@@ -57,25 +57,12 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexStart=createPublicClient\\(
     // customPropHighlightRegexEnd=\\);
     import { createPublicClient, http, defineChain } from 'viem';
-
-    // Define Push Chain Testnet Config
+  
+    // Define Push Testnet Chain
     const pushTestnet = defineChain({
-      id: 42101,
-      name: 'Push Testnet',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'PC',
-        symbol: '$PC',
-      },
       rpcUrls: {
         default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/', 'https://evm.rpc-testnet-donut-node2.push.org/'],
-        },
-      },
-      blockExplorers: {
-        default: {
-          name: 'Push Testnet Explorer',
-          url: 'https://donut.push.network/',
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
         },
       },
     });
@@ -128,24 +115,11 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=\\);
     import { createPublicClient, http, defineChain } from 'viem';
 
-    // Define Push Chain Testnet Config
+    // Define Push Testnet Chain
     const pushTestnet = defineChain({
-      id: 42101,
-      name: 'Push Testnet',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'PC',
-        symbol: '$PC',
-      },
       rpcUrls: {
         default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/', 'https://evm.rpc-testnet-donut-node2.push.org/'],
-        },
-      },
-      blockExplorers: {
-        default: {
-          name: 'Push Testnet Explorer',
-          url: 'https://donut.push.network/',
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
         },
       },
     });

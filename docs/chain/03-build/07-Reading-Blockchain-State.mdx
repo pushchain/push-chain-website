@@ -56,14 +56,13 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=\\);
     import { defineChain, createPublicClient, http } from 'viem';
 
-    // Define Push Testnet chain
+    // Define Push Testnet Chain
     const pushTestnet = defineChain({
-      id: 42101,
-      name: 'Push Testnet',
-      nativeCurrency: { name: 'PC', symbol: '$PC', decimals: 18 },
       rpcUrls: {
-        default: { http: ['https://evm.rpc-testnet-donut-node1.push.org/'] }
-      }
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
     });
 
     // HTTP client
@@ -105,7 +104,15 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=\\);
     import { defineChain, createPublicClient, http } from 'viem';
 
-    const pushTestnet = defineChain({ /* ... */ });
+    // Define Push Testnet Chain
+    const pushTestnet = defineChain({
+      rpcUrls: {
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
+    });
+
     const viemClient    = createPublicClient({ chain: pushTestnet, transport: http() });
     const txHash        = '0xa7839fb1e3483eab628cbf18f42603ba192cef99b724d4b651eb7c4e9683b79e';
 
@@ -148,7 +155,15 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=\\);
     import { defineChain, createPublicClient, http } from 'viem';
 
-    const pushTestnet  = defineChain({ /* ... */ });
+    // Define Push Testnet Chain
+    const pushTestnet = defineChain({
+      rpcUrls: {
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
+    });
+
     const viemClient   = createPublicClient({ chain: pushTestnet, transport: http() });
     const latestBlock  = await viemClient.getBlock();
     console.log(JSON.stringify(latestBlock, null, 2));
@@ -170,7 +185,7 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     import { ethers } from 'ethers';
 
     const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-    const blockHash = '0xccdb5bc5b71ece5a73aa42d5d3171b156f1c0735ac97a07ccec3156b59ac936c';
+    const blockHash = '0x1bdc478ba03f52a7f35071e0f03676368cda76b95c4846f21844a39cfd541f32';
 
     const block = await provider.getBlock(blockHash);
     console.log(JSON.stringify(block, null, 2));
@@ -187,8 +202,17 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=\\);
     import { defineChain, createPublicClient, http } from 'viem';
 
-    const pushTestnet = defineChain({ /* ... */ });
-    const viemClient  = createPublicClient({ chain: pushTestnet, transport: http() });
+    // Define Push Testnet Chain
+    const pushTestnet = defineChain({
+      rpcUrls: {
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
+    });
+
+    const viemClient = createPublicClient({ chain: pushTestnet, transport: http() });
+    const blockHash = '0x1bdc478ba03f52a7f35071e0f03676368cda76b95c4846f21844a39cfd541f32';
 
     const block = await viemClient.getBlock({ blockHash });
     console.log(JSON.stringify(block, null, 2));
@@ -263,8 +287,16 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=}\\);
     import { createPublicClient, defineChain, webSocket } from 'viem';
 
-    const pushTestnet = defineChain({ /* ... */ });
-    const client      = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
+    // Define Push Testnet Chain
+    const pushTestnet = defineChain({
+      rpcUrls: {
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
+    });
+
+    const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
     const stop = client.watchBlocks({
       onBlock: (b) => console.log('🆕 Block', b.number),
@@ -330,26 +362,14 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexEnd=}\\);
     import { defineChain } from 'viem';
 
+    // Define Push Testnet Chain
     const pushTestnet = defineChain({
-      id: 42101,
-      name: 'Push Testnet',
-      nativeCurrency: {
-        decimals: 18,
-        name: 'PC',
-        symbol: '$PC',
-      },
       rpcUrls: {
         default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/', 'https://evm.rpc-testnet-donut-node2.push.org/'],
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
         },
       },
-      blockExplorers: {
-        default: {
-          name: 'Push Testnet Explorer',
-          url: 'https://donut.push.network/',
-        },
-      },
-    })
+    });
 
     const viemClient = createPublicClient({
       chain: pushTestnet,
