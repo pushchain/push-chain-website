@@ -48,7 +48,7 @@ This helper contract helps in fetching cross-chain information about an address.
 import "@pushprotocol/push-chain-contracts/src/Interfaces/IUEAFactory.sol";
 ```
 
-Or, define the interface manually in your solidity contract:
+<Details summary="Or, define the interface manually in your solidity contract">
 
 ```solidity
 pragma solidity ^0.8.0;
@@ -86,6 +86,7 @@ interface IUEAFactory {
 }
 ```
 
+</Details>
 
 ### UEAFactory Methods
 
@@ -125,7 +126,7 @@ function getOriginForUEA(
 | --------- | --------- | ------------------------------------------------- |
 | addr      | `address` | Any address on Push Chain (typically msg.sender). |
 
-<Details summary="Returns UniversalAccount <struct> and bool" className="alert alert--fn-args">
+<Details summary="Returns `UniversalAccount`<struct> and `bool`" className="alert alert--fn-args">
 
 | Response | Type               | Description                                                                                                              |
 | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -227,7 +228,7 @@ function getUEAForOrigin(
 | --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \_id      | UniversalAccount | The Universal Account information containing:<br/>- chain: Chain identifier (e.g., "eip155:1")<br/>- owner: Owner's public key or address in bytes format. |
 
-<Details summary="Returns address and bool" className="alert alert--fn-args">
+<Details summary="Returns `address` and `bool`" className="alert alert--fn-args">
 
 | Response   | Type    | Description                                          |
 | ---------- | ------- | ---------------------------------------------------- |

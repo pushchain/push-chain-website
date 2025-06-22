@@ -192,6 +192,20 @@
   padding-top: 20px;
 }
 
+.alert.alert--info {
+  border-color: var(--ifm-border-color);
+}
+
+.alert.alert--info summary::before {
+  border-color: transparent transparent transparent var(--ifm-color-primary);
+}
+
+.alert.alert--info
+  .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
+  border-top: 1px solid
+    color-mix(in srgb, var(--ifm-color-primary) 50%, transparent);
+}
+
 /* ----- */
 /* Custom Fonts */
 /* ----- */
