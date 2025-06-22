@@ -120,7 +120,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(62, 65, 83, 1);
   --ifm-live-highlighted-code-line-bg-pulse-start: rgba(62, 65, 83, 1);
   --ifm-live-highlighted-code-line-bg-pulse-mid: rgba(87, 91, 117, 1);
-  --ifm-border-color: #1f1f20;
+  --ifm-border-color: #3c3c3e;
   --ifm-global-radius: 12px;
 }
 
@@ -144,7 +144,7 @@
   height: 1px;
   right: 1%;
   bottom: -10px;
-  background: #bec3c9;
+  background: var(--ifm-border-color);
 }
 
 .alert.alert--fn-args:after,
@@ -155,7 +155,7 @@
   height: 1px;
   right: 5%;
   bottom: -20px;
-  background: #bec3c9;
+  background: var(--ifm-border-color);
 }
 
 .alert.alert--fn-args {
@@ -501,6 +501,10 @@ article em > code {
 }
 
 /* Override for having mandatory arguments in developer documentation */
+.PushDocs p code {
+  padding: 4px 8px;
+}
+
 .PushDocs article em > code {
   background: transparent;
   color: var(--ifm-color-secondary-text);

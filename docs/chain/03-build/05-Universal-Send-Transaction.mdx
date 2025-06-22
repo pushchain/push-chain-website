@@ -1,32 +1,26 @@
 ---
 id: docs-chain-build-send-universal-transaction
 title: Send Universal Transaction
-hide_title: true
+hide_title: false
 slug: ./send-universal-transaction
 displayed_sidebar: pushChainSidebar
 sidebar_position: 5
 image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_channel.png'
 ---
 
-# Send Transaction Overview
+## Overview
 
-Push Chain is an **EVM-compatible Universal Blockchain** that offers multiple ways to send transactions. The preferred method is using the Push Chain SDK for its advanced features, but you can also interact with Push Chain using standard EVM libraries such as `Viem` or `Ethers.js`.
+Universal Transaction is an extension of native transactions that allows you to send transactions to Push Chain from other Layer 1 blockchains.
 
 <head>
-  <title>{`Send Transaction | Push Chain | Push Documentation`}</title>
+  <title>{`Send Transaction | Build | Push Chain | Push Documentation`}</title>
 </head>
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
-import {
-  ModalContainer,
-  ModalSmall,
-  ModalWrapper,
-  AFocus,
-} from '@site/src/css/SharedStyling';
 
-## Send Transaction API
+## Sending Universal Transaction
 
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
@@ -37,15 +31,15 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 ### Send Transaction Parameters
 
-| **Arguments** | **Type** | **Default** | **Description**                                       |
-| ---------------------- | -------- | ----------- | ----------------------------------------------------- |
-| _`to`_                 | `string` | -           | The address of the recipient.                         |
-| _`value`_              | `BigInt` | -           | The value to send in wei.                             |
-| `data`                 | `string` | -           | The data to send.                                     |
-| `gasLimit`             | `BigInt` | -           | The gas limit for the transaction.                    |
-| `maxFeePerGas`         | `BigInt` | -           | The maximum fee per gas for the transaction.          |
-| `maxPriorityFeePerGas` | `BigInt` | -           | The maximum priority fee per gas for the transaction. |
-| `deadline`             | `BigInt` | -           | The deadline for the transaction.                     |
+| **Arguments**          | **Type** | **Description**                                       |
+| ---------------------- | -------- | ----------------------------------------------------- |
+| _`to`_                 | `string` | The address of the recipient.                         |
+| _`value`_              | `BigInt` | The value to send in wei.                             |
+| `data`                 | `string` | The data to send.                                     |
+| `gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+| `deadline`             | `BigInt` | The deadline for the transaction.                     |
 
 > Note: These _`Arguments`_ are mandatory.
 

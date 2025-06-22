@@ -59,15 +59,15 @@ const account = PushChain.utils.account.toUniversal(address, {
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.account\.toUniversal
     // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core'
+    import { PushChain } from '@pushchain/core';
 
     function main() {
       const account = PushChain.utils.account.toUniversal(
         '0xD8d6aF611a17C236b13235B5318508FA61dE3Dba', {
           chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-        }
-      )
-      console.log(JSON.stringify(account, null, 2))
+        };
+      );
+      console.log(JSON.stringify(account, null, 2));
     }
 
     main()

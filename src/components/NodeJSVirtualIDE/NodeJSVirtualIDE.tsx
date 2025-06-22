@@ -313,20 +313,21 @@ function App() {
               font-size: 14px;
               border-radius: 6px;
               border: 1px solid #e2e8f0;
-              background-color: #fff;
-              color: #475569;
+              background-color: var(--ifm-color-primary-inverse);
+              color: var(--ifm-color-secondary-text);
               cursor: pointer;
               display: flex;
               align-items: center;
               gap: 6px;
               transition: background-color 0.2s, border-color 0.2s;
+              text-decoration-color: transparent !important;
             }
             .run-btn:hover,
             .clear-btn:hover,
             .repo-btn:hover {
-              background-color: #dd44b9;
-              border-color: #dd44b9;
-              color: #fff;
+              background-color: var(--ifm-color-primary);
+              border-color: var(--ifm-color-primary);
+              color: var(--ifm-color-primary-unified-text);
             }
           \`}</style>
         </div>
