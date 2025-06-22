@@ -1,7 +1,7 @@
 ---
 id: docs-chain-build-recommended-practices
 title: Recommended Practices
-hide_title: true
+hide_title: false
 slug: ./recommended-practices
 displayed_sidebar: pushChainSidebar
 sidebar_position: 1
@@ -35,21 +35,25 @@ Push Chain is a fully EVM-compatible blockchain, meaning that developers can dep
 
 This compatibility makes onboarding to Push Chain seamless and efficient for teams familiar with the Ethereum development ecosystem.
 
-## Seamless User Experience with Push Wallet
-
-Push Chain also provides a native wallet experience with Push Wallet, which simplifies frontend development and improves the user experience by:
-
-- Fee abstraction: Users can interact with Push Chain contracts without holding native tokens
-- Multi-chain connections: Users can sign in and connect using wallets from other blockchains
-- Email login: For non-crypto native users, Push Wallet supports email login and onboarding, enabling apps to attract wider audiences
-
-This frontend abstraction lets developers focus on building apps without worrying about how users pay gas or manage wallets.
-
 ## Backend SDK: `@pushchain/core`
 
-If you're building backend services, automation scripts, bots, or analytics pipelines, Push Chain offers an official SDK: `@pushchain/core`.
+If you're building backend services, automation scripts, bots, or analytics pipelines, Push Chain offers an official SDK: [@pushchain/core](https://npmjs.com/package/@pushchain/core).
 
-`@pushchain/core` is ideal for server-side integrations, backend logic for dApps, and indexing or monitoring tools that need to interact with the Push Chain network reliably and efficiently.
+`@pushchain/core` is ideal for:
+- Server-side integrations
+- Backend logic for dApps 
+- Indexing or monitoring tools that need to interact with the Push Chain network reliably and efficiently.
+
+## UI Kit SDK: `@pushchain/ui-kit`
+
+Push Chain also offers [@pushchain/ui-kit](https://npmjs.com/package/@pushchain/ui-kit) which is a collection of React components that completely abstract away the complexity of wallet connections and user authentication.
+
+`@pushchain/ui-kit` is ideal for:
+
+- Building user interfaces for dApps
+- Abstracting away the complexity of wallet connections and user authentication (abstracted initialization of pushChainClient)
+- Multi-chain connections: Users can sign in and connect using wallets from other blockchains
+- Email login: For non-crypto native users, Push Wallet supports email login and onboarding, enabling apps to attract wider audiences
 
 ## Smart Contract Helper Functions
 

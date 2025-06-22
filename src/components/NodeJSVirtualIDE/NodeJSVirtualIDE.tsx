@@ -142,32 +142,43 @@ function App() {
 
       // a very minimal browser‐side readline shim
       const readlineShim = \`;
-        // override Node’s readline
+        // override Node’s readline to support both callback and Promise
         const readline = {
-          createInterface: ({ input, output }) => ({
-            question: (questionText, callback) => {
-              // if you want special prefix handling:
-              const isPrompt =
-                typeof questionText === 'string' &&
-                  questionText.startsWith(':::prompt:::');
-              const text = isPrompt
-                ? questionText.replace(/:::prompt:::/, '')
-              : questionText;
-            
-            if (isPrompt) {
-              window.alert(text);
-              callback('');
-            } else {
-              // display prompt
-              const answer = window.prompt(text);
-              // Node's readline.question calls callback(answer);
-              callback(answer);
-            }
+          createInterface: ({ input, output }) => {
+            const iface = {
+              question(questionText, callback) {
+                const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');
+                const text = isPrompt
+                  ? questionText.replace(/^:::prompt:::/, '')
+                  : questionText;
+
+                // If no callback provided, return a Promise
+                if (typeof callback !== 'function') {
+                  return Promise.resolve().then(() => {
+                    if (isPrompt) {
+                      window.alert(text);
+                      return '';
+                    } else {
+                      return window.prompt(text);
+                    }
+                  });
+                }
+
+                // callback-style
+                if (isPrompt) {
+                  window.alert(text);
+                  callback('');
+                } else {
+                  const answer = window.prompt(text);
+                  callback(answer);
+                }
+              },
+              close() {},
+            };
+            return iface;
           },
-          close: () => {},
-        }),
-      };
-      \`;
+        };
+    \`;
       
     // shim console
     const consoleShim = {
