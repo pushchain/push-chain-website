@@ -113,6 +113,10 @@ const sidebars = {
       label: 'Knowledge Base',
       href: 'https://push.org/knowledge',
     },
+    {
+      type: 'doc',
+      id: 'chain/docs-chain-changelog',
+    },
   ],
   pushNotificationSidebar: [
     {
