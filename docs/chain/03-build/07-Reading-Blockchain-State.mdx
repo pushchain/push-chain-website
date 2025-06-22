@@ -206,27 +206,23 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 <NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/push-protocol/push-chain-sdk" }}>
 
 {`
-    // customPropHighlightRegexStart=ethers\.WebSocketProvider
+    // customPropHighlightRegexStart=ws\.on
     // customPropHighlightRegexEnd=}\\);
     import { ethers } from 'ethers';
     const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
     const watchedAddress = '0x8a36C6358861F0CE1672B04345C9e2E6717Be946'.toLowerCase();
 
-    console.log('Socked connected!');
+    console.log('Connection Opened!');
       
     ws.on('block', async (blockNumber) => {
       const block = await ws.getBlock(blockNumber, true);
       if (block && block.transactions) {
         console.log('New block:', block.number);
-      
-        block.transactions
-          .filter((tx) => tx.from?.toLowerCase() === watchedAddress);
-          .forEach((tx) => console.log('Tx from watched address →', tx.hash));
       }
     });
 
     // Stop after 10s
-    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Socket closed!'); }, 10000);               
+    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);        
 `}
 
 </NodeJSVirtualIDE>
@@ -242,14 +238,18 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
 {`
     // customPropHighlightRegexStart=ws\.on
-    // customPropHighlightRegexEnd=\\)\\);
+    // customPropHighlightRegexEnd=}\\);
     import { ethers } from 'ethers';
+    
+    const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
 
-    const ws = new ethers.WebSocketProvider('wss://evm.rpc-testnet-donut-node1.push.org/');
-    ws.on('block', (num) => console.log('New block:', num));
+    console.log('Connection Opened!');
+    ws.on('block', async (blockNumber) => {
+      console.log("Block produced: ", blockNumber);
+    });
 
     // Stop after 10s
-    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); }, 10000);
+    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
 `}
 
 </NodeJSVirtualIDE>
@@ -291,17 +291,30 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     // customPropHighlightRegexStart=ws\.on
     // customPropHighlightRegexEnd=}\\);
     import { ethers } from 'ethers';
+    
     const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-    const watchedAddress = '0x8a36C6358861F0CE1672B04345C9e2E6717Be946'.toLowerCase();
+    const watchedAddress = '0x0000000000000000000000000000000000042101';
+
+    console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
 
     ws.on('block', async (blockNumber) => {
+      const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org');
       const block = await provider.getBlock(blockNumber, true);
+
       if (block && block.transactions) {
-        block.transactions
-          .filter((tx) => tx.from?.toLowerCase() === watchedAddress)
-          .forEach((tx) => console.log('Tx from watched address →', tx.hash));
+        let prevTxCount=txCount;
+        const txs = await Promise.all(block.transactions.map(hash => block.getTransaction(hash)));
+        
+        txs
+          .filter((tx) => tx.to === watchedAddress)
+          .forEach((tx) => console.log('Tx detected →', tx.hash));
+          
+        console.log("Block produced: ", blockNumber);
       }
     });
+
+    // Stop after 10s
+    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);
 `}
 
 </NodeJSVirtualIDE>

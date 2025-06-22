@@ -56,7 +56,7 @@ pragma solidity ^0.8.0;
 // Represents a cross-chain account identifier
 struct UniversalAccount {
     string chain;   // e.g. "eip155:11155111"
-    address owner;  // external chain address
+    bytes owner;  // external chain address
 }
 
 /// @title Universal Executor Account Factory Interface
@@ -102,7 +102,7 @@ Returns the owner information and UEA status for a given address on Push Chain.
 - Determining the source chain of a given address on Push Chain.
 - Getting the Universal Account information associated with this address.
 
-> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the 40 bytes wallet address.
+> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the wallet address in bytes.
 
 ```solidity
 /**
@@ -130,7 +130,7 @@ function getOriginForUEA(
 
 | Response | Type               | Description                                                                                                              |
 | -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| account  | `UniversalAccount` | The Universal Account information associated with this UEA. struct `UniversalAccount` \{ string chain; address owner; \} |
+| account  | `UniversalAccount` | The Universal Account information associated with this UEA. struct `UniversalAccount` \{ string chain; bytes owner; \} |
 | isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)          |
 
 </Details>
@@ -204,7 +204,7 @@ Returns the computed UEA address for a given Universal Account and deployment st
 - Get or compute the UEA address for a given Universal Account.
 - Check if a given Universal Account is deployed or not.
 
-> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the 40 bytes wallet address.
+> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the wallet address in bytes.
 
 ```solidity
 /**
@@ -269,7 +269,7 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
     // Minimal ABI
     const IUEAFactoryABI = [
       // takes (UniversalAccount _id) and returns (address uea, bool isDeployed)
-      "function getUEAForOrigin(tuple(string chain, address owner) _id) view returns (address uea, bool isDeployed)"
+      "function getUEAForOrigin(tuple(string chain, bytes  owner) _id) view returns (address uea, bool isDeployed)"
     ]
 
     async function main() {
@@ -278,26 +278,37 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
       const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
 
       // 2) pick some external-chain address as the "owner"
-      const address = '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045';
+      const ethAddress = "0xd8da6bf26964af9d7eed9e03e53415d37aa96045";
+      const solAddress = '14grJpemFaf88c8tiVb77W7TYg2W3ir6pfkKz3YjhhZ5';
 
       // 3) manually form the UniversalAccount struct
       const originAccount = {
         chain: 'eip155:11155111',   // Ethereum Sepolia namespace
-        owner: address
+        owner: ethAddress          
       };
+      
+      const solOriginAccount = {
+        chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1',   // Solana Devnet namespace
+        owner: solAddress                                   // converted to bytes
+      }
 
       // 4) call getUEAForOrigin and destructure the tuple return
-      console.log("Calling getUEAForOrigin on PushChain");
-      const ueaResult = await factory.getUEAForOrigin({
+      console.log("Calling getUEAForOrigin (passing ETH Address) on PushChain");
+      const ueaResultETH = await factory.getUEAForOrigin({
         chain: originAccount.chain,
         owner: originAccount.owner
       });
-      console.log("Result -", JSON.stringify(ueaResult));
+      console.log("Result -", JSON.stringify(ueaResultETH));
+      
+      console.log("Calling getUEAForOrigin (passing SOL Address) on PushChain");
+      const ueaResultSol = await factory.getUEAForOrigin({
+        chain: solOriginAccount.chain,
+        owner: solOriginAccount.owner
+      });
+      console.log("Result -", JSON.stringify(ueaResultSol));
     }
 
     await main().catch(console.error);
-                                                                                                                                  
-
 `}
 
 </NodeJSVirtualIDE>

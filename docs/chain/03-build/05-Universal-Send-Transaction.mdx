@@ -10,7 +10,7 @@ image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_cha
 
 ## Overview
 
-Universal Transaction is an extension of native transactions that allows you to send transactions to Push Chain from other Layer 1 blockchains.
+Universal transactions let you send **native** transactions from any Layer 1 chain—EVM or non-EVM, even Push Chain itself—without wrapping, bridging or extra tooling required.
 
 <head>
   <title>{`Send Transaction | Build | Push Chain | Push Documentation`}</title>
@@ -19,27 +19,27 @@ Universal Transaction is an extension of native transactions that allows you to 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Sending Universal Transaction
+**_`pushChainClient.universal.sendTransaction({options}): Promise<TransactionReceipt>`_**
 
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
   to: '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF',
-  value: BigInt('100000000000000000'), // 0.1 ETH in wei
+  value: BigInt('100000000000000000'), // 0.1 PC in wei
 });
 ```
 
-### Send Transaction Parameters
-
 | **Arguments**          | **Type** | **Description**                                       |
 | ---------------------- | -------- | ----------------------------------------------------- |
-| _`to`_                 | `string` | The address of the recipient.                         |
-| _`value`_              | `BigInt` | The value to send in wei.                             |
-| `data`                 | `string` | The data to send.                                     |
-| `gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
-| `maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
-| `maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
-| `deadline`             | `BigInt` | The deadline for the transaction.                     |
+| _`options.to`_                 | `string` | The address of the recipient.                         |
+| _`options.value`_              | `BigInt` | The value to send in wei.                             |
+| `options.data`                 | `string` | The data to send.                                     |
+| `options.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `options.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `options.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+| `options.deadline`             | `BigInt` | The deadline for the transaction.                     |
 
 > Note: These _`Arguments`_ are mandatory.
 
@@ -50,13 +50,11 @@ const txHash = await pushChainClient.universal.sendTransaction({
 '0xd4491116f55568faabe3ae813dacb77eeea49080f34221ae433b27d3732a460a'
 ```
 
----
-
 </Details>
 
-### Send Transaction with Contract Interaction
+## Send Transaction with Contract Interaction
 
-When you need to interact with smart contracts, you'll need to pass encoded function data. Here's how to generate the `data` parameter using viem and use it with the Push Chain SDK:
+When you need to interact with smart contracts, you'll need to pass encoded function data. Here's how to generate the `data` parameter and use it with the Push Chain SDK:
 
 <Tabs groupId="send-transaction">
   <TabItem value='ethers_v6' label='Ethers (v6)' default>
@@ -124,59 +122,46 @@ main().catch(console.error);
   </TabItem>
 </Tabs>
 
-## Advanced
+## Live Playground
 
-For advanced use cases, you may still opt to use standard EVM libraries directly. However, we recommend the Push Chain SDK’s `universal.sendTransaction` for its cross-chain features and gas abstraction.
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/send-transaction"}}>
 
-<Tabs groupId="send-transaction">
-  <TabItem value='ethers_v6' label='Ethers (v6)' default>
+{`
 
-```typescript
-import { ethers } from 'ethers';
+    // customPropHighlightRegexStart=pushChainClient\.universal\.sendTransaction
+    // customPropHighlightRegexEnd=\\);
+    // Using ethers for example - You can use any library
+    // ethers, viem, solana web3js, etc
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
 
-async function main() {
-  const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const signer = new ethers.Wallet('YOUR_PRIVATE_KEY', provider);
+    async function main() {
+      // Create random wallet
+      const wallet = ethers.Wallet.createRandom()
 
-  const txHash = await signer.sendTransaction({
-    to: '0xRecipientAddressHere',
-    value: ethers.utils.parseUnits('0.001', 'ether'),
-  });
+      // Set up provider
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org')
+      const signer = wallet.connect(provider)
+      
+      // Convert to Universal Signer
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
 
-}
+      // Initialize Push Chain Client
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+      });
 
-main().catch(console.error);
-```
+      const txHash = await pushChainClient.universal.sendTransaction({
+        to: '0xRecipientAddress', // The smart contract address on Push Chain
+        value: BigInt('0'), // No ETH being sent, just contract interaction
+        data: data // The encoded function call
+      });
+    }
 
-</TabItem>
+    await main().catch(console.error);
 
-  <TabItem value='viem' label='Viem'>
+`}
 
-```typescript
-import { createWalletClient, http, parseEther } from 'viem';
-import { privateKeyToAccount } from 'viem/accounts';
-import { PushChain } from '@pushchain/core';
+</NodeJSVirtualIDE>
 
-async function main() {
-  const privateKey = 'YOUR_PRIVATE_KEY';
-  const account = privateKeyToAccount(privateKey);
-
-  const walletClient = createWalletClient({
-    account,
-    chain: PushChain.CONSTANTS.VIEM_PUSH_TESTNET,
-    transport: http(),
-  });
-
-  const txHash = await walletClient.sendTransaction({
-    to: '0xRecipientAddressHere',
-    value: parseEther('0.1'),
-  });
-}
-
-main().catch(console.error);
-```
-
-</TabItem>
-</Tabs>
-
-## Sign Universal Message
+## Next Steps
