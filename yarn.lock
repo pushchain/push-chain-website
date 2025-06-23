@@ -3652,10 +3652,30 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==
 
-"@pushchain/core@^0.1.18", "@pushchain/core@^0.1.21":
+"@pushchain/core@^0.1.18":
   version "0.1.21"
   resolved "https://registry.yarnpkg.com/@pushchain/core/-/core-0.1.21.tgz#ecbed5e91cd04c64a99b2e8e88488609e595bd41"
   integrity sha512-ZRf2kw2SGtImNavJIRWHW7ftqTbFKUdnKHOsa6H6kkP7MGQAk53eLDXHDMJG6s0wvrj/MU1ev8k2dG2kWiuZ6w==
+  dependencies:
+    "@bufbuild/protobuf" "^2.0.0"
+    "@coral-xyz/anchor" "^0.31.0"
+    "@cosmjs/crypto" "0.33.1"
+    "@cosmjs/encoding" "0.33.1"
+    "@cosmjs/proto-signing" "^0.33.1"
+    "@cosmjs/stargate" "^0.33.1"
+    "@cosmjs/tendermint-rpc" "0.33.1"
+    "@solana/web3.js" "^1.68.0"
+    cosmjs-types "0.9.0"
+    ethers "^6.14.3"
+    protobufjs "7.4.0"
+    tslib "^2.3.0"
+    tweetnacl "^1.0.3"
+    viem "2.27.2"
+
+"@pushchain/core@^0.1.22":
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/@pushchain/core/-/core-0.1.22.tgz#39857e1978d9b477344b7d815543298a150072fc"
+  integrity sha512-Dxkqsk32NYlscy1hPR9XZr5Zz0adcCJaS5b+95/l7Ea6fdRJALDiaWKrhgQSUiKduwamBAOx02ydvfR21k/8lg==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
     "@coral-xyz/anchor" "^0.31.0"
@@ -17508,6 +17528,7 @@ word-wrap@^1.2.5:
   integrity sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
