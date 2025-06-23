@@ -92,7 +92,7 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 | **Arguments** | **Type** |**Description**                                                                                                                                                                                        |
 | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`address`_             | `string` | An address string (e.g., `0xabc...`).                                                                                                                                                                  |
-| _`options.chain`_        | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_CHAIN_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
+| _`options.chain`_        | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
 
 > Note: These _`Arguments`_ are mandatory.
 
@@ -536,7 +536,7 @@ const chainName = PushChain.utils.helpers.getChainName(namespace);
 
 | **Arguments**        | **Type** | **Description**                                      |
 | -------------------- | -------- | ---------------------------------------------------- |
-| _`chainNamespace`_   | `number` | The chain namespace to convert to chain name. Eg: `eip155:42101` converts to `PUSH_CHAIN_TESTNET_DONUT`, `eip155:11155111` converts to `ETHEREUM_SEPOLIA` |
+| _`namespace`_   | `string` | The chain namespace to convert to chain name. Eg: `eip155:42101` converts to `PUSH_TESTNET_DONUT`, `eip155:11155111` converts to `ETHEREUM_SEPOLIA` |
 
 > Note: These _`Arguments`_ are mandatory.
 
@@ -544,7 +544,7 @@ const chainName = PushChain.utils.helpers.getChainName(namespace);
 
 ```typescript
 // chainName string
-'PUSH_CHAIN_TESTNET_DONUT'
+'PUSH_TESTNET_DONUT'
 
 
 // NOTE: returns undefined if chainId is unsupported
