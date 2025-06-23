@@ -25,6 +25,7 @@ import Details from '@theme/Details';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Create Universal Signer
+
 **_`PushChain.utils.signer.toUniversal(signer): Promise<UniversalSigner>`_**
 
 The most common way to create a Universal Signer is by converting an existing signer from supported libraries (Ethers, Viem, Solana).
@@ -59,7 +60,8 @@ const viemClient = createWalletClient({
 });
 
 const universalSigner = await PushChain.utils.signer.toUniversal(viemClient);
-```
+
+````
 
 :::note Provider determines the chain of the account
 
@@ -82,15 +84,14 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
     library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
   }
 )
-```
+````
 
   </TabItem>
 </Tabs>
 
-
-| **Arguments**           | **Type**                                                            | **Description**                                      |
-| ----------------------- | ------------------------------------------------------------------- | ---------------------------------------------------- |
-| _`signer`_              | `viem.WalletClient` \| `ethers.Wallet` \| `UniversalSignerSkeleton` | The signer to convert to Universal Signer format.    |
+| **Arguments** | **Type**                                                            | **Description**                                   |
+| ------------- | ------------------------------------------------------------------- | ------------------------------------------------- |
+| _`signer`_    | `viem.WalletClient` \| `ethers.Wallet` \| `UniversalSignerSkeleton` | The signer to convert to Universal Signer format. |
 
 > Note: These _`Arguments`_ are mandatory.
 
@@ -279,7 +280,8 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 </Tabs>
 
 ## Next Steps
+
 - [Initialize Push Chain Client](/docs/chain/build/initialize-push-chain-client) with the Universal Signer
-- Abstract away creation of the Universal Signer using [UI Kit](/docs/chain/build/ui-kit)
+- Abstract away creation of the Universal Signer using [UI Kit](/docs/chain/ui-kit)
 - Learn how to create [Universal Signer from public / private keypair](/docs/chain/build/utility-functions#create-universal-signer-from-key-pair)
 - Create [custom implementation](/docs/chain/build/advanced/custom-universal-signer) of universal signer (Advanced)

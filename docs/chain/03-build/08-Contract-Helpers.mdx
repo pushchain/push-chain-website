@@ -25,7 +25,7 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
 ## Universal Executor Account Factory
 
-> As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.
+> As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/chain/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.
 
 The [Universal Executor Account Factory](https://github.com/push-protocol/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
 
@@ -128,10 +128,10 @@ function getOriginForUEA(
 
 <Details summary="Returns `UniversalAccount`<struct> and `bool`" className="alert alert--fn-args">
 
-| Response | Type               | Description                                                                                                              |
-| -------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| Response | Type               | Description                                                                                                            |
+| -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | account  | `UniversalAccount` | The Universal Account information associated with this UEA. struct `UniversalAccount` \{ string chain; bytes owner; \} |
-| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)          |
+| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)        |
 
 </Details>
 
@@ -258,9 +258,9 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
-    // customPropHighlightRegexStart=factory\.getUEAForOrigin
-    // customPropHighlightRegexEnd=\\);
-    import { ethers } from 'ethers';
+// customPropHighlightRegexStart=factory\.getUEAForOrigin
+// customPropHighlightRegexEnd=\\);
+import { ethers } from 'ethers';
 
     // ——— CONFIG ———
     const RPC_URL          = 'https://evm.rpc-testnet-donut-node1.push.org/';
@@ -284,9 +284,9 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
       // 3) manually form the UniversalAccount struct
       const originAccount = {
         chain: 'eip155:11155111',   // Ethereum Sepolia namespace
-        owner: ethAddress          
+        owner: ethAddress
       };
-      
+
       const solOriginAccount = {
         chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1',   // Solana Devnet namespace
         owner: solAddress                                   // converted to bytes
@@ -299,7 +299,7 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
         owner: originAccount.owner
       });
       console.log("Result -", JSON.stringify(ueaResultETH));
-      
+
       console.log("Calling getUEAForOrigin (passing SOL Address) on PushChain");
       const ueaResultSol = await factory.getUEAForOrigin({
         chain: solOriginAccount.chain,
@@ -309,12 +309,12 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
     }
 
     await main().catch(console.error);
+
 `}
 
 </NodeJSVirtualIDE>
 
 </Details>
-
 
 ## Next Steps
 
