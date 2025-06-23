@@ -187,6 +187,11 @@ export default function LivePlaygroundEditorHighlightScript() {
 
     // On editor focus: clear highlights
     function handleFocusIn(event) {
+      const editorElement = event.target.closest('.push-live-editor');
+      if (editorElement) {
+        editorElement.classList.add('push-live-editor-focus');
+      }
+
       const container = event.target.closest(
         '.push-apply-highlight-in-live-editor'
       );
@@ -197,6 +202,11 @@ export default function LivePlaygroundEditorHighlightScript() {
 
     // On editor blur/out: reapply highlights
     function handleFocusOut(event) {
+      const editorElement = event.target.closest('.push-live-editor');
+      if (editorElement) {
+        editorElement.classList.remove('push-live-editor-focus');
+      }
+
       const container = event.target.closest(
         '.push-apply-highlight-in-live-editor'
       );
@@ -217,6 +227,14 @@ export default function LivePlaygroundEditorHighlightScript() {
 
     // On mouse down: clear highlights and mark as modified
     function handleMouseDown(event) {
+      // Find the playground container
+      const editorElement = event.target.closest(
+        '.push-apply-highlight-in-live-editor'
+      );
+      if (editorElement) {
+        editorElement.classList.remove('push-live-editor-focus');
+      }
+
       const container = event.target.closest(
         '.push-apply-highlight-in-live-editor'
       );

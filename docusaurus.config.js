@@ -112,7 +112,7 @@ const config = {
           sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the 'edit this page' links.
-          editUrl: 'https://github.com/push-protocol/push-website/blob/main',
+          editUrl: 'https://github.com/pushchain/push-website/blob/main',
         },
         blog: false,
         theme: {

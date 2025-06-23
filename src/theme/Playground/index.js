@@ -277,7 +277,7 @@ export default function Playground({
               <div
                 className={
                   highlightRegexStart
-                    ? 'push-apply-highlight-in-live-editor'
+                    ? 'push-live-editor push-apply-highlight-in-live-editor'
                     : 'push-live-editor'
                 }
                 data-highlight-regex-start={highlightRegexStart}
@@ -300,7 +300,7 @@ export default function Playground({
               <div
                 className={
                   highlightRegexStart
-                    ? 'push-apply-highlight-in-live-editor'
+                    ? 'push-live-editor push-apply-highlight-in-live-editor'
                     : 'push-live-editor'
                 }
                 data-highlight-regex-start={highlightRegexStart}

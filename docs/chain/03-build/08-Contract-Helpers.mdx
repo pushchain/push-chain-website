@@ -27,11 +27,11 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
 > As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.
 
-The [Universal Executor Account Factory](https://github.com/push-protocol/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
+The [Universal Executor Account Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
 
 ### UEAFactory Features
 
-The [UEA Factory](https://github.com/push-protocol/push-chain-contracts/blob/main/src/UEAFactoryV1.sol) serves these key features:
+The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/UEAFactoryV1.sol) serves these key features:
 
 - **Multi-Chain Support**: Register and manage UEAs for users from different blockchains
 - **Deterministic Addresses**: Uses `CREATE2` + minimal proxies for predictable UEA addresses
@@ -153,7 +153,7 @@ function checkCallerType() public view returns (bool isUEA) {
 
 <Details summary="Off-chain usage" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
 
@@ -255,7 +255,7 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
 
 <Details summary="Off-chain usage" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=factory\.getUEAForOrigin

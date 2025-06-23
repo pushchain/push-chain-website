@@ -54,7 +54,7 @@ const account = PushChain.utils.account.toUniversal(address, {
 
 <Details summary="Live Playground: Convert Ethereum Sepolia Address to UniversalAccount" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.account\.toUniversal
@@ -107,7 +107,7 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 
 <Details summary="Live Playground: Convert Ethereum Mainnet address to chain agnostic address" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.account\.toChainAgnostic
     // customPropHighlightRegexEnd=\\);
@@ -162,7 +162,7 @@ const account = PushChain.utils.account.fromChainAgnostic(chainAgnosticAddress);
 
 <Details summary="Live Playground: Convert Ethereum Sepolia chain agnostic address to UniversalAccount" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.account\.fromChainAgnostic
@@ -220,7 +220,7 @@ const info = await PushChain.utils.account.convertOriginToExecutor(universalAcco
 
 <Details summary="Live Playground: Convert Origin Account to Universal Executor Account" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.account\.convertOriginToExecutor
@@ -304,7 +304,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 
 <Tabs className="liveplaytab" groupId="code-examples">
   <TabItem value='ethers_v6' label='Ethers (v6)' default>
-      <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+      <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversalFromKeypair
     // customPropHighlightRegexEnd=\\);
@@ -330,7 +330,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
   </TabItem>
 
   <TabItem value='viem' label='Viem'>
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversalFromKeypair
     // customPropHighlightRegexEnd=\\);
@@ -362,7 +362,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
   </TabItem>
 
   <TabItem value='solana_web3js' label='Web3 JS (Solana)'>
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversalFromKeypair
@@ -421,7 +421,7 @@ const url = pushChainClient.explorer.getTransactionUrl(txHash);
 
 <Details summary="Live Playground: Get Explorer URL for a transaction hash" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 {`
     // customPropHighlightRegexStart=pushChainClient\.explorer\.getTransactionUrl
     // customPropHighlightRegexEnd=\\);
@@ -486,7 +486,7 @@ const explorerUrls = pushChainClient.explorer.listUrls();
 
 <Details summary="Live Playground: List all Explorer URLs" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 {`
     // customPropHighlightRegexStart=pushChainClient\.explorer\.listUrls
     // customPropHighlightRegexEnd=\\);
@@ -554,7 +554,7 @@ const chainName = PushChain.utils.helpers.getChainName(namespace);
 
 <Details summary="Live Playground: Get Chain Name from Chain ID" className="alert alert--live-play">
 
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/push-protocol/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
     // customPropHighlightRegexStart=PushChain\.utils\.helpers\.getChainName

@@ -135,49 +135,57 @@ function App() {
        , space);
      \`;
 
-      // stub out process.stdin/stdout so readline won't crash
-      const processShim = \`
-        const process = { stdin: {}, stdout: {} };
-      \`;
+    // stub out process.stdin/stdout so readline won't crash, and support process.exit()
+    const processShim = \`
+      const process = {
+        stdin: {},
+        stdout: {},
+        exit: (code = 0) => {
+          // you can decide how you want to handle an exit,
+          // e.g. throw so your “wrapped” async IIFE bails out:
+          throw new Error('Process exited with code ' + code);
+        },
+      };
+    \`;
 
-      // a very minimal browser‐side readline shim
-      const readlineShim = \`;
-        // override Node’s readline to support both callback and Promise
-        const readline = {
-          createInterface: ({ input, output }) => {
-            const iface = {
-              question(questionText, callback) {
-                const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');
-                const text = isPrompt
-                  ? questionText.replace(/^:::prompt:::/, '')
-                  : questionText;
+    // a very minimal browser‐side readline shim
+    const readlineShim = \`;
+      // override Node’s readline to support both callback and Promise
+      const readline = {
+        createInterface: ({ input, output }) => {
+          const iface = {
+            question(questionText, callback) {
+              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');
+              const text = isPrompt
+                ? questionText.replace(/^:::prompt:::/, '')
+                : questionText;
 
-                // If no callback provided, return a Promise
-                if (typeof callback !== 'function') {
-                  return Promise.resolve().then(() => {
-                    if (isPrompt) {
-                      window.alert(text);
-                      return '';
-                    } else {
-                      return window.prompt(text);
-                    }
-                  });
-                }
+              // If no callback provided, return a Promise
+              if (typeof callback !== 'function') {
+                return Promise.resolve().then(() => {
+                  if (isPrompt) {
+                    window.alert(text);
+                    return '';
+                  } else {
+                    return window.prompt(text);
+                  }
+                });
+              }
 
-                // callback-style
-                if (isPrompt) {
-                  window.alert(text);
-                  callback('');
-                } else {
-                  const answer = window.prompt(text);
-                  callback(answer);
-                }
-              },
-              close() {},
-            };
-            return iface;
-          },
-        };
+              // callback-style
+              if (isPrompt) {
+                window.alert(text);
+                callback('');
+              } else {
+                const answer = window.prompt(text);
+                callback(answer);
+              }
+            },
+            close() {},
+          };
+          return iface;
+        },
+      };
     \`;
       
     // shim console
@@ -232,7 +240,7 @@ function App() {
         style={{ margin: '0 auto', width: 'inherit', backgroundColor: '#282a36' }}
         className="${
           highlightRegexStart
-            ? 'push-apply-highlight-in-live-editor'
+            ? 'push-live-editor push-apply-highlight-in-live-editor'
             : 'push-live-editor'
         }"
         ${highlightRegexStart ? `data-highlight-regex-start="${highlightRegexStart}"` : ''}

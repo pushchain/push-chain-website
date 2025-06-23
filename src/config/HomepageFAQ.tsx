@@ -519,10 +519,7 @@ export const IntegratingPush = [
             Docs
           </AMod>
           ,
-          <AMod
-            href='https://github.com/push-protocol/push-sdk'
-            target={'_blank'}
-          >
+          <AMod href='https://github.com/pushchain/push-sdk' target={'_blank'}>
             Github
           </AMod>{' '}
           Push Notifications -{' '}
@@ -531,14 +528,14 @@ export const IntegratingPush = [
           </AMod>
           ,
           <AMod
-            href='https://github.com/push-protocol/push-for-hackers'
+            href='https://github.com/pushchain/push-for-hackers'
             target={'_blank'}
           >
             Github
           </AMod>
           <br />
           <AMod
-            href='https://github.com/push-protocol/push-showrunners-framework'
+            href='https://github.com/pushchain/push-showrunners-framework'
             target={'_blank'}
           >
             Showrunners Framework

@@ -25,7 +25,7 @@ export const HeaderList = {
       title: 'header.developers.link2.title',
       subtitle: 'header.developers.link2.subtitle',
       srcrefoff: 'examples-icon-off',
-      href: 'https://github.com/push-protocol/push-sdk/tree/main/packages/examples',
+      href: 'https://github.com/pushchain/push-sdk/tree/main/packages/examples',
     },
     {
       title: 'header.developers.link3.title',

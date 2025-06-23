@@ -108,7 +108,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
     title: 'Examples',
     srcref: 'star',
     alt: 'Logo representing examples repo - Push Chain',
-    link: 'https://github.com/push-protocol/push-chain-examples/tree/main/examples',
+    link: 'https://github.com/pushchain/push-chain-examples/tree/main/examples',
     target: '_blank',
     description:
       'Examples to show how to use Push Chain and instantly 10x your userbase.',
@@ -138,7 +138,7 @@ export const SdkItemsList: ISdkListItem[] = [
     title: 'Core SDK',
     Svg: require('@site/static/assets/docs/arrowupright.svg').default,
     PinkSvg: require('@site/static/assets/docs/ArrowUpRight-pink.svg').default,
-    link: 'https://github.com/push-protocol/push-chain-sdk/tree/main/packages/core',
+    link: 'https://github.com/pushchain/push-chain-sdk/tree/main/packages/core',
   },
   // {
   //   title: 'REST API',
@@ -168,7 +168,7 @@ export const SdkItemsList: ISdkListItem[] = [
     title: 'UI Kit',
     Svg: require('@site/static/assets/docs/arrowupright.svg').default,
     PinkSvg: require('@site/static/assets/docs/ArrowUpRight-pink.svg').default,
-    link: 'https://github.com/push-protocol/push-chain-sdk/tree/main/packages/ui-kit',
+    link: 'https://github.com/pushchain/push-chain-sdk/tree/main/packages/ui-kit',
   },
 ];
 

@@ -45,7 +45,7 @@ This unified identity gains enhanced privacy through zkPass, enabling **users to
 ## 👷‍♂️How does it benefit builders?
 
 **Build Universally accessible privacy-centric DApps**
-Push Chain enables developers to build applications that work across any blockchain, while zkPass adds powerful privacy-preservation capabilities to this universal reach. Developers can use the [Push Chain](https://github.com/push-protocol/push-chain-sdk) and [Transgate](https://zkpass.gitbook.io/zkpass/developer-guides/extension-js-sdk) SDKs to create apps that verify user credentials, assets, or achievements across chains without managing complex privacy infrastructure or dealing with multiple chain-specific identity systems.
+Push Chain enables developers to build applications that work across any blockchain, while zkPass adds powerful privacy-preservation capabilities to this universal reach. Developers can use the [Push Chain](https://github.com/pushchain/push-chain-sdk) and [Transgate](https://zkpass.gitbook.io/zkpass/developer-guides/extension-js-sdk) SDKs to create apps that verify user credentials, assets, or achievements across chains without managing complex privacy infrastructure or dealing with multiple chain-specific identity systems.
 
 **Build privately - verifiable DeFi Protocols**
 
