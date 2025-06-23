@@ -531,7 +531,7 @@ const explorerUrls = pushChainClient.explorer.listUrls();
 Every external chain is represented as a particular string on Push Chain. You can see the list of supported chains in the [Chain Configuration](/docs/chain/setup/chain-config#universal-chain-namespace) section.
 
 ```typescript
-const chainName = PushChain.utils.helpers.chainNameFromNamespace(namespace);
+const chainName = PushChain.utils.helpers.getChainName(namespace);
 ```
 
 | **Arguments**        | **Type** | **Description**                                      |

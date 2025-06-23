@@ -3672,10 +3672,10 @@
     tweetnacl "^1.0.3"
     viem "2.27.2"
 
-"@pushchain/core@^0.1.22":
-  version "0.1.22"
-  resolved "https://registry.yarnpkg.com/@pushchain/core/-/core-0.1.22.tgz#39857e1978d9b477344b7d815543298a150072fc"
-  integrity sha512-Dxkqsk32NYlscy1hPR9XZr5Zz0adcCJaS5b+95/l7Ea6fdRJALDiaWKrhgQSUiKduwamBAOx02ydvfR21k/8lg==
+"@pushchain/core@^0.1.24":
+  version "0.1.24"
+  resolved "https://registry.yarnpkg.com/@pushchain/core/-/core-0.1.24.tgz#600b32ad50525d51a962df566d71789372886b4e"
+  integrity sha512-VZISRsfIxfJmr1R5lCnckSnfga5dRiA/W956ILk6dYsEwhDsnDNG5DEItLEwwTzBWgEkWQdOe10uKqgibNeAaQ==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
     "@coral-xyz/anchor" "^0.31.0"
