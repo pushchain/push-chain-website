@@ -190,7 +190,7 @@ Here is an example of how to initialize the Push Chain SDK with a universal sign
       console.log(JSON.stringify(pushChainClient))
   }
 
-  main().catch(console.error)
+  await main().catch(console.error)
   `}
 
 </NodeJSVirtualIDE>
@@ -227,7 +227,7 @@ Here is an example of how to initialize the Push Chain SDK with a universal sign
       console.log(JSON.stringify(pushChainClient))
   }
 
-  main().catch(console.error)
+  await main().catch(console.error)
   `}
 
 </NodeJSVirtualIDE>
@@ -258,7 +258,7 @@ Here is an example of how to initialize the Push Chain SDK with a universal sign
       console.log(JSON.stringify(pushChainClient))
   }
 
-  main().catch(console.error)
+  await main().catch(console.error)
   `}
 
 </NodeJSVirtualIDE>
@@ -335,7 +335,7 @@ const originAccount = pushChainClient.universal.origin
       console.log(JSON.stringify(originAccount, null, 2))
     }
 
-    main().catch(console.error)
+    await main().catch(console.error)
 `}
 
 </NodeJSVirtualIDE>
@@ -476,7 +476,7 @@ const signature = await pushChainClient.universal.signTypedData({
       }
     }
 
-    main().catch(console.error)
+    await main().catch(console.error)
 
 `}
 
