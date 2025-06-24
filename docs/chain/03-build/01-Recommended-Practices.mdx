@@ -40,8 +40,9 @@ This compatibility makes onboarding to Push Chain seamless and efficient for tea
 If you're building backend services, automation scripts, bots, or analytics pipelines, Push Chain offers an official SDK: [@pushchain/core](https://npmjs.com/package/@pushchain/core).
 
 `@pushchain/core` is ideal for:
+
 - Server-side integrations
-- Backend logic for dApps 
+- Backend logic for dApps
 - Indexing or monitoring tools that need to interact with the Push Chain network reliably and efficiently.
 
 ## UI Kit SDK: `@pushchain/ui-kit`
@@ -70,8 +71,8 @@ These helpers are already deployed and maintained, so you can easily integrate t
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk"}}>
 
 {`
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
 
     async function main() {
       console.log('Creating Universal Signer - Ethers V6');
@@ -96,12 +97,13 @@ These helpers are already deployed and maintained, so you can easily integrate t
     }
 
     await main().catch(console.error)
+
 `}
 
 </NodeJSVirtualIDE>
 
-
 ## Next Steps
+
 - Create [Universal Signer](/docs/chain/build/create-universal-signer) from existing signer
-- Abstract away creation of the Universal Signer using [UI Kit](/docs/chain/build/ui-kit)
+- Abstract away creation of the Universal Signer using [UI Kit](/docs/chain/ui-kit)
 - Revist [Important Concepts](/docs/chain/important-concepts)

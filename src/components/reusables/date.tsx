@@ -32,9 +32,9 @@ export function ReadingTime({ readingTime }) {
 }
 
 export function Date({ date, formattedDate, mr }) {
-  var year = moment().year();
+  const year = moment().year();
   const isPresentYear = formattedDate?.includes(year);
-  const newDate = moment(formattedDate).format(
+  const newDate = moment(formattedDate, 'MMM DD, YYYY').format(
     !isPresentYear ? 'MMM DD,  YYYY' : 'MMM DD'
   );
 
