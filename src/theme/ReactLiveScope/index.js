@@ -114,6 +114,7 @@ const ReactLiveScope = {
   TypedData: loadClientSideLibraryViem('TypedData'),
   TypedDataDomain: loadClientSideLibraryViem('TypedDataDomain'),
   defineChain: loadClientSideLibraryViem('defineChain'),
+  webSocket: loadClientSideLibraryViem('webSocket'),
 
   privateKeyToAccount: loadClientSideLibraryViemAccounts('privateKeyToAccount'),
   generatePrivateKey: loadClientSideLibraryViemAccounts('generatePrivateKey'),

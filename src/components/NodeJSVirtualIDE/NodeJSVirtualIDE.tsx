@@ -212,6 +212,7 @@ function App() {
         Keypair,
         PublicKey,
         parseTransaction,
+        webSocket,
         TypedData,
         TypedDataDomain,
         privateKeyToAccount,

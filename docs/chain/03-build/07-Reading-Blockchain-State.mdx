@@ -236,24 +236,54 @@ import { defineChain, createPublicClient, http } from 'viem';
 <NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk" }}>
 
 {`
-// customPropHighlightRegexStart=ws\.on
-// customPropHighlightRegexEnd=}\\);
-import { ethers } from 'ethers';
-const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-const watchedAddress = '0x8a36C6358861F0CE1672B04345C9e2E6717Be946'.toLowerCase();
+    // customPropHighlightRegexStart=const ws = new ethers\.Web
+    // customPropHighlightRegexEnd=\\);
+    import { ethers } from 'ethers';
+
+    const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
 
     console.log('Connection Opened!');
 
     ws.on('block', async (blockNumber) => {
-      const block = await ws.getBlock(blockNumber, true);
-      if (block && block.transactions) {
-        console.log('New block:', block.number);
-      }
+      console.log("Block produced: ", blockNumber);
     });
 
     // Stop after 10s
     setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);
 
+`}
+
+</NodeJSVirtualIDE>
+  </TabItem>
+  <TabItem value="viem" label="Viem">
+<NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk" }}>
+
+{`
+
+    // customPropHighlightRegexStart=createPublicClient\\(
+    // customPropHighlightRegexEnd=\\);
+    import { createPublicClient, defineChain, webSocket } from 'viem';
+
+    // Define Push Testnet Chain
+    const pushTestnet = defineChain({
+      rpcUrls: {
+        default: {
+          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+        },
+      },
+    });
+
+    const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
+
+    console.log('Connection Opened!');
+
+    const stop = client.watchBlocks({
+      onBlock: (b) => console.log("Block produced: ", b.number),
+      onError: console.error,
+    });
+
+    // Stop after 10s
+    setTimeout(stop, 10000);
 `}
 
 </NodeJSVirtualIDE>
@@ -267,9 +297,9 @@ const watchedAddress = '0x8a36C6358861F0CE1672B04345C9e2E6717Be946'.toLowerCase(
 <NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk" }}>
 
 {`
-// customPropHighlightRegexStart=ws\.on
-// customPropHighlightRegexEnd=}\\);
-import { ethers } from 'ethers';
+    // customPropHighlightRegexStart=ws\.on
+    // customPropHighlightRegexEnd=}\\);
+    import { ethers } from 'ethers';
 
     const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
 
@@ -290,9 +320,9 @@ import { ethers } from 'ethers';
 <NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk" }}>
 
 {`
-// customPropHighlightRegexStart=client\.watchBlocks
-// customPropHighlightRegexEnd=}\\);
-import { createPublicClient, defineChain, webSocket } from 'viem';
+    // customPropHighlightRegexStart=client\.watchBlocks
+    // customPropHighlightRegexEnd=}\\);
+    import { createPublicClient, defineChain, webSocket } from 'viem';
 
     // Define Push Testnet Chain
     const pushTestnet = defineChain({
@@ -306,7 +336,7 @@ import { createPublicClient, defineChain, webSocket } from 'viem';
     const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
     const stop = client.watchBlocks({
-      onBlock: (b) => console.log('🆕 Block', b.number),
+      onBlock: (b) => console.log("Block produced: ", b.number),
       onError: console.error,
     });
 
@@ -341,7 +371,6 @@ import { ethers } from 'ethers';
       const block = await provider.getBlock(blockNumber, true);
 
       if (block && block.transactions) {
-        let prevTxCount=txCount;
         const txs = await Promise.all(block.transactions.map(hash => block.getTransaction(hash)));
 
         txs
@@ -352,8 +381,8 @@ import { ethers } from 'ethers';
       }
     });
 
-    // Stop after 10s
-    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);
+    // Stop after 20s
+    setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
 
 `}
 
@@ -366,9 +395,9 @@ import { ethers } from 'ethers';
 <NodeJSVirtualIDE repo={{ title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk" }}>
 
 {`
-// customPropHighlightRegexStart=viemClient\.watchBlocks
-// customPropHighlightRegexEnd=}\\);
-import { defineChain } from 'viem';
+    // customPropHighlightRegexStart=viemClient\.watchBlocks
+    // customPropHighlightRegexEnd=}\\);
+    import { createPublicClient, defineChain, webSocket } from 'viem';
 
     // Define Push Testnet Chain
     const pushTestnet = defineChain({
@@ -379,20 +408,32 @@ import { defineChain } from 'viem';
       },
     });
 
-    const viemClient = createPublicClient({
-      chain: pushTestnet,
-      transport: http(),
-    })
+    const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
-    const watchedAddress = '0x8a36C6358861F0CE1672B04345C9e2E6717Be946'.toLowerCase();
+    const watchedAddress = '0x0000000000000000000000000000000000042101';
 
-    viemClient.watchBlocks({
-      onBlock: (block) => {
-          block.transactions
-              .filter((tx) => tx.from?.toLowerCase() === watchedAddress)
-              .forEach((tx) => console.log('Tx from watched address →', tx.hash));
+    console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
+
+    const stop = client.watchBlocks({
+      onBlock: async (block) => {
+        console.log('Block produced: ', block.number)
+
+        for (const txHash of block.transactions) {
+          try {
+            const tx = await client.getTransaction({ hash: txHash })
+            // Check if transaction is from watched address
+            if (tx.to?.toLowerCase() === watchedAddress.toLowerCase()) {
+              console.log('Tx detected →', tx.hash)
+            }
+          } catch (error) {
+            console.error('Error fetching transaction:', txHash, error)
+          }
+        }
       },
-    });
+  })
+
+    // Stop after 20s
+    setTimeout(stop, 20000);
 
 `}
 

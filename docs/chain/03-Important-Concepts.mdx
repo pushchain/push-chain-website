@@ -94,7 +94,7 @@ The `UniversalAccount` is a chain-agnostic way of representing a wallet address,
       console.log(JSON.stringify(solanaAccount, null, 2))
     }
 
-    main().catch(console.error)
+    await main().catch(console.error)
 
 `}
 
@@ -137,7 +137,7 @@ A `UniversalSigner` extends `UniversalAccount` with signing capabilities.
       console.log(JSON.stringify(universalSignerFromSol, null, 2))
     }
 
-    main().catch(console.error)
+    await main().catch(console.error)
 
 `}
 
