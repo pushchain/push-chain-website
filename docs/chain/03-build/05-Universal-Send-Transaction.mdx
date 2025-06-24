@@ -126,8 +126,60 @@ main().catch(console.error);
 
 ## Live Playground
 
-<Tabs className="liveplaytab" groupId="send-universal-transaction">
-  <TabItem value='ethers_v6' label='Ethers (v6)' default>
+<Tabs className="liveplaytab" groupId="send-universal-transaction-coding">
+  <TabItem value='ethers_v6_quick' label='Quickstart'>
+  
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction-quickstart"}}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.sendTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      console.log('Quickstart Example - See rest of the tabs for end-to-end flow');
+
+      // Set up wallet, provider and signer
+      const wallet = ethers.Wallet.createRandom();
+
+      // Replace it with different JsonRpcProvider to target Ethereum Account, BNB Account, etc
+      // const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia');
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // Convert to Universal Signer and Initialize Push Chain SDK
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction({
+          to: '0x0000000000000000000000000000000000042101',
+          value: BigInt('100000000000000000'), // 0.1 PC in wei
+        });
+        console.log('Transaction Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('Transaction failed:', error);
+
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+  </NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='ethers_v6' label='Ethers (v6)'>
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
@@ -407,7 +459,103 @@ main().catch(console.error);
 
   </TabItem>
 
-  <TabItem value='ui_kit' label='UI Kit (Frontend / Abstracted)'>
+  <TabItem value='ethers_v6_smart_contract' label='Smart Contract Interaction'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+    // customPropHighlightRegexStart=universal\.sendTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    // ——— CONFIG ———
+    // RPC URL OF DIFFERENT CHAINS
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+      
+      // Choose chain from which to send transaction
+      const chainMeta = await returnUserChainSelection();
+      
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+      
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+      });
+      
+      // 5) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        // data: '0x...', // For contract interactions - hex encoded
+      };
+      
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+      
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+    // --- HELPER FUNCTIONS ---
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please select 1 or 2.');
+        process.exit(0);
+      }
+      
+      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+      
+      return {id: selection, name: name};
+    }                                                  
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='ui_kit' label='UI Kit'>
   
     ```jsx live
     // customPropHighlightRegexStart=<PushUniversalWalletProvider
