@@ -24,7 +24,7 @@ import Details from '@theme/Details';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Sending Universal Transaction
-**_`pushChainClient.universal.sendTransaction({options}): Promise<TransactionReceipt>`_**
+**_`pushChainClient.universal.sendTransaction({tx}): Promise<TransactionReceipt>`_**
 
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
@@ -33,17 +33,30 @@ const txHash = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-| **Arguments**          | **Type** | **Description**                                       |
-| ---------------------- | -------- | ----------------------------------------------------- |
-| _`options.to`_                 | `string` | The address of the recipient.                         |
-| _`options.value`_              | `BigInt` | The value to send in wei.                             |
-| `options.data`                 | `string` | The data to send.                                     |
-| `options.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
-| `options.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
-| `options.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
-| `options.deadline`             | `BigInt` | The deadline for the transaction.                     |
+| **Arguments**                  | **Type** | **Description**                                       |
+| ------------------------------ | -------- | ----------------------------------------------------- |
+| _`tx.to`_                 | `string` | The address of the recipient.                         |
+| _`tx.value`_              | `BigInt` | The value to send in wei.                             |
+| `tx.data`                 | `string` | The data to send.                                     |
+| `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `tx.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+| `tx.deadline`             | `BigInt` | The deadline for the transaction.                     |
+| `tx.progressHook`                 | `(progress: ProgressHookType) => void` | A callback function to receive progress updates during transaction lifecycle, especially for cross-chain transactions.             |
 
 > Note: These _`Arguments`_ are mandatory.
+
+<Details summary="ProgressHook Type and Response" className="alert alert--minimal">
+
+| **Response** | **Type** | **Description** |
+| --- | --- | --- |
+| `progress` | `object` | The progress of the transaction. |
+| `progress.id` | `string` | Predefined ID for the progress. |
+| `progress.infoType` | `string` | Predefined InfoType for the progress. |
+| `progress.Type` | `string` | The type of the transaction. |
+| `progress.Data` | `object` | The data of the transaction. |
+
+</Details>
 
 <Details summary="Returns `TransactionReceipt` <object>" className="alert alert--fn-args">
 
@@ -458,8 +471,56 @@ main().catch(console.error);
 </NodeJSVirtualIDE>
 
   </TabItem>
+  
+  <TabItem value='ui_kit' label='UI Kit'>
+  
+    ```jsx live
+    // customPropHighlightRegexStart=<PushUniversalWalletProvider
+    // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
+    // customPropMinimized='false'
+    // Import necessary components from @pushchain/ui-kit
+    import {
+      PushUniversalWalletProvider,
+      PushUniversalAccountButton,
+      usePushWalletContext,
+      usePushChainClient,
+      PushUI,
+    } from '@pushchain/ui-kit';
 
-  <TabItem value='ethers_v6_smart_contract' label='Smart Contract Interaction'>
+    function App() {
+      // Define Wallet Config
+      const walletConfig = {
+        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+      };
+
+      function Component() {
+        const { connectionStatus } = usePushWalletContext();
+        const { pushChainClient } = usePushChainClient();
+
+        return (
+          <div>
+            <PushUniversalAccountButton />
+
+            {connectionStatus == 'connected' &&
+              <p>Push Chain Client Initialized with Universal Signer: ${JSON.stringify(pushChainClient)}</p>
+            }
+          </div>
+        );
+      }
+
+      return (
+        <PushUniversalWalletProvider config={walletConfig}>
+          <Component />
+        </PushUniversalWalletProvider>
+      );
+    }
+    ```
+
+  </TabItem>
+  
+</Tabs>
+
+<Details summary="Live Playground: Interact with Smart Contract" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
@@ -553,55 +614,102 @@ main().catch(console.error);
 
 </NodeJSVirtualIDE>
 
-  </TabItem>
+</Details>
 
-  <TabItem value='ui_kit' label='UI Kit'>
-  
-    ```jsx live
-    // customPropHighlightRegexStart=<PushUniversalWalletProvider
-    // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
-    // customPropMinimized='false'
-    // Import necessary components from @pushchain/ui-kit
-    import {
-      PushUniversalWalletProvider,
-      PushUniversalAccountButton,
-      usePushWalletContext,
-      usePushChainClient,
-      PushUI,
-    } from '@pushchain/ui-kit';
+<Details summary="Live Playground: Progress Lifecycle of Transaction" className="alert alert--live-play">
 
-    function App() {
-      // Define Wallet Config
-      const walletConfig = {
-        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+    // customPropHighlightRegexStart=universal\.sendTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
+
+    // ——— CONFIG ———
+    // RPC URL OF DIFFERENT CHAINS
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+      
+      // Choose chain from which to send transaction
+      const chainMeta = await returnUserChainSelection();
+      
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+      
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+      });
+      
+      // 5) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        // data: '0x...', // For contract interactions - hex encoded
       };
+      
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
 
-      function Component() {
-        const { connectionStatus } = usePushWalletContext();
-        const { pushChainClient } = usePushChainClient();
-
-        return (
-          <div>
-            <PushUniversalAccountButton />
-
-            {connectionStatus == 'connected' &&
-              <p>Push Chain Client Initialized with Universal Signer: ${JSON.stringify(pushChainClient)}</p>
-            }
-          </div>
-        );
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+      
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
       }
-
-      return (
-        <PushUniversalWalletProvider config={walletConfig}>
-          <Component />
-        </PushUniversalWalletProvider>
-      );
     }
-    ```
 
-  </TabItem>
-  
-</Tabs>
+    await main().catch(console.error);
 
+    // --- HELPER FUNCTIONS ---
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please select 1 or 2.');
+        process.exit(0);
+      }
+      
+      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+      
+      return {id: selection, name: name};
+    }                                                  
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
 
 ## Next Steps

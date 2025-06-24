@@ -206,6 +206,51 @@
     color-mix(in srgb, var(--ifm-color-primary) 50%, transparent);
 }
 
+.alert.alert--minimal {
+  border-color: transparent !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-shadow: none !important;
+}
+
+.alert.alert--minimal summary {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  font-weight: 600 !important;
+  color: color-mix(
+    in srgb,
+    var(--ifm-color-primary-text) 50%,
+    transparent
+  ) !important;
+}
+
+.alert.alert--minimal summary::before {
+  display: none !important;
+}
+
+.alert.alert--minimal summary::after {
+  position: absolute;
+  content: '';
+  border-color: transparent transparent transparent var(--ifm-color-primary);
+
+  content: '';
+  border-width: var(--docusaurus-details-summary-arrow-size);
+  border-style: solid;
+
+  transform: rotate(0deg) translateX(75%) translateY(60%);
+  transition: var(--docusaurus-details-transition);
+  transform-origin: calc(var(--docusaurus-details-summary-arrow-size) / 2) 50%;
+}
+
+.alert.alert--minimal[open] summary::after {
+  transform: rotate(90deg) translateX(75%) translateY(-70%);
+}
+
+.alert.alert--minimal
+  .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
+  border-top: 1px solid color-mix(in srgb, transparent 50%, transparent) !important;
+}
+
 /* ----- */
 /* Custom Fonts */
 /* ----- */
@@ -504,7 +549,13 @@ article tr > td > code,
 article ul > li > code,
 article em > code {
   font-size: 0.8em !important;
-  padding: 4px 8px;
+  padding: 2px 8px;
+  display: inline-block;
+  margin: 2px auto;
+}
+
+article tr > td > code:only-child {
+  display: inline-block;
 }
 
 article em > code {
@@ -516,7 +567,7 @@ article em > code {
 
 /* Override for having mandatory arguments in developer documentation */
 .PushDocs p code {
-  padding: 4px 8px;
+  padding: 2px 8px;
 }
 
 .PushDocs article em > code {
