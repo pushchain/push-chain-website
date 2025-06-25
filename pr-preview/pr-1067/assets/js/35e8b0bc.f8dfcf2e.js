@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_chain_website=self.webpackChunkpush_chain_website||[]).push([[95187],{941016:e=>{e.exports=JSON.parse('{"label":"Intent Solvers","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/intent-solvers","allTagsPath":"/push-chain-website/pr-preview/pr-1067/blog/tags","count":1,"unlisted":false}')}}]);
