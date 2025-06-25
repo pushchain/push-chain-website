@@ -1854,7 +1854,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@coral-xyz/anchor@npm:^0.31.0":
+"@coral-xyz/anchor@npm:^0.31.0, @coral-xyz/anchor@npm:^0.31.1":
   version: 0.31.1
   resolution: "@coral-xyz/anchor@npm:0.31.1"
   dependencies:
@@ -4910,28 +4910,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^0.1.18":
-  version: 0.1.21
-  resolution: "@pushchain/core@npm:0.1.21"
-  dependencies:
-    "@bufbuild/protobuf": "npm:^2.0.0"
-    "@coral-xyz/anchor": "npm:^0.31.0"
-    "@cosmjs/crypto": "npm:0.33.1"
-    "@cosmjs/encoding": "npm:0.33.1"
-    "@cosmjs/proto-signing": "npm:^0.33.1"
-    "@cosmjs/stargate": "npm:^0.33.1"
-    "@cosmjs/tendermint-rpc": "npm:0.33.1"
-    "@solana/web3.js": "npm:^1.68.0"
-    cosmjs-types: "npm:0.9.0"
-    ethers: "npm:^6.14.3"
-    protobufjs: "npm:7.4.0"
-    tslib: "npm:^2.3.0"
-    tweetnacl: "npm:^1.0.3"
-    viem: "npm:2.27.2"
-  checksum: 10c0/d4ed6d321c72ced69347a1c50641daf404bd999310685eac18621407cef5f85eded45afc63e63b962017aaacba2a3ac0eacb3dbc36fd7dfafa8f137638b41711
-  languageName: node
-  linkType: hard
-
 "@pushchain/core@npm:^0.1.24":
   version: 0.1.24
   resolution: "@pushchain/core@npm:0.1.24"
@@ -4954,19 +4932,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^1.1.0-alpha.7":
-  version: 1.1.0-alpha.7
-  resolution: "@pushchain/ui-kit@npm:1.1.0-alpha.7"
+"@pushchain/ui-kit@npm:^1.1.0-alpha.9":
+  version: 1.1.0-alpha.9
+  resolution: "@pushchain/ui-kit@npm:1.1.0-alpha.9"
   dependencies:
+    "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^0.1.18"
+    "@pushchain/core": "npm:^0.1.24"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.3"
     buffer: "npm:^6.0.3"
     ethers: "npm:^6.13.5"
     tslib: "npm:^2.3.0"
     viem: "npm:^2.23.9"
-  checksum: 10c0/1072d39e2cef11b445aac8114c584420ce39006b5334d47e9509e62ff05c0e0c6129bea49886a50afe9d4701dcd122febfcd1a9697962145bf01212280f4fa37
+  checksum: 10c0/bf042bcdefa4f5142094233363411c38524089c569a5a8069f64a862c3f04e79de1b7022d59ebd3b624997564a614ec921f365c59804596265c6bb50d8172d73
   languageName: node
   linkType: hard
 
@@ -19721,7 +19700,7 @@ __metadata:
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
     "@pushchain/core": "npm:^0.1.24"
-    "@pushchain/ui-kit": "npm:^1.1.0-alpha.7"
+    "@pushchain/ui-kit": "npm:^1.1.0-alpha.9"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
