@@ -522,7 +522,7 @@ import \* as readline from 'node:readline/promises';
             <PushUniversalAccountButton />
 
             {connectionStatus == 'connected' &&
-              <button>Send Transaction</button>
+              <button onClick={handleSendTransaction}>Send Transaction</button>
             }
           </div>
         );
