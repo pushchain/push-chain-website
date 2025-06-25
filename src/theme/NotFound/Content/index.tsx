@@ -21,8 +21,13 @@ export default function NotFoundContent({ className }: Props): ReactElement {
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
   // Normalize the pathname by removing the "push-website/pr-preview/pr-XXX" prefix
-  const normalizedPathname = location?.pathname.startsWith('/push-website')
-    ? location?.pathname.replace(/^\/push-website\/pr-preview\/pr-\d+/, '')
+  const normalizedPathname = location?.pathname.startsWith(
+    '/push-chain-website'
+  )
+    ? location?.pathname.replace(
+        /^\/push-chain-website\/pr-preview\/pr-\d+/,
+        ''
+      )
     : location.pathname;
 
   const oldDocsUrls = [

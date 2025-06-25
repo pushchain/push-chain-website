@@ -19703,9 +19703,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"push-website@workspace:.":
+"push-chain-website@workspace:.":
   version: 0.0.0-use.local
-  resolution: "push-website@workspace:."
+  resolution: "push-chain-website@workspace:."
   dependencies:
     "@docusaurus/core": "npm:3.0.1"
     "@docusaurus/cssnano-preset": "npm:3.0.1"
