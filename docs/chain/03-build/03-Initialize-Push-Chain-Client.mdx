@@ -27,6 +27,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 
 ## Initialize Push Chain Client
 
@@ -43,18 +44,27 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 });
 ```
 
+<PushAPIReference title="Arguments">
+
 | Arguments                 | Type                             | Default                                          | Description                                                                                                                                                                                          |
 | --------------------- | -------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`signer`_   | `UniversalSigner`                | -                                                | Chain-agnostic signer responsible for signing transactions and messages.                                                                                                                         |
 | _`options.network`_     | `PushChain.CONSTANTS.PUSH_NETWORK`                        | - | Push Chain network to conenct to. For example: `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushChain.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details>                                                                                                                                |
 | `options.rpcUrls`     | `Partial<Record<CHAIN, string>>` | `{}`                                             | Custom RPC URLs mapped by chain IDs. If not provided, the default RPC URLs for the network will be used. Example: `rpcUrls: {[CHAIN.ETHEREUM_SEPOLIA]: 'https://sepolia.infura.io/v3/your-api-key', [CHAIN.SOLANA_DEVNET]: 'https://api.devnet.solana.com'}` |
+
+
+</PushAPIReference>
+
+<Details summary="Advance Arguments" className="alert alert--minimal code">
+
+| Arguments                 | Type                             | Default                                          | Description                                                                                                                                                                                          |
+| --------------------- | -------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `options.blockExplorers` | `Partial<Record<CHAIN, string[]>>` | `{[CHAIN.PUSH_TESTNET_DONUT]: ['https://donut.push.network']}` | Custom block explorer URLs mapped by chain IDs. If not provided, the default block explorer URLs for the network will be used. |
 | `options.printTraces` | `boolean`                        | `false`                                          | When true, console logs the internal trace logs for debugging requests to nodes                                                                                                                |
 
+</Details>
 
-<Details summary="Available Options" className="alert alert--minimal">`PushChain.CONSTANTS.PUSH_NETWORK.MAINNET` `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET` `PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details>
-
-<Details summary="Returns `PushChainClient` <object>">
+<Details summary="Returns `PushChainClient` <object>" className="alert alert--fn-args">
 
 ```typescript
 // PushChainClient object
@@ -86,11 +96,9 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 
 </Details>
 
-## Example
+**Let's create your first Push Chain client!** Try the code in live playground 👇.
 
-Here is an example of how to initialize the Push Chain SDK with a universal signer and a custom RPC URL.
-
-<Tabs groupId="initialize-push-chain-client">
+<Tabs className="liveplaytab" groupId="initialize-push-chain-client">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk"}}>
 
@@ -391,144 +399,4 @@ const originAccount = pushChainClient.universal.origin
   </TabItem>
 </Tabs>
 
-## Creating Signatures with Push Chain SDK
-
-The Push Chain SDK provides three essential signature functions that work across different blockchain networks (EVM and SVM). These functions handle the complexity of signing data and transactions in a chain-agnostic manner.
-
-### Available Signature Functions
-
-| Function | Description | Return Type |
-|----------|-------------|-------------|
-| `signMessage` | Signs arbitrary message data | Hex string |
-| `signTypedData` | Signs structured data (EIP-712) | Hex string |
-
-### 1. Sign Message
-
-The `signMessage` function signs arbitrary message data and automatically handles the encoding format.
-
-```typescript
-// Create message data
-const message = new TextEncoder().encode('Hello, Push Chain!')
-
-// Sign the message
-const signature = await pushChainClient.universal.signMessage(message)
-```
-
-### 2. Sign Typed Data
-
-The `signTypedData` function signs structured data following the EIP-712 standard. This function is primarily used for EVM chains and throws an error if the underlying signer doesn't support typed data signing.
-
-```typescript
-// EIP-712 typed data structure
-const domain = {
-  name: 'Push Chain',
-  version: '1',
-  chainId: 42101, // Push testnet
-  verifyingContract:
-    '0x1234567890123456789012345678901234567890' as `0x${string}`,
-};
-
-const types = {
-  Person: [
-    { name: 'name', type: 'string' },
-    { name: 'wallet', type: 'address' },
-  ],
-};
-
-const message = {
-  name: 'Alice',
-  wallet: '0x9821655B609186a9296261638FA74e1DFBA4AC88' as `0x${string}`,
-};
-
-// Sign the typed data
-const signature = await pushChainClient.universal.signTypedData({
-  domain,
-  types,
-  primaryType: 'Person',
-  message,
-})
-```
-
-### Example
-
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-sdk"}}>
-
-{`
-
-    import { PushChain } from '@pushchain/core'
-    import { ethers } from 'ethers'
-
-    async function main() {
-      console.log('Creating Universal Signer - Ethers V6')
-
-      // Create random wallet
-      const wallet = ethers.Wallet.createRandom()
-
-      // Set up provider connected to Ethereum Sepolia Testnet
-      const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia')
-      const signer = wallet.connect(provider)
-
-      // Convert ethers signer to Universal Signer
-      const universalSigner = await PushChain.utils.signer.toUniversal(signer)
-      console.log('Got universal signer')
-
-      // Initialize Push Chain SDK
-      const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
-      })
-      console.log('Got push chain client')
-
-      // 1. Sign Message Example
-      console.log('Signing Message...')
-      const messageToSign = new TextEncoder().encode('Hello, Push Chain!')
-      const messageSignature = await pushChainClient.universal.signMessage(messageToSign)
-      console.log('Message signature:', messageSignature)
-
-      // 2. Sign Typed Data Example
-      console.log('Signing Typed Data...')
-      const domain = {
-        name: 'Push Chain',
-        version: '1',
-        chainId: 42101, // Push testnet
-        verifyingContract:
-          '0x1234567890123456789012345678901234567890',
-      };
-
-      const types = {
-        Person: [
-          { name: 'name', type: 'string' },
-          { name: 'wallet', type: 'address' },
-        ],
-      };
-
-      const message = {
-        name: 'Alice',
-        wallet: '0x9821655B609186a9296261638FA74e1DFBA4AC88',
-      };
-
-      // Sign the typed data
-      const signature = await pushChainClient.universal.signTypedData({
-        domain,
-        types,
-        primaryType: 'Person',
-        message,
-      })
-
-      try {
-        const typedDataSignature = await pushChainClient.universal.signTypedData({
-          domain,
-          types,
-          primaryType: 'Person',
-          message,
-        })
-        console.log('Typed data signature:', typedDataSignature)
-      } catch (error) {
-        console.log('Typed data signing not supported:', error.message)
-      }
-    }
-
-    await main().catch(console.error)
-
-`}
-
-</NodeJSVirtualIDE>
+## Next Steps

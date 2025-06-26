@@ -44,31 +44,30 @@ The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/sr
 
 This helper contract helps in fetching cross-chain information about an address. It also provides identity-mapping between source chain wallet address and Push Chain address and can determine if the address is native to Push Chain or is proxy for external chain user.
 
-In order to use the UEAFactory in your contract, there are 2 simple ways:
-
-1. Import it directly from Push Chain Core Repository, or
-2. Define the interface manually in your solidity contract.
+In order to use the UEAFactory in your contract, you can either:
 
 #### 1. Import it directly from Push Chain Core Repository
 
-This step is exactly like you to import any other contract in your solidity code.
+```solidity
+import "push-chain-core-contracts/src/Interfaces/IUEAFactory.sol";
+```
+
+<Details summary="For Foundry Developers">
+Do the additional steps to enable the same in your Foundry:
 
 1. Run forge install
 ```bash
 forge install pushchain/push-chain-core-contracts
 ```
 
-2. Add remappings to your `foundry.toml` file
+2. Add remappings to your **foundry.toml** file
 ```toml 
-    remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
+remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
 ```
+</Details>
 
-3. Import the interface in your contract
-```solidity
-import "push-chain-core-contracts/src/Interfaces/IUEAFactory.sol";
-```
 
-#### 2. Define the interface manually in your solidity contract
+#### Or 2. Define the interface manually in your solidity contract
 
 <Details summary="Use the following interface directly in your contract">
 

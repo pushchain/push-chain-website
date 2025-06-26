@@ -21,11 +21,12 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Initialize EVM Client
 
-<Tabs groupId="initialize-evm-client">
+<Tabs className="liveplaytab" groupId="initialize-evm-client">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
 
 <NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples"}}>
@@ -40,7 +41,7 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
     function initEthers() {
       const provider = new ethers.JsonRpcProvider(RPC_URL);
-      console.log('Ethers.js provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
+      console.log('Got Ethers.js provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
     }
 
     initEthers();
@@ -80,9 +81,9 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
   </TabItem>
 </Tabs>
 
-## Example: Fetch a Transaction by Hash
+<Details summary="Live Playground: Fetch a Transaction by Hash" className="alert alert--live-play alert-top-pad-20">
 
-<Tabs groupId="initialize-evm-client">
+<Tabs className="liveplaytab" groupId="initialize-evm-client">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
 
 <NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples"}}>
@@ -139,6 +140,8 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
   </TabItem>
 </Tabs>
+
+</Details>
 
 ## Next Steps
 
