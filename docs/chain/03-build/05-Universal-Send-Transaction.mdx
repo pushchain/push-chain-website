@@ -128,7 +128,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction({
           to: '0x0000000000000000000000000000000000042101',
-          value: BigInt('100000000000000000'), // 0.1 PC in wei
+          value: BigInt('1'),
         });
         console.log('Transaction Response:', JSON.stringify(txResponse));
       } catch (error) {
@@ -200,7 +200,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -253,13 +253,9 @@ import \* as readline from 'node:readline/promises';
 // customPropHighlightRegexEnd=\\);
 import { PushChain } from '@pushchain/core';
 import { createWalletClient, defineChain, http } from 'viem';
+import { sepolia } from 'viem/chains';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import \* as readline from 'node:readline/promises';
-
-    // ——— CONFIG ———
-    // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+import * as readline from 'node:readline/promises';
 
     // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
@@ -267,7 +263,7 @@ import \* as readline from 'node:readline/promises';
     // Enable User Input
     const rl = readline.createInterface({
       input: process.stdin,
-      output: process.stdout
+      output: process.stdout,
     });
 
     // ⭐️ MAIN FUNCTION ⭐️
@@ -283,17 +279,13 @@ import \* as readline from 'node:readline/promises';
       console.log('🔑 Got account: ', account.address);
 
       // 2) Set up chain config and viem client
-      // Define Push Testnet chain configuration for Viem
-      const pushTestnet = defineChain({
-        rpcUrls: {
-          default: { http: [chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA] },
-        },
-      });
+      // Get chain configuration based on user selection
+      const chainConfig = returnPushChainTestnetConfig(chainMeta);
 
       // create viem client
       const client = createWalletClient({
         account,
-        chain: pushTestnet,
+        chain: chainConfig,
         transport: http(),
       });
 
@@ -304,13 +296,13 @@ import \* as readline from 'node:readline/promises';
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -345,8 +337,38 @@ import \* as readline from 'node:readline/promises';
 
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
 
-      return {id: selection, name: name};
+      return { id: selection, name: name };
     }
+
+    // Function to return chain configuration based on user selection
+    function returnPushChainTestnetConfig(chainMeta) {
+      if (chainMeta.id === '2') {
+        return sepolia;
+      }
+      
+      // Define custom Push Testnet config
+      return defineChain({
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      });
+    }
+
 
 `}
 
@@ -400,7 +422,7 @@ import \* as readline from 'node:readline/promises';
       // 4) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
