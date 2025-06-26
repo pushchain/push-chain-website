@@ -1,16 +1,12 @@
 ---
 id: docs-chain-setup-smart-contract-environment-configure-foundry
 title: Configure Foundry
-hide_title: true
+hide_title: false
 slug: ./configure-foundry
 displayed_sidebar: pushChainSidebar
 sidebar_position: 1
 image: '/assets/docs/previews/docs_notifications_develop--get_started.png'
 ---
-
-# Overview
-
-This page covers the setup of your smart contract environment to interact with Push Chain. Whether you are using Remix, Hardhat, Foundry, or any other tooling, this page will guide you through the process.
 
 <head>
   <title>{`Configure Foundry | Smart Contract Environment | Tooling | Setup | Push Chain Docs`}</title>
@@ -18,20 +14,20 @@ This page covers the setup of your smart contract environment to interact with P
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
 import PushChainSpecs from '@site/src/components/Static/PushChainSpecs';
-import RemixIDE from '@site/src/components/RemixIDE/RemixIDE';
 
-## Setting up Local Dev Environment
-
-You can use any EVM tooling including Foundry or Hardhat to deploy your smart contracts.
+Get up and running with Foundry on Push Chain testnet.
 
 :::info Recommended Practice
-
-Work on your smart contract exactly the same way you would on Ethereum, then use Push Chain configuration to deploy your smart contracts on Push Chain.
-
+Instead of reinventing your workflow, keep developing exactly as you would on Ethereum—then just point Foundry at Push Chain RPCs and explorer.
 :::
 
-## Deploying with Foundry
+<Details summary="Push Chain Specs" className="alert alert--minimal">
+  <PushChainSpecs />
+</Details>
+
+## Deploy Smart Contracts with Foundry
 
 Foundry is a blazing fast, portable, and modular toolkit for Ethereum application development.
 
@@ -84,19 +80,19 @@ Now simply modify your `foundry.toml` file to include Push Chain testnet configu
 
 ```toml
 [profile.default]
-src = "src"
-out = "out"
-libs = ["lib"]
-remappings = ["@openzeppelin/=lib/openzeppelin-contracts/"]
+src                 = "src"
+out                 = "out"
+libs                = ["lib"]
+remappings          = ["@openzeppelin/=lib/openzeppelin-contracts/"]
 
 # Push Chain Testnet configuration
 [rpc_endpoints]
-push_testnet = "https://evm.rpc-testnet-donut-node1.push.org/"
-push_testnet_alt = "https://evm.rpc-testnet-donut-node2.push.org/"
+push_testnet        = "https://evm.rpc-testnet-donut-node1.push.org/"
+push_testnet_alt    = "https://evm.rpc-testnet-donut-node2.push.org/"
 
 # This is a placeholder - BlockScout doesn't require an API key but Foundry expects a key field
 [etherscan]
-push_testnet = { key = "blockscout", url = "https://donut.push.network/api", chain = 42101 }
+push_testnet        = { key = "blockscout", url = "https://donut.push.network/api", chain = 42101 }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
 ```
@@ -123,17 +119,17 @@ import "@openzeppelin/contracts/access/Ownable.sol";
  * @dev A simple ERC20 token for demonstration on PUSH CHAIN
  */
 contract MyToken is ERC20, Ownable {
-    constructor() ERC20("MyToken", "MT") Ownable(msg.sender) {
-        _mint(msg.sender, 1000 * 10**18);
-    }
+  constructor() ERC20("MyToken", "MT") Ownable(msg.sender) {
+    _mint(msg.sender, 1000 * 10**18);
+  }
 
-    function decimals() public view virtual override returns (uint8) {
-        return 18;
-    }
+  function decimals() public view virtual override returns (uint8) {
+    return 18;
+  }
 
-    function mint(address to, uint256 amount) public onlyOwner {
-        _mint(to, amount);
-    }
+  function mint(address to, uint256 amount) public onlyOwner {
+    _mint(to, amount);
+  }
 }
 ```
 
@@ -174,13 +170,16 @@ Never store private keys in plain text or in your repository.
 
 #### 6.2. Get testnet tokens
 
-Ensure you have testnet tokens to pay for deployment gas fees. If you don't have any, use the Push Chain testnet faucet**.**
-Visiting our [Faucet](https://faucet.push.org/).
+Ensure you have testnet tokens to pay for deployment gas fees. If you don't have any, use the Push Chain [testnet faucet](https://faucet.push.org/).
 
 #### 6.3. Deploy your contract
 
 ```bash
-forge create src/MyToken.sol:MyToken --rpc-url push_testnet --chain 42101 --account myKeystore --broadcast
+forge create src/MyToken.sol:MyToken \
+  --rpc-url push_testnet \
+  --chain 42101 \
+  --account myKey \
+  --broadcast
 ```
 
 This command:
@@ -191,7 +190,7 @@ This command:
 - Uses your securely stored account
 - Broadcasts the transaction to the network
 
-\*\*Deployment Results
+**Deployment Results**
 
 If successful, you'll see output similar to:
 
@@ -208,7 +207,12 @@ Save the contract address for verification and interaction later.
 Verify your contract on the Push Chain BlockScout explorer:
 
 ```bash
-forge verify-contract --chain 42101 --verifier blockscout --verifier-url https://donut.push.network/api 0xF0f1199A048A39336dFD915F146470de1b5d6dAd src/MyToken.sol:MyToken
+forge verify-contract \
+  --chain 42101 \
+  --verifier blockscout 
+  --verifier-url https://donut.push.network/api \
+  0xYourDeployedAddress \
+  src/MyToken.sol:MyToken
 ```
 
 > \*\*Note Replace `0xF0f1199A048A39336dFD915F146470de1b5d6dAd` with your actual deployed contract address.
@@ -228,3 +232,10 @@ Submitted contract for verification:
 Visit the provided URL to view your verified contract on the Push Chain explorer.
 
 That's it! You have successfully deployed and verified your smart contract on Push Chain.
+
+## Next Steps
+
+- Verify your deployment on the [Block Explorer](/docs/chain/setup/tooling/block-explorer)
+- Deploy with scripts using [Hardhat](/docs/chain/setup/smart-contract-environment/configure-hardhat)
+- Call your contract from code via the [Push Chain SDK](/docs/chain/build)
+- Check out all the [Chain Con]

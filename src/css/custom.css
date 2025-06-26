@@ -220,6 +220,10 @@
 
 /* Do for Minimal and API Table */
 /* API Docs */
+.alert .tabs__item--active {
+  border-color: var(--ifm-color-primary) !important;
+}
+
 .alert.alert--minimal,
 .alert.alert--minimal-api-table {
   border-color: transparent !important;
@@ -235,7 +239,7 @@
 .alert.alert--minimal-api-table {
   padding: 8px 20px 8px 8px !important;
   margin: 10px auto;
-  border: 1px solid #ddd !important;
+  border: 1px solid var(--ifm-border-color) !important;
 }
 
 .alert.alert--minimal-api-table:last-child {

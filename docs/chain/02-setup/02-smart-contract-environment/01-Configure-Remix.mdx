@@ -1,16 +1,14 @@
 ---
 id: docs-chain-setup-tooling-configure-remix
 title: Remix IDE
-hide_title: true
+hide_title: false
 slug: ./configure-remix
 displayed_sidebar: pushChainSidebar
 sidebar_position: 1
 image: '/assets/docs/previews/docs_notifications_develop--get_started.png'
 ---
 
-# Remix IDE
-
-Use Remix to compile, deploy, and test smart contracts on Push Chain
+Use Remix to compile, deploy, and test smart contracts on Push Chain.
 
 <head>
   <title>
@@ -23,15 +21,15 @@ Use Remix to compile, deploy, and test smart contracts on Push Chain
 import PushChainSpecs from '@site/src/components/Static/PushChainSpecs';
 import RemixIDE from '@site/src/components/RemixIDE/RemixIDE';
 
-## Deploy a Smart Contract with Remix
+## Deploy Smart Contracts with Remix
 
-### Add Push Chain to Your Wallet
-
-<PushChainSpecs />
+### 1. Add Push Chain to Your Wallet
 
 > If you haven’t yet, follow [Wallet Setup](/docs/chain/setup/tooling/wallet-setup) to add Push Chain as a custom network in your wallet.
 
-### Launch Remix
+<PushChainSpecs />
+
+### 2. Launch Remix
 
 Open [Remix IDE](https://remix.ethereum.org) or use the embedded IDE below.
 
@@ -47,19 +45,19 @@ Open [Remix IDE](https://remix.ethereum.org) or use the embedded IDE below.
   }}
 />
 
-### Configure “Deploy & Run Transactions”
+### 3. Configure “Deploy & Run Transactions”
 
 1. Click the **Deploy & Run Transactions** plugin in the left sidebar
 2. Under **Environment**, choose **Injected Provider - Web3**
 3. Approve the connection in your wallet, making sure it’s set to **Push Chain Donut Testnet (42101)**
 
-### Compile Your Contract
+### 4. Compile Your Contract
 
 1. Open the **Solidity Compiler** plugin
 2. Select compiler version **0.8.22** (or match your `pragma`)
 3. Click **Compile** next to your contract file
 
-### Deploy Your Contract
+### 5. Deploy Your Contract
 
 1. Return to **Deploy & Run Transactions**
 2. Select your contract from the **Contract** dropdown
