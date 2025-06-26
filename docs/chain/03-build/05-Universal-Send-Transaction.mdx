@@ -12,7 +12,7 @@ image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_cha
 
 Universal transactions let you send **native** transactions from any Layer 1 chain—EVM or non-EVM, even Push Chain itself—without wrapping, bridging or extra tooling required.
 
-**Behind the scenes**, the SDK automatically **estimates gas, assembles cross-chain signature and replay any EVM or non-EVM proofs**, so you can focus on your app instead of what, why and where of different chains.
+**Under the hood**, the SDK automatically **estimates gas, orchestrates signatures, and replays any EVM or non-EVM proofs**, so you can focus on your app—not the network plumbing.
 
 <head>
   <title>{`Send Transaction | Build | Push Chain | Push Documentation`}</title>
@@ -21,10 +21,12 @@ Universal transactions let you send **native** transactions from any Layer 1 cha
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Sending Universal Transaction
-**_`pushChainClient.universal.sendTransaction({ .. }): Promise<TransactionReceipt>`_**
+
+**_`pushChainClient.universal.sendTransaction({tx}): Promise<TransactionReceipt>`_**
 
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
@@ -33,28 +35,55 @@ const txHash = await pushChainClient.universal.sendTransaction({
 });
 ```
 
-| **Arguments**                  | **Type** | **Description**                                       |
-| ------------------------------ | -------- | ----------------------------------------------------- |
-| _`to`_                 | `string` | The address of the recipient.                         |
-| _`value`_              | `BigInt` | The value to send in wei.                             |
-| `data`                 | `string` | The data to send.                                     |
-| `gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
-| `maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
-| `maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
-| `deadline`             | `BigInt` | The deadline for the transaction.                     |
-| `progressHook`                 | `(progress: ProgressHookType) => void` | A callback function to receive progress updates during transaction lifecycle, especially for cross-chain transactions.             |
+<PushAPIReference>
 
-> Note: These _`Arguments`_ are mandatory.
+| **Arguments**          | **Type** | **Description**                                       |
+| ---------------------- | -------- | ----------------------------------------------------- |
+| _`tx.to`_                 | `string` | The address of the recipient.                         |
+| _`tx.value`_              | `BigInt` | The value to send in wei.                             |
+| `tx.data`                 | `string` | The data to send.                                     |
+| `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `tx.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+
+</PushAPIReference>
+
+<Details summary="Advanced Arguments" className="alert alert--minimal code">
+
+| Arguments      | Type                                   | Default | Description                                                                                                                            |
+| -------------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `tx.deadline`     | `BigInt`                               | -       | The deadline for the transaction.                                                                                                      |
+| `tx.progressHook` | `(progress: ProgressHookType) => void` | -       | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions. |
 
 <Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
 
-| **Response**        | **Type** | **Description**                       |
-| ------------------- | -------- | ------------------------------------- |
-| `progress`          | `object` | The progress of the transaction.      |
-| `progress.id`       | `string` | Predefined ID for the progress.       |
-| `progress.infoType` | `string` | Predefined InfoType for the progress. |
-| `progress.Type`     | `string` | The type of the transaction.          |
-| `progress.Data`     | `object` | The data of the transaction.          |
+| Field                | Type                                          | Description                                                                     |
+| -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------- |
+| `progress`           | `object`                                      | The progress of the transaction.                                                |
+| `progress.id`        | `string`                                      | Unique identifier for the progress event.                                       |
+| `progress.title`     | `string`                                      | Brief title of the progress event.                                              |
+| `progress.message`   | `string`                                      | Detailed message describing the event.                                          |
+| `progress.level`     | `INFO` \| `SUCCESS` \| `WARNING` \| `ERROR` | Severity level of the event.                                                    |
+| `progress.timestamp` | `string`                                      | ISO-8601 timestamp when the event occurred (e.g. `2025-06-26T15:04:05.000Z`). |
+
+| ID              | Title                               | Message                                                                                       | Level   |
+| --------------- | ----------------------------------- | --------------------------------------------------------------------------------------------- | ------- |
+| `SEND-TX-01`    | Origin Chain Detected               | Origin chain: solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1                                       | INFO    |
+| `SEND-TX-02-01` | Estimating Gas                      | Estimating and fetching gas limit, gas price for TX…                                          | INFO    |
+| `SEND-TX-02-02` | Gas Estimated                       | Total execution cost (Gas cost + value): 1011250000000000000 UPC                            | SUCCESS |
+| `SEND-TX-03-01` | Resolving UEA                       | Resolving Execution Account (UEA) – computing address, checking deployment status and balance | INFO    |
+| `SEND-TX-03-02` | UEA Resolved                        | UEA: 0x4f17B798A7d643d4F89cb2d8D42A72F84e83e566, Deployed: true                             | SUCCESS |
+| `SEND-TX-04`    | Generated Universal Payload         | Universal Payload Hash: 0xb03fc567b8e421d66829f007ac8c90d179abf8663b7d6ca3701903eeaa79aaed  | INFO    |
+| `SEND-TX-05-01` | Awaiting Signature for Execution    | Waiting for signature on payload hash                                                         | INFO    |
+| `SEND-TX-05-02` | Signature Completed                 | Signature: 0x1a579f18…fabac4309                                                             | SUCCESS |
+| `SEND-TX-06-01` | Locking Origin Chain Fee            | Locking fee: 1000063864000000000 UPC on origin chain                                        | INFO    |
+| `SEND-TX-06-02` | Awaiting Origin Chain Confirmations | TX sent: ibtWfWBU…1231U5Xy9hUK5W58kBt8a, waiting for 0 confirmations.                       | SUCCESS |
+| `SEND-TX-07`    | Confirmations Received              | Required confirmations received.                                                              | SUCCESS |
+| `SEND-TX-08`    | Broadcasting to Push Chain          | Sending TX to Push Chain…                                                                     | INFO    |
+| `SEND-TX-99-01` | Push Chain TX Success               | …                                                                                             | SUCCESS |
+| `SEND-TX-99-02` | Push Chain TX Failed                | …                                                                                             | ERROR   |
+
+</Details>
 
 </Details>
 
@@ -81,14 +110,14 @@ const erc20Abi = [
 const data = encodeFunctionData({
   abi: erc20Abi,
   functionName: 'transfer',
-  args: ['0xRecipientAddress', parseEther('10')] // Transfer 10 tokens
+  args: ['0xRecipientAddress', parseEther('10')], // Transfer 10 tokens
 });
 
 // Send the transaction using Push Chain SDK
 const txHash = await pushChainClient.universal.sendTransaction({
   to: '0xTokenContractAddress', // The smart contract address on Push Chain
   value: BigInt('0'), // No ETH being sent, just contract interaction
-  data: data // The encoded function call
+  data: data, // The encoded function call
 });
 ```
 
@@ -255,7 +284,7 @@ import { PushChain } from '@pushchain/core';
 import { createWalletClient, defineChain, http } from 'viem';
 import { sepolia } from 'viem/chains';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import * as readline from 'node:readline/promises';
+import \* as readline from 'node:readline/promises';
 
     // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
@@ -345,7 +374,7 @@ import * as readline from 'node:readline/promises';
       if (chainMeta.id === '2') {
         return sepolia;
       }
-      
+
       // Define custom Push Testnet config
       return defineChain({
         id: 42101,
@@ -368,7 +397,6 @@ import * as readline from 'node:readline/promises';
         },
       });
     }
-
 
 `}
 
@@ -613,13 +641,13 @@ import \* as readline from 'node:readline/promises';
 
 </Details>
 
-<Details summary="Live Playground: Progress Lifecycle of Transaction" className="alert alert--live-play">
+<Details summary="Live Playground: (Advanced) See the progress lifecycle of a transaction" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\\);
+// customPropHighlightRegexStart=progressHook: 
+// customPropHighlightRegexEnd=}
 import { PushChain } from '@pushchain/core';
 import { ethers } from 'ethers';
 import \* as readline from 'node:readline/promises';
@@ -667,7 +695,9 @@ import \* as readline from 'node:readline/promises';
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
-        // data: '0x...', // For contract interactions - hex encoded
+        progressHook: (progress) => {
+          console.log('Progress:', progress);
+        }
       };
 
       // wait for user to send funds first
@@ -680,7 +710,7 @@ import \* as readline from 'node:readline/promises';
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction(txParams);
-        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
       } catch (error) {
         console.error('❌ Transaction failed:', error.message);
         // In playground, this will fail without funds
@@ -712,4 +742,7 @@ import \* as readline from 'node:readline/promises';
 
 ## Next Steps
 
-- Learn how to [Sign Universal Message](/docs/chain/build/sign-universal-message)
+- Sign arbitrary data with [Sign Universal Message](/docs/chain/build/sign-universal-message)  
+- Surface live feedback in your UI by handling the `progressHook` events  
+- Leverage pre-built utilities in [Contract Helpers](/docs/chain/build/contract-helpers)  
+- Integrate transaction flows into your frontend app using the [UI Kit](/docs/chain/ui-kit)  

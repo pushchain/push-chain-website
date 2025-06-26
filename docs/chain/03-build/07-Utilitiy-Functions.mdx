@@ -19,6 +19,7 @@ This section covers the most commonly used helpers in the Push Chain Core SDK to
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Account Utilities
@@ -35,12 +36,14 @@ const account = PushChain.utils.account.toUniversal(address, {
 });
 ```
 
+<PushAPIReference>
+
 | **Arguments**     | **Type** | **Description**                                                                                                                                                                                                                                        |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`address`_       | `string` | An address string (e.g., `0xabc...`).                                                                                                                                                                                                                  |
 | _`options.chain`_ | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `UniversalAccount` <object>" className="alert alert--fn-args">
 
@@ -93,12 +96,14 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 });
 ```
 
+<PushAPIReference>
+
 | **Arguments**     | **Type** | **Description**                                                                                                                                                                                                                                        |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`address`_       | `string` | An address string (e.g., `0xabc...`).                                                                                                                                                                                                                  |
 | _`options.chain`_ | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `ChainAgnosticAddress` <string>" className="alert alert--fn-args">
 
@@ -145,13 +150,13 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 const account = PushChain.utils.account.fromChainAgnostic(chainAgnosticAddress);
 ```
 
+<PushAPIReference>
+
 | **Arguments**            | **Type** | **Description**                                                                                            |
 | ------------------------ | -------- | ---------------------------------------------------------------------------------------------------------- |
 | _`chainAgnosticAddress`_ | `string` | A full chain agnostic address string (e.g., `eip155:11155111:0x35B84d6848D16415177c64D64504663b998A6ab4`). |
 
-> Note: These _`Arguments`_ are mandatory.
-
----
+</PushAPIReference>
 
 <Details summary="Returns `UniversalAccount` <object>" className="alert alert--fn-args">
 
@@ -203,12 +208,14 @@ const info =
   await PushChain.utils.account.convertOriginToExecutor(universalAccount);
 ```
 
+<PushAPIReference>
+
 | **Arguments**    | **Type**           | **Default** | **Description**                                                                                            |
 | ---------------- | ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------- |
 | _`account`_      | `UniversalAccount` | -           | A UniversalAccount object containing chain and address information.                                        |
 | `options.status` | `boolean`          | `false`     | Whether to check if the computed executor account is deployed. Set to `true` to include deployment status. |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details 
   summary="Returns `ExecutorAccountInfo` <object>" 
@@ -284,13 +291,15 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 );
 ```
 
+<PushAPIReference>
+
 | **Arguments**       | **Type**  | **Description**                                                                                                                                                                                             |
 | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`keypair`_         | `Keypair` | A keypair object from one of the supported libraries (ethers v5/v6, viem, or a custom UniversalSignerSkeleton)                                                                                              |
 | _`options.chain`_   | `CHAIN`   | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`       |
 | _`options.library`_ | `LIBRARY` | The library to use for the signer. Here are some possible values: `PushChain.CONSTANTS.LIBRARY.ETHEREUM_ETHERSV6`, `PushChain.CONSTANTS.LIBRARY.ETHEREUM_VIEM`, `PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS` |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `UniversalSigner` <object>" className="alert alert--fn-args">
 
@@ -418,11 +427,13 @@ import { Keypair } from '@solana/web3.js';
 const url = pushChainClient.explorer.getTransactionUrl(txHash);
 ```
 
+<PushAPIReference>
+
 | **Arguments** | **Type** | **Description**                                  |
 | ------------- | -------- | ------------------------------------------------ |
 | _`txHash`_    | `string` | The transaction hash to convert to explorer URL. |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `url` <string>" className="alert alert--fn-args">
 
@@ -552,11 +563,13 @@ Every external chain is represented as a particular string on Push Chain. You ca
 const chainName = PushChain.utils.helpers.getChainName(namespace);
 ```
 
+<PushAPIReference>
+
 | **Arguments** | **Type** | **Description**                                                                                                                                     |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`namespace`_ | `string` | The chain namespace to convert to chain name. Eg: `eip155:42101` converts to `PUSH_TESTNET_DONUT`, `eip155:11155111` converts to `ETHEREUM_SEPOLIA` |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `chainName` <string>" className="alert alert--fn-args">
 
