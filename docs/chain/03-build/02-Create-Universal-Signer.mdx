@@ -22,6 +22,7 @@ Wrap any EVM or non-EVM signer (ethers, viem, Solana, etc.) into a `UniversalSig
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Create Universal Signer
@@ -91,11 +92,13 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
   </TabItem>
 </Tabs>
 
+<PushAPIReference>
+
 | **Arguments** | **Type**                                                            | **Description**                                   |
 | ------------- | ------------------------------------------------------------------- | ------------------------------------------------- |
 | _`signer`_    | `viem.WalletClient` \| `ethers.Wallet` \| `UniversalSignerSkeleton` | The signer to convert to Universal Signer format. |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `UniversalSigner` <object>" className="alert alert--fn-args">
 

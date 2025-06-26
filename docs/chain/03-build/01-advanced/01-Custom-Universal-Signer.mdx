@@ -19,6 +19,7 @@ If you don't have a supported library signer or want to create a custom implemen
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Custom Universal Signer API
@@ -52,6 +53,8 @@ const skeleton = PushChain.utils.signer.construct(account, {
 const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
 ```
 
+<PushAPIReference>
+
 | **Arguments**                      | **Type**                                          | **Description**                                        |
 | ---------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |
 | _`account`_                        | `UniversalAccount`                                | Account information containing address and chain       |
@@ -60,7 +63,7 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
 | _`options.signMessage`_            | `(data: Uint8Array) => Promise<Uint8Array>`       | Function to sign raw message data                      |
 | `options.signTypedData`            | `(params) => Promise<Uint8Array>`                 | Function to sign typed data (EIP-712)                  |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 <Details summary="Returns `UniversalSignerSkeleton` <object>" className="alert alert--fn-args">
 

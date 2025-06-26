@@ -67,6 +67,7 @@
   --ifm-live-highlighted-code-line-bg-pulse-mid: rgba(87, 91, 117, 1);
   --ifm-border-color: #dadde1;
   --ifm-global-radius: 12px;
+  --ifm-alert-code-background: rgb(246, 247, 248);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -122,6 +123,7 @@
   --ifm-live-highlighted-code-line-bg-pulse-mid: rgba(87, 91, 117, 1);
   --ifm-border-color: #3c3c3e;
   --ifm-global-radius: 12px;
+  --ifm-alert-code-background: rgb(246, 247, 248);
 }
 
 /* Custom styles for admonitions/alerts */
@@ -133,6 +135,10 @@
   display: inline-block;
   padding: 4px 8px;
   margin: 2px auto;
+}
+
+.alert table code {
+  background-color: var(--ifm-alert-code-background);
 }
 
 .alert.alert--fn-args,
@@ -620,7 +626,7 @@ article strong > em > code {
   font-style: normal;
   font-weight: 600;
   padding: 4px 8px;
-  background-color: var(--ifm-code-background) !important;
+  background-color: var(--ifm-alert-code-background) !important;
   border: 0.1rem solid var(--ifm-playground-header-tag) !important;
   border-radius: var(--ifm-code-border-radius);
   font-family: var(--ifm-font-family-monospace);
