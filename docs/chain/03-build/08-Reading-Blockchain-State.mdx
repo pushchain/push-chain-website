@@ -59,17 +59,35 @@ import { ethers } from 'ethers';
 import { defineChain, createPublicClient, http } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     // HTTP client
     const viemClient = createPublicClient({ chain: pushTestnet, transport: http() });
     console.log('Viem client:', JSON.stringify(viemClient, null, 2));
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
@@ -108,19 +126,37 @@ import { ethers } from 'ethers';
 import { defineChain, createPublicClient, http } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const viemClient    = createPublicClient({ chain: pushTestnet, transport: http() });
     const txHash        = '0xa7839fb1e3483eab628cbf18f42603ba192cef99b724d4b651eb7c4e9683b79e';
 
     const tx = await viemClient.getTransaction({ hash: txHash });
     console.log(JSON.stringify(tx, null, 2));
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
@@ -160,17 +196,35 @@ import { defineChain, createPublicClient, http } from 'viem';
 import { defineChain, createPublicClient, http } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const viemClient   = createPublicClient({ chain: pushTestnet, transport: http() });
     const latestBlock  = await viemClient.getBlock();
     console.log(JSON.stringify(latestBlock, null, 2));
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
@@ -209,19 +263,37 @@ import { ethers } from 'ethers';
 import { defineChain, createPublicClient, http } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const viemClient = createPublicClient({ chain: pushTestnet, transport: http() });
     const blockHash = '0x1bdc478ba03f52a7f35071e0f03676368cda76b95c4846f21844a39cfd541f32';
 
     const block = await viemClient.getBlock({ blockHash });
     console.log(JSON.stringify(block, null, 2));
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
@@ -265,13 +337,7 @@ import { defineChain, createPublicClient, http } from 'viem';
     import { createPublicClient, defineChain, webSocket } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
@@ -284,6 +350,30 @@ import { defineChain, createPublicClient, http } from 'viem';
 
     // Stop after 10s
     setTimeout(stop, 10000);
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 `}
 
 </NodeJSVirtualIDE>
@@ -325,13 +415,7 @@ import { defineChain, createPublicClient, http } from 'viem';
     import { createPublicClient, defineChain, webSocket } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
@@ -342,6 +426,30 @@ import { defineChain, createPublicClient, http } from 'viem';
 
     // Stop after 10s
     setTimeout(stop, 10000);
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
@@ -400,13 +508,7 @@ import { ethers } from 'ethers';
     import { createPublicClient, defineChain, webSocket } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     const client = createPublicClient({ chain: pushTestnet, transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
 
@@ -430,10 +532,34 @@ import { ethers } from 'ethers';
           }
         }
       },
-  })
+    });
 
     // Stop after 20s
     setTimeout(stop, 20000);
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
 
 `}
 
