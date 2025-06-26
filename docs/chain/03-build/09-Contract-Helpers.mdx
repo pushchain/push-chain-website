@@ -21,6 +21,7 @@ One primary helper is the Universal Executor Account Factory (UEAFactory), which
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Universal Executor Account Factory
@@ -86,14 +87,14 @@ interface IUEAFactory {
     /**
      * @dev Returns the owner key (UOA) for a given UEA address
      * @param addr Any given address ( msg.sender ) on push chain
-     * @return account The Universal Account information associated with this UEA
+     * @return account The Universal Account identity information associated with this UEA
      * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)
      */
     function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
 
     /**
      * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
-     * @param _id The Universal Account information
+     * @param _id The Universal Account identity information
      * @return uea The address of the UEA (computed deterministically)
      * @return isDeployed True if the UEA has already been deployed
      */
@@ -115,15 +116,13 @@ Returns the owner information and UEA status for a given address on Push Chain.
 
 - Checking if a given address is a native account on Push Chain or is controlled by another chain user.
 - Determining the source chain of a given address on Push Chain.
-- Getting the Universal Account information associated with this address.
-
-> Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. `chainNamespace` contains the [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.) and `chainId` contains the chain ID of the source chain of the owner of this UEA. `owner` contains the wallet address in bytes.
+- Getting the Universal Account identity information associated with this address.
 
 ```solidity
 /**
  * @dev Returns the owner key (UOA) for a given UEA address
  * @param addr Any given address ( msg.sender ) on push chain
- * @return account The Universal Account information associated with this UEA
+ * @return account The Universal Account identity information associated with this UEA
  * @return isUEA True if the address addr is a UEA contract. False if it is a native account on PUSH chain (i.e., isUEA = false)
 */
 function getOriginForUEA(
@@ -137,16 +136,20 @@ function getOriginForUEA(
     );
 ```
 
+<PushAPIReference showRequiredNotice={false}>
+
 | Arguments | Type      | Description                                       |
 | --------- | --------- | ------------------------------------------------- |
-| addr      | `address` | Any address on Push Chain (typically msg.sender). |
+| _`addr`_      | `address` | Any address on Push Chain (typically msg.sender). |
+
+</PushAPIReference>
 
 <Details summary="Returns `UniversalAccountId`<struct> and `bool`" className="alert alert--fn-args">
 
 | Response | Type               | Description                                                                                                            |
 | -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| account  | `UniversalAccountId` | The Universal Account information associated with this UEA. struct `UniversalAccountId` \{ string chainNamespace; string chainId; bytes owner; \} |
-| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)        |
+| account  | `UniversalAccountId` | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false).        |
 
 </Details>
 
@@ -225,7 +228,7 @@ Additionaly, it also returns the deployment status of the UEA.
 ```solidity
 /**
  * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
- * @param _id The Universal Account information
+ * @param _id The Universal Account identity information
  * @return uea The address of the UEA (computed deterministically)
  * @return isDeployed True if the UEA has already been deployed
 */
@@ -240,10 +243,13 @@ function getUEAForOrigin(
     );
 ```
 
+<PushAPIReference showRequiredNotice={false}>
 
 | Arguments | Type             | Description                                                                                                                                                |
 | --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _`\_id`_      | UniversalAccountId | The Universal Account information containing:<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+| _`\_id`_      | UniversalAccountId | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+
+</PushAPIReference>
 
 <Details summary="Returns `address` and `bool`" className="alert alert--fn-args">
 
