@@ -254,7 +254,7 @@ import \* as readline from 'node:readline/promises';
 import { PushChain } from '@pushchain/core';
 import { createWalletClient, defineChain, http } from 'viem';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import \* as readline from 'node:readline/promises';
+import * as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
@@ -267,7 +267,7 @@ import \* as readline from 'node:readline/promises';
     // Enable User Input
     const rl = readline.createInterface({
       input: process.stdin,
-      output: process.stdout
+      output: process.stdout,
     });
 
     // ⭐️ MAIN FUNCTION ⭐️
@@ -283,17 +283,13 @@ import \* as readline from 'node:readline/promises';
       console.log('🔑 Got account: ', account.address);
 
       // 2) Set up chain config and viem client
-      // Define Push Testnet chain configuration for Viem
-      const pushTestnet = defineChain({
-        rpcUrls: {
-          default: { http: [chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA] },
-        },
-      });
+      // Get chain configuration based on user selection
+      const chainConfig = returnPushChainTestnetConfig(chainMeta);
 
       // create viem client
       const client = createWalletClient({
         account,
-        chain: pushTestnet,
+        chain: chainConfig,
         transport: http(),
       });
 
@@ -304,7 +300,7 @@ import \* as readline from 'node:readline/promises';
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
       // 5) Prepare transaction parameters
@@ -345,8 +341,34 @@ import \* as readline from 'node:readline/promises';
 
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
 
-      return {id: selection, name: name};
+      return { id: selection, name: name };
     }
+
+    // Function to return chain configuration based on user selection
+    function returnPushChainTestnetConfig(chainMeta) {
+      // define Viem config
+      return defineChain({
+        id: chainMeta.id === '1' ? 42101 : 11155111, // Push Testnet or Sepolia
+        name: chainMeta.name,
+        nativeCurrency: {
+          decimals: 18,
+          name: chainMeta.id === '1' ? 'PC' : 'ETH',
+          symbol: chainMeta.id === '1' ? '$PC' : 'ETH',
+        },
+        rpcUrls: {
+          default: {
+            http: [chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: chainMeta.id === '1' ? 'Push Testnet Explorer' : 'Sepolia Explorer',
+            url: chainMeta.id === '1' ? 'https://donut.push.network/' : 'https://sepolia.etherscan.io/',
+          },
+        },
+      });
+    }
+
 
 `}
 
