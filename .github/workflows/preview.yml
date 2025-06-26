@@ -52,7 +52,7 @@ jobs:
       - name: Install and Build
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
-          yarn install --no-hardened-mode
+          yarn install
           yarn build:pr:preview
 
       - name: Deploy preview
