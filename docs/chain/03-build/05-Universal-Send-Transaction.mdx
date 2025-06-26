@@ -253,13 +253,9 @@ import \* as readline from 'node:readline/promises';
 // customPropHighlightRegexEnd=\\);
 import { PushChain } from '@pushchain/core';
 import { createWalletClient, defineChain, http } from 'viem';
+import { sepolia } from 'viem/chains';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
 import * as readline from 'node:readline/promises';
-
-    // ——— CONFIG ———
-    // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
@@ -346,24 +342,28 @@ import * as readline from 'node:readline/promises';
 
     // Function to return chain configuration based on user selection
     function returnPushChainTestnetConfig(chainMeta) {
-      // define Viem config
+      if (chainMeta.id === '2') {
+        return sepolia;
+      }
+      
+      // Define custom Push Testnet config
       return defineChain({
-        id: chainMeta.id === '1' ? 42101 : 11155111, // Push Testnet or Sepolia
-        name: chainMeta.name,
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
         nativeCurrency: {
           decimals: 18,
-          name: chainMeta.id === '1' ? 'PC' : 'ETH',
-          symbol: chainMeta.id === '1' ? '$PC' : 'ETH',
+          name: 'PC',
+          symbol: '$PC',
         },
         rpcUrls: {
           default: {
-            http: [chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA],
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
           },
         },
         blockExplorers: {
           default: {
-            name: chainMeta.id === '1' ? 'Push Testnet Explorer' : 'Sepolia Explorer',
-            url: chainMeta.id === '1' ? 'https://donut.push.network/' : 'https://sepolia.etherscan.io/',
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
           },
         },
       });
