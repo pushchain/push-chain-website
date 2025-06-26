@@ -1,67 +1,44 @@
 export const HeaderList = {
-  products: [
+  testnet: [
     {
-      title: 'header.products.link1.title',
-      subtitle: 'header.products.link1.subtitle',
-      srcrefoff: 'inbox-icon-off',
-      id: 'notification',
+      title: 'header.testnet.link1.title',
+      subtitle: 'header.testnet.link1.subtitle',
+      id: 'donut',
     },
     {
-      title: 'header.products.link2.title',
-      subtitle: 'header.products.link2.subtitle',
-      srcrefoff: 'chat-icon-off',
-      id: 'chat',
+      title: 'header.testnet.link2.title',
+      subtitle: 'header.testnet.link2.subtitle',
+      id: 'faucet',
     },
   ],
   developers: [
     {
       title: 'header.developers.link1.title',
       subtitle: 'header.developers.link1.subtitle',
-      srcrefoff: 'docs-icon-off',
+      // srcrefoff: 'docs-icon-off',
       href: '/docs',
       target: '_blank',
     },
     {
       title: 'header.developers.link2.title',
       subtitle: 'header.developers.link2.subtitle',
-      srcrefoff: 'examples-icon-off',
+      // srcrefoff: 'examples-icon-off',
       href: 'https://github.com/push-protocol/push-sdk/tree/main/packages/examples',
-    },
-    {
-      title: 'header.developers.link3.title',
-      subtitle: 'header.developers.link3.subtitle',
-      srcrefoff: 'inbox-icon-off',
-      href: '/docs/notifications/quickstart/',
-      target: '_blank',
-    },
-    {
-      title: 'header.developers.link4.title',
-      subtitle: 'header.developers.link4.subtitle',
-      srcrefoff: 'chat-icon-off',
-      href: '/docs/chat/quickstart/',
-      target: '_blank',
-    },
-    {
-      title: 'header.developers.link5.title',
-      subtitle: 'header.developers.link5.subtitle',
-      srcrefoff: 'hacker-icon-off',
-      href: '/docs/hackers/',
-      target: '_blank',
     },
     {
       title: 'header.developers.link6.title',
       subtitle: 'header.developers.link6.subtitle',
-      tagitem: {
-        text: 'NEW',
-      },
-      srcrefoff: 'react-icon-off',
+      // tagitem: {
+      //   text: 'NEW',
+      // },
+      // srcrefoff: 'react-icon-off',
       href: '/docs/video/playground/push-react-component-playground-example/',
       target: '_blank',
     },
     {
       title: 'header.developers.link7.title',
       subtitle: 'header.developers.link7.subtitle',
-      srcrefoff: 'discord-icon-off',
+      // srcrefoff: 'discord-icon-off',
       href: 'https://discord.gg/pushprotocol',
     },
   ],

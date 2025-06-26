@@ -67,19 +67,19 @@ const GLOBALS = {
     HEIGHT: 78,
     OUTER_MARGIN: {
       DESKTOP: {
-        TOP: 44,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
       },
       TABLET: {
-        TOP: 24,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
       },
       MOBILE: {
-        TOP: 8,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
@@ -88,27 +88,27 @@ const GLOBALS = {
     OUTER_PADDING: {
       DESKTOP: {
         TOP: 0,
-        LEFT: 16,
+        LEFT: 12,
         BOTTOM: 0,
-        RIGHT: 16,
+        RIGHT: 12,
       },
       TABLET: {
-        TOP: 16,
-        LEFT: 16,
-        BOTTOM: 16,
-        RIGHT: 16,
+        TOP: 12,
+        LEFT: 12,
+        BOTTOM: 12,
+        RIGHT: 12,
       },
       MOBILE: {
         TOP: 12,
-        LEFT: 16,
+        LEFT: 12,
         BOTTOM: 12,
-        RIGHT: 16,
+        RIGHT: 12,
       },
     },
   },
 
   STRUCTURE: {
-    MAX_WIDTH: size.laptopL,
+    MAX_WIDTH: size.laptopM,
     PADDING: {
       DESKTOP: `${structure.PADDING.DESKTOP.TOP}px ${structure.PADDING.DESKTOP.RIGHT}px ${structure.PADDING.DESKTOP.BOTTOM}px ${structure.PADDING.DESKTOP.LEFT}px`,
       TABLET: `${structure.PADDING.TABLET.TOP}px ${structure.PADDING.TABLET.RIGHT}px ${structure.PADDING.TABLET.BOTTOM}px ${structure.PADDING.TABLET.LEFT}px`,

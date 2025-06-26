@@ -38,8 +38,19 @@
       "hindi": "हिंदी"
     },
     "app-button": {
-      "title": "Launch App",
-      "alt-title": "Push Dapp"
+      "title": "Push Portal",
+      "alt-title": "Push Portal"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "link1": {
+        "title": "Donut Testnet Explorer",
+        "subtitle": "Analyze network stats and txs"
+      },
+      "link2": {
+        "title": "$PC Faucet",
+        "subtitle": "Get free testnet tokens"
+      }
     },
     "products": {
       "title": "Products",
@@ -132,9 +143,10 @@
   },
   "home": {
     "hero": {
-      "title": "The Communication Protocol of Web3",
-      "description": "Push is a web3 native communication network, enabling cross-chain notifications, messaging, and more for apps, wallets, and services.",
+      "title": "Any Chain, Any App, All Users.\nOne Push Chain.",
+      "description": "The first Layer 1 built for Universal Apps. \nBuild & Deploy once, onboard users from any chain.",
       "start-button": "Start Building",
+      "explore-push-portal": "Explore Push Portal",
       "alt-start-button": "Developer Docs",
       "explore-button": "Explore Push Protocol",
       "alt-explore-button": "Push Dapp"
