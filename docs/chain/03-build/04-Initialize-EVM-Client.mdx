@@ -59,13 +59,7 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     import { createPublicClient, http, defineChain } from 'viem';
   
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     function initViem() {
       const publicClient = createPublicClient({ chain: pushTestnet, transport: http() });
@@ -73,6 +67,31 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     }
 
     initViem();
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
+
 `}
 
 </NodeJSVirtualIDE>
@@ -116,13 +135,7 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
     import { createPublicClient, http, defineChain } from 'viem';
 
     // Define Push Testnet Chain
-    const pushTestnet = defineChain({
-      rpcUrls: {
-        default: {
-          http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-        },
-      },
-    });
+    const pushTestnet = defineChain(returnPushChainTestnetConfig());
 
     async function fetchTxViem() {
       const client      = createPublicClient({ chain: pushTestnet, transport: http() });
@@ -133,6 +146,31 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
     console.log('Fetching transaction...');
     await fetchTxViem().catch(console.error);
+
+    // Function to return Push Testnet Chain configuration
+    function returnPushChainTestnetConfig() {
+      return {
+        id: 42101,
+        name: 'PUSH_TESTNET_DONUT',
+        nativeCurrency: {
+          decimals: 18,
+          name: 'PC',
+          symbol: '$PC',
+        },
+        rpcUrls: {
+          default: {
+            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
+          },
+        },
+        blockExplorers: {
+          default: {
+            name: 'Push Testnet Explorer',
+            url: 'https://donut.push.network/',
+          },
+        },
+      };
+    }
+
 `}
 
 </NodeJSVirtualIDE>
