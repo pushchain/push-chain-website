@@ -48,13 +48,13 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 <Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
 
-| **Response** | **Type** | **Description** |
-| --- | --- | --- |
-| `progress` | `object` | The progress of the transaction. |
-| `progress.id` | `string` | Predefined ID for the progress. |
+| **Response**        | **Type** | **Description**                       |
+| ------------------- | -------- | ------------------------------------- |
+| `progress`          | `object` | The progress of the transaction.      |
+| `progress.id`       | `string` | Predefined ID for the progress.       |
 | `progress.infoType` | `string` | Predefined InfoType for the progress. |
-| `progress.Type` | `string` | The type of the transaction. |
-| `progress.Data` | `object` | The data of the transaction. |
+| `progress.Type`     | `string` | The type of the transaction.          |
+| `progress.Data`     | `object` | The data of the transaction.          |
 
 </Details>
 
@@ -62,7 +62,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 ```typescript
 // Transaction hash
-'0xd4491116f55568faabe3ae813dacb77eeea49080f34221ae433b27d3732a460a'
+'0xd4491116f55568faabe3ae813dacb77eeea49080f34221ae433b27d3732a460a';
 ```
 
 </Details>
@@ -152,19 +152,19 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
-    // customPropHighlightRegexStart=universal\.sendTransaction
-    // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
-    import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -175,41 +175,41 @@ const txHash = await pushChainClient.universal.sendTransaction({
     // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
-      
+
       // Choose chain from which to send transaction
       const chainMeta = await returnUserChainSelection();
-      
+
       // 1) Create a wallet (in production, you'd use your own wallet)
       const wallet = ethers.Wallet.createRandom();
       console.log('📝 Created wallet:', wallet.address);
-      
+
       // 2) Set up provider and connect wallet
       const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      
+
       // 3) Convert to Universal Signer
       console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      
+
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
       });
-      
+
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
         // data: '0x...', // For contract interactions - hex encoded
       };
-      
+
       // wait for user to send funds first
       await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
 
       // 6) Send universal transaction
       console.log('📤 Sending transaction to:', RECIPIENT);
-      
+
       try {
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
@@ -232,11 +232,12 @@ const txHash = await pushChainClient.universal.sendTransaction({
         console.log('Invalid selection. Please select 1 or 2.');
         process.exit(0);
       }
-      
+
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-      
+
       return {id: selection, name: name};
-    }                                                  
+    }
+
 `}
 
 </NodeJSVirtualIDE>
@@ -248,20 +249,20 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/send-transaction-viem"}}>
 
 {`
-    // customPropHighlightRegexStart=universal\.sendTransaction
-    // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core';
-    import { createWalletClient, defineChain, http } from 'viem';
-    import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-    import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { createWalletClient, defineChain, http } from 'viem';
+import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -272,15 +273,15 @@ const txHash = await pushChainClient.universal.sendTransaction({
     // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
-      
+
       // Choose chain from which to send transaction
       const chainMeta = await returnUserChainSelection();
-      
+
       // 1) Create a wallet (in production, you'd use your own wallet)
       const privateKey = generatePrivateKey();
       const account = privateKeyToAccount(privateKey);
       console.log('🔑 Got account: ', account.address);
-      
+
       // 2) Set up chain config and viem client
       // Define Push Testnet chain configuration for Viem
       const pushTestnet = defineChain({
@@ -299,26 +300,26 @@ const txHash = await pushChainClient.universal.sendTransaction({
       // 3) Convert to Universal Signer
       console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(client);
-      
+
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
       });
-      
+
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
         // data: '0x...', // For contract interactions - hex encoded
       };
-      
+
       // wait for user to send funds first
       await rl.question(':::prompt:::Please send funds to: ' + account.address + ' on ' + chainMeta.name + ' to continue.');
 
       // 6) Send universal transaction
       console.log('📤 Sending transaction to:', RECIPIENT);
-      
+
       try {
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
@@ -341,11 +342,12 @@ const txHash = await pushChainClient.universal.sendTransaction({
         console.log('Invalid selection. Please select 1 or 2.');
         process.exit(0);
       }
-      
+
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-      
+
       return {id: selection, name: name};
-    }                                                  
+    }
+
 `}
 
 </NodeJSVirtualIDE>
@@ -357,16 +359,16 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/send-transaction-viem"}}>
 
 {`
-    // customPropHighlightRegexStart=universal\.sendTransaction
-    // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core';
-    import { Connection, Keypair } from '@solana/web3.js';
-    import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { Connection, Keypair } from '@solana/web3.js';
+import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
 
     // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -394,20 +396,20 @@ const txHash = await pushChainClient.universal.sendTransaction({
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
       });
-      
+
       // 4) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
         // data: '0x...', // For contract interactions - hex encoded
       };
-      
+
       // wait for user to send funds first
       await rl.question(':::prompt:::Please send funds to: ' + keypair.publicKey.toBase58() + ' on SOLANA_DEVNET to continue.');
 
       // 5) Send universal transaction
       console.log('📤 Sending transaction to:', RECIPIENT);
-      
+
       try {
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
@@ -420,7 +422,8 @@ const txHash = await pushChainClient.universal.sendTransaction({
       }
     }
 
-    await main().catch(console.error);                                        
+    await main().catch(console.error);
+
 `}
 
 </NodeJSVirtualIDE>
@@ -452,12 +455,28 @@ const txHash = await pushChainClient.universal.sendTransaction({
         const { connectionStatus } = usePushWalletContext();
         const { pushChainClient } = usePushChainClient();
 
+        const handleSendTransaction = async () => {
+          if (pushChainClient) {
+            try {
+              await pushChainClient.universal.sendTransaction({
+                to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
+                value: BigInt(1),
+                data: '0x',
+              });
+              alert('Send Transaction Successful');
+            } catch (err) {
+              console.log(err);
+              alert('Send Transaction Failed');
+            }
+          }
+        };
+
         return (
           <div>
             <PushUniversalAccountButton />
 
             {connectionStatus == 'connected' &&
-              <p>Push Chain Client Initialized with Universal Signer: ${JSON.stringify(pushChainClient)}</p>
+              <button onClick={handleSendTransaction}>Send Transaction</button>
             }
           </div>
         );
@@ -480,19 +499,19 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
-    // customPropHighlightRegexStart=universal\.sendTransaction
-    // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
-    import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -503,41 +522,41 @@ const txHash = await pushChainClient.universal.sendTransaction({
     // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
-      
+
       // Choose chain from which to send transaction
       const chainMeta = await returnUserChainSelection();
-      
+
       // 1) Create a wallet (in production, you'd use your own wallet)
       const wallet = ethers.Wallet.createRandom();
       console.log('📝 Created wallet:', wallet.address);
-      
+
       // 2) Set up provider and connect wallet
       const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      
+
       // 3) Convert to Universal Signer
       console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      
+
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
       });
-      
+
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
         // data: '0x...', // For contract interactions - hex encoded
       };
-      
+
       // wait for user to send funds first
       await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
 
       // 6) Send universal transaction
       console.log('📤 Sending transaction to:', RECIPIENT);
-      
+
       try {
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
@@ -560,11 +579,12 @@ const txHash = await pushChainClient.universal.sendTransaction({
         console.log('Invalid selection. Please select 1 or 2.');
         process.exit(0);
       }
-      
+
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-      
+
       return {id: selection, name: name};
-    }                                                  
+    }
+
 `}
 
 </NodeJSVirtualIDE>
@@ -576,19 +596,19 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
-    // customPropHighlightRegexStart=universal\.sendTransaction
-    // customPropHighlightRegexEnd=\\);
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
-    import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/'; 
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com'; 
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101'; 
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -599,41 +619,41 @@ const txHash = await pushChainClient.universal.sendTransaction({
     // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
-      
+
       // Choose chain from which to send transaction
       const chainMeta = await returnUserChainSelection();
-      
+
       // 1) Create a wallet (in production, you'd use your own wallet)
       const wallet = ethers.Wallet.createRandom();
       console.log('📝 Created wallet:', wallet.address);
-      
+
       // 2) Set up provider and connect wallet
       const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      
+
       // 3) Convert to Universal Signer
       console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      
+
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
       });
-      
+
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
         // data: '0x...', // For contract interactions - hex encoded
       };
-      
+
       // wait for user to send funds first
       await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
 
       // 6) Send universal transaction
       console.log('📤 Sending transaction to:', RECIPIENT);
-      
+
       try {
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
@@ -656,11 +676,12 @@ const txHash = await pushChainClient.universal.sendTransaction({
         console.log('Invalid selection. Please select 1 or 2.');
         process.exit(0);
       }
-      
+
       const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-      
+
       return {id: selection, name: name};
-    }                                                  
+    }
+
 `}
 
 </NodeJSVirtualIDE>
