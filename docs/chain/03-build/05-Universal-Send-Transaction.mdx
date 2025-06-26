@@ -128,7 +128,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction({
           to: '0x0000000000000000000000000000000000042101',
-          value: BigInt('100000000000000000'), // 0.1 PC in wei
+          value: BigInt('1'),
         });
         console.log('Transaction Response:', JSON.stringify(txResponse));
       } catch (error) {
@@ -200,7 +200,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -310,7 +310,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -400,7 +400,7 @@ import \* as readline from 'node:readline/promises';
       // 4) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: BigInt('1'),
         // data: '0x...', // For contract interactions - hex encoded
       };
 
