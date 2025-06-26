@@ -44,45 +44,61 @@ The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/sr
 
 This helper contract helps in fetching cross-chain information about an address. It also provides identity-mapping between source chain wallet address and Push Chain address and can determine if the address is native to Push Chain or is proxy for external chain user.
 
-```solidity
-import "@pushprotocol/push-chain-contracts/src/Interfaces/IUEAFactory.sol";
+In order to use the UEAFactory in your contract, there are 2 simple ways:
+
+1. Import it directly from Push Chain Core Repository, or
+2. Define the interface manually in your solidity contract.
+
+#### 1. Import it directly from Push Chain Core Repository
+
+This step is exactly like you to import any other contract in your solidity code.
+
+1. Run forge install
+```bash
+forge install pushchain/push-chain-core-contracts
 ```
 
-<Details summary="Or, define the interface manually in your solidity contract">
+2. Add remappings to your `foundry.toml` file
+```toml 
+    remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
+```
+
+3. Import the interface in your contract
+```solidity
+import "push-chain-core-contracts/src/Interfaces/IUEAFactory.sol";
+```
+
+#### 2. Define the interface manually in your solidity contract
+
+<Details summary="Use the following interface directly in your contract">
 
 ```solidity
 pragma solidity ^0.8.0;
 
-// Represents a cross-chain account identifier
-struct UniversalAccount {
-    string chain;   // e.g. "eip155:11155111"
-    bytes owner;  // external chain address
+struct UniversalAccountIdId {
+    string chainNamespace; // Chain namespace identifier of the owner account (e.g., "eip155" or "solana")
+    string chainId; // Chain ID of the source chain of the owner of this UEA.
+    bytes owner; // Owner's public key or address in bytes format
 }
 
 /// @title Universal Executor Account Factory Interface
 /// @notice Helper interface for deploying and querying UEAs on Push Chain
 interface IUEAFactory {
-    /// @notice Returns the UniversalAccount and UEA status for a given address
-    /// @param addr The Push Chain account or proxy address (msg.sender)
-    /// @return account The underlying cross-chain account
-    /// @return isUEA True if addr is a UEA proxy, false if native EOA
-    function getOriginForUEA(
-        address addr
-    ) external view returns (
-        UniversalAccount memory account,
-        bool isUEA
-    );
+    /**
+     * @dev Returns the owner key (UOA) for a given UEA address
+     * @param addr Any given address ( msg.sender ) on push chain
+     * @return account The Universal Account information associated with this UEA
+     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)
+     */
+    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
 
-    /// @notice Computes the UEA proxy address and checks deployment
-    /// @param _id The cross-chain UniversalAccount identifier
-    /// @return uea The deterministic UEA proxy address
-    /// @return isDeployed True if the proxy contract is deployed
-    function getUEAForOrigin(
-        UniversalAccount memory _id
-    ) external view returns (
-        address uea,
-        bool isDeployed
-    );
+    /**
+     * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
+     * @param _id The Universal Account information
+     * @return uea The address of the UEA (computed deterministically)
+     * @return isDeployed True if the UEA has already been deployed
+     */
+    function getUEAForOrigin(UniversalAccountId memory _id) external view returns (address uea, bool isDeployed);
 }
 ```
 
@@ -92,7 +108,7 @@ interface IUEAFactory {
 
 ### UEAFactory → getOriginForUEA
 
-**_`getOriginForUEA(address): (UniversalAccount, bool)`_** is _`external view`_
+**_`getOriginForUEA(address): (UniversalAccountId, bool)`_** is _`external view`_
 
 Returns the owner information and UEA status for a given address on Push Chain.
 
@@ -102,7 +118,7 @@ Returns the owner information and UEA status for a given address on Push Chain.
 - Determining the source chain of a given address on Push Chain.
 - Getting the Universal Account information associated with this address.
 
-> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the wallet address in bytes.
+> Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. `chainNamespace` contains the [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.) and `chainId` contains the chain ID of the source chain of the owner of this UEA. `owner` contains the wallet address in bytes.
 
 ```solidity
 /**
@@ -117,7 +133,7 @@ function getOriginForUEA(
     external
     view
     returns (
-        UniversalAccount memory account,
+        UniversalAccountId memory account,
         bool isUEA
     );
 ```
@@ -126,11 +142,11 @@ function getOriginForUEA(
 | --------- | --------- | ------------------------------------------------- |
 | addr      | `address` | Any address on Push Chain (typically msg.sender). |
 
-<Details summary="Returns `UniversalAccount`<struct> and `bool`" className="alert alert--fn-args">
+<Details summary="Returns `UniversalAccountId`<struct> and `bool`" className="alert alert--fn-args">
 
 | Response | Type               | Description                                                                                                            |
 | -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
-| account  | `UniversalAccount` | The Universal Account information associated with this UEA. struct `UniversalAccount` \{ string chain; bytes owner; \} |
+| account  | `UniversalAccountId` | The Universal Account information associated with this UEA. struct `UniversalAccountId` \{ string chainNamespace; string chainId; bytes owner; \} |
 | isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)        |
 
 </Details>
@@ -139,7 +155,7 @@ function getOriginForUEA(
 
 ```solidity
 function checkCallerType() public view returns (bool isUEA) {
-  (UniversalAccount memory account, bool isUEA) = IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(msg.sender);
+  (UniversalAccountId memory account, bool isUEA) = IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(msg.sender);
 
   if (isUEA) {
       // Do something with the UEA
@@ -167,7 +183,7 @@ function checkCallerType() public view returns (bool isUEA) {
 
     // Minimal ABI
     const IUEAFactoryABI = [
-      // returns (UniversalAccount account, bool isUEA)
+      // returns (UniversalAccountId account, bool isUEA)
       "function getOriginForUEA(address addr) view returns (tuple(string chain, address owner) account, bool isUEA)"
     ]
 
@@ -195,16 +211,17 @@ function checkCallerType() public view returns (bool isUEA) {
 
 ### UEAFactory → getUEAForOrigin
 
-**_`getUEAForOrigin(UniversalAccount): (address, bool)`_** is _`external view`_
+**_`getUEAForOrigin(UniversalAccountId): (address, bool)`_** is _`external view`_
 
-Returns the computed UEA address for a given Universal Account and deployment status.
+Returns the computed UEA address for a given Universal Account.
+Additionaly, it also returns the deployment status of the UEA.
 
 **Commonly used for**:
 
 - Get or compute the UEA address for a given Universal Account.
 - Check if a given Universal Account is deployed or not.
 
-> Note: UniversalAccount is a struct that returns chain and owner. chain contains the entire [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155:1") and owner contains the wallet address in bytes.
+> Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. `chainNamespace` contains the [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.) and `chainId` contains the chain ID of the source chain of the owner of this UEA. `owner` contains the wallet address in bytes.
 
 ```solidity
 /**
@@ -214,7 +231,7 @@ Returns the computed UEA address for a given Universal Account and deployment st
  * @return isDeployed True if the UEA has already been deployed
 */
 function getUEAForOrigin(
-    UniversalAccount memory _id
+    UniversalAccountId memory _id
 )
     external
     view
@@ -226,7 +243,7 @@ function getUEAForOrigin(
 
 | Arguments | Type             | Description                                                                                                                                                |
 | --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_id      | UniversalAccount | The Universal Account information containing:<br/>- chain: Chain identifier (e.g., "eip155:1")<br/>- owner: Owner's public key or address in bytes format. |
+| \_id      | UniversalAccountId | The Universal Account information containing:<br/>- chainNamespace: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- chainId: Chain ID of the source chain of the owner of this UEA.<br/>- owner: Owner's public key or address in bytes format. |
 
 <Details summary="Returns `address` and `bool`" className="alert alert--fn-args">
 
@@ -268,7 +285,7 @@ import { ethers } from 'ethers';
 
     // Minimal ABI
     const IUEAFactoryABI = [
-      // takes (UniversalAccount _id) and returns (address uea, bool isDeployed)
+      // takes (UniversalAccountId _id) and returns (address uea, bool isDeployed)
       "function getUEAForOrigin(tuple(string chain, bytes  owner) _id) view returns (address uea, bool isDeployed)"
     ]
 
@@ -281,7 +298,7 @@ import { ethers } from 'ethers';
       const ethAddress = "0xd8da6bf26964af9d7eed9e03e53415d37aa96045";
       const solAddress = '14grJpemFaf88c8tiVb77W7TYg2W3ir6pfkKz3YjhhZ5';
 
-      // 3) manually form the UniversalAccount struct
+      // 3) manually form the UniversalAccountId struct
       const originAccount = {
         chain: 'eip155:11155111',   // Ethereum Sepolia namespace
         owner: ethAddress
