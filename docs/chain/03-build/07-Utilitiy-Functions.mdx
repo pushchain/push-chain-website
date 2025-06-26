@@ -4,7 +4,7 @@ title: Utility Functions
 hide_title: true
 slug: ./utility-functions
 displayed_sidebar: pushChainSidebar
-sidebar_position: 6
+sidebar_position: 7
 image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_channel.png'
 ---
 
@@ -372,7 +372,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 </NodeJSVirtualIDE>
   </TabItem>
 
-  <TabItem value='solana_web3js' label='Web3 JS (Solana)'>
+  <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
   <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/utility-functions"}}>
 
 {`
@@ -457,7 +457,7 @@ const url = pushChainClient.explorer.getTransactionUrl(txHash);
 
       // Initialize Push Chain Client
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
       const exploredTxHashUrl = pushChainClient.explorer.getTransactionUrl('0x4627fd2eca321d5fd007995c94af636e5e332760f50fbd8e3426ad0c67543dad');
@@ -522,7 +522,7 @@ const explorerUrls = pushChainClient.explorer.listUrls();
 
       // Initialize Push Chain Client
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
 
       const explorerUrls = pushChainClient.explorer.listUrls();

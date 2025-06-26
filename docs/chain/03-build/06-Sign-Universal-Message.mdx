@@ -1,0 +1,85 @@
+---
+id: docs-chain-build-sign-universal-message
+title: Sign Universal Message
+hide_title: false
+slug: ./sign-universal-message
+displayed_sidebar: pushChainSidebar
+sidebar_position: 6
+image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_channel.png'
+---
+
+## Overview
+
+Sign arbitrary data with your universal signer, across EVM, Solana, or any supported chain.
+
+<head>
+  <title>{`Sign Message | Build | Push Chain | Push Documentation`}</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+## Sign Universal Message
+**_`pushChainClient.universal.signMessage(message): string`_**
+
+```typescript
+// Create message data
+const message = new TextEncoder().encode('Hello, Push Chain!')
+
+// Sign the message
+const signature = await pushChainClient.universal.signMessage(message)
+```
+
+<Details summary="Returns `signedMessage` <string>" className="alert alert--fn-args">
+
+```typescript
+// Signed Message
+'0xf10cabddd923cf05578dd253c0642009e7651286171a17b3d40f270f42e97aff56f8941ff9989333c23edb82ae1fad11b1e82b939b9e74a96ae6e3db9ae63e0b1c'
+```
+
+</Details>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction-quickstart"}}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.signMessage
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      // Using ethers for this demo
+      // Set up wallet, provider and signer
+      const wallet = ethers.Wallet.createRandom();
+
+      // Setup provide and signer
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // Convert to Universal Signer and Initialize Push Chain SDK
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // Sign Message
+      console.log('Signing Message...');
+      const messageToSign = new TextEncoder().encode('Hello, Push Chain!');
+      const messageSignature = await pushChainClient.universal.signMessage(messageToSign);
+      console.log('Message signature:', messageSignature);
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+
+
+
+
+## Next Steps

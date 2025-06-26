@@ -34,10 +34,11 @@ The most common way to create a Universal Signer is by converting an existing si
   <TabItem value='ethers_v6' label='Ethers (v6)' default>
 
 ```typescript
-// import @pushchain/core and ethers
+// Derive Ethers Signer
 const provider = new ethers.providers.JsonRpcProvider('<RPC_URL>');
 const ethersSigner = new ethers.Wallet('<PRIVATE_KEY>', provider);
 
+// Convert to Universal Signer
 const universalSigner = await PushChain.utils.signer.toUniversal(ethersSigner);
 ```
 
@@ -52,15 +53,15 @@ const universalSigner = await PushChain.utils.signer.toUniversal(ethersSigner);
   <TabItem value='viem' label='Viem'>
   
 ```typescript
-// import @pushchain/core and viem
+// Derive Wallet Client
 const account = privateKeyToAccount('<PRIVATE_KEY>');
 const viemClient = createWalletClient({
   transport: http('<RPC_URL>'), // or your preferred RPC URL
   account,
 });
 
+// Convert to Universal Signer
 const universalSigner = await PushChain.utils.signer.toUniversal(viemClient);
-
 ````
 
 :::note Provider determines the chain of the account
@@ -71,20 +72,21 @@ const universalSigner = await PushChain.utils.signer.toUniversal(viemClient);
 
   </TabItem>
 
-  <TabItem value='solana_web3js' label='Web3 JS (Solana)'>
+  <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
 
 ```typescript
-// import @pushchain/core and @solana/web3.js
-const solKeypair = Keypair.generate()
+// Derive Solana Keypair
+const solKeypair = Keypair.generate();
 
+// Convert Keypair to Universal Signer
 const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
   solKeypair,
   {
     chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
     library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
   }
-)
-````
+);
+```
 
   </TabItem>
 </Tabs>
@@ -194,7 +196,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 
   </TabItem>
 
-  <TabItem value='solana_web3js' label='Web3 JS (Solana)'>
+  <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/create-universal-signer"}}>
 

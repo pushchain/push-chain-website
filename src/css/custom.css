@@ -129,6 +129,12 @@
   background-color: transparent;
 }
 
+.alert code {
+  display: inline-block;
+  padding: 4px 8px;
+  margin: 2px auto;
+}
+
 .alert.alert--fn-args,
 .alert.alert--live-play {
   position: relative;
@@ -203,32 +209,57 @@
 .alert.alert--info
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
   border-top: 1px solid
-    color-mix(in srgb, var(--ifm-color-primary) 50%, transparent);
+    color-mix(in srgb, var(--ifm-color-primary) 75%, transparent);
 }
 
-.alert.alert--minimal {
+/* Do for Minimal and API Table */
+/* API Docs */
+.alert.alert--minimal,
+.alert.alert--minimal-api-table {
   border-color: transparent !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding: 0 !important;
   box-shadow: none !important;
 }
 
-.alert.alert--minimal summary {
+.alert.alert--minimal.no-margin,
+.alert.alert--minimal-api-table.no-margin {
+  margin: 0 !important;
+}
+
+.alert.alert--minimal-api-table {
+  padding: 8px 20px 8px 8px !important;
+  margin: 10px auto;
+  border: 1px solid #ddd !important;
+}
+
+.alert.alert--minimal-api-table:last-child {
+  margin-bottom: 0px !important;
+}
+
+.alert.alert--minimal summary,
+.alert.alert--minimal-api-table summary {
   padding-left: 0 !important;
   padding-right: 0 !important;
   font-weight: 600 !important;
   color: color-mix(
     in srgb,
-    var(--ifm-color-primary-text) 50%,
+    var(--ifm-color-primary-text) 75%,
     transparent
   ) !important;
 }
 
-.alert.alert--minimal summary::before {
+.alert.alert--minimal.code summary,
+.alert.alert--minimal-api-table summary {
+  font-family: monospace !important;
+}
+
+.alert.alert--minimal summary::before,
+.alert.alert--minimal-api-table summary::before {
   display: none !important;
 }
 
-.alert.alert--minimal summary::after {
+.alert.alert--minimal summary::after,
+.alert.alert--minimal-api-table summary::after {
   position: absolute;
   content: '';
   border-color: transparent transparent transparent var(--ifm-color-primary);
@@ -237,18 +268,23 @@
   border-width: var(--docusaurus-details-summary-arrow-size);
   border-style: solid;
 
-  transform: rotate(0deg) translateX(75%) translateY(60%);
+  bottom: 0%;
+  transform: rotate(0deg) translate(75%, -50%);
   transition: var(--docusaurus-details-transition);
   transform-origin: calc(var(--docusaurus-details-summary-arrow-size) / 2) 50%;
 }
 
-.alert.alert--minimal[open] summary::after {
-  transform: rotate(90deg) translateX(75%) translateY(-70%);
+.alert.alert--minimal[open] summary::after,
+.alert.alert--minimal-api-table[open] summary::after {
+  transform: rotate(90deg) translateX(-50%) translateY(-75%);
 }
 
 .alert.alert--minimal
+  .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module,
+.alert.alert--minimal-api-table
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
   border-top: 1px solid color-mix(in srgb, transparent 50%, transparent) !important;
+  padding: 0;
 }
 
 /* ----- */

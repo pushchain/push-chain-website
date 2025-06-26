@@ -12,7 +12,7 @@ image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_cha
 
 Universal transactions let you send **native** transactions from any Layer 1 chain—EVM or non-EVM, even Push Chain itself—without wrapping, bridging or extra tooling required.
 
-Behind the scenes, the SDK automatically estimates gas and assembles the necessary cross-chain signature/verification, so you can focus on your app instead of network details.
+**Behind the scenes**, the SDK automatically **estimates gas, assembles cross-chain signature and replay any EVM or non-EVM proofs**, so you can focus on your app instead of what, why and where of different chains.
 
 <head>
   <title>{`Send Transaction | Build | Push Chain | Push Documentation`}</title>
@@ -24,7 +24,7 @@ import Details from '@theme/Details';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
 ## Sending Universal Transaction
-**_`pushChainClient.universal.sendTransaction({tx}): Promise<TransactionReceipt>`_**
+**_`pushChainClient.universal.sendTransaction({ .. }): Promise<TransactionReceipt>`_**
 
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
@@ -35,18 +35,18 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 | **Arguments**                  | **Type** | **Description**                                       |
 | ------------------------------ | -------- | ----------------------------------------------------- |
-| _`tx.to`_                 | `string` | The address of the recipient.                         |
-| _`tx.value`_              | `BigInt` | The value to send in wei.                             |
-| `tx.data`                 | `string` | The data to send.                                     |
-| `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
-| `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
-| `tx.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
-| `tx.deadline`             | `BigInt` | The deadline for the transaction.                     |
-| `tx.progressHook`                 | `(progress: ProgressHookType) => void` | A callback function to receive progress updates during transaction lifecycle, especially for cross-chain transactions.             |
+| _`to`_                 | `string` | The address of the recipient.                         |
+| _`value`_              | `BigInt` | The value to send in wei.                             |
+| `data`                 | `string` | The data to send.                                     |
+| `gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+| `deadline`             | `BigInt` | The deadline for the transaction.                     |
+| `progressHook`                 | `(progress: ProgressHookType) => void` | A callback function to receive progress updates during transaction lifecycle, especially for cross-chain transactions.             |
 
 > Note: These _`Arguments`_ are mandatory.
 
-<Details summary="ProgressHook Type and Response" className="alert alert--minimal">
+<Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
 
 | **Response** | **Type** | **Description** |
 | --- | --- | --- |
@@ -71,71 +71,26 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 When you need to interact with smart contracts, you'll need to pass encoded function data. Here's how to generate the `data` parameter and use it with the Push Chain SDK:
 
-<Tabs groupId="send-transaction">
-  <TabItem value='ethers_v6' label='Ethers (v6)' default>
-
 ```typescript
-import { ethers } from 'ethers';
+// Define the ABI for the ERC20 transfer function
+const erc20Abi = [
+  'function transfer(address to, uint256 amount) returns (bool)',
+];
 
-async function main() {
-  // Define the ABI for the ERC20 transfer function
-  const erc20Abi = [
-    'function transfer(address to, uint256 amount) returns (bool)',
-  ];
+// Generate the encoded function data using viem
+const data = encodeFunctionData({
+  abi: erc20Abi,
+  functionName: 'transfer',
+  args: ['0xRecipientAddress', parseEther('10')] // Transfer 10 tokens
+});
 
-  // Create an Interface instance
-  const interface = new ethers.Interface(erc20Abi);
-
-  // Encode the function data
-  const data = interface.encodeFunctionData('transfer', [
-    '0xRecipientAddress',
-    ethers.parseEther('10'),
-  ]);
-
-  // Send the transaction using Push Chain SDK
-  const txHash = await pushChainClient.universal.sendTransaction({
-    to: '0xTokenContractAddress', // The smart contract address on Push Chain
-    value: 0n, // No ETH being sent
-    data: data, // Encoded function call
-  });
-}
-
-main().catch(console.error);
+// Send the transaction using Push Chain SDK
+const txHash = await pushChainClient.universal.sendTransaction({
+  to: '0xTokenContractAddress', // The smart contract address on Push Chain
+  value: BigInt('0'), // No ETH being sent, just contract interaction
+  data: data // The encoded function call
+});
 ```
-
-  </TabItem>
-
-  <TabItem value='viem' label='Viem'>
-
-```typescript
-import { encodeFunctionData, parseEther } from 'viem';
-
-async function main() {
-  // Define the ABI for the ERC20 transfer function
-  const erc20Abi = [
-    'function transfer(address to, uint256 amount) returns (bool)',
-  ];
-
-  // Generate the encoded function data using viem
-  const data = encodeFunctionData({
-    abi: erc20Abi,
-    functionName: 'transfer',
-    args: ['0xRecipientAddress', parseEther('10')] // Transfer 10 tokens
-  });
-
-  // Send the transaction using Push Chain SDK
-  const txHash = await pushChainClient.universal.sendTransaction({
-    to: '0xTokenContractAddress', // The smart contract address on Push Chain
-    value: BigInt('0'), // No ETH being sent, just contract interaction
-    data: data // The encoded function call
-  });
-}
-
-main().catch(console.error);
-```
-
-  </TabItem>
-</Tabs>
 
 ## Live Playground
 
@@ -397,7 +352,7 @@ main().catch(console.error);
 
   </TabItem>
 
-  <TabItem value='solana_web3js' label='Web3 JS (Solana)'>
+  <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/sdk-functions/send-transaction-viem"}}>
 
@@ -471,7 +426,7 @@ main().catch(console.error);
 </NodeJSVirtualIDE>
 
   </TabItem>
-  
+
   <TabItem value='ui_kit' label='UI Kit'>
   
     ```jsx live
