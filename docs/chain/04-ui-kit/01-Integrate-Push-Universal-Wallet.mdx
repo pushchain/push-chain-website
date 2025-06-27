@@ -9,7 +9,13 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import RemixIDE from '@site/src/components/RemixIDE/RemixIDE';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+
+<head>
+  <title>{`Integrate Push Universal Wallet | Customizations | UI Kit | Push Chain Docs`}</title>
+</head>
+
+<!-- Content Start -->
 
 Seamlessly Connect to Multiple Blockchains: Simplify wallet integration across your application with Push Universal Wallet.
 
@@ -27,7 +33,7 @@ The Push Universal Wallet provides a unified interface for connecting to multipl
 
 ## Installation
 
-<Tabs className="codetabs" groupId="code-examples">
+<Tabs className="codetabs" groupId="frontend-installation">
   <TabItem value="npm" attributes={{className: "codetab npm"}} default>
     ```bash
     npm install @pushchain/ui-kit
@@ -43,7 +49,90 @@ The Push Universal Wallet provides a unified interface for connecting to multipl
 
 ## Usage and Playground
 
+<Tabs className="liveplaytab" groupId="integrate-push-wallet">
+  <TabItem value="basic" label="Quickstart" default>
+
 ```jsx live
+// customPropHighlightRegexStart=<PushUniversalWalletProvider\s
+// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushChainClient,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="with_hooks" label="With Hooks" default>
+
+```jsx live
+// customPropHighlightRegexStart=<PushUniversalWalletProvider\s
+// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushChainClient,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  function WalletUI() {
+    const { connectionStatus } = usePushWalletContext();
+    const { pushChainClient } = usePushChainClient();
+
+    return (
+      <div>
+        <PushUniversalAccountButton />
+        {connectionStatus == 'connected' && (
+          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient.universal.account}</p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      <WalletUI />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="with_customizations" label="With Customizations">
+
+```jsx live
+// customPropHighlightRegexStart=<PushUniversalWalletProvider\s
+// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
 // customPropMinimized='false'
 // Import necessary components from @pushchain/ui-kit
 import {
@@ -82,7 +171,82 @@ function App() {
   };
 
   function WalletUI() {
-    const { universalAccount, connectionStatus } = usePushWalletContext();
+    const { connectionStatus } = usePushWalletContext();
+    const { pushChainClient } = usePushChainClient();
+
+    return (
+      <div>
+        <PushUniversalAccountButton />
+        {connectionStatus == 'connected' && (
+          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient.universal.account}</p>
+        )}
+      </div>
+    };
+
+    return (
+      <div>
+        <PushUniversalAccountButton />
+        {connectionStatus == 'connected' && (
+          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient.universal.account}</p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig} app={appMetadata}>
+      <WalletUI />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="with_pushchainclient_interaction" label="With pushChainClient Interaction">
+
+```jsx live
+// customPropHighlightRegexStart=<PushUniversalWalletProvider\s
+// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushChainClient,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+    login: {
+      email: true,
+      google: true,
+      wallet: {
+        enabled: true,
+      },
+      appPreview: true,
+    },
+    modal: {
+      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      appPreview: true,
+    },
+  };
+
+  // Define Your App Preview
+  const appMetadata = {
+    logoUrl:
+      'https://plus.unsplash.com/premium_photo-1746731481770-08b2f71661d0?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Test App Title',
+    description: 'Test App Description',
+  };
+
+  function WalletUI() {
+    const { connectionStatus } = usePushWalletContext();
     const { pushChainClient } = usePushChainClient();
 
     const handleSendTransaction = async () => {
@@ -90,8 +254,7 @@ function App() {
         try {
           await pushChainClient.universal.sendTransaction({
             to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
-            value: BigInt(1),
-            data: '0x',
+            value: BigInt(1000000000000000), // 0.001 PC
           });
           alert('Send Transaction Successful');
         } catch (err) {
@@ -119,11 +282,16 @@ function App() {
 }
 ```
 
+</TabItem>
+</Tabs>
+
 ## Customization Parameters
 
 Customize the parameters as per your need and the wallet functionality being used.
 
 ### PushUniversalWalletProvider
+
+<PushAPIReference>
 
 | Arguments            | Type                                | Default                 | Description                                                  |
 | ---------------- | ----------------------------------- | ----------------------- | -------------------------------------------------------- |
@@ -138,9 +306,12 @@ Customize the parameters as per your need and the wallet functionality being use
 | `themeOverrides` | `ThemeOverrides`                    | -                       | Override the theme settings                              |
 | `children`       | `React.ReactNode`                   | -                       | Your application components                              |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
+
 
 ### PushUniversalAccountButton
+
+<PushAPIReference>
 
 | Arguments               | Type                   | Default           | Description                                        |
 | ------------------- | ---------------------- | ----------------- | ---------------------------------------------- |
@@ -151,7 +322,7 @@ Customize the parameters as per your need and the wallet functionality being use
 | `loginAppOverride`  | `AppMetadata`          | -                 | Override the login app metadata                |
 | `themeOverrides`    | `ButtonThemeOverrides` | -                 | Override the button theme settings             |
 
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
 
 ## Next Steps
 
@@ -159,6 +330,7 @@ The Push Universal Wallet is highly customizable with extensive configuration op
 
 For comprehensive customization options and detailed component APIs, explore:
 
-- [Push Wallet Provider Documentation](/docs/chain/ui-kit/advanced/push-wallet-provider/)
-- [Push Universal Account Button Documentation](/docs/chain/ui-kit/advanced/push-universal-account-button/)
-- [Push Wallet Context Documentation](/docs/chain/ui-kit/advanced/use-push-wallet-context/)
+- Go through [Push Univeral Wallet Provider](/docs/chain/ui-kit/advanced/push-wallet-provider/)
+- Explore customizations in [Push Universal Account Button](/docs/chain/ui-kit/advanced/push-universal-account-button/)
+- Learn how to use wallet hooks from [Wallet Context](/docs/chain/ui-kit/advanced/use-push-wallet-context/) 
+- Tap into already initialized `PushChainClient` from [Client Context](/docs/chain/ui-kit/advanced/use-push-chain-client/) 

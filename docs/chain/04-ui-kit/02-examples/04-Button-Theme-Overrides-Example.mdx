@@ -1,0 +1,244 @@
+---
+id: docs-chain-ui-components-example-button-theme-overrides-example
+title: Button Theme Overrides Example
+hide_title: false
+slug: ./button-theme-overrides-example
+displayed_sidebar: pushChainSidebar
+sidebar_position: 4
+---
+
+<head>
+  <title>{`Button Theme Overrides Example | Customizations | UI Kit | Push Chain Docs`}</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<!-- Content Start -->
+
+List of examples that demostrates:
+- How to customize the theme of Push Universal Account Button.
+- How to customize the theme for light and dark modes.
+- How to extend customization of Push Universal Account Button for all css styles.
+
+## Live playground
+
+<Tabs className="liveplaytab" groupId="button-theme-overrides-example">
+  <TabItem value="basic" label="Basic" default>
+
+```jsx live
+// customPropMinimized='true'
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+    login: {
+      email: true,
+      google: true,
+      wallet: {
+        enabled: true,
+      },
+      appPreview: true,
+    },
+    modal: {
+      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      appPreview: true,
+    },
+  };
+
+  const appMetadata = {
+    logoUrl:
+      'https://plus.unsplash.com/premium_photo-1746731481770-08b2f71661d0?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Test App Title',
+    description: 'Test App Description',
+  };
+
+  function WalletUI() {
+    const { universalAccount } = usePushWalletContext();
+
+    return (
+      <div>
+        <PushUniversalAccountButton
+          themeOverrides={{
+            '--pwauth-btn-connect-text-color': 'red',
+            '--pwauth-btn-connect-bg-color': '#fff',
+            '--pwauth-btn-connected-text-color': '#000',
+            '--pwauth-btn-connected-bg-color': '#000000',
+          }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig} app={appMetadata}>
+      <WalletUI />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+</TabItem>
+
+<TabItem value="light-dark" label="Light / Dark">
+
+```jsx live
+// customPropMinimized='true'
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+    login: {
+      email: true,
+      google: true,
+      wallet: {
+        enabled: true,
+      },
+      appPreview: true,
+    },
+    modal: {
+      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      appPreview: true,
+    },
+  };
+
+  const appMetadata = {
+    logoUrl:
+      'https://plus.unsplash.com/premium_photo-1746731481770-08b2f71661d0?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Test App Title',
+    description: 'Test App Description',
+  };
+
+  function WalletUI() {
+    const { universalAccount } = usePushWalletContext();
+
+    return (
+      <div>
+        <PushUniversalAccountButton
+          themeOverrides={{
+            light: {
+              '--pwauth-btn-connect-text-color': 'red',
+              '--pwauth-btn-connect-bg-color	': '#fff',
+              '--pwauth-btn-connected-text-color': '#000',
+              '--pwauth-btn-connected-bg-color': '#000000',
+            },
+            dark: {
+              '--pwauth-btn-connect-text-color': 'blue',
+              '--pwauth-btn-connect-bg-color': '#000',
+              '--pwauth-btn-connected-text-color': '#fff',
+              '--pwauth-btn-connected-bg-color': '#ffffff',
+            },
+          }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider
+      config={walletConfig}
+      app={appMetadata}
+      themeMode={PushUI.CONSTANTS.THEME.DARK}
+    >
+      <WalletUI />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="extend" label="Extending CSS for Any Style">
+
+```jsx live
+// customPropMinimized='true'
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+    login: {
+      email: true,
+      google: true,
+      wallet: {
+        enabled: true,
+      },
+      appPreview: true,
+    },
+    modal: {
+      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      appPreview: true,
+    },
+  };
+
+  const appMetadata = {
+    logoUrl:
+      'https://plus.unsplash.com/premium_photo-1746731481770-08b2f71661d0?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Test App Title',
+    description: 'Test App Description',
+  };
+
+  function WalletUI() {
+    const { universalAccount } = usePushWalletContext();
+
+    return (
+      <div>
+        <PushUniversalAccountButton
+          themeOverrides={{
+            light: {
+              '--pwauth-btn-connect-text-color': 'red',
+              '--pwauth-btn-connect-bg-color	': '#fff',
+              '--pwauth-btn-connected-text-color': '#000',
+              '--pwauth-btn-connected-bg-color': '#000000',
+            },
+            dark: {
+              '--pwauth-btn-connect-text-color': 'blue',
+              '--pwauth-btn-connect-bg-color': '#000',
+              '--pwauth-btn-connected-text-color': '#fff',
+              '--pwauth-btn-connected-bg-color': '#ffffff',
+            },
+          }}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider
+      config={walletConfig}
+      app={appMetadata}
+      themeMode={PushUI.CONSTANTS.THEME.DARK}
+    >
+      <WalletUI />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+## Next Steps
+- Check out advance concepts of Push Chain in [Deep Dives](/docs/chain/deep-dives)
+- Check out step by step implementation of App in [end to end Tutorials](/docs/chain/end-to-end-tutorials)
+- Follow or give a shoutout on X to our Intern at [@PushChain](https://x.com/PushChain)!
