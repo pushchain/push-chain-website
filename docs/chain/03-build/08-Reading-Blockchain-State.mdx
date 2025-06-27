@@ -22,9 +22,9 @@ import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtua
 
 Push Chain is an EVM-compatible blockchain, so you can use familiar Ethereum tools to fetch on-chain data. This guide shows you how to:
 
-- Initialize HTTP clients for one-off requests
+- Initialize HTTP client for one-off requests
 - Fetch transactions and blocks
-- Initialize WebSocket clients for real-time streaming
+- Initialize WebSocket client for real-time streaming
 - Subscribe to new blocks and filter for specific transactions
 
 For full reference on each library, see:
@@ -32,7 +32,7 @@ For full reference on each library, see:
 - [ethers.js documentation](https://docs.ethers.org/)
 - [viem documentation](https://viem.sh/)
 
-## Initialize HTTP Clients
+## Initialize HTTP Client
 
 <Tabs className="liveplaytab" groupId="reading-blockchain-state">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
@@ -303,7 +303,8 @@ import { defineChain, createPublicClient, http } from 'viem';
   </TabItem>
 </Tabs>
 
-## Initialize WebSocket Clients
+## Websocket Client
+### Initialize WebSocket Client
 
 <Tabs className="liveplaytab" groupId="reading-blockchain-state">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
@@ -382,7 +383,7 @@ import { defineChain, createPublicClient, http } from 'viem';
   </TabItem>
 </Tabs>
 
-## Subscribing to New Blocks
+### Subscribing to New Blocks
 
 <Tabs className="liveplaytab" groupId="reading-blockchain-state">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
@@ -459,7 +460,7 @@ import { defineChain, createPublicClient, http } from 'viem';
   </TabItem>
 </Tabs>
 
-### Example: Filtering New Blocks for Specific Transactions
+### Filtering New Blocks for Specific Transactions
 
 <Tabs className="liveplaytab" groupId="reading-blockchain-state">
   <TabItem value="ethers_v6" label="Ethers (v6)" default>
