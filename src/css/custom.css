@@ -604,7 +604,6 @@ article em > code {
 h3 > code,
 h4 > code {
   padding: 2px 8px;
-  color: inherit;
 }
 
 article tr > td > code:only-child {
