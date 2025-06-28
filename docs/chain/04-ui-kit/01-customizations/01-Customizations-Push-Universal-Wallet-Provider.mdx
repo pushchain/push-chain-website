@@ -13,13 +13,15 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
 import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 
 <!-- Content Start -->
 
-`PushUniversalWalletProvider` is the top-level context provider component that initializes the Push Wallet functionality throughout your application. 
+`PushUniversalWalletProvider` is the top-level context provider component that initializes the Push Wallet functionality throughout your application.
 
 It is responsible for:
+
 - **Login Configuration**: What logins and wallets you want to enable in your app.
 - **Application Metadata**: Allows you to display your application metadata such as logo, name, etc.
 - **Theme Settings**: Allows you to customize the wallet abstraction and interaction.
@@ -48,16 +50,16 @@ yarn add @pushchain/ui-kit
 
 ## Usage
 
-Wrap your application with `PushUniversalWalletProvider` to make wallet functionality available to all child components:
+Wrap your application with `PushUniversalWalletProvider` to make wallet functionality available to all child components.
 
 <Tabs className="codetabs" groupId="code-examples">
   <TabItem value="react" attributes={{className: "codetab react"}} default>
 
 ```typescript
-import { 
-  PushUniversalWalletProvider, 
-  PushUniversalWalletProviderConfig, 
-  PushUI 
+import {
+  PushUniversalWalletProvider,
+  PushUniversalWalletProviderConfig,
+  PushUI
 } from '@pushchain/ui-kit';
 
 function App() {
@@ -79,88 +81,294 @@ function App() {
 
 ## Props
 
-### _`config`_ (required)
-
-
-<PushAPIReference>
-| Property    | Type                          | Description                                             | Default          |
-| ----------- | ----------------------------- | ------------------------------------------------------- | ---------------- |
-| `uid`       | string                        | Unique identifier for this provider instance            | 'default'        |
-| _`network`_ | PushUI.CONSTANTS.PUSH_NETWORK | Chain environment to connect to                         | Required         |
-| `rpcURL`    | string                        | Custom JSON-RPC endpoint for supported chains           | Public endpoints |
-| `login`     | Object                        | Login method configuration                              | See below        |
-| `modal`     | Object                        | Global defaults for login and connected modal instances | See below        |
-| `chain`     | Object                        | Custom settings to configure the SDK instance           | See below        |
-</PushAPIReference>
-
-#### `config.login` Options
-
-<PushAPIReference showRequiredNotice={false}>
-| Property     | Type    | Description                    | Default   |
-| ------------ | ------- | ------------------------------ | --------- |
-| `email`      | boolean | Enable email/password login    | `true`    |
-| `google`     | boolean | Enable Google OAuth login      | `true`    |
-| `wallet`     | Object  | External wallet configuration  | See below |
-| `appPreview` | boolean | Show app preview inside iframe | `false`   |
-</PushAPIReference>
-
-#### `config.login.wallet` Options
-
-<PushAPIReference showRequiredNotice={false}>
-| Property  | Type              | Description                       | Default              |
-| --------- | ----------------- | --------------------------------- | -------------------- |
-| `enabled` | boolean           | Allow external wallet connections | `true`               |
-| `chains`  | CONSTANTS.CHAIN[] | Specific chains to enable         | All supported chains |
-</PushAPIReference>
-
-#### `config.modal` Options
-
-Global defaults for all login modal instances.
-
-<PushAPIReference showRequiredNotice={false}>
-| Property          | Type                                                  | Description                          | Default                |
-| ----------------- | ----------------------------------------------------- | ------------------------------------ | ---------------------- |
-| `loginLayout`     | CONSTANTS.LOGIN.SPLIT \| CONSTANTS.LOGIN.SIMPLE       | Login modal layout type              | CONSTANTS.LOGIN.SIMPLE |
-| `appPreview`      | boolean                                               | Show app preview in modal            | `false`                |
-| `bgImage`         | string                                                | Background image for the login modal | None                   |
-| `connectedLayout` | CONSTANTS.CONNECTED.FULL \| CONSTANTS.CONNECTED.HOVER | Connected modal layout type          | None                   |
-</PushAPIReference>
-
-### _`app`_
-
-### _`themeOverride`_
-
-### _`themeMode`_
-
-### `config` (Required)
+### _`config`_ prop (required)
 
 Core configuration object for connections and login settings.
 
+<PushAPIReference>
 
-### `app`
+| Property    | Type                            | Default          | Description                                                                                                                                                                                                                                                                                                                 |
+| ----------- | ------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`network`_ | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to conenct to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
+| `login`     | `Object`                        | -                | Login method configuration (**See Below**)                                                                                                                                                                                                                                                                                  |
+| `modal`     | `Object`                        | -                | Global defaults for login and connected modal instances (**See Below**)                                                                                                                                                                                                                                                     |
+| `uid`       | `string`                        | `default`        | Unique identifier for this provider instance                                                                                                                                                                                                                                                                                |
+| `rpcURL`    | `string`                        | Public endpoints | Custom JSON-RPC endpoint for supported chains                                                                                                                                                                                                                                                                               |
+| `chain`     | `Object`                        | -                | Custom settings to configure the SDK instance (**See Below**)                                                                                                                                                                                                                                                               |
+
+</PushAPIReference>
+
+<Details summary="`config.login` Options" className="alert alert--minimal code">
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Property     | Type      | Default | Description                                   |
+| ------------ | --------- | ------- | --------------------------------------------- |
+| `email`      | `boolean` | `true`  | Enable email/password login                   |
+| `google`     | `boolean` | `true`  | Enable Google OAuth login                     |
+| `wallet`     | `Object`  | -       | External wallet configuration (**See Below**) |
+| `appPreview` | `boolean` | `false` | Show app preview inside iframe                |
+
+</PushAPIReference>
+
+</Details>
+
+<Details summary="`config.login.wallet` Options" className="alert alert--minimal code">
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Property  | Type                       | Description                       | Default                                                                                                                                                                                                                                           |
+| --------- | -------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled` | `boolean`                  | Allow external wallet connections | `true`                                                                                                                                                                                                                                            |
+| `chains`  | `PushUI.CONSTANTS.CHAIN[]` | Specific chains to enable         | All supported chains. <Details summary="PushUI.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushUI.CONSTANTS.CHAIN.SOLANA_DEVNET` `PushUI.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`</Details> |
+
+</PushAPIReference>
+
+</Details>
+
+<Details summary="`config.modal` Options" className="alert alert--minimal code">
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Property               | Type                                     | Default                                               | Description                                                                                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `loginLayout`          | `PushUI.CONSTANTS.LOGIN.LAYOUT`          | `PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE`                | Login modal layout type. <Details summary="PushUI.CONSTANTS.LOGIN.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE` `PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT`</Details>                                        |
+| `appPreview`           | `boolean`                                | `false`                                               | Show app preview in modal                                                                                                                                                                                                                          |
+| `bgImage`              | `string`                                 | -                                                     | Background image for the login modal                                                                                                                                                                                                               |
+| `connectedLayout`      | `PushUI.CONSTANTS.CONNECTED.LAYOUT`      | `PushUI.CONSTANTS.CONNECTED.HOVER`                    | Connected modal layout type. <Details summary="PushUI.CONSTANTS.CONNECTED.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.LAYOUT.FULL` `PushUI.CONSTANTS.CONNECTED.HOVER`</Details>                                 |
+| `connectedInteraction` | `PushUI.CONSTANTS.CONNECTED.INTERACTION` | `PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTABLE` | Connected modal outside interaction type. <Details summary="PushUI.CONSTANTS.CONNECTED.INTERACTION" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTABLE` `PushUI.CONSTANTS.INTERACTION.BLUR`</Details> |
+
+</PushAPIReference>
+
+</Details>
+
+<Details summary="Live Playground: Creating basic and advanced config" className="alert alert--live-play alert-top-pad-20">
+
+<Tabs className="liveplaytab" groupId="integrate-push-wallet">
+
+  <TabItem value="basic" label="Basic" default>
+
+```jsx live
+// customPropHighlightRegexStart=walletConfig\s=
+// customPropHighlightRegexEnd=};
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // network to connect to
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      {/* Your app logic */}
+
+      {/* Push Universal Wallet Button to show the functionality */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+<TabItem value="advanced" label="Advanced">
+
+```jsx live
+// customPropHighlightRegexStart=walletConfig\s=
+// customPropHighlightRegexEnd=};
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // network to connect to
+    login: { // login options to choose from
+      email: true,
+      google: false, // disable google login
+      wallet: {
+        enabled: true, // enable external wallet login
+        chains: [PushUI.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA, PushUI.CONSTANTS.CHAIN.SOLANA_DEVNET, PushUI.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT],
+      },
+      appPreview: true, // enable app preview to be shown inside login modal. Meed to provide app metadata as well
+    },
+    modal: {
+      loginLayout: PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE, // login modal layout type
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.LAYOUT.FULL, // connected modal layout type
+      appPreview: true, // enable app preview to be shown inside modal. Meed to provide app metadata as well
+    },
+    uid: 'your-uid', // unique identifier, only used if multiple wallet needs to be connected
+    rpcURL: '<INFURA_RPC_URL>', // custom rpc url to connect to
+    chainConfig: {} // custom chain config to pass to push chain client if needed
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      {/* Your app logic */}
+
+      {/* Push Universal Wallet Button to show the functionality */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</TabItem>
+
+</Tabs>
+
+</Details>
+
+
+### `app` prop
 
 Application metadata used for branding in login screens and preview panes.
 
 <PushAPIReference showRequiredNotice={false}>
+
 | Property      | Type   | Description                          |
 | ------------- | ------ | ------------------------------------ |
 | `logoURL`     | string | URL to application logo or icon      |
 | `title`       | string | Application name or title            |
 | `description` | string | Brief description of the application |
+
 </PushAPIReference>
 
-### `themeMode`
+<Details summary="Live Playground: Creating your app metadata" className="alert alert--live-play alert-top-pad-20">
+
+```jsx live
+// customPropHighlightRegexStart=appMetadata\s=
+// customPropHighlightRegexEnd=};
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // network to connect to
+  };
+
+  // Define Your App Preview
+  const appMetadata = {
+    logoUrl:
+      'https://plus.unsplash.com/premium_photo-1746731481770-08b2f71661d0?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    title: 'Test App Title',
+    description: 'Test App Description',
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig} app={appMetadata}>
+      {/* Your app logic */}
+
+      {/* Push Universal Wallet Button to show the functionality */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</Details>
+
+### `themeMode` prop
 
 <PushAPIReference showRequiredNotice={false}>
-| Type            | Description                | Default                |
+
+| Type            | Default                | Description                |
 | --------------- | -------------------------- | ---------------------- |
-| CONSTANTS.THEME | Theme mode (LIGHT or DARK) | `CONSTANTS.THEME.DARK` |
+| `PushUI.CONSTANTS.THEME` | `PushUI.CONSTANTS.THEME.LIGHT` | Theme mode to apply, you can use `LIGHT` or `DARK` option. <Details summary="PushUI.CONSTANTS.THEME" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.THEME.LIGHT` `PushUI.CONSTANTS.THEME.DARK`</Details> |
+
 </PushAPIReference>
 
-### `themeOverride`
+<Details summary="Live Playground: Playing with themeMode" className="alert alert--live-play alert-top-pad-20">
+
+```jsx live
+// customPropHighlightRegexStart=themeMode={
+// customPropHighlightRegexEnd=}>
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // network to connect to
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig} themeMode={PushUI.CONSTANTS.THEME.DARK}>
+      {/* Your app logic */}
+
+      {/* Push Universal Wallet Button to show the functionality */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</Details>
+
+### `themeOverrides` prop
 
 <PushAPIReference showRequiredNotice={false}>
-| Type           | Description                 | Default |
-| -------------- | --------------------------- | ------- |
-| ThemeOverrides | Override the theme settings | `{}`    |
+
+| Type           | Default | Description                 |
+| -------------- | ------- | --------------------------- |
+| ThemeOverrides | `{}`    | Override the theme settings |
+
 </PushAPIReference>
+
+<Details summary="Live Playground: Customizing your theme" className="alert alert--live-play alert-top-pad-20">
+
+```jsx live
+// customPropHighlightRegexStart=themeOverrides={{
+// customPropHighlightRegexEnd=}}>
+// customPropMinimized='false'
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig} themeOverrides={{
+      '--pw-core-bg-primary-color': '#FF474C',
+      '--pw-core-font-family': 'Inter',
+      '--pw-core-text-primary-color': '#fff',
+      '--pw-core-text-secondary-color': '#F5F6F8',
+      '--pw-core-btn-border-radius': '15px',
+    }}>
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+</Details>
