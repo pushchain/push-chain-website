@@ -9,6 +9,7 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
 import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 
 <head>
@@ -17,9 +18,14 @@ import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIRefer
 
 <!-- Content Start -->
 
-Seamlessly Connect to Multiple Blockchains: Simplify wallet integration across your application with Push Universal Wallet.
+## Overview
 
-You can effortlessly integrate the Push Universal Wallet into your root application component, enabling wallet functionality throughout your entire app. This eliminates the need to manage complex blockchain connections, authentication states, and cross-chain interactions manually.
+Push Universal Wallet gives your app:
+
+- **Seamless cross-chain** wallet integration (EVM, Solana, etc.)
+- **Provider/consumer** hook API for global state
+- Built-in **UI components** for connect buttons and modals
+- **Eliminates the need** to manage complex blockchain connections, authentication states, and cross-chain interactions manually
 
 ## How It Works
 
@@ -47,7 +53,7 @@ The Push Universal Wallet provides a unified interface for connecting to multipl
   </TabItem>
 </Tabs>
 
-## Usage and Playground
+## Quickstart
 
 <Tabs className="liveplaytab" groupId="integrate-push-wallet">
   <TabItem value="basic" label="Quickstart" default>
@@ -56,7 +62,6 @@ The Push Universal Wallet provides a unified interface for connecting to multipl
 // customPropHighlightRegexStart=<PushUniversalWalletProvider\s
 // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
 // customPropMinimized='false'
-// Import necessary components from @pushchain/ui-kit
 // Import necessary components from @pushchain/ui-kit
 import {
   PushUniversalWalletProvider,
@@ -82,13 +87,12 @@ function App() {
 
 </TabItem>
 
-<TabItem value="with_hooks" label="With Hooks" default>
+<TabItem value="with_hooks" label="With Hooks">
 
 ```jsx live
 // customPropHighlightRegexStart=<PushUniversalWalletProvider\s
 // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
 // customPropMinimized='false'
-// Import necessary components from @pushchain/ui-kit
 // Import necessary components from @pushchain/ui-kit
 import {
   PushUniversalWalletProvider,
@@ -112,7 +116,10 @@ function App() {
       <div>
         <PushUniversalAccountButton />
         {connectionStatus == 'connected' && (
-          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient.universal.account}</p>
+          <p>
+            LFG! Push Chain Executor Account (UEA): $
+            {pushChainClient.universal.account}
+          </p>
         )}
       </div>
     );
@@ -291,46 +298,28 @@ Customize the parameters as per your need and the wallet functionality being use
 
 ### PushUniversalWalletProvider
 
+Below is a list of **minimum parameters** required to customize the Push Universal Wallet Provider. Check out [PushUniversalWalletProvider](/chain/ui-kit/customizations/push-universal-account-button/) for more information on how to use and customize the Push Universal Wallet Provider.
+
 <PushAPIReference>
 
-| Arguments            | Type                                | Default                 | Description                                                  |
-| ---------------- | ----------------------------------- | ----------------------- | -------------------------------------------------------- |
-| _`config`_       | `PushUniversalWalletProviderConfig` | -                       | Core configuration object for wallet connections         |
-| _`config.env`_   | `CONSTANTS.ENV`                     | -                       | Chain environment - 'TESTNET', 'MAINNET', or 'LOCAL'     |
-| `config.uid`     | `string`                            | 'default'               | Unique identifier for this provider instance             |
-| `config.rpcURL`  | `string`                            | -                       | Custom JSON-RPC endpoint for supported chains            |
-| `config.login`   | `Object`                            | -                       | Login method configuration (email, google, wallet)       |
-| `modal`          | `ModalProps`                        | -                       | Global defaults for login and connected modal instances  |
-| `app`            | `AppMetadata`                       | -                       | Application branding metadata (logo, title, description) |
-| `themeMode`      | `CONSTANTS.THEME`                   | `CONSTANTS.THEME.LIGHT` | Theme mode - 'LIGHT' or 'DARK'                           |
-| `themeOverrides` | `ThemeOverrides`                    | -                       | Override the theme settings                              |
-| `children`       | `React.ReactNode`                   | -                       | Your application components                              |
+| Arguments          | Type                                           | Default  | Description                                                                                                                                                                                                                                                                                                                 |
+| ------------------ | ---------------------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`config`_         | `PushUniversalWalletProviderConfig`            | -        | Core configuration object for wallet connections.                                                                                                                                                                                                                                                                            |
+| _`config.network`_ | `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET`        | -        | Push Chain network to conenct to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
+| `config.app`       | `{ title, description, logoUrl }`              | —        | (Optional) app metadata for login/preview in the modal.                                                                                                                                                                                                                                                                      |
+| `config.login`     | `{ email, google, wallet, appPreview }`        | —        | Toggle login methods.                                                                                                                                                                                                                                                                                                        |
+| `config.modal`     | `{ loginLayout, connectedLayout, appPreview }` | —        | Customize the modal layout.                                                                                                                                                                                                                                                                                                  |
+| `themeMode`        | `'light'` \| `'dark'`            | `light` | Force a particular theme.                                                                                                                                                                                                                                                                                                    |
+| `themeOverrides`   | `Record<string,string> & { light, dark }`      | —        | Override CSS vars globally or per theme.                                                                                                                                                                                                                                                                                     |
 
 </PushAPIReference>
-
 
 ### PushUniversalAccountButton
 
-<PushAPIReference>
-
-| Arguments               | Type                   | Default           | Description                                        |
-| ------------------- | ---------------------- | ----------------- | ---------------------------------------------- |
-| `uid`               | `string`               | -                 | Target provider instance, matches `config.uid` |
-| `connectButtonText` | `string`               | 'Connect Account' | Text for the connect button                    |
-| `loadingComponent`  | `React.ReactNode`      | -                 | Custom loading indicator                       |
-| `modalAppOverride`  | `AppMetadata`          | -                 | Override the modal app metadata                |
-| `loginAppOverride`  | `AppMetadata`          | -                 | Override the login app metadata                |
-| `themeOverrides`    | `ButtonThemeOverrides` | -                 | Override the button theme settings             |
-
-</PushAPIReference>
+Check out [PushUniversalAccountButton](/chain/ui-kit/customizations/push-universal-account-button/) for more information on how to use and customize the Push Universal Account Button.
 
 ## Next Steps
 
-The Push Universal Wallet is highly customizable with extensive configuration options for themes, login methods, button styling, and modal layouts.
-
-For comprehensive customization options and detailed component APIs, explore:
-
-- Go through [Push Univeral Wallet Provider](/docs/chain/ui-kit/advanced/push-wallet-provider/)
-- Explore customizations in [Push Universal Account Button](/docs/chain/ui-kit/advanced/push-universal-account-button/)
-- Learn how to use wallet hooks from [Wallet Context](/docs/chain/ui-kit/advanced/use-push-wallet-context/) 
-- Tap into already initialized `PushChainClient` from [Client Context](/docs/chain/ui-kit/advanced/use-push-chain-client/) 
+- Customize the provider in [PushUniversalWalletProvider](/docs/chain/ui-kit/advanced/push-wallet-provider/)
+- Style your connect button in [PushUniversalAccountButton](/docs/chain/ui-kit/advanced/push-universal-account-button/)
+- Master hooks with [usePushWalletContext](/docs/chain/ui-kit/advanced/use-push-wallet-context/)
