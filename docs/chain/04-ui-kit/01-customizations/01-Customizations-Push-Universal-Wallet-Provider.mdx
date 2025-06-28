@@ -13,18 +13,38 @@ sidebar_position: 1
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 
 <!-- Content Start -->
 
-`PushUniversalWalletProvider` is the top-level context provider component that initializes the Push Wallet functionality throughout your application. It manages theme settings, RPC connections, login configuration, and application metadata.
+`PushUniversalWalletProvider` is the top-level context provider component that initializes the Push Wallet functionality throughout your application. 
+
+It is responsible for:
+- **Login Configuration**: What logins and wallets you want to enable in your app.
+- **Application Metadata**: Allows you to display your application metadata such as logo, name, etc.
+- **Theme Settings**: Allows you to customize the wallet abstraction and interaction.
 
 ## Installation
 
+<Tabs className="codetabs" groupId="quickstart-examples">
+  <TabItem value="npm" attributes={{className: "codetab npm"}} default>
+
 ```bash
+# UI Kit SDK
 npm install @pushchain/ui-kit
-# or
+```
+
+  </TabItem>
+
+  <TabItem value="yarn" attributes={{className: "codetab yarn"}}>
+
+```bash
+# UI Kit SDK
 yarn add @pushchain/ui-kit
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Usage
 
@@ -34,17 +54,19 @@ Wrap your application with `PushUniversalWalletProvider` to make wallet function
   <TabItem value="react" attributes={{className: "codetab react"}} default>
 
 ```typescript
-import { PushUI, PushUniversalWalletProvider, PushUniversalWalletProviderConfig } from '@pushchain/ui-kit';
-
-const walletConfig: PushUniversalWalletProviderConfig = {
-  network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
-}
-
+import { 
+  PushUniversalWalletProvider, 
+  PushUniversalWalletProviderConfig, 
+  PushUI 
+} from '@pushchain/ui-kit';
 
 function App() {
   return (
     <PushUniversalWalletProvider
-      config={walletConfig}
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      app={{ title: 'My App', description: 'Demo', logoURL: 'https://...' }}
+      themeMode={PushUI.CONSTANTS.THEME.LIGHT}
+      themeOverrides={{ '--pw-core-bg-primary-color': '#FF474C' }}
     >
       <Component />
     </PushUniversalWalletProvider>
@@ -52,15 +74,15 @@ function App() {
 }
 ```
 
- </TabItem>
+  </TabItem>
 </Tabs>
 
 ## Props
 
-### `config` (Required)
+### _`config`_ (required)
 
-Core configuration object for connections and login settings.
 
+<PushAPIReference>
 | Property    | Type                          | Description                                             | Default          |
 | ----------- | ----------------------------- | ------------------------------------------------------- | ---------------- |
 | `uid`       | string                        | Unique identifier for this provider instance            | 'default'        |
@@ -69,54 +91,76 @@ Core configuration object for connections and login settings.
 | `login`     | Object                        | Login method configuration                              | See below        |
 | `modal`     | Object                        | Global defaults for login and connected modal instances | See below        |
 | `chain`     | Object                        | Custom settings to configure the SDK instance           | See below        |
+</PushAPIReference>
 
 #### `config.login` Options
 
+<PushAPIReference showRequiredNotice={false}>
 | Property     | Type    | Description                    | Default   |
 | ------------ | ------- | ------------------------------ | --------- |
 | `email`      | boolean | Enable email/password login    | `true`    |
 | `google`     | boolean | Enable Google OAuth login      | `true`    |
 | `wallet`     | Object  | External wallet configuration  | See below |
 | `appPreview` | boolean | Show app preview inside iframe | `false`   |
+</PushAPIReference>
 
 #### `config.login.wallet` Options
 
+<PushAPIReference showRequiredNotice={false}>
 | Property  | Type              | Description                       | Default              |
 | --------- | ----------------- | --------------------------------- | -------------------- |
 | `enabled` | boolean           | Allow external wallet connections | `true`               |
 | `chains`  | CONSTANTS.CHAIN[] | Specific chains to enable         | All supported chains |
+</PushAPIReference>
 
 #### `config.modal` Options
 
 Global defaults for all login modal instances.
 
+<PushAPIReference showRequiredNotice={false}>
 | Property          | Type                                                  | Description                          | Default                |
 | ----------------- | ----------------------------------------------------- | ------------------------------------ | ---------------------- |
 | `loginLayout`     | CONSTANTS.LOGIN.SPLIT \| CONSTANTS.LOGIN.SIMPLE       | Login modal layout type              | CONSTANTS.LOGIN.SIMPLE |
 | `appPreview`      | boolean                                               | Show app preview in modal            | `false`                |
 | `bgImage`         | string                                                | Background image for the login modal | None                   |
 | `connectedLayout` | CONSTANTS.CONNECTED.FULL \| CONSTANTS.CONNECTED.HOVER | Connected modal layout type          | None                   |
+</PushAPIReference>
+
+### _`app`_
+
+### _`themeOverride`_
+
+### _`themeMode`_
+
+### `config` (Required)
+
+Core configuration object for connections and login settings.
+
 
 ### `app`
 
 Application metadata used for branding in login screens and preview panes.
 
+<PushAPIReference showRequiredNotice={false}>
 | Property      | Type   | Description                          |
 | ------------- | ------ | ------------------------------------ |
 | `logoURL`     | string | URL to application logo or icon      |
 | `title`       | string | Application name or title            |
 | `description` | string | Brief description of the application |
+</PushAPIReference>
 
 ### `themeMode`
 
+<PushAPIReference showRequiredNotice={false}>
 | Type            | Description                | Default                |
 | --------------- | -------------------------- | ---------------------- |
 | CONSTANTS.THEME | Theme mode (LIGHT or DARK) | `CONSTANTS.THEME.DARK` |
+</PushAPIReference>
 
 ### `themeOverride`
 
+<PushAPIReference showRequiredNotice={false}>
 | Type           | Description                 | Default |
 | -------------- | --------------------------- | ------- |
 | ThemeOverrides | Override the theme settings | `{}`    |
-
-> Note: These _`Arguments`_ are mandatory.
+</PushAPIReference>
