@@ -27,47 +27,100 @@ The UI Kit SDK lets you customize its look by overriding CSS variables (aka them
 <Tabs className="liveplaytab" groupId="customize-theme-variable">
   <TabItem value="applevel" label="App Level" default>
 
-```jsx
-<PushUniversalWalletProvider
-  config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
-  themeOverrides={{
-    '--pw-core-bg-primary-color': '#17181B', // global override
-    light: {
-      '--pw-core-bg-primary-color': '#F5F6F8', // light theme override
-    },
-    dark: {
-      '--pw-core-bg-primary-color': '#17181B', // dark theme override
-    },
-  }}
->
-  {/* Your App Logic */}
-</PushUniversalWalletProvider>
+```jsx live
+// customPropHighlightRegexStart=themeOverrides=
+// customPropHighlightRegexEnd=}}
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  return (
+    <PushUniversalWalletProvider
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      themeOverrides={{
+        '--pw-core-bg-primary-color': '#2A0134', // global override
+      }}
+    >
+      {/* Your App Logic */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
 ```
 
   </TabItem>
 
-  <TabItem value="basic" label="Button Specific" default>
+  <TabItem value="applevel_lightdark" label="App Level (Light / Dark)" default>
 
-```jsx
-<PushUniversalWalletProvider
-  config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
-  themeOverrides={{
-    // ... app level overrides
-    // NOTE: Button overrides can override app level overrides for supported variables (beginning with `--pwauth-`)
-  }}
->
-  {/* Button-level overrides */}
-  <PushUniversalAccountButton
-    themeOverrides={{
-      '--pwauth-btn-connect-text-color': 'yellow',
-      '--pwauth-btn-connect-border-radius': '20px',
-      light: { '--pwauth-btn-connect-text-color': 'red' },
-      dark: { '--pwauth-btn-connect-text-color': 'blue' },
-    }}
-  />
+```jsx live
+// customPropHighlightRegexStart=themeOverrides=
+// customPropHighlightRegexEnd=}}
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
 
-  {/* Your App Logic */}
-</PushUniversalWalletProvider>
+function App() {
+  return (
+    <PushUniversalWalletProvider
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      themeOverrides={{
+        '--pw-core-bg-primary-color': '#2A0134', // global override
+        light: {
+          // light theme override - no override so global value is taken
+        },
+        dark: {
+          '--pw-core-bg-primary-color': '#2E6F40', // dark theme override - this will override the global value
+        },
+      }}
+    >
+      {/* Your App Logic */}
+      <PushUniversalAccountButton />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+  </TabItem>
+
+  <TabItem value="button_specific" label="Button Specific" default>
+
+```jsx live
+// customPropHighlightRegexStart=themeOverrides=
+// customPropHighlightRegexEnd=}}
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  return (
+    <PushUniversalWalletProvider
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      themeOverrides={{
+        // ... app level overrides
+        // NOTE: Button overrides can override app level overrides for supported variables (beginning with `--pwauth-`)
+      }}
+    >
+      {/* Button-level overrides */}
+      <PushUniversalAccountButton
+        themeOverrides={{
+          '--pwauth-btn-connect-bg-color': 'yellow',
+          '--pwauth-btn-connect-border-radius': '32px',
+          light: { '--pwauth-btn-connect-bg-color': 'red' },
+          dark: { '--pwauth-btn-connect-bg-color': 'blue' },
+        }}
+      />
+
+      {/* Your App Logic */}
+    </PushUniversalWalletProvider>
+  );
+}
 ```
 
   </TabItem>
