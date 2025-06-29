@@ -11,17 +11,36 @@ sidebar_position: 2
   <title>{`Push Universal Account Button | Customizations | UI Kit | Push Chain Docs`}</title>
 </head>
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+
 <!-- Content Start -->
 
 `PushUniversalAccountButton` is a versatile, state-aware button component for wallet connections in the Push Chain ecosystem. It handles the complete user journey from connection initiation through authentication to displaying the connected account state, with extensive customization options for each state.
 
 ## Installation
 
+<Tabs className="codetabs" groupId="quickstart-examples">
+  <TabItem value="npm" attributes={{className: "codetab npm"}} default>
+
 ```bash
+# UI Kit SDK
 npm install @pushchain/ui-kit
-# or
+```
+
+  </TabItem>
+
+  <TabItem value="yarn" attributes={{className: "codetab yarn"}}>
+
+```bash
+# UI Kit SDK
 yarn add @pushchain/ui-kit
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Usage
 
@@ -58,39 +77,57 @@ Each state can be fully customized through props.
 
 ### Instance Targeting
 
-| Property | Type   | Description                                    | Default               |
-| -------- | ------ | ---------------------------------------------- | --------------------- |
-| `uid`    | string | Target provider instance, matches `config.uid` | Uses default provider |
+<PushAPIReference showRequiredNotice={false}>
+
+| Property | Type     | Default               | Description                                    |
+| -------- | -------- | --------------------- | ---------------------------------------------- |
+| `uid`    | `string` | Uses default provider | Target provider instance, matches `config.uid` |
+
+</PushAPIReference>
 
 ### Disconnected State Customization
 
-| Property            | Type   | Description                 | Default           |
-| ------------------- | ------ | --------------------------- | ----------------- |
-| `connectButtonText` | string | Text for the connect button | `Connect Account` |
+<PushAPIReference showRequiredNotice={false}>
+
+| Property            | Type     | Default           | Description                 |
+| ------------------- | -------- | ----------------- | --------------------------- |
+| `connectButtonText` | `string` | `Connect Account` | Text for the connect button |
+
+</PushAPIReference>
 
 ### Loading State Customization
 
-| Property           | Type            | Description              | Default             |
-| ------------------ | --------------- | ------------------------ | ------------------- |
-| `loadingComponent` | React.ReactNode | Custom loading indicator | Uses default loader |
+<PushAPIReference showRequiredNotice={false}>
+
+| Property           | Type              | Default             | Description              |
+| ------------------ | ----------------- | ------------------- | ------------------------ |
+| `loadingComponent` | `React.ReactNode` | Uses default loader | Custom loading indicator |
+
+</PushAPIReference>
 
 ### App Preview Overrides
 
-| Property                       | Type   | Description                                | Default                |
-| ------------------------------ | ------ | ------------------------------------------ | ---------------------- |
-| `modalAppOverride`             | Object | Override app preview in the wrapper iframe | From `app`             |
-| `modalAppOverride.logoURL`     | string | Override app logo                          | From `app.logoURL`     |
-| `modalAppOverride.title`       | string | Override app title                         | From `app.title`       |
-| `modalAppOverride.description` | string | Override app description                   | From `app.description` |
-| `loginAppOverride`             | Object | Override app preview inside hosted iframe  | From `app`             |
-| `loginAppOverride.logoURL`     | string | Override app logo in iframe                | From `app.logoURL`     |
-| `loginAppOverride.title`       | string | Override app title in iframe               | From `app.title`       |
-| `loginAppOverride.description` | string | Override app description in iframe         | From `app.description` |
+<PushAPIReference showRequiredNotice={false}>
+
+| Property                       | Type     | Default                | Description                                |
+| ------------------------------ | -------- | ---------------------- | ------------------------------------------ |
+| `modalAppOverride`             | `Object` | From `app`             | Override app preview in the wrapper iframe |
+| `modalAppOverride.logoURL`     | `string` | From `app.logoURL`     | Override app logo                          |
+| `modalAppOverride.title`       | `string` | From `app.title`       | Override app title                         |
+| `modalAppOverride.description` | `string` | From `app.description` | Override app description                   |
+| `loginAppOverride`             | `Object` | From `app`             | Override app preview inside hosted iframe  |
+| `loginAppOverride.logoURL`     | `string` | From `app.logoURL`     | Override app logo in iframe                |
+| `loginAppOverride.title`       | `string` | From `app.title`       | Override app title in iframe               |
+| `loginAppOverride.description` | `string` | From `app.description` | Override app description in iframe         |
+
+</PushAPIReference>
 
 ### Button Theme Settings Override
 
-| Property         | Type           | Description            | Default |
-| ---------------- | -------------- | ---------------------- | ------- |
-| `themeOverrides` | ThemeOverrides | Button theme overrides | `{}`    |
+<PushAPIReference showRequiredNotice={false}>
 
-> Note: These _`Arguments`_ are mandatory.
+| Property         | Type             | Default | Description            |
+| ---------------- | ---------------- | ------- | ---------------------- |
+| `themeOverrides` | `ThemeOverrides` | `{}`    | Button theme overrides |
+
+</PushAPIReference>

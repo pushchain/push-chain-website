@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 interface PushAPIReferenceProps {
   children: React.ReactNode;
-  title?: string;
   className?: string;
   showRequiredNotice?: boolean;
 }

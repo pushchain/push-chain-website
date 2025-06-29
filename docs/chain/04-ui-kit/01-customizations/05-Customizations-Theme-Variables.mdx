@@ -12,29 +12,96 @@ sidebar_position: 5
 </head>
 
 import ColorSwatch from '@site/src/components/ColorSwatch/ColorSwatch';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 <!-- Content Start -->
 
-The UI Kit SDK allows you to customize the theme using CSS variables by overriding the default theme tokens. It supports global overrides (apply to both themes) as well as theme-specific overrides (`light` and `dark`).
+The UI Kit SDK lets you customize its look by overriding CSS variables (aka theme tokens). You can apply **global overrides** (affecting both light & dark) or **theme-specific** overrides via `light` and `dark` sub-objects.
 
-### Typography and Layout
+## Usage
 
-| Variable                           | Default          |
-| ---------------------------------- | ---------------- |
-| --pw-core-font-family              | `FK Grotesk Neu` |
-| --pw-core-text-size                | `26px`           |
-| --pw-core-modal-border             | `2px`            |
-| --pw-core-modal-border-radius      | `24px`           |
-| --pw-core-modal-width              | `376px`          |
-| --pw-core-modal-padding            | `24px`           |
-| --pw-core-list-spacing             | `12px`           |
-| --pw-core-btn-border-radius        | `12px`           |
-| --pwauth-btn-connect-border-radius | `12px`           |
+- Pass the `themeOverrides` prop to the **PushUniversalWalletProvider** component to override app wide theme variables.
+- You can further extend this by passing the `themeOverrides` prop to the **PushUniversalAccountButton** for supported variables. These always begins with `--pwauth-`.
+
+<Tabs className="liveplaytab" groupId="customize-theme-variable">
+  <TabItem value="applevel" label="App Level" default>
+
+```jsx
+<PushUniversalWalletProvider
+  config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+  themeOverrides={{
+    '--pw-core-bg-primary-color': '#17181B', // global override
+    light: {
+      '--pw-core-bg-primary-color': '#F5F6F8', // light theme override
+    },
+    dark: {
+      '--pw-core-bg-primary-color': '#17181B', // dark theme override
+    },
+  }}
+>
+  {/* Your App Logic */}
+</PushUniversalWalletProvider>
+```
+
+  </TabItem>
+
+  <TabItem value="basic" label="Button Specific" default>
+
+```jsx
+<PushUniversalWalletProvider
+  config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+  themeOverrides={{
+    // ... app level overrides
+    // NOTE: Button overrides can override app level overrides for supported variables (beginning with `--pwauth-`)
+  }}
+>
+  {/* Button-level overrides */}
+  <PushUniversalAccountButton
+    themeOverrides={{
+      '--pwauth-btn-connect-text-color': 'yellow',
+      '--pwauth-btn-connect-border-radius': '20px',
+      light: { '--pwauth-btn-connect-text-color': 'red' },
+      dark: { '--pwauth-btn-connect-text-color': 'blue' },
+    }}
+  />
+
+  {/* Your App Logic */}
+</PushUniversalWalletProvider>
+```
+
+  </TabItem>
+
+
+</Tabs>
+
+:::note Override Order
+Top‑level properties apply to both themes; then `light` and `dark` objects override those values when the corresponding theme is active.
+:::
+
+## List of Supported Theme Variables
+### Global Overrides
+
+Use these tokens for settings that should apply regardless of theme:
+
+| Category            | Variable                           | Default          |
+| ------------------- | ---------------------------------- | ---------------- |
+| Typography & Layout | --pw-core-font-family              | `FK Grotesk Neu` |
+|                     | --pw-core-text-size                | `26px`           |
+| Spacing & Border    | --pw-core-list-spacing             | `12px`           |
+|                     | --pw-core-modal-border             | `2px`            |
+|                     | --pw-core-modal-border-radius      | `24px`           |
+|                     | --pw-core-modal-width              | `376px`          |
+|                     | --pw-core-modal-padding            | `24px`           |
+|                     | --pw-core-btn-border-radius        | `12px`           |
+|                     | --pwauth-btn-connect-border-radius | `12px`           |
 
 ### Colors
 
-| Variable                          | Default (Light) | Default (Dark) |
-| --------------------------------- | --------------- | -------------- |
+These tokens have different defaults in light vs. dark themes:
+
+| Variable                          | Default (Light)                 | Default (Dark)                  |
+| --------------------------------- | ------------------------------- | ------------------------------- |
 | --pw-core-brand-primary-color     | <ColorSwatch color="#D548EC" /> | <ColorSwatch color="#CF59E2" /> |
 | --pw-core-text-primary-color      | <ColorSwatch color="#17181B" /> | <ColorSwatch color="#F5F6F8" /> |
 | --pw-core-text-secondary-color    | <ColorSwatch color="#313338" /> | <ColorSwatch color="#C4CBD5" /> |
@@ -54,3 +121,10 @@ The UI Kit SDK allows you to customize the theme using CSS variables by overridi
 | --pwauth-btn-connect-bg-color     | <ColorSwatch color="#D548EC" /> | <ColorSwatch color="#D548EC" /> |
 | --pwauth-btn-connected-text-color | <ColorSwatch color="#FFFFFF" /> | <ColorSwatch color="#FFFFFF" /> |
 | --pwauth-btn-connected-bg-color   | <ColorSwatch color="#000000" /> | <ColorSwatch color="#000000" /> |
+
+
+## Next Steps
+
+- Try out [Theme Overrides Example](/docs/chain/ui-kit/examples/theme-overrides-example/) or [Button Theme Overrides Example](/docs/chain/ui-kit/examples/button-theme-overrides-example/)
+- Check out various other examples in [Examples section](/docs/chain/ui-kit/examples/single-wallet-example/)
+- Dive into [end to end tutorials](/docs/chain/tutorials) to see step by step implementation of App

@@ -81,7 +81,7 @@ function App() {
 
 ### _`config`_ prop (required)
 
-Core configuration object for connections and login settings.
+Customize the behavior of the wallet connection, logins, and modals by using the `config` prop.
 
 <PushAPIReference>
 
@@ -90,7 +90,7 @@ Core configuration object for connections and login settings.
 | _`network`_ | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to connenct to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
 | `login`     | `Object`                        | -                | Login method configuration (**See Below**)                                                                                                                                                                                                                                                                                  |
 | `modal`     | `Object`                        | -                | Global defaults for login and connected modal instances (**See Below**)                                                                                                                                                                                                                                                     |
-| `uid`       | `string`                        | `default`        | Unique identifier for this provider instance                                                                                                                                                                                                                                                                                |
+| `uid`       | `string`                        | 'default'        | Unique identifier for this provider instance                                                                                                                                                                                                                                                                                |
 | `rpcURL`    | `string`                        | Public endpoints | Custom JSON-RPC endpoint for supported chains                                                                                                                                                                                                                                                                               |
 | `chain`     | `Object`                        | -                | Custom settings to configure the SDK instance (**See Below**)                                                                                                                                                                                                                                                               |
 
@@ -115,10 +115,10 @@ Core configuration object for connections and login settings.
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property  | Type                       | Description                       | Default                                                                                                                                                                                                                                           |
+| Property  | Type                       | Default                                                                                                                                                                                                                                           | Description                       | 
 | --------- | -------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `enabled` | `boolean`                  | Allow external wallet connections | `true`                                                                                                                                                                                                                                            |
-| `chains`  | `PushUI.CONSTANTS.CHAIN[]` | Specific chains to enable         | All supported chains. <Details summary="PushUI.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushUI.CONSTANTS.CHAIN.SOLANA_DEVNET` `PushUI.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`</Details> |
+| `enabled` | `boolean`                  | `true`                                                                                                                                                                                                                                            | Allow external wallet connections |
+| `chains`  | `PushUI.CONSTANTS.CHAIN[]` | All supported chains              | You can choose to enable specific chains by passing them in an array. <Details summary="PushUI.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushUI.CONSTANTS.CHAIN.SOLANA_DEVNET` `PushUI.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`</Details> |
 
 </PushAPIReference>
 
@@ -128,7 +128,7 @@ Core configuration object for connections and login settings.
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property               | Type                                     | Default                                               | Description                                                                                                                                                                                                                                        |
+| Property               | Type                                     | Description                                                                                                                                                                                                                                        | Default                                               |
 | ---------------------- | ---------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `loginLayout`          | `PushUI.CONSTANTS.LOGIN.LAYOUT`          | `PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE`                | Login modal layout type. <Details summary="PushUI.CONSTANTS.LOGIN.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE` `PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT`</Details>                                        |
 | `appPreview`           | `boolean`                                | `false`                                               | Show app preview in modal                                                                                                                                                                                                                          |
@@ -148,7 +148,7 @@ Core configuration object for connections and login settings.
 
 ```jsx live
 // customPropHighlightRegexStart=walletConfig\s=
-// customPropHighlightRegexEnd=};
+// customPropHighlightRegexEnd=<PushUniversalWalletProvider
 // customPropMinimized='false'
 // Import necessary components from @pushchain/ui-kit
 import {
@@ -180,7 +180,7 @@ function App() {
 
 ```jsx live
 // customPropHighlightRegexStart=walletConfig\s=
-// customPropHighlightRegexEnd=};
+// customPropHighlightRegexEnd=<PushUniversalWalletProvider
 // customPropMinimized='false'
 // Import necessary components from @pushchain/ui-kit
 import {
@@ -232,15 +232,15 @@ function App() {
 
 ### `app` prop
 
-Application metadata used for branding in login screens and preview panes.
+Display your app metadata in login screens and preview panes by using the `app` prop. **Note**: You will also need to enable `appPreview` in the `login` and `modal` section of `config` props to show them in different sections of the UI.
 
 <PushAPIReference showRequiredNotice={false}>
 
 | Property      | Type   | Description                          |
 | ------------- | ------ | ------------------------------------ |
-| `logoUrl`     | string | URL to application logo or icon      |
-| `title`       | string | Application name or title            |
-| `description` | string | Brief description of the application |
+| `logoUrl`     | `string` | URL to application logo or icon      |
+| `title`       | `string` | Application name or title            |
+| `description` | `string` | Brief description of the application |
 
 </PushAPIReference>
 
@@ -248,7 +248,7 @@ Application metadata used for branding in login screens and preview panes.
 
 ```jsx live
 // customPropHighlightRegexStart=appMetadata\s=
-// customPropHighlightRegexEnd=};
+// customPropHighlightRegexEnd=<PushUniversalWalletProvider
 // customPropMinimized='false'
 // Import necessary components from @pushchain/ui-kit
 import {
@@ -285,6 +285,8 @@ function App() {
 </Details>
 
 ### `themeMode` prop
+
+You can choose between `LIGHT` and `DARK` theme mode by using the `themeMode` prop.
 
 <PushAPIReference showRequiredNotice={false}>
 
@@ -328,11 +330,13 @@ function App() {
 
 ### `themeOverrides` prop
 
+Override different theme settings by using the `themeOverrides` prop. Check out all the supported theme variables in [Theme Variables](/docs/chain/ui-kit/customizations/theme-variables/).
+
 <PushAPIReference showRequiredNotice={false}>
 
 | Type           | Default | Description                 |
 | -------------- | ------- | --------------------------- |
-| ThemeOverrides | `{}`    | Override the theme settings |
+| `ThemeOverrides` | {}    | Override the theme settings |
 
 </PushAPIReference>
 
