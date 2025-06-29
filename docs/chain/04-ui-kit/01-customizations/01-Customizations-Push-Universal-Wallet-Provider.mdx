@@ -50,32 +50,28 @@ yarn add @pushchain/ui-kit
 
 Wrap your application with `PushUniversalWalletProvider` to make wallet functionality available to all child components.
 
-<Tabs className="codetabs" groupId="code-examples">
-  <TabItem value="react" attributes={{className: "codetab react"}} default>
-
-```typescript
+```typescript live
+// customPropHighlightRegexStart=<PushUniversalWalletProvider
+// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
 import {
   PushUniversalWalletProvider,
-  PushUniversalWalletProviderConfig,
+  PushUniversalAccountButton,
   PushUI
 } from '@pushchain/ui-kit';
 
 function App() {
   return (
     <PushUniversalWalletProvider
-      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
-      app={{ title: 'My App', description: 'Demo', logoUrl: 'https://...' }}
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, login: { appPreview: true }}}
+      app={{ title: 'My App', description: 'Demo', logoUrl: 'https://push.org/cute.jpg' }}
       themeMode={PushUI.CONSTANTS.THEME.LIGHT}
       themeOverrides={{ '--pw-core-bg-primary-color': '#FF474C' }}
     >
-      <Component />
+      <PushUniversalAccountButton />
     </PushUniversalWalletProvider>
   );
 }
 ```
-
-  </TabItem>
-</Tabs>
 
 ## Props
 
