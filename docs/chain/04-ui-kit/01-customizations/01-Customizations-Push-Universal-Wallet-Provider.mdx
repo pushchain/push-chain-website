@@ -18,13 +18,11 @@ import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIRefer
 
 <!-- Content Start -->
 
-`PushUniversalWalletProvider` is the top-level context provider component that initializes the Push Wallet functionality throughout your application.
+`PushUniversalWalletProvider` is the top-level context provider component that initializes wallet functionality across your app, handling:
 
-It is responsible for:
-
-- **Login Configuration**: What logins and wallets you want to enable in your app.
+- **Login Configuration**: What logins and wallets you want to enable in your app (email, OAuth, wallets).
 - **Application Metadata**: Allows you to display your application metadata such as logo, name, etc.
-- **Theme Settings**: Allows you to customize the wallet abstraction and interaction.
+- **Theme Overrides**: Customize or override default styles.
 
 ## Installation
 
@@ -66,7 +64,7 @@ function App() {
   return (
     <PushUniversalWalletProvider
       config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
-      app={{ title: 'My App', description: 'Demo', logoURL: 'https://...' }}
+      app={{ title: 'My App', description: 'Demo', logoUrl: 'https://...' }}
       themeMode={PushUI.CONSTANTS.THEME.LIGHT}
       themeOverrides={{ '--pw-core-bg-primary-color': '#FF474C' }}
     >
@@ -89,7 +87,7 @@ Core configuration object for connections and login settings.
 
 | Property    | Type                            | Default          | Description                                                                                                                                                                                                                                                                                                                 |
 | ----------- | ------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _`network`_ | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to conenct to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
+| _`network`_ | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to connenct to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
 | `login`     | `Object`                        | -                | Login method configuration (**See Below**)                                                                                                                                                                                                                                                                                  |
 | `modal`     | `Object`                        | -                | Global defaults for login and connected modal instances (**See Below**)                                                                                                                                                                                                                                                     |
 | `uid`       | `string`                        | `default`        | Unique identifier for this provider instance                                                                                                                                                                                                                                                                                |
@@ -240,7 +238,7 @@ Application metadata used for branding in login screens and preview panes.
 
 | Property      | Type   | Description                          |
 | ------------- | ------ | ------------------------------------ |
-| `logoURL`     | string | URL to application logo or icon      |
+| `logoUrl`     | string | URL to application logo or icon      |
 | `title`       | string | Application name or title            |
 | `description` | string | Brief description of the application |
 
@@ -372,3 +370,9 @@ function App() {
 ```
 
 </Details>
+
+## Next Steps
+
+- Customize the connect button with [Push Universal Account Button](/docs/chain/ui-kit/customizations/push-universal-account-button/)  
+- Use wallet context hooks via [usePushWalletContext](/docs/chain/ui-kit/customizations/use-push-wallet-context/)  
+- Access the Push Chain Client with [usePushChainClient](/docs/chain/ui-kit/customizations/use-push-chain-client/)
