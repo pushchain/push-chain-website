@@ -46,19 +46,22 @@ yarn add @pushchain/ui-kit
 
 Place the button in your UI where users should be able to connect. The button must be used within a `PushUniversalWalletProvider`:
 
-```jsx
-import { PushUniversalAccountButton } from '@pushchain/ui-kit';
+```jsx live
+// customPropHighlightRegexStart=<PushUniversalAccountButton
+// customPropHighlightRegexEnd=</PushUniversalAccountButton>
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI
+} from '@pushchain/ui-kit';
 
-function Header() {
+function App() {
   return (
-    <Box
-      display='flex'
-      alignItems='center'
-      justifyContent='center'
-      width='-webkit-fill-available'
+    <PushUniversalWalletProvider
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
     >
       <PushUniversalAccountButton />
-    </Box>
+    </PushUniversalWalletProvider>
   );
 }
 ```
