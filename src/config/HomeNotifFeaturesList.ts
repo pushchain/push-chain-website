@@ -3,13 +3,168 @@ export const NotifFeaturesList = {
     {
       config: {
         id: 'native',
-        padding: '24px',
+        padding: '32px',
+        containerFlexDirection: 'column-reverse',
+        height: '100%',
         fluid: {
           desktop: false,
           laptop: false,
-          tablet: true,
+          tablet: false,
           mobile: false,
         },
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: 'Any Chain Transactions',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Push Chain supports transactions from any blockchain. Users can pay gas in any token — No need for bridging.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+    {
+      config: {
+        id: 'custom-notif',
+        padding: '24px',
+        height: '100%',
+        fluid: {
+          desktop: true,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: 'Wallet Abstraction',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Let any wallet from any chain connect, interact, and transact. Break web3 barriers by using social login or email. User get to decide on Push Chain.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+        {
+          type: 'styled-link',
+          href: 'https://example.com/learn-more',
+          hrefText: 'Learn More',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+  ],
+  second: [
+    {
+      config: {
+        id: 'lightweight',
+        containerFlexDirection: 'column-reverse',
+        fluid: {
+          desktop: true,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: '100% EVM\nCompatible',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Deploy with zero on-chain code. Turn your native app into a universal app in minutes.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+    {
+      config: {
+        id: 'lightweight',
+        height: '100%',
+        fluid: {
+          desktop: true,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: 'Universal Smart Contracts',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Build once, run cross chain, multi step experiences  with a single, future-proof contract.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+    {
+      config: {
+        id: 'interoperable',
+        containerFlexDirection: 'column-reverse',
+        fluid: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
         hide: {
           desktop: false,
           laptop: false,
@@ -18,86 +173,171 @@ export const NotifFeaturesList = {
         },
       },
       header: {
-        title: 'home.notification-section.box1.title',
+        title: 'Universal Fee\nAbstraction',
         align: 'left',
       },
+      mockimage: true,
       body: [
         {
-          type: 'image',
-          imagesrc: 'notifs/web3-native',
-          videosrc: 'notifs/web3-native-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box1.imagealt',
-          imagetitle: 'home.notification-section.box1.imagetitle',
-        },
-      ],
-    },
-    {
-      config: {
-        id: 'cross-chain',
-        padding: '24px',
-        fluid: {
-          desktop: false,
-          laptop: false,
-          tablet: true,
-          mobile: false,
-        },
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box2.title',
-        align: 'left',
-      },
-      body: [
-        {
-          type: 'image',
-          imagesrc: 'notifs/cross-chain',
-          videosrc: 'notifs/cross-chain-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box2.imagealt',
-          imagetitle: 'home.notification-section.box2.imagetitle',
-        },
-      ],
-    },
-    {
-      config: {
-        id: 'custom-notif',
-        padding: '24px',
-        fluid: {
-          desktop: true,
-          laptop: false,
-          tablet: true,
-          mobile: false,
-        },
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box3.title',
-        align: 'left',
-      },
-      body: [
-        {
-          type: 'image',
-          imagesrc: 'notifs/notif',
-          videosrc: 'notifs/notif-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box3.imagealt',
-          imagetitle: 'home.notification-section.box3.imagetitle',
+          type: 'text',
+          bodytext:
+            'Let’s users pay gas in any token, on any chain without bridging.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
         },
       ],
     },
   ],
-  second: [
+  third: [
+    {
+      config: {
+        id: 'lightweight',
+        containerFlexDirection: 'column-reverse',
+        fluid: {
+          desktop: true,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: 'Universal Execution Layer',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Build atomic, composable apps across web3. Create never seen before app experiences, by having multiple users of different chains transact with the same app.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+    {
+      config: {
+        id: 'lightweight',
+        height: '100%',
+        fluid: {
+          desktop: true,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+      },
+      header: {
+        title: 'Shared State',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Access account and state data from other chains in your smart contract.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+    {
+      config: {
+        id: 'interoperable',
+        containerFlexDirection: 'column-reverse',
+        fluid: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: true,
+        },
+      },
+      header: {
+        title: 'Programmable\nSolvers',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Trigger, validate, and complete transactions across any chain using your smart contract.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
+  ],
+  tabletOnly: [
+    {
+      config: {
+        id: 'interoperable',
+        containerFlexDirection: 'column-reverse',
+        fluid: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: false,
+        },
+        padding: '24px',
+        hide: {
+          desktop: false,
+          laptop: false,
+          tablet: false,
+          mobile: true,
+        },
+      },
+      header: {
+        title: 'Universal Fee\nAbstraction',
+        align: 'left',
+      },
+      mockimage: true,
+      body: [
+        {
+          type: 'text',
+          bodytext:
+            'Let’s users pay gas in any token, on any chain without bridging.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
+        },
+      ],
+    },
     {
       config: {
         id: 'lightweight',
@@ -114,199 +354,24 @@ export const NotifFeaturesList = {
           tablet: false,
           mobile: false,
         },
-        link: {
-          url: 'https://push.org',
-          linktitle: 'Lightweight Code with Rapid API Integration',
-        },
       },
       header: {
-        title: 'home.notification-section.box4.title',
-        align: 'center',
+        title: 'Universal Execution Layer',
+        align: 'left',
       },
+      mockimage: true,
       body: [
         {
-          type: 'title',
-          titletext: 'home.notification-section.box4.titletext',
-        },
-        {
-          type: 'button',
-          buttontext: 'home.notification-section.box4.buttontext',
-          buttonlink: '/docs/notifications/quickstart',
-          buttontitle: 'home.notification-section.box4.buttontitle',
-        },
-        {
-          type: 'image',
-          imagesrc: 'notifs/lightweight-notif',
-          videosrc: 'notifs/lightweight-notif-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box4.imagealt',
-          imagetitle: 'home.notification-section.box4.imagetitle',
-        },
-      ],
-    },
-    {
-      config: {
-        id: 'interoperable',
-        height: '202px',
-        fluid: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-        padding: '24px',
-        bg: require('@site/static/assets/website/home/notifs/interoperable.webp')
-          .default,
-        bgvideosrc: 'notifs/interoperable-video',
-        bgvideowebm: true,
-        bgtitle: 'home.notification-section.box5.bgtitle',
-        bgsize: 'cover',
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: true,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box5.title',
-        align: 'left',
-      },
-    },
-  ],
-  third: [
-    {
-      config: {
-        id: 'anti-spam',
-        padding: '24px',
-        fluid: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box6.title',
-        align: 'left',
-        illustration: 'notifs/anti-spam',
-        illustrationvideo: 'notifs/anti-spam-video',
-        illustrationvideowebm: true,
-        imagealt: 'home.notification-section.box6.iconalt',
-        imagetitle: 'home.notification-section.box6.icontitle',
-      },
-    },
-    {
-      config: {
-        id: 'snap',
-        fluid: {
-          desktop: true,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-        padding: '24px',
-        bg: require('@site/static/assets/website/home/notifs/snap-bg.png')
-          .default,
-        bgvideowebm: true,
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box7.title',
-        theme: 'hue',
-        align: 'left',
-        icon: 'notifs/starIcon',
-        highlight: {
-          title: 'NEW',
-          color: '#D98AEC',
-          border: '1px solid #D98AEC',
-          fontSize: '9px',
-        },
-      },
-      body: [
-        {
-          type: 'image',
-          imagesrc: 'notifs/snap',
-          videosrc: 'notifs/snap-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box7.imagealt',
-          imagetitle: 'home.notification-section.box7.imagetitle',
-        },
-      ],
-      footer: {
-        text: 'home.notification-section.box7.footertext',
-      },
-    },
-    {
-      config: {
-        id: 'increase',
-        height: '260px',
-        padding: '24px',
-        fluid: {
-          desktop: false,
-          laptop: false,
-          tablet: false,
-          mobile: false,
-        },
-        hide: {
-          desktop: false,
-          laptop: false,
-          tablet: true,
-          mobile: true,
-        },
-      },
-      header: {
-        title: 'home.notification-section.box8.title',
-        align: 'left',
-      },
-      body: [
-        {
-          type: 'image',
-          imagesrc: 'notifs/engage',
-          videosrc: 'notifs/engage-video',
-          videowebm: true,
-          imagealt: 'home.notification-section.box8.imagealt',
-          imagetitle: 'home.notification-section.box8.imagetitle',
+          type: 'text',
+          bodytext:
+            'Build atomic, composable apps across web3. Create never seen before app experiences, by having multiple users of different chains transact with the same app.',
+          bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
+          bodytextsize: '1.125rem',
+          bodytextweight: '400',
+          margin: '0px 0 0 0',
+          align: 'left',
         },
       ],
     },
   ],
 };
-
-export const NotifUseCasesList = [
-  {
-    url: 'https://blog.ethereum.org/2020/08/19/esp-beyond-grants',
-    title: 'Infrastructure',
-  },
-  {
-    url: 'https://www.coindesk.com/business/2022/04/14/ethereum-push-notification-service-raises-10m-at-131m-valuation/',
-    title: 'Social',
-  },
-  {
-    url: 'https://defiprime.com/ethereum-push-notification-service',
-    title: 'Blockchain',
-  },
-  {
-    url: 'https://x.com/PushChain/status/1336359832081768448',
-    title: 'Gaming',
-  },
-  {
-    url: 'https://beincrypto.com/learn/web3-communication-networks/?utm_source=twitter&utm_medium=URL&utm_campaign=learn',
-    title: 'DAO',
-  },
-  {
-    url: 'https://beincrypto.com/learn/web3-communication-networks/?utm_source=twitter&utm_medium=URL&utm_campaign=learn',
-    title: 'NFT',
-  },
-];

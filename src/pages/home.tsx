@@ -13,7 +13,6 @@ import Spline from '@splinetool/react-spline';
 import { useTranslation } from 'react-i18next';
 import { BsArrowRight, BsArrowUpRight, BsFileX } from 'react-icons/bs';
 import styled from 'styled-components';
-import { TbArrowRight, TbArrowUpRight } from 'react-icons/tb';
 
 // Internal Components
 import FeaturedList from '@site/src/components/Featured/FeaturedList';
@@ -51,15 +50,7 @@ import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIc
 import BgImage from '@site/static/assets/website/home/faq/footerbg@3x.png';
 
 // Internal Configs
-import {
-  ChatFeaturesList,
-  ChatUseCasesList,
-} from '@site/src/config/HomeChatFeaturesList';
-import { InvList } from '@site/src/config/HomeInvestorList';
-import {
-  NotifFeaturesList,
-  NotifUseCasesList,
-} from '@site/src/config/HomeNotifFeaturesList';
+import { NotifFeaturesList } from '@site/src/config/HomeNotifFeaturesList';
 import { OthersFeaturesList } from '@site/src/config/HomeOthersFeaturesList';
 import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
@@ -202,7 +193,7 @@ export default function Home() {
                       zIndex='2'
                     >
                       {t('home.hero.start-button')}
-                      <TbArrowRight className='start-svg' />
+                      <BsArrowRight className='start-svg' />
                     </A>
 
                     <PortalA
@@ -223,16 +214,6 @@ export default function Home() {
                 </HeroBody>
               </HeroItem>
             </HeroPrimary>
-
-            {/* <HeroAnalytics
-              position='absolute'
-              zIndex='9'
-              left='0'
-              right='0'
-              bottom={`${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px`}
-            >
-              <AnalyticsStats />
-            </HeroAnalytics> */}
           </HeroContent>
         </HeroSection>
 
@@ -249,151 +230,86 @@ export default function Home() {
         </ShowcaseSection>
 
         {/* NOTIF SECTION */}
-        <NotificationSection id='notification'>
-          <Content alignSelf='center'>
-            <ItemV maxWidth={'849px'} margin='0px auto'>
-              <H2
-                color='#DDD8D8'
-                fontSize={isMobile ? '24px' : '30px'}
-                textAlign={isMobile ? 'left' : 'center'}
-                lineHeight='normal'
-                fontWeight='400'
-                letterSpacing='normal'
-                fontFamily='FK Grotesk Neue'
-              >
-                <B color='#fff'>
-                  {t('home.notification-section.header.main-text')}
-                </B>{' '}
-                {t('home.notification-section.header.other-text')}
-              </H2>
-            </ItemV>
-
-            <NotificationFeatures>
-              <NotificationFeatureItem flex='1'>
-                {NotifFeaturesList?.first?.map((item) => (
+        <GridSection id='notification'>
+          {/* Fix grid */}
+          <GridContent alignSelf='center'>
+            <GridFeatures>
+              {NotifFeaturesList?.first?.map((item) => (
+                <GridFeatureItem>
                   <Glassy item={item} />
-                ))}
-              </NotificationFeatureItem>
-
-              <NotificationFeatureItem flex='2'>
-                {NotifFeaturesList?.second?.map((item) => (
-                  <Glassy item={item} />
-                ))}
-              </NotificationFeatureItem>
-
-              <NotificationFeatureItem onFocusCapturelex='1'>
-                {NotifFeaturesList?.third?.map((item) => (
-                  <Glassy item={item} />
-                ))}
-              </NotificationFeatureItem>
-            </NotificationFeatures>
-
-            <ItemV padding='0 0 15px 0' overflow='hidden'>
-              <GridMarquee
-                speed={1}
-                gradientWidth={8}
-                gap={18}
-                bg={
-                  'linear-gradient(90deg, #0D0D0F 0%, #0D0D0F 6%, rgba(13, 13, 15, 0.00) 32%, rgba(13, 13, 15, 0.00) 69%, #0D0D0F 94.5%, #0D0D0F 100%)'
-                }
-                direction='ltr'
-              >
-                {NotifUseCasesList.map((item) => {
-                  return (
-                    <SplideSlide>
-                      <NotificationMarquee>
-                        <GridItem>
-                          <H2
-                            fontWeight='400'
-                            letterSpacing='normal'
-                            fontFamily='FK Grotesk Neue'
-                          >
-                            {item.title}
-                          </H2>
-                          <StarIcon />
-                        </GridItem>
-                      </NotificationMarquee>
-                    </SplideSlide>
-                  );
-                })}
-              </GridMarquee>
-            </ItemV>
-          </Content>
-        </NotificationSection>
-
-        {/* CHAT SECTION */}
-        <ChatSection id='chat' data-bkg='light' className='lightBackground'>
-          <Content alignSelf='center'>
-            <ItemV maxWidth={'849px'} margin='0px auto' flexDirection='row'>
-              <H2
-                color='#DDD8D8'
-                fontSize={isMobile ? '24px' : '30px'}
-                textAlign={isMobile ? 'left' : 'center'}
-                lineHeight={isMobile && '30px'}
-                fontWeight='500'
-                fontFamily='FK Grotesk Neue'
-              >
-                <B color='#fff'>{t('home.chat-section.header.main-text')} </B>
-                {t('home.chat-section.header.other-text')}
-                <TagItem>COMING SOON</TagItem>
-              </H2>
-            </ItemV>
-
-            <ChatFeatures>
-              <ChatFeatureItem flex='1'>
-                {ChatFeaturesList?.first?.map((item) => <Glassy item={item} />)}
-              </ChatFeatureItem>
-
-              <ChatFeatureItem flex='2'>
-                {ChatFeaturesList?.second?.map((item) => (
-                  <Glassy item={item} />
-                ))}
-              </ChatFeatureItem>
-
-              <ChatFeatureItem flex='1'>
-                {ChatFeaturesList?.third?.map((item) => <Glassy item={item} />)}
-              </ChatFeatureItem>
-            </ChatFeatures>
-
-            <ItemV padding='0 0 15px 0' overflow='hidden'>
-              <GridMarquee
-                speed={1}
-                gradientWidth={8}
-                gap={18}
-                bg={
-                  'linear-gradient(90deg, #0D0D0F 0%, #0D0D0F 6%, rgba(13, 13, 15, 0.00) 32%, rgba(13, 13, 15, 0.00) 69%, #0D0D0F 94.5%, #0D0D0F 100%)'
-                }
-                direction='ltr'
-              >
-                {ChatUseCasesList.map((item) => {
-                  return (
-                    <SplideSlide>
-                      <NotificationMarquee>
-                        <GridItem>
-                          <H2 fontFamily='FK Grotesk Neue'>{item.title}</H2>
-                          <StarIcon />
-                        </GridItem>
-                      </NotificationMarquee>
-                    </SplideSlide>
-                  );
-                })}
-              </GridMarquee>
-            </ItemV>
-          </Content>
-        </ChatSection>
-
-        {/* PUSH SPACE AND VIDEO SECTION */}
-        {/* <OtherFeaturesSection id='otherfeatures'>
-          <Content>
-            <OtherFeatures>
-              {OthersFeaturesList?.products.map((item) => (
-                <OtherFeatureItem>
-                  <Glassy item={item} />
-                </OtherFeatureItem>
+                </GridFeatureItem>
               ))}
-            </OtherFeatures>
-          </Content>
-        </OtherFeaturesSection> */}
+            </GridFeatures>
+
+            <SecondGridFeatures>
+              {NotifFeaturesList?.second?.map((item) => (
+                <GridFeatureItem>
+                  <Glassy item={item} />
+                </GridFeatureItem>
+              ))}
+            </SecondGridFeatures>
+
+            <TabletGridFeatures>
+              {NotifFeaturesList?.tabletOnly?.map((item) => (
+                <GridFeatureItem>
+                  <Glassy item={item} />
+                </GridFeatureItem>
+              ))}
+            </TabletGridFeatures>
+
+            <ThirdGridFeatures>
+              {NotifFeaturesList?.third?.map((item) => (
+                <GridFeatureItem>
+                  <Glassy item={item} />
+                </GridFeatureItem>
+              ))}
+            </ThirdGridFeatures>
+
+            <GridBottomSection
+              flexDirection={isMobile ? 'column' : 'row'}
+              justifyContent='space-between'
+              alignItems='center'
+              gap={isTablet && '24px'}
+            >
+              <ItemH
+                gap='24px'
+                flexDirection='row'
+                justifyContent='flex-start'
+                flexWrap='nowrap'
+              >
+                <H1Text>10x</H1Text>
+                <Span
+                  color='#FFF'
+                  fontSize={isMobile ? '1.5rem' : '2rem'}
+                  fontWeight='500'
+                  lineHeight='140%'
+                  letterSpacing='-0.64px'
+                  gap='24px'
+                >
+                  your apps user base by going universal {!isTablet && <br />}
+                  with zero effort!
+                </Span>
+              </ItemH>
+
+              <A
+                href={useBaseUrl('/docs')}
+                title={t('home.hero.alt-start-button')}
+                background='#D548EC'
+                borderRadius='16px'
+                border='1px solid rgba(255, 255, 255, 0.30)'
+                fontSize='1.125rem'
+                fontWeight='600'
+                letterSpacing='-0.03em'
+                lineHeight='1rem'
+                padding='16px 32px'
+                zIndex='2'
+              >
+                {t('home.hero.start-button')}
+                <BsArrowRight className='start-svg' />
+              </A>
+            </GridBottomSection>
+          </GridContent>
+        </GridSection>
 
         <TokenomicsSection id='tokenomics'>
           <Content alignSelf='center'>
@@ -1009,7 +925,15 @@ const PortalA = styled(A)`
 
 const ShowcaseSection = styled(Section)``;
 
-const NotificationSection = styled(Section)``;
+const GridSection = styled(Section)``;
+
+const GridContent = styled(Content)`
+  gap: 24px;
+
+  @media ${device.mobileL} {
+    gap: 0px;
+  }
+`;
 
 const ChatSection = styled(Section)``;
 
@@ -1126,87 +1050,197 @@ const InvestorSubtitle = styled(Span)`
   text-transform: uppercase;
 `;
 
-const NotificationFeatures = styled(ItemH)`
+const GridFeatures = styled(ItemH)`
   font-family: FK Grotesk Neue;
   gap: 24px;
-  flex-wrap: wrap;
-  margin-top: 72px;
   justify-content: flex-start;
+  width: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
 
-  @media ${device.laptopM} {
+  & > div:first-child {
+    max-width: 400px;
+  }
+
+  @media ${device.laptop} {
     width: 100%;
+    flex: 1;
+
+    & > div:first-child {
+      max-width: 300px;
+    }
+
+    & > div:nth-child(3) {
+      display: none;
+    }
   }
 
   @media ${device.mobileL} {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
-    gap: 16px;
+    gap: 24px;
+
+    & > div:first-child {
+      width: 100%;
+      max-width: 100%;
+    }
   }
 `;
 
-const NotificationFeatureItem = styled(ItemV)`
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-
+const SecondGridFeatures = styled(ItemH)`
+  font-family: FK Grotesk Neue;
   gap: 24px;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  & > div:first-child {
+    max-width: 300px;
+  }
+
+  & > div:nth-child(3) {
+    max-width: 300px;
+  }
+
+  @media ${device.laptop} {
+    width: 100%;
+
+    & > div:first-child {
+      max-width: 450px;
+    }
+
+    & > div:nth-child(3) {
+      display: none !important;
+    }
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    & > div:first-child,
+    & > div:nth-child(3) {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+`;
+
+const TabletGridFeatures = styled(ItemH)`
+  display: none;
+
+  @media ${device.laptop} {
+    font-family: FK Grotesk Neue;
+    gap: 24px;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    display: flex;
+
+    & > div:first-child {
+      max-width: 250px;
+    }
+
+    & > div:nth-child(3) {
+      display: none !important;
+    }
+  }
+
+  @media ${device.mobileL} {
+    display: none !important;
+  }
+`;
+
+const ThirdGridFeatures = styled(ItemH)`
+  font-family: FK Grotesk Neue;
+  gap: 24px;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  flex-wrap: nowrap;
+
+  & > div:first-child {
+    min-width: 450px;
+  }
 
   @media ${device.laptopM} {
-    &:nth-child(3) {
-      flex-direction: row;
-      flex-wrap: nowrap;
+    width: 100%;
+
+    & > div:first-child {
+      display: none !important;
+    }
+
+    & > div:nth-child(3) {
+      max-width: 450px;
     }
   }
 
   @media ${device.mobileL} {
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    gap: 24px;
 
-    &:nth-child(n) {
-      flex-direction: column;
-      flex-wrap: nowrap;
+    & > div:first-child {
+      width: 100%;
+      min-width: 100%;
     }
-
-    gap: 16px;
   }
 `;
 
-const ChatFeatures = styled(NotificationFeatures)``;
+const H1Text = styled(H1)`
+  leading-trim: both;
+  text-edge: cap;
+  text-shadow: 0px 0px 10px rgba(198, 139, 249, 0.5);
+  font-family: 'DM Sans';
+  font-size: 6.5rem;
+  font-style: normal;
+  font-weight: 600;
+  // line-height: 38.578px;
+  letter-spacing: -2.067px;
 
-const ChatFeatureItem = styled(NotificationFeatureItem)`
-  &:nth-child(2) {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
+  background: linear-gradient(90deg, #f5f1ff -3.12%, #aa48ec 109.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
 
-  .hyperscalable {
-    width: calc(50% - 12px);
-  }
-
-  .plug-play {
-    width: calc(50% - 12px);
+const GridBottomSection = styled(ItemH)`
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
   }
 
   @media ${device.mobileL} {
-    .hyperscalable {
-      width: 100%;
-    }
-
-    .plug-play {
+    a {
       width: 100%;
     }
   }
 `;
 
-const OtherFeatures = styled(NotificationFeatures)`
-  margin-top: 0px;
-  justify-content: flex-start;
-`;
+const GridFeatureItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  padding: 0px;
+  // gap: 24px;
 
-const OtherFeatureItem = styled(NotificationFeatureItem)``;
+  // @media ${device.laptopM} {
+  // }
+
+  // @media ${device.mobileL} {
+  // }
+`;
 
 const TagItem = styled.b`
   width: fit-content;
@@ -1219,42 +1253,6 @@ const TagItem = styled.b`
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
-`;
-
-const NotificationMarquee = styled(ItemH)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  margin: 64px 0;
-`;
-
-const GridMarquee = styled(NewMarqueeAnimation)``;
-
-const GridItem = styled(ItemH)`
-  display: flex;
-  flex-direction: row;
-  gap: 35px;
-  align-items: center;
-
-  h2 {
-    color: #707187;
-    font-size: 28px;
-    line-height: 150%;
-  }
-
-  &:hover {
-    cursor: pointer;
-    h2 {
-      color: #fff;
-    }
-  }
-
-  svg {
-    height: 20px;
-    width: 20px;
-  }
 `;
 
 const SlideLink = styled(A)`

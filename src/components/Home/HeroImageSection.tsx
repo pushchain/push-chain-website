@@ -72,7 +72,7 @@ export const HeroImageSection = () => {
 };
 
 const HeroWrapper = styled.div`
-  height: 584px;
+  height: 680px;
   width: 100%;
 
   @media ${device.laptop} {

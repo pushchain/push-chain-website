@@ -40,7 +40,7 @@ const Glassy = ({ item }) => {
 
   const [hovered, setHovered] = useState(false);
 
-  const { config, header, body, footer, after } = item;
+  const { config, header, body, footer, mockimage, after } = item;
   const {
     id,
     height,
@@ -51,6 +51,7 @@ const Glassy = ({ item }) => {
     bgtitle,
     link,
     hidehovereffect,
+    containerFlexDirection,
   } = config || '';
 
   const {
@@ -160,6 +161,7 @@ const Glassy = ({ item }) => {
       fluid={item.config.fluid}
       hide={item.config.hide ? item.config.hide : null}
       hideEffect={hidehovereffect}
+      containerFlexDirection={containerFlexDirection}
       className={`${hovered ? 'active' : ''} ${id}`}
     >
       <GlowwyBorder
@@ -332,7 +334,9 @@ const Glassy = ({ item }) => {
               gap='12px'
               margin='14px 0 0 0'
             >
-              {tags?.map((item) => <Tag item={item} />)}
+              {tags?.map((item) => (
+                <Tag item={item} />
+              ))}
             </TagItems>
           )}
         </Header>
@@ -353,83 +357,80 @@ const Glassy = ({ item }) => {
               {item.body.map((object) => {
                 // Render type "image"
                 if (object.type === 'image') {
-                  const videoFormat = object.videowebm ? 'webm' : 'mp4';
-
-                  return (
-                    <BodyImageWrapper>
-                      {object.videosrc && (
-                        <ReactPlayer
-                          url={
-                            require(
-                              `@site/static/assets/website/home/${object.videosrc}.${videoFormat}`
-                            ).default
-                          }
-                          config={{
-                            file: {
-                              attributes: {
-                                controlsList: 'nofullscreen',
-                              },
-                            },
-                          }}
-                          playing={hovered ? true : false}
-                          loop={true}
-                          muted={true}
-                          width='100%'
-                          height='100%'
-                          style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            visibility:
-                              hovered &&
-                              window.innerWidth > disableVideoAt &&
-                              object.videosrc
-                                ? 'visible'
-                                : 'hidden',
-                          }}
-                        />
-                      )}
-
-                      <BodyImage
-                        src={
-                          require(
-                            `@site/static/assets/website/home/${object.imagesrc}.webp`
-                          ).default
-                        }
-                        srcSet={`${require(`@site/static/assets/website/home/${object.imagesrc}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${object.imagesrc}@3x.webp`).default} 3x`}
-                        alt={t(object.imagealt)}
-                        title={t(object.imagetitle)}
-                        style={{
-                          visibility:
-                            hovered &&
-                            window.innerWidth > disableVideoAt &&
-                            object.videosrc
-                              ? 'hidden'
-                              : 'visible',
-                        }}
-                        type={object.type}
-                      />
-                    </BodyImageWrapper>
-                  );
-                }
-
-                // Render type "title"
-                if (object.type === 'title') {
-                  return (
-                    <ItemV
-                      padding='0px 0px 0px 0px'
-                      flex='initial'
-                      alignSelf={
-                        object.align === 'left'
-                          ? 'flex-start'
-                          : object.align === 'right'
-                            ? 'flex-end'
-                            : 'center'
-                      }
-                    >
-                      <SubscribeText>{t(object.titletext)}</SubscribeText>
-                    </ItemV>
-                  );
+                  //   const videoFormat = object.videowebm ? 'webm' : 'mp4';
+                  //   return (
+                  //     <BodyImageWrapper>
+                  //       {object.videosrc && (
+                  //         <ReactPlayer
+                  //           url={
+                  //             require(
+                  //               `@site/static/assets/website/home/${object.videosrc}.${videoFormat}`
+                  //             ).default
+                  //           }
+                  //           config={{
+                  //             file: {
+                  //               attributes: {
+                  //                 controlsList: 'nofullscreen',
+                  //               },
+                  //             },
+                  //           }}
+                  //           playing={hovered ? true : false}
+                  //           loop={true}
+                  //           muted={true}
+                  //           width='100%'
+                  //           height='100%'
+                  //           style={{
+                  //             position: 'absolute',
+                  //             top: 0,
+                  //             left: 0,
+                  //             visibility:
+                  //               hovered &&
+                  //               window.innerWidth > disableVideoAt &&
+                  //               object.videosrc
+                  //                 ? 'visible'
+                  //                 : 'hidden',
+                  //           }}
+                  //         />
+                  //       )}
+                  //       <BodyImage
+                  //         src={
+                  //           require(
+                  //             `@site/static/assets/website/home/${object.imagesrc}.webp`
+                  //           ).default
+                  //         }
+                  //         srcSet={`${require(`@site/static/assets/website/home/${object.imagesrc}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${object.imagesrc}@3x.webp`).default} 3x`}
+                  //         alt={t(object.imagealt)}
+                  //         title={t(object.imagetitle)}
+                  //         style={{
+                  //           visibility:
+                  //             hovered &&
+                  //             window.innerWidth > disableVideoAt &&
+                  //             object.videosrc
+                  //               ? 'hidden'
+                  //               : 'visible',
+                  //         }}
+                  //         type={object.type}
+                  //       />
+                  //     </BodyImageWrapper>
+                  //   );
+                  // }
+                  // // Render type "title"
+                  // if (object.type === 'title') {
+                  //   return (
+                  //     <ItemV
+                  //       padding='0px 0px 0px 0px'
+                  //       flex='initial'
+                  //       alignSelf={
+                  //         object.align === 'left'
+                  //           ? 'flex-start'
+                  //           : object.align === 'right'
+                  //             ? 'flex-end'
+                  //             : 'center'
+                  //       }
+                  //     >
+                  //       <SubscribeText>{t(object.titletext)}</SubscribeText>
+                  //     </ItemV>
+                  //   );
                 }
 
                 // Render type "regular text"
@@ -526,6 +527,8 @@ const Glassy = ({ item }) => {
         )}
       </Subcontainer>
 
+      {mockimage && <div style={{ width: '200px', height: '200px' }}></div>}
+
       {after && (
         <AfterItem alignment={alignment}>
           <H2
@@ -548,41 +551,41 @@ const Container = styled.div`
   align-self: flex-start;
   position: relative;
   width: 100%;
-  min-height: ${(props) => props.height || 'auto'};
+  min-height: ${(props) => props.height || '100%'};
   border-radius: 24px;
   box-sizing: border-box;
   overflow: hidden !important;
   display: flex;
   display: ${(props) => props.hide && props.hide.desktop && 'none'};
-  flex-direction: column;
+  flex-direction: ${(props) => props.containerFlexDirection || 'column'};
   justify-content: space-between;
 
   // for glassy effect
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: inherit; /* Inherit border-radius from parent container */
-    z-index: -10; /* Put the pseudo-element behind the container content */
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   border-radius: inherit; /* Inherit border-radius from parent container */
+  //   z-index: -10; /* Put the pseudo-element behind the container content */
+  // }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    right: 1px;
-    border-radius: inherit;
-    background: ${(props) => (props.hideEffect ? 'transparent' : '#0d0d0f')};
-    z-index: -8; /* Glowwy comes as -9 */
-  }
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 1px;
+  //   left: 1px;
+  //   bottom: 1px;
+  //   right: 1px;
+  //   border-radius: inherit;
+  //   background: ${(props) => (props.hideEffect ? 'transparent' : '#0d0d0f')};
+  //   z-index: -8; /* Glowwy comes as -9 */
+  // }
 
   @media ${device.laptopM} {
     flex: ${(props) =>
@@ -630,11 +633,10 @@ const Glowwy = styled(GlowwyBorder)`
 
 const Subcontainer = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  gap: 16px;
+  gap: 8px;
   padding: ${(props) => props.padding || '24px'};
   background-image: url(${(props) => props.bg});
   background-position: center;
@@ -677,14 +679,18 @@ const TagItems = styled(ItemV)`
 `;
 
 const H2Text = styled(H2)`
-  font-size: 19px;
+  font-size: 2rem;
   color: #fff;
-  line-height: 130%;
+  line-height: 120%;
   white-space: pre;
-  font-weight: 400;
+  font-weight: 500;
+
+  @media ${device.laptop} {
+    white-space: normal;
+  }
 
   @media ${device.mobileL} {
-    white-space: pre;
+    white-space: normal;
     margin-top: ${({ id }) => (id == 'snap' ? '24px' : '0')};
   }
 
@@ -696,7 +702,6 @@ const H2Text = styled(H2)`
 `;
 
 const SubscribeText = styled.h2`
-  font-family: FK Grotesk Neue;
   font-size: 72px;
   background: linear-gradient(
     270deg,
@@ -721,9 +726,8 @@ const SubscribeText = styled.h2`
   }
 `;
 
-const BodyText = styled.h2`
-  font-family: FK Grotesk Neue;
-  color: ${(props) => props.color};
+const BodyText = styled.div`
+  // color: ${(props) => props.color};
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   text-transform: ${(props) => props.uppercase && 'uppercase'};
@@ -731,7 +735,13 @@ const BodyText = styled.h2`
   // text-align: center;
   letter-spacing: normal;
   // margin: 0 auto;
-  line-height: 130%;
+  line-height: 150%;
+  font-family: 'DM Sans', sans-serif;
+
+  background: linear-gradient(90deg, #b1b1b9 0%, #635d65 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media ${device.laptop} {
     font-size: ${(props) => props.mobilesize};
@@ -812,11 +822,11 @@ const BodyInner = styled(ItemV)`
     props.bodyjustifycontent ? props.bodyjustifycontent : 'center'};
 `;
 const BodyTextItem = styled(ItemV)`
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  line-height: normal;
   max-width: ${(props) => props.bodytextwidth};
-
-  // @media ${device.tablet} {
-  //   max-width: ${(props) => props.mobilebodytextwidth};
-  // }
 `;
 
 const BodyImageWrapper = styled.div`
@@ -906,16 +916,40 @@ const AfterItem = styled.div`
   }
 `;
 
-const SlideLink = styled(A)`
+const SlideLink = styled.a`
+  gap: 12px;
+  background: none;
+  border: none;
   overflow: inherit;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto 0 0;
+  padding: 0px;
+
   .anchorSVGlink {
     color: #fff;
     top: 3px;
   }
 
+  span {
+    background: transparent;
+    color: #fff;
+  }
+
   &:hover {
+    background: transparent;
+    text-decoration: none;
+    background: none;
+
     .anchorSVGlink {
-      color: #d98aec;
+      color: #e163ff;
+    }
+
+    span {
+      background: transparent;
+      color: #e163ff;
     }
   }
 `;
@@ -928,22 +962,22 @@ const SpanLink = styled(Span)`
   letter-spacing: normal;
   line-height: 142%;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   transform: scaleX(0);
+  //   height: 2px;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-color: #fff;
+  //   transform-origin: bottom right;
+  //   transition: transform 0.25s ease-out;
+  // }
+  // &:hover:after {
+  //   transform: scaleX(1);
+  //   transform-origin: bottom left;
+  // }
 `;
 
 export default Glassy;
