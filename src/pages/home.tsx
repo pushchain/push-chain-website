@@ -224,11 +224,6 @@ export default function Home() {
           </Content>
         </Section>
 
-        {/* SHOWCASE SECTION */}
-        <ShowcaseSection id='showcase'>
-          <Content alignSelf='center'>{/* <ShowcasePartners /> */}</Content>
-        </ShowcaseSection>
-
         {/* NOTIF SECTION */}
         <GridSection id='notification'>
           {/* Fix grid */}
@@ -311,84 +306,12 @@ export default function Home() {
           </GridContent>
         </GridSection>
 
-        <TokenomicsSection id='tokenomics'>
+        {/* SHOWCASE SECTION */}
+        <ShowcaseSection id='showcase'>
           <Content alignSelf='center'>
-            <ItemH
-              flexDirection={isMobile && 'column'}
-              gap={isMobile ? '8px' : isTablet ? '16px' : '74px'}
-            >
-              <ItemV
-                alignItems='flex-start'
-                justifyContent={!isMobile && 'stretch'}
-              >
-                <ItemV alignItems='flex-start' justifyContent={'flex-start'}>
-                  <H2
-                    textAlign='left'
-                    color='#D98AEC'
-                    textTransform='uppercase'
-                    fontSize='14px'
-                    fontWeight='700'
-                    lineHeight='130%'
-                    letterSpacing='0.56px'
-                    fontFamily='FK Grotesk Neue'
-                  >
-                    Push Network
-                  </H2>
-
-                  <H2
-                    color='#FFF'
-                    fontSize={isMobile ? '28px' : '30px'}
-                    fontWeight='500'
-                    margin='8px 0 0 0'
-                    fontFamily='FK Grotesk Neue'
-                    lineHeight='130%'
-                    letterSpacing='normal'
-                  >
-                    {t('home.network-section.title')}
-                  </H2>
-                </ItemV>
-
-                <TokenImage
-                  width={'100%'}
-                  height={'auto'}
-                  src={
-                    require(
-                      `@site/static/assets/website/tokenomics/tokenomics.webp`
-                    ).default
-                  }
-                  srcSet={`${require(`@site/static/assets/website/tokenomics/tokenomics@2x.webp`).default} 2x, ${require(`@site/static/assets/website/tokenomics/tokenomics@3x.webp`).default} 3x`}
-                  alt={'Tokenomics'}
-                  loading='lazy'
-                />
-              </ItemV>
-
-              <ItemV>
-                <TokenItem>{t('home.network-section.first-text')}</TokenItem>
-                <TokenItem>{t('home.network-section.second-text')}</TokenItem>
-                <TokenItem>
-                  {t('home.network-section.third-text')}
-                  <TagItem style={{ marginLeft: '10px' }}>NEW</TagItem>
-                </TokenItem>
-                <TokenItem>{t('home.network-section.fourth-text')}</TokenItem>
-                <TokenItem>{t('home.network-section.fifth-text')}</TokenItem>
-              </ItemV>
-            </ItemH>
-            <SlideLink
-              href={useBaseUrl(`/docs/tokenomics/deepdive/$push/`)}
-              title={'new'}
-              target='_blank'
-              padding='0px 0px'
-              className='button'
-              margin={isMobile ? '24px auto 0px 0px' : '24px 0px 0px auto'}
-              background='transparent'
-              alignItems='center'
-              justifyContent='flex-end'
-            >
-              <SpanLink>Explore Tokenomics</SpanLink>
-              <BsArrowRight className='anchorSVGlink' />
-            </SlideLink>
+            <ShowcasePartners />
           </Content>
-        </TokenomicsSection>
+        </ShowcaseSection>
 
         {/* WHY PUSH AND BLOG */}
         <BlogSection id='blog'>
@@ -398,14 +321,13 @@ export default function Home() {
               <ItemH justifyContent='flex-start' alignItems='center' gap='8px'>
                 <StarSolidIcon />
                 <H2
-                  color='#D98AEC'
-                  fontSize={'21px'}
+                  color='#CCA4F0'
+                  fontSize={'0.75rem'}
                   fontWeight='500'
-                  letterSpacing='0.84px'
-                  lineHeight='130%'
-                  fontFamily='FK Grotesk Neue'
+                  letterSpacing='0.6px'
+                  lineHeight='120%'
                 >
-                  Push Blog
+                  NEWS, DEVLOGS & IDEAS
                 </H2>
               </ItemH>
 
@@ -418,12 +340,11 @@ export default function Home() {
                     hover='transparent'
                     background='transparent'
                     filter='none'
-                    color='#fff'
+                    color='#E163FF'
                     borderRadius='0'
                     padding='0px 0px'
-                    fontFamily='FK Grotesk Neue'
                   >
-                    <SpanLink>Explore Blog</SpanLink>
+                    <SpanLink>Explore More Articles</SpanLink>
                     <BsArrowRight className='anchorSVGlink' />
                   </SlideLink>
                 </ItemH>
@@ -431,135 +352,19 @@ export default function Home() {
             </ItemH>
 
             <H2
-              fontSize={isMobile ? '24px' : '30px'}
+              fontSize={isMobile ? '24px' : '3rem'}
               color='#fff'
               margin='8px 0 0 0'
               fontWeight='500'
-              fontFamily='FK Grotesk Neue'
               lineHeight='120%'
-              letterSpacing='normal'
+              letterSpacing='0.6px'
             >
-              Your gateway to shiny updates and innovations at Push Protocol.
+              Your Pulse of Push Chain
             </H2>
 
             <RecentBlogPosts />
           </Content>
         </BlogSection>
-
-        {/* BACKED BY SECTION */}
-        {/* <BackedBySection id='investors'>
-          <ItemV
-            id='integratePush'
-            position='absolute'
-            top='0'
-            right='0'
-            bottom='0'
-            left='0'
-          />
-
-          <Content alignSelf='center'>
-            <InvestorItem alignItems='stretch'>
-              <InvestorHeader
-                color='#FFFFFF'
-                fontWeight='700'
-                letterSpacing='-0.02em'
-                lineHeight='120%'
-                fontSize={isMobile ? '24px' : '36px'}
-                fontFamily='FK Grotesk Neue'
-                lineHeight='130%'
-                textAlign='center'
-              >
-                {t('home.investors-section.title')}
-              </InvestorHeader>
-            </InvestorItem>
-
-            <MarqueeAnimationContainer
-              margin={isMobile ? '24px 0 3em 0' : '72px 0 3em 0'}
-              flex='1'
-              alignItems='stretch'
-            >
-              <NewMarqueeAnimation
-                speed={2}
-                gradientWidth={8}
-                gap={24}
-                fixedWidth={'250px'}
-                direction='ltr'
-              >
-                {InvList.top.map((item) => {
-                  return (
-                    <SplideSlide>
-                      <InvestorCard key={item.id}>
-                        <InvestorIcon
-                          width={item.title ? 64 : 'auto'}
-                          src={
-                            require(
-                              `@site/static/assets/website/investors/${item.srcref}.webp`
-                            ).default
-                          }
-                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                          alt={`${item?.alt}`}
-                        />
-                        {item.title && (
-                          <InvestorDetails>
-                            <InvestorTitle>{item.title}</InvestorTitle>
-                            {item.subtitle && (
-                              <InvestorSubtitle>
-                                {item.subtitle}
-                              </InvestorSubtitle>
-                            )}
-                          </InvestorDetails>
-                        )}
-                      </InvestorCard>
-                    </SplideSlide>
-                  );
-                })}
-              </NewMarqueeAnimation>
-            </MarqueeAnimationContainer>
-
-            <MarqueeAnimationContainer flex='1' alignItems='stretch'>
-              <NewMarqueeAnimation
-                speed={-2}
-                gradientWidth={8}
-                gap={24}
-                fixedWidth={'250px'}
-                direction='ltr'
-              >
-                {InvList.bottom.map((item, i) => {
-                  return (
-                    <SplideSlide>
-                      <InvestorCard
-                        key={item.id}
-                        flexDirection={item.title ? 'true' : 'false'}
-                      >
-                        <InvestorIcon
-                          width={item.title ? '64px' : 'auto'}
-                          borderRadius={item.title ? '50%' : '0'}
-                          src={
-                            require(
-                              `@site/static/assets/website/investors/${item.srcref}.webp`
-                            ).default
-                          }
-                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                          alt={`${item?.alt}`}
-                        />
-                        {item.title && (
-                          <InvestorDetails>
-                            <InvestorTitle>{item.title}</InvestorTitle>
-                            {item.subtitle && (
-                              <InvestorSubtitle>
-                                {item.subtitle}
-                              </InvestorSubtitle>
-                            )}
-                          </InvestorDetails>
-                        )}
-                      </InvestorCard>
-                    </SplideSlide>
-                  );
-                })}
-              </NewMarqueeAnimation>
-            </MarqueeAnimationContainer>
-          </Content>
-        </BackedBySection> */}
 
         {/* MEDIA COVERAGE SECTION */}
         <FeaturedInSection id='featured'>
@@ -929,10 +734,6 @@ const GridSection = styled(Section)``;
 
 const GridContent = styled(Content)`
   gap: 24px;
-
-  @media ${device.mobileL} {
-    gap: 0px;
-  }
 `;
 
 const ChatSection = styled(Section)``;
@@ -1258,13 +1059,13 @@ const TagItem = styled.b`
 const SlideLink = styled(A)`
   overflow: inherit;
   .anchorSVGlink {
-    color: #fff;
+    color: #e163ff;
     top: 3px;
   }
 
   &:hover {
     .anchorSVGlink {
-      color: #d98aec;
+      color: #e163ff;
     }
   }
 `;
@@ -1294,9 +1095,9 @@ const FaqLink = styled(A)`
 const SpanLink = styled(Span)`
   position: relative;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: normal;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.36px;
   line-height: 142%;
 
   &:after {
@@ -1307,7 +1108,7 @@ const SpanLink = styled(Span)`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #e163ff;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
