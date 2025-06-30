@@ -9,7 +9,7 @@ image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_cha
 ---
 
 <head>
-  <title>{`Utility Functions | Build | Push Chain Docs`}</title>
+  <title>Utility Functions | Build | Push Chain Docs</title>
 </head>
 
 import Tabs from '@theme/Tabs';
@@ -43,7 +43,7 @@ const account = PushChain.utils.account.toUniversal(address, {
 | **Arguments**     | **Type** | **Description**                                                                                                                                                                                                                                        |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`address`_       | `string` | An address string (e.g., `0xabc...`).                                                                                                                                                                                                                  |
-| _`options.chain`_ | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
+| _`options.chain`_ | `CHAIN`  | The target chain for the signer. For example: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT` <Details summary="PushChain.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushChain.CONSTANTS.PUSH_MAINNET` `PushChain.CONSTANTS.PUSH_TESTNET` `PushChain.CONSTANTS.PUSH_TESTNET_DONUT` `PushChain.CONSTANTS.PUSH_LOCALNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` `PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET` `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`</Details> |
 
 </PushAPIReference>
 
@@ -103,7 +103,7 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 | **Arguments**     | **Type** | **Description**                                                                                                                                                                                                                                        |
 | ----------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | _`address`_       | `string` | An address string (e.g., `0xabc...`).                                                                                                                                                                                                                  |
-| _`options.chain`_ | `CHAIN`  | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` |
+| _`options.chain`_ | `CHAIN`  | The target chain for the signer. For example: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT` <Details summary="PushChain.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushChain.CONSTANTS.PUSH_MAINNET` `PushChain.CONSTANTS.PUSH_TESTNET` `PushChain.CONSTANTS.PUSH_TESTNET_DONUT` `PushChain.CONSTANTS.PUSH_LOCALNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` `PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET` `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`</Details> |
 
 </PushAPIReference>
 
@@ -298,8 +298,8 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
 | **Arguments**       | **Type**  | **Description**                                                                                                                                                                                             |
 | ------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`keypair`_         | `Keypair` | A keypair object from one of the supported libraries (ethers v5/v6, viem, or a custom UniversalSignerSkeleton)                                                                                              |
-| _`options.chain`_   | `CHAIN`   | The target chain for the signer. Here are some possible values: `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET`, `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA`, `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`       |
-| _`options.library`_ | `LIBRARY` | The library to use for the signer. Here are some possible values: `PushChain.CONSTANTS.LIBRARY.ETHEREUM_ETHERSV6`, `PushChain.CONSTANTS.LIBRARY.ETHEREUM_VIEM`, `PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS` |
+| _`options.chain`_   | `CHAIN`   | The target chain for the signer. For example: `PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT` <Details summary="PushChain.CONSTANTS.CHAIN" className="alert alert--minimal-api-table">`PushChain.CONSTANTS.PUSH_MAINNET` `PushChain.CONSTANTS.PUSH_TESTNET` `PushChain.CONSTANTS.PUSH_TESTNET_DONUT` `PushChain.CONSTANTS.PUSH_LOCALNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET` `PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA` `PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET` `PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET` `PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET`</Details>       |
+| _`options.library`_ | `LIBRARY` | The library to use for the signer. For example: `PushChain.CONSTANTS.LIBRARY.ETHEREUM_ETHERSV6` <Details summary="PushChain.CONSTANTS.LIBRARY" className="alert alert--minimal-api-table">`PushChain.CONSTANTS.LIBRARY.ETHEREUM_ETHERSV6` `PushChain.CONSTANTS.LIBRARY.ETHEREUM_VIEM` `PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS` </Details> |
 
 </PushAPIReference>
 
