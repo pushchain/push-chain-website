@@ -11,6 +11,8 @@ sidebar_position: 3
   <title>{`usePushWalletContext | Customizations | UI Kit | Push Chain Docs`}</title>
 </head>
 
+import Details from '@theme/Details';
+
 <!-- Content Start -->
 
 The `usePushWalletContext` hook provides access to the current wallet state and methods to interact with the Push Wallet. This hook must be used within a component that's wrapped by a `PushUniversalWalletProvider`.
@@ -19,9 +21,9 @@ The `usePushWalletContext` hook provides access to the current wallet state and 
 ## Usage
 
 ```jsx live
-// customPropHighlightRegexStart=const WalletContextComponent
-// customPropHighlightRegexEnd=</PushUniversalWalletProvider>
-import { 
+// customPropHighlightRegexStart=const {
+// customPropHighlightRegexEnd=usePushWalletContext\(\)
+ import { 
   PushUniversalWalletProvider,
   PushUniversalAccountButton,
   usePushWalletContext,
@@ -29,35 +31,28 @@ import {
 } from '@pushchain/ui-kit';
 import { useState, useEffect } from 'react';
 
-// Create a component that uses the hook inside the provider context
-const WalletContextComponent = () => {
-  const { 
-    account, 
-    isConnected, 
-    isConnecting, 
-    connect, 
-    disconnect 
-  } = usePushWalletContext(); // optional: uid parameter for targeting a specific wallet instance
-
-  return (
-    <div>
-      <h3>Wallet Status</h3>
-      <p>Connected: {isConnected ? 'Yes' : 'No'}</p>
-      <p>Connecting: {isConnecting ? 'Yes' : 'No'}</p>
-      {isConnected && account && (
-        <p>Account: {account.address}</p>
-      )}
-      {!isConnected && (
-        <button onClick={() => connect()}>Connect Manually</button>
-      )}
-      {isConnected && (
-        <button onClick={() => disconnect()}>Disconnect</button>
-      )}
-    </div>
-  );
-};
-
 function App() {
+  // Create a component that uses the hook inside the provider context
+  const WalletContextComponent = () => {
+    const { 
+      connectionStatus, 
+      handleConnectToPushWallet, 
+      handleUserLogOutEvent 
+    } = usePushWalletContext(); // optional: uid parameter for targeting a specific wallet instance
+
+    return (
+      <div>
+        <h3>Wallet Status: {connectionStatus}</h3>
+        {connectionStatus === 'notConnected' && (
+          <button onClick={() => handleConnectToPushWallet()}>Connect via Hook Call</button>
+        )}
+        {connectionStatus === 'connected' && (
+          <button onClick={() => handleUserLogOutEvent()}>Disconnect via Hook Call</button>
+        )}
+      </div>
+    );
+  };
+
   return (
     <PushUniversalWalletProvider config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}>
       <PushUniversalAccountButton />
@@ -69,17 +64,17 @@ function App() {
 
 ### Parameters
 
-| Arguments | Type     | Required | Description                                 |
-| --------- | -------- | -------- | ------------------------------------------- |
-| `uid`     | `string` | No       | Optional user identifier for wallet context |
+| Arguments | Type     | Description                                 |
+| --------- | -------- | ------------------------------------------- |
+| `uid`     | `string` | Optional ID if targeting a specific wallet instance. See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
 
-#### Return Values
+### Returns
 
-| Property                    | Type     | Description                                                                                                                             |
-| --------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `connectionStatus`          | string   | Current connection state of the wallet. Possible values: `"notConnected"`, `"connecting"`, `"authenticating"`, `"connected"`, `"retry"` |
-| `handleConnectToPushWallet` | function | Call this function to initiate the wallet connection process                                                                            |
-| `handleUserLogOutEvent`     | function | Call this function to disconnect the current wallet and log out the user                                                                |
+| Property                    | Type         | Default         | Description                                                                                       |
+| --------------------------- | ------------ | --------------- | ------------------------------------------------------------------------------------------------- |
+| `connectionStatus`          | `PushUI.CONSTANTS.CONNECTION.STATUS`     | `PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED`| It will be from one of the following: <Details summary="PushUI.CONSTANTS.CONNECTION.STATUS" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED` `PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTING` `PushUI.CONSTANTS.CONNECTION.STATUS.AUTHENTICATING` `PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED` `PushUI.CONSTANTS.CONNECTION.STATUS.RETRY` </Details>              |
+| `handleConnectToPushWallet` | `() => void` | _function_      | Call to open the wallet-connect modal (or trigger your chosen flow).                              |
+| `handleUserLogOutEvent`     | `() => void` | _function_      | Call to disconnect the wallet and clear the session.                                             |
 
 ## Next Steps
 

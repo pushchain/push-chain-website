@@ -17,7 +17,7 @@ The `usePushChainClient` hook initializes and manages a Push Chain client instan
 
 Like `usePushWalletContext`, This hook must also be used within a component that's wrapped by a `PushUniversalWalletProvider`.
 
-### Usage
+## Usage
 
 ```jsx live
 // customPropHighlightRegexStart=usePushChainClient\(
@@ -33,21 +33,16 @@ import { useState, useEffect } from 'react';
 function App() {
   // Create a component that uses the hook inside the provider context
   const ClientComponent = () => {
-    const [status, setStatus] = useState(null);
-    const { pushChainClient, isInitialized, error } = usePushChainClient(); // optional: uid parameter for targeting a specific wallet instance
-
-    useEffect(() => {
-      !isInitialized
-        ? setStatus('Not initialized...')
-        : setStatus('initialized');
-    }, [isInitialized]);
+    const { pushChainClient, isInitialized, error } = usePushChainClient(); // optional: pass uid parameter for targeting a specific wallet instance
 
     return (
       <div>
-        <h3>Chain Client Status: {status}</h3>
-        {pushChainClient && !isLoading && (
+        <h3>
+          Chain Client Status:{' '}
+          {isInitialized ? 'Initialized 🎉' : 'Initializing...'}
+        </h3>
+        {pushChainClient && (
           <>
-            <p>Chain client initialized successfully!</p>
             <p>Executor: {pushChainClient.universal.account}</p>
             <p>
               Origin: {pushChainClient.universal.origin.address} | Chain:{' '}
@@ -73,17 +68,17 @@ function App() {
 
 ### Parameters
 
-| Arguments | Type     | Required | Description                                  |
-| --------- | -------- | -------- | -------------------------------------------- |
-| `uid`     | `string` | No       | Optional ID if targeting a specific wallet instance. For example, see [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/). |
+| Arguments | Type     | Description                                                                                                                                            |
+| --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `uid`     | `string` | Optional ID if targeting a specific wallet instance. See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
 
-### Return Values
+### Returns
 
-| Property          | Type                        | Description                             |
-| ----------------- | --------------------------- | --------------------------------------- |
-| `pushChainClient` | `PushChainClient` \| `null` | Your initialized client (once ready).   |
-| `isInitialized`   | `boolean`                   | `false` while the client is booting up. |
-| `error`           | `Error` \| `null`           | Failure information, if any.            |
+| Property          | Type                        | Default | Description                             |
+| ----------------- | --------------------------- | ------- | --------------------------------------- |
+| `pushChainClient` | `PushChainClient` \| `null` | -       | Your initialized client (once ready).   |
+| `isInitialized`   | `boolean`                   | `false` | `false` while the client is booting up. |
+| `error`           | `Error` \| `null`           | -       | Failure information, if any.            |
 
 ## Next Steps
 
