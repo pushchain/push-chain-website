@@ -11,10 +11,16 @@ import Spinner, {
   SPINNER_TYPE,
 } from '@site/src/components/reusables/spinners/SpinnerUnit';
 import GLOBALS from '@site/src/config/globals';
-import { Button, ItemH, ItemV } from '@site/src/css/SharedStyling';
+import {
+  Button,
+  ItemH,
+  ItemV,
+  CopyContainer,
+  CopyButton,
+} from '@site/src/css/SharedStyling';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiChevronDown, FiChevronUp, FiCopy, FiCheck } from 'react-icons/fi';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import styles from './styles.module.css';
 
@@ -98,6 +104,7 @@ function ThemedLiveEditor({ code, className }) {
 
 function EditorWithHeader({ minimized, code, title, codeEnv }) {
   const [minimizedState, setMinimizedState] = useState(minimized);
+  const [copied, setCopied] = useState(false);
   const liveEditorClasses = `liveEditor${codeEnv}`;
 
   const displayTitle = title || (
@@ -109,15 +116,20 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
     </Translate>
   );
 
+  const handleCopy = async (e) => {
+    e.stopPropagation();
+    try {
+      await navigator.clipboard.writeText(code);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // reset after 2s
+    } catch (err) {
+      console.error('Failed to copy', err);
+    }
+  };
+
   return (
     <>
       <Header>
-        <ItemH>
-          <ItemV flex='1' alignItems='flex-start'>
-            {displayTitle}
-          </ItemV>
-          {minimizedState ? <FiChevronDown /> : <FiChevronUp />}
-        </ItemH>
         <Button
           onClick={() => setMinimizedState(!minimizedState)}
           textTransform='uppercase'
@@ -131,7 +143,19 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
           right='0'
           bottom='0'
           left='0'
+          zIndex={1}
         />
+        <ItemH>
+          <ItemV flex='1' alignItems='flex-start'>
+            {displayTitle}
+          </ItemV>
+          <CopyContainer>
+            <CopyButton onClick={handleCopy}>
+              {copied ? <FiCheck color='#50FA7B' /> : <FiCopy />}
+            </CopyButton>
+            {minimizedState ? <FiChevronDown /> : <FiChevronUp />}
+          </CopyContainer>
+        </ItemH>
       </Header>
       {!minimizedState && (
         <ThemedLiveEditor code={code} className={liveEditorClasses} />

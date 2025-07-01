@@ -26,7 +26,6 @@ The UI Kit SDK lets you customize its look by overriding CSS variables (aka them
 
 <Tabs className="liveplaytab" groupId="customize-theme-variable">
   <TabItem value="applevel" label="App Level" default>
-
 ```jsx live
 // customPropHighlightRegexStart=themeOverrides=
 // customPropHighlightRegexEnd=}}
@@ -41,7 +40,7 @@ function App() {
     <PushUniversalWalletProvider
       config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
       themeOverrides={{
-        '--pw-core-bg-primary-color': '#2A0134', // global override
+        '--pw-core-bg-primary-color': 'red', // global override
       }}
     >
       {/* Your App Logic */}
@@ -50,11 +49,9 @@ function App() {
   );
 }
 ```
-
   </TabItem>
 
   <TabItem value="applevel_lightdark" label="App Level (Light / Dark)" default>
-
 ```jsx live
 // customPropHighlightRegexStart=themeOverrides=
 // customPropHighlightRegexEnd=}}
@@ -69,13 +66,7 @@ function App() {
     <PushUniversalWalletProvider
       config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
       themeOverrides={{
-        '--pw-core-bg-primary-color': '#2A0134', // global override
-        light: {
-          // light theme override - no override so global value is taken
-        },
-        dark: {
-          '--pw-core-bg-primary-color': '#2E6F40', // dark theme override - this will override the global value
-        },
+        '--pw-core-bg-primary-color': 'green', // global override
       }}
     >
       {/* Your App Logic */}
@@ -84,11 +75,9 @@ function App() {
   );
 }
 ```
-
   </TabItem>
 
   <TabItem value="button_specific" label="Button Specific" default>
-
 ```jsx live
 // customPropHighlightRegexStart=themeOverrides=
 // customPropHighlightRegexEnd=}}
@@ -122,7 +111,6 @@ function App() {
   );
 }
 ```
-
   </TabItem>
 
 

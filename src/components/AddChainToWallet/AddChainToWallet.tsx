@@ -5,21 +5,7 @@ import React from 'react';
 declare global {
   interface Window {
     ethereum?: {
-      request: (args: {
-        method: string;
-        params: Array<{
-          chainId: string;
-          chainName: string;
-          nativeCurrency: {
-            name: string;
-            symbol: string;
-            decimals: number;
-          };
-          iconUrls: string[];
-          rpcUrls: string[];
-          blockExplorerUrls: string[];
-        }>;
-      }) => Promise<void>;
+      request: (args: unknown) => Promise<void>;
     };
   }
 }
@@ -53,22 +39,44 @@ const AddChainToWallet: React.FC<AddChainToWalletProps> = ({
         return;
       }
 
-      await window.ethereum.request({
-        method: 'wallet_addEthereumChain',
-        params: [
-          {
-            chainId: `0x${config.chainId.toString(16)}`,
-            chainName: config.chainName,
-            nativeCurrency: config.nativeCurrency,
-            iconUrls: config.iconUrls,
-            rpcUrls: config.rpcUrls,
-            blockExplorerUrls: config.blockExplorerUrls,
-          },
-        ],
-      });
+      const chainIdHex = `0x${config.chainId.toString(16)}`;
+
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: chainIdHex }],
+        });
+        alert('Network already exists.');
+        return;
+      } catch (switchError) {
+        // Step 2: If the error code is 4902, the chain doesn't exist
+        if (switchError.code === 4902) {
+          try {
+            await window.ethereum.request({
+              method: 'wallet_addEthereumChain',
+              params: [
+                {
+                  chainId: chainIdHex,
+                  chainName: config.chainName,
+                  nativeCurrency: config.nativeCurrency,
+                  iconUrls: config.iconUrls,
+                  rpcUrls: config.rpcUrls,
+                  blockExplorerUrls: config.blockExplorerUrls,
+                },
+              ],
+            });
+          } catch (addError) {
+            console.error('Error adding network:', addError);
+            alert('Failed to add network to MetaMask');
+          }
+        } else {
+          console.error('Error switching network:', switchError);
+          alert('Failed to switch network');
+        }
+      }
     } catch (error) {
-      console.error('Error adding network:', error);
-      alert('Failed to add network to MetaMask');
+      console.error('Unexpected error:', error);
+      alert('Something went wrong while adding the network');
     }
   };
 

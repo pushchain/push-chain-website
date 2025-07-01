@@ -807,3 +807,17 @@ export const FeatureImage = styled.img`
   height: auto;
   border-radius: 8px;
 `;
+
+export const CopyContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+`;
+
+export const CopyButton = styled.div`
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  height: 20px;
+  width: 16px;
+`;

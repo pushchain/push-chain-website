@@ -107,12 +107,13 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property     | Type      | Default | Description                                                              |
-| ------------ | --------- | ------- | ------------------------------------------------------------------------ |
-| `email`      | `boolean` | `true`  | Enable email/password login.                                             |
-| `google`     | `boolean` | `true`  | Enable Google OAuth login.                                               |
-| `wallet`     | `Object`  | _\*\*_  | External wallet configuration. _\*\*_ See `config.login.wallet` Options. |
-| `appPreview` | `boolean` | `false` | Show app preview inside iframe.                                          |
+| Property               | Type                                     | Default                                               | Description                                                                                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `loginLayout`          | `PushUI.CONSTANTS.LOGIN.LAYOUT`          | `PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE`                | Login modal layout type. <Details summary="PushUI.CONSTANTS.LOGIN.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE` `PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT`</Details>                                        |
+| `appPreview`           | `boolean`                                | `false`                                               | Show app preview in modal                                                                                                                                                                                                                          |
+| `bgImage`              | `string`                                 | `null`                                                | Background image for the login modal                                                                                                                                                                                                               |
+| `connectedLayout`      | `PushUI.CONSTANTS.CONNECTED.LAYOUT`      | `PushUI.CONSTANTS.CONNECTED.HOVER`                    | Connected modal layout type. <Details summary="PushUI.CONSTANTS.CONNECTED.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.LAYOUT.FULL` `PushUI.CONSTANTS.CONNECTED.HOVER`</Details>                                 |
+| `connectedInteraction` | `PushUI.CONSTANTS.CONNECTED.INTERACTION` | `PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTIVE` | Connected modal outside interaction type. <Details summary="PushUI.CONSTANTS.CONNECTED.INTERACTION" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTABLE` `PushUI.CONSTANTS.INTERACTION.BLUR`</Details> |
 
 </PushAPIReference>
 
@@ -150,6 +151,12 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 <Details summary="`config.chainConfig` Options" className="alert alert--minimal code">
 
 <PushAPIReference showRequiredNotice={false}>
+
+| Property     | Type      | Default | Description                                                              |
+| ------------ | --------- | ------- | ------------------------------------------------------------------------ |
+| `rpcUrls`      | `Partial<Record<CHAIN, string>>` | `{}`  | Custom RPC URLs mapped by chain IDs.                                             |
+| `blockExplorers`     | `Partial<Record<CHAIN, string[]>` | `{[CHAIN.PUSH_TESTNET_DONUT]: ['https://donut.push.network']}`  | Custom block explorer URLs mapped by chain IDs.  |
+| `printTraces`     | `boolean`  | `false`  | When true, console logs the internal trace logs for debugging requests to nodes |
 
 </PushAPIReference>
 
@@ -237,7 +244,7 @@ function App() {
       {/* Your app logic */}
 
       {/* Push Universal Wallet Button to show the functionality */}
-      <PushUniversalAccountButton />
+      <PushUniversalAccountButton uid='your-uid' />
     </PushUniversalWalletProvider>
   );
 }
