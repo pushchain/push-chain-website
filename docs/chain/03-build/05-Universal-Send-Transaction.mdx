@@ -91,8 +91,1020 @@ const txHash = await pushChainClient.universal.sendTransaction({
 <Details summary="Returns `TransactionReceipt` <object>" className="alert alert--fn-args">
 
 ```typescript
-// Transaction hash
-'0xd4491116f55568faabe3ae813dacb77eeea49080f34221ae433b27d3732a460a';
+{
+  "height": 748987,
+  "txIndex": 0,
+  "hash": "40FDF915D914B021344846F1D2D1F33811873B72A7663DFEDF5B96D3B1F45E93",
+  "code": 0,
+  "events": [
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "23625000000000upc"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push17xpfvakm2amg962yls6f84z3kell8c5lgmspl4"
+        },
+        {
+          "key": "amount",
+          "value": "23625000000000upc"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "push17xpfvakm2amg962yls6f84z3kell8c5lgmspl4"
+        },
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "23625000000000upc"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        }
+      ]
+    },
+    {
+      "type": "tx",
+      "attributes": [
+        {
+          "key": "fee",
+          "value": "23625000000000upc"
+        }
+      ]
+    },
+    {
+      "type": "ethereum_tx",
+      "attributes": [
+        {
+          "key": "ethereumTxHash",
+          "value": "0x39c9273b14bd716b9dc153a2ca8bb5392865cb248cc4244271c7af80257a32f7"
+        },
+        {
+          "key": "txIndex",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "action",
+          "value": "/os.evm.v1.MsgEthereumTx"
+        },
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coinbase",
+      "attributes": [
+        {
+          "key": "minter",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1qqqqqqqqqqqqqqqqqqqqqqqqqqqqgggpqz2hej"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "push1qqqqqqqqqqqqqqqqqqqqqqqqqqqqgggpqz2hej"
+        },
+        {
+          "key": "sender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "burn",
+      "attributes": [
+        {
+          "key": "burner",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coinbase",
+      "attributes": [
+        {
+          "key": "minter",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1qqqqqqqqqqqqqqqqqqqqqqqqqqqqgggpqz2hej"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "push1qqqqqqqqqqqqqqqqqqqqqqqqqqqqgggpqz2hej"
+        },
+        {
+          "key": "sender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_received",
+      "attributes": [
+        {
+          "key": "receiver",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "transfer",
+      "attributes": [
+        {
+          "key": "recipient",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "sender",
+          "value": "push1rxc2za6p33vvwafphpu3kq7dcc8g3pq3slw607"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "coin_spent",
+      "attributes": [
+        {
+          "key": "spender",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "burn",
+      "attributes": [
+        {
+          "key": "burner",
+          "value": "push1vqu8rska6swzdmnhf90zuv0xmelej4lq4sk4qq"
+        },
+        {
+          "key": "amount",
+          "value": "1upc"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "ethereum_tx",
+      "attributes": [
+        {
+          "key": "amount",
+          "value": "1"
+        },
+        {
+          "key": "ethereumTxHash",
+          "value": "0x39c9273b14bd716b9dc153a2ca8bb5392865cb248cc4244271c7af80257a32f7"
+        },
+        {
+          "key": "txIndex",
+          "value": "0"
+        },
+        {
+          "key": "txGasUsed",
+          "value": "21000"
+        },
+        {
+          "key": "txHash",
+          "value": "40fdf915d914b021344846f1d2d1f33811873b72a7663dfedf5b96d3b1f45e93"
+        },
+        {
+          "key": "recipient",
+          "value": "0x0000000000000000000000000000000000042101"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "tx_log",
+      "attributes": [
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "type": "message",
+      "attributes": [
+        {
+          "key": "module",
+          "value": "evm"
+        },
+        {
+          "key": "sender",
+          "value": "0x19b0A177418C58C77521b8791b03cdC60E888411"
+        },
+        {
+          "key": "txType",
+          "value": "2"
+        },
+        {
+          "key": "msg_index",
+          "value": "0"
+        }
+      ]
+    }
+  ],
+  "rawLog": "",
+  "tx": {
+    "0": 10,
+    "1": 197,
+    "2": 2,
+    "3": 10,
+    "4": 152,
+    "5": 2,
+    "6": 10,
+    "7": 24,
+    "8": 47,
+    "9": 111,
+    "10": 115,
+    "11": 46,
+    "12": 101,
+    "13": 118,
+    "14": 109,
+    "15": 46,
+    "16": 118,
+    "17": 49,
+    "18": 46,
+    "19": 77,
+    "20": 115,
+    "21": 103,
+    "22": 69,
+    "23": 116,
+    "24": 104,
+    "25": 101,
+    "26": 114,
+    "27": 101,
+    "28": 117,
+    "29": 109,
+    "30": 84,
+    "31": 120,
+    "32": 18,
+    "33": 251,
+    "34": 1,
+    "35": 10,
+    "36": 180,
+    "37": 1,
+    "38": 10,
+    "39": 23,
+    "40": 47,
+    "41": 111,
+    "42": 115,
+    "43": 46,
+    "44": 101,
+    "45": 118,
+    "46": 109,
+    "47": 46,
+    "48": 118,
+    "49": 49,
+    "50": 46,
+    "51": 68,
+    "52": 121,
+    "53": 110,
+    "54": 97,
+    "55": 109,
+    "56": 105,
+    "57": 99,
+    "58": 70,
+    "59": 101,
+    "60": 101,
+    "61": 84,
+    "62": 120,
+    "63": 18,
+    "64": 152,
+    "65": 1,
+    "66": 10,
+    "67": 5,
+    "68": 52,
+    "69": 50,
+    "70": 49,
+    "71": 48,
+    "72": 49,
+    "73": 26,
+    "74": 9,
+    "75": 49,
+    "76": 50,
+    "77": 53,
+    "78": 48,
+    "79": 48,
+    "80": 48,
+    "81": 48,
+    "82": 48,
+    "83": 48,
+    "84": 34,
+    "85": 10,
+    "86": 49,
+    "87": 51,
+    "88": 50,
+    "89": 53,
+    "90": 48,
+    "91": 48,
+    "92": 48,
+    "93": 48,
+    "94": 48,
+    "95": 48,
+    "96": 40,
+    "97": 136,
+    "98": 164,
+    "99": 1,
+    "100": 50,
+    "101": 42,
+    "102": 48,
+    "103": 120,
+    "104": 48,
+    "105": 48,
+    "106": 48,
+    "107": 48,
+    "108": 48,
+    "109": 48,
+    "110": 48,
+    "111": 48,
+    "112": 48,
+    "113": 48,
+    "114": 48,
+    "115": 48,
+    "116": 48,
+    "117": 48,
+    "118": 48,
+    "119": 48,
+    "120": 48,
+    "121": 48,
+    "122": 48,
+    "123": 48,
+    "124": 48,
+    "125": 48,
+    "126": 48,
+    "127": 48,
+    "128": 48,
+    "129": 48,
+    "130": 48,
+    "131": 48,
+    "132": 48,
+    "133": 48,
+    "134": 48,
+    "135": 48,
+    "136": 48,
+    "137": 48,
+    "138": 48,
+    "139": 52,
+    "140": 50,
+    "141": 49,
+    "142": 48,
+    "143": 49,
+    "144": 58,
+    "145": 1,
+    "146": 49,
+    "147": 82,
+    "148": 1,
+    "149": 1,
+    "150": 90,
+    "151": 32,
+    "152": 170,
+    "153": 63,
+    "154": 221,
+    "155": 123,
+    "156": 137,
+    "157": 180,
+    "158": 31,
+    "159": 249,
+    "160": 109,
+    "161": 128,
+    "162": 52,
+    "163": 54,
+    "164": 134,
+    "165": 8,
+    "166": 162,
+    "167": 208,
+    "168": 22,
+    "169": 224,
+    "170": 246,
+    "171": 194,
+    "172": 4,
+    "173": 255,
+    "174": 228,
+    "175": 234,
+    "176": 54,
+    "177": 135,
+    "178": 170,
+    "179": 229,
+    "180": 213,
+    "181": 200,
+    "182": 106,
+    "183": 132,
+    "184": 98,
+    "185": 32,
+    "186": 78,
+    "187": 251,
+    "188": 167,
+    "189": 212,
+    "190": 225,
+    "191": 235,
+    "192": 85,
+    "193": 69,
+    "194": 200,
+    "195": 134,
+    "196": 201,
+    "197": 87,
+    "198": 29,
+    "199": 111,
+    "200": 204,
+    "201": 133,
+    "202": 26,
+    "203": 14,
+    "204": 12,
+    "205": 91,
+    "206": 154,
+    "207": 28,
+    "208": 125,
+    "209": 178,
+    "210": 124,
+    "211": 179,
+    "212": 1,
+    "213": 75,
+    "214": 83,
+    "215": 103,
+    "216": 147,
+    "217": 15,
+    "218": 26,
+    "219": 66,
+    "220": 48,
+    "221": 120,
+    "222": 51,
+    "223": 57,
+    "224": 99,
+    "225": 57,
+    "226": 50,
+    "227": 55,
+    "228": 51,
+    "229": 98,
+    "230": 49,
+    "231": 52,
+    "232": 98,
+    "233": 100,
+    "234": 55,
+    "235": 49,
+    "236": 54,
+    "237": 98,
+    "238": 57,
+    "239": 100,
+    "240": 99,
+    "241": 49,
+    "242": 53,
+    "243": 51,
+    "244": 97,
+    "245": 50,
+    "246": 99,
+    "247": 97,
+    "248": 56,
+    "249": 98,
+    "250": 98,
+    "251": 53,
+    "252": 51,
+    "253": 57,
+    "254": 50,
+    "255": 56,
+    "256": 54,
+    "257": 53,
+    "258": 99,
+    "259": 98,
+    "260": 50,
+    "261": 52,
+    "262": 56,
+    "263": 99,
+    "264": 99,
+    "265": 52,
+    "266": 50,
+    "267": 52,
+    "268": 52,
+    "269": 50,
+    "270": 55,
+    "271": 49,
+    "272": 99,
+    "273": 55,
+    "274": 97,
+    "275": 102,
+    "276": 56,
+    "277": 48,
+    "278": 50,
+    "279": 53,
+    "280": 55,
+    "281": 97,
+    "282": 51,
+    "283": 50,
+    "284": 102,
+    "285": 55,
+    "286": 250,
+    "287": 63,
+    "288": 39,
+    "289": 10,
+    "290": 37,
+    "291": 47,
+    "292": 111,
+    "293": 115,
+    "294": 46,
+    "295": 101,
+    "296": 118,
+    "297": 109,
+    "298": 46,
+    "299": 118,
+    "300": 49,
+    "301": 46,
+    "302": 69,
+    "303": 120,
+    "304": 116,
+    "305": 101,
+    "306": 110,
+    "307": 115,
+    "308": 105,
+    "309": 111,
+    "310": 110,
+    "311": 79,
+    "312": 112,
+    "313": 116,
+    "314": 105,
+    "315": 111,
+    "316": 110,
+    "317": 115,
+    "318": 69,
+    "319": 116,
+    "320": 104,
+    "321": 101,
+    "322": 114,
+    "323": 101,
+    "324": 117,
+    "325": 109,
+    "326": 84,
+    "327": 120,
+    "328": 18,
+    "329": 29,
+    "330": 18,
+    "331": 27,
+    "332": 10,
+    "333": 21,
+    "334": 10,
+    "335": 3,
+    "336": 117,
+    "337": 112,
+    "338": 99,
+    "339": 18,
+    "340": 14,
+    "341": 50,
+    "342": 55,
+    "343": 56,
+    "344": 50,
+    "345": 53,
+    "346": 48,
+    "347": 48,
+    "348": 48,
+    "349": 48,
+    "350": 48,
+    "351": 48,
+    "352": 48,
+    "353": 48,
+    "354": 48,
+    "355": 16,
+    "356": 136,
+    "357": 164,
+    "358": 1
+  },
+  "msgResponses": [
+    {
+      "typeUrl": "/os.evm.v1.MsgEthereumTxResponse",
+      "value": {
+        "0": 10,
+        "1": 66,
+        "2": 48,
+        "3": 120,
+        "4": 51,
+        "5": 57,
+        "6": 99,
+        "7": 57,
+        "8": 50,
+        "9": 55,
+        "10": 51,
+        "11": 98,
+        "12": 49,
+        "13": 52,
+        "14": 98,
+        "15": 100,
+        "16": 55,
+        "17": 49,
+        "18": 54,
+        "19": 98,
+        "20": 57,
+        "21": 100,
+        "22": 99,
+        "23": 49,
+        "24": 53,
+        "25": 51,
+        "26": 97,
+        "27": 50,
+        "28": 99,
+        "29": 97,
+        "30": 56,
+        "31": 98,
+        "32": 98,
+        "33": 53,
+        "34": 51,
+        "35": 57,
+        "36": 50,
+        "37": 56,
+        "38": 54,
+        "39": 53,
+        "40": 99,
+        "41": 98,
+        "42": 50,
+        "43": 52,
+        "44": 56,
+        "45": 99,
+        "46": 99,
+        "47": 52,
+        "48": 50,
+        "49": 52,
+        "50": 52,
+        "51": 50,
+        "52": 55,
+        "53": 49,
+        "54": 99,
+        "55": 55,
+        "56": 97,
+        "57": 102,
+        "58": 56,
+        "59": 48,
+        "60": 50,
+        "61": 53,
+        "62": 55,
+        "63": 97,
+        "64": 51,
+        "65": 50,
+        "66": 102,
+        "67": 55,
+        "68": 40,
+        "69": 136,
+        "70": 164,
+        "71": 1
+      }
+    }
+  ],
+  "gasUsed": "21000",
+  "gasWanted": "21000",
+  "transactionHash": "0x39c9273b14bd716b9dc153a2ca8bb5392865cb248cc4244271c7af80257a32f7"
+}
 ```
 
 </Details>
