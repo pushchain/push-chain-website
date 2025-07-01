@@ -9,7 +9,9 @@ sidebar_position: 2
 
 <head>
   <title>
-    {'Push Universal Account Button | Customizations | UI Kit | Push Chain Docs'}
+    {
+      'Push Universal Account Button | Customizations | UI Kit | Push Chain Docs'
+    }
   </title>
 </head>
 
@@ -46,7 +48,7 @@ yarn add @pushchain/ui-kit
 
 ## Usage
 
-Place the button in your UI where users should be able to connect. The button must be used within a `PushUniversalWalletProvider`:
+Place the button in your UI where users should be able to connect. The button must be used within a `PushUniversalWalletProvider`.
 
 <Tabs className="liveplaytab" groupId="customize-push-universal-button">
   <TabItem value='basic' label='Quickstart'>
@@ -65,8 +67,8 @@ function App() {
     <PushUniversalWalletProvider
       config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
     >
-      <PushUniversalAccountButton 
-        connectButtonText="Start Building 🔥" 
+      <PushUniversalAccountButton
+        connectButtonText='Start Building 🔥'
         modalAppOverride={{
           title: 'Override App Title on Modal',
         }}
@@ -96,11 +98,38 @@ import {
 } from '@pushchain/ui-kit';
 
 function App() {
+  // Custom loading component
+  const CustomLoader = () => (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div
+        style={{
+          width: '16px',
+          height: '16px',
+          borderRadius: '50%',
+          border: '3px solid rgba(0, 0, 0, 0.1)',
+          borderTopColor: '#6B46C1',
+          animation: 'spin 1s linear infinite',
+        }}
+      />
+      <style jsx>{`
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      `}</style>
+      <span>Loading wallet...</span>
+    </div>
+  );
+
   return (
     <PushUniversalWalletProvider
       config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      themeOverrides={{
+        '--pw-core-bg-primary-color': '#FFFFFF33',
+      }}
     >
-      <PushUniversalAccountButton />
+      <PushUniversalAccountButton loadingComponent={<CustomLoader />} />
     </PushUniversalWalletProvider>
   );
 }
@@ -109,71 +138,55 @@ function App() {
   </TabItem>
 </Tabs>
 
-## Button States
-
-The button transitions between three main states:
-
-1. **Disconnected**: Login button prompting users to connect
-2. **Loading**: Connection/authentication in progress
-3. **Connected**: Displays the connected account with dropdown menu
-
-Each state can be fully customized through props.
-
 ## Props
 
-### Instance Targeting
-
 <PushAPIReference showRequiredNotice={false}>
 
-| Arguments | Type     | Default               | Description                                                                                                                                         |
-| --------- | -------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `uid`     | `string` | Uses default provider | Should match `config.uid` of specific `PushUniversalWalletProvider` instance.<br />&nbsp;<br />See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
+| Property            | Type              | Default               | Description                                                                                                                                                                                                                                       |
+| ------------------- | ----------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `connectButtonText` | `string`          | `Connect Account`     | Text for the connect button.                                                                                                                                                                                                                      |
+| `loadingComponent`  | `React.ReactNode` | Uses default loader   | Custom loading indicator.                                                                                                                                                                                                                         |
+| `uid`               | `string`          | Uses default provider | Optional ID for targeting a specific wallet instance, must match `config.uid` of specific `PushUniversalWalletProvider` instance.<br />&nbsp;<br />See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
+| `themeOverrides`    | `ThemeOverrides`  | `{}`                  | Button theme overrides. Check out all the supported theme variables in [Theme Variables](/docs/chain/ui-kit/customizations/theme-variables/).                                                                                                     |
+| `loginAppOverride`  | `Object`          | _\*\*_                | Used to override app preview in the login screen. _\*\*_ See `loginAppOverride` prop for more info.                                                                                                                                               |
+| `modalAppOverride`  | `Object`          | _\*\*_                | Used to override app preview in the modal presented. _\*\*_ See `modalAppOverride` prop for more info.                                                                                                                                            |
 
 </PushAPIReference>
 
-### Disconnected State Customization
+### `loginAppOverride` props
+
+Use this to override app preview that is provided on login screen for a particular button instance. This will override the app preview that is provided in the `app` prop of `PushUniversalWalletProvider`.
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property            | Type     | Default           | Description                 |
-| ------------------- | -------- | ----------------- | --------------------------- |
-| `connectButtonText` | `string` | `Connect Account` | Text for the connect button |
+| Property      | Type     | Default                            | Description                               |
+| ------------- | -------- | ---------------------------------- | ----------------------------------------- |
+| `logoUrl`     | `string` | From `Provider's` -> `app.logoUrl` | Override app logo in login screen.        |
+| `title`       | `string` | From `app.title`                   | Override app title in login screen.       |
+| `description` | `string` | From `app.description`             | Override app description in login screen. |
 
 </PushAPIReference>
 
-### Loading State Customization
+### `modalAppOverride` props
+
+Use this to override app preview that is provided on wallet modal for a particular button instance. This will override the app preview that is provided in the `app` prop of `PushUniversalWalletProvider`.
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property           | Type              | Default             | Description              |
-| ------------------ | ----------------- | ------------------- | ------------------------ |
-| `loadingComponent` | `React.ReactNode` | Uses default loader | Custom loading indicator |
+| Property      | Type     | Default                | Description                        |
+| ------------- | -------- | ---------------------- | ---------------------------------- |
+| `logoUrl`     | `string` | From `app.logoUrl`     | Override app logo in modal.        |
+| `title`       | `string` | From `app.title`       | Override app title in modal.       |
+| `description` | `string` | From `app.description` | Override app description in modal. |
 
 </PushAPIReference>
 
-### App Preview Overrides
+## Handling Connection Lifecycle
 
-<PushAPIReference showRequiredNotice={false}>
+You can track and customize the wallet connection lifecycle with [usePushWalletContext](/docs/chain/ui-kit/customizations/use-push-wallet-context/).
 
-| Property                       | Type     | Default                | Description                                |
-| ------------------------------ | -------- | ---------------------- | ------------------------------------------ |
-| `modalAppOverride`             | `Object` | From `app`             | Override app preview in the wrapper iframe |
-| `modalAppOverride.logoUrl`     | `string` | From `app.logoUrl`     | Override app logo                          |
-| `modalAppOverride.title`       | `string` | From `app.title`       | Override app title                         |
-| `modalAppOverride.description` | `string` | From `app.description` | Override app description                   |
-| `loginAppOverride`             | `Object` | From `app`             | Override app preview inside hosted iframe  |
-| `loginAppOverride.logoUrl`     | `string` | From `app.logoUrl`     | Override app logo in iframe                |
-| `loginAppOverride.title`       | `string` | From `app.title`       | Override app title in iframe               |
-| `loginAppOverride.description` | `string` | From `app.description` | Override app description in iframe         |
+## Next Steps
 
-</PushAPIReference>
-
-### Button Theme Settings Override
-
-<PushAPIReference showRequiredNotice={false}>
-
-| Property         | Type             | Default | Description            |
-| ---------------- | ---------------- | ------- | ---------------------- |
-| `themeOverrides` | `ThemeOverrides` | `{}`    | Button theme overrides |
-
-</PushAPIReference>
+- Track the wallet connection lifecycle with [usePushWalletContext](/docs/chain/ui-kit/customizations/use-push-wallet-context/)
+- Get initialized wallet instance with [usePushChainClient](/docs/chain/ui-kit/customizations/use-push-chain-client/)
+- Customize user experience with [Theme Variables](/docs/chain/ui-kit/customizations/theme-variables/)
