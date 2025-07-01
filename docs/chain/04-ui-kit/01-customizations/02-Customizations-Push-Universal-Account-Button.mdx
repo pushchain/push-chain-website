@@ -8,7 +8,9 @@ sidebar_position: 2
 ---
 
 <head>
-  <title>Push Universal Account Button | Customizations | UI Kit | Push Chain Docs</title>
+  <title>
+    {'Push Universal Account Button | Customizations | UI Kit | Push Chain Docs'}
+  </title>
 </head>
 
 import Tabs from '@theme/Tabs';
@@ -46,13 +48,51 @@ yarn add @pushchain/ui-kit
 
 Place the button in your UI where users should be able to connect. The button must be used within a `PushUniversalWalletProvider`:
 
+<Tabs className="liveplaytab" groupId="customize-push-universal-button">
+  <TabItem value='basic' label='Quickstart'>
+
 ```jsx live
 // customPropHighlightRegexStart=<PushUniversalAccountButton
-// customPropHighlightRegexEnd=</PushUniversalAccountButton>
+// customPropHighlightRegexEnd=/>
 import {
   PushUniversalWalletProvider,
   PushUniversalAccountButton,
-  PushUI
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  return (
+    <PushUniversalWalletProvider
+      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+    >
+      <PushUniversalAccountButton 
+        connectButtonText="Start Building 🔥" 
+        modalAppOverride={{
+          title: 'Override App Title on Modal',
+        }}
+        loginAppOverride={{
+          title: 'Override App Title on Login',
+        }}
+        themeOverrides={{
+          '--pw-core-bg-primary-color': '#2A0134', // or override theme
+        }}
+      />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+  </TabItem>
+
+  <TabItem value='advanced' label='Advanced'>
+
+```jsx live
+// customPropHighlightRegexStart=<PushUniversalAccountButton
+// customPropHighlightRegexEnd=/>
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  PushUI,
 } from '@pushchain/ui-kit';
 
 function App() {
@@ -65,6 +105,9 @@ function App() {
   );
 }
 ```
+
+  </TabItem>
+</Tabs>
 
 ## Button States
 
@@ -82,9 +125,9 @@ Each state can be fully customized through props.
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property | Type     | Default               | Description                                    |
-| -------- | -------- | --------------------- | ---------------------------------------------- |
-| `uid`    | `string` | Uses default provider | Target provider instance, matches `config.uid` |
+| Arguments | Type     | Default               | Description                                                                                                                                         |
+| --------- | -------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `uid`     | `string` | Uses default provider | Should match `config.uid` of specific `PushUniversalWalletProvider` instance.<br />&nbsp;<br />See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
 
 </PushAPIReference>
 
@@ -115,11 +158,11 @@ Each state can be fully customized through props.
 | Property                       | Type     | Default                | Description                                |
 | ------------------------------ | -------- | ---------------------- | ------------------------------------------ |
 | `modalAppOverride`             | `Object` | From `app`             | Override app preview in the wrapper iframe |
-| `modalAppOverride.logoURL`     | `string` | From `app.logoURL`     | Override app logo                          |
+| `modalAppOverride.logoUrl`     | `string` | From `app.logoUrl`     | Override app logo                          |
 | `modalAppOverride.title`       | `string` | From `app.title`       | Override app title                         |
 | `modalAppOverride.description` | `string` | From `app.description` | Override app description                   |
 | `loginAppOverride`             | `Object` | From `app`             | Override app preview inside hosted iframe  |
-| `loginAppOverride.logoURL`     | `string` | From `app.logoURL`     | Override app logo in iframe                |
+| `loginAppOverride.logoUrl`     | `string` | From `app.logoUrl`     | Override app logo in iframe                |
 | `loginAppOverride.title`       | `string` | From `app.title`       | Override app title in iframe               |
 | `loginAppOverride.description` | `string` | From `app.description` | Override app description in iframe         |
 
