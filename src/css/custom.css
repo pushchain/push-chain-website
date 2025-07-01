@@ -237,7 +237,7 @@
 }
 
 .alert.alert--minimal-api-table {
-  padding: 8px 20px 8px 8px !important;
+  padding: 8px 8px 8px 8px !important;
   margin: 10px auto;
   border: 1px solid var(--ifm-border-color) !important;
 }
