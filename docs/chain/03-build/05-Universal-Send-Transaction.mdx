@@ -1198,7 +1198,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 // customPropHighlightRegexEnd=\\);
 import { PushChain } from '@pushchain/core';
 import { ethers } from 'ethers';
-import \* as readline from 'node:readline/promises';
+import * as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
@@ -1242,8 +1242,10 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1'),
-        // data: '0x...', // For contract interactions - hex encoded
+        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        progressHook: (progress) => {
+          console.log('Progress:', progress);
+        }
       };
 
       // wait for user to send funds first
@@ -1256,7 +1258,7 @@ import \* as readline from 'node:readline/promises';
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction(txParams);
-        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
       } catch (error) {
         console.error('❌ Transaction failed:', error.message);
         // In playground, this will fail without funds
@@ -1294,13 +1296,15 @@ import \* as readline from 'node:readline/promises';
 // customPropHighlightRegexStart=universal\.sendTransaction
 // customPropHighlightRegexEnd=\\);
 import { PushChain } from '@pushchain/core';
-import { createWalletClient, defineChain, http } from 'viem';
-import { sepolia } from 'viem/chains';
+import { createWalletClient, http } from 'viem';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
 import \* as readline from 'node:readline/promises';
 
     // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Enable User Input
     const rl = readline.createInterface({
@@ -1320,15 +1324,10 @@ import \* as readline from 'node:readline/promises';
       const account = privateKeyToAccount(privateKey);
       console.log('🔑 Got account: ', account.address);
 
-      // 2) Set up chain config and viem client
-      // Get chain configuration based on user selection
-      const chainConfig = returnPushChainTestnetConfig(chainMeta);
-
-      // create viem client
+      // 2) Create viem client
       const client = createWalletClient({
         account,
-        chain: chainConfig,
-        transport: http(),
+        transport: http(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA),
       });
 
       // 3) Convert to Universal Signer
@@ -1381,36 +1380,6 @@ import \* as readline from 'node:readline/promises';
 
       return { id: selection, name: name };
     }
-
-    // Function to return chain configuration based on user selection
-    function returnPushChainTestnetConfig(chainMeta) {
-      if (chainMeta.id === '2') {
-        return sepolia;
-      }
-
-      // Define custom Push Testnet config
-      return defineChain({
-        id: 42101,
-        name: 'PUSH_TESTNET_DONUT',
-        nativeCurrency: {
-          decimals: 18,
-          name: 'PC',
-          symbol: '$PC',
-        },
-        rpcUrls: {
-          default: {
-            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-          },
-        },
-        blockExplorers: {
-          default: {
-            name: 'Push Testnet Explorer',
-            url: 'https://donut.push.network/',
-          },
-        },
-      });
-    }
-
 `}
 
 </NodeJSVirtualIDE>
