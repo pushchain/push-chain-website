@@ -1,0 +1,79 @@
+---
+id: docs-chain-ui-components-examples-send-transaction
+title: Send Transaction Example
+hide_title: false
+slug: ./send-transaction-example
+displayed_sidebar: pushChainSidebar
+sidebar_position: 5
+---
+
+<head>
+  <title>Send Transaction Example | Examples | UI Kit | Push Chain Docs</title>
+</head>
+
+<!-- Content Start -->
+
+This example demonstrates: 
+- Basic send transaction functionality using `pushChainClient` of `usePushChainClient`.
+
+## Live playground
+
+```jsx live
+// Import necessary components from @pushchain/ui-kit
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  usePushChainClient,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  function Component() {
+    const { connectionStatus } = usePushWalletContext();
+    const { pushChainClient } = usePushChainClient();
+
+    const handleSendTransaction = async () => {
+      if (pushChainClient) {
+        try {
+          await pushChainClient.universal.sendTransaction({
+            to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
+            value: BigInt(1),
+            data: '0x',
+          });
+          alert('Send Transaction Successful');
+        } catch (err) {
+          console.log(err);
+          alert('Send Transaction Failed');
+        }
+      }
+    };
+
+    return (
+      <div>
+        <PushUniversalAccountButton />
+
+        {connectionStatus == 'connected' &&
+          <button onClick={handleSendTransaction}>Send Transaction</button>
+        }
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      <Component />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+## Next Steps
+- Check out advance concepts of Push Chain in [Deep Dives](/docs/chain/deep-dives)
+- Check out step by step implementation of App in [end to end Tutorials](/docs/chain/tutorials)
+- Follow or give a shoutout on X to our Intern at [@PushChain](https://x.com/PushChain)!
