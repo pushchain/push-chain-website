@@ -70,18 +70,17 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 | ID              | Title                               | Message                                                                                       | Level   |
 | --------------- | ----------------------------------- | --------------------------------------------------------------------------------------------- | ------- |
-| `SEND-TX-01`    | Origin Chain Detected               | Origin chain: solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1                                       | INFO    |
+| `SEND-TX-01`    | Origin Chain Detected               | Origin chain: solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1                                         | INFO    |
 | `SEND-TX-02-01` | Estimating Gas                      | Estimating and fetching gas limit, gas price for TX…                                          | INFO    |
-| `SEND-TX-02-02` | Gas Estimated                       | Total execution cost (Gas cost + value): 1011250000000000000 UPC                            | SUCCESS |
+| `SEND-TX-02-02` | Gas Estimated                       | Total execution cost (Gas cost + value): 1011250000000000000 UPC                              | SUCCESS |
 | `SEND-TX-03-01` | Resolving UEA                       | Resolving Execution Account (UEA) – computing address, checking deployment status and balance | INFO    |
-| `SEND-TX-03-02` | UEA Resolved                        | UEA: 0x4f17B798A7d643d4F89cb2d8D42A72F84e83e566, Deployed: true                             | SUCCESS |
-| `SEND-TX-04`    | Generated Universal Payload         | Universal Payload Hash: 0xb03fc567b8e421d66829f007ac8c90d179abf8663b7d6ca3701903eeaa79aaed  | INFO    |
-| `SEND-TX-05-01` | Awaiting Signature for Execution    | Waiting for signature on payload hash                                                         | INFO    |
-| `SEND-TX-05-02` | Signature Completed                 | Signature: 0x1a579f18…fabac4309                                                             | SUCCESS |
-| `SEND-TX-06-01` | Locking Origin Chain Fee            | Locking fee: 1000063864000000000 UPC on origin chain                                        | INFO    |
-| `SEND-TX-06-02` | Awaiting Origin Chain Confirmations | TX sent: ibtWfWBU…1231U5Xy9hUK5W58kBt8a, waiting for 0 confirmations.                       | SUCCESS |
-| `SEND-TX-07`    | Confirmations Received              | Required confirmations received.                                                              | SUCCESS |
-| `SEND-TX-08`    | Broadcasting to Push Chain          | Sending TX to Push Chain…                                                                     | INFO    |
+| `SEND-TX-03-02` | UEA Resolved                        | UEA: 0x4f17B798A7d643d4F89cb2d8D42A72F84e83e566, Deployed: true                               | SUCCESS |
+| `SEND_TX_04_01` | Awaiting Signature for Tx Execution | Universal Payload Hash: 0x1a579f18…fabac4309                                                  | INFO    |
+| `SEND_TX_04_02` | Generated Universal Payload         | Signature Completed                                                                           | SUCCESS |
+| `SEND-TX-05-01` | Locking Origin Chain Fee            | Locking fee: 1000063864000000000 UPC on origin chain                                                            | INFO    |
+| `SEND-TX-05-02` | Awaiting Origin Chain Confirmations | Tx sent: 0xabc..234, waiting for 2 confirmations.                                             | INFO    |
+| `SEND-TX-05-03` | Confirmations Received              | Required confirmations received.                                                           | SUCCESS |
+| `SEND-TX-06`    | Broadcasting to Push Chain          | Sending Tx to Push Chain…                                             | INFO    |
 | `SEND-TX-99-01` | Push Chain TX Success               | …                                                                                             | SUCCESS |
 | `SEND-TX-99-02` | Push Chain TX Failed                | …                                                                                             | ERROR   |
 

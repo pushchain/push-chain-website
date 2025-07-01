@@ -8,7 +8,7 @@ sidebar_position: 4
 ---
 
 <head>
-  <title>Button Theme Overrides Example | Customizations | UI Kit | Push Chain Docs</title>
+  <title>Button Theme Overrides Example | Examples | UI Kit | Push Chain Docs</title>
 </head>
 
 import Tabs from '@theme/Tabs';
@@ -204,18 +204,8 @@ function App() {
       <div>
         <PushUniversalAccountButton
           themeOverrides={{
-            light: {
-              '--pwauth-btn-connect-text-color': 'red',
-              '--pwauth-btn-connect-bg-color	': '#fff',
-              '--pwauth-btn-connected-text-color': '#000',
-              '--pwauth-btn-connected-bg-color': '#000000',
-            },
-            dark: {
-              '--pwauth-btn-connect-text-color': 'green',
-              '--pwauth-btn-connect-bg-color': '#000',
-              '--pwauth-btn-connected-text-color': '#fff',
-              '--pwauth-btn-connected-bg-color': '#ffffff',
-            },
+            '--pwauth-btn-connect-border-radius': '32px',
+            '--pwauth-btn-connect-bg-color': 'blue',
           }}
         />
       </div>
@@ -239,6 +229,6 @@ function App() {
 </Tabs>
 
 ## Next Steps
+- Check out the send transaction feature of pushChainClient in [Send Transaction Example](/docs/chain/ui-kit/examples/send-transaction-example)
 - Check out advance concepts of Push Chain in [Deep Dives](/docs/chain/deep-dives)
 - Check out step by step implementation of App in [end to end Tutorials](/docs/chain/tutorials)
-- Follow or give a shoutout on X to our Intern at [@PushChain](https://x.com/PushChain)!

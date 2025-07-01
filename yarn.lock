@@ -4904,9 +4904,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^0.1.29":
-  version: 0.1.29
-  resolution: "@pushchain/core@npm:0.1.29"
+"@pushchain/core@npm:^0.1.29, @pushchain/core@npm:^0.1.30":
+  version: 0.1.30
+  resolution: "@pushchain/core@npm:0.1.30"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@coral-xyz/anchor": "npm:^0.31.0"
@@ -4922,7 +4922,7 @@ __metadata:
     tslib: "npm:^2.3.0"
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
-  checksum: 10c0/c7e403bc0c0b21106bc2b8158ea3371cef828a30cf13bf002355d782109e5b037157ad17a59b8d8a4fdf657ce2f40b144a8eccb5d48d7f7b3fae4228fc1d8311
+  checksum: 10c0/ab210d98b750aab560b5c822986ce1dac28d31335d8631825b8bef7d00a30dbed0c27b8e1793fab68d2c06060791e57e731bae1731f663ec451bc9fd2b1daa84
   languageName: node
   linkType: hard
 
@@ -19693,7 +19693,7 @@ __metadata:
     "@docusaurus/theme-mermaid": "npm:3.0.1"
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
-    "@pushchain/core": "npm:^0.1.29"
+    "@pushchain/core": "npm:^0.1.30"
     "@pushchain/ui-kit": "npm:^1.1.3"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
