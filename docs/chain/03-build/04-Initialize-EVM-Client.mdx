@@ -59,42 +59,14 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 {`
     // customPropHighlightRegexStart=createPublicClient\\(
     // customPropHighlightRegexEnd=\\);
-    import { createPublicClient, http, defineChain } from 'viem';
+    import { createPublicClient, http } from 'viem';
   
-    // Define Push Testnet Chain
-    const pushTestnet = defineChain(returnPushChainTestnetConfig());
-
     function initViem() {
-      const publicClient = createPublicClient({ chain: pushTestnet, transport: http() });
+      const publicClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
       console.log('Viem publicClient:', JSON.stringify(publicClient, null, 2));
     }
 
     initViem();
-
-    // Function to return Push Testnet Chain configuration
-    function returnPushChainTestnetConfig() {
-      return {
-        id: 42101,
-        name: 'PUSH_TESTNET_DONUT',
-        nativeCurrency: {
-          decimals: 18,
-          name: 'PC',
-          symbol: '$PC',
-        },
-        rpcUrls: {
-          default: {
-            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-          },
-        },
-        blockExplorers: {
-          default: {
-            name: 'Push Testnet Explorer',
-            url: 'https://donut.push.network/',
-          },
-        },
-      };
-    }
-
 `}
 
 </NodeJSVirtualIDE>
@@ -135,13 +107,10 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 {`
     // customPropHighlightRegexStart=client\.getTransaction
     // customPropHighlightRegexEnd=\\);
-    import { createPublicClient, http, defineChain } from 'viem';
-
-    // Define Push Testnet Chain
-    const pushTestnet = defineChain(returnPushChainTestnetConfig());
+    import { createPublicClient, http } from 'viem';
 
     async function fetchTxViem() {
-      const client      = createPublicClient({ chain: pushTestnet, transport: http() });
+      const client      = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
       const txHash      = '0x4627fd2eca321d5fd007995c94af636e5e332760f50fbd8e3426ad0c67543dad';
       const tx          = await client.getTransaction({ hash: txHash });
       console.log('Transaction:', JSON.stringify(tx, null, 2));
@@ -149,31 +118,6 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 
     console.log('Fetching transaction...');
     await fetchTxViem().catch(console.error);
-
-    // Function to return Push Testnet Chain configuration
-    function returnPushChainTestnetConfig() {
-      return {
-        id: 42101,
-        name: 'PUSH_TESTNET_DONUT',
-        nativeCurrency: {
-          decimals: 18,
-          name: 'PC',
-          symbol: '$PC',
-        },
-        rpcUrls: {
-          default: {
-            http: ['https://evm.rpc-testnet-donut-node1.push.org/'],
-          },
-        },
-        blockExplorers: {
-          default: {
-            name: 'Push Testnet Explorer',
-            url: 'https://donut.push.network/',
-          },
-        },
-      };
-    }
-
 `}
 
 </NodeJSVirtualIDE>
