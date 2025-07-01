@@ -72,7 +72,7 @@ import { PushChain } from '@pushchain/core';
       const account = PushChain.utils.account.toUniversal(
         '0xD8d6aF611a17C236b13235B5318508FA61dE3Dba', {
           chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-        };
+        }
       );
       console.log(JSON.stringify(account, null, 2));
     }
@@ -215,7 +215,7 @@ const info =
 | **Arguments**    | **Type**           | **Default** | **Description**                                                                                            |
 | ---------------- | ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------- |
 | _`account`_      | `UniversalAccount` | -           | A UniversalAccount object containing chain and address information.                                        |
-| `options.status` | `boolean`          | `false`     | Whether to check if the computed executor account is deployed. Set to `true` to include deployment status. |
+| `options.onlyCompute` | `boolean`          | `false`     | Whether to check if the computed executor account is deployed. Set to `true` to include deployment status. |
 
 </PushAPIReference>
 
@@ -253,14 +253,14 @@ import { PushChain } from '@pushchain/core'
 
       // Convert to executor address with deployment status
       const executorInfo = await PushChain.utils.account.convertOriginToExecutor(account, {
-        status: true,
+        onlyCompute: true,
       })
 
       console.log(JSON.stringify(executorInfo, null, 2));
 
       // Convert without deployment status
       const executorSimple = await PushChain.utils.account.convertOriginToExecutor(account, {
-        status: false,
+        onlyCompute: false,
       })
 
       console.log(JSON.stringify(executorSimple, null, 2));
@@ -376,7 +376,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
       console.log(JSON.stringify(universalSigner, null, 2));
     }
 
-    awaitmain().catch(console.error);
+    await main().catch(console.error);
 
 `}
 
@@ -505,7 +505,7 @@ const explorerUrls = pushChainClient.explorer.listUrls();
 ```typescript
 // explorerUrls string[]
 {
-  ['https://donut.push.network/tx/0x...', 'https://scan.push.org/tx/0x...'];
+  ['https://donut.push.network', 'https://scan.push.org'];
 }
 ```
 
