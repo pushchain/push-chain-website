@@ -77,10 +77,10 @@ function App() {
 
 | Property         | Type                     | Default                        | Description                                                                                                                                                                                                            |
 | ---------------- | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _`config`_       | `Object`                 | _\*\*_                         | Used to configure the wallet connection, logins, and modals. _\*\*_ See `config` prop for more info.                                                                                                                          |
-| `app`            | `Object`                 | _\*\*_                         | Used to display your application metadata such as logo, name, etc. _\*\*_ See `app` prop for more info.                                                                                                                       |
+| _`config`_       | `Object`                 | _\*\*_                         | Used to configure the wallet connection, logins, and modals. _\*\*_ See `config` prop for more info.                                                                                                                   |
+| `app`            | `Object`                 | _\*\*_                         | Used to display your application metadata such as logo, name, etc. _\*\*_ See `app` prop for more info.                                                                                                                |
 | `themeMode`      | `PushUI.CONSTANTS.THEME` | `PushUI.CONSTANTS.THEME.LIGHT` | Theme mode to apply, you can use `LIGHT` or `DARK` option. <Details summary="PushUI.CONSTANTS.THEME" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.THEME.LIGHT` `PushUI.CONSTANTS.THEME.DARK`</Details> |
-| `themeOverrides` | `Object`                 | _\*\*_                         | Used to override default styles. _\*\*_ See `themeOverrides` prop for more info.                                                                                                                                              |
+| `themeOverrides` | `Object`                 | _\*\*_                         | Used to override default styles. _\*\*_ See `themeOverrides` prop for more info.                                                                                                                                       |
 
 </PushAPIReference>
 
@@ -95,11 +95,11 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 | Property      | Type                            | Default          | Description                                                                                                                                                                                                                                                                                                                 |
 | ------------- | ------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`network`_   | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to connect to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
-| `login`       | `Object`                        | _\*\*_           | Login method configuration. _\*\*_ See `config.login` Options.                                                                                                                                                                                                                                                                     |
-| `modal`       | `Object`                        | _\*\*_           | Global defaults for login and connected modal instances. _\*\*_ See `config.modal` Options.                                                                                                                                                                                                                                        |
+| `login`       | `Object`                        | _\*\*_           | Login method configuration. _\*\*_ See `config.login` Options.                                                                                                                                                                                                                                                              |
+| `modal`       | `Object`                        | _\*\*_           | Global defaults for login and connected modal instances. _\*\*_ See `config.modal` Options.                                                                                                                                                                                                                                 |
 | `uid`         | `string`                        | 'default'        | Unique identifier for this provider. instance                                                                                                                                                                                                                                                                               |
 | `rpcUrl`      | `string`                        | Public endpoints | Custom JSON-RPC endpoint for supported chains.                                                                                                                                                                                                                                                                              |
-| `chainConfig` | `Object`                        | _\*\*_           | Custom settings to configure the SDK instance. _\*\*_ See `config.chainConfig` Options.                                                                                                                                                                                                                                            |
+| `chainConfig` | `Object`                        | _\*\*_           | Custom settings to configure the SDK instance. _\*\*_ See `config.chainConfig` Options.                                                                                                                                                                                                                                     |
 
 </PushAPIReference>
 
@@ -107,12 +107,12 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property     | Type      | Default | Description                                                       |
-| ------------ | --------- | ------- | ----------------------------------------------------------------- |
-| `email`      | `boolean` | `true`  | Enable email/password login.                                      |
-| `google`     | `boolean` | `true`  | Enable Google OAuth login.                                        |
+| Property     | Type      | Default | Description                                                              |
+| ------------ | --------- | ------- | ------------------------------------------------------------------------ |
+| `email`      | `boolean` | `true`  | Enable email/password login.                                             |
+| `google`     | `boolean` | `true`  | Enable Google OAuth login.                                               |
 | `wallet`     | `Object`  | _\*\*_  | External wallet configuration. _\*\*_ See `config.login.wallet` Options. |
-| `appPreview` | `boolean` | `false` | Show app preview inside iframe.                                   |
+| `appPreview` | `boolean` | `false` | Show app preview inside iframe.                                          |
 
 </PushAPIReference>
 
@@ -135,7 +135,7 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 
 <PushAPIReference showRequiredNotice={false}>
 
-| Property               | Type                                     | Description                                           | Default                                                                                                                                                                                                                                            |
+| Property               | Type                                     | Default                                               | Description                                                                                                                                                                                                                                        |
 | ---------------------- | ---------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `loginLayout`          | `PushUI.CONSTANTS.LOGIN.LAYOUT`          | `PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE`                | Login modal layout type. <Details summary="PushUI.CONSTANTS.LOGIN.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.LOGIN.LAYOUT.SIMPLE` `PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT`</Details>                                        |
 | `appPreview`           | `boolean`                                | `false`                                               | Show app preview in modal                                                                                                                                                                                                                          |
