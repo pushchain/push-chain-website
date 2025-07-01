@@ -71,25 +71,43 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 ```typescript
 // PushChainClient object
 {
-  orchestartor: Orchestrator {
+  orchestrator: Orchestrator {
     universalSigner: {
       account: [Object],
-      signMessage: [AsyncFunction: customSignMessage],
-      signAndSendTransaction: [AsyncFunction: customSignAndSendTransaction],
-      signTypedData: [AsyncFunction: customSignTypedData]
+      signMessage: [Function: signMessage],
+      signAndSendTransaction: [Function: signAndSendTransaction],
+      signTypedData: [Function: signTypedData]
     },
+    pushNetwork: 'TESTNET_DONUT',
     rpcUrls: {},
     printTraces: false,
+    progressHook: undefined,
     pushClient: PushClient {
       publicClient: [Object],
       pushChainInfo: [Object],
-      signerPrivateKey: '...'
+      ephemeralKey: '...'
     }
   },
+  universalSigner: {
+    account: {
+      address: '0xC8AE31cF444CAB447921277c4DcF65128d5B25a8',
+      chain: 'eip155:11155111'
+    },
+    signMessage: [Function: signMessage],
+    signAndSendTransaction: [Function: signAndSendTransaction],
+    signTypedData: [Function: signTypedData]
+  },
+  blockExplorers: { 'eip155:42101': [ 'https://donut.push.network' ] },
   universal: {
     origin: [Getter],
     account: [Getter],
-    sendTransaction: [Function: bound execute]
+    sendTransaction: [Function: bound execute],
+    signMessage: [Function: signMessage],
+    signTypedData: [Function: signTypedData]
+  },
+  explorer: {
+    getTransactionUrl: [Function: getTransactionUrl],
+    listUrls: [Function: listUrls]
   }
 }
 ```
