@@ -71,7 +71,9 @@ function Preview({ codeEnv }) {
   );
 }
 
-function ResultWithHeader({ title, codeEnv }) {
+function ResultWithHeader({ title, codeEnv, hidden, code }) {
+  const [copied, setCopied] = useState(false);
+
   const displayTitle = title || (
     <Translate
       id='theme.Playground.result'
@@ -81,9 +83,33 @@ function ResultWithHeader({ title, codeEnv }) {
     </Translate>
   );
   const previewClass = `${styles.playgroundPreview} preview${codeEnv}`;
+
+  const handleCopy = async (e) => {
+    try {
+      const match = code.match(/const\s+defaultCode\s*=\s*`([\s\S]*?)`;/);
+      const extractedCode = match ? match[1] : '';
+      await navigator.clipboard.writeText(extractedCode);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // reset after 2s
+    } catch (err) {
+      console.error('Failed to copy', err);
+    }
+  };
+
   return (
     <>
-      <Header>{displayTitle}</Header>
+      <Header>
+        <ItemH>
+          <ItemV flex='1' alignItems='flex-start'>
+            {displayTitle}
+          </ItemV>
+          {hidden && (
+            <CopyButton onClick={handleCopy}>
+              {copied ? <FiCheck color='#50FA7B' /> : <FiCopy />}
+            </CopyButton>
+          )}
+        </ItemH>
+      </Header>
       <div className={previewClass}>
         <Preview codeEnv={codeEnv} />
       </div>
@@ -167,40 +193,40 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
 function changeToExecutableCode(code, isNodeJSEnv) {
   const execCode = !isNodeJSEnv
     ? code
-        .split('\n')
-        .reduce(
-          (acc, line) => {
-            // If we're not in an import statement and this line doesn't start an import,
-            // keep the line
-            if (!acc.inImport && !line.trim().startsWith('import')) {
-              return {
-                inImport: false,
-                lines: [...acc.lines, line],
-              };
-            }
-
-            // If this line contains a semicolon, we're done with the import
-            if (line.includes(';')) {
-              return {
-                inImport: false,
-                lines: acc.lines,
-              };
-            }
-
-            // Otherwise we're in an import statement
+      .split('\n')
+      .reduce(
+        (acc, line) => {
+          // If we're not in an import statement and this line doesn't start an import,
+          // keep the line
+          if (!acc.inImport && !line.trim().startsWith('import')) {
             return {
-              inImport: true,
+              inImport: false,
+              lines: [...acc.lines, line],
+            };
+          }
+
+          // If this line contains a semicolon, we're done with the import
+          if (line.includes(';')) {
+            return {
+              inImport: false,
               lines: acc.lines,
             };
-          },
-          {
-            inImport: false,
-            lines: [],
           }
-        )
-        .lines.join('\n')
-        .replace(/^\n/, '')
-        .trimEnd()
+
+          // Otherwise we're in an import statement
+          return {
+            inImport: true,
+            lines: acc.lines,
+          };
+        },
+        {
+          inImport: false,
+          lines: [],
+        }
+      )
+      .lines.join('\n')
+      .replace(/^\n/, '')
+      .trimEnd()
     : code;
 
   return execCode;
@@ -296,6 +322,8 @@ export default function Playground({
             <ResultWithHeader
               title={isNodeJSEnv ? 'VIRTUAL NODE IDE' : 'LIVE APP PREVIEW'}
               codeEnv={codeEnv}
+              hidden={hidden}
+              code={execCode}
             />
             {!hidden && (
               <div
@@ -343,6 +371,8 @@ export default function Playground({
             <ResultWithHeader
               title={isNodeJSEnv ? 'VIRTUAL NODE IDE' : 'LIVE APP PREVIEW'}
               codeEnv={codeEnv}
+              hidden={hidden}
+              code={execCode}
             />
           </>
         )}
