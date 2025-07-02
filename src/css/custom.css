@@ -9,9 +9,10 @@
 /* https://cssnano.co/playground/ */
 
 :root {
+  --ifm-background-color: #fff;
   --ifm-color-primary: #dd44b9;
   --ifm-color-primary-unified-text: #fff;
-  --ifm-color-primary-text: #000;
+  --ifm-color-primary-text: #313338;
   --ifm-color-secondary-text: #575d73;
   --ifm-color-primary-inverse: #fff;
   --ifm-color-primary-dark: #b72194;
@@ -23,10 +24,10 @@
   --ifm-color-primary-preferred: #d53a94;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-font-family-base: 'DM Sans', sans-serif;
   --ifm-font-family-brbprimary: 'Glancyr', sans-serif;
   --ifm-font-family-brbsecondary: 'Green Brooks', sans-serif;
-  --ifm-font-family-homepage: 'FK Grotesk Neue';
+  --ifm-font-family-homepage: 'DM Sans', sans-serif;
   --ifm-font-family-chainpage: 'N27', sans-serif;
   --ifm-navbar-link-color: #000;
   --ifm-button-background-color: #dd44b9;
@@ -47,15 +48,16 @@
   --ifm-color-moved-to: #575d73;
   --ifm-color-new-indicator: #ff8282;
   --ifm-color-update-indicator: #575d73;
-  --ifm-navbar-bg: rgba(255, 255, 255, 0.8);
-  --ifm-docs-navbar-border: 1px solid rgba(0, 0, 0, 0.1);
-  --ifm-navbar-search-bg: rgba(0, 0, 0, 0.1);
+  --ifm-navbar-bg: transparent;
+  --ifm-docs-navbar-border: 1px solid #EAEBF2;
+  --ifm-navbar-search-bg: #F5F6F8;
+  --ifm-navbar-docs-bg: #F5F6F8;
   --ifm-search-text-color: #9b9cab;
   --ifm-navbar-text-color: #6c6e73;
   --ifm-navbar-dropdown-bg: #fff;
-  --ifm-navbar-dropdown-subtext: #6c6e73;
-  --ifm-navbar-dropdown-hover: rgba(0, 0, 0, 0.05);
-  --ifm-navbar-dropdown-image: grayscale(100%) brightness(70%) contrast(130%);
+  --ifm-navbar-dropdown-subtext: #8C93A0;
+  --ifm-navbar-dropdown-hover: #EAEBF2;
+  --ifm-navbar-dropdown-image: 'none';
   --ifm-docs-hero-bg: #efefef;
   --ifm-paragraph-margin-bottom: 0;
   --docusaurus-highlighted-code-line-bg: rgba(62, 65, 83, 1);
@@ -68,13 +70,16 @@
   --ifm-border-color: #dadde1;
   --ifm-global-radius: 12px;
   --ifm-alert-code-background: rgb(246, 247, 248);
+  --ifm-header-caret-color: #C4CBD5;
+  --ifm-header-dropdown-title-color: #17181B;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  --ifm-background-color: #202124;
   --ifm-color-primary: #dd44b9;
   --ifm-color-primary-unified-text: #fff;
-  --ifm-color-primary-text: #fff;
+  --ifm-color-primary-text: #C4CBD5;
   --ifm-color-secondary-text: #8f99bd;
   --ifm-color-primary-inverse: #000;
   --ifm-color-primary-dark: #dd42b8;
@@ -103,15 +108,16 @@
   --ifm-color-moved-to: #575d73;
   --ifm-color-new-indicator: #ff8282;
   --ifm-color-update-indicator: #575d73;
-  --ifm-navbar-bg: rgba(13, 13, 15, 0.8);
-  --ifm-docs-navbar-border: 1px solid rgba(255, 255, 255, 0.1);
-  --ifm-navbar-search-bg: rgba(255, 255, 255, 0.1);
+  --ifm-navbar-bg: transparent;
+  --ifm-docs-navbar-border: 1px solid #313338;
+  --ifm-navbar-search-bg: #17181B;
+  --ifm-navbar-docs-bg: #484D58;
   --ifm-search-text-color: #bbbcd0;
   --ifm-navbar-text-color: #6c6c6c;
-  --ifm-navbar-dropdown-bg: #19181b;
-  --ifm-navbar-dropdown-subtext: #bbbcd0;
+  --ifm-navbar-dropdown-bg: #202124;
+  --ifm-navbar-dropdown-subtext: #757D8D;
   --ifm-navbar-dropdown-hover: rgba(255, 255, 255, 0.05);
-  --ifm-navbar-dropdown-image: 'none';
+  --ifm-navbar-dropdown-image: 'invert(77%) sepia(7%) saturate(211%) hue-rotate(182deg) brightness(95%) contrast(81%)';
   --ifm-docs-hero-bg: #0d0c0f;
   --ifm-paragraph-margin-bottom: 0;
   --ifm-detail-live-play: rgb(76, 179, 212);
@@ -124,6 +130,20 @@
   --ifm-border-color: #3c3c3e;
   --ifm-global-radius: 12px;
   --ifm-alert-code-background: rgb(246, 247, 248);
+  --ifm-header-caret-color: #8C93A0;
+  --ifm-header-dropdown-title-color: #fff;
+
+}
+
+/* update docs/blogs dark mode color */
+html[data-theme='dark'],
+html[data-theme='dark'] body,
+html[data-theme='dark'] #__docusaurus,
+html[data-theme='dark'] .main-wrapper,
+html[data-theme='dark'] .theme-doc-markdown,
+html[data-theme='dark'] .theme-doc-page,
+html[data-theme='dark'] .container {
+  background-color: #202124 !important;
 }
 
 /* Custom styles for admonitions/alerts */
@@ -489,7 +509,8 @@ a:hover {
 }
 
 .navbar__link {
-  color: var(--ifm-navbar-text-color) !important;
+  color: var(--ifm-color-primary-text);
+  font-size: 1rem;
   padding: 4px 3px;
   font-family: var(--ifm-font-family-homepage) !important;
 }

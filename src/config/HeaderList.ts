@@ -123,14 +123,14 @@ export const HeaderList = {
     {
       title: 'Chain Docs',
       subtitle: 'Read More about Push Chain',
-      srcrefoff: 'pushchain-icon-off',
+      srcrefoff: 'new-docs-icon',
       href: '/docs/chain',
       target: '_self',
     },
     {
       title: 'Push Chain Home',
       subtitle: 'Back to Push Chain Homepage',
-      srcrefoff: 'home',
+      srcrefoff: 'new-home-icon',
       href: '/',
       target: '_self',
     },
