@@ -605,6 +605,171 @@ import { PushChain } from '@pushchain/core';
 </NodeJSVirtualIDE>
 
 </Details>
+
+### Encode Transaction Data
+
+**_`PushChain.utils.helpers.encodeTxData(abi, functionName, args): string`_**
+
+```typescript
+const encodedData = PushChain.utils.helpers.encodeTxData(
+  abi,
+  'functionName',
+  []
+);
+```
+
+<PushAPIReference>
+
+| **Arguments**     | **Type** | **Default** | **Description**                                                                                                                                     |
+| ----------------- | -------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`abi`_           | `any[]`  | -           | The ABI array of the smart contract containing function definitions.                                                                                |
+| _`functionName`_  | `string` | -           | The name of the function to encode transaction data for.                                                                                            |
+| `args`          | `any[]`  | `[]`        | The arguments to pass to the function. Defaults to empty array for functions with no parameters.                                                   |
+
+</PushAPIReference>
+
+<Details summary="Returns `encodedData` <string>" className="alert alert--fn-args">
+
+```typescript
+// encodedData string - the encoded function call data
+'0xd09de08a';
+```
+
+</Details>
+
+<Details summary="Live Playground: Encode Transaction Data for Smart Contract Function" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.encodeTxData
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+    function main() {
+      // Example ABI for a simple counter contract
+      const testAbi = [
+        {
+          inputs: [],
+          stateMutability: 'nonpayable',
+          type: 'constructor',
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: false,
+              internalType: 'uint256',
+              name: 'newCount',
+              type: 'uint256',
+            },
+            {
+              indexed: true,
+              internalType: 'address',
+              name: 'caller',
+              type: 'address',
+            },
+            {
+              indexed: false,
+              internalType: 'string',
+              name: 'chainNamespace',
+              type: 'string',
+            },
+            {
+              indexed: false,
+              internalType: 'string',
+              name: 'chainId',
+              type: 'string',
+            },
+          ],
+          name: 'CountIncremented',
+          type: 'event',
+        },
+        {
+          inputs: [],
+          name: 'increment',
+          outputs: [],
+          stateMutability: 'nonpayable',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'reset',
+          outputs: [],
+          stateMutability: 'nonpayable',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'countEth',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256',
+            },
+          ],
+          stateMutability: 'view',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'countPC',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256',
+            },
+          ],
+          stateMutability: 'view',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'countSol',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256',
+            },
+          ],
+          stateMutability: 'view',
+          type: 'function',
+        },
+        {
+          inputs: [],
+          name: 'getCount',
+          outputs: [
+            {
+              internalType: 'uint256',
+              name: '',
+              type: 'uint256',
+            },
+          ],
+          stateMutability: 'view',
+          type: 'function',
+        },
+      ];
+
+      // Encode transaction data for the increment function
+      const result = PushChain.utils.helpers.encodeTxData(
+        testAbi,
+        'increment'
+      );
+      
+      console.log('Encoded transaction data:', result);
+    }
+
+    main();
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
 <!-- API Section Ends-->
 
 ## Next Steps
