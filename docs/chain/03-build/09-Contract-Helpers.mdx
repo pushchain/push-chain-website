@@ -285,55 +285,100 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
 {`
 // customPropHighlightRegexStart=factory\.getUEAForOrigin
 // customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
+    import { ethers } from 'ethers';
 
     // ——— CONFIG ———
-    const RPC_URL          = 'https://evm.rpc-testnet-donut-node1.push.org/';
-    const FACTORY_ADDRESS  = '0x00000000000000000000000000000000000000eA';
+    const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const FACTORY_ADDRESS = '0x00000000000000000000000000000000000000eA';
 
-    // Minimal ABI
-    const IUEAFactoryABI = [
-      // takes (UniversalAccountId _id) and returns (address uea, bool isDeployed)
-      "function getUEAForOrigin(tuple(string chain, bytes  owner) _id) view returns (address uea, bool isDeployed)"
-    ]
+    const FACTORY_V1 = [
+      {
+        type: 'function',
+        name: 'getVMType',
+        inputs: [
+          {
+            name: '_chainHash',
+            type: 'bytes32',
+            internalType: 'bytes32',
+          },
+        ],
+        outputs: [
+          {
+            name: 'vmHash',
+            type: 'bytes32',
+            internalType: 'bytes32',
+          },
+          {
+            name: 'isRegistered',
+            type: 'bool',
+            internalType: 'bool',
+          },
+        ],
+        stateMutability: 'view',
+      },
+      {
+        type: 'function',
+        name: 'getUEAForOrigin',
+        inputs: [
+          {
+            name: '_id',
+            type: 'tuple',
+            internalType: 'struct UniversalAccountId',
+            components: [
+              {
+                name: 'chainNamespace',
+                type: 'string',
+                internalType: 'string',
+              },
+              {
+                name: 'chainId',
+                type: 'string',
+                internalType: 'string',
+              },
+              {
+                name: 'owner',
+                type: 'bytes',
+                internalType: 'bytes',
+              },
+            ],
+          },
+        ],
+        outputs: [
+          {
+            name: 'uea',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'isDeployed',
+            type: 'bool',
+            internalType: 'bool',
+          },
+        ],
+        stateMutability: 'view',
+      },
+    ];
 
     async function main() {
       // 1) set up
       const provider = new ethers.JsonRpcProvider(RPC_URL);
-      const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+      const factory = new ethers.Contract(FACTORY_ADDRESS, FACTORY_V1, provider);
 
-      // 2) pick some external-chain address as the "owner"
-      const ethAddress = "0xd8da6bf26964af9d7eed9e03e53415d37aa96045";
-      const solAddress = '14grJpemFaf88c8tiVb77W7TYg2W3ir6pfkKz3YjhhZ5';
-
-      // 3) manually form the UniversalAccountId struct
-      const originAccount = {
-        chain: 'eip155:11155111',   // Ethereum Sepolia namespace
-        owner: ethAddress
+      // 2) create UniversalAccountId struct
+      const universalAccountId = {
+        chainNamespace: 'eip155', // EVM chain
+        chainId: '11155111', // Sepolia testnet (more likely to be registered on Push testnet)
+        owner: '0xa96CaA79eb2312DbEb0B8E93c1Ce84C98b67bF11', // owner address in bytes format
       };
 
-      const solOriginAccount = {
-        chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1',   // Solana Devnet namespace
-        owner: solAddress                                   // converted to bytes
-      }
-
-      // 4) call getUEAForOrigin and destructure the tuple return
-      console.log("Calling getUEAForOrigin (passing ETH Address) on PushChain");
-      const ueaResultETH = await factory.getUEAForOrigin({
-        chain: originAccount.chain,
-        owner: originAccount.owner
-      });
-      console.log("Result -", JSON.stringify(ueaResultETH));
-
-      console.log("Calling getUEAForOrigin (passing SOL Address) on PushChain");
-      const ueaResultSol = await factory.getUEAForOrigin({
-        chain: solOriginAccount.chain,
-        owner: solOriginAccount.owner
-      });
-      console.log("Result -", JSON.stringify(ueaResultSol));
+      // 3) call getUEAForOrigin
+      console.log('Calling getUEAForOrigin on PushChain');
+      const originResult = await factory.getUEAForOrigin(universalAccountId);
+      console.log('Result -', JSON.stringify(originResult));
     }
 
-    await main().catch(console.error);
+    await main().catch(console.error);                                                                                             
+                                                                                                                               
 
 `}
 
