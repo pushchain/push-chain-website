@@ -693,6 +693,91 @@ import { PushChain } from '@pushchain/core';
 
 </Details>
 
+### Parse Units
+
+**_`PushChain.utils.helpers.parseUnits(value, exponent): bigint`_**
+
+Converts a human-readable string representation of a number to a scaled integer (bigint) by multiplying by 10^exponent. This is commonly used for handling token amounts where you need to convert from human-readable decimals to the smallest unit (like converting ETH to wei).
+
+```typescript
+const result = PushChain.utils.helpers.parseUnits('1.5', 18);
+// Returns: 1500000000000000000n (1.5 ETH in wei)
+```
+
+<PushAPIReference>
+
+| **Arguments** | **Type** | **Description**                                                                                                                                     |
+| ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`value`_     | `string` | The string representation of the number to parse. Can include decimals (e.g., `"1.5"`, `"420"`, `"0.1"`).                                        |
+| _`exponent`_  | `number` | The number of decimal places to scale by. Must be a non-negative integer. For example, use `18` for ETH, `6` for USDC, `8` for BTC.              |
+
+</PushAPIReference>
+
+<Details summary="Returns `bigint`" className="alert alert--fn-args">
+
+```typescript
+// bigint - the scaled integer value
+1500000000000000000n
+```
+
+</Details>
+
+<Details summary="Live Playground: Parse Units for Common Token Scenarios" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.parseUnits
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+    function main() {
+      console.log('=== Common Token Conversion Examples ===');
+      
+      // ETH to Wei (18 decimals)
+      const ethToWei = PushChain.utils.helpers.parseUnits('1.5', 18);
+      console.log('1.5 ETH to Wei:', ethToWei.toString());
+      
+      // USDC amount (6 decimals) 
+      const usdcAmount = PushChain.utils.helpers.parseUnits('100.50', 6);
+      console.log('100.50 USDC to smallest unit:', usdcAmount.toString());
+      
+      // BTC to Satoshi (8 decimals)
+      const btcToSatoshi = PushChain.utils.helpers.parseUnits('0.00000001', 8);
+      console.log('0.00000001 BTC to Satoshi:', btcToSatoshi.toString());
+      
+      console.log('=== Basic Number Parsing ===');
+      
+      // Integer values
+      const integerResult = PushChain.utils.helpers.parseUnits('420', 9);
+      console.log('420 with 9 decimal places:', integerResult.toString());
+      
+      // Decimal values
+      const decimalResult = PushChain.utils.helpers.parseUnits('0.1', 6);
+      console.log('0.1 with 6 decimal places:', decimalResult.toString());
+      
+      // Values starting with decimal point
+      const dotDecimal = PushChain.utils.helpers.parseUnits('.5', 18);
+      console.log('0.5 ETH to Wei:', dotDecimal.toString());
+      
+      console.log('=== Real-World Token Examples ===');
+      
+      // Push token amount (18 decimals)
+      const pushAmount = PushChain.utils.helpers.parseUnits('1000.5', 18);
+      console.log('1000.5 PUSH tokens:', pushAmount.toString());
+      
+      // Precise decimal matching
+      const preciseAmount = PushChain.utils.helpers.parseUnits('1.123456', 6);
+      console.log('Precise 6-decimal amount:', preciseAmount.toString());
+    }
+
+    main();
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
 <!-- API Section Ends-->
 
 ## Next Steps
