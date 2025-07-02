@@ -1670,16 +1670,16 @@ import \* as readline from 'node:readline/promises';
       // 4) Initialize Push Chain Client
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        progressHook: (progress) => {
+          console.log('Progress:', JSON.stringify(progress));
+        }
       });
 
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
         value: BigInt('1000000000000000'), // 0.001 PC in wei
-        progressHook: (progress) => {
-          console.log('Progress:', progress);
-        }
       };
 
       // wait for user to send funds first
