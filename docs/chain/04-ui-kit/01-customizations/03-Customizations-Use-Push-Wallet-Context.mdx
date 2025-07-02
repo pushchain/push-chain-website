@@ -43,10 +43,10 @@ function App() {
     return (
       <div>
         <h3>Wallet Status: {connectionStatus}</h3>
-        {connectionStatus === 'notConnected' && (
+        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED && (
           <button onClick={() => handleConnectToPushWallet()}>Connect via Hook Call</button>
         )}
-        {connectionStatus === 'connected' && (
+        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
           <button onClick={() => handleUserLogOutEvent()}>Disconnect via Hook Call</button>
         )}
       </div>

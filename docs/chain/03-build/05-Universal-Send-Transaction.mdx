@@ -1111,7 +1111,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 ## Send Transaction with Contract Interaction
 
-When you need to interact with smart contracts, you'll need to pass encoded function data. Here's how to generate the `data` parameter and use it with the Push Chain SDK:
+When calling a smart contract method via sendTransaction, supply the ABI-encoded function call as a **hex string in the data field**. You can choose `ethers` or `viem` or any of your favorite libraries to encode the function data. Or, use our utility function `PushChain.utils.helpers.encodeTxData` to encode the function data.
 
 ```typescript
 // Define the ABI for the ERC20 transfer function
@@ -1120,16 +1120,16 @@ const erc20Abi = [
 ];
 
 // Generate the encoded function data using viem
-const data = encodeFunctionData({
+const data = PushChain.utils.helpers.encodeTxData({
   abi: erc20Abi,
   functionName: 'transfer',
-  args: ['0xRecipientAddress', parseEther('10')], // Transfer 10 tokens
+  args: ['0xRecipientAddress', parseUnits('10', 18)], // Transfer 10 tokens, converted to 18 decimal places
 });
 
 // Send the transaction using Push Chain SDK
 const txHash = await pushChainClient.universal.sendTransaction({
   to: '0xTokenContractAddress', // The smart contract address on Push Chain
-  value: BigInt('0'), // No ETH being sent, just contract interaction
+  value: BigInt('0'), // No $PC being sent, just contract interaction
   data: data, // The encoded function call
 });
 ```
@@ -1628,11 +1628,9 @@ import \* as readline from 'node:readline/promises';
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
-// customPropHighlightRegexStart=progressHook: 
-// customPropHighlightRegexEnd=}
-import { PushChain } from '@pushchain/core';
-import { ethers } from 'ethers';
-import \* as readline from 'node:readline/promises';
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import * as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
@@ -1671,8 +1669,8 @@ import \* as readline from 'node:readline/promises';
       console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (progress) => {
-          console.log('Progress:', JSON.stringify(progress));
+        progressHook: async (progress) => {
+          console.log('TX Progress: ', progress.title, ' | Time:', progress.timestamp);
         }
       });
 
@@ -1715,7 +1713,6 @@ import \* as readline from 'node:readline/promises';
 
       return {id: selection, name: name};
     }
-
 `}
 
 </NodeJSVirtualIDE>
