@@ -608,14 +608,14 @@ import { PushChain } from '@pushchain/core';
 
 ### Encode Transaction Data
 
-**_`PushChain.utils.helpers.encodeTxData(abi, functionName, args): string`_**
+**_`PushChain.utils.helpers.encodeTxData({abi, functionName, args}): string`_**
 
 ```typescript
-const encodedData = PushChain.utils.helpers.encodeTxData(
+const encodedData = PushChain.utils.helpers.encodeTxData({
   abi,
-  'functionName',
-  []
-);
+  functionName: 'functionName',
+  args: []
+});
 ```
 
 <PushAPIReference>
@@ -754,10 +754,10 @@ import { PushChain } from '@pushchain/core';
       ];
 
       // Encode transaction data for the increment function
-      const result = PushChain.utils.helpers.encodeTxData(
-        testAbi,
-        'increment'
-      );
+      const result = PushChain.utils.helpers.encodeTxData({
+        abi: testAbi,
+        functionName: 'increment'
+      });
       
       console.log('Encoded transaction data:', result);
     }
