@@ -130,9 +130,9 @@
 .PushDocs .docRoot_UBD9 {
   width: 85%;
   align-self: center;
-  margin: 0 auto;
-  /* background-color: ; */
+  margin: 23px auto;
 }
+
 
 .DocsHub
   .docRoot_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-styles-module,
@@ -268,4 +268,12 @@
   margin-left: 10px !important;
   margin-bottom: 3px;
   display: flex;
+}
+
+.docMainContainer_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-Main-styles-module > .container {
+  padding: 0px;
+}
+
+.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+  padding: 0 0 0 24px;
 }
