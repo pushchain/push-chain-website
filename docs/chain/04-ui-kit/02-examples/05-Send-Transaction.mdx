@@ -44,12 +44,9 @@ function App() {
           await pushChainClient.universal.sendTransaction({
             to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
             value: BigInt(1),
-            data: '0x',
           });
-          alert('Send Transaction Successful');
         } catch (err) {
           console.log(err);
-          alert('Send Transaction Failed');
         }
       }
     };
