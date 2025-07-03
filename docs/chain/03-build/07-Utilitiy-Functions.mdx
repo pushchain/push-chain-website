@@ -697,11 +697,11 @@ import { PushChain } from '@pushchain/core';
 
 **_`PushChain.utils.helpers.parseUnits(value, exponent): bigint`_**
 
-Converts a human-readable string representation of a number to a scaled integer (bigint) by multiplying by 10^exponent. This is commonly used for handling token amounts where you need to convert from human-readable decimals to the smallest unit (like converting ETH to wei).
+Converts a human-readable string representation of a number to a scaled integer (bigint) by multiplying by 10^exponent. This is commonly used for handling token amounts where you need to convert from human-readable decimals to the smallest unit (like converting ETH to wei or PC to uPC).
 
 ```typescript
 const result = PushChain.utils.helpers.parseUnits('1.5', 18);
-// Returns: 1500000000000000000n (1.5 ETH in wei)
+// Returns: 1500000000000000000n (1.5 PC in uPC)
 ```
 
 <PushAPIReference>
@@ -709,7 +709,7 @@ const result = PushChain.utils.helpers.parseUnits('1.5', 18);
 | **Arguments** | **Type** | **Description**                                                                                                                                     |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | _`value`_     | `string` | The string representation of the number to parse. Can include decimals (e.g., `"1.5"`, `"420"`, `"0.1"`).                                        |
-| _`exponent`_  | `number` | The number of decimal places to scale by. Must be a non-negative integer. For example, use `18` for ETH, `6` for USDC, `8` for BTC.              |
+| _`exponent`_  | `number` | The number of decimal places to scale by. Must be a non-negative integer. For example, use `18` for PC or ETH, `6` for USDC, `8` for BTC.              |
 
 </PushAPIReference>
 

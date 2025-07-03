@@ -43,7 +43,7 @@ function App() {
         try {
           await pushChainClient.universal.sendTransaction({
             to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
-            value: BigInt(1),
+            value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC in uPC
           });
         } catch (err) {
           console.log(err);

@@ -33,7 +33,8 @@ Universal transactions let you send **native** transactions from any Layer 1 cha
 ```typescript
 const txHash = await pushChainClient.universal.sendTransaction({
   to: '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF',
-  value: BigInt('100000000000000000'), // 0.1 PC in wei
+  value: PushChain.utils.helpers.parseUnits('0.1', 18), // 0.1 PC in uPC
+  // value: BigInt('100000000000000000') is equivalent here
 });
 ```
 
@@ -42,7 +43,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 | **Arguments**          | **Type** | **Description**                                       |
 | ---------------------- | -------- | ----------------------------------------------------- |
 | _`tx.to`_                 | `string` | The address of the recipient.                         |
-| _`tx.value`_              | `BigInt` | The value to send in wei.                             |
+| _`tx.value`_              | `BigInt` | The value to send in uPC. smallest unit of PC, like wei in ETH                             |
 | `tx.data`                 | `string` | The data to send.                                     |
 | `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
 | `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
@@ -133,7 +134,8 @@ const erc20Abi = [
 const data = PushChain.utils.helpers.encodeTxData({
   abi: erc20Abi,
   functionName: 'transfer',
-  args: ['0xRecipientAddress', parseUnits('10', 18)], // Transfer 10 tokens, converted to 18 decimal places
+  // Transfer 10 tokens, converted to 18 decimal places
+  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)], 
 });
 
 // Send the transaction using Push Chain SDK
@@ -180,7 +182,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction({
           to: '0x0000000000000000000000000000000000042101',
-          value: BigInt('1'),
+          value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC in uPC (wei)
         });
         console.log('Transaction Response:', JSON.stringify(txResponse));
       } catch (error) {
@@ -252,10 +254,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
-        progressHook: (progress) => {
-          console.log('Progress:', progress);
-        }
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC (wei)
       };
 
       // wait for user to send funds first
@@ -353,7 +352,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1'),
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -442,7 +441,7 @@ import \* as readline from 'node:readline/promises';
       // 4) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1'),
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
         // data: '0x...', // For contract interactions - hex encoded
       };
 
@@ -502,7 +501,7 @@ import \* as readline from 'node:readline/promises';
             try {
               await pushChainClient.universal.sendTransaction({
                 to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
-                value: BigInt(1),
+                value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
                 data: '0x',
               });
               alert('Send Transaction Successful');
@@ -609,9 +608,13 @@ import \* as readline from 'node:readline/promises';
 
       // 5) Prepare transaction parameters
       // Encode the increment() function call
-      const abiInterface = new ethers.Interface(testAbi);
-      const data = abiInterface.encodeFunctionData('increment'); // 0xd09de08a
+      const data = PushChain.utils.helpers.encodeTxData({
+        testABI, 
+        functionName: 'increment', 
+        args: []
+      }); // 0xd09de08a
       console.log('data', data);
+      
       // Prepare transaction parameters
       const txParams = {
         to: '0xA22E6B51586C80fED805c31d606e14F7AD77E164',
@@ -641,7 +644,7 @@ import \* as readline from 'node:readline/promises';
 
 </Details>
 
-<Details summary="Live Playground: (Advanced) See the progress lifecycle of a transaction" className="alert alert--live-play">
+<Details summary="Live Playground: (Advanced) Track the progress lifecycle of a transaction" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
@@ -695,7 +698,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       const txParams = {
         to: RECIPIENT,
-        value: BigInt('1000000000000000'), // 0.001 PC in wei
+        value: PushChain.utils.helpers.parseUnits(".001", 18) // 0.001 PC in uPC (wei)
       };
 
       // wait for user to send funds first

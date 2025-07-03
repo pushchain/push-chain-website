@@ -73,7 +73,7 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
       // Send a universal transaction (from any chain to Push Chain)
       const txHash = await pushChainClient.universal.sendTransaction({
         to: '0xD0DE00000447492307108Bdc7Ff6BaB33Ff37Dacc479', // To address on Push Chain
-        value: BigInt(0), // $PC Value to send
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC - equivalent to BigInt('1000000000000000'), // $PC Value to send
       });
 
       console.log('Transaction sent:', txHash);
