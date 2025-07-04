@@ -213,7 +213,7 @@ function UniversalCounterExample() {
               {isLoading ? 'Processing...' : 'Increment Counter'}
             </button>
             
-            {txHash && (
+            {txHash && pushChainClient && (
               <div className="transaction-info" style={{display: 'grid'}}>
                 <p>Transaction Hash: <code>{txHash}</code></p>
                 <a href={pushChainClient.explorer.getTransactionUrl(txHash)} target="_blank">View in Explorer</a> 
