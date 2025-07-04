@@ -89,6 +89,9 @@
   --ifm-table-body-border: 1px solid #EAEBF2;
   --ifm-table-inactive-tagbg: #FFF;
   --ifm-table-inactive-tagborder: 1px solid #C4CBD5;
+  --ifm-playground-border-info: #A2C9FF;
+  --ifm-playground-border-warning: #F3AEFF;
+  --ifm-playground-border-stable: #C4CBD5;
 
 }
 
@@ -167,6 +170,10 @@
   --ifm-table-body-border: 1px solid #313338;
   --ifm-table-inactive-tagbg: #202124;
   --ifm-table-inactive-tagborder: 1px solid #484D58;
+  --ifm-playground-border-info: #0056D0;
+  --ifm-playground-border-warning:  #D548EC;
+  --ifm-playground-border-stable: #484D58;
+
 
 }
 
@@ -226,31 +233,31 @@ html[data-theme='dark'] .container {
 }
 
 .alert.alert--fn-args {
-  border-color: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-playground-border-warning) !important;
 }
 
 .alert.alert--fn-args summary::before {
-  border-color: transparent transparent transparent var(--ifm-color-primary) !important;
+  border-color: transparent transparent transparent var(--ifm-playground-border-warning) !important;
 }
 
 .alert.alert--fn-args
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
   border-top: 1px solid
-    color-mix(in srgb, var(--ifm-color-primary) 50%, transparent) !important;
+    color-mix(in srgb, var(--ifm-playground-border-warning) 50%, transparent) !important;
 }
 
 .alert.alert--live-play {
-  border-color: var(--ifm-detail-live-play) !important;
+  border-color: var(--ifm-playground-border-info) !important;
 }
 
 .alert.alert--live-play summary::before {
-  border-color: transparent transparent transparent var(--ifm-detail-live-play) !important;
+  border-color: transparent transparent transparent var(--ifm-playground-border-info) !important;
 }
 
 .alert.alert--live-play
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
   border-top: 1px solid
-    color-mix(in srgb, var(--ifm-detail-live-play) 50%, transparent) !important;
+    color-mix(in srgb, var(--ifm-playground-border-info) 50%, transparent) !important;
   padding: 0;
 }
 

@@ -764,12 +764,12 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       // Encode the increment() function call
       const data = PushChain.utils.helpers.encodeTxData({
-        abi: testAbi, 
-        functionName: 'increment', 
+        abi: testAbi,
+        functionName: 'increment',
         args: []
       }); // 0xd09de08a
       console.log('data', data);
-      
+
       // Prepare transaction parameters
       const txParams = {
         to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
@@ -893,12 +893,12 @@ import \* as readline from 'node:readline/promises';
       // 4) Prepare transaction parameters
       // Encode the increment() function call
       const data = PushChain.utils.helpers.encodeTxData({
-        abi: testAbi, 
-        functionName: 'increment', 
+        abi: testAbi,
+        functionName: 'increment',
         args: []
       }); // 0xd09de08a
       console.log('data', data);
-      
+
       // Prepare transaction parameters
       const txParams = {
         to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
