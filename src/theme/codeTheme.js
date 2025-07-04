@@ -36,10 +36,15 @@ const lightCodeTheme = {
     },
     {
       types: [
-        'method, function, maybe-class-name, property-access, tag , attr-name',
+        'method',
+        'function',
+        'maybe-class-name',
+        'property-access',
+        'tag',
+        'attr-name',
       ],
       style: {
-        color: '#187931',
+        color: '#ff9900',
       },
     },
   ],
