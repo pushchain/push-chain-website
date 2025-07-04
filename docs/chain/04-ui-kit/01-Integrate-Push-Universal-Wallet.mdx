@@ -258,7 +258,7 @@ function App() {
         try {
           await pushChainClient.universal.sendTransaction({
             to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
-            value: BigInt(1000000000000000), // 0.001 PC
+            value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC
           });
         } catch (err) {
           console.log(err);
