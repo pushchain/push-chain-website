@@ -4924,7 +4924,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^0.1.36":
+"@pushchain/core@npm:^0.1.37":
   version: 0.1.37
   resolution: "@pushchain/core@npm:0.1.37"
   dependencies:
@@ -4946,20 +4946,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^1.1.7":
-  version: 1.1.7
-  resolution: "@pushchain/ui-kit@npm:1.1.7"
+"@pushchain/ui-kit@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "@pushchain/ui-kit@npm:1.1.8"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^0.1.36"
+    "@pushchain/core": "npm:^0.1.37"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.3"
     buffer: "npm:^6.0.3"
     ethers: "npm:^6.13.5"
+    styled-components: "npm:^6.1.19"
     tslib: "npm:^2.3.0"
     viem: "npm:^2.23.9"
-  checksum: 10c0/f32258b040aab389bbd8513bfe0a7ab411c735befc419bbce4cd5b24820c51d1b1a1acc09da4d59c2b0d27042a9b1d8a0c9791930ee0c6571e84927b61814873
+  checksum: 10c0/a46a94145e8ef19d56e60d3199c63e4c0d2873aabcf616759cc93e4959f48e06fff704627386cc1a6489624bae4383463122590c3f6144ea8d542b3834e6d307
   languageName: node
   linkType: hard
 
@@ -19706,8 +19707,8 @@ __metadata:
     "@docusaurus/theme-mermaid": "npm:3.0.1"
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
-    "@pushchain/core": "npm:^0.1.36"
-    "@pushchain/ui-kit": "npm:^1.1.7"
+    "@pushchain/core": "npm:^0.1.37"
+    "@pushchain/ui-kit": "npm:^1.1.8"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
@@ -22366,7 +22367,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-components@npm:^6.0.8, styled-components@npm:^6.1.0":
+"styled-components@npm:^6.0.8, styled-components@npm:^6.1.0, styled-components@npm:^6.1.19":
   version: 6.1.19
   resolution: "styled-components@npm:6.1.19"
   dependencies:
