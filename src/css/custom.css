@@ -82,6 +82,13 @@
   --ifm-sidebar-bg-color: #C742DD;
   --ifm-sidebar-activetext-color: #C742DD;
   --ifm-toc-link-color:#313338;
+  --ifm-table-header-bg: #EAEBF2;
+  --ifm-table-header-textcolor: #17181B;
+  --ifm-table-body-bg: #F5F6F8;
+  --ifm-table-body-textcolor:#313338;
+  --ifm-table-body-border: 1px solid #EAEBF2;
+  --ifm-table-inactive-tagbg: #FFF;
+  --ifm-table-inactive-tagborder: 1px solid #C4CBD5;
 
 }
 
@@ -153,6 +160,13 @@
   --ifm-sidebar-activetext-color: #CF59E2;
   --ifm-sidebar-bg-color: #D548EC;
   --ifm-toc-link-color:#C4CBD5;
+  --ifm-table-header-bg: #313338;
+  --ifm-table-header-textcolor: #F5F6F8;
+  --ifm-table-body-bg: #17181B;
+  --ifm-table-body-textcolor:#C4CBD5;
+  --ifm-table-body-border: 1px solid #313338;
+  --ifm-table-inactive-tagbg: #202124;
+  --ifm-table-inactive-tagborder: 1px solid #484D58;
 
 }
 
@@ -336,6 +350,10 @@ html[data-theme='dark'] .container {
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
   border-top: 1px solid color-mix(in srgb, transparent 50%, transparent) !important;
   padding: 0;
+}
+
+.alert a {
+  text-decoration: none;
 }
 
 /* ----- */
@@ -672,6 +690,11 @@ article em > code {
   font-family: "Fira Code";
 } */
 
+.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+  background-color: var(--ifm-navbar-search-bg) !important;
+  font-family: 'Fira Code' !important;
+}
+
 article em > strong > code,
 article strong > em > code {
   color: var(--ifm-sidebar-activetext-color) !important;
@@ -844,7 +867,7 @@ table {
 
 /* Main table styling */
 .markdown table {
-  border: 1px solid var(--ifm-border-color);
+  border: 1px solid transparent;
   border-radius: var(--ifm-global-radius);
   width: 100%;
   table-layout: auto; /* Allow columns to size based on content */
@@ -853,16 +876,15 @@ table {
 /* Header row styling */
 .markdown table thead tr {
   border: none;
-  background: var(--ifm-color-emphasis-100);
+  background: var(--ifm-table-header-bg);
+  color: var(--ifm-table-header-textcolor);
 }
 
 /* Alternating row colors */
-.markdown table tbody tr:nth-child(odd) {
-  background: transparent;
-}
-
-.markdown table tbody tr:nth-child(even) {
-  background: var(--ifm-color-emphasis-50);
+.markdown table tbody tr {
+  background: var(--ifm-table-body-bg);
+  border-top: var(--ifm-table-body-border);
+  color: var(--ifm-table-body-textcolor);
 }
 
 /* Cell styling with borders */
@@ -870,8 +892,7 @@ table {
 .markdown td {
   padding: 0.75rem;
   border: none;
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  border-right: 1px solid var(--ifm-color-emphasis-200);
+  border-right: none;
   word-break: break-word; /* Ensures text wraps properly */
 }
 
@@ -903,6 +924,28 @@ table {
 .markdown tr:last-child td {
   border-bottom: none;
 }
+
+.markdown table em > code {
+  font-family: "Fira Code";
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height:  165%;
+  background-color: transparent !important;
+  border: 1px solid var(--ifm-sidebar-activetext-color) !important;
+  color: var(--ifm-table-body-textcolor);
+  margin: 0px auto !important;
+}
+
+.markdown table code {
+  font-family: "Fira Code";
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height:  165%;
+  background-color: var(--ifm-table-inactive-tagbg);
+  border: var(--ifm-table-inactive-tagborder) !important;
+  margin: 0px auto !important;
+}
+
 
 /* Table CSS Overrides Ends */
 /* ----- */

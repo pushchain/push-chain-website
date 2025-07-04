@@ -135,7 +135,7 @@ const data = PushChain.utils.helpers.encodeTxData({
   abi: erc20Abi,
   functionName: 'transfer',
   // Transfer 10 tokens, converted to 18 decimal places
-  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)], 
+  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)],
 });
 
 // Send the transaction using Push Chain SDK
@@ -150,7 +150,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 <Tabs className="liveplaytab" groupId="send-universal-transaction-coding">
   <TabItem value='ethers_v6_quick' label='Quickstart'>
-  
+
   <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
 {`
@@ -472,7 +472,7 @@ import \* as readline from 'node:readline/promises';
   </TabItem>
 
   <TabItem value='ui_kit' label='UI Kit'>
-  
+
     ```jsx live
     // customPropHighlightRegexStart=<PushUniversalWalletProvider
     // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
@@ -532,7 +532,7 @@ import \* as readline from 'node:readline/promises';
     ```
 
   </TabItem>
-  
+
 </Tabs>
 
 <Details summary="Live Playground: Interact with Smart Contract" className="alert alert--live-play">
@@ -635,12 +635,12 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       // Encode the increment() function call
       const data = PushChain.utils.helpers.encodeTxData({
-        abi: testAbi, 
-        functionName: 'increment', 
+        abi: testAbi,
+        functionName: 'increment',
         args: []
       }); // 0xd09de08a
       console.log('data', data);
-      
+
       // Prepare transaction parameters
       const txParams = {
         to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
@@ -1031,7 +1031,7 @@ import \* as readline from 'node:readline/promises';
 
 ## Next Steps
 
-- Sign arbitrary data with [Sign Universal Message](/docs/chain/build/sign-universal-message)  
-- Surface live feedback in your UI by handling the `progressHook` events  
-- Leverage pre-built utilities in [Contract Helpers](/docs/chain/build/contract-helpers)  
-- Integrate transaction flows into your frontend app using the [UI Kit](/docs/chain/ui-kit)  
+- Sign arbitrary data with [Sign Universal Message](/docs/chain/build/sign-universal-message)
+- Surface live feedback in your UI by handling the `progressHook` events
+- Leverage pre-built utilities in [Contract Helpers](/docs/chain/build/contract-helpers)
+- Integrate transaction flows into your frontend app using the [UI Kit](/docs/chain/ui-kit)
