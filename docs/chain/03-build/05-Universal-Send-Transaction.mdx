@@ -609,7 +609,7 @@ import \* as readline from 'node:readline/promises';
       // 5) Prepare transaction parameters
       // Encode the increment() function call
       const data = PushChain.utils.helpers.encodeTxData({
-        testABI, 
+        abi: testAbi, 
         functionName: 'increment', 
         args: []
       }); // 0xd09de08a
