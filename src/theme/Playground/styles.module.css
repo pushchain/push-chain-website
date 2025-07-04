@@ -83,6 +83,7 @@
 .playgroundEditor pre {
   border-radius: 0px;
   background-color: var(--ifm-pre-background) !important;
+  font-family: 'Fira Code' !important;
 }
 
 .playgroundPreview:global(.previewNodeJS) {

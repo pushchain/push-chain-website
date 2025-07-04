@@ -6,7 +6,7 @@
   display: block;
 
   transition: background-color 0.2s ease-in-out;
-  font-family: 'Fira Code';
+  font-family: 'Fira Code' !important;
 }
 
 /* Hide highlights when editor is focused or being edited */
