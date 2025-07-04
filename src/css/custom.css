@@ -1224,15 +1224,23 @@ li {
 
 .markdown h1:first-child,
 .markdown > header > h1 {
-  margin: 0 0 64px 0;
+  /* margin: 0 0 64px 0; */
 }
 
 .markdown > h2 {
-  margin: 0 0 20px 0;
+  margin: 100px 0 20px 0;
+}
+
+.markdown > h2:first-of-type {
+  margin-top: 0;
 }
 
 .markdown > h3 {
-  margin: 0 0 16px 0;
+  margin: 0px 0 16px 0;
+}
+
+.markdown > h3:first-of-type {
+  margin-top: 0;
 }
 
 .markdown p,
