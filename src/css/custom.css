@@ -660,33 +660,34 @@ article em > code {
 }
 
 /* Override for having mandatory arguments in developer documentation */
-.PushDocs p code {
+/* .PushDocs p code {
   padding: 2px 8px;
-}
+} */
 
-.PushDocs article em > code {
-  background: transparent;
-  color: var(--ifm-color-secondary-text);
-  border: 1px solid var(--ifm-color-primary);
-  font-weight: 600;
-}
+/* .PushDocs article em > code {
+  background: var(--ifm-playground-header-terminalbg); */
+  /* color: var(--ifm-color-secondary-text); */
+  /* border: 1px solid var(--ifm-color-primary); */
+  /* font-weight: 600;
+  font-family: "Fira Code";
+} */
 
 article em > strong > code,
 article strong > em > code {
-  color: var(--ifm-color-primary) !important;
-  font-size: 80%;
+  color: var(--ifm-sidebar-activetext-color) !important;
+  font-size: 0.919rem;
   font-style: normal;
-  font-weight: 600;
-  padding: 4px 8px;
-  background-color: var(--ifm-alert-code-background) !important;
-  border: 0.1rem solid var(--ifm-playground-header-tag) !important;
+  font-weight: 500;
+  padding: 8px 16px;
+  background: var(--ifm-playground-header-terminalbg) !important;
+  border: var(--ifm-playground-button-border) !important;
   border-radius: var(--ifm-code-border-radius);
-  font-family: var(--ifm-font-family-monospace);
+  font-family: "Fira Code";
 }
 
 article em > strong > code:hover,
 article strong > em > code:hover {
-  background: var(--ifm-color-primary) !important;
+  background: var(--ifm-sidebar-bg-color) !important;
   color: var(--ifm-color-primary-unified-text) !important;
 }
 
