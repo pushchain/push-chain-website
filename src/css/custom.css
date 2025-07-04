@@ -63,9 +63,14 @@
   --ifm-paragraph-margin-bottom: 0;
   --docusaurus-highlighted-code-line-bg: rgba(62, 65, 83, 1);
   --ifm-detail-live-play: rgb(76, 179, 212);
-  --ifm-playground-header-bg: #61657b;
-  --ifm-playground-header-tag: #0000001a;
-  --ifm-playground-header-text: #ffffff;
+  --ifm-playground-header-bg: #EAEBF2;
+  --ifm-playground-header-tag: #000;
+  --ifm-playground-buttontextcolor: #17181B;
+  --ifm-playground-button-border: 1px solid #C4CBD5;
+  --ifm-playground-header-text: #313338;
+  --ifm-playground-buttontext-color: #8C93A0;
+  --ifm-playground-header-terminalbg: #F5F6F8;
+  --ifm-playground-header-terminalcolor: #313338;
   --ifm-live-highlighted-code-line-bg-pulse-start: rgba(62, 65, 83, 1);
   --ifm-live-highlighted-code-line-bg-pulse-mid: rgba(87, 91, 117, 1);
   --ifm-border-color: #dadde1;
@@ -128,9 +133,14 @@
   --ifm-docs-hero-bg: #0d0c0f;
   --ifm-paragraph-margin-bottom: 0;
   --ifm-detail-live-play: rgb(76, 179, 212);
-  --ifm-playground-header-bg: #61657b;
-  --ifm-playground-header-tag: #0000004d;
-  --ifm-playground-header-text: #ffffff;
+  --ifm-playground-header-bg: #313338;
+  --ifm-playground-header-tag: #FFF;
+  --ifm-playground-buttontextcolor: #F5F6F8;
+  --ifm-playground-button-border: 1px solid #484D58;
+  --ifm-playground-header-text: #C4CBD5;
+  --ifm-playground-buttontext-color: #757D8D;
+  --ifm-playground-header-terminalbg: #17181B;
+  --ifm-playground-header-terminalcolor: #C4CBD5;
   --docusaurus-highlighted-code-line-bg: rgba(62, 65, 83, 1);
   --ifm-live-highlighted-code-line-bg-pulse-start: rgba(62, 65, 83, 1);
   --ifm-live-highlighted-code-line-bg-pulse-mid: rgba(87, 91, 117, 1);
@@ -1201,7 +1211,7 @@ li {
   color: var(--ifm-sidebar-bg-color);
 }
 
-/* docs font */
+/* docs font, header, paragraphs, spans, lists */
 .markdown > h1,
 .markdown > header > h1,
 .markdown > h2,
@@ -1210,7 +1220,6 @@ li {
 .markdown > h5,
 .markdown > h6 {
   color: var(--ifm-color-title-text-color);
-  /* margin: 0px; */
 }
 
 .markdown h1:first-child,
@@ -1226,11 +1235,28 @@ li {
   margin: 0 0 16px 0;
 }
 
-.markdown p {
+.markdown p,
+.markdown span,
+{
   color: var(--ifm-toc-link-color);
   margin: 0 0 16px 0;
 }
 
+article .markdown > p, article .markdown > ul > li, article .markdown > ol > li {
+  color: var(--ifm-toc-link-color);
+}
+
+article .markdown ul > li::marker {
+  color: var(--ifm-toc-link-color);
+}
+
+
+ul.tabs.liveplaytab li {
+  border-radius: 24px;
+  background: var(--ifm-navbar-search-bg);
+  color: var(--ifm-toc-link-color);
+  border: none;
+}
 
 
 

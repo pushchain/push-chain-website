@@ -277,3 +277,13 @@
 .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
   padding: 0 0 0 24px;
 }
+
+@media (max-width: 1024px) {
+  .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+    padding: 0 0 0 0;
+  }
+
+  .docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-styles-module main .container .row {
+    margin: 0;
+  }
+}

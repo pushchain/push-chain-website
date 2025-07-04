@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Playground from '@theme/Playground';
 import ReactLiveScope from '@theme/ReactLiveScope';
 
@@ -102,7 +104,7 @@ function App() {
       const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);
       return () => clearInterval(t);
     }, []);
-    return <span style={{ fontFamily:'monospace' }}>{frames[i]}</span>;
+    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;
   }
 
   const consoleContainerRef = useRef<HTMLDivElement>(null);
@@ -125,7 +127,7 @@ function App() {
 
     // clean imports
     const cleaned = code.replace(/^\\s*import.*$/gm, '');
-    
+
        // our JSON.stringify shim: BigInts → strings
     const jsonShim = \`
       const _orig = JSON.stringify;
@@ -187,13 +189,13 @@ function App() {
         },
       };
     \`;
-      
+
     // shim console
     const consoleShim = {
       log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),
       error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),
     };
-    
+
     // pass the wrapped code
       const fnBody = \`
       return (async () => {
@@ -235,10 +237,173 @@ function App() {
     }
   };
 
+  const wrapper =  {
+    margin: '0 auto',
+    width: '100%'
+  }
+
+  const highlightRegexStart = {
+    margin: '0 auto',
+    width: 'inherit',
+  }
+
+  const newCodeDiv = {
+    fontFamily: 'Fira Code',
+    fontSize: 16,
+    width: 'inherit',
+  }
+
+  const repoWrapper = {
+    padding: '0px',
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    gap: '12px',
+  }
+
+  const repoUrlDiv = {
+    display: 'flex',
+    flex: 'none',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '12px',
+    padding: '8.5px 13px 8.59px 13px',
+  }
+
+  const buttonDiv = {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '12px',
+    flex: '1',
+    justifyContent: 'flex-end'
+  }
+
+  const terminalDiv = {
+    fontFamily: 'Fira Code',
+    fontSize: 13,
+    borderRadius: 12,
+    overflow: "hidden",
+    position: "relative",
+    background: "var(--ifm-playground-header-terminalbg)",
+    color: "var(--ifm-playground-header-terminalcolor)",
+  }
+
+  const headerDiv = {
+    display: "flex",
+    alignItems: "center",
+    padding: "12px 16px",
+    background: "transparent",
+  }
+
+  const repoButton = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+    fontSize: '0.875rem',
+    color: 'var(--ifm-playground-buttontext-color)',
+    cursor: 'pointer',
+  }
+
+  const clearButton = {
+    borderRadius: '12px',
+    border: 'var(--ifm-playground-button-border)',
+    display: 'flex',
+    padding: '12.55px 13px 13.04px 13px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: 'var(--ifm-playground-buttontextcolor)',
+    cursor: 'pointer',
+  }
+
+  const runCodeButton = {
+    borderRadius: '12px',
+    background: '#D548EC',
+    display: 'flex',
+    padding: '13px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '4px',
+    fontSize: '14px',
+    fontWeight: 600,
+    lineHeight: 'normal',
+    border: 'none',
+    cursor: 'pointer',
+    fontFamily: 'DM Sans',
+    color: '#FFF',
+  }
+
+  const arrowIcon = {
+    color: 'var(--ifm-header-caret-color)',
+    marginTop: '-6px'
+  }
+
+
+  const dotRed = {
+    display: "inline-block",
+    width: 12,
+    height: 12,
+    borderRadius: "50%",
+    background: "#f25f58",
+    marginRight: 6,
+  };
+
+  const dotYellow = {
+    display: "inline-block",
+    width: 12,
+    height: 12,
+    borderRadius: "50%",
+    background: "#febe2e",
+    marginRight: 6,
+  };
+
+  const dotGreen = {
+    display: "inline-block",
+    width: 12,
+    height: 12,
+    borderRadius: "50%",
+    background: "#58cb42",
+  };
+
+  const consoleContainer = {
+    color: "var(--ifm-playground-header-terminalcolor)",
+    padding: 12,
+    minHeight: 180,
+    maxHeight: 300,
+    overflowY: "auto",
+  }
+
+  const bottomSection = {
+    margin: '0 auto',
+    background: 'var(--ifm-playground-header-bg)',
+    padding: '16px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    borderRadius: '0 0 16px 16px',
+    borderTop: 'var(--ifm-playground-button-border)',
+ }
+
+  const asciiDiv = {
+    position: 'absolute',
+    bottom: 8,
+    right: 12,
+    padding: '4px 6px',
+    background: '#333',
+    borderRadius: 4,
+    color: '#50fa7b',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+  }
+
   return (
-    <div style={{ margin: '0 auto', width: '100%' }}>
+    <div style={wrapper}>
       <div
-        style={{ margin: '0 auto', width: 'inherit', backgroundColor: '#282a36' }}
+        style={highlightRegexStart}
         className="${
           highlightRegexStart
             ? 'push-live-editor push-apply-highlight-in-live-editor'
@@ -255,165 +420,83 @@ function App() {
             // Remove trailing newlines and spaces before setting the code
             setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));
           }}
-          style={{
-            fontFamily: 'monospace',
-            fontSize: 16,
-            width: 'inherit',
-          }}
+          style={newCodeDiv}
         />
       </div>
-    
-      <div style={{ margin: '0 auto' }}>
+
+      <div style={bottomSection}>
         <div
-          style={{
-            padding: '20px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            flexDirection: 'row',
-            borderBottom: '1px solid var(--ifm-border-color)',
-            justifyContent: 'flex-end',
-            gap: '12px',
-          }}
+          style={repoWrapper}
         >
           {/* Repo button if available */}
           ${
             repo && repo.url
               ? `
-                <div 
-                  style={{ 
-                    display: 'flex', 
-                    flex: 'none',
-                    alignItems: 'flex-start',
-                    gap: '12px', 
-                  }}
+                <div
+                  style={repoUrlDiv}
                 >
-                  <a 
-                    href="${repo.url}" 
+                  <a
+                    href="${repo.url}"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="repo-btn"
+                    style={repoButton}
+                    className='btn'
                   >
                     ${repo.title || 'View Code'}
                   </a>
+
+                  <BsBoxArrowUpRight style={arrowIcon} />
                 </div>
               `
               : ''
           }
-          <div 
-            style={{ 
-              display: 'flex', 
-               flexWrap: 'wrap',
-              gap: '12px', 
-              flex: '1', 
-              justifyContent: 'flex-end' 
-            }}
+          <div
+            style={buttonDiv}
           >
             <button
-              className="clear-btn"
               onClick={() => setLogs([])}
               title="Clear console"
+              style={clearButton}
+              className='btn'
             >
               Clear Console
             </button>
 
             <button
-              className="run-btn"
+              style={runCodeButton}
               onClick={runCode}
+              className='btn'
             >
-              ► Run Code
+              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>►</span>
+              <span>Run Code</span>
             </button>
           </div>
 
           {/* Hover & focus styles */}
           <style>{\`
-            .run-btn,
-            .clear-btn,
-            .repo-btn {
-              padding: 8px 12px;
-              font-size: 14px;
-              border-radius: 6px;
-              border: 1px solid #e2e8f0;
-              background-color: var(--ifm-color-primary-inverse);
-              color: var(--ifm-color-secondary-text);
-              cursor: pointer;
-              display: flex;
-              align-items: center;
-              gap: 6px;
-              transition: background-color 0.2s, border-color 0.2s;
-              text-decoration-color: transparent !important;
-            }
-            .run-btn:hover,
-            .clear-btn:hover,
-            .repo-btn:hover {
-              background-color: var(--ifm-color-primary);
-              border-color: var(--ifm-color-primary);
-              color: var(--ifm-color-primary-unified-text);
+            .btn:hover {
+                opacity: 0.8;
             }
           \`}</style>
         </div>
-            
+
         {/* Virtual “terminal” console */}
         <div
-          style={{
-            fontFamily: "monospace",
-            fontSize: 13,
-            borderRadius: 12,
-            overflow: "hidden",
-            margin: "20px 20px 0 20px",
-            position: "relative",
-          }}
+          style={terminalDiv}
         >
           {/* header bar */}
           <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              padding: "12px 16px",
-              background: "#444",
-            }}
+            style={headerDiv}
           >
-            <span
-              style={{
-                display: "inline-block",
-                width: 12,
-                height: 12,
-                borderRadius: "50%",
-                background: "#f25f58",
-                marginRight: 6,
-              }}
-            />
-            <span
-              style={{
-                display: "inline-block",
-                width: 12,
-                height: 12,
-                borderRadius: "50%",
-                background: "#febe2e",
-                marginRight: 6,
-              }}
-            />
-            <span
-              style={{
-                display: "inline-block",
-                width: 12,
-                height: 12,
-                borderRadius: "50%",
-                background: "#58cb42",
-              }}
-            />
+            <span style={dotRed} />
+            <span style={dotYellow} />
+            <span style={dotGreen} />
           </div>
 
           {/* log output */}
           <div
             ref={consoleContainerRef}
-            style={{
-              background: "#1e1e1e",
-              color: "#eee",
-              padding: 12,
-              minHeight: 180,
-              maxHeight: 300,
-              overflowY: "auto",
-            }}
+            style={consoleContainer}
           >
             {logs.length === 0 ? (
               <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit "Run Code" to Execute.</div>
@@ -430,18 +513,7 @@ function App() {
           {/* ASCII loader, bottom-right */}
           {isRunning && (
             <div
-              style={{
-                position: 'absolute',
-                bottom: 8,
-                right: 12,
-                padding: '4px 6px',
-                background: '#333',
-                borderRadius: 4,
-                color: '#50fa7b',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px',
-              }}
+              style={asciiDiv}
             >
               <AsciiLoader /> Running...
             </div>

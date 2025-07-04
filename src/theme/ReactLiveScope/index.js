@@ -68,6 +68,12 @@ function loadClientSideLibraryPushChainCore(constantName) {
     : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
 }
 
+function loadClientSideReactIconsBS(iconName) {
+  return typeof window !== 'undefined'
+    ? require('react-icons/bs')[iconName]
+    : () => null;
+}
+
 // For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName) {
   return function LibComponentBrowserOnly(props) {
@@ -162,6 +168,7 @@ const ReactLiveScope = {
   usePushChainClient: loadClientSideLibraryPushChainUIKit('usePushChainClient'),
   PushUI: loadClientSideLibraryPushChainUIKit('PushUI'),
   PushChain: loadClientSideLibraryPushChainCore('PushChain'),
+  BsBoxArrowUpRight: loadClientSideReactIconsBS('BsBoxArrowUpRight'),
 };
 
 export default ReactLiveScope;
