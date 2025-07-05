@@ -168,6 +168,7 @@ Never use accounts with significant funds for test deployments.
 Never store private keys in plain text or in your repository.
 :::
 
+
 #### 6.2. Get testnet tokens
 
 Ensure you have testnet tokens to pay for deployment gas fees. If you don't have any, use the Push Chain [testnet faucet](https://faucet.push.org/).
@@ -209,7 +210,7 @@ Verify your contract on the Push Chain BlockScout explorer:
 ```bash
 forge verify-contract \
   --chain 42101 \
-  --verifier blockscout 
+  --verifier blockscout
   --verifier-url https://donut.push.network/api \
   0xYourDeployedAddress \
   src/MyToken.sol:MyToken

@@ -363,6 +363,50 @@ html[data-theme='dark'] .container {
   text-decoration: none;
 }
 
+.admonition_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-Layout-styles-module .alert.alert--info {
+  background: red !important;
+}
+
+.theme-admonition.alert--info {
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+.theme-admonition.alert--warning {
+  border-left: 5px solid var(--stroke-state-warning-subtle, #FFBB16);
+  background: var(--surface-state-warning-subtle, #FFF0CB);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  color: var(--text-state-warning-bold, #8A4900);
+}
+
+.theme-admonition.alert--warning svg {
+  fill: #A85A00;
+}
+
+.theme-admonition.alert--danger {
+  border-radius: 12px;
+  border-left: 5px solid var(--stroke-state-error-bold, #FF4E4E);
+  background: var(--surface-state-error-subtle, #FFECEC);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  color: var(--text-state-error-bold, #F11F1F)
+}
+
+.theme-admonition.alert--danger svg {
+  fill: #F11F1F;
+}
+.theme-admonition.alert--success {
+  border-radius: 12px;
+  border-left: 5px solid var(--stroke-state-info-bold, #0056D0);
+  background: var(--surface-state-info-subtle, #E8F2FF);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  color: var(--text-state-info-bold, #0056D0);
+}
+
+.theme-admonition.alert--success svg {
+  fill: #076EFF;
+}
+
+
 /* ----- */
 /* Custom Fonts */
 /* ----- */
