@@ -1637,21 +1637,21 @@ sup strong {
 /* Markdown CSS(Docs and Blogs Fonts) Overrides */
 /* ----- */
 
-/* .PushDocs {
-  font-family: Inter, sans-serif !important;
+.PushDocs {
+  font-family: DM Sans, sans-serif !important;
 
   * {
-    font-family: Inter, sans-serif !important;
+    font-family: DM Sans, sans-serif !important;
   }
 }
 
 .PushBlog {
-  font-family: Inter, sans-serif !important;
+  font-family: DM Sans, sans-serif !important;
 
   * {
-    font-family: Inter, sans-serif !important;
+    font-family: DM Sans, sans-serif !important;
   }
-} */
+}
 
 /* ----- */
 /* Markdown CSS(Docs and Blogs Fonts) Overrides Ends*/
