@@ -338,11 +338,13 @@ import {
 function App() {
   // Define Wallet Config
   const walletConfig = {
+    uid: 'custom-theme',
     network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
   };
 
   return (
     <PushUniversalWalletProvider
+      uid='custom-theme'
       config={walletConfig}
       themeOverrides={{
         '--pw-core-bg-primary-color': '#FF474C',
@@ -352,7 +354,7 @@ function App() {
         '--pw-core-btn-border-radius': '15px',
       }}
     >
-      <PushUniversalAccountButton />
+      <PushUniversalAccountButton uid='custom-theme' />
     </PushUniversalWalletProvider>
   );
 }

@@ -37,6 +37,7 @@ import {
 
 function App() {
   const walletConfig = {
+    uid: 'basic',
     network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
     login: {
       email: true,
@@ -61,11 +62,11 @@ function App() {
   };
 
   function WalletUI() {
-    const { universalAccount } = usePushWalletContext();
+    const { universalAccount } = usePushWalletContext('basic');
 
     return (
       <div>
-        <PushUniversalAccountButton />
+        <PushUniversalAccountButton uid='basic' />
       </div>
     );
   }
@@ -76,6 +77,7 @@ function App() {
       app={appMetadata}
       themeOverrides={{
         '--pw-core-bg-primary-color': '#FF474C',
+        '--pw-core-bg-secondary-color': '#942222',
         '--pw-core-font-family': 'Inter',
         '--pw-core-text-primary-color': '#fff',
         '--pw-core-text-secondary-color': '#F5F6F8',
@@ -102,6 +104,7 @@ import {
 
 function App() {
   const walletConfig = {
+    uid: 'light_dark',
     network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
     login: {
       email: true,
@@ -126,11 +129,11 @@ function App() {
   };
 
   function WalletUI() {
-    const { universalAccount } = usePushWalletContext();
+    const { universalAccount } = usePushWalletContext('light_dark');
 
     return (
       <div>
-        <PushUniversalAccountButton />
+        <PushUniversalAccountButton uid='light_dark' />
       </div>
     );
   }

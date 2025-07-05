@@ -38,13 +38,16 @@ import {
 function App() {
   return (
     <PushUniversalWalletProvider
-      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      config={{
+        uid: 'applevel',
+        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET
+      }}
       themeOverrides={{
         '--pw-core-bg-primary-color': 'red', // global override
       }}
     >
       {/* Your App Logic */}
-      <PushUniversalAccountButton />
+      <PushUniversalAccountButton uid='applevel' />
     </PushUniversalWalletProvider>
   );
 }
@@ -64,13 +67,16 @@ import {
 function App() {
   return (
     <PushUniversalWalletProvider
-      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      config={{
+        uid: 'applevel_lightdark',
+        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET
+      }}
       themeOverrides={{
         '--pw-core-bg-primary-color': 'green', // global override
       }}
     >
       {/* Your App Logic */}
-      <PushUniversalAccountButton />
+      <PushUniversalAccountButton uid='applevel_lightdark' />
     </PushUniversalWalletProvider>
   );
 }
@@ -90,7 +96,10 @@ import {
 function App() {
   return (
     <PushUniversalWalletProvider
-      config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
+      config={{
+        uid: 'button_specific',
+        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET
+      }}
       themeOverrides={{
         // ... app level overrides
         // NOTE: Button overrides can override app level overrides for supported variables (beginning with `--pwauth-`)
@@ -98,6 +107,7 @@ function App() {
     >
       {/* Button-level overrides */}
       <PushUniversalAccountButton
+        uid='button_specific'
         themeOverrides={{
           '--pwauth-btn-connect-bg-color': 'yellow',
           '--pwauth-btn-connect-border-radius': '32px',
