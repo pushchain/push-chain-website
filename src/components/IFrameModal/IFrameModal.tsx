@@ -38,7 +38,6 @@ export default function IFrameModal({
         width: '100%',
         height: isIframeVisible ? '80vh' : 'auto',
         maxHeight,
-        backgroundColor: 'rgb(40, 42, 54)',
         borderRadius: '12px',
         overflow: 'hidden',
         margin: '20px 0',
@@ -65,18 +64,18 @@ export default function IFrameModal({
           alignItems: 'center',
           gap: '10px',
           padding: '10px',
-          backgroundColor: '#8d949e',
+          backgroundColor: 'var(--ifm-playground-header-bg)',
         }}
       >
         <div
           style={{
             flex: 1,
             padding: '8px 12px',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            backgroundColor: 'var(--ifm-navbar-search-bg)',
             borderRadius: '12px',
-            color: '#fff',
-            fontSize: '14px',
-            fontFamily: 'monospace',
+            color: 'var(--ifm-color-title-text-color)',
+            fontSize: '0.875rem',
+            fontFamily: 'Fira Code',
             whiteSpace: 'nowrap',
             overflow: 'hidden',
             textOverflow: 'ellipsis',
@@ -94,17 +93,17 @@ export default function IFrameModal({
             width: '32px',
             height: '32px',
             padding: '6px',
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
             borderRadius: '12px',
             cursor: 'pointer',
             transition: 'all 0.2s ease',
+            border: 'var(--ifm-playground-button-border)',
+            backgroundColor: 'var(--ifm-table-body-bg)',
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+            e.currentTarget.style.opacity = '0.8';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.backgroundColor = 'transparent';
+            e.currentTarget.style.opacity = '1';
           }}
         >
           <svg
@@ -116,8 +115,8 @@ export default function IFrameModal({
           >
             <path
               d='M14 8c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c1.8 0 3.4.8 4.5 2h-2.5v1h4V1h-1v2.1C11.9 1.8 10 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7h-1z'
-              fill='#fff'
-              opacity='0.8'
+              fill='var(--ifm-iframe-icon-color)'
+              opacity='1'
             />
           </svg>
         </button>
@@ -128,8 +127,7 @@ export default function IFrameModal({
         style={{
           position: 'relative',
           flex: 1,
-          backgroundColor: '#fff',
-          border: '1px solid var(--ifm-border-color)',
+          backgroundColor: 'var(--ifm-playground-header-bg)',
           borderRadius: '0 0 12px 12px',
         }}
       >
@@ -146,7 +144,8 @@ export default function IFrameModal({
               onClick={() => setIsIframeVisible(true)}
               style={{
                 padding: '12px 24px',
-                fontSize: '16px',
+                fontSize: '0.875rem',
+                fontWeight: '600',
                 backgroundColor: '#D548EC',
                 color: '#fff',
                 border: 'none',
@@ -154,6 +153,7 @@ export default function IFrameModal({
                 cursor: 'pointer',
                 transition: 'opacity 0.2s ease',
                 opacity: 0.9,
+                fontFamily: 'DM Sans',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.opacity = '1';

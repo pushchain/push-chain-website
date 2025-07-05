@@ -92,6 +92,7 @@
   --ifm-playground-border-info: #A2C9FF;
   --ifm-playground-border-warning: #F3AEFF;
   --ifm-playground-border-stable: #C4CBD5;
+  --ifm-iframe-icon-color: #202124;
 
 }
 
@@ -173,7 +174,7 @@
   --ifm-playground-border-info: #0056D0;
   --ifm-playground-border-warning:  #D548EC;
   --ifm-playground-border-stable: #484D58;
-
+  --ifm-iframe-icon-color: #B0B3B9;
 
 }
 
