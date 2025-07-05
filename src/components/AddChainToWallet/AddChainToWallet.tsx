@@ -97,6 +97,7 @@ const AddChainToWallet: React.FC<AddChainToWalletProps> = ({
           padding: '12px 24px',
           cursor: 'pointer',
           transition: 'all 0.2s ease',
+          fontFamily: 'DM Sans',
         }}
       >
         {title}

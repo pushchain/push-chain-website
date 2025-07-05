@@ -1,3 +1,4 @@
+/* eslint-disable @docusaurus/prefer-docusaurus-heading */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -14,6 +15,8 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
+
 function CardContainer({ href, children }) {
   return (
     <Link
@@ -27,17 +30,20 @@ function CardContainer({ href, children }) {
 function CardLayout({ href, icon, title, description }) {
   return (
     <CardContainer href={useBaseUrl(href)}>
-      <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
-        {icon} {title}
-      </h2>
-      {description && (
-        <p
-          className={clsx('text--truncate', styles.cardDescription)}
-          title={description}
-        >
-          {description}
-        </p>
-      )}
+      <WalletSvg className={styles.walletIcon} />
+      <div className={styles.textDiv}>
+        <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
+          {icon} {title}
+        </h2>
+        {description && (
+          <p
+            className={clsx('text--truncate', styles.cardDescription)}
+            title={description}
+          >
+            {description}
+          </p>
+        )}
+      </div>
     </CardContainer>
   );
 }

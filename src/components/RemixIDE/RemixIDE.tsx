@@ -1,5 +1,6 @@
 import Link from '@docusaurus/Link';
 import React, { useEffect, useState } from 'react';
+import { BsArrowsAngleExpand, BsBoxArrowUpRight } from 'react-icons/bs';
 
 interface RemixIDEProps {
   examples: {
@@ -64,13 +65,51 @@ export default function RemixIDE({ examples }: RemixIDEProps) {
     };
   }, [isFullScreen]);
 
+  const arrowIcon = {
+    color: 'var(--ifm-header-caret-color)',
+    marginTop: '-6px',
+  };
+
+  const repoButton = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '4px',
+    fontSize: '0.875rem',
+    color: 'var(--ifm-playground-buttontext-color)',
+    cursor: 'pointer',
+    fontWeight: '600',
+  };
+
+  const repoUrlDiv = {
+    display: 'flex',
+    flex: 'none',
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: '12px',
+    padding: '8.5px 13px 8.59px 13px',
+  };
+
+  const selectButton = {
+    borderRadius: '12px',
+    border: 'var(--ifm-playground-button-border)',
+    display: 'flex',
+    padding: '12.55px 13px 13.04px 13px',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    color: 'var(--ifm-playground-buttontextcolor)',
+    cursor: 'pointer',
+  };
+
   return (
     <div
       style={{
         width: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: 'var(--ifm-table-header-bg)',
         borderRadius: '12px',
-        border: '1px solid var(--ifm-border-color)',
+        border: 'none',
         overflow: 'hidden',
         position: isFullScreen ? 'fixed' : 'relative',
         top: isFullScreen ? 0 : 'auto',
@@ -94,12 +133,16 @@ export default function RemixIDE({ examples }: RemixIDEProps) {
           justifyContent: 'space-between',
           alignItems: 'center',
           padding: '10px 15px',
-          borderBottom: '1px solid rgb(226, 232, 240)',
-          backgroundColor: '#f8fafc',
           gap: '16px',
         }}
       >
-        <div style={{ fontSize: '16px', fontWeight: 500, color: '#475569' }}>
+        <div
+          style={{
+            fontSize: '16px',
+            fontWeight: 500,
+            color: 'var(--ifm-color-title-text-color)',
+          }}
+        >
           Remix IDE
         </div>
         <div
@@ -116,21 +159,24 @@ export default function RemixIDE({ examples }: RemixIDEProps) {
           {exampleKeys.length > 0 &&
             selected &&
             examplesObj[selected]?.ctaURL && (
-              <Link
-                to={examplesObj[selected].ctaURL}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='topbar-btn'
-              >
-                {examplesObj[selected]?.ctaTitle || 'View Code'}
-              </Link>
+              <div style={repoUrlDiv}>
+                <Link
+                  to={examplesObj[selected].ctaURL}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  style={repoButton}
+                >
+                  {examplesObj[selected]?.ctaTitle || 'View Code'}
+                </Link>
+                <BsBoxArrowUpRight style={arrowIcon} />
+              </div>
             )}
 
           {exampleKeys.length > 0 && (
             <select
               value={selected ?? ''}
               onChange={(e) => setSelected(e.target.value)}
-              className='topbar-btn'
+              style={selectButton}
             >
               {exampleKeys.map((key) => (
                 <option key={key} value={key}>
@@ -140,12 +186,16 @@ export default function RemixIDE({ examples }: RemixIDEProps) {
             </select>
           )}
 
-          <button
+          <BsArrowsAngleExpand
+            size={27}
+            style={{
+              color: 'var(--ifm-header-caret-color)',
+              cursor: 'pointer',
+              transition: 'color 0.2s',
+              padding: '2px',
+            }}
             onClick={() => setIsFullScreen(!isFullScreen)}
-            className='topbar-btn'
-          >
-            {isFullScreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-          </button>
+          />
 
           {/* Hover & focus styles */}
           <style>{`
