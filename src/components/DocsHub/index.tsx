@@ -33,7 +33,7 @@ import {
   TechDocumentationItems,
   TutorialDocumentationItems,
 } from '@site/src/config/DocsHubList';
-import GLOBALS, { device } from '@site/src/config/globals';
+import GLOBALS, { device, size } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 
 import { Grid } from './Grid';
@@ -167,14 +167,14 @@ export default function HomepageFeatures(): JSX.Element {
 
       {/* Grid Section */}
       <Section>
-        <Content>
+        <Content maxWidth={`1326px`}>
           <Grid />
         </Content>
       </Section>
 
       {/* QUICKSTART SECTION */}
       <HomepageSection>
-        <Content margin='0 auto' width='100%'>
+        <Content margin='0 auto' maxWidth={`1326px`} width='100%'>
           <HomepageSubHeader id='quickstart'>
             <ItemV justifyContent='flex-start' alignItems='flex-start'>
               <H2>Quickstart</H2>
@@ -218,7 +218,7 @@ export default function HomepageFeatures(): JSX.Element {
       </HomepageSection>
 
       <Section>
-        <Content>
+        <Content maxWidth={`1326px`}>
           <HomepageSubHeader id='quickstart'>
             <ItemV justifyContent='flex-start' alignItems='flex-start'>
               <H2>Technical Documentation</H2>
@@ -247,7 +247,7 @@ export default function HomepageFeatures(): JSX.Element {
       </Section>
 
       <Section>
-        <Content>
+        <Content maxWidth={`1326px`}>
           <HomepageSubHeader id='quickstart'>
             <ItemV justifyContent='flex-start' alignItems='flex-start'>
               <H2>Tutorials</H2>
@@ -276,7 +276,7 @@ export default function HomepageFeatures(): JSX.Element {
       </Section>
 
       <Section>
-        <Content>
+        <Content maxWidth={`1326px`}>
           <ItemV>
             <H2
               fontSize='3rem'
