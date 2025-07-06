@@ -70,10 +70,10 @@ const GridCard = styled(Link)`
 const GridImage = styled.div`
   padding: 16px;
   border-radius: var(--radius-lg, 32px);
-  // :todo border
   // border: 1px solid rgba(112, 70, 248, 0.4);
-  background: rgba(0, 0, 0, 0.1);
-  background-blend-mode: plus-lighter;
+  border: 1px solid rgb(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.05);
+  background-blend-mode: lighten;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
