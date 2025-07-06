@@ -52,12 +52,12 @@ const txHash = await pushChainClient.universal.sendTransaction({
   {
     title: 'UI-Kit Quickstart',
     codeblock: `// Import Push UI Kit
-import { 
-  PushUniversalWalletProvider, 
-  PushUniversalAccountButton, 
-  usePushWalletContext, 
-  usePushChainClient, 
-  PushUI 
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  usePushChainClient,
+  PushUI
 } from '@pushchain/ui-kit';
 
 function App() {
@@ -191,5 +191,81 @@ export const accordionItems = [
   {
     title: 'Do I have to pay to send notifications?',
     content: 'Content for Section 3',
+  },
+];
+
+export const TechDocumentationItems = [
+  {
+    title: 'Wallet Setup',
+    href: 'https://docs.push.org',
+    content:
+      'Add Push Chain as custom network to your wallet before building your app.',
+  },
+  {
+    title: 'Faucet',
+    href: 'https://docs.push.org',
+    content:
+      'A drip of testnet $PC to play with, deploy your smart contracts, and test your app.',
+  },
+  {
+    title: 'Chain Explorer',
+    href: 'https://docs.push.org',
+    content:
+      'Explore Push Chain transactions, blocks, and accounts in real time.',
+  },
+];
+
+export const TutorialDocumentationItems = [
+  {
+    title: 'Learn More',
+    href: 'https://docs.push.org',
+    content:
+      'Add Push Chain as custom network to your wallet before building your app.',
+  },
+];
+
+export const GridTopItems = [
+  {
+    bgColor: '#dd6fff',
+    title: 'What is Push Chain?',
+    href: 'https://docs.push.org',
+    description:
+      'Push Chain provides a unified toolkit to build truly universal apps.',
+    link: {
+      label: 'Learn More',
+      href: '/docs/push-chain',
+    },
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+  },
+  {
+    bgColor: '#4277F7',
+    title: `Let's build!`,
+    href: 'https://docs.push.org',
+    description:
+      'everything you will require from Push Chain SDK to create your universal app.',
+    link: null,
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+  },
+  {
+    bgColor: '#4277F7',
+    title: 'UI Kit',
+    href: 'https://docs.push.org',
+    description: 'Integrate any React based app in less than 5 minutes.',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
   },
 ];

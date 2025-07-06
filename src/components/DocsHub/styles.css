@@ -130,7 +130,8 @@
 .PushDocs .docRoot_UBD9 {
   width: 85%;
   align-self: center;
-  margin: 23px auto;
+  margin: 0px auto;
+  /* margin: 23px auto; */
 }
 
 

@@ -1,0 +1,122 @@
+import Link from '@docusaurus/Link';
+import { BsArrowUpRight } from 'react-icons/bs';
+import { styled } from 'styled-components';
+import { device } from '@site/src/config/globals';
+import { H3, Image, Span } from '@site/src/css/SharedStyling';
+import { GridTopItems } from '@site/src/config/DocsHubList';
+
+export const Grid = () => {
+  return (
+    <GridWrapper>
+      {GridTopItems.map((item, index) => (
+        <GridCard key={index} style={{ backgroundColor: item.bgColor }}>
+          <GridImage>
+            <Image
+              src={item.image}
+              srcSet={`${item.image2x} 2x, ${item.image3x} 3x`}
+              alt={`Image for ${item.title}`}
+              loading='lazy'
+              className='pulse-logo'
+            />
+          </GridImage>
+
+          <TextDiv>
+            <H3>{item.title}</H3>
+            <Span>{item.description}</Span>
+
+            {item.link && (
+              <LinkTo>
+                <p>{item.link.label}</p>
+                <BsArrowUpRight />
+              </LinkTo>
+            )}
+          </TextDiv>
+        </GridCard>
+      ))}
+    </GridWrapper>
+  );
+};
+
+const GridWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-self: stretch;
+
+  @media ${device.tablet} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const GridCard = styled(Link)`
+  border-radius: 32px;
+  background: #dd6fff;
+  align-items: flex-start;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 414px;
+`;
+
+const GridImage = styled.div`
+  padding: 16px;
+  border-radius: var(--radius-lg, 32px);
+  // :todo border
+  // border: 1px solid rgba(112, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.1);
+  background-blend-mode: plus-lighter;
+  box-shadow:
+    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
+  backdrop-filter: blur(4px);
+  width: 148px;
+  height: 148px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pulse-logo {
+    width: 70px;
+    height: auto;
+    z-index: 99999;
+  }
+`;
+
+const TextDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h3 {
+    color: #fff;
+    font-size: 1.625rem;
+    font-weight: 600;
+    line-height: 107.692%;
+    font-family: 'DM Sans', sans-serif !important;
+  }
+
+  span {
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 133.333%;
+    font-family: 'DM Sans', sans-serif !important;
+  }
+`;
+
+const LinkTo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  color: #fff;
+
+  p {
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 77.778%;
+  }
+`;
