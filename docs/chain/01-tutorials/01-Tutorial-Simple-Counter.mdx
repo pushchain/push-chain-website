@@ -278,37 +278,57 @@ function SimpleCounterExample() {
         </div>
 
         {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
-          <div className='counter-container' style={{ display: 'grid' }}>
-            <button
-              className='increment-button'
-              onClick={handleSendTransaction}
-              disabled={isLoadingIncrement}
-            >
-              {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}
-            </button>
-
-            <button
-              className='reset-button'
-              onClick={handleResetTransaction}
-              disabled={isLoadingReset}
-            >
-              {isLoadingReset ? 'Processing...' : 'Reset Counter'}
-            </button>
+          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+              <button
+                className='increment-button'
+                onClick={handleSendTransaction}
+                disabled={isLoadingIncrement}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}
+              </button>
+              
+              <button
+                className='reset-button'
+                onClick={handleResetTransaction}
+                disabled={isLoadingReset}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                {isLoadingReset ? 'Processing...' : 'Reset Counter'}
+              </button>
+            </div>
 
             {txHash && pushChainClient && (
-              <div className='transaction-info' style={{ display: 'grid' }}>
+              <div className='transaction-info' style={{ textAlign: 'center' }}>
                 <p>
-                  Transaction Hash: <code>{txHash}</code>
+                  Transaction Hash:{' '}
+                  <a
+                    href={pushChainClient.explorer.getTransactionUrl(txHash)}
+                    target='_blank'
+                    style={{ color: '#d946ef', textDecoration: 'underline' }}
+                  >
+                    {txHash}
+                  </a>
                 </p>
-                <a
-                  href={pushChainClient.explorer.getTransactionUrl(txHash)}
-                  target='_blank'
-                >
-                  View in Explorer
-                </a>
-                <button onClick={fetchCounters} className='refresh-button'>
-                  Refresh Counter Values
-                </button>
               </div>
             )}
           </div>

@@ -66,45 +66,23 @@ Here is the solidity code for our Universal Counter smart contract.
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.22;
 
+// Universal Account ID Struct and IUEAFactory Interface
+
 struct UniversalAccountId {
-    // @notice Chain namespace identifier (e.g., "eip155" or "solana").
     string chainNamespace;
-    // @notice Chain ID of the source chain of the owner of this UEA.
     string chainId;
-    // @notice Owner's public key or address in bytes format.
     bytes owner;
 }
 
 interface IUEAFactory {
-    /**
-     * @notice Returns the Universal Account information and type for a given address on Push Chain.
-     * @param addr The address to query (typically msg.sender).
-     * @return account The Universal Account information associated with this UEA.
-     * @return isUEA True if the address is a UEA contract, false if it is a native EOA of Push Chain.
-     */
     function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
 }
 
-/**
- * @title UniversalCounter
- * @notice Tracks and increments counters for users from different blockchains (Ethereum, Solana, Push Chain) natively.
- * @dev Uses Push Chain's UEA system to identify the origin chain of the caller and increments the appropriate counter.
- */
 contract UniversalCounter {
-    /// @notice Counter for Ethereum users (chainNamespace: "eip155", chainId: "1").
     uint256 public countEth;
-    /// @notice Counter for Solana users (chainNamespace: "solana", chainId: "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp").
     uint256 public countSol;
-    /// @notice Counter for native Push Chain users (EOA, not UEA).
     uint256 public countPC;
 
-    /**
-     * @notice Emitted when the counter is incremented by any user.
-     * @param newCount The new total count after increment.
-     * @param caller The address of the user who called increment().
-     * @param chainNamespace The namespace of the caller's origin chain (e.g., "eip155", "solana").
-     * @param chainId The chain ID of the caller's origin chain (e.g., "1" for Ethereum mainnet).
-     */
     event CountIncremented(
         uint256 newCount,
         address indexed caller,
@@ -112,23 +90,8 @@ contract UniversalCounter {
         string chainId
     );
 
-    /**
-     * @notice Initializes the Counter contract.
-     * @dev No special initialization logic required.
-     */
     constructor() {}
 
-    /**
-     * @notice Increments the counter for the caller's origin chain.
-     * @dev Uses IUEAFactory to determine the caller's chain. Increments the appropriate counter based on the chain.
-     *      - If the caller is a native Push Chain EOA, increments countPC.
-     *      - If the caller is a UEA from Solana, increments countSol.
-     *      - If the caller is a UEA from Ethereum, increments countEth.
-     *      - Reverts for unsupported chains.
-     * @custom:example
-     *      - Bob (Ethereum user) calls increment() -> countEth is incremented.
-     *      - Dan (Push Chain user) calls increment() -> countPC is incremented.
-     */
     function increment() public {
         address caller = msg.sender;
         (UniversalAccountId memory originAccount, bool isUEA) =
@@ -152,63 +115,61 @@ contract UniversalCounter {
         emit CountIncremented(getCount(), caller, originAccount.chainNamespace, originAccount.chainId);
     }
 
-    /**
-     * @notice Resets all counters (Ethereum, Solana, Push Chain) to zero.
-     * @dev Can be called by anyone. Use with caution as it affects all users.
-     */
     function reset() public {
         countEth = 0;
         countSol = 0;
         countPC = 0;
     }
 
-    /**
-     * @notice Returns the total count across all chains.
-     * @return The sum of countEth, countSol, and countPC.
-     */
     function getCount() public view returns (uint256) {
         return countEth + countSol + countPC;
     }
 }
 ```
 
-As previously mentioned, the unique aspect of this smart contract is its ability to determine all imperative details of the user **( msg.sender )** instantly and natively.
+## Understanding the Universal Counter App
 
-This means, for any given **msg.sender** address, the contract is able to quickly identify:
+The unique aspect of this smart contract is its ability to determine all imperative details of the user **( msg.sender )** instantly and natively.
 
+In simpler terms, for any given **msg.sender** address, the contract is able to quickly identify:
 1. _the actual source chain of the caller_
 2. _the chain id of the source chain of the caller._
 3. _the address of the caller on the source chain._
 
 These details are natively available for any smart contract built on Push Chain.
+This is enabled via **[UEAFactory Interface](https://github.com/pushchain/push-chain-core-contracts/blob/main/src/Interfaces/IUEAFactory.sol)**.
 
-This is enabled using **UEAFactory Interface.**
-
-## Understanding the Universal Counter App
-
-### Including UEAFactory Interface
-
-The first step is to include the UEAFactory interface in your contract.
-
+### Using the UEAFactory Interface
+The first step is to achieve the universal functionality is to use the UEAFactory interface in our contract.
 _This can either be imported or directly included in your contract._
 
-This interfaces provides you with the function - `getOriginForUEA()` which plays the critical role of fetching and returning the information about the caller ( **_msg.sender )._**
+This interfaces provides you with the function - `getOriginForUEA()`.
+```solidity
+    /**
+     * @dev Returns the owner key (UOA) for a given UEA address
+     * @param addr Any given address ( msg.sender ) on push chain
+     * @return account The Universal Account information associated with this UEA
+     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)
+     */
+    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
+```
 
-The function mainly returns 2 data:
+This function plays the critical role of fetching and returning the information about the caller ( **msg.sender** ).
 
+The function mainly returns 2 crucial values:
 - The **UniversalAccountId** of the user, and
 - A boolean that indicates whether or not this caller is a UEA.
 
-### The Increment function
+### Designing the Increment Function
 
-The increment function is the main logic of this contract that updates the count variables based on user’s origin type.
+The `increment` function is the main logic of this contract that updates the count variables based on user’s origin type.
 
 In order to achieve this, the `increment` function does the following:
 
 - calls the `getOriginForUEA()` with **msg.sender** as argument
 - this provides us with **isUEA and UniversalAccountId** for the caller.
 - then we check if **isUEA is false,** this means the caller is a native Push User.
-  - for such users, the function increments `countPC` variable by 1
+- for such users, the function increments `countPC` variable by 1
 
 <details>
   <summary><strong>Why isUEA = false means native Push User?</strong></summary>
@@ -238,7 +199,21 @@ With this, we have simply achieved:
 
 This makes our Counter smart contract **truly universal** with just a few lines of solidity codes.
 
-## Let's Test our UniversalCounter
+## Interact with UniversalCounter App
+A easier way to interact with the contract is to use the LivePlayground below.
+The UniversalCounter app is already deployed on Push Chain Testnet.
+> **UniversalCounter Contract Address:** [0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D](https://donut.push.network/address/0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D?tab=contract)
+
+**Note:** Push Chain easily allows you to interact with the UniversalCounter from any chain.
+
+Follow the steps below to interact with the UniversalCounter:
+- Connect your wallet to the LivePlayground.
+- You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)
+- Click on the `Increment Counter` button to increment the counter.
+- Click on the `Refresh Counter Values` button to refresh the counter values.
+- Click on the `View in Explorer` button to view the transaction in the explorer.
+
+### Let's Test our UniversalCounter App
 
 ```jsx live
 import React, { useState, useEffect } from 'react';
@@ -389,6 +364,34 @@ function UniversalCounterExample() {
       }
     };
 
+    // Function to determine which chain is winning
+    const getWinningChain = () => {
+      if (countEth === -1 || countSol === -1 || countPC === -1) return null;
+      
+      if (countEth > countSol && countEth > countPC) {
+        return `Ethereum is winning with ${countEth} counts`;
+      } else if (countSol > countEth && countSol > countPC) {
+        return `Solana is winning with ${countSol} counts`;
+      } else if (countPC > countEth && countPC > countSol) {
+        return `Push Chain is winning with ${countPC} counts`;
+      } else {
+        // Handle ties
+        if (countEth === countSol && countEth === countPC && countEth > 0) {
+          return `It's a three-way tie with ${countEth} counts each`;
+        } else if (countEth === countSol && countEth > countPC) {
+          return `Ethereum and Solana are tied with ${countEth} counts each`;
+        } else if (countEth === countPC && countEth > countSol) {
+          return `Ethereum and Push Chain are tied with ${countEth} counts each`;
+        } else if (countSol === countPC && countSol > countEth) {
+          return `Solana and Push Chain are tied with ${countSol} counts each`;
+        } else {
+          return null; // No winner yet or all zeros
+        }
+      }
+    };
+
+    const winningMessage = getWinningChain();
+
     return (
       <div
         style={{
@@ -446,29 +449,62 @@ function UniversalCounterExample() {
         </div>
 
         {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
-          <div className='counter-container' style={{ display: 'grid' }}>
-            <button
-              className='increment-button'
-              onClick={handleSendTransaction}
-              disabled={isLoading}
-            >
-              {isLoading ? 'Processing...' : 'Increment Counter'}
-            </button>
+          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+              <button
+                className='increment-button'
+                onClick={handleSendTransaction}
+                disabled={isLoading}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                {isLoading ? 'Processing...' : 'Increment Counter'}
+              </button>
+              
+              <button
+                className='refresh-button'
+                onClick={fetchCounters}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                Refresh Counter Values
+              </button>
+            </div>
+
+            {winningMessage && (
+              <div style={{ margin: '10px 0', fontWeight: 'bold', color: '#d946ef' }}>
+                {winningMessage}
+              </div>
+            )}
 
             {txHash && pushChainClient && (
-              <div className='transaction-info' style={{ display: 'grid' }}>
+              <div className='transaction-info' style={{ textAlign: 'center' }}>
                 <p>
-                  Transaction Hash: <code>{txHash}</code>
+                  Transaction Hash:{' '}
+                  <a
+                    href={pushChainClient.explorer.getTransactionUrl(txHash)}
+                    target='_blank'
+                    style={{ color: '#d946ef', textDecoration: 'underline' }}
+                  >
+                    {txHash}
+                  </a>
                 </p>
-                <a
-                  href={pushChainClient.explorer.getTransactionUrl(txHash)}
-                  target='_blank'
-                >
-                  View in Explorer
-                </a>
-                <button onClick={fetchCounters} className='refresh-button'>
-                  Refresh Counter Values
-                </button>
               </div>
             )}
           </div>
