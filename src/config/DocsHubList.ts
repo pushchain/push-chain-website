@@ -233,7 +233,7 @@ export const GridTopItems = [
       'Push Chain provides a unified toolkit to build truly universal apps.',
     link: {
       label: 'Learn More',
-      href: '/docs/push-chain',
+      href: 'https://docs.push.org',
     },
     image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
       .default,

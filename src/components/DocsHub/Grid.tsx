@@ -12,7 +12,14 @@ export const Grid = () => {
   return (
     <GridWrapper>
       {GridTopItems.map((item, index) => (
-        <GridCard key={index} bg={item.bgColor} bgImage={item.gridBG}>
+        <GridCard
+          key={index}
+          bg={item.bgColor}
+          bgImage={item.gridBG}
+          href={item.href}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <GridImage customWidth={item.customWidth}>
             <Image
               src={item.image}

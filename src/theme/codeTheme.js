@@ -50,7 +50,19 @@ const lightCodeTheme = {
   ],
 };
 
-const darkCodeTheme = require('prism-react-renderer').themes.dracula;
+const darkCodeTheme = {
+  ...baseTheme,
+  styles: [
+    ...baseTheme.styles,
+    {
+      types: ['string'],
+      style: {
+        color: '#BF2DD2',
+      },
+    },
+  ],
+};
+// const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 module.exports = {
   lightCodeTheme,
