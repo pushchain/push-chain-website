@@ -33,15 +33,15 @@ The tutorial is designed to achieve the following:
 2. Modify the Counter contract to a UniversalCounter that works with multiple chains.
 3. Deeply understand the uniqueness and benefits of building Universal Apps on Push Chain.
 
+> **Note:** How to use Tutorials: <br/ >
+> a. Every tutorial is designed with tutorial guide and a LivePlayground to test your code.<br/ >
+> b. **Use Live Playground** to test & interact with SimpleCounter.<br/ >
+> c. **Use Live App Preview** to view the results of your interaction with SimpleCounter.<br/ >
+> d. **Use Push Chain Examples** to view the code for the [tutorials](https://github.com/pushchain/push-chain-examples).<br/ >
+
 ## Let’s Build Counter
-
 The process of building a simple smart contract like a counter is exactly similar to any other EVM Chain.
-
-You can use the same tools, such as:
-
-- [Solidity Language](https://soliditylang.org/)
-- [Foundry](https://getfoundry.sh/), or [Hardhat](https://hardhat.org/)
-- [Remix IDE](https://remix.ethereum.org/)
+You can use the same tools, such as, remix, foundry, hardhat, etc.
 
 To get started, you can use the following contract:
 
@@ -80,7 +80,21 @@ You can use any of the following guides to build and deploy this contract on Pus
 
 Once deployed, you can interact with the Counter contract just like on any other EVM-compatible chain.
 
-## Let's Test our SimpleCounter
+## Interact with SimpleCounter App
+A easier way to interact with the contract is to use the LivePlayground below.
+The SimpleCounter app is already deployed on Push Chain Testnet.
+> **SimpleCounter Contract Address:** [0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17](https://donut.push.network/address/0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17?tab=contract)
+
+**Note:** Push Chain easily allows you to interact with the SimpleCounter from any chain.
+
+Follow the steps below to interact with the SimpleCounter:
+- Connect your wallet to the LivePlayground.
+- You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)
+- Click on the `Increment Counter` button to increment the counter.
+- Click on the `Refresh Counter Values` button to refresh the counter values.
+- Click on the `View in Explorer` button to view the transaction in the explorer.
+
+### Let's Test our SimpleCounter
 
 ```jsx live
 import React, { useState, useEffect } from 'react';
@@ -101,25 +115,6 @@ function SimpleCounterExample() {
 
   // Define Simple Counter ABI, taking minimal ABI for the demo
   const UCABI = [
-    {
-      anonymous: false,
-      inputs: [
-        {
-          indexed: true,
-          internalType: 'uint256',
-          name: 'countPC',
-          type: 'uint256',
-        },
-        {
-          indexed: true,
-          internalType: 'address',
-          name: 'caller',
-          type: 'address',
-        },
-      ],
-      name: 'CountIncremented',
-      type: 'event',
-    },
     {
       inputs: [],
       name: 'increment',
@@ -331,16 +326,21 @@ function SimpleCounterExample() {
 ```
 
 ## What's Next?
+This was just a simple tutorial.
 
-While this was a simple tutorial to help you get started with deploying contracts on Push Chain, the next phase introduces the power of **Universal Apps**.
+What we did in this tutorial:
+
+- Deployed a simple counter contract on Push Chain.
+- Interacted with the contract from any chain easily. ( ethereum, solana or push chain)
+
+The next phase introduces the true power of **Universal Apps**.
 
 In the next part, we modify this contract to implement the following:
 
 1. `increment()` can be called by users on **any chain**.
-2. The contract will natively detect which chain the `msg.sender` belongs to.
-3. The contract will maintain a `count` for each chain based on the caller’s origin.
+2. But now, the contract will natively detect which chain the `msg.sender` belongs to.
+3. Moreover, the contract will maintain a `count` for each chain based on the caller’s origin.
 
 > All of these features will be natively supported in the contract with no requirement of
 > third-party oracles, interop providers or packages.
->
-> **This is only possible on Push Chain.**
+> **This is only possible on Push Chain.** 
