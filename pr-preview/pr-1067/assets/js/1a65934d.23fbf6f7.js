@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_chain_website=self.webpackChunkpush_chain_website||[]).push([[19138],{247244:e=>{e.exports=JSON.parse('{"label":"Token Sale","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/token-sale","allTagsPath":"/push-chain-website/pr-preview/pr-1067/blog/tags","count":2,"unlisted":false}')}}]);

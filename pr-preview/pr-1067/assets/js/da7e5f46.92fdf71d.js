@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_chain_website=self.webpackChunkpush_chain_website||[]).push([[26633],{521238:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/push-points","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

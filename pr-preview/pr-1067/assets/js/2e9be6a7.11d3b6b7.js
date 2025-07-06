@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[85768],{
+
+/***/ 384405:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"label":"Ethdenver 2023","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethdenver-2023","allTagsPath":"/push-chain-website/pr-preview/pr-1067/blog/tags","count":1,"unlisted":false}');
+
+/***/ })
+
+}]);
