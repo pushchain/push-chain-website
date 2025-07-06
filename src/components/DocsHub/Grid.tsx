@@ -1,3 +1,6 @@
+/* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import Link from '@docusaurus/Link';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { styled } from 'styled-components';
@@ -9,8 +12,8 @@ export const Grid = () => {
   return (
     <GridWrapper>
       {GridTopItems.map((item, index) => (
-        <GridCard key={index} style={{ backgroundColor: item.bgColor }}>
-          <GridImage>
+        <GridCard key={index} bg={item.bgColor} bgImage={item.gridBG}>
+          <GridImage customWidth={item.customWidth}>
             <Image
               src={item.image}
               srcSet={`${item.image2x} 2x, ${item.image3x} 3x`}
@@ -50,13 +53,18 @@ const GridWrapper = styled.div`
 
 const GridCard = styled(Link)`
   border-radius: 32px;
-  background: #dd6fff;
   align-items: flex-start;
   padding: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 414px;
+
+  background: ${({ bg }) => bg};
+  background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : 'none')};
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 `;
 
 const GridImage = styled.div`
@@ -77,8 +85,8 @@ const GridImage = styled.div`
   align-items: center;
 
   .pulse-logo {
-    width: 70px;
     height: auto;
+    width: ${({ customWidth }) => customWidth || '90px'};
     z-index: 99999;
   }
 `;

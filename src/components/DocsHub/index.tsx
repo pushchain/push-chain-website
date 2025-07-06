@@ -8,6 +8,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import styled, { keyframes } from 'styled-components';
 import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs';
+import { Button } from '../../css/SharedStyling';
 
 // Internal Components
 import {
@@ -114,13 +115,18 @@ export default function HomepageFeatures(): JSX.Element {
         <Content padding='0px'>
           <HeroHeader>
             <ItemV zIndex='1'>
-              <H1 color='var(--ifm-color-primary-text)' margin='0 !important'>
+              <H1
+                color='var(--ifm-color-title-text-color)'
+                margin='0 !important'
+              >
                 Documentation Hub
               </H1>
               <Span
-                color='var(--ifm-color-primary-text)'
-                padding='0 0 64px 0'
+                color='var(--ifm-playground-header-terminalcolor)'
+                padding='0'
                 textAlign='center'
+                fontSize='1.25rem'
+                fontWeight='400'
               >
                 Get started with building shared state apps for any chain.
               </Span>
@@ -132,9 +138,8 @@ export default function HomepageFeatures(): JSX.Element {
               left='0'
               right='0'
               height='50%'
-              padding='14rem 0'
+              padding='10rem 0'
             >
-              <PulseStatic />
               <Pulse>
                 <Image
                   src={
@@ -270,6 +275,40 @@ export default function HomepageFeatures(): JSX.Element {
         </Content>
       </Section>
 
+      <Section>
+        <Content>
+          <ItemV>
+            <H2
+              fontSize='3rem'
+              color='var(--ifm-playground-buttontextcolor)'
+              fontWeight='600'
+              lineHeight='125%'
+            >
+              Want to dive deeper?
+            </H2>
+            <Span
+              fontSize='1.25rem'
+              color='var(--ifm-playground-header-text)'
+              fontWeight='400'
+              lineHeight='125%'
+            >
+              Explore the full docs to get started.
+            </Span>
+
+            <Button
+              margin='24px 0 0 0'
+              background='#D548EC'
+              fontSize='14px'
+              fontWeight='600'
+              lineHeight='normal'
+              padding='13px'
+            >
+              Explore Docs
+            </Button>
+          </ItemV>
+        </Content>
+      </Section>
+
       <Footer showPattern={false} />
     </Layout>
   );
@@ -281,31 +320,17 @@ const DocsHeroSection = styled(Section)`
 `;
 
 const HeroHeader = styled(ItemV)`
-  padding: 20rem 0 5.5rem 0;
+  padding: 15rem 0 0 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   & ${H1} {
-    font-size: var(--ifm-h1-font-size);
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.96px;
   }
-`;
-
-const pulseStaticAnim = keyframes`
-  100% {
-    opacity: 0.25;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-  }
-`;
-
-const PulseStatic = styled.div`
-  width: 40px;
-  height: 40px;
-  background: #000;
-  border-radius: 50%;
-  position: absolute;
-  animation: ${pulseStaticAnim} 5s ease-out forwards;
-  z-index: 2;
 `;
 
 const Pulse = styled.div`
@@ -328,7 +353,7 @@ const Pulse = styled.div`
 const pulsateAnim = keyframes`
   100% {
     opacity: 0;
-    transform: scale(12);
+    transform: scale(8);
   }
 `;
 
@@ -341,6 +366,7 @@ const Pulsate = styled.span`
   opacity: 0.8;
   animation: ${pulsateAnim} 6s ease-out infinite;
   animation-delay: calc(1s * ${(props) => (props.stagger ? props.stagger : 1)});
+  z-index: 0;
 `;
 
 const HomepageSection = styled(Section)`

@@ -241,6 +241,8 @@ export const GridTopItems = [
       .default,
     image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
       .default,
+    customWidth: '70px',
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
   },
   {
     bgColor: '#4277F7',
@@ -249,23 +251,25 @@ export const GridTopItems = [
     description:
       'everything you will require from Push Chain SDK to create your universal app.',
     link: null,
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/Build.png`).default,
+    image2x: require(`@site/static/assets/website/docshub/Build@2x.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+    image3x: require(`@site/static/assets/website/docshub/Build@3x.png`)
       .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
+    customWidth: '110px',
+    gridBG: require(`@site/static/assets/website/docshub/BlueBG.png`).default,
   },
   {
     bgColor: '#4277F7',
     title: 'UI Kit',
     href: 'https://docs.push.org',
     description: 'Integrate any React based app in less than 5 minutes.',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/UIKit.png`).default,
+    image2x: require(`@site/static/assets/website/docshub/UIKit@2x.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+    image3x: require(`@site/static/assets/website/docshub/UIKit@3x.png`)
       .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
+    customWidth: '95px',
+    gridBG: require(`@site/static/assets/website/docshub/BlueBG.png`).default,
   },
 ];
