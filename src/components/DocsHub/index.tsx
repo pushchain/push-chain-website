@@ -370,8 +370,6 @@ const Pulsate = styled.span`
 `;
 
 const HomepageSection = styled(Section)`
-  margin-top: 70px;
-  margin-bottom: 30px;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
