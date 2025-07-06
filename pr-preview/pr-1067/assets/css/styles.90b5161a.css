@@ -5995,7 +5995,7 @@ span.token-line:has(> span.token.console:nth-child(2)) {
   padding: 24px 16px !important;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0px;
 }
 
 .playgroundPreview_bb8I {

@@ -395,7 +395,7 @@ function _createMdxContent(props) {
           children: "Push Chain Donut Testnet (42101)"
         })]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "4-compile-your-contract",
       children: "4. Compile Your Contract"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -414,7 +414,7 @@ function _createMdxContent(props) {
           children: "Compile"
         }), " next to your contract file"]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "5-deploy-your-contract",
       children: "5. Deploy Your Contract"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
@@ -433,7 +433,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Confirm the transaction in your wallet"
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "next-steps",
       children: "Next Steps"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {

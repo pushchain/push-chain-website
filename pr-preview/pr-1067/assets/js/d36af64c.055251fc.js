@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[17725],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[41532],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -124,71 +124,6 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
-/***/ 303999:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ Details_Details)
-});
-
-;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
-function _objectDestructuringEmpty(t) {
-  if (null == t) throw new TypeError("Cannot destructure " + t);
-}
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(618215);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
-var dist_clsx = __webpack_require__(15066);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
-var useIsBrowser = __webpack_require__(992303);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
-var Collapsible = __webpack_require__(41422);
-;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
-const _excluded=["summary","children"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
- * A mostly un-styled `<details>` element with smooth collapsing. Provides some
- * very lightweight styles, but you should bring your UI.
- */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
-// only after animation completes, otherwise close animations won't work
-const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
-if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
-const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
-// setOpen(false);
-}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
-,collapsed:collapsed,disableSSRStyle:true// Allows component to work fine even with JS disabled!
-,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Should we have a custom details/summary comp in Infima instead of reusing
-// alert classes?
-const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
-
-/***/ }),
-
 /***/ 411470:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -253,7 +188,7 @@ return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{classNam
 
 /***/ }),
 
-/***/ 670341:
+/***/ 525005:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -266,54 +201,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(474848);
-/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(28453);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(28453);
 /* harmony import */ var _theme_Tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(411470);
 /* harmony import */ var _theme_TabItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(119365);
-/* harmony import */ var _theme_Details__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(303999);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(113490);
+/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
-	id: 'docs-deep-dives-json-rpc-functions',
-	title: 'JSON-RPC Functions',
+	id: 'docs-chain-deep-dives-localnet',
+	title: 'Localnet',
 	hide_title: false,
-	slug: './json-rpc-functions',
+	slug: './localnet',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 1,
-	image: '/assets/docs/previews/docs_deep_dives--json-rpc_functions.png'
+	sidebar_position: 3,
+	image: '/assets/docs/previews/docs_chain_deep_dives--localnet.png'
 };
 const contentTitle = undefined;
 const metadata = {
-  "id": "chain/deep-dives/docs-deep-dives-json-rpc-functions",
-  "title": "JSON-RPC Functions",
-  "description": "JSON-RPC Functions | Deep Dives | Push Chain Docs",
-  "source": "@site/docs/chain/05-deep-dives/01-JSON-RPC-Functions.mdx",
+  "id": "chain/deep-dives/docs-chain-deep-dives-localnet",
+  "title": "Localnet",
+  "description": "Localnet | Setup | Push Chain Docs",
+  "source": "@site/docs/chain/05-deep-dives/03-Localnet.mdx",
   "sourceDirName": "chain/05-deep-dives",
-  "slug": "/chain/deep-dives/json-rpc-functions",
-  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/json-rpc-functions",
+  "slug": "/chain/deep-dives/localnet",
+  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/localnet",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/05-deep-dives/01-JSON-RPC-Functions.mdx",
+  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/05-deep-dives/03-Localnet.mdx",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 1,
+  "sidebarPosition": 3,
   "frontMatter": {
-    "id": "docs-deep-dives-json-rpc-functions",
-    "title": "JSON-RPC Functions",
+    "id": "docs-chain-deep-dives-localnet",
+    "title": "Localnet",
     "hide_title": false,
-    "slug": "./json-rpc-functions",
+    "slug": "./localnet",
     "displayed_sidebar": "pushChainSidebar",
-    "sidebar_position": 1,
-    "image": "/assets/docs/previews/docs_deep_dives--json-rpc_functions.png"
+    "sidebar_position": 3,
+    "image": "/assets/docs/previews/docs_chain_deep_dives--localnet.png"
   },
   "sidebar": "pushChainSidebar",
   "previous": {
-    "title": "Deep Dives",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives"
-  },
-  "next": {
     "title": "Push Node Manager",
     "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/push-node-manager"
+  },
+  "next": {
+    "title": "Changelog",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/changelog"
   }
 };
 const assets = {
@@ -327,111 +261,275 @@ const assets = {
 
 
 const toc = [{
-  "value": "Examples",
-  "id": "examples",
+  "value": "Prerequisites",
+  "id": "prerequisites",
   "level": 2
 }, {
-  "value": "Get Block by Number",
-  "id": "get-block-by-number",
+  "value": "Setup &amp; Start Push Chain Localnet",
+  "id": "setup--start-push-chain-localnet",
+  "level": 2
+}, {
+  "value": "1. Clone and install Push Chain",
+  "id": "1-clone-and-install-push-chain",
   "level": 3
 }, {
-  "value": "Get Current Block Number",
-  "id": "get-current-block-number",
+  "value": "2. Start the local testnet",
+  "id": "2-start-the-local-testnet",
   "level": 3
 }, {
-  "value": "Get Transaction by txHash",
-  "id": "get-transaction-by-txhash",
+  "value": "Deploy Protocol Contracts (UEA)",
+  "id": "deploy-protocol-contracts-uea",
+  "level": 2
+}, {
+  "value": "1. Clone and build smart account contracts",
+  "id": "1-clone-and-build-smart-account-contracts",
   "level": 3
 }, {
-  "value": "Get Account Balance",
-  "id": "get-account-balance",
+  "value": "2. Fund Your EVM Wallet on Localnet",
+  "id": "2-fund-your-evm-wallet-on-localnet",
   "level": 3
 }, {
-  "value": "Further Information",
-  "id": "further-information",
+  "value": "Step-by-step",
+  "id": "step-by-step",
+  "level": 4
+}, {
+  "value": "3. Deploy UEAFactory &amp; Implementations",
+  "id": "3-deploy-ueafactory--implementations",
+  "level": 3
+}, {
+  "value": "Add External Chain Configurations",
+  "id": "add-external-chain-configurations",
+  "level": 2
+}, {
+  "value": "Solana Devnet",
+  "id": "solana-devnet",
+  "level": 3
+}, {
+  "value": "Ethereum Sepolia",
+  "id": "ethereum-sepolia",
+  "level": 3
+}, {
+  "value": "Next steps",
+  "id": "next-steps",
   "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    blockquote: "blockquote",
     code: "code",
     h2: "h2",
     h3: "h3",
+    h4: "h4",
+    li: "li",
+    ol: "ol",
     p: "p",
     pre: "pre",
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_5__/* .useMDXComponents */ .R)(),
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_4__/* .useMDXComponents */ .R)(),
     ...props.components
   }, {Head} = _components;
   if (!Head) _missingMdxReference("Head", true);
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Head, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: "JSON-RPC Functions | Deep Dives | Push Chain Docs"
+        children: "Localnet | Setup | Push Chain Docs"
       })
-    }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Push Chain is an EVM-compatible blockchain, and thus supports the standard JSON-RPC functions available on all Ethereum-compatible networks. This document provides examples of how to call basic JSON-RPC functions on Push Chain. For comprehensive details, visit the official ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "https://ethereum.org/en/developers/docs/apis/json-rpc/",
-        children: "Ethereum JSON-RPC Documentation"
-      }), "."]
+    }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Learn how to deploy localnet of Push Chain to understand or speed up the development of your app."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "examples",
-      children: "Examples"
+      id: "prerequisites",
+      children: "Prerequisites"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Here are examples showcasing how to make JSON-RPC requests using CURL."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "get-block-by-number",
-      children: "Get Block by Number"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Fetch block details for a specific block number:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST https://evm.pn1.dev.push.org \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getBlockByNumber\",\n       \"params\":[\"0x10d4f\", true],\n       \"id\":1\n     }'\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "get-current-block-number",
-      children: "Get Current Block Number"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Retrieve the current block number:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST https://evm.pn1.dev.push.org \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_blockNumber\",\n       \"params\":[],\n       \"id\":1\n     }'\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "get-transaction-by-txhash",
-      children: "Get Transaction by txHash"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Fetch transaction details using its hash:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST https://evm.pn1.dev.push.org \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getTransactionByHash\",\n       \"params\":[\"0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238\"],\n       \"id\":1\n     }'\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "get-account-balance",
-      children: "Get Account Balance"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Retrieve the balance of an address:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -X POST https://evm.pn1.dev.push.org \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getBalance\",\n       \"params\":[\"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266\", \"latest\"],\n       \"id\":1\n     }'\n"
-      })
+      children: "Ensure the following tools are installed:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "https://go.dev/doc/install",
+          children: "Go"
+        }), " (v1.21+)"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "https://book.getfoundry.sh/getting-started/installation",
+          children: "Foundry"
+        })
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Git"
+      }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "further-information",
-      children: "Further Information"
+      id: "setup--start-push-chain-localnet",
+      children: "Setup & Start Push Chain Localnet"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "1-clone-and-install-push-chain",
+      children: "1. Clone and install Push Chain"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "git clone https://github.com/pushchain/push-chain\ncd push-chain\nmake install\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "2-start-the-local-testnet",
+      children: "2. Start the local testnet"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "make sh-testnet\n"
+      })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["For more JSON-RPC methods and their usage, refer to the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-        href: "https://ethereum.org/en/developers/docs/apis/json-rpc/",
-        children: "Ethereum JSON-RPC API Reference"
-      }), "."]
+      children: ["This launches the local Push Chain node. You can now interact with it using the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "pchaind"
+      }), " CLI."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "deploy-protocol-contracts-uea",
+      children: "Deploy Protocol Contracts (UEA)"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "To enable universal execution from EVM/Solana chains, you need to deploy protocol contracts to your localnet."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "1-clone-and-build-smart-account-contracts",
+      children: "1. Clone and build smart account contracts"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "git clone https://github.com/pushchain/push-smart-account-v1\ncd push-smart-account-v1\nforge build\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "2-fund-your-evm-wallet-on-localnet",
+      children: "2. Fund Your EVM Wallet on Localnet"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Before deploying the contracts, your EVM wallet must have enough UPC tokens on the local Push Chain network."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["To send funds, you need the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Bech32 format"
+      }), " of your EVM wallet address (since Push Chain uses Cosmos SDK-style addresses for transfers)."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h4, {
+      id: "step-by-step",
+      children: "Step-by-step"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Take your EVM address"
+        }), " (in hex, 0x-prefixed format) — for example:"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "0x778d3206374f8ac265728e18e3fe2ae6b93e4ce4\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      start: "2",
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Convert it to Bech32 format"
+        }), " using:"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "pchaind debug addr 778d3206374f8ac265728e18e3fe2ae6b93e4ce4\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+        children: ["🔁 Replace ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "778d...ce4"
+        }), " with your ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "own EVM address"
+        }), " (without the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "0x"
+        }), " prefix)."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      start: "3",
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "You should get an output like this:"
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "Address (hex): 778D3206374F8AC265728E18E3FE2AE6B93E4CE4\nBech32 Acc: push1jtdw9kjc2yptl6yjyad69q73v2gcl29xfmmq5a\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
+      start: "4",
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "Use the Bech32 account address"
+        }), " (e.g. ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "push1jtdw9kjc2yptl6yjyad69q73v2gcl29xfmmq5a"
+        }), ") to receive funds:"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "pchaind tx bank send push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20 push1jtdw9kjc2yptl6yjyad69q73v2gcl29xfmmq5a 100000000000000000000000upc --gas-prices 1000000000upc -y\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+        children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20"
+        }), " address is pre-funded at genesis with ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "2 billion UPC"
+        }), ", so it’s safe to use as the sender."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "3-deploy-ueafactory--implementations",
+      children: "3. Deploy UEAFactory & Implementations"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Once funded, run the deployment script:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "forge script script/deployFactory.s.sol --rpc-url http://localhost:8545 --broadcast --private-key <YOUR_LOCAL_PRIVATE_KEY>\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "This sets up the UEAFactory and registers the EVM + SVM UEA implementations needed for universal execution."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "add-external-chain-configurations",
+      children: "Add External Chain Configurations"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Now configure Push Chain to interact with external chains."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "solana-devnet",
+      children: "Solana Devnet"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "pchaind tx ue update-chain-config --chain-config '{\n  \"namespace\": \"solana\",\n  \"chain_id\": \"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\",\n  \"public_rpc_url\": \"https://api.devnet.solana.com\",\n  \"vm_type\": 1,\n  \"locker_contract_address\": \"3zrWaMknHTRQpZSxY4BvQxw9TStSXiHcmcp3NMPTFkke\",\n  \"block_confirmation\": 1,\n  \"funds_added_event_topic\": \"FundsAddedEvent\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "ethereum-sepolia",
+      children: "Ethereum Sepolia"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-bash",
+        children: "pchaind tx ue add-chain-config --chain-config '{\n  \"namespace\": \"eip155\",\n  \"chain_id\": \"11155111\",\n  \"public_rpc_url\": \"https://1rpc.io/sepolia\",\n  \"vm_type\": 0,\n  \"locker_contract_address\": \"0xdEF1a1265247488e5934706657404F40A81eDEe4\",\n  \"block_confirmation\": 6,\n  \"funds_added_event_topic\": \"0xddcd6ef7998ae51b4ead4e9aa669a7d5ff30af88eddaa5062c91b08153da07c0\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+        children: ["If you’ve deployed a custom ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "FeeGateway"
+        }), " contract, you can include its address in the chain config as well."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "That’s it!\nYou have successfully set up the Push Chain localnet and are ready to bring your imagination into reality."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next steps"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Interact and make your app universal via ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "/docs/chain/build/",
+          children: "Core SDK"
+        })]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Abstract wallet and gas fee for your Users by implementing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit/",
+          children: "UI Kit"
+        })]
+      }), "\n"]
     })]
   });
 }
 function MDXContent(props = {}) {
   const {wrapper: MDXLayout} = {
-    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_5__/* .useMDXComponents */ .R)(),
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_4__/* .useMDXComponents */ .R)(),
     ...props.components
   };
   return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
