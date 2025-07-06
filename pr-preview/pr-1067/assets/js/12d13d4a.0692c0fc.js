@@ -294,24 +294,29 @@ const toc = [{
   "id": "understanding-the-universal-counter-app",
   "level": 2
 }, {
-  "value": "Including UEAFactory Interface",
-  "id": "including-ueafactory-interface",
+  "value": "Using the UEAFactory Interface",
+  "id": "using-the-ueafactory-interface",
   "level": 3
 }, {
-  "value": "The Increment function",
-  "id": "the-increment-function",
+  "value": "Designing the Increment Function",
+  "id": "designing-the-increment-function",
   "level": 3
 }, {
   "value": "Summary",
   "id": "summary",
   "level": 2
 }, {
-  "value": "Let&#39;s Test our UniversalCounter",
-  "id": "lets-test-our-universalcounter",
+  "value": "Interact with UniversalCounter App",
+  "id": "interact-with-universalcounter-app",
   "level": 2
+}, {
+  "value": "Let&#39;s Test our UniversalCounter App",
+  "id": "lets-test-our-universalcounter-app",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     blockquote: "blockquote",
     code: "code",
     em: "em",
@@ -424,14 +429,17 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-solidity",
-        children: "// SPDX-License-Identifier: MIT\npragma solidity 0.8.22;\n\nstruct UniversalAccountId {\n    // @notice Chain namespace identifier (e.g., \"eip155\" or \"solana\").\n    string chainNamespace;\n    // @notice Chain ID of the source chain of the owner of this UEA.\n    string chainId;\n    // @notice Owner's public key or address in bytes format.\n    bytes owner;\n}\n\ninterface IUEAFactory {\n    /**\n     * @notice Returns the Universal Account information and type for a given address on Push Chain.\n     * @param addr The address to query (typically msg.sender).\n     * @return account The Universal Account information associated with this UEA.\n     * @return isUEA True if the address is a UEA contract, false if it is a native EOA of Push Chain.\n     */\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n}\n\n/**\n * @title UniversalCounter\n * @notice Tracks and increments counters for users from different blockchains (Ethereum, Solana, Push Chain) natively.\n * @dev Uses Push Chain's UEA system to identify the origin chain of the caller and increments the appropriate counter.\n */\ncontract UniversalCounter {\n    /// @notice Counter for Ethereum users (chainNamespace: \"eip155\", chainId: \"1\").\n    uint256 public countEth;\n    /// @notice Counter for Solana users (chainNamespace: \"solana\", chainId: \"5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp\").\n    uint256 public countSol;\n    /// @notice Counter for native Push Chain users (EOA, not UEA).\n    uint256 public countPC;\n\n    /**\n     * @notice Emitted when the counter is incremented by any user.\n     * @param newCount The new total count after increment.\n     * @param caller The address of the user who called increment().\n     * @param chainNamespace The namespace of the caller's origin chain (e.g., \"eip155\", \"solana\").\n     * @param chainId The chain ID of the caller's origin chain (e.g., \"1\" for Ethereum mainnet).\n     */\n    event CountIncremented(\n        uint256 newCount,\n        address indexed caller,\n        string chainNamespace,\n        string chainId\n    );\n\n    /**\n     * @notice Initializes the Counter contract.\n     * @dev No special initialization logic required.\n     */\n    constructor() {}\n\n    /**\n     * @notice Increments the counter for the caller's origin chain.\n     * @dev Uses IUEAFactory to determine the caller's chain. Increments the appropriate counter based on the chain.\n     *      - If the caller is a native Push Chain EOA, increments countPC.\n     *      - If the caller is a UEA from Solana, increments countSol.\n     *      - If the caller is a UEA from Ethereum, increments countEth.\n     *      - Reverts for unsupported chains.\n     * @custom:example\n     *      - Bob (Ethereum user) calls increment() -> countEth is incremented.\n     *      - Dan (Push Chain user) calls increment() -> countPC is incremented.\n     */\n    function increment() public {\n        address caller = msg.sender;\n        (UniversalAccountId memory originAccount, bool isUEA) =\n            IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(caller);\n\n        if (!isUEA) {\n            // If it's a native Push Chain EOA (isUEA = false)\n            countPC += 1;\n        } else {\n            bytes32 chainHash = keccak256(abi.encodePacked(originAccount.chainNamespace, originAccount.chainId));\n\n            if (chainHash == keccak256(abi.encodePacked(\"solana\",\"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\"))) {\n                countSol += 1;\n            } else if (chainHash == keccak256(abi.encodePacked(\"eip155\",\"11155111\"))) {\n                countEth += 1;\n            } else {\n                revert(\"Invalid chain\");\n            }\n        }\n\n        emit CountIncremented(getCount(), caller, originAccount.chainNamespace, originAccount.chainId);\n    }\n\n    /**\n     * @notice Resets all counters (Ethereum, Solana, Push Chain) to zero.\n     * @dev Can be called by anyone. Use with caution as it affects all users.\n     */\n    function reset() public {\n        countEth = 0;\n        countSol = 0;\n        countPC = 0;\n    }\n\n    /**\n     * @notice Returns the total count across all chains.\n     * @return The sum of countEth, countSol, and countPC.\n     */\n    function getCount() public view returns (uint256) {\n        return countEth + countSol + countPC;\n    }\n}\n"
+        children: "// SPDX-License-Identifier: MIT\npragma solidity 0.8.22;\n\n// Universal Account ID Struct and IUEAFactory Interface\n\nstruct UniversalAccountId {\n    string chainNamespace;\n    string chainId;\n    bytes owner;\n}\n\ninterface IUEAFactory {\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n}\n\ncontract UniversalCounter {\n    uint256 public countEth;\n    uint256 public countSol;\n    uint256 public countPC;\n\n    event CountIncremented(\n        uint256 newCount,\n        address indexed caller,\n        string chainNamespace,\n        string chainId\n    );\n\n    constructor() {}\n\n    function increment() public {\n        address caller = msg.sender;\n        (UniversalAccountId memory originAccount, bool isUEA) =\n            IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(caller);\n\n        if (!isUEA) {\n            // If it's a native Push Chain EOA (isUEA = false)\n            countPC += 1;\n        } else {\n            bytes32 chainHash = keccak256(abi.encodePacked(originAccount.chainNamespace, originAccount.chainId));\n\n            if (chainHash == keccak256(abi.encodePacked(\"solana\",\"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\"))) {\n                countSol += 1;\n            } else if (chainHash == keccak256(abi.encodePacked(\"eip155\",\"11155111\"))) {\n                countEth += 1;\n            } else {\n                revert(\"Invalid chain\");\n            }\n        }\n\n        emit CountIncremented(getCount(), caller, originAccount.chainNamespace, originAccount.chainId);\n    }\n\n    function reset() public {\n        countEth = 0;\n        countSol = 0;\n        countPC = 0;\n    }\n\n    function getCount() public view returns (uint256) {\n        return countEth + countSol + countPC;\n    }\n}\n"
       })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "understanding-the-universal-counter-app",
+      children: "Understanding the Universal Counter App"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["As previously mentioned, the unique aspect of this smart contract is its ability to determine all imperative details of the user ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["The unique aspect of this smart contract is its ability to determine all imperative details of the user ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "( msg.sender )"
       }), " instantly and natively."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["This means, for any given ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+      children: ["In simpler terms, for any given ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: "msg.sender"
       }), " address, the contract is able to quickly identify:"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
@@ -448,34 +456,35 @@ function _createMdxContent(props) {
           children: "the address of the caller on the source chain."
         })
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "These details are natively available for any smart contract built on Push Chain."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["This is enabled using ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "UEAFactory Interface."
-      })]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "understanding-the-universal-counter-app",
-      children: "Understanding the Universal Counter App"
+      children: ["These details are natively available for any smart contract built on Push Chain.\nThis is enabled via ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "https://github.com/pushchain/push-chain-core-contracts/blob/main/src/Interfaces/IUEAFactory.sol",
+          children: "UEAFactory Interface"
+        })
+      }), "."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "including-ueafactory-interface",
-      children: "Including UEAFactory Interface"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "The first step is to include the UEAFactory interface in your contract."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+      id: "using-the-ueafactory-interface",
+      children: "Using the UEAFactory Interface"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["The first step is to achieve the universal functionality is to use the UEAFactory interface in our contract.\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
         children: "This can either be imported or directly included in your contract."
-      })
+      })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["This interfaces provides you with the function - ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "getOriginForUEA()"
-      }), " which plays the critical role of fetching and returning the information about the caller ( ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
-          children: "msg.sender )."
-        })
-      })]
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        className: "language-solidity",
+        children: "    /**\n     * @dev Returns the owner key (UOA) for a given UEA address\n     * @param addr Any given address ( msg.sender ) on push chain\n     * @return account The Universal Account information associated with this UEA\n     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)\n     */\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["This function plays the critical role of fetching and returning the information about the caller ( ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "msg.sender"
+      }), " )."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "The function mainly returns 2 data:"
+      children: "The function mainly returns 2 crucial values:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
@@ -485,10 +494,12 @@ function _createMdxContent(props) {
         children: "A boolean that indicates whether or not this caller is a UEA."
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "the-increment-function",
-      children: "The Increment function"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "The increment function is the main logic of this contract that updates the count variables based on user’s origin type."
+      id: "designing-the-increment-function",
+      children: "Designing the Increment Function"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "increment"
+      }), " function is the main logic of this contract that updates the count variables based on user’s origin type."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["In order to achieve this, the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "increment"
@@ -507,13 +518,11 @@ function _createMdxContent(props) {
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: ["then we check if ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
           children: "isUEA is false,"
-        }), " this means the caller is a native Push User.", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-          children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-            children: ["for such users, the function increments ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-              children: "countPC"
-            }), " variable by 1"]
-          }), "\n"]
-        }), "\n"]
+        }), " this means the caller is a native Push User."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["for such users, the function increments ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "countPC"
+        }), " variable by 1"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(Details, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("summary", {
@@ -575,14 +584,52 @@ function _createMdxContent(props) {
         children: "truly universal"
       }), " with just a few lines of solidity codes."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "lets-test-our-universalcounter",
-      children: "Let's Test our UniversalCounter"
+      id: "interact-with-universalcounter-app",
+      children: "Interact with UniversalCounter App"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "A easier way to interact with the contract is to use the LivePlayground below.\nThe UniversalCounter app is already deployed on Push Chain Testnet."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "UniversalCounter Contract Address:"
+        }), " ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "https://donut.push.network/address/0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D?tab=contract",
+          children: "0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D"
+        })]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Note:"
+      }), " Push Chain easily allows you to interact with the UniversalCounter from any chain."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Follow the steps below to interact with the UniversalCounter:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Connect your wallet to the LivePlayground."
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Click on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Increment Counter"
+        }), " button to increment the counter."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Click on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "Refresh Counter Values"
+        }), " button to refresh the counter values."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Click on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "View in Explorer"
+        }), " button to view the transaction in the explorer."]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "lets-test-our-universalcounter-app",
+      children: "Let's Test our UniversalCounter App"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-jsx",
         metastring: "live",
         live: true,
-        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction UniversalCounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Universal Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countEth',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countSol',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for the Universal Counter\n  const CONTRACT_ADDRESS = '0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countEth, setCountEth] = useState(-1);\n    const [countSol, setCountSol] = useState(-1);\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoading, setIsLoading] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode transaction data\n    const getTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      if (!pushChainClient) return;\n\n      try {\n        // Create a contract instance for read operations\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        // Fetch counter values\n        const ethCount = await contract.countEth();\n        const solCount = await contract.countSol();\n        const pcCount = await contract.countPC();\n\n        // Update state\n        setCountEth(Number(ethCount));\n        setCountSol(Number(solCount));\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount and when connection status changes\n    useEffect(() => {\n      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED) {\n        fetchCounters();\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoading(true);\n          const data = getTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n\n          // Wait for transaction to be mined\n          await tx.wait();\n\n          // Refresh counter values\n          await fetchCounters();\n          setIsLoading(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoading(false);\n        }\n      }\n    };\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Universal Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>\n            Total Universal Count:{' '}\n            {countEth == -1 ? '...' : countEth + countSol + countPC}\n          </h3>\n\n          <div\n            style={{\n              display: 'flex',\n              flexDirection: 'row',\n              alignItems: 'center',\n              justifyContent: 'space-around',\n              gap: '12px',\n              width: '100%',\n            }}\n          >\n            <div className='counter-box'>\n              <h3>ETH Counter: {countEth == -1 ? '...' : countEth}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>Sol Counter: {countSol == -1 ? '...' : countSol}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>PC Counter: {countPC == -1 ? '...' : countPC}</h3>\n            </div>\n          </div>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'grid' }}>\n            <button\n              className='increment-button'\n              onClick={handleSendTransaction}\n              disabled={isLoading}\n            >\n              {isLoading ? 'Processing...' : 'Increment Counter'}\n            </button>\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ display: 'grid' }}>\n                <p>\n                  Transaction Hash: <code>{txHash}</code>\n                </p>\n                <a\n                  href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                  target='_blank'\n                >\n                  View in Explorer\n                </a>\n                <button onClick={fetchCounters} className='refresh-button'>\n                  Refresh Counter Values\n                </button>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction UniversalCounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Universal Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countEth',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countSol',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for the Universal Counter\n  const CONTRACT_ADDRESS = '0x5A59a5Ac94d5190553821307F98e4673BF3c4a1D';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countEth, setCountEth] = useState(-1);\n    const [countSol, setCountSol] = useState(-1);\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoading, setIsLoading] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode transaction data\n    const getTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      if (!pushChainClient) return;\n\n      try {\n        // Create a contract instance for read operations\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        // Fetch counter values\n        const ethCount = await contract.countEth();\n        const solCount = await contract.countSol();\n        const pcCount = await contract.countPC();\n\n        // Update state\n        setCountEth(Number(ethCount));\n        setCountSol(Number(solCount));\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount and when connection status changes\n    useEffect(() => {\n      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED) {\n        fetchCounters();\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoading(true);\n          const data = getTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n\n          // Wait for transaction to be mined\n          await tx.wait();\n\n          // Refresh counter values\n          await fetchCounters();\n          setIsLoading(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoading(false);\n        }\n      }\n    };\n\n    // Function to determine which chain is winning\n    const getWinningChain = () => {\n      if (countEth === -1 || countSol === -1 || countPC === -1) return null;\n      \n      if (countEth > countSol && countEth > countPC) {\n        return `Ethereum is winning with ${countEth} counts`;\n      } else if (countSol > countEth && countSol > countPC) {\n        return `Solana is winning with ${countSol} counts`;\n      } else if (countPC > countEth && countPC > countSol) {\n        return `Push Chain is winning with ${countPC} counts`;\n      } else {\n        // Handle ties\n        if (countEth === countSol && countEth === countPC && countEth > 0) {\n          return `It's a three-way tie with ${countEth} counts each`;\n        } else if (countEth === countSol && countEth > countPC) {\n          return `Ethereum and Solana are tied with ${countEth} counts each`;\n        } else if (countEth === countPC && countEth > countSol) {\n          return `Ethereum and Push Chain are tied with ${countEth} counts each`;\n        } else if (countSol === countPC && countSol > countEth) {\n          return `Solana and Push Chain are tied with ${countSol} counts each`;\n        } else {\n          return null; // No winner yet or all zeros\n        }\n      }\n    };\n\n    const winningMessage = getWinningChain();\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Universal Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>\n            Total Universal Count:{' '}\n            {countEth == -1 ? '...' : countEth + countSol + countPC}\n          </h3>\n\n          <div\n            style={{\n              display: 'flex',\n              flexDirection: 'row',\n              alignItems: 'center',\n              justifyContent: 'space-around',\n              gap: '12px',\n              width: '100%',\n            }}\n          >\n            <div className='counter-box'>\n              <h3>ETH Counter: {countEth == -1 ? '...' : countEth}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>Sol Counter: {countSol == -1 ? '...' : countSol}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>PC Counter: {countPC == -1 ? '...' : countPC}</h3>\n            </div>\n          </div>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>\n            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>\n              <button\n                className='increment-button'\n                onClick={handleSendTransaction}\n                disabled={isLoading}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                {isLoading ? 'Processing...' : 'Increment Counter'}\n              </button>\n              \n              <button\n                className='refresh-button'\n                onClick={fetchCounters}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                Refresh Counter Values\n              </button>\n            </div>\n\n            {winningMessage && (\n              <div style={{ margin: '10px 0', fontWeight: 'bold', color: '#d946ef' }}>\n                {winningMessage}\n              </div>\n            )}\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ textAlign: 'center' }}>\n                <p>\n                  Transaction Hash:{' '}\n                  <a\n                    href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                    target='_blank'\n                    style={{ color: '#d946ef', textDecoration: 'underline' }}\n                  >\n                    {txHash}\n                  </a>\n                </p>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
       })
     })]
   });
