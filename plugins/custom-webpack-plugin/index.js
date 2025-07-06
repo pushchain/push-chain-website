@@ -1,14 +1,13 @@
-// eslint-disable-next-line
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
-    // eslint-disable-next-line
-    configureWebpack(config, isServer, utils) {
+    configureWebpack(config, isServer) {
       return {
         resolve: {
-          alias: {},
           fallback: {
             assert: require.resolve('assert'),
             http: require.resolve('stream-http'),
@@ -19,22 +18,29 @@ module.exports = function () {
             zlib: require.resolve('browserify-zlib'),
             crypto: require.resolve('crypto-browserify'),
             vm: require.resolve('vm-browserify'),
-            process: require.resolve('process/browser'),
+            process: require.resolve('process/browser.js'),
           },
         },
         plugins: [
           new webpack.ProvidePlugin({
-            process: 'process/browser',
+            process: 'process/browser.js',
           }),
         ],
-        module: {
-          rules: [
-            {
-              test: /\.m?js/,
-              resolve: {
-                fullySpecified: false,
+        optimization: {
+          minimize: false,
+          minimizer: [
+            new TerserPlugin({
+              parallel: false,
+              terserOptions: {
+                format: {
+                  comments: false,
+                },
               },
-            },
+              extractComments: false,
+            }),
+            new CssMinimizerPlugin({
+              parallel: false,
+            }),
           ],
         },
       };
