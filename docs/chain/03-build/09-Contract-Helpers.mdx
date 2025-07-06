@@ -32,6 +32,9 @@ One primary helper is the Universal Executor Account Factory (UEAFactory), which
 
 The [Universal Executor Account Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
 
+<br />
+<br />
+
 ### UEAFactory Features
 
 The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/UEAFactoryV1.sol) serves these key features:
@@ -40,6 +43,9 @@ The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/sr
 - **Deterministic Addresses**: Uses `CREATE2` + minimal proxies for predictable UEA addresses
 - **Deployment Status**: Optionally check if a UEA is already deployed
 - **Owner ↔ UEA Mapping**: Bidirectional mapping between Universal Accounts and their UEAs, VM types and implementations.
+
+<br />
+<br />
 
 ### UEAFactory Interface
 
@@ -64,7 +70,7 @@ forge install pushchain/push-chain-core-contracts
 ```
 
 2. Add remappings to your **foundry.toml** file
-```toml 
+```toml
 remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
 ```
 </Details>
@@ -105,6 +111,9 @@ interface IUEAFactory {
 ```
 
 </Details>
+
+<br />
+<br />
 
 ### UEAFactory Methods
 
@@ -212,6 +221,9 @@ function checkCallerType() public view returns (bool isUEA) {
 </NodeJSVirtualIDE>
 
 </Details>
+
+<br />
+<br />
 
 ### UEAFactory → getUEAForOrigin
 
@@ -377,8 +389,8 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
       console.log('Result -', JSON.stringify(originResult));
     }
 
-    await main().catch(console.error);                                                                                             
-                                                                                                                               
+    await main().catch(console.error);
+
 
 `}
 

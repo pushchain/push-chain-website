@@ -34,10 +34,16 @@ Run a Push Chain node in minutes with our simple one-line installer. Whether you
 - Docker installed ([Get Docker](https://docs.docker.com/get-docker/))
 - That's it!
 
+<br />
+<br />
+
 ### Step 1: Install (30 seconds)
 ```bash
 curl -sSL https://raw.githubusercontent.com/pushchain/push-chain-node/feature/validator-node-setup/push-node-manager/install.sh | bash
 ```
+
+<br />
+<br />
 
 ### Step 2: Start Your Node
 ```bash
@@ -45,6 +51,9 @@ cd push-node-manager
 ./push-node-manager start
 ```
 Your node will start syncing with the network. This is normal and takes 1-2 hours.
+
+<br />
+<br />
 
 ### Step 3: Check Status
 ```bash
@@ -56,6 +65,9 @@ Look for:
 - 📊 **Sync Progress** = Shows percentage and blocks behind
 - 🔍 **Node Type** = Shows if you're running as validator or full node
 
+<br />
+<br />
+
 ### Step 4: Become a Validator
 ```bash
 ./push-node-manager setup
@@ -65,6 +77,9 @@ The wizard will guide you through:
 1. **Creating a wallet** (save your seed phrase!)
 2. **Getting test tokens** from https://faucet.push.org
 3. **Registering as validator** (automatic)
+
+<br />
+<br />
 
 ### Step 5: Verify You're a Validator
 After registration completes:
@@ -309,12 +324,18 @@ By default, your validator runs on localhost. If you want to make it publicly ac
 └─────────────────────────────────┘
 ```
 
+<br />
+<br />
+
 ### Prerequisites
 
 - Ubuntu/Debian server with public IP
 - Domain name pointing to your server
 - Ports 80 and 443 open in firewall
 - Validator already running (`./push-node-manager status`)
+
+<br />
+<br />
 
 ### Quick Setup
 
@@ -324,6 +345,9 @@ By default, your validator runs on localhost. If you want to make it publicly ac
 
 # Or follow the manual steps below
 ```
+
+<br />
+<br />
 
 ### What This Sets Up
 
@@ -342,6 +366,9 @@ By default, your validator runs on localhost. If you want to make it publicly ac
    - WebSocket support
    - Connection pooling
    - Health checks
+
+<br />
+<br />
 
 ### Manual Setup Steps
 
@@ -364,12 +391,14 @@ By default, your validator runs on localhost. If you want to make it publicly ac
    ```bash
    # Test Cosmos RPC
    curl https://rpc.your-domain.com/status
-   
+
    # Test EVM RPC
    curl -X POST https://evm.your-domain.com \
      -H "Content-Type: application/json" \
      -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
    ```
+<br />
+<br />
 
 ### Security Best Practices
 
@@ -378,6 +407,9 @@ By default, your validator runs on localhost. If you want to make it publicly ac
 - Enable rate limiting in nginx configuration
 - Monitor access logs regularly
 - Consider using a CDN for additional protection
+
+<br />
+<br />
 
 ### Notes
 

@@ -98,7 +98,7 @@
   padding: 24px 16px !important;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0px;
 }
 
 .playgroundPreview {

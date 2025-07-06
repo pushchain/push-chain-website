@@ -46,6 +46,9 @@ cd push-chain
 make install
 ```
 
+<br />
+<br />
+
 ### 2. Start the local testnet
 
 ```bash
@@ -65,6 +68,9 @@ git clone https://github.com/pushchain/push-smart-account-v1
 cd push-smart-account-v1
 forge build
 ```
+
+<br />
+<br />
 
 ### 2. Fund Your EVM Wallet on Localnet
 
@@ -103,6 +109,9 @@ pchaind tx bank send push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20 push1jtdw9kjc2y
 
 > The `push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20` address is pre-funded at genesis with **2 billion UPC**, so it’s safe to use as the sender.
 
+<br />
+<br />
+
 ### 3. Deploy UEAFactory & Implementations
 
 Once funded, run the deployment script:
@@ -130,6 +139,9 @@ pchaind tx ue update-chain-config --chain-config '{
   "funds_added_event_topic": "FundsAddedEvent"
 }' --from acc1 --gas-prices 1000000000upc -y
 ```
+
+<br />
+<br />
 
 ### Ethereum Sepolia
 
