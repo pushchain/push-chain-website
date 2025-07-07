@@ -21,8 +21,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fira+Code:wght@300..700&amp;display=swap&quot; rel=&quot;stylesheet">
 <script>!function(n){if("/"===n.search[1]){var a=n.search.slice(1).split("&").map(function(n){return n.replace(/~and~/g,"&")}).join("?");window.history.replaceState(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel="stylesheet" href="/push-chain-website/pr-preview/pr-1067/assets/css/styles.cce9de2e.css">
-<script src="/push-chain-website/pr-preview/pr-1067/assets/js/runtime~main.345100ed.js" defer="defer"></script>
-<script src="/push-chain-website/pr-preview/pr-1067/assets/js/main.5605bd9b.js" defer="defer"></script>
+<script src="/push-chain-website/pr-preview/pr-1067/assets/js/runtime~main.9f597afb.js" defer="defer"></script>
+<script src="/push-chain-website/pr-preview/pr-1067/assets/js/main.c554da09.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div class="Root__PageContainer-sc-dlrhc1-0 dXIsAF PushDocs DocusaurusNavbar"><style data-styled="" data-styled-version="6.1.19">.rssHS{align-items:flex-start;align-self:stretch;background:transparent;border:initial;border-radius:initial;bottom:auto;box-shadow:initial;display:flex;filter:initial;flex:1;flex-basis:auto;flex-direction:column;flex-wrap:wrap;gap:0px;font-size:initial;height:auto;min-height:initial;justify-content:center;left:auto;margin:0px;max-width:initial;min-width:auto;overflow:initial;padding:0px;position:relative;right:auto;text-align:initial;top:auto;width:auto;z-index:auto;}/*!sc*/
@@ -120,8 +120,8 @@ data-styled.g152[id="sc-keyframes-eoUyJr"]{content:"eoUyJr,"}/*!sc*/
 <p><strong>Your users sign exactly as they do today;</strong> Push Chain handles the cross-chain plumbing.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="fee-abstraction-and-cross-chain-execution">Fee Abstraction and Cross-Chain Execution<a href="#fee-abstraction-and-cross-chain-execution" class="hash-link" aria-label="Direct link to Fee Abstraction and Cross-Chain Execution" title="Direct link to Fee Abstraction and Cross-Chain Execution">​</a></h2>
 <p>Push Chain lets users execute contracts without holding $PC (Push Chain native token). Instead, users can initiate transactions from their source chains, such as Ethereum Sepolia or Solana Devnet, and pay gas fees in their native tokens like ETH or SOL.</p>
-<p>When a user signs a transaction from a source chain such as Goerli or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload.</p>
-<p><strong>Your users interact exactly as they would on their home chain</strong>, with no extra steps.</p>
+<p>When a user signs a transaction from a source chain such as Ethereum Sepolia or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload.</p>
+<p><strong>Your users interact exactly as they would on their home chain</strong>, with no additional steps.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="universal-gateway-ug-contracts">Universal Gateway (UG) Contracts<a href="#universal-gateway-ug-contracts" class="hash-link" aria-label="Direct link to Universal Gateway (UG) Contracts" title="Direct link to Universal Gateway (UG) Contracts">​</a></h2>
 <p>Push Chain uses a set of contracts to enable cross-chain transactions. These contracts are deployed on source chains from where the transactions originate and are used to route transactions from source chains to Push Chain.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="account-types-on-push-chain">Account Types on Push Chain<a href="#account-types-on-push-chain" class="hash-link" aria-label="Direct link to Account Types on Push Chain" title="Direct link to Account Types on Push Chain">​</a></h2>
@@ -142,11 +142,13 @@ On-chain contracts that hold logic (e.g. multisigs, social recovery wallets).</p
 <ul>
 <li>
 <p><strong>Universal Executor Accounts (UEAs)</strong><br>
-Proxy accounts that represent source‐chain wallets on Push Chain. UEAs let Ethereum, Solana, and other wallets execute Push Chain logic without needing a native Push Chain wallet, significantly enhancing accessibility and user experience.</p>
+Proxy accounts that represent external chain wallets ( users ) on Push Chain.
+UEAs let Ethereum, Solana, and other wallets execute Push Chain logic without the need for a native Push Chain wallet. This significantly enhances accessibility and overal UX.</p>
 </li>
 <li>
 <p><strong>Universal Origin Accounts (UOAs)</strong><br>
-The original source-chain wallet in <a href="#chain-agnostic-address-examples" title="Examples of chain agnostic address">chain agnostic address</a> format that is behind each UEA. UOAs let you attribute activity back to the user’s home chain.</p>
+The original source-chain wallet in <a href="#chain-agnostic-address-examples" title="Examples of chain agnostic address">chain agnostic address</a> format that is behind each UEA.
+UOAs let you attribute activity back to the user’s home chain.</p>
 </li>
 </ul>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="understanding-universal-account">Understanding Universal Account<a href="#understanding-universal-account" class="hash-link" aria-label="Direct link to Understanding Universal Account" title="Direct link to Understanding Universal Account">​</a></h2>
