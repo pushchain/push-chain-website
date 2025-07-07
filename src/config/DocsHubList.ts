@@ -31,7 +31,7 @@ import { ethers } from 'ethers';
 const wallet = ethers.Wallet.createRandom();
 
 // Create Signer, change JsonRpcProvider to attach different chain's account
-const provider = new ethers.JsonRpcProvider('https://evm.pn1.dev.push.org');
+const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
 const signer = wallet.connect(provider);
 
 // Convert to Universal Signer
