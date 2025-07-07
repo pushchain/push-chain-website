@@ -367,7 +367,7 @@ export default function Home() {
         </BlogSection>
 
         {/* MEDIA COVERAGE SECTION */}
-        <FeaturedInSection id='featured'>
+        {/* <FeaturedInSection id='featured'>
           <Content className='fluid'>
             <ItemH justifyContent='center'>
               <H2
@@ -385,7 +385,7 @@ export default function Home() {
 
             <FeaturedList />
           </Content>
-        </FeaturedInSection>
+        </FeaturedInSection> */}
 
         <FAQSection>
           <Content>
