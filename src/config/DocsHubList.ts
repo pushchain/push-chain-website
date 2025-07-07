@@ -249,7 +249,7 @@ export const GridTopItems = [
     title: `Let's build!`,
     href: 'https://docs.push.org',
     description:
-      'everything you will require from Push Chain SDK to create your universal app.',
+      'Everything you need with Push Chain SDK to create your universal app.',
     link: null,
     image: require(`@site/static/assets/website/docshub/Build.png`).default,
     image2x: require(`@site/static/assets/website/docshub/Build@2x.png`)
