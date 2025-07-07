@@ -15,6 +15,24 @@ export default function IFrameModal({
   const [isIframeVisible, setIsIframeVisible] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
+  // Use proxy for push explorer URLs to bypass CSP
+  const getProxiedUrl = (originalUrl: string) => {
+    if (
+      originalUrl.includes('push.network') ||
+      originalUrl.includes('donut.push.network')
+    ) {
+      // Extract the base URL from the original URL to construct the proxy URL
+      const urlObj = new URL(originalUrl);
+      const baseUrl = `${urlObj.protocol}//${urlObj.host}`;
+
+      // Use the push explorer's proxy endpoint if it's publicly accessible
+      return `${baseUrl}/node-api/iframe-proxy?url=${encodeURIComponent(originalUrl)}`;
+    }
+    return originalUrl;
+  };
+
+  const proxiedUrl = getProxiedUrl(url);
+
   useEffect(() => {
     setIsLoading(true);
   }, [url]);
@@ -26,7 +44,7 @@ export default function IFrameModal({
   const handleRefresh = () => {
     setIsLoading(true);
     if (iframeRef.current) {
-      iframeRef.current.src = url;
+      iframeRef.current.src = proxiedUrl;
     }
   };
 
@@ -184,7 +202,7 @@ export default function IFrameModal({
 
             <iframe
               ref={iframeRef}
-              src={url}
+              src={proxiedUrl}
               title='IFrame Content'
               onLoad={handleIframeLoad}
               sandbox='allow-scripts allow-same-origin allow-forms allow-popups'
