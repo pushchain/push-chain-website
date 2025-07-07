@@ -42,9 +42,9 @@ Users can leverage their existing wallets, whether Ethereum-based (MetaMask), So
 
 Push Chain lets users execute contracts without holding $PC (Push Chain native token). Instead, users can initiate transactions from their source chains, such as Ethereum Sepolia or Solana Devnet, and pay gas fees in their native tokens like ETH or SOL.
 
-When a user signs a transaction from a source chain such as Goerli or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload.
+When a user signs a transaction from a source chain such as Ethereum Sepolia or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload.
 
-**Your users interact exactly as they would on their home chain**, with no extra steps.
+**Your users interact exactly as they would on their home chain**, with no additional steps.
 
 ## Universal Gateway (UG) Contracts
 
@@ -63,10 +63,12 @@ As an EVM-compatible Universal Layer 1 blockchain, Push Chain naturally supports
 > Additionally, Push Chain innovates by introducing:
 
 - **Universal Executor Accounts (UEAs)**<br />
-  Proxy accounts that represent source‐chain wallets on Push Chain. UEAs let Ethereum, Solana, and other wallets execute Push Chain logic without needing a native Push Chain wallet, significantly enhancing accessibility and user experience.
+  Proxy accounts that represent external chain wallets ( users ) on Push Chain. 
+  UEAs let Ethereum, Solana, and other wallets execute Push Chain logic without the need for a native Push Chain wallet. This significantly enhances accessibility and overal UX.
 
 - **Universal Origin Accounts (UOAs)**<br />
-  The original source-chain wallet in [chain agnostic address](#chain-agnostic-address-examples 'Examples of chain agnostic address') format that is behind each UEA. UOAs let you attribute activity back to the user’s home chain.
+  The original source-chain wallet in [chain agnostic address](#chain-agnostic-address-examples 'Examples of chain agnostic address') format that is behind each UEA. 
+  UOAs let you attribute activity back to the user’s home chain.
 
 ## Understanding Universal Account
 
