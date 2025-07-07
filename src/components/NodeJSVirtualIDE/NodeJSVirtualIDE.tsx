@@ -26,6 +26,7 @@ export default function NodeJSVirtualIDE({ repo = null, children }: Props) {
       // pass everything your snippet needs into the scope
       scope={{
         ...ReactLiveScope,
+        Buffer: require('buffer').Buffer,
       }}
       // no-op: we already hand it the fully-wrapped code below
       transformCode={(code: string) => code}

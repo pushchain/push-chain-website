@@ -19,7 +19,7 @@ import {
   CopyButton,
 } from '@site/src/css/SharedStyling';
 import clsx from 'clsx';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiChevronDown, FiChevronUp, FiCopy, FiCheck } from 'react-icons/fi';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import styles from './styles.module.css';
@@ -193,40 +193,40 @@ function EditorWithHeader({ minimized, code, title, codeEnv }) {
 function changeToExecutableCode(code, isNodeJSEnv) {
   const execCode = !isNodeJSEnv
     ? code
-      .split('\n')
-      .reduce(
-        (acc, line) => {
-          // If we're not in an import statement and this line doesn't start an import,
-          // keep the line
-          if (!acc.inImport && !line.trim().startsWith('import')) {
-            return {
-              inImport: false,
-              lines: [...acc.lines, line],
-            };
-          }
+        .split('\n')
+        .reduce(
+          (acc, line) => {
+            // If we're not in an import statement and this line doesn't start an import,
+            // keep the line
+            if (!acc.inImport && !line.trim().startsWith('import')) {
+              return {
+                inImport: false,
+                lines: [...acc.lines, line],
+              };
+            }
 
-          // If this line contains a semicolon, we're done with the import
-          if (line.includes(';')) {
+            // If this line contains a semicolon, we're done with the import
+            if (line.includes(';')) {
+              return {
+                inImport: false,
+                lines: acc.lines,
+              };
+            }
+
+            // Otherwise we're in an import statement
             return {
-              inImport: false,
+              inImport: true,
               lines: acc.lines,
             };
+          },
+          {
+            inImport: false,
+            lines: [],
           }
-
-          // Otherwise we're in an import statement
-          return {
-            inImport: true,
-            lines: acc.lines,
-          };
-        },
-        {
-          inImport: false,
-          lines: [],
-        }
-      )
-      .lines.join('\n')
-      .replace(/^\n/, '')
-      .trimEnd()
+        )
+        .lines.join('\n')
+        .replace(/^\n/, '')
+        .trimEnd()
     : code;
 
   return execCode;
@@ -237,6 +237,7 @@ export default function Playground({
   transformCode,
   ...props
 }) {
+  const [liveScope, setLiveScope] = useState(null);
   const {
     siteConfig: { themeConfig },
   } = useDocusaurusContext();
@@ -306,6 +307,31 @@ export default function Playground({
     ? CodingEnvironment.NODEJS
     : CodingEnvironment.REACT;
 
+  useEffect(() => {
+    const attachGlobals = async () => {
+      if (typeof globalThis.Buffer === 'undefined') {
+        const buffer = await import('buffer');
+        globalThis.Buffer = buffer.Buffer;
+      }
+
+      if (typeof globalThis.process === 'undefined') {
+        globalThis.process = { env: {} };
+      }
+
+      if (typeof globalThis.global === 'undefined') {
+        globalThis.global = globalThis;
+      }
+
+      setLiveScope({
+        Buffer: globalThis.Buffer,
+        process: globalThis.process,
+        global: globalThis,
+      });
+    };
+
+    attachGlobals();
+  }, []);
+
   return (
     <div className={styles.playgroundContainer}>
       <LiveProvider
@@ -315,6 +341,7 @@ export default function Playground({
           `${changeToExecutableCode(code, isNodeJSEnv)};`
         }
         theme={prismTheme}
+        scope={liveScope}
         {...props}
       >
         {playgroundPosition === 'top' ? (
