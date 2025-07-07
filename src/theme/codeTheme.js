@@ -31,7 +31,7 @@ const lightCodeTheme = {
     {
       types: ['comment'],
       style: {
-        color: '#3B65EA',
+        color: '#B1B3BB',
       },
     },
     {
@@ -60,9 +60,27 @@ const darkCodeTheme = {
         color: '#BF2DD2',
       },
     },
+    {
+      types: ['comment'],
+      style: {
+        color: '#424346',
+      },
+    },
+    {
+      types: [
+        'method',
+        'function',
+        'maybe-class-name',
+        'property-access',
+        'tag',
+        'attr-name',
+      ],
+      style: {
+        color: '#50FA7B',
+      },
+    },
   ],
 };
-// const darkCodeTheme = require('prism-react-renderer').themes.dracula;
 
 module.exports = {
   lightCodeTheme,
