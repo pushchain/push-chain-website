@@ -1438,8 +1438,8 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
         alt: "Venn diagram: Push Chain sits at the intersection of Wallet Abstraction, Fee Abstraction, and Shared State",
         src: (__webpack_require__(869446)/* ["default"] */ .A) + "",
-        width: "1600",
-        height: "881"
+        width: "3200",
+        height: "1760"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "hello-push-chain-",
@@ -2231,7 +2231,7 @@ function IFrameModal(_ref){let{url,buttonTitle='Load Interactive Demo',maxHeight
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/venn-diagram-push-109b52662d8549115dddf3654b5aef51.png");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/venn-diagram-push-b23f5ed051c127a3d17d74307d35433a.png");
 
 /***/ }),
 
