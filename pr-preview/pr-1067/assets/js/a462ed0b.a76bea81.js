@@ -417,7 +417,7 @@ function _createMdxContent(props) {
                 children: "Ethereum Sepolia Testnet"
               }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.td, {
                 children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-                  children: "0xdEF1a1265247488e5934706657404F40A81eDEe4"
+                  children: "0x28E0F09bE2321c1420Dc60Ee146aACbD68B335Fe"
                 })
               })]
             }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.tr, {

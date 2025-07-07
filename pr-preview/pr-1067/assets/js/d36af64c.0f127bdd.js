@@ -499,7 +499,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "pchaind tx ue add-chain-config --chain-config '{\n  \"namespace\": \"eip155\",\n  \"chain_id\": \"11155111\",\n  \"public_rpc_url\": \"https://1rpc.io/sepolia\",\n  \"vm_type\": 0,\n  \"locker_contract_address\": \"0xdEF1a1265247488e5934706657404F40A81eDEe4\",\n  \"block_confirmation\": 6,\n  \"funds_added_event_topic\": \"0xddcd6ef7998ae51b4ead4e9aa669a7d5ff30af88eddaa5062c91b08153da07c0\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
+        children: "pchaind tx ue add-chain-config --chain-config '{\n  \"namespace\": \"eip155\",\n  \"chain_id\": \"11155111\",\n  \"public_rpc_url\": \"https://1rpc.io/sepolia\",\n  \"vm_type\": 0,\n  \"locker_contract_address\": \"0x28E0F09bE2321c1420Dc60Ee146aACbD68B335Fe\",\n  \"block_confirmation\": 6,\n  \"funds_added_event_topic\": \"0xddcd6ef7998ae51b4ead4e9aa669a7d5ff30af88eddaa5062c91b08153da07c0\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
