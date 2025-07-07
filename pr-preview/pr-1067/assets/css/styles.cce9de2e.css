@@ -3827,7 +3827,8 @@ article em > code {
   font-family: "Fira Code";
 } */
 
-.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module {
+.codeBlockLines_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module,
+.theme-code-block code {
   background-color: var(--ifm-navbar-search-bg) !important;
   font-family: 'Fira Code' !important;
 }
