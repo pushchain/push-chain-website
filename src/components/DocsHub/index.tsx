@@ -30,10 +30,10 @@ import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import {
   QuickstartItems,
-  TechDocumentationItems,
+  ToolingItems,
   TutorialDocumentationItems,
 } from '@site/src/config/DocsHubList';
-import GLOBALS, { device, size } from '@site/src/config/globals';
+import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 
 import { Grid } from './Grid';
@@ -158,7 +158,6 @@ export default function HomepageFeatures(): JSX.Element {
                 <Pulsate stagger={3}></Pulsate>
                 <Pulsate stagger={4}></Pulsate>
                 <Pulsate stagger={5}></Pulsate>
-                {/* <Pulsate stagger={6}></Pulsate> */}
               </Pulse>
             </ItemV>
           </HeroHeader>
@@ -185,9 +184,9 @@ export default function HomepageFeatures(): JSX.Element {
             </ItemV>
 
             <FaqLink
-              href='https://discord.gg/pushprotocol'
+              href='/docs/chain/quickstart/'
               target='_blank'
-              title='Discord'
+              title='Explore Push Chain Quickstart'
             >
               <p>Explore Quickstart</p>
               <BsArrowRight className='svg' size={23} />
@@ -221,7 +220,7 @@ export default function HomepageFeatures(): JSX.Element {
         <Content maxWidth={`1326px`}>
           <HomepageSubHeader id='quickstart'>
             <ItemV justifyContent='flex-start' alignItems='flex-start'>
-              <H2>Technical Documentation</H2>
+              <H2>Tooling</H2>
               <Span>
                 Everything you will need to get up and running in 2 minutes or
                 less!
@@ -238,11 +237,11 @@ export default function HomepageFeatures(): JSX.Element {
             </FaqLink>
           </HomepageSubHeader>
 
-          <TechnicalGridSection>
-            {TechDocumentationItems.map((item, idx) => (
+          <GridSection>
+            {ToolingItems.map((item, idx) => (
               <TechnicalGrid key={idx} item={item} />
             ))}
-          </TechnicalGridSection>
+          </GridSection>
         </Content>
       </Section>
 
@@ -267,11 +266,11 @@ export default function HomepageFeatures(): JSX.Element {
             </FaqLink>
           </HomepageSubHeader>
 
-          <TechnicalGridSection>
+          <GridSection>
             {TutorialDocumentationItems.map((item, idx) => (
               <TechnicalGrid key={idx} item={item} />
             ))}
-          </TechnicalGridSection>
+          </GridSection>
         </Content>
       </Section>
 
@@ -309,7 +308,8 @@ export default function HomepageFeatures(): JSX.Element {
         </Content>
       </Section>
 
-      <Footer showPattern={false} />
+      {/* TODO: Implement Footer */}
+      {/* <Footer showPattern={false} /> */}
     </Layout>
   );
 }
@@ -381,7 +381,7 @@ const HomepageSection = styled(Section)`
 
 const HomepageSubHeader = styled.div`
   align-items: start;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -404,7 +404,7 @@ const HomepageSubHeader = styled.div`
   }
 `;
 
-const FaqLink = styled(A)`
+const FaqLink = styled(Link)`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -414,6 +414,14 @@ const FaqLink = styled(A)`
   flex: 0;
   width: fit-content;
   background: transparent;
+
+  &:after {
+    background: transparent !important;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 
   p {
     margin: 0px !important;
@@ -437,6 +445,7 @@ const FaqLink = styled(A)`
 
   &:hover {
     text-decoration: none !important;
+    background: transparent !important;
     .anchorSVGlink {
       color: #fff;
     }
@@ -464,17 +473,22 @@ const PopularQuickiesList = styled(ItemH)`
   gap: 32px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
   position: relative;
+  height: 100%;
+  align-items: stretch;
 `;
 
 const PopularQuickiesCard = styled(ItemV)`
   margin: 0px;
-  align-self: flex-start;
+  align-self: stretch;
   flex: 1;
   overflow: auto;
   width: 100%;
   min-width: 400px;
+
+  code {
+    align-self: flex-start;
+  }
 
   /* WebKit browsers (Chrome, Safari) */
   *::-webkit-scrollbar {
@@ -543,7 +557,7 @@ const PopularQuickiesHeader = styled(ItemH)`
   }
 `;
 
-const TechnicalGridSection = styled(ItemV)`
+const GridSection = styled(ItemV)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -571,6 +585,11 @@ const TechnicalGridWrapper = styled(Link)`
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 133.333%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   svg {
@@ -597,7 +616,8 @@ const PopularQuickiesTitle = styled(Span)`
 `;
 
 const PopularQuickiesContent = styled(ItemV)`
-  align-items: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
 `;
 

@@ -194,22 +194,22 @@ export const accordionItems = [
   },
 ];
 
-export const TechDocumentationItems = [
+export const ToolingItems = [
   {
     title: 'Wallet Setup',
-    href: 'https://docs.push.org',
+    href: '/docs/chain/setup/tooling/wallet-setup/',
     content:
       'Add Push Chain as custom network to your wallet before building your app.',
   },
   {
     title: 'Faucet',
-    href: 'https://docs.push.org',
+    href: '/docs/chain/setup/tooling/faucet',
     content:
       'A drip of testnet $PC to play with, deploy your smart contracts, and test your app.',
   },
   {
     title: 'Chain Explorer',
-    href: 'https://docs.push.org',
+    href: '/docs/chain/setup/tooling/block-explorer/',
     content:
       'Explore Push Chain transactions, blocks, and accounts in real time.',
   },
@@ -217,10 +217,16 @@ export const TechDocumentationItems = [
 
 export const TutorialDocumentationItems = [
   {
-    title: 'Learn More',
-    href: 'https://docs.push.org',
+    title: 'Simple Counter App',
+    href: '/docs/chain/tutorials/tutorial-simple-counter/',
     content:
-      'Add Push Chain as custom network to your wallet before building your app.',
+      'The process of building a simple smart contract like a counter is exactly similar to any other EVM Chain.',
+  },
+  {
+    title: 'Universal Counter App',
+    href: '/docs/chain/tutorials/tutorial-universal-counter/',
+    content:
+      'GM vs GM is a simple example to show how to create a Universal App on Push...',
   },
 ];
 

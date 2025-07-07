@@ -19,6 +19,7 @@ export const Grid = () => {
           href={item.href}
           target='_blank'
           rel='noopener noreferrer'
+          alt={item.title}
         >
           <GridImage customWidth={item.customWidth}>
             <Image
