@@ -10,7 +10,7 @@
 
 :root {
   --ifm-background-color: #fff;
-  --ifm-color-primary: #dd44b9;
+  --ifm-color-primary: #C742DD;
   --ifm-color-primary-unified-text: #fff;
   --ifm-color-primary-text: #313338;
   --ifm-color-title-text-color: #17181B;
@@ -99,7 +99,7 @@
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-background-color: #202124;
-  --ifm-color-primary: #dd44b9;
+  --ifm-color-primary:  #CF59E2;
   --ifm-color-primary-unified-text: #fff;
   --ifm-color-primary-text: #C4CBD5;
   --ifm-color-title-text-color: #F5F6F8;
