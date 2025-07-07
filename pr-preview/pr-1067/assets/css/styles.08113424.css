@@ -3800,6 +3800,15 @@ a:hover {
 /* ----- */
 /* Article CSS Overrids */
 /* ----- */
+article .markdown > p > code, article .markdown > ul > li > code, article .markdown > ol > li > code
+{
+  color: var(--ifm-link-color) !important;
+  font-family: 'Fira Code' !important;
+  background: transparent;
+  border: var(--ifm-playground-button-border);
+}
+
+
 article .markdown > p > code,
 article .markdown > ul > li > code,
 article .markdown > ol > li > code,
