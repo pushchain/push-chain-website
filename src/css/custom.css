@@ -243,8 +243,7 @@ html[data-theme='dark'] .container {
 
 .alert.alert--fn-args
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-top: 1px solid
-    color-mix(in srgb, var(--ifm-playground-border-warning) 50%, transparent) !important;
+  border-top: none !important;
 }
 
 .alert.alert--live-play {
@@ -257,14 +256,12 @@ html[data-theme='dark'] .container {
 
 .alert.alert--live-play
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-top: 1px solid
-    color-mix(in srgb, var(--ifm-playground-border-info) 50%, transparent) !important;
+  border-top: none;
   padding: 0;
 }
 
 .alert.alert--live-play.alert-top-pad-20
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  padding-top: 20px;
 }
 
 .alert.alert--info {
@@ -277,9 +274,30 @@ html[data-theme='dark'] .container {
 
 .alert.alert--info
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-top: 1px solid
-    color-mix(in srgb, var(--ifm-color-primary) 75%, transparent);
+  border-top: none;
+  margin-top: 0.5rem !important;
+  padding-top: 0 !important;
 }
+
+.alert summary {
+  color: var(--ifm-playground-buttontextcolor);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height:  165%;
+  margin-left: 8px;
+}
+
+/* .alert summary::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../static/assets/website/header/newCaretDown.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none !important;
+  padding-left: 16px;
+} */
 
 /* Do for Minimal and API Table */
 /* API Docs */
@@ -356,7 +374,7 @@ html[data-theme='dark'] .container {
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module,
 .alert.alert--minimal-api-table
   .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module {
-  border-top: 1px solid color-mix(in srgb, transparent 50%, transparent) !important;
+  border-top: none !important;
   padding: 0;
 }
 
