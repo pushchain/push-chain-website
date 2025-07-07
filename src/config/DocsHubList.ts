@@ -228,13 +228,9 @@ export const GridTopItems = [
   {
     bgColor: '#dd6fff',
     title: 'What is Push Chain?',
-    href: 'https://docs.push.org',
+    href: '/docs/chain/',
     description:
       'Push Chain provides a unified toolkit to build truly universal apps.',
-    link: {
-      label: 'Learn More',
-      href: 'https://docs.push.org',
-    },
     image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
       .default,
     image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
@@ -247,7 +243,7 @@ export const GridTopItems = [
   {
     bgColor: '#4277F7',
     title: `Let's build!`,
-    href: 'https://docs.push.org',
+    href: '/docs/chain/build/',
     description:
       'Everything you need with Push Chain SDK to create your universal app.',
     link: null,
@@ -262,7 +258,7 @@ export const GridTopItems = [
   {
     bgColor: '#4277F7',
     title: 'UI Kit',
-    href: 'https://docs.push.org',
+    href: '/docs/chain/ui-kit/',
     description: 'Integrate any React based app in less than 5 minutes.',
     image: require(`@site/static/assets/website/docshub/UIKit.png`).default,
     image2x: require(`@site/static/assets/website/docshub/UIKit@2x.png`)

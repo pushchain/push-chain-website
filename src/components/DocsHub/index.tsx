@@ -158,7 +158,7 @@ export default function HomepageFeatures(): JSX.Element {
                 <Pulsate stagger={3}></Pulsate>
                 <Pulsate stagger={4}></Pulsate>
                 <Pulsate stagger={5}></Pulsate>
-                <Pulsate stagger={6}></Pulsate>
+                {/* <Pulsate stagger={6}></Pulsate> */}
               </Pulse>
             </ItemV>
           </HeroHeader>
@@ -334,10 +334,8 @@ const HeroHeader = styled(ItemV)`
 `;
 
 const Pulse = styled.div`
-  width: 40px;
-  height: 40px;
-  background: rgba(213, 72, 236, 0.4);
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -346,14 +344,19 @@ const Pulse = styled.div`
   .pulse-logo {
     width: 50px;
     height: auto;
-    z-index: 99999;
+    z-index: 2;
   }
 `;
 
 const pulsateAnim = keyframes`
+  0% {
+    transform: scale(0.1);
+    opacity: 0.6;
+  }
+
   100% {
+    transform: scale(6);
     opacity: 0;
-    transform: scale(8);
   }
 `;
 
@@ -361,12 +364,13 @@ const Pulsate = styled.span`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  opacity: 0.8;
-  animation: ${pulsateAnim} 6s ease-out infinite;
-  animation-delay: calc(1s * ${(props) => (props.stagger ? props.stagger : 1)});
-  z-index: 0;
+  background: rgba(213, 72, 236, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ${pulsateAnim} 5s ease-out infinite;
+  animation-delay: calc(1s * ${(props) => props.stagger || 0});
+  animation-fill-mode: forwards;
+  z-index: 1;
 `;
 
 const HomepageSection = styled(Section)`

@@ -34,12 +34,10 @@ export const Grid = () => {
             <H3>{item.title}</H3>
             <Span>{item.description}</Span>
 
-            {item.link && (
-              <LinkTo>
-                <p>{item.link.label}</p>
-                <BsArrowUpRight />
-              </LinkTo>
-            )}
+            <LinkTo className='hover-link'>
+              <p>Learn More</p>
+              <BsArrowUpRight />
+            </LinkTo>
           </TextDiv>
         </GridCard>
       ))}
@@ -59,6 +57,7 @@ const GridWrapper = styled.div`
 `;
 
 const GridCard = styled(Link)`
+  position: relative;
   border-radius: 32px;
   align-items: flex-start;
   padding: 32px;
@@ -72,6 +71,38 @@ const GridCard = styled(Link)`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+
+  &:hover .hover-link {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+`;
+
+const LinkTo = styled.div`
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  margin-top: 0;
+
+  p {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  ${GridCard}:hover & {
+    opacity: 1;
+    max-height: 50px;
+    transform: translateY(0);
+    margin-top: 20px;
+  }
 `;
 
 const GridImage = styled.div`
@@ -116,21 +147,5 @@ const TextDiv = styled.div`
     font-weight: 400;
     line-height: 133.333%;
     font-family: 'DM Sans', sans-serif !important;
-  }
-`;
-
-const LinkTo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-  color: #fff;
-
-  p {
-    font-size: 1.125rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 77.778%;
   }
 `;
