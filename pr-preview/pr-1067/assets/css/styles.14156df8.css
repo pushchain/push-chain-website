@@ -3368,6 +3368,11 @@ html[data-theme='dark'] .container {
   margin-left: 8px;
 }
 
+.alert::after,
+.alert::before {
+  display: none !important;
+}
+
 /* .alert summary::before {
   content: '';
   display: inline-block;
