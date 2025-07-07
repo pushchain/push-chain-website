@@ -81,7 +81,7 @@ import { createPublicClient, http } from 'viem';
 import { ethers } from 'ethers';
 
     const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-    const txHash  = '0xa7839fb1e3483eab628cbf18f42603ba192cef99b724d4b651eb7c4e9683b79e';
+    const txHash  = '0x133cca8d673f1af4533c9c491de54e416b11f78c84c3a14d72190d530c1afe41';
 
     const tx = await provider.getTransaction(txHash);
     console.log(JSON.stringify(tx, null, 2));
@@ -100,7 +100,7 @@ import { ethers } from 'ethers';
 import { createPublicClient, http } from 'viem';
 
     const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-    const txHash = '0xa7839fb1e3483eab628cbf18f42603ba192cef99b724d4b651eb7c4e9683b79e';
+    const txHash = '0x133cca8d673f1af4533c9c491de54e416b11f78c84c3a14d72190d530c1afe41';
 
     const tx = await viemClient.getTransaction({ hash: txHash });
     console.log(JSON.stringify(tx, null, 2));
