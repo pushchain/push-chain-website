@@ -93,7 +93,7 @@
   --ifm-playground-border-warning: #F3AEFF;
   --ifm-playground-border-stable: #C4CBD5;
   --ifm-iframe-icon-color: #202124;
-
+  --ifm-link-color: #C742DD;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -175,7 +175,7 @@
   --ifm-playground-border-warning:  #D548EC;
   --ifm-playground-border-stable: #484D58;
   --ifm-iframe-icon-color: #B0B3B9;
-
+  --ifm-link-color: #CF59E2;
 }
 
 /* update docs/blogs dark mode color */
@@ -1638,13 +1638,13 @@ sup strong {
 /* Markdown CSS(Docs and Blogs Fonts) Overrides */
 /* ----- */
 
-.PushDocs {
+/* .PushDocs {
   font-family: DM Sans, sans-serif !important;
 
   * {
     font-family: DM Sans, sans-serif !important;
   }
-}
+} */
 
 .PushBlog {
   font-family: DM Sans, sans-serif !important;
