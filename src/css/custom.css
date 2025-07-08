@@ -1100,7 +1100,7 @@ table {
   border: var(--ifm-table-inactive-tagborder) !important;
   margin: 0px auto !important;
   color: var(--ifm-color-primary-text);
-  padding: 2px 8px;
+  padding: 4px 6px;
 }
 
 
@@ -1802,4 +1802,30 @@ article .markdown > ol > li > code {
 .codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
 {
   background: transparent !important;
+}
+
+/* footer pagination styling */
+.pagination-nav__link--prev .pagination-nav__label::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('../../static/assets/website/docshub/caretLeft.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.pagination-nav__link--next .pagination-nav__label::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('../../static/assets/website/docshub/caretLeft.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 8px;
+  vertical-align: middle;
+  transform: rotate(180deg);
 }
