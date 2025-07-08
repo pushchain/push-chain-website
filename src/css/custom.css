@@ -380,18 +380,17 @@ html[data-theme='dark'] .container {
 .alert.alert--minimal-api-table summary {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  color: var(--ifm-color-title-text-color) !important;
+  font-family: "DM Sans" !important;
+  font-size: 1rem;
   font-weight: 600 !important;
-  color: color-mix(
-    in srgb,
-    var(--ifm-color-primary-text) 75%,
-    transparent
-  ) !important;
+  line-height: 134.063%;
 }
 
-.alert.alert--minimal.code > summary,
+/* .alert.alert--minimal.code > summary,
 .alert.alert--minimal-api-table > summary {
   font-family: monospace !important;
-}
+} */
 
 .alert.alert--minimal > summary::before,
 .alert.alert--minimal-api-table > summary::before {
@@ -400,23 +399,29 @@ html[data-theme='dark'] .container {
 
 .alert.alert--minimal > summary::after,
 .alert.alert--minimal-api-table > summary::after {
+  content: '';
+  display: inline-block;
+  width: 21px !important;
+  height: 21px !important;
+  background-image: url('../../static/assets/website/header/newCaretDown.svg');
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: none;
+
+  border: none !important;
   position: absolute;
-  content: '';
-  border-color: transparent transparent transparent var(--ifm-color-primary);
-
-  content: '';
-  border-width: var(--docusaurus-details-summary-arrow-size);
-  border-style: solid;
-
-  bottom: 0%;
-  transform: rotate(0deg) translate(75%, -50%);
-  transition: var(--docusaurus-details-transition);
-  transform-origin: calc(var(--docusaurus-details-summary-arrow-size) / 2) 50%;
+  left: 175px !important;
+  top: 0px !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease;
 }
 
 .alert.alert--minimal[open] > summary::after,
 .alert.alert--minimal-api-table[open] > summary::after {
-  transform: rotate(90deg) translateX(-50%) translateY(-75%);
+  transform: rotate(90deg) translateY(5%);
 }
 
 .alert.alert--minimal
@@ -1413,6 +1418,10 @@ li {
 }
 
 /* docs font, header, paragraphs, spans, lists */
+
+.markdown button {
+  font-weight: 600;
+}
 .markdown > h1,
 .markdown > header > h1,
 .markdown > h2,
