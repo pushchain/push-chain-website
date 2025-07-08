@@ -208,7 +208,6 @@ html[data-theme='dark'] .container {
 .alert.alert--live-play {
   position: relative;
   margin-top: 2rem;
-  margin-bottom: 4rem;
 }
 
 .alert.alert--fn-args:before,
@@ -742,7 +741,9 @@ a:hover {
 /* ----- */
 /* Article CSS Overrids */
 /* ----- */
-article .markdown > p > code, article .markdown > ul > li > code, article .markdown > ol > li > code
+article .markdown > p > code, article .markdown > ul > li > code, article .markdown > ol > li > code,
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module p code,
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module li code
 {
   color: var(--ifm-link-color) !important;
   font-family: 'Fira Code' !important;
@@ -1727,3 +1728,10 @@ article .markdown > ol > li > code {
 /* ----- */
 /* Markdown CSS Overrides Ends*/
 /* ----- */
+
+/* for code blocks */
+.codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module,
+.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
+{
+  background: transparent !important;
+}

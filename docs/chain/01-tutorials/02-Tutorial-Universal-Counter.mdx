@@ -367,7 +367,7 @@ function UniversalCounterExample() {
     // Function to determine which chain is winning
     const getWinningChain = () => {
       if (countEth === -1 || countSol === -1 || countPC === -1) return null;
-      
+
       if (countEth > countSol && countEth > countPC) {
         return `Ethereum is winning with ${countEth} counts`;
       } else if (countSol > countEth && countSol > countPC) {
@@ -468,7 +468,7 @@ function UniversalCounterExample() {
               >
                 {isLoading ? 'Processing...' : 'Increment Counter'}
               </button>
-              
+
               <button
                 className='refresh-button'
                 onClick={fetchCounters}

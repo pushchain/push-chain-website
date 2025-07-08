@@ -67,7 +67,7 @@ Everything you will need to get up and running in 2 minutes or less!
   </TabItem>
 
   <TabItem value='viem' label='Viem'>
-  
+
     ```typescript
     // Import Push Chain SDK and Viem
     // You can use other library like ethers, etc
@@ -103,7 +103,7 @@ Everything you will need to get up and running in 2 minutes or less!
     const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co')
 
     // 2. Create a random wallet (or use your own private key)
-      const wallet = ethers.Wallet.createRandom(provider)
+    const wallet = ethers.Wallet.createRandom(provider)
 
     // 3. Convert ethers signer to Universal Signer
     // Most popular libraries can pass just the signer to get universal signer
@@ -131,7 +131,7 @@ Everything you will need to get up and running in 2 minutes or less!
     const universalSigner = await PushChain.utils.signer.toUniversal(signer)
     ```
 
-  </TabItem> 
+  </TabItem>
 
   <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
 

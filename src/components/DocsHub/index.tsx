@@ -641,6 +641,6 @@ const PopularQuickiesCodeBlock = styled(CodeBlock)`
   border-bottom-right-radius: 24px;
   overflow: hidden;
   width: inherit;
-  background: var(--ifm-navbar-search-bg);
+  background: var(--ifm-navbar-search-bg) !important;
   flex: 1;
 `;

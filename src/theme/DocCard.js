@@ -15,7 +15,7 @@ import clsx from 'clsx';
 import React from 'react';
 import styles from './styles.module.css';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
+// import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
 
 function CardContainer({ href, children }) {
   return (
@@ -30,7 +30,8 @@ function CardContainer({ href, children }) {
 function CardLayout({ href, icon, title, description }) {
   return (
     <CardContainer href={useBaseUrl(href)}>
-      <WalletSvg className={styles.walletIcon} />
+      {/* TODO: update icon */}
+      {/* <WalletSvg className={styles.walletIcon} /> */}
       <div className={styles.textDiv}>
         <h2 className={clsx('text--truncate', styles.cardTitle)} title={title}>
           {icon} {title}

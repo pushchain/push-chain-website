@@ -82,7 +82,8 @@
 
 .playgroundEditor pre {
   border-radius: 0px;
-  background-color: var(--ifm-pre-background) !important;
+  /* background-color: var(--ifm-pre-background) !important; */
+  background-color: var(--ifm-navbar-search-bg) !important;
   font-family: 'Fira Code' !important;
 }
 
