@@ -194,10 +194,10 @@ function checkCallerType() public view returns (bool isUEA) {
     const RPC_URL          = 'https://evm.rpc-testnet-donut-node1.push.org/';
     const FACTORY_ADDRESS  = '0x00000000000000000000000000000000000000eA';
 
-    // Minimal ABI
+    // Corrected ABI
     const IUEAFactoryABI = [
       // returns (UniversalAccountId account, bool isUEA)
-      "function getOriginForUEA(address addr) view returns (tuple(string chain, address owner) account, bool isUEA)"
+      "function getOriginForUEA(address addr) view returns (tuple(string chainNamespace, string chainId, bytes owner) account, bool isUEA)"
     ]
 
     async function main() {
@@ -205,8 +205,8 @@ function checkCallerType() public view returns (bool isUEA) {
       const provider = new ethers.JsonRpcProvider(RPC_URL);
       const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
 
-      // 2) pick some address to inspect
-      const someAddress = '0xa96CaA79eb2312DbEb0B8E93c1Ce84C98b67bF11';
+      // 2) <inser any address ( UEA or Native Addresses) to check its origin details >
+      const someAddress = '0xc16a585b95810F7D204620bb3677F73243242A8F';
 
       // 3) call getOriginForUEA
       console.log("Calling getOriginForUEA on PushChain");
@@ -214,7 +214,7 @@ function checkCallerType() public view returns (bool isUEA) {
       console.log("Result -", JSON.stringify(originResult));
     }
 
-    await main().catch(console.error);
+await main().catch(console.error);
 
 `}
 
@@ -303,78 +303,15 @@ function checkUEAType() public view returns (address uea, bool isDeployed) {
     const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
     const FACTORY_ADDRESS = '0x00000000000000000000000000000000000000eA';
 
-    const FACTORY_V1 = [
-      {
-        type: 'function',
-        name: 'getVMType',
-        inputs: [
-          {
-            name: '_chainHash',
-            type: 'bytes32',
-            internalType: 'bytes32',
-          },
-        ],
-        outputs: [
-          {
-            name: 'vmHash',
-            type: 'bytes32',
-            internalType: 'bytes32',
-          },
-          {
-            name: 'isRegistered',
-            type: 'bool',
-            internalType: 'bool',
-          },
-        ],
-        stateMutability: 'view',
-      },
-      {
-        type: 'function',
-        name: 'getUEAForOrigin',
-        inputs: [
-          {
-            name: '_id',
-            type: 'tuple',
-            internalType: 'struct UniversalAccountId',
-            components: [
-              {
-                name: 'chainNamespace',
-                type: 'string',
-                internalType: 'string',
-              },
-              {
-                name: 'chainId',
-                type: 'string',
-                internalType: 'string',
-              },
-              {
-                name: 'owner',
-                type: 'bytes',
-                internalType: 'bytes',
-              },
-            ],
-          },
-        ],
-        outputs: [
-          {
-            name: 'uea',
-            type: 'address',
-            internalType: 'address',
-          },
-          {
-            name: 'isDeployed',
-            type: 'bool',
-            internalType: 'bool',
-          },
-        ],
-        stateMutability: 'view',
-      },
-    ];
+    // Corrected ABI
+    const IUEAFactoryABI = [
+    "function getUEAForOrigin(tuple(string chainNamespace, string chainId, bytes owner) _id) view returns (address uea, bool isDeployed)"
+  ]
 
     async function main() {
       // 1) set up
       const provider = new ethers.JsonRpcProvider(RPC_URL);
-      const factory = new ethers.Contract(FACTORY_ADDRESS, FACTORY_V1, provider);
+      const factory = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
 
       // 2) create UniversalAccountId struct
       const universalAccountId = {
