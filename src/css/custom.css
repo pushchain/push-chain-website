@@ -218,6 +218,8 @@ html[data-theme='dark'] .container {
 /* Custom styles for admonitions/alerts */
 .alert {
   background-color: transparent;
+ /* --ifm-code-background: red !important; */
+
 }
 
 .alert code {
@@ -386,11 +388,6 @@ html[data-theme='dark'] .container {
   font-weight: 600 !important;
   line-height: 134.063%;
 }
-
-/* .alert.alert--minimal.code > summary,
-.alert.alert--minimal-api-table > summary {
-  font-family: monospace !important;
-} */
 
 .alert.alert--minimal > summary::before,
 .alert.alert--minimal-api-table > summary::before {
@@ -1449,7 +1446,10 @@ li {
 .markdown > p > code,
 .markdown > ul > li > code,
 .markdown > blockquote > p > code,
-.markdown > h2 code {
+.markdown > h2 code,
+.alert.alert--info p code,
+.alert.alert--info ul li code
+{
   color: var(--ifm-link-color) !important;
   font-family: 'Fira Code' !important;
   background-color: transparent !important;
