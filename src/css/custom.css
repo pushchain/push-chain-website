@@ -741,14 +741,16 @@ a:hover {
 /* ----- */
 /* Article CSS Overrids */
 /* ----- */
+/* This targets all the code elements in differenc sections */
 article .markdown > p > code, article .markdown > ul > li > code, article .markdown > ol > li > code,
 .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module p code,
-.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module li code
+.collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module li code,
 {
   color: var(--ifm-link-color) !important;
   font-family: 'Fira Code' !important;
-  background: transparent;
-  border: var(--ifm-playground-button-border);
+  background-color: transparent !important;
+  border: var(--ifm-playground-button-border) !important;
+  font-size: 0.8rem !important;
 }
 
 
@@ -774,7 +776,7 @@ article tr > td > code:only-child {
   display: inline-block;
 }
 
-article em > code {
+article strong em > code {
   background: var(--ifm-color-primary);
   color: var(--ifm-color-primary-unified-text);
   font-style: normal;
@@ -1379,6 +1381,20 @@ li {
 
 .markdown > h2 {
   margin: 100px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.markdown > p > code,
+.markdown > h2 code {
+  color: var(--ifm-link-color) !important;
+  font-family: 'Fira Code' !important;
+  background-color: transparent !important;
+  border: var(--ifm-playground-button-border) !important;
+  font-size: 0.8rem !important;
+  padding: 2px 8px;
 }
 
 .markdown > h2:first-of-type {

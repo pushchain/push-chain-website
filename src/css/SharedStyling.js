@@ -660,7 +660,6 @@ export const ModalContainer = styled(ItemH)`
 `;
 
 export const ModalInner = styled(Button)`
-  // border: 1px solid #d9d9d9;
   border: var(--ifm-playground-button-border);
   border-radius: 16px;
   padding: 12px 16px;
