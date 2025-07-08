@@ -79,16 +79,15 @@ const darkCodeTheme = {
       },
     },
     {
-      types: [
-        'method',
-        'function',
-        'maybe-class-name',
-        'property-access',
-        'tag',
-        'attr-name',
-      ],
+      types: ['method', 'function', 'attr-name'],
       style: {
         color: '#61DC9C',
+      },
+    },
+    {
+      types: ['maybe-class-name', 'tag', 'property-access'],
+      style: {
+        color: '#F0F0F0',
       },
     },
   ],
