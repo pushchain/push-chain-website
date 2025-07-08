@@ -5,21 +5,21 @@ const lightCodeTheme = {
   plain: {
     ...baseTheme.plain,
     backgroundColor: '#ffffff',
-    color: '#1a1a1a',
+    color: '#2B2B30',
   },
   styles: [
     ...baseTheme.styles,
     {
       types: ['keyword'],
       style: {
-        color: '#8C59D6',
+        color: '#824FCA',
         fontStyle: 'italic',
       },
     },
     {
       types: ['string'],
       style: {
-        color: '#BF2DD2',
+        color: '#D14FE2',
       },
     },
     {
@@ -29,9 +29,9 @@ const lightCodeTheme = {
       },
     },
     {
-      types: ['comment'],
+      types: ['comment', 'plain-text'],
       style: {
-        color: '#B1B3BB',
+        color: '#AAAAB0',
       },
     },
     {
@@ -44,7 +44,7 @@ const lightCodeTheme = {
         'attr-name',
       ],
       style: {
-        color: '#ff9900',
+        color: '#33A168',
       },
     },
   ],
@@ -52,18 +52,30 @@ const lightCodeTheme = {
 
 const darkCodeTheme = {
   ...baseTheme,
+  plain: {
+    ...baseTheme.plain,
+    backgroundColor: '#ffffff',
+    color: '#F0F0F0',
+  },
   styles: [
     ...baseTheme.styles,
     {
-      types: ['string'],
+      types: ['keyword'],
       style: {
-        color: '#BF2DD2',
+        color: '#B389F0',
+        fontStyle: 'italic',
       },
     },
     {
-      types: ['comment'],
+      types: ['string'],
       style: {
-        color: '#424346',
+        color: '#D982E4',
+      },
+    },
+    {
+      types: ['comment', 'plain-text'],
+      style: {
+        color: '#44444E',
       },
     },
     {
@@ -76,7 +88,7 @@ const darkCodeTheme = {
         'attr-name',
       ],
       style: {
-        color: '#50FA7B',
+        color: '#61DC9C',
       },
     },
   ],

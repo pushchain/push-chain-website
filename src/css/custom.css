@@ -285,6 +285,7 @@ html[data-theme='dark'] .container {
   font-weight: 600;
   line-height:  165%;
   margin-left: 8px;
+  position: relative;
 }
 
 .alert::after,
@@ -292,17 +293,35 @@ html[data-theme='dark'] .container {
   display: none !important;
 }
 
-/* .alert summary::before {
+.alert summary::before {
   content: '';
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 21px !important;
+  height: 21px !important;
   background-image: url('../../static/assets/website/header/newCaretDown.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 18px 18px;
+  background-position: center;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: none;
+
   border: none !important;
-  padding-left: 16px;
-} */
+  position: absolute;
+  left: -10px !important;
+  top: 2px !important;
+  transform-origin: center center !important;
+  transition: transform 0.3s ease;
+}
+
+.alert.alert--live-play summary::before {
+  background-color: #D1E4FF !important;
+}
+
+.alert.alert--fn-args summary::before {
+  background-color: #CF59E2 !important;
+}
+
 
 /* Do for Minimal and API Table */
 /* API Docs */

@@ -112,12 +112,13 @@ export default function HomepageFeatures(): JSX.Element {
 
       {/* DOCS HERO SECTION */}
       <DocsHeroSection>
-        <Content padding='0px'>
+        <Content>
           <HeroHeader>
             <ItemV zIndex='1'>
               <H1
                 color='var(--ifm-color-title-text-color)'
                 margin='0 !important'
+                textAlign='center'
               >
                 Documentation Hub
               </H1>
@@ -228,9 +229,9 @@ export default function HomepageFeatures(): JSX.Element {
             </ItemV>
 
             <FaqLink
-              href='https://discord.gg/pushprotocol'
+              href='/docs/chain/setup/tooling/'
               target='_blank'
-              title='Discord'
+              title='Explore Tooling'
             >
               <p>Explore Tooling</p>
               <BsArrowRight className='svg' size={23} />
@@ -257,9 +258,9 @@ export default function HomepageFeatures(): JSX.Element {
             </ItemV>
 
             <FaqLink
-              href='https://discord.gg/pushprotocol'
+              href='/docs/chain/tutorials'
               target='_blank'
-              title='Discord'
+              title='Explore Tutorials'
             >
               <p>Explore Tutorials</p>
               <BsArrowRight className='svg' size={23} />
@@ -282,6 +283,7 @@ export default function HomepageFeatures(): JSX.Element {
               color='var(--ifm-playground-buttontextcolor)'
               fontWeight='600'
               lineHeight='125%'
+              textAlign='center'
             >
               Want to dive deeper?
             </H2>
@@ -290,6 +292,7 @@ export default function HomepageFeatures(): JSX.Element {
               color='var(--ifm-playground-header-text)'
               fontWeight='400'
               lineHeight='125%'
+              textAlign='center'
             >
               Explore the full docs to get started.
             </Span>
@@ -330,6 +333,12 @@ const HeroHeader = styled(ItemV)`
     font-weight: 600;
     line-height: 125%;
     letter-spacing: -0.96px;
+  }
+
+  @media ${device.mobileL} {
+    & ${H1} {
+      font-size: 2rem;
+    }
   }
 `;
 
@@ -440,7 +449,7 @@ const FaqLink = styled(Link)`
   }
 
   @media ${device.tablet} {
-    margin: 16px 0 0 auto;
+    margin: 16px auto 0 0;
   }
 
   &:hover {
@@ -520,9 +529,13 @@ const PopularQuickiesCard = styled(ItemV)`
     flex: 1;
     max-width: initial;
   }
+
+  @media ${device.mobileL} {
+    min-width: 100%;
+  }
 `;
 
-const PopularQuickiesHeader = styled(ItemH)`
+const PopularQuickiesHeader = styled.div`
   align-items: center;
   font-size: 20px;
   background: var(--ifm-navbar-search-bg);
@@ -540,6 +553,7 @@ const PopularQuickiesHeader = styled(ItemH)`
     height: 0.6em;
     width: 0.6em;
     margin: 0.3em;
+    top: 0.8em;
     left: 0.5em;
     border-radius: 100%;
     background: var(--ifm-header-caret-color);
@@ -616,8 +630,8 @@ const PopularQuickiesTitle = styled(Span)`
 `;
 
 const PopularQuickiesContent = styled(ItemV)`
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: stretch;
+  justify-content: stretch;
   width: 100%;
 `;
 
@@ -627,4 +641,6 @@ const PopularQuickiesCodeBlock = styled(CodeBlock)`
   border-bottom-right-radius: 24px;
   overflow: hidden;
   width: inherit;
+  background: var(--ifm-navbar-search-bg);
+  flex: 1;
 `;
