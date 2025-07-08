@@ -94,6 +94,19 @@
   --ifm-playground-border-stable: #C4CBD5;
   --ifm-iframe-icon-color: #202124;
   --ifm-link-color: #C742DD;
+  --ifm-surface-alert-warning-subtle: #FFF0CB;
+  --ifm-stroke-alert-warning-subtle: #8A4900;
+  --ifm-border-alert-warning-subtle: #FFBB16;
+  --ifm-surface-alert-secondary-subtle: #FFF;
+  --ifm-stroke-alert-secondary-subtle: #313338;
+  --ifm-border-alert-secondary-subtle: #C4CBD5;
+  --ifm-surface-alert-success-subtle: #E8F2FF;
+  --ifm-stroke-alert-success-subtle: #0056D0;
+  --ifm-border-alert-success-subtle: #0056D0;
+  --ifm-surface-alert-danger-subtle: #FFECEC;
+  --ifm-stroke-alert-danger-subtle: #F11F1F;
+  --ifm-border-alert-danger-subtle: #FF4E4E;
+
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -176,6 +189,19 @@
   --ifm-playground-border-stable: #484D58;
   --ifm-iframe-icon-color: #B0B3B9;
   --ifm-link-color: #CF59E2;
+  --ifm-surface-alert-warning-subtle: #472600;
+  --ifm-stroke-alert-warning-subtle: #FFF0CB;
+  --ifm-border-alert-warning-subtle: #8A4900;
+  --ifm-surface-alert-secondary-subtle: #202124;
+  --ifm-stroke-alert-secondary-subtle: #C4CBD5;
+  --ifm-border-alert-secondary-subtle: #484D58;
+  --ifm-surface-alert-success-subtle: #002D6D;
+  --ifm-stroke-alert-success-subtle: #E8F2FF;
+  --ifm-border-alert-success-subtle: #A2C9FF;
+  --ifm-surface-alert-danger-subtle: #670000;
+  --ifm-stroke-alert-danger-subtle: #FF4E4E;
+  --ifm-border-alert-danger-subtle: #FFB1B1;
+
 }
 
 /* update docs/blogs dark mode color */
@@ -413,39 +439,61 @@ html[data-theme='dark'] .container {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
 }
 
+.theme-admonition.alert--info svg {
+  display: none;
+}
+
+.theme-admonition.alert--info span::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('../../static/assets/website/docshub/theme-info.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+.theme-admonition.alert--info {
+  border-left: 5px solid var(--ifm-border-alert-secondary-subtle);
+  background: var(--ifm-surface-alert-secondary-subtle);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+  color: var(--ifm-stroke-alert-secondary-subtle);
+}
+
 
 .theme-admonition.alert--warning {
-  border-left: 5px solid var(--stroke-state-warning-subtle, #FFBB16);
-  background: var(--surface-state-warning-subtle, #FFF0CB);
+  border-left: 5px solid var(--ifm-border-alert-warning-subtle);
+  background: var(--ifm-surface-alert-warning-subtle);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
-  color: var(--text-state-warning-bold, #8A4900);
+  color: var(--ifm-stroke-alert-warning-subtle);
 }
 
 .theme-admonition.alert--warning svg {
-  fill: #A85A00;
+  fill:  var(--ifm-stroke-alert-warning-subtle);
 }
 
 .theme-admonition.alert--danger {
   border-radius: 12px;
-  border-left: 5px solid var(--stroke-state-error-bold, #FF4E4E);
-  background: var(--surface-state-error-subtle, #FFECEC);
+  border-left: 5px solid var(--ifm-border-alert-danger-subtle);
+  background: var(--ifm-surface-alert-danger-subtle);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
-  color: var(--text-state-error-bold, #F11F1F)
+  color: var(--ifm-stroke-alert-danger-subtle);
 }
 
 .theme-admonition.alert--danger svg {
-  fill: #F11F1F;
+  fill: var(--ifm-stroke-alert-danger-subtle);
 }
 .theme-admonition.alert--success {
   border-radius: 12px;
-  border-left: 5px solid var(--stroke-state-info-bold, #0056D0);
-  background: var(--surface-state-info-subtle, #E8F2FF);
+  border-left: 5px solid var(--ifm-border-alert-success-subtle);
+  background: var(--ifm-surface-alert-success-subtle);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
-  color: var(--text-state-info-bold, #0056D0);
+  color: var(--ifm-stroke-alert-success-subtle);
 }
 
 .theme-admonition.alert--success svg {
-  fill: #076EFF;
+  fill: var(--ifm-stroke-alert-success-subtle);
 }
 
 
@@ -1052,6 +1100,7 @@ table {
   border: var(--ifm-table-inactive-tagborder) !important;
   margin: 0px auto !important;
   color: var(--ifm-color-primary-text);
+  padding: 2px 8px;
 }
 
 
