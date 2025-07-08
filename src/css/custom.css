@@ -741,7 +741,7 @@ a:hover {
 /* ----- */
 /* Article CSS Overrids */
 /* ----- */
-/* This targets all the code elements in differenc sections */
+/* This targets all the code elements in different sections */
 article .markdown > p > code, article .markdown > ul > li > code, article .markdown > ol > li > code,
 .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module p code,
 .collapsibleContent_node_modules-\@docusaurus-theme-common-lib-components-Details-styles-module li code,
@@ -1387,13 +1387,16 @@ li {
   gap: 8px;
 }
 
+/* This targets all the code elements in different sections */
 .markdown > p > code,
+.markdown > ul > li > code,
+.markdown > blockquote > p > code,
 .markdown > h2 code {
   color: var(--ifm-link-color) !important;
   font-family: 'Fira Code' !important;
   background-color: transparent !important;
   border: var(--ifm-playground-button-border) !important;
-  font-size: 0.8rem !important;
+  font-size: 0.92rem !important;
   padding: 2px 8px;
 }
 
