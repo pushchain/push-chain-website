@@ -348,7 +348,7 @@ function _createMdxContent(props) {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
           href: "https://go.dev/doc/install",
           children: "Go"
-        }), " (v1.21+)"]
+        }), " (v1.23+)"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
           href: "https://book.getfoundry.sh/getting-started/installation",
@@ -366,7 +366,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "git clone https://github.com/pushchain/push-chain\ncd push-chain\nmake install\n"
+        children: "git clone https://github.com/pushchain/push-chain-node\ncd push-chain\nmake install\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "2-start-the-local-testnet",
@@ -391,7 +391,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "git clone https://github.com/pushchain/push-smart-account-v1\ncd push-smart-account-v1\nforge build\n"
+        children: "git clone https://github.com/pushchain/push-chain-core-contracts/\ncd push-smart-account-v1\nforge build\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "2-fund-your-evm-wallet-on-localnet",
@@ -465,7 +465,7 @@ function _createMdxContent(props) {
         children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
           children: "push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20"
         }), " address is pre-funded at genesis with ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "2 billion UPC"
+          children: "5 billion UPC"
         }), ", so it’s safe to use as the sender."]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
@@ -491,7 +491,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "pchaind tx ue update-chain-config --chain-config '{\n  \"namespace\": \"solana\",\n  \"chain_id\": \"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\",\n  \"public_rpc_url\": \"https://api.devnet.solana.com\",\n  \"vm_type\": 1,\n  \"locker_contract_address\": \"3zrWaMknHTRQpZSxY4BvQxw9TStSXiHcmcp3NMPTFkke\",\n  \"block_confirmation\": 1,\n  \"funds_added_event_topic\": \"FundsAddedEvent\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
+        children: "pchaind tx ue add-chain-config --chain-config \"$(cat config/testnet-donut/solana_devnet_chain_config.json)\" --from acc1 --gas-prices 100000000000upc -y\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "ethereum-sepolia",
@@ -499,7 +499,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "pchaind tx ue add-chain-config --chain-config '{\n  \"namespace\": \"eip155\",\n  \"chain_id\": \"11155111\",\n  \"public_rpc_url\": \"https://1rpc.io/sepolia\",\n  \"vm_type\": 0,\n  \"locker_contract_address\": \"0x28E0F09bE2321c1420Dc60Ee146aACbD68B335Fe\",\n  \"block_confirmation\": 6,\n  \"funds_added_event_topic\": \"0xddcd6ef7998ae51b4ead4e9aa669a7d5ff30af88eddaa5062c91b08153da07c0\"\n}' --from acc1 --gas-prices 1000000000upc -y\n"
+        children: "pchaind tx ue add-chain-config --chain-config \"$(cat config/testnet-donut/eth_sepolia_chain_config.json)\" --from acc1 --gas-prices 100000000000upc -y\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
