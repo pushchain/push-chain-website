@@ -660,7 +660,8 @@ export const ModalContainer = styled(ItemH)`
 `;
 
 export const ModalInner = styled(Button)`
-  border: 1px solid #d9d9d9;
+  // border: 1px solid #d9d9d9;
+  border: var(--ifm-playground-button-border);
   border-radius: 16px;
   padding: 12px 16px;
   background: transparent;
@@ -736,6 +737,7 @@ export const ModalWrapper = styled(ItemH)`
   gap: 5px;
   align-items: center;
   justify-content: center;
+  color: var(--ifm-color-primary-text);
 `;
 
 export const ImageText = styled.div`
