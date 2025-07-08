@@ -32,7 +32,7 @@ Learn how to deploy localnet of Push Chain to understand or speed up the develop
 
 Ensure the following tools are installed:
 
-- [Go](https://go.dev/doc/install) (v1.21+)
+- [Go](https://go.dev/doc/install) (v1.23+)
 - [Foundry](https://book.getfoundry.sh/getting-started/installation)
 - Git
 
@@ -41,7 +41,7 @@ Ensure the following tools are installed:
 ### 1. Clone and install Push Chain
 
 ```bash
-git clone https://github.com/pushchain/push-chain
+git clone https://github.com/pushchain/push-chain-node
 cd push-chain
 make install
 ```
@@ -64,7 +64,7 @@ To enable universal execution from EVM/Solana chains, you need to deploy protoco
 ### 1. Clone and build smart account contracts
 
 ```bash
-git clone https://github.com/pushchain/push-smart-account-v1
+git clone https://github.com/pushchain/push-chain-core-contracts/
 cd push-smart-account-v1
 forge build
 ```
@@ -107,7 +107,7 @@ Bech32 Acc: push1jtdw9kjc2yptl6yjyad69q73v2gcl29xfmmq5a
 pchaind tx bank send push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20 push1jtdw9kjc2yptl6yjyad69q73v2gcl29xfmmq5a 100000000000000000000000upc --gas-prices 1000000000upc -y
 ```
 
-> The `push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20` address is pre-funded at genesis with **2 billion UPC**, so it’s safe to use as the sender.
+> The `push1gjaw568e35hjc8udhat0xnsxxmkm2snrexxz20` address is pre-funded at genesis with **5 billion UPC**, so it’s safe to use as the sender.
 
 <br />
 <br />
@@ -129,15 +129,7 @@ Now configure Push Chain to interact with external chains.
 ### Solana Devnet
 
 ```bash
-pchaind tx ue update-chain-config --chain-config '{
-  "namespace": "solana",
-  "chain_id": "EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
-  "public_rpc_url": "https://api.devnet.solana.com",
-  "vm_type": 1,
-  "locker_contract_address": "3zrWaMknHTRQpZSxY4BvQxw9TStSXiHcmcp3NMPTFkke",
-  "block_confirmation": 1,
-  "funds_added_event_topic": "FundsAddedEvent"
-}' --from acc1 --gas-prices 1000000000upc -y
+pchaind tx ue add-chain-config --chain-config "$(cat config/testnet-donut/solana_devnet_chain_config.json)" --from acc1 --gas-prices 100000000000upc -y
 ```
 
 <br />
@@ -146,15 +138,7 @@ pchaind tx ue update-chain-config --chain-config '{
 ### Ethereum Sepolia
 
 ```bash
-pchaind tx ue add-chain-config --chain-config '{
-  "namespace": "eip155",
-  "chain_id": "11155111",
-  "public_rpc_url": "https://1rpc.io/sepolia",
-  "vm_type": 0,
-  "locker_contract_address": "0x28E0F09bE2321c1420Dc60Ee146aACbD68B335Fe",
-  "block_confirmation": 6,
-  "funds_added_event_topic": "0xddcd6ef7998ae51b4ead4e9aa669a7d5ff30af88eddaa5062c91b08153da07c0"
-}' --from acc1 --gas-prices 1000000000upc -y
+pchaind tx ue add-chain-config --chain-config "$(cat config/testnet-donut/eth_sepolia_chain_config.json)" --from acc1 --gas-prices 100000000000upc -y
 ```
 
 > If you’ve deployed a custom `FeeGateway` contract, you can include its address in the chain config as well.
