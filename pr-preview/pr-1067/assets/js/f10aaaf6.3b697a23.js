@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[2183],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[98559],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -131,7 +131,7 @@ var jsx_runtime = __webpack_require__(474848);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */// import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
-function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
+function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",href:item.href||'',title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
 ;// ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -142,7 +142,7 @@ function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_r
 
 /***/ }),
 
-/***/ 794206:
+/***/ 952009:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -160,46 +160,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const frontMatter = {
-	id: 'docs-chain-build-section',
-	title: 'Build',
+	id: 'docs-chain-deep-dives-section',
+	title: 'Deep Dives',
 	hide_title: false,
-	slug: './build',
+	slug: './deep-dives',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 102,
-	image: '/assets/docs/previews/docs_chain__section--build.png'
+	sidebar_position: 105,
+	image: '/assets/docs/previews/docs_chain__section--deep_dives.png'
 };
-const contentTitle = 'Build Section';
+const contentTitle = 'Deep Dives Section';
 const metadata = {
-  "id": "chain/docs-chain-build-section",
-  "title": "Build",
-  "description": "Build Section | Push Chain Docs",
-  "source": "@site/docs/chain/102-Build-Section.mdx",
+  "id": "chain/docs-chain-deep-dives-section",
+  "title": "Deep Dives",
+  "description": "Deep Dives Section | Push Chain Docs",
+  "source": "@site/docs/chain/105-Deep-Dives-Section.mdx",
   "sourceDirName": "chain",
-  "slug": "/chain/build",
-  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/build",
+  "slug": "/chain/deep-dives",
+  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/102-Build-Section.mdx",
+  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/105-Deep-Dives-Section.mdx",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 102,
+  "sidebarPosition": 105,
   "frontMatter": {
-    "id": "docs-chain-build-section",
-    "title": "Build",
+    "id": "docs-chain-deep-dives-section",
+    "title": "Deep Dives",
     "hide_title": false,
-    "slug": "./build",
+    "slug": "./deep-dives",
     "displayed_sidebar": "pushChainSidebar",
-    "sidebar_position": 102,
-    "image": "/assets/docs/previews/docs_chain__section--build.png"
+    "sidebar_position": 105,
+    "image": "/assets/docs/previews/docs_chain__section--deep_dives.png"
   },
   "sidebar": "pushChainSidebar",
   "previous": {
-    "title": "Chain Configuration",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/chain-config"
+    "title": "Send Transaction Example",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/examples/send-transaction-example"
   },
   "next": {
-    "title": "Recommended Practices",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/build/recommended-practices"
+    "title": "JSON-RPC Functions",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/json-rpc-functions"
   }
 };
 const assets = {
@@ -221,13 +221,13 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Head, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: "Build Section | Push Chain Docs"
+        children: "Deep Dives Section | Push Chain Docs"
       })
     }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-      id: "build-section",
-      children: "Build Section"
+      id: "deep-dives-section",
+      children: "Deep Dives Section"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This section covers everything you will require from Push Chain Core SDK to create your Universal Application."
+      children: "Dive into concepts, advanced topics and understand the inner workings of Push Chain."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_DocCardList__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, {})]
   });
 }

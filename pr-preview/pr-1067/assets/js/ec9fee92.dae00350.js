@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[39619],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[85265],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -131,7 +131,7 @@ var jsx_runtime = __webpack_require__(474848);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */// import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
-function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
+function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",href:item.href||'',title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
 ;// ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -142,7 +142,7 @@ function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_r
 
 /***/ }),
 
-/***/ 755685:
+/***/ 511960:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -160,46 +160,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const frontMatter = {
-	id: 'docs-chain-setup-smart-contract-environment-section',
-	title: 'Smart Contract Environment',
+	id: 'docs-chain-setup-section',
+	title: 'Setup',
 	hide_title: false,
-	slug: './smart-contract-environment',
+	slug: './setup',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 102,
-	image: '/assets/docs/previews/docs_chain_setup__section--smart_contract_environment.png'
+	sidebar_position: 101,
+	image: '/assets/docs/previews/docs_chain__section--setup.png'
 };
-const contentTitle = 'Smart Contract Environment Section';
+const contentTitle = 'Setup Section';
 const metadata = {
-  "id": "chain/setup/docs-chain-setup-smart-contract-environment-section",
-  "title": "Smart Contract Environment",
-  "description": "Smart Contract Environment Section | Setup | Push Chain Docs",
-  "source": "@site/docs/chain/02-setup/102-Smart-Contract-Environment-Section.mdx",
-  "sourceDirName": "chain/02-setup",
-  "slug": "/chain/setup/smart-contract-environment",
-  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/smart-contract-environment",
+  "id": "chain/docs-chain-setup-section",
+  "title": "Setup",
+  "description": "Setup Section | Push Chain Docs",
+  "source": "@site/docs/chain/103-Setup-Section.mdx",
+  "sourceDirName": "chain",
+  "slug": "/chain/setup",
+  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/02-setup/102-Smart-Contract-Environment-Section.mdx",
+  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/103-Setup-Section.mdx",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 102,
+  "sidebarPosition": 101,
   "frontMatter": {
-    "id": "docs-chain-setup-smart-contract-environment-section",
-    "title": "Smart Contract Environment",
+    "id": "docs-chain-setup-section",
+    "title": "Setup",
     "hide_title": false,
-    "slug": "./smart-contract-environment",
+    "slug": "./setup",
     "displayed_sidebar": "pushChainSidebar",
-    "sidebar_position": 102,
-    "image": "/assets/docs/previews/docs_chain_setup__section--smart_contract_environment.png"
+    "sidebar_position": 101,
+    "image": "/assets/docs/previews/docs_chain__section--setup.png"
   },
   "sidebar": "pushChainSidebar",
   "previous": {
-    "title": "Block Explorer",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/tooling/block-explorer"
+    "title": "Universal Counter App",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-universal-counter"
   },
   "next": {
-    "title": "Remix IDE",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/smart-contract-environment/configure-remix"
+    "title": "Tooling",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/tooling"
   }
 };
 const assets = {
@@ -221,14 +221,14 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Head, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: "Smart Contract Environment Section | Setup | Push Chain Docs"
+        children: "Setup Section | Push Chain Docs"
       })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-      id: "smart-contract-environment-section",
-      children: "Smart Contract Environment Section"
+    }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
+      id: "setup-section",
+      children: "Setup Section"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Setting up your smart contract environment to interact with Push Chain, whether you are using Remix, Hardhat, Foundry, or any other tooling, this section will guide you through the process."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_DocCardList__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, {})]
+      children: "This section covers everything you will require to setup your tooling and environment to start building on Push Chain."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_DocCardList__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, {})]
   });
 }
 function MDXContent(props = {}) {

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[11023],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[89052],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -131,7 +131,7 @@ var jsx_runtime = __webpack_require__(474848);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */// import WalletSvg from '../../static/assets/website/docshub/WalletSVG.svg';
-function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
+function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:(0,useBaseUrl/* default */.A)(href),className:(0,clsx_m/* default */.A)('card padding--lg',styles_module.cardContainer),children:children});}function CardLayout(_ref2){let{href,icon,title,description}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardContainer,{href:(0,useBaseUrl/* default */.A)(href),children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:styles_module.textDiv,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("h2",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardTitle),title:title,children:[icon," ",title]}),description&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:(0,clsx_m/* default */.A)('text--truncate',styles_module.cardDescription),title:description,children:description})]})});}function CardCategory(_ref3){var _item$description;let{item}=_ref3;return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{icon:"\uD83D\uDDC3\uFE0F",href:item.href||'',title:item.label,description:(_item$description=item.description)!==null&&_item$description!==void 0?_item$description:(0,Translate/* translate */.T)({message:'{count} items',id:'theme.docs.DocCard.categoryDescription',description:'The default description for a category card in the generated index about how many items this category includes'},{count:item.items.length})});}function CardLink(_ref4){var _item$docId,_item$description2;let{item}=_ref4;const doc=(0,docsUtils/* useDocById */.cC)((_item$docId=item.docId)!==null&&_item$docId!==void 0?_item$docId:undefined);return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLayout,{href:item.href,icon:'',title:item.label,description:(_item$description2=item.description)!==null&&_item$description2!==void 0?_item$description2:doc===null||doc===void 0?void 0:doc.description});}function DocCard(_ref5){let{item}=_ref5;switch(item.type){case'link':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardLink,{item:item});case'category':return/*#__PURE__*/(0,jsx_runtime.jsx)(CardCategory,{item:item});default:throw new Error(`unknown item type ${JSON.stringify(item)}`);}}
 ;// ./node_modules/@docusaurus/theme-classic/lib/theme/DocCardList/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -142,7 +142,7 @@ function CardContainer(_ref){let{href,children}=_ref;return/*#__PURE__*/(0,jsx_r
 
 /***/ }),
 
-/***/ 914266:
+/***/ 841844:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -160,46 +160,46 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const frontMatter = {
-	id: 'docs-chain-ui-kit-customizations-section',
-	title: 'Customizations',
+	id: 'docs-chain-ui-kit-examples-section',
+	title: 'Examples',
 	hide_title: false,
-	slug: './customizations',
+	slug: './examples',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 101,
-	image: '/assets/docs/previews/docs_chain_ui_kit__section--customizations.png'
+	sidebar_position: 102,
+	image: '/assets/docs/previews/docs_chain_ui_kit__section--examples.png'
 };
-const contentTitle = 'Customizations Section';
+const contentTitle = 'Examples Section';
 const metadata = {
-  "id": "chain/ui-kit/docs-chain-ui-kit-customizations-section",
-  "title": "Customizations",
-  "description": "Customizations Section | UI Kit | Push Chain Docs",
-  "source": "@site/docs/chain/04-ui-kit/101-Customizations.mdx",
+  "id": "chain/ui-kit/docs-chain-ui-kit-examples-section",
+  "title": "Examples",
+  "description": "Examples Section | UI Kit | Push Chain Docs",
+  "source": "@site/docs/chain/04-ui-kit/102-Examples.mdx",
   "sourceDirName": "chain/04-ui-kit",
-  "slug": "/chain/ui-kit/customizations",
-  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/customizations",
+  "slug": "/chain/ui-kit/examples",
+  "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/examples",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/04-ui-kit/101-Customizations.mdx",
+  "editUrl": "https://github.com/pushchain/push-chain-website/blob/main/docs/chain/04-ui-kit/102-Examples.mdx",
   "tags": [],
   "version": "current",
-  "sidebarPosition": 101,
+  "sidebarPosition": 102,
   "frontMatter": {
-    "id": "docs-chain-ui-kit-customizations-section",
-    "title": "Customizations",
+    "id": "docs-chain-ui-kit-examples-section",
+    "title": "Examples",
     "hide_title": false,
-    "slug": "./customizations",
+    "slug": "./examples",
     "displayed_sidebar": "pushChainSidebar",
-    "sidebar_position": 101,
-    "image": "/assets/docs/previews/docs_chain_ui_kit__section--customizations.png"
+    "sidebar_position": 102,
+    "image": "/assets/docs/previews/docs_chain_ui_kit__section--examples.png"
   },
   "sidebar": "pushChainSidebar",
   "previous": {
-    "title": "Integrate Push Universal Wallet",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/integrate-push-universal-wallet"
+    "title": "Theme Variables",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/customizations/theme-variables"
   },
   "next": {
-    "title": "Push Universal Wallet Provider",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/customizations/push-universal-wallet-provider"
+    "title": "Single Wallet Example",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/examples/single-wallet-example"
   }
 };
 const assets = {
@@ -221,13 +221,13 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Head, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: "Customizations Section | UI Kit | Push Chain Docs"
+        children: "Examples Section | UI Kit | Push Chain Docs"
       })
     }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h1, {
-      id: "customizations-section",
-      children: "Customizations Section"
+      id: "examples-section",
+      children: "Examples Section"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This section covers all the components of the Push Chain UI Kit."
+      children: "This section covers the examples of each component of the Push Chain Ui Kit."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_theme_DocCardList__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A, {})]
   });
 }
