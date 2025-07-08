@@ -69,10 +69,10 @@ function App() {
         <PushUniversalAccountButton
           uid='basic'
           themeOverrides={{
-            '--pwauth-btn-connect-text-color': 'red',
-            '--pwauth-btn-connect-bg-color': '#fff',
-            '--pwauth-btn-connected-text-color': '#000',
-            '--pwauth-btn-connected-bg-color': '#000000',
+            '--pwauth-btn-connect-text-color': '#FFFFFF',
+            '--pwauth-btn-connect-bg-color': '#3459F0',
+            '--pwauth-btn-connected-text-color': '#FFFFFF',
+            '--pwauth-btn-connected-bg-color': '#6684FC',
           }}
         />
       </div>
@@ -100,6 +100,8 @@ import {
 } from '@pushchain/ui-kit';
 
 function App() {
+  const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
+
   const walletConfig = {
     uid: 'light-dark',
     network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
@@ -134,19 +136,42 @@ function App() {
           uid='light-dark'
           themeOverrides={{
             light: {
-              '--pwauth-btn-connect-text-color': 'red',
-              '--pwauth-btn-connect-bg-color	': '#fff',
-              '--pwauth-btn-connected-text-color': '#000',
-              '--pwauth-btn-connected-bg-color': '#000000',
+              '--pwauth-btn-connect-text-color': '#1A1A1A',
+              '--pwauth-btn-connect-bg-color': '#E5E7EB',
+              '--pwauth-btn-connected-text-color': '#4B4B4B',
+              '--pwauth-btn-connected-bg-color': '#D4D4D8',
             },
             dark: {
-              '--pwauth-btn-connect-text-color': 'green',
-              '--pwauth-btn-connect-bg-color': '#000',
-              '--pwauth-btn-connected-text-color': '#fff',
-              '--pwauth-btn-connected-bg-color': '#ffffff',
+              '--pwauth-btn-connect-text-color': '#FFFFFF',
+              '--pwauth-btn-connect-bg-color': '#1F2937',
+              '--pwauth-btn-connected-text-color': '#D1D5DB',
+              '--pwauth-btn-connected-bg-color': '#111827',
             },
           }}
         />
+        <div key={theme} style={{ display: 'flex', gap: '16px', marginTop: '8px'}}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <input
+              type="radio"
+              name="theme"
+              value="light"
+              checked={theme === 'light'}
+              onChange={() => setTheme('light')}
+            />
+            Light
+          </label>
+
+          <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <input
+              type="radio"
+              name="theme"
+              value="dark"
+              checked={theme === 'dark'}
+              onChange={() => setTheme('dark')}
+            />
+            Dark
+          </label>
+        </div>
       </div>
     );
   }
@@ -155,7 +180,7 @@ function App() {
     <PushUniversalWalletProvider
       config={walletConfig}
       app={appMetadata}
-      themeMode={PushUI.CONSTANTS.THEME.DARK}
+      themeMode={theme === 'dark' ? PushUI.CONSTANTS.THEME.DARK : PushUI.CONSTANTS.THEME.LIGHT}
     >
       <WalletUI />
     </PushUniversalWalletProvider>
@@ -211,7 +236,7 @@ function App() {
           uid='extend'
           themeOverrides={{
             '--pwauth-btn-connect-border-radius': '32px',
-            '--pwauth-btn-connect-bg-color': 'blue',
+            '--pwauth-btn-connect-bg-color': '#6684FC',
           }}
         />
       </div>

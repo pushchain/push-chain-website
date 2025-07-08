@@ -42,12 +42,32 @@ function App() {
 
     return (
       <div>
-        <h3>Wallet Status: {connectionStatus}</h3>
+        <h3 style={{ margin: '1rem 0' }}>Wallet Status: {connectionStatus}</h3>
         {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED && (
-          <button onClick={() => handleConnectToPushWallet()}>Connect via Hook Call</button>
+          <button
+            style={{
+              background: 'transparent',
+              padding: '12px 18px',
+              borderRadius: '10px',
+              border: '1px solid',
+            }}
+            onClick={() => handleConnectToPushWallet()}
+          >
+            Connect via Hook Call
+          </button>
         )}
         {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
-          <button onClick={() => handleUserLogOutEvent()}>Disconnect via Hook Call</button>
+          <button
+            style={{
+              background: 'transparent',
+              padding: '12px 18px',
+              borderRadius: '10px',
+              border: '1px solid',
+            }}
+            onClick={() => handleUserLogOutEvent()}
+          >
+            Disconnect via Hook Call
+          </button>
         )}
       </div>
     );

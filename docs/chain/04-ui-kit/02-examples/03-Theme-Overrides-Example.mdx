@@ -76,11 +76,11 @@ function App() {
       config={walletConfig}
       app={appMetadata}
       themeOverrides={{
-        '--pw-core-bg-primary-color': '#FF474C',
-        '--pw-core-bg-secondary-color': '#942222',
+        '--pw-core-bg-primary-color': '#FAF1DD',
+        '--pw-core-bg-secondary-color': '#FFFDF8',
         '--pw-core-font-family': 'Inter',
-        '--pw-core-text-primary-color': '#fff',
-        '--pw-core-text-secondary-color': '#F5F6F8',
+        '--pw-core-text-primary-color': '#1A1A1A',
+        '--pw-core-text-secondary-color': '#4B4B4B',
         '--pw-core-btn-border-radius': '15px',
       }}
     >
@@ -103,6 +103,8 @@ import {
 } from '@pushchain/ui-kit';
 
 function App() {
+  const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
+
   const walletConfig = {
     uid: 'light_dark',
     network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
@@ -134,6 +136,29 @@ function App() {
     return (
       <div>
         <PushUniversalAccountButton uid='light_dark' />
+        <div key={theme} style={{ display: 'flex', gap: '16px', marginTop: '8px'}}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <input
+              type="radio"
+              name="theme"
+              value="light"
+              checked={theme === 'light'}
+              onChange={() => setTheme('light')}
+            />
+            Light
+          </label>
+
+          <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            <input
+              type="radio"
+              name="theme"
+              value="dark"
+              checked={theme === 'dark'}
+              onChange={() => setTheme('dark')}
+            />
+            Dark
+          </label>
+        </div>
       </div>
     );
   }
@@ -142,15 +167,18 @@ function App() {
     <PushUniversalWalletProvider
       config={walletConfig}
       app={appMetadata}
-      themeMode={PushUI.CONSTANTS.THEME.LIGHT}
+      themeMode={theme === 'dark' ? PushUI.CONSTANTS.THEME.DARK : PushUI.CONSTANTS.THEME.LIGHT}
       themeOverrides={{
-        '--pw-core-bg-primary-color': 'red',
+        '--pw-core-bg-primary-color': '#FAF1DD',
+        '--pw-core-bg-secondary-color': '#FFFDF8',
         light: {
-          '--pw-core-bg-primary-color': 'yellow',
+          '--pw-core-bg-primary-color': '#DBE3FF',
+          '--pw-core-bg-secondary-color': '#EDEFFF',
         },
         dark: {
-          '--pw-core-bg-primary-color': 'green',
-        },
+          '--pw-core-bg-primary-color': '#2D344C',
+          '--pw-core-bg-secondary-color': '#222642',
+        }
       }}
     >
       <WalletUI />

@@ -43,7 +43,8 @@ function App() {
         network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET
       }}
       themeOverrides={{
-        '--pw-core-bg-primary-color': 'red', // global override
+        '--pw-core-bg-primary-color': '#FAF3E0', // global override
+        '--pw-core-bg-secondary-color': '#FFFDF9',
       }}
     >
       {/* Your App Logic */}
@@ -65,6 +66,8 @@ import {
 } from '@pushchain/ui-kit';
 
 function App() {
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+
   return (
     <PushUniversalWalletProvider
       config={{
@@ -72,11 +75,41 @@ function App() {
         network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET
       }}
       themeOverrides={{
-        '--pw-core-bg-primary-color': 'green', // global override
+        light: {
+          '--pw-core-bg-primary-color': '#F1ECF9',
+          '--pw-core-bg-secondary-color': '#F9F7FC',
+        },
+        dark: {
+          '--pw-core-bg-primary-color': '#1F1B24',
+          '--pw-core-bg-secondary-color': '#2B2235',
+        }
       }}
+      themeMode={theme === 'dark' ? PushUI.CONSTANTS.THEME.DARK : PushUI.CONSTANTS.THEME.LIGHT}
     >
-      {/* Your App Logic */}
       <PushUniversalAccountButton uid='applevel_lightdark' />
+      <div key={theme} style={{ display: 'flex', gap: '16px', marginTop: '8px'}}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <input
+            type="radio"
+            name="theme"
+            value="light"
+            checked={theme === 'light'}
+            onChange={() => setTheme('light')}
+          />
+          Light
+        </label>
+
+        <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <input
+            type="radio"
+            name="theme"
+            value="dark"
+            checked={theme === 'dark'}
+            onChange={() => setTheme('dark')}
+          />
+          Dark
+        </label>
+      </div>
     </PushUniversalWalletProvider>
   );
 }
@@ -94,6 +127,8 @@ import {
 } from '@pushchain/ui-kit';
 
 function App() {
+  const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
+
   return (
     <PushUniversalWalletProvider
       config={{
@@ -104,18 +139,40 @@ function App() {
         // ... app level overrides
         // NOTE: Button overrides can override app level overrides for supported variables (beginning with `--pwauth-`)
       }}
+      themeMode={theme === 'dark' ? PushUI.CONSTANTS.THEME.DARK : PushUI.CONSTANTS.THEME.LIGHT}
     >
       {/* Button-level overrides */}
       <PushUniversalAccountButton
         uid='button_specific'
         themeOverrides={{
-          '--pwauth-btn-connect-bg-color': 'yellow',
           '--pwauth-btn-connect-border-radius': '32px',
-          light: { '--pwauth-btn-connect-bg-color': 'red' },
-          dark: { '--pwauth-btn-connect-bg-color': 'blue' },
+          light: { '--pwauth-btn-connect-bg-color': '#3459F0' },
+          dark: { '--pwauth-btn-connect-bg-color': '#6684FC' },
         }}
       />
+      <div key={theme} style={{ display: 'flex', gap: '16px', marginTop: '8px'}}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <input
+            type="radio"
+            name="theme"
+            value="light"
+            checked={theme === 'light'}
+            onChange={() => setTheme('light')}
+          />
+          Light
+        </label>
 
+        <label style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+          <input
+            type="radio"
+            name="theme"
+            value="dark"
+            checked={theme === 'dark'}
+            onChange={() => setTheme('dark')}
+          />
+          Dark
+        </label>
+      </div>
       {/* Your App Logic */}
     </PushUniversalWalletProvider>
   );
