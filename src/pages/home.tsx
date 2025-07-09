@@ -314,6 +314,12 @@ export default function Home() {
           </Content>
         </ShowcaseSection>
 
+        <Section>
+          <StatsContent>
+            <StatsSection />
+          </StatsContent>
+        </Section>
+
         {/* WHY PUSH AND BLOG */}
         <BlogSection id='blog'>
           <Content alignSelf='center'>
@@ -366,12 +372,6 @@ export default function Home() {
             <RecentBlogPosts />
           </Content>
         </BlogSection>
-
-        <Section>
-          <Content>
-            <StatsSection />
-          </Content>
-        </Section>
 
         {/* MEDIA COVERAGE SECTION */}
         {/* <FeaturedInSection id='featured'>
@@ -526,24 +526,23 @@ const GlowCircle = styled.div`
   pointer-events: none;
   z-index: 999999;
 
-  // mobile
-  width: 395px;
-  height: 392px;
-  left: -12px;
-  top: 102px;
+  width: 543px;
+  height: 538px;
+  left: 446px;
+  top: 29px;
 
-  // tablet
-  @media (min-width: 768px) {
+  @media ${device.tablet} {
     width: 543px;
     height: 538px;
     left: 238px;
     top: 29px;
   }
 
-  // desktop
-  @media (min-width: 1024px) {
-    left: 446px;
-    top: 29px;
+  @media ${device.mobileL} {
+    width: 395px;
+    height: 392px;
+    left: -12px;
+    top: 102px;
   }
 `;
 
@@ -750,6 +749,8 @@ const OtherFeaturesSection = styled(Section)``;
 const TokenomicsSection = styled(Section)``;
 
 const FAQSection = styled(Section)``;
+
+const StatsContent = styled(Content)``;
 
 const BgSection = styled(Section)`
   &:after {
