@@ -4924,9 +4924,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^0.1.38":
-  version: 0.1.39
-  resolution: "@pushchain/core@npm:0.1.39"
+"@pushchain/core@npm:^0.1.40":
+  version: 0.1.40
+  resolution: "@pushchain/core@npm:0.1.40"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@coral-xyz/anchor": "npm:^0.31.0"
@@ -4942,17 +4942,17 @@ __metadata:
     tslib: "npm:^2.3.0"
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
-  checksum: 10c0/3b1eab1fb6494bf8adb15f5b437b28207fc243dd60d78e92d8c657dcba79030d9f108a0cfe3c9135d1edb101d0d228dc3a5e9f62fdc0b14ee80f569a12711674
+  checksum: 10c0/50d395b089e44e8fea373f6a5b85f17edf6a77d0273cac1ea1add98930b9a6e088ac1f20780d49444432e51f145eddbc55cbaefbdbbe26205fbc8fe4b0a9886f
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^1.1.16-alpha.5":
-  version: 1.1.16-alpha.5
-  resolution: "@pushchain/ui-kit@npm:1.1.16-alpha.5"
+"@pushchain/ui-kit@npm:^1.1.16":
+  version: 1.1.16
+  resolution: "@pushchain/ui-kit@npm:1.1.16"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^0.1.38"
+    "@pushchain/core": "npm:^0.1.40"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.3"
     buffer: "npm:^6.0.3"
@@ -4962,7 +4962,7 @@ __metadata:
     styled-components: "npm:^6.1.19"
     tslib: "npm:^2.3.0"
     viem: "npm:^2.23.9"
-  checksum: 10c0/a9613a2b9a37cb33d739d5997e26c14f07fff6db2cc31c9ccb151fbecbb6f051e97f2b7688ea0835ead2fa86b941e90795725a2db29d71d5a1a1cf47669207fd
+  checksum: 10c0/e02079a0a87a5e627552a8ca45231c8abb4e9db33824ef2a228c59105b10bd5efe6257babbd612169a2c88896d80794cde4a24060f902b0555bece0fbd94426c
   languageName: node
   linkType: hard
 
@@ -20155,8 +20155,8 @@ __metadata:
     "@docusaurus/theme-mermaid": "npm:3.0.1"
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
-    "@pushchain/core": "npm:^0.1.38"
-    "@pushchain/ui-kit": "npm:^1.1.16-alpha.5"
+    "@pushchain/core": "npm:^0.1.40"
+    "@pushchain/ui-kit": "npm:^1.1.16"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
