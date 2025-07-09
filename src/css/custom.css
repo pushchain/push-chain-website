@@ -387,6 +387,7 @@ html[data-theme='dark'] .container {
   font-size: 1rem;
   font-weight: 600 !important;
   line-height: 134.063%;
+  width: fit-content;
 }
 
 .alert.alert--minimal > summary::before,
@@ -410,10 +411,12 @@ html[data-theme='dark'] .container {
 
   border: none !important;
   position: absolute;
-  left: 175px !important;
+  right: -30px !important;
   top: 0px !important;
+  flex-shrink: 0;
   transform-origin: center center !important;
   transition: transform 0.3s ease;
+  /* margin-right: 40px; */
 }
 
 .alert.alert--minimal[open] > summary::after,
@@ -1814,6 +1817,14 @@ article .markdown > ol > li > code {
 {
   background: transparent !important;
 }
+
+/* for deploy preview only */
+.collapsibleContent_i85q {
+  margin-top: 0 rem !important;
+  border-top: none !important;
+}
+
+
 
 /* footer pagination styling */
 .pagination-nav__link--prev .pagination-nav__label::before {
