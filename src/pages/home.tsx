@@ -55,6 +55,7 @@ import { OthersFeaturesList } from '@site/src/config/HomeOthersFeaturesList';
 import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
+import { StatsSection } from '../components/Home/StatsSection';
 
 export default function Home() {
   // Internationalization
@@ -365,6 +366,12 @@ export default function Home() {
             <RecentBlogPosts />
           </Content>
         </BlogSection>
+
+        <Section>
+          <Content>
+            <StatsSection />
+          </Content>
+        </Section>
 
         {/* MEDIA COVERAGE SECTION */}
         {/* <FeaturedInSection id='featured'>
