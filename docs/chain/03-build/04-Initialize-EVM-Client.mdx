@@ -88,8 +88,8 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 
     async function fetchTxEthers() {
       const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-      const txHash   = '0x4627fd2eca321d5fd007995c94af636e5e332760f50fbd8e3426ad0c67543dad';
-      const tx       = await provider.getTransaction(txHash);
+      const txHash = '0x9405d6d75fe331d17ca53e7076a784b70c030c74a00e72ceff6a3e88356828f5';
+      const tx = await provider.getTransaction(txHash);
       console.log('Transaction:', JSON.stringify(tx, null, 2));
     }
 
@@ -111,8 +111,8 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
 
     async function fetchTxViem() {
       const client      = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-      const txHash      = '0x4627fd2eca321d5fd007995c94af636e5e332760f50fbd8e3426ad0c67543dad';
-      const tx          = await client.getTransaction({ hash: txHash });
+      const txHash = '0x9405d6d75fe331d17ca53e7076a784b70c030c74a00e72ceff6a3e88356828f5';
+      const tx = await client.getTransaction({ hash: txHash });
       console.log('Transaction:', JSON.stringify(tx, null, 2));
     }
 
