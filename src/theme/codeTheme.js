@@ -19,7 +19,7 @@ const lightCodeTheme = {
     {
       types: ['string'],
       style: {
-        color: '#D14FE2',
+        color: '#824FCA',
       },
     },
     {
