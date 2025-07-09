@@ -4907,6 +4907,10 @@ article .markdown > ol > li > code {
   border-top: none !important;
 }
 
+.buttonGroup_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module button {
+  color: #000 !important;
+}
+
 
 
 /* footer pagination styling */
