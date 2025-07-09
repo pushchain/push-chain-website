@@ -1648,11 +1648,7 @@ function _createMdxContent(props) {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
             children: "Universal Origin Accounts (UOAs)"
-          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\nThe original source-chain wallet in ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-            href: "#chain-agnostic-address-examples",
-            title: "Examples of chain agnostic address",
-            children: "chain agnostic address"
-          }), " format that is behind each UEA.\nUOAs let you attribute activity back to the user’s home chain."]
+          }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("br", {}), "\nThe original source-chain wallet in chain agnostic address format that is behind each UEA.\nUOAs let you attribute activity back to the user’s home chain."]
         }), "\n"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
@@ -1833,7 +1829,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: ["The addresses are inspired from ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-          href: "https://github.com/ChainSafe/CAIPs/blob/master/CAIPs/CAIP-10.md",
+          href: "https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md",
           title: "Link to caip-10 proposal",
           children: "caip-10"
         }), " format."]
