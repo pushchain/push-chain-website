@@ -694,10 +694,12 @@ const Answer = styled(ItemH)`
 
   & ${Span} {
     color: #bbbcd0;
-    font-size: 19px;
-    font-family: FK Grotesk Neue;
+    font-size: 1.25rem;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-weight: 400;
-    line-height: 140%;
+    line-height: 150%;
 
     @media ${device.mobileL} {
       font-size: 16px;

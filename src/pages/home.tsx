@@ -11,7 +11,12 @@ import React, { useState } from 'react';
 // External Components
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from 'react-i18next';
-import { BsArrowRight, BsArrowUpRight, BsFileX } from 'react-icons/bs';
+import {
+  BsArrowRight,
+  BsArrowUpRight,
+  BsDiscord,
+  BsFileX,
+} from 'react-icons/bs';
 import styled from 'styled-components';
 
 // Internal Components
@@ -64,6 +69,7 @@ export default function Home() {
   const [showMoreTeamMembers, setShowMoreTeamMembers] = useState(false);
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
+  const isLaptop = useMediaQuery(device.laptop);
 
   const onClickViewMoreTeamMembers = (e) => {
     e.preventDefault();
@@ -397,21 +403,23 @@ export default function Home() {
         <FAQSection>
           <Content>
             <ItemH
-              flexDirection={isMobile && 'column'}
+              flexDirection={isLaptop && 'column'}
               alignItems='flex-start'
               justifyContent='space-between'
             >
-              <ItemV alignItems='flex-start' justifyContent='flex-start'>
+              <ItemV
+                flexDirection={isLaptop ? 'row' : 'column'}
+                alignItems='flex-start'
+                justifyContent={isLaptop ? 'space-between' : 'flex-start'}
+              >
                 <H2
                   color='#FFF'
-                  fontSize={isMobile ? '32px' : '36px'}
-                  fontFamily='FK Grotesk Neue'
-                  textAlign={isMobile && 'center'}
-                  margin={isMobile && '0 auto'}
-                  fontWeight='500'
-                  lineHeight='130%'
+                  fontSize={isMobile ? '2.5rem' : '3rem'}
+                  fontFamily='DM Sans, sans-serif'
+                  fontWeight='600'
+                  lineHeight='120%'
                 >
-                  Frequently Asked Questions
+                  Frequently <br /> Asked <br /> Questions
                 </H2>
 
                 <FaqLink
@@ -419,31 +427,33 @@ export default function Home() {
                   target='_blank'
                   title='Discord'
                   fontSize='16px'
-                  margin={isMobile ? '24px auto 0 auto' : '24px 0 0 0'}
-                  background={GLOBALS.COLORS.HIGHLIGHT}
+                  margin={
+                    isMobile ? '24px 0 0 0' : isLaptop ? '0' : '24px 0 0 0'
+                  }
+                  background='#5865F2'
                   color={GLOBALS.COLORS.FONT_LIGHT}
-                  fontFamily='FK Grotesk Neue'
+                  fontFamily='DM Sans, sans-serif'
+                  border='1px solid rgba(255, 255, 255, 0.30)'
+                  borderRadius='12px'
+                  gap='12px'
                 >
+                  <BsDiscord size={28} />
                   <p>Ask us on Discord</p>
-                  <BsArrowRight className='anchorSVGlink' />
+                  <BsArrowRight size={24} className='anchorSvgLink' />
                 </FaqLink>
               </ItemV>
 
-              <ItemV alignItems='flex-start' justifyContent='flex-start'>
+              <ItemV
+                alignItems='flex-start'
+                justifyContent='flex-start'
+                margin={isLaptop ? '48px 0 0 0' : '-20px 0 0 0'}
+              >
                 <AccordionGrid>
-                  <Accordion
-                    items={General}
-                    fontFamily='FK Grotesk Neue'
-                    textColor='#BBBCD0 !important'
-                  />
+                  <Accordion items={General} />
                 </AccordionGrid>
 
                 <AccordionGrid>
-                  <Accordion
-                    items={Notifs.slice(0, 2)}
-                    fontFamily='FK Grotesk Neue'
-                    firstOpen={false}
-                  />
+                  <Accordion items={Notifs.slice(0, 2)} firstOpen={false} />
                 </AccordionGrid>
 
                 <SlideLink
@@ -1083,13 +1093,15 @@ const FaqLink = styled(A)`
   flex-direction: row;
   align-items: center;
   overflow: inherit;
+  gap: 12px;
 
-  p {
-    margin: 0px !important;
-  }
   .anchorSVGlink {
     color: #fff;
     top: 0px;
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
   }
 
   &:hover {
