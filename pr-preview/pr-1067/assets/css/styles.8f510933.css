@@ -4890,7 +4890,9 @@ article .markdown > ol > li > code {
 
 /* for code blocks */
 .codeBlockContainer_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Container-styles-module,
-.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module
+.codeBlock_node_modules-\@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module,
+.codeBlockContainer_Ckt0,
+.theme-code-block pre
 {
   background: transparent !important;
 }
