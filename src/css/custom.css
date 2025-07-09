@@ -866,6 +866,7 @@ article strong > em > code {
   border: var(--ifm-playground-button-border) !important;
   border-radius: var(--ifm-code-border-radius);
   font-family: "Fira Code";
+  width: 100%;
 }
 
 article em > strong > code:hover,
