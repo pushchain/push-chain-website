@@ -36,7 +36,6 @@ export const useChainNotification = () => {
     const toastId = toast.custom(
       () => (
         <NotificationItem
-          // title='Devnet Drop S2 is Live!'
           description='Explore, Deploy, Test & Win up to $500 in prizes!'
           position='bottom-left'
           onClick={() => {
