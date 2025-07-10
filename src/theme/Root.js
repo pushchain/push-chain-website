@@ -44,6 +44,7 @@ export default function Root({ children }) {
 
   const baseURL = useSiteBaseUrl();
   useChainNotification();
+  // useRewardsNotification();
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
     excludeDefaultConfigAt(path)

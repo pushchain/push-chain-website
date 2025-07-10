@@ -120,8 +120,8 @@ export const useRewardsNotification = () => {
     const toastId = toast.custom(
       () => (
         <NotificationItem
-          title='Push Points are Live'
-          description='Earn Push Points to unlock exclusive rewards on completing exciting activities'
+          title='Donut Testnet Closed beta is Live!'
+          description='Get a sneak peek into Testnet, Donut, build universal apps and win prizes!'
           image={
             <Image
               src={
@@ -147,7 +147,7 @@ export const useRewardsNotification = () => {
       ),
       {
         duration: Infinity,
-        position: 'bottom-left',
+        position: 'bottom-right',
       }
     );
   };
@@ -170,7 +170,7 @@ export const useRewardsNotification = () => {
 };
 
 export const Notification = () => {
-  return <StyledToaster offset={0} visibleToasts={5} />;
+  return <StyledToaster offset={20} visibleToasts={5} />;
 };
 
 // Notification Item Component
