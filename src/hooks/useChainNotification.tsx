@@ -37,7 +37,6 @@ export const useChainNotification = () => {
       () => (
         <NotificationItem
           description='Explore, Deploy, Test & Win up to $500 in prizes!'
-          position='bottom-left'
           onClick={() => {
             localStorage.setItem('testnetNotificationShown', 'true');
             window.open('https://t.me/+dHOCilvxNR9jZjM9', '_blank');
@@ -153,8 +152,8 @@ const NotificationContainer = styled.div`
   }
 
   img {
-    width: 230px;
-    height: auto;
+    width: 209px;
+    height: 132px;
     margin: 0 auto;
   }
 `;
