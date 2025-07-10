@@ -268,7 +268,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(
           <div>
             <PushUniversalAccountButton />
 
-            {connectionStatus == 'connected' &&
+            {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&
               <p>Push Chain Client Initialized with Universal Signer: ${JSON.stringify(pushChainClient)}</p>
             }
           </div>
