@@ -123,7 +123,6 @@ const NotificationItem: FC<NotificationProps> = ({
           hoverBorder='1.5px solid #fff'
           fontFamily='DM Sans !important'
           width='100%'
-          padding='16px 32px'
         >
           Enter Donut Contest
         </Button>
