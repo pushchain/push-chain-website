@@ -27,7 +27,7 @@ This guide will walk you through how to join and start building on **Donut**.
 
 ### 🔧 **Powerful SDK, UIKit, Tooling and easy to follow Docs**
 
-Start exploring and building with our [**comprehensive documentation](https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&utm_medium=content&utm_campaign=devdocs).**
+Start exploring and building with our [comprehensive documentation](https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&utm_medium=content&utm_campaign=devdocs).
 
 Use the SDK, 10x your user base, unlock cross-chain liquidity with 100% EVM compatibility. Deploy your app with minimal code changes in minutes.
 
@@ -45,12 +45,12 @@ Network, team up and learn from the best! Also, unlock special Invites to commun
 
 The first Layer 1 built for Universal Apps. Build & Deploy once, onboard users from any chain.
 
-**✅ Deploy once, go cross-chain & 10x your user base**
+**✅ Deploy once, go cross-chain & 10x your user base.**
 
 **✅ Skip bridges. Deploy Universal Smart Contracts with Wallet/Fee Abstraction, Any Chain TX & 100% EVM compatibility.**
 
 **✅ Create unique app experiences, by having users of different chains transact with the same app.**
 
-## 🎟️ Claim your Donut Testnet Pass [HERE](https://t.me/+dHOCilvxNR9jZjM9)
+## [🎟️ Claim your Donut Testnet Pass HERE](https://t.me/+dHOCilvxNR9jZjM9)
 
 PS: *(Spots are limited, Early access closes soon)*
