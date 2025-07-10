@@ -176,7 +176,7 @@ const contentTitle = undefined;
 const metadata = {
   "id": "chain/ui-kit/customizations/docs-chain-ui-kit-customizations-push-universal-account-button",
   "title": "Push Universal Account Button",
-  "description": "{Push Universal Account Button | Customizations | UI Kit | Push Chain Docs}",
+  "description": "Push Universal Account Button | Customizations | UI Kit | Push Chain Docs",
   "source": "@site/docs/chain/04-ui-kit/01-customizations/02-Customizations-Push-Universal-Account-Button.mdx",
   "sourceDirName": "chain/04-ui-kit/01-customizations",
   "slug": "/chain/ui-kit/customizations/push-universal-account-button",
@@ -269,7 +269,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(Head, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
-        children: `Push Universal Account Button | Customizations | UI Kit | Push Chain Docs`
+        children: "Push Universal Account Button | Customizations | UI Kit | Push Chain Docs"
       })
     }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
