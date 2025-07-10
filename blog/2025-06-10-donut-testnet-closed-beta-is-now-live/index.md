@@ -27,7 +27,7 @@ This guide will walk you through how to join and start building on **Donut**.
 
 ### 🔧 **Powerful SDK, UIKit, Tooling and easy to follow Docs**
 
-Start exploring and building with our [comprehensive documentation](https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&utm_medium=content&utm_campaign=devdocs).
+Start exploring and building with our [**comprehensive documentation**](https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&utm_medium=content&utm_campaign=devdocs).
 
 Use the SDK, 10x your user base, unlock cross-chain liquidity with 100% EVM compatibility. Deploy your app with minimal code changes in minutes.
 
