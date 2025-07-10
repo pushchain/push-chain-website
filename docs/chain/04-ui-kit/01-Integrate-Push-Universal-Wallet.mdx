@@ -241,18 +241,25 @@ function App() {
   };
 
   function WalletUI() {
+    const [txnHash, setTxnHash] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState(false);
+
     const { connectionStatus } = usePushWalletContext();
     const { pushChainClient } = usePushChainClient();
 
     const handleSendTransaction = async () => {
       if (pushChainClient) {
+        setIsLoading(true);
         try {
-          await pushChainClient.universal.sendTransaction({
+          const res = await pushChainClient.universal.sendTransaction({
             to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
             value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC
           });
+          setTxnHash(res.hash);
         } catch (err) {
           console.log(err);
+        } finally {
+          setIsLoading(false);
         }
       }
     };
@@ -262,11 +269,12 @@ function App() {
         <PushUniversalAccountButton />
         {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
           <button
+            disabled={isLoading}
             style={{
               background: 'transparent',
               border: '1px solid',
               borderRadius: '10px',
-              padding: '12px',
+              padding: '12px 18px',
               cursor: 'pointer',
               marginTop: '8px',
             }}
@@ -274,6 +282,18 @@ function App() {
           >
             Send Transaction
           </button>
+        )}
+        {txnHash && (
+            <>
+                <p>Txn Hash: {txnHash}</p>
+                <a
+                    href={pushChainClient.explorer.getTransactionUrl(txnHash)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View in Explorer
+                </a>
+            </>
         )}
       </div>
     );
