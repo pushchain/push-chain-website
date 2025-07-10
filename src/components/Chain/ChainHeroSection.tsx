@@ -69,8 +69,8 @@ const ChainHeroSection: FC = () => {
   return (
     <ChainHeroSectionWrapper>
       <ChainAlertBar
-        text='Push Chain Devnet Drop S2 is Live!'
-        url='https://portal.push.org/rewards'
+        text='Donut Testnet Closed Beta is Now Live!'
+        url='https://push.org/blog/donut-testnet-closed-beta-is-now-live'
         center={true}
       />
       <HeroText>
