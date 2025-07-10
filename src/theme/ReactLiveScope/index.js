@@ -166,6 +166,7 @@ const ReactLiveScope = {
     'usePushWalletContext'
   ),
   usePushChainClient: loadClientSideLibraryPushChainUIKit('usePushChainClient'),
+  usePushChain: loadClientSideLibraryPushChainUIKit('usePushChain'),
   PushUI: loadClientSideLibraryPushChainUIKit('PushUI'),
   PushChain: loadClientSideLibraryPushChainCore('PushChain'),
   BsBoxArrowUpRight: loadClientSideReactIconsBS('BsBoxArrowUpRight'),

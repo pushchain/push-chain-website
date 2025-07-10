@@ -112,10 +112,10 @@ function App() {
     return (
       <div>
         <PushUniversalAccountButton />
-        {connectionStatus == 'connected' && (
+        {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
           <p>
             LFG! Push Chain Executor Account (UEA): $
-            {pushChainClient.universal.account}
+            {pushChainClient?.universal.account}
           </p>
         )}
       </div>
@@ -181,8 +181,8 @@ function App() {
     return (
       <div>
         <PushUniversalAccountButton />
-        {connectionStatus == 'connected' && (
-          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient.universal.account}</p>
+        {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+          <p>LFG! Push Chain Executor Account (UEA): ${pushChainClient?.universal.account}</p>
         )}
       </div>
     );
@@ -260,8 +260,20 @@ function App() {
     return (
       <div>
         <PushUniversalAccountButton />
-        {connectionStatus == 'connected' && (
-          <button onClick={handleSendTransaction}>Send Transaction</button>
+        {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+          <button
+            style={{
+              background: 'transparent',
+              border: '1px solid',
+              borderRadius: '10px',
+              padding: '12px',
+              cursor: 'pointer',
+              marginTop: '8px',
+            }}
+            onClick={handleSendTransaction}
+          >
+            Send Transaction
+          </button>
         )}
       </div>
     );
