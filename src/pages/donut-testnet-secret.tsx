@@ -22,18 +22,15 @@ function TOS() {
         {/* <!-- Update Facebook Meta Tags --> */}
         <meta property='og:url' content='https://push.org' />
         <meta property='og:type' content='website' />
-        <meta
-          property='og:title'
-          content='Push Chain | Any Chain. Any Wallet. Any App'
-        />
+        <meta property='og:title' content='Donut Early Pass is here' />
         <meta
           name='og:description'
-          content='Push Chain is a shared state L1 blockchain for Universal Apps. Capable of doing transactions from any chain, unifying L1s & L2s and enabling apps from any chain to be accessed by the users of any chain.'
+          content='Donut is the closed beta for devs who don’t sleep.…mmm Donuts! 🍩 🎟️ Be one of the first to grab it and get access to Push Chain Testnet'
         />
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/testnet-donut-secret.webp')
+            require('/static/assets/previews/testnet-donut-secretpreview.webp')
               .default,
             { absolute: true }
           )}
@@ -42,18 +39,15 @@ function TOS() {
         {/* <!-- Update Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@PushChain' />
-        <meta
-          name='twitter:title'
-          content='Push Chain | Any Chain. Any User. Any App'
-        />
+        <meta name='twitter:title' content='Donut Early Pass is here' />
         <meta
           name='twitter:description'
-          content='Push Chain is a shared state L1 blockchain for Universal Apps. Capable of doing transactions from any chain, unifying L1s & L2s and enabling apps from any chain to be accessed by the users of any chain.'
+          content='Donut is the closed beta for devs who don’t sleep.…mmm Donuts! 🍩 🎟️ Be one of the first to grab it and get access to Push Chain Testnet'
         />
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/testnet-donut-secret.webp')
+            require('/static/assets/previews/testnet-donut-secretpreview.webp')
               .default,
             { absolute: true }
           )}
