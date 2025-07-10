@@ -124,7 +124,6 @@ const NotificationItem: FC<NotificationProps> = ({
           hoverBorder='1.5px solid #fff'
           fontFamily='N27'
           width='100%'
-          padding='16px 32px'
         >
           Claim Closed Beta Pass
         </Button>
