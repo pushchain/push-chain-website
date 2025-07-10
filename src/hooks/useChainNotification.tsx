@@ -153,7 +153,7 @@ const NotificationContainer = styled.div`
 
   img {
     width: 230px;
-    height: auto;
+    height: 132px;
     margin: 0 auto;
   }
 `;
