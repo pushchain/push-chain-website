@@ -39,12 +39,12 @@ export const useChainNotification = () => {
           description='Get a sneak peek into Testnet, Donut, build universal apps and win prizes!'
           position='bottom-left'
           onClick={() => {
-            localStorage.setItem('chainNotificationShown', 'true');
+            localStorage.setItem('testnetNotificationShown', 'true');
             window.open('https://t.me/+dHOCilvxNR9jZjM9', '_blank');
             toast.dismiss(toastId);
           }}
           onClose={() => {
-            localStorage.setItem('chainNotificationShown', 'true');
+            localStorage.setItem('testnetNotificationShown', 'true');
             toast.dismiss(toastId);
           }}
         />
@@ -60,7 +60,7 @@ export const useChainNotification = () => {
     // Ensure this code only runs in the browser
     if (typeof window !== 'undefined') {
       const notificationAlreadyShown =
-        localStorage.getItem('chainNotificationShown') === 'true';
+        localStorage.getItem('testnetNotificationShown') === 'true';
 
       if (!notificationAlreadyShown && !hasMounted) {
         showNotification();
@@ -109,10 +109,8 @@ const NotificationItem: FC<NotificationProps> = ({
               ).default
             }
             srcSet={`${require(`@site/static/assets/website/notifications/testnet-donut@2x.webp`).default} 2x, ${require(`@site/static/assets/website/notifications/testnet-donut@3x.webp`).default} 3x`}
-            alt='Mobile main background image for Billion Reasons to Build website (#BRBIndia)'
+            alt='Push Testnet'
             loading='lazy'
-            width='230px'
-            height='auto'
           />
         </PushLogoBlackContainer>
         {title && <NotificationTitle>{title}</NotificationTitle>}

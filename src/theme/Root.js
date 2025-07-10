@@ -11,7 +11,10 @@ import styled from 'styled-components';
 import ServerStyle from '@site/src/theme/ServerStyle';
 import CookieComponent from '../components/CookieComponent';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
-import { Notification } from '../hooks/useRewardsNotification';
+import {
+  Notification,
+  useRewardsNotification,
+} from '../hooks/useRewardsNotification';
 import { useChainNotification } from '../hooks/useChainNotification';
 
 // Initialize Internalization
@@ -44,7 +47,7 @@ export default function Root({ children }) {
 
   const baseURL = useSiteBaseUrl();
   useChainNotification();
-  // useRewardsNotification();
+  useRewardsNotification();
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
     excludeDefaultConfigAt(path)

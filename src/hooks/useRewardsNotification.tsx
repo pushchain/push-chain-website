@@ -1,3 +1,7 @@
+/* eslint-disable no-useless-escape */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
 // React and other libraries
 import React, { useEffect, useState, FC, ReactNode } from 'react';
 import styled from 'styled-components';
@@ -50,6 +54,7 @@ const NotificationContainer = styled.div`
 
 const StyledToaster = styled(Toaster)`
   width: 397px;
+  margin-right: 50px;
 
   @media (max-width: 425px) {
     width: -webkit-fill-available;
@@ -86,15 +91,7 @@ const NotificationDescription = styled.span`
   -webkit-box-orient: vertical;
 `;
 
-const IconContainer = styled.div`
-  padding: 16px 12px;
-  border-radius: 8px 0px 0px 8px;
-  background: radial-gradient(
-    79.55% 79.55% at 50% 50%,
-    #344efd 0%,
-    #171717 100%
-  );
-`;
+const IconContainer = styled.div``;
 
 const CloseButton = styled.div`
   background-color: transparent;
@@ -126,17 +123,18 @@ export const useRewardsNotification = () => {
             <Image
               src={
                 require(
-                  `@site/static/assets/website/illustrations/rewardspoint.png`
+                  `@site/static/assets/website/notifications/testnet-notif.webp`
                 ).default
               }
-              srcSet={`${require(`@site/static/assets/website/illustrations/rewardspoint@2x.png`).default} 2x, ${require(`@site/static/assets/website/illustrations/rewardspoint@3x.png`).default} 3x`}
-              alt='Image showing BRB Chat is powered by Push Chat'
+              srcSet={`${require(`@site/static/assets/website/notifications/testnet-notif@2x.webp`).default} 2x, ${require(`@site/static/assets/website/notifications/testnet-notif@3x.webp`).default} 3x`}
+              alt='Push Testnet'
+              loading='lazy'
             />
           }
           position='bottom-left'
           onClick={() => {
             localStorage.setItem('notificationShown', 'true');
-            window.open('https://app.push.org/points', '_blank');
+            window.open('https://t.me/+dHOCilvxNR9jZjM9', '_blank');
             toast.dismiss(toastId);
           }}
           onClose={() => {
@@ -170,7 +168,7 @@ export const useRewardsNotification = () => {
 };
 
 export const Notification = () => {
-  return <StyledToaster offset={20} visibleToasts={5} />;
+  return <StyledToaster offset={0} visibleToasts={5} />;
 };
 
 // Notification Item Component
