@@ -1,41 +1,29 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 //
-//
 import { useEffect, useState } from 'react';
 
 function useMediaQuery(query: string): boolean {
-  const getMatches = (q: string): boolean => {
-    if (typeof window === 'undefined') return false;
-    return window.matchMedia(q).matches;
-  };
+  const getMatch = (q: string) =>
+    typeof window !== 'undefined' ? window.matchMedia(q).matches : false;
 
-  const [matches, setMatches] = useState<boolean>(getMatches(query));
+  const [matches, setMatches] = useState<boolean>(getMatch(query));
 
   useEffect(() => {
-    if (typeof window === 'undefined') return () => {};
-
     const mql = window.matchMedia(query);
+    const listener = (e: MediaQueryListEvent) => setMatches(e.matches);
 
-    const handleChange = (event: MediaQueryListEvent) => {
-      setMatches(event.matches);
-    };
-
-    // For Safari compatibility: older versions only support addListener/removeListener
-    if (mql.addEventListener) {
-      mql.addEventListener('change', handleChange);
-    } else if (mql.addListener) {
-      mql.addListener(handleChange);
+    if (typeof mql.addEventListener === 'function') {
+      mql.addEventListener('change', listener);
+    } else if (typeof mql.addListener === 'function') {
+      mql.addListener(listener);
     }
 
-    // Always update state immediately in case initial value changed
-    setMatches(mql.matches);
-
     return () => {
-      if (mql.removeEventListener) {
-        mql.removeEventListener('change', handleChange);
-      } else if (mql.removeListener) {
-        mql.removeListener(handleChange);
+      if (typeof mql.removeEventListener === 'function') {
+        mql.removeEventListener('change', listener);
+      } else if (typeof mql.removeListener === 'function') {
+        mql.removeListener(listener);
       }
     };
   }, [query]);
