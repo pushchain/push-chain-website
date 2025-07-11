@@ -4946,9 +4946,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^1.1.18":
-  version: 1.1.18
-  resolution: "@pushchain/ui-kit@npm:1.1.18"
+"@pushchain/ui-kit@npm:^1.1.19":
+  version: 1.1.19
+  resolution: "@pushchain/ui-kit@npm:1.1.19"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
@@ -4962,7 +4962,7 @@ __metadata:
     styled-components: "npm:^6.1.19"
     tslib: "npm:^2.3.0"
     viem: "npm:^2.23.9"
-  checksum: 10c0/29ef7ddec305ab625e86682068f76ac4ee34328b46b7ba82524d26e97bc3d4eaf4d9cc6cb4f7686d82b8c226c8d20bbac07d92c26b1b84978fea9cbabf45fb4c
+  checksum: 10c0/f68223b74cf78d6321975b4b969f84d8e34a28a7d934a5d00e727d88084a3aa152a18ed3a658af4d8a06f193c396fc1459fd8a9b191da7b95d7291c6ec6b0488
   languageName: node
   linkType: hard
 
@@ -20172,7 +20172,7 @@ __metadata:
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
     "@pushchain/core": "npm:^0.1.40"
-    "@pushchain/ui-kit": "npm:^1.1.18"
+    "@pushchain/ui-kit": "npm:^1.1.19"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
