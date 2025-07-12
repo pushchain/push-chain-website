@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[28898],{666054:e=>{e.exports=JSON.parse('{"label":"Stox","permalink":"/push-website/pr-preview/pr-1076/blog/tags/stox","allTagsPath":"/push-website/pr-preview/pr-1076/blog/tags","count":1,"unlisted":false}')}}]);
