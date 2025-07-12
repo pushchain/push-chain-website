@@ -268,12 +268,12 @@ export default function HomepageFeatures(): JSX.Element {
               >
                 Get started with building shared state apps for any chain.
               </Span>
-              <HeroButton onClick={() => (window.location.href = '#techdocs')}>
-                <Span padding='0 10px 0 0' fontSize='18px'>
-                  Explore Docs
-                </Span>{' '}
-                ↗
-              </HeroButton>
+              {/* <HeroButton onClick={() => (window.location.href = '#techdocs')}> */}
+              <Span padding='0 10px 0 0' fontSize='1.5rem' fontWeight='600'>
+                Coming Soon
+              </Span>{' '}
+              {/* ↗ */}
+              {/* </HeroButton> */}
             </ItemV>
 
             <ItemV
@@ -299,7 +299,8 @@ export default function HomepageFeatures(): JSX.Element {
       </DocsHeroSection>
 
       {/* QUICKSTART SECTION */}
-      <HomepageSection alignItems='flex-start'>
+      {/* TODO: Comment out these data temporarily */}
+      {/* <HomepageSection alignItems='flex-start'>
         <FluidContent>
           <HomepageSubHeader id='quickstart'>
             Popular Quickstart
@@ -326,10 +327,10 @@ export default function HomepageFeatures(): JSX.Element {
             })}
           </PopularQuickiesList>
         </FluidContent>
-      </HomepageSection>
+      </HomepageSection> */}
 
       {/* TECH DOCS SECTION */}
-      <HomepageSection>
+      {/* <HomepageSection>
         <FluidContent>
           <HomepageSubHeader id='techdocs'>
             Technical Documentation
@@ -340,10 +341,10 @@ export default function HomepageFeatures(): JSX.Element {
             ))}
           </TechDocCardList>
         </FluidContent>
-      </HomepageSection>
+      </HomepageSection> */}
 
       {/* SDK SECTION */}
-      <HomepageSection>
+      {/* <HomepageSection>
         <FluidContent>
           <ItemH justifyContent='flex-start'>
             <HomepageSubHeader>Push Chain SDK</HomepageSubHeader>
@@ -371,9 +372,9 @@ export default function HomepageFeatures(): JSX.Element {
                 </PushSdkContent>
               </PushSdkCard>
             ))}
-          </PushSdkCardList>
+          </PushSdkCardList> */}
 
-          {/* <div className='Faqs-main-container'>
+      {/* <div className='Faqs-main-container'>
                   <div className='sub-container'>
                     <span className="hero_home_Faq_header">
                       Frequently Asked Questions
@@ -390,8 +391,8 @@ export default function HomepageFeatures(): JSX.Element {
                   <FAQ />
 
                 </div> */}
-        </FluidContent>
-      </HomepageSection>
+      {/* </FluidContent>
+      </HomepageSection> */}
 
       <Footer showPattern={false} />
     </Layout>
