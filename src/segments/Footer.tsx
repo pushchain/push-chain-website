@@ -9,14 +9,13 @@ import { useHistory } from 'react-router-dom';
 // External Components
 import { BsTwitterX } from 'react-icons/bs';
 import styled from 'styled-components';
-import Typewriter from 'typewriter-effect';
 
 // Internal Components
-import FeaturedList from '@site/src/components/Featured/FeaturedList';
 import {
   A,
   Content,
   H2,
+  Image,
   ItemH,
   ItemV,
   LinkTo,
@@ -24,10 +23,9 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
-import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
-import ImageBg from '@site/static/assets/website/chain/chainFeaturesDivider@3x.png';
 import DiscordSVG from '@site/static/assets/website/shared/discord.svg';
 import GithubSVG from '@site/static/assets/website/shared/github.svg';
+import { ChainEmailSignup } from '@site/src/components/Chain/ChainEmailSignup';
 
 // Internal Configs
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -36,11 +34,11 @@ import { device } from '@site/src/config/globals';
 import { ChainFooterList } from '../components/Chain/config/ChainFooterList';
 
 const tosPrivacyLinks = [
+  { href: '/privacy', text: 'Privacy Policy' },
   { href: '/tos', text: 'Terms of service' },
-  { href: '/privacy', text: 'Privacy' },
 ];
 
-function Footer({ showPattern }) {
+function Footer() {
   // Internationalization
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
@@ -54,66 +52,77 @@ function Footer({ showPattern }) {
     document.documentElement.scrollTo(0, 0);
   };
 
-  // const handleNavigation = (e, href, id, target) => {
-  //   e.stopPropagation();
-  //   if (href) {
-  //     const fullHref = href.includes('http') ? href : `${baseURL}${href}`;
-  //     target === '_self'
-  //       ? (window.location.href = fullHref)
-  //       : window.open(fullHref, target || '_blank');
-  //   } else if (id) {
-  //     const scrollTarget = document.getElementById(id);
-  //     if (location?.pathname !== `${baseURL}/`) {
-  //       history.push(`${baseURL}/`);
-  //       setTimeout(
-  //         () => scrollTarget?.scrollIntoView({ behavior: 'smooth' }),
-  //         300
-  //       );
-  //     } else {
-  //       scrollTarget?.scrollIntoView({ behavior: 'smooth' });
-  //     }
-  //   }
-  // };
-
   // Determine if the pathname starts with '/docs' or Blog
-  const isDocsOrBlogsPage =
-    location?.pathname.startsWith(baseURL + '/docs') ||
-    location?.pathname.startsWith(baseURL + '/blog');
+  // const isDocsOrBlogsPage =
+  //   location?.pathname.startsWith(baseURL + '/docs') ||
+  //   location?.pathname.startsWith(baseURL + '/blog');
 
   return (
     <ChainFooterContainer>
-      {showPattern && <DividerImg />}
-
       <StyledFooter>
-        {/* featured section */}
-        {!isDocsOrBlogsPage && (
-          <FeaturedInSection id='featured'>
-            <Content className='fluid'>
-              <ItemH justifyContent='center' flex='0'>
-                <H2
-                  color='#FFF'
-                  fontWeight='500'
-                  letterSpacing='normal'
-                  fontSize={isMobile ? '24px' : '36px'}
-                  fontFamily='N27'
-                  lineHeight='130%'
-                  textAlign='center'
-                >
-                  Featured Stories
-                </H2>
-              </ItemH>
+        <EmailSection id='featured'>
+          <EmailContent>
+            <EmailDiv>
+              <H2
+                color='#FFF'
+                fontWeight='400'
+                letterSpacing='-0.56px'
+                fontSize={isMobile ? '1.rem' : '1.75rem'}
+                lineHeight='140%'
+              >
+                Want to receive Push Chain airdrops, <br /> news, and updates?
+              </H2>
 
-              <FeaturedList />
-            </Content>
-          </FeaturedInSection>
-        )}
+              <ChainEmailSignup
+                inputWidth={isMobile ? '100%' : '300px'}
+                showButton={true}
+                background={'rgba(0, 0, 0, 0.10)'}
+                borderColor={'rgba(112, 90, 208, 0.40)'}
+                textColor={'#494E54'}
+                buttonBg={'#D548EC'}
+                buttonBorder={'1px solid rgba(255, 255, 255, 0.30)'}
+                arrowColor={'#fff'}
+                loaderColor={'#fff'}
+                blendMode='lighten'
+                boxShadow='2.788px 2.598px 12px rgba(255, 255, 255, 0.15) inset, 1.858px 1.732px 6px rgba(255, 255, 255, 0.15) inset'
+                backdrop='blur(10px)'
+              />
+            </EmailDiv>
+          </EmailContent>
+        </EmailSection>
 
         <FooterSection id='footer'>
           <Content alignSelf='center'>
+            <TopLogoSection>
+              <FooterLinkItem>
+                <LinkTo
+                  className='pushLogo'
+                  to={useBaseUrl('/')}
+                  title='Push'
+                  onClick={scrollToTop}
+                  justifyContent={isMobile ? 'center' : 'flex-start'}
+                  padding='0px 0px'
+                >
+                  <Image
+                    src={
+                      require(
+                        `@site/static/assets/website/footer/PushLogoOnly.png`
+                      ).default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/footer/PushLogoOnly@2x.png`).default} 2x, ${require(`@site/static/assets/website/footer/PushLogoOnly@3x.png`).default} 3x`}
+                    alt={`Push Chain`}
+                    loading='lazy'
+                    width='90px'
+                    height='auto'
+                  />
+                </LinkTo>
+              </FooterLinkItem>
+            </TopLogoSection>
+
             {/* footer links */}
             <ItemH flex='1' margin='0px 0 0 0'>
               <FooterContainer>
-                <FooterColumn>
+                <FooterColumn className='logo'>
                   <FooterLinkItem>
                     <LinkTo
                       className='pushLogo'
@@ -123,102 +132,84 @@ function Footer({ showPattern }) {
                       justifyContent={isMobile ? 'center' : 'flex-start'}
                       padding='0px 0px'
                     >
-                      <ChainLogoDark style={{ margin: '0px 9px 0px 4px' }} />
-                    </LinkTo>
-
-                    <Span fontWeight='500' fontSize='16px' lineHeight='142%'>
-                      <Typewriter
-                        options={{
-                          strings: [
-                            'Interoperable,',
-                            'Any Chain,',
-                            'Omnichain,',
-                            'Shared State,',
-                          ],
-                          autoStart: true,
-                          loop: true,
-                          delay: 50,
-                          deleteSpeed: 75,
-                          pauseFor: 1500,
-                          cursor: '',
-                        }}
+                      <Image
+                        src={
+                          require(
+                            `@site/static/assets/website/footer/PushLogoOnly.png`
+                          ).default
+                        }
+                        srcSet={`${require(`@site/static/assets/website/footer/PushLogoOnly@2x.png`).default} 2x, ${require(`@site/static/assets/website/footer/PushLogoOnly@3x.png`).default} 3x`}
+                        alt={`Push Chain`}
+                        loading='lazy'
+                        width='90px'
+                        height='auto'
                       />
-                      Universal Apps
-                    </Span>
+                    </LinkTo>
                   </FooterLinkItem>
                 </FooterColumn>
 
                 <FooterColumns>
-                  {['resources', 'community', 'developers'].map((key) => (
-                    <FooterColumn key={key}>
-                      <FooterLinks>
-                        <Span
-                          fontWeight='700'
-                          fontSize='18px'
-                          lineHeight='140%'
-                          letterSpacing='-0.36px'
-                          textTransform='uppercase'
-                          margin='0 0 8px 0'
-                        >
-                          {key}
-                        </Span>
-                        {ChainFooterList[key]?.map((item) => {
-                          const fullHref = item.href
-                            ? item.href.includes('http')
-                              ? item.href
-                              : `${baseURL}${item.href}`
-                            : item.id
-                              ? `/#${item.id}`
-                              : '#'; // fallback
+                  {['resources', 'community', 'developers', 'product'].map(
+                    (key) => (
+                      <FooterColumn key={key}>
+                        <FooterLinks>
+                          <Span
+                            fontWeight='700'
+                            fontSize='1.125rem'
+                            lineHeight='140%'
+                            letterSpacing='1.8px'
+                            textTransform='uppercase'
+                            margin='0 0 8px 0'
+                          >
+                            {key}
+                          </Span>
+                          {ChainFooterList[key]?.map((item) => {
+                            const fullHref = item.href
+                              ? item.href.includes('http')
+                                ? item.href
+                                : `${baseURL}${item.href}`
+                              : item.id
+                                ? `/#${item.id}`
+                                : '#'; // fallback
 
-                          return (
-                            <FooterAnchorSecondary
-                              key={item.title}
-                              href={fullHref}
-                              target={
-                                item.target || (item.href ? '_blank' : '_self')
-                              }
-                              rel='noopener noreferrer'
-                              onClick={(e) => {
-                                if (!item.href && item.id) {
-                                  e.preventDefault(); // prevent default <a> behavior
-                                  const scrollTarget = document.getElementById(
-                                    item.id
-                                  );
+                            return (
+                              <FooterAnchorSecondary
+                                key={item.title}
+                                href={fullHref}
+                                target={
+                                  item.target ||
+                                  (item.href ? '_blank' : '_self')
+                                }
+                                rel='noopener noreferrer'
+                                onClick={(e) => {
+                                  if (!item.href && item.id) {
+                                    e.preventDefault(); // prevent default <a> behavior
+                                    const scrollTarget =
+                                      document.getElementById(item.id);
 
-                                  if (location?.pathname !== `${baseURL}/`) {
-                                    history.push(`${baseURL}/`);
-                                    setTimeout(() => {
+                                    if (location?.pathname !== `${baseURL}/`) {
+                                      history.push(`${baseURL}/`);
+                                      setTimeout(() => {
+                                        scrollTarget?.scrollIntoView({
+                                          behavior: 'smooth',
+                                        });
+                                      }, 300);
+                                    } else {
                                       scrollTarget?.scrollIntoView({
                                         behavior: 'smooth',
                                       });
-                                    }, 300);
-                                  } else {
-                                    scrollTarget?.scrollIntoView({
-                                      behavior: 'smooth',
-                                    });
+                                    }
                                   }
-                                }
-                              }}
-                              // as='div'
-                              // key={item.title}
-                              // title={item.title}
-                              // onClick={(e) =>
-                              //   handleNavigation(
-                              //     e,
-                              //     item.href,
-                              //     item.id,
-                              //     item.target
-                              //   )
-                              // }
-                            >
-                              {item.title}
-                            </FooterAnchorSecondary>
-                          );
-                        })}
-                      </FooterLinks>
-                    </FooterColumn>
-                  ))}
+                                }}
+                              >
+                                {item.title}
+                              </FooterAnchorSecondary>
+                            );
+                          })}
+                        </FooterLinks>
+                      </FooterColumn>
+                    )
+                  )}
                 </FooterColumns>
               </FooterContainer>
             </ItemH>
@@ -259,14 +250,14 @@ function Footer({ showPattern }) {
 
               <ItemH justifyContent='flex-end' className='pushLinks' gap='32px'>
                 {tosPrivacyLinks.map(({ href, text }) => (
-                  <FooterAnchorSecondary
+                  <FooterIconSecondary
                     as={LinkTo}
                     key={href}
                     to={useBaseUrl(href)}
                     onClick={() => document.documentElement.scrollTo(0, 0)}
                   >
                     {text}
-                  </FooterAnchorSecondary>
+                  </FooterIconSecondary>
                 ))}
               </ItemH>
             </SocialLinks>
@@ -277,16 +268,6 @@ function Footer({ showPattern }) {
   );
 }
 
-const DividerImg = styled.div`
-  width: 100%;
-  height: 200px;
-  background-image: url(${ImageBg});
-  background-repeat: repeat-x;
-  background-size: contain;
-  background-position: ${({ inverted }) => (inverted ? 'top' : 'bottom')};
-  transform: ${({ inverted }) => (inverted ? 'rotate(180deg)' : 'none')};
-`;
-
 const ChainFooterContainer = styled.div`
   align-items: flex-start;
   display: flex;
@@ -295,7 +276,9 @@ const ChainFooterContainer = styled.div`
 `;
 
 const StyledFooter = styled.footer`
-  font-family: N27;
+  font-family:
+    DM Sans,
+    sans-serif;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -306,12 +289,39 @@ const StyledFooter = styled.footer`
 
 const FooterSection = styled(Section)``;
 
+const TopLogoSection = styled.div`
+  display: none;
+
+  @media ${device.tablet} {
+    display: flex;
+    margin: 0 auto;
+  }
+`;
+
+const EmailDiv = styled(ItemH)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+
+  @media ${device.tablet} {
+    gap: 30px;
+  }
+`;
+
 const FooterContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
+
+  @media ${device.tablet} {
+    .logo {
+      display: none;
+    }
+  }
 `;
 
 const FooterColumn = styled.div`
@@ -323,20 +333,27 @@ const FooterColumn = styled.div`
   flex-direction: column;
 
   align-items: center;
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 `;
 
-const FeaturedInSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 0px;
+const EmailSection = styled(Section)``;
+
+const EmailContent = styled(Content)`
+  padding-bottom: 0px;
 `;
 
 const FooterColumns = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 90px;
+  gap: 80px;
+
+  @media ${device.laptop} {
+    gap: 40px;
+  }
 
   @media ${device.tablet} {
     gap: 20px;
@@ -416,13 +433,40 @@ const SocialLinks = styled(ItemH)`
 
 const FooterAnchorSecondary = styled(A)`
   padding: 0px;
-  color: #e8eff8 !important;
-  font-family: N27;
-  font-size: 16px;
+  color: #94a3b6 !important;
+  font-family:
+    DM Sans,
+    sans-serif;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  letter-spacing: -0.32px;
+  letter-spacing: -0.36px;
+  justify-content: flex-start;
+  background: transparent;
+  border-radius: 0;
+
+  &:hover {
+    color: #fff !important;
+    background: transparent !important;
+  }
+
+  &:before {
+    background: transparent;
+  }
+`;
+
+const FooterIconSecondary = styled(A)`
+  padding: 0px;
+  color: #fff !important;
+  font-family:
+    DM Sans,
+    sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: -0.36px;
   justify-content: flex-start;
   background: transparent;
   border-radius: 0;
