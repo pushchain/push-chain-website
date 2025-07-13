@@ -263,6 +263,20 @@ function Footer() {
             </SocialLinks>
           </Content>
         </FooterSection>
+
+        <FooterImage>
+          <Image
+            src={
+              require(`@site/static/assets/website/footer/PushFooterImg.webp`)
+                .default
+            }
+            srcSet={`${require(`@site/static/assets/website/footer/PushFooterImg@2x.webp`).default} 2x, ${require(`@site/static/assets/website/footer/PushFooterImg@3x.webp`).default} 3x`}
+            alt={`Push Chain`}
+            loading='lazy'
+            width='100%'
+            height='auto'
+          />
+        </FooterImage>
       </StyledFooter>
     </ChainFooterContainer>
   );
@@ -321,6 +335,15 @@ const FooterContainer = styled.div`
     .logo {
       display: none;
     }
+  }
+`;
+
+const FooterImage = styled.div`
+  width: 95%;
+  margin: 200px auto;
+
+  @media ${device.tablet} {
+    margin: 100px auto;
   }
 `;
 
@@ -388,7 +411,6 @@ const FooterLinkItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  //   min-width: 280px;
 
   svg {
     width: 106px;
@@ -425,7 +447,7 @@ const SocialLinks = styled(ItemH)`
       justify-content: center;
     }
   }
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     flex-direction: column;
     gap: 24px;
   }
