@@ -61,6 +61,8 @@ import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
 import { StatsSection } from '../components/Home/StatsSection';
+import { InvList } from '@site/src/config/HomeInvestorList';
+import { FeaturedSection } from '../components/Home/FeaturedSection';
 
 export default function Home() {
   // Internationalization
@@ -332,7 +334,7 @@ export default function Home() {
             {/* BLOG SECTION */}
             <ItemH>
               <ItemH justifyContent='flex-start' alignItems='center' gap='8px'>
-                <StarSolidIcon />
+                <StarSolidIcon color='#D98AEC' />
                 <H2
                   color='#CCA4F0'
                   fontSize={'0.75rem'}
@@ -460,14 +462,17 @@ export default function Home() {
                   href={useBaseUrl('/faq')}
                   title={'new'}
                   target='_blank'
-                  padding='0px 0px'
                   className='button'
                   margin={isMobile ? '24px auto 0px 0px' : '24px 0px 0px auto'}
+                  hoverBackground='transparent'
+                  hover='transparent'
                   background='transparent'
-                  alignItems='center'
-                  justifyContent='flex-end'
+                  filter='none'
+                  color='#E163FF'
+                  borderRadius='0'
+                  padding='0px 0px'
                 >
-                  <SpanLink>Explore FAQs</SpanLink>
+                  <SpanLink>Explore More FAQs</SpanLink>
                   <BsArrowRight className='anchorSVGlink' />
                 </SlideLink>
               </ItemV>
@@ -475,7 +480,167 @@ export default function Home() {
           </Content>
         </FAQSection>
 
-        <BgSection>
+        {/* BACKED BY SECTION */}
+        <BackedBySection padding='0px 0px' id='investors'>
+          {/* <ItemV
+            id='integratePush'
+            position='absolute'
+            top='0'
+            right='0'
+            bottom='0'
+            left='0'
+          /> */}
+
+          <BackedByContent padding='0px 0px' alignSelf='center'>
+            <InvestorItem alignItems='stretch'>
+              <InvestorHeader
+                color='#FFFFFF'
+                fontWeight='500'
+                letterSpacing='-0.02em'
+                fontSize={isMobile ? '24px' : '2rem'}
+                lineHeight='130%'
+                textAlign='center'
+              >
+                {t('home.investors-section.title')}
+              </InvestorHeader>
+            </InvestorItem>
+
+            <MarqueeAnimationContainer
+              margin={isMobile ? '24px 0 2.625rem 0' : '64px 0 2.625rem 0'}
+              flex='1'
+              alignItems='stretch'
+            >
+              <NewMarqueeAnimation
+                speed={2}
+                gradientWidth={8}
+                gap={24}
+                fixedWidth={'250px'}
+                direction='ltr'
+                // background='yellow'
+              >
+                {InvList.top.map((item) => {
+                  return (
+                    <SplideSlide>
+                      <InvestorCard key={item.id}>
+                        <InvestorIcon
+                          width={item.title ? 64 : 'auto'}
+                          src={
+                            require(
+                              `@site/static/assets/website/investors/${item.srcref}.webp`
+                            ).default
+                          }
+                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
+                          alt={`${item?.alt}`}
+                        />
+                        {item.title && (
+                          <InvestorDetails>
+                            <InvestorTitle>{item.title}</InvestorTitle>
+                            {item.subtitle && (
+                              <InvestorSubtitle>
+                                {item.subtitle}
+                              </InvestorSubtitle>
+                            )}
+                          </InvestorDetails>
+                        )}
+                      </InvestorCard>
+                    </SplideSlide>
+                  );
+                })}
+              </NewMarqueeAnimation>
+            </MarqueeAnimationContainer>
+
+            <MarqueeAnimationContainer flex='1' alignItems='stretch'>
+              <NewMarqueeAnimation
+                speed={-2}
+                gradientWidth={8}
+                gap={24}
+                fixedWidth={'250px'}
+                direction='ltr'
+              >
+                {InvList.bottom.map((item, i) => {
+                  return (
+                    <SplideSlide>
+                      <InvestorCard
+                        key={item.id}
+                        flexDirection={item.title ? 'true' : 'false'}
+                      >
+                        <InvestorIcon
+                          width={item.title ? '64px' : 'auto'}
+                          borderRadius={item.title ? '50%' : '0'}
+                          src={
+                            require(
+                              `@site/static/assets/website/investors/${item.srcref}.webp`
+                            ).default
+                          }
+                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
+                          alt={`${item?.alt}`}
+                        />
+                        {item.title && (
+                          <InvestorDetails>
+                            <InvestorTitle>{item.title}</InvestorTitle>
+                            {item.subtitle && (
+                              <InvestorSubtitle>
+                                {item.subtitle}
+                              </InvestorSubtitle>
+                            )}
+                          </InvestorDetails>
+                        )}
+                      </InvestorCard>
+                    </SplideSlide>
+                  );
+                })}
+              </NewMarqueeAnimation>
+            </MarqueeAnimationContainer>
+
+            <FeaturedSection />
+          </BackedByContent>
+        </BackedBySection>
+
+        <BottomSection>
+          <Content>
+            <ItemV>
+              <H2
+                fontSize={isMobile ? '2rem' : '4rem'}
+                color='#fff'
+                fontWeight='600'
+                lineHeight='120%'
+                textAlign='center'
+              >
+                Build Universal Apps.
+              </H2>
+              <Span
+                fontSize='1.25rem'
+                color='#fff'
+                fontWeight='400'
+                lineHeight='125%'
+                textAlign='center'
+              >
+                Break the silos. Build once, scale on every blockchain.
+              </Span>
+
+              <FaqLink
+                href='/docs'
+                target='_blank'
+                title='Explore Push Chain Docs'
+                background='#D548EC'
+                borderRadius='16px'
+                border='1px solid rgba(255, 255, 255, 0.30)'
+                fontSize='1.125rem'
+                fontWeight='600'
+                letterSpacing='-0.03em'
+                lineHeight='1rem'
+                padding='16px 32px'
+                zIndex='2'
+                margin='48px 0 0 0'
+              >
+                <p>LFG Push Chain</p>
+                <BsArrowRight className='svg' size={23} />
+              </FaqLink>
+            </ItemV>
+          </Content>
+        </BottomSection>
+
+        {/* <BgSection>
           <Content>
             <ImageBackgroundDiv>
               <ItemV
@@ -522,7 +687,7 @@ export default function Home() {
               </ItemV>
             </ImageBackgroundDiv>
           </Content>
-        </BgSection>
+        </BgSection> */}
       </HomeWrapper>
     </Layout>
   );
@@ -758,6 +923,10 @@ const OtherFeaturesSection = styled(Section)``;
 
 const TokenomicsSection = styled(Section)``;
 
+const BottomSection = styled(Section)`
+  padding: 200px 0;
+`;
+
 const FAQSection = styled(Section)``;
 
 const StatsContent = styled(Content)``;
@@ -823,6 +992,13 @@ const BlogSection = styled(Section)``;
 
 const BackedBySection = styled(Section)``;
 
+const BackedByContent = styled(Content)`
+  // background: red;
+  width: 100%;
+  max-width: 100%;
+  padding: 0px;
+`;
+
 const InvestorHeader = styled(H2)`
   width: 720px;
   margin: 0 auto 0px auto;
@@ -834,8 +1010,15 @@ const InvestorHeader = styled(H2)`
 const InvestorItem = styled(ItemV)``;
 
 const InvestorCard = styled(ItemV)`
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 74px;
+  background: rgba(0, 0, 0, 0.1);
+  background-blend-mode: plus-lighter;
+  box-shadow:
+    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(112, 70, 248, 0.4);
+  border-radius: 16px;
   padding: 8px;
   min-width: 242px;
   min-height: 96px;
@@ -845,6 +1028,9 @@ const InvestorCard = styled(ItemV)`
 
 const InvestorIcon = styled(Image)`
   margin: auto auto;
+  // fix filters
+  // filter: grayscale(100%);
+  // filter: invert(77%) sepia(7%) saturate(211%) hue-rotate(182deg) brightness(95%) contrast(81%);
 `;
 
 const InvestorDetails = styled(ItemV)`
@@ -1079,6 +1265,7 @@ const SlideLink = styled(A)`
   .anchorSVGlink {
     color: #e163ff;
     top: 3px;
+    margin-left: 8px;
   }
 
   &:hover {
