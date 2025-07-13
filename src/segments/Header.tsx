@@ -740,7 +740,7 @@ const HeaderItemH = styled(ItemH)`
 
 const HeaderBlurV = styled(ItemV)`
   border-radius: 24px;
-  border: 1px solid rgba(112, 70, 248, 0.4);
+  border: 1px solid rgba(112, 90, 208, 0.4);
   background: rgba(0, 0, 0, 0.5);
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
@@ -1158,7 +1158,7 @@ const NavigationMenuContent = styled.ul`
   padding: 12px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(112, 70, 248, 0.55);
+  border-color: rgba(112, 90, 208, 0.4);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 40%,
@@ -1225,7 +1225,7 @@ const LanguageMenuContent = styled.div`
   border-radius: 24px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(112, 70, 248, 0.55);
+  border-color: rgba(112, 90, 208, 0.4);
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.5) 40%,

@@ -482,15 +482,6 @@ export default function Home() {
 
         {/* BACKED BY SECTION */}
         <BackedBySection padding='0px 0px' id='investors'>
-          {/* <ItemV
-            id='integratePush'
-            position='absolute'
-            top='0'
-            right='0'
-            bottom='0'
-            left='0'
-          /> */}
-
           <BackedByContent padding='0px 0px' alignSelf='center'>
             <InvestorItem alignItems='stretch'>
               <InvestorHeader
@@ -505,6 +496,8 @@ export default function Home() {
               </InvestorHeader>
             </InvestorItem>
 
+            <FeaturedGlowCircle />
+
             <MarqueeAnimationContainer
               margin={isMobile ? '24px 0 2.625rem 0' : '64px 0 2.625rem 0'}
               flex='1'
@@ -516,7 +509,6 @@ export default function Home() {
                 gap={24}
                 fixedWidth={'250px'}
                 direction='ltr'
-                // background='yellow'
               >
                 {InvList.top.map((item) => {
                   return (
@@ -639,55 +631,6 @@ export default function Home() {
             </ItemV>
           </Content>
         </BottomSection>
-
-        {/* <BgSection>
-          <Content>
-            <ImageBackgroundDiv>
-              <ItemV
-                alignItems='center'
-                justifyContent='flex-end'
-                height='100%'
-                zIndex='888'
-              >
-                <H2
-                  color='#FFF'
-                  fontSize={isMobile ? '20px' : '32px'}
-                  fontFamily='FK Grotesk Neue'
-                  fontWeight='500'
-                  lineHeight='140%'
-                  textAlign={isTablet && 'center'}
-                  margin={isTablet && '0 auto'}
-                >
-                  {t('home.bg-section.title')}
-                </H2>
-
-                <H3
-                  color='#a5abb8'
-                  fontSize={isMobile ? '14px' : '19px'}
-                  fontFamily='FK Grotesk Neue'
-                  fontWeight='400'
-                  lineHeight='192%'
-                  textAlign={isTablet && 'center'}
-                  margin={isTablet && '0 auto'}
-                >
-                  {t('home.bg-section.subtitle')}
-                </H3>
-
-                <FaqLink
-                  href={useBaseUrl('/docs')}
-                  title='Explore docs'
-                  fontSize='16px'
-                  margin='48px 0 0 0'
-                  background={GLOBALS.COLORS.HIGHLIGHT}
-                  color={GLOBALS.COLORS.FONT_LIGHT}
-                  fontFamily='FK Grotesk Neue'
-                >
-                  <p>{t('home.bg-section.buttonText')}</p>
-                </FaqLink>
-              </ItemV>
-            </ImageBackgroundDiv>
-          </Content>
-        </BgSection> */}
       </HomeWrapper>
     </Layout>
   );
@@ -711,6 +654,34 @@ const GlowCircle = styled.div`
     height: 538px;
     left: 238px;
     top: 29px;
+  }
+
+  @media ${device.mobileL} {
+    width: 395px;
+    height: 392px;
+    left: -12px;
+    top: 102px;
+  }
+`;
+
+const FeaturedGlowCircle = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(179, 72, 236, 0.2);
+  filter: blur(125px);
+  pointer-events: none;
+  z-index: 999999;
+
+  width: 543px;
+  height: 538px;
+  left: 446px;
+  top: 0px;
+
+  @media ${device.tablet} {
+    width: 543px;
+    height: 538px;
+    left: 238px;
+    top: 0px;
   }
 
   @media ${device.mobileL} {
@@ -904,7 +875,7 @@ const PortalA = styled(A)`
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
   backdrop-filter: blur(100px);
-  border: 1px solid rgba(112, 70, 248, 0.4);
+  border: 1px solid rgba(112, 90, 208, 0.4);
 `;
 
 /* Home Page Sections */
@@ -1017,7 +988,7 @@ const InvestorCard = styled(ItemV)`
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
   backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(112, 70, 248, 0.4);
+  border: 1px solid rgba(112, 90, 208, 0.4);
   border-radius: 16px;
   padding: 8px;
   min-width: 242px;
