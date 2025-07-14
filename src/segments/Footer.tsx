@@ -52,11 +52,6 @@ function Footer() {
     document.documentElement.scrollTo(0, 0);
   };
 
-  // Determine if the pathname starts with '/docs' or Blog
-  // const isDocsOrBlogsPage =
-  //   location?.pathname.startsWith(baseURL + '/docs') ||
-  //   location?.pathname.startsWith(baseURL + '/blog');
-
   return (
     <ChainFooterContainer>
       <StyledFooter>
