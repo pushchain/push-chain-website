@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[45227],{623798:e=>{e.exports=JSON.parse('{"label":"QuickSwap","permalink":"/push-chain-website/pr-preview/pr-1078/blog/tags/quick-swap","allTagsPath":"/push-chain-website/pr-preview/pr-1078/blog/tags","count":1,"unlisted":false}')}}]);

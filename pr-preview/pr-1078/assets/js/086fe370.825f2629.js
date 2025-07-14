@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[64994],{500249:e=>{e.exports=JSON.parse('{"label":"Arbitrum","permalink":"/push-chain-website/pr-preview/pr-1078/blog/tags/arbitrum","allTagsPath":"/push-chain-website/pr-preview/pr-1078/blog/tags","count":1,"unlisted":false}')}}]);
