@@ -25,7 +25,7 @@ export default function NotFoundContent({ className }: Props): ReactElement {
     '/push-chain-website'
   )
     ? location?.pathname.replace(
-        /^\/push-chain -website\/pr-preview\/pr-\d+/,
+        /^\/push-chain-website\/pr-preview\/pr-\d+/,
         ''
       )
     : location.pathname;
