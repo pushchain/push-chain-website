@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[76553],{636501:e=>{e.exports=JSON.parse('{"label":"Yield Farming","permalink":"/push-website/pr-preview/pr-1077/blog/tags/yield-farming","allTagsPath":"/push-website/pr-preview/pr-1077/blog/tags","count":5,"unlisted":false}')}}]);
