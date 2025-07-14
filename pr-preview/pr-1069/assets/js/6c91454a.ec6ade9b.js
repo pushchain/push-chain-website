@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[69768],{549467:e=>{e.exports=JSON.parse('{"permalink":"/push-website/pr-preview/pr-1069/blog/tags/consumer-tx","page":1,"postsPerPage":10,"totalPages":1,"totalCount":8,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
