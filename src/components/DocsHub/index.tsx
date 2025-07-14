@@ -245,61 +245,63 @@ export default function HomepageFeatures(): JSX.Element {
         </script>
       </Head>
 
-      {/* DOCS HERO SECTION */}
-      <DocsHeroSection>
-        <ItemV
-          position='absolute'
-          top='-149px'
-          left='0'
-          right='0'
-          height='149px'
-          background={'var(--ifm-docs-hero-bg)'}
-        ></ItemV>
-        <Content padding='0px'>
-          <HeroHeader>
-            <ItemV zIndex='1'>
-              <H1 color='var(--ifm-color-primary-text)' margin='0 !important'>
-                Push Chain Documentation Hub
-              </H1>
-              <Span
-                color='var(--ifm-color-primary-text)'
-                padding='0 0 64px 0'
-                textAlign='center'
-              >
-                Get started with building shared state apps for any chain.
-              </Span>
-              <HeroButton onClick={() => (window.location.href = '#techdocs')}>
-                <Span padding='0 10px 0 0' fontSize='18px'>
-                  Explore Docs
+      <DocsWrapper>
+        {/* DOCS HERO SECTION */}
+        <DocsHeroSection>
+          <ItemV
+            position='absolute'
+            top='-149px'
+            left='0'
+            right='0'
+            height='149px'
+            background={'var(--ifm-docs-hero-bg)'}
+          ></ItemV>
+          <Content padding='0px'>
+            <HeroHeader>
+              <ItemV zIndex='1'>
+                <H1 color='var(--ifm-color-primary-text)' margin='0 !important'>
+                  Push Chain Documentation Hub
+                </H1>
+                <Span
+                  color='var(--ifm-color-primary-text)'
+                  padding='0 0 64px 0'
+                  textAlign='center'
+                >
+                  Get started with building shared state apps for any chain.
+                </Span>
+                {/* <HeroButton onClick={() => (window.location.href = '#techdocs')}> */}
+                <Span padding='0 10px 0 0' fontSize='1.5rem' fontWeight='600'>
+                  Coming Soon
                 </Span>{' '}
-                ↗
-              </HeroButton>
-            </ItemV>
+                {/* ↗ */}
+                {/* </HeroButton> */}
+              </ItemV>
 
-            <ItemV
-              position='absolute'
-              bottom='-25%'
-              left='0'
-              right='0'
-              height='50%'
-            >
-              <PulseStatic />
-              <Pulse>
-                <Pulsate stagger={0}></Pulsate>
-                <Pulsate stagger={1}></Pulsate>
-                <Pulsate stagger={2}></Pulsate>
-                <Pulsate stagger={3}></Pulsate>
-                <Pulsate stagger={4}></Pulsate>
-                <Pulsate stagger={5}></Pulsate>
-                <Pulsate stagger={6}></Pulsate>
-              </Pulse>
-            </ItemV>
-          </HeroHeader>
-        </Content>
-      </DocsHeroSection>
+              <ItemV
+                position='absolute'
+                bottom='-25%'
+                left='0'
+                right='0'
+                height='50%'
+              >
+                <PulseStatic />
+                <Pulse>
+                  <Pulsate stagger={0}></Pulsate>
+                  <Pulsate stagger={1}></Pulsate>
+                  <Pulsate stagger={2}></Pulsate>
+                  <Pulsate stagger={3}></Pulsate>
+                  <Pulsate stagger={4}></Pulsate>
+                  <Pulsate stagger={5}></Pulsate>
+                  <Pulsate stagger={6}></Pulsate>
+                </Pulse>
+              </ItemV>
+            </HeroHeader>
+          </Content>
+        </DocsHeroSection>
 
-      {/* QUICKSTART SECTION */}
-      <HomepageSection alignItems='flex-start'>
+        {/* QUICKSTART SECTION */}
+        {/* TODO: Comment out these data temporarily */}
+        {/* <HomepageSection alignItems='flex-start'>
         <FluidContent>
           <HomepageSubHeader id='quickstart'>
             Popular Quickstart
@@ -326,10 +328,10 @@ export default function HomepageFeatures(): JSX.Element {
             })}
           </PopularQuickiesList>
         </FluidContent>
-      </HomepageSection>
+      </HomepageSection> */}
 
-      {/* TECH DOCS SECTION */}
-      <HomepageSection>
+        {/* TECH DOCS SECTION */}
+        {/* <HomepageSection>
         <FluidContent>
           <HomepageSubHeader id='techdocs'>
             Technical Documentation
@@ -340,10 +342,10 @@ export default function HomepageFeatures(): JSX.Element {
             ))}
           </TechDocCardList>
         </FluidContent>
-      </HomepageSection>
+      </HomepageSection> */}
 
-      {/* SDK SECTION */}
-      <HomepageSection>
+        {/* SDK SECTION */}
+        {/* <HomepageSection>
         <FluidContent>
           <ItemH justifyContent='flex-start'>
             <HomepageSubHeader>Push Chain SDK</HomepageSubHeader>
@@ -371,9 +373,9 @@ export default function HomepageFeatures(): JSX.Element {
                 </PushSdkContent>
               </PushSdkCard>
             ))}
-          </PushSdkCardList>
+          </PushSdkCardList> */}
 
-          {/* <div className='Faqs-main-container'>
+        {/* <div className='Faqs-main-container'>
                   <div className='sub-container'>
                     <span className="hero_home_Faq_header">
                       Frequently Asked Questions
@@ -390,13 +392,36 @@ export default function HomepageFeatures(): JSX.Element {
                   <FAQ />
 
                 </div> */}
-        </FluidContent>
-      </HomepageSection>
+        {/* </FluidContent>
+      </HomepageSection> */}
 
-      <Footer showPattern={false} />
+        {/* NOTE: added extra div for larger screens since body is removed */}
+        <ExtraDiv></ExtraDiv>
+
+        <Footer showPattern={false} />
+      </DocsWrapper>
     </Layout>
   );
 }
+
+const DocsWrapper = styled.div`
+  @media (min-width: 1800px) {
+    min-height: 100vh;
+    background: var(--ifm-color-primary-inverse);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+`;
+
+const ExtraDiv = styled.div`
+  display: none;
+
+  @media (min-width: 1800px) {
+    display: block;
+    height: 6rem; // or adjust to whatever spacing you need
+  }
+`;
 
 const DocsHeroSection = styled(Section)`
   background: var(--ifm-docs-hero-bg);
@@ -424,6 +449,7 @@ const HeroHeader = styled(ItemV)`
 
   & ${H1} {
     font-size: var(--ifm-h1-font-size);
+    text-align: center;
   }
 `;
 
