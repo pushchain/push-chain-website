@@ -18,14 +18,14 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.GITHUB_ACTIONS
-    ? `/push-website/pr-preview/${process.env.REACT_APP_PREVIEW_BASE}`
+    ? `/push-chain-website/pr-preview/${process.env.REACT_APP_PREVIEW_BASE}`
     : '/',
   trailingSlash: true,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'push-protocol', // Usually your GitHub org/user name.
-  projectName: 'push-website', // Usually your repo name.
+  projectName: 'push-chain-website', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
@@ -112,7 +112,7 @@ const config = {
           sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the 'edit this page' links.
-          editUrl: 'https://github.com/push-protocol/push-website/blob/main',
+          editUrl: 'https://github.com/push-protocol/push-chain-website/blob/main',
         },
         blog: false,
         theme: {
