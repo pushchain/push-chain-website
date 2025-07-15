@@ -3,7 +3,7 @@
 /* eslint-disable */
 
 // React + Web3 Essentials
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useLocation } from '@docusaurus/router';
 
@@ -43,6 +43,8 @@ import { HeaderList } from '../config/HeaderList';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 
+import AccountContext from '../context/accountContext';
+
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
@@ -76,6 +78,7 @@ function Header() {
 
   // Internationalization
   const { t, i18n } = useTranslation();
+  const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
 
   const showMobileMenu = isMobile && isMobileMenuOpen;
 
@@ -289,6 +292,7 @@ function Header() {
             alignSelf='stretch'
             padding={GLOBALS.ADJUSTMENTS.PADDING.SMALL}
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
+            showAlertBar={showAlertBar}
           >
             <HeaderBlurV
               position='absolute'
@@ -709,9 +713,13 @@ const LanguageItem = styled.div`
   }
 `;
 
-// V2 Designs
 const HeaderItemH = styled(ItemH)`
-  margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT}px`};
+  margin: ${({ showAlertBar }) =>
+    `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
+      GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT
+    }px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${
+      GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT
+    }px`};
   color: ${GLOBALS.COLORS.FONT_LIGHT};
   height: ${GLOBALS.HEADER.HEIGHT}px;
   padding: ${`${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.LEFT}px`};
@@ -719,14 +727,24 @@ const HeaderItemH = styled(ItemH)`
   flex-wrap: nowrap;
 
   @media ${device.laptopM} {
-    margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT}px`};
+    margin: ${({ showAlertBar }) =>
+      `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT
+      }px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT
+      }px`};
     flex-direction: column;
     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.LEFT}px`};
     height: fit-content;
   }
 
   @media ${device.mobileL} {
-    margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT}px`};
+    margin: ${({ showAlertBar }) =>
+      `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT
+      }px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT
+      }px`};
     flex-direction: column;
     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.LEFT}px`};
     box-sizing: border-box;
@@ -737,6 +755,35 @@ const HeaderItemH = styled(ItemH)`
     background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
   }
 `;
+
+// // V2 Designs
+// const HeaderItemH = styled(ItemH)`
+//   margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT}px`};
+//   color: ${GLOBALS.COLORS.FONT_LIGHT};
+//   height: ${GLOBALS.HEADER.HEIGHT}px;
+//   padding: ${`${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.LEFT}px`};
+//   flex-direction: row;
+//   flex-wrap: nowrap;
+
+//   @media ${device.laptopM} {
+//     margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT}px`};
+//     flex-direction: column;
+//     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.LEFT}px`};
+//     height: fit-content;
+//   }
+
+//   @media ${device.mobileL} {
+//     margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT}px`};
+//     flex-direction: column;
+//     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.LEFT}px`};
+//     box-sizing: border-box;
+//   }
+
+//   &.light {
+//     color: ${GLOBALS.COLORS.FONT_DARK};
+//     background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
+//   }
+// `;
 
 const HeaderBlurV = styled(ItemV)`
   border-radius: 24px;

@@ -1,6 +1,6 @@
 // React + Web3 Essentials
 import { useLocation } from '@docusaurus/router';
-import React from 'react';
+import React, { useContext } from 'react';
 
 // External Components
 import i18nInitialize from '@site/src/utils/i18n';
@@ -13,6 +13,8 @@ import CookieComponent from '../components/CookieComponent';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 import { Notification } from '../hooks/useRewardsNotification';
 import { useChainNotification } from '../hooks/useChainNotification';
+import InfoBar from '../components/InfoBar';
+import AccountContext from '../context/accountContext';
 
 // Initialize Internalization
 i18nInitialize();
@@ -44,6 +46,8 @@ export default function Root({ children }) {
 
   const baseURL = useSiteBaseUrl();
   useChainNotification();
+  const { showAlertBar } = useContext(AccountContext);
+
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
     excludeDefaultConfigAt(path)
@@ -110,20 +114,28 @@ export default function Root({ children }) {
   }
 
   return (
-    <PageContainer className={returnAdditionalClasses(superimposedConditions)}>
-      <ServerStyle from={children} />
-
-      {/* Main react children */}
-      <Content>{children}</Content>
-      <Notification />
-
-      {shouldRenderFooter && (
-        <>
-          {/* <Footer /> */}
-          <CookieComponent />
-        </>
+    <>
+      {showAlertBar && (
+        <InfoBar text='Launch on Push Testnet Now — Unlock Rewards for Builders and Early Users.' />
       )}
-    </PageContainer>
+
+      <PageContainer
+        className={returnAdditionalClasses(superimposedConditions)}
+      >
+        <ServerStyle from={children} />
+
+        {/* Main react children */}
+        <Content>{children}</Content>
+        <Notification />
+
+        {shouldRenderFooter && (
+          <>
+            {/* <Footer /> */}
+            <CookieComponent />
+          </>
+        )}
+      </PageContainer>
+    </>
   );
 }
 
@@ -131,6 +143,7 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  // padding-top: 48px;
 `;
 
 // The main content should take up all remaining space
