@@ -156,7 +156,9 @@ const SignupInputField = styled.input`
   all: unset;
 
   box-sizing: border-box;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -221,7 +223,9 @@ const IconButton = styled.button`
 const ResponseSpan = styled(Span)`
   margin: 0;
   padding: 0;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

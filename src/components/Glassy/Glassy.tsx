@@ -251,12 +251,12 @@ const Glassy = ({ item }) => {
                   fontSize={isTablet ? '9px' : '11px'}
                   color='#D98AEC'
                   fontWeight='bold'
-                  fontFamily='FK Grotesk Neue'
+                  fontFamily='DM Sans'
                 >
                   {t(subheader)}
                 </H2>
 
-                <H2Text fontFamily='FK Grotesk Neue' theme={theme}>
+                <H2Text fontFamily='DM Sans' theme={theme}>
                   {t(title)}
                 </H2Text>
               </Title>
@@ -499,7 +499,7 @@ const Glassy = ({ item }) => {
                         margin='0px auto'
                         fontWeight='500'
                         fontSize='16px'
-                        fontFamily='FK Grotesk Neue'
+                        fontFamily='DM Sans, san-serif'
                         href={useBaseUrl(object.buttonlink)}
                         title={t(object.buttontitle)}
                       >
@@ -519,7 +519,7 @@ const Glassy = ({ item }) => {
         {footer && (
           <Footer>
             {text && (
-              <H2Text fontFamily='FK Grotesk Neue' id={id}>
+              <H2Text fontFamily='DM Sans, san-serif' id={id}>
                 {t(text)}
               </H2Text>
             )}
@@ -534,7 +534,7 @@ const Glassy = ({ item }) => {
           <H2
             fontSize='12px'
             color='#FFF'
-            fontFamily='FK Grotesk Neue'
+            fontFamily='DM Sans, san-serif'
             lineHeight='130%'
           >
             {t(message)}

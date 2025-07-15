@@ -390,7 +390,7 @@ export default function Home() {
                 fontWeight='500'
                 letterSpacing='normal'
                 fontSize={isMobile ? '24px' : '36px'}
-                fontFamily='FK Grotesk Neue'
+                fontFamily='DM Sans, san-serif'
                 lineHeight='130%'
                 textAlign='center'
               >
@@ -697,7 +697,9 @@ const HomeWrapper = styled(ItemV)`
   margin: 0;
   padding: 0;
   overflow-x: hidden !important;
-  font-family: FK Grotesk Neue !important;
+  font-family:
+    DM Sans,
+    san-serif !important;
 
   box-sizing: border-box;
   & #hero .contentBox {
@@ -794,7 +796,9 @@ const HeroBody = styled(ItemV)`
 `;
 
 const HeroCTA = styled(ItemH)`
-  font-family: FK Grotesk Neue !important;
+  font-family:
+    DM Sans,
+    san-serif !important;
   letter-spacing: normal;
   justify-content: center;
   padding-top: 48px;
@@ -931,7 +935,7 @@ const TokenItem = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   color: #fff;
-  font-family: 'FK Grotesk Neue';
+  font-family: 'DM Sans, san-serif';
   font-size: 19px;
   font-weight: 400;
   line-height: 130%;
@@ -1027,7 +1031,9 @@ const InvestorSubtitle = styled(Span)`
 `;
 
 const GridFeatures = styled(ItemH)`
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   gap: 24px;
   justify-content: flex-start;
   width: 100%;
@@ -1065,7 +1071,9 @@ const GridFeatures = styled(ItemH)`
 `;
 
 const SecondGridFeatures = styled(ItemH)`
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   gap: 24px;
   justify-content: flex-start;
   width: 100%;
@@ -1111,7 +1119,9 @@ const TabletGridFeatures = styled(ItemH)`
   display: none;
 
   @media ${device.laptop} {
-    font-family: FK Grotesk Neue;
+    font-family:
+      DM Sans,
+      san-serif;
     gap: 24px;
     justify-content: flex-start;
     width: 100%;
@@ -1135,7 +1145,9 @@ const TabletGridFeatures = styled(ItemH)`
 `;
 
 const ThirdGridFeatures = styled(ItemH)`
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   gap: 24px;
   justify-content: flex-start;
   width: 100%;

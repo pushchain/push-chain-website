@@ -166,7 +166,7 @@ export default function NavbarContent() {
         <ItemH flexDirection='column' alignItems='flex-start' gap='4px'>
           <H2
             fontSize='16px'
-            fontFamily='FK Grotesk Neue'
+            fontFamily='DM Sans, san-serif'
             color='var(--ifm-color-primary-text)'
             lineHeight='130%'
             letterSpacing='normal'
@@ -177,7 +177,7 @@ export default function NavbarContent() {
 
           <H3
             fontSize='14px'
-            fontFamily='FK Grotesk Neue'
+            fontFamily='DM Sans, san-serif'
             color='var(--ifm-navbar-dropdown-subtext)'
             lineHeight='130%'
             letterSpacing='normal'
@@ -295,7 +295,7 @@ const NavigationMenuItem = styled.div`
   }
 
   & span {
-    font-family: 'FK Grotesk Neue';
+    font-family: 'DM Sans, san-serif';
 
     padding: 4px;
     font-weight: 500;
@@ -457,7 +457,7 @@ const HeaderImage = styled(Image)`
 const NavItem = styled(LinkTo)`
   color: var(--ifm-color-primary-text);
 
-  font-family: 'FK Grotesk Neue';
+  font-family: 'DM Sans, san-serif';
   font-size: 15px;
   font-style: normal;
   font-weight: 500;

@@ -731,7 +731,9 @@ const AMod = styled(A)`
 const LIFaq = styled(LI)`
   color: #bbbcd0;
   font-size: 19px;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   font-weight: 400;
   line-height: 140%;
   list-style-type: circle;

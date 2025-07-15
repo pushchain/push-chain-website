@@ -26,7 +26,7 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
       }}
     >
       <StarColoredIcon />
-      <H2 fontWeight='400' fontFamily='FK Grotesk Neue'>
+      <H2 fontWeight='400' fontFamily='DM Sans, san-serif'>
         {text}
       </H2>
       <BsArrowRight />
@@ -35,7 +35,9 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
 };
 
 const HeroButton = styled(Button)`
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
