@@ -30,4 +30,11 @@ export const ChainFooterList = {
       target: '_blank',
     },
   ],
+  product: [
+    {
+      title: 'Github',
+      href: 'https://github.com/push-protocol',
+      target: '_blank',
+    },
+  ],
 };
