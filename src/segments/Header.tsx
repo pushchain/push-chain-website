@@ -305,16 +305,20 @@ function Header() {
               className={'headerblur'}
             />
 
-            <MenuTop flex='initial' showMobileMenu={showMobileMenu}>
+            <MenuTop
+              flex='initial'
+              showMobileMenu={showMobileMenu}
+              showAlertBar={showAlertBar}
+            >
               <PushLogoBlackContainer className='headerlogo' flex='initial'>
                 <LinkTo to={useBaseUrl('/')} aria-label='Push'>
                   <Image
                     src={
                       require(
-                        `@site/static/assets/website/segments/PushLogoTextBlack.webp`
+                        `@site/static/assets/website/segments/PushLogoTextWhite.webp`
                       ).default
                     }
-                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextBlack@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextBlack@3x.webp`).default} 3x`}
+                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
                     alt={`Push Logo`}
                     width='auto'
                     height='auto'
@@ -331,10 +335,10 @@ function Header() {
                   <Image
                     src={
                       require(
-                        `@site/static/assets/website/segments/PushLogoTextBlack.webp`
+                        `@site/static/assets/website/segments/PushLogoTextWhite.webp`
                       ).default
                     }
-                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextBlack@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextBlack@3x.webp`).default} 3x`}
+                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
                     alt={`Push Logo`}
                     width='auto'
                     height='auto'
@@ -942,7 +946,7 @@ const MenuTop = styled(ItemV)`
     height: auto;
     top: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP + ADJUST_FOR_BLUR}px`
+        ? `${GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP + ADJUST_FOR_BLUR + (props.showAlertBar && 80)}px`
         : 0};
     left: ${(props) =>
       props.showMobileMenu
@@ -966,7 +970,7 @@ const MenuTop = styled(ItemV)`
     border-radius: 24px;
     top: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP + ADJUST_FOR_BLUR}px`
+        ? `${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP + ADJUST_FOR_BLUR + (props.showAlertBar && 80)}px`
         : 0};
     left: ${(props) =>
       props.showMobileMenu
