@@ -181,7 +181,7 @@ const config = {
         logo: {
           alt: 'Push Logo',
           src: '/assets/website/docshub/PushLogoBlack@3x.png',
-          srcDark: '/assets/website/segments/PushLogoTextBlack@3x.webp',
+          srcDark: '/assets/website/segments/PushLogoTextWhite@3x.webp',
           href: '/',
         },
         items: [

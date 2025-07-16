@@ -457,7 +457,9 @@ const HeaderImage = styled(Image)`
 const NavItem = styled(LinkTo)`
   color: var(--ifm-color-primary-text);
 
-  font-family: 'DM Sans, san-serif';
+  font-family:
+    DM Sans,
+    san-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;

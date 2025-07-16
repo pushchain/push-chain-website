@@ -49,7 +49,10 @@ export default function Root({ children }) {
   const baseURL = useSiteBaseUrl();
   useChainNotification();
   const { showAlertBar } = useContext(AccountContext);
-  const isHome = location.pathname === '/';
+  const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
+    location.pathname
+  );
+  const isHome = location.pathname === '/' || isPreview;
 
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
