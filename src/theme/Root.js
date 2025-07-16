@@ -15,6 +15,7 @@ import { Notification } from '../hooks/useRewardsNotification';
 import { useChainNotification } from '../hooks/useChainNotification';
 import InfoBar from '../components/InfoBar';
 import AccountContext from '../context/accountContext';
+import { AccountProvider } from '@site/src/context/accountContext';
 
 // Initialize Internalization
 i18nInitialize();
@@ -44,9 +45,11 @@ export default function Root({ children }) {
     },
   ];
 
+  const location = useLocation();
   const baseURL = useSiteBaseUrl();
   useChainNotification();
   const { showAlertBar } = useContext(AccountContext);
+  const isHome = location.pathname === '/';
 
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
@@ -80,9 +83,6 @@ export default function Root({ children }) {
     let result = false;
     pathname = pathname?.toUpperCase();
 
-    // Define location
-    const location = useLocation();
-
     const str = location?.pathname.toUpperCase();
     const modstr =
       str != null && str.length >= pathname.length
@@ -114,28 +114,33 @@ export default function Root({ children }) {
   }
 
   return (
-    <>
-      {showAlertBar && (
-        <InfoBar text='Launch on Push Testnet Now — Unlock Rewards for Builders and Early Users.' />
-      )}
-
-      <PageContainer
-        className={returnAdditionalClasses(superimposedConditions)}
-      >
-        <ServerStyle from={children} />
-
-        {/* Main react children */}
-        <Content>{children}</Content>
-        <Notification />
-
-        {shouldRenderFooter && (
-          <>
-            {/* <Footer /> */}
-            <CookieComponent />
-          </>
+    <AccountProvider>
+      <>
+        {showAlertBar && (
+          <InfoBar
+            text='Launch on Push Testnet Now — Unlock Rewards for Builders and Early Users.'
+            url='https://push.org/blog/donut-testnet-closed-beta-is-now-live/'
+          />
         )}
-      </PageContainer>
-    </>
+
+        <PageContainer
+          className={returnAdditionalClasses(superimposedConditions)}
+        >
+          <ServerStyle from={children} />
+
+          {/* Main react children */}
+          <Content isHome={isHome && showAlertBar}>{children}</Content>
+          <Notification />
+
+          {shouldRenderFooter && (
+            <>
+              {/* <Footer /> */}
+              <CookieComponent />
+            </>
+          )}
+        </PageContainer>
+      </>
+    </AccountProvider>
   );
 }
 
@@ -143,10 +148,13 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  // padding-top: 48px;
 `;
 
 // The main content should take up all remaining space
 const Content = styled.div`
   flex: 1;
+  ${({ isHome }) =>
+    isHome &&
+    `background: linear-gradient(90deg, #3524ed 0%, #d548ec 50%, #3524ed 100%);
+    `}
 `;

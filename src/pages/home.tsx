@@ -6,7 +6,7 @@
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 // External Components
 import Spline from '@splinetool/react-spline';
@@ -63,10 +63,12 @@ import { HeroImageSection } from '../components/Home/HeroImageSection';
 import { StatsSection } from '../components/Home/StatsSection';
 import { InvList } from '@site/src/config/HomeInvestorList';
 import { FeaturedSection } from '../components/Home/FeaturedSection';
+import AccountContext from '../context/accountContext';
 
 export default function Home() {
   // Internationalization
   const { t, i18n } = useTranslation();
+  const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
 
   const [showMoreTeamMembers, setShowMoreTeamMembers] = useState(false);
   const isMobile = useMediaQuery(device.mobileL);
@@ -144,7 +146,7 @@ export default function Home() {
         </script>
       </Head>
 
-      <HomeWrapper>
+      <HomeWrapper showAlertBar={showAlertBar}>
         {/* GLOW CIRCLE */}
         <GlowCircle />
 
@@ -646,7 +648,7 @@ const GlowCircle = styled.div`
 
   width: 543px;
   height: 538px;
-  left: 446px;
+  left: 35%;
   top: 29px;
 
   @media ${device.tablet} {
@@ -700,6 +702,12 @@ const HomeWrapper = styled(ItemV)`
   font-family:
     DM Sans,
     san-serif !important;
+
+  ${({ showAlertBar }) =>
+    showAlertBar &&
+    `border-top-left-radius: 24px;
+       border-top-right-radius: 24px;
+    `}
 
   box-sizing: border-box;
   & #hero .contentBox {

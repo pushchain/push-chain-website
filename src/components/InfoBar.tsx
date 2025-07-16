@@ -9,7 +9,7 @@ import AccountContext from '@site/src/context/accountContext';
 
 type InfoBarProps = {
   text: string;
-  url?: string;
+  url: string;
 };
 
 const InfoBar = ({ text, url }: InfoBarProps) => {
@@ -19,7 +19,7 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
 
   const handleDismiss = () => {
     setShowAlertBar(false);
-    localStorage.setItem('showAlertBar', 'false');
+    localStorage.setItem('showAlertBar', false);
   };
 
   return (
@@ -27,6 +27,8 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
       <HeroButton
         onClick={() => {
           if (url) window.open(url, '_blank');
+          setShowAlertBar(false);
+          localStorage.setItem('showAlertBar', false);
         }}
       >
         <WhiteStarIcon className='star-icon' />
@@ -40,6 +42,7 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
 };
 
 const BarContainer = styled.div`
+  z-index: 9999999;
   position: relative;
   display: flex;
   align-items: center;
@@ -49,6 +52,7 @@ const BarContainer = styled.div`
   padding: 0 16px;
   box-sizing: border-box;
   height: 75px;
+  cursor: pointer;
 
   background: linear-gradient(90deg, #3524ed 0%, #d548ec 50%, #3524ed 100%);
   backdrop-filter: blur(calc(var(--blur-md, 24px) / 2));

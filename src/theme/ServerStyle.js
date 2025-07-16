@@ -13,7 +13,6 @@ import { ServerStyleSheet } from 'styled-components';
 import Footer from '@site/src/segments/Footer';
 import Header from '@site/src/segments/Header';
 import { CookiesProvider } from 'react-cookie';
-import { AccountProvider } from '@site/src/context/accountContext';
 
 function ServerStyle({ from: children }) {
   let style = null;
@@ -27,15 +26,13 @@ function ServerStyle({ from: children }) {
       sheet.collectStyles(
         <HelmetProvider>
           <StaticRouter location={location}>
-            <AccountProvider>
-              <CookiesProvider>
-                <DocusaurusContext.Provider value={context}>
-                  <Header />
-                  {children}
-                  <Footer />
-                </DocusaurusContext.Provider>
-              </CookiesProvider>
-            </AccountProvider>
+            <CookiesProvider>
+              <DocusaurusContext.Provider value={context}>
+                <Header />
+                {children}
+                <Footer />
+              </DocusaurusContext.Provider>
+            </CookiesProvider>
           </StaticRouter>
         </HelmetProvider>
       )

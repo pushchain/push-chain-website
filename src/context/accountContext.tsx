@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 type AccountContextType = {
   showAlertBar: boolean;
@@ -15,18 +15,17 @@ export const AccountProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [showAlertBar, setShowAlertBarState] = useState(true);
-
-  useEffect(() => {
+  const [showAlertBar, setShowAlertBarState] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return true;
     const stored = localStorage.getItem('showAlertBar');
-    if (stored === 'false') {
-      setShowAlertBarState(false);
-    }
-  }, []);
+    return stored === null ? true : stored === 'true';
+  });
 
   const setShowAlertBar = (val: boolean) => {
     setShowAlertBarState(val);
-    localStorage.setItem('showAlertBar', String(val));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('showAlertBar', val.toString());
+    }
   };
 
   return (
