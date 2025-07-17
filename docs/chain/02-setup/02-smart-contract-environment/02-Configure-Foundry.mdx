@@ -226,13 +226,12 @@ Verify your contract on the Push Chain BlockScout explorer:
 ```bash
 forge verify-contract \
   --chain 42101 \
-  --verifier blockscout
-  --verifier-url https://donut.push.network/api \
+  --verifier blockscout \
   0xYourDeployedAddress \
   src/MyToken.sol:MyToken
 ```
 
-> **Note:** Replace `0xF0f1199A048A39336dFD915F146470de1b5d6dAd` with your actual deployed contract address.
+> **Note:** Replace `0xYourDeployedAddress` with your actual deployed contract address.
 
 If successful, you'll see output similar to:
 
