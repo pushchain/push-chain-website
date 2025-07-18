@@ -129,6 +129,8 @@ Returns the owner information and UEA status for a given address on Push Chain.
 - Determining the source chain of a given address on Push Chain.
 - Getting the Universal Account identity information associated with this address.
 
+> Note: The returned origin address will be encoded in Hex format. For example, for Solana addresses, a base58 conversion should be done to get the readable format.
+
 ```solidity
 /**
  * @dev Returns the owner key (UOA) for a given UEA address
@@ -212,6 +214,9 @@ function checkCallerType() public view returns (bool isUEA) {
       console.log("Calling getOriginForUEA on PushChain");
       const originResult = await factory.getOriginForUEA(someAddress);
       console.log("Result -", JSON.stringify(originResult));
+      
+      // Note: If the origin is Solana (chainNamespace === "solana"), the owner address 
+      // will be in hex format and needs to be converted to base58 for readable format
     }
 
 await main().catch(console.error);
