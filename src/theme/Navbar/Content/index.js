@@ -17,6 +17,8 @@ import {
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import { device } from '@site/src/config/globals';
+import CaretSVG from '../../../../static/assets/website/header/caretdown.svg';
+
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
