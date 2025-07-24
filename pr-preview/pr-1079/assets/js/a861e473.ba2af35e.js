@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[52586],{
+
+/***/ 923361:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"label":"Web3 Tools","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/web-3-tools","allTagsPath":"/push-chain-website/pr-preview/pr-1067/blog/tags","count":3,"unlisted":false}');
+
+/***/ })
+
+}]);
