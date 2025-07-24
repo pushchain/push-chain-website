@@ -63,10 +63,13 @@ jobs:
         with:
           source-dir: ./build/
           umbrella-dir: pr-preview
+          subdir: pr-1067
 
-      - uses: rossjrw/pr-preview-action@v1.4.7
+      - name: Remove preview on close
+        uses: rossjrw/pr-preview-action@v1.4.7
         if: github.event.action == 'closed' || github.event.pull_request.merged
         with:
-          umbrella-dir: pr-preview
           source-dir: ./build/
-          action: remove
+          umbrella-dir: pr-preview
+          # subdir: pr-1067
+          # action: remove
