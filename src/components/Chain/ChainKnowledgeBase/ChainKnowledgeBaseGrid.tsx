@@ -38,16 +38,20 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
   return (
     <ChainKnowledgeBaseGridWrapper addBottomMargin={divider}>
       {title && (
-        <ItemV>
+        <ItemV
+          alignItems={mode === 'playlist' ? 'flex-start' : 'center'}
+          justifyContent={mode === 'playlist' ? 'flex-start' : 'center'}
+        >
           <H3
             fontSize='2.5rem'
             fontWeight='500'
             fontFamily='N27'
             lineHeight={isMobile ? '100%' : '140%'}
             letterSpacing='-0.8px'
-            textAlign='center'
+            textAlign={mode === 'playlist' ? 'left' : 'center'}
+            alignSelf={mode === 'playlist' ? 'flex-start' : 'center'}
           >
-            {title ? title : 'Hey! Want to learn more about Push Chain?'}
+            {title}
           </H3>
         </ItemV>
       )}
@@ -85,11 +89,12 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
 export default ChainKnowledgeBaseGrid;
 
 const ChainKnowledgeBaseGridWrapper = styled.div`
-  margin: ${({ addBottomMargin }) => (addBottomMargin ? '120px auto' : 'auto')};
+  margin: ${({ addBottomMargin }) =>
+    addBottomMargin ? '72px 0 120px auto' : 'auto'};
 
   @media ${device.mobileL} {
     margin: ${({ addBottomMargin }) =>
-      addBottomMargin ? '120x auto' : 'auto'};
+      addBottomMargin ? '64px 0 120x auto' : 'auto'};
   }
 `;
 

@@ -44,22 +44,24 @@ export const push101Content = {
         {
           type: 'text',
           value: `## Curated Reads 👇`,
+          hidden: true,
         },
       ],
     },
     {
       type: 'list',
+      title: 'Learn why Push Chain is the future of web3',
       mode: 'playlist',
       divider: true,
       items: [
         {
-          slug: 'evolution-of-push',
-          image: 'evolution-of-push',
-          title: 'Evolution of Push',
+          slug: 'why-push-chain',
+          image: 'why-push-chain',
+          title: 'Why Push Chain?',
           subtitle:
-            'Push Protocol has come a long way! We’ve delivered over 140M notifications, built a community of 500K aggregate users, powered notifications for 500+ projects, and are known as the de facto leader in notifications and communications for web3.',
-          url: '/blog/evolution-of-push',
-          target: '_self',
+            'Push Protocol recently announced its governance proposal of launching Push Chain. Push Protocol envisions the creation of Push Chain which enables a shared state L1 chain designed to support truly scalable consumer applications and universal applications.',
+          url: '/blog/why-push-chain',
+          target: '_blank',
         },
         {
           slug: 'innovations-by-push-chain',
@@ -68,7 +70,7 @@ export const push101Content = {
           subtitle:
             'Unlike traditional L1 chains, Push Chain introduces ten key innovations and optimized mechanisms to unify any chain, any user, and any app. This article will help you understand - What Innovations Push Chain brings to Web3!',
           url: '/blog/innovations-by-push-chain',
-          target: '_self',
+          target: '_blank',
         },
         {
           slug: 'another-l1',
@@ -77,16 +79,16 @@ export const push101Content = {
           subtitle:
             'The move towards Push Chain was driven by the realisation that we had to do our bit to move the needle on interoperability, not in order to create our own fragmented ecosystem.',
           url: '/blog/another-l1',
-          target: '_self',
+          target: '_blank',
         },
         {
-          slug: 'faq-push-chain',
-          image: 'frequently-asked-questions-cover',
-          title: 'Push Chain’s Frequently Asked Questions',
+          slug: 'evolution-of-push',
+          image: 'evolution-of-push',
+          title: 'Evolution of Push',
           subtitle:
-            'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
-          url: '/blog/faq-push-chain/',
-          target: '_self',
+            'Push Protocol has come a long way! We’ve delivered over 140M notifications, built a community of 500K aggregate users, powered notifications for 500+ projects, and are known as the de facto leader in notifications and communications for web3.',
+          url: '/blog/evolution-of-push',
+          target: '_blank',
         },
         {
           slug: 'consumer-apps-that-can-be-built-on-push-chain',
@@ -95,16 +97,16 @@ export const push101Content = {
           subtitle:
             'Web 3 is growing at lightning speed!Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!! While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal...',
           url: '/blog/consumer-apps-that-can-be-built-on-push-chain/',
-          target: '_self',
+          target: '_blank',
         },
         {
-          slug: 'why-push-chain',
-          image: 'why-push-chain',
-          title: 'Why Push Chain?',
+          slug: 'faq-push-chain',
+          image: 'frequently-asked-questions-cover',
+          title: 'Push Chain’s Frequently Asked Questions',
           subtitle:
-            'Push Protocol recently announced its governance proposal of launching Push Chain. Push Protocol envisions the creation of Push Chain which enables a shared state L1 chain designed to support truly scalable consumer applications and universal applications.',
-          url: '/blog/why-push-chain',
-          target: '_self',
+            'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
+          url: '/blog/faq-push-chain/',
+          target: '_blank',
         },
       ],
     },

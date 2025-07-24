@@ -162,9 +162,24 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
       {item.content?.map((block, blockIndex) => {
         if (block.type === 'indexlist') {
-          const texts = block?.value?.filter((v) => v.type === 'text') || [];
+          const texts =
+            block?.value?.filter((v) => v.type === 'text' && !v.hidden) || [];
           const rawMarkdown = texts?.map((t) => t.value).join('\n\n');
           const toc = extractTOC(block?.value || []);
+
+          // Create hidden section placeholders
+          const hiddenSections = [];
+          block?.value?.forEach((v) => {
+            if (v.type === 'text' && v.hidden) {
+              // Extract heading from hidden content
+              const headingMatch = v.value.match(/^##\s+(.+)$/m);
+              if (headingMatch) {
+                const headingText = headingMatch[1];
+                const headingId = generateIdFromHeadingText(headingText);
+                hiddenSections.push({ id: headingId, text: headingText });
+              }
+            }
+          });
 
           return (
             <ItemH
@@ -278,6 +293,7 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
                             const id = generateIdFromHeadingText(
                               props.children
                             );
+
                             return React.createElement(
                               tag,
                               {
@@ -289,10 +305,37 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
                           },
                         ])
                       ),
+                      p: ({ node, ...props }) => {
+                        // For now, let's hide all paragraphs in hidden sections
+                        // This is a simplified approach - we'll hide paragraphs that come after hidden headings
+                        const isHidden = false; // We'll implement this logic later if needed
+
+                        return React.createElement(
+                          'p',
+                          {
+                            style: isHidden ? { display: 'none' } : {},
+                          },
+                          props.children
+                        );
+                      },
                     }}
                   >
                     {resolveImageUrls(cleanMarkdown(rawMarkdown))}
                   </Markdown>
+
+                  {/* Hidden section placeholders for TOC navigation */}
+                  {hiddenSections.map((section, index) => (
+                    <div
+                      key={`hidden-${section.id}-${index}`}
+                      id={section.id}
+                      style={{
+                        height: '1px',
+                        margin: '0',
+                        padding: '0',
+                        visibility: 'hidden',
+                      }}
+                    />
+                  ))}
                 </TextItem>
               </ItemV>
             </ItemH>
