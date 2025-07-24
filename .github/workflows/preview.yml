@@ -1,28 +1,25 @@
-name: Deploy PR preview to pr-1067
+name: Deploy PR preview to pr-1079
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
+    types: [opened, reopened, synchronize]
     branches:
       - main
 
-concurrency: preview-1067
+concurrency: preview-1079
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+
     steps:
       - name: Set up environment variables
         run: |
-          echo "REACT_APP_PREVIEW_BASE=pr-1067" >> $GITHUB_ENV
+          echo "REACT_APP_PREVIEW_BASE=pr-1079" >> $GITHUB_ENV
           echo "REACT_APP_DEPLOY_ENV=PREVIEW" >> $GITHUB_ENV
           echo "REACT_APP_PUBLIC_URL=https://push-protocol.github.io" >> $GITHUB_ENV
-          echo "GITHUB_PR_NUMBER=1067" >> $GITHUB_ENV
-          echo "REACT_APP_BASE_URL=/push-chain-website/pr-preview/pr-1067" >> $GITHUB_ENV
+          echo "GITHUB_PR_NUMBER=1079" >> $GITHUB_ENV
+          echo "REACT_APP_BASE_URL=/push-chain-website/pr-preview/pr-1079" >> $GITHUB_ENV
 
       - name: Free Disk Space (Ubuntu)
         uses: jlumbroso/free-disk-space@main
@@ -35,7 +32,7 @@ jobs:
           docker-images: true
           swap-storage: true
 
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 1
@@ -53,23 +50,14 @@ jobs:
           cache: yarn
 
       - name: Install and Build
-        if: github.event.action != 'closed'
         run: |
           yarn install
           yarn build:pr:preview
 
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1.4.7
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          source-dir: ./build/
-          umbrella-dir: pr-preview
-          subdir: pr-1067
-
-      - name: Remove preview on close
-        uses: rossjrw/pr-preview-action@v1.4.7
-        if: github.event.action == 'closed' || github.event.pull_request.merged
-        with:
-          source-dir: ./build/
-          umbrella-dir: pr-preview
-          # subdir: pr-1067
-          # action: remove
+          branch: gh-pages
+          folder: build
+          target-folder: pr-preview/pr-1079
+          clean: true
