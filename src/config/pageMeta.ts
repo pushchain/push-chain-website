@@ -75,7 +75,7 @@ export const PageMeta = {
       'Discover everything for tutorials to code base to what makes Push Chain tick at the knowledge hub.',
   },
   PUSH101: {
-    pageTitle: 'Push101 | Knowledge Base | Push Chain',
+    pageTitle: 'Basics | Knowledge Base | Push Chain',
     pageDescription:
       'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
   },
@@ -85,7 +85,7 @@ export const PageMeta = {
       'Get started with building on Push Chain. Explore best practices, guides and things that can make your app go universal instantly.',
   },
   DEEPDIVES: {
-    pageTitle: ' Deepdives | Knowledge Base | Push Chain',
+    pageTitle: 'Deepdives | Knowledge Base | Push Chain',
     pageDescription:
       'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
   },

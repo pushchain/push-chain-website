@@ -1,6 +1,8 @@
 /* eslint-disable @docusaurus/no-html-links, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import Link from '@docusaurus/Link';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -24,6 +26,65 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
   const baseUrl = useSiteBaseUrl();
+  const tocRef = React.useRef(null);
+  const contentRef = React.useRef(null);
+
+  // GSAP ScrollTrigger for DesktopTOC
+  React.useEffect(() => {
+    if (isTablet || !tocRef.current || !contentRef.current) return;
+
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Calculate TOC height and create ScrollTrigger
+    const tocHeight = tocRef.current?.offsetHeight || 0;
+    const parentHeight = contentRef.current?.offsetHeight || 0;
+    const endOffset = tocHeight; // TOC height + top offset
+
+    // Create ScrollTrigger for TOC sticky behavior
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: contentRef.current,
+      start: 'top top+=24',
+      end: `bottom top+=${endOffset}`,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const direction = self.direction;
+
+        if (progress > 0 && progress < 1) {
+          // Parent is in viewport - make TOC sticky
+          gsap.set(tocRef.current, {
+            position: 'fixed',
+            top: '24px',
+            zIndex: 100,
+          });
+        } else if (progress >= 1 && direction === 1) {
+          // Reached end of parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-end',
+          });
+        } else if (progress <= 0 && direction === -1) {
+          // Scrolled above parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-start',
+          });
+        }
+      },
+    });
+
+    return () => {
+      scrollTrigger.kill();
+    };
+  }, [isTablet]);
 
   if (!item || !item.content) {
     return <p>Loading...</p>; // or some fallback UI
@@ -101,17 +162,23 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
       {item.content?.map((block, blockIndex) => {
         if (block.type === 'indexlist') {
-          const texts = block?.value.filter((v) => v.type === 'text');
+          const texts = block?.value?.filter((v) => v.type === 'text') || [];
           const rawMarkdown = texts?.map((t) => t.value).join('\n\n');
-          const toc = extractTOC(block?.value);
+          const toc = extractTOC(block?.value || []);
 
           return (
             <ItemH
               key={blockIndex}
+              ref={contentRef}
               flexDirection={isTablet ? 'column' : 'row'}
-              gap={isTablet ? '32px' : '165px'}
+              gap={isTablet ? '32px' : '64px'}
               alignItems='flex-start'
-              margin='16px 0 32px 0'
+              margin='32px 0 32px 0'
+              style={{
+                minHeight: '100vh',
+                position: 'relative',
+                overflow: 'visible',
+              }}
             >
               <ItemV
                 maxWidth={isTablet ? '100%' : '300px'}
@@ -163,6 +230,7 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
                 {!isTablet && toc.length > 0 && (
                   <DesktopTOC
+                    ref={tocRef}
                     background='#FFF'
                     padding='32px'
                     borderRadius='32px'
@@ -233,7 +301,12 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
         if (block.type === 'list') {
           return (
-            <ChainKnowledgeBaseGrid items={block?.items} title={block?.title} />
+            <ChainKnowledgeBaseGrid
+              items={block?.items}
+              title={block?.title}
+              mode={block?.mode}
+              divider={block?.divider}
+            />
           );
         }
 
@@ -384,8 +457,6 @@ const TextItem = styled.div`
   }
 
   p {
-    margin: 0;
-    padding: 0;
     line-height: 170%;
   }
 
@@ -431,6 +502,11 @@ const MobileTOCWrapper = styled.div`
 `;
 
 const DesktopTOC = styled(ItemV)`
+  align-self: flex-start;
+  max-height: calc(100vh - 256px);
+  overflow-y: auto;
+  position: relative;
+
   ul {
     padding: 0;
     margin: 0;

@@ -21,48 +21,62 @@ interface KnowledgeBaseItem {
 interface ChainKnowledgeBaseGridProps {
   items?: KnowledgeBaseItem[];
   title?: string | null;
+  mode?: 'playlist' | 'grid';
+  divider?: boolean;
 }
 
 const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
   items,
   title,
+  mode = 'grid',
+  divider = false,
 }) => {
   const isMobile = useMediaQuery(device.mobileL);
-  const isTablet = useMediaQuery(device.tablet);
 
   const gridRows = createGridRows(items ?? knowledgeBaseArticleContent);
 
   return (
-    <ChainKnowledgeBaseGridWrapper addBottomMargin={items}>
-      <ItemV>
-        <H3
-          fontSize='2.5rem'
-          fontWeight='500'
-          fontFamily='N27'
-          lineHeight={isMobile ? '100%' : '140%'}
-          letterSpacing='-0.8px'
-          textAlign='center'
-        >
-          {title ? title : 'Hey! Want to learn more about Push Chain?'}
-        </H3>
-      </ItemV>
+    <ChainKnowledgeBaseGridWrapper addBottomMargin={divider}>
+      {title && (
+        <ItemV>
+          <H3
+            fontSize='2.5rem'
+            fontWeight='500'
+            fontFamily='N27'
+            lineHeight={isMobile ? '100%' : '140%'}
+            letterSpacing='-0.8px'
+            textAlign='center'
+          >
+            {title ? title : 'Hey! Want to learn more about Push Chain?'}
+          </H3>
+        </ItemV>
+      )}
 
       <ChainKnowledgeGridWrapper>
-        {!isTablet &&
+        {mode === 'grid' &&
           gridRows?.map((row, rowIndex) => (
             <ChainKnowledgeGrid key={rowIndex} itemsInRow={row.length}>
               {row.map((item, index) => (
-                <ChannelKnowledgeBaseComponentItem item={item} index={index} />
+                <ChannelKnowledgeBaseComponentItem
+                  item={item}
+                  index={index}
+                  mode='grid'
+                />
               ))}
             </ChainKnowledgeGrid>
           ))}
 
-        <ChainKnowledgeGrid>
-          {isTablet &&
-            knowledgeBaseArticleContent?.map((item, index) => (
-              <ChannelKnowledgeBaseComponentItem item={item} index={index} />
+        {mode === 'playlist' && (
+          <ChainKnowledgePlaylist>
+            {items?.map((row, rowIndex) => (
+              <ChannelKnowledgeBaseComponentItem
+                item={row}
+                index={rowIndex}
+                mode='playlist'
+              />
             ))}
-        </ChainKnowledgeGrid>
+          </ChainKnowledgePlaylist>
+        )}
       </ChainKnowledgeGridWrapper>
     </ChainKnowledgeBaseGridWrapper>
   );
@@ -71,12 +85,11 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
 export default ChainKnowledgeBaseGrid;
 
 const ChainKnowledgeBaseGridWrapper = styled.div`
-  margin: ${({ addBottomMargin }) =>
-    addBottomMargin ? '120px auto' : '200px auto 0 auto'};
+  margin: ${({ addBottomMargin }) => (addBottomMargin ? '120px auto' : 'auto')};
 
   @media ${device.mobileL} {
     margin: ${({ addBottomMargin }) =>
-      addBottomMargin ? '120x auto' : '153px auto 0 auto'};
+      addBottomMargin ? '120x auto' : 'auto'};
   }
 `;
 
@@ -102,4 +115,12 @@ const ChainKnowledgeGrid = styled.div`
   @media ${device.mobileL} {
     grid-template-columns: 1fr; /* One item per row for mobile */
   }
+`;
+
+const ChainKnowledgePlaylist = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
 `;
