@@ -175,6 +175,7 @@ export default function HomepageFeatures(): JSX.Element {
       {/* QUICKSTART SECTION */}
       <HomepageSection>
         <Content margin='0 auto' maxWidth={`1326px`} width='100%'>
+
           <HomepageSubHeader id='quickstart'>
             <ItemV justifyContent='flex-start' alignItems='flex-start'>
               <H2>Quickstart</H2>
@@ -230,6 +231,7 @@ export default function HomepageFeatures(): JSX.Element {
 
             <FaqLink
               href='/docs/chain/setup/tooling/'
+
               target='_blank'
               title='Explore Tooling'
             >
@@ -317,6 +319,25 @@ export default function HomepageFeatures(): JSX.Element {
   );
 }
 
+const DocsWrapper = styled.div`
+  @media (min-width: 1800px) {
+    min-height: 100vh;
+    background: var(--ifm-color-primary-inverse);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+`;
+
+const ExtraDiv = styled.div`
+  display: none;
+
+  @media (min-width: 1800px) {
+    display: block;
+    height: 6rem; // or adjust to whatever spacing you need
+  }
+`;
+
 const DocsHeroSection = styled(Section)`
   padding: 0px;
   padding-bottom: 0px;
@@ -333,6 +354,7 @@ const HeroHeader = styled(ItemV)`
     font-weight: 600;
     line-height: 125%;
     letter-spacing: -0.96px;
+
   }
 
   @media ${device.mobileL} {
