@@ -1,8 +1,3 @@
-/* eslint-disable */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable */
-
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -23,6 +18,8 @@ import {
 } from '@docusaurus/theme-common/internal';
 import { device } from '@site/src/config/globals';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
+
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
@@ -38,7 +35,6 @@ import {
 import NavbarItem from '@theme/NavbarItem';
 import SearchBar from '@theme/SearchBar';
 import { HeaderList } from '../../../config/HeaderList';
-
 import styles from './styles.module.css';
 
 const defaultMobileMenuState = {
@@ -245,7 +241,7 @@ export default function NavbarContent() {
               </NavItem>
             ))}
 
-          {/* {!isLaptopM && (
+          {!isLaptopM && (
             <NavigationMenuItem>
               <NavigationMenuHeader
                 onClick={(e) => onMobileHeaderMenuClick(e, 0)}
@@ -275,7 +271,7 @@ export default function NavbarContent() {
                 ))}
               </NavigationMenuContent>
             </NavigationMenuItem>
-          )} */}
+          )}
         </>
       }
       right={
