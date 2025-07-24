@@ -1,0 +1,243 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[81018],{
+
+/***/ 28453:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   R: () => (/* binding */ useMDXComponents),
+/* harmony export */   x: () => (/* binding */ MDXProvider)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/**
+ * @import {MDXComponents} from 'mdx/types.js'
+ * @import {Component, ReactElement, ReactNode} from 'react'
+ */
+
+/**
+ * @callback MergeComponents
+ *   Custom merge function.
+ * @param {Readonly<MDXComponents>} currentComponents
+ *   Current components from the context.
+ * @returns {MDXComponents}
+ *   Additional components.
+ *
+ * @typedef Props
+ *   Configuration for `MDXProvider`.
+ * @property {ReactNode | null | undefined} [children]
+ *   Children (optional).
+ * @property {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @property {boolean | null | undefined} [disableParentContext=false]
+ *   Turn off outer component context (default: `false`).
+ */
+
+
+
+/** @type {Readonly<MDXComponents>} */
+const emptyComponents = {}
+
+const MDXContext = react__WEBPACK_IMPORTED_MODULE_0__.createContext(emptyComponents)
+
+/**
+ * Get current components from the MDX Context.
+ *
+ * @param {Readonly<MDXComponents> | MergeComponents | null | undefined} [components]
+ *   Additional components to use or a function that creates them (optional).
+ * @returns {MDXComponents}
+ *   Current components.
+ */
+function useMDXComponents(components) {
+  const contextComponents = react__WEBPACK_IMPORTED_MODULE_0__.useContext(MDXContext)
+
+  // Memoize to avoid unnecessary top-level context changes
+  return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(
+    function () {
+      // Custom merge via a function prop
+      if (typeof components === 'function') {
+        return components(contextComponents)
+      }
+
+      return {...contextComponents, ...components}
+    },
+    [contextComponents, components]
+  )
+}
+
+/**
+ * Provider for MDX context.
+ *
+ * @param {Readonly<Props>} properties
+ *   Properties.
+ * @returns {ReactElement}
+ *   Element.
+ * @satisfies {Component}
+ */
+function MDXProvider(properties) {
+  /** @type {Readonly<MDXComponents>} */
+  let allComponents
+
+  if (properties.disableParentContext) {
+    allComponents =
+      typeof properties.components === 'function'
+        ? properties.components(emptyComponents)
+        : properties.components || emptyComponents
+  } else {
+    allComponents = useMDXComponents(properties.components)
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0__.createElement(
+    MDXContext.Provider,
+    {value: allComponents},
+    properties.children
+  )
+}
+
+
+/***/ }),
+
+/***/ 94350:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-cc72de1f1ec0eb6feaeeb4d0bce09d00.webp");
+
+/***/ }),
+
+/***/ 185327:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-cc72de1f1ec0eb6feaeeb4d0bce09d00.webp");
+
+/***/ }),
+
+/***/ 360383:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* binding */ metadata),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(474848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28453);
+
+
+const frontMatter = {
+	slug: 'what-is-decentralized-social-media',
+	title: 'What is Decentralized Social Media and Why Does it Matter?',
+	authors: [
+		'sixty'
+	],
+	image: './cover-image.webp',
+	description: 'What is Decentralized Social Media and Why Does it Matter?',
+	text: 'A crucial difference between centralized and decentralized social media is their approach to data ownership. On traditional platforms like Facebook, Instagram, or X (formerly Twitter), users relinquish control of their data from the moment they sign up.',
+	tags: [
+		'Consumer Crypto',
+		'Insights'
+	]
+};
+const contentTitle = undefined;
+const metadata = {
+  "permalink": "/push-chain-website/pr-preview/pr-1079/blog/what-is-decentralized-social-media",
+  "source": "@site/blog/2024-10-25-what-is-decentralized-social-media/index.md",
+  "title": "What is Decentralized Social Media and Why Does it Matter?",
+  "description": "What is Decentralized Social Media and Why Does it Matter?",
+  "date": "2024-10-25T00:00:00.000Z",
+  "formattedDate": "October 25, 2024",
+  "tags": [
+    {
+      "label": "Consumer Crypto",
+      "permalink": "/push-chain-website/pr-preview/pr-1079/blog/tags/consumer-crypto"
+    },
+    {
+      "label": "Insights",
+      "permalink": "/push-chain-website/pr-preview/pr-1079/blog/tags/insights"
+    }
+  ],
+  "readingTime": 4.663333333333333,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "SixtyKeys",
+      "title": "Guest Contributor",
+      "url": "https://x.com/sixty_keys",
+      "imageURL": "/assets/blog/authors/authorsixty.png",
+      "key": "sixty"
+    }
+  ],
+  "frontMatter": {
+    "slug": "what-is-decentralized-social-media",
+    "title": "What is Decentralized Social Media and Why Does it Matter?",
+    "authors": [
+      "sixty"
+    ],
+    "image": "./cover-image.webp",
+    "description": "What is Decentralized Social Media and Why Does it Matter?",
+    "text": "A crucial difference between centralized and decentralized social media is their approach to data ownership. On traditional platforms like Facebook, Instagram, or X (formerly Twitter), users relinquish control of their data from the moment they sign up.",
+    "tags": [
+      "Consumer Crypto",
+      "Insights"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "How Push Chat is Different from Traditional Chat Platforms ",
+    "permalink": "/push-chain-website/pr-preview/pr-1079/blog/how-push-chat-is-different-from-traditional-chat-platforms"
+  },
+  "nextItem": {
+    "title": "Why Do On-Chain Push Notifications Matter?",
+    "permalink": "/push-chain-website/pr-preview/pr-1079/blog/why-onchain-push-notifications-matter"
+  }
+};
+const assets = {
+"image": (__webpack_require__(185327)/* ["default"] */ .A),
+"authorsImageUrls": [undefined],
+};
+
+
+
+const toc = [];
+function _createMdxContent(props) {
+  const _components = {
+    img: "img",
+    p: "p",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+      alt: "Cover Image of What is Decentralized Social Media and Why Does it Matter?",
+      src: (__webpack_require__(94350)/* ["default"] */ .A) + "",
+      width: "1920",
+      height: "1080"
+    })
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ })
+
+}]);

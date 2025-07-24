@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[23455],{
+
+/***/ 847512:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1079/blog/tags/ethereum/page/21","page":21,"postsPerPage":10,"totalPages":21,"totalCount":204,"previousPage":"/push-chain-website/pr-preview/pr-1079/blog/tags/ethereum/page/20","blogDescription":"Blog","blogTitle":"Blog"}');
+
+/***/ })
+
+}]);

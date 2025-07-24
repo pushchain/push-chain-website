@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[27381],{
+
+/***/ 1680:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1079/blog/tags/governance","page":1,"postsPerPage":10,"totalPages":3,"totalCount":21,"nextPage":"/push-chain-website/pr-preview/pr-1079/blog/tags/governance/page/2","blogDescription":"Blog","blogTitle":"Blog"}');
+
+/***/ })
+
+}]);
