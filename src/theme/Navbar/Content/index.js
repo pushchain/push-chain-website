@@ -1,8 +1,3 @@
-/* eslint-disable */
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable */
-
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -11,8 +6,10 @@
  */
 
 // React + Web3 Essentials
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 import { ErrorCauseBoundary, useThemeConfig } from '@docusaurus/theme-common';
 import {
@@ -20,18 +17,27 @@ import {
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import { device } from '@site/src/config/globals';
-import { H2, H3, Image, ItemH, LinkTo } from '@site/src/css/SharedStyling';
+import CaretSVG from '../../../../static/assets/website/header/caretdown.svg';
+
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
+
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarLogo from '@theme/Navbar/Logo';
 import NavbarMobileSidebarToggle from '@theme/Navbar/MobileSidebar/Toggle';
 import NavbarSearch from '@theme/Navbar/Search';
+import {
+  H2,
+  H3,
+  Image,
+  ItemH,
+  LinkTo,
+  Span,
+} from '@site/src/css/SharedStyling';
 import NavbarItem from '@theme/NavbarItem';
 import SearchBar from '@theme/SearchBar';
-import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
+import { HeaderList } from '../../../config/HeaderList';
 import styles from './styles.module.css';
-import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
 const defaultMobileMenuState = {
   0: false,
@@ -163,11 +169,15 @@ export default function NavbarContent() {
           />
         )}
 
-        <ItemH flexDirection='column' alignItems='flex-start' gap='4px'>
+        <ItemH
+          flexDirection='column'
+          alignItems='flex-start'
+          gap='0px'
+          padding='0px'
+        >
           <H2
-            fontSize='16px'
-            fontFamily='FK Grotesk Neue'
-            color='var(--ifm-color-primary-text)'
+            fontSize='1rem'
+            color='var(--ifm-header-dropdown-title-color)'
             lineHeight='130%'
             letterSpacing='normal'
             fontWeight='500'
@@ -176,8 +186,7 @@ export default function NavbarContent() {
           </H2>
 
           <H3
-            fontSize='14px'
-            fontFamily='FK Grotesk Neue'
+            fontSize='0.875rem'
             color='var(--ifm-navbar-dropdown-subtext)'
             lineHeight='130%'
             letterSpacing='normal'
@@ -234,7 +243,7 @@ export default function NavbarContent() {
               </NavItem>
             ))}
 
-          {/* {!isLaptopM && (
+          {!isLaptopM && (
             <NavigationMenuItem>
               <NavigationMenuHeader
                 onClick={(e) => onMobileHeaderMenuClick(e, 0)}
@@ -244,16 +253,15 @@ export default function NavbarContent() {
                 id='text0'
               >
                 <Span
-                  fontSize='18px'
+                  fontSize='1rem'
                   fontWeight='500'
-                  letterSpacing='-0.03em'
-                  lineHeight='142%'
+                  letterSpacing='-0.03rem'
+                  lineHeight='150%'
                   padding='16px'
-                  color='inherit'
                 >
                   Explore
                 </Span>
-                <BsChevronDown size={12} className='chevronIcon' />
+                <CaretSVG color='var(--ifm-header-caret-color)' />
               </NavigationMenuHeader>
 
               <NavigationMenuContent
@@ -265,7 +273,7 @@ export default function NavbarContent() {
                 ))}
               </NavigationMenuContent>
             </NavigationMenuItem>
-          )} */}
+          )}
         </>
       }
       right={
@@ -295,14 +303,11 @@ const NavigationMenuItem = styled.div`
   }
 
   & span {
-    font-family: 'FK Grotesk Neue';
-
     padding: 4px;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: normal;
-    // color: #6c6c6c;
   }
 
   &:hover {
@@ -329,12 +334,12 @@ const NavigationMenuHeader = styled.div`
   padding: 12px 0px;
 
   & span {
-    color: var(--ifm-navbar-text-color);
+    color: var(--ifm-color-primary-text);
     padding: 0px 4px 0px 12px;
-    border-left: 1px solid var(--ifm-color-primary-text);
+    border-left: 1px solid var(--ifm-header-caret-color);
 
     &:hover {
-      color: var(--ifm-navbar-text-color);
+      // color: var(--ifm-navbar-text-color);
     }
   }
 
@@ -368,7 +373,9 @@ const NavigationMenuHeader = styled.div`
 const NavigationMenuContent = styled.ul`
   list-style: none;
 
-  font-family: Inter, sans-serif;
+  font-family:
+    DM Sans,
+    sans-serif;
   display: none;
   position: absolute;
 
@@ -377,10 +384,14 @@ const NavigationMenuContent = styled.ul`
   left: 100%;
   transform: translateX(-20%);
   z-index: 188;
-  padding: 10px 14px 24px 14px;
+  padding: 25px 15px;
   border-radius: 24px;
   border: var(--ifm-docs-navbar-border);
   background: var(--ifm-navbar-dropdown-bg);
+
+  & > li:not(:last-child) {
+    margin-bottom: 14px;
+  }
 
   @media ${device.laptopM} {
     width: 100%;
@@ -390,8 +401,7 @@ const NavigationMenuContent = styled.ul`
     transform: none;
     display: flex;
     flex-direction: column;
-    margin: 8px 0 0 0;
-    padding: 0px 12px 6px 12px;
+    padding: 25px 15px;
     max-height: initial;
     min-height: initial;
 
@@ -410,13 +420,12 @@ const NavigationMenuContent = styled.ul`
   }
 `;
 
-const HeaderItem = styled.div`
+const HeaderItem = styled.li`
   display: flex;
   align-items: center;
   flex-direction: row;
   padding: 10px;
-  gap: 6px;
-  margin: 14px 0 0 0;
+  gap: 12px;
   cursor: pointer;
 
   @media (min-width: 1025px) {
@@ -424,7 +433,8 @@ const HeaderItem = styled.div`
   }
 
   & ${Image} {
-    filter: var(--ifm-navbar-dropdown-image);
+    filter: invert(77%) sepia(7%) saturate(211%) hue-rotate(182deg)
+      brightness(95%) contrast(81%);
   }
 
   &:hover {
@@ -432,40 +442,33 @@ const HeaderItem = styled.div`
     border-radius: 16px;
 
     h2 {
-      color: #d98aec;
+      color: #c742dd;
+      font-weight: 600;
     }
     & ${Image} {
-      filter: brightness(0) saturate(100%) invert(83%) sepia(53%)
-        saturate(5899%) hue-rotate(225deg) brightness(107%) contrast(85%);
+      filter: invert(77%) sepia(7%) saturate(211%) hue-rotate(182deg)
+        brightness(95%) contrast(81%);
     }
   }
 
   @media ${device.laptopM} {
     max-width: 100%;
-    margin: 6px 0 0 0;
   }
 `;
 
-const HeaderImage = styled(Image)`
-  margin: 10px;
-
-  @media ${device.laptopM} {
-    margin: 10px 10px 10px 0;
-  }
-`;
+const HeaderImage = styled(Image)``;
 
 const NavItem = styled(LinkTo)`
   color: var(--ifm-color-primary-text);
-
-  font-family: 'FK Grotesk Neue';
-  font-size: 15px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.938rem;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
   letter-spacing: normal;
 
   border-radius: 8px;
-  background: var(--ifm-navbar-search-bg);
+  background: var(--ifm-navbar-docs-bg);
   padding: 0px 12px;
 
   &:hover {

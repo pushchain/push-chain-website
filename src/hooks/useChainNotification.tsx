@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+
 // React and other libraries
 import React, { useEffect, useState, FC, ReactNode } from 'react';
 import styled from 'styled-components';
@@ -35,9 +36,7 @@ export const useChainNotification = () => {
     const toastId = toast.custom(
       () => (
         <NotificationItem
-          // title='Devnet Drop S2 is Live!'
-          description='Get a sneak peek into Testnet, Donut, build universal apps and win prizes!'
-          position='bottom-left'
+          description='Explore, Deploy, Test & Win up to $500 in prizes!'
           onClick={() => {
             localStorage.setItem('testnetNotificationShown', 'true');
             window.open('https://t.me/+dHOCilvxNR9jZjM9', '_blank');
@@ -105,10 +104,10 @@ const NotificationItem: FC<NotificationProps> = ({
           <Image
             src={
               require(
-                `@site/static/assets/website/notifications/testnet-donut.webp`
+                `@site/static/assets/website/notifications/testnet-donut-img.png`
               ).default
             }
-            srcSet={`${require(`@site/static/assets/website/notifications/testnet-donut@2x.webp`).default} 2x, ${require(`@site/static/assets/website/notifications/testnet-donut@3x.webp`).default} 3x`}
+            srcSet={`${require(`@site/static/assets/website/notifications/testnet-donut-img@2x.png`).default} 2x, ${require(`@site/static/assets/website/notifications/testnet-donut-img@3x.png`).default} 3x`}
             alt='Push Testnet'
             loading='lazy'
           />
@@ -122,10 +121,10 @@ const NotificationItem: FC<NotificationProps> = ({
           margin='0 auto'
           border='1.5px solid #fff'
           hoverBorder='1.5px solid #fff'
-          fontFamily='N27'
+          fontFamily='DM Sans !important'
           width='100%'
         >
-          Claim Closed Beta Pass
+          Enter Donut Contest
         </Button>
       </TextContainer>
     </NotificationContainer>
@@ -135,7 +134,7 @@ const NotificationItem: FC<NotificationProps> = ({
 // Notification Container
 const NotificationContainer = styled.div`
   position: relative;
-  background-color: #1b43c8;
+  background-color: #f6f;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -144,7 +143,7 @@ const NotificationContainer = styled.div`
   width: 320px;
   cursor: pointer;
   box-sizing: border-box;
-  font-family: N27;
+  font-family: DM Sans !important;
   overflow: hidden;
 
   @media (max-width: 425px) {
@@ -152,7 +151,7 @@ const NotificationContainer = styled.div`
   }
 
   img {
-    width: 230px;
+    width: 209px;
     height: 132px;
     margin: 0 auto;
   }
@@ -180,7 +179,7 @@ const TextContainer = styled.div`
 const NotificationTitle = styled.span`
   color: #fff;
   text-align: center;
-  font-family: N27;
+  font-family: DM Sans !important;
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
@@ -192,7 +191,7 @@ const NotificationTitle = styled.span`
 const NotificationDescription = styled.span`
   color: #fff;
   text-align: center;
-  font-family: N27;
+  font-family: DM Sans !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

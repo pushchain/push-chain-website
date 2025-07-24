@@ -4,12 +4,43 @@ import Spinner, {
 } from '@site/src/components/reusables/spinners/SpinnerUnit';
 import GLOBALS from '@site/src/config/globals';
 import React from 'react';
+import { LiveEditor, LiveProvider, LiveError, LivePreview } from 'react-live';
 
 // This function returns a promise that resolves to the library,
 // ensuring it's only imported on the client side.
 function loadClientSideLibraryEthers(constantName) {
   return typeof window !== 'undefined'
     ? require('ethers')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibrarySolana(constantName) {
+  return typeof window !== 'undefined'
+    ? require('@solana/web3.js')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryViem(constantName) {
+  return typeof window !== 'undefined'
+    ? require('viem')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryViemAccounts(constantName) {
+  return typeof window !== 'undefined'
+    ? require('viem/accounts')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryViemChains(constantName) {
+  return typeof window !== 'undefined'
+    ? require('viem/chains')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryViemUtils(constantName) {
+  return typeof window !== 'undefined'
+    ? require('viem/utils')[constantName]
     : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
 }
 
@@ -23,6 +54,24 @@ function loadClientSideLibraryPushProtocolUIWeb(constantName) {
   return typeof window !== 'undefined'
     ? require('@pushprotocol/uiweb')[constantName]
     : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryPushChainUIKit(constantName) {
+  return typeof window !== 'undefined'
+    ? require('@pushchain/ui-kit')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryPushChainCore(constantName) {
+  return typeof window !== 'undefined'
+    ? require('@pushchain/core')[constantName]
+    : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideReactIconsBS(iconName) {
+  return typeof window !== 'undefined'
+    ? require('react-icons/bs')[iconName]
+    : () => null;
 }
 
 // For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
@@ -50,10 +99,39 @@ function createBrowserOnlyLibComponentUIWeb(componentExportName) {
 const ReactLiveScope = {
   React,
   ...React,
+  LiveEditor,
+  LiveProvider,
+  LiveError,
+  LivePreview,
+  BrowserOnly,
+  Spinner,
+  SPINNER_TYPE,
+  GLOBALS,
   // Asynchronously import ethers and PushAPI only on the client side
   ethers: loadClientSideLibraryEthers('ethers'),
+
+  Keypair: loadClientSideLibrarySolana('Keypair'),
+  PublicKey: loadClientSideLibrarySolana('PublicKey'),
+
+  createWalletClient: loadClientSideLibraryViem('createWalletClient'),
+  createPublicClient: loadClientSideLibraryViem('createPublicClient'),
+  http: loadClientSideLibraryViem('http'),
+  parseTransaction: loadClientSideLibraryViem('parseTransaction'),
+  TypedData: loadClientSideLibraryViem('TypedData'),
+  TypedDataDomain: loadClientSideLibraryViem('TypedDataDomain'),
+  defineChain: loadClientSideLibraryViem('defineChain'),
+  webSocket: loadClientSideLibraryViem('webSocket'),
+
+  privateKeyToAccount: loadClientSideLibraryViemAccounts('privateKeyToAccount'),
+  generatePrivateKey: loadClientSideLibraryViemAccounts('generatePrivateKey'),
+
+  sepolia: loadClientSideLibraryViemChains('sepolia'),
+
+  hexToBytes: loadClientSideLibraryViemUtils('hexToBytes'),
+  bytesToHex: loadClientSideLibraryViemUtils('bytesToHex'),
+
   PushAPI: loadClientSideLibraryPushProtocolRestAPI('PushAPI'),
-  CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
+  // CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
   MODAL_POSITION_TYPE: loadClientSideLibraryPushProtocolUIWeb(
     'MODAL_POSITION_TYPE'
   ),
@@ -73,11 +151,25 @@ const ReactLiveScope = {
   ChatPreviewList: createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),
   darkChatTheme: createBrowserOnlyLibComponentUIWeb('darkChatTheme'),
   lightChatTheme: createBrowserOnlyLibComponentUIWeb('lightChatTheme'),
-  NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
+  // NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
   SubscriptionManager: createBrowserOnlyLibComponentUIWeb(
     'SubscriptionManager'
   ),
   WidgetUIProvider: createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),
+  PushUniversalWalletProvider: loadClientSideLibraryPushChainUIKit(
+    'PushUniversalWalletProvider'
+  ),
+  PushUniversalAccountButton: loadClientSideLibraryPushChainUIKit(
+    'PushUniversalAccountButton'
+  ),
+  usePushWalletContext: loadClientSideLibraryPushChainUIKit(
+    'usePushWalletContext'
+  ),
+  usePushChainClient: loadClientSideLibraryPushChainUIKit('usePushChainClient'),
+  usePushChain: loadClientSideLibraryPushChainUIKit('usePushChain'),
+  PushUI: loadClientSideLibraryPushChainUIKit('PushUI'),
+  PushChain: loadClientSideLibraryPushChainCore('PushChain'),
+  BsBoxArrowUpRight: loadClientSideReactIconsBS('BsBoxArrowUpRight'),
 };
 
 export default ReactLiveScope;
