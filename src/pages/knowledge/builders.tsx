@@ -7,26 +7,33 @@ import Layout from '@theme/Layout';
 import React from 'react';
 
 // Internal Component
-import ChainKnowledgeBase from '../../components/Chain/ChainKnowledgeBase/ChainKnowledgeBase';
+import ChainKnowledgeBaseArticle from '../../components/Chain/ChainKnowledgeBaseArticle/ChainKnowledgeBaseArticle';
 
 // Internal Configs
+import { buildersContent } from '@site/src/components/Chain/content/builders';
 import { PageMeta } from '@site/src/config/pageMeta';
 
-function PushChainKnowledgeBase() {
+function Page() {
   return (
     <Layout
-      title={PageMeta.KNOWLEDGE.pageTitle}
-      description={PageMeta.KNOWLEDGE.pageDescription}
+      title={PageMeta.PUSHBUILDERS.pageTitle}
+      description={PageMeta.PUSHBUILDERS.pageDescription}
       showNavbar={'chain'}
     >
       <Head>
         {/* <!-- Update Facebook Meta Tags --> */}
-        <meta property='og:url' content='https://push.org/chain/knowledge' />
+        <meta
+          property='og:url'
+          content='https://push.org/chain/knowledge/push101'
+        />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Knowledge Base | Push Chain' />
+        <meta
+          property='og:title'
+          content='Builders | Knowledge Base | Push Chain'
+        />
         <meta
           name='og:description'
-          content='Discover everything for tutorials to code base to what makes Push Chain tick at the knowledge hub.'
+          content='Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!'
         />
         <meta
           property='og:image'
@@ -40,10 +47,13 @@ function PushChainKnowledgeBase() {
         {/* <!-- Update Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@PushChain' />
-        <meta name='twitter:title' content='Knowledge Base | Push Chain' />
+        <meta
+          name='twitter:title'
+          content='Builders | Knowledge Base | Push Chain'
+        />
         <meta
           name='twitter:description'
-          content='Discover everything for tutorials to code base to what makes Push Chain tick at the knowledge hub.'
+          content='Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!'
         />
         <meta
           name='twitter:image'
@@ -70,9 +80,9 @@ function PushChainKnowledgeBase() {
         </script>
       </Head>
 
-      <ChainKnowledgeBase />
+      <ChainKnowledgeBaseArticle item={buildersContent} />
     </Layout>
   );
 }
 
-export default PushChainKnowledgeBase;
+export default Page;

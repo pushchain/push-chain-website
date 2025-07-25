@@ -1,5 +1,6 @@
 export const push101Content = {
-  title: 'Push 101',
+  title: 'Push Chain Basics',
+  divider: false,
   content: [
     {
       type: 'indexlist',
@@ -8,12 +9,9 @@ export const push101Content = {
           type: 'text',
           value: `## Why Push Chain?
 
-    Push Chain addresses specific gaps in the existing blockchains, such as interoperability, state access across chains, programmable solvers and wallet abstraction resulting in a **full stack interop**. While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.<p />
-
-    While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.<p />
-
-    Push Chain’s focus is on being a **shared state chain** for universal applications acting as a unifying layer where all chains can come together and use PC as universal hub or do settlement between them.<p />
-PC offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet/User.** And is suitable for **Any App.**`,
+          Push Chain is the first **true universal L1**, purpose built to enable apps to seamlessly be interactable by users of any chain.
+          
+          Write your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.`,
         },
         {
           type: 'text',
@@ -21,42 +19,49 @@ PC offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet
 
     Push Chain is a Proof-of-Stake (PoS) L1 blockchain that is designed to eliminate fragmentation across all chains.<p />
 
-    It is a **shared state L1** blockchain for **Universal (Interoperable) Apps** across chains. Push Chain enables txs from any chain (Eth, Solana, EVM, or non-EVM) enabling apps from any chain to be accessed by the users of any chain (**polymarket** from any chain, **pump.fun** from any chain, etc).`,
+    It is a **shared state L1** blockchain for **Universal (Interoperable) Apps** across chains. Push Chain enables transactions from any chain (Eth, Solana, EVM, or non-EVM), enabling apps from any chain to be accessed by the users of any chain (**polymarket** from any chain, **pump.fun** from any chain, etc).`,
         },
         {
           type: 'text',
           value: `## Innovations of Push Chain
 
-    Push Chain introduces some groundbreaking innovations such as:<p />
+    Push Chain introduces several groundbreaking innovations such as:<p />
 
-    **Fee and Wallet abstraction** - allowing wallets/users of any chain to interact natively while being on the chain of their choice.<p />
+    **True Universal L1** - Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.<p />
 
-    **Universal Wallet** - ensuring user can login via social or email and still have non-custodial wallets created for them for all chains (Ethereum, Bitcoin, Solana, etc).<p />
+    **Universal Fee Abstraction** - Allows users to interact natively while being on the chain of their choice and using any tokens they want.<p />
 
-    **Shared State** - enabling developers to read the state of any wallet or smart contract of any other blockchain via smart contract on Push Chain.<p />
+    **Wallet Abstraction** - Support MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet to access any apps.<p />
 
-    **Programmable Solvers** - ensures that a developer can create a basic path for cross chain actions (write actions) based on the shared state.<p />
+    **Single transaction, no matter the chain** - users can interact with any app on Push Chain with a single transaction. No matter how they choose to interact with the app, they will only ever need to sign a single transaction.<p />
 
-    **Universal Smart Contracts** - giving developers ability to use shared state and generalized solvers for read and write action in chain agnostic fashion. And enables users to use fees and wallet abstraction to access any app or any chain without any hassle.<p />
+    **Universal Smart Contracts** - Smart contracts are universal and will work instantly without any on-chain code changes or extra steps.<p />
 
-    Push Chain uses all these innovations to enable reading (shared state) or writing to different chains (programmable solvers), all controlled by the universal smart contract. The fee and wallet abstraction further enables a seamless, user centric approach as the learnings for a user is abstracted away no matter from what chain they chose to interact. <p/>
+    **Shared State & Programmable Solvers** - Enables develepors to read and write state of other blockchains (Roadmap).<p />
 
     This results in **fully interoperable applications** for web3. In this paradigm, instead of being a user of "Uniswap on Ethereum," "Uniswap on Polygon," or "Uniswap on Arbitrum," a person simply becomes a **user of Uniswap.**`,
+        },
+        {
+          type: 'text',
+          value: `## Curated Reads 👇`,
+          hidden: true,
         },
       ],
     },
     {
       type: 'list',
-      title: 'Curated Reads',
+      title: 'Learn why Push Chain is the future of web3',
+      mode: 'playlist',
+      divider: true,
       items: [
         {
-          slug: 'evolution-of-push',
-          image: 'evolution-of-push',
-          title: 'Evolution of Push',
+          slug: 'why-push-chain',
+          image: 'why-push-chain',
+          title: 'Why Push Chain is the Missing Layer in Web3!',
           subtitle:
-            'Push Protocol has come a long way! We’ve delivered over 140M notifications, built a community of 500K aggregate users, powered notifications for 500+ projects, and are known as the de facto leader in notifications and communications for web3.',
-          url: '/blog/evolution-of-push',
-          target: '_self',
+            'Push Protocol recently announced its governance proposal of launching Push Chain. Push Protocol envisions the creation of Push Chain which enables a shared state L1 chain designed to support truly scalable consumer applications and universal applications.',
+          url: '/blog/why-push-chain',
+          target: '_blank',
         },
         {
           slug: 'innovations-by-push-chain',
@@ -65,7 +70,7 @@ PC offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet
           subtitle:
             'Unlike traditional L1 chains, Push Chain introduces ten key innovations and optimized mechanisms to unify any chain, any user, and any app. This article will help you understand - What Innovations Push Chain brings to Web3!',
           url: '/blog/innovations-by-push-chain',
-          target: '_self',
+          target: '_blank',
         },
         {
           slug: 'another-l1',
@@ -74,16 +79,16 @@ PC offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet
           subtitle:
             'The move towards Push Chain was driven by the realisation that we had to do our bit to move the needle on interoperability, not in order to create our own fragmented ecosystem.',
           url: '/blog/another-l1',
-          target: '_self',
+          target: '_blank',
         },
         {
-          slug: 'faq-push-chain',
-          image: 'frequently-asked-questions',
-          title: 'Push Chain’s Frequently Asked Questions',
+          slug: 'evolution-of-push',
+          image: 'evolution-of-push',
+          title: 'Evolution of Push',
           subtitle:
-            'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
-          url: '/blog/faq-push-chain/',
-          target: '_self',
+            'Push Protocol has come a long way! We’ve delivered over 140M notifications, built a community of 500K aggregate users, powered notifications for 500+ projects, and are known as the de facto leader in notifications and communications for web3.',
+          url: '/blog/evolution-of-push',
+          target: '_blank',
         },
         {
           slug: 'consumer-apps-that-can-be-built-on-push-chain',
@@ -92,16 +97,16 @@ PC offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet
           subtitle:
             'Web 3 is growing at lightning speed!Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!! While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal...',
           url: '/blog/consumer-apps-that-can-be-built-on-push-chain/',
-          target: '_self',
+          target: '_blank',
         },
         {
-          slug: 'why-push-chain',
-          image: 'why-push-chain',
-          title: 'Why Push Chain?',
+          slug: 'faq-push-chain',
+          image: 'frequently-asked-questions-cover',
+          title: 'Push Chain’s Frequently Asked Questions',
           subtitle:
-            'Push Protocol recently announced its governance proposal of launching Push Chain. Push Protocol envisions the creation of Push Chain which enables a shared state L1 chain designed to support truly scalable consumer applications and universal applications.',
-          url: '/blog/why-push-chain',
-          target: '_self',
+            'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
+          url: '/blog/faq-push-chain/',
+          target: '_blank',
         },
       ],
     },
