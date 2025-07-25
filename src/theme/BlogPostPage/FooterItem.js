@@ -191,7 +191,7 @@ const FooterItem = () => {
           others).
           <p />
           It is 100% EVM compatible, Proof of Stake (PoS) chain that allows
-          users to interact with the apps deployed on Push Chain from any chain
+          users to interact with the apps deployed on Push Chain from any chain,
           as they natively do on their own chain.
         </AboutSpan>
       </AboutSection>
