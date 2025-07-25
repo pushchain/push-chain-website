@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[3443],{956646:e=>{e.exports=JSON.parse('{"label":"Openleverage","permalink":"/push-website/pr-preview/pr-1081/blog/tags/openleverage","allTagsPath":"/push-website/pr-preview/pr-1081/blog/tags","count":2,"unlisted":false}')}}]);

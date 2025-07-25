@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[6957],{108741:e=>{e.exports=JSON.parse('{"label":"Bridges","permalink":"/push-website/pr-preview/pr-1081/blog/tags/bridges","allTagsPath":"/push-website/pr-preview/pr-1081/blog/tags","count":1,"unlisted":false}')}}]);
