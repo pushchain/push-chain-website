@@ -195,7 +195,6 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
               alignItems='flex-start'
               margin='32px 0 32px 0'
               style={{
-                minHeight: '100vh',
                 position: 'relative',
                 overflow: 'visible',
               }}
