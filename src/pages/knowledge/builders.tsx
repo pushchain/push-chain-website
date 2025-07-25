@@ -29,7 +29,7 @@ function Page() {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content='Push Chain | Knowledge Base | Push101'
+          content='Builders | Knowledge Base | Push Chain'
         />
         <meta
           name='og:description'
@@ -49,7 +49,7 @@ function Page() {
         <meta name='twitter:site' content='@PushChain' />
         <meta
           name='twitter:title'
-          content='Push Chain | Knowledge Base | Push101'
+          content='Builders | Knowledge Base | Push Chain'
         />
         <meta
           name='twitter:description'

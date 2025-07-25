@@ -80,7 +80,7 @@ export const PageMeta = {
       'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
   },
   PUSHBUILDERS: {
-    pageTitle: 'Build on Push Chain | Knowledge Base | Push Chain',
+    pageTitle: 'Builders | Knowledge Base | Push Chain',
     pageDescription:
       'Get started with building on Push Chain. Explore best practices, guides and things that can make your app go universal instantly.',
   },

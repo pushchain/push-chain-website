@@ -27,6 +27,8 @@ export const push101Content = {
 
     Push Chain introduces several groundbreaking innovations such as:<p />
 
+    **True Universal L1** - Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.<p />
+
     **Universal Fee Abstraction** - Allows users to interact natively while being on the chain of their choice and using any tokens they want.<p />
 
     **Wallet Abstraction** - Support MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet to access any apps.<p />
@@ -35,9 +37,7 @@ export const push101Content = {
 
     **Universal Smart Contracts** - Smart contracts are universal and will work instantly without any on-chain code changes or extra steps.<p />
 
-    **Shared State** - enabling developers to read the state of any wallet or smart contract of any other blockchain via smart contract on Push Chain.<p />
-
-    **Programmable Solvers** - ensures that a developer can create a basic path for cross chain actions (write actions) based on the shared state.<p />
+    **Shared State & Programmable Solvers** - Enables develepors to read and write state of other blockchains (Roadmap).<p />
 
     This results in **fully interoperable applications** for web3. In this paradigm, instead of being a user of "Uniswap on Ethereum," "Uniswap on Polygon," or "Uniswap on Arbitrum," a person simply becomes a **user of Uniswap.**`,
         },
@@ -57,7 +57,7 @@ export const push101Content = {
         {
           slug: 'why-push-chain',
           image: 'why-push-chain',
-          title: 'Why Push Chain?',
+          title: 'Why Push Chain is the Missing Layer in Web3!',
           subtitle:
             'Push Protocol recently announced its governance proposal of launching Push Chain. Push Protocol envisions the creation of Push Chain which enables a shared state L1 chain designed to support truly scalable consumer applications and universal applications.',
           url: '/blog/why-push-chain',

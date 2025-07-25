@@ -36,50 +36,58 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
 
-    // Calculate TOC height and create ScrollTrigger
+    // Calculate TOC height and check if it fits in viewport
     const tocHeight = tocRef.current?.offsetHeight || 0;
     const parentHeight = contentRef.current?.offsetHeight || 0;
+    const viewportHeight = window.innerHeight;
     const endOffset = tocHeight; // TOC height + top offset
 
-    // Create ScrollTrigger for TOC sticky behavior
-    const scrollTrigger = ScrollTrigger.create({
-      trigger: contentRef.current,
-      start: 'top top+=24',
-      end: `bottom top+=${endOffset}`,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const direction = self.direction;
+    // Only activate GSAP if TOC fits in viewport
+    const tocFitsInViewport = tocHeight < viewportHeight - 256; // 256px for top/bottom margins
 
-        if (progress > 0 && progress < 1) {
-          // Parent is in viewport - make TOC sticky
-          gsap.set(tocRef.current, {
-            position: 'fixed',
-            top: '24px',
-            zIndex: 100,
-          });
-        } else if (progress >= 1 && direction === 1) {
-          // Reached end of parent - return to normal position
-          gsap.set(tocRef.current, {
-            position: 'relative',
-            top: 'auto',
-            zIndex: 'auto',
-          });
-          gsap.set(tocRef.current.parentElement, {
-            alignSelf: 'flex-end',
-          });
-        } else if (progress <= 0 && direction === -1) {
-          // Scrolled above parent - return to normal position
-          gsap.set(tocRef.current, {
-            position: 'relative',
-            top: 'auto',
-            zIndex: 'auto',
-          });
-          gsap.set(tocRef.current.parentElement, {
-            alignSelf: 'flex-start',
-          });
-        }
-      },
-    });
+    let scrollTrigger = null;
+
+    if (tocFitsInViewport) {
+      // Create ScrollTrigger for TOC sticky behavior
+      scrollTrigger = ScrollTrigger.create({
+        trigger: contentRef.current,
+        start: 'top top+=24',
+        end: `bottom top+=${endOffset}`,
+        onUpdate: (self) => {
+          const progress = self.progress;
+          const direction = self.direction;
+
+          if (progress > 0 && progress < 1) {
+            // Parent is in viewport - make TOC sticky
+            gsap.set(tocRef.current, {
+              position: 'fixed',
+              top: '24px',
+              zIndex: 100,
+            });
+          } else if (progress >= 1 && direction === 1) {
+            // Reached end of parent - return to normal position
+            gsap.set(tocRef.current, {
+              position: 'relative',
+              top: 'auto',
+              zIndex: 'auto',
+            });
+            gsap.set(tocRef.current.parentElement, {
+              alignSelf: 'flex-end',
+            });
+          } else if (progress <= 0 && direction === -1) {
+            // Scrolled above parent - return to normal position
+            gsap.set(tocRef.current, {
+              position: 'relative',
+              top: 'auto',
+              zIndex: 'auto',
+            });
+            gsap.set(tocRef.current.parentElement, {
+              alignSelf: 'flex-start',
+            });
+          }
+        },
+      });
+    }
 
     return () => {
       scrollTrigger.kill();
@@ -123,14 +131,11 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
       .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '')
       .replace(/^\d+\.\s*/, '');
 
-    return (
-      'user-content-' +
-      plain
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+$/, '')
-    );
+    return plain
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+$/, '');
   }
 
   return (
@@ -546,9 +551,14 @@ const MobileTOCWrapper = styled.div`
 
 const DesktopTOC = styled(ItemV)`
   align-self: flex-start;
-  max-height: calc(100vh - 256px);
-  overflow-y: auto;
   position: relative;
+  min-width: 300px;
+  width: 300px;
+
+  justify-content: flex-start;
+
+  max-height: 65vh;
+  overflow-y: auto;
 
   ul {
     padding: 0;

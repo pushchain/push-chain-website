@@ -62,7 +62,7 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
       justifyContent='space-between'
       href={getHref(item)}
       rel='noopener noreferrer'
-      onClick={() => openLink(item)}
+      target={item?.target ? item?.target : '_self'}
       mode={mode}
     >
       {item?.image && (
