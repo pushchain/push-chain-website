@@ -190,7 +190,10 @@ function Header() {
     };
 
     return (
-      <HeaderItem onClick={(e) => openLink(e, item.href, item.id, item.target)}>
+      <HeaderItem
+        onClick={(e) => openLink(e, item.href, item.id, item.target)}
+        className='header-item'
+      >
         {item.srcrefoff && (
           <HeaderImage
             key={index}
@@ -296,10 +299,10 @@ function Header() {
           >
             <HeaderBlurV
               position='absolute'
-              top='0'
-              right='0'
-              bottom='0'
-              left='0'
+              top='1px'
+              right='1px'
+              bottom='1px'
+              left='1px'
               overflow='hidden'
               borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
               className={'headerblur'}
@@ -423,11 +426,12 @@ function Header() {
                       </ItemH>
                       <BsChevronDown size={12} className='chevronIcon' />
                     </NavigationMenuHeader>
-
                     <NavigationMenuContent
                       className='menuContent'
                       expanded={mobileMenuMap[0]}
                     >
+                      <NavigationMenuContentItem />
+
                       {HeaderList.testnet.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -460,6 +464,8 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[1]}
                     >
+                      <NavigationMenuContentItem />
+
                       <HeaderDiv>
                         <HeaderSection>
                           {HeaderList.developers
@@ -499,6 +505,8 @@ function Header() {
                       onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
+                      <NavigationMenuContentItem />
+
                       {HeaderList.community.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -530,6 +538,8 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[3]}
                     >
+                      <NavigationMenuContentItem />
+
                       {HeaderList.resources.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -676,35 +686,6 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-const GlowCircle = styled.div`
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(179, 72, 236, 0.2);
-  filter: blur(125px);
-  pointer-events: none;
-  z-index: 0;
-
-  // Mobile (default)
-  width: 395px;
-  height: 392px;
-  left: -12px;
-  top: 102px;
-
-  // Tablet
-  @media (min-width: 768px) {
-    width: 543px;
-    height: 538px;
-    left: 238px;
-    top: 29px;
-  }
-
-  // Desktop
-  @media (min-width: 1024px) {
-    left: 446px;
-    top: 29px;
-  }
-`;
-
 const LanguageItem = styled.div`
   list-style: none;
   margin: 0px 16px 0px 0px;
@@ -718,6 +699,13 @@ const LanguageItem = styled.div`
 `;
 
 const HeaderItemH = styled(ItemH)`
+  background: linear-gradient(
+    to top right,
+    rgba(70, 40, 92),
+    rgba(87, 66, 103)
+  );
+  border-radius: 24px;
+
   margin: ${({ showAlertBar }) =>
     `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
       GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT
@@ -791,8 +779,7 @@ const HeaderItemH = styled(ItemH)`
 
 const HeaderBlurV = styled(ItemV)`
   border-radius: 24px;
-  border: 1px solid rgba(112, 90, 208, 0.4);
-  background: rgba(0, 0, 0, 0.5);
+  background: #000;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
@@ -1193,8 +1180,28 @@ const LanguageMenuHeader = styled.div`
   }
 `;
 
+const NavigationMenuContentItem = styled.div`
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 1px;
+  border-radius: 24px;
+  background: #000;
+  background-blend-mode: lighten;
+  box-shadow:
+    2.788px 2.598px 6px 0px rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 3px 0px rgba(255, 255, 255, 0.15) inset;
+  z-index: -2;
+`;
+
 const NavigationMenuContent = styled.ul`
   list-style: none;
+  .header-item {
+    &:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+      margin-top: 16px;
+    }
+  }
 
   font-family: 'Strawford', 'Manrope', sans-serif;
   display: none;
@@ -1207,19 +1214,15 @@ const NavigationMenuContent = styled.ul`
   z-index: 1;
   border-radius: 24px;
   padding: 12px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(112, 90, 208, 0.4);
+
   background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(100, 42, 124, 0.35) 100%
+    to top left,
+    rgba(73, 40, 98),
+    rgba(255, 203, 255, 0.5)
   );
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   min-width: 360px;
 
   @media ${device.laptopM} {
@@ -1344,18 +1347,13 @@ const HeaderItem = styled.div`
   cursor: pointer;
   border: 1px solid transparent;
 
-  &:not(:first-of-type) {
-    margin-top: 16px;
-  }
-
   @media (min-width: 1025px) {
-    // min-width: 450px;
     width: auto;
   }
 
   &:hover {
     border-radius: var(--radius-xs, 12px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
     background: rgba(0, 0, 0, 0.5);
 
     h2 {

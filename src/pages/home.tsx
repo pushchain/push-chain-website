@@ -11,25 +11,16 @@ import React, { useContext, useState } from 'react';
 // External Components
 import Spline from '@splinetool/react-spline';
 import { useTranslation } from 'react-i18next';
-import {
-  BsArrowRight,
-  BsArrowUpRight,
-  BsDiscord,
-  BsFileX,
-} from 'react-icons/bs';
+import { BsArrowRight, BsDiscord } from 'react-icons/bs';
 import styled from 'styled-components';
 
 // Internal Components
 import FeaturedList from '@site/src/components/Featured/FeaturedList';
 import Glassy from '@site/src/components/Glassy/Glassy';
-// import AnalyticsStats from '@site/src/components/Home/AnalyticsStats';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
-import ImageHolder from '@site/src/components/ImageHolder';
-import { MailingSignup } from '@site/src/components/MailingSignup/MailingSignup';
 import NewMarqueeAnimation from '@site/src/components/NewMarqueeAnimation';
 import Accordion from '@site/src/components/Accordion';
-import InfoBar from '@site/src/components/InfoBar';
 import { General, Notifs } from '@site/src/config/HomepageFAQ';
 import {
   A,
@@ -49,14 +40,12 @@ import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 // Import Assets
-import StarColoredIcon from '@site/static/assets/website/illustrations/starColoredIcon.svg';
-import StarIcon from '@site/static/assets/website/illustrations/starIcon.svg';
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
 import BgImage from '@site/static/assets/website/home/faq/footerbg@3x.png';
+import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
 
 // Internal Configs
 import { NotifFeaturesList } from '@site/src/config/HomeNotifFeaturesList';
-import { OthersFeaturesList } from '@site/src/config/HomeOthersFeaturesList';
 import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
@@ -64,6 +53,7 @@ import { StatsSection } from '../components/Home/StatsSection';
 import { InvList } from '@site/src/config/HomeInvestorList';
 import { FeaturedSection } from '../components/Home/FeaturedSection';
 import AccountContext from '../context/accountContext';
+import { structure } from '@site/src/config/globals';
 
 export default function Home() {
   // Internationalization
@@ -161,11 +151,6 @@ export default function Home() {
           <HeroContent alignSelf='center' overflow='visible'>
             <HeroPrimary flex='initial' justifyContent='flex-start'>
               <HeroItem alignItems='center'>
-                {/* <InfoBar
-                  text='Push Chain Devnet Drop S2 is Live!'
-                  url={alertLink}
-                /> */}
-
                 <HeroBody>
                   <H1
                     zIndex='2'
@@ -190,7 +175,7 @@ export default function Home() {
                     {t('home.hero.description')}
                   </Span>
 
-                  <HeroCTA gap='18px'>
+                  <HeroCTA gap='18px' flex='0'>
                     <A
                       href={useBaseUrl('/docs')}
                       title={t('home.hero.alt-start-button')}
@@ -212,7 +197,6 @@ export default function Home() {
                       href='https://portal.push.org'
                       target='_blank'
                       title={t('home.hero.alt-start-button')}
-                      borderRadius='16px'
                       fontSize='1.125rem'
                       fontWeight='600'
                       letterSpacing='-0.03em'
@@ -647,24 +631,24 @@ const GlowCircle = styled.div`
   pointer-events: none;
   z-index: 999999;
 
-  width: 543px;
-  height: 538px;
-  left: 35%;
-  top: 29px;
+  // width: 543px;
+  // height: 538px;
+  // left: 35%;
+  // top: 29px;
 
-  @media ${device.tablet} {
-    width: 543px;
-    height: 538px;
-    left: 238px;
-    top: 29px;
-  }
+  // @media ${device.tablet} {
+  //   width: 543px;
+  //   height: 538px;
+  //   left: 238px;
+  //   top: 29px;
+  // }
 
-  @media ${device.mobileL} {
-    width: 395px;
-    height: 392px;
-    left: -12px;
-    top: 102px;
-  }
+  // @media ${device.mobileL} {
+  //   width: 395px;
+  //   height: 392px;
+  //   left: -12px;
+  //   top: 102px;
+  // }
 `;
 
 const FeaturedGlowCircle = styled.div`
@@ -744,41 +728,66 @@ const HeroSection = styled(Section)`
 
 const HeroContent = styled(Content)`
   align-self: stretch;
-  // padding-top: 250px;
-  // padding-bottom: 250px;
+  padding-right: 0;
+  padding-left: 0;
 
   @media ${device.laptop} {
-    padding-top: 200px;
     padding-bottom: 40px;
+    padding-right: ${structure.PADDING.TABLET.RIGHT}px;
+    padding-left: ${structure.PADDING.TABLET.LEFT}px;
   }
 
   @media ${device.mobileL} {
     padding-top: 112px;
     padding-bottom: 40px;
+    padding-right: ${structure.PADDING.MOBILE.RIGHT}px;
+    padding-left: ${structure.PADDING.MOBILE.LEFT}px;
   }
 `;
 
-const HeroPrimary = styled(ItemH)``;
+const HeroPrimary = styled.div`
+  background-image: url(${HeroBG});
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1440px;
+  height: 850px;
+
+  @media ${device.laptopL} {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+`;
 
 const HeroItem = styled(ItemV)`
   z-index: 2;
   max-width: 970px;
   margin: 0 auto;
+  height: 100%;
+
+  @media ${device.laptopL} {
+  }
 
   @media ${device.laptop} {
     max-width: initial;
     align-items: center;
-    margin: 0 15%;
+    margin: 0px 15%;
   }
 
   @media ${device.tablet} {
-    margin: 0 auto;
+    margin: 114px auto;
+  }
+
+  @media ${device.mobileL} {
+    margin: 0px auto;
   }
 `;
 
 const HeroBody = styled(ItemV)`
-  margin: 114px 0px;
+  margin: auto 0px;
   text-align: left;
+  align-self: center;
 
   h1,
   span {
@@ -787,7 +796,7 @@ const HeroBody = styled(ItemV)`
   }
 
   @media ${device.laptop} {
-    margin: 14px 0px;
+    // margin: 69px 0px;
     text-align: center;
 
     & > Span {
@@ -796,7 +805,7 @@ const HeroBody = styled(ItemV)`
   }
 
   @media ${device.mobileL} {
-    margin: 69px 0px;
+    // margin: 69px 0px;
     h1,
     span {
       white-space: normal;
@@ -821,6 +830,8 @@ const HeroCTA = styled(ItemH)`
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 58px;
+    max-height: 58px;
   }
 
   @media ${device.laptop} {
@@ -840,55 +851,34 @@ const HeroCTA = styled(ItemH)`
   }
 `;
 
-const HeroAnalytics = styled(ItemH)`
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: -70px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 50px;
-    width: 40%;
-    border-radius: 0 0 150px 150px;
-    background-color: #c336e4;
-    opacity: 0.35;
-    filter: blur(80px);
-    z-index: -1;
-  }
-
-  &:after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(202, 55, 237, 0) 18%,
-      #ca37ed 50%,
-      rgba(202, 55, 237, 0) 82%
-    );
-  }
-
-  margin: 0 auto;
-
-  @media ${device.laptop} {
-    margin: 40px 0 0px 0;
-    flex: initial;
-    position: relative;
-    bottom: auto;
-  }
-`;
-
 const PortalA = styled(A)`
+  position: relative;
+  padding: 16px 32px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1rem;
+  border-radius: 16px;
+
+  border: 1px solid rgba(171, 70, 248, 0.4);
   background: rgba(0, 0, 0, 0.1);
   background-blend-mode: lighten;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(100px);
-  border: 1px solid rgba(112, 90, 208, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  color: white;
+  z-index: 2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 `;
 
 /* Home Page Sections */
@@ -900,12 +890,6 @@ const GridSection = styled(Section)``;
 const GridContent = styled(Content)`
   gap: 24px;
 `;
-
-const ChatSection = styled(Section)``;
-
-const OtherFeaturesSection = styled(Section)``;
-
-const TokenomicsSection = styled(Section)``;
 
 const BottomSection = styled(Section)`
   padding: 200px 0;
