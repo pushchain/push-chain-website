@@ -289,11 +289,11 @@ export default function Home() {
         </GridSection>
 
         {/* SHOWCASE SECTION */}
-        <ShowcaseSection id='showcase'>
+        {/* <ShowcaseSection id='showcase'>
           <Content alignSelf='center'>
             <ShowcasePartners />
           </Content>
-        </ShowcaseSection>
+        </ShowcaseSection> */}
 
         <Section>
           <StatsContent>
@@ -879,57 +879,6 @@ const FAQSection = styled(Section)``;
 
 const StatsContent = styled(Content)``;
 
-const BgSection = styled(Section)`
-  &:after {
-    content: '';
-    position: absolute;
-    height: 500px;
-    width: 500px;
-    top: 25px;
-    background: radial-gradient(
-      98.72% 98.72% at 50% 1.28%,
-      rgba(206, 56, 231, 0.43) 0%,
-      rgba(45, 20, 148, 0.26) 51.5%
-    );
-    filter: blur(95.11041259765625px);
-    border-radius: 531.848px;
-    margin: auto auto;
-
-    @media ${device.mobileL} {
-      height: 300px;
-      width: 300px;
-    }
-  }
-`;
-
-const TokenItem = styled.div`
-  width: 100%;
-  padding: 24px 12px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-  color: #fff;
-  font-family: 'DM Sans, san-serif';
-  font-size: 19px;
-  font-weight: 400;
-  line-height: 130%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  letter-spacing: normal;
-
-  @media ${device.mobileL} {
-    font-size: 17px;
-  }
-`;
-
-const TokenImage = styled(Image)`
-  object-fit: contain;
-
-  @media ${device.mobileL} {
-    margin-top: 32px;
-  }
-`;
-
 const FeaturedInSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -1175,6 +1124,8 @@ const H1Text = styled(H1)`
 `;
 
 const GridBottomSection = styled(ItemH)`
+  margin-top: 75px;
+
   a {
     display: flex;
     justify-content: center;

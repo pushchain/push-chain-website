@@ -338,8 +338,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/programmable-solvers',
-          // videosrc: 'chain/wallet-abstraction-video',
-          // videowebm: true,
+          videosrc: 'chain/programmable-solvers-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
