@@ -3,7 +3,6 @@
 /* eslint-disable */
 import { device } from '@site/src/config/globals';
 import { A, H2, Span } from '@site/src/css/SharedStyling';
-import React from 'react';
 import { TbArrowRight } from 'react-icons/tb';
 import styled from 'styled-components';
 
@@ -91,8 +90,8 @@ const HeroBG = styled.div`
   background-image: url(${require('@site/static/assets/website/hero/hero-image@3x.webp')
     .default});
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position: center top;
+  background-size: contain;
+  background-position: calc(50% + 30px) center;
 
   @media ${device.tablet} {
     background: none;
@@ -223,6 +222,10 @@ const LearnMoreLink = styled(A)`
   gap: 12px;
   margin: 16px 0 0 0;
   background: transparent;
+
+  &:hover {
+    text-decoration: underline;
+  }
 
   .start-svg {
     color: #e163ff;

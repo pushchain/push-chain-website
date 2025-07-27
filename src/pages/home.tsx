@@ -796,7 +796,6 @@ const HeroBody = styled(ItemV)`
   }
 
   @media ${device.laptop} {
-    // margin: 69px 0px;
     text-align: center;
 
     & > Span {
@@ -805,7 +804,6 @@ const HeroBody = styled(ItemV)`
   }
 
   @media ${device.mobileL} {
-    // margin: 69px 0px;
     h1,
     span {
       white-space: normal;
