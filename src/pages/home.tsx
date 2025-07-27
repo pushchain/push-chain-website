@@ -83,6 +83,7 @@ export default function Home() {
   const noNavbar = false;
   const alertLink = `https://portal.push.org/rewards`;
 
+
   return (
     <Layout
       title={PageMeta.HOME.pageTitle}
