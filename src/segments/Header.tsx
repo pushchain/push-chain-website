@@ -69,6 +69,7 @@ function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileMenuMap, setMobileMenuMap] = useState(defaultMobileMenuState);
   const [scrollDirection, setScrollDirection] = useState(null);
+  const [isAlertBarVisible, setIsAlertBarVisible] = useState(true);
   const location = useLocation();
   const baseURL = useSiteBaseUrl() || '';
   // const [isAlertVisible, setIsAlertVisible] = useState(true);
@@ -150,6 +151,28 @@ function Header() {
       window.removeEventListener('scroll', updateScrollDirection); // clean up
     };
   }, []);
+
+  useEffect(() => {
+    const checkAlertBarVisibility = () => {
+      if (!showAlertBar) {
+        setIsAlertBarVisible(false);
+        return;
+      }
+
+      const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+      setIsAlertBarVisible(scrollY < 80);
+    };
+
+    checkAlertBarVisibility();
+
+    window.addEventListener('scroll', checkAlertBarVisibility, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener('scroll', checkAlertBarVisibility);
+    };
+  }, [showAlertBar]);
 
   const HeaderSpace = ({ item, index }) => {
     const openLink = async (e, href, id, target) => {
@@ -295,7 +318,7 @@ function Header() {
             alignSelf='stretch'
             padding={GLOBALS.ADJUSTMENTS.PADDING.SMALL}
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
-            showAlertBar={showAlertBar}
+            showAlertBar={isAlertBarVisible}
           >
             <HeaderBlurV
               position='absolute'
@@ -311,7 +334,7 @@ function Header() {
             <MenuTop
               flex='initial'
               showMobileMenu={showMobileMenu}
-              showAlertBar={showAlertBar}
+              showAlertBar={isAlertBarVisible}
             >
               <PushLogoBlackContainer className='headerlogo' flex='initial'>
                 <LinkTo to={useBaseUrl('/')} aria-label='Push'>
@@ -747,35 +770,6 @@ const HeaderItemH = styled(ItemH)`
     background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
   }
 `;
-
-// // V2 Designs
-// const HeaderItemH = styled(ItemH)`
-//   margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT}px`};
-//   color: ${GLOBALS.COLORS.FONT_LIGHT};
-//   height: ${GLOBALS.HEADER.HEIGHT}px;
-//   padding: ${`${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.LEFT}px`};
-//   flex-direction: row;
-//   flex-wrap: nowrap;
-
-//   @media ${device.laptopM} {
-//     margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT}px`};
-//     flex-direction: column;
-//     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.LEFT}px`};
-//     height: fit-content;
-//   }
-
-//   @media ${device.mobileL} {
-//     margin: ${`${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT}px`};
-//     flex-direction: column;
-//     padding: ${`${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.LEFT}px`};
-//     box-sizing: border-box;
-//   }
-
-//   &.light {
-//     color: ${GLOBALS.COLORS.FONT_DARK};
-//     background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
-//   }
-// `;
 
 const HeaderBlurV = styled(ItemV)`
   border-radius: 24px;
