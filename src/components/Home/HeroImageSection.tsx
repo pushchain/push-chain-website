@@ -219,7 +219,7 @@ const LearnMoreLink = styled(A)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
+  gap: 8px;
   margin: 16px 0 0 0;
   background: transparent;
 
@@ -229,7 +229,7 @@ const LearnMoreLink = styled(A)`
 
   .start-svg {
     color: #e163ff;
-    margin: 0px 0 0 8px;
+    margin: 0;
   }
 
   @media ${device.laptopM} {

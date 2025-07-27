@@ -22,7 +22,7 @@ export const StatsSection = () => {
           Interoperability
         </H2>
 
-        <Span>
+        <Span className='regular-text'>
           Optimized for performance. <br /> High TPS, ultra-low gas, and
           sub-second finality for real-time app execution.
         </Span>
@@ -56,8 +56,8 @@ const GlowCircle = styled.div`
   pointer-events: none;
   z-index: 999999;
 
-  width: 579px;
-  height: 579px;
+  width: 529px;
+  height: 529px;
   left: 346px;
   top: 159px;
 
@@ -81,7 +81,7 @@ const StatsWrapper = styled.div`
   background-image: url(${StatsBg});
   background-repeat: no-repeat;
   background-position: center -60%;
-  background-size: cover;
+  background-size: contain;
   padding-bottom: 200px;
   margin-top: 100px;
 
@@ -115,8 +115,16 @@ const TextSection = styled(ItemH)`
     letter-spacing: -0.96px;
   }
 
-  span {
+  .regular-text {
     max-width: 400px;
+
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.4px;
   }
 
   @media ${device.tablet} {
@@ -182,4 +190,11 @@ const StatsItem = styled.div`
 
 const ColoredText = styled.span`
   color: #d548ec;
+  leading-trim: both;
+  text-edge: cap;
+  font-size: 3rem
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.96px;
 `;

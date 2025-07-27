@@ -21,7 +21,7 @@ import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
 import NewMarqueeAnimation from '@site/src/components/NewMarqueeAnimation';
 import Accordion from '@site/src/components/Accordion';
-import { General, Notifs } from '@site/src/config/HomepageFAQ';
+import { General } from '@site/src/config/ChainFAQconfig';
 import {
   A,
   B,
@@ -425,10 +425,6 @@ export default function Home() {
               >
                 <AccordionGrid>
                   <Accordion items={General} />
-                </AccordionGrid>
-
-                <AccordionGrid>
-                  <Accordion items={Notifs.slice(0, 2)} firstOpen={false} />
                 </AccordionGrid>
 
                 <SlideLink

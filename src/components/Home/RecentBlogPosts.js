@@ -56,7 +56,6 @@ const RecentBlogPosts = () => {
               </ItemH>
 
               <H2
-                margin='8px 0'
                 textAlign='left'
                 color='#fff'
                 lineHeight='135%'
@@ -92,7 +91,7 @@ const BlogPostCardPrimary = styled(Button)`
   align-self: stretch;
   color: ${GLOBALS.COLORS.FONT_DARK};
   padding: 0px;
-  gap: 24px;
+  // gap: 24px;
   width: 32%;
   background: transparent;
 
@@ -126,6 +125,8 @@ const BodyItem = styled.div`
   align-items: flex-start;
   width: 100%;
   justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
 
   .date {
     color: #bbbcd0;
@@ -137,6 +138,7 @@ const BodyItem = styled.div`
   }
 
   h2 {
+    margin: 8px 0 auto 0;
     width: 100%;
     letter-spacing: normal;
     overflow: hidden;
@@ -144,7 +146,8 @@ const BodyItem = styled.div`
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     font-size: 1.75rem;
-    margin: 0 0 auto 0;
+    font-weight: 600;
+    line-height: 140%;
   }
 
   @media ${device.mobileL} {
@@ -167,10 +170,7 @@ const TextSpan = styled(Span)`
   display: -webkit-box !important;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-
-  @media ${device.mobileL} {
-    margin: 16px 0 0 0;
-  }
+  margin: 16px 0 0 0;
 `;
 
 export default RecentBlogPosts;
