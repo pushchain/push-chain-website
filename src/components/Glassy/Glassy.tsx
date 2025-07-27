@@ -226,120 +226,130 @@ const Glassy = ({ item }) => {
           />
         )}
 
-        <Header highlight={highlight} id={id}>
-          <Subheader highlight={highlight} id={id} illustration={illustration}>
-            <ItemH
-              flex='1'
-              alignSelf={illustration ? 'center' : 'flex-start'}
-              gap={icon && '8px'}
+        {header && (
+          <Header highlight={highlight} id={id}>
+            <Subheader
+              highlight={highlight}
+              id={id}
+              illustration={illustration}
             >
-              {icon && (
-                <GridImage
-                  src={
-                    require(`@site/static/assets/website/home/${icon}.webp`)
-                      .default
-                  }
-                  srcSet={`${require(`@site/static/assets/website/home/${icon}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${icon}@3x.webp`).default} 3x`}
-                  alt={t(iconalt)}
-                  title={t(icontitle)}
-                  width='16px'
-                  height='16px'
-                />
-              )}
-              <Title align={align} highlight={highlight} subheader={subheader}>
-                <H2
-                  fontSize={isTablet ? '9px' : '11px'}
-                  color='#D98AEC'
-                  fontWeight='bold'
-                  fontFamily='DM Sans'
+              <ItemH
+                flex='1'
+                alignSelf={illustration ? 'center' : 'flex-start'}
+                gap={icon && '8px'}
+              >
+                {icon && (
+                  <GridImage
+                    src={
+                      require(`@site/static/assets/website/home/${icon}.webp`)
+                        .default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/home/${icon}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${icon}@3x.webp`).default} 3x`}
+                    alt={t(iconalt)}
+                    title={t(icontitle)}
+                    width='16px'
+                    height='16px'
+                  />
+                )}
+                <Title
+                  align={align}
+                  highlight={highlight}
+                  subheader={subheader}
                 >
-                  {t(subheader)}
-                </H2>
+                  <H2
+                    fontSize={isTablet ? '9px' : '11px'}
+                    color='#D98AEC'
+                    fontWeight='bold'
+                    fontFamily='DM Sans'
+                  >
+                    {t(subheader)}
+                  </H2>
 
-                <H2Text fontFamily='DM Sans' theme={theme}>
-                  {t(title)}
-                </H2Text>
-              </Title>
+                  <H2Text fontFamily='DM Sans' theme={theme}>
+                    {t(title)}
+                  </H2Text>
+                </Title>
 
-              {highlight && <Tag item={highlight} />}
-            </ItemH>
+                {highlight && <Tag item={highlight} />}
+              </ItemH>
 
-            {illustration && (
-              <HeaderImageWrapper>
-                {item.header.illustrationvideo &&
-                  typeof window !== 'undefined' &&
-                  window.innerWidth > size.tablet && (
-                    <ReactPlayer
-                      url={
-                        require(
-                          `@site/static/assets/website/home/${item.header.illustrationvideo}.${headerIllustrationFormat}`
-                        ).default
-                      }
-                      config={{
-                        file: {
-                          attributes: {
-                            controlsList: 'nofullscreen',
+              {illustration && (
+                <HeaderImageWrapper>
+                  {item.header.illustrationvideo &&
+                    typeof window !== 'undefined' &&
+                    window.innerWidth > size.tablet && (
+                      <ReactPlayer
+                        url={
+                          require(
+                            `@site/static/assets/website/home/${item.header.illustrationvideo}.${headerIllustrationFormat}`
+                          ).default
+                        }
+                        config={{
+                          file: {
+                            attributes: {
+                              controlsList: 'nofullscreen',
+                            },
                           },
-                        },
-                      }}
-                      playing={hovered ? true : false}
-                      loop={true}
-                      muted={true}
-                      width='100%'
-                      height='100%'
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        visibility:
-                          hovered &&
-                          window.innerWidth > disableVideoAt &&
-                          item.header.illustrationvideo
-                            ? 'visible'
-                            : 'hidden',
-                      }}
-                    />
-                  )}
+                        }}
+                        playing={hovered ? true : false}
+                        loop={true}
+                        muted={true}
+                        width='100%'
+                        height='100%'
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          visibility:
+                            hovered &&
+                            window.innerWidth > disableVideoAt &&
+                            item.header.illustrationvideo
+                              ? 'visible'
+                              : 'hidden',
+                        }}
+                      />
+                    )}
 
-                <GridImage
-                  src={
-                    require(
-                      `@site/static/assets/website/home/${illustration}.webp`
-                    ).default
-                  }
-                  srcSet={`${require(`@site/static/assets/website/home/${illustration}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${illustration}@3x.webp`).default} 3x`}
-                  alt={t(iconalt)}
-                  title={t(icontitle)}
-                  width={isTablet ? '27px' : 'auto'}
-                  height={isTablet ? 'auto' : '37px'}
-                  style={{
-                    visibility:
-                      hovered &&
-                      window.innerWidth > disableVideoAt &&
-                      item.header.illustrationvideo
-                        ? 'hidden'
-                        : 'visible',
-                  }}
-                />
-              </HeaderImageWrapper>
+                  <GridImage
+                    src={
+                      require(
+                        `@site/static/assets/website/home/${illustration}.webp`
+                      ).default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/home/${illustration}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${illustration}@3x.webp`).default} 3x`}
+                    alt={t(iconalt)}
+                    title={t(icontitle)}
+                    width={isTablet ? '27px' : 'auto'}
+                    height={isTablet ? 'auto' : '37px'}
+                    style={{
+                      visibility:
+                        hovered &&
+                        window.innerWidth > disableVideoAt &&
+                        item.header.illustrationvideo
+                          ? 'hidden'
+                          : 'visible',
+                    }}
+                  />
+                </HeaderImageWrapper>
+              )}
+            </Subheader>
+
+            {/* tags */}
+            {tags && (
+              <TagItems
+                flexDirection='row'
+                alignItems='flex-start'
+                justifyContent='flex-start'
+                gap='12px'
+                margin='14px 0 0 0'
+              >
+                {tags?.map((item) => (
+                  <Tag item={item} />
+                ))}
+              </TagItems>
             )}
-          </Subheader>
-
-          {/* tags */}
-          {tags && (
-            <TagItems
-              flexDirection='row'
-              alignItems='flex-start'
-              justifyContent='flex-start'
-              gap='12px'
-              margin='14px 0 0 0'
-            >
-              {tags?.map((item) => (
-                <Tag item={item} />
-              ))}
-            </TagItems>
-          )}
-        </Header>
+          </Header>
+        )}
 
         {item.body && (
           <Body>
@@ -737,7 +747,7 @@ const Subcontainer = styled.div`
   position: relative;
   margin: 1px;
 
-  @media ${device.mobileL} {
+  @media ${device.laptop} {
     padding: ${(props) => props.mobilepadding || '24px'};
   }
 `;
@@ -906,10 +916,14 @@ const Body = styled.div`
 `;
 
 const BodyInner = styled(ItemV)`
-  gap: 20px;
+  gap: 16px;
+  align-self: normal;
+  flex-wrap: nowrap;
 
   justify-content: ${(props) =>
     props.bodyjustifycontent ? props.bodyjustifycontent : 'center'};
+  height: 100%;
+  box-sizing: border-box;
 `;
 const BodyTextItem = styled(ItemV)`
   padding: 0;
@@ -947,10 +961,14 @@ const BodyImageWrapper = styled.div`
 
   position: relative;
 
-  @media ${device.tablet} {
-    width: 80%;
+  @media ${device.laptop} {
+    width: 90%;
     height: auto;
     overflow: hidden;
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
   }
 `;
 

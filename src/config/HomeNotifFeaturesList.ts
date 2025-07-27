@@ -47,7 +47,7 @@ export const NotifFeaturesList = {
     {
       config: {
         id: 'custom-notif',
-        padding: '24px',
+        padding: '32px',
         height: '490px',
         fluid: {
           desktop: true,
