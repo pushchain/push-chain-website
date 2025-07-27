@@ -5,7 +5,7 @@ export const NotifFeaturesList = {
         id: 'native',
         padding: '32px',
         containerFlexDirection: 'column-reverse',
-        height: '100%',
+        height: '490px',
         fluid: {
           desktop: false,
           laptop: false,
@@ -19,14 +19,21 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Any Chain Transactions',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
+          type: 'image',
+          imagesrc: 'chain/any-chain',
+          videosrc: 'chain/any-chain-video',
+          videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: '0 0 auto 0',
+        },
+        {
           type: 'text',
+          texttitle: 'Any Chain Transactions',
           bodytext:
             'Push Chain supports transactions from any blockchain. Users can pay gas in any token — No need for bridging.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -41,7 +48,7 @@ export const NotifFeaturesList = {
       config: {
         id: 'custom-notif',
         padding: '24px',
-        height: '100%',
+        height: '490px',
         fluid: {
           desktop: true,
           laptop: false,
@@ -55,14 +62,10 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Wallet Abstraction',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
           type: 'text',
+          texttitle: 'Wallet Abstraction',
           bodytext:
             'Let any wallet from any chain connect, interact, and transact. Break web3 barriers by using social login or email. User get to decide on Push Chain.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -77,6 +80,17 @@ export const NotifFeaturesList = {
           hrefText: 'Learn More',
           margin: '0px 0 0 0',
           align: 'left',
+        },
+        {
+          type: 'image',
+          imagesrc: 'chain/wallet-abstraction',
+          // videosrc: 'notifs/web3-native-video',
+          // videowebm: false,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: 'auto 0 0 0',
         },
       ],
     },

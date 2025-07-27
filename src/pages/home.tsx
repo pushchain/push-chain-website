@@ -65,15 +65,6 @@ export default function Home() {
   const isTablet = useMediaQuery(device.tablet);
   const isLaptop = useMediaQuery(device.laptop);
 
-  const onClickViewMoreTeamMembers = (e) => {
-    e.preventDefault();
-    setShowMoreTeamMembers(!showMoreTeamMembers);
-  };
-
-  const noNavbar = false;
-  const alertLink = `https://portal.push.org/rewards`;
-
-
   return (
     <Layout
       title={PageMeta.HOME.pageTitle}
@@ -142,12 +133,7 @@ export default function Home() {
         <GlowCircle />
 
         {/* HERO SECTION */}
-        <HeroSection
-          id='hero'
-          // minHeight='100vh'
-          width='100%'
-          className='darkBackground'
-        >
+        <HeroSection id='hero' width='100%' className='darkBackground'>
           <HeroContent alignSelf='center' overflow='visible'>
             <HeroPrimary flex='initial' justifyContent='flex-start'>
               <HeroItem alignItems='center'>

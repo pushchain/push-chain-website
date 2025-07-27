@@ -357,80 +357,85 @@ const Glassy = ({ item }) => {
               {item.body.map((object) => {
                 // Render type "image"
                 if (object.type === 'image') {
-                  //   const videoFormat = object.videowebm ? 'webm' : 'mp4';
-                  //   return (
-                  //     <BodyImageWrapper>
-                  //       {object.videosrc && (
-                  //         <ReactPlayer
-                  //           url={
-                  //             require(
-                  //               `@site/static/assets/website/home/${object.videosrc}.${videoFormat}`
-                  //             ).default
-                  //           }
-                  //           config={{
-                  //             file: {
-                  //               attributes: {
-                  //                 controlsList: 'nofullscreen',
-                  //               },
-                  //             },
-                  //           }}
-                  //           playing={hovered ? true : false}
-                  //           loop={true}
-                  //           muted={true}
-                  //           width='100%'
-                  //           height='100%'
-                  //           style={{
-                  //             position: 'absolute',
-                  //             top: 0,
-                  //             left: 0,
-                  //             visibility:
-                  //               hovered &&
-                  //               window.innerWidth > disableVideoAt &&
-                  //               object.videosrc
-                  //                 ? 'visible'
-                  //                 : 'hidden',
-                  //           }}
-                  //         />
-                  //       )}
-                  //       <BodyImage
-                  //         src={
-                  //           require(
-                  //             `@site/static/assets/website/home/${object.imagesrc}.webp`
-                  //           ).default
-                  //         }
-                  //         srcSet={`${require(`@site/static/assets/website/home/${object.imagesrc}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${object.imagesrc}@3x.webp`).default} 3x`}
-                  //         alt={t(object.imagealt)}
-                  //         title={t(object.imagetitle)}
-                  //         style={{
-                  //           visibility:
-                  //             hovered &&
-                  //             window.innerWidth > disableVideoAt &&
-                  //             object.videosrc
-                  //               ? 'hidden'
-                  //               : 'visible',
-                  //         }}
-                  //         type={object.type}
-                  //       />
-                  //     </BodyImageWrapper>
-                  //   );
-                  // }
-                  // // Render type "title"
-                  // if (object.type === 'title') {
-                  //   return (
-                  //     <ItemV
-                  //       padding='0px 0px 0px 0px'
-                  //       flex='initial'
-                  //       alignSelf={
-                  //         object.align === 'left'
-                  //           ? 'flex-start'
-                  //           : object.align === 'right'
-                  //             ? 'flex-end'
-                  //             : 'center'
-                  //       }
-                  //     >
-                  //       <SubscribeText>{t(object.titletext)}</SubscribeText>
-                  //     </ItemV>
-                  //   );
+                  const videoFormat = object.videowebm ? 'webm' : 'mp4';
+                  return (
+                    <BodyImageWrapper
+                      imagewidth={object.imagewidth}
+                      imageheight={object.imageheight}
+                      imagemargin={object.imagemargin}
+                    >
+                      {object.videosrc && (
+                        <ReactPlayer
+                          url={
+                            require(
+                              `@site/static/assets/website/home/${object.videosrc}.${videoFormat}`
+                            ).default
+                          }
+                          config={{
+                            file: {
+                              attributes: {
+                                controlsList: 'nofullscreen',
+                              },
+                            },
+                          }}
+                          playing={hovered ? true : false}
+                          loop={true}
+                          muted={true}
+                          width='100%'
+                          height='100%'
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            visibility:
+                              hovered &&
+                              window.innerWidth > disableVideoAt &&
+                              object.videosrc
+                                ? 'visible'
+                                : 'hidden',
+                          }}
+                        />
+                      )}
+                      <BodyImage
+                        src={
+                          require(
+                            `@site/static/assets/website/home/${object.imagesrc}.webp`
+                          ).default
+                        }
+                        srcSet={`${require(`@site/static/assets/website/home/${object.imagesrc}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${object.imagesrc}@3x.webp`).default} 3x`}
+                        alt={t(object.imagealt)}
+                        title={t(object.imagetitle)}
+                        style={{
+                          visibility:
+                            hovered &&
+                            window.innerWidth > disableVideoAt &&
+                            object.videosrc
+                              ? 'hidden'
+                              : 'visible',
+                        }}
+                        type={object.type}
+                      />
+                    </BodyImageWrapper>
+                  );
+                }
+
+                // Render type "title"
+                if (object.type === 'title') {
+                  return (
+                    <ItemV
+                      padding='0px 0px 0px 0px'
+                      flex='initial'
+                      alignSelf={
+                        object.align === 'left'
+                          ? 'flex-start'
+                          : object.align === 'right'
+                            ? 'flex-end'
+                            : 'center'
+                      }
+                    >
+                      <SubscribeText>{t(object.titletext)}</SubscribeText>
+                    </ItemV>
+                  );
                 }
 
                 // Render type "regular text"
@@ -449,16 +454,23 @@ const Glassy = ({ item }) => {
                             : 'center'
                       }
                     >
-                      <BodyText
-                        size={object.bodytextsize}
-                        mobilesize={object.mobilebodytextsize}
-                        color={object.bodytextcolor}
-                        weight={object.bodytextweight}
-                        uppercase={object.uppercase}
-                        margin={object.margin}
-                      >
-                        {t(object.bodytext)}
-                      </BodyText>
+                      <div className='text-content'>
+                        {object.texttitle && (
+                          <div className='text-title'>
+                            {t(object.texttitle)}
+                          </div>
+                        )}
+                        <BodyText
+                          size={object.bodytextsize}
+                          mobilesize={object.mobilebodytextsize}
+                          color={object.bodytextcolor}
+                          weight={object.bodytextweight}
+                          uppercase={object.uppercase}
+                          margin={object.margin}
+                        >
+                          {t(object.bodytext)}
+                        </BodyText>
+                      </div>
                     </BodyTextItem>
                   );
                 }
@@ -527,7 +539,7 @@ const Glassy = ({ item }) => {
         )}
       </Subcontainer>
 
-      {mockimage && <div style={{ width: '200px', height: '200px' }}></div>}
+      {/* {mockimage && <div style={{ width: '200px', height: '200px' }}></div>} */}
 
       {after && (
         <AfterItem alignment={alignment}>
@@ -627,7 +639,9 @@ const Container = styled.div`
   align-self: flex-start;
   position: relative;
   width: 100%;
+  height: 100%;
   min-height: ${(props) => props.height || '100%'};
+  max-height: ${(props) => props.height || '100%'};
   border-radius: 24px;
   box-sizing: border-box;
   overflow: hidden !important;
@@ -903,12 +917,41 @@ const BodyTextItem = styled(ItemV)`
   height: fit-content;
   line-height: normal;
   max-width: ${(props) => props.bodytextwidth};
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .text-title {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+
+    @media (min-width: 471px) and (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
 `;
 
 const BodyImageWrapper = styled.div`
   display: block;
-  width: 100%;
+  width: ${(props) => props.imagewidth || '100%'};
+  height: ${(props) => props.imageheight || 'auto'};
+  margin: ${(props) => props.imagemargin || 'auto'};
+
   position: relative;
+
+  @media ${device.tablet} {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+  }
 `;
 
 const BodyImage = styled(Image)`
