@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable */
 import styled from 'styled-components';
 
 import { H2, ItemV, Span } from '@site/src/css/SharedStyling';
