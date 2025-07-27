@@ -5,18 +5,7 @@ authors: [push]
 image: './cover-image.webp'
 description: 'Push Chain Joins Forces With Morph'
 text: 'Push Chain is about to facelift the consumer app experience by teaming up with Morph L2!. Learn everything about our collaboration with Morph - what it means for Push and Morph users, the use cases it unlocks and more!'
-tags:
-  [
-    Push Chain,
-    Partnerships,
-    Shared App Experience,
-    Any Chain Tx,
-    Universal Smart Contracts,
-    Shared State Blockchain,
-    Consumer Tx,
-    Parallel Validators,
-    Dynamic Sharding,
-  ]
+tags: [Push Chain, Partnerships]
 ---
 
 ![Cover image of Push Chain Join Forces With Morph ](./cover-image.webp)

@@ -8,8 +8,8 @@ text: 'Today’s web3 is fractured - users bounce across 30+ chains, while devel
 tags:
   [
     Push Chain,
-    Universal Execution Layer,
     Any Chain Tx,
+    Universal Execution Layer,
     Universal Smart Contracts,
     Shared State Blockchain,
   ]
