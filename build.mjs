@@ -1,9 +1,9 @@
 import chalk from 'chalk';
+import { parse } from 'envfile';
 import fs from 'fs';
 import Jimp from 'jimp';
 import path from 'path';
 import readline from 'readline';
-import { parse } from 'envfile';
 import { fileURLToPath } from 'url';
 import { getPreviewBasePath } from './basePath.js';
 
@@ -261,14 +261,25 @@ async function generatePNGImage(imagePath, title) {
     const loadedSubFont = await Jimp.loadFont(subFont);
 
     // create transparent overlay
-    let overlayImage = new Jimp(1200, 630, 0x0, (err, textImage) => {
+    let overlayImage = new Jimp(1200, 630, 0x0, (err) => {
       //((0x0 = 0 = rgba(0, 0, 0, 0)) = transparent)
       if (err) throw err;
     });
-    overlayImage.print(loadedSubFont, 30, 30, formattedSubTitle);
+
+    // Calculate position for bottom left corner
+    const textWidth = Jimp.measureText(loadedSubFont, formattedSubTitle);
+    const textHeight = Jimp.measureTextHeight(
+      loadedSubFont,
+      formattedSubTitle,
+      textWidth
+    );
+    const x = 30; // 30px from left edge
+    const y = image.bitmap.height - textHeight - 30; // 30px from bottom edge
+
+    overlayImage.print(loadedSubFont, x, y, formattedSubTitle);
     overlayImage.color([{ apply: 'xor', params: ['#cf3fad'] }]);
 
-    // Print the subTitle (top left corner)
+    // Print the subTitle (bottom left corner)
     image.blit(overlayImage, 0, 0);
   }
 
