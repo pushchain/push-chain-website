@@ -251,8 +251,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/universal-execution-layer',
-          // videosrc: 'chain/evm-compatible',
-          // videowebm: true,
+          videosrc: 'chain/universal-execution-layer-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
