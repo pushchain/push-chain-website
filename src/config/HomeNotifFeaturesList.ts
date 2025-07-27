@@ -2,7 +2,7 @@ export const NotifFeaturesList = {
   first: [
     {
       config: {
-        id: 'native',
+        id: 'any-chain',
         padding: '32px',
         containerFlexDirection: 'column-reverse',
         height: '490px',
@@ -23,8 +23,7 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/any-chain',
-          videosrc: 'chain/any-chain-video',
-          videowebm: true,
+          lottiesrc: 'chain/any-chain-lottie',
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
@@ -46,7 +45,7 @@ export const NotifFeaturesList = {
     },
     {
       config: {
-        id: 'custom-notif',
+        id: 'wallet-abstraction',
         padding: '32px',
         height: '490px',
         fluid: {
@@ -84,8 +83,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/wallet-abstraction',
-          // videosrc: 'notifs/web3-native-video',
-          // videowebm: false,
+          videosrc: 'chain/wallet-abstraction-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
@@ -98,15 +97,16 @@ export const NotifFeaturesList = {
   second: [
     {
       config: {
-        id: 'lightweight',
+        id: 'evm-compatible',
         containerFlexDirection: 'column-reverse',
+        height: '490px',
         fluid: {
           desktop: true,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -114,14 +114,21 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: '100% EVM\nCompatible',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
+          type: 'image',
+          imagesrc: 'chain/evm-compatible',
+          // videosrc: 'chain/evm-compatible',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: 'auto 0 0 0',
+        },
+        {
           type: 'text',
+          texttitle: '100% EVM\nCompatible',
           bodytext:
             'Deploy with zero on-chain code. Turn your native app into a universal app in minutes.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -134,15 +141,15 @@ export const NotifFeaturesList = {
     },
     {
       config: {
-        id: 'lightweight',
-        height: '100%',
+        id: 'universal-smart-contract',
+        height: '490px',
         fluid: {
           desktop: true,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -150,14 +157,10 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Universal Smart Contracts',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
           type: 'text',
+          texttitle: 'Universal Smart Contracts',
           bodytext:
             'Build once, run cross chain, multi step experiences  with a single, future-proof contract.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -166,11 +169,22 @@ export const NotifFeaturesList = {
           margin: '0px 0 0 0',
           align: 'left',
         },
+        {
+          type: 'image',
+          imagesrc: 'chain/universal-smart-contract',
+          // videosrc: 'chain/wallet-abstraction-video',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: '0 0 auto 0',
+        },
       ],
     },
     {
       config: {
-        id: 'interoperable',
+        id: 'universal-fee',
         containerFlexDirection: 'column-reverse',
         fluid: {
           desktop: false,
@@ -178,7 +192,8 @@ export const NotifFeaturesList = {
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
+        height: '490px',
         hide: {
           desktop: false,
           laptop: false,
@@ -186,14 +201,10 @@ export const NotifFeaturesList = {
           mobile: true,
         },
       },
-      header: {
-        title: 'Universal Fee\nAbstraction',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
           type: 'text',
+          texttitle: 'Universal Fee\nAbstraction',
           bodytext:
             'Let’s users pay gas in any token, on any chain without bridging.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -202,13 +213,25 @@ export const NotifFeaturesList = {
           margin: '0px 0 0 0',
           align: 'left',
         },
+        {
+          type: 'image',
+          imagesrc: 'chain/universal-fee',
+          // videosrc: 'chain/wallet-abstraction-video',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: 'auto 0 0 0',
+        },
       ],
     },
   ],
   third: [
     {
       config: {
-        id: 'lightweight',
+        id: 'universal-execution-layer',
+        height: '490px',
         containerFlexDirection: 'column-reverse',
         fluid: {
           desktop: true,
@@ -216,7 +239,7 @@ export const NotifFeaturesList = {
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -224,14 +247,21 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Universal Execution Layer',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
+          type: 'image',
+          imagesrc: 'chain/universal-execution-layer',
+          // videosrc: 'chain/evm-compatible',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: '0 0 auto 0',
+        },
+        {
           type: 'text',
+          texttitle: 'Universal Execution Layer',
           bodytext:
             'Build atomic, composable apps across web3. Create never seen before app experiences, by having multiple users of different chains transact with the same app.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -244,15 +274,15 @@ export const NotifFeaturesList = {
     },
     {
       config: {
-        id: 'lightweight',
-        height: '100%',
+        id: 'shared-state',
+        height: '490px',
         fluid: {
           desktop: true,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -260,14 +290,10 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Shared State',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
           type: 'text',
+          texttitle: 'Shared State',
           bodytext:
             'Access account and state data from other chains in your smart contract.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -276,19 +302,31 @@ export const NotifFeaturesList = {
           margin: '0px 0 0 0',
           align: 'left',
         },
+        {
+          type: 'image',
+          imagesrc: 'chain/shared-state',
+          // videosrc: 'chain/wallet-abstraction-video',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: 'auto 0 0 0',
+        },
       ],
     },
     {
       config: {
-        id: 'interoperable',
+        id: 'programmable-solvers',
         containerFlexDirection: 'column-reverse',
+        height: '490px',
         fluid: {
           desktop: false,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -296,14 +334,21 @@ export const NotifFeaturesList = {
           mobile: true,
         },
       },
-      header: {
-        title: 'Programmable\nSolvers',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
+          type: 'image',
+          imagesrc: 'chain/programmable-solvers',
+          // videosrc: 'chain/wallet-abstraction-video',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: '0 0 auto 0',
+        },
+        {
           type: 'text',
+          texttitle: 'Programmable\nSolvers',
           bodytext:
             'Trigger, validate, and complete transactions across any chain using your smart contract.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -318,15 +363,16 @@ export const NotifFeaturesList = {
   tabletOnly: [
     {
       config: {
-        id: 'interoperable',
+        id: 'universal-fee',
         containerFlexDirection: 'column-reverse',
+        height: '490px',
         fluid: {
           desktop: false,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -342,6 +388,7 @@ export const NotifFeaturesList = {
       body: [
         {
           type: 'text',
+          texttitle: 'Universal Fee\nAbstraction',
           bodytext:
             'Let’s users pay gas in any token, on any chain without bridging.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -350,18 +397,30 @@ export const NotifFeaturesList = {
           margin: '0px 0 0 0',
           align: 'left',
         },
+        {
+          type: 'image',
+          imagesrc: 'chain/universal-fee',
+          // videosrc: 'chain/wallet-abstraction-video',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: 'auto 0 0 0',
+        },
       ],
     },
     {
       config: {
         id: 'lightweight',
+        height: '490px',
         fluid: {
           desktop: true,
           laptop: false,
           tablet: false,
           mobile: false,
         },
-        padding: '24px',
+        padding: '32px',
         hide: {
           desktop: false,
           laptop: false,
@@ -369,14 +428,21 @@ export const NotifFeaturesList = {
           mobile: false,
         },
       },
-      header: {
-        title: 'Universal Execution Layer',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
+          type: 'image',
+          imagesrc: 'chain/universal-execution-layer',
+          // videosrc: 'chain/evm-compatible',
+          // videowebm: true,
+          imagealt: 'home.notification-section.box1.imagealt',
+          imagetitle: 'home.notification-section.box1.imagetitle',
+          imagewidth: 'auto',
+          imageheight: 'auto',
+          imagemargin: '0 0 auto 0',
+        },
+        {
           type: 'text',
+          texttitle: 'Universal Execution Layer',
           bodytext:
             'Build atomic, composable apps across web3. Create never seen before app experiences, by having multiple users of different chains transact with the same app.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',

@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 import ReactPlayer from 'react-player';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styled from 'styled-components';
+import Lottie from 'lottie-react';
 
 // Internal Components
 import {
@@ -406,6 +407,36 @@ const Glassy = ({ item }) => {
                           }}
                         />
                       )}
+                      {object.lottiesrc && (
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            visibility:
+                              hovered &&
+                              window.innerWidth > disableVideoAt &&
+                              object.lottiesrc
+                                ? 'visible'
+                                : 'hidden',
+                          }}
+                        >
+                          <Lottie
+                            animationData={require(
+                              `@site/static/assets/website/home/${object.lottiesrc}.json`
+                            )}
+                            loop={true}
+                            autoplay={true}
+                            play={hovered}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                            }}
+                          />
+                        </div>
+                      )}
                       <BodyImage
                         src={
                           require(
@@ -419,7 +450,7 @@ const Glassy = ({ item }) => {
                           visibility:
                             hovered &&
                             window.innerWidth > disableVideoAt &&
-                            object.videosrc
+                            (object.videosrc || object.lottiesrc)
                               ? 'hidden'
                               : 'visible',
                         }}
