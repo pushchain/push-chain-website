@@ -320,7 +320,7 @@ function Header() {
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
             showAlertBar={isAlertBarVisible}
           >
-            <HeaderBlurV
+            {/* <HeaderBlurV
               position='absolute'
               top='1px'
               right='1px'
@@ -329,7 +329,7 @@ function Header() {
               overflow='hidden'
               borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
               className={'headerblur'}
-            />
+            /> */}
 
             <MenuTop
               flex='initial'
@@ -722,12 +722,13 @@ const LanguageItem = styled.div`
 `;
 
 const HeaderItemH = styled(ItemH)`
-  background: linear-gradient(
-    to top right,
-    rgba(70, 40, 92),
-    rgba(87, 66, 103)
-  );
   border-radius: 24px;
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow:
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  backdrop-filter: blur(5px);
 
   margin: ${({ showAlertBar }) =>
     `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${

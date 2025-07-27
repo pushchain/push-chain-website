@@ -762,11 +762,7 @@ const HeroItem = styled(ItemV)`
   }
 
   @media ${device.tablet} {
-    margin: 114px auto;
-  }
-
-  @media ${device.mobileL} {
-    margin: 0px auto;
+    margin: 24px auto;
   }
 `;
 

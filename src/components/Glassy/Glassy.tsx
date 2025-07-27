@@ -143,12 +143,12 @@ const Glassy = ({ item }) => {
       container.style.transform = `rotateX(${degX}deg) rotateY(${degY}deg) translateZ(${transZ}px)`;
     }
 
-    // Apply glow
-    const glowwys = document.querySelectorAll(`.${id} > .glowwy`);
-    glowwys.forEach((glowwy) => {
-      glowwy.style.top = `${y}px`;
-      glowwy.style.right = `${x}px`;
-    });
+    // // Apply glow
+    // const glowwys = document.querySelectorAll(`.${id} > .glowwy`);
+    // glowwys.forEach((glowwy) => {
+    //   glowwy.style.top = `${y}px`;
+    //   glowwy.style.right = `${x}px`;
+    // });
   };
 
   return (
@@ -164,7 +164,7 @@ const Glassy = ({ item }) => {
       containerFlexDirection={containerFlexDirection}
       className={`${hovered ? 'active' : ''} ${id}`}
     >
-      <GlowwyBorder
+      {/* <GlowwyBorder
         className={`${hovered ? 'active' : ''} glowwy`}
         hideEffect={hidehovereffect}
       />
@@ -172,7 +172,7 @@ const Glassy = ({ item }) => {
       <Glowwy
         className={`${hovered ? 'active' : ''} glowwy`}
         hideEffect={hidehovereffect}
-      />
+      /> */}
 
       <Subcontainer
         id={id}
@@ -567,82 +567,6 @@ const Glassy = ({ item }) => {
   );
 };
 
-// TODO: update glow effect
-// const Container = styled.div`
-//   flex: ${(props) =>
-//     props.fluid && props.fluid.desktop ? '1 0 auto' : 'initial'};
-//   align-self: flex-start;
-//   position: relative;
-//   width: 100%;
-//   min-height: ${(props) => props.height || '100%'};
-//   box-sizing: border-box;
-//   overflow: hidden !important;
-//   display: ${(props) => props.hide && props.hide.desktop && 'none'};
-//   flex-direction: ${(props) => props.containerFlexDirection || 'column'};
-//   justify-content: space-between;
-
-//   /* default state (no effect) */
-//   border-radius: 24px;
-//   border: 1px solid rgba(255, 255, 255, 0.1);
-//   background: transparent;
-//   box-shadow: none;
-//   backdrop-filter: none;
-//   -webkit-backdrop-filter: none;
-//   transition: all 0.3s ease;
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     bottom: -40px;
-//     right: -40px;
-//     width: 280px;
-//     height: 280px;
-//     background: radial-gradient(
-//       at 80% 80%,
-//       rgba(255, 255, 255, 0.7) 0%,
-//       rgba(205, 79, 243, 0.5) 40%,
-//       rgba(205, 79, 243, 0.1) 70%,
-//       transparent 100%
-//     );
-//     border-radius: 50%;
-//     filter: blur(30px);
-//     pointer-events: none;
-//     z-index: 0;
-//   }
-
-//   &:hover {
-//     z-index: 1;
-//     border: 1px solid #CD4FF3;
-//     background: rgba(0, 0, 0, 0.1);
-//     background-blend-mode: plus-lighter;
-//     box-shadow:
-//       -11.15px -10.392px 48px -12px rgba(0, 0, 0, 0.15),
-//       -1.858px -1.732px 12px -8px rgba(0, 0, 0, 0.15),
-//       2.788px 2.598px 20px 2px rgba(255, 255, 255, 0.20) inset,
-//       1.858px 1.732px 10px 2px rgba(118, 13, 255, 0.25) inset;
-//     backdrop-filter: blur(50px);
-//     -webkit-backdrop-filter: blur(50px);
-//   }
-
-//   @media ${device.laptopM} {
-//     flex: ${(props) =>
-//       props.fluid && props.fluid.laptop ? '1 0 auto' : 'initial'};
-//     display: ${(props) => props.hide && props.hide.laptop && 'none'};
-//   }
-
-//   @media ${device.tablet} {
-//     flex: ${(props) =>
-//       props.fluid && props.fluid.tablet ? '1 0 auto' : 'initial'};
-//     width: ${(props) => (props.fluid && props.fluid.tablet ? 'auto' : '100%')};
-//   }
-
-//   @media ${device.mobileL} {
-//     flex: ${(props) => (props.fluid && props.fluid.mobile ? '1' : 'initial')};
-//     width: ${(props) => (props.fluid && props.fluid.mobile ? 'auto' : '100%')};
-//     display: ${(props) => props.hide && props.hide.mobile && 'none'};
-//   }
-// `;
-
 const Container = styled.div`
   flex: ${(props) =>
     props.fluid && props.fluid.desktop ? '1 0 auto' : 'initial'};
@@ -663,6 +587,17 @@ const Container = styled.div`
   // for glassy effect
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1;
+
+  &:hover {
+    border-radius: 16px;
+    border: 1px solid rgba(112, 70, 248, 0.4);
+    background: rgba(0, 0, 0, 0.1);
+    background-blend-mode: plus-lighter;
+    box-shadow:
+      2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+      1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+    backdrop-filter: blur(10px);
+  }
 
   // &::before {
   //   content: '';
@@ -703,33 +638,37 @@ const Container = styled.div`
     flex: ${(props) => (props.fluid && props.fluid.mobile ? '1' : 'initial')};
     width: ${(props) => (props.fluid && props.fluid.mobile ? 'auto' : '100%')};
     display: ${(props) => props.hide && props.hide.mobile && 'none'};
+
+    min-height: 100%;
+    max-height: 100%;
   }
 `;
 
-const GlowwyBorder = styled.div`
-  width: 0px;
-  height: 0px;
-  border-radius: 50%;
-  box-shadow:
-    0 0 49px 19px rgb(202, 55, 237),
-    0 0 80px 40px #ca37ed,
-    0 0 100px 50px rgb(202, 55, 237);
-  position: absolute;
-  z-index: -9;
-  display: none;
+// TODO: comment out glow
+// const GlowwyBorder = styled.div`
+//   width: 0px;
+//   height: 0px;
+//   border-radius: 50%;
+//   box-shadow:
+//     0 0 49px 19px rgb(202, 55, 237),
+//     0 0 80px 40px #ca37ed,
+//     0 0 100px 50px rgb(202, 55, 237);
+//   position: absolute;
+//   z-index: -9;
+//   display: none;
 
-  &.active {
-    // display: block;
-    display: ${(props) => (props.hideEffect ? 'none' : 'block')};
-  }
-`;
+//   &.active {
+//     // display: block;
+//     display: ${(props) => (props.hideEffect ? 'none' : 'block')};
+//   }
+// `;
 
-const Glowwy = styled(GlowwyBorder)`
-  box-shadow: 0 0 100px 100px rgba(135, 34, 158, 0.15);
-  z-index: 1;
+// const Glowwy = styled(GlowwyBorder)`
+//   box-shadow: 0 0 100px 100px rgba(135, 34, 158, 0.15);
+//   z-index: 1;
 
-  display: ${(props) => props.hideEffect && 'none'};
-`;
+//   display: ${(props) => props.hideEffect && 'none'};
+// `;
 
 const Subcontainer = styled.div`
   display: flex;
@@ -962,8 +901,6 @@ const BodyImageWrapper = styled.div`
   position: relative;
 
   @media ${device.laptop} {
-    width: 90%;
-    height: auto;
     overflow: hidden;
   }
 
