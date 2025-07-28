@@ -47,47 +47,47 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
     let scrollTrigger = null;
 
-    if (tocFitsInViewport) {
-      // Create ScrollTrigger for TOC sticky behavior
-      scrollTrigger = ScrollTrigger.create({
-        trigger: contentRef.current,
-        start: 'top top+=24',
-        end: `bottom top+=${endOffset}`,
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const direction = self.direction;
+    // if (tocFitsInViewport) {
+    // Create ScrollTrigger for TOC sticky behavior
+    scrollTrigger = ScrollTrigger.create({
+      trigger: contentRef.current,
+      start: 'top top+=24',
+      end: `bottom top+=${endOffset}`,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const direction = self.direction;
 
-          if (progress > 0 && progress < 1) {
-            // Parent is in viewport - make TOC sticky
-            gsap.set(tocRef.current, {
-              position: 'fixed',
-              top: '24px',
-              zIndex: 100,
-            });
-          } else if (progress >= 1 && direction === 1) {
-            // Reached end of parent - return to normal position
-            gsap.set(tocRef.current, {
-              position: 'relative',
-              top: 'auto',
-              zIndex: 'auto',
-            });
-            gsap.set(tocRef.current.parentElement, {
-              alignSelf: 'flex-end',
-            });
-          } else if (progress <= 0 && direction === -1) {
-            // Scrolled above parent - return to normal position
-            gsap.set(tocRef.current, {
-              position: 'relative',
-              top: 'auto',
-              zIndex: 'auto',
-            });
-            gsap.set(tocRef.current.parentElement, {
-              alignSelf: 'flex-start',
-            });
-          }
-        },
-      });
-    }
+        if (progress > 0 && progress < 1) {
+          // Parent is in viewport - make TOC sticky
+          gsap.set(tocRef.current, {
+            position: 'fixed',
+            top: '24px',
+            zIndex: 100,
+          });
+        } else if (progress >= 1 && direction === 1) {
+          // Reached end of parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-end',
+          });
+        } else if (progress <= 0 && direction === -1) {
+          // Scrolled above parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-start',
+          });
+        }
+      },
+    });
+    // }
 
     return () => {
       scrollTrigger.kill();
@@ -556,7 +556,7 @@ const DesktopTOC = styled(ItemV)`
 
   justify-content: flex-start;
 
-  max-height: 65vh;
+  max-height: 90vh;
   overflow-y: auto;
 
   ul {

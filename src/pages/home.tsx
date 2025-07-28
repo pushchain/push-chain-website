@@ -57,7 +57,7 @@ function PushHomepage() {
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/homepreview.png').default,
             { absolute: true }
           )}
         />
@@ -76,7 +76,7 @@ function PushHomepage() {
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/homepreview.png').default,
             { absolute: true }
           )}
         />
