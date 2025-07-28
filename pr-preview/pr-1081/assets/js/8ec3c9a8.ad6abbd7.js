@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[58239],{936882:e=>{e.exports=JSON.parse('{"label":"Data Analytics","permalink":"/push-website/pr-preview/pr-1081/blog/tags/data-analytics","allTagsPath":"/push-website/pr-preview/pr-1081/blog/tags","count":1,"unlisted":false}')}}]);

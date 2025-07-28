@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[53359],{340816:e=>{e.exports=JSON.parse('{"permalink":"/push-website/pr-preview/pr-1081/blog/tags/mmorpg","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
