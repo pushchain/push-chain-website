@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { BsArrowRight } from 'react-icons/bs';
+
+import { TbArrowRight } from 'react-icons/tb';
 
 import { Button, H2 } from '@site/src/css/SharedStyling';
 import WhiteStarIcon from '@site/static/assets/website/illustrations/whiteStarIcon.svg';
@@ -19,7 +20,9 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
 
   const handleDismiss = () => {
     setShowAlertBar(false);
-    localStorage.setItem('showAlertBar', false);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('showAlertBar', 'false');
+    }
   };
 
   return (
@@ -28,13 +31,15 @@ const InfoBar = ({ text, url }: InfoBarProps) => {
         onClick={() => {
           if (url) window.open(url, '_blank');
           setShowAlertBar(false);
-          localStorage.setItem('showAlertBar', false);
+          if (typeof window !== 'undefined') {
+            localStorage.setItem('showAlertBar', 'false');
+          }
         }}
       >
         <WhiteStarIcon className='star-icon' />
         <H2>{text}</H2>
         <span>Learn More</span>
-        <BsArrowRight size={24} className='arrow-icon' />
+        <TbArrowRight size={24} className='arrow-icon' />
       </HeroButton>
       <DismissBtn onClick={handleDismiss}>✕</DismissBtn>
     </BarContainer>
@@ -55,7 +60,7 @@ const BarContainer = styled.div`
   cursor: pointer;
 
   background: linear-gradient(90deg, #3524ed 0%, #d548ec 50%, #3524ed 100%);
-  backdrop-filter: blur(calc(var(--blur-md, 24px) / 2));
+  /* backdrop-filter: blur(calc(var(--blur-md, 24px) / 2)); */
 
   @media ${device.tablet} {
     padding: 0 8px;

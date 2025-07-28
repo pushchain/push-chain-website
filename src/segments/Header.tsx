@@ -320,17 +320,6 @@ function Header() {
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
             showAlertBar={isAlertBarVisible}
           >
-            {/* <HeaderBlurV
-              position='absolute'
-              top='1px'
-              right='1px'
-              bottom='1px'
-              left='1px'
-              overflow='hidden'
-              borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
-              className={'headerblur'}
-            /> */}
-
             <MenuTop
               flex='initial'
               showMobileMenu={showMobileMenu}
@@ -453,8 +442,6 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[0]}
                     >
-                      <NavigationMenuContentItem />
-
                       {HeaderList.testnet.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -487,8 +474,6 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[1]}
                     >
-                      <NavigationMenuContentItem />
-
                       <HeaderDiv>
                         <HeaderSection>
                           {HeaderList.developers
@@ -528,8 +513,6 @@ function Header() {
                       onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
-                      <NavigationMenuContentItem />
-
                       {HeaderList.community.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -561,8 +544,6 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[3]}
                     >
-                      <NavigationMenuContentItem />
-
                       {HeaderList.resources.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -768,19 +749,6 @@ const HeaderItemH = styled(ItemH)`
 
   &.light {
     color: ${GLOBALS.COLORS.FONT_DARK};
-    background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
-  }
-`;
-
-const HeaderBlurV = styled(ItemV)`
-  border-radius: 24px;
-  background: #000;
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(20px);
-
-  &.light {
     background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
   }
 `;
@@ -1142,21 +1110,6 @@ const LanguageMenuHeader = styled.div`
   }
 `;
 
-const NavigationMenuContentItem = styled.div`
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  right: 1px;
-  bottom: 1px;
-  border-radius: 24px;
-  background: #000;
-  background-blend-mode: lighten;
-  box-shadow:
-    2.788px 2.598px 6px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 3px 0px rgba(255, 255, 255, 0.15) inset;
-  z-index: -2;
-`;
-
 const NavigationMenuContent = styled.ul`
   list-style: none;
   .header-item {
@@ -1177,14 +1130,26 @@ const NavigationMenuContent = styled.ul`
   border-radius: 24px;
   padding: 12px;
 
-  background: linear-gradient(
-    to top left,
-    rgba(73, 40, 98),
-    rgba(255, 203, 255, 0.5)
-  );
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow:
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  overflow: hidden;
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 24px;
+  }
+
   min-width: 360px;
 
   @media ${device.laptopM} {
@@ -1239,19 +1204,26 @@ const LanguageMenuContent = styled.div`
   z-index: 1;
   padding: 12px;
   border-radius: 24px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(112, 90, 208, 0.4);
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.5) 40%,
-    rgba(100, 42, 124, 0.35) 100%
-  );
+
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 24px;
+  }
 
   & button {
     min-width: 182px;

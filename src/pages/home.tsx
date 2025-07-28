@@ -6,16 +6,14 @@
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
-import React, { useContext, useState } from 'react';
-
-// External Components
-import Spline from '@splinetool/react-spline';
-import { useTranslation } from 'react-i18next';
-import { BsArrowRight, BsDiscord } from 'react-icons/bs';
+import { useContext, useState } from 'react';
 import styled from 'styled-components';
 
+// External Components
+import { useTranslation } from 'react-i18next';
+import { BsArrowRight, BsDiscord } from 'react-icons/bs';
+
 // Internal Components
-import FeaturedList from '@site/src/components/Featured/FeaturedList';
 import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
@@ -25,7 +23,6 @@ import { General } from '@site/src/config/ChainFAQconfig';
 import {
   A,
   B,
-  Button,
   Content,
   H1,
   H2,
@@ -71,42 +68,40 @@ export default function Home() {
       showNavbar='chain'
     >
       <Head>
-        {/* <!-- HTML Meta Tags --> */}
-        <title>Push (Previously EPNS) | Communication Protocol of Web3</title>
-        <meta
-          name='description'
-          content='Push is the missing piece of Web3 | Push Protocol is a web3 communication network, enabling cross-chain notifications and messaging for dapps, wallets, and services.'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property='og:url' content='https://comms.push.org' />
+        {/* <!-- Update Facebook Meta Tags --> */}
+        <meta property='og:url' content='https://push.org' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Push Protocol (Previously EPNS)' />
         <meta
-          property='og:description'
-          content='Push is the missing piece of Web3 | Push Protocol is a web3 communication network, enabling cross-chain notifications and messaging for dapps, wallets, and services.'
+          property='og:title'
+          content='Home | Push Chain: True Universal Blockchain'
+        />
+        <meta
+          name='og:description'
+          content='Push Chain is a shared state L1 blockchain for Universal Apps. Capable of doing transactions from any chain, unifying L1s & L2s and enabling apps from any chain to be accessed by the users of any chain.'
         />
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/homepreview.png').default,
+            require('/static/assets/previews/chainpreview.png').default,
             { absolute: true }
           )}
         />
 
-        {/* <!-- Twitter Meta Tags --> */}
+        {/* <!-- Update Twitter Meta Tags --> */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:site' content='@PushChain' />
-        <meta name='twitter:title' content='Push Protocol (Previously EPNS)' />
         <meta
-          name='twitter:description'
-          content='Push is the missing piece of Web3 | Push Protocol is a web3 communication network, enabling cross-chain notifications and messaging for dapps, wallets, and services.'
+          name='twitter:title'
+          content='Home | Push Chain: True Universal Blockchain'
         />
         <meta
-          property='twitter:image'
+          name='twitter:description'
+          content='Push Chain is a shared state L1 blockchain for Universal Apps. Capable of doing transactions from any chain, unifying L1s & L2s and enabling apps from any chain to be accessed by the users of any chain.'
+        />
+        <meta
+          name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/homepreview.png').default,
+            require('/static/assets/previews/chainpreview.png').default,
             { absolute: true }
           )}
         />
@@ -115,13 +110,13 @@ export default function Home() {
           {JSON.stringify({
             '@context': 'https://schema.org/',
             '@type': 'Organization',
-            name: 'Push Protocol',
-            description: 'The Communication Protocol of Web3',
-            url: 'https://comms.push.org',
+            name: 'Push Chain',
+            description: 'Any Chain. Any Wallet. Any App',
+            url: 'https://push.org',
             logo: '/assets/website/favicon.ico',
             sameAs: [
               'https://x.com/PushChain',
-              'https://www.linkedin.com/company/push-protocol/mycompany/',
+              'https://www.linkedin.com/company/push-chain',
             ],
           })}
         </script>
