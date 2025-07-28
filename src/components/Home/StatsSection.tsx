@@ -1,7 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
-
 import { styled } from 'styled-components';
 import { ItemH, ItemV, H2, H3, Span } from '../../css/SharedStyling';
 import { device } from '@site/src/config/globals';
@@ -82,13 +81,14 @@ const StatsWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   margin-top: 100px;
 
   @media ${device.tablet} {
     background-size: contain;
     background-position: bottom;
     padding-bottom: 0px;
+    margin-top: 0px;
   }
 
   @media ${device.mobileL} {

@@ -298,7 +298,6 @@ export default function Home() {
         {/* WHY PUSH AND BLOG */}
         <BlogSection id='blog'>
           <Content alignSelf='center'>
-            {/* BLOG SECTION */}
             <ItemH>
               <ItemH justifyContent='flex-start' alignItems='center' gap='8px'>
                 <StarSolidIcon color='#D98AEC' />
@@ -348,33 +347,13 @@ export default function Home() {
           </Content>
         </BlogSection>
 
-        {/* MEDIA COVERAGE SECTION */}
-        {/* <FeaturedInSection id='featured'>
-          <Content className='fluid'>
-            <ItemH justifyContent='center'>
-              <H2
-                color='#FFFFFF'
-                fontWeight='500'
-                letterSpacing='normal'
-                fontSize={isMobile ? '24px' : '36px'}
-                fontFamily='DM Sans, san-serif'
-                lineHeight='130%'
-                textAlign='center'
-              >
-                {t('home.featured-section.title')}
-              </H2>
-            </ItemH>
-
-            <FeaturedList />
-          </Content>
-        </FeaturedInSection> */}
-
         <FAQSection>
           <Content>
             <ItemH
               flexDirection={isLaptop && 'column'}
               alignItems='flex-start'
               justifyContent='space-between'
+              gap={isLaptop ? '24px' : '0'}
             >
               <ItemV
                 flexDirection={isLaptop ? 'row' : 'column'}
@@ -444,7 +423,7 @@ export default function Home() {
         </FAQSection>
 
         {/* BACKED BY SECTION */}
-        <BackedBySection padding='0px 0px' id='investors'>
+        <BackedBySection id='investors'>
           <BackedByContent padding='0px 0px' alignSelf='center'>
             <InvestorItem alignItems='stretch'>
               <InvestorHeader
@@ -547,7 +526,7 @@ export default function Home() {
         </BackedBySection>
 
         <BottomSection>
-          <Content>
+          <Content className='content'>
             <ItemV>
               <FinalSection>
                 <H2
@@ -860,10 +839,24 @@ const GridContent = styled(Content)`
 `;
 
 const BottomSection = styled(Section)`
-  padding: 200px 0;
+  .content {
+    padding-top: 100px;
+    padding-bottom: 200px;
+
+    @media ${device.mobileL} {
+      padding-top: 125px;
+      padding-bottom: 125px;
+    }
+  }
 `;
 
-const FAQSection = styled(Section)``;
+const FAQSection = styled(Section)`
+  padding: 100px 0;
+
+  @media ${device.mobileL} {
+    padding: 0;
+  }
+`;
 
 const StatsContent = styled(Content)``;
 
@@ -875,10 +868,15 @@ const FeaturedInSection = styled.div`
 
 const BlogSection = styled(Section)``;
 
-const BackedBySection = styled(Section)``;
+const BackedBySection = styled(Section)`
+  padding: 100px 0;
+
+  @media ${device.mobileL} {
+    padding: 125px 0;
+  }
+`;
 
 const BackedByContent = styled(Content)`
-  // background: red;
   width: 100%;
   max-width: 100%;
   padding: 0px;
