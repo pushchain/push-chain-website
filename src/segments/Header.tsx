@@ -945,7 +945,6 @@ const MenuTop = styled(ItemV)`
         : '0px'};
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(4px);
   }
 
   @media ${device.mobileL} {

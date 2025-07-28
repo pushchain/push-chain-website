@@ -19,7 +19,7 @@ import FeaturedList from '@site/src/components/Featured/FeaturedList';
 import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
 import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
-import NewMarqueeAnimation from '@site/src/components/NewMarqueeAnimation';
+import Marquee from 'react-fast-marquee';
 import Accordion from '@site/src/components/Accordion';
 import { General } from '@site/src/config/ChainFAQconfig';
 import {
@@ -37,12 +37,11 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 // Import Assets
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
-import BgImage from '@site/static/assets/website/home/faq/footerbg@3x.png';
 import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
+import FinalBgImage from '../../static/assets/website/home/others/push-chain-final@3x.webp';
 
 // Internal Configs
 import { NotifFeaturesList } from '@site/src/config/HomeNotifFeaturesList';
@@ -472,85 +471,80 @@ export default function Home() {
               flex='1'
               alignItems='stretch'
             >
-              <NewMarqueeAnimation
-                speed={2}
-                gradientWidth={8}
-                gap={24}
-                fixedWidth={'250px'}
-                direction='ltr'
+              <Marquee
+                direction='left'
+                speed={50}
+                gradient={true}
+                gradientColor={[13, 13, 16]}
+                gradientWidth={80}
+                pauseOnHover={false}
               >
                 {InvList.top.map((item) => {
                   return (
-                    <SplideSlide>
-                      <InvestorCard key={item.id}>
-                        <InvestorIcon
-                          width={item.title ? 64 : 'auto'}
-                          src={
-                            require(
-                              `@site/static/assets/website/investors/${item.srcref}.webp`
-                            ).default
-                          }
-                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                          alt={`${item?.alt}`}
-                        />
-                        {item.title && (
-                          <InvestorDetails>
-                            <InvestorTitle>{item.title}</InvestorTitle>
-                            {item.subtitle && (
-                              <InvestorSubtitle>
-                                {item.subtitle}
-                              </InvestorSubtitle>
-                            )}
-                          </InvestorDetails>
-                        )}
-                      </InvestorCard>
-                    </SplideSlide>
+                    <InvestorCard key={item.id} style={{ margin: '0 12px' }}>
+                      <InvestorIcon
+                        width={item.title ? 64 : 'auto'}
+                        src={
+                          require(
+                            `@site/static/assets/website/investors/${item.srcref}.webp`
+                          ).default
+                        }
+                        srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
+                        alt={`${item?.alt}`}
+                      />
+                      {item.title && (
+                        <InvestorDetails>
+                          <InvestorTitle>{item.title}</InvestorTitle>
+                          {item.subtitle && (
+                            <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
+                          )}
+                        </InvestorDetails>
+                      )}
+                    </InvestorCard>
                   );
                 })}
-              </NewMarqueeAnimation>
+              </Marquee>
             </MarqueeAnimationContainer>
 
             <MarqueeAnimationContainer flex='1' alignItems='stretch'>
-              <NewMarqueeAnimation
-                speed={-2}
-                gradientWidth={8}
-                gap={24}
-                fixedWidth={'250px'}
-                direction='ltr'
+              <Marquee
+                direction='right'
+                speed={50}
+                gradient={true}
+                gradientColor={[13, 13, 16]}
+                gradientWidth={80}
+                pauseOnHover={false}
               >
                 {InvList.bottom.map((item, i) => {
                   return (
-                    <SplideSlide>
-                      <InvestorCard
-                        key={item.id}
-                        flexDirection={item.title ? 'true' : 'false'}
-                      >
-                        <InvestorIcon
-                          width={item.title ? '64px' : 'auto'}
-                          borderRadius={item.title ? '50%' : '0'}
-                          src={
-                            require(
-                              `@site/static/assets/website/investors/${item.srcref}.webp`
-                            ).default
-                          }
-                          srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
-                          alt={`${item?.alt}`}
-                        />
-                        {item.title && (
-                          <InvestorDetails>
-                            <InvestorTitle>{item.title}</InvestorTitle>
-                            {item.subtitle && (
-                              <InvestorSubtitle>
-                                {item.subtitle}
-                              </InvestorSubtitle>
-                            )}
-                          </InvestorDetails>
-                        )}
-                      </InvestorCard>
-                    </SplideSlide>
+                    <InvestorCard
+                      key={item.id}
+                      flexDirection={item.title ? 'true' : 'false'}
+                      style={{ margin: '0 12px' }}
+                    >
+                      <InvestorIcon
+                        width={item.title ? '64px' : 'auto'}
+                        borderRadius={item.title ? '50%' : '0'}
+                        src={
+                          require(
+                            `@site/static/assets/website/investors/${item.srcref}.webp`
+                          ).default
+                        }
+                        srcSet={`${require(`@site/static/assets/website/investors/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/investors/${item.srcref}@3x.webp`).default} 3x`}
+                        alt={`${item?.alt}`}
+                      />
+                      {item.title && (
+                        <InvestorDetails>
+                          <InvestorTitle>{item.title}</InvestorTitle>
+                          {item.subtitle && (
+                            <InvestorSubtitle>{item.subtitle}</InvestorSubtitle>
+                          )}
+                        </InvestorDetails>
+                      )}
+                    </InvestorCard>
                   );
                 })}
-              </NewMarqueeAnimation>
+              </Marquee>
             </MarqueeAnimationContainer>
 
             <FeaturedSection />
@@ -560,15 +554,18 @@ export default function Home() {
         <BottomSection>
           <Content>
             <ItemV>
-              <H2
-                fontSize={isMobile ? '2rem' : '4rem'}
-                color='#fff'
-                fontWeight='600'
-                lineHeight='120%'
-                textAlign='center'
-              >
-                Build Universal Apps.
-              </H2>
+              <FinalSection>
+                <H2
+                  fontSize={isMobile ? '2.5rem' : '4rem'}
+                  color='#fff'
+                  fontWeight='600'
+                  lineHeight='120%'
+                  textAlign='center'
+                >
+                  Build {isMobile && <br />} Universal {isMobile && <br />}{' '}
+                  Apps.
+                </H2>
+              </FinalSection>
               <Span
                 fontSize='1.25rem'
                 color='#fff'
@@ -902,21 +899,24 @@ const InvestorHeader = styled(H2)`
 
 const InvestorItem = styled(ItemV)``;
 
-const InvestorCard = styled(ItemV)`
+const InvestorCard = styled.div`
   background: rgba(0, 0, 0, 0.1);
-  background-blend-mode: plus-lighter;
-  box-shadow:
-    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
-    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(10px);
-
   border: 1px solid rgba(112, 90, 208, 0.4);
   border-radius: 16px;
   padding: 8px;
   min-width: 242px;
-  min-height: 96px;
-  max-height: 96px;
-  flex: 0;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  // backdrop-filter: blur(10px);
+  // background-blend-mode: lighten;
+  box-shadow:
+    2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
 `;
 
 const InvestorIcon = styled(Image)`
@@ -1185,6 +1185,10 @@ const FaqLink = styled(A)`
   overflow: inherit;
   gap: 12px;
 
+  p {
+    margin: 0;
+  }
+
   .anchorSVGlink {
     color: #fff;
     top: 0px;
@@ -1240,26 +1244,34 @@ const AccordionGrid = styled.div`
   }
 `;
 
-const ImageBackgroundDiv = styled.div`
-  width: 100%;
-  min-height: 400px;
-  background-image: url(${BgImage});
-  background-size: auto 400px;
+const FinalSection = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(${FinalBgImage});
+  background-size: contain;
   background-repeat: no-repeat;
-  background-position: top center;
-  margin: 0 auto;
+  background-position: center;
+  width: 800px;
+  height: 600px;
 
-  @media ${device.mobileL} {
-    width: 100%;
-    background-size: contain;
-    background-position: top center;
-    min-height: 330px;
+  h2 {
+    margin-top: auto;
+
+    @media ${device.mobileL} {
+      margin-bottom: 0.5rem;
+    }
   }
 
   @media ${device.tablet} {
-    width: 100%;
-    background-size: contain;
-    background-position: top center;
-    min-height: 400px;
+    width: 500px;
+    height: 400px;
+  }
+
+  @media ${device.mobileL} {
+    width: 350px;
+    height: 350px;
   }
 `;

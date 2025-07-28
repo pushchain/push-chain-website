@@ -80,7 +80,7 @@ const StatsWrapper = styled.div`
   width: 100%;
   background-image: url(${StatsBg});
   background-repeat: no-repeat;
-  background-position: center -60%;
+  background-position: center;
   background-size: contain;
   padding-bottom: 200px;
   margin-top: 100px;
