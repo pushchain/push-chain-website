@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import { TbArrowRight } from 'react-icons/tb';
@@ -14,22 +14,11 @@ type InfoBarProps = {
 };
 
 const InfoBar = ({ text, url }: InfoBarProps) => {
-  const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
-  const [isHydrated, setIsHydrated] = useState(false);
-  const [shouldShow, setShouldShow] = useState(false);
-
-  useEffect(() => {
-    setIsHydrated(true);
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('showAlertBar');
-      setShouldShow(showAlertBar && stored !== 'false');
-    } else {
-      setShouldShow(showAlertBar);
-    }
-  }, [showAlertBar]);
+  const { setShowAlertBar, isHydrated, shouldShowAlertBar } =
+    useContext(AccountContext);
 
   if (!isHydrated) return null;
-  if (!shouldShow) return null;
+  if (!shouldShowAlertBar) return null;
 
   const handleDismiss = () => {
     setShowAlertBar(false);

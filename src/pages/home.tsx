@@ -54,9 +54,8 @@ import { structure } from '@site/src/config/globals';
 export default function Home() {
   // Internationalization
   const { t, i18n } = useTranslation();
-  const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
+  const { isHydrated, shouldShowAlertBar } = useContext(AccountContext);
 
-  const [showMoreTeamMembers, setShowMoreTeamMembers] = useState(false);
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
   const isLaptop = useMediaQuery(device.laptop);
@@ -122,7 +121,7 @@ export default function Home() {
         </script>
       </Head>
 
-      <HomeWrapper showAlertBar={showAlertBar}>
+      <HomeWrapper showAlertBar={isHydrated ? shouldShowAlertBar : false}>
         {/* GLOW CIRCLE */}
         <GlowCircle />
 
