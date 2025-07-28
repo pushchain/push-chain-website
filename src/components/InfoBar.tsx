@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 import { TbArrowRight } from 'react-icons/tb';
@@ -15,8 +15,21 @@ type InfoBarProps = {
 
 const InfoBar = ({ text, url }: InfoBarProps) => {
   const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [shouldShow, setShouldShow] = useState(false);
 
-  if (!showAlertBar) return null;
+  useEffect(() => {
+    setIsHydrated(true);
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('showAlertBar');
+      setShouldShow(showAlertBar && stored !== 'false');
+    } else {
+      setShouldShow(showAlertBar);
+    }
+  }, [showAlertBar]);
+
+  if (!isHydrated) return null;
+  if (!shouldShow) return null;
 
   const handleDismiss = () => {
     setShowAlertBar(false);
@@ -78,8 +91,19 @@ const HeroButton = styled(Button)`
   border-radius: 12px;
   background: transparent;
 
+  &:after {
+    background: none;
+  }
+
   &:hover:after {
     opacity: 1 !important;
+  }
+
+  &:hover span {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    transition: all 0.2s ease-in-out;
   }
 
   @media ${device.mobileL} {
@@ -87,11 +111,18 @@ const HeroButton = styled(Button)`
     gap: 4px;
   }
 
-  svg,
   span,
   .star-icon {
     @media ${device.mobileL} {
       display: none;
+    }
+  }
+
+  .arrow-icon {
+    @media ${device.mobileL} {
+      min-width: 24px;
+      min-height: 24px;
+      flex-shrink: 0;
     }
   }
 
@@ -101,6 +132,8 @@ const HeroButton = styled(Button)`
     font-weight: 600;
     line-height: 142%;
     margin-left: 24px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
   }
 
   @media ${device.tablet} {

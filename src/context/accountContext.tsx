@@ -15,11 +15,15 @@ export const AccountProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [showAlertBar, setShowAlertBarState] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return true;
-    const stored = localStorage.getItem('showAlertBar');
-    return stored === null ? true : stored === 'true';
-  });
+  const [showAlertBar, setShowAlertBarState] = useState<boolean>(true);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('showAlertBar');
+      const shouldShow = stored === null ? true : stored === 'true';
+      setShowAlertBarState(shouldShow);
+    }
+  }, []);
 
   const setShowAlertBar = (val: boolean) => {
     setShowAlertBarState(val);
