@@ -623,11 +623,11 @@ const Container = styled.div`
     border-radius: 16px;
     border: 1px solid rgba(112, 70, 248, 0.4);
     background: rgba(0, 0, 0, 0.1);
-    background-blend-mode: plus-lighter;
     box-shadow:
       2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
       1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
+    background-blend-mode: plus-lighten;
   }
 
   // &::before {

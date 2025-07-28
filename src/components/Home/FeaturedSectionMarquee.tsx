@@ -119,7 +119,7 @@ const Marquee = styled.div<{ reverse?: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  animation: ${VerticalScroll} 30s linear infinite;
+  animation: ${VerticalScroll} 60s linear infinite;
   animation-direction: ${(props) => (props.reverse ? 'reverse' : 'normal')};
   will-change: transform;
 
