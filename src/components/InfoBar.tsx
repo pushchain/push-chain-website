@@ -56,7 +56,7 @@ const BarContainer = styled.div`
   width: 100%;
   padding: 0 16px;
   box-sizing: border-box;
-  height: 75px;
+  height: 58px;
   cursor: pointer;
 
   background: linear-gradient(90deg, #3524ed 0%, #d548ec 50%, #3524ed 100%);
@@ -78,6 +78,10 @@ const HeroButton = styled(Button)`
   border-radius: 12px;
   background: transparent;
 
+  &:hover:after {
+    opacity: 1 !important;
+  }
+
   @media ${device.mobileL} {
     width: 80%;
     gap: 4px;
@@ -85,7 +89,6 @@ const HeroButton = styled(Button)`
 
   svg,
   span,
-  // .arrow-icon,
   .star-icon {
     @media ${device.mobileL} {
       display: none;

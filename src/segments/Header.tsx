@@ -712,7 +712,7 @@ const HeaderItemH = styled(ItemH)`
   backdrop-filter: blur(5px);
 
   margin: ${({ showAlertBar }) =>
-    `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
+    `${showAlertBar ? 80 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
       GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT
     }px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${
       GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT
@@ -725,7 +725,7 @@ const HeaderItemH = styled(ItemH)`
 
   @media ${device.laptopM} {
     margin: ${({ showAlertBar }) =>
-      `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${
+      `${showAlertBar ? 74 : GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${
         GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT
       }px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${
         GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT
@@ -737,7 +737,7 @@ const HeaderItemH = styled(ItemH)`
 
   @media ${device.mobileL} {
     margin: ${({ showAlertBar }) =>
-      `${showAlertBar ? 91 : GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${
+      `${showAlertBar ? 74 : GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${
         GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT
       }px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${
         GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT
@@ -1356,10 +1356,17 @@ const PortalLauncher = styled(A)`
   height: auto;
   min-width: 140px;
   box-sizing: border-box;
-  // display: none;
 
   @media ${device.laptop} {
     display: block;
+  }
+
+  @media (max-width: 522px) {
+    display: none;
+  }
+
+  @media (max-width: 522px) {
+    display: none;
   }
 
   @media ${device.mobileL} {
