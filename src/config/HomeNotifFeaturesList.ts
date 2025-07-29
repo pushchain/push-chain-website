@@ -118,8 +118,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/evm-compatible',
-          // videosrc: 'chain/evm-compatible',
-          // videowebm: true,
+          videosrc: 'chain/evm-compatible-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
@@ -172,8 +172,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/universal-smart-contract',
-          // videosrc: 'chain/wallet-abstraction-video',
-          // videowebm: true,
+          videosrc: 'chain/universal-smart-contract-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
