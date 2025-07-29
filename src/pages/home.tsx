@@ -448,7 +448,7 @@ export default function Home() {
                 direction='left'
                 speed={50}
                 gradient={true}
-                gradientColor={[13, 13, 16]}
+                gradientColor={'transparent'}
                 gradientWidth={80}
                 pauseOnHover={false}
               >
@@ -484,7 +484,7 @@ export default function Home() {
                 direction='right'
                 speed={50}
                 gradient={true}
-                gradientColor={[13, 13, 16]}
+                gradientColor={'transparent'}
                 gradientWidth={80}
                 pauseOnHover={false}
               >
@@ -917,7 +917,6 @@ const InvestorCard = styled.div`
   flex-shrink: 0;
 
   // backdrop-filter: blur(10px);
-  background-blend-mode: lighten;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
