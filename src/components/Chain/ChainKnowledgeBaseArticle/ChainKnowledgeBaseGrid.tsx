@@ -8,8 +8,8 @@ import useMediaQuery from '../../../hooks/useMediaQuery';
 import { createGridRows } from '../utils/CreateGridRows';
 
 import { H3, ItemV } from '../../../css/SharedStyling';
+import ChannelKnowledgeBaseComponentItem from '../ChainKnowledgeBase/ChannelKnowledgeBaseComponentItem';
 import { knowledgeBaseArticleContent } from '../config/ChainKnowledgeBaseConfig';
-import ChannelKnowledgeBaseComponentItem from './ChannelKnowledgeBaseComponentItem';
 
 interface KnowledgeBaseItem {
   id: string;
