@@ -7,8 +7,8 @@ description: 'Evolution of Push'
 text: 'One of the defining aspects of decentralized networks is their lack of a central authority to govern how they operate. Instead, these networks rely on a set of rules and systems to securely communicate and reach consensus on the overall state of the network.'
 tags: [Push Chain, Shared App Experience, Shared State Blockchain]
 ---
-
 import { ImageText, VideoContainer } from '@site/src/css/SharedStyling';
+
 
 ![Cover Image of Evolution of Push](./cover-image.webp)
 

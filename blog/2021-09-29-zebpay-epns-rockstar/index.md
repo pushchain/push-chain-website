@@ -5,12 +5,7 @@ description: 'ZebPay ❤️ EPNS ROCKSTAR'
 authors: [push]
 image: './cover-image.webp'
 text: "We have awesome news to share! To celebrate $PUSH listing on ZebPay, we are thrilled to announce that this week’s $ROCKSTAR #NFT will be sponsored by none other than ZebPay. This week’s winner goes home with $ROCKSTAR NFT + 2400 $PUSH (~$6,500), and 10 top shortlisted entries win Goodies from ZebPay 🎁"
-tags: [ Ethereum
-,Zebpay
-,Mème
-,Contests
-,Push
-]
+tags: [Ethereum, Zebpay, Mème, Contests, Push]
 ---
 
 import { ImageText } from '@site/src/css/SharedStyling';
