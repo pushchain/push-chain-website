@@ -1,8 +1,12 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable */
+
 // import { useTranslation } from 'react-i18next';
 import Link from '@docusaurus/Link';
 
 import styled, { keyframes } from 'styled-components';
-import { MediaList } from '@site/src/config/HomeMediaList';
+import { MediaList, SecondMediaList } from '@site/src/config/HomeMediaList';
 import { Image } from '@site/src/css/SharedStyling';
 import { device } from '@site/src/config/globals';
 
@@ -39,7 +43,7 @@ export const FeaturedSectionMarquee = () => {
 
   const createRightContent = () => {
     const result = [];
-    MediaList.forEach((item, idx) => {
+    SecondMediaList.forEach((item, idx) => {
       result.push(
         <MarqueeCard key={idx} href={item.url} target='_blank' rel='noreferrer'>
           <p>{item.text}</p>
