@@ -424,6 +424,8 @@ export default function Home() {
         {/* BACKED BY SECTION */}
         <BackedBySection id='investors'>
           <BackedByContent padding='0px 0px' alignSelf='center'>
+            <FeaturedGlowCircle />
+
             <InvestorItem alignItems='stretch'>
               <InvestorHeader
                 color='#FFFFFF'
@@ -436,8 +438,6 @@ export default function Home() {
                 {t('home.investors-section.title')}
               </InvestorHeader>
             </InvestorItem>
-
-            <FeaturedGlowCircle />
 
             <MarqueeAnimationContainer
               margin={isMobile ? '24px 0 2.625rem 0' : '64px 0 2.625rem 0'}
@@ -583,24 +583,30 @@ const GlowCircle = styled.div`
   pointer-events: none;
   z-index: 999999;
 
-  // width: 543px;
-  // height: 538px;
-  // left: 35%;
-  // top: 29px;
+  width: 600px;
+  height: 600px;
+  left: 40%;
+  top: 159px;
 
-  // @media ${device.tablet} {
-  //   width: 543px;
-  //   height: 538px;
-  //   left: 238px;
-  //   top: 29px;
-  // }
+  @media ${device.laptopL} {
+    width: 500px;
+    height: 500px;
+    left: 35%;
+  }
 
-  // @media ${device.mobileL} {
-  //   width: 395px;
-  //   height: 392px;
-  //   left: -12px;
-  //   top: 102px;
-  // }
+  @media ${device.tablet} {
+    width: 543px;
+    height: 538px;
+    left: 238px;
+    top: 29px;
+  }
+
+  @media ${device.mobileL} {
+    width: 395px;
+    height: 392px;
+    left: -12px;
+    top: 102px;
+  }
 `;
 
 const FeaturedGlowCircle = styled.div`
@@ -611,10 +617,16 @@ const FeaturedGlowCircle = styled.div`
   pointer-events: none;
   z-index: 999999;
 
-  width: 543px;
-  height: 538px;
-  left: 446px;
-  top: 0px;
+  width: 443px;
+  height: 338px;
+  left: 35%;
+  top: 150px;
+
+  @media ${device.laptopL} {
+    width: 500px;
+    height: 500px;
+    left: 25%;
+  }
 
   @media ${device.tablet} {
     width: 543px;
@@ -905,7 +917,7 @@ const InvestorCard = styled.div`
   flex-shrink: 0;
 
   // backdrop-filter: blur(10px);
-  // background-blend-mode: lighten;
+  background-blend-mode: lighten;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
@@ -913,9 +925,6 @@ const InvestorCard = styled.div`
 
 const InvestorIcon = styled(Image)`
   margin: auto auto;
-  // fix filters
-  // filter: grayscale(100%);
-  // filter: invert(77%) sepia(7%) saturate(211%) hue-rotate(182deg) brightness(95%) contrast(81%);
 `;
 
 const InvestorDetails = styled(ItemV)`
