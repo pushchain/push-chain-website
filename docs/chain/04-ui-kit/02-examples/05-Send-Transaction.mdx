@@ -27,6 +27,8 @@ import {
   usePushChainClient,
   PushUI,
 } from '@pushchain/ui-kit';
+import { useState } from 'react';
+import { PushChain } from '@pushchain/core';
 
 function App() {
   // Define Wallet Config
@@ -82,7 +84,7 @@ function App() {
             <>
                 <p>Txn Hash: {txnHash}</p>
                 <a
-                    href={pushChainClient.explorer.getTransactionUrl(txnHash)}
+                    href={pushChainClient?.explorer.getTransactionUrl(txnHash)}
                     target="_blank"
                     rel="noopener noreferrer"
                 >

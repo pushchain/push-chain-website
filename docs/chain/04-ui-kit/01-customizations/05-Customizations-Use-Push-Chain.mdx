@@ -28,18 +28,16 @@ import {
   usePushChainClient,
   usePushChain,
 } from '@pushchain/ui-kit';
-import { useState, useEffect } from 'react';
 
 function App() {
   // Create a component that uses the hook inside the provider context
-
   const Component = () => {
     const { PushChain } = usePushChain();
     const { pushChainClient, isInitialized } = usePushChainClient();
 
     return (
         <>
-            {isInitialized && (
+            {isInitialized && pushChainClient && (
                 <p>Chain Agnostic: {
                     PushChain.utils.account.toChainAgnostic(
                         pushChainClient.universal.origin.address,

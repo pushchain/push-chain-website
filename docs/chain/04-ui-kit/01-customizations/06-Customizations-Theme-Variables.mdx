@@ -64,6 +64,7 @@ import {
   PushUniversalAccountButton,
   PushUI,
 } from '@pushchain/ui-kit';
+import { useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
@@ -125,9 +126,10 @@ import {
   PushUniversalAccountButton,
   PushUI,
 } from '@pushchain/ui-kit';
+import { useState } from 'react';
 
 function App() {
-  const [theme, setTheme] = React.useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   return (
     <PushUniversalWalletProvider

@@ -41,8 +41,8 @@ function App() {
       appPreview: false,
     },
     modal: {
-      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
-      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      loginLayout: PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.LAYOUT.HOVER,
       appPreview: true,
     },
   };
@@ -75,9 +75,6 @@ function App() {
   };
 
   function WalletUI() {
-    const { universalAccount } = usePushWalletContext('wallet1');
-    const { universalAccount: secondAccount } = usePushWalletContext('wallet2');
-
     return (
       <div
         style={{
