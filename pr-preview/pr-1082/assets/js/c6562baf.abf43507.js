@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[40548],{288055:e=>{e.exports=JSON.parse('{"label":"Universal Execution Layer","permalink":"/push-website/pr-preview/pr-1082/blog/tags/universal-execution-layer","allTagsPath":"/push-website/pr-preview/pr-1082/blog/tags","count":2,"unlisted":false}')}}]);

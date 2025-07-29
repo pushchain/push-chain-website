@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[93008],{825249:e=>{e.exports=JSON.parse('{"label":"Governance","permalink":"/push-website/pr-preview/pr-1082/blog/tags/governance","allTagsPath":"/push-website/pr-preview/pr-1082/blog/tags","count":21,"unlisted":false}')}}]);
