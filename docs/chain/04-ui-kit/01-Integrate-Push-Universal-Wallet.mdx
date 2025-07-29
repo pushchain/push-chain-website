@@ -102,6 +102,7 @@ import {
   PushUniversalWalletProvider,
   PushUniversalAccountButton,
   usePushWalletContext,
+  usePushChainClient,
   PushUI,
 } from '@pushchain/ui-kit';
 
@@ -166,8 +167,8 @@ function App() {
       appPreview: true,
     },
     modal: {
-      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
-      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      loginLayout: PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.LAYOUT.HOVER,
       appPreview: true,
     },
   };
@@ -211,6 +212,7 @@ function App() {
 // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
 // customPropMinimized='false'
 // Import necessary components from @pushchain/ui-kit
+import { PushChain } from '@pushchain/core';
 import {
   PushUniversalWalletProvider,
   PushUniversalAccountButton,
@@ -218,6 +220,7 @@ import {
   usePushChainClient,
   PushUI,
 } from '@pushchain/ui-kit';
+import { useState } from 'react';
 
 function App() {
   // Define Wallet Config
@@ -232,11 +235,12 @@ function App() {
       appPreview: true,
     },
     modal: {
-      loginLayout: PushUI.CONSTANTS.LOGIN.SPLIT,
-      connectedLayout: PushUI.CONSTANTS.CONNECTED.HOVER,
+      loginLayout: PushUI.CONSTANTS.LOGIN.LAYOUT.SPLIT,
+      connectedLayout: PushUI.CONSTANTS.CONNECTED.LAYOUT.HOVER,
       appPreview: true,
     },
   };
+
 
   // Define Your App Preview
   const appMetadata = {
@@ -293,7 +297,7 @@ function App() {
             <>
                 <p>Txn Hash: {txnHash}</p>
                 <a
-                    href={pushChainClient.explorer.getTransactionUrl(txnHash)}
+                    href={pushChainClient?.explorer.getTransactionUrl(txnHash)}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
