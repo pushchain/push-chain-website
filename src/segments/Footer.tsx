@@ -259,19 +259,21 @@ function Footer() {
           </Content>
         </FooterSection>
 
-        <FooterImage>
-          <Image
-            src={
-              require(`@site/static/assets/website/footer/PushFooterImg.webp`)
-                .default
-            }
-            srcSet={`${require(`@site/static/assets/website/footer/PushFooterImg@2x.webp`).default} 2x, ${require(`@site/static/assets/website/footer/PushFooterImg@3x.webp`).default} 3x`}
-            alt={`Push Chain`}
-            loading='lazy'
-            width='100%'
-            height='auto'
-          />
-        </FooterImage>
+        <Section>
+          <ImageContent>
+            <Image
+              src={
+                require(`@site/static/assets/website/footer/PushFooterImg.webp`)
+                  .default
+              }
+              srcSet={`${require(`@site/static/assets/website/footer/PushFooterImg@2x.webp`).default} 2x, ${require(`@site/static/assets/website/footer/PushFooterImg@3x.webp`).default} 3x`}
+              alt={`Push Chain`}
+              loading='lazy'
+              width='100%'
+              height='auto'
+            />
+          </ImageContent>
+        </Section>
       </StyledFooter>
     </ChainFooterContainer>
   );
@@ -333,12 +335,9 @@ const FooterContainer = styled.div`
   }
 `;
 
-const FooterImage = styled.div`
-  width: 95%;
-  margin: 200px auto;
-
+const ImageContent = styled(Content)`
   @media ${device.tablet} {
-    margin: 100px auto;
+    padding-top: 0px;
   }
 `;
 
