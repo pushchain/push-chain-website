@@ -91,6 +91,12 @@ const Wrapper = styled.div`
   flex-direction: row;
   gap: 32px;
   overflow: hidden;
+
+  @media ${device.mobileL} {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 2px;
+  }
 `;
 
 const MarqueeWrapper = styled.div<{ reverse?: boolean }>`

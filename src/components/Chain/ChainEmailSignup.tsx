@@ -142,8 +142,8 @@ const Button = styled.button<{
   }
 
   @media ${device.mobileL} {
-    height: 48px;
-    width: 48px;
+    height: 72px;
+    width: 72px;
   }
 
   & svg {

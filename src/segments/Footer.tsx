@@ -144,7 +144,7 @@ function Footer() {
                 </FooterColumn>
 
                 <FooterColumns>
-                  {['resources', 'community', 'developers', 'product'].map(
+                  {['resources', 'developers', 'community', 'product'].map(
                     (key) => (
                       <FooterColumn key={key}>
                         <FooterLinks>
@@ -226,7 +226,7 @@ function Footer() {
                   </FooterAnchorIcon>
 
                   <FooterAnchorIcon
-                    href='https://github.com/push-protocol/'
+                    href='https://github.com/pushchain/'
                     title='Push Github'
                     target='_blank'
                   >
