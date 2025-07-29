@@ -57,7 +57,7 @@ export const InvList = {
       alt: 'Push Investor - A Capital',
     },
     {
-      srcref: 'THE-LAO',
+      srcref: 'The-Lao',
       id: 'the-lao',
       title: null,
       subtitle: null,

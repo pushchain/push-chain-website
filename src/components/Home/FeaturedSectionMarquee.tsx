@@ -19,17 +19,15 @@ export const FeaturedSectionMarquee = () => {
     MediaList.forEach((item, idx) => {
       result.push(
         <MarqueeCard key={idx} href={item.url} target='_blank' rel='noreferrer'>
-          <p>
-            We saw a driven, innovative builder who was deeply committed to
-            Ethereum's growth and success.
-          </p>
+          <p>{item.text}</p>
           <Image
             src={
-              require(`@site/static/assets/website/coverage/coindesk.png`)
-                .default
+              require(
+                `@site/static/assets/website/coverage/${item.srcref}.webp`
+              ).default
             }
-            srcSet={`${require(`@site/static/assets/website/coverage/coindesk@2x.png`).default} 2x, ${require(`@site/static/assets/website/coverage/coindesk@3x.png`).default} 3x`}
-            alt={`Media coverage ${idx + 1}`}
+            srcSet={`${require(`@site/static/assets/website/coverage/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/coverage/${item.srcref}@3x.webp`).default} 3x`}
+            alt={`Media coverage from ${item.srcref}`}
             loading='lazy'
           />
         </MarqueeCard>
@@ -44,17 +42,15 @@ export const FeaturedSectionMarquee = () => {
     MediaList.forEach((item, idx) => {
       result.push(
         <MarqueeCard key={idx} href={item.url} target='_blank' rel='noreferrer'>
-          <p>
-            We saw a driven, innovative builder who was deeply committed to
-            Ethereum's growth and success.
-          </p>
+          <p>{item.text}</p>
           <Image
             src={
-              require(`@site/static/assets/website/coverage/coindesk.png`)
-                .default
+              require(
+                `@site/static/assets/website/coverage/${item.srcref}.webp`
+              ).default
             }
-            srcSet={`${require(`@site/static/assets/website/coverage/coindesk@2x.png`).default} 2x, ${require(`@site/static/assets/website/coverage/coindesk@3x.png`).default} 3x`}
-            alt={`Media coverage ${idx + 1}`}
+            srcSet={`${require(`@site/static/assets/website/coverage/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/coverage/${item.srcref}@3x.webp`).default} 3x`}
+            alt={`Media coverage from ${item.srcref}`}
             loading='lazy'
           />
         </MarqueeCard>
@@ -157,7 +153,8 @@ const MarqueeCard = styled(Link)`
 
   img {
     width: auto;
-    height: 35px;
+    height: auto;
+    // height: 35px;
     margin: 0 auto;
   }
 

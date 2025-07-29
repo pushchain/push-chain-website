@@ -1,50 +1,75 @@
 export const MediaList = [
   {
-    url: 'https://blog.ethereum.org/2020/08/19/esp-beyond-grants',
-    urltranslatedtitle: 'home.featured-section.article1.link-text',
-    translatedtitle: 'home.featured-section.article1.text',
-    srcref: 'ethfoundation',
+    url: 'https://cointelegraph.com/news/unstoppable-domains-launches-badge-gated-group-chat-feature-username-holders',
+    text: 'We are thrilled to announce that Push Protocol, a leading decentralized communications protocol for Web3, has now launched on BNB Chain.',
+    srcref: 'binance-chain',
   },
   {
     url: 'https://www.coindesk.com/business/2022/04/14/ethereum-push-notification-service-raises-10m-at-131m-valuation/',
-    urltranslatedtitle: 'home.featured-section.article2.link-text',
-    translatedtitle: 'home.featured-section.article2.text',
+    text: 'Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats',
     srcref: 'coindesk',
   },
   {
-    url: 'https://defiprime.com/ethereum-push-notification-service',
-    urltranslatedtitle: 'home.featured-section.article3.link-text',
-    translatedtitle: 'home.featured-section.article3.text',
-    srcref: 'defiprime',
-  },
-  {
-    url: 'https://x.com/PushChain/status/1336359832081768448',
-    urltranslatedtitle: 'home.featured-section.article4.link-text',
-    translatedtitle: 'home.featured-section.article4.text',
-    srcref: 'balajitweethandle',
-  },
-  {
-    url: 'https://beincrypto.com/learn/web3-communication-networks/?utm_source=twitter&utm_medium=URL&utm_campaign=learn',
-    urltranslatedtitle: 'home.featured-section.article5.link-text',
-    translatedtitle: 'home.featured-section.article5.text',
-    srcref: 'beincrypto',
-  },
-  {
-    url: 'https://cointelegraph.com/news/unstoppable-domains-launches-badge-gated-group-chat-feature-username-holders',
-    urltranslatedtitle: 'home.featured-section.article6.link-text',
-    translatedtitle: 'home.featured-section.article6.text',
-    srcref: 'cointelegraph',
-  },
-  {
     url: 'https://thedefiant.io/unstoppable-domains-launches-token-gated-group-chats',
-    urltranslatedtitle: 'home.featured-section.article7.link-text',
-    translatedtitle: 'home.featured-section.article7.text',
+    text: 'Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams.',
     srcref: 'defiant',
   },
   {
     url: 'https://erc4337.mirror.xyz/ghX6mENwSgsNqLz7Gqlt940akHzYWZH4LRaRAgx77VI',
-    urltranslatedtitle: 'home.featured-section.article8.link-text',
-    translatedtitle: 'home.featured-section.article8.text',
-    srcref: 'erc',
+    text: 'User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google.',
+    srcref: 'balaji',
+  },
+  {
+    url: 'https://defiprime.com/ethereum-push-notification-service',
+    text: 'Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications.',
+    srcref: 'defiprime',
+  },
+  {
+    url: 'https://blog.ethereum.org/2020/08/19/esp-beyond-grants',
+    text: 'Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call “a missing piece of web3.”',
+    srcref: 'ethfoundation',
+  },
+  {
+    url: 'https://beincrypto.com/learn/web3-communication-networks/?utm_source=twitter&utm_medium=URL&utm_campaign=learn',
+    text: 'How Web3 Communication Networks Work: A Technical Deep Dive',
+    srcref: 'beincrypto',
+  },
+];
+
+export const SecondMediaList = [
+  {
+    url: 'https://cointelegraph.com/news/unstoppable-domains-launches-badge-gated-group-chat-feature-username-holders',
+    text: 'We are thrilled to announce that Push Protocol, a leading decentralized communications protocol for Web3, has now launched on BNB Chain.',
+    srcref: 'binance-chain',
+  },
+  {
+    url: 'https://www.coindesk.com/business/2022/04/14/ethereum-push-notification-service-raises-10m-at-131m-valuation/',
+    text: 'Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats',
+    srcref: 'coindesk',
+  },
+  {
+    url: 'https://thedefiant.io/unstoppable-domains-launches-token-gated-group-chats',
+    text: 'Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams.',
+    srcref: 'defiant',
+  },
+  {
+    url: 'https://erc4337.mirror.xyz/ghX6mENwSgsNqLz7Gqlt940akHzYWZH4LRaRAgx77VI',
+    text: 'User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google.',
+    srcref: 'balaji',
+  },
+  {
+    url: 'https://defiprime.com/ethereum-push-notification-service',
+    text: 'Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications.',
+    srcref: 'defiprime',
+  },
+  {
+    url: 'https://blog.ethereum.org/2020/08/19/esp-beyond-grants',
+    text: 'Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call “a missing piece of web3.”',
+    srcref: 'ethfoundation',
+  },
+  {
+    url: 'https://beincrypto.com/learn/web3-communication-networks/?utm_source=twitter&utm_medium=URL&utm_campaign=learn',
+    text: 'How Web3 Communication Networks Work: A Technical Deep Dive',
+    srcref: 'beincrypto',
   },
 ];
