@@ -5,6 +5,7 @@ type AccountContextType = {
   setShowAlertBar: (val: boolean) => void;
   isHydrated: boolean;
   shouldShowAlertBar: boolean;
+  delayedShowAlertBar: boolean;
 };
 
 const AccountContext = createContext<AccountContextType>({
@@ -12,6 +13,7 @@ const AccountContext = createContext<AccountContextType>({
   setShowAlertBar: () => {},
   isHydrated: false,
   shouldShowAlertBar: false,
+  delayedShowAlertBar: false,
 });
 
 export const AccountProvider = ({
@@ -22,6 +24,9 @@ export const AccountProvider = ({
   const [showAlertBar, setShowAlertBarState] = useState<boolean>(true);
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
   const [shouldShowAlertBar, setShouldShowAlertBar] = useState<boolean>(false);
+  const [delayedShowAlertBar, setDelayedShowAlertBar] =
+    useState<boolean>(false);
+  const [wasEverVisible, setWasEverVisible] = useState<boolean>(false);
 
   React.useEffect(() => {
     setIsHydrated(true);
@@ -30,10 +35,24 @@ export const AccountProvider = ({
       const shouldShow = stored === null ? true : stored === 'true';
       setShowAlertBarState(shouldShow);
       setShouldShowAlertBar(shouldShow);
+      if (shouldShow) setWasEverVisible(true);
     } else {
       setShouldShowAlertBar(showAlertBar);
+      if (showAlertBar) setWasEverVisible(true);
     }
   }, [showAlertBar]);
+
+  React.useEffect(() => {
+    if (shouldShowAlertBar) {
+      setDelayedShowAlertBar(true);
+      setWasEverVisible(true);
+    } else if (wasEverVisible) {
+      const timer = setTimeout(() => {
+        setDelayedShowAlertBar(false);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [shouldShowAlertBar, wasEverVisible]);
 
   const setShowAlertBar = (val: boolean) => {
     setShowAlertBarState(val);
@@ -50,6 +69,7 @@ export const AccountProvider = ({
         setShowAlertBar,
         isHydrated,
         shouldShowAlertBar,
+        delayedShowAlertBar,
       }}
     >
       {children}

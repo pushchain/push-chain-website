@@ -70,6 +70,7 @@ function Header() {
   const [mobileMenuMap, setMobileMenuMap] = useState(defaultMobileMenuState);
   const [scrollDirection, setScrollDirection] = useState(null);
   const [isAlertBarVisible, setIsAlertBarVisible] = useState(true);
+
   const location = useLocation();
   const baseURL = useSiteBaseUrl() || '';
   // const [isAlertVisible, setIsAlertVisible] = useState(true);
@@ -79,7 +80,8 @@ function Header() {
 
   // Internationalization
   const { t, i18n } = useTranslation();
-  const { showAlertBar, setShowAlertBar } = useContext(AccountContext);
+  const { showAlertBar, setShowAlertBar, delayedShowAlertBar } =
+    useContext(AccountContext);
 
   const showMobileMenu = isMobile && isMobileMenuOpen;
 
@@ -318,12 +320,12 @@ function Header() {
             alignSelf='stretch'
             padding={GLOBALS.ADJUSTMENTS.PADDING.SMALL}
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
-            showAlertBar={isAlertBarVisible}
+            showAlertBar={delayedShowAlertBar && isAlertBarVisible}
           >
             <MenuTop
               flex='initial'
               showMobileMenu={showMobileMenu}
-              showAlertBar={isAlertBarVisible}
+              showAlertBar={delayedShowAlertBar && isAlertBarVisible}
             >
               <PushLogoBlackContainer className='headerlogo' flex='initial'>
                 <LinkTo to={useBaseUrl('/')} aria-label='Push'>
@@ -722,6 +724,7 @@ const HeaderItemH = styled(ItemH)`
   padding: ${`${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.LEFT}px`};
   flex-direction: row;
   flex-wrap: nowrap;
+  transition: margin 0.1s ease-out;
 
   @media ${device.laptopM} {
     margin: ${({ showAlertBar }) =>
