@@ -4,11 +4,7 @@
 import React, { useRef, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
-
-const isSafari = () => {
-  if (typeof window === 'undefined') return false;
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-};
+import { isSafari } from './isSafari';
 
 type CustomReactPlayerProps = {
   url: string;

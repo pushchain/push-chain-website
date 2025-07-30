@@ -2,11 +2,6 @@
 // @ts-nocheck
 /* eslint-disable */
 
-const isSafari = () => {
-  if (typeof window === 'undefined') return false;
-  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-};
-
 // React + Web3 Essentials
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -36,6 +31,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 // Internal Configs
 import { device, size } from '@site/src/config/globals';
+import { isSafari } from '@site/src/utils/isSafari';
 
 const Glassy = ({ item }) => {
   const isMobile = useMediaQuery(device.mobileL);
