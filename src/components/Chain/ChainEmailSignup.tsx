@@ -15,6 +15,7 @@ import useEmailValidationAndSend from '@site/src/hooks/useEmailValidationAndSend
 
 // Internal Components
 import { Span } from '@site/src/css/SharedStyling';
+import ArrowRight from '@site/static/assets/website/footer/arrow-right.svg';
 
 export type signupType = {
   showButton?: boolean;
@@ -31,33 +32,6 @@ export type signupType = {
   blendMode?: string;
   boxShadow?: string;
   backdrop?: string;
-};
-
-const ArrowSvg = () => {
-  return (
-    <svg
-      width='72'
-      height='73'
-      viewBox='0 0 72 73'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-    >
-      <path
-        d='M19.1516 36.7957H52.8484'
-        stroke='white'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-      />
-      <path
-        d='M39.1602 23.1074L52.8495 36.7968L39.1602 50.4861'
-        stroke='white'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
-      />
-    </svg>
-  );
 };
 
 export const ChainEmailSignup = (props: signupType) => {
@@ -92,7 +66,7 @@ export const ChainEmailSignup = (props: signupType) => {
               arrowColor={props.arrowColor}
               loaderColor={props.loaderColor}
             >
-              {!isLoading && <ArrowSvg className='arrow' />}
+              {!isLoading && <ArrowRight className='arrow' />}
               {isLoading && <BiLoaderAlt size={32} className='loader' />}
             </Button>
             {isLoading ? <MaskInput /> : null}
