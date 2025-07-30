@@ -23,7 +23,9 @@ export const FeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/any-chain',
-          lottiesrc: 'chain/any-chain-lottie',
+          // lottiesrc: 'chain/any-chain-lottie',
+          videosrc: 'chain/any-chain-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',

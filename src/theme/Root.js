@@ -1,5 +1,6 @@
 // React + Web3 Essentials
 import { useLocation } from '@docusaurus/router';
+
 import React, { useContext } from 'react';
 
 // External Components
@@ -48,7 +49,7 @@ export default function Root({ children }) {
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
   useChainNotification();
-  const { showAlertBar } = useContext(AccountContext);
+  const { showAlertBar, isHydrated } = useContext(AccountContext);
   const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
     location.pathname
   );
@@ -132,7 +133,9 @@ export default function Root({ children }) {
           <ServerStyle from={children} />
 
           {/* Main react children */}
-          <Content isHome={isHome && showAlertBar}>{children}</Content>
+          <Content isHome={isHome && showAlertBar && isHydrated}>
+            {children}
+          </Content>
           <Notification />
 
           {shouldRenderFooter && (

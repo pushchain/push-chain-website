@@ -71,37 +71,34 @@ export const HeroImageSection = () => {
 };
 
 const HeroWrapper = styled.div`
-  height: 680px;
   width: 100%;
+  height: auto;
+`;
+
+const HeroBG = styled.div`
+  position: relative;
+  width: 100%;
+  height: 780px;
+  background-image: url(${require('@site/static/assets/website/hero/hero-image@3x.webp')
+    .default});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 
   @media ${device.laptop} {
     height: 550px;
   }
 
   @media ${device.tablet} {
-    height: auto;
-  }
-`;
-
-const HeroBG = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background-image: url(${require('@site/static/assets/website/hero/hero-image@3x.webp')
-    .default});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: calc(50% + 30px) center;
-
-  @media ${device.tablet} {
     background: none;
+    height: auto;
   }
 `;
 
 const TopLeftText = styled.div`
   position: absolute;
   top: 1rem;
-  left: 4rem;
+  left: 0rem;
 
   h2 {
     color: #fff;
@@ -127,13 +124,12 @@ const TopLeftText = styled.div`
 const BottomRightText = styled.div`
   position: absolute;
   bottom: 1rem;
-  right: 10rem;
+  right: 0rem;
   display: flex;
   flex-direction: column;
 
   @media ${device.laptop} {
     bottom: 0;
-    right: 5rem;
   }
 
   span {
