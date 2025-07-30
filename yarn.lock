@@ -4933,9 +4933,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^0.1.40":
-  version: 0.1.41
-  resolution: "@pushchain/core@npm:0.1.41"
+"@pushchain/core@npm:0.1.42, @pushchain/core@npm:^0.1.42":
+  version: 0.1.42
+  resolution: "@pushchain/core@npm:0.1.42"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@coral-xyz/anchor": "npm:^0.31.0"
@@ -4945,31 +4945,34 @@ __metadata:
     "@cosmjs/stargate": "npm:^0.33.1"
     "@cosmjs/tendermint-rpc": "npm:0.33.1"
     "@solana/web3.js": "npm:^1.68.0"
+    buffer: "npm:^6.0.3"
     cosmjs-types: "npm:0.9.0"
     ethers: "npm:^6.14.3"
     protobufjs: "npm:7.4.0"
     tslib: "npm:^2.3.0"
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
-  checksum: 10c0/7e4c77e323031bf9b9d06baf97e49313870f00b39a7e069f45ef1400be13f4a83d53f563f1af184e6d28d99ade2a72c819ad5f9575067d493d691d73e1130895
+  checksum: 10c0/02c365392668326c264db7be033c1acc26dcb812c39e842c56351adc7080a3883ce2c1c52f55da2e6807e144d3e8e8aaf54381a6027adf293bbb4a8611bf5490
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^1.1.25":
-  version: 1.1.25
-  resolution: "@pushchain/ui-kit@npm:1.1.25"
+"@pushchain/ui-kit@npm:^1.1.28":
+  version: 1.1.28
+  resolution: "@pushchain/ui-kit@npm:1.1.28"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^0.1.40"
+    "@pushchain/core": "npm:0.1.42"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.5"
+    buffer: "npm:^6.0.3"
     ethers: "npm:^6.13.5"
     react: "npm:^18.3.1"
+    react-is: "npm:^19.1.0"
     styled-components: "npm:^5.3.8"
     tslib: "npm:^2.3.0"
     viem: "npm:^2.23.9"
-  checksum: 10c0/b1423338febc9d9772824fe6146646bd7ac91bfbe7edfb6628e3439311794de08485144c58bbb786c06bea442dcf9aaba14764bf5880c305bbe2dddb6525eb85
+  checksum: 10c0/7d02a0e6fb969e7595a3fb78baf5050e0fdb010c259a792149caedd905ffd4684dbdd14cf97a86b29976484b8a955a939cfb446eef1105f51c732fe0e8b7858e
   languageName: node
   linkType: hard
 
@@ -20179,8 +20182,8 @@ __metadata:
     "@docusaurus/theme-mermaid": "npm:3.0.1"
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
-    "@pushchain/core": "npm:^0.1.40"
-    "@pushchain/ui-kit": "npm:^1.1.25"
+    "@pushchain/core": "npm:^0.1.42"
+    "@pushchain/ui-kit": "npm:^1.1.28"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
@@ -20616,6 +20619,13 @@ __metadata:
   version: 18.3.1
   resolution: "react-is@npm:18.3.1"
   checksum: 10c0/f2f1e60010c683479e74c63f96b09fb41603527cd131a9959e2aee1e5a8b0caf270b365e5ca77d4a6b18aae659b60a86150bb3979073528877029b35aecd2072
+  languageName: node
+  linkType: hard
+
+"react-is@npm:^19.1.0":
+  version: 19.1.1
+  resolution: "react-is@npm:19.1.1"
+  checksum: 10c0/3dba763fcd69835ae263dcd6727d7ffcc44c1d616f04b7329e67aefdc66a567af4f8dcecdd29454c7a707c968aa1eb85083a83fb616f01675ef25e71cf082f97
   languageName: node
   linkType: hard
 
