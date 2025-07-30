@@ -6,7 +6,6 @@
 import React from 'react';
 
 // External Components
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BiLoaderAlt } from 'react-icons/bi';
 import styled from 'styled-components';
 
@@ -32,6 +31,33 @@ export type signupType = {
   blendMode?: string;
   boxShadow?: string;
   backdrop?: string;
+};
+
+const ArrowSvg = () => {
+  return (
+    <svg
+      width='72'
+      height='73'
+      viewBox='0 0 72 73'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        d='M19.1516 36.7957H52.8484'
+        stroke='white'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+      <path
+        d='M39.1602 23.1074L52.8495 36.7968L39.1602 50.4861'
+        stroke='white'
+        stroke-width='2'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+    </svg>
+  );
 };
 
 export const ChainEmailSignup = (props: signupType) => {
@@ -66,7 +92,7 @@ export const ChainEmailSignup = (props: signupType) => {
               arrowColor={props.arrowColor}
               loaderColor={props.loaderColor}
             >
-              {!isLoading && <AiOutlineArrowRight size={32} />}
+              {!isLoading && <ArrowSvg className='arrow' />}
               {isLoading && <BiLoaderAlt size={32} className='loader' />}
             </Button>
             {isLoading ? <MaskInput /> : null}
@@ -147,7 +173,13 @@ const Button = styled.button<{
     width: 72px;
   }
 
-  & svg {
+  .arrow {
+    height: 100%;
+    width: 100%;
+    color: ${(props) => props.arrowColor || '#e492ff'};
+  }
+
+  .loader {
     height: 1.5rem;
     width: 1.5rem;
     color: ${(props) => props.arrowColor || '#e492ff'};
@@ -229,7 +261,7 @@ const SignupInputField = styled.input`
 
 const MaskInput = styled.div`
   position: absolute;
-  background: #fff;
+  background: transparent;
   top: 0;
   left: 0;
   right: 0;
