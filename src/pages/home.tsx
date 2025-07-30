@@ -41,7 +41,7 @@ import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
 import FinalBgImage from '../../static/assets/website/home/others/push-chain-final@3x.webp';
 
 // Internal Configs
-import { NotifFeaturesList } from '@site/src/config/HomeNotifFeaturesList';
+import { FeaturesList } from '@site/src/config/HomeFeaturesList';
 import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
@@ -204,7 +204,7 @@ export default function Home() {
           {/* Fix grid */}
           <GridContent alignSelf='center'>
             <GridFeatures>
-              {NotifFeaturesList?.first?.map((item) => (
+              {FeaturesList?.first?.map((item) => (
                 <GridFeatureItem>
                   <Glassy item={item} />
                 </GridFeatureItem>
@@ -212,7 +212,7 @@ export default function Home() {
             </GridFeatures>
 
             <SecondGridFeatures>
-              {NotifFeaturesList?.second?.map((item) => (
+              {FeaturesList?.second?.map((item) => (
                 <GridFeatureItem>
                   <Glassy item={item} />
                 </GridFeatureItem>
@@ -220,7 +220,7 @@ export default function Home() {
             </SecondGridFeatures>
 
             <TabletGridFeatures>
-              {NotifFeaturesList?.tabletOnly?.map((item) => (
+              {FeaturesList?.tabletOnly?.map((item) => (
                 <GridFeatureItem>
                   <Glassy item={item} />
                 </GridFeatureItem>
@@ -228,7 +228,7 @@ export default function Home() {
             </TabletGridFeatures>
 
             <ThirdGridFeatures>
-              {NotifFeaturesList?.third?.map((item) => (
+              {FeaturesList?.third?.map((item) => (
                 <GridFeatureItem>
                   <Glassy item={item} />
                 </GridFeatureItem>

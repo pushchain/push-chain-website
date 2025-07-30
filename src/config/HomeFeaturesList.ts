@@ -1,4 +1,4 @@
-export const NotifFeaturesList = {
+export const FeaturesList = {
   first: [
     {
       config: {
@@ -305,8 +305,8 @@ export const NotifFeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/shared-state',
-          // videosrc: 'chain/wallet-abstraction-video',
-          // videowebm: true,
+          videosrc: 'chain/shared-state-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
