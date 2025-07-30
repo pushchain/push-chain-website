@@ -42,7 +42,7 @@ const Glassy = ({ item }) => {
 
   const [hovered, setHovered] = useState(false);
 
-  const { config, header, body, footer, mockimage, after } = item;
+  const { config, header, body, footer, after } = item;
   const {
     id,
     height,
@@ -506,6 +506,13 @@ const Glassy = ({ item }) => {
                   );
                 }
 
+                // Render type "tag"
+                // if (object.type === 'text') {
+                //   return (
+
+                //   );
+                // }
+
                 // Render type "title"
                 if (object.type === 'title') {
                   return (
@@ -541,6 +548,16 @@ const Glassy = ({ item }) => {
                             : 'center'
                       }
                     >
+                      {object.tagText && (
+                        <TagText>
+                          <span>{t(object.tagText)}</span>
+
+                          {object.tags?.map((item) => (
+                            <Tag item={item} />
+                          ))}
+                        </TagText>
+                      )}
+
                       <div className='text-content'>
                         {object.texttitle && (
                           <div className='text-title'>
@@ -609,7 +626,7 @@ const Glassy = ({ item }) => {
                   );
                 }
 
-                return null; // Explicitly return null if the condition is not met
+                return null;
               })}
             </BodyInner>
           </Body>
@@ -625,8 +642,6 @@ const Glassy = ({ item }) => {
           </Footer>
         )}
       </Subcontainer>
-
-      {/* {mockimage && <div style={{ width: '200px', height: '200px' }}></div>} */}
 
       {after && (
         <AfterItem alignment={alignment}>
@@ -1065,6 +1080,24 @@ const AfterItem = styled.div`
       #252527 71%
     );
   }
+`;
+
+const TagText = styled.div`
+  color: #cca4f0;
+  font-family: 'DM Sans';
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px 0;
 `;
 
 const SlideLink = styled.a`

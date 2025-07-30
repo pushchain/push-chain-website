@@ -30,6 +30,9 @@ export const AccountProvider = ({
 
   React.useEffect(() => {
     setIsHydrated(true);
+  }, []);
+
+  React.useEffect(() => {
     if (typeof window !== 'undefined') {
       const stored = localStorage.getItem('showAlertBar');
       const shouldShow = stored === null ? true : stored === 'true';

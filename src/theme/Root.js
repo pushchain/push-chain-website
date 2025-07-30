@@ -8,7 +8,6 @@ import i18nInitialize from '@site/src/utils/i18n';
 import styled from 'styled-components';
 
 // Internal Components
-// import Footer from '@site/src/segments/Footer';
 import ServerStyle from '@site/src/theme/ServerStyle';
 import CookieComponent from '../components/CookieComponent';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
@@ -49,11 +48,11 @@ export default function Root({ children }) {
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
   useChainNotification();
-  const { showAlertBar, isHydrated } = useContext(AccountContext);
+  const { showAlertBar } = useContext(AccountContext);
   const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
     location.pathname
   );
-  const isHome = location.pathname === '/' || isPreview;
+  const isHome = (location.pathname === '/' || isPreview) && showAlertBar;
 
   const excludePaths = ['/BRB', '/DOCS', '/BOOTCAMP', '/CHAIN', '/TEMPLATE'];
   const shouldRenderFooter = excludePaths.every((path) =>
@@ -133,9 +132,7 @@ export default function Root({ children }) {
           <ServerStyle from={children} />
 
           {/* Main react children */}
-          <Content isHome={isHome && showAlertBar && isHydrated}>
-            {children}
-          </Content>
+          <Content isHome={isHome}>{children}</Content>
           <Notification />
 
           {shouldRenderFooter && (

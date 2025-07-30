@@ -1153,6 +1153,8 @@ const NavigationMenuContent = styled.ul`
     border-radius: 24px;
   }
 
+  min-width: 390px;
+
   @media ${device.mobileL} {
     min-width: 100%;
   }

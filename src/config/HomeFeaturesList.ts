@@ -295,6 +295,16 @@ export const FeaturesList = {
       body: [
         {
           type: 'text',
+          tagText: 'Read from Chains',
+          tags: [
+            {
+              title: 'COMING SOON',
+              background: 'transparent',
+              color: '#CCA4F0',
+              border: '1px solid #CCA4F0',
+              fontSize: '9px',
+            },
+          ],
           texttitle: 'Shared State',
           bodytext:
             'Access account and state data from other chains in your smart contract.',
@@ -351,6 +361,16 @@ export const FeaturesList = {
         {
           type: 'text',
           texttitle: 'Programmable\nSolvers',
+          tagText: 'WRITE TO CHAINS',
+          tags: [
+            {
+              title: 'COMING SOON',
+              background: 'transparent',
+              color: '#CCA4F0',
+              border: '1px solid #CCA4F0',
+              fontSize: '9px',
+            },
+          ],
           bodytext:
             'Trigger, validate, and complete transactions across any chain using your smart contract.',
           bodytextcolor: 'linear-gradient(90deg, #B1B1B9 0%, #635D65 100%)',
@@ -382,11 +402,6 @@ export const FeaturesList = {
           mobile: true,
         },
       },
-      header: {
-        title: 'Universal Fee\nAbstraction',
-        align: 'left',
-      },
-      mockimage: true,
       body: [
         {
           type: 'text',

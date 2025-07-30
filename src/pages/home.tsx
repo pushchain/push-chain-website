@@ -199,9 +199,8 @@ export default function Home() {
           </Content>
         </Section>
 
-        {/* NOTIF SECTION */}
+        {/* GLASSY SECTION */}
         <GridSection id='notification'>
-          {/* Fix grid */}
           <GridContent alignSelf='center'>
             <GridFeatures>
               {FeaturesList?.first?.map((item) => (
@@ -971,7 +970,8 @@ const GridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    max-width: 400px;
+    min-width: 447px;
+    max-width: 447px;
   }
 
   @media ${device.laptop} {
@@ -979,7 +979,8 @@ const GridFeatures = styled(ItemH)`
     flex: 1;
 
     & > div:first-child {
-      max-width: 300px;
+      min-width: 325px;
+      max-width: 325px;
     }
 
     & > div:nth-child(3) {
@@ -1012,22 +1013,32 @@ const SecondGridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    max-width: 300px;
+    min-width: 325px;
+    max-width: 325px;
   }
 
   & > div:nth-child(3) {
-    max-width: 300px;
+    min-width: 325px;
+    max-width: 325px;
   }
 
   @media ${device.laptop} {
     width: 100%;
 
     & > div:first-child {
-      max-width: 450px;
+      min-width: 452px;
+      max-width: 452px;
     }
 
     & > div:nth-child(3) {
       display: none !important;
+    }
+  }
+
+  @media ${device.tablet} {
+    & > div:first-child {
+      min-width: 325px;
+      max-width: 325px;
     }
   }
 
@@ -1061,11 +1072,18 @@ const TabletGridFeatures = styled(ItemH)`
     display: flex;
 
     & > div:first-child {
-      max-width: 250px;
+      min-width: 325px;
+      max-width: 325px;
     }
 
     & > div:nth-child(3) {
       display: none !important;
+    }
+  }
+
+  @media ${device.tablet} {
+    & > div:first-child {
+      min-width: 325px;
     }
   }
 
@@ -1086,18 +1104,31 @@ const ThirdGridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    min-width: 450px;
+    max-width: 100%;
   }
 
-  @media ${device.laptopM} {
+  & > div:nth-child(2),
+  & > div:nth-child(3) {
+    min-width: 325px;
+    max-width: 325px;
+  }
+
+  @media ${device.laptop} {
     width: 100%;
 
     & > div:first-child {
       display: none !important;
     }
 
+    & > div:nth-child(2),
     & > div:nth-child(3) {
-      max-width: 450px;
+      max-width: 100%;
+    }
+  }
+
+  @media ${device.tablet} {
+    & > div:nth-child(2) {
+      min-width: 325px;
     }
   }
 
