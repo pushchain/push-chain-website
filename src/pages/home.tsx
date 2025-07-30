@@ -837,6 +837,17 @@ const PortalA = styled(A)`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  &:hover {
+    border-radius: 16px;
+    border: 1px solid rgba(171, 70, 248, 0.6);
+    background: rgba(0, 0, 0, 0.1);
+    background-blend-mode: plus-lighter;
+    box-shadow:
+      2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+      1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.55) inset;
+    backdrop-filter: blur(5px);
+  }
 `;
 
 /* Home Page Sections */
