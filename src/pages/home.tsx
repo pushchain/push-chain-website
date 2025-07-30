@@ -581,7 +581,7 @@ const GlowCircle = styled.div`
   background: rgba(179, 72, 236, 0.2);
   filter: blur(125px);
   pointer-events: none;
-  z-index: 999999;
+  z-index: 2;
 
   width: 600px;
   height: 600px;
@@ -716,6 +716,7 @@ const HeroPrimary = styled.div`
   background-repeat: no-repeat;
   width: 1440px;
   height: 850px;
+  z-index: 99;
 
   @media ${device.laptopL} {
     width: 100%;

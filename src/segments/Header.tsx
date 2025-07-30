@@ -162,7 +162,7 @@ function Header() {
       }
 
       const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
-      setIsAlertBarVisible(scrollY < 80);
+      setIsAlertBarVisible(scrollY < 60);
     };
 
     checkAlertBarVisibility();
