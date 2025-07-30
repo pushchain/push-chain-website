@@ -2,6 +2,11 @@
 // @ts-nocheck
 /* eslint-disable */
 
+const isSafari = () => {
+  if (typeof window === 'undefined') return false;
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+};
+
 // React + Web3 Essentials
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -73,9 +78,39 @@ const Glassy = ({ item }) => {
 
   // decide video format for bg and header illustration
   const disableVideoAt = size.tablet;
-  const bgVideoFormat = item.config && item.config.bgvideowebm ? 'webm' : 'mp4';
-  const headerIllustrationFormat =
-    item.header && item.header.illustrationvideowebm ? 'webm' : 'mp4';
+  const bgVideoFormat = (() => {
+    if (item.config && item.config.bgvideowebm) {
+      if (isSafari()) {
+        try {
+          require(
+            `@site/static/assets/website/home/${item.config.bgvideosrc}.mp4`
+          );
+          return 'mp4';
+        } catch {
+          return 'webm';
+        }
+      }
+      return 'webm';
+    }
+    return 'mp4';
+  })();
+
+  const headerIllustrationFormat = (() => {
+    if (item.header && item.header.illustrationvideowebm) {
+      if (isSafari()) {
+        try {
+          require(
+            `@site/static/assets/website/home/${item.header.illustrationvideosrc}.mp4`
+          );
+          return 'mp4';
+        } catch {
+          return 'webm';
+        }
+      }
+      return 'webm';
+    }
+    return 'mp4';
+  })();
 
   const Tag = ({ item }) => {
     const { background, border, color, title, fontSize } = item || '';
@@ -368,7 +403,22 @@ const Glassy = ({ item }) => {
               {item.body.map((object) => {
                 // Render type "image"
                 if (object.type === 'image') {
-                  const videoFormat = object.videowebm ? 'webm' : 'mp4';
+                  const videoFormat = (() => {
+                    if (object.videowebm) {
+                      if (isSafari()) {
+                        try {
+                          require(
+                            `@site/static/assets/website/home/${object.videosrc}.mp4`
+                          );
+                          return 'mp4';
+                        } catch {
+                          return 'webm';
+                        }
+                      }
+                      return 'webm';
+                    }
+                    return 'mp4';
+                  })();
                   return (
                     <BodyImageWrapper
                       imagewidth={object.imagewidth}

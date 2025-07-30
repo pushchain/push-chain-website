@@ -1,9 +1,14 @@
 /* eslint-disable @typescript-eslint/ban-types */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import ReactPlayer from 'react-player';
+
+const isSafari = () => {
+  if (typeof window === 'undefined') return false;
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+};
 
 type CustomReactPlayerProps = {
   url: string;
@@ -23,10 +28,22 @@ const CustomReactPlayer: React.FC<CustomReactPlayerProps> = ({
   loop = true,
   muted = true,
   className,
-  playContinuously = false, // Default is false
+  playContinuously = false,
 }) => {
+  const videoUrl = useMemo(() => {
+    if (isSafari() && url.endsWith('.webm')) {
+      try {
+        const mp4Url = url.replace('.webm', '.mp4');
+        require(mp4Url);
+        return mp4Url;
+      } catch {
+        return url;
+      }
+    }
+    return url;
+  }, [url]);
   const [isPlaying, setIsPlaying] = useState(false);
-  const playerRef = useRef<ReactPlayer | null>(null); // Create a ref for ReactPlayer
+  const playerRef = useRef<ReactPlayer | null>(null);
 
   const handleMouseEnter = () => {
     if (!playContinuously) setIsPlaying(true);
@@ -35,7 +52,7 @@ const CustomReactPlayer: React.FC<CustomReactPlayerProps> = ({
   const handleMouseLeave = () => {
     if (!playContinuously) {
       setIsPlaying(false);
-      playerRef.current?.seekTo(0); // Reset the video to the beginning
+      playerRef.current?.seekTo(0);
     }
   };
 
@@ -45,8 +62,8 @@ const CustomReactPlayer: React.FC<CustomReactPlayerProps> = ({
       onMouseLeave={handleMouseLeave}
     >
       <ReactPlayer
-        ref={playerRef} // Attach the ref to ReactPlayer
-        url={url}
+        ref={playerRef}
+        url={videoUrl}
         playing={playContinuously || isPlaying}
         loop={loop}
         muted={muted}
