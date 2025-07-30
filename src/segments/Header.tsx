@@ -1113,7 +1113,7 @@ const LanguageMenuHeader = styled.div`
 const NavigationMenuContent = styled.ul`
   list-style: none;
   .header-item {
-    &:not(:nth-of-type(1)):not(:nth-of-type(2)) {
+    &:not(:nth-of-type(1)) {
       margin-top: 16px;
     }
   }
