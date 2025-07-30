@@ -40,7 +40,7 @@ export const ChainEmailSignup = (props: signupType) => {
 
   return (
     <Box>
-      <Wrapper background={props.background} onSubmit={onEmailSubmit}>
+      <Wrapper onSubmit={onEmailSubmit}>
         <SignupInputField
           type='text'
           name='email'
@@ -113,6 +113,7 @@ const Wrapper = styled.form`
   align-items: center;
   padding: 5px 0px;
   justify-content: space-between;
+  background: transparent !important;
 
   @media ${device.tablet} {
     gap: 12px;
@@ -200,6 +201,16 @@ const SignupInputField = styled.input`
   background-blend-mode: ${(props) => props.blendMode || 'normal'};
   box-shadow: ${(props) => props.boxShadow || 'none'};
   backdrop-filter: ${(props) => props.backdrop || 'none'};
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: ${(props) => props.boxShadow || 'none'} !important;
+    -webkit-text-fill-color: ${(props) =>
+      props.textColor || '#a3a7ac'} !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 
   @media ${device.laptop} {
     min-width: auto;
