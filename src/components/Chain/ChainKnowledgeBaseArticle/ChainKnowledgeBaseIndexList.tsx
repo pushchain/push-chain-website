@@ -219,7 +219,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
         const lastTrigger = ScrollTrigger.create({
           trigger: lastHeading,
           start: 'top 20%',
-          end: 'bottom bottom', // Extend to the very bottom of the page
+          end: 'bottom', // Extend to the very bottom of the page
           onEnter: () => {
             if (!isTOCTransitioning && !isManualNavigationRef.current) {
               setActiveHeadingIdSafely(lastHeading.id);
@@ -415,6 +415,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
           gsap.set(tocRef.current, {
             position: 'relative',
             top: 'auto',
+            bottom: 'auto',
             zIndex: 'auto',
           });
           gsap.set(tocRef.current.parentElement, {

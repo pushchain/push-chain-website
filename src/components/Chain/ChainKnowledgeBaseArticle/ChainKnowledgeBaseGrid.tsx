@@ -22,21 +22,19 @@ interface ChainKnowledgeBaseGridProps {
   items?: KnowledgeBaseItem[];
   title?: string | null;
   mode?: 'playlist' | 'grid';
-  divider?: boolean;
 }
 
 const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
   items,
   title,
   mode = 'grid',
-  divider = false,
 }) => {
   const isMobile = useMediaQuery(device.mobileL);
 
   const gridRows = createGridRows(items ?? knowledgeBaseArticleContent);
 
   return (
-    <ChainKnowledgeBaseGridWrapper addBottomMargin={divider}>
+    <ChainKnowledgeBaseGridWrapper>
       {title && (
         <ItemV
           alignItems={mode === 'playlist' ? 'flex-start' : 'center'}
@@ -88,15 +86,7 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
 
 export default ChainKnowledgeBaseGrid;
 
-const ChainKnowledgeBaseGridWrapper = styled.div`
-  margin: ${({ addBottomMargin }) =>
-    addBottomMargin ? '72px 0 120px auto' : 'auto'};
-
-  @media ${device.mobileL} {
-    margin: ${({ addBottomMargin }) =>
-      addBottomMargin ? '64px 0 120x auto' : 'auto'};
-  }
-`;
+const ChainKnowledgeBaseGridWrapper = styled.div``;
 
 const ChainKnowledgeGridWrapper = styled.div`
   display: flex;

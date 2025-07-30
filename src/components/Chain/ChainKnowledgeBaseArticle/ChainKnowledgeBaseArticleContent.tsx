@@ -49,22 +49,31 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
       {item.content?.map((block, blockIndex) => {
         if (block.type === 'indexlist') {
           return (
-            <ChainKnowledgeBaseIndexList
-              key={blockIndex}
-              block={block}
-              blockIndex={blockIndex}
-            />
+            <ChainKnowledgeBaseArticleContentWrapper
+              topGap={block?.topGap}
+              bottomGap={block?.bottomGap}
+            >
+              <ChainKnowledgeBaseIndexList
+                key={blockIndex}
+                block={block}
+                blockIndex={blockIndex}
+              />
+            </ChainKnowledgeBaseArticleContentWrapper>
           );
         }
 
         if (block.type === 'list') {
           return (
-            <ChainKnowledgeBaseGrid
-              items={block?.items}
-              title={block?.title}
-              mode={block?.mode}
-              divider={block?.divider}
-            />
+            <ChainKnowledgeBaseArticleContentWrapper
+              topGap={block?.topGap}
+              bottomGap={block?.bottomGap}
+            >
+              <ChainKnowledgeBaseGrid
+                items={block?.items}
+                title={block?.title}
+                mode={block?.mode}
+              />
+            </ChainKnowledgeBaseArticleContentWrapper>
           );
         }
 
@@ -107,5 +116,17 @@ const BreadcrumbLink = styled(Link)`
   }
   &:hover {
     color: #cf59e2;
+  }
+`;
+
+const ChainKnowledgeBaseArticleContentWrapper = styled.div`
+  margin: auto;
+
+  margin-top: ${({ topGap }) => (topGap ? '72px' : '0')};
+  margin-bottom: ${({ bottomGap }) => (bottomGap ? '120px' : '0')};
+
+  @media ${device.mobileL} {
+    margin-top: ${({ topGap }) => (topGap ? '64px' : '0')};
+    margin-bottom: ${({ bottomGap }) => (bottomGap ? '120px' : '0')};
   }
 `;

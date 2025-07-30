@@ -1,8 +1,9 @@
 export const push101Content = {
   title: 'Push Chain Basics',
-  divider: false,
   content: [
     {
+      topGap: false,
+      bottomGap: false,
       type: 'indexlist',
       value: [
         {
@@ -52,7 +53,8 @@ export const push101Content = {
       type: 'list',
       title: 'Learn why Push Chain is the future of web3',
       mode: 'playlist',
-      divider: true,
+      topGap: true,
+      bottomGap: true,
       items: [
         {
           slug: 'why-push-chain',
