@@ -80,7 +80,7 @@ const BlogPostList = styled.div`
 
   @media ${device.mobileL} {
     flex-direction: column;
-    gap: 32px;
+    gap: 64px;
   }
 `;
 

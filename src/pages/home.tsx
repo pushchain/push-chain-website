@@ -331,7 +331,7 @@ export default function Home() {
             </ItemH>
 
             <H2
-              fontSize={isMobile ? '24px' : '3rem'}
+              fontSize='3rem'
               color='#fff'
               margin='8px 0 0 0'
               fontWeight='500'
@@ -1315,6 +1315,6 @@ const FinalSection = styled.div`
 
   @media ${device.mobileL} {
     width: 350px;
-    height: 350px;
+    height: 500px;
   }
 `;

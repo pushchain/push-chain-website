@@ -65,7 +65,8 @@ function Footer() {
                 fontSize={isMobile ? '1.rem' : '1.75rem'}
                 lineHeight='140%'
               >
-                Want to receive Push Chain airdrops, <br /> news, and updates?
+                Want to receive Push Chain airdrops, {!isMobile && <br />} news,
+                and updates?
               </H2>
 
               <ChainEmailSignup
@@ -150,7 +151,7 @@ function Footer() {
                         <FooterLinks>
                           <Span
                             fontWeight='700'
-                            fontSize='1.125rem'
+                            fontSize='1rem'
                             lineHeight='140%'
                             letterSpacing='1.8px'
                             textTransform='uppercase'
@@ -338,6 +339,7 @@ const FooterContainer = styled.div`
 const ImageContent = styled(Content)`
   @media ${device.tablet} {
     padding-top: 0px;
+    padding-bottom: 0px;
   }
 `;
 
