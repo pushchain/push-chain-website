@@ -194,9 +194,9 @@ export default function Home() {
 
         {/* HERO IMG SECTION */}
         <Section id='hero-image'>
-          <Content alignSelf='center'>
+          <HeroImageContent alignSelf='center'>
             <HeroImageSection />
-          </Content>
+          </HeroImageContent>
         </Section>
 
         {/* GLASSY SECTION */}
@@ -708,6 +708,16 @@ const HeroContent = styled(Content)`
   }
 `;
 
+const HeroImageContent = styled(Content)`
+
+
+  @media ${device.mobileL} {
+    // padding-top: 300px;
+    padding-bottom: 0px;
+  }
+}
+`;
+
 const HeroPrimary = styled.div`
   background-image: url(${HeroBG});
   background-size: contain;
@@ -858,6 +868,10 @@ const GridSection = styled(Section)``;
 
 const GridContent = styled(Content)`
   gap: 24px;
+
+  @media ${device.mobileL} {
+    padding-top: 100px;
+  }
 `;
 
 const BottomSection = styled(Section)`
@@ -1031,7 +1045,7 @@ const SecondGridFeatures = styled(ItemH)`
     }
 
     & > div:nth-child(3) {
-      display: none !important;
+      display: none;
     }
   }
 
@@ -1052,6 +1066,10 @@ const SecondGridFeatures = styled(ItemH)`
     & > div:nth-child(3) {
       width: 100%;
       min-width: 100%;
+    }
+
+    & > div:nth-child(3) {
+      display: flex !important;
     }
   }
 `;
@@ -1117,7 +1135,7 @@ const ThirdGridFeatures = styled(ItemH)`
     width: 100%;
 
     & > div:first-child {
-      display: none !important;
+      display: none;
     }
 
     & > div:nth-child(2),
@@ -1139,6 +1157,7 @@ const ThirdGridFeatures = styled(ItemH)`
     gap: 24px;
 
     & > div:first-child {
+      display: flex;
       width: 100%;
       min-width: 100%;
     }

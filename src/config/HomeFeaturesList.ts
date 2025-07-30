@@ -200,7 +200,7 @@ export const FeaturesList = {
           desktop: false,
           laptop: false,
           tablet: false,
-          mobile: true,
+          mobile: false,
         },
       },
       body: [
@@ -343,7 +343,7 @@ export const FeaturesList = {
           desktop: false,
           laptop: false,
           tablet: false,
-          mobile: true,
+          mobile: false,
         },
       },
       body: [
