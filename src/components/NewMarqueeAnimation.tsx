@@ -53,13 +53,7 @@ function NewMarqueeAnimation(props: Props) {
       <Splide
         ref={splideRef}
         options={{
-          width: width
-            ? width
-            : isMobile
-              ? '90vw'
-              : isTablet
-                ? '95vw'
-                : '1213px',
+          width: width ? width : isMobile ? '90vw' : isTablet ? '95vw' : '100%',
           type: 'loop',
           direction: direction,
           arrows: false,
