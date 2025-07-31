@@ -415,7 +415,6 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
           gsap.set(tocRef.current, {
             position: 'relative',
             top: 'auto',
-            bottom: 'auto',
             zIndex: 'auto',
           });
           gsap.set(tocRef.current.parentElement, {

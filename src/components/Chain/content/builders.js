@@ -78,7 +78,7 @@ export const buildersContent = {
           slug: 'testnet-explorer',
           image: 'developer-explorer',
           title: 'Push Testnet Explorer',
-          url: 'https://donut.push.org',
+          url: 'https://donut.push.network',
           target: '_blank',
         },
       ],
