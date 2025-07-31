@@ -38,6 +38,7 @@ import useMediaQuery from '@site/src/hooks/useMediaQuery';
 // Import Assets
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
 import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
+import HeroBGMobile from '../../static/assets/website/hero/hero-bg-img.webp';
 import FinalBgImage from '../../static/assets/website/home/others/push-chain-final@3x.webp';
 
 // Internal Configs
@@ -729,8 +730,16 @@ const HeroPrimary = styled.div`
 
   @media ${device.laptopL} {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 650px;
+    aspect-ratio: 1 / 2;
+  }
+
+  @media ${device.mobileL} {
+    background-image: url(${HeroBGMobile});
+    background-size: contain;
+    aspect-ratio: 1/2;
+    width: 100%;
+    height: 600px;
   }
 `;
 
@@ -751,6 +760,10 @@ const HeroItem = styled(ItemV)`
 
   @media ${device.tablet} {
     margin: 24px auto;
+  }
+
+  @media ${device.tablet} {
+    margin: 4px auto;
   }
 `;
 
