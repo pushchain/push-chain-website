@@ -10,7 +10,7 @@ export const buildersContent = {
           type: 'text',
           value: `## Builders
           
-          Ready to build on Push Chain? Here are some resources to get you started.
+          Ready to build on Push Chain? Here are some resources to get you inspired and started.
           
           `,
         },
@@ -48,6 +48,37 @@ export const buildersContent = {
           image: 'consumer-apps',
           title: 'Consumer Apps 🫶🏽 Push Chain?',
           url: '/blog/consumer-apps-that-can-be-built-on-push-chain/',
+          target: '_blank',
+        },
+      ],
+    },
+
+    {
+      type: 'list',
+      title: 'Developer Resources',
+      topGap: true,
+      bottomGap: true,
+      mode: 'playlist',
+      items: [
+        {
+          slug: 'developer-docs',
+          image: 'developer-docs',
+          title: 'Explore Developer Documentation',
+          url: '/docs/developer-docs',
+          target: '_blank',
+        },
+        {
+          slug: 'faucet',
+          image: 'developer-faucet',
+          title: 'Get Testnet Tokens',
+          url: 'https://faucet.push.org',
+          target: '_blank',
+        },
+        {
+          slug: 'testnet-explorer',
+          image: 'developer-explorer',
+          title: 'Push Testnet Explorer',
+          url: 'https://donut.push.org',
           target: '_blank',
         },
       ],
