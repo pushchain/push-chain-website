@@ -39,15 +39,8 @@ export const deepDivesContent = {
         {
           slug: 'understand-proof-of-stake-part-1',
           image: 'understand-proof-of-stake',
-          title: "Understanding Push Chain's Proof of Stake (POS) - Part 2",
-          url: '/blog/understand-proof-of-stake-part-1',
-          target: '_blank',
-        },
-        {
-          slug: 'understand-proof-of-stake-part-1',
-          image: 'understand-proof-of-stake',
           title: 'Understanding Proof of Stake (POS) - Part 1',
-          url: '/blog/understand-proof-of-stake-part-1',
+          url: '/blog/understand-proof-of-stake',
           target: '_blank',
         },
       ],

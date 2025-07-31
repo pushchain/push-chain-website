@@ -1,5 +1,5 @@
 ---
-slug: understand-proof-of-stake-part-1
+slug: understand-proof-of-stake
 title: 'Understand Proof of Stake (POS) - Part 1'
 authors: [push]
 image: './cover-image.webp'
@@ -190,4 +190,4 @@ There are a lot of variants of PoS, here are some of the most popular ones:
 
 ## Conclusion
 
-In this article, we have covered the basics of Proof of Stake and how it works. Next up, we will be covering how [Push Chain uses Proof of Stake (PoS)](/blog/understand-push-chain-proof-of-stake-part-2) to secure its network.
+In this article, we have covered the basics of Proof of Stake and how it works.
