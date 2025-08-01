@@ -31,9 +31,9 @@ import GithubSVG from '@site/static/assets/website/shared/github.svg';
 
 // Internal Configs
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 import { device } from '@site/src/config/globals';
 import { ChainFooterList } from '../components/Chain/config/ChainFooterList';
+import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 
 const tosPrivacyLinks = [
   { href: '/tos', text: 'Terms of service' },
@@ -240,7 +240,7 @@ function Footer({ showPattern }) {
                   </FooterAnchorIcon>
 
                   <FooterAnchorIcon
-                    href='https://github.com/push-protocol/'
+                    href='https://github.com/pushchain/'
                     title='Push Github'
                     target='_blank'
                   >

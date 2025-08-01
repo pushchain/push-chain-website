@@ -44,7 +44,9 @@ const NavLink = styled.div`
   font-size: 15px;
   font-weight: 500;
 
-  font-family: Inter sans-serif;
+  font-family:
+    DM Sans,
+    sans-serif;
   border: 1px solid #bac4d6;
   width: fit-content;
   cursor: pointer;

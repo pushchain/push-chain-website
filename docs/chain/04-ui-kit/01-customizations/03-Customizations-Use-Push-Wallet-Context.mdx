@@ -1,0 +1,102 @@
+---
+id: docs-chain-ui-kit-customizations-use-push-wallet-context
+title: usePushWalletContext
+hide_title: false
+slug: ./use-push-wallet-context
+displayed_sidebar: pushChainSidebar
+sidebar_position: 3
+---
+
+<head>
+  <title>usePushWalletContext | Customizations | UI Kit | Push Chain Docs</title>
+</head>
+
+import Details from '@theme/Details';
+
+<!-- Content Start -->
+
+The `usePushWalletContext` hook provides access to the current wallet state and methods to interact with the Push Wallet. This hook must be used within a component that's wrapped by a `PushUniversalWalletProvider`.
+
+
+## Usage
+
+```jsx live
+// customPropHighlightRegexStart=const {
+// customPropHighlightRegexEnd=usePushWalletContext\(\)
+ import { 
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  PushUI 
+} from '@pushchain/ui-kit';
+
+function App() {
+  // Create a component that uses the hook inside the provider context
+  const WalletContextComponent = () => {
+    const { 
+      connectionStatus, 
+      handleConnectToPushWallet, 
+      handleUserLogOutEvent 
+    } = usePushWalletContext(); // optional: uid parameter for targeting a specific wallet instance
+
+    return (
+      <div>
+        <h3 style={{ margin: '1rem 0' }}>Wallet Status: {connectionStatus}</h3>
+        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED && (
+          <button
+            style={{
+              background: 'transparent',
+              padding: '12px 18px',
+              borderRadius: '10px',
+              border: '1px solid',
+            }}
+            onClick={() => handleConnectToPushWallet()}
+          >
+            Connect via Hook Call
+          </button>
+        )}
+        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+          <button
+            style={{
+              background: 'transparent',
+              padding: '12px 18px',
+              borderRadius: '10px',
+              border: '1px solid',
+            }}
+            onClick={() => handleUserLogOutEvent()}
+          >
+            Disconnect via Hook Call
+          </button>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <PushUniversalWalletProvider config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}>
+      <PushUniversalAccountButton />
+      <WalletContextComponent />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+### Parameters
+
+| Arguments | Type     | Description                                 |
+| --------- | -------- | ------------------------------------------- |
+| `uid`     | `string` | Optional ID for targeting a specific wallet instance, must match `config.uid` of specific `PushUniversalWalletProvider` instance.<br />&nbsp;<br />See [multiple wallet example](/docs/chain/ui-kit/examples/multiple-wallet-example/) for usage. |
+
+### Returns
+
+| Property                    | Type         | Default         | Description                                                                                       |
+| --------------------------- | ------------ | --------------- | ------------------------------------------------------------------------------------------------- |
+| `connectionStatus`          | `PushUI.CONSTANTS.CONNECTION.STATUS`     | `PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED`| It will be from one of the following: <Details summary="PushUI.CONSTANTS.CONNECTION.STATUS" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTION.STATUS.NOT_CONNECTED` `PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTING` `PushUI.CONSTANTS.CONNECTION.STATUS.AUTHENTICATING` `PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED` `PushUI.CONSTANTS.CONNECTION.STATUS.RETRY` </Details>              |
+| `handleConnectToPushWallet` | `() => void` | _function_      | Call to open the wallet-connect modal (or trigger your chosen flow).                              |
+| `handleUserLogOutEvent`     | `() => void` | _function_      | Call to disconnect the wallet and clear the session.                                             |
+
+## Next Steps
+
+- Learn how to use [usePushChainClient](/docs/chain/ui-kit/customizations/use-push-chain-client/) in your app
+- Dive into theme customizations with [Theme Variables](/docs/chain/ui-kit/customizations/theme-variables/)
+- Check out how to implement usePushWalletContext in [Examples](/docs/chain/ui-kit/examples/)

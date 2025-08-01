@@ -21,23 +21,6 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
   const isMobile = useMediaQuery(device.mobileL);
   const baseURL = useSiteBaseUrl() || '';
 
-  const openLink = (item: any) => {
-    if (!item?.url && !item?.slug) return;
-    let targetUrl = '';
-
-    if (item.url?.startsWith('https://')) {
-      targetUrl = item.url;
-    } else if (item.url?.startsWith('/')) {
-      targetUrl = `${baseURL}${item.url}`;
-    } else if (item.parentSlug) {
-      targetUrl = `${baseURL}/knowledge/${item.parentSlug}/${item.slug}`;
-    } else {
-      targetUrl = `${baseURL}/knowledge/${item.url || item.slug}`;
-    }
-
-    window.open(targetUrl, !item.target ? '_self' : item.target);
-  };
-
   const getHref = (item: any) => {
     if (!item?.url && !item?.slug) return '#';
 

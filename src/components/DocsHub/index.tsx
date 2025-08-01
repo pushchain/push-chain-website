@@ -1,28 +1,18 @@
 /* eslint-disable */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-/* eslint-disable */
+import React, { useState } from 'react';
 
-// React + Web3 Essentials
+// React + Web3 Essentials + External Components
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import { useLocation } from '@docusaurus/router';
-import { useColorMode } from '@docusaurus/theme-common';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-
-import CodeBlock from '@theme/CodeBlock';
-import Layout from '@theme/Layout';
-import React, { useState } from 'react';
-import './styles.css';
-
-// External Components
-import clsx from 'clsx';
 import styled, { keyframes } from 'styled-components';
+import { BsArrowRight, BsArrowUpRight } from 'react-icons/bs';
+import { Button } from '../../css/SharedStyling';
 
 // Internal Components
 import {
   A,
-  Button,
   Content,
   H1,
   H2,
@@ -33,163 +23,38 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import Footer from '../../segments/Footer';
-
-// Import Assets
-import ArrowUp from '@site/static/assets/docs/ArrowUpRight-pink.svg';
-import { FiArrowUpRight } from 'react-icons/fi';
+import CodeBlock from '@theme/CodeBlock';
+import Layout from '@theme/Layout';
 
 // Internal Configs
-import BrowserOnly from '@docusaurus/BrowserOnly';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import Spinner, {
-  SPINNER_TYPE,
-} from '@site/src/components/reusables/spinners/SpinnerUnit';
 import {
-  ITechDocItem,
   QuickstartItems,
-  SdkItemsList,
-  TechDocItems,
+  ToolingItems,
+  TutorialDocumentationItems,
 } from '@site/src/config/DocsHubList';
 import GLOBALS, { device } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
-import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
-function QuickstartList({ title, codeblock, Svg }: IQuickstartItem) {
-  return (
-    <PopularQuickiesCard>
-      <PopularQuickiesHeader>
-        <PopularQuickiesTitle>{`${title}`}</PopularQuickiesTitle>
-      </PopularQuickiesHeader>
+import { Grid } from './Grid';
+import './styles.css';
 
-      <PopularQuickiesContent>
-        <PopularQuickiesCodeBlock language='jsx' showLineNumbers={true}>
-          {codeblock}
-        </PopularQuickiesCodeBlock>
-      </PopularQuickiesContent>
-    </PopularQuickiesCard>
-  );
-}
-
-function TechDocItem({
-  title,
-  srcref,
-  alt,
-  description,
-  codeblock,
-  link,
-  target,
-  docutheme,
-}: ITechDocItem) {
-  const [content, setContent] = useState<number>(0);
-  const baseUrl = useSiteBaseUrl();
-
-  const handleOpenLink = (e, link: { e: any; link: string }) => {
-    if (!link) return;
-
-    // Check if link is an absolute URL (starts with http or https)
-    const isAbsoluteUrl = /^https?:\/\//i.test(link);
-
-    // If the link is not an absolute URL and baseUrl is defined, prepend the baseUrl
-    const fullLink = isAbsoluteUrl ? link : baseUrl ? baseUrl + link : link;
-    console.log(
-      fullLink,
-      isAbsoluteUrl ? 'absolute link' : 'full link with baseUrl'
-    );
-
-    // Navigate to the constructed fullLink or the absolute link
-    target === '_self'
-      ? (window.location.href = fullLink)
-      : window.open(fullLink, target);
-  };
+export const TechnicalGrid = ({ item }) => {
+  const { title, content, href } = item;
 
   return (
-    <TechDocCard>
-      {/* <Link to={link} target='_blank'> */}
-      <TechDocContent
-        onClick={(e) => handleOpenLink(e, link)}
-        hoverBackground='transparent'
-      >
-        <ItemV alignSelf='stretch' margin='0px 8%'>
-          <ItemV padding='0px 0px 30px 0px' alignItems='flex-start'>
-            <TechDocIcon docutheme={docutheme}>
-              <Image
-                src={
-                  require(`@site/static/assets/docs/docshub/${srcref}.webp`)
-                    .default
-                }
-                srcSet={`${require(`@site/static/assets/docs/docshub/${srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/docs/docshub/${srcref}@3x.webp`).default} 3x`}
-                alt={`${alt}`}
-              />
-            </TechDocIcon>
-            <TechDocTitle>{title}</TechDocTitle>
-          </ItemV>
+    <TechnicalGridWrapper href={href} target='_blank' rel='noopener noreferrer'>
+      <LinkTo>
+        <H2>{title}</H2>
+        <BsArrowUpRight className='svg' />
+      </LinkTo>
 
-          {codeblock && (
-            <TechDocSwitcher gap='10px'>
-              <TechDocButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                  setContent(0);
-                }}
-                background={
-                  content == 0
-                    ? 'var(--ifm-color-primary)'
-                    : 'var(--ifm-color-background)'
-                }
-                color={
-                  content == 0
-                    ? 'var(--ifm-color-primary-inverse)'
-                    : 'var(--ifm-color-content)'
-                }
-              >
-                Overview
-              </TechDocButton>
-              <TechDocButton
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
-                  setContent(1);
-                }}
-                background={
-                  content == 1
-                    ? 'var(--ifm-color-primary)'
-                    : 'var(--ifm-color-background)'
-                }
-                color={
-                  content == 1
-                    ? 'var(--ifm-color-primary-inverse)'
-                    : 'var(--ifm-color-content)'
-                }
-              >
-                API
-              </TechDocButton>
-            </TechDocSwitcher>
-          )}
-
-          <ItemV alignItems='stretch'>
-            {content == 0 && <TechDocOverview>{description}</TechDocOverview>}
-          </ItemV>
-        </ItemV>
-
-        {content == 1 && codeblock && (
-          <Div
-            onClick={(e) => {
-              e.stopPropagation();
-              e.preventDefault();
-            }}
-          >
-            <TechDocCodeBlock language='jsx'>{codeblock}</TechDocCodeBlock>
-          </Div>
-        )}
-      </TechDocContent>
-    </TechDocCard>
+      <Span>{content}</Span>
+    </TechnicalGridWrapper>
   );
-}
+};
 
 export default function HomepageFeatures(): JSX.Element {
-  const { colorMode, setColorMode } = useColorMode();
-
   return (
     <Layout
       title={PageMeta.DOCS.pageTitle}
@@ -245,66 +110,88 @@ export default function HomepageFeatures(): JSX.Element {
         </script>
       </Head>
 
-      <DocsWrapper>
-        {/* DOCS HERO SECTION */}
-        <DocsHeroSection>
-          <ItemV
-            position='absolute'
-            top='-149px'
-            left='0'
-            right='0'
-            height='149px'
-            background={'var(--ifm-docs-hero-bg)'}
-          ></ItemV>
-          <Content padding='0px'>
-            <HeroHeader>
-              <ItemV zIndex='1'>
-                <H1 color='var(--ifm-color-primary-text)' margin='0 !important'>
-                  Push Chain Documentation Hub
-                </H1>
-                <Span
-                  color='var(--ifm-color-primary-text)'
-                  padding='0 0 64px 0'
-                  textAlign='center'
-                >
-                  Get started with building shared state apps for any chain.
-                </Span>
-                {/* <HeroButton onClick={() => (window.location.href = '#techdocs')}> */}
-                <Span padding='0 10px 0 0' fontSize='1.5rem' fontWeight='600'>
-                  Coming Soon
-                </Span>{' '}
-                {/* ↗ */}
-                {/* </HeroButton> */}
-              </ItemV>
-
-              <ItemV
-                position='absolute'
-                bottom='-25%'
-                left='0'
-                right='0'
-                height='50%'
+      {/* DOCS HERO SECTION */}
+      <DocsHeroSection>
+        <Content>
+          <HeroHeader>
+            <ItemV zIndex='1'>
+              <H1
+                color='var(--ifm-color-title-text-color)'
+                margin='0 !important'
+                textAlign='center'
               >
-                <PulseStatic />
-                <Pulse>
-                  <Pulsate stagger={0}></Pulsate>
-                  <Pulsate stagger={1}></Pulsate>
-                  <Pulsate stagger={2}></Pulsate>
-                  <Pulsate stagger={3}></Pulsate>
-                  <Pulsate stagger={4}></Pulsate>
-                  <Pulsate stagger={5}></Pulsate>
-                  <Pulsate stagger={6}></Pulsate>
-                </Pulse>
-              </ItemV>
-            </HeroHeader>
-          </Content>
-        </DocsHeroSection>
+                Documentation Hub
+              </H1>
+              <Span
+                color='var(--ifm-playground-header-terminalcolor)'
+                padding='0'
+                textAlign='center'
+                fontSize='1.25rem'
+                fontWeight='400'
+              >
+                Get started with building shared state apps for any chain.
+              </Span>
+            </ItemV>
 
-        {/* QUICKSTART SECTION */}
-        {/* TODO: Comment out these data temporarily */}
-        {/* <HomepageSection alignItems='flex-start'>
-        <FluidContent>
+            <ItemV
+              position='absolute'
+              top='0'
+              left='0'
+              right='0'
+              height='50%'
+              padding='10rem 0'
+            >
+              <Pulse>
+                <Image
+                  src={
+                    require(
+                      `@site/static/assets/website/docshub/NewPushLogo.png`
+                    ).default
+                  }
+                  srcSet={`${require(`@site/static/assets/website/docshub/NewPushLogo@2x.png`).default} 2x, ${require(`@site/static/assets/website/docshub/NewPushLogo@3x.png`).default} 3x`}
+                  alt={`Image showing BRB Chat is powered by Push Chat`}
+                  loading='lazy'
+                  className='pulse-logo'
+                />
+                <Pulsate stagger={0}></Pulsate>
+                <Pulsate stagger={1}></Pulsate>
+                <Pulsate stagger={2}></Pulsate>
+                <Pulsate stagger={3}></Pulsate>
+                <Pulsate stagger={4}></Pulsate>
+                <Pulsate stagger={5}></Pulsate>
+              </Pulse>
+            </ItemV>
+          </HeroHeader>
+        </Content>
+      </DocsHeroSection>
+
+      {/* Grid Section */}
+      <Section>
+        <Content maxWidth={`1326px`}>
+          <Grid />
+        </Content>
+      </Section>
+
+      {/* QUICKSTART SECTION */}
+      <HomepageSection>
+        <Content margin='0 auto' maxWidth={`1326px`} width='100%'>
           <HomepageSubHeader id='quickstart'>
-            Popular Quickstart
+            <ItemV justifyContent='flex-start' alignItems='flex-start'>
+              <H2>Quickstart</H2>
+              <Span>
+                Everything you will need to get up and running in 2 minutes or
+                less!
+              </Span>
+            </ItemV>
+
+            <FaqLink
+              href='/docs/chain/quickstart/'
+              target='_blank'
+              title='Explore Push Chain Quickstart'
+            >
+              <p>Explore Quickstart</p>
+              <BsArrowRight className='svg' size={23} />
+            </FaqLink>
           </HomepageSubHeader>
 
           <PopularQuickiesList>
@@ -318,7 +205,7 @@ export default function HomepageFeatures(): JSX.Element {
                   <PopularQuickiesContent>
                     <PopularQuickiesCodeBlock
                       language='jsx'
-                      showLineNumbers={true}
+                      showLineNumbers={false}
                     >
                       {item.codeblock}
                     </PopularQuickiesCodeBlock>
@@ -327,183 +214,158 @@ export default function HomepageFeatures(): JSX.Element {
               );
             })}
           </PopularQuickiesList>
-        </FluidContent>
-      </HomepageSection> */}
+        </Content>
+      </HomepageSection>
 
-        {/* TECH DOCS SECTION */}
-        {/* <HomepageSection>
-        <FluidContent>
-          <HomepageSubHeader id='techdocs'>
-            Technical Documentation
-          </HomepageSubHeader>
-          <TechDocCardList>
-            {TechDocItems.map((props, idx) => (
-              <TechDocItem key={idx} docutheme={colorMode} {...props} />
-            ))}
-          </TechDocCardList>
-        </FluidContent>
-      </HomepageSection> */}
-
-        {/* SDK SECTION */}
-        {/* <HomepageSection>
-        <FluidContent>
-          <ItemH justifyContent='flex-start'>
-            <HomepageSubHeader>Push Chain SDK</HomepageSubHeader>
-            <Link
-              to='https://www.npmjs.com/package/@pushprotocol/restapi'
-              target='_blank'
-            >
-              <Span fontSize='18px' margin='0 5px 0 10px'>
-                Explore SDK
-              </Span>
+      <Section>
+        <Content maxWidth={`1326px`}>
+          <HomepageSubHeader id='quickstart'>
+            <ItemV justifyContent='flex-start' alignItems='flex-start'>
+              <H2>Tooling</H2>
               <Span>
-                <FiArrowUpRight size={20} />
+                Everything you will need to get up and running in 2 minutes or
+                less!
               </Span>
-            </Link>
-          </ItemH>
+            </ItemV>
 
-          <PushSdkCardList justifyContent='flex-start'>
-            {SdkItemsList.map((item, idx) => (
-              <PushSdkCard>
-                <PushSdkContent href={item.link} target='_blank'>
-                  <PushSdkContentTitle>{item.title}</PushSdkContentTitle>
-                  <PushSdkContentArrow>
-                    <FiArrowUpRight size={24} />
-                  </PushSdkContentArrow>
-                </PushSdkContent>
-              </PushSdkCard>
+            <FaqLink
+              href='/docs/chain/setup/tooling/'
+              target='_blank'
+              title='Explore Tooling'
+            >
+              <p>Explore Tooling</p>
+              <BsArrowRight className='svg' size={23} />
+            </FaqLink>
+          </HomepageSubHeader>
+
+          <GridSection>
+            {ToolingItems.map((item, idx) => (
+              <TechnicalGrid key={idx} item={item} />
             ))}
-          </PushSdkCardList> */}
+          </GridSection>
+        </Content>
+      </Section>
 
-        {/* <div className='Faqs-main-container'>
-                  <div className='sub-container'>
-                    <span className="hero_home_Faq_header">
-                      Frequently Asked Questions
-                    </span>
-                    <Link to='https://push.org/faq' target='_blank'>
-                      <div className='hero_home_explore'>
-                        <p className='hero_home_explore_link'>
-                          Explore FAQs
-                        </p>
-                        <FiArrowUpRight className='arrowUp-icon' />
-                      </div>
-                    </Link>
-                  </div>
-                  <FAQ />
+      <Section>
+        <Content maxWidth={`1326px`}>
+          <HomepageSubHeader id='quickstart'>
+            <ItemV justifyContent='flex-start' alignItems='flex-start'>
+              <H2>Tutorials</H2>
+              <Span>
+                Tutorials to enable you to build your first Universal
+                Application.
+              </Span>
+            </ItemV>
 
-                </div> */}
-        {/* </FluidContent>
-      </HomepageSection> */}
+            <FaqLink
+              href='/docs/chain/tutorials'
+              target='_blank'
+              title='Explore Tutorials'
+            >
+              <p>Explore Tutorials</p>
+              <BsArrowRight className='svg' size={23} />
+            </FaqLink>
+          </HomepageSubHeader>
 
-        {/* NOTE: added extra div for larger screens since body is removed */}
-        <ExtraDiv></ExtraDiv>
+          <GridSection>
+            {TutorialDocumentationItems.map((item, idx) => (
+              <TechnicalGrid key={idx} item={item} />
+            ))}
+          </GridSection>
+        </Content>
+      </Section>
 
-        <Footer showPattern={false} />
-      </DocsWrapper>
+      <Section>
+        <Content maxWidth={`1326px`}>
+          <ItemV>
+            <H2
+              fontSize='3rem'
+              color='var(--ifm-playground-buttontextcolor)'
+              fontWeight='600'
+              lineHeight='125%'
+              textAlign='center'
+            >
+              Want to dive deeper?
+            </H2>
+            <Span
+              fontSize='1.25rem'
+              color='var(--ifm-playground-header-text)'
+              fontWeight='400'
+              lineHeight='125%'
+              textAlign='center'
+            >
+              Explore the full docs to get started.
+            </Span>
+
+            <Button
+              margin='24px 0 0 0'
+              background='#D548EC'
+              fontSize='14px'
+              fontWeight='600'
+              lineHeight='normal'
+              padding='13px'
+            >
+              Explore Docs
+            </Button>
+          </ItemV>
+        </Content>
+      </Section>
+
+      {/* TODO: Implement Footer */}
+      {/* <Footer showPattern={false} /> */}
     </Layout>
   );
 }
 
-const DocsWrapper = styled.div`
-  @media (min-width: 1800px) {
-    min-height: 100vh;
-    background: var(--ifm-color-primary-inverse);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-`;
-
-const ExtraDiv = styled.div`
-  display: none;
-
-  @media (min-width: 1800px) {
-    display: block;
-    height: 6rem; // or adjust to whatever spacing you need
-  }
-`;
-
 const DocsHeroSection = styled(Section)`
-  background: var(--ifm-docs-hero-bg);
-  // background: ${GLOBALS.COLORS.BG_DARK};
-
-  padding: ${GLOBALS.STRUCTURE.PADDING.DESKTOP};
+  padding: 0px;
   padding-bottom: 0px;
-
-  @media ${device.laptop} {
-    padding: ${GLOBALS.STRUCTURE.PADDING.TABLET};
-    padding-bottom: 0px;
-  }
-
-  @media ${device.mobileM} {
-    padding: ${GLOBALS.STRUCTURE.PADDING.MOBILE};
-    padding-bottom: 0px;
-  }
 `;
 
 const HeroHeader = styled(ItemV)`
-  padding: 2rem 0 5.5rem 0;
+  padding: 15rem 0 0 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 
   & ${H1} {
-    font-size: var(--ifm-h1-font-size);
-    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.96px;
   }
-`;
 
-const HeroButton = styled(Button)`
-  cursor: ${(props) => (props.disabled ? 'not-allowed !important' : 'pointer')};
-  align-items: center;
-  background-color: #d548ec;
-  border-radius: 16px;
-  color: #fff;
-  display: flex;
-  flex-direction: row;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 142%;
-  padding: 12px 30px;
-  text-decoration: none;
-  transition: all 0.1s ease-in-out;
-
-  &:hover {
-    transform: scale(1.05);
-    color: #fff;
+  @media ${device.mobileL} {
+    & ${H1} {
+      font-size: 2rem;
+    }
   }
-`;
-
-const pulseStaticAnim = keyframes`
-  100% {
-    opacity: 0.25;
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-  }
-`;
-
-const PulseStatic = styled.div`
-  width: 40px;
-  height: 40px;
-  background: #000;
-  border-radius: 50%;
-  position: absolute;
-  animation: ${pulseStaticAnim} 5s ease-out forwards;
-  z-index: 2;
 `;
 
 const Pulse = styled.div`
-  width: 40px;
-  height: 40px;
-  // background: var(--ifm-color-primary-preferred);
-  background: rgba(213, 72, 236, 0.4);
-  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pulse-logo {
+    width: 50px;
+    height: auto;
+    z-index: 2;
+  }
 `;
 
 const pulsateAnim = keyframes`
+  0% {
+    transform: scale(0.1);
+    opacity: 0.6;
+  }
+
   100% {
+    transform: scale(6);
     opacity: 0;
-    transform: scale(12);
   }
 `;
 
@@ -511,71 +373,131 @@ const Pulsate = styled.span`
   position: absolute;
   width: 100%;
   height: 100%;
-  background: inherit;
-  border-radius: inherit;
-  opacity: 0.8;
-  animation: ${pulsateAnim} 6s ease-out infinite;
-  animation-delay: calc(1s * ${(props) => (props.stagger ? props.stagger : 1)});
-`;
-
-const TechDocIcon = styled(ItemV)`
-  align-self: flex-start;
-
-  & ${Image} {
-    filter: ${(props) => (props.docutheme === 'dark' ? 'invert(100%)' : '')};
-
-    height: 44px;
-    width: auto;
-    margin: 0 0 1rem 0;
-  }
-`;
-
-const FluidContent = styled(Content)`
-  align-self: center;
-  width: 68%;
-  max-width: initial;
-  padding-top: 0px;
-  padding-bottom: 0px;
-
-  @media ${device.laptopL} {
-    width: 100%;
-    box-sizing: border-box;
-  }
+  background: rgba(213, 72, 236, 0.4);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ${pulsateAnim} 5s ease-out infinite;
+  animation-delay: calc(1s * ${(props) => props.stagger || 0});
+  animation-fill-mode: forwards;
+  z-index: 1;
 `;
 
 const HomepageSection = styled(Section)`
-  margin-top: 70px;
-  margin-bottom: 30px;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
 `;
 
-const HomepageSubHeader = styled(H2)`
-  font-family: var(--ifm-font-family-base);
-  font-weight: 600;
-  font-size: 36px;
+const HomepageSubHeader = styled.div`
   align-items: start;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
 
-  color: var(--ifm-color-primary-text);
+  h2 {
+    color: var(--ifm-playground-buttontextcolor);
+    font-weight: 600;
+    font-size: 36px;
+  }
+
+  span {
+    color: var(--ifm-playground-header-text);
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+`;
+
+const FaqLink = styled(Link)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: inherit;
+  gap: 12px;
+  padding: 0;
+  flex: 0;
+  width: fit-content;
+  background: transparent;
+
+  &:after {
+    background: transparent !important;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  p {
+    margin: 0px !important;
+    color: #e163ff;
+    background: transparent;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.36px;
+    white-space: nowrap;
+  }
+
+  .svg {
+    color: #e163ff;
+    top: 0px;
+  }
+
+  @media ${device.tablet} {
+    margin: 16px auto 0 0;
+  }
+
+  &:hover {
+    text-decoration: none !important;
+    background: transparent !important;
+    .anchorSVGlink {
+      color: #fff;
+    }
+  }
+`;
+
+const LinkTo = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  color: var(--ifm-table-header-textcolor);
+
+  h2 {
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115.385%;
+    letter-spacing: -0.78px;
+    color: var(--ifm-table-header-textcolor);
+  }
 `;
 
 const PopularQuickiesList = styled(ItemH)`
   gap: 32px;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
   position: relative;
+  height: 100%;
+  align-items: stretch;
 `;
 
 const PopularQuickiesCard = styled(ItemV)`
   margin: 0px;
-  align-self: flex-start;
+  align-self: stretch;
   flex: 1;
   overflow: auto;
   width: 100%;
+  min-width: 400px;
+
+  code {
+    align-self: flex-start;
+  }
 
   /* WebKit browsers (Chrome, Safari) */
   *::-webkit-scrollbar {
@@ -607,15 +529,19 @@ const PopularQuickiesCard = styled(ItemV)`
     flex: 1;
     max-width: initial;
   }
+
+  @media ${device.mobileL} {
+    min-width: 100%;
+  }
 `;
 
-const PopularQuickiesHeader = styled(ItemH)`
+const PopularQuickiesHeader = styled.div`
   align-items: center;
   font-size: 20px;
-  background: #282a36;
+  background: var(--ifm-navbar-search-bg);
   justify-content: flex-start;
   padding: 10px 20px 14px 80px;
-  margin-bottom: -6px;
+  margin-bottom: -8px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   position: relative;
@@ -627,12 +553,13 @@ const PopularQuickiesHeader = styled(ItemH)`
     height: 0.6em;
     width: 0.6em;
     margin: 0.3em;
+    top: 0.8em;
     left: 0.5em;
     border-radius: 100%;
-    background: #4a4a4a;
+    background: var(--ifm-header-caret-color);
     box-shadow:
-      1em 0em #4a4a4a,
-      2em 0em #4a4a4a;
+      1em 0em var(--ifm-header-caret-color),
+      2em 0em var(--ifm-header-caret-color);
     transition: all 0.3s ease-in-out;
   }
 
@@ -644,15 +571,67 @@ const PopularQuickiesHeader = styled(ItemH)`
   }
 `;
 
+const GridSection = styled(ItemV)`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+const TechnicalGridWrapper = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 24px;
+  border: var(--ifm-playground-button-border);
+  background: transparent;
+  gap: 8px;
+
+  span {
+    color: var(--ifm-table-body-textcolor);
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 133.333%;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  svg {
+    color: var(--ifm-header-caret-color);
+  }
+
+  &:hover {
+    cursor: pointer;
+    h2 {
+      color: var(--ifm-sidebar-activetext-color) !important;
+    }
+
+    svg {
+      color: var(--ifm-sidebar-activetext-color) !important;
+    }
+  }
+`;
+
 const PopularQuickiesTitle = styled(Span)`
-  color: #9aa3db;
-  font-size: 16px;
+  color: var(--ifm-playground-header-text);
+  font-size: 0.875rem;
   font-weight: bold;
+  text-transform: uppercase;
 `;
 
 const PopularQuickiesContent = styled(ItemV)`
-  border-top: 1px solid #3d3d3d;
   align-items: stretch;
+  justify-content: stretch;
   width: 100%;
 `;
 
@@ -662,182 +641,6 @@ const PopularQuickiesCodeBlock = styled(CodeBlock)`
   border-bottom-right-radius: 24px;
   overflow: hidden;
   width: inherit;
-`;
-
-const TechDocCardList = styled(ItemH)`
-  gap: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
-
-const TechDocCard = styled(ItemV)`
-  margin: 0px;
-  align-self: flex-start;
-  flex: 0 0 calc(33.33% - 21.33px);
-  min-width: 280px;
-  max-width: calc(33.33% - 21.33px);
-  box-sizing: border-box;
-  justify-content: flex-start;
-
-  @media ${device.laptop} {
-    flex: 1;
-    max-width: initial;
-  }
-`;
-
-const TechDocContent = styled.div`
-  margin-top: 24px;
-  position: relative;
-  border-radius: 24px;
-  padding: 40px 20px;
-  border: 1px solid #d9d9d9;
-  background: transparent;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  cursor: pointer;
-
-  & svg path {
-    stroke: var(--ifm-color-primary-text);
-  }
-
-  &:hover {
-    border: 1px solid var(--ifm-color-primary-preferred);
-
-    & ${Image} {
-      filter: invert(36%) sepia(21%) saturate(4402%) hue-rotate(291deg)
-        brightness(89%) contrast(94%);
-    }
-  }
-`;
-
-const TechDocTitle = styled(Span)`
-  font-family: var(--ifm-font-family-base);
-  font-size: 26px;
-  color: var(--ifm-color-primary-text);
-  margin-top: 0px;
-  font-weight: bold;
-  letter-spacing: -0.03em;
-`;
-
-const TechDocSwitcher = styled(ItemH)`
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: inherit;
-`;
-
-const TechDocButton = styled(Button)`
-  padding: 4px 12px;
-  font-size: 14px;
-  font-weight: 600;
-`;
-
-const TechDocOverview = styled(Span)`
-  font-family: var(--ifm-font-family-base);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--ifm-color-secondary-text);
-  margin-top: -10px;
-  letter-spacing: -0.02em;
-  line-height: 150%;
-`;
-
-const TechDocCodeBlock = styled(CodeBlock)`
-  font-size: 14px;
-  margin: 0px 10px;
-  align-self: stretch;
-  text-align: initial;
-  overflow: auto;
-  max-width: 100%;
-
-  /* WebKit browsers (Chrome, Safari) */
-  *::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background: #cb3faa;
-    border-radius: 6px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-
-  *::-webkit-scrollbar-button {
-    display: none !important;
-  }
-
-  /* Firefox */
-  * {
-    scrollbar-color: #cb3faa #f1f1f1;
-    scrollbar-width: thin;
-  }
-`;
-
-const PushSdkCardList = styled(ItemH)`
-  gap: 32px;
-  margin-top: 30px;
-  margin-bottom: 70px;
-  align-items: center;
-`;
-
-const PushSdkCard = styled(ItemH)`
-  align-self: flex-start;
-  flex: 0 0 calc(33.33% - 21.33px);
-  min-width: 250px;
-  max-width: calc(33.33% - 21.33px);
-
-  @media ${device.laptop} {
-    flex: 1;
-    max-width: initial;
-  }
-`;
-
-const PushSdkContent = styled(A)`
-  color: var(--ifm-color-primary-text);
-  background: var(--ifm-color-primary-inverse);
-  align-items: stretch;
-  display: flex;
-  justify-content: stretch;
-  align-self: stretch;
-  border: 1px solid #d9d9d9;
-  width: 100%;
-  padding: 24px;
-
-  & svg {
-    color: #d9d9d9;
-  }
-
-  &:after {
-    background: transparent;
-  }
-
-  &:hover {
-    border: 1px solid var(--ifm-color-primary-preferred);
-
-    & svg {
-      color: var(--ifm-color-primary-preferred);
-    }
-  }
-`;
-
-const PushSdkContentTitle = styled(Span)`
-  font-family: var(--ifm-font-family-base);
-  font-size: 26px;
-  color: var(--ifm-color-primary-text);
-  margin-top: 0px;
-  font-weight: bold;
-  letter-spacing: -0.03em;
+  background: var(--ifm-navbar-search-bg) !important;
   flex: 1;
 `;
-
-const PushSdkContentArrow = styled(Span)`
-  display: flex;
-  align-items: center;
-`;
-const Div = styled.div``;

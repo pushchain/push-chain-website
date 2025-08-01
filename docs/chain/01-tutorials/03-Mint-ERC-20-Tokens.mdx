@@ -1,0 +1,616 @@
+---
+id: docs-chain-tutorials-mint-erc-20-tokens
+title: Mint Universal ERC-20 Tokens
+hide_title: false
+slug: ./tutorial-mint-erc-20-tokens
+displayed_sidebar: pushChainSidebar
+sidebar_position: 2
+image: '/assets/docs/previews/notifications--intro_to_push_notification.png'
+---
+
+<head>
+  <title>Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {
+  ModalContainer,
+  ModalSmall,
+  ModalWrapper,
+} from '@site/src/css/SharedStyling';
+import IFrameModal from '@site/src/components/IFrameModal/IFrameModal';
+
+<!-- Content Start -->
+
+Welcome to this developer-focused tutorial on building a truly universal ERC-20 token on Push Chain. We’ll walk through:
+
+1. Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat
+2. Spinning up a minimal Vite + React + TypeScript frontend using `@pushchain/ui-kit`
+3. Fetching ERC-20 token balance from Push Chain
+4. Minting tokens from Push Chain or Sepolia with Universal Transaction
+
+If you’ve shipped ERC-20s before, you’ll recognize the pieces—but this setup makes cross-chain-style interactions seamless. Let’s dive in 🤿.
+
+## Tutorial Overview
+
+This tutorial is divided into two main parts:
+
+### Part 1: Smart Contract Development & Deployment
+We'll deploy a standard ERC-20 token (`MyToken`) to Push Chain's testnet using Hardhat. This includes:
+- Setting up the development environment
+- Writing and compiling the smart contract
+- Deploying to Push Chain testnet
+
+### Part 2: Building the Frontend UI
+We'll create a React application using `@pushchain/ui-kit` to interact with our deployed contract. This includes:
+- Setting up a Vite + React + TypeScript frontend
+- Integrating Push Chain wallet functionality
+- Calling the `balanceOf` function from the contract on Push Chain
+- Implementing cross-chain transaction capabilities
+
+## Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat
+
+> **Note:** For a deeper dive on how to configure Hardhat to Push Chain, please refer to this page [Configure Hardhat](/docs/chain/02-setup/02-smart-contract-environment/03-Configure-Hardhat.mdx)
+
+### 1.1. Setting up Hardhat
+
+First, let’s set up a new Hardhat project.
+
+```bash
+mkdir myToken
+cd myToken
+npm init -y
+```
+
+Install Hardhat and required dependencies:
+
+```bash
+npm install --save-dev \
+  hardhat \
+  @nomicfoundation/hardhat-toolbox \
+  @nomicfoundation/hardhat-verify \
+  dotenv \
+  @openzeppelin/contracts
+```
+
+### 1.2. Creating a new Hardhat project
+
+Initialize a new Hardhat project:
+
+```bash
+npx hardhat init
+```
+
+Select `Create a JavaScript project` and press Enter.
+
+### 1.3. Configuring Hardhat
+
+Configure Hardhat to use Push Chain by editing the `hardhat.config.js` file:
+
+```javaScript
+require('@nomicfoundation/hardhat-toolbox');
+require('@nomicfoundation/hardhat-verify');
+require('dotenv').config();
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: {
+    version: '0.8.22',
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 200,
+      },
+    },
+  },
+  networks: {
+    push_testnet: {
+      url: 'https://evm.rpc-testnet-donut-node1.push.org/',
+      chainId: 42101,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+    push_testnet_alt: {
+      url: 'https://evm.rpc-testnet-donut-node2.push.org/',
+      chainId: 42101,
+      accounts: [process.env.PRIVATE_KEY],
+    },
+  },
+  etherscan: {
+    apiKey: {
+      // Blockscout doesn't require an actual API key, any non-empty string will work
+      push_testnet: 'blockscout',
+    },
+    customChains: [
+      {
+        network: 'push_testnet',
+        chainId: 42101,
+        urls: {
+          apiURL: 'https://donut.push.network/api/v2/verifyContract',
+          browserURL: 'https://donut.push.network/',
+        },
+      },
+    ],
+  },
+  sourcify: {
+    // Disable sourcify for manual verification
+    enabled: false,
+  },
+  paths: {
+    sources: './contracts',
+    tests: './test',
+    cache: './cache',
+    artifacts: './artifacts',
+  },
+  mocha: {
+    timeout: 40000,
+  },
+};
+```
+
+### 1.4. Writing the ERC-20 Contract
+
+Create a new file `contracts/MyToken.sol` with the following content:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.22;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+/**
+ * @title MyToken
+ * @dev A simple ERC20 token for demonstration on PUSH CHAIN
+ */
+contract MyToken is ERC20 {
+    constructor() ERC20("MyToken", "MT") {
+        _mint(msg.sender, 1000 * 10 ** 18);
+    }
+
+    /**
+     * @dev Returns the number of decimals used to get its user representation.
+     */
+    function decimals() public view virtual override returns (uint8) {
+        return 18;
+    }
+
+    /**
+     * @dev Allows anyone to mint new tokens
+     * @param to The address that will receive the minted tokens.
+     * @param amount The amount of tokens to mint.
+     */
+    function mint(address to, uint256 amount) public {
+        _mint(to, amount);
+    }
+}
+```
+
+### 1.5. Compiling the Contract
+
+Compile the contract with:
+
+```bash
+npx hardhat compile
+```
+
+### 1.6. Deploying the Contract to Push Chain
+
+Create a `.env` file in the root directory and add your private key that you will use to deploy the contract to Push Chain.  If you need `PC` tokens to deploy the contract, you can get them from the [Push Chain Faucet](https://faucet.push.org/).
+
+Add the following to the `.env` file:
+
+```bash
+PRIVATE_KEY=your_private_key
+```
+
+Then create a deployment script at scripts/deploy.js:
+
+```javascript
+const hre = require('hardhat');
+
+async function main() {
+  console.log('Deploying MyToken to PUSH Chain...');
+
+  const myToken = await hre.ethers.deployContract('MyToken');
+  await myToken.waitForDeployment();
+
+  const address = await myToken.getAddress();
+  console.log(`MyToken deployed to: ${address}`);
+}
+
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+```
+
+Now, deploy the contract to Push Chain:
+
+```bash
+npx hardhat run scripts/deploy.js --network push_testnet
+```
+
+After the deployment is complete, you will see the contract address in the terminal.
+
+```bash
+Deploying MyToken to PUSH Chain...
+MyToken deployed to: 0x0B86e252B035027028C0d4D3B136d80Da4C98Ec1
+```
+
+## Part 2: Building the Frontend UI
+
+> **Note:** To learn more about how to integrate Push Universal Wallet, please refer to the [Integrate Push Universal Wallet](/docs/chain/04-ui-kit/01-Integrate-Push-Universal-Wallet.mdx) page.
+
+### 2.1. Setting up Vite + React + TypeScript frontend
+
+Create a new directory for the frontend and install the necessary dependencies:
+
+```bash
+npm create vite@latest my-react-ts-app -- --template react-ts
+cd my-react-ts-app
+npm install
+```
+
+### 2.2. Installing `@pushchain/ui-kit`
+
+Install `@pushchain/ui-kit` in the frontend directory and `ethers` that we'll use to interact with the Push Chain network:
+
+```bash
+npm install @pushchain/ui-kit ethers
+```
+
+### 2.3. Setting up the Push Chain Wallet
+
+To use the Push Universal Wallet in your application, you need to wrap your app with the `PushUniversalWalletProvider` component. This provider makes the wallet functionality available throughout your application.
+
+Here's how to set it up in the `main.tsx` file:
+
+```tsx
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import App from './App.tsx';
+import { PushUniversalWalletProvider, PushUI } from '@pushchain/ui-kit';
+
+const walletConfig = {
+  network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+};
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <PushUniversalWalletProvider config={walletConfig}>
+      <App />
+    </PushUniversalWalletProvider>
+  </StrictMode>
+);
+
+```
+
+The `PushUniversalWalletProvider` component requires a `config` prop that specifies the network configuration. In this example, we're using the Push Chain testnet.
+
+### 2.4. Creating the Application Component
+
+Open the `App.tsx` and add the necessary imports:
+
+```tsx
+import { useState } from 'react';
+import { ethers } from 'ethers';
+import { PushChain } from '@pushchain/core';
+import { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';
+import './App.css';
+import React from 'react';
+```
+
+Let's add the required hooks to the `App` component:
+
+```tsx
+const { connectionStatus } = usePushWalletContext();
+const { pushChainClient } = usePushChainClient();
+const [isLoading, setIsLoading] = useState(false);
+const [txHash, setTxHash] = useState('');
+const [tokenBalance, setTokenBalance] = useState<string>('0');
+```
+
+The `usePushChainClient` hook provides the Push Chain client instance, which is used to interact with the Push Chain network.
+
+The `usePushWalletContext` hook provides the connection status and the Push Universal Wallet instance.
+
+Now, on the `App` component, we'll use `ethers` to fetch the ERC-20 token balance from our deployed contract on Push Chain. We'll need:
+
+1. **Contract ABI**: This comes from the `artifacts/contracts/MyToken.sol/MyToken.json` file that was generated when we compiled our contract with Hardhat
+2. **Contract Address**: This is the address we received after deploying our contract to Push Chain (e.g., `0x0B86e252B035027028C0d4D3B136d80Da4C98Ec1`)
+
+Add the following code to fetch the ERC-20 token balance from Push Chain:
+
+```tsx
+// Function to get token balance
+const getTokenBalance = async () => {
+  if (!pushChainClient) return;
+
+  try {
+    const userAddress = pushChainClient.universal.account;
+    console.log('Fetching balance for address:', userAddress);
+
+    // Create a read-only provider using the Push Chaintestnet RPC URL
+    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+
+    // Create contract interface
+    const contract = new ethers.Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, provider);
+
+    // Call balanceOf directly
+    const balance = await contract.balanceOf(userAddress);
+    console.log('Raw balance response:', balance);
+
+    // Convert balance from wei to ether and format it
+    const formattedBalance = ethers.formatUnits(balance, 18);
+    setTokenBalance(formattedBalance);
+  } catch (err) {
+    console.error('Error fetching balance:', err);
+  }
+};
+```
+
+Now, let's create the `mint` function to mint tokens from Push Chain or Sepolia with Universal Transaction.
+
+For enconding the transaction data, we'll use the `encodeTxData` function from the `PushChain` library. This function takes the ABI of the contract, the function name, and the arguments for the function.
+
+```tsx
+// Function to encode transaction data for minting
+const getMintTxData = () => {
+  if (!pushChainClient) return null;
+
+  const amount = ethers.parseUnits('1', 18); // Mint 1 token (with 18 decimals)
+  const userAddress = pushChainClient.universal.account;
+
+  return PushChain.utils.helpers.encodeTxData({
+    abi: TOKEN_ABI,
+    functionName: 'mint',
+    args: [userAddress, amount],
+  }) as `0x${string}`;
+};
+
+// Handle mint transaction
+const handleMint = async () => {
+  if (pushChainClient) {
+    try {
+      setIsLoading(true);
+      const data = getMintTxData();
+
+      if (!data) {
+        throw new Error('Failed to encode transaction data');
+      }
+
+      const tx = await pushChainClient.universal.sendTransaction({
+        to: TOKEN_CONTRACT_ADDRESS,
+        value: BigInt(0),
+        data: data,
+      });
+
+      setTxHash(tx.hash);
+
+      // Wait for transaction to be mined
+      await tx.wait();
+      // Update balance after successful mint
+      await getTokenBalance();
+      setIsLoading(false);
+    } catch (err) {
+      console.error('Mint transaction error:', err);
+      setIsLoading(false);
+    }
+  }
+};
+```
+
+Now, we can add the button and build the UI to mint tokens from Push Chain or Sepolia with Universal Transaction.
+
+Here is the complete `App.tsx` file:
+
+```tsx
+import { useState } from 'react';
+import { ethers } from 'ethers';
+import { PushChain } from '@pushchain/core';
+import { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';
+import './App.css';
+import React from 'react';
+
+// MyToken contract ABI
+const TOKEN_ABI = [
+  {
+    inputs: [
+      { name: 'to', type: 'address' },
+      { name: 'amount', type: 'uint256' },
+    ],
+    name: 'mint',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+  {
+    inputs: [{ name: 'account', type: 'address' }],
+    name: 'balanceOf',
+    outputs: [{ name: '', type: 'uint256' }],
+    stateMutability: 'view',
+    type: 'function',
+  },
+];
+
+const TOKEN_CONTRACT_ADDRESS = '0xA6AEA5b75Af70A4a036F0D2E1265590C168A96fa' as `0x${string}`;
+
+function App() {
+  const { connectionStatus } = usePushWalletContext();
+  const { pushChainClient } = usePushChainClient();
+  const [isLoading, setIsLoading] = useState(false);
+  const [txHash, setTxHash] = useState('');
+  const [tokenBalance, setTokenBalance] = useState<string>('0');
+
+  // Function to get token balance
+  const getTokenBalance = async () => {
+    if (!pushChainClient) return;
+
+    try {
+      const userAddress = pushChainClient.universal.account;
+      console.log('Fetching balance for address:', userAddress);
+
+      // Create a read-only provider using the testnet RPC URL
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+
+      // Create contract interface
+      const contract = new ethers.Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, provider);
+
+      // Call balanceOf directly
+      const balance = await contract.balanceOf(userAddress);
+      console.log('Raw balance response:', balance);
+
+      // Convert balance from wei to ether and format it
+      const formattedBalance = ethers.formatUnits(balance, 18);
+      setTokenBalance(formattedBalance);
+    } catch (err) {
+      console.error('Error fetching balance:', err);
+    }
+  };
+
+  // Fetch balance when connection status changes or when pushChainClient changes
+  React.useEffect(() => {
+    if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && pushChainClient) {
+      console.log('Connection status changed to connected, fetching balance...');
+      getTokenBalance();
+    } else {
+      console.log('Not connected or no client, setting balance to 0');
+      setTokenBalance('0');
+    }
+  }, [connectionStatus, pushChainClient]);
+
+  // Function to encode transaction data for minting
+  const getMintTxData = () => {
+    if (!pushChainClient) return null;
+
+    const amount = ethers.parseUnits('1', 18); // Mint 1 token (with 18 decimals)
+    const userAddress = pushChainClient.universal.account;
+
+    return PushChain.utils.helpers.encodeTxData({
+      abi: TOKEN_ABI,
+      functionName: 'mint',
+      args: [userAddress, amount],
+    }) as `0x${string}`;
+  };
+
+  // Handle mint transaction
+  const handleMint = async () => {
+    if (pushChainClient) {
+      try {
+        setIsLoading(true);
+        const data = getMintTxData();
+
+        if (!data) {
+          throw new Error('Failed to encode transaction data');
+        }
+
+        const tx = await pushChainClient.universal.sendTransaction({
+          to: TOKEN_CONTRACT_ADDRESS,
+          value: BigInt(0),
+          data: data,
+        });
+
+        setTxHash(tx.hash);
+
+        // Wait for transaction to be mined
+        await tx.wait();
+        // Update balance after successful mint
+        await getTokenBalance();
+        setIsLoading(false);
+      } catch (err) {
+        console.error('Mint transaction error:', err);
+        setIsLoading(false);
+      }
+    }
+  };
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '20px',
+        padding: '20px',
+      }}
+    >
+      <h1>Push Chain Token Minter</h1>
+
+      <PushUniversalAccountButton />
+
+      {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>
+          <div
+            style={{
+              backgroundColor: '#f3e8ff',
+              padding: '12px 24px',
+              borderRadius: '12px',
+              textAlign: 'center',
+            }}
+          >
+            <p style={{ margin: 0, color: '#581c87' }}>
+              Your Token Balance: <strong>{tokenBalance}</strong>
+            </p>
+          </div>
+
+          <button
+            onClick={handleMint}
+            disabled={isLoading}
+            style={{
+              backgroundColor: '#d946ef',
+              color: 'white',
+              border: 'none',
+              borderRadius: '20px',
+              padding: '12px 24px',
+              fontSize: '16px',
+              cursor: 'pointer',
+              fontWeight: 'bold',
+            }}
+          >
+            {isLoading ? 'Minting...' : 'Mint Token'}
+          </button>
+
+          {txHash && pushChainClient && (
+            <div style={{ textAlign: 'center' }}>
+              <p>
+                Transaction Hash:{' '}
+                <a
+                  href={pushChainClient.explorer.getTransactionUrl(txHash)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#d946ef', textDecoration: 'underline' }}
+                >
+                  {txHash}
+                </a>
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+        <p>Please connect your wallet to mint tokens.</p>
+      )}
+    </div>
+  );
+}
+
+export default App;
+```
+
+## Conclusion
+
+Congratulations! 🎉 You've successfully built a universal ERC-20 token system on Push Chain that demonstrates the power of cross-chain interactions. Here's what we accomplished:
+
+### Next Steps
+
+- [Intro to Push Chain](/docs/chain/)
+- [Push Universal Wallet Integration](/docs/chain/04-ui-kit/01-Integrate-Push-Universal-Wallet.mdx)
+- [Configure Hardhat](/docs/chain/02-setup/02-smart-contract-environment/03-Configure-Hardhat.mdx)
+- [Push Chain Explorer](https://donut.push.network/)
+
+Happy building! 🚀
+

@@ -1,0 +1,176 @@
+---
+id: docs-chain-build-sign-universal-message
+title: Sign Universal Message
+hide_title: false
+slug: ./sign-universal-message
+displayed_sidebar: pushChainSidebar
+sidebar_position: 6
+image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_channel.png'
+---
+
+<head>
+  <title>Sign Message | Build | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+<!-- Content Start -->
+
+## Overview
+
+Sign arbitrary data with your universal signer, across EVM, Solana, or any supported chain.
+
+## Sign Universal Message
+**_`pushChainClient.universal.signMessage(message): Promise<string>`_**
+
+```typescript
+// Create message data
+const message = new TextEncoder().encode('Hello, Push Chain!')
+
+// Sign the message
+const signature = await pushChainClient.universal.signMessage(message)
+```
+
+<Details summary="Returns `signedMessage` <string>" className="alert alert--fn-args">
+
+```typescript
+// Signed Message
+'0xf10cabddd923cf05578dd253c0642009e7651286171a17b3d40f270f42e97aff56f8941ff9989333c23edb82ae1fad11b1e82b939b9e74a96ae6e3db9ae63e0b1c'
+```
+
+</Details>
+
+<Details summary="Live Playground: Get back Signed Message" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"}}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.signMessage
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      // Using ethers for this demo
+      // Set up wallet, provider and signer
+      const wallet = ethers.Wallet.createRandom();
+
+      // Setup provide and signer
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // Convert to Universal Signer and Initialize Push Chain SDK
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // Sign Message
+      console.log('Signing Message...');
+      const messageToSign = new TextEncoder().encode('Hello, Push Chain!');
+      const messageSignature = await pushChainClient.universal.signMessage(messageToSign);
+      console.log('Message signature:', messageSignature);
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+## Sign Typed Data
+**_`pushChainClient.universal.signTypedData({typedData}): Promise<string>`_**
+
+The `signTypedData` function signs structured data following the EIP-712 standard. This function is only supported when connected to an **EVM compatible chain**.
+
+```typescript
+// Sign the message
+const signature = await pushChainClient.universal.signTypedData({<TYPED_DATA>})
+```
+
+<Details summary="Returns `signedTypedData` <string>" className="alert alert--fn-args">
+
+```typescript
+// Signed Message
+'0x9356ffe552cf0bdaa624c5121b1da0598a65b6bba357ba33868f92c9dedd490e1b9757b64af7dd16d5797e0e151fe731858c49defcc04894f53a4ab10429499f1c'
+```
+
+</Details>
+
+<Details summary="Live Playground: Get back Signed Typed Data" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"}}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.signTypedData
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      // Using ethers for this demo
+      // Set up wallet, provider and signer
+      const wallet = ethers.Wallet.createRandom();
+
+      // Setup provide and signer
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // Convert to Universal Signer and Initialize Push Chain SDK
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // Sign Typed Data Example
+      console.log('Signing Typed Data...')
+      const domain = {
+        name: 'Push Chain',
+        version: '1',
+        chainId: 42101, // Push testnet
+        verifyingContract:
+          '0x1234567890123456789012345678901234567890',
+      };
+
+      const types = {
+        Person: [
+          { name: 'name', type: 'string' },
+          { name: 'wallet', type: 'address' },
+        ],
+      };
+
+      const message = {
+        name: 'Alice',
+        wallet: '0x9821655B609186a9296261638FA74e1DFBA4AC88',
+      };
+
+      // Sign the typed data
+      const signature = await pushChainClient.universal.signTypedData({
+        domain,
+        types,
+        primaryType: 'Person',
+        message,
+      })
+      console.log('Typed data signature:', signature)
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+## Next Steps
+
+- Query on-chain data with our [Utility Functions](/docs/chain/build/utility-functions)  
+- Read contract state using the [Blockchain State Reader](/docs/chain/build/reading-blockchain-state)  
+- Build rich UIs around your signer using the [UI Kit](/docs/chain/ui-kit)

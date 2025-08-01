@@ -122,6 +122,10 @@ const Div = styled.div`
     position: relative;
     top: 120px;
     left: -15px;
+
+    span {
+      color: #000 !important;
+    }
   }
 `;
 

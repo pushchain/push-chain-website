@@ -1,0 +1,349 @@
+---
+id: docs-chain-build-contract-helpers
+title: Contract Helpers
+hide_title: false
+slug: ./contract-helpers
+displayed_sidebar: pushChainSidebar
+sidebar_position: 9
+image: '/assets/docs/previews/docs_notifications_develop--get_started.png'
+---
+
+<head>
+  <title>Contract Helpers | Build | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+<!-- Content Start -->
+
+## Overview
+
+When building smart contract applications on Push Chain, you’ll at times need helper contracts to surface on-chain metadata—like identifying external chain users or computing deterministic smart account addresses. Push Chain provides a set of helper interfaces under the hood to simplify these workflows.
+
+One primary helper is the Universal Executor Account Factory (UEAFactory), which underpins Push Chain’s multi‐chain smart account abstraction.
+
+## Universal Executor Account Factory
+
+> As previously mentioned, [Universal Executor Accounts (UEAs)](/docs/chain/important-concepts#account-types-on-push-chain) are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain.
+
+The [Universal Executor Account Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol) is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains.
+
+<br />
+<br />
+
+### UEAFactory Features
+
+The [UEA Factory](https://github.com/pushchain/push-chain-contracts/blob/main/src/UEAFactoryV1.sol) serves these key features:
+
+- **Multi-Chain Support**: Register and manage UEAs for users from different blockchains
+- **Deterministic Addresses**: Uses `CREATE2` + minimal proxies for predictable UEA addresses
+- **Deployment Status**: Optionally check if a UEA is already deployed
+- **Owner ↔ UEA Mapping**: Bidirectional mapping between Universal Accounts and their UEAs, VM types and implementations.
+
+<br />
+<br />
+
+### UEAFactory Interface
+
+**Deployed Address**: **_`0x00000000000000000000000000000000000000eA`_**
+
+This helper contract helps in fetching cross-chain information about an address. It also provides identity-mapping between source chain wallet address and Push Chain address and can determine if the address is native to Push Chain or is proxy for external chain user.
+
+In order to use the UEAFactory in your contract, you can either:
+
+#### 1. Import it directly from Push Chain Core Repository
+
+```solidity
+import "push-chain-core-contracts/src/Interfaces/IUEAFactory.sol";
+```
+
+<Details summary="For Foundry Developers">
+Do the additional steps to enable the same in your Foundry:
+
+1. Run forge install
+```bash
+forge install pushchain/push-chain-core-contracts
+```
+
+2. Add remappings to your **foundry.toml** file
+```toml
+remappings = ["push-chain-core-contracts/=lib/push-chain-core-contracts/"]
+```
+</Details>
+
+
+#### Or 2. Define the interface manually in your solidity contract
+
+<Details summary="Use the following interface directly in your contract">
+
+```solidity
+pragma solidity ^0.8.0;
+
+struct UniversalAccountId {
+    string chainNamespace; // Chain namespace identifier of the owner account (e.g., "eip155" or "solana")
+    string chainId; // Chain ID of the source chain of the owner of this UEA.
+    bytes owner; // Owner's public key or address in bytes format
+}
+
+/// @title Universal Executor Account Factory Interface
+/// @notice Helper interface for deploying and querying UEAs on Push Chain
+interface IUEAFactory {
+    /**
+     * @dev Returns the owner key (UOA) for a given UEA address
+     * @param addr Any given address ( msg.sender ) on push chain
+     * @return account The Universal Account identity information associated with this UEA
+     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)
+     */
+    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);
+
+    /**
+     * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
+     * @param _id The Universal Account identity information
+     * @return uea The address of the UEA (computed deterministically)
+     * @return isDeployed True if the UEA has already been deployed
+     */
+    function getUEAForOrigin(UniversalAccountId memory _id) external view returns (address uea, bool isDeployed);
+}
+```
+
+</Details>
+
+<br />
+<br />
+
+### UEAFactory Methods
+
+### UEAFactory → getOriginForUEA
+
+**_`getOriginForUEA(address): (UniversalAccountId, bool)`_** is _`external view`_
+
+Returns the owner information and UEA status for a given address on Push Chain.
+
+**Commonly used for**:
+
+- Checking if a given address is a native account on Push Chain or is controlled by another chain user.
+- Determining the source chain of a given address on Push Chain.
+- Getting the Universal Account identity information associated with this address.
+
+> Note: The returned origin address will be encoded in Hex format. For example, for Solana addresses, a base58 conversion should be done to get the readable format.
+
+```solidity
+/**
+ * @dev Returns the owner key (UOA) for a given UEA address
+ * @param addr Any given address ( msg.sender ) on push chain
+ * @return account The Universal Account identity information associated with this UEA
+ * @return isUEA True if the address addr is a UEA contract. False if it is a native account on PUSH chain (i.e., isUEA = false)
+*/
+function getOriginForUEA(
+    address addr
+)
+    external
+    view
+    returns (
+        UniversalAccountId memory account,
+        bool isUEA
+    );
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type      | Description                                       |
+| --------- | --------- | ------------------------------------------------- |
+| _`addr`_      | `address` | Any address on Push Chain (typically msg.sender). |
+
+</PushAPIReference>
+
+<Details summary="Returns `UniversalAccountId`<struct> and `bool`" className="alert alert--fn-args">
+
+| Response | Type               | Description                                                                                                            |
+| -------- | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| account  | `UniversalAccountId` | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+| isUEA    | `bool`             | True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false).        |
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+function checkCallerType() public view returns (bool isUEA) {
+  (UniversalAccountId memory account, bool isUEA) = IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(msg.sender);
+
+  if (isUEA) {
+      // Do something with the UEA
+  } else {
+      // Do something with the native account
+  }
+}
+```
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"}}>
+
+{`
+
+    // customPropHighlightRegexStart=factory\.getOriginForUEA
+    // customPropHighlightRegexEnd=\\);
+    import { ethers } from 'ethers';
+
+    // ——— CONFIG ———
+    const RPC_URL          = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const FACTORY_ADDRESS  = '0x00000000000000000000000000000000000000eA';
+
+    // Corrected ABI
+    const IUEAFactoryABI = [
+      // returns (UniversalAccountId account, bool isUEA)
+      "function getOriginForUEA(address addr) view returns (tuple(string chainNamespace, string chainId, bytes owner) account, bool isUEA)"
+    ]
+
+    async function main() {
+      // 1) set up
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+      // 2) <inser any address ( UEA or Native Addresses) to check its origin details >
+      const someAddress = '0xc16a585b95810F7D204620bb3677F73243242A8F';
+
+      // 3) call getOriginForUEA
+      console.log("Calling getOriginForUEA on PushChain");
+      const originResult = await factory.getOriginForUEA(someAddress);
+      console.log("Result -", JSON.stringify(originResult));
+      
+      // Note: If the origin is Solana (chainNamespace === "solana"), the owner address 
+      // will be in hex format and needs to be converted to base58 for readable format
+    }
+
+await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+<br />
+<br />
+
+### UEAFactory → getUEAForOrigin
+
+**_`getUEAForOrigin(UniversalAccountId): (address, bool)`_** is _`external view`_
+
+Returns the computed UEA address for a given Universal Account.
+Additionaly, it also returns the deployment status of the UEA.
+
+**Commonly used for**:
+
+- Get or compute the UEA address for a given Universal Account.
+- Check if a given Universal Account is deployed or not.
+
+> Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. `chainNamespace` contains the [chain namespace](/docs/chain/setup/chain-config/#universal-chain-namespace) (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.) and `chainId` contains the chain ID of the source chain of the owner of this UEA. `owner` contains the wallet address in bytes.
+
+```solidity
+/**
+ * @dev Returns the computed UEA address for a given Universal Account ID and deployment status
+ * @param _id The Universal Account identity information
+ * @return uea The address of the UEA (computed deterministically)
+ * @return isDeployed True if the UEA has already been deployed
+*/
+function getUEAForOrigin(
+    UniversalAccountId memory _id
+)
+    external
+    view
+    returns (
+        address uea,
+        bool    isDeployed
+    );
+```
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Arguments | Type             | Description                                                                                                                                                |
+| --------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| _`_id`_      | UniversalAccountId | The Universal Account identity information containing:<br/>&nbsp;<br/>- **chainNamespace**: Chain namespace identifier (e.g., "eip155" for EVM based chains, "solana" for Solana, etc.)<br/>- **chainId**: Chain ID of the source chain of the owner of this UEA.<br/>- **owner**: Owner's public key or address in bytes format. |
+
+</PushAPIReference>
+
+<Details summary="Returns `address` and `bool`" className="alert alert--fn-args">
+
+| Response   | Type    | Description                                          |
+| ---------- | ------- | ---------------------------------------------------- |
+| uea        | address | The address of the UEA (computed deterministically). |
+| isDeployed | bool    | True if the UEA has already been deployed.           |
+
+</Details>
+
+<Details summary="On-chain usage" className="alert alert--live-play">
+
+```solidity
+function checkUEAType() public view returns (address uea, bool isDeployed) {
+    (address uea, bool isDeployed) = IUEAFactory(0x00000000000000000000000000000000000000eA).getUEAForOrigin(account);
+
+    if (isDeployed) {
+        // Do something with the deployed UEA
+    } else {
+        // UEA is not deployed yet but you have deterministic address for the UEA.
+    }
+}
+```
+
+</Details>
+
+<Details summary="Off-chain usage" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"}}>
+
+{`
+// customPropHighlightRegexStart=factory\.getUEAForOrigin
+// customPropHighlightRegexEnd=\\);
+    import { ethers } from 'ethers';
+
+    // ——— CONFIG ———
+    const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const FACTORY_ADDRESS = '0x00000000000000000000000000000000000000eA';
+
+    // Corrected ABI
+    const IUEAFactoryABI = [
+    "function getUEAForOrigin(tuple(string chainNamespace, string chainId, bytes owner) _id) view returns (address uea, bool isDeployed)"
+  ]
+
+    async function main() {
+      // 1) set up
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const factory = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+      // 2) create UniversalAccountId struct
+      const universalAccountId = {
+        chainNamespace: 'eip155', // EVM chain
+        chainId: '11155111', // Sepolia testnet (more likely to be registered on Push testnet)
+        owner: '0xa96CaA79eb2312DbEb0B8E93c1Ce84C98b67bF11', // owner address in bytes format
+      };
+
+      // 3) call getUEAForOrigin
+      console.log('Calling getUEAForOrigin on PushChain');
+      const originResult = await factory.getUEAForOrigin(universalAccountId);
+      console.log('Result -', JSON.stringify(originResult));
+    }
+
+    await main().catch(console.error);
+
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+## Next Steps
+
+- Wire up your SDK in [Initialize Push Chain Client](/docs/chain/build/initialize-push-chain-client)
+- Simplify cross-chain workflows via [Utility Functions](/docs/chain/build/utility-functions)
+- Dive into on-chain reads with [Reading Blockchain State](/docs/chain/build/reading-blockchain-state)
+- Abstract wallet & UI flows with our [UI Kit](/docs/chain/ui-kit)
+- Go deeper into advanced patterns in [Deep Dives](/docs/chain/deep-dives)

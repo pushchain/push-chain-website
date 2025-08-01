@@ -178,7 +178,7 @@ const FooterItem = () => {
       <AboutSection>
         <AboutTitle>About Push Chain</AboutTitle>
         <AboutSpan
-          fontFamily='Inter, sans-serif'
+          fontFamily='DM Sans, sans-serif'
           textAlign='center'
           fontSize='19px'
           fontWeight='400'
@@ -265,7 +265,9 @@ const AboutSection = styled.div`
 `;
 
 const AboutTitle = styled.div`
-  font-family: Inter, sans-serif !important;
+  font-family:
+    DM Sans,
+    sans-serif !important;
   font-weight: 700;
   font-size: 28px;
   line-height: 38px;
@@ -291,7 +293,9 @@ const KPIBanner = styled.div`
   justify-content: center;
   width: 100%;
   padding: 20px 0px;
-  font-family: Inter, sans-serif;
+  font-family:
+    DM Sans,
+    sans-serif;
   font-style: normal;
   margin-top: 30px;
   margin-bottom: 100px;
@@ -393,7 +397,9 @@ const ModalDiv = styled.div`
 const ModalTopic = styled.div`
   color: var(--ifm-color-primary-text);
   font-size: 20px;
-  font-family: Inter, sans-serif;
+  font-family:
+    DM Sans,
+    sans-serif;
   line-height: 142%;
   letter-spacing: -0.6px;
 `;
@@ -418,7 +424,9 @@ const ModalLink = styled.div`
 const ModalCopy = styled.div`
   color: #fff;
   font-size: 14px;
-  font-family: Inter, sans-serif;
+  font-family:
+    DM Sans,
+    sans-serif;
   font-weight: 500;
   line-height: 142%;
   letter-spacing: -0.42px;
