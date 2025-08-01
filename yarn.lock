@@ -8704,6 +8704,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"busboy@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "busboy@npm:1.6.0"
+  dependencies:
+    streamsearch: "npm:^1.1.0"
+  checksum: 10c0/fa7e836a2b82699b6e074393428b91ae579d4f9e21f5ac468e1b459a244341d722d2d22d10920cdd849743dbece6dca11d72de939fb75a7448825cf2babfba1f
+  languageName: node
+  linkType: hard
+
 "bytes@npm:3.0.0":
   version: 3.0.0
   resolution: "bytes@npm:3.0.0"
@@ -12386,7 +12395,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"form-data@npm:^4.0.0":
+"form-data@npm:^4.0.0, form-data@npm:^4.0.4":
   version: 4.0.4
   resolution: "form-data@npm:4.0.4"
   dependencies:
@@ -18946,6 +18955,7 @@ __metadata:
     eslint-config-prettier: "npm:^9.0.0"
     eslint-plugin-prettier: "npm:^5.0.1"
     ethers: "npm:^5.6.8"
+    form-data: "npm:^4.0.4"
     gh-pages: "npm:^6.3.0"
     gsap: "npm:3.11.1"
     hast-util-sanitize: "npm:^5.0.2"
@@ -18993,6 +19003,7 @@ __metadata:
     swiper: "npm:^11.0.3"
     typescript: "npm:^4.7.4"
     typewriter-effect: "npm:^2.21.0"
+    undici: "npm:5.22.0"
     unified: "npm:^11.0.5"
     unist-util-visit: "npm:^5.0.0"
     url: "npm:^0.11.3"
@@ -21294,6 +21305,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"streamsearch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "streamsearch@npm:1.1.0"
+  checksum: 10c0/fbd9aecc2621364384d157f7e59426f4bfd385e8b424b5aaa79c83a6f5a1c8fd2e4e3289e95de1eb3511cb96bb333d6281a9919fafce760e4edb35b2cd2facab
+  languageName: node
+  linkType: hard
+
 "strict-uri-encode@npm:^2.0.0":
   version: 2.0.0
   resolution: "strict-uri-encode@npm:2.0.0"
@@ -22255,10 +22273,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:^7.12.0":
-  version: 7.13.0
-  resolution: "undici@npm:7.13.0"
-  checksum: 10c0/8865d40b141f073215a6763aad5d1b2f4bd4e252600e93e68055d6c5d23a8a0e5782669236b2ecfa4d415d1d969d9c4623ff1c0386d32fa60088a19ffa58c611
+"undici@npm:5.22.0":
+  version: 5.22.0
+  resolution: "undici@npm:5.22.0"
+  dependencies:
+    busboy: "npm:^1.6.0"
+  checksum: 10c0/a9c1d5bdac6aa95fb623bd9bbba3f2c190556e5c03c7a5d904fbded257ca52de0cfcdfc921e4f8d82a349bacf6d6d2437e905fb9e14435a7347fd76f2303bf0a
   languageName: node
   linkType: hard
 

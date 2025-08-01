@@ -1,10 +1,10 @@
-// eslint-disable-next-line
-const webpack = require('webpack');
+// /* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 
 module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
-    // eslint-disable-next-line
     configureWebpack(config, isServer, utils) {
       return {
         resolve: {
@@ -19,6 +19,7 @@ module.exports = function () {
             zlib: require.resolve('browserify-zlib'),
             crypto: require.resolve('crypto-browserify'),
             vm: require.resolve('vm-browserify'),
+            File: isServer ? false : require.resolve('form-data'),
           },
         },
         module: {
@@ -31,6 +32,13 @@ module.exports = function () {
             },
           ],
         },
+        plugins: isServer
+          ? [
+              new webpack.ProvidePlugin({
+                File: ['form-data', 'FormData'],
+              }),
+            ]
+          : [],
       };
     },
   };
