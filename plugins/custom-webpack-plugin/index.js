@@ -4,6 +4,7 @@
 //
 const webpack = require('webpack');
 
+// Webpack configuration
 module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
@@ -22,6 +23,9 @@ module.exports = function () {
             crypto: require.resolve('crypto-browserify'),
             vm: require.resolve('vm-browserify'),
             File: isServer ? false : require.resolve('form-data'),
+            bufferutil: false, // Fallback for WebSocket
+            'utf-8-validate': false, // Fallback for WebSocket
+            'pino-pretty': false, // Fallback for pino
           },
         },
         module: {
