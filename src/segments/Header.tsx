@@ -711,7 +711,20 @@ const HeaderItemH = styled(ItemH)`
   box-shadow:
     2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
-  backdrop-filter: blur(5px);
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    border-radius: 24px;
+  }
 
   margin: ${({ showAlertBar }) =>
     `${showAlertBar ? 80 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
@@ -1134,24 +1147,12 @@ const NavigationMenuContent = styled.ul`
   padding: 12px;
 
   border: 1px solid rgba(171, 70, 248, 0.4);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
   box-shadow:
     2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
   overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: rgba(0, 0, 0, 0.5);
-    filter: blur(10px);
-    z-index: -1;
-    border-radius: 24px;
-  }
+  backdrop-filter: blur(5px);
 
   min-width: 390px;
 
