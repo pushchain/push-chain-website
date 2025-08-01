@@ -85,7 +85,7 @@ async function blogPluginExtended(...pluginArgs) {
         exact: true,
 
         // The component to use for the "Home" page route
-        component: '../src/pages/home.tsx',
+        component: '@site/src/pages/home.tsx',
 
         // These are the props that will be passed to our "Home" page component
         modules: {

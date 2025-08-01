@@ -16,16 +16,16 @@ const ChainRoadmapSection: FC = () => {
     'Wallet Abstraction',
     'Universal Wallet',
     'Any Chain Transactions',
-    'Consumer(unordered) Transactions',
     'Devnet',
+    'UniversalFees Abstraction',
+    'Universal Smart Contracts',
   ];
 
   const inProgressList = [
-    'Fees Abstraction',
+    'Mainnet',
+    'Consumer(unordered) Transactions',
     'Shared State across Chains',
-    'Universal Smart Contracts',
     'Programmable Solvers',
-    'Testnet & Mainnet',
   ];
 
   return (
