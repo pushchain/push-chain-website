@@ -53,7 +53,7 @@ jobs:
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
           yarn install
-          yarn build:pr:preview --debug
+          yarn build:pr:preview
 
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1.4.7
