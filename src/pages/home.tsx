@@ -1,25 +1,25 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 // React + Web3 Essentials
-import React from 'react';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
+import React from 'react';
 import styled from 'styled-components';
 
 // Internal Config
-import { device } from '../config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
+import ChainBottomComponent from '../components/Chain/ChainBottomComponent';
+import { ChainFeaturesSection } from '../components/Chain/ChainFeaturesSection';
 import ChainHeroSection from '../components/Chain/ChainHeroSection';
 import ChainMarqueeSection from '../components/Chain/ChainMarqueeSection';
+import ChainRoadmapSection from '../components/Chain/ChainRoadmapSection';
+import ChainUseCase from '../components/Chain/ChainUseCase';
 import {
   ChainMarqueeList,
   ChainMarqueeSecondList,
 } from '../components/Chain/config/ChainMarqueeList';
-import { ChainFeaturesSection } from '../components/Chain/ChainFeaturesSection';
-import ChainUseCase from '../components/Chain/ChainUseCase';
-import ChainRoadmapSection from '../components/Chain/ChainRoadmapSection';
-import ChainBottomComponent from '../components/Chain/ChainBottomComponent';
+import { device } from '../config/globals';
 
 // Internal Component
 import { ItemV } from '../../src/css/SharedStyling';
@@ -48,7 +48,7 @@ function PushHomepage() {
         <meta property='og:type' content='website' />
         <meta
           property='og:title'
-          content='Push Chain | Any Chain. Any Wallet. Any App'
+          content='Home | Push Chain: True Universal Blockchain'
         />
         <meta
           name='og:description'
@@ -57,7 +57,7 @@ function PushHomepage() {
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/homepreview.png').default,
             { absolute: true }
           )}
         />
@@ -67,7 +67,7 @@ function PushHomepage() {
         <meta name='twitter:site' content='@PushChain' />
         <meta
           name='twitter:title'
-          content='Push Chain | Any Chain. Any User. Any App'
+          content='Home | Push Chain: True Universal Blockchain'
         />
         <meta
           name='twitter:description'
@@ -76,7 +76,7 @@ function PushHomepage() {
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/homepreview.png').default,
             { absolute: true }
           )}
         />

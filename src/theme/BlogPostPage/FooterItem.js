@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 // Internal Components
 import { Button, H2, ItemV, Span } from '@site/src/css/SharedStyling';
-import { BsLinkedin, BsTwitter, BsYoutube, BsX } from 'react-icons/bs';
-import { BiShareAlt } from 'react-icons/bi';
-import { FaDiscord, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import { BiShareAlt } from 'react-icons/bi';
+import { BsLinkedin, BsTwitter, BsX, BsYoutube } from 'react-icons/bs';
+import { FaDiscord, FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
 import Modal from 'react-modal';
 
@@ -184,12 +184,15 @@ const FooterItem = () => {
           fontWeight='400'
           lineHeight='32px'
         >
-          Push Chain is a Proof of Stake (PoS) layer 1 blockchain network
-          designed to revolutionize web3 by addressing scalability,
-          interoperability, and user experience challenges. Its shared-state
-          architecture empowers developers to create universal applications that
-          can blend financial and non-financial use cases with ease, all while
-          achieving sub-second finality.
+          Push Chain is the first true universal blockchain designed to
+          eliminate fragmentation across all chains. It enables developers to
+          deploy once, and instantly become available for users on any chain,
+          whether EVM or Non-EVM (including Ethereum, Solana, Bitcoin among
+          others).
+          <p />
+          It is 100% EVM compatible, Proof of Stake (PoS) chain that allows
+          users to interact with the apps deployed on Push Chain from any chain,
+          as they natively do on their own chain.
         </AboutSpan>
       </AboutSection>
 

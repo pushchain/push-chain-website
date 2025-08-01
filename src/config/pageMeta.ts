@@ -61,39 +61,44 @@ export const PageMeta = {
       'Push Chain is a shared state L1 blockchain for Universal/Interopable Apps. Capable of doing transactions from any chain, unifying all L1s, L2s and enabling apps from any chain to be accessed by the users of any chain.',
   },
   KNOWLEDGE: {
-    pageTitle: 'Push Chain | Knowledge Base',
+    pageTitle: 'Knowledge Base | Push Chain',
     pageDescription:
       'Discover everything for tutorials to code base to what makes Push Chain tick at the knowledge hub.',
   },
   PARTNERS: {
-    pageTitle: 'Push Chain | Knowledge Base Partners',
+    pageTitle: 'Knowledge Base Partners | Push Chain',
     pageDescription: 'Meet our Partners',
   },
   ARTICLE: {
-    pageTitle: 'Push Chain | Knowledge Base',
+    pageTitle: 'Knowledge Base | Push Chain',
     pageDescription:
       'Discover everything for tutorials to code base to what makes Push Chain tick at the knowledge hub.',
   },
   PUSH101: {
-    pageTitle: 'Push Chain | Knowledge Base | Push101',
+    pageTitle: 'Basics | Knowledge Base | Push Chain',
     pageDescription:
       'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
   },
+  PUSHBUILDERS: {
+    pageTitle: 'Builders | Knowledge Base | Push Chain',
+    pageDescription:
+      'Get started with building on Push Chain. Explore best practices, guides and things that can make your app go universal instantly.',
+  },
   DEEPDIVES: {
-    pageTitle: 'Push Chain | Knowledge Base | Deepdives',
+    pageTitle: 'Deepdives | Knowledge Base | Push Chain',
     pageDescription:
       'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
   },
   TOKENOMICS: {
-    pageTitle: 'Push Chain | Knowledge Base | Tokenomics',
+    pageTitle: 'Tokenomics | Knowledge Base | Push Chain',
     pageDescription: `Learn how Push Chain's tokenomics incentivizes all actors and ensures sustainable network that's built to last`,
   },
   FAQ: {
-    pageTitle: 'Push Chain | Knowledge Base | Push Chain FAQ',
+    pageTitle: 'Frequently Asked Questions | Knowledge Base | Push Chain',
     pageDescription: `The place to find answers to all the popular questions the community has asked. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.`,
   },
   NEWPAGE: {
-    pageTitle: 'Push Chain | Knowledge Base | Deepdives',
+    pageTitle: 'Deepdives | Knowledge Base | Push Chain',
     pageDescription:
       'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
   },

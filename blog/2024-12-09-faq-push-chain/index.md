@@ -5,9 +5,8 @@ authors: [push]
 image: './cover-image.webp'
 description: 'Push Chain’s Frequently Asked Questions'
 text: 'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.'
-tags: [Push Chain, Push Chain FAQs]
+tags: [Push Chain, Shared App Experience, Community & Ecosystem, Tokenomics]
 ---
-
 
 ![Cover Image of Push Chain’s Frequently Asked Questions](./cover-image.webp)
 
@@ -177,7 +176,6 @@ Push Chain begins as EVM compatible and becomes more and more compatible with fu
 Yes, Push Chain is designed to support both EVM and non-EVM chains, ensuring maximum interoperability.
 
 ---
-
 
 Push Chain addresses pervasive gaps in the existing blockchains; specifically interoperability, shared app experiences, and scalability. While existing blockchains are robust, they operate in silos and lack the ability to unify state across multiple blockchains. Push Chain’s focus is on being a **shared state chain for universal applications**, offering seamless cross-chain interactions and unparalleled scalability.
 

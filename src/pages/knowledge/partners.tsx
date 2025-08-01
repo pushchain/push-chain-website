@@ -1,10 +1,10 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 // React + Web3 Essentials
-import React from 'react';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
+import React from 'react';
 
 // Internal Component
 import ChainKnowledgeBasePartners from '../../components/Chain/ChainKnowledgeBasePartners/ChainKnowledgeBasePartners';
@@ -26,12 +26,15 @@ function PushChainKnowledgeBase() {
           content='https://push.org/chain/knowledge/partners'
         />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Push Chain | Knowledge Base' />
+        <meta
+          property='og:title'
+          content='Partners | Knowledge Base | Push Chain'
+        />
         <meta name='og:description' content='Meet our Partners.' />
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/kbpartnerspreview.png').default,
             { absolute: true }
           )}
         />
@@ -41,13 +44,13 @@ function PushChainKnowledgeBase() {
         <meta name='twitter:site' content='@PushChain' />
         <meta
           name='twitter:title'
-          content='Push Chain | Knowledge Base Partners'
+          content='Partners | Knowledge Base | Push Chain'
         />
         <meta name='twitter:description' content='Meet our Partners' />
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainpreview.png').default,
+            require('/static/assets/previews/kbpartnerspreview.png').default,
             { absolute: true }
           )}
         />

@@ -1,6 +1,8 @@
 /* eslint-disable @docusaurus/no-html-links, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 import Link from '@docusaurus/Link';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
 import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
@@ -24,6 +26,73 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
   const baseUrl = useSiteBaseUrl();
+  const tocRef = React.useRef(null);
+  const contentRef = React.useRef(null);
+
+  // GSAP ScrollTrigger for DesktopTOC
+  React.useEffect(() => {
+    if (isTablet || !tocRef.current || !contentRef.current) return;
+
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Calculate TOC height and check if it fits in viewport
+    const tocHeight = tocRef.current?.offsetHeight || 0;
+    const parentHeight = contentRef.current?.offsetHeight || 0;
+    const viewportHeight = window.innerHeight;
+    const endOffset = tocHeight; // TOC height + top offset
+
+    // Only activate GSAP if TOC fits in viewport
+    const tocFitsInViewport = tocHeight < viewportHeight - 256; // 256px for top/bottom margins
+
+    let scrollTrigger = null;
+
+    // if (tocFitsInViewport) {
+    // Create ScrollTrigger for TOC sticky behavior
+    scrollTrigger = ScrollTrigger.create({
+      trigger: contentRef.current,
+      start: 'top top+=24',
+      end: `bottom top+=${endOffset}`,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const direction = self.direction;
+
+        if (progress > 0 && progress < 1) {
+          // Parent is in viewport - make TOC sticky
+          gsap.set(tocRef.current, {
+            position: 'fixed',
+            top: '24px',
+            zIndex: 100,
+          });
+        } else if (progress >= 1 && direction === 1) {
+          // Reached end of parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-end',
+          });
+        } else if (progress <= 0 && direction === -1) {
+          // Scrolled above parent - return to normal position
+          gsap.set(tocRef.current, {
+            position: 'relative',
+            top: 'auto',
+            zIndex: 'auto',
+          });
+          gsap.set(tocRef.current.parentElement, {
+            alignSelf: 'flex-start',
+          });
+        }
+      },
+    });
+    // }
+
+    return () => {
+      scrollTrigger.kill();
+    };
+  }, [isTablet]);
 
   if (!item || !item.content) {
     return <p>Loading...</p>; // or some fallback UI
@@ -62,14 +131,11 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
       .replace(/[\p{Emoji_Presentation}\p{Extended_Pictographic}]/gu, '')
       .replace(/^\d+\.\s*/, '');
 
-    return (
-      'user-content-' +
-      plain
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+$/, '')
-    );
+    return plain
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+$/, '');
   }
 
   return (
@@ -101,17 +167,37 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
       {item.content?.map((block, blockIndex) => {
         if (block.type === 'indexlist') {
-          const texts = block?.value.filter((v) => v.type === 'text');
+          const texts =
+            block?.value?.filter((v) => v.type === 'text' && !v.hidden) || [];
           const rawMarkdown = texts?.map((t) => t.value).join('\n\n');
-          const toc = extractTOC(block?.value);
+          const toc = extractTOC(block?.value || []);
+
+          // Create hidden section placeholders
+          const hiddenSections = [];
+          block?.value?.forEach((v) => {
+            if (v.type === 'text' && v.hidden) {
+              // Extract heading from hidden content
+              const headingMatch = v.value.match(/^##\s+(.+)$/m);
+              if (headingMatch) {
+                const headingText = headingMatch[1];
+                const headingId = generateIdFromHeadingText(headingText);
+                hiddenSections.push({ id: headingId, text: headingText });
+              }
+            }
+          });
 
           return (
             <ItemH
               key={blockIndex}
+              ref={contentRef}
               flexDirection={isTablet ? 'column' : 'row'}
-              gap={isTablet ? '32px' : '165px'}
+              gap={isTablet ? '32px' : '64px'}
               alignItems='flex-start'
-              margin='16px 0 32px 0'
+              margin='32px 0 32px 0'
+              style={{
+                position: 'relative',
+                overflow: 'visible',
+              }}
             >
               <ItemV
                 maxWidth={isTablet ? '100%' : '300px'}
@@ -163,6 +249,7 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
                 {!isTablet && toc.length > 0 && (
                   <DesktopTOC
+                    ref={tocRef}
                     background='#FFF'
                     padding='32px'
                     borderRadius='32px'
@@ -210,6 +297,7 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
                             const id = generateIdFromHeadingText(
                               props.children
                             );
+
                             return React.createElement(
                               tag,
                               {
@@ -221,10 +309,37 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
                           },
                         ])
                       ),
+                      p: ({ node, ...props }) => {
+                        // For now, let's hide all paragraphs in hidden sections
+                        // This is a simplified approach - we'll hide paragraphs that come after hidden headings
+                        const isHidden = false; // We'll implement this logic later if needed
+
+                        return React.createElement(
+                          'p',
+                          {
+                            style: isHidden ? { display: 'none' } : {},
+                          },
+                          props.children
+                        );
+                      },
                     }}
                   >
                     {resolveImageUrls(cleanMarkdown(rawMarkdown))}
                   </Markdown>
+
+                  {/* Hidden section placeholders for TOC navigation */}
+                  {hiddenSections.map((section, index) => (
+                    <div
+                      key={`hidden-${section.id}-${index}`}
+                      id={section.id}
+                      style={{
+                        height: '1px',
+                        margin: '0',
+                        padding: '0',
+                        visibility: 'hidden',
+                      }}
+                    />
+                  ))}
                 </TextItem>
               </ItemV>
             </ItemH>
@@ -233,7 +348,12 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 
         if (block.type === 'list') {
           return (
-            <ChainKnowledgeBaseGrid items={block?.items} title={block?.title} />
+            <ChainKnowledgeBaseGrid
+              items={block?.items}
+              title={block?.title}
+              mode={block?.mode}
+              divider={block?.divider}
+            />
           );
         }
 
@@ -384,8 +504,6 @@ const TextItem = styled.div`
   }
 
   p {
-    margin: 0;
-    padding: 0;
     line-height: 170%;
   }
 
@@ -431,6 +549,16 @@ const MobileTOCWrapper = styled.div`
 `;
 
 const DesktopTOC = styled(ItemV)`
+  align-self: flex-start;
+  position: relative;
+  min-width: 300px;
+  width: 300px;
+
+  justify-content: flex-start;
+
+  max-height: 90vh;
+  overflow-y: auto;
+
   ul {
     padding: 0;
     margin: 0;

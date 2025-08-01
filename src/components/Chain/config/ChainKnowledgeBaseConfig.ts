@@ -10,7 +10,7 @@ export const knowledgeBaseArticleContent = [
   {
     id: 'push101',
     url: 'push101',
-    title: 'Push 101',
+    title: 'Push Chain Basics',
     ctatitle: 'Explore More',
     target: '_self',
     image: 'knowledge_101',
@@ -18,9 +18,19 @@ export const knowledgeBaseArticleContent = [
       'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
   },
   {
+    id: 'builders',
+    url: 'builders',
+    title: 'Build on Push Chain',
+    ctatitle: 'Builders Assemble',
+    target: '_self',
+    image: 'knowledge_builders',
+    subtitle:
+      'Dive into how to build universal apps, the unlocks and how to get started!',
+  },
+  {
     id: 'deepdives',
     url: 'deepdives',
-    title: 'Deep Dives',
+    title: 'Technical Deep Dives',
     ctatitle: 'See it Tick',
     target: '_self',
     image: 'knowledge_deepdives',
