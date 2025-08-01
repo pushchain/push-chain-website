@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/">
-  <ShortName>Push Chain | Any Chain. Any Wallet. Any App.</ShortName>
-  <Description>Search Push Chain | Any Chain. Any Wallet. Any App.</Description>
+  <ShortName>Push Chain: True Universal L1 Blockchain</ShortName>
+  <Description>Search Push Chain: True Universal L1 Blockchain</Description>
   <InputEncoding>UTF-8</InputEncoding>
   <Image width="16" height="16" type="image/x-icon">https://push-protocol.github.io/push-chain-website/pr-preview/pr-1067/assets/website/favicon.ico</Image>
   <Url type="text/html" method="get" template="https://push-protocol.github.io/push-chain-website/pr-preview/pr-1067/search?q={searchTerms}"/>
