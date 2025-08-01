@@ -18,7 +18,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: process.env.GITHUB_ACTIONS
-    ? `/push-website/pr-preview/${process.env.REACT_APP_PREVIEW_BASE}`
+    ? `/push-chain-website/pr-preview/${process.env.REACT_APP_PREVIEW_BASE}`
     : '/',
   trailingSlash: true,
 
