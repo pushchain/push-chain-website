@@ -26,14 +26,19 @@ async function blogPluginExtended(...pluginArgs) {
       const allPosts = [...content.blogPosts];
 
       async function createRecentPostModule(blogPost, index) {
+        if (!blogPost || !blogPost.metadata) {
+          console.warn(`Skipping blog post ${index} - missing metadata`);
+          return null;
+        }
+        
         return {
           // Inject the metadata you need for each recent blog post
           metadata: await actions.createData(
             `home-page-recent-post-metadata-${index}.json`,
             JSON.stringify({
-              title: blogPost?.metadata.title,
-              description: blogPost?.metadata.description,
-              frontMatter: blogPost?.metadata.frontMatter,
+              title: blogPost?.metadata?.title || 'Untitled',
+              description: blogPost?.metadata?.description || '',
+              frontMatter: blogPost?.metadata?.frontMatter || {},
               content: blogPost,
             })
           ),
@@ -43,7 +48,7 @@ async function blogPluginExtended(...pluginArgs) {
           Preview: {
             __import: true,
             // The markdown file for the blog post will be loaded by webpack
-            path: blogPost?.metadata.source,
+            path: blogPost?.metadata?.source,
             query: {
               truncated: true,
             },
@@ -52,14 +57,19 @@ async function blogPluginExtended(...pluginArgs) {
       }
 
       async function createMorePostModule(blogPost, index) {
+        if (!blogPost || !blogPost.metadata) {
+          console.warn(`Skipping blog post ${index} - missing metadata`);
+          return null;
+        }
+        
         return {
           // Inject the metadata you need for each recent blog post
           metadata: await actions.createData(
             `blog-page-more-post-metadata-${index}.json`,
             JSON.stringify({
-              title: blogPost?.metadata.title,
-              description: blogPost?.metadata.description,
-              frontMatter: blogPost?.metadata.frontMatter,
+              title: blogPost?.metadata?.title || 'Untitled',
+              description: blogPost?.metadata?.description || '',
+              frontMatter: blogPost?.metadata?.frontMatter || {},
               content: blogPost,
             })
           ),
@@ -69,7 +79,7 @@ async function blogPluginExtended(...pluginArgs) {
           Preview: {
             __import: true,
             // The markdown file for the blog post will be loaded by webpack
-            path: blogPost?.metadata.source,
+            path: blogPost?.metadata?.source,
             // query: {
             // truncated: false,
             // },
@@ -98,18 +108,23 @@ async function blogPluginExtended(...pluginArgs) {
               totalRecentPosts: recentPosts.length,
             })
           ),
-          recentPosts: await Promise.all(
+          recentPosts: (await Promise.all(
             recentPosts.map(createRecentPostModule)
-          ),
+          )).filter(Boolean),
         },
       });
 
       for (let i = 0; i < allPosts.length; i++) {
         const blogPost = allPosts[i];
+        if (!blogPost || !blogPost.metadata || !blogPost.metadata.permalink) {
+          console.warn(`Skipping blog post ${i} - missing metadata or permalink`);
+          continue;
+        }
+        
         actions.addRoute({
           // Add route for the blog page
           // path: "/blog/:slug",
-          path: `${blogPost?.metadata.permalink}`,
+          path: `${blogPost.metadata.permalink}`,
           exact: true,
 
           // The component to use for the "blog" page route
@@ -126,7 +141,7 @@ async function blogPluginExtended(...pluginArgs) {
                 totalRecentPosts: recentPosts.length,
               })
             ),
-            allPosts: await Promise.all(allPosts.map(createMorePostModule)),
+            allPosts: (await Promise.all(allPosts.map(createMorePostModule))).filter(Boolean),
           },
         });
       }
