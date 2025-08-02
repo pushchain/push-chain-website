@@ -1,3 +1,4 @@
+/* eslint-disable @docusaurus/prefer-docusaurus-heading */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -60,7 +61,7 @@ function BlogTagsPostsPageMetadata({ tag }) {
     </>
   );
 }
-function BlogTagsPostsPageContent({ tag, items, sidebar, listMetadata }) {
+function BlogTagsPostsPageContent({ tag, items, listMetadata }) {
   const title = useBlogTagsPostsPageTitle(tag);
   return (
     <BlogLayout>
@@ -78,7 +79,19 @@ function BlogTagsPostsPageContent({ tag, items, sidebar, listMetadata }) {
       </TagsHeader>
 
       <GridItem>
-        <BlogPostItems items={items} />
+        <BlogPostItems
+          items={
+            items?.filter((item) => {
+              return (
+                item &&
+                item.content &&
+                typeof item.content === 'function' &&
+                item.content.metadata &&
+                item.content.frontMatter
+              );
+            }) || []
+          }
+        />
         <BlogListPaginator metadata={listMetadata} />
       </GridItem>
     </BlogLayout>

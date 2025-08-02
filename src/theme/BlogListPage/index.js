@@ -48,6 +48,27 @@ function BlogListPageMetadata(props) {
 function BlogListPageContent(props) {
   const { metadata, items } = props;
 
+  // Validate items array and filter out invalid items
+  const validItems =
+    items?.filter((item) => {
+      return (
+        item &&
+        item.content &&
+        typeof item.content === 'function' &&
+        item.content.metadata &&
+        item.content.frontMatter
+      );
+    }) || [];
+
+  if (validItems.length === 0) {
+    console.warn('No valid blog post items found');
+    return (
+      <ListItem>
+        <ListSpan>No blog posts available</ListSpan>
+      </ListItem>
+    );
+  }
+
   return (
     <>
       <ListItem>
@@ -55,11 +76,13 @@ function BlogListPageContent(props) {
           {metadata?.page == 1 ? 'Recent Updates' : `Page ${metadata?.page}`}
         </ListSpan>
         {metadata?.page == 1 && (
-          <BlogPostItems items={items?.slice(0, 4)} list={true} />
+          <BlogPostItems items={validItems.slice(0, 4)} list={true} />
         )}
       </ListItem>
       <GridItem marginTop={metadata?.page == 1 ? true : false}>
-        <BlogPostItems items={items?.slice(metadata?.page == 1 ? 4 : 0, 11)} />
+        <BlogPostItems
+          items={validItems.slice(metadata?.page == 1 ? 4 : 0, 11)}
+        />
       </GridItem>
       <PaginatorDiv>
         <BlogListPaginator metadata={metadata} />
