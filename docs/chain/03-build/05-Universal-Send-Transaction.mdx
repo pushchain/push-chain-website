@@ -93,30 +93,128 @@ const txHash = await pushChainClient.universal.sendTransaction({
 
 ```typescript
 {
-  blockHash: '0xd193f3d61a6d73c167d64ce97577882e4736346bc1460fcafafca9144afc083e',
-  blockNumber: 803963n,
-  from: '0xb59cdc85cacd15097ece4c77ed9d225014b4d56d',
-  gas: 21000n,
-  gasPrice: 1125000000n,
+  hash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',
+  origin: 'eip155:42101:0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  blockNumber: 0n,
+  blockHash: '',
+  transactionIndex: 0,
+  chainId: '42101',
+  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+  nonce: 341,
+  data: '0x',
+  value: 1000n,
+  gasLimit: 21000n,
+  gasPrice: 1325000000n,
   maxFeePerGas: 1325000000n,
   maxPriorityFeePerGas: 125000000n,
-  hash: '0xa0a2a3a58bd7241785b9ff3470b8ba0bbbdf800b3ec8f2b806bb691595041537',
-  input: '0x',
-  nonce: 34,
-  to: '0xfae3594c68edfc2a61b7527164bdae80bc302108',
-  transactionIndex: 0,
-  value: 1n,
-  type: 'eip1559',
   accessList: [],
-  chainId: 42101,
-  v: 0n,
-  r: '0x485939545430e60b5a1b6f4271bf1e1955f3045709a43ef616977f391c8601d1',
-  s: '0x4848e381fdc59955d9c63162caf15a0fb98d5c78e233dd10b177d7be2144d434',
-  typeHex: '0x2',
-  yParity: 0,
-  wait: [Function: wait]
+  wait: [Function: wait],
+  type: '2',
+  typeVerbose: 'eip1559',
+  signature: {
+    r: '0x556566ba1304bf8e93025fc82daff32eb24b7ee9804a76d0baa0098dfa7237de',
+    s: '0x4495d7811d3dcb1beac16f29261903b542b0b65f51aa5942f65dbaf67e735724',
+    v: 1,
+    yParity: 1
+  },
+  raw: {
+    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+    nonce: 341,
+    data: '0x',
+    value: 1000n
+  }
 }
 ```
+
+### Transaction Response Properties
+
+| Property | Type | Description |
+|----------|----------|------|
+| `hash` | `string` | Unique transaction hash identifier |
+| `origin` | `string` | Origin identifier in format "eip155:chainId:address" or "solana:chainId:address" |
+| `blockNumber` | `BigInt` | Block number where transaction was included |
+| `blockHash` | `string` | Hash of the block containing this transaction |
+| `transactionIndex` | `number` | Position/index of transaction within the block |
+| `chainId` | `string` | Chain identifier (e.g. Push Chain = `42101`) |
+| `from` | `string` | UEA (Universal Execution Address) that executed the transaction |
+| `to` | `string` | Target address the UEA executed against |
+| `nonce` | `number` | Derived nonce for the UEA |
+| `data` | `string` | Perceived calldata (transaction input data) |
+| `value` | `BigInt` | Amount of native tokens transferred (in wei) |
+| `gasLimit` | `BigInt` | Maximum gas units allocated for transaction |
+| `gasPrice` | `BigInt` | Gas price for legacy transactions (in wei) |
+| `maxFeePerGas` | `BigInt` | Maximum fee per gas for EIP-1559 transactions |
+| `maxPriorityFeePerGas` | `BigInt` | Maximum priority fee (tip) per gas for EIP-1559 |
+| `accessList` | `array` | EIP-2930 access list for optimized storage access |
+| `type` | `string` | Transaction type identifier |
+| `typeVerbose` | `string` | Human-readable transaction type |
+| `signature` | `object` | ECDSA signature components |
+| `signature.r` | `string` | R component of ECDSA signature |
+| `signature.s` | `string` | S component of ECDSA signature |
+| `signature.v` | `number` | Recovery ID (legacy format) |
+| `signature.yParity` | `number` | Y-parity for EIP-1559 (0 or 1) |
+| `raw` | `object` | Original on-chain transaction data |
+| `raw.from` | `string` | Actual from address that went on chain |
+| `raw.to` | `string` | Actual to address that went on chain |
+| `raw.nonce` | `number` | Actual raw nonce used on chain |
+| `raw.data` | `string` | Actual raw data that went on chain |
+| `raw.value` | `BigInt` | Actual derived value that went on chain |
+| `wait` | `function` | Async function that returns a Promise resolving to UniversalTxReceipt |
+
+### Transaction Receipt (wait() function return)
+
+The `wait()` function returns a `Promise<UniversalTxReceipt>` containing the final transaction receipt once the transaction is confirmed on-chain.
+
+```typescript
+{
+  hash: '0xb52706db4116dd6bbea87be5142ac2c69b17fe8ccf8e2b88ac176adb30b90dd6',
+  blockNumber: 3413247n,
+  blockHash: '0x5a7b6e2716f7d4450b6ca08aebfe74cea3d876367a8afe6f603196ba8c346a2d',
+  transactionIndex: 0,
+  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+  contractAddress: null,
+  gasPrice: 1325000000n,
+  gasUsed: 21000n,
+  cumulativeGasUsed: 21000n,
+  logs: [],
+  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  status: 1,
+  raw: {
+    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+    nonce: 342,
+    data: '0x',
+    value: 1000n
+  }
+}
+```
+
+#### Receipt Properties
+
+| Property | Type | Description |
+|----------|----------|------|
+| `hash` | `string` | Transaction hash (same as in transaction response) |
+| `blockNumber` | `BigInt` | Block number where transaction was confirmed |
+| `blockHash` | `string` | Hash of the block containing the transaction |
+| `transactionIndex` | `number` | Position/index of transaction within the block |
+| `from` | `string` | Executor account address (UEA on Push Chain) |
+| `to` | `string` | Actual intended target address of the transaction |
+| `contractAddress` | `string` \| `null` | Address of deployed contract (null for regular transfers) |
+| `gasPrice` | `BigInt` | Gas price used for the transaction (in wei) |
+| `gasUsed` | `BigInt` | Actual gas consumed by the transaction |
+| `cumulativeGasUsed` | `BigInt` | Total gas used by all transactions in the block up to this one |
+| `logs` | `array` | Array of log objects emitted by the transaction |
+| `logsBloom` | `string` | Bloom filter for efficient log searching |
+| `status` | `number` | Transaction status (1 = success, 0 = failure) |
+| `raw` | `object` | Raw on-chain transaction data |
+| `raw.from` | `string` | Actual from address that executed on chain |
+| `raw.to` | `string` | Actual to address that was called on chain |
+| `raw.nonce` | `number` | Actual nonce used on chain |
+| `raw.data` | `string` | Actual calldata sent on chain |
+| `raw.value` | `BigInt` | Actual value transferred on chain |
 
 </Details>
 
