@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[86731],{410625:e=>{e.exports=JSON.parse('{"label":"Adoption","permalink":"/push-chain-website/pr-preview/pr-1083/blog/tags/adoption","allTagsPath":"/push-chain-website/pr-preview/pr-1083/blog/tags","count":2,"unlisted":false}')}}]);

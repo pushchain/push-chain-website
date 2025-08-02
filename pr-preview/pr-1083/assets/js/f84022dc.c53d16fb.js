@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[70898],{335591:e=>{e.exports=JSON.parse('{"label":"Web3 Notifications","permalink":"/push-chain-website/pr-preview/pr-1083/blog/tags/web-3-notifications","allTagsPath":"/push-chain-website/pr-preview/pr-1083/blog/tags","count":1,"unlisted":false}')}}]);

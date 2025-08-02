@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[23933],{935941:e=>{e.exports=JSON.parse('{"label":"Grant Writing","permalink":"/push-chain-website/pr-preview/pr-1083/blog/tags/grant-writing","allTagsPath":"/push-chain-website/pr-preview/pr-1083/blog/tags","count":2,"unlisted":false}')}}]);
