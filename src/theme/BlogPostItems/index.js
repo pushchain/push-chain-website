@@ -1,47 +1,6 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 import React from 'react';
 import { BlogPostProvider } from '@docusaurus/theme-common/internal';
 import BlogPostItem from '@theme/BlogPostItem';
-
-// Safe wrapper for BlogPostProvider that validates content structure
-function SafeBlogPostProvider({ content, children, ...props }) {
-  // Validate that content has the required structure
-  if (!content || typeof content !== 'function') {
-    console.warn('Invalid content: expected function component', content);
-    return null;
-  }
-
-  if (!content.metadata) {
-    console.warn('Invalid content: missing metadata', content);
-    return null;
-  }
-
-  if (!content.frontMatter) {
-    console.warn('Invalid content: missing frontMatter', content);
-    return null;
-  }
-
-  // Ensure required metadata properties exist
-  if (!content.metadata.permalink) {
-    console.warn(
-      'Invalid content: missing permalink in metadata',
-      content.metadata
-    );
-    return null;
-  }
-
-  // If all validations pass, render the BlogPostProvider
-  return (
-    <BlogPostProvider content={content} {...props}>
-      {children}
-    </BlogPostProvider>
-  );
-}
 
 export default function BlogPostItems({
   items,
@@ -50,16 +9,35 @@ export default function BlogPostItems({
 }) {
   return (
     <>
-      {items?.map(({ content: BlogPostContent }) => {
+      {items?.map(({ content: BlogPostContent }, index) => {
+        // Ensure BlogPostContent is a function/component
+        if (typeof BlogPostContent !== 'function') {
+          console.warn(
+            `Skipping item at index ${index}: content is not a valid React component.`
+          );
+          return null;
+        }
+
+        const metadata = BlogPostContent?.metadata;
+        const frontMatter = BlogPostContent?.frontMatter;
+
+        if (!metadata || !frontMatter || !metadata.permalink) {
+          console.warn(
+            `Skipping invalid blog post metadata at index ${index}.`,
+            {
+              metadata,
+              frontMatter,
+            }
+          );
+          return null;
+        }
+
         return (
-          <SafeBlogPostProvider
-            key={BlogPostContent?.metadata?.permalink || Math.random()}
-            content={BlogPostContent}
-          >
+          <BlogPostProvider key={metadata?.permalink} content={BlogPostContent}>
             <BlogPostItemComponent list={list}>
               <BlogPostContent />
             </BlogPostItemComponent>
-          </SafeBlogPostProvider>
+          </BlogPostProvider>
         );
       })}
     </>

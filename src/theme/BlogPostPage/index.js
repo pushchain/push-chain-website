@@ -1,3 +1,4 @@
+/* eslint-disable @docusaurus/prefer-docusaurus-heading */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -53,19 +54,35 @@ function BlogPostPageContent({ allPosts, post, children }) {
     </BlogLayout>
   );
 }
+
 export default function BlogPostPage(props) {
   const blogPath = props.location.pathname.substring(
     0,
     props.location.pathname.length - 1
   );
   const allPosts = props.allPosts;
-  const contentName = allPosts?.filter((x) =>
-    x?.Preview?.metadata?.permalink.includes(blogPath)
-  )[0];
+
+  const contentName = allPosts?.find((x) =>
+    x?.Preview?.metadata?.permalink?.includes(blogPath)
+  );
+
   const BlogPostContent = contentName?.Preview;
 
+  const isValidComponent =
+    BlogPostContent && typeof BlogPostContent === 'function';
+
+  if (!isValidComponent) {
+    console.warn(`Invalid blog post component for path: ${blogPath}`);
+    return (
+      <div style={{ padding: '2rem', textAlign: 'center' }}>
+        <h1>Blog post not found or invalid.</h1>
+        <p>Please check the metadata or route configuration.</p>
+      </div>
+    );
+  }
+
   return (
-    <BlogPostProvider content={contentName?.Preview} isBlogPostPage>
+    <BlogPostProvider content={BlogPostContent} isBlogPostPage>
       <HtmlClassNameProvider
         className={clsx(
           ThemeClassNames.wrapper.blogPages,
