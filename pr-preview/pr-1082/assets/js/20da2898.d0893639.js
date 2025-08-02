@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[98953],{232632:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1082/blog/tags/yam-finance","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

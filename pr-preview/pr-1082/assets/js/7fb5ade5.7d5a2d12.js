@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[27526],{853652:e=>{e.exports=JSON.parse('{"label":"Parallel Validators","permalink":"/push-chain-website/pr-preview/pr-1082/blog/tags/parallel-validators","allTagsPath":"/push-chain-website/pr-preview/pr-1082/blog/tags","count":3,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[83448],{474362:e=>{e.exports=JSON.parse('{"label":"Solidity","permalink":"/push-website/pr-preview/pr-1082/blog/tags/solidity","allTagsPath":"/push-website/pr-preview/pr-1082/blog/tags","count":2,"unlisted":false}')}}]);

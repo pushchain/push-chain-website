@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[85220],{201200:e=>{e.exports=JSON.parse('{"label":"Wallets","permalink":"/push-chain-website/pr-preview/pr-1082/blog/tags/wallets","allTagsPath":"/push-chain-website/pr-preview/pr-1082/blog/tags","count":3,"unlisted":false}')}}]);

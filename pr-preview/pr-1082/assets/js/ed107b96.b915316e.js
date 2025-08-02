@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[24945],{452586:s=>{s.exports=JSON.parse('{"label":"Ambassador Program","permalink":"/push-chain-website/pr-preview/pr-1082/blog/tags/ambassador-program","allTagsPath":"/push-chain-website/pr-preview/pr-1082/blog/tags","count":2,"unlisted":false}')}}]);

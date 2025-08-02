@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[40652],{874023:e=>{e.exports=JSON.parse('{"label":"Developerdao","permalink":"/push-chain-website/pr-preview/pr-1082/blog/tags/developerdao","allTagsPath":"/push-chain-website/pr-preview/pr-1082/blog/tags","count":1,"unlisted":false}')}}]);
