@@ -26,7 +26,7 @@ export const ChainFooterList = {
   developers: [
     {
       title: 'Github',
-      href: 'https://github.com/push-protocol',
+      href: 'https://github.com/pushchain',
       target: '_blank',
     },
   ],

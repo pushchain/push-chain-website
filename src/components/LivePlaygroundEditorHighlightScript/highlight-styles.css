@@ -1,0 +1,88 @@
+/* Styles for highlighted code in LiveEditor */
+.highlight-live-editor {
+  background-color: var(--ifm-playground-header-bg);
+  border-radius: 3px;
+  position: relative;
+  display: block;
+
+  transition: background-color 0.2s ease-in-out;
+  font-family: 'Fira Code' !important;
+  animation: none !important;
+}
+
+/* Hide highlights when editor is focused or being edited */
+.push-apply-highlight-in-live-editor:focus-within .highlight-live-editor {
+  background-color: transparent !important;
+}
+
+/* Animation for the highlight */
+@keyframes highlight-pulse {
+  0% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+  }
+  50% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-mid);
+  }
+  100% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+  }
+}
+
+/* Play animation once when container is focused or hovered */
+.push-apply-highlight-in-live-editor:hover .highlight-live-editor,
+.push-apply-highlight-in-live-editor:focus-within .highlight-live-editor {
+  animation: highlight-pulse 2s ease-in-out 1;
+}
+
+/* Dark mode initial state */
+/* html[data-theme='dark'] .highlight-live-editor {
+  background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+} */
+
+/* Dark mode support */
+/* html[data-theme='dark'] .highlight-live-editor {
+  background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+} */
+
+@keyframes highlight-pulse-dark {
+  0% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+  }
+  50% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-mid);
+  }
+  100% {
+    background-color: var(--ifm-live-highlighted-code-line-bg-pulse-start);
+  }
+}
+
+/* Play animation once in dark mode when container is focused or hovered */
+html[data-theme='dark']
+  .push-apply-highlight-in-live-editor:hover
+  .highlight-live-editor,
+html[data-theme='dark']
+  .push-apply-highlight-in-live-editor:focus-within
+  .highlight-live-editor {
+  animation: highlight-pulse-dark 2s ease-in-out 1;
+}
+
+/* Dim console lines when not in focus */
+/* when the 2nd child is a span.token.console */
+span.token-line:has(> span.token.console:nth-child(2)) {
+  opacity: 0.65;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.push-live-editor-focus pre span.token-line:has(> span.token.console) {
+  opacity: 1;
+}
+
+/* TODO: fix this instead of calling classname directly */
+:root[data-theme='light'] .push-live-editor .token.plain,
+:root[data-theme='light'] .push-live-editor .token.imports,
+:root[data-theme='light'] .push-live-editor .token.operator,
+:root[data-theme='light'] .push-live-editor .token.class-name,
+:root[data-theme='light'] .push-live-editor .token.punctuation,
+:root[data-theme='light'] .push-live-editor .token-line span[style*="color: rgb(248, 248, 242)"] {
+  color: #313338 !important;
+}

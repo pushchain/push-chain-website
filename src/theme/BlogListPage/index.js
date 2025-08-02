@@ -125,7 +125,9 @@ const ListItem = styled.div`
 
 const ListSpan = styled(Span)`
   color: var(--ifm-color-primary-blog);
-  font-family: Inter;
+  font-family:
+    DM Sans,
+    sans-serif;
   font-size: 37px;
   font-style: normal;
   font-weight: 700;

@@ -25,7 +25,7 @@ export const HeaderList = {
       title: 'header.developers.link2.title',
       subtitle: 'header.developers.link2.subtitle',
       srcrefoff: 'examples-icon-off',
-      href: 'https://github.com/push-protocol/push-sdk/tree/main/packages/examples',
+      href: 'https://github.com/pushchain/push-sdk/tree/main/packages/examples',
     },
     {
       title: 'header.developers.link3.title',
@@ -123,14 +123,14 @@ export const HeaderList = {
     {
       title: 'Chain Docs',
       subtitle: 'Read More about Push Chain',
-      srcrefoff: 'pushchain-icon-off',
+      srcrefoff: 'new-docs-icon',
       href: '/docs/chain',
       target: '_self',
     },
     {
       title: 'Push Chain Home',
       subtitle: 'Back to Push Chain Homepage',
-      srcrefoff: 'home',
+      srcrefoff: 'new-home-icon',
       href: '/',
       target: '_self',
     },

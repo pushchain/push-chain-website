@@ -1,0 +1,134 @@
+---
+id: docs-chain-build-initialize-evm-client
+title: Initialize EVM Client
+hide_title: false
+slug: ./initialize-evm-client
+displayed_sidebar: pushChainSidebar
+sidebar_position: 4
+image: '/assets/docs/previews/docs_notifications_develop--initialize_user.png'
+---
+
+<head>
+  <title>Initialize EVM Client | Build | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+<!-- Content Start -->
+
+## Overview
+
+Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum tooling—whether that’s Ethers.js or Viem. For more details on each library, check out:
+
+- [ethers.js documentation](https://docs.ethers.org/)
+- [viem documentation](https://viem.sh/)
+
+## Initialize EVM Client
+
+<Tabs className="liveplaytab" groupId="initialize-evm-client">
+  <TabItem value="ethers_v6" label="Ethers (v6)" default>
+
+<NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"}}>
+
+{`    
+    // customPropHighlightRegexStart=ethers\.JsonRpcProvider
+    // customPropHighlightRegexEnd=\\);
+    import { ethers } from 'ethers';
+
+    // ——— CONFIG ———
+    const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+
+    function initEthers() {
+      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      console.log('Got Ethers.js provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
+    }
+
+    initEthers();
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+  <TabItem value="viem" label="Viem">
+
+<NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"}}>
+
+{`
+    // customPropHighlightRegexStart=createPublicClient\\(
+    // customPropHighlightRegexEnd=\\);
+    import { createPublicClient, http } from 'viem';
+  
+    function initViem() {
+      const publicClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+      console.log('Viem publicClient:', JSON.stringify(publicClient, null, 2));
+    }
+
+    initViem();
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+</Tabs>
+
+<Details summary="Live Playground: Fetch a Transaction by Hash" className="alert alert--live-play alert-top-pad-20">
+
+<Tabs className="liveplaytab" groupId="initialize-evm-client">
+  <TabItem value="ethers_v6" label="Ethers (v6)" default>
+
+<NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"}}>
+
+{`
+    // customPropHighlightRegexStart=provider\.getTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { ethers } from 'ethers';
+
+    async function fetchTxEthers() {
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const txHash = '0x9405d6d75fe331d17ca53e7076a784b70c030c74a00e72ceff6a3e88356828f5';
+      const tx = await provider.getTransaction(txHash);
+      console.log('Transaction:', JSON.stringify(tx, null, 2));
+    }
+
+    console.log('Fetching transaction...');
+    await fetchTxEthers().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+  <TabItem value="viem" label="Viem">
+
+<NodeJSVirtualIDE repo={{title: "Open in GitHub", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"}}>
+
+{`
+    // customPropHighlightRegexStart=client\.getTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { createPublicClient, http } from 'viem';
+
+    async function fetchTxViem() {
+      const client      = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+      const txHash = '0x9405d6d75fe331d17ca53e7076a784b70c030c74a00e72ceff6a3e88356828f5';
+      const tx = await client.getTransaction({ hash: txHash });
+      console.log('Transaction:', JSON.stringify(tx, null, 2));
+    }
+
+    console.log('Fetching transaction...');
+    await fetchTxViem().catch(console.error);
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+</Tabs>
+
+</Details>
+
+## Next Steps
+
+- Send your first universal transaction with [Send Universal Transaction](/docs/chain/build/send-universal-transaction)
+- Learn about popular utilities in [Utility Functions](/docs/chain/build/utility-functions)  
+- Skip core and directly jump to [UI Kit](/docs/chain/ui-kit) that provides complete abstraction

@@ -1,0 +1,1165 @@
+---
+id: docs-chain-build-send-universal-transaction
+title: Send Universal Transaction
+hide_title: false
+slug: ./send-universal-transaction
+displayed_sidebar: pushChainSidebar
+sidebar_position: 5
+image: '/assets/docs/previews/docs_notifications_develop_fetch_chats--create_channel.png'
+---
+
+<head>
+  <title>Send Transaction | Build | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import Details from '@theme/Details';
+import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+
+<!-- Content Start -->
+
+## Overview
+
+Universal transactions let you send **native** transactions from any Layer 1 chain—EVM or non-EVM, even Push Chain itself—without wrapping, bridging or extra tooling required.
+
+**Under the hood**, the SDK automatically **estimates gas, orchestrates signatures, and replays any EVM or non-EVM proofs**, so you can focus on your app—not the network plumbing.
+
+## Sending Universal Transaction
+
+**_`pushChainClient.universal.sendTransaction({tx}): Promise<TransactionReceipt>`_**
+
+```typescript
+const txHash = await pushChainClient.universal.sendTransaction({
+  to: '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF',
+  value: PushChain.utils.helpers.parseUnits('0.1', 18), // 0.1 PC in uPC
+  // value: BigInt('100000000000000000') is equivalent here
+});
+```
+
+<PushAPIReference>
+
+| **Arguments**          | **Type** | **Description**                                       |
+| ---------------------- | -------- | ----------------------------------------------------- |
+| _`tx.to`_                 | `string` | The address of the recipient.                         |
+| _`tx.value`_              | `BigInt` | The value to send in uPC. smallest unit of PC, like wei in ETH                             |
+| `tx.data`                 | `string` | The data to send.                                     |
+| `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
+| `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
+| `tx.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+
+</PushAPIReference>
+
+<Details summary="Advanced Arguments" className="alert alert--minimal code">
+
+| Arguments      | Type                                   | Default | Description                                                                                                                            |
+| -------------- | -------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `tx.deadline`     | `BigInt`                               | -       | The deadline for the transaction.                                                                                                      |
+| `tx.progressHook` | `(progress: ProgressHookType) => void` | -       | A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions. |
+
+<Details summary="ProgressHook Type and Response" className="alert alert--minimal code">
+
+| Field                | Type                                          | Description                                                                     |
+| -------------------- | --------------------------------------------- | ------------------------------------------------------------------------------- |
+| `progress`           | `Object`                                      | The progress of the transaction.                                                |
+| `progress.id`        | `string`                                      | Unique identifier for the progress event.                                       |
+| `progress.title`     | `string`                                      | Brief title of the progress event.                                              |
+| `progress.message`   | `string`                                      | Detailed message describing the event.                                          |
+| `progress.level`     | `INFO` \| `SUCCESS` \| `WARNING` \| `ERROR` | Severity level of the event.                                                    |
+| `progress.timestamp` | `string`                                      | ISO-8601 timestamp when the event occurred (e.g. `2025-06-26T15:04:05.000Z`). |
+
+| ID              | Title                               | Message                                                                                       | Level   |
+| --------------- | ----------------------------------- | --------------------------------------------------------------------------------------------- | ------- |
+| `SEND-TX-01`    | Origin Chain Detected               | Origin chain: solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1                                         | INFO    |
+| `SEND-TX-02-01` | Estimating Gas                      | Estimating and fetching gas limit, gas price for TX…                                          | INFO    |
+| `SEND-TX-02-02` | Gas Estimated                       | Total execution cost (Gas cost + value): 1011250000000000000 UPC                              | SUCCESS |
+| `SEND-TX-03-01` | Resolving UEA                       | Resolving Execution Account (UEA) – computing address, checking deployment status and balance | INFO    |
+| `SEND-TX-03-02` | UEA Resolved                        | UEA: 0x4f17B798A7d643d4F89cb2d8D42A72F84e83e566, Deployed: true                               | SUCCESS |
+| `SEND_TX_04_01` | Awaiting Signature for Tx Execution | Universal Payload Hash: 0x1a579f18…fabac4309                                                  | INFO    |
+| `SEND_TX_04_02` | Generated Universal Payload         | Signature Completed                                                                           | SUCCESS |
+| `SEND-TX-05-01` | Locking Origin Chain Fee            | Locking fee: 1000063864000000000 UPC on origin chain                                                            | INFO    |
+| `SEND-TX-05-02` | Awaiting Origin Chain Confirmations | Tx sent: 0xabc..234, waiting for 2 confirmations.                                             | INFO    |
+| `SEND-TX-05-03` | Confirmations Received              | Required confirmations received.                                                           | SUCCESS |
+| `SEND-TX-06`    | Broadcasting to Push Chain          | Sending Tx to Push Chain…                                             | INFO    |
+| `SEND-TX-99-01` | Push Chain TX Success               | …                                                                                             | SUCCESS |
+| `SEND-TX-99-02` | Push Chain TX Failed                | …                                                                                             | ERROR   |
+
+</Details>
+
+</Details>
+
+<Details summary="Returns `TxResponse` <object>" className="alert alert--fn-args">
+
+```typescript
+{
+  hash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',
+  origin: 'eip155:42101:0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  blockNumber: 0n,
+  blockHash: '',
+  transactionIndex: 0,
+  chainId: '42101',
+  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+  nonce: 341,
+  data: '0x',
+  value: 1000n,
+  gasLimit: 21000n,
+  gasPrice: 1325000000n,
+  maxFeePerGas: 1325000000n,
+  maxPriorityFeePerGas: 125000000n,
+  accessList: [],
+  wait: [Function: wait],
+  type: '2',
+  typeVerbose: 'eip1559',
+  signature: {
+    r: '0x556566ba1304bf8e93025fc82daff32eb24b7ee9804a76d0baa0098dfa7237de',
+    s: '0x4495d7811d3dcb1beac16f29261903b542b0b65f51aa5942f65dbaf67e735724',
+    v: 1,
+    yParity: 1
+  },
+  raw: {
+    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+    nonce: 341,
+    data: '0x',
+    value: 1000n
+  }
+}
+```
+
+### Transaction Response Properties
+
+| Property | Type | Description |
+|----------|----------|------|
+| `hash` | `string` | Unique transaction hash identifier |
+| `origin` | `string` | Origin identifier in format "eip155:chainId:address" or "solana:chainId:address" |
+| `blockNumber` | `BigInt` | Block number where transaction was included |
+| `blockHash` | `string` | Hash of the block containing this transaction |
+| `transactionIndex` | `number` | Position/index of transaction within the block |
+| `chainId` | `string` | Chain identifier (e.g. Push Chain = `42101`) |
+| `from` | `string` | UEA (Universal Execution Address) that executed the transaction |
+| `to` | `string` | Target address the UEA executed against |
+| `nonce` | `number` | Derived nonce for the UEA |
+| `data` | `string` | Perceived calldata (transaction input data) |
+| `value` | `BigInt` | Amount of native tokens transferred (in wei) |
+| `gasLimit` | `BigInt` | Maximum gas units allocated for transaction |
+| `gasPrice` | `BigInt` | Gas price for legacy transactions (in wei) |
+| `maxFeePerGas` | `BigInt` | Maximum fee per gas for EIP-1559 transactions |
+| `maxPriorityFeePerGas` | `BigInt` | Maximum priority fee (tip) per gas for EIP-1559 |
+| `accessList` | `array` | EIP-2930 access list for optimized storage access |
+| `type` | `string` | Transaction type identifier |
+| `typeVerbose` | `string` | Human-readable transaction type |
+| `signature` | `object` | ECDSA signature components |
+| `signature.r` | `string` | R component of ECDSA signature |
+| `signature.s` | `string` | S component of ECDSA signature |
+| `signature.v` | `number` | Recovery ID (legacy format) |
+| `signature.yParity` | `number` | Y-parity for EIP-1559 (0 or 1) |
+| `raw` | `object` | Original on-chain transaction data |
+| `raw.from` | `string` | Actual from address that went on chain |
+| `raw.to` | `string` | Actual to address that went on chain |
+| `raw.nonce` | `number` | Actual raw nonce used on chain |
+| `raw.data` | `string` | Actual raw data that went on chain |
+| `raw.value` | `BigInt` | Actual derived value that went on chain |
+| `wait` | `function` | Async function that returns a Promise resolving to UniversalTxReceipt |
+
+### Transaction Receipt (wait() function return)
+
+The `wait()` function returns a `Promise<UniversalTxReceipt>` containing the final transaction receipt once the transaction is confirmed on-chain.
+
+```typescript
+{
+  hash: '0xb52706db4116dd6bbea87be5142ac2c69b17fe8ccf8e2b88ac176adb30b90dd6',
+  blockNumber: 3413247n,
+  blockHash: '0x5a7b6e2716f7d4450b6ca08aebfe74cea3d876367a8afe6f603196ba8c346a2d',
+  transactionIndex: 0,
+  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+  contractAddress: null,
+  gasPrice: 1325000000n,
+  gasUsed: 21000n,
+  cumulativeGasUsed: 21000n,
+  logs: [],
+  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',
+  status: 1,
+  raw: {
+    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',
+    nonce: 342,
+    data: '0x',
+    value: 1000n
+  }
+}
+```
+
+#### Receipt Properties
+
+| Property | Type | Description |
+|----------|----------|------|
+| `hash` | `string` | Transaction hash (same as in transaction response) |
+| `blockNumber` | `BigInt` | Block number where transaction was confirmed |
+| `blockHash` | `string` | Hash of the block containing the transaction |
+| `transactionIndex` | `number` | Position/index of transaction within the block |
+| `from` | `string` | Executor account address (UEA on Push Chain) |
+| `to` | `string` | Actual intended target address of the transaction |
+| `contractAddress` | `string` \| `null` | Address of deployed contract (null for regular transfers) |
+| `gasPrice` | `BigInt` | Gas price used for the transaction (in wei) |
+| `gasUsed` | `BigInt` | Actual gas consumed by the transaction |
+| `cumulativeGasUsed` | `BigInt` | Total gas used by all transactions in the block up to this one |
+| `logs` | `array` | Array of log objects emitted by the transaction |
+| `logsBloom` | `string` | Bloom filter for efficient log searching |
+| `status` | `number` | Transaction status (1 = success, 0 = failure) |
+| `raw` | `object` | Raw on-chain transaction data |
+| `raw.from` | `string` | Actual from address that executed on chain |
+| `raw.to` | `string` | Actual to address that was called on chain |
+| `raw.nonce` | `number` | Actual nonce used on chain |
+| `raw.data` | `string` | Actual calldata sent on chain |
+| `raw.value` | `BigInt` | Actual value transferred on chain |
+
+</Details>
+
+## Send Transaction with Contract Interaction
+
+When calling a smart contract method via sendTransaction, supply the ABI-encoded function call as a **hex string in the data field**. You can choose `ethers` or `viem` or any of your favorite libraries to encode the function data. Or, use our utility function `PushChain.utils.helpers.encodeTxData` to encode the function data.
+
+```typescript
+// Define the ABI for the ERC20 transfer function
+const erc20Abi = [
+  'function transfer(address to, uint256 amount) returns (bool)',
+];
+
+// Generate the encoded function data using viem
+const data = PushChain.utils.helpers.encodeTxData({
+  abi: erc20Abi,
+  functionName: 'transfer',
+  // Transfer 10 tokens, converted to 18 decimal places
+  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)],
+});
+
+// Send the transaction using Push Chain SDK
+const txHash = await pushChainClient.universal.sendTransaction({
+  to: '0xTokenContractAddress', // The smart contract address on Push Chain
+  value: BigInt('0'), // No $PC being sent, just contract interaction
+  data: data, // The encoded function call
+});
+```
+
+## Live Playground
+
+<Tabs className="liveplaytab" groupId="send-universal-transaction-coding">
+  <TabItem value='ethers_v6_quick' label='Quickstart'>
+
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+
+    // customPropHighlightRegexStart=universal\.sendTransaction
+    // customPropHighlightRegexEnd=\\);
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      console.log('Quickstart Example - See rest of the tabs for end-to-end flow');
+
+      // Set up wallet, provider and signer
+      const wallet = ethers.Wallet.createRandom();
+
+      // Replace it with different JsonRpcProvider to target Ethereum Account, BNB Account, etc
+      // const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia');
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // Convert to Universal Signer and Initialize Push Chain SDK
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction({
+          to: '0x0000000000000000000000000000000000042101',
+          value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC in uPC (wei)
+        });
+        console.log('Transaction Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('Transaction failed:', error);
+
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+  </NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='ethers_v6' label='Ethers (v6)'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import \* as readline from 'node:readline/promises';
+
+    // ——— CONFIG ———
+    // RPC URL OF DIFFERENT CHAINS
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // Choose chain from which to send transaction
+      const chainMeta = await returnUserChainSelection();
+
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+      });
+
+      // 5) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC (wei)
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+    // --- HELPER FUNCTIONS ---
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please select 1 or 2.');
+        process.exit(0);
+      }
+
+      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+      return {id: selection, name: name};
+    }
+
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='viem' label='Viem'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { createWalletClient, http } from 'viem';
+import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+import \* as readline from 'node:readline/promises';
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // Choose chain from which to send transaction
+      const chainMeta = await returnUserChainSelection();
+
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const privateKey = generatePrivateKey();
+      const account = privateKeyToAccount(privateKey);
+      console.log('🔑 Got account: ', account.address);
+
+      // 2) Create viem client
+      const client = createWalletClient({
+        account,
+        transport: http(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA),
+      });
+
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(client);
+
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // 5) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+        // data: '0x...', // For contract interactions - hex encoded
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + account.address + ' on ' + chainMeta.name + ' to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+    // --- HELPER FUNCTIONS ---
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please select 1 or 2.');
+        process.exit(0);
+      }
+
+      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+      return { id: selection, name: name };
+    }
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { Connection, Keypair } from '@solana/web3.js';
+import \* as readline from 'node:readline/promises';
+
+    // ——— CONFIG ———
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // 1) Create a keypair
+      const keypair = Keypair.generate();
+      console.log('🔑 Got keypair: ', keypair.publicKey.toBase58());
+
+      // 2) Convert to Universal Signer from Keypair
+      console.log('🔄 Converting to Universal Signer from Keypair...');
+      const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keypair, {
+        chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+        library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+      });
+
+      // 3) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+      });
+
+      // 4) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+        // data: '0x...', // For contract interactions - hex encoded
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + keypair.publicKey.toBase58() + ' on SOLANA_DEVNET to continue.');
+
+      // 5) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Hash:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='ui_kit' label='UI Kit'>
+
+    ```jsx live
+    // customPropHighlightRegexStart=<PushUniversalWalletProvider
+    // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
+    // customPropMinimized='false'
+    // Import necessary components from @pushchain/ui-kit
+    import {
+      PushUniversalWalletProvider,
+      PushUniversalAccountButton,
+      usePushWalletContext,
+      usePushChainClient,
+      PushUI,
+    } from '@pushchain/ui-kit';
+
+    function App() {
+      // Define Wallet Config
+      const walletConfig = {
+        network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+      };
+
+      function Component() {
+        const [txnHash, setTxnHash] = useState<string | null>(null);
+        const [isLoading, setIsLoading] = useState(false);
+
+        const { connectionStatus } = usePushWalletContext();
+        const { pushChainClient } = usePushChainClient();
+
+        const handleSendTransaction = async () => {
+          if (pushChainClient) {
+            setIsLoading(true);
+            try {
+              const res = await pushChainClient.universal.sendTransaction({
+                to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
+                value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+                data: '0x',
+              });
+              setTxnHash(res.hash);
+            } catch (err) {
+              console.log(err);
+            }  finally {
+              setIsLoading(false);
+            }
+          }
+        };
+
+        return (
+          <div>
+            <PushUniversalAccountButton />
+
+            {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&
+              <button
+                disabled={isLoading}
+                style={{
+                    background: 'transparent',
+                    border: '1px solid',
+                    borderRadius: '10px',
+                    padding: '12px 18px',
+                    cursor: 'pointer',
+                    margin: '8px 0',
+                }}
+                onClick={handleSendTransaction}
+              >
+                Send Transaction
+              </button>
+            }
+            {txnHash && (
+                <>
+                    <p>Txn Hash: {txnHash}</p>
+                    <a
+                        href={pushChainClient.explorer.getTransactionUrl(txnHash)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View in Explorer
+                    </a>
+                </>
+            )}
+          </div>
+        );
+      }
+
+      return (
+        <PushUniversalWalletProvider config={walletConfig}>
+          <Component />
+        </PushUniversalWalletProvider>
+      );
+    }
+    ```
+
+  </TabItem>
+
+</Tabs>
+
+<Details summary="Live Playground: Interact with Smart Contract" className="alert alert--live-play">
+
+<br />
+
+<Tabs className="liveplaytab" groupId="send-universal-transaction-coding">
+  <TabItem value='ethers_v6_pushchain' label='From Push Chain'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import \* as readline from 'node:readline/promises';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    // Contract ABI for UniversalCounter.sol
+    // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+    // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+    const testAbi = [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "countPC",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "caller",
+            "type": "address"
+          }
+        ],
+        "name": "CountIncremented",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "increment",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reset",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "countPC",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const signer = wallet.connect(provider);
+
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // 5) Prepare transaction parameters
+      // Encode the increment() function call
+      const data = PushChain.utils.helpers.encodeTxData({
+        abi: testAbi,
+        functionName: 'increment',
+        args: []
+      }); // 0xd09de08a
+      console.log('data', data);
+
+      // Prepare transaction parameters
+      const txParams = {
+        to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+        data: data,
+        value: BigInt(0),
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on Push Testnet Donut to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+      try {
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+</TabItem>
+
+ <TabItem value='ethers_v6_sepolia' label='From Sepolia'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import \* as readline from 'node:readline/promises';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    // Contract ABI for UniversalCounter.sol
+    // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+    // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+    const testAbi = [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "countPC",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "caller",
+            "type": "address"
+          }
+        ],
+        "name": "CountIncremented",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "increment",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reset",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "countPC",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co');
+      const signer = wallet.connect(provider);
+
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // 5) Prepare transaction parameters
+      // Encode the increment() function call
+      const data = PushChain.utils.helpers.encodeTxData({
+        abi: testAbi,
+        functionName: 'increment',
+        args: []
+      }); // 0xd09de08a
+      console.log('data', data);
+
+      // Prepare transaction parameters
+      const txParams = {
+        to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+        data: data,
+        value: BigInt(0),
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on Sepolia to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+      try {
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</TabItem>
+
+ <TabItem value='solana_webJs_devnet' label='From Solana Devnet'>
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import \* as readline from 'node:readline/promises';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout,
+    });
+
+    // Contract ABI for UniversalCounter.sol
+    // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+    // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+    const testAbi = [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "countPC",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "caller",
+            "type": "address"
+          }
+        ],
+        "name": "CountIncremented",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "increment",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "reset",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "countPC",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ];
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // 1) Create a keypair
+      const keypair = Keypair.generate();
+      console.log('🔑 Got keypair: ', keypair.publicKey.toBase58());
+
+      // 2) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer from Keypair...');
+      const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keypair, {
+        chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+        library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+      });
+
+      // 3) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      // 4) Prepare transaction parameters
+      // Encode the increment() function call
+      const data = PushChain.utils.helpers.encodeTxData({
+        abi: testAbi,
+        functionName: 'increment',
+        args: []
+      }); // 0xd09de08a
+      console.log('data', data);
+
+      // Prepare transaction parameters
+      const txParams = {
+        to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+        data: data,
+        value: BigInt(0),
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + keypair.publicKey.toBase58() + ' on Sepolia to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+      try {
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+      }
+    }
+
+    await main().catch(console.error);
+
+`}
+
+</NodeJSVirtualIDE>
+
+</TabItem>
+
+
+</Tabs>
+
+</Details>
+
+<Details summary="Live Playground: (Advanced) Track the progress lifecycle of a transaction" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+{`
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+    import \* as readline from 'node:readline/promises';
+
+    // ——— CONFIG ———
+    // RPC URL OF DIFFERENT CHAINS
+    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+    // Dummy Address
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+    // Enable User Input
+    const rl = readline.createInterface({
+      input: process.stdin,
+      output: process.stdout
+    });
+
+    // ⭐️ MAIN FUNCTION ⭐️
+    async function main() {
+      console.log('🚀 Initializing Universal Transaction Example');
+
+      // Choose chain from which to send transaction
+      const chainMeta = await returnUserChainSelection();
+
+      // 1) Create a wallet (in production, you'd use your own wallet)
+      const wallet = ethers.Wallet.createRandom();
+      console.log('📝 Created wallet:', wallet.address);
+
+      // 2) Set up provider and connect wallet
+      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+
+      // 3) Convert to Universal Signer
+      console.log('🔄 Converting to Universal Signer...');
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+      // 4) Initialize Push Chain Client
+      console.log('🔗 Initializing Push Chain Client...');
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+        progressHook: async (progress) => {
+          console.log('TX Progress: ', progress.title, ' | Time:', progress.timestamp);
+        }
+      });
+
+      // 5) Prepare transaction parameters
+      const txParams = {
+        to: RECIPIENT,
+        value: PushChain.utils.helpers.parseUnits(".001", 18) // 0.001 PC in uPC (wei)
+      };
+
+      // wait for user to send funds first
+      await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
+
+      // 6) Send universal transaction
+      console.log('📤 Sending transaction to:', RECIPIENT);
+
+      try {
+        // Note: This would fail in playground without funds
+        // In production, ensure wallet has funds
+        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
+      } catch (error) {
+        console.error('❌ Transaction failed:', error.message);
+        // In playground, this will fail without funds
+        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+      }
+    }
+
+    await main().catch(console.error);
+
+    // --- HELPER FUNCTIONS ---
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please select 1 or 2.');
+        process.exit(0);
+      }
+
+      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+      return {id: selection, name: name};
+    }
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
+## Next Steps
+
+- Sign arbitrary data with [Sign Universal Message](/docs/chain/build/sign-universal-message)
+- Surface live feedback in your UI by handling the `progressHook` events
+- Leverage pre-built utilities in [Contract Helpers](/docs/chain/build/contract-helpers)
+- Integrate transaction flows into your frontend app using the [UI Kit](/docs/chain/ui-kit)

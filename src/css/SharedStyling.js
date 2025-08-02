@@ -16,7 +16,7 @@ import GLOBALS, { device, structure } from '@site/src/config/globals';
  */
 
 export const HeroHeader = styled.h1`
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   color: ${(props) => props.color || GLOBALS.COLORS.FONT_LIGHT};
   font-size: 68px;
   line-height: 110%;
@@ -193,7 +193,7 @@ export const H1 = styled.h1`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.03em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
@@ -219,7 +219,7 @@ export const H2 = styled.h2`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.02em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
@@ -245,7 +245,7 @@ export const H3 = styled.h3`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.02em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
@@ -322,11 +322,15 @@ export const Button = styled.button`
   text-decoration: ${(props) => props.textDecoration || 'none'};
   width: ${(props) => props.width || 'initial'};
   overflow: ${(props) => props.overflow || 'hidden'};
+  right: ${(props) => props.right || 'auto'};
+  left: ${(props) => props.left || 'auto'};
+  bottom: ${(props) => props.bottom || 'auto'};
+  top: ${(props) => props.top || 'auto'};
   z-index: ${(props) => props.zIndex || '3'};
   pointer: ${(props) => props.pointer || 'hand'};
   cursor: ${(props) => props.cursor || 'pointer'};
   gap: ${(props) => props.gap};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
 
   @media ${device.laptop} {
     font-size: ${(props) =>
@@ -656,7 +660,7 @@ export const ModalContainer = styled(ItemH)`
 `;
 
 export const ModalInner = styled(Button)`
-  border: 1px solid #d9d9d9;
+  border: var(--ifm-playground-button-border);
   border-radius: 16px;
   padding: 12px 16px;
   background: transparent;
@@ -732,6 +736,7 @@ export const ModalWrapper = styled(ItemH)`
   gap: 5px;
   align-items: center;
   justify-content: center;
+  color: var(--ifm-color-primary-text);
 `;
 
 export const ImageText = styled.div`
@@ -802,4 +807,19 @@ export const FeatureImage = styled.img`
   width: 100%;
   height: auto;
   border-radius: 8px;
+`;
+
+export const CopyContainer = styled.div`
+  display: flex;
+  gap: 6px;
+  align-items: center;
+`;
+
+export const CopyButton = styled.div`
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  height: 20px;
+  width: 16px;
+  margin-right: 4px;
 `;

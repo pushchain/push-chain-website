@@ -1,0 +1,83 @@
+---
+id: docs-chain-setup-tooling-configure-remix
+title: Remix IDE
+hide_title: false
+slug: ./configure-remix
+displayed_sidebar: pushChainSidebar
+sidebar_position: 1
+image: '/assets/docs/previews/docs_notifications_develop--get_started.png'
+---
+
+<head>
+  <title>Remix IDE | Smart Contract Environment | Setup | Push Chain Docs</title>
+</head>
+
+import PushChainSpecs from '@site/src/components/Static/PushChainSpecs';
+import RemixIDE from '@site/src/components/RemixIDE/RemixIDE';
+
+<!-- Content Start -->
+
+Remix is a browser-based Solidity IDE that lets you write, compile, test and deploy smart contracts directly in your browser, no local setup required.
+
+Let's use Remix to compile, deploy, and test smart contracts on Push Chain.
+
+## Deploy Smart Contracts with Remix
+
+### 1. Add Push Chain to Your Wallet
+
+> If you haven’t yet, follow [Wallet Setup](/docs/chain/setup/tooling/wallet-setup) to add Push Chain as a custom network in your wallet.
+
+<PushChainSpecs />
+
+### 2. Launch Remix
+
+Open [Remix IDE](https://remix.ethereum.org) or use the embedded IDE below.
+
+<RemixIDE
+  examples={{
+    'Counter.sol': {
+      absoluteFileURL:
+        'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-counter/contracts/src/Counter.sol',
+      ctaTitle: 'View on GitHub',
+      ctaURL:
+        'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-counter/contracts/src/Counter.sol',
+    },
+  }}
+/>
+
+<br />
+<br />
+
+### 3. Configure “Deploy & Run Transactions”
+
+1. Click the **Deploy & Run Transactions** plugin in the left sidebar
+2. Under **Environment**, choose **Injected Provider - Web3**
+3. Approve the connection in your wallet, making sure it’s set to **Push Chain Donut Testnet (42101)**
+
+<br />
+<br />
+
+### 4. Compile Your Contract
+
+1. Open the **Solidity Compiler** plugin
+2. Select compiler version **0.8.22** (or match your `pragma`)
+3. Click **Compile** next to your contract file
+
+<br />
+<br />
+
+### 5. Deploy Your Contract
+
+1. Return to **Deploy & Run Transactions**
+2. Select your contract from the **Contract** dropdown
+3. Click **Deploy**
+4. Confirm the transaction in your wallet
+
+<br />
+<br />
+
+## Next Steps
+
+- Deploy from the console with [Foundry](/docs/chain/setup/smart-contract-environment/configure-foundry)
+- Script deployments with [Hardhat](/docs/chain/setup/smart-contract-environment/configure-hardhat)
+- Call your contract from code via the [Push Chain SDK](/docs/chain/build)

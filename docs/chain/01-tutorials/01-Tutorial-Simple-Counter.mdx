@@ -1,0 +1,369 @@
+---
+id: docs-chain-tutorials-simple-counter
+title: Simple Counter App
+hide_title: false
+slug: ./tutorial-simple-counter
+displayed_sidebar: pushChainSidebar
+sidebar_position: 1
+image: '/assets/docs/previews/notifications--intro_to_push_notification.png'
+---
+
+<head>
+  <title>Simple Counter | Tutorials | Push Chain Docs</title>
+</head>
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {
+  ModalContainer,
+  ModalSmall,
+  ModalWrapper,
+} from '@site/src/css/SharedStyling';
+import IFrameModal from '@site/src/components/IFrameModal/IFrameModal';
+
+<!-- Content Start -->
+
+Welcome to the first tutorial of building and deploying smart contracts on Push Chain.
+
+We will start with the most popular smart contract, i.e., `Counter.sol`, that all Solidity devs are familiar with.
+
+The tutorial is designed to achieve the following:
+
+1. Start with basic building and deployment of a Counter contract.
+2. Modify the Counter contract to a UniversalCounter that works with multiple chains.
+3. Deeply understand the uniqueness and benefits of building Universal Apps on Push Chain.
+
+> **Note:** How to use Tutorials: <br/ >
+> a. Every tutorial is designed with tutorial guide and a LivePlayground to test your code.<br/ >
+> b. **Use Live Playground** to test & interact with SimpleCounter.<br/ >
+> c. **Use Live App Preview** to view the results of your interaction with SimpleCounter.<br/ >
+> d. **Use Push Chain Examples** to view the code for the [tutorials](https://github.com/pushchain/push-chain-examples).
+
+<br/ >
+<br/ >
+
+## Let’s Build Counter
+The process of building a simple smart contract like a counter is exactly similar to any other EVM Chain.
+You can use the same tools, such as, remix, foundry, hardhat, etc.
+
+To get started, you can use the following contract:
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.22;
+
+contract Counter {
+    uint256 public countPC;
+    event CountIncremented(uint256 indexed countPC, address indexed caller);
+
+    function increment() public {
+        countPC += 1;
+        emit CountIncremented(countPC, msg.sender);
+    }
+
+    function reset() public {
+        countPC = 0;
+    }
+}
+```
+
+The contract is a simple counter contract that:
+
+- Allows the caller to increment the variable `countPC`.
+- Emits an event with the current value of `countPC` and the caller’s address.
+- Allows anyone to reset the `countPC` to zero.
+
+## Build and Deploy the Contract
+
+You can use any of the following guides to build and deploy this contract on Push Chain:
+
+1. [Remix IDE](https://remix.ethereum.org/)
+2. [Foundry Configuration](/docs/chain/setup/smart-contract-environment/configure-foundry/)
+3. [Hardhat Configuration](/docs/chain/setup/smart-contract-environment/configure-hardhat/)
+
+Once deployed, you can interact with the Counter contract just like on any other EVM-compatible chain.
+
+## Interact with SimpleCounter App
+A easier way to interact with the contract is to use the LivePlayground below.
+The SimpleCounter app is already deployed on Push Chain Testnet.
+> **SimpleCounter Contract Address:** [0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17](https://donut.push.network/address/0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17?tab=contract)
+
+**Note:** Push Chain easily allows you to interact with the SimpleCounter from any chain.
+
+Follow the steps below to interact with the SimpleCounter:
+- Connect your wallet to the LivePlayground.
+- You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)
+- Click on the `Increment Counter` button to increment the counter.
+- Click on the `Refresh Counter Values` button to refresh the counter values.
+- Click on the `View in Explorer` button to view the transaction in the explorer.
+
+### Let's Test our SimpleCounter
+
+```jsx live
+import React, { useState, useEffect } from 'react';
+import { ethers } from 'ethers';
+import {
+  PushUniversalWalletProvider,
+  PushUniversalAccountButton,
+  usePushWalletContext,
+  usePushChainClient,
+  PushUI,
+} from '@pushchain/ui-kit';
+
+function SimpleCounterExample() {
+  // Define Wallet Config
+  const walletConfig = {
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+  };
+
+  // Define Simple Counter ABI, taking minimal ABI for the demo
+  const UCABI = [
+    {
+      inputs: [],
+      name: 'increment',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'reset',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function',
+    },
+    {
+      inputs: [],
+      name: 'countPC',
+      outputs: [
+        {
+          internalType: 'uint256',
+          name: '',
+          type: 'uint256',
+        },
+      ],
+      stateMutability: 'view',
+      type: 'function',
+    },
+  ];
+
+  // Contract address for the Simple Counter
+  const CONTRACT_ADDRESS = '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17';
+
+  function Component() {
+    const { connectionStatus } = usePushWalletContext();
+    const { pushChainClient } = usePushChainClient();
+
+    // State to store counter values
+    const [countPC, setCountPC] = useState(-1);
+    const [isLoadingIncrement, setIsLoadingIncrement] = useState(false);
+    const [isLoadingReset, setIsLoadingReset] = useState(false);
+    const [txHash, setTxHash] = useState('');
+
+    // Function to encode increment transaction data
+    const getIncrementTxData = () => {
+      return PushChain.utils.helpers.encodeTxData({
+        abi: UCABI,
+        functionName: 'increment',
+      });
+    };
+
+    // Function to encode reset transaction data
+    const getResetTxData = () => {
+      return PushChain.utils.helpers.encodeTxData({
+        abi: UCABI,
+        functionName: 'reset',
+      });
+    };
+
+    // Function to fetch counter values
+    const fetchCounters = async () => {
+      if (!pushChainClient) return;
+
+      try {
+        const provider = new ethers.JsonRpcProvider(
+          'https://evm.rpc-testnet-donut-node1.push.org/'
+        );
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);
+
+        const pcCount = await contract.countPC();
+        setCountPC(Number(pcCount));
+      } catch (err) {
+        console.error('Error fetching counter values:', err);
+      }
+    };
+
+    // Fetch counter values on component mount and when connection status changes
+    useEffect(() => {
+      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED) {
+        fetchCounters();
+      }
+    }, [connectionStatus, pushChainClient]);
+
+    // Handle transaction to increment counter
+    const handleSendTransaction = async () => {
+      if (pushChainClient) {
+        try {
+          setIsLoadingIncrement(true);
+          const data = getIncrementTxData();
+
+          const tx = await pushChainClient.universal.sendTransaction({
+            to: CONTRACT_ADDRESS,
+            value: BigInt(0),
+            data: data,
+          });
+
+          setTxHash(tx.hash);
+          await tx.wait();
+
+          await fetchCounters();
+          setIsLoadingIncrement(false);
+        } catch (err) {
+          console.error('Transaction error:', err);
+          setIsLoadingIncrement(false);
+        }
+      }
+    };
+
+    // Handle transaction to reset counter
+    const handleResetTransaction = async () => {
+      if (pushChainClient) {
+        try {
+          setIsLoadingReset(true);
+          const data = getResetTxData();
+
+          const tx = await pushChainClient.universal.sendTransaction({
+            to: CONTRACT_ADDRESS,
+            value: BigInt(0),
+            data: data,
+          });
+
+          setTxHash(tx.hash);
+          await tx.wait();
+
+          await fetchCounters();
+          setIsLoadingReset(false);
+        } catch (err) {
+          console.error('Reset transaction error:', err);
+          setIsLoadingReset(false);
+        }
+      }
+    };
+
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '12px',
+        }}
+      >
+        <h2>Simple Counter Example</h2>
+
+        <PushUniversalAccountButton />
+
+        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+          <p>Please connect your wallet to interact with the counter.</p>
+        )}
+
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '12px',
+            width: '100%',
+            flexWrap: 'nowrap',
+          }}
+        >
+          <h3>PC Counter: {countPC == -1 ? '...' : countPC}</h3>
+        </div>
+
+        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
+          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+              <button
+                className='increment-button'
+                onClick={handleSendTransaction}
+                disabled={isLoadingIncrement}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}
+              </button>
+
+              <button
+                className='reset-button'
+                onClick={handleResetTransaction}
+                disabled={isLoadingReset}
+                style={{
+                  backgroundColor: '#d946ef',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '20px',
+                  padding: '8px 16px',
+                  fontSize: '14px',
+                  cursor: 'pointer',
+                  fontWeight: 'bold'
+                }}
+              >
+                {isLoadingReset ? 'Processing...' : 'Reset Counter'}
+              </button>
+            </div>
+
+            {txHash && pushChainClient && (
+              <div className='transaction-info' style={{ textAlign: 'center' }}>
+                <p>
+                  Transaction Hash:{' '}
+                  <a
+                    href={pushChainClient.explorer.getTransactionUrl(txHash)}
+                    target='_blank'
+                    style={{ color: '#d946ef', textDecoration: 'underline' }}
+                  >
+                    {txHash}
+                  </a>
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <PushUniversalWalletProvider config={walletConfig}>
+      <Component />
+    </PushUniversalWalletProvider>
+  );
+}
+```
+
+## What's Next?
+This was just a simple tutorial.
+
+What we did in this tutorial:
+
+- Deployed a simple counter contract on Push Chain.
+- Interacted with the contract from any chain easily. ( ethereum, solana or push chain)
+
+The next phase introduces the true power of **Universal Apps**.
+
+In the next part, we modify this contract to implement the following:
+
+1. `increment()` can be called by users on **any chain**.
+2. But now, the contract will natively detect which chain the `msg.sender` belongs to.
+3. Moreover, the contract will maintain a `count` for each chain based on the caller’s origin.
+
+> All of these features will be natively supported in the contract with no requirement of
+> third-party oracles, interop providers or packages.
+> **This is only possible on Push Chain.**
