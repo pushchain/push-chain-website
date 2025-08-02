@@ -8,11 +8,8 @@ import React from 'react';
 import { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import { useBlogPost } from '@docusaurus/theme-common/internal';
 export default function BlogPostItemContainer({ children, className }) {
-  const {
-    frontMatter,
-    assets,
-    metadata: { description },
-  } = useBlogPost();
+  const { frontMatter, assets, metadata } = useBlogPost();
+  const description = metadata?.description;
   const { withBaseUrl } = useBaseUrlUtils();
   const image = assets.image ?? frontMatter.image;
   const keywords = frontMatter.keywords ?? [];

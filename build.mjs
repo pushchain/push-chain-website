@@ -36,8 +36,8 @@ function walkDirectory(currentDirPath, callback) {
       const stat = fs.statSync(filePath);
 
       if (stat.isFile()) {
-        // Check if the file is an .mdx file before executing the callback
-        if (path.extname(filePath) === '.mdx') {
+        // Check if the file is an .mdx or .md file before executing the callback
+        if (path.extname(filePath) === '.mdx' || path.extname(filePath) === '.md') {
           callback(filePath, stat);
         }
       } else if (stat.isDirectory()) {

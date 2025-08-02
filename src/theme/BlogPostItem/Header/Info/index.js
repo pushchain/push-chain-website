@@ -17,7 +17,7 @@ import {
 
 export default function BlogPostItemHeaderInfo({ className, morePosts }) {
   const { metadata, isBlogPostPage } = useBlogPost();
-  const { date, formattedDate, readingTime } = metadata;
+  const { date, formattedDate, readingTime } = metadata || {};
   if (morePosts) {
     const blogDate = morePosts.date;
     const blogFormattedDate = morePosts.formattedDate;

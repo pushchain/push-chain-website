@@ -14,7 +14,7 @@ import { device } from '@site/src/config/globals';
 
 export default function BlogPostItemHeaderTitle() {
   const { metadata, isBlogPostPage } = useBlogPost();
-  const { permalink, title } = metadata;
+  const { permalink, title } = metadata || {};
   return (
     <>
       {isBlogPostPage ? (

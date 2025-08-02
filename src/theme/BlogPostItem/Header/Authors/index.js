@@ -11,10 +11,8 @@ import BlogPostItemHeaderAuthor from '@theme/BlogPostItem/Header/Author';
 import styles from './styles.module.css';
 // Component responsible for the authors layout
 export default function BlogPostItemHeaderAuthors({ className }) {
-  const {
-    metadata: { authors },
-    assets,
-  } = useBlogPost();
+  const { metadata, assets } = useBlogPost();
+  const authors = metadata?.authors || [];
   const authorsCount = authors.length;
   if (authorsCount === 0) {
     return null;
