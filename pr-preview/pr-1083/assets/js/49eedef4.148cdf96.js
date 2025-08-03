@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[21215],{522557:e=>{e.exports=JSON.parse('{"label":"Funding","permalink":"/push-chain-website/pr-preview/pr-1083/blog/tags/funding","allTagsPath":"/push-chain-website/pr-preview/pr-1083/blog/tags","count":3,"unlisted":false}')}}]);

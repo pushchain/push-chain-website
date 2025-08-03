@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[93907],{633588:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1083/blog/tags/dynamic-sharding","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
