@@ -390,7 +390,8 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
           return line;
         }
         if (line.trim() !== '---') {
-          return line.replace(/^\s+/gm, '');
+          // Preserve tabs but remove leading spaces
+          return line.replace(/^[ ]+/gm, '');
         }
         return line;
       })
@@ -410,22 +411,10 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
 
   // Process admonitions manually
   function processAdmonitions(md: string): string {
-    console.log('Processing admonitions for:', md.substring(0, 200) + '...');
-
-    // Test with a simple pattern first
-    const testPattern = /:::(\w+)/g;
-    const matches = md.match(testPattern);
-    console.log('Found admonition markers:', matches);
-
     // Try a more robust regex pattern
     let result = md.replace(
       /:::(\w+)(?:\s+([^\n\r]+))?\r?\n([\s\S]*?)\r?\n:::/g,
       (match, type, title, content) => {
-        console.log('Found admonition:', {
-          type,
-          title,
-          content: content.substring(0, 50) + '...',
-        });
         const cleanContent = content.trim();
         const titleText = title
           ? title.trim()
@@ -435,16 +424,12 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
   <div class="admonition-title">${titleText}</div>
   <div class="admonition-content">${cleanContent}</div>
 </div>`;
-        console.log('Generated admonition HTML:', admonitionHtml);
         return admonitionHtml;
       }
     );
 
     // If no admonitions were found, try a simpler approach
     if (result === md) {
-      console.log(
-        'No admonitions found with regex, trying line-by-line approach'
-      );
       const lines = md.split('\n');
       let inAdmonition = false;
       let admonitionType = '';
@@ -478,10 +463,6 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
   <div class="admonition-title">${titleText}</div>
   <div class="admonition-content">${content}</div>
 </div>`;
-            console.log(
-              'Generated admonition HTML (line-by-line):',
-              admonitionHtml
-            );
             processedLines.push(admonitionHtml);
           }
         } else if (inAdmonition) {
@@ -514,39 +495,47 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
   const texts =
     block?.value?.filter((v) => v.type === 'text' && !v.hidden) || [];
   const rawMarkdown = texts?.map((t) => t.value).join('\n\n');
-  console.log(
-    'Raw markdown contains admonitions:',
-    rawMarkdown.includes(':::')
+
+  // Memoize the processed markdown to prevent unnecessary re-processing
+  const processedMarkdown = React.useMemo(() => {
+    return resolveImageUrls(processAdmonitions(cleanMarkdown(rawMarkdown)));
+  }, [rawMarkdown]);
+
+  const toc = React.useMemo(
+    () => extractTOC(block?.value || []),
+    [block?.value]
   );
-  const toc = extractTOC(block?.value || []);
 
   // Create hidden section placeholders
-  const hiddenSections = [];
-  block?.value?.forEach((v) => {
-    if (v.type === 'text' && v.hidden) {
-      // Extract heading from hidden content (h2 and h3 only)
-      const h2Match = v.value.match(/^##\s+(.+)$/m);
-      const h3Match = v.value.match(/^###\s+(.+)$/m);
+  const hiddenSections = React.useMemo(() => {
+    const sections = [];
+    block?.value?.forEach((v) => {
+      if (v.type === 'text' && v.hidden) {
+        // Extract heading from hidden content (h2 and h3 only)
+        const h2Match = v.value.match(/^##\s+(.+)$/m);
+        const h3Match = v.value.match(/^###\s+(.+)$/m);
 
-      if (h2Match) {
-        const headingText = h2Match[1];
-        const headingId = generateIdFromHeadingText(headingText);
-        hiddenSections.push({
-          id: headingId,
-          text: headingText,
-          level: 2,
-        });
-      } else if (h3Match) {
-        const headingText = h3Match[1];
-        const headingId = generateIdFromHeadingText(headingText);
-        hiddenSections.push({
-          id: headingId,
-          text: headingText,
-          level: 3,
-        });
+        if (h2Match) {
+          const headingText = h2Match[1];
+          const headingId = generateIdFromHeadingText(headingText);
+          sections.push({
+            id: headingId,
+            text: headingText,
+            level: 2,
+          });
+        } else if (h3Match) {
+          const headingText = h3Match[1];
+          const headingId = generateIdFromHeadingText(headingText);
+          sections.push({
+            id: headingId,
+            text: headingText,
+            level: 3,
+          });
+        }
       }
-    }
-  });
+    });
+    return sections;
+  }, [block?.value]);
 
   return (
     <ItemH
@@ -689,7 +678,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
               },
             }}
           >
-            {resolveImageUrls(processAdmonitions(cleanMarkdown(rawMarkdown)))}
+            {processedMarkdown}
           </Markdown>
 
           {/* Hidden section placeholders for TOC navigation */}
@@ -821,6 +810,12 @@ const TextItem = styled.div`
 
   p {
     line-height: 170%;
+  }
+
+  ul,
+  ol,
+  p {
+    margin: 24px 0;
   }
 
   p img,
