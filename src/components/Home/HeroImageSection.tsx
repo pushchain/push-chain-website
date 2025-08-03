@@ -1,10 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
-import { device } from '@site/src/config/globals';
-import { A, H2, Span } from '@site/src/css/SharedStyling';
+import Lottie from 'lottie-react';
 import { TbArrowRight } from 'react-icons/tb';
 import styled from 'styled-components';
+
+import { device } from '@site/src/config/globals';
+import { A, H2, Span } from '@site/src/css/SharedStyling';
+import heroAnimation from '@site/static/assets/website/hero/hero-animation.json';
 
 export const HeroImageSection = () => {
   const UniversalText = () => (
@@ -40,18 +43,18 @@ export const HeroImageSection = () => {
   return (
     <HeroWrapper>
       <HeroBG>
+        <LottieContainer>
+          <Lottie animationData={heroAnimation} loop={true} autoplay={true} />
+        </LottieContainer>
+
         <MobileContent>
           <MobileTopText>
             <UniversalText />
           </MobileTopText>
 
-          <MobileImage
-            src={
-              require('@site/static/assets/website/hero/hero-image@3x.webp')
-                .default
-            }
-            alt='Push Chain'
-          />
+          <MobileLottieContainer>
+            <Lottie animationData={heroAnimation} loop={true} autoplay={true} />
+          </MobileLottieContainer>
 
           <MobileBottomText>
             <BottomSection />
@@ -79,20 +82,33 @@ const HeroBG = styled.div`
   position: relative;
   width: 100%;
   height: 780px;
-  background-image: url(${require('@site/static/assets/website/hero/hero-image@3x.webp')
-    .default});
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: center center;
 
   @media ${device.laptop} {
     height: 550px;
   }
 
   @media ${device.tablet} {
-    background: none;
     height: auto;
   }
+`;
+
+const LottieContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
+const MobileLottieContainer = styled.div`
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
 `;
 
 const TopLeftText = styled.div`
