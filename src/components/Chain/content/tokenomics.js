@@ -14,24 +14,12 @@ export const tokenomicsContent = {
 
     Push Chain is a purpose-built layer that connects L1s, L2s, and L3s with near-instant finality and true scalability, which solves the fundamental issue with web3 applications: fragmentation. With the successful voting of the governance proposal, the Push Chain mission is now on its way toward building **any chain, any user, and any app.**
     
-    :::info
-
-    testing
-
-    :::
-    
     :::info ⚠️ Token not live yet
-        
-    The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.
+    The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.<p />
 
-    Do not believe anyone offering early access or early migration to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.gg/pushprotocol 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
-    
+
+    Do not believe anyone offering early access to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.gg/pushprotocol 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
     :::
-
-    > ⚠️ Caution <br/>
-    > The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.
-    
-    > Do not believe anyone offering early access or early migration to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.gg/pushprotocol 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
 
     ## What is the Vision of Push Chain?
 
@@ -49,9 +37,9 @@ export const tokenomicsContent = {
 
     - Ability to do **transactions from any chain**
     - **Fee & Wallet Abstraction** (universal wallet + guest wallet)
+    - **Universal Smart Contract** (enables devs to deploy universal interop apps in hours)
     - **Shared State** (read data from other blockchain) 👀
     - **Generalised Programmable Solve**r (enables acting on the data read from other chains)
-    - **Universal Smart Contract** (enables devs to deploy universal interop apps in hours)
     - **Shared App Experience** (any user from any chain can access any app of any chain)
 
     >  &#9432; Info <br/>
@@ -82,7 +70,7 @@ export const tokenomicsContent = {
 
     <hr />
 
-    ## 👋 Push Chain Tokenomics
+    ## Push Chain Tokenomics 👋
 
     ![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)
 

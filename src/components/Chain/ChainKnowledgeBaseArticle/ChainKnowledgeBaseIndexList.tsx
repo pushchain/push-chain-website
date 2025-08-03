@@ -8,6 +8,7 @@ import Markdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
 import rehypeSlug from 'rehype-slug';
+
 import remarkGfm from 'remark-gfm';
 import styled from 'styled-components';
 
@@ -47,47 +48,6 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
       return;
     }
     setActiveHeadingId(newId);
-  };
-
-  // Scroll TOC to show active item
-  const scrollTOCToActiveItem = (activeId) => {
-    if (!tocRef.current || !activeId) return;
-
-    // Don't auto-scroll if user just manually clicked a TOC item
-    if (isManualNavigationRef.current) {
-      console.log('Skipping TOC auto-scroll due to manual navigation');
-      return;
-    }
-
-    const tocContainer = tocRef.current;
-    const activeTOCItem = tocContainer.querySelector(`a[href="#${activeId}"]`);
-    if (activeTOCItem) {
-      // Get the TOC container and active item positions
-      const tocRect = tocContainer.getBoundingClientRect();
-      const itemRect = activeTOCItem.getBoundingClientRect();
-
-      // Check if the active item is outside the visible area
-      const isAbove = itemRect.top < tocRect.top;
-      const isBelow = itemRect.bottom > tocRect.bottom;
-
-      if (isAbove || isBelow) {
-        // Calculate the scroll position to center the active item
-        const containerHeight = tocRect.height;
-        const itemHeight = itemRect.height;
-        const itemOffsetTop = activeTOCItem.offsetTop;
-
-        // Center the item in the visible area
-        const targetScrollTop =
-          itemOffsetTop - containerHeight / 2 + itemHeight / 2;
-
-        // Use GSAP for smoother scrolling
-        gsap.to(tocContainer, {
-          scrollTop: Math.max(0, targetScrollTop),
-          duration: 0.8,
-          ease: 'power2.out',
-        });
-      }
-    }
   };
 
   // Handle TOC item clicks to prevent auto-scroll interference
@@ -165,13 +125,8 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
             if (!isTOCTransitioning && !isManualNavigationRef.current) {
               setActiveHeadingIdSafely(heading.id);
               lastActiveId = heading.id;
+              // Only set end state if this is actually the last heading
               setIsAtEnd(index === headingsWithIds.length - 1);
-              // Scroll TOC to show the active item (only if not manual navigation)
-              console.log(
-                'Calling scrollTOCToActiveItem for heading:',
-                heading.id
-              );
-              setTimeout(() => scrollTOCToActiveItem(heading.id), 100);
             } else if (isManualNavigationRef.current) {
               console.log(
                 'Skipping heading change due to manual navigation for heading:',
@@ -183,13 +138,8 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
             if (!isTOCTransitioning && !isManualNavigationRef.current) {
               setActiveHeadingIdSafely(heading.id);
               lastActiveId = heading.id;
+              // Only set end state if this is actually the last heading
               setIsAtEnd(index === headingsWithIds.length - 1);
-              // Scroll TOC to show the active item (only if not manual navigation)
-              console.log(
-                'Calling scrollTOCToActiveItem for heading:',
-                heading.id
-              );
-              setTimeout(() => scrollTOCToActiveItem(heading.id), 100);
             } else if (isManualNavigationRef.current) {
               console.log(
                 'Skipping heading change due to manual navigation for heading:',
@@ -225,8 +175,6 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
               setActiveHeadingIdSafely(lastHeading.id);
               lastActiveId = lastHeading.id;
               setIsAtEnd(true);
-              // Scroll TOC to show the active item (only if not manual navigation)
-              setTimeout(() => scrollTOCToActiveItem(lastHeading.id), 100);
             }
           },
           onEnterBack: () => {
@@ -234,14 +182,11 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
               setActiveHeadingIdSafely(lastHeading.id);
               lastActiveId = lastHeading.id;
               setIsAtEnd(true);
-              // Scroll TOC to show the active item (only if not manual navigation)
-              setTimeout(() => scrollTOCToActiveItem(lastHeading.id), 100);
             }
           },
           onLeave: () => {
-            // Never clear the last heading when scrolling down
-            // Keep it active
-            setIsAtEnd(true);
+            // Only set end state if we're actually at the bottom
+            // Don't force it on every leave event
           },
           onLeaveBack: () => {
             // Only clear if we're scrolling up and there's a previous heading
@@ -325,11 +270,14 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
       const documentHeight = document.documentElement.scrollHeight;
       const distanceFromBottom = documentHeight - scrollPosition;
 
-      // If we're within 200px of the bottom, prevent clearing active heading
-      if (distanceFromBottom < 200 && activeHeadingId) {
-        // Force the active heading to stay active
-        setActiveHeadingIdSafely(activeHeadingId);
+      // Only set end state if we're very close to the bottom (within 50px)
+      // and we have an active heading
+      if (distanceFromBottom < 50 && activeHeadingId) {
+        // Only force end state if we're actually at the very bottom
         setIsAtEnd(true);
+      } else if (distanceFromBottom > 100) {
+        // Reset end state if we're not near the bottom
+        setIsAtEnd(false);
       }
 
       // Check if TOC is transitioning (position changes)
@@ -437,6 +385,10 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     return text
       .split('\n')
       .map((line: string) => {
+        // Preserve admonition markers and their content
+        if (line.trim().startsWith(':::')) {
+          return line;
+        }
         if (line.trim() !== '---') {
           return line.replace(/^\s+/gm, '');
         }
@@ -456,6 +408,95 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     );
   }
 
+  // Process admonitions manually
+  function processAdmonitions(md: string): string {
+    console.log('Processing admonitions for:', md.substring(0, 200) + '...');
+
+    // Test with a simple pattern first
+    const testPattern = /:::(\w+)/g;
+    const matches = md.match(testPattern);
+    console.log('Found admonition markers:', matches);
+
+    // Try a more robust regex pattern
+    let result = md.replace(
+      /:::(\w+)(?:\s+([^\n\r]+))?\r?\n([\s\S]*?)\r?\n:::/g,
+      (match, type, title, content) => {
+        console.log('Found admonition:', {
+          type,
+          title,
+          content: content.substring(0, 50) + '...',
+        });
+        const cleanContent = content.trim();
+        const titleText = title
+          ? title.trim()
+          : type.charAt(0).toUpperCase() + type.slice(1);
+
+        const admonitionHtml = `<div class="admonition admonition-${type.toLowerCase()}">
+  <div class="admonition-title">${titleText}</div>
+  <div class="admonition-content">${cleanContent}</div>
+</div>`;
+        console.log('Generated admonition HTML:', admonitionHtml);
+        return admonitionHtml;
+      }
+    );
+
+    // If no admonitions were found, try a simpler approach
+    if (result === md) {
+      console.log(
+        'No admonitions found with regex, trying line-by-line approach'
+      );
+      const lines = md.split('\n');
+      let inAdmonition = false;
+      let admonitionType = '';
+      let admonitionTitle = '';
+      let admonitionContent = [];
+      const processedLines = [];
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const trimmedLine = line.trim();
+
+        if (trimmedLine.startsWith(':::')) {
+          if (!inAdmonition) {
+            // Start of admonition
+            const match = trimmedLine.match(/:::(\w+)(?:\s+(.+))?/);
+            if (match) {
+              inAdmonition = true;
+              admonitionType = match[1];
+              admonitionTitle = match[2] || '';
+              admonitionContent = [];
+            }
+          } else {
+            // End of admonition
+            inAdmonition = false;
+            const titleText =
+              admonitionTitle ||
+              admonitionType.charAt(0).toUpperCase() + admonitionType.slice(1);
+            const content = admonitionContent.join('\n').trim();
+
+            const admonitionHtml = `<div class="admonition admonition-${admonitionType.toLowerCase()}">
+  <div class="admonition-title">${titleText}</div>
+  <div class="admonition-content">${content}</div>
+</div>`;
+            console.log(
+              'Generated admonition HTML (line-by-line):',
+              admonitionHtml
+            );
+            processedLines.push(admonitionHtml);
+          }
+        } else if (inAdmonition) {
+          admonitionContent.push(line);
+        } else {
+          processedLines.push(line);
+        }
+      }
+
+      result = processedLines.join('\n');
+    }
+
+    return result;
+  }
+
   // Removes emojis, numbering and spaces from header texts
   // so it can generates an id for the header
   function generateIdFromHeadingText(text: React.ReactNode): string {
@@ -473,6 +514,10 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
   const texts =
     block?.value?.filter((v) => v.type === 'text' && !v.hidden) || [];
   const rawMarkdown = texts?.map((t) => t.value).join('\n\n');
+  console.log(
+    'Raw markdown contains admonitions:',
+    rawMarkdown.includes(':::')
+  );
   const toc = extractTOC(block?.value || []);
 
   // Create hidden section placeholders
@@ -595,7 +640,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
         <TextItem>
           <Markdown
             remarkPlugins={[remarkGfm]}
-            rehypePlugins={[rehypeSlug, rehypeRaw, rehypeSanitize]}
+            rehypePlugins={[rehypeSlug, rehypeRaw]}
             components={{
               a: ({ node, ...props }) => (
                 <a {...props} target='_blank' rel='noopener noreferrer'>
@@ -632,9 +677,19 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
                   props.children
                 );
               },
+              // Custom component for admonitions
+              div: ({ node, className, ...props }) => {
+                if (className && className.includes('admonition')) {
+                  return React.createElement('div', {
+                    className,
+                    ...props,
+                  });
+                }
+                return React.createElement('div', props);
+              },
             }}
           >
-            {resolveImageUrls(cleanMarkdown(rawMarkdown))}
+            {resolveImageUrls(processAdmonitions(cleanMarkdown(rawMarkdown)))}
           </Markdown>
 
           {/* Hidden section placeholders for TOC navigation */}
@@ -746,13 +801,14 @@ const TextItem = styled.div`
   }
 
   blockquote {
+    border: 2px solid #fff;
     border-left: 6px solid #d548ec;
-    background: #fff;
+    background-color: #ffffff55;
     color: #000;
     border-radius: 12px;
     padding: 15px;
     box-sizing: border-box;
-    margin: 10px 0;
+    margin: 24px 0;
   }
 
   ol li {
@@ -772,6 +828,61 @@ const TextItem = styled.div`
     border-radius: 32px;
     margin: 16px 0;
   }
+
+  /* Admonition styling */
+  .admonition {
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin: 24px 0;
+    border: 2px solid #fff;
+    border-left: 6px solid;
+    background-color: #ffffff55;
+  }
+
+  .admonition-info {
+    border-left-color: #2196f3;
+  }
+
+  .admonition-warning {
+    background-color: #fff3e0;
+    border-left-color: #ff9800;
+  }
+
+  .admonition-caution {
+    border-left-color: #f44336;
+  }
+
+  .admonition-tip {
+    border-left-color: #4caf50;
+  }
+
+  .admonition-note {
+    border-left-color: #9c27b0;
+  }
+
+  .admonition-title {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    font-family: N27;
+  }
+
+  .admonition-content {
+    margin: 0;
+  }
+
+  .admonition-content p {
+    margin: 0 0 12px 0;
+  }
+
+  .admonition-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .admonition p:empty {
+    display: none;
+  }
+
   @media ${device.tablet} {
     max-width: 100%;
   }
