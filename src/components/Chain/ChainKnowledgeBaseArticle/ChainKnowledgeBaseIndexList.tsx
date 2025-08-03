@@ -31,6 +31,63 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
   const tocRef = React.useRef(null);
   const contentRef = React.useRef(null);
   const isManualNavigationRef = React.useRef(false);
+  const lastScrollTimeRef = React.useRef(0);
+  const isUserScrollingRef = React.useRef(false);
+
+  // Function to scroll TOC to active item
+  const scrollTOCToActiveItem = (headingId) => {
+    if (
+      !tocRef.current ||
+      !isUserScrollingRef.current ||
+      isManualNavigationRef.current
+    ) {
+      return;
+    }
+
+    const activeTOCItem = tocRef.current.querySelector(
+      `a[href="#${headingId}"]`
+    );
+    if (activeTOCItem) {
+      const tocContainer = tocRef.current;
+      const itemRect = activeTOCItem.getBoundingClientRect();
+      const containerRect = tocContainer.getBoundingClientRect();
+
+      // Calculate if the item is outside the visible area
+      const itemTop = itemRect.top;
+      const itemBottom = itemRect.bottom;
+      const containerTop = containerRect.top;
+      const containerBottom = containerRect.bottom;
+
+      // Add some padding for better visibility
+      const padding = 20;
+
+      if (itemTop < containerTop + padding) {
+        // Item is above visible area, scroll up smoothly
+        const scrollDistance = containerTop + padding - itemTop;
+        const currentScrollTop = tocContainer.scrollTop;
+        const targetScrollTop = currentScrollTop - scrollDistance;
+
+        // Use GSAP for smooth scrolling
+        gsap.to(tocContainer, {
+          scrollTop: targetScrollTop,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      } else if (itemBottom > containerBottom - padding) {
+        // Item is below visible area, scroll down smoothly
+        const scrollDistance = itemBottom - containerBottom + padding;
+        const currentScrollTop = tocContainer.scrollTop;
+        const targetScrollTop = currentScrollTop + scrollDistance;
+
+        // Use GSAP for smooth scrolling
+        gsap.to(tocContainer, {
+          scrollTop: targetScrollTop,
+          duration: 0.3,
+          ease: 'power2.out',
+        });
+      }
+    }
+  };
 
   // Robust setActiveHeadingId function
   const setActiveHeadingIdSafely = (newId) => {
@@ -47,7 +104,13 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     if (!newId && distanceFromBottom < 300) {
       return;
     }
+
     setActiveHeadingId(newId);
+
+    // Auto-scroll TOC to the active item when user is scrolling
+    if (newId && isUserScrollingRef.current && !isManualNavigationRef.current) {
+      scrollTOCToActiveItem(newId);
+    }
   };
 
   // Handle TOC item clicks to prevent auto-scroll interference
@@ -57,6 +120,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     console.log('TOC item clicked, setting manual navigation to true');
     // Temporarily disable auto-scroll during manual navigation
     isManualNavigationRef.current = true;
+    isUserScrollingRef.current = false; // Disable user scrolling detection
 
     // Scroll to the target heading
     const targetId = e.currentTarget.getAttribute('href')?.replace('#', '');
@@ -74,6 +138,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     setTimeout(() => {
       console.log('Re-enabling auto-scroll after manual navigation');
       isManualNavigationRef.current = false;
+      isUserScrollingRef.current = true; // Re-enable user scrolling detection
     }, 2000); // Wait 2 seconds for smooth scroll to complete
   };
 
@@ -266,6 +331,21 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
 
     // Add a scroll listener to prevent clearing active heading when near bottom
     const preventClearOnScroll = () => {
+      const currentTime = Date.now();
+      const timeSinceLastScroll = currentTime - lastScrollTimeRef.current;
+
+      // Detect if user is actively scrolling (scroll events within 100ms of each other)
+      if (timeSinceLastScroll < 100) {
+        isUserScrollingRef.current = true;
+
+        // Reset user scrolling detection after 500ms of no scroll events
+        clearTimeout(window.scrollTimeout);
+        window.scrollTimeout = setTimeout(() => {
+          isUserScrollingRef.current = false;
+        }, 500);
+      }
+      lastScrollTimeRef.current = currentTime;
+
       const scrollPosition = window.scrollY + window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const distanceFromBottom = documentHeight - scrollPosition;
@@ -306,6 +386,9 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
       if (resizeTimer) {
         clearTimeout(resizeTimer);
       }
+      if (window.scrollTimeout) {
+        clearTimeout(window.scrollTimeout);
+      }
       observer.disconnect();
       window.removeEventListener('resize', handleResize);
       scrollTriggers.forEach((trigger) => trigger.kill());
@@ -336,7 +419,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     scrollTrigger = ScrollTrigger.create({
       trigger: contentRef.current,
       start: 'top top+=24',
-      end: `bottom top+=${endOffset}`,
+      end: `bottom top+=${endOffset + 24}`, // Add 24px margin to prevent premature bottom positioning
       onUpdate: (self) => {
         const progress = self.progress;
         const direction = self.direction;
