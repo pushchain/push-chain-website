@@ -15,7 +15,6 @@ import { brbPartnersList } from '@site/src/config/BRBPartnersList';
 
 // Internal Configs
 import { device } from '@site/src/config/globals';
-
 export const Partners = ({
   sectionRef,
 }: {

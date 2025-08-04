@@ -8,7 +8,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 // Internal Components
-import { Image, ItemH } from '@site/src/css/SharedStyling';
+import { Image, ItemH, Span } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 
 // Internal Configs
