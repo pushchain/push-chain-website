@@ -44,12 +44,12 @@
     "testnet": {
       "title": "Testnet",
       "link1": {
-        "title": "Donut Testnet Explorer",
-        "subtitle": "Analyze network stats and txs"
+        "title": "Push Scan",
+        "subtitle": "Block explorer for Push Chain"
       },
       "link2": {
-        "title": "$PC Faucet",
-        "subtitle": "Get free testnet tokens"
+        "title": "Faucet",
+        "subtitle": "Get testnet tokens"
       }
     },
     "products": {
@@ -74,70 +74,62 @@
     "developers": {
       "title": "Developers",
       "link1": {
-        "title": "Documentation Hub",
-        "subtitle": "Curated wiki of Push Protocol"
+        "title": "Get Started",
+        "subtitle": "Intro to building on Push Chain"
       },
       "link2": {
-        "title": "Examples",
-        "subtitle": "Gallery of collaborative experiencess"
+        "title": "Quick Start",
+        "subtitle": "Setup dev environment in seconds"
       },
       "link3": {
-        "title": "Notification Quickstart",
-        "subtitle": "Setup notifications in 2 mins"
+        "title": "Tutorials",
+        "subtitle": "Step-by-step guides to build with Push"
       },
       "link4": {
-        "title": "Chat Quickstart",
-        "subtitle": "Setup chat in 2 mins"
+        "title": "GitHub",
+        "subtitle": "View core code and open-source tools"
       },
       "link5": {
-        "title": "Hackers",
-        "subtitle": "Are you a hacker? Get a head start here"
-      },
-      "link6": {
-        "title": "React Playground",
-        "subtitle": "Plug and play react components"
-      },
-      "link7": {
         "title": "Developer Discord",
-        "subtitle": "Join our community of developers"
+        "subtitle": "Connect with the dev community"
       }
     },
     "community": {
       "title": "Community",
       "link1": {
-        "title": "Ecosystem",
-        "subtitle": "Amazing community of developers building with Push"
+        "title": "Knowledge Base",
+        "subtitle": "Find deep dives on features"
       },
       "link2": {
-        "title": "Push DAO",
-        "subtitle": "Participate in governing Push Protocol"
+        "title": "Tokenomics",
+        "subtitle": "Learn how the $PC token works"
       },
       "link3": {
-        "title": "Grants",
-        "subtitle": "Get a kickstart with Push grants program"
+        "title": "X/Twitter",
+        "subtitle": "Follow updates and ecosystem news"
       },
       "link4": {
-        "title": "Billion Reasons to Build",
-        "subtitle": "Solve problems and win prizes over $50K"
+        "title": "Discord",
+        "subtitle": "Chat, build, and vibe with the community"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Join the convo and stay in the loop"
       }
     },
     "resources": {
       "title": "Resources",
       "link1": {
         "title": "Blog",
-        "subtitle": "News, ideas and insights on Push and Web3"
+        "subtitle": "Updates, deep dives, and dev stories"
       },
       "link2": {
-        "title": "FAQ",
-        "subtitle": "Frequently asked questions about Push"
+        "title": "Litepaper",
+        "subtitle": "The vision and tech, simplified"
       },
       "link3": {
-        "title": "Roadmap",
-        "subtitle": "A living roadmap for the protocol"
-      },
-      "link4": {
-        "title": "Tokenomics",
-        "subtitle": "Token utility and Push network"
+        "title": "FAQ",
+        "subtitle": "Quick answers to common questions"
       }
     }
   },
