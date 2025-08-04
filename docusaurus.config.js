@@ -147,6 +147,9 @@ const config = {
     },
     {
       tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
       innerHTML: `
         (function(h,o,t,j,a,r){
           h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
