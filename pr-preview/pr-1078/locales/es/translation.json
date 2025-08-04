@@ -41,6 +41,17 @@
       "title": "Abrir App",
       "alt-title": "Dapp de Push"
     },
+    "testnet": {
+      "title": "Testnet",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Explorador de bloques para Push Chain"
+      },
+      "link2": {
+        "title": "Faucet",
+        "subtitle": "Obtener tokens de testnet"
+      }
+    },
     "products": {
       "title": "Productos",
       "link1": {
@@ -63,70 +74,62 @@
     "developers": {
       "title": "Desarrolladores",
       "link1": {
-        "title": "Centro de Documentación",
-        "subtitle": "Wiki curada de Push Protocol"
+        "title": "Comenzar",
+        "subtitle": "Introducción a construir en Push Chain"
       },
       "link2": {
-        "title": "Ejemplos",
-        "subtitle": "Galería de experiencias colaborativas"
+        "title": "Inicio Rápido",
+        "subtitle": "Configura el entorno de desarrollo en segundos"
       },
       "link3": {
-        "title": "Inicio Rápido de Notificaciones",
-        "subtitle": "Configura notificaciones en 2 minutos"
+        "title": "Tutoriales",
+        "subtitle": "Guías paso a paso para construir con Push"
       },
       "link4": {
-        "title": "Inicio Rápido de Chat",
-        "subtitle": "Configura chat en 2 minutos"
+        "title": "GitHub",
+        "subtitle": "Ver código central y herramientas de código abierto"
       },
       "link5": {
-        "title": "Hackers",
-        "subtitle": "¿Eres un hacker? Comienza aquí"
-      },
-      "link6": {
-        "title": "Área de Juego de React",
-        "subtitle": "Componentes de React listos para usar"
-      },
-      "link7": {
         "title": "Discord de Desarrolladores",
-        "subtitle": "Únete a nuestra comunidad de desarrolladores"
+        "subtitle": "Conecta con la comunidad de desarrolladores"
       }
     },
     "community": {
       "title": "Comunidad",
       "link1": {
-        "title": "Ecosistema",
-        "subtitle": "Increíble comunidad de desarrolladores construyendo con Push"
+        "title": "Base de Conocimientos",
+        "subtitle": "Encuentra análisis profundos sobre características"
       },
       "link2": {
-        "title": "DAO de Push",
-        "subtitle": "Participa en la gobernanza del Protocolo Push"
+        "title": "Tokenomics",
+        "subtitle": "Aprende cómo funciona el token $PC"
       },
       "link3": {
-        "title": "Subsidios",
-        "subtitle": "Obtén un impulso inicial con el programa de subsidios de Push"
+        "title": "X/Twitter",
+        "subtitle": "Sigue actualizaciones y noticias del ecosistema"
       },
       "link4": {
-        "title": "Mil Razones para Construir",
-        "subtitle": "Resuelve problemas y gana premios de más de $50K"
+        "title": "Discord",
+        "subtitle": "Chatea, construye y vibra con la comunidad"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Únete a la conversación y mantente al día"
       }
     },
     "resources": {
       "title": "Recursos",
       "link1": {
         "title": "Blog",
-        "subtitle": "Noticias, ideas e información sobre Push y Web3"
+        "subtitle": "Actualizaciones, análisis profundos e historias de desarrollo"
       },
       "link2": {
-        "title": "FAQ",
-        "subtitle": "Preguntas frecuentes sobre Push"
+        "title": "Litepaper",
+        "subtitle": "La visión y la tecnología, simplificadas"
       },
       "link3": {
-        "title": "Hoja de Ruta",
-        "subtitle": "Una hoja de ruta viva para el protocolo"
-      },
-      "link4": {
-        "title": "Tokenómica",
-        "subtitle": "Utilidad del token y red de Push"
+        "title": "FAQ",
+        "subtitle": "Respuestas rápidas a preguntas comunes"
       }
     }
   },
