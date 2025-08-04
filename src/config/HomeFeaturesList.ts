@@ -76,13 +76,6 @@ export const FeaturesList = {
           align: 'left',
         },
         {
-          type: 'styled-link',
-          href: 'https://example.com/learn-more',
-          hrefText: 'Learn More',
-          margin: '0px 0 0 0',
-          align: 'left',
-        },
-        {
           type: 'image',
           imagesrc: 'chain/wallet-abstraction',
           videosrc: 'chain/wallet-abstraction-video',

@@ -11,11 +11,6 @@ export const ChainFooterList = {
       target: '_blank',
     },
     {
-      title: 'White Paper',
-      href: 'https://whitepaper.push.org/',
-      target: '_blank',
-    },
-    {
       title: 'Litepaper',
       href: 'https://push.org/litepaper.pdf',
       target: '_blank',

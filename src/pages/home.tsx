@@ -323,6 +323,7 @@ export default function Home() {
                     color='#E163FF'
                     borderRadius='0'
                     padding='0px 0px'
+                    target='_blank'
                   >
                     <SpanLink>Explore More Articles</SpanLink>
                     <BsArrowRight className='anchorSVGlink' />
@@ -400,7 +401,7 @@ export default function Home() {
                 </AccordionGrid>
 
                 <SlideLink
-                  href={useBaseUrl('/faq')}
+                  href={useBaseUrl('/knowledge/faq')}
                   title={'new'}
                   target='_blank'
                   className='button'

@@ -24,7 +24,7 @@ export const HeroImageSection = () => {
       <Span>Reach Everywhere</Span>
 
       <LearnMoreLink
-        href='https://portal.push.org/'
+        href='/docs'
         target='_blank'
         border='none'
         fontSize='1.125rem'
@@ -34,7 +34,7 @@ export const HeroImageSection = () => {
         width='100%'
         color='#E163FF'
       >
-        Learn More
+        Get Started
         <TbArrowRight className='start-svg' />
       </LearnMoreLink>
     </>

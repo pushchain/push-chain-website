@@ -478,11 +478,9 @@ function Header() {
                     >
                       <HeaderDiv>
                         <HeaderSection>
-                          {HeaderList.developers
-                            .slice(0, 4)
-                            .map((item, index) => (
-                              <HeaderSpace item={item} index={index} />
-                            ))}
+                          {HeaderList.developers.map((item, index) => (
+                            <HeaderSpace item={item} index={index} />
+                          ))}
                         </HeaderSection>
                       </HeaderDiv>
                     </NavigationMenuContent>
