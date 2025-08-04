@@ -948,14 +948,12 @@ const InvestorCard = styled.div`
   border-radius: 16px;
   padding: 8px;
   min-width: 242px;
-  height: 96px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-
-  // backdrop-filter: blur(10px);
+  height: 100%;
+  overflow: hidden;
   box-shadow:
     2.788px 2.598px 12px 0px rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0px rgba(255, 255, 255, 0.15) inset;
@@ -1308,7 +1306,10 @@ const SpanLink = styled(Span)`
   }
 `;
 
-const MarqueeAnimationContainer = styled(ItemV)``;
+const MarqueeAnimationContainer = styled(ItemV)`
+  max-height: 96px;
+  min-height: 96px;
+`;
 
 const AccordionGrid = styled.div`
   max-width: 877px;
