@@ -87,7 +87,7 @@ export const extractTOC = (contentArray) => {
       insideCodeBlock = false;
     }
 
-    if (node.tagName && /^h[1-6]$/.test(node.tagName) && !insideCodeBlock) {
+    if (node.tagName && /^h[1-3]$/.test(node.tagName) && !insideCodeBlock) {
       const rawText = extractText(node).trim();
       const text = cleanHeadingText(rawText);
       const id = generateIdFromText(text);

@@ -12,6 +12,12 @@ tags: [Push Chain, Tokenomics]
 
 <!--truncate-->
 
+:::warning
+
+This article is moved to it's own dedicated page. Please refer to the [Push Chain's Tokenomics Page](/knowledge/tokenomics) for latest information.
+
+:::
+
 ## Overview
 
 In late 2024, the Push community voted to approve the launch of Push Chain, a shared state layer 1 blockchain designed to enable the development and scale of universal applications.

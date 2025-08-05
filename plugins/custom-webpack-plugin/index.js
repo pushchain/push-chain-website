@@ -1,10 +1,13 @@
-// eslint-disable-next-line
+// /* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+//
 const webpack = require('webpack');
 
+// Webpack configuration
 module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
-    // eslint-disable-next-line
     configureWebpack(config, isServer, utils) {
       return {
         resolve: {
@@ -19,6 +22,10 @@ module.exports = function () {
             zlib: require.resolve('browserify-zlib'),
             crypto: require.resolve('crypto-browserify'),
             vm: require.resolve('vm-browserify'),
+            File: isServer ? false : require.resolve('form-data'),
+            bufferutil: false, // Fallback for WebSocket
+            'utf-8-validate': false, // Fallback for WebSocket
+            'pino-pretty': false, // Fallback for pino
           },
         },
         module: {
@@ -31,6 +38,13 @@ module.exports = function () {
             },
           ],
         },
+        plugins: isServer
+          ? [
+              new webpack.ProvidePlugin({
+                File: ['form-data', 'FormData'],
+              }),
+            ]
+          : [],
       };
     },
   };
