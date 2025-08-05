@@ -117,13 +117,13 @@ export const knowledgeBaseArticleContent = [
     url: 'faq',
     target: '_self',
     ctatitle: 'Read More',
-    image: require(`@site/static/assets/website/docshub/FaqIcons.png`).default,
-    image2x: require(`@site/static/assets/website/docshub/FaqIcons@2x.png`)
+    image: require(`@site/static/assets/website/docshub/FAQIcons.png`).default,
+    image2x: require(`@site/static/assets/website/docshub/FAQIcons@2x.png`)
       .default,
-    image3x: require(`@site/static/assets/website/docshub/FaqIcons@3x.png`)
+    image3x: require(`@site/static/assets/website/docshub/FAQIcons@3x.png`)
       .default,
     gridBG: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
     bgColor: '#101010',
-    customWidth: '75px',
+    customWidth: '70px',
   },
 ];
