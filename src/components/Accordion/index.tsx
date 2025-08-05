@@ -25,7 +25,6 @@ interface AccordionItem {
 interface AccordionProps {
   items: AccordionItem[];
   firstOpen?: boolean;
-  textColor?: string;
   fontWeight?: string;
   fontSize?: string;
 }
@@ -33,7 +32,6 @@ interface AccordionProps {
 const Accordion: React.FC<AccordionProps> = ({
   items,
   firstOpen,
-  textColor,
   fontWeight,
   fontSize,
 }) => {
@@ -54,7 +52,7 @@ const Accordion: React.FC<AccordionProps> = ({
         <AccordionSection key={index}>
           <AccordionParent onClick={() => toggleAccordion(index)}>
             <H2
-              color={textColor || '#FFF'}
+              color={'#FFF'}
               fontSize={fontSize ? fontSize : isMobile ? '20px' : '1.5rem'}
               fontFamily={'DM Sans, sans-serif'}
               fontWeight={fontWeight || '600'}
@@ -64,16 +62,16 @@ const Accordion: React.FC<AccordionProps> = ({
             </H2>
             <div>
               {activeIndex === index ? (
-                <AiOutlineMinus color={textColor || '#FFF'} size={22} />
+                <AiOutlineMinus color={'#FFF'} size={22} />
               ) : (
-                <AiOutlinePlus color={textColor || '#FFF'} size={22} />
+                <AiOutlinePlus color={'#FFF'} size={22} />
               )}
             </div>
           </AccordionParent>
           {activeIndex === index && item.content !== undefined && (
             <>
               <H3
-                color={textColor || '#FFF'}
+                color={'#FFF'}
                 fontSize={isMobile ? '16px' : '19px'}
                 fontFamily={'DM Sans, sans-serif'}
                 fontWeight='400'

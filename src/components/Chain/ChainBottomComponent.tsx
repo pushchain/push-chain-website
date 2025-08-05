@@ -10,9 +10,7 @@ import useMediaQuery from '../../hooks/useMediaQuery';
 
 import Accordion from '@site/src/components/Accordion';
 import DiscordSVG from '@site/static/assets/website/shared/discord.svg';
-import { A, H2, H3, ItemH, ItemV, Span } from '../../css/SharedStyling';
-import ChainCanvas from './ChainCanvas';
-import { ChainEmailSignup } from './ChainEmailSignup';
+import { A, H2, ItemH, ItemV } from '../../css/SharedStyling';
 import { General } from './config/ChainFAQconfig';
 
 type ChainBottomComponentProps = {
@@ -39,10 +37,10 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
             padding={!isMobile && '23px 0 0 0'}
           >
             <H2
-              color='#000'
-              fontSize={isMobile ? '36px' : '48px'}
-              fontFamily='N27'
-              fontWeight='500'
+              color='#FFF'
+              fontSize={isMobile ? '2.5rem' : '3rem'}
+              fontFamily='DM Sans, sans-serif'
+              fontWeight='600'
               lineHeight='120%'
             >
               Frequently Asked Questions
@@ -55,7 +53,10 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
               fontSize='16px'
               background='#5865F2'
               color='#FFF'
-              fontFamily='N27'
+              fontFamily='DM Sans, sans-serif'
+              border='1px solid rgba(255, 255, 255, 0.30)'
+              borderRadius='12px'
+              gap='12px'
             >
               <DiscordSVG width={24} />
               <p>Ask us on Discord</p>
@@ -65,60 +66,11 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
 
           <ItemV alignItems='flex-start' justifyContent='flex-start'>
             <AccordionGrid>
-              <Accordion
-                items={General}
-                fontFamily='N27'
-                textColor='#000 !important'
-                fontWeight='500'
-                fontSize='24px'
-              />
+              <Accordion items={General} />
             </AccordionGrid>
           </ItemV>
         </ItemH>
       )}
-
-      <ElevateSection>
-        <ItemH maxWidth='850px' margin='0 auto'>
-          <H3
-            color='#FFF'
-            fontSize={isMobile ? '36px' : '48px'}
-            fontFamily='N27'
-            textAlign='center'
-            fontWeight='500'
-            lineHeight='120%'
-            letterSpacing='-0.72px'
-          >
-            Any Chain. Any Wallet. Any App.
-            <br />
-            <hr />
-            One Push Chain
-          </H3>
-        </ItemH>
-
-        <ChainCanvasItem>
-          <ChainCanvas />
-        </ChainCanvasItem>
-      </ElevateSection>
-
-      <InputSection>
-        <ItemH maxWidth={!isMobile && '470px'} padding={!isMobile && '0 24px'}>
-          <Span
-            color='#000'
-            fontSize={isMobile ? '20px' : '24px'}
-            fontFamily='N27'
-            fontWeight='500'
-            lineHeight='120%'
-            letterSpacing='-0.48px'
-          >
-            To get exclusive updates and be the first to try universal app
-            experiences
-          </Span>
-        </ItemH>
-
-        <ItemH>
-          <ChainEmailSignup showButton={true} />
-        </ItemH>
-      </InputSection>
     </ChainBottomComponentWrapper>
   );
 };
@@ -126,7 +78,7 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
 export default ChainBottomComponent;
 
 const ChainBottomComponentWrapper = styled.div`
-  margin: ${(props) => (props.showFaq ? '213px auto 0 auto' : '0 auto')};
+  margin: ${(props) => (props.showFaq ? '213px auto' : '0 auto')};
 
   @media ${device.desktopL} {
     width: 1400px;
@@ -190,50 +142,6 @@ const AccordionGrid = styled.div`
 
   @media ${device.mobileL} {
     margin-top: 24px;
-  }
-`;
-
-const ElevateSection = styled.div`
-  width: 100%;
-  margin-top: ${(props) => (props.showFaq ? '300px' : '200px')};
-  border-radius: 32px;
-  background: #000;
-  padding: 64px 64px 0px 64px;
-  position: relative;
-  overflow: hidden;
-  gap: 48px;
-
-  @media ${device.mobileL} {
-    margin-top: 200px;
-    padding: 64px 24px 0px 24px;
-  }
-`;
-
-const InputSection = styled.div`
-  width: 100%;
-  margin-top: 24px;
-  margin-bottom: 240px;
-  border-radius: 32px;
-  background: #e492ff;
-  padding: 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 33px;
-
-  @media ${device.tablet} {
-    padding: 24px;
-    flex-direction: column;
-    margin-top: 24px;
-    margin-bottom: 240px;
-  }
-`;
-
-const ChainCanvasItem = styled.div`
-  height: 230px;
-
-  @media ${device.laptop} {
-    height: 300px;
   }
 `;
 

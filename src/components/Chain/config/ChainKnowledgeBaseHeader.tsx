@@ -10,11 +10,11 @@ export const ChainKnowledgeBaseHeader = {
   title: 'Knowledge Base',
   description: () => (
     <div>
-      <div>
+      <div style={{ color: '#BBBCD0' }}>
         Push Chain is a shared-state blockchain designed for universal
         (interoperable) applications.
       </div>
-      <div>
+      <div style={{ color: '#CCC' }}>
         <p /> <p />
         By enabling seamless transactions from any chain, abstracting away gas
         and wallet complexities, and fostering interoperability across L1s, L2s,

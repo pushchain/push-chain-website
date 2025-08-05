@@ -16,7 +16,6 @@ import { BsArrowRight, BsDiscord } from 'react-icons/bs';
 // Internal Components
 import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
-import ShowcasePartners from '@site/src/components/Home/ShowcasePartners';
 import Marquee from 'react-fast-marquee';
 import Accordion from '@site/src/components/Accordion';
 import { General } from '@site/src/config/ChainFAQconfig';
