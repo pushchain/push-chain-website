@@ -24,6 +24,7 @@ export const knowledgeBaseArticleContent = [
       .default,
     gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
     bgColor: '#dd6fff',
+    customWidth: '70px',
   },
   {
     id: 'builders',
@@ -34,14 +35,17 @@ export const knowledgeBaseArticleContent = [
     // image: 'knowledge_builders',
     subtitle:
       'Dive into how to build universal apps, the unlocks and how to get started!',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/BuildOnPushIcon.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
-      .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
-    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
-    bgColor: '#dd6fff',
+    image2x: require(
+      `@site/static/assets/website/docshub/BuildOnPushIcon@2x.png`
+    ).default,
+    image3x: require(
+      `@site/static/assets/website/docshub/BuildOnPushIcon@3x.png`
+    ).default,
+    gridBG: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+    bgColor: '#101010',
+    customWidth: '113px',
   },
   {
     id: 'deepdives',
@@ -52,14 +56,18 @@ export const knowledgeBaseArticleContent = [
     // image: 'knowledge_deepdives',
     subtitle:
       'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
-      .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
-      .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
-    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
-    bgColor: '#dd6fff',
+    image: require(
+      `@site/static/assets/website/docshub/TechnicalDeepDivesIcon.png`
+    ).default,
+    image2x: require(
+      `@site/static/assets/website/docshub/TechnicalDeepDivesIcon@2x.png`
+    ).default,
+    image3x: require(
+      `@site/static/assets/website/docshub/TechnicalDeepDivesIcon@3x.png`
+    ).default,
+    gridBG: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+    bgColor: '#101010',
+    customWidth: '103px',
   },
   {
     id: 'devdocs',
@@ -69,14 +77,17 @@ export const knowledgeBaseArticleContent = [
     url: '/docs',
     target: '_self',
     ctatitle: 'Build Now',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/DeveloperDocsIcon.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
-      .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
-    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
-    bgColor: '#dd6fff',
+    image2x: require(
+      `@site/static/assets/website/docshub/DeveloperDocsIcon@2x.png`
+    ).default,
+    image3x: require(
+      `@site/static/assets/website/docshub/DeveloperDocsIcon@3x.png`
+    ).default,
+    gridBG: require(`@site/static/assets/website/docshub/BlueBG.png`).default,
+    bgColor: '#4277F7',
+    customWidth: '100px',
   },
   {
     id: 'tokenomics',
@@ -86,14 +97,16 @@ export const knowledgeBaseArticleContent = [
     url: 'tokenomics',
     target: '_self',
     ctatitle: 'Learn Token Design',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/TokenomicsIcon.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
-      .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
-    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
-    bgColor: '#dd6fff',
+    image2x: require(
+      `@site/static/assets/website/docshub/TokenomicsIcon@2x.png`
+    ).default,
+    image3x: require(
+      `@site/static/assets/website/docshub/TokenomicsIcon@3x.png`
+    ).default,
+    gridBG: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+    bgColor: '#101010',
   },
   {
     id: 'faq',
@@ -104,13 +117,13 @@ export const knowledgeBaseArticleContent = [
     url: 'faq',
     target: '_self',
     ctatitle: 'Read More',
-    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+    image: require(`@site/static/assets/website/docshub/FaqIcons.png`).default,
+    image2x: require(`@site/static/assets/website/docshub/FaqIcons@2x.png`)
       .default,
-    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+    image3x: require(`@site/static/assets/website/docshub/FaqIcons@3x.png`)
       .default,
-    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
-      .default,
-    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
-    bgColor: '#dd6fff',
+    gridBG: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+    bgColor: '#101010',
+    customWidth: '75px',
   },
 ];
