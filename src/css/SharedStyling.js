@@ -484,6 +484,7 @@ export const P = styled.p`
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || 'inherit'};
   text-align: ${(props) => props.textAlign || 'initial'};
+  font-family: ${(props) => props.fontFamily || 'inherit'};
 `;
 
 export const LinkTo = styled(Link)`

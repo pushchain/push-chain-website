@@ -13,9 +13,17 @@ export const knowledgeBaseArticleContent = [
     title: 'Push Chain Basics',
     ctatitle: 'Explore More',
     target: '_self',
-    image: 'knowledge_101',
+    // image: 'knowledge_101',
     subtitle:
       'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
   {
     id: 'builders',
@@ -23,9 +31,17 @@ export const knowledgeBaseArticleContent = [
     title: 'Build on Push Chain',
     ctatitle: 'Builders Assemble',
     target: '_self',
-    image: 'knowledge_builders',
+    // image: 'knowledge_builders',
     subtitle:
       'Dive into how to build universal apps, the unlocks and how to get started!',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
   {
     id: 'deepdives',
@@ -33,36 +49,68 @@ export const knowledgeBaseArticleContent = [
     title: 'Technical Deep Dives',
     ctatitle: 'See it Tick',
     target: '_self',
-    image: 'knowledge_deepdives',
+    // image: 'knowledge_deepdives',
     subtitle:
       'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
   {
     id: 'devdocs',
-    image: 'knowledge_devdocs',
+    // image: 'knowledge_devdocs',
     title: 'Developer Docs',
     subtitle: `Let's come straight to the point! I am universal chain... and you are a dev, let's make it official!`,
     url: '/docs',
     target: '_self',
     ctatitle: 'Build Now',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
   {
     id: 'tokenomics',
-    image: 'knowledge_tokenomics',
+    // image: 'knowledge_tokenomics',
     title: 'Explore Tokenomics',
     subtitle: `Learn how Push Chain's tokenomics incentivizes all actors and ensures sustainable network that's built to last`,
     url: 'tokenomics',
     target: '_self',
     ctatitle: 'Learn Token Design',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
   {
     id: 'faq',
-    image: 'frequently-asked-questions',
+    // image: 'frequently-asked-questions',
     title: 'FAQs',
     subtitle:
       'The place to find answers to all the popular questions the community has asked. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
     url: 'faq',
     target: '_self',
     ctatitle: 'Read More',
+    image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
+      .default,
+    image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
+      .default,
+    image3x: require(`@site/static/assets/website/docshub/WhitePushLogo@3x.png`)
+      .default,
+    gridBG: require(`@site/static/assets/website/docshub/BG.png`).default,
+    bgColor: '#dd6fff',
   },
 ];
