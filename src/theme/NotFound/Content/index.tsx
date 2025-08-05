@@ -13,7 +13,6 @@ import Heading from '@theme/Heading';
 import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
 import { Content, ItemH, ItemV, Section } from '../../../css/SharedStyling';
-import PushLogo from '@site/static/assets/website/brb/pushIcon.svg';
 import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
 import Footer from '@site/src/segments/Footer';
 
@@ -63,7 +62,6 @@ export default function NotFoundContent({ className }: Props): ReactElement {
       {isOldDocsPage ? (
         <Container>
           <PushLogoBlackContainer className='headerlogo' flex='initial'>
-            <PushLogo style={{ margin: '0px 9px 0px 4px' }} />
             <ChainLogoDark />
           </PushLogoBlackContainer>
           <Message>Redirecting...</Message>

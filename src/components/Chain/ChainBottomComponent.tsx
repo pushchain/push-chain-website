@@ -78,7 +78,7 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
 export default ChainBottomComponent;
 
 const ChainBottomComponentWrapper = styled.div`
-  margin: ${(props) => (props.showFaq ? '213px auto' : '0 auto')};
+  margin: ${(props) => (props.showFaq ? '170px auto' : '0 auto')};
 
   @media ${device.desktopL} {
     width: 1400px;

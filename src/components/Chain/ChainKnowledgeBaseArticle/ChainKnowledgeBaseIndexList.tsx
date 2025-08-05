@@ -876,7 +876,7 @@ const TextItem = styled.div`
     border: 2px solid #fff;
     border-left: 6px solid #d548ec;
     background-color: #ffffff55;
-    color: #fff;
+    color: #000;
     border-radius: 12px;
     padding: 15px;
     box-sizing: border-box;
@@ -912,18 +912,21 @@ const TextItem = styled.div`
     border-radius: 12px;
     padding: 16px 20px;
     margin: 24px 0;
-    border: 2px solid #fff;
-    border-left: 6px solid;
+    border: none;
+    border-left: 5px solid;
     background-color: #ffffff55;
   }
 
   .admonition-info {
-    border-left-color: #2196f3;
+    border-left-color: #a2c9ff;
+    background: #002d6d;
+    color: #fff;
   }
 
   .admonition-warning {
     background-color: #fff3e0;
     border-left-color: #ff9800;
+    color: #000;
   }
 
   .admonition-caution {
@@ -939,17 +942,30 @@ const TextItem = styled.div`
   }
 
   .admonition-title {
-    font-weight: 600;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
     margin-bottom: 8px;
   }
 
   .admonition-content {
     margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
   }
 
   .admonition-content p {
     margin: 0 0 12px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
+  }
+
+  .admonition-content a {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
   }
 
   .admonition-content p:last-child {

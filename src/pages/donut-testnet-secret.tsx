@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Head from '@docusaurus/Head';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-import PushLogo from '@site/static/assets/website/brb/pushIcon.svg';
 import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
 
 import { ItemV } from '../../src/css/SharedStyling';
@@ -70,7 +69,6 @@ function TOS() {
       </Head>
 
       <PushLogoBlackContainer className='headerlogo' flex='initial'>
-        <PushLogo style={{ margin: '0px 9px 0px 4px' }} />
         <ChainLogoDark />
       </PushLogoBlackContainer>
       <Message>Redirecting...</Message>
