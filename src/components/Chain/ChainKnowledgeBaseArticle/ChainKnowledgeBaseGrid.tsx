@@ -41,13 +41,13 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
           justifyContent={mode === 'playlist' ? 'flex-start' : 'center'}
         >
           <H3
-            fontSize='2.5rem'
-            fontWeight='500'
-            fontFamily='N27'
-            lineHeight={isMobile ? '100%' : '140%'}
+            fontSize='2.3rem'
+            fontWeight='600'
+            lineHeight={isMobile ? '100%' : '150%'}
             letterSpacing='-0.8px'
             textAlign={mode === 'playlist' ? 'left' : 'center'}
             alignSelf={mode === 'playlist' ? 'flex-start' : 'center'}
+            color='#FFF'
           >
             {title}
           </H3>
@@ -115,7 +115,7 @@ const ChainKnowledgeGrid = styled.div`
 const ChainKnowledgePlaylist = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
   justify-content: center;
 `;

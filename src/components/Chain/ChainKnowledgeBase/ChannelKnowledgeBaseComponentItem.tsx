@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styled from 'styled-components';
 
 import { TbArrowUpRight } from 'react-icons/tb';
@@ -21,23 +21,6 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
   const isMobile = useMediaQuery(device.mobileL);
   const baseURL = useSiteBaseUrl() || '';
 
-  const openLink = (item: any) => {
-    if (!item?.url && !item?.slug) return;
-    let targetUrl = '';
-
-    if (item.url?.startsWith('https://')) {
-      targetUrl = item.url;
-    } else if (item.url?.startsWith('/')) {
-      targetUrl = `${baseURL}${item.url}`;
-    } else if (item.parentSlug) {
-      targetUrl = `${baseURL}/knowledge/${item.parentSlug}/${item.slug}`;
-    } else {
-      targetUrl = `${baseURL}/knowledge/${item.url || item.slug}`;
-    }
-
-    window.open(targetUrl, !item.target ? '_self' : item.target);
-  };
-
   const getHref = (item: any) => {
     if (!item?.url && !item?.slug) return '#';
 
@@ -55,7 +38,6 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
   return (
     <Card
       key={index}
-      background='#FFF'
       padding='24px'
       alignItems='flex-start'
       borderRadius='32px'
@@ -101,11 +83,11 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
 
       <ItemH flex='1' justifyContent='flex-start' alignItems='center'>
         <TitleH3
+          mode={mode}
           margin={mode === 'playlist' ? '0 0 0 0' : '24px 0 0 0'}
-          fontSize='2rem'
+          fontSize='1.8rem'
           fontWeight='500'
-          fontFamily='N27'
-          lineHeight={isMobile ? '100%' : '140%'}
+          lineHeight={isMobile ? '100%' : '150%'}
           letterSpacing='-0.64px'
           flex='1'
         >
@@ -130,7 +112,6 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
               margin='8px 0 0 0'
               fontSize='1.125rem'
               fontWeight='400'
-              fontFamily='N27'
               lineHeight='140%'
               letterSpacing='-0.64px'
               color='#757D8D'
@@ -166,9 +147,9 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
 
 const Card = styled.a`
   cursor: pointer;
-  background: #fff;
-  padding: 24px;
-  border-radius: 32px;
+  background: ${(props) => (props.mode === 'playlist' ? '#101010' : '#FFF')};
+  padding: ${(props) => (props.mode === 'playlist' ? '16px' : '24px')};
+  border-radius: ${(props) => (props.mode === 'playlist' ? '24px' : '32px')};
   display: flex;
   flex-direction: ${(props) => (props.mode === 'playlist' ? 'row' : 'column')};
   gap: ${(props) => (props.mode === 'playlist' ? '24px' : '0px')};
@@ -192,7 +173,7 @@ const Card = styled.a`
 
   &:hover {
     H3 {
-      color: var(--ifm-primary-color);
+      color: #d548ec;
     }
   }
 
@@ -204,9 +185,10 @@ const Card = styled.a`
 
 const KnowledgeImage = styled(Image)`
   width: ${(props) => (props.mode === 'playlist' ? 'auto' : '100%')};
-  max-height: ${(props) => (props.mode === 'playlist' ? '64px' : '100%')};
+  min-height: ${(props) => (props.mode === 'playlist' ? '78px' : 'auto')};
+  max-height: ${(props) => (props.mode === 'playlist' ? '78px' : '100%')};
   aspect-ratio: 16/9;
-  border-radius: ${(props) => (props.mode === 'playlist' ? '16px' : '24px')};
+  border-radius: ${(props) => (props.mode === 'playlist' ? '12px' : '24px')};
 
   @media ${device.mobileL} {
     width: ${(props) => (props.mode === 'playlist' ? '100%' : '100%')};
@@ -215,6 +197,8 @@ const KnowledgeImage = styled(Image)`
 `;
 
 const TitleH3 = styled(H3)`
+  color: ${(props) => (props.mode === 'playlist' ? '#FFF' : '#000')};
+
   @media ${device.tablet} {
     font-size: 1.5rem;
   }

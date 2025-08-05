@@ -29,8 +29,10 @@ const ChainWrapper = styled(ItemV)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #e8eff8;
-  font-family: N27, sans-serif;
+  background: #000;
+  font-family:
+    DM Sans,
+    sans-serif;
 `;
 
 const ChainInnerWrapper = styled(ItemV)`
