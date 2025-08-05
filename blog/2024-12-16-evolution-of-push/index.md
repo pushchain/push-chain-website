@@ -14,9 +14,10 @@ import { ImageText, VideoContainer } from '@site/src/css/SharedStyling';
 
 <!--truncate-->
 
-## **Summary**
+## Summary
 
 Push Protocol has come a long way! We’ve delivered over 140M notifications, built a community of 500K aggregate users, powered notifications for 500+ projects, and are known as the de facto leader in notifications and communications for web3.
+
 We took the biggest and the most ambitious step in its history last week and have launched governance for its evolution to Push Chain, a shared state blockchain for building universal applications. It is a sharded Proof of Stake (PoS) chain built to allow developers to create user-centric app experiences and act as a shared settlement layer for multiple L1s, L2s, L3s.
 
 The journey often matters more than the destination, and we couldn’t agree more. From our beginnings at ETHGlobal 2020, to becoming an EF alumnus, ranking as a top 5 project in Gitcoin Grants, securing funding from leading VCs and angels, inventing the communication stack for web3, and now launching a consumer-centric L1 to unify web3 - each milestone has shaped our path and brought us here. Buckle up, it's time to reminisce!

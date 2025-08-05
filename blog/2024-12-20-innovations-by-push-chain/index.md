@@ -15,9 +15,9 @@ tags: [Push Chain, Shared App Experience, Any Chain Tx, Universal Smart Contract
 
 ## Introduction
 
-Push recently unveiled its new layer 1 blockchain - Push Chain, a shared state blockchain designed for shared app experiences.
+Push recently unveiled its new layer 1 blockchain - Push Chain, a shared state blockchain designed for universal apps - apps that are deployed once and can be used by users from any chain.
 
-Unlike traditional Layer 1 chains, Push Chain introduces ten key innovations and optimized mechanisms to unify any chain, any user, and any app.
+Unlike traditional Layer 1 chains, Push Chain introduces several key innovations and optimized mechanisms to unify any chain, any user, and any app.
 
 This article will help you understand:
 
@@ -39,23 +39,19 @@ Key Innovations and Superpowers of Push Chain include:
 
 → 2. **Support Txns from any chain**
 
-→ 3. **Fee Abstraction**
+→ 3. **UniversalFee Abstraction**
 
 → 4. **Wallet Abstraction**
 
-→ 5. **Consumer (Unordered) and Traditional (Ordered) Transactions**
+→ 5. **Single Transaction, no matter the chain**
 
-→ 6. **True Scale: Sub Second Finality (speed)**
+→ 6. **Universal Smart Contracts**
 
-→ 7. **True Scale: Parallel validators (scaling write throughput)**
+→ 7. **True Identity and Cross-Chain Mapping**
 
-→ 8. **True Scale: Dynamic Sharding (scaling read throughput)**
+→ 8. **Shared State and Programmable Solvers (Roadmap)**
 
-→ 9. **Push ID**
-
-→ 10. **Universal Smart Contracts and Shared State**
-
-Let’s take a closer look at each of these innovations and enhancements
+Let’s take a closer look at each of these innovations and enhancements.
 
 ## Innovations By Push Chain
 
@@ -79,159 +75,83 @@ Push Chain achieves this by accepting signed payload data and supporting the nat
 
 <video width="640" height="360" controls>
   <source src="./simulate_push_chain.mp4" type="video/mp4" />
-
 </video> -->
 
 To clarify, a user doesn’t have to “bridge” to another chain to use our platform. Instead, the app becomes universal and available to all users of any chain.
 
-Push Chain also introduces a new mechanism called **Push ID** to create a consistent and unified interface for users, no matter which wallet they use.
-
-**_More on Push ID below..._**
-
-### 3. Fee Abstraction
+### 3. Universal Fee Abstraction
 
 With web3’s progression towards true interoperability, the necessity to hold native tokens for basic interactions creates unnecessary barriers in what should be a borderless ecosystem.
 
 **Push Chain’s Fee Abstraction eliminates these digital borders, ensuring universal accessibility and removing the economic friction of owning native tokens for network fees.**
 
-- **Onchain Swappers**: Fee contracts on every chain convert native tokens to cover fees automatically—no explicit swaps for Push Chain’s tokens are required.
+- **Universal Gateway Contracts**<br />
+  Fee contracts on every chain convert native tokens to cover fees automatically—no explicit swaps for Push Chain’s tokens are required.
 
-- **Bulk Fee Payments**: Lock and release fees in bulk, then send them to Push Chain directly in the transaction. This removes the bottleneck of waiting on a specific blockchain’s speed.
+- **Bulk Fee Payments**<br />
+  Lock and release fees in bulk, then send them to Push Chain directly in the transaction. This removes the bottleneck of waiting on a specific blockchain’s speed.
 
-- **Delegated Fees**: Wallets or web3 apps can cover fees, enabling a web2-like UX where the “website” pays for the user.
+- **Delegated Fees**<br />
+  Wallets or web3 apps can cover fees, enabling a web2-like UX where the “website” pays for the user.
 
-These mechanisms bridge web2 paradigms into web3 enabling web2 UX in a web3 world -
-
-- **Pay-for-content models**: Apps like Facebook and Instagram cover user interaction fees.
-
-- **Freemium models**: Apps absorb user costs temporarily, enabling users to later pay in bulk for services after experiencing them for free (e.g., Spotify, Google Drive).
-
-Push Chain makes these models possible, creating a frictionless experience and paving the way for building universal apps with borderless shared experiences.
+These mechanisms bridge web2 paradigms into web3 enabling web2 UX in a web3 world enabling any user of any chain to simply interact with the app and not have to worry about the fees.
 
 ### 4. Wallet abstraction
 
-At a higher level, there are two user personas in web3:
-
-- **Degens (aka existing web3 users)** - Well accustomed to the fragmented UX, have app & chain specific preferences for every on-chain activity.
-
-- **Normies (aka new web3 users)** - New or casual users unfamiliar with web3 complexities - Struggle with the manual and often complicated process of setting up a wallet.
-
-With the rapid proliferation of L1s, L2s and L3s, the UX gap between Degens and Normies is widening, creating a disproportionate balance in user experiences.
-
-**Push Chain’s Wallet Abstraction diminishes this divide by creating a balanced ground for every web3 user persona.**
-
 Wallet abstraction provides a flexible, **embeddable wallet experience**, tailored to individual user journeys enabling any wallet from any chain to connect, interact and transact with Push Chain.
 
-**Existing Web3 Users?**
+- **Degens (aka existing web3 users)**<br />
+  Well accustomed to the fragmented UX, have app & chain specific preferences for every on-chain activity. These users already are using wallets like Metamask, Phantom, etc and are already in a blockchain ecosystem like Ethereum, Solana, etc.
 
-Already using Ethereum, Solana, or another chain? Push Wallet lets you continue using your existing setup—no extra hoops. Combined with fee abstraction, transactions stay native to the source blockchain, making cross-chain use effortless.
+  For these users, Push Chain provides a seamless onboarding experience by allowing them to use their existing wallets like Metamask, Phantom, etc along with whatever native chain they are on for both sending transactions and funding the fees.
 
-**New Web3 Users (Web2 Normies)?**
+- **Normies (aka new web3 users)**<br />
+  New or casual users unfamiliar with web3 complexities. Ones who are not comfortable with the idea of setting up a wallet.
 
-Not web3-savvy? No problem. Just log in with an email or social account. Under the hood, the wallet uses sharding and pass keys to stay non-custodial but feels as simple and intuitive as web2.
+  For these users, Push Chain offers a seamless onboarding experience by allowing them to use their email or social account to connect to the app and transact with Push Chain.
 
-**For users logging in via email or social platforms**, Push Chain ensures security and non-custodial functionality through key sharding. The user’s credentials are divided into three encrypted shards stored across the Push Backend (trusted), local storage (encrypted via a passkey), and Push Chain (also encrypted via a passkey). This approach allows key reconstruction only when accessed by the user, providing a secure yet user-friendly experience that bridges the gap between web2 familiarity and web3 security.
+### 5. Single Transaction, no matter the chain
 
-### 5. Consumer (Unordered) and Traditional (Ordered) Transactions
+User experience is the most important part of any app. Creating a powerful tech stack is only half the battle. Which is why Push Chain only ever requires a single transaction to be sent by the user, no matter from which chain they choose to interact with the app.
 
-Present web3 infra is heavily skewed towards financial apps that require strict ordering of transactions and precise state accuracy.
-However consumer apps, on the other hand, are inclined towards more flexible, faster and parallel transaction needs.
-Consumer apps are made of two primary elements where:
+This is made possible by optimizing the transaction flow to be as simple as possible.
 
-1. _Order is necessary (user payments, financial instruments) and_
-2. _Order is not critical (messages, comments or likes on a post, retweet, chat, email, gameplay, etc.)._
+- **New wallet of another chain doing a transaction** - Transaction hash is bundle with fee locking on universal gateway contracts ensuring single transaction.
 
-Traditional chains don’t provide the right experience for such use cases forcing consumer apps to make suboptimal compromises impacting their performance and usability.
+- **Existing (onboarded) wallet of another chain doing a transaction** - If the wallet has enough gas, the universal gateway contract is surpassed and the transaction is sent directly to the chain.
 
-**_Could there be a way of supporting consumer actions in an unordered, parallel and yet decentralised manner?_**
+### 6. Universal Smart Contracts
 
-Absolutely yes! This is where **Push Chain innovates a new transaction type - Consumer Transaction**- which instantly unlocks non-financial, mixed-financial apps for web3 helping consumer apps reach faster PMF.
+Push Chain is a fully EVM compatible chain. Any EVM compatible smart contract can be deployed on Push Chain with **zero on-chain code changes** to instantly become compatible with all L1s (including non-EVM chains).
 
-Managing hyper-scalable apps with thousands of parallel transactions on-chain - is not easy.
-Push Chain makes it possible using its new innovation - **True Scale**.
+Just deploy in minutes and instantly 10x your userbase.
 
-With True Scale, Push Chain's network capacity and its read-write throughput grow organically, as more nodes join its consensus.
-This enables parallel execution of thousands of consumer transactions, near-instant finality and quicker information storage and retrieval.
+### 7. True Identity and Cross-Chain Mapping
 
-Here’s how the Push Chain achieves true scale.
+Contracts on Push Chain automatically recognize the wallet of the user and the chain they are on. This allows the contracts to know the entire state of the user and the chain they are on enabling developers to create apps that were not possible before.
 
-### 6. True Scale: Sub second finality (speed)
+Imagine multi-chain enabled safes, prediction markets accessible by all users, poker games played between different chains, defi that can tap into liquidity from all chains, and so much more!
 
-Push Chain splits the nodes into three types - **Validator, Storage and Archival** and enables a node governance smart contract that keeps track of all the nodes that are present in the network.
-
-- **Validator Nodes** - Responsible for validating transactions.
-
-- **Storage Nodes** - Dynamically shard data based on the hash of blockchain-agnostic addresses and store it.
-
-- **Archival Nodes** - Maintain a full snapshot of all transactions on the network.
-
-These role-specific nodes enable parallel validation to be done on any type of consumer transaction ensuring near-instant finality.
-
-**Note:** All txs (write or read) are attested by random validators/storage nodes ensuring that malicious nodes result in slashing.
-
-**Node Registry Smart Contract:** Push Chain employs a registry smart contract to register these nodes, manage dynamic sharding, set replication factors, and enable parallel validators that scale dynamically with the number of nodes in the network. This approach ensures linear scaling, allowing the network to handle increased read and write demands efficiently as it grows.
-
-Because of these different nodes and smart contract setting up parallel validators, the tx sent to the network can land on any of the _‘n’_ number of parallel validators which are then instantly moved to processing (250ms block), this is what enables sub-second finality for Push Chain.
-
-### 7. True Scale: Parallel validators (scaling write throughput)
-
-Push Chain achieves true scaling of write transactions, particularly for consumer transactions, where the consumer txs are packed in unordered blocks (or should we call them **stateless blocks**!? ).
-
-Allowing these transactions to be processed through any active validator node promises near-instant finality, and the write throughput (or TPS) of the chain increases linearly as the number of nodes in the network grows.
-
-### 8. True Scale: Dynamic Sharding (scaling read throughput)
-
-**Push Chain achieves true scaling of reading transactions by implementing dynamic sharding on storage nodes.**
-
-Data chunks within each shard are mapped to blockchain-agnostic addresses and are dynamically redistributed as new storage nodes are added to the network.
-
-In addition, the chain introduces a node governing smart contract onto which each node (regardless of the type) is registered before getting admitted to the network. Since this node-registry smart contract knows the number of nodes in the network, it is able to dynamically shard and assign data chunks and replication factors ensuring the network is fast and becomes faster in retrieving data as new nodes are added.
-
-### 9. Push ID
-
-In a universal chain like Push Chain - One essential element for bringing shared app experiences to users is the ability to track users’ on-chain identity - and not just their wallets.
-
-One user may have multiple wallets, spanning various chains and ecosystems whether EVM or nonEVM.
-This led us to create the unified Push ID, giving each user one identity that spans all their wallets, both EVM and non-EVM. Instead of tying interactions strictly to a single wallet, transactions are now accredited to a user’s Push ID.
-
-The Push ID mapping allows for reverse lookups guaranteeing a consistent and unified interface for users, no matter which wallet they use. developers can fetch, index, and understand a user’s full spectrum of interactions across chains, all mapped to one identity.
-
-### 10. Shared State and Universal Smart Contracts
+### 8. Shared State and Programmable Solvers (Roadmap)
 
 <!-- shared state diagram -->
 
 ![shared state diagram](./image2.webp)
 
-**Shared State**
+- **Shared State**<br />
 
-With Push ID and Any Chain Tx, we realized that accessing a wallet’s state across different blockchains is a game changer.
-
-One thing that’s missing over here though was the ability to get the individual state of all the wallets which in essence will allow smart contracts to know the entire state of individual wallet(s) that are connected to the user. This feature is what we call a Shared state.
-
-**Shared state allows Push Chain to access data from its own chain as well as supported external chains!**
+Shared state allows Push Chain to access data from any supported external chains in the smart contract, further giving power to developers to enquire and act on the state of a wallet or a smart contract from any other chain.
 
 With shared state, you can read wallet activities like NFTs, DeFi positions, governance participation, and so much more!
 
-**Universal Smart Contracts**
+- **Programmable Solvers**<br />
 
-A shared state chain is essential to enable shared app experiences. This chain must have the ability to read the state of wallets across other chains, facilitating universal smart contracts and creating an ecosystem where users from any chain—or even web2—can interact seamlessly. Such a chain would provide shared settlement across both EVM and non-EVM chains, ushering in an era of universal apps and shared experiences.
+Programmable solvers on the other hand enables developers to give atomic instructions of what they want to execute on other chains from the smart contract.
 
-Using shared state in VM, Push allows developers to write universal smart contracts with which universal app experiences become possible. Users, regardless of their origin—whether from any chain or ecosystem—can effortlessly interact with consumer apps that prioritize user engagement without regard to how or where they enter the system.
+## Conclusion
 
-Ultimately, **Universal Smart Contracts and the ability to interact with all chains through Push Chain and represent our ultimate goal: Eliminating Web3 friction and delivering the best shared app experience possible.**
+We started from users of any chain able to access app on Push Chain but once Push is done - we will finally see a world where users of any chain are able to interact with apps on any other chain.
 
-## Build Universal Apps!
+All while making sure that the developers or users don't pay a price for it - neither in terms of learning curve, multiple deployments, maintaining multiple codebases or complexity of the code.
 
-Universal AI apps, Universal social apps, Unified Prediction markets and many more!
-Want to know the countless app innovations that you can make happen because of Push Chain?
-Explore our [Innovations that can be built on Push Chain Blog](https://push.org/blog/consumer-apps-that-can-be-built-on-push-chain/)
-
-### Next Steps​👇
-
-- Check out the [Push Chain Whitepaper](https://whitepaper.push.org/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov) for a detailed overview of the vision and the underlying technicalities.
-
-- Visit the [Push Chain Website](https://push.org/chain/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov) to find a one-pager explanation of the vision.
-
-- [Push Chain Devnet](https://scan.push.org/home?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov) is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.
-
-- [Push Chain Simulate Tx](https://simulate.push.org/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov) already provides a way for everyone to send tx from any chain using wallet abstraction.
+**Let's Build Universal Apps!**

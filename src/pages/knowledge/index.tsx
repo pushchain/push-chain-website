@@ -31,8 +31,7 @@ function PushChainKnowledgeBase() {
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainknowledgepreview.png')
-              .default,
+            require('/static/assets/previews/knowledgebasepreview.png').default,
             { absolute: true }
           )}
         />
@@ -48,8 +47,7 @@ function PushChainKnowledgeBase() {
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainknowledgepreview.png')
-              .default,
+            require('/static/assets/previews/knowledgebasepreview.png').default,
             { absolute: true }
           )}
         />

@@ -38,8 +38,7 @@ function Page() {
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainknowledgepreview.png')
-              .default,
+            require('/static/assets/previews/kbbuilderspreview.png').default,
             { absolute: true }
           )}
         />
@@ -58,8 +57,7 @@ function Page() {
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/chainknowledgepreview.png')
-              .default,
+            require('/static/assets/previews/kbbuilderspreview.png').default,
             { absolute: true }
           )}
         />

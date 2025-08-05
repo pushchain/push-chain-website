@@ -5,18 +5,7 @@ authors: [push]
 image: './cover-image.webp'
 description: 'Push Chain joins forces with Plume!'
 text: 'Push Chain is set to revolutionize RWAfi by joining forces with Plume! Learn what this announcement means for Plume and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.'
-tags:
-  [
-    Push Chain,
-    Partnerships,
-    Shared App Experience,
-    Any Chain Tx,
-    Universal Smart Contracts,
-    Shared State Blockchain,
-    Consumer Tx,
-    Parallel Validators,
-    Dynamic Sharding,
-  ]
+tags: [Push Chain, Partnerships]
 ---
 
 ![Cover image of Push Chain joins forces with Plume ](./cover-image.webp)

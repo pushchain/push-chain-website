@@ -4,12 +4,12 @@ title: 'Why Push Chain is the Missing Layer in Web3'
 authors: [harsh]
 image: './cover-image.webp'
 description: 'How a shared-state L1 can heal web3’s fragmentation and unleash web3’s true potential.'
-text: 'Today’s web3 is fractured. Users bounce between 30+ chains; apps are built on different chains; and the UX is fragmented. This fragmentation is a major blocker towards overall web3 UX improvement. In this article, we will dive deep into the concerns that exist in web3 today and the solutions that Push Chain offers for each one of them.'
+text: 'Today’s web3 is fractured - users bounce across 30+ chains, while developers gamble on choosing the ‘right chain’ to find traction, only to rebuild their app again and again for every new ecosystem; All of this is leading to a fragmented experience for everyone.'
 tags:
   [
     Push Chain,
-    Universal Execution Layer,
     Any Chain Tx,
+    Universal Execution Layer,
     Universal Smart Contracts,
     Shared State Blockchain,
   ]
@@ -21,11 +21,11 @@ tags:
 
 ## Introduction
 
-Today’s web3 is fractured. Users bounce between 30+ chains; apps are built on different chains; and the UX is fragmented.
+Today’s web3 is fractured - users bounce across 30+ chains, while developers gamble on choosing the ‘right chain’ to find traction, only to rebuild their app again and again for every new ecosystem; All of this is leading to a fragmented experience for everyone.
 
-This fragmentation is a major blocker towards overall web3 UX improvement.
+This fragmentation is a major blocker towards overall web3 adoption.
 
-In this article, we will dive deep into the concerns that exist in web3 today and the solutions that Push Chain offers for each one of them. But first, let’s understand why Push Chain is needed and why universal apps are the future of web3.
+In this article, we will dive deep into the concerns that exist in web3 today and the solutions that Push Chain offers for each one of them.
 
 ## The Major Concerns in Web3 Today
 

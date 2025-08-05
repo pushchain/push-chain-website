@@ -3,24 +3,36 @@ push:
   # title: Site Admin
   url: https://x.com/PushChain
   image_url: /assets/blog/authors/authorpush.png
+  page: true
 harsh:
   name: Harsh Rajat
+  title: Co-Founder
   url: https://twitter.com/harshrajat
   image_url: /assets/blog/authors/authorharsh.png
+  page: true
 richa:
   name: Richa Joshi
   url: https://twitter.com/Riijo
   image_url: /assets/blog/authors/authorricha.png
+  page: true
 zaryab:
   name: Zaryab Afser
   url: https://x.com/zaryab_eth
   image_url: /assets/blog/authors/authorzaryab.png
+  page: true
 ian:
   name: Ian LeViness
   url: https://x.com/ExpatCrypto3
   image_url: /assets/blog/authors/authorian.png
+  page: true
 sixty:
   name: SixtyKeys
   title: Guest Contributor
   url: https://x.com/sixty_keys
   image_url: /assets/blog/authors/authorsixty.png
+  page: true
+sid:
+  name: Sidharth
+  title: Degen Marketer
+  image_url: /assets/blog/authors/authorsid.png
+  page: true

@@ -1,48 +1,181 @@
 ---
 slug: another-l1
 title: 'Is Push Chain Another L1?'
-authors: [harsh]
+authors: [harsh, sid]
 image: './cover-image.webp'
 description: 'Learn why Push Chain is built different'
 text: 'The move towards Push Chain was driven by the realisation that we had to do our bit to move the needle on interoperability, not in order to create our own fragmented ecosystem.'
-tags: [Push, Chain, Insights, Vision]
+tags:
+  [
+    Push Chain,
+    Insights,
+    Vision,
+    Shared State Blockchain,
+    Universal Execution Layer,
+  ]
 ---
-
 
 ![Cover image of Is Push Chain Another L1?](./cover-image.webp)
 
 <!--truncate-->
 
-### The Curious
+import ReactPlayer from 'react-player';
 
-At crypto conferences I'm often asked how our approach at Push differs from other L1 projects. And at normie gatherings I'm asked which crypto is best for starters. Until now I used to think of these as two distinct questions coming from two distinct audiences, i.e. technical and non-technical. My responses were conditioned by this assumption. At the former I used to talk about our '[shared state](https://push.org/blog/innovations-by-push-chain/)' approach and how it is distinguishable from interoperability (more on that below and in subsequent articles). And to the normies I used to suggest that starting-points can be subjective because different projects are trying to do different things. Some for instance are building reliable forms of decentralised cash, while others are trying to democratise the financial system. Still others are trying to get social media out of the hands of big tech, and a lot of them are just having fun.
+Another L1?.... Ahh, sh\*t, here we go again.
 
-The problem with my approach was that it left out the real audience: the 'web3 curious'. This is a huge category which cannot be ignored, and I'm going to define it rather broadly as those people who have heard of crypto and played around with it a bit [without digging deeper](https://push.org/blog/why-push-chain/). You could say the real reason why they got into the whole thing was quick money. But in order for that to happen I feel they must _at some level believe_ in the larger crypto project. To put it differently, _even if_ they thought they were playing around with 'magic internet money', some part of them must have known that the magic was real (or had the potential of _becoming_ real). That's the part of the collective psyche we need to reach.
+"_Aren't there too many blockchains already? Adding more only makes it harder for apps and protocols to work across them._"
 
-### Ecosystem Abstraction
+This is one of the most common questions we get asked during conferences.
 
-To return to the earlier point, I now feel that both audiences were asking me the same thing in different ways, i.e. _which ecosystem?_ It's often said that a few years in crypto equals decades in the real world. To me this was never a throwaway sentiment but a profound ground-truth about our industry. When crypto was just starting out people used to debate whether it had 'inherent value' and whether it could ever become 'money'. Those questions have more or less disappeared today because most people have concluded that it does. Thanks to the SEC, the critical regulatory question today seems to be whether a particular crypto is a [security](https://www.forbes.com/sites/digital-assets/2023/08/14/how-the-secs-charge-that-cryptos-are-securities-could-face-an-uphill-battle/) or not. But of course it took humanity more than a thousand years to get from money to finance.
+If that's what you're thinking, you're not wrong - Yes, Push Chain is another L1 - except it's **NOT JUST** _'another L1'_ !!
 
-The lesson we can draw from this is that the forms of '[crypto tribalism](https://medium.com/@adamnite/a-history-of-crypto-tribalism-11f9f9c5cbaf)' we see today are comparable to [historical tribes](https://www.wideopenspaces.com/native-american-totem-animals-origins-totem-poles-meaning/) who hitched their identity to particular totems and money-objects. We took a giant leap when we adopted the human-first-tribe-later perspective. This allowed us to _abstract away particular ecosystems_ and develop a more global outlook. Of course I am not suggesting that our particular cultural attributes disappeared with modernity, but rather that they were preserved within a more ['universal' wrapper](https://www.notion.so/Is-Push-Chain-another-L1-188188aea7f4801a8e5dc22d0c20e0f3?pvs=21).
+Let's find out how..
 
-### Cities & Bridges
+## Don't we have enough L1s, L2s already?
 
-Simply put, ‘ecosystem abstraction’ is my general response to both questions posed above. I see it as [an ongoing process](https://thenetworkstate.com/) that Push aims to accelerate -- comparable perhaps to globalisation which aims to overcome national boundaries -- rather than as a quantifiable end state. What this means in concrete terms is that we are building a non-competitive L1 that does not distinguish between normies and crypto-natives.
+Yes, crypto has tens of layer 1s, hundreds of layer 2s, and - who knows - maybe thousands of layer 3s in the near future!  
+But what it didn't have was a means to unify all of these amazing chains together - and that's exactly what Push chain does.
 
-Why, you wonder? Because it’s the [final ecosystem barrier](https://push.org/blog/what-is-consumer-crypto-and-why-does-it-matter/) standing between us and mass adoption. Moreover, it allows us to approach technical problems with a fresh perspective. Consider interoperability. By and large it means two things in crypto: unifying different chains via bridges and developing common standards. The first is a necessary, but more importantly, _organic_ approach because bridges between two parts of a city aren't built unless there is significant traffic between them. The trouble right now is that the two sides are run by different municipal authorities, and every time you have to cross between them you must take fresh authorisation from an agent who operates a toll booth.
+**Push is not just another silo** - it's a universal chain that unites every existing and forthcoming chain together (under one roof). It is a shared-state L1 blockchain designed to function as a universal settlement layer for users across any chain, wallet, and app.
 
-Now if this were a real city the citizens would petition the Mayor and get things changed. They would most likely ask for a monthly ticket and some sort of [‘fast tag’](https://en.wikipedia.org/wiki/FASTag) on their cars which could automatically calculate and deduct the toll-fees from their wallets. But crypto is decentralised and there is no Mayor to petition. So for us the only solution is to get both municipal authorities to agree on a system for quick and trustworthy communication. Moreover, if both sides have different ticketing systems then they would need to develop a common ticketing standard which is mutually recognised.
+Combining this with its innovation of shared state, universal smart contracts, generalized programmable solver, and complete user abstraction, what you get is a blockchain able to read any other chain and… is accessible by users from any chain.
 
-### Necessity-led invention
+**Push Chain's vision is not to compete and replace any blockchain, but unite every chain together to maximize UX, freedom of movement, and revenue scaling opportunities for apps.**
 
-In crypto, the reason why interoperability is an especially difficult problem to crack is because it requires unbroken coordination and synchronicity between different ecosystems. With every new chain that is added to the mix, the patchwork expands and becomes more unwieldy. It is therefore legitimate for people to wonder whether we are ‘another L1’ which is ultimately going to increase this messiness.
+## Is Push Chain just about cross-chain apps? Aren't there already many cross-chain protocols?
 
-The short answer is no: Push is not building its own separate municipality in its own corner of the city. Instead we are building systems (such as [solver networks and fees quotas](https://whitepaper.push.org/)) through which bridge-operators can communicate and coordinate. Imagine if a [tourist](https://www.notion.so/189188aea7f480faaba5f80052406759?pvs=21) was visiting the city and wanted to pass through three different bridges in a single drive. The bridge-operators would need to reach consensus on various things including: (a) does he have enough money for all the tolls? (2) is he a legitimate (non-malicious) actor, and (c) has he received necessary permissions from the respective Mayors of the source and destination cities, etc.
+No – cross-chain apps still require deployment of separate contracts on separate supported chains. Such apps typically rely on bridges and manual relayers to move tokens and messages between chains, leading to separate liquidity formation and additional development overhead.
 
-In the context of crypto these steps are reducible to verifiable cross-chain communications, and because Push has been working on this problem from its origin, it is uniquely positioned to create such a system. In other words, the move towards Push Chain was driven by the realisation that we had to do our bit to move the needle on interoperability, not in order to create our own fragmented ecosystem.
+Push Chain introduces Universal Apps that can:
 
-Personally, what is most exciting for me is thinking about the new use-cases that such a cross-chain-communication-grid unlocks. Imagine if an _Aurory_ or _Star Atlas_ player is able to leverage Uniswap or Polymarket through in-game intent solvers, or if an artist is able to launch NFTs of their work simultanously across Opensea, Magic Eden and Jpg.store. Here's how my friend and colleague Zee put it in a recent conversation: "we're trying to build systems where people can use their favourite apps on their favourite chains without friction or second thought."
+- **Be accessed by users of any chain**– Devs can write and deploy a single contract on Push Chain that interacts with multiple blockchains without deploying separate contracts on each chain.
 
-Yes it's an ambitious road, but we're determined.
+  This is the magic of the **Shared Execution Layer.**
 
-LFPush!
+- **Read and sync live states from multiple chains**, including token balances, contract data, and user activity.
+
+**Cross-chain apps move assets. Universal apps built on Push Chain move logic and context along with assets**. Thus, opening the doors to a wide variety of use cases that once were deemed impossible - discover these cool use cases here - [Vol. 1](/blog/apps-only-possible-with-shared-state-v1/) and [Vol. 2](/blog/apps-only-possible-with-shared-state-v2/).
+
+![Simple app vs cross-chain app](./image1-1.webp)
+![Universal app](./image1-2.webp)
+
+_Want to build a universal app? Or make your existing Dapp universal?_  
+_Check out [Push Chain Docs](/docs)._
+
+## Is Push Chain EVM compatible? SVM compatible? Or Move compatible?
+
+Push Chain is 100% EVM compatible & at the same time, it's also **universally compatible.**
+
+Meaning:
+
+- Everything that EVM chains support -> Push Chain supports.<br />
+  Therefore, EVM devs don't have to endure any new learning curve. At the same time, on deploying your evm contracts on Push Chain, your EVM dapps become automatically compatible to users from any other EVM ecosystems like Solana or BSC.
+
+- Everything deployed on Push Chain is automatically compatible with EVM, or non-EVM chains.
+  This means, that any deployed apps on Push Chain is universally compatible and can be accessed by users from any other chain.
+
+Devs can either:
+
+1. **Deploy their existing app to Push Chain** (within minutes) and accept user traffic from any other chain.
+
+2. **Build native apps** on Push Chain that are universally accessible by users from every chain and VM.
+
+_An Ethereum user and a Solana user can compete, collaborate, or transact within the same app because_ → _this is a truly universal Layer 1._
+
+![EVM and non-EVM compatible](./image2.webp)
+
+## How is Push Chain different from existing interoperability solutions?
+
+Majority of cross-chain apps today rely on interoperability solutions that provide bridges and arbitrary message passing
+
+- Bridges move tokens across chains → Effective yet slow, costly, and filled with multiple friction points.
+
+- Message protocols (like Axelar, LayerZero) pass arbitrary messages → useful, but they don't give apps a coherent view of user state across chains.
+
+Push Chain utilizes a different approach with the help of:
+
+**1. Universal Smart Contracts** <br />
+Devs deploy one contract that is instantly compatible across all chains. It is 100% EVM compatible and required **zero on-chain code changes**.
+
+**2. Shared State**<br />
+An innovation by Push Chain where smart contracts can read and use states from other chains.
+
+Using shared state, apps on Push Chain can easily query verified state from any supported chain (token balances, contract state, user activity).
+
+**3. Programmable Solvers**<br />
+Provides paths to execute any multichain action - enabling apps to act across chains without forcing users to bridge or switch networks.
+
+This is what we call the **Fullstack universal interop** → Universal Wallet + Generalized Programmable Solvers + Shared State + Universal Smart Contracts.
+
+## Why build on Push Chain?
+
+_If you're building on one chain, deploying on Push Chain helps you reach users across all blockchains – without rewriting your app, switching wallets, or begging users to bridge._
+
+Building on Push Chain automatically means you…
+
+### 1. Expand user base & Drive app sustainability
+
+By enabling apps that can host users from any chain, and not just the chain on which the app is primarily based on. **Guaranteeing higher user traction -> higher revenue generation -> and wider distribution**
+
+And that too with super limited development overhead!
+
+### 2. No extra smart contract audits required
+
+Since Push Chain is fully EVM-compatible, you don't need to rewrite or modify your existing contracts.
+
+This also means you can deploy them without needing an additional audit – saving time and effort. Just plug in your audited EVM contracts, integrate the Push Chain UI wrapper, and you're good to go!
+
+Cherry on the top -> Your App now automatically gains access to Solana, BNB and other EVM users
+
+_Push Chain will soon, also support all other L1 chains (be it Move-based or any other VM)_
+
+### 3. It's Alright if users don't have a wallet\
+
+Web2 native users or users with no active wallets can always interact with apps deployed on Push Chain - because of its inbuilt wallet abstraction support.
+
+Any user can :  
+ -> Login using their web2 socials (email, google account) OR  
+ -> Existing wallets (Phantom, Metamask, Rabbi etc)
+
+**Note**: As we unlock support to more Layer 1s - you'll only be required to upgrade the package of the wallet abstraction frontend component. No more complex chain integration nightmares ;)
+
+### 4. It's alright if users don't have native chain tokens for gas\*\*
+
+With the support of Fee Abstraction -
+
+- You can use any token that you have - to fund the fees. Similar with Ethereum and other chains.
+- Push eliminates the need for bridging for fees, manual management of funds on multiple chains and introduction of unnecessary learning for the average user.
+
+### 5. Unfragment User Experience, liquidity, and user retention
+
+Rise of Layer 2s and chains solved a lot of pressing challenges but also led us to a series of cascading shortfalls, leading to deterioration in user as well as developer experience.
+
+Building on Push Chain solves these challenges to a greater extent with fast and reliable movement of data and assets between chains (for both apps and users).
+
+The user can remain on the chain where they are and either utilise fee abstraction or universal wallet (most of the time both) to interact with other chain.
+
+![Woes about state fragmentation](./image3.webp)
+
+## Conclusion
+
+Finally, this concludes our trip – from perceiving Push Chain as just another L1, to recognizing it as the Universal Layer 1.
+
+The points covered in this article answer some of the most common questions we get asked, **TLDR;**
+
+We're enabling Apps that are capable of:
+
+- Unifying liquidity
+- Unifying cross-chain user bases
+- And most importantly – unifying our shared love for this space!
+
+If you want to make your app truly flexible and accessible from every chain - join our [Discord](https://discord.gg/pushprotocol) today! Or dive straight into the [Developer Docs](/docs) to get started.
+
+& finally…
+
+_Yeahhh it's Push Chain… here we go!_
+
+<ReactPlayer
+  controls
+  width="100%"
+  url="https://www.youtube.com/watch?v=vCadcBR95oU"
+/>

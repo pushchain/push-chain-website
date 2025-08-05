@@ -5,18 +5,7 @@ authors: [push]
 image: './cover-image.webp'
 description: 'Push Chain joins forces with zkLink!'
 text: "Push Chain's road to testnet has kickstarted in full swing.  Learn everything about our collaboration with zkLink - what it means for Push and zkLink users, the use cases it unlocks and more!"
-tags:
-  [
-    Push Chain,
-    Partnerships,
-    Shared App Experience,
-    Any Chain Tx,
-    Universal Smart Contracts,
-    Shared State Blockchain,
-    Consumer Tx,
-    Parallel Validators,
-    Dynamic Sharding,
-  ]
+tags: [Push Chain, Partnerships]
 ---
 
 ![Cover image of Push Chain Join forces with zkLink ](./cover-image.webp)

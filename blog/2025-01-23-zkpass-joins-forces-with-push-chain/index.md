@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: 'Push Chain joins forces with zkPass!'
 text: "Push chain is pumped to join forces with zkPass to transform user privacy in the new internet world. Discover how this collaboration empowers devs, users and the entire web3 ecosystem!
 "
-tags: [Push Chain, Partnerships, Shared App Experience, Any Chain Tx, Universal Smart Contracts, Shared State Blockchain, Consumer Tx, Parallel Validators, Dynamic Sharding]
+tags: [Push Chain, Partnerships]
 ---
 
 ![Cover image of Push Chain joins forces with zkPass ](./cover-image.webp)
