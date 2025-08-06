@@ -168,7 +168,7 @@ const MobileContent = styled.div`
   flex-direction: column;
   align-items: flex-start;
   text-align: center;
-  padding: 1rem;
+  // padding: 1rem;
 
   @media ${device.tablet} {
     display: flex;

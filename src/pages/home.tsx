@@ -722,7 +722,7 @@ const HeroContent = styled(Content)`
   }
 
   @media ${device.mobileL} {
-    padding-top: 112px;
+    padding-top: 0px;
     padding-bottom: 40px;
     padding-right: ${structure.PADDING.MOBILE.RIGHT}px;
     padding-left: ${structure.PADDING.MOBILE.LEFT}px;
