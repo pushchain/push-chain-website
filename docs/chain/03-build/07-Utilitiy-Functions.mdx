@@ -275,6 +275,69 @@ import { PushChain } from '@pushchain/core'
 </Details>
 <!-- API Section Ends-->
 
+### Convert Executor Address to Origin Account
+
+**_`PushChain.utils.account.convertExecutorToOrigin(ueaAddress): Promise<{ account: UniversalAccount | null; isUEA: boolean }>`_**
+
+Gives the origin account (UOA) for a given executor account (UEA).
+
+```typescript
+const { account, isUEA } = await PushChain.utils.account.convertExecutorToOrigin(ueaAddress);
+```
+
+<PushAPIReference>
+
+| **Arguments**    | **Type**           | **Default** | **Description**                                                                                            |
+| ---------------- | ------------------ | ----------- | ---------------------------------------------------------------------------------------------------------- |
+| _`ueaAddress`_ | `string` | -           | Address of the executor account (UEA).                                        |
+
+</PushAPIReference>
+<Details summary="Returns `{ account: UniversalAccount | null; isUEA: boolean }` <object>" className="alert alert--fn-args">
+
+```typescript
+// { account: UniversalAccount | null; isUEA: boolean }
+{
+  account: {
+    chain: 'eip155:11155111',
+    address: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9'
+  },
+  isUEA: true
+}
+```
+
+</Details>
+
+<Details summary="Live Playground: Convert Origin Account to Universal Executor Account" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.account\.convertExecutorToOrigin
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core'
+
+    async function main() {
+      const ueaAddress = '0xc16a585b95810F7D204620bb3677F73243242A8F';
+      const result = await PushChain.utils.account.convertExecutorToOrigin(
+        ueaAddress
+      );
+      console.log(JSON.stringify(result, null, 2));
+
+      const notUeaAddress = '0x35B84d6848D16415177c64D64504663b998A6ab4';
+      const result2 = await PushChain.utils.account.convertExecutorToOrigin(
+        notUeaAddress
+      );
+      console.log(JSON.stringify(result2, null, 2));
+    }
+
+    await main().catch(console.error)
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+
 ## Signer Utilities
 
 <!-- API Section Begins-->
