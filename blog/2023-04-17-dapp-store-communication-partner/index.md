@@ -49,6 +49,6 @@ All in all, we believe Push will be a game-changer for dApp store creators. Push
 
 We are excited about this new integration and the potential it brings to the world of decentralized applications. We look forward to collaborating with dApp store creators and their users to create a more personalized and seamless experience for everyone!
 
-Learn more about dApp Store Kit using Push on our [Discord](https://discord.gg/pushprotocol)
+Learn more about dApp Store Kit using Push on our [Discord](https://discord.com/invite/pushchain)
 
 Learn how to integrate Push into your dApp: [Push developer docs](https://comms.push.org/docs/)

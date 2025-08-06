@@ -41,4 +41,4 @@ Web3 is eating up web2, starting with the metamorphosis of various web2 tooling.
 
 While the use cases listed above provide a good first view of the extensive capabilities of Push notifications, it’s important to remember that new use cases are emerging every day. Using notifications to increase UX, product stickiness, and community engagement is a feat many developers strive for and this trend will continue to drive more demand toward notification services that offer the most smooth, customized, and reliable solutions that stand out in comparison to legacy alternatives.
 
-If you are a developer and want to quickly get your application integrated with Push, don’t hesitate to get in touch on [Discord](https://discord.gg/pushprotocol) or reach us via our social media channels below.
+If you are a developer and want to quickly get your application integrated with Push, don’t hesitate to get in touch on [Discord](https://discord.com/invite/pushchain) or reach us via our social media channels below.

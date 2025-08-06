@@ -76,6 +76,6 @@ If you’re interested to read more about PIPs, check out the [PIPs Github](http
 - [PIP-1 — Purpose and Guidelines](https://gov.push.org/c/pip/29)
 - [Definitions of Types, and categories of PIPs](https://github.com/push-protocol/PIPs/tree/main/definitions)
 
-We invite all members interested in contributing to the future of native communication in Web3 to check out the [Push Discord](https://discord.gg/pushprotocol) and [PIP forum](https://gov.push.org/c/pip/29) and come meet the pioneers behind Push.
+We invite all members interested in contributing to the future of native communication in Web3 to check out the [Push Discord](https://discord.com/invite/pushchain) and [PIP forum](https://gov.push.org/c/pip/29) and come meet the pioneers behind Push.
 
 Who knows, you just might be the author of the next chapter of Push and native communication in Web3.

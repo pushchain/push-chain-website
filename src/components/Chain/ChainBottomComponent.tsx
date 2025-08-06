@@ -49,7 +49,7 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
             </H2>
 
             <FaqLink
-              href='https://discord.gg/pushprotocol'
+              href='https://discord.com/invite/pushchain'
               target='_blank'
               title='Discord'
               fontSize='16px'

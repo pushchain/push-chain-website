@@ -62,7 +62,7 @@ export const HeaderList = {
       title: 'header.developers.link7.title',
       subtitle: 'header.developers.link7.subtitle',
       srcrefoff: 'discord-icon-off',
-      href: 'https://discord.gg/pushprotocol',
+      href: 'https://discord.com/invite/pushchain',
     },
   ],
   community: [

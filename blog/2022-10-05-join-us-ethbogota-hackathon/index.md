@@ -66,6 +66,6 @@ We know getting started with building a new project can involve a lot of boilerp
 
 <b>A little fun fact:</b> We started building Push (EPNS) in 2020 at the ETHGlobal hackathon, and the feedback we got from the early hackathon community convinced us that it could be so much more. So please remember, you can get pretty far in just a 3-day hackathon, and ETHBogotá is exactly your opportunity to make something happen!
 
-The Push crew will be around to answer questions and offer our support. If something is missing that you want access to — find our crew members on site or let us know [online](https://x.com/PushChain). And don’t hesitate to get in touch on our [Discord](https://discord.gg/pushprotocol).
+The Push crew will be around to answer questions and offer our support. If something is missing that you want access to — find our crew members on site or let us know [online](https://x.com/PushChain). And don’t hesitate to get in touch on our [Discord](https://discord.com/invite/pushchain).
 
 Good luck and have fun! We can’t wait to see what you build!

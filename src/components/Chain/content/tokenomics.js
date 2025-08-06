@@ -18,7 +18,7 @@ export const tokenomicsContent = {
     The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.<p />
 
 
-    Do not believe anyone offering early access to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.gg/pushprotocol 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
+    Do not believe anyone offering early access to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
     :::
 
     ## What is the Vision of Push Chain?
@@ -157,7 +157,7 @@ export const tokenomicsContent = {
     Explore our SDK & Docs at [Documentation Hub](/docs/)
 
     - **🦹 Community**  
-    Follow [@PushChain](https://x.com/PushChain) on X/Twitter, join our [Discord](https://discord.gg/pushprotocol) and [Telegram](https://t.me/epnsproject).
+    Follow [@PushChain](https://x.com/PushChain) on X/Twitter, join our [Discord](https://discord.com/invite/pushchain) and [Telegram](https://t.me/epnsproject).
 
     Together, let’s build the future of **Universal Web3**!
 `,

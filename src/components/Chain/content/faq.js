@@ -403,7 +403,7 @@ export const faqContent = {
           type: 'text',
           value: `### Where can I find more information and stay updated on Push Chain's progress?
 
-          The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), and [Discord](https://discord.gg/pushprotocol).
+          The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), and [Discord](https://discord.com/invite/pushchain).
 
           Always remain cautious of phishing links, websites or any scam links asking you for your crypto. All official communications will go out from our official Push handles.
           
@@ -506,7 +506,7 @@ export const faqContent = {
 
           For support, you can [submit a ticket over here](https://app.push.org/support) or reach out to us on support@push.org.
 
-          If you are a developer, you can also reach out to us on our [Discord](https://discord.gg/pushprotocol) and we will be happy to help you.
+          If you are a developer, you can also reach out to us on our [Discord](https://discord.com/invite/pushchain) and we will be happy to help you.
           
 `,
         },
@@ -514,7 +514,7 @@ export const faqContent = {
           type: 'text',
           value: `### Where can I find more information and stay updated on Push Chain's progress?
 
-          The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), and [Discord](https://discord.gg/pushprotocol).
+          The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), and [Discord](https://discord.com/invite/pushchain).
 
           Always remain cautious of phishing links, websites or any scam links asking you for your crypto. All official communications will go out from our official Push handles.
           

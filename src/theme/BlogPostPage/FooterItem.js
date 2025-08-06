@@ -209,7 +209,7 @@ const FooterItem = () => {
         </BannerItem>
 
         <BannerItem
-          onClick={() => OpenURL('https://discord.gg/pushprotocol')}
+          onClick={() => OpenURL('https://discord.com/invite/pushchain')}
           gap='18px'
           className='kpiItem'
         >

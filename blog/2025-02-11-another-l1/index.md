@@ -168,7 +168,7 @@ We're enabling Apps that are capable of:
 - Unifying cross-chain user bases
 - And most importantly – unifying our shared love for this space!
 
-If you want to make your app truly flexible and accessible from every chain - join our [Discord](https://discord.gg/pushprotocol) today! Or dive straight into the [Developer Docs](/docs) to get started.
+If you want to make your app truly flexible and accessible from every chain - join our [Discord](https://discord.com/invite/pushchain) today! Or dive straight into the [Developer Docs](/docs) to get started.
 
 & finally…
 
