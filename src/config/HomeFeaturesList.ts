@@ -211,8 +211,8 @@ export const FeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/universal-fee',
-          // videosrc: 'chain/wallet-abstraction-video',
-          // videowebm: true,
+          videosrc: 'chain/universal-fee-video',
+          videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',
           imagewidth: 'auto',
@@ -410,7 +410,7 @@ export const FeaturesList = {
         {
           type: 'image',
           imagesrc: 'chain/universal-fee',
-          // videosrc: 'chain/wallet-abstraction-video',
+          // videosrc: 'chain/universal-fee-video',
           // videowebm: true,
           imagealt: 'home.notification-section.box1.imagealt',
           imagetitle: 'home.notification-section.box1.imagetitle',

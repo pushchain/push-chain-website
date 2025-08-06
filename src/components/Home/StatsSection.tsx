@@ -7,14 +7,13 @@ import { device } from '@site/src/config/globals';
 import { StatsList } from '../../config/StatsList';
 import StatsBg from '../../../static/assets/website/chain/StatsSectionBG.webp';
 import useMediaQuery from '../../hooks/useMediaQuery';
+import instantInteroperability from '@site/static/assets/website/interoperability/instant-interoperability.json';
+import Lottie from 'lottie-react';
 
 export const StatsSection = () => {
   const isMobile = useMediaQuery(device.mobileL);
   return (
     <StatsWrapper>
-      {/* GLOW CIRCLE */}
-      <GlowCircle />
-
       <TextSection>
         <H2>
           Achieve {isMobile && <br />} <ColoredText>Instant</ColoredText> <br />{' '}
@@ -27,7 +26,24 @@ export const StatsSection = () => {
         </Span>
       </TextSection>
 
+      {/* <LottieContainer>
+        <Lottie animationData={instantInteroperability} loop={true} autoplay={true} />
+      </LottieContainer> */}
+
       <StatsGrid>
+        <Lottie
+          animationData={instantInteroperability}
+          loop={true}
+          autoplay={true}
+          style={{
+            position: "absolute",
+            top: 85,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            zIndex: 0,
+          }}
+        />
         {StatsList.map((item, index) => (
           <StatsItem key={index}>
             <H3>{item.title}</H3>
@@ -77,10 +93,6 @@ const GlowCircle = styled.div`
 
 const StatsWrapper = styled.div`
   width: 100%;
-  background-image: url(${StatsBg});
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   padding-bottom: 100px;
   margin-top: 100px;
 
@@ -104,6 +116,7 @@ const TextSection = styled(ItemH)`
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  z-index: 99;
 
   h2 {
     color: #fff;
@@ -182,6 +195,7 @@ const StatsItem = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  position: relative;
 
   @media ${device.mobileL} {
     margin: 100px 0 0 0;
@@ -197,4 +211,17 @@ const ColoredText = styled.span`
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.96px;
+`;
+
+const LottieContainer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;

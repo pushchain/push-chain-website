@@ -38,7 +38,7 @@ import Marquee from 'react-fast-marquee';
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
 import HeroBGMobile from '../../static/assets/website/hero/hero-bg-img.webp';
 import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
-import FinalBgImage from '../../static/assets/website/home/others/push-chain-final@3x.webp';
+import FinalBgImage from '../../static/assets/website/home/others/push-chain-final.webm';
 
 // Internal Configs
 import { FeaturesList } from '@site/src/config/HomeFeaturesList';
@@ -49,6 +49,7 @@ import { FeaturedSection } from '../components/Home/FeaturedSection';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
 import { StatsSection } from '../components/Home/StatsSection';
 import AccountContext from '../context/accountContext';
+import CustomReactPlayer from '../utils/CustomReactPlayer';
 
 export default function Home() {
   // Internationalization
@@ -58,6 +59,11 @@ export default function Home() {
   const isMobile = useMediaQuery(device.mobileL);
   const isTablet = useMediaQuery(device.tablet);
   const isLaptop = useMediaQuery(device.laptop);
+
+  const isSafari = () => {
+    if (typeof window === 'undefined') return false;
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  };
 
   return (
     <Layout
@@ -527,6 +533,17 @@ export default function Home() {
           <Content className='content'>
             <ItemV>
               <FinalSection>
+                <CustomReactPlayer
+                  url={
+                    require(
+                      isSafari() ?
+                      `@site/static/assets/website/home/others/push-chain-final.mp4` :
+                      `@site/static/assets/website/home/others/push-chain-final.webm`
+                    ).default
+                  }
+                  playing
+                  playContinuously
+                />
                 <H2
                   fontSize={isMobile ? '2.5rem' : '4rem'}
                   color='#fff'
@@ -1331,10 +1348,6 @@ const FinalSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url(${FinalBgImage});
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 800px;
   height: 600px;
 

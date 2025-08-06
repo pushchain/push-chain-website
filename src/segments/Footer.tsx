@@ -65,8 +65,8 @@ function Footer() {
                 fontSize={isMobile ? '1.rem' : '1.75rem'}
                 lineHeight='140%'
               >
-                Want to receive Push Chain airdrops, {!isMobile && <br />} news,
-                and updates?
+                Stay in the loop with Push Chain {!isMobile && <br />} news and
+                updates!
               </H2>
 
               <ChainEmailSignup
