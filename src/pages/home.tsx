@@ -14,10 +14,9 @@ import { useTranslation } from 'react-i18next';
 import { BsArrowRight, BsDiscord } from 'react-icons/bs';
 
 // Internal Components
+import Accordion from '@site/src/components/Accordion';
 import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
-import Marquee from 'react-fast-marquee';
-import Accordion from '@site/src/components/Accordion';
 import { General } from '@site/src/config/ChainFAQconfig';
 import {
   A,
@@ -33,23 +32,23 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import Marquee from 'react-fast-marquee';
 
 // Import Assets
 import StarSolidIcon from '@site/static/assets/website/illustrations/starSolidIcon.svg';
-import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
 import HeroBGMobile from '../../static/assets/website/hero/hero-bg-img.webp';
+import HeroBG from '../../static/assets/website/hero/hero-bg.webp';
 import FinalBgImage from '../../static/assets/website/home/others/push-chain-final@3x.webp';
 
 // Internal Configs
 import { FeaturesList } from '@site/src/config/HomeFeaturesList';
-import GLOBALS, { device } from '@site/src/config/globals';
+import { InvList } from '@site/src/config/HomeInvestorList';
+import GLOBALS, { device, structure } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
+import { FeaturedSection } from '../components/Home/FeaturedSection';
 import { HeroImageSection } from '../components/Home/HeroImageSection';
 import { StatsSection } from '../components/Home/StatsSection';
-import { InvList } from '@site/src/config/HomeInvestorList';
-import { FeaturedSection } from '../components/Home/FeaturedSection';
 import AccountContext from '../context/accountContext';
-import { structure } from '@site/src/config/globals';
 
 export default function Home() {
   // Internationalization
@@ -684,16 +683,15 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
-
-  @media ${device.laptop} {
-    min-height: initial;
-  }
+  min-height: 100vh;
 `;
 
 const HeroContent = styled(Content)`
   align-self: stretch;
   padding-right: 0;
   padding-left: 0;
+  margin-top: ${GLOBALS.HEADER.HEIGHT +
+  GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px;
 
   @media ${device.laptop} {
     padding-bottom: 40px;
@@ -701,11 +699,18 @@ const HeroContent = styled(Content)`
     padding-left: ${structure.PADDING.TABLET.LEFT}px;
   }
 
+  @media ${device.tablet} {
+    margin-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px;
+  }
+
   @media ${device.mobileL} {
     padding-top: 112px;
     padding-bottom: 40px;
     padding-right: ${structure.PADDING.MOBILE.RIGHT}px;
     padding-left: ${structure.PADDING.MOBILE.LEFT}px;
+    margin-top: ${GLOBALS.HEADER.HEIGHT +
+    GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px;
   }
 `;
 
