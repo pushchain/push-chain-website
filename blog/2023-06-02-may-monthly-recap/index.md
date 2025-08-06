@@ -64,7 +64,7 @@ Firstly, a warm welcome to our [10 new Push Protocol LATAM Ambassadors!](https:/
 
 In addition to our ambassadors, we are thrilled to announce [CopperX](https://twitter.com/CopperxHQ/status/1656980548852793348?t=X-Fn-Tmg-8wvtYOafpfMlQ&s=19) as our newest Push Grantee. CopperX is using Push Protocol for providing payment notifications to businesses.
 
-To foster community engagement, we have initiated Governance bi-weekly calls to provide a platform for all community members and stakeholders to actively participate in shaping the future of Push Protocol. Stay tuned and be a part of the discussion on our [Discord](https://discord.com/invite/pushprotocol).
+To foster community engagement, we have initiated Governance bi-weekly calls to provide a platform for all community members and stakeholders to actively participate in shaping the future of Push Protocol. Stay tuned and be a part of the discussion on our [Discord](https://discord.com/invite/pushchain).
 
 ## Community
 

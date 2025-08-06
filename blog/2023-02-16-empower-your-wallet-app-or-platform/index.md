@@ -138,7 +138,7 @@ curl - location - request POST 'https://<delivery_node_url>/apis/v1/pushtokens/r
 
 If at any point you find yourself needing assistance and help with getting set up, Push has a team of helpful developers ready when you need it.
 
-Come join us in Discord where you can get assistance and meet other devs who are building with Push👉 https://discord.com/invite/pushprotocol
+Come join us in Discord where you can get assistance and meet other devs who are building with Push👉 https://discord.com/invite/pushchain
 
 ## Push SNS Module for Delivery Node
 

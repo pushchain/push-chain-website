@@ -75,7 +75,7 @@ Our community’s enthusiasm and support inspire us to continue building. Let’
 2. Amazing response for the [Hackathon 101 Twitter Spaces](https://x.com/PushChain/status/1643218238573035523?s=20) joined by our friends from Livepeer, Goldman Sachs, and Fuel Network.
 3. Our founder Harsh was featured on [The Defiant](https://twitter.com/DefiantNews/status/1646377694018568198) podcast to discuss the power of decentralized messaging and the intersection between AI and Web3.
 
-What’s more? We’re hosting very exciting [Trivia Nights](https://x.com/PushChain/status/1648310413006610432?s=20) every Wednesday on [Push Discord](https://discord.com/invite/pushprotocol). Don’t miss out on all the fun and rewards!
+What’s more? We’re hosting very exciting [Trivia Nights](https://x.com/PushChain/status/1648310413006610432?s=20) every Wednesday on [Push Discord](https://discord.com/invite/pushchain). Don’t miss out on all the fun and rewards!
 
 Lastly, we attended [ETH Tokyo](https://x.com/PushChain/status/1646830660001341440) and had the most amazing time interacting with our community. We’re taking away some amazing learnings and can’t wait to see you all next time.
 

@@ -43,7 +43,7 @@ In addition to these developments, we’ve seen a lot of exciting progress on th
 
 [Empover Your Wallet, App, or Platform with Push Delivery Nodes⚡](https://medium.com/push-protocol/empower-your-wallet-app-or-platform-with-push-delivery-nodes-cbe2d575e9e7?source=post_page-----accc0e684afb--------------------------------)
 
-We’re super excited to bring more interesting features to you soon. Stay tuned with everything on [Push Discord](https://discord.com/invite/pushprotocol).
+We’re super excited to bring more interesting features to you soon. Stay tuned with everything on [Push Discord](https://discord.com/invite/pushchain).
 
 ## Frens of Push
 
