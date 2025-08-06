@@ -3,9 +3,9 @@
 /* eslint-disable */
 
 // React + Web3 Essentials
-import React, { useEffect, useState, useContext } from 'react';
-import { useHistory } from 'react-router-dom';
 import { useLocation } from '@docusaurus/router';
+import React, { useContext, useEffect, useRef, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 // External Components
 import { gsap } from 'gsap';
@@ -16,6 +16,7 @@ import styled from 'styled-components';
 
 // Internal Components
 import { Alert } from '@site/src/components/Alert';
+import { GlassElement } from '@site/src/components/GlassElement/GlassElement';
 import {
   A,
   Button,
@@ -37,10 +38,10 @@ import { BsChevronDown } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 // Internal Configs
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import { SupportedLanguagesList } from '@site/src/config/SupportedLanguagesList';
 import GLOBALS, { device, structure } from '@site/src/config/globals';
 import { HeaderList } from '../config/HeaderList';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 
 import AccountContext from '../context/accountContext';
@@ -314,6 +315,7 @@ function Header() {
           className='vertfluid'
           overflow='visible'
           padding={isMobile && '0 16px'}
+          position='relative'
         >
           {/* Header Content Begins */}
           <HeaderItemH
@@ -322,6 +324,17 @@ function Header() {
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
             showAlertBar={delayedShowAlertBar && isAlertBarVisible}
           >
+            {/* Insert Glass Element */}
+            <ItemH position='absolute' top='0' left='0' right='0' bottom='0'>
+              <GlassElement
+                autoResize={true}
+                depth={10}
+                blur={2}
+                chromaticAberration={5}
+                debug={false}
+              />
+            </ItemH>
+
             <MenuTop
               flex='initial'
               showMobileMenu={showMobileMenu}
@@ -444,9 +457,29 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[0]}
                     >
-                      {HeaderList.testnet.map((item, index) => (
-                        <HeaderSpace item={item} index={index} />
-                      ))}
+                      {/* Insert Glass Element */}
+                      <ItemH
+                        position='absolute'
+                        top='0'
+                        left='0'
+                        right='0'
+                        bottom='0'
+                        zIndex='-10'
+                        pointerEvents='none'
+                      >
+                        <GlassElement
+                          autoResize={true}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </ItemH>
+                      <div style={{ position: 'relative', zIndex: 10 }}>
+                        {HeaderList.testnet.map((item, index) => (
+                          <HeaderSpace item={item} index={index} />
+                        ))}
+                      </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
@@ -476,6 +509,25 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[1]}
                     >
+                      {/* Insert Glass Element */}
+                      <ItemH
+                        position='absolute'
+                        top='0'
+                        left='0'
+                        right='0'
+                        bottom='0'
+                        zIndex='-10'
+                        pointerEvents='none'
+                      >
+                        <GlassElement
+                          autoResize={true}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </ItemH>
+
                       <HeaderDiv>
                         <HeaderSection>
                           {HeaderList.developers.map((item, index) => (
@@ -513,6 +565,25 @@ function Header() {
                       onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
+                      {/* Insert Glass Element */}
+                      <ItemH
+                        position='absolute'
+                        top='0'
+                        left='0'
+                        right='0'
+                        bottom='0'
+                        zIndex='-10'
+                        pointerEvents='none'
+                      >
+                        <GlassElement
+                          autoResize={true}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </ItemH>
+
                       {HeaderList.community.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -544,6 +615,25 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[3]}
                     >
+                      {/* Insert Glass Element */}
+                      <ItemH
+                        position='absolute'
+                        top='0'
+                        left='0'
+                        right='0'
+                        bottom='0'
+                        zIndex='-10'
+                        pointerEvents='none'
+                      >
+                        <GlassElement
+                          autoResize={true}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </ItemH>
+
                       {HeaderList.resources.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
                       ))}
@@ -602,6 +692,25 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[4]}
                     >
+                      {/* Insert Glass Element */}
+                      <ItemH
+                        position='absolute'
+                        top='0'
+                        left='0'
+                        right='0'
+                        bottom='0'
+                        zIndex='-10'
+                        pointerEvents='none'
+                      >
+                        <GlassElement
+                          autoResize={true}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </ItemH>
+
                       {SupportedLanguagesList.map((item, index) => {
                         return (
                           <LanguageButton
@@ -774,14 +883,14 @@ const HeaderNavItemV = styled(ItemV)`
   @media ${device.laptopM} {
     margin: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP + GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM + 20}px 0 20px 0`
+        ? `${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP + GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px 0 20px 0`
         : '0'};
   }
 
   @media ${device.laptopM} {
     margin: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP + GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM + 20}px 0 20px 0`
+        ? `${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP + GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px 0 20px 0`
         : '0'};
   }
 `;
@@ -896,7 +1005,10 @@ const MobileMenuToggleIcon = styled.span`
 `;
 
 const ADJUST_FOR_BLUR = 8;
-const MenuTop = styled(ItemV)`
+const MenuTop = styled(ItemV)<{
+  showMobileMenu?: boolean;
+  showAlertBar?: boolean;
+}>`
   display: flex;
   z-index: 9999;
   height: ${GLOBALS.HEADER.HEIGHT}px;
@@ -906,9 +1018,11 @@ const MenuTop = styled(ItemV)`
   }
 
   @media ${device.laptopM} {
-    position: ${(props) => (props.showMobileMenu ? 'fixed' : 'relative')};
+    position: ${({ showMobileMenu }) => {
+      return showMobileMenu ? 'relative' : 'relative';
+    }};
     height: auto;
-    top: ${(props) => (props.showMobileMenu ? `12px` : 0)};
+    top: ${({ showMobileMenu }) => (showMobileMenu ? '3px' : '0')};
     left: 0;
     flex-direction: row;
     width: 100%;
@@ -1150,7 +1264,18 @@ const NavigationMenuContent = styled.ul`
     2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
   overflow: hidden;
-  backdrop-filter: blur(5px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1;
+    left: -1;
+    right: -1;
+    bottom: -1;
+    filter: blur(5px);
+    pointer-events: none;
+    z-index: -1;
+  }
 
   min-width: 390px;
 
