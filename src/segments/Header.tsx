@@ -16,7 +16,7 @@ import styled from 'styled-components';
 
 // Internal Components
 import { Alert } from '@site/src/components/Alert';
-import { GlassElement } from '@site/src/components/GlassElement/GlassElement';
+import { LiquidGlass } from '@site/src/components/LiquidGlass/LiquidGlass';
 import {
   A,
   Button,
@@ -324,10 +324,11 @@ function Header() {
             borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
             showAlertBar={delayedShowAlertBar && isAlertBarVisible}
           >
-            {/* Insert Glass Element */}
+            {/* Insert Liquid Glass */}
             <ItemH position='absolute' top='0' left='0' right='0' bottom='0'>
-              <GlassElement
+              <LiquidGlass
                 autoResize={true}
+                radius={24}
                 depth={10}
                 blur={2}
                 chromaticAberration={5}
@@ -457,7 +458,7 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[0]}
                     >
-                      {/* Insert Glass Element */}
+                      {/* Insert Liquid Glass */}
                       <ItemH
                         position='absolute'
                         top='0'
@@ -467,8 +468,9 @@ function Header() {
                         zIndex='-10'
                         pointerEvents='none'
                       >
-                        <GlassElement
+                        <LiquidGlass
                           autoResize={true}
+                          radius={24}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}
@@ -509,7 +511,7 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[1]}
                     >
-                      {/* Insert Glass Element */}
+                      {/* Insert Liquid Glass */}
                       <ItemH
                         position='absolute'
                         top='0'
@@ -519,8 +521,9 @@ function Header() {
                         zIndex='-10'
                         pointerEvents='none'
                       >
-                        <GlassElement
+                        <LiquidGlass
                           autoResize={true}
+                          radius={24}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}
@@ -565,7 +568,7 @@ function Header() {
                       onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
-                      {/* Insert Glass Element */}
+                      {/* Insert Liquid Glass */}
                       <ItemH
                         position='absolute'
                         top='0'
@@ -575,8 +578,9 @@ function Header() {
                         zIndex='-10'
                         pointerEvents='none'
                       >
-                        <GlassElement
+                        <LiquidGlass
                           autoResize={true}
+                          radius={24}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}
@@ -615,7 +619,7 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[3]}
                     >
-                      {/* Insert Glass Element */}
+                      {/* Insert Liquid Glass */}
                       <ItemH
                         position='absolute'
                         top='0'
@@ -625,8 +629,9 @@ function Header() {
                         zIndex='-10'
                         pointerEvents='none'
                       >
-                        <GlassElement
+                        <LiquidGlass
                           autoResize={true}
+                          radius={parseInt(GLOBALS.ADJUSTMENTS.RADIUS.SMALL)}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}
@@ -692,7 +697,7 @@ function Header() {
                       className='menuContent'
                       expanded={mobileMenuMap[4]}
                     >
-                      {/* Insert Glass Element */}
+                      {/* Insert Liquid Glass */}
                       <ItemH
                         position='absolute'
                         top='0'
@@ -702,8 +707,9 @@ function Header() {
                         zIndex='-10'
                         pointerEvents='none'
                       >
-                        <GlassElement
+                        <LiquidGlass
                           autoResize={true}
+                          radius={24}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}

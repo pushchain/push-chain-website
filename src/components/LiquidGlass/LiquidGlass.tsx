@@ -6,16 +6,16 @@ import {
   getDisplacementFilter,
 } from './getDisplacementFilter';
 import { getDisplacementMap } from './getDisplacementMap';
-import styles from './GlassElement.module.css';
+import styles from './LiquidGlass.module.css';
 
-type GlassElementProps = DisplacementOptions & {
+type LiquidGlassProps = DisplacementOptions & {
   children?: ReactNode | undefined;
   blur?: number;
   debug?: boolean;
   autoResize?: boolean;
 };
 
-export const GlassElement = ({
+export const LiquidGlass = ({
   height,
   width,
   depth: baseDepth,
@@ -26,16 +26,15 @@ export const GlassElement = ({
   blur = 2,
   debug = false,
   autoResize = false,
-}: GlassElementProps) => {
+}: LiquidGlassProps) => {
   /* Change element depth on click */
   const [clicked, setClicked] = useState(false);
   let depth = baseDepth / (clicked ? 0.7 : 1);
-  
+
   // Ref for auto-resize functionality
   const containerRef = useRef<HTMLDivElement>(null);
   const [autoWidth, setAutoWidth] = useState(width || 0);
   const [autoHeight, setAutoHeight] = useState(height || 0);
-  const [autoRadius, setAutoRadius] = useState(radius || 32); // Default to 32 (equivalent to parseInt(GLOBALS.ADJUSTMENTS.RADIUS.MID))
 
   // Auto-resize effect
   useEffect(() => {
@@ -46,18 +45,17 @@ export const GlassElement = ({
         const parent = containerRef.current.parentElement;
         const parentWidth = parent.offsetWidth;
         const parentHeight = parent.offsetHeight;
-        
+
         setAutoWidth(parentWidth || 0);
         setAutoHeight(parentHeight || 0);
-        setAutoRadius(32); // Default radius
       }
     };
 
     calculateDimensions();
-    
+
     // Listen for window resize
     window.addEventListener('resize', calculateDimensions);
-    
+
     // Use ResizeObserver to detect parent container size changes
     let resizeObserver: ResizeObserver | null = null;
     if (containerRef.current && containerRef.current.parentElement) {
@@ -66,7 +64,7 @@ export const GlassElement = ({
       });
       resizeObserver.observe(containerRef.current.parentElement);
     }
-    
+
     return () => {
       window.removeEventListener('resize', calculateDimensions);
       if (resizeObserver) {
@@ -78,7 +76,7 @@ export const GlassElement = ({
   // Use auto-calculated values if autoResize is enabled
   const finalWidth = autoResize ? autoWidth : width;
   const finalHeight = autoResize ? autoHeight : height;
-  const finalRadius = autoResize ? autoRadius : radius;
+  const finalRadius = radius ? radius : 24;
 
   /* Dynamic CSS properties */
   const style: CSSProperties = {

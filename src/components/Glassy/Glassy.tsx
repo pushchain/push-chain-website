@@ -7,12 +7,13 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // External Components
-import ReactPlayer from 'react-player';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styled from 'styled-components';
 import Lottie from 'lottie-react';
+import ReactPlayer from 'react-player';
+import styled from 'styled-components';
 
 // Internal Components
+import { LiquidGlass } from '@site/src/components/LiquidGlass/LiquidGlass';
 import {
   A,
   Button,
@@ -176,11 +177,11 @@ const Glassy = ({ item }) => {
     }
 
     // // Apply glow
-    // const glowwys = document.querySelectorAll(`.${id} > .glowwy`);
-    // glowwys.forEach((glowwy) => {
-    //   glowwy.style.top = `${y}px`;
-    //   glowwy.style.right = `${x}px`;
-    // });
+    const glowwys = document.querySelectorAll(`.${id} > .glowwy`);
+    glowwys.forEach((glowwy) => {
+      glowwy.style.top = `${y}px`;
+      glowwy.style.right = `${x}px`;
+    });
   };
 
   return (
@@ -737,30 +738,30 @@ const Container = styled.div`
 `;
 
 // TODO: comment out glow
-// const GlowwyBorder = styled.div`
-//   width: 0px;
-//   height: 0px;
-//   border-radius: 50%;
-//   box-shadow:
-//     0 0 49px 19px rgb(202, 55, 237),
-//     0 0 80px 40px #ca37ed,
-//     0 0 100px 50px rgb(202, 55, 237);
-//   position: absolute;
-//   z-index: -9;
-//   display: none;
+const GlowwyBorder = styled.div`
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 49px 19px rgb(202, 55, 237),
+    0 0 80px 40px #ca37ed,
+    0 0 100px 50px rgb(202, 55, 237);
+  position: absolute;
+  z-index: -9;
+  display: none;
 
-//   &.active {
-//     // display: block;
-//     display: ${(props) => (props.hideEffect ? 'none' : 'block')};
-//   }
-// `;
+  &.active {
+    // display: block;
+    display: ${(props) => (props.hideEffect ? 'none' : 'block')};
+  }
+`;
 
-// const Glowwy = styled(GlowwyBorder)`
-//   box-shadow: 0 0 100px 100px rgba(135, 34, 158, 0.15);
-//   z-index: 1;
+const Glowwy = styled(GlowwyBorder)`
+  box-shadow: 0 0 100px 100px rgba(135, 34, 158, 0.15);
+  z-index: 1;
 
-//   display: ${(props) => props.hideEffect && 'none'};
-// `;
+  display: ${(props) => props.hideEffect && 'none'};
+`;
 
 const Subcontainer = styled.div`
   display: flex;
