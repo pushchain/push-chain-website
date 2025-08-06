@@ -275,7 +275,7 @@ We are not stopping at 5k members. We have already made the breakthrough to take
 
 To address this, we have decided to implement these changes in two phases:
 Incorporate all functionalities that understand the new architecture in Push SDK from 1.4.45 upwards. Devs just need to update to start supporting the reading of those formats.
-The use of the feature flags in the SDK (See below or ask on Discord as to how to enable that: https://discord.gg/pushprotocol) enables the new standard as the default allowing devs to tap into it and use that in case they want.
+The use of the feature flags in the SDK (See below or ask on Discord as to how to enable that: https://discord.com/invite/pushchain) enables the new standard as the default allowing devs to tap into it and use that in case they want.
 
 So, what do you have to do to update this functionality?
 
@@ -283,7 +283,7 @@ Only one thing: Update the SDK to the latest version (1.4.45 or upwards), thatâ€
 
 #### How to enable Push SDK Feature Flag
 
-In-depth details for how to enable this can be found in the [Push Chat documentation](https://push.org/docs/chat/) and [GitHub repository](https://github.com/push-protocol/push-sdk/tree/main/packages/restapi).
+In-depth details for how to enable this can be found in the [Push Chat documentation](https://comms.push.org/docs/chat/) and [GitHub repository](https://github.com/push-protocol/push-sdk/tree/main/packages/restapi).
 
 ### Push SDK V2 is Coming
 
@@ -291,4 +291,4 @@ We are also thrilled to announce that we are working on the V2 version of the SD
 
 Apart from this, the V2 version will have more streamlined response objects and faster calls though it will break backward compatibility which is why we will transition slowly to the new SDK.
 
-We recommend joining our Discord server (https://discord.gg/pushprotocol) -> #dev-announcements channel for information on how to upgrade / best practices / changelog.
+We recommend joining our Discord server (https://discord.com/invite/pushchain) -> #dev-announcements channel for information on how to upgrade / best practices / changelog.

@@ -1,3 +1,4 @@
+/* eslint-disable @docusaurus/prefer-docusaurus-heading */
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -12,14 +13,12 @@ import {
   BlogPostProvider,
   useBlogPost,
 } from '@docusaurus/theme-common/internal';
-import GLOBALS, { device } from '@site/src/config/globals';
+import GLOBALS from '@site/src/config/globals';
 import BlogLayout from '@theme/BlogLayout';
 import BlogPostItem from '@theme/BlogPostItem';
 import BlogPostPageMetadata from '@theme/BlogPostPage/Metadata';
-import BlogPostPaginator from '@theme/BlogPostPaginator';
 import TOC from '@theme/TOC';
 import clsx from 'clsx';
-import React from 'react';
 import styled from 'styled-components';
 import FooterItem from './FooterItem';
 import MorePosts from './MorePosts';
@@ -27,7 +26,7 @@ import MorePosts from './MorePosts';
 function BlogPostPageContent({ allPosts, post, children }) {
   const { metadata, toc } = useBlogPost();
 
-  const { nextItem, prevItem, frontMatter, unlisted } = metadata;
+  const { frontMatter } = metadata;
   const {
     hide_table_of_contents: hideTableOfContents,
     toc_min_heading_level: tocMinHeadingLevel,
@@ -49,30 +48,41 @@ function BlogPostPageContent({ allPosts, post, children }) {
       <BlogItem>
         <BlogPostItem>{children}</BlogPostItem>
 
-        {/* {(nextItem || prevItem) && (
-          <BlogPostPaginator nextItem={nextItem} prevItem={prevItem} />
-        )} */}
-
         <FooterItem />
         <MorePosts allPosts={allPosts} post={post} />
       </BlogItem>
     </BlogLayout>
   );
 }
+
 export default function BlogPostPage(props) {
   const blogPath = props.location.pathname.substring(
     0,
     props.location.pathname.length - 1
   );
   const allPosts = props.allPosts;
-  const contentName = allPosts?.filter((x) =>
-    x?.Preview?.metadata?.permalink.includes(blogPath)
-  )[0];
+
+  const contentName = allPosts?.find((x) =>
+    x?.Preview?.metadata?.permalink?.includes(blogPath)
+  );
+
   const BlogPostContent = contentName?.Preview;
 
-  // const BlogPostContent = props.content;
+  const isValidComponent =
+    BlogPostContent && typeof BlogPostContent === 'function';
+
+  if (!isValidComponent) {
+    console.warn(`Invalid blog post component for path: ${blogPath}`);
+    return (
+      <div style={{ padding: '2rem', textAlign: 'center' }}>
+        <h1>Blog post not found or invalid.</h1>
+        <p>Please check the metadata or route configuration.</p>
+      </div>
+    );
+  }
+
   return (
-    <BlogPostProvider content={contentName?.Preview} isBlogPostPage>
+    <BlogPostProvider content={BlogPostContent} isBlogPostPage>
       <HtmlClassNameProvider
         className={clsx(
           ThemeClassNames.wrapper.blogPages,
@@ -91,6 +101,42 @@ export default function BlogPostPage(props) {
 const BlogItem = styled.div`
   width: 800px !important;
   margin: 0 auto;
+
+  & article .markdown {
+    * {
+      font-size: 1.15rem;
+    }
+
+    h1 {
+      font-size: 2.65rem;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
 
   @media (max-width: 820px) {
     width: 100% !important;

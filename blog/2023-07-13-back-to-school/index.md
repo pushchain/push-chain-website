@@ -79,7 +79,7 @@ It involves detailed description of your event: including expected audience, sca
 
 All questions about the program will be answered in the #Uni-collab Channel in our Discord. We are excited to hear from you!
 
-Discord 👉https://discord.com/invite/pushprotocol
+Discord 👉https://discord.com/invite/pushchain
 
 Remember to review the specific application guidelines to ensure you meet all requirements.
 

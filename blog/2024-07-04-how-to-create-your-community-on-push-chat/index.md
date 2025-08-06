@@ -131,4 +131,4 @@ This is how you can swiftly create your community with granular customization po
 ### Start building your community now 👉 [https://app.push.org/chat](https://app.push.org/chat?utm_source=google&utm_medium=blog&utm_campaign=create_group_chat)
 
 Have any queries?
-We’ll be super happy to answer them on our [Discord](https://discord.com/invite/pushprotocol)
+We’ll be super happy to answer them on our [Discord](https://discord.com/invite/pushchain)

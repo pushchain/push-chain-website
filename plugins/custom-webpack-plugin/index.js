@@ -1,22 +1,13 @@
-// eslint-disable-next-line
+// /* eslint-disable @typescript-eslint/no-unused-vars */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+//
 const webpack = require('webpack');
-const fs = require('fs');
-const path = require('path');
 
-module.exports = function (context, options) {
-  // Read the file
-  const filePath = path.join(
-    context.siteDir,
-    '/docs/roadmap/01-Push-Roadmap.mdx'
-  );
-
-  // Get the last modified date of the file
-  const stats = fs.statSync(filePath);
-  const lastUpdated = stats.mtime;
-
+// Webpack configuration
+module.exports = function () {
   return {
     name: 'custom-docusaurus-plugin',
-    // eslint-disable-next-line
     configureWebpack(config, isServer, utils) {
       return {
         resolve: {
@@ -31,6 +22,10 @@ module.exports = function (context, options) {
             zlib: require.resolve('browserify-zlib'),
             crypto: require.resolve('crypto-browserify'),
             vm: require.resolve('vm-browserify'),
+            File: isServer ? false : require.resolve('form-data'),
+            bufferutil: false, // Fallback for WebSocket
+            'utf-8-validate': false, // Fallback for WebSocket
+            'pino-pretty': false, // Fallback for pino
           },
         },
         module: {
@@ -43,17 +38,13 @@ module.exports = function (context, options) {
             },
           ],
         },
-        plugins: [
-          new webpack.DefinePlugin({
-            LAST_UPDATED: JSON.stringify(
-              lastUpdated.toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'short',
-                day: 'numeric',
-              })
-            ),
-          }),
-        ],
+        plugins: isServer
+          ? [
+              new webpack.ProvidePlugin({
+                File: ['form-data', 'FormData'],
+              }),
+            ]
+          : [],
       };
     },
   };

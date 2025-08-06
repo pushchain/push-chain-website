@@ -30,10 +30,10 @@ Polygon Wallet is a launch partner for Push Chat, setting the stage for the intr
 
 Starting today, October 10, access to the Push Chat alpha is available to the following individuals. (If you’re not part of these groups, don’t sweat! We’ll be rolling out more alpha access to the communities in the weeks to come, and the full public launch isn’t too far behind 🙂).
 
-- <b>ETH Bogota Hackers</b>. If you were a developer who hacked with Push Protocol during ETH Bogota this year, come try out the alpha! More information is in the <a href="https://discord.gg/pushprotocol">Push Discord</a>.
+- <b>ETH Bogota Hackers</b>. If you were a developer who hacked with Push Protocol during ETH Bogota this year, come try out the alpha! More information is in the <a href="https://discord.com/invite/pushchain">Push Discord</a>.
 - <b>Alpha POAP Holders</b>. If you have a POAP from the Push team handed out in Bogota, you can access the alpha. <i>Come find the Push team at Devcon (Push has a booth on Day 3 & 4 of Devcon!) and other events in Bogota and ask for a POAP</i>.
 
-If you are part of the Push Chat alpha, your feedback will be important to the success of the app when it goes public. [Join our Discord](https://discord.gg/pushprotocol) and leave your thoughts and feedback in the #push-chat-alpha channel.
+If you are part of the Push Chat alpha, your feedback will be important to the success of the app when it goes public. [Join our Discord](https://discord.com/invite/pushchain) and leave your thoughts and feedback in the #push-chat-alpha channel.
 
 If you don’t join the Push Chat alpha — no worries! The public app will be available soon — stay tuned.
 
@@ -49,7 +49,7 @@ We knew that messaging would eventually find its home in web3 not as a feature, 
 
 Before we could launch Push Chat, we had to deal with the fact that much of our market branding to date has focused on push notifications. Not just that, but push notifications on Ethereum. If we wished to move beyond push notifications to include chat, we also knew that chat would need to be available to any web3 user, no matter which blockchain their app operated on.
 
-So, in September 2022, EPNS [announced its rebrand](https://twitter.com/pushprotocol/status/1574771582790406144) to Push Protocol! Push is the multi-chain communication platform of web3. It powers any type of communication on any decentralized network, helping to better connect apps, services, developers, and users. And our rebrand wasn’t just for kicks. Two days after the rebrand, we announced that Push Protocol was [live on Polygon’s mainnet](https://twitter.com/pushprotocol/status/1575485566065381377), capable of powering notifications for the thousands of apps and hundreds of thousands of active users.
+So, in September 2022, EPNS [announced its rebrand](https://x.com/PushChain/status/1574771582790406144) to Push Protocol! Push is the multi-chain communication platform of web3. It powers any type of communication on any decentralized network, helping to better connect apps, services, developers, and users. And our rebrand wasn’t just for kicks. Two days after the rebrand, we announced that Push Protocol was [live on Polygon’s mainnet](https://x.com/PushChain/status/1575485566065381377), capable of powering notifications for the thousands of apps and hundreds of thousands of active users.
 
 With new branding that nods to our roots, we are <i>pushing forward the future of web3 with robust, decentralized, and user-friendly communication for all</i>.
 

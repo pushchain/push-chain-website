@@ -99,7 +99,7 @@ Mentioned below are the imperative calls made by the Push Snap.
 
 If you have any issues with setting up your Push Snap, we have a 24/7 dedicated team of devs to help you out.
 
-You can find us here 👉https://discord.gg/pushprotocol
+You can find us here 👉https://discord.com/invite/pushchain
 
 ## Other FAQs
 

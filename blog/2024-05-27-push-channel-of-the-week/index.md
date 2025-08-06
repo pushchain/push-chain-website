@@ -48,7 +48,7 @@ You can even customize your notification preferences by adjusting the ranges ðŸŽ
 Visit the [Price Tracker Channel Profile Page](https://app.push.org/channels/0x48De2669db5C2da4bf36C29ef9CFd62057B4b6C8?utm_source=google&utm_medium=blog&utm_campaign=channel_of_week), where you will see recent notifications sent by the channel. Click on '**Opt In**' and choose the crytpo and tokens you wish to receive updates from and specify the price change and alert frequency and Sign the Gasless message to succesfully opt-in!
 
 Want support for more tokens?
-Reach out to us on [Push Discord](https://discord.com/invite/pushprotocol).
+Reach out to us on [Push Discord](https://discord.com/invite/pushchain).
 
 
 ## Week 12: PWN Notifications
@@ -354,4 +354,4 @@ You can opt-in to Bankless for free (with no gas fees!) from the [Bankless Chann
 
 
 Stay tuned for the next winner! ðŸ‘€
-Let us know about your favorite channel on [Push Protocol Discord](https://discord.com/invite/pushprotocol)
+Let us know about your favorite channel on [Push Protocol Discord](https://discord.com/invite/pushchain)

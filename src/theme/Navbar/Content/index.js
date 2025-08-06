@@ -1,3 +1,8 @@
+/* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable */
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -15,14 +20,7 @@ import {
   useNavbarMobileSidebar,
 } from '@docusaurus/theme-common/internal';
 import { device } from '@site/src/config/globals';
-import {
-  H2,
-  H3,
-  Image,
-  ItemH,
-  LinkTo,
-  Span,
-} from '@site/src/css/SharedStyling';
+import { H2, H3, Image, ItemH, LinkTo } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import NavbarColorModeToggle from '@theme/Navbar/ColorModeToggle';
 import NavbarLogo from '@theme/Navbar/Logo';
@@ -31,11 +29,9 @@ import NavbarSearch from '@theme/Navbar/Search';
 import NavbarItem from '@theme/NavbarItem';
 import SearchBar from '@theme/SearchBar';
 import { useTranslation } from 'react-i18next';
-import { BsChevronDown } from 'react-icons/bs';
 import styled from 'styled-components';
-import { HeaderList } from '../../../config/HeaderList';
 import styles from './styles.module.css';
-import { useSiteBaseUrl } from '@site/src/utils/useSiteBaseUrl';
+import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
 const defaultMobileMenuState = {
   0: false,
@@ -238,7 +234,7 @@ export default function NavbarContent() {
               </NavItem>
             ))}
 
-          {!isLaptopM && (
+          {/* {!isLaptopM && (
             <NavigationMenuItem>
               <NavigationMenuHeader
                 onClick={(e) => onMobileHeaderMenuClick(e, 0)}
@@ -269,7 +265,7 @@ export default function NavbarContent() {
                 ))}
               </NavigationMenuContent>
             </NavigationMenuItem>
-          )}
+          )} */}
         </>
       }
       right={
@@ -372,7 +368,7 @@ const NavigationMenuHeader = styled.div`
 const NavigationMenuContent = styled.ul`
   list-style: none;
 
-  font-family: 'Strawford', 'Manrope', sans-serif;
+  font-family: Inter, sans-serif;
   display: none;
   position: absolute;
 
