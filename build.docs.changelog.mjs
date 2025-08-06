@@ -4,44 +4,81 @@ import path from 'path';
 
 const monoRepoURL = 'https://github.com/pushchain/push-chain-sdk/pull/';
 
-const coreChangeLogMeta = {
-  url: 'https://raw.githubusercontent.com/pushchain/push-chain-sdk/refs/heads/main/packages/core/CHANGELOG.md',
-  packageName: '@pushchain/core',
-  mdxStartMarker:
-    '## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)',
-  mdxEndMarker:
-    '## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)',
-};
+const changeLogMetaArray = [
+  {
+    url: 'https://raw.githubusercontent.com/pushchain/push-chain-sdk/refs/heads/main/packages/core/CHANGELOG.md',
+    packageName: '@pushchain/core',
+    mdxStartMarker:
+      '## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)',
+    mdxEndMarker:
+      '## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)',
+  },
+  {
+    url: 'https://raw.githubusercontent.com/pushchain/push-chain-sdk/refs/heads/main/packages/ui-kit/CHANGELOG.md',
+    packageName: '@pushchain/ui-kit',
+    mdxStartMarker:
+      '## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)',
+    mdxEndMarker: '',
+  },
+];
 
 // Prep for deployment starts everything
 export const prepForDocsChangelog = async () => {
   console.log(chalk.green('Starting Changelog in Docs Prebuild...'));
 
-  // Fetch the changelog content
-  const coreChangeLog = await fetchChangeLog(coreChangeLogMeta.url);
+  let allFormattedContent = '';
+  let hasAnyEntries = false;
 
-  if (coreChangeLog) {
-    // Parse the changelog entries
-    const entries = parseChangelogEntries(
-      coreChangeLog,
-      coreChangeLogMeta.packageName
+  // Loop through each changelog meta object
+  for (const changeLogMeta of changeLogMetaArray) {
+    console.log(
+      chalk.blue(`Processing changelog for ${changeLogMeta.packageName}...`)
     );
 
-    if (entries.length > 0) {
-      // Format the entries for MDX
-      const formattedContent = formatEntriesForMDX(
-        entries,
-        coreChangeLogMeta.packageName
+    // Fetch the changelog content
+    const changeLog = await fetchChangeLog(changeLogMeta.url);
+
+    if (changeLog) {
+      // Parse the changelog entries
+      const entries = parseChangelogEntries(
+        changeLog,
+        changeLogMeta.packageName
       );
 
-      // Update the Changelog.mdx file
-      await updateChangelogFile(formattedContent);
-      console.log(chalk.green('Changelog updated successfully!'));
+      if (entries.length > 0) {
+        // Format the entries for MDX
+        const formattedContent = formatEntriesForMDX(
+          entries,
+          changeLogMeta.packageName
+        );
+
+        allFormattedContent += formattedContent;
+        hasAnyEntries = true;
+        console.log(
+          chalk.green(
+            `Changelog for ${changeLogMeta.packageName} processed successfully!`
+          )
+        );
+      } else {
+        console.log(
+          chalk.yellow(
+            `No changelog entries found for ${changeLogMeta.packageName}`
+          )
+        );
+      }
     } else {
-      console.log(chalk.yellow('No changelog entries found'));
+      console.log(
+        chalk.red(`Failed to fetch changelog for ${changeLogMeta.packageName}`)
+      );
     }
+  }
+
+  if (hasAnyEntries) {
+    // Update the Changelog.mdx file with all formatted content
+    await updateChangelogFile(allFormattedContent);
+    console.log(chalk.green('All changelogs updated successfully!'));
   } else {
-    console.log(chalk.red('Failed to fetch changelog'));
+    console.log(chalk.yellow('No changelog entries found for any package'));
   }
 };
 
@@ -219,15 +256,42 @@ const updateChangelogFile = async (newContent) => {
     console.log(chalk.grey(`Reading changelog file: ${changelogPath}`));
     const fileContent = await fs.readFile(changelogPath, 'utf8');
 
-    // Find the positions of the start and end markers in the file
-    const startMarkerPos = fileContent.indexOf(
-      coreChangeLogMeta.mdxStartMarker
-    );
-    const endMarkerPos = fileContent.indexOf(coreChangeLogMeta.mdxEndMarker);
+    // Find the start position using the first package's start marker
+    const firstMeta = changeLogMetaArray[0];
+    const startMarkerPos = fileContent.indexOf(firstMeta.mdxStartMarker);
 
-    if (startMarkerPos === -1 || endMarkerPos === -1) {
-      console.log(chalk.red('Could not find markers in the changelog file'));
+    if (startMarkerPos === -1) {
+      console.log(
+        chalk.red('Could not find start marker in the changelog file')
+      );
       return;
+    }
+
+    // Find the end position using the last package's end marker
+    // If the last package has no end marker, find the next section or end of file
+    const lastMeta = changeLogMetaArray[changeLogMetaArray.length - 1];
+    let endMarkerPos;
+
+    if (lastMeta.mdxEndMarker) {
+      endMarkerPos = fileContent.indexOf(lastMeta.mdxEndMarker);
+      if (endMarkerPos === -1) {
+        console.log(
+          chalk.red('Could not find end marker in the changelog file')
+        );
+        return;
+      }
+    } else {
+      // If no end marker, replace until the end of the file or next major section
+      // Look for the next ## heading that's not one of our package headings
+      const afterLastStart = fileContent.indexOf(lastMeta.mdxStartMarker) + lastMeta.mdxStartMarker.length;
+      const remainingContent = fileContent.substring(afterLastStart);
+      const nextSectionMatch = remainingContent.match(/\n## (?!\[@pushchain)/); // Find next ## that's not a @pushchain package
+      
+      if (nextSectionMatch) {
+        endMarkerPos = afterLastStart + nextSectionMatch.index;
+      } else {
+        endMarkerPos = fileContent.length;
+      }
     }
 
     // Create the new file content by replacing the section between markers
