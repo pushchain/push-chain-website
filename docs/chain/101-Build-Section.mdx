@@ -8,14 +8,22 @@ sidebar_position: 101
 image: "/assets/docs/previews/docs_chain__section--build.png"
 ---
 
-# Let's build!
+import { useEffect } from 'react';
+import { useHistory } from '@docusaurus/router';
 
-This section covers everything you will require from Push Chain SDK to create your Universal Application.
+export default function ChainRedirect() {
+  const history = useHistory();
+  
+  useEffect(() => {
+    history.replace('/docs');
+  }, [history]);
 
-<head>
-  <title>Build section | Push Chain | Push Documentation</title>
-</head>
+  return (
+    <div>
+      <h1>Redirecting...</h1>
+      <p>If you are not redirected automatically, <a href="/docs">click here to go to the main docs</a>.</p>
+    </div>
+  );
+}
 
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
+<ChainRedirect />
