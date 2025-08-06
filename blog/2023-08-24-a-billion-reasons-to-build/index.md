@@ -133,7 +133,7 @@ To all the developers planning to take part in Billion Reasons to Build — we w
 
 Make sure to follow [@PushChain on Twitter](https://x.com/PushChain) for important updates, reminders on the cities we’ll be visiting, and new information regarding the Challenges.
 
-Join us on discord to chat https://discord.com/invite/pushprotocol
+Join us on discord to chat https://discord.com/invite/pushchain
 
 <VideoContainer>
 <iframe width="100%" height="100%" style={{borderRadius: "32px"}} src="https://www.youtube.com/embed/wzAeKoZ5tGk" title="Announcing Billion Reasons to Build - India Dev Tour 🇮🇳" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

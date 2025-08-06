@@ -96,4 +96,4 @@ Stay tuned on Push Chat for more communications.
 
 
 
-If you encounter any issue while claiming the NFT or joining the group, we’d be happy to answer your queries on  [Push Discord](https://discord.com/invite/pushprotocol).
+If you encounter any issue while claiming the NFT or joining the group, we’d be happy to answer your queries on  [Push Discord](https://discord.com/invite/pushchain).

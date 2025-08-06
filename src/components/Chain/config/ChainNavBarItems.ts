@@ -15,7 +15,7 @@ export const ChainNavBarItems = [
         id: 'discord',
         label: 'Developer Discord',
         sublabels: 'Join our thriving community of devs',
-        url: 'https://discord.com/invite/pushprotocol',
+        url: 'https://discord.com/invite/pushchain',
       },
     ],
   },

@@ -173,4 +173,4 @@ Push Chain gives you a **Billion Reasons to Build** Any App _for_ Any User _on_ 
 
 Already have an idea to build? Want guidance to make it happen?
 
-Reach out to us on our [Push Discord Community](https://discord.com/invite/pushprotocol).
+Reach out to us on our [Push Discord Community](https://discord.com/invite/pushchain).

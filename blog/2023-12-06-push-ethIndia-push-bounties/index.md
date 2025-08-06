@@ -104,6 +104,6 @@ Find all the details about the ETHIndia event 👉https://ethindia.co/
 
 Your Push documentation hub for building is here 👉https://comms.push.org/docs/hackers/
 
-And of course 24/7 dev support can always be found here 👉https://discord.com/invite/pushprotocol
+And of course 24/7 dev support can always be found here 👉https://discord.com/invite/pushchain
 
 Happy hacking! 🛠️

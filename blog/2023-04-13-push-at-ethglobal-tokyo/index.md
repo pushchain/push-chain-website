@@ -161,6 +161,6 @@ IPFSに何かをアップロードしたとき、またはバリデーターが�
 
 ## 最後に
 
-Push ChatとPush Notificationsの仕組みに興味がある場合は、是非[discordチャンネル](https://discord.com/invite/pushprotocol)に参加し、あなたが何をビルドしているのかを教えてください。Pushチームは、あなたがそれを実現するために必要なすべての開発者リソースを提供できます。
+Push ChatとPush Notificationsの仕組みに興味がある場合は、是非[discordチャンネル](https://discord.com/invite/pushchain)に参加し、あなたが何をビルドしているのかを教えてください。Pushチームは、あなたがそれを実現するために必要なすべての開発者リソースを提供できます。
 
 すぐにビルドを開始するには、<a href="https://comms.push.org/docs/"><b>こちら</b></a>のPush開発者ドキュメントにアクセスしてください。

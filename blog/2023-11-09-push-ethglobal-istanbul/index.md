@@ -105,7 +105,7 @@ You can always check out this information and other resource links directly on t
 
 Your Push documentation hub for building is here 👉https://push.org/docs/
 
-And of course 24/7 dev support can always be found here 👉https://discord.com/invite/pushprotocol
+And of course 24/7 dev support can always be found here 👉https://discord.com/invite/pushchain
 
 Let us know if you have any issues, questions, or need help building. We’re always here to help!
 

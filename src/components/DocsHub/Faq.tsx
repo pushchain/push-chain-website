@@ -111,7 +111,7 @@ const Faq: FaqItems[] = [
         ) in case your favorite wallet or dApp doesn't have Push support yet.
         Push recently launched a wallet-to-wallet communication product called
         Push Chat which is in alpha stage. Reach out to us on{' '}
-        <AMod href='https://discord.com/invite/pushprotocol' target={'_blank'}>
+        <AMod href='https://discord.com/invite/pushchain' target={'_blank'}>
           Discord
         </AMod>{' '}
         to get exclusive Push Chat access.
