@@ -193,7 +193,13 @@ const Card = styled.a`
   &:focus,
   &:active {
     outline: none;
-    background: #fff;
+    background: ${(props) =>
+      props.mode === 'playlist' ? '#101010' : props.bgColor};
+    background-image: ${({ bgImage }) =>
+      bgImage ? `url(${bgImage})` : 'none'};
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     color: inherit;
   }
 
