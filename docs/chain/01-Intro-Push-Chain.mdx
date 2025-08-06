@@ -20,10 +20,11 @@ import {
   ModalWrapper,
 } from '@site/src/css/SharedStyling';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+import ThemedImage from '@theme/ThemedImage';
 
 <!-- Content Start -->
 
-Push Chain is the first **True Universal Layer 1** blockchain, built as a **100% EVM-compatible** Proof of Stake (PoS) chain on Cosmos SDK. It runs seamlessly across every chain and wallet.
+Push Chain is the first **True Universal Layer 1** blockchain, built as a **100% EVM-compatible** Proof of Stake (PoS) chain. It runs seamlessly across every chain and wallet.
 
 Write your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.
 
@@ -31,7 +32,15 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
 > - Follow our [Quickstart](/docs/chain/quickstart) to deploy your app in minutes. <br/ >
 > - Explore core abstractions in [Important Concepts](/docs/chain/important-concepts). <br/ >
 
-![Venn diagram: Push Chain sits at the intersection of Wallet Abstraction, Fee Abstraction, and Shared State](/assets/docs/chain/build/venn-diagram-push.png)
+<p>
+  <ThemedImage
+    alt="Diagram to show how an existing EVM or non-EVM application can be deployed on Push Chain to instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code."
+    sources={{
+      light: '/assets/docs/chain/build/unichain_light.webp',
+      dark: '/assets/docs/chain/build/unichain_dark.webp',
+    }}
+  />
+</p>
 
 ## Hello Push Chain 👋
 
@@ -41,33 +50,34 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
   <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"}}>
 
 {`
-
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
     // Import Push Chain SDK and Ethers
     // You can use other library like veim, etc
-    import { PushChain } from '@pushchain/core'
-    import { ethers } from 'ethers'
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
 
     async function main() {
       // 1. Connect to a provider (e.g., Push Chain RPC URL)
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/')
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
 
       // 2. Create a random wallet (or use your own private key)
-      const wallet = ethers.Wallet.createRandom(provider)
+      const wallet = ethers.Wallet.createRandom(provider);
 
       // 3. Convert ethers signer to Universal Signer
       // Most popular libraries can pass just the signer to get universal signer
       // Or use PushChain.utils.signer.construct to create a custom one
-      const universalSigner = await PushChain.utils.signer.toUniversal(wallet)
+      const universalSigner = await PushChain.utils.signer.toUniversal(wallet);
 
       // Initialize Push Chain SDK for use from Push Chain account
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-      })
+      });
 
-      console.log(JSON.stringify(pushChainClient, null, 2))
+      console.log(JSON.stringify(pushChainClient, null, 2));
     }
 
-    await main().catch(console.error)
+    await main().catch(console.error);
 
 `}
     </NodeJSVirtualIDE>
@@ -79,6 +89,8 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
       <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
 
 {`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
     // Import Push Chain SDK and Ethers
     // You can use other library like veim, etc
     import { PushChain } from '@pushchain/core'
@@ -116,6 +128,8 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
     <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
 
 {`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
     // Import Push Chain SDK and Viem
     // You can use other library like ethers, etc
     import { PushChain } from '@pushchain/core';
@@ -159,6 +173,8 @@ Write your smart contract once, deploy it on Push Chain, and instantly reach use
     <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
 
 {`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
     // Import Push Chain SDK and Solana Web3.js
     // You can use other library like @solana/kit, etc
     import { PushChain } from '@pushchain/core';

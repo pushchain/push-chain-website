@@ -4,7 +4,7 @@ import Spinner, {
 } from '@site/src/components/reusables/spinners/SpinnerUnit';
 import GLOBALS from '@site/src/config/globals';
 import React from 'react';
-import { LiveEditor, LiveProvider, LiveError, LivePreview } from 'react-live';
+import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 
 // This function returns a promise that resolves to the library,
 // ensuring it's only imported on the client side.
@@ -42,6 +42,12 @@ function loadClientSideLibraryViemUtils(constantName) {
   return typeof window !== 'undefined'
     ? require('viem/utils')[constantName]
     : Promise.resolve({}); // Return an empty object or appropriate placeholder for SSR.
+}
+
+function loadClientSideLibraryBS58() {
+  return typeof window !== 'undefined'
+    ? require('bs58').default || require('bs58')
+    : {}; // Return an empty object or appropriate placeholder for SSR.
 }
 
 function loadClientSideLibraryPushProtocolRestAPI(constantName) {
@@ -129,6 +135,8 @@ const ReactLiveScope = {
 
   hexToBytes: loadClientSideLibraryViemUtils('hexToBytes'),
   bytesToHex: loadClientSideLibraryViemUtils('bytesToHex'),
+
+  bs58: loadClientSideLibraryBS58(),
 
   PushAPI: loadClientSideLibraryPushProtocolRestAPI('PushAPI'),
   // CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),

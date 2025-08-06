@@ -71,8 +71,11 @@ These helpers are already deployed and maintained, so you can easily integrate t
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"}}>
 
 {`
-import { PushChain } from '@pushchain/core';
-import { ethers } from 'ethers';
+
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
 
     async function main() {
       console.log('Creating Universal Signer - Ethers V6');
@@ -91,7 +94,7 @@ import { ethers } from 'ethers';
       // Initialize Push Chain SDK
       const pushChainClient = await PushChain.initialize(universalSigner, {
           network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
-      })
+      });
       console.log('🚀 Got push chain client');
       console.log(JSON.stringify(pushChainClient));
     }

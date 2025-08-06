@@ -128,8 +128,6 @@ const txHash = await pushChainClient.universal.sendTransaction({
 }
 ```
 
-### Transaction Response Properties
-
 | Property | Type | Description |
 |----------|----------|------|
 | `hash` | `string` | Unique transaction hash identifier |
@@ -163,9 +161,16 @@ const txHash = await pushChainClient.universal.sendTransaction({
 | `raw.value` | `BigInt` | Actual derived value that went on chain |
 | `wait` | `function` | Async function that returns a Promise resolving to UniversalTxReceipt |
 
-### Transaction Receipt (wait() function return)
+</Details>
 
-The `wait()` function returns a `Promise<UniversalTxReceipt>` containing the final transaction receipt once the transaction is confirmed on-chain.
+<Details summary="Getting `txReceipt` <object> from `txResponse` <object>">
+<br />
+Calling the `wait()` function from `txResponse` object will give you a `Promise<UniversalTxReceipt>` once the transaction is confirmed on-chain.
+<br />
+
+```typescript
+const txReceipt = await txResponse.wait(1); // number of blocks confirmations to wait for
+```
 
 ```typescript
 {
@@ -192,8 +197,6 @@ The `wait()` function returns a `Promise<UniversalTxReceipt>` containing the fin
 }
 ```
 
-#### Receipt Properties
-
 | Property | Type | Description |
 |----------|----------|------|
 | `hash` | `string` | Transaction hash (same as in transaction response) |
@@ -215,7 +218,6 @@ The `wait()` function returns a `Promise<UniversalTxReceipt>` containing the fin
 | `raw.nonce` | `number` | Actual nonce used on chain |
 | `raw.data` | `string` | Actual calldata sent on chain |
 | `raw.value` | `BigInt` | Actual value transferred on chain |
-
 </Details>
 
 ## Send Transaction with Contract Interaction
@@ -365,7 +367,7 @@ import \* as readline from 'node:readline/promises';
         // Note: This would fail in playground without funds
         // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction(txParams);
-        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
+        console.log('✅ Transaction sent! Tx:', txResponse);
       } catch (error) {
         console.error('❌ Transaction failed:', error.message);
         // In playground, this will fail without funds

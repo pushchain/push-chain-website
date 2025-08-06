@@ -222,6 +222,7 @@ function App() {
         generatePrivateKey,
         sepolia,
         hexToBytes,
+        bs58,
         bytesToHex,
         createWalletClient,
         createPublicClient,

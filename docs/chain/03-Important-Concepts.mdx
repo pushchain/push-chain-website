@@ -20,9 +20,6 @@ Before integrating the SDK, here are the core ideas you need to know to build tr
 
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
-<br />
-<br />
-
 ## 100% EVM Compatibility
 
 Push Chain is an EVM-compatible Universal Layer 1 blockchain that runs any Solidity contract as-is. Your existing Ethereum dApp will work without touching a single byte of on-chain code.
@@ -81,25 +78,27 @@ The `UniversalAccount` is a chain-agnostic way of representing a wallet address,
 
 {`
 
+    // customPropHighlightRegexStart=PushChain\.utils\.account\.toUniversal
+    // customPropHighlightRegexEnd=(\\);|\\}\\);)
     import { PushChain } from '@pushchain/core';
 
     async function main() {
       // Ethereum Sepolia
       const ethereumAccount = PushChain.utils.account.toUniversal('0x742d35Cc6370C742Fc60f8b67da6c68F091C42b5', {
         chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-      })
+      });
 
-      console.log(JSON.stringify(ethereumAccount, null, 2))
+      console.log(JSON.stringify(ethereumAccount, null, 2));
 
       // Solana Testnet
       const solanaAccount = PushChain.utils.account.toUniversal('ySYrGNLLJSK9hvGGpoxg8TzWfRe8ftBtDSMECtx2eJR', {
         chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
-      })
+      });
 
-      console.log(JSON.stringify(solanaAccount, null, 2))
+      console.log(JSON.stringify(solanaAccount, null, 2));
     }
 
-    await main().catch(console.error)
+    await main().catch(console.error);
 
 `}
 
@@ -118,31 +117,33 @@ A `UniversalSigner` extends `UniversalAccount` with signing capabilities.
 
 {`
 
+    // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversal
+    // customPropHighlightRegexEnd=(\\);|\\}\\);)
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import { Keypair } from '@solana/web3.js';
 
     async function main() {
       // Ethereum Sepolia
-      const ethwallet = ethers.Wallet.createRandom()
-      const ethprovider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co')
-      const signer = ethwallet.connect(ethprovider)
+      const ethwallet = ethers.Wallet.createRandom();
+      const ethprovider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co');
+      const signer = ethwallet.connect(ethprovider);
 
-      const universalSignerFromEth = await PushChain.utils.signer.toUniversal(signer)
+      const universalSignerFromEth = await PushChain.utils.signer.toUniversal(signer);
 
       // Solana Testnet
-      const solKeypair = Keypair.generate()
+      const solKeypair = Keypair.generate();
 
       const universalSignerFromSol = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
         chain: PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET,
         library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
-      })
+      });
 
-      console.log(JSON.stringify(universalSignerFromEth, null, 2))
-      console.log(JSON.stringify(universalSignerFromSol, null, 2))
+      console.log(JSON.stringify(universalSignerFromEth, null, 2));
+      console.log(JSON.stringify(universalSignerFromSol, null, 2));
     }
 
-    await main().catch(console.error)
+    await main().catch(console.error);
 
 `}
 

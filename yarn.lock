@@ -4933,7 +4933,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:0.1.42, @pushchain/core@npm:^0.1.42":
+"@pushchain/core@npm:0.1.42":
   version: 0.1.42
   resolution: "@pushchain/core@npm:0.1.42"
   dependencies:
@@ -4953,6 +4953,29 @@ __metadata:
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
   checksum: 10c0/02c365392668326c264db7be033c1acc26dcb812c39e842c56351adc7080a3883ce2c1c52f55da2e6807e144d3e8e8aaf54381a6027adf293bbb4a8611bf5490
+  languageName: node
+  linkType: hard
+
+"@pushchain/core@npm:0.2.0":
+  version: 0.2.0
+  resolution: "@pushchain/core@npm:0.2.0"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^2.0.0"
+    "@coral-xyz/anchor": "npm:^0.31.0"
+    "@cosmjs/crypto": "npm:0.33.1"
+    "@cosmjs/encoding": "npm:0.33.1"
+    "@cosmjs/proto-signing": "npm:^0.33.1"
+    "@cosmjs/stargate": "npm:^0.33.1"
+    "@cosmjs/tendermint-rpc": "npm:0.33.1"
+    "@solana/web3.js": "npm:^1.68.0"
+    buffer: "npm:^6.0.3"
+    cosmjs-types: "npm:0.9.0"
+    ethers: "npm:^6.14.3"
+    protobufjs: "npm:7.4.0"
+    tslib: "npm:^2.3.0"
+    tweetnacl: "npm:^1.0.3"
+    viem: "npm:2.27.2"
+  checksum: 10c0/4b9f3e2a54cd945c93592ebf85a0d580744d4bd812e4dfbd4170edb92b88291451112e9f1fe424c00360bda8676d201dabaef4dccd1cc55dfa727346ea433282
   languageName: node
   linkType: hard
 
@@ -9211,7 +9234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bs58@npm:6.0.0":
+"bs58@npm:6.0.0, bs58@npm:^6.0.0":
   version: 6.0.0
   resolution: "bs58@npm:6.0.0"
   dependencies:
@@ -20182,7 +20205,7 @@ __metadata:
     "@docusaurus/theme-mermaid": "npm:3.0.1"
     "@docusaurus/types": "npm:3.0.1"
     "@mdx-js/react": "npm:^3.0.0"
-    "@pushchain/core": "npm:^0.1.42"
+    "@pushchain/core": "npm:0.2.0"
     "@pushchain/ui-kit": "npm:^1.1.28"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
@@ -20200,6 +20223,7 @@ __metadata:
     assert: "npm:^2.0.0"
     babel-plugin-styled-components: "npm:^2.1.4"
     browserify-zlib: "npm:^0.2.0"
+    bs58: "npm:^6.0.0"
     buffer: "npm:^6.0.3"
     chalk: "npm:5.3.0"
     clsx: "npm:^1.2.1"
