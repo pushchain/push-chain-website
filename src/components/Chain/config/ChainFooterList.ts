@@ -17,7 +17,7 @@ export const ChainFooterList = {
     },
     {
       title: 'Brand Kit',
-      href: 'https://pushprotocol.notion.site/Push-Chain-Brand-Kit-and-Guidelines-d374a18fc78e4635a437ccad49350dac?pvs=4',
+      href: 'https://pushprotocol.notion.site/push-chain-brand-kit',
       target: '_blank',
     },
   ],
