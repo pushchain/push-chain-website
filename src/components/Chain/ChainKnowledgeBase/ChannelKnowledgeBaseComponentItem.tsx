@@ -47,7 +47,7 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
       rel='noopener noreferrer'
       target={item?.target ? item?.target : '_self'}
       mode={mode}
-      background={item.bgColor}
+      background={mode === 'grid' ? item.gridBG : '#101010'}
     >
       {mode === 'grid' && (
         <GridImage customWidth={item.customWidth}>
@@ -99,7 +99,7 @@ const ChannelKnowledgeBaseComponentItem: FC = ({
         flex={mode === 'playlist' ? '1' : '0'}
         justifyContent='flex-start'
         alignItems='center'
-        margin={mode === 'grid' ? 'auto 0 0 0' : '0 0 auto 0'}
+        margin={mode === 'grid' ? 'auto 0 0 0' : '0'}
       >
         <TitleH3
           mode={mode}
@@ -168,6 +168,7 @@ const Card = styled.a`
   cursor: pointer;
   padding: ${(props) => (props.mode === 'playlist' ? '16px' : '24px')};
   border-radius: ${(props) => (props.mode === 'playlist' ? '24px' : '32px')};
+  background: ${(props) => props.background};
   display: flex;
   flex-direction: ${(props) => (props.mode === 'playlist' ? 'row' : 'column')};
   gap: ${(props) => (props.mode === 'playlist' ? '24px' : '0px')};
@@ -175,8 +176,6 @@ const Card = styled.a`
     props.mode === 'playlist' ? 'center' : 'flex-start'};
 
   min-height: ${(props) => (props.mode === 'playlist' ? 'auto' : '420px')};
-  background: ${(props) =>
-    props.background === 'playlist' ? '#101010' : props.background};
   background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : 'none')};
   background-repeat: no-repeat;
   background-size: contain;
