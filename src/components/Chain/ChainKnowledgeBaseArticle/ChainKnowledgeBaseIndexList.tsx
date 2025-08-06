@@ -418,8 +418,8 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     // Create ScrollTrigger for TOC sticky behavior
     scrollTrigger = ScrollTrigger.create({
       trigger: contentRef.current,
-      start: 'top top+=24',
-      end: `bottom top+=${endOffset + 24}`, // Add 24px margin to prevent premature bottom positioning
+      start: 'top top+=112',
+      end: `bottom top+=${endOffset + 112}`, // Add 24px margin to prevent premature bottom positioning
       onUpdate: (self) => {
         const progress = self.progress;
         const direction = self.direction;
@@ -428,7 +428,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
           // Parent is in viewport - make TOC sticky
           gsap.set(tocRef.current, {
             position: 'fixed',
-            top: '24px',
+            top: '112px',
             zIndex: 100,
           });
         } else if (progress >= 1 && direction === 1) {
