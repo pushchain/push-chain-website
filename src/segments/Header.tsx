@@ -25,6 +25,7 @@ import {
   H3,
   Image,
   ItemH,
+  ItemH1,
   ItemV,
   LinkTo,
   Section,
@@ -216,58 +217,68 @@ function Header() {
     };
 
     return (
-      <HeaderItem
-        onClick={(e) => openLink(e, item.href, item.id, item.target)}
+      <a
+        href={item.href}
+        target={item.target}
+        rel="noopener noreferrer"
         className='header-item'
+        style={{
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
+        }}
       >
-        {item.srcrefoff && (
-          <HeaderImage
-            key={index}
-            src={
-              require(
-                `@site/static/assets/website/header/${item.srcrefoff}.png`
-              ).default
-            }
-            srcSet={`${require(`@site/static/assets/website/header/${item.srcrefoff}@2x.png`).default} 2x, ${require(`@site/static/assets/website/header/${item.srcrefoff}@3x.png`).default} 3x`}
-            alt={`${t(item.title)}`}
-            height={24}
-            width={24}
-          />
-        )}
+        <HeaderItem>
+          {item.srcrefoff && (
+            <HeaderImage
+              key={index}
+              src={
+                require(
+                  `@site/static/assets/website/header/${item.srcrefoff}.png`
+                ).default
+              }
+              srcSet={`${require(`@site/static/assets/website/header/${item.srcrefoff}@2x.png`).default} 2x, ${require(`@site/static/assets/website/header/${item.srcrefoff}@3x.png`).default} 3x`}
+              alt={`${t(item.title)}`}
+              height={24}
+              width={24}
+            />
+          )}
 
-        <ItemH
-          flexDirection='column'
-          alignItems='flex-start'
-          gap='0px'
-          flex='1'
-        >
-          <H2
-            fontSize='1rem'
-            color='#FFF'
-            lineHeight='130%'
-            letterSpacing='normal'
-            fontWeight='600'
+          <ItemH
+            flexDirection='column'
+            alignItems='flex-start'
+            gap='0px'
+            flex='1'
           >
-            {t(item.title)}
+            <H2
+              fontSize='1rem'
+              color='#FFF'
+              lineHeight='130%'
+              letterSpacing='normal'
+              fontWeight='600'
+            >
+              {t(item.title)}
 
-            {item.tagitem && (
-              <TagItem style={{ marginLeft: '10px' }}>
-                {item.tagitem.text}
-              </TagItem>
-            )}
-          </H2>
+              {item.tagitem && (
+                <TagItem style={{ marginLeft: '10px' }}>
+                  {item.tagitem.text}
+                </TagItem>
+              )}
+            </H2>
 
-          <H3
-            fontSize='0.875rem'
-            color='#FFF'
-            lineHeight='130%'
-            letterSpacing='normal'
-            fontWeight='400'
-          >
-            {t(item.subtitle)}
-          </H3>
-        </ItemH>
-      </HeaderItem>
+            <H3
+              fontSize='0.875rem'
+              color='#FFF'
+              lineHeight='130%'
+              letterSpacing='normal'
+              fontWeight='400'
+            >
+              {t(item.subtitle)}
+            </H3>
+          </ItemH>
+        </HeaderItem>
+      </a>
     );
   };
 
@@ -325,7 +336,7 @@ function Header() {
             showAlertBar={delayedShowAlertBar && isAlertBarVisible}
           >
             {/* Insert Liquid Glass */}
-            <ItemH position='absolute' top='0' left='0' right='0' bottom='0'>
+            <ItemH1 position='absolute' top='0' left='0' right='0' bottom='0'>
               <LiquidGlass
                 autoResize={true}
                 radius={24}
@@ -334,7 +345,7 @@ function Header() {
                 chromaticAberration={5}
                 debug={false}
               />
-            </ItemH>
+            </ItemH1>
 
             <MenuTop
               flex='initial'
@@ -459,7 +470,7 @@ function Header() {
                       expanded={mobileMenuMap[0]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH
+                      <ItemH1
                         position='absolute'
                         top='0'
                         left='0'
@@ -476,12 +487,14 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH>
-                      <div style={{ position: 'relative', zIndex: 10 }}>
-                        {HeaderList.testnet.map((item, index) => (
-                          <HeaderSpace item={item} index={index} />
-                        ))}
-                      </div>
+                      </ItemH1>
+                      <HeaderDiv>
+                        <HeaderSection>
+                          {HeaderList.testnet.map((item, index) => (
+                            <HeaderSpace item={item} index={index} />
+                          ))}
+                        </HeaderSection>
+                      </HeaderDiv>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
 
@@ -512,7 +525,7 @@ function Header() {
                       expanded={mobileMenuMap[1]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH
+                      <ItemH1
                         position='absolute'
                         top='0'
                         left='0'
@@ -529,7 +542,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH>
+                      </ItemH1>
 
                       <HeaderDiv>
                         <HeaderSection>
@@ -569,7 +582,7 @@ function Header() {
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH
+                      <ItemH1
                         position='absolute'
                         top='0'
                         left='0'
@@ -586,7 +599,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH>
+                      </ItemH1>
 
                       {HeaderList.community.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
@@ -620,7 +633,7 @@ function Header() {
                       expanded={mobileMenuMap[3]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH
+                      <ItemH1
                         position='absolute'
                         top='0'
                         left='0'
@@ -637,7 +650,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH>
+                      </ItemH1>
 
                       {HeaderList.resources.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
@@ -698,7 +711,7 @@ function Header() {
                       expanded={mobileMenuMap[4]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH
+                      <ItemH1
                         position='absolute'
                         top='0'
                         left='0'
@@ -715,7 +728,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH>
+                      </ItemH1>
 
                       {SupportedLanguagesList.map((item, index) => {
                         return (
@@ -757,7 +770,7 @@ function Header() {
                                 letterSpacing='normal'
                                 alignSelf='flex-start'
                                 padding='8px 30px 8px 10px !important'
-                                color='#FFF !important'
+                                color='inherit'
                               >
                                 {t(item.translatedtitle)}
                               </H3>
@@ -1093,7 +1106,8 @@ const NavigationMenuItem = styled.li`
     }
 
     & .menuContent {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
   }
 `;
@@ -1298,7 +1312,7 @@ const NavigationMenuContent = styled.ul`
     display: flex;
     flex-direction: column;
     margin: 8px 0 0 0;
-    padding: 0px;
+    padding: 12px;
     max-height: initial;
     min-height: initial;
 
@@ -1343,7 +1357,7 @@ const LanguageMenuContent = styled.div`
   border-radius: 24px;
 
   border: 1px solid rgba(171, 70, 248, 0.4);
-  background: rgba(0, 0, 0, 0.8);
+  // background: rgba(0, 0, 0, 0.8);
   box-shadow:
     2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
     1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
@@ -1387,6 +1401,7 @@ const LanguageMenuContent = styled.div`
 
 const LanguageButton = styled(Button)`
   border: 1px solid transparent;
+  color: #fff;
 
   &:not(:first-of-type) {
     margin-top: 8px;
@@ -1394,12 +1409,13 @@ const LanguageButton = styled(Button)`
 
   &:hover {
     border-radius: var(--radius-xs, 12px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
+    border: 1px solid transparent;
     background: rgba(0, 0, 0, 0.5);
+    color: #d548ec;
 
-    h3 {
-      color: red;
-    }
+    // h3 {
+    //   color: red;
+    // }
   }
 
   @media ${device.laptopM} {
@@ -1424,7 +1440,7 @@ const HeaderItem = styled.div`
 
   &:hover {
     border-radius: var(--radius-xs, 12px);
-    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    // border: 1px solid rgba(255, 255, 255, 0.35) !important;
     background: rgba(0, 0, 0, 0.5);
 
     h2 {
@@ -1438,7 +1454,7 @@ const HeaderItem = styled.div`
 
   @media ${device.laptopM} {
     max-width: 100%;
-    margin: 6px 0 0 0;
+    // margin: 6px 0 0 0;
   }
 `;
 

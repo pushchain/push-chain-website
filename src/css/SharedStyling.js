@@ -77,46 +77,46 @@ export const Content = styled.div`
 
   &.fluid {
     padding: ${(props) =>
-      props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.DESKTOP};
+    props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.DESKTOP};
     max-width: 100%;
   }
 
   &.vertfluid {
     padding: ${(props) =>
-      props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.DESKTOP};
+    props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.DESKTOP};
   }
 
   @media ${device.laptop} {
     max-width: ${(props) =>
-      props.maxWidth ||
-      `${GLOBALS.STRUCTURE.MAX_WIDTH + structure.PADDING.TABLET.LEFT + structure.PADDING.TABLET.RIGHT}px`};
+    props.maxWidth ||
+    `${GLOBALS.STRUCTURE.MAX_WIDTH + structure.PADDING.TABLET.LEFT + structure.PADDING.TABLET.RIGHT}px`};
     padding: ${(props) => props.padding || GLOBALS.STRUCTURE.PADDING.TABLET};
 
     &.fluid {
       padding: ${(props) =>
-        props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.TABLET};
+    props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.TABLET};
     }
 
     &.vertfluid {
       padding: ${(props) =>
-        props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.TABLET};
+    props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.TABLET};
     }
   }
 
   @media ${device.mobileL} {
     padding: ${(props) => props.padding || GLOBALS.STRUCTURE.PADDING.MOBILE};
     max-width: ${(props) =>
-      props.maxWidth ||
-      `${GLOBALS.STRUCTURE.MAX_WIDTH + structure.PADDING.MOBILE.LEFT + structure.PADDING.MOBILE.RIGHT}px`};
+    props.maxWidth ||
+    `${GLOBALS.STRUCTURE.MAX_WIDTH + structure.PADDING.MOBILE.LEFT + structure.PADDING.MOBILE.RIGHT}px`};
 
     &.fluid {
       padding: ${(props) =>
-        props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.MOBILE};
+    props.padding || GLOBALS.STRUCTURE.PADDING.FLUID.MOBILE};
     }
 
     &.vertfluid {
       padding: ${(props) =>
-        props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.MOBILE};
+    props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.MOBILE};
     }
   }
 `;
@@ -162,17 +162,23 @@ export const ItemH = styled.div`
 
   &:hover & {
     filter: ${(props) =>
-      (props.filterHover
-        ? props.filterHover
-        : props.hover
-          ? props.hover
-          : 'none') || 'none'};
+    (props.filterHover
+      ? props.filterHover
+      : props.hover
+        ? props.hover
+        : 'none') || 'none'};
   }
 
   ${ItemBreak} {
     width: 0;
   }
 `;
+
+export const ItemH1 = styled(ItemH)`
+  @media ${device.mobileM} {
+    display: none;
+  }
+`
 
 export const ItemV = styled(ItemH)`
   flex: ${(props) => props.flex || '1'};
@@ -201,12 +207,12 @@ export const H1 = styled.h1`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.PRIMARY_HEADING.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.PRIMARY_HEADING.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.PRIMARY_HEADING.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.PRIMARY_HEADING.MOBILE};
   }
 `;
 
@@ -227,12 +233,12 @@ export const H2 = styled.h2`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.MOBILE};
   }
 `;
 
@@ -253,12 +259,12 @@ export const H3 = styled.h3`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING.MOBILE};
   }
 `;
 
@@ -293,12 +299,12 @@ export const Span = styled.span`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
   }
 `;
 
@@ -331,17 +337,17 @@ export const Button = styled.button`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
   }
 
   &:before {
     background: ${(props) =>
-      props.hover || (props.background ? props.background : 'transparent')};
+    props.hover || (props.background ? props.background : 'transparent')};
     bottom: 0;
     content: '';
     display: none;
@@ -413,17 +419,17 @@ export const A = styled.a`
 
   @media ${device.laptop} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.TABLET};
   }
 
   @media ${device.mobileM} {
     font-size: ${(props) =>
-      props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
+    props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.MOBILE};
   }
 
   &:before {
     background: ${(props) =>
-      props.hover || (props.background ? props.background : 'transparent')};
+    props.hover || (props.background ? props.background : 'transparent')};
     bottom: 0;
     content: '';
     display: none;
@@ -518,18 +524,18 @@ export const LinkTo = styled(Link)`
 
   &:hover & {
     filter: ${(props) =>
-      (props.filterHover
-        ? props.filterHover
-        : props.hover
-          ? props.hover
-          : 'none') || 'none'};
+    (props.filterHover
+      ? props.filterHover
+      : props.hover
+        ? props.hover
+        : 'none') || 'none'};
 
     color: ${(props) =>
-      (props.hoverColor
-        ? props.hoverColor
-        : props.color
-          ? props.color
-          : '#fff') || '#fff'};
+    (props.hoverColor
+      ? props.hoverColor
+      : props.color
+        ? props.color
+        : '#fff') || '#fff'};
   }
 
   &:before {
@@ -540,7 +546,7 @@ export const LinkTo = styled(Link)`
     right: 0;
     bottom: 0;
     background: ${(props) =>
-      props.hover || (props.background ? props.background : 'transparent')};
+    props.hover || (props.background ? props.background : 'transparent')};
     display: none;
     z-index: -1;
   }
