@@ -34,12 +34,12 @@ export const ChainFooterList = {
     },
     {
       title: 'Discord',
-      href: 'https://discord.gg/pushprotocol',
+      href: 'https://discord.com/invite/pushchain',
       target: '_blank',
     },
     {
       title: 'Reddit',
-      href: 'https://discord.gg/pushprotocol',
+      href: 'https://discord.com/invite/pushchain',
       target: '_blank',
     },
     {

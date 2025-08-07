@@ -218,7 +218,7 @@ function Header() {
 
     return (
       <a
-        href={item.href}
+        href={item.href.includes('http') ? item.href : `${baseURL}${item.href}`}
         target={item.target}
         rel="noopener noreferrer"
         className='header-item'
