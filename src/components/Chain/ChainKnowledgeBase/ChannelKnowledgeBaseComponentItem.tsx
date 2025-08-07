@@ -178,7 +178,7 @@ const Card = styled.a`
   min-height: ${(props) => (props.mode === 'playlist' ? 'auto' : '420px')};
   background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : 'none')};
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   justify-content: ${(props) => (props.mode === 'grid' ? 'space-between' : '')};
 
