@@ -198,7 +198,7 @@ const Card = styled.a`
     background-image: ${({ bgImage }) =>
       bgImage ? `url(${bgImage})` : 'none'};
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     color: inherit;
   }
