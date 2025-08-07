@@ -118,6 +118,6 @@ As the accessibility of these tools grows, so does the quality of dApps that bui
 
 We are excited for this new era for the Push Protocol Network and we are extremely excited to have you be a part of it.
 
-For more questions or queries, join us in Discord 👉https://discord.com/invite/pushprotocol
+For more questions or queries, join us in Discord 👉https://discord.com/invite/pushchain
 
 You can also get started building with Push tools 👉https://comms.push.org/docs/

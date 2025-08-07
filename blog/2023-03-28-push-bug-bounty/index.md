@@ -61,6 +61,6 @@ We look forward to seeing your contributions and support in making Push as great
 
 You can reach out to us through any of our communication channels, however we suggest Discord as the initial point to start conversations and ask questions regarding vulnerabilities found.
 
-You can find us on [Discord here](https://discord.com/invite/pushprotocol).
+You can find us on [Discord here](https://discord.com/invite/pushchain).
 
 Thanks again for being a part of what makes Push Protocol incredible!

@@ -73,7 +73,7 @@ As such, your MetaMask wallet is your new notification hub, ensuring you never m
 
 The Push Protocol Snap V1 has successfully passed the Consensys audit which you can [view in its entirety here](https://consensys.io/diligence/audits/2023/07/push-protocol-snap-for-metamask/).
 
-Have questions? Reach out to us on our [Discord](https://discord.gg/pushprotocol) — we’re always happy to help!
+Have questions? Reach out to us on our [Discord](https://discord.com/invite/pushchain) — we’re always happy to help!
 
 <!-- [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 

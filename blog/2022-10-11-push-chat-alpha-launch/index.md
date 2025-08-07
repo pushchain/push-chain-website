@@ -30,10 +30,10 @@ Polygon Wallet is a launch partner for Push Chat, setting the stage for the intr
 
 Starting today, October 10, access to the Push Chat alpha is available to the following individuals. (If you’re not part of these groups, don’t sweat! We’ll be rolling out more alpha access to the communities in the weeks to come, and the full public launch isn’t too far behind 🙂).
 
-- <b>ETH Bogota Hackers</b>. If you were a developer who hacked with Push Protocol during ETH Bogota this year, come try out the alpha! More information is in the <a href="https://discord.gg/pushprotocol">Push Discord</a>.
+- <b>ETH Bogota Hackers</b>. If you were a developer who hacked with Push Protocol during ETH Bogota this year, come try out the alpha! More information is in the <a href="https://discord.com/invite/pushchain">Push Discord</a>.
 - <b>Alpha POAP Holders</b>. If you have a POAP from the Push team handed out in Bogota, you can access the alpha. <i>Come find the Push team at Devcon (Push has a booth on Day 3 & 4 of Devcon!) and other events in Bogota and ask for a POAP</i>.
 
-If you are part of the Push Chat alpha, your feedback will be important to the success of the app when it goes public. [Join our Discord](https://discord.gg/pushprotocol) and leave your thoughts and feedback in the #push-chat-alpha channel.
+If you are part of the Push Chat alpha, your feedback will be important to the success of the app when it goes public. [Join our Discord](https://discord.com/invite/pushchain) and leave your thoughts and feedback in the #push-chat-alpha channel.
 
 If you don’t join the Push Chat alpha — no worries! The public app will be available soon — stay tuned.
 

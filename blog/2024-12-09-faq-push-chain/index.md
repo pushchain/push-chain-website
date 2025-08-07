@@ -412,6 +412,6 @@ You’ll have a sample app live in minutes—no local setup required!
 
 ### Where can I find more information and stay updated on Push Chain's progress?
 
-The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain 'Push Protocol on X'), [Telegram](https://t.me/epnsproject 'Push Protocol on Telegram'), and [Discord](https://discord.gg/pushprotocol 'Push Protocol on Discord').
+The best way to stay on top of Push Chain’s progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain 'Push Protocol on X'), [Telegram](https://t.me/epnsproject 'Push Protocol on Telegram'), and [Discord](https://discord.com/invite/pushchain 'Push Protocol on Discord').
 
 Always remain cautious of phishing links, websites or any scam links asking you for your crypto. All official communications will go out from our official Push handles.

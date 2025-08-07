@@ -44,7 +44,7 @@ November showcased Push in the spotlight:
 
 [ETH Global Istanbul](https://push.org/blog/push-ethglobal-istanbul/) was incredible, with 45+ projects building using Push's communication tools. [Winners](https://x.com/PushChain/status/1726638450668146688) took away big Push bounties. What’s more? We turned Istanbul a bit more pink with our Push merch!
 
-And that's not all. We've launched the ["Push Developer Spotlight"](https://x.com/PushChain/status/1729867047377711293) series, chatting with awesome devs on Discord. [Join](https://discord.com/invite/pushprotocol?utm_source=Shivam&utm_medium=Discord+Event&utm_campaign=Developer+Spotlight) the fun and get to know the minds shaping the future of web3.
+And that's not all. We've launched the ["Push Developer Spotlight"](https://x.com/PushChain/status/1729867047377711293) series, chatting with awesome devs on Discord. [Join](https://discord.com/invite/pushchain?utm_source=Shivam&utm_medium=Discord+Event&utm_campaign=Developer+Spotlight) the fun and get to know the minds shaping the future of web3.
 
 ### BRB India
 

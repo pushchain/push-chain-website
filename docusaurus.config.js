@@ -218,7 +218,7 @@ const config = {
             position: 'right',
           },
           {
-            to: 'https://discord.com/invite/pushprotocol',
+            to: 'https://discord.com/invite/pushchain',
             label: 'Discord',
             position: 'right',
           },

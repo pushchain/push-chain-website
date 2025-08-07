@@ -90,6 +90,6 @@ If your organization is considering a UX and communication upgrade, Push Protoco
 
 Reach out to us today to see how we can help you👋
 
-Contact our team on [Discord](https://discord.gg/pushprotocol)
+Contact our team on [Discord](https://discord.com/invite/pushchain)
 
 Send us a DM on [Twitter](https://x.com/PushChain)

@@ -27,7 +27,7 @@ Push Chain is a purpose-built layer that connects L1s, L2s, and L3s with near-in
 :::caution
 The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named. The migration from Push Protocol $PUSH to the Push Chain token is not live.
 
-Do not believe anyone offering early access or early migration to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.gg/pushprotocol 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
+Do not believe anyone offering early access or early migration to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').
 :::
 &nbsp;
 

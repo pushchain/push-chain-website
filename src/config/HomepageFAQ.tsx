@@ -129,7 +129,7 @@ export const General = [
           Push recently launched a wallet-to-wallet communication product called
           Push Chat which is in alpha stage. Reach out to us on{' '}
           <AMod
-            href='https://discord.com/invite/pushprotocol'
+            href='https://discord.com/invite/pushchain'
             target={'_blank'}
           >
             Discord
@@ -557,7 +557,7 @@ export const IntegratingPush = [
       <Answer>
         <Span>
           You can just drop your queries on the{' '}
-          <AMod href='https://discord.com/invite/pushprotocol'>
+          <AMod href='https://discord.com/invite/pushchain'>
             Push Discord
           </AMod>{' '}
           and the community managers will be able to assist you.
@@ -577,7 +577,7 @@ export const Governance = [
         <Span>
           Reach out to the Push team on{' '}
           <AMod
-            href='https://discord.com/invite/pushprotocol'
+            href='https://discord.com/invite/pushchain'
             target={'_blank'}
           >
             Discord
@@ -600,7 +600,7 @@ export const Governance = [
         <Span>
           The{' '}
           <AMod
-            href='https://discord.com/invite/pushprotocol'
+            href='https://discord.com/invite/pushchain'
             target={'_blank'}
           >
             Push Discord
@@ -618,7 +618,7 @@ export const Governance = [
       <Answer>
         <Span>
           Office Hours are hosted on the{' '}
-          <AMod href='https://discord.com/invite/pushprotocol'>
+          <AMod href='https://discord.com/invite/pushchain'>
             Push Discord
           </AMod>{' '}
           for DAO related meetings, try joining the discord for more

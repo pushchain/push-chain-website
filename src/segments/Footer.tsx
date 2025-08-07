@@ -235,7 +235,7 @@ function Footer() {
                   </FooterAnchorIcon>
 
                   <FooterAnchorIcon
-                    href='https://discord.gg/pushprotocol'
+                    href='https://discord.com/invite/pushchain'
                     title='Push Discord'
                     target='_blank'
                   >

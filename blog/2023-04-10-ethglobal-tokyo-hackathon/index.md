@@ -58,7 +58,7 @@ Here are a few resources and tips to get you started:
 - Checkout Push workshops for live demos on building with Push, like [“How to Add Web3 Notifications to Your Project”](https://www.youtube.com/watch?v=pB--X3X1QO4&ab_channel=DeUniversityofEthereum). Here’s all of our [previous workshops](https://www.youtube.com/playlist?list=PLyWTqFLqKt9ZJIPvTjf6GHOn7u7_8h1DY).
 - Create clean and easy-to-read documentation to impress the judges.
 - Explain what problem you are solving and why your project matters in a short demo video.
-- [Find the Push crew onsite](https://twitter.com/learn4life6) and our [devs in Discord](https://discord.com/invite/pushprotocol) if you need any help from brainstorming to user testing to feedback.
+- [Find the Push crew onsite](https://twitter.com/learn4life6) and our [devs in Discord](https://discord.com/invite/pushchain) if you need any help from brainstorming to user testing to feedback.
 
 We started building Push at the ETHGlobal hackathon in 2020, and the early feedback convinced us that it could be so much more. So who knows, it might be your project next that goes from Hackathon to web3 sensation!
 

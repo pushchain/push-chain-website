@@ -39,7 +39,7 @@ Beyond just the introduction of PIPs though, there have been a host of improveme
 - Delivery nodes are undergoing extensive quality assurance to make them foolproof and battle-ready.
 - New mobile app features will go live soon and bug fixes are being made in the app.
 
-With so much happening on the development front and with the launch of PIP, we invite you all to join us and have a chat with our team on [Push Discord](https://discord.gg/pushprotocol). All the good conversations are happening there!
+With so much happening on the development front and with the launch of PIP, we invite you all to join us and have a chat with our team on [Push Discord](https://discord.com/invite/pushchain). All the good conversations are happening there!
 
 ## 🤝 Frens of Push 🤝
 

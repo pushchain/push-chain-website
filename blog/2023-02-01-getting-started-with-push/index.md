@@ -249,7 +249,7 @@ We’ll cover other parts of the Push SDK in coming posts so stay tuned!
 
 - [Push Protocol SDK documentation here](https://www.npmjs.com/package/@pushprotocol/restapi) — if you’d like more reference material to chew on.
 - [Push SDK on GitHub](https://github.com/push-protocol/push-sdk)
-- [Our Discord](https://discord.gg/pushprotocol) — we’ve got devs ready to give your project whatever support and consultation you need.
+- [Our Discord](https://discord.com/invite/pushchain) — we’ve got devs ready to give your project whatever support and consultation you need.
 - [Push developer docs](https://comms.push.org/docs/) to get started on building right away!
 
 #PoweredbyPush

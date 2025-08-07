@@ -35,7 +35,7 @@ After Push Chat, Push Video is the second major social networking product to be 
 
 ### The Push Developer Video SDK
 
-The Push Developer Video SDK is launching soon! The SDK will give app developers an easy way to start integrating decentralized notifications, chat, and/or video directly into their applications. We’ll be launching the SDK imminently, so join the #dev-chat channel in our [Discord](https://discord.gg/pushprotocol) to learn more.
+The Push Developer Video SDK is launching soon! The SDK will give app developers an easy way to start integrating decentralized notifications, chat, and/or video directly into their applications. We’ll be launching the SDK imminently, so join the #dev-chat channel in our [Discord](https://discord.com/invite/pushchain) to learn more.
 
 ### How to Get Started with Push Video?
 

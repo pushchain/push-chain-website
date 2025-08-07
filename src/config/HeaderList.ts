@@ -43,8 +43,25 @@ export const HeaderList = {
     {
       title: 'header.developers.link5.title',
       subtitle: 'header.developers.link5.subtitle',
-      href: 'https://discord.gg/pushprotocol',
-      target: '_self',
+      srcrefoff: 'hacker-icon-off',
+      href: '/docs/hackers/',
+      target: '_blank',
+    },
+    {
+      title: 'header.developers.link6.title',
+      subtitle: 'header.developers.link6.subtitle',
+      tagitem: {
+        text: 'NEW',
+      },
+      srcrefoff: 'react-icon-off',
+      href: '/docs/video/playground/push-react-component-playground-example/',
+      target: '_blank',
+    },
+    {
+      title: 'header.developers.link7.title',
+      subtitle: 'header.developers.link7.subtitle',
+      srcrefoff: 'discord-icon-off',
+      href: 'https://discord.com/invite/pushchain',
     },
   ],
   community: [
