@@ -45,6 +45,28 @@ export const structure = {
       LEFT: 16,
     },
   },
+  MARGIN: {
+    SKELETON_SMALL: {
+      DESKTOP: {
+        TOP: 120,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
+      TABLET: {
+        TOP: 80,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
+      MOBILE: {
+        TOP: 20,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
+    },
+  },
 };
 
 // Define Globals
@@ -124,6 +146,13 @@ const GLOBALS = {
         DESKTOP: `0 ${structure.PADDING.DESKTOP.RIGHT}px 0 ${structure.PADDING.DESKTOP.LEFT}px`,
         TABLET: `0 ${structure.PADDING.TABLET.RIGHT}px 0 ${structure.PADDING.TABLET.LEFT}px`,
         MOBILE: `0 ${structure.PADDING.MOBILE.RIGHT}px 0 ${structure.PADDING.MOBILE.LEFT}px`,
+      },
+    },
+    MARGIN: {
+      SKELETON_SMALL: {
+        DESKTOP: `${structure.MARGIN.SKELETON_SMALL.DESKTOP.TOP}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.LEFT}px`,
+        TABLET: `${structure.MARGIN.SKELETON_SMALL.TABLET.TOP}px ${structure.MARGIN.SKELETON_SMALL.TABLET.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.TABLET.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.TABLET.LEFT}px`,
+        MOBILE: `${structure.MARGIN.SKELETON_SMALL.MOBILE.TOP}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.LEFT}px`,
       },
     },
   },

@@ -18,8 +18,11 @@ const ChainKnowledgeBaseComponent = () => {
 
   return (
     <ChainKnowledgeBaseComponentWrapper>
-      <ItemH gap='32px' flexDirection={isMobile && 'column'}>
-        <ItemV alignItems={isMobile ? 'center' : 'flex-start'}>
+      <MainContentWrapper>
+        <ItemV
+          alignItems={isMobile ? 'center' : 'flex-start'}
+          justifyContent='flex-start'
+        >
           <H2
             fontSize={isMobile ? '2.5rem' : '3rem'}
             fontWeight='600'
@@ -89,7 +92,7 @@ const ChainKnowledgeBaseComponent = () => {
             </ButtonLink>
           </IframeContent>
         </IFrameItem>
-      </ItemH>
+      </MainContentWrapper>
 
       {/* modal */}
       <ChainElevateModal isOpen={isOpen} onClose={close} />
@@ -100,10 +103,34 @@ const ChainKnowledgeBaseComponent = () => {
 export default ChainKnowledgeBaseComponent;
 
 const ChainKnowledgeBaseComponentWrapper = styled.div`
-  margin: 213px auto 0 auto;
+  display: flex;
+  flex: 1;
+  width: inherit;
+`;
+
+const MainContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 128px;
+  justify-content: space-between;
+  flex: 1;
+
+  @media ${device.laptop} {
+    gap: 80px;
+  }
+
+  @media ${device.tablet} {
+    gap: 48px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   @media ${device.mobileL} {
-    margin: 153px auto 0 auto;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center;
   }
 `;
 
@@ -112,13 +139,14 @@ const IFrameImage = styled(ItemH)`
 `;
 
 const IFrameItem = styled.div`
-  padding: 16px;
+  padding: 16px 0px 16px 16px;
   background: #101010;
   display: flex;
   border-radius: 40px;
   flex-direction: column;
   max-width: 592px;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
 
   iframe {
     border-radius: 24px;

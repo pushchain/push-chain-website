@@ -3,8 +3,8 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TbArrowUpRight } from 'react-icons/tb';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
@@ -308,13 +308,7 @@ const ChainHeroSection: FC = () => {
 
 export default ChainHeroSection;
 
-const ChainHeroSectionWrapper = styled.div`
-  margin: 213px auto 0 auto;
-
-  @media ${device.mobileL} {
-    margin: 103px auto 0 auto;
-  }
-`;
+const ChainHeroSectionWrapper = styled.div``;
 
 const HeroText = styled.div`
   display: flex;

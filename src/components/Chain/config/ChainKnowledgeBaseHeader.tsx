@@ -11,15 +11,15 @@ export const ChainKnowledgeBaseHeader = {
   description: () => (
     <div>
       <div style={{ color: '#BBBCD0' }}>
-        Push Chain is a shared-state blockchain designed for universal
-        (interoperable) applications.
+        Push Chain is a true universal blockchain designed to{' '}
+        <b>eliminate fragmentation across all chains</b>.
       </div>
       <div style={{ color: '#CCC' }}>
         <p /> <p />
-        By enabling seamless transactions from any chain, abstracting away gas
-        and wallet complexities, and fostering interoperability across L1s, L2s,
-        and L3s, Push Chain ensures a frictionless web3 experience for users and
-        developers alike.
+        <b>Developers</b> deploy once and instantly become compatible with all
+        supported EVM and non-EVM chains.
+        <p />
+        <b>Users</b> use the same app no matter the chain they come from.
       </div>
     </div>
   ),
@@ -28,5 +28,5 @@ export const ChainKnowledgeBaseHeader = {
   //   title: 'title',
   // },
   image: `knowledge-frame`,
-  learnMore: 'Hey! Want to learn more about Push Chain?',
+  // learnMore: 'Hey! Want to learn more about Push Chain?',
 };

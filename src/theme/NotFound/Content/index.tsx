@@ -1,20 +1,20 @@
 /* eslint-disable */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+import { useLocation } from '@docusaurus/router';
+import clsx from 'clsx';
 import React, { ReactElement, useEffect } from 'react';
 import styled from 'styled-components';
-import clsx from 'clsx';
-import { useLocation } from '@docusaurus/router';
 
 import Translate from '@docusaurus/Translate';
-import type { Props } from '@theme/NotFound/Content';
 import Heading from '@theme/Heading';
+import type { Props } from '@theme/NotFound/Content';
 
 import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
 
-import { Content, ItemH, ItemV, Section } from '../../../css/SharedStyling';
-import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
 import Footer from '@site/src/segments/Footer';
+import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
+import { Content, ItemH, ItemV, Section } from '../../../css/SharedStyling';
 
 export default function NotFoundContent({ className }: Props): ReactElement {
   const location = useLocation();
@@ -69,7 +69,7 @@ export default function NotFoundContent({ className }: Props): ReactElement {
       ) : (
         <PageContainer isDocsOrBlogsPage={isDocsOrBlogsPage!}>
           <Section>
-            <Content>
+            <Content className='skeletonsmall'>
               <main className={clsx('container margin-vert--xl', className)}>
                 <div className='row'>
                   <div className='col col--6 col--offset-3'>
@@ -118,12 +118,12 @@ export default function NotFoundContent({ className }: Props): ReactElement {
 const PageContainer = styled.div<{ isDocsPage?: boolean }>`
   display: flex;
   flex-direction: column;
-  ${({ isDocsOrBlogsPage }) => !isDocsOrBlogsPage && 'background: #e8eff8'};
+  ${({ isDocsOrBlogsPage }) => !isDocsOrBlogsPage && 'background: #000000'};
   ${({ isDocsOrBlogsPage }) => isDocsOrBlogsPage && 'min-height: 100vh;'};
   ${({ isDocsOrBlogsPage }) =>
     isDocsOrBlogsPage
       ? 'color: var(--ifm-color-primary-text) !important'
-      : 'color: #000 !important'};
+      : 'color: #ffffff !important'};
 `;
 
 const Container = styled.div`

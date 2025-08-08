@@ -76,13 +76,7 @@ const ChainEcosystemContent = () => {
 
 export default ChainEcosystemContent;
 
-const ChainEcosystemWrapper = styled.div`
-  margin: 213px auto 0 auto;
-
-  @media ${device.mobileL} {
-    margin: 153px auto 0 auto;
-  }
-`;
+const ChainEcosystemWrapper = styled.div``;
 
 const ChainEcoSystemApps = styled.div`
   margin: 48px auto;

@@ -85,12 +85,8 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 export default ChainKnowledgeBaseArticleContent;
 
 const ChainKnowledgeBaseArticleWrapper = styled.div`
-  margin: 213px auto 0 auto;
   width: 100%;
   position: relative;
-  @media ${device.mobileL} {
-    margin: 153px auto 0 auto;
-  }
 `;
 
 const BreadcrumbList = styled(UL)`

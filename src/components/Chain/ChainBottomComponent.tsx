@@ -77,31 +77,7 @@ const ChainBottomComponent: FC<ChainBottomComponentProps> = ({ showFaq }) => {
 
 export default ChainBottomComponent;
 
-const ChainBottomComponentWrapper = styled.div`
-  margin: ${(props) => (props.showFaq ? '170px auto' : '0 auto')};
-
-  @media ${device.desktopL} {
-    width: 1400px;
-  }
-
-  @media ${device.desktop} {
-    width: 1200px;
-  }
-
-  @media (max-width: 1248px) {
-    width: 100%;
-    padding: 0 24px;
-  }
-
-  @media ${device.tablet} {
-    padding: 0 24px;
-  }
-
-  @media ${device.mobileL} {
-    margin: ${(props) => (props.showFaq ? '153px auto 0 auto' : ' 0 auto')};
-    padding: 0 16px;
-  }
-`;
+const ChainBottomComponentWrapper = styled.div``;
 
 const FaqLink = styled(A)`
   display: flex;

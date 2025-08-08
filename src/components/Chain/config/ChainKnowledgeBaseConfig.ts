@@ -15,7 +15,7 @@ export const knowledgeBaseArticleContent = [
     target: '_self',
     // image: 'knowledge_101',
     subtitle:
-      'Learn about basics of Push Chain. The innovations it introduces, what makes it tick and why is it required!',
+      "Learn about basics of Push Chain, It's innovations and why it is required",
     image: require(`@site/static/assets/website/docshub/WhitePushLogo.png`)
       .default,
     image2x: require(`@site/static/assets/website/docshub/WhitePushLogo@2x.png`)
@@ -34,7 +34,7 @@ export const knowledgeBaseArticleContent = [
     target: '_self',
     // image: 'knowledge_builders',
     subtitle:
-      'Dive into how to build universal apps, the unlocks and how to get started!',
+      'Dive into how to build universal apps, what it unlocks and how to get started!',
     image: require(`@site/static/assets/website/docshub/BuildOnPushIcon.png`)
       .default,
     image2x: require(
@@ -55,7 +55,7 @@ export const knowledgeBaseArticleContent = [
     target: '_self',
     // image: 'knowledge_deepdives',
     subtitle:
-      'Want to know the intricate working of Push? or just a curious fellow? If so, this section is for you ❤️',
+      'Want to know the intricate working of Push? or just a curious fellow? Eitherway, say hello!',
     image: require(
       `@site/static/assets/website/docshub/TechnicalDeepDivesIcon.png`
     ).default,
@@ -93,7 +93,7 @@ export const knowledgeBaseArticleContent = [
     id: 'tokenomics',
     // image: 'knowledge_tokenomics',
     title: 'Explore Tokenomics',
-    subtitle: `Learn how Push Chain's tokenomics incentivizes all actors and ensures sustainable network that's built to last`,
+    subtitle: `Learn how our tokenomics incentivizes and ensures sustainable network that's built to last`,
     url: 'tokenomics',
     target: '_self',
     ctatitle: 'Learn Token Design',
@@ -113,7 +113,7 @@ export const knowledgeBaseArticleContent = [
     // image: 'frequently-asked-questions',
     title: 'FAQs',
     subtitle:
-      'The place to find answers to all the popular questions the community has asked. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
+      'The place to find answers to all the popular questions the community has asked',
     url: 'faq',
     target: '_self',
     ctatitle: 'Read More',
