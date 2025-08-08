@@ -543,6 +543,13 @@ export default function Home() {
                   }
                   playing
                   playContinuously
+                  config={{
+                    file: {
+                      attributes: {
+                        controlsList: 'nofullscreen',
+                      },
+                    },
+                  }}
                 />
                 <H2
                   fontSize={isMobile ? '2.5rem' : '4rem'}
@@ -1350,6 +1357,8 @@ const FinalSection = styled.div`
   justify-content: center;
   width: 800px;
   height: 600px;
+  pointer-events: none;
+  touch-action: none;
 
   h2 {
     margin-top: auto;
