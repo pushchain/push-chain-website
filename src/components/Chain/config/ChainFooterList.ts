@@ -3,17 +3,17 @@ export const ChainFooterList = {
     {
       title: 'Knowledge Base',
       href: '/knowledge',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Blog',
       href: '/blog',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Litepaper',
       href: 'https://push.org/litepaper.pdf',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Brand Kit',
@@ -52,12 +52,12 @@ export const ChainFooterList = {
     {
       title: 'Get started',
       href: '/docs/chain',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Docs',
       href: '/docs',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Github',

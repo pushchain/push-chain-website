@@ -321,6 +321,9 @@ const Glassy = ({ item }) => {
                           file: {
                             attributes: {
                               controlsList: 'nofullscreen',
+                              muted: true,
+                              playsInline: true,
+                              playsinline: true,
                             },
                           },
                         }}
@@ -725,13 +728,16 @@ const Container = styled.div`
     flex: ${(props) =>
       props.fluid && props.fluid.tablet ? '1 0 auto' : 'initial'};
     width: ${(props) => (props.fluid && props.fluid.tablet ? 'auto' : '100%')};
+    pointer-events: none;
+    touch-action: none;
   }
 
   @media ${device.mobileL} {
     flex: ${(props) => (props.fluid && props.fluid.mobile ? '1' : 'initial')};
     width: ${(props) => (props.fluid && props.fluid.mobile ? 'auto' : '100%')};
     display: ${(props) => props.hide && props.hide.mobile && 'none'};
-
+    pointer-events: none;
+    touch-action: none;
     min-height: 100%;
     max-height: 100%;
   }
