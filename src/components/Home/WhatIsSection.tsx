@@ -36,6 +36,7 @@ export const WhatIsSection = () => {
 
       <LearnMoreLink
         href='/docs'
+        title={t('home.whatis-section.bottomLinkTitle')}
         target='_self'
         border='none'
         fontSize='1.125rem'
@@ -45,7 +46,7 @@ export const WhatIsSection = () => {
         width='100%'
         color='#E163FF'
       >
-        {t('home.whatis-section.bottomTextLink')}
+        {t('home.whatis-section.bottomLinkText')}
         <TbArrowRight className='start-svg' />
       </LearnMoreLink>
     </>

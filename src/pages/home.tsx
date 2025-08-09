@@ -162,7 +162,7 @@ export default function Home() {
                   <HeroCTA gap='18px' flex='0'>
                     <A
                       href={useBaseUrl('/docs')}
-                      title={t('home.hero-section.alt-start-button')}
+                      title={t('home.hero-section.primary-button-title')}
                       background='#D548EC'
                       borderRadius='16px'
                       border='1px solid rgba(255, 255, 255, 0.30)'
@@ -180,7 +180,7 @@ export default function Home() {
                     <PortalA
                       href='/knowledge'
                       target='_self'
-                      title={t('home.hero-section.alt-start-button')}
+                      title={t('home.hero-section.secondary-button-title')}
                       fontSize='1.125rem'
                       fontWeight='600'
                       letterSpacing='-0.03em'
@@ -205,7 +205,7 @@ export default function Home() {
         </Section>
 
         {/* GLASSY SECTION */}
-        <Section id='features-of-push-chain'>
+        <Section id='innovations-of-push-chain'>
           <Content>
             <FeaturesTopSection maxWidth={'840px'} margin='0px auto'>
               <H2
@@ -313,20 +313,20 @@ export default function Home() {
         </Section>
 
         {/* SHOWCASE SECTION */}
-        {/* <ShowcaseSection id='showcase'>
+        {/* <ShowcaseSection id='ecosystem'>
           <Content alignSelf='center'>
             <ShowcasePartners />
           </Content>
         </ShowcaseSection> */}
 
-        {/* STATS SECTION */}
-        <Section>
+        {/* USEFUL STATS SECTION */}
+        <Section id='useful-stats'>
           <StatsContent>
             <StatsSection />
           </StatsContent>
         </Section>
 
-        {/* WHY PUSH AND BLOG */}
+        {/* PUSH CHAIN BLOG */}
         <BlogSection id='blog'>
           <Content alignSelf='center'>
             <ItemH>

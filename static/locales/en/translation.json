@@ -133,7 +133,9 @@
       "title": "Any Chain, Any App, All Users.\nOne Push Chain.",
       "description": "The first Layer 1 built for Universal Apps. \nBuild & Deploy once, onboard users from any chain.",
       "primary-button": "Start Building",
-      "secondary-button": "Explore Knowledge Base"
+      "primary-button-title": "Start your builder's journey with Push Chain!",
+      "secondary-button": "Explore Knowledge Base",
+      "secondary-button-title": "Learn and explore Push Chain"
     },
     "whatis-section": {
       "titleFirst": "A True",
@@ -141,7 +143,8 @@
       "titleThird": "Chain",
       "bottomTextFirst": "Deploy Once,",
       "bottomTextSecond": "Reach Everywhere",
-      "bottomTextLink": "Get Started"
+      "bottomLinkText": "Get Started",
+      "bottomLinkTitle": "Goto Documentation Hub"
     },
     "chain-features-section": {
       "header": {
@@ -208,7 +211,7 @@
         "title": "your app's user base by going universal",
         "secondary": "with zero effort!",
         "ctatext": "Start Building",
-        "ctatitle": "Visit Developer Docs"
+        "ctatitle": "Deploy once, 10x your userbase. Visit Developer Docs."
       }
     },
     "stats-section": {
@@ -235,23 +238,6 @@
           "description": "1s"
         }
       }
-    },
-    "email-section": {
-      "title": "Never Miss an Update",
-      "text": "Sign up and stay up to date with ecosystem announcements, giveaways and more.",
-      "email-input": "Your Email",
-      "submit-button": "Sign Up",
-      "loading-submit-button": "Please Wait..."
-    },
-    "why-push-section": {
-      "title": "Why do you need Push?",
-      "text": "Before Push, blockchain applications, service providers, and wallets had no way to natively communicate with each other. Most communication in today’s ecosystem relies on traditional web2 solutions, resulting in a broken ecosystem and problems in daily use.",
-      "chain-agnostic-text": "Chain Agnostic",
-      "immediate-communication-text": "Immediate Communication",
-      "decentralized-stack-text": "Decentralized Stack",
-      "improved-ux-text": "Improved UX",
-      "security-alerts-text": "Security Alerts",
-      "censorship-resistant-text": "Censorship Resistant"
     },
     "insights-section": {
       "title": "Push Insights & Updates",
@@ -319,6 +305,25 @@
       "title": "Take your user engagement to the next level.",
       "subtitle": "Engage users, build communities, and enable a thriving ecosystem with Push.",
       "buttonText": "Start Building"
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "Never Miss an Update",
+      "text": "Sign up and stay up to date with ecosystem announcements, giveaways and more.",
+      "email-input": "Your Email",
+      "email-input-placeholder": "Enter your email address",
+      "email-input-title": "Subscribe to Push Chain newsletter for updates",
+      "email-input-aria-label": "Email address for newsletter subscription",
+      "submit-button": "Sign Up",
+      "submit-button-title": "Subscribe to Push Chain newsletter",
+      "submit-button-aria-label": "Subscribe to newsletter",
+      "loading-submit-button": "Please Wait...",
+      "arrow-button-aria-label": "Subscribe to newsletter",
+      "arrow-button-title": "Subscribe to Push Chain updates",
+      "form-aria-label": "Newsletter subscription form",
+      "success-message-aria-label": "Subscription successful",
+      "error-message-aria-label": "Subscription error message"
     }
   },
   "frens": {
