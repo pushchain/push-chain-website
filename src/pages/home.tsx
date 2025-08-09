@@ -327,19 +327,28 @@ export default function Home() {
         </Section>
 
         {/* PUSH CHAIN BLOG */}
-        <BlogSection id='blog'>
+        <BlogSection 
+          id='blog'
+          role='region'
+          aria-label={t('home.blog-section.section-aria-label')}
+        >
           <Content alignSelf='center'>
             <ItemH>
               <ItemH justifyContent='flex-start' alignItems='center' gap='8px'>
-                <StarSolidIcon color='#D98AEC' />
+                <StarSolidIcon 
+                  color='#D98AEC' 
+                  aria-hidden='true'
+                />
                 <H2
                   color='#CCA4F0'
                   fontSize={'0.75rem'}
                   fontWeight='500'
                   letterSpacing='0.6px'
                   lineHeight='120%'
+                  role='text'
+                  aria-label={t('home.blog-section.subtitle-aria-label')}
                 >
-                  NEWS, DEVLOGS & IDEAS
+                  {t('home.blog-section.subtitle')}
                 </H2>
               </ItemH>
 
@@ -347,7 +356,8 @@ export default function Home() {
                 <ItemH justifyContent='flex-end'>
                   <SlideLink
                     href='https://push.org/blog'
-                    title='Explore all articles'
+                    title={t('home.blog-section.explore-link-title')}
+                    aria-label={t('home.blog-section.explore-link-aria-label')}
                     hoverBackground='transparent'
                     hover='transparent'
                     background='transparent'
@@ -357,8 +367,11 @@ export default function Home() {
                     padding='0px 0px'
                     target='_blank'
                   >
-                    <SpanLink>Explore More Articles</SpanLink>
-                    <BsArrowRight className='anchorSVGlink' />
+                    <SpanLink>{t('home.blog-section.explore-link-text')}</SpanLink>
+                    <BsArrowRight 
+                      className='anchorSVGlink' 
+                      aria-hidden='true'
+                    />
                   </SlideLink>
                 </ItemH>
               )}
@@ -371,8 +384,11 @@ export default function Home() {
               fontWeight='500'
               lineHeight='120%'
               letterSpacing='0.6px'
+              role='heading'
+              aria-level='2'
+              aria-label={t('home.blog-section.title-aria-label')}
             >
-              Your Pulse of Push Chain
+              {t('home.blog-section.title')}
             </H2>
 
             <RecentBlogPosts />

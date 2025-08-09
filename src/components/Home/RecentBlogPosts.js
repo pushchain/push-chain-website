@@ -2,10 +2,11 @@
 import React from 'react';
 
 // External Components
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 // Internal Components
-import { Button, H2, ItemH, Span, Image } from '@site/src/css/SharedStyling';
+import { Button, H2, Image, ItemH, Span } from '@site/src/css/SharedStyling';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
@@ -19,19 +20,67 @@ import {
 
 const RecentBlogPosts = () => {
   const { recentBlogs } = useFetchRecentBlogs();
+  const { t } = useTranslation();
+
+  // Handle loading and error states
+  if (!recentBlogs) {
+    return (
+      <BlogPostList>
+        <LoadingMessage role='status' aria-live='polite'>
+          {t('home.blog-section.loading-text')}
+        </LoadingMessage>
+      </BlogPostList>
+    );
+  }
+
+  if (recentBlogs.length === 0) {
+    return (
+      <BlogPostList>
+        <ErrorMessage role='status' aria-live='polite'>
+          {t('home.blog-section.no-posts-text')}
+        </ErrorMessage>
+      </BlogPostList>
+    );
+  }
 
   return (
-    <BlogPostList>
+    <BlogPostList
+      role='list'
+      aria-label={t('home.blog-section.blog-posts-list-aria-label')}
+    >
       {recentBlogs?.slice(0, 3).map((postItem, index) => {
+        const blogPostAriaLabel = t('home.blog-section.blog-post-aria-label', {
+          title: postItem?.title,
+        });
+        const blogPostTitle = `${t(
+          'home.blog-section.blog-post-title-prefix'
+        )}${postItem?.title}`;
+
         return (
           <BlogPostCardPrimary
             key={index}
+            role='listitem'
+            tabIndex={0}
             onClick={() => {
               window.open(`${postItem?.link}`, '_blank');
             }}
-            alt={`Read blog post - ${postItem?.title}`}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(`${postItem?.link}`, '_blank');
+              }
+            }}
+            title={blogPostTitle}
+            aria-label={blogPostAriaLabel}
+            style={{ cursor: 'pointer' }}
           >
-            <Image src={postItem?.imageUrl} width='100%' loading='lazy' />
+            <Image
+              src={postItem?.imageUrl}
+              width='100%'
+              loading='lazy'
+              alt={`Featured image for ${postItem?.title}`}
+              role='img'
+            />
 
             <BodyItem>
               <ItemH
@@ -41,6 +90,8 @@ const RecentBlogPosts = () => {
                 color='#fff'
                 justifyContent='space-between'
                 className='date'
+                role='group'
+                aria-label='Post metadata'
               >
                 <Date
                   date={postItem?.pubDate}
@@ -60,11 +111,13 @@ const RecentBlogPosts = () => {
                 color='#fff'
                 lineHeight='135%'
                 letterSpacing='normal'
+                role='heading'
+                aria-level='3'
               >
                 {postItem?.title}
               </H2>
 
-              <TextSpan>{postItem?.description}</TextSpan>
+              <TextSpan role='text'>{postItem?.description}</TextSpan>
             </BodyItem>
           </BlogPostCardPrimary>
         );
@@ -171,6 +224,31 @@ const TextSpan = styled(Span)`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   margin: 16px 0 0 0;
+  text-align: start;
+`;
+
+const LoadingMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #bbbcd0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  min-height: 200px;
+`;
+
+const ErrorMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #bbbcd0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  min-height: 200px;
 `;
 
 export default RecentBlogPosts;

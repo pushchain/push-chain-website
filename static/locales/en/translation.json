@@ -239,9 +239,21 @@
         }
       }
     },
-    "insights-section": {
-      "title": "Push Insights & Updates",
-      "link-text": "Explore all Articles"
+    "blog-section": {
+      "subtitle": "NEWS, DEVLOGS & IDEAS",
+      "subtitle-aria-label": "Blog category information",
+      "title": "Your Pulse of Push Chain",
+      "title-aria-label": "Latest Push Chain blog posts and updates",
+      "explore-link-text": "Explore More Articles",
+      "explore-link-title": "Visit Push Chain blog to read all articles and updates",
+      "explore-link-aria-label": "Navigate to Push Chain blog page",
+      "section-aria-label": "Push Chain blog posts and news section",
+      "blog-posts-list-aria-label": "Recent Push Chain blog posts",
+      "blog-post-aria-label": "Read blog post about {title}",
+      "blog-post-title-prefix": "Read blog post - ",
+      "loading-text": "Loading latest blog posts...",
+      "error-text": "Unable to load blog posts at this time",
+      "no-posts-text": "No blog posts available"
     },
     "investors-section": {
       "title": "Built by the team trusted by pioneers of web3"
