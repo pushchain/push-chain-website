@@ -37,7 +37,7 @@ const ChainElevateModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                 <H3
                   color='#FFF'
                   fontSize='36px'
-                  fontFamily='N27'
+                  fontFamily='DM Sans'
                   textAlign='center'
                   fontWeight='500'
                   lineHeight='120%'
@@ -63,7 +63,6 @@ const ChainElevateModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
                 <Span
                   color='#000'
                   fontSize={isMobile ? '20px' : '24px'}
-                  fontFamily='N27'
                   fontWeight='500'
                   lineHeight='120%'
                   letterSpacing='-0.48px'
@@ -167,7 +166,7 @@ const InputSection = styled.div`
   gap: 33px;
 
   span {
-    font-family: N27;
+    font-family: DM Sans;
   }
 
   @media ${device.tablet} {

@@ -25,7 +25,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'push-protocol', // Usually your GitHub org/user name.
-  projectName: 'push-website', // Usually your repo name.
+  projectName: 'push-chain-website', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
   onBrokenLinks: 'throw',
@@ -112,7 +112,8 @@ const config = {
           sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the 'edit this page' links.
-          editUrl: 'https://github.com/push-protocol/push-website/blob/main',
+          editUrl:
+            'https://github.com/push-protocol/push-chain-website/blob/main',
         },
         blog: false,
         theme: {
@@ -142,8 +143,24 @@ const config = {
       tagName: 'link',
       attributes: {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet',
       },
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `
+        (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:6483480,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      `,
     },
     {
       tagName: 'script',
@@ -181,7 +198,7 @@ const config = {
         logo: {
           alt: 'Push Logo',
           src: '/assets/website/docshub/PushLogoBlack@3x.png',
-          srcDark: '/assets/website/docshub/PushLogo@3x.png',
+          srcDark: '/assets/website/segments/PushLogoTextWhite@3x.webp',
           href: '/',
         },
         items: [

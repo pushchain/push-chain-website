@@ -44,7 +44,7 @@ const CookieComponent = () => {
             fontWeight='400'
             letterSpacing='normal'
             fontSize={'14px'}
-            fontFamily='FK Grotesk Neue'
+            fontFamily='DM Sans'
             lineHeight='130%'
             textAlign='left'
           >
@@ -124,7 +124,6 @@ const AcceptButton = styled(Button)`
   background: #d548ec;
   font-size: 14px;
   font-weight: 500;
-  font-family: FK Grotesk Neue;
 `;
 
 const RejectButton = styled(Button)`
@@ -138,7 +137,6 @@ const RejectButton = styled(Button)`
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  font-family: FK Grotesk Neue;
 
   &:hover {
     background-color: transparent !important;

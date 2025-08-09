@@ -44,7 +44,9 @@ const NotificationContainer = styled.div`
   width: 397px;
   cursor: pointer;
   box-sizing: border-box;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   overflow: hidden;
 
   @media (max-width: 425px) {

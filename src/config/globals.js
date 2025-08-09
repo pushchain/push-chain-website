@@ -2,7 +2,7 @@
 export const size = {
   mobileS: 320,
   mobileM: 395,
-  mobileL: 470,
+  mobileL: 525,
   tablet: 768,
   laptop: 1024,
   laptopM: 1260,
@@ -33,16 +33,38 @@ export const structure = {
       LEFT: 48,
     },
     TABLET: {
-      TOP: 90,
+      TOP: 100,
       RIGHT: 32,
-      BOTTOM: 90,
+      BOTTOM: 100,
       LEFT: 32,
     },
     MOBILE: {
-      TOP: 90,
+      TOP: 125,
       RIGHT: 16,
-      BOTTOM: 90,
+      BOTTOM: 125,
       LEFT: 16,
+    },
+  },
+  MARGIN: {
+    SKELETON_SMALL: {
+      DESKTOP: {
+        TOP: 120,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
+      TABLET: {
+        TOP: 80,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
+      MOBILE: {
+        TOP: 20,
+        LEFT: 0,
+        BOTTOM: 0,
+        RIGHT: 0,
+      },
     },
   },
 };
@@ -67,19 +89,19 @@ const GLOBALS = {
     HEIGHT: 78,
     OUTER_MARGIN: {
       DESKTOP: {
-        TOP: 44,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
       },
       TABLET: {
-        TOP: 24,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
       },
       MOBILE: {
-        TOP: 8,
+        TOP: 16,
         LEFT: 0,
         BOTTOM: 0,
         RIGHT: 0,
@@ -88,27 +110,27 @@ const GLOBALS = {
     OUTER_PADDING: {
       DESKTOP: {
         TOP: 0,
-        LEFT: 16,
+        LEFT: 12,
         BOTTOM: 0,
-        RIGHT: 16,
+        RIGHT: 12,
       },
       TABLET: {
-        TOP: 16,
-        LEFT: 16,
-        BOTTOM: 16,
-        RIGHT: 16,
+        TOP: 12,
+        LEFT: 12,
+        BOTTOM: 12,
+        RIGHT: 12,
       },
       MOBILE: {
         TOP: 12,
-        LEFT: 16,
+        LEFT: 12,
         BOTTOM: 12,
-        RIGHT: 16,
+        RIGHT: 12,
       },
     },
   },
 
   STRUCTURE: {
-    MAX_WIDTH: size.laptopL,
+    MAX_WIDTH: size.laptopM,
     PADDING: {
       DESKTOP: `${structure.PADDING.DESKTOP.TOP}px ${structure.PADDING.DESKTOP.RIGHT}px ${structure.PADDING.DESKTOP.BOTTOM}px ${structure.PADDING.DESKTOP.LEFT}px`,
       TABLET: `${structure.PADDING.TABLET.TOP}px ${structure.PADDING.TABLET.RIGHT}px ${structure.PADDING.TABLET.BOTTOM}px ${structure.PADDING.TABLET.LEFT}px`,
@@ -124,6 +146,13 @@ const GLOBALS = {
         DESKTOP: `0 ${structure.PADDING.DESKTOP.RIGHT}px 0 ${structure.PADDING.DESKTOP.LEFT}px`,
         TABLET: `0 ${structure.PADDING.TABLET.RIGHT}px 0 ${structure.PADDING.TABLET.LEFT}px`,
         MOBILE: `0 ${structure.PADDING.MOBILE.RIGHT}px 0 ${structure.PADDING.MOBILE.LEFT}px`,
+      },
+    },
+    MARGIN: {
+      SKELETON_SMALL: {
+        DESKTOP: `${structure.MARGIN.SKELETON_SMALL.DESKTOP.TOP}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.DESKTOP.LEFT}px`,
+        TABLET: `${structure.MARGIN.SKELETON_SMALL.TABLET.TOP}px ${structure.MARGIN.SKELETON_SMALL.TABLET.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.TABLET.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.TABLET.LEFT}px`,
+        MOBILE: `${structure.MARGIN.SKELETON_SMALL.MOBILE.TOP}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.RIGHT}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.BOTTOM}px ${structure.MARGIN.SKELETON_SMALL.MOBILE.LEFT}px`,
       },
     },
   },

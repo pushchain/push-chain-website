@@ -4,7 +4,7 @@
 import Link from '@docusaurus/Link';
 import styled from 'styled-components';
 // Internal Components
-import { A, ItemH, Span } from '@site/src/css/SharedStyling';
+import { ItemH, Span } from '@site/src/css/SharedStyling';
 
 // Internal Configs
 import { device } from '@site/src/config/globals';
@@ -203,12 +203,11 @@ const Answer = styled(ItemH)`
   padding: 0 0 24px 0;
 
   & ${Span} {
-    color: #000;
-    font-family: N27;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 140%;
+    color: #bbbcd0;
 
     @media ${device.mobileL} {
       font-size: 16px;
@@ -217,17 +216,5 @@ const Answer = styled(ItemH)`
 
   & Span:not(:first-child) {
     margin-top: 24px;
-  }
-`;
-
-const AMod = styled(A)`
-  color: #e79cff !important;
-  font-weight: 400;
-  background: transparent;
-  padding: 0px;
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
   }
 `;

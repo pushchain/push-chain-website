@@ -418,8 +418,8 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
     // Create ScrollTrigger for TOC sticky behavior
     scrollTrigger = ScrollTrigger.create({
       trigger: contentRef.current,
-      start: 'top top+=24',
-      end: `bottom top+=${endOffset + 24}`, // Add 24px margin to prevent premature bottom positioning
+      start: 'top top+=112',
+      end: `bottom top+=${endOffset + 112}`, // Add 24px margin to prevent premature bottom positioning
       onUpdate: (self) => {
         const progress = self.progress;
         const direction = self.direction;
@@ -428,7 +428,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
           // Parent is in viewport - make TOC sticky
           gsap.set(tocRef.current, {
             position: 'fixed',
-            top: '24px',
+            top: '112px',
             zIndex: 100,
           });
         } else if (progress >= 1 && direction === 1) {
@@ -676,7 +676,7 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
         {!isTablet && toc.length > 0 && (
           <DesktopTOC
             ref={tocRef}
-            background='#FFF'
+            background='#101010'
             padding='32px'
             borderRadius='32px'
             alignItems='flex-start'
@@ -788,7 +788,7 @@ export default ChainKnowledgeBaseIndexList;
 
 const TextItem = styled.div`
   width: inherit;
-  color: #000;
+  color: #fff;
   &:not(:first-of-type) {
     margin: 12px 0 0 auto;
   }
@@ -798,8 +798,10 @@ const TextItem = styled.div`
   }
 
   h1 {
-    color: #000;
-    font-family: N27;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 3rem;
     font-style: normal;
     font-weight: 500;
@@ -809,8 +811,10 @@ const TextItem = styled.div`
   }
 
   h2 {
-    color: #000;
-    font-family: N27;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 2.5rem;
     font-style: normal;
     font-weight: 500;
@@ -820,8 +824,10 @@ const TextItem = styled.div`
   }
 
   h3 {
-    color: #000;
-    font-family: N27;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 2rem;
     font-style: normal;
     font-weight: 500;
@@ -831,8 +837,10 @@ const TextItem = styled.div`
   }
 
   h4 {
-    color: #000;
-    font-family: N27;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 500;
@@ -842,8 +850,10 @@ const TextItem = styled.div`
   }
 
   h5 {
-    color: #000;
-    font-family: N27;
+    color: #fff;
+    font-family:
+      DM Sans,
+      sans-serif;
     font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
@@ -851,16 +861,6 @@ const TextItem = styled.div`
     letter-spacing: -0.64px;
     margin: 0 0 16px 0;
   }
-
-  /* Apply margin-top to all h tags except the first one */
-  // h1:not(:first-child),
-  // h2:not(:first-child),
-  // h3:not(:first-child),
-  // h4:not(:first-child),
-  // h5:not(:first-child),
-  // h6:not(:first-child) {
-  //   margin-top: 24px;
-  // }
 
   /* Ensure the first heading has no top margin */
   h1:first-child,
@@ -912,18 +912,21 @@ const TextItem = styled.div`
     border-radius: 12px;
     padding: 16px 20px;
     margin: 24px 0;
-    border: 2px solid #fff;
-    border-left: 6px solid;
+    border: none;
+    border-left: 5px solid;
     background-color: #ffffff55;
   }
 
   .admonition-info {
-    border-left-color: #2196f3;
+    border-left-color: #a2c9ff;
+    background: #002d6d;
+    color: #fff;
   }
 
   .admonition-warning {
     background-color: #fff3e0;
     border-left-color: #ff9800;
+    color: #000;
   }
 
   .admonition-caution {
@@ -939,18 +942,30 @@ const TextItem = styled.div`
   }
 
   .admonition-title {
-    font-weight: 600;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
     margin-bottom: 8px;
-    font-family: N27;
   }
 
   .admonition-content {
     margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
   }
 
   .admonition-content p {
     margin: 0 0 12px 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
+  }
+
+  .admonition-content a {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 165%;
   }
 
   .admonition-content p:last-child {
@@ -969,7 +984,7 @@ const TextItem = styled.div`
 const ListItem = styled.a`
   display: block;
   color: ${({ isActive }) => (isActive ? '#cf59e2' : '#757d8d')};
-  font-family: N27;
+  font-family: DM Sans;
   font-size: ${({ level }) =>
     level === 1 ? '1.25em' : level === 2 ? '1.125em' : '1em'};
   margin-left: ${({ level, highestLevel }) =>
@@ -990,7 +1005,7 @@ const MobileTOCWrapper = styled.div`
   margin-top: 16px;
   padding: 20px;
   border-radius: 24px;
-  background: #f8f8f8;
+  background: #101010;
   width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   ul {

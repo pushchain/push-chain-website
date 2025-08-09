@@ -35,12 +35,11 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
         </BreadcrumbList>
 
         <H1
-          fontSize='3.375rem'
-          fontWeight='500'
-          fontFamily='N27'
-          lineHeight='120%'
-          letterSpacing='-1.04px'
-          color='#000'
+          fontSize='3rem'
+          fontWeight='600'
+          lineHeight='135%'
+          letterSpacing='-1.1px'
+          color='#fff'
         >
           {item?.title}
         </H1>
@@ -86,12 +85,8 @@ const ChainKnowledgeBaseArticleContent = ({ item }) => {
 export default ChainKnowledgeBaseArticleContent;
 
 const ChainKnowledgeBaseArticleWrapper = styled.div`
-  margin: 213px auto 0 auto;
   width: 100%;
   position: relative;
-  @media ${device.mobileL} {
-    margin: 153px auto 0 auto;
-  }
 `;
 
 const BreadcrumbList = styled(UL)`
@@ -101,16 +96,18 @@ const BreadcrumbList = styled(UL)`
   padding: 0;
   margin: 0;
   align-items: center;
-  color: #000;
+  color: #fff;
 `;
 
 const BreadcrumbLink = styled(Link)`
   text-decoration: none;
   font-size: 1.25em;
-  font-weight: 400;
-  font-family: 'N27', sans-serif;
+  font-weight: 500;
+  font-family:
+    DM Sans,
+    sans-serif;
   line-height: 140%;
-  color: #000;
+  color: #fff;
   @media ${device.tablet} {
     font-size: 1em;
   }

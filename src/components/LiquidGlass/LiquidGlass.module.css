@@ -1,0 +1,10 @@
+/* 
+Apple's Liquid Glass seems to add a certain level of reflection in addition to refraction.
+The following code is only an approximation of the appearance of the edge and opacity of an element.
+*/
+/* handle it on outside component */
+.box {
+  /* background: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 4px 0px white;
+  cursor: pointer; */
+}

@@ -28,6 +28,19 @@ export type signupType = {
   textColor?: string;
 };
 
+/**
+ * MailingSignup component provides a user interface for subscribing to a mailing list.
+ * It includes an input field for the email address and optional buttons for submission.
+ * The component supports loading states and displays responses or errors based on the email validation process.
+ *
+ * @param {signupType} props - The properties object.
+ * @param {boolean} [props.showButton] - Determines if the submit button should be displayed.
+ * @param {boolean} [props.showArrow] - Determines if the arrow icon button should be displayed.
+ * @param {string} [props.background] - Background color for the input field and wrapper.
+ * @param {string} [props.borderColor] - Border color for the wrapper.
+ * @param {string} [props.inputWidth] - Width of the input field.
+ * @param {string} [props.textColor] - Text color for the input field.
+ */
 export const MailingSignup = (props: signupType) => {
   const [isLoading, apiResponse, emailError, onEmailSubmit] =
     useEmailValidationAndSend();
@@ -41,23 +54,39 @@ export const MailingSignup = (props: signupType) => {
         background={props.background}
         border={props.borderColor}
         onSubmit={onEmailSubmit}
+        role='form'
+        aria-label={t('components.mailing-signup.form-aria-label')}
       >
         <SignupInputField
-          type='text'
+          type='email'
           name='email'
-          placeholder='Email Address'
+          placeholder={t('components.mailing-signup.email-input-placeholder')}
+          title={t('components.mailing-signup.email-input-title')}
+          aria-label={t('components.mailing-signup.email-input-aria-label')}
           background={props.background}
           inputWidth={props.inputWidth}
           textColor={props.textColor}
           tabIndex={0}
           required
+          autoComplete='email'
+          autoCapitalize='none'
+          autoCorrect='off'
+          spellCheck='false'
         />
         {props.showButton && (
           <>
-            <Button tabIndex={0} type='submit'>
+            <Button
+              tabIndex={0}
+              type='submit'
+              title={t('components.mailing-signup.submit-button-title')}
+              aria-label={t(
+                'components.mailing-signup.submit-button-aria-label'
+              )}
+              disabled={isLoading}
+            >
               {isLoading
-                ? t('home.email-section.loading-submit-button')
-                : t('home.email-section.submit-button')}
+                ? t('components.mailing-signup.loading-submit-button')
+                : t('components.mailing-signup.submit-button')}
             </Button>
             {isLoading ? <MaskInput /> : null}
           </>
@@ -65,10 +94,14 @@ export const MailingSignup = (props: signupType) => {
         {props.showArrow && (
           <>
             <IconButton
-              aria-label='Subscribe'
+              aria-label={t(
+                'components.mailing-signup.arrow-button-aria-label'
+              )}
+              title={t('components.mailing-signup.arrow-button-title')}
               className='icon'
               tabIndex={0}
               type='submit'
+              disabled={isLoading}
             >
               {!isLoading && <AiOutlineArrowRight />}
               {/* {isLoading && <MaskInput />} */}
@@ -79,12 +112,24 @@ export const MailingSignup = (props: signupType) => {
       </Wrapper>
 
       {apiResponse && (
-        <ResponseSpan className='msg' color='green'>
+        <ResponseSpan
+          className='msg'
+          color='green'
+          role='status'
+          aria-label={t('components.mailing-signup.success-message-aria-label')}
+          aria-live='polite'
+        >
           {apiResponse}
         </ResponseSpan>
       )}
       {!apiResponse && emailError && (
-        <ResponseSpan className='msg' color='#D98AEC'>
+        <ResponseSpan
+          className='msg'
+          color='#D98AEC'
+          role='alert'
+          aria-label={t('components.mailing-signup.error-message-aria-label')}
+          aria-live='assertive'
+        >
           {emailError}
         </ResponseSpan>
       )}
@@ -156,7 +201,9 @@ const SignupInputField = styled.input`
   all: unset;
 
   box-sizing: border-box;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -221,7 +268,9 @@ const IconButton = styled.button`
 const ResponseSpan = styled(Span)`
   margin: 0;
   padding: 0;
-  font-family: FK Grotesk Neue;
+  font-family:
+    DM Sans,
+    san-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

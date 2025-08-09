@@ -1,356 +1,262 @@
 {
   "header": {
-    "docs": {
-      "title": "Docs",
-      "developer-guides": "Documentation Hub",
-      "alt-developer-guides": "Explore all things Push in Documentation Hub",
-      "governance-guides": "Governance Hub",
-      "alt-governance-guides": "Explore all Governance related things in Governance Hub",
-      "whitepaper": "Whitepaper",
-      "alt-whitepaper": "Read Whitepaper"
+    "logo": {
+      "imagealt": "Image of Push Chain Logo",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "Go to Homepage"
     },
-    "more": {
-      "title": "Learn More",
-      "faq": "FAQ",
-      "alt-faq": "Frequently Asked Questions",
-      "blog": "Blog",
-      "alt-blog": "Read Our Story",
-      "push-ecosystem": "Push Ecosystem",
-      "alt-push-ecosystem": "Push Ecosystem",
-      "media-kit": "Media Kit",
-      "alt-media-kit": "Push Media Kit"
-    },
-    "push-dao": {
-      "title": "Push DAO",
-      "notion": "Push DAO Notion",
-      "alt-notion": "Push DAO Notion",
-      "forum": "Forum",
-      "alt-forum": "Push Governance Forum",
-      "grants": "Grants",
-      "alt-grants": "Push Grants",
-      "missions": "Missions",
-      "alt-missions": "Push Missions"
-    },
-    "language": {
-      "title": "Language",
-      "english": "English",
-      "spanish": "Español",
-      "hindi": "हिंदी"
-    },
-    "app-button": {
-      "title": "Launch App",
-      "alt-title": "Push Dapp"
-    },
-    "products": {
-      "title": "Products",
+    "testnet": {
+      "title": "Testnet",
       "link1": {
-        "title": "Push Notifications",
-        "subtitle": "Web3 native notification alerts"
+        "title": "Push Scan",
+        "subtitle": "Block explorer for Push Chain"
       },
       "link2": {
-        "title": "Push Chat",
-        "subtitle": "Web3 native chat protocol with groups"
-      },
-      "link3": {
-        "title": "Push Video",
-        "subtitle": "Decentralized video calls"
-      },
-      "link4": {
-        "title": "Push Spaces",
-        "subtitle": "Decentralized audio streaming"
+        "title": "Faucet",
+        "subtitle": "Get testnet tokens"
       }
     },
     "developers": {
       "title": "Developers",
       "link1": {
-        "title": "Documentation Hub",
-        "subtitle": "Curated wiki of Push Protocol"
+        "title": "Get Started",
+        "subtitle": "Intro to building on Push Chain"
       },
       "link2": {
-        "title": "Examples",
-        "subtitle": "Gallery of collaborative experiencess"
+        "title": "Quick Start",
+        "subtitle": "Setup dev environment in seconds"
       },
       "link3": {
-        "title": "Notification Quickstart",
-        "subtitle": "Setup notifications in 2 mins"
+        "title": "Tutorials",
+        "subtitle": "Step-by-step guides to build with Push"
       },
       "link4": {
-        "title": "Chat Quickstart",
-        "subtitle": "Setup chat in 2 mins"
+        "title": "GitHub",
+        "subtitle": "View core code and open-source tools"
       },
       "link5": {
-        "title": "Hackers",
-        "subtitle": "Are you a hacker? Get a head start here"
-      },
-      "link6": {
-        "title": "React Playground",
-        "subtitle": "Plug and play react components"
-      },
-      "link7": {
         "title": "Developer Discord",
-        "subtitle": "Join our community of developers"
+        "subtitle": "Connect with the dev community"
       }
     },
     "community": {
       "title": "Community",
       "link1": {
-        "title": "Ecosystem",
-        "subtitle": "Amazing community of developers building with Push"
+        "title": "Knowledge Base",
+        "subtitle": "Find deep dives on features"
       },
       "link2": {
-        "title": "Push DAO",
-        "subtitle": "Participate in governing Push Protocol"
+        "title": "Tokenomics",
+        "subtitle": "Native token powering everything on Push Chain"
       },
       "link3": {
-        "title": "Grants",
-        "subtitle": "Get a kickstart with Push grants program"
+        "title": "X/Twitter",
+        "subtitle": "Follow updates and ecosystem news"
       },
       "link4": {
-        "title": "Billion Reasons to Build",
-        "subtitle": "Solve problems and win prizes over $50K"
+        "title": "Discord",
+        "subtitle": "Chat, build, and vibe with the community"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Join the convo and stay in the loop"
       }
     },
     "resources": {
       "title": "Resources",
       "link1": {
         "title": "Blog",
-        "subtitle": "News, ideas and insights on Push and Web3"
+        "subtitle": "Updates, deep dives, and dev stories"
       },
       "link2": {
-        "title": "FAQ",
-        "subtitle": "Frequently asked questions about Push"
+        "title": "Litepaper",
+        "subtitle": "The vision and tech, simplified"
       },
       "link3": {
-        "title": "Roadmap",
-        "subtitle": "A living roadmap for the protocol"
-      },
-      "link4": {
-        "title": "Tokenomics",
-        "subtitle": "Token utility and Push network"
+        "title": "FAQ",
+        "subtitle": "Quick answers to common questions"
       }
+    },
+    "language": {
+      "title": "Language",
+      "ctatitle": "Please select your language",
+
+      "english": "English",
+      "english-ctatitle": "Change language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Visit Push Portal"
     }
   },
   "home": {
-    "hero": {
-      "title": "The Communication Protocol of Web3",
-      "description": "Push is a web3 native communication network, enabling cross-chain notifications, messaging, and more for apps, wallets, and services.",
-      "start-button": "Start Building",
-      "alt-start-button": "Developer Docs",
-      "explore-button": "Explore Push Protocol",
-      "alt-explore-button": "Push Dapp"
+    "hero-section": {
+      "title": "Any Chain, Any App, All Users.\nOne Push Chain.",
+      "description": "The first Layer 1 built for Universal Apps. \nBuild & Deploy once, onboard users from any chain.",
+      "primary-button": "Start Building",
+      "primary-button-title": "Start your builder's journey with Push Chain!",
+      "secondary-button": "Explore Knowledge Base",
+      "secondary-button-title": "Learn and explore Push Chain"
     },
-    "stats": {
-      "notifications": {
-        "part1": "Notifications",
-        "part2": "Sent"
-      },
-      "subscribers": {
-        "part1": "Total",
-        "part2": "Subscribers"
-      },
-      "integrations": {
-        "part1": "Total Push",
-        "part2": "Integrations"
-      },
-      "grants": {
-        "part1": "Funded In",
-        "part2": "Grants"
-      }
+    "whatis-section": {
+      "titleFirst": "A True",
+      "titleSecondGraditent": "Universal",
+      "titleThird": "Chain",
+      "bottomTextFirst": "Deploy Once,",
+      "bottomTextSecond": "Reach Everywhere",
+      "bottomLinkText": "Get Started",
+      "bottomLinkTitle": "Goto Documentation Hub"
     },
-    "partners-section": {
-      "partner-channels-title": "Powered by Push",
-      "partner-channels-description": "Discover an amazing community of developers building with Push to engage users and increase adoption.",
-      "partner-channels-button": "Explore Ecosystem",
-      "partner-channels-button-alt": "Learn about $PUSH",
-      "networks": "Push powers communication for over 100 of the world’s leading dapps and service providers across DeFi, NFTs, gaming, dev tools, and more. Push is currently live on Ethereum, Polygon and BNB Chain.",
-      "alt-missing-web3-image": "Illustration showing Push as the missing piece of web3",
-      "title-missing-web3-image": "Push is the missing piece of web3",
-      "missing-web3-title": "Push is the missing piece of Web3",
-      "missing-web3-text": "Until Push, no solution existed to enable native communication between wallets in response to on- and off-chain data. The result was a fractured dapp ecosystem, held together by antiquated and centralized communication platforms.",
-      "missing-web3-span": "Push is building the communication network for Web3, addressing a gap in critical infrastructure and improving the everyday experience for blockchain users.",
-      "missing-web3-alt-button": "Developer Docs",
-      "missing-web3-button": "How Push works"
-    },
-    "email-section": {
-      "title": "Never Miss an Update",
-      "text": "Sign up and stay up to date with ecosystem announcements, giveaways and more.",
-      "email-input": "Your Email",
-      "submit-button": "Sign Up",
-      "loading-submit-button": "Please Wait..."
-    },
-    "horizontal-scroll-section": {
-      "slide1": {
-        "title": "Push Notifications",
-        "text": "directly connect applications to individual users, enabling secure and personalized communication in response to customized on- and off-chain activity.",
-        "link-text": "Build Push Notifications",
-        "image-alt": "Illustration showing Push Notifications"
-      },
-      "slide2": {
-        "title": "Push Chat",
-        "text": "is the leading decentralized, web3 native chat application with user friendly features like 1-1, group chat, videos/images, and (soon) streaming.",
-        "link-text": "Build with Push Chat",
-        "image-alt": "Illustration showing Push Chat"
-      },
-      "slide3": {
-        "title": "Push DAO",
-        "text": "is the home of community ownership of the Push Protocol. Push token holders can view, propose, and vote on critical developments to the protocol.",
-        "link-text": "Explore Push DAO",
-        "image-alt": "Illustration showing Push DAO"
-      }
-    },
-    "notification-section": {
+    "chain-features-section": {
       "header": {
-        "main-text": "Push provides a robust and decentralized push notification protocol.",
-        "other-text": "Push enables web3 native notification alerts between wallets."
+        "main-text": "Built on innovations to eliminate fragmenation!",
+        "other-text": "Push is the only Universal Layer 1 you will ever need!"
       },
       "box1": {
-        "title": "Web3 Native",
-        "imagealt": "Illustration showing native web3 notification support for smart contracts, gasless and even off-chain notifications",
-        "imagetitle": "Supports any type of web3 native notification capabilities"
+        "texttitle": "Any Chain Transactions",
+        "bodytext": "Push Chain supports transactions from any blockchain. Users can pay gas in any token — No need for bridging.",
+        "imagealt": "Illustration showing different blockchain logos falling in a pin ball machine.",
+        "imagetitle": "Supports transactions from any blockchain."
       },
       "box2": {
-        "title": "Cross-chain \nNotifications",
-        "imagealt": "Illustration showing cross-chain support for Push Protocol",
-        "imagetitle": "Supports cross-chain notifications including EVM and non-EVM chains (Like Polygon, BNB, etc)"
+        "texttitle": "Wallet Abstraction",
+        "bodytext": "Let any wallet from any chain connect, interact, and transact. Break web3 barriers by using social login or email. User get to decide on Push Chain.",
+        "imagealt": "Illustration showing Metamask wallet, Phantom Wallet, etc coming out of a big wallet with Push Chain logo on it.",
+        "imagetitle": "Supports any existing wallets like Metamask, Phantom, etc along with social login"
       },
       "box3": {
-        "title": "Customize Notification \nPreferences",
-        "imagealt": "Illustration showing various types of notification categories that can be customized by the developer for enchaned UX",
-        "imagetitle": "Supports customizable notification categories for enhanced user experience"
+        "texttitle": "100% EVM\nCompatible",
+        "bodytext": "Deploy with zero on-chain code. Turn your native app into a universal app in minutes.",
+        "imagealt": "Illustration showing Ethereum Virtual Machine logo spinning and saying 100% EVM Compatibility.",
+        "imagetitle": "Zero on-chain code changes required, 100% EVM Compatible."
       },
       "box4": {
-        "title": "Lightweight Code with Rapid API Integration",
+        "texttitle": "Universal Smart Contracts",
+        "bodytext": "Build once, run cross chain, multi step experiences  with a single, future-proof contract.",
         "imagealt": "Illustration showing lines of code required for Push Protocol integration",
-        "imagetitle": "Integrate Push Protocol in less than 4 minutes and 2 lines of code",
-        "titletext": "<4 mins",
-        "buttontext": "Start building",
-        "buttonlink": "https://comms.push.org/docs/notifications/quickstart",
-        "buttontitle": "Documentation for instant integration of notifications via Push Protocol in your dapp."
+        "imagetitle": "Deploy once, instantly become compatible with all supported chains (EVM or non-EVM)."
       },
       "box5": {
-        "title": "Interoperable \nNotifications",
-        "bgtitle": "Interoperable notifications across all web3 wallets and dapps (Like Unstoppable, MetaMask Push Snap, Shapeshift, Push, etc)"
+        "texttitle": "Universal Fee\nAbstraction",
+        "bodytext": "Let’s users pay gas in any token, on any chain without bridging.",
+        "imagealt": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
+        "imagetitle": "Supports any token of any chain for transactions."
       },
       "box6": {
-        "title": "Anti-Spam",
-        "iconalt": "Illustration showing anti-spam capabilities of Push Protocol",
-        "icontitle": "User centric, anti-spam capabilities to thwart spam and unwanted notifications."
+        "texttitle": "Universal Execution Layer",
+        "bodytext": "Build atomic, composable apps across web3. Create never seen before app experiences, by having multiple users of different chains transact with the same app.",
+        "imagealt": "Illustration showing different tetris blocks entering a wormhole and Push Chain logo emerging from the other end.",
+        "imagetitle": "Transactions from any chain finalize on Push Chain, enabling users of any chain to natively use the same app aka Universal Execution Layer."
       },
       "box7": {
-        "title": "Push Snap",
-        "imagetitle": "Illustration showing Push Snap for MetaMask users",
-        "imagealt": "Push Snap to ensure users of MetaMask can get notifications without any additional setup.",
-        "footertext": "Receive Notifications \nin MetaMask"
+        "texttitle": "Shared State",
+        "bodytext": "Access account and state data from other chains in your smart contract.",
+        "tagText": "COMING SOON",
+        "tags": {
+          "title1": "READ FROM CHAINS"
+        },
+        "imagealt": "Illustration showing Push Chain growing in blocks style animation.",
+        "imagetitle": "(Roadmap) Shared State allows access to account and state data from other chains in your smart contract."
       },
       "box8": {
-        "title": "Increase \nEngagement",
-        "imagealt": "Illustration showing graph indicating increased user engagement (by 8x) with Push Protocol",
-        "imagetitle": "Notifications increase user engagement by 8x"
+        "texttitle": "Programmable\nSolvers",
+        "bodytext": "Trigger, validate, and complete transactions across any chain using your smart contract.",
+        "tagText": "COMING SOON",
+        "tags": {
+          "title1": "READ FROM CHAINS"
+        },
+        "imagealt": "Illustration showing tetris blocks in different colors merging and changing.",
+        "imagetitle": "(Roadmap) Programmable Solvers allow users to trigger, validate, and complete transactions across any chain using your smart contract."
+      },
+      "footer": {
+        "title": "your app's user base by going universal",
+        "secondary": "with zero effort!",
+        "ctatext": "Start Building",
+        "ctatitle": "Deploy once, 10x your userbase. Visit Developer Docs."
       }
     },
-    "chat-section": {
-      "header": {
-        "main-text": "Push Chat is the leading decentralized,",
-        "other-text": "web3 native chat protocol with user friendly features like group chat, video calls, spaces and streaming "
-      },
-      "box1": {
-        "title": "Share Images, Gifs, \nand Reactions",
-        "imagealt": "Illustration showing messages sent in a group chat along with a meme",
-        "imagetitle": "Send emojis, gifs, and images in group chat, gated by web3 native preferences"
-      },
-      "box2": {
-        "title": "Chat Requests",
-        "subheader": "PRIVATE AND ANTI SPAM",
-        "iconalt": "Illustration showing 5 chat requests in Push Chat",
-        "icontitle": "User centric, anti-spam capabilities to thwart spam and unwanted chat / scam chats."
-      },
-      "box3": {
-        "title": "Secure, Instant, and \nVerifiable Payments"
-      },
-      "box4": {
-        "title": "Lightweight Code with Rapid API Integration",
-        "imagealt": "Illustration showing 2 lines of code required for Push Protocol integration",
-        "imagetitle": "Integrate Push Chat in 2 mins and with 2 lines of code",
-        "titletext": "<2 mins",
-        "buttontext": "Start building",
-        "buttonlink": "https://comms.push.org/docs/chat/quickstart",
-        "buttontitle": "Explore the documentation for instant integration of chat via Push Protocol in your dapp"
-      },
-      "box5": {
-        "title": "Hyperscalable \nGroups",
-        "bgtitle": "Push Chat supports groups that can have 100k+ members, a feat that is not possible with any other chat app in the web3 ecosystem.",
-        "afterMessage": "*Other Chat Apps: 1024 Members"
-      },
-      "box6": {
-        "title": "Plug and Play \nChat Components",
-        "imagealt": "Illustration showing how different components of Push Chat can be seamlessly integrated into any dapp",
-        "imagetitle": "Seamlessly integrate Push Chat or any of the modular components into your dapp in minutes"
-      },
-      "box7": {
-        "title": "Chain Agnostic",
-        "subheader": "SUPPORTS ALL EVM CHAINS",
-        "iconalt": "Illustration showing Push Chat supporting all EVM and even non-EVM chains",
-        "icontitle": "Push Chat is chain agnostic and simply works on any EVM (with non-EVM support coming soon)"
-      },
-      "box8": {
-        "imagealt": "Illustration showing a bored ape nft and how it or any other NFT, tokens or any conditional logic can be used to create gated groups",
-        "imagetitle": "Create gated groups based on NFTs, tokens or any conditional logic!",
-        "footertext": "Create Token, NFT, \nGeo Gated Groups"
-      },
-      "box9": {
-        "title": "E2E Encryption",
-        "subheader": "END-TO-END (E2EE)",
-        "iconalt": "Illustration showing E2E encryption in Push Chat",
-        "icontitle": "End to end encryption (E2EE) for all messages and calls between users of Push"
-      },
-      "box10": {
-        "title": "Supports any \nWeb3 Standard",
-        "imagealt": "Illustration showing how all web3 standards can be used in Push Chat including chatting with wallet, NFTs, cross chain messaging, etc",
-        "imagetitle": "Chat from a wallet or an NFT or even between different chains, Push Chat supports all web3 standards"
+    "stats-section": {
+      "title": "Achieve",
+      "titleGradient": "Instant",
+      "titleThird": "Interoperability",
+      "description": "Optimized for performance.\nHigh TPS, ultra-low gas, and sub-second\nfinality for real-time app execution.",
+      "stats": {
+        "stat1": {
+          "title": "Supported Chains",
+          "imagealt": "Illustration showing supported chains",
+          "imagetitle": "List of all supported chains like Ethereum, Solana, BNB Chain, etc"
+        },
+        "stat2": {
+          "title": "TPS",
+          "description": "4.2k"
+        },
+        "stat3": {
+          "title": "NATIVE FINALITY",
+          "description": "Instant"
+        },
+        "stat4": {
+          "title": "NATIVE BLOCK TIME",
+          "description": "1s"
+        }
       }
     },
-    "video-section": {
-      "alt": "Illustration showing real-time Web3 communication with Push Video",
-      "title": "Push Video",
-      "subtitle": "Experience real time web3 communication with Push Video",
-      "content": "Push Video supports decentralized wallet-to-wallet video calls in a chain-agnostic environment.",
-      "itemLink": "Learn More"
-    },
-    "space-section": {
-      "alt": "Illustration showing real-time Web3 communication with Push Spaces",
-      "title": "Push Spaces",
-      "subtitle": "Revolutionize web3 communication with community streaming",
-      "content": "The first web3 decentralized audio streaming app, powered by Push Protocol.",
-      "itemLink": "Learn More"
-    },
-    "grow-section": {
-      "image-alt": "Illustration showing $PUSH tokens",
-      "image-title": "Use the Push token to grow",
-      "title": "Grow with Push",
-      "text": "The $PUSH token enables governance, modification of protocol fees and features, network security, and fee management among all wallets that integrate Push, including Push governance participants.",
-      "wallet-text": {
-        "part1": "Are you a crypto wallet?",
-        "part2": "Integrate and earn."
-      },
-      "button": "Learn about $PUSH",
-      "button-alt": "Learn about $PUSH"
-    },
-    "why-push-section": {
-      "title": "Why do you need Push?",
-      "text": "Before Push, blockchain applications, service providers, and wallets had no way to natively communicate with each other. Most communication in today’s ecosystem relies on traditional web2 solutions, resulting in a broken ecosystem and problems in daily use.",
-      "chain-agnostic-text": "Chain Agnostic",
-      "immediate-communication-text": "Immediate Communication",
-      "decentralized-stack-text": "Decentralized Stack",
-      "improved-ux-text": "Improved UX",
-      "security-alerts-text": "Security Alerts",
-      "censorship-resistant-text": "Censorship Resistant"
-    },
-    "insights-section": {
-      "title": "Push Insights & Updates",
-      "link-text": "Explore all Articles"
+    "blog-section": {
+      "subtitle": "NEWS, DEVLOGS & IDEAS",
+      "subtitle-aria-label": "Blog category information",
+      "title": "Your Pulse of Push Chain",
+      "title-aria-label": "Latest Push Chain blog posts and updates",
+      "explore-link-text": "Explore More Articles",
+      "explore-link-title": "Visit Push Chain blog to read all articles and updates",
+      "explore-link-aria-label": "Navigate to Push Chain blog page",
+      "section-aria-label": "Push Chain blog posts and news section",
+      "blog-posts-list-aria-label": "Recent Push Chain blog posts",
+      "blog-post-aria-label": "Read blog post about {title}",
+      "blog-post-title-prefix": "Read blog post - ",
+      "loading-text": "Loading latest blog posts...",
+      "error-text": "Unable to load blog posts at this time",
+      "no-posts-text": "No blog posts available"
     },
     "investors-section": {
-      "title": "Backed by successful entrepreneurs and venture capital funds."
+      "title": "Built by the team trusted by pioneers of web3"
     },
     "network-section": {
       "title": "Learn how Push Network becomes L2 for web3 communication!",
@@ -411,6 +317,78 @@
       "title": "Take your user engagement to the next level.",
       "subtitle": "Engage users, build communities, and enable a thriving ecosystem with Push.",
       "buttonText": "Start Building"
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "Never Miss an Update",
+      "text": "Sign up and stay up to date with ecosystem announcements, giveaways and more.",
+      "email-input": "Your Email",
+      "email-input-placeholder": "Enter your email address",
+      "email-input-title": "Subscribe to Push Chain newsletter for updates",
+      "email-input-aria-label": "Email address for newsletter subscription",
+      "submit-button": "Sign Up",
+      "submit-button-title": "Subscribe to Push Chain newsletter",
+      "submit-button-aria-label": "Subscribe to newsletter",
+      "loading-submit-button": "Please Wait...",
+      "arrow-button-aria-label": "Subscribe to newsletter",
+      "arrow-button-title": "Subscribe to Push Chain updates",
+      "form-aria-label": "Newsletter subscription form",
+      "success-message-aria-label": "Subscription successful",
+      "error-message-aria-label": "Subscription error message"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Frequently asked questions about Push Chain",
+      "title": "Frequently\nAsked\nQuestions",
+      "title-aria-label": "Common questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive FAQ documentation",
+      "explore-more-aria-label": "Navigate to complete FAQ page",
+      "accordion-aria-label": "Frequently asked questions list",
+      "faqs": {
+        "what-is-push-chain": {
+          "question": "What is Push Chain?",
+          "answer-1": "We are building Push Chain, a <1>shared state L1</1> blockchain for <3>Universal Apps</3>. Push Chain enables txs from any chain (Eth, Solana, EVM, or non-EVM) enabling apps from any chain to be accessed by the users of any chain (polymarket from any chain, pump.fun from any chain, etc).",
+          "answer-2": "It enables apps to be completely interoperable by allowing developers to deploy a single universal smart contract on Push Chain. It also enables new paradigm of apps where users of all chains can come together for shared app experiences (universal AI agents, socials, etc)."
+        },
+        "how-does-push-chain-work": {
+          "question": "How does Push Chain work?",
+          "answer-1": "Push Chain is a Proof-of-Stake (PoS) L1 blockchain that is designed to eliminate fragmentation across all chains.",
+          "answer-2": "It leverages on several innovations such as specialized validators, off-chain relayers and generalized solvers working in tandem to ensure a user or developer is able to read and write on any chain. This eliminates the silos of different chains, wallet conventions, liquidity fragmentation and more.",
+          "answer-3": "It introduces some groundbreaking innovations such as:",
+          "answer-4": "<1>Fee and Wallet abstraction</1> - allowing wallets/users of any chain to interact natively while being on the chain of their choice.",
+          "answer-5": "<1>Universal Wallet</1> - ensuring user can login via social or email and still have non-custodial wallets created for them for all chains (Ethereum, Bitcoin, Solana, etc).",
+          "answer-6": "<1>Shared State</1> - enabling developers to read the state of any wallet or smart contract of any other blockchain via smart contract on Push Chain.",
+          "answer-7": "<1>Programmable Solvers</1> - ensures that a developer can create a basic path for cross chain actions (write actions) based on the shared state.",
+          "answer-8": "<1>Universal Smart Contracts</1> - giving developers ability to use shared state and generalized solvers for read and write action in chain agnostic fashion. And enables users to use fees and wallet abstraction to access any app or any chain without any hassle.",
+          "answer-9": "Push Chain uses all these innovations to enable reading (shared state) or writing to different chains (programmable solvers), all controlled by the universal smart contract. The fee and wallet abstraction further enables a seamless, user centric approach as the learnings for a user is abstracted away no matter from what chain they chose to interact.",
+          "answer-10": "This results in <1>universal applications</1> for web3. In this paradigm, instead of being a user of \"Uniswap on Ethereum,\" \"Uniswap on Polygon,\" or \"Uniswap on Arbitrum,\" a person simply becomes a <3>user of Uniswap</3>."
+        },
+        "why-is-push-chain-unique": {
+          "question": "Why is Push Chain unique for users?",
+          "answer-1": "Push Chain addresses specific gaps in the existing blockchains, such as interoperability, state access across chains, programmable solvers and wallet abstraction resulting in a <1>full stack interop</1>. While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.",
+          "answer-2": "Push Chain's focus is on being a <1>shared state chain</1> for universal (interoperable) applications acting as a unifying layer where all chains can come together and use PC as universal hub or do settlement between them.",
+          "answer-3": "PC offers a new paradigm of web3 that works from <1>Any Chain.</1> For <3>Any Wallet/User.</3> And is suitable for <5>Any App.</5>"
+        },
+        "push-chain-grants": {
+          "question": "How do I get involved with Push Chain Grants?",
+          "answer-1": "While we are thrilled with the early interest coming from developers to build universal apps, we are still in the governance phase for ratifying our evolution from Push Protocol to Push Chain and hence do not have a grants program now.",
+          "answer-2": "This will change very soon once the community approves of Push Chain! Meanwhile, to frontrun other grantees, please drop us an email at <1>team@push.org</1> with the subject line as <3>Grant MEOW</3> and your app idea. Or, simply follow <5>@PushChain</5> for more updates around the grants program and its release."
+        },
+        "push-protocol-future": {
+          "question": "What will happen to Push Protocol?",
+          "answer-1": "Today's push notification and chat protocols will benefit significantly from being built on top of Push Chain. A dedicated section of the team will focus on maintaining and enhancing these protocols, ensuring they remain the de-facto standard in their respective domains.",
+          "answer-2": "By aligning with Push Chain, notifications and chat sent through the protocols will be processed as transactions on the chain. This integration not only enables these protocols to accrue value but also marks the beginning of a new chapter in their evolution, further enhancing their utility and impact within the web3 ecosystem."
+        },
+        "learn-more": {
+          "question": "I want to learn more?",
+          "answer-1": "That's awesome! you can head to our <1>Knowledge Base</1> section to learn everything in depth.",
+          "answer-2": "If you are a FAQ type of a person, then simply head to our <1>Detailed FAQ</1> for more info."
+        }
+      }
     }
   },
   "frens": {

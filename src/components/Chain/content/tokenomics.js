@@ -13,8 +13,8 @@ export const tokenomicsContent = {
     In late 2024, the Push community voted to approve the launch of Push Chain, a shared state layer 1 blockchain designed to enable the development of universal applications and eliminate fragmentation across web3.
 
     Push Chain is a purpose-built layer that connects L1s, L2s, and L3s with near-instant finality and true scalability, which solves the fundamental issue with web3 applications: fragmentation. With the successful voting of the governance proposal, the Push Chain mission is now on its way toward building **any chain, any user, and any app.**
-    
-    :::info ⚠️ Token not live yet
+
+    :::warning ⚠️ Token not live yet
     The Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.<p />
 
 
@@ -40,7 +40,7 @@ export const tokenomicsContent = {
     - **Universal Smart Contract** to enable devs to deploy instant interop apps in minutes
     - **Shared State** to read data from other blockchain
     - **Programmable Solver** to write data to any other chain
-    
+
     All of this enables a **Universal Execution Layer** to allow users of any chain to access and interact with the same app.
 
     ### Where does Push Chain fit in?
@@ -82,16 +82,16 @@ export const tokenomicsContent = {
 
     2. **Transaction Fees** <br />
     The token serves as the primary method for network fees for transactions and app usage.
-     
+
     3. **Universal Fee Abstraction** <br />
     Push’s Universal Fee contract is used to enable users of any chain (whether ETH, SOL, etc) to pay for gas via native token or other supported tokens on cross chain. These are collected in USD equivalent and are converted to native token and burned.
-    
+
     4. **Synthetic Assets** <br />
     Each mint and burn collects a fee portion to fund ecosystem growth and potential buybacks.
 
     5. **Governance** <br />
     Token holders gain voting rights to propose and decide on protocol changes, actively contributing to the chain’s future.
-    
+
     Push Chain adopts a dynamic supply model, which is used among popular chains (like Ethereum and Solana). Post mainnet, new tokens for the chain would be mined solely for node rewards, relayer rewards, and other participants that are required for ensuring chain security, functionality, and decentralization needs.
 
     ### Burn and Deflationary Mechanism
@@ -100,8 +100,8 @@ export const tokenomicsContent = {
 
     1. **Native Chain Burn** <br />
     A part of the fees is always burned when native transactions are done on Push Chain.
-    
-    2. **Cross Chain Burn** <br /> 
+
+    2. **Cross Chain Burn** <br />
     Using Universal Fee Abstractions, a part of the fee collected on other blockchain’s native token (ETH, SOL) is swapped for Push Chain native token and burned.
 
     This ensures a deflationary blockchain design that burns tokens as the network and the transactions that happen on it grow. This design enables the creation of an incentivized, sustainable long-term future for Push Chain and all its participants.
@@ -153,7 +153,7 @@ export const tokenomicsContent = {
 
     ## Get Involved
 
-    - **🧙 Developers**  
+    - **🧙 Developers**
     Explore our SDK & Docs at [Documentation Hub](/docs/)
 
     - **🦹 Community**  

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-types */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { FC, useEffect, useRef, useState } from 'react';
 import Link from '@docusaurus/Link';
+import React, { FC, useEffect, useRef, useState } from 'react';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';

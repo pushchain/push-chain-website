@@ -66,15 +66,6 @@ function BRBParallax() {
     });
   }, []);
 
-  // useEffect(()=>{
-  //   gsap.set('.firstBackground', {yPercent: 0});
-  //   gsap.to('.firstBackground', {scale: 1.7, scrollTrigger: {
-  //     trigger: '#home',
-  //     pin: '#home',
-  //     scrub: true
-  //   }});
-  // },[]);
-
   const Stats = [
     {
       figure: '18',
@@ -123,8 +114,6 @@ function BRBParallax() {
             </ParallaxFlex>
           </ParallaxContent>
         </FirstBackground>
-
-        {/* <div style={{color:'#fff'}}>clea n clean clean</div> */}
       </BRBWrapper>
     </Container>
   );

@@ -36,22 +36,19 @@ const ChainKnowledgeBaseGrid: React.FC<ChainKnowledgeBaseGridProps> = ({
   return (
     <ChainKnowledgeBaseGridWrapper>
       {title && (
-        <ItemV
-          alignItems={mode === 'playlist' ? 'flex-start' : 'center'}
-          justifyContent={mode === 'playlist' ? 'flex-start' : 'center'}
-        >
+        <ChainKnowledgeBaseGridWrapperTitle mode={mode}>
           <H3
-            fontSize='2.5rem'
-            fontWeight='500'
-            fontFamily='N27'
-            lineHeight={isMobile ? '100%' : '140%'}
+            fontSize='2.3rem'
+            fontWeight='600'
+            lineHeight={isMobile ? '100%' : '150%'}
             letterSpacing='-0.8px'
             textAlign={mode === 'playlist' ? 'left' : 'center'}
             alignSelf={mode === 'playlist' ? 'flex-start' : 'center'}
+            color='#FFF'
           >
             {title}
           </H3>
-        </ItemV>
+        </ChainKnowledgeBaseGridWrapperTitle>
       )}
 
       <ChainKnowledgeGridWrapper>
@@ -95,6 +92,18 @@ const ChainKnowledgeGridWrapper = styled.div`
   margin: 48px 0 0 0;
 `;
 
+const ChainKnowledgeBaseGridWrapperTitle = styled(ItemV)`
+  align-items: ${({ mode }) =>
+    mode === 'playlist' ? 'flex-start' : 'flex-start'};
+  justify-content: ${({ mode }) =>
+    mode === 'playlist' ? 'flex-start' : 'center'};
+
+  @media ${device.tablet} {
+    align-items: ${({ mode }) =>
+      mode === 'playlist' ? 'flex-start' : 'center'};
+  }
+`;
+
 const ChainKnowledgeGrid = styled.div`
   display: grid;
   grid-template-columns: ${({ itemsInRow }) =>
@@ -115,7 +124,7 @@ const ChainKnowledgeGrid = styled.div`
 const ChainKnowledgePlaylist = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
   justify-content: center;
 `;

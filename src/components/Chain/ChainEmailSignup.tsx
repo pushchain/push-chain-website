@@ -6,7 +6,6 @@
 import React from 'react';
 
 // External Components
-import { AiOutlineArrowRight } from 'react-icons/ai';
 import { BiLoaderAlt } from 'react-icons/bi';
 import styled from 'styled-components';
 
@@ -16,6 +15,7 @@ import useEmailValidationAndSend from '@site/src/hooks/useEmailValidationAndSend
 
 // Internal Components
 import { Span } from '@site/src/css/SharedStyling';
+import ArrowRight from '@site/static/assets/website/footer/arrow-right.svg';
 
 export type signupType = {
   showButton?: boolean;
@@ -24,6 +24,14 @@ export type signupType = {
   borderColor?: string;
   inputWidth?: string;
   textColor?: string;
+  buttonBg?: string;
+  buttonBorder?: string;
+  arrowColor?: string;
+  loaderColor?: string;
+  fontFamily?: string;
+  blendMode?: string;
+  boxShadow?: string;
+  backdrop?: string;
 };
 
 export const ChainEmailSignup = (props: signupType) => {
@@ -32,28 +40,34 @@ export const ChainEmailSignup = (props: signupType) => {
 
   return (
     <Box>
-      <Wrapper
-        background={props.background}
-        border={props.borderColor}
-        onSubmit={onEmailSubmit}
-      >
+      <Wrapper onSubmit={onEmailSubmit}>
         <SignupInputField
           type='text'
           name='email'
-          placeholder='Email Address'
+          placeholder='satoshi@bitcoin.com'
           background={props.background}
           inputWidth={props.inputWidth}
           textColor={props.textColor}
+          border={props.borderColor}
+          blendMode={props.blendMode}
+          boxShadow={props.boxShadow}
+          backdrop={props.backdrop}
+          fontFamily={props.fontFamily}
           tabIndex={0}
           required
         />
         {props.showButton && (
           <>
-            <Button tabIndex={0} type='submit'>
-              {!isLoading && <AiOutlineArrowRight size={32} color='#e492ff' />}
-              {isLoading && (
-                <BiLoaderAlt size={32} className='loader' color='#FFF' />
-              )}
+            <Button
+              tabIndex={0}
+              type='submit'
+              buttonBg={props.buttonBg}
+              buttonBorder={props.buttonBorder}
+              arrowColor={props.arrowColor}
+              loaderColor={props.loaderColor}
+            >
+              {!isLoading && <ArrowRight className='arrow' />}
+              {isLoading && <BiLoaderAlt size={32} className='loader' />}
             </Button>
             {isLoading ? <MaskInput /> : null}
           </>
@@ -61,12 +75,16 @@ export const ChainEmailSignup = (props: signupType) => {
       </Wrapper>
 
       {apiResponse && (
-        <ResponseSpan className='msg' color='#000'>
+        <ResponseSpan
+          className='msg'
+          color='#fff'
+          fontFamily={props.fontFamily}
+        >
           {apiResponse}
         </ResponseSpan>
       )}
       {!apiResponse && emailError && (
-        <ResponseSpan className='msg' color='#000'>
+        <ResponseSpan className='msg' color='red' fontFamily={props.fontFamily}>
           {emailError}
         </ResponseSpan>
       )}
@@ -95,15 +113,22 @@ const Wrapper = styled.form`
   align-items: center;
   padding: 5px 0px;
   justify-content: space-between;
+  background: transparent !important;
 
   @media ${device.tablet} {
     gap: 12px;
   }
 `;
 
-const Button = styled.button`
+const Button = styled.button<{
+  buttonBg?: string;
+  buttonBorder?: string;
+  arrowColor?: string;
+  loaderColor?: string;
+}>`
   cursor: pointer;
-  background: #000;
+  background: ${(props) => props.buttonBg || '#000'};
+  border: ${(props) => props.buttonBorder || '0'};
   border-radius: 16px;
   display: flex;
   justify-content: center;
@@ -111,7 +136,6 @@ const Button = styled.button`
   height: 72px;
   width: 72px;
   white-space: nowrap;
-  border: 0;
 
   @media ${device.tablet} {
     min-width: auto;
@@ -119,13 +143,20 @@ const Button = styled.button`
   }
 
   @media ${device.mobileL} {
-    height: 48px;
-    width: 48px;
+    height: 72px;
+    width: 72px;
   }
 
-  & svg {
+  .arrow {
+    height: 100%;
+    width: 100%;
+    color: ${(props) => props.arrowColor || '#e492ff'};
+  }
+
+  .loader {
     height: 1.5rem;
     width: 1.5rem;
+    color: ${(props) => props.arrowColor || '#e492ff'};
   }
 
   @keyframes loadingAnimation {
@@ -142,14 +173,23 @@ const Button = styled.button`
     animation-duration: 1500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    color: ${(props) => props.loaderColor || '#FFF'};
   }
 `;
+
+/* Gradient border setup */
+// border: 1px solid transparent;
+// border-image: ${(props) =>
+//   props.border
+//     ? `linear-gradient(to bottom, rgba(255, 255, 255, 0.25), ${props.border})`
+//     : 'linear-gradient(to bottom, rgba(255, 255, 255, 0.25), rgba(112, 90, 208, 0.4))'};
+// border-image-slice: 1;
 
 const SignupInputField = styled.input`
   all: unset;
   box-sizing: border-box;
-  color: #a3a7ac;
-  font-family: N27;
+  color: ${(props) => props.textColor || '#a3a7ac'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans'};
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -157,9 +197,26 @@ const SignupInputField = styled.input`
   letter-spacing: -0.48px;
   background: ${(props) => props.background || '#ffffff'};
   width: ${(props) => props.inputWidth || '100%'};
+  border: 1px solid ${(props) => props.border || 'transparent'};
   padding: 24px;
   flex: 1;
   border-radius: 16px;
+  max-height: 72px;
+  min-height: 72px;
+
+  background-blend-mode: ${(props) => props.blendMode || 'normal'};
+  box-shadow: ${(props) => props.boxShadow || 'none'};
+  backdrop-filter: ${(props) => props.backdrop || 'none'};
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    -webkit-box-shadow: ${(props) => props.boxShadow || 'none'} !important;
+    -webkit-text-fill-color: ${(props) =>
+      props.textColor || '#a3a7ac'} !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }
 
   @media ${device.laptop} {
     min-width: auto;
@@ -170,15 +227,15 @@ const SignupInputField = styled.input`
     padding: 16px 24px;
   }
 
-  &:placeholder {
-    color: #a3a7ac;
+  &::placeholder {
+    color: ${(props) => props.textColor || '#a3a7ac'};
     opacity: 1;
   }
 `;
 
 const MaskInput = styled.div`
   position: absolute;
-  background: #fff;
+  background: transparent;
   top: 0;
   left: 0;
   right: 0;
@@ -188,10 +245,10 @@ const MaskInput = styled.div`
   z-index: 10;
 `;
 
-const ResponseSpan = styled(Span)`
+const ResponseSpan = styled(Span)<{ fontFamily?: string }>`
   margin: 0;
   padding: 0;
-  font-family: FK Grotesk Neue;
+  font-family: ${(props) => props.fontFamily || 'DM Sans'};
   font-style: normal;
   font-weight: 400;
   font-size: 15px;

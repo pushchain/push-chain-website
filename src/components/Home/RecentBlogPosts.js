@@ -2,14 +2,14 @@
 import React from 'react';
 
 // External Components
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
 // Internal Components
-import { Button, H2, ItemH, Span, Image } from '@site/src/css/SharedStyling';
+import { Button, H2, Image, ItemH, Span } from '@site/src/css/SharedStyling';
 
 // Internal Configs
 import GLOBALS, { device } from '@site/src/config/globals';
-import useMediaQuery from '@site/src/hooks/useMediaQuery';
 import useFetchRecentBlogs from './hooks/useFetchRecentBlogs';
 
 import {
@@ -19,32 +19,79 @@ import {
 } from '@site/src/components/reusables/date.tsx';
 
 const RecentBlogPosts = () => {
-  const isTablet = useMediaQuery(device.laptop);
   const { recentBlogs } = useFetchRecentBlogs();
+  const { t } = useTranslation();
+
+  // Handle loading and error states
+  if (!recentBlogs) {
+    return (
+      <BlogPostList>
+        <LoadingMessage role='status' aria-live='polite'>
+          {t('home.blog-section.loading-text')}
+        </LoadingMessage>
+      </BlogPostList>
+    );
+  }
+
+  if (recentBlogs.length === 0) {
+    return (
+      <BlogPostList>
+        <ErrorMessage role='status' aria-live='polite'>
+          {t('home.blog-section.no-posts-text')}
+        </ErrorMessage>
+      </BlogPostList>
+    );
+  }
 
   return (
-    <BlogPostList>
-      {recentBlogs?.slice(0, 1).map((postItem, index) => {
-        // Docusaurus loads the actual content lazily;
-        // hence the .default to get the actual component.
+    <BlogPostList
+      role='list'
+      aria-label={t('home.blog-section.blog-posts-list-aria-label')}
+    >
+      {recentBlogs?.slice(0, 3).map((postItem, index) => {
+        const blogPostAriaLabel = t('home.blog-section.blog-post-aria-label', {
+          title: postItem?.title,
+        });
+        const blogPostTitle = `${t(
+          'home.blog-section.blog-post-title-prefix'
+        )}${postItem?.title}`;
+
         return (
           <BlogPostCardPrimary
             key={index}
-            className='item-3'
+            role='listitem'
+            tabIndex={0}
             onClick={() => {
               window.open(`${postItem?.link}`, '_blank');
             }}
-            alt={`Read blog post - ${postItem?.title}`}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                window.open(`${postItem?.link}`, '_blank');
+              }
+            }}
+            title={blogPostTitle}
+            aria-label={blogPostAriaLabel}
+            style={{ cursor: 'pointer' }}
           >
-            <Image src={postItem?.imageUrl} width='100%' loading='lazy' />
+            <Image
+              src={postItem?.imageUrl}
+              width='100%'
+              loading='lazy'
+              alt={`Featured image for ${postItem?.title}`}
+              role='img'
+            />
 
             <BodyItem>
               <ItemH
                 alignItems='flex-start'
                 alignSelf='flex-start'
+                flex='0'
                 color='#fff'
+                justifyContent='space-between'
                 className='date'
-                display={isTablet && 'none'}
+                role='group'
+                aria-label='Post metadata'
               >
                 <Date
                   date={postItem?.pubDate}
@@ -60,139 +107,34 @@ const RecentBlogPosts = () => {
               </ItemH>
 
               <H2
-                margin={isTablet ? '0px 0 24px 0' : '8px 0'}
                 textAlign='left'
                 color='#fff'
                 lineHeight='135%'
-                fontFamily='FK Grotesk Neue'
                 letterSpacing='normal'
+                role='heading'
+                aria-level='3'
               >
                 {postItem?.title}
               </H2>
 
-              <TextSpan>{postItem?.description}</TextSpan>
+              <TextSpan role='text'>{postItem?.description}</TextSpan>
             </BodyItem>
           </BlogPostCardPrimary>
-        );
-      })}
-      {recentBlogs?.slice(1, 4).map((postItem, index) => {
-        // Docusaurus loads the actual content lazily;
-        // hence the .default to get the actual component.
-        return (
-          <BlogPostCardSecondary
-            key={index}
-            className={`item-${index}`}
-            onClick={() => {
-              window.open(`${postItem?.link}`, '_blank');
-            }}
-            alt={`Read blog post - ${postItem?.title}`}
-          >
-            <Image src={postItem?.imageUrl} width='100%' loading='lazy' />
-
-            <TitleItem>
-              <H2
-                margin='auto 0'
-                textAlign='left'
-                fontWeight='500'
-                color='#fff'
-                lineHeight='150%'
-                fontFamily='FK Grotesk Neue'
-                letterSpacing='normal'
-              >
-                {postItem?.title}
-              </H2>
-            </TitleItem>
-          </BlogPostCardSecondary>
         );
       })}
     </BlogPostList>
   );
 };
 
-const BlogPostList = styled(ItemH)`
+const BlogPostList = styled.div`
+  display: flex;
   gap: 25px;
   margin: 72px 0 0 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-flow: column;
-
-  .item-3 {
-    grid-column: 1;
-    grid-row: span 3 / span 3;
-  }
-
-  .item-0 {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .item-1 {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .item-2 {
-    grid-column: 2;
-    grid-row: 3;
-  }
-
-  @media ${device.laptop} {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-
-    .item-3 {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .item-0 {
-      grid-column: 2;
-      grid-row: 1;
-    }
-
-    .item-1 {
-      grid-column: 1;
-      grid-row: 2;
-      margin-top: 40px;
-    }
-
-    .item-2 {
-      grid-column: 2;
-      grid-row: 2;
-      margin-top: 40px;
-    }
-  }
+  flex-wrap: wrap;
 
   @media ${device.mobileL} {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    width: 100%;
-    margin: 41px 0 0 0;
-    gap: 0px;
-
-    .item-3 {
-      grid-column: 1;
-      grid-row: 1;
-    }
-
-    .item-0 {
-      grid-column: 1;
-      grid-row: 2;
-      margin-top: 32px;
-    }
-
-    .item-1 {
-      grid-column: 1;
-      grid-row: 3;
-      margin-top: 32px;
-    }
-
-    .item-2 {
-      grid-column: 1;
-      grid-row: 4;
-      margin-top: 32px;
-    }
+    flex-direction: column;
+    gap: 64px;
   }
 `;
 
@@ -202,159 +144,27 @@ const BlogPostCardPrimary = styled(Button)`
   justify-content: flex-start;
   align-self: stretch;
   color: ${GLOBALS.COLORS.FONT_DARK};
-  padding: 0px 0px;
-  gap: 24px;
-
-  & p {
-    margin: 0 !important;
-  }
+  padding: 0px;
+  flex: 1;
+  min-width: 280px;
+  background: transparent;
 
   & img {
-    width: auto;
-    min-width: 200px;
+    width: 100%;
     height: auto;
     border-radius: 24px;
-  }
-
-  & p:nth-child(2) {
-    display: none;
-  }
-
-  & p:nth-child(3) {
-    display: none;
-  }
-
-  & h1 {
-    display: none;
-  }
-
-  h2 {
-    font-size: 30px;
-    font-weight: 500;
-    line-height: 135%;
-  }
-
-  & ${Span} {
-    min-width: 200px;
-  }
-  @media ${device.laptop} {
-    border-radius: 0px;
-
-    h2 {
-      font-size: 22px;
-      line-height: 150%;
-    }
-
-    & img {
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-    }
-  }
-
-  @media ${device.tablet} {
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    & ${Span} {
-      font-size: 20px;
-    }
-  }
-
-  @media ${device.mobileL} {
-    h2 {
-      font-size: 18px;
-      line-height: 135%;
-    }
-  }
-`;
-
-const BlogPostCardSecondary = styled(Button)`
-  display: flex;
-  justify-content: flex-start;
-  align-self: stretch;
-  color: ${GLOBALS.COLORS.FONT_DARK};
-  padding: 0px 0px;
-  gap: 24px;
-  height: 160px;
-
-  & p {
-    margin: 0 !important;
-  }
-
-  & img {
-    min-width: 282px;
-    max-width: 282px;
     object-fit: cover;
-    height: 160px;
-    border-radius: ${GLOBALS.ADJUSTMENTS.RADIUS.SMALL};
-    display: block;
-  }
-
-  & p:nth-child(2) {
-    display: none;
-  }
-
-  & p:nth-child(3) {
-    display: none;
-  }
-
-  & h1 {
-    display: none;
+    aspect-ratio: 16 / 9;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 135%;
   }
 
-  & ${Span} {
-    min-width: 200px;
-    align-self: center;
-    align-items: center;
-    color: #fff;
-  }
-
   @media ${device.laptop} {
-    flex-direction: column;
-    height: auto;
-    border-radius: 0px;
-
-    h2 {
-      font-size: 22px;
-      line-height: 150%;
-    }
-
-    & img {
-      min-width: 100%;
-      max-width: 100%;
-      object-fit: cover;
-      height: auto;
-      border-radius: 24px;
-      display: block;
-      aspect-ratio: 16/9;
-    }
-  }
-
-  @media ${device.tablet} {
-    & ${Span} {
-      font-size: 20px;
-    }
-
-    & img {
-      width: auto;
-      min-width: 200px;
-      height: auto;
-      border-radius: 24px;
-    }
-  }
-
-  @media ${device.mobileL} {
-    h2 {
-      font-size: 18px;
-      line-height: 135%;
-    }
+    width: 100%;
   }
 `;
 
@@ -364,38 +174,44 @@ const BodyItem = styled.div`
   height: 100%;
   align-items: flex-start;
   width: 100%;
+  justify-content: space-between;
+  padding: 24px;
+  box-sizing: border-box;
 
-  & .date {
+  .date {
     color: #bbbcd0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: normal;
-    font-family: FK Grotesk Neue;
   }
 
   h2 {
+    margin: 8px 0 auto 0;
     width: 100%;
-    font-family: FK Grotesk Neue;
     letter-spacing: normal;
-
     overflow: hidden;
     display: -webkit-box !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 140%;
   }
 
-  @media ${device.laptop} {
-    border-bottom: 1px solid #252527;
-    height: auto;
+  @media ${device.mobileL} {
+    padding: 24px;
+
+    h2 {
+      margin: 8px 0 0 0;
+    }
   }
 `;
 
 const TextSpan = styled(Span)`
   color: #bbbcd0;
-
-  font-size: 19px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: 135%;
@@ -404,33 +220,32 @@ const TextSpan = styled(Span)`
   display: -webkit-box !important;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-family: FK Grotesk Neue;
-
-  @media ${device.laptop} {
-    display: none !important;
-  }
+  margin: 16px 0 0 0;
+  text-align: start;
 `;
 
-const TitleItem = styled.div`
+const LoadingMessage = styled.div`
   display: flex;
-  flex-direction: column;
-  height: 100%;
   align-items: center;
-  border-bottom: 1px solid #252527;
-  width: 100%;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #bbbcd0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  min-height: 200px;
+`;
 
-  h2 {
-    width: 100%;
-
-    overflow: hidden;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-  }
-
-  @media ${device.laptop} {
-    padding: 0 0 24px 0;
-  }
+const ErrorMessage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  color: #bbbcd0;
+  font-size: 1.125rem;
+  font-weight: 400;
+  text-align: center;
+  min-height: 200px;
 `;
 
 export default RecentBlogPosts;

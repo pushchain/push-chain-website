@@ -1,38 +1,60 @@
-// /* eslint-disable @typescript-eslint/no-unused-vars */
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
-import React, { FC, useEffect, useState } from 'react';
+/* eslint-disable */
 
+// React + Web3 Essentials
 import { useLocation } from '@docusaurus/router';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import { AiOutlineClose } from 'react-icons/ai';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
+// External Components
+import { gsap } from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 
-import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
-import GLOBALS, { device, structure } from '../../src/config/globals';
-import useMediaQuery from '../hooks/useMediaQuery';
-import { useScrollDirection } from '../hooks/useScrollDirection';
-import { ChainNavBarItems } from '../components/Chain/config/ChainNavBarItems';
-
-import ChainLogo from '@site/static/assets/website/chain/ChainLogo.svg';
-import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
-import { BsChevronDown } from 'react-icons/bs';
+// Internal Components
+import { Alert } from '@site/src/components/Alert';
+import { LiquidGlass } from '@site/src/components/LiquidGlass/LiquidGlass';
 import {
   A,
+  Button,
   Content,
+  H2,
   H3,
+  Image,
   ItemH,
   ItemV,
+  LinkTo,
   Section,
   Span,
-} from '../../src/css/SharedStyling';
+} from '@site/src/css/SharedStyling';
+import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import AccountContext from '../context/accountContext';
+import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
+
+// Import Assets
+import { AiOutlineClose } from 'react-icons/ai';
+import { BsChevronDown } from 'react-icons/bs';
+import { GiHamburgerMenu } from 'react-icons/gi';
+
+// Internal Configs
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import { SupportedLanguagesList } from '@site/src/config/SupportedLanguagesList';
+import GLOBALS, { device, structure } from '@site/src/config/globals';
+import { HeaderList } from '../config/HeaderList';
 
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
+let lastScrollY = 0;
+const SCROLL_DELTA = 5;
+
+if (typeof window !== 'undefined') {
+  lastScrollY = window.scrollY;
+}
 
 const defaultMobileMenuState = {
   0: false,
@@ -42,55 +64,46 @@ const defaultMobileMenuState = {
   // add next [index]: false for new main Nav menu item
 };
 
-const Header: FC = () => {
+function Header() {
   const isMobile = useMediaQuery(device.laptopM);
-  const history = useHistory();
-  const location = useLocation();
-
-  const [mobileMenuMap, setMobileMenuMap] = useState(defaultMobileMenuState);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(null);
+  const [mobileMenuMap, setMobileMenuMap] = useState(defaultMobileMenuState);
+  const [scrollDirection, setScrollDirection] = useState(null);
+  const [isAlertBarVisible, setIsAlertBarVisible] = useState(true);
 
-  const [scrollDirection] = useScrollDirection(isMobileMenuOpen);
-
+  const location = useLocation();
   const baseURL = useSiteBaseUrl() || '';
+  // const [isAlertVisible, setIsAlertVisible] = useState(true);
+
+  // for navigation
+  const history = useHistory();
+
+  // Internationalization
+  const { t, i18n } = useTranslation();
+  const { showAlertBar, setShowAlertBar, delayedShowAlertBar } =
+    useContext(AccountContext);
+
+  const showMobileMenu = isMobile && isMobileMenuOpen;
+
+  const headerClass = `${scrollDirection === 'scrollDown' ? 'hide' : 'show'}`;
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((lastOpen) => !lastOpen);
   };
 
-  const showMobileMenu = isMobile && isMobileMenuOpen;
-  const headerClass = `${scrollDirection === 'scrollDown' ? 'hide' : 'show'}`;
-
   const onMobileHeaderMenuClick = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-    menuIndex: number,
-    itemId
+    menuIndex: number
   ) => {
     e.preventDefault();
-    const newMenuState = {
-      ...mobileMenuMap,
-      [menuIndex]: !mobileMenuMap[menuIndex], // Toggle only the clicked menu
-    };
 
-    setMobileMenuMap(newMenuState);
-    setActiveItem(itemId);
-  };
-
-  const handleMouseEnter = (e, activeId, itemId) => {
-    setMobileMenuMap({
-      ...defaultMobileMenuState,
-      [activeId]: true,
+    // if (isMobile) {
+    setMobileMenuMap((oldMap) => {
+      return {
+        ...defaultMobileMenuState,
+        [menuIndex]: !oldMap[menuIndex],
+      };
     });
-    setActiveItem(itemId!);
-  };
-
-  const handleMouseLeave = (e, activeId) => {
-    setMobileMenuMap({
-      ...defaultMobileMenuState,
-      [activeId]: false,
-    });
-    setActiveItem(null);
   };
 
   useEffect(() => {
@@ -106,323 +119,912 @@ const Header: FC = () => {
     };
   }, [isMobileMenuOpen, isMobile]);
 
-  const handleSectionNavigation = (item) => {
-    setActiveItem(item?.id);
-    if (!item.url) {
-      if (showMobileMenu) toggleMobileMenu();
-
-      // Scroll to the section if no URL exists
-      gsap.to(window, {
-        duration: 0.75,
-        scrollTo: { y: `#${item?.id}` },
-      });
-    }
-  };
-
-  const handleRedirect = (item) => {
-    setActiveItem(item?.id);
-
-    if (!item.url) return;
-
-    // Handle external links
-    if (item?.url.startsWith('https://')) {
-      setIsMobileMenuOpen(false);
-      window.open(item?.url, '_blank');
-      return;
-    }
-
-    if (item?.url == '/blog') {
-      const targetUrl = baseURL + item?.url;
-
-      // Navigate to the new URL
-      history.push(targetUrl);
-      setIsMobileMenuOpen(false);
-      return;
-    }
-
-    // Handle internal links
-    if (item?.url.startsWith('/')) {
-      const targetUrl = baseURL + item?.url;
-
-      // Navigate to the new URL
-      history.push(targetUrl);
-      setIsMobileMenuOpen(false);
-
-      // Scroll to the section
-      gsap.to(window, {
-        duration: 0.75,
-        scrollTo: { y: `#${item?.id}` },
-      });
-      return;
-    }
-
-    // Handle in-page navigation
-    handleSectionNavigation(item);
-  };
-
-  // Update the active item based on the current location
+  // Use Effect
   useEffect(() => {
-    const activeNavItem = ChainNavBarItems?.find(
-      (item) => location.pathname === baseURL + item.url
-    );
-    if (activeNavItem) {
-      setActiveItem(activeNavItem.id);
-    }
-  }, [location]);
+    const updateScrollDirection = () => {
+      let scrollY = 0;
 
-  const spanStyle = {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    display: 'block',
+      if (typeof window !== 'undefined') {
+        scrollY = window.scrollY;
+      }
+
+      let direction = scrollY > lastScrollY ? 'scrollDown' : 'scrollUp';
+
+      if (
+        direction !== scrollDirection &&
+        (scrollY - lastScrollY > SCROLL_DELTA ||
+          scrollY - lastScrollY < -SCROLL_DELTA)
+      ) {
+        // check if isMobileMenuOpen then override
+        if (isMobileMenuOpen) {
+          direction = 'scrollUp';
+        }
+
+        setScrollDirection(direction);
+      }
+
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+
+    // add event listener
+    // window.addEventListener('scroll', updateScrollDirection, { passive: true });
+
+    return () => {
+      // window.removeEventListener('scroll', updateScrollDirection); // clean up
+    };
+  }, []);
+
+  useEffect(() => {
+    const checkAlertBarVisibility = () => {
+      if (!showAlertBar) {
+        setIsAlertBarVisible(false);
+        return;
+      }
+
+      const scrollY = typeof window !== 'undefined' ? window.scrollY : 0;
+      setIsAlertBarVisible(scrollY < 60);
+    };
+
+    checkAlertBarVisibility();
+
+    window.addEventListener('scroll', checkAlertBarVisibility, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener('scroll', checkAlertBarVisibility);
+    };
+  }, [showAlertBar]);
+
+  const HeaderSpace = ({ item, index }) => {
+    const openLink = async (e, href, id, target) => {
+      e.stopPropagation();
+
+      if (href) {
+        if (target && target !== '_blank') {
+          if (target === '_self') {
+            // check if url is external
+            if (href.includes('http')) {
+              window.location.href = href;
+            } else {
+              history.push(baseURL + href);
+            }
+          }
+        } else {
+          // check if url is internal and if so append the base url
+          if (href.includes('http')) {
+            window.open(href, target);
+          } else {
+            window.open(`${window.location.origin}${baseURL + href}`, target);
+          }
+        }
+      } else if (id) {
+        if (showMobileMenu) toggleMobileMenu();
+
+        if (location?.pathname !== baseURL + '/' && id) {
+          history.push(baseURL + '/');
+          setTimeout(() => {
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+          }, 200);
+        }
+
+        if (location?.pathname === baseURL + '/') {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else return;
+    };
+
+    return (
+      <a
+        href={item.href.includes('http') ? item.href : `${baseURL}${item.href}`}
+        target={item.target}
+        rel='noopener noreferrer'
+        className='header-item'
+        style={{
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+          MozUserSelect: 'none',
+          msUserSelect: 'none',
+        }}
+      >
+        <HeaderItem>
+          {item.srcrefoff && (
+            <HeaderImage
+              key={index}
+              src={
+                require(
+                  `@site/static/assets/website/header/${item.srcrefoff}.png`
+                ).default
+              }
+              srcSet={`${require(`@site/static/assets/website/header/${item.srcrefoff}@2x.png`).default} 2x, ${require(`@site/static/assets/website/header/${item.srcrefoff}@3x.png`).default} 3x`}
+              alt={`${t(item.title)}`}
+              height={24}
+              width={24}
+            />
+          )}
+
+          <ItemH
+            flexDirection='column'
+            alignItems='flex-start'
+            gap='0px'
+            flex='1'
+          >
+            <H2
+              fontSize='1rem'
+              color='#FFF'
+              lineHeight='130%'
+              letterSpacing='normal'
+              fontWeight='600'
+            >
+              {t(item.title)}
+
+              {item.tagitem && (
+                <TagItem style={{ marginLeft: '10px' }}>
+                  {item.tagitem.text}
+                </TagItem>
+              )}
+            </H2>
+
+            <H3
+              fontSize='0.875rem'
+              color='#838383'
+              lineHeight='130%'
+              letterSpacing='normal'
+              fontWeight='400'
+            >
+              {t(item.subtitle)}
+            </H3>
+          </ItemH>
+        </HeaderItem>
+      </a>
+    );
+  };
+
+  const textIds = ['text0', 'text1', 'text2', 'text3', 'text4'];
+
+  const handleMouseEnter = (e, activeId) => {
+    textIds.forEach((id) => {
+      if (id !== activeId) {
+        const element = document.getElementById(id);
+        if (element) {
+          element.style.color = '#6C6C6C';
+          element.style.transitionDuration = '1s';
+        }
+      }
+    });
+  };
+
+  const handleMouseLeave = (e) => {
+    textIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.style.color = '#fff';
+        element.style.transitionDuration = '1s';
+      }
+    });
   };
 
   return (
     <StyledHeader
       showMobileMenu={showMobileMenu}
-      isMobileMenuOpen={isMobileMenuOpen}
       className={`header ${headerClass}`}
     >
-      <Section>
-        <HeaderContent
-          className='contentBox'
-          isMobileMenuOpen={isMobileMenuOpen}
-          showMobileMenu={showMobileMenu}
+      {/* ALERT SECTION */}
+      <Alert />
+
+      {/* INVISIBLE WALL TO CLOSE */}
+      <InvisibleWall onClick={toggleMobileMenu} isActive={isMobileMenuOpen} />
+
+      {/* HEADER SECTION */}
+      <Section onClick={(e) => e.stopPropagation()}>
+        <Content
+          className='vertfluid'
+          overflow='visible'
+          padding={isMobile && '0 16px'}
+          position='relative'
         >
-          <NavList showMobileMenu={showMobileMenu}>
-            <MenuTop padding={isMobileMenuOpen && '16px'} flex='initial'>
-              <PushLogoBlackContainer
-                className='headerlogo'
-                flex='initial'
-                href={'/'}
-                rel='noopener noreferrer'
-              >
-                {isMobileMenuOpen ? <ChainLogoDark /> : <ChainLogo />}
+          {/* Header Content Begins */}
+          <HeaderItemH
+            alignSelf='stretch'
+            padding={GLOBALS.ADJUSTMENTS.PADDING.SMALL}
+            borderRadius={GLOBALS.ADJUSTMENTS.RADIUS.MID}
+            showAlertBar={delayedShowAlertBar && isAlertBarVisible}
+          >
+            {/* Insert Liquid Glass */}
+            <LiquidGlassOuter>
+              <LiquidGlass
+                autoResize={true}
+                radius={24}
+                depth={10}
+                blur={2}
+                chromaticAberration={5}
+                debug={false}
+              />
+            </LiquidGlassOuter>
+
+            <MenuTop
+              flex='initial'
+              showMobileMenu={showMobileMenu}
+              showAlertBar={delayedShowAlertBar && isAlertBarVisible}
+            >
+              <PushLogoBlackContainer className='headerlogo' flex='initial'>
+                <LinkTo
+                  title={t('header.logo.ctatitle')}
+                  to={useBaseUrl('/')}
+                  aria-label='Push'
+                >
+                  <Image
+                    src={
+                      require(
+                        `@site/static/assets/website/segments/PushLogoTextBlack.webp`
+                      ).default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextBlack@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextBlack@3x.webp`).default} 3x`}
+                    alt={t('header.logo.imagealt')}
+                    width='auto'
+                    height='auto'
+                  />
+                </LinkTo>
               </PushLogoBlackContainer>
+              <PushLogoWhiteContainer className='headerlogo' flex='initial'>
+                <LinkTo
+                  to={useBaseUrl('/')}
+                  title={t('header.logo.ctatitle')}
+                  hoverBackground='transparent'
+                  padding='0'
+                >
+                  <Image
+                    src={
+                      require(
+                        `@site/static/assets/website/segments/PushLogoTextWhite.webp`
+                      ).default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
+                    alt={t('header.logo.imagealt')}
+                    width='auto'
+                    height='auto'
+                  />
+                </LinkTo>
+              </PushLogoWhiteContainer>
 
               <MobileMenuToggleIcon>
                 {isMobileMenuOpen ? (
-                  <AiOutlineClose
-                    size={28}
-                    color='#fff'
-                    onClick={toggleMobileMenu}
-                  />
+                  <AiOutlineClose size={28} onClick={toggleMobileMenu} />
                 ) : (
-                  <GiHamburgerMenu
-                    size={28}
-                    color='#000'
-                    onClick={toggleMobileMenu}
-                  />
+                  <ItemH gap='24px'>
+                    <PortalLauncher
+                      showMobileMenu={showMobileMenu}
+                      href='https://portal.push.org/'
+                      target='_blank'
+                      title={t('header.app-button.alt-title')}
+                      background='#D548EC'
+                      borderRadius='16px'
+                      border='1px solid rgba(255, 255, 255, 0.30)'
+                      fontSize='1.125rem'
+                      fontWeight='600'
+                      letterSpacing='-0.03em'
+                      lineHeight='1rem'
+                      width='100%'
+                    >
+                      {t('header.app-button.title')}
+                    </PortalLauncher>
+
+                    {/* TODO: Bring Language, maybe remove Portal in Tablet */}
+                    {/* <LanguageItem showMobileMenu={showMobileMenu}>
+                      <LanguageMenuItem>
+                        <LanguageMenuHeader
+                          onClick={(e) => onMobileHeaderMenuClick(e, 4)}
+                          expanded={mobileMenuMap[4]}
+                          onMouseEnter={(e) => handleMouseEnter(e, 'text4')}
+                          onMouseLeave={(e) => handleMouseLeave(e)}
+                          id='text4'
+                        >
+                          <H2
+                            fontSize='16px'
+                            lineHeight='130%'
+                            letterSpacing='normal'
+                            fontWeight='500'
+                          >
+                            {isMobile &&
+                              i18n &&
+                              SupportedLanguagesList.filter(
+                                (item) => item.id === i18n.language
+                              ).map((item, index) => (
+                                <div>{item?.language}</div>
+                              ))}
+                          </H2>
+
+                          <Span
+                            fontSize='18px'
+                            fontWeight='500'
+                            letterSpacing='-0.03em'
+                            lineHeight='142%'
+                            padding='16px 0px'
+                            aria-label={t('header.language.ctatitle')}
+                          >
+                            <Image
+                              src={
+                                require(
+                                  `@site/static/assets/website/languages/world.webp`
+                                ).default
+                              }
+                              srcSet={`${require(`@site/static/assets/website/languages/world@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/world@3x.webp`).default} 3x`}
+                              alt={'Language Header Icon'}
+                              height={24}
+                              width={24}
+                              borderRadius='100%'
+                            />
+                          </Span>
+                          <BsChevronDown size={12} className='chevronIcon' />
+                        </LanguageMenuHeader>
+
+                        <LanguageMenuContent
+                          className='menuContent'
+                          expanded={mobileMenuMap[4]}
+                        >
+                          {/* Insert Liquid Glass */}
+                    {/* <LiquidGlassOuter>
+                            <LiquidGlass
+                              autoResize={true}
+                              radius={24}
+                              depth={20}
+                              blur={5}
+                              chromaticAberration={10}
+                              debug={false}
+                            />
+                          </LiquidGlassOuter>
+
+                          <LanguageMenuContentInner>
+                            {SupportedLanguagesList.map((item, index) => {
+                              return (
+                                <LanguageButton
+                                  key={index}
+                                  href='#'
+                                  title={t(item.ctatitle)}
+                                  background='transparent'
+                                  hoverbackground='#fff'
+                                  color='#fff'
+                                  padding='8px 14px'
+                                  display='flex'
+                                  borderRadius='0'
+                                  justifyContent='flex-start'
+                                  onClick={() => i18n.changeLanguage(item.id)}
+                                >
+                                  <ItemH
+                                    justifyContent='flex-start'
+                                    flexWrap='nowrap'
+                                    padding='0px'
+                                  >
+                                    <Image
+                                      key={index}
+                                      src={
+                                        require(
+                                          `@site/static/assets/website/languages/${item.srcref}.webp`
+                                        ).default
+                                      }
+                                      srcSet={`${require(`@site/static/assets/website/languages/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/${item.srcref}@3x.webp`).default} 3x`}
+                                      alt={`${item?.alt}`}
+                                      height={24}
+                                      width={24}
+                                      borderRadius='100%'
+                                    />
+                                    <H3
+                                      fontSize='14px'
+                                      fontWeight='500'
+                                      lineHeight='130%'
+                                      letterSpacing='normal'
+                                      alignSelf='flex-start'
+                                      padding='8px 30px 8px 10px !important'
+                                      color='inherit'
+                                    >
+                                      {t(item.ctatext)}
+                                    </H3>
+                                  </ItemH>
+                                </LanguageButton>
+                              );
+                            })}
+                          </LanguageMenuContentInner>
+                        </LanguageMenuContent>
+                      </LanguageMenuItem>
+                    </LanguageItem> */}
+
+                    <Image
+                      src={
+                        require(`@site/static/assets/website/header/bars.png`)
+                          .default
+                      }
+                      srcSet={`${require(`@site/static/assets/website/header/bars@2x.png`).default} 2x, ${require(`@site/static/assets/website/header/bars@3x.png`).default} 3x`}
+                      alt={`Bars Icon`}
+                      width='auto'
+                      height='28px'
+                      onClick={toggleMobileMenu}
+                    />
+                  </ItemH>
                 )}
               </MobileMenuToggleIcon>
             </MenuTop>
 
-            <HeaderNavItemV showMobileMenu={isMobileMenuOpen} margin>
-              <NavigationMenu
-                role='menu'
-                className='navigationMenu'
-                showMobileMenu={isMobileMenuOpen}
-              >
-                {ChainNavBarItems?.map((item, index) => {
-                  const isExternal = item?.url?.startsWith('http');
-                  const itemHref = item?.url
-                    ? isExternal
-                      ? item.url
-                      : `${baseURL}${item.url}`
-                    : '#';
-
-                  return (
-                    <NavigationMenuItem
-                      key={item.id}
-                      isActive={activeItem === item.id}
-                      className={activeItem === item?.id ? 'active' : ''}
-                      showMobileMenu={showMobileMenu}
-                      expanded={mobileMenuMap[index]}
-                      {...(item.subItems &&
-                        !isMobileMenuOpen && {
-                          onMouseEnter: (e) =>
-                            handleMouseEnter(e, index, item.id),
-                          onMouseLeave: (e) =>
-                            handleMouseLeave(e, index, item.id),
-                        })}
-                    >
-                      <MenuNavLink
-                        className='navLink'
-                        showMobileMenu={showMobileMenu}
-                      >
-                        {item.subItems ? (
-                          <NavigationMenuHeader
-                            as='div'
-                            isActive={activeItem === item.id}
-                            onClick={(e) =>
-                              onMobileHeaderMenuClick(e, index, item.id)
-                            }
-                          >
-                            <Span
-                              textTransform='uppercase'
-                              fontSize='14px'
-                              fontWeight='500'
-                              lineHeight='140%'
-                              style={spanStyle}
-                            >
-                              {item.label}
-                            </Span>
-                            <BsChevronDown
-                              size={12}
-                              color={activeItem === item.id ? '#000' : '#fff'}
-                              className='chevronIcon'
-                            />
-                          </NavigationMenuHeader>
-                        ) : (
-                          <a
-                            href={itemHref}
-                            target={isExternal ? '_blank' : undefined}
-                            rel={isExternal ? 'noopener noreferrer' : undefined}
-                            className={`navigation-link ${activeItem === item.id ? 'active' : ''}`}
-                            onClick={
-                              isExternal
-                                ? null
-                                : (e) => {
-                                    e.preventDefault();
-                                    handleRedirect(item);
-                                  }
-                            }
-                          >
-                            <Span
-                              textTransform='uppercase'
-                              fontSize='14px'
-                              fontWeight='500'
-                              lineHeight='140%'
-                              style={spanStyle}
-                            >
-                              {item.label}
-                            </Span>
-                          </a>
-                        )}
-
-                        {item.subItems && (
-                          <DropdownMenu
-                            className='menuContent'
-                            expanded={mobileMenuMap[index]}
-                          >
-                            {item.subItems?.map((subItem) => {
-                              const isSubExternal =
-                                subItem?.url?.startsWith('http');
-                              const subItemHref = subItem?.url
-                                ? isSubExternal
-                                  ? subItem.url
-                                  : `${baseURL}${subItem.url}`
-                                : '#';
-
-                              return (
-                                <DropdownItem key={subItem.id}>
-                                  <a
-                                    href={subItemHref}
-                                    target={
-                                      isSubExternal ? '_blank' : undefined
-                                    }
-                                    rel={
-                                      isSubExternal
-                                        ? 'noopener noreferrer'
-                                        : undefined
-                                    }
-                                    onClick={
-                                      isSubExternal
-                                        ? null
-                                        : (e) => {
-                                            e.preventDefault();
-                                            handleRedirect(subItem);
-                                          }
-                                    }
-                                  >
-                                    <H3>{subItem.label}</H3>
-                                    <Span>{subItem?.sublabels}</Span>
-                                  </a>
-                                </DropdownItem>
-                              );
-                            })}
-                          </DropdownMenu>
-                        )}
-                      </MenuNavLink>
-                    </NavigationMenuItem>
-                  );
-                })}
-              </NavigationMenu>
-            </HeaderNavItemV>
-
-            <HeaderFocusItems flex='initial' alignSelf='stretch'>
-              <IconMenu
-                role='menu'
-                className='navigationMenu'
-                showMobileMenu={isMobileMenuOpen}
-              >
-                <RedirectButton
-                  background='#D548EC'
-                  fontFamily='N27'
-                  fontWeight='500'
-                  fontSize='18px'
-                  flex={isMobileMenuOpen && '1'}
-                  href='https://portal.push.org/rewards'
-                  target='_blank'
+            <HeaderWrapper>
+              <HeaderNavItemV showMobileMenu={isMobileMenuOpen}>
+                <NavigationMenu
+                  role='menu'
+                  className='navigationMenu'
+                  showMobileMenu={isMobileMenuOpen}
                 >
-                  Push Portal
-                </RedirectButton>
-              </IconMenu>
-            </HeaderFocusItems>
-          </NavList>
-        </HeaderContent>
+                  <NavigationMenuItem>
+                    <NavigationMenuHeader
+                      onClick={(e) => onMobileHeaderMenuClick(e, 0)}
+                      expanded={mobileMenuMap[0]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text0')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                      id='text0'
+                    >
+                      <ItemH justifyContent='flex-start' gap='4px'>
+                        <Image
+                          src={
+                            require(
+                              `@site/static/assets/website/header/donut-icon.webp`
+                            ).default
+                          }
+                          alt={`Push Chain Testnet Donut`}
+                          width='20px'
+                          height='auto'
+                        />
+                        <Span
+                          fontSize='1rem'
+                          fontWeight='500'
+                          letterSpacing='-0.03em'
+                          lineHeight='142%'
+                          padding='16px'
+                          color='inherit'
+                        >
+                          {t('header.testnet.title')}
+                        </Span>
+                      </ItemH>
+                      <BsChevronDown size={12} className='chevronIcon' />
+                    </NavigationMenuHeader>
+                    <NavigationMenuContent
+                      className='menuContent'
+                      expanded={mobileMenuMap[0]}
+                    >
+                      {/* Insert Liquid Glass */}
+                      <LiquidGlassOuter>
+                        <LiquidGlass
+                          autoResize={true}
+                          radius={24}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </LiquidGlassOuter>
+                      <HeaderDiv>
+                        <HeaderSection>
+                          {HeaderList.testnet.map((item, index) => (
+                            <HeaderSpace item={item} index={index} />
+                          ))}
+                        </HeaderSection>
+                      </HeaderDiv>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuHeader
+                      onClick={(e) => onMobileHeaderMenuClick(e, 1)}
+                      expanded={mobileMenuMap[1]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                      id='text1'
+                    >
+                      <Span
+                        fontSize='18px'
+                        fontWeight='500'
+                        letterSpacing='-0.03em'
+                        lineHeight='142%'
+                        padding='16px'
+                        color='inherit'
+                      >
+                        {t('header.developers.title')}
+                      </Span>
+
+                      <BsChevronDown size={12} className='chevronIcon' />
+                    </NavigationMenuHeader>
+
+                    <NavigationMenuContent
+                      className='menuContent'
+                      expanded={mobileMenuMap[1]}
+                    >
+                      {/* Insert Liquid Glass */}
+                      <LiquidGlassOuter>
+                        <LiquidGlass
+                          autoResize={true}
+                          radius={24}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </LiquidGlassOuter>
+
+                      <HeaderDiv>
+                        <HeaderSection>
+                          {HeaderList.developers.map((item, index) => (
+                            <HeaderSpace item={item} index={index} />
+                          ))}
+                        </HeaderSection>
+                      </HeaderDiv>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuHeader
+                      onClick={(e) => onMobileHeaderMenuClick(e, 2)}
+                      expanded={mobileMenuMap[2]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text2')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                      id='text2'
+                    >
+                      <Span
+                        fontSize='18px'
+                        fontWeight='500'
+                        letterSpacing='-0.03em'
+                        lineHeight='142%'
+                        padding='16px'
+                        color='inherit'
+                      >
+                        {t('header.community.title')}
+                      </Span>
+                      <BsChevronDown size={12} className='chevronIcon' />
+                    </NavigationMenuHeader>
+
+                    <NavigationMenuContent
+                      className='menuContent'
+                      expanded={mobileMenuMap[2]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text1')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                    >
+                      {/* Insert Liquid Glass */}
+                      <LiquidGlassOuter>
+                        <LiquidGlass
+                          autoResize={true}
+                          radius={24}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </LiquidGlassOuter>
+
+                      {HeaderList.community.map((item, index) => (
+                        <HeaderSpace item={item} index={index} />
+                      ))}
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuHeader
+                      onClick={(e) => onMobileHeaderMenuClick(e, 3)}
+                      expanded={mobileMenuMap[3]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text3')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                      id='text3'
+                    >
+                      <Span
+                        fontSize='18px'
+                        fontWeight='500'
+                        letterSpacing='-0.03em'
+                        lineHeight='142%'
+                        padding='16px'
+                      >
+                        {t('header.resources.title')}
+                      </Span>
+
+                      <BsChevronDown size={12} className='chevronIcon' />
+                    </NavigationMenuHeader>
+
+                    <NavigationMenuContent
+                      className='menuContent'
+                      expanded={mobileMenuMap[3]}
+                    >
+                      {/* Insert Liquid Glass */}
+                      <LiquidGlassOuter>
+                        <LiquidGlass
+                          autoResize={true}
+                          radius={24}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </LiquidGlassOuter>
+
+                      {HeaderList.resources.map((item, index) => (
+                        <HeaderSpace item={item} index={index} />
+                      ))}
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                </NavigationMenu>
+              </HeaderNavItemV>
+
+              <HeaderFocusItems flex='initial'>
+                <LanguageItem showMobileMenu={showMobileMenu}>
+                  <LanguageMenuItem>
+                    <LanguageMenuHeader
+                      onClick={(e) => onMobileHeaderMenuClick(e, 4)}
+                      expanded={mobileMenuMap[4]}
+                      onMouseEnter={(e) => handleMouseEnter(e, 'text4')}
+                      onMouseLeave={(e) => handleMouseLeave(e)}
+                      id='text4'
+                    >
+                      <H2
+                        fontSize='16px'
+                        lineHeight='130%'
+                        letterSpacing='normal'
+                        fontWeight='500'
+                      >
+                        {isMobile &&
+                          i18n &&
+                          SupportedLanguagesList.filter(
+                            (item) => item.id === i18n.language
+                          ).map((item, index) => <div>{item?.language}</div>)}
+                      </H2>
+
+                      <Span
+                        fontSize='18px'
+                        fontWeight='500'
+                        letterSpacing='-0.03em'
+                        lineHeight='142%'
+                        padding='16px 0px'
+                        aria-label={t('header.language.ctatitle')}
+                      >
+                        <Image
+                          src={
+                            require(
+                              `@site/static/assets/website/languages/world.webp`
+                            ).default
+                          }
+                          srcSet={`${require(`@site/static/assets/website/languages/world@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/world@3x.webp`).default} 3x`}
+                          alt={'Language Header Icon'}
+                          height={24}
+                          width={24}
+                          borderRadius='100%'
+                        />
+                      </Span>
+                      <BsChevronDown size={12} className='chevronIcon' />
+                    </LanguageMenuHeader>
+
+                    <LanguageMenuContent
+                      className='menuContent'
+                      expanded={mobileMenuMap[4]}
+                    >
+                      {/* Insert Liquid Glass */}
+                      <LiquidGlassOuter>
+                        <LiquidGlass
+                          autoResize={true}
+                          radius={24}
+                          depth={20}
+                          blur={5}
+                          chromaticAberration={10}
+                          debug={false}
+                        />
+                      </LiquidGlassOuter>
+
+                      <LanguageMenuContentInner>
+                        {SupportedLanguagesList.map((item, index) => {
+                          return (
+                            <LanguageButton
+                              key={index}
+                              href='#'
+                              title={t(item.ctatitle)}
+                              background='transparent'
+                              hoverbackground='#fff'
+                              color='#fff'
+                              padding='8px 14px'
+                              display='flex'
+                              borderRadius='0'
+                              justifyContent='flex-start'
+                              onClick={() => i18n.changeLanguage(item.id)}
+                            >
+                              <ItemH
+                                justifyContent='flex-start'
+                                flexWrap='nowrap'
+                                padding='0px'
+                              >
+                                <Image
+                                  key={index}
+                                  src={
+                                    require(
+                                      `@site/static/assets/website/languages/${item.srcref}.webp`
+                                    ).default
+                                  }
+                                  srcSet={`${require(`@site/static/assets/website/languages/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/${item.srcref}@3x.webp`).default} 3x`}
+                                  alt={`${item?.alt}`}
+                                  height={24}
+                                  width={24}
+                                  borderRadius='100%'
+                                />
+                                <H3
+                                  fontSize='14px'
+                                  fontWeight='500'
+                                  lineHeight='130%'
+                                  letterSpacing='normal'
+                                  alignSelf='flex-start'
+                                  padding='8px 30px 8px 10px !important'
+                                  color='inherit'
+                                >
+                                  {t(item.ctatext)}
+                                </H3>
+                              </ItemH>
+                            </LanguageButton>
+                          );
+                        })}
+                      </LanguageMenuContentInner>
+                    </LanguageMenuContent>
+                  </LanguageMenuItem>
+                </LanguageItem>
+
+                <PrimaryLauncher
+                  showMobileMenu={showMobileMenu}
+                  href='https://portal.push.org/'
+                  target='_blank'
+                  title={t('header.app-button.alt-title')}
+                  background='var(--ifm-link-color)'
+                  borderRadius='16px'
+                  border='1px solid rgba(255, 255, 255, 0.30)'
+                  fontSize='1.125rem'
+                  fontWeight='600'
+                  letterSpacing='-0.03em'
+                  lineHeight='1rem'
+                  width='100%'
+                >
+                  {t('header.app-button.title')}
+                </PrimaryLauncher>
+              </HeaderFocusItems>
+            </HeaderWrapper>
+          </HeaderItemH>
+        </Content>
       </Section>
     </StyledHeader>
   );
-};
+}
 
-export default Header;
-
-const HeaderContent = styled(Content)`
-  height: ${(props) => (!props.showMobileMenu ? '64px' : 'auto')};
-  align-self: ${(props) => (props.showMobileMenu ? 'flex-start' : 'stretch')};
-  overflow: visible;
-`;
-
-const NavList = styled.div`
-  position: relative;
+const HeaderWrapper = styled.div`
   width: 100%;
-  height: ${(props) => (!props.showMobileMenu ? '64px' : '100%')};
-  max-height: ${(props) => (!props.showMobileMenu ? '64px' : '100%')};
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align: center;
-  flex: 1;
-  margin: 0px auto 0 auto;
+  background: transparent;
 
   @media ${device.laptopM} {
     flex-direction: column;
-    width: 100%;
-    padding: 14px 0px 14px 0px;
-    margin: 0px auto;
+  }
+`;
+
+const LanguageItem = styled.div`
+  list-style: none;
+  margin: 0px 16px 0px 0px;
+
+  @media ${device.laptopM} {
+    display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
+    margin: 0px;
+    padding: 0px 16px 0px 16px;
+    flex: 1;
+    width: inherit;
+  }
+`;
+
+const HeaderItemH = styled(ItemH)`
+  border-radius: 24px;
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow:
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+    border-radius: 24px;
+  }
+
+  margin: ${({ showAlertBar }) =>
+    `${showAlertBar ? 80 : GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.TOP}px ${
+      GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.RIGHT
+    }px ${GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.BOTTOM}px ${
+      GLOBALS.HEADER.OUTER_MARGIN.DESKTOP.LEFT
+    }px`};
+  color: ${GLOBALS.COLORS.FONT_LIGHT};
+  height: ${GLOBALS.HEADER.HEIGHT}px;
+  padding: ${`${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.DESKTOP.LEFT}px`};
+  flex-direction: row;
+  flex-wrap: nowrap;
+  transition: margin 0.1s ease-out;
+
+  @media ${device.laptopM} {
+    margin: ${({ showAlertBar }) =>
+      `${showAlertBar ? 74 : GLOBALS.HEADER.OUTER_MARGIN.TABLET.TOP}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.TABLET.RIGHT
+      }px ${GLOBALS.HEADER.OUTER_MARGIN.TABLET.BOTTOM}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.TABLET.LEFT
+      }px`};
+    flex-direction: column;
+    padding: ${`${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.TABLET.LEFT}px`};
+    height: fit-content;
+  }
+
+  @media ${device.mobileL} {
+    margin: ${({ showAlertBar }) =>
+      `${showAlertBar ? 74 : GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.MOBILE.RIGHT
+      }px ${GLOBALS.HEADER.OUTER_MARGIN.MOBILE.BOTTOM}px ${
+        GLOBALS.HEADER.OUTER_MARGIN.MOBILE.LEFT
+      }px`};
+    flex-direction: column;
+    padding: ${`${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.RIGHT}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px ${GLOBALS.HEADER.OUTER_PADDING.MOBILE.LEFT}px`};
     box-sizing: border-box;
-    align-items: center;
-    border-radius: ${(props) => (props.showMobileMenu ? '32px' : '55px')};
-    min-height: ${(props) => (props.showMobileMenu ? '100vh' : '100%')};
-    justify-content: ${(props) =>
-      props.isMobileMenuOpen ? 'flex-start' : 'space-between'};
+  }
+
+  &.light {
+    color: ${GLOBALS.COLORS.FONT_DARK};
+    background: ${GLOBALS.COLORS.HEADER_BG_LIGHT};
+  }
+`;
+
+const HeaderNavItemV = styled(ItemV)`
+  margin: 0 ${GLOBALS.ADJUSTMENTS.PADDING.SMALL} 0
+    ${GLOBALS.ADJUSTMENTS.PADDING.SMALL};
+
+  @media ${device.laptopM} {
+    margin: ${(props) =>
+      props.showMobileMenu
+        ? `${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px 16px 20px 16px`
+        : '0'};
+  }
+
+  @media ${device.laptopM} {
+    margin: ${(props) =>
+      props.showMobileMenu
+        ? `${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px 16px 20px 16px`
+        : '0'};
+  }
+`;
+
+const PushLogoWhiteContainer = styled(ItemV)`
+  display: flex;
+  max-width: 190px;
+  &.light {
+    display: none;
+  }
+`;
+
+const PushLogoBlackContainer = styled(ItemV)`
+  display: none;
+  &.light {
+    display: flex;
   }
 `;
 
 const StyledHeader = styled.header`
-  font-family: N27, sans-serif;
+  font-family: 'Strawford';
+
+  /* padding: 0px 160px; */
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: ${(props) => (props.showMobileMenu ? '100vh' : 'auto')};
-  padding-top: 12px;
-  padding-bottom: 12px;
 
-  background: rgba(232, 239, 248, 0.5);
-  backdrop-filter: blur(calc(24px / 2));
-  z-index: 99999 !important;
+  opacity: 1;
+
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+
   transition: top 0.3s ease-in-out;
 
   &.hide {
@@ -433,79 +1035,84 @@ const StyledHeader = styled.header`
     & span {
       color: #121315;
     }
+
+    & svg.chevronIcon {
+      fill: #121315;
+
+      & path {
+        stroke: #121315;
+      }
+    }
   }
 
-  z-index: 999999;
+  z-index: 999;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  & .contentBox {
-    padding: 0px ${structure.PADDING.DESKTOP.RIGHT}px !important;
-    max-width: ${GLOBALS.STRUCTURE.MAX_WIDTH}px !important;
-
-    @media ${device.tablet} {
-      padding: 0px ${structure.PADDING.TABLET.RIGHT}px !important;
-    }
-
-    @media ${device.mobile} {
-      padding: 0px ${structure.PADDING.MOBILE.RIGHT}px !important;
-    }
-  }
-
   @media ${device.laptopM} {
+    max-height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
     flex-direction: column;
-    top: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    background-color: ${(props) =>
-      props.showMobileMenu ? '#000' : 'transparent'};
 
     &.hide {
       top: -100%;
     }
+
+    /* WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+      width: 3px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #cb3faa;
+      border-radius: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-button {
+      display: none !important;
+    }
+
+    /* Firefox */
+    scrollbar-color: #cb3faa #f1f1f1;
+    scrollbar-width: thin;
   }
 `;
 
-const MenuTop = styled(ItemV)`
-  display: flex;
+const InvisibleWall = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: ${(props) =>
+    props.isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0)'};
+  pointer-events: ${(props) => (props.isActive ? 'auto' : 'none')};
 
-  & svg {
-    cursor: pointer;
-  }
+  @media ${device.mobileL} {
+    transition:
+      background 0.2s ease-in-out,
+      -webkit-backdrop-filter 0.4s ease-in-out,
+      backdrop-filter 0.4s ease-in-out;
 
-  @media ${device.laptopM} {
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px 10px 10px;
-  }
-`;
-
-const PushLogoBlackContainer = styled.a`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
-  width: 150px;
-  color: #fff;
-  background: transparent;
-  padding: 0px;
-
-  &:hover {
-    background: transparent;
-  }
-
-  @media ${device.tablet} {
-    width: 100px;
+    -webkit-backdrop-filter: ${(props) =>
+      props.isActive ? 'blur(12px)' : 'blur(0px)'};
+    backdrop-filter: ${(props) =>
+      props.isActive ? 'blur(12px)' : 'blur(0px)'};
   }
 `;
 
 const MobileMenuToggleIcon = styled.span`
   display: none;
+  padding: 0 10px 0px 16px;
 
   @media ${device.laptopM} {
     display: flex;
@@ -513,49 +1120,31 @@ const MobileMenuToggleIcon = styled.span`
   }
 `;
 
-const MenuNavLink = styled.div`
-  position: relative;
-  cursor: pointer;
-
-  flex: 1;
-  margin: auto 0;
+const ADJUST_FOR_BLUR = 8;
+const MenuTop = styled(ItemV)<{
+  showMobileMenu?: boolean;
+  showAlertBar?: boolean;
+}>`
   display: flex;
-  align-items: center;
-  width: 100%;
-  padding: ${(props) => (props.showMobileMenu ? '16px' : '0px 24px')};
+  z-index: 9999;
+  height: ${GLOBALS.HEADER.HEIGHT}px;
 
-  @media ${device.laptopM} {
-    align-self: flex-start;
-    justify-content: flex-start;
+  & svg {
+    cursor: pointer;
   }
-`;
-
-const HeaderNavItemV = styled(ItemV)`
-  border-radius: 24px;
-  background: #000;
-  width: fit-content;
-  flex: 0;
-  padding: 8px;
 
   @media ${device.laptopM} {
-    margin: ${(props) => (props.showMobileMenu ? '24px 0px 0px 0px' : '0')};
-    width: ${(props) => (props.showMobileMenu ? '100%' : 'fit-content')};
-    padding: ${(props) => (props.showMobileMenu ? '0px' : '8px')};
-    flex: 0;
-    background: transparent;
-  }
-`;
-
-const HeaderFocusItems = styled(ItemH)`
-  align-self: stretch;
-  flex-wrap: nowrap;
-
-  @media ${device.laptopM} {
-    flex-direction: column;
-    align-self: flex-start;
-    flex-wrap: wrap;
-    margin: auto 0 0 0;
+    position: ${({ showMobileMenu }) => {
+      return showMobileMenu ? 'relative' : 'relative';
+    }};
+    height: auto;
+    top: ${({ showMobileMenu }) => (showMobileMenu ? '3px' : '0')};
+    left: 0;
+    flex-direction: row;
     width: 100%;
+    padding: 0px;
+    justify-content: space-between;
+    align-items: center;
   }
 `;
 
@@ -563,15 +1152,12 @@ const NavigationMenu = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  flex: 1;
+
   display: flex;
-  gap: 8px;
+
+  column-gap: 32px;
 
   z-index: 999;
-
-  .active {
-    background: #fff !important;
-  }
 
   @media ${device.laptopM} {
     flex-direction: column;
@@ -581,124 +1167,136 @@ const NavigationMenu = styled.ul`
   }
 `;
 
-const IconMenu = styled.ul`
-  list-style: none;
-  margin: 0 0 0 0;
-  justify-content: flex-start;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-  z-index: 9;
-
-  @media ${device.laptopM} {
-    flex-direction: row;
-    flex: 1;
-    margin: 0 0 auto 0;
-    align-self: stretch;
-    display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
-  }
-`;
-
 /**
  * HOVER happens on this element
  */
-const NavigationMenuItem = styled.div`
+const NavigationMenuItem = styled.li`
   position: relative;
-  font-family: N27, sans-serif;
-  border-radius: 16px;
-  background: transparent;
-
-  display: flex;
-  flex-direction: column;
-  align-items: ${(props) => (props.showMobileMenu ? 'flex-start' : 'center')};
-  transition: background 0.3s;
+  // Styles for the flags
+  .flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 
   & span {
-    color: ${(props) => (props.isActive ? '#000' : '#FFF')};
-    font-family: N27;
-    font-size: 14px;
-    font-style: normal;
+    padding: 4px;
     font-weight: 500;
-    line-height: 140%;
-    text-transform: uppercase;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: block;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: normal;
+    color: #6c6c6c;
   }
 
-  .navLink {
-    flex: 1;
-    margin: auto 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: ${(props) => (props.showMobileMenu ? '16px' : '0px 24px')};
-  }
+  // & .chevronIcon {
+  //   color: #6C6C6C;
+  // }
 
   &:hover {
-    cursor: pointer;
-
     & span {
-      transition-duration: 0.7s;
+      color: #fff;
     }
 
     & .chevronIcon {
       transform: rotate(180deg);
+      // color: #fff;
+    }
+
+    & .menuContent {
+      display: flex;
+      flex-direction: column;
     }
   }
+`;
 
-  @media ${device.laptopM} {
+const LanguageMenuItem = styled.li`
+  position: relative;
+  // Styles for the flags
+  .flag-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    display: block;
+  }
+
+  .flag-icon-drop {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: block;
+  }
+
+  padding-left: 16px;
+
+  & span {
+    padding: 4px 0px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142%;
+  }
+
+  // &:hover {
+  // & span {
+  //   color: ${(props) => (props.expanded ? '#dd44b9' : '')};
+  // }
+
+  & .chevronIcon {
+    color: #6c6c6c;
+  }
+
+  // & .menuContent {
+  //   display: ${(props) => (props.expanded ? 'block' : 'none')};
+  // }
+  // }
+
+  &:hover {
     & span {
-      font-size: 16px;
+      color: #dd44b9;
     }
 
-    .navLink {
+    & .chevronIcon {
+      transform: rotate(180deg);
+      color: #fff;
+    }
+
+    & .menuContent {
       display: block;
     }
   }
 
-  /* Style for proper links */
-  & .navigation-link {
-    display: flex;
-    align-items: center;
-    margin: auto 0;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
-    background: transparent;
-    padding: 0;
-
-    &:hover {
-      text-decoration: none;
-      background: transparent;
-    }
-
-    &.active span {
-      color: #000;
-    }
+  @media ${device.laptopM} {
+    padding-left: 0px;
+    flex: 1;
   }
 `;
 
 const NavigationMenuHeader = styled.div`
   display: flex;
   align-items: center;
-  margin: auto 0;
-  gap: 8px;
   cursor: pointer;
+
+  & span {
+    color: inherit !important;
+    padding: 12px 6px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 
   & .chevronIcon {
     transition-duration: 0.4s;
     transition-property: transform;
-  }
-
-  & span {
-    color: ${(props) => (props.isActive ? '#000' : '#FFF')};
+    color: inherit !important;
   }
 
   @media ${device.laptopM} {
     justify-content: space-between;
+    margin: 24px 0 0px 0;
+
+    & span {
+      padding: 0px;
+    }
 
     & .chevronIcon {
       width: 16px;
@@ -709,26 +1307,106 @@ const NavigationMenuHeader = styled.div`
   }
 `;
 
-const DropdownMenu = styled.ul`
-  list-style: none;
+const LanguageMenuHeader = styled.div`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
-  display: ${(props) => (props.expanded ? 'flex' : 'none !important')};
-  position: absolute;
-  top: 90%;
-  left: 0;
-  flex-direction: column;
-  z-index: 9999999999 !important;
-  padding: 12px;
-  border-radius: 24px;
-  background: rgba(11, 11, 13, 0.9);
-  min-width: 300px;
-  gap: 16px;
+  h2 {
+    color: inherit !important;
+  }
+
+  & span {
+    padding: 12px 6px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  & .chevronIcon {
+    transition-duration: 0.4s;
+    transition-property: transform;
+    color: inherit !important;
+  }
+
+  @media ${device.laptopM} {
+    justify-content: flex-end;
+
+    & span {
+      padding: 0px 8px;
+    }
+
+    & .chevronIcon {
+      width: 16px;
+      height: 16px;
+      transform: ${(props) =>
+        props.expanded ? 'rotate(180deg)' : 'none  !important'};
+    }
+  }
 
   @media ${device.laptopM} {
     width: 100%;
+
+    h2 {
+      margin: 0 auto 0 0;
+      padding: 4px 0px;
+    }
+  }
+`;
+
+const NavigationMenuContent = styled.ul`
+  list-style: none;
+  .header-item {
+    &:not(.absolute) + .header-item:not(.absolute) {
+      margin-top: 16px;
+    }
+  }
+
+  font-family: 'Strawford', 'Manrope', sans-serif;
+  display: none;
+  position: absolute;
+
+  // logic - this should touch the parent li for enough hover surface area.
+  top: 50px;
+  left: 50%;
+  transform: translateX(-10%);
+  z-index: 1;
+  border-radius: 24px;
+  padding: 12px;
+
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow:
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    filter: blur(5px);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  min-width: 390px;
+
+  @media ${device.mobileL} {
     min-width: 100%;
+  }
+
+  @media ${device.laptopM} {
+    width: 100%;
     position: relative;
-    top: 0;
+    top: 0px;
     left: 0;
     transform: none;
     display: flex;
@@ -737,9 +1415,9 @@ const DropdownMenu = styled.ul`
     padding: 12px;
     max-height: initial;
     min-height: initial;
-    border-radius: 12px;
 
     position: relative;
+    clip-path: inset(0 round 24px);
 
     display: ${(props) => (props.expanded ? 'flex' : 'none !important')};
     & a {
@@ -753,818 +1431,256 @@ const DropdownMenu = styled.ul`
   }
 `;
 
-const DropdownItem = styled.li`
-  padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 12px;
+const HeaderFocusItems = styled(ItemH)`
+  align-self: center;
+  flex-wrap: nowrap;
 
-  a {
-    display: block;
-    background: none;
-    border-radius: 0px;
+  @media ${device.laptopM} {
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    text-decoration: none;
+    flex: 1;
+  }
+`;
 
-    &:hover {
-      cursor: pointer !important;
-      text-decoration: none;
-      background: transparent;
+const LanguageMenuContent = styled.div`
+  list-style: none;
+
+  display: none;
+  position: absolute;
+
+  // logic - this should touch the parent li for enough hover surface area.
+  top: 50px;
+  left: 50%;
+  transform: translateX(-85%);
+  z-index: 1;
+  padding: 12px;
+  border-radius: 24px;
+
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  // background: rgba(0, 0, 0, 0.8);
+  box-shadow:
+    2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+    1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: rgba(0, 0, 0, 0.5);
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 24px;
+  }
+
+  & button {
+    min-width: 182px;
+  }
+
+  @media ${device.laptopM} {
+    min-width: 100%;
+
+    position: relative;
+    top: 8px;
+    left: 0;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+
+    display: ${(props) => (props.expanded ? 'flex' : 'none !important')};
+
+    & a {
+      justify-content: flex-start;
     }
   }
+`;
 
-  h3 {
-    color: #fff;
-    font-family: N27;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 130%;
+const LanguageMenuContentInner = styled.div`
+  max-height: 400px;
+  overflow-y: auto;
+
+  /* Custom scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 6px;
   }
 
-  span {
-    text-transform: capitalize;
-    color: #bbbcd0;
-    font-family: N27;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 130%;
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(171, 70, 248, 0.6);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(171, 70, 248, 0.8);
+  }
+
+  @media ${device.tablet} {
+    max-height: 300px;
+  }
+
+  @media ${device.mobileL} {
+    max-height: 200px;
+  }
+`;
+
+const LanguageButton = styled(Button)`
+  border: 1px solid transparent;
+  color: #fff;
+
+  &:not(:first-of-type) {
+    margin-top: 8px;
   }
 
   &:hover {
-    cursor: pointer !important;
-    border: 1px solid #fff;
-    background: #f4f4f4;
-    background: rgba(11, 11, 13, 0.9);
-    backdrop-filter: blur(calc(16px / 2));
+    border-radius: var(--radius-xs, 12px);
+    border: 1px solid transparent;
+    background: rgba(0, 0, 0, 1);
+    color: var(--ifm-link-color);
+  }
 
-    h3 {
-      color: #d98aec;
-    }
+  @media ${device.laptopM} {
+    width: 100%;
+    flex: 1;
+    margin: 8px 0;
   }
 `;
 
-const RedirectButton = styled(A)`
-  text-align: center;
+const HeaderItem = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px 12px;
+  gap: 6px;
+  cursor: pointer;
+  border: 1px solid transparent;
+
+  @media (min-width: 1025px) {
+    width: auto;
+  }
+
+  &:hover {
+    border-radius: var(--radius-xs, 12px);
+    // border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    background: rgba(0, 0, 0, 1);
+
+    h2 {
+      color: #d548ec;
+    }
+    & ${Image} {
+      filter: brightness(0) saturate(100%) invert(83%) sepia(53%)
+        saturate(5899%) hue-rotate(225deg) brightness(107%) contrast(85%);
+    }
+  }
+
+  @media ${device.laptopM} {
+    max-width: 100%;
+    // margin: 6px 0 0 0;
+  }
 `;
 
-// TODO: test on preview before removing
-// // /* eslint-disable @typescript-eslint/no-unused-vars */
-// // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// // @ts-nocheck
-// import React, { FC, useEffect, useState } from 'react';
-
-// import { useLocation } from '@docusaurus/router';
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-// import { AiOutlineClose } from 'react-icons/ai';
-// import { GiHamburgerMenu } from 'react-icons/gi';
-// import { useHistory } from 'react-router-dom';
-// import styled from 'styled-components';
-// import Link from '@docusaurus/Link';
-
-// import { useSiteBaseUrl } from '@site/src/hooks/useSiteBaseUrl';
-// import GLOBALS, { device, structure } from '../../src/config/globals';
-// import useMediaQuery from '../hooks/useMediaQuery';
-// import { useScrollDirection } from '../hooks/useScrollDirection';
-// import { ChainNavBarItems } from '../components/Chain/config/ChainNavBarItems';
-
-// import ChainLogo from '@site/static/assets/website/chain/ChainLogo.svg';
-// import ChainLogoDark from '@site/static/assets/website/chain/ChainLogoDark.svg';
-// import { BsChevronDown } from 'react-icons/bs';
-// import {
-//   A,
-//   Content,
-//   H3,
-//   ItemH,
-//   ItemV,
-//   Section,
-//   Span,
-// } from '../../src/css/SharedStyling';
-
-// // Register GSAP plugins
-// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
-
-// const defaultMobileMenuState = {
-//   0: false,
-//   1: false,
-//   2: false,
-//   3: false,
-//   // add next [index]: false for new main Nav menu item
-// };
-
-// const Header: FC = () => {
-//   const isMobile = useMediaQuery(device.laptopM);
-//   const history = useHistory();
-//   const location = useLocation();
-
-//   const [mobileMenuMap, setMobileMenuMap] = useState(defaultMobileMenuState);
-//   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-//   const [activeItem, setActiveItem] = useState(null);
-
-//   const [scrollDirection] = useScrollDirection(isMobileMenuOpen);
-
-//   const baseURL = useSiteBaseUrl() || '';
-
-//   const toggleMobileMenu = () => {
-//     setIsMobileMenuOpen((lastOpen) => !lastOpen);
-//   };
-
-//   const showMobileMenu = isMobile && isMobileMenuOpen;
-//   const headerClass = `${scrollDirection === 'scrollDown' ? 'hide' : 'show'}`;
-
-//   const onMobileHeaderMenuClick = (
-//     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-//     menuIndex: number,
-//     itemId
-//   ) => {
-//     e.preventDefault();
-//     const newMenuState = {
-//       ...mobileMenuMap,
-//       [menuIndex]: !mobileMenuMap[menuIndex], // Toggle only the clicked menu
-//     };
-
-//     setMobileMenuMap(newMenuState);
-//     setActiveItem(itemId);
-//   };
-
-//   const handleMouseEnter = (e, activeId, itemId) => {
-//     setMobileMenuMap({
-//       ...defaultMobileMenuState,
-//       [activeId]: true,
-//     });
-//     setActiveItem(itemId!);
-//   };
-
-//   const handleMouseLeave = (e, activeId) => {
-//     setMobileMenuMap({
-//       ...defaultMobileMenuState,
-//       [activeId]: false,
-//     });
-//     setActiveItem(null);
-//   };
-
-//   useEffect(() => {
-//     if (isMobileMenuOpen && isMobile) {
-//       document.body.style.overflow = 'hidden';
-//     } else {
-//       document.body.style.overflow = '';
-//     }
-
-//     return () => {
-//       // Cleanup: Reset overflow when the component unmounts
-//       document.body.style.overflow = '';
-//     };
-//   }, [isMobileMenuOpen, isMobile]);
-
-//   const handleSectionNavigation = (item) => {
-//     setActiveItem(item?.id);
-//     if (!item.url) {
-//       if (showMobileMenu) toggleMobileMenu();
-
-//       // Scroll to the section if no URL exists
-//       gsap.to(window, {
-//         duration: 0.75,
-//         scrollTo: { y: `#${item?.id}` },
-//       });
-//     }
-//   };
-
-//   const handleRedirect = (item) => {
-//     setActiveItem(item?.id);
-
-//     if (!item.url) return;
-
-//     // Handle external links
-//     if (item?.url.startsWith('https://')) {
-//       setIsMobileMenuOpen(false);
-//       window.open(item?.url, '_blank');
-//       return;
-//     }
-
-//     if (item?.url == '/blog') {
-//       const targetUrl = baseURL + item?.url;
-
-//       // Navigate to the new URL
-//       history.push(targetUrl);
-//       setIsMobileMenuOpen(false);
-//       return;
-//     }
-
-//     // Handle internal links
-//     if (item?.url.startsWith('/')) {
-//       const targetUrl = baseURL + item?.url;
-
-//       // Navigate to the new URL
-//       history.push(targetUrl);
-//       setIsMobileMenuOpen(false);
-
-//       // Scroll to the section
-//       gsap.to(window, {
-//         duration: 0.75,
-//         scrollTo: { y: `#${item?.id}` },
-//       });
-//       return;
-//     }
-
-//     // Handle in-page navigation
-//     handleSectionNavigation(item);
-//   };
-
-//   // Update the active item based on the current location
-//   useEffect(() => {
-//     const activeNavItem = ChainNavBarItems?.find(
-//       (item) => location.pathname === baseURL + item.url
-//     );
-//     if (activeNavItem) {
-//       setActiveItem(activeNavItem.id);
-//     }
-//   }, [location]);
-
-//   const spanStyle = {
-//     whiteSpace: 'nowrap',
-//     overflow: 'hidden',
-//     textOverflow: 'ellipsis',
-//     display: 'block',
-//   };
-
-//   return (
-//     <StyledHeader
-//       showMobileMenu={showMobileMenu}
-//       isMobileMenuOpen={isMobileMenuOpen}
-//       className={`header ${headerClass}`}
-//     >
-//       <Section>
-//         <HeaderContent
-//           className='contentBox'
-//           isMobileMenuOpen={isMobileMenuOpen}
-//           showMobileMenu={showMobileMenu}
-//         >
-//           <NavList showMobileMenu={showMobileMenu}>
-//             <MenuTop padding={isMobileMenuOpen && '16px'} flex='initial'>
-//               <PushLogoBlackContainer
-//                 className='headerlogo'
-//                 flex='initial'
-//                 href={'/'}
-//                 rel='noopener noreferrer'
-//               >
-//                 {isMobileMenuOpen ? <ChainLogoDark /> : <ChainLogo />}
-//               </PushLogoBlackContainer>
-
-//               <MobileMenuToggleIcon>
-//                 {isMobileMenuOpen ? (
-//                   <AiOutlineClose
-//                     size={28}
-//                     color='#fff'
-//                     onClick={toggleMobileMenu}
-//                   />
-//                 ) : (
-//                   <GiHamburgerMenu
-//                     size={28}
-//                     color='#000'
-//                     onClick={toggleMobileMenu}
-//                   />
-//                 )}
-//               </MobileMenuToggleIcon>
-//             </MenuTop>
-
-//             <HeaderNavItemV showMobileMenu={isMobileMenuOpen} margin>
-//               <NavigationMenu
-//                 role='menu'
-//                 className='navigationMenu'
-//                 showMobileMenu={isMobileMenuOpen}
-//               >
-//                 {ChainNavBarItems?.map((item, index) => {
-//                   const isExternal = item?.url?.startsWith('http');
-//                   const itemHref = item?.url
-//                     ? isExternal
-//                       ? item.url
-//                       : `${baseURL}${item.url}`
-//                     : '#';
-
-//                   const handleClick = (
-//                     e: React.MouseEvent<HTMLAnchorElement>
-//                   ) => {
-//                     if (item.subItems) {
-//                       e.preventDefault();
-//                       onMobileHeaderMenuClick(e, index, item.id);
-//                       return;
-//                     }
-
-//                     if (item.url) {
-//                       e.preventDefault();
-//                       handleRedirect(item);
-//                     }
-//                   };
-
-//                   return (
-//                     <NavigationMenuItem
-//                       key={item.id}
-//                       isActive={activeItem === item.id}
-//                       className={activeItem === item?.id ? 'active' : ''}
-//                       as={item?.subItems ? 'div' : 'a'}
-//                       {...(!item.subItems && {
-//                         href: itemHref,
-//                         target: isExternal ? '_blank' : undefined,
-//                         rel: isExternal ? 'noopener noreferrer' : undefined,
-//                         onClick: handleClick,
-//                       })}
-//                       showMobileMenu={showMobileMenu}
-//                       expanded={mobileMenuMap[index]}
-//                       onClick={handleClick}
-//                       {...(item.subItems &&
-//                         !isMobileMenuOpen && {
-//                           onMouseEnter: (e) =>
-//                             handleMouseEnter(e, index, item.id),
-//                           onMouseLeave: (e) =>
-//                             handleMouseLeave(e, index, item.id),
-//                         })}
-//                     >
-//                       <MenuNavLink
-//                         className='navLink'
-//                         showMobileMenu={showMobileMenu}
-//                       >
-//                         <NavigationMenuHeader isActive={activeItem === item.id}>
-//                           <Span
-//                             textTransform='uppercase'
-//                             fontSize='14px'
-//                             fontWeight='500'
-//                             lineHeight='140%'
-//                             style={spanStyle}
-//                           >
-//                             {item.label}
-//                           </Span>
-//                           {item.subItems && (
-//                             <BsChevronDown
-//                               size={12}
-//                               color={activeItem === item.id ? '#000' : '#fff'}
-//                               className='chevronIcon'
-//                             />
-//                           )}
-//                         </NavigationMenuHeader>
-
-//                         {item.subItems && (
-//                           <DropdownMenu
-//                             className='menuContent'
-//                             expanded={mobileMenuMap[index]}
-//                           >
-//                             {item.subItems?.map((subItem) => (
-//                               <DropdownItem key={subItem.id}>
-//                                 <Link
-//                                   to={subItem.url}
-//                                   onClick={() => handleRedirect(subItem)}
-//                                   padding='0px'
-//                                 >
-//                                   <H3>{subItem.label} </H3>
-//                                   <Span>{subItem?.sublabels}</Span>
-//                                 </Link>
-//                               </DropdownItem>
-//                             ))}
-//                           </DropdownMenu>
-//                         )}
-//                       </MenuNavLink>
-//                     </NavigationMenuItem>
-//                   );
-//                 })}
-//               </NavigationMenu>
-//             </HeaderNavItemV>
-
-//             <HeaderFocusItems flex='initial' alignSelf='stretch'>
-//               <IconMenu
-//                 role='menu'
-//                 className='navigationMenu'
-//                 showMobileMenu={isMobileMenuOpen}
-//               >
-//                 <RedirectButton
-//                   background='#D548EC'
-//                   fontFamily='N27'
-//                   fontWeight='500'
-//                   fontSize='18px'
-//                   flex={isMobileMenuOpen && '1'}
-//                   href='https://portal.push.org/rewards'
-//                   target='_blank'
-//                 >
-//                   Push Portal
-//                 </RedirectButton>
-//               </IconMenu>
-//             </HeaderFocusItems>
-//           </NavList>
-//         </HeaderContent>
-//       </Section>
-//     </StyledHeader>
-//   );
-// };
-
-// export default Header;
-
-// const HeaderContent = styled(Content)`
-//   height: ${(props) => (!props.showMobileMenu ? '64px' : 'auto')};
-//   align-self: ${(props) => (props.showMobileMenu ? 'flex-start' : 'stretch')};
-//   overflow: visible;
-// `;
-
-// const NavList = styled.div`
-//   position: relative;
-//   width: 100%;
-//   height: ${(props) => (!props.showMobileMenu ? '64px' : '100%')};
-//   max-height: ${(props) => (!props.showMobileMenu ? '64px' : '100%')};
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-between;
-//   align: center;
-//   flex: 1;
-//   margin: 0px auto 0 auto;
-
-//   @media ${device.laptopM} {
-//     flex-direction: column;
-//     width: 100%;
-//     padding: 14px 0px 14px 0px;
-//     margin: 0px auto;
-//     box-sizing: border-box;
-//     align-items: center;
-//     border-radius: ${(props) => (props.showMobileMenu ? '32px' : '55px')};
-//     min-height: ${(props) => (props.showMobileMenu ? '100vh' : '100%')};
-//     justify-content: ${(props) =>
-//       props.isMobileMenuOpen ? 'flex-start' : 'space-between'};
-//   }
-// `;
-
-// const StyledHeader = styled.header`
-//   font-family: N27, sans-serif;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   height: ${(props) => (props.showMobileMenu ? '100vh' : 'auto')};
-//   padding-top: 12px;
-//   padding-bottom: 12px;
-
-//   background: rgba(232, 239, 248, 0.5);
-//   backdrop-filter: blur(calc(24px / 2));
-//   z-index: 99999 !important;
-//   transition: top 0.3s ease-in-out;
-
-//   &.hide {
-//     top: -100%;
-//   }
-
-//   &.light {
-//     & span {
-//       color: #121315;
-//     }
-//   }
-
-//   z-index: 999999;
-
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: center;
-
-//   & .contentBox {
-//     padding: 0px ${structure.PADDING.DESKTOP.RIGHT}px !important;
-//     max-width: ${GLOBALS.STRUCTURE.MAX_WIDTH}px !important;
-
-//     @media ${device.tablet} {
-//       padding: 0px ${structure.PADDING.TABLET.RIGHT}px !important;
-//     }
-
-//     @media ${device.mobile} {
-//       padding: 0px ${structure.PADDING.MOBILE.RIGHT}px !important;
-//     }
-//   }
-
-//   @media ${device.laptopM} {
-//     flex-direction: column;
-//     top: 0px;
-//     padding-top: 0px;
-//     padding-bottom: 0px;
-//     background-color: ${(props) =>
-//       props.showMobileMenu ? '#000' : 'transparent'};
-
-//     &.hide {
-//       top: -100%;
-//     }
-//   }
-// `;
-
-// const MenuTop = styled(ItemV)`
-//   display: flex;
-
-//   & svg {
-//     cursor: pointer;
-//   }
-
-//   @media ${device.laptopM} {
-//     flex-direction: row;
-//     width: 100%;
-//     justify-content: space-between;
-//     align-items: center;
-//     padding: 10px 15px 10px 10px;
-//   }
-// `;
-
-// const PushLogoBlackContainer = styled.a`
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   height: 100%;
-//   width: 150px;
-//   color: #fff;
-//   background: transparent;
-//   padding: 0px;
-
-//   &:hover {
-//     background: transparent;
-//   }
-
-//   @media ${device.tablet} {
-//     width: 100px;
-//   }
-// `;
-
-// const MobileMenuToggleIcon = styled.span`
-//   display: none;
-
-//   @media ${device.laptopM} {
-//     display: flex;
-//     cursor: pointer;
-//   }
-// `;
-
-// const MenuNavLink = styled.div`
-//   position: relative;
-//   cursor: pointer;
-
-//   flex: 1;
-//   margin: auto 0;
-//   display: flex;
-//   align-items: center;
-//   width: 100%;
-//   padding: ${(props) => (props.showMobileMenu ? '16px' : '0px 24px')};
-
-//   @media ${device.laptopM} {
-//     align-self: flex-start;
-//     justify-content: flex-start;
-//   }
-// `;
-
-// const HeaderNavItemV = styled(ItemV)`
-//   border-radius: 24px;
-//   background: #000;
-//   width: fit-content;
-//   flex: 0;
-//   padding: 8px;
-
-//   @media ${device.laptopM} {
-//     margin: ${(props) => (props.showMobileMenu ? '24px 0px 0px 0px' : '0')};
-//     width: ${(props) => (props.showMobileMenu ? '100%' : 'fit-content')};
-//     padding: ${(props) => (props.showMobileMenu ? '0px' : '8px')};
-//     flex: 0;
-//     background: transparent;
-//   }
-// `;
-
-// const HeaderFocusItems = styled(ItemH)`
-//   align-self: stretch;
-//   flex-wrap: nowrap;
-
-//   @media ${device.laptopM} {
-//     flex-direction: column;
-//     align-self: flex-start;
-//     flex-wrap: wrap;
-//     margin: auto 0 0 0;
-//     width: 100%;
-//   }
-// `;
-
-// const NavigationMenu = styled.ul`
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-//   flex: 1;
-//   display: flex;
-//   gap: 8px;
-
-//   z-index: 999;
-
-//   .active {
-//     background: #fff !important;
-//   }
-
-//   @media ${device.laptopM} {
-//     flex-direction: column;
-//     flex: 0 0 75%;
-//     align-self: stretch;
-//     display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
-//   }
-// `;
-
-// const IconMenu = styled.ul`
-//   list-style: none;
-//   margin: 0 0 0 0;
-//   justify-content: flex-start;
-//   padding: 0;
-//   display: flex;
-//   gap: 20px;
-//   z-index: 9;
-
-//   @media ${device.laptopM} {
-//     flex-direction: row;
-//     flex: 1;
-//     margin: 0 0 auto 0;
-//     align-self: stretch;
-//     display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
-//   }
-// `;
-
-// /**
-//  * HOVER happens on this element
-//  */
-// const NavigationMenuItem = styled(Link)`
-//   position: relative;
-//   font-family: N27, sans-serif;
-//   border-radius: 16px;
-//   background: transparent;
-
-//   display: flex;
-//   flex-direction: column;
-//   align-items: ${(props) => (props.showMobileMenu ? 'flex-start' : 'center')};
-//   transition: background 0.3s;
-
-//   & span {
-//     color: ${(props) => (props.isActive ? '#000' : '#FFF')};
-//     font-family: N27;
-//     font-size: 14px;
-//     font-style: normal;
-//     font-weight: 500;
-//     line-height: 140%;
-//     text-transform: uppercase;
-
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     display: block;
-//   }
-
-//   .navLink {
-//     flex: 1;
-//     margin: auto 0;
-//     display: flex;
-//     align-items: center;
-//     width: 100%;
-//     padding: ${(props) => (props.showMobileMenu ? '16px' : '0px 24px')};
-//   }
-
-//   &:hover {
-//     cursor: pointer;
-
-//     & span {
-//       transition-duration: 0.7s;
-//     }
-
-//     & .chevronIcon {
-//       transform: rotate(180deg);
-//     }
-
-//     // & .menuContent {
-//     //   display: block;
-//     // }
-//   }
-
-//   @media ${device.laptopM} {
-//     & span {
-//       font-size: 16px;
-//     }
-
-//     .navLink {
-//       display: block;
-//     }
-//   }
-// `;
-
-// const NavigationMenuHeader = styled.a`
-//   display: flex;
-//   align-items: center;
-//   margin: auto 0;
-//   gap: 8px;
-
-//   & .chevronIcon {
-//     transition-duration: 0.4s;
-//     transition-property: transform;
-//   }
-
-//   & span {
-//     color: ${(props) => (props.isActive ? '#000' : '#FFF')};
-//   }
-
-//   @media ${device.laptopM} {
-//     justify-content: space-between;
-
-//     & .chevronIcon {
-//       width: 16px;
-//       height: 16px;
-//       transform: ${(props) =>
-//         props.expanded ? 'rotate(180deg)' : 'none  !important'};
-//     }
-//   }
-// `;
-
-// const DropdownMenu = styled.ul`
-//   list-style: none;
-
-//   display: ${(props) => (props.expanded ? 'flex' : 'none !important')};
-//   position: absolute;
-//   top: 90%;
-//   left: 0;
-//   flex-direction: column;
-//   z-index: 9999999999 !important;
-//   padding: 12px;
-//   border-radius: 24px;
-//   background: rgba(11, 11, 13, 0.9);
-//   min-width: 300px;
-//   gap: 16px;
-
-//   @media ${device.laptopM} {
-//     width: 100%;
-//     min-width: 100%;
-//     position: relative;
-//     top: 0;
-//     left: 0;
-//     transform: none;
-//     display: flex;
-//     flex-direction: column;
-//     margin: 8px 0 0 0;
-//     padding: 12px;
-//     max-height: initial;
-//     min-height: initial;
-//     border-radius: 12px;
-
-//     position: relative;
-
-//     display: ${(props) => (props.expanded ? 'flex' : 'none !important')};
-//     & a {
-//       justify-content: flex-start;
-//     }
-//   }
-
-//   @media ${device.tablet} {
-//     max-height: initial;
-//     min-height: initial;
-//   }
-// `;
-
-// const DropdownItem = styled.li`
-//   padding: 8px;
-//   border: 1px solid transparent;
-//   border-radius: 12px;
-
-//   a {
-//     display: block;
-//     background: none;
-//     border-radius: 0px;
-//     width: 100%;
-//     height: 100%;
-
-//     &:hover {
-//       cursor: pointer !important;
-//     }
-//   }
-
-//   h3 {
-//     color: #fff;
-//     font-family: N27;
-//     font-size: 16px;
-//     font-style: normal;
-//     font-weight: 500;
-//     line-height: 130%;
-//   }
-
-//   span {
-//     text-transform: capitalize;
-//     color: #bbbcd0;
-//     font-family: N27;
-//     font-size: 14px;
-//     font-style: normal;
-//     font-weight: 400;
-//     line-height: 130%;
-//   }
-
-//   &:hover {
-//     cursor: pointer !important;
-//     border: 1px solid #fff;
-//     background: #f4f4f4;
-//     background: rgba(11, 11, 13, 0.9);
-//     backdrop-filter: blur(calc(16px / 2));
-
-//     h3 {
-//       color: #d98aec;
-//     }
-//   }
-// `;
-
-// const RedirectButton = styled(A)`
-//   text-align: center;
-// `;
+const HeaderImage = styled(Image)`
+  margin: 10px;
+
+  @media ${device.laptopM} {
+    margin: 10px 10px 10px 0;
+  }
+`;
+
+const HeaderDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+`;
+
+const HeaderSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+`;
+
+const PrimaryLauncher = styled(A)`
+  padding: 16px 32px;
+  font-family:
+    DM Sans,
+    sans-serif;
+  height: auto;
+  min-width: 140px;
+  box-sizing: border-box;
+
+  @media ${device.laptopM} {
+    align-self: stretch;
+    flex: 0 1 100%;
+    display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
+    margin-top: ${(props) => props.showMobileMenu && '32px'};
+  }
+
+  @media ${device.mobileL} {
+  }
+`;
+
+const PortalLauncher = styled(A)`
+  padding: 16px 32px;
+  font-family:
+    DM Sans,
+    sans-serif;
+  height: auto;
+  min-width: 140px;
+  box-sizing: border-box;
+
+  @media ${device.laptop} {
+    display: block;
+  }
+
+  @media (max-width: 522px) {
+    display: none;
+  }
+
+  @media (max-width: 522px) {
+    display: none;
+  }
+
+  @media ${device.mobileL} {
+    display: none;
+  }
+`;
+
+const TagItem = styled.b`
+  width: fit-content;
+  border-radius: 12px;
+  border: 1px solid #d98aec;
+  background: transparent;
+  padding: 2px 5px;
+  color: #d98aec;
+  // text-align: center;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: bolder;
+  line-height: normal;
+`;
+
+const LiquidGlassOuter = styled(ItemV)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  pointer-events: none;
+
+  @media ${device.mobileL} {
+    display: none;
+  }
+`;
+
+export default Header;

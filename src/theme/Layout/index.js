@@ -57,7 +57,7 @@ export default function Layout(props) {
 
       {showNavbar === 'chain' && (
         <ItemH background='#e8eff8'>
-          <Footer showPattern={true} />
+          <Footer showPattern={false} />
         </ItemH>
       )}
     </LayoutProvider>

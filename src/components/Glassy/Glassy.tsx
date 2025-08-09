@@ -7,11 +7,13 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 // External Components
-import ReactPlayer from 'react-player';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Lottie from 'lottie-react';
+import ReactPlayer from 'react-player';
 import styled from 'styled-components';
 
 // Internal Components
+import { LiquidGlass } from '@site/src/components/LiquidGlass/LiquidGlass';
 import {
   A,
   Button,
@@ -30,6 +32,7 @@ import { BsArrowRight } from 'react-icons/bs';
 
 // Internal Configs
 import { device, size } from '@site/src/config/globals';
+import { isSafari } from '@site/src/utils/isSafari';
 
 const Glassy = ({ item }) => {
   const isMobile = useMediaQuery(device.mobileL);
@@ -51,6 +54,7 @@ const Glassy = ({ item }) => {
     bgtitle,
     link,
     hidehovereffect,
+    containerFlexDirection,
   } = config || '';
 
   const {
@@ -71,9 +75,39 @@ const Glassy = ({ item }) => {
 
   // decide video format for bg and header illustration
   const disableVideoAt = size.tablet;
-  const bgVideoFormat = item.config && item.config.bgvideowebm ? 'webm' : 'mp4';
-  const headerIllustrationFormat =
-    item.header && item.header.illustrationvideowebm ? 'webm' : 'mp4';
+  const bgVideoFormat = (() => {
+    if (item.config && item.config.bgvideowebm) {
+      if (isSafari()) {
+        try {
+          require(
+            `@site/static/assets/website/home/${item.config.bgvideosrc}.mp4`
+          );
+          return 'mp4';
+        } catch {
+          return 'webm';
+        }
+      }
+      return 'webm';
+    }
+    return 'mp4';
+  })();
+
+  const headerIllustrationFormat = (() => {
+    if (item.header && item.header.illustrationvideowebm) {
+      if (isSafari()) {
+        try {
+          require(
+            `@site/static/assets/website/home/${item.header.illustrationvideosrc}.mp4`
+          );
+          return 'mp4';
+        } catch {
+          return 'webm';
+        }
+      }
+      return 'webm';
+    }
+    return 'mp4';
+  })();
 
   const Tag = ({ item }) => {
     const { background, border, color, title, fontSize } = item || '';
@@ -85,7 +119,7 @@ const Glassy = ({ item }) => {
         color={color}
         fontSize={fontSize}
       >
-        {title}
+        {t(title)}
       </TagItem>
     );
   };
@@ -142,7 +176,7 @@ const Glassy = ({ item }) => {
       container.style.transform = `rotateX(${degX}deg) rotateY(${degY}deg) translateZ(${transZ}px)`;
     }
 
-    // Apply glow
+    // // Apply glow
     const glowwys = document.querySelectorAll(`.${id} > .glowwy`);
     glowwys.forEach((glowwy) => {
       glowwy.style.top = `${y}px`;
@@ -160,9 +194,10 @@ const Glassy = ({ item }) => {
       fluid={item.config.fluid}
       hide={item.config.hide ? item.config.hide : null}
       hideEffect={hidehovereffect}
+      containerFlexDirection={containerFlexDirection}
       className={`${hovered ? 'active' : ''} ${id}`}
     >
-      <GlowwyBorder
+      {/* <GlowwyBorder
         className={`${hovered ? 'active' : ''} glowwy`}
         hideEffect={hidehovereffect}
       />
@@ -170,7 +205,7 @@ const Glassy = ({ item }) => {
       <Glowwy
         className={`${hovered ? 'active' : ''} glowwy`}
         hideEffect={hidehovereffect}
-      />
+      /> */}
 
       <Subcontainer
         id={id}
@@ -224,118 +259,133 @@ const Glassy = ({ item }) => {
           />
         )}
 
-        <Header highlight={highlight} id={id}>
-          <Subheader highlight={highlight} id={id} illustration={illustration}>
-            <ItemH
-              flex='1'
-              alignSelf={illustration ? 'center' : 'flex-start'}
-              gap={icon && '8px'}
+        {header && (
+          <Header highlight={highlight} id={id}>
+            <Subheader
+              highlight={highlight}
+              id={id}
+              illustration={illustration}
             >
-              {icon && (
-                <GridImage
-                  src={
-                    require(`@site/static/assets/website/home/${icon}.webp`)
-                      .default
-                  }
-                  srcSet={`${require(`@site/static/assets/website/home/${icon}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${icon}@3x.webp`).default} 3x`}
-                  alt={t(iconalt)}
-                  title={t(icontitle)}
-                  width='16px'
-                  height='16px'
-                />
-              )}
-              <Title align={align} highlight={highlight} subheader={subheader}>
-                <H2
-                  fontSize={isTablet ? '9px' : '11px'}
-                  color='#D98AEC'
-                  fontWeight='bold'
-                  fontFamily='FK Grotesk Neue'
+              <ItemH
+                flex='1'
+                alignSelf={illustration ? 'center' : 'flex-start'}
+                gap={icon && '8px'}
+              >
+                {icon && (
+                  <GridImage
+                    src={
+                      require(`@site/static/assets/website/home/${icon}.webp`)
+                        .default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/home/${icon}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${icon}@3x.webp`).default} 3x`}
+                    alt={t(iconalt)}
+                    title={t(icontitle)}
+                    width='16px'
+                    height='16px'
+                  />
+                )}
+                <Title
+                  align={align}
+                  highlight={highlight}
+                  subheader={subheader}
                 >
-                  {t(subheader)}
-                </H2>
+                  <H2
+                    fontSize={isTablet ? '9px' : '11px'}
+                    color='#D98AEC'
+                    fontWeight='bold'
+                    fontFamily='DM Sans'
+                  >
+                    {t(subheader)}
+                  </H2>
 
-                <H2Text fontFamily='FK Grotesk Neue' theme={theme}>
-                  {t(title)}
-                </H2Text>
-              </Title>
+                  <H2Text fontFamily='DM Sans' theme={theme}>
+                    {t(title)}
+                  </H2Text>
+                </Title>
 
-              {highlight && <Tag item={highlight} />}
-            </ItemH>
+                {highlight && <Tag item={highlight} />}
+              </ItemH>
 
-            {illustration && (
-              <HeaderImageWrapper>
-                {item.header.illustrationvideo &&
-                  typeof window !== 'undefined' &&
-                  window.innerWidth > size.tablet && (
-                    <ReactPlayer
-                      url={
-                        require(
-                          `@site/static/assets/website/home/${item.header.illustrationvideo}.${headerIllustrationFormat}`
-                        ).default
-                      }
-                      config={{
-                        file: {
-                          attributes: {
-                            controlsList: 'nofullscreen',
+              {illustration && (
+                <HeaderImageWrapper>
+                  {item.header.illustrationvideo &&
+                    typeof window !== 'undefined' &&
+                    window.innerWidth > size.tablet && (
+                      <ReactPlayer
+                        url={
+                          require(
+                            `@site/static/assets/website/home/${item.header.illustrationvideo}.${headerIllustrationFormat}`
+                          ).default
+                        }
+                        config={{
+                          file: {
+                            attributes: {
+                              controlsList: 'nofullscreen',
+                              muted: true,
+                              playsInline: true,
+                              playsinline: true,
+                            },
                           },
-                        },
-                      }}
-                      playing={hovered ? true : false}
-                      loop={true}
-                      muted={true}
-                      width='100%'
-                      height='100%'
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        visibility:
-                          hovered &&
-                          window.innerWidth > disableVideoAt &&
-                          item.header.illustrationvideo
-                            ? 'visible'
-                            : 'hidden',
-                      }}
-                    />
-                  )}
+                        }}
+                        playing={hovered ? true : false}
+                        loop={true}
+                        muted={true}
+                        width='100%'
+                        height='100%'
+                        style={{
+                          position: 'absolute',
+                          top: 0,
+                          left: 0,
+                          visibility:
+                            hovered &&
+                            window.innerWidth > disableVideoAt &&
+                            item.header.illustrationvideo
+                              ? 'visible'
+                              : 'hidden',
+                        }}
+                      />
+                    )}
 
-                <GridImage
-                  src={
-                    require(
-                      `@site/static/assets/website/home/${illustration}.webp`
-                    ).default
-                  }
-                  srcSet={`${require(`@site/static/assets/website/home/${illustration}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${illustration}@3x.webp`).default} 3x`}
-                  alt={t(iconalt)}
-                  title={t(icontitle)}
-                  width={isTablet ? '27px' : 'auto'}
-                  height={isTablet ? 'auto' : '37px'}
-                  style={{
-                    visibility:
-                      hovered &&
-                      window.innerWidth > disableVideoAt &&
-                      item.header.illustrationvideo
-                        ? 'hidden'
-                        : 'visible',
-                  }}
-                />
-              </HeaderImageWrapper>
+                  <GridImage
+                    src={
+                      require(
+                        `@site/static/assets/website/home/${illustration}.webp`
+                      ).default
+                    }
+                    srcSet={`${require(`@site/static/assets/website/home/${illustration}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/home/${illustration}@3x.webp`).default} 3x`}
+                    alt={t(iconalt)}
+                    title={t(icontitle)}
+                    width={isTablet ? '27px' : 'auto'}
+                    height={isTablet ? 'auto' : '37px'}
+                    style={{
+                      visibility:
+                        hovered &&
+                        window.innerWidth > disableVideoAt &&
+                        item.header.illustrationvideo
+                          ? 'hidden'
+                          : 'visible',
+                    }}
+                  />
+                </HeaderImageWrapper>
+              )}
+            </Subheader>
+
+            {/* tags */}
+            {tags && (
+              <TagItems
+                flexDirection='row'
+                alignItems='flex-start'
+                justifyContent='flex-start'
+                gap='12px'
+                margin='14px 0 0 0'
+              >
+                {tags?.map((item) => (
+                  <Tag item={item} />
+                ))}
+              </TagItems>
             )}
-          </Subheader>
-
-          {/* tags */}
-          {tags && (
-            <TagItems
-              flexDirection='row'
-              alignItems='flex-start'
-              justifyContent='flex-start'
-              gap='12px'
-              margin='14px 0 0 0'
-            >
-              {tags?.map((item) => <Tag item={item} />)}
-            </TagItems>
-          )}
-        </Header>
+          </Header>
+        )}
 
         {item.body && (
           <Body>
@@ -353,10 +403,28 @@ const Glassy = ({ item }) => {
               {item.body.map((object) => {
                 // Render type "image"
                 if (object.type === 'image') {
-                  const videoFormat = object.videowebm ? 'webm' : 'mp4';
-
+                  const videoFormat = (() => {
+                    if (object.videowebm) {
+                      if (isSafari()) {
+                        try {
+                          require(
+                            `@site/static/assets/website/home/${object.videosrc}.mp4`
+                          );
+                          return 'mp4';
+                        } catch {
+                          return 'webm';
+                        }
+                      }
+                      return 'webm';
+                    }
+                    return 'mp4';
+                  })();
                   return (
-                    <BodyImageWrapper>
+                    <BodyImageWrapper
+                      imagewidth={object.imagewidth}
+                      imageheight={object.imageheight}
+                      imagemargin={object.imagemargin}
+                    >
                       {object.videosrc && (
                         <ReactPlayer
                           url={
@@ -389,7 +457,36 @@ const Glassy = ({ item }) => {
                           }}
                         />
                       )}
-
+                      {object.lottiesrc && (
+                        <div
+                          style={{
+                            position: 'absolute',
+                            top: 0,
+                            left: 0,
+                            width: '100%',
+                            height: '100%',
+                            visibility:
+                              hovered &&
+                              window.innerWidth > disableVideoAt &&
+                              object.lottiesrc
+                                ? 'visible'
+                                : 'hidden',
+                          }}
+                        >
+                          <Lottie
+                            animationData={require(
+                              `@site/static/assets/website/home/${object.lottiesrc}.json`
+                            )}
+                            loop={true}
+                            autoplay={true}
+                            play={hovered}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                            }}
+                          />
+                        </div>
+                      )}
                       <BodyImage
                         src={
                           require(
@@ -403,7 +500,7 @@ const Glassy = ({ item }) => {
                           visibility:
                             hovered &&
                             window.innerWidth > disableVideoAt &&
-                            object.videosrc
+                            (object.videosrc || object.lottiesrc)
                               ? 'hidden'
                               : 'visible',
                         }}
@@ -412,6 +509,13 @@ const Glassy = ({ item }) => {
                     </BodyImageWrapper>
                   );
                 }
+
+                // Render type "tag"
+                // if (object.type === 'text') {
+                //   return (
+
+                //   );
+                // }
 
                 // Render type "title"
                 if (object.type === 'title') {
@@ -448,16 +552,33 @@ const Glassy = ({ item }) => {
                             : 'center'
                       }
                     >
-                      <BodyText
-                        size={object.bodytextsize}
-                        mobilesize={object.mobilebodytextsize}
-                        color={object.bodytextcolor}
-                        weight={object.bodytextweight}
-                        uppercase={object.uppercase}
-                        margin={object.margin}
-                      >
-                        {t(object.bodytext)}
-                      </BodyText>
+                      {object.tagText && (
+                        <TagText>
+                          <span>{t(object.tagText)}</span>
+
+                          {object.tags?.map((item) => (
+                            <Tag item={item} />
+                          ))}
+                        </TagText>
+                      )}
+
+                      <div className='text-content'>
+                        {object.texttitle && (
+                          <div className='text-title'>
+                            {t(object.texttitle)}
+                          </div>
+                        )}
+                        <BodyText
+                          size={object.bodytextsize}
+                          mobilesize={object.mobilebodytextsize}
+                          color={object.bodytextcolor}
+                          weight={object.bodytextweight}
+                          uppercase={object.uppercase}
+                          margin={object.margin}
+                        >
+                          {t(object.bodytext)}
+                        </BodyText>
+                      </div>
                     </BodyTextItem>
                   );
                 }
@@ -498,7 +619,7 @@ const Glassy = ({ item }) => {
                         margin='0px auto'
                         fontWeight='500'
                         fontSize='16px'
-                        fontFamily='FK Grotesk Neue'
+                        fontFamily='DM Sans, san-serif'
                         href={useBaseUrl(object.buttonlink)}
                         title={t(object.buttontitle)}
                       >
@@ -509,7 +630,7 @@ const Glassy = ({ item }) => {
                   );
                 }
 
-                return null; // Explicitly return null if the condition is not met
+                return null;
               })}
             </BodyInner>
           </Body>
@@ -518,7 +639,7 @@ const Glassy = ({ item }) => {
         {footer && (
           <Footer>
             {text && (
-              <H2Text fontFamily='FK Grotesk Neue' id={id}>
+              <H2Text fontFamily='DM Sans, san-serif' id={id}>
                 {t(text)}
               </H2Text>
             )}
@@ -531,7 +652,7 @@ const Glassy = ({ item }) => {
           <H2
             fontSize='12px'
             color='#FFF'
-            fontFamily='FK Grotesk Neue'
+            fontFamily='DM Sans, san-serif'
             lineHeight='130%'
           >
             {t(message)}
@@ -548,41 +669,53 @@ const Container = styled.div`
   align-self: flex-start;
   position: relative;
   width: 100%;
-  min-height: ${(props) => props.height || 'auto'};
+  height: 100%;
+  min-height: ${(props) => props.height || '100%'};
+  max-height: ${(props) => props.height || '100%'};
   border-radius: 24px;
   box-sizing: border-box;
   overflow: hidden !important;
   display: flex;
-  display: ${(props) => props.hide && props.hide.desktop && 'none'};
-  flex-direction: column;
+  flex-direction: ${(props) => props.containerFlexDirection || 'column'};
   justify-content: space-between;
 
   // for glassy effect
   border: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: inherit; /* Inherit border-radius from parent container */
-    z-index: -10; /* Put the pseudo-element behind the container content */
+  &:hover {
+    border-radius: 16px;
+    border: 1px solid rgba(112, 70, 248, 0.4);
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow:
+      2.788px 2.598px 12px 0 rgba(255, 255, 255, 0.15) inset,
+      1.858px 1.732px 6px 0 rgba(255, 255, 255, 0.15) inset;
+    /* backdrop-filter: blur(10px); */
+    background-blend-mode: plus-lighten;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    right: 1px;
-    border-radius: inherit;
-    background: ${(props) => (props.hideEffect ? 'transparent' : '#0d0d0f')};
-    z-index: -8; /* Glowwy comes as -9 */
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   border-radius: inherit; /* Inherit border-radius from parent container */
+  //   z-index: -10; /* Put the pseudo-element behind the container content */
+  // }
+
+  // &::after {
+  //   content: '';
+  //   position: absolute;
+  //   top: 1px;
+  //   left: 1px;
+  //   bottom: 1px;
+  //   right: 1px;
+  //   border-radius: inherit;
+  //   background: ${(props) => (props.hideEffect ? 'transparent' : '#0d0d0f')};
+  //   z-index: -8; /* Glowwy comes as -9 */
+  // }
 
   @media ${device.laptopM} {
     flex: ${(props) =>
@@ -594,15 +727,22 @@ const Container = styled.div`
     flex: ${(props) =>
       props.fluid && props.fluid.tablet ? '1 0 auto' : 'initial'};
     width: ${(props) => (props.fluid && props.fluid.tablet ? 'auto' : '100%')};
+    pointer-events: none;
+    touch-action: none;
   }
 
   @media ${device.mobileL} {
     flex: ${(props) => (props.fluid && props.fluid.mobile ? '1' : 'initial')};
     width: ${(props) => (props.fluid && props.fluid.mobile ? 'auto' : '100%')};
     display: ${(props) => props.hide && props.hide.mobile && 'none'};
+    pointer-events: none;
+    touch-action: none;
+    min-height: 100%;
+    max-height: 100%;
   }
 `;
 
+// TODO: comment out glow
 const GlowwyBorder = styled.div`
   width: 0px;
   height: 0px;
@@ -630,11 +770,10 @@ const Glowwy = styled(GlowwyBorder)`
 
 const Subcontainer = styled.div`
   display: flex;
-  flex: 1;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  gap: 16px;
+  gap: 8px;
   padding: ${(props) => props.padding || '24px'};
   background-image: url(${(props) => props.bg});
   background-position: center;
@@ -645,7 +784,7 @@ const Subcontainer = styled.div`
   position: relative;
   margin: 1px;
 
-  @media ${device.mobileL} {
+  @media ${device.laptop} {
     padding: ${(props) => props.mobilepadding || '24px'};
   }
 `;
@@ -677,14 +816,18 @@ const TagItems = styled(ItemV)`
 `;
 
 const H2Text = styled(H2)`
-  font-size: 19px;
+  font-size: 2rem;
   color: #fff;
-  line-height: 130%;
+  line-height: 120%;
   white-space: pre;
-  font-weight: 400;
+  font-weight: 500;
+
+  @media ${device.laptop} {
+    white-space: normal;
+  }
 
   @media ${device.mobileL} {
-    white-space: pre;
+    white-space: normal;
     margin-top: ${({ id }) => (id == 'snap' ? '24px' : '0')};
   }
 
@@ -696,7 +839,6 @@ const H2Text = styled(H2)`
 `;
 
 const SubscribeText = styled.h2`
-  font-family: FK Grotesk Neue;
   font-size: 72px;
   background: linear-gradient(
     270deg,
@@ -721,9 +863,8 @@ const SubscribeText = styled.h2`
   }
 `;
 
-const BodyText = styled.h2`
-  font-family: FK Grotesk Neue;
-  color: ${(props) => props.color};
+const BodyText = styled.div`
+  // color: ${(props) => props.color};
   font-size: ${(props) => props.size};
   font-weight: ${(props) => props.weight};
   text-transform: ${(props) => props.uppercase && 'uppercase'};
@@ -731,7 +872,13 @@ const BodyText = styled.h2`
   // text-align: center;
   letter-spacing: normal;
   // margin: 0 auto;
-  line-height: 130%;
+  line-height: 150%;
+  font-family: 'DM Sans', sans-serif;
+
+  background: linear-gradient(90deg, #b1b1b9 0%, #635d65 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
   @media ${device.laptop} {
     font-size: ${(props) => props.mobilesize};
@@ -806,23 +953,58 @@ const Body = styled.div`
 `;
 
 const BodyInner = styled(ItemV)`
-  gap: 20px;
+  gap: 16px;
+  align-self: normal;
+  flex-wrap: nowrap;
 
   justify-content: ${(props) =>
     props.bodyjustifycontent ? props.bodyjustifycontent : 'center'};
+  height: 100%;
+  box-sizing: border-box;
 `;
 const BodyTextItem = styled(ItemV)`
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  line-height: normal;
   max-width: ${(props) => props.bodytextwidth};
 
-  // @media ${device.tablet} {
-  //   max-width: ${(props) => props.mobilebodytextwidth};
-  // }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .text-title {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.64px;
+
+    @media (min-width: 471px) and (max-width: 1200px) {
+      font-size: 1.5rem;
+    }
 `;
 
 const BodyImageWrapper = styled.div`
   display: block;
-  width: 100%;
+  width: ${(props) => props.imagewidth || '100%'};
+  height: ${(props) => props.imageheight || 'auto'};
+  margin: ${(props) => props.imagemargin || 'auto'};
+
   position: relative;
+
+  @media ${device.laptop} {
+    overflow: hidden;
+  }
+
+  @media ${device.mobileL} {
+    width: 100%;
+  }
 `;
 
 const BodyImage = styled(Image)`
@@ -906,16 +1088,58 @@ const AfterItem = styled.div`
   }
 `;
 
-const SlideLink = styled(A)`
+const TagText = styled.div`
+  color: #cca4f0;
+  font-family: 'DM Sans';
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 4px 0;
+`;
+
+const SlideLink = styled.a`
+  gap: 12px;
+  background: none;
+  border: none;
   overflow: inherit;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto 0 0;
+  padding: 0px;
+
   .anchorSVGlink {
     color: #fff;
     top: 3px;
   }
 
+  span {
+    background: transparent;
+    color: #fff;
+  }
+
   &:hover {
+    background: transparent;
+    text-decoration: none;
+    background: none;
+
     .anchorSVGlink {
-      color: #d98aec;
+      color: #e163ff;
+    }
+
+    span {
+      background: transparent;
+      color: #e163ff;
     }
   }
 `;
@@ -928,22 +1152,22 @@ const SpanLink = styled(Span)`
   letter-spacing: normal;
   line-height: 142%;
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  &:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   width: 100%;
+  //   transform: scaleX(0);
+  //   height: 2px;
+  //   bottom: 0;
+  //   left: 0;
+  //   background-color: #fff;
+  //   transform-origin: bottom right;
+  //   transition: transform 0.25s ease-out;
+  // }
+  // &:hover:after {
+  //   transform: scaleX(1);
+  //   transform-origin: bottom left;
+  // }
 `;
 
 export default Glassy;

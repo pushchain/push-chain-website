@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Push Chain 标志图像",
+      "imagetitle": "Push Chain 标志",
+      "ctatitle": "前往主页"
+    },
+    "testnet": {
+      "title": "测试网",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Push Chain 区块浏览器"
+      },
+      "link2": {
+        "title": "水龙头",
+        "subtitle": "获取测试网代币"
+      }
+    },
+    "developers": {
+      "title": "开发者",
+      "link1": {
+        "title": "开始使用",
+        "subtitle": "在 Push Chain 上构建的介绍"
+      },
+      "link2": {
+        "title": "快速开始",
+        "subtitle": "几秒钟内设置开发环境"
+      },
+      "link3": {
+        "title": "教程",
+        "subtitle": "使用 Push 构建的分步指南"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "查看核心代码和开源工具"
+      },
+      "link5": {
+        "title": "开发者 Discord",
+        "subtitle": "与开发者社区连接"
+      }
+    },
+    "community": {
+      "title": "社区",
+      "link1": {
+        "title": "知识库",
+        "subtitle": "查找功能深度解析"
+      },
+      "link2": {
+        "title": "代币经济学",
+        "subtitle": "为 Push Chain 上的一切提供动力的原生代币"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "关注更新和生态系统新闻"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "与社区聊天、构建和互动"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "加入对话并保持联系"
+      }
+    },
+    "resources": {
+      "title": "资源",
+      "link1": {
+        "title": "博客",
+        "subtitle": "更新、深度解析和开发故事"
+      },
+      "link2": {
+        "title": "简化白皮书",
+        "subtitle": "愿景和技术，简化版"
+      },
+      "link3": {
+        "title": "常见问题",
+        "subtitle": "常见问题的快速答案"
+      }
+    },
+    "language": {
+      "title": "语言",
+      "ctatitle": "请选择您的语言",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "切换语言为葡萄牙语",
+
+      "russian": "Русский",
+      "russian-ctatitle": "切换语言为俄语",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "切换语言为土耳其语",
+
+      "french": "Français",
+      "french-ctatitle": "切换语言为法语",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "切换语言为印尼语",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "切换语言为越南语",
+
+      "german": "Deutsch",
+      "german-ctatitle": "切换语言为德语",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "切换语言为阿拉伯语"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "访问 Push Portal"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "任何链，任何应用，所有用户。\n一个 Push Chain。",
+      "description": "首个为通用应用构建的第一层。\n一次构建和部署，从任何链上引入用户。",
+      "primary-button": "开始构建",
+      "secondary-button": "探索知识库"
+    },
+    "whatis-section": {
+      "titleFirst": "真正的",
+      "titleSecondGraditent": "通用",
+      "titleThird": "链",
+      "bottomTextFirst": "一次部署，",
+      "bottomTextSecond": "无处不在",
+      "bottomTextLink": "开始使用"
+    },
+    "email-section": {
+      "title": "不要错过任何更新",
+      "text": "注册并及时了解生态系统公告、赠品等。",
+      "email-input": "您的邮箱",
+      "submit-button": "注册",
+      "loading-submit-button": "请稍候..."
+    }
+  },
+  "alert": {
+    "know-more": "开始使用！"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "获取最新的 Push 新闻",
+      "privacy": "隐私政策",
+      "tos": "条款和条件"
+    }
+  }
+}

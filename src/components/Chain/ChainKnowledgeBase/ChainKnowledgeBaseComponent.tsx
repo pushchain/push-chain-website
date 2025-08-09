@@ -18,25 +18,27 @@ const ChainKnowledgeBaseComponent = () => {
 
   return (
     <ChainKnowledgeBaseComponentWrapper>
-      <ItemH gap='32px' flexDirection={isMobile && 'column'}>
-        <ItemV>
+      <MainContentWrapper>
+        <ItemV
+          alignItems={isMobile ? 'center' : 'flex-start'}
+          justifyContent='flex-start'
+        >
           <H2
-            fontSize={isMobile ? '36px' : '54px'}
-            fontWeight='500'
-            fontFamily='N27'
-            lineHeight='140%'
+            fontSize={isMobile ? '2.5rem' : '3rem'}
+            fontWeight='600'
+            lineHeight='157%'
             letterSpacing='-1.098px'
-            textAlign='center'
+            textAlign={isMobile ? 'center' : 'left'}
+            color='#FFF'
           >
             {ChainKnowledgeBaseHeader?.title}
           </H2>
 
           <H3
-            fontSize={isMobile ? '16px' : '20px'}
+            fontSize={isMobile ? '1rem' : '1.125rem'}
             fontWeight='400'
-            fontFamily='N27'
-            lineHeight='140%'
-            textAlign='center'
+            lineHeight='155%'
+            textAlign={isMobile ? 'center' : 'left'}
           >
             {ChainKnowledgeBaseHeader?.description()}
           </H3>
@@ -44,7 +46,7 @@ const ChainKnowledgeBaseComponent = () => {
 
         <IFrameItem>
           <IFrameImage
-            background={ChainKnowledgeBaseHeader?.image && '#E8EFF8'}
+            background={ChainKnowledgeBaseHeader?.image && '#F2C2FE'}
             borderRadius='32px'
           >
             {ChainKnowledgeBaseHeader?.video && (
@@ -75,12 +77,11 @@ const ChainKnowledgeBaseComponent = () => {
 
           <IframeContent>
             <H3
-              fontSize={isMobile ? '14px' : '16px'}
+              fontSize={isMobile ? '0.875rem' : '0.938rem'}
               fontWeight='400'
-              fontFamily='N27'
-              lineHeight={isMobile ? '100%' : '140%'}
+              lineHeight={isMobile ? '100%' : '132%'}
               letterSpacing='-0.64px'
-              color='#000'
+              color='#BBBCD0'
               flex='1'
             >
               Craft seamless, user-friendly experiences for you app on any
@@ -91,7 +92,7 @@ const ChainKnowledgeBaseComponent = () => {
             </ButtonLink>
           </IframeContent>
         </IFrameItem>
-      </ItemH>
+      </MainContentWrapper>
 
       {/* modal */}
       <ChainElevateModal isOpen={isOpen} onClose={close} />
@@ -102,10 +103,34 @@ const ChainKnowledgeBaseComponent = () => {
 export default ChainKnowledgeBaseComponent;
 
 const ChainKnowledgeBaseComponentWrapper = styled.div`
-  margin: 213px auto 0 auto;
+  display: flex;
+  flex: 1;
+  width: inherit;
+`;
+
+const MainContentWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 128px;
+  justify-content: space-between;
+  flex: 1;
+
+  @media ${device.laptop} {
+    gap: 80px;
+  }
+
+  @media ${device.tablet} {
+    gap: 48px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 
   @media ${device.mobileL} {
-    margin: 153px auto 0 auto;
+    flex-direction: column;
+    gap: 32px;
+    justify-content: flex-start;
+    align-items: center;
   }
 `;
 
@@ -114,13 +139,14 @@ const IFrameImage = styled(ItemH)`
 `;
 
 const IFrameItem = styled.div`
-  padding: 16px;
-  background: white;
+  padding: 16px 0px 16px 16px;
+  background: #101010;
   display: flex;
   border-radius: 40px;
   flex-direction: column;
   max-width: 592px;
-  justify-content: center;
+  justify-content: flex-start;
+  align-self: flex-start;
 
   iframe {
     border-radius: 24px;
@@ -145,13 +171,19 @@ const IframeContent = styled.div`
 `;
 
 const ButtonLink = styled.a`
-  background: #d548ec;
-  font-family: N27;
-  font-size: 18px;
+  font-family:
+    DM Sans,
+    sans-serif;
+  font-size: 1rem;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   padding: 14px 32px;
   border-radius: 16px;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #d548ec;
+  line-height: 180.513%;
 
   &:hover {
     color: #fff;

@@ -174,7 +174,7 @@ export default function ChainCanvas() {
     const ctx = canvas.getContext('2d')!;
 
     Matter.Events.on(render, 'afterRender', () => {
-      ctx.font = `400 ${fontSize}px N27`; // Font style
+      ctx.font = `400 ${fontSize}px DM Sans`; // Font style
       ctx.textBaseline = 'middle'; // Vertically align text
       ctx.fillStyle = '#FFFFFF';
 

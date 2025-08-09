@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Push Chain 로고 이미지",
+      "imagetitle": "Push Chain 로고",
+      "ctatitle": "홈페이지로 이동"
+    },
+    "testnet": {
+      "title": "테스트넷",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Push Chain 블록 익스플로러"
+      },
+      "link2": {
+        "title": "파우셋",
+        "subtitle": "테스트넷 토큰 받기"
+      }
+    },
+    "developers": {
+      "title": "개발자",
+      "link1": {
+        "title": "시작하기",
+        "subtitle": "Push Chain에서 구축하는 방법 소개"
+      },
+      "link2": {
+        "title": "빠른 시작",
+        "subtitle": "몇 초 만에 개발 환경 설정"
+      },
+      "link3": {
+        "title": "튜토리얼",
+        "subtitle": "Push로 구축하는 단계별 가이드"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "핵심 코드 및 오픈소스 도구 보기"
+      },
+      "link5": {
+        "title": "개발자 Discord",
+        "subtitle": "개발자 커뮤니티와 연결"
+      }
+    },
+    "community": {
+      "title": "커뮤니티",
+      "link1": {
+        "title": "지식 베이스",
+        "subtitle": "기능에 대한 심층 분석 찾기"
+      },
+      "link2": {
+        "title": "토큰노믹스",
+        "subtitle": "Push Chain의 모든 것을 구동하는 네이티브 토큰"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "업데이트 및 생태계 뉴스 팔로우"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "커뮤니티와 채팅, 구축, 소통"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "대화에 참여하고 연결 유지"
+      }
+    },
+    "resources": {
+      "title": "리소스",
+      "link1": {
+        "title": "블로그",
+        "subtitle": "업데이트, 심층 분석, 개발 스토리"
+      },
+      "link2": {
+        "title": "라이트페이퍼",
+        "subtitle": "비전과 기술, 간소화 버전"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "일반적인 질문에 대한 빠른 답변"
+      }
+    },
+    "language": {
+      "title": "언어",
+      "ctatitle": "언어를 선택해주세요",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "언어를 포르투갈어로 변경",
+
+      "russian": "Русский",
+      "russian-ctatitle": "언어를 러시아어로 변경",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "언어를 터키어로 변경",
+
+      "french": "Français",
+      "french-ctatitle": "언어를 프랑스어로 변경",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "언어를 인도네시아어로 변경",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "언어를 베트남어로 변경",
+
+      "german": "Deutsch",
+      "german-ctatitle": "언어를 독일어로 변경",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "언어를 아랍어로 변경"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Push Portal 방문"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "모든 체인, 모든 앱, 모든 사용자.\n하나의 Push Chain.",
+      "description": "유니버설 앱을 위해 구축된 최초의 레이어 1.\n한 번 구축하고 배포하면, 모든 체인에서 사용자를 온보딩.",
+      "primary-button": "구축 시작",
+      "secondary-button": "지식 베이스 탐색"
+    },
+    "whatis-section": {
+      "titleFirst": "진정한",
+      "titleSecondGraditent": "유니버설",
+      "titleThird": "체인",
+      "bottomTextFirst": "한 번 배포,",
+      "bottomTextSecond": "어디든 도달",
+      "bottomTextLink": "시작하기"
+    },
+    "email-section": {
+      "title": "업데이트를 놓치지 마세요",
+      "text": "가입하고 생태계 발표, 경품 등의 최신 정보를 받아보세요.",
+      "email-input": "이메일 주소",
+      "submit-button": "가입하기",
+      "loading-submit-button": "잠시만 기다려주세요..."
+    }
+  },
+  "alert": {
+    "know-more": "시작하기!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "최신 Push 뉴스 받기",
+      "privacy": "개인정보 보호정책",
+      "tos": "이용약관"
+    }
+  }
+}

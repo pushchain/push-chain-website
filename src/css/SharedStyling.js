@@ -16,7 +16,7 @@ import GLOBALS, { device, structure } from '@site/src/config/globals';
  */
 
 export const HeroHeader = styled.h1`
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   color: ${(props) => props.color || GLOBALS.COLORS.FONT_LIGHT};
   font-size: 68px;
   line-height: 110%;
@@ -86,6 +86,11 @@ export const Content = styled.div`
       props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.DESKTOP};
   }
 
+  &.skeletonsmall {
+    margin: ${(props) =>
+      props.margin || GLOBALS.STRUCTURE.MARGIN.SKELETON_SMALL.DESKTOP};
+  }
+
   @media ${device.laptop} {
     max-width: ${(props) =>
       props.maxWidth ||
@@ -100,6 +105,11 @@ export const Content = styled.div`
     &.vertfluid {
       padding: ${(props) =>
         props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.TABLET};
+    }
+
+    &.skeletonsmall {
+      margin: ${(props) =>
+        props.margin || GLOBALS.STRUCTURE.MARGIN.SKELETON_SMALL.TABLET};
     }
   }
 
@@ -117,6 +127,11 @@ export const Content = styled.div`
     &.vertfluid {
       padding: ${(props) =>
         props.padding || GLOBALS.STRUCTURE.PADDING.VERTICAL_FLUID.MOBILE};
+    }
+
+    &.skeletonsmall {
+      margin: ${(props) =>
+        props.margin || GLOBALS.STRUCTURE.MARGIN.SKELETON_SMALL.MOBILE};
     }
   }
 `;
@@ -193,7 +208,7 @@ export const H1 = styled.h1`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.03em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
@@ -219,8 +234,9 @@ export const H2 = styled.h2`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.02em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
+  white-space: ${(props) => props.whiteSpace || 'normal'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
   z-index: ${(props) => props.zIndex || 'auto'};
@@ -243,9 +259,10 @@ export const H3 = styled.h3`
   font-size: ${(props) => props.fontSize || GLOBALS.ADJUSTMENTS.FONT.HEADING};
   text-transform: ${(props) => props.textTransform || 'inherit'};
   margin: ${(props) => props.margin || '0px'};
+  max-width: ${(props) => props.maxWidth || 'initial'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.02em'};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
@@ -277,10 +294,12 @@ export const Span = styled.span`
   font-weight: ${(props) => props.fontWeight || 400};
   font-size: ${(props) =>
     props.fontSize || GLOBALS.ADJUSTMENTS.FONT.NORMAL_TEXT.DESKTOP};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-transform: ${(props) => props.textTransform || 'inherit'};
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.03em'};
+  white-space: ${(props) => props.whiteSpace || 'break-spaces'}
   text-align: ${(props) => props.textAlign || 'initial'};
   line-height: ${(props) => props.lineHeight || '142%'};
   position: ${(props) => props.position || 'initial'};
@@ -326,7 +345,7 @@ export const Button = styled.button`
   pointer: ${(props) => props.pointer || 'hand'};
   cursor: ${(props) => props.cursor || 'pointer'};
   gap: ${(props) => props.gap};
-  font-family: ${(props) => props.fontFamily || 'Inter, sans-serif'};
+  font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
 
   @media ${device.laptop} {
     font-size: ${(props) =>
@@ -483,6 +502,7 @@ export const P = styled.p`
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || 'inherit'};
   text-align: ${(props) => props.textAlign || 'initial'};
+  font-family: ${(props) => props.fontFamily || 'inherit'};
 `;
 
 export const LinkTo = styled(Link)`
