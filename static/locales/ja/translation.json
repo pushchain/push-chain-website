@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Push Chain ロゴの画像",
+      "imagetitle": "Push Chain ロゴ",
+      "ctatitle": "ホームページに移動"
+    },
+    "testnet": {
+      "title": "テストネット",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Push Chain のブロックエクスプローラー"
+      },
+      "link2": {
+        "title": "フォーセット",
+        "subtitle": "テストネットトークンを取得"
+      }
+    },
+    "developers": {
+      "title": "開発者",
+      "link1": {
+        "title": "始める",
+        "subtitle": "Push Chain での構築の紹介"
+      },
+      "link2": {
+        "title": "クイックスタート",
+        "subtitle": "数秒で開発環境をセットアップ"
+      },
+      "link3": {
+        "title": "チュートリアル",
+        "subtitle": "Push で構築するためのステップバイステップガイド"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "コアコードとオープンソースツールを表示"
+      },
+      "link5": {
+        "title": "開発者 Discord",
+        "subtitle": "開発者コミュニティと接続"
+      }
+    },
+    "community": {
+      "title": "コミュニティ",
+      "link1": {
+        "title": "ナレッジベース",
+        "subtitle": "機能の詳細解説を見つける"
+      },
+      "link2": {
+        "title": "トークノミクス",
+        "subtitle": "Push Chain 上のすべてを動かすネイティブトークン"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "アップデートとエコシステムニュースをフォロー"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "コミュニティとチャット、構築、交流"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "会話に参加し、つながりを保つ"
+      }
+    },
+    "resources": {
+      "title": "リソース",
+      "link1": {
+        "title": "ブログ",
+        "subtitle": "アップデート、詳細解説、開発ストーリー"
+      },
+      "link2": {
+        "title": "ライトペーパー",
+        "subtitle": "ビジョンと技術、簡素化版"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "よくある質問への迅速な回答"
+      }
+    },
+    "language": {
+      "title": "言語",
+      "ctatitle": "言語を選択してください",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "言語をポルトガル語に変更",
+
+      "russian": "Русский",
+      "russian-ctatitle": "言語をロシア語に変更",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "言語をトルコ語に変更",
+
+      "french": "Français",
+      "french-ctatitle": "言語をフランス語に変更",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "言語をインドネシア語に変更",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "言語をベトナム語に変更",
+
+      "german": "Deutsch",
+      "german-ctatitle": "言語をドイツ語に変更",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "言語をアラビア語に変更"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Push Portal を訪問"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "あらゆるチェーン、あらゆるアプリ、すべてのユーザー。\n一つの Push Chain。",
+      "description": "ユニバーサルアプリ用に構築された最初のレイヤー1。\n一度構築・デプロイすれば、あらゆるチェーンからユーザーをオンボード。",
+      "primary-button": "構築を開始",
+      "secondary-button": "ナレッジベースを探索"
+    },
+    "whatis-section": {
+      "titleFirst": "真の",
+      "titleSecondGraditent": "ユニバーサル",
+      "titleThird": "チェーン",
+      "bottomTextFirst": "一度デプロイ、",
+      "bottomTextSecond": "どこでも到達",
+      "bottomTextLink": "始める"
+    },
+    "email-section": {
+      "title": "アップデートを見逃さない",
+      "text": "サインアップして、エコシステムの発表、プレゼントなどの最新情報を入手してください。",
+      "email-input": "あなたのメール",
+      "submit-button": "サインアップ",
+      "loading-submit-button": "お待ちください..."
+    }
+  },
+  "alert": {
+    "know-more": "始めましょう！"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "最新の Push ニュースを取得",
+      "privacy": "プライバシーポリシー",
+      "tos": "利用規約"
+    }
+  }
+}

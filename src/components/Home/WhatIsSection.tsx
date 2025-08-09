@@ -1,31 +1,42 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
+
+// React + Web3 Essentials
 import Lottie from 'lottie-react';
 import { TbArrowRight } from 'react-icons/tb';
 import styled from 'styled-components';
 
+// External Components
+import { useTranslation } from 'react-i18next';
+
+// Internal Components
 import { device } from '@site/src/config/globals';
 import { A, H2, Span } from '@site/src/css/SharedStyling';
 import heroAnimation from '@site/static/assets/website/hero/hero-animation.json';
 
-export const HeroImageSection = () => {
+export const WhatIsSection = () => {
+  // Internationalization
+  const { t, i18n } = useTranslation();
+
   const UniversalText = () => (
     <>
-      <H2>A True</H2>
-      <H2 className='gradient-bg'>Universal</H2>
-      <H2>Chain</H2>
+      <H2>{t('home.whatis-section.titleFirst')}</H2>
+      <H2 className='gradient-bg'>
+        {t('home.whatis-section.titleSecondGraditent')}
+      </H2>
+      <H2>{t('home.whatis-section.titleThird')}</H2>
     </>
   );
 
   const BottomSection = () => (
     <>
-      <Span>Deploy Once,</Span>
-      <Span>Reach Everywhere</Span>
+      <Span>{t('home.whatis-section.bottomTextFirst')}</Span>
+      <Span>{t('home.whatis-section.bottomTextSecond')}</Span>
 
       <LearnMoreLink
         href='/docs'
-        target='_blank'
+        target='_self'
         border='none'
         fontSize='1.125rem'
         fontWeight='600'
@@ -34,7 +45,7 @@ export const HeroImageSection = () => {
         width='100%'
         color='#E163FF'
       >
-        Get Started
+        {t('home.whatis-section.bottomTextLink')}
         <TbArrowRight className='start-svg' />
       </LearnMoreLink>
     </>

@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Hình ảnh logo Push Chain",
+      "imagetitle": "Logo Push Chain",
+      "ctatitle": "Đi đến trang chủ"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Trình khám phá khối cho Push Chain"
+      },
+      "link2": {
+        "title": "Faucet",
+        "subtitle": "Nhận token testnet"
+      }
+    },
+    "developers": {
+      "title": "Nhà phát triển",
+      "link1": {
+        "title": "Bắt đầu",
+        "subtitle": "Giới thiệu về việc xây dựng trên Push Chain"
+      },
+      "link2": {
+        "title": "Khởi động nhanh",
+        "subtitle": "Thiết lập môi trường phát triển trong vài giây"
+      },
+      "link3": {
+        "title": "Hướng dẫn",
+        "subtitle": "Hướng dẫn từng bước để xây dựng với Push"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "Xem mã lõi và công cụ mã nguồn mở"
+      },
+      "link5": {
+        "title": "Discord nhà phát triển",
+        "subtitle": "Kết nối với cộng đồng nhà phát triển"
+      }
+    },
+    "community": {
+      "title": "Cộng đồng",
+      "link1": {
+        "title": "Cơ sở kiến thức",
+        "subtitle": "Tìm hiểu sâu về các tính năng"
+      },
+      "link2": {
+        "title": "Tokenomics",
+        "subtitle": "Token gốc cung cấp năng lượng cho mọi thứ trên Push Chain"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "Theo dõi cập nhật và tin tức hệ sinh thái"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "Trò chuyện, xây dựng và tương tác với cộng đồng"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Tham gia cuộc trò chuyện và giữ liên lạc"
+      }
+    },
+    "resources": {
+      "title": "Tài nguyên",
+      "link1": {
+        "title": "Blog",
+        "subtitle": "Cập nhật, phân tích sâu và câu chuyện phát triển"
+      },
+      "link2": {
+        "title": "Litepaper",
+        "subtitle": "Tầm nhìn và công nghệ, được đơn giản hóa"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "Câu trả lời nhanh cho các câu hỏi thường gặp"
+      }
+    },
+    "language": {
+      "title": "Ngôn ngữ",
+      "ctatitle": "Vui lòng chọn ngôn ngữ của bạn",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Đổi ngôn ngữ sang tiếng Bồ Đào Nha",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Đổi ngôn ngữ sang tiếng Nga",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Đổi ngôn ngữ sang tiếng Thổ Nhĩ Kỳ",
+
+      "french": "Français",
+      "french-ctatitle": "Đổi ngôn ngữ sang tiếng Pháp",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Đổi ngôn ngữ sang tiếng Indonesia",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Đổi ngôn ngữ sang tiếng Việt",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Đổi ngôn ngữ sang tiếng Đức",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "Đổi ngôn ngữ sang tiếng Ả Rập"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Truy cập Push Portal"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "Bất kỳ Chuỗi nào, Bất kỳ Ứng dụng nào, Tất cả Người dùng.\nMột Push Chain.",
+      "description": "Layer 1 đầu tiên được xây dựng cho Ứng dụng Phổ quát.\nXây dựng & Triển khai một lần, thu hút người dùng từ bất kỳ chuỗi nào.",
+      "primary-button": "Bắt đầu Xây dựng",
+      "secondary-button": "Khám phá Cơ sở Kiến thức"
+    },
+    "whatis-section": {
+      "titleFirst": "Một Chuỗi",
+      "titleSecondGraditent": "Phổ quát",
+      "titleThird": "Thực sự",
+      "bottomTextFirst": "Triển khai Một lần,",
+      "bottomTextSecond": "Tiếp cận Mọi nơi",
+      "bottomTextLink": "Bắt đầu"
+    },
+    "email-section": {
+      "title": "Không bao giờ bỏ lỡ cập nhật",
+      "text": "Đăng ký và cập nhật thông báo hệ sinh thái, quà tặng và nhiều hơn nữa.",
+      "email-input": "Email của bạn",
+      "submit-button": "Đăng ký",
+      "loading-submit-button": "Vui lòng đợi..."
+    }
+  },
+  "alert": {
+    "know-more": "Bắt đầu!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Nhận tin tức Push mới nhất",
+      "privacy": "Chính sách Bảo mật",
+      "tos": "Điều khoản và điều kiện"
+    }
+  }
+}

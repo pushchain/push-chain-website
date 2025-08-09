@@ -46,8 +46,8 @@ import { InvList } from '@site/src/config/HomeInvestorList';
 import GLOBALS, { device, structure } from '@site/src/config/globals';
 import { PageMeta } from '@site/src/config/pageMeta';
 import { FeaturedSection } from '../components/Home/FeaturedSection';
-import { HeroImageSection } from '../components/Home/HeroImageSection';
 import { StatsSection } from '../components/Home/StatsSection';
+import { WhatIsSection } from '../components/Home/WhatIsSection';
 import AccountContext from '../context/accountContext';
 import CustomReactPlayer from '../utils/CustomReactPlayer';
 
@@ -145,7 +145,7 @@ export default function Home() {
                     letterSpacing='normal'
                     color='#FFF'
                   >
-                    {t('home.hero.title')}
+                    {t('home.hero-section.title')}
                   </H1>
 
                   <Span
@@ -156,13 +156,13 @@ export default function Home() {
                     lineHeight='150%'
                     letterSpacing='normal'
                   >
-                    {t('home.hero.description')}
+                    {t('home.hero-section.description')}
                   </Span>
 
                   <HeroCTA gap='18px' flex='0'>
                     <A
                       href={useBaseUrl('/docs')}
-                      title={t('home.hero.alt-start-button')}
+                      title={t('home.hero-section.alt-start-button')}
                       background='#D548EC'
                       borderRadius='16px'
                       border='1px solid rgba(255, 255, 255, 0.30)'
@@ -173,14 +173,14 @@ export default function Home() {
                       padding='16px 32px'
                       zIndex='2'
                     >
-                      {t('home.hero.start-button')}
+                      {t('home.hero-section.primary-button')}
                       <BsArrowRight className='start-svg' />
                     </A>
 
                     <PortalA
-                      href='https://portal.push.org'
-                      target='_blank'
-                      title={t('home.hero.alt-start-button')}
+                      href='/knowledge'
+                      target='_self'
+                      title={t('home.hero-section.alt-start-button')}
                       fontSize='1.125rem'
                       fontWeight='600'
                       letterSpacing='-0.03em'
@@ -188,7 +188,7 @@ export default function Home() {
                       padding='16px 32px'
                       zIndex='2'
                     >
-                      {t('home.hero.explore-push-portal')}
+                      {t('home.hero-section.secondary-button')}
                     </PortalA>
                   </HeroCTA>
                 </HeroBody>
@@ -198,92 +198,119 @@ export default function Home() {
         </HeroSection>
 
         {/* HERO IMG SECTION */}
-        <Section id='hero-image'>
-          <HeroImageContent alignSelf='center'>
-            <HeroImageSection />
-          </HeroImageContent>
+        <Section id='what-is-push-chain'>
+          <Content alignSelf='center'>
+            <WhatIsSection />
+          </Content>
         </Section>
 
         {/* GLASSY SECTION */}
-        <GridSection id='notification'>
-          <GridContent alignSelf='center'>
-            <GridFeatures>
-              {FeaturesList?.first?.map((item) => (
-                <GridFeatureItem>
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </GridFeatures>
-
-            <SecondGridFeatures>
-              {FeaturesList?.second?.map((item) => (
-                <GridFeatureItem>
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </SecondGridFeatures>
-
-            <TabletGridFeatures>
-              {FeaturesList?.tabletOnly?.map((item) => (
-                <GridFeatureItem>
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </TabletGridFeatures>
-
-            <ThirdGridFeatures>
-              {FeaturesList?.third?.map((item) => (
-                <GridFeatureItem>
-                  <Glassy item={item} />
-                </GridFeatureItem>
-              ))}
-            </ThirdGridFeatures>
-
-            <GridBottomSection
-              flexDirection={isMobile ? 'column' : 'row'}
-              justifyContent='space-between'
-              alignItems='center'
-              gap={isTablet && '24px'}
-            >
-              <ItemH
-                gap='24px'
-                flexDirection='row'
-                justifyContent='flex-start'
-                flexWrap='nowrap'
+        <Section id='features-of-push-chain'>
+          <Content>
+            <FeaturesTopSection maxWidth={'840px'} margin='0px auto'>
+              <H2
+                color='#DDD8D8'
+                fontSize={isMobile ? '24px' : '30px'}
+                textAlign={isMobile ? 'left' : 'center'}
+                lineHeight='normal'
+                fontWeight='400'
+                letterSpacing='normal'
+                fontFamily='DM Sans, san-serif'
               >
-                <H1Text>10x</H1Text>
-                <Span
-                  color='#FFF'
-                  fontSize={isMobile ? '1.5rem' : '2rem'}
-                  fontWeight='500'
-                  lineHeight='140%'
-                  letterSpacing='-0.64px'
+                <B color='#fff'>{t(FeaturesList?.meta.title)}</B>{' '}
+                {t(FeaturesList?.meta.subtitle)}
+              </H2>
+            </FeaturesTopSection>
+
+            <ItemV alignSelf='center' flexWrap='nowrap' gap='24px'>
+              <FirstGridFeatures>
+                {FeaturesList?.first?.map((item) => (
+                  <GridFeatureItem
+                    showDesktop={!item.config.hide.desktop}
+                    showLaptop={!item.config.hide.laptop}
+                    showTablet={!item.config.hide.tablet}
+                    showMobile={!item.config.hide.mobile}
+                  >
+                    <Glassy item={item} />
+                  </GridFeatureItem>
+                ))}
+              </FirstGridFeatures>
+
+              <SecondGridFeatures>
+                {FeaturesList?.second?.map((item) => (
+                  <GridFeatureItem
+                    showDesktop={!item.config.hide.desktop}
+                    showLaptop={!item.config.hide.laptop}
+                    showTablet={!item.config.hide.tablet}
+                    showMobile={!item.config.hide.mobile}
+                  >
+                    <Glassy item={item} />
+                  </GridFeatureItem>
+                ))}
+              </SecondGridFeatures>
+
+              <ThirdGridFeatures>
+                {FeaturesList?.third?.map((item, index) => (
+                  <GridFeatureItem
+                    key={`${item.config.id}-${index}`}
+                    showDesktop={!item.config.hide.desktop}
+                    showLaptop={!item.config.hide.laptop}
+                    showTablet={!item.config.hide.tablet}
+                    showMobile={!item.config.hide.mobile}
+                  >
+                    <Glassy item={item} />
+                  </GridFeatureItem>
+                ))}
+              </ThirdGridFeatures>
+
+              <FeaturesBottomSection
+                flexDirection={isMobile ? 'column' : 'row'}
+                justifyContent='space-between'
+                alignItems='center'
+              >
+                <ItemH
                   gap='24px'
+                  flexDirection='row'
+                  justifyContent='flex-start'
+                  flexWrap='nowrap'
                 >
-                  your apps user base by going universal {!isTablet && <br />}
-                  with zero effort!
-                </Span>
-              </ItemH>
+                  <H1Text>10x</H1Text>
+                  <Span
+                    color='#FFF'
+                    fontSize={isMobile ? '1.5rem' : '2rem'}
+                    fontWeight='500'
+                    lineHeight='140%'
+                    letterSpacing='-0.64px'
+                    gap='24px'
+                  >
+                    {t(FeaturesList.meta.footer.title)}
+                    <FeaturesBottomOptionalText>
+                      <br />
+                      {t(FeaturesList.meta.footer.secondary)}
+                    </FeaturesBottomOptionalText>
+                  </Span>
+                </ItemH>
 
-              <A
-                href={useBaseUrl('/docs')}
-                title={t('home.hero.alt-start-button')}
-                background='#D548EC'
-                borderRadius='16px'
-                border='1px solid rgba(255, 255, 255, 0.30)'
-                fontSize='1.125rem'
-                fontWeight='600'
-                letterSpacing='-0.03em'
-                lineHeight='1rem'
-                padding='16px 32px'
-                zIndex='2'
-              >
-                {t('home.hero.start-button')}
-                <BsArrowRight className='start-svg' />
-              </A>
-            </GridBottomSection>
-          </GridContent>
-        </GridSection>
+                <A
+                  href={useBaseUrl('/docs')}
+                  title={t(FeaturesList.meta.footer.ctaTitle)}
+                  background='#D548EC'
+                  borderRadius='16px'
+                  border='1px solid rgba(255, 255, 255, 0.30)'
+                  fontSize='1.125rem'
+                  fontWeight='600'
+                  letterSpacing='-0.03em'
+                  lineHeight='1rem'
+                  padding='16px 32px'
+                  zIndex='2'
+                >
+                  {t(FeaturesList.meta.footer.ctaText)}
+                  <BsArrowRight className='start-svg' />
+                </A>
+              </FeaturesBottomSection>
+            </ItemV>
+          </Content>
+        </Section>
 
         {/* SHOWCASE SECTION */}
         {/* <ShowcaseSection id='showcase'>
@@ -292,6 +319,7 @@ export default function Home() {
           </Content>
         </ShowcaseSection> */}
 
+        {/* STATS SECTION */}
         <Section>
           <StatsContent>
             <StatsSection />
@@ -536,9 +564,9 @@ export default function Home() {
                 <CustomReactPlayer
                   url={
                     require(
-                      isSafari() ?
-                      `@site/static/assets/website/home/others/push-chain-final.mp4` :
-                      `@site/static/assets/website/home/others/push-chain-final.webm`
+                      isSafari()
+                        ? `@site/static/assets/website/home/others/push-chain-final.mp4`
+                        : `@site/static/assets/website/home/others/push-chain-final.webm`
                     ).default
                   }
                   playing
@@ -736,16 +764,6 @@ const HeroContent = styled(Content)`
     margin-top: ${GLOBALS.HEADER.HEIGHT +
     GLOBALS.HEADER.OUTER_MARGIN.MOBILE.TOP}px;
   }
-`;
-
-const HeroImageContent = styled(Content)`
-
-
-  @media ${device.mobileL} {
-    // padding-top: 300px;
-    padding-bottom: 0px;
-  }
-}
 `;
 
 const HeroPrimary = styled.div`
@@ -1013,7 +1031,11 @@ const InvestorSubtitle = styled(Span)`
   text-transform: uppercase;
 `;
 
-const GridFeatures = styled(ItemH)`
+const FeaturesTopSection = styled(ItemV)`
+  margin-bottom: 75px;
+`;
+
+const FirstGridFeatures = styled(ItemH)`
   font-family:
     DM Sans,
     san-serif;
@@ -1024,8 +1046,11 @@ const GridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    min-width: 447px;
-    max-width: 447px;
+    flex: 1;
+  }
+
+  & > div:nth-child(2) {
+    flex: 1.8;
   }
 
   @media ${device.laptop} {
@@ -1033,12 +1058,11 @@ const GridFeatures = styled(ItemH)`
     flex: 1;
 
     & > div:first-child {
-      min-width: 325px;
-      max-width: 325px;
+      flex: 1;
     }
 
-    & > div:nth-child(3) {
-      display: none;
+    & > div:nth-child(2) {
+      flex: 1;
     }
   }
 
@@ -1067,32 +1091,32 @@ const SecondGridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    min-width: 325px;
-    max-width: 325px;
+    flex: 1;
+  }
+
+  & > div:nth-child(2) {
+    flex: 2;
   }
 
   & > div:nth-child(3) {
-    min-width: 325px;
-    max-width: 325px;
+    flex: 1;
   }
 
   @media ${device.laptop} {
     width: 100%;
 
     & > div:first-child {
-      min-width: 452px;
-      max-width: 452px;
+      flex: 1.4;
     }
 
-    & > div:nth-child(3) {
-      display: none;
+    & > div:nth-child(2) {
+      flex: 1;
     }
   }
 
   @media ${device.tablet} {
     & > div:first-child {
-      min-width: 325px;
-      max-width: 325px;
+      flex: 1;
     }
   }
 
@@ -1114,42 +1138,6 @@ const SecondGridFeatures = styled(ItemH)`
   }
 `;
 
-const TabletGridFeatures = styled(ItemH)`
-  display: none;
-
-  @media ${device.laptop} {
-    font-family:
-      DM Sans,
-      san-serif;
-    gap: 24px;
-    justify-content: flex-start;
-    width: 100%;
-    height: 100%;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    display: flex;
-
-    & > div:first-child {
-      min-width: 325px;
-      max-width: 325px;
-    }
-
-    & > div:nth-child(3) {
-      display: none !important;
-    }
-  }
-
-  @media ${device.tablet} {
-    & > div:first-child {
-      min-width: 325px;
-    }
-  }
-
-  @media ${device.mobileL} {
-    display: none !important;
-  }
-`;
-
 const ThirdGridFeatures = styled(ItemH)`
   font-family:
     DM Sans,
@@ -1162,31 +1150,33 @@ const ThirdGridFeatures = styled(ItemH)`
   flex-wrap: nowrap;
 
   & > div:first-child {
-    max-width: 100%;
+    flex: 2;
   }
 
-  & > div:nth-child(2),
+  & > div:nth-child(2) {
+    flex: 1;
+  }
+
   & > div:nth-child(3) {
-    min-width: 325px;
-    max-width: 325px;
+    flex: 1;
   }
 
   @media ${device.laptop} {
     width: 100%;
+    flex: 1;
 
-    & > div:first-child {
-      display: none;
+    & > div:nth-child(2) {
+      flex: 1;
     }
 
-    & > div:nth-child(2),
     & > div:nth-child(3) {
-      max-width: 100%;
+      flex: 1;
     }
   }
 
   @media ${device.tablet} {
     & > div:nth-child(2) {
-      min-width: 325px;
+      flex: 1;
     }
   }
 
@@ -1221,8 +1211,9 @@ const H1Text = styled(H1)`
   -webkit-text-fill-color: transparent;
 `;
 
-const GridBottomSection = styled(ItemH)`
+const FeaturesBottomSection = styled(ItemH)`
   margin-top: 75px;
+  gap: 24px;
 
   a {
     display: flex;
@@ -1238,18 +1229,29 @@ const GridBottomSection = styled(ItemH)`
   }
 `;
 
+const FeaturesBottomOptionalText = styled.span`
+  @media ${device.tablet} {
+    display: none;
+  }
+`;
+
 const GridFeatureItem = styled.div`
-  display: flex;
+  display: ${(props) => (props.showDesktop ? 'flex' : 'none')};
   flex-direction: row;
   flex: 1;
   padding: 0px;
-  // gap: 24px;
 
-  // @media ${device.laptopM} {
-  // }
+  @media ${device.laptopL} {
+    display: ${(props) => (props.showLaptop ? 'flex' : 'none')};
+  }
 
-  // @media ${device.mobileL} {
-  // }
+  @media ${device.tablet} {
+    display: ${(props) => (props.showTablet ? 'flex' : 'none')};
+  }
+
+  @media ${device.mobileL} {
+    display: ${(props) => (props.showMobile ? 'flex' : 'none')};
+  }
 `;
 
 const TagItem = styled.b`

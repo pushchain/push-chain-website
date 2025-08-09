@@ -119,7 +119,7 @@ const Glassy = ({ item }) => {
         color={color}
         fontSize={fontSize}
       >
-        {title}
+        {t(title)}
       </TagItem>
     );
   };
@@ -676,7 +676,6 @@ const Container = styled.div`
   box-sizing: border-box;
   overflow: hidden !important;
   display: flex;
-  display: ${(props) => props.hide && props.hide.desktop && 'none'};
   flex-direction: ${(props) => props.containerFlexDirection || 'column'};
   justify-content: space-between;
 

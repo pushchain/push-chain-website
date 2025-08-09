@@ -189,12 +189,6 @@ export const ItemH = styled.div`
   }
 `;
 
-export const ItemH1 = styled(ItemH)`
-  @media ${device.mobileM} {
-    display: none;
-  }
-`;
-
 export const ItemV = styled(ItemH)`
   flex: ${(props) => props.flex || '1'};
   flex-direction: ${(props) => props.flexDirection || 'column'};
@@ -304,6 +298,7 @@ export const Span = styled.span`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.03em'};
+  white-space: ${(props) => props.whiteSpace || 'break-space'}
   text-align: ${(props) => props.textAlign || 'initial'};
   line-height: ${(props) => props.lineHeight || '142%'};
   position: ${(props) => props.position || 'initial'};

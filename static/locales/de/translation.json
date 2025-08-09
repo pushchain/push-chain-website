@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Bild des Push Chain Logos",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "Zur Startseite gehen"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Block-Explorer für Push Chain"
+      },
+      "link2": {
+        "title": "Faucet",
+        "subtitle": "Testnet-Token erhalten"
+      }
+    },
+    "developers": {
+      "title": "Entwickler",
+      "link1": {
+        "title": "Loslegen",
+        "subtitle": "Einführung in das Bauen auf Push Chain"
+      },
+      "link2": {
+        "title": "Schnellstart",
+        "subtitle": "Entwicklungsumgebung in Sekunden einrichten"
+      },
+      "link3": {
+        "title": "Tutorials",
+        "subtitle": "Schritt-für-Schritt-Anleitungen zum Bauen mit Push"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "Kerncode und Open-Source-Tools anzeigen"
+      },
+      "link5": {
+        "title": "Entwickler Discord",
+        "subtitle": "Mit der Entwickler-Community verbinden"
+      }
+    },
+    "community": {
+      "title": "Community",
+      "link1": {
+        "title": "Wissensdatenbank",
+        "subtitle": "Tiefgehende Analysen zu Features finden"
+      },
+      "link2": {
+        "title": "Tokenomics",
+        "subtitle": "Nativer Token, der alles auf Push Chain antreibt"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "Updates und Ökosystem-News folgen"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "Chatten, bauen und mit der Community interagieren"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Am Gespräch teilnehmen und in Verbindung bleiben"
+      }
+    },
+    "resources": {
+      "title": "Ressourcen",
+      "link1": {
+        "title": "Blog",
+        "subtitle": "Updates, tiefgehende Analysen und Entwicklergeschichten"
+      },
+      "link2": {
+        "title": "Litepaper",
+        "subtitle": "Die Vision und Technologie, vereinfacht"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "Schnelle Antworten auf häufige Fragen"
+      }
+    },
+    "language": {
+      "title": "Sprache",
+      "ctatitle": "Bitte wählen Sie Ihre Sprache",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Sprache auf Portugiesisch ändern",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Sprache auf Russisch ändern",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Sprache auf Türkisch ändern",
+
+      "french": "Français",
+      "french-ctatitle": "Sprache auf Französisch ändern",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Sprache auf Indonesisch ändern",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Sprache auf Vietnamesisch ändern",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "Sprache auf Arabisch ändern"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Push Portal besuchen"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "Jede Chain, Jede App, Alle Nutzer.\nEine Push Chain.",
+      "description": "Die erste Layer 1, die für Universelle Apps gebaut wurde.\nEinmal bauen & deployen, Nutzer von jeder Chain onboarden.",
+      "primary-button": "Mit dem Bauen beginnen",
+      "secondary-button": "Wissensdatenbank erkunden"
+    },
+    "whatis-section": {
+      "titleFirst": "Eine wahre",
+      "titleSecondGraditent": "Universelle",
+      "titleThird": "Chain",
+      "bottomTextFirst": "Einmal deployen,",
+      "bottomTextSecond": "Überall erreichen",
+      "bottomTextLink": "Loslegen"
+    },
+    "email-section": {
+      "title": "Verpassen Sie kein Update",
+      "text": "Melden Sie sich an und bleiben Sie über Ökosystem-Ankündigungen, Geschenke und mehr auf dem Laufenden.",
+      "email-input": "Ihre E-Mail",
+      "submit-button": "Anmelden",
+      "loading-submit-button": "Bitte warten..."
+    }
+  },
+  "alert": {
+    "know-more": "Loslegen!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Erhalten Sie die neuesten Push-Nachrichten",
+      "privacy": "Datenschutzrichtlinie",
+      "tos": "Geschäftsbedingungen"
+    }
+  }
+}

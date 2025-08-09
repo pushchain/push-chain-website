@@ -25,13 +25,14 @@ import {
   H3,
   Image,
   ItemH,
-  ItemH1,
   ItemV,
   LinkTo,
   Section,
   Span,
 } from '@site/src/css/SharedStyling';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import AccountContext from '../context/accountContext';
+import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
 
 // Import Assets
 import { AiOutlineClose } from 'react-icons/ai';
@@ -43,9 +44,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import { SupportedLanguagesList } from '@site/src/config/SupportedLanguagesList';
 import GLOBALS, { device, structure } from '@site/src/config/globals';
 import { HeaderList } from '../config/HeaderList';
-import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
-
-import AccountContext from '../context/accountContext';
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
@@ -220,7 +218,7 @@ function Header() {
       <a
         href={item.href.includes('http') ? item.href : `${baseURL}${item.href}`}
         target={item.target}
-        rel="noopener noreferrer"
+        rel='noopener noreferrer'
         className='header-item'
         style={{
           userSelect: 'none',
@@ -269,7 +267,7 @@ function Header() {
 
             <H3
               fontSize='0.875rem'
-              color='#FFF'
+              color='#838383'
               lineHeight='130%'
               letterSpacing='normal'
               fontWeight='400'
@@ -314,11 +312,8 @@ function Header() {
       {/* ALERT SECTION */}
       <Alert />
 
-      {/* GLOW CIRCLE */}
-      {/* <GlowCircle /> */}
-
       {/* INVISIBLE WALL TO CLOSE */}
-      <InvisibleWall />
+      <InvisibleWall onClick={toggleMobileMenu} isActive={isMobileMenuOpen} />
 
       {/* HEADER SECTION */}
       <Section onClick={(e) => e.stopPropagation()}>
@@ -336,7 +331,7 @@ function Header() {
             showAlertBar={delayedShowAlertBar && isAlertBarVisible}
           >
             {/* Insert Liquid Glass */}
-            <ItemH1 position='absolute' top='0' left='0' right='0' bottom='0'>
+            <LiquidGlassOuter>
               <LiquidGlass
                 autoResize={true}
                 radius={24}
@@ -345,7 +340,7 @@ function Header() {
                 chromaticAberration={5}
                 debug={false}
               />
-            </ItemH1>
+            </LiquidGlassOuter>
 
             <MenuTop
               flex='initial'
@@ -353,15 +348,19 @@ function Header() {
               showAlertBar={delayedShowAlertBar && isAlertBarVisible}
             >
               <PushLogoBlackContainer className='headerlogo' flex='initial'>
-                <LinkTo to={useBaseUrl('/')} aria-label='Push'>
+                <LinkTo
+                  title={t('header.logo.ctatitle')}
+                  to={useBaseUrl('/')}
+                  aria-label='Push'
+                >
                   <Image
                     src={
                       require(
-                        `@site/static/assets/website/segments/PushLogoTextWhite.webp`
+                        `@site/static/assets/website/segments/PushLogoTextBlack.webp`
                       ).default
                     }
-                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
-                    alt={`Push Logo`}
+                    srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextBlack@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextBlack@3x.webp`).default} 3x`}
+                    alt={t('header.logo.imagealt')}
                     width='auto'
                     height='auto'
                   />
@@ -370,7 +369,7 @@ function Header() {
               <PushLogoWhiteContainer className='headerlogo' flex='initial'>
                 <LinkTo
                   to={useBaseUrl('/')}
-                  aria-label='Push'
+                  title={t('header.logo.ctatitle')}
                   hoverBackground='transparent'
                   padding='0'
                 >
@@ -381,7 +380,7 @@ function Header() {
                       ).default
                     }
                     srcSet={`${require(`@site/static/assets/website/segments/PushLogoTextWhite@2x.webp`).default} 2x, ${require(`@site/static/assets/website/segments/PushLogoTextWhite@3x.webp`).default} 3x`}
-                    alt={`Push Logo`}
+                    alt={t('header.logo.imagealt')}
                     width='auto'
                     height='auto'
                   />
@@ -409,6 +408,124 @@ function Header() {
                     >
                       {t('header.app-button.title')}
                     </PortalLauncher>
+
+                    {/* <LanguageItem showMobileMenu={showMobileMenu}>
+                      <LanguageMenuItem>
+                        <LanguageMenuHeader
+                          onClick={(e) => onMobileHeaderMenuClick(e, 4)}
+                          expanded={mobileMenuMap[4]}
+                          onMouseEnter={(e) => handleMouseEnter(e, 'text4')}
+                          onMouseLeave={(e) => handleMouseLeave(e)}
+                          id='text4'
+                        >
+                          <H2
+                            fontSize='16px'
+                            lineHeight='130%'
+                            letterSpacing='normal'
+                            fontWeight='500'
+                          >
+                            {isMobile &&
+                              i18n &&
+                              SupportedLanguagesList.filter(
+                                (item) => item.id === i18n.language
+                              ).map((item, index) => (
+                                <div>{item?.language}</div>
+                              ))}
+                          </H2>
+
+                          <Span
+                            fontSize='18px'
+                            fontWeight='500'
+                            letterSpacing='-0.03em'
+                            lineHeight='142%'
+                            padding='16px 0px'
+                            aria-label={t('header.language.ctatitle')}
+                          >
+                            <Image
+                              src={
+                                require(
+                                  `@site/static/assets/website/languages/world.webp`
+                                ).default
+                              }
+                              srcSet={`${require(`@site/static/assets/website/languages/world@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/world@3x.webp`).default} 3x`}
+                              alt={'Language Header Icon'}
+                              height={24}
+                              width={24}
+                              borderRadius='100%'
+                            />
+                          </Span>
+                          <BsChevronDown size={12} className='chevronIcon' />
+                        </LanguageMenuHeader>
+
+                        <LanguageMenuContent
+                          className='menuContent'
+                          expanded={mobileMenuMap[4]}
+                        >
+                          {/* Insert Liquid Glass */}
+                          <LiquidGlassOuter>
+                            <LiquidGlass
+                              autoResize={true}
+                              radius={24}
+                              depth={20}
+                              blur={5}
+                              chromaticAberration={10}
+                              debug={false}
+                            />
+                          </LiquidGlassOuter>
+
+                          <LanguageMenuContentInner>
+                            {SupportedLanguagesList.map((item, index) => {
+                              return (
+                                <LanguageButton
+                                  key={index}
+                                  href='#'
+                                  title={t(item.ctatitle)}
+                                  background='transparent'
+                                  hoverbackground='#fff'
+                                  color='#fff'
+                                  padding='8px 14px'
+                                  display='flex'
+                                  borderRadius='0'
+                                  justifyContent='flex-start'
+                                  onClick={() => i18n.changeLanguage(item.id)}
+                                >
+                                  <ItemH
+                                    justifyContent='flex-start'
+                                    flexWrap='nowrap'
+                                    padding='0px'
+                                  >
+                                    <Image
+                                      key={index}
+                                      src={
+                                        require(
+                                          `@site/static/assets/website/languages/${item.srcref}.webp`
+                                        ).default
+                                      }
+                                      srcSet={`${require(`@site/static/assets/website/languages/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/${item.srcref}@3x.webp`).default} 3x`}
+                                      alt={`${item?.alt}`}
+                                      height={24}
+                                      width={24}
+                                      borderRadius='100%'
+                                    />
+                                    <H3
+                                      fontSize='14px'
+                                      fontWeight='500'
+                                      lineHeight='130%'
+                                      letterSpacing='normal'
+                                      alignSelf='flex-start'
+                                      padding='8px 30px 8px 10px !important'
+                                      color='inherit'
+                                    >
+                                      {t(item.ctatext)}
+                                    </H3>
+                                  </ItemH>
+                                </LanguageButton>
+                              );
+                            })}
+                          </LanguageMenuContentInner>
+                        </LanguageMenuContent>
+                      </LanguageMenuItem>
+                    </LanguageItem> */}
 
                     <Image
                       src={
@@ -470,15 +587,7 @@ function Header() {
                       expanded={mobileMenuMap[0]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH1
-                        position='absolute'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        zIndex='-10'
-                        pointerEvents='none'
-                      >
+                      <LiquidGlassOuter>
                         <LiquidGlass
                           autoResize={true}
                           radius={24}
@@ -487,7 +596,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH1>
+                      </LiquidGlassOuter>
                       <HeaderDiv>
                         <HeaderSection>
                           {HeaderList.testnet.map((item, index) => (
@@ -525,15 +634,7 @@ function Header() {
                       expanded={mobileMenuMap[1]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH1
-                        position='absolute'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        zIndex='-10'
-                        pointerEvents='none'
-                      >
+                      <LiquidGlassOuter>
                         <LiquidGlass
                           autoResize={true}
                           radius={24}
@@ -542,7 +643,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH1>
+                      </LiquidGlassOuter>
 
                       <HeaderDiv>
                         <HeaderSection>
@@ -582,15 +683,7 @@ function Header() {
                       onMouseLeave={(e) => handleMouseLeave(e)}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH1
-                        position='absolute'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        zIndex='-10'
-                        pointerEvents='none'
-                      >
+                      <LiquidGlassOuter>
                         <LiquidGlass
                           autoResize={true}
                           radius={24}
@@ -599,7 +692,7 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH1>
+                      </LiquidGlassOuter>
 
                       {HeaderList.community.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
@@ -633,24 +726,16 @@ function Header() {
                       expanded={mobileMenuMap[3]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH1
-                        position='absolute'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        zIndex='-10'
-                        pointerEvents='none'
-                      >
+                      <LiquidGlassOuter>
                         <LiquidGlass
                           autoResize={true}
-                          radius={parseInt(GLOBALS.ADJUSTMENTS.RADIUS.SMALL)}
+                          radius={24}
                           depth={20}
                           blur={5}
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH1>
+                      </LiquidGlassOuter>
 
                       {HeaderList.resources.map((item, index) => (
                         <HeaderSpace item={item} index={index} />
@@ -689,14 +774,15 @@ function Header() {
                         letterSpacing='-0.03em'
                         lineHeight='142%'
                         padding='16px 0px'
+                        aria-label={t('header.language.ctatitle')}
                       >
                         <Image
                           src={
                             require(
-                              `@site/static/assets/website/languages/eng.png`
+                              `@site/static/assets/website/languages/world.webp`
                             ).default
                           }
-                          srcSet={`${require(`@site/static/assets/website/languages/eng@2x.png`).default} 2x, ${require(`@site/static/assets/website/languages/eng@3x.png`).default} 3x`}
+                          srcSet={`${require(`@site/static/assets/website/languages/world@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/world@3x.webp`).default} 3x`}
                           alt={'Language Header Icon'}
                           height={24}
                           width={24}
@@ -711,15 +797,7 @@ function Header() {
                       expanded={mobileMenuMap[4]}
                     >
                       {/* Insert Liquid Glass */}
-                      <ItemH1
-                        position='absolute'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        zIndex='-10'
-                        pointerEvents='none'
-                      >
+                      <LiquidGlassOuter>
                         <LiquidGlass
                           autoResize={true}
                           radius={24}
@@ -728,61 +806,63 @@ function Header() {
                           chromaticAberration={10}
                           debug={false}
                         />
-                      </ItemH1>
+                      </LiquidGlassOuter>
 
-                      {SupportedLanguagesList.map((item, index) => {
-                        return (
-                          <LanguageButton
-                            key={index}
-                            href='#'
-                            title={t(item.translatedtitle)}
-                            background='transparent'
-                            hoverbackground='#fff'
-                            color='#fff'
-                            padding='8px 14px'
-                            display='flex'
-                            borderRadius='0'
-                            justifyContent='flex-start'
-                            onClick={() => i18n.changeLanguage(item.id)}
-                          >
-                            <ItemH
+                      <LanguageMenuContentInner>
+                        {SupportedLanguagesList.map((item, index) => {
+                          return (
+                            <LanguageButton
+                              key={index}
+                              href='#'
+                              title={t(item.ctatitle)}
+                              background='transparent'
+                              hoverbackground='#fff'
+                              color='#fff'
+                              padding='8px 14px'
+                              display='flex'
+                              borderRadius='0'
                               justifyContent='flex-start'
-                              flexWrap='nowrap'
-                              padding='0px'
+                              onClick={() => i18n.changeLanguage(item.id)}
                             >
-                              <Image
-                                key={index}
-                                src={
-                                  require(
-                                    `@site/static/assets/website/languages/${item.srcref}.png`
-                                  ).default
-                                }
-                                srcSet={`${require(`@site/static/assets/website/languages/${item.srcref}@2x.png`).default} 2x, ${require(`@site/static/assets/website/languages/${item.srcref}@3x.png`).default} 3x`}
-                                alt={`${item?.alt}`}
-                                height={24}
-                                width={24}
-                                borderRadius='100%'
-                              />
-                              <H3
-                                fontSize='14px'
-                                fontWeight='500'
-                                lineHeight='130%'
-                                letterSpacing='normal'
-                                alignSelf='flex-start'
-                                padding='8px 30px 8px 10px !important'
-                                color='inherit'
+                              <ItemH
+                                justifyContent='flex-start'
+                                flexWrap='nowrap'
+                                padding='0px'
                               >
-                                {t(item.translatedtitle)}
-                              </H3>
-                            </ItemH>
-                          </LanguageButton>
-                        );
-                      })}
+                                <Image
+                                  key={index}
+                                  src={
+                                    require(
+                                      `@site/static/assets/website/languages/${item.srcref}.webp`
+                                    ).default
+                                  }
+                                  srcSet={`${require(`@site/static/assets/website/languages/${item.srcref}@2x.webp`).default} 2x, ${require(`@site/static/assets/website/languages/${item.srcref}@3x.webp`).default} 3x`}
+                                  alt={`${item?.alt}`}
+                                  height={24}
+                                  width={24}
+                                  borderRadius='100%'
+                                />
+                                <H3
+                                  fontSize='14px'
+                                  fontWeight='500'
+                                  lineHeight='130%'
+                                  letterSpacing='normal'
+                                  alignSelf='flex-start'
+                                  padding='8px 30px 8px 10px !important'
+                                  color='inherit'
+                                >
+                                  {t(item.ctatext)}
+                                </H3>
+                              </ItemH>
+                            </LanguageButton>
+                          );
+                        })}
+                      </LanguageMenuContentInner>
                     </LanguageMenuContent>
                   </LanguageMenuItem>
                 </LanguageItem>
 
-                <DappLauncher
+                <PrimaryLauncher
                   showMobileMenu={showMobileMenu}
                   href='https://portal.push.org/'
                   target='_blank'
@@ -797,7 +877,7 @@ function Header() {
                   width='100%'
                 >
                   {t('header.app-button.title')}
-                </DappLauncher>
+                </PrimaryLauncher>
               </HeaderFocusItems>
             </HeaderWrapper>
           </HeaderItemH>
@@ -825,8 +905,9 @@ const LanguageItem = styled.div`
   @media ${device.laptopM} {
     display: ${(props) => (props.showMobileMenu ? 'flex' : 'none')};
     margin: 0px;
+    padding: 0px 16px 0px 16px;
     flex: 1;
-    width: 100%;
+    width: inherit;
   }
 `;
 
@@ -845,7 +926,7 @@ const HeaderItemH = styled(ItemH)`
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     z-index: -1;
@@ -902,14 +983,14 @@ const HeaderNavItemV = styled(ItemV)`
   @media ${device.laptopM} {
     margin: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP + GLOBALS.HEADER.OUTER_PADDING.TABLET.BOTTOM}px 0 20px 0`
+        ? `${GLOBALS.HEADER.OUTER_PADDING.TABLET.TOP}px 16px 20px 16px`
         : '0'};
   }
 
   @media ${device.laptopM} {
     margin: ${(props) =>
       props.showMobileMenu
-        ? `${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP + GLOBALS.HEADER.OUTER_PADDING.MOBILE.BOTTOM}px 0 20px 0`
+        ? `${GLOBALS.HEADER.OUTER_PADDING.MOBILE.TOP}px 16px 20px 16px`
         : '0'};
   }
 `;
@@ -1006,16 +1087,31 @@ const StyledHeader = styled.header`
 `;
 
 const InvisibleWall = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  background: ${(props) =>
+    props.isActive ? 'rgba(0, 0, 0, 0.25)' : 'rgba(0, 0, 0, 0)'};
+  pointer-events: ${(props) => (props.isActive ? 'auto' : 'none')};
+
+  @media ${device.mobileL} {
+    transition:
+      background 0.2s ease-in-out,
+      -webkit-backdrop-filter 0.4s ease-in-out,
+      backdrop-filter 0.4s ease-in-out;
+
+    -webkit-backdrop-filter: ${(props) =>
+      props.isActive ? 'blur(12px)' : 'blur(0px)'};
+    backdrop-filter: ${(props) =>
+      props.isActive ? 'blur(12px)' : 'blur(0px)'};
+  }
 `;
 
 const MobileMenuToggleIcon = styled.span`
   display: none;
-  padding: 0 16px;
+  padding: 0 10px 0px 16px;
 
   @media ${device.laptopM} {
     display: flex;
@@ -1132,7 +1228,7 @@ const LanguageMenuItem = styled.li`
   padding-left: 16px;
 
   & span {
-    padding: 4px;
+    padding: 4px 0px;
     font-weight: 500;
     font-size: 18px;
     line-height: 142%;
@@ -1253,7 +1349,7 @@ const LanguageMenuHeader = styled.div`
 
     h2 {
       margin: 0 auto 0 0;
-      padding: 4px;
+      padding: 4px 0px;
     }
   }
 `;
@@ -1288,13 +1384,16 @@ const NavigationMenuContent = styled.ul`
   &::before {
     content: '';
     position: absolute;
-    top: -1;
-    left: -1;
-    right: -1;
-    bottom: -1;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
     filter: blur(5px);
+    backdrop-filter: blur(5px);
     pointer-events: none;
     z-index: -1;
+    border-radius: 30px;
+    overflow: hidden;
   }
 
   min-width: 390px;
@@ -1384,7 +1483,7 @@ const LanguageMenuContent = styled.div`
     min-width: 100%;
 
     position: relative;
-    top: 0px;
+    top: 8px;
     left: 0;
     transform: none;
     display: flex;
@@ -1399,6 +1498,38 @@ const LanguageMenuContent = styled.div`
   }
 `;
 
+const LanguageMenuContentInner = styled.div`
+  max-height: 400px;
+  overflow-y: auto;
+
+  /* Custom scrollbar styling */
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(171, 70, 248, 0.6);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(171, 70, 248, 0.8);
+  }
+
+  @media ${device.tablet} {
+    max-height: 300px;
+  }
+
+  @media ${device.mobileL} {
+    max-height: 200px;
+  }
+`;
+
 const LanguageButton = styled(Button)`
   border: 1px solid transparent;
   color: #fff;
@@ -1410,7 +1541,7 @@ const LanguageButton = styled(Button)`
   &:hover {
     border-radius: var(--radius-xs, 12px);
     border: 1px solid transparent;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
     color: #d548ec;
 
     // h3 {
@@ -1441,7 +1572,7 @@ const HeaderItem = styled.div`
   &:hover {
     border-radius: var(--radius-xs, 12px);
     // border: 1px solid rgba(255, 255, 255, 0.35) !important;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 1);
 
     h2 {
       color: #d548ec;
@@ -1481,7 +1612,7 @@ const HeaderSection = styled.div`
   flex: 1;
 `;
 
-const DappLauncher = styled(A)`
+const PrimaryLauncher = styled(A)`
   padding: 16px 32px;
   font-family:
     DM Sans,
@@ -1539,6 +1670,20 @@ const TagItem = styled.b`
   font-style: normal;
   font-weight: bolder;
   line-height: normal;
+`;
+
+const LiquidGlassOuter = styled(ItemV)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  pointer-events: none;
+
+  @media ${device.mobileL} {
+    display: none;
+  }
 `;
 
 export default Header;

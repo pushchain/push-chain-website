@@ -1,28 +1,42 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
+
+// React + Web3 Essentials
 import { styled } from 'styled-components';
-import { ItemH, ItemV, H2, H3, Span } from '../../css/SharedStyling';
-import { device } from '@site/src/config/globals';
-import { StatsList } from '../../config/StatsList';
-import StatsBg from '../../../static/assets/website/chain/StatsSectionBG.webp';
-import useMediaQuery from '../../hooks/useMediaQuery';
-import instantInteroperability from '@site/static/assets/website/interoperability/instant-interoperability.json';
+
+// External Components
 import Lottie from 'lottie-react';
+import { useTranslation } from 'react-i18next';
+
+// Internal Components
+import { device } from '@site/src/config/globals';
+import instantInteroperability from '@site/static/assets/website/interoperability/instant-interoperability.json';
+
+// Import Assets
+import StatsBg from '../../../static/assets/website/chain/StatsSectionBG.webp';
+import { H2, H3, ItemH, ItemV, Span } from '../../css/SharedStyling';
+import useMediaQuery from '../../hooks/useMediaQuery';
+
+// Internal Configs
+import { StatsList } from '../../config/StatsList';
 
 export const StatsSection = () => {
+  // Internationalization
+  const { t, i18n } = useTranslation();
+
   const isMobile = useMediaQuery(device.mobileL);
   return (
     <StatsWrapper>
       <TextSection>
         <H2>
-          Achieve {isMobile && <br />} <ColoredText>Instant</ColoredText> <br />{' '}
-          Interoperability
+          {t('home.stats-section.title')} {isMobile && <br />}{' '}
+          <ColoredText>{t('home.stats-section.titleGradient')}</ColoredText>{' '}
+          <br /> {t('home.stats-section.titleThird')}
         </H2>
 
         <Span className='regular-text'>
-          Optimized for performance. <br /> High TPS, ultra-low gas, and
-          sub-second finality for real-time app execution.
+          {t('home.stats-section.description')}
         </Span>
       </TextSection>
 
@@ -36,7 +50,7 @@ export const StatsSection = () => {
           loop={true}
           autoplay={true}
           style={{
-            position: "absolute",
+            position: 'absolute',
             top: 85,
             left: 0,
             width: '100%',
@@ -47,16 +61,16 @@ export const StatsSection = () => {
         />
         {StatsList.map((item, index) => (
           <StatsItem key={index}>
-            <H3>{item.title}</H3>
+            <H3>{t(item.title)}</H3>
             {item.image && (
               <img
                 src={item.image}
                 srcSet={item.srcSet}
-                alt={item.title}
-                title={item.title}
+                alt={t(item.imagealt)}
+                title={t(item.imagetitle)}
               />
             )}
-            <Span>{item.description}</Span>
+            <Span>{t(item.description)}</Span>
           </StatsItem>
         ))}
       </StatsGrid>
