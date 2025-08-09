@@ -868,7 +868,7 @@ function Header() {
                   href='https://portal.push.org/'
                   target='_blank'
                   title={t('header.app-button.alt-title')}
-                  background='#D548EC'
+                  background='var(--ifm-link-color)'
                   borderRadius='16px'
                   border='1px solid rgba(255, 255, 255, 0.30)'
                   fontSize='1.125rem'
@@ -1543,11 +1543,7 @@ const LanguageButton = styled(Button)`
     border-radius: var(--radius-xs, 12px);
     border: 1px solid transparent;
     background: rgba(0, 0, 0, 1);
-    color: #d548ec;
-
-    // h3 {
-    //   color: red;
-    // }
+    color: var(--ifm-link-color);
   }
 
   @media ${device.laptopM} {

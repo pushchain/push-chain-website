@@ -17,7 +17,8 @@ import { BsArrowRight, BsDiscord } from 'react-icons/bs';
 import Accordion from '@site/src/components/Accordion';
 import Glassy from '@site/src/components/Glassy/Glassy';
 import RecentBlogPosts from '@site/src/components/Home/RecentBlogPosts';
-import { General } from '@site/src/config/ChainFAQconfig';
+import ShortFAQs from '@site/src/components/ShortFAQs/ShortFAQs';
+import { ShortFAQsList } from '@site/src/config/ShortFAQsList';
 import {
   A,
   B,
@@ -327,7 +328,7 @@ export default function Home() {
         </Section>
 
         {/* PUSH CHAIN BLOG */}
-        <BlogSection 
+        <BlogSection
           id='blog'
           role='region'
           aria-label={t('home.blog-section.section-aria-label')}
@@ -335,10 +336,7 @@ export default function Home() {
           <Content alignSelf='center'>
             <ItemH>
               <ItemH justifyContent='flex-start' alignItems='center' gap='8px'>
-                <StarSolidIcon 
-                  color='#D98AEC' 
-                  aria-hidden='true'
-                />
+                <StarSolidIcon color='#D98AEC' aria-hidden='true' />
                 <H2
                   color='#CCA4F0'
                   fontSize={'0.75rem'}
@@ -367,9 +365,11 @@ export default function Home() {
                     padding='0px 0px'
                     target='_blank'
                   >
-                    <SpanLink>{t('home.blog-section.explore-link-text')}</SpanLink>
-                    <BsArrowRight 
-                      className='anchorSVGlink' 
+                    <SpanLink>
+                      {t('home.blog-section.explore-link-text')}
+                    </SpanLink>
+                    <BsArrowRight
+                      className='anchorSVGlink'
                       aria-hidden='true'
                     />
                   </SlideLink>
@@ -395,78 +395,10 @@ export default function Home() {
           </Content>
         </BlogSection>
 
-        <FAQSection>
+        {/* FAQ SECTION */}
+        <FAQSection id='faq'>
           <Content>
-            <ItemH
-              flexDirection={isLaptop && 'column'}
-              alignItems='flex-start'
-              justifyContent='space-between'
-              gap={isLaptop ? '24px' : '0'}
-            >
-              <ItemV
-                flexDirection={isLaptop ? 'row' : 'column'}
-                alignItems='flex-start'
-                justifyContent={isLaptop ? 'space-between' : 'flex-start'}
-              >
-                <H2
-                  color='#FFF'
-                  fontSize={isMobile ? '2.5rem' : '3rem'}
-                  fontFamily='DM Sans, sans-serif'
-                  fontWeight='600'
-                  lineHeight='120%'
-                >
-                  Frequently <br /> Asked <br /> Questions
-                </H2>
-
-                <FaqLink
-                  href='https://discord.com/invite/pushchain'
-                  target='_blank'
-                  title='Discord'
-                  fontSize='16px'
-                  margin={
-                    isMobile ? '24px 0 0 0' : isLaptop ? '0' : '24px 0 0 0'
-                  }
-                  background='#5865F2'
-                  color={GLOBALS.COLORS.FONT_LIGHT}
-                  fontFamily='DM Sans, sans-serif'
-                  border='1px solid rgba(255, 255, 255, 0.30)'
-                  borderRadius='12px'
-                  gap='12px'
-                >
-                  <BsDiscord size={28} />
-                  <p>Ask us on Discord</p>
-                  <BsArrowRight size={24} className='anchorSvgLink' />
-                </FaqLink>
-              </ItemV>
-
-              <ItemV
-                alignItems='flex-start'
-                justifyContent='flex-start'
-                margin={isLaptop ? '48px 0 0 0' : '-20px 0 0 0'}
-              >
-                <AccordionGrid>
-                  <Accordion items={General} />
-                </AccordionGrid>
-
-                <SlideLink
-                  href={useBaseUrl('/knowledge/faq')}
-                  title={'new'}
-                  target='_blank'
-                  className='button'
-                  margin={isMobile ? '24px auto 0px 0px' : '24px 0px 0px auto'}
-                  hoverBackground='transparent'
-                  hover='transparent'
-                  background='transparent'
-                  filter='none'
-                  color='#E163FF'
-                  borderRadius='0'
-                  padding='0px 0px'
-                >
-                  <SpanLink>Explore More FAQs</SpanLink>
-                  <BsArrowRight className='anchorSVGlink' />
-                </SlideLink>
-              </ItemV>
-            </ItemH>
+            <ShortFAQs />
           </Content>
         </FAQSection>
 

@@ -236,6 +236,7 @@ export const H2 = styled.h2`
   letter-spacing: ${(props) => props.letterSpacing || '-0.02em'};
   font-family: ${(props) => props.fontFamily || 'DM Sans, sans-serif'};
   text-align: ${(props) => props.textAlign || 'inherit'};
+  white-space: ${(props) => props.whiteSpace || 'normal'};
   line-height: ${(props) => props.lineHeight || '110%'};
   text-shadow: none;
   z-index: ${(props) => props.zIndex || 'auto'};
@@ -298,7 +299,7 @@ export const Span = styled.span`
   margin: ${(props) => props.margin || '0px'};
   padding: ${(props) => props.padding || '0px'};
   letter-spacing: ${(props) => props.letterSpacing || '-0.03em'};
-  white-space: ${(props) => props.whiteSpace || 'break-space'}
+  white-space: ${(props) => props.whiteSpace || 'break-spaces'}
   text-align: ${(props) => props.textAlign || 'initial'};
   line-height: ${(props) => props.lineHeight || '142%'};
   position: ${(props) => props.position || 'initial'};

@@ -336,6 +336,59 @@
       "form-aria-label": "Newsletter subscription form",
       "success-message-aria-label": "Subscription successful",
       "error-message-aria-label": "Subscription error message"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Frequently asked questions about Push Chain",
+      "title": "Frequently\nAsked\nQuestions",
+      "title-aria-label": "Common questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive FAQ documentation",
+      "explore-more-aria-label": "Navigate to complete FAQ page",
+      "accordion-aria-label": "Frequently asked questions list",
+      "faqs": {
+        "what-is-push-chain": {
+          "question": "What is Push Chain?",
+          "answer-1": "We are building Push Chain, a <1>shared state L1</1> blockchain for <3>Universal Apps</3>. Push Chain enables txs from any chain (Eth, Solana, EVM, or non-EVM) enabling apps from any chain to be accessed by the users of any chain (polymarket from any chain, pump.fun from any chain, etc).",
+          "answer-2": "It enables apps to be completely interoperable by allowing developers to deploy a single universal smart contract on Push Chain. It also enables new paradigm of apps where users of all chains can come together for shared app experiences (universal AI agents, socials, etc)."
+        },
+        "how-does-push-chain-work": {
+          "question": "How does Push Chain work?",
+          "answer-1": "Push Chain is a Proof-of-Stake (PoS) L1 blockchain that is designed to eliminate fragmentation across all chains.",
+          "answer-2": "It leverages on several innovations such as specialized validators, off-chain relayers and generalized solvers working in tandem to ensure a user or developer is able to read and write on any chain. This eliminates the silos of different chains, wallet conventions, liquidity fragmentation and more.",
+          "answer-3": "It introduces some groundbreaking innovations such as:",
+          "answer-4": "<1>Fee and Wallet abstraction</1> - allowing wallets/users of any chain to interact natively while being on the chain of their choice.",
+          "answer-5": "<1>Universal Wallet</1> - ensuring user can login via social or email and still have non-custodial wallets created for them for all chains (Ethereum, Bitcoin, Solana, etc).",
+          "answer-6": "<1>Shared State</1> - enabling developers to read the state of any wallet or smart contract of any other blockchain via smart contract on Push Chain.",
+          "answer-7": "<1>Programmable Solvers</1> - ensures that a developer can create a basic path for cross chain actions (write actions) based on the shared state.",
+          "answer-8": "<1>Universal Smart Contracts</1> - giving developers ability to use shared state and generalized solvers for read and write action in chain agnostic fashion. And enables users to use fees and wallet abstraction to access any app or any chain without any hassle.",
+          "answer-9": "Push Chain uses all these innovations to enable reading (shared state) or writing to different chains (programmable solvers), all controlled by the universal smart contract. The fee and wallet abstraction further enables a seamless, user centric approach as the learnings for a user is abstracted away no matter from what chain they chose to interact.",
+          "answer-10": "This results in <1>universal applications</1> for web3. In this paradigm, instead of being a user of \"Uniswap on Ethereum,\" \"Uniswap on Polygon,\" or \"Uniswap on Arbitrum,\" a person simply becomes a <3>user of Uniswap</3>."
+        },
+        "why-is-push-chain-unique": {
+          "question": "Why is Push Chain unique for users?",
+          "answer-1": "Push Chain addresses specific gaps in the existing blockchains, such as interoperability, state access across chains, programmable solvers and wallet abstraction resulting in a <1>full stack interop</1>. While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.",
+          "answer-2": "Push Chain's focus is on being a <1>shared state chain</1> for universal (interoperable) applications acting as a unifying layer where all chains can come together and use PC as universal hub or do settlement between them.",
+          "answer-3": "PC offers a new paradigm of web3 that works from <1>Any Chain.</1> For <3>Any Wallet/User.</3> And is suitable for <5>Any App.</5>"
+        },
+        "push-chain-grants": {
+          "question": "How do I get involved with Push Chain Grants?",
+          "answer-1": "While we are thrilled with the early interest coming from developers to build universal apps, we are still in the governance phase for ratifying our evolution from Push Protocol to Push Chain and hence do not have a grants program now.",
+          "answer-2": "This will change very soon once the community approves of Push Chain! Meanwhile, to frontrun other grantees, please drop us an email at <1>team@push.org</1> with the subject line as <3>Grant MEOW</3> and your app idea. Or, simply follow <5>@PushChain</5> for more updates around the grants program and its release."
+        },
+        "push-protocol-future": {
+          "question": "What will happen to Push Protocol?",
+          "answer-1": "Today's push notification and chat protocols will benefit significantly from being built on top of Push Chain. A dedicated section of the team will focus on maintaining and enhancing these protocols, ensuring they remain the de-facto standard in their respective domains.",
+          "answer-2": "By aligning with Push Chain, notifications and chat sent through the protocols will be processed as transactions on the chain. This integration not only enables these protocols to accrue value but also marks the beginning of a new chapter in their evolution, further enhancing their utility and impact within the web3 ecosystem."
+        },
+        "learn-more": {
+          "question": "I want to learn more?",
+          "answer-1": "That's awesome! you can head to our <1>Knowledge Base</1> section to learn everything in depth.",
+          "answer-2": "If you are a FAQ type of a person, then simply head to our <1>Detailed FAQ</1> for more info."
+        }
+      }
     }
   },
   "frens": {

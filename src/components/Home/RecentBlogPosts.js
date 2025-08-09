@@ -130,6 +130,7 @@ const BlogPostList = styled.div`
   display: flex;
   gap: 25px;
   margin: 72px 0 0 0;
+  flex-wrap: wrap;
 
   @media ${device.mobileL} {
     flex-direction: column;
@@ -144,8 +145,8 @@ const BlogPostCardPrimary = styled(Button)`
   align-self: stretch;
   color: ${GLOBALS.COLORS.FONT_DARK};
   padding: 0px;
-  // gap: 24px;
-  width: 32%;
+  flex: 1;
+  min-width: 280px;
   background: transparent;
 
   & img {
@@ -164,10 +165,6 @@ const BlogPostCardPrimary = styled(Button)`
 
   @media ${device.laptop} {
     width: 100%;
-  }
-
-  @media ${device.mobileL} {
-    gap: 0px;
   }
 `;
 
