@@ -409,6 +409,7 @@ function Header() {
                       {t('header.app-button.title')}
                     </PortalLauncher>
 
+                    {/* TODO: Bring Language, maybe remove Portal in Tablet */}
                     {/* <LanguageItem showMobileMenu={showMobileMenu}>
                       <LanguageMenuItem>
                         <LanguageMenuHeader
@@ -462,7 +463,7 @@ function Header() {
                           expanded={mobileMenuMap[4]}
                         >
                           {/* Insert Liquid Glass */}
-                          <LiquidGlassOuter>
+                    {/* <LiquidGlassOuter>
                             <LiquidGlass
                               autoResize={true}
                               radius={24}
