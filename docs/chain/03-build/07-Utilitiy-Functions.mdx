@@ -18,7 +18,7 @@ import Details from '@theme/Details';
 import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
-<!-- Content Start -->
+{/* Content Start */}
 
 ## Overview
 
@@ -26,7 +26,7 @@ This section covers the most commonly used helpers in the Push Chain Core SDK to
 
 ## Account Utilities
 
-<!-- API Section Begins-->
+{/* API Section Begins*/}
 
 ### Convert to Universal Account
 
@@ -84,9 +84,9 @@ import { PushChain } from '@pushchain/core';
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
-<!-- API Section Begins-->
+{/* API Section Begins*/}
 
 ### Convert to Chain-Agnostic Address
 
@@ -140,9 +140,9 @@ const chainAgnosticAddress = PushChain.utils.account.toChainAgnostic(address, {
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
-<!-- API Section Begins-->
+{/* API Section Begins*/}
 
 ### Convert from Chain-Agnostic to Universal Account
 
@@ -195,9 +195,9 @@ import { PushChain } from '@pushchain/core';
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
-<!-- API Section Begins-->
+{/* API Section Begins*/}
 
 ### Convert Origin to Executor Account
 
@@ -273,16 +273,16 @@ import { PushChain } from '@pushchain/core'
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
 ### Convert Executor Address to Origin Account
 
-**_`PushChain.utils.account.convertExecutorToOrigin(ueaAddress): Promise<{ account: UniversalAccount | null; isUEA: boolean }>`_**
+**_`PushChain.utils.account.convertExecutorToOriginAccount(ueaAddress): Promise<OriginAccountInfo>`_**
 
 Gives the origin account (UOA) for a given executor account (UEA).
 
 ```typescript
-const { account, isUEA } = await PushChain.utils.account.convertExecutorToOrigin(ueaAddress);
+const { account, exists } = await PushChain.utils.account.convertExecutorToOriginAccount(ueaAddress);
 ```
 
 <PushAPIReference>
@@ -292,39 +292,39 @@ const { account, isUEA } = await PushChain.utils.account.convertExecutorToOrigin
 | _`ueaAddress`_ | `string` | -           | Address of the executor account (UEA).                                        |
 
 </PushAPIReference>
-<Details summary="Returns `{ account: UniversalAccount | null; isUEA: boolean }` <object>" className="alert alert--fn-args">
+<Details summary="Returns `OriginAccountInfo` <object>" className="alert alert--fn-args">
 
 ```typescript
-// { account: UniversalAccount | null; isUEA: boolean }
+// OriginAccountInfo object
 {
   account: {
-    chain: 'eip155:11155111',
-    address: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9'
+    chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1',
+    address: 'FNDJWigdNWsmxXYGrFV2gCvioLYwXnsVxZ4stL33wFHf'
   },
-  isUEA: true
+  exists: true
 }
 ```
 
 </Details>
 
-<Details summary="Live Playground: Convert Origin Account to Universal Executor Account" className="alert alert--live-play">
+<Details summary="Live Playground: Convert Executor Account to Origin Account" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
 
 {`
-// customPropHighlightRegexStart=PushChain\.utils\.account\.convertExecutorToOrigin
+// customPropHighlightRegexStart=PushChain\.utils\.account\.convertExecutorToOriginAccount
 // customPropHighlightRegexEnd=\\);
 import { PushChain } from '@pushchain/core'
 
     async function main() {
       const ueaAddress = '0xc16a585b95810F7D204620bb3677F73243242A8F';
-      const result = await PushChain.utils.account.convertExecutorToOrigin(
+      const result = await PushChain.utils.account.convertExecutorToOriginAccount(
         ueaAddress
       );
       console.log(JSON.stringify(result, null, 2));
 
       const notUeaAddress = '0x35B84d6848D16415177c64D64504663b998A6ab4';
-      const result2 = await PushChain.utils.account.convertExecutorToOrigin(
+      const result2 = await PushChain.utils.account.convertExecutorToOriginAccount(
         notUeaAddress
       );
       console.log(JSON.stringify(result2, null, 2));
@@ -340,7 +340,7 @@ import { PushChain } from '@pushchain/core'
 
 ## Signer Utilities
 
-<!-- API Section Begins-->
+{/* API Section Begins*/}
 
 ### Create Universal Signer from Keypair
 
@@ -475,11 +475,11 @@ import { Keypair } from '@solana/web3.js';
 </Tabs>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
 ## Explorer Utilities
 
-<!-- API Section Start-->
+{/* API Section Start*/}
 
 ### Get Transaction URL
 
@@ -548,9 +548,9 @@ const url = pushChainClient.explorer.getTransactionUrl(txHash);
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
-<!-- API Section Start-->
+{/* API Section Start*/}
 
 ### List all Explorer URLs
 
@@ -612,11 +612,11 @@ const explorerUrls = pushChainClient.explorer.listUrls();
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
 ## Helper Utilities
 
-<!-- API Section Start-->
+{/* API Section Start*/}
 
 ### Get Chain Name from Chain Namespace
 
@@ -841,7 +841,7 @@ import { PushChain } from '@pushchain/core';
 </NodeJSVirtualIDE>
 
 </Details>
-<!-- API Section Ends-->
+{/* API Section Ends*/}
 
 ## Next Steps
 
