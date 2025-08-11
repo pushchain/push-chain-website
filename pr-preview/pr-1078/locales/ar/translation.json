@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "صورة شعار Push Chain",
+      "imagetitle": "شعار Push Chain",
+      "ctatitle": "الذهاب إلى الصفحة الرئيسية"
+    },
+    "testnet": {
+      "title": "شبكة الاختبار",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "مستكشف الكتل لـ Push Chain"
+      },
+      "link2": {
+        "title": "الصنبور",
+        "subtitle": "احصل على رموز شبكة الاختبار"
+      }
+    },
+    "developers": {
+      "title": "المطورون",
+      "link1": {
+        "title": "البدء",
+        "subtitle": "مقدمة للبناء على Push Chain"
+      },
+      "link2": {
+        "title": "البداية السريعة",
+        "subtitle": "إعداد بيئة التطوير في ثوانٍ"
+      },
+      "link3": {
+        "title": "الدروس التعليمية",
+        "subtitle": "أدلة خطوة بخطوة للبناء مع Push"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "عرض الكود الأساسي وأدوات المصدر المفتوح"
+      },
+      "link5": {
+        "title": "Discord المطورين",
+        "subtitle": "تواصل مع مجتمع المطورين"
+      }
+    },
+    "community": {
+      "title": "المجتمع",
+      "link1": {
+        "title": "قاعدة المعرفة",
+        "subtitle": "العثور على تحليلات عميقة للميزات"
+      },
+      "link2": {
+        "title": "اقتصاديات الرمز",
+        "subtitle": "الرمز الأصلي الذي يشغل كل شيء على Push Chain"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "متابعة التحديثات وأخبار النظام البيئي"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "الدردشة والبناء والتفاعل مع المجتمع"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "انضم إلى المحادثة وابق متصلاً"
+      }
+    },
+    "resources": {
+      "title": "الموارد",
+      "link1": {
+        "title": "المدونة",
+        "subtitle": "التحديثات والتحليلات العميقة وقصص التطوير"
+      },
+      "link2": {
+        "title": "الورقة المبسطة",
+        "subtitle": "الرؤية والتكنولوجيا، مبسطة"
+      },
+      "link3": {
+        "title": "الأسئلة الشائعة",
+        "subtitle": "إجابات سريعة للأسئلة الشائعة"
+      }
+    },
+    "language": {
+      "title": "اللغة",
+      "ctatitle": "يرجى اختيار لغتك",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "تغيير اللغة إلى البرتغالية",
+
+      "russian": "Русский",
+      "russian-ctatitle": "تغيير اللغة إلى الروسية",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "تغيير اللغة إلى التركية",
+
+      "french": "Français",
+      "french-ctatitle": "تغيير اللغة إلى الفرنسية",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "تغيير اللغة إلى الإندونيسية",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "تغيير اللغة إلى الفيتنامية",
+
+      "german": "Deutsch",
+      "german-ctatitle": "تغيير اللغة إلى الألمانية",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "زيارة Push Portal"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "أي سلسلة، أي تطبيق، جميع المستخدمين.\nPush Chain واحدة.",
+      "description": "أول طبقة 1 مبنية للتطبيقات العالمية.\nابنِ ونشر مرة واحدة، اجذب المستخدمين من أي سلسلة.",
+      "primary-button": "ابدأ البناء",
+      "secondary-button": "استكشف قاعدة المعرفة"
+    },
+    "whatis-section": {
+      "titleFirst": "سلسلة",
+      "titleSecondGraditent": "عالمية",
+      "titleThird": "حقيقية",
+      "bottomTextFirst": "انشر مرة واحدة،",
+      "bottomTextSecond": "اوصل في كل مكان",
+      "bottomTextLink": "ابدأ"
+    },
+    "email-section": {
+      "title": "لا تفوت أي تحديث",
+      "text": "اشترك وابق على اطلاع بإعلانات النظام البيئي والهدايا والمزيد.",
+      "email-input": "بريدك الإلكتروني",
+      "submit-button": "اشتراك",
+      "loading-submit-button": "يرجى الانتظار..."
+    }
+  },
+  "alert": {
+    "know-more": "ابدأ!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "احصل على آخر أخبار Push",
+      "privacy": "سياسة الخصوصية",
+      "tos": "الشروط والأحكام"
+    }
+  }
+}

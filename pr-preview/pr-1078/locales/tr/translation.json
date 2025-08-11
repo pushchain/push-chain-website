@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Push Chain logosu görüntüsü",
+      "imagetitle": "Push Chain logosu",
+      "ctatitle": "Ana sayfaya git"
+    },
+    "testnet": {
+      "title": "Test Ağı",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Push Chain için blok gezgini"
+      },
+      "link2": {
+        "title": "Faucet",
+        "subtitle": "Test ağı tokenları al"
+      }
+    },
+    "developers": {
+      "title": "Geliştiriciler",
+      "link1": {
+        "title": "Başlayın",
+        "subtitle": "Push Chain üzerinde geliştirmeye giriş"
+      },
+      "link2": {
+        "title": "Hızlı Başlangıç",
+        "subtitle": "Geliştirme ortamını saniyeler içinde kurun"
+      },
+      "link3": {
+        "title": "Eğitimler",
+        "subtitle": "Push ile geliştirmek için adım adım kılavuzlar"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "Temel kodu ve açık kaynak araçları görüntüleyin"
+      },
+      "link5": {
+        "title": "Geliştirici Discord",
+        "subtitle": "Geliştirici topluluğuyla bağlantı kurun"
+      }
+    },
+    "community": {
+      "title": "Topluluk",
+      "link1": {
+        "title": "Bilgi Bankası",
+        "subtitle": "Özellikler hakkında derinlemesine incelemeler bulun"
+      },
+      "link2": {
+        "title": "Tokenomics",
+        "subtitle": "Push Chain'deki her şeyi güçlendiren yerel token"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "Güncellemeleri ve ekosistem haberlerini takip edin"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "Toplulukla sohbet edin, geliştirin ve etkileşim kurun"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Sohbete katılın ve bağlantıda kalın"
+      }
+    },
+    "resources": {
+      "title": "Kaynaklar",
+      "link1": {
+        "title": "Blog",
+        "subtitle": "Güncellemeler, derinlemesine incelemeler ve geliştirici hikayeleri"
+      },
+      "link2": {
+        "title": "Litepaper",
+        "subtitle": "Vizyon ve teknoloji, basitleştirilmiş"
+      },
+      "link3": {
+        "title": "SSS",
+        "subtitle": "Yaygın sorulara hızlı yanıtlar"
+      }
+    },
+    "language": {
+      "title": "Dil",
+      "ctatitle": "Lütfen dilinizi seçin",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Dili Portekizce'ye değiştir",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Dili Rusça'ya değiştir",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçe'ye değiştir",
+
+      "french": "Français",
+      "french-ctatitle": "Dili Fransızca'ya değiştir",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Dili Endonezce'ye değiştir",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Dili Vietnamca'ya değiştir",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Dili Almanca'ya değiştir",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "Dili Arapça'ya değiştir"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Push Portal'ı ziyaret et"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "Herhangi Bir Zincir, Herhangi Bir Uygulama, Tüm Kullanıcılar.\nBir Push Chain.",
+      "description": "Evrensel Uygulamalar için inşa edilmiş ilk Katman 1.\nBir kez inşa edin ve dağıtın, herhangi bir zincirden kullanıcıları dahil edin.",
+      "primary-button": "İnşa Etmeye Başlayın",
+      "secondary-button": "Bilgi Bankasını Keşfedin"
+    },
+    "whatis-section": {
+      "titleFirst": "Gerçek Bir",
+      "titleSecondGraditent": "Evrensel",
+      "titleThird": "Zincir",
+      "bottomTextFirst": "Bir Kez Dağıtın,",
+      "bottomTextSecond": "Her Yere Ulaşın",
+      "bottomTextLink": "Başlayın"
+    },
+    "email-section": {
+      "title": "Hiçbir Güncellemeyi Kaçırmayın",
+      "text": "Kaydolun ve ekosistem duyuruları, hediyeler ve daha fazlası hakkında güncel kalın.",
+      "email-input": "E-postanız",
+      "submit-button": "Kaydol",
+      "loading-submit-button": "Lütfen bekleyin..."
+    }
+  },
+  "alert": {
+    "know-more": "Başlayın!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "En son Push haberlerini alın",
+      "privacy": "Gizlilik Politikası",
+      "tos": "Şartlar ve koşullar"
+    }
+  }
+}

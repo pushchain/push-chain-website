@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Изображение логотипа Push Chain",
+      "imagetitle": "Логотип Push Chain",
+      "ctatitle": "Перейти на главную страницу"
+    },
+    "testnet": {
+      "title": "Тестовая сеть",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Обозреватель блоков для Push Chain"
+      },
+      "link2": {
+        "title": "Кран",
+        "subtitle": "Получить токены тестовой сети"
+      }
+    },
+    "developers": {
+      "title": "Разработчики",
+      "link1": {
+        "title": "Начать",
+        "subtitle": "Введение в создание на Push Chain"
+      },
+      "link2": {
+        "title": "Быстрый старт",
+        "subtitle": "Настройка среды разработки за секунды"
+      },
+      "link3": {
+        "title": "Руководства",
+        "subtitle": "Пошаговые руководства по созданию с Push"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "Просмотр основного кода и инструментов с открытым исходным кодом"
+      },
+      "link5": {
+        "title": "Discord разработчиков",
+        "subtitle": "Подключитесь к сообществу разработчиков"
+      }
+    },
+    "community": {
+      "title": "Сообщество",
+      "link1": {
+        "title": "База знаний",
+        "subtitle": "Найдите глубокие погружения в функции"
+      },
+      "link2": {
+        "title": "Токеномика",
+        "subtitle": "Нативный токен, питающий все на Push Chain"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "Следите за обновлениями и новостями экосистемы"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "Общайтесь, создавайте и взаимодействуйте с сообществом"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Присоединяйтесь к разговору и оставайтесь на связи"
+      }
+    },
+    "resources": {
+      "title": "Ресурсы",
+      "link1": {
+        "title": "Блог",
+        "subtitle": "Обновления, глубокие погружения и истории разработки"
+      },
+      "link2": {
+        "title": "Лайтпейпер",
+        "subtitle": "Видение и технология, упрощенно"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "Быстрые ответы на распространенные вопросы"
+      }
+    },
+    "language": {
+      "title": "Язык",
+      "ctatitle": "Пожалуйста, выберите ваш язык",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Изменить язык на португальский",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Изменить язык на турецкий",
+
+      "french": "Français",
+      "french-ctatitle": "Изменить язык на французский",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Изменить язык на индонезийский",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Изменить язык на вьетнамский",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Изменить язык на немецкий",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "Изменить язык на арабский"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Посетить Push Portal"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "Любая сеть, любое приложение, все пользователи.\nОдин Push Chain.",
+      "description": "Первый уровень 1, созданный для универсальных приложений.\nСоздайте и разверните один раз, привлекайте пользователей из любой сети.",
+      "primary-button": "Начать создание",
+      "secondary-button": "Изучить базу знаний"
+    },
+    "whatis-section": {
+      "titleFirst": "Истинно",
+      "titleSecondGraditent": "Универсальная",
+      "titleThird": "Сеть",
+      "bottomTextFirst": "Разверните один раз,",
+      "bottomTextSecond": "Достигните везде",
+      "bottomTextLink": "Начать"
+    },
+    "email-section": {
+      "title": "Не пропустите обновления",
+      "text": "Зарегистрируйтесь и будьте в курсе объявлений экосистемы, розыгрышей и многого другого.",
+      "email-input": "Ваш Email",
+      "submit-button": "Зарегистрироваться",
+      "loading-submit-button": "Пожалуйста, подождите..."
+    }
+  },
+  "alert": {
+    "know-more": "Начать!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Получайте последние новости Push",
+      "privacy": "Политика конфиденциальности",
+      "tos": "Условия использования"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "header": {
+    "logo": {
+      "imagealt": "Gambar logo Push Chain",
+      "imagetitle": "Logo Push Chain",
+      "ctatitle": "Pergi ke beranda"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "link1": {
+        "title": "Push Scan",
+        "subtitle": "Penjelajah blok untuk Push Chain"
+      },
+      "link2": {
+        "title": "Faucet",
+        "subtitle": "Dapatkan token testnet"
+      }
+    },
+    "developers": {
+      "title": "Pengembang",
+      "link1": {
+        "title": "Mulai",
+        "subtitle": "Pengenalan membangun di Push Chain"
+      },
+      "link2": {
+        "title": "Mulai Cepat",
+        "subtitle": "Siapkan lingkungan pengembangan dalam hitungan detik"
+      },
+      "link3": {
+        "title": "Tutorial",
+        "subtitle": "Panduan langkah demi langkah untuk membangun dengan Push"
+      },
+      "link4": {
+        "title": "GitHub",
+        "subtitle": "Lihat kode inti dan alat open source"
+      },
+      "link5": {
+        "title": "Discord Pengembang",
+        "subtitle": "Terhubung dengan komunitas pengembang"
+      }
+    },
+    "community": {
+      "title": "Komunitas",
+      "link1": {
+        "title": "Basis Pengetahuan",
+        "subtitle": "Temukan analisis mendalam tentang fitur"
+      },
+      "link2": {
+        "title": "Tokenomics",
+        "subtitle": "Token asli yang menggerakkan segala sesuatu di Push Chain"
+      },
+      "link3": {
+        "title": "X/Twitter",
+        "subtitle": "Ikuti pembaruan dan berita ekosistem"
+      },
+      "link4": {
+        "title": "Discord",
+        "subtitle": "Ngobrol, bangun, dan berinteraksi dengan komunitas"
+      },
+      "link5": {
+        "title": "Telegram",
+        "subtitle": "Bergabung dalam percakapan dan tetap terhubung"
+      }
+    },
+    "resources": {
+      "title": "Sumber Daya",
+      "link1": {
+        "title": "Blog",
+        "subtitle": "Pembaruan, analisis mendalam, dan cerita pengembang"
+      },
+      "link2": {
+        "title": "Litepaper",
+        "subtitle": "Visi dan teknologi, disederhanakan"
+      },
+      "link3": {
+        "title": "FAQ",
+        "subtitle": "Jawaban cepat untuk pertanyaan umum"
+      }
+    },
+    "language": {
+      "title": "Bahasa",
+      "ctatitle": "Silakan pilih bahasa Anda",
+
+      "english": "English",
+      "english-ctatitle": "Change Language to English",
+
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+
+      "korean": "한국어",
+      "korean-ctatitle": "언어를 한국어로 변경하기",
+
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Ubah bahasa ke Portugis",
+
+      "russian": "Русский",
+      "russian-ctatitle": "Ubah bahasa ke Rusia",
+
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Ubah bahasa ke Turki",
+
+      "french": "Français",
+      "french-ctatitle": "Ubah bahasa ke Prancis",
+
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke Indonesia",
+
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Ubah bahasa ke Vietnam",
+
+      "german": "Deutsch",
+      "german-ctatitle": "Ubah bahasa ke Jerman",
+
+      "arabic": "العربية",
+      "arabic-ctatitle": "Ubah bahasa ke Arab"
+    },
+    "app-button": {
+      "title": "Push Portal",
+      "alt-title": "Kunjungi Push Portal"
+    }
+  },
+  "home": {
+    "hero-section": {
+      "title": "Chain Apa Pun, Aplikasi Apa Pun, Semua Pengguna.\nSatu Push Chain.",
+      "description": "Layer 1 pertama yang dibangun untuk Aplikasi Universal.\nBangun & Deploy sekali, onboard pengguna dari chain mana pun.",
+      "primary-button": "Mulai Membangun",
+      "secondary-button": "Jelajahi Basis Pengetahuan"
+    },
+    "whatis-section": {
+      "titleFirst": "Chain",
+      "titleSecondGraditent": "Universal",
+      "titleThird": "Sejati",
+      "bottomTextFirst": "Deploy Sekali,",
+      "bottomTextSecond": "Jangkau Semua Tempat",
+      "bottomTextLink": "Mulai"
+    },
+    "email-section": {
+      "title": "Jangan Lewatkan Pembaruan Apa Pun",
+      "text": "Daftar dan tetap update dengan pengumuman ekosistem, hadiah, dan lainnya.",
+      "email-input": "Email Anda",
+      "submit-button": "Daftar",
+      "loading-submit-button": "Harap tunggu..."
+    }
+  },
+  "alert": {
+    "know-more": "Mulai!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Dapatkan berita Push terbaru",
+      "privacy": "Kebijakan Privasi",
+      "tos": "Syarat dan ketentuan"
+    }
+  }
+}
