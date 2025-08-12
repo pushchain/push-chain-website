@@ -2394,7 +2394,7 @@ import { PushChain } from '@pushchain/core'
 import { PushChain } from '@pushchain/core'
 
   async function main() {
-    const ueaAddress = '0x5ef53CF4B369E507C34C3eF5B24791574dCd415E';
+    const ueaAddress = '0x2C592Cd90d9d485EB27eC30c718B8A3b63B32d78';
     const result = await PushChain.utils.account.convertExecutorToOriginAccount(
       ueaAddress
     );
