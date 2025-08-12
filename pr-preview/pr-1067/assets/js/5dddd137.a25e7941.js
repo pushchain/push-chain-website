@@ -2285,12 +2285,11 @@ import { PushChain } from '@pushchain/core';
 import { PushChain } from '@pushchain/core'
 
   async function main() {
-    // Create a universal account for Ethereum Sepolia
+    // Create a universal account for Solana Devnet
     const account = PushChain.utils.account.toUniversal(
-      '0xD8d6aF611a17C236b13235B5318508FA61dE3Dba', {
-        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-      }
-    )
+      'EUYcfSUScdFgKMbB3rRdgRZwXmcxY7QCRQa2JwrchP1Q', {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+    })
 
     // Convert to executor address with deployment status
     const executorInfo = await PushChain.utils.account.convertOriginToExecutor(account, {
