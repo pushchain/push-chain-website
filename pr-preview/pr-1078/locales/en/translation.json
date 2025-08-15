@@ -109,52 +109,96 @@
     "language": {
       "title": "Language",
       "aria-label": "Language Selection Dropdown",
-
       "english": "English",
       "english-ctatitle": "Change language to English",
-
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
-
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
-
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
       "korean": "한국어",
       "korean-ctatitle": "한국어로 언어 변경",
-
       "japanese": "日本語",
       "japanese-ctatitle": "言語を日本語に変更する",
-
       "portuguese": "Português",
       "portuguese-ctatitle": "Mudar o idioma para português",
-
       "russian": "Русский",
       "russian-ctatitle": "Изменить язык на русский",
-
       "turkish": "Türkçe",
       "turkish-ctatitle": "Dili Türkçeye değiştir",
-
       "french": "Français",
       "french-ctatitle": "Changer la langue en français",
-
       "indonesian": "Bahasa Indonesia",
       "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
-
       "vietnamese": "Tiếng Việt",
       "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
-
       "german": "Deutsch",
       "german-ctatitle": "Sprache auf Deutsch ändern",
-
       "arabic": "العربية",
       "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
       "text": "Push Portal",
       "title": "Access Push Portal - Earn points as developer, user, or validator"
+    }
+  },
+  "alert": {
+    "know-more": "Get started!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Get the latest Push news",
+      "privacy": "Privacy Policy",
+      "tos": "Terms and conditions"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Join us and build the future of Web3 Communication.",
+        "link-text": "See Open Positions",
+        "image-title": "Join Us",
+        "image-alt": "Icon showing Open Positions"
+      },
+      "docs-card": {
+        "text": "Follow our simple guides to get started in minutes.",
+        "link-text": "Explore Docs",
+        "image-title": "Get Started",
+        "image-alt": "Icon showing ease of getting started"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Company",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "Terms",
+        "privacy-link": "Privacy"
+      },
+      "governance-column": {
+        "title": "Governance",
+        "push-governance-link": "Push Governance",
+        "guides-link": "Guides",
+        "forum-link": "Forum",
+        "grants-link": "Grants",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Resources",
+        "blog-link": "Blog",
+        "whitepaper-link": "Whitepaper",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Dev Guides"
+      },
+      "subscribe-column": {
+        "title": "Support",
+        "contact-us-link": "Contact Us",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "Subscribe",
+        "email-placeholder": "Your Email"
+      }
     }
   },
   "pages": {
@@ -227,7 +271,7 @@
         },
         "box5": {
           "texttitle": "Universal Fee\nAbstraction",
-          "bodytext": "Let’s users pay gas in any token, on any chain without bridging.",
+          "bodytext": "Let's users pay gas in any token, on any chain without bridging.",
           "imagealt": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
           "imagetitle": "Supports any token of any chain for transactions."
         },
@@ -328,7 +372,7 @@
         "aria-label": "Featured On section",
         "tag": "FEATURED ON",
         "title": "Push Chain in the Spotlight",
-        "subtitle": "Don’t just take our word for it. See what the media is saying about the true universal chain.",
+        "subtitle": "Don't just take our word for it. See what the media is saying about the true universal chain.",
         "articles-image-alt": "Media coverage from ",
         "articles-text": "Read Full Coverage",
         "articles-title-1": "Read ",
@@ -446,7 +490,7 @@
           "og-title": "Partners - Ecosystem & Integrations",
           "og-description": "See projects building with Push Chain and our strategic partners.",
           "twitter-title": "Ecosystem Partners",
-          "twitter-description": "Discover who’s building with Push Chain."
+          "twitter-description": "Discover who's building with Push Chain."
         }
       },
       "tokenomics": {
@@ -513,7 +557,7 @@
     "litepaper": {
       "seo": {
         "title": "Litepaper — Technical Overview",
-        "description": "A concise look at Push Chain’s vision, architecture, and economics for universal apps.",
+        "description": "A concise look at Push Chain's vision, architecture, and economics for universal apps.",
         "og-title": "Push Chain Litepaper - Technical Overview",
         "og-description": "The vision, design, and economic model of the universal execution layer—simplified.",
         "twitter-title": "Litepaper - Push Chain",
@@ -568,7 +612,7 @@
     "brb": {
       "seo": {
         "title": "BRB — Billion Reasons to Build",
-        "description": "Push Chain’s flagship hackathon: solve real problems, learn from experts, and win prizes.",
+        "description": "Push Chain's flagship hackathon: solve real problems, learn from experts, and win prizes.",
         "og-title": "BRB - Push Chain Hackathon",
         "og-description": "Tracks, timelines, and prizes for the Billion Reasons to Build competition.",
         "twitter-title": "BRB Hackathon - Build & Win",
@@ -617,11 +661,11 @@
         },
         "faq3": {
           "question": "Do I need a different wallet or gas token?",
-          "answer": "<1><2>No.</2></1><1><2>Keep your wallet.</2> Use the wallet you already have — no new wallet or account.</1><1><2>Pay in what you hold.</2> Fees can be paid in the tokens you already have on your home chain; we handle conversion behind the scenes.</1><1><2>No network switching.</2> Stay on your home chain — no bridging just to get a gas token.</1><1><2>Non-custodial.</2> You sign every action; Push never holds your keys.</1><1><2>Under the hood.</2> The network settles fees in $PC automatically — you don’t need to manage it.</1>"
+          "answer": "<1><2>No.</2></1><1><2>Keep your wallet.</2> Use the wallet you already have — no new wallet or account.</1><1><2>Pay in what you hold.</2> Fees can be paid in the tokens you already have on your home chain; we handle conversion behind the scenes.</1><1><2>No network switching.</2> Stay on your home chain — no bridging just to get a gas token.</1><1><2>Non-custodial.</2> You sign every action; Push never holds your keys.</1><1><2>Under the hood.</2> The network settles fees in $PC automatically — you don't need to manage it.</1>"
         },
         "faq4": {
           "question": "How is this different from bridges or messaging layers?",
-          "answer": "<1><2>Short Answer</2>: Push is where your app runs. Bridges/messaging just move tokens or messages between chains which complicates everything for the user and developers.</1><1><2>Single home vs many clones.</2> With bridges/messaging you deploy per chain and sync via messages. On Push you deploy once; everyone hits the same contract and shared state.</1><1><2>No wrapped assets or mandatory bridging.</2> Users stay on their home chain and pay with what they already hold; we handle routing and fee conversion under the hood.</1><1><2>Unified identity & verification.</2> We accept signatures from any wallet/chain and attribute them to the same user on Push — non-custodial.</1><1><2>Fewer moving parts.</2> No cross-chain approval dance, no gas-token hunting, no glue contracts to keep in sync.</1><1><2>Use bridges when you want, not because you must.</2> Liquidity can still move via bridges, but interacting with your app doesn’t require it.</1><1>Result: simpler apps, one source of truth, and a UX that feels like one chain — even when users aren’t.</1>"
+          "answer": "<1><2>Short Answer</2>: Push is where your app runs. Bridges/messaging just move tokens or messages between chains which complicates everything for the user and developers.</1><1><2>Single home vs many clones.</2> With bridges/messaging you deploy per chain and sync via messages. On Push you deploy once; everyone hits the same contract and shared state.</1><1><2>No wrapped assets or mandatory bridging.</2> Users stay on their home chain and pay with what they already hold; we handle routing and fee conversion under the hood.</1><1><2>Unified identity & verification.</2> We accept signatures from any wallet/chain and attribute them to the same user on Push — non-custodial.</1><1><2>Fewer moving parts.</2> No cross-chain approval dance, no gas-token hunting, no glue contracts to keep in sync.</1><1><2>Use bridges when you want, not because you must.</2> Liquidity can still move via bridges, but interacting with your app doesn't require it.</1><1>Result: simpler apps, one source of truth, and a UX that feels like one chain — even when users aren't.</1>"
         },
         "faq5": {
           "question": "Is it EVM-only? Which chains are supported?",
@@ -634,64 +678,6 @@
           "answer": "<1><2>Speed.</2> Designed for ~1–2s confirmations with fast UX feedback. Check live metrics on <3>🍩 Donut Testnet</3>.</1><1><2>Fee model.</2> You see the fee in the token you choose to pay; the network settles in $PC under the hood.</1><1><2>Typical costs.</2> Typical fees is less than <2>$0.001</2> per transaction. though, it varies by contract complexity, price of the token and network load. You get an exact quote before you sign.</1>",
           "donut-testnet-title": "Check out stats of Push Chain Donut Testnet."
         }
-      }
-    }
-  },
-  "alert": {
-    "know-more": "Get started!"
-  },
-  "footer": {
-    "mail-section": {
-      "title": "Get the latest Push news",
-      "privacy": "Privacy Policy",
-      "tos": "Terms and conditions"
-    },
-    "info-section": {
-      "positions-card": {
-        "text": "Join us and build the future of Web3 Communication.",
-        "link-text": "See Open Positions",
-        "image-title": "Join Us",
-        "image-alt": "Icon showing Open Positions"
-      },
-      "docs-card": {
-        "text": "Follow our simple guides to get started in minutes.",
-        "link-text": "Explore Docs",
-        "image-title": "Get Started",
-        "image-alt": "Icon showing ease of getting started"
-      }
-    },
-    "links-section": {
-      "company-column": {
-        "title": "Company",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Terms",
-        "privacy-link": "Privacy"
-      },
-      "governance-column": {
-        "title": "Governance",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Grants",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
-        "title": "Resources",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
-      },
-      "subscribe-column": {
-        "title": "Support",
-        "contact-us-link": "Contact Us",
-        "faq-link": "FAQ"
-      },
-      "support-column": {
-        "title": "Subscribe",
-        "email-placeholder": "Your Email"
       }
     }
   }

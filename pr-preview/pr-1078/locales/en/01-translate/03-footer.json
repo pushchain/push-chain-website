@@ -1,0 +1,60 @@
+{
+  "alert": {
+    "know-more": "Get started!"
+  },
+  "footer": {
+    "mail-section": {
+      "title": "Get the latest Push news",
+      "privacy": "Privacy Policy",
+      "tos": "Terms and conditions"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Join us and build the future of Web3 Communication.",
+        "link-text": "See Open Positions",
+        "image-title": "Join Us",
+        "image-alt": "Icon showing Open Positions"
+      },
+      "docs-card": {
+        "text": "Follow our simple guides to get started in minutes.",
+        "link-text": "Explore Docs",
+        "image-title": "Get Started",
+        "image-alt": "Icon showing ease of getting started"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Company",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "Terms",
+        "privacy-link": "Privacy"
+      },
+      "governance-column": {
+        "title": "Governance",
+        "push-governance-link": "Push Governance",
+        "guides-link": "Guides",
+        "forum-link": "Forum",
+        "grants-link": "Grants",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Resources",
+        "blog-link": "Blog",
+        "whitepaper-link": "Whitepaper",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Dev Guides"
+      },
+      "subscribe-column": {
+        "title": "Support",
+        "contact-us-link": "Contact Us",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "Subscribe",
+        "email-placeholder": "Your Email"
+      }
+    }
+  }
+}

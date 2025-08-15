@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — How-tos & Tutorials",
+          "description": "Step-by-step guides, patterns, and examples to use Push Chain features.",
+          "og-title": "Builders - How-tos & Tutorials",
+          "og-description": "Guided tutorials, best practices, and examples for building with Push Chain.",
+          "twitter-title": "Builders - How-tos & Tutorials",
+          "twitter-description": "Step-by-step guides to ship on Push Chain."
+        }
+      }
+    }
+  }
+}
