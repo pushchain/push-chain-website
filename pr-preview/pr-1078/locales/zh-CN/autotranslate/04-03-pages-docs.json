@@ -8,6 +8,11 @@
         "og-description": "使用清晰的指南和示例在通用执行层构建和运行应用程序。",
         "twitter-title": "Push Chain 文档 - 立即构建",
         "twitter-description": "快速入门、SDK、API 参考和示例，助您快速上线。"
+      },
+      "explorePrelaunchBuild": {
+        "text": "探索预发布版本",
+        "title": "访问 Push Chain 测试网文档和预发布功能",
+        "ariaLabel": "导航到 Push Chain 测试网文档以探索预发布版本功能"
       }
     }
   }

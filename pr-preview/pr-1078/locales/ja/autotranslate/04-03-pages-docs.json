@@ -8,6 +8,11 @@
         "og-description": "明確なガイドと例を使用して、ユニバーサル実行レイヤーでアプリを構築および実行します。",
         "twitter-title": "Push Chain Docs - 今すぐ構築",
         "twitter-description": "迅速なリリースを実現するためのクイックスタート、SDK、APIリファレンス、およびサンプル。"
+      },
+      "explorePrelaunchBuild": {
+        "text": "プレローンチビルドを探索",
+        "title": "Push Chain Testnetドキュメントとプレローンチ機能にアクセス",
+        "ariaLabel": "Push Chain Testnet docsに移動してプレローンチビルド機能を探索"
       }
     }
   }
