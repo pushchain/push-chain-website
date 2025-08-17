@@ -1,0 +1,142 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Перейти на главную страницу",
+      "language-icon-alt": "Иконка выбора языка",
+      "hamburger-menu-alt": "Открыть меню навигации",
+      "testnet-badge-alt": "Push Chain Testnet Donut - Просмотр статуса тестовой сети"
+    },
+    "logo": {
+      "imagealt": "Изображение логотипа Push Chain",
+      "imagetitle": "Логотип Push Chain",
+      "ctatitle": "Перейти на главную страницу Push Chain"
+    },
+    "testnet": {
+      "title": "Тестовая сеть",
+      "aria-label": "Раздел тестовой сети",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Обозреватель блоков для Push Chain",
+        "title": "Изучите транзакции и блоки тестовой сети Push Chain на Push Scan"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "Получите тестовые токены",
+        "title": "Получите бесплатные тестовые токены для разработки Push Chain"
+      }
+    },
+    "developers": {
+      "title": "Разработчики",
+      "aria-label": "Раздел разработчиков",
+      "link1": {
+        "text": "Начните",
+        "subtext": "Введение в разработку на Push Chain",
+        "title": "Начните разрабатывать универсальные приложения на Push Chain - Документация разработчика"
+      },
+      "link2": {
+        "text": "Быстрый старт",
+        "subtext": "Настройка среды разработки за секунды",
+        "title": "Руководство по быстрому старту - Настройте среду разработки Push Chain мгновенно"
+      },
+      "link3": {
+        "text": "Учебные пособия",
+        "subtext": "Пошаговые руководства по разработке с Push",
+        "title": "Учитесь с помощью практических учебных пособий - Создайте свое первое универсальное приложение на Push Chain"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "Просмотр основного кода и инструментов с открытым исходным кодом",
+        "title": "Изучите исходный код Push Chain и инструменты разработки на GitHub"
+      },
+      "link5": {
+        "text": "Developer Discord",
+        "subtext": "Общайтесь с сообществом разработчиков",
+        "title": "Присоединяйтесь к сообществу разработчиков Push Chain на Discord для поддержки и сотрудничества"
+      }
+    },
+    "community": {
+      "title": "Сообщество",
+      "aria-label": "Раздел сообщества",
+      "link1": {
+        "text": "База знаний",
+        "subtext": "Найдите подробную информацию о функциях",
+        "title": "Изучите исчерпывающую документацию Push Chain и руководства по функциям"
+      },
+      "link2": {
+        "text": "Tokenomics",
+        "subtext": "Нативный токен, питающий все на Push Chain",
+        "title": "Узнайте о токеномике Push Chain и полезности токена $PC"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "Следите за обновлениями и новостями экосистемы",
+        "title": "Следите за Push Chain в X (Twitter) для получения последних обновлений и объявлений"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "Общайтесь, разрабатывайте и наслаждайтесь сообществом",
+        "title": "Присоединяйтесь к сообществу Push Chain на Discord для обсуждений и поддержки"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "Присоединяйтесь к разговору и оставайтесь в курсе событий",
+        "title": "Общайтесь с сообществом Push Chain в Telegram для получения обновлений в режиме реального времени"
+      }
+    },
+    "resources": {
+      "title": "Ресурсы",
+      "aria-label": "Раздел ресурсов",
+      "link1": {
+        "text": "Блог",
+        "subtext": "Обновления, глубокий анализ и истории разработчиков",
+        "title": "Читайте блог Push Chain для получения последних обновлений, глубокого технического анализа и историй разработчиков"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "Видение и технологии, упрощенные",
+        "title": "Прочитайте Litepaper Push Chain - упрощенное видение и технический обзор"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "Быстрые ответы на распространенные вопросы",
+        "title": "Просмотрите часто задаваемые вопросы о Push Chain"
+      }
+    },
+    "language": {
+      "title": "Язык",
+      "aria-label": "Выпадающее меню выбора языка",
+      "english": "English",
+      "english-ctatitle": "Изменить язык на английский",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Получите доступ к Push Portal - Зарабатывайте баллы как разработчик, пользователь или валидатор"
+    }
+  }
+}

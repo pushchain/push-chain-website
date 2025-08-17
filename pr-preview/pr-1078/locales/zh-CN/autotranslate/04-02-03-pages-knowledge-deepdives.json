@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "深度解析 — 概念与架构",
+          "description": "关于共享状态、费用抽象、USV/UEA 以及通用执行层的易读解释。",
+          "og-title": "深度解析 - 概念与架构",
+          "og-description": "关于 Push Chain 模块、设计决策和性能的深入文章。",
+          "twitter-title": "深度解析 - 幕后揭秘",
+          "twitter-description": "关于 Push Chain 工作原理的解释。"
+        }
+      }
+    }
+  }
+}

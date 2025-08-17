@@ -1,164 +1,199 @@
 {
+  "global": {
+    "site-name": "Push Chain — アプリのためのユニバーサルL1",
+    "site-description": "ユニバーサルアプリのための共有状態L1。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どのウォレットでも使用可能。どのトークンでも支払い可能。ネットワーク切り替え不要。"
+  },
   "header": {
-    "logo": {
-      "imagealt": "Push Chain ロゴの画像",
-      "imagetitle": "Push Chain ロゴ",
-      "ctatitle": "ホームページに移動"
-    },
-    "testnet": {
-      "title": "テストネット",
-      "link1": {
-        "title": "Push Scan",
-        "subtitle": "Push Chain のブロックエクスプローラー"
-      },
-      "link2": {
-        "title": "フォーセット",
-        "subtitle": "テストネットトークンを取得"
-      }
-    },
-    "developers": {
-      "title": "開発者",
-      "link1": {
-        "title": "始める",
-        "subtitle": "Push Chain での構築の紹介"
-      },
-      "link2": {
-        "title": "クイックスタート",
-        "subtitle": "数秒で開発環境をセットアップ"
-      },
-      "link3": {
-        "title": "チュートリアル",
-        "subtitle": "Push で構築するためのステップバイステップガイド"
-      },
-      "link4": {
-        "title": "GitHub",
-        "subtitle": "コアコードとオープンソースツールを表示"
-      },
-      "link5": {
-        "title": "開発者 Discord",
-        "subtitle": "開発者コミュニティと接続"
-      }
-    },
-    "community": {
-      "title": "コミュニティ",
-      "link1": {
-        "title": "ナレッジベース",
-        "subtitle": "機能の詳細解説を見つける"
-      },
-      "link2": {
-        "title": "トークノミクス",
-        "subtitle": "Push Chain 上のすべてを動かすネイティブトークン"
-      },
-      "link3": {
-        "title": "X/Twitter",
-        "subtitle": "アップデートとエコシステムニュースをフォロー"
-      },
-      "link4": {
-        "title": "Discord",
-        "subtitle": "コミュニティとチャット、構築、交流"
-      },
-      "link5": {
-        "title": "Telegram",
-        "subtitle": "会話に参加し、つながりを保つ"
-      }
-    },
-    "resources": {
-      "title": "リソース",
-      "link1": {
-        "title": "ブログ",
-        "subtitle": "アップデート、詳細解説、開発ストーリー"
-      },
-      "link2": {
-        "title": "ライトペーパー",
-        "subtitle": "ビジョンと技術、簡素化版"
-      },
-      "link3": {
-        "title": "FAQ",
-        "subtitle": "よくある質問への迅速な回答"
-      }
-    },
-    "language": {
-      "title": "言語",
-      "ctatitle": "言語を選択してください",
-
-      "english": "English",
-      "english-ctatitle": "Change Language to English",
-
-      "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "切换语言为中文",
-
-      "spanish": "Español",
-      "spanish-ctatitle": "Cambiar el idioma a español",
-
-      "hindi": "हिंदी",
-      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
-      "korean": "한국어",
-      "korean-ctatitle": "언어를 한국어로 변경하기",
-
-      "japanese": "日本語",
-      "japanese-ctatitle": "言語を日本語に変更する",
-
-      "portuguese": "Português",
-      "portuguese-ctatitle": "言語をポルトガル語に変更",
-
-      "russian": "Русский",
-      "russian-ctatitle": "言語をロシア語に変更",
-
-      "turkish": "Türkçe",
-      "turkish-ctatitle": "言語をトルコ語に変更",
-
-      "french": "Français",
-      "french-ctatitle": "言語をフランス語に変更",
-
-      "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "言語をインドネシア語に変更",
-
-      "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "言語をベトナム語に変更",
-
-      "german": "Deutsch",
-      "german-ctatitle": "言語をドイツ語に変更",
-
-      "arabic": "العربية",
-      "arabic-ctatitle": "言語をアラビア語に変更"
-    },
     "app-button": {
-      "title": "Push Portal",
-      "alt-title": "Push Portal を訪問"
+      "text": "Push Portal",
+      "title": "Push Portalにアクセス - 開発者、ユーザー、またはバリデーターとしてポイントを獲得"
     }
-  },
-  "home": {
-    "hero-section": {
-      "title": "あらゆるチェーン、あらゆるアプリ、すべてのユーザー。\n一つの Push Chain。",
-      "description": "ユニバーサルアプリ用に構築された最初のレイヤー1。\n一度構築・デプロイすれば、あらゆるチェーンからユーザーをオンボード。",
-      "primary-button": "構築を開始",
-      "secondary-button": "ナレッジベースを探索"
-    },
-    "whatis-section": {
-      "titleFirst": "真の",
-      "titleSecondGraditent": "ユニバーサル",
-      "titleThird": "チェーン",
-      "bottomTextFirst": "一度デプロイ、",
-      "bottomTextSecond": "どこでも到達",
-      "bottomTextLink": "始める"
-    },
-    "email-section": {
-      "title": "アップデートを見逃さない",
-      "text": "サインアップして、エコシステムの発表、プレゼントなどの最新情報を入手してください。",
-      "email-input": "あなたのメール",
-      "submit-button": "サインアップ",
-      "loading-submit-button": "お待ちください..."
-    }
-  },
-  "alert": {
-    "know-more": "始めましょう！"
   },
   "footer": {
     "mail-section": {
-      "title": "最新の Push ニュースを取得",
+      "title": "最新のPushニュースを入手",
       "privacy": "プライバシーポリシー",
       "tos": "利用規約"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Web3コミュニケーションの未来を共に築きましょう。",
+        "link-text": "求人情報を見る",
+        "image-title": "参加する",
+        "image-alt": "求人情報アイコン"
+      },
+      "docs-card": {
+        "text": "シンプルなガイドに従って、数分で簡単に始めましょう。",
+        "link-text": "ドキュメントを探索",
+        "image-title": "始める",
+        "image-alt": "簡単に始められるアイコン"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "会社",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "Terms",
+        "privacy-link": "Privacy"
+      },
+      "governance-column": {
+        "title": "ガバナンス",
+        "push-governance-link": "Push Governance",
+        "guides-link": "Guides",
+        "forum-link": "Forum",
+        "grants-link": "Grants",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "リソース",
+        "blog-link": "Blog",
+        "whitepaper-link": "Whitepaper",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Dev Guides"
+      },
+      "subscribe-column": {
+        "title": "サポート",
+        "contact-us-link": "お問い合わせ",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "購読",
+        "email-placeholder": "メールアドレス"
+      }
+    }
+  },
+  "pages": {
+    "brb": {
+      "seo": {
+        "title": "BRB — 構築する10億の理由",
+        "description": "Push Chainのフラッグシップハッカソン：現実の問題を解決し、専門家から学び、賞品を獲得しましょう。",
+        "og-title": "BRB - Push Chain Hackathon",
+        "og-description": "Billion Reasons to Build コンペティションのトラック、タイムライン、賞品。",
+        "twitter-title": "BRB Hackathon - 構築して勝利",
+        "twitter-description": "Push Chainハッカソンに参加して成果を出し、賞品を獲得しましょう。"
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "更新情報を逃さない",
+      "text": "サインアップして、エコシステムのお知らせ、景品など、最新情報を入手しましょう。",
+      "email-input": "あなたのメールアドレス",
+      "email-input-placeholder": "メールアドレスを入力してください",
+      "email-input-title": "Push Chain ニュースレターを購読して、最新情報を入手",
+      "email-input-aria-label": "ニュースレター購読のためのメールアドレス",
+      "submit-button": "サインアップ",
+      "submit-button-title": "Push Chain ニュースレターを購読",
+      "submit-button-aria-label": "ニュースレターを購読",
+      "loading-submit-button": "お待ちください...",
+      "arrow-button-aria-label": "ニュースレターを購読",
+      "arrow-button-title": "Push Chain の最新情報を購読",
+      "form-aria-label": "ニュースレター購読フォーム",
+      "success-message-aria-label": "購読に成功しました",
+      "error-message-aria-label": "購読エラーメッセージ"
+    },
+    "cookie-banner": {
+      "message": "お客様の体験をパーソナライズするためにCookieを使用しています。詳細については",
+      "privacy-policy-link": "プライバシーポリシー",
+      "privacy-policy-link-title": "Push Protocol のプライバシーポリシーを読む",
+      "privacy-policy-link-aria-label": "新しいタブでプライバシーポリシーを開く",
+      "accept-button": "同意する",
+      "accept-button-title": "Cookie を受け入れて、お客様の体験をパーソナライズ",
+      "accept-button-aria-label": "Cookie を受け入れてバナーを閉じる",
+      "reject-button": "拒否する",
+      "reject-button-title": "Cookie を拒否してバナーを閉じる",
+      "reject-button-aria-label": "Cookie を拒否してバナーを閉じる",
+      "banner-aria-label": "Cookie 同意バナー",
+      "banner-role": "Cookie の設定通知"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Push Chain - ユニバーサルブロックチェーンに関するよくある質問",
+      "title": "よくある\n質問",
+      "title-aria-label": "Push Chain に関する一般的な質問と回答",
+      "discord-link-text": "Discord で質問する",
+      "discord-link-title": "サポートと質問のために Push Chain Discord コミュニティに参加する",
+      "discord-link-aria-label": "新しいタブで Discord コミュニティを開く",
+      "explore-more-text": "その他の FAQ を見る",
+      "explore-more-title": "Push Chain FAQ のドキュメントおよび開発者ガイドを参照する",
+      "explore-more-aria-label": "完全な Push Chain FAQ ページに移動する",
+      "accordion-aria-label": "Push Chain のよくある質問リスト",
+      "answer-aria-label": "質問への回答 - ",
+      "faqs": {
+        "faq1": {
+          "question": "Push Chain とは何ですか？",
+          "answer": "<1>Push Chain は、<2>分断を解消し、アプリをユニバーサルにする共有ステートブロックチェーンです。</2></1><1>Push に一度デプロイするだけで済みます。ユーザーは、EVM または非 EVM のチェーンに関係なく、既存のウォレットとトークンを使用してアプリを使用できます。手数料はバックグラウンドで処理されます。</1>"
+        },
+        "faq2": {
+          "question": "仕組みはどうなっていますか？ (ELI5)",
+          "answer": "<1>現在お使いのウォレットを使用します。Push がクロスチェーン処理をバックグラウンドで処理します。</1><1>1. <2>どこからでも始められます。</2> どのチェーン (ネットワークの切り替えは不要) のウォレットを使用してもかまいません。</1><1>2. <2>一度だけ署名します。</2> 保有しているトークンで支払います。手数料はホームチェーンで確保されます。</1><1>3. <2>ルーティングします。</2> Push 上のアカウント (所有者のアカウント) は、アプリにコールを転送します (非カストディアル)。</1><1>4. <2>常にあなた自身です。</2> ホームチェーンのウォレットは、Push 上のアカウントにマッチし、アクションは Push 上で正しく検証され、あなたに帰属されます。</1><1>5. <2>すぐに完了します。</2> アプリは Push 上で実行されます。手数料はバックグラウンドで処理されます。ブリッジは不要で、新しいウォレットも必要ありません。</1><1>このようにして、あらゆるチェーンのユーザーは、Push Chain にデプロイされた同じアプリを使用できるようになり、アプリは真にユニバーサルになります。</1>"
+        },
+        "faq3": {
+          "question": "別のウォレットやガス トークンは必要ですか？",
+          "answer": "<1><2>いいえ。</2></1><1><2>ウォレットをそのまま使用できます。</2> 現在お使いのウォレットを使用できます。新しいウォレットやアカウントは必要ありません。</1><1><2>保有しているトークンで支払います。</2> 手数料は、ホームチェーンで現在保有しているトークンで支払うことができます。ルーティングと手数料の換算はバックグラウンドで処理されます。</1><1><2>ネットワークの切り替えは不要です。</2> ホームチェーンのままで、ガス トークンを取得するためにブリッジする必要はありません。</1><1><2>非カストディアルです。</2> すべてのアクションに署名します。Push はキーを保持しません。</1><1><2>バックグラウンドで処理されます。</2> ネットワークは自動的に $PC で決済を処理します。管理する必要はありません。</1>"
+        },
+        "faq4": {
+          "question": "ブリッジやメッセージングレイヤーとどう違いますか？",
+          "answer": "<1><2>簡単に言うと、Push はアプリが実行される場所です。</2> ブリッジやメッセージングはトークンやメッセージをチェーン間で移動させるだけで、ユーザーと開発者にとってはすべてが複雑になります。</1><1><2>ホームチェーン1つ vs 多くのクローン。</2> ブリッジやメッセージングを使用すると、チェーンごとにデプロイし、メッセージを介して同期します。Push を使用すると、一度デプロイするだけで済みます。誰もが同じコントラクトと共有ステートにアクセスできます。</1><1><2>ラップされた資産や必須のブリッジは不要です。</2> ユーザーはホームチェーンのままで、保有しているトークンで支払うことができます。ルーティングと手数料の換算はバックグラウンドで処理されます。</1><1><2>統一されたIDと検証。</2> あらゆるウォレット/チェーンからの署名を受け付け、Push 上で同じユーザーに帰属させることができます (非カストディアル)。</1><1><2>少ない可動部分。</2> クロスチェーン承認ダンスや、ガス トークンを探す必要はありません。同期を維持する必要のあるグルーコントラクトもありません。</1><1><2>ブリッジが必要な場合にのみ使用してください。</2> 流動性はブリッジを介して移動できますが、アプリを操作するには必要ありません。</1><1>結果：シンプルなアプリ、単一の真実源、そしてユーザーがどのチェーンにいても、まるで1つのチェーンのように感じる UX。</1>"
+        },
+        "faq5": {
+          "question": "EVM 専用ですか？ どのチェーンがサポートされていますか？",
+          "answer": "<1><2>いいえ、Push は EVM と非 EVM のチェーンの両方をサポートしています。</2> デプロイは EVM 優先ですが、EVM または非 EVM のチェーンのユーザーは、ネイティブでアプリを使用しているかのようにアプリを使用できます。</1>\n<1><2>一度デプロイ。どこでも相互運用可能。</2> 標準の EVM コントラクト (Solidity/Vyper) を Push に書き込み、デプロイします。ツールは変わりません。</1>\n<1><2>あらゆるチェーンのユーザー。</2> Ethereum と主要な EVM L2 はネイティブに動作します。非 EVM ユーザー (例：Solana) は、ホームウォレットに署名します。バックグラウンドで検証し、ルーティングします (ネットワークの切り替えは不要)。</1>\n<1><2>現在サポートされています。</2> <3>サポートされているチェーン</3> のライブリストを参照してください。</1><1><2>カバレッジを拡大中です。</2> 常にチェーンを追加しています。チェーンの追加をリクエストする場合は、<4>お問い合わせください</4>。</1>",
+          "supported-urls-title": "Push Chain がサポートするすべてのチェーンのリスト",
+          "supported-urls-aria-label": "サポートされているチェーンのリストを表示",
+          "contact-urls-title": "お問い合わせ",
+          "contact-urls-aria-label": "お問い合わせフォームを表示"
+        },
+        "faq6": {
+          "question": "どれくらい安全ですか？",
+          "answer": "Push はセキュリティを最優先事項と考えています。監査されたスマートコントラクト、最新の暗号化技術、複数のセキュリティレイヤーで、ユーザーの資金とデータを保護します。"
+        }
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
+      "button-text": "クローズドベータパスを獲得",
+      "button-title": "Push Chainテストネットに参加して、クローズドベータパスを獲得",
+      "button-aria-label": "Telegramを開いてPush Chainのクローズドベータパスを獲得",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "テストネットの通知を閉じる",
+      "close-button-aria-label": "Push Chainテストネットの通知を閉じる",
+      "container-aria-label": "Push Chainテストネットの通知",
+      "container-role": "Push Chainテストネットのアナウンス"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnetクローズドベータ版公開！",
+      "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "報酬の通知を閉じる",
+      "close-button-aria-label": "Push Chain報酬の通知を閉じる",
+      "container-aria-label": "Push Chain報酬の通知",
+      "container-role": "Push Chain報酬のアナウンス"
+    },
+    "info-bar": {
+      "title": "Push Testnetで今すぐ開始 — ビルダーと早期ユーザーのための報酬をアンロックしましょう。",
+      "learn-more-text": "詳細はこちら",
+      "learn-more-title": "このアナウンスの詳細はこちら",
+      "learn-more-aria-label": "新しいタブでアナウンスリンクを開く",
+      "dismiss-button-title": "アナウンスを閉じる",
+      "dismiss-button-aria-label": "アナウンスバーを閉じる",
+      "container-aria-label": "サイトアナウンス",
+      "container-role": "サイトアナウンスバナー",
+      "star-icon-alt": "アナウンススターアイコン"
+    },
+    "alert": {
+      "message": "Push Metamask Snapが公開されました。",
+      "know-more-text": "今すぐ始める！",
+      "know-more-title": "Push Metamask Snapを使い始める",
+      "know-more-aria-label": "新しいタブでPush Metamask Snapを開く",
+      "close-button-title": "アラートを閉じる",
+      "close-button-aria-label": "Push Metamask Snapアラートを閉じる",
+      "container-aria-label": "Push Metamask Snapアナウンス",
+      "container-role": "Push Metamask Snapアラートバナー"
     }
   }
 }

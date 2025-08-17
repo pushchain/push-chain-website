@@ -1,0 +1,142 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - انتقل إلى الصفحة الرئيسية",
+      "language-icon-alt": "أيقونة اختيار اللغة",
+      "hamburger-menu-alt": "افتح قائمة التنقل",
+      "testnet-badge-alt": "Push Chain Testnet Donut - عرض حالة الشبكة التجريبية"
+    },
+    "logo": {
+      "imagealt": "صورة شعار Push Chain",
+      "imagetitle": "شعار Push Chain",
+      "ctatitle": "انتقل إلى الصفحة الرئيسية لـ Push Chain"
+    },
+    "testnet": {
+      "title": "الشبكة التجريبية",
+      "aria-label": "قسم الشبكة التجريبية",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "مستكشف الكتل لـ Push Chain",
+        "title": "استكشف معاملات وكتل Push Chain التجريبية على Push Scan"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "احصل على رموز الشبكة التجريبية",
+        "title": "احصل على رموز مجانية للشبكة التجريبية لتطوير Push Chain"
+      }
+    },
+    "developers": {
+      "title": "المطورون",
+      "aria-label": "قسم المطورين",
+      "link1": {
+        "text": "ابدأ",
+        "subtext": "مقدمة للبناء على Push Chain",
+        "title": "ابدأ ببناء التطبيقات الشاملة على Push Chain - وثائق المطورين"
+      },
+      "link2": {
+        "text": "البداية السريعة",
+        "subtext": "إعداد بيئة التطوير في ثوانٍ",
+        "title": "دليل البداية السريعة - إعداد بيئة تطوير Push Chain فوراً"
+      },
+      "link3": {
+        "text": "الدروس التعليمية",
+        "subtext": "أدلة خطوة بخطوة للبناء مع Push",
+        "title": "تعلّم بالدروس العملية - ابنِ أول تطبيق شامل لك على Push Chain"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "عرض الكود الأساسي وأدوات المصدر المفتوح",
+        "title": "استكشف كود مصدر Push Chain وأدوات التطوير على GitHub"
+      },
+      "link5": {
+        "text": "Discord للمطورين",
+        "subtext": "تواصل مع مجتمع المطورين",
+        "title": "انضم إلى مجتمع مطوري Push Chain على Discord للدعم والتعاون"
+      }
+    },
+    "community": {
+      "title": "المجتمع",
+      "aria-label": "قسم المجتمع",
+      "link1": {
+        "text": "قاعدة المعرفة",
+        "subtext": "اعثر على تحليلات عميقة للميزات",
+        "title": "استكشف وثائق Push Chain الشاملة وأدلة الميزات"
+      },
+      "link2": {
+        "text": "اقتصاد الرمز المميز",
+        "subtext": "الرمز الأصلي الذي يشغل كل شيء على Push Chain",
+        "title": "تعرّف على اقتصاد رمز Push Chain وفائدة رمز $PC"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "تابع التحديثات وأخبار النظام البيئي",
+        "title": "تابع Push Chain على X (Twitter) لآخر التحديثات والإعلانات"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "تحدث وابنِ واستمتع مع المجتمع",
+        "title": "انضم إلى مجتمع Push Chain على Discord للمناقشات والدعم"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "انضم للمحادثة وابق على اطلاع",
+        "title": "تواصل مع مجتمع Push Chain على Telegram للتحديثات الفورية"
+      }
+    },
+    "resources": {
+      "title": "الموارد",
+      "aria-label": "قسم الموارد",
+      "link1": {
+        "text": "المدونة",
+        "subtext": "التحديثات والتحليلات العميقة وقصص المطورين",
+        "title": "اقرأ مدونة Push Chain لآخر التحديثات والتحليلات التقنية العميقة وقصص المطورين"
+      },
+      "link2": {
+        "text": "الورقة المبسطة",
+        "subtext": "الرؤية والتكنولوجيا، بشكل مبسط",
+        "title": "اقرأ الورقة المبسطة لـ Push Chain - رؤية مبسطة ونظرة عامة تقنية"
+      },
+      "link3": {
+        "text": "الأسئلة الشائعة",
+        "subtext": "إجابات سريعة للأسئلة الشائعة",
+        "title": "تصفح الأسئلة الشائعة حول Push Chain"
+      }
+    },
+    "language": {
+      "title": "اللغة",
+      "aria-label": "قائمة اختيار اللغة المنسدلة",
+      "english": "English",
+      "english-ctatitle": "تغيير اللغة إلى الإنجليزية",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "الوصول إلى Push Portal - اكسب نقاط كمطور أو مستخدم أو مُحقق"
+    }
+  }
+}

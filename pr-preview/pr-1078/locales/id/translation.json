@@ -1,164 +1,331 @@
 {
+  "global": {
+    "site-name": "Push Chain — L1 Universal untuk Aplikasi",
+    "site-description": "L1 shared-state untuk aplikasi universal. Deploy sekali; jangkau pengguna di chain manapun. Gunakan wallet apapun. Bayar dengan token apapun. Tanpa perlu ganti jaringan."
+  },
   "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Navigasi ke beranda",
+      "language-icon-alt": "Ikon pemilihan bahasa",
+      "hamburger-menu-alt": "Buka menu navigasi",
+      "testnet-badge-alt": "Push Chain Testnet Donut - Lihat status testnet"
+    },
     "logo": {
-      "imagealt": "Gambar logo Push Chain",
+      "imagealt": "Gambar Logo Push Chain",
       "imagetitle": "Logo Push Chain",
-      "ctatitle": "Pergi ke beranda"
+      "ctatitle": "Navigasi ke beranda Push Chain"
     },
     "testnet": {
       "title": "Testnet",
+      "aria-label": "Bagian Testnet",
       "link1": {
-        "title": "Push Scan",
-        "subtitle": "Penjelajah blok untuk Push Chain"
+        "text": "Push Scan",
+        "subtext": "Penjelajah blok untuk Push Chain",
+        "title": "Jelajahi transaksi dan blok testnet Push Chain di Push Scan"
       },
       "link2": {
-        "title": "Faucet",
-        "subtitle": "Dapatkan token testnet"
+        "text": "Faucet",
+        "subtext": "Dapatkan token testnet",
+        "title": "Dapatkan token testnet gratis untuk pengembangan Push Chain"
       }
     },
     "developers": {
       "title": "Pengembang",
+      "aria-label": "Bagian Pengembang",
       "link1": {
-        "title": "Mulai",
-        "subtitle": "Pengenalan membangun di Push Chain"
+        "text": "Mulai",
+        "subtext": "Pengenalan membangun di Push Chain",
+        "title": "Mulai membangun aplikasi universal di Push Chain - Dokumentasi pengembang"
       },
       "link2": {
-        "title": "Mulai Cepat",
-        "subtitle": "Siapkan lingkungan pengembangan dalam hitungan detik"
+        "text": "Panduan Cepat",
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Panduan memulai cepat - Siapkan lingkungan pengembangan Push Chain secara instan"
       },
       "link3": {
-        "title": "Tutorial",
-        "subtitle": "Panduan langkah demi langkah untuk membangun dengan Push"
+        "text": "Tutorial",
+        "subtext": "Panduan langkah demi langkah untuk membangun dengan Push",
+        "title": "Belajar dengan tutorial hands-on - Bangun aplikasi universal pertama Anda di Push Chain"
       },
       "link4": {
-        "title": "GitHub",
-        "subtitle": "Lihat kode inti dan alat open source"
+        "text": "GitHub",
+        "subtext": "Lihat kode inti dan alat open-source",
+        "title": "Jelajahi kode sumber Push Chain dan alat pengembangan di GitHub"
       },
       "link5": {
-        "title": "Discord Pengembang",
-        "subtitle": "Terhubung dengan komunitas pengembang"
+        "text": "Developer Discord",
+        "subtext": "Terhubung dengan komunitas pengembang",
+        "title": "Bergabung dengan komunitas pengembang Push Chain di Discord untuk dukungan dan kolaborasi"
       }
     },
     "community": {
       "title": "Komunitas",
+      "aria-label": "Bagian Komunitas",
       "link1": {
-        "title": "Basis Pengetahuan",
-        "subtitle": "Temukan analisis mendalam tentang fitur"
+        "text": "Knowledge Base",
+        "subtext": "Temukan pembahasan mendalam tentang fitur",
+        "title": "Jelajahi dokumentasi Push Chain yang komprehensif dan panduan fitur"
       },
       "link2": {
-        "title": "Tokenomics",
-        "subtitle": "Token asli yang menggerakkan segala sesuatu di Push Chain"
+        "text": "Tokenomics",
+        "subtext": "Token asli yang menggerakkan segala sesuatu di Push Chain",
+        "title": "Pelajari tokenomics Push Chain dan utilitas token $PC"
       },
       "link3": {
-        "title": "X/Twitter",
-        "subtitle": "Ikuti pembaruan dan berita ekosistem"
+        "text": "X/Twitter",
+        "subtext": "Ikuti pembaruan dan berita ekosistem",
+        "title": "Ikuti Push Chain di X (Twitter) untuk pembaruan dan pengumuman terbaru"
       },
       "link4": {
-        "title": "Discord",
-        "subtitle": "Ngobrol, bangun, dan berinteraksi dengan komunitas"
+        "text": "Discord",
+        "subtext": "Ngobrol, membangun, dan bersosialisasi dengan komunitas",
+        "title": "Bergabung dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
       },
       "link5": {
-        "title": "Telegram",
-        "subtitle": "Bergabung dalam percakapan dan tetap terhubung"
+        "text": "Telegram",
+        "subtext": "Ikuti percakapan dan tetap update",
+        "title": "Terhubung dengan komunitas Push Chain di Telegram untuk pembaruan real-time"
       }
     },
     "resources": {
       "title": "Sumber Daya",
+      "aria-label": "Bagian Sumber Daya",
       "link1": {
-        "title": "Blog",
-        "subtitle": "Pembaruan, analisis mendalam, dan cerita pengembang"
+        "text": "Blog",
+        "subtext": "Pembaruan, pembahasan mendalam, dan cerita pengembang",
+        "title": "Baca blog Push Chain untuk pembaruan terbaru, pembahasan teknis mendalam, dan cerita pengembang"
       },
       "link2": {
-        "title": "Litepaper",
-        "subtitle": "Visi dan teknologi, disederhanakan"
+        "text": "Litepaper",
+        "subtext": "Visi dan teknologi, disederhanakan",
+        "title": "Baca Litepaper Push Chain - visi yang disederhanakan dan tinjauan teknis"
       },
       "link3": {
-        "title": "FAQ",
-        "subtitle": "Jawaban cepat untuk pertanyaan umum"
+        "text": "FAQ",
+        "subtext": "Jawaban cepat untuk pertanyaan umum",
+        "title": "Jelajahi pertanyaan yang sering diajukan tentang Push Chain"
       }
     },
     "language": {
       "title": "Bahasa",
-      "ctatitle": "Silakan pilih bahasa Anda",
-
+      "aria-label": "Dropdown Pemilihan Bahasa",
       "english": "English",
-      "english-ctatitle": "Change Language to English",
-
+      "english-ctatitle": "Ubah bahasa ke bahasa Inggris",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
-
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
-
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
       "korean": "한국어",
-      "korean-ctatitle": "언어를 한국어로 변경하기",
-
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
       "japanese-ctatitle": "言語を日本語に変更する",
-
       "portuguese": "Português",
-      "portuguese-ctatitle": "Ubah bahasa ke Portugis",
-
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "Ubah bahasa ke Rusia",
-
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "Ubah bahasa ke Turki",
-
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "Ubah bahasa ke Prancis",
-
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "Ubah bahasa ke Indonesia",
-
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "Ubah bahasa ke Vietnam",
-
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "Ubah bahasa ke Jerman",
-
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "Ubah bahasa ke Arab"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
-      "title": "Push Portal",
-      "alt-title": "Kunjungi Push Portal"
+      "text": "Push Portal",
+      "title": "Akses Push Portal - Dapatkan poin sebagai pengembang, pengguna, atau validator"
     }
-  },
-  "home": {
-    "hero-section": {
-      "title": "Chain Apa Pun, Aplikasi Apa Pun, Semua Pengguna.\nSatu Push Chain.",
-      "description": "Layer 1 pertama yang dibangun untuk Aplikasi Universal.\nBangun & Deploy sekali, onboard pengguna dari chain mana pun.",
-      "primary-button": "Mulai Membangun",
-      "secondary-button": "Jelajahi Basis Pengetahuan"
-    },
-    "whatis-section": {
-      "titleFirst": "Chain",
-      "titleSecondGraditent": "Universal",
-      "titleThird": "Sejati",
-      "bottomTextFirst": "Deploy Sekali,",
-      "bottomTextSecond": "Jangkau Semua Tempat",
-      "bottomTextLink": "Mulai"
-    },
-    "email-section": {
-      "title": "Jangan Lewatkan Pembaruan Apa Pun",
-      "text": "Daftar dan tetap update dengan pengumuman ekosistem, hadiah, dan lainnya.",
-      "email-input": "Email Anda",
-      "submit-button": "Daftar",
-      "loading-submit-button": "Harap tunggu..."
-    }
-  },
-  "alert": {
-    "know-more": "Mulai!"
   },
   "footer": {
     "mail-section": {
       "title": "Dapatkan berita Push terbaru",
       "privacy": "Kebijakan Privasi",
-      "tos": "Syarat dan ketentuan"
+      "tos": "Syarat dan Ketentuan"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Bergabunglah dengan kami dan bangun masa depan Komunikasi Web3.",
+        "link-text": "Lihat Lowongan Terbuka",
+        "image-title": "Bergabunglah Dengan Kami",
+        "image-alt": "Ikon yang menunjukkan Lowongan Terbuka"
+      },
+      "docs-card": {
+        "text": "Ikuti panduan sederhana kami untuk memulai dalam hitungan menit.",
+        "link-text": "Jelajahi Dokumentasi",
+        "image-title": "Mulai",
+        "image-alt": "Ikon yang menunjukkan kemudahan memulai"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Perusahaan",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "Syarat",
+        "privacy-link": "Privasi"
+      },
+      "governance-column": {
+        "title": "Tata Kelola",
+        "push-governance-link": "Push Governance",
+        "guides-link": "Panduan",
+        "forum-link": "Forum",
+        "grants-link": "Hibah",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Sumber Daya",
+        "blog-link": "Blog",
+        "whitepaper-link": "Whitepaper",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Panduan Pengembangan"
+      },
+      "subscribe-column": {
+        "title": "Dukungan",
+        "contact-us-link": "Hubungi Kami",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "Berlangganan",
+        "email-placeholder": "Email Anda"
+      }
+    }
+  },
+  "pages": {
+    "brb": {
+      "seo": {
+        "title": "BRB — Alasan Miliaran untuk Membangun",
+        "description": "Hackathon unggulan Push Chain: pecahkan masalah nyata, belajar dari para ahli, dan menangkan hadiah.",
+        "og-title": "BRB - Hackathon Push Chain",
+        "og-description": "Jalur, jadwal waktu, dan hadiah untuk kompetisi Alasan Miliaran untuk Membangun.",
+        "twitter-title": "Hackathon BRB - Bangun & Menang",
+        "twitter-description": "Bergabunglah dengan hackathon Push Chain untuk mengirimkan proyek dan menangkan hadiah."
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "Jangan Lewatkan Pembaruan",
+      "text": "Daftar dan tetap dapat informasi terbaru mengenai pengumuman ekosistem, hadiah, dan banyak lagi.",
+      "email-input": "Email Anda",
+      "email-input-placeholder": "Masukkan alamat email Anda",
+      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan pembaruan",
+      "email-input-aria-label": "Alamat email untuk berlangganan newsletter",
+      "submit-button": "Daftar",
+      "submit-button-title": "Berlangganan newsletter Push Chain",
+      "submit-button-aria-label": "Berlangganan newsletter",
+      "loading-submit-button": "Harap Tunggu...",
+      "arrow-button-aria-label": "Berlangganan newsletter",
+      "arrow-button-title": "Berlangganan pembaruan Push Chain",
+      "form-aria-label": "Formulir berlangganan newsletter",
+      "success-message-aria-label": "Berlangganan berhasil",
+      "error-message-aria-label": "Kesalahan berlangganan"
+    },
+    "cookie-banner": {
+      "message": "Kami menggunakan cookies untuk mempersonalisasi pengalaman Anda. Pelajari lebih lanjut di",
+      "privacy-policy-link": "Kebijakan Privasi",
+      "privacy-policy-link-title": "Baca Kebijakan Privasi Push Protocol",
+      "privacy-policy-link-aria-label": "Buka kebijakan privasi di tab baru",
+      "accept-button": "Terima",
+      "accept-button-title": "Terima cookies untuk mempersonalisasi pengalaman Anda",
+      "accept-button-aria-label": "Terima cookies dan tutup banner",
+      "reject-button": "Tolak",
+      "reject-button-title": "Tolak cookies dan tutup banner",
+      "reject-button-aria-label": "Tolak cookies dan tutup banner",
+      "banner-aria-label": "Banner persetujuan cookie",
+      "banner-role": "Notifikasi preferensi cookie"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Pertanyaan yang sering diajukan tentang Push Chain - Universal Blockchain",
+      "title": "Pertanyaan\nSering\nDitanyakan",
+      "title-aria-label": "Pertanyaan dan jawaban umum tentang Push Chain",
+      "discord-link-text": "Tanyakan kami di Discord",
+      "discord-link-title": "Bergabunglah dengan komunitas Discord Push Chain untuk dukungan dan pertanyaan",
+      "discord-link-aria-label": "Buka komunitas Discord di tab baru",
+      "explore-more-text": "Jelajahi Lebih Banyak FAQ",
+      "explore-more-title": "Lihat dokumentasi FAQ dan panduan pengembang Push Chain lengkap",
+      "explore-more-aria-label": "Arahkan ke halaman FAQ Push Chain lengkap",
+      "accordion-aria-label": "Daftar pertanyaan yang sering diajukan tentang Push Chain",
+      "answer-aria-label": "Jawaban untuk pertanyaan - ",
+      "faqs": {
+        "faq1": {
+          "question": "Apa itu Push Chain?",
+          "answer": "<1>Push Chain adalah blockchain shared-state yang <2>menghilangkan fragmentasi dan membuat aplikasi menjadi universal</2>.</1><1>Deploy sekali di Push. Pengguna di chain mana pun — EVM atau non-EVM — menggunakan aplikasi Anda dengan wallet dan token yang sudah ada; biaya ditangani di balik layar.</1>"
+        },
+        "faq2": {
+          "question": "Bagaimana cara kerjanya? (ELI5)",
+          "answer": "<1>Gunakan wallet yang sudah Anda miliki — Push menangani bagian cross-chain di balik layar.</1><1>1. <2>Mulai di mana saja.</2> Gunakan wallet mana pun di chain mana pun — tidak perlu mengganti network.</1><1>2. <2>Tandatangani sekali.</2> Bayar dengan token yang sudah Anda miliki; kami menyimpan biaya di chain utama Anda.</1><1>3. <2>Kami merutekannya.</2> Akun tertaut di Push (masih milik Anda) meneruskan panggilan Anda ke aplikasi — non-custodial.</1><1>4. <2>Anda selalu Anda.</2> Kami mencocokkan wallet chain utama Anda dengan akun tertaut Anda sehingga tindakan diverifikasi dan diatribusikan dengan benar kepada Anda di Push.</1><1>5. <2>Selesai dengan cepat.</2> Aplikasi berjalan di Push; biaya ditangani di balik layar. Tidak perlu bridge, tidak perlu wallet baru.</1><1>Inilah cara pengguna di chain mana pun dapat menggunakan aplikasi yang sama yang di-deploy di Push Chain — membuat aplikasi benar-benar universal.</1>"
+        },
+        "faq3": {
+          "question": "Apakah saya membutuhkan wallet atau gas token yang berbeda?",
+          "answer": "<1><2>Tidak.</2></1><1><2>Simpan wallet Anda.</2> Gunakan wallet yang sudah Anda miliki — tidak perlu wallet atau akun baru.</1><1><2>Bayar dengan apa yang Anda miliki.</2> Biaya dapat dibayarkan dalam token yang sudah Anda miliki di chain utama Anda; kami menangani konversi di balik layar.</1><1><2>Tidak perlu mengganti network.</2> Tetap di chain utama Anda — tidak perlu bridging hanya untuk mendapatkan gas token.</1><1><2>Non-custodial.</2> Anda menandatangani setiap tindakan; Push tidak menyimpan kunci Anda.</1><1><2>Di balik layar.</2> Network menyelesaikan biaya dalam $PC secara otomatis — Anda tidak perlu mengelolanya.</1>"
+        },
+        "faq4": {
+          "question": "Apa bedanya ini dengan bridge atau layer messaging?",
+          "answer": "<1><2>Jawaban Singkat</2>: Push adalah tempat aplikasi Anda berjalan. Bridge/messaging hanya memindahkan token atau pesan antar chain yang membuat segalanya menjadi rumit bagi pengguna dan pengembang.</1><1><2>Satu home vs banyak clone.</2> Dengan bridge/messaging Anda deploy per chain dan sinkronkan melalui pesan. Di Push Anda deploy sekali; semua orang memukul contract dan shared state yang sama.</1><1><2>Tidak ada aset yang dibungkus atau bridging wajib.</2> Pengguna tetap di chain utama mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani perutean dan konversi biaya di balik layar.</1><1><2>Identitas & verifikasi terpadu.</2> Kami menerima tanda tangan dari wallet/chain mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-custodial.</1><1><2>Lebih sedikit bagian yang bergerak.</2> Tidak ada cross-chain approval dance, tidak perlu berburu gas-token, tidak ada contract glue yang perlu disinkronkan.</1><1><2>Gunakan bridge kapan Anda mau, bukan karena Anda harus.</2> Likuiditas masih dapat bergerak melalui bridge, tetapi berinteraksi dengan aplikasi Anda tidak memerlukannya.</1><1>Hasil: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu chain — bahkan ketika pengguna tidak.</1>"
+        },
+        "faq5": {
+          "question": "Apakah ini hanya untuk EVM? Chain mana yang didukung?",
+          "answer": "<1><2>Tidak, Push mendukung chain EVM dan non-EVM.</2> Meskipun EVM-first untuk deployment, pengguna dari chain mana pun (termasuk non-EVM) dapat menggunakan aplikasi Anda seolah-olah mereka menggunakannya secara native.</1>\n<1><2>Deploy sekali. Interop di mana saja.</2> Tulis dan deploy contract EVM standar di Push (Solidity/Vyper). Tooling tetap sama.</1>\n<1><2>Pengguna dari chain mana pun.</2> Ethereum dan major EVM L2s berfungsi secara native. Pengguna non-EVM (misalnya, Solana) menandatangani dengan wallet home mereka; kami memverifikasi dan merutekan di balik layar — tidak perlu mengganti network.</1>\n<1><2>Didukung hari ini.</2> Lihat daftar langsung chain yang didukung → <3>Chain yang Didukung</3>.</1><1><2>Meluas jangkauan.</2> Kami terus menambahkan lebih banyak chain. Jika Anda ingin meminta chain apa pun, silakan <4>hubungi kami</4>.</1>",
+          "supported-urls-title": "Daftar semua chain yang didukung oleh Push Chain.",
+          "contact-url-title": "Hubungi kami untuk menambahkan chain baru."
+        },
+        "faq6": {
+          "question": "Seberapa cepat dan bagaimana tampilan biayanya?",
+          "answer": "<1><2>Kecepatan.</2> Dirancang untuk ~1–2s konfirmasi dengan umpan balik UX yang cepat. Periksa metrik langsung di <3>Donat</3>.</1><1><2>Biaya.</2> Aplikasi berjalan di Push; biaya ditangani di balik layar. Tidak perlu bridge, tidak perlu wallet baru.</1>"
+        }
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Dapatkan intip Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
+      "button-text": "Klaim Pass Beta Tertutup",
+      "button-title": "Bergabung dengan testnet Push Chain dan klaim pass beta tertutup Anda",
+      "button-aria-label": "Buka Telegram untuk mengklaim pass beta tertutup Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "Tutup notifikasi testnet",
+      "close-button-aria-label": "Tutup notifikasi testnet Push Chain",
+      "container-aria-label": "Notifikasi testnet Push Chain",
+      "container-role": "Pengumuman testnet Push Chain"
+    },
+    "rewards-notification": {
+      "title": "Beta Tertutup Testnet Donut Sudah Tersedia!",
+      "description": "Dapatkan intip Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
+      "image-alt": "Push Chain Testnet Rewards - Bangun Aplikasi Universal",
+      "close-button-title": "Tutup notifikasi hadiah",
+      "close-button-aria-label": "Tutup notifikasi hadiah Push Chain",
+      "container-aria-label": "Notifikasi hadiah Push Chain",
+      "container-role": "Pengumuman hadiah Push Chain"
+    },
+    "info-bar": {
+      "title": "Luncurkan di Push Testnet Sekarang — Buka Kunci Hadiah untuk Pembangun dan Pengguna Awal.",
+      "learn-more-text": "Pelajari Lebih Lanjut",
+      "learn-more-title": "Pelajari lebih lanjut tentang pengumuman ini",
+      "learn-more-aria-label": "Buka tautan pengumuman di tab baru",
+      "dismiss-button-title": "Tutup pengumuman",
+      "dismiss-button-aria-label": "Tutup bilah pengumuman",
+      "container-aria-label": "Pengumuman Situs",
+      "container-role": "Spanduk pengumuman Situs",
+      "star-icon-alt": "Ikon bintang pengumuman"
+    },
+    "alert": {
+      "message": "Push Metamask Snap sekarang sudah tersedia,",
+      "know-more-text": "Mulai!",
+      "know-more-title": "Mulai dengan Push Metamask Snap",
+      "know-more-aria-label": "Buka Push Metamask Snap di tab baru",
+      "close-button-title": "Tutup peringatan",
+      "close-button-aria-label": "Tutup peringatan Push Metamask Snap",
+      "container-aria-label": "Pengumuman Push Metamask Snap",
+      "container-role": "Spanduk peringatan Push Metamask Snap"
     }
   }
 }

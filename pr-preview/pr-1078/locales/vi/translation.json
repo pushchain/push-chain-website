@@ -1,164 +1,325 @@
 {
+  "global": {
+    "site-name": "Push Chain — Nền tảng L1 phổ quát cho Ứng dụng",
+    "site-description": "L1 trạng thái chung cho các ứng dụng phổ quát. Triển khai một lần; tiếp cận người dùng trên mọi chuỗi. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào. Không cần chuyển mạng."
+  },
   "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Navigate to homepage",
+      "language-icon-alt": "Language selection icon",
+      "hamburger-menu-alt": "Open navigation menu",
+      "testnet-badge-alt": "Push Chain Testnet Donut - View testnet status"
+    },
     "logo": {
-      "imagealt": "Hình ảnh logo Push Chain",
-      "imagetitle": "Logo Push Chain",
-      "ctatitle": "Đi đến trang chủ"
+      "imagealt": "Image of Push Chain Logo",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "Navigate to Push Chain homepage"
     },
     "testnet": {
       "title": "Testnet",
+      "aria-label": "Testnet Section",
       "link1": {
-        "title": "Push Scan",
-        "subtitle": "Trình khám phá khối cho Push Chain"
+        "text": "Push Scan",
+        "subtext": "Block explorer for Push Chain",
+        "title": "Explore Push Chain testnet transactions and blocks on Push Scan"
       },
       "link2": {
-        "title": "Faucet",
-        "subtitle": "Nhận token testnet"
+        "text": "Faucet",
+        "subtext": "Get testnet tokens",
+        "title": "Get free testnet tokens for Push Chain development"
       }
     },
     "developers": {
-      "title": "Nhà phát triển",
+      "title": "Developers",
+      "aria-label": "Developers Section",
       "link1": {
-        "title": "Bắt đầu",
-        "subtitle": "Giới thiệu về việc xây dựng trên Push Chain"
+        "text": "Get Started",
+        "subtext": "Intro to building on Push Chain",
+        "title": "Start building universal apps on Push Chain - Developer documentation"
       },
       "link2": {
-        "title": "Khởi động nhanh",
-        "subtitle": "Thiết lập môi trường phát triển trong vài giây"
+        "text": "Quick Start",
+        "subtext": "Setup dev environment in seconds",
+        "title": "Quick start guide - Set up Push Chain development environment instantly"
       },
       "link3": {
-        "title": "Hướng dẫn",
-        "subtitle": "Hướng dẫn từng bước để xây dựng với Push"
+        "text": "Tutorials",
+        "subtext": "Step-by-step guides to build with Push",
+        "title": "Learn with hands-on tutorials - Build your first universal app on Push Chain"
       },
       "link4": {
-        "title": "GitHub",
-        "subtitle": "Xem mã lõi và công cụ mã nguồn mở"
+        "text": "GitHub",
+        "subtext": "View core code and open-source tools",
+        "title": "Explore Push Chain source code and development tools on GitHub"
       },
       "link5": {
-        "title": "Discord nhà phát triển",
-        "subtitle": "Kết nối với cộng đồng nhà phát triển"
+        "text": "Developer Discord",
+        "subtext": "Connect with the dev community",
+        "title": "Join Push Chain developer community on Discord for support and collaboration"
       }
     },
     "community": {
-      "title": "Cộng đồng",
+      "title": "Community",
+      "aria-label": "Community Section",
       "link1": {
-        "title": "Cơ sở kiến thức",
-        "subtitle": "Tìm hiểu sâu về các tính năng"
+        "text": "Knowledge Base",
+        "subtext": "Find deep dives on features",
+        "title": "Explore comprehensive Push Chain documentation and feature guides"
       },
       "link2": {
-        "title": "Tokenomics",
-        "subtitle": "Token gốc cung cấp năng lượng cho mọi thứ trên Push Chain"
+        "text": "Tokenomics",
+        "subtext": "Native token powering everything on Push Chain",
+        "title": "Learn about Push Chain tokenomics and $PC token utility"
       },
       "link3": {
-        "title": "X/Twitter",
-        "subtitle": "Theo dõi cập nhật và tin tức hệ sinh thái"
+        "text": "X/Twitter",
+        "subtext": "Follow updates and ecosystem news",
+        "title": "Follow Push Chain on X (Twitter) for latest updates and announcements"
       },
       "link4": {
-        "title": "Discord",
-        "subtitle": "Trò chuyện, xây dựng và tương tác với cộng đồng"
+        "text": "Discord",
+        "subtext": "Chat, build, and vibe with the community",
+        "title": "Join Push Chain community on Discord for discussions and support"
       },
       "link5": {
-        "title": "Telegram",
-        "subtitle": "Tham gia cuộc trò chuyện và giữ liên lạc"
+        "text": "Telegram",
+        "subtext": "Join the convo and stay in the loop",
+        "title": "Connect with Push Chain community on Telegram for real-time updates"
       }
     },
     "resources": {
-      "title": "Tài nguyên",
+      "title": "Resources",
+      "aria-label": "Resources Section",
       "link1": {
-        "title": "Blog",
-        "subtitle": "Cập nhật, phân tích sâu và câu chuyện phát triển"
+        "text": "Blog",
+        "subtext": "Updates, deep dives, and dev stories",
+        "title": "Read Push Chain blog for latest updates, technical deep dives, and developer stories"
       },
       "link2": {
-        "title": "Litepaper",
-        "subtitle": "Tầm nhìn và công nghệ, được đơn giản hóa"
+        "text": "Litepaper",
+        "subtext": "The vision and tech, simplified",
+        "title": "Read Push Chain Litepaper - simplified vision and technical overview"
       },
       "link3": {
-        "title": "FAQ",
-        "subtitle": "Câu trả lời nhanh cho các câu hỏi thường gặp"
+        "text": "FAQ",
+        "subtext": "Quick answers to common questions",
+        "title": "Browse frequently asked questions about Push Chain"
       }
     },
     "language": {
-      "title": "Ngôn ngữ",
-      "ctatitle": "Vui lòng chọn ngôn ngữ của bạn",
-
+      "title": "Language",
+      "aria-label": "Language Selection Dropdown",
       "english": "English",
-      "english-ctatitle": "Change Language to English",
-
+      "english-ctatitle": "Change language to English",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
-
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
-
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
       "korean": "한국어",
-      "korean-ctatitle": "언어를 한국어로 변경하기",
-
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
       "japanese-ctatitle": "言語を日本語に変更する",
-
       "portuguese": "Português",
-      "portuguese-ctatitle": "Đổi ngôn ngữ sang tiếng Bồ Đào Nha",
-
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "Đổi ngôn ngữ sang tiếng Nga",
-
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "Đổi ngôn ngữ sang tiếng Thổ Nhĩ Kỳ",
-
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "Đổi ngôn ngữ sang tiếng Pháp",
-
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "Đổi ngôn ngữ sang tiếng Indonesia",
-
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "Đổi ngôn ngữ sang tiếng Việt",
-
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "Đổi ngôn ngữ sang tiếng Đức",
-
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "Đổi ngôn ngữ sang tiếng Ả Rập"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
-      "title": "Push Portal",
-      "alt-title": "Truy cập Push Portal"
+      "text": "Push Portal",
+      "title": "Access Push Portal - Earn points as developer, user, or validator"
     }
-  },
-  "home": {
-    "hero-section": {
-      "title": "Bất kỳ Chuỗi nào, Bất kỳ Ứng dụng nào, Tất cả Người dùng.\nMột Push Chain.",
-      "description": "Layer 1 đầu tiên được xây dựng cho Ứng dụng Phổ quát.\nXây dựng & Triển khai một lần, thu hút người dùng từ bất kỳ chuỗi nào.",
-      "primary-button": "Bắt đầu Xây dựng",
-      "secondary-button": "Khám phá Cơ sở Kiến thức"
-    },
-    "whatis-section": {
-      "titleFirst": "Một Chuỗi",
-      "titleSecondGraditent": "Phổ quát",
-      "titleThird": "Thực sự",
-      "bottomTextFirst": "Triển khai Một lần,",
-      "bottomTextSecond": "Tiếp cận Mọi nơi",
-      "bottomTextLink": "Bắt đầu"
-    },
-    "email-section": {
-      "title": "Không bao giờ bỏ lỡ cập nhật",
-      "text": "Đăng ký và cập nhật thông báo hệ sinh thái, quà tặng và nhiều hơn nữa.",
-      "email-input": "Email của bạn",
-      "submit-button": "Đăng ký",
-      "loading-submit-button": "Vui lòng đợi..."
-    }
-  },
-  "alert": {
-    "know-more": "Bắt đầu!"
   },
   "footer": {
     "mail-section": {
       "title": "Nhận tin tức Push mới nhất",
-      "privacy": "Chính sách Bảo mật",
+      "privacy": "Chính sách bảo mật",
       "tos": "Điều khoản và điều kiện"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Tham gia cùng chúng tôi và xây dựng tương lai của Giao tiếp Web3.",
+        "link-text": "Xem các vị trí đang mở",
+        "image-title": "Tham gia với chúng tôi",
+        "image-alt": "Biểu tượng hiển thị các vị trí đang mở"
+      },
+      "docs-card": {
+        "text": "Theo dõi các hướng dẫn đơn giản của chúng tôi để bắt đầu trong vài phút.",
+        "link-text": "Khám phá Tài liệu",
+        "image-title": "Bắt đầu",
+        "image-alt": "Biểu tượng hiển thị sự dễ dàng khi bắt đầu"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Công ty",
+        "push-ecosystem-link": "Hệ sinh thái Push",
+        "media-kit-link": "Bộ tài liệu truyền thông",
+        "terms-link": "Điều khoản",
+        "privacy-link": "Bảo mật"
+      },
+      "governance-column": {
+        "title": "Quản trị",
+        "push-governance-link": "Quản trị Push",
+        "guides-link": "Hướng dẫn",
+        "forum-link": "Diễn đàn",
+        "grants-link": "Khoản trợ cấp",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Tài nguyên",
+        "blog-link": "Blog",
+        "whitepaper-link": "Sách trắng",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Hướng dẫn dành cho nhà phát triển"
+      },
+      "subscribe-column": {
+        "title": "Hỗ trợ",
+        "contact-us-link": "Liên hệ chúng tôi",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "Đăng ký",
+        "email-placeholder": "Địa chỉ Email của bạn"
+      }
+    }
+  },
+  "pages": {
+    "brb": {
+      "seo": {
+        "title": "BRB — Triệu Lý Do Để Xây Dựng",
+        "description": "Hackathon hàng đầu của Push Chain: giải quyết các vấn đề thực tế, học hỏi từ các chuyên gia và giành giải thưởng.",
+        "og-title": "BRB - Hackathon Push Chain",
+        "og-description": "Các track, thời gian biểu và giải thưởng cho cuộc thi Triệu Lý Do Để Xây Dựng.",
+        "twitter-title": "BRB Hackathon - Xây Dựng & Chiến Thắng",
+        "twitter-description": "Tham gia hackathon Push Chain để hoàn thành dự án và giành giải thưởng."
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "Không bỏ lỡ bất kỳ cập nhật nào",
+      "text": "Đăng ký và luôn cập nhật thông báo về hệ sinh thái, các chương trình tặng quà và hơn thế nữa.",
+      "email-input": "Email của bạn",
+      "email-input-placeholder": "Nhập địa chỉ email của bạn",
+      "email-input-title": "Đăng ký nhận bản tin Push Chain để cập nhật thông tin",
+      "email-input-aria-label": "Địa chỉ email để đăng ký bản tin",
+      "submit-button": "Đăng ký",
+      "submit-button-title": "Đăng ký nhận bản tin Push Chain",
+      "submit-button-aria-label": "Đăng ký nhận bản tin",
+      "loading-submit-button": "Vui lòng chờ...",
+      "arrow-button-aria-label": "Đăng ký nhận bản tin",
+      "arrow-button-title": "Đăng ký cập nhật Push Chain",
+      "form-aria-label": "Biểu mẫu đăng ký bản tin",
+      "success-message-aria-label": "Đăng ký thành công",
+      "error-message-aria-label": "Lỗi đăng ký"
+    },
+    "cookie-banner": {
+      "message": "Chúng tôi sử dụng cookie để cá nhân hóa trải nghiệm của bạn. Tìm hiểu thêm trong",
+      "privacy-policy-link": "Chính sách quyền riêng tư",
+      "privacy-policy-link-title": "Đọc chính sách quyền riêng tư của Push Protocol",
+      "privacy-policy-link-aria-label": "Mở chính sách quyền riêng tư trong tab mới",
+      "accept-button": "Chấp nhận",
+      "accept-button-title": "Chấp nhận cookie để cá nhân hóa trải nghiệm của bạn",
+      "accept-button-aria-label": "Chấp nhận cookie và đóng banner",
+      "reject-button": "Từ chối",
+      "reject-button-title": "Từ chối cookie và đóng banner",
+      "reject-button-aria-label": "Từ chối cookie và đóng banner",
+      "banner-aria-label": "Banner đồng ý cookie",
+      "banner-role": "Thông báo tùy chọn cookie"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Câu hỏi thường gặp về Push Chain - Blockchain Universal",
+      "title": "Câu hỏi thường gặp",
+      "title-aria-label": "Các câu hỏi và câu trả lời thường gặp về Push Chain",
+      "discord-link-text": "Hỏi chúng tôi trên Discord",
+      "discord-link-title": "Tham gia cộng đồng Discord của Push Chain để được hỗ trợ và giải đáp thắc mắc",
+      "discord-link-aria-label": "Mở cộng đồng Discord trong tab mới",
+      "explore-more-text": "Khám phá thêm các câu hỏi thường gặp",
+      "explore-more-title": "Xem tài liệu FAQ đầy đủ và hướng dẫn dành cho nhà phát triển của Push Chain",
+      "explore-more-aria-label": "Truy cập trang FAQ đầy đủ của Push Chain",
+      "accordion-aria-label": "Danh sách câu hỏi thường gặp của Push Chain",
+      "answer-aria-label": "Trả lời câu hỏi - ",
+      "faqs": {
+        "faq1": {
+          "question": "Push Chain là gì?",
+          "answer": "<1>Push Chain là một blockchain trạng thái chia sẻ loại bỏ sự phân mảnh và làm cho ứng dụng trở nên phổ quát</2>.</1><1>Triển khai một lần trên Push. Người dùng trên bất kỳ chain nào — EVM hoặc non-EVM — sử dụng ứng dụng của bạn với các ví hiện có và token; phí được xử lý ẩn.</1>"
+        },
+        "faq2": {
+          "question": "Cách hoạt động? (Giải thích đơn giản)",
+          "answer": "<1>Sử dụng ví bạn đã có — Push xử lý các phần cross-chain ẩn.</1><1>1. <2>Bắt đầu ở bất cứ đâu.</2> Sử dụng bất kỳ ví nào trên bất kỳ chain nào — không cần chuyển mạng.</1><1>2. <2>Ký một lần.</2> Thanh toán bằng token bạn đã có; chúng tôi sẽ để dành phí trên chain chính của bạn.</1><1>3. <2>Chúng tôi định tuyến nó.</2> Một tài khoản liên kết trên Push (vẫn là của bạn) chuyển cuộc gọi của bạn đến ứng dụng — không phải custodial.</1><1>4. <2>Bạn luôn là bạn.</2> Chúng tôi khớp ví chain chính của bạn với tài khoản liên kết của bạn để các hành động được xác minh chính xác và ghi nhận cho bạn trên Push.</1><1>5. <2>Xong nhanh.</2> Ứng dụng chạy trên Push; phí được xử lý ẩn. Không cần bridge, không cần ví mới.</1><1>Đây là cách người dùng trên bất kỳ chain nào có thể sử dụng cùng một ứng dụng được triển khai trên Push Chain — làm cho ứng dụng thực sự phổ quát.</1>"
+        },
+        "faq3": {
+          "question": "Tôi có cần một ví khác hoặc token gas không?",
+          "answer": "<1><2>Không.</2></1><1><2>Giữ ví của bạn.</2> Sử dụng ví bạn đã có — không cần ví mới hoặc tài khoản mới.</1><1><2>Thanh toán bằng những gì bạn có.</2> Phí có thể được thanh toán bằng các token bạn đã có trên chain chính của mình; chúng tôi xử lý chuyển đổi ẩn.</1><1><2>Không chuyển mạng.</2> Ở lại chain chính của bạn — không cần bridge chỉ để có token gas.</1><1><2>Không phải custodial.</2> Bạn ký mọi hành động; Push không giữ khóa của bạn.</1><1><2>Ẩn.</2> Mạng thanh toán phí bằng $PC tự động — bạn không cần quản lý nó.</1>"
+        },
+        "faq4": {
+          "question": "Điều này khác biệt với bridge hoặc layer nhắn tin như thế nào?",
+          "answer": "<1><2>Trả lời ngắn gọn</2>: Push là nơi ứng dụng của bạn chạy. Bridge/nhắn tin chỉ di chuyển token hoặc tin nhắn giữa các chain, điều này làm phức tạp mọi thứ cho người dùng và nhà phát triển.</1><1><2>Một chain chính so với nhiều bản clone.</2> Với bridge/nhắn tin, bạn triển khai trên mỗi chain và đồng bộ hóa thông qua tin nhắn. Trên Push, bạn triển khai một lần; mọi người truy cập cùng một hợp đồng và trạng thái chia sẻ.</1><1><2>Không cần tài sản đã gói hoặc bridge bắt buộc.</2> Người dùng ở lại chain chính của họ và thanh toán bằng những gì họ đã có; chúng tôi xử lý định tuyến và chuyển đổi phí ẩn.</1><1><2>Danh tính và xác minh thống nhất.</2> Chúng tôi chấp nhận chữ ký từ bất kỳ ví/chain nào và ghi nhận chúng cho cùng một người dùng trên Push — không phải custodial.</1><1><2>Ít bộ phận di chuyển hơn.</2> Không cần dance phê duyệt cross-chain, không cần săn token gas, không cần hợp đồng glue để giữ đồng bộ.</1><1><2>Sử dụng bridge khi bạn muốn, không phải vì bạn phải.</2> Thanh khoản vẫn có thể di chuyển qua bridge, nhưng tương tác với ứng dụng của bạn không bắt buộc.</1><1>Kết quả: ứng dụng đơn giản hơn, một nguồn chân thực duy nhất và UX giống như một chain duy nhất — ngay cả khi người dùng không phải.</1>"
+        },
+        "faq5": {
+          "question": "Nó có chỉ dành cho EVM không? Những chain nào được hỗ trợ?",
+          "answer": "<1><2>Không, Push hỗ trợ cả chain EVM và non-EVM.</2> Mặc dù nó là EVM-first để triển khai, người dùng từ bất kỳ chain nào (bao gồm cả non-EVM) có thể sử dụng ứng dụng của bạn như thể họ đang sử dụng nó bản địa.</1>\n<1><2>Triển khai một lần. Khả năng tương tác ở khắp mọi nơi.</2> Viết và triển khai các hợp đồng EVM tiêu chuẩn trên Push (Solidity/Vyper). Công cụ vẫn giữ nguyên.</1>\n<1><2>Người dùng từ bất kỳ chain nào.</2> Ethereum và các L2 EVM chính hoạt động bản địa. Người dùng non-EVM (ví dụ: Solana) ký bằng ví chính của họ; chúng tôi xác minh và định tuyến ẩn — không cần chuyển mạng.</1>\n<1><2>Được hỗ trợ hôm nay.</2> Xem danh sách trực tiếp các chain được hỗ trợ → <3>Các Chain được hỗ trợ</3>.</1><1><2>Mở rộng phạm vi.</2> Chúng tôi đang thêm các chain liên tục. Nếu bạn muốn yêu cầu bất kỳ chain nào, vui lòng liên hệ với chúng tôi.</1>"
+        }
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Nhận cái nhìn sơ lược về Testnet, Donut, xây dựng ứng dụng đa nền tảng và giành giải thưởng!",
+      "button-text": "Nhận Thẻ Beta Đóng",
+      "button-title": "Tham gia testnet Push Chain và nhận thẻ beta đóng của bạn",
+      "button-aria-label": "Mở Telegram để nhận thẻ beta đóng Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Blockchain Đa Năng",
+      "close-button-title": "Đóng thông báo testnet",
+      "close-button-aria-label": "Từ chối thông báo testnet Push Chain",
+      "container-aria-label": "Thông báo testnet Push Chain",
+      "container-role": "Thông báo testnet Push Chain"
+    },
+    "rewards-notification": {
+      "title": "Beta Đóng Testnet Donut Đã Khởi Động!",
+      "description": "Nhận cái nhìn sơ lược về Testnet, Donut, xây dựng ứng dụng đa nền tảng và giành giải thưởng!",
+      "image-alt": "Phần Thưởng Testnet Push Chain - Xây Dựng Ứng Dụng Đa Năng",
+      "close-button-title": "Đóng thông báo phần thưởng",
+      "close-button-aria-label": "Từ chối thông báo phần thưởng Push Chain",
+      "container-aria-label": "Thông báo phần thưởng Push Chain",
+      "container-role": "Thông báo phần thưởng Push Chain"
+    },
+    "info-bar": {
+      "title": "Ra Mắt trên Push Testnet Ngay Bây Giờ — Mở Khóa Phần Thưởng cho Người Xây Dựng và Người Dùng Sớm.",
+      "learn-more-text": "Tìm Hiểu Thêm",
+      "learn-more-title": "Tìm hiểu thêm về thông báo này",
+      "learn-more-aria-label": "Mở liên kết thông báo trong tab mới",
+      "dismiss-button-title": "Từ chối thông báo",
+      "dismiss-button-aria-label": "Đóng thanh thông báo",
+      "container-aria-label": "Thông báo trang web",
+      "container-role": "Biển quảng cáo thông báo trang web",
+      "star-icon-alt": "Biểu tượng ngôi sao thông báo"
+    },
+    "alert": {
+      "message": "Push Metamask Snap Đã Khởi Động,",
+      "know-more-text": "Bắt Đầu!",
+      "know-more-title": "Bắt đầu với Push Metamask Snap",
+      "know-more-aria-label": "Mở Push Metamask Snap trong tab mới",
+      "close-button-title": "Đóng cảnh báo",
+      "close-button-aria-label": "Từ chối cảnh báo Push Metamask Snap",
+      "container-aria-label": "Thông báo Push Metamask Snap",
+      "container-role": "Biển quảng cáo cảnh báo Push Metamask Snap"
     }
   }
 }

@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Tenha uma prévia do Testnet, Donut, crie aplicativos universais e ganhe prêmios!",
+      "button-text": "Reivindique o Passe Beta Fechado",
+      "button-title": "Junte-se ao testnet Push Chain e reivindique seu passe beta fechado",
+      "button-aria-label": "Abra o Telegram para reivindicar o passe beta fechado do Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Blockchain Universal",
+      "close-button-title": "Fechar notificação do testnet",
+      "close-button-aria-label": "Dismissar notificação do testnet Push Chain",
+      "container-aria-label": "Notificação do testnet Push Chain",
+      "container-role": "Anúncio do testnet Push Chain"
+    },
+    "rewards-notification": {
+      "title": "O beta fechado do Donut Testnet está ao vivo!",
+      "description": "Tenha uma prévia do Testnet, Donut, crie aplicativos universais e ganhe prêmios!",
+      "image-alt": "Recompensas do Testnet Push Chain - Crie Aplicativos Universais",
+      "close-button-title": "Fechar notificação de recompensas",
+      "close-button-aria-label": "Dismissar notificação de recompensas do Push Chain",
+      "container-aria-label": "Notificação de recompensas do Push Chain",
+      "container-role": "Anúncio de recompensas do Push Chain"
+    },
+    "info-bar": {
+      "title": "Lançamento no Push Testnet agora — Desbloqueie recompensas para criadores e primeiros usuários.",
+      "learn-more-text": "Saiba Mais",
+      "learn-more-title": "Saiba mais sobre este anúncio",
+      "learn-more-aria-label": "Abra o link do anúncio em uma nova aba",
+      "dismiss-button-title": "Dismissar anúncio",
+      "dismiss-button-aria-label": "Fechar barra de anúncio",
+      "container-aria-label": "Anúncio do site",
+      "container-role": "Banner de anúncio do site",
+      "star-icon-alt": "Ícone de estrela do anúncio"
+    },
+    "alert": {
+      "message": "O Push Metamask Snap já está ao vivo,",
+      "know-more-text": "Comece agora!",
+      "know-more-title": "Comece com o Push Metamask Snap",
+      "know-more-aria-label": "Abra o Push Metamask Snap em uma nova aba",
+      "close-button-title": "Fechar alerta",
+      "close-button-aria-label": "Dismissar alerta do Push Metamask Snap",
+      "container-aria-label": "Anúncio do Push Metamask Snap",
+      "container-role": "Banner de alerta do Push Metamask Snap"
+    }
+  }
+}

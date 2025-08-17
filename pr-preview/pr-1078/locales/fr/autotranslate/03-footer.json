@@ -1,0 +1,57 @@
+{
+  "footer": {
+    "mail-section": {
+      "title": "Recevez les dernières actualités de Push",
+      "privacy": "Politique de confidentialité",
+      "tos": "Conditions générales d'utilisation"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Rejoignez-nous et construisez l'avenir de la communication Web3.",
+        "link-text": "Voir les offres d'emploi",
+        "image-title": "Rejoignez-nous",
+        "image-alt": "Icône montrant les offres d'emploi"
+      },
+      "docs-card": {
+        "text": "Suivez nos guides simples pour démarrer en quelques minutes.",
+        "link-text": "Explorer la documentation",
+        "image-title": "Commencer",
+        "image-alt": "Icône montrant la facilité de démarrage"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Entreprise",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "Conditions générales",
+        "privacy-link": "Confidentialité"
+      },
+      "governance-column": {
+        "title": "Gouvernance",
+        "push-governance-link": "Push Governance",
+        "guides-link": "Guides",
+        "forum-link": "Forum",
+        "grants-link": "Subventions",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Ressources",
+        "blog-link": "Blog",
+        "whitepaper-link": "Livre blanc",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Guides de développement"
+      },
+      "subscribe-column": {
+        "title": "Support",
+        "contact-us-link": "Contactez-nous",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "S'abonner",
+        "email-placeholder": "Votre Email"
+      }
+    }
+  }
+}

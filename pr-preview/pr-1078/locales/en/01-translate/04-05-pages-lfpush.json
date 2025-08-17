@@ -8,6 +8,24 @@
         "og-description": "Community-driven initiative and shares for Push Chain.",
         "twitter-title": "Let's Push | Community Initiative",
         "twitter-description": "See Push community initiative for Push Chain."
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "The LF Push builders community—celebrating what you ship and who you help. Share your wins, tag <hashtag>#LFPush</hashtag> or <mention>@PushChain</mention>, and we'll amplify."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Share Your Win",
+          "join-community": "Join Community",
+          "learn-more": "Learn More"
+        },
+        "meta": {
+          "tweet-alt": "Tweet from Push Chain community member",
+          "loading-alt": "Loading more community tweets"
+        },
+        "tweets-counter": "{{count}} Tweets and counting!",
+        "loading": "Loading more tweets...",
+        "end-message": "You've reached the end! 🎉"
       }
     }
   }

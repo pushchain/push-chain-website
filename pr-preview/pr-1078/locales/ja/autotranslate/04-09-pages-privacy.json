@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "privacy": {
+      "seo": {
+        "title": "プライバシーポリシー",
+        "description": "データの収集、使用、保護方法—およびあなたの権利と選択肢。",
+        "og-title": "Push Chain プライバシーポリシー - データ保護",
+        "og-description": "どのようなデータを収集し、どのように使用するか、そしてあなたのプライバシーに関する権利について。",
+        "twitter-title": "プライバシーポリシー - Push Chain",
+        "twitter-description": "あなたのデータ。あなたの権利。両方をどのように保護するか。"
+      },
+      "hero-section": {
+        "title": "プライバシーポリシー",
+        "description": "Pushがデータを収集、処理、管理する方法を定義します。",
+        "update-text": "最終更新日: 2020年11月2日"
+      }
+    }
+  }
+}

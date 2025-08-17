@@ -1,0 +1,138 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "Главная",
+        "description": "Совместное состояние L1 для универсальных приложений. Разверните один раз; достигните пользователей на любом блокчейне. Используйте любой кошелек. Платите любым токеном.",
+        "og-title": "Push Chain - Универсальный L1 для приложений",
+        "og-description": "Одно развертывание для пользователей EVM и не-EVM. Используйте любой кошелек и платите любым токеном — без переключения между сетями.",
+        "twitter-title": "Разверните один раз. Достигните любого блокчейна.",
+        "twitter-description": "Транзакции с любого блокчейна. Используйте любой кошелек. Платите любым токеном. Без переключения между сетями."
+      },
+      "hero-section": {
+        "title": "Любой блокчейн, любое приложение, все пользователи.\nОдин Push Chain.",
+        "description": "Первый Layer 1, созданный для универсальных приложений. \nРазверните и запустите один раз, привлеките пользователей с любого блокчейна.",
+        "primary-button": "Начать разработку",
+        "primary-button-title": "Начните свой путь разработчика с Push Chain!",
+        "secondary-button": "Изучить базу знаний",
+        "secondary-button-title": "Узнайте больше об Push Chain",
+        "section-aria-label": "Hero-секция Push Chain - представление универсального блокчейна Layer 1",
+        "primary-button-aria-label": "Начните разрабатывать универсальные приложения на Push Chain - перейдите к документации разработчика",
+        "secondary-button-aria-label": "Узнайте о функциях и концепциях Push Chain в базе знаний",
+        "hero-background-alt": "Анимация фона Push Chain, показывающая универсальную связь блокчейнов",
+        "hero-background-title": "Push Chain - Универсальный Layer 1 для кросс-блокчейн приложений",
+        "schema-headline": "Push Chain - Универсальный L1 для приложений",
+        "schema-description": "Разверните один раз на Push Chain и достигните пользователей на любом блокчейне с универсальными приложениями"
+      },
+      "whatis-section": {
+        "titleFirst": "Истинный",
+        "titleSecondGraditent": "Универсальный",
+        "titleThird": "Блокчейн",
+        "bottomTextFirst": "Разверните Один раз,",
+        "bottomTextSecond": "Охватите Все",
+        "bottomLinkText": "Начать",
+        "bottomLinkTitle": "Перейти в Hub документации",
+        "section-aria-label": "Что такое Push Chain - объяснение универсального блокчейна",
+        "animation-alt": "Анимация, демонстрирующая универсальное развертывание приложений Push Chain в нескольких блокчейнах",
+        "animation-title": "Визуализация универсального развертывания Push Chain - разверните один раз, достигните любого блокчейна",
+        "bottom-link-aria-label": "Перейдите к документации Push Chain, чтобы начать разрабатывать универсальные приложения"
+      },
+      "blog-section": {
+        "subtitle": "НОВОСТИ, ДЕВЛОГИ И ИДЕИ",
+        "subtitle-aria-label": "Информация о категории блога",
+        "title": "Ваш Пульс Push Chain",
+        "title-aria-label": "Последние посты и обновления блога Push Chain",
+        "explore-link-text": "Узнать больше статей",
+        "explore-link-title": "Посетите блог Push Chain, чтобы прочитать все статьи и обновления",
+        "explore-link-aria-label": "Перейдите на страницу блога Push Chain",
+        "section-aria-label": "Секция постов и новостей блога Push Chain",
+        "blog-posts-list-aria-label": "Последние посты в блоге Push Chain",
+        "blog-post-aria-label": "Прочитайте пост в блоге о {title}",
+        "blog-post-title-prefix": "Прочитайте пост в блоге - ",
+        "loading-text": "Загрузка последних постов блога...",
+        "error-text": "Не удалось загрузить посты блога в данный момент",
+        "no-posts-text": "Нет доступных постов в блоге"
+      },
+      "trustedby-section": {
+        "title": "Создано командой, которой доверяют пионеры Web3",
+        "section-aria-label": "Секция Trusted by Push Chain",
+        "trusted-by-alt": "Инвестор - "
+      },
+      "featured-section": {
+        "aria-label": "Секция Featured On",
+        "tag": "В СМИ",
+        "title": "Push Chain в центре внимания",
+        "subtitle": "Не принимайте наши слова на веру. Посмотрите, что говорят СМИ об истинном универсальном блокчейне.",
+        "articles-image-alt": "Освещение в СМИ от ",
+        "articles-text": "Прочитать полную статью",
+        "articles-title-1": "Прочитайте ",
+        "articles-title-2": "'s мысли о Push Chain в полной детали",
+        "articles": {
+          "binance-chain": {
+            "text": "Мы рады объявить, что Push Protocol, ведущий децентрализованный коммуникационный протокол для Web3, теперь запущен в BNB Chain."
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          },
+          "balaji": {
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
+          },
+          "ethfoundation": {
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
+          },
+          "beincrypto": {
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "Секция Build Universal Apps",
+        "section-title": "Создавайте Универсальные Приложения.",
+        "section-subtitle": "Разрушайте барьеры. Разверните один раз, масштабируйтесь на каждом блокчейне.",
+        "docs-link": {
+          "text": "Изучить Документацию Push Chain",
+          "title": "Изучите документацию и ресурсы разработчика Push Chain",
+          "aria-label": "Откройте документацию Push Chain в новой вкладке"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "Начните работу с Push Chain - универсальной блокчейн-платформой",
+          "aria-label": "Начните разработку с Push Chain"
+        }
+      }
+    }
+  }
+}

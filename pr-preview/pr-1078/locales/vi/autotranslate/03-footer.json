@@ -1,0 +1,57 @@
+{
+  "footer": {
+    "mail-section": {
+      "title": "Nhận tin tức Push mới nhất",
+      "privacy": "Chính sách bảo mật",
+      "tos": "Điều khoản và điều kiện"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Tham gia cùng chúng tôi và xây dựng tương lai của Giao tiếp Web3.",
+        "link-text": "Xem các vị trí đang mở",
+        "image-title": "Tham gia với chúng tôi",
+        "image-alt": "Biểu tượng hiển thị các vị trí đang mở"
+      },
+      "docs-card": {
+        "text": "Theo dõi các hướng dẫn đơn giản của chúng tôi để bắt đầu trong vài phút.",
+        "link-text": "Khám phá Tài liệu",
+        "image-title": "Bắt đầu",
+        "image-alt": "Biểu tượng hiển thị sự dễ dàng khi bắt đầu"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Công ty",
+        "push-ecosystem-link": "Hệ sinh thái Push",
+        "media-kit-link": "Bộ tài liệu truyền thông",
+        "terms-link": "Điều khoản",
+        "privacy-link": "Bảo mật"
+      },
+      "governance-column": {
+        "title": "Quản trị",
+        "push-governance-link": "Quản trị Push",
+        "guides-link": "Hướng dẫn",
+        "forum-link": "Diễn đàn",
+        "grants-link": "Khoản trợ cấp",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Tài nguyên",
+        "blog-link": "Blog",
+        "whitepaper-link": "Sách trắng",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Hướng dẫn dành cho nhà phát triển"
+      },
+      "subscribe-column": {
+        "title": "Hỗ trợ",
+        "contact-us-link": "Liên hệ chúng tôi",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "Đăng ký",
+        "email-placeholder": "Địa chỉ Email của bạn"
+      }
+    }
+  }
+}

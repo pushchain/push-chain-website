@@ -1,0 +1,74 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Güncellemeleri Kaçırmayın",
+      "text": "Kaydolun ve ekosistem duyurularından, çekilişlerden ve daha fazlasından haberdar olun.",
+      "email-input": "E-posta Adresiniz",
+      "email-input-placeholder": "E-posta adresinizi girin",
+      "email-input-title": "Güncellemeler için Push Chain bültenine abone olun",
+      "email-input-aria-label": "Bülten aboneliği için e-posta adresi",
+      "submit-button": "Kaydol",
+      "submit-button-title": "Push Chain bültenine abone olun",
+      "submit-button-aria-label": "Bültene abone olun",
+      "loading-submit-button": "Lütfen Bekleyin...",
+      "arrow-button-aria-label": "Bültene abone olun",
+      "arrow-button-title": "Push Chain güncellemelerine abone olun",
+      "form-aria-label": "Bülten aboneliği formu",
+      "success-message-aria-label": "Abonelik başarılı",
+      "error-message-aria-label": "Abonelik hatası"
+    },
+    "cookie-banner": {
+      "message": "Deneyiminizi kişiselleştirmek için çerezler kullanıyoruz. Daha fazla bilgiyi",
+      "privacy-policy-link": "Gizlilik Politikamızda",
+      "privacy-policy-link-title": "Push Protocol gizlilik politikasını okuyun",
+      "privacy-policy-link-aria-label": "Gizlilik politikasını yeni sekmede aç",
+      "accept-button": "Kabul Et",
+      "accept-button-title": "Deneyiminizi kişiselleştirmek için çerezleri kabul edin",
+      "accept-button-aria-label": "Çerezleri kabul edin ve banner'ı kapatın",
+      "reject-button": "Reddet",
+      "reject-button-title": "Çerezleri reddedin ve banner'ı kapatın",
+      "reject-button-aria-label": "Çerezleri reddedin ve banner'ı kapatın",
+      "banner-aria-label": "Çerez onayı banner'ı",
+      "banner-role": "Çerez tercihleri bildirimi"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Push Chain - Evrensel Blockchain hakkında sık sorulan sorular",
+      "title": "Sıkça\nSorulan\nSorular",
+      "title-aria-label": "Push Chain hakkında sık sorulan sorular ve cevaplar",
+      "discord-link-text": "Bize Discord'da sorun",
+      "discord-link-title": "Destek ve sorular için Push Chain Discord topluluğuna katılın",
+      "discord-link-aria-label": "Discord topluluğunu yeni sekmede aç",
+      "explore-more-text": "Daha Fazla SSS'yi Keşfedin",
+      "explore-more-title": "Kapsamlı Push Chain SSS belgelerini ve geliştirici kılavuzlarını görüntüleyin",
+      "explore-more-aria-label": "Tam Push Chain SSS sayfasına gidin",
+      "accordion-aria-label": "Push Chain sık sorulan sorular listesi",
+      "answer-aria-label": "Sorunun cevabı - ",
+      "faqs": {
+        "faq1": {
+          "question": "Push Chain nedir?",
+          "answer": "<1>Push Chain, parçalanmayı ortadan kaldıran ve uygulamaları evrensel hale getiren paylaşımlı durumlu bir blockchain'dir.</1><1>Tek seferde Push'a dağıtın. Herhangi bir zincirdeki (EVM veya EVM olmayan) kullanıcılar, mevcut cüzdanları ve token'ları kullanarak uygulamanızı kullanır; ücretler perde arkasında halledilir.</1>"
+        },
+        "faq2": {
+          "question": "Nasıl çalışır? (ELI5)",
+          "answer": "<1>Zaten kullandığınız cüzdanı kullanın - Push, perde arkasındaki zincirler arası işlemleri halleder.</1><1>1. <2>Her yerden başlayın.</2> Herhangi bir cüzdanı herhangi bir zincirde kullanın - zincir değiştirmeye gerek yok.</1><1>2. <2>Tek seferde imzalayın.</2> Zaten sahip olduğunuz bir token ile ödeme yapın; ana zincirinizde ücreti ayırırız.</1><1>3. <2>Yönlendiriyoruz.</2> Push'taki bağlantılı bir hesap (hala sizinki) çağrınızı uygulamaya iletir - muhafazasız.</1><1>4. <2>Her zaman sizsiniz.</2> Ana zincir cüzdanınızı bağlantılı hesabınızla eşleştiriyoruz, böylece eylemler doğru şekilde doğrulanır ve Push'ta size atfedilir.</1><1>5. <2>Hızlıca bitti.</2> Uygulama Push'ta çalışır; ücretler perde arkasında halledilir. Köprü yok, yeni cüzdan yok.</1><1>Bu sayede herhangi bir zincirdeki kullanıcılar aynı uygulamayı Push Chain'de kullanabilir; uygulamaları gerçekten evrensel hale getirir.</1>"
+        },
+        "faq3": {
+          "question": "Farklı bir cüzdana veya gas token'a ihtiyacım var mı?",
+          "answer": "<1><2>Hayır.</2></1><1><2>Cüzdanınızı saklayın.</2> Zaten kullandığınız cüzdanı kullanın - yeni cüzdan veya hesap gerekmez.</1><1><2>Sahip olduğunuzla ödeme yapın.</2> Ücretler, ana zincirinizde zaten sahip olduğunuz token'larla ödenebilir; yönlendirme ve ücret dönüşümü perde arkasında halledilir.</1><1><2>Zincir değiştirmeye gerek yok.</2> Ana zincirinizde kalın - gas token almak için köprüleme yapmanıza gerek yok.</1><1><2>Muhafazasız.</2> Her eylemi imzalarsınız; Push asla anahtarlarınızı tutmaz.</1><1><2>Perde arkasında.</2> Ağ, ücretleri otomatik olarak $PC ile ödeşir - bunu yönetmenize gerek yoktur.</1>"
+        },
+        "faq4": {
+          "question": "Bu köprülerden veya mesajlaşma katmanlarından nasıl farklıdır?",
+          "answer": "<1><2>Kısa Cevap</2>: Push, uygulamanızın çalıştığı yerdir. Köprüler/mesajlaşma sadece token'ları veya mesajları zincirler arasında taşır ve bu da her şeyin kullanıcı ve geliştiriciler için karmaşık hale gelmesini sağlar.</1><1><2>Tek ana zincir vs birçok klon.</2> Köprüler/mesajlaşma ile zincir başına dağıtırsınız ve mesajlar aracılığıyla senkronize edersiniz. Push'ta tek seferde dağıtırsınız; herkes aynı sözleşmeyi ve paylaşımlı durumu kullanır.</1><1><2>Sarılı varlık yok veya zorunlu köprüleme yok.</2> Kullanıcılar ana zincirlerinde kalınır ve zaten sahip olduklarıyla ödeme yaparlar; yönlendirme ve ücret dönüşümü perde arkasında halledilir.</1><1><2>Birleşik kimlik ve doğrulama.</2> Herhangi bir cüzdan/zincirden imzaları kabul ediyoruz ve bunları Push'ta aynı kullanıcıya atfediyoruz - muhafazasız.</1><1><2>Daha az hareketli parça.</2> Zincirler arası onay dansı yok, gas token avı yok, senkronize etmek için tutmanız gereken yapışkan sözleşmeler yok.</1><1><2>İstediğinizde köprü kullanın, zorunlu olmadığınız için değil.</2> Likidite hala köprüler aracılığıyla hareket edebilir, ancak uygulamanızla etkileşimde bulunmak için buna gerek yoktur.</1><1>Sonuç: daha basit uygulamalar, tek doğru kaynak ve bir zincir gibi hisseden bir UX - kullanıcılar böyle hissetmese bile.</1>"
+        },
+        "faq5": {
+          "question": "Sadece EVM destekliyor mu? Hangi zincirler destekleniyor?",
+          "answer": "<1><2>Hayır, Push hem EVM hem de EVM olmayan zincirleri destekliyor.</2> Dağıtıma EVM öncelikli olsa da, EVM olmayan zincirlerden (dahil) kullanıcılar, bunu yerel olarak kullanıyormuş gibi uygulamanızı kullanabilir.</1>\n<1><2>Tek seferde dağıtın. Her yerde birlikte çalışabilirlik.</2> Standart EVM sözleşmelerini Push'a yazın ve dağıtın (Solidity).<1><2>Herhangi bir zincirdeki EVM olmayan zincirler için push ile çalışır.</2>"
+        },
+        "faq6": {
+          "question": "Herhangi bir zincirdeki EVM olmayan zincirler için push ile çalışır.",
+          "answer": "<1><2>Herhangi bir zincirdeki EVM olmayan zincirler için push ile çalışır.</2>"
+        }
+      }
+    }
+  }
+}

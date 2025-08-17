@@ -1,0 +1,76 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Nunca Perca uma Atualização",
+      "text": "Cadastre-se e mantenha-se atualizado com os anúncios do ecossistema, sorteios e muito mais.",
+      "email-input": "Seu Email",
+      "email-input-placeholder": "Digite seu endereço de email",
+      "email-input-title": "Inscreva-se na newsletter Push Chain para receber atualizações",
+      "email-input-aria-label": "Endereço de email para inscrição na newsletter",
+      "submit-button": "Cadastrar",
+      "submit-button-title": "Inscreva-se na newsletter Push Chain",
+      "submit-button-aria-label": "Inscreva-se na newsletter",
+      "loading-submit-button": "Aguarde...",
+      "arrow-button-aria-label": "Inscreva-se na newsletter",
+      "arrow-button-title": "Inscreva-se nas atualizações do Push Chain",
+      "form-aria-label": "Formulário de inscrição na newsletter",
+      "success-message-aria-label": "Inscrição bem-sucedida",
+      "error-message-aria-label": "Erro na inscrição"
+    },
+    "cookie-banner": {
+      "message": "Usamos cookies para personalizar sua experiência. Saiba mais em nossa",
+      "privacy-policy-link": "Política de Privacidade",
+      "privacy-policy-link-title": "Leia a política de privacidade do Push Protocol",
+      "privacy-policy-link-aria-label": "Abrir política de privacidade em uma nova aba",
+      "accept-button": "Aceitar",
+      "accept-button-title": "Aceitar cookies para personalizar sua experiência",
+      "accept-button-aria-label": "Aceitar cookies e fechar banner",
+      "reject-button": "Recusar",
+      "reject-button-title": "Recusar cookies e fechar banner",
+      "reject-button-aria-label": "Recusar cookies e fechar banner",
+      "banner-aria-label": "Banner de consentimento de cookies",
+      "banner-role": "Notificação de preferências de cookies"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Perguntas frequentes sobre Push Chain - Blockchain Universal",
+      "title": "Perguntas\nFrequentes",
+      "title-aria-label": "Perguntas e respostas comuns sobre Push Chain",
+      "discord-link-text": "Pergunte-nos no Discord",
+      "discord-link-title": "Junte-se à comunidade Discord do Push Chain para suporte e perguntas",
+      "discord-link-aria-label": "Abrir comunidade Discord em uma nova aba",
+      "explore-more-text": "Explore Mais Perguntas Frequentes",
+      "explore-more-title": "Veja a documentação completa de perguntas frequentes do Push Chain e guias para desenvolvedores",
+      "explore-more-aria-label": "Navegue para a página completa de perguntas frequentes do Push Chain",
+      "accordion-aria-label": "Lista de perguntas frequentes do Push Chain",
+      "answer-aria-label": "Resposta à pergunta - ",
+      "faqs": {
+        "faq1": {
+          "question": "O que é Push Chain?",
+          "answer": "<1>Push Chain é uma blockchain de estado compartilhado que <2>elimina a fragmentação e torna os aplicativos universais</2>.</1><1>Implante uma vez no Push. Usuários em qualquer chain — EVM ou não-EVM — usem seu aplicativo com suas carteiras e tokens existentes; as taxas são tratadas nos bastidores.</1>"
+        },
+        "faq2": {
+          "question": "Como funciona? (ELI5)",
+          "answer": "<1>Use a carteira que você já tem — o Push cuida das partes cross-chain nos bastidores.</1><1>1. <2>Comece em qualquer lugar.</2> Use qualquer carteira em qualquer chain — sem alternar de rede.</1><1>2. <2>Assine uma vez.</2> Pague com um token que você já tem; reservamos a taxa em sua chain principal.</1><1>3. <2>Nós roteamos.</2> Uma conta vinculada no Push (ainda sua) encaminha sua chamada para o aplicativo — não custodial.</1><1>4. <2>Você é sempre você.</2> Correspondemos sua carteira da chain principal à sua conta vinculada para que as ações sejam verificadas e atribuídas corretamente a você no Push.</1><1>5. <2>Feito rápido.</2> O aplicativo é executado no Push; as taxas são tratadas nos bastidores. Sem pontes, sem nova carteira.</1><1>É assim que os usuários em qualquer chain podem usar o mesmo aplicativo implantado no Push Chain — tornando os aplicativos verdadeiramente universais.</1>"
+        },
+        "faq3": {
+          "question": "Eu preciso de uma carteira ou token de gás diferente?",
+          "answer": "<1><2>Não.</2></1><1><2>Mantenha sua carteira.</2> Use a carteira que você já tem — sem nova carteira ou conta.</1><1><2>Pague com o que você tem.</2> As taxas podem ser pagas com os tokens que você já tem em sua chain principal; nós cuidamos da conversão nos bastidores.</1><1><2>Sem alternar de rede.</2> Permaneça em sua chain principal — sem pontes apenas para obter um token de gás.</1><1><2>Não custodial.</2> Você assina todas as ações; o Push nunca detém suas chaves.</1><1><2>Nos bastidores.</2> A rede liquida as taxas em $PC automaticamente — você não precisa gerenciá-lo.</1>"
+        },
+        "faq4": {
+          "question": "Como isso é diferente de pontes ou camadas de mensagens?",
+          "answer": "<1><2>Resposta curta</2>: Push é onde seu aplicativo é executado. Pontes/mensagens apenas movem tokens ou mensagens entre chains, o que complica tudo para o usuário e os desenvolvedores.</1><1><2>Uma casa principal vs muitos clones.</2> Com pontes/mensagens, você implanta por chain e sincroniza por mensagens. No Push, você implanta uma vez; todos atingem o mesmo contrato e estado compartilhado.</1><1><2>Sem ativos embrulhados ou pontes obrigatórias.</2> Os usuários permanecem em sua chain principal e pagam com o que já têm; nós cuidamos do roteamento e da conversão de taxas nos bastidores.</1><1><2>Identidade e verificação unificadas.</2> Aceitamos assinaturas de qualquer carteira/chain e as atribuímos ao mesmo usuário no Push — não custodial.</1><1><2>Menos partes móveis.</2> Sem dança de aprovação cross-chain, sem caça de token de gás, sem contratos de cola para manter sincronizados.</1><1><2>Use pontes quando quiser, não porque deve.</2> A liquidez ainda pode se mover por meio de pontes, mas interagir com seu aplicativo não requer isso.</1><1>Resultado: aplicativos mais simples, uma fonte de verdade e uma experiência de usuário que parece ser uma chain — mesmo quando os usuários não são.</1>"
+        },
+        "faq5": {
+          "question": "É apenas para EVM? Quais chains são suportadas?",
+          "answer": "<1><2>Não, o Push suporta chains EVM e não-EVM.</2> Embora seja EVM-first para implantação, usuários de qualquer chain (incluindo não-EVM) podem usar seu aplicativo como se estivessem usando-o nativamente.</1>\n<1><2>Implante uma vez. Interoperação em todos os lugares.</2> Escreva e implante contratos EVM padrão no Push (Solidity/Vyper). As ferramentas permanecem as mesmas.</1>\n<1><2>Usuários de qualquer chain.</2> Ethereum e as principais L2s do EVM funcionam nativamente. Usuários não-EVM (por exemplo, Solana) assinam com suas carteiras da chain principal; nós verificamos e roteamos nos bastidores — sem alternar de rede.</1>\n<1><2>Suportado hoje.</2> Veja a lista ao vivo de chains suportadas → <3>Chains Suportadas</3>.</1><1><2>Expandindo a cobertura.</2> Estamos adicionando mais chains constantemente. Se você quiser solicitar qualquer chain, <4>entre em contato conosco</4>.</1>",
+          "supported-urls-title": "Lista de todas as chains suportadas pelo Push Chain.",
+          "contact-url-title": "Entre em contato conosco para adicionar novas chains."
+        },
+        "faq6": {
+          "question": "Qual é a velocidade de processamento?",
+          "answer": "<1><2>Resposta curta</2>: Push é onde seu aplicativo é executado. Pontes/mensagens apenas movem tokens ou mensagens entre chains, o que complica tudo para o usuário e os desenvolvedores.</1><1><2>Uma casa principal vs muitos clones.</2> Com pontes/mensagens, você implanta por chain e sincroniza por mensagens. No Push, você implanta uma vez; todos atingem o mesmo contrato e estado compartilhado.</1><1><2>Sem ativos embrulhados ou pontes obrigatórias.</2> Os usuários permanecem em sua chain principal e pagam com o que já têm; nós cuidamos do roteamento e da conversão de taxas nos bastidores.</1><1><2>Identidade e verificação unificadas.</2> Aceitamos assinaturas de qualquer carteira/chain e as atribuímos ao mesmo usuário no Push — não custodial.</1><1><2>Menos partes móveis.</2> Sem dança de aprovação cross-chain, sem caça de token de gás, sem contratos de cola para manter sincronizados.</1><1><2>Use pontes quando quiser, não porque deve.</2> A liquidez ainda pode se mover por meio de pontes, mas interagir com seu aplicativo não requer isso.</1><1>Resultado: aplicativos mais simples, uma fonte de verdade e uma experiência de usuário que parece ser uma chain — mesmo quando os usuários não são.</1>"
+        }
+      }
+    }
+  }
+}

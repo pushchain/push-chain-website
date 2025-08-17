@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Đi sâu — Khái niệm & Kiến trúc",
+          "description": "Giải thích dễ hiểu về trạng thái chia sẻ, trừu tượng hóa phí, USV/UEA và lớp thực thi phổ quát.",
+          "og-title": "Đi sâu - Khái niệm & Kiến trúc",
+          "og-description": "Các bài viết chuyên sâu về các mô-đun Push Chain, quyết định thiết kế và hiệu suất.",
+          "twitter-title": "Đi sâu - Bên trong",
+          "twitter-description": "Giải thích cách Push Chain hoạt động."
+        }
+      }
+    }
+  }
+}

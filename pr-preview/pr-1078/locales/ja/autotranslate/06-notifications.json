@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
+      "button-text": "クローズドベータパスを獲得",
+      "button-title": "Push Chainテストネットに参加して、クローズドベータパスを獲得",
+      "button-aria-label": "Telegramを開いてPush Chainのクローズドベータパスを獲得",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "テストネットの通知を閉じる",
+      "close-button-aria-label": "Push Chainテストネットの通知を閉じる",
+      "container-aria-label": "Push Chainテストネットの通知",
+      "container-role": "Push Chainテストネットのアナウンス"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnetクローズドベータ版公開！",
+      "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "報酬の通知を閉じる",
+      "close-button-aria-label": "Push Chain報酬の通知を閉じる",
+      "container-aria-label": "Push Chain報酬の通知",
+      "container-role": "Push Chain報酬のアナウンス"
+    },
+    "info-bar": {
+      "title": "Push Testnetで今すぐ開始 — ビルダーと早期ユーザーのための報酬をアンロックしましょう。",
+      "learn-more-text": "詳細はこちら",
+      "learn-more-title": "このアナウンスの詳細はこちら",
+      "learn-more-aria-label": "新しいタブでアナウンスリンクを開く",
+      "dismiss-button-title": "アナウンスを閉じる",
+      "dismiss-button-aria-label": "アナウンスバーを閉じる",
+      "container-aria-label": "サイトアナウンス",
+      "container-role": "サイトアナウンスバナー",
+      "star-icon-alt": "アナウンススターアイコン"
+    },
+    "alert": {
+      "message": "Push Metamask Snapが公開されました。",
+      "know-more-text": "今すぐ始める！",
+      "know-more-title": "Push Metamask Snapを使い始める",
+      "know-more-aria-label": "新しいタブでPush Metamask Snapを開く",
+      "close-button-title": "アラートを閉じる",
+      "close-button-aria-label": "Push Metamask Snapアラートを閉じる",
+      "container-aria-label": "Push Metamask Snapアナウンス",
+      "container-role": "Push Metamask Snapアラートバナー"
+    }
+  }
+}

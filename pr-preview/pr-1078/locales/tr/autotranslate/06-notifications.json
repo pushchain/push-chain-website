@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet'e bir göz atın, Donut ile evrensel uygulamalar oluşturun ve ödüller kazanın!",
+      "button-text": "Kapalı Beta Pass'i Talep Et",
+      "button-title": "Push Chain testnet'e katılın ve kapalı beta pass'inizi talep edin",
+      "button-aria-label": "Push Chain kapalı beta pass'ini talep etmek için Telegram'ı açın",
+      "image-alt": "Push Chain Testnet Donut - Evrensel Blockchain",
+      "close-button-title": "Testnet bildirimini kapat",
+      "close-button-aria-label": "Push Chain testnet bildirimini kapat",
+      "container-aria-label": "Push Chain testnet bildirimi",
+      "container-role": "Push Chain testnet duyurusu"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnet Kapalı Beta Yayında!",
+      "description": "Testnet'e bir göz atın, Donut ile evrensel uygulamalar oluşturun ve ödüller kazanın!",
+      "image-alt": "Push Chain Testnet Ödülleri - Evrensel Uygulamalar Oluştur",
+      "close-button-title": "Ödüller bildirimini kapat",
+      "close-button-aria-label": "Push Chain ödüller bildirimini kapat",
+      "container-aria-label": "Push Chain ödüller bildirimi",
+      "container-role": "Push Chain ödüller duyurusu"
+    },
+    "info-bar": {
+      "title": "Şimdi Push Testnet'te Başlatın — Oluşturucular ve Erken Kullanıcılar için Ödüllerin Kilidini Açın.",
+      "learn-more-text": "Daha Fazlasını Öğren",
+      "learn-more-title": "Bu duyuru hakkında daha fazla bilgi edinin",
+      "learn-more-aria-label": "Yeni sekmede duyuru bağlantısını aç",
+      "dismiss-button-title": "Duyuruyu kapat",
+      "dismiss-button-aria-label": "Duyuru çubuğunu kapat",
+      "container-aria-label": "Site duyurusu",
+      "container-role": "Site duyuru banner'ı",
+      "star-icon-alt": "Duyuru yıldız simgesi"
+    },
+    "alert": {
+      "message": "Push Metamask Snap şimdi yayında,",
+      "know-more-text": "Hemen başlayın!",
+      "know-more-title": "Push Metamask Snap ile başlayın",
+      "know-more-aria-label": "Yeni sekmede Push Metamask Snap'i aç",
+      "close-button-title": "Uyarıyı kapat",
+      "close-button-aria-label": "Push Metamask Snap uyarısını kapat",
+      "container-aria-label": "Push Metamask Snap duyurusu",
+      "container-role": "Push Metamask Snap uyarı banner'ı"
+    }
+  }
+}

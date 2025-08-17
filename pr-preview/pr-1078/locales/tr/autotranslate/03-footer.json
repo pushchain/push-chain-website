@@ -1,0 +1,57 @@
+{
+  "footer": {
+    "mail-section": {
+      "title": "Son Push haberlerini alın",
+      "privacy": "Gizlilik Politikası",
+      "tos": "Şartlar ve Koşullar"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "Bize katılın ve Web3 İletişiminin geleceğini inşa edin.",
+        "link-text": "Açık Pozisyonları Gör",
+        "image-title": "Bize Katılın",
+        "image-alt": "Açık Pozisyonları Gösteren Simge"
+      },
+      "docs-card": {
+        "text": "Dakikalar içinde başlamak için basit kılavuzlarımızı takip edin.",
+        "link-text": "Dokümanları Keşfet",
+        "image-title": "Başlayın",
+        "image-alt": "Başlamanın kolaylığını gösteren simge"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "Şirket",
+        "push-ecosystem-link": "Push Ekosistemi",
+        "media-kit-link": "Medya Kiti",
+        "terms-link": "Şartlar",
+        "privacy-link": "Gizlilik"
+      },
+      "governance-column": {
+        "title": "Yönetişim",
+        "push-governance-link": "Push Yönetişimi",
+        "guides-link": "Kılavuzlar",
+        "forum-link": "Forum",
+        "grants-link": "Hibeler",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "Kaynaklar",
+        "blog-link": "Blog",
+        "whitepaper-link": "Beyaz Kitap",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "Geliştirici Kılavuzları"
+      },
+      "subscribe-column": {
+        "title": "Destek",
+        "contact-us-link": "Bize Ulaşın",
+        "faq-link": "SSS"
+      },
+      "support-column": {
+        "title": "Abone Ol",
+        "email-placeholder": "E-Posta Adresiniz"
+      }
+    }
+  }
+}

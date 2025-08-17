@@ -1,0 +1,57 @@
+{
+  "footer": {
+    "mail-section": {
+      "title": "获取最新的 Push 新闻",
+      "privacy": "隐私政策",
+      "tos": "条款和条件"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "加入我们，共同构建 Web3 通信的未来。",
+        "link-text": "查看开放职位",
+        "image-title": "加入我们",
+        "image-alt": "显示开放职位的图标"
+      },
+      "docs-card": {
+        "text": "通过我们简单的指南，在几分钟内开始使用。",
+        "link-text": "探索文档",
+        "image-title": "开始使用",
+        "image-alt": "显示易于开始使用的图标"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "公司",
+        "push-ecosystem-link": "Push 生态系统",
+        "media-kit-link": "媒体工具包",
+        "terms-link": "条款",
+        "privacy-link": "隐私"
+      },
+      "governance-column": {
+        "title": "治理",
+        "push-governance-link": "Push 治理",
+        "guides-link": "指南",
+        "forum-link": "论坛",
+        "grants-link": "资助",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "资源",
+        "blog-link": "博客",
+        "whitepaper-link": "白皮书",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "开发者指南"
+      },
+      "subscribe-column": {
+        "title": "支持",
+        "contact-us-link": "联系我们",
+        "faq-link": "常见问题"
+      },
+      "support-column": {
+        "title": "订阅",
+        "email-placeholder": "您的邮箱"
+      }
+    }
+  }
+}

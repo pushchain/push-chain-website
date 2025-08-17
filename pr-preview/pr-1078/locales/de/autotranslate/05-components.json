@@ -1,0 +1,78 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Keine Updates verpassen",
+      "text": "Registriere dich und bleibe über Ankündigungen des Ökosystems, Gewinnspiele und mehr auf dem Laufenden.",
+      "email-input": "Deine E-Mail",
+      "email-input-placeholder": "Gib deine E-Mail-Adresse ein",
+      "email-input-title": "Abonniere den Push Chain Newsletter für Updates",
+      "email-input-aria-label": "E-Mail-Adresse für Newsletter-Abonnement",
+      "submit-button": "Registrieren",
+      "submit-button-title": "Abonniere den Push Chain Newsletter",
+      "submit-button-aria-label": "Newsletter abonnieren",
+      "loading-submit-button": "Bitte warten...",
+      "arrow-button-aria-label": "Newsletter abonnieren",
+      "arrow-button-title": "Abonniere Push Chain Updates",
+      "form-aria-label": "Newsletter-Abonnementformular",
+      "success-message-aria-label": "Abonnement erfolgreich",
+      "error-message-aria-label": "Abonnementfehler"
+    },
+    "cookie-banner": {
+      "message": "Wir verwenden Cookies, um deine Erfahrung zu personalisieren. Erfahre mehr in unserer",
+      "privacy-policy-link": "Datenschutzrichtlinie",
+      "privacy-policy-link-title": "Lies die Datenschutzrichtlinie von Push Protocol",
+      "privacy-policy-link-aria-label": "Datenschutzrichtlinie in neuem Tab öffnen",
+      "accept-button": "Akzeptieren",
+      "accept-button-title": "Akzeptiere Cookies, um deine Erfahrung zu personalisieren",
+      "accept-button-aria-label": "Cookies akzeptieren und Banner schließen",
+      "reject-button": "Ablehnen",
+      "reject-button-title": "Lehne Cookies ab und schließe Banner",
+      "reject-button-aria-label": "Cookies ablehnen und Banner schließen",
+      "banner-aria-label": "Cookie-Consent-Banner",
+      "banner-role": "Benachrichtigung über Cookie-Einstellungen"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Häufig gestellte Fragen zu Push Chain - Universal Blockchain",
+      "title": "Häufig\nGestellte\nFragen",
+      "title-aria-label": "Häufige Fragen und Antworten zu Push Chain",
+      "discord-link-text": "Frag uns auf Discord",
+      "discord-link-title": "Trete der Push Chain Discord-Community für Support und Fragen bei",
+      "discord-link-aria-label": "Öffne die Discord-Community in einem neuen Tab",
+      "explore-more-text": "Weitere FAQs ansehen",
+      "explore-more-title": "Sieh dir die umfassende FAQ-Dokumentation und Entwicklerhandbücher von Push Chain an",
+      "explore-more-aria-label": "Navigiere zur vollständigen FAQ-Seite von Push Chain",
+      "accordion-aria-label": "Liste der häufig gestellten Fragen zu Push Chain",
+      "answer-aria-label": "Antwort auf die Frage - ",
+      "faqs": {
+        "faq1": {
+          "question": "Was ist Push Chain?",
+          "answer": "<1>Push Chain ist eine Blockchain mit gemeinsamem Zustand, die <2>Fragmentierung beseitigt und Apps universell macht.</2></1><1>Einmal auf Push bereitstellen. Benutzer auf jeder Chain – EVM oder nicht-EVM – verwenden deine App mit ihren bestehenden Wallets und Token; Gebühren werden im Hintergrund abgewickelt.</1>"
+        },
+        "faq2": {
+          "question": "Wie funktioniert es? (ELI5)",
+          "answer": "<1>Verwende die Wallet, die du bereits hast – Push erledigt die Cross-Chain-Arbeit im Hintergrund.</1><1>1. <2>Überall starten.</2> Verwende jede Wallet auf jeder Chain – kein Netzwechsel.</1><1>2. <2>Einmal unterschreiben.</2> Bezahle mit einem Token, das du bereits besitzt; wir legen die Gebühr auf deiner Home-Chain bereit.</1><1>3. <2>Wir leiten es weiter.</2> Ein verknüpftes Konto auf Push (immer noch deins) leitet deinen Aufruf an die App weiter – nicht-custodial.</1><1>4. <2>Du bist immer du.</2> Wir passen deine Home-Chain-Wallet an dein verknüpftes Konto an, damit Aktionen korrekt verifiziert und dir auf Push zugeschrieben werden.</1><1>5. <2>Schnell erledigt.</2> Die App läuft auf Push; Gebühren werden im Hintergrund abgewickelt. Kein Bridging, keine neue Wallet.</1><1>So können Benutzer auf jeder Chain dieselbe App verwenden, die auf Push Chain bereitgestellt wird – und Apps wirklich universell machen.</1>"
+        },
+        "faq3": {
+          "question": "Benötige ich eine andere Wallet oder ein anderes Gas-Token?",
+          "answer": "<1><2>Nein.</2></1><1><2>Behalte deine Wallet.</2> Verwende die Wallet, die du bereits hast – keine neue Wallet oder kein neues Konto.</1><1><2>Bezahle mit dem, was du besitzt.</2> Gebühren können mit den Token bezahlt werden, die du bereits auf deiner Home-Chain besitzt; wir übernehmen die Umrechnung im Hintergrund.</1><1><2>Kein Netzwechsel.</2> Bleibe auf deiner Home-Chain – kein Bridging nur um ein Gas-Token zu bekommen.</1><1><2>Nicht-Custodial.</2> Du unterschreibst jede Aktion; Push hält niemals deine Schlüssel.</1><1><2>Im Hintergrund.</2> Das Netzwerk wickelt Gebühren automatisch in $PC ab – du musst dich nicht darum kümmern.</1>"
+        },
+        "faq4": {
+          "question": "Was unterscheidet dies von Bridges oder Messaging-Layern?",
+          "answer": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Bridges/Messaging verschieben nur Token oder Nachrichten zwischen Chains, was alles für Benutzer und Entwickler erschwert.</1><1><2>Einzelnes Home vs. viele Klone.</2> Mit Bridges/Messaging stellst du pro Chain bereit und synchronisierst über Nachrichten. Auf Push stellst du einmal bereit; jeder greift auf denselben Vertrag und gemeinsamen Zustand zu.</1><1><2>Keine Wrapped Assets oder obligatorisches Bridging.</2> Benutzer bleiben auf ihrer Home-Chain und bezahlen mit dem, was sie bereits besitzen; wir übernehmen die Weiterleitung und Gebührenumrechnung im Hintergrund.</1><1><2>Einheitliche Identität & Verifizierung.</2> Wir akzeptieren Signaturen von jeder Wallet/Chain und ordnen sie demselben Benutzer auf Push zu – nicht-custodial.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Chain-Genehmigungstanz, keine Gas-Token-Suche, keine Glue-Verträge, die synchron gehalten werden müssen.</1><1><2>Nutze Bridges, wenn du willst, nicht weil du musst.</2> Liquidität kann sich immer noch über Bridges bewegen, aber die Interaktion mit deiner App erfordert dies nicht.</1><1>Ergebnis: einfachere Apps, eine einzige Quelle der Wahrheit und eine Benutzererfahrung, die sich wie eine Chain anfühlt – auch wenn die Benutzer es nicht sind.</1>"
+        },
+        "faq5": {
+          "question": "Ist es EVM-only? Welche Chains werden unterstützt?",
+          "answer": "<1><2>Nein, Push unterstützt sowohl EVM- als auch nicht-EVM-Chains.</2> Obwohl es EVM-first für die Bereitstellung ist, können Benutzer von jeder Chain (einschließlich nicht-EVM) deine App verwenden, als ob sie sie nativ verwenden würden.</1>\n<1><2>Einmal bereitstellen. Interoperabilität überall.</2> Schreibe und stelle Standard-EVM-Verträge auf Push (Solidity/Vyper) bereit. Die Tools bleiben gleich.</1>\n<1><2>Benutzer von jeder Chain.</2> Ethereum und die wichtigsten EVM L2s funktionieren nativ. Nicht-EVM-Benutzer (z. B. Solana) unterschreiben mit ihren Home-Wallets; wir verifizieren und leiten im Hintergrund weiter – kein Netzwechsel.</1>\n<1><2>Heute unterstützt.</2> Sieh dir die Live-Liste der unterstützten Chains → <3>Unterstützte Chains</3>.</1><1><2>Abdeckung erweitern.</2> Wir fügen ständig weitere Chains hinzu. Wenn du eine Chain anfordern möchtest, <4>kontaktiere uns</4>.</1>",
+          "supported-urls-title": "Liste aller von Push Chain unterstützten Chains",
+          "explore-more-text": "Weitere FAQs ansehen",
+          "explore-more-title": "Sieh dir die umfassende FAQ-Dokumentation und Entwicklerhandbücher von Push Chain an",
+          "explore-more-aria-label": "Navigiere zur vollständigen FAQ-Seite von Push Chain"
+        },
+        "faq6": {
+          "question": "Was unterscheidet Push Chain von anderen Blockchains?",
+          "answer": "Push Chain unterscheidet sich durch ihren Fokus auf Universalität, Einfachheit und Benutzererfahrung. Sie ist so konzipiert, dass sie für Entwickler und Endbenutzer gleichermaßen zugänglich ist und es ermöglicht, dass Apps nahtlos auf einer Vielzahl von Chains funktionieren."
+        }
+      }
+    }
+  }
+}

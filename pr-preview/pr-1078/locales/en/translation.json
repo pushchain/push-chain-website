@@ -143,62 +143,97 @@
       "title": "Access Push Portal - Earn points as developer, user, or validator"
     }
   },
-  "alert": {
-    "know-more": "Get started!"
-  },
   "footer": {
-    "mail-section": {
-      "title": "Get the latest Push news",
-      "privacy": "Privacy Policy",
-      "tos": "Terms and conditions"
+    "email-section": {
+      "title": "Stay in the loop with Push Chain",
+      "title-secondary": "news and updates!",
+      "title-aria-label": "Newsletter subscription section",
+      "section-aria-label": "Push Chain newsletter signup"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Join us and build the future of Web3 Communication.",
-        "link-text": "See Open Positions",
-        "image-title": "Join Us",
-        "image-alt": "Icon showing Open Positions"
-      },
-      "docs-card": {
-        "text": "Follow our simple guides to get started in minutes.",
-        "link-text": "Explore Docs",
-        "image-title": "Get Started",
-        "image-alt": "Icon showing ease of getting started"
-      }
+    "main-section": {
+      "section-aria-label": "Footer navigation and links",
+      "logo-link-title": "Push Chain homepage",
+      "logo-link-aria-label": "Push Chain homepage",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "Company",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Terms",
-        "privacy-link": "Privacy"
-      },
-      "governance-column": {
-        "title": "Governance",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Grants",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "Resources",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
+        "title-aria-label": "Resources navigation"
       },
-      "subscribe-column": {
-        "title": "Support",
-        "contact-us-link": "Contact Us",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "Developers",
+        "title-aria-label": "Developer navigation"
       },
-      "support-column": {
-        "title": "Subscribe",
-        "email-placeholder": "Your Email"
+      "community": {
+        "title": "Community",
+        "title-aria-label": "Community navigation"
+      },
+      "help": {
+        "title": "Help",
+        "title-aria-label": "Help navigation"
       }
+    },
+    "links": {
+      "get-started": "Get Started",
+      "get-started-title": "Start building on Push Chain",
+      "docs": "Docs",
+      "docs-title": "Push Chain documentation",
+      "github": "GitHub",
+      "github-title": "Push Chain repositories on GitHub",
+      "knowledge-base": "Knowledge Base",
+      "knowledge-base-title": "Push Chain Knowledge Base",
+      "blog": "Blog",
+      "blog-title": "Push Chain blog",
+      "litepaper": "Litepaper",
+      "litepaper-title": "Push Chain litepaper (PDF)",
+      "brand-kit": "Brand Kit",
+      "brand-kit-title": "Push Chain brand assets and guidelines",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain blockchain explorer",
+      "faucet": "Faucet",
+      "faucet-title": "Get test tokens from the Push Chain faucet",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Protocol community portal",
+      "support": "Support",
+      "support-title": "Help Center",
+      "security": "Security & Disclosure",
+      "security-title": "Report a vulnerability (responsible disclosure)",
+      "contact-us": "Contact Us",
+      "contact-us-title": "Partnerships, BD, media, or general inquiries",
+      "careers": "Careers",
+      "careers-title": "Open roles at Push Chain",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Follow Push Chain on X (Twitter)",
+      "discord": "Discord",
+      "discord-title": "Join the Push Chain Discord",
+      "reddit": "Reddit",
+      "reddit-title": "Join the Push Chain subreddit",
+      "telegram": "Telegram",
+      "telegram-title": "Join the Push Chain Telegram"
+    },
+    "social-section": {
+      "section-aria-label": "Social media links and legal information",
+      "twitter-icon-title": "Push Chain on X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain on X (Twitter)",
+      "github-icon-title": "Push Chain on GitHub",
+      "github-icon-aria-label": "Push Chain on GitHub",
+      "discord-icon-title": "Push Chain on Discord",
+      "discord-icon-aria-label": "Push Chain on Discord"
+    },
+    "legal": {
+      "privacy-policy": "Privacy Policy",
+      "privacy-policy-title": "Read the Privacy Policy",
+      "privacy-policy-aria-label": "Privacy Policy",
+      "terms-of-service": "Terms of Service",
+      "terms-of-service-title": "Read the Terms of Service",
+      "terms-of-service-aria-label": "Terms of Service",
+      "cookie-preferences": "Cookie Preferences",
+      "cookie-preferences-title": "Manage cookie settings"
+    },
+    "footer-image": {
+      "alt": "Push Chain footer illustration",
+      "title": "Push Chain - Universal Blockchain"
     }
   },
   "pages": {
@@ -542,6 +577,24 @@
         "og-description": "Community-driven initiative and shares for Push Chain.",
         "twitter-title": "Let's Push | Community Initiative",
         "twitter-description": "See Push community initiative for Push Chain."
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "The LF Push builders community—celebrating what you ship and who you help. Share your wins, tag <hashtag>#LFPush</hashtag> or <mention>@PushChain</mention>, and we'll amplify."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Share Your Win",
+          "join-community": "Join Community",
+          "learn-more": "Learn More"
+        },
+        "meta": {
+          "tweet-alt": "Tweet from Push Chain community member",
+          "loading-alt": "Loading more community tweets"
+        },
+        "tweets-counter": "{{count}} Tweets and counting!",
+        "loading": "Loading more tweets...",
+        "end-message": "You've reached the end! 🎉"
       }
     },
     "support": {
@@ -618,6 +671,26 @@
         "twitter-title": "BRB Hackathon - Build & Win",
         "twitter-description": "Join the Push Chain hackathon to ship and win prizes."
       }
+    },
+    "contact": {
+      "seo": {
+        "title": "Contact — Get in Touch",
+        "description": "Reach the Push Chain team for partnerships, integrations, grants, media, support, and security disclosures.",
+        "og-title": "Push Chain Contact - Get in Touch",
+        "og-description": "Contact the Push Chain team about partnerships, integrations, grants, media, support, and security.",
+        "twitter-title": "Contact - Push Chain Team",
+        "twitter-description": "Partnerships, integrations, grants, media, support, and security — get in touch with Push Chain."
+      }
+    },
+    "donutsecret": {
+      "seo": {
+        "title": "Shhh… Donut Testnet — Secret Beta Access",
+        "description": "Invite-only closed beta for builders. Claim your Donut pass to access Push Chain Testnet, ship universal apps, and unlock early rewards.",
+        "og-title": "Donut Testnet — Secret Beta Access",
+        "og-description": "Early access for developers: claim a Closed Beta Pass, try Push Chain (Donut), and earn rewards while building universal apps.",
+        "twitter-title": "Shhh… Donut Testnet — Closed Beta",
+        "twitter-description": "Invite-only access for builders. Claim your pass, try Push Chain (Donut), and earn rewards. 🍩"
+      }
     }
   },
   "components": {
@@ -637,6 +710,20 @@
       "form-aria-label": "Newsletter subscription form",
       "success-message-aria-label": "Subscription successful",
       "error-message-aria-label": "Subscription error message"
+    },
+    "cookie-banner": {
+      "message": "We use cookies to personalize your experience. Learn more in our",
+      "privacy-policy-link": "Privacy Policy",
+      "privacy-policy-link-title": "Read Push Protocol privacy policy",
+      "privacy-policy-link-aria-label": "Open privacy policy in new tab",
+      "accept-button": "Accept",
+      "accept-button-title": "Accept cookies to personalize your experience",
+      "accept-button-aria-label": "Accept cookies and close banner",
+      "reject-button": "Opt-out",
+      "reject-button-title": "Opt out of cookies and close banner",
+      "reject-button-aria-label": "Reject cookies and close banner",
+      "banner-aria-label": "Cookie consent banner",
+      "banner-role": "Cookie preferences notification"
     },
     "short-faq-snippet": {
       "section-aria-label": "Frequently asked questions about Push Chain - Universal Blockchain",
@@ -679,6 +766,44 @@
           "donut-testnet-title": "Check out stats of Push Chain Donut Testnet."
         }
       }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Get a sneak peek into Testnet, Donut, build universal apps and win prizes!",
+      "button-text": "Claim Closed Beta Pass",
+      "button-title": "Join Push Chain testnet and claim your closed beta pass",
+      "button-aria-label": "Open Telegram to claim Push Chain closed beta pass",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "Close testnet notification",
+      "close-button-aria-label": "Dismiss Push Chain testnet notification",
+      "container-aria-label": "Push Chain testnet notification"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnet Closed beta is Live!",
+      "description": "Get a sneak peek into Testnet, Donut, build universal apps and win prizes!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "Close rewards notification",
+      "close-button-aria-label": "Dismiss Push Chain rewards notification",
+      "container-aria-label": "Push Chain rewards notification"
+    },
+    "info-bar": {
+      "title": "Launch on Push Testnet Now — Unlock Rewards for Builders and Early Users.",
+      "learn-more-text": "Learn More",
+      "learn-more-title": "Learn more about this announcement",
+      "dismiss-button-title": "Dismiss announcement",
+      "dismiss-button-aria-label": "Close announcement bar",
+      "container-aria-label": "Site announcement",
+      "star-icon-alt": "Announcement star icon"
+    },
+    "alert": {
+      "message": "Push Metamask Snap is now live,",
+      "know-more-text": "Get started!",
+      "know-more-title": "Get started with Push Metamask Snap",
+      "close-button-title": "Close alert",
+      "close-button-aria-label": "Dismiss Push Metamask Snap alert",
+      "container-aria-label": "Push Metamask Snap announcement"
     }
   }
 }

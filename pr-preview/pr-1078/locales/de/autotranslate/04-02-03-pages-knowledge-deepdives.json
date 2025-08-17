@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Deep Dives — Konzepte & Architektur",
+          "description": "Verständliche Erklärungen zu Shared State, Fee Abstraction, USV/UEA und der universellen Ausführungsschicht.",
+          "og-title": "Deep Dives - Konzepte & Architektur",
+          "og-description": "Detaillierte Artikel zu Push Chain Modulen, Designentscheidungen und Performance.",
+          "twitter-title": "Deep Dives - Unter der Haube",
+          "twitter-description": "Erklärungen, wie Push Chain funktioniert."
+        }
+      }
+    }
+  }
+}

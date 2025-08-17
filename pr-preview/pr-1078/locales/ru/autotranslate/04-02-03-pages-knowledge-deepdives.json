@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Глубокое погружение — Концепции и Архитектура",
+          "description": "Легко читаемые объяснения общего состояния, абстракции комиссий, USV/UEA и универсального слоя исполнения.",
+          "og-title": "Deep Dives - Concepts & Architecture",
+          "og-description": "Глубокие статьи о модулях Push Chain, дизайнерских решениях и производительности.",
+          "twitter-title": "Deep Dives - Под капотом",
+          "twitter-description": "Объяснения того, как работает Push Chain."
+        }
+      }
+    }
+  }
+}

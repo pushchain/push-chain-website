@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Plongées approfondies — Concepts & Architecture",
+          "description": "Explications claires sur l'état partagé, l'abstraction des frais, USV/UEA, et la couche d'exécution universelle.",
+          "og-title": "Plongées approfondies - Concepts & Architecture",
+          "og-description": "Articles approfondis sur les modules Push Chain, les décisions de conception et les performances.",
+          "twitter-title": "Plongées approfondies - Sous le capot",
+          "twitter-description": "Explications sur le fonctionnement de Push Chain."
+        }
+      }
+    }
+  }
+}

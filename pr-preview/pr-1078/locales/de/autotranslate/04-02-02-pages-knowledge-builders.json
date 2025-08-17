@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — Anleitungen & Tutorials",
+          "description": "Schritt-für-Schritt-Anleitungen, Muster und Beispiele zur Verwendung von Push Chain Funktionen.",
+          "og-title": "Builders - Anleitungen & Tutorials",
+          "og-description": "Geführte Tutorials, bewährte Verfahren und Beispiele für die Entwicklung mit Push Chain.",
+          "twitter-title": "Builders - Anleitungen & Tutorials",
+          "twitter-description": "Schritt-für-Schritt-Anleitungen für den Versand auf Push Chain."
+        }
+      }
+    }
+  }
+}

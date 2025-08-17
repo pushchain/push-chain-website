@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Загляните в Testnet, Donut, создавайте универсальные приложения и выигрывайте призы!",
+      "button-text": "Получить Закрытый Бета-Пасс",
+      "button-title": "Присоединяйтесь к testnet Push Chain и получите свой закрытый бета-пасс",
+      "button-aria-label": "Открыть Telegram для получения закрытого бета-пасса Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Универсальный Блокчейн",
+      "close-button-title": "Закрыть уведомление testnet",
+      "close-button-aria-label": "Отклонить уведомление Push Chain testnet",
+      "container-aria-label": "Уведомление Push Chain testnet",
+      "container-role": "Объявление Push Chain testnet"
+    },
+    "rewards-notification": {
+      "title": "Закрытое бета-тестирование Donut запущено!",
+      "description": "Загляните в Testnet, Donut, создавайте универсальные приложения и выигрывайте призы!",
+      "image-alt": "Push Chain Testnet Rewards - Создавайте Универсальные Приложения",
+      "close-button-title": "Закрыть уведомление о наградах",
+      "close-button-aria-label": "Отклонить уведомление Push Chain о наградах",
+      "container-aria-label": "Уведомление Push Chain о наградах",
+      "container-role": "Объявление Push Chain о наградах"
+    },
+    "info-bar": {
+      "title": "Запуск на Push Testnet уже сейчас — Разблокируйте награды для создателей и первых пользователей.",
+      "learn-more-text": "Узнать больше",
+      "learn-more-title": "Узнайте больше об этом объявлении",
+      "learn-more-aria-label": "Открыть ссылку на объявление в новой вкладке",
+      "dismiss-button-title": "Отклонить объявление",
+      "dismiss-button-aria-label": "Закрыть панель объявлений",
+      "container-aria-label": "Объявление сайта",
+      "container-role": "Баннер объявления сайта",
+      "star-icon-alt": "Иконка звезды объявления"
+    },
+    "alert": {
+      "message": "Push Metamask Snap теперь доступен,",
+      "know-more-text": "Начать!",
+      "know-more-title": "Начните работу с Push Metamask Snap",
+      "know-more-aria-label": "Открыть Push Metamask Snap в новой вкладке",
+      "close-button-title": "Закрыть оповещение",
+      "close-button-aria-label": "Отклонить оповещение Push Metamask Snap",
+      "container-aria-label": "Объявление Push Metamask Snap",
+      "container-role": "Баннер оповещения Push Metamask Snap"
+    }
+  }
+}

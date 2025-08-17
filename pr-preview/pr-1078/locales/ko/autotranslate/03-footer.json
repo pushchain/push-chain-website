@@ -1,0 +1,57 @@
+{
+  "footer": {
+    "mail-section": {
+      "title": "최신 Push 뉴스를 받아보세요",
+      "privacy": "개인정보처리방침",
+      "tos": "이용 약관"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "저희와 함께 Web3 커뮤니케이션의 미래를 만들어가세요.",
+        "link-text": "채용 공고 보기",
+        "image-title": "지금 참여하세요",
+        "image-alt": "채용 공고 아이콘"
+      },
+      "docs-card": {
+        "text": "간단한 가이드를 따라 몇 분 안에 시작하세요.",
+        "link-text": "문서 살펴보기",
+        "image-title": "시작하기",
+        "image-alt": "시작의 용이성을 보여주는 아이콘"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "회사",
+        "push-ecosystem-link": "Push 생태계",
+        "media-kit-link": "미디어 키트",
+        "terms-link": "이용 약관",
+        "privacy-link": "개인정보처리방침"
+      },
+      "governance-column": {
+        "title": "거버넌스",
+        "push-governance-link": "Push 거버넌스",
+        "guides-link": "가이드",
+        "forum-link": "포럼",
+        "grants-link": "보조금",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "리소스",
+        "blog-link": "블로그",
+        "whitepaper-link": "백서",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "개발 가이드"
+      },
+      "subscribe-column": {
+        "title": "지원",
+        "contact-us-link": "문의하기",
+        "faq-link": "FAQ"
+      },
+      "support-column": {
+        "title": "구독",
+        "email-placeholder": "이메일 주소"
+      }
+    }
+  }
+}

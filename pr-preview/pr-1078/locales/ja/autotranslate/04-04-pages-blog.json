@@ -1,0 +1,14 @@
+{
+  "pages": {
+    "blog": {
+      "seo": {
+        "title": "ブログ — アップデート、詳細解説 & ストーリー",
+        "description": "Push Chain チームとエコシステムからのニュース、リリースノート、技術的な詳細解説、および開発者ストーリー。",
+        "og-title": "Push Chain Blog - アップデート、詳細解説 & ストーリー",
+        "og-description": "Push Chainからの製品アップデート、開発ストーリー、詳細解説、およびエコシステムニュースをフォローしてください。",
+        "twitter-title": "Push Chain Blog - 最新情報",
+        "twitter-description": "リリース、詳細解説、およびビルダーのストーリー — 最新情報を入手してください。"
+      }
+    }
+  }
+}

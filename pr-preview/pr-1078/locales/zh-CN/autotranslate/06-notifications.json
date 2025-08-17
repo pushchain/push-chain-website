@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "抢先体验 Testnet，Donut，构建通用应用并赢取奖励！",
+      "button-text": "领取封闭 Beta 权限",
+      "button-title": "加入 Push Chain 测试网并领取您的封闭 Beta 权限",
+      "button-aria-label": "打开 Telegram 以领取 Push Chain 封闭 Beta 权限",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "关闭测试网通知",
+      "close-button-aria-label": "关闭 Push Chain 测试网通知",
+      "container-aria-label": "Push Chain 测试网通知",
+      "container-role": "Push Chain 测试网公告"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnet 封闭 Beta 正式上线！",
+      "description": "抢先体验 Testnet，Donut，构建通用应用并赢取奖励！",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "关闭奖励通知",
+      "close-button-aria-label": "关闭 Push Chain 奖励通知",
+      "container-aria-label": "Push Chain 奖励通知",
+      "container-role": "Push Chain 奖励公告"
+    },
+    "info-bar": {
+      "title": "立即在 Push Testnet 上线 — 解锁面向构建者和早期用户的奖励。",
+      "learn-more-text": "了解更多",
+      "learn-more-title": "了解更多关于此公告的信息",
+      "learn-more-aria-label": "在新标签页中打开公告链接",
+      "dismiss-button-title": "关闭公告",
+      "dismiss-button-aria-label": "关闭公告栏",
+      "container-aria-label": "站点公告",
+      "container-role": "站点公告横幅",
+      "star-icon-alt": "公告星标图标"
+    },
+    "alert": {
+      "message": "Push Metamask Snap 现已上线，",
+      "know-more-text": "立即开始！",
+      "know-more-title": "开始使用 Push Metamask Snap",
+      "know-more-aria-label": "在新标签页中打开 Push Metamask Snap",
+      "close-button-title": "关闭警报",
+      "close-button-aria-label": "关闭 Push Metamask Snap 警报",
+      "container-aria-label": "Push Metamask Snap 公告",
+      "container-role": "Push Metamask Snap 警报横幅"
+    }
+  }
+}

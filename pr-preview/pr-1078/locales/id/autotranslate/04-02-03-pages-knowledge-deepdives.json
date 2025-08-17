@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Deep Dives — Konsep & Arsitektur",
+          "description": "Penjelasan yang mudah dibaca tentang shared state, abstraksi biaya, USV/UEA, dan universal execution layer.",
+          "og-title": "Deep Dives - Konsep & Arsitektur",
+          "og-description": "Artikel mendalam tentang modul Push Chain, keputusan desain, dan performa.",
+          "twitter-title": "Deep Dives - Di balik layar",
+          "twitter-description": "Penjelasan tentang cara kerja Push Chain."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Nhận cái nhìn sơ lược về Testnet, Donut, xây dựng ứng dụng đa nền tảng và giành giải thưởng!",
+      "button-text": "Nhận Thẻ Beta Đóng",
+      "button-title": "Tham gia testnet Push Chain và nhận thẻ beta đóng của bạn",
+      "button-aria-label": "Mở Telegram để nhận thẻ beta đóng Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Blockchain Đa Năng",
+      "close-button-title": "Đóng thông báo testnet",
+      "close-button-aria-label": "Từ chối thông báo testnet Push Chain",
+      "container-aria-label": "Thông báo testnet Push Chain",
+      "container-role": "Thông báo testnet Push Chain"
+    },
+    "rewards-notification": {
+      "title": "Beta Đóng Testnet Donut Đã Khởi Động!",
+      "description": "Nhận cái nhìn sơ lược về Testnet, Donut, xây dựng ứng dụng đa nền tảng và giành giải thưởng!",
+      "image-alt": "Phần Thưởng Testnet Push Chain - Xây Dựng Ứng Dụng Đa Năng",
+      "close-button-title": "Đóng thông báo phần thưởng",
+      "close-button-aria-label": "Từ chối thông báo phần thưởng Push Chain",
+      "container-aria-label": "Thông báo phần thưởng Push Chain",
+      "container-role": "Thông báo phần thưởng Push Chain"
+    },
+    "info-bar": {
+      "title": "Ra Mắt trên Push Testnet Ngay Bây Giờ — Mở Khóa Phần Thưởng cho Người Xây Dựng và Người Dùng Sớm.",
+      "learn-more-text": "Tìm Hiểu Thêm",
+      "learn-more-title": "Tìm hiểu thêm về thông báo này",
+      "learn-more-aria-label": "Mở liên kết thông báo trong tab mới",
+      "dismiss-button-title": "Từ chối thông báo",
+      "dismiss-button-aria-label": "Đóng thanh thông báo",
+      "container-aria-label": "Thông báo trang web",
+      "container-role": "Biển quảng cáo thông báo trang web",
+      "star-icon-alt": "Biểu tượng ngôi sao thông báo"
+    },
+    "alert": {
+      "message": "Push Metamask Snap Đã Khởi Động,",
+      "know-more-text": "Bắt Đầu!",
+      "know-more-title": "Bắt đầu với Push Metamask Snap",
+      "know-more-aria-label": "Mở Push Metamask Snap trong tab mới",
+      "close-button-title": "Đóng cảnh báo",
+      "close-button-aria-label": "Từ chối cảnh báo Push Metamask Snap",
+      "container-aria-label": "Thông báo Push Metamask Snap",
+      "container-role": "Biển quảng cáo cảnh báo Push Metamask Snap"
+    }
+  }
+}

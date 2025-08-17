@@ -1,164 +1,569 @@
 {
+  "global": {
+    "site-name": "بوش تشين — الطبقة الأولى العالمية للتطبيقات",
+    "site-description": "الطبقة الأولى ذات الحالة المشتركة للتطبيقات العالمية. انشر مرة واحدة؛ اصل إلى المستخدمين على أي سلسلة. استخدم أي محفظة. ادفع بأي رمز مميز. بدون تبديل الشبكة."
+  },
   "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - انتقل إلى الصفحة الرئيسية",
+      "language-icon-alt": "أيقونة اختيار اللغة",
+      "hamburger-menu-alt": "افتح قائمة التنقل",
+      "testnet-badge-alt": "Push Chain Testnet Donut - عرض حالة الشبكة التجريبية"
+    },
     "logo": {
       "imagealt": "صورة شعار Push Chain",
       "imagetitle": "شعار Push Chain",
-      "ctatitle": "الذهاب إلى الصفحة الرئيسية"
+      "ctatitle": "انتقل إلى الصفحة الرئيسية لـ Push Chain"
     },
     "testnet": {
-      "title": "شبكة الاختبار",
+      "title": "الشبكة التجريبية",
+      "aria-label": "قسم الشبكة التجريبية",
       "link1": {
-        "title": "Push Scan",
-        "subtitle": "مستكشف الكتل لـ Push Chain"
+        "text": "Push Scan",
+        "subtext": "مستكشف الكتل لـ Push Chain",
+        "title": "استكشف معاملات وكتل Push Chain التجريبية على Push Scan"
       },
       "link2": {
-        "title": "الصنبور",
-        "subtitle": "احصل على رموز شبكة الاختبار"
+        "text": "Faucet",
+        "subtext": "احصل على رموز الشبكة التجريبية",
+        "title": "احصل على رموز مجانية للشبكة التجريبية لتطوير Push Chain"
       }
     },
     "developers": {
       "title": "المطورون",
+      "aria-label": "قسم المطورين",
       "link1": {
-        "title": "البدء",
-        "subtitle": "مقدمة للبناء على Push Chain"
+        "text": "ابدأ",
+        "subtext": "مقدمة للبناء على Push Chain",
+        "title": "ابدأ ببناء التطبيقات الشاملة على Push Chain - وثائق المطورين"
       },
       "link2": {
-        "title": "البداية السريعة",
-        "subtitle": "إعداد بيئة التطوير في ثوانٍ"
+        "text": "البداية السريعة",
+        "subtext": "إعداد بيئة التطوير في ثوانٍ",
+        "title": "دليل البداية السريعة - إعداد بيئة تطوير Push Chain فوراً"
       },
       "link3": {
-        "title": "الدروس التعليمية",
-        "subtitle": "أدلة خطوة بخطوة للبناء مع Push"
+        "text": "الدروس التعليمية",
+        "subtext": "أدلة خطوة بخطوة للبناء مع Push",
+        "title": "تعلّم بالدروس العملية - ابنِ أول تطبيق شامل لك على Push Chain"
       },
       "link4": {
-        "title": "GitHub",
-        "subtitle": "عرض الكود الأساسي وأدوات المصدر المفتوح"
+        "text": "GitHub",
+        "subtext": "عرض الكود الأساسي وأدوات المصدر المفتوح",
+        "title": "استكشف كود مصدر Push Chain وأدوات التطوير على GitHub"
       },
       "link5": {
-        "title": "Discord المطورين",
-        "subtitle": "تواصل مع مجتمع المطورين"
+        "text": "Discord للمطورين",
+        "subtext": "تواصل مع مجتمع المطورين",
+        "title": "انضم إلى مجتمع مطوري Push Chain على Discord للدعم والتعاون"
       }
     },
     "community": {
       "title": "المجتمع",
+      "aria-label": "قسم المجتمع",
       "link1": {
-        "title": "قاعدة المعرفة",
-        "subtitle": "العثور على تحليلات عميقة للميزات"
+        "text": "قاعدة المعرفة",
+        "subtext": "اعثر على تحليلات عميقة للميزات",
+        "title": "استكشف وثائق Push Chain الشاملة وأدلة الميزات"
       },
       "link2": {
-        "title": "اقتصاديات الرمز",
-        "subtitle": "الرمز الأصلي الذي يشغل كل شيء على Push Chain"
+        "text": "اقتصاد الرمز المميز",
+        "subtext": "الرمز الأصلي الذي يشغل كل شيء على Push Chain",
+        "title": "تعرّف على اقتصاد رمز Push Chain وفائدة رمز $PC"
       },
       "link3": {
-        "title": "X/Twitter",
-        "subtitle": "متابعة التحديثات وأخبار النظام البيئي"
+        "text": "X/Twitter",
+        "subtext": "تابع التحديثات وأخبار النظام البيئي",
+        "title": "تابع Push Chain على X (Twitter) لآخر التحديثات والإعلانات"
       },
       "link4": {
-        "title": "Discord",
-        "subtitle": "الدردشة والبناء والتفاعل مع المجتمع"
+        "text": "Discord",
+        "subtext": "تحدث وابنِ واستمتع مع المجتمع",
+        "title": "انضم إلى مجتمع Push Chain على Discord للمناقشات والدعم"
       },
       "link5": {
-        "title": "Telegram",
-        "subtitle": "انضم إلى المحادثة وابق متصلاً"
+        "text": "Telegram",
+        "subtext": "انضم للمحادثة وابق على اطلاع",
+        "title": "تواصل مع مجتمع Push Chain على Telegram للتحديثات الفورية"
       }
     },
     "resources": {
       "title": "الموارد",
+      "aria-label": "قسم الموارد",
       "link1": {
-        "title": "المدونة",
-        "subtitle": "التحديثات والتحليلات العميقة وقصص التطوير"
+        "text": "المدونة",
+        "subtext": "التحديثات والتحليلات العميقة وقصص المطورين",
+        "title": "اقرأ مدونة Push Chain لآخر التحديثات والتحليلات التقنية العميقة وقصص المطورين"
       },
       "link2": {
-        "title": "الورقة المبسطة",
-        "subtitle": "الرؤية والتكنولوجيا، مبسطة"
+        "text": "الورقة المبسطة",
+        "subtext": "الرؤية والتكنولوجيا، بشكل مبسط",
+        "title": "اقرأ الورقة المبسطة لـ Push Chain - رؤية مبسطة ونظرة عامة تقنية"
       },
       "link3": {
-        "title": "الأسئلة الشائعة",
-        "subtitle": "إجابات سريعة للأسئلة الشائعة"
+        "text": "الأسئلة الشائعة",
+        "subtext": "إجابات سريعة للأسئلة الشائعة",
+        "title": "تصفح الأسئلة الشائعة حول Push Chain"
       }
     },
     "language": {
       "title": "اللغة",
-      "ctatitle": "يرجى اختيار لغتك",
-
+      "aria-label": "قائمة اختيار اللغة المنسدلة",
       "english": "English",
-      "english-ctatitle": "Change Language to English",
-
+      "english-ctatitle": "تغيير اللغة إلى الإنجليزية",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
-
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
-
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
       "korean": "한국어",
-      "korean-ctatitle": "언어를 한국어로 변경하기",
-
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
       "japanese-ctatitle": "言語を日本語に変更する",
-
       "portuguese": "Português",
-      "portuguese-ctatitle": "تغيير اللغة إلى البرتغالية",
-
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "تغيير اللغة إلى الروسية",
-
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "تغيير اللغة إلى التركية",
-
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "تغيير اللغة إلى الفرنسية",
-
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "تغيير اللغة إلى الإندونيسية",
-
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "تغيير اللغة إلى الفيتنامية",
-
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "تغيير اللغة إلى الألمانية",
-
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
       "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
-      "title": "Push Portal",
-      "alt-title": "زيارة Push Portal"
+      "text": "Push Portal",
+      "title": "الوصول إلى Push Portal - اكسب نقاط كمطور أو مستخدم أو مُحقق"
     }
-  },
-  "home": {
-    "hero-section": {
-      "title": "أي سلسلة، أي تطبيق، جميع المستخدمين.\nPush Chain واحدة.",
-      "description": "أول طبقة 1 مبنية للتطبيقات العالمية.\nابنِ ونشر مرة واحدة، اجذب المستخدمين من أي سلسلة.",
-      "primary-button": "ابدأ البناء",
-      "secondary-button": "استكشف قاعدة المعرفة"
-    },
-    "whatis-section": {
-      "titleFirst": "سلسلة",
-      "titleSecondGraditent": "عالمية",
-      "titleThird": "حقيقية",
-      "bottomTextFirst": "انشر مرة واحدة،",
-      "bottomTextSecond": "اوصل في كل مكان",
-      "bottomTextLink": "ابدأ"
-    },
-    "email-section": {
-      "title": "لا تفوت أي تحديث",
-      "text": "اشترك وابق على اطلاع بإعلانات النظام البيئي والهدايا والمزيد.",
-      "email-input": "بريدك الإلكتروني",
-      "submit-button": "اشتراك",
-      "loading-submit-button": "يرجى الانتظار..."
-    }
-  },
-  "alert": {
-    "know-more": "ابدأ!"
   },
   "footer": {
     "mail-section": {
       "title": "احصل على آخر أخبار Push",
       "privacy": "سياسة الخصوصية",
       "tos": "الشروط والأحكام"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "انضم إلينا وابنِ مستقبل تواصل Web3.",
+        "link-text": "شاهد الوظائف المتاحة",
+        "image-title": "انضم إلينا",
+        "image-alt": "أيقونة توضح الوظائف المتاحة"
+      },
+      "docs-card": {
+        "text": "اتبع أدلةنا البسيطة للبدء في دقائق.",
+        "link-text": "استكشف الوثائق",
+        "image-title": "ابدأ الآن",
+        "image-alt": "أيقونة توضح سهولة البدء"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "الشركة",
+        "push-ecosystem-link": "Push Ecosystem",
+        "media-kit-link": "Media Kit",
+        "terms-link": "الشروط",
+        "privacy-link": "الخصوصية"
+      },
+      "governance-column": {
+        "title": "الحوكمة",
+        "push-governance-link": "Push Governance",
+        "guides-link": "الدلائل",
+        "forum-link": "المنتدى",
+        "grants-link": "المنح",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "المصادر",
+        "blog-link": "المدونة",
+        "whitepaper-link": "الورقة البيضاء",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "دليل المطورين"
+      },
+      "subscribe-column": {
+        "title": "الدعم",
+        "contact-us-link": "تواصل معنا",
+        "faq-link": "الأسئلة الشائعة"
+      },
+      "support-column": {
+        "title": "اشترك",
+        "email-placeholder": "بريدك الإلكتروني"
+      }
+    }
+  },
+  "seo": {
+    "title": "الرئيسية",
+    "description": "طبقة أولى بحالة مشتركة للتطبيقات العالمية. انشر مرة واحدة؛ واصل المستخدمين على أي سلسلة. استخدم أي محفظة. ادفع بأي رمز مميز.",
+    "og-title": "Push Chain - الطبقة الأولى العالمية للتطبيقات",
+    "og-description": "نشر واحد لمستخدمي EVM وغير EVM. استخدم أي محفظة وادفع بأي رمز مميز — بدون تبديل الشبكة.",
+    "twitter-title": "انشر مرة واحدة. اوصل لأي سلسلة.",
+    "twitter-description": "تعامل من أي سلسلة. استخدم أي محفظة. ادفع بأي رمز مميز. بدون تبديل الشبكة."
+  },
+  "hero-section": {
+    "title": "أي سلسلة، أي تطبيق، جميع المستخدمين.\nسلسلة Push واحدة.",
+    "description": "أول طبقة أولى مبنية للتطبيقات الشاملة.\nابنِ ونشر مرة واحدة، واستقطب المستخدمين من أي سلسلة.",
+    "primary-button": "ابدأ البناء",
+    "primary-button-title": "ابدأ رحلة المطور الخاصة بك مع Push Chain!",
+    "secondary-button": "استكشف قاعدة المعرفة",
+    "secondary-button-title": "تعلم واستكشف Push Chain",
+    "section-aria-label": "قسم Push Chain الرئيسي - مقدمة بلوك تشين الطبقة الأولى الشاملة",
+    "primary-button-aria-label": "ابدأ ببناء التطبيقات الشاملة على Push Chain - اذهب إلى وثائق المطورين",
+    "secondary-button-aria-label": "تعرف على ميزات ومفاهيم Push Chain في قاعدة المعرفة",
+    "hero-background-alt": "رسوم متحركة لخلفية Push Chain الرئيسية تُظهر الاتصال الشامل لبلوك تشين",
+    "hero-background-title": "Push Chain - الطبقة الأولى الشاملة لتطبيقات متعددة السلاسل",
+    "schema-headline": "Push Chain - طبقة أولى شاملة للتطبيقات",
+    "schema-description": "انشر مرة واحدة على Push Chain واوصل للمستخدمين على أي بلوك تشين مع التطبيقات الشاملة"
+  },
+  "whatis-section": {
+    "titleFirst": "سلسلة",
+    "titleSecondGraditent": "عالمية",
+    "titleThird": "حقيقية",
+    "bottomTextFirst": "انشر مرة واحدة،",
+    "bottomTextSecond": "اوصل في كل مكان",
+    "bottomLinkText": "ابدأ الآن",
+    "bottomLinkTitle": "انتقل إلى مركز التوثيق",
+    "section-aria-label": "ما هي Push Chain - شرح البلوك تشين العالمي",
+    "animation-alt": "رسوم متحركة توضح نشر التطبيقات العالمية لـ Push Chain عبر عدة بلوك تشينز",
+    "animation-title": "مرئيات النشر العالمي لـ Push Chain - انشر مرة واحدة، اوصل لأي سلسلة",
+    "bottom-link-aria-label": "انتقل إلى توثيق Push Chain لبدء بناء التطبيقات العالمية"
+  },
+  "chain-features-section": {
+    "section-aria-label": "قسم الابتكارات والمميزات لشبكة Push Chain",
+    "header": {
+      "main-text": "مبني على الابتكارات للقضاء على التجزئة!",
+      "other-text": "Push هي الطبقة الأولى العالمية الوحيدة التي ستحتاجها على الإطلاق!"
+    },
+    "box1": {
+      "texttitle": "معاملات أي شبكة",
+      "bodytext": "تدعم شبكة Push Chain المعاملات من أي بلوك تشين. يمكن للمستخدمين دفع الغاز بأي رمز مميز — لا حاجة للربط.",
+      "imagealt": "رسم توضيحي يُظهر شعارات مختلفة لشبكات البلوك تشين تتساقط في آلة كرة الدبابيس.",
+      "imagetitle": "يدعم المعاملات من أي شبكة بلوك تشين."
+    },
+    "box2": {
+      "texttitle": "تجريد المحافظ",
+      "bodytext": "دع أي محفظة من أي شبكة تتصل وتتفاعل وتتداول. اكسر حواجز web3 باستخدام تسجيل الدخول الاجتماعي أو البريد الإلكتروني. المستخدم يقرر على شبكة Push Chain.",
+      "imagealt": "رسم توضيحي يُظهر محفظة Metamask ومحفظة Phantom، إلخ تخرج من محفظة كبيرة عليها شعار Push Chain.",
+      "imagetitle": "يدعم أي محافظ موجودة مثل Metamask و Phantom، إلخ إلى جانب تسجيل الدخول الاجتماعي"
+    },
+    "box3": {
+      "texttitle": "متوافق 100% مع EVM",
+      "bodytext": "انشر بدون أي كود على الشبكة. حول تطبيقك الأصلي إلى تطبيق عالمي في دقائق.",
+      "imagealt": "رسم توضيحي يُظهر شعار Ethereum Virtual Machine يدور ويقول توافق 100% مع EVM.",
+      "imagetitle": "لا حاجة لتغييرات في الكود على الشبكة، متوافق 100% مع EVM."
+    },
+    "box4": {
+      "texttitle": "العقود الذكية العالمية",
+      "bodytext": "اصنع مرة واحدة، شغل عبر الشبكات، تجارب متعددة الخطوات مع عقد واحد مقاوم للمستقبل.",
+      "imagealt": "رسم توضيحي يُظهر أسطر الكود المطلوبة لتكامل Push Protocol",
+      "imagetitle": "انشر مرة واحدة، أصبح متوافق فوراً مع جميع الشبكات المدعومة (EVM أو غير EVM)."
+    },
+    "box5": {
+      "texttitle": "تجريد الرسوم العالمي",
+      "bodytext": "يسمح للمستخدمين بدفع الغاز بأي رمز مميز، على أي شبكة بدون ربط.",
+      "imagealt": "رسم توضيحي يُظهر شعارات مختلفة لـ Bitcoin و Ethereum و Solana تدور حول Push Chain",
+      "imagetitle": "يدعم أي رمز مميز من أي شبكة للمعاملات."
+    },
+    "box6": {
+      "texttitle": "طبقة التنفيذ العالمية",
+      "bodytext": "اصنع تطبيقات ذرية وقابلة للتركيب عبر web3. أنشئ تجارب تطبيقات لم ترها من قبل، من خلال وجود عدة مستخدمين من شبكات مختلفة يتفاعلون مع نفس التطبيق.",
+      "imagealt": "رسم توضيحي يُظهر قطع تترس مختلفة تدخل ثقب دودي وشعار Push Chain يخرج من الطرف الآخر.",
+      "imagetitle": "المعاملات من أي شبكة تنتهي على Push Chain، مما يمكن مستخدمي أي شبكة من استخدام نفس التطبيق بشكل أصلي أي طبقة التنفيذ العالمية."
+    },
+    "box7": {
+      "texttitle": "الحالة المشتركة",
+      "bodytext": "الوصول إلى بيانات الحساب والحالة من الشبكات الأخرى في عقدك الذكي.",
+      "tagText": "قريباً",
+      "tags": {
+        "title1": "القراءة من الشبكات"
+      },
+      "imagealt": "رسم توضيحي يُظهر Push Chain تنمو بحركة كتل متحركة.",
+      "imagetitle": "(خارطة الطريق) الحالة المشتركة تسمح بالوصول إلى بيانات الحساب والحالة من الشبكات الأخرى في عقدك الذكي."
+    },
+    "box8": {
+      "texttitle": "الحلول القابلة للبرمجة",
+      "bodytext": "تشغيل والتحقق وإتمام المعاملات عبر أي شبكة باستخدام عقدك الذكي.",
+      "tagText": "قريباً",
+      "tags": {
+        "title1": "القراءة من الشبكات"
+      },
+      "imagealt": "رسم توضيحي يُظهر قطع تترس بألوان مختلفة تندمج وتتغير.",
+      "imagetitle": "(خارطة الطريق) الحلول القابلة للبرمجة تسمح للمستخدمين بتشغيل والتحقق وإتمام المعاملات عبر أي شبكة باستخدام عقدك الذكي."
+    },
+    "footer": {
+      "title": "قاعدة مستخدمي تطبيقك من خلال التوسع عالمياً",
+      "secondary": "بدون أي جهد!",
+      "ctatext": "ابدأ البناء",
+      "ctatitle": "انشر مرة واحدة، اضاعف قاعدة مستخدميك 10 مرات. قم بزيارة وثائق المطورين."
+    }
+  },
+  "partners-section": {
+    "section-aria-label": "شركاء النظام البيئي لـ Push Chain والتكاملات",
+    "title": "مدعوم بـ Push Chain",
+    "subtitle": "اكتشف التطبيقات التي ضاعفت قاعدة مستخدميها من خلال النشر ببساطة على Push Chain.",
+    "ctatitle": "تحقق من الشركاء والتطبيقات والبنية التحتية المنشورة على Push Chain",
+    "ctatext": "استكشف النظام البيئي",
+    "partners-grid-aria-label": "شبكة من شعارات الشركاء تظهر مشاريع Web3 التي تستخدم Push Chain",
+    "partner-logo-title-prefix": "شعار الشريك - ",
+    "partner-logo-alt-prefix": "شعار ",
+    "mobile-view-aria-label": "عرض الهاتف المحمول لشركاء النظام البيئي لـ Push Chain"
+  },
+  "stats-section": {
+    "section-aria-label": "إحصائيات ومقاييس أداء Push Chain",
+    "title": "حقق",
+    "titleGradient": "فوري",
+    "titleThird": "التشغيل البيني",
+    "description": "محسن للأداء.\nمعدل معاملات عالي، رسوم غاز منخفضة جداً، واستكمال\nتحت الثانية لتنفيذ التطبيقات في الوقت الفعلي.",
+    "animation-alt": "رسوم متحركة تفاعلية تُظهر التشغيل البيني الفوري لـ Push Chain عبر عدة بلوك تشين",
+    "animation-title": "تصور التشغيل البيني الفوري لـ Push Chain",
+    "stats": {
+      "stat1": {
+        "title": "السلاسل المدعومة",
+        "imagealt": "رسم توضيحي يُظهر السلاسل المدعومة",
+        "imagetitle": "قائمة بجميع السلاسل المدعومة مثل Ethereum وSolana وBNB Chain وغيرها"
+      },
+      "stat2": {
+        "title": "TPS",
+        "description": "4.2k"
+      },
+      "stat3": {
+        "title": "الاستكمال الأصلي",
+        "description": "فوري"
+      },
+      "stat4": {
+        "title": "وقت البلوك الأصلي",
+        "description": "1s"
+      }
+    }
+  },
+  "blog-section": {
+    "subtitle": "الأخبار والسجلات التطويرية والأفكار",
+    "subtitle-aria-label": "معلومات فئة المدونة",
+    "title": "نبضك من Push Chain",
+    "title-aria-label": "أحدث منشورات وتحديثات مدونة Push Chain",
+    "explore-link-text": "استكشف المزيد من المقالات",
+    "explore-link-title": "زر مدونة Push Chain لقراءة جميع المقالات والتحديثات",
+    "explore-link-aria-label": "الانتقال إلى صفحة مدونة Push Chain",
+    "section-aria-label": "قسم منشورات وأخبار مدونة Push Chain",
+    "blog-posts-list-aria-label": "منشورات مدونة Push Chain الحديثة",
+    "blog-post-aria-label": "اقرأ منشور المدونة حول {title}",
+    "blog-post-title-prefix": "اقرأ منشور المدونة - ",
+    "loading-text": "جاري تحميل أحدث منشورات المدونة...",
+    "error-text": "غير قادر على تحميل منشورات المدونة في هذا الوقت",
+    "no-posts-text": "لا توجد منشورات مدونة متاحة"
+  },
+  "trustedby-section": {
+    "title": "مبني من قبل الفريق الموثوق به من قبل رواد web3",
+    "section-aria-label": "قسم الثقة في Push Chain",
+    "trusted-by-alt": "المستثمر - "
+  },
+  "featured-section": {
+    "aria-label": "قسم المميز",
+    "tag": "مميز في",
+    "title": "Push Chain في دائرة الضوء",
+    "subtitle": "لا تكتفِ بكلامنا فقط. اطلع على ما تقوله وسائل الإعلام حول السلسلة العالمية الحقيقية.",
+    "articles-image-alt": "التغطية الإعلامية من ",
+    "articles-text": "اقرأ التغطية الكاملة",
+    "articles-title-1": "اقرأ ",
+    "articles-title-2": "آراء حول Push Chain بالتفصيل الكامل",
+    "articles": {
+      "binance-chain": {
+        "text": "نحن متحمسون للإعلان أن Push Protocol، وهو بروتوكول اتصالات لامركزي رائد لـ Web3، قد تم إطلاقه الآن على BNB Chain."
+      },
+      "coindesk": {
+        "text": "Protocol Village: Unstoppable تتعاون مع Push Protocol لتقديم دردشات جماعية محمية بالرموز المميزة"
+      },
+      "defiant": {
+        "text": "Unstoppable Domains تطلق دردشات جماعية محمية بالرموز المميزة. التعاون مع Push Protocol يهدف إلى مواجهة المعلومات المضللة والاحتيال."
+      },
+      "balaji": {
+        "text": "الإشعارات التي يتحكم فيها المستخدم. شركتان تتحكمان في الإشعارات المرسلة إلى مليارات الهواتف الذكية: Apple و Google."
+      },
+      "defiprime": {
+        "text": "Harsh Rajat يتحدث عن مستقبل الخدمات المصرفية، وحوافز بروتوكول EPNS وأين يكمن النموذج التجاري للإشعارات اللامركزية."
+      },
+      "ethfoundation": {
+        "text": "منذ HackMoney، وجه Richa و Harsh طاقة هائلة نحو بناء EPNS لما يسمونه \"قطعة مفقودة من web3.\""
+      },
+      "beincrypto": {
+        "text": "كيف تعمل شبكات الاتصالات Web3: غوص تقني عميق"
+      },
+      "the-block": {
+        "text": "بروتوكول إشعارات Web3 Push سيطلق سلسلة Layer 1 الخاصة به"
+      },
+      "business-insider": {
+        "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوك تشين العالمية"
+      },
+      "chainwire": {
+        "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوك تشين العالمية."
+      },
+      "benzinga": {
+        "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوك تشين العالمية"
+      },
+      "crypto-briefing": {
+        "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوك تشين العالمية"
+      },
+      "cryptoslate": {
+        "text": "Push Protocol يطلق Push Chain لتوحيد اتصالات ومعاملات البلوك تشين"
+      },
+      "messari": {
+        "text": "EPNS يمكّن الحوافز والأرباح السلبية للمستخدمين الذين يتلقون الإشعارات اللامركزية."
+      },
+      "coin-telegraph-1": {
+        "text": "Harsh Rajat، مؤسس ورئيس مشروع Push Protocol، يشرح الارتفاع في تطوير تطبيقات دردشة Web3 في أحدث حلقة من Hashing It Out."
+      },
+      "coin-telegraph-2": {
+        "text": "Unstoppable Domains تطلق ميزة الدردشة الجماعية المحمية بالشارات لحاملي أسماء المستخدمين."
+      }
+    }
+  },
+  "ending-section": {
+    "aria-label": "قسم بناء التطبيقات الشاملة",
+    "section-title": "ابنِ التطبيقات الشاملة.",
+    "section-subtitle": "اكسر الحواجز. ابنِ مرة واحدة، وتوسع على كل بلوك تشين.",
+    "docs-link": {
+      "text": "استكشف وثائق Push Chain",
+      "title": "استكشف وثائق Push Chain وموارد المطورين",
+      "aria-label": "افتح وثائق Push Chain في علامة تبويب جديدة"
+    },
+    "cta-link": {
+      "text": "LFG Push Chain",
+      "title": "ابدأ مع Push Chain - منصة البلوك تشين الشاملة",
+      "aria-label": "ابدأ مع تطوير Push Chain"
+    }
+  },
+  "pages": {
+    "brb": {
+      "seo": {
+        "title": "BRB — أسباب بليون لبناء",
+        "description": "هاكاثون Push Chain الرائد: حل المشكلات الحقيقية، وتعلم من الخبراء، واربح جوائز.",
+        "og-title": "BRB - هاكاثون Push Chain",
+        "og-description": "المسارات والجداول الزمنية والجوائز لمسابقة أسباب بليون لبناء.",
+        "twitter-title": "هاكاثون BRB - ابن واربح",
+        "twitter-description": "انضم إلى هاكاثون Push Chain لإطلاق مشاريعك والفوز بجوائز."
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "لا تفوّت أي تحديث",
+      "text": "اشترك وابق على اطلاع دائم بإعلانات النظام البيئي، والجوائز والمزيد.",
+      "email-input": "بريدك الإلكتروني",
+      "email-input-placeholder": "أدخل عنوان بريدك الإلكتروني",
+      "email-input-title": "اشترك في رسالة Push Chain الإخبارية للحصول على آخر المستجدات",
+      "email-input-aria-label": "عنوان البريد الإلكتروني للاشتراك في الرسالة الإخبارية",
+      "submit-button": "اشترك",
+      "submit-button-title": "اشترك في رسالة Push Chain الإخبارية",
+      "submit-button-aria-label": "الاشتراك في الرسالة الإخبارية",
+      "loading-submit-button": "يرجى الانتظار...",
+      "arrow-button-aria-label": "الاشتراك في الرسالة الإخبارية",
+      "arrow-button-title": "الاشتراك في تحديثات Push Chain",
+      "form-aria-label": "نموذج الاشتراك في الرسالة الإخبارية",
+      "success-message-aria-label": "تم الاشتراك بنجاح",
+      "error-message-aria-label": "خطأ في الاشتراك"
+    },
+    "cookie-banner": {
+      "message": "نستخدم ملفات تعريف الارتباط لتخصيص تجربتك. تعرف على المزيد في سياسة",
+      "privacy-policy-link": "سياسة الخصوصية",
+      "privacy-policy-link-title": "اقرأ سياسة الخصوصية لبروتوكول Push",
+      "privacy-policy-link-aria-label": "فتح سياسة الخصوصية في علامة تبويب جديدة",
+      "accept-button": "قبول",
+      "accept-button-title": "قبول ملفات تعريف الارتباط لتخصيص تجربتك",
+      "accept-button-aria-label": "قبول ملفات تعريف الارتباط وإغلاق الشعار",
+      "reject-button": "الرفض",
+      "reject-button-title": "الرفض من ملفات تعريف الارتباط وإغلاق الشعار",
+      "reject-button-aria-label": "رفض ملفات تعريف الارتباط وإغلاق الشعار",
+      "banner-aria-label": "شعار الموافقة على ملفات تعريف الارتباط",
+      "banner-role": "إشعار تفضيلات ملفات تعريف الارتباط"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "الأسئلة الشائعة حول Push Chain - بلوك تشين عالمي",
+      "title": "أسئلة\nمتكررة",
+      "title-aria-label": "الأسئلة والأجوبة الشائعة حول Push Chain",
+      "discord-link-text": "اسألنا على Discord",
+      "discord-link-title": "انضم إلى مجتمع Discord الخاص بـ Push Chain للحصول على الدعم والأسئلة",
+      "discord-link-aria-label": "فتح مجتمع Discord في علامة تبويب جديدة",
+      "explore-more-text": "استكشف المزيد من الأسئلة الشائعة",
+      "explore-more-title": "عرض وثائق الأسئلة الشائعة الشاملة الخاصة بـ Push Chain وأدلة المطور",
+      "explore-more-aria-label": "الانتقال إلى صفحة الأسئلة الشائعة الشاملة الخاصة بـ Push Chain",
+      "accordion-aria-label": "قائمة الأسئلة الشائعة حول Push Chain",
+      "answer-aria-label": "إجابة على السؤال - ",
+      "faqs": {
+        "faq1": {
+          "question": "ما هو Push Chain؟",
+          "answer": "<1>Push Chain هو بلوك تشين مشترك الحالة يزيل التجزئة ويجعل التطبيقات عالمية.</1><1>انشر مرة واحدة على Push. يستخدم المستخدمون على أي سلسلة - EVM أو غير EVM - تطبيقك باستخدام محافظهم ورموزهم الحالية؛ تتم معالجة الرسوم من الخلف.</1>"
+        },
+        "faq2": {
+          "question": "كيف يعمل؟ (ELI5)",
+          "answer": "<1>استخدم المحفظة التي لديك بالفعل - Push تتعامل مع الأجزاء عبر السلاسل من الخلف.</1><1>1. <2>ابدأ من أي مكان.</2> استخدم أي محفظة على أي سلسلة - لا يوجد تبديل للشبكة.</1><1>2. <2>وقّع مرة واحدة.</2> ادفع برمز لديك بالفعل؛ نضع الرسوم على سلسلتك الرئيسية.</1><1>3. <2>نوجهها.</2> حساب مرتبط على Push (لا يزال حسابك) يرسل مكالمتك إلى التطبيق - غير احترازي.</1><1>4. <2>أنت دائمًا أنت.</2> نطابق محفظة سلسلتك الرئيسية بحسابك المرتبط بحيث يتم التحقق من الإجراءات بشكل صحيح وإسنادها إليك على Push.</1><1>5. <2>تم بسرعة.</2> يعمل التطبيق على Push؛ تتم معالجة الرسوم من الخلف. لا توجد جسور، ولا توجد محفظة جديدة.</1><1>هذا هو السبب في أنه يمكن للمستخدمين على أي سلسلة استخدام نفس التطبيق الذي تم نشره على Push Chain - مما يجعل التطبيقات عالمية حقًا.</1>"
+        },
+        "faq3": {
+          "question": "هل أحتاج إلى محفظة أو رمز غاز مختلف؟",
+          "answer": "<1><2>لا.</2></1><1><2>احتفظ بمحفظتك.</2> استخدم المحفظة التي لديك بالفعل - لا توجد محفظة أو حساب جديد.</1><1><2>ادفع بما لديك.</2> يمكن دفع الرسوم بالرموز التي لديك بالفعل على سلسلتك الرئيسية؛ نتعامل مع التحويل من الخلف.</1><1><2>لا يوجد تبديل للشبكة.</2> ابق على سلسلتك الرئيسية - لا توجد جسور لمجرد الحصول على رمز غاز.</1><1><2>غير احترازي.</2> أنت توقع على كل إجراء؛ لا تحتفظ Push بمفاتيحك.</1><1><2>من الخلف.</2> يتم تسوية الرسوم تلقائيًا في $PC - لست بحاجة إلى إدارتها.</1>"
+        },
+        "faq4": {
+          "question": "ما هو الفرق بين هذا والجسور أو طبقات المراسلة؟",
+          "answer": "<1><2>إجابة قصيرة</2>: Push هو المكان الذي يعمل فيه تطبيقك. الجسور / المراسلة تنقل الرموز أو الرسائل بين السلاسل مما يعقد كل شيء للمستخدمين والمطورين.</1><1><2>الوطن الواحد مقابل العديد من النسخ المتماثلة.</2> مع الجسور / المراسلة تقوم بالنشر لكل سلسلة والمزامنة عبر الرسائل. على Push تقوم بالنشر مرة واحدة؛ يضرب الجميع نفس العقد والحالة المشتركة.</1><1><2>لا توجد أصول ملفوفة أو جسور إجبارية.</2> يبقى المستخدمون على سلسلتهم الرئيسية ويدفعون بما لديهم بالفعل؛ نتعامل مع التوجيه وتحويل الرسوم من الخلف.</1><1><2>هوية موحدة والتحقق.</2> نقبل التوقيعات من أي محفظة / سلسلة وننسبها إلى نفس المستخدم على Push - غير احترازي.</1><1><2>أقل أجزاء متحركة.</2> لا توجد رقصات موافقة عبر السلسلة ، ولا توجد مطاردة لرموز الغاز ، ولا توجد عقود لاصقة لإبقائها متزامنة.</1><1><2>استخدم الجسور عندما تريد ، وليس لأنك يجب.</2> لا تزال السيولة تتحرك عبر الجسور ، لكن التفاعل مع تطبيقك لا يتطلبه.</1><1>النتيجة: تطبيقات أبسط ، مصدر واحد للحقيقة ، وتجربة مستخدم تبدو وكأنها سلسلة واحدة - حتى عندما لا يكون المستخدمون كذلك.</1>"
+        },
+        "faq5": {
+          "question": "هل هو EVM فقط؟ ما هي السلاسل المدعومة؟",
+          "answer": "<1><2>لا ، يدعم Push كلاً من السلاسل EVM وغير EVM.</2> على الرغم من أنه EVM أولاً للنشر ، إلا أن المستخدمين من أي سلاسل (بما في ذلك غير EVM) يمكنهم استخدام تطبيقك كما لو كانوا يستخدمونه أصلاً.</1>\n<1><2>انشر مرة واحدة. التفاعل في كل مكان.</2> اكتب عقود EVM قياسية على Push (Solidity/Vyper). تظل الأدوات كما هي.</1>\n<1><2>المستخدمون من أي سلسلة.</2> تعمل Ethereum و EVM بشكل طبيعي. المستخدمون من سلاسل غير EVM يحتاجون إلى جسر.</1><1><2>يستخدم Push جسوراً للتحقق من المستخدمين من السلاسل غير EVM.</2> نطابق التوقيعات من السلاسل غير EVM باستخدام البنية التحتية للجسور الموثوقة.</1>"
+        },
+        "faq6": {
+          "question": "كيف يمكنني البدء في تطوير تطبيق Push Chain الخاص بي؟",
+          "answer": "<1>تحقق من وثائق التطوير الخاصة بنا.</2> ابدأ في بناء تطبيقات لامركزية جديدة على Push Chain من خلال وثائقنا الشاملة. توجد أمثلة وإرشادات.</1>"
+        }
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "احصل على نظرة خاطفة على Testnet، Donut، ابنِ تطبيقات عالمية واربح جوائز!",
+      "button-text": "احصل على تصريح النسخة التجريبية المغلقة",
+      "button-title": "انضم إلى شبكة اختبار Push Chain واحصل على تصريح النسخة التجريبية المغلقة",
+      "button-aria-label": "افتح Telegram للحصول على تصريح النسخة التجريبية المغلقة لـ Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "إغلاق إشعار شبكة الاختبار",
+      "close-button-aria-label": "إغلاق إشعار شبكة اختبار Push Chain",
+      "container-aria-label": "إشعار شبكة اختبار Push Chain",
+      "container-role": "إعلان شبكة اختبار Push Chain"
+    },
+    "rewards-notification": {
+      "title": "النسخة التجريبية المغلقة لـ Donut Testnet مُتاحة الآن!",
+      "description": "احصل على نظرة خاطفة على Testnet، Donut، ابنِ تطبيقات عالمية واربح جوائز!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "إغلاق إشعار المكافآت",
+      "close-button-aria-label": "إغلاق إشعار مكافآت Push Chain",
+      "container-aria-label": "إشعار مكافآت Push Chain",
+      "container-role": "إعلان مكافآت Push Chain"
+    },
+    "info-bar": {
+      "title": "أطلق العنان الآن على Push Testnet — افتح المكافآت للبناة والمستخدمين الأوائل.",
+      "learn-more-text": "اعرف المزيد",
+      "learn-more-title": "تعرف على المزيد حول هذا الإعلان",
+      "learn-more-aria-label": "افتح رابط الإعلان في علامة تبويب جديدة",
+      "dismiss-button-title": "إغلاق الإعلان",
+      "dismiss-button-aria-label": "إغلاق شريط الإعلانات",
+      "container-aria-label": "إعلان الموقع",
+      "container-role": "شعار إعلان الموقع",
+      "star-icon-alt": "أيقونة نجمة الإعلان"
+    },
+    "alert": {
+      "message": "Push Metamask Snap مُتاح الآن,",
+      "know-more-text": "ابدأ!",
+      "know-more-title": "ابدأ مع Push Metamask Snap",
+      "know-more-aria-label": "افتح Push Metamask Snap في علامة تبويب جديدة",
+      "close-button-title": "إغلاق التنبيه",
+      "close-button-aria-label": "إغلاق تنبيه Push Metamask Snap",
+      "container-aria-label": "إعلان Push Metamask Snap",
+      "container-role": "شعار تنبيه Push Metamask Snap"
     }
   }
 }

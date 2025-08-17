@@ -1,0 +1,14 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "ドキュメント — ユニバーサルアプリを構築",
+        "description": "Push Chainでリリースするために必要なものがすべて揃っています：クイックスタート、SDK、APIリファレンス、サンプル、およびノードセットアップ。",
+        "og-title": "Push Chain Docs - クイックスタート、SDK & API",
+        "og-description": "明確なガイドと例を使用して、ユニバーサル実行レイヤーでアプリを構築および実行します。",
+        "twitter-title": "Push Chain Docs - 今すぐ構築",
+        "twitter-description": "迅速なリリースを実現するためのクイックスタート、SDK、APIリファレンス、およびサンプル。"
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Ana sayfaya git",
+      "language-icon-alt": "Dil seçimi simgesi",
+      "hamburger-menu-alt": "Navigasyon menüsünü aç",
+      "testnet-badge-alt": "Push Chain Testnet Donut - Testnet durumunu görüntüle"
+    },
+    "logo": {
+      "imagealt": "Push Chain Logosu Görseli",
+      "imagetitle": "Push Chain Logosu",
+      "ctatitle": "Push Chain ana sayfasına git"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "aria-label": "Testnet Bölümü",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Push Chain blok keşifçisi",
+        "title": "Push Chain testnet işlemlerini ve bloklarını Push Scan'de keşfedin"
+      },
+      "link2": {
+        "text": "Musluk",
+        "subtext": "Testnet token'ları al",
+        "title": "Push Chain geliştirme için ücretsiz testnet token'ları al"
+      }
+    },
+    "developers": {
+      "title": "Geliştiriciler",
+      "aria-label": "Geliştiriciler Bölümü",
+      "link1": {
+        "text": "Başlangıç",
+        "subtext": "Push Chain üzerinde geliştirmeye giriş",
+        "title": "Push Chain üzerinde evrensel uygulamalar geliştirmeye başlayın - Geliştirici dokümantasyonu"
+      },
+      "link2": {
+        "text": "Hızlı Başlangıç",
+        "subtext": "Saniyeler içinde geliştirme ortamını kur",
+        "title": "Hızlı başlangıç kılavuzu - Push Chain geliştirme ortamını anında kur"
+      },
+      "link3": {
+        "text": "Eğitimler",
+        "subtext": "Adım adım Push ile geliştirme kılavuzları",
+        "title": "Adım adım eğitimlerle Push Chain üzerinde ilk evrensel uygulamanızı geliştirin"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "Çekirdek kodu ve açık kaynaklı araçları görüntüle",
+        "title": "Push Chain kaynak kodunu ve geliştirme araçlarını GitHub'da keşfedin"
+      },
+      "link5": {
+        "text": "Geliştirici Discord",
+        "subtext": "Geliştirici topluluğuna bağlan",
+        "title": "Destek ve işbirliği için Push Chain geliştirici topluluğuna Discord'dan katılın"
+      }
+    },
+    "community": {
+      "title": "Topluluk",
+      "aria-label": "Topluluk Bölümü",
+      "link1": {
+        "text": "Bilgi Tabanı",
+        "subtext": "Özellikler hakkında derinlemesine bilgi bul",
+        "title": "Kapsamlı Push Chain dokümantasyonunu ve özellik kılavuzlarını keşfedin"
+      },
+      "link2": {
+        "text": "Token Ekonomisi",
+        "subtext": "Push Chain'deki her şeyi güçlendiren yerel token",
+        "title": "$PC token'ın faydalarını ve Push Chain token ekonomisini öğrenin"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "Güncellemeleri ve ekosistem haberlerini takip et",
+        "title": "En son güncellemeler ve duyurular için Push Chain'i X (Twitter) üzerinden takip edin"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "Sohbet et, geliştir ve toplulukla etkileşim kur",
+        "title": "Tartışmalar ve destek için Push Chain topluluğuna Discord'dan katılın"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "Konuşmaya katıl ve gelişmelerden haberdar ol",
+        "title": "Gerçek zamanlı güncellemeler için Push Chain topluluğuna Telegram'dan bağlanın"
+      }
+    },
+    "resources": {
+      "title": "Kaynaklar",
+      "aria-label": "Kaynaklar Bölümü",
+      "link1": {
+        "text": "Blog",
+        "subtext": "Güncellemeler, derinlemesine analizler ve geliştirici hikayeleri",
+        "title": "En son güncellemeler, teknik analizler ve geliştirici hikayeleri için Push Chain blog'unu okuyun"
+      },
+      "link2": {
+        "text": "Hafif Makale",
+        "subtext": "Vizyon ve teknolojiyi basitleştirilmiş haliyle",
+        "title": "Push Chain Hafif Makalesini okuyun - basitleştirilmiş vizyon ve teknik genel bakış"
+      },
+      "link3": {
+        "text": "SSS",
+        "subtext": "Sık sorulan sorulara hızlı yanıtlar",
+        "title": "Push Chain hakkında sık sorulan soruları inceleyin"
+      }
+    },
+    "language": {
+      "title": "Dil",
+      "aria-label": "Dil Seçim Açılır Menüsü",
+      "english": "İngilizce",
+      "english-ctatitle": "Dili İngilizceye değiştir",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal'a erişin - Geliştirici, kullanıcı veya doğrulayıcı olarak puan kazanın"
+    }
+  }
+}

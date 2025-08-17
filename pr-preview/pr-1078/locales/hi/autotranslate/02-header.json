@@ -1,0 +1,142 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - होमपेज पर जाएं",
+      "language-icon-alt": "भाषा चयन आइकन",
+      "hamburger-menu-alt": "नेविगेशन मेनू खोलें",
+      "testnet-badge-alt": "Push Chain Testnet Donut - टेस्टनेट स्थिति देखें"
+    },
+    "logo": {
+      "imagealt": "Push Chain लोगो की छवि",
+      "imagetitle": "Push Chain लोगो",
+      "ctatitle": "Push Chain होमपेज पर जाएं"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "aria-label": "Testnet सेक्शन",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Push Chain के लिए ब्लॉक एक्सप्लोरर",
+        "title": "Push Scan पर Push Chain testnet लेनदेन और ब्लॉक्स को एक्सप्लोर करें"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "टेस्टनेट टोकन प्राप्त करें",
+        "title": "Push Chain डेवलपमेंट के लिए मुफ्त टेस्टनेट टोकन प्राप्त करें"
+      }
+    },
+    "developers": {
+      "title": "Developers",
+      "aria-label": "Developers सेक्शन",
+      "link1": {
+        "text": "शुरू करें",
+        "subtext": "Push Chain पर बिल्डिंग का परिचय",
+        "title": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़"
+      },
+      "link2": {
+        "text": "Quick Start",
+        "subtext": "सेकंडों में डेव एनवायरनमेंट सेटअप करें",
+        "title": "क्विक स्टार्ट गाइड - Push Chain डेवलपमेंट एनवायरनमेंट तुरंत सेटअप करें"
+      },
+      "link3": {
+        "text": "Tutorials",
+        "subtext": "Push के साथ बिल्ड करने के लिए चरणबद्ध गाइड",
+        "title": "हैंड्स-ऑन ट्यूटोरियल्स के साथ सीखें - Push Chain पर अपना पहला यूनिवर्सल ऐप बनाएं"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "कोर कोड और ओपन-सोर्स टूल्स देखें",
+        "title": "GitHub पर Push Chain सोर्स कोड और डेवलपमेंट टूल्स को एक्सप्लोर करें"
+      },
+      "link5": {
+        "text": "Developer Discord",
+        "subtext": "डेव कम्युनिटी से जुड़ें",
+        "title": "सपोर्ट और सहयोग के लिए Discord पर Push Chain डेवलपर कम्युनिटी में शामिल हों"
+      }
+    },
+    "community": {
+      "title": "Community",
+      "aria-label": "Community सेक्शन",
+      "link1": {
+        "text": "Knowledge Base",
+        "subtext": "फीचर्स पर डीप डाइव्स खोजें",
+        "title": "व्यापक Push Chain दस्तावेज़ और फीचर गाइड्स को एक्सप्लोर करें"
+      },
+      "link2": {
+        "text": "Tokenomics",
+        "subtext": "Push Chain पर सब कुछ पावर करने वाला नेटिव टोकन",
+        "title": "Push Chain टोकनोमिक्स और $PC टोकन उपयोगिता के बारे में जानें"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "अपडेट्स और इकोसिस्टम न्यूज़ फॉलो करें",
+        "title": "नवीनतम अपडेट्स और घोषणाओं के लिए X (Twitter) पर Push Chain को फॉलो करें"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "कम्युनिटी के साथ चैट, बिल्ड और वाइब करें",
+        "title": "चर्चा और सपोर्ट के लिए Discord पर Push Chain कम्युनिटी में शामिल हों"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "बातचीत में शामिल हों और अपडेटेड रहें",
+        "title": "रियल-टाइम अपडेट्स के लिए Telegram पर Push Chain कम्युनिटी से जुड़ें"
+      }
+    },
+    "resources": {
+      "title": "Resources",
+      "aria-label": "Resources सेक्शन",
+      "link1": {
+        "text": "Blog",
+        "subtext": "अपडेट्स, डीप डाइव्स और डेव स्टोरीज़",
+        "title": "नवीनतम अपडेट्स, तकनीकी डीप डाइव्स और डेवलपर स्टोरीज़ के लिए Push Chain ब्लॉग पढ़ें"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "दृष्टि और तकनीक, सरलीकृत",
+        "title": "Push Chain Litepaper पढ़ें - सरलीकृत दृष्टि और तकनीकी अवलोकन"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "सामान्य प्रश्नों के त्वरित उत्तर",
+        "title": "Push Chain के बारे में अक्सर पूछे जाने वाले प्रश्न ब्राउज़ करें"
+      }
+    },
+    "language": {
+      "title": "भाषा",
+      "aria-label": "भाषा चयन ड्रॉपडाउन",
+      "english": "English",
+      "english-ctatitle": "भाषा को English में बदलें",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "भाषा को 中文 में बदलें",
+      "spanish": "Español",
+      "spanish-ctatitle": "भाषा को Español में बदलें",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "भाषा को 한국어 में बदलें",
+      "japanese": "日本語",
+      "japanese-ctatitle": "भाषा को 日本語 में बदलें",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "भाषा को Português में बदलें",
+      "russian": "Русский",
+      "russian-ctatitle": "भाषा को Русский में बदलें",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "भाषा को Türkçe में बदलें",
+      "french": "Français",
+      "french-ctatitle": "भाषा को Français में बदलें",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "भाषा को Bahasa Indonesia में बदलें",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "भाषा को Tiếng Việt में बदलें",
+      "german": "Deutsch",
+      "german-ctatitle": "भाषा को Deutsch में बदलें",
+      "arabic": "العربية",
+      "arabic-ctatitle": "भाषा को العربية में बदलें"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal एक्सेस करें - डेवलपर, यूज़र या वैलिडेटर के रूप में पॉइंट्स अर्जित करें"
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "홈",
+        "description": "보편적인 앱을 위한 공유 상태 L1. 한 번 배포하고 모든 체인의 사용자를 확보하세요. 모든 지갑을 사용하세요. 모든 토큰으로 결제하세요.",
+        "og-title": "Push Chain - 앱을 위한 범용 L1",
+        "og-description": "EVM 및 비 EVM 사용자를 위한 한 번의 배포. 네트워크 전환 없이 모든 지갑을 사용하고 모든 토큰으로 결제하세요.",
+        "twitter-title": "한 번 배포하세요. 모든 체인을 확보하세요.",
+        "twitter-description": "모든 체인에서 트랜잭션을 실행하세요. 모든 지갑을 사용하세요. 모든 토큰으로 결제하세요. 네트워크 전환이 필요 없습니다."
+      },
+      "hero-section": {
+        "title": "모든 체인, 모든 앱, 모든 사용자.\n단 하나의 Push Chain.",
+        "description": "범용 앱을 위해 구축된 최초의 Layer 1. \n한 번 구축 및 배포하고 모든 체인의 사용자를 온보드하세요.",
+        "primary-button": "빌드 시작",
+        "primary-button-title": "Push Chain으로 빌더 여정을 시작하세요!",
+        "secondary-button": "지식 기반 탐색",
+        "secondary-button-title": "Push Chain 학습",
+        "section-aria-label": "Push Chain hero 섹션 - 범용 Layer 1 블록체인 소개",
+        "primary-button-aria-label": "Push Chain에서 범용 앱 빌드 시작 - 개발자 문서로 이동",
+        "secondary-button-aria-label": "지식 기반에서 Push Chain 기능 및 개념 학습",
+        "hero-background-alt": "Push Chain hero 배경 애니메이션으로 범용 블록체인 연결성 표시",
+        "hero-background-title": "Push Chain - 크로스체인 애플리케이션을 위한 범용 Layer 1",
+        "schema-headline": "Push Chain - 앱을 위한 범용 L1",
+        "schema-description": "Push Chain에 한 번 배포하고 범용 앱을 통해 모든 블록체인에서 사용자를 확보하세요"
+      },
+      "whatis-section": {
+        "titleFirst": "진정한",
+        "titleSecondGraditent": "범용",
+        "titleThird": "체인",
+        "bottomTextFirst": "한 번 배포,",
+        "bottomTextSecond": "어디든 도달",
+        "bottomLinkText": "시작하기",
+        "bottomLinkTitle": "문서 허브로 이동",
+        "section-aria-label": "Push Chain이란 무엇인가 - 범용 블록체인 설명",
+        "animation-alt": "Push Chain의 범용 앱 배포가 여러 블록체인에서 이루어지는 것을 보여주는 애니메이션",
+        "animation-title": "Push Chain 범용 배포 시각화 - 한 번 배포하고 모든 체인을 확보",
+        "bottom-link-aria-label": "Push Chain 문서로 이동하여 범용 앱 빌드 시작"
+      },
+      "chain-features-section": {
+        "section-aria-label": "Push Chain 기능 섹션",
+        "header": {
+          "main": "분열을 없애세요. 모든 체인에서 확장하세요.",
+          "description": "다양한 블록체인에서 애플리케이션을 구축할 수 있도록 설계된 개발자 친화적 플랫폼입니다."
+        },
+        "body": {
+          "features": [
+            {
+              "title": "상호운용성",
+              "description": "Push Chain은 모든 블록체인을 연결하여 원활한 트랜잭션과 데이터 교환을 가능하게 합니다."
+            },
+            {
+              "title": "보안",
+              "description": "고급 암호화 및 분산 합의 메커니즘은 네트워크와 자산의 안전을 보장합니다."
+            },
+            {
+              "title": "확장성",
+              "description": "Push Chain은 높은 처리량과 낮은 지연 시간으로 확장성을 위해 설계되었습니다."
+            }
+          ]
+        },
+        "features": [
+          {
+            "title": "상호운용성",
+            "description": "모든 블록체인에서 애플리케이션을 구축할 수 있도록 설계된 개발자 친화적 플랫폼입니다."
+          },
+          {
+            "title": "보안",
+            "description": "고급 암호화 및 분산 합의 메커니즘은 네트워크와 자산의 안전을 보장합니다."
+          },
+          {
+            "title": "확장성",
+            "description": "Push Chain은 높은 처리량과 낮은 지연 시간으로 확장성을 위해 설계되었습니다."
+          }
+        ]
+      },
+      "blog-section": {
+        "subtitle": "뉴스, 개발 일지 및 아이디어",
+        "subtitle-aria-label": "블로그 카테고리 정보",
+        "title": "Push Chain의 맥박",
+        "title-aria-label": "최신 Push Chain 블로그 게시물 및 업데이트",
+        "explore-link-text": "더 많은 기사 살펴보기",
+        "explore-link-title": "Push Chain 블로그를 방문하여 모든 기사 및 업데이트 읽기",
+        "explore-link-aria-label": "Push Chain 블로그 페이지로 이동",
+        "section-aria-label": "Push Chain 블로그 게시물 및 뉴스 섹션",
+        "blog-posts-list-aria-label": "최근 Push Chain 블로그 게시물",
+        "blog-post-aria-label": "{title}에 대한 블로그 게시물 읽기",
+        "blog-post-title-prefix": "블로그 게시물 읽기 - ",
+        "loading-text": "최신 블로그 게시물 로드 중...",
+        "error-text": "현재 블로그 게시물을 로드할 수 없습니다",
+        "no-posts-text": "블로그 게시물이 없습니다"
+      },
+      "trustedby-section": {
+        "title": "웹3 개척자가 신뢰하는 팀에서 구축",
+        "section-aria-label": "Push Chain 신뢰 섹션",
+        "trusted-by-alt": "투자자 - "
+      },
+      "ending-section": {
+        "aria-label": "범용 앱 구축 섹션",
+        "section-title": "범용 앱 구축.",
+        "section-subtitle": "사일로를 깨뜨리세요. 한 번 구축하고 모든 블록체인에서 확장하세요.",
+        "docs-link": {
+          "text": "Push Chain 문서 살펴보기",
+          "title": "Push Chain 문서 및 개발자 리소스 살펴보기",
+          "aria-label": "새 탭에서 Push Chain 문서 열기"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "범용 블록체인 플랫폼인 Push Chain 시작 - ",
+          "aria-label": "Push Chain 개발 시작"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Inmersiones Profundas — Conceptos y Arquitectura",
+          "description": "Explicaciones claras sobre estado compartido, abstracción de tarifas, USV/UEA y la capa de ejecución universal.",
+          "og-title": "Inmersiones Profundas - Conceptos y Arquitectura",
+          "og-description": "Artículos profundos sobre los módulos de Push Chain, decisiones de diseño y rendimiento.",
+          "twitter-title": "Inmersiones Profundas - Bajo el capó",
+          "twitter-description": "Explicaciones sobre cómo funciona Push Chain."
+        }
+      }
+    }
+  }
+}

@@ -1,164 +1,332 @@
 {
+  "global": {
+    "site-name": "Push Chain — 通用 L1 应用平台",
+    "site-description": "为通用应用设计的共享状态 L1。一次部署，触达任何链上的用户。使用任意钱包。用任意代币支付。无需网络切换。"
+  },
   "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - 导航至首页",
+      "language-icon-alt": "语言选择图标",
+      "hamburger-menu-alt": "打开导航菜单",
+      "testnet-badge-alt": "Push Chain Testnet Donut - 查看测试网状态"
+    },
     "logo": {
-      "imagealt": "Push Chain 标志图像",
-      "imagetitle": "Push Chain 标志",
-      "ctatitle": "前往主页"
+      "imagealt": "Push Chain Logo 的图像",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "导航至 Push Chain 首页"
     },
     "testnet": {
       "title": "测试网",
+      "aria-label": "测试网部分",
       "link1": {
-        "title": "Push Scan",
-        "subtitle": "Push Chain 区块浏览器"
+        "text": "Push Scan",
+        "subtext": "Push Chain 区块浏览器",
+        "title": "浏览 Push Chain 测试网交易和区块 - Push Scan"
       },
       "link2": {
-        "title": "水龙头",
-        "subtitle": "获取测试网代币"
+        "text": "Faucet",
+        "subtext": "获取测试网代币",
+        "title": "获取用于 Push Chain 开发的免费测试网代币"
       }
     },
     "developers": {
       "title": "开发者",
+      "aria-label": "开发者部分",
       "link1": {
-        "title": "开始使用",
-        "subtitle": "在 Push Chain 上构建的介绍"
+        "text": "Get Started",
+        "subtext": "开始在 Push Chain 上构建",
+        "title": "开始在 Push Chain 上构建通用应用 - 开发者文档"
       },
       "link2": {
-        "title": "快速开始",
-        "subtitle": "几秒钟内设置开发环境"
+        "text": "Quick Start",
+        "subtext": "在几秒钟内设置开发环境",
+        "title": "快速入门指南 - 立即设置 Push Chain 开发环境"
       },
       "link3": {
-        "title": "教程",
-        "subtitle": "使用 Push 构建的分步指南"
+        "text": "Tutorials",
+        "subtext": "分步构建指南",
+        "title": "通过实践教程学习 - 在 Push Chain 上构建您的第一个通用应用"
       },
       "link4": {
-        "title": "GitHub",
-        "subtitle": "查看核心代码和开源工具"
+        "text": "GitHub",
+        "subtext": "查看核心代码和开源工具",
+        "title": "在 GitHub 上浏览 Push Chain 源代码和开发工具"
       },
       "link5": {
-        "title": "开发者 Discord",
-        "subtitle": "与开发者社区连接"
+        "text": "Developer Discord",
+        "subtext": "与开发者社区联系",
+        "title": "加入 Push Chain 开发者社区以获取支持和协作"
       }
     },
     "community": {
       "title": "社区",
+      "aria-label": "社区部分",
       "link1": {
-        "title": "知识库",
-        "subtitle": "查找功能深度解析"
+        "text": "Knowledge Base",
+        "subtext": "深入了解功能",
+        "title": "浏览关于 Push Chain 的全面文档和功能指南"
       },
       "link2": {
-        "title": "代币经济学",
-        "subtitle": "为 Push Chain 上的一切提供动力的原生代币"
+        "text": "Tokenomics",
+        "subtext": "为 Push Chain 上的所有内容提供支持的原生代币",
+        "title": "了解 Push Chain 代币经济学和 $PC 代币实用程序"
       },
       "link3": {
-        "title": "X/Twitter",
-        "subtitle": "关注更新和生态系统新闻"
+        "text": "X/Twitter",
+        "subtext": "关注更新和生态系统新闻",
+        "title": "在 X (Twitter) 上关注 Push Chain 以获取最新更新和公告"
       },
       "link4": {
-        "title": "Discord",
-        "subtitle": "与社区聊天、构建和互动"
+        "text": "Discord",
+        "subtext": "聊天、构建和与社区互动",
+        "title": "加入 Push Chain 社区以进行讨论和支持"
       },
       "link5": {
-        "title": "Telegram",
-        "subtitle": "加入对话并保持联系"
+        "text": "Telegram",
+        "subtext": "加入对话并随时了解最新信息",
+        "title": "在 Telegram 上与 Push Chain 社区联系以获取实时更新"
       }
     },
     "resources": {
       "title": "资源",
+      "aria-label": "资源部分",
       "link1": {
-        "title": "博客",
-        "subtitle": "更新、深度解析和开发故事"
+        "text": "Blog",
+        "subtext": "更新、深入分析和开发者故事",
+        "title": "阅读 Push Chain 博客以获取最新更新、技术深入分析和开发者故事"
       },
       "link2": {
-        "title": "简化白皮书",
-        "subtitle": "愿景和技术，简化版"
+        "text": "Litepaper",
+        "subtext": "简化愿景和技术",
+        "title": "阅读 Push Chain Litepaper - 简化愿景和技术概述"
       },
       "link3": {
-        "title": "常见问题",
-        "subtitle": "常见问题的快速答案"
+        "text": "FAQ",
+        "subtext": "快速解答常见问题",
+        "title": "浏览关于 Push Chain 的常见问题"
       }
     },
     "language": {
-      "title": "语言",
-      "ctatitle": "请选择您的语言",
-
+      "title": "Language",
+      "aria-label": "语言选择下拉菜单",
       "english": "English",
-      "english-ctatitle": "Change Language to English",
-
+      "english-ctatitle": "更改语言为 English",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
-
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
-
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-
       "korean": "한국어",
-      "korean-ctatitle": "언어를 한국어로 변경하기",
-
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
       "japanese-ctatitle": "言語を日本語に変更する",
-
       "portuguese": "Português",
-      "portuguese-ctatitle": "切换语言为葡萄牙语",
-
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "切换语言为俄语",
-
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "切换语言为土耳其语",
-
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "切换语言为法语",
-
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "切换语言为印尼语",
-
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "切换语言为越南语",
-
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "切换语言为德语",
-
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "切换语言为阿拉伯语"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
-      "title": "Push Portal",
-      "alt-title": "访问 Push Portal"
+      "text": "Push Portal",
+      "title": "访问 Push Portal - 作为开发者、用户或验证者赚取积分"
     }
-  },
-  "home": {
-    "hero-section": {
-      "title": "任何链，任何应用，所有用户。\n一个 Push Chain。",
-      "description": "首个为通用应用构建的第一层。\n一次构建和部署，从任何链上引入用户。",
-      "primary-button": "开始构建",
-      "secondary-button": "探索知识库"
-    },
-    "whatis-section": {
-      "titleFirst": "真正的",
-      "titleSecondGraditent": "通用",
-      "titleThird": "链",
-      "bottomTextFirst": "一次部署，",
-      "bottomTextSecond": "无处不在",
-      "bottomTextLink": "开始使用"
-    },
-    "email-section": {
-      "title": "不要错过任何更新",
-      "text": "注册并及时了解生态系统公告、赠品等。",
-      "email-input": "您的邮箱",
-      "submit-button": "注册",
-      "loading-submit-button": "请稍候..."
-    }
-  },
-  "alert": {
-    "know-more": "开始使用！"
   },
   "footer": {
     "mail-section": {
       "title": "获取最新的 Push 新闻",
       "privacy": "隐私政策",
       "tos": "条款和条件"
+    },
+    "info-section": {
+      "positions-card": {
+        "text": "加入我们，共同构建 Web3 通信的未来。",
+        "link-text": "查看开放职位",
+        "image-title": "加入我们",
+        "image-alt": "显示开放职位的图标"
+      },
+      "docs-card": {
+        "text": "通过我们简单的指南，在几分钟内开始使用。",
+        "link-text": "探索文档",
+        "image-title": "开始使用",
+        "image-alt": "显示易于开始使用的图标"
+      }
+    },
+    "links-section": {
+      "company-column": {
+        "title": "公司",
+        "push-ecosystem-link": "Push 生态系统",
+        "media-kit-link": "媒体工具包",
+        "terms-link": "条款",
+        "privacy-link": "隐私"
+      },
+      "governance-column": {
+        "title": "治理",
+        "push-governance-link": "Push 治理",
+        "guides-link": "指南",
+        "forum-link": "论坛",
+        "grants-link": "资助",
+        "snapshot-link": "Snapshot"
+      },
+      "resources-column": {
+        "title": "资源",
+        "blog-link": "博客",
+        "whitepaper-link": "白皮书",
+        "github-link": "Github",
+        "discord-link": "Discord",
+        "dev-guides-link": "开发者指南"
+      },
+      "subscribe-column": {
+        "title": "支持",
+        "contact-us-link": "联系我们",
+        "faq-link": "常见问题"
+      },
+      "support-column": {
+        "title": "订阅",
+        "email-placeholder": "您的邮箱"
+      }
+    }
+  },
+  "pages": {
+    "brb": {
+      "seo": {
+        "title": "BRB — 建设十亿理由",
+        "description": "Push Chain 旗舰黑客松：解决实际问题，向专家学习，并赢取奖品。",
+        "og-title": "BRB - Push Chain 黑客松",
+        "og-description": "解决实际问题，向专家学习，并赢取奖品。",
+        "twitter-title": "BRB 黑客松 - 建设并赢取",
+        "twitter-description": "加入 Push Chain 黑客松并赢取奖品。"
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "不错过任何更新",
+      "text": "注册并及时了解生态系统公告、赠品等信息。",
+      "email-input": "您的邮箱",
+      "email-input-placeholder": "请输入您的邮箱地址",
+      "email-input-title": "订阅 Push Chain 新闻简报以获取更新",
+      "email-input-aria-label": "订阅新闻简报的邮箱地址",
+      "submit-button": "注册",
+      "submit-button-title": "订阅 Push Chain 新闻简报",
+      "submit-button-aria-label": "订阅新闻简报",
+      "loading-submit-button": "请稍候...",
+      "arrow-button-aria-label": "订阅新闻简报",
+      "arrow-button-title": "订阅 Push Chain 更新",
+      "form-aria-label": "新闻简报订阅表单",
+      "success-message-aria-label": "订阅成功",
+      "error-message-aria-label": "订阅出错"
+    },
+    "cookie-banner": {
+      "message": "我们使用 Cookie 来个性化您的体验。 了解更多信息，请查看我们的",
+      "privacy-policy-link": "隐私政策",
+      "privacy-policy-link-title": "阅读 Push 协议隐私政策",
+      "privacy-policy-link-aria-label": "在新标签页中打开隐私政策",
+      "accept-button": "接受",
+      "accept-button-title": "接受 Cookie 以个性化您的体验",
+      "accept-button-aria-label": "接受 Cookie 并关闭横幅",
+      "reject-button": "退出",
+      "reject-button-title": "退出 Cookie 并关闭横幅",
+      "reject-button-aria-label": "拒绝 Cookie 并关闭横幅",
+      "banner-aria-label": "Cookie 同意横幅",
+      "banner-role": "Cookie 首选项通知"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "关于 Push Chain - 通用区块链的常见问题",
+      "title": "常见\n问题\n解答",
+      "title-aria-label": "关于 Push Chain 的常见问题和解答",
+      "discord-link-text": "在 Discord 上提问",
+      "discord-link-title": "加入 Push Chain Discord 社区以获取支持和解答",
+      "discord-link-aria-label": "在新标签页中打开 Discord 社区",
+      "explore-more-text": "探索更多常见问题",
+      "explore-more-title": "查看全面的 Push Chain 常见问题文档和开发者指南",
+      "explore-more-aria-label": "导航到完整的 Push Chain 常见问题页面",
+      "accordion-aria-label": "Push Chain 常见问题列表",
+      "answer-aria-label": "问题的答案 - ",
+      "faqs": {
+        "faq1": {
+          "question": "什么是 Push Chain？",
+          "answer": "<1>Push Chain 是一个共享状态区块链，它<2>消除了碎片化并使应用程序成为通用应用程序</2>。</1><1>只需在 Push 上部署一次。 拥有任何链（EVM 或非 EVM）的用户都可以使用他们的现有钱包和代币使用您的应用程序；费用在后台处理。</1>"
+        },
+        "faq2": {
+          "question": "它是如何工作的？（用简单的术语解释）",
+          "answer": "<1>使用您已经拥有的钱包 — Push 会处理后台的跨链操作。</1><1>1. <2>从任何地方开始。</2> 使用任何链上的任何钱包 — 无需切换网络。</1><1>2. <2>只需签名一次。</2> 使用您已经拥有的代币支付；我们会在您的主链上预留费用。</1><1>3. <2>我们进行路由处理。</2> Push 上的关联账户（仍然是您的账户）会将您的调用转发给应用程序 — 非托管。</1><1>4. <2>始终是您。</2> 我们将您的主链钱包与您的关联账户匹配，以便正确验证操作并在 Push 上归因给您。</1><1>5. <2>快速完成。</2> 应用程序在 Push 上运行；费用在后台处理。 无需桥接，无需新的钱包。</1><1>这样，任何链上的用户都可以使用部署在 Push Chain 上的同一应用程序 — 使应用程序真正通用。</1>"
+        },
+        "faq3": {
+          "question": "我需要不同的钱包或 gas 代币吗？",
+          "answer": "<1><2>不需要。</2></1><1><2>保留您的钱包。</2> 使用您已经拥有的钱包 — 无需新的钱包或账户。</1><1><2>使用您拥有的代币支付。</2> 费用可以使用您已经在主链上拥有的代币支付；我们在后台处理转换。</1><1><2>无需切换网络。</2> 停留在您的主链上 — 无需仅为了获取 gas 代币而进行桥接。</1><1><2>非托管。</2> 您签名每一个操作；Push 从不持有您的密钥。</1><1><2>后台处理。</2> 网络自动以 $PC 结算费用 — 您无需管理它。</1>"
+        },
+        "faq4": {
+          "question": "它与桥接或消息层有什么不同？",
+          "answer": "<1><2>简而言之</2>: Push 是您的应用程序运行的地方。 桥接/消息只是在链之间移动代币或消息，这会使用户和开发人员的操作变得复杂。</1><1><2>单个主链与许多克隆。</2> 使用桥接/消息，您需要在每个链上部署并使用消息进行同步。 在 Push 上，您只需部署一次；每个人都会点击相同的合约和共享状态。</1><1><2>无需包装资产或强制桥接。</2> 用户停留在他们的主链上并使用他们已经拥有的代币支付；我们在后台处理路由和费用转换。</1><1><2>统一的身份和验证。</2> 我们接受来自任何钱包/链的签名，并将它们归因于 Push 上的同一用户 — 非托管。</1><1><2>更少的活动部件。</2> 无需跨链批准舞蹈，无需寻找 gas 代币，无需保持同步的胶水合约。</1><1><2>在需要时使用桥接，而不是因为您必须使用桥接。</2> 资金仍然可以通过桥接移动，但与您的应用程序交互不需要它。</1><1>结果：更简单的应用程序，单一的事实来源，以及感觉像一个链的用户体验 — 即使用户并非如此。</1>"
+        },
+        "faq5": {
+          "question": "它是否仅支持 EVM？ 支持哪些链？",
+          "answer": "<1><2>不，Push 支持 EVM 和非 EVM 链。</2> 虽然它是 EVM 优先的部署方式，但来自任何链（包括非 EVM）的用户都可以像原生一样使用您的应用程序。</1>\n<1><2>一次部署，处处互操作。</2> 在 Push 上编写和部署标准 EVM 合约（Solidity/Vyper）。 工具保持不变。</1>\n<1><2>来自任何链的用户。</2> Ethereum 和主要的 EVM L2s 原生工作。 非 EVM 用户（例如 Solana）使用他们的主钱包签名；我们在后台验证和路由 — 无需切换网络。</1>\n<1><2>今天支持。</2> 查看实时支持的链列表 → <3>支持的链</3>.</1><1><2>扩展覆盖。</2> 我们不断添加更多链。 如果您想请求任何链，请 <4>联系我们</4>.</1>",
+          "supported-urls-title": "Push Chain 支持的所有链的列表。",
+          "contact-url-title": "联系我们以添加新的链。"
+        },
+        "faq6": {
+          "question": "它的速度有多快，费用如何？",
+          "answer": "<1><2>速度。</2> 设计用于 ~1–2 秒的确认，并具有快速的用户体验反馈。 请查看 <3>🍩 Donut Testnet</3> 上的实时指标。</1><1><2>费用模式。</2> 您会看到您选择支付的代币的费用；网络在后台以 $PC 结算。</1><1><2>典型成本。</2> 典型费用低于 <2>$0.001</2> 每笔交易。 虽然，它因合约复杂性、代币价格和网络负载而异。 您在签名之前会获得确切的报价。</1>",
+          "donut-testnet-title": "查看 Push Chain Donut Testnet 的统计信息。"
+        }
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "抢先体验 Testnet，Donut，构建通用应用并赢取奖励！",
+      "button-text": "领取封闭 Beta 权限",
+      "button-title": "加入 Push Chain 测试网并领取您的封闭 Beta 权限",
+      "button-aria-label": "打开 Telegram 以领取 Push Chain 封闭 Beta 权限",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "关闭测试网通知",
+      "close-button-aria-label": "关闭 Push Chain 测试网通知",
+      "container-aria-label": "Push Chain 测试网通知",
+      "container-role": "Push Chain 测试网公告"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnet 封闭 Beta 正式上线！",
+      "description": "抢先体验 Testnet，Donut，构建通用应用并赢取奖励！",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "关闭奖励通知",
+      "close-button-aria-label": "关闭 Push Chain 奖励通知",
+      "container-aria-label": "Push Chain 奖励通知",
+      "container-role": "Push Chain 奖励公告"
+    },
+    "info-bar": {
+      "title": "立即在 Push Testnet 上线 — 解锁面向构建者和早期用户的奖励。",
+      "learn-more-text": "了解更多",
+      "learn-more-title": "了解更多关于此公告的信息",
+      "learn-more-aria-label": "在新标签页中打开公告链接",
+      "dismiss-button-title": "关闭公告",
+      "dismiss-button-aria-label": "关闭公告栏",
+      "container-aria-label": "站点公告",
+      "container-role": "站点公告横幅",
+      "star-icon-alt": "公告星标图标"
+    },
+    "alert": {
+      "message": "Push Metamask Snap 现已上线，",
+      "know-more-text": "立即开始！",
+      "know-more-title": "开始使用 Push Metamask Snap",
+      "know-more-aria-label": "在新标签页中打开 Push Metamask Snap",
+      "close-button-title": "关闭警报",
+      "close-button-aria-label": "关闭 Push Metamask Snap 警报",
+      "container-aria-label": "Push Metamask Snap 公告",
+      "container-role": "Push Metamask Snap 警报横幅"
     }
   }
 }

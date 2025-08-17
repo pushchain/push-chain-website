@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — Руководства и Учебные пособия",
+          "description": "Пошаговые инструкции, шаблоны и примеры для использования функций Push Chain.",
+          "og-title": "Builders - Руководства и Учебные пособия",
+          "og-description": "Подробные руководства, лучшие практики и примеры для разработки с Push Chain.",
+          "twitter-title": "Builders - Руководства и Учебные пособия",
+          "twitter-description": "Пошаговые инструкции для запуска на Push Chain."
+        }
+      }
+    }
+  }
+}

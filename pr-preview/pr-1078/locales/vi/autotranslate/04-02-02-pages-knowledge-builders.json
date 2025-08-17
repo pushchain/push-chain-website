@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — Hướng dẫn & Bài hướng dẫn",
+          "description": "Hướng dẫn từng bước, mẫu và ví dụ để sử dụng các tính năng của Push Chain.",
+          "og-title": "Builders - Hướng dẫn & Bài hướng dẫn",
+          "og-description": "Hướng dẫn chi tiết, các phương pháp tốt nhất và ví dụ để xây dựng với Push Chain.",
+          "twitter-title": "Builders - Hướng dẫn & Bài hướng dẫn",
+          "twitter-description": "Hướng dẫn từng bước để triển khai trên Push Chain."
+        }
+      }
+    }
+  }
+}

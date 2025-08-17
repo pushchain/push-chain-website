@@ -1,0 +1,165 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "Beranda",
+        "description": "L1 state bersama untuk aplikasi universal. Sebarkan sekali; jangkau pengguna di rantai mana pun. Gunakan dompet apa pun. Bayar dengan token apa pun.",
+        "og-title": "Push Chain - L1 Universal untuk Aplikasi",
+        "og-description": "Satu penyebaran untuk pengguna EVM dan non-EVM. Gunakan dompet apa pun dan bayar dengan token apa pun — tanpa perlu berganti jaringan.",
+        "twitter-title": "Sebarkan sekali. Jangkau rantai mana pun.",
+        "twitter-description": "Bertransaksi dari rantai mana pun. Gunakan dompet apa pun. Bayar dengan token apa pun. Tidak perlu berganti jaringan."
+      },
+      "hero-section": {
+        "title": "Rantai Mana Pun, Aplikasi Mana Pun, Semua Pengguna.\nSatu Push Chain.",
+        "description": "Layer 1 pertama yang dibuat untuk Aplikasi Universal. \nBangun & Sebarkan sekali, onboard pengguna dari rantai mana pun.",
+        "primary-button": "Mulai Membangun",
+        "primary-button-title": "Mulailah perjalanan pembangun Anda dengan Push Chain!",
+        "secondary-button": "Jelajahi Basis Pengetahuan",
+        "secondary-button-title": "Pelajari dan jelajahi Push Chain",
+        "section-aria-label": "Bagian hero Push Chain - pengenalan blockchain Layer 1 universal",
+        "primary-button-aria-label": "Mulai bangun aplikasi universal di Push Chain - Buka dokumentasi pengembang",
+        "secondary-button-aria-label": "Pelajari tentang fitur dan konsep Push Chain di basis pengetahuan",
+        "hero-background-alt": "Animasi latar belakang hero Push Chain yang menunjukkan konektivitas blockchain universal",
+        "hero-background-title": "Push Chain - Layer 1 Universal untuk aplikasi lintas-rantai",
+        "schema-headline": "Push Chain - L1 Universal untuk Aplikasi",
+        "schema-description": "Sebarkan sekali di Push Chain dan jangkau pengguna di blockchain mana pun dengan aplikasi universal"
+      },
+      "whatis-section": {
+        "titleFirst": "Sebenarnya",
+        "titleSecondGraditent": "Universal",
+        "titleThird": "Chain",
+        "bottomTextFirst": "Sebarkan Sekali,",
+        "bottomTextSecond": "Jangkau Dimana Saja",
+        "bottomLinkText": "Mulai",
+        "bottomLinkTitle": "Buka Hub Dokumentasi",
+        "section-aria-label": "Apa itu Push Chain - penjelasan blockchain universal",
+        "animation-alt": "Animasi yang mendemonstrasikan penyebaran aplikasi universal Push Chain di beberapa blockchain",
+        "animation-title": "Visualisasi penyebaran universal Push Chain - sebarkan sekali, jangkau rantai mana pun",
+        "bottom-link-aria-label": "Navigasi ke dokumentasi Push Chain untuk mulai membangun aplikasi universal"
+      },
+      "chain-features-section": {
+        "section-aria-label": "Bagian inovasi dan fitur Push Chain",
+        "header": {
+          "main-text": "Dibangun berdasarkan inovasi untuk menghilangkan fragmentasi!",
+          "other-text": "Push Chain adalah satu-satunya Layer 1 yang Anda butuhkan."
+        },
+        "feature-1": {
+          "title": "Transaksi lintas-rantai",
+          "description": "Jangkau pengguna di berbagai blockchain."
+        },
+        "feature-2": {
+          "title": "Dompet tanpa custodi",
+          "description": "Pengguna sepenuhnya memegang kunci mereka sendiri."
+        },
+        "feature-3": {
+          "title": "Notifikasi yang dapat dibuktikan",
+          "description": "Komunikasi yang aman dan andal."
+        },
+        "feature-4": {
+          "title": "Penyebaran sekali klik",
+          "description": "Sederhana dan cepat."
+        },
+        "feature-5": {
+          "title": "Biaya rendah",
+          "description": "Jaga dana Anda di tangan Anda."
+        }
+      },
+      "blog-section": {
+        "subtitle": "BERITA, DEVLOG & IDE",
+        "subtitle-aria-label": "Informasi kategori blog",
+        "title": "Nadi Push Chain Anda",
+        "title-aria-label": "Postingan blog dan pembaruan Push Chain terbaru",
+        "explore-link-text": "Jelajahi Artikel Lainnya",
+        "explore-link-title": "Kunjungi blog Push Chain untuk membaca semua artikel dan pembaruan",
+        "explore-link-aria-label": "Navigasi ke halaman blog Push Chain",
+        "section-aria-label": "Bagian posting blog dan berita Push Chain",
+        "blog-posts-list-aria-label": "Postingan blog Push Chain baru-baru ini",
+        "blog-post-aria-label": "Baca posting blog tentang {title}",
+        "blog-post-title-prefix": "Baca posting blog - ",
+        "loading-text": "Memuat posting blog terbaru...",
+        "error-text": "Tidak dapat memuat posting blog saat ini",
+        "no-posts-text": "Tidak ada posting blog yang tersedia"
+      },
+      "trustedby-section": {
+        "title": "Dibangun oleh tim yang dipercaya oleh pelopor web3",
+        "section-aria-label": "Bagian dipercaya oleh Push Chain",
+        "trusted-by-alt": "Investor - "
+      },
+      "featured-section": {
+        "aria-label": "Bagian Unggulan",
+        "tag": "DIUNGGULKAN DI",
+        "title": "Push Chain di Sorotan",
+        "subtitle": "Jangan hanya percaya kata kami. Lihat apa kata media tentang rantai universal sejati.",
+        "articles-image-alt": "Liputan media dari ",
+        "articles-text": "Baca Liputan Penuh",
+        "articles-title-1": "Baca ",
+        "articles-title-2": "'s pendapat tentang Push Chain secara rinci",
+        "articles": {
+          "binance-chain": {
+            "text": "Kami sangat senang mengumumkan bahwa Push Protocol, protokol komunikasi terdesentralisasi terkemuka untuk Web3, sekarang telah diluncurkan di BNB Chain."
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          },
+          "balaji": {
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
+          },
+          "ethfoundation": {
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
+          },
+          "beincrypto": {
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "Bagian Bangun Aplikasi Universal",
+        "section-title": "Bangun Aplikasi Universal.",
+        "section-subtitle": "Hancurkan silo. Bangun sekali, skala di setiap blockchain.",
+        "docs-link": {
+          "text": "Jelajahi Dokumen Push Chain",
+          "title": "Jelajahi dokumentasi Push Chain dan sumber daya pengembang",
+          "aria-label": "Buka dokumentasi Push Chain di tab baru"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "Mulai dengan Push Chain - platform blockchain universal",
+          "aria-label": "Mulai pengembangan Push Chain"
+        }
+      }
+    }
+  }
+}

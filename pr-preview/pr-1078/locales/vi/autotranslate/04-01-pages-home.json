@@ -1,0 +1,139 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "Trang chủ",
+        "description": "Lớp trạng thái chia sẻ L1 cho các ứng dụng đa năng. Triển khai một lần; tiếp cận người dùng trên bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào.",
+        "og-title": "Push Chain - L1 đa năng cho các ứng dụng",
+        "og-description": "Một lần triển khai cho người dùng EVM và phi EVM. Sử dụng bất kỳ ví nào và thanh toán bằng bất kỳ token nào — không cần chuyển mạng.",
+        "twitter-title": "Triển khai một lần. Tiếp cận bất kỳ chuỗi nào.",
+        "twitter-description": "Giao dịch từ bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào. Không cần chuyển mạng."
+      },
+      "hero-section": {
+        "title": "Bất kỳ Chuỗi nào, Bất kỳ Ứng dụng nào, Tất cả Người dùng.\nMột Push Chain.",
+        "description": "Lớp đầu tiên được xây dựng cho các Ứng dụng Đa năng. \nXây dựng & Triển khai một lần, đưa người dùng từ bất kỳ chuỗi nào lên tàu.",
+        "primary-button": "Bắt đầu Xây dựng",
+        "primary-button-title": "Bắt đầu hành trình xây dựng của bạn với Push Chain!",
+        "secondary-button": "Khám phá Cơ sở Kiến thức",
+        "secondary-button-title": "Tìm hiểu và khám phá Push Chain",
+        "section-aria-label": "Phần giới thiệu Push Chain hero section - Giới thiệu blockchain Layer 1 đa năng",
+        "primary-button-aria-label": "Bắt đầu xây dựng các ứng dụng đa năng trên Push Chain - Truy cập tài liệu dành cho nhà phát triển",
+        "secondary-button-aria-label": "Tìm hiểu về các tính năng và khái niệm của Push Chain trong cơ sở kiến thức",
+        "hero-background-alt": "Hình ảnh động nền của Push Chain hero section thể hiện kết nối blockchain đa năng",
+        "hero-background-title": "Push Chain - Lớp 1 đa năng cho các ứng dụng đa chuỗi",
+        "schema-headline": "Push Chain - L1 đa năng cho Ứng dụng",
+        "schema-description": "Triển khai một lần trên Push Chain và tiếp cận người dùng trên bất kỳ blockchain nào với các ứng dụng đa năng"
+      },
+      "whatis-section": {
+        "titleFirst": "Một Chuỗi",
+        "titleSecondGraditent": "Đa năng",
+        "titleThird": "Thực sự",
+        "bottomTextFirst": "Triển khai Một Lần,",
+        "bottomTextSecond": "Tiếp cận Mọi Nơi",
+        "bottomLinkText": "Bắt đầu",
+        "bottomLinkTitle": "Truy cập Trung tâm Tài liệu",
+        "section-aria-label": "Phần giải thích blockchain đa năng của Push Chain - Universal blockchain explanation",
+        "animation-alt": "Hình ảnh động thể hiện việc triển khai ứng dụng đa năng của Push Chain trên nhiều blockchain",
+        "animation-title": "Hình ảnh trực quan triển khai đa năng của Push Chain - triển khai một lần, tiếp cận bất kỳ chuỗi nào",
+        "loading-text": "Đang tải...",
+        "error-text": "Không thể tải dữ liệu"
+      },
+      "blog-section": {
+        "subtitle": "TIN TỨC, NHẬT KÝ PHÁT TRIỂN & Ý TƯỞNG",
+        "subtitle-aria-label": "Thông tin danh mục blog",
+        "title": "Nhịp đập của Push Chain",
+        "title-aria-label": "Bài đăng và cập nhật blog Push Chain mới nhất",
+        "explore-link-text": "Khám phá thêm các bài viết",
+        "explore-link-title": "Truy cập blog Push Chain để đọc tất cả các bài viết và cập nhật",
+        "explore-link-aria-label": "Điều hướng đến trang blog Push Chain",
+        "section-aria-label": "Phần bài đăng và tin tức blog Push Chain",
+        "blog-posts-list-aria-label": "Các bài đăng blog Push Chain gần đây",
+        "blog-post-aria-label": "Đọc bài đăng blog về {title}",
+        "blog-post-title-prefix": "Đọc bài đăng - ",
+        "loading-text": "Đang tải các bài đăng blog mới nhất...",
+        "error-text": "Không thể tải các bài đăng blog tại thời điểm này",
+        "no-posts-text": "Không có bài đăng blog nào"
+      },
+      "trustedby-section": {
+        "title": "Được xây dựng bởi đội ngũ được tin cậy bởi những người tiên phong của web3",
+        "section-aria-label": "Phần tin cậy của Push Chain",
+        "trusted-by-alt": "Nhà đầu tư - "
+      },
+      "featured-section": {
+        "aria-label": "Phần nổi bật",
+        "tag": "ĐƯỢC NỔI BẬT TRÊN",
+        "title": "Push Chain trên các trang tin",
+        "subtitle": "Đừng chỉ nghe chúng tôi nói. Hãy xem giới truyền thông đang nói gì về chuỗi đa năng thực sự.",
+        "articles-image-alt": "Thông tin từ ",
+        "articles-text": "Đọc Bài viết đầy đủ",
+        "articles-title-1": "Đọc ",
+        "articles-title-2": "'s thoughts on Push Chain in full detail",
+        "articles": {
+          "binance-chain": {
+            "text": "We are thrilled to announce that Push Protocol, a leading decentralized communications protocol for Web3, has now launched on BNB Chain."
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          },
+          "balaji": {
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
+          },
+          "ethfoundation": {
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
+          },
+          "beincrypto": {
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "Xây dựng các ứng dụng đa năng",
+        "section-title": "Xây dựng các Ứng dụng Đa năng.",
+        "section-subtitle": "Phá vỡ các rào cản. Xây dựng một lần, mở rộng trên mọi blockchain.",
+        "docs-link": {
+          "text": "Khám phá Tài liệu Push Chain",
+          "title": "Khám phá tài liệu và tài nguyên dành cho nhà phát triển của Push Chain",
+          "aria-label": "Mở tài liệu Push Chain trong tab mới"
+        },
+        "cta-link": {
+          "text": "Bắt đầu Push Chain",
+          "title": "Bắt đầu với Push Chain - nền tảng blockchain đa năng",
+          "aria-label": "Bắt đầu phát triển Push Chain"
+        }
+      }
+    }
+  }
+}

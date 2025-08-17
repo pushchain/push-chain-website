@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — Guides et tutoriels",
+          "description": "Guides pas à pas, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
+          "og-title": "Builders - Guides et tutoriels",
+          "og-description": "Tutoriels guidés, bonnes pratiques et exemples pour construire avec Push Chain.",
+          "twitter-title": "Builders - Guides et tutoriels",
+          "twitter-description": "Guides pas à pas pour lancer sur Push Chain."
+        }
+      }
+    }
+  }
+}

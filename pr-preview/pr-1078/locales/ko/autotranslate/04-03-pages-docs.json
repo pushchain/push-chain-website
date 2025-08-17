@@ -1,0 +1,14 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "문서 — 범용 앱 구축",
+        "description": "Push Chain에 배포하는 데 필요한 모든 것: 빠른 시작, SDK, API 참조, 예제 및 노드 설정.",
+        "og-title": "Push Chain 문서 - 빠른 시작, SDK 및 API",
+        "og-description": "명확한 가이드와 예제를 통해 범용 실행 계층에서 앱을 구축하고 실행하세요.",
+        "twitter-title": "Push Chain 문서 - 지금 구축",
+        "twitter-description": "빠른 시작, SDK, API 참조 및 예제를 통해 빠르게 배포하세요."
+      }
+    }
+  }
+}

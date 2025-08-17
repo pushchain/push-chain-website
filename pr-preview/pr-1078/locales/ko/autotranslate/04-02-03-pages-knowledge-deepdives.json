@@ -1,0 +1,16 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "심층 분석 — 개념 및 아키텍처",
+          "description": "공유 상태, 수수료 추상화, USV/UEA, 그리고 범용 실행 계층에 대한 이해하기 쉬운 설명.",
+          "og-title": "심층 분석 - 개념 및 아키텍처",
+          "og-description": "Push Chain 모듈, 설계 결정 및 성능에 대한 심층 기사.",
+          "twitter-title": "심층 분석 - 내부 작동 방식",
+          "twitter-description": "Push Chain의 작동 방식에 대한 설명."
+        }
+      }
+    }
+  }
+}
