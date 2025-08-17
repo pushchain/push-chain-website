@@ -865,7 +865,7 @@
         },
         "qna4": {
           "question": "How do grants work?",
-          "answer": "<1>Tell us your <2>project name</2>, <2>repo/website</2>, stage (<2>idea, prototype, MVP, live</2>), and a brief plan.</1><1>If you’re applying to BRB/Bootcamp, include the track and timeline. Start here → <3>Grants</3>.</1>",
+          "answer": "<1>Tell us your <2>project name</2>, <2>repo/website</2>, stage (<2>idea, prototype, MVP, live</2>), and a brief plan.</1><1>Grant applications are always processed in first-come-first-serve basis. Start here → <3>Grants</3>.</1>",
           "contact-grants-title": "Open Grants contact"
         },
         "qna5": {
@@ -875,7 +875,7 @@
         },
         "qna6": {
           "question": "How do I report a security issue?",
-          "answer": "<1>Email <2>security@push.org</2> with steps to reproduce and impact. Please avoid public disclosure until we confirm a fix.</1><1>See our <3>Security & Disclosure</3> guidelines. We acknowledge good-faith reports and provide remediation timelines.</1>",
+          "answer": "<1>Email <3><2>security@push.org</2></3> with steps to reproduce and impact. Please avoid public disclosure until we confirm a fix.</1>",
           "security-policy-title": "Read Security & Disclosure"
         },
         "qna7": {
@@ -885,7 +885,7 @@
         },
         "qna8": {
           "question": "Careers & hiring",
-          "answer": "<1>If roles are open, they’ll be posted on our channels. You can still share your profile and interests via <3>Careers</3> or follow <4>@PushChain</4> for updates.</1>",
+          "answer": "<1>If roles are open, they’ll be posted on our channels. You can still share your profile and interests via <3>Contacting us</3> or follow <4>@PushChain</4> for updates.</1>",
           "contact-careers-title": "Open Careers contact",
           "twitter-title": "Follow @PushChain on X"
         }
