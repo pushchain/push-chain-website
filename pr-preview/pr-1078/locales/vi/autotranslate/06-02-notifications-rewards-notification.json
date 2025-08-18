@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Bản beta đã mở!",
+      "description": "Nhận cái nhìn sớm về Testnet, Donut, xây dựng ứng dụng đa năng và giành giải thưởng!",
+      "image-alt": "Phần thưởng Push Chain Testnet - Xây dựng Ứng dụng Đa năng",
+      "close-button-title": "Đóng thông báo phần thưởng",
+      "close-button-aria-label": "Bỏ qua thông báo phần thưởng Push Chain",
+      "container-aria-label": "Thông báo phần thưởng Push Chain"
+    }
+  }
+}

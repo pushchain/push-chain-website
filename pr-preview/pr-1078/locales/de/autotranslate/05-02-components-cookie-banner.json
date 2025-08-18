@@ -1,0 +1,18 @@
+{
+  "components": {
+    "cookie-banner": {
+      "message": "Wir verwenden Cookies, um Ihr Erlebnis zu personalisieren. Mehr erfahren Sie in unseren",
+      "privacy-policy-link": "Datenschutzrichtlinien",
+      "privacy-policy-link-title": "Lesen Sie die Datenschutzrichtlinien des Push Protokolls",
+      "privacy-policy-link-aria-label": "Datenschutzrichtlinien in neuem Tab öffnen",
+      "accept-button": "Akzeptieren",
+      "accept-button-title": "Akzeptieren Sie Cookies, um Ihr Erlebnis zu personalisieren",
+      "accept-button-aria-label": "Cookies akzeptieren und Banner schließen",
+      "reject-button": "Ablehnen",
+      "reject-button-title": "Cookies ablehnen und Banner schließen",
+      "reject-button-aria-label": "Cookies ablehnen und Banner schließen",
+      "banner-aria-label": "Cookie-Einwilligungs-Banner",
+      "banner-role": "Benachrichtigung über Cookie-Einstellungen"
+    }
+  }
+}

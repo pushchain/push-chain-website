@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "احصل على آخر أخبار Push",
-      "privacy": "سياسة الخصوصية",
-      "tos": "الشروط والأحكام"
+    "email-section": {
+      "title": "ابقَ على اطلاع بآخر أخبار Push Chain",
+      "title-secondary": "والتحديثات!",
+      "title-aria-label": "قسم الاشتراك في النشرة الإخبارية",
+      "section-aria-label": "الاشتراك في النشرة الإخبارية لـ Push Chain"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "انضم إلينا وابنِ مستقبل تواصل Web3.",
-        "link-text": "شاهد الوظائف المتاحة",
-        "image-title": "انضم إلينا",
-        "image-alt": "أيقونة توضح الوظائف المتاحة"
-      },
-      "docs-card": {
-        "text": "اتبع أدلةنا البسيطة للبدء في دقائق.",
-        "link-text": "استكشف الوثائق",
-        "image-title": "ابدأ الآن",
-        "image-alt": "أيقونة توضح سهولة البدء"
-      }
+    "main-section": {
+      "section-aria-label": "روابط وتصفح قسم التذييل",
+      "logo-link-title": "الصفحة الرئيسية لـ Push Chain",
+      "logo-link-aria-label": "الصفحة الرئيسية لـ Push Chain",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "الشركة",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "الشروط",
-        "privacy-link": "الخصوصية"
-      },
-      "governance-column": {
-        "title": "الحوكمة",
-        "push-governance-link": "Push Governance",
-        "guides-link": "الدلائل",
-        "forum-link": "المنتدى",
-        "grants-link": "المنح",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "المصادر",
-        "blog-link": "المدونة",
-        "whitepaper-link": "الورقة البيضاء",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "دليل المطورين"
+        "title-aria-label": "تصفح قسم المصادر"
       },
-      "subscribe-column": {
-        "title": "الدعم",
-        "contact-us-link": "تواصل معنا",
-        "faq-link": "الأسئلة الشائعة"
+      "developers": {
+        "title": "المطورون",
+        "title-aria-label": "تصفح قسم المطورين"
       },
-      "support-column": {
-        "title": "اشترك",
-        "email-placeholder": "بريدك الإلكتروني"
+      "community": {
+        "title": "المجتمع",
+        "title-aria-label": "تصفح قسم المجتمع"
+      },
+      "help": {
+        "title": "المساعدة",
+        "title-aria-label": "تصفح قسم المساعدة"
       }
+    },
+    "links": {
+      "get-started": "ابدأ الآن",
+      "get-started-title": "ابدأ البناء على Push Chain",
+      "docs": "الوثائق",
+      "docs-title": "وثائق Push Chain",
+      "github": "GitHub",
+      "github-title": "مستودعات Push Chain على GitHub",
+      "knowledge-base": "قاعدة المعرفة",
+      "knowledge-base-title": "قاعدة المعرفة لـ Push Chain",
+      "blog": "المدونة",
+      "blog-title": "مدونة Push Chain",
+      "litepaper": "الورقة البيضاء المصغرة",
+      "litepaper-title": "الورقة البيضاء المصغرة لـ Push Chain (PDF)",
+      "brand-kit": "مجموعة العلامة التجارية",
+      "brand-kit-title": "أصول وإرشادات العلامة التجارية لـ Push Chain",
+      "push-scan": "Push Scan",
+      "push-scan-title": "مستكشف سلسلة كتل Push Chain",
+      "faucet": "صنبور",
+      "faucet-title": "احصل على رموز اختبار من صنبور Push Chain",
+      "push-portal": "Push Portal",
+      "push-portal-title": "بوابة مجتمع Push Protocol",
+      "support": "الدعم",
+      "support-title": "مركز المساعدة",
+      "security": "الأمان والإفصاح",
+      "security-title": "الإبلاغ عن ثغرة أمنية (إفصاح مسؤول)",
+      "contact-us": "اتصل بنا",
+      "contact-us-title": "الشراكات، أو التطوير التجاري، أو الإعلام، أو الاستفسارات العامة",
+      "careers": "الوظائف",
+      "careers-title": "الوظائف المتاحة في Push Chain",
+      "twitter": "X (تويتر)",
+      "twitter-title": "تابع Push Chain على X (تويتر)",
+      "discord": "Discord",
+      "discord-title": "انضم إلى مجتمع Discord الخاص بـ Push Chain",
+      "reddit": "Reddit",
+      "reddit-title": "انضم إلى مجتمع Reddit الخاص بـ Push Chain",
+      "telegram": "Telegram",
+      "telegram-title": "انضم إلى مجتمع Telegram الخاص بـ Push Chain"
+    },
+    "social-section": {
+      "section-aria-label": "روابط وسائل التواصل الاجتماعي والمعلومات القانونية",
+      "twitter-icon-title": "Push Chain على X (تويتر)",
+      "twitter-icon-aria-label": "Push Chain على X (تويتر)",
+      "github-icon-title": "Push Chain على GitHub",
+      "github-icon-aria-label": "Push Chain على GitHub",
+      "discord-icon-title": "Push Chain على Discord",
+      "discord-icon-aria-label": "Push Chain على Discord"
+    },
+    "legal": {
+      "privacy-policy": "سياسة الخصوصية",
+      "privacy-policy-title": "اقرأ سياسة الخصوصية",
+      "privacy-policy-aria-label": "سياسة الخصوصية",
+      "terms-of-service": "شروط الخدمة",
+      "terms-of-service-title": "اقرأ شروط الخدمة",
+      "terms-of-service-aria-label": "شروط الخدمة",
+      "cookie-preferences": "تفضيلات ملفات تعريف الارتباط",
+      "cookie-preferences-title": "إدارة إعدادات ملفات تعريف الارتباط"
+    },
+    "footer-image": {
+      "alt": "توضيح تذييل Push Chain",
+      "title": "Push Chain - سلسلة كتل عالمية"
     }
   }
 }

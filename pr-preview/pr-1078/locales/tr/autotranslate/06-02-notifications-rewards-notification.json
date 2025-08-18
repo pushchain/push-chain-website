@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Kapalı Betası Yayınlandı!",
+      "description": "Testnet'e önceden göz atın, Donut üzerinde evrensel uygulamalar geliştirin ve ödüller kazanın!",
+      "image-alt": "Push Chain Testnet Ödülleri - Evrensel Uygulamalar Geliştirin",
+      "close-button-title": "Ödül bildirimini kapat",
+      "close-button-aria-label": "Push Chain ödül bildirimini kapat",
+      "container-aria-label": "Push Chain ödül bildirimi"
+    }
+  }
+}

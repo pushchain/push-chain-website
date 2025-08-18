@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "获取最新的 Push 新闻",
-      "privacy": "隐私政策",
-      "tos": "条款和条件"
+    "email-section": {
+      "title": "关注 Push Chain",
+      "title-secondary": "获取最新消息和更新！",
+      "title-aria-label": "邮件订阅区域",
+      "section-aria-label": "Push Chain 新闻订阅"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "加入我们，共同构建 Web3 通信的未来。",
-        "link-text": "查看开放职位",
-        "image-title": "加入我们",
-        "image-alt": "显示开放职位的图标"
-      },
-      "docs-card": {
-        "text": "通过我们简单的指南，在几分钟内开始使用。",
-        "link-text": "探索文档",
-        "image-title": "开始使用",
-        "image-alt": "显示易于开始使用的图标"
-      }
+    "main-section": {
+      "section-aria-label": "页脚导航和链接",
+      "logo-link-title": "Push Chain 首页",
+      "logo-link-aria-label": "Push Chain 首页",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "公司",
-        "push-ecosystem-link": "Push 生态系统",
-        "media-kit-link": "媒体工具包",
-        "terms-link": "条款",
-        "privacy-link": "隐私"
-      },
-      "governance-column": {
-        "title": "治理",
-        "push-governance-link": "Push 治理",
-        "guides-link": "指南",
-        "forum-link": "论坛",
-        "grants-link": "资助",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "资源",
-        "blog-link": "博客",
-        "whitepaper-link": "白皮书",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "开发者指南"
+        "title-aria-label": "资源导航"
       },
-      "subscribe-column": {
-        "title": "支持",
-        "contact-us-link": "联系我们",
-        "faq-link": "常见问题"
+      "developers": {
+        "title": "开发者",
+        "title-aria-label": "开发者导航"
       },
-      "support-column": {
-        "title": "订阅",
-        "email-placeholder": "您的邮箱"
+      "community": {
+        "title": "社区",
+        "title-aria-label": "社区导航"
+      },
+      "help": {
+        "title": "帮助",
+        "title-aria-label": "帮助导航"
       }
+    },
+    "links": {
+      "get-started": "开始使用",
+      "get-started-title": "开始在 Push Chain 上构建",
+      "docs": "文档",
+      "docs-title": "Push Chain 文档",
+      "github": "GitHub",
+      "github-title": "Push Chain GitHub 仓库",
+      "knowledge-base": "知识库",
+      "knowledge-base-title": "Push Chain 知识库",
+      "blog": "博客",
+      "blog-title": "Push Chain 博客",
+      "litepaper": "轻白皮书",
+      "litepaper-title": "Push Chain 轻白皮书 (PDF)",
+      "brand-kit": "品牌工具包",
+      "brand-kit-title": "Push Chain 品牌素材和指南",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain 区块链浏览器",
+      "faucet": "测试水龙头",
+      "faucet-title": "从 Push Chain 水龙头获取测试代币",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push 协议社区门户",
+      "support": "支持",
+      "support-title": "帮助中心",
+      "security": "安全与漏洞披露",
+      "security-title": "报告漏洞 (负责任披露)",
+      "contact-us": "联系我们",
+      "contact-us-title": "合作伙伴、BD、媒体或一般咨询",
+      "careers": "职业生涯",
+      "careers-title": "Push Chain 招聘岗位",
+      "twitter": "X (Twitter)",
+      "twitter-title": "在 X (Twitter) 上关注 Push Chain",
+      "discord": "Discord",
+      "discord-title": "加入 Push Chain Discord",
+      "reddit": "Reddit",
+      "reddit-title": "加入 Push Chain subreddit",
+      "telegram": "Telegram",
+      "telegram-title": "加入 Push Chain Telegram"
+    },
+    "social-section": {
+      "section-aria-label": "社交媒体链接和法律信息",
+      "twitter-icon-title": "Push Chain 在 X (Twitter) 上",
+      "twitter-icon-aria-label": "Push Chain 在 X (Twitter) 上",
+      "github-icon-title": "Push Chain 在 GitHub 上",
+      "github-icon-aria-label": "Push Chain 在 GitHub 上",
+      "discord-icon-title": "Push Chain 在 Discord 上",
+      "discord-icon-aria-label": "Push Chain 在 Discord 上"
+    },
+    "legal": {
+      "privacy-policy": "隐私政策",
+      "privacy-policy-title": "阅读隐私政策",
+      "privacy-policy-aria-label": "隐私政策",
+      "terms-of-service": "服务条款",
+      "terms-of-service-title": "阅读服务条款",
+      "terms-of-service-aria-label": "服务条款",
+      "cookie-preferences": "Cookie 偏好设置",
+      "cookie-preferences-title": "管理 Cookie 设置"
+    },
+    "footer-image": {
+      "alt": "Push Chain 页脚插图",
+      "title": "Push Chain - 通用区块链"
     }
   }
 }

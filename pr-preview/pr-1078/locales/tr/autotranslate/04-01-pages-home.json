@@ -2,80 +2,82 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Ana Sayfa",
-        "description": "Evrensel uygulamalar için paylaşımlı durum Katmanı 1. Bir kez dağıtın; herhangi bir zincirde kullanıcılara ulaşın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeme yapın.",
+        "title": "Anasayfa",
+        "description": "Evrensel uygulamalar için Katman 1. Bir kez dağıtın; her zincirdeki kullanıcılara ulaşın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeme yapın.",
         "og-title": "Push Chain - Uygulamalar için Evrensel Katman 1",
-        "og-description": "EVM ve EVM olmayan kullanıcılar için tek dağıtım. Herhangi bir cüzdanı kullanın ve ağ değiştirmeden herhangi bir token ile ödeme yapın.",
-        "twitter-title": "Bir kez dağıt. Herhangi bir zincire ulaş.",
-        "twitter-description": "Herhangi bir zincirden işlem yapın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeme yapın. Ağ değiştirmeye gerek yok."
+        "og-description": "EVM ve EVM olmayan kullanıcılar için tek bir dağıtım. Herhangi bir cüzdanı kullanın ve ağ değiştirmeden herhangi bir token ile ödeme yapın.",
+        "twitter-title": "Bir kez dağıtın. Herhangi bir zincire ulaşın.",
+        "twitter-description": "Herhangi bir zincirden işlem yapın. Herhangi bir cüzdanı kullanın. Ağ değiştirmeden herhangi bir token ile ödeme yapın."
       },
       "hero-section": {
-        "title": "Herhangi Bir Zincir, Herhangi Bir Uygulama, Tüm Kullanıcılar.\nTek Push Chain.",
-        "description": "Evrensel Uygulamalar için inşa edilmiş ilk Katman 1. \nBir kez inşa edin ve dağıtın, herhangi bir zincirden kullanıcıları dahil edin.",
-        "primary-button": "İnşaya Başla",
-        "primary-button-title": "Push Chain ile inşa yolculuğunuza başlayın!",
-        "secondary-button": "Bilgi Tabanını Keşfet",
-        "secondary-button-title": "Push Chain'i öğrenin ve keşfedin",
-        "section-aria-label": "Push Chain ana sayfa bölümü - Evrensel Katman 1 blok zinciri tanıtımı",
-        "primary-button-aria-label": "Push Chain üzerinde evrensel uygulamalar inşa etmeye başlayın - Geliştirici belgelerine gidin",
-        "secondary-button-aria-label": "Push Chain özelliklerini ve kavramlarını öğrenmek için bilgi tabanına gidin",
-        "hero-background-alt": "Push Chain ana sayfa arka plan animasyonu, evrensel blok zinciri bağlantısını gösteriyor",
-        "hero-background-title": "Push Chain - Evrensel Katman 1, zincirler arası uygulamalar için",
-        "schema-headline": "Push Chain - Uygulamalar için Evrensel Katman 1",
-        "schema-description": "Push Chain üzerinde bir kez dağıtın ve evrensel uygulamalarla herhangi bir blok zincirindeki kullanıcılara ulaşın"
-      },
-      "whatis-section": {
-        "titleFirst": "Gerçek bir",
-        "titleSecondGraditent": "Evrensel",
-        "titleThird": "Zincir",
-        "bottomTextFirst": "Bir kez Dağıtın,",
-        "bottomTextSecond": "Her Yere Ulaşın",
-        "bottomLinkText": "Başlayın",
-        "bottomLinkTitle": "Belge Merkezi'ne Gidin",
-        "section-aria-label": "Push Chain nedir - Evrensel blok zinciri açıklaması",
-        "animation-alt": "Push Chain'in birden fazla blok zinciri üzerinde evrensel uygulama dağıtımını gösteren animasyon",
-        "animation-title": "Push Chain evrensel uygulama dağıtımını gösteren animasyon",
-        "section-title": "Push Chain",
-        "section-description": "Evrensel uygulama geliştiriciliği yapmak için ihtiyacınız olan her şey.",
-        "section-features-title": "Her şey tek yerde",
-        "section-features-description": "Push Chain, uygulama geliştiricilerinin daha güvenli, ölçeklenebilir ve kolay bir şekilde evrensel uygulama oluşturmalarına yardımcı olur.",
-        "section-features-list-1-title": "EVM uyumluluğu",
-        "section-features-list-1-description": "Mevcut EVM araç ve kaynaklarını kullanın.",
-        "section-features-list-2-title": "Zincirler arası iletişim",
-        "section-features-list-2-description": "Farklı blok zincirler arasında kolayca iletişim kurun.",
-        "section-features-list-3-title": "Ölçeklenebilirlik",
-        "section-features-list-3-description": "Uygulamalarınızı sınırlama olmaksızın ölçeklendirin.",
-        "section-features-list-4-title": "Güvenlik",
-        "section-features-list-4-description": "Uygulamalarınızı en son güvenlik önlemleriyle koruyun."
+        "title": "Her Zincir, Her Uygulama, Tüm Kullanıcılar.\nTek Push Chain.",
+        "description": "Evrensel Uygulamalar için oluşturulmuş ilk Katman 1. \nBir kez oluşturun ve dağıtın, her zincirden kullanıcıları dahil edin.",
+        "primary-button": "Oluşturmaya Başlayın",
+        "primary-button-title": "Push Chain ile inşaat yolculuğunuza başlayın!",
+        "secondary-button": "Bilgi Tabanını Keşfedin",
+        "secondary-button-title": "Push Chain hakkında bilgi edinin",
+        "section-aria-label": "Push Chain ana bölümü - evrensel Katman 1 blockchain tanıtımı",
+        "primary-button-aria-label": "Push Chain üzerinde evrensel uygulamalar oluşturmaya başlayın - geliştirici dokümantasyonuna gidin",
+        "secondary-button-aria-label": "Push Chain özelliklerini ve konseptlerini bilgi tabanında öğrenin",
+        "hero-background-alt": "Push Chain ana bölüm arka plan animasyonu, evrensel blockchain bağlantısını gösteriyor",
+        "hero-background-title": "Push Chain - çapraz zincir uygulamalar için evrensel Katman 1",
+        "stats": {
+          "stat1": {
+            "title": "Desteklenen Zincirler",
+            "imagealt": "Desteklenen zincirlerin illüstrasyonu",
+            "imagetitle": "Ethereum, Solana, BNB Chain vb. tüm desteklenen zincirlerin listesi"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "YEREL SONLANMA",
+            "description": "Anında"
+          },
+          "stat4": {
+            "title": "YEREL BLOK SÜRESİ",
+            "description": "1s"
+          }
+        }
       },
       "blog-section": {
-        "subtitle": "HABERLER, GELİŞTİRME GÜNLÜKLERİ & FİKİRLER",
+        "subtitle": "HABERLER, GELİŞTİRME GÜNLÜKLERİ VE FİKİRLER",
         "subtitle-aria-label": "Blog kategori bilgileri",
         "title": "Push Chain'in Nabzı",
         "title-aria-label": "Son Push Chain blog gönderileri ve güncellemeleri",
-        "explore-link-text": "Daha Fazla Makale Keşfet",
+        "explore-link-text": "Daha Fazla Makale Keşfedin",
         "explore-link-title": "Tüm makaleleri ve Push Chain güncellemelerini okumak için Push Chain blogunu ziyaret edin",
         "explore-link-aria-label": "Push Chain blog sayfasına gidin",
         "section-aria-label": "Push Chain blog gönderileri ve haber bölümü",
         "blog-posts-list-aria-label": "Son Push Chain blog gönderileri",
-        "blog-post-aria-label": "{başlık} hakkında blog gönderisini okuyun",
+        "blog-post-aria-label": "{title} hakkında blog gönderisini okuyun",
         "blog-post-title-prefix": "Blog gönderisini okuyun - ",
         "loading-text": "Son blog gönderileri yükleniyor...",
-        "error-text": "Blog gönderileri şu anda yüklenemiyor",
-        "no-posts-text": "Şu anda blog gönderisi bulunmuyor"
+        "error-text": "Blog gönderileri bu anda yüklenemiyor",
+        "no-posts-text": "Herhangi bir blog gönderisi mevcut değil"
+      },
+      "stats-section": {
+        "section-aria-label": "Push Chain performans istatistikleri ve metrikleri",
+        "title": "Elde Edin",
+        "titleGradient": "Anında",
+        "titleThird": "Birlikte Çalışabilirlik",
+        "description": "Performans için optimize edilmiştir.\nGerçek zamanlı uygulama yürütmesi için yüksek TPS, ultra düşük gaz ve alt saniyelik sonlanma.",
+        "animation-alt": "Push Chain'in birden çok zincirde anında birlikte çalışabilirliğini gösteren etkileşimli animasyon",
+        "animation-title": "Push Chain anında birlikte çalışabilirlik görselleştirmesi"
       },
       "ending-section": {
-        "aria-label": "Evrensel Uygulamalar Oluşturun bölümü",
+        "aria-label": "Evrensel Uygulamalar Oluştur bölümü",
         "section-title": "Evrensel Uygulamalar Oluşturun.",
-        "section-subtitle": "Siloları kırın. Bir kez oluşturun, her blok zincirinde ölçeklendirin.",
+        "section-subtitle": "Siloları yıkın. Bir kez oluşturun, her zincirde ölçekleyin.",
         "docs-link": {
-          "text": "Push Chain Belgelerini Keşfet",
-          "title": "Push Chain belgelerini ve geliştirici kaynaklarını keşfedin",
-          "aria-label": "Yeni sekmede Push Chain belgelerini aç"
+          "text": "Push Chain Dokümanlarını Keşfedin",
+          "title": "Push Chain dokümantasyonunu ve geliştirici kaynaklarını keşfedin",
+          "aria-label": "Push Chain dokümanlarını yeni bir sekmede açın"
         },
         "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Evrensel blok zinciri platformu Push Chain ile başlayın",
+          "text": "Push Chain ile LFG",
+          "title": "Evrensel blockchain platformu Push Chain ile başlayın",
           "aria-label": "Push Chain geliştirme ile başlayın"
         }
       }

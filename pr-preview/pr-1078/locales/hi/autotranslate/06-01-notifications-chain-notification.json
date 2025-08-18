@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet, Donut में एक झलक पाएं, universal apps बनाएं और पुरस्कार जीतें!",
+      "button-text": "Closed Beta Pass प्राप्त करें",
+      "button-title": "Push Chain testnet में शामिल हों और अपना closed beta pass प्राप्त करें",
+      "button-aria-label": "Push Chain closed beta pass प्राप्त करने के लिए Telegram खोलें",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "testnet सूचना बंद करें",
+      "close-button-aria-label": "Push Chain testnet सूचना को खारिज करें",
+      "container-aria-label": "Push Chain testnet सूचना"
+    }
+  }
+}

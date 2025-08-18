@@ -2,12 +2,16 @@
   "pages": {
     "support": {
       "seo": {
-        "title": "Hỗ trợ — Trung tâm Trợ giúp",
-        "description": "Nhận trợ giúp với Push Chain: hướng dẫn, khắc phục sự cố, trạng thái và hỗ trợ cộng đồng.",
-        "og-title": "Hỗ trợ Push Chain - Trung tâm Trợ giúp",
-        "og-description": "Tìm tài liệu, hướng dẫn, cập nhật trạng thái và cách liên hệ hỗ trợ.",
-        "twitter-title": "Hỗ trợ - Trợ giúp & Tài liệu",
+        "title": "Hỗ Trợ — Trung Tâm Trợ Giúp",
+        "description": "Nhận trợ giúp về Push Chain: hướng dẫn, khắc phục sự cố, tình trạng hệ thống và hỗ trợ cộng đồng.",
+        "og-title": "Hỗ Trợ Push Chain - Trung Tâm Trợ Giúp",
+        "og-description": "Tìm tài liệu, hướng dẫn, cập nhật tình trạng và cách liên hệ hỗ trợ.",
+        "twitter-title": "Hỗ Trợ - Trợ Giúp & Tài Liệu",
         "twitter-description": "Hướng dẫn, hướng dẫn và hỗ trợ cộng đồng cho Push Chain."
+      },
+      "hero-section": {
+        "title": "Hỗ Trợ",
+        "description": "Trung Tâm Trợ Giúp Push Chain: khắc phục sự cố, hướng dẫn, Donut testnet, trình khám phá & vòi, cập nhật tình trạng và bảo mật. Hỏi trên Discord hoặc mở một yêu cầu hỗ trợ."
       }
     }
   }

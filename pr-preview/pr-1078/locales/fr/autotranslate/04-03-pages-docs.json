@@ -2,17 +2,17 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Documentation — Créez des Applications Universelles",
-        "description": "Tout ce dont vous avez besoin pour déployer sur Push Chain : guides de démarrage rapide, SDK, référence API, exemples et configuration de nœuds.",
-        "og-title": "Push Chain Docs - Guides de démarrage rapide, SDK et API",
-        "og-description": "Créez et exécutez des applications sur la couche d'exécution universelle avec des guides clairs et des exemples.",
-        "twitter-title": "Push Chain Docs - Créez maintenant",
-        "twitter-description": "Guides de démarrage rapide, SDK, référence API et exemples pour déployer rapidement."
+        "title": "Documentation — Créez des applications universelles",
+        "description": "Tout ce dont vous avez besoin pour lancer votre application sur Push Chain : guides de démarrage rapide, SDKs, référence API, exemples et configuration des nœuds.",
+        "og-title": "Documentation Push Chain - Guides de démarrage, SDKs et API",
+        "og-description": "Développez et exécutez des applications sur la couche d'exécution universelle avec des guides clairs et des exemples.",
+        "twitter-title": "Documentation Push Chain - Commencez maintenant",
+        "twitter-description": "Guides de démarrage rapide, SDKs, référence API et exemples pour un lancement rapide."
       },
       "explorePrelaunchBuild": {
-        "text": "Explorer la version de pré-lancement",
-        "title": "Accéder à la documentation Push Chain Testnet et aux fonctionnalités de pré-lancement",
-        "ariaLabel": "Naviguer vers la documentation Push Chain Testnet pour explorer les fonctionnalités de pré-lancement"
+        "text": "Explorer la version pré-lancement",
+        "title": "Accédez à la documentation du testnet Push Chain et découvrez les fonctionnalités pré-lancement",
+        "ariaLabel": "Accéder à la documentation du testnet Push Chain pour explorer les fonctionnalités pré-lancement"
       }
     }
   }

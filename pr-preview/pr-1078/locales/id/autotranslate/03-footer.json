@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "Dapatkan berita Push terbaru",
-      "privacy": "Kebijakan Privasi",
-      "tos": "Syarat dan Ketentuan"
+    "email-section": {
+      "title": "Tetap terhubung dengan Push Chain",
+      "title-secondary": "berita dan pembaruan!",
+      "title-aria-label": "Bagian langganan newsletter",
+      "section-aria-label": "Pendaftaran newsletter Push Chain"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Bergabunglah dengan kami dan bangun masa depan Komunikasi Web3.",
-        "link-text": "Lihat Lowongan Terbuka",
-        "image-title": "Bergabunglah Dengan Kami",
-        "image-alt": "Ikon yang menunjukkan Lowongan Terbuka"
-      },
-      "docs-card": {
-        "text": "Ikuti panduan sederhana kami untuk memulai dalam hitungan menit.",
-        "link-text": "Jelajahi Dokumentasi",
-        "image-title": "Mulai",
-        "image-alt": "Ikon yang menunjukkan kemudahan memulai"
-      }
+    "main-section": {
+      "section-aria-label": "Navigasi dan tautan footer",
+      "logo-link-title": "Beranda Push Chain",
+      "logo-link-aria-label": "Beranda Push Chain",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "Perusahaan",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Syarat",
-        "privacy-link": "Privasi"
-      },
-      "governance-column": {
-        "title": "Tata Kelola",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Panduan",
-        "forum-link": "Forum",
-        "grants-link": "Hibah",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "Sumber Daya",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Panduan Pengembangan"
+        "title-aria-label": "Navigasi Sumber Daya"
       },
-      "subscribe-column": {
-        "title": "Dukungan",
-        "contact-us-link": "Hubungi Kami",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "Pengembang",
+        "title-aria-label": "Navigasi Pengembang"
       },
-      "support-column": {
-        "title": "Berlangganan",
-        "email-placeholder": "Email Anda"
+      "community": {
+        "title": "Komunitas",
+        "title-aria-label": "Navigasi Komunitas"
+      },
+      "help": {
+        "title": "Bantuan",
+        "title-aria-label": "Navigasi Bantuan"
       }
+    },
+    "links": {
+      "get-started": "Mulai",
+      "get-started-title": "Mulai membangun di Push Chain",
+      "docs": "Dokumentasi",
+      "docs-title": "Dokumentasi Push Chain",
+      "github": "GitHub",
+      "github-title": "Repositori Push Chain di GitHub",
+      "knowledge-base": "Basis Pengetahuan",
+      "knowledge-base-title": "Basis Pengetahuan Push Chain",
+      "blog": "Blog",
+      "blog-title": "Blog Push Chain",
+      "litepaper": "Litepaper",
+      "litepaper-title": "Litepaper Push Chain (PDF)",
+      "brand-kit": "Kit Merek",
+      "brand-kit-title": "Aset merek dan panduan Push Chain",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Eksplorer blockchain Push Chain",
+      "faucet": "Faucet",
+      "faucet-title": "Dapatkan token uji dari faucet Push Chain",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Portal komunitas Push Protocol",
+      "support": "Dukungan",
+      "support-title": "Pusat Bantuan",
+      "security": "Keamanan & Pengungkapan",
+      "security-title": "Laporkan kerentanan (pengungkapan bertanggung jawab)",
+      "contact-us": "Hubungi Kami",
+      "contact-us-title": "Kemitraan, BD, media, atau pertanyaan umum",
+      "careers": "Karier",
+      "careers-title": "Posisi terbuka di Push Chain",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Ikuti Push Chain di X (Twitter)",
+      "discord": "Discord",
+      "discord-title": "Bergabung dengan Discord Push Chain",
+      "reddit": "Reddit",
+      "reddit-title": "Bergabung dengan subreddit Push Chain",
+      "telegram": "Telegram",
+      "telegram-title": "Bergabung dengan Telegram Push Chain"
+    },
+    "social-section": {
+      "section-aria-label": "Tautan media sosial dan informasi hukum",
+      "twitter-icon-title": "Push Chain di X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain di X (Twitter)",
+      "github-icon-title": "Push Chain di GitHub",
+      "github-icon-aria-label": "Push Chain di GitHub",
+      "discord-icon-title": "Push Chain di Discord",
+      "discord-icon-aria-label": "Push Chain di Discord"
+    },
+    "legal": {
+      "privacy-policy": "Kebijakan Privasi",
+      "privacy-policy-title": "Baca Kebijakan Privasi",
+      "privacy-policy-aria-label": "Kebijakan Privasi",
+      "terms-of-service": "Ketentuan Layanan",
+      "terms-of-service-title": "Baca Ketentuan Layanan",
+      "terms-of-service-aria-label": "Ketentuan Layanan",
+      "cookie-preferences": "Preferensi Cookie",
+      "cookie-preferences-title": "Kelola pengaturan cookie"
+    },
+    "footer-image": {
+      "alt": "Ilustrasi footer Push Chain",
+      "title": "Push Chain - Blockchain Universal"
     }
   }
 }

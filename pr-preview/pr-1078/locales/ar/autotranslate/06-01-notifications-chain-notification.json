@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "احصل على نظرة خاطفة على Testnet و Donut، وقم ببناء تطبيقات عالمية واربح جوائز!",
+      "button-text": "احصل على تصريح النسخة التجريبية المغلقة",
+      "button-title": "انضم إلى شبكة اختبار Push Chain واحصل على تصريح النسخة التجريبية المغلقة",
+      "button-aria-label": "افتح Telegram للحصول على تصريح النسخة التجريبية المغلقة لـ Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "إغلاق إشعار شبكة الاختبار",
+      "close-button-aria-label": "إخفاء إشعار شبكة اختبار Push Chain",
+      "container-aria-label": "إشعار شبكة اختبار Push Chain"
+    }
+  }
+}

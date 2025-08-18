@@ -3,177 +3,113 @@
     "home": {
       "seo": {
         "title": "Inicio",
-        "description": "Capa de estado compartido L1 para aplicaciones universales. Implemente una vez; llegue a los usuarios en cualquier cadena. Use cualquier billetera. Pague con cualquier token.",
-        "og-title": "Push Chain - L1 Universal para Aplicaciones",
-        "og-description": "Una implementación para usuarios de EVM y no EVM. Use cualquier billetera y pague con cualquier token — sin cambiar de red.",
-        "twitter-title": "Implemente una vez. Llegue a cualquier cadena.",
-        "twitter-description": "Transacte desde cualquier cadena. Use cualquier billetera. Pague con cualquier token. Sin cambiar de red."
+        "description": "Capa 1 con estado compartido para aplicaciones universales. Implementa una vez; llega a los usuarios en cualquier cadena. Usa cualquier billetera. Paga con cualquier token.",
+        "og-title": "Push Chain - Capa 1 universal para aplicaciones",
+        "og-description": "Una sola implementación para usuarios de EVM y no EVM. Usa cualquier billetera y paga con cualquier token: ¡sin cambiar de red!",
+        "twitter-title": "Implementa una vez. Llega a cualquier cadena.",
+        "twitter-description": "Transacciona desde cualquier cadena. Usa cualquier billetera. Paga con cualquier token. ¡Sin cambiar de red!"
       },
       "hero-section": {
-        "title": "Cualquier Cadena, Cualquier Aplicación, Todos los Usuarios.\nUna Push Chain.",
-        "description": "La primera Capa 1 construida para Aplicaciones Universales.\nConstruya e Implemente una vez, integre usuarios de cualquier cadena.",
-        "primary-button": "Comenzar a Construir",
-        "primary-button-title": "¡Comience su viaje como desarrollador con Push Chain!",
-        "secondary-button": "Explorar la Base de Conocimiento",
-        "secondary-button-title": "Aprenda y explore Push Chain",
-        "section-aria-label": "Sección de presentación de Push Chain - introducción a la cadena de bloques universal de Capa 1",
-        "primary-button-aria-label": "Comience a construir aplicaciones universales en Push Chain - Vaya a la documentación del desarrollador",
-        "secondary-button-aria-label": "Aprenda sobre las características y conceptos de Push Chain en la base de conocimiento",
-        "hero-background-alt": "Animación de fondo de Push Chain que muestra la conectividad universal de la cadena de bloques",
-        "hero-background-title": "Push Chain - Capa 1 Universal para aplicaciones entre cadenas",
-        "schema-headline": "Push Chain - L1 Universal para Aplicaciones",
-        "schema-description": "Implemente una vez en Push Chain y llegue a los usuarios en cualquier cadena de bloques con aplicaciones universales"
+        "title": "Cualquier Cadena, Cualquier App, Todos los Usuarios.\nUna Push Chain.",
+        "description": "La primera Capa 1 creada para aplicaciones universales. \nImplementa y despliega una vez, incorpora usuarios desde cualquier cadena.",
+        "primary-button": "Comenzar a construir",
+        "primary-button-title": "¡Comienza tu viaje como constructor con Push Chain!",
+        "secondary-button": "Explorar la base de conocimiento",
+        "secondary-button-title": "Aprende y explora Push Chain",
+        "section-aria-label": "Sección de introducción de Push Chain - Capa 1 universal blockchain",
+        "primary-button-aria-label": "Comienza a construir apps universales en Push Chain - Ve a la documentación para desarrolladores",
+        "secondary-button-aria-label": "Aprende sobre las características y conceptos de Push Chain en la base de conocimiento",
+        "hero-background-alt": "Animación de fondo de Push Chain mostrando conectividad universal blockchain",
+        "hero-background-title": "Push Chain - Capa 1 universal para aplicaciones cross-chain",
+        "schema-headline": "Push Chain - Capa 1 universal para aplicaciones",
+        "schema-description": "Implementa una vez en Push Chain y llega a usuarios en cualquier blockchain con aplicaciones universales"
       },
-      "whatis-section": {
-        "titleFirst": "Una Verdadera",
-        "titleSecondGraditent": "Universal",
-        "titleThird": "Cadena",
-        "bottomTextFirst": "Implemente Una Vez,",
-        "bottomTextSecond": "Llegue a Todas Partes",
-        "bottomLinkText": "Comenzar",
-        "bottomLinkTitle": "Vaya al Centro de Documentación",
-        "section-aria-label": "Qué es Push Chain - explicación de la cadena de bloques universal",
-        "animation-alt": "Animación que demuestra la implementación universal de aplicaciones de Push Chain en múltiples cadenas de bloques",
-        "animation-title": "Visualización de la implementación universal de Push Chain - implemente una vez, llegue a cualquier cadena",
-        "bottom-link-aria-label": "Navegue a la documentación de Push Chain para comenzar a construir aplicaciones universales"
+      "what-is-section": {
+        "title": "El Futuro de las Aplicaciones Blockchain",
+        "description": "Push Chain es una capa 1 interoperable diseñada para unificar blockchain communication y transacciones. Simplifica el desarrollo de aplicaciones, permitiendo que los desarrolladores implementen una vez y lleguen a múltiples cadenas.",
+        "features": [
+          {
+            "icon": "cross_chain_communication",
+            "title": "Comunicación Cross-Chain",
+            "description": "Conéctate con usuarios en todas las principales blockchains sin problemas.",
+            "alt": "Comunicación cross-chain"
+          },
+          {
+            "icon": "single_implementation",
+            "title": "Implementación Única",
+            "description": "Implementa tu aplicación una vez y llega a un ecosistema diverso de blockchains.",
+            "alt": "Implementación única"
+          },
+          {
+            "icon": "low_gas",
+            "title": "Bajas Tarifas de Gas",
+            "description": "Disfruta de tarifas de gas ultrabajas para transacciones eficientes y rentables.",
+            "alt": "Bajas tarifas de gas"
+          },
+          {
+            "icon": "instant_finality",
+            "title": "Finalidad Instantánea",
+            "description": "Experimenta una finalidad instantánea para transacciones en tiempo real.",
+            "alt": "Finalidad instantánea"
+          }
+        ]
       },
-      "chain-features-section": {
-        "section-aria-label": "Sección de innovaciones y características de Push Chain",
-        "header": {
-          "title": "Una capa de estado compartido L1 para el futuro de web3",
-          "description": "Transacciones de nivel empresarial a velocidades ultrarrápidas con una finalización casi instantánea."
-        },
-        "primary-features": {
-          "title": "Una arquitectura L1 que permite la escalabilidad sin límites",
-          "description": "Las aplicaciones son totalmente compatibles con EVM, lo que permite una transición perfecta y un desarrollo fluido."
-        },
-        "title": "Transacciones a nivel empresarial a velocidades ultrarrápidas",
-        "description": "Transacciones a nivel empresarial a velocidades ultrarrápidas con una finalización casi instantánea.",
-        "secondary-features": {
-          "title": "Transacciones a nivel empresarial a velocidades ultrarrápidas",
-          "description": "Transacciones a nivel empresarial a velocidades ultrarrápidas con una finalización casi instantánea."
-        },
-        "features-list": {
-          "title": "Características destacadas",
-          "description": "Descubra las innovadoras características que distinguen a Push Chain",
-          "features": [
-            {
-              "title": "Compatibilidad con EVM",
-              "description": "Compatibilidad total con el entorno de ejecución virtual de Ethereum (EVM) para una fácil migración de aplicaciones existentes.",
-              "icon": "evm"
-            },
-            {
-              "title": "Finalidad casi instantánea",
-              "description": "Experimente tiempos de transacción ultrarrápidos con una finalidad casi instantánea, lo que garantiza una experiencia de usuario fluida.",
-              "icon": "finality"
-            },
-            {
-              "title": "Escalabilidad sin límites",
-              "description": "Escalabilidad sin límites para satisfacer las crecientes demandas de su aplicación, lo que permite un crecimiento sostenible.",
-              "icon": "scalability"
-            },
-            {
-              "title": "Transacciones de nivel empresarial",
-              "description": "Transacciones a nivel empresarial para manejar grandes volúmenes de transacciones de forma eficiente y segura.",
-              "icon": "enterprise"
-            }
-          ]
-        }
-      },
-      "blog-section": {
-        "subtitle": "NOTICIAS, DESARROLLOS E IDEAS",
-        "subtitle-aria-label": "Información de la categoría del blog",
-        "title": "El Pulso de Push Chain",
-        "title-aria-label": "Las últimas publicaciones y actualizaciones del blog de Push Chain",
-        "explore-link-text": "Explorar Más Artículos",
-        "explore-link-title": "Visite el blog de Push Chain para leer todos los artículos y actualizaciones",
-        "explore-link-aria-label": "Navegue a la página del blog de Push Chain",
-        "section-aria-label": "Sección de publicaciones y noticias del blog de Push Chain",
-        "blog-posts-list-aria-label": "Publicaciones recientes del blog de Push Chain",
-        "blog-post-aria-label": "Lea la publicación del blog sobre {title}",
-        "blog-post-title-prefix": "Lea la publicación del blog - ",
-        "loading-text": "Cargando las últimas publicaciones del blog...",
-        "error-text": "No se pudo cargar las publicaciones del blog en este momento",
-        "no-posts-text": "No hay publicaciones de blog disponibles"
-      },
-      "trustedby-section": {
-        "title": "Construido por el equipo en el que confían los pioneros de web3",
-        "section-aria-label": "Sección de confianza en Push Chain",
-        "trusted-by-alt": "Inversor - "
-      },
-      "featured-section": {
-        "aria-label": "Sección Destacado",
-        "tag": "DESTACADO EN",
-        "title": "Push Chain en el Punto de Mira",
-        "subtitle": "No solo tome nuestra palabra por ello. Vea lo que dicen los medios sobre la verdadera cadena universal.",
-        "articles-image-alt": "Cobertura mediática de ",
-        "articles-text": "Leer Cobertura Completa",
-        "articles-title-1": "Lea ",
-        "articles-title-2": "'s pensamientos sobre Push Chain en detalle",
-        "articles": {
-          "binance-chain": {
-            "text": "Estamos encantados de anunciar que Push Protocol, un protocolo de comunicación descentralizado líder para Web3, ahora se ha lanzado en BNB Chain."
+      "stats-section": {
+        "title": "Logra",
+        "titleGradient": "Interoperabilidad",
+        "titleThird": "Instantánea",
+        "description": "Optimizado para el rendimiento.\nAlto TPS, gas ultrabajo y finalidad inferior al segundo para la ejecución de aplicaciones en tiempo real.",
+        "animation-alt": "Animación interactiva que muestra la interoperabilidad instantánea de Push Chain entre múltiples blockchains",
+        "animation-title": "Visualización de la interoperabilidad instantánea de Push Chain",
+        "stats": {
+          "stat1": {
+            "title": "Cadenas Soportadas",
+            "imagealt": "Ilustración que muestra las cadenas soportadas",
+            "imagetitle": "Lista de todas las cadenas soportadas como Ethereum, Solana, BNB Chain, etc"
           },
-          "coindesk": {
-            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
           },
-          "defiant": {
-            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          "stat3": {
+            "title": "FINALIDAD NATIVA",
+            "description": "Instantánea"
           },
-          "balaji": {
-            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
-          },
-          "defiprime": {
-            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
-          },
-          "ethfoundation": {
-            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
-          },
-          "beincrypto": {
-            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
-          },
-          "the-block": {
-            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
-          },
-          "business-insider": {
-            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
-          },
-          "chainwire": {
-            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
-          },
-          "benzinga": {
-            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
-          },
-          "crypto-briefing": {
-            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
-          },
-          "cryptoslate": {
-            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
-          },
-          "messari": {
-            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
-          },
-          "coin-telegraph-1": {
-            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
-          },
-          "coin-telegraph-2": {
-            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          "stat4": {
+            "title": "TIEMPO DE BLOQUE NATIVO",
+            "description": "1s"
           }
         }
       },
+      "blog-section": {
+        "subtitle": "NOTICIAS, DEVLOGS E IDEAS",
+        "subtitle-aria-label": "Información de la categoría del blog",
+        "title": "Tu Pulso de Push Chain",
+        "title-aria-label": "Las últimas publicaciones del blog y actualizaciones de Push Chain",
+        "explore-link-text": "Explorar más artículos",
+        "explore-link-title": "Visita el blog de Push Chain para leer todos los artículos y actualizaciones",
+        "explore-link-aria-label": "Navega a la página del blog de Push Chain",
+        "section-aria-label": "Sección de publicaciones del blog y noticias de Push Chain",
+        "blog-posts-list-aria-label": "Publicaciones recientes del blog de Push Chain",
+        "blog-post-aria-label": "Lee la publicación del blog sobre {title}",
+        "blog-post-title-prefix": "Lee la publicación del blog - ",
+        "loading-text": "Cargando las últimas publicaciones del blog...",
+        "error-text": "No se pudieron cargar las publicaciones del blog en este momento",
+        "no-posts-text": "No hay publicaciones de blog disponibles"
+      },
       "ending-section": {
-        "aria-label": "Construya Aplicaciones Universales",
-        "section-title": "Construya Aplicaciones Universales.",
-        "section-subtitle": "Rompa los silos. Construya una vez, escale en cada cadena de bloques.",
+        "aria-label": "Construye Aplicaciones Universales",
+        "section-title": "Construye Aplicaciones Universales.",
+        "section-subtitle": "Rompe los silos. Implementa una vez, escala en cada blockchain.",
         "docs-link": {
-          "text": "Explorar la Documentación de Push Chain",
-          "title": "Explore la documentación de Push Chain y los recursos para desarrolladores",
-          "aria-label": "Abra la documentación de Push Chain en una nueva pestaña"
+          "text": "Explora la documentación de Push Chain",
+          "title": "Explora la documentación de Push Chain y los recursos para desarrolladores",
+          "aria-label": "Abre la documentación de Push Chain en una nueva pestaña"
         },
         "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Comience con Push Chain - la plataforma de cadena de bloques universal",
-          "aria-label": "Comience con el desarrollo de Push Chain"
+          "text": "Únete a Push Chain",
+          "title": "Comienza con Push Chain: la plataforma blockchain universal",
+          "aria-label": "Comienza el desarrollo de Push Chain"
         }
       }
     }

@@ -5,14 +5,14 @@
         "title": "文档 — 构建通用应用",
         "description": "Push Chain 上线所需的一切：快速入门、SDK、API 参考、示例和节点设置。",
         "og-title": "Push Chain 文档 - 快速入门、SDK 和 API",
-        "og-description": "使用清晰的指南和示例在通用执行层构建和运行应用程序。",
+        "og-description": "使用清晰的指南和示例，在通用执行层构建和运行应用。",
         "twitter-title": "Push Chain 文档 - 立即构建",
         "twitter-description": "快速入门、SDK、API 参考和示例，助您快速上线。"
       },
       "explorePrelaunchBuild": {
         "text": "探索预发布版本",
-        "title": "访问 Push Chain 测试网文档和预发布功能",
-        "ariaLabel": "导航到 Push Chain 测试网文档以探索预发布版本功能"
+        "title": "访问 Push Chain Testnet 文档和预发布功能",
+        "ariaLabel": "导航到 Push Chain Testnet 文档以探索预发布功能"
       }
     }
   }

@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Supportfragen zu Push Chain - Universal Blockchain",
+      "title": "Support\nHilfe-Center",
+      "title-aria-label": "Häufig gestellte Supportfragen und Antworten zu Push Chain",
+      "discord-link-text": "Frag uns auf Discord",
+      "discord-link-title": "Tritt der Push Chain Discord-Community für Support und Fragen bei",
+      "discord-link-aria-label": "Discord-Community in einem neuen Tab öffnen",
+      "explore-more-text": "Weitere FAQs erkunden",
+      "explore-more-title": "Umfassende Push Chain FAQs, Dokumentationen und Entwicklerhandbücher anzeigen",
+      "explore-more-aria-label": "Zur vollständigen Push Chain FAQ-Seite navigieren",
+      "accordion-aria-label": "Liste der Push Chain Supportfragen",
+      "answer-aria-label": "Antwort auf die Frage - ",
+      "qnas": {
+        "qna1": {
+          "question": "Ich kann meine Wallet nicht verbinden. Was sollte ich versuchen?",
+          "answer": "<1><2>Schnelle Überprüfung:</2> Seite aktualisieren, Wallet entsperren und aggressive Werbeblocker/Scriptblocker für push.org deaktivieren.</1><1><2>Kein Netzwerkwechsel erforderlich:</2> Bleibe auf deiner Home-Chain; Push übernimmt die Weiterleitung im Hintergrund.</1><1><2>Website-Berechtigungen zurücksetzen:</2> Entferne die Verbindung der Website in deiner Wallet und verbinde sie erneut.</1><1>Immer noch feststecken? Frag auf <3>Discord</3> oder öffne ein <4>Support-Ticket</4>.</1>",
+          "discord-url-title": "Tritt dem Push Chain Discord für Echtzeit-Hilfe bei.",
+          "support-url-title": "Öffne ein Support-Ticket."
+        },
+        "qna2": {
+          "question": "Meine Transaktion ist ausstehend oder fehlgeschlagen – was nun?",
+          "answer": "<1><2>Status überprüfen:</2> Suche deine Tx auf <3>Push Scan</3> mit dem Hash aus deiner Wallet.</1><1><2>Ausstehend:</2> Bestätigung erfolgt normalerweise kurz; vermeide wiederholtes erneutes Senden.</1><1><2>Fehlgeschlagen:</2> Keine Gelder wurden abgezogen. Überprüfe den Fehler und versuche es erneut.</1><1>Laufende Vorfälle werden auf <4>Status</4> veröffentlicht.</1>",
+          "scan-url-title": "Öffne Push Scan (Explorer).",
+          "status-url-title": "Ansicht des Netzwerkstatus und der Vorfälle."
+        },
+        "qna3": {
+          "question": "Wie erhalte ich Testnet-Token (Donut)?",
+          "answer": "<1>Verwende den <3>Faucet</3> um Test-Token anzufordern.</1><1><2>Hinweis:</2> Ratenbegrenzungen können gelten; einige Faucets erfordern eine einfache Verifizierung. Wenn der Faucet fehlschlägt, ping uns auf <4>Discord</4>.</1>",
+          "faucet-url-title": "Öffne den Push Chain Faucet.",
+          "discord-url-title": "Tritt dem Push Chain Discord bei."
+        },
+        "qna4": {
+          "question": "Wie melde ich einen Fehler oder eine Sicherheitslücke?",
+          "answer": "<1><2>App-Fehler:</2> Erstelle ein <3>Support-Ticket</3> oder poste in <4>Discord</4> mit Schritten zur Reproduktion.</1><1><2>Sicherheitsprobleme:</2> Email an <5>security@push.org</5>. Bitte vermeide öffentliche Veröffentlichung, bis wir eine Lösung bestätigen.</1>",
+          "support-url-title": "Öffne ein Support-Ticket.",
+          "discord-url-title": "Tritt dem Discord bei."
+        },
+        "qna5": {
+          "question": "Wo befinden sich die Dokumente und Schnellstarts?",
+          "answer": "<1>Beginne mit <3>Docs</3> für Schnellstarts und APIs und der <4>Knowledge Base</4> für Konzepte, tiefe Einblicke und FAQs.</1>",
+          "docs-url-title": "Öffne die Entwicklerdokumentation.",
+          "kb-url-title": "Öffne die Knowledge Base."
+        },
+        "qna6": {
+          "question": "Kann ich Support für eine neue Chain, Funktion oder Integration anfordern?",
+          "answer": "<1>Ja. Teile uns mit, welche Chain/Tooling du über <3>Contact</3> benötigst oder öffne ein Issue auf <4>GitHub</4>. Wir erweitern die Abdeckung kontinuierlich.</1>",
+          "contact-url-title": "Kontaktiere das Push Chain Team.",
+          "github-url-title": "Öffne die GitHub Organisation."
+        }
+      }
+    }
+  }
+}

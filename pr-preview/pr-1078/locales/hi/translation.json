@@ -1,104 +1,104 @@
 {
   "global": {
     "site-name": "Push Chain — ऐप्स के लिए यूनिवर्सल L1",
-    "site-description": "यूनिवर्सल ऐप्स के लिए साझा-स्थिति L1। एक बार डिप्लॉय करें; किसी भी चेन पर उपयोगकर्ताओं तक पहुंचें। कोई भी वॉलेट उपयोग करें। किसी भी टोकन से भुगतान करें। नेटवर्क स्विचिंग की आवश्यकता नहीं।"
+    "site-description": "यूनिवर्सल ऐप्स के लिए साझा-स्टेट L1. एक बार डिप्लॉय करें; किसी भी चेन पर उपयोगकर्ताओं तक पहुंचें. कोई भी वॉलेट इस्तेमाल करें. कोई भी टोकन इस्तेमाल करें. नेटवर्क स्विचिंग की आवश्यकता नहीं."
   },
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - होमपेज पर जाएं",
+      "logo-aria-label": "Push Chain - होमपेज पर जाएँ",
       "language-icon-alt": "भाषा चयन आइकन",
       "hamburger-menu-alt": "नेविगेशन मेनू खोलें",
       "testnet-badge-alt": "Push Chain Testnet Donut - टेस्टनेट स्थिति देखें"
     },
     "logo": {
-      "imagealt": "Push Chain लोगो की छवि",
+      "imagealt": "Push Chain लोगो की इमेज",
       "imagetitle": "Push Chain लोगो",
-      "ctatitle": "Push Chain होमपेज पर जाएं"
+      "ctatitle": "Push Chain होमपेज पर जाएँ"
     },
     "testnet": {
-      "title": "Testnet",
-      "aria-label": "Testnet सेक्शन",
+      "title": "टेस्टनेट",
+      "aria-label": "टेस्टनेट सेक्शन",
       "link1": {
         "text": "Push Scan",
         "subtext": "Push Chain के लिए ब्लॉक एक्सप्लोरर",
-        "title": "Push Scan पर Push Chain testnet लेनदेन और ब्लॉक्स को एक्सप्लोर करें"
+        "title": "Push Scan पर Push Chain टेस्टनेट लेन-देन और ब्लॉक देखें"
       },
       "link2": {
         "text": "Faucet",
         "subtext": "टेस्टनेट टोकन प्राप्त करें",
-        "title": "Push Chain डेवलपमेंट के लिए मुफ्त टेस्टनेट टोकन प्राप्त करें"
+        "title": "Push Chain विकास के लिए मुफ्त टेस्टनेट टोकन प्राप्त करें"
       }
     },
     "developers": {
-      "title": "Developers",
-      "aria-label": "Developers सेक्शन",
+      "title": "डेवलपर्स",
+      "aria-label": "डेवलपर्स सेक्शन",
       "link1": {
         "text": "शुरू करें",
-        "subtext": "Push Chain पर बिल्डिंग का परिचय",
-        "title": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़"
+        "subtext": "Push Chain पर निर्माण का परिचय",
+        "title": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर डॉक्यूमेंटेशन"
       },
       "link2": {
-        "text": "Quick Start",
-        "subtext": "सेकंडों में डेव एनवायरनमेंट सेटअप करें",
-        "title": "क्विक स्टार्ट गाइड - Push Chain डेवलपमेंट एनवायरनमेंट तुरंत सेटअप करें"
+        "text": "क्विक स्टार्ट",
+        "subtext": "सेकंड में देव वातावरण सेटअप करें",
+        "title": "क्विक स्टार्ट गाइड - Push Chain डेवलपमेंट वातावरण को तुरंत सेटअप करें"
       },
       "link3": {
-        "text": "Tutorials",
-        "subtext": "Push के साथ बिल्ड करने के लिए चरणबद्ध गाइड",
-        "title": "हैंड्स-ऑन ट्यूटोरियल्स के साथ सीखें - Push Chain पर अपना पहला यूनिवर्सल ऐप बनाएं"
+        "text": "ट्यूटोरियल",
+        "subtext": "Push के साथ निर्माण के लिए चरण-दर-चरण गाइड",
+        "title": "Push Chain पर अपने पहले यूनिवर्सल ऐप का निर्माण करके सीखें - हैंड्स-ऑन ट्यूटोरियल"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "कोर कोड और ओपन-सोर्स टूल्स देखें",
-        "title": "GitHub पर Push Chain सोर्स कोड और डेवलपमेंट टूल्स को एक्सप्लोर करें"
+        "subtext": "कोर कोड और ओपन-सोर्स टूल देखें",
+        "title": "Push Chain सोर्स कोड और GitHub पर विकास टूल देखें"
       },
       "link5": {
         "text": "Developer Discord",
-        "subtext": "डेव कम्युनिटी से जुड़ें",
-        "title": "सपोर्ट और सहयोग के लिए Discord पर Push Chain डेवलपर कम्युनिटी में शामिल हों"
+        "subtext": "देव समुदाय से जुड़ें",
+        "title": "समर्थन और सहयोग के लिए Push Chain डेवलपर समुदाय से Discord पर जुड़ें"
       }
     },
     "community": {
-      "title": "Community",
-      "aria-label": "Community सेक्शन",
+      "title": "समुदाय",
+      "aria-label": "समुदाय सेक्शन",
       "link1": {
         "text": "Knowledge Base",
-        "subtext": "फीचर्स पर डीप डाइव्स खोजें",
-        "title": "व्यापक Push Chain दस्तावेज़ और फीचर गाइड्स को एक्सप्लोर करें"
+        "subtext": "फीचर पर गहन जानकारी खोजें",
+        "title": "Push Chain डॉक्यूमेंटेशन और फीचर गाइड का व्यापक अन्वेषण करें"
       },
       "link2": {
         "text": "Tokenomics",
-        "subtext": "Push Chain पर सब कुछ पावर करने वाला नेटिव टोकन",
-        "title": "Push Chain टोकनोमिक्स और $PC टोकन उपयोगिता के बारे में जानें"
+        "subtext": "Push Chain पर सब कुछ शक्ति देने वाला मूल टोकन",
+        "title": "$PC टोकन उपयोगिता और Push Chain टोकनिक्स के बारे में जानें"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "अपडेट्स और इकोसिस्टम न्यूज़ फॉलो करें",
-        "title": "नवीनतम अपडेट्स और घोषणाओं के लिए X (Twitter) पर Push Chain को फॉलो करें"
+        "subtext": "अपडेट और इकोसिस्टम समाचारों का पालन करें",
+        "title": "नवीनतम अपडेट और घोषणाओं के लिए X (Twitter) पर Push Chain का पालन करें"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "कम्युनिटी के साथ चैट, बिल्ड और वाइब करें",
-        "title": "चर्चा और सपोर्ट के लिए Discord पर Push Chain कम्युनिटी में शामिल हों"
+        "subtext": "चैट करें, निर्माण करें और समुदाय के साथ वाइब करें",
+        "title": "चर्चाओं और समर्थन के लिए Push Chain समुदाय से Discord पर जुड़ें"
       },
       "link5": {
         "text": "Telegram",
-        "subtext": "बातचीत में शामिल हों और अपडेटेड रहें",
-        "title": "रियल-टाइम अपडेट्स के लिए Telegram पर Push Chain कम्युनिटी से जुड़ें"
+        "subtext": "बातचीत में शामिल हों और लूप में रहें",
+        "title": "वास्तविक समय अपडेट के लिए Push Chain समुदाय से Telegram पर जुड़ें"
       }
     },
     "resources": {
-      "title": "Resources",
-      "aria-label": "Resources सेक्शन",
+      "title": "संसाधन",
+      "aria-label": "संसाधन सेक्शन",
       "link1": {
         "text": "Blog",
-        "subtext": "अपडेट्स, डीप डाइव्स और डेव स्टोरीज़",
-        "title": "नवीनतम अपडेट्स, तकनीकी डीप डाइव्स और डेवलपर स्टोरीज़ के लिए Push Chain ब्लॉग पढ़ें"
+        "subtext": "अपडेट, गहन जानकारी और डेवलपर कहानियां",
+        "title": "नवीनतम अपडेट, तकनीकी गहन जानकारी और डेवलपर कहानियों के लिए Push Chain ब्लॉग पढ़ें"
       },
       "link2": {
         "text": "Litepaper",
-        "subtext": "दृष्टि और तकनीक, सरलीकृत",
-        "title": "Push Chain Litepaper पढ़ें - सरलीकृत दृष्टि और तकनीकी अवलोकन"
+        "subtext": "दृष्टि और तकनीक, सरल",
+        "title": "Push Chain Litepaper पढ़ें - सरल दृष्टि और तकनीकी अवलोकन"
       },
       "link3": {
         "text": "FAQ",
@@ -110,174 +110,764 @@
       "title": "भाषा",
       "aria-label": "भाषा चयन ड्रॉपडाउन",
       "english": "English",
-      "english-ctatitle": "भाषा को English में बदलें",
+      "english-ctatitle": "भाषा को अंग्रेजी में बदलें",
       "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "भाषा को 中文 में बदलें",
+      "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",
-      "spanish-ctatitle": "भाषा को Español में बदलें",
+      "spanish-ctatitle": "Cambiar el idioma a español",
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
       "korean": "한국어",
-      "korean-ctatitle": "भाषा को 한국어 में बदलें",
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
-      "japanese-ctatitle": "भाषा को 日本語 में बदलें",
+      "japanese-ctatitle": "言語を日本語に変更する",
       "portuguese": "Português",
-      "portuguese-ctatitle": "भाषा को Português में बदलें",
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "भाषा को Русский में बदलें",
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "भाषा को Türkçe में बदलें",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "भाषा को Français में बदलें",
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "भाषा को Bahasa Indonesia में बदलें",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "भाषा को Tiếng Việt में बदलें",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "भाषा को Deutsch में बदलें",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "भाषा को العربية में बदलें"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Push Portal एक्सेस करें - डेवलपर, यूज़र या वैलिडेटर के रूप में पॉइंट्स अर्जित करें"
+      "title": "Push Portal एक्सेस करें - डेवलपर, उपयोगकर्ता, या सत्यापनकर्ता के रूप में अंक अर्जित करें"
     }
   },
   "footer": {
-    "mail-section": {
-      "title": "नवीनतम Push समाचार प्राप्त करें",
-      "privacy": "गोपनीयता नीति",
-      "tos": "शर्तें और नियम"
+    "email-section": {
+      "title": "Push Chain से जुड़े रहें",
+      "title-secondary": "खबरें और अपडेट!",
+      "title-aria-label": "न्यूज़लेटर सदस्यता अनुभाग",
+      "section-aria-label": "Push Chain न्यूज़लेटर साइनअप"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "हमारे साथ जुड़ें और Web3 संचार का भविष्य बनाएं।",
-        "link-text": "खुले पदों को देखें",
-        "image-title": "हमारे साथ जुड़ें",
-        "image-alt": "खुले पदों को दर्शाने वाला आइकन"
-      },
-      "docs-card": {
-        "text": "मिनटों में आरंभ करने के लिए हमारे सरल गाइड का पालन करें।",
-        "link-text": "दस्तावेज़ देखें",
-        "image-title": "शुरू करें",
-        "image-alt": "शुरू करने की आसानी को दर्शाने वाला आइकन"
-      }
+    "main-section": {
+      "section-aria-label": "फ़ुटर नेविगेशन और लिंक",
+      "logo-link-title": "Push Chain होमपेज",
+      "logo-link-aria-label": "Push Chain होमपेज",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "कंपनी",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "शर्तें",
-        "privacy-link": "गोपनीयता"
-      },
-      "governance-column": {
-        "title": "शासन",
-        "push-governance-link": "Push Governance",
-        "guides-link": "मार्गदर्शिकाएँ",
-        "forum-link": "फ़ोरम",
-        "grants-link": "अनुदान",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "संसाधन",
-        "blog-link": "ब्लॉग",
-        "whitepaper-link": "श्वेत पत्र",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
+        "title-aria-label": "संसाधन नेविगेशन"
       },
-      "subscribe-column": {
+      "developers": {
+        "title": "डेवलपर्स",
+        "title-aria-label": "डेवलपर नेविगेशन"
+      },
+      "community": {
+        "title": "समुदाय",
+        "title-aria-label": "समुदाय नेविगेशन"
+      },
+      "help": {
         "title": "सहायता",
-        "contact-us-link": "संपर्क करें",
-        "faq-link": "अक्सर पूछे जाने वाले प्रश्न"
-      },
-      "support-column": {
-        "title": "सदस्यता लें",
-        "email-placeholder": "आपका ईमेल"
+        "title-aria-label": "सहायता नेविगेशन"
       }
+    },
+    "links": {
+      "get-started": "शुरू करें",
+      "get-started-title": "Push Chain पर बनाना शुरू करें",
+      "docs": "दस्तावेज़",
+      "docs-title": "Push Chain दस्तावेज़",
+      "github": "GitHub",
+      "github-title": "GitHub पर Push Chain रिपॉजिटरी",
+      "knowledge-base": "नॉलेज बेस",
+      "knowledge-base-title": "Push Chain नॉलेज बेस",
+      "blog": "ब्लॉग",
+      "blog-title": "Push Chain ब्लॉग",
+      "litepaper": "लाइटपेपर",
+      "litepaper-title": "Push Chain लाइटपेपर (PDF)",
+      "brand-kit": "ब्रांड किट",
+      "brand-kit-title": "Push Chain ब्रांड एसेट्स और दिशानिर्देश",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain ब्लॉकचेन एक्सप्लोरर",
+      "faucet": "फ़ॉसेट",
+      "faucet-title": "Push Chain फ़ॉसेट से टेस्ट टोकन प्राप्त करें",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Protocol समुदाय पोर्टल",
+      "support": "सहायता",
+      "support-title": "सहायता केंद्र",
+      "security": "सुरक्षा और प्रकटीकरण",
+      "security-title": "एक भेद्यता की रिपोर्ट करें (जिम्मेदार प्रकटीकरण)",
+      "contact-us": "संपर्क करें",
+      "contact-us-title": "साझेदारी, BD, मीडिया, या सामान्य पूछताछ",
+      "careers": "कैरियर",
+      "careers-title": "Push Chain में खुली भूमिकाएं",
+      "twitter": "X (Twitter)",
+      "twitter-title": "X (Twitter) पर Push Chain को फॉलो करें",
+      "discord": "Discord",
+      "discord-title": "Push Chain Discord में शामिल हों",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain subreddit में शामिल हों",
+      "telegram": "Telegram",
+      "telegram-title": "Push Chain Telegram में शामिल हों"
+    },
+    "social-section": {
+      "section-aria-label": "सोशल मीडिया लिंक और कानूनी जानकारी",
+      "twitter-icon-title": "X (Twitter) पर Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) पर Push Chain",
+      "github-icon-title": "GitHub पर Push Chain",
+      "github-icon-aria-label": "GitHub पर Push Chain",
+      "discord-icon-title": "Discord पर Push Chain",
+      "discord-icon-aria-label": "Discord पर Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "गोपनीयता नीति",
+      "privacy-policy-title": "गोपनीयता नीति पढ़ें",
+      "privacy-policy-aria-label": "गोपनीयता नीति",
+      "terms-of-service": "सेवा की शर्तें",
+      "terms-of-service-title": "सेवा की शर्तें पढ़ें",
+      "terms-of-service-aria-label": "सेवा की शर्तें",
+      "cookie-preferences": "कुकी प्राथमिकताएं",
+      "cookie-preferences-title": "कुकी सेटिंग प्रबंधित करें"
+    },
+    "footer-image": {
+      "alt": "Push Chain फ़ुटर चित्रण",
+      "title": "Push Chain - यूनिवर्सल ब्लॉकचेन"
     }
   },
   "pages": {
+    "home": {
+      "seo": {
+        "title": "होम",
+        "description": "सार्वभौमिक ऐप्स के लिए साझा-स्टेट L1। एक बार परिनियोजित करें; किसी भी चेन पर उपयोगकर्ताओं तक पहुंचें। कोई भी वॉलेट इस्तेमाल करें। किसी भी टोकन से भुगतान करें।",
+        "og-title": "पुश चेन - ऐप्स के लिए सार्वभौमिक L1",
+        "og-description": "EVM और गैर-EVM उपयोगकर्ताओं के लिए एक परिनियोजन। किसी भी वॉलेट का उपयोग करें और बिना नेटवर्क स्विचिंग के किसी भी टोकन से भुगतान करें।",
+        "twitter-title": "एक बार परिनियोजित करें। किसी भी चेन पर पहुंचें।",
+        "twitter-description": "किसी भी चेन से लेनदेन करें। किसी भी वॉलेट का उपयोग करें। किसी भी टोकन से भुगतान करें। बिना नेटवर्क स्विचिंग के।"
+      },
+      "hero-section": {
+        "title": "कोई भी चेन, कोई भी ऐप, सभी उपयोगकर्ता।\nएक पुश चेन।",
+        "description": "पहला Layer 1 जो सार्वभौमिक ऐप्स के लिए बनाया गया है।\nएक बार बनाएं और परिनियोजित करें, किसी भी चेन से उपयोगकर्ताओं को ऑनबोर्ड करें।",
+        "primary-button": "बिल्डिंग शुरू करें",
+        "primary-button-title": "पुश चेन के साथ अपनी बिल्डर की यात्रा शुरू करें!",
+        "secondary-button": "नॉलेज बेस का पता लगाएं",
+        "secondary-button-title": "पुश चेन के बारे में जानें",
+        "section-aria-label": "पुश चेन हीरो सेक्शन - सार्वभौमिक Layer 1 ब्लॉकचेन का परिचय",
+        "primary-button-aria-label": "पुश चेन पर सार्वभौमिक ऐप बनाना शुरू करें - डेवलपर दस्तावेज़ पर जाएं",
+        "secondary-button-aria-label": "पुश चेन सुविधाओं और अवधारणाओं के बारे में नॉलेज बेस में जानें",
+        "hero-background-alt": "पुश चेन हीरो बैकग्राउंड एनिमेशन जो सार्वभौमिक ब्लॉकचेन कनेक्टिविटी दिखाता है",
+        "hero-background-title": "पुश चेन - क्रॉस-चेन एप्लिकेशन के लिए सार्वभौमिक Layer 1",
+        "stats": {
+          "stat1": {
+            "title": "समर्थित चेन",
+            "imagealt": "समर्थित चेन का चित्रण",
+            "imagetitle": "इथेरियम, सोलाना, BNB चेन आदि जैसी समर्थित चेन की सूची"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "नेटिव फाइनलिटी",
+            "description": "तत्काल"
+          },
+          "stat4": {
+            "title": "नेटिव ब्लॉक टाइम",
+            "description": "1s"
+          }
+        }
+      },
+      "stats-section": {
+        "section-aria-label": "पुश चेन प्रदर्शन आंकड़े",
+        "title": "प्राप्त करें",
+        "titleGradient": "तत्काल",
+        "titleThird": "अंतरसंचालनीयता",
+        "description": "प्रदर्शन के लिए अनुकूलित।\nउच्च TPS, अल्ट्रा-लो गैस, और वास्तविक समय ऐप निष्पादन के लिए सब-सेकंड अंतिमता।",
+        "animation-alt": "इंटरैक्टिव एनीमेशन जो कई ब्लॉकचेन में पुश चेन की तत्काल अंतरसंचालनीयता दिखाता है",
+        "animation-title": "पुश चेन तत्काल अंतरसंचालनीयता विज़ुअलाइज़ेशन",
+        "stats": {
+          "stat1": {
+            "title": "समर्थित चेन",
+            "imagealt": "समर्थित चेन का चित्रण",
+            "imagetitle": "इथेरियम, सोलाना, BNB चेन आदि जैसी समर्थित चेन की सूची"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "नेटिव फाइनलिटी",
+            "description": "तत्काल"
+          },
+          "stat4": {
+            "title": "नेटिव ब्लॉक टाइम",
+            "description": "1s"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "समाचार, देवलॉग्स और विचार",
+        "subtitle-aria-label": "ब्लॉग श्रेणी की जानकारी",
+        "title": "पुश चेन का आपका स्पंदन",
+        "title-aria-label": "नवीनतम पुश चेन ब्लॉग पोस्ट और अपडेट",
+        "explore-link-text": "अधिक लेख देखें",
+        "explore-link-title": "पुश चेन ब्लॉग पर जाएं सभी लेख और अपडेट पढ़ने के लिए",
+        "explore-link-aria-label": "पुश चेन ब्लॉग पेज पर जाएं",
+        "section-aria-label": "पुश चेन ब्लॉग पोस्ट और समाचार अनुभाग",
+        "blog-posts-list-aria-label": "नवीनतम पुश चेन ब्लॉग पोस्ट",
+        "blog-post-aria-label": "{शीर्षक} के बारे में ब्लॉग पोस्ट पढ़ें",
+        "blog-post-title-prefix": "ब्लॉग पोस्ट पढ़ें - ",
+        "loading-text": "नवीनतम ब्लॉग पोस्ट लोड हो रहे हैं...",
+        "error-text": "इस समय ब्लॉग पोस्ट लोड नहीं हो सके",
+        "no-posts-text": "कोई ब्लॉग पोस्ट उपलब्ध नहीं है"
+      },
+      "trustedby-section": {
+        "title": "वेब3 के अग्रणी लोगों द्वारा विश्वसनीय टीम द्वारा निर्मित",
+        "section-aria-label": "पुश चेन द्वारा विश्वसनीय अनुभाग",
+        "trusted-by-alt": "निवेशक - "
+      },
+      "ending-section": {
+        "aria-label": "सार्वभौमिक ऐप बनाएं अनुभाग",
+        "section-title": "सार्वभौमिक ऐप बनाएं।",
+        "section-subtitle": "साइलो तोड़ें। एक बार बनाएं, हर ब्लॉकचेन पर स्केल करें।",
+        "docs-link": {
+          "text": "पुश चेन दस्तावेज़ का अन्वेषण करें",
+          "title": "पुश चेन दस्तावेज़ और डेवलपर संसाधनों का अन्वेषण करें",
+          "aria-label": "एक नए टैब में पुश चेन दस्तावेज़ खोलें"
+        },
+        "cta-link": {
+          "text": "LFG पुश चेन",
+          "title": "पुश चेन के साथ शुरुआत करें - सार्वभौमिक ब्लॉकचेन प्लेटफॉर्म",
+          "aria-label": "पुश चेन विकास के साथ शुरुआत करें"
+        }
+      }
+    },
+    "knowledge": {
+      "seo": {
+        "title": "ज्ञान आधार — गाइड, अक्सर पूछे जाने वाले प्रश्न और कैसे करें",
+        "description": "Push Chain का उपयोग करने के लिए अवधारणाओं, अक्सर पूछे जाने वाले प्रश्नों, कैसे करें और इकोसिस्टम संसाधनों के लिए यहां से शुरुआत करें। स्पष्ट, गैर-तकनीकी गाइड।",
+        "og-title": "Push Chain ज्ञान आधार - गाइड और अक्सर पूछे जाने वाले प्रश्न",
+        "og-description": "Push Chain के बारे में अवधारणाएँ, चरण-दर-चरण कैसे करें और सामान्य प्रश्नों के उत्तर।",
+        "twitter-title": "ज्ञान आधार - गाइड और अक्सर पूछे जाने वाले प्रश्न",
+        "twitter-description": "Push Chain के लिए त्वरित गाइड, अक्सर पूछे जाने वाले प्रश्न और कैसे करें (कोई डेवलपर शब्दजाल नहीं)।"
+      },
+      "push101": {
+        "seo": {
+          "title": "Push Chain की मूल बातें — परिचय",
+          "description": "Push Chain और यूनिवर्सल ऐप्स का शुरुआती-अनुकूल परिचय—यह क्या है, यह कैसे काम करता है, और कैसे शुरुआत करें।",
+          "og-title": "Push Chain की मूल बातें - परिचय",
+          "og-description": "मूल बातें जानें: Push Chain क्या है, यह कैसे काम करता है, और आपके पहले कदम।",
+          "twitter-title": "Push Chain की मूल बातें - यहां से शुरू करें",
+          "twitter-description": "Push Chain और यूनिवर्सल ऐप्स के लिए शुरुआती गाइड।"
+        }
+      },
+      "builders": {
+        "seo": {
+          "title": "Builders — कैसे करें और ट्यूटोरियल",
+          "description": "Push Chain सुविधाओं का उपयोग करने के लिए चरण-दर-चरण गाइड, पैटर्न और उदाहरण।",
+          "og-title": "Builders - कैसे करें और ट्यूटोरियल",
+          "og-description": "Push Chain के साथ निर्माण के लिए निर्देशित ट्यूटोरियल, सर्वोत्तम अभ्यास और उदाहरण।",
+          "twitter-title": "Builders - कैसे करें और ट्यूटोरियल",
+          "twitter-description": "Push Chain पर शिप करने के लिए चरण-दर-चरण गाइड।"
+        }
+      },
+      "deepdives": {
+        "seo": {
+          "title": "डीप डाइव्स — अवधारणाएं और आर्किटेक्चर",
+          "description": "शेयर्ड स्टेट, शुल्क एब्स्ट्रैक्शन, यूएसवी/यूईए, और यूनिवर्सल एग्जीक्यूशन लेयर पर आसानी से समझ आने वाले स्पष्टीकरण।",
+          "og-title": "डीप डाइव्स - अवधारणाएं और आर्किटेक्चर",
+          "og-description": "Push Chain मॉड्यूल, डिजाइन निर्णय और प्रदर्शन पर गहन लेख।",
+          "twitter-title": "डीप डाइव्स - अंदर की बातें",
+          "twitter-description": "Push Chain कैसे काम करता है, इस पर स्पष्टीकरण।"
+        }
+      },
+      "partners": {
+        "seo": {
+          "title": "पार्टनर — इकोसिस्टम",
+          "description": "DeFi, सोशल, गेमिंग और टूलिंग में एकीकरण और सहयोग देखें।",
+          "og-title": "पार्टनर - इकोसिस्टम और एकीकरण",
+          "og-description": "देखें कि कौन से प्रोजेक्ट Push Chain के साथ बना रहे हैं और हमारे रणनीतिक पार्टनर कौन हैं।",
+          "twitter-title": "इकोसिस्टम पार्टनर",
+          "twitter-description": "खोजें कि कौन Push Chain के साथ बना रहा है।"
+        }
+      },
+      "tokenomics": {
+        "seo": {
+          "title": "टोकनॉमिक्स - $PC वैल्यू एक्यूमल और इकोनॉमिक्स",
+          "description": "$PC कैसे वैल्यू कैप्चर करता है: सेटलमेंट-आधारित मांग, उपयोग-आधारित सिंक (बर्न/लॉक), स्टेकिंग इकोनॉमिक्स और सप्लाई शेड्यूल।",
+          "og-title": "टोकनॉमिक्स - $PC वैल्यू एक्यूमल और इकोनॉमिक्स",
+          "og-description": "$PC में सेटलमेंट मांग बढ़ाता है; उपयोग-आधारित सिंक सप्लाई कम करते हैं। स्टेकिंग इकोनॉमिक्स और उत्सर्जन शामिल हैं।",
+          "twitter-title": "Push Chain टोकनॉमिक्स | टोकन इकोनॉमिक्स",
+          "twitter-description": "$PC में सेटलमेंट, उपयोग-आधारित सिंक, स्टेकिंग इकोनॉमिक्स और उत्सर्जन—संक्षिप्त निवेशक अवलोकन।"
+        }
+      },
+      "faq": {
+        "seo": {
+          "title": "FAQ — अक्सर पूछे जाने वाले प्रश्न",
+          "description": "वॉलेट, शुल्क, समर्थित चेन और शुरुआत कैसे करें के बारे में त्वरित जवाब।",
+          "og-title": "Push Chain FAQ - सभी प्रश्न",
+          "og-description": "गाइड, टेस्टनेट और समर्थन के लिंक के साथ त्वरित उत्तर खोजें।",
+          "twitter-title": "FAQ - यहीं से शुरू करें",
+          "twitter-description": "Push Chain से जुड़े प्रश्नों के त्वरित उत्तर।"
+        }
+      }
+    },
+    "docs": {
+      "seo": {
+        "title": "दस्तावेज़ — यूनिवर्सल ऐप्स बनाएं",
+        "description": "Push Chain पर शिप करने के लिए आपको जो कुछ भी चाहिए: त्वरित शुरुआत, SDK, API संदर्भ, उदाहरण और नोड सेटअप।",
+        "og-title": "Push Chain दस्तावेज़ - त्वरित शुरुआत, SDK और API",
+        "og-description": "स्पष्ट गाइड और उदाहरणों के साथ यूनिवर्सल निष्पादन परत पर ऐप्स बनाएं और चलाएं।",
+        "twitter-title": "Push Chain दस्तावेज़ - अभी बनाएं",
+        "twitter-description": "तेजी से शिप करने के लिए त्वरित शुरुआत, SDK, API संदर्भ और उदाहरण।"
+      },
+      "explorePrelaunchBuild": {
+        "text": "प्री-लॉन्च बिल्ड देखें",
+        "title": "Push Chain Testnet दस्तावेज़ और प्री-लॉन्च सुविधाओं तक पहुंचें",
+        "ariaLabel": "प्री-लॉन्च बिल्ड सुविधाओं का पता लगाने के लिए Push Chain Testnet दस्तावेज़ पर जाएं"
+      }
+    },
+    "blog": {
+      "seo": {
+        "title": "ब्लॉग — अपडेट, गहन विश्लेषण और कहानियां",
+        "description": "Push Chain टीम और इकोसिस्टम से खबरें, रिलीज़ नोट्स, तकनीकी गहन विश्लेषण और डेवलपर कहानियां।",
+        "og-title": "Push Chain ब्लॉग - अपडेट, गहन विश्लेषण और कहानियां",
+        "og-description": "Push Chain से उत्पाद अपडेट, डेवलपर कहानियां, गहन विश्लेषण और इकोसिस्टम की खबरें फॉलो करें।",
+        "twitter-title": "Push Chain ब्लॉग - क्या नया है",
+        "twitter-description": "रिलीज़, गहन विश्लेषण और बिल्डर कहानियां — अपडेट रहें।"
+      }
+    },
+    "lfpush": {
+      "seo": {
+        "title": "लेट्स पुश — समुदाय पहल",
+        "description": "पुश समुदाय पहल, पोस्ट और बहुत कुछ।",
+        "og-title": "लेट्स पुश - पुश चेन के लिए समुदाय पहल",
+        "og-description": "समुदाय-संचालित पहल और पुश चेन के लिए शेयर।",
+        "twitter-title": "लेट्स पुश | समुदाय पहल",
+        "twitter-description": "पुश चेन के लिए पुश समुदाय पहल देखें।"
+      },
+      "hero-section": {
+        "title": "लेट्स पुश",
+        "description": "एलएफ पुश बिल्डर्स समुदाय—आप जो शिप करते हैं और जिसकी आप मदद करते हैं उसे मनाते हुए। अपनी जीत साझा करें, <hashtag>#LFPush</hashtag> या <mention>@PushChain</mention> टैग करें, और हम इसे बढ़ाएंगे।"
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "अपनी जीत साझा करें",
+          "join-community": "समुदाय में शामिल हों",
+          "learn-more": "और जानें"
+        },
+        "meta": {
+          "tweet-alt": "पुश चेन समुदाय सदस्य से ट्वीट",
+          "loading-alt": "अधिक समुदाय ट्वीट लोड हो रहे हैं"
+        },
+        "tweets-counter": "{{count}} ट्वीट और गिनती!",
+        "loading": "अधिक ट्वीट लोड हो रहे हैं...",
+        "end-message": "आप अंत तक पहुँच गए हैं! 🎉"
+      }
+    },
+    "support": {
+      "seo": {
+        "title": "सहायता — सहायता केंद्र",
+        "description": "Push Chain के साथ सहायता प्राप्त करें: गाइड, समस्या निवारण, स्थिति और समुदाय समर्थन।",
+        "og-title": "Push Chain सहायता - सहायता केंद्र",
+        "og-description": "दस्तावेज़ीकरण, ट्यूटोरियल, स्थिति अपडेट और समर्थन से संपर्क करने के तरीके खोजें।",
+        "twitter-title": "सहायता - मदद और दस्तावेज़",
+        "twitter-description": "Push Chain के लिए गाइड, ट्यूटोरियल और समुदाय सहायता।"
+      },
+      "hero-section": {
+        "title": "सहायता",
+        "description": "Push Chain सहायता केंद्र: समस्या निवारण, गाइड, Donut टेस्टनेट, एक्सप्लोरर और फ़ॉसेट, स्थिति अपडेट और सुरक्षा। Discord पर पूछें या समर्थन टिकट खोलें।"
+      }
+    },
+    "litepaper": {
+      "seo": {
+        "title": "लाइटपेपर – तकनीकी अवलोकन",
+        "description": "Push Chain के विजन, आर्किटेक्चर और यूनिवर्सल ऐप्स के लिए अर्थशास्त्र का संक्षिप्त विवरण।",
+        "og-title": "Push Chain लाइटपेपर - तकनीकी अवलोकन",
+        "og-description": "यूनिवर्सल एग्जीक्यूशन लेयर के विजन, डिजाइन और आर्थिक मॉडल – सरलीकृत।",
+        "twitter-title": "लाइटपेपर - Push Chain",
+        "twitter-description": "एक नज़र में विजन, आर्किटेक्चर और अर्थशास्त्र।"
+      }
+    },
+    "tos": {
+      "seo": {
+        "title": "सेवा की शर्तें",
+        "description": "Push Chain वेबसाइटों, ऐप्स और सेवाओं का उपयोग करने के नियम, जिसमें आपके अधिकार और जिम्मेदारियां शामिल हैं।",
+        "og-title": "Push Chain सेवा की शर्तें - कानूनी शर्तें",
+        "og-description": "हमारी वेबसाइटों, ऐप्स और डेवलपर टूल के उपयोग को नियंत्रित करने वाली कानूनी शर्तें।",
+        "twitter-title": "सेवा की शर्तें - Push Chain",
+        "twitter-description": "Push Chain का उपयोग करने के लिए कानूनी शर्तें पढ़ें।"
+      },
+      "hero-section": {
+        "title": "सेवा की शर्तें",
+        "description": "शर्तों और नियमों का विवरण",
+        "update-text": "अंतिम अपडेट: 2 नवंबर 2020"
+      }
+    },
+    "privacy": {
+      "seo": {
+        "title": "गोपनीयता नीति",
+        "description": "हम आपका डेटा कैसे एकत्र करते हैं, उपयोग करते हैं और सुरक्षित रखते हैं—साथ ही आपके अधिकार और विकल्प।",
+        "og-title": "Push Chain गोपनीयता नीति - डेटा सुरक्षा",
+        "og-description": "जानें कि हम कौन सा डेटा एकत्र करते हैं, इसका उपयोग कैसे करते हैं, और आपके गोपनीयता अधिकार।",
+        "twitter-title": "गोपनीयता नीति - Push Chain",
+        "twitter-description": "आपका डेटा। आपके अधिकार। हम दोनों की सुरक्षा कैसे करते हैं।"
+      },
+      "hero-section": {
+        "title": "गोपनीयता नीति",
+        "description": "यह परिभाषित करता है कि Push डेटा कैसे एकत्र करता है, प्रबंधित करता है और संसाधित करता है।",
+        "update-text": "अंतिम अपडेट: 2 नवंबर 2020"
+      }
+    },
+    "privacymobile": {
+      "seo": {
+        "title": "मोबाइल गोपनीयता नीति",
+        "description": "Push Chain मोबाइल ऐप्स में हम डेटा कैसे एकत्र करते हैं, उपयोग करते हैं, और आपकी पसंद।",
+        "og-title": "Push Chain मोबाइल गोपनीयता नीति - ऐप डेटा सुरक्षा",
+        "og-description": "हमारे मोबाइल एप्लिकेशन के लिए डेटा प्रथाएं और आपके अधिकार।",
+        "twitter-title": "मोबाइल गोपनीयता नीति - Push Chain",
+        "twitter-description": "Push मोबाइल ऐप्स में आपका डेटा और विकल्प।"
+      },
+      "hero-section": {
+        "title": "मोबाइल गोपनीयता नीति",
+        "description": "Push Chain मोबाइल ऐप्स में हम डेटा कैसे एकत्र करते हैं, उपयोग करते हैं, और आपकी पसंद।",
+        "update-text": "अंतिम अपडेट: 2 नवंबर 2020"
+      }
+    },
     "brb": {
       "seo": {
-        "title": "BRB — बिलियन कारणों से निर्माण करें",
-        "description": "पुश चेन की प्रमुख हैकथॉन: वास्तविक समस्याओं को हल करें, विशेषज्ञों से सीखें और पुरस्कार जीतें।",
-        "og-title": "BRB - पुश चेन हैकथॉन",
-        "og-description": "बिलियन कारणों से निर्माण प्रतियोगिता के लिए ट्रैक, समयरेखा और पुरस्कार।",
-        "twitter-title": "BRB हैकथॉन - निर्माण करें और जीतें",
-        "twitter-description": "पुरस्कार जीतने के लिए पुश चेन हैकथॉन में शामिल हों।"
+        "title": "BRB — बिल्ड करने के अरबों कारण",
+        "description": "Push Chain का प्रमुख हैकाथॉन: वास्तविक समस्याओं को हल करें, विशेषज्ञों से सीखें और पुरस्कार जीतें।",
+        "og-title": "BRB - Push Chain Hackathon",
+        "og-description": "Billion Reasons to Build प्रतियोगिता के लिए ट्रैक, समयरेखा और पुरस्कार।",
+        "twitter-title": "BRB हैकाथॉन - बनाएं और जीतें",
+        "twitter-description": "Push Chain हैकाथॉन में शामिल हों और पुरस्कार जीतें।"
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "संपर्क करें — संपर्क में रहें",
+        "description": "साझेदारी, एकीकरण, अनुदान, मीडिया, सहायता और सुरक्षा प्रकटीकरण के लिए Push Chain टीम से संपर्क करें।",
+        "og-title": "Push Chain संपर्क - संपर्क में रहें",
+        "og-description": "साझेदारी, एकीकरण, अनुदान, मीडिया, सहायता और सुरक्षा के बारे में Push Chain टीम से संपर्क करें।",
+        "twitter-title": "संपर्क करें - Push Chain टीम",
+        "twitter-description": "साझेदारी, एकीकरण, अनुदान, मीडिया, सहायता और सुरक्षा — Push Chain से संपर्क करें।"
+      }
+    },
+    "hero-section": {
+      "title": "Push Chain टीम से संपर्क करें",
+      "description": "साझेदारी और एकीकरण, अनुदान, मीडिया और बोलना, सत्यापनकर्ता, कानूनी, करियर या सामान्य प्रश्न—यहां संपर्क करें। तकनीकी सहायता या सुरक्षा प्रकटीकरण के लिए, कृपया सहायता केंद्र पर जाएं।"
+    },
+    "donutsecret": {
+      "seo": {
+        "title": "शश्श… Donut Testnet — Secret Beta Access",
+        "description": "बिल्डर्स के लिए निमंत्रण-आधारित क्लोज्ड बीटा। Push Chain Testnet तक पहुँच प्राप्त करने के लिए अपना Donut पास प्राप्त करें, यूनिवर्सल ऐप्स शिप करें, और शुरुआती रिवॉर्ड अनलॉक करें।",
+        "og-title": "Donut Testnet — Secret Beta Access",
+        "og-description": "डेवलपर्स के लिए शुरुआती पहुँच: क्लोज्ड बीटा पास प्राप्त करें, Push Chain (Donut) का प्रयास करें, और यूनिवर्सल ऐप्स बनाते समय रिवॉर्ड अर्जित करें।",
+        "twitter-title": "शश्श… Donut Testnet — Closed Beta",
+        "twitter-description": "बिल्डर्स के लिए निमंत्रण-आधारित पहुँच। अपना पास प्राप्त करें, Push Chain (Donut) का प्रयास करें, और रिवॉर्ड अर्जित करें। 🍩"
       }
     }
   },
   "components": {
     "mailing-signup": {
-      "title": "कभी भी अपडेट न चूकें",
+      "title": "कभी भी अपडेट मिस न करें",
       "text": "साइन अप करें और इकोसिस्टम घोषणाओं, उपहारों और बहुत कुछ के साथ अपडेट रहें।",
       "email-input": "आपका ईमेल",
       "email-input-placeholder": "अपना ईमेल पता दर्ज करें",
-      "email-input-title": "अपडेट के लिए पुश चेन न्यूज़लेटर की सदस्यता लें",
+      "email-input-title": "अपडेट के लिए Push Chain न्यूज़लेटर की सदस्यता लें",
       "email-input-aria-label": "न्यूज़लेटर सदस्यता के लिए ईमेल पता",
       "submit-button": "साइन अप करें",
-      "submit-button-title": "पुश चेन न्यूज़लेटर की सदस्यता लें",
+      "submit-button-title": "Push Chain न्यूज़लेटर की सदस्यता लें",
       "submit-button-aria-label": "न्यूज़लेटर की सदस्यता लें",
       "loading-submit-button": "कृपया प्रतीक्षा करें...",
       "arrow-button-aria-label": "न्यूज़लेटर की सदस्यता लें",
-      "arrow-button-title": "पुश चेन अपडेट की सदस्यता लें",
+      "arrow-button-title": "Push Chain अपडेट की सदस्यता लें",
       "form-aria-label": "न्यूज़लेटर सदस्यता फॉर्म",
       "success-message-aria-label": "सदस्यता सफल",
       "error-message-aria-label": "सदस्यता त्रुटि संदेश"
     },
     "cookie-banner": {
-      "message": "हम आपके अनुभव को निजीकृत करने के लिए कुकीज़ का उपयोग करते हैं। हमारी में और जानें",
+      "message": "हम आपके अनुभव को निजीकृत करने के लिए कुकीज़ का उपयोग करते हैं। हमारी",
       "privacy-policy-link": "गोपनीयता नीति",
-      "privacy-policy-link-title": "पुश प्रोटोकॉल गोपनीयता नीति पढ़ें",
+      "privacy-policy-link-title": "पुश प्रोटोकॉल की गोपनीयता नीति पढ़ें",
       "privacy-policy-link-aria-label": "नई टैब में गोपनीयता नीति खोलें",
       "accept-button": "स्वीकार करें",
       "accept-button-title": "अपने अनुभव को निजीकृत करने के लिए कुकीज़ स्वीकार करें",
       "accept-button-aria-label": "कुकीज़ स्वीकार करें और बैनर बंद करें",
-      "reject-button": "हटाएँ",
-      "reject-button-title": "कुकीज़ हटाएँ और बैनर बंद करें",
-      "reject-button-aria-label": "कुकीज़ हटाएँ और बैनर बंद करें",
+      "reject-button": "अस्वीकार करें",
+      "reject-button-title": "कुकीज़ अस्वीकार करें और बैनर बंद करें",
+      "reject-button-aria-label": "कुकीज़ अस्वीकार करें और बैनर बंद करें",
       "banner-aria-label": "कुकी सहमति बैनर",
-      "banner-role": "कुकी वरीयता सूचना"
+      "banner-role": "कुकी प्राथमिकताएँ सूचना"
     },
     "short-faq-snippet": {
-      "section-aria-label": "पुश चेन - यूनिवर्सल ब्लॉकचेन के बारे में अक्सर पूछे जाने वाले प्रश्न",
-      "title": "अक्सर\nपूछे जाने वाले\nप्रश्न",
-      "title-aria-label": "पुश चेन के बारे में सामान्य प्रश्न और उत्तर",
-      "discord-link-text": "हमें Discord पर पूछें",
-      "discord-link-title": "सहायता और प्रश्नों के लिए पुश चेन Discord समुदाय में शामिल हों",
-      "discord-link-aria-label": "नई टैब में Discord समुदाय खोलें",
-      "explore-more-text": "अधिक अक्सर पूछे जाने वाले प्रश्न देखें",
-      "explore-more-title": "व्यापक पुश चेन अक्सर पूछे जाने वाले प्रश्न प्रलेखन और डेवलपर गाइड देखें",
-      "explore-more-aria-label": "पूर्ण पुश चेन अक्सर पूछे जाने वाले प्रश्न पृष्ठ पर नेविगेट करें",
-      "accordion-aria-label": "पुश चेन अक्सर पूछे जाने वाले प्रश्नों की सूची",
+      "section-aria-label": "Push Chain - यूनिवर्सल ब्लॉकचेन के बारे में अक्सर पूछे जाने वाले प्रश्न",
+      "title": "अक्सर पूछे जाने वाले\nप्रश्न",
+      "title-aria-label": "Push Chain के बारे में आम प्रश्न और उत्तर",
+      "discord-link-text": "Discord पर हमसे पूछें",
+      "discord-link-title": "सहायता और प्रश्नों के लिए Push Chain Discord समुदाय में शामिल हों",
+      "discord-link-aria-label": "एक नई टैब में Discord समुदाय खोलें",
+      "explore-more-text": "अधिक FAQ देखें",
+      "explore-more-title": "Push Chain FAQ दस्तावेज़ और डेवलपर गाइड देखें",
+      "explore-more-aria-label": "संपूर्ण Push Chain FAQ पृष्ठ पर जाएं",
+      "accordion-aria-label": "Push Chain अक्सर पूछे जाने वाले प्रश्नों की सूची",
       "answer-aria-label": "प्रश्न का उत्तर - ",
-      "faqs": {
-        "faq1": {
-          "question": "पुश चेन क्या है?",
-          "answer": "<1>पुश चेन एक साझा-स्टेट ब्लॉकचेन है जो <2>विखंडन को समाप्त करता है और ऐप्स को यूनिवर्सल बनाता है</2>.</1><1>पुश पर एक बार डिप्लॉय करें। कोई भी चेन — ईवीएम या गैर-ईवीएम — उपयोगकर्ता अपने मौजूदा वॉलेट और टोकन के साथ आपके ऐप का उपयोग करते हैं; शुल्क पर्दे के पीछे संभाले जाते हैं।</1>"
+      "qnas": {
+        "qna1": {
+          "question": "Push Chain क्या है?",
+          "answer": "<1>Push Chain एक साझा-स्टेट ब्लॉकचेन है जो <2>खंडन को समाप्त करता है और ऐप्स को सार्वभौमिक बनाता है</2>.</1><1>Push पर एक बार डिप्लॉय करें. उपयोगकर्ता किसी भी चेन — ईवीएम या गैर-ईवीएम — पर अपने मौजूदा वॉलेट और टोकन के साथ आपके ऐप का उपयोग करते हैं; फीस पर्दे के पीछे संभाली जाती है.</1>"
         },
-        "faq2": {
+        "qna2": {
           "question": "यह कैसे काम करता है? (ELI5)",
-          "answer": "<1>अपने पहले से मौजूद वॉलेट का उपयोग करें — पुश पर्दे के पीछे क्रॉस-चेन बिट्स को संभालता है।</1><1>1. <2>कहीं से भी शुरू करें।</2> कोई भी वॉलेट किसी भी चेन पर इस्तेमाल करें — नेटवर्क स्विचिंग की जरूरत नहीं है।</1><1>2. <2>एक बार साइन करें।</2> अपने पहले से मौजूद टोकन के साथ भुगतान करें; हम आपके होम चेन पर शुल्क अलग रखते हैं।</1><1>3. <2>हम इसे रूट करते हैं।</2> पुश पर एक लिंक किया गया खाता (अभी भी आपका) ऐप को आपका कॉल अग्रेषित करता है — गैर-कस्टोडियल।</1><1>4. <2>आप हमेशा आप ही हैं।</2> हम आपके होम-चेन वॉलेट को अपने लिंक किए गए खाते से मिलाते हैं ताकि क्रियाओं को सही ढंग से सत्यापित किया जा सके और पुश पर आपको जिम्मेदार ठहराया जा सके।</1><1>5. <2>इसे जल्दी से करें।</2> ऐप पुश पर चलता है; शुल्क पर्दे के पीछे संभाले जाते हैं। कोई पुल नहीं, नया वॉलेट नहीं।</1><1>यही कारण है कि कोई भी चेन उपयोगकर्ता पुश चेन पर डिप्लॉय किए गए एक ही ऐप का उपयोग कर सकते हैं — जिससे ऐप्स वास्तव में यूनिवर्सल बन जाते हैं।</1>"
+          "answer": "<1>जिस वॉलेट का आप पहले से उपयोग करते हैं उसका उपयोग करें — Push पर्दे के पीछे क्रॉस-चेन बिट्स को संभालता है.</1><1>1. <2>कहीं से भी शुरू करें.</2> किसी भी चेन पर कोई भी वॉलेट उपयोग करें — नेटवर्क स्विचिंग नहीं.</1><1>2. <2>एक बार साइन इन करें.</2> जिस टोकन को आप पहले से रखते हैं उससे भुगतान करें; हम आपकी होम चेन पर शुल्क अलग रख देते हैं.</1><1>3. <2>हम इसे रूट करते हैं.</2> Push पर एक लिंक किए गए खाते (अभी भी आपका) आपके कॉल को ऐप में अग्रेषित करता है — गैर-कस्टोडियल.</1><1>4. <2>आप हमेशा आप होते हैं.</2> हम आपकी होम-चेन वॉलेट को अपने लिंक किए गए खाते से मिलाते हैं ताकि क्रियाओं को सही ढंग से सत्यापित किया जा सके और Push पर आपको जिम्मेदार ठहराया जा सके.</1><1>5. <2>तेजी से हो गया.</2> ऐप Push पर चलता है; फीस पर्दे के पीछे संभाली जाती है. कोई पुल नहीं, कोई नया वॉलेट नहीं.</1><1>यही कारण है कि किसी भी चेन पर उपयोगकर्ता Push Chain पर डिप्लॉय किए गए एक ही ऐप का उपयोग कर सकते हैं — जिससे ऐप्स वास्तव में सार्वभौमिक बन जाते हैं.</1>"
         },
-        "faq3": {
+        "qna3": {
           "question": "क्या मुझे एक अलग वॉलेट या गैस टोकन की आवश्यकता है?",
-          "answer": "<1><2>नहीं।</2></1><1><2>अपना वॉलेट रखें।</2> अपने पहले से मौजूद वॉलेट का उपयोग करें — नया वॉलेट या खाता नहीं।</1><1><2>आप जो रखते हैं उसमें भुगतान करें।</2> शुल्क आपके होम चेन पर आपके पहले से मौजूद टोकन में भुगतान किया जा सकता है; हम पर्दे के पीछे रूपांतरण को संभालते हैं।</1><1><2>नेटवर्क स्विचिंग की जरूरत नहीं है।</2> अपने होम चेन पर रहें — गैस टोकन प्राप्त करने के लिए ब्रिजिंग की जरूरत नहीं है।</1><1><2>गैर-कस्टोडियल।</2> आप हर क्रिया पर हस्ताक्षर करते हैं; पुश कभी भी आपकी कुंजियाँ नहीं रखता है।</1><1><2>पर्दे के पीछे।</2> नेटवर्क स्वचालित रूप से $PC में लेनदेन का निपटान करता है — आपको इसे प्रबंधित करने की आवश्यकता नहीं है।</1>"
+          "answer": "<1><2>नहीं.</2></1><1><2>अपना वॉलेट रखें.</2> आप जिस वॉलेट का उपयोग पहले से करते हैं उसका उपयोग करें — कोई नया वॉलेट या खाता नहीं.</1><1><2>अपने पास जो है उसमें भुगतान करें.</2> फीस आपके होम चेन पर आपके पास मौजूद टोकन में भुगतान की जा सकती है; हम पर्दे के पीछे रूपांतरण को संभालते हैं.</1><1><2>कोई नेटवर्क स्विचिंग नहीं.</2> अपनी होम चेन पर रहें — गैस टोकन प्राप्त करने के लिए केवल पुलिंग नहीं.</1><1><2>गैर-कस्टोडियल.</2> आप हर क्रिया पर हस्ताक्षर करते हैं; Push कभी भी आपकी कुंजी नहीं रखता.</1><1><2>पर्दे के पीछे.</2> नेटवर्क स्वचालित रूप से $PC में सेटलमेंट फीस करता है — आपको इसे प्रबंधित करने की आवश्यकता नहीं है.</1>"
         },
-        "faq4": {
+        "qna4": {
           "question": "यह पुलों या संदेश परतों से कैसे अलग है?",
-          "answer": "<1><2>संक्षिप्त उत्तर</2>: पुश वह जगह है जहां आपका ऐप चलता है। पुल/संदेश केवल टोकन या संदेशों को चेन के बीच ले जाते हैं, जिससे उपयोगकर्ता और डेवलपर्स दोनों के लिए चीजें जटिल हो जाती हैं।</1><1><2>एकल होम बनाम कई क्लोन।</2> पुलों/संदेशों के साथ आप प्रति चेन डिप्लॉय करते हैं और संदेशों के माध्यम से सिंक्रनाइज़ करते हैं। पुश पर आप एक बार डिप्लॉय करते हैं; हर कोई एक ही अनुबंध और साझा स्थिति को हिट करता है।</1><1><2>कोई लिपटे हुए परिसंपत्तियां या अनिवार्य ब्रिजिंग नहीं।</2> उपयोगकर्ता अपने होम चेन पर रहते हैं और वे जो पहले से रखते हैं उसके साथ भुगतान करते हैं; हम पर्दे के पीछे रूटिंग और शुल्क रूपांतरण को संभालते हैं।</1><1><2>एकीकृत पहचान और सत्यापन।</2> हम किसी भी वॉलेट/चेन से हस्ताक्षर स्वीकार करते हैं और उन्हें पुश पर एक ही उपयोगकर्ता को जिम्मेदार ठहराते हैं — गैर-कस्टोडियल।</1><1><2>कम चल रहे हिस्से।</2> क्रॉस-चेन अनुमोदन नृत्य नहीं, गैस-टोकन शिकार नहीं, सिंक्रनाइज़ रखने के लिए कोई गोंद अनुबंध नहीं।</1><1><2>जब चाहें तो पुलों का उपयोग करें, क्योंकि आपको होना चाहिए।</2> तरलता अभी भी पुलों के माध्यम से आगे बढ़ सकती है, लेकिन आपके ऐप के साथ इंटरैक्ट करने के लिए इसकी आवश्यकता नहीं है।</1><1>परिणाम: सरल ऐप्स, सच्चाई का एक स्रोत, और एक ऐसा UX जो एक चेन जैसा महसूस होता है — भले ही उपयोगकर्ता नहीं हैं।</1>"
+          "answer": "<1><2>संक्षिप्त उत्तर</2>: Push वह जगह है जहां आपका ऐप चलता है. पुल/संदेश केवल टोकन या संदेशों को चेन के बीच ले जाते हैं जिससे उपयोगकर्ता और डेवलपर्स दोनों के लिए सब कुछ जटिल हो जाता है.</1><1><2>सिंगल होम बनाम कई क्लोन.</2> पुल/संदेश के साथ आप प्रति चेन डिप्लॉय करते हैं और संदेशों के माध्यम से सिंक करते हैं. Push पर आप एक बार डिप्लॉय करते हैं; हर कोई उसी अनुबंध और साझा स्थिति को हिट करता है.</1><1><2>कोई रैप्ड एसेट या अनिवार्य पुलिंग नहीं.</2> उपयोगकर्ता अपनी होम चेन पर रहते हैं और अपने पास मौजूद टोकन से भुगतान करते हैं; हम पर्दे के पीछे रूटिंग और शुल्क रूपांतरण को संभालते हैं.</1><1><2>एकीकृत पहचान और सत्यापन.</2> हम किसी भी वॉलेट/चेन से हस्ताक्षर स्वीकार करते हैं और उन्हें Push पर उसी उपयोगकर्ता के लिए जिम्मेदार ठहराते हैं — गैर-कस्टोडियल.</1><1><2>कम गतिशील भाग.</2> कोई क्रॉस-चेन अनुमोदन नृत्य नहीं, कोई गैस-टोकन शिकार नहीं, कोई गोंद अनुबंध नहीं जिसे सिंक रखने की आवश्यकता है.</1><1><2>जब आप चाहें तो पुल का उपयोग करें, इसलिए नहीं कि आपको होना चाहिए.</2> तरलता अभी भी पुलों के माध्यम से चल सकती है, लेकिन आपके ऐप के साथ बातचीत के लिए इसकी आवश्यकता नहीं है.</1><1>परिणाम: सरल ऐप्स, सच्चाई का एक स्रोत और एक UX जो एक चेन जैसा महसूस होता है — भले ही उपयोगकर्ता न हों.</1>"
         },
-        "faq5": {
+        "qna5": {
           "question": "क्या यह केवल ईवीएम है? कौन सी चेन समर्थित हैं?",
-          "answer": "<1><2>नहीं, पुश ईवीएम और गैर-ईवीएम दोनों चेन का समर्थन करता है।</2> हालांकि यह डिप्लॉयमेंट के लिए ईवीएम-प्रथम है, गैर-ईवीएम सहित किसी भी चेन (समेत) के उपयोगकर्ता आपके ऐप का उपयोग कर सकते हैं जैसे कि वे इसे मूल रूप से उपयोग कर रहे हों।</1>\n<1><2>एक बार डिप्लॉय करें। हर जगह इंटरॉप।</2> मानक ईवीएम अनुबंधों को पुश पर लिखें और डिप्लॉय करें (सोलिडिटी/व्यपर)। टूलिंग वही रहती है।</1>\n<1><2>किसी भी चेन से उपयोगकर्ता।</2> कोई भी वॉलेट किसी भी चेन पर इस्तेमाल करें — नेटवर्क स्विचिंग की जरूरत नहीं है।</1><1>2. <2>एक बार साइन करें।</2> अपने पहले से मौजूद टोकन के साथ भुगतान करें; हम आपके होम चेन पर शुल्क अलग रखते हैं।</1><1>3. <2>हम इसे रूट करते हैं।</2> पुश पर एक लिंक किया गया खाता (अभी भी आपका) ऐप को आपका कॉल अग्रेषित करता है — गैर-कस्टोडियल।</1><1>4. <2>आप हमेशा आप ही हैं।</2> हम आपके होम-चेन वॉलेट को अपने लिंक किए गए खाते से मिलाते हैं ताकि क्रियाओं को सही ढंग से सत्यापित किया जा सके और पुश पर आपको जिम्मेदार ठहराया जा सके।</1><1>5. <2>इसे जल्दी से करें।</2> ऐप पुश पर चलता है; शुल्क पर्दे के पीछे संभाले जाते हैं। कोई पुल नहीं, नया वॉलेट नहीं।</1><1>यही कारण है कि कोई भी चेन उपयोगकर्ता पुश चेन पर डिप्लॉय किए गए एक ही ऐप का उपयोग कर सकते हैं — जिससे ऐप्स वास्तव में यूनिवर्सल बन जाते हैं।</1>"
+          "answer": "<1><2>नहीं, Push ईवीएम और गैर-ईवीएम दोनों चेन का समर्थन करता है.</2> हालांकि यह डिप्लॉयमेंट के लिए ईवीएम-प्रथम है, किसी भी चेन (गैर-ईवीएम सहित) के उपयोगकर्ता आपके ऐप का उपयोग कर सकते हैं जैसे कि वे इसे मूल रूप से उपयोग कर रहे हों.</1>\n<1><2>एक बार डिप्लॉय करें. हर जगह इंटरऑप.</2> मानक ईवीएम अनुबंधों को Push (सोलिडिटी/वाइपर) पर लिखें और डिप्लॉय करें. उपकरण समान रहते हैं.</1>\n<1><2>किसी भी चेन के उपयोगकर्ता.</2> एथेरियम और प्रमुख ईवीएम एल2 मूल रूप से काम करते हैं. गैर-ईवीएम उपयोगकर्ता (उदाहरण के लिए, सोलाना) अपने होम वॉलेट से साइन इन करते हैं; हम पर्दे के पीछे सत्यापित और रूट करते हैं — कोई नेटवर्क स्विचिंग नहीं.</1>\n<1><2>आज समर्थित.</2> समर्थित चेन की लाइव सूची देखें → <3>समर्थित चेन</3>.</1><1><2>विस्तारित कवरेज.</2> हम लगातार अधिक चेन जोड़ रहे हैं. यदि आप किसी भी चेन का अनुरोध करना चाहते हैं, तो कृपया <4>हमसे संपर्क करें</4>.</1>",
+          "supported-urls-title": "Push Chain द्वारा समर्थित सभी चेन की सूची।",
+          "contact-url-title": "नई चेन जोड़ने के लिए हमसे संपर्क करें।"
         },
-        "faq6": {
-          "question": "पुश चेन पर वॉलेट कनेक्ट कैसे करें?",
-          "answer": "पुश चेन पर वॉलेट कनेक्ट करने के लिए, आपको अपने पसंदीदा वेब 3 वॉलेट को पुश चेन के साथ संगत होना होगा, जैसे कि मेटामास्क, वॉलेट कनेक्ट या ट्रस्ट वॉलेट। एक बार आपका वॉलेट कनेक्ट हो जाने के बाद, आप पुश चेन ऐप के साथ इंटरैक्ट कर सकते हैं और लेनदेन कर सकते हैं। अधिक जानकारी के लिए, कृपया [वॉलेट कनेक्ट दस्तावेज़](https://docs.push.com/resources/wallets) देखें।"
+        "qna6": {
+          "question": "यह कितनी तेज़ है और फीस कैसी दिखती है?",
+          "answer": "<1><2>गति.</2> लगभग 1–2 सेकंड की पुष्टि के लिए डिज़ाइन किया गया है, जिसमें तेज़ UX प्रतिक्रिया है. लाइव मेट्रिक्स <3>🍩 डोनट टेस्टनेट</3> पर देखें.</1><1><2>शुल्क मॉडल.</2> आप जिस टोकन का भुगतान करने का विकल्प चुनते हैं उसमें शुल्क देखते हैं; नेटवर्क पर्दे के पीछे $PC में बस जाता है.</1><1><2>सामान्य लागत.</2> सामान्य शुल्क <2>$0.001</2> से कम है प्रति लेन-देन, हालांकि, यह अनुबंध जटिलता, टोकन की कीमत और नेटवर्क लोड के आधार पर भिन्न होता है. आपको साइन करने से पहले एक सटीक उद्धरण मिलता है.</1>",
+          "donut-testnet-title": "पुश चेन डोनट टेस्टनेट के आंकड़ों की जाँच करें।"
+        }
+      }
+    },
+    "short-support-snippet": {
+      "section-aria-label": "Push Chain - यूनिवर्सल ब्लॉकचेन के बारे में सहायता प्रश्न",
+      "title": "सहायता\nहेल्प डेस्क",
+      "title-aria-label": "Push Chain के बारे में सामान्य सहायता प्रश्न और उत्तर",
+      "discord-link-text": "Discord पर हमसे पूछें",
+      "discord-link-title": "सहायता और प्रश्नों के लिए Push Chain Discord समुदाय में शामिल हों",
+      "discord-link-aria-label": "Discord समुदाय को एक नए टैब में खोलें",
+      "explore-more-text": "अधिक अक्सर पूछे जाने वाले प्रश्न देखें",
+      "explore-more-title": "Push Chain के संपूर्ण अक्सर पूछे जाने वाले प्रश्न दस्तावेज़ और डेवलपर गाइड देखें",
+      "explore-more-aria-label": "संपूर्ण Push Chain अक्सर पूछे जाने वाले प्रश्न पृष्ठ पर नेविगेट करें",
+      "accordion-aria-label": "Push Chain सहायता प्रश्न सूची",
+      "answer-aria-label": "प्रश्न का उत्तर - ",
+      "qnas": {
+        "qna1": {
+          "question": "मैं अपना वॉलेट कनेक्ट नहीं कर पा रहा हूँ। मुझे क्या प्रयास करना चाहिए?",
+          "answer": "<1><2>जल्दी जांच करें:</2> पेज को रीफ्रेश करें, अपने वॉलेट को अनलॉक करें, और push.org के लिए आक्रामक विज्ञापन/स्क्रिप्ट ब्लॉकर्स को अक्षम करें।</1><1><2>नेटवर्क स्विच की आवश्यकता नहीं:</2> अपनी होम चेन पर बने रहें; पुश बैकएंड में रूटिंग को हैंडल करता है।</1><1><2>साइट अनुमतियों को रीसेट करें:</2> अपने वॉलेट में, साइट का कनेक्शन हटा दें और फिर से कनेक्ट करें।</1><1>अभी भी अटक गए? <3>Discord</3> पर पूछें या <4>सहायता टिकट</4> खोलें।</1>",
+          "discord-url-title": "वास्तविक समय में सहायता के लिए Push Chain Discord में शामिल हों।",
+          "support-url-title": "सहायता टिकट खोलें।"
+        },
+        "qna2": {
+          "question": "मेरा लेनदेन लंबित है या विफल हो गया — अब क्या?",
+          "answer": "<1><2>स्थिति जांचें:</2> अपने वॉलेट से हैश का उपयोग करके <3>Push Scan</3> पर अपने लेनदेन को देखें।</1><1><2>लंबित:</2> यह आमतौर पर जल्द ही पुष्टि हो जाता है; बार-बार फिर से भेजने से बचें।</1><1><2>विफल:</2> कोई फंड नहीं लिया गया है। त्रुटि की समीक्षा करें और फिर से प्रयास करें।</1><1>चल रही घटनाओं को <4>स्थिति</4> पर पोस्ट किया जाता है।</1>",
+          "scan-url-title": "Push Scan (एक्सप्लोरर) खोलें।",
+          "status-url-title": "नेटवर्क स्थिति और घटनाओं को देखें।"
+        },
+        "qna3": {
+          "question": "मुझे टेस्टनेट टोकन (डोनट) कैसे प्राप्त करें?",
+          "answer": "<1><3>फासेट</3> का उपयोग करके टेस्ट टोकन का अनुरोध करें।</1><1><2>नोट:</2> दर सीमाएं लागू हो सकती हैं; कुछ फासेट को सरल सत्यापन की आवश्यकता होती है। यदि फासेट विफल रहता है, तो हमें <4>Discord</4> पर पिंग करें।</1>",
+          "faucet-url-title": "Push Chain फासेट खोलें।",
+          "discord-url-title": "Push Chain Discord में शामिल हों।"
+        },
+        "qna4": {
+          "question": "मैं बग या भेद्यता की रिपोर्ट कैसे करूं?",
+          "answer": "<1><2>ऐप बग:</2> <3>सहायता टिकट</3> फ़ाइल करें या पुनरुत्पादन के चरणों के साथ <4>Discord</4> पर पोस्ट करें।</1><1><2>सुरक्षा मुद्दे:</2> <5>security@push.org</5> पर ईमेल करें। कृपया फिक्स की पुष्टि होने तक सार्वजनिक प्रकटीकरण से बचें।</1>",
+          "support-url-title": "सहायता टिकट खोलें।",
+          "discord-url-title": "Discord में शामिल हों।"
+        },
+        "qna5": {
+          "question": "डॉक्स और त्वरित शुरुआत कहाँ हैं?",
+          "answer": "<1>त्वरित शुरुआत और एपीआई के लिए <3>डॉक्स</3> से शुरुआत करें, और अवधारणाओं, गहन जानकारी और अक्सर पूछे जाने वाले प्रश्नों के लिए <4>नॉलेज बेस</4>।</1>",
+          "docs-url-title": "डेवलपर दस्तावेज़ खोलें।",
+          "kb-url-title": "नॉलेज बेस खोलें।"
+        },
+        "qna6": {
+          "question": "क्या मैं एक नई चेन, सुविधा या एकीकरण के लिए समर्थन का अनुरोध कर सकता हूँ?",
+          "answer": "<1>हाँ। <3>संपर्क</3> के माध्यम से हमें बताएं कि आपको कौन सी चेन/टूलिंग की आवश्यकता है या <4>GitHub</4> पर एक मुद्दा खोलें। हम लगातार कवरेज का विस्तार कर रहे हैं।</1>",
+          "contact-url-title": "Push Chain टीम से संपर्क करें।",
+          "github-url-title": "GitHub org खोलें।"
+        }
+      }
+    },
+    "short-contact-us-snippet": {
+      "section-aria-label": "Push Chain टीम से संपर्क करें",
+      "title": "आम सवाल",
+      "title-aria-label": "Push Chain के लिए सामान्य संपर्क प्रश्न",
+      "discord-link-text": "Discord में शामिल हों",
+      "discord-link-title": "Discord पर Push Chain समुदाय के साथ चैट करें",
+      "discord-link-aria-label": "एक नए टैब में Discord खोलें",
+      "explore-more-text": "कार्यक्रम देखें",
+      "explore-more-title": "Push Chain कार्यक्रमों, BRB और इकोसिस्टम को देखें",
+      "explore-more-aria-label": "Push Chain कार्यक्रमों पर जाएं",
+      "accordion-aria-label": "संपर्क प्रश्नों की सूची",
+      "answer-aria-label": "प्रश्न का उत्तर - ",
+      "qnas": {
+        "qna1": {
+          "question": "मुझे किस श्रेणी का चयन करना चाहिए?",
+          "answer": "<1><2>साझेदारी और एकीकरण</2>: वॉलेट, इंफ्रा, एक्सचेंज, प्रोटोकॉल सहयोग → <3>साझेदारी से संपर्क करें</3>.</1><1><2>अनुदान और कार्यक्रम</2>: BRB, बूटकैंप, फंडिंग → <4>अनुदान से संपर्क करें</4>.</1><1><2>मीडिया और भाषण</2>: साक्षात्कार, बयान, वार्ता → <5>मीडिया और कार्यक्रम</5>.</1><1><2>वैलिडेटर</2>: नोड ऑपरेटर रुचि, RPC प्रदाता → <6>वैलिडेटर</6>.</1><1><2>कानूनी</2>: ट्रेडमार्क, डेटा अनुरोध, समझौते → <7>कानूनी और अनुपालन</7>.</1><1>तकनीकी मदद या स्थिति चाहिए? इसके बजाय <8>समर्थन</8> का उपयोग करें.</1>",
+          "contact-partnerships-title": "साझेदारी से संपर्क करें",
+          "contact-grants-title": "अनुदान से संपर्क करें",
+          "contact-media-title": "मीडिया और भाषण से संपर्क करें",
+          "contact-validators-title": "वैलिडेटर से संपर्क करें",
+          "contact-legal-title": "कानूनी और अनुपालन से संपर्क करें",
+          "support-title": "समर्थन केंद्र पर जाएं"
+        },
+        "qna2": {
+          "question": "आप कितनी जल्दी जवाब देते हैं?",
+          "answer": "<1>हम अधिकांश पूछताछों को <2>1–2 व्यावसायिक दिनों</2> के भीतर स्वीकार करने का लक्ष्य रखते हैं। समय-संवेदनशील अनुरोधों (जैसे, मीडिया की समय सीमा, सुरक्षा) को प्राथमिकता दी जाती है।</1><1>तत्काल मुद्दों के लिए, <2>समय सीमा, समय क्षेत्र</2>, और <2>सबसे अच्छा संपर्क</2> शामिल करें।</1>"
+        },
+        "qna3": {
+          "question": "साझेदारी के लिए क्या विवरण मदद करते हैं?",
+          "answer": "<1>अपनी <2>कंपनी का नाम</2>, <2>वेबसाइट</2>, और <2>आप मिलकर क्या बनाना चाहते हैं</2> साझा करें।</1><1>सहायक अतिरिक्त: दर्शकों का आकार, क्षेत्र, समयरेखा, और कोई भी तकनीकी स्कोप या SDK जिन्हें आप उपयोग करने की योजना बना रहे हैं।</1><1>यहां से शुरू करें → <3>साझेदारी</3>.</1>",
+          "contact-partnerships-title": "साझेदारी से संपर्क करें"
+        },
+        "qna4": {
+          "question": "अनुदान कैसे काम करते हैं?",
+          "answer": "<1>हमें अपने <2>परियोजना का नाम</2>, <2>रेपो/वेबसाइट</2>, चरण (<2>विचार, प्रोटोटाइप, MVP, लाइव</2>), और एक संक्षिप्त योजना बताएं।</1><1>अनुदान आवेदनों को हमेशा पहले आओ पहले पाओ के आधार पर संसाधित किया जाता है। यहां से शुरू करें → <3>अनुदान</3>.</1>",
+          "contact-grants-title": "अनुदान से संपर्क करें"
+        },
+        "qna5": {
+          "question": "मीडिया और भाषण अनुरोध",
+          "answer": "<1>अपने आउटलेट, विषय, <2>समय सीमा</2>, और प्रश्न शामिल करें। भाषणों/कार्यशालाओं के लिए, घटना की तारीख, प्रारूप, और दर्शकों को जोड़ें।</1><1>हम <3>मीडिया और भाषण</3> के माध्यम से संपर्क करें। हम लोगो, संस्थापक बायो और बॉयलरप्लेट साझा कर सकते हैं।</1>",
+          "contact-media-title": "मीडिया और भाषण से संपर्क करें"
+        },
+        "qna6": {
+          "question": "मैं सुरक्षा मुद्दे की कैसे रिपोर्ट करूं?",
+          "answer": "<1>प्रतिकृति चरणों और प्रभाव के साथ <3><2>security@push.org</2></3> पर ईमेल करें। कृपया हमें पुष्टि होने तक सार्वजनिक प्रकटीकरण से बचें।</1>",
+          "security-policy-title": "सुरक्षा और प्रकटीकरण पढ़ें"
+        },
+        "qna7": {
+          "question": "मैं वैलिडेटर / इंफ्रा प्रदान करना चाहता हूं",
+          "answer": "<1>अपनी इंफ्रा प्रोफ़ाइल (अनुभव, क्षेत्र), अपेक्षित अपटाइम/एसएलए, और किसी भी पसंदीदा शर्तों को साझा करें। यहां से शुरू करें → <3>वैलिडेटर</3>.</1>",
+          "contact-validators-title": "वैलिडेटर से संपर्क करें"
+        },
+        "qna8": {
+          "question": "कैरियर और भर्ती",
+          "answer": "<1>यदि भूमिकाएं खुली हैं, तो उन्हें हमारे चैनलों पर पोस्ट किया जाएगा। आप अभी भी <3>हमसे संपर्क करके</3> अपनी प्रोफ़ाइल और रुचियों को साझा कर सकते हैं या अपडेट के लिए <4>@PushChain</4> का पालन कर सकते हैं।</1>",
+          "contact-careers-title": "कैरियर से संपर्क करें",
+          "twitter-title": "X पर @PushChain का पालन करें"
+        }
+      }
+    },
+    "typeform-support": {
+      "collapsed-text-for-support": "समर्थन टिकट खोलें",
+      "expanded-title-for-support": "मदद चाहिए? 👋",
+      "collapsed-text-for-contact": "टीम से संपर्क करें",
+      "expanded-title-for-contact": "नमस्ते! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 तकनीकी सहायता",
+          "description": "बग रिपोर्ट, SDK/API, स्मार्ट अनुबंध, एकीकरण में सहायता"
+        },
+        "network": {
+          "label": "🌐 नेटवर्क और टेस्टनेट",
+          "description": "एक्सप्लोरर/पुश स्कैन, RPC, फ़ॉसेट, डोनेट टेस्टनेट समस्याएं"
+        },
+        "wallet": {
+          "label": "👛 यूनिवर्सल वॉलेट",
+          "description": "पुश वॉलेट, यूनिवर्सल चेन कनेक्शन या अन्य वॉलेट समस्याएं"
+        },
+        "identity": {
+          "label": "🪪 खाते और पहचान",
+          "description": "UEA/UOA, हस्ताक्षर, विशेषता प्रश्न"
+        },
+        "security": {
+          "label": "🛡️ सुरक्षा",
+          "description": "भेद्यता रिपोर्ट, जिम्मेदार प्रकटीकरण (security@push.org)"
+        },
+        "general": {
+          "label": "💬 सामान्य पूछताछ",
+          "description": "प्रश्न, प्रतिक्रिया, अन्य विषय"
+        },
+        "partnerships": {
+          "label": "🤝 साझेदारी और एकीकरण",
+          "description": "BD, पारिस्थितिकी तंत्र एकीकरण (वॉलेट, इंफ्रा, एक्सचेंज, प्रोटोकॉल)"
+        },
+        "grants": {
+          "label": "💰 अनुदान और पारिस्थितिकी तंत्र कार्यक्रम",
+          "description": "BRB, बूटकैंप, अनुदान, धन पूछताछ"
+        },
+        "media": {
+          "label": "📰 मीडिया और प्रेस",
+          "description": "साक्षात्कार, बयान, संपत्तियां, तथ्य-जांच"
+        },
+        "events": {
+          "label": "🎤 भाषण और कार्यक्रम",
+          "description": "बातें, कार्यशालाएं, हैकथॉन, प्रायोजन"
+        },
+        "careers": {
+          "label": "👩‍💻 करियर",
+          "description": "खुली भूमिकाएं, इंटर्नशिप, ठेकेदार अवसर"
+        },
+        "validators": {
+          "label": "🧡 सत्यापनकर्ता / नोड संचालक",
+          "description": "संचालक रुचि, RPC प्रदाता, इंफ्रा भागीदारों"
+        },
+        "legal": {
+          "label": "⚖️ कानूनी और अनुपालन",
+          "description": "ट्रेडमार्क, डेटा अनुरोध, समझौते"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "हम आपकी क्या मदद कर सकते हैं?",
+            "subtitle": "वह श्रेणी चुनें जो आपकी पूछताछ का सबसे अच्छा वर्णन करे"
+          },
+          "contact": {
+            "title": "आइए जान लें",
+            "subtitle": "हम आपसे वापस संपर्क करने के लिए इस जानकारी का उपयोग करेंगे",
+            "name-label": "आपका नाम",
+            "name-placeholder": "अपना पूरा नाम दर्ज करें",
+            "name-aftergreet": "आपसे मिलकर अच्छा लगा, ",
+            "email-label": "ईमेल पता",
+            "email-placeholder": "अपना ईमेल पता दर्ज करें"
+          },
+          "details": {
+            "title": "हमें और बताएं",
+            "subtitle": "अपनी पूछताछ के बारे में विवरण प्रदान करें",
+            "subject-label": "विषय",
+            "subject-placeholder": "आपके मुद्दे का संक्षिप्त सारांश",
+            "message-label": "संदेश",
+            "message-placeholder": "अपने मुद्दे का विस्तार से वर्णन करें। कोई भी त्रुटि संदेश, पुनरुत्पादन के चरण या प्रासंगिक जानकारी शामिल करें।"
+          },
+          "submit": {
+            "title": "समीक्षा और सबमिट करें",
+            "subtitle": "सबमिट करने से पहले अपनी जानकारी की समीक्षा करें",
+            "placeholder": "हमें बताएं कि आपको किस चीज़ में मदद चाहिए..."
+          }
+        },
+        "buttons": {
+          "next": "अगला",
+          "previous": "पिछला",
+          "submit": "टिकट सबमिट करें",
+          "submitting": "सबमिट किया जा रहा है..."
+        },
+        "validation": {
+          "name-required": "नाम आवश्यक है",
+          "name-min-length": "नाम कम से कम 2 अक्षरों का लंबा होना चाहिए",
+          "email-required": "ईमेल आवश्यक है",
+          "email-invalid": "कृपया एक मान्य ईमेल पता दर्ज करें",
+          "subject-required": "विषय आवश्यक है",
+          "message-required": "संदेश आवश्यक है",
+          "category-required": "कृपया एक श्रेणी चुनें",
+          "default": "यह फ़ील्ड आवश्यक है"
+        },
+        "success": {
+          "title": "टिकट सफलतापूर्वक सबमिट किया गया!",
+          "message": "संपर्क करने के लिए धन्यवाद। हमें आपका समर्थन टिकट प्राप्त हुआ है और हम जल्द ही आपसे वापस संपर्क करेंगे।",
+          "button": "एक और टिकट सबमिट करें"
+        },
+        "error": {
+          "title": "सबमिशन विफल रहा",
+          "message": "आपका टिकट सबमिट करने में त्रुटि हुई। कृपया फिर से प्रयास करें या सीधे हमसे संपर्क करें।",
+          "button": "फिर से प्रयास करें"
         }
       }
     }
@@ -285,45 +875,39 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Testnet, Donut में एक झलक पाएं, यूनिवर्सल ऐप्स बनाएं और पुरस्कार जीतें!",
+      "description": "Testnet, Donut में एक झलक पाएं, universal apps बनाएं और पुरस्कार जीतें!",
       "button-text": "Closed Beta Pass प्राप्त करें",
-      "button-title": "Push Chain testnet में शामिल हों और अपना Closed Beta Pass प्राप्त करें",
+      "button-title": "Push Chain testnet में शामिल हों और अपना closed beta pass प्राप्त करें",
       "button-aria-label": "Push Chain closed beta pass प्राप्त करने के लिए Telegram खोलें",
       "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
       "close-button-title": "testnet सूचना बंद करें",
       "close-button-aria-label": "Push Chain testnet सूचना को खारिज करें",
-      "container-aria-label": "Push Chain testnet सूचना",
-      "container-role": "Push Chain testnet घोषणा"
+      "container-aria-label": "Push Chain testnet सूचना"
     },
     "rewards-notification": {
-      "title": "Donut Testnet Closed beta लाइव है!",
+      "title": "Donut Testnet का क्लोज्ड बीटा लाइव है!",
       "description": "Testnet, Donut में एक झलक पाएं, यूनिवर्सल ऐप्स बनाएं और पुरस्कार जीतें!",
-      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
-      "close-button-title": "rewards सूचना बंद करें",
-      "close-button-aria-label": "Push Chain rewards सूचना को खारिज करें",
-      "container-aria-label": "Push Chain rewards सूचना",
-      "container-role": "Push Chain rewards घोषणा"
+      "image-alt": "Push Chain Testnet Rewards - यूनिवर्सल ऐप्स बनाएं",
+      "close-button-title": "पुरस्कार सूचना बंद करें",
+      "close-button-aria-label": "Push Chain पुरस्कार सूचना खारिज करें",
+      "container-aria-label": "Push Chain पुरस्कार सूचना"
     },
     "info-bar": {
-      "title": "Push Testnet पर अभी लॉन्च करें — बिल्डर्स और शुरुआती उपयोगकर्ताओं के लिए पुरस्कार अनलॉक करें।",
+      "title": "Push Testnet पर लॉन्च अब — बिल्डर्स और शुरुआती उपयोगकर्ताओं के लिए पुरस्कार अनलॉक करें।",
       "learn-more-text": "और जानें",
       "learn-more-title": "इस घोषणा के बारे में और जानें",
-      "learn-more-aria-label": "नई टैब में घोषणा लिंक खोलें",
       "dismiss-button-title": "घोषणा खारिज करें",
       "dismiss-button-aria-label": "घोषणा बार बंद करें",
       "container-aria-label": "साइट घोषणा",
-      "container-role": "साइट घोषणा बैनर",
       "star-icon-alt": "घोषणा स्टार आइकन"
     },
     "alert": {
       "message": "Push Metamask Snap अब लाइव है,",
       "know-more-text": "शुरू करें!",
-      "know-more-title": "Push Metamask Snap के साथ शुरुआत करें",
-      "know-more-aria-label": "नई टैब में Push Metamask Snap खोलें",
+      "know-more-title": "Push Metamask Snap के साथ शुरू करें",
       "close-button-title": "अलर्ट बंद करें",
-      "close-button-aria-label": "Push Metamask Snap अलर्ट को खारिज करें",
-      "container-aria-label": "Push Metamask Snap घोषणा",
-      "container-role": "Push Metamask Snap अलर्ट बैनर"
+      "close-button-aria-label": "Push Metamask Snap अलर्ट खारिज करें",
+      "container-aria-label": "Push Metamask Snap घोषणा"
     }
   }
 }

@@ -3,79 +3,80 @@
     "home": {
       "seo": {
         "title": "首页",
-        "description": "共享状态的 L1，用于通用应用程序。一次部署，覆盖任何链上的用户。使用任何钱包。使用任何代币支付。",
-        "og-title": "Push Chain - 通用 L1，用于应用程序",
-        "og-description": "一次部署即可适用于 EVM 和非 EVM 用户。使用任何钱包并用任何代币支付——无需切换网络。",
-        "twitter-title": "一次部署，覆盖任何链。",
-        "twitter-description": "从任何链进行交易。使用任何钱包。使用任何代币支付。无需切换网络。"
+        "description": "为通用应用设计的 L1 共享状态层。一次部署，触达任何链上的用户。使用任何钱包。使用任何代币支付。",
+        "og-title": "Push Chain - 适用于应用的通用 L1",
+        "og-description": "一次部署即可触达 EVM 和非 EVM 用户。使用任何钱包并用任何代币支付 - 无需网络切换。",
+        "twitter-title": "一次部署，触达任何链。",
+        "twitter-description": "从任何链进行交易。使用任何钱包。用任何代币支付。无需网络切换。"
       },
       "hero-section": {
-        "title": "任何链，任何应用，所有用户。\n一个 Push Chain。",
-        "description": "第一层构建用于通用应用程序的层。 \n一次构建和部署，在任何链上注册用户。",
+        "title": "任何链，任何应用，所有用户。\nPush Chain 一统天下。",
+        "description": "首个为通用应用打造的 Layer 1。\n一次构建和部署，即可汇聚来自任何链上的用户。",
         "primary-button": "开始构建",
-        "primary-button-title": "开始您的构建者之旅，体验 Push Chain！",
+        "primary-button-title": "开始您的 Push Chain 构建之旅！",
         "secondary-button": "探索知识库",
-        "secondary-button-title": "学习和探索 Push Chain",
-        "section-aria-label": "Push Chain 英雄部分 - 通用 Layer 1 区块链介绍",
-        "primary-button-aria-label": "开始在 Push Chain 上构建通用应用程序 - 前往开发者文档",
-        "secondary-button-aria-label": "了解 Push Chain 的功能和概念，请查阅知识库",
+        "secondary-button-title": "了解和探索 Push Chain",
+        "section-aria-label": "Push Chain 英雄区 - 通用 Layer 1 区块链介绍",
+        "primary-button-aria-label": "开始在 Push Chain 上构建通用应用 - 前往开发者文档",
+        "secondary-button-aria-label": "在知识库中了解 Push Chain 的特性和概念",
         "hero-background-alt": "Push Chain 英雄背景动画，展示通用区块链连接",
-        "hero-background-title": "Push Chain - 用于跨链应用的通用 Layer 1",
-        "schema-headline": "Push Chain - 用于应用程序的通用 L1",
-        "schema-description": "在 Push Chain 上一次部署即可覆盖任何区块链上的用户，享受通用应用程序。"
+        "hero-background-title": "Push Chain - 面向跨链应用的通用 Layer 1",
+        "schema-headline": "Push Chain - 适用于应用的通用 L1",
+        "schema-description": "在 Push Chain 上一次部署，即可触达任何区块链上的用户，实现通用应用"
       },
       "whatis-section": {
-        "titleFirst": "一个真正的",
+        "titleFirst": "真正的",
         "titleSecondGraditent": "通用",
         "titleThird": "链",
-        "bottomTextFirst": "一次部署,",
-        "bottomTextSecond": "覆盖所有地方",
-        "bottomLinkText": "开始使用",
-        "bottomLinkTitle": "前往文档中心",
-        "section-aria-label": "Push Chain 是什么 - 通用区块链解释",
-        "animation-alt": "动画演示 Push Chain 的通用应用部署跨多个区块链",
-        "animation-title": "Push Chain 通用部署可视化 - 一次部署，覆盖任何链",
-        "bottom-link-aria-label": "导航到 Push Chain 文档，开始构建通用应用程序"
+        "description": "打破壁垒。一次构建，跨链扩展。",
+        "animation-alt": "交互式动画，展示 Push Chain 跨多个区块链的即时互操作性",
+        "animation-title": "Push Chain 即时互操作性可视化",
+        "stats": {
+          "stat1": {
+            "title": "支持的链",
+            "imagealt": "展示支持的链",
+            "imagetitle": "所有支持的链列表，如以太坊、Solana、BNB Chain 等"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "原生最终确定性",
+            "description": "即时"
+          },
+          "stat4": {
+            "title": "原生区块时间",
+            "description": "1s"
+          }
+        }
       },
-      "chain-features-section": {
-        "section-aria-label": "Push Chain 创新和功能部分",
-        "header": {
-          "main-text": "基于创新，消除碎片化！",
-          "other-text": "Push 是您需要的唯一通用 Layer 1！"
-        },
-        "box1": {
-          "texttitle": "任何链的交易",
-          "bodytext": "Push Chain 支持来自任何区块链的交易。用户可以使用任何代币支付 gas——无需桥接。",
-          "imagealt": "插图：代表多个区块链网络的交易",
-          "image-text": "插图，显示来自各种链的交易流"
-        },
-        "box2": {
-          "texttitle": "TPS",
-          "description": "4.2k"
-        },
-        "box3": {
-          "texttitle": "原生最终确定性",
-          "description": "即时"
-        },
-        "box4": {
-          "texttitle": "原生区块时间",
-          "description": "1s"
-        },
-        "box5": {
-          "texttitle": "任何钱包",
-          "bodytext": "与 MetaMask、Trust Wallet 等钱包兼容，无缝连接。"
-        },
-        "box6": {
-          "texttitle": "多链互操作性",
-          "bodytext": "在以太坊、BNB Chain、Polygon 等网络上部署，实现互操作性。"
-        },
-        "box7": {
-          "texttitle": "开发者友好",
-          "bodytext": "使用 Solidity 和 Web3.js 等标准工具进行构建，简化开发流程。"
-        },
-        "box8": {
-          "texttitle": "安全且可扩展",
-          "bodytext": "通过共识机制和分片技术确保安全性和可扩展性。"
+      "stats-section": {
+        "section-aria-label": "Push Chain 性能统计数据和指标",
+        "title": "实现",
+        "titleGradient": "即时",
+        "titleThird": "互操作性",
+        "description": "针对性能进行优化。\n高 TPS、超低 Gas 费用，以及亚秒级\n最终确定性，实现实时应用执行。",
+        "animation-alt": "交互式动画，展示 Push Chain 跨多个区块链的即时互操作性",
+        "animation-title": "Push Chain 即时互操作性可视化",
+        "stats": {
+          "stat1": {
+            "title": "支持的链",
+            "imagealt": "展示支持的链",
+            "imagetitle": "所有支持的链列表，如以太坊、Solana、BNB Chain 等"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "原生最终确定性",
+            "description": "即时"
+          },
+          "stat4": {
+            "title": "原生区块时间",
+            "description": "1s"
+          }
         }
       },
       "blog-section": {
@@ -85,91 +86,91 @@
         "title-aria-label": "最新的 Push Chain 博客文章和更新",
         "explore-link-text": "探索更多文章",
         "explore-link-title": "访问 Push Chain 博客，阅读所有文章和更新",
-        "explore-link-aria-label": "导航到 Push Chain 博客页面",
-        "section-aria-label": "Push Chain 博客文章和新闻部分",
+        "explore-link-aria-label": "导航至 Push Chain 博客页面",
+        "section-aria-label": "Push Chain 博客文章和新闻版块",
         "blog-posts-list-aria-label": "最近的 Push Chain 博客文章",
         "blog-post-aria-label": "阅读关于 {title} 的博客文章",
         "blog-post-title-prefix": "阅读博客文章 - ",
         "loading-text": "正在加载最新的博客文章...",
         "error-text": "目前无法加载博客文章",
-        "no-posts-text": "没有可用的博客文章"
+        "no-posts-text": "目前没有可用的博客文章"
       },
       "trustedby-section": {
-        "title": "由被先锋信任的团队构建",
-        "section-aria-label": "Push Chain 值得信赖的部分",
+        "title": "受先驱 Web3 项目团队信赖",
+        "section-aria-label": "Push Chain 受信版块",
         "trusted-by-alt": "投资者 - "
       },
       "featured-section": {
-        "aria-label": "精选部分",
+        "aria-label": "精选版块",
         "tag": "精选于",
-        "title": "Push Chain 在聚光灯下",
-        "subtitle": "不要只听我们说。看看媒体对真正通用链的评价。",
+        "title": "Push Chain 备受瞩目",
+        "subtitle": "不要只听我们的一面之词。看看媒体对真正的通用链怎么说。",
         "articles-image-alt": "来自 ",
         "articles-text": "阅读完整报道",
         "articles-title-1": "阅读 ",
         "articles-title-2": "关于 Push Chain 的完整细节",
         "articles": {
           "binance-chain": {
-            "text": "我们很高兴宣布 Web3 领先的去中心化通信协议 Push Protocol 现已在 BNB Chain 上启动。"
+            "text": "我们很高兴地宣布，领先的 Web3 去中心化通信协议 Push Protocol 现在已在 BNB Chain 上启动。"
           },
           "coindesk": {
-            "text": "协议村：Unstoppable Works 与 Push Protocol 合作提供代币门控群聊"
+            "text": "协议村庄：Unstoppable Works 与 Push Protocol 合作，提供代币门控群聊"
           },
           "defiant": {
-            "text": "Unstoppable Domains 启动代币门控群聊功能。与 Push Protocol 的合作旨在防范虚假信息和诈骗。"
+            "text": "Unstoppable Domains 启动徽章门控群聊功能，与 Push Protocol 合作，旨在防范错误信息和诈骗。"
           },
           "balaji": {
             "text": "用户控制的通知。两家公司控制着数十亿智能手机的推送通知：Apple 和 Google。"
           },
           "defiprime": {
-            "text": "Harsh Rajat 谈论银行的未来，EPNS 协议激励措施以及去中心化推送通知的商业模式。"
+            "text": "Harsh Rajat 谈论未来银行业务、EPNS 协议激励以及去中心化推送通知的商业模式。"
           },
           "ethfoundation": {
-            "text": "自从 HackMoney 以来，Richa 和 Harsh 将难以置信的精力投入到将 EPNS 建设成他们所说的“Web3 中缺失的一块”中。"
+            "text": "自从 HackMoney 之后，Richa 和 Harsh 一直将令人难以置信的精力投入到将 EPNS 打造成为他们所说的“Web3 中缺失的一块”。"
           },
           "beincrypto": {
-            "text": "Web3 通信网络的工作原理：技术深入分析"
+            "text": "Web3 通信网络的工作原理：技术深度解析"
           },
           "the-block": {
-            "text": "Push Protocol 启动其自身的 Layer 1 链"
+            "text": "Web3 通知协议 Push 将启动其自己的 Layer 1 链"
           },
           "business-insider": {
-            "text": "Push Unveils Push Chain：通用区块链应用程序的未来"
+            "text": "Push 发布 Push Chain：通用区块链应用的未来"
           },
           "chainwire": {
-            "text": "Push Unveils Push Chain：通用区块链应用程序的未来。"
+            "text": "Push 发布 Push Chain：通用区块链应用的未来。"
           },
           "benzinga": {
-            "text": "Push Unveils Push Chain：通用区块链应用程序的未来"
+            "text": "Push 发布 Push Chain：通用区块链应用的未来"
           },
           "crypto-briefing": {
-            "text": "Push Unveils Push Chain：通用区块链应用程序的未来"
+            "text": "Push 发布 Push Chain：通用区块链应用的未来"
           },
           "cryptoslate": {
-            "text": "Push Protocol 启动 Push Chain，以统一区块链通信和交易"
+            "text": "Push Protocol 发布 Push Chain，以统一区块链通信和交易"
           },
           "messari": {
-            "text": "EPNS 允许用户接收去中心化通知，实现激励和被动收入。"
+            "text": "EPNS 能够为接收去中心化通知的用户提供激励和被动收益。"
           },
           "coin-telegraph-1": {
-            "text": "Harsh Rajat，Push Protocol 的创始人兼项目负责人，在最新一期的 Hashing It Out 中解释了 Web3 聊天应用程序的激增。"
+            "text": "Harsh Rajat，Push Protocol 的创始人兼项目负责人，在最新一期的 Hashing It Out 中谈论了 Web3 聊天应用的发展。"
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains 为用户名持有者启动徽章门控群聊功能。"
+            "text": "Unstoppable Domains 启动徽章门控群聊功能，面向用户名持有者。"
           }
         }
       },
       "ending-section": {
-        "aria-label": "构建通用应用程序部分",
-        "section-title": "构建通用应用程序。",
-        "section-subtitle": "打破孤岛。一次构建，在每条链上扩展。",
+        "aria-label": "构建通用应用版块",
+        "section-title": "构建通用应用。",
+        "section-subtitle": "打破孤岛。一次构建，跨链扩展。",
         "docs-link": {
           "text": "探索 Push Chain 文档",
           "title": "探索 Push Chain 文档和开发者资源",
           "aria-label": "在新标签页中打开 Push Chain 文档"
         },
         "cta-link": {
-          "text": "LFG Push Chain",
+          "text": "加入 Push Chain",
           "title": "开始使用 Push Chain - 通用区块链平台",
           "aria-label": "开始 Push Chain 开发"
         }

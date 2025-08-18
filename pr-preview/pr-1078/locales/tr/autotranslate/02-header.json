@@ -3,11 +3,11 @@
     "meta": {
       "logo-aria-label": "Push Chain - Ana sayfaya git",
       "language-icon-alt": "Dil seçimi simgesi",
-      "hamburger-menu-alt": "Navigasyon menüsünü aç",
+      "hamburger-menu-alt": "Gezinme menüsünü aç",
       "testnet-badge-alt": "Push Chain Testnet Donut - Testnet durumunu görüntüle"
     },
     "logo": {
-      "imagealt": "Push Chain Logosu Görseli",
+      "imagealt": "Push Chain Logosu",
       "imagetitle": "Push Chain Logosu",
       "ctatitle": "Push Chain ana sayfasına git"
     },
@@ -16,13 +16,13 @@
       "aria-label": "Testnet Bölümü",
       "link1": {
         "text": "Push Scan",
-        "subtext": "Push Chain blok keşifçisi",
+        "subtext": "Push Chain blok gezgini",
         "title": "Push Chain testnet işlemlerini ve bloklarını Push Scan'de keşfedin"
       },
       "link2": {
-        "text": "Musluk",
-        "subtext": "Testnet token'ları al",
-        "title": "Push Chain geliştirme için ücretsiz testnet token'ları al"
+        "text": "Faucet",
+        "subtext": "Testnet tokenları al",
+        "title": "Push Chain geliştirmesi için ücretsiz testnet tokenları al"
       }
     },
     "developers": {
@@ -31,56 +31,56 @@
       "link1": {
         "text": "Başlangıç",
         "subtext": "Push Chain üzerinde geliştirmeye giriş",
-        "title": "Push Chain üzerinde evrensel uygulamalar geliştirmeye başlayın - Geliştirici dokümantasyonu"
+        "title": "Push Chain üzerinde evrensel uygulamalar geliştirmeye başla - Geliştirici dokümantasyonu"
       },
       "link2": {
         "text": "Hızlı Başlangıç",
-        "subtext": "Saniyeler içinde geliştirme ortamını kur",
+        "subtext": "Saniyeler içinde dev ortamını kur",
         "title": "Hızlı başlangıç kılavuzu - Push Chain geliştirme ortamını anında kur"
       },
       "link3": {
         "text": "Eğitimler",
         "subtext": "Adım adım Push ile geliştirme kılavuzları",
-        "title": "Adım adım eğitimlerle Push Chain üzerinde ilk evrensel uygulamanızı geliştirin"
+        "title": "Push Chain üzerinde ilk evrensel uygulamanızı Push Chain ile pratik eğitimlerle öğrenin"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "Çekirdek kodu ve açık kaynaklı araçları görüntüle",
-        "title": "Push Chain kaynak kodunu ve geliştirme araçlarını GitHub'da keşfedin"
+        "subtext": "Temel kodu ve açık kaynak araçlarını görüntüle",
+        "title": "Push Chain kaynak kodunu ve GitHub'daki geliştirme araçlarını keşfedin"
       },
       "link5": {
         "text": "Geliştirici Discord",
         "subtext": "Geliştirici topluluğuna bağlan",
-        "title": "Destek ve işbirliği için Push Chain geliştirici topluluğuna Discord'dan katılın"
+        "title": "Destek ve işbirliği için Push Chain geliştirici topluluğuna Discord'da katıl"
       }
     },
     "community": {
       "title": "Topluluk",
       "aria-label": "Topluluk Bölümü",
       "link1": {
-        "text": "Bilgi Tabanı",
-        "subtext": "Özellikler hakkında derinlemesine bilgi bul",
+        "text": "Bilgi Bankası",
+        "subtext": "Özelliklere ilişkin derinlemesine bilgiler bul",
         "title": "Kapsamlı Push Chain dokümantasyonunu ve özellik kılavuzlarını keşfedin"
       },
       "link2": {
-        "text": "Token Ekonomisi",
+        "text": "Tokenomik",
         "subtext": "Push Chain'deki her şeyi güçlendiren yerel token",
-        "title": "$PC token'ın faydalarını ve Push Chain token ekonomisini öğrenin"
+        "title": "Push Chain tokenomiği ve $PC token kullanım alanlarını öğrenin"
       },
       "link3": {
         "text": "X/Twitter",
         "subtext": "Güncellemeleri ve ekosistem haberlerini takip et",
-        "title": "En son güncellemeler ve duyurular için Push Chain'i X (Twitter) üzerinden takip edin"
+        "title": "Push Chain'i X (Twitter) üzerinde takip ederek en son güncellemeleri ve duyuruları takip edin"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "Sohbet et, geliştir ve toplulukla etkileşim kur",
-        "title": "Tartışmalar ve destek için Push Chain topluluğuna Discord'dan katılın"
+        "subtext": "Sohbet et, geliştir ve toplulukla birlikte ol",
+        "title": "Tartışmalar ve destek için Push Chain topluluğuna Discord'da katıl"
       },
       "link5": {
         "text": "Telegram",
         "subtext": "Konuşmaya katıl ve gelişmelerden haberdar ol",
-        "title": "Gerçek zamanlı güncellemeler için Push Chain topluluğuna Telegram'dan bağlanın"
+        "title": "Push Chain topluluğuna Telegram'da bağlanarak gerçek zamanlı güncellemelerden haberdar ol"
       }
     },
     "resources": {
@@ -89,24 +89,24 @@
       "link1": {
         "text": "Blog",
         "subtext": "Güncellemeler, derinlemesine analizler ve geliştirici hikayeleri",
-        "title": "En son güncellemeler, teknik analizler ve geliştirici hikayeleri için Push Chain blog'unu okuyun"
+        "title": "Push Chain blogunu okuyarak en son güncellemeleri, teknik analizleri ve geliştirici hikayelerini takip edin"
       },
       "link2": {
-        "text": "Hafif Makale",
-        "subtext": "Vizyon ve teknolojiyi basitleştirilmiş haliyle",
-        "title": "Push Chain Hafif Makalesini okuyun - basitleştirilmiş vizyon ve teknik genel bakış"
+        "text": "Litepaper",
+        "subtext": "Vizyon ve tekniği basitleştirilmiş haliyle",
+        "title": "Push Chain Litepaper'ını okuyarak basitleştirilmiş vizyonu ve teknik genel bakışı öğrenin"
       },
       "link3": {
         "text": "SSS",
-        "subtext": "Sık sorulan sorulara hızlı yanıtlar",
-        "title": "Push Chain hakkında sık sorulan soruları inceleyin"
+        "subtext": "Sık sorulan sorulara hızlı cevaplar",
+        "title": "Push Chain hakkında sık sorulan sorulara göz atın"
       }
     },
     "language": {
       "title": "Dil",
       "aria-label": "Dil Seçim Açılır Menüsü",
-      "english": "İngilizce",
-      "english-ctatitle": "Dili İngilizceye değiştir",
+      "english": "English",
+      "english-ctatitle": "Dili İngilizce'ye değiştir",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",
@@ -136,7 +136,7 @@
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Push Portal'a erişin - Geliştirici, kullanıcı veya doğrulayıcı olarak puan kazanın"
+      "title": "Push Portal'a eriş - Geliştirici, kullanıcı veya doğrulayıcı olarak puan kazan"
     }
   }
 }

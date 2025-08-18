@@ -1,88 +1,625 @@
 {
   "global": {
     "site-name": "Push Chain — アプリのためのユニバーサルL1",
-    "site-description": "ユニバーサルアプリのための共有状態L1。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どのウォレットでも使用可能。どのトークンでも支払い可能。ネットワーク切り替え不要。"
+    "site-description": "ユニバーサルアプリのための共有ステートL1。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どのウォレットでも利用可能。どのトークンでも支払い可能。チェーンの切り替えは不要です。"
   },
   "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - ホームページに移動",
+      "language-icon-alt": "言語選択アイコン",
+      "hamburger-menu-alt": "ナビゲーションメニューを開く",
+      "testnet-badge-alt": "Push Chain テストネット Donut - テストネットのステータスを表示"
+    },
+    "logo": {
+      "imagealt": "Push Chain ロゴの画像",
+      "imagetitle": "Push Chain ロゴ",
+      "ctatitle": "Push Chain ホームページに移動"
+    },
+    "testnet": {
+      "title": "テストネット",
+      "aria-label": "テストネットセクション",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Push Chain のブロックエクスプローラー",
+        "title": "Push Scan で Push Chain テストネットのトランザクションとブロックを探索"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "テストネットトークンを入手",
+        "title": "Push Chain 開発用の無料テストネットトークンを入手"
+      }
+    },
+    "developers": {
+      "title": "開発者",
+      "aria-label": "開発者セクション",
+      "link1": {
+        "text": "Get Started",
+        "subtext": "Push Chain での開発入門",
+        "title": "Push Chain でのユニバーサルアプリ開発を始める - 開発者ドキュメント"
+      },
+      "link2": {
+        "text": "Quick Start",
+        "subtext": "数秒で開発環境をセットアップ",
+        "title": "クイックスタートガイド - Push Chain 開発環境を即座にセットアップ"
+      },
+      "link3": {
+        "text": "Tutorials",
+        "subtext": "Push を使った段階的なガイド",
+        "title": "実践的なチュートリアルで学ぶ - Push Chain で最初のユニバーサルアプリを構築"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "コアコードとオープンソースツールを表示",
+        "title": "GitHub で Push Chain ソースコードと開発ツールを探索"
+      },
+      "link5": {
+        "text": "Developer Discord",
+        "subtext": "開発コミュニティに参加",
+        "title": "Discord で Push Chain 開発コミュニティに参加してサポートとコラボレーションを"
+      }
+    },
+    "community": {
+      "title": "コミュニティ",
+      "aria-label": "コミュニティセクション",
+      "link1": {
+        "text": "Knowledge Base",
+        "subtext": "機能の詳細な解説を見る",
+        "title": "Push Chain の包括的なドキュメントと機能ガイドを探索"
+      },
+      "link2": {
+        "text": "Tokenomics",
+        "subtext": "Push Chain を支えるネイティブトークン",
+        "title": "$PC トークンのユーティリティと Push Chain のトークノミクスを学ぶ"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "最新情報とエコシステムのニュースを追う",
+        "title": "X (Twitter) で Push Chain をフォローして最新情報とアナウンスを入手"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "チャット、構築、コミュニティと交流",
+        "title": "Discord で Push Chain コミュニティに参加してディスカッションやサポートに参加"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "会話に参加して最新情報を入手",
+        "title": "Telegram で Push Chain コミュニティに参加してリアルタイムの最新情報を入手"
+      }
+    },
+    "resources": {
+      "title": "リソース",
+      "aria-label": "リソースセクション",
+      "link1": {
+        "text": "Blog",
+        "subtext": "最新情報、詳細な解説、開発者のストーリー",
+        "title": "Push Chain ブログを読んで最新情報、技術的な詳細な解説、開発者のストーリーを入手"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "ビジョンと技術をわかりやすく解説",
+        "title": "Push Chain Litepaper を読んで簡略化されたビジョンと技術の概要を入手"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "よくある質問への簡単な回答",
+        "title": "Push Chain に関するよくある質問を参照"
+      }
+    },
+    "language": {
+      "title": "言語",
+      "aria-label": "言語選択ドロップダウン",
+      "english": "English",
+      "english-ctatitle": "言語を英語に変更",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
     "app-button": {
       "text": "Push Portal",
-      "title": "Push Portalにアクセス - 開発者、ユーザー、またはバリデーターとしてポイントを獲得"
+      "title": "Push Portal にアクセス - 開発者、ユーザー、バリデーターとしてポイントを獲得"
     }
   },
   "footer": {
-    "mail-section": {
-      "title": "最新のPushニュースを入手",
-      "privacy": "プライバシーポリシー",
-      "tos": "利用規約"
+    "email-section": {
+      "title": "Push Chain の最新情報を受け取る",
+      "title-secondary": "ニュースとアップデート！",
+      "title-aria-label": "ニュースレター登録セクション",
+      "section-aria-label": "Push Chain ニュースレター登録"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Web3コミュニケーションの未来を共に築きましょう。",
-        "link-text": "求人情報を見る",
-        "image-title": "参加する",
-        "image-alt": "求人情報アイコン"
-      },
-      "docs-card": {
-        "text": "シンプルなガイドに従って、数分で簡単に始めましょう。",
-        "link-text": "ドキュメントを探索",
-        "image-title": "始める",
-        "image-alt": "簡単に始められるアイコン"
-      }
+    "main-section": {
+      "section-aria-label": "フッターナビゲーションとリンク",
+      "logo-link-title": "Push Chain ホームページ",
+      "logo-link-aria-label": "Push Chain ホームページ",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "会社",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Terms",
-        "privacy-link": "Privacy"
-      },
-      "governance-column": {
-        "title": "ガバナンス",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Grants",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "リソース",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
+        "title-aria-label": "リソースナビゲーション"
       },
-      "subscribe-column": {
-        "title": "サポート",
-        "contact-us-link": "お問い合わせ",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "開発者",
+        "title-aria-label": "開発者ナビゲーション"
       },
-      "support-column": {
-        "title": "購読",
-        "email-placeholder": "メールアドレス"
+      "community": {
+        "title": "コミュニティ",
+        "title-aria-label": "コミュニティナビゲーション"
+      },
+      "help": {
+        "title": "ヘルプ",
+        "title-aria-label": "ヘルプナビゲーション"
       }
+    },
+    "links": {
+      "get-started": "はじめる",
+      "get-started-title": "Push Chain での開発を始める",
+      "docs": "ドキュメント",
+      "docs-title": "Push Chain ドキュメント",
+      "github": "GitHub",
+      "github-title": "GitHub の Push Chain リポジトリ",
+      "knowledge-base": "ナレッジベース",
+      "knowledge-base-title": "Push Chain ナレッジベース",
+      "blog": "ブログ",
+      "blog-title": "Push Chain ブログ",
+      "litepaper": "ライトペーパー",
+      "litepaper-title": "Push Chain ライトペーパー (PDF)",
+      "brand-kit": "ブランドキット",
+      "brand-kit-title": "Push Chain ブランドアセットとガイドライン",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain ブロックチェーンエクスプローラー",
+      "faucet": "Faucet",
+      "faucet-title": "Push Chain faucet からテストトークンを入手",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Protocol コミュニティポータル",
+      "support": "サポート",
+      "support-title": "ヘルプセンター",
+      "security": "セキュリティ & 脆弱性報告",
+      "security-title": "脆弱性を報告 (責任開示)",
+      "contact-us": "お問い合わせ",
+      "contact-us-title": "パートナーシップ、BD、メディア、または一般的なお問い合わせ",
+      "careers": "採用情報",
+      "careers-title": "Push Chain の募集ポジション",
+      "twitter": "X (Twitter)",
+      "twitter-title": "X (Twitter) で Push Chain をフォロー",
+      "discord": "Discord",
+      "discord-title": "Push Chain Discord に参加",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain サブレディットに参加",
+      "telegram": "Telegram",
+      "telegram-title": "Push Chain Telegram に参加"
+    },
+    "social-section": {
+      "section-aria-label": "ソーシャルメディアリンクと法的情報",
+      "twitter-icon-title": "X (Twitter) での Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) での Push Chain",
+      "github-icon-title": "GitHub での Push Chain",
+      "github-icon-aria-label": "GitHub での Push Chain",
+      "discord-icon-title": "Discord での Push Chain",
+      "discord-icon-aria-label": "Discord での Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "プライバシーポリシー",
+      "privacy-policy-title": "プライバシーポリシーを読みます",
+      "privacy-policy-aria-label": "プライバシーポリシー",
+      "terms-of-service": "利用規約",
+      "terms-of-service-title": "利用規約を読みます",
+      "terms-of-service-aria-label": "利用規約",
+      "cookie-preferences": "Cookie の設定",
+      "cookie-preferences-title": "Cookie 設定を管理する"
+    },
+    "footer-image": {
+      "alt": "Push Chain フッターイラスト",
+      "title": "Push Chain - Universal Blockchain"
     }
   },
   "pages": {
+    "home": {
+      "seo": {
+        "title": "ホーム",
+        "description": "ユニバーサルアプリのためのL1共有状態。一度デプロイすれば、どのチェーン上のユーザーにもリーチできます。どのウォレットでも使用できます。どのトークンでも支払うことができます。",
+        "og-title": "Push Chain - アプリのためのユニバーサルL1",
+        "og-description": "EVMと非EVMの両方のユーザー向けに一度デプロイ。どのウォレットでも使用し、ネットワーク切り替えなしで、どのトークンでも支払うことができます。",
+        "twitter-title": "一度デプロイ。どのチェーンにもリーチ。",
+        "twitter-description": "どのチェーンからでもトランザクション。どのウォレットでも使用可能。ネットワーク切り替えなしで、どのトークンでも支払うことができます。"
+      },
+      "hero-section": {
+        "title": "どのチェーンでも、どのアプリでも、すべてのユーザー。\nPush Chain 1つ。",
+        "description": "ユニバーサルアプリ用に構築された最初のLayer 1。 \n一度構築・デプロイするだけで、どのチェーン上のユーザーでもオンボーディングできます。",
+        "primary-button": "開発を始める",
+        "primary-button-title": "Push Chain で開発の旅を始めましょう！",
+        "secondary-button": "ナレッジベースを参照する",
+        "secondary-button-title": "Push Chain を学ぶ",
+        "section-aria-label": "Push Chain ヒーローセクション - ユニバーサル Layer 1 ブロックチェーンの紹介",
+        "primary-button-aria-label": "Push Chain でユニバーサルアプリの開発を開始 - 開発ドキュメントへ",
+        "secondary-button-aria-label": "ナレッジベースで Push Chain の機能と概念について学ぶ",
+        "hero-background-alt": "Push Chain ヒーロー背景アニメーション - 普遍的なブロックチェーン接続を示す",
+        "hero-background-title": "Push Chain - クロスチェーンアプリケーションのためのユニバーサル Layer 1",
+        "schema-headline": "Push Chain - アプリのためのユニバーサル L1",
+        "schema-description": "Push Chain に一度デプロイすれば、あらゆるブロックチェーンで利用できます。"
+      },
+      "stats-section": {
+        "section-aria-label": "Push Chain のパフォーマンス統計",
+        "title": "すぐに",
+        "titleGradient": "相互運用性",
+        "titleThird": "を実現する",
+        "description": "パフォーマンスに最適化。\n高いTPS、超低ガス、およびリアルタイムアプリ実行のためのサブセカンドのファイナリティを実現します。",
+        "animation-alt": "複数のブロックチェーンにわたる Push Chain の即時相互運用性を示すインタラクティブアニメーション",
+        "animation-title": "Push Chain の即時相互運用性を示す可視化",
+        "stats": {
+          "stat1": {
+            "title": "対応チェーン",
+            "imagealt": "対応チェーンを示すイラスト",
+            "imagetitle": "Ethereum、Solana、BNB Chain など、すべての対応チェーンのリスト"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "ネイティブファイナリティ",
+            "description": "即時"
+          },
+          "stat4": {
+            "title": "ネイティブブロックタイム",
+            "description": "1s"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "ニュース、開発ログ、アイデア",
+        "subtitle-aria-label": "ブログカテゴリ情報",
+        "title": "Push Chain の鼓動を感じよう",
+        "title-aria-label": "最新の Push Chain ブログ記事と最新情報",
+        "explore-link-text": "その他の記事を読む",
+        "explore-link-title": "Push Chain ブログを訪問して、すべての記事と最新情報を読む",
+        "explore-link-aria-label": "Push Chain ブログページに移動する",
+        "section-aria-label": "Push Chain ブログ記事とニュースセクション",
+        "blog-posts-list-aria-label": "最新の Push Chain ブログ記事",
+        "blog-post-aria-label": "{title} に関するブログ記事を読む",
+        "blog-post-title-prefix": "ブログ記事を読む - ",
+        "loading-text": "最新のブログ記事を読み込んでいます...",
+        "error-text": "現在、ブログ記事を読み込むことができません",
+        "no-posts-text": "利用可能なブログ記事はありません"
+      },
+      "trustedby-section": {
+        "title": "Web3 のパイオニアに信頼されるチームによって構築",
+        "section-aria-label": "Push Chain 信頼セクション",
+        "trusted-by-alt": "投資家 - "
+      },
+      "featured-section": {
+        "aria-label": "掲載セクション",
+        "tag": "掲載",
+        "title": "Push Chain が注目を集める",
+        "subtitle": "うわさ話だけではありません。メディアが真のユニバーサルチェーンについてどのように言っているかを確認してください。",
+        "articles-image-alt": "メディアカバレッジ - ",
+        "articles-text": "完全なカバレッジを読む",
+        "articles-title-1": "を読む ",
+        "articles-title-2": "の Push Chain に関する詳細な思考",
+        "articles": {
+          "binance-chain": {
+            "text": "Web3 のリーディングディセントラルコミュニケーションプロトコルである Push Protocol が BNB Chain にローンチされたことを発表できて大変嬉しく思います。"
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
+          },
+          "balaji": {
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
+          },
+          "ethfoundation": {
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
+          },
+          "beincrypto": {
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "ユニバーサルアプリの構築セクション",
+        "section-title": "ユニバーサルアプリを構築しましょう。",
+        "section-subtitle": "サイロを壊しましょう。一度構築して、すべてのブロックチェーンでスケールしましょう。",
+        "docs-link": {
+          "text": "Push Chain ドキュメントを参照する",
+          "title": "Push Chain ドキュメントと開発リソースを参照する",
+          "aria-label": "新しいタブで Push Chain ドキュメントを開く"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "ユニバーサルブロックチェーンプラットフォームである Push Chain を開始しましょう",
+          "aria-label": "Push Chain 開発を開始する"
+        }
+      }
+    },
+    "knowledge": {
+      "seo": {
+        "title": "知識ベース — ガイド、FAQ、操作方法",
+        "description": "Push Chain のコンセプト、FAQ、操作方法、エコシステムのリソースをこちらから。分かりやすい、専門用語を使わないガイド。",
+        "og-title": "Push Chain 知識ベース - ガイド & FAQ",
+        "og-description": "Push Chain のコンセプト、ステップバイステップの操作方法、よくある質問への回答。",
+        "twitter-title": "知識ベース - ガイド & FAQ",
+        "twitter-description": "Push Chain の簡単なガイド、FAQ、操作方法 (専門用語なし)。"
+      },
+      "push101": {
+        "seo": {
+          "title": "Push Chain の基本 — 入門",
+          "description": "Push Chain とユニバーサルアプリの初心者向け紹介—概要、仕組み、始め方。",
+          "og-title": "Push Chain の基本 — 入門",
+          "og-description": "基本を学ぶ: Push Chain の概要、仕組み、最初のステップ。",
+          "twitter-title": "Push Chain の基本 — ここから始めよう",
+          "twitter-description": "Push Chain とユニバーサルアプリの初心者向けガイド。"
+        }
+      },
+      "builders": {
+        "seo": {
+          "title": "Builders – 方法とチュートリアル",
+          "description": "Push Chain の機能を活用するためのステップバイステップガイド、パターン、および例。",
+          "og-title": "Builders – 方法とチュートリアル",
+          "og-description": "Push Chain で構築するためのガイド付きチュートリアル、ベストプラクティス、および例。",
+          "twitter-title": "Builders – 方法とチュートリアル",
+          "twitter-description": "Push Chain でリリースするためのステップバイステップガイド。"
+        }
+      },
+      "deepdives": {
+        "seo": {
+          "title": "ディープダイブ — コンセプトとアーキテクチャ",
+          "description": "共有状態、手数料の抽象化、USV/UEA、そしてユニバーサル実行レイヤーに関するわかりやすい解説。",
+          "og-title": "ディープダイブ - コンセプトとアーキテクチャ",
+          "og-description": "Push Chainモジュール、設計決定、パフォーマンスに関する詳細記事。",
+          "twitter-title": "ディープダイブ - 裏側",
+          "twitter-description": "Push Chainの仕組みに関する解説。"
+        }
+      },
+      "partners": {
+        "seo": {
+          "title": "パートナー — エコシステム",
+          "description": "DeFi、ソーシャル、ゲーム、ツール分野の連携とコラボレーションを探索。",
+          "og-title": "パートナー - エコシステム & 統合",
+          "og-description": "Push Chain と戦略的パートナーが構築しているプロジェクトをご覧ください。",
+          "twitter-title": "エコシステムパートナー",
+          "twitter-description": "Push Chain と連携しているプロジェクトを発見。"
+        }
+      },
+      "tokenomics": {
+        "seo": {
+          "title": "$PCのトークノミクス — 価値の蓄積と経済モデル",
+          "description": "$PCがどのように価値を獲得するか：決済による需要、使用量に基づくシンク（焼却/ロック）、ステーキング経済、および供給スケジュール。",
+          "og-title": "$PCのトークノミクス - 価値の蓄積と経済モデル",
+          "og-description": "$PCでの決済が需要を促進し、使用量に基づくシンクが供給量を削減。ステーキング経済と排出量も含まれています。",
+          "twitter-title": "Push Chain トークノミクス | トークンエコノミクス",
+          "twitter-description": "$PCでの決済、使用量に基づくシンク、ステーキング経済、および排出量—簡潔な投資家向け概要。"
+        }
+      },
+      "faq": {
+        "seo": {
+          "title": "FAQ — よくある質問",
+          "description": "ウォレット、手数料、対応チェーン、そして始め方に関する簡単な回答。",
+          "og-title": "Push Chain FAQ - すべての質問",
+          "og-description": "ガイド、テストネット、サポートへのリンクとともに、迅速な回答を見つける。",
+          "twitter-title": "FAQ - ここから始めましょう",
+          "twitter-description": "Push Chain に関する質問への簡単な回答。"
+        }
+      }
+    },
+    "docs": {
+      "seo": {
+        "title": "ドキュメント — ユニバーサルアプリを構築",
+        "description": "Push Chain でリリースするために必要なものがすべて揃っています：クイックスタート、SDK、API リファレンス、サンプル、ノード設定。",
+        "og-title": "Push Chain ドキュメント - クイックスタート、SDK、API",
+        "og-description": "明確なガイドとサンプルで、ユニバーサル実行レイヤーでアプリを構築して実行します。",
+        "twitter-title": "Push Chain ドキュメント - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、API リファレンス、サンプルで迅速にリリース。"
+      },
+      "explorePrelaunchBuild": {
+        "text": "プレローンチビルドを試す",
+        "title": "Push Chain Testnet のドキュメントとプレローンチ機能にアクセス",
+        "ariaLabel": "Push Chain Testnet のドキュメントに移動して、プレローンチ機能を確認"
+      }
+    },
+    "blog": {
+      "seo": {
+        "title": "ブログ — 最新情報、詳細解説 & ストーリー",
+        "description": "Push Chain チームとエコシステムからのニュース、リリースノート、技術的な詳細解説、開発者ストーリー。",
+        "og-title": "Push Chain ブログ - 最新情報、詳細解説 & ストーリー",
+        "og-description": "Push Chain のプロダクトアップデート、開発ストーリー、詳細解説、エコシステムニュースをフォロー。",
+        "twitter-title": "Push Chain ブログ - 最新情報",
+        "twitter-description": "リリース、詳細解説、そして開発者ストーリー — 最新情報をチェック。"
+      }
+    },
+    "lfpush": {
+      "seo": {
+        "title": "Let's Push — コミュニティの取り組み",
+        "description": "Push コミュニティの取り組み、投稿など。",
+        "og-title": "Let's Push - Push Chain コミュニティの取り組み",
+        "og-description": "Push Chain のコミュニティ主導の取り組みと共有。",
+        "twitter-title": "Let's Push | コミュニティの取り組み",
+        "twitter-description": "Push Chain のコミュニティの取り組みをご覧ください。"
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "LF Push ビルダーコミュニティ—あなたが成し遂げたことと、あなたが助けた人々を称えましょう。あなたの成功を共有し、<hashtag>#LFPush</hashtag> または <mention>@PushChain</mention> をタグ付けすれば、私たちが広めます。"
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "成功事例を共有",
+          "join-community": "コミュニティに参加",
+          "learn-more": "詳細はこちら"
+        },
+        "meta": {
+          "tweet-alt": "Push Chain コミュニティメンバーからのツイート",
+          "loading-alt": "コミュニティのツイートを読み込んでいます"
+        },
+        "tweets-counter": "{{count}} 件のツイートとカウント中！",
+        "loading": "ツイートを読み込んでいます...",
+        "end-message": "これで最後です！🎉"
+      }
+    },
+    "support": {
+      "seo": {
+        "title": "サポート — ヘルプセンター",
+        "description": "Push Chain に関するヘルプ: ガイド、トラブルシューティング、ステータス、コミュニティサポート。",
+        "og-title": "Push Chain サポート - ヘルプセンター",
+        "og-description": "ドキュメント、チュートリアル、ステータスアップデート、およびサポートへの問い合わせ方法を見つけます。",
+        "twitter-title": "サポート - ヘルプ & ドキュメント",
+        "twitter-description": "Push Chain のガイド、チュートリアル、コミュニティサポート。"
+      },
+      "hero-section": {
+        "title": "サポート",
+        "description": "Push Chain ヘルプセンター: トラブルシューティング、ガイド、Donut testnet、エクスプローラー & ファセット、ステータスアップデート、セキュリティ。Discord で質問するか、サポートチケットを開いてください。"
+      }
+    },
+    "litepaper": {
+      "seo": {
+        "title": "Litepaper — 技術概要",
+        "description": "Push Chainのビジョン、アーキテクチャ、およびユニバーサルアプリのための経済モデルの概要。",
+        "og-title": "Push Chain Litepaper - 技術概要",
+        "og-description": "ユニバーサル実行レイヤーのビジョン、設計、および経済モデルを簡潔にまとめました。",
+        "twitter-title": "Litepaper - Push Chain",
+        "twitter-description": "ビジョン、アーキテクチャ、および経済モデルの概要。"
+      }
+    },
+    "tos": {
+      "seo": {
+        "title": "利用規約",
+        "description": "Push Chainのウェブサイト、アプリ、サービスの利用に関するルール（あなたの権利と責任）。",
+        "og-title": "Push Chain 利用規約 - 法的条件",
+        "og-description": "当社のウェブサイト、アプリ、開発ツール利用に関する法的条件。",
+        "twitter-title": "利用規約 - Push Chain",
+        "twitter-description": "Push Chainの利用に関する法的条件をお読みください。"
+      },
+      "hero-section": {
+        "title": "利用規約",
+        "description": "利用規約と条件について",
+        "update-text": "最終更新日: 2020年11月2日"
+      }
+    },
+    "privacy": {
+      "seo": {
+        "title": "プライバシーポリシー",
+        "description": "データの収集、使用、保護方法と、あなたの権利と選択肢について。",
+        "og-title": "Push Chain プライバシーポリシー - データ保護",
+        "og-description": "どのようなデータを収集し、どのように使用し、あなたのプライバシーの権利について学ぶ。",
+        "twitter-title": "プライバシーポリシー - Push Chain",
+        "twitter-description": "あなたのデータ。あなたの権利。その両方をどのように保護するか。"
+      },
+      "hero-section": {
+        "title": "プライバシーポリシー",
+        "description": "Push がデータを収集、処理する方法を定義します。",
+        "update-text": "最終更新日: 2020年11月2日"
+      }
+    },
+    "privacymobile": {
+      "seo": {
+        "title": "モバイルプライバシーポリシー",
+        "description": "Push Chainモバイルアプリにおけるデータの収集、利用、保護方法、およびお客様の選択肢について。",
+        "og-title": "Push Chain モバイルプライバシーポリシー - アプリのデータ保護",
+        "og-description": "モバイルアプリケーションにおけるデータプライバシーとお客様の権利について。",
+        "twitter-title": "モバイルプライバシーポリシー - Push Chain",
+        "twitter-description": "Pushモバイルアプリにおけるデータとお客様の選択肢について。"
+      },
+      "hero-section": {
+        "title": "モバイルプライバシーポリシー",
+        "description": "Push Chainモバイルアプリにおけるデータの収集、利用、保護方法、およびお客様の選択肢について。",
+        "update-text": "最終更新日：2020年11月2日"
+      }
+    },
     "brb": {
       "seo": {
-        "title": "BRB — 構築する10億の理由",
+        "title": "BRB — 構築する何十億もの理由",
         "description": "Push Chainのフラッグシップハッカソン：現実の問題を解決し、専門家から学び、賞品を獲得しましょう。",
-        "og-title": "BRB - Push Chain Hackathon",
+        "og-title": "BRB - Push Chain ハッカソン",
         "og-description": "Billion Reasons to Build コンペティションのトラック、タイムライン、賞品。",
-        "twitter-title": "BRB Hackathon - 構築して勝利",
-        "twitter-description": "Push Chainハッカソンに参加して成果を出し、賞品を獲得しましょう。"
+        "twitter-title": "BRB ハッカソン - 構築して勝利",
+        "twitter-description": "Push Chain ハッカソンに参加して、構築して賞品を獲得しましょう。"
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "お問い合わせ — Push Chain にご連絡ください",
+        "description": "パートナーシップ、連携、助成金、メディア、サポート、セキュリティに関するお問い合わせはこちら。",
+        "og-title": "Push Chain お問い合わせ - ご連絡ください",
+        "og-description": "パートナーシップ、連携、助成金、メディア、サポート、セキュリティに関するお問い合わせはこちら。",
+        "twitter-title": "お問い合わせ - Push Chain チーム",
+        "twitter-description": "パートナーシップ、連携、助成金、メディア、サポート、セキュリティ — Push Chain へのお問い合わせはこちら。"
+      }
+    },
+    "hero-section": {
+      "title": "Push Chain チームへのお問い合わせ",
+      "description": "パートナーシップ・連携、助成金、メディア・講演、バリデーター、法的問題、採用、または一般的なご質問については、こちらまでお問い合わせください。技術的なサポートやセキュリティに関するお問い合わせについては、サポートセンターにお問い合わせください。"
+    },
+    "donutsecret": {
+      "seo": {
+        "title": "🤫 Donut Testnet — 招待制ベータアクセス",
+        "description": "招待制のクローズドベータ版。DonutパスをクレームしてPush Chain Testnetにアクセスし、ユニバーサルアプリを開発して早期リワードをゲットしましょう。",
+        "og-title": "Donut Testnet — 招待制ベータアクセス",
+        "og-description": "開発者向けの早期アクセス: クローズドベータパスをクレームしてPush Chain (Donut)を試して、ユニバーサルアプリを開発しながらリワードを獲得しましょう。",
+        "twitter-title": "🤫 Donut Testnet — 招待制ベータ",
+        "twitter-description": "招待制のビルダー限定アクセス。パスをクレームしてPush Chain (Donut)を試してリワードを獲得しましょう。🍩"
       }
     }
   },
   "components": {
     "mailing-signup": {
-      "title": "更新情報を逃さない",
-      "text": "サインアップして、エコシステムのお知らせ、景品など、最新情報を入手しましょう。",
-      "email-input": "あなたのメールアドレス",
+      "title": "最新情報を必ずチェック",
+      "text": "サインアップして、エコシステムの最新情報、プレゼント企画などを入手しましょう。",
+      "email-input": "メールアドレス",
       "email-input-placeholder": "メールアドレスを入力してください",
-      "email-input-title": "Push Chain ニュースレターを購読して、最新情報を入手",
+      "email-input-title": "Push Chain ニュースレターを購読して最新情報を入手",
       "email-input-aria-label": "ニュースレター購読のためのメールアドレス",
       "submit-button": "サインアップ",
       "submit-button-title": "Push Chain ニュースレターを購読",
@@ -91,63 +628,289 @@
       "arrow-button-aria-label": "ニュースレターを購読",
       "arrow-button-title": "Push Chain の最新情報を購読",
       "form-aria-label": "ニュースレター購読フォーム",
-      "success-message-aria-label": "購読に成功しました",
+      "success-message-aria-label": "購読登録完了",
       "error-message-aria-label": "購読エラーメッセージ"
     },
     "cookie-banner": {
-      "message": "お客様の体験をパーソナライズするためにCookieを使用しています。詳細については",
+      "message": "私たちはクッキーを使用して、お客様の体験をパーソナライズしています。詳細については、",
       "privacy-policy-link": "プライバシーポリシー",
-      "privacy-policy-link-title": "Push Protocol のプライバシーポリシーを読む",
-      "privacy-policy-link-aria-label": "新しいタブでプライバシーポリシーを開く",
-      "accept-button": "同意する",
-      "accept-button-title": "Cookie を受け入れて、お客様の体験をパーソナライズ",
-      "accept-button-aria-label": "Cookie を受け入れてバナーを閉じる",
-      "reject-button": "拒否する",
-      "reject-button-title": "Cookie を拒否してバナーを閉じる",
-      "reject-button-aria-label": "Cookie を拒否してバナーを閉じる",
-      "banner-aria-label": "Cookie 同意バナー",
-      "banner-role": "Cookie の設定通知"
+      "privacy-policy-link-title": "Push Protocolのプライバシーポリシーを読む",
+      "privacy-policy-link-aria-label": "プライバシーポリシーを新しいタブで開く",
+      "accept-button": "同意",
+      "accept-button-title": "クッキーに同意して体験をパーソナライズ",
+      "accept-button-aria-label": "クッキーに同意してバナーを閉じる",
+      "reject-button": "拒否",
+      "reject-button-title": "クッキーを拒否してバナーを閉じる",
+      "reject-button-aria-label": "クッキーを拒否してバナーを閉じる",
+      "banner-aria-label": "Cookie consent banner",
+      "banner-role": "Cookie preferences notification"
     },
     "short-faq-snippet": {
-      "section-aria-label": "Push Chain - ユニバーサルブロックチェーンに関するよくある質問",
+      "section-aria-label": "Push Chain - Universal Blockchain に関するよくある質問",
       "title": "よくある\n質問",
       "title-aria-label": "Push Chain に関する一般的な質問と回答",
       "discord-link-text": "Discord で質問する",
-      "discord-link-title": "サポートと質問のために Push Chain Discord コミュニティに参加する",
+      "discord-link-title": "サポートや質問のために Push Chain Discord コミュニティに参加してください",
       "discord-link-aria-label": "新しいタブで Discord コミュニティを開く",
       "explore-more-text": "その他の FAQ を見る",
-      "explore-more-title": "Push Chain FAQ のドキュメントおよび開発者ガイドを参照する",
+      "explore-more-title": "包括的な Push Chain FAQ ドキュメントと開発者ガイドを見る",
       "explore-more-aria-label": "完全な Push Chain FAQ ページに移動する",
-      "accordion-aria-label": "Push Chain のよくある質問リスト",
+      "accordion-aria-label": "Push Chain に関するよくある質問リスト",
       "answer-aria-label": "質問への回答 - ",
-      "faqs": {
-        "faq1": {
+      "qnas": {
+        "qna1": {
           "question": "Push Chain とは何ですか？",
-          "answer": "<1>Push Chain は、<2>分断を解消し、アプリをユニバーサルにする共有ステートブロックチェーンです。</2></1><1>Push に一度デプロイするだけで済みます。ユーザーは、EVM または非 EVM のチェーンに関係なく、既存のウォレットとトークンを使用してアプリを使用できます。手数料はバックグラウンドで処理されます。</1>"
+          "answer": "<1>Push Chain は、<2>断片化を排除し、アプリをユニバーサルにする</2>共有ステートのブロックチェーンです。</1><1>Push に一度デプロイするだけで、ユーザーはあらゆるチェーン (EVM または非 EVM) で既存のウォレットとトークンを使用してアプリを使用できます。手数料は裏側で処理されます。</1>"
         },
-        "faq2": {
-          "question": "仕組みはどうなっていますか？ (ELI5)",
-          "answer": "<1>現在お使いのウォレットを使用します。Push がクロスチェーン処理をバックグラウンドで処理します。</1><1>1. <2>どこからでも始められます。</2> どのチェーン (ネットワークの切り替えは不要) のウォレットを使用してもかまいません。</1><1>2. <2>一度だけ署名します。</2> 保有しているトークンで支払います。手数料はホームチェーンで確保されます。</1><1>3. <2>ルーティングします。</2> Push 上のアカウント (所有者のアカウント) は、アプリにコールを転送します (非カストディアル)。</1><1>4. <2>常にあなた自身です。</2> ホームチェーンのウォレットは、Push 上のアカウントにマッチし、アクションは Push 上で正しく検証され、あなたに帰属されます。</1><1>5. <2>すぐに完了します。</2> アプリは Push 上で実行されます。手数料はバックグラウンドで処理されます。ブリッジは不要で、新しいウォレットも必要ありません。</1><1>このようにして、あらゆるチェーンのユーザーは、Push Chain にデプロイされた同じアプリを使用できるようになり、アプリは真にユニバーサルになります。</1>"
+        "qna2": {
+          "question": "どのように機能しますか？ (ELI5)",
+          "answer": "<1>すでに持っているウォレットを使用してください。Push が裏側でクロスチェーン処理を行います。</1><1>1. <2>どこからでも開始できます。</2> どのチェーンのウォレットでも使用できます — ネットワークを切り替える必要はありません。</1><1>2. <2>一度署名するだけです。</2> 既に持っているトークンで支払います — 手数料はホームチェーンで確保されます。</1><1>3. <2>ルーティングします。</2> Push のリンクされたアカウント (所有者自身) が、アプリに呼び出しを転送します — カストディアルではありません。</1><1>4. <2>あなたは常にあなたです。</2> Push はホームチェーンのウォレットをリンクされたアカウントにマッチさせ、アクションが正しく検証され、Push 上であなたに帰属されるようにします。</1><1>5. <2>すぐに完了します。</2> アプリは Push 上で実行され、手数料は裏側で処理されます。ブリッジや新しいウォレットは必要ありません。</1><1>これが、あらゆるチェーンのユーザーが Push Chain 上にデプロイされた同じアプリを使用できる理由 — これにより、アプリが真にユニバーサルになります。</1>"
         },
-        "faq3": {
+        "qna3": {
           "question": "別のウォレットやガス トークンは必要ですか？",
-          "answer": "<1><2>いいえ。</2></1><1><2>ウォレットをそのまま使用できます。</2> 現在お使いのウォレットを使用できます。新しいウォレットやアカウントは必要ありません。</1><1><2>保有しているトークンで支払います。</2> 手数料は、ホームチェーンで現在保有しているトークンで支払うことができます。ルーティングと手数料の換算はバックグラウンドで処理されます。</1><1><2>ネットワークの切り替えは不要です。</2> ホームチェーンのままで、ガス トークンを取得するためにブリッジする必要はありません。</1><1><2>非カストディアルです。</2> すべてのアクションに署名します。Push はキーを保持しません。</1><1><2>バックグラウンドで処理されます。</2> ネットワークは自動的に $PC で決済を処理します。管理する必要はありません。</1>"
+          "answer": "<1><2>いいえ。</2></1><1><2>ウォレットをそのまま使用してください。</2> 別のウォレットやアカウントは必要ありません。</1><1><2>手持ちのトークンで支払ってください。</2> 手数料は、ホームチェーンで既に持っているトークンで支払うことができます。裏側で換算を行います。</1><1><2>ネットワークを切り替える必要はありません。</2> ホームチェーンに留まり、ガス トークンを取得するためにブリッジする必要はありません。</1><1><2>カストディアルではありません。</2> すべてのアクションに署名します — Push はキーを保持しません。</1><1><2>裏側で処理されます。</2> ネットワークは、自動的に $PC で手数料を決済します — 管理する必要はありません。</1>"
         },
-        "faq4": {
-          "question": "ブリッジやメッセージングレイヤーとどう違いますか？",
-          "answer": "<1><2>簡単に言うと、Push はアプリが実行される場所です。</2> ブリッジやメッセージングはトークンやメッセージをチェーン間で移動させるだけで、ユーザーと開発者にとってはすべてが複雑になります。</1><1><2>ホームチェーン1つ vs 多くのクローン。</2> ブリッジやメッセージングを使用すると、チェーンごとにデプロイし、メッセージを介して同期します。Push を使用すると、一度デプロイするだけで済みます。誰もが同じコントラクトと共有ステートにアクセスできます。</1><1><2>ラップされた資産や必須のブリッジは不要です。</2> ユーザーはホームチェーンのままで、保有しているトークンで支払うことができます。ルーティングと手数料の換算はバックグラウンドで処理されます。</1><1><2>統一されたIDと検証。</2> あらゆるウォレット/チェーンからの署名を受け付け、Push 上で同じユーザーに帰属させることができます (非カストディアル)。</1><1><2>少ない可動部分。</2> クロスチェーン承認ダンスや、ガス トークンを探す必要はありません。同期を維持する必要のあるグルーコントラクトもありません。</1><1><2>ブリッジが必要な場合にのみ使用してください。</2> 流動性はブリッジを介して移動できますが、アプリを操作するには必要ありません。</1><1>結果：シンプルなアプリ、単一の真実源、そしてユーザーがどのチェーンにいても、まるで1つのチェーンのように感じる UX。</1>"
+        "qna4": {
+          "question": "ブリッジやメッセージングレイヤーとどう違うのですか？",
+          "answer": "<1><2>簡単に言うと</2>: Push はアプリが実行される場所です。ブリッジ/メッセージングは、トークンやメッセージをチェーン間で移動させるだけで、ユーザーと開発者の両方を複雑にします。</1><1><2>単一のホーム vs 多くのクローン。</2> ブリッジ/メッセージングを使用すると、チェーンごとにデプロイしてメッセージを介して同期します。Push では一度デプロイするだけで、誰もが同じコントラクトと共有状態にアクセスします。</1><1><2>ラップされた資産や必須のブリッジは必要ありません。</2> ユーザーはホームチェーンに留まり、手持ちのトークンで支払います。裏側でルーティングと手数料換算を行います。</1><1><2>統一された ID と検証。</2> どのウォレット/チェーンからの署名でも受け入れ、Push 上の同じユーザーに帰属させます — カストディアルではありません。</1><1><2>可動部品が少ない。</2> クロスチェーン承認ダンスや、ガス トークン探し、同期を維持する必要のあるグルー コントラクトはありません。</1><1><2>ブリッジが必要な場合は使用してください。必須ではありません。</2> 流動性はブリッジを介して移動できますが、アプリの操作には必要ありません。</1><1>結果：シンプルなアプリ、唯一の真実のソース、ユーザーがいない場合でも、1 つのチェーンのように感じる UX。</1>"
         },
-        "faq5": {
+        "qna5": {
           "question": "EVM 専用ですか？ どのチェーンがサポートされていますか？",
-          "answer": "<1><2>いいえ、Push は EVM と非 EVM のチェーンの両方をサポートしています。</2> デプロイは EVM 優先ですが、EVM または非 EVM のチェーンのユーザーは、ネイティブでアプリを使用しているかのようにアプリを使用できます。</1>\n<1><2>一度デプロイ。どこでも相互運用可能。</2> 標準の EVM コントラクト (Solidity/Vyper) を Push に書き込み、デプロイします。ツールは変わりません。</1>\n<1><2>あらゆるチェーンのユーザー。</2> Ethereum と主要な EVM L2 はネイティブに動作します。非 EVM ユーザー (例：Solana) は、ホームウォレットに署名します。バックグラウンドで検証し、ルーティングします (ネットワークの切り替えは不要)。</1>\n<1><2>現在サポートされています。</2> <3>サポートされているチェーン</3> のライブリストを参照してください。</1><1><2>カバレッジを拡大中です。</2> 常にチェーンを追加しています。チェーンの追加をリクエストする場合は、<4>お問い合わせください</4>。</1>",
-          "supported-urls-title": "Push Chain がサポートするすべてのチェーンのリスト",
-          "supported-urls-aria-label": "サポートされているチェーンのリストを表示",
-          "contact-urls-title": "お問い合わせ",
-          "contact-urls-aria-label": "お問い合わせフォームを表示"
+          "answer": "<1><2>いいえ、Push は EVM と非 EVM の両方のチェーンをサポートしています。</2> EVM 優先ですが、ユーザーはあらゆるチェーン (非 EVM を含む) からネイティブアプリを使用しているかのようにアプリを使用できます。</1>\n<1><2>一度デプロイするだけで、どこでも相互運用できます。</2> EVM 標準コントラクトを Push 上にデプロイします (Solidity/Vyper)。ツールは変わりません。</1>\n<1><2>あらゆるチェーンのユーザー。</2> Ethereum および主要な EVM L2 はネイティブに動作します。非 EVM ユーザー (例: Solana) はホームウォレットに署名します。裏側で検証とルーティングを行います — ネットワークを切り替える必要はありません。</1>\n<1><2>今日サポートされています。</2> 推奨チェーンのライブリストを参照 → <3>サポートされているチェーン</3>.</1><1><2>カバレッジを拡大中。</2> 定期的にチェーンを追加しています。 リクエストしたいチェーンがある場合は、<4>お問い合わせください</4>.</1>",
+          "supported-urls-title": "Push Chain でサポートされているすべてのチェーンのリスト。",
+          "contact-url-title": "新しいチェーンの追加についてお問い合わせください。"
         },
-        "faq6": {
-          "question": "どれくらい安全ですか？",
-          "answer": "Push はセキュリティを最優先事項と考えています。監査されたスマートコントラクト、最新の暗号化技術、複数のセキュリティレイヤーで、ユーザーの資金とデータを保護します。"
+        "qna6": {
+          "question": "どのくらいの速さで、手数料はどのようになっていますか？",
+          "answer": "<1><2>速度。</2> 約 1〜2 秒の確認で、高速な UX フィードバックを実現するように設計されています。 <3>🍩 ドーナツテストネット</3> でライブメトリックを確認してください。</1><1><2>料金モデル。</2> 選択したトークンで料金が表示されます。ネットワークは裏側で $PC で決済します。</1><1><2>一般的なコスト。</2> トランザクションあたり <2>$0.001</2> 未満の一般的な料金です。ただし、コントラクトの複雑さ、トークンの価格、ネットワーク負荷によって異なります。署名前に正確な見積もりが表示されます。</1>",
+          "donut-testnet-title": "Push Chain ドーナツテストネットの統計情報をチェックしてください。"
+        }
+      }
+    },
+    "short-support-snippet": {
+      "section-aria-label": "Push Chain - Universal Blockchainに関するサポート",
+      "title": "サポート\nヘルプデスク",
+      "title-aria-label": "Push Chainに関するよくある質問と回答",
+      "discord-link-text": "Discordで質問する",
+      "discord-link-title": "サポートや質問のためにPush Chain Discordコミュニティに参加する",
+      "discord-link-aria-label": "新しいタブでDiscordコミュニティを開く",
+      "explore-more-text": "もっとFAQを見る",
+      "explore-more-title": "Push ChainのFAQドキュメントと開発者向けガイドをすべて見る",
+      "explore-more-aria-label": "Push Chainの完全なFAQページに移動する",
+      "accordion-aria-label": "Push Chainサポートの質問リスト",
+      "answer-aria-label": "質問の回答 - ",
+      "qnas": {
+        "qna1": {
+          "question": "ウォレットに接続できません。どうすればよいですか？",
+          "answer": "<1><2>簡単な確認事項:</2> ページを更新し、ウォレットのロックを解除し、push.orgの積極的な広告/スクリプトブロッカーを無効にします。</1><1><2>ネットワークの切り替えは不要です:</2> ホームチェーンにとどまってください。Pushは内部でルーティングを処理します。</1><1><2>サイトの権限をリセットしてください:</2> ウォレットでサイトの接続を削除し、再接続します。</1><1>まだ行き詰まっていますか？<3>Discord</3>で質問するか、<4>サポートチケット</4>を開いてください。</1>",
+          "discord-url-title": "リアルタイムのサポートのためにPush Chain Discordに参加してください。",
+          "support-url-title": "サポートチケットを開いてください。"
+        },
+        "qna2": {
+          "question": "トランザクションが保留中または失敗しました。どうすればよいですか？",
+          "answer": "<1><2>ステータスを確認してください:</2> ウォレットのハッシュを使用して<3>Push Scan</3>でトランザクションを検索します。</1><1><2>保留中:</2> 通常はすぐに確認されます。何度も再送信しないでください。</1><1><2>失敗:</2> 資金は差し引かれていません。エラーを確認して再度試してください。</1><1>進行中のインシデントは<4>Status</4>に投稿されます。</1>",
+          "scan-url-title": "Push Scan（エクスプローラー）を開きます。",
+          "status-url-title": "ネットワークのステータスとインシデントを表示します。"
+        },
+        "qna3": {
+          "question": "テストネットのトークン（Donut）はどうすれば入手できますか？",
+          "answer": "<1><3>Faucet</3>を使用してテストトークンをリクエストしてください。</1><1><2>注意:</2> 制限がある場合があります。一部のFaucetでは簡単な検証が必要な場合があります。Faucetが失敗した場合は、<4>Discord</4>でお問い合わせください。</1>",
+          "faucet-url-title": "Push ChainのFaucetを開きます。",
+          "discord-url-title": "Push Chain Discordに参加してください。"
+        },
+        "qna4": {
+          "question": "バグや脆弱性を報告するにはどうすればよいですか？",
+          "answer": "<1><2>アプリのバグ:</2> <3>サポートチケット</3>を開くか、再現手順を<4>Discord</4>に投稿してください。</1><1><2>セキュリティの問題:</2> <5>security@push.org</5>にメールを送信してください。修正を確認するまでは、公開しないでください。</1>",
+          "support-url-title": "サポートチケットを開いてください。",
+          "discord-url-title": "Discordに参加してください。"
+        },
+        "qna5": {
+          "question": "ドキュメントとクイックスタートはどこにありますか？",
+          "answer": "<1><3>Docs</3>からクイックスタートとAPIを始め、<4>Knowledge Base</4>で概念、詳細な説明、FAQを確認してください。</1>",
+          "docs-url-title": "開発者向けドキュメントを開きます。",
+          "kb-url-title": "Knowledge Baseを開きます。"
+        },
+        "qna6": {
+          "question": "新しいチェーン、機能、統合のサポートをリクエストできますか？",
+          "answer": "<1>はい。<3>Contact</3>から必要なチェーン/ツールを教えていただくか、<4>GitHub</4>で問題を提起してください。継続的に対応範囲を拡大しています。</1>",
+          "contact-url-title": "Push Chainチームに連絡してください。",
+          "github-url-title": "GitHub orgを開きます。"
+        }
+      }
+    },
+    "short-contact-us-snippet": {
+      "section-aria-label": "Push Chain チームに連絡する",
+      "title": "よくある\n質問",
+      "title-aria-label": "Push Chain に関する一般的な連絡先質問",
+      "discord-link-text": "Discordに参加",
+      "discord-link-title": "DiscordでPush Chainコミュニティとチャット",
+      "discord-link-aria-label": "新しいタブでDiscordを開く",
+      "explore-more-text": "プログラムを見る",
+      "explore-more-title": "助成金、BRB、エコシステムプログラムを見る",
+      "explore-more-aria-label": "Push Chain プログラムに移動",
+      "accordion-aria-label": "連絡先質問リスト",
+      "answer-aria-label": "質問への回答 - ",
+      "qnas": {
+        "qna1": {
+          "question": "どのカテゴリを選択すればよいですか？",
+          "answer": "<1><2>パートナーシップ & 統合</2>: ウォレット、インフラ、取引所、プロトコルコラボ → <3>パートナーシップに連絡</3>.</1><1><2>助成金 & プログラム</2>: BRB、ブートキャンプ、資金調達 → <4>助成金に連絡</4>.</1><1><2>メディア & スピーキング</2>: インタビュー、声明、講演 → <5>メディア & イベント</5>.</1><1><2>バリデーター</2>: ノードオペレーター関心、RPCプロバイダー → <6>バリデーター</6>.</1><1><2>リーガル</2>: 商標、データ要求、合意 → <7>リーガル</7>.</1><1>技術的なサポートやステータスが必要ですか？ 代わりに <8>サポート</8>を使用してください。</1>",
+          "contact-partnerships-title": "パートナーシップに連絡",
+          "contact-grants-title": "助成金に連絡",
+          "contact-media-title": "メディア & スピーキングに連絡",
+          "contact-validators-title": "バリデーターに連絡",
+          "contact-legal-title": "リーガル & コンプライアンスに連絡",
+          "support-title": "サポートセンターに移動"
+        },
+        "qna2": {
+          "question": "回答はどのくらい早くもらえますか？",
+          "answer": "<1>ほとんどのお問い合わせについて<2>1～2営業日</2>以内に確認することを目指しています。緊急性の高いリクエスト（例：メディアの締め切り、セキュリティ）は優先されます。</1><1>緊急の問題については、<2>締め切り</2>、<2>タイムゾーン</2>、および<2>連絡先</2>を含めてください。</1>"
+        },
+        "qna3": {
+          "question": "パートナーシップにはどのような情報を提供すればよいですか？",
+          "answer": "<1>貴社の<2>会社名</2>、<2>ウェブサイト</2>、および<2>協力して構築したい内容</2>をお知らせください。</1><1>役立つ追加情報：オーディエンスサイズ、地域、タイムライン、および使用する予定の技術的スコープまたはSDK。</1><1>ここから始めましょう → <3>パートナーシップ</3>.</1>",
+          "contact-partnerships-title": "パートナーシップに連絡"
+        },
+        "qna4": {
+          "question": "助成金はどのように機能しますか？",
+          "answer": "<1>貴社の<2>プロジェクト名</2>、<2>リポジトリ/ウェブサイト</2>、ステージ（<2>アイデア、プロトタイプ、MVP、ライブ</2>）、および簡単な計画をお知らせください。</1><1>助成金の申請は常に先着順で処理されます。ここから始めましょう → <3>助成金</3>.</1>",
+          "contact-grants-title": "助成金に連絡"
+        },
+        "qna5": {
+          "question": "メディア & スピーキングの依頼",
+          "answer": "<1>貴社のメディア、トピック、<2>締め切り</2>、および質問を含めてください。講演/ワークショップの場合は、イベントの日付、形式、およびオーディエンスを追加してください。</1><1><3>メディア & スピーキング</3>からご連絡ください。ロゴ、創業者紹介、および基本情報を提供できます。</1>",
+          "contact-media-title": "メディア & スピーキングに連絡"
+        },
+        "qna6": {
+          "question": "セキュリティ上の問題はどのように報告すればよいですか？",
+          "answer": "<1>再現手順と影響を<3><2>security@push.org</2></3>にメールしてください。修正を確認するまで、公開しないでください。</1>",
+          "security-policy-title": "セキュリティ & 開示ポリシーを読む"
+        },
+        "qna7": {
+          "question": "バリデーターを実行したい / インフラを提供したい",
+          "answer": "<1>インフラプロファイル（経験、地域）、期待される稼働時間/SLA、および希望する条件を共有してください。ここから始めましょう → <3>バリデーター</3>.</1>",
+          "contact-validators-title": "バリデーターに連絡"
+        },
+        "qna8": {
+          "question": "キャリア & 採用",
+          "answer": "<1>ポジションが開いている場合は、当社のチャネルに投稿されます。まだ<3>お問い合わせ</3>からご連絡いただくか、<4>@PushChain</4>をフォローして最新情報を入手できます。</1>",
+          "contact-careers-title": "キャリアに連絡",
+          "twitter-title": "Xで@PushChainをフォロー"
+        }
+      }
+    },
+    "typeform-support": {
+      "collapsed-text-for-support": "サポートチケットを開く",
+      "expanded-title-for-support": "サポートが必要ですか？ 👋",
+      "collapsed-text-for-contact": "チームに連絡する",
+      "expanded-title-for-contact": "こんにちは！ 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 テクニカルサポート",
+          "description": "バグ報告、SDK/API、スマートコントラクト、連携ヘルプ"
+        },
+        "network": {
+          "label": "🌐 ネットワークとテストネット",
+          "description": "エクスプローラー/Push Scan、RPC、Faucet、Donut テストネットの問題"
+        },
+        "wallet": {
+          "label": "👛 汎用ウォレット",
+          "description": "Push Wallet、汎用チェーン接続またはその他のウォレットの問題"
+        },
+        "identity": {
+          "label": "🪪 アカウントとID",
+          "description": "UEA/UOA、署名、帰属に関する質問"
+        },
+        "security": {
+          "label": "🛡️ セキュリティ",
+          "description": "脆弱性報告、責任ある情報開示（security@push.org）"
+        },
+        "general": {
+          "label": "💬 一般的な問い合わせ",
+          "description": "質問、フィードバック、その他のトピック"
+        },
+        "partnerships": {
+          "label": "🤝 パートナーシップと連携",
+          "description": "BD、エコシステム連携（ウォレット、インフラ、取引所、プロトコル）"
+        },
+        "grants": {
+          "label": "💰 グ rant とエコシステムプログラム",
+          "description": "BRB、Bootcamp、grant 、資金に関する問い合わせ"
+        },
+        "media": {
+          "label": "📰 メディアとプレス",
+          "description": "インタビュー、声明、アセット、ファクトチェック"
+        },
+        "events": {
+          "label": "🎤 スピーキングとイベント",
+          "description": "講演、ワークショップ、ハッカソン、スポンサーシップ"
+        },
+        "careers": {
+          "label": "👩‍💻 キャリア",
+          "description": "募集中のポジション、インターンシップ、契約の機会"
+        },
+        "validators": {
+          "label": "🧡 バリデーター/ノードオペレーター",
+          "description": "オペレーターの関心、RPCプロバイダー、インフラパートナー"
+        },
+        "legal": {
+          "label": "⚖️ 法務とコンプライアンス",
+          "description": "商標、データリクエスト、契約"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "どのようなご用件ですか？",
+            "subtitle": "お問い合わせ内容に最も近いカテゴリを選択してください"
+          },
+          "contact": {
+            "title": "あなたについて教えてください",
+            "subtitle": "こちらでいただいた情報をもとにご連絡させていただきます",
+            "name-label": "お名前",
+            "name-placeholder": "お名前を入力してください",
+            "name-aftergreet": "お会いできて嬉しいです、 ",
+            "email-label": "メールアドレス",
+            "email-placeholder": "メールアドレスを入力してください"
+          },
+          "details": {
+            "title": "詳細を教えてください",
+            "subtitle": "お問い合わせ内容の詳細をご記入ください",
+            "subject-label": "件名",
+            "subject-placeholder": "問題の簡単な要約",
+            "message-label": "メッセージ",
+            "message-placeholder": "問題を詳細に説明してください。エラーメッセージ、再現手順、関連情報を記載してください。"
+          },
+          "submit": {
+            "title": "確認と送信",
+            "subtitle": "送信前に情報を確認してください",
+            "placeholder": "どのようなご支援が必要か教えてください..."
+          }
+        },
+        "buttons": {
+          "next": "次へ",
+          "previous": "前へ",
+          "submit": "チケットを送信",
+          "submitting": "送信中..."
+        },
+        "validation": {
+          "name-required": "名前は必須です",
+          "name-min-length": "名前は2文字以上である必要があります",
+          "email-required": "メールアドレスは必須です",
+          "email-invalid": "有効なメールアドレスを入力してください",
+          "subject-required": "件名は必須です",
+          "message-required": "メッセージは必須です",
+          "category-required": "カテゴリを選択してください",
+          "default": "このフィールドは必須です"
+        },
+        "success": {
+          "title": "チケットを正常に送信しました！",
+          "message": "お問い合わせいただきありがとうございます。サポートチケットを受け取りましたので、できるだけ早くご連絡いたします。",
+          "button": "別のチケットを送信"
+        },
+        "error": {
+          "title": "送信に失敗しました",
+          "message": "チケットの送信に失敗しました。もう一度お試しいただくか、直接お問い合わせください。",
+          "button": "再試行"
         }
       }
     }
@@ -158,42 +921,36 @@
       "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
       "button-text": "クローズドベータパスを獲得",
       "button-title": "Push Chainテストネットに参加して、クローズドベータパスを獲得",
-      "button-aria-label": "Telegramを開いてPush Chainのクローズドベータパスを獲得",
+      "button-aria-label": "Telegramを開いて、Push Chainクローズドベータパスを獲得",
       "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
-      "close-button-title": "テストネットの通知を閉じる",
-      "close-button-aria-label": "Push Chainテストネットの通知を閉じる",
-      "container-aria-label": "Push Chainテストネットの通知",
-      "container-role": "Push Chainテストネットのアナウンス"
+      "close-button-title": "テストネット通知を閉じる",
+      "close-button-aria-label": "Push Chainテストネット通知を閉じる",
+      "container-aria-label": "Push Chainテストネット通知"
     },
     "rewards-notification": {
-      "title": "Donut Testnetクローズドベータ版公開！",
-      "description": "Testnet、Donutをいち早く体験して、ユニバーサルアプリを構築し、賞品を獲得しましょう！",
+      "title": "Donut Testnet クローズドベータ版が開始！",
+      "description": "テストネットDonutをいち早く体験し、ユニバーサルアプリを構築して賞品を獲得しましょう！",
       "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
-      "close-button-title": "報酬の通知を閉じる",
-      "close-button-aria-label": "Push Chain報酬の通知を閉じる",
-      "container-aria-label": "Push Chain報酬の通知",
-      "container-role": "Push Chain報酬のアナウンス"
+      "close-button-title": "報酬通知を閉じる",
+      "close-button-aria-label": "Push Chain の報酬通知を閉じる",
+      "container-aria-label": "Push Chain の報酬通知"
     },
     "info-bar": {
-      "title": "Push Testnetで今すぐ開始 — ビルダーと早期ユーザーのための報酬をアンロックしましょう。",
+      "title": "Push Testnetローンチ開始 — 開発者と初期ユーザー向け特典をゲット",
       "learn-more-text": "詳細はこちら",
-      "learn-more-title": "このアナウンスの詳細はこちら",
-      "learn-more-aria-label": "新しいタブでアナウンスリンクを開く",
-      "dismiss-button-title": "アナウンスを閉じる",
-      "dismiss-button-aria-label": "アナウンスバーを閉じる",
-      "container-aria-label": "サイトアナウンス",
-      "container-role": "サイトアナウンスバナー",
-      "star-icon-alt": "アナウンススターアイコン"
+      "learn-more-title": "このお知らせについて詳しくはこちら",
+      "dismiss-button-title": "お知らせを閉じる",
+      "dismiss-button-aria-label": "お知らせバーを閉じる",
+      "container-aria-label": "サイトのお知らせ",
+      "star-icon-alt": "お知らせの星アイコン"
     },
     "alert": {
-      "message": "Push Metamask Snapが公開されました。",
-      "know-more-text": "今すぐ始める！",
-      "know-more-title": "Push Metamask Snapを使い始める",
-      "know-more-aria-label": "新しいタブでPush Metamask Snapを開く",
+      "message": "Push Metamask Snap がリリースされました。",
+      "know-more-text": "さっそく始める！",
+      "know-more-title": "Push Metamask Snap で始める",
       "close-button-title": "アラートを閉じる",
-      "close-button-aria-label": "Push Metamask Snapアラートを閉じる",
-      "container-aria-label": "Push Metamask Snapアナウンス",
-      "container-role": "Push Metamask Snapアラートバナー"
+      "close-button-aria-label": "Push Metamask Snap アラートを閉じる",
+      "container-aria-label": "Push Metamask Snap のお知らせ"
     }
   }
 }

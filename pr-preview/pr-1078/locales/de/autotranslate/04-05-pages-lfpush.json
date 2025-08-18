@@ -3,11 +3,29 @@
     "lfpush": {
       "seo": {
         "title": "Let's Push – Community-Initiative",
-        "description": "Push-Community-Initiativen, Beiträge und mehr.",
+        "description": "Push-Community-Initiativen, Posts und mehr.",
         "og-title": "Let's Push - Community-Initiative für Push Chain",
-        "og-description": "Community-gesteuerte Initiative und Beiträge für Push Chain.",
+        "og-description": "Community-gesteuerte Initiative und Shares für Push Chain.",
         "twitter-title": "Let's Push | Community-Initiative",
-        "twitter-description": "Sehen Sie die Community-Initiative für Push Chain."
+        "twitter-description": "Sehen Sie die Push-Community-Initiative für Push Chain."
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "Die LF Push Builders Community – wir feiern, was Sie leisten und wem Sie helfen. Teilen Sie Ihre Erfolge, markieren Sie <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention>, und wir verstärken Ihre Botschaft."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Erfolg Teilen",
+          "join-community": "Community Beitreten",
+          "learn-more": "Mehr Erfahren"
+        },
+        "meta": {
+          "tweet-alt": "Tweet von einem Push Chain Community-Mitglied",
+          "loading-alt": "Lade weitere Community-Tweets"
+        },
+        "tweets-counter": "{{count}} Tweets und mehr!",
+        "loading": "Lade weitere Tweets...",
+        "end-message": "Du hast das Ende erreicht! 🎉"
       }
     }
   }

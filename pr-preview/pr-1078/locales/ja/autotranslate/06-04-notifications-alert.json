@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "alert": {
+      "message": "Push Metamask Snap がリリースされました。",
+      "know-more-text": "さっそく始める！",
+      "know-more-title": "Push Metamask Snap で始める",
+      "close-button-title": "アラートを閉じる",
+      "close-button-aria-label": "Push Metamask Snap アラートを閉じる",
+      "container-aria-label": "Push Metamask Snap のお知らせ"
+    }
+  }
+}

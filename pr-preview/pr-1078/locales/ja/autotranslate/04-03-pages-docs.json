@@ -3,16 +3,16 @@
     "docs": {
       "seo": {
         "title": "ドキュメント — ユニバーサルアプリを構築",
-        "description": "Push Chainでリリースするために必要なものがすべて揃っています：クイックスタート、SDK、APIリファレンス、サンプル、およびノードセットアップ。",
-        "og-title": "Push Chain Docs - クイックスタート、SDK & API",
-        "og-description": "明確なガイドと例を使用して、ユニバーサル実行レイヤーでアプリを構築および実行します。",
-        "twitter-title": "Push Chain Docs - 今すぐ構築",
-        "twitter-description": "迅速なリリースを実現するためのクイックスタート、SDK、APIリファレンス、およびサンプル。"
+        "description": "Push Chain でリリースするために必要なものがすべて揃っています：クイックスタート、SDK、API リファレンス、サンプル、ノード設定。",
+        "og-title": "Push Chain ドキュメント - クイックスタート、SDK、API",
+        "og-description": "明確なガイドとサンプルで、ユニバーサル実行レイヤーでアプリを構築して実行します。",
+        "twitter-title": "Push Chain ドキュメント - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、API リファレンス、サンプルで迅速にリリース。"
       },
       "explorePrelaunchBuild": {
-        "text": "プレローンチビルドを探索",
-        "title": "Push Chain Testnetドキュメントとプレローンチ機能にアクセス",
-        "ariaLabel": "Push Chain Testnet docsに移動してプレローンチビルド機能を探索"
+        "text": "プレローンチビルドを試す",
+        "title": "Push Chain Testnet のドキュメントとプレローンチ機能にアクセス",
+        "ariaLabel": "Push Chain Testnet のドキュメントに移動して、プレローンチ機能を確認"
       }
     }
   }

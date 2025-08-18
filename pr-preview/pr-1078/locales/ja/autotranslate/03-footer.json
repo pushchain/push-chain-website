@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "最新のPushニュースを入手",
-      "privacy": "プライバシーポリシー",
-      "tos": "利用規約"
+    "email-section": {
+      "title": "Push Chain の最新情報を受け取る",
+      "title-secondary": "ニュースとアップデート！",
+      "title-aria-label": "ニュースレター登録セクション",
+      "section-aria-label": "Push Chain ニュースレター登録"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Web3コミュニケーションの未来を共に築きましょう。",
-        "link-text": "求人情報を見る",
-        "image-title": "参加する",
-        "image-alt": "求人情報アイコン"
-      },
-      "docs-card": {
-        "text": "シンプルなガイドに従って、数分で簡単に始めましょう。",
-        "link-text": "ドキュメントを探索",
-        "image-title": "始める",
-        "image-alt": "簡単に始められるアイコン"
-      }
+    "main-section": {
+      "section-aria-label": "フッターナビゲーションとリンク",
+      "logo-link-title": "Push Chain ホームページ",
+      "logo-link-aria-label": "Push Chain ホームページ",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "会社",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Terms",
-        "privacy-link": "Privacy"
-      },
-      "governance-column": {
-        "title": "ガバナンス",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Grants",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "リソース",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
+        "title-aria-label": "リソースナビゲーション"
       },
-      "subscribe-column": {
-        "title": "サポート",
-        "contact-us-link": "お問い合わせ",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "開発者",
+        "title-aria-label": "開発者ナビゲーション"
       },
-      "support-column": {
-        "title": "購読",
-        "email-placeholder": "メールアドレス"
+      "community": {
+        "title": "コミュニティ",
+        "title-aria-label": "コミュニティナビゲーション"
+      },
+      "help": {
+        "title": "ヘルプ",
+        "title-aria-label": "ヘルプナビゲーション"
       }
+    },
+    "links": {
+      "get-started": "はじめる",
+      "get-started-title": "Push Chain での開発を始める",
+      "docs": "ドキュメント",
+      "docs-title": "Push Chain ドキュメント",
+      "github": "GitHub",
+      "github-title": "GitHub の Push Chain リポジトリ",
+      "knowledge-base": "ナレッジベース",
+      "knowledge-base-title": "Push Chain ナレッジベース",
+      "blog": "ブログ",
+      "blog-title": "Push Chain ブログ",
+      "litepaper": "ライトペーパー",
+      "litepaper-title": "Push Chain ライトペーパー (PDF)",
+      "brand-kit": "ブランドキット",
+      "brand-kit-title": "Push Chain ブランドアセットとガイドライン",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain ブロックチェーンエクスプローラー",
+      "faucet": "Faucet",
+      "faucet-title": "Push Chain faucet からテストトークンを入手",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Protocol コミュニティポータル",
+      "support": "サポート",
+      "support-title": "ヘルプセンター",
+      "security": "セキュリティ & 脆弱性報告",
+      "security-title": "脆弱性を報告 (責任開示)",
+      "contact-us": "お問い合わせ",
+      "contact-us-title": "パートナーシップ、BD、メディア、または一般的なお問い合わせ",
+      "careers": "採用情報",
+      "careers-title": "Push Chain の募集ポジション",
+      "twitter": "X (Twitter)",
+      "twitter-title": "X (Twitter) で Push Chain をフォロー",
+      "discord": "Discord",
+      "discord-title": "Push Chain Discord に参加",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain サブレディットに参加",
+      "telegram": "Telegram",
+      "telegram-title": "Push Chain Telegram に参加"
+    },
+    "social-section": {
+      "section-aria-label": "ソーシャルメディアリンクと法的情報",
+      "twitter-icon-title": "X (Twitter) での Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) での Push Chain",
+      "github-icon-title": "GitHub での Push Chain",
+      "github-icon-aria-label": "GitHub での Push Chain",
+      "discord-icon-title": "Discord での Push Chain",
+      "discord-icon-aria-label": "Discord での Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "プライバシーポリシー",
+      "privacy-policy-title": "プライバシーポリシーを読みます",
+      "privacy-policy-aria-label": "プライバシーポリシー",
+      "terms-of-service": "利用規約",
+      "terms-of-service-title": "利用規約を読みます",
+      "terms-of-service-aria-label": "利用規約",
+      "cookie-preferences": "Cookie の設定",
+      "cookie-preferences-title": "Cookie 設定を管理する"
+    },
+    "footer-image": {
+      "alt": "Push Chain フッターイラスト",
+      "title": "Push Chain - Universal Blockchain"
     }
   }
 }

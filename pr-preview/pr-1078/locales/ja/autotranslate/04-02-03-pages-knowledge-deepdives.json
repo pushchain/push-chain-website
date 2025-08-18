@@ -3,11 +3,11 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "Deep Dives — コンセプト & アーキテクチャ",
-          "description": "共有状態、手数料抽象化、USV/UEA、およびユニバーサル実行レイヤーに関する読みやすい解説。",
-          "og-title": "Deep Dives - コンセプト & アーキテクチャ",
-          "og-description": "Push Chainモジュール、設計決定、およびパフォーマンスに関する詳細な記事。",
-          "twitter-title": "Deep Dives - 裏側",
+          "title": "ディープダイブ — コンセプトとアーキテクチャ",
+          "description": "共有状態、手数料の抽象化、USV/UEA、そしてユニバーサル実行レイヤーに関するわかりやすい解説。",
+          "og-title": "ディープダイブ - コンセプトとアーキテクチャ",
+          "og-description": "Push Chainモジュール、設計決定、パフォーマンスに関する詳細記事。",
+          "twitter-title": "ディープダイブ - 裏側",
           "twitter-description": "Push Chainの仕組みに関する解説。"
         }
       }

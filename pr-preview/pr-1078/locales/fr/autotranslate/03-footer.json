@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "Recevez les dernières actualités de Push",
-      "privacy": "Politique de confidentialité",
-      "tos": "Conditions générales d'utilisation"
+    "email-section": {
+      "title": "Restez informé avec Push Chain",
+      "title-secondary": "nouvelles et mises à jour !",
+      "title-aria-label": "Section d'abonnement à la newsletter",
+      "section-aria-label": "Inscription à la newsletter Push Chain"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Rejoignez-nous et construisez l'avenir de la communication Web3.",
-        "link-text": "Voir les offres d'emploi",
-        "image-title": "Rejoignez-nous",
-        "image-alt": "Icône montrant les offres d'emploi"
-      },
-      "docs-card": {
-        "text": "Suivez nos guides simples pour démarrer en quelques minutes.",
-        "link-text": "Explorer la documentation",
-        "image-title": "Commencer",
-        "image-alt": "Icône montrant la facilité de démarrage"
-      }
+    "main-section": {
+      "section-aria-label": "Navigation et liens du pied de page",
+      "logo-link-title": "Page d'accueil Push Chain",
+      "logo-link-aria-label": "Page d'accueil Push Chain",
+      "logo-alt": "Push Chain logo"
     },
-    "links-section": {
-      "company-column": {
-        "title": "Entreprise",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Conditions générales",
-        "privacy-link": "Confidentialité"
-      },
-      "governance-column": {
-        "title": "Gouvernance",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Subventions",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "Ressources",
-        "blog-link": "Blog",
-        "whitepaper-link": "Livre blanc",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Guides de développement"
+        "title-aria-label": "Navigation des ressources"
       },
-      "subscribe-column": {
-        "title": "Support",
-        "contact-us-link": "Contactez-nous",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "Développeurs",
+        "title-aria-label": "Navigation développeurs"
       },
-      "support-column": {
-        "title": "S'abonner",
-        "email-placeholder": "Votre Email"
+      "community": {
+        "title": "Communauté",
+        "title-aria-label": "Navigation communauté"
+      },
+      "help": {
+        "title": "Aide",
+        "title-aria-label": "Navigation d'aide"
       }
+    },
+    "links": {
+      "get-started": "Commencer",
+      "get-started-title": "Démarrez le développement sur Push Chain",
+      "docs": "Documentation",
+      "docs-title": "Documentation Push Chain",
+      "github": "GitHub",
+      "github-title": "Dépôts Push Chain sur GitHub",
+      "knowledge-base": "Base de connaissances",
+      "knowledge-base-title": "Base de connaissances Push Chain",
+      "blog": "Blog",
+      "blog-title": "Blog Push Chain",
+      "litepaper": "Litepaper",
+      "litepaper-title": "Litepaper Push Chain (PDF)",
+      "brand-kit": "Kit de marque",
+      "brand-kit-title": "Ressources et directives de marque Push Chain",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Explorateur de blockchain Push Chain",
+      "faucet": "Robinnet",
+      "faucet-title": "Obtenez des jetons de test depuis le robinnet Push Chain",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Portail communautaire Push Protocol",
+      "support": "Support",
+      "support-title": "Centre d'aide",
+      "security": "Sécurité & Divulgation",
+      "security-title": "Signaler une vulnérabilité (divulgation responsable)",
+      "contact-us": "Contactez-nous",
+      "contact-us-title": "Partenariats, BD, médias ou demandes générales",
+      "careers": "Carrières",
+      "careers-title": "Postes ouverts chez Push Chain",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Suivez Push Chain sur X (Twitter)",
+      "discord": "Discord",
+      "discord-title": "Rejoignez le Discord Push Chain",
+      "reddit": "Reddit",
+      "reddit-title": "Rejoignez le subreddit Push Chain",
+      "telegram": "Telegram",
+      "telegram-title": "Rejoignez le Telegram Push Chain"
+    },
+    "social-section": {
+      "section-aria-label": "Liens des réseaux sociaux et informations légales",
+      "twitter-icon-title": "Push Chain sur X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain sur X (Twitter)",
+      "github-icon-title": "Push Chain sur GitHub",
+      "github-icon-aria-label": "Push Chain sur GitHub",
+      "discord-icon-title": "Push Chain sur Discord",
+      "discord-icon-aria-label": "Push Chain sur Discord"
+    },
+    "legal": {
+      "privacy-policy": "Politique de confidentialité",
+      "privacy-policy-title": "Lire la Politique de confidentialité",
+      "privacy-policy-aria-label": "Politique de confidentialité",
+      "terms-of-service": "Conditions d'utilisation",
+      "terms-of-service-title": "Lire les Conditions d'utilisation",
+      "terms-of-service-aria-label": "Conditions d'utilisation",
+      "cookie-preferences": "Préférences de cookies",
+      "cookie-preferences-title": "Gérer les paramètres de cookies"
+    },
+    "footer-image": {
+      "alt": "Illustration du pied de page Push Chain",
+      "title": "Push Chain - Blockchain Universel"
     }
   }
 }

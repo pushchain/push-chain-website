@@ -2,12 +2,17 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Tài liệu — Xây dựng Ứng dụng Tổng quát",
+        "title": "Tài liệu — Xây dựng Ứng dụng Toàn năng",
         "description": "Mọi thứ bạn cần để triển khai trên Push Chain: hướng dẫn nhanh, SDK, tài liệu API, ví dụ và thiết lập node.",
         "og-title": "Tài liệu Push Chain - Hướng dẫn nhanh, SDK & API",
-        "og-description": "Xây dựng và chạy ứng dụng trên lớp thực thi tổng quát với hướng dẫn rõ ràng và các ví dụ.",
+        "og-description": "Xây dựng và chạy ứng dụng trên lớp thực thi toàn năng với hướng dẫn rõ ràng và ví dụ.",
         "twitter-title": "Tài liệu Push Chain - Bắt đầu ngay",
-        "twitter-description": "Hướng dẫn nhanh, SDK, tài liệu tham khảo API và các ví dụ để triển khai nhanh chóng."
+        "twitter-description": "Hướng dẫn nhanh, SDK, tài liệu API và ví dụ để triển khai nhanh chóng."
+      },
+      "explorePrelaunchBuild": {
+        "text": "Khám phá bản dựng trước khi ra mắt",
+        "title": "Truy cập tài liệu Push Chain Testnet và các tính năng trước khi ra mắt",
+        "ariaLabel": "Điều hướng đến tài liệu Push Chain Testnet để khám phá các tính năng bản dựng trước khi ra mắt"
       }
     }
   }

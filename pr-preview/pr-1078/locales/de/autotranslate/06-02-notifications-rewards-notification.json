@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Closed Beta ist live!",
+      "description": "Erhalten Sie einen exklusiven Vorgeschmack auf Testnet, Donut, entwickeln Sie universelle Apps und gewinnen Sie Preise!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "Belohnungsbenachrichtigung schließen",
+      "close-button-aria-label": "Push Chain Belohnungsbenachrichtigung verwerfen",
+      "container-aria-label": "Push Chain Belohnungsbenachrichtigung"
+    }
+  }
+}

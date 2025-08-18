@@ -2,12 +2,12 @@
   "pages": {
     "blog": {
       "seo": {
-        "title": "博客 — 最新动态、深度解析和故事",
-        "description": "来自 Push Chain 团队和生态系统的新闻、发布说明、技术深度解析和开发者故事。",
-        "og-title": "Push Chain 博客 - 最新动态、深度解析和故事",
+        "title": "博客 — 最新动态、深度解析与故事",
+        "description": "来自 Push Chain 团队和生态系统的最新消息、发布说明、技术深度解析和开发者故事。",
+        "og-title": "Push Chain 博客 - 最新动态、深度解析与故事",
         "og-description": "关注 Push Chain 的产品更新、开发者故事、深度解析和生态系统新闻。",
-        "twitter-title": "Push Chain 博客 - 最新消息",
-        "twitter-description": "发布信息、深度解析和开发者故事 — 保持更新。"
+        "twitter-title": "Push Chain 博客 - 最新资讯",
+        "twitter-description": "发布、深度解析和开发者故事 — 保持更新。"
       }
     }
   }

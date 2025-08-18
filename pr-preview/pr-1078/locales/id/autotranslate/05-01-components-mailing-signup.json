@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Jangan Lewatkan Update Terbaru",
+      "text": "Daftar sekarang dan dapatkan informasi terbaru tentang pengumuman ekosistem, hadiah, dan banyak lagi.",
+      "email-input": "Email Anda",
+      "email-input-placeholder": "Masukkan alamat email Anda",
+      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan update",
+      "email-input-aria-label": "Alamat email untuk berlangganan newsletter",
+      "submit-button": "Daftar",
+      "submit-button-title": "Berlangganan newsletter Push Chain",
+      "submit-button-aria-label": "Berlangganan newsletter",
+      "loading-submit-button": "Mohon Tunggu...",
+      "arrow-button-aria-label": "Berlangganan newsletter",
+      "arrow-button-title": "Berlangganan update Push Chain",
+      "form-aria-label": "Formulir berlangganan newsletter",
+      "success-message-aria-label": "Berlangganan berhasil",
+      "error-message-aria-label": "Pesan kesalahan berlangganan"
+    }
+  }
+}

@@ -4,10 +4,28 @@
       "seo": {
         "title": "Hadi İtelim — Topluluk Girişimi",
         "description": "Push topluluk girişimleri, gönderiler ve daha fazlası.",
-        "og-title": "Hadi İtelim - Push Zinciri için Topluluk Girişimi",
-        "og-description": "Push Zinciri için topluluk güdümlü girişim ve paylaşımlar.",
+        "og-title": "Hadi İtelim - Push Chain İçin Topluluk Girişimi",
+        "og-description": "Push Chain için topluluk odaklı girişim ve paylaşımlar.",
         "twitter-title": "Hadi İtelim | Topluluk Girişimi",
-        "twitter-description": "Push Zinciri için Push topluluk girişimini görün."
+        "twitter-description": "Push Chain için Push topluluk girişimlerini görün."
+      },
+      "hero-section": {
+        "title": "Hadi İtelim",
+        "description": "LF Push topluluk üyeleri—geliştirdiğin ve yardım ettiğin şeyleri kutluyoruz. Başarılarını paylaş, <hashtag>#LFPush</hashtag> veya <mention>@PushChain</mention> etiketle, ve biz de duyuralım."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Başarını Paylaş",
+          "join-community": "Topluluğa Katıl",
+          "learn-more": "Daha Fazla Bilgi Al"
+        },
+        "meta": {
+          "tweet-alt": "Push Chain topluluk üyesinden tweet",
+          "loading-alt": "Daha fazla topluluk tweeti yükleniyor"
+        },
+        "tweets-counter": "{{count}} Tweet ve saymaya devam!",
+        "loading": "Daha fazla tweet yükleniyor...",
+        "end-message": "Sonuna ulaştın! 🎉"
       }
     }
   }

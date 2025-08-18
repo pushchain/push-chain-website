@@ -3,11 +3,29 @@
     "lfpush": {
       "seo": {
         "title": "렛츠 푸시 — 커뮤니티 이니셔티브",
-        "description": "푸시 커뮤니티 이니셔티브, 게시물 및 기타 정보.",
+        "description": "푸시 커뮤니티 이니셔티브, 게시물 등",
         "og-title": "렛츠 푸시 - Push Chain 커뮤니티 이니셔티브",
-        "og-description": "Push Chain을 위한 커뮤니티 주도 이니셔티브 및 공유.",
+        "og-description": "Push Chain을 위한 커뮤니티 주도 이니셔티브 및 공유",
         "twitter-title": "렛츠 푸시 | 커뮤니티 이니셔티브",
-        "twitter-description": "Push Chain을 위한 푸시 커뮤니티 이니셔티브를 확인하세요."
+        "twitter-description": "Push Chain을 위한 푸시 커뮤니티 이니셔티브 확인"
+      },
+      "hero-section": {
+        "title": "렛츠 푸시",
+        "description": "LF Push 빌더 커뮤니티—당신이 출시한 것과 당신이 도운 사람들을 축하합니다. 당신의 성공을 공유하고 <hashtag>#LFPush</hashtag> 또는 <mention>@PushChain</mention>을 태그하면 홍보해 드리겠습니다."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "성공 사례 공유",
+          "join-community": "커뮤니티 참여",
+          "learn-more": "자세히 알아보기"
+        },
+        "meta": {
+          "tweet-alt": "푸시 체인 커뮤니티 회원의 트윗",
+          "loading-alt": "커뮤니티 트윗 더 불러오는 중"
+        },
+        "tweets-counter": "{{count}}개의 트윗 및 계속 증가 중!",
+        "loading": "트윗 더 불러오는 중...",
+        "end-message": "마지막 트윗에 도달했습니다! 🎉"
       }
     }
   }

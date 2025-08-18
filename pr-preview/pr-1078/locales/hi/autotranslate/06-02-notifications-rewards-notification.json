@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet का क्लोज्ड बीटा लाइव है!",
+      "description": "Testnet, Donut में एक झलक पाएं, यूनिवर्सल ऐप्स बनाएं और पुरस्कार जीतें!",
+      "image-alt": "Push Chain Testnet Rewards - यूनिवर्सल ऐप्स बनाएं",
+      "close-button-title": "पुरस्कार सूचना बंद करें",
+      "close-button-aria-label": "Push Chain पुरस्कार सूचना खारिज करें",
+      "container-aria-label": "Push Chain पुरस्कार सूचना"
+    }
+  }
+}

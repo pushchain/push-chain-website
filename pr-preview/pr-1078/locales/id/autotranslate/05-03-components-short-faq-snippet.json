@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Pertanyaan yang sering diajukan tentang Push Chain - Blockchain Universal",
+      "title": "Pertanyaan\nSering\nDitanyakan",
+      "title-aria-label": "Pertanyaan dan jawaban umum tentang Push Chain",
+      "discord-link-text": "Tanya kami di Discord",
+      "discord-link-title": "Bergabung dengan komunitas Discord Push Chain untuk dukungan dan pertanyaan",
+      "discord-link-aria-label": "Buka komunitas Discord di tab baru",
+      "explore-more-text": "Jelajahi Lebih Banyak FAQ",
+      "explore-more-title": "Lihat dokumentasi FAQ dan panduan pengembang Push Chain lengkap",
+      "explore-more-aria-label": "Navigasi ke halaman FAQ Push Chain lengkap",
+      "accordion-aria-label": "Daftar pertanyaan yang sering diajukan Push Chain",
+      "answer-aria-label": "Jawaban untuk pertanyaan - ",
+      "qnas": {
+        "qna1": {
+          "question": "Apa itu Push Chain?",
+          "answer": "<1>Push Chain adalah blockchain shared-state yang <2>menghilangkan fragmentasi dan membuat aplikasi universal</2>.</1><1>Deploy sekali di Push. Pengguna di chain mana pun — EVM atau non-EVM — menggunakan aplikasi Anda dengan dompet dan token mereka yang sudah ada; biaya ditangani di balik layar.</1>"
+        },
+        "qna2": {
+          "question": "Bagaimana cara kerjanya? (Dijelaskan dengan sederhana)",
+          "answer": "<1>Gunakan dompet yang sudah Anda miliki — Push menangani bagian cross-chain di balik layar.</1><1>1. <2>Mulai di mana saja.</2> Gunakan dompet mana pun di chain mana pun — tidak perlu mengganti network.</1><1>2. <2>Tanda tangan sekali.</2> Bayar dengan token yang sudah Anda miliki; kami menyediakan biaya di chain utama Anda.</1><1>3. <2>Kami merutekannya.</2> Akun tertaut di Push (masih milik Anda) meneruskan panggilan Anda ke aplikasi — non-custodial.</1><1>4. <2>Anda selalu Anda.</2> Kami mencocokkan dompet chain utama Anda dengan akun tertaut Anda sehingga tindakan diverifikasi dengan benar dan diatribusikan kepada Anda di Push.</1><1>5. <2>Selesai dengan cepat.</2> Aplikasi berjalan di Push; biaya ditangani di balik layar. Tidak ada bridge, tidak perlu dompet baru.</1><1>Inilah cara pengguna di chain mana pun dapat menggunakan aplikasi yang sama yang di-deploy di Push Chain — membuat aplikasi benar-benar universal.</1>"
+        },
+        "qna3": {
+          "question": "Apakah saya membutuhkan dompet atau token gas yang berbeda?",
+          "answer": "<1><2>Tidak.</2></1><1><2>Simpan dompet Anda.</2> Gunakan dompet yang sudah Anda miliki — tidak perlu dompet atau akun baru.</1><1><2>Bayar dengan apa yang Anda miliki.</2> Biaya dapat dibayar dengan token yang sudah Anda miliki di chain utama Anda; kami menangani konversi di balik layar.</1><1><2>Tidak perlu mengganti network.</2> Tetap di chain utama Anda — tidak perlu bridging hanya untuk mendapatkan token gas.</1><1><2>Non-custodial.</2> Anda menandatangani setiap tindakan; Push tidak menyimpan kunci Anda.</1><1><2>Di balik layar.</2> Network menyelesaikan biaya dalam $PC secara otomatis — Anda tidak perlu mengelolanya.</1>"
+        },
+        "qna4": {
+          "question": "Apa bedanya ini dengan bridge atau layer perpesanan?",
+          "answer": "<1><2>Jawaban Singkat</2>: Push adalah tempat aplikasi Anda berjalan. Bridge/messaging hanya memindahkan token atau pesan antar chain yang membuat semuanya rumit bagi pengguna dan pengembang.</1><1><2>Satu chain utama vs banyak klon.</2> Dengan bridge/messaging Anda di-deploy per chain dan menyinkronkan melalui pesan. Di Push Anda di-deploy sekali; semua orang menghantam kontrak yang sama dan shared state.</1><1><2>Tidak ada aset terbungkus atau bridging wajib.</2> Pengguna tetap di chain utama mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani routing dan konversi biaya di balik layar.</1><1><2>Identitas & verifikasi terpadu.</2> Kami menerima tanda tangan dari dompet/chain mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-custodial.</1><1><2>Lebih sedikit bagian yang bergerak.</2> Tidak ada tarian persetujuan cross-chain, tidak perlu berburu token gas, tidak ada kontrak lem untuk dijaga sinkronisasinya.</1><1><2>Gunakan bridge jika Anda mau, bukan karena Anda harus.</2> Likuiditas masih dapat bergerak melalui bridge, tetapi berinteraksi dengan aplikasi Anda tidak mengharuskannya.</1><1>Hasil: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu chain — bahkan ketika pengguna tidak.</1>"
+        },
+        "qna5": {
+          "question": "Apakah ini hanya untuk EVM?",
+          "answer": "<1><2>Tidak, Push mendukung chain EVM dan non-EVM.</2> Meskipun berfokus pada EVM untuk deployment, pengguna dari chain mana pun (termasuk non-EVM) dapat menggunakan aplikasi Anda seolah-olah mereka menggunakannya secara native.</1>\n<1><2>Deploy sekali. Interop di mana-mana.</2> Tulis dan deploy kontrak EVM standar di Push (Solidity/Vyper). Tooling tetap sama.</1>\n<1><2>Pengguna dari chain mana pun.</2> Ethereum dan major EVM L2s berfungsi secara native. Pengguna Non-EVM (e.g., Solana) menandatangani dengan dompet utama mereka; kami memverifikasi dan merutekan di balik layar — tidak perlu mengganti network.</1>\n<1><2>Didukung hari ini.</2> Lihat daftar live chain yang didukung → <3>Chain yang Didukung</3>.</1><1><2>Meluas cakupan.</2> Kami menambahkan lebih banyak chain secara konstan. Jika Anda ingin meminta chain apa pun, silakan <4>hubungi kami</4>.</1>",
+          "supported-urls-title": "Daftar semua chain yang didukung oleh Push Chain.",
+          "contact-url-title": "Hubungi kami untuk menambahkan chain baru."
+        },
+        "qna6": {
+          "question": "Seberapa cepat dan bagaimana tampilan biayanya?",
+          "answer": "<1><2>Kecepatan.</2> Dirancang untuk ~1–2s konfirmasi dengan feedback UX cepat. Periksa metrik live di <3>🍩 Donut Testnet</3>.</1><1><2>Model biaya.</2> Anda melihat biaya dalam token yang Anda pilih untuk membayar; network menyelesaikan dalam $PC di balik layar.</1><1><2>Biaya khas.</2> Biaya khas kurang dari <2>$0.001</2> per transaksi. meskipun, bervariasi berdasarkan kompleksitas kontrak, harga token dan beban network. Anda mendapatkan kutipan yang tepat sebelum Anda menandatangani.</1>",
+          "donut-testnet-title": "Lihat statistik Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

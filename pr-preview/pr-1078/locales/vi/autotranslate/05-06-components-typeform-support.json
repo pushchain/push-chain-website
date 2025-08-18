@@ -1,0 +1,120 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "Gửi yêu cầu hỗ trợ",
+      "expanded-title-for-support": "Cần giúp đỡ? 👋",
+      "collapsed-text-for-contact": "Liên hệ đội ngũ",
+      "expanded-title-for-contact": "Chào bạn! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 Hỗ trợ kỹ thuật",
+          "description": "Báo lỗi, SDK/API, hợp đồng thông minh, hỗ trợ tích hợp"
+        },
+        "network": {
+          "label": "🌐 Mạng lưới & Testnet",
+          "description": "Trình khám phá/Push Scan, RPC, Vòi, sự cố Donut testnet"
+        },
+        "wallet": {
+          "label": "👛 Ví Universal",
+          "description": "Push Wallet, kết nối chuỗi universal hoặc các sự cố khác của ví"
+        },
+        "identity": {
+          "label": "🪪 Tài khoản & Danh tính",
+          "description": "UEA/UOA, chữ ký, câu hỏi về quyền sở hữu"
+        },
+        "security": {
+          "label": "🛡️ Bảo mật",
+          "description": "Báo cáo lỗ hổng bảo mật, công bố có trách nhiệm (security@push.org)"
+        },
+        "general": {
+          "label": "💬 Yêu cầu chung",
+          "description": "Câu hỏi, phản hồi, các chủ đề khác"
+        },
+        "partnerships": {
+          "label": "🤝 Đối tác & Tích hợp",
+          "description": "BD, tích hợp hệ sinh thái (ví, cơ sở hạ tầng, sàn giao dịch, giao thức)"
+        },
+        "grants": {
+          "label": "💰 Tài trợ & Chương trình hệ sinh thái",
+          "description": "BRB, Bootcamp, tài trợ, yêu cầu tài trợ"
+        },
+        "media": {
+          "label": "📰 Truyền thông & Báo chí",
+          "description": "Phỏng vấn, tuyên bố, tài sản, kiểm tra sự thật"
+        },
+        "events": {
+          "label": "🎤 Diễn thuyết & Sự kiện",
+          "description": "Talkshow, hội thảo, hackathon, tài trợ"
+        },
+        "careers": {
+          "label": "👩‍💻 Tuyển dụng",
+          "description": "Các vị trí đang tuyển, thực tập, cơ hội làm việc theo hợp đồng"
+        },
+        "validators": {
+          "label": "🧡 Người xác thực / Nhà điều hành Node",
+          "description": "Quan tâm của nhà điều hành, nhà cung cấp RPC, đối tác cơ sở hạ tầng"
+        },
+        "legal": {
+          "label": "⚖️ Pháp lý & Tuân thủ",
+          "description": "Thương hiệu, yêu cầu dữ liệu, thỏa thuận"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "Chúng tôi có thể giúp gì cho bạn?",
+            "subtitle": "Chọn danh mục phù hợp nhất với yêu cầu của bạn"
+          },
+          "contact": {
+            "title": "Hãy làm quen nhé",
+            "subtitle": "Chúng tôi sẽ sử dụng thông tin này để liên hệ lại với bạn",
+            "name-label": "Tên của bạn",
+            "name-placeholder": "Nhập tên đầy đủ của bạn",
+            "name-aftergreet": "Rất vui được gặp bạn, ",
+            "email-label": "Địa chỉ email",
+            "email-placeholder": "Nhập địa chỉ email của bạn"
+          },
+          "details": {
+            "title": "Cho chúng tôi biết thêm chi tiết",
+            "subtitle": "Cung cấp chi tiết về yêu cầu của bạn",
+            "subject-label": "Chủ đề",
+            "subject-placeholder": "Tóm tắt ngắn gọn về vấn đề của bạn",
+            "message-label": "Tin nhắn",
+            "message-placeholder": "Mô tả chi tiết vấn đề của bạn. Bao gồm bất kỳ thông báo lỗi nào, các bước tái hiện hoặc thông tin liên quan."
+          },
+          "submit": {
+            "title": "Xem lại & Gửi",
+            "subtitle": "Vui lòng xem lại thông tin của bạn trước khi gửi",
+            "placeholder": "Cho chúng tôi biết thêm về những gì bạn cần giúp đỡ..."
+          }
+        },
+        "buttons": {
+          "next": "Tiếp theo",
+          "previous": "Trước",
+          "submit": "Gửi yêu cầu",
+          "submitting": "Đang gửi..."
+        },
+        "validation": {
+          "name-required": "Tên là bắt buộc",
+          "name-min-length": "Tên phải có ít nhất 2 ký tự",
+          "email-required": "Email là bắt buộc",
+          "email-invalid": "Vui lòng nhập địa chỉ email hợp lệ",
+          "subject-required": "Chủ đề là bắt buộc",
+          "message-required": "Tin nhắn là bắt buộc",
+          "category-required": "Vui lòng chọn một danh mục",
+          "default": "Trường này là bắt buộc"
+        },
+        "success": {
+          "title": "Yêu cầu đã được gửi thành công!",
+          "message": "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi đã nhận được yêu cầu hỗ trợ của bạn và sẽ liên hệ lại với bạn sớm nhất có thể.",
+          "button": "Gửi yêu cầu khác"
+        },
+        "error": {
+          "title": "Gửi không thành công",
+          "message": "Đã xảy ra lỗi khi gửi yêu cầu của bạn. Vui lòng thử lại hoặc liên hệ trực tiếp với chúng tôi.",
+          "button": "Thử lại"
+        }
+      }
+    }
+  }
+}

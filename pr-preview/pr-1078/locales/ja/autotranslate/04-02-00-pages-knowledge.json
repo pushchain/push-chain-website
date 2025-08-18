@@ -2,12 +2,12 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "ナレッジベース — ガイド、FAQ & チュートリアル",
-        "description": "Push Chain の概念、FAQ、チュートリアル、およびエコシステムのリソースをここから始めましょう。技術的な知識がなくても使える、わかりやすいガイドです。",
-        "og-title": "Push Chain ナレッジベース - ガイド & FAQ",
-        "og-description": "Push Chain の概念、ステップバイステップのチュートリアル、およびよくある質問への回答。",
-        "twitter-title": "ナレッジベース - ガイド & FAQ",
-        "twitter-description": "Push Chain に関するクイックガイド、FAQ、およびチュートリアル (開発専門用語なし)。"
+        "title": "知識ベース — ガイド、FAQ、操作方法",
+        "description": "Push Chain のコンセプト、FAQ、操作方法、エコシステムのリソースをこちらから。分かりやすい、専門用語を使わないガイド。",
+        "og-title": "Push Chain 知識ベース - ガイド & FAQ",
+        "og-description": "Push Chain のコンセプト、ステップバイステップの操作方法、よくある質問への回答。",
+        "twitter-title": "知識ベース - ガイド & FAQ",
+        "twitter-description": "Push Chain の簡単なガイド、FAQ、操作方法 (専門用語なし)。"
       }
     }
   }

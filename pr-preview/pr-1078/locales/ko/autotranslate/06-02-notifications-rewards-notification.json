@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet 비공개 베타 출시!",
+      "description": "Testnet, Donut을 미리 체험하고 앱을 구축하여 상품을 받으세요!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "보상 알림 닫기",
+      "close-button-aria-label": "Push Chain 보상 알림 닫기",
+      "container-aria-label": "Push Chain 보상 알림"
+    }
+  }
+}

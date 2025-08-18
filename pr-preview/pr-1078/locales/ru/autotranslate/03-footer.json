@@ -1,57 +1,95 @@
 {
   "footer": {
-    "mail-section": {
-      "title": "Получайте последние новости Push",
-      "privacy": "Политика конфиденциальности",
-      "tos": "Условия использования"
+    "email-section": {
+      "title": "Будьте в курсе новостей <1>Push Chain</1>",
+      "title-secondary": "и обновлений!",
+      "title-aria-label": "Раздел подписки на рассылку",
+      "section-aria-label": "Подписка на рассылку <1>Push Chain</1>"
     },
-    "info-section": {
-      "positions-card": {
-        "text": "Присоединяйтесь к нам и стройте будущее Web3-коммуникаций.",
-        "link-text": "Смотреть открытые вакансии",
-        "image-title": "Присоединяйтесь к нам",
-        "image-alt": "Иконка, показывающая открытые вакансии"
-      },
-      "docs-card": {
-        "text": "Следуйте нашим простым руководствам, чтобы начать работу за несколько минут.",
-        "link-text": "Изучить документацию",
-        "image-title": "Начать работу",
-        "image-alt": "Иконка, показывающая простоту начала работы"
-      }
+    "main-section": {
+      "section-aria-label": "Навигация и ссылки в футере",
+      "logo-link-title": "Главная страница <1>Push Chain</1>",
+      "logo-link-aria-label": "Главная страница <1>Push Chain</1>",
+      "logo-alt": "Логотип <1>Push Chain</1>"
     },
-    "links-section": {
-      "company-column": {
-        "title": "Компания",
-        "push-ecosystem-link": "Push Ecosystem",
-        "media-kit-link": "Media Kit",
-        "terms-link": "Terms",
-        "privacy-link": "Privacy"
-      },
-      "governance-column": {
-        "title": "Управление",
-        "push-governance-link": "Push Governance",
-        "guides-link": "Guides",
-        "forum-link": "Forum",
-        "grants-link": "Grants",
-        "snapshot-link": "Snapshot"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "Ресурсы",
-        "blog-link": "Blog",
-        "whitepaper-link": "Whitepaper",
-        "github-link": "Github",
-        "discord-link": "Discord",
-        "dev-guides-link": "Dev Guides"
+        "title-aria-label": "Навигация по ресурсам"
       },
-      "subscribe-column": {
-        "title": "Поддержка",
-        "contact-us-link": "Связаться с нами",
-        "faq-link": "FAQ"
+      "developers": {
+        "title": "Разработчикам",
+        "title-aria-label": "Навигация для разработчиков"
       },
-      "support-column": {
-        "title": "Подписка",
-        "email-placeholder": "Ваш Email"
+      "community": {
+        "title": "Сообщество",
+        "title-aria-label": "Навигация по сообществу"
+      },
+      "help": {
+        "title": "Помощь",
+        "title-aria-label": "Навигация по помощи"
       }
+    },
+    "links": {
+      "get-started": "Начать",
+      "get-started-title": "Начните разрабатывать на <1>Push Chain</1>",
+      "docs": "Документация",
+      "docs-title": "Документация <1>Push Chain</1>",
+      "github": "GitHub",
+      "github-title": "Репозитории <1>Push Chain</1> на GitHub",
+      "knowledge-base": "База знаний",
+      "knowledge-base-title": "База знаний <1>Push Chain</1>",
+      "blog": "Блог",
+      "blog-title": "Блог <1>Push Chain</1>",
+      "litepaper": "Лайтпейпер",
+      "litepaper-title": "Лайтпейпер <1>Push Chain</1> (PDF)",
+      "brand-kit": "Brand Kit",
+      "brand-kit-title": "Брендовые материалы и гайдлайны <1>Push Chain</1>",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Обозреватель блоков <1>Push Chain</1>",
+      "faucet": "Faucet",
+      "faucet-title": "Получите тестовые токены с Faucet <1>Push Chain</1>",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Сообщество <1>Push Protocol</1>",
+      "support": "Поддержка",
+      "support-title": "Центр поддержки",
+      "security": "Безопасность и уведомления",
+      "security-title": "Сообщить об уязвимости (ответственное раскрытие)",
+      "contact-us": "Контакты",
+      "contact-us-title": "Партнерство, BD, медиа или общие вопросы",
+      "careers": "Карьера",
+      "careers-title": "Открытые вакансии в <1>Push Chain</1>",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Следите за <1>Push Chain</1> в X (Twitter)",
+      "discord": "Discord",
+      "discord-title": "Присоединяйтесь к Discord <1>Push Chain</1>",
+      "reddit": "Reddit",
+      "reddit-title": "Присоединяйтесь к сообществу <1>Push Chain</1> на Reddit",
+      "telegram": "Telegram",
+      "telegram-title": "Присоединяйтесь к Telegram <1>Push Chain</1>"
+    },
+    "social-section": {
+      "section-aria-label": "Ссылки на социальные сети и юридическая информация",
+      "twitter-icon-title": "<1>Push Chain</1> в X (Twitter)",
+      "twitter-icon-aria-label": "<1>Push Chain</1> в X (Twitter)",
+      "github-icon-title": "<1>Push Chain</1> в GitHub",
+      "github-icon-aria-label": "<1>Push Chain</1> в GitHub",
+      "discord-icon-title": "<1>Push Chain</1> в Discord",
+      "discord-icon-aria-label": "<1>Push Chain</1> в Discord"
+    },
+    "legal": {
+      "privacy-policy": "Политика конфиденциальности",
+      "privacy-policy-title": "Ознакомьтесь с Политикой конфиденциальности",
+      "privacy-policy-aria-label": "Политика конфиденциальности",
+      "terms-of-service": "Условия использования",
+      "terms-of-service-title": "Ознакомьтесь с Условиями использования",
+      "terms-of-service-aria-label": "Условия использования",
+      "cookie-preferences": "Настройки cookie",
+      "cookie-preferences-title": "Управление настройками cookie"
+    },
+    "footer-image": {
+      "alt": "Иллюстрация футера <1>Push Chain</1>",
+      "title": "<1>Push Chain</1> – Универсальный блокчейн"
     }
   }
 }

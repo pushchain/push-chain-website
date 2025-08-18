@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "No te pierdas nada",
+      "text": "Regístrate y mantente al día con los anuncios del ecosistema, sorteos y mucho más.",
+      "email-input": "Tu Correo Electrónico",
+      "email-input-placeholder": "Ingresa tu dirección de correo electrónico",
+      "email-input-title": "Suscríbete al boletín de Push Chain para recibir actualizaciones",
+      "email-input-aria-label": "Dirección de correo electrónico para suscribirte al boletín",
+      "submit-button": "Suscribirme",
+      "submit-button-title": "Suscríbete al boletín de Push Chain",
+      "submit-button-aria-label": "Suscribirse al boletín",
+      "loading-submit-button": "Por favor, espera...",
+      "arrow-button-aria-label": "Suscribirse al boletín",
+      "arrow-button-title": "Suscríbete a las actualizaciones de Push Chain",
+      "form-aria-label": "Formulario de suscripción al boletín",
+      "success-message-aria-label": "Suscripción exitosa",
+      "error-message-aria-label": "Error de suscripción"
+    }
+  }
+}

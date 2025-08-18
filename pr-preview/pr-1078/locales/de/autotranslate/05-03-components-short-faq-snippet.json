@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Häufig gestellte Fragen zu Push Chain - Universal Blockchain",
+      "title": "Häufig gestellte\nFragen",
+      "title-aria-label": "Gängige Fragen und Antworten zu Push Chain",
+      "discord-link-text": "Frag uns auf Discord",
+      "discord-link-title": "Tritt der Push Chain Discord Community für Support und Fragen bei",
+      "discord-link-aria-label": "Discord Community in einem neuen Tab öffnen",
+      "explore-more-text": "Weitere FAQs entdecken",
+      "explore-more-title": "Sieh dir die umfassende Push Chain FAQ Dokumentation und Entwicklerhandbücher an",
+      "explore-more-aria-label": "Zur vollständigen Push Chain FAQ Seite navigieren",
+      "accordion-aria-label": "Liste der häufig gestellten Fragen zu Push Chain",
+      "answer-aria-label": "Antwort auf die Frage - ",
+      "qnas": {
+        "qna1": {
+          "question": "Was ist Push Chain?",
+          "answer": "<1>Push Chain ist eine Blockchain mit gemeinsamem Zustand, die <2>Fragmentierung beseitigt und Apps universell macht</2>.</1><1>Einmal auf Push bereitstellen. Benutzer auf jeder Chain – EVM oder nicht-EVM – nutzen deine App mit ihren bestehenden Wallets und Tokens; Gebühren werden im Hintergrund abgewickelt.</1>"
+        },
+        "qna2": {
+          "question": "Wie funktioniert es? (Einfach erklärt)",
+          "answer": "<1>Nutze das Wallet, das du bereits hast – Push erledigt die Cross-Chain-Aufgaben im Hintergrund.</1><1>1. <2>Überall starten.</2> Nutze jedes Wallet auf jeder Chain – kein Umschalten des Netzwerks.</1><1>2. <2>Einmal unterschreiben.</2> Bezahle mit einem Token, das du bereits besitzt; wir legen die Gebühr auf deiner Home-Chain bereit.</1><1>3. <2>Wir leiten es weiter.</2> Ein verknüpftes Konto auf Push (immer noch deins) leitet deinen Aufruf an die App weiter – nicht-verwahrungsorientiert.</1><1>4. <2>Du bist immer du.</2> Wir ordnen dein Home-Chain-Wallet deinem verknüpften Konto zu, damit Aktionen korrekt verifiziert und dir auf Push zugeschrieben werden.</1><1>5. <2>Schnell erledigt.</2> Die App läuft auf Push; Gebühren werden im Hintergrund abgewickelt. Kein Bridging, kein neues Wallet.</1><1>So können Benutzer auf jeder Chain dieselbe App nutzen, die auf Push Chain bereitgestellt wurde – und Apps wirklich universell machen.</1>"
+        },
+        "qna3": {
+          "question": "Benötige ich ein anderes Wallet oder Gas-Token?",
+          "answer": "<1><2>Nein.</2></1><1><2>Behalte dein Wallet.</2> Nutze das Wallet, das du bereits hast – kein neues Wallet oder Konto.</1><1><2>Bezahle in dem, was du hast.</2> Gebühren können in den Tokens bezahlt werden, die du bereits auf deiner Home-Chain besitzt; wir erledigen die Umwandlung im Hintergrund.</1><1><2>Kein Netzwerkwechsel.</2> Bleib auf deiner Home-Chain – kein Bridging nur, um ein Gas-Token zu bekommen.</1><1><2>Nicht-verwahrungsorientiert.</2> Du unterschreibst jede Aktion; Push hält niemals deine Schlüssel.</1><1><2>Im Hintergrund.</2> Das Netzwerk begleicht Gebühren automatisch in $PC – du musst es nicht verwalten.</1>"
+        },
+        "qna4": {
+          "question": "Wodurch unterscheidet sich das von Bridges oder Messaging-Layern?",
+          "answer": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Bridges/Messaging bewegen nur Tokens oder Nachrichten zwischen Chains, was alles für Benutzer und Entwickler kompliziert macht.</1><1><2>Ein Home vs viele Klone.</2> Mit Bridges/Messaging stellst du pro Chain bereit und synchronisierst dich über Nachrichten. Auf Push stellst du einmal bereit; jeder greift auf denselben Vertrag und gemeinsamen Zustand zu.</1><1><2>Keine Wrapped Assets oder obligatorisches Bridging.</2> Benutzer bleiben auf ihrer Home-Chain und bezahlen mit dem, was sie bereits besitzen; wir erledigen die Weiterleitung und Gebührenumwandlung im Hintergrund.</1><1><2>Vereinheitlichte Identität & Verifizierung.</2> Wir akzeptieren Signaturen von jedem Wallet/Chain und ordnen sie demselben Benutzer auf Push zu – nicht-verwahrungsorientiert.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Chain-Approval-Tanz, keine Gas-Token-Jagd, keine Glue Contracts, die synchron gehalten werden müssen.</1><1><2>Nutze Bridges, wenn du willst, nicht weil du musst.</2> Liquidität kann immer noch über Bridges verschoben werden, aber die Interaktion mit deiner App erfordert dies nicht.</1><1>Ergebnis: einfachere Apps, eine einzige Quelle der Wahrheit und eine UX, die sich wie eine Chain anfühlt – auch wenn Benutzer es nicht sind.</1>"
+        },
+        "qna5": {
+          "question": "Ist es EVM-only? Welche Chains werden unterstützt?",
+          "answer": "<1><2>Nein, Push unterstützt sowohl EVM- als auch Nicht-EVM-Chains.</2> Obwohl es EVM-First für die Bereitstellung ist, können Benutzer von jeder Chain (einschließlich Nicht-EVM) deine App nutzen, als ob sie sie nativ nutzen würden.</1>\n<1><2>Einmal bereitstellen. Interoperabilität überall.</2> Schreibe und stelle Standard-EVM-Verträge auf Push (Solidity/Vyper) bereit. Die Tools bleiben gleich.</1>\n<1><2>Benutzer von jeder Chain.</2> Ethereum und wichtige EVM-L2s funktionieren nativ. Nicht-EVM-Benutzer (z.B. Solana) unterschreiben mit ihren Home-Wallets; wir verifizieren und leiten im Hintergrund weiter – kein Netzwerkwechsel.</1>\n<1><2>Heute unterstützt.</2> Sieh dir die Live-Liste der unterstützten Chains an → <3>Unterstützte Chains</3>.</1><1><2>Erweiterung der Abdeckung.</2> Wir fügen ständig weitere Chains hinzu. Wenn du die Hinzufügung einer Chain beantragen möchtest, bitte <4>kontaktiere uns</4>.</1>",
+          "supported-urls-title": "Liste aller von Push Chain unterstützten Chains.",
+          "contact-url-title": "Kontaktiere uns, um neue Chains hinzuzufügen."
+        },
+        "qna6": {
+          "question": "Wie schnell ist es und wie sehen die Gebühren aus?",
+          "answer": "<1><2>Geschwindigkeit.</2> Entwickelt für ~1–2 Sekunden Bestätigungen mit schnellem UX-Feedback. Sieh dir Live-Metriken auf <3>🍩 Donut Testnet</3>.</1><1><2>Gebührenmodell.</2> Du siehst die Gebühr in dem Token, den du bezahlen wählst; das Netzwerk begleicht im Hintergrund in $PC.</1><1><2>Typische Kosten.</2> Typische Gebühren sind weniger als <2>$0.001</2> pro Transaktion, obwohl sie je nach Vertragskomplexität, Preis des Tokens und Netzwerkauslastung variieren. Du erhältst ein genaues Angebot, bevor du unterschreibst.</1>",
+          "donut-testnet-title": "Sieh dir die Statistiken des Push Chain Donut Testnet an."
+        }
+      }
+    }
+  }
+}

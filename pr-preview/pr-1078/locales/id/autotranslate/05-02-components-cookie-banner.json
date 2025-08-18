@@ -1,0 +1,18 @@
+{
+  "components": {
+    "cookie-banner": {
+      "message": "Kami menggunakan cookie untuk mempersonalisasi pengalaman Anda. Pelajari lebih lanjut di",
+      "privacy-policy-link": "Kebijakan Privasi",
+      "privacy-policy-link-title": "Baca Kebijakan Privasi Push Protocol",
+      "privacy-policy-link-aria-label": "Buka Kebijakan Privasi di tab baru",
+      "accept-button": "Setuju",
+      "accept-button-title": "Setujui cookie untuk mempersonalisasi pengalaman Anda",
+      "accept-button-aria-label": "Setujui cookie dan tutup banner",
+      "reject-button": "Tidak Setuju",
+      "reject-button-title": "Tolak cookie dan tutup banner",
+      "reject-button-aria-label": "Tolak cookie dan tutup banner",
+      "banner-aria-label": "Banner persetujuan cookie",
+      "banner-role": "Notifikasi preferensi cookie"
+    }
+  }
+}

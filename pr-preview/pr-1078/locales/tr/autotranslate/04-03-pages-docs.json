@@ -2,12 +2,17 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Belgeler — Evrensel Uygulamalar Oluşturun",
-        "description": "Push Chain üzerinde yayınlamak için ihtiyacınız olan her şey: hızlı başlangıç kılavuzları, SDK'lar, API referansı, örnekler ve düğüm kurulumu.",
-        "og-title": "Push Chain Belgeleri - Hızlı Başlangıç, SDK'lar ve API",
+        "title": "Dokümantasyon — Evrensel Uygulamalar Oluştur",
+        "description": "Push Chain'da yayınlamak için ihtiyacınız olan her şey: hızlı başlangıç kılavuzları, SDK'lar, API referansı, örnekler ve düğüm kurulumu.",
+        "og-title": "Push Chain Dokümanları - Hızlı Başlangıç, SDK'lar ve API",
         "og-description": "Net rehberler ve örneklerle evrensel yürütme katmanında uygulamalar oluşturun ve çalıştırın.",
-        "twitter-title": "Push Chain Belgeleri - Şimdi Oluşturun",
-        "twitter-description": "Hızlı başlangıç, SDK'lar, API referansı ve hızlı bir şekilde yayınlamak için örnekler."
+        "twitter-title": "Push Chain Dokümanları - Şimdi Oluştur",
+        "twitter-description": "Hızlı başlangıç kılavuzları, SDK'lar, API referansı ve hızlı yayınlama için örnekler."
+      },
+      "explorePrelaunchBuild": {
+        "text": "Ön Lansman Sürümünü Keşfet",
+        "title": "Push Chain Testnet dokümantasyonuna ve ön lansman özelliklerine erişin",
+        "ariaLabel": "Push Chain Testnet dokümantasyonuna giderek ön lansman sürümü özelliklerini keşfedin"
       }
     }
   }

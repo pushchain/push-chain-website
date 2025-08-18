@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "alert": {
+      "message": "¡Push Metamask Snap ya está disponible!",
+      "know-more-text": "¡Empieza ahora!",
+      "know-more-title": "Empieza con Push Metamask Snap",
+      "close-button-title": "Cerrar alerta",
+      "close-button-aria-label": "Descartar alerta de Push Metamask Snap",
+      "container-aria-label": "Anuncio de Push Metamask Snap"
+    }
+  }
+}

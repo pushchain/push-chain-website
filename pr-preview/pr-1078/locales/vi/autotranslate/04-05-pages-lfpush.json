@@ -2,12 +2,30 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Hãy Cùng Chung Tay — Sáng Kiến Cộng Đồng",
-        "description": "Các sáng kiến cộng đồng, bài đăng và hơn thế nữa của Push.",
-        "og-title": "Hãy Cùng Chung Tay - Sáng Kiến Cộng Đồng cho Push Chain",
-        "og-description": "Sáng kiến và chia sẻ cộng đồng cho Push Chain.",
-        "twitter-title": "Hãy Cùng Chung Tay | Sáng Kiến Cộng Đồng",
-        "twitter-description": "Xem các sáng kiến cộng đồng cho Push Chain."
+        "title": "Hãy Cùng Chia Sẻ – Cộng Đồng Sáng Kiến",
+        "description": "Các sáng kiến, bài đăng và hơn thế nữa từ cộng đồng Push.",
+        "og-title": "Hãy Cùng Chia Sẻ - Sáng Kiến Cộng Đồng cho Push Chain",
+        "og-description": "Sáng kiến và chia sẻ cộng đồng dành cho Push Chain.",
+        "twitter-title": "Hãy Cùng Chia Sẻ | Sáng Kiến Cộng Đồng",
+        "twitter-description": "Xem các sáng kiến cộng đồng dành cho Push Chain."
+      },
+      "hero-section": {
+        "title": "Hãy Cùng Chia Sẻ",
+        "description": "Cộng đồng các nhà xây dựng LF Push – tôn vinh những thành quả của bạn và những người bạn giúp đỡ. Chia sẻ những thành công của bạn, gắn thẻ <hashtag>#LFPush</hashtag> hoặc <mention>@PushChain</mention>, và chúng tôi sẽ lan tỏa."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Chia Sẻ Thành Công",
+          "join-community": "Tham Gia Cộng Đồng",
+          "learn-more": "Tìm Hiểu Thêm"
+        },
+        "meta": {
+          "tweet-alt": "Tweet từ thành viên cộng đồng Push Chain",
+          "loading-alt": "Đang tải thêm tweet cộng đồng"
+        },
+        "tweets-counter": "{{count}} Tweet và đang tăng!",
+        "loading": "Đang tải thêm tweet...",
+        "end-message": "Bạn đã đến cuối! 🎉"
       }
     }
   }

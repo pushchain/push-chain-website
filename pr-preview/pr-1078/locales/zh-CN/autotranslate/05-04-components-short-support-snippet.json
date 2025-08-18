@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Push Chain - 通用区块链的支持问题",
+      "title": "支持\n帮助中心",
+      "title-aria-label": "关于Push Chain的常见支持问题和答案",
+      "discord-link-text": "在Discord上提问",
+      "discord-link-title": "加入Push Chain Discord社区以获得支持和解答问题",
+      "discord-link-aria-label": "在新标签页中打开Discord社区",
+      "explore-more-text": "查看更多常见问题",
+      "explore-more-title": "查看完整的Push Chain常见问题文档和开发者指南",
+      "explore-more-aria-label": "导航至完整的Push Chain常见问题页面",
+      "accordion-aria-label": "Push Chain支持问题列表",
+      "answer-aria-label": "问题的答案 - ",
+      "qnas": {
+        "qna1": {
+          "question": "我无法连接我的钱包。我应该尝试什么？",
+          "answer": "<1><2>快速检查：</2>刷新页面，解锁你的钱包，并禁用push.org上的激进广告/脚本拦截器。</1><1><2>无需切换网络：</2>保持在你的主链上；Push 会在后台处理路由。</1><1><2>重置站点权限：</2>在你的钱包中，删除站点的连接并重新连接。</1><1>仍然卡住？在<3>Discord</3>上提问或开通<4>支持工单</4>。</1>",
+          "discord-url-title": "加入Push Chain Discord以获得实时帮助。",
+          "support-url-title": "开通支持工单。"
+        },
+        "qna2": {
+          "question": "我的交易正在等待或失败了——现在怎么办？",
+          "answer": "<1><2>检查状态：</2>使用钱包中的哈希值在<3>Push Scan</3>上查找你的交易。</1><1><2>等待中：</2>通常会很快确认；避免重复发送。</1><1><2>失败：</2>不会扣除任何资金。检查错误并重试。</1><1>持续发生的事件将在<4>Status</4>上发布。</1>",
+          "scan-url-title": "打开Push Scan (浏览器)。",
+          "status-url-title": "查看网络状态和事件。"
+        },
+        "qna3": {
+          "question": "如何获取测试网代币 (Donut)？",
+          "answer": "<1>使用<3>Faucet</3>请求测试代币。</1><1><2>注意：</2>可能存在速率限制；某些水龙头需要简单的验证。如果水龙头失败，请在<4>Discord</4>上联系我们。</1>",
+          "faucet-url-title": "打开Push Chain水龙头。",
+          "discord-url-title": "加入Push Chain Discord。"
+        },
+        "qna4": {
+          "question": "如何报告错误或漏洞？",
+          "answer": "<1><2>App 错误：</2>开通<3>支持工单</3>或发布在<4>Discord</4>上，并提供重现步骤。</1><1><2>安全问题：</2>发送电子邮件至<5>security@push.org</5>。请在确认修复之前避免公开披露。</1>",
+          "support-url-title": "开通支持工单。",
+          "discord-url-title": "加入Discord。"
+        },
+        "qna5": {
+          "question": "在哪里可以找到文档和快速入门指南？",
+          "answer": "<1>从<3>Docs</3>开始，获取快速入门指南和API，以及<4>Knowledge Base</4>，了解概念、深入研究和常见问题解答。</1>",
+          "docs-url-title": "打开开发者文档。",
+          "kb-url-title": "打开知识库。"
+        },
+        "qna6": {
+          "question": "我可以请求对新链、功能或集成进行支持吗？",
+          "answer": "<1>可以。通过<3>Contact</3>告诉我们你需要哪些链/工具，或在<4>GitHub</4>上发起一个issue。我们正在不断扩展覆盖范围。</1>",
+          "contact-url-title": "联系Push Chain团队。",
+          "github-url-title": "打开GitHub组织。"
+        }
+      }
+    }
+  }
+}

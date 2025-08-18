@@ -3,12 +3,12 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders — 教程与操作指南",
+          "title": "开发者 — 使用指南和教程",
           "description": "使用 Push Chain 功能的分步指南、模式和示例。",
-          "og-title": "Builders - 教程与操作指南",
-          "og-description": "使用 Push Chain 构建的指导教程、最佳实践和示例。",
-          "twitter-title": "Builders - 教程与操作指南",
-          "twitter-description": "在 Push Chain 上发布的逐步指南。"
+          "og-title": "开发者 - 使用指南和教程",
+          "og-description": "使用 Push Chain 构建的分步教程、最佳实践和示例。",
+          "twitter-title": "开发者 - 使用指南和教程",
+          "twitter-description": "在 Push Chain 上发布的步骤指南。"
         }
       }
     }
