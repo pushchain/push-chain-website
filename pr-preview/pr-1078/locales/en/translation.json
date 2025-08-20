@@ -194,7 +194,7 @@
       "faucet": "Faucet",
       "faucet-title": "Get test tokens from the Push Chain faucet",
       "push-portal": "Push Portal",
-      "push-portal-title": "Push Protocol community portal",
+      "push-portal-title": "Push Chain community portal",
       "support": "Support",
       "support-title": "Help Center",
       "security": "Security & Disclosure",
@@ -301,7 +301,7 @@
         "box4": {
           "texttitle": "Universal Smart Contracts",
           "bodytext": "Build once, run cross chain, multi step experiences  with a single, future-proof contract.",
-          "imagealt": "Illustration showing lines of code required for Push Protocol integration",
+          "imagealt": "Illustration showing Ethereum Virtual Maching logo and a an arc revolving around it saying '100% EVM Compatible'",
           "imagetitle": "Deploy once, instantly become compatible with all supported chains (EVM or non-EVM)."
         },
         "box5": {
@@ -488,6 +488,70 @@
         "twitter-title": "Knowledge Base - Guides & FAQs",
         "twitter-description": "Quick guides, FAQs, and how-tos for Push Chain (no dev jargon)."
       },
+      "hero-section": {
+        "title": "Knowledge Base",
+        "description": {
+          "highlighted": "Push Chain is a true universal blockchain designed to eliminate fragmentation across all chains.",
+          "developers": "Developers",
+          "developers-text": "deploy once and instantly become compatible with all supported EVM and non-EVM chains.",
+          "users": "Users",
+          "users-text": "use the same app no matter the chain they come from."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Get Notified about Push Chain Testnet",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Be the first to know when Push Chain testnet goes live. Join our mailing list for exclusive updates."
+        },
+        "footer": {
+          "description": "Craft seamless, user-friendly experiences for you app on any blockchain with Push Chain.",
+          "cta": {
+            "text": "Get Notified"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Resources",
+              "items": {
+                "push101": {
+                  "title": "Push Chain Basics",
+                  "subtitle": "Learn about basics of Push Chain, It's innovations and why it is required",
+                  "ctatitle": "Explore More"
+                },
+                "builders": {
+                  "title": "Build on Push Chain",
+                  "subtitle": "Dive into how to build universal apps, what it unlocks and how to get started!",
+                  "ctatitle": "Builders Assemble"
+                },
+                "deepdives": {
+                  "title": "Technical Deep Dives",
+                  "subtitle": "Want to know the intricate working of Push? or just a curious fellow? Eitherway, say hello!",
+                  "ctatitle": "See it Tick"
+                },
+                "devdocs": {
+                  "title": "Developer Docs",
+                  "subtitle": "Let's come straight to the point! I am a universal chain... and you are a dev, let's make it official!",
+                  "ctatitle": "Build Now"
+                },
+                "tokenomics": {
+                  "title": "Explore Tokenomics",
+                  "subtitle": "Learn how our tokenomics incentivizes and ensures sustainable network that's built to last",
+                  "ctatitle": "Learn Token Design"
+                },
+                "faq": {
+                  "title": "FAQs",
+                  "subtitle": "The place to find answers to all the popular questions the community has asked",
+                  "ctatitle": "Read More"
+                }
+              }
+            }
+          }
+        }
+      },
       "push101": {
         "seo": {
           "title": "Push Chain Basics — Introduction",
@@ -496,6 +560,55 @@
           "og-description": "Learn the basics: what Push Chain is, how it works, and your first steps.",
           "twitter-title": "Push Chain Basics - Start here",
           "twitter-description": "Beginner guides to Push Chain and universal apps."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Push Chain Basics",
+            "sections": {
+              "push-chain-basics": {
+                "items": {
+                  "why-push-chain": "## Why Push Chain?\n\nPush Chain is the first **true universal L1**, purpose built to enable apps to seamlessly be interact-able by users of any chain.\n\nWrite your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.",
+                  "what-is-push-chain": "## What is Push Chain?\n\nPush Chain is a Proof-of-Stake (PoS) L1 blockchain that is designed to eliminate fragmentation across all chains.\n\nIt is a **shared state L1** blockchain for **Universal (Interoperable) Apps** across chains. Push Chain enables transactions from any chain (Eth, Solana, EVM, or non-EVM), enabling apps from any chain to be accessed by the users of any chain (**polymarket** from any chain, **pump.fun** from any chain, etc).",
+                  "innovations-of-push-chain": "## Innovations of Push Chain\n\nPush Chain introduces several groundbreaking innovations such as:\n\n**True Universal L1** - Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.\n\n**Universal Fee Abstraction** - Allows users to interact natively while being on the chain of their choice and using any tokens they want.\n\n**Wallet Abstraction** - Support MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet to access any apps.\n\n**Single transaction, no matter the chain** - users can interact with any app on Push Chain with a single transaction. No matter how they choose to interact with the app, they will only ever need to sign a single transaction.\n\n**Universal Smart Contracts** - Smart contracts are universal and will work instantly without any on-chain code changes or extra steps.\n\n**Shared State & Programmable Solvers** - Enables develepors to read and write state of other blockchains (Roadmap).\n\nThis results in **fully interoperable applications** for web3. In this paradigm, instead of being a user of \"Uniswap on Ethereum,\" \"Uniswap on Polygon,\" or \"Uniswap on Arbitrum,\" a person simply becomes a **user of Uniswap.**",
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "why-push-chain-future": {
+                "title": "Learn why Push Chain is the future of web3",
+                "items": {
+                  "learn-why-push-chain": {
+                    "title": "Why Push Chain is the Missing Layer in Web3",
+                    "subtitle": "Push Chain is designed as the shared state L1 that enables scalable, consumer-ready universal applications."
+                  },
+                  "innovations-by-push-chain": {
+                    "title": "Innovations by Push Chain",
+                    "subtitle": "Discover ten key innovations that unify any chain, any user, and any app."
+                  },
+                  "another-l1": {
+                    "title": "Is Push Chain Another L1?",
+                    "subtitle": "Push Chain isn’t about creating another siloed ecosystem — it’s about solving interoperability for everyone."
+                  },
+                  "evolution-of-push": {
+                    "title": "Evolution of Push",
+                    "subtitle": "From Push Protocol to Push Chain — the journey to building a universal, shared-state L1 for scalable Web3 apps."
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Consumer Apps 🫶🏽 on Push Chain",
+                    "subtitle": "Push Chain opens the door for the next wave of consumer apps that can run universally across chains."
+                  },
+                  "faq-push-chain": {
+                    "title": "Push Chain FAQs",
+                    "subtitle": "Got questions? Here are the most common answers about Push Chain and universal apps."
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "builders": {
@@ -506,6 +619,52 @@
           "og-description": "Guided tutorials, best practices, and examples for building with Push Chain.",
           "twitter-title": "Builders - How-tos & Tutorials",
           "twitter-description": "Step-by-step guides to ship on Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Build on Push Chain",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nReady to build on Push Chain? Here are some resources to get you inspired and started.",
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Let's Build Universal Apps 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Possible Only with Shared State - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Possible Only with Shared State - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Consumer Apps 🫶🏽 Push Chain?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Developer Resources",
+                "items": {
+                  "developer-docs": {
+                    "title": "Explore Developer Documentation"
+                  },
+                  "faucet": {
+                    "title": "Get Testnet Tokens"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "deepdives": {
@@ -516,6 +675,35 @@
           "og-description": "In-depth articles on Push Chain modules, design decisions, and performance.",
           "twitter-title": "Deep Dives - Under the hood",
           "twitter-description": "Explainers on how Push Chain works."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Deep Dives",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Architecture Deep Dives\n\nLearn about the intricacies of Push Chain's architecture and how it works - One module at a time.",
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Learn what makes Push Chain tick!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "Interop as a Spectrum"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Understanding Proof of Stake (POS) - Part 1"
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "tokenomics": {
@@ -526,6 +714,33 @@
           "og-description": "Settlement in $PC drives demand; usage-based sinks reduce supply. Includes staking economics and emissions.",
           "twitter-title": "Push Chain Tokenomics | Token Economics",
           "twitter-description": "Settlement in $PC, usage-driven sinks, staking economics, and emissions—concise investor overview."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Explore Tokenomics",
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "overview": "## Overview\n\nIn late 2024, the Push community voted to approve the launch of Push Chain, a shared state layer 1 blockchain designed to enable the development of universal applications and eliminate fragmentation across web3.\n\nPush Chain is a purpose-built layer that connects L1s, L2s, and L3s with near-instant finality and true scalability, which solves the fundamental issue with web3 applications: fragmentation. With the successful voting of the governance proposal, the Push Chain mission is now on its way toward building **any chain, any user, and any app.**\n\n:::warning ⚠️ Token not live yet\nThe Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.<p />\n\n\nDo not believe anyone offering early access to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## What is the Vision of Push Chain?\n\nAll blockchains have proven particularly useful for specific apps and use cases. Bitcoin enabled smart money. Ethereum enabled innovations for DeFi. Solana enabled fast apps and meme culture. Several L2s and new L1s are targeting other areas of concern.\n\nHowever, a blockchain that is purpose-built to enable chain abstraction and seamless interoperability in the space is still required. This chain would enable transactions from any chain (ETH, SOL, EVM or non-EVM) to power apps that can be used by **any user —** no matter their chain or wallet. This is the chain of **Universal Apps**. This is Push Chain!",
+                  "innovation": "### Built on innovation to eliminate blockchain isolation!\n\nPush Chain is revolutionary for both users and developers as it creates an environment for any developer to deploy their universal app in hours via a single universal smart contract deployment.\n\nIt also enables users to transact from the comfort, convenience, and choice of their ecosystem, no matter where the app resides.\n\nUnder the hood, this is achieved by:\n\n- Ability to do **transactions from any chain**\n- **Universal Fee & Wallet Abstraction** to enable users to use any chain, any wallet and pay in any token\n- **Universal Smart Contract** to enable devs to deploy instant interop apps in minutes\n- **Shared State** to read data from other blockchain\n- **Programmable Solver** to write data to any other chain\n\nAll of this enables a **Universal Execution Layer** to allow users of any chain to access and interact with the same app.",
+                  "fit": "### Where does Push Chain fit in?\n\nPush chain fits **every project…** **on every chain!**\n\n- **It allows developers** from any chain to create seamless full interop apps that can be used from any chain, via any wallet.<br />\n- **It allows users** the freedom to interact with the wallet of their choice or have a seamless signless experience via Push Universal Wallet with social login.<br />\n- **It allows shared app experiences** where users of all chains can come together and engage with universal DeFi, unified gaming, universal NFT, universal Governance, etc.<br />",
+                  "use-cases": "### What can be built on Push Chain?\n\nPush Chain brings seamless interoperability and unifies all L1s, L2s, & L3s and therefore is poised to become the playground of innovation and interop. You can build existing web3 use cases such as:\n\n![Primary use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nOr you can better web3 and create innovations:\n\n![Consumer use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nOr you can see some popular app examples and to take inspiration from:\n\n![Popular app examples on Push Chain](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
+                  "token-utility": "### What is the utility of the Push Chain token?\n\n1. **Staking & Validation** <br />\nThe token is used for staking to secure the network and participate in consensus. Validators and delegators earn rewards for their participation.\n\n2. **Transaction Fees** <br />\nThe token serves as the primary method for network fees for transactions and app usage.\n\n3. **Universal Fee Abstraction** <br />\nThe token enables users to pay fees in any token (ETH, SOL, USDC, etc.) while the protocol handles conversion behind the scenes.\n\n4. **Governance** <br />\nToken holders can participate in protocol governance, voting on upgrades, parameter changes, and ecosystem decisions.",
+                  "deflationary-design": "### Deflationary Design\n\n1. **Transaction Fee Burn** <br />\nA portion of transaction fees collected in the native Push Chain token are burned, reducing the total supply over time.\n\n2. **Cross Chain Burn** <br />\nUsing Universal Fee Abstractions, a part of the fee collected on other blockchain's native token (ETH, SOL) is swapped for Push Chain native token and burned.\n\nThis ensures a deflationary blockchain design that burns tokens as the network and the transactions that happen on it grow. This design enables the creation of an incentivized, sustainable long-term future for Push Chain and all its participants.",
+                  "migration-details": "### Migration Details\n\nPush Chain is the result of years of learning from building the leading notification and communication protocol of web3, which was one of the first consumer apps for crypto.\n\nOwing to this, apart from the airdrop allocated (see details below) to Push Chain users, creators, developers and ecosystem partners, **there is also a migration drop reserved for the $PUSH holders** (which was the native token of Push Protocol).\n\n<details>\n  <summary>\n  <b>Migration details for existing $PUSH token holders</b>\n\n  </summary>\n\n  **For existing $PUSH token holders**, the Push Chain tokenomics proposal allocates 15% of the total Push Chain token supply specifically for migration. The migration will occur at a ratio of **1:15**—meaning for each Push Protocol ($PUSH) token you hold, you'll receive 15 Push Chain tokens. For example, if you currently hold 40 $PUSH tokens, you'll receive 600 Push Chain tokens after migration.\n\n  The launch of Push Chain is designed to reward and incentivize prior Push Protocol ($PUSH) holders for their loyalty and contribution. The migration process for existing $PUSH token holders will work as follows:\n\n  - Tokens will migrate at a 1:15 ratio (1 Push Protocol token = 15 Push Chain tokens).\n  - Participants in the Push Chain migration will see 50% of their migrated tokens unlocked immediately, and an additional 50% unlocked after 3 months.\n  - Token migrators will also benefit from a dedicated yield farming pool reserved for them. These rewards will be distributed to token migrators if they stake their migrated Push Chain tokens, to reward them for long-term contribution to the ecosystem.\n  - For example, if you have 100 Push Protocol $PUSH tokens, you'll receive 750 Push Chain tokens when you migrate and 750 Push Chain tokens after 3 months — for a total of 1,500 Push Chain tokens. You can choose to stake these tokens to get additional rewards from the Push Chain yield farming pool, distributed periodically.\n\n  The Push Chain token migration will be open for 12 months after launch, after which any remaining tokens will go to the community and ecosystem reserve.\n\n</details>\n<p />",
+                  "airdrop-details": "### Airdrop Details\n\nAdditionally, the tokenomics proposal allocates 10% of the total Push Chain token supply for airdrops to past and present Push Protocol application users (notifications, messaging, chat). Along with new users, creators, developers, and ecosystem partners of Push Chain.\n\n<br />",
+                  "token-distribution": "## Token Distribution Details\n\nThe total supply of Push Chain tokens is proposed at **10 billion**, distributed as follows:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Airdrop distributions begin at TGE, but will happen over the course of multiple seasons.\n2. Core Contributors have a 12-month delay, followed by 24-month vesting.\n3. Push Labs Treasury has a 36-month vesting.\n4. Investors have 24-month linear vesting.\n5. Community and Ecosystem Reserves has a 13.5% unlock at TGE, followed by 36-month vesting.\n\n<br />",
+                  "get-involved": "## Get Involved\n\n- **🧙 Developers**\nExplore our SDK & Docs at [Documentation Hub](/docs/)\n\n- **🦹 Community**  \nFollow [@PushChain](https://x.com/PushChain) on X/Twitter, join our [Discord](https://discord.com/invite/pushchain) and [Telegram](https://t.me/epnsproject).\n\nTogether, let's build the future of **Universal Web3**!"
+                }
+              }
+            }
+          }
         }
       },
       "faq": {
@@ -536,6 +751,68 @@
           "og-description": "Find fast answers with links to guides, testnet, and support.",
           "twitter-title": "FAQ - Start here",
           "twitter-description": "Quick answers to Push Chain questions."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Frequently Asked Questions",
+            "sections": {
+              "faq-overview": {
+                "items": {
+                  "overview": "## Overview\n\nThe place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam 🫶 and curated by the Push team 💪.\n\n---",
+                  "what-is-push-chain": "### What is Push Chain?\n\nPush Chain is a shared-state Layer 1 blockchain built to eliminate fragmentation across all chains.\n\nBy enabling **seamless transactions from any chain** (Ethereum, Solana, EVM or non-EVM), it lets any user interact with web3 apps without juggling multiple wallets, tokens or gas mechanics.\n\nIn short, Push Chain unites L1s 🤝 L2s 🤝 L3s under one cohesive layer.\n\n---",
+                  "how-does-push-chain-work": "### How does Push Chain work?\n\n![How Normal Apps Work](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![How Universal Apps Work](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain takes a unique approach to solving the problem of fragmentation across all chains. Instead of relying on interoperability protocols, which add complexity for both users and developers, it takes a novel approach by building a true universal blockchain that can be natively used by any user from any chain.\n\nTo achieve this, Push Chain leverages several **precompiles** which are custom modules created to:\n\n1. **Recognize** users of other chains - Universal address standard that extends the address of a user to be blockchain agnostic (based on [CAIP-10 standards](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)).\n\n2. **Map** users to Push Chain - a Universal Executor Account (UEA) is deployed for each external-chain user. This module is used to deploy a smart account that then uses other precompiles to process the transactions.\n\n3. **Execute** universal transactions - This is done by using USV (Universal Signature Verification) and UTXV (Universal Transaction Verifier) precompiles to verify and execute signatures and transactions from other chains.\n\n4. **Abstract** away the complexities of the chain they are on - This is done by having universal gateway contracts on each chain that locks gas funds in native token of the chain (or any other compliant token) and then uses the UTXV precompiles to attribute the gas to UEA (Executor Account) and USV to execute the transaction.\n\nThis is an **extremely powerful approach** that allows users to interact with any app on Push Chain without worrying about the chain they are on or what wallet they are using as everything is abstracted away, for both the users and the developers.\n\n---",
+                  "why-unique-for-users": "### Why is Push Chain unique for users?\n\nPush Chain addresses specific gaps in the existing blockchains, such as interoperability, state access across chains, programmable solvers and wallet abstraction resulting in **true full-stack interoperability**. While existing blockchains are robust, they operate in their own eco-system and an aggregator to unite these chains are needed.\n\nPush Chain's focus is on being a **shared state chain** for universal (interoperable) applications acting as a unifying layer where all chains can come together and use Push Chain as universal hub or do settlement between them.\n\nIt offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet / User.** And is suitable for **Any App.**\n\n---",
+                  "core-innovations": "### What Makes Push Chain Innovative?\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\nPush Chain is a Proof-of-Stake Layer 1 designed to eliminate fragmentation across every blockchain. Under the hood, it combines several key innovations:\n\n- **True Universal Chain**  \n  Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.\n\n- **Universal Fee & Wallet Abstraction**  \n  Allows users to interact with the app from any chain without worrying about gas or wallet mechanics.\n\n- **Single transaction for any chain**  \n  Users only ever sign one transaction, no matter which chain they’re on.\n\n- **Universal Smart Contracts**  \n  100% EVM compatible smart contracts that can be deployed with **zero on-chain code changes**. Once deployed, they become instantly compatible with users of all chains.\n\n- **Universal EVM**  \n  Push Chain is smart enough to natively recognize users of other chains and correctly attributes and maps the transactions to them.\n\n- **Shared State and Programmable Solvers**  \n  (Roadmap) Enables smart contracts of Push Chain to read and write state to any other chain.\n\nTogether, these features let you build **universal web3 apps**. Instead of \"Uniswap on Ethereum\" or \"Uniswap on Polygon,\" a user simply becomes **user of Uniswap**—period.\n\n---",
+                  "problems-solved": "### What problems does Push Chain solve?\n\n- **Fragmentation**  \n  Unites EVM & non-EVM chains under one shared-state L1, so users never need to hop networks or wallets.\n\n- **Interoperability**  \n  Native support for transactions from any blockchain and on-chain shared state.\n\n- **Finality**  \n  Instant, irreversible native finality in ~1–2 seconds—no more waiting or reorgs.\n\n- **Onboarding & UX**  \n  Social/email login, gas-in-any-token & any-wallet support for zero-friction access across chains.\n\n- **Universal Apps**  \n  Build once, deploy everywhere — any web3 app works seamlessly for any user on any chain.\n\n---",
+                  "what-apps-can-build": "### What apps can you build on Push Chain?\n\n![Universal App Examples](/assets/website/chain/knowledge/faq/appusecases.webp)\n\nWith Push Chain's shared-state, cross-chain architecture, the possibilities are endless. Here are just a few flagship examples:\n\n- **Universal DEX**  \n  One swap UI for every liquidity pool—abstracted routing across all chains with the speed and UX of a CEX.\n\n- **Universal DeFi**  \n  A global bank in your browser: lending, borrowing, yield aggregators that span ecosystems without manual bridging.\n\n- **Universal AI Agents**  \n  Autonomous agents that pay and get paid in any token on any chain—perfect for subscription services, data bots, and more.\n\n- **Universal DAOs**  \n  Cross-chain governance where token holders vote and enact proposals irrespective of their origin chain.\n\n- **Universal Gaming**  \n  Multiplayer tournaments and in-game economies that unite players and assets from Ethereum, Solana, Polygon, and beyond.\n\n- **Universal Marketplace**  \n  Buy, sell, and trade NFTs and tokens from every chain in one consolidated marketplace.\n\n- **Universal Name Service**  \n  Human-readable names that resolve to wallets across multiple blockchains.\n\nThe apps and innovations that can happen on Push Chain are endless! Here are some [more use cases](/blog/consumer-apps-that-can-be-built-on-push-chain/) to get you started. Builders can also check out the [Documentation Hub](/docs/) to get started.\n\n---",
+                  "technical-section": "## Technical",
+                  "why-not-an-l2": "### Why L1 and not an L2?\n\nPush Chain is built to serve as a **shared settlement layer** and **universal execution layer** for all other blockchains—roles that only a standalone L1 can fulfill:\n\n- **Native Cross-Chain Settlement**  \n  As an L1, Push Chain can directly finalize transactions from any chain without relying on external security models or fraud proofs.\n\n- **Universal Execution & State Access**  \n  Running its own consensus and state machine lets Push Chain interpret and execute transactions from Ethereum, Solana, and beyond — something an L2 — tied to one base layer — can’t do natively.\n\n- **No L2 Constraints or Delays**  \n  L2s inherit the latency, finality rules, and gas model of their host chain (plus bridging overhead). Push Chain avoids these bottlenecks by offering instant finality and universal fee abstraction at the base layer.\n\n- **True Shared State**  \n  To read & write the state of multiple chains within smart contracts, you need direct, protocol-level access—only available at the L1 layer.\n\nIn short, only a purpose-built L1 can unify every chain under one cohesive execution and settlement layer — without extra complexity or added trust assumptions.\n\n---",
+                  "evm-compatibility": "### Is Push Chain EVM Compatible?\n\nYes, Push Chain is **EVM compatible** and much more. It supports:\n\n- **EVM Smart Contracts**: Deploy Solidity contracts just like on Ethereum\n- **Ethereum Tooling**: Use MetaMask, Hardhat, Remix, and other familiar tools\n- **Universal Extensions**: Additional precompiles for cross-chain functionality\n- **Multi-VM Support**: (Roadmap) Support for other VMs like SVM (Solana), MoveVM, etc.\n\nThis means developers can:\n- Port existing Ethereum dApps with minimal changes\n- Use familiar development workflows and tools\n- Access enhanced cross-chain capabilities through Push Chain's universal features\n\nIn practice, users and apps from any chain can interact with Push Chain apps seamlessly — no matter the underlying VM.\n\n---",
+                  "evm-non-evm-compatible": "### Will Push Chain be compatible with both EVM and non-EVM chains?\n\nYes! Push Chain is built to bridge every blockchain paradigm.\n\n- **EVM Compatibility**  \n  Drop in your Solidity contracts and they run unchanged, leveraging Push Chain's EVM runtime.\n\n- **Non-EVM Support**  \n  Native precompiles (USV/UTXV) and the universal address standard let Push Chain validate and execute transactions from Solana, Bitcoin, Cosmos SDK chains, and more.\n\nIn practice, users and apps from any chain can interact with Push Chain apps seamlessly — no matter the underlying VM.\n\n---",
+                  "why-not-ethereum-or-solana": "### Why create a new blockchain when existing ones like Ethereum and Solana already exist?\n\nExisting blockchains excel in their specific domains but create **fragmentation**:\n\n- **Ethereum**: Great for DeFi but expensive and slow\n- **Solana**: Fast and cheap but different tooling and ecosystem\n- **L2s**: Solve scaling but create more fragmentation\n\nPush Chain doesn't compete with these chains — it **unifies them**:\n\n- Users can interact with Push Chain apps using their existing wallets (MetaMask, Phantom, etc.)\n- Pay gas in their preferred tokens (ETH, SOL, USDC)\n- Developers build once instead of deploying on multiple chains\n- Liquidity and users from all chains can interact in the same apps\n\nPush Chain is the **missing piece** that makes all existing chains work together seamlessly.\n\n---",
+                  "shared-state-meaning": "### What does shared state blockchain mean?\n\nShared state refers to the present status of onchain data. A shared-state blockchain is one that has read-and-write access to its own state and the state of all other chains it interacts with.\n\nA shared state chain is capable of handling data, liquidity, and users from any other chain.\n\n---",
+                  "how-achieve-shared-state": "### How does Push Chain achieve shared state?\n\n![Push Chain Universal App](/assets/website/chain/knowledge/faq/pcuniversalapp.webp)\n\nA traditional blockchain only knows its own ledger and wallet standard. Push Chain extends that model in four key ways:\n\n1. **Universal Wallet Compatibility**  \n\t- Supports chain agnostic addresses from any chain (Ethereum, Solana, Bitcoin, Cosmos SDK, etc.)  \n\t- Signatures from any chain are verified via USV/UTXV precompiles, so users never switch wallets.\n\n2. **Universal Smart Contracts**  \n\t- EVM contracts deploy unchanged but can natively verify and execute cross-chain transactions.  \n\t- Push Chain's runtime handles signature mapping and payload parsing for every supported network.\n\n3. **On-Chain Shared State**  \n\t- Validators commit Merkle proofs of external chain state (via MPT roots) each block.  \n\t- Relayers fetch and submit leaf proofs on demand, so contracts can read any chain's data in real time.\n\n4. **Programmable Solvers**  \n\t- A solver network executes atomic cross-chain workflows (e.g., swap on Chain A, mint on Chain B) under a single transaction.  \n\t- Developers write simple solver scripts; the network handles routing and execution.\n\nTogether, these features turn Push Chain into a **shared-state L1** that enables universal apps to be native to all chains. A world where any user of any chain is able to access and interact with any app on any other chain.\n\n**Any Chain, Any App, Any User - One Push Chain**\n\n---",
+                  "consensus-mechanism": "### What consensus mechanism does Push Chain use?\n\nPush Chain uses **Proof-of-Stake (PoS)** consensus, built on the **CometBFT** engine, with several enhancements:\n\n- **Fast Finality**: Transactions are finalized in ~1–2 seconds, with deterministic finality (no reorgs)\n- **Energy Efficient**: PoS is environmentally sustainable compared to PoW\n- **Validator Network**: Decentralized network of validators securing the chain\n- **Slashing Protection**: Economic incentives ensure validator honesty\n\nCometBFT’s battle-tested BFT consensus is optimized here for the unique requirements of universal transaction processing and cross-chain state management.\n\n---",
+                  "transaction-fees": "### How do transaction fees work on Push Chain?\n\nPush Chain revolutionizes fee payment with **Universal Fee Abstraction**:\n\n- **Pay in Any Token**: Users can pay gas in ETH, SOL, USDC, or any supported token\n- **Cross-Chain Fee Payment**: Pay fees from your origin chain without bridging\n- **Gasless Transactions**: Apps can sponsor user transactions for seamless UX\n- **Dynamic Fee Market**: Fees adjust based on network demand\n\nThis means users never need to acquire native Push Chain tokens just to interact with apps.\n\n---",
+                  "true-universal-chain": "### What does True Universal Chain mean?\n\nA **true universal chain** is a blockchain that treats every other network as first class citizens—no bridges, no centralized relayers, and no compatibility hacks. It delivers:\n\n1. **Native Multichain Identity**  \n\tWallets from Ethereum, Solana, any EVM or non-EVM chains all sign, verify and execute natively on Push Chain. So users never switch accounts or are troubled by the complexities of multiple wallets.\n\n2. **Unified Settlement**  \n\tTransactions from any network finalize on Push Chain, giving everyone a single source of truth and enabling the same app to be accessible by users of all chains.\n\n3. **Single Transaction and Universal Fee Abstraction**  \n\tUsers sign just one transaction, regardless of their source chain and pay gas in any token. No more maintaining or swapping countless tokens to use an app.\n\n4. **Deploy Once, Use Everywhere**  \n\tDevelopers write and deploy smart contracts once (EVM or otherwise) with **zero** extra code — one deployment covers all chains.\n\nPush Chain is the first to bake these features directly into its consensus and runtime, truly eliminating fragmentation — no workarounds, no extra layers, just one universal chain for everyone.\n\n---",
+                  "competitors-section": "## Competitors",
+                  "vs-other-universal": "### What sets Push Chain apart from other Universal Solutions?\n\nToday's so-called \"universal\" solutions still rely on bridges, require double transactions or centralized relayers to move data and value. Push Chain is different—it's the first **true** universal L1 that:\n\n- **Unifies users across chains**  \n\tEvery blockchain address is natively supported. Wallets like MetaMask, Phantom, etc are all compatible with Push Chain. Gas is paid in any token on any chain.\n\n- **Acts as a universal execution layer**  \n\tAll transactions finalize on the same chain, ensuring everyone interacts with the same app—no hacks, no workarounds.\n\n- **Correctly attributes & executes any chain's transactions**  \n\tTransactions are signed, verified, and attributed to wallets on their source chains. A true universal chain supports them all.\n\n---",
+                  "vs-bridges-messaging": "### How is this different from bridges or messaging layers?\n\n**Short Answer**: Push is where your app runs. Bridges/messaging just move tokens or messages between chains which complicates everything for the user and developers.\n\n- **Single home vs many clones**  \n\tWith bridges/messaging you deploy per chain and sync via messages. On Push you deploy once; everyone hits the same contract and shared state.\n\n- **No wrapped assets or mandatory bridging**  \n\tUsers stay on their home chain and pay with what they already hold; we handle routing and fee conversion under the hood.\n\n- **Unified identity & verification**  \n\tWe accept signatures from any wallet/chain and attribute them to the same user on Push — non-custodial.\n\n- **Fewer moving parts**  \n\tNo cross-chain approval dance, no gas-token hunting, no glue contracts to keep in sync.\n\n- **Use bridges when you want, not because you must**  \n\tLiquidity can still move via bridges, but interacting with your app doesn't require it.\n\n**Result**: simpler apps, one source of truth, and a UX that feels like one chain — even when users aren't.\n\n---",
+                  "vs-layerzero": "### How is Push Chain different from LayerZero?\n\n**LayerZero:**\n- **Messaging Protocol**: Enables cross-chain message passing\n- **Relayer Dependency**: Relies on external relayers and oracles\n- **Developer Integration**: Apps must integrate LayerZero SDK\n- **Trust Assumptions**: Users must trust relayer infrastructure\n\n**Push Chain:**\n- **Native Execution**: Direct transaction execution from any chain\n- **No Relayers**: Built-in cross-chain functionality at protocol level\n- **Zero Integration**: Existing apps work without modifications\n- **Trust-Minimized**: No extra trust assumptions beyond Push Chain’s own consensus\n\nPush Chain provides native cross-chain execution while LayerZero requires additional infrastructure and integration.\n\n---",
+                  "vs-wormhole": "### How is Push Chain different from Wormhole?\n\n**Wormhole:**\n- **Bridge Protocol**: Primarily focused on token and NFT bridging\n- **Wrapped Assets**: Creates wrapped versions of tokens on different chains\n- **Guardian Network**: Relies on validator set to verify cross-chain messages\n- **Multi-Step Process**: Users must bridge assets before using apps\n\n**Push Chain:**\n- **Universal Execution**: Users interact directly without bridging\n- **Native Assets**: No wrapped tokens needed, use original assets\n- **Direct Verification**: Native signature verification from any chain\n- **Single Transaction**: Users interact in one step, no bridging required\n\nPush Chain eliminates the need for asset bridging while Wormhole requires it for cross-chain interactions.\n\n---",
+                  "vs-axelar": "### How is Push Chain different from Axelar?\n\n**Axelar:**\n- **Network of Networks**: Connects chains through Axelar network\n- **Validator Dependency**: Relies on Axelar validator set for security\n- **Gateway Contracts**: Requires gateway deployments on each chain\n- **Message Passing**: Focuses on cross-chain communication\n\n**Push Chain:**\n- **Direct Execution**: Transactions process natively on Push Chain without intermediaries\n- **Independent Security**: Own consensus without external dependencies\n- **Universal Contracts**: Single deployment works for all chains\n- **Native Execution**: Direct transaction processing from any chain\n\nPush Chain provides direct universal access while Axelar adds an intermediate layer.\n\n---",
+                  "vs-chainlink-ccip": "### How is Push Chain different from Chainlink CCIP?\n\n**Chainlink CCIP:**\n- **Oracle Network**: Uses Chainlink oracle infrastructure\n- **Message Routing**: Routes messages between different chains\n- **External Dependency**: Relies on Chainlink's decentralized network\n- **Integration Required**: Apps must integrate CCIP for cross-chain features\n\n**Push Chain:**\n- **Built-in Protocol**: Cross-chain functionality is native to the blockchain\n- **Direct Execution**: No external oracle network needed\n- **Self-Contained**: All verification and execution happens on Push Chain\n- **Automatic Compatibility**: Deploy existing contracts — they work out of the box for all users\n\nPush Chain has cross-chain capabilities built into its core protocol while CCIP is an external service layer.\n\n---",
+                  "vs-particle-network": "### How is Push Chain different from Particle Network?\n\n**Particle Network:**\n- **Account Abstraction Focus**: Primarily focuses on wallet abstraction and social login\n- **Multi-Chain Wallets**: Creates unified wallet experience across chains\n- **SDK Integration**: Requires integration of Particle SDK for functionality\n- **User Experience Layer**: Operates as a layer on top of existing chains\n\n**Push Chain:**\n- **Universal Blockchain**: Native blockchain that supports all chain users\n- **Protocol-Level Integration**: Cross-chain functionality built into consensus\n- **No SDK Required**: Existing wallets work natively without modification\n- **Base Layer**: Provides the underlying blockchain infrastructure, not just a UX layer\n\nPush Chain is a universal blockchain while Particle Network is a wallet abstraction service.\n\n---",
+                  "vs-agglayer": "### How is Push Chain different from AggLayer?\n\n**AggLayer (Polygon):**\n- **Aggregation Layer**: Aggregates liquidity and state across Polygon chains\n- **Polygon Ecosystem**: Specifically designed for Polygon CDK chains\n- **Shared Sequencing**: Provides unified sequencing for connected chains\n- **Ecosystem Specific**: Limited to Polygon's chain ecosystem\n\n**Push Chain:**\n- **Universal Chain**: Works with any blockchain, not ecosystem-specific\n- **Native Execution**: Direct transaction execution from any chain\n- **Chain Agnostic**: Supports Ethereum, Solana, Bitcoin, and all others\n- **One Deployment, Universal Apps**: Deploy a smart contract once on Push Chain, and it becomes accessible to users from any chain — enabling true app-level interoperability\n\nPush Chain enables universal applications with a single deployment across all blockchains, while AggLayer is focused on liquidity and sequencing aggregation within the Polygon ecosystem.\n\n---",
+                  "vs-cosmos": "### How is Push Chain different from Cosmos?\n\nWhile both enable cross-chain functionality, the approaches are fundamentally different:\n\n**Cosmos:**\n- **Hub-and-Spoke Model**: Chains connect through IBC protocol\n- **Separate Ecosystems**: Each chain maintains its own state and users\n- **Manual Bridging**: Users must bridge assets between chains\n- **Developer Complexity**: Need to deploy on multiple chains\n\n**Push Chain:**\n- **Universal Chain**: Single chain that natively supports all users\n- **Shared State**: One unified state accessible from any chain\n- **No Bridging**: Users interact directly from their origin chain\n- **Deploy Once**: Single deployment works for all chain users\n\nPush Chain removes the need for manual bridging and multi-chain deployments, offering a simpler, unified UX.\n\n---",
+                  "vs-polkadot": "### How is Push Chain different from Polkadot?\n\n**Polkadot:**\n- **Parachain Model**: Limited slots for connected chains\n- **Relay Chain Dependency**: All parachains depend on relay chain security\n- **Substrate Framework**: Requires specific development framework\n- **Auction System**: Expensive parachain slot auctions\n\n**Push Chain:**\n- **Universal Support**: Natively supports any existing chain\n- **Independent Security**: Own consensus and validator set\n- **EVM Compatible**: Use existing Ethereum tools and contracts\n- **No Auctions**: Direct integration without competitive bidding\n\nPush Chain integrates with existing chains directly, while Polkadot requires chains to be rebuilt as parachains.\n\n---",
+                  "token-section": "## Token Related",
+                  "new-token": "### Will there be a new token associated with Push Chain?\n\nAs a new layer 1, Push Chain would have its own native token with tokenomics suited to the functioning, maintenance, and security of a blockchain.\n\nFor full details, see our [Tokenomics deep dive](/knowledge/tokenomics/) 👀.\n\n---",
+                  "developers-section": "## Developers, Users and Node Operators",
+                  "early-adopter-incentives": "### Are there incentives for early adopters or node operators on Push Chain?\n\nNode operators will earn staking rewards once mainnet launches and are encouraged to take part in **Push Points Program** to earn rewards.\n\nEarly adopters are encouraged to take part in **Push Points Program** to earn rewards. Start by visiting [Push Portal](https://portal.push.org/).\n\n---",
+                  "developer-user-benefits": "### What benefits does Push Chain offer to developers and users?\n\n**🧙 For Developers**\n\n- **Deploy Once, 10× Your Reach**  \nDeploy your App a single time — no code changes — and it runs on every supported chain, even non-EVM networks.\n\n- **Audit-Friendly, 100% EVM Compatible**  \nLeverage existing Solidity contracts without extra audits or rewrites—focus your budget on features, not infrastructure.\n\n- **Unified, Frictionless UX**  \nUsers sign one transaction, pay in any token, and interact via any wallet — your app just works everywhere.\n\n- **Lightning-Fast DX**  \nSpin up with our SDKs, virtual editors, and React playgrounds; go from zero to live in minutes.\n\n**🦹 For Users**\n\n- **One-Click Onboarding**  \nLogin with email, social, or any existing wallet — no more seed phrases or chain-hopping.\n\n- **Seamless Interactions**  \nGas, wallet, and chain complexities are hidden — enjoy apps as if they were native to your network.\n\n- **We're Fast**  \nTransactions finalize in 1-2 seconds, feels like native to the chain you are on.\n\n---",
+                  "how-to-build": "### How can developers start building on Push Chain?\n\n🚀 Visit our [Documentation Hub](/docs/) to get everything you need:\n\n- 🖥️ **Virtual Code Editors**: Spin up SDK function calls in your browser  \n- ⚛️ **React Playground**: Prototype your frontend in real time  \n- 📚 **End-to-End Examples**: Follow complete project walkthroughs  \n\nYou'll have a sample app live in minutes—no local setup required!\n\n---",
+                  "dao-section": "## DAO and Grants",
+                  "governance-changes": "### How will the current governance system change when the new token launches?\n\nThe Push DAO governance system will both evolve and expand as Push Chain launches. This is an expected process, since Push is becoming something more encompassing than the original.\n\nDelegates, ambassador programs, subDAOs, and other DAO initiatives will be upgraded to reflect the key goals of achieving status as the hub for universal applications, run by all of the groups that make them possible.\n\n---",
+                  "doubts-section": "## Doubts",
+                  "push-services-future": "### What Happens to Push Notification and Push Chat?\n\nPush Chain is a natural evolution of Push Protocol's vision. Current services of Push Protocol remain a priority, ensuring they continue to improve while benefiting from the new infrastructure.\n\nToday's push notification and chat protocols will benefit significantly from being built on top of Push Chain. A dedicated section of the team will focus on maintaining and enhancing these protocols, ensuring they remain the de-facto standard in their respective domains.\n\nBy aligning with Push Chain, notifications and chat sent through the protocols will be processed as transactions on the chain. This integration not only enables these protocols to accrue value but also marks the beginning of a new chapter in their evolution, further enhancing their utility and impact within the web3 ecosystem.\n\n---",
+                  "project-distraction": "### Is this project a distraction from improving current services?\n\nNo, read ☝️ [above](#what-happens-to-push-notification-and-push-chat).\n\n---",
+                  "core-focus-shift": "### Is Push Chain a shift away from Push Protocol's core focus on notifications and chat?\n\nNo. Push Chain builds upon Push Protocol's established foundation. Push Chain represents the **next evolution** of Push Protocol, not a departure.\n\n---",
+                  "partnerships-effect": "### How will the launch of Push Chain affect existing partnerships and integrations?\n\nPush Chain complements existing partnerships by offering additional capabilities like cross-chain support, faster finality, and scalable solutions. It strengthens collaborations by enabling partners to build and scale universal applications.\n\n---",
+                  "decentralization-scaling": "### How will Push Chain maintain decentralization while scaling?\n\nOur Devnet demonstrated how we'll scale using dynamic sharding and parallel execution—boosting throughput without compromising decentralization.\n\nOn testnet, we focused on full stack interop with the chain running on [CometBFT](https://github.com/cometbft/cometbft), a battle-tested, Byzantine-fault-tolerant engine. The network achieved sub-second finality and has the ability to handle up to [20k transactions per minute](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nThis proof of concept is just the beginning. As we roll out further scaling optimizations in later phases, we're confident Push Chain can meet the demands of universal applications—securely and without centralization.\n\n---",
+                  "centralization-risks": "### Are there any risks of centralization with Push Chain?\n\n**No.** Push Chain's architecture emphasizes decentralization.\n\nPush Chain is fully decentralized and is designed to be robust and resilient. Anyone can run a node and participate in the network and is incentivized or penalized through PoS. To Summarize:\n\n- Validators and other actors operate independently and are incentivized through PoS.\n- Governance mechanisms ensure community involvement.\n- Every ecosystem party is included in governance to some extent.\n\nTo learn more about how to run a node, see our [Knowledge Base](/knowledge/) or check out our [Validator Node Repo](https://github.com/pushchain/push-chain-node).\n\n---",
+                  "support-section": "## Support and Engagement",
+                  "need-help": "### I need help, where can I contact Push Chain?\n\nFor support, you can [submit a ticket over here](https://app.push.org/support) or reach out to us on support@push.org.\n\nIf you are a developer, you can also reach out to us on our [Discord](https://discord.com/invite/pushchain) and we will be happy to help you.\n\n---",
+                  "how-to-contribute": "### Great, how can I contribute?\n\nThe best way to stay on top of Push Chain's progress is through the official Push channels: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), and [Discord](https://discord.com/invite/pushchain).\n\nAlways stay cautious of phishing attempts, fake sites, or scams asking for your crypto. All official communications will go out from our official Push handles.\n\n---"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -717,7 +994,7 @@
     "cookie-banner": {
       "message": "We use cookies to personalize your experience. Learn more in our",
       "privacy-policy-link": "Privacy Policy",
-      "privacy-policy-link-title": "Read Push Protocol privacy policy",
+      "privacy-policy-link-title": "Read Push Chain privacy policy",
       "privacy-policy-link-aria-label": "Open privacy policy in new tab",
       "accept-button": "Accept",
       "accept-button-title": "Accept cookies to personalize your experience",
@@ -1004,6 +1281,19 @@
       "go-to-title": "Go to {{page}} page",
       "current-page-aria-label": "Current page: {{page}}",
       "separator-aria-label": "Breadcrumb separator"
+    },
+    "explainer": {
+      "prepend": "Jump to ",
+      "append": ""
+    },
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Cover for ",
+        "image-append": "",
+        "link-prepend": "Explore ",
+        "link-append": "",
+        "cta-title": "Read More"
+      }
     }
   },
   "notifications": {

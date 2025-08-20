@@ -8,6 +8,70 @@
         "og-description": "Concepts, step-by-step how-tos, and answers to common questions about Push Chain.",
         "twitter-title": "Knowledge Base - Guides & FAQs",
         "twitter-description": "Quick guides, FAQs, and how-tos for Push Chain (no dev jargon)."
+      },
+      "hero-section": {
+        "title": "Knowledge Base",
+        "description": {
+          "highlighted": "Push Chain is a true universal blockchain designed to eliminate fragmentation across all chains.",
+          "developers": "Developers",
+          "developers-text": "deploy once and instantly become compatible with all supported EVM and non-EVM chains.",
+          "users": "Users",
+          "users-text": "use the same app no matter the chain they come from."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Get Notified about Push Chain Testnet",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Be the first to know when Push Chain testnet goes live. Join our mailing list for exclusive updates."
+        },
+        "footer": {
+          "description": "Craft seamless, user-friendly experiences for you app on any blockchain with Push Chain.",
+          "cta": {
+            "text": "Get Notified"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Resources",
+              "items": {
+                "push101": {
+                  "title": "Push Chain Basics",
+                  "subtitle": "Learn about basics of Push Chain, It's innovations and why it is required",
+                  "ctatitle": "Explore More"
+                },
+                "builders": {
+                  "title": "Build on Push Chain",
+                  "subtitle": "Dive into how to build universal apps, what it unlocks and how to get started!",
+                  "ctatitle": "Builders Assemble"
+                },
+                "deepdives": {
+                  "title": "Technical Deep Dives",
+                  "subtitle": "Want to know the intricate working of Push? or just a curious fellow? Eitherway, say hello!",
+                  "ctatitle": "See it Tick"
+                },
+                "devdocs": {
+                  "title": "Developer Docs",
+                  "subtitle": "Let's come straight to the point! I am a universal chain... and you are a dev, let's make it official!",
+                  "ctatitle": "Build Now"
+                },
+                "tokenomics": {
+                  "title": "Explore Tokenomics",
+                  "subtitle": "Learn how our tokenomics incentivizes and ensures sustainable network that's built to last",
+                  "ctatitle": "Learn Token Design"
+                },
+                "faq": {
+                  "title": "FAQs",
+                  "subtitle": "The place to find answers to all the popular questions the community has asked",
+                  "ctatitle": "Read More"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
