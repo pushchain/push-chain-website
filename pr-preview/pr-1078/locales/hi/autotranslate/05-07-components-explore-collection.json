@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "के लिए कवर ",
+        "image-append": "",
+        "link-prepend": "एक्सप्लोर करें ",
+        "link-append": "",
+        "cta-title": "और पढ़ें"
+      }
+    }
+  }
+}

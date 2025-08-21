@@ -2,30 +2,30 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Mari Bersama — Inisiatif Komunitas",
-        "description": "Inisiatif komunitas Push, postingan, dan banyak lagi.",
-        "og-title": "Mari Bersama - Inisiatif Komunitas untuk Push Chain",
+        "title": "Mari Berkembang Bersama — Inisiatif Komunitas",
+        "description": "Inisiatif komunitas Push, postingan, dan lainnya.",
+        "og-title": "Mari Berkembang Bersama - Inisiatif Komunitas untuk Push Chain",
         "og-description": "Inisiatif dan berbagi yang digerakkan oleh komunitas untuk Push Chain.",
-        "twitter-title": "Mari Bersama | Inisiatif Komunitas",
+        "twitter-title": "Mari Berkembang Bersama | Inisiatif Komunitas",
         "twitter-description": "Lihat inisiatif komunitas Push untuk Push Chain."
       },
       "hero-section": {
-        "title": "Mari Bersama",
-        "description": "Komunitas pembangun LF Push—merayakan apa yang Anda kirim dan siapa yang Anda bantu. Bagikan kemenangan Anda, tag <hashtag>#LFPush</hashtag> atau <mention>@PushChain</mention>, dan kami akan memperkuatnya."
+        "title": "Mari Berkembang Bersama",
+        "description": "Komunitas builder LF Push—merayakan apa yang kamu selesaikan dan siapa yang kamu bantu. Bagikan kemenanganmu, tag <hashtag>#LFPush</hashtag> atau <mention>@PushChain</mention>, dan kami akan memperluas jangkauannya."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Bagikan Kemenangan Anda",
+          "share-win": "Bagikan Kemenanganmu",
           "join-community": "Bergabung dengan Komunitas",
           "learn-more": "Pelajari Lebih Lanjut"
         },
         "meta": {
           "tweet-alt": "Tweet dari anggota komunitas Push Chain",
-          "loading-alt": "Memuat tweet komunitas lebih banyak"
+          "loading-alt": "Memuat lebih banyak tweet komunitas"
         },
         "tweets-counter": "{{count}} Tweet dan terus bertambah!",
-        "loading": "Memuat tweet lebih banyak...",
-        "end-message": "Anda telah mencapai akhir! 🎉"
+        "loading": "Memuat lebih banyak tweet...",
+        "end-message": "Kamu telah mencapai akhir! 🎉"
       }
     }
   }

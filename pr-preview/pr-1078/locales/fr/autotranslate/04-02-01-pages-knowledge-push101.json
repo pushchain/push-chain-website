@@ -4,11 +4,60 @@
       "push101": {
         "seo": {
           "title": "Les bases de Push Chain — Introduction",
-          "description": "Introduction facile pour les débutants à Push Chain et aux applications universelles—ce que c'est, comment ça fonctionne et comment commencer.",
+          "description": "Introduction conviviale à Push Chain et aux applications universelles – ce que c'est, comment cela fonctionne et comment démarrer.",
           "og-title": "Les bases de Push Chain - Introduction",
           "og-description": "Apprenez les bases : ce qu'est Push Chain, son fonctionnement et vos premières étapes.",
           "twitter-title": "Les bases de Push Chain - Commencez ici",
           "twitter-description": "Guides pour débutants sur Push Chain et les applications universelles."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Base de connaissances"
+            }
+          },
+          "blocks": {
+            "title": "Les bases de Push Chain",
+            "sections": {
+              "push-chain-basics": {
+                "items": {
+                  "why-push-chain": "## Pourquoi Push Chain?\n\nPush Chain est la première **vraie L1 universelle**, conçue spécifiquement pour permettre aux applications d'interagir de manière transparente avec les utilisateurs de n'importe quelle chaîne.\n\nÉcrivez votre contrat intelligent une fois, déployez-le sur Push Chain, et accédez instantanément aux utilisateurs sur Ethereum, Solana et toutes les autres chaînes prises en charge sans modifier le code sur chaîne.",
+                  "what-is-push-chain": "## Qu'est-ce que Push Chain?\n\nPush Chain est une blockchain L1 Proof-of-Stake (PoS) conçue pour éliminer la fragmentation entre toutes les chaînes.\n\nC'est une blockchain L1 à **état partagé** pour les **applications universelles (interopérables)** entre les chaînes. Push Chain permet les transactions de n'importe quelle chaîne (Eth, Solana, EVM, ou non-EVM), permettant aux applications de n'importe quelle chaîne d'être accessibles par les utilisateurs de n'importe quelle chaîne (**polymarket** de n'importe quelle chaîne, **pump.fun** de n'importe quelle chaîne, etc).",
+                  "innovations-of-push-chain": "## Innovations de Push Chain\n\nPush Chain introduit plusieurs innovations révolutionnaires telles que :\n\n**Vraie L1 universelle** – Prend en charge nativement toutes les chaînes et permet aux utilisateurs d'interagir avec la même application. Aucun relais centralisé, pont ou autre astuce nécessaire.\n\n**Abstraction universelle des frais** – Permet aux utilisateurs d'interagir nativement tout en étant sur la chaîne de leur choix et en utilisant n'importe quel jeton qu'ils souhaitent.\n\n**Abstraction du portefeuille** – Prend en charge MetaMask, Phantom et d'autres portefeuilles ainsi que la connexion sociale ou par e-mail via un fournisseur unifié. Les utilisateurs n'ont jamais besoin de créer un nouveau portefeuille pour accéder à des applications.\n\n**Une seule transaction, quelle que soit la chaîne** – les utilisateurs peuvent interagir avec n'importe quelle application sur Push Chain avec une seule transaction. Peu importe la manière dont ils choisissent d'interagir avec l'application, ils n'auront jamais besoin de signer plus d'une seule transaction.\n\n**Contrats intelligents universels** – Les contrats intelligents sont universels et fonctionneront instantanément sans modification du code sur chaîne ni étape supplémentaire.\n\n**État partagé et solveurs programmables** – Permet aux développeurs de lire et d'écrire l'état d'autres blockchains (Feuille de route).\n\nCela se traduit par des **applications entièrement interopérables** pour le web3. Dans ce paradigme, au lieu d'être un utilisateur de \"Uniswap sur Ethereum\", \"Uniswap sur Polygon\", ou \"Uniswap sur Arbitrum\", une personne devient simplement un **utilisateur d'Uniswap.**",
+                  "curated-reads": "## Lectures sélectionnées 👇"
+                }
+              },
+              "why-push-chain-future": {
+                "title": "Découvrez pourquoi Push Chain est l'avenir du web3",
+                "items": {
+                  "learn-why-push-chain": {
+                    "title": "Pourquoi Push Chain est la couche manquante dans le Web3",
+                    "subtitle": "Push Chain est conçu comme la L1 à état partagé qui permet des applications universelles évolutives et prêtes pour les consommateurs."
+                  },
+                  "innovations-by-push-chain": {
+                    "title": "Innovations par Push Chain",
+                    "subtitle": "Découvrez dix innovations clés qui unifient n'importe quelle chaîne, n'importe quel utilisateur et n'importe quelle application."
+                  },
+                  "another-l1": {
+                    "title": "Push Chain est-il une autre L1?",
+                    "subtitle": "Push Chain ne consiste pas à créer un autre écosystème cloisonné – il s'agit de résoudre l'interopérabilité pour tous."
+                  },
+                  "evolution-of-push": {
+                    "title": "Évolution de Push",
+                    "subtitle": "De Push Protocol à Push Chain – le parcours vers la construction d'une L1 à état partagé universelle pour les applications web3 évolutives."
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Applications grand public 🫶🏽 sur Push Chain",
+                    "subtitle": "Push Chain ouvre la voie à la prochaine vague d'applications grand public qui peuvent fonctionner universellement entre les chaînes."
+                  },
+                  "faq-push-chain": {
+                    "title": "Foire aux questions sur Push Chain",
+                    "subtitle": "Vous avez des questions ? Voici les réponses les plus courantes sur Push Chain et les applications universelles."
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

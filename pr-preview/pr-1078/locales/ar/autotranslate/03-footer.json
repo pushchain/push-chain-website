@@ -4,30 +4,30 @@
       "title": "ابقَ على اطلاع بآخر أخبار Push Chain",
       "title-secondary": "والتحديثات!",
       "title-aria-label": "قسم الاشتراك في النشرة الإخبارية",
-      "section-aria-label": "الاشتراك في النشرة الإخبارية لـ Push Chain"
+      "section-aria-label": "قسم الاشتراك في النشرة الإخبارية لـ Push Chain"
     },
     "main-section": {
-      "section-aria-label": "روابط وتصفح قسم التذييل",
+      "section-aria-label": "روابط التنقل ومعلومات أساسية في التذييل",
       "logo-link-title": "الصفحة الرئيسية لـ Push Chain",
       "logo-link-aria-label": "الصفحة الرئيسية لـ Push Chain",
-      "logo-alt": "Push Chain logo"
+      "logo-alt": "شعار Push Chain"
     },
     "columns": {
       "resources": {
         "title": "المصادر",
-        "title-aria-label": "تصفح قسم المصادر"
+        "title-aria-label": "روابط التنقل للمصادر"
       },
       "developers": {
         "title": "المطورون",
-        "title-aria-label": "تصفح قسم المطورين"
+        "title-aria-label": "روابط التنقل للمطورين"
       },
       "community": {
         "title": "المجتمع",
-        "title-aria-label": "تصفح قسم المجتمع"
+        "title-aria-label": "روابط التنقل للمجتمع"
       },
       "help": {
         "title": "المساعدة",
-        "title-aria-label": "تصفح قسم المساعدة"
+        "title-aria-label": "روابط التنقل للمساعدة"
       }
     },
     "links": {
@@ -38,25 +38,25 @@
       "github": "GitHub",
       "github-title": "مستودعات Push Chain على GitHub",
       "knowledge-base": "قاعدة المعرفة",
-      "knowledge-base-title": "قاعدة المعرفة لـ Push Chain",
+      "knowledge-base-title": "قاعدة معرفة Push Chain",
       "blog": "المدونة",
       "blog-title": "مدونة Push Chain",
-      "litepaper": "الورقة البيضاء المصغرة",
-      "litepaper-title": "الورقة البيضاء المصغرة لـ Push Chain (PDF)",
-      "brand-kit": "مجموعة العلامة التجارية",
+      "litepaper": "الورقة البيضاء الموجزة",
+      "litepaper-title": "الورقة البيضاء الموجزة لـ Push Chain (PDF)",
+      "brand-kit": "عدة العلامة التجارية",
       "brand-kit-title": "أصول وإرشادات العلامة التجارية لـ Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "مستكشف سلسلة كتل Push Chain",
-      "faucet": "صنبور",
-      "faucet-title": "احصل على رموز اختبار من صنبور Push Chain",
+      "push-scan-title": "مستكشف Blockchain الخاص بـ Push Chain",
+      "faucet": "صنبور الاختبار",
+      "faucet-title": "احصل على رموز اختبار من صنبور الاختبار الخاص بـ Push Chain",
       "push-portal": "Push Portal",
-      "push-portal-title": "بوابة مجتمع Push Protocol",
+      "push-portal-title": "بوابة مجتمع Push Chain",
       "support": "الدعم",
       "support-title": "مركز المساعدة",
       "security": "الأمان والإفصاح",
-      "security-title": "الإبلاغ عن ثغرة أمنية (إفصاح مسؤول)",
+      "security-title": "الإبلاغ عن ثغرة أمنية (الإفصاح المسؤول)",
       "contact-us": "اتصل بنا",
-      "contact-us-title": "الشراكات، أو التطوير التجاري، أو الإعلام، أو الاستفسارات العامة",
+      "contact-us-title": "الشراكات، BD، وسائل الإعلام، أو الاستفسارات العامة",
       "careers": "الوظائف",
       "careers-title": "الوظائف المتاحة في Push Chain",
       "twitter": "X (تويتر)",
@@ -69,7 +69,7 @@
       "telegram-title": "انضم إلى مجتمع Telegram الخاص بـ Push Chain"
     },
     "social-section": {
-      "section-aria-label": "روابط وسائل التواصل الاجتماعي والمعلومات القانونية",
+      "section-aria-label": "روابط وسائل التواصل الاجتماعي ومعلومات قانونية",
       "twitter-icon-title": "Push Chain على X (تويتر)",
       "twitter-icon-aria-label": "Push Chain على X (تويتر)",
       "github-icon-title": "Push Chain على GitHub",
@@ -88,8 +88,8 @@
       "cookie-preferences-title": "إدارة إعدادات ملفات تعريف الارتباط"
     },
     "footer-image": {
-      "alt": "توضيح تذييل Push Chain",
-      "title": "Push Chain - سلسلة كتل عالمية"
+      "alt": "صورة توضيحية لتذييل Push Chain",
+      "title": "Push Chain - Blockchain عالمي"
     }
   }
 }

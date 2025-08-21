@@ -2,38 +2,40 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Trang chủ",
-        "description": "Lớp 1 chia sẻ trạng thái cho các ứng dụng đa năng. Triển khai một lần; tiếp cận người dùng trên bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào.",
-        "og-title": "Push Chain - Lớp 1 đa năng cho các ứng dụng",
-        "og-description": "Một lần triển khai cho người dùng EVM và phi EVM. Sử dụng bất kỳ ví nào và thanh toán bằng bất kỳ token nào — không cần chuyển mạng.",
-        "twitter-title": "Triển khai một lần. Tiếp cận bất kỳ chuỗi nào.",
-        "twitter-description": "Giao dịch từ bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào. Không cần chuyển mạng."
+        "title": "Trang chủ - Push Chain | Chuỗi đa năng cho Ứng dụng",
+        "description": "Lớp 1 chia sẻ trạng thái cho các ứng dụng đa năng. Triển khai một lần; tiếp cận người dùng trên mọi chuỗi. Sử dụng bất kỳ ví tiền nào. Thanh toán bằng bất kỳ token nào.",
+        "og-title": "Push Chain - Lớp 1 đa năng cho Ứng dụng",
+        "og-description": "Một lần triển khai cho người dùng EVM và không EVM. Sử dụng bất kỳ ví tiền nào và thanh toán bằng bất kỳ token nào — không cần chuyển mạng.",
+        "twitter-title": "Triển khai một lần. Tiếp cận mọi chuỗi.",
+        "twitter-description": "Giao dịch từ bất kỳ chuỗi nào. Sử dụng bất kỳ ví tiền nào. Thanh toán bằng bất kỳ token nào. Không cần chuyển mạng."
       },
       "hero-section": {
-        "title": "Bất kỳ Chuỗi nào, Bất kỳ Ứng dụng nào, Tất cả Người dùng.\nMột Push Chain.",
-        "description": "Lớp 1 đầu tiên được xây dựng cho các Ứng dụng đa năng. \nXây dựng & Triển khai một lần, tích hợp người dùng từ bất kỳ chuỗi nào.",
+        "title": "Bất kỳ Chuỗi nào, Bất kỳ Ứng dụng nào, Tất cả Người dùng.\nChỉ một Push Chain.",
+        "description": "Lớp 1 đầu tiên được xây dựng cho Ứng dụng đa năng. \nXây dựng & Triển khai một lần, đưa người dùng từ bất kỳ chuỗi nào lên tàu.",
         "primary-button": "Bắt đầu Xây dựng",
-        "primary-button-title": "Bắt đầu hành trình xây dựng của bạn với Push Chain!",
-        "secondary-button": "Khám phá Cơ sở Kiến thức",
+        "primary-button-title": "Khởi hành hành trình xây dựng cùng Push Chain!",
+        "secondary-button": "Khám phá Cơ sở tri thức",
         "secondary-button-title": "Tìm hiểu và khám phá Push Chain",
-        "section-aria-label": "Phần giới thiệu về Push Chain hero section - blockchain lớp 1 đa năng",
-        "primary-button-aria-label": "Bắt đầu xây dựng các ứng dụng đa năng trên Push Chain - Chuyển đến tài liệu dành cho nhà phát triển",
-        "secondary-button-aria-label": "Tìm hiểu về các tính năng và khái niệm của Push Chain trong cơ sở kiến thức",
-        "hero-background-alt": "Hoạt ảnh nền của Push Chain hero section thể hiện kết nối blockchain đa năng",
-        "hero-background-title": "Hình ảnh minh họa kết nối blockchain đa năng của Push Chain",
-        "animation-alt": "Hoạt ảnh tương tác thể hiện khả năng tương tác tức thời của Push Chain giữa nhiều blockchain",
-        "animation-title": "Hình ảnh minh họa khả năng tương tác tức thời của Push Chain"
+        "section-aria-label": "Phần giới thiệu Push Chain hero section - Chuỗi blockchain lớp 1 đa năng",
+        "primary-button-aria-label": "Bắt đầu xây dựng ứng dụng đa năng trên Push Chain - Đến tài liệu dành cho nhà phát triển",
+        "secondary-button-aria-label": "Tìm hiểu về các tính năng và khái niệm của Push Chain trong cơ sở tri thức",
+        "hero-background-alt": "Hình ảnh động nền của Push Chain hero cho thấy kết nối blockchain đa năng",
+        "hero-background-title": "Push Chain - Lớp 1 đa năng cho các ứng dụng liên chuỗi",
+        "schema-headline": "Push Chain - Lớp 1 đa năng cho Ứng dụng",
+        "schema-description": "Mô tả chi tiết về Push Chain và lợi ích của nó"
       },
       "stats-section": {
-        "section-aria-label": "Thống kê hiệu suất của Push Chain",
+        "section-aria-label": "Thống kê hiệu suất Push Chain",
         "title": "Đạt được",
-        "titleGradient": "Tức thì",
-        "titleThird": "Khả năng tương tác",
-        "description": "Tối ưu hóa hiệu suất.\nTPS cao, chi phí gas cực thấp và thời gian xác nhận dưới một giây\ncho quá trình thực thi ứng dụng theo thời gian thực.",
+        "titleGradient": "Kết nối",
+        "titleThird": "Ngay lập tức",
+        "description": "Tối ưu hóa hiệu suất.\nTPS cao, chi phí gas cực thấp và độ trễ dưới một giây\ncho trải nghiệm ứng dụng theo thời gian thực.",
+        "animation-alt": "Hình ảnh động tương tác cho thấy khả năng kết nối tức thì của Push Chain trên nhiều blockchain",
+        "animation-title": "Hình ảnh hóa khả năng kết nối tức thì của Push Chain",
         "stats": {
           "stat1": {
             "title": "Chuỗi được hỗ trợ",
-            "imagealt": "Hình ảnh minh họa các chuỗi được hỗ trợ",
+            "imagealt": "Hình ảnh minh họa cho thấy các chuỗi được hỗ trợ",
             "imagetitle": "Danh sách tất cả các chuỗi được hỗ trợ như Ethereum, Solana, BNB Chain, v.v."
           },
           "stat2": {
@@ -41,102 +43,102 @@
             "description": "4.2k"
           },
           "stat3": {
-            "title": "XÁC NHẬN NATIVE",
-            "description": "Tức thì"
+            "title": "Xác thực bản địa",
+            "description": "Ngay lập tức"
           },
           "stat4": {
-            "title": "THỜI GIAN KHỐI NATIVE",
+            "title": "THỜI GIAN KHỐI BẢN ĐỊA",
             "description": "1s"
           }
         }
       },
       "blog-section": {
-        "subtitle": "TIN TỨC, DEVLOGS & Ý TƯỞNG",
+        "subtitle": "TIN TỨC, BLOG DEV & Ý TƯỞNG",
         "subtitle-aria-label": "Thông tin danh mục blog",
-        "title": "Nhịp điệu của Push Chain của bạn",
-        "title-aria-label": "Bài đăng và cập nhật blog Push Chain mới nhất",
-        "explore-link-text": "Khám phá thêm Bài viết",
+        "title": "Nguồn tin của Push Chain",
+        "title-aria-label": "Bài đăng và cập nhật blog mới nhất của Push Chain",
+        "explore-link-text": "Khám phá thêm các bài viết",
         "explore-link-title": "Truy cập blog Push Chain để đọc tất cả các bài viết và cập nhật",
         "explore-link-aria-label": "Điều hướng đến trang blog Push Chain",
         "section-aria-label": "Phần bài đăng và tin tức blog Push Chain",
         "blog-posts-list-aria-label": "Bài đăng blog Push Chain gần đây",
         "blog-post-aria-label": "Đọc bài đăng blog về {title}",
-        "blog-post-title-prefix": "Đọc bài đăng blog - ",
-        "loading-text": "Đang tải bài đăng blog mới nhất...",
-        "error-text": "Không thể tải bài đăng blog vào lúc này",
+        "blog-post-title-prefix": "Đọc bài đăng - ",
+        "loading-text": "Đang tải các bài đăng blog mới nhất...",
+        "error-text": "Không thể tải các bài đăng blog tại thời điểm này",
         "no-posts-text": "Không có bài đăng blog nào"
       },
       "trustedby-section": {
-        "title": "Được xây dựng bởi đội ngũ được tin cậy bởi những người tiên phong của web3",
+        "title": "Được xây dựng bởi đội ngũ đáng tin cậy của những người tiên phong web3",
         "section-aria-label": "Phần đáng tin cậy của Push Chain",
         "trusted-by-alt": "Nhà đầu tư - "
       },
       "featured-section": {
         "aria-label": "Phần nổi bật",
         "tag": "NỔI BẬT TRÊN",
-        "title": "Push Chain trên các trang báo",
-        "subtitle": "Đừng chỉ tin vào lời chúng tôi. Hãy xem giới truyền thông đang nói gì về chuỗi đa năng thực sự.",
-        "articles-image-alt": "Độ phủ sóng truyền thông từ ",
-        "articles-text": "Đọc đầy đủ độ phủ sóng",
+        "title": "Push Chain trên truyền thông",
+        "subtitle": "Đừng chỉ nghe lời chúng tôi. Hãy xem truyền thông nói gì về chuỗi đa năng thực sự.",
+        "articles-image-alt": "Độ phủ truyền thông từ ",
+        "articles-text": "Đọc nội dung đầy đủ",
         "articles-title-1": "Đọc ",
-        "articles-title-2": "'s nhận xét về Push Chain chi tiết",
+        "articles-title-2": " suy nghĩ chi tiết về Push Chain",
         "articles": {
           "binance-chain": {
-            "text": "Chúng tôi rất vui thông báo rằng Push Protocol, một giao thức giao tiếp phi tập trung hàng đầu cho Web3, hiện đã ra mắt trên BNB Chain."
+            "text": "Chúng tôi rất vui thông báo rằng Push Protocol, giao thức truyền thông phi tập trung hàng đầu cho Web3, hiện đã ra mắt trên BNB Chain."
           },
           "coindesk": {
-            "text": "Protocol Village: Unstoppable Works With Push Protocol để cung cấp các cuộc trò chuyện nhóm được gắn token."
+            "text": "Protocol Village: Unstoppable Works With Push Protocol Để Cung Cấp Trò Chuyện Nhóm Được Mã Hóa Token"
           },
           "defiant": {
-            "text": "Unstoppable Domains Ra mắt tính năng trò chuyện nhóm được gắn thẻ. Sự hợp tác với Push Protocol nhằm chống lại thông tin sai lệch và gian lận."
+            "text": "Unstoppable Domains Ra mắt Trò Chuyện Nhóm Được Mã Hóa Token. Hợp tác với Push Protocol nhằm ngăn chặn thông tin sai lệch và lừa đảo."
           },
           "balaji": {
             "text": "Thông báo do người dùng kiểm soát. Hai công ty kiểm soát thông báo đẩy đến hàng tỷ điện thoại thông minh: Apple và Google."
           },
           "defiprime": {
-            "text": "Harsh Rajat nói về tương lai của ngân hàng, động lực giao thức EPNS và mô hình kinh doanh cho thông báo đẩy phi tập trung."
+            "text": "Harsh Rajat nói về tương lai của ngân hàng, các ưu đãi giao thức EPNS và mô hình kinh doanh cho thông báo đẩy phi tập trung."
           },
           "ethfoundation": {
-            "text": "Kể từ HackMoney, Richa và Harsh đã tập trung năng lượng đáng kinh ngạc vào việc xây dựng EPNS thành \"một phần còn thiếu của web3.\""
+            "text": "Kể từ HackMoney, Richa và Harsh đã hướng năng lượng đáng kinh ngạc vào việc xây dựng EPNS thành \"phần còn thiếu của web3\"."
           },
           "beincrypto": {
-            "text": "Cách mạng lưới giao tiếp Web3 hoạt động: Phân tích kỹ thuật sâu"
+            "text": "Cách mạng Mạng Truyền Thông Web3 Hoạt Động: Phân Tích Kỹ Thuật Sâu"
           },
           "the-block": {
-            "text": "Push Protocol chuẩn bị ra mắt chuỗi blockchain gốc"
+            "text": "Giao thức thông báo web3 Push sắp ra mắt chuỗi riêng của mình"
           },
           "business-insider": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng blockchain đa năng"
+            "text": "Push Giới Thiệu Push Chain: Tương Lai Của Ứng Dụng Blockchain Đa Năng"
           },
           "chainwire": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng blockchain đa năng."
+            "text": "Push Giới Thiệu Push Chain: Tương Lai Của Ứng Dụng Blockchain Đa Năng."
           },
           "benzinga": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng blockchain đa năng"
+            "text": "Push Giới Thiệu Push Chain: Tương Lai Của Ứng Dụng Blockchain Đa Năng"
           },
           "crypto-briefing": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng blockchain đa năng"
+            "text": "Push Giới Thiệu Push Chain: Tương Lai Của Ứng Dụng Blockchain Đa Năng"
           },
           "cryptoslate": {
-            "text": "Push Protocol ra mắt Push Chain để thống nhất giao tiếp và giao dịch blockchain"
+            "text": "Push Protocol Ra Mắt Push Chain Để Thống Nhất Truyền Thông Và Giao Dịch Blockchain"
           },
           "messari": {
-            "text": "EPNS cho phép các ưu đãi và thu nhập thụ động cho người dùng nhận được các thông báo phi tập trung."
+            "text": "EPNS cho phép các ưu đãi và thu nhập thụ động cho người dùng nhận thông báo phi tập trung."
           },
           "coin-telegraph-1": {
-            "text": "Harsh Rajat, người sáng lập và trưởng dự án của Push Protocol, giải thích sự bùng nổ phát triển của các ứng dụng trò chuyện Web3 trong tập mới nhất của Hashing It Out."
+            "text": "Harsh Rajat, người sáng lập và trưởng dự án của Push Protocol, giải thích sự bùng nổ trong sự phát triển của ứng dụng trò chuyện web3 trong tập cuối cùng của Hashing It Out."
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains ra mắt tính năng trò chuyện nhóm được gắn thẻ cho người nắm giữ tên người dùng."
+            "text": "Unstoppable Domains ra mắt tính năng trò chuyện nhóm được mã hóa badge cho chủ sở hữu tên người dùng."
           }
         }
       },
       "ending-section": {
-        "aria-label": "Phần Xây dựng các Ứng dụng đa năng",
-        "section-title": "Xây dựng các Ứng dụng đa năng.",
-        "section-subtitle": "Phá vỡ các silo. Xây dựng một lần, mở rộng quy mô trên mọi blockchain.",
+        "aria-label": "Xây dựng ứng dụng đa năng",
+        "section-title": "Xây dựng ứng dụng đa năng.",
+        "section-subtitle": "Phá vỡ các silo. Xây dựng một lần, mở rộng trên mọi blockchain.",
         "docs-link": {
-          "text": "Khám phá Tài liệu Push Chain",
+          "text": "Khám phá tài liệu Push Chain",
           "title": "Khám phá tài liệu và tài nguyên dành cho nhà phát triển của Push Chain",
           "aria-label": "Mở tài liệu Push Chain trong tab mới"
         },

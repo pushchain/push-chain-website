@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Обложка для ",
+        "image-append": "",
+        "link-prepend": "Изучить ",
+        "link-append": "",
+        "cta-title": "Читать далее"
+      }
+    }
+  }
+}

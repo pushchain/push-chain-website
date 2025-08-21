@@ -1,9 +1,9 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Abrir um Ticket de Suporte",
+      "collapsed-text-for-support": "Abrir um Chamado de Suporte",
       "expanded-title-for-support": "Precisa de ajuda? 👋",
-      "collapsed-text-for-contact": "Entre em Contato com a Equipe",
+      "collapsed-text-for-contact": "Entrar em Contato com a Equipe",
       "expanded-title-for-contact": "Olá! 👋",
       "categories": {
         "technical": {
@@ -12,35 +12,35 @@
         },
         "network": {
           "label": "🌐 Rede & Testnet",
-          "description": "Explorer/Push Scan, RPC, Faucet, problemas com a Donut testnet"
+          "description": "Explorer/Push Scan, RPC, Faucet, problemas com a testnet Donut"
         },
         "wallet": {
           "label": "👛 Carteira Universal",
-          "description": "Push Wallet, conexão universal à blockchain ou outros problemas com a carteira"
+          "description": "Push Wallet, conexão universal com a blockchain ou outros problemas com a carteira"
         },
         "identity": {
           "label": "🪪 Contas & Identidade",
-          "description": "UEA/UOA, assinaturas, dúvidas de atribuição"
+          "description": "UEA/UOA, assinaturas, dúvidas sobre atribuição"
         },
         "security": {
           "label": "🛡️ Segurança",
           "description": "Relatos de vulnerabilidades, divulgação responsável (security@push.org)"
         },
         "general": {
-          "label": "💬 Pergunta Geral",
+          "label": "💬 Dúvida Geral",
           "description": "Perguntas, feedback, outros tópicos"
         },
         "partnerships": {
           "label": "🤝 Parcerias & Integrações",
-          "description": "BD, integrações de ecossistema (carteiras, infra, exchanges, protocolos)"
+          "description": "BD, integrações com o ecossistema (carteiras, infra, exchanges, protocolos)"
         },
         "grants": {
-          "label": "💰 Subvenções & Programas de Ecossistema",
-          "description": "BRB, Bootcamp, subvenções, dúvidas de financiamento"
+          "label": "💰 Subvenções & Programas do Ecossistema",
+          "description": "BRB, Bootcamp, subvenções, dúvidas sobre financiamento"
         },
         "media": {
           "label": "📰 Mídia & Imprensa",
-          "description": "Entrevistas, declarações, recursos, verificações de fatos"
+          "description": "Entrevistas, declarações, ativos, verificação de fatos"
         },
         "events": {
           "label": "🎤 Palestras & Eventos",
@@ -51,11 +51,11 @@
           "description": "Vagas abertas, estágios, oportunidades de contrato"
         },
         "validators": {
-          "label": "🧡 Validadores / Operadores de Node",
-          "description": "Interesse de operador, provedores de RPC, parceiros de infra"
+          "label": "🧡 Validadores / Operadores de Nó",
+          "description": "Interesse do operador, provedores de RPC, parceiros de infraestrutura"
         },
         "legal": {
-          "label": "⚖️ Legal & Conformidade",
+          "label": "⚖️ Legal & Compliance",
           "description": "Marcas registradas, solicitações de dados, acordos"
         }
       },
@@ -63,20 +63,20 @@
         "steps": {
           "category": {
             "title": "Em que podemos ajudar?",
-            "subtitle": "Escolha a categoria que melhor descreve sua solicitação"
+            "subtitle": "Escolha a categoria que melhor descreve sua dúvida"
           },
           "contact": {
             "title": "Vamos nos conhecer",
             "subtitle": "Usaremos essas informações para entrar em contato com você",
             "name-label": "Seu Nome",
             "name-placeholder": "Digite seu nome completo",
-            "name-aftergreet": "Prazer em te conhecer, ",
-            "email-label": "Endereço de Email",
-            "email-placeholder": "Digite seu endereço de email"
+            "name-aftergreet": "Prazer em conhecê-lo(a), ",
+            "email-label": "Endereço de E-mail",
+            "email-placeholder": "Digite seu endereço de e-mail"
           },
           "details": {
             "title": "Conte-nos mais",
-            "subtitle": "Forneça detalhes sobre sua solicitação",
+            "subtitle": "Forneça detalhes sobre sua dúvida",
             "subject-label": "Assunto",
             "subject-placeholder": "Resumo breve do seu problema",
             "message-label": "Mensagem",
@@ -91,27 +91,27 @@
         "buttons": {
           "next": "Próximo",
           "previous": "Anterior",
-          "submit": "Enviar Ticket",
+          "submit": "Enviar Chamado",
           "submitting": "Enviando..."
         },
         "validation": {
           "name-required": "Nome é obrigatório",
           "name-min-length": "Nome deve ter pelo menos 2 caracteres",
-          "email-required": "Email é obrigatório",
-          "email-invalid": "Digite um endereço de email válido",
+          "email-required": "E-mail é obrigatório",
+          "email-invalid": "Digite um endereço de e-mail válido",
           "subject-required": "Assunto é obrigatório",
           "message-required": "Mensagem é obrigatória",
           "category-required": "Selecione uma categoria",
           "default": "Este campo é obrigatório"
         },
         "success": {
-          "title": "Ticket Enviado com Sucesso!",
-          "message": "Obrigado por entrar em contato conosco. Recebemos seu ticket de suporte e entraremos em contato com você o mais rápido possível.",
-          "button": "Enviar Outro Ticket"
+          "title": "Chamado Enviado com Sucesso!",
+          "message": "Obrigado por entrar em contato conosco. Recebemos seu chamado de suporte e entraremos em contato o mais rápido possível.",
+          "button": "Enviar Outro Chamado"
         },
         "error": {
           "title": "Envio Falhou",
-          "message": "Ocorreu um erro ao enviar seu ticket. Tente novamente ou entre em contato conosco diretamente.",
+          "message": "Ocorreu um erro ao enviar seu chamado. Tente novamente ou entre em contato diretamente conosco.",
           "button": "Tentar Novamente"
         }
       }

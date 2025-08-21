@@ -3,12 +3,41 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "Análisis Profundo — Conceptos y Arquitectura",
-          "description": "Explicaciones claras sobre estado compartido, abstracción de tarifas, USV/UEA y la capa de ejecución universal.",
-          "og-title": "Análisis Profundo - Conceptos y Arquitectura",
-          "og-description": "Artículos detallados sobre los módulos de Push Chain, decisiones de diseño y rendimiento.",
-          "twitter-title": "Análisis Profundo - Bajo el capó",
+          "title": "Análisis en Profundidad — Conceptos y Arquitectura",
+          "description": "Explicaciones claras y concisas sobre estado compartido, abstracción de tarifas, USV/UEA y la capa de ejecución universal.",
+          "og-title": "Análisis en Profundidad - Conceptos y Arquitectura",
+          "og-description": "Artículos en profundidad sobre los módulos de Push Chain, decisiones de diseño y rendimiento.",
+          "twitter-title": "Análisis en Profundidad - Bajo el capó",
           "twitter-description": "Explicaciones sobre cómo funciona Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Base de Conocimiento"
+            }
+          },
+          "blocks": {
+            "title": "Análisis en Profundidad",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Análisis en Profundidad de la Arquitectura\n\nConoce las complejidades de la arquitectura de Push Chain y cómo funciona, un módulo a la vez.",
+                  "curated-reads": "## Lecturas Recomendadas 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "¡Aprende qué hace que Push Chain funcione!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "La Interoperabilidad como un Espectro"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Entendiendo Proof of Stake (POS) - Parte 1"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

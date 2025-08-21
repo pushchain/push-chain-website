@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Cover für ",
+        "image-append": "",
+        "link-prepend": "Entdecke ",
+        "link-append": "",
+        "cta-title": "Mehr erfahren"
+      }
+    }
+  }
+}

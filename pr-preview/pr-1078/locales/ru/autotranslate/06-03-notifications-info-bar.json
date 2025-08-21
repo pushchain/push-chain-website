@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "Запуск на Push Testnet уже доступен — получите награды для разработчиков и первых пользователей.",
-      "learn-more-text": "Подробнее",
-      "learn-more-title": "Узнайте больше об этом объявлении",
-      "dismiss-button-title": "Закрыть объявление",
-      "dismiss-button-aria-label": "Закрыть панель объявлений",
-      "container-aria-label": "Объявление сайта",
-      "star-icon-alt": "Иконка звезды объявления"
+      "title": "Запуск на Push Testnet уже доступен — получите вознаграждения для разработчиков и первых пользователей.",
+      "learn-more-text": "Узнать больше",
+      "learn-more-title": "Подробнее об этом анонсе",
+      "dismiss-button-title": "Закрыть анонс",
+      "dismiss-button-aria-label": "Закрыть панель анонсов",
+      "container-aria-label": "Анонс сайта",
+      "star-icon-alt": "Иконка звезды анонса"
     }
   }
 }

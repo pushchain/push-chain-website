@@ -1,14 +1,14 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Support-Ticket öffnen",
+      "collapsed-text-for-support": "Support Ticket öffnen",
       "expanded-title-for-support": "Brauchen Sie Hilfe? 👋",
       "collapsed-text-for-contact": "Team kontaktieren",
       "expanded-title-for-contact": "Hallo! 👋",
       "categories": {
         "technical": {
           "label": "🔧 Technischer Support",
-          "description": "Fehlermeldungen, SDK/API, Smart Contracts, Integrationshilfe"
+          "description": "Fehlerberichte, SDK/API, Smart Contracts, Integrationshilfe"
         },
         "network": {
           "label": "🌐 Netzwerk & Testnet",
@@ -24,7 +24,7 @@
         },
         "security": {
           "label": "🛡️ Sicherheit",
-          "description": "Schwachstellenmeldungen, verantwortungsvolle Offenlegung (security@push.org)"
+          "description": "Schwachstellenberichte, verantwortungsvolle Offenlegung (security@push.org)"
         },
         "general": {
           "label": "💬 Allgemeine Anfrage",
@@ -32,15 +32,15 @@
         },
         "partnerships": {
           "label": "🤝 Partnerschaften & Integrationen",
-          "description": "BD, Ökosystem-Integrationen (Wallets, Infrastruktur, Börsen, Protokolle)"
+          "description": "BD, Ökosystemintegrationen (Wallets, Infra, Börsen, Protokolle)"
         },
         "grants": {
-          "label": "💰 Zuschüsse & Ökosystem-Programme",
-          "description": "BRB, Bootcamp, Zuschüsse, Finanzierungsanfragen"
+          "label": "💰 Zuschüsse & Ökosystemprogramme",
+          "description": "BRB, Bootcamp, Zuschüsse, Anfragen zur Finanzierung"
         },
         "media": {
           "label": "📰 Medien & Presse",
-          "description": "Interviews, Erklärungen, Materialien, Faktenprüfung"
+          "description": "Interviews, Erklärungen, Assets, Faktenprüfung"
         },
         "events": {
           "label": "🎤 Vorträge & Veranstaltungen",
@@ -51,12 +51,12 @@
           "description": "Offene Stellen, Praktika, Auftragsmöglichkeiten"
         },
         "validators": {
-          "label": "🧡 Validatoren / Node-Betreiber",
-          "description": "Interesse von Betreibern, RPC-Anbieter, Infrastrukturpartner"
+          "label": "🧡 Validator / Node Betreiber",
+          "description": "Interesse von Betreibern, RPC-Anbieter, Infra-Partner"
         },
         "legal": {
           "label": "⚖️ Rechtliches & Compliance",
-          "description": "Markenzeichen, Datenanfragen, Vereinbarungen"
+          "description": "Marken, Datenanfragen, Vereinbarungen"
         }
       },
       "form": {
@@ -84,7 +84,7 @@
           },
           "submit": {
             "title": "Überprüfen und Absenden",
-            "subtitle": "Überprüfen Sie Ihre Informationen, bevor Sie sie absenden",
+            "subtitle": "Bitte überprüfen Sie Ihre Informationen vor dem Absenden",
             "placeholder": "Erzählen Sie uns mehr darüber, wobei Sie Hilfe benötigen..."
           }
         },
@@ -106,7 +106,7 @@
         },
         "success": {
           "title": "Ticket erfolgreich übermittelt!",
-          "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihr Support-Ticket erhalten und werden uns so bald wie möglich bei Ihnen melden.",
+          "message": "Vielen Dank für Ihre Kontaktaufnahme. Wir haben Ihr Support-Ticket erhalten und werden uns so bald wie möglich bei Ihnen melden.",
           "button": "Ein weiteres Ticket absenden"
         },
         "error": {

@@ -2,12 +2,76 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "知識ベース — ガイド、FAQ、操作方法",
-        "description": "Push Chain のコンセプト、FAQ、操作方法、エコシステムのリソースをこちらから。分かりやすい、専門用語を使わないガイド。",
+        "title": "知識ベース — ガイド、FAQ & チュートリアル",
+        "description": "Push Chain のコンセプト、FAQ、チュートリアル、エコシステムリソースをこちらから。Push Chain の使用に関するわかりやすく、専門用語を使わないガイド。",
         "og-title": "Push Chain 知識ベース - ガイド & FAQ",
-        "og-description": "Push Chain のコンセプト、ステップバイステップの操作方法、よくある質問への回答。",
+        "og-description": "Push Chain に関するコンセプト、ステップバイステップのチュートリアル、一般的な質問への回答。",
         "twitter-title": "知識ベース - ガイド & FAQ",
-        "twitter-description": "Push Chain の簡単なガイド、FAQ、操作方法 (専門用語なし)。"
+        "twitter-description": "Push Chain のクイックガイド、FAQ、チュートリアル (開発者向け専門用語は使用しません)。"
+      },
+      "hero-section": {
+        "title": "知識ベース",
+        "description": {
+          "highlighted": "Push Chain は、すべてのチェーン間の断片化を解消するように設計された真のユニバーサルブロックチェーンです。",
+          "developers": "開発者",
+          "developers-text": "一度デプロイするだけで、サポートされているすべての EVM および非 EVM チェーンと互換性を持つようになります。",
+          "users": "ユーザー",
+          "users-text": "どのチェーンから来たとしても、同じアプリを使用できます。"
+        },
+        "email-signup": {
+          "title": {
+            "long": "Push Chain Testnet に関する通知を受け取る",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Push Chain Testnet の公開時にいち早くお知らせします。限定アップデートのためにメーリングリストにご登録ください。"
+        },
+        "footer": {
+          "description": "Push Chain を使用して、あらゆるブロックチェーンでシームレスで使いやすいアプリ体験を実現します。",
+          "cta": {
+            "text": "通知を受け取る"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "リソース",
+              "items": {
+                "push101": {
+                  "title": "Push Chain の基本",
+                  "subtitle": "Push Chain の基本、革新性、そしてなぜ必要なのかを学びましょう。",
+                  "ctatitle": "もっと詳しく"
+                },
+                "builders": {
+                  "title": "Push Chain 上で構築",
+                  "subtitle": "ユニバーサルアプリの構築方法、それがどのように可能性を広げるか、そしてどのように始めるかを見てみましょう！",
+                  "ctatitle": "Builders Assemble"
+                },
+                "deepdives": {
+                  "title": "技術的な詳細",
+                  "subtitle": "Push Chain の仕組みを知りたいですか？それとも単に好奇心旺盛ですか？どちらにしても、こんにちは！",
+                  "ctatitle": "See it Tick"
+                },
+                "devdocs": {
+                  "title": "開発者向けドキュメント",
+                  "subtitle": "要点をまっすぐ説明します！私はユニバーサルチェーンであり、あなたは開発者です。公式に始めましょう！",
+                  "ctatitle": "Build Now"
+                },
+                "tokenomics": {
+                  "title": "トークノミクスを学ぶ",
+                  "subtitle": "当社のトークノミクスがどのようにインセンティブを与え、持続可能なネットワークを確保するかを学びましょう。",
+                  "ctatitle": "トークン設計を学ぶ"
+                },
+                "faq": {
+                  "title": "FAQ",
+                  "subtitle": "コミュニティから寄せられた一般的な質問の答えを見つける場所。",
+                  "ctatitle": "Read More"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

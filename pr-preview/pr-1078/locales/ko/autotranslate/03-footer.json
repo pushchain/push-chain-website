@@ -2,41 +2,41 @@
   "footer": {
     "email-section": {
       "title": "Push Chain 소식을 받아보세요",
-      "title-secondary": "최신 소식과 업데이트!",
+      "title-secondary": "최신 뉴스 및 업데이트!",
       "title-aria-label": "뉴스레터 구독 섹션",
       "section-aria-label": "Push Chain 뉴스레터 가입"
     },
     "main-section": {
-      "section-aria-label": "푸터 내비게이션 및 링크",
+      "section-aria-label": "푸터 탐색 및 링크",
       "logo-link-title": "Push Chain 홈페이지",
       "logo-link-aria-label": "Push Chain 홈페이지",
-      "logo-alt": "Push Chain logo"
+      "logo-alt": "Push Chain 로고"
     },
     "columns": {
       "resources": {
         "title": "자료",
-        "title-aria-label": "자료 내비게이션"
+        "title-aria-label": "자료 탐색"
       },
       "developers": {
         "title": "개발자",
-        "title-aria-label": "개발자 내비게이션"
+        "title-aria-label": "개발자 탐색"
       },
       "community": {
         "title": "커뮤니티",
-        "title-aria-label": "커뮤니티 내비게이션"
+        "title-aria-label": "커뮤니티 탐색"
       },
       "help": {
         "title": "도움말",
-        "title-aria-label": "도움말 내비게이션"
+        "title-aria-label": "도움말 탐색"
       }
     },
     "links": {
       "get-started": "시작하기",
-      "get-started-title": "Push Chain에서 개발 시작하기",
+      "get-started-title": "Push Chain에서 시작하기",
       "docs": "문서",
       "docs-title": "Push Chain 문서",
       "github": "GitHub",
-      "github-title": "Push Chain GitHub 저장소",
+      "github-title": "GitHub의 Push Chain 저장소",
       "knowledge-base": "지식 기반",
       "knowledge-base-title": "Push Chain 지식 기반",
       "blog": "블로그",
@@ -48,13 +48,13 @@
       "push-scan": "Push Scan",
       "push-scan-title": "Push Chain 블록체인 탐색기",
       "faucet": "Faucet",
-      "faucet-title": "Push Chain faucet에서 테스트 토큰 받기",
+      "faucet-title": "Push Chain Faucet에서 테스트 토큰 받기",
       "push-portal": "Push Portal",
-      "push-portal-title": "Push Protocol 커뮤니티 포털",
+      "push-portal-title": "Push Chain 커뮤니티 포털",
       "support": "지원",
-      "support-title": "도움말 센터",
+      "support-title": "Help Center",
       "security": "보안 및 공개",
-      "security-title": "취약점 신고 (책임 있는 공개)",
+      "security-title": "취약점 신고 (책임 공개)",
       "contact-us": "문의하기",
       "contact-us-title": "파트너십, BD, 미디어 또는 일반 문의",
       "careers": "채용",
@@ -62,11 +62,11 @@
       "twitter": "X (Twitter)",
       "twitter-title": "X (Twitter)에서 Push Chain 팔로우하기",
       "discord": "Discord",
-      "discord-title": "Push Chain Discord 참여하기",
+      "discord-title": "Push Chain Discord에 참여하기",
       "reddit": "Reddit",
-      "reddit-title": "Push Chain subreddit 참여하기",
+      "reddit-title": "Push Chain subreddit에 참여하기",
       "telegram": "Telegram",
-      "telegram-title": "Push Chain Telegram 참여하기"
+      "telegram-title": "Push Chain Telegram에 참여하기"
     },
     "social-section": {
       "section-aria-label": "소셜 미디어 링크 및 법적 정보",
@@ -78,9 +78,9 @@
       "discord-icon-aria-label": "Discord에서 Push Chain"
     },
     "legal": {
-      "privacy-policy": "개인 정보 처리 방침",
-      "privacy-policy-title": "개인 정보 처리 방침 읽기",
-      "privacy-policy-aria-label": "개인 정보 처리 방침",
+      "privacy-policy": "개인정보 처리방침",
+      "privacy-policy-title": "개인정보 처리방침 읽기",
+      "privacy-policy-aria-label": "개인정보 처리방침",
       "terms-of-service": "이용 약관",
       "terms-of-service-title": "이용 약관 읽기",
       "terms-of-service-aria-label": "이용 약관",
@@ -89,7 +89,7 @@
     },
     "footer-image": {
       "alt": "Push Chain 푸터 일러스트레이션",
-      "title": "Push Chain - 범용 블록체인"
+      "title": "Push Chain - Universal Blockchain"
     }
   }
 }

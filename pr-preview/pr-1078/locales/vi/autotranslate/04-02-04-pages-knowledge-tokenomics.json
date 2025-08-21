@@ -1,0 +1,39 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "seo": {
+          "title": "Tokenomics — Giá trị và Kinh tế của $PC",
+          "description": "Cách $PC tích lũy giá trị: nhu cầu đến từ việc thanh toán, cơ chế đốt/khóa dựa trên mức sử dụng, kinh tế staking và lịch trình cung cấp.",
+          "og-title": "Tokenomics - Giá trị và Kinh tế của $PC",
+          "og-description": "Việc thanh toán bằng $PC thúc đẩy nhu cầu; cơ chế đốt dựa trên mức sử dụng làm giảm nguồn cung. Bao gồm kinh tế staking và lượng phát hành.",
+          "twitter-title": "Tokenomics của Push Chain | Kinh tế Token",
+          "twitter-description": "Thanh toán bằng $PC, cơ chế đốt dựa trên mức sử dụng, kinh tế staking và lượng phát hành—tổng quan ngắn gọn dành cho nhà đầu tư."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Cơ sở kiến thức"
+            }
+          },
+          "blocks": {
+            "title": "Khám phá Tokenomics",
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "overview": "## Tổng quan\n\nCuối năm 2024, cộng đồng Push đã bỏ phiếu chấp thuận việc ra mắt Push Chain, một lớp trạng thái chung blockchain layer 1 được thiết kế để cho phép phát triển các ứng dụng toàn năng và loại bỏ sự phân mảnh trong web3.\n\nPush Chain là một lớp được xây dựng chuyên biệt để kết nối L1, L2 và L3 với tốc độ xác thực nhanh gần như tức thời và khả năng mở rộng thực sự, giải quyết vấn đề cơ bản với các ứng dụng web3: sự phân mảnh. Với việc bỏ phiếu thành công cho đề xuất quản trị, sứ mệnh của Push Chain đang trên đường xây dựng **bất kỳ chain nào, bất kỳ người dùng nào và bất kỳ ứng dụng nào.**\n\n:::warning ⚠️ Token chưa ra mắt\nThe Push Chain token chưa ra mắt, cũng như chưa có đợt presale nào. Token Push Chain chưa có tên.<p />\n\n\nĐừng tin bất kỳ ai cung cấp quyền truy cập sớm vào token Push Chain. Tất cả các thông báo liên quan đến Push Chain sẽ được công bố đồng thời trên các kênh chính thức của Push — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## Tầm nhìn của Push Chain là gì?\n\nTất cả các blockchain đã chứng minh tính hữu ích đặc biệt đối với các ứng dụng và trường hợp sử dụng cụ thể. Bitcoin cho phép tiền thông minh. Ethereum cho phép đổi mới trong DeFi. Solana cho phép các ứng dụng nhanh và văn hóa meme. Nhiều L2 và L1 mới đang nhắm đến các lĩnh vực quan tâm khác.\n\nTuy nhiên, một blockchain được xây dựng chuyên biệt để cho phép trừu tượng hóa chain và khả năng tương tác liền mạch trong không gian vẫn còn cần thiết. Chain này sẽ cho phép các giao dịch từ bất kỳ chain nào (ETH, SOL, EVM hoặc không EVM) để cung cấp năng lượng cho các ứng dụng có thể được sử dụng bởi **bất kỳ người dùng nào—**bất kể chain hoặc ví của họ. Đây là chain của **Ứng dụng Toàn năng**. Đây là Push Chain!",
+                  "innovation": "### Được xây dựng trên sự đổi mới để loại bỏ sự cô lập blockchain!\n\nPush Chain mang tính cách mạng đối với cả người dùng và nhà phát triển vì nó tạo ra một môi trường để bất kỳ nhà phát triển nào triển khai ứng dụng toàn năng của họ trong vài giờ thông qua việc triển khai hợp đồng thông minh toàn năng duy nhất.\n\nNó cũng cho phép người dùng giao dịch từ sự thoải mái, tiện lợi và lựa chọn của hệ sinh thái của họ, bất kể ứng dụng nằm ở đâu.\n\nBên dưới, điều này đạt được bằng cách:\n\n- Khả năng thực hiện **giao dịch từ bất kỳ chain nào**\n- **Trừu tượng hóa Phí & Ví Toàn năng** để cho phép người dùng sử dụng bất kỳ chain nào, bất kỳ ví nào và thanh toán bằng bất kỳ token nào\n- **Hợp đồng Thông minh Toàn năng** để cho phép các nhà phát triển triển khai các ứng dụng tương tác tức thì trong vài phút\n- **Trạng thái Chung** để đọc dữ liệu từ các blockchain khác\n- **Bộ giải lập có thể lập trình** để ghi dữ liệu vào các chain khác\n\n Tất cả điều này cho phép một **Lớp Thực thi Toàn năng** để cho phép người dùng của bất kỳ chain nào truy cập và tương tác với cùng một ứng dụng.",
+                  "fit": "### Push Chain phù hợp ở đâu?\n\nPush Chain phù hợp với **mọi dự án…** **trên mọi chain!**\n\n- **Cho phép các nhà phát triển** từ bất kỳ chain nào tạo ra các ứng dụng tương tác đầy đủ liền mạch có thể được sử dụng từ bất kỳ chain nào, thông qua bất kỳ ví nào.<br />\n- **Cho phép người dùng** tự do tương tác với ví họ chọn hoặc có trải nghiệm đăng ký liền mạch thông qua Push Universal Wallet với đăng nhập mạng xã hội.<br />\n- **Cho phép các trải nghiệm ứng dụng chung** nơi người dùng của tất cả các chain có thể đến với nhau và tương tác với DeFi toàn năng, trò chơi thống nhất, NFT toàn năng, Quản trị toàn năng, v.v.<br />",
+                  "use-cases": "### Các trường hợp sử dụng\n\n![Push Chain Use Cases](/assets/website/chain/knowledge/tokenomics/usecasepc.webp)\n\n- Các ứng dụng Web3 đa chain\n- Phí nhanh và rẻ hơn\n- Dễ dàng tích hợp với các giao thức hiện có\n- Tăng cường trải nghiệm người dùng\n\n<br />",
+                  "token-distribution": "## Chi tiết Phân phối Token\n\nTổng nguồn cung token Push Chain được đề xuất là **10 tỷ**, được phân phối như sau:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Phân phối airdrop bắt đầu tại TGE, nhưng sẽ diễn ra trong nhiều mùa.\n2. Các cộng tác viên cốt lõi có sự trì hoãn 12 tháng, theo sau là giai đoạn vesting 24 tháng.\n3. Kho bạc phòng thí nghiệm Push có giai đoạn vesting 36 tháng.\n4. Các nhà đầu tư có giai đoạn vesting tuyến tính 24 tháng.\n5. Các khoản dự trữ cộng đồng và hệ sinh thái có 13,5% được mở khóa tại TGE, theo sau là giai đoạn vesting 36 tháng.\n\n<br />",
+                  "get-involved": "## Tham gia\n\n- **🧙 Nhà phát triển**\nKhám phá SDK & Tài liệu của chúng tôi tại [Documentation Hub](/docs/)\n\n- **🦹 Cộng đồng**  \nTheo dõi [@PushChain](https://x.com/PushChain) trên X/Twitter, tham gia [Discord](https://discord.com/invite/pushchain) và [Telegram](https://t.me/epnsproject).\n\nCùng nhau, chúng ta hãy xây dựng tương lai của **Web3 Toàn năng**!"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

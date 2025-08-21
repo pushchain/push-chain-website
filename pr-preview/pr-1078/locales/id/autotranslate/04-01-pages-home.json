@@ -2,8 +2,8 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Beranda",
-        "description": "L1 dengan status bersama untuk aplikasi universal. Deploy sekali; jangkau pengguna di rantai mana pun. Gunakan dompet apa pun. Bayar dengan token apa pun.",
+        "title": "Beranda - Push Chain | Rantai Universal untuk Aplikasi",
+        "description": "L1 shared-state untuk aplikasi universal. Deploy sekali; jangkau pengguna di rantai mana pun. Gunakan dompet apa pun. Bayar dengan token apa pun.",
         "og-title": "Push Chain - L1 Universal untuk Aplikasi",
         "og-description": "Satu deploy untuk pengguna EVM dan non-EVM. Gunakan dompet apa pun dan bayar dengan token apa pun — tidak perlu berpindah jaringan.",
         "twitter-title": "Deploy sekali. Jangkau rantai mana pun.",
@@ -13,63 +13,37 @@
         "title": "Rantai Mana Pun, Aplikasi Mana Pun, Semua Pengguna.\nSatu Push Chain.",
         "description": "Layer 1 pertama yang dibangun untuk Aplikasi Universal. \nBangun & Deploy sekali, onboard pengguna dari rantai mana pun.",
         "primary-button": "Mulai Membangun",
-        "primary-button-title": "Mulai perjalanan pembangun Anda bersama Push Chain!",
+        "primary-button-title": "Mulailah perjalanan pembangunmu dengan Push Chain!",
         "secondary-button": "Jelajahi Knowledge Base",
         "secondary-button-title": "Pelajari dan jelajahi Push Chain",
-        "section-aria-label": "Bagian hero Push Chain - pengantar blockchain Layer 1 universal",
-        "primary-button-aria-label": "Mulai membangun aplikasi universal di Push Chain - Buka dokumentasi developer",
+        "section-aria-label": "Bagian hero Push Chain - Pengantar blockchain Layer 1 universal",
+        "primary-button-aria-label": "Mulai bangun aplikasi universal di Push Chain - Buka dokumentasi pengembang",
         "secondary-button-aria-label": "Pelajari tentang fitur dan konsep Push Chain di knowledge base",
-        "hero-background-alt": "Animasi latar belakang hero Push Chain yang menunjukkan konektivitas blockchain universal",
+        "hero-background-alt": "Animasi latar belakang hero Push Chain yang menampilkan konektivitas blockchain universal",
         "hero-background-title": "Push Chain - Layer 1 Universal untuk aplikasi lintas rantai",
         "schema-headline": "Push Chain - L1 Universal untuk Aplikasi",
         "schema-description": "Deploy sekali di Push Chain dan jangkau pengguna di blockchain mana pun dengan aplikasi universal"
       },
       "whatis-section": {
-        "title": "Apa itu Push Chain?",
-        "description": "Push Chain adalah Layer 1 yang dibangun dengan mempertimbangkan interoperabilitas dan skalabilitas, memungkinkan developer untuk membangun aplikasi universal yang berjalan lancar di berbagai blockchain. Dengan Push Chain, Anda dapat membangun sekali dan menjangkau pengguna di mana pun mereka berada.",
-        "section-aria-label": "Bagian apa itu Push Chain",
-        "stat1": {
-          "title": "Ekosistem",
-          "imagealt": "Daftar rantai yang didukung",
-          "imagetitle": "Ekosistem rantai yang didukung"
-        },
-        "stat2": {
-          "title": "TPS",
-          "description": "4.2k"
-        },
-        "stat3": {
-          "title": "Finalitas",
-          "description": "Instan"
-        },
-        "stat4": {
-          "title": "Waktu Blok",
-          "description": "1 detik"
-        }
-      },
-      "blog-section": {
-        "subtitle": "BERITA, DEVLOG & IDE",
-        "subtitle-aria-label": "Informasi kategori blog",
-        "title": "Denyut Push Chain Anda",
-        "title-aria-label": "Postingan blog dan pembaruan Push Chain terbaru",
-        "explore-link-text": "Jelajahi Lebih Banyak Artikel",
-        "explore-link-title": "Kunjungi blog Push Chain untuk membaca semua artikel dan pembaruan",
-        "explore-link-aria-label": "Navigasi ke halaman blog Push Chain",
-        "section-aria-label": "Bagian posting blog dan berita Push Chain",
-        "blog-posts-list-aria-label": "Postingan blog Push Chain terbaru",
-        "blog-post-aria-label": "Baca posting blog tentang {title}",
-        "blog-post-title-prefix": "Baca posting blog - ",
-        "loading-text": "Memuat posting blog terbaru...",
-        "error-text": "Tidak dapat memuat posting blog saat ini",
-        "no-posts-text": "Tidak ada posting blog yang tersedia"
+        "titleFirst": "Sebuah",
+        "titleSecondGraditent": "Universal",
+        "titleThird": "Chain",
+        "description": "Bangun dan deploy sekali, onboarding pengguna di seluruh blockchain dengan mudah.",
+        "primary-button": "Pelajari Selengkapnya",
+        "section-aria-label": "Bagian 'Apa Itu Push Chain'",
+        "animation-alt": "Animasi interaktif yang menunjukkan interopabilitas instan Push Chain di berbagai blockchain",
+        "animation-title": "Visualisasi interopabilitas instan Push Chain",
+        "blog-posts-list-aria-label": "Artikel blog terbaru Push Chain",
+        "blog-post-aria-label": "Baca artikel blog tentang {title}"
       },
       "stats-section": {
-        "section-aria-label": "Bagian statistik dan metrik kinerja Push Chain",
-        "title": "Capai",
+        "section-aria-label": "Bagian statistik kinerja Push Chain",
+        "title": "Raih",
         "titleGradient": "Instan",
         "titleThird": "Interoperabilitas",
-        "description": "Dioptimalkan untuk kinerja.\nTPS Tinggi, gas ultra-rendah, dan finalitas sub-detik untuk eksekusi aplikasi real-time.",
-        "animation-alt": "Animasi interaktif yang menunjukkan interoperabilitas instan Push Chain di berbagai blockchain",
-        "animation-title": "Visualisasi interoperabilitas instan Push Chain",
+        "description": "Dioptimalkan untuk kinerja.\nTPS tinggi, gas ultra-rendah, dan finalitas sub-detik untuk eksekusi aplikasi real-time.",
+        "animation-alt": "Animasi interaktif yang menunjukkan interopabilitas instan Push Chain di berbagai blockchain",
+        "animation-title": "Visualisasi interopabilitas instan Push Chain",
         "stats": {
           "stat1": {
             "title": "Rantai yang Didukung",
@@ -81,93 +55,109 @@
             "description": "4.2k"
           },
           "stat3": {
-            "title": "FINALITAS ASLI",
+            "title": "FINALITAS NATIVE",
             "description": "Instan"
           },
           "stat4": {
-            "title": "WAKTU BLOK ASLI",
-            "description": "1 detik"
+            "title": "WAKTU BLOK NATIVE",
+            "description": "1s"
           }
         }
       },
+      "blog-section": {
+        "subtitle": "BERITA, DEVLOG & IDE",
+        "subtitle-aria-label": "Informasi kategori blog",
+        "title": "Nadi Push Chain-mu",
+        "title-aria-label": "Postingan blog dan pembaruan terbaru Push Chain",
+        "explore-link-text": "Jelajahi Lebih Banyak Artikel",
+        "explore-link-title": "Kunjungi blog Push Chain untuk membaca semua artikel dan pembaruan",
+        "explore-link-aria-label": "Arahkan ke halaman blog Push Chain",
+        "section-aria-label": "Bagian postingan blog dan berita Push Chain",
+        "blog-posts-list-aria-label": "Postingan blog terbaru Push Chain",
+        "blog-post-aria-label": "Baca artikel blog tentang {title}",
+        "blog-post-title-prefix": "Baca artikel blog - ",
+        "loading-text": "Memuat postingan blog terbaru...",
+        "error-text": "Tidak dapat memuat postingan blog saat ini",
+        "no-posts-text": "Tidak ada postingan blog yang tersedia"
+      },
       "trustedby-section": {
-        "title": "Dibangun oleh tim terpercaya oleh pelopor web3",
-        "section-aria-label": "Bagian tepercaya oleh Push Chain",
+        "title": "Dibangun oleh tim yang dipercaya oleh pelopor web3",
+        "section-aria-label": "Bagian 'Dipercaya oleh'",
         "trusted-by-alt": "Investor - "
       },
       "featured-section": {
-        "aria-label": "Bagian Diunggulkan",
-        "tag": "DIUNGGULKAN",
+        "aria-label": "Bagian 'Tampilkan'",
+        "tag": "DIHADIRKAN",
         "title": "Push Chain di Sorotan",
-        "subtitle": "Jangan hanya percaya kata kami. Lihat apa kata media tentang rantai universal sejati.",
+        "subtitle": "Jangan hanya percaya kata kami. Lihat apa yang dikatakan media tentang rantai universal sejati.",
         "articles-image-alt": "Liputan media dari ",
         "articles-text": "Baca Liputan Penuh",
         "articles-title-1": "Baca ",
         "articles-title-2": "'s pemikiran tentang Push Chain secara detail",
         "articles": {
           "binance-chain": {
-            "text": "Kami sangat senang mengumumkan bahwa Push Protocol, protokol komunikasi terdesentralisasi terkemuka untuk Web3, kini telah diluncurkan di BNB Chain."
+            "text": "Kami sangat senang mengumumkan bahwa Push Protocol, protokol komunikasi terdesentralisasi terkemuka untuk Web3, sekarang telah diluncurkan di BNB Chain."
           },
           "coindesk": {
-            "text": "Protocol Village: Unstoppable Bekerja Sama dengan Push Protocol untuk Menyediakan Obrolan Grup yang Dikelompokkan Token"
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
           },
           "defiant": {
-            "text": "Unstoppable Domains Meluncurkan Obrolan Grup yang Dikelompokkan Token. Kolaborasi dengan Push Protocol bertujuan untuk mencegah misinformasi dan penipuan."
+            "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
           },
           "balaji": {
-            "text": "Pemberitahuan yang dikontrol pengguna. Dua perusahaan mengontrol pemberitahuan push ke miliaran smartphone: Apple dan Google."
+            "text": "User-controlled notifications. Two companies control push notifications to billions of smartphones: Apple and Google."
           },
           "defiprime": {
-            "text": "Harsh Rajat berbicara tentang masa depan perbankan, insentif protokol EPNS dan di mana model bisnis untuk pemberitahuan push terdesentralisasi."
+            "text": "Harsh Rajat talks about future of banking, EPNS protocol incentives and where is a business model for decentralized push notifications."
           },
           "ethfoundation": {
-            "text": "Sejak HackMoney, Richa dan Harsh telah mengarahkan energi yang luar biasa ke pembangunan EPNS menjadi apa yang mereka sebut \"potongan yang hilang dari web3.\""
+            "text": "Since HackMoney, Richa and Harsh have directed incredible energy toward building EPNS into what they call \"a missing piece of web3.\""
           },
           "beincrypto": {
-            "text": "Bagaimana Jaringan Komunikasi Web3 Bekerja: Seluk-beluk Teknis"
+            "text": "How Web3 Communication Networks Work: A Technical Deep Dive"
           },
           "the-block": {
-            "text": "Protokol pemberitahuan web3 Push akan meluncurkan rantainya sendiri"
+            "text": "Web3 notifications protocol Push to launch its own Layer 1 chain"
           },
           "business-insider": {
-            "text": "Push Meluncurkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
           },
           "chainwire": {
-            "text": "Push Meluncurkan Push Chain: Masa Depan Aplikasi Blockchain Universal."
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications."
           },
           "benzinga": {
-            "text": "Push Meluncurkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
           },
           "crypto-briefing": {
-            "text": "Push Meluncurkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Unveils Push Chain: The Future of Universal Blockchain Applications"
           },
           "cryptoslate": {
-            "text": "Push Protocol meluncurkan Push Chain untuk menyatukan komunikasi dan transaksi blockchain"
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
           },
           "messari": {
-            "text": "EPNS memungkinkan insentif dan pendapatan pasif bagi pengguna yang menerima pemberitahuan terdesentralisasi."
+            "text": "EPNS enables incentives and passive earnings for users receiving the decentralized notifications."
           },
           "coin-telegraph-1": {
-            "text": "Harsh Rajat, pendiri dan pemimpin proyek Push Protocol, menjelaskan lonjakan dalam pengembangan aplikasi obrolan Web3 di episode terbaru Hashing It Out."
+            "text": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 chat applications on the latest episode of Hashing It Out."
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains meluncurkan fitur obrolan grup yang dikelompokkan badge untuk pemegang nama pengguna."
+            "text": "Unstoppable Domains launches badge-gated group chat feature for username holders."
           }
         }
       },
       "ending-section": {
-        "aria-label": "Bagian Bangun Aplikasi Universal",
+        "aria-label": "Bagian 'Bangun Aplikasi Universal'",
         "section-title": "Bangun Aplikasi Universal.",
         "section-subtitle": "Hancurkan silo. Bangun sekali, skala di setiap blockchain.",
         "docs-link": {
-          "text": "Jelajahi Dokumen Push Chain",
-          "title": "Jelajahi dokumentasi Push Chain dan sumber daya developer",
+          "text": "Jelajahi Dokumentasi Push Chain",
+          "title": "Jelajahi dokumentasi dan sumber daya pengembang Push Chain",
           "aria-label": "Buka dokumentasi Push Chain di tab baru"
         },
         "cta-link": {
           "text": "LFG Push Chain",
           "title": "Mulai dengan Push Chain - platform blockchain universal",
-          "aria-label": "Mulai dengan pengembangan Push Chain"
+          "aria-label": "Mulai pengembangan Push Chain"
         }
       }
     }

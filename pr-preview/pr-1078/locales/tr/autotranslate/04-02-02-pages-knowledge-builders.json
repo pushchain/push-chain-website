@@ -3,12 +3,58 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Geliştiriciler — Nasıl Yapılır & Öğreticiler",
-          "description": "Push Chain özelliklerini kullanmak için adım adım kılavuzlar, yöntemler ve örnekler.",
-          "og-title": "Geliştiriciler - Nasıl Yapılır & Öğreticiler",
-          "og-description": "Push Chain ile geliştirmek için rehberli öğreticiler, en iyi uygulamalar ve örnekler.",
-          "twitter-title": "Geliştiriciler - Nasıl Yapılır & Öğreticiler",
+          "title": "Geliştiriciler — Nasıl Yapılır & Eğitimler",
+          "description": "Push Chain özelliklerini kullanmak için adım adım kılavuzlar, örnekler ve yöntemler.",
+          "og-title": "Geliştiriciler - Nasıl Yapılır & Eğitimler",
+          "og-description": "Push Chain ile geliştirmek için rehberler, en iyi uygulamalar ve örnekler.",
+          "twitter-title": "Geliştiriciler - Nasıl Yapılır & Eğitimler",
           "twitter-description": "Push Chain üzerinde yayınlamak için adım adım kılavuzlar."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Bilgi Bankası"
+            }
+          },
+          "blocks": {
+            "title": "Push Chain Üzerinde Geliştirin",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Geliştiriciler\n\nPush Chain üzerinde geliştirmeye hazır mısınız? İlham almak ve başlamak için bazı kaynaklar burada.",
+                  "curated-reads": "## Önerilen Kaynaklar 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Evrensel Uygulamalar Geliştirelim 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Paylaşılan Durum ile Mümkün Olan Uygulamalar - Cilt 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Paylaşılan Durum ile Mümkün Olan Uygulamalar - Cilt 2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Tüketici Uygulamaları 🫶🏽 Push Chain?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Geliştirici Kaynakları",
+                "items": {
+                  "developer-docs": {
+                    "title": "Geliştirici Belgelerini Keşfedin"
+                  },
+                  "faucet": {
+                    "title": "Testnet Tokenları Alın"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Gezgini"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

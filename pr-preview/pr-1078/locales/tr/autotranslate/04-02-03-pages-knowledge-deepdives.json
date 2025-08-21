@@ -6,9 +6,38 @@
           "title": "Derinlemesine İncelemeler — Kavramlar ve Mimari",
           "description": "Paylaşılan durum, ücret soyutlama, USV/UEA ve evrensel yürütme katmanı hakkında okunabilir açıklamalar.",
           "og-title": "Derinlemesine İncelemeler - Kavramlar ve Mimari",
-          "og-description": "Push Chain modülleri, tasarım kararları ve performans hakkında detaylı makaleler.",
-          "twitter-title": "Derinlemesine İncelemeler - Arka Plan",
-          "twitter-description": "Push Chain'ın nasıl çalıştığına dair açıklamalar."
+          "og-description": "Push Chain modülleri, tasarım kararları ve performans hakkında derinlemesine makaleler.",
+          "twitter-title": "Derinlemesine İncelemeler - Sahne Arkası",
+          "twitter-description": "Push Chain'in nasıl çalıştığına dair açıklamalar."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Bilgi Tabanı"
+            }
+          },
+          "blocks": {
+            "title": "Derinlemesine İncelemeler",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Mimari Derinlemesine İncelemeleri\n\nPush Chain'in mimarisini ve nasıl çalıştığını - Tek seferde bir modül öğrenin.",
+                  "curated-reads": "## Özenle Seçilmiş Okumalar 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Push Chain'i neyin harekete geçirdiğini öğrenin!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "Birlikte Çalışabilirlik Spektrumu"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "İş Kanıtı (POS) - Bölüm 1'i Anlamak"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

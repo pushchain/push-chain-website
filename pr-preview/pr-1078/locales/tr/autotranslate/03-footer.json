@@ -1,8 +1,8 @@
 {
   "footer": {
     "email-section": {
-      "title": "Push Chain'den haberleri kaçırmayın",
-      "title-secondary": "ve güncellemeleri!",
+      "title": "Push Chain ile güncel kalın",
+      "title-secondary": "haberler ve yenilikler!",
       "title-aria-label": "Bülten aboneliği bölümü",
       "section-aria-label": "Push Chain bülten kaydı"
     },
@@ -32,35 +32,35 @@
     },
     "links": {
       "get-started": "Başlayın",
-      "get-started-title": "Push Chain üzerinde geliştirmeye başlayın",
+      "get-started-title": "Push Chain üzerinde inşa etmeye başlayın",
       "docs": "Dokümanlar",
       "docs-title": "Push Chain dokümantasyonu",
       "github": "GitHub",
       "github-title": "Push Chain depoları GitHub'da",
-      "knowledge-base": "Bilgi Tabanı",
-      "knowledge-base-title": "Push Chain Bilgi Tabanı",
+      "knowledge-base": "Bilgi Bankası",
+      "knowledge-base-title": "Push Chain Bilgi Bankası",
       "blog": "Blog",
       "blog-title": "Push Chain blogu",
       "litepaper": "Litepaper",
       "litepaper-title": "Push Chain litepaper (PDF)",
-      "brand-kit": "Marka Kitleri",
+      "brand-kit": "Marka Kitimiz",
       "brand-kit-title": "Push Chain marka öğeleri ve kılavuzları",
       "push-scan": "Push Scan",
       "push-scan-title": "Push Chain blok zinciri gezgini",
       "faucet": "Musluk",
-      "faucet-title": "Push Chain musluğundan test token'ları alın",
+      "faucet-title": "Push Chain musluğundan test tokenları alın",
       "push-portal": "Push Portal",
-      "push-portal-title": "Push Protocol topluluk portalı",
+      "push-portal-title": "Push Chain topluluk portalı",
       "support": "Destek",
       "support-title": "Yardım Merkezi",
       "security": "Güvenlik ve Açıklama",
-      "security-title": "Bir güvenlik açığını bildirin (sorumlu açıklama)",
+      "security-title": "Bir güvenlik açığı bildirin (sorumlu açıklama)",
       "contact-us": "Bize Ulaşın",
       "contact-us-title": "Ortaklıklar, BD, medya veya genel sorular",
       "careers": "Kariyer",
-      "careers-title": "Push Chain'deki açık pozisyonlar",
+      "careers-title": "Push Chain'de açık pozisyonlar",
       "twitter": "X (Twitter)",
-      "twitter-title": "Push Chain'i X (Twitter) üzerinden takip edin",
+      "twitter-title": "X (Twitter) üzerinde Push Chain'i takip edin",
       "discord": "Discord",
       "discord-title": "Push Chain Discord'una katılın",
       "reddit": "Reddit",
@@ -70,12 +70,12 @@
     },
     "social-section": {
       "section-aria-label": "Sosyal medya bağlantıları ve yasal bilgiler",
-      "twitter-icon-title": "Push Chain X (Twitter)'da",
-      "twitter-icon-aria-label": "Push Chain X (Twitter)'da",
-      "github-icon-title": "Push Chain GitHub'da",
-      "github-icon-aria-label": "Push Chain GitHub'da",
-      "discord-icon-title": "Push Chain Discord'da",
-      "discord-icon-aria-label": "Push Chain Discord'da"
+      "twitter-icon-title": "X (Twitter) üzerinde Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) üzerinde Push Chain",
+      "github-icon-title": "GitHub üzerinde Push Chain",
+      "github-icon-aria-label": "GitHub üzerinde Push Chain",
+      "discord-icon-title": "Discord üzerinde Push Chain",
+      "discord-icon-aria-label": "Discord üzerinde Push Chain"
     },
     "legal": {
       "privacy-policy": "Gizlilik Politikası",
@@ -85,11 +85,11 @@
       "terms-of-service-title": "Hizmet Şartlarını okuyun",
       "terms-of-service-aria-label": "Hizmet Şartları",
       "cookie-preferences": "Çerez Tercihleri",
-      "cookie-preferences-title": "Çerez ayarlarını yönetin"
+      "cookie-preferences-title": "Çerez ayarlarını yönet"
     },
     "footer-image": {
       "alt": "Push Chain altbilgi illüstrasyonu",
-      "title": "Push Chain - Evrensel Blok Zinciri"
+      "title": "Push Chain - Evrensel Blockchain"
     }
   }
 }

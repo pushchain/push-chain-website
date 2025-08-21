@@ -1,11 +1,11 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Beta fechada da Donut Testnet está no ar!",
-      "description": "Tenha uma prévia da Testnet, Donut, crie aplicativos universais e ganhe prêmios!",
-      "image-alt": "Recompensas Push Chain Testnet - Crie aplicativos universais",
+      "title": "Beta fechada do Testnet Donut está no ar!",
+      "description": "Dê uma espiada no Testnet Donut, crie aplicativos universais e ganhe prêmios!",
+      "image-alt": "Recompensas Push Chain Testnet - Crie Aplicativos Universais",
       "close-button-title": "Fechar notificação de recompensas",
-      "close-button-aria-label": "Dismiss notificação de recompensas Push Chain",
+      "close-button-aria-label": "Dispensar notificação de recompensas Push Chain",
       "container-aria-label": "Notificação de recompensas Push Chain"
     }
   }

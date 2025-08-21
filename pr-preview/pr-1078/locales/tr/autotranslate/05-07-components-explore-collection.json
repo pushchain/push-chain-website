@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": " için Kapak ",
+        "image-append": "",
+        "link-prepend": " Keşfet ",
+        "link-append": "",
+        "cta-title": "Devamını Oku"
+      }
+    }
+  }
+}

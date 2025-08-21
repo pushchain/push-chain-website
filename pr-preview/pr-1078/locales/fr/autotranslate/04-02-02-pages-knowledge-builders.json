@@ -3,12 +3,58 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Créateurs — Guides et Tutoriels",
-          "description": "Guides pas à pas, modèles et exemples pour utiliser les fonctionnalités Push Chain.",
-          "og-title": "Créateurs - Guides et Tutoriels",
+          "title": "Builders — Guides et Tutoriels",
+          "description": "Guides pas à pas, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
+          "og-title": "Builders - Guides et Tutoriels",
           "og-description": "Tutoriels guidés, bonnes pratiques et exemples pour développer avec Push Chain.",
-          "twitter-title": "Créateurs - Guides et Tutoriels",
+          "twitter-title": "Builders - Guides et Tutoriels",
           "twitter-description": "Guides pas à pas pour lancer votre projet sur Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Base de Connaissances"
+            }
+          },
+          "blocks": {
+            "title": "Développer sur Push Chain",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPrêt à développer sur Push Chain ? Voici quelques ressources pour vous inspirer et vous aider à démarrer.",
+                  "curated-reads": "## Lectures Sélectionnées 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Développons des Apps Universelles 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Possibles Seulement avec l'État Partagé - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Possibles Seulement avec l'État Partagé - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Les Apps Consommateurs et Push Chain ?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Ressources pour Développeurs",
+                "items": {
+                  "developer-docs": {
+                    "title": "Explorez la Documentation Développeur"
+                  },
+                  "faucet": {
+                    "title": "Obtenez des Tokens Testnet"
+                  },
+                  "testnet-explorer": {
+                    "title": "Explorateur Push Testnet"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

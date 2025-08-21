@@ -4,11 +4,40 @@
       "deepdives": {
         "seo": {
           "title": "Explorations approfondies — Concepts & Architecture",
-          "description": "Explications claires sur l'état partagé, l'abstraction des frais, USV/UEA et la couche d'exécution universelle.",
+          "description": "Explications claires et accessibles sur l'état partagé, l'abstraction des frais, USV/UEA et la couche d'exécution universelle.",
           "og-title": "Explorations approfondies - Concepts & Architecture",
-          "og-description": "Articles détaillés sur les modules Push Chain, les choix de conception et les performances.",
+          "og-description": "Articles détaillés sur les modules de Push Chain, les décisions de conception et les performances.",
           "twitter-title": "Explorations approfondies - Sous le capot",
           "twitter-description": "Explications sur le fonctionnement de Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Base de connaissances"
+            }
+          },
+          "blocks": {
+            "title": "Explorations approfondies",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Explorations approfondies de l'architecture\n\nDécouvrez les subtilités de l'architecture de Push Chain et son fonctionnement - Un module à la fois.",
+                  "curated-reads": "## Lectures sélectionnées 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Découvrez ce qui fait fonctionner Push Chain !",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "Interop comme un spectre"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Comprendre la preuve d'enjeu (Proof of Stake) - Partie 1"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

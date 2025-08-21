@@ -1,53 +1,53 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Push Chain - Evrensel Blockchain Hakkında Destek Soruları",
+      "section-aria-label": "Push Chain - Evrensel Blockchain Hakkındaki Destek Soruları",
       "title": "Destek\nYardım Masası",
-      "title-aria-label": "Push Chain Hakkında Sıkça Sorulan Sorular ve Cevaplar",
+      "title-aria-label": "Push Chain Hakkındaki Sıkça Sorulan Sorular ve Cevaplar",
       "discord-link-text": "Bize Discord'dan Sorun",
-      "discord-link-title": "Destek ve sorular için Push Chain Discord topluluğuna katılın",
-      "discord-link-aria-label": "Yeni sekmede Discord topluluğunu aç",
+      "discord-link-title": "Destek ve sorularınız için Push Chain Discord topluluğuna katılın",
+      "discord-link-aria-label": "Discord topluluğunu yeni sekmede aç",
       "explore-more-text": "Daha Fazla SSS'ye Göz Atın",
-      "explore-more-title": "Kapsamlı Push Chain SSS dokümantasyonunu ve geliştirici kılavuzlarını görüntüleyin",
+      "explore-more-title": "Kapsamlı Push Chain SSS belgelerine ve geliştirici kılavuzlarına göz atın",
       "explore-more-aria-label": "Tam Push Chain SSS sayfasına gidin",
       "accordion-aria-label": "Push Chain destek soruları listesi",
       "answer-aria-label": "Sorunun cevabı - ",
       "qnas": {
         "qna1": {
-          "question": "Cüzdanımı bağlayamıyorum. Ne denemeliyim?",
-          "answer": "<1><2>Hızlı Kontroller:</2> sayfayı yenileyin, cüzdanınızı açın ve push.org için agresif reklam/komut dosyası engelleyicileri devre dışı bırakın.</1><1><2>Ağ geçişine gerek yok:</2> ana zincirinizde kalın; Push yönlendirmeyi arka planda işler.</1><1><2>Site izinlerini sıfırlayın:</2> cüzdanınızda, sitenin bağlantısını kaldırın ve yeniden bağlanın.</1><1>Hala takıldınız mı? <3>Discord</3>'dan sorun veya <4>Destek bileti</4> açın.</1>",
+          "question": "Cüzdanımı bağlayamıyorum. Ne yapmalıyım?",
+          "answer": "<1><2>Hızlı Kontroller:</2> sayfayı yenileyin, cüzdanınızı açın ve push.org için agresif reklam/komut dosyası engelleyicilerini devre dışı bırakın.</1><1><2>Ağ geçişine gerek yok:</2> ana ağınızda kalın; Push arka planda yönlendirmeyi halleder.</1><1><2>Site izinlerini sıfırlayın:</2> cüzdanınızda site bağlantısını kaldırın ve yeniden bağlanın.</1><1>Hala takıldınız mı? <3>Discord</3>'dan sorun veya <4>Destek talebi</4> açın.</1>",
           "discord-url-title": "Gerçek zamanlı yardım için Push Chain Discord'a katılın.",
-          "support-url-title": "Destek bileti açın."
+          "support-url-title": "Destek talebi açın."
         },
         "qna2": {
-          "question": "My transaction is pending or failed — what now?",
-          "answer": "<1><2>Durumu Kontrol Edin:</2> işlem hash'inizi kullanarak cüzdanınızdan <3>Push Scan</3>'da işlemine bakın.</1><1><2>Bekliyor:</2> genellikle kısa süre içinde onaylanır; tekrar tekrar göndermekten kaçının.</1><1><2>Başarısız:</2> para çekilmedi. Hatayı inceleyin ve tekrar deneyin.</1><1>Devam eden olaylar <4>Durum</4>'da yayınlanır.</1>",
-          "scan-url-title": "Push Scan'ı (tarayıcıyı) açın.",
-          "status-url-title": "Ağ durumunu ve olayları görüntüleyin."
+          "question": "İşlemim bekliyor veya başarısız oldu — şimdi ne yapmalıyım?",
+          "answer": "<1><2>Durumu kontrol edin:</2> işlem hash'inizi cüzdanınızdan kullanarak <3>Push Scan</3>'de arayın.</1><1><2>Bekliyor:</2> genellikle kısa sürede onaylanır; tekrar tekrar göndermeyin.</1><1><2>Başarısız:</2> para çekilmedi. Hatayı inceleyin ve tekrar deneyin.</1><1>Devam eden olaylar <4>Durum</4> sayfasında yayınlanmaktadır.</1>",
+          "scan-url-title": "Push Scan (gezgin) açın.",
+          "status-url-title": "Ağ durumu ve olayları görüntüleyin."
         },
         "qna3": {
-          "question": "Testnet tokenları (Donut) nasıl alabilirim?",
-          "answer": "<1><3>Musluk</3>'u kullanarak test tokenları isteyin.</1><1><2>Notlar:</2> hız sınırları uygulanabilir; bazı musluklar basit bir doğrulama gerektirebilir. Musluk başarısız olursa, bize <4>Discord</4>'dan bildirin.</1>",
+          "question": "Testnet token'larını (Donut) nasıl alırım?",
+          "answer": "<1><3>Musluk</3>'u kullanarak test token'ı talep edin.</1><1><2>Notlar:</2> oran sınırlamaları uygulanabilir; bazı musluklar basit bir doğrulama gerektirebilir. Musluk başarısız olursa, <4>Discord</4>'dan bize bildirin.</1>",
           "faucet-url-title": "Push Chain musluğunu açın.",
           "discord-url-title": "Push Chain Discord'a katılın."
         },
         "qna4": {
-          "question": "Bir hata veya güvenlik açığı nasıl bildirebilirim?",
-          "answer": "<1><2>Uygulama hataları:</2> <3>Destek bileti</3> açın veya yeniden üretme adımlarıyla birlikte <4>Discord</4>'a gönderin.</1><1><2>Güvenlik sorunları:</2> <5>security@push.org</5> adresine e-posta gönderin. Düzeltmeyi onaylayana kadar kamuya açıklama yapmaktan kaçının.</1>",
-          "support-url-title": "Destek bileti açın.",
+          "question": "Bir hata veya güvenlik açığı bildirmek istiyorum?",
+          "answer": "<1><2>Uygulama hataları:</2> <3>Destek talebi</3> açın veya adımları yeniden üretmek için <4>Discord</4>'a gönderin.</1><1><2>Güvenlik sorunları:</2> <5>security@push.org</5> adresine e-posta gönderin. Bir düzeltmeyi onaylayana kadar halka açık açıklamadan kaçının.</1>",
+          "support-url-title": "Destek talebi açın.",
           "discord-url-title": "Discord'a katılın."
         },
         "qna5": {
-          "question": "Belgeler ve hızlı başlangıçlar nerede?",
-          "answer": "<1><3>Belgeler</3> ile başlayın, hızlı başlangıçlar ve API'ler ve <4>Bilgi Tabanı</4> için kavramlar, derinlemesine analizler ve SSS'ler için.</1>",
+          "question": "Belgelere ve hızlı başlangıçlara nereden ulaşabilirim?",
+          "answer": "<1>Önce <3>Belgeler</3>'den başlayın hızlı başlangıçlar ve API'ler için, ve kavramlar, derinlemesine incelemeler ve SSS'ler için <4>Bilgi Tabanı</4>.</1>",
           "docs-url-title": "Geliştirici belgelerini açın.",
           "kb-url-title": "Bilgi Tabanını açın."
         },
         "qna6": {
-          "question": "Yeni bir zincir, özellik veya entegrasyon için destek isteyebilir miyim?",
-          "answer": "<1>Evet. Hangi zincire/araca ihtiyacınız olduğunu <3>İletişim</3> yoluyla bize bildirin veya <4>GitHub</4>'da bir sorun açın. Kapsamı sürekli olarak genişletiyoruz.</1>",
+          "question": "Yeni bir ağ, özellik veya entegrasyon için destek talep edebilir miyim?",
+          "answer": "<1>Evet. Hangi ağ/araçlara ihtiyacınız olduğunu <3>İletişim</3> yoluyla bize bildirin veya <4>GitHub</4>'da bir sorun açın. Kapsamımızı sürekli olarak genişletiyoruz.</1>",
           "contact-url-title": "Push Chain ekibiyle iletişime geçin.",
-          "github-url-title": "GitHub org'u açın."
+          "github-url-title": "GitHub org'unu açın."
         }
       }
     }

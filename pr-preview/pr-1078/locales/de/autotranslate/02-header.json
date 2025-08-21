@@ -1,10 +1,10 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Zur Startseite navigieren",
-      "language-icon-alt": "Symbol für die Sprachauswahl",
+      "logo-aria-label": "Push Chain – Zur Startseite navigieren",
+      "language-icon-alt": "Symbol zur Sprachauswahl",
       "hamburger-menu-alt": "Navigationsmenü öffnen",
-      "testnet-badge-alt": "Push Chain Testnet Donut - Testnet-Status anzeigen"
+      "testnet-badge-alt": "Push Chain Testnet Donut – Testnet-Status anzeigen"
     },
     "logo": {
       "imagealt": "Bild des Push Chain Logos",
@@ -16,13 +16,13 @@
       "aria-label": "Testnet-Bereich",
       "link1": {
         "text": "Push Scan",
-        "subtext": "Blockexplorer für Push Chain",
-        "title": "Erkunden Sie Push Chain Testnet-Transaktionen und -Blöcke auf Push Scan"
+        "subtext": "Block Explorer für Push Chain",
+        "title": "Push Chain Testnet-Transaktionen und -Blöcke auf Push Scan erkunden"
       },
       "link2": {
         "text": "Faucet",
         "subtext": "Testnet-Token erhalten",
-        "title": "Erhalten Sie kostenlose Testnet-Token für die Push Chain-Entwicklung"
+        "title": "Kostenlose Testnet-Token für die Push Chain-Entwicklung erhalten"
       }
     },
     "developers": {
@@ -31,17 +31,17 @@
       "link1": {
         "text": "Loslegen",
         "subtext": "Einführung in die Entwicklung auf Push Chain",
-        "title": "Beginnen Sie mit der Entwicklung universeller Apps auf Push Chain - Entwicklerdokumentation"
+        "title": "Beginnen Sie mit dem Erstellen universeller Apps auf Push Chain – Entwicklerdokumentation"
       },
       "link2": {
         "text": "Schnellstart",
-        "subtext": "Entwicklungsumgebung in Sekundenschnelle einrichten",
-        "title": "Schnellstartanleitung - Richten Sie die Push Chain-Entwicklungsumgebung sofort ein"
+        "subtext": "Entwicklungsumgebung in Sekunden einrichten",
+        "title": "Schnellstartanleitung – Richten Sie die Push Chain-Entwicklungsumgebung sofort ein"
       },
       "link3": {
         "text": "Tutorials",
-        "subtext": "Schritt-für-Schritt-Anleitungen für die Entwicklung mit Push",
-        "title": "Lernen Sie mit praktischen Tutorials - Erstellen Sie Ihre erste universelle App auf Push Chain"
+        "subtext": "Schritt-für-Schritt-Anleitungen zum Erstellen mit Push",
+        "title": "Lernen Sie mit praktischen Tutorials – Erstellen Sie Ihre erste universelle App auf Push Chain"
       },
       "link4": {
         "text": "GitHub",
@@ -49,7 +49,7 @@
         "title": "Erkunden Sie den Quellcode und die Entwicklungstools von Push Chain auf GitHub"
       },
       "link5": {
-        "text": "Entwickler Discord",
+        "text": "Entwickler-Discord",
         "subtext": "Mit der Entwickler-Community in Kontakt treten",
         "title": "Treten Sie der Push Chain-Entwickler-Community auf Discord bei, um Unterstützung und Zusammenarbeit zu erhalten"
       }
@@ -70,7 +70,7 @@
       "link3": {
         "text": "X/Twitter",
         "subtext": "Updates und Nachrichten aus dem Ökosystem verfolgen",
-        "title": "Folgen Sie Push Chain auf X (Twitter) für die neuesten Updates und Ankündigungen"
+        "title": "Folgen Sie Push Chain auf X (Twitter), um die neuesten Updates und Ankündigungen zu erhalten"
       },
       "link4": {
         "text": "Discord",
@@ -80,7 +80,7 @@
       "link5": {
         "text": "Telegram",
         "subtext": "Treten Sie dem Gespräch bei und bleiben Sie auf dem Laufenden",
-        "title": "Verbinden Sie sich mit der Push Chain-Community auf Telegram, um Echtzeit-Updates zu erhalten"
+        "title": "Treten Sie der Push Chain-Community auf Telegram bei, um Echtzeit-Updates zu erhalten"
       }
     },
     "resources": {
@@ -89,12 +89,12 @@
       "link1": {
         "text": "Blog",
         "subtext": "Updates, detaillierte Informationen und Entwicklergeschichten",
-        "title": "Lesen Sie den Push Chain-Blog für die neuesten Updates, technische Details und Entwicklergeschichten"
+        "title": "Lesen Sie den Push Chain-Blog für die neuesten Updates, technischen Analysen und Entwicklergeschichten"
       },
       "link2": {
         "text": "Litepaper",
-        "subtext": "Die Vision und Technologie, vereinfacht",
-        "title": "Lesen Sie das Push Chain-Litepaper - vereinfachte Vision und technischer Überblick"
+        "subtext": "Die Vision und Technik, vereinfacht",
+        "title": "Lesen Sie das Push Chain Litepaper – vereinfachte Vision und technischer Überblick"
       },
       "link3": {
         "text": "FAQ",
@@ -108,35 +108,35 @@
       "english": "English",
       "english-ctatitle": "Sprache auf Englisch ändern",
       "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "Sprache auf Chinesisch ändern",
+      "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",
-      "spanish-ctatitle": "Sprache auf Spanisch ändern",
+      "spanish-ctatitle": "Cambiar el idioma a español",
       "hindi": "हिंदी",
-      "hindi-ctatitle": "Sprache auf Hindi ändern",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
       "korean": "한국어",
-      "korean-ctatitle": "Sprache auf Koreanisch ändern",
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
-      "japanese-ctatitle": "Sprache auf Japanisch ändern",
+      "japanese-ctatitle": "言語を日本語に変更する",
       "portuguese": "Português",
-      "portuguese-ctatitle": "Sprache auf Portugiesisch ändern",
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "Sprache auf Russisch ändern",
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "Sprache auf Türkisch ändern",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "Sprache auf Französisch ändern",
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "Sprache auf Indonesisch ändern",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "Sprache auf Vietnamesisch ändern",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
       "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "Sprache auf Arabisch ändern"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Zugriff auf Push Portal - Verdienen Sie Punkte als Entwickler, Benutzer oder Validierer"
+      "title": "Auf das Push Portal zugreifen – Punkte als Entwickler, Nutzer oder Validator verdienen"
     }
   }
 }

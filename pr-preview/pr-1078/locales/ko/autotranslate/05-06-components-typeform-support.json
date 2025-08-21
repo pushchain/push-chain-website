@@ -8,19 +8,19 @@
       "categories": {
         "technical": {
           "label": "🔧 기술 지원",
-          "description": "버그 보고, SDK/API, 스마트 컨트랙트, 통합 지원"
+          "description": "버그 리포트, SDK/API, 스마트 컨트랙트, 통합 지원"
         },
         "network": {
-          "label": "🌐 네트워크 및 테스트넷",
-          "description": "익스플로러/Push Scan, RPC, faucet, Donut 테스트넷 문제"
+          "label": "🌐 네트워크 & Testnet",
+          "description": "익스플로러/Push Scan, RPC, Faucet, Donut 테스트넷 문제"
         },
         "wallet": {
           "label": "👛 범용 지갑",
-          "description": "Push Wallet, 범용 체인 연결 또는 기타 지갑 문제"
+          "description": "Push Wallet, 범용 체인 연결 또는 다른 지갑 문제"
         },
         "identity": {
-          "label": "🪪 계정 및 신원",
-          "description": "UEA/UOA, 서명, 속성 질문"
+          "label": "🪪 계정 & 신원 확인",
+          "description": "UEA/UOA, 서명, 속성 관련 질문"
         },
         "security": {
           "label": "🛡️ 보안",
@@ -31,31 +31,31 @@
           "description": "질문, 피드백, 기타 주제"
         },
         "partnerships": {
-          "label": "🤝 파트너십 및 통합",
-          "description": "BD, 에코시스템 통합 (지갑, 인프라, 거래소, 프로토콜)"
+          "label": "🤝 파트너십 & 통합",
+          "description": "BD, 생태계 통합 (지갑, 인프라, 거래소, 프로토콜)"
         },
         "grants": {
-          "label": "💰 보조금 및 에코시스템 프로그램",
-          "description": "BRB, 부트캠프, 보조금, 자금 문의"
+          "label": "💰 보조금 & 생태계 프로그램",
+          "description": "BRB, Bootcamp, 보조금, 자금 지원 문의"
         },
         "media": {
-          "label": "📰 미디어 및 언론",
-          "description": "인터뷰, 성명, 자산, 사실 확인"
+          "label": "📰 미디어 & 언론",
+          "description": "인터뷰, 성명, 자료, 사실 확인"
         },
         "events": {
-          "label": "🎤 강연 및 이벤트",
-          "description": "강연, 워크숍, 해커톤, 후원"
+          "label": "🎤 강연 & 이벤트",
+          "description": "강연, 워크샵, 해커톤, 스폰서십"
         },
         "careers": {
           "label": "👩‍💻 채용",
-          "description": "오픈된 직무, 인턴십, 계약 기회"
+          "description": "채용 공고, 인턴십, 계약 기회"
         },
         "validators": {
-          "label": "🧡 검증자 / 노드 운영자",
+          "label": "🧡 Validator / Node 운영자",
           "description": "운영자 관심, RPC 제공자, 인프라 파트너"
         },
         "legal": {
-          "label": "⚖️ 법률 및 규정 준수",
+          "label": "⚖️ 법률 & 규정 준수",
           "description": "상표, 데이터 요청, 계약"
         }
       },
@@ -63,29 +63,28 @@
         "steps": {
           "category": {
             "title": "무엇을 도와드릴까요?",
-            "subtitle": "문의 사항과 가장 관련 있는 카테고리를 선택하세요"
+            "subtitle": "문의 내용과 가장 관련 있는 카테고리를 선택해주세요."
           },
           "contact": {
             "title": "알아봅시다",
-            "subtitle": "이 정보를 사용하여 답변 드리겠습니다",
+            "subtitle": "연락을 위해 이 정보를 사용합니다.",
             "name-label": "이름",
-            "name-placeholder": "성함 입력",
-            "name-aftergreet": "만나 뵙게 되어 반갑습니다, ",
+            "name-placeholder": "이름을 입력해주세요",
+            "name-aftergreet": "안녕하세요, ",
             "email-label": "이메일 주소",
-            "email-placeholder": "이메일 주소 입력"
+            "email-placeholder": "이메일 주소를 입력해주세요"
           },
           "details": {
             "title": "자세히 알려주세요",
-            "subtitle": "문의 사항에 대한 자세한 내용을 알려주세요",
+            "subtitle": "문의 내용을 자세히 알려주세요.",
             "subject-label": "제목",
-            "subject-placeholder": "간단한 문제 요약",
+            "subject-placeholder": "문제에 대한 간략한 요약",
             "message-label": "메시지",
-            "message-placeholder": "문제를 자세히 설명하십시오. 오류 메시지, 재현 단계 또는 관련 정보를 포함하십시오."
+            "message-placeholder": "문제에 대한 자세한 내용을 설명해주세요. 오류 메시지, 재현 단계 또는 관련 정보를 포함해주세요."
           },
           "submit": {
             "title": "검토 및 제출",
-            "subtitle": "제출하기 전에 정보를 검토하십시오",
-            "placeholder": "도움이 필요한 내용을 자세히 알려주세요..."
+            "subtitle": "제출하기 전에 정보를 검토해주세요."
           }
         },
         "buttons": {
@@ -95,23 +94,23 @@
           "submitting": "제출 중..."
         },
         "validation": {
-          "name-required": "이름이 필요합니다",
-          "name-min-length": "이름은 최소 2자 이상이어야 합니다",
-          "email-required": "이메일이 필요합니다",
-          "email-invalid": "유효한 이메일 주소를 입력하십시오",
-          "subject-required": "제목이 필요합니다",
-          "message-required": "메시지가 필요합니다",
-          "category-required": "카테고리를 선택하십시오",
-          "default": "이 필드가 필요합니다"
+          "name-required": "이름은 필수입니다.",
+          "name-min-length": "이름은 최소 2자 이상이어야 합니다.",
+          "email-required": "이메일은 필수입니다.",
+          "email-invalid": "유효한 이메일 주소를 입력해주세요.",
+          "subject-required": "제목은 필수입니다.",
+          "message-required": "메시지는 필수입니다.",
+          "category-required": "카테고리를 선택해주세요.",
+          "default": "이 필드를 채워주세요."
         },
         "success": {
-          "title": "티켓 제출 성공!",
-          "message": "연락해 주셔서 감사합니다. 지원 티켓을 받았으며 최대한 빨리 답변 드리겠습니다.",
+          "title": "티켓이 성공적으로 제출되었습니다!",
+          "message": "연락 주셔서 감사합니다. 지원 티켓을 받았습니다. 최대한 빨리 답변드리겠습니다.",
           "button": "다른 티켓 제출"
         },
         "error": {
           "title": "제출 실패",
-          "message": "티켓 제출에 실패했습니다. 다시 시도하거나 직접 문의하십시오.",
+          "message": "티켓 제출에 실패했습니다. 다시 시도하거나 직접 문의해주세요.",
           "button": "다시 시도"
         }
       }

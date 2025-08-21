@@ -1,16 +1,16 @@
 {
   "footer": {
     "email-section": {
-      "title": "Будьте в курсе новостей <1>Push Chain</1>",
+      "title": "Будьте в курсе новостей Push Chain",
       "title-secondary": "и обновлений!",
-      "title-aria-label": "Раздел подписки на рассылку",
-      "section-aria-label": "Подписка на рассылку <1>Push Chain</1>"
+      "title-aria-label": "Раздел подписки на рассылку новостей",
+      "section-aria-label": "Подписка на рассылку Push Chain"
     },
     "main-section": {
       "section-aria-label": "Навигация и ссылки в футере",
-      "logo-link-title": "Главная страница <1>Push Chain</1>",
-      "logo-link-aria-label": "Главная страница <1>Push Chain</1>",
-      "logo-alt": "Логотип <1>Push Chain</1>"
+      "logo-link-title": "Главная страница Push Chain",
+      "logo-link-aria-label": "Главная страница Push Chain",
+      "logo-alt": "Push Chain logo"
     },
     "columns": {
       "resources": {
@@ -27,55 +27,55 @@
       },
       "help": {
         "title": "Помощь",
-        "title-aria-label": "Навигация по помощи"
+        "title-aria-label": "Навигация по справке"
       }
     },
     "links": {
       "get-started": "Начать",
-      "get-started-title": "Начните разрабатывать на <1>Push Chain</1>",
+      "get-started-title": "Начните создавать на Push Chain",
       "docs": "Документация",
-      "docs-title": "Документация <1>Push Chain</1>",
+      "docs-title": "Документация Push Chain",
       "github": "GitHub",
-      "github-title": "Репозитории <1>Push Chain</1> на GitHub",
+      "github-title": "Репозитории Push Chain на GitHub",
       "knowledge-base": "База знаний",
-      "knowledge-base-title": "База знаний <1>Push Chain</1>",
+      "knowledge-base-title": "База знаний Push Chain",
       "blog": "Блог",
-      "blog-title": "Блог <1>Push Chain</1>",
+      "blog-title": "Блог Push Chain",
       "litepaper": "Лайтпейпер",
-      "litepaper-title": "Лайтпейпер <1>Push Chain</1> (PDF)",
+      "litepaper-title": "Лайтпейпер Push Chain (PDF)",
       "brand-kit": "Brand Kit",
-      "brand-kit-title": "Брендовые материалы и гайдлайны <1>Push Chain</1>",
+      "brand-kit-title": "Брендовые материалы Push Chain и гайдлайны",
       "push-scan": "Push Scan",
-      "push-scan-title": "Обозреватель блоков <1>Push Chain</1>",
-      "faucet": "Faucet",
-      "faucet-title": "Получите тестовые токены с Faucet <1>Push Chain</1>",
+      "push-scan-title": "Обозреватель блоков Push Chain",
+      "faucet": "Кран",
+      "faucet-title": "Получите тестовые токены с крана Push Chain",
       "push-portal": "Push Portal",
-      "push-portal-title": "Сообщество <1>Push Protocol</1>",
+      "push-portal-title": "Сообщество Push Chain",
       "support": "Поддержка",
-      "support-title": "Центр поддержки",
-      "security": "Безопасность и уведомления",
-      "security-title": "Сообщить об уязвимости (ответственное раскрытие)",
-      "contact-us": "Контакты",
-      "contact-us-title": "Партнерство, BD, медиа или общие вопросы",
+      "support-title": "Центр помощи",
+      "security": "Безопасность и уведомления об уязвимостях",
+      "security-title": "Сообщить об уязвимости (ответственная раскрытие информации)",
+      "contact-us": "Связаться с нами",
+      "contact-us-title": "Партнерство, бизнес-развитие, медиа или общие вопросы",
       "careers": "Карьера",
-      "careers-title": "Открытые вакансии в <1>Push Chain</1>",
+      "careers-title": "Открытые вакансии в Push Chain",
       "twitter": "X (Twitter)",
-      "twitter-title": "Следите за <1>Push Chain</1> в X (Twitter)",
+      "twitter-title": "Подпишитесь на Push Chain в X (Twitter)",
       "discord": "Discord",
-      "discord-title": "Присоединяйтесь к Discord <1>Push Chain</1>",
+      "discord-title": "Присоединяйтесь к Discord Push Chain",
       "reddit": "Reddit",
-      "reddit-title": "Присоединяйтесь к сообществу <1>Push Chain</1> на Reddit",
+      "reddit-title": "Присоединяйтесь к сабреддиту Push Chain",
       "telegram": "Telegram",
-      "telegram-title": "Присоединяйтесь к Telegram <1>Push Chain</1>"
+      "telegram-title": "Присоединяйтесь к Telegram Push Chain"
     },
     "social-section": {
       "section-aria-label": "Ссылки на социальные сети и юридическая информация",
-      "twitter-icon-title": "<1>Push Chain</1> в X (Twitter)",
-      "twitter-icon-aria-label": "<1>Push Chain</1> в X (Twitter)",
-      "github-icon-title": "<1>Push Chain</1> в GitHub",
-      "github-icon-aria-label": "<1>Push Chain</1> в GitHub",
-      "discord-icon-title": "<1>Push Chain</1> в Discord",
-      "discord-icon-aria-label": "<1>Push Chain</1> в Discord"
+      "twitter-icon-title": "Push Chain в X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain в X (Twitter)",
+      "github-icon-title": "Push Chain в GitHub",
+      "github-icon-aria-label": "Push Chain в GitHub",
+      "discord-icon-title": "Push Chain в Discord",
+      "discord-icon-aria-label": "Push Chain в Discord"
     },
     "legal": {
       "privacy-policy": "Политика конфиденциальности",
@@ -84,12 +84,12 @@
       "terms-of-service": "Условия использования",
       "terms-of-service-title": "Ознакомьтесь с Условиями использования",
       "terms-of-service-aria-label": "Условия использования",
-      "cookie-preferences": "Настройки cookie",
-      "cookie-preferences-title": "Управление настройками cookie"
+      "cookie-preferences": "Настройки Cookie",
+      "cookie-preferences-title": "Управление настройками Cookie"
     },
     "footer-image": {
-      "alt": "Иллюстрация футера <1>Push Chain</1>",
-      "title": "<1>Push Chain</1> – Универсальный блокчейн"
+      "alt": "Push Chain footer illustration",
+      "title": "Push Chain - Универсальный блокчейн"
     }
   }
 }

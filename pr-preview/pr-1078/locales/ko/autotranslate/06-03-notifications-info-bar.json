@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "Push 테스트넷 출시 — 빌더 및 초기 사용자에게 보상 잠금 해제.",
+      "title": "Push Testnet 출시! — 개발자 및 초기 사용자를 위한 보상 혜택을 받으세요.",
       "learn-more-text": "자세히 알아보기",
-      "learn-more-title": "이 발표에 대해 자세히 알아보기",
-      "dismiss-button-title": "알림 닫기",
-      "dismiss-button-aria-label": "알림 바 닫기",
+      "learn-more-title": "이 공지에 대해 자세히 알아보기",
+      "dismiss-button-title": "공지 닫기",
+      "dismiss-button-aria-label": "공지 바 닫기",
       "container-aria-label": "사이트 공지",
-      "star-icon-alt": "공지 별 아이콘"
+      "star-icon-alt": "공지 스타 아이콘"
     }
   }
 }

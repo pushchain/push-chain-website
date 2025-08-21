@@ -1,18 +1,18 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - ホームページに移動",
+      "logo-aria-label": "Push Chain - ホームページへ移動",
       "language-icon-alt": "言語選択アイコン",
       "hamburger-menu-alt": "ナビゲーションメニューを開く",
-      "testnet-badge-alt": "Push Chain テストネット Donut - テストネットのステータスを表示"
+      "testnet-badge-alt": "Push Chain Testnet ドーナツ - テストネットのステータスを表示"
     },
     "logo": {
       "imagealt": "Push Chain ロゴの画像",
       "imagetitle": "Push Chain ロゴ",
-      "ctatitle": "Push Chain ホームページに移動"
+      "ctatitle": "Push Chain ホームページへ移動"
     },
     "testnet": {
-      "title": "テストネット",
+      "title": "Testnet",
       "aria-label": "テストネットセクション",
       "link1": {
         "text": "Push Scan",
@@ -26,12 +26,12 @@
       }
     },
     "developers": {
-      "title": "開発者",
+      "title": "Developers",
       "aria-label": "開発者セクション",
       "link1": {
         "text": "Get Started",
-        "subtext": "Push Chain での開発入門",
-        "title": "Push Chain でのユニバーサルアプリ開発を始める - 開発者ドキュメント"
+        "subtext": "Push Chain での構築入門",
+        "title": "Push Chain でのユニバーサルアプリ構築を始める - 開発者ドキュメント"
       },
       "link2": {
         "text": "Quick Start",
@@ -40,7 +40,7 @@
       },
       "link3": {
         "text": "Tutorials",
-        "subtext": "Push を使った段階的なガイド",
+        "subtext": "ステップバイステップのガイドで構築",
         "title": "実践的なチュートリアルで学ぶ - Push Chain で最初のユニバーサルアプリを構築"
       },
       "link4": {
@@ -50,65 +50,65 @@
       },
       "link5": {
         "text": "Developer Discord",
-        "subtext": "開発コミュニティに参加",
-        "title": "Discord で Push Chain 開発コミュニティに参加してサポートとコラボレーションを"
+        "subtext": "開発者コミュニティと連携",
+        "title": "Discord で Push Chain 開発者コミュニティに参加して、サポートと協力を得る"
       }
     },
     "community": {
-      "title": "コミュニティ",
+      "title": "Community",
       "aria-label": "コミュニティセクション",
       "link1": {
         "text": "Knowledge Base",
-        "subtext": "機能の詳細な解説を見る",
-        "title": "Push Chain の包括的なドキュメントと機能ガイドを探索"
+        "subtext": "機能の詳細な情報を探す",
+        "title": "包括的な Push Chain ドキュメントと機能ガイドを探索"
       },
       "link2": {
         "text": "Tokenomics",
-        "subtext": "Push Chain を支えるネイティブトークン",
-        "title": "$PC トークンのユーティリティと Push Chain のトークノミクスを学ぶ"
+        "subtext": "Push Chain のすべてを支えるネイティブトークン",
+        "title": "Push Chain トークノミクスと $PC トークンのユーティリティについて学ぶ"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "最新情報とエコシステムのニュースを追う",
-        "title": "X (Twitter) で Push Chain をフォローして最新情報とアナウンスを入手"
+        "subtext": "最新情報とエコシステムのニュースをフォロー",
+        "title": "X (Twitter) で Push Chain をフォローして、最新情報と発表を入手"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "チャット、構築、コミュニティと交流",
-        "title": "Discord で Push Chain コミュニティに参加してディスカッションやサポートに参加"
+        "subtext": "チャット、構築、コミュニティとの交流",
+        "title": "Discord で Push Chain コミュニティに参加して、ディスカッションとサポートに参加"
       },
       "link5": {
         "text": "Telegram",
-        "subtext": "会話に参加して最新情報を入手",
-        "title": "Telegram で Push Chain コミュニティに参加してリアルタイムの最新情報を入手"
+        "subtext": "会話に参加して常に最新情報を入手",
+        "title": "Telegram で Push Chain コミュニティに接続して、リアルタイムの最新情報を入手"
       }
     },
     "resources": {
-      "title": "リソース",
+      "title": "Resources",
       "aria-label": "リソースセクション",
       "link1": {
         "text": "Blog",
-        "subtext": "最新情報、詳細な解説、開発者のストーリー",
-        "title": "Push Chain ブログを読んで最新情報、技術的な詳細な解説、開発者のストーリーを入手"
+        "subtext": "最新情報、詳細な情報、開発者のストーリー",
+        "title": "Push Chain ブログを読んで、最新情報、技術的な詳細な情報、開発者のストーリーを入手"
       },
       "link2": {
         "text": "Litepaper",
-        "subtext": "ビジョンと技術をわかりやすく解説",
-        "title": "Push Chain Litepaper を読んで簡略化されたビジョンと技術の概要を入手"
+        "subtext": "ビジョンと技術を簡略化",
+        "title": "Push Chain ライトペーパーを読む - 簡略化されたビジョンと技術概要"
       },
       "link3": {
         "text": "FAQ",
-        "subtext": "よくある質問への簡単な回答",
+        "subtext": "一般的な質問への簡単な回答",
         "title": "Push Chain に関するよくある質問を参照"
       }
     },
     "language": {
-      "title": "言語",
+      "title": "Language",
       "aria-label": "言語選択ドロップダウン",
       "english": "English",
-      "english-ctatitle": "言語を英語に変更",
+      "english-ctatitle": "言語を英語に変更する",
       "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "切换语言为中文",
+      "chinese_simplified-ctatitle": "语言切换为中文",
       "spanish": "Español",
       "spanish-ctatitle": "Cambiar el idioma a español",
       "hindi": "हिंदी",

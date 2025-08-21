@@ -3,12 +3,58 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "开发者 — 使用指南和教程",
+          "title": "开发者 — 使用指南 & 教程",
           "description": "使用 Push Chain 功能的分步指南、模式和示例。",
-          "og-title": "开发者 - 使用指南和教程",
-          "og-description": "使用 Push Chain 构建的分步教程、最佳实践和示例。",
-          "twitter-title": "开发者 - 使用指南和教程",
-          "twitter-description": "在 Push Chain 上发布的步骤指南。"
+          "og-title": "开发者 - 使用指南 & 教程",
+          "og-description": "构建 Push Chain 的指导教程、最佳实践和示例。",
+          "twitter-title": "开发者 - 使用指南 & 教程",
+          "twitter-description": "使用 Push Chain 上线的分步指南。"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "知识库"
+            }
+          },
+          "blocks": {
+            "title": "在 Push Chain 上构建",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## 开发者\n\n准备好在 Push Chain 上构建了吗？这里有一些资源可以帮助您获得灵感并开始。",
+                  "curated-reads": "## 精选阅读 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "让我们构建通用应用 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "仅在共享状态下才能构建的应用 - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "仅在共享状态下才能构建的应用 - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "消费应用 🫶🏽 Push Chain?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "开发者资源",
+                "items": {
+                  "developer-docs": {
+                    "title": "探索开发者文档"
+                  },
+                  "faucet": {
+                    "title": "获取 Testnet 令牌"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet 资源管理器"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -2,12 +2,76 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Wissensdatenbank – Anleitungen, FAQs & Tutorials",
-        "description": "Hier finden Sie Konzepte, FAQs, Anleitungen und Ökosystem-Ressourcen. Verständliche, nicht-technische Anleitungen zur Nutzung von Push Chain.",
+        "title": "Wissensdatenbank — Anleitungen, FAQs & How-tos",
+        "description": "Hier starten Sie mit Konzepten, FAQs, Anleitungen und Ökosystem-Ressourcen. Verständliche, nicht-technische Anleitungen zur Verwendung von Push Chain.",
         "og-title": "Push Chain Wissensdatenbank - Anleitungen & FAQs",
-        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufig gestellte Fragen zu Push Chain.",
-        "twitter-title": "Wissensdatenbank – Anleitungen & FAQs",
-        "twitter-description": "Schnelle Anleitungen, FAQs und Tutorials für Push Chain (keine Fachbegriffe)."
+        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufige Fragen zu Push Chain.",
+        "twitter-title": "Wissensdatenbank - Anleitungen & FAQs",
+        "twitter-description": "Schnelle Anleitungen, FAQs und How-tos für Push Chain (ohne Fachjargon)."
+      },
+      "hero-section": {
+        "title": "Wissensdatenbank",
+        "description": {
+          "highlighted": "Push Chain ist eine echte universelle Blockchain, die Fragmentierung über alle Chains hinweg beseitigt.",
+          "developers": "Entwickler",
+          "developers-text": "einmal bereitstellen und sofort mit allen unterstützten EVM- und Nicht-EVM-Chains kompatibel werden.",
+          "users": "Nutzer",
+          "users-text": "die gleiche App verwenden, egal von welcher Chain sie kommen."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Benachrichtigung über Push Chain Testnet erhalten",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Erfahren Sie zuerst, wenn das Push Chain Testnet live geht. Melden Sie sich für unseren Newsletter an, um exklusive Updates zu erhalten."
+        },
+        "footer": {
+          "description": "Gestalten Sie nahtlose, benutzerfreundliche Erlebnisse für Ihre App auf jeder Blockchain mit Push Chain.",
+          "cta": {
+            "text": "Benachrichtigung erhalten"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Ressourcen",
+              "items": {
+                "push101": {
+                  "title": "Push Chain Grundlagen",
+                  "subtitle": "Lernen Sie die Grundlagen von Push Chain, seine Innovationen und warum es erforderlich ist",
+                  "ctatitle": "Mehr erfahren"
+                },
+                "builders": {
+                  "title": "Auf Push Chain bauen",
+                  "subtitle": "Tauchen Sie ein in die Entwicklung universeller Apps, was es ermöglicht und wie Sie beginnen!",
+                  "ctatitle": "Bauen wir los"
+                },
+                "deepdives": {
+                  "title": "Technische Details",
+                  "subtitle": "Möchten Sie die detaillierte Funktionsweise von Push Chain kennen? Oder sind Sie einfach neugierig? Egal wie, hallo!",
+                  "ctatitle": "Sehen wir, wie es tickt"
+                },
+                "devdocs": {
+                  "title": "Entwickler-Dokumentation",
+                  "subtitle": "Kommen wir gleich zur Sache! Ich bin eine universelle Chain... und Sie sind ein Entwickler, machen wir es offiziell!",
+                  "ctatitle": "Jetzt bauen"
+                },
+                "tokenomics": {
+                  "title": "Tokenomics erkunden",
+                  "subtitle": "Lernen Sie, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das von Dauer ist",
+                  "ctatitle": "Token-Design lernen"
+                },
+                "faq": {
+                  "title": "FAQs",
+                  "subtitle": "Hier finden Sie Antworten auf alle häufigen Fragen der Community",
+                  "ctatitle": "Mehr lesen"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -1,0 +1,41 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "seo": {
+          "title": "Tokenomics — $PC Value Accrual & Economics",
+          "description": "How $PC captures value: settlement-driven demand, usage-based sinks (burns/locks), staking economics, and the supply schedule.",
+          "og-title": "Tokenomics - $PC Value Accrual & Economics",
+          "og-description": "Settlement in $PC drives demand; usage-based sinks reduce supply. Includes staking economics and emissions.",
+          "twitter-title": "Push Chain Tokenomics | Token Economics",
+          "twitter-description": "Settlement in $PC, usage-driven sinks, staking economics, and emissions—concise investor overview."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Knowledge Base"
+            }
+          },
+          "blocks": {
+            "title": "Explore Tokenomics",
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "overview": "## Overview\n\nIn late 2024, the Push community voted to approve the launch of Push Chain, a shared state layer 1 blockchain designed to enable the development of universal applications and eliminate fragmentation across web3.\n\nPush Chain is a purpose-built layer that connects L1s, L2s, and L3s with near-instant finality and true scalability, which solves the fundamental issue with web3 applications: fragmentation. With the successful voting of the governance proposal, the Push Chain mission is now on its way toward building **any chain, any user, and any app.**\n\n:::warning ⚠️ Token not live yet\nThe Push Chain token is not live, nor is any presale live. The Push Chain token is not yet named.<p />\n\n\nDo not believe anyone offering early access to the Push Chain token. All communications regarding Push Chain will be announced simultaneously from official Push channels — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## What is the Vision of Push Chain?\n\nAll blockchains have proven particularly useful for specific apps and use cases. Bitcoin enabled smart money. Ethereum enabled innovations for DeFi. Solana enabled fast apps and meme culture. Several L2s and new L1s are targeting other areas of concern.\n\nHowever, a blockchain that is purpose-built to enable chain abstraction and seamless interoperability in the space is still required. This chain would enable transactions from any chain (ETH, SOL, EVM or non-EVM) to power apps that can be used by **any user —** no matter their chain or wallet. This is the chain of **Universal Apps**. This is Push Chain!",
+                  "innovation": "### Built on innovation to eliminate blockchain isolation!\n\nPush Chain is revolutionary for both users and developers as it creates an environment for any developer to deploy their universal app in hours via a single universal smart contract deployment.\n\nIt also enables users to transact from the comfort, convenience, and choice of their ecosystem, no matter where the app resides.\n\nUnder the hood, this is achieved by:\n\n- Ability to do **transactions from any chain**\n- **Universal Fee & Wallet Abstraction** to enable users to use any chain, any wallet and pay in any token\n- **Universal Smart Contract** to enable devs to deploy instant interop apps in minutes\n- **Shared State** to read data from other blockchain\n- **Programmable Solver** to write data to any other chain\n\nAll of this enables a **Universal Execution Layer** to allow users of any chain to access and interact with the same app.",
+                  "fit": "### Where does Push Chain fit in?\n\nPush chain fits **every project…** **on every chain!**\n\n- **It allows developers** from any chain to create seamless full interop apps that can be used from any chain, via any wallet.<br />\n- **It allows users** the freedom to interact with the wallet of their choice or have a seamless signless experience via Push Universal Wallet with social login.<br />\n- **It allows shared app experiences** where users of all chains can come together and engage with universal DeFi, unified gaming, universal NFT, universal Governance, etc.<br />",
+                  "use-cases": "### What can be built on Push Chain?\n\nPush Chain brings seamless interoperability and unifies all L1s, L2s, & L3s and therefore is poised to become the playground of innovation and interop. You can build existing web3 use cases such as:\n\n![Primary use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nOr you can better web3 and create innovations:\n\n![Consumer use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nOr you can see some popular app examples and to take inspiration from:\n\n![Popular app examples on Push Chain](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
+                  "token-utility": "### What is the utility of the Push Chain token?\n\n1. **Staking & Validation** <br />\nThe token is used for staking to secure the network and participate in consensus. Validators and delegators earn rewards for their participation.\n\n2. **Transaction Fees** <br />\nThe token serves as the primary method for network fees for transactions and app usage.\n\n3. **Universal Fee Abstraction** <br />\nThe token enables users to pay fees in any token\n\n4. **Universal Smart Contracts**\n\n5. **Shared State**\n\n6. **Programmable Solvers**\n\nAll of this enables a **Universal Execution Layer** to allow users of any chain to access and interact with the same app.",
+                  "airdrop-details": "### Airdrop Details\n\nAdditionally, the tokenomics proposal allocates 10% of the total Push Chain token supply for airdrops to past and present Push Protocol application users (notifications, messaging, chat). Along with new users, creators, developers, and ecosystem partners of Push Chain.\n\n<br />",
+                  "token-distribution": "## Token Distribution Details\n\nThe total supply of Push Chain tokens is proposed at **10 billion**, distributed as follows:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Airdrop distributions begin at TGE, but will happen over the course of multiple seasons.\n2. Core Contributors have a 12-month delay, followed by 24-month vesting.\n3. Push Labs Treasury has a 36-month vesting.\n4. Investors have 24-month linear vesting.\n5. Community and Ecosystem Reserves has a 13.5% unlock at TGE, followed by 36-month vesting.\n\n<br />",
+                  "get-involved": "## Get Involved\n\n- **🧙 Developers**\nExplore our SDK & Docs at [Documentation Hub](/docs/)\n\n- **🦹 Community**  \nFollow [@PushChain](https://x.com/PushChain) on X/Twitter, join our [Discord](https://discord.com/invite/pushchain) and [Telegram](https://t.me/epnsproject).\n\nTogether, let's build the future of **Universal Web3**!"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

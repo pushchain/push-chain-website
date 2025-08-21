@@ -3,12 +3,58 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders – 方法とチュートリアル",
+          "title": "Builders — チュートリアルとハウツー",
           "description": "Push Chain の機能を活用するためのステップバイステップガイド、パターン、および例。",
-          "og-title": "Builders – 方法とチュートリアル",
-          "og-description": "Push Chain で構築するためのガイド付きチュートリアル、ベストプラクティス、および例。",
-          "twitter-title": "Builders – 方法とチュートリアル",
+          "og-title": "Builders - チュートリアルとハウツー",
+          "og-description": "Push Chain を使って構築するためのガイド付きチュートリアル、ベストプラクティス、および例。",
+          "twitter-title": "Builders - チュートリアルとハウツー",
           "twitter-description": "Push Chain でリリースするためのステップバイステップガイド。"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "知識ベース"
+            }
+          },
+          "blocks": {
+            "title": "Push Chain で構築",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain で構築する準備はできましたか？ ここには、インスピレーションを与え、すぐに始められるためのリソースがあります。",
+                  "curated-reads": "## 厳選されたおすすめ情報 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "ユニバーサルアプリを構築しましょう 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "共有状態でのみ可能なアプリ - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "共有状態でのみ可能なアプリ - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Push Chain で構築できるコンシューマーアプリ?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "開発者向けリソース",
+                "items": {
+                  "developer-docs": {
+                    "title": "開発者向けドキュメントを探索"
+                  },
+                  "faucet": {
+                    "title": "Testnet トークンを入手"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

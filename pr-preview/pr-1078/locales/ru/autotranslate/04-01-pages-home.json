@@ -2,75 +2,41 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Главная",
-        "description": "L1 с общим состоянием для универсальных приложений. Разверните один раз, охватите пользователей на любом блокчейне. Используйте любой кошелек. Оплачивайте любым токеном.",
-        "og-title": "Push Chain - Универсальный L1 для приложений",
-        "og-description": "Одно развертывание для пользователей EVM и не-EVM. Используйте любой кошелек и оплачивайте любым токеном — без переключения сетей.",
-        "twitter-title": "Разверните один раз. Охватите любой блокчейн.",
-        "twitter-description": "Транзакции из любого блокчейна. Используйте любой кошелек. Оплачивайте любым токеном. Никакого переключения сетей."
+        "title": "Главная - Push Chain | Универсальная цепочка для приложений",
+        "description": "L1 с общим состоянием для универсальных приложений. Разверните один раз, достигните пользователей на любой цепочке. Используйте любой кошелек. Платите любым токеном.",
+        "og-title": "Push Chain - Универсальная L1 для приложений",
+        "og-description": "Одно развертывание для пользователей EVM и не-EVM. Используйте любой кошелек и платите любым токеном — без переключения между сетями.",
+        "twitter-title": "Разверните один раз. Достигните любой цепочки.",
+        "twitter-description": "Транзакции с любой цепочки. Используйте любой кошелек. Платите любым токеном. Никакого переключения между сетями."
       },
       "hero-section": {
-        "title": "Любой блокчейн, любое приложение, все пользователи.\nОдин Push Chain.",
-        "description": "Первый Layer 1, созданный для универсальных приложений. \nРазверните и запустите один раз, привлеките пользователей с любого блокчейна.",
+        "title": "Любая цепочка, любое приложение, все пользователи.\nОдна Push Chain.",
+        "description": "Первый Layer 1, созданный для универсальных приложений. \nСоздайте и разверните один раз, привлеките пользователей с любой цепочки.",
         "primary-button": "Начать разработку",
         "primary-button-title": "Начните свой путь разработчика с Push Chain!",
         "secondary-button": "Изучить базу знаний",
         "secondary-button-title": "Узнайте больше о Push Chain",
-        "section-aria-label": "Hero-раздел Push Chain - представление универсального блокчейна Layer 1",
-        "primary-button-aria-label": "Начните разработку универсальных приложений на Push Chain — перейдите к документации для разработчиков",
+        "section-aria-label": "Hero-раздел Push Chain - представление универсального Layer 1 блокчейна",
+        "primary-button-aria-label": "Начните создавать универсальные приложения на Push Chain - перейдите к документации для разработчиков",
         "secondary-button-aria-label": "Узнайте о функциях и концепциях Push Chain в базе знаний",
-        "hero-background-alt": "Анимация на фоне hero-раздела Push Chain, показывающая универсальную связь блокчейнов",
-        "hero-background-title": "Push Chain - Универсальный Layer 1 для межблокчейн приложений",
-        "schema-title": "Универсальный Layer 1 для приложений",
-        "stats": {
-          "stat1": {
-            "title": "Поддерживаемые блокчейны",
-            "imagealt": "Иллюстрация поддерживаемых блокчейнов",
-            "imagetitle": "Список всех поддерживаемых блокчейнов, таких как Ethereum, Solana, BNB Chain и т.д."
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "МГНОВЕННАЯ ФИНАЛИЗАЦИЯ",
-            "description": "Мгновенно"
-          },
-          "stat4": {
-            "title": "НАТИВНОЕ ВРЕМЯ БЛОКА",
-            "description": "1с"
-          }
-        }
-      },
-      "blog-section": {
-        "subtitle": "НОВОСТИ, DEVLOGS И ИДЕИ",
-        "subtitle-aria-label": "Информация о категориях блога",
-        "title": "Ваш Пульс Push Chain",
-        "title-aria-label": "Последние посты и обновления блога Push Chain",
-        "explore-link-text": "Узнать больше статей",
-        "explore-link-title": "Посетите блог Push Chain, чтобы прочитать все статьи и обновления",
-        "explore-link-aria-label": "Перейдите на страницу блога Push Chain",
-        "section-aria-label": "Раздел с постами и новостями блога Push Chain",
-        "blog-posts-list-aria-label": "Последние посты блога Push Chain",
-        "blog-post-aria-label": "Прочитайте пост в блоге о {title}",
-        "blog-post-title-prefix": "Прочитайте пост - ",
-        "loading-text": "Загрузка последних постов блога...",
-        "error-text": "Не удалось загрузить посты блога в данный момент",
-        "no-posts-text": "Постов блога нет"
+        "hero-background-alt": "Фоновая анимация Push Chain, показывающая универсальное подключение блокчейнов",
+        "hero-background-title": "Push Chain - Универсальный Layer 1 для кросс-чейн приложений",
+        "schema-headline": "Push Chain - Универсальная L1 для приложений",
+        "schema-description": "Разверните один раз на Push Chain и достигните пользователей на любом блокчейне с универсальными приложениями"
       },
       "stats-section": {
         "section-aria-label": "Статистика производительности Push Chain",
-        "title": "Достигните",
+        "title": "Достигайте",
         "titleGradient": "Мгновенной",
-        "titleThird": "Взаимодействия",
-        "description": "Оптимизировано для производительности.\nВысокая TPS, сверхнизкая комиссия и субсекундная\nфинализация для выполнения приложений в реальном времени.",
-        "animation-alt": "Интерактивная анимация, показывающая мгновенную совместимость Push Chain с несколькими блокчейнами",
+        "titleThird": "Взаимосовместимости",
+        "description": "Оптимизирован для производительности.\nВысокая TPS, сверхнизкий газ и субсекундная\nфинализация для выполнения приложений в реальном времени.",
+        "animation-alt": "Интерактивная анимация, показывающая мгновенную совместимость Push Chain между несколькими блокчейнами",
         "animation-title": "Визуализация мгновенной совместимости Push Chain",
         "stats": {
           "stat1": {
-            "title": "Поддерживаемые блокчейны",
-            "imagealt": "Иллюстрация поддерживаемых блокчейнов",
-            "imagetitle": "Список всех поддерживаемых блокчейнов, таких как Ethereum, Solana, BNB Chain и т.д."
+            "title": "Поддерживаемые цепочки",
+            "imagealt": "Иллюстрация поддерживаемых цепочек",
+            "imagetitle": "Список всех поддерживаемых цепочек, таких как Ethereum, Solana, BNB Chain и т. д."
           },
           "stat2": {
             "title": "TPS",
@@ -86,21 +52,42 @@
           }
         }
       },
+      "blog-section": {
+        "subtitle": "НОВОСТИ, DEVLOGS & ИДЕИ",
+        "subtitle-aria-label": "Информация о категориях блога",
+        "title": "Ваш Пульс Push Chain",
+        "title-aria-label": "Последние публикации в блоге Push Chain и обновления",
+        "explore-link-text": "Подробнее",
+        "explore-link-title": "Посетите блог Push Chain, чтобы прочитать все статьи и обновления",
+        "explore-link-aria-label": "Перейдите на страницу блога Push Chain",
+        "section-aria-label": "Раздел публикаций в блоге и новостей Push Chain",
+        "blog-posts-list-aria-label": "Последние публикации в блоге Push Chain",
+        "blog-post-aria-label": "Прочитайте статью о {title}",
+        "blog-post-title-prefix": "Прочитайте статью - ",
+        "loading-text": "Загрузка последних публикаций в блоге...",
+        "error-text": "Не удалось загрузить публикации в блоге в данный момент",
+        "no-posts-text": "Нет доступных публикаций в блоге"
+      },
+      "trustedby-section": {
+        "title": "Создано командой, которой доверяют пионеры web3",
+        "section-aria-label": "Раздел \"Доверяют\" Push Chain",
+        "trusted-by-alt": "Инвестор - "
+      },
       "featured-section": {
-        "aria-label": "Раздел 'В центре внимания'",
+        "aria-label": "Раздел \"В центре внимания\"",
         "tag": "В ЦЕНТРЕ ВНИМАНИЯ",
         "title": "Push Chain в центре внимания",
-        "subtitle": "Не верьте нам на слово. Посмотрите, что говорят СМИ об истинном универсальном блокчейне.",
-        "articles-image-alt": "Освещение в СМИ от ",
-        "articles-text": "Прочитать полную статью",
-        "articles-title-1": "Прочитать ",
-        "articles-title-2": "'s мысли о Push Chain в полной детали",
+        "subtitle": "Не верьте нам на слово. Посмотрите, что говорят СМИ об истинной универсальной цепочке.",
+        "articles-image-alt": "Освещение СМИ от ",
+        "articles-text": "Подробное освещение",
+        "articles-title-1": "Прочитайте ",
+        "articles-title-2": "'s мысли о Push Chain в деталях",
         "articles": {
           "binance-chain": {
-            "text": "Мы рады объявить, что Push Protocol, ведущий децентрализованный протокол коммуникаций для Web3, теперь запущен в BNB Chain."
+            "text": "Мы рады объявить, что Push Protocol, ведущий децентрализованный протокол связи для Web3, теперь запущен в BNB Chain."
           },
           "coindesk": {
-            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
+            "text": "Protocol Village: Unstoppable Works With Push Protocol To Deliver Token-Gated Group Chats"
           },
           "defiant": {
             "text": "Unstoppable Domains Launches Token Gated Group Chats. Collaboration with Push Protocol aims to fend off misinformation and scams."
@@ -147,24 +134,19 @@
         }
       },
       "ending-section": {
-        "aria-label": "Раздел 'Создавайте универсальные приложения'",
+        "aria-label": "Раздел \"Создавайте универсальные приложения\"",
         "section-title": "Создавайте универсальные приложения.",
-        "section-subtitle": "Разрушьте барьеры. Разверните один раз, масштабируйте на каждом блокчейне.",
+        "section-subtitle": "Разрушайте барьеры. Разверните один раз, масштабируйтесь на каждом блокчейне.",
         "docs-link": {
-          "text": "Изучить документацию Push Chain",
-          "title": "Изучите документацию Push Chain и ресурсы для разработчиков",
-          "aria-label": "Открыть документацию Push Chain в новой вкладке"
+          "text": "Изучите документацию Push Chain",
+          "title": "Изучите документацию и ресурсы разработчиков Push Chain",
+          "aria-label": "Откройте документацию Push Chain в новом окне"
         },
         "cta-link": {
           "text": "LFG Push Chain",
-          "title": "Начните работу с Push Chain - универсальной блокчейн-платформой",
-          "aria-label": "Начните разработку на Push Chain"
+          "title": "Начните работу с Push Chain — универсальной блокчейн-платформой",
+          "aria-label": "Начните разработку Push Chain"
         }
-      },
-      "trustedby-section": {
-        "title": "Разработано командой, которой доверяют пионеры web3",
-        "section-aria-label": "Раздел 'Доверяют компании'",
-        "trusted-by-alt": "Инвестор - "
       }
     }
   }

@@ -2,17 +2,17 @@
   "pages": {
     "contact": {
       "seo": {
-        "title": "Kontakt — Nehmen Sie Kontakt auf",
-        "description": "Erreichen Sie das Push Chain Team für Partnerschaften, Integrationen, Zuschüsse, Medienanfragen, Support und Sicherheitsmeldungen.",
-        "og-title": "Push Chain Kontakt - Get in Touch",
-        "og-description": "Kontaktieren Sie das Push Chain Team bezüglich Partnerschaften, Integrationen, Zuschüssen, Medienanfragen und Support.",
+        "title": "Kontakt — Nimm Kontakt auf",
+        "description": "Erreiche das Push Chain Team für Partnerschaften, Integrationen, Zuschüsse, Medienanfragen, Support und Sicherheitsmeldungen.",
+        "og-title": "Push Chain Kontakt - Nimm Kontakt auf",
+        "og-description": "Kontaktiere das Push Chain Team bezüglich Partnerschaften, Integrationen, Zuschüssen, Medienanfragen, Support und Sicherheit.",
         "twitter-title": "Kontakt - Push Chain Team",
-        "twitter-description": "Partnerschaften, Integrationen, Zuschüsse, Medienanfragen und Support – kontaktieren Sie Push Chain."
+        "twitter-description": "Partnerschaften, Integrationen, Zuschüsse, Medienanfragen, Support und Sicherheit – nimm Kontakt mit Push Chain auf."
+      },
+      "hero-section": {
+        "title": "Kontaktiere das Push Chain Team",
+        "description": "Partnerschaften & Integrationen, Zuschüsse, Medien & Vorträge, Validatoren, Rechtliches, Karriere oder allgemeine Fragen – erreich uns hier. Für technische Hilfe oder Sicherheitsmeldungen besuche bitte das Support Center."
       }
-    },
-    "hero-section": {
-      "title": "Kontaktieren Sie das Push Chain Team",
-      "description": "Partnerschaften & Integrationen, Zuschüsse, Medien & Vorträge, Validatoren, Rechtliches, Karriere oder allgemeine Fragen – erreichen Sie uns hier. Bei technischer Hilfe oder Sicherheitsmeldungen besuchen Sie bitte das Support Center."
     }
   }
 }

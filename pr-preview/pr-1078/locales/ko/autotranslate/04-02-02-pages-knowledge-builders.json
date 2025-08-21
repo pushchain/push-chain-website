@@ -3,12 +3,58 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "빌더 — 사용법 및 튜토리얼",
-          "description": "Push Chain 기능을 사용하는 단계별 가이드, 패턴 및 예제.",
-          "og-title": "빌더 - 사용법 및 튜토리얼",
-          "og-description": "Push Chain으로 빌드하는 방법을 위한 가이드 튜토리얼, 모범 사례 및 예제.",
-          "twitter-title": "빌더 - 사용법 및 튜토리얼",
-          "twitter-description": "Push Chain에서 빠르게 시작하는 단계별 가이드."
+          "title": "Builders — 사용법 & 튜토리얼",
+          "description": "Push Chain 기능을 활용하기 위한 단계별 가이드, 패턴 및 예제.",
+          "og-title": "Builders - 사용법 & 튜토리얼",
+          "og-description": "Push Chain으로 빌드하기 위한 가이드 튜토리얼, 모범 사례 및 예제.",
+          "twitter-title": "Builders - 사용법 & 튜토리얼",
+          "twitter-description": "Push Chain에서 출시하기 위한 단계별 가이드."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "지식 기반"
+            }
+          },
+          "blocks": {
+            "title": "Push Chain에서 빌드하기",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain에서 빌드할 준비가 되셨나요? 영감을 얻고 시작하는 데 도움이 되는 리소스가 여기 있습니다.",
+                  "curated-reads": "## 추천 자료 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "유니버설 앱 빌드하기 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "공유 상태 - Vol.1에서만 가능한 앱"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "공유 상태 - Vol.2에서만 가능한 앱"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Push Chain에서 구축 가능한 소비자 앱?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "개발자 리소스",
+                "items": {
+                  "developer-docs": {
+                    "title": "개발자 문서 살펴보기"
+                  },
+                  "faucet": {
+                    "title": "Testnet 토큰 받기"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

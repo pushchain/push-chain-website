@@ -2,61 +2,61 @@
   "components": {
     "short-contact-us-snippet": {
       "section-aria-label": "Push Chain Ekibiyle İletişime Geçin",
-      "title": "Sıkça Sorulan Sorular",
-      "title-aria-label": "Push Chain için sıkça sorulan iletişim soruları",
+      "title": "Sıkça Sorulan\nSorular",
+      "title-aria-label": "Push Chain için yaygın iletişim soruları",
       "discord-link-text": "Discord'a Katıl",
       "discord-link-title": "Discord'da Push Chain topluluğuyla sohbet edin",
       "discord-link-aria-label": "Discord'u yeni bir sekmede aç",
       "explore-more-text": "Programları Keşfet",
-      "explore-more-title": "Push Chain programlarını, hibe programlarını ve ekosistem programlarını görün",
+      "explore-more-title": "Push Chain hibeleri, BRB ve ekosistem programlarını görün",
       "explore-more-aria-label": "Push Chain programlarına gidin",
       "accordion-aria-label": "İletişim soruları listesi",
       "answer-aria-label": "Sorunun cevabı - ",
       "qnas": {
         "qna1": {
           "question": "Hangi kategoriyi seçmeliyim?",
-          "answer": "<1><2>Ortaklıklar ve Entegrasyonlar</2>: cüzdanlar, altyapı, borsalar, protokol işbirlikleri → <3>Ortaklıklar ile İletişime Geçin</3>.</1><1><2>Hibeler ve Programlar</2>: BRB, Bootcamp, finansman → <4>Hibeler ile İletişime Geçin</4>.</1><1><2>Medya ve Konuşmalar</2>: röportajlar, açıklamalar, konuşmalar → <5>Medya ve Etkinlikler</5>.</1><1><2>Doğrulayıcılar</2>: node operatörü ilgisi, RPC sağlayıcıları → <6>Doğrulayıcılar</6>.</1><1><2>Hukuki</2>: ticari markalar, veri istekleri, anlaşmalar → <7>Hukuki ve Uyumluluk</7>.</1><1>Teknik yardıma veya duruma ihtiyacınız var mı? Bunun yerine <8>Destek</8> kullanın.</1>",
+          "answer": "<1><2>Ortaklıklar & Entegrasyonlar</2>: cüzdanlar, altyapı, borsalar, protokol işbirlikleri → <3>Ortaklıklar ile İletişime Geçin</3>.</1><1><2>Hibeler & Programlar</2>: BRB, Bootcamp, finansman → <4>Hibeler ile İletişime Geçin</4>.</1><1><2>Medya & Konuşmalar</2>: röportajlar, açıklamalar, konuşmalar → <5>Medya & Etkinlikler</5>.</1><1><2>Doğrulayıcılar</2>: node operatörü ilgisi, RPC sağlayıcıları → <6>Doğrulayıcılar</6>.</1><1><2>Hukuki</2>: ticari markalar, veri istekleri, anlaşmalar → <7>Hukuki</7>.</1><1>Teknik yardım veya durum gerekiyor mu? Bunun yerine <8>Destek</8> kullanın.</1>",
           "contact-partnerships-title": "Ortaklıklar ile İletişime Geçin",
           "contact-grants-title": "Hibeler ile İletişime Geçin",
-          "contact-media-title": "Medya ve Konuşmalar ile İletişime Geçin",
+          "contact-media-title": "Medya & Konuşmalar ile İletişime Geçin",
           "contact-validators-title": "Doğrulayıcılar ile İletişime Geçin",
-          "contact-legal-title": "Hukuki ve Uyumluluk ile İletişime Geçin",
-          "support-title": "Destek Merkezi'ne Gidin"
+          "contact-legal-title": "Hukuki & Uyumluluk ile İletişime Geçin",
+          "support-title": "Destek Merkezi'ne Git"
         },
         "qna2": {
           "question": "Ne kadar hızlı yanıt veriyorsunuz?",
-          "answer": "<1>Çoğu talebe <2>1–2 iş günü</2> içinde yanıt vermeyi hedefliyoruz. Zaman hassasiyeti olan talepler (örneğin, medya son tarihleri, güvenlik) önceliklendirilir.</1><1>Acil sorunlar için <2>son tarih</2>, <2>saat dilimi</2> ve <2>en iyi iletişim</2> bilgilerinizi ekleyin.</1>"
+          "answer": "<1>Çoğu isteğe <2>1–2 iş günü</2> içinde yanıt vermeyi hedefliyoruz. Zamanla ilgili talepler (örneğin, medya teslim tarihleri, güvenlik) öncelikli olur.</1><1>Acil sorunlar için, <2>teslim tarihi, zaman dilimi</2> ve <2>en iyi iletişim yöntemi</2> ekleyin.</1>"
         },
         "qna3": {
           "question": "Ortaklıklar için hangi bilgiler yardımcı olur?",
-          "answer": "<1><2>Şirket adınızı</2>, <2>web sitenizi</2> ve <2>birlikte ne inşa etmek istediğinizi</2> paylaşın.</1><1>Faydalı ek bilgiler: kitle boyutu, bölgeler, zaman çizelgesi ve kullanmayı planladığınız herhangi bir teknik kapsam veya SDK.</1><1>Buradan başlayın → <3>Ortaklıklar</3>.</1>",
+          "answer": "<1><2>şirket adı</2>, <2>web sitesi</2> ve <2>birlikte ne inşa etmek istediğinizi</2> paylaşın.</1><1>Faydalı ek bilgiler: hedef kitle boyutu, bölgeler, zaman çizelgesi ve kullanmayı planladığınız teknik kapsam veya SDK'lar.</1><1>Buradan başlayın → <3>Ortaklıklar</3>.</1>",
           "contact-partnerships-title": "Ortaklıklar ile İletişime Geçin"
         },
         "qna4": {
           "question": "Hibeler nasıl çalışır?",
-          "answer": "<1><2>Proje adınızı</2>, <2>deponuzu/web sitenizi</2>, aşamanızı (<2>fikir, prototip, MVP, canlı</2>) ve kısa bir plan paylaşın.</1><1>Hibe başvuruları her zaman ilk gelen ilk hizmet alır esasına göre işlenir. Buradan başlayın → <3>Hibeler</3>.</1>",
+          "answer": "<1><2>proje adı</2>, <2>depo/web sitesi</2>, aşama (<2>fikir, prototip, MVP, canlı</2>) ve kısa bir plan paylaşın.</1><1>Hibe başvuruları her zaman gelen sırayla işlenir. Buradan başlayın → <3>Hibeler</3>.</1>",
           "contact-grants-title": "Hibeler ile İletişime Geçin"
         },
         "qna5": {
           "question": "Medya ve konuşma talepleri",
-          "answer": "<1>Çıkışınızı, konunuzu, <2>son tarihinizi</2> ve sorularınızı ekleyin. Konuşmalar/çalıştaylar için etkinlik tarihini, formatı ve hedef kitleyi ekleyin.</1><1><3>Medya ve Konuşmalar</3> üzerinden bize ulaşın. Logo, kurucu biyografisi ve standart metinleri paylaşabiliriz.</1>",
-          "contact-media-title": "Medya ve Konuşmalar ile İletişime Geçin"
+          "answer": "<1>Çıkışınızı, konusunuzu, <2>teslim tarihini</2> ve sorularınızı ekleyin. Konuşmalar/çalıştaylar için etkinlik tarihini, biçimini ve hedef kitleyi ekleyin.</1><1><3>Medya & Konuşmalar</3> yoluyla bize ulaşın. Logolar, kurucu özgeçmişleri ve kısa açıklamalar paylaşabiliriz.</1>",
+          "contact-media-title": "Medya & Konuşmalar ile İletişime Geçin"
         },
         "qna6": {
-          "question": "Bir güvenlik sorunu nasıl bildirebilirim?",
-          "answer": "<1>Yeniden üretme adımlarını ve etkiyi içeren adımlarla <3><2>security@push.org</2></3> adresine e-posta gönderin. Bir düzeltme onaylayana kadar kamuoyuna açıklamamaktan kaçının.</1>",
-          "security-policy-title": "Güvenlik ve Açıklama Okuyun"
+          "question": "Bir güvenlik sorunu bildirmek istiyorum?",
+          "answer": "<1><3><2>security@push.org</2></3> adresine e-posta gönderin ve yeniden üretme adımlarını ve etkisini ekleyin. Bir düzeltme onaylamadan önce kamuya açıklamaktan kaçının.</1>",
+          "security-policy-title": "Güvenlik & Açıklama İlkesini Oku"
         },
         "qna7": {
-          "question": "Doğrulayıcı çalıştırmak / altyapı sağlamak istiyorum",
-          "answer": "<1>Altyapı profilinizi (deneyim, bölgeler), beklenen çalışma sürenizi/SLAlarınızı ve tercih ettiğiniz şartları paylaşın. Buradan başlayın → <3>Doğrulayıcılar</3>.</1>",
+          "question": "Bir doğrulayıcı çalıştırmak / altyapı sağlamak istiyorum?",
+          "answer": "<1>Altyapı profilinizi (deneyim, bölgeler), beklenen çalışma süresini/SLA'ları ve tercih ettiğiniz şartları paylaşın. Buradan başlayın → <3>Doğrulayıcılar</3>.</1>",
           "contact-validators-title": "Doğrulayıcılar ile İletişime Geçin"
         },
         "qna8": {
           "question": "Kariyer ve işe alım",
-          "answer": "<1>Roller açık olduğunda kanallarımızda yayınlanacak. Hala profilinizi ve ilgi alanlarınızı <3>Bizimle İletişime Geçerek</3> paylaşabilir veya güncellemeler için <4>@PushChain</4>'i takip edebilirsiniz.</1>",
+          "answer": "<1>Açık roller varsa, kanallarımızda yayınlanacaklar. Profilinizi ve ilgi alanlarınızı <3>Bizimle İletişime Geçerek</3> paylaşabilir veya güncellemeler için <4>@PushChain</4> hesabını takip edebilirsiniz.</1>",
           "contact-careers-title": "Kariyer ile İletişime Geçin",
-          "twitter-title": "X'te @PushChain'i Takip Edin"
+          "twitter-title": "X'te @PushChain hesabını takip edin"
         }
       }
     }

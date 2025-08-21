@@ -8,15 +8,15 @@
       "categories": {
         "technical": {
           "label": "🔧 Dukungan Teknis",
-          "description": "Laporan bug, SDK/API, kontrak pintar, bantuan integrasi"
+          "description": "Laporan bug, SDK/API, smart contracts, bantuan integrasi"
         },
         "network": {
           "label": "🌐 Jaringan & Testnet",
           "description": "Explorer/Push Scan, RPC, Faucet, masalah testnet Donut"
         },
         "wallet": {
-          "label": "👛 Dompet Universal",
-          "description": "Dompet Push, koneksi rantai universal atau masalah dompet lainnya"
+          "label": "👛 Universal Wallet",
+          "description": "Push Wallet, koneksi rantai universal atau masalah dompet lainnya"
         },
         "identity": {
           "label": "🪪 Akun & Identitas",
@@ -24,15 +24,15 @@
         },
         "security": {
           "label": "🛡️ Keamanan",
-          "description": "Laporan kerentanan, pengungkapan bertanggung jawab (security@push.org)"
+          "description": "Laporan kerentanan, pengungkapan yang bertanggung jawab (security@push.org)"
         },
         "general": {
           "label": "💬 Pertanyaan Umum",
-          "description": "Pertanyaan, umpan balik, topik lainnya"
+          "description": "Pertanyaan, masukan, topik lainnya"
         },
         "partnerships": {
           "label": "🤝 Kemitraan & Integrasi",
-          "description": "BD, integrasi ekosistem (dompet, infrastruktur, bursa, protokol)"
+          "description": "BD, integrasi ekosistem (dompet, infra, bursa, protokol)"
         },
         "grants": {
           "label": "💰 Hibah & Program Ekosistem",
@@ -43,16 +43,16 @@
           "description": "Wawancara, pernyataan, aset, pengecekan fakta"
         },
         "events": {
-          "label": "🎤 Berbicara & Acara",
-          "description": "Pidato, lokakarya, hackathon, sponsor"
+          "label": "🎤 Pembicaraan & Acara",
+          "description": "Pembicaraan, lokakarya, hackathon, sponsor"
         },
         "careers": {
           "label": "👩‍💻 Karir",
-          "description": "Posisi terbuka, magang, peluang kontraktor"
+          "description": "Peran terbuka, magang, kesempatan kontraktor"
         },
         "validators": {
           "label": "🧡 Validator / Operator Node",
-          "description": "Minat operator, penyedia RPC, mitra infrastruktur"
+          "description": "Minat operator, penyedia RPC, mitra infra"
         },
         "legal": {
           "label": "⚖️ Hukum & Kepatuhan",
@@ -62,11 +62,11 @@
       "form": {
         "steps": {
           "category": {
-            "title": "Kami dapat membantu apa?",
+            "title": "Kami bisa bantu apa?",
             "subtitle": "Pilih kategori yang paling sesuai dengan pertanyaan Anda"
           },
           "contact": {
-            "title": "Mari mengenal Anda",
+            "title": "Mari saling mengenal",
             "subtitle": "Kami akan menggunakan informasi ini untuk menghubungi Anda kembali",
             "name-label": "Nama Anda",
             "name-placeholder": "Masukkan nama lengkap Anda",
@@ -78,7 +78,7 @@
             "title": "Ceritakan lebih banyak",
             "subtitle": "Berikan detail tentang pertanyaan Anda",
             "subject-label": "Subjek",
-            "subject-placeholder": "Ringkasan singkat dari masalah Anda",
+            "subject-placeholder": "Ringkasan singkat tentang masalah Anda",
             "message-label": "Pesan",
             "message-placeholder": "Jelaskan masalah Anda secara detail. Sertakan pesan kesalahan apa pun, langkah-langkah untuk mereproduksi, atau informasi yang relevan."
           },
@@ -106,12 +106,12 @@
         },
         "success": {
           "title": "Tiket Berhasil Dikirim!",
-          "message": "Terima kasih telah menghubungi kami. Kami telah menerima tiket dukungan Anda dan akan menghubungi Anda sesegera mungkin.",
+          "message": "Terima kasih telah menghubungi kami. Kami telah menerima tiket dukungan Anda dan akan segera menghubungi Anda.",
           "button": "Kirim Tiket Lain"
         },
         "error": {
           "title": "Pengiriman Gagal",
-          "message": "Terjadi kesalahan saat mengirim tiket Anda. Harap coba lagi atau hubungi kami langsung.",
+          "message": "Terjadi kesalahan saat mengirim tiket Anda. Coba lagi atau hubungi kami secara langsung.",
           "button": "Coba Lagi"
         }
       }

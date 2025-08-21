@@ -19,7 +19,7 @@
       },
       "developers": {
         "title": "Desarrolladores",
-        "title-aria-label": "Navegación para desarrolladores"
+        "title-aria-label": "Navegación de desarrolladores"
       },
       "community": {
         "title": "Comunidad",
@@ -43,16 +43,16 @@
       "blog-title": "Blog de Push Chain",
       "litepaper": "Litepaper",
       "litepaper-title": "Litepaper de Push Chain (PDF)",
-      "brand-kit": "Kit de Marca",
-      "brand-kit-title": "Activos y directrices de la marca Push Chain",
+      "brand-kit": "Brand Kit",
+      "brand-kit-title": "Activos y guías de marca de Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "Explorador de blockchain de Push Chain",
+      "push-scan-title": "Explorador de Blockchain de Push Chain",
       "faucet": "Faucet",
       "faucet-title": "Obtén tokens de prueba del faucet de Push Chain",
       "push-portal": "Push Portal",
-      "push-portal-title": "Portal comunitario de Push Protocol",
+      "push-portal-title": "Portal comunitario de Push Chain",
       "support": "Soporte",
-      "support-title": "Centro de Ayuda",
+      "support-title": "Centro de ayuda",
       "security": "Seguridad y Divulgación",
       "security-title": "Reporta una vulnerabilidad (divulgación responsable)",
       "contact-us": "Contáctanos",
@@ -85,7 +85,7 @@
       "terms-of-service-title": "Lee los Términos de Servicio",
       "terms-of-service-aria-label": "Términos de Servicio",
       "cookie-preferences": "Preferencias de Cookies",
-      "cookie-preferences-title": "Administra la configuración de las cookies"
+      "cookie-preferences-title": "Gestiona la configuración de cookies"
     },
     "footer-image": {
       "alt": "Ilustración del pie de página de Push Chain",

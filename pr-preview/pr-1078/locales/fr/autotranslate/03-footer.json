@@ -2,7 +2,7 @@
   "footer": {
     "email-section": {
       "title": "Restez informé avec Push Chain",
-      "title-secondary": "nouvelles et mises à jour !",
+      "title-secondary": "actualités et mises à jour !",
       "title-aria-label": "Section d'abonnement à la newsletter",
       "section-aria-label": "Inscription à la newsletter Push Chain"
     },
@@ -10,20 +10,20 @@
       "section-aria-label": "Navigation et liens du pied de page",
       "logo-link-title": "Page d'accueil Push Chain",
       "logo-link-aria-label": "Page d'accueil Push Chain",
-      "logo-alt": "Push Chain logo"
+      "logo-alt": "Logo Push Chain"
     },
     "columns": {
       "resources": {
         "title": "Ressources",
-        "title-aria-label": "Navigation des ressources"
+        "title-aria-label": "Navigation vers les ressources"
       },
       "developers": {
         "title": "Développeurs",
-        "title-aria-label": "Navigation développeurs"
+        "title-aria-label": "Navigation des développeurs"
       },
       "community": {
         "title": "Communauté",
-        "title-aria-label": "Navigation communauté"
+        "title-aria-label": "Navigation de la communauté"
       },
       "help": {
         "title": "Aide",
@@ -31,8 +31,8 @@
       }
     },
     "links": {
-      "get-started": "Commencer",
-      "get-started-title": "Démarrez le développement sur Push Chain",
+      "get-started": "Démarrer",
+      "get-started-title": "Commencez à développer sur Push Chain",
       "docs": "Documentation",
       "docs-title": "Documentation Push Chain",
       "github": "GitHub",
@@ -47,10 +47,10 @@
       "brand-kit-title": "Ressources et directives de marque Push Chain",
       "push-scan": "Push Scan",
       "push-scan-title": "Explorateur de blockchain Push Chain",
-      "faucet": "Robinnet",
-      "faucet-title": "Obtenez des jetons de test depuis le robinnet Push Chain",
+      "faucet": "Faucet",
+      "faucet-title": "Obtenez des jetons de test du faucet Push Chain",
       "push-portal": "Push Portal",
-      "push-portal-title": "Portail communautaire Push Protocol",
+      "push-portal-title": "Portail communautaire Push Chain",
       "support": "Support",
       "support-title": "Centre d'aide",
       "security": "Sécurité & Divulgation",
@@ -79,13 +79,13 @@
     },
     "legal": {
       "privacy-policy": "Politique de confidentialité",
-      "privacy-policy-title": "Lire la Politique de confidentialité",
+      "privacy-policy-title": "Lisez la Politique de confidentialité",
       "privacy-policy-aria-label": "Politique de confidentialité",
       "terms-of-service": "Conditions d'utilisation",
-      "terms-of-service-title": "Lire les Conditions d'utilisation",
+      "terms-of-service-title": "Lisez les Conditions d'utilisation",
       "terms-of-service-aria-label": "Conditions d'utilisation",
       "cookie-preferences": "Préférences de cookies",
-      "cookie-preferences-title": "Gérer les paramètres de cookies"
+      "cookie-preferences-title": "Gérez les paramètres de cookies"
     },
     "footer-image": {
       "alt": "Illustration du pied de page Push Chain",

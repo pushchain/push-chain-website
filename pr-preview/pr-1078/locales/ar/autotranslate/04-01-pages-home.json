@@ -2,41 +2,41 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "الرئيسية",
+        "title": "الرئيسية - Push Chain | السلسلة العالمية للتطبيقات",
         "description": "طبقة أولى مشتركة للتطبيقات العالمية. انشر مرة واحدة؛ تواصل مع المستخدمين على أي سلسلة. استخدم أي محفظة. ادفع بأي رمز.",
         "og-title": "Push Chain - الطبقة الأولى العالمية للتطبيقات",
-        "og-description": "نشر واحد لمستخدمي EVM وغير EVM. استخدم أي محفظة وادفع بأي رمز — لا حاجة للتبديل بين الشبكات.",
+        "og-description": "نشر واحد لمستخدمي EVM وغير EVM. استخدم أي محفظة وادفع بأي رمز - بدون تبديل الشبكات.",
         "twitter-title": "انشر مرة واحدة. تواصل مع أي سلسلة.",
-        "twitter-description": "قم بإجراء معاملات من أي سلسلة. استخدم أي محفظة. ادفع بأي رمز. لا حاجة للتبديل بين الشبكات."
+        "twitter-description": "قم بالمعاملات من أي سلسلة. استخدم أي محفظة. ادفع بأي رمز. بدون تبديل الشبكات."
       },
       "hero-section": {
         "title": "أي سلسلة، أي تطبيق، جميع المستخدمين.\nPush Chain واحدة.",
-        "description": "أول طبقة أولى مبنية للتطبيقات العالمية. \nقم بالبناء والنشر مرة واحدة، وجلب المستخدمين من أي سلسلة.",
+        "description": "الطبقة الأولى الأولى المصممة للتطبيقات العالمية.\nقم بالبناء والنشر مرة واحدة، وقم بإعداد المستخدمين من أي سلسلة.",
         "primary-button": "ابدأ البناء",
-        "primary-button-title": "ابدأ رحلتك كباني مع Push Chain!",
+        "primary-button-title": "ابدأ رحلتك كمنشئ مع Push Chain!",
         "secondary-button": "استكشف قاعدة المعرفة",
-        "secondary-button-title": "تعرف على Push Chain واستكشفها",
-        "section-aria-label": "قسم Hero في Push Chain - مقدمة لـ blockchain الطبقة الأولى العالمية",
-        "primary-button-aria-label": "ابدأ في بناء تطبيقات عالمية على Push Chain - انتقل إلى وثائق المطور",
+        "secondary-button-title": "تعرف واستكشف Push Chain",
+        "section-aria-label": "قسم Push Chain الرئيسي - مقدمة عن blockchain الطبقة الأولى العالمية",
+        "primary-button-aria-label": "ابدأ بناء تطبيقات عالمية على Push Chain - انتقل إلى وثائق المطورين",
         "secondary-button-aria-label": "تعرف على ميزات ومفاهيم Push Chain في قاعدة المعرفة",
-        "hero-background-alt": "خلفية قسم Hero في Push Chain تعرض رسوم متحركة للاتصال العالمي بـ blockchain",
+        "hero-background-alt": "خلفية قسم Push Chain الرئيسي تعرض رسومًا متحركة للاتصال العالمي بـ blockchain",
         "hero-background-title": "Push Chain - الطبقة الأولى العالمية للتطبيقات عبر السلاسل",
         "schema-headline": "Push Chain - الطبقة الأولى العالمية للتطبيقات",
-        "schema-description": "وصِف تطبيقك العالمي."
+        "schema-description": "انشر مرة واحدة على Push Chain وتواصل مع المستخدمين على أي blockchain باستخدام تطبيقات عالمية"
       },
-      "stats-section": {
-        "section-aria-label": "إحصائيات أداء Push Chain ومقاييسها",
-        "title": "تحقيق",
-        "titleGradient": "فوري",
-        "titleThird": "التشغيل البيني",
-        "description": "محسّن للأداء.\nمعاملات عالية في الثانية، ورسوم منخفضة للغاية، ونهائية أقل من الثانية لتنفيذ التطبيقات في الوقت الفعلي.",
-        "animation-alt": "رسوم متحركة تفاعلية تعرض التشغيل البيني الفوري لـ Push Chain عبر سلاسل blockchain متعددة",
-        "animation-title": "تصور التشغيل البيني الفوري لـ Push Chain",
+      "whatis-section": {
+        "titleFirst": "سلسلة",
+        "titleGradient": "حقيقية",
+        "titleThird": "عالمية",
+        "description": "طبقة أولى مشتركة للتطبيقات العالمية.  نشر واحد، قابلية توسع على كل blockchain.",
+        "primary-button": "ابدأ البناء",
+        "animation-alt": "رسوم متحركة تفاعلية تعرض قابلية التشغيل البيني الفوري لـ Push Chain عبر سلاسل متعددة",
+        "animation-title": "تصور قابلية التشغيل البيني الفوري لـ Push Chain",
         "stats": {
           "stat1": {
             "title": "السلاسل المدعومة",
-            "imagealt": "تصور للسلاسل المدعومة",
-            "imagetitle": "قائمة بجميع السلاسل المدعومة مثل Ethereum و Solana و BNB Chain ، إلخ"
+            "imagealt": "تصوير السلاسل المدعومة",
+            "imagetitle": "قائمة بجميع السلاسل المدعومة مثل Ethereum و Solana و BNB Chain، إلخ"
           },
           "stat2": {
             "title": "TPS",
@@ -53,34 +53,99 @@
         }
       },
       "blog-section": {
-        "subtitle": "الأخبار ، مدونات المطور والأفكار",
+        "subtitle": "الأخبار والمدونات والأفكار",
         "subtitle-aria-label": "معلومات فئة المدونة",
         "title": "نبض Push Chain الخاص بك",
-        "title-aria-label": "أحدث منشورات مدونات Push Chain والتحديثات",
+        "title-aria-label": "أحدث مقالات ومدونات Push Chain",
         "explore-link-text": "استكشف المزيد من المقالات",
         "explore-link-title": "قم بزيارة مدونة Push Chain لقراءة جميع المقالات والتحديثات",
         "explore-link-aria-label": "انتقل إلى صفحة مدونة Push Chain",
-        "section-aria-label": "قسم مدونات ومنشورات أخبار Push Chain",
-        "blog-posts-list-aria-label": "منشورات مدونات Push Chain الحديثة",
-        "blog-post-aria-label": "اقرأ منشور المدونة حول {title}",
-        "blog-post-title-prefix": "اقرأ منشور المدونة - ",
-        "loading-text": "جارٍ تحميل أحدث منشورات المدونة...",
-        "error-text": "تعذر تحميل منشورات المدونة في الوقت الحالي",
-        "no-posts-text": "لا توجد منشورات مدونة متاحة"
+        "section-aria-label": "قسم مقالات ومدونات Push Chain",
+        "blog-posts-list-aria-label": "مقالات مدونة Push Chain الحديثة",
+        "blog-post-aria-label": "اقرأ مقالة المدونة حول {title}",
+        "blog-post-title-prefix": "اقرأ مقالة المدونة - ",
+        "loading-text": "جاري تحميل أحدث مقالات المدونة...",
+        "error-text": "تعذر تحميل مقالات المدونة في الوقت الحالي",
+        "no-posts-text": "لا توجد مقالات مدونة متاحة"
+      },
+      "trustedby-section": {
+        "title": "تم إنشاؤها بواسطة الفريق الموثوق به من رواد web3",
+        "section-aria-label": "قسم الموثوق به من Push Chain",
+        "trusted-by-alt": "المستثمر - "
+      },
+      "featured-section": {
+        "aria-label": "قسم مميز",
+        "tag": "مُظهَّر",
+        "title": "Push Chain في دائرة الضوء",
+        "subtitle": "لا تأخذ كلمتنا فقط على هذا النحو. تعرف على ما يقوله الإعلام حول السلسلة العالمية الحقيقية.",
+        "articles-image-alt": "تغطية إعلامية من ",
+        "articles-text": "اقرأ التغطية الكاملة",
+        "articles-title-1": "اقرأ ",
+        "articles-title-2": "'s أفكار حول Push Chain بالتفصيل الكامل",
+        "articles": {
+          "binance-chain": {
+            "text": "يسعدنا أن نعلن أن Push Protocol، وهو بروتوكول اتصالات لامركزي رائد لـ Web3، قد تم إطلاقه الآن على BNB Chain."
+          },
+          "coindesk": {
+            "text": "قرية البروتوكول: Unstoppable Works مع Push Protocol لتقديم دردشات جماعية ذات رموز."
+          },
+          "defiant": {
+            "text": "Unstoppable Domains تطلق دردشات جماعية ذات رموز. يهدف التعاون مع Push Protocol إلى صد المعلومات الخاطئة والاحتيال."
+          },
+          "balaji": {
+            "text": "إشعارات يتم التحكم فيها من قبل المستخدم. تتحكم شركتان في إشعارات الدفع لملايين الهواتف الذكية: Apple و Google."
+          },
+          "defiprime": {
+            "text": "يتحدث Harsh Rajat عن مستقبل الخدمات المصرفية، وحوافز بروتوكول EPNS والمكان الذي يمثل نموذجًا للأعمال لإشعارات الدفع اللامركزية."
+          },
+          "ethfoundation": {
+            "text": "منذ HackMoney، وجه Richa و Harsh طاقة هائلة نحو بناء EPNS في ما يسمونه \"قطعة مفقودة من web3.\""
+          },
+          "beincrypto": {
+            "text": "كيف تعمل شبكات الاتصالات Web3: دراسة فنية متعمقة"
+          },
+          "the-block": {
+            "text": "Push Protocol تطلق سلسلة Push Chain الخاصة بها: مستقبل تطبيقات blockchain العالمية"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: مستقبل تطبيقات blockchain العالمية"
+          },
+          "chainwire": {
+            "text": "Push Unveils Push Chain: مستقبل تطبيقات blockchain العالمية."
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: مستقبل تطبيقات blockchain العالمية"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: مستقبل تطبيقات blockchain العالمية"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol تطلق Push Chain لتوحيد اتصالات blockchain ومعاملاتها"
+          },
+          "messari": {
+            "text": "يمكّن EPNS الحوافز والأرباح السلبية للمستخدمين الذين يتلقون الإشعارات اللامركزية."
+          },
+          "coin-telegraph-1": {
+            "text": "يشرح Harsh Rajat، المؤسس والرئيس التنفيذي لمشروع Push Protocol، الطفرة في تطوير تطبيقات الدردشة Web3 في أحدث حلقة من Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "تطلق Unstoppable Domains ميزة الدردشة الجماعية ذات رموز البادج لحاملي أسماء المستخدمين."
+          }
+        }
       },
       "ending-section": {
-        "aria-label": "قسم بناء التطبيقات العالمية",
-        "section-title": "بناء التطبيقات العالمية.",
-        "section-subtitle": "اكسر الصواميل. ابنِ مرة واحدة، وقم بالتوسع على كل blockchain.",
+        "aria-label": "قسم بناء تطبيقات عالمية",
+        "section-title": "بناء تطبيقات عالمية.",
+        "section-subtitle": "اكسر الصوامع. قم بالبناء مرة واحدة، وقم بالتوسع على كل blockchain.",
         "docs-link": {
           "text": "استكشف وثائق Push Chain",
-          "title": "استكشف وثائق Push Chain وموارد المطور",
+          "title": "استكشف وثائق وموارد مطوري Push Chain",
           "aria-label": "افتح وثائق Push Chain في علامة تبويب جديدة"
         },
         "cta-link": {
           "text": "LFG Push Chain",
           "title": "ابدأ مع Push Chain - منصة blockchain العالمية",
-          "aria-label": "ابدأ في تطوير Push Chain"
+          "aria-label": "ابدأ تطوير Push Chain"
         }
       }
     }

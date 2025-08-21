@@ -1,0 +1,38 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "seo": {
+          "title": "Tokenomics — Valor de $PC y Economía",
+          "description": "Cómo $PC captura valor: demanda impulsada por liquidaciones, mecanismos de hundimiento basados en el uso (quemaduras/bloqueos), economía del staking y el programa de suministro.",
+          "og-title": "Tokenomics - Valor de $PC y Economía",
+          "og-description": "Las liquidaciones en $PC impulsan la demanda; los mecanismos de hundimiento basados en el uso reducen la oferta. Incluye la economía del staking y las emisiones.",
+          "twitter-title": "Tokenomics de Push Chain | Economía del Token",
+          "twitter-description": "Liquidaciones en $PC, mecanismos de hundimiento basados en el uso, economía del staking y emisiones—una visión general concisa para inversores."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge": {
+              "text": "Base de Conocimiento"
+            }
+          },
+          "blocks": {
+            "title": "Explora Tokenomics",
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "overview": "## Descripción General\n\nA finales de 2024, la comunidad de Push votó a favor de la aprobación del lanzamiento de Push Chain, una capa de estado compartida blockchain de capa 1 diseñada para permitir el desarrollo de aplicaciones universales y eliminar la fragmentación en web3.\n\nPush Chain es una capa construida con un propósito específico para conectar L1, L2 y L3 con finalización casi instantánea y verdadera escalabilidad, lo que resuelve el problema fundamental de las aplicaciones web3: la fragmentación. Con la votación exitosa de la propuesta de gobernanza, la misión de Push Chain está ahora en camino de construir **cualquier cadena, cualquier usuario y cualquier aplicación.**\n\n:::warning ⚠️ Token aún no disponible\nEl token de Push Chain aún no está disponible, ni tampoco hay preventas activas. El token de Push Chain aún no tiene nombre.<p />\n\n\nNo creas a nadie que ofrezca acceso anticipado al token de Push Chain. Todas las comunicaciones relacionadas con Push Chain se anunciarán simultáneamente desde los canales oficiales de Push—[Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Sitio Web](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## ¿Cuál es la Visión de Push Chain?\n\nTodas las blockchains han demostrado ser particularmente útiles para aplicaciones y casos de uso específicos. Bitcoin habilitó dinero inteligente. Ethereum habilitó innovaciones para DeFi. Solana habilitó aplicaciones rápidas y cultura meme. Varias L2 y nuevas L1 se dirigen a otras áreas de preocupación.\n\nSin embargo, todavía se requiere una blockchain construida con un propósito específico para habilitar la abstracción de la cadena y la interoperabilidad perfecta en el espacio. Esta cadena permitiría transacciones desde cualquier cadena (ETH, SOL, EVM o no EVM) para impulsar aplicaciones que puedan ser utilizadas por **cualquier usuario—** independientemente de su cadena o billetera. ¡Esta es la cadena de **Aplicaciones Universales**! ¡Esta es Push Chain!",
+                  "innovation": "### ¡Construido sobre la innovación para eliminar el aislamiento de la blockchain!\n\nPush Chain es revolucionaria tanto para usuarios como para desarrolladores, ya que crea un entorno para que cualquier desarrollador implemente su aplicación universal en cuestión de horas a través de una única implementación de contrato inteligente universal.\n\nTambién permite a los usuarios realizar transacciones desde la comodidad, la conveniencia y la elección de su ecosistema, sin importar dónde se encuentre la aplicación.\n\nEn el fondo, esto se logra mediante:\n\n- Capacidad de realizar **transacciones desde cualquier cadena**\n- **Abstracción Universal de Tarifas y Billeteras** para permitir a los usuarios usar cualquier cadena, cualquier billetera y pagar en cualquier token\n- **Contrato Inteligente Universal** para permitir a los desarrolladores implementar aplicaciones de interoperabilidad instantánea en minutos\n- **Estado Compartido** para leer datos de otras blockchains\n- **Solver Programable** para escribir datos en cualquier otra cadena\n\nTodo esto permite una **Capa de Ejecución Universal** para permitir a los usuarios de cualquier cadena acceder e interactuar con la misma aplicación.",
+                  "fit": "### ¿Dónde encaja Push Chain?\n\nPush Chain encaja en **cada proyecto…** **en cada cadena!**\n\n- **Permite a los desarrolladores** de cualquier cadena crear aplicaciones de interoperabilidad completa perfecta que puedan ser utilizadas desde cualquier cadena, a través de cualquier billetera.<br />\n- **Permite a los usuarios** la libertad de interactuar con la billetera de su elección o tener una experiencia sin firma perfecta a través de Push Universal Wallet con inicio de sesión social.<br />\n- **Permite experiencias de aplicación compartidas** donde los usuarios de todas las cadenas pueden unirse y participar en DeFi universal, juegos unificados, NFT universal, Gobernanza universal, etc.<br />",
+                  "use-cases": "### ¿Qué se puede construir en Push Chain?\n\nPush Chain aporta interoperabilidad perfecta y unifica todas las L1, L2 y L3 y, por lo tanto, está destinada a convertirse en el patio de recreo de la innovación y la interoperabilidad. Puedes construir casos de uso web3 existentes como:\n\n![Casos de uso principales de Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nO puedes mejorar web3 y crear innovaciones:\n\n![Casos de uso de consumo de Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\n1. Airdrop distributions begin at TGE, but will happen over the course of multiple seasons.\n2. Core Contributors have a 12-month delay, followed by 24-month vesting.\n3. Push Labs Treasury has a 36-month vesting.\n4. Investors have 24-month linear vesting.\n5. Community and Ecosystem Reserves has a 13.5% unlock at TGE, followed by 36-month vesting.\n\n<br />",
+                  "get-involved": "## Participa\n\n- **🧙 Desarrolladores**\nExplora nuestro SDK y Docs en [Hub de Documentación](/docs/)\n\n- **🦹 Comunidad**  \nSigue a [@PushChain](https://x.com/PushChain) en X/Twitter, únete a nuestro [Discord](https://discord.com/invite/pushchain) y [Telegram](https://t.me/epnsproject).\n\nJuntos, construyamos el futuro de **Web3 Universal**!"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

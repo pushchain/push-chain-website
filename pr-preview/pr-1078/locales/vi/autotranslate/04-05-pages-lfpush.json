@@ -2,16 +2,16 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Hãy Cùng Chia Sẻ – Cộng Đồng Sáng Kiến",
-        "description": "Các sáng kiến, bài đăng và hơn thế nữa từ cộng đồng Push.",
-        "og-title": "Hãy Cùng Chia Sẻ - Sáng Kiến Cộng Đồng cho Push Chain",
-        "og-description": "Sáng kiến và chia sẻ cộng đồng dành cho Push Chain.",
-        "twitter-title": "Hãy Cùng Chia Sẻ | Sáng Kiến Cộng Đồng",
-        "twitter-description": "Xem các sáng kiến cộng đồng dành cho Push Chain."
+        "title": "Hãy Cùng Push — Sáng Kiến Cộng Đồng",
+        "description": "Các sáng kiến cộng đồng, bài đăng và hơn thế nữa của Push.",
+        "og-title": "Hãy Cùng Push - Sáng Kiến Cộng Đồng cho Push Chain",
+        "og-description": "Sáng kiến ​​dựa trên cộng đồng và chia sẻ cho Push Chain.",
+        "twitter-title": "Hãy Cùng Push | Sáng Kiến Cộng Đồng",
+        "twitter-description": "Xem sáng kiến cộng đồng của Push Chain."
       },
       "hero-section": {
-        "title": "Hãy Cùng Chia Sẻ",
-        "description": "Cộng đồng các nhà xây dựng LF Push – tôn vinh những thành quả của bạn và những người bạn giúp đỡ. Chia sẻ những thành công của bạn, gắn thẻ <hashtag>#LFPush</hashtag> hoặc <mention>@PushChain</mention>, và chúng tôi sẽ lan tỏa."
+        "title": "Hãy Cùng Push",
+        "description": "Cộng đồng các nhà xây dựng LF Push—kỷ niệm những thành quả bạn đạt được và những người bạn giúp đỡ. Chia sẻ thành công của bạn, gắn thẻ <hashtag>#LFPush</hashtag> hoặc <mention>@PushChain</mention>, và chúng tôi sẽ lan tỏa."
       },
       "tweets-section": {
         "actions": {
@@ -21,11 +21,11 @@
         },
         "meta": {
           "tweet-alt": "Tweet từ thành viên cộng đồng Push Chain",
-          "loading-alt": "Đang tải thêm tweet cộng đồng"
+          "loading-alt": "Đang tải thêm tweet từ cộng đồng"
         },
         "tweets-counter": "{{count}} Tweet và đang tăng!",
         "loading": "Đang tải thêm tweet...",
-        "end-message": "Bạn đã đến cuối! 🎉"
+        "end-message": "Bạn đã đến cuối trang! 🎉"
       }
     }
   }

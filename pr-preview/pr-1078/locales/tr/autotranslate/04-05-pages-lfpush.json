@@ -4,28 +4,28 @@
       "seo": {
         "title": "Hadi İtelim — Topluluk Girişimi",
         "description": "Push topluluk girişimleri, gönderiler ve daha fazlası.",
-        "og-title": "Hadi İtelim - Push Chain İçin Topluluk Girişimi",
-        "og-description": "Push Chain için topluluk odaklı girişim ve paylaşımlar.",
-        "twitter-title": "Hadi İtelim | Topluluk Girişimi",
-        "twitter-description": "Push Chain için Push topluluk girişimlerini görün."
+        "og-title": "Hadi İtelim - Push Chain için Topluluk Girişimi",
+        "og-description": "Push Chain için topluluk güdümlü girişim ve paylaşımlar.",
+        "twitter-title": "Hadi İtelim | Push Chain Topluluk Girişimi",
+        "twitter-description": "Push Chain için Push Chain topluluk girişimini görün."
       },
       "hero-section": {
         "title": "Hadi İtelim",
-        "description": "LF Push topluluk üyeleri—geliştirdiğin ve yardım ettiğin şeyleri kutluyoruz. Başarılarını paylaş, <hashtag>#LFPush</hashtag> veya <mention>@PushChain</mention> etiketle, ve biz de duyuralım."
+        "description": "LF Push yapımcı topluluğu—başardıklarınızı ve kime yardım ettiğinizi kutluyoruz. Kazançlarınızı paylaşın, <hashtag>#LFPush</hashtag> veya <mention>@PushChain</mention> etiketleyin, ve biz de duyuralım."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Başarını Paylaş",
-          "join-community": "Topluluğa Katıl",
-          "learn-more": "Daha Fazla Bilgi Al"
+          "share-win": "Başarınızı Paylaşın",
+          "join-community": "Topluluğa Katılın",
+          "learn-more": "Daha Fazla Bilgi Edinin"
         },
         "meta": {
           "tweet-alt": "Push Chain topluluk üyesinden tweet",
-          "loading-alt": "Daha fazla topluluk tweeti yükleniyor"
+          "loading-alt": "Daha fazla topluluk tweet'i yükleniyor"
         },
-        "tweets-counter": "{{count}} Tweet ve saymaya devam!",
+        "tweets-counter": "{{count}} Tweet ve saymaya devam ediyor!",
         "loading": "Daha fazla tweet yükleniyor...",
-        "end-message": "Sonuna ulaştın! 🎉"
+        "end-message": "Sonuna ulaştınız! 🎉"
       }
     }
   }

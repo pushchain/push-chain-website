@@ -2,12 +2,76 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Base de connaissances — Guides, FAQ et tutoriels",
-        "description": "Démarrez ici pour découvrir les concepts, les FAQ, les tutoriels et les ressources de l'écosystème. Guides clairs et non techniques sur l'utilisation de Push Chain.",
+        "title": "Base de connaissances — Guides, FAQ & Tutoriels",
+        "description": "Commencez ici pour découvrir les concepts, les FAQ et les tutoriels, ainsi que les ressources de l'écosystème. Des guides clairs et non techniques pour utiliser Push Chain.",
         "og-title": "Base de connaissances Push Chain - Guides & FAQ",
-        "og-description": "Concepts, tutoriels étape par étape et réponses aux questions courantes sur Push Chain.",
+        "og-description": "Concepts, tutoriels pas à pas et réponses aux questions fréquemment posées sur Push Chain.",
         "twitter-title": "Base de connaissances - Guides & FAQ",
         "twitter-description": "Guides rapides, FAQ et tutoriels pour Push Chain (sans jargon technique)."
+      },
+      "hero-section": {
+        "title": "Base de connaissances",
+        "description": {
+          "highlighted": "Push Chain est une véritable blockchain universelle conçue pour éliminer la fragmentation entre toutes les chaînes.",
+          "developers": "Développeurs",
+          "developers-text": "déployez une fois et soyez instantanément compatible avec toutes les chaînes EVM et non-EVM prises en charge.",
+          "users": "Utilisateurs",
+          "users-text": "utilisez la même application, quelle que soit la chaîne d'où ils viennent."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Soyez notifié du lancement du Testnet Push Chain",
+            "short": "Testnet Push Chain"
+          },
+          "description": "Soyez le premier à être informé du lancement du testnet Push Chain. Rejoignez notre liste de diffusion pour des mises à jour exclusives."
+        },
+        "footer": {
+          "description": "Créez des expériences fluides et conviviales pour votre application sur n'importe quelle blockchain avec Push Chain.",
+          "cta": {
+            "text": "Soyez notifié"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Ressources",
+              "items": {
+                "push101": {
+                  "title": "Les bases de Push Chain",
+                  "subtitle": "Découvrez les bases de Push Chain, ses innovations et pourquoi il est nécessaire.",
+                  "ctatitle": "En savoir plus"
+                },
+                "builders": {
+                  "title": "Construisez sur Push Chain",
+                  "subtitle": "Plongez dans la construction d'applications universelles, ce que cela débloque et comment démarrer !",
+                  "ctatitle": "Assemblement de Constructeurs"
+                },
+                "deepdives": {
+                  "title": "Analyses approfondies",
+                  "subtitle": "Vous voulez connaître le fonctionnement interne de Push ? Ou êtes-vous simplement curieux ? Dans les deux cas, bonjour !",
+                  "ctatitle": "Voyez comment ça fonctionne"
+                },
+                "devdocs": {
+                  "title": "Documentation pour développeurs",
+                  "subtitle": "Allons droit au but ! Je suis une chaîne universelle... et vous êtes un développeur, officialisons cela !",
+                  "ctatitle": "Construisez maintenant"
+                },
+                "tokenomics": {
+                  "title": "Explorez la tokenomie",
+                  "subtitle": "Découvrez comment notre tokenomie incite et garantit un réseau durable, conçu pour durer.",
+                  "ctatitle": "Apprendre la conception du token"
+                },
+                "faq": {
+                  "title": "FAQ",
+                  "subtitle": "L'endroit où trouver des réponses aux questions les plus courantes de la communauté.",
+                  "ctatitle": "Lire la suite"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

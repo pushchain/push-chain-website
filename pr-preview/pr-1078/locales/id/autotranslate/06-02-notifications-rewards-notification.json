@@ -1,11 +1,11 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Beta Tertutup Donut Testnet Hadir!",
-      "description": "Dapatkan intip Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
-      "image-alt": "Hadiah Push Chain Testnet - Bangun Aplikasi Universal",
+      "title": "Beta Tertutup Testnet Donut Telah Hadir!",
+      "description": "Dapatkan intip ke dalam Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
+      "image-alt": "Hadiah Testnet Push Chain - Bangun Aplikasi Universal",
       "close-button-title": "Tutup notifikasi hadiah",
-      "close-button-aria-label": "Tutup notifikasi hadiah Push Chain",
+      "close-button-aria-label": "Sembunyikan notifikasi hadiah Push Chain",
       "container-aria-label": "Notifikasi hadiah Push Chain"
     }
   }

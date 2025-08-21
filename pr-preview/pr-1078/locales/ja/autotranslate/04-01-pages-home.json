@@ -2,41 +2,40 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "ホーム",
-        "description": "ユニバーサルアプリのためのL1共有状態。一度デプロイすれば、どのチェーン上のユーザーにもリーチできます。どのウォレットでも使用できます。どのトークンでも支払うことができます。",
-        "og-title": "Push Chain - アプリのためのユニバーサルL1",
-        "og-description": "EVMと非EVMの両方のユーザー向けに一度デプロイ。どのウォレットでも使用し、ネットワーク切り替えなしで、どのトークンでも支払うことができます。",
-        "twitter-title": "一度デプロイ。どのチェーンにもリーチ。",
-        "twitter-description": "どのチェーンからでもトランザクション。どのウォレットでも使用可能。ネットワーク切り替えなしで、どのトークンでも支払うことができます。"
+        "title": "ホーム - Push Chain | アプリのための普遍的なチェーン",
+        "description": "ユニバーサルアプリのための共有ステート L1。一度デプロイするだけで、あらゆるチェーンでユーザーにリーチできます。任意のウォレットを使用できます。任意のトークンで支払うことができます。",
+        "og-title": "Push Chain - アプリのための普遍的な L1",
+        "og-description": "EVM と非 EVM の両方のユーザー向けに一度デプロイするだけで、あらゆるチェーンでユーザーにリーチできます。ネットワークの切り替えは不要です。",
+        "twitter-title": "一度デプロイ。あらゆるチェーンにリーチ。",
+        "twitter-description": "あらゆるチェーンからトランザクションを実行。任意のウォレットを使用し、任意のトークンで支払う。ネットワークの切り替えは不要です。"
       },
       "hero-section": {
-        "title": "どのチェーンでも、どのアプリでも、すべてのユーザー。\nPush Chain 1つ。",
-        "description": "ユニバーサルアプリ用に構築された最初のLayer 1。 \n一度構築・デプロイするだけで、どのチェーン上のユーザーでもオンボーディングできます。",
-        "primary-button": "開発を始める",
-        "primary-button-title": "Push Chain で開発の旅を始めましょう！",
-        "secondary-button": "ナレッジベースを参照する",
+        "title": "あらゆるチェーン、あらゆるアプリ、すべてのユーザー。\nただ一つの Push Chain。",
+        "description": "ユニバーサルアプリのために構築された最初の Layer 1。一度ビルド & デプロイするだけで、あらゆるチェーンからユーザーを取り込みます。",
+        "primary-button": "ビルドを始める",
+        "primary-button-title": "Push Chain であなたのビルダーとしての旅を始めましょう！",
+        "secondary-button": "ナレッジベースを見る",
         "secondary-button-title": "Push Chain を学ぶ",
         "section-aria-label": "Push Chain ヒーローセクション - ユニバーサル Layer 1 ブロックチェーンの紹介",
-        "primary-button-aria-label": "Push Chain でユニバーサルアプリの開発を開始 - 開発ドキュメントへ",
-        "secondary-button-aria-label": "ナレッジベースで Push Chain の機能と概念について学ぶ",
-        "hero-background-alt": "Push Chain ヒーロー背景アニメーション - 普遍的なブロックチェーン接続を示す",
+        "primary-button-aria-label": "Push Chain でユニバーサルアプリのビルドを開始 - 開発者ドキュメントへ",
+        "secondary-button-aria-label": "Push Chain の機能と概念をナレッジベースで学ぶ",
+        "hero-background-alt": "Push Chain ヒーロー背景アニメーション - ユニバーサルブロックチェーン接続",
         "hero-background-title": "Push Chain - クロスチェーンアプリケーションのためのユニバーサル Layer 1",
         "schema-headline": "Push Chain - アプリのためのユニバーサル L1",
-        "schema-description": "Push Chain に一度デプロイすれば、あらゆるブロックチェーンで利用できます。"
+        "schema-description": "Push Chain で一度デプロイするだけで、あらゆるブロックチェーンのユーザーにリーチできます"
       },
-      "stats-section": {
-        "section-aria-label": "Push Chain のパフォーマンス統計",
-        "title": "すぐに",
-        "titleGradient": "相互運用性",
-        "titleThird": "を実現する",
-        "description": "パフォーマンスに最適化。\n高いTPS、超低ガス、およびリアルタイムアプリ実行のためのサブセカンドのファイナリティを実現します。",
-        "animation-alt": "複数のブロックチェーンにわたる Push Chain の即時相互運用性を示すインタラクティブアニメーション",
-        "animation-title": "Push Chain の即時相互運用性を示す可視化",
+      "whatis-section": {
+        "titleFirst": "真の",
+        "titleGradient": "普遍的な",
+        "titleThird": "チェーン",
+        "description": "一度デプロイするだけで、あらゆるチェーンで利用可能。スケーラブルで、あらゆるチェーンで利用可能。",
+        "animation-alt": "Push Chain のあらゆるチェーンにおける即時相互運用性を示すインタラクティブアニメーション",
+        "animation-title": "Push Chain の即時相互運用性を示すビジュアライゼーション",
         "stats": {
           "stat1": {
-            "title": "対応チェーン",
-            "imagealt": "対応チェーンを示すイラスト",
-            "imagetitle": "Ethereum、Solana、BNB Chain など、すべての対応チェーンのリスト"
+            "title": "サポートされているチェーン",
+            "imagealt": "サポートされているチェーンを示すイラスト",
+            "imagetitle": "Ethereum、Solana、BNB Chain などのサポートされているチェーンのリスト"
           },
           "stat2": {
             "title": "TPS",
@@ -53,38 +52,38 @@
         }
       },
       "blog-section": {
-        "subtitle": "ニュース、開発ログ、アイデア",
+        "subtitle": "ニュース、Devlog、アイデア",
         "subtitle-aria-label": "ブログカテゴリ情報",
-        "title": "Push Chain の鼓動を感じよう",
-        "title-aria-label": "最新の Push Chain ブログ記事と最新情報",
-        "explore-link-text": "その他の記事を読む",
-        "explore-link-title": "Push Chain ブログを訪問して、すべての記事と最新情報を読む",
-        "explore-link-aria-label": "Push Chain ブログページに移動する",
-        "section-aria-label": "Push Chain ブログ記事とニュースセクション",
-        "blog-posts-list-aria-label": "最新の Push Chain ブログ記事",
+        "title": "Push Chain の脈動",
+        "title-aria-label": "最新の Push Chain ブログ投稿と更新",
+        "explore-link-text": "詳細記事を見る",
+        "explore-link-title": "Push Chain ブログにアクセスしてすべての記事と更新を読む",
+        "explore-link-aria-label": "Push Chain ブログページに移動",
+        "section-aria-label": "Push Chain ブログ投稿とニュースセクション",
+        "blog-posts-list-aria-label": "最近の Push Chain ブログ投稿",
         "blog-post-aria-label": "{title} に関するブログ記事を読む",
         "blog-post-title-prefix": "ブログ記事を読む - ",
-        "loading-text": "最新のブログ記事を読み込んでいます...",
-        "error-text": "現在、ブログ記事を読み込むことができません",
-        "no-posts-text": "利用可能なブログ記事はありません"
+        "loading-text": "最新のブログ投稿を読み込んでいます...",
+        "error-text": "現時点ではブログ投稿を読み込めません",
+        "no-posts-text": "利用可能なブログ投稿はありません"
       },
       "trustedby-section": {
-        "title": "Web3 のパイオニアに信頼されるチームによって構築",
-        "section-aria-label": "Push Chain 信頼セクション",
+        "title": "Web3 のパイオニアに信頼されているチームによって構築",
+        "section-aria-label": "Push Chain 信頼されているセクション",
         "trusted-by-alt": "投資家 - "
       },
       "featured-section": {
-        "aria-label": "掲載セクション",
-        "tag": "掲載",
-        "title": "Push Chain が注目を集める",
-        "subtitle": "うわさ話だけではありません。メディアが真のユニバーサルチェーンについてどのように言っているかを確認してください。",
-        "articles-image-alt": "メディアカバレッジ - ",
-        "articles-text": "完全なカバレッジを読む",
-        "articles-title-1": "を読む ",
-        "articles-title-2": "の Push Chain に関する詳細な思考",
+        "aria-label": "特集セクション",
+        "tag": "FEATURED ON",
+        "title": "Push Chain スポットライト",
+        "subtitle": "私たちの言葉を信じるだけでなく、メディアが真の普遍的なチェーンについて言っていることを確認してください。",
+        "articles-image-alt": "からの報道",
+        "articles-text": "完全な詳細を読む",
+        "articles-title-1": "を読む",
+        "articles-title-2": "'s の Push Chain に関する詳細",
         "articles": {
           "binance-chain": {
-            "text": "Web3 のリーディングディセントラルコミュニケーションプロトコルである Push Protocol が BNB Chain にローンチされたことを発表できて大変嬉しく思います。"
+            "text": "主要な分散型通信プロトコルである Push Protocol が BNB Chain にローンチされたことを発表しました。"
           },
           "coindesk": {
             "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
@@ -134,17 +133,17 @@
         }
       },
       "ending-section": {
-        "aria-label": "ユニバーサルアプリの構築セクション",
-        "section-title": "ユニバーサルアプリを構築しましょう。",
-        "section-subtitle": "サイロを壊しましょう。一度構築して、すべてのブロックチェーンでスケールしましょう。",
+        "aria-label": "ユニバーサルアプリを構築するセクション",
+        "section-title": "ユニバーサルアプリを構築する。",
+        "section-subtitle": "サイロを壊す。一度構築して、すべてのブロックチェーンでスケールする。",
         "docs-link": {
-          "text": "Push Chain ドキュメントを参照する",
-          "title": "Push Chain ドキュメントと開発リソースを参照する",
+          "text": "Push Chain ドキュメントを見る",
+          "title": "Push Chain ドキュメントと開発者リソースを見る",
           "aria-label": "新しいタブで Push Chain ドキュメントを開く"
         },
         "cta-link": {
           "text": "LFG Push Chain",
-          "title": "ユニバーサルブロックチェーンプラットフォームである Push Chain を開始しましょう",
+          "title": "ユニバーサルブロックチェーンプラットフォームである Push Chain の開発を開始する",
           "aria-label": "Push Chain 開発を開始する"
         }
       }

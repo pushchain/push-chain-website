@@ -4,7 +4,7 @@
       "logo-aria-label": "Push Chain - 홈페이지로 이동",
       "language-icon-alt": "언어 선택 아이콘",
       "hamburger-menu-alt": "탐색 메뉴 열기",
-      "testnet-badge-alt": "Push Chain Testnet Donut - 테스트넷 상태 보기"
+      "testnet-badge-alt": "Push Chain 테스트넷 도넛 - 테스트넷 상태 보기"
     },
     "logo": {
       "imagealt": "Push Chain 로고 이미지",
@@ -31,17 +31,17 @@
       "link1": {
         "text": "시작하기",
         "subtext": "Push Chain 빌드 소개",
-        "title": "Push Chain에서 범용 앱을 빌딩하기 시작 - 개발자 문서"
+        "title": "Push Chain에서 유니버설 앱 빌드 시작 - 개발자 문서"
       },
       "link2": {
         "text": "빠른 시작",
         "subtext": "몇 초 만에 개발 환경 설정",
-        "title": "빠른 시작 가이드 - Push Chain 개발 환경을 즉시 설정"
+        "title": "빠른 시작 가이드 - Push Chain 개발 환경 즉시 설정"
       },
       "link3": {
         "text": "튜토리얼",
         "subtext": "단계별 Push 빌드 가이드",
-        "title": "Hands-on 튜토리얼로 학습 - Push Chain에서 첫 번째 범용 앱 빌드"
+        "title": "실습 튜토리얼로 배우기 - Push Chain에서 첫 번째 유니버설 앱 빌드"
       },
       "link4": {
         "text": "GitHub",
@@ -51,7 +51,7 @@
       "link5": {
         "text": "개발자 Discord",
         "subtext": "개발 커뮤니티와 연결",
-        "title": "Discord에서 Push Chain 개발자 커뮤니티에 참여하여 지원 및 협업"
+        "title": "Discord에서 Push Chain 개발 커뮤니티에 참여하여 지원 및 협업"
       }
     },
     "community": {
@@ -60,27 +60,27 @@
       "link1": {
         "text": "지식 기반",
         "subtext": "기능에 대한 심층 정보 찾기",
-        "title": "Push Chain 문서 및 기능 가이드 탐색"
+        "title": "종합적인 Push Chain 문서 및 기능 가이드 탐색"
       },
       "link2": {
         "text": "토큰 이코노미",
-        "subtext": "Push Chain의 모든 것을 지원하는 기본 토큰",
-        "title": "Push Chain 토큰 이코노미 및 $PC 토큰 유틸리티에 대해 자세히 알아보기"
+        "subtext": "Push Chain의 모든 것을 지원하는 네이티브 토큰",
+        "title": "Push Chain 토큰 이코노미 및 $PC 토큰 유틸리티에 대해 알아보기"
       },
       "link3": {
         "text": "X/Twitter",
         "subtext": "업데이트 및 생태계 뉴스 팔로우",
-        "title": "X (Twitter)에서 Push Chain을 팔로우하여 최신 업데이트 및 공지 확인"
+        "title": "X (Twitter)에서 Push Chain을 팔로우하여 최신 업데이트 및 공지 사항 확인"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "채팅, 빌드 및 커뮤니티와 소통",
+        "subtext": "채팅, 빌드 및 커뮤니티와 함께",
         "title": "Discord에서 Push Chain 커뮤니티에 참여하여 토론 및 지원"
       },
       "link5": {
         "text": "Telegram",
         "subtext": "대화에 참여하고 정보를 얻으세요",
-        "title": "Telegram에서 Push Chain 커뮤니티와 연결하여 실시간 업데이트 확인"
+        "title": "Telegram에서 Push Chain 커뮤니티에 연결하여 실시간 업데이트 받기"
       }
     },
     "resources": {
@@ -92,14 +92,14 @@
         "title": "Push Chain 블로그를 읽고 최신 업데이트, 기술 심층 분석 및 개발 스토리 확인"
       },
       "link2": {
-        "text": "Litepaper",
-        "subtext": "비전과 기술을 단순화",
-        "title": "Push Chain Litepaper를 읽고 단순화된 비전 및 기술 개요 확인"
+        "text": "라이트페이퍼",
+        "subtext": "비전과 기술을 간소화",
+        "title": "Push Chain 라이트페이퍼를 읽고 간소화된 비전 및 기술 개요 확인"
       },
       "link3": {
         "text": "FAQ",
-        "subtext": "일반적인 질문에 대한 빠른 답변",
-        "title": "Push Chain에 대한 자주 묻는 질문을 확인하세요"
+        "subtext": "자주 묻는 질문에 대한 빠른 답변",
+        "title": "Push Chain에 대한 자주 묻는 질문 찾아보기"
       }
     },
     "language": {
@@ -136,7 +136,7 @@
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Push Portal - 개발자, 사용자 또는 검증자로서 포인트를 획득하세요"
+      "title": "Push Portal 액세스 - 개발자, 사용자 또는 유효성 검사기로 포인트를 획득하세요"
     }
   }
 }

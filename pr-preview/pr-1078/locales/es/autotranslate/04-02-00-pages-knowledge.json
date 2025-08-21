@@ -3,11 +3,75 @@
     "knowledge": {
       "seo": {
         "title": "Base de Conocimiento — Guías, Preguntas Frecuentes y Tutoriales",
-        "description": "Comienza aquí para conocer conceptos, preguntas frecuentes, tutoriales y recursos del ecosistema. Guías claras y sencillas para usar Push Chain.",
+        "description": "Empieza aquí para conocer conceptos, preguntas frecuentes, tutoriales y recursos del ecosistema. Guías claras y sencillas para usar Push Chain.",
         "og-title": "Base de Conocimiento de Push Chain - Guías y Preguntas Frecuentes",
-        "og-description": "Conceptos, tutoriales paso a paso y respuestas a preguntas comunes sobre Push Chain.",
+        "og-description": "Conceptos, tutoriales paso a paso y respuestas a las preguntas más comunes sobre Push Chain.",
         "twitter-title": "Base de Conocimiento - Guías y Preguntas Frecuentes",
         "twitter-description": "Guías rápidas, preguntas frecuentes y tutoriales para Push Chain (sin jerga técnica)."
+      },
+      "hero-section": {
+        "title": "Base de Conocimiento",
+        "description": {
+          "highlighted": "Push Chain es una verdadera blockchain universal diseñada para eliminar la fragmentación entre todas las cadenas.",
+          "developers": "Desarrolladores",
+          "developers-text": "implementa una vez y sé compatible instantáneamente con todas las cadenas EVM y no EVM compatibles.",
+          "users": "Usuarios",
+          "users-text": "usa la misma aplicación sin importar la cadena de la que provenga."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Recibe Notificaciones sobre la Red de Pruebas de Push Chain",
+            "short": "Red de Pruebas de Push Chain"
+          },
+          "description": "Sé el primero en saber cuándo se lance la red de pruebas de Push Chain. Únete a nuestra lista de correo para recibir actualizaciones exclusivas."
+        },
+        "footer": {
+          "description": "Crea experiencias fluidas y fáciles de usar para tu aplicación en cualquier blockchain con Push Chain.",
+          "cta": {
+            "text": "Recibe Notificaciones"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Recursos",
+              "items": {
+                "push101": {
+                  "title": "Conceptos Básicos de Push Chain",
+                  "subtitle": "Aprende sobre los conceptos básicos de Push Chain, sus innovaciones y por qué es necesario.",
+                  "ctatitle": "Explora Más"
+                },
+                "builders": {
+                  "title": "Construye en Push Chain",
+                  "subtitle": "Sumérgete en cómo construir aplicaciones universales, lo que desbloquea y cómo empezar.",
+                  "ctatitle": "¡Reúnanse Constructores!"
+                },
+                "deepdives": {
+                  "title": "Análisis Técnicos en Profundidad",
+                  "subtitle": "¿Quieres saber cómo funciona Push Chain por dentro? ¿O simplemente tienes curiosidad? ¡En cualquier caso, saluda!",
+                  "ctatitle": "¡Mira Cómo Funciona!"
+                },
+                "devdocs": {
+                  "title": "Documentación para Desarrolladores",
+                  "subtitle": "¡Vamos directo al grano! Soy una cadena universal... y tú eres un desarrollador, ¡vamos a oficializarlo!",
+                  "ctatitle": "¡Construye Ahora!"
+                },
+                "tokenomics": {
+                  "title": "Explora la Tokenómica",
+                  "subtitle": "Aprende cómo nuestra tokenómica incentiva y asegura una red sostenible que está diseñada para durar.",
+                  "ctatitle": "Aprende Sobre el Diseño del Token"
+                },
+                "faq": {
+                  "title": "Preguntas Frecuentes",
+                  "subtitle": "El lugar para encontrar respuestas a todas las preguntas populares de la comunidad.",
+                  "ctatitle": "Lee Más"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

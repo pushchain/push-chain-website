@@ -3,25 +3,25 @@
     "lfpush": {
       "seo": {
         "title": "Let's Push — Инициатива сообщества",
-        "description": "Инициативы сообщества Push, публикации и многое другое.",
+        "description": "Инициативы, посты и многое другое от сообщества Push.",
         "og-title": "Let's Push - Инициатива сообщества для Push Chain",
-        "og-description": "Инициатива, управляемая сообществом, и публикации для Push Chain.",
+        "og-description": "Инициатива, управляемая сообществом, и разделы для Push Chain.",
         "twitter-title": "Let's Push | Инициатива сообщества",
-        "twitter-description": "Узнайте об инициативе сообщества Push для Push Chain."
+        "twitter-description": "Посмотрите инициативу сообщества Push для Push Chain."
       },
       "hero-section": {
         "title": "Let's Push",
-        "description": "Сообщество строителей LF Push — празднуем то, что вы создаете и кому помогаете. Поделитесь своими успехами, отметьте <hashtag>#LFPush</hashtag> или <mention>@PushChain</mention>, и мы сделаем вашу публикацию более заметной."
+        "description": "Сообщество LF Push builders—отмечаем ваши достижения и тех, кому вы помогаете. Делитесь своими успехами, отмечайте <hashtag>#LFPush</hashtag> или <mention>@PushChain</mention>, и мы усилим эффект."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Поделиться успехом",
-          "join-community": "Присоединиться к сообществу",
-          "learn-more": "Узнать больше"
+          "share-win": "Поделиться Успехом",
+          "join-community": "Присоединиться к Сообществу",
+          "learn-more": "Узнать Больше"
         },
         "meta": {
           "tweet-alt": "Твит от участника сообщества Push Chain",
-          "loading-alt": "Загрузка других твитов сообщества"
+          "loading-alt": "Загрузка дополнительных твитов сообщества"
         },
         "tweets-counter": "{{count}} Твитов и ещё больше!",
         "loading": "Загрузка твитов...",
