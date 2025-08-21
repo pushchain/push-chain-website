@@ -12,9 +12,7 @@
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge": {
-              "text": "Knowledge Base"
-            }
+            "knowledge-base": "Knowledge Base"
           },
           "blocks": {
             "title": "Deep Dives",
@@ -23,7 +21,7 @@
                 "items": {
                   "intro": "## Architecture Deep Dives\n\nLearn about the intricacies of Push Chain's architecture and how it works - One module at a time.",
 
-                  "curated-reads": "## Curated Reads \ud83d\udc47"
+                  "curated-reads": "## Curated Reads 👇"
                 }
               },
               "learn-push-chain": {
