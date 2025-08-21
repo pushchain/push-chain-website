@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "Let's Push — Iniciativa Comunitaria",
+        "description": "Iniciativas, publicaciones y más de la comunidad Push.",
+        "og-title": "Let's Push - Iniciativa Comunitaria para Push Chain",
+        "og-description": "Iniciativa impulsada por la comunidad y participaciones para Push Chain.",
+        "twitter-title": "Let's Push | Iniciativa Comunitaria",
+        "twitter-description": "Echa un vistazo a la iniciativa comunitaria de Push Chain."
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "La comunidad de builders de LF Push—celebrando lo que creas y a quien ayudas. Comparte tus logros, etiqueta <hashtag>#LFPush</hashtag> o <mention>@PushChain</mention>, y los amplificaremos."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Comparte Tu Logro",
+          "join-community": "Únete a la Comunidad",
+          "learn-more": "Aprende Más"
+        },
+        "meta": {
+          "tweet-alt": "Tweet de un miembro de la comunidad Push Chain",
+          "loading-alt": "Cargando más tweets de la comunidad"
+        },
+        "tweets-counter": "{{count}} Tweets ¡y contando!",
+        "loading": "Cargando más tweets...",
+        "end-message": "¡Has llegado al final! 🎉"
+      }
+    }
+  }
+}

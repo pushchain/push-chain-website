@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "support": {
+      "seo": {
+        "title": "Support — Centre d'aide",
+        "description": "Obtenez de l'aide avec Push Chain : guides, dépannage, statut et support communautaire.",
+        "og-title": "Support Push Chain - Centre d'aide",
+        "og-description": "Trouvez de la documentation, des tutoriels, des mises à jour de statut et les moyens de contacter le support.",
+        "twitter-title": "Support - Aide & Docs",
+        "twitter-description": "Guides, tutoriels et aide communautaire pour Push Chain."
+      },
+      "hero-section": {
+        "title": "Support",
+        "description": "Centre d'aide Push Chain : dépannage, guides, Donut testnet, explorer & faucet, mises à jour de statut et sécurité. Posez votre question sur Discord ou ouvrez un ticket de support."
+      }
+    }
+  }
+}

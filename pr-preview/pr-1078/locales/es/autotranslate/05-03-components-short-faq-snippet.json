@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Preguntas frecuentes sobre Push Chain - Blockchain Universal",
+      "title": "Preguntas\nFrecuentes",
+      "title-aria-label": "Preguntas y respuestas comunes sobre Push Chain",
+      "discord-link-text": "Pregúntanos en Discord",
+      "discord-link-title": "Únete a la comunidad de Discord de Push Chain para soporte y preguntas",
+      "discord-link-aria-label": "Abrir la comunidad de Discord en una nueva pestaña",
+      "explore-more-text": "Explorar más preguntas frecuentes",
+      "explore-more-title": "Ver la documentación completa de preguntas frecuentes de Push Chain y guías para desarrolladores",
+      "explore-more-aria-label": "Navegar a la página completa de preguntas frecuentes de Push Chain",
+      "accordion-aria-label": "Lista de preguntas frecuentes de Push Chain",
+      "answer-aria-label": "Respuesta a la pregunta - ",
+      "qnas": {
+        "qna1": {
+          "question": "¿Qué es Push Chain?",
+          "answer": "<1>Push Chain es una blockchain de estado compartido que <2>elimina la fragmentación y hace que las aplicaciones sean universales</2>.</1><1>Despliega una vez en Push. Los usuarios en cualquier cadena — EVM o no EVM — usan tu aplicación con sus billeteras y tokens existentes; las tarifas se gestionan en segundo plano.</1>"
+        },
+        "qna2": {
+          "question": "¿Cómo funciona? (Explicado fácil)",
+          "answer": "<1>Usa la billetera que ya tienes — Push gestiona la parte intercadena entre bastidores.</1><1>1. <2>Empieza en cualquier lugar.</2> Usa cualquier billetera en cualquier cadena — no es necesario cambiar de red.</1><1>2. <2>Firma una vez.</2> Paga con un token que ya tienes; reservamos la tarifa en tu cadena principal.</1><1>3. <2>Lo enrutamos.</2> Una cuenta vinculada en Push (todavía tuya) reenvía tu llamada a la aplicación — no custodial.</1><1>4. <2>Siempre eres tú.</2> Emparejamos tu billetera de cadena principal con tu cuenta vinculada para que las acciones se verifiquen correctamente y se atribuyan a ti en Push.</1><1>5. <2>Listo rápido.</2> La aplicación se ejecuta en Push; las tarifas se gestionan en segundo plano. No hay puentes, no hay billetera nueva.</1><1>Así es como los usuarios en cualquier cadena pueden usar la misma aplicación desplegada en Push Chain — haciendo que las aplicaciones sean verdaderamente universales.</1>"
+        },
+        "qna3": {
+          "question": "¿Necesito una billetera o token de gas diferente?",
+          "answer": "<1><2>No.</2></1><1><2>Mantén tu billetera.</2> Usa la billetera que ya tienes — no hay billetera o cuenta nueva.</1><1><2>Paga con lo que tienes.</2> Las tarifas se pueden pagar con los tokens que ya tienes en tu cadena principal; gestionamos la conversión entre bastidores.</1><1><2>No es necesario cambiar de red.</2> Permanece en tu cadena principal — no es necesario hacer bridging solo para obtener un token de gas.</1><1><2>No custodial.</2> Firmas cada acción; Push nunca guarda tus claves.</1><1><2>Entre bastidores.</2> La red liquida las tarifas en $PC automáticamente — no necesitas gestionarlo.</1>"
+        },
+        "qna4": {
+          "question": "¿En qué se diferencia esto de los puentes o las capas de mensajería?",
+          "answer": "<1><2>Respuesta corta</2>: Push es donde se ejecuta tu aplicación. Los puentes/mensajería solo mueven tokens o mensajes entre cadenas, lo que complica todo para el usuario y los desarrolladores.</1><1><2>Una sede vs muchos clones.</2> Con los puentes/mensajería, implementas por cadena y sincronizas a través de mensajes. En Push, implementas una vez; todos golpean el mismo contrato y estado compartido.</1><1><2>Sin activos envueltos ni bridging obligatorio.</2> Los usuarios permanecen en su cadena principal y pagan con lo que ya tienen; gestionamos el enrutamiento y la conversión de tarifas entre bastidores.</1><1><2>Identidad y verificación unificadas.</2> Aceptamos firmas de cualquier billetera/cadena y las atribuimos al mismo usuario en Push — no custodial.</1><1><2>Menos piezas móviles.</2> No hay baile de aprobación entre cadenas, no hay búsqueda de tokens de gas, no hay contratos de pegamento para mantener sincronizados.</1><1><2>Usa puentes cuando quieras, no porque tengas que hacerlo.</2> La liquidez aún puede moverse a través de puentes, pero interactuar con tu aplicación no lo requiere.</1><1>Resultado: aplicaciones más simples, una única fuente de verdad y una experiencia de usuario que se siente como una única cadena — incluso cuando los usuarios no lo son.</1>"
+        },
+        "qna5": {
+          "question": "¿Es solo compatible con EVM? ¿Qué cadenas son compatibles?",
+          "answer": "<1><2>No, Push es compatible con cadenas EVM y no EVM.</2> Aunque es EVM-first para la implementación, los usuarios de cualquier cadena (incluidas las no EVM) pueden usar tu aplicación como si la estuvieran usando de forma nativa.</1>\n<1><2>Implementa una vez. Interoperabilidad en todas partes.</2> Escribe e implementa contratos EVM estándar en Push (Solidity/Vyper). Las herramientas siguen siendo las mismas.</1>\n<1><2>Usuarios de cualquier cadena.</2> Ethereum y las principales L2 de EVM funcionan de forma nativa. Los usuarios no EVM (por ejemplo, Solana) firman con sus billeteras de origen; verificamos y enrutamos entre bastidores — no es necesario cambiar de red.</1>\n<1><2>Compatible hoy.</2> Consulta la lista en vivo de cadenas compatibles → <3>Cadenas compatibles</3>.</1><1><2>Ampliando la cobertura.</2> Estamos añadiendo más cadenas constantemente. Si quieres solicitar alguna cadena, por favor <4>contáctanos</4>.</1>",
+          "supported-urls-title": "Lista de todas las cadenas compatibles con Push Chain.",
+          "contact-url-title": "Contáctanos para añadir nuevas cadenas."
+        },
+        "qna6": {
+          "question": "¿Qué tan rápido es y cómo son las tarifas?",
+          "answer": "<1><2>Velocidad.</2> Diseñado para confirmaciones de ~1–2 segundos con una retroalimentación rápida de la experiencia de usuario. Consulta las métricas en vivo en <3>🍩 Donut Testnet</3>.</1><1><2>Modelo de tarifas.</2> Ves la tarifa en el token que elijas pagar; la red se liquida en $PC entre bastidores.</1><1><2>Costos típicos.</2> Las tarifas típicas son inferiores a <2>$0.001</2> por transacción, aunque varía según la complejidad del contrato, el precio del token y la carga de la red. Obtienes una cotización exacta antes de firmar.</1>",
+          "donut-testnet-title": "Consulta las estadísticas de Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

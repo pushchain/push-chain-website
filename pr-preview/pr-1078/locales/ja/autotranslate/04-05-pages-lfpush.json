@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "Let's Push — コミュニティイニシアティブ",
+        "description": "Pushコミュニティのイニシアティブ、投稿など。",
+        "og-title": "Let's Push - Push Chain のコミュニティイニシアティブ",
+        "og-description": "Push Chain を推進するコミュニティ主導のイニシアティブと情報共有。",
+        "twitter-title": "Let's Push | コミュニティイニシアティブ",
+        "twitter-description": "Push Chain のコミュニティイニシアティブをご覧ください。"
+      },
+      "hero-section": {
+        "title": "Let's Push",
+        "description": "LF Push ビルダーコミュニティ—あなたの成果と助け合った人々を祝福します。あなたの成功を共有し、<hashtag>#LFPush</hashtag> や <mention>@PushChain</mention> をタグ付けすると、より多くの人々に広めます。"
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "成功談を共有",
+          "join-community": "コミュニティに参加",
+          "learn-more": "詳細を見る"
+        },
+        "meta": {
+          "tweet-alt": "Push Chain コミュニティメンバーからのツイート",
+          "loading-alt": "コミュニティのツイートを読み込んでいます"
+        },
+        "tweets-counter": "{{count}} 件のツイート (随時更新中)",
+        "loading": "ツイートを読み込んでいます...",
+        "end-message": "これで最後です！ 🎉"
+      }
+    }
+  }
+}

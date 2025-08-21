@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "support": {
+      "seo": {
+        "title": "Soporte — Centro de ayuda",
+        "description": "Obtén ayuda con Push Chain: guías, solución de problemas, estado y soporte comunitario.",
+        "og-title": "Soporte de Push Chain - Centro de ayuda",
+        "og-description": "Encuentra documentación, tutoriales, actualizaciones de estado y formas de contactar con el soporte.",
+        "twitter-title": "Soporte - Ayuda y documentación",
+        "twitter-description": "Guías, tutoriales y ayuda de la comunidad para Push Chain."
+      },
+      "hero-section": {
+        "title": "Soporte",
+        "description": "Centro de ayuda de Push Chain: solución de problemas, guías, testnet Donut, explorador y grifo, actualizaciones de estado y seguridad. Pregunta en Discord o abre un ticket de soporte."
+      }
+    }
+  }
+}

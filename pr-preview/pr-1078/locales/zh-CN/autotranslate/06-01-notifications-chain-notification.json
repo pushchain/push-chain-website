@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "抢先体验 Testnet、Donut，构建通用应用并赢取奖励！",
+      "button-text": "领取封闭 Beta 资格",
+      "button-title": "加入 Push Chain 测试网并领取您的封闭 Beta 资格",
+      "button-aria-label": "打开 Telegram 领取 Push Chain 封闭 Beta 资格",
+      "image-alt": "Push Chain Testnet Donut - 通用区块链",
+      "close-button-title": "关闭测试网通知",
+      "close-button-aria-label": "关闭 Push Chain 测试网通知",
+      "container-aria-label": "Push Chain 测试网通知"
+    }
+  }
+}
