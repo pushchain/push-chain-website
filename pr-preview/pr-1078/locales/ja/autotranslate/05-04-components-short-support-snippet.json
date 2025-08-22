@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Push Chain - Universal ブロックチェーンに関するサポートの質問",
+      "title": "サポート\nヘルプデスク",
+      "title-aria-label": "Push Chain に関する一般的なサポートの質問と回答",
+      "discord-link-text": "Discord で質問する",
+      "discord-link-title": "サポートや質問のために Push Chain Discord コミュニティに参加してください",
+      "discord-link-aria-label": "新しいタブで Discord コミュニティを開く",
+      "explore-more-text": "FAQ をもっと見る",
+      "explore-more-title": "Push Chain の完全な FAQ ページと開発者ガイドを表示する",
+      "explore-more-aria-label": "Push Chain の完全な FAQ ページに移動する",
+      "accordion-aria-label": "Push Chain サポートの質問リスト",
+      "answer-aria-label": "質問への回答 - ",
+      "qnas": {
+        "qna1": {
+          "question": "ウォレットに接続できません。何を試すべきですか？",
+          "answer": "<1><2>クイックチェック:</2> ページを更新し、ウォレットのロックを解除し、push.org の攻撃的な広告/スクリプトブロッカーを無効にします。</1><1><2>ネットワークの切り替えは不要:</2> ホームチェーンにとどまります。Push は舞台裏でルーティングを処理します。</1><1><2>サイトの権限をリセット:</2> ウォレットでサイトの接続を削除して再接続します。</1><1>まだ行き詰まりましたか？ <3>Discord</3> で質問するか、<4>サポートチケット</4> を開いてください。</1>",
+          "discord-url-title": "リアルタイムのヘルプのために Push Chain Discord に参加してください。",
+          "support-url-title": "サポートチケットを開く。"
+        },
+        "qna2": {
+          "question": "トランザクションが保留中または失敗しました - どうすればよいですか？",
+          "answer": "<1><2>ステータスを確認:</2> ウォレットのハッシュを使用して <3>Push Scan</3> で tx を探します。</1><1><2>保留中:</2> 通常はすぐに確認されます。複数回再送信しないでください。</1><1><2>失敗:</2> 資金は差し引かれません。エラーを確認して再試行してください。</1><1>進行中のインシデントは <4>Status</4> に投稿されています。</1>",
+          "scan-url-title": "Push Scan (エクスプローラー) を開きます。",
+          "status-url-title": "ネットワークのステータスとインシデントを表示する。"
+        },
+        "qna3": {
+          "question": "テストネットのトークン (Donut) はどのように入手できますか？",
+          "answer": "<1>Faucet を使用してテストトークンをリクエストします。</1><1><2>注:</2> 制限がある場合があります。一部の faucet では簡単な検証が必要です。Faucet が失敗した場合は、<4>Discord</4> で ping してください。</1>",
+          "faucet-url-title": "Push Chain faucet を開きます。",
+          "discord-url-title": "Push Chain Discord に参加してください。"
+        },
+        "qna4": {
+          "question": "バグまたは脆弱性をどのように報告しますか？",
+          "answer": "<1><2>アプリのバグ:</2> <3>サポートチケット</3> を開くか、再現手順を <4>Discord</4> に投稿します。</1><1><2>セキュリティの問題:</2> <5>security@push.org</5> にメールを送信してください。修正が確認されるまで、公に公開しないでください。</1>",
+          "support-url-title": "サポートチケットを開く。",
+          "discord-url-title": "Discord に参加してください。"
+        },
+        "qna5": {
+          "question": "ドキュメントとクイックスタートはどこにありますか？",
+          "answer": "<1>まず <3>Docs</3> からクイックスタートと API を開始し、<4>Knowledge Base</4> で概念、深掘り、FAQ を確認します。</1>",
+          "docs-url-title": "開発者ドキュメントを開きます。",
+          "kb-url-title": "Knowledge Base を開く。"
+        },
+        "qna6": {
+          "question": "新しいチェーン、機能、または統合のサポートをリクエストできますか？",
+          "answer": "<1>はい。必要なチェーン/ツールを <3>Contact</3> を通じて教えていただくか、<4>GitHub</4> で issue を開いてください。継続的にカバレッジを拡大しています。</1>",
+          "contact-url-title": "Push Chain チームに連絡する。",
+          "github-url-title": "GitHub 組織を開く。"
+        }
+      }
+    }
+  }
+}

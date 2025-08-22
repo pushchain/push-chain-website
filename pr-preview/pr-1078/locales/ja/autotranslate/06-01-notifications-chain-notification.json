@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "テストネット、Donut をいち早く体験して、ユニバーサル <app> を構築して賞品を獲得しましょう！",
+      "button-text": "クローズドベータパスを獲得",
+      "button-title": "Push Chain テストネットに参加して、クローズドベータパスを獲得",
+      "button-aria-label": "Push Chain のクローズドベータパスを獲得するには Telegram を開いてください",
+      "image-alt": "Push Chain テストネット Donut - ユニバーサル <blockchain>",
+      "close-button-title": "テストネットの通知を閉じる",
+      "close-button-aria-label": "Push Chain テストネットの通知を閉じる",
+      "container-aria-label": "Push Chain テストネットの通知"
+    }
+  }
+}

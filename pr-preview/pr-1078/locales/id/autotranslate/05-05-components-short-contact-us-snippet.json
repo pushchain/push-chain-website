@@ -1,0 +1,64 @@
+{
+  "components": {
+    "short-contact-us-snippet": {
+      "section-aria-label": "Hubungi Tim Push Chain",
+      "title": "Pertanyaan\nPopuler",
+      "title-aria-label": "Pertanyaan umum kontak untuk Push Chain",
+      "discord-link-text": "Bergabung dengan Discord",
+      "discord-link-title": "Ngobrol dengan komunitas Push Chain di Discord",
+      "discord-link-aria-label": "Buka Discord di tab baru",
+      "explore-more-text": "Jelajahi Program",
+      "explore-more-title": "Lihat hibah, BRB, dan program ekosistem",
+      "explore-more-aria-label": "Navigasi ke program Push Chain",
+      "accordion-aria-label": "Daftar pertanyaan kontak",
+      "answer-aria-label": "Jawaban untuk pertanyaan - ",
+      "qnas": {
+        "qna1": {
+          "question": "Kategori mana yang harus saya pilih?",
+          "answer": "<1><2>Kemitraan & Integrasi</2>: dompet, infra, bursa, kolaborasi protocol → <3>Kontak Kemitraan</3>.</1><1><2>Hibah & Program</2>: BRB, Bootcamp, pendanaan → <4>Kontak Hibah</4>.</1><1><2>Media & Berbicara</2>: wawancara, pernyataan, pidato → <5>Media & Acara</5>.</1><1><2>Validator</2>: minat operator node, penyedia RPC → <6>Validator</6>.</1><1><2>Hukum</2>: merek dagang, permintaan data, perjanjian → <7>Legal</7>.</1><1>Butuh bantuan teknis atau status? Gunakan <8>Dukungan</8> saja.</1>",
+          "contact-partnerships-title": "Buka Kontak Kemitraan",
+          "contact-grants-title": "Buka Kontak Hibah",
+          "contact-media-title": "Buka Kontak Media & Berbicara",
+          "contact-validators-title": "Buka Kontak Validator",
+          "contact-legal-title": "Buka Kontak Hukum & Kepatuhan",
+          "support-title": "Buka Pusat Dukungan"
+        },
+        "qna2": {
+          "question": "Seberapa cepat Anda merespons?",
+          "answer": "<1>Kami bertujuan untuk mengakui sebagian besar pertanyaan dalam <2>1–2 hari kerja</2>. Permintaan mendesak (mis., tenggat waktu media, keamanan) diprioritaskan.</1><1>Untuk masalah mendesak, sertakan <2>tenggat waktu, zona waktu</2>, dan <2>kontak terbaik</2>.</1>"
+        },
+        "qna3": {
+          "question": "Detail apa yang membantu untuk kemitraan?",
+          "answer": "<1>Bagikan <2>nama perusahaan</2>, <2>situs web</2>, dan <2>apa yang ingin Anda bangun bersama</2>.</1><1>Tambahan yang bermanfaat: ukuran audiens, wilayah, jadwal waktu, dan cakupan teknis atau SDK yang Anda rencanakan untuk digunakan.</1><1>Mulai di sini → <3>Kemitraan</3>.</1>",
+          "contact-partnerships-title": "Buka Kontak Kemitraan"
+        },
+        "qna4": {
+          "question": "Bagaimana cara kerja hibah?",
+          "answer": "<1>Beritahu kami <2>nama proyek</2>, <2>repo/situs web</2>, tahap (<2>ide, prototipe, MVP, langsung</2>), dan rencana singkat.</1><1>Aplikasi hibah selalu diproses berdasarkan prinsip pertama-datang-pertama-dilayani. Mulai di sini → <3>Hibah</3>.</1>",
+          "contact-grants-title": "Buka Kontak Hibah"
+        },
+        "qna5": {
+          "question": "Permintaan media & berbicara",
+          "answer": "<1>Sertakan outlet Anda, topik, <2>tenggat waktu</2>, dan pertanyaan. Untuk pidato/lokakarya, tambahkan tanggal acara, format, dan audiens.</1><1>Hubungi kami melalui <3>Media & Berbicara</3>. Kami dapat berbagi logo, bio pendiri, dan boilerplate.</1>",
+          "contact-media-title": "Buka Kontak Media & Berbicara"
+        },
+        "qna6": {
+          "question": "Bagaimana cara melaporkan masalah keamanan?",
+          "answer": "<1>Kirim email ke <3><2>security@push.org</2></3> dengan langkah-langkah untuk mereproduksi dan dampaknya. Harap hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
+          "security-policy-title": "Baca Keamanan & Pengungkapan"
+        },
+        "qna7": {
+          "question": "Saya ingin menjalankan validator / menyediakan infra",
+          "answer": "<1>Bagikan profil infra Anda (pengalaman, wilayah), waktu aktif/SLA yang diharapkan, dan persyaratan pilihan Anda. Mulai di sini → <3>Validator</3>.</1>",
+          "contact-validators-title": "Buka Kontak Validator"
+        },
+        "qna8": {
+          "question": "Karir & perekrutan",
+          "answer": "<1>Jika peran terbuka, mereka akan diposting di saluran kami. Anda masih dapat berbagi profil dan minat Anda melalui <3>Menghubungi kami</3> atau ikuti <4>@PushChain</4> untuk pembaruan.</1>",
+          "contact-careers-title": "Buka Kontak Karir",
+          "twitter-title": "Ikuti @PushChain di X"
+        }
+      }
+    }
+  }
+}

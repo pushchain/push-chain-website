@@ -1,0 +1,120 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "Open a Support Ticket",
+      "expanded-title-for-support": "Need help? 👋",
+      "collapsed-text-for-contact": "Contact the Team",
+      "expanded-title-for-contact": "Hi There! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 الدعم الفني",
+          "description": "Bug reports, SDK/API, smart contracts, integration help"
+        },
+        "network": {
+          "label": "🌐 الشبكة و testnet",
+          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet issues"
+        },
+        "wallet": {
+          "label": "👛 Universal Wallet",
+          "description": "Push Wallet, universal chain connection or other wallet issues"
+        },
+        "identity": {
+          "label": "🪪 الحسابات والهوية",
+          "description": "UEA/UOA, signatures, attribution questions"
+        },
+        "security": {
+          "label": "🛡️ الأمان",
+          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
+        },
+        "general": {
+          "label": "💬 استفسار عام",
+          "description": "Questions, feedback, other topics"
+        },
+        "partnerships": {
+          "label": "🤝 الشراكات والتكامل",
+          "description": "BD, ecosystem integrations (wallets, infra, exchanges, protocols)"
+        },
+        "grants": {
+          "label": "💰 المنح وبرامج النظام البيئي",
+          "description": "BRB, Bootcamp, grants, funding inquiries"
+        },
+        "media": {
+          "label": "📰 وسائل الإعلام والصحافة",
+          "description": "Interviews, statements, assets, fact-checks"
+        },
+        "events": {
+          "label": "🎤 التحدث والفعاليات",
+          "description": "Talks, workshops, hackathons, sponsorships"
+        },
+        "careers": {
+          "label": "👩‍💻 الوظائف",
+          "description": "Open roles, internships, contractor opportunities"
+        },
+        "validators": {
+          "label": "🧡 المدققون / مشغلو العقد",
+          "description": "Operator interest, RPC providers, infra partners"
+        },
+        "legal": {
+          "label": "⚖️ القانون والامتثال",
+          "description": "Trademarks, data requests, agreements"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "What can we help you with?",
+            "subtitle": "Choose the category that best describes your inquiry"
+          },
+          "contact": {
+            "title": "Let's get to know you",
+            "subtitle": "We'll use this information to get back to you",
+            "name-label": "Your Name",
+            "name-placeholder": "Enter your full name",
+            "name-aftergreet": "Nice to meet you, ",
+            "email-label": "Email Address",
+            "email-placeholder": "Enter your email address"
+          },
+          "details": {
+            "title": "Tell us more",
+            "subtitle": "Provide details about your inquiry",
+            "subject-label": "Subject",
+            "subject-placeholder": "Brief summary of your issue",
+            "message-label": "Message",
+            "message-placeholder": "Describe your issue in detail. Include any error messages, steps to reproduce, or relevant information."
+          },
+          "submit": {
+            "title": "Review and Submit",
+            "subtitle": "Please review your information before submitting",
+            "placeholder": "Tell us more about what you need help with..."
+          }
+        },
+        "buttons": {
+          "next": "Next",
+          "previous": "Previous",
+          "submit": "Submit Ticket",
+          "submitting": "Submitting..."
+        },
+        "validation": {
+          "name-required": "Name is required",
+          "name-min-length": "Name must be at least 2 characters long",
+          "email-required": "Email is required",
+          "email-invalid": "Please enter a valid email address",
+          "subject-required": "Subject is required",
+          "message-required": "Message is required",
+          "category-required": "Please select a category",
+          "default": "This field is required"
+        },
+        "success": {
+          "title": "Ticket Submitted Successfully!",
+          "message": "Thank you for contacting us. We've received your support ticket and will get back to you as soon as possible.",
+          "button": "Submit Another Ticket"
+        },
+        "error": {
+          "title": "Submission Failed",
+          "message": "There was an error submitting your ticket. Please try again or contact us directly.",
+          "button": "Try Again"
+        }
+      }
+    }
+  }
+}

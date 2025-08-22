@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "最新情報を逃さない",
+      "text": "サインアップして、エコシステムの最新情報、プレゼント企画などを入手しましょう。",
+      "email-input": "メールアドレス",
+      "email-input-placeholder": "メールアドレスを入力してください",
+      "email-input-title": "Push Chain ニュースレターを購読して最新情報を入手",
+      "email-input-aria-label": "ニュースレター購読のためのメールアドレス",
+      "submit-button": "サインアップ",
+      "submit-button-title": "Push Chain ニュースレターを購読",
+      "submit-button-aria-label": "ニュースレターを購読",
+      "loading-submit-button": "お待ちください...",
+      "arrow-button-aria-label": "ニュースレターを購読",
+      "arrow-button-title": "Push Chain の最新情報を入手",
+      "form-aria-label": "ニュースレター購読フォーム",
+      "success-message-aria-label": "購読に成功しました",
+      "error-message-aria-label": "購読エラーメッセージ"
+    }
+  }
+}

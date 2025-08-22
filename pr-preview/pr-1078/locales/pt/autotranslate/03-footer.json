@@ -1,0 +1,95 @@
+{
+  "footer": {
+    "email-section": {
+      "title": "Mantenha-se atualizado com Push Chain",
+      "title-secondary": "notícias e novidades!",
+      "title-aria-label": "Seção de inscrição na newsletter",
+      "section-aria-label": "Inscrição na newsletter Push Chain"
+    },
+    "main-section": {
+      "section-aria-label": "Links e navegação do rodapé",
+      "logo-link-title": "Página inicial Push Chain",
+      "logo-link-aria-label": "Página inicial Push Chain",
+      "logo-alt": "Push Chain logo"
+    },
+    "columns": {
+      "resources": {
+        "title": "Recursos",
+        "title-aria-label": "Navegação de recursos"
+      },
+      "developers": {
+        "title": "Desenvolvedores",
+        "title-aria-label": "Navegação de desenvolvedores"
+      },
+      "community": {
+        "title": "Comunidade",
+        "title-aria-label": "Navegação da comunidade"
+      },
+      "help": {
+        "title": "Ajuda",
+        "title-aria-label": "Navegação de ajuda"
+      }
+    },
+    "links": {
+      "get-started": "Começar",
+      "get-started-title": "Comece a construir no Push Chain",
+      "docs": "Documentação",
+      "docs-title": "Documentação do Push Chain",
+      "github": "GitHub",
+      "github-title": "Repositórios do Push Chain no GitHub",
+      "knowledge-base": "Base de Conhecimento",
+      "knowledge-base-title": "Base de Conhecimento do Push Chain",
+      "blog": "Blog",
+      "blog-title": "Blog do Push Chain",
+      "litepaper": "Litepaper",
+      "litepaper-title": "Litepaper do Push Chain (PDF)",
+      "brand-kit": "Kit de Marca",
+      "brand-kit-title": "Ativos e diretrizes de marca do Push Chain",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Explorador de blockchain Push Chain",
+      "faucet": "Torneira",
+      "faucet-title": "Obtenha tokens de teste da torneira Push Chain",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Portal da comunidade Push Chain",
+      "support": "Suporte",
+      "support-title": "Central de Ajuda",
+      "security": "Segurança & Divulgação",
+      "security-title": "Reporte uma vulnerabilidade (divulgação responsável)",
+      "contact-us": "Contate-nos",
+      "contact-us-title": "Parcerias, BD, mídia ou perguntas gerais",
+      "careers": "Carreiras",
+      "careers-title": "Vagas abertas no Push Chain",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Siga o Push Chain no X (Twitter)",
+      "discord": "Discord",
+      "discord-title": "Junte-se ao Discord do Push Chain",
+      "reddit": "Reddit",
+      "reddit-title": "Junte-se ao subreddit do Push Chain",
+      "telegram": "Telegram",
+      "telegram-title": "Junte-se ao Telegram do Push Chain"
+    },
+    "social-section": {
+      "section-aria-label": "Links de mídia social e informações legais",
+      "twitter-icon-title": "Push Chain no X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain no X (Twitter)",
+      "github-icon-title": "Push Chain no GitHub",
+      "github-icon-aria-label": "Push Chain no GitHub",
+      "discord-icon-title": "Push Chain no Discord",
+      "discord-icon-aria-label": "Push Chain no Discord"
+    },
+    "legal": {
+      "privacy-policy": "Política de Privacidade",
+      "privacy-policy-title": "Leia a Política de Privacidade",
+      "privacy-policy-aria-label": "Política de Privacidade",
+      "terms-of-service": "Termos de Serviço",
+      "terms-of-service-title": "Leia os Termos de Serviço",
+      "terms-of-service-aria-label": "Termos de Serviço",
+      "cookie-preferences": "Preferências de Cookies",
+      "cookie-preferences-title": "Gerenciar configurações de cookies"
+    },
+    "footer-image": {
+      "alt": "Ilustração do rodapé do Push Chain",
+      "title": "Push Chain - Blockchain Universal"
+    }
+  }
+}

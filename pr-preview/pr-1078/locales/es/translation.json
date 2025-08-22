@@ -1071,6 +1071,34 @@
         "link-append": "",
         "cta-title": "Leer más"
       }
+    },
+    "blog": {
+      "more-posts": {
+        "title": "Más de Push Chain",
+        "follow-button": "Follow",
+        "read-more": "Read More"
+      },
+      "list": {
+        "recent-updates": "Actualizaciones recientes",
+        "page-title": "Página {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "Navegación de la lista del blog",
+        "newer-entries": "Entradas más recientes",
+        "older-entries": "Entradas más antiguas"
+      },
+      "footer-item": {
+        "share-title": "Sé parte de la conversación compartiendo este artículo",
+        "share-button": "Share",
+        "share-modal-title": "Share",
+        "copy-link": "Copiar enlace",
+        "about-title": "Acerca de Push Chain",
+        "about-description": "Push Chain es la primera verdadera blockchain universal diseñada para eliminar la fragmentación entre todas las cadenas. Permite a los desarrolladores desplegar una vez, y estar instantáneamente disponibles para los usuarios en cualquier cadena, ya sea EVM o no EVM (incluyendo Ethereum, Solana, Bitcoin entre otros). Es una cadena 100% compatible con EVM, Proof of Stake (PoS) que permite a los usuarios interactuar con las apps desplegadas en Push Chain desde cualquier cadena, como lo hacen de forma nativa en su propia cadena.",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "Linkedin"
+      }
     }
   },
   "notifications": {

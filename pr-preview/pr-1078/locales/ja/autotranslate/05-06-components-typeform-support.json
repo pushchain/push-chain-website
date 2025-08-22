@@ -1,0 +1,120 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "サポートチケットを送信",
+      "expanded-title-for-support": "サポートが必要ですか？ 👋",
+      "collapsed-text-for-contact": "チームに連絡",
+      "expanded-title-for-contact": "こんにちは！ 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 技術サポート",
+          "description": "バグ報告、SDK/API、スマートコントラクト、統合サポート"
+        },
+        "network": {
+          "label": "🌐 ネットワーク & テストネット",
+          "description": "エクスプローラー/Push Scan、RPC、Faucet、Donut testnetの問題"
+        },
+        "wallet": {
+          "label": "👛 ユニバーサルウォレット",
+          "description": "Push Wallet、ユニバーサルチェーン接続、その他のウォレットの問題"
+        },
+        "identity": {
+          "label": "🪪 アカウント & ID",
+          "description": "UEA/UOA、署名、帰属に関する質問"
+        },
+        "security": {
+          "label": "🛡️ セキュリティ",
+          "description": "脆弱性報告、責任開示 (security@push.org)"
+        },
+        "general": {
+          "label": "💬 一般的な問い合わせ",
+          "description": "質問、フィードバック、その他のトピック"
+        },
+        "partnerships": {
+          "label": "🤝 パートナーシップ & 統合",
+          "description": "BD、エコシステム統合 (ウォレット、インフラ、エクスチェンジ、プロトコル)"
+        },
+        "grants": {
+          "label": "💰 グラント & エコシステムプログラム",
+          "description": "BRB、Bootcamp、グラント、資金に関する問い合わせ"
+        },
+        "media": {
+          "label": "📰 メディア & プレス",
+          "description": "インタビュー、声明、アセット、ファクトチェック"
+        },
+        "events": {
+          "label": "🎤 スピーキング & イベント",
+          "description": "講演、ワークショップ、ハッカソン、スポンサーシップ"
+        },
+        "careers": {
+          "label": "👩‍💻 キャリア",
+          "description": "募集中のポジション、インターンシップ、請負業者募集"
+        },
+        "validators": {
+          "label": "🧡 バリデーター / ノードオペレーター",
+          "description": "オペレーターの関心、RPCプロバイダー、インフラパートナー"
+        },
+        "legal": {
+          "label": "⚖️ 法務 & コンプライアンス",
+          "description": "商標、データ要求、契約"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "どのようなご用件ですか？",
+            "subtitle": "お問い合わせ内容に最も近いカテゴリを選択してください"
+          },
+          "contact": {
+            "title": "あなたについて教えてください",
+            "subtitle": "この情報を使って、ご連絡いたします",
+            "name-label": "お名前",
+            "name-placeholder": "おフルネームを入力してください",
+            "name-aftergreet": "はじめまして、",
+            "email-label": "メールアドレス",
+            "email-placeholder": "メールアドレスを入力してください"
+          },
+          "details": {
+            "title": "詳細を教えてください",
+            "subtitle": "お問い合わせ内容の詳細をご記入ください",
+            "subject-label": "件名",
+            "subject-placeholder": "問題の簡単な要約",
+            "message-label": "メッセージ",
+            "message-placeholder": "問題を詳細に記述してください。エラーメッセージ、再現手順、関連情報などを記載してください。"
+          },
+          "submit": {
+            "title": "確認と送信",
+            "subtitle": "送信前に情報を確認してください",
+            "placeholder": "お手伝いが必要なことについて詳しく教えてください..."
+          }
+        },
+        "buttons": {
+          "next": "次へ",
+          "previous": "前へ",
+          "submit": "チケットを送信",
+          "submitting": "送信中..."
+        },
+        "validation": {
+          "name-required": "名前は必須です",
+          "name-min-length": "名前は2文字以上である必要があります",
+          "email-required": "メールアドレスは必須です",
+          "email-invalid": "有効なメールアドレスを入力してください",
+          "subject-required": "件名は必須です",
+          "message-required": "メッセージは必須です",
+          "category-required": "カテゴリを選択してください",
+          "default": "このフィールドは必須です"
+        },
+        "success": {
+          "title": "チケットを正常に送信しました！",
+          "message": "お問い合わせいただきありがとうございます。サポートチケットを受け取りましたので、できるだけ早くご連絡いたします。",
+          "button": "別のチケットを送信"
+        },
+        "error": {
+          "title": "送信に失敗しました",
+          "message": "チケットの送信に失敗しました。もう一度お試しいただくか、直接お問い合わせください。",
+          "button": "もう一度お試しください"
+        }
+      }
+    }
+  }
+}

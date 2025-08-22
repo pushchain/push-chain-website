@@ -1,0 +1,63 @@
+{
+  "pages": {
+    "knowledge": {
+      "push101": {
+        "seo": {
+          "title": "Push Chain 기본 사항 — 소개",
+          "description": " Push Chain과 유니버설 앱에 대해 초보자를 위한 introducción를 제공합니다. ciò는 무엇이며 어떻게 작동하며 시작하려면 어떻게 해야 하는지 알아봅니다.",
+          "og-title": "Push Chain 기본 사항 - 소개",
+          "og-description": "기본 사항을 배워보세요: ciò는 무엇이며 cómo Push Chain이 작동하고 첫 번째 단계입니다.",
+          "twitter-title": "Push Chain 기본 사항 — 여기서 시작하세요",
+          "twitter-description": "Push Chain과 유니버설 앱에 대한 초보자 안내서."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "지식 기반"
+          },
+          "blocks": {
+            "title": "Push Chain 기본 사항",
+            "sections": {
+              "push-chain-basics": {
+                "items": {
+                  "why-push-chain": "## Push Chain이란 무엇입니까?\n\nPush Chain은 모든 체인 간의 fragmentation을 해결하기 위해 디자인된 PoS L1 블록체인입니다.\n\n**유니버설 (인터오페러블) 앱**을 위한 **공유 상태 L1 블록체인**으로 Push Chain은 Eth, Solana, EVM 또는 non-EVM 체인에서 트랜잭션을 지원하여 모든 체인의 apps를 사용자의 아무 체인에서도 액세스할 수 있습니다 (**pump.fun**에서 아무 체인에서).",
+                  "what-is-push-chain": "## Push Chain이란 무엇입니까?\n\nPush Chain은 모든 체인 간의 fragmentation을 해결하기 위해 디자인된 PoS L1 블록체인입니다.\n\n**유니버설 (인터오페러블) 앱**을 위한 **공유 상태 L1 블록체인**으로 Push Chain은 Eth, Solana, EVM 또는 non-EVM 체인에서 트랜잭션을 지원하여 모든 체인의 apps를 사용자의 아무 체인에서도 액세스할 수 있습니다 (**pump.fun**에서 아무 체인에서).",
+                  "innovations-of-push-chain": "## Push Chain의 혁신\n\nPush Chain은 다음과 같은 획기적인 혁신을 소개합니다:\n\n**진정한 유니버설 L1** — 모든 체인을 지원하고 중앙 집중식 릴레이어, 브리지 또는 다른 해킹이 필요 없이 동일한 앱을 사용할 수 있습니다.\n\n**유니버설 피 원스틸렉션** — 사용자가 자신의 선택한 체인에서 인터랙션하고 원하는 토큰을 사용하며 네이티브로 인터랙션할 수 있습니다.\n\n**월릿 압스트랙션** — MetaMask, Phantom 및 기타 월릿뿐만 아니라 소셜 또는 이메일 로그인을 통해 단일 통합 제공자로 지원합니다. 사용자가 앱에 액세스하기 위해 새로운 월릿을 생성하지 않아도 됩니다.",
+                  "curated-reads": "## 큐레이트된 읽기 👇"
+                }
+              },
+              "why-push-chain-future": {
+                "title": "Push Chain이 웹3의 미래인 이유 알아보기",
+                "items": {
+                  "learn-why-push-chain": {
+                    "title": " Push Chain이 웹3의 부족한 레이어임",
+                    "subtitle": "Push Chain은 스케일링 가능한 소비자 준비 유니버설 애플리케이션을 위한 공유 상태 L1로 디자인되었습니다."
+                  },
+                  "innovations-by-push-chain": {
+                    "title": " Push Chain의 혁신",
+                    "subtitle": "십 개의 핵심 혁신을 통해 체인, 사용자 및 앱을 통합합니다."
+                  },
+                  "another-l1": {
+                    "title": "Push Chain은 또 다른 L1입니까?",
+                    "subtitle": "Push Chain은 또 다른 시iloed 생태계를 만드는 것이 아니라 모든 사람을 위한 인터오페러블성을 해결하기 위해 디자인되었습니다."
+                  },
+                  "evolution-of-push": {
+                    "title": " Push의 진화",
+                    "subtitle": "Push Protocol에서 Push Chain까지 — 스케일링된 웹3 앱을 위한 유니버설, 공유 상태 L1를 구축하기 위한 여정."
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Push Chain에서 만들 수 있는 소비자 앱 🫶🏽",
+                    "subtitle": " Push Chain은 체인 간에 일관되게 실행할 수 있는 다음 세대의 소비자 앱을 위한 문을 엽니다."
+                  },
+                  "faq-push-chain": {
+                    "title": "Push Chain FAQ",
+                    "subtitle": "질문이 있으신가요? Push Chain과 유니버설 앱에 대한 가장 일반적인 답변을 확인하세요."
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

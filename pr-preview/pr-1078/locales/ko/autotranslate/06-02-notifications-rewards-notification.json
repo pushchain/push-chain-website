@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Closed beta is Live!",
+      "description": "Donut 테스트넷을 미리 살펴보고, 유니버설 앱을 구축하고 상을 받으세요!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "Close rewards notification",
+      "close-button-aria-label": "Dismiss Push Chain rewards notification",
+      "container-aria-label": "Push Chain rewards notification"
+    }
+  }
+}

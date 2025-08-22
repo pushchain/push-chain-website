@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "لا تفوّت أي تحديث",
+      "text": "اشترك وابقَ على اطلاع دائم بإعلانات النظام البيئي، والهدايا والمزيد.",
+      "email-input": "بريدك الإلكتروني",
+      "email-input-placeholder": "أدخل عنوان بريدك الإلكتروني",
+      "email-input-title": "اشترك في نشرة <1>Push Chain</1> للحصول على آخر التحديثات",
+      "email-input-aria-label": "عنوان البريد الإلكتروني للاشتراك في النشرة",
+      "submit-button": "اشترك",
+      "submit-button-title": "اشترك في نشرة <1>Push Chain</1>",
+      "submit-button-aria-label": "الاشتراك في النشرة",
+      "loading-submit-button": "يرجى الانتظار...",
+      "arrow-button-aria-label": "الاشتراك في النشرة",
+      "arrow-button-title": "الاشتراك في تحديثات <1>Push Chain</1>",
+      "form-aria-label": "نموذج الاشتراك في النشرة",
+      "success-message-aria-label": "تم الاشتراك بنجاح",
+      "error-message-aria-label": "حدث خطأ في الاشتراك"
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "pages": {
+    "knowledge": {
+      "seo": {
+        "title": "ナレッジベース — ガイド、FAQ & チュートリアル",
+        "description": "Push Chain のコンセプト、FAQ、チュートリアルはこちらから。Push Chain の使用方法に関する、明確で専門用語を使わないガイド。",
+        "og-title": "Push Chain ナレッジベース - ガイド & FAQ",
+        "og-description": "Push Chain に関するコンセプト、段階的なチュートリアル、よくある質問への回答。",
+        "twitter-title": "ナレッジベース - ガイド & FAQ",
+        "twitter-description": "Push Chain の簡単なガイド、FAQ、チュートリアル（開発者用語なし）。"
+      },
+      "hero-section": {
+        "title": "ナレッジベース",
+        "description": {
+          "highlighted": "Push Chain は、あらゆるチェーン間の断片化を排除するように設計された真のユニバーサルブロックチェーンです。",
+          "developers": "開発者",
+          "developers-text": "一度デプロイするだけで、サポートされているすべての EVM と非 EVM チェーンと瞬時に互換性を持つことができます。",
+          "users": "ユーザー",
+          "users-text": "どのチェーンから来ても、同じ app を使用できます。"
+        },
+        "email-signup": {
+          "title": {
+            "long": "Push Chain テストネットの開始時期を通知します",
+            "short": "Push Chain テストネット"
+          },
+          "description": "Push Chain テストネットの開始時期を最初に知ってください。限定アップデートのためにメーリングリストにご登録ください。"
+        },
+        "footer": {
+          "description": "Push Chain を使用して、あらゆるブロックチェーンでシームレスで使いやすいエクスペリエンスを作成してください。",
+          "cta": {
+            "text": "通知を受け取る"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "リソース",
+              "items": {
+                "push101": {
+                  "title": "Push Chain の基本",
+                  "subtitle": "Push Chain の基本、革新性、および必要な理由について学びます。",
+                  "ctatitle": "詳細を見る"
+                },
+                "builders": {
+                  "title": "Push Chain 上の構築",
+                  "subtitle": "ユニバーサル app の構築方法、それがどのようにロック解除されるか、および開始方法について学びます！",
+                  "ctatitle": "ビルダーを集めよう"
+                },
+                "deepdives": {
+                  "title": "技術的な詳細",
+                  "subtitle": "Push Chain の複雑な動作を知りたいですか？または単に好奇心旺盛な仲間ですか？どちらの場合も、こんにちは！",
+                  "ctatitle": "仕組みを見る"
+                },
+                "devdocs": {
+                  "title": "開発者ドキュメント",
+                  "subtitle": "要点にいきましょう！私はユニバーサルチェーン…そしてあなたは開発者です。正式にしましょう！",
+                  "ctatitle": "今すぐ構築"
+                },
+                "tokenomics": {
+                  "title": "トークノミクスを探索",
+                  "subtitle": "当社のトークノミクスが持続可能なネットワークをインセンティブ付け、確保する方法について学びます。",
+                  "ctatitle": "トークン設計を学ぶ"
+                },
+                "faq": {
+                  "title": "FAQ",
+                  "subtitle": "コミュニティから寄せられた一般的な質問への回答を見つける場所。",
+                  "ctatitle": "詳細を読む"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

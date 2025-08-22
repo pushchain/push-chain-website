@@ -1,0 +1,95 @@
+{
+  "footer": {
+    "email-section": {
+      "title": "Push Chainの最新情報を手に入れる",
+      "title-secondary": "ニュースとアップデート！",
+      "title-aria-label": "ニュースレター登録セクション",
+      "section-aria-label": "Push Chainニュースレターの登録"
+    },
+    "main-section": {
+      "section-aria-label": "フッターのナビゲーションとリンク",
+      "logo-link-title": "Push Chainホームページ",
+      "logo-link-aria-label": "Push Chainホームページ",
+      "logo-alt": "Push Chain logo"
+    },
+    "columns": {
+      "resources": {
+        "title": "リソース",
+        "title-aria-label": "リソースのナビゲーション"
+      },
+      "developers": {
+        "title": "開発者",
+        "title-aria-label": "開発者のナビゲーション"
+      },
+      "community": {
+        "title": "コミュニティ",
+        "title-aria-label": "コミュニティのナビゲーション"
+      },
+      "help": {
+        "title": "ヘルプ",
+        "title-aria-label": "ヘルプのナビゲーション"
+      }
+    },
+    "links": {
+      "get-started": "はじめる",
+      "get-started-title": "Push Chain での構築を始める",
+      "docs": "ドキュメント",
+      "docs-title": "Push Chain ドキュメント",
+      "github": "GitHub",
+      "github-title": "Push Chain リポジトリ on GitHub",
+      "knowledge-base": "ナレッジベース",
+      "knowledge-base-title": "Push Chain ナレッジベース",
+      "blog": "ブログ",
+      "blog-title": "Push Chain ブログ",
+      "litepaper": "ライトペーパー",
+      "litepaper-title": "Push Chain ライトペーパー (PDF)",
+      "brand-kit": "ブランドキット",
+      "brand-kit-title": "Push Chain ブランドアセットとガイドライン",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain ブロックエクスプローラー",
+      "faucet": "Faucet",
+      "faucet-title": "Push Chain Faucet からテストトークンを入手",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Chain コミュニティポータル",
+      "support": "サポート",
+      "support-title": "ヘルプセンター",
+      "security": "セキュリティと脆弱性報告",
+      "security-title": "脆弱性報告 (責任ある開示)",
+      "contact-us": "お問い合わせ",
+      "contact-us-title": "パートナーシップ、BD、メディア、または一般的なお問い合わせ",
+      "careers": "キャリア",
+      "careers-title": "Push Chain のオープンポジション",
+      "twitter": "X (Twitter)",
+      "twitter-title": "X (Twitter) で Push Chain をフォロー",
+      "discord": "Discord",
+      "discord-title": "Push Chain Discord に参加",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain サブレディットに参加",
+      "telegram": "Telegram",
+      "telegram-title": "Push Chain Telegram に参加"
+    },
+    "social-section": {
+      "section-aria-label": "ソーシャルメディアのリンクと法的情報",
+      "twitter-icon-title": "X (Twitter) での Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) での Push Chain",
+      "github-icon-title": "GitHub での Push Chain",
+      "github-icon-aria-label": "GitHub での Push Chain",
+      "discord-icon-title": "Discord での Push Chain",
+      "discord-icon-aria-label": "Discord での Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "プライバシーポリシー",
+      "privacy-policy-title": "プライバシーポリシーを読む",
+      "privacy-policy-aria-label": "プライバシーポリシー",
+      "terms-of-service": "利用規約",
+      "terms-of-service-title": "利用規約を読む",
+      "terms-of-service-aria-label": "利用規約",
+      "cookie-preferences": "Cookie の設定",
+      "cookie-preferences-title": "Cookie 設定の管理"
+    },
+    "footer-image": {
+      "alt": "Push Chain フッターイラスト",
+      "title": "Push Chain - Universal Blockchain"
+    }
+  }
+}

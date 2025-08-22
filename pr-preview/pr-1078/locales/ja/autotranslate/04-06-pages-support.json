@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "support": {
+      "seo": {
+        "title": "サポート — ヘルプセンター",
+        "description": "Push Chain に関するヘルプ: ガイド、トラブルシューティング、ステータス、およびコミュニティサポート。",
+        "og-title": "Push Chain Support - ヘルプセンター",
+        "og-description": "ドキュメント、チュートリアル、ステータスアップデート、およびサポートに連絡する方法を見つける。",
+        "twitter-title": "サポート - ヘルプ & ドキュメント",
+        "twitter-description": "Push Chain に関するガイド、チュートリアル、およびコミュニティサポート。"
+      },
+      "hero-section": {
+        "title": "サポート",
+        "description": "Push Chain ヘルプセンター: トラブルシューティング、ガイド、Donut testnet、エクスプローラー & ファセット、ステータスアップデート、およびセキュリティ。Discord で質問するか、サポートチケットを開いてください。"
+      }
+    }
+  }
+}

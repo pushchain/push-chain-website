@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet, Donut을 미리 만나보고 universal 앱을 구축하고 상품을 받으세요!",
+      "button-text": "클로즈 베타 패스 받기",
+      "button-title": "Push Chain testnet에 참여하고 클로즈 베타 패스를 받으세요",
+      "button-aria-label": "Push Chain 클로즈 베타 패스를 받으려면 Telegram을 여세요",
+      "image-alt": "Push Chain Testnet Donut - Universal 블록체인",
+      "close-button-title": "testnet 알림 닫기",
+      "close-button-aria-label": "Push Chain testnet 알림 닫기",
+      "container-aria-label": "Push Chain testnet 알림"
+    }
+  }
+}

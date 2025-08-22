@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "More from Push Chain",
+        "follow-button": "팔로우",
+        "read-more": "더 보기"
+      },
+      "list": {
+        "recent-updates": "최신 업데이트",
+        "page-title": "페이지 {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "블로그 목록 페이지 탐색",
+        "newer-entries": "최신 게시물",
+        "older-entries": "이전 게시물"
+      },
+      "footer-item": {
+        "share-title": "이 기사를 공유하여 대화에 참여하세요",
+        "share-button": "공유",
+        "share-modal-title": "공유",
+        "copy-link": "링크 복사",
+        "about-title": "Push Chain 소개",
+        "about-description": "Push Chain은 모든 체인 간의 파편화를 제거하도록 설계된 최초의 진정한 universal blockchain입니다. 이를 통해 개발자는 한 번 배포하여 EVM 또는 Non-EVM (Ethereum, Solana, Bitcoin 등 포함) 체인에서 사용 가능하게 할 수 있습니다. 100% EVM 호환 Proof of Stake (PoS) 체인이며 사용자는 자신만의 체인에서와 같이 Push Chain에 배포된 앱을 모든 체인에서 상호 작용할 수 있습니다.",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "Linkedin"
+      }
+    }
+  }
+}

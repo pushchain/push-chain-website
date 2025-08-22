@@ -1,0 +1,142 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - 홈페이지로 이동",
+      "language-icon-alt": "언어 선택 아이콘",
+      "hamburger-menu-alt": "탐색 메뉴 열기",
+      "testnet-badge-alt": "Push Chain Testnet Donut - 테스트넷 상태 보기"
+    },
+    "logo": {
+      "imagealt": "Push Chain 로고 이미지",
+      "imagetitle": "Push Chain 로고",
+      "ctatitle": "Push Chain 홈페이지로 이동"
+    },
+    "testnet": {
+      "title": "테스트넷",
+      "aria-label": "테스트넷 섹션",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Push Chain 블록 탐색기",
+        "title": "Push Scan에서 Push Chain 테스트넷 트랜잭션 및 블록 탐색"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "테스트넷 토큰 받기",
+        "title": "Push Chain 개발을 위한 무료 테스트넷 토큰 받기"
+      }
+    },
+    "developers": {
+      "title": "개발자",
+      "aria-label": "개발자 섹션",
+      "link1": {
+        "text": "시작하기",
+        "subtext": "Push Chain 빌드 소개",
+        "title": "Push Chain에서 universal 앱 빌드 시작 - 개발자 문서"
+      },
+      "link2": {
+        "text": "빠른 시작",
+        "subtext": "몇 초 만에 개발 환경 설정",
+        "title": "빠른 시작 가이드 - Push Chain 개발 환경 즉시 설정"
+      },
+      "link3": {
+        "text": "튜토리얼",
+        "subtext": "Push 빌드 단계별 가이드",
+        "title": "Hands-on 튜토리얼로 학습 - Push Chain에서 첫 번째 universal 앱 빌드"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "핵심 코드 및 오픈 소스 도구 보기",
+        "title": "Push Chain 소스 코드 및 개발 도구 GitHub에서 탐색"
+      },
+      "link5": {
+        "text": "개발자 Discord",
+        "subtext": "개발 커뮤니티 연결",
+        "title": "Discord에서 Push Chain 개발 커뮤니티에 참여하여 지원 및 협업"
+      }
+    },
+    "community": {
+      "title": "커뮤니티",
+      "aria-label": "커뮤니티 섹션",
+      "link1": {
+        "text": "Knowledge Base",
+        "subtext": "기능에 대한 자세한 정보 찾기",
+        "title": "Push Chain 문서 및 기능 가이드 탐색"
+      },
+      "link2": {
+        "text": "Tokenomics",
+        "subtext": "Push Chain의 모든 것을 지원하는 네이티브 토큰",
+        "title": "Push Chain 토큰 이코노미 및 $PC 토큰 유틸리티에 대해 학습"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "업데이트 및 생태계 뉴스 팔로우",
+        "title": "X (Twitter)에서 Push Chain을 팔로우하여 최신 업데이트 및 공지 확인"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "채팅, 빌드 및 커뮤니티와 교류",
+        "title": "Discord에서 Push Chain 커뮤니티에 참여하여 토론 및 지원"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "대화에 참여하고 최신 정보를 유지",
+        "title": "Telegram에서 Push Chain 커뮤니티에 연결하여 실시간 업데이트 받기"
+      }
+    },
+    "resources": {
+      "title": "리소스",
+      "aria-label": "리소스 섹션",
+      "link1": {
+        "text": "Blog",
+        "subtext": "업데이트, 심층 분석 및 개발 스토리",
+        "title": "Push Chain 블로그를 읽고 최신 업데이트, 기술 심층 분석 및 개발 스토리 확인"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "비전과 기술 간소화",
+        "title": "Push Chain Litepaper 읽기 - 간소화된 비전 및 기술 개요"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "자주 묻는 질문에 대한 빠른 답변",
+        "title": "Push Chain에 대한 자주 묻는 질문 찾아보기"
+      }
+    },
+    "language": {
+      "title": "언어",
+      "aria-label": "언어 선택 드롭다운",
+      "english": "English",
+      "english-ctatitle": "언어를 영어로 변경",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal 액세스 - 개발자, 사용자 또는 유효성 검사자로서 포인트를 획득"
+    }
+  }
+}

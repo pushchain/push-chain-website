@@ -1,0 +1,18 @@
+{
+  "components": {
+    "cookie-banner": {
+      "message": "저희는 사용자 경험을 맞춤 설정하기 위해 쿠키를 사용합니다. 자세한 내용은 다음에서 확인하세요.",
+      "privacy-policy-link": "개인정보 처리방침",
+      "privacy-policy-link-title": "Push Chain 개인정보 처리방침 읽기",
+      "privacy-policy-link-aria-label": "새 탭에서 개인정보 처리방침 열기",
+      "accept-button": "수락",
+      "accept-button-title": "사용자 경험 맞춤 설정을 위해 쿠키를 수락합니다.",
+      "accept-button-aria-label": "쿠키를 수락하고 배너 닫기",
+      "reject-button": "거부",
+      "reject-button-title": "쿠키를 거부하고 배너 닫기",
+      "reject-button-aria-label": "쿠키를 거부하고 배너 닫기",
+      "banner-aria-label": "쿠키 동의 배너",
+      "banner-role": "쿠키 설정 알림"
+    }
+  }
+}

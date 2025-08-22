@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "Lebih Banyak dari Push Chain",
+        "follow-button": "Ikuti",
+        "read-more": "Baca Selengkapnya"
+      },
+      "list": {
+        "recent-updates": "Pembaruan Terbaru",
+        "page-title": "Halaman {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "Navigasi halaman daftar Blog",
+        "newer-entries": "Entri Baru",
+        "older-entries": "Entri Lama"
+      },
+      "footer-item": {
+        "share-title": "Jadilah bagian dari percakapan dengan membagikan artikel ini",
+        "share-button": "Bagikan",
+        "share-modal-title": "Bagikan",
+        "copy-link": "Salin tautan",
+        "about-title": "Tentang Push Chain",
+        "about-description": "Push Chain adalah blockchain universal sejati pertama yang dirancang untuk menghilangkan fragmentasi di seluruh rantai. Ini memungkinkan pengembang untuk menyebarkan sekali, dan langsung tersedia untuk pengguna di rantai mana pun, apakah EVM atau Non-EVM (termasuk Ethereum, Solana, Bitcoin di antaranya). Ini adalah rantai Proof of Stake (PoS) yang 100% kompatibel dengan EVM yang memungkinkan pengguna untuk berinteraksi dengan aplikasi yang disebarkan di Push Chain dari rantai mana pun, seperti yang mereka lakukan secara native di rantai mereka sendiri.",
+        "social-twitter": "X/Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "Linkedin"
+      }
+    }
+  }
+}

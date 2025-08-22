@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Dokumentasi — Bangun Aplikasi Universal",
+        "description": "Semua yang Anda butuhkan untuk meluncur di Push Chain: quickstart, SDK, referensi API, contoh, dan pengaturan node.",
+        "og-title": "Dokumentasi Push Chain - Quickstart, SDK & API",
+        "og-description": "Bangun dan jalankan aplikasi di universal execution layer dengan panduan dan contoh yang jelas.",
+        "twitter-title": "Dokumentasi Push Chain - Bangun sekarang",
+        "twitter-description": "Quickstart, SDK, referensi API, dan contoh untuk meluncur dengan cepat."
+      },
+      "explore-prelaunch-build": {
+        "text": "Jelajahi build pra-peluncuran",
+        "title": "Akses dokumentasi Push Chain testnet dan fitur pra-peluncuran",
+        "ariaLabel": "Navigasi ke dokumentasi Push Chain testnet untuk menjelajahi fitur build pra-peluncuran"
+      }
+    }
+  }
+}

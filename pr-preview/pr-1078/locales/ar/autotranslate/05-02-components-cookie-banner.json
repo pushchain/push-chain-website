@@ -1,0 +1,18 @@
+{
+  "components": {
+    "cookie-banner": {
+      "message": "نستخدم ملفات تعريف الارتباط لتخصيص تجربتك. تعرف على المزيد في سياسة الخصوصية الخاصة بنا",
+      "privacy-policy-link": "سياسة الخصوصية",
+      "privacy-policy-link-title": "اقرأ سياسة خصوصية Push Chain",
+      "privacy-policy-link-aria-label": "افتح سياسة الخصوصية في علامة تبويب جديدة",
+      "accept-button": "قبول",
+      "accept-button-title": "قبول ملفات تعريف الارتباط لتخصيص تجربتك",
+      "accept-button-aria-label": "قبول ملفات تعريف الارتباط وإغلاق اللوحة",
+      "reject-button": "رفض",
+      "reject-button-title": "رفض ملفات تعريف الارتباط وإغلاق اللوحة",
+      "reject-button-aria-label": "رفض ملفات تعريف الارتباط وإغلاق اللوحة",
+      "banner-aria-label": "لوحة موافقة ملفات تعريف الارتباط",
+      "banner-role": "إشعار تفضيلات ملفات تعريف الارتباط"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "components": {
+    "breadcrumbs": {
+      "navigation-aria-label": "تصفح مسار الصفحة",
+      "home-text": "الرئيسية",
+      "navigate-to-aria-label": "الانتقال إلى {{page}}",
+      "go-to-title": "الانتقال إلى صفحة {{page}}",
+      "current-page-aria-label": "الصفحة الحالية: {{page}}",
+      "separator-aria-label": "فاصل مسار الصفحة"
+    }
+  }
+}

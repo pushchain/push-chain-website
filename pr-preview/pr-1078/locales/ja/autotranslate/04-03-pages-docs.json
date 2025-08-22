@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "ドキュメント — ユニバーサル <app> の構築",
+        "description": "Push Chain での出荷に必要なすべて：クイックスタート、SDK、API リファレンス、例、および <node> セットアップ。",
+        "og-title": "Push Chain Docs - クイックスタート、SDK & API",
+        "og-description": "明確なガイドと例でユニバーサル <execution layer> 上で <app> を構築および実行します。",
+        "twitter-title": "Push Chain Docs - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、API リファレンス、および例で高速に出荷します。"
+      },
+      "explore-prelaunch-build": {
+        "text": "プレローンチビルドを探索",
+        "title": "Push Chain <testnet> ドキュメントとプレローンチ機能にアクセス",
+        "ariaLabel": "プレローンチビルド機能を探求するために Push Chain <testnet> ドキュメントに移動します"
+      }
+    }
+  }
+}
