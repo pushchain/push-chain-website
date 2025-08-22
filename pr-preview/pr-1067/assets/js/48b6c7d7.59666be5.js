@@ -171,48 +171,44 @@ const toc = [{
   "id": "what-youll-build",
   "level": 2
 }, {
-  "value": "Create the project",
-  "id": "create-the-project",
+  "value": "1) Create the project",
+  "id": "1-create-the-project",
   "level": 2
 }, {
-  "value": "1) Wrap your app with Push Universal Wallet",
-  "id": "1-wrap-your-app-with-push-universal-wallet",
+  "value": "2) Wrap your app with Push Universal Wallet",
+  "id": "2-wrap-your-app-with-push-universal-wallet",
   "level": 2
 }, {
-  "value": "2) Build the Universal Payment UI",
-  "id": "2-build-the-universal-payment-ui",
+  "value": "3) Build the Universal Payment UI",
+  "id": "3-build-the-universal-payment-ui",
   "level": 2
 }, {
-  "value": "2.1) Hooks you&#39;ll use",
-  "id": "21-hooks-youll-use",
+  "value": "3.1) Hooks you&#39;ll use",
+  "id": "31-hooks-youll-use",
   "level": 3
 }, {
-  "value": "2.2) Local state &amp; derived amount",
-  "id": "22-local-state--derived-amount",
+  "value": "3.2) Local state &amp; derived amount",
+  "id": "32-local-state--derived-amount",
   "level": 3
 }, {
-  "value": "2.3) Send transaction",
-  "id": "23-send-transaction",
+  "value": "3.3) Send transaction",
+  "id": "33-send-transaction",
   "level": 3
 }, {
-  "value": "2.4) Connect Account Button and check connection status",
-  "id": "24-connect-account-button-and-check-connection-status",
+  "value": "3.4) Connect Account Button and check connection status",
+  "id": "34-connect-account-button-and-check-connection-status",
   "level": 3
 }, {
-  "value": "2.5) Display Block Explorer URL",
-  "id": "25-display-block-explorer-url",
+  "value": "3.5) Display Block Explorer URL",
+  "id": "35-display-block-explorer-url",
   "level": 3
 }, {
-  "value": "2.6) Complete code",
-  "id": "26-complete-code",
+  "value": "3.6) Complete code",
+  "id": "36-complete-code",
   "level": 3
 }, {
   "value": "How this enables “Stripe‑like” payments",
   "id": "how-this-enables-stripelike-payments",
-  "level": 3
-}, {
-  "value": "3) Run it",
-  "id": "3-run-it",
   "level": 2
 }, {
   "value": "Notes &amp; tips",
@@ -320,8 +316,8 @@ function _createMdxContent(props) {
         })]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "create-the-project",
-      children: "Create the project"
+      id: "1-create-the-project",
+      children: "1) Create the project"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "First, create a new Vite TypeScript React project:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
@@ -341,8 +337,8 @@ function _createMdxContent(props) {
         children: "npm install @pushchain/ui-kit @pushchain/core\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "1-wrap-your-app-with-push-universal-wallet",
-      children: "1) Wrap your app with Push Universal Wallet"
+      id: "2-wrap-your-app-with-push-universal-wallet",
+      children: "2) Wrap your app with Push Universal Wallet"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["Open ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
         children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
@@ -375,11 +371,11 @@ function _createMdxContent(props) {
         }), " file since we won't be using the default Vite styles for this tutorial."]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "2-build-the-universal-payment-ui",
-      children: "2) Build the Universal Payment UI"
+      id: "3-build-the-universal-payment-ui",
+      children: "3) Build the Universal Payment UI"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "21-hooks-youll-use",
-      children: "2.1) Hooks you'll use"
+      id: "31-hooks-youll-use",
+      children: "3.1) Hooks you'll use"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
@@ -397,8 +393,8 @@ function _createMdxContent(props) {
         children: "import { usePushWalletContext, usePushChainClient } from '@pushchain/ui-kit';\n\nconst { connectionStatus } = usePushWalletContext();\nconst { pushChainClient } = usePushChainClient();\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "22-local-state--derived-amount",
-      children: "2.2) Local state & derived amount"
+      id: "32-local-state--derived-amount",
+      children: "3.2) Local state & derived amount"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "We store the selected preset amount (1 PC, 5 PC, 10 PC, or custom), the recipient, and tx state."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
@@ -408,8 +404,8 @@ function _createMdxContent(props) {
         children: "type PresetAmount = 1 | 5 | 10 | 'custom';\n\nconst [recipient, setRecipient] = useState('');\nconst [preset, setPreset] = useState<Preset>(1);\nconst [custom, setCustom] = useState('');\nconst [sending, setSending] = useState(false);\nconst [hash, setHash] = useState<string | null>(null);\n\nconst amount = preset === 'custom' ? Number(custom) || 0 : preset;\nconst validAddr = /^0x[a-fA-F0-9]{40}$/.test(recipient.trim());\nconst canSend = connected && validAddr && amount > 0 && !sending;\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "23-send-transaction",
-      children: "2.3) Send transaction"
+      id: "33-send-transaction",
+      children: "3.3) Send transaction"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "handleSend"
@@ -423,8 +419,8 @@ function _createMdxContent(props) {
         children: "import { PushChain } from '@pushchain/core';\n\nconst { pushChainClient } = usePushChainClient();\n\nasync function send() {\n  if (!pushChainClient || !canSend) return;\n  setSending(true);\n  setHash(null);\n  try {\n    const value = PushChain.utils.helpers.parseUnits(String(amount), 18);\n    const res = await pushChainClient.universal.sendTransaction({\n      to: recipient.trim(),\n      value,\n    });\n    setHash(res.hash);\n  } finally {\n    setSending(false);\n  }\n}\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "24-connect-account-button-and-check-connection-status",
-      children: "2.4) Connect Account Button and check connection status"
+      id: "34-connect-account-button-and-check-connection-status",
+      children: "3.4) Connect Account Button and check connection status"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "PushUniversalAccountButton"
@@ -440,8 +436,8 @@ function _createMdxContent(props) {
         children: "...\n<PushUniversalAccountButton />\n\n{connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n  <div>\n    {/* Payment form goes here */}\n  </div>\n)}\n...\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "25-display-block-explorer-url",
-      children: "2.5) Display Block Explorer URL"
+      id: "35-display-block-explorer-url",
+      children: "3.5) Display Block Explorer URL"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["After success, show the tx hash with a link from the client’s explorer helper by using the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "pushChainClient.explorer.getTransactionUrl"
@@ -453,16 +449,16 @@ function _createMdxContent(props) {
         children: "...\n{hash && (\n  <div style={{ marginTop: 12, fontSize: 14 }}>\n    Txn: <code>{hash}</code>{' '}\n    <a href={pushChainClient?.explorer.getTransactionUrl(hash)} target=\"_blank\" rel=\"noreferrer noopener\">\n      View\n    </a>\n  </div>\n)}\n...\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "26-complete-code",
-      children: "2.6) Complete code"
+      id: "36-complete-code",
+      children: "3.6) Complete code"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-jsx",
         metastring: "live",
         live: true,
-        children: "import { useState } from 'react';\nimport { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';\nimport { PushChain } from '@pushchain/core';\n\nfunction App() {\n  function PaymentGateway() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    const connected = connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED;\n\n    const [recipient, setRecipient] = useState('');\n    const [preset, setPreset] = useState(1);\n    const [custom, setCustom] = useState('');\n    const [sending, setSending] = useState(false);\n    const [hash, setHash] = useState(null);\n\n    const amount = preset === 'custom' ? Number(custom) || 0 : preset;\n    const validAddr = /^0x[a-fA-F0-9]{40}$/.test(recipient.trim());\n    const canSend = connected && validAddr && amount > 0 && !sending;\n\n    async function send() {\n      if (!pushChainClient || !canSend) return;\n      setSending(true);\n      setHash(null);\n      try {\n        const value = PushChain.utils.helpers.parseUnits(String(amount), 18);\n        const res = await pushChainClient.universal.sendTransaction({\n          to: recipient.trim(),\n          value,\n        });\n        setHash(res.hash);\n      } finally {\n        setSending(false);\n      }\n    }\n\n    return (\n      <div style={{ maxWidth: 520, margin: '24px auto', padding: 16, fontFamily: 'system-ui' }}>\n        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>\n          <PushUniversalAccountButton />\n        </div>\n\n        <h2 style={{ marginTop: 16 }}>Universal Payment Gateway</h2>\n        <p style={{ marginTop: 6, color: '#666' }}>\n          Pay a Push address from Ethereum or Solana—no manual network switching.\n        </p>\n\n        <label style={{ display: 'block', fontWeight: 600, marginTop: 16 }}>Recipient (Push EVM address)</label>\n        <input\n          value={recipient}\n          onChange={(e) => setRecipient(e.target.value)}\n          placeholder=\"0x...\"\n          style={{ width: '100%', padding: 10, borderRadius: 10, border: '1px solid #ccc' }}\n        />\n        {!validAddr && recipient.trim() !== '' && (\n          <div style={{ color: '#b00020', fontSize: 12, marginTop: 6 }}>Enter a valid 0x address</div>\n        )}\n\n        <div style={{ fontWeight: 600, marginTop: 16 }}>Amount (PC)</div>\n        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>\n          {[1, 5, 10].map((a) => (\n            <button\n              key={a}\n              onClick={() => setPreset(a)}\n              disabled={sending}\n              style={{\n                padding: '8px 12px',\n                borderRadius: 10,\n                border: '1px solid #111',\n                background: preset === a ? '#111' : 'transparent',\n                color: preset === a ? '#fff' : '#111',\n                cursor: 'pointer',\n              }}\n            >\n              {a} PC\n            </button>\n          ))}\n          <button\n            onClick={() => setPreset('custom')}\n            disabled={sending}\n            style={{\n              padding: '8px 12px',\n              borderRadius: 10,\n              border: '1px solid #111',\n              background: preset === 'custom' ? '#111' : 'transparent',\n              color: preset === 'custom' ? '#fff' : '#111',\n              cursor: 'pointer',\n            }}\n          >\n            Custom\n          </button>\n        </div>\n\n        {preset === 'custom' && (\n          <input\n            type=\"number\"\n            min={0}\n            step={0.000001}\n            placeholder=\"Enter PC amount\"\n            value={custom}\n            onChange={(e) => setCustom(e.target.value)}\n            style={{\n              width: '100%',\n              padding: 10,\n              borderRadius: 10,\n              border: '1px solid #ccc',\n              marginTop: 8,\n            }}\n          />\n        )}\n\n        <button\n          onClick={send}\n          disabled={!canSend}\n          style={{\n            width: '100%',\n            marginTop: 16,\n            padding: '12px 16px',\n            borderRadius: 10,\n            border: '1px solid #111',\n            background: canSend ? '#111' : '#999',\n            color: '#fff',\n            cursor: canSend ? 'pointer' : 'not-allowed',\n          }}\n        >\n          {sending ? 'Sending…' : `Send ${amount || ''} PC`}\n        </button>\n\n        {hash && (\n          <div style={{ marginTop: 12, fontSize: 14 }}>\n            Txn: <code>{hash}</code>{' '}\n            <a href={pushChainClient?.explorer.getTransactionUrl(hash)} target=\"_blank\" rel=\"noreferrer noopener\">\n              View\n            </a>\n          </div>\n        )}\n\n        {!connected && <div style={{ color: '#555', marginTop: 8, fontSize: 12 }}>Connect your wallet to send.</div>}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}>\n      <PaymentGateway />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+        children: "import { useState } from 'react';\nimport { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';\nimport { PushChain } from '@pushchain/core';\n\nfunction App() {\n  function PaymentGateway() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    const connected = connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED;\n\n    const [recipient, setRecipient] = useState('');\n    const [preset, setPreset] = useState(1);\n    const [custom, setCustom] = useState('');\n    const [sending, setSending] = useState(false);\n    const [hash, setHash] = useState(null);\n\n    const amount = preset === 'custom' ? Number(custom) || 0 : preset;\n    const validAddr = /^0x[a-fA-F0-9]{40}$/.test(recipient.trim());\n    const canSend = connected && validAddr && amount > 0 && !sending;\n\n    async function send() {\n      if (!pushChainClient || !canSend) return;\n      setSending(true);\n      setHash(null);\n      try {\n        const value = PushChain.utils.helpers.parseUnits(String(amount), 18);\n        const res = await pushChainClient.universal.sendTransaction({\n          to: recipient.trim(),\n          value,\n        });\n        setHash(res.hash);\n      } finally {\n        setSending(false);\n      }\n    }\n\n    return (\n      <div style={{ maxWidth: 520, margin: '24px auto', padding: 16, fontFamily: 'system-ui' }}>\n        <div style={{ display: 'flex', justifyContent: 'center' }}>\n          <PushUniversalAccountButton />\n        </div>\n\n        <h2 style={{ marginTop: 16 }}>Universal Payment Gateway</h2>\n        <p style={{ marginTop: 6, color: '#666' }}>\n          Pay a Push address from Ethereum or Solana—no manual network switching.\n        </p>\n\n        <label style={{ display: 'block', fontWeight: 600, marginTop: 16 }}>Recipient (Push EVM address)</label>\n        <input\n          value={recipient}\n          onChange={(e) => setRecipient(e.target.value)}\n          placeholder=\"0x...\"\n          style={{ width: '100%', padding: 10, borderRadius: 10, border: '1px solid #ccc' }}\n        />\n        {!validAddr && recipient.trim() !== '' && (\n          <div style={{ color: '#b00020', fontSize: 12, marginTop: 6 }}>Enter a valid 0x address</div>\n        )}\n\n        <div style={{ fontWeight: 600, marginTop: 16 }}>Amount (PC)</div>\n        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginTop: 8 }}>\n          {[1, 5, 10].map((a) => (\n            <button\n              key={a}\n              onClick={() => setPreset(a)}\n              disabled={sending}\n              style={{\n                padding: '8px 12px',\n                borderRadius: 10,\n                border: '1px solid #111',\n                background: preset === a ? '#111' : 'transparent',\n                color: preset === a ? '#fff' : '#111',\n                cursor: 'pointer',\n              }}\n            >\n              {a} PC\n            </button>\n          ))}\n          <button\n            onClick={() => setPreset('custom')}\n            disabled={sending}\n            style={{\n              padding: '8px 12px',\n              borderRadius: 10,\n              border: '1px solid #111',\n              background: preset === 'custom' ? '#111' : 'transparent',\n              color: preset === 'custom' ? '#fff' : '#111',\n              cursor: 'pointer',\n            }}\n          >\n            Custom\n          </button>\n        </div>\n\n        {preset === 'custom' && (\n          <input\n            type=\"number\"\n            min={0}\n            step={0.000001}\n            placeholder=\"Enter PC amount\"\n            value={custom}\n            onChange={(e) => setCustom(e.target.value)}\n            style={{\n              width: '100%',\n              padding: 10,\n              borderRadius: 10,\n              border: '1px solid #ccc',\n              marginTop: 8,\n            }}\n          />\n        )}\n\n        <button\n          onClick={send}\n          disabled={!canSend}\n          style={{\n            width: '100%',\n            marginTop: 16,\n            padding: '12px 16px',\n            borderRadius: 10,\n            border: '1px solid #111',\n            background: canSend ? '#111' : '#999',\n            color: '#fff',\n            cursor: canSend ? 'pointer' : 'not-allowed',\n          }}\n        >\n          {sending ? 'Sending…' : `Send ${amount || ''} PC`}\n        </button>\n\n        {hash && (\n          <div style={{ marginTop: 12, fontSize: 14 }}>\n            Txn: <code>{hash}</code>{' '}\n            <a href={pushChainClient?.explorer.getTransactionUrl(hash)} target=\"_blank\" rel=\"noreferrer noopener\">\n              View\n            </a>\n          </div>\n        )}\n\n        {!connected && <div style={{ color: '#555', marginTop: 8, fontSize: 12 }}>Connect your wallet to send.</div>}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}>\n      <PaymentGateway />\n    </PushUniversalWalletProvider>\n  );\n}\n"
       })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "how-this-enables-stripelike-payments",
       children: "How this enables “Stripe‑like” payments"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
@@ -481,18 +477,6 @@ function _createMdxContent(props) {
           children: "Gas in native tokens"
         }), "—your users can pay fees in ETH/SOL while you receive on Push."]
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "3-run-it",
-      children: "3) Run it"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npm install\nnpm run dev\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Open the printed local URL, connect a wallet or email, pick an amount, and hit ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-        children: "Send"
-      }), "."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "notes--tips",
       children: "Notes & tips"
