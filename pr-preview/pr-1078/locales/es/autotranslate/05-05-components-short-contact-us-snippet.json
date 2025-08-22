@@ -1,62 +1,62 @@
 {
   "components": {
     "short-contact-us-snippet": {
-      "section-aria-label": "Contacta al equipo de Push Chain",
+      "section-aria-label": "Contact the Push Chain Team",
       "title": "Preguntas\nFrecuentes",
-      "title-aria-label": "Preguntas comunes sobre cómo contactar a Push Chain",
+      "title-aria-label": "Common contact questions for Push Chain",
       "discord-link-text": "Únete a Discord",
-      "discord-link-title": "Chatea con la comunidad de Push Chain en Discord",
-      "discord-link-aria-label": "Abrir Discord en una nueva pestaña",
+      "discord-link-title": "Chat with the Push Chain community on Discord",
+      "discord-link-aria-label": "Open Discord in a new tab",
       "explore-more-text": "Explorar Programas",
-      "explore-more-title": "Descubre subvenciones, BRB y programas del ecosistema",
-      "explore-more-aria-label": "Navegar a los programas de Push Chain",
-      "accordion-aria-label": "Lista de preguntas de contacto",
-      "answer-aria-label": "Respuesta a la pregunta - ",
+      "explore-more-title": "See grants, BRB, and ecosystem programs",
+      "explore-more-aria-label": "Navigate to Push Chain programs",
+      "accordion-aria-label": "Contact questions list",
+      "answer-aria-label": "Answer to the question - ",
       "qnas": {
         "qna1": {
-          "question": "¿Qué categoría debería elegir?",
-          "answer": "<1><2>Asociaciones & Integraciones</2>: wallets, infra, exchanges, colaboraciones de protocolo → <3>Contactar Asociaciones</3>.</1><1><2>Subvenciones & Programas</2>: BRB, Bootcamp, financiación → <4>Contactar Subvenciones</4>.</1><1><2>Medios & Charlas</2>: entrevistas, declaraciones, ponencias → <5>Medios & Eventos</5>.</1><1><2>Validadores</2>: interés de operadores de nodos, proveedores de RPC → <6>Validadores</6>.</1><1><2>Legal</2>: marcas registradas, solicitudes de datos, acuerdos → <7>Legal</7>.</1><1>¿Necesitas ayuda técnica o información sobre el estado? Usa <8>Soporte</8> en su lugar.</1>",
-          "contact-partnerships-title": "Abrir contacto con Asociaciones",
-          "contact-grants-title": "Abrir contacto con Subvenciones",
-          "contact-media-title": "Abrir contacto con Medios & Charlas",
-          "contact-validators-title": "Abrir contacto con Validadores",
-          "contact-legal-title": "Abrir contacto con Legal & Cumplimiento",
+          "question": "Which category should I choose?",
+          "answer": "<1><2>Asociaciones e Integraciones</2>: wallets, infra, exchanges, collabs de protocolo → <3>Contactar Asociaciones</3>.</1><1><2>Subvenciones y Programas</2>: BRB, Bootcamp, financiación → <4>Contactar Subvenciones</4>.</1><1><2>Medios y Charlas</2>: entrevistas, declaraciones, charlas → <5>Medios y Eventos</5>.</1><1><2>Validadores</2>: interés del operador del nodo, proveedores de RPC → <6>Validadores</6>.</1><1><2>Legal</2>: marcas comerciales, solicitudes de datos, acuerdos → <7>Legal</7>.</1><1>¿Necesitas ayuda técnica o estado? Usa <8>Soporte</8> en su lugar.</1>",
+          "contact-partnerships-title": "Abrir contacto de Asociaciones",
+          "contact-grants-title": "Abrir contacto de Subvenciones",
+          "contact-media-title": "Abrir contacto de Medios y Charlas",
+          "contact-validators-title": "Abrir contacto de Validadores",
+          "contact-legal-title": "Abrir contacto de Legal y Cumplimiento",
           "support-title": "Ir al Centro de Soporte"
         },
         "qna2": {
-          "question": "¿Con qué rapidez responden?",
-          "answer": "<1>Nuestro objetivo es reconocer la mayoría de las consultas en <2>1–2 días hábiles</2>. Las solicitudes urgentes (p. ej., plazos de los medios, seguridad) tienen prioridad.</1><1>Para problemas urgentes, incluye <2>plazo, zona horaria</2>, y un <2>mejor contacto</2>.</1>"
+          "question": "How fast do you respond?",
+          "answer": "<1>Nuestro objetivo es reconocer la mayoría de las consultas dentro de <2>1–2 días hábiles</2>. Las solicitudes urgentes (por ejemplo, plazos de medios, seguridad) tienen prioridad.</1><1>Para problemas urgentes, incluye <2>plazo, zona horaria</2> y un <2>mejor contacto</2>.</1>"
         },
         "qna3": {
-          "question": "¿Qué detalles ayudan para las asociaciones?",
-          "answer": "<1>Comparte tu <2>nombre de empresa</2>, <2>sitio web</2>, y <2>lo que quieres construir juntos</2>.</1><1>Extras útiles: tamaño de la audiencia, regiones, plazos y cualquier alcance técnico o SDKs que planees usar.</1><1>Comienza aquí → <3>Asociaciones</3>.</1>",
-          "contact-partnerships-title": "Abrir contacto con Asociaciones"
+          "question": "What details help for partnerships?",
+          "answer": "<1>Comparte tu <2>nombre de la empresa</2>, <2>sitio web</2> y <2>lo que quieres construir juntos</2>.</1><1>Extras útiles: tamaño de la audiencia, regiones, plazos y cualquier alcance técnico o SDK que planees usar.</1><1>Comienza aquí → <3>Asociaciones</3>.</1>",
+          "contact-partnerships-title": "Abrir contacto de Asociaciones"
         },
         "qna4": {
-          "question": "¿Cómo funcionan las subvenciones?",
-          "answer": "<1>Cuéntanos tu <2>nombre del proyecto</2>, <2>repo/sitio web</2>, etapa (<2>idea, prototipo, MVP, en vivo</2>), y un plan breve.</1><1>Las solicitudes de subvenciones siempre se procesan por orden de llegada. Comienza aquí → <3>Subvenciones</3>.</1>",
-          "contact-grants-title": "Abrir contacto con Subvenciones"
+          "question": "How do grants work?",
+          "answer": "<1>Cuéntanos tu <2>nombre del proyecto</2>, <2>repo/sitio web</2>, etapa (<2>idea, prototipo, MVP, en vivo</2>) y un breve plan.</1><1>Las solicitudes de subvenciones siempre se procesan por orden de llegada. Comienza aquí → <3>Subvenciones</3>.</1>",
+          "contact-grants-title": "Abrir contacto de Subvenciones"
         },
         "qna5": {
-          "question": "¿Solicitudes de medios y charlas?",
-          "answer": "<1>Incluye tu medio, tema, <2>plazo</2>, y preguntas. Para charlas/talleres, agrega la fecha del evento, formato y audiencia.</1><1>Contáctanos vía <3>Medios & Charlas</3>. Podemos compartir logotipos, biografías de fundadores y material promocional.</1>",
-          "contact-media-title": "Abrir contacto con Medios & Charlas"
+          "question": "Media & speaking requests",
+          "answer": "<1>Incluye tu medio, tema, <2>plazo</2> y preguntas. Para charlas/talleres, agrega fecha del evento, formato y audiencia.</1><1>Contáctanos a través de <3>Medios y Charlas</3>. Podemos compartir logotipos, biografías del fundador y material predefinido.</1>",
+          "contact-media-title": "Abrir contacto de Medios y Charlas"
         },
         "qna6": {
-          "question": "¿Cómo reporto un problema de seguridad?",
-          "answer": "<1>Envía un correo electrónico a <3><2>security@push.org</2></3> con los pasos para reproducirlo y el impacto. Por favor, evita la divulgación pública hasta que confirmemos una solución.</1>",
-          "security-policy-title": "Lee la Política de Seguridad & Divulgación"
+          "question": "How do I report a security issue?",
+          "answer": "<1>Envía un correo electrónico a <3><2>security@push.org</2></3> con los pasos para reproducir y el impacto. Por favor, evita la divulgación pública hasta que confirmemos una solución.</1>",
+          "security-policy-title": "Leer Política de Seguridad y Divulgación"
         },
         "qna7": {
-          "question": "¿Quiero ejecutar un validador / proporcionar infra?",
-          "answer": "<1>Comparte tu perfil de infra (experiencia, regiones), tiempo de actividad/SLA esperados, y cualquier término preferido. Comienza aquí → <3>Validadores</3>.</1>",
-          "contact-validators-title": "Abrir contacto con Validadores"
+          "question": "I want to run a validator / provide infra",
+          "answer": "<1>Comparte tu perfil de infraestructura (experiencia, regiones), tiempo de actividad/SLA esperado y cualquier término preferido. Comienza aquí → <3>Validadores</3>.</1>",
+          "contact-validators-title": "Abrir contacto de Validadores"
         },
         "qna8": {
-          "question": "¿Carreras & contrataciones?",
-          "answer": "<1>Si hay puestos abiertos, se publicarán en nuestros canales. Aún así, puedes compartir tu perfil e intereses vía <3>Contactándonos</3> o seguir <4>@PushChain</4> para actualizaciones.</1>",
-          "contact-careers-title": "Abrir contacto con Carreras",
-          "twitter-title": "Sigue a @PushChain en X"
+          "question": "Careers & hiring",
+          "answer": "<1>Si hay puestos abiertos, se publicarán en nuestros canales. Todavía puedes compartir tu perfil e intereses a través de <3>Contactándonos</3> o seguir <4>@PushChain</4> para obtener actualizaciones.</1>",
+          "contact-careers-title": "Abrir contacto de Carreras",
+          "twitter-title": "Seguir @PushChain en X"
         }
       }
     }

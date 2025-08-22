@@ -2,12 +2,12 @@
   "pages": {
     "blog": {
       "seo": {
-        "title": "Blog — Updates, Einblicke & Geschichten",
-        "description": "Neuigkeiten, Versionshinweise, technische Einblicke und Entwicklergeschichten vom Push Chain Team und Ökosystem.",
-        "og-title": "Push Chain Blog - Updates, Einblicke & Geschichten",
-        "og-description": "Verfolge Produkt-Updates, Entwicklergeschichten, tiefe Einblicke und Ökosystem-News von Push Chain.",
-        "twitter-title": "Push Chain Blog - Was ist neu?",
-        "twitter-description": "Releases, tiefe Einblicke und Geschichten von Entwicklern — bleibe auf dem Laufenden."
+        "title": "Blog — Updates, Deep Dives & Stories",
+        "description": "News, release notes, technische Deep Dives und Entwicklergeschichten vom Push Chain Team und Ökosystem.",
+        "og-title": "Push Chain Blog - Updates, Deep Dives & Stories",
+        "og-description": "Verfolge Produkt-Updates, Dev Stories, Deep Dives und Ökosystem-News von Push Chain.",
+        "twitter-title": "Push Chain Blog - Was ist neu",
+        "twitter-description": "Releases, Deep Dives und Builder Stories – bleibe auf dem Laufenden."
       }
     }
   }

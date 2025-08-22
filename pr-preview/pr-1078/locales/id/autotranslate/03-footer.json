@@ -1,7 +1,7 @@
 {
   "footer": {
     "email-section": {
-      "title": "Tetap terhubung dengan Push Chain",
+      "title": "Tetap dapat info terbaru dari Push Chain",
       "title-secondary": "berita dan pembaruan!",
       "title-aria-label": "Bagian langganan newsletter",
       "section-aria-label": "Pendaftaran newsletter Push Chain"
@@ -46,7 +46,7 @@
       "brand-kit": "Kit Merek",
       "brand-kit-title": "Aset dan panduan merek Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "Blockchain explorer Push Chain",
+      "push-scan-title": "Penjelajah blockchain Push Chain",
       "faucet": "Faucet",
       "faucet-title": "Dapatkan token uji dari faucet Push Chain",
       "push-portal": "Push Portal",
@@ -54,7 +54,7 @@
       "support": "Dukungan",
       "support-title": "Pusat Bantuan",
       "security": "Keamanan & Pengungkapan",
-      "security-title": "Laporkan kerentanan (pengungkapan bertanggung jawab)",
+      "security-title": "Laporkan kerentanan (pengungkapan yang bertanggung jawab)",
       "contact-us": "Hubungi Kami",
       "contact-us-title": "Kemitraan, BD, media, atau pertanyaan umum",
       "careers": "Karir",
@@ -89,7 +89,7 @@
     },
     "footer-image": {
       "alt": "Ilustrasi footer Push Chain",
-      "title": "Push Chain - Blockchain Universal"
+      "title": "Push Chain - Universal Blockchain"
     }
   }
 }

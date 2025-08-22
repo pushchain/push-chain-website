@@ -1,115 +1,48 @@
 {
-  "pages": {
-    "home": {
-      "seo": {
-        "title": "Inicio - Push Chain | La Cadena Universal para Apps",
-        "description": "Capa L1 con estado compartido para apps universales. Implementa una vez; llega a usuarios en cualquier cadena. Usa cualquier billetera. Paga con cualquier token.",
-        "og-title": "Push Chain - Capa L1 Universal para Apps",
-        "og-description": "Una implementación para usuarios EVM y no EVM. Usa cualquier billetera y paga con cualquier token — sin necesidad de cambiar de red.",
-        "twitter-title": "Implementa una vez. Llega a cualquier cadena.",
-        "twitter-description": "Transacciona desde cualquier cadena. Usa cualquier billetera. Paga con cualquier token. Sin necesidad de cambiar de red."
-      },
-      "hero-section": {
-        "title": "Cualquier Cadena, Cualquier App, Todos los Usuarios.\nUna Push Chain.",
-        "description": "La primera Capa 1 construida para Apps Universales. \nImplementa y despliega una vez, integra usuarios desde cualquier cadena.",
-        "primary-button": "Empieza a Construir",
-        "primary-button-title": "¡Comienza tu viaje como desarrollador con Push Chain!",
-        "secondary-button": "Explora la Base de Conocimiento",
-        "secondary-button-title": "Aprende y explora Push Chain",
-        "section-aria-label": "Sección de presentación de Push Chain - introducción a la Capa 1 blockchain universal",
-        "primary-button-aria-label": "Empieza a construir apps universales en Push Chain - Ve a la documentación para desarrolladores",
-        "secondary-button-aria-label": "Aprende sobre las características y conceptos de Push Chain en la base de conocimiento",
-        "hero-background-alt": "Animación de fondo de Push Chain que muestra conectividad universal blockchain",
-        "hero-background-title": "Push Chain - Capa 1 Universal para aplicaciones inter-cadena",
-        "schema-headline": "Push Chain - Capa L1 Universal para Apps",
-        "schema-description": "Implementa una vez en Push Chain y llega a usuarios en cualquier blockchain con apps universales"
-      },
-      "whatis-section": {
-        "titleFirst": "Una Verdadera",
-        "titleSecondGraditent": "Universal",
-        "titleThird": "Cadena",
-        "description": "Optimizado para rendimiento.\nAlto TPS, gas ultra-bajo y finalización sub-segundo\npara la ejecución de apps en tiempo real.",
-        "animation-alt": "Animación interactiva que muestra la interoperabilidad instantánea de Push Chain en múltiples blockchains",
-        "animation-title": "Visualización de la interoperabilidad instantánea de Push Chain",
-        "stats": {
-          "stat1": {
-            "title": "Cadenas Soportadas",
-            "imagealt": "Ilustración que muestra las cadenas soportadas",
-            "imagetitle": "Listado de todas las cadenas soportadas como Ethereum, Solana, BNB Chain, etc"
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "FINALIDAD NATIVA",
-            "description": "Instantáneo"
-          },
-          "stat4": {
-            "title": "TIEMPO DE BLOQUE NATIVO",
-            "description": "1s"
-          }
-        }
-      },
-      "blog-section": {
-        "subtitle": "NOTICIAS, DEVLOGS E IDEAS",
-        "subtitle-aria-label": "Información de la categoría del blog",
-        "title": "El Pulso de Push Chain",
-        "title-aria-label": "Últimas publicaciones y actualizaciones del blog de Push Chain",
-        "explore-link-text": "Explora Más Artículos",
-        "explore-link-title": "Visita el blog de Push Chain para leer todos los artículos y actualizaciones",
-        "explore-link-aria-label": "Ve a la página del blog de Push Chain",
-        "section-aria-label": "Sección de publicaciones y noticias del blog de Push Chain",
-        "blog-posts-list-aria-label": "Publicaciones recientes del blog de Push Chain",
-        "blog-post-aria-label": "Lee la publicación del blog sobre {title}",
-        "blog-post-title-prefix": "Lee la publicación del blog - ",
-        "loading-text": "Cargando las últimas publicaciones del blog...",
-        "error-text": "No se pudieron cargar las publicaciones del blog en este momento",
-        "no-posts-text": "No hay publicaciones del blog disponibles"
-      },
-      "stats-section": {
-        "section-aria-label": "Sección de estadísticas y métricas de rendimiento de Push Chain",
-        "title": "Logra",
-        "titleGradient": "Interoperabilidad",
-        "titleThird": "Instantánea",
-        "description": "Optimizado para rendimiento.\nAlto TPS, gas ultra-bajo y finalización sub-segundo\npara la ejecución de apps en tiempo real.",
-        "animation-alt": "Animación interactiva que muestra la interoperabilidad instantánea de Push Chain en múltiples blockchains",
-        "animation-title": "Visualización de la interoperabilidad instantánea de Push Chain",
-        "stats": {
-          "stat1": {
-            "title": "Cadenas Soportadas",
-            "imagealt": "Ilustración que muestra las cadenas soportadas",
-            "imagetitle": "Listado de todas las cadenas soportadas como Ethereum, Solana, BNB Chain, etc"
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "FINALIDAD NATIVA",
-            "description": "Instantáneo"
-          },
-          "stat4": {
-            "title": "TIEMPO DE BLOQUE NATIVO",
-            "description": "1s"
-          }
-        }
-      },
-      "ending-section": {
-        "aria-label": "Sección Construye Apps Universales",
-        "section-title": "Construye Apps Universales.",
-        "section-subtitle": "Rompe los silos. Implementa una vez, escala en cada blockchain.",
-        "docs-link": {
-          "text": "Explora la Documentación de Push Chain",
-          "title": "Explora la documentación y los recursos para desarrolladores de Push Chain",
-          "aria-label": "Abre la documentación de Push Chain en una nueva pestaña"
-        },
-        "cta-link": {
-          "text": "Vamos con Push Chain",
-          "title": "Comienza con Push Chain - la plataforma blockchain universal",
-          "aria-label": "Comienza a desarrollar con Push Chain"
-        }
-      }
-    }
-  }
+  "home": {
+    "title": "Build Universal Apps.",
+    "subtitle": "Break the silos. Build once, scale on every blockchain.",
+    "docs_link": "Explore Push Chain Docs",
+    "cta_link": "LFG Push Chain",
+    "section_title": "Build Universal Apps.",
+    "section_subtitle": "Break the silos. Build once, scale on every blockchain."
+  },
+  "supported_chains": [
+    "Ethereum",
+    "Solana",
+    "BNB Chain"
+  ],
+  "tps": "4.2k",
+  "native_finality": "Instant",
+  "native_block_time": "1s",
+  "shared_state_coming_soon": "COMING SOON",
+  "programmable_solvers_coming_soon": "COMING SOON",
+  "read_from_chains_tag": "READ FROM CHAINS",
+  "stats_section_title": "Achieve Instant Interoperability",
+  "stats_section_description": "Optimized for performance. High TPS, ultra-low gas, and sub-second finality for real-time app execution.",
+  "blog_section_subtitle": "NEWS, DEVLOGS & IDEAS",
+  "blog_section_title": "Your Pulse of Push Chain",
+  "partners_section_title": "Powered by Push Chain",
+  "partners_section_subtitle": "Explore apps who have multiplied their user base by simply deploying on Push Chain.",
+  "featured_section_tag": "FEATURED ON",
+  "featured_section_title": "Push Chain in the Spotlight",
+  "featured_section_subtitle": "Don't just take our word for it. See what the media is saying about the true universal chain.",
+  "trustedby_section_title": "Built by the team trusted by pioneers of web3",
+  "ending_section_title": "Build Universal Apps.",
+  "ending_section_subtitle": "Break the silos. Build once, scale on every blockchain.",
+  "partners_grid_aria_label": "Grid of partner logos showing Web3 projects using Push Chain",
+  "partner_logo_title_prefix": "Partner logo - ",
+  "partner_logo_alt_prefix": "Logo of ",
+  "mobile_view_aria_label": "Mobile view of Push Chain ecosystem partners",
+  "stats_section_supported_chains_title": "Supported Chains",
+  "stats_section_tps_title": "TPS",
+  "stats_section_native_finality_title": "NATIVE FINALITY",
+  "stats_section_native_block_time_title": "NATIVE BLOCK TIME",
+  "blog_section_explore_link_text": "Explore More Articles",
+  "blog_section_explore_link_title": "Visit Push Chain blog to read all articles and updates",
+  "blog_section_loading_text": "Loading latest blog posts...",
+  "blog_section_error_text": "Unable to load blog posts at this time",
+  "blog_section_no_posts_text": "No blog posts available",
+  "ending_section_docs_link_title": "Explore Push Chain documentation and developer resources",
+  "ending_section_cta_link_title": "Get started with Push Chain - the universal blockchain platform"
 }

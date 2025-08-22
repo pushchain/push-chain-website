@@ -3,8 +3,8 @@
     "meta": {
       "logo-aria-label": "Push Chain - الانتقال إلى الصفحة الرئيسية",
       "language-icon-alt": "أيقونة تحديد اللغة",
-      "hamburger-menu-alt": "فتح قائمة التنقل",
-      "testnet-badge-alt": "شعار شبكة الاختبار Push Chain - عرض حالة شبكة الاختبار"
+      "hamburger-menu-alt": "فتح قائمة التصفح",
+      "testnet-badge-alt": "Push Chain Testnet Donut - عرض حالة الشبكة التجريبية"
     },
     "logo": {
       "imagealt": "صورة شعار Push Chain",
@@ -12,44 +12,44 @@
       "ctatitle": "الانتقال إلى الصفحة الرئيسية لـ Push Chain"
     },
     "testnet": {
-      "title": "شبكة الاختبار",
-      "aria-label": "قسم شبكة الاختبار",
+      "title": "الشبكة التجريبية",
+      "aria-label": "قسم الشبكة التجريبية",
       "link1": {
         "text": "Push Scan",
-        "subtext": "مستكشف الكتل لـ Push Chain",
-        "title": "استكشف معاملات وكتل شبكة اختبار Push Chain على Push Scan"
+        "subtext": "مستكشف بلوك لـ Push Chain",
+        "title": "استكشف معاملات وكتل الشبكة التجريبية لـ Push Chain على Push Scan"
       },
       "link2": {
-        "text": "صنبور",
-        "subtext": "احصل على رموز شبكة الاختبار",
-        "title": "احصل على رموز شبكة اختبار مجانية لتطوير Push Chain"
+        "text": "Faucet",
+        "subtext": "احصل على توكنات تجريبية",
+        "title": "احصل على توكنات تجريبية مجانية لتطوير Push Chain"
       }
     },
     "developers": {
       "title": "المطورون",
-      "aria-label": "قسم المطورون",
+      "aria-label": "قسم المطورين",
       "link1": {
-        "text": "ابدأ",
-        "subtext": "مقدمة إلى التطوير على Push Chain",
-        "title": "ابدأ في تطوير التطبيقات الشاملة على Push Chain - وثائق المطورين"
+        "text": "Get Started",
+        "subtext": "مقدمة إلى البناء على Push Chain",
+        "title": "ابدأ البناء على التطبيقات العالمية على Push Chain - وثائق المطورين"
       },
       "link2": {
-        "text": "بدء سريع",
+        "text": "Quick Start",
         "subtext": "إعداد بيئة التطوير في ثوانٍ",
-        "title": "دليل البدء السريع - إعداد بيئة تطوير Push Chain على الفور"
+        "title": "دليل البدء السريع - قم بإعداد بيئة تطوير Push Chain على الفور"
       },
       "link3": {
-        "text": "دروس تعليمية",
-        "subtext": "إرشادات خطوة بخطوة للتطوير مع Push",
-        "title": "تعلم من خلال الدروس التعليمية العملية - قم ببناء تطبيقك الشامل الأول على Push Chain"
+        "text": "Tutorials",
+        "subtext": "إرشادات خطوة بخطوة للبناء باستخدام Push",
+        "title": "تعلم من خلال دروس عملية - قم ببناء تطبيقك العالمي الأول على Push Chain"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "عرض الكود الأساسي والأدوات مفتوحة المصدر",
+        "subtext": "عرض الكود الأساسي وأدوات المصادر المفتوحة",
         "title": "استكشف كود مصدر Push Chain وأدوات التطوير على GitHub"
       },
       "link5": {
-        "text": "Discord للمطورين",
+        "text": "Developer Discord",
         "subtext": "تواصل مع مجتمع المطورين",
         "title": "انضم إلى مجتمع مطوري Push Chain على Discord للحصول على الدعم والتعاون"
       }
@@ -58,14 +58,14 @@
       "title": "المجتمع",
       "aria-label": "قسم المجتمع",
       "link1": {
-        "text": "قاعدة المعرفة",
-        "subtext": "ابحث في التحليلات العميقة للميزات",
-        "title": "استكشف وثائق Push Chain الشاملة وإرشادات الميزات"
+        "text": "Knowledge Base",
+        "subtext": "ابحث عن تحليلات متعمقة حول الميزات",
+        "title": "استكشف وثائق شاملة لـ Push Chain وأدلة الميزات"
       },
       "link2": {
-        "text": "نموذج الرمز",
-        "subtext": "الرمز الأصلي الذي يدعم كل شيء على Push Chain",
-        "title": "تعرف على نموذج رموز Push Chain وفائدة رمز $PC"
+        "text": "Tokenomics",
+        "subtext": "التوكن الأصلي الذي يدعم كل شيء على Push Chain",
+        "title": "تعرف على اقتصاد توكنات Push Chain وفائدة توكن $PC"
       },
       "link3": {
         "text": "X/Twitter",
@@ -74,7 +74,7 @@
       },
       "link4": {
         "text": "Discord",
-        "subtext": "تحدث، ابنِ، واستمتع مع المجتمع",
+        "subtext": "تحدث وابني واستمتع مع المجتمع",
         "title": "انضم إلى مجتمع Push Chain على Discord للمناقشات والدعم"
       },
       "link5": {
@@ -84,20 +84,20 @@
       }
     },
     "resources": {
-      "title": "المصادر",
-      "aria-label": "قسم المصادر",
+      "title": "الموارد",
+      "aria-label": "قسم الموارد",
       "link1": {
-        "text": "المدونة",
-        "subtext": "تحديثات وتحليلات عميقة وقصص المطورين",
+        "text": "Blog",
+        "subtext": "تحديثات وتحليلات متعمقة وقصص المطورين",
         "title": "اقرأ مدونة Push Chain للحصول على أحدث التحديثات والتحليلات الفنية وقصص المطورين"
       },
       "link2": {
-        "text": "الورقة البيضاء المصغرة",
+        "text": "Litepaper",
         "subtext": "الرؤية والتقنية، بشكل مبسط",
-        "title": "اقرأ الورقة البيضاء المصغرة لـ Push Chain - نظرة عامة مبسطة للرؤية والتقنية"
+        "title": "اقرأ ورقة Push Chain البيضاء المبسطة - الرؤية والتقنية العامة المبسطة"
       },
       "link3": {
-        "text": "الأسئلة الشائعة",
+        "text": "FAQ",
         "subtext": "إجابات سريعة على الأسئلة الشائعة",
         "title": "تصفح الأسئلة المتداولة حول Push Chain"
       }
@@ -106,7 +106,7 @@
       "title": "اللغة",
       "aria-label": "قائمة تحديد اللغة",
       "english": "English",
-      "english-ctatitle": "تغيير اللغة إلى English",
+      "english-ctatitle": "تغيير اللغة إلى الإنجليزية",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",
@@ -136,7 +136,7 @@
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "ادخل إلى Push Portal - اكسب نقاط كمطور أو مستخدم أو مدقق"
+      "title": "الوصول إلى Push Portal - اكسب نقاط كمطور أو مستخدم أو مدقق"
     }
   }
 }

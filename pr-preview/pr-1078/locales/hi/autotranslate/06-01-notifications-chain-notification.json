@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Testnet का एक झलक पाएं, Donut के साथ बनाएं, universal ऐप्स बनाएं और पुरस्कार जीतें!",
-      "button-text": "क्लोज्ड बीटा पास प्राप्त करें",
-      "button-title": "Push Chain टेस्टनेट में शामिल हों और अपना क्लोज्ड बीटा पास प्राप्त करें",
-      "button-aria-label": "Push Chain क्लोज्ड बीटा पास प्राप्त करने के लिए Telegram खोलें",
-      "image-alt": "Push Chain टेस्टनेट Donut - Universal Blockchain",
-      "close-button-title": "टेस्टनेट अधिसूचना बंद करें",
-      "close-button-aria-label": "Push Chain टेस्टनेट अधिसूचना खारिज करें",
-      "container-aria-label": "Push Chain टेस्टनेट अधिसूचना"
+      "description": "टेस्टनेट, डोनट में एक झलक पाएं, यूनिवर्सल ऐप्स बनाएं और पुरस्कार जीतें!",
+      "button-text": "Closed Beta Pass प्राप्त करें",
+      "button-title": "पुश चेन टेस्टनेट में शामिल हों और अपना क्लोज्ड बीटा पास प्राप्त करें",
+      "button-aria-label": "पुश चेन क्लोज्ड बीटा पास प्राप्त करने के लिए टेलीग्राम खोलें",
+      "image-alt": "पुश चेन टेस्टनेट डोनट - यूनिवर्सल ब्लॉकचेन",
+      "close-button-title": "टेस्टनेट नोटिफिकेशन बंद करें",
+      "close-button-aria-label": "पुश चेन टेस्टनेट नोटिफिकेशन खारिज करें",
+      "container-aria-label": "पुश चेन टेस्टनेट नोटिफिकेशन"
     }
   }
 }

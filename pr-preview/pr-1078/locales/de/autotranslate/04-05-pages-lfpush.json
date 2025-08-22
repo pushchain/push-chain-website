@@ -2,25 +2,25 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Let's Push — Community-Initiative",
-        "description": "Push Community-Initiativen, Beiträge und mehr.",
-        "og-title": "Let's Push - Community-Initiative für Push Chain",
-        "og-description": "Community-gesteuerte Initiative und Shares für Push Chain.",
-        "twitter-title": "Let's Push | Community-Initiative",
-        "twitter-description": "Entdecke die Push Community-Initiative für Push Chain."
+        "title": "Let's Push — Community Initiative",
+        "description": "Push community initiatives, posts and more.",
+        "og-title": "Let's Push - Community Initiative for Push Chain",
+        "og-description": "Community-driven initiative and shares for Push Chain.",
+        "twitter-title": "Let's Push | Community Initiative",
+        "twitter-description": "See Push community initiative for Push Chain."
       },
       "hero-section": {
         "title": "Let's Push",
-        "description": "Die LF Push Builders Community—wir feiern, was du schaffst und wem du hilfst. Teile deine Erfolge, markiere <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention>, und wir verstärken deine Botschaft."
+        "description": "Die LF Push Builders-Community – wir feiern, was du erreichst und wem du hilfst. Teile deine Erfolge, versehe <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention> mit einem Tag und wir verstärken deine Botschaft."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Teile deinen Erfolg",
+          "share-win": "Deinen Erfolg teilen",
           "join-community": "Community beitreten",
           "learn-more": "Mehr erfahren"
         },
         "meta": {
-          "tweet-alt": "Tweet von einem Push Chain Community-Mitglied",
+          "tweet-alt": "Tweet von einem Community-Mitglied von Push Chain",
           "loading-alt": "Lade weitere Community-Tweets"
         },
         "tweets-counter": "{{count}} Tweets und mehr!",

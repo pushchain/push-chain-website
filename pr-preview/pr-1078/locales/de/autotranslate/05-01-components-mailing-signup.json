@@ -2,17 +2,17 @@
   "components": {
     "mailing-signup": {
       "title": "Keine Updates mehr verpassen",
-      "text": "Melde dich an und bleibe über Ankündigungen, Gewinnspiele und vieles mehr auf dem Laufenden.",
+      "text": "Melde dich an und bleibe über Ankündigungen des Ökosystems, Gewinnspiele und vieles mehr auf dem Laufenden.",
       "email-input": "Deine E-Mail",
       "email-input-placeholder": "Gib deine E-Mail-Adresse ein",
       "email-input-title": "Abonniere den Push Chain Newsletter für Updates",
-      "email-input-aria-label": "E-Mail-Adresse für den Newsletter-Abonnement",
+      "email-input-aria-label": "E-Mail-Adresse für Newsletter-Abonnement",
       "submit-button": "Anmelden",
       "submit-button-title": "Abonniere den Push Chain Newsletter",
       "submit-button-aria-label": "Newsletter abonnieren",
-      "loading-submit-button": "Bitte warte...",
+      "loading-submit-button": "Bitte warten...",
       "arrow-button-aria-label": "Newsletter abonnieren",
-      "arrow-button-title": "Push Chain Updates abonnieren",
+      "arrow-button-title": "Abonniere Push Chain Updates",
       "form-aria-label": "Newsletter-Abonnementformular",
       "success-message-aria-label": "Abonnement erfolgreich",
       "error-message-aria-label": "Fehlermeldung beim Abonnement"

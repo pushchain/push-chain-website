@@ -1,44 +1,44 @@
 {
   "components": {
     "short-faq-snippet": {
-      "section-aria-label": "Foire aux questions fréquentes sur Push Chain - Blockchain Universelle",
-      "title": "Foire aux\nQuestions\nFréquentes",
-      "title-aria-label": "Questions et réponses courantes sur Push Chain",
-      "discord-link-text": "Posez-nous vos questions sur Discord",
-      "discord-link-title": "Rejoignez la communauté Push Chain Discord pour obtenir de l'aide et poser vos questions",
-      "discord-link-aria-label": "Ouvrir la communauté Discord dans un nouvel onglet",
-      "explore-more-text": "En savoir plus sur les FAQ",
-      "explore-more-title": "Consultez la documentation complète des FAQ de Push Chain et les guides de développement",
-      "explore-more-aria-label": "Accéder à la page complète des FAQ de Push Chain",
-      "accordion-aria-label": "Liste des questions fréquemment posées sur Push Chain",
-      "answer-aria-label": "Réponse à la question - ",
+      "section-aria-label": "Frequently asked questions about Push Chain - Universal Blockchain",
+      "title": "Frequently\nAsked\nQuestions",
+      "title-aria-label": "Common questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive Push Chain FAQ documentation and developer guides",
+      "explore-more-aria-label": "Navigate to complete Push Chain FAQ page",
+      "accordion-aria-label": "Push Chain frequently asked questions list",
+      "answer-aria-label": "Answer to the question - ",
       "qnas": {
         "qna1": {
-          "question": "Qu'est-ce que Push Chain ?",
-          "answer": "<1>Push Chain est une blockchain à état partagé qui <2>élimine la fragmentation et rend les applications universelles.</2></1><1>Déployez une seule fois sur Push. Les utilisateurs sur n'importe quelle chaîne — EVM ou non-EVM — utilisent votre application avec leurs portefeuilles et leurs jetons existants ; les frais sont gérés en arrière-plan.</1>"
+          "question": "What is Push Chain?",
+          "answer": "<1>Push Chain is a shared-state blockchain that <2>eliminates fragmentation and makes apps universal</2>.</1><1>Deploy once on Push. Users on any chain — EVM or non-EVM — use your app with their existing wallets and tokens; fees are handled under the hood.</1>"
         },
         "qna2": {
-          "question": "Comment ça marche ? (ELI5)",
-          "answer": "<1>Utilisez le portefeuille que vous avez déjà — Push gère les aspects inter-chaînes en arrière-plan.</1><1>1. <2>Commencez n'importe où.</2> Utilisez n'importe quel portefeuille sur n'importe quelle chaîne — pas de changement de réseau.</1><1>2. <2>Signez une seule fois.</2> Payez avec un jeton que vous possédez déjà ; nous réservons les frais sur votre chaîne d'origine.</1><1>3. <2>Nous acheminons ça.</2> Un compte lié sur Push (toujours le vôtre) transmet votre appel à l'application — non custodial.</1><1>4. <2>Vous êtes toujours vous.</2> Nous faisons correspondre votre portefeuille de chaîne d'origine à votre compte lié afin que les actions soient correctement vérifiées et attribuées à vous sur Push.</1><1>5. <2>Terminé rapidement.</2> L'application s'exécute sur Push ; les frais sont gérés en arrière-plan. Pas de bridges, pas de nouveau portefeuille.</1><1>C'est ainsi que les utilisateurs sur n'importe quelle chaîne peuvent utiliser la même application déployée sur Push Chain — rendant les applications véritablement universelles.</1>"
+          "question": "How it works? (ELI5)",
+          "answer": "<1>Use the wallet you already have — Push handles the cross-chain bits behind the scenes.</1><1>1. <2>Start anywhere.</2> Use any wallet on any chain — no network switching.</1><1>2. <2>Sign once.</2> Pay with a token you already hold; we set aside the fee on your home chain.</1><1>3. <2>We route it.</2> A linked account on Push (still yours) forwards your call to the app — non-custodial.</1><1>4. <2>You're always you.</2> We match your home-chain wallet to your linked account so actions are correctly verified and attributed to you on Push.</1><1>5. <2>Done fast.</2> The app runs on Push; fees are handled under the hood. No bridges, no new wallet.</1><1>This is how users on any chain can use the same app deployed on Push Chain — making apps truly universal.</1>"
         },
         "qna3": {
-          "question": "Ai-je besoin d'un portefeuille ou d'un jeton de gaz différent ?",
-          "answer": "<1><2>Non.</2></1><1><2>Gardez votre portefeuille.</2> Utilisez le portefeuille que vous avez déjà — pas de nouveau portefeuille ou de compte.</1><1><2>Payez avec ce que vous possédez.</2> Les frais peuvent être payés avec les jetons que vous possédez déjà sur votre chaîne d'origine ; nous gérons la conversion en arrière-plan.</1><1><2>Pas de changement de réseau.</2> Restez sur votre chaîne d'origine — pas de bridging juste pour obtenir un jeton de gaz.</1><1><2>Non custodial.</2> Vous signez chaque action ; Push ne détient jamais vos clés.</1><1><2>En arrière-plan.</2> Le réseau règle les frais en $PC automatiquement — vous n'avez pas besoin de le gérer.</1>"
+          "question": "Do I need a different wallet or gas token?",
+          "answer": "<1><2>No.</2></1><1><2>Keep your wallet.</2> Use the wallet you already have — no new wallet or account.</1><1><2>Pay in what you hold.</2> Fees can be paid in the tokens you already have on your home chain; we handle conversion behind the scenes.</1><1><2>No network switching.</2> Stay on your home chain — no bridging just to get a gas token.</1><1><2>Non-custodial.</2> You sign every action; Push never holds your keys.</1><1><2>Under the hood.</2> The network settles fees in $PC automatically — you don't need to manage it.</1>"
         },
         "qna4": {
-          "question": "En quoi cela diffère-t-il des bridges ou des couches de messagerie ?",
-          "answer": "<1><2>Réponse courte</2>: Push est l'endroit où votre application s'exécute. Les bridges/la messagerie ne font que déplacer des jetons ou des messages entre les chaînes, ce qui complique tout pour l'utilisateur et les développeurs.</1><1><2>Un seul domicile vs de nombreux clones.</2> Avec les bridges/la messagerie, vous déployez par chaîne et synchronisez via des messages. Sur Push, vous déployez une seule fois ; tout le monde accède au même contrat et au même état partagé.</1><1><2>Pas d'actifs enveloppés ni de bridging obligatoire.</2> Les utilisateurs restent sur leur chaîne d'origine et paient avec ce qu'ils possèdent déjà ; nous gérons l'acheminement et la conversion des frais en arrière-plan.</1><1><2>Identité et vérification unifiées.</2> Nous acceptons les signatures de n'importe quel portefeuille/chaîne et les attribuons au même utilisateur sur Push — non custodial.</1><1><2>Moins de pièces mobiles.</2> Pas de danse d'approbation inter-chaînes, pas de chasse aux jetons de gaz, pas de contrats de colle à synchroniser.</1><1><2>Utilisez des bridges quand vous voulez, pas parce que vous devez.</2> La liquidité peut encore se déplacer via des bridges, mais l'interaction avec votre application ne l'exige pas.</1><1>Résultat : applications plus simples, une seule source de vérité et une expérience utilisateur qui ressemble à une seule chaîne — même lorsque les utilisateurs n'en sont pas.</1>"
+          "question": "How is this different from bridges or messaging layers?",
+          "answer": "<1><2>Short Answer</2>: Push is where your app runs. Bridges/messaging just move tokens or messages between chains which complicates everything for the user and developers.</1><1><2>Single home vs many clones.</2> With bridges/messaging you deploy per chain and sync via messages. On Push you deploy once; everyone hits the same contract and shared state.</1><1><2>No wrapped assets or mandatory bridging.</2> Users stay on their home chain and pay with what they already hold; we handle routing and fee conversion under the hood.</1><1><2>Unified identity & verification.</2> We accept signatures from any wallet/chain and attribute them to the same user on Push — non-custodial.</1><1><2>Fewer moving parts.</2> No cross-chain approval dance, no gas-token hunting, no glue contracts to keep in sync.</1><1><2>Use bridges when you want, not because you must.</2> Liquidity can still move via bridges, but interacting with your app doesn't require it.</1><1>Result: simpler apps, one source of truth, and a UX that feels like one chain — even when users aren't.</1>"
         },
         "qna5": {
-          "question": "Est-ce que c'est uniquement EVM ? Quelles chaînes sont prises en charge ?",
-          "answer": "<1><2>Non, Push prend en charge les chaînes EVM et non-EVM.</2> Bien qu'il soit EVM-first pour le déploiement, les utilisateurs de n'importe quelle chaîne (y compris non-EVM) peuvent utiliser votre application comme s'ils l'utilisaient nativement.</1>\n<1><2>Déployez une fois. Interopérabilité partout.</2> Écrivez et déployez des contrats EVM standard sur Push (Solidity/Vyper). Les outils restent les mêmes.</1>\n<1><2>Utilisateurs de n'importe quelle chaîne.</2> Ethereum et les principaux L2 EVM fonctionnent nativement. Les utilisateurs non-EVM (par exemple, Solana) signent avec leurs portefeuilles d'origine ; nous vérifions et acheminons en arrière-plan — pas de changement de réseau.</1>\n<1><2>Pris en charge aujourd'hui.</2> Consultez la liste en direct des chaînes prises en charge → <3>Chaînes prises en charge</3>.</1><1><2>Couverture en expansion.</2> Nous ajoutons constamment plus de chaînes. Si vous souhaitez demander une chaîne, veuillez <4>nous contacter</4>.</1>",
-          "supported-urls-title": "Liste de toutes les chaînes prises en charge par Push Chain.",
-          "contact-url-title": "Contactez-nous pour ajouter de nouvelles chaînes."
+          "question": "Is it EVM-only? Which chains are supported?",
+          "answer": "<1><2>No, Push supports both EVM and non-EVM chains.</2> Though it is EVM-first for deployment, users from any chains (including non-EVM) can use your app as if they are using it natively.</1>\n<1><2>Deploy once. Interop everywhere.</2> Write and deploy standard EVM contracts on Push (Solidity/Vyper). Tooling stays the same.</1>\n<1><2>Users from any chain.</2> Ethereum and major EVM L2s work natively. Non-EVM users (e.g., Solana) sign with their home wallets; we verify and route under the hood — no network switching.</1>\n<1><2>Supported today.</2> See the live list of supported chains → <3>Supported Chains</3>.</1><1><2>Expanding coverage.</2> We're adding more chains constantly. If you want to request any chain, please <4>contact us</4>.</1>",
+          "supported-urls-title": "List of all chains supported by Push Chain.",
+          "contact-url-title": "Contact us for adding new chains."
         },
         "qna6": {
-          "question": "Quelle est sa vitesse et quels sont les frais ?",
-          "answer": "<1><2>Vitesse.</2> Conçu pour des confirmations d'environ ~1–2 s avec une rétroaction UX rapide. Consultez les statistiques en direct sur <3>🍩 Donut Testnet</3>.</1><1><2>Modèle de frais.</2> Vous voyez le frais dans le jeton que vous choisissez de payer ; le réseau règle en $PC en arrière-plan.</1><1><2>Coûts typiques.</2> Les frais typiques sont inférieurs à <2>$0,001</2> par transaction, mais ils varient en fonction de la complexité du contrat, du prix du jeton et de la charge du réseau. Vous obtenez un devis exact avant de signer.</1>",
-          "donut-testnet-title": "Consultez les statistiques du Donut Testnet de Push Chain."
+          "question": "How fast is it and what do fees look like?",
+          "answer": "<1><2>Speed.</2> Designed for ~1–2s confirmations with fast UX feedback. Check live metrics on <3>🍩 Donut Testnet</3>.</1><1><2>Fee model.</2> You see the fee in the token you choose to pay; the network settles in $PC under the hood.</1><1><2>Typical costs.</2> Typical fees is less than <2>$0.001</2> per transaction. though, it varies by contract complexity, price of the token and network load. You get an exact quote before you sign.</1>",
+          "donut-testnet-title": "Check out stats of Push Chain Donut Testnet."
         }
       }
     }

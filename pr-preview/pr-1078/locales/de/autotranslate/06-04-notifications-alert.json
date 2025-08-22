@@ -2,10 +2,10 @@
   "notifications": {
     "alert": {
       "message": "Push Metamask Snap ist jetzt live,",
-      "know-more-text": "Loslegen!",
-      "know-more-title": "Starte mit Push Metamask Snap",
-      "close-button-title": "Hinweis schließen",
-      "close-button-aria-label": "Push Metamask Snap Hinweis schließen",
+      "know-more-text": "Jetzt loslegen!",
+      "know-more-title": "Starte mit Push Metamask Snap durch",
+      "close-button-title": "Benachrichtigung schließen",
+      "close-button-aria-label": "Push Metamask Snap Benachrichtigung schließen",
       "container-aria-label": "Push Metamask Snap Ankündigung"
     }
   }

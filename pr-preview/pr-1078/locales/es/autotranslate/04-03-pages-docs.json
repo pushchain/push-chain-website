@@ -2,17 +2,17 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Documentación — Crea Aplicaciones Universales",
+        "title": "Documentación — Construye Aplicaciones Universales",
         "description": "Todo lo que necesitas para lanzar en Push Chain: guías rápidas, SDKs, referencia de API, ejemplos y configuración de nodos.",
-        "og-title": "Documentación de Push Chain - Guías rápidas, SDKs y API",
-        "og-description": "Crea y ejecuta aplicaciones en la capa de ejecución universal con guías claras y ejemplos.",
-        "twitter-title": "Documentación de Push Chain - Comienza a construir ahora",
-        "twitter-description": "Guías rápidas, SDKs, referencia de API y ejemplos para lanzar rápido."
+        "og-title": "Push Chain Docs - Guías rápidas, SDKs y API",
+        "og-description": "Construye y ejecuta aplicaciones en la capa de ejecución universal con guías claras y ejemplos.",
+        "twitter-title": "Push Chain Docs - Construye ahora",
+        "twitter-description": "Guías rápidas, SDKs, ref de API y ejemplos para lanzar rápido."
       },
       "explore-prelaunch-build": {
         "text": "Explora la versión pre-lanzamiento",
-        "title": "Accede a la documentación de Push Chain Testnet y a las funciones pre-lanzamiento",
-        "ariaLabel": "Navega a la documentación de Push Chain Testnet para explorar las funciones pre-lanzamiento"
+        "title": "Accede a la documentación de Push Chain testnet y funciones pre-lanzamiento",
+        "ariaLabel": "Navega a la documentación de Push Chain testnet para explorar las funciones de la versión pre-lanzamiento"
       }
     }
   }

@@ -2,21 +2,21 @@
   "components": {
     "typeform-support": {
       "collapsed-text-for-support": "Abrir un Ticket de Soporte",
-      "expanded-title-for-support": "¿Necesitas ayuda? 👋",
-      "collapsed-text-for-contact": "Contactar al Equipo",
-      "expanded-title-for-contact": "¡Hola! 👋",
+      "expanded-title-for-support": "Necesitas ayuda? 👋",
+      "collapsed-text-for-contact": "Contacta al Equipo",
+      "expanded-title-for-contact": "Hola! 👋",
       "categories": {
         "technical": {
           "label": "🔧 Soporte Técnico",
-          "description": "Informes de errores, SDK/API, contratos inteligentes, ayuda con la integración"
+          "description": "Informes de errores, SDK/API, smart contracts, ayuda con la integración"
         },
         "network": {
-          "label": "🌐 Red & Testnet",
+          "label": "🌐 Red & testnet",
           "description": "Explorador/Push Scan, RPC, Faucet, problemas con la testnet Donut"
         },
         "wallet": {
-          "label": "👛 Billetera Universal",
-          "description": "Push Wallet, conexión universal a la cadena o problemas con otras billeteras"
+          "label": "👛 Universal Wallet",
+          "description": "Push Wallet, conexión universal a la cadena o otros problemas con la wallet"
         },
         "identity": {
           "label": "🪪 Cuentas & Identidad",
@@ -32,27 +32,27 @@
         },
         "partnerships": {
           "label": "🤝 Alianzas & Integraciones",
-          "description": "BD, integraciones del ecosistema (billeteras, infraestructura, exchanges, protocolos)"
+          "description": "BD, integraciones de ecosistema (wallets, infra, exchanges, protocols)"
         },
         "grants": {
-          "label": "💰 Subvenciones & Programas del Ecosistema",
+          "label": "💰 Subvenciones & Programas de Ecosistema",
           "description": "BRB, Bootcamp, subvenciones, consultas de financiación"
         },
         "media": {
           "label": "📰 Medios & Prensa",
-          "description": "Entrevistas, declaraciones, activos, verificación de datos"
+          "description": "Entrevistas, declaraciones, activos, verificaciones de datos"
         },
         "events": {
           "label": "🎤 Charlas & Eventos",
-          "description": "Conferencias, talleres, hackatones, patrocinios"
+          "description": "Charlas, talleres, hackatones, patrocinios"
         },
         "careers": {
           "label": "👩‍💻 Carreras",
-          "description": "Puestos abiertos, prácticas, oportunidades para contratistas"
+          "description": "Puestos abiertos, prácticas, oportunidades de contratistas"
         },
         "validators": {
           "label": "🧡 Validadores / Operadores de Nodos",
-          "description": "Interés de los operadores, proveedores de RPC, socios de infraestructura"
+          "description": "Interés del operador, proveedores de RPC, socios de infra"
         },
         "legal": {
           "label": "⚖️ Legal & Cumplimiento",
@@ -66,7 +66,7 @@
             "subtitle": "Elige la categoría que mejor describa tu consulta"
           },
           "contact": {
-            "title": "Conozcámonos",
+            "title": "Conozcamos un poco más",
             "subtitle": "Utilizaremos esta información para responderte",
             "name-label": "Tu Nombre",
             "name-placeholder": "Ingresa tu nombre completo",
@@ -78,13 +78,13 @@
             "title": "Cuéntanos más",
             "subtitle": "Proporciona detalles sobre tu consulta",
             "subject-label": "Asunto",
-            "subject-placeholder": "Resumen breve de tu problema",
+            "subject-placeholder": "Breve resumen de tu problema",
             "message-label": "Mensaje",
             "message-placeholder": "Describe tu problema en detalle. Incluye cualquier mensaje de error, pasos para reproducirlo o información relevante."
           },
           "submit": {
-            "title": "Revisa y Envía",
-            "subtitle": "Por favor, revisa tu información antes de enviar",
+            "title": "Revisar y Enviar",
+            "subtitle": "Revisa tu información antes de enviar",
             "placeholder": "Cuéntanos más sobre lo que necesitas ayuda..."
           }
         },
@@ -105,13 +105,13 @@
           "default": "Este campo es requerido"
         },
         "success": {
-          "title": "¡Ticket Enviado Exitosamente!",
+          "title": "Ticket Enviado Exitosamente!",
           "message": "Gracias por contactarnos. Hemos recibido tu ticket de soporte y te responderemos lo antes posible.",
           "button": "Enviar Otro Ticket"
         },
         "error": {
           "title": "Error al Enviar",
-          "message": "Hubo un error al enviar tu ticket. Intenta de nuevo o contáctanos directamente.",
+          "message": "Hubo un error al enviar tu ticket. Inténtalo de nuevo o contáctanos directamente.",
           "button": "Intentar de Nuevo"
         }
       }

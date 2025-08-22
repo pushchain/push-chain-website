@@ -1,72 +1,72 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Support Ticket öffnen",
-      "expanded-title-for-support": "Brauchen Sie Hilfe? 👋",
-      "collapsed-text-for-contact": "Team kontaktieren",
-      "expanded-title-for-contact": "Hallo! 👋",
+      "collapsed-text-for-support": "Open a Support Ticket",
+      "expanded-title-for-support": "Need help? 👋",
+      "collapsed-text-for-contact": "Contact the Team",
+      "expanded-title-for-contact": "Hi There! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 Technischer Support",
-          "description": "Fehlerberichte, SDK/API, Smart Contracts, Integrationshilfe"
+          "label": "🔧 Technical Support",
+          "description": "Bug reports, SDK/API, smart contracts, integration help"
         },
         "network": {
-          "label": "🌐 Netzwerk & Testnet",
-          "description": "Explorer/Push Scan, RPC, Faucet, Probleme mit dem Donut Testnet"
+          "label": "🌐 Network & Testnet",
+          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet issues"
         },
         "wallet": {
           "label": "👛 Universal Wallet",
-          "description": "Push Wallet, universelle Kettenverbindung oder andere Wallet-Probleme"
+          "description": "Push Wallet, universal chain connection or other wallet issues"
         },
         "identity": {
-          "label": "🪪 Konten & Identität",
-          "description": "UEA/UOA, Signaturen, Fragen zur Zuordnung"
+          "label": "🪪 Accounts & Identity",
+          "description": "UEA/UOA, signatures, attribution questions"
         },
         "security": {
-          "label": "🛡️ Sicherheit",
-          "description": "Schwachstellenberichte, verantwortungsvolle Offenlegung (security@push.org)"
+          "label": "🛡️ Security",
+          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
         },
         "general": {
-          "label": "💬 Allgemeine Anfrage",
-          "description": "Fragen, Feedback, andere Themen"
+          "label": "💬 General Inquiry",
+          "description": "Questions, feedback, other topics"
         },
         "partnerships": {
-          "label": "🤝 Partnerschaften & Integrationen",
-          "description": "BD, Ökosystemintegrationen (Wallets, Infra, Börsen, Protokolle)"
+          "label": "🤝 Partnerships & Integrations",
+          "description": "BD, ecosystem integrations (wallets, infra, exchanges, protocols)"
         },
         "grants": {
-          "label": "💰 Zuschüsse & Ökosystemprogramme",
-          "description": "BRB, Bootcamp, Zuschüsse, Anfragen zur Finanzierung"
+          "label": "💰 Grants & Ecosystem Programs",
+          "description": "BRB, Bootcamp, grants, funding inquiries"
         },
         "media": {
-          "label": "📰 Medien & Presse",
-          "description": "Interviews, Erklärungen, Assets, Faktenprüfung"
+          "label": "📰 Media & Press",
+          "description": "Interviews, statements, assets, fact-checks"
         },
         "events": {
-          "label": "🎤 Vorträge & Veranstaltungen",
-          "description": "Vorträge, Workshops, Hackathons, Sponsoring"
+          "label": "🎤 Speaking & Events",
+          "description": "Talks, workshops, hackathons, sponsorships"
         },
         "careers": {
-          "label": "👩‍💻 Karriere",
-          "description": "Offene Stellen, Praktika, Auftragsmöglichkeiten"
+          "label": "👩‍💻 Careers",
+          "description": "Open roles, internships, contractor opportunities"
         },
         "validators": {
-          "label": "🧡 Validator / Node Betreiber",
-          "description": "Interesse von Betreibern, RPC-Anbieter, Infra-Partner"
+          "label": "🧡 Validator / Node Operators",
+          "description": "Operator interest, RPC providers, infra partners"
         },
         "legal": {
-          "label": "⚖️ Rechtliches & Compliance",
-          "description": "Marken, Datenanfragen, Vereinbarungen"
+          "label": "⚖️ Legal & Compliance",
+          "description": "Trademarks, data requests, agreements"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "Wobei können wir Ihnen helfen?",
+            "title": "Was können wir für Sie tun?",
             "subtitle": "Wählen Sie die Kategorie, die Ihre Anfrage am besten beschreibt"
           },
           "contact": {
-            "title": "Lernen wir Sie kennen",
+            "title": "Lernen wir uns kennen",
             "subtitle": "Wir verwenden diese Informationen, um Sie zu kontaktieren",
             "name-label": "Ihr Name",
             "name-placeholder": "Geben Sie Ihren vollständigen Namen ein",
@@ -84,7 +84,7 @@
           },
           "submit": {
             "title": "Überprüfen und Absenden",
-            "subtitle": "Bitte überprüfen Sie Ihre Informationen vor dem Absenden",
+            "subtitle": "Bitte überprüfen Sie Ihre Informationen, bevor Sie sie absenden",
             "placeholder": "Erzählen Sie uns mehr darüber, wobei Sie Hilfe benötigen..."
           }
         },
@@ -105,12 +105,12 @@
           "default": "Dieses Feld ist erforderlich"
         },
         "success": {
-          "title": "Ticket erfolgreich übermittelt!",
-          "message": "Vielen Dank für Ihre Kontaktaufnahme. Wir haben Ihr Support-Ticket erhalten und werden uns so bald wie möglich bei Ihnen melden.",
+          "title": "Ticket erfolgreich abgesendet!",
+          "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihr Support-Ticket erhalten und werden uns so schnell wie möglich bei Ihnen melden.",
           "button": "Ein weiteres Ticket absenden"
         },
         "error": {
-          "title": "Übermittlung fehlgeschlagen",
+          "title": "Absenden fehlgeschlagen",
           "message": "Beim Absenden Ihres Tickets ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
           "button": "Erneut versuchen"
         }

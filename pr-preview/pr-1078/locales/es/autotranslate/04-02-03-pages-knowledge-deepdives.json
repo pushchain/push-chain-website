@@ -3,33 +3,31 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "Análisis en Profundidad — Conceptos y Arquitectura",
-          "description": "Explicaciones claras y concisas sobre estado compartido, abstracción de tarifas, USV/UEA y la capa de ejecución universal.",
-          "og-title": "Análisis en Profundidad - Conceptos y Arquitectura",
+          "title": "Deep Dives — Concepts & Architecture",
+          "description": "Explicaciones fáciles de entender sobre shared state, fee abstraction, USV/UEA y la universal execution layer.",
+          "og-title": "Deep Dives - Concepts & Architecture",
           "og-description": "Artículos en profundidad sobre los módulos de Push Chain, decisiones de diseño y rendimiento.",
-          "twitter-title": "Análisis en Profundidad - Bajo el capó",
-          "twitter-description": "Explicaciones sobre cómo funciona Push Chain."
+          "twitter-title": "Deep Dives - Bajo el capó",
+          "twitter-description": "Explicaciones de cómo funciona Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge": {
-              "text": "Base de Conocimiento"
-            }
+            "knowledge-base": "Knowledge Base"
           },
           "blocks": {
-            "title": "Análisis en Profundidad",
+            "title": "Deep Dives",
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Análisis en Profundidad de la Arquitectura\n\nConoce las complejidades de la arquitectura de Push Chain y cómo funciona, un módulo a la vez.",
-                  "curated-reads": "## Lecturas Recomendadas 👇"
+                  "intro": "## Deep Dives de arquitectura\n\nAprende sobre las complejidades de la arquitectura de Push Chain y cómo funciona, un módulo a la vez.",
+                  "curated-reads": "## Lecturas seleccionadas 👇"
                 }
               },
               "learn-push-chain": {
-                "title": "¡Aprende qué hace que Push Chain funcione!",
+                "title": "¡Aprende lo que hace que Push Chain funcione!",
                 "items": {
                   "interop-spectrum": {
-                    "title": "La Interoperabilidad como un Espectro"
+                    "title": "Interop como un espectro"
                   },
                   "understand-proof-of-stake-part-1": {
                     "title": "Entendiendo Proof of Stake (POS) - Parte 1"

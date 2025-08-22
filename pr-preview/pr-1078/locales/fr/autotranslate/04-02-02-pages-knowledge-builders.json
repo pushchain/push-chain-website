@@ -3,18 +3,16 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders — Guides et Tutoriels",
+          "title": "Builders — How-tos & Tutorials",
           "description": "Guides pas à pas, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
-          "og-title": "Builders - Guides et Tutoriels",
+          "og-title": "Builders - How-tos & Tutorials",
           "og-description": "Tutoriels guidés, bonnes pratiques et exemples pour développer avec Push Chain.",
-          "twitter-title": "Builders - Guides et Tutoriels",
+          "twitter-title": "Builders - How-tos & Tutorials",
           "twitter-description": "Guides pas à pas pour lancer votre projet sur Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge": {
-              "text": "Base de Connaissances"
-            }
+            "knowledge-base": "Base de connaissances"
           },
           "blocks": {
             "title": "Développer sur Push Chain",
@@ -22,31 +20,31 @@
               "builders-intro": {
                 "items": {
                   "intro": "## Builders\n\nPrêt à développer sur Push Chain ? Voici quelques ressources pour vous inspirer et vous aider à démarrer.",
-                  "curated-reads": "## Lectures Sélectionnées 👇"
+                  "curated-reads": "## Lectures sélectionnées 👇"
                 }
               },
               "universal-apps": {
-                "title": "Développons des Apps Universelles 💪",
+                "title": "Développons des apps universelles 💪",
                 "items": {
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "Apps Possibles Seulement avec l'État Partagé - Vol.1"
+                    "title": "Apps possibles uniquement avec Shared State - Vol. 1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps Possibles Seulement avec l'État Partagé - Vol.2"
+                    "title": "Apps possibles uniquement avec Shared State - Vol. 2"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Les Apps Consommateurs et Push Chain ?"
+                    "title": "Les apps grand public 🫶 Push Chain ?"
                   }
                 }
               },
               "developer-resources": {
-                "title": "Ressources pour Développeurs",
+                "title": "Ressources pour développeurs",
                 "items": {
                   "developer-docs": {
-                    "title": "Explorez la Documentation Développeur"
+                    "title": "Explorez la documentation pour développeurs"
                   },
                   "faucet": {
-                    "title": "Obtenez des Tokens Testnet"
+                    "title": "Obtenez des Token de Testnet"
                   },
                   "testnet-explorer": {
                     "title": "Explorateur Push Testnet"

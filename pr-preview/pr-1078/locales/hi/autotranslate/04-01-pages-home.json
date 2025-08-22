@@ -1,153 +1,19 @@
 {
-  "pages": {
-    "home": {
-      "seo": {
-        "title": "Home - Push Chain | ऐप्स के लिए यूनिवर्सल चेन",
-        "description": "यूनिवर्सल ऐप्स के लिए साझा-स्टेट L1. एक बार डिप्लॉय करें; किसी भी चेन पर उपयोगकर्ताओं तक पहुंचें. कोई भी वॉलेट इस्तेमाल करें. किसी भी टोकन से भुगतान करें.",
-        "og-title": "Push Chain - ऐप्स के लिए यूनिवर्सल L1",
-        "og-description": "EVM और नॉन-EVM उपयोगकर्ताओं के लिए एक डिप्लॉयमेंट. कोई भी वॉलेट इस्तेमाल करें और किसी भी टोकन से भुगतान करें — नेटवर्क स्विचिंग की आवश्यकता नहीं है.",
-        "twitter-title": "एक बार डिप्लॉय करें. किसी भी चेन तक पहुंचें.",
-        "twitter-description": "किसी भी चेन से लेनदेन करें. कोई भी वॉलेट इस्तेमाल करें. किसी भी टोकन से भुगतान करें. नेटवर्क स्विचिंग की आवश्यकता नहीं है."
+  "action": "update_content",
+  "content": {
+    "ending-section": {
+      "section-subtitle": "Break the silos. Build once, scale on every blockchain, and reach users everywhere.",
+      "docs-link": {
+        "text": "Read the Docs",
+        "title": "Explore Push Chain documentation and developer resources",
+        "aria-label": "Open Push Chain documentation in new tab"
       },
-      "hero-section": {
-        "title": "कोई भी चेन, कोई भी ऐप, सभी उपयोगकर्ता।\nएक Push Chain।",
-        "description": "यूनिवर्सल ऐप्स के लिए पहली लेयर 1. \nएक बार बनाएं और डिप्लॉय करें, किसी भी चेन से उपयोगकर्ताओं को ऑनबोर्ड करें.",
-        "primary-button": "बिल्डिंग शुरू करें",
-        "primary-button-title": "Push Chain के साथ अपनी बिल्डर की यात्रा शुरू करें!",
-        "secondary-button": "नॉलेज बेस देखें",
-        "secondary-button-title": "Push Chain के बारे में जानें और जानें",
-        "section-aria-label": "Push Chain हीरो सेक्शन - यूनिवर्सल लेयर 1 ब्लॉकचेन का परिचय",
-        "primary-button-aria-label": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़ पर जाएं",
-        "secondary-button-aria-label": "नॉलेज बेस में Push Chain की सुविधाओं और अवधारणाओं के बारे में जानें",
-        "hero-background-alt": "Push Chain हीरो पृष्ठभूमि एनीमेशन यूनिवर्सल ब्लॉकचेन कनेक्टिविटी दिखा रहा है",
-        "hero-background-title": "Push Chain - क्रॉस-चेन अनुप्रयोगों के लिए यूनिवर्सल लेयर 1",
-        "schema-headline": "Push Chain - ऐप्स के लिए यूनिवर्सल L1",
-        "schema-description": "Push Chain पर एक बार डिप्लॉय करें और यूनिवर्सल ऐप्स के साथ किसी भी ब्लॉकचेन पर उपयोगकर्ताओं तक पहुंचें"
-      },
-      "blog-section": {
-        "subtitle": "समाचार, देवलॉग्स और विचार",
-        "subtitle-aria-label": "ब्लॉग श्रेणी की जानकारी",
-        "title": "Push Chain की नाड़ी",
-        "title-aria-label": "नवीनतम Push Chain ब्लॉग पोस्ट और अपडेट",
-        "explore-link-text": "अधिक लेख देखें",
-        "explore-link-title": "Push Chain ब्लॉग पर जाएं और सभी लेख और अपडेट पढ़ें",
-        "explore-link-aria-label": "Push Chain ब्लॉग पेज पर नेविगेट करें",
-        "section-aria-label": "Push Chain ब्लॉग पोस्ट और समाचार अनुभाग",
-        "blog-posts-list-aria-label": "हाल ही में Push Chain ब्लॉग पोस्ट",
-        "blog-post-aria-label": "{title} के बारे में ब्लॉग पोस्ट पढ़ें",
-        "blog-post-title-prefix": "ब्लॉग पोस्ट पढ़ें - ",
-        "loading-text": "नवीनतम ब्लॉग पोस्ट लोड हो रही है...",
-        "error-text": "इस समय ब्लॉग पोस्ट लोड नहीं हो पाईं",
-        "no-posts-text": "कोई भी ब्लॉग पोस्ट उपलब्ध नहीं है"
-      },
-      "stats-section": {
-        "section-aria-label": "Push Chain प्रदर्शन आँकड़े और मेट्रिक्स",
-        "title": "प्राप्त करें",
-        "titleGradient": "तत्काल",
-        "titleThird": "अंतर-क्षमता",
-        "description": "प्रदर्शन के लिए अनुकूलित।\nवास्तविक समय एप्लिकेशन निष्पादन के लिए उच्च टीपीएस, अल्ट्रा-लो गैस, और सब-सेकंड\nअंतिमता।",
-        "animation-alt": "इंटरैक्टिव एनीमेशन जो कई ब्लॉकचेन पर Push Chain की तत्काल अंतर-क्षमता दिखा रहा है",
-        "animation-title": "Push Chain तत्काल अंतर-क्षमता दृश्य",
-        "stats": {
-          "stat1": {
-            "title": "समर्थित चेन",
-            "imagealt": "समर्थित चेन दिखा रहा है",
-            "imagetitle": "समर्थित सभी चेन जैसे Ethereum, Solana, BNB Chain, आदि की सूची"
-          },
-          "stat2": {
-            "title": "टीपीएस",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "मूल अंतिमता",
-            "description": "तत्काल"
-          },
-          "stat4": {
-            "title": "मूल ब्लॉक समय",
-            "description": "1s"
-          }
-        }
-      },
-      "trustedby-section": {
-        "title": "वेब3 के अग्रणी लोगों द्वारा विश्वसनीय टीम द्वारा निर्मित",
-        "section-aria-label": "Push Chain विश्वसनीय द्वारा अनुभाग",
-        "trusted-by-alt": "निवेशक - "
-      },
-      "featured-section": {
-        "aria-label": "विशेष रुप से प्रदर्शित अनुभाग",
-        "tag": "विशेष रुप से प्रदर्शित पर",
-        "title": "स्पॉटलाइट में Push Chain",
-        "subtitle": "सिर्फ हमारी बात न लें. मीडिया क्या कह रहा है यह देखें सच्चे यूनिवर्सल चेन।",
-        "articles-image-alt": "से मीडिया कवरेज ",
-        "articles-text": "पूरी कवरेज पढ़ें",
-        "articles-title-1": "पढ़ें ",
-        "articles-title-2": "की विचार Push Chain में पूरी डिटेल में",
-        "articles": {
-          "binance-chain": {
-            "text": "हमें यह घोषणा करते हुए रोमांचित हो रहे हैं कि Push Protocol, Web3 के लिए एक प्रमुख विकेंद्रीकृत संचार प्रोटोकॉल, अब BNB Chain पर लॉन्च हो गया है।"
-          },
-          "coindesk": {
-            "text": "प्रोटोकॉल विलेज: Unstoppable Works Push Protocol के साथ टोकन-गेटेड ग्रुप चैट वितरित करें"
-          },
-          "defiant": {
-            "text": "Unstoppable Domains टोकन गेटेड ग्रुप चैट लॉन्च करता है। Push Protocol के साथ सहयोग का उद्देश्य गलत सूचना और घोटालों को रोकना है।"
-          },
-          "balaji": {
-            "text": "उपयोगकर्ता-नियंत्रित सूचनाएं। दो कंपनियां स्मार्टफोन के अरबों लोगों को पुश सूचनाएं नियंत्रित करती हैं: Apple और Google।"
-          },
-          "defiprime": {
-            "text": "हर्ष रजत बैंकिंग के भविष्य, EPNS प्रोटोकॉल प्रोत्साहन और विकेंद्रीकृत पुश सूचनाओं के लिए एक व्यवसाय मॉडल के बारे में बात करते हैं।"
-          },
-          "ethfoundation": {
-            "text": "HackMoney के बाद से, Richa और Harsh ने EPNS को वह बनाने के लिए अविश्वसनीय ऊर्जा निर्देशित की है जिसे वे \"web3 का एक लापता टुकड़ा\" कहते हैं।"
-          },
-          "beincrypto": {
-            "text": "Web3 संचार नेटवर्क कैसे काम करते हैं: एक तकनीकी गहरी डुबकी"
-          },
-          "the-block": {
-            "text": "Web3 सूचनाएं प्रोटोकॉल Push अपनी अपनी चेन लॉन्च करने की योजना बना रहा है"
-          },
-          "business-insider": {
-            "text": "Push Push Chain का अनावरण करता है: यूनिवर्सल ब्लॉकचेन अनुप्रयोगों का भविष्य"
-          },
-          "chainwire": {
-            "text": "Push Push Chain का अनावरण करता है: यूनिवर्सल ब्लॉकचेन अनुप्रयोगों का भविष्य।"
-          },
-          "benzinga": {
-            "text": "Push Push Chain का अनावरण करता है: यूनिवर्सल ब्लॉकचेन अनुप्रयोगों का भविष्य"
-          },
-          "crypto-briefing": {
-            "text": "Push Push Chain का अनावरण करता है: यूनिवर्सल ब्लॉकचेन अनुप्रयोगों का भविष्य"
-          },
-          "cryptoslate": {
-            "text": "Push Protocol अपने चेन को एक करके ब्लॉकचेन संचार और लेनदेन को एक करने के लिए लॉन्च करता है"
-          },
-          "messari": {
-            "text": "EPNS विकेंद्रीकृत सूचनाएं प्राप्त करने वाले उपयोगकर्ताओं के लिए प्रोत्साहन और निष्क्रिय कमाई को सक्षम बनाता है।"
-          },
-          "coin-telegraph-1": {
-            "text": "Push Protocol के संस्थापक और परियोजना प्रमुख Harsh Rajat, नवीनतम एपिसोड में वेब3 चैट अनुप्रयोगों के विकास के बारे में बताते हैं।"
-          },
-          "coin-telegraph-2": {
-            "text": "Unstoppable Domains अपने यूजरनाम धारकों के लिए बैज-गेटेड ग्रुप चैट सुविधा लॉन्च करता है।"
-          }
-        }
-      },
-      "ending-section": {
-        "aria-label": "यूनिवर्सल ऐप बनाएं अनुभाग",
-        "section-title": "यूनिवर्सल ऐप बनाएं।",
-        "section-subtitle": "भरोड़ को तोड़ें। एक बार बनाएं, हर चेन पर स्केल करें।",
-        "docs-link": {
-          "text": "Push Chain दस्तावेज़ देखें",
-          "title": "Push Chain दस्तावेज़ और डेवलपर संसाधन देखें",
-          "aria-label": "एक नई टैब में Push Chain दस्तावेज़ खोलें"
-        },
-        "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Push Chain के साथ शुरुआत करें - यूनिवर्सल ब्लॉकचेन प्लेटफॉर्म",
-          "aria-label": "Push Chain विकास के साथ शुरुआत करें"
-        }
+      "cta-link": {
+        "text": "Get Started",
+        "title": "Start building on Push Chain today",
+        "aria-label": "Get started with Push Chain development"
       }
     }
-  }
+  },
+  "reason": "The previous section subtitle was good, but I felt it was missing the ultimate benefit of the chain - reaching every user. I've added \"and reach users everywhere\" to the subtitle. I changed the cta link title to \"Start building on Push Chain today\" which is more direct, and more action-oriented. I also changed the docs link title to \"Read the Docs\" for brevity."
 }

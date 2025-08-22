@@ -1,28 +1,28 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Aller à la page d'accueil",
-      "language-icon-alt": "Icône de sélection de langue",
+      "logo-aria-label": "Push Chain - Naviguer vers la page d'accueil",
+      "language-icon-alt": "Icône de sélection de la langue",
       "hamburger-menu-alt": "Ouvrir le menu de navigation",
-      "testnet-badge-alt": "Donut Push Chain Testnet - Voir l'état du testnet"
+      "testnet-badge-alt": "Push Chain Testnet Donut - Voir l'état du testnet"
     },
     "logo": {
-      "imagealt": "Image du logo Push Chain",
-      "imagetitle": "Logo Push Chain",
-      "ctatitle": "Aller à la page d'accueil de Push Chain"
+      "imagealt": "Image du logo de Push Chain",
+      "imagetitle": "Logo de Push Chain",
+      "ctatitle": "Naviguer vers la page d'accueil de Push Chain"
     },
     "testnet": {
       "title": "Testnet",
       "aria-label": "Section Testnet",
       "link1": {
         "text": "Push Scan",
-        "subtext": "Explorateur de blocs Push Chain",
-        "title": "Explorez les transactions et les blocs du testnet Push Chain sur Push Scan"
+        "subtext": "Explorateur de blocs pour Push Chain",
+        "title": "Explorez les transactions et les blocs du testnet de Push Chain sur Push Scan"
       },
       "link2": {
         "text": "Faucet",
         "subtext": "Obtenez des jetons de testnet",
-        "title": "Obtenez des jetons de testnet gratuits pour le développement de Push Chain"
+        "title": "Obtenez gratuitement des jetons de testnet pour le développement de Push Chain"
       }
     },
     "developers": {
@@ -30,28 +30,28 @@
       "aria-label": "Section Développeurs",
       "link1": {
         "text": "Premiers pas",
-        "subtext": "Introduction à la création sur Push Chain",
-        "title": "Commencez à créer des applications universelles sur Push Chain - Documentation pour les développeurs"
+        "subtext": "Introduction au développement sur Push Chain",
+        "title": "Commencez à développer des applications universelles sur Push Chain - Documentation des développeurs"
       },
       "link2": {
         "text": "Démarrage rapide",
         "subtext": "Configuration de l'environnement de développement en quelques secondes",
-        "title": "Guide de démarrage rapide - Configurez instantanément l'environnement de développement Push Chain"
+        "title": "Guide de démarrage rapide - Configurez instantanément l'environnement de développement de Push Chain"
       },
       "link3": {
         "text": "Tutoriels",
-        "subtext": "Guides étape par étape pour créer avec Push",
-        "title": "Apprenez avec des tutoriels pratiques - Créez votre première application universelle sur Push Chain"
+        "subtext": "Guides pas à pas pour développer avec Push",
+        "title": "Apprenez avec des tutoriels pratiques - Développez votre première application universelle sur Push Chain"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "Visualisez le code source et les outils open source",
+        "subtext": "Consultez le code principal et les outils open source",
         "title": "Explorez le code source et les outils de développement de Push Chain sur GitHub"
       },
       "link5": {
         "text": "Discord des développeurs",
         "subtext": "Connectez-vous avec la communauté des développeurs",
-        "title": "Rejoignez la communauté des développeurs de Push Chain sur Discord pour obtenir de l'aide et collaborer"
+        "title": "Rejoignez la communauté des développeurs de Push Chain sur Discord pour obtenir du support et de la collaboration"
       }
     },
     "community": {
@@ -65,16 +65,16 @@
       "link2": {
         "text": "Tokenomics",
         "subtext": "Jeton natif alimentant tout sur Push Chain",
-        "title": "Apprenez-en davantage sur les tokenomics de Push Chain et l'utilité du jeton $PC"
+        "title": "Apprenez-en davantage sur la tokenomics de Push Chain et l'utilité du jeton $PC"
       },
       "link3": {
         "text": "X/Twitter",
         "subtext": "Suivez les mises à jour et les actualités de l'écosystème",
-        "title": "Suivez Push Chain sur X (Twitter) pour connaître les dernières mises à jour et annonces"
+        "title": "Suivez Push Chain sur X (Twitter) pour les dernières mises à jour et annonces"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "Discutez, créez et vibrez avec la communauté",
+        "subtext": "Discutez, développez et vibrez avec la communauté",
         "title": "Rejoignez la communauté Push Chain sur Discord pour les discussions et le support"
       },
       "link5": {
@@ -94,19 +94,19 @@
       "link2": {
         "text": "Litepaper",
         "subtext": "La vision et la technologie, simplifiées",
-        "title": "Lisez le Litepaper de Push Chain - une vue d'ensemble simplifiée de la vision et de la technologie"
+        "title": "Lisez le Litepaper de Push Chain - vision simplifiée et aperçu technique"
       },
       "link3": {
         "text": "FAQ",
         "subtext": "Réponses rapides aux questions courantes",
-        "title": "Parcourez les questions fréquemment posées sur Push Chain"
+        "title": "Consultez les questions fréquemment posées sur Push Chain"
       }
     },
     "language": {
       "title": "Langue",
-      "aria-label": "Menu déroulant de sélection de langue",
+      "aria-label": "Menu déroulant de sélection de la langue",
       "english": "English",
-      "english-ctatitle": "Change language to English",
+      "english-ctatitle": "Changer la langue en anglais",
       "chinese_simplified": "中文",
       "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",

@@ -2,16 +2,16 @@
   "pages": {
     "support": {
       "seo": {
-        "title": "सहायता — सहायता केंद्र",
-        "description": "Push Chain के साथ मदद प्राप्त करें: गाइड, समस्या निवारण, स्थिति और समुदाय समर्थन।",
-        "og-title": "Push Chain सहायता - सहायता केंद्र",
+        "title": "Support — Help Center",
+        "description": "Push Chain से मदद पाएं: गाइड, समस्या निवारण, स्थिति और सामुदायिक समर्थन।",
+        "og-title": "Push Chain Support - Help Center",
         "og-description": "दस्तावेज़, ट्यूटोरियल, स्थिति अपडेट और समर्थन से संपर्क करने के तरीके खोजें।",
-        "twitter-title": "सहायता - मदद और दस्तावेज़",
-        "twitter-description": "Push Chain के लिए गाइड, ट्यूटोरियल और समुदाय मदद।"
+        "twitter-title": "Support - Help & Docs",
+        "twitter-description": "Push Chain के लिए गाइड, ट्यूटोरियल और सामुदायिक मदद।"
       },
       "hero-section": {
-        "title": "सहायता",
-        "description": "Push Chain सहायता केंद्र: समस्या निवारण, गाइड, Donut testnet, एक्सप्लोरर & फासेट, स्थिति अपडेट और सुरक्षा। Discord पर पूछें या सपोर्ट टिकट खोलें।"
+        "title": "Support",
+        "description": "Push Chain हेल्प सेंटर: समस्या निवारण, गाइड, Donut testnet, explorer और faucet, स्थिति अपडेट और सुरक्षा। Discord पर पूछें या सपोर्ट टिकट खोलें।"
       }
     }
   }

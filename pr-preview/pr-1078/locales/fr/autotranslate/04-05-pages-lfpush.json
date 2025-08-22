@@ -3,15 +3,15 @@
     "lfpush": {
       "seo": {
         "title": "Let's Push — Initiative Communautaire",
-        "description": "Initiatives, publications et plus encore de la communauté Push.",
+        "description": "Initiatives communautaires Push, publications et plus encore.",
         "og-title": "Let's Push - Initiative Communautaire pour Push Chain",
-        "og-description": "Initiative et partages pilotés par la communauté pour Push Chain.",
+        "og-description": "Initiative axée sur la communauté et partages pour Push Chain.",
         "twitter-title": "Let's Push | Initiative Communautaire",
         "twitter-description": "Découvrez l'initiative communautaire Push pour Push Chain."
       },
       "hero-section": {
         "title": "Let's Push",
-        "description": "La communauté LF Push—célébrons ce que vous accomplissez et ceux que vous aidez. Partagez vos succès, identifiez <hashtag>#LFPush</hashtag> ou <mention>@PushChain</mention>, et nous les amplifierons."
+        "description": "La communauté des builders LF Push—célébrant ce que vous réalisez et ceux que vous aidez. Partagez vos succès, identifiez <hashtag>#LFPush</hashtag> ou <mention>@PushChain</mention>, et nous amplifierons."
       },
       "tweets-section": {
         "actions": {
@@ -23,7 +23,7 @@
           "tweet-alt": "Tweet d'un membre de la communauté Push Chain",
           "loading-alt": "Chargement de plus de tweets de la communauté"
         },
-        "tweets-counter": "{{count}} Tweets et plus !",
+        "tweets-counter": "{{count}} Tweets et plus!",
         "loading": "Chargement de plus de tweets...",
         "end-message": "Vous avez atteint la fin ! 🎉"
       }

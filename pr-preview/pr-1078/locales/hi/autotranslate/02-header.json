@@ -1,23 +1,23 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - होमपेज पर नेविगेट करें",
+      "logo-aria-label": "Push Chain - Homepage पर नेविगेट करें",
       "language-icon-alt": "भाषा चयन आइकन",
       "hamburger-menu-alt": "नेविगेशन मेनू खोलें",
-      "testnet-badge-alt": "Push Chain Testnet डोनट - टेस्टनेट स्थिति देखें"
+      "testnet-badge-alt": "Push Chain Testnet Donut - टेस्टनेट स्थिति देखें"
     },
     "logo": {
-      "imagealt": "Push Chain लोगो की छवि",
-      "imagetitle": "Push Chain लोगो",
-      "ctatitle": "Push Chain होमपेज पर नेविगेट करें"
+      "imagealt": "Push Chain Logo की छवि",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "Push Chain Homepage पर नेविगेट करें"
     },
     "testnet": {
-      "title": "टेस्टनेट",
-      "aria-label": "टेस्टनेट अनुभाग",
+      "title": "Testnet",
+      "aria-label": "Testnet अनुभाग",
       "link1": {
         "text": "Push Scan",
         "subtext": "Push Chain के लिए ब्लॉक एक्सप्लोरर",
-        "title": "Push Scan पर Push Chain टेस्टनेट लेनदेन और ब्लॉक का अन्वेषण करें"
+        "title": "Push Scan पर Push Chain टेस्टनेट लेनदेन और ब्लॉक देखें"
       },
       "link2": {
         "text": "Faucet",
@@ -26,117 +26,117 @@
       }
     },
     "developers": {
-      "title": "डेवलपर्स",
-      "aria-label": "डेवलपर्स अनुभाग",
+      "title": "Developers",
+      "aria-label": "Developers अनुभाग",
       "link1": {
-        "text": "शुरू करें",
+        "text": "Get Started",
         "subtext": "Push Chain पर निर्माण का परिचय",
-        "title": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़"
+        "title": "Push Chain पर universal app निर्माण शुरू करें - डेवलपर प्रलेखन"
       },
       "link2": {
-        "text": "क्विक स्टार्ट",
-        "subtext": "सेकंड में देव वातावरण सेटअप करें",
-        "title": "क्विक स्टार्ट गाइड - Push Chain विकास वातावरण को तुरंत सेटअप करें"
+        "text": "Quick Start",
+        "subtext": "सेकंड में देव वातावरण सेट करें",
+        "title": "त्वरित शुरुआत मार्गदर्शिका - Push Chain विकास वातावरण को तुरंत सेट करें"
       },
       "link3": {
-        "text": "ट्यूटोरियल",
-        "subtext": "Push के साथ बनाने के लिए चरण-दर-चरण गाइड",
-        "title": "Push Chain पर अपना पहला यूनिवर्सल ऐप बनाने के लिए हैंड्स-ऑन ट्यूटोरियल के साथ सीखें"
+        "text": "Tutorials",
+        "subtext": "Push के साथ निर्माण के लिए चरण-दर-चरण मार्गदर्शिकाएँ",
+        "title": "Push Chain पर अपने पहले universal app के निर्माण के साथ सीखें"
       },
       "link4": {
         "text": "GitHub",
         "subtext": "कोर कोड और ओपन-सोर्स टूल देखें",
-        "title": "GitHub पर Push Chain सोर्स कोड और विकास टूल का अन्वेषण करें"
+        "title": "Push Chain स्रोत कोड और GitHub पर विकास टूल देखें"
       },
       "link5": {
-        "text": "डेवलपर Discord",
+        "text": "Developer Discord",
         "subtext": "देव समुदाय से जुड़ें",
-        "title": "सहायता और सहयोग के लिए Push Chain डेवलपर समुदाय में Discord पर शामिल हों"
+        "title": "सहायता और सहयोग के लिए Discord पर Push Chain डेवलपर समुदाय में शामिल हों"
       }
     },
     "community": {
-      "title": "समुदाय",
-      "aria-label": "समुदाय अनुभाग",
+      "title": "Community",
+      "aria-label": "Community अनुभाग",
       "link1": {
-        "text": "नॉलेज बेस",
-        "subtext": "फीचर्स पर गहन जानकारी प्राप्त करें",
-        "title": "Push Chain दस्तावेज़ और सुविधा गाइड का अन्वेषण करें"
+        "text": "Knowledge Base",
+        "subtext": "फीचर्स पर गहरी जानकारी खोजें",
+        "title": "Push Chain प्रलेखन और फीचर गाइड देखें"
       },
       "link2": {
-        "text": "टोकनॉमिक्स",
+        "text": "Tokenomics",
         "subtext": "Push Chain पर सब कुछ चलाने वाला मूल टोकन",
-        "title": "Push Chain टोकनॉमिक्स और $PC टोकन उपयोगिता के बारे में जानें"
+        "title": "Push Chain टोकनिक्स और $PC टोकन उपयोगिता के बारे में जानें"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "अपडेट और इकोसिस्टम समाचारों का पालन करें",
+        "subtext": "अपडेट और पारिस्थितिकी तंत्र समाचारों का पालन करें",
         "title": "नवीनतम अपडेट और घोषणाओं के लिए X (Twitter) पर Push Chain का पालन करें"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "चैट करें, बनाएं और समुदाय के साथ वाइब करें",
-        "title": "चर्चाओं और समर्थन के लिए Push Chain समुदाय में Discord पर शामिल हों"
+        "subtext": "चैट करें, निर्माण करें और समुदाय के साथ वाइब करें",
+        "title": "चर्चाओं और समर्थन के लिए Discord पर Push Chain समुदाय में शामिल हों"
       },
       "link5": {
         "text": "Telegram",
-        "subtext": "बातचीत में शामिल हों और अपडेट रहें",
-        "title": "रीयल-टाइम अपडेट के लिए Push Chain समुदाय में Telegram से जुड़ें"
+        "subtext": "बातचीत में शामिल हों और लूप में रहें",
+        "title": "रीयल-टाइम अपडेट के लिए Telegram पर Push Chain समुदाय से जुड़ें"
       }
     },
     "resources": {
-      "title": "संसाधन",
-      "aria-label": "संसाधन अनुभाग",
+      "title": "Resources",
+      "aria-label": "Resources अनुभाग",
       "link1": {
-        "text": "ब्लॉग",
-        "subtext": "अपडेट, गहन जानकारी और देव कहानियां",
-        "title": "नवीनतम अपडेट, तकनीकी गहन जानकारी और डेवलपर कहानियों के लिए Push Chain ब्लॉग पढ़ें"
+        "text": "Blog",
+        "subtext": "अपडेट, गहरी जानकारी और डेवलपर कहानियां",
+        "title": "नवीनतम अपडेट, तकनीकी गहरी जानकारी और डेवलपर कहानियों के लिए Push Chain ब्लॉग पढ़ें"
       },
       "link2": {
-        "text": "लाइटपेपर",
-        "subtext": "दृष्टि और तकनीक, सरलीकृत",
-        "title": "Push Chain लाइटपेपर पढ़ें - सरलीकृत दृष्टि और तकनीकी अवलोकन"
+        "text": "Litepaper",
+        "subtext": "दृष्टि और तकनीक, सरल",
+        "title": "Push Chain Litepaper पढ़ें - सरल दृष्टि और तकनीकी अवलोकन"
       },
       "link3": {
         "text": "FAQ",
         "subtext": "सामान्य प्रश्नों के त्वरित उत्तर",
-        "title": "Push Chain के बारे में अक्सर पूछे जाने वाले प्रश्न ब्राउज़ करें"
+        "title": "Push Chain के बारे में अक्सर पूछे जाने वाले प्रश्न देखें"
       }
     },
     "language": {
-      "title": "भाषा",
+      "title": "Language",
       "aria-label": "भाषा चयन ड्रॉपडाउन",
       "english": "English",
       "english-ctatitle": "भाषा को अंग्रेजी में बदलें",
       "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "भाषा को चीनी में बदलें",
+      "chinese_simplified-ctatitle": "切换语言为中文",
       "spanish": "Español",
-      "spanish-ctatitle": "भाषा को स्पेनिश में बदलें",
+      "spanish-ctatitle": "Cambiar el idioma a español",
       "hindi": "हिंदी",
       "hindi-ctatitle": "भाषा को हिंदी में बदलें",
       "korean": "한국어",
-      "korean-ctatitle": "भाषा को कोरियाई में बदलें",
+      "korean-ctatitle": "한국어로 언어 변경",
       "japanese": "日本語",
-      "japanese-ctatitle": "भाषा को जापानी में बदलें",
+      "japanese-ctatitle": "言語を日本語に変更する",
       "portuguese": "Português",
-      "portuguese-ctatitle": "भाषा को पुर्तगाली में बदलें",
+      "portuguese-ctatitle": "Mudar o idioma para português",
       "russian": "Русский",
-      "russian-ctatitle": "भाषा को रूसी में बदलें",
+      "russian-ctatitle": "Изменить язык на русский",
       "turkish": "Türkçe",
-      "turkish-ctatitle": "भाषा को तुर्की में बदलें",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
       "french": "Français",
-      "french-ctatitle": "भाषा को फ्रेंच में बदलें",
+      "french-ctatitle": "Changer la langue en français",
       "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "भाषा को इंडोनेशियाई में बदलें",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
       "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "भाषा को वियतनामी में बदलें",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
       "german": "Deutsch",
-      "german-ctatitle": "भाषा को जर्मन में बदलें",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
       "arabic": "العربية",
-      "arabic-ctatitle": "भाषा को अरबी में बदलें"
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Push Portal एक्सेस करें - डेवलपर, उपयोगकर्ता या वैलिडेटर के रूप में पॉइंट कमाएं"
+      "title": "Push Portal एक्सेस करें - डेवलपर, उपयोगकर्ता या वैलिडेटर के रूप में अंक अर्जित करें"
     }
   }
 }

@@ -2,20 +2,20 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Wissensdatenbank — Anleitungen, FAQs & How-tos",
-        "description": "Hier starten Sie mit Konzepten, FAQs, Anleitungen und Ökosystem-Ressourcen. Verständliche, nicht-technische Anleitungen zur Verwendung von Push Chain.",
-        "og-title": "Push Chain Wissensdatenbank - Anleitungen & FAQs",
-        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufige Fragen zu Push Chain.",
-        "twitter-title": "Wissensdatenbank - Anleitungen & FAQs",
-        "twitter-description": "Schnelle Anleitungen, FAQs und How-tos für Push Chain (ohne Fachjargon)."
+        "title": "Wissensdatenbank — Anleitungen, FAQs & Anleitungen",
+        "description": "Starten Sie hier mit Konzepten, FAQs, Anleitungen und Ökosystemressourcen. Klare, nicht-technische Anleitungen zur Verwendung von Push Chain.",
+        "og-title": "Push Chain Knowledge Base - Guides & FAQs",
+        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufig gestellte Fragen zu Push Chain.",
+        "twitter-title": "Knowledge Base - Guides & FAQs",
+        "twitter-description": "Schnelle Anleitungen, FAQs und Anleitungen für Push Chain (kein Entwicklerjargon)."
       },
       "hero-section": {
         "title": "Wissensdatenbank",
         "description": {
           "highlighted": "Push Chain ist eine echte universelle Blockchain, die Fragmentierung über alle Chains hinweg beseitigt.",
           "developers": "Entwickler",
-          "developers-text": "einmal bereitstellen und sofort mit allen unterstützten EVM- und Nicht-EVM-Chains kompatibel werden.",
-          "users": "Nutzer",
+          "developers-text": "Einmal bereitstellen und sofort mit allen unterstützten EVM- und Nicht-EVM-Chains kompatibel werden.",
+          "users": "Benutzer",
           "users-text": "die gleiche App verwenden, egal von welcher Chain sie kommen."
         },
         "email-signup": {
@@ -23,7 +23,7 @@
             "long": "Benachrichtigung über Push Chain Testnet erhalten",
             "short": "Push Chain Testnet"
           },
-          "description": "Erfahren Sie zuerst, wenn das Push Chain Testnet live geht. Melden Sie sich für unseren Newsletter an, um exklusive Updates zu erhalten."
+          "description": "Seien Sie der Erste, wenn das Push Chain Testnet live geht. Treten Sie unserer Mailingliste für exklusive Updates bei."
         },
         "footer": {
           "description": "Gestalten Sie nahtlose, benutzerfreundliche Erlebnisse für Ihre App auf jeder Blockchain mit Push Chain.",
@@ -39,33 +39,33 @@
               "title": "Ressourcen",
               "items": {
                 "push101": {
-                  "title": "Push Chain Grundlagen",
-                  "subtitle": "Lernen Sie die Grundlagen von Push Chain, seine Innovationen und warum es erforderlich ist",
+                  "title": "Push Chain Basics",
+                  "subtitle": "Lernen Sie die Grundlagen von Push Chain, seine Innovationen und warum es benötigt wird",
                   "ctatitle": "Mehr erfahren"
                 },
                 "builders": {
                   "title": "Auf Push Chain bauen",
-                  "subtitle": "Tauchen Sie ein in die Entwicklung universeller Apps, was es ermöglicht und wie Sie beginnen!",
-                  "ctatitle": "Bauen wir los"
+                  "subtitle": "Tauchen Sie ein in das Bauen von universellen Apps, was es freischaltet und wie Sie anfangen können!",
+                  "ctatitle": "Builders Assemble"
                 },
                 "deepdives": {
-                  "title": "Technische Details",
-                  "subtitle": "Möchten Sie die detaillierte Funktionsweise von Push Chain kennen? Oder sind Sie einfach neugierig? Egal wie, hallo!",
-                  "ctatitle": "Sehen wir, wie es tickt"
+                  "title": "Technische Deep Dives",
+                  "subtitle": "Möchten Sie die detaillierte Funktionsweise von Push Chain kennenlernen? Oder sind Sie einfach nur neugierig? In jedem Fall, hallo!",
+                  "ctatitle": "Sehen Sie es ticken"
                 },
                 "devdocs": {
-                  "title": "Entwickler-Dokumentation",
+                  "title": "Entwicklerdokumentation",
                   "subtitle": "Kommen wir gleich zur Sache! Ich bin eine universelle Chain... und Sie sind ein Entwickler, machen wir es offiziell!",
                   "ctatitle": "Jetzt bauen"
                 },
                 "tokenomics": {
                   "title": "Tokenomics erkunden",
-                  "subtitle": "Lernen Sie, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das von Dauer ist",
-                  "ctatitle": "Token-Design lernen"
+                  "subtitle": "Lernen Sie, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das auf Langlebigkeit ausgelegt ist",
+                  "ctatitle": "Token Design lernen"
                 },
                 "faq": {
                   "title": "FAQs",
-                  "subtitle": "Hier finden Sie Antworten auf alle häufigen Fragen der Community",
+                  "subtitle": "Hier finden Sie Antworten auf alle gängigen Fragen der Community",
                   "ctatitle": "Mehr lesen"
                 }
               }

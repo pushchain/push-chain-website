@@ -1,115 +1,105 @@
 {
-  "pages": {
-    "home": {
-      "seo": {
-        "title": "Startseite - Push Chain | Die universelle Chain für Apps",
-        "description": "Shared-State L1 für universelle Apps. Einmal bereitstellen, Nutzer auf jeder Chain erreichen. Jede Wallet nutzen. Mit jedem Token bezahlen.",
-        "og-title": "Push Chain - Universelle L1 für Apps",
-        "og-description": "Einmal bereitstellen für EVM und nicht-EVM Nutzer. Jede Wallet nutzen und mit jedem Token bezahlen — ohne Netzwerkwechsel.",
-        "twitter-title": "Einmal bereitstellen. Jede Chain erreichen.",
-        "twitter-description": "Transaktionen von jeder Chain. Jede Wallet nutzen. Mit jedem Token bezahlen. Kein Netzwerkwechsel."
-      },
-      "hero-section": {
-        "title": "Jede Chain, Jede App, Alle Nutzer.\nEine Push Chain.",
-        "description": "Die erste Layer 1, die für universelle Apps entwickelt wurde. \nEinmal bauen & bereitstellen, Nutzer von jeder Chain an Bord holen.",
-        "primary-button": "Mit dem Bauen beginnen",
-        "primary-button-title": "Beginne deine Reise als Entwickler mit Push Chain!",
-        "secondary-button": "Wissensdatenbank erkunden",
-        "secondary-button-title": "Push Chain kennenlernen",
-        "section-aria-label": "Push Chain Hero-Bereich - Einführung in die universelle Layer 1 Blockchain",
-        "primary-button-aria-label": "Beginne mit dem Bauen universeller Apps auf Push Chain - Gehe zur Entwicklerdokumentation",
-        "secondary-button-aria-label": "Erfahre mehr über die Funktionen und Konzepte von Push Chain in der Wissensdatenbank",
-        "hero-background-alt": "Push Chain Hero-Hintergrundanimation, die universelle Blockchain-Konnektivität zeigt",
-        "hero-background-title": "Push Chain - Universelle Layer 1 für Cross-Chain-Anwendungen",
-        "schema-headline": "Push Chain - Universelle L1 für Apps",
-        "schema-description": "Einmal auf Push Chain bereitstellen und Nutzer auf jeder Blockchain mit universellen Apps erreichen"
-      },
-      "whatis-section": {
-        "titleFirst": "Eine echte",
-        "titleSecondGraditent": "Universelle",
-        "titleThird": "Chain",
-        "description": "Shared-State L1 für universelle Apps. Einmal bereitstellen, Nutzer auf jeder Chain erreichen. Jede Wallet nutzen. Mit jedem Token bezahlen.",
-        "animation-alt": "Interaktive Animation, die die Instant Interoperabilität von Push Chain über mehrere Blockchains hinweg zeigt",
-        "animation-title": "Visualisierung der Instant Interoperabilität von Push Chain",
-        "stats": {
-          "stat1": {
-            "title": "Unterstützte Chains",
-            "imagealt": "Illustration der unterstützten Chains",
-            "imagetitle": "Liste aller unterstützten Chains wie Ethereum, Solana, BNB Chain, etc."
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "NATIVE FINALITÄT",
-            "description": "Instant"
-          },
-          "stat4": {
-            "title": "NATIVE BLOCKZEIT",
-            "description": "1s"
-          }
-        }
-      },
-      "blog-section": {
-        "subtitle": "NEWS, DEVLOGS & IDEEN",
-        "subtitle-aria-label": "Blog-Kategorieinformationen",
-        "title": "Der Puls von Push Chain",
-        "title-aria-label": "Neueste Blogbeiträge und Updates von Push Chain",
-        "explore-link-text": "Weitere Artikel erkunden",
-        "explore-link-title": "Besuche den Push Chain Blog, um alle Artikel und Updates zu lesen",
-        "explore-link-aria-label": "Navigiere zur Push Chain Blog-Seite",
-        "section-aria-label": "Push Chain Blog-Beiträge und News-Bereich",
-        "blog-posts-list-aria-label": "Aktuelle Blogbeiträge von Push Chain",
-        "blog-post-aria-label": "Lies den Blogbeitrag über {title}",
-        "blog-post-title-prefix": "Lies den Blogbeitrag - ",
-        "loading-text": "Lade die neuesten Blogbeiträge...",
-        "error-text": "Blogbeiträge konnten im Moment nicht geladen werden",
-        "no-posts-text": "Es sind keine Blogbeiträge verfügbar"
-      },
-      "stats-section": {
-        "section-aria-label": "Push Chain Leistungsstatistiken und Metriken",
-        "title": "Erreiche",
-        "titleGradient": "Instant",
-        "titleThird": "Interoperabilität",
-        "description": "Optimiert für Performance.\nHoher TPS, ultra-niedrige Gasgebühren und sub-sekündliche\nFinalisierung für Echtzeit-App-Ausführung.",
-        "animation-alt": "Interaktive Animation, die die Instant Interoperabilität von Push Chain über mehrere Blockchains hinweg zeigt",
-        "animation-title": "Visualisierung der Instant Interoperabilität von Push Chain",
-        "stats": {
-          "stat1": {
-            "title": "Unterstützte Chains",
-            "imagealt": "Illustration der unterstützten Chains",
-            "imagetitle": "Liste aller unterstützten Chains wie Ethereum, Solana, BNB Chain, etc"
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "NATIVE FINALITÄT",
-            "description": "Instant"
-          },
-          "stat4": {
-            "title": "NATIVE BLOCKZEIT",
-            "description": "1s"
-          }
-        }
-      },
-      "ending-section": {
-        "aria-label": "Build Universal Apps section",
-        "section-title": "Build Universal Apps.",
-        "section-subtitle": "Breche die Silos auf. Einmal bauen, auf jeder Blockchain skalieren.",
-        "docs-link": {
-          "text": "Push Chain Docs erkunden",
-          "title": "Erkunde die Push Chain Dokumentation und Entwicklerressourcen",
-          "aria-label": "Öffne die Push Chain Dokumentation in einem neuen Tab"
-        },
-        "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Starte mit der Entwicklung auf Push Chain - der universellen Blockchain Plattform",
-          "aria-label": "Starte mit der Push Chain Entwicklung"
-        }
-      }
+  "seiteninformationen": {
+    "titel": "Push Chain: Die wahre Universal-Kette",
+    "beschreibung": "Erhalten Sie Benachrichtigungen von Anwendungen auf Ihrer Wallet. Push Protocol ist eine dezentrale Kommunikationsplattform für Web3.",
+    "schlüsselwörter": [
+      "Web3-Kommunikation",
+      "Blockchain-Benachrichtigungen",
+      "Dezentrale Apps"
+    ],
+    "bild": {
+      "quellcode": "https://example.com/push-protocol-logo.png",
+      "beschreibung": "Push Protocol-Logo"
     }
+  },
+  "seiteninhalt": {
+    "startseite": {
+      "überschrift": "Willkommen bei Push Chain",
+      "unterüberschrift": "Die wahre Universal-Kette für dezentrale Anwendungen.",
+      "beschreibung": "Push Chain ermöglicht es Ihnen, Benachrichtigungen von Anwendungen auf Ihrer Wallet zu erhalten. Es ist eine dezentrale Kommunikationsplattform für Web3.",
+      "cta-text": "Jetzt loslegen",
+      "cta-titel": "Erfahren Sie mehr über Push Chain und beginnen Sie noch heute mit der Entwicklung"
+    },
+    "ueber-uns": {
+      "überschrift": "Über Push Chain",
+      "unterüberschrift": "Eine Revolution in der Web3-Kommunikation.",
+      "beschreibung": "Push Chain ist eine dezentrale Kommunikationsplattform für Web3. Es ermöglicht es Anwendungen, Benachrichtigungen an Wallets zu senden und somit die Nutzererfahrung zu verbessern.",
+      "trusted-by": [
+        {
+          "name": "Binance",
+          "bild": {
+            "quellcode": "https://example.com/binance-logo.png",
+            "beschreibung": "Binance-Logo"
+          }
+        },
+        {
+          "name": "CoinDesk",
+          "bild": {
+            "quellcode": "https://example.com/coindesk-logo.png",
+            "beschreibung": "CoinDesk-Logo"
+          }
+        }
+      ]
+    },
+    "funktionen": {
+      "überschrift": "Push Chain-Funktionen",
+      "unterüberschrift": "Eine breite Palette von Funktionen für dezentrale Anwendungen.",
+      "funktionen": [
+        {
+          "titel": "Dezentrale Benachrichtigungen",
+          "beschreibung": "Erhalten Sie Benachrichtigungen von Anwendungen auf Ihrer Wallet."
+        },
+        {
+          "titel": "Web3-Kommunikation",
+          "beschreibung": "Push Chain ist eine dezentrale Kommunikationsplattform für Web3-Anwendungen."
+        },
+        {
+          "titel": "Universelle Kompatibilität",
+          "beschreibung": "Push Chain ist mit verschiedenen Blockchain-Plattformen kompatibel."
+        }
+      ]
+    },
+    "entwicklerressourcen": {
+      "überschrift": "Entwicklerressourcen",
+      "unterüberschrift": "Alles, was Sie für die Entwicklung von Anwendungen auf Push Chain benötigen.",
+      "ressourcen": [
+        {
+          "titel": "Dokumentation",
+          "beschreibung": "Eine ausführliche Dokumentation zur Verwendung von Push Chain als Entwickler."
+        },
+        {
+          "titel": "GitHub",
+          "beschreibung": "Push Chain auf GitHub. Hier finden Sie das Quellcode-Repository und können Probleme melden oder Features vorschlagen."
+        },
+        {
+          "titel": "Community",
+          "beschreibung": "Treten Sie unserer wachsenden Community bei, um Fragen zu stellen, Tipps zu erhalten und sich mit anderen Entwicklern auszutauschen."
+        }
+      ]
+    },
+    "blog": {
+      "überschrift": "Push Chain-Blog",
+      "unterüberschrift": "Lesen Sie die neuesten Beiträge und Updates von Push Chain.",
+      "beiträge": [
+        {
+          "titel": "Was ist Push Chain?",
+          "beschreibung": "Erfahren Sie mehr über die Vision und die Funktionsweise von Push Chain."
+        },
+        {
+          "titel": " Wie man mit Push Chain startet",
+          "beschreibung": "Ein Leitfaden für Entwickler, um schnell mit der Entwicklung auf Push Chain zu beginnen."
+        }
+      ]
+    },
+    "kontakt": {
+      "überschrift": "Kontaktieren Sie uns",
+      "unterüberschrift": "Haben Sie Fragen oder Anregungen? Wir freuen uns darauf, von Ihnen zu hören.",
+      "email": "info@pushprotocol.com",
+      "twitter": "@PushProtocol",
+      "discord": "pushprotocol"
+    }
+  },
+  "fusszeile": {
+    "copyright": "© 2023 Push Protocol. Alle Rechte vorbehalten."
   }
 }

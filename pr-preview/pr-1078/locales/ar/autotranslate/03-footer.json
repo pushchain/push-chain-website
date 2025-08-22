@@ -1,33 +1,33 @@
 {
   "footer": {
     "email-section": {
-      "title": "ابقَ على اطلاع بآخر أخبار Push Chain",
-      "title-secondary": "والتحديثات!",
+      "title": "ابقَ على اطلاع بـ Push Chain",
+      "title-secondary": "آخر الأخبار والتحديثات!",
       "title-aria-label": "قسم الاشتراك في النشرة الإخبارية",
       "section-aria-label": "قسم الاشتراك في النشرة الإخبارية لـ Push Chain"
     },
     "main-section": {
-      "section-aria-label": "روابط التنقل ومعلومات أساسية في التذييل",
+      "section-aria-label": "روابط وتصفح تذييل الصفحة",
       "logo-link-title": "الصفحة الرئيسية لـ Push Chain",
       "logo-link-aria-label": "الصفحة الرئيسية لـ Push Chain",
-      "logo-alt": "شعار Push Chain"
+      "logo-alt": "Push Chain logo"
     },
     "columns": {
       "resources": {
         "title": "المصادر",
-        "title-aria-label": "روابط التنقل للمصادر"
+        "title-aria-label": "تصفح المصادر"
       },
       "developers": {
         "title": "المطورون",
-        "title-aria-label": "روابط التنقل للمطورين"
+        "title-aria-label": "تصفح المطورين"
       },
       "community": {
         "title": "المجتمع",
-        "title-aria-label": "روابط التنقل للمجتمع"
+        "title-aria-label": "تصفح المجتمع"
       },
       "help": {
         "title": "المساعدة",
-        "title-aria-label": "روابط التنقل للمساعدة"
+        "title-aria-label": "تصفح المساعدة"
       }
     },
     "links": {
@@ -42,13 +42,13 @@
       "blog": "المدونة",
       "blog-title": "مدونة Push Chain",
       "litepaper": "الورقة البيضاء الموجزة",
-      "litepaper-title": "الورقة البيضاء الموجزة لـ Push Chain (PDF)",
+      "litepaper-title": "ورقة Push Chain البيضاء الموجزة (PDF)",
       "brand-kit": "عدة العلامة التجارية",
       "brand-kit-title": "أصول وإرشادات العلامة التجارية لـ Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "مستكشف Blockchain الخاص بـ Push Chain",
-      "faucet": "صنبور الاختبار",
-      "faucet-title": "احصل على رموز اختبار من صنبور الاختبار الخاص بـ Push Chain",
+      "push-scan-title": "مستكشف بلوكشين Push Chain",
+      "faucet": "الصنبور",
+      "faucet-title": "احصل على رموز اختبار من صنبور Push Chain",
       "push-portal": "Push Portal",
       "push-portal-title": "بوابة مجتمع Push Chain",
       "support": "الدعم",
@@ -56,11 +56,11 @@
       "security": "الأمان والإفصاح",
       "security-title": "الإبلاغ عن ثغرة أمنية (الإفصاح المسؤول)",
       "contact-us": "اتصل بنا",
-      "contact-us-title": "الشراكات، BD، وسائل الإعلام، أو الاستفسارات العامة",
+      "contact-us-title": "الشراكات، تطوير الأعمال، وسائل الإعلام، أو الاستفسارات العامة",
       "careers": "الوظائف",
       "careers-title": "الوظائف المتاحة في Push Chain",
-      "twitter": "X (تويتر)",
-      "twitter-title": "تابع Push Chain على X (تويتر)",
+      "twitter": "X (Twitter)",
+      "twitter-title": "تابع Push Chain على X (Twitter)",
       "discord": "Discord",
       "discord-title": "انضم إلى مجتمع Discord الخاص بـ Push Chain",
       "reddit": "Reddit",
@@ -70,8 +70,8 @@
     },
     "social-section": {
       "section-aria-label": "روابط وسائل التواصل الاجتماعي ومعلومات قانونية",
-      "twitter-icon-title": "Push Chain على X (تويتر)",
-      "twitter-icon-aria-label": "Push Chain على X (تويتر)",
+      "twitter-icon-title": "Push Chain على X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain على X (Twitter)",
       "github-icon-title": "Push Chain على GitHub",
       "github-icon-aria-label": "Push Chain على GitHub",
       "discord-icon-title": "Push Chain على Discord",
@@ -88,8 +88,8 @@
       "cookie-preferences-title": "إدارة إعدادات ملفات تعريف الارتباط"
     },
     "footer-image": {
-      "alt": "صورة توضيحية لتذييل Push Chain",
-      "title": "Push Chain - Blockchain عالمي"
+      "alt": "رسم توضيحي لتذييل الصفحة الخاص بـ Push Chain",
+      "title": "Push Chain - بلوكشين عالمي"
     }
   }
 }

@@ -1,118 +1,118 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "एक सपोर्ट टिकट खोलें",
-      "expanded-title-for-support": "क्या आपको मदद चाहिए? 👋",
-      "collapsed-text-for-contact": "टीम से संपर्क करें",
-      "expanded-title-for-contact": "नमस्ते! 👋",
+      "collapsed-text-for-support": "Open a Support Ticket",
+      "expanded-title-for-support": "Need help? 👋",
+      "collapsed-text-for-contact": "Contact the Team",
+      "expanded-title-for-contact": "Hi There! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 तकनीकी सहायता",
-          "description": "बग रिपोर्ट, SDK/API, स्मार्ट कॉन्ट्रैक्ट, इंटीग्रेशन सहायता"
+          "label": "🔧 Technical Support",
+          "description": "Bug reports, SDK/API, स्मार्ट कॉन्ट्रैक्ट, integration help"
         },
         "network": {
-          "label": "🌐 नेटवर्क और टेस्टनेट",
-          "description": "एक्सप्लोरर/पुश स्कैन, RPC, फाउसेट, डोनट टेस्टनेट के मुद्दे"
+          "label": "🌐 Network & Testnet",
+          "description": "Explorer/Push Scan, RPC, Faucet, Donut टेस्टनेट issues"
         },
         "wallet": {
-          "label": "👛 यूनिवर्सल वॉलेट",
-          "description": "पुश वॉलेट, यूनिवर्सल चेन कनेक्शन या अन्य वॉलेट के मुद्दे"
+          "label": "👛 Universal वॉलेट",
+          "description": "Push वॉलेट, universal चेन connection या other वॉलेट issues"
         },
         "identity": {
-          "label": "🪪 खाते और पहचान",
-          "description": "UEA/UOA, हस्ताक्षर, एट्रिब्यूशन प्रश्न"
+          "label": "🪪 Accounts & Identity",
+          "description": "UEA/UOA, signatures, attribution questions"
         },
         "security": {
-          "label": "🛡️ सुरक्षा",
-          "description": "भेद्यता रिपोर्ट, जिम्मेदार प्रकटीकरण (security@push.org)"
+          "label": "🛡️ Security",
+          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
         },
         "general": {
-          "label": "💬 सामान्य पूछताछ",
-          "description": "प्रश्न, प्रतिक्रिया, अन्य विषय"
+          "label": "💬 General Inquiry",
+          "description": "Questions, feedback, other topics"
         },
         "partnerships": {
-          "label": "🤝 भागीदारी और एकीकरण",
-          "description": "BD, इकोसिस्टम एकीकरण (वॉलेट, इंफ्रा, एक्सचेंज, प्रोटोकॉल)"
+          "label": "🤝 Partnerships & Integrations",
+          "description": "BD, ecosystem integrations (wallets, infra, exchanges, प्रोटोकॉल)"
         },
         "grants": {
-          "label": "💰 अनुदान और इकोसिस्टम प्रोग्राम",
-          "description": "BRB, बूटकैंप, अनुदान, फंडिंग पूछताछ"
+          "label": "💰 Grants & Ecosystem Programs",
+          "description": "BRB, Bootcamp, grants, funding inquiries"
         },
         "media": {
-          "label": "📰 मीडिया और प्रेस",
-          "description": "साक्षात्कार, बयान, संपत्ति, तथ्य-जांच"
+          "label": "📰 Media & Press",
+          "description": "Interviews, statements, assets, fact-checks"
         },
         "events": {
-          "label": "🎤 वक्ता और कार्यक्रम",
-          "description": "बातचीत, कार्यशालाएँ, हैकाथॉन, प्रायोजन"
+          "label": "🎤 Speaking & Events",
+          "description": "Talks, workshops, हैकथॉन, sponsorships"
         },
         "careers": {
-          "label": "👩‍💻 करियर",
-          "description": "खुली भूमिकाएँ, इंटर्नशिप, ठेकेदार के अवसर"
+          "label": "👩‍💻 Careers",
+          "description": "Open roles, internships, contractor opportunities"
         },
         "validators": {
-          "label": "🧡 सत्यापनकर्ता / नोड ऑपरेटर",
-          "description": "ऑपरेटर रुचि, RPC प्रदाता, इंफ्रा भागीदारों"
+          "label": "🧡 Validator / Node Operators",
+          "description": "Operator interest, RPC providers, infra partners"
         },
         "legal": {
-          "label": "⚖️ कानूनी और अनुपालन",
-          "description": "ट्रेडमार्क, डेटा अनुरोध, समझौते"
+          "label": "⚖️ Legal & Compliance",
+          "description": "Trademarks, data requests, agreements"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "हम आपकी कैसे मदद कर सकते हैं?",
-            "subtitle": "वह श्रेणी चुनें जो आपकी पूछताछ का सबसे अच्छा वर्णन करे"
+            "title": "What can we help you with?",
+            "subtitle": "Choose the category that best describes your inquiry"
           },
           "contact": {
-            "title": "आइए आपको जानें",
-            "subtitle": "हम आपसे संपर्क करने के लिए इस जानकारी का उपयोग करेंगे",
-            "name-label": "आपका नाम",
-            "name-placeholder": "अपना पूरा नाम दर्ज करें",
-            "name-aftergreet": "आपसे मिलकर अच्छा लगा, ",
-            "email-label": "ईमेल पता",
-            "email-placeholder": "अपना ईमेल पता दर्ज करें"
+            "title": "Let's get to know you",
+            "subtitle": "We'll use this information to get back to you",
+            "name-label": "Your Name",
+            "name-placeholder": "Enter your full name",
+            "name-aftergreet": "Nice to meet you, ",
+            "email-label": "Email Address",
+            "email-placeholder": "Enter your email address"
           },
           "details": {
-            "title": "हमें और बताएं",
-            "subtitle": "अपनी पूछताछ के बारे में विवरण प्रदान करें",
-            "subject-label": "विषय",
-            "subject-placeholder": "आपके मुद्दे का संक्षिप्त सारांश",
-            "message-label": "संदेश",
-            "message-placeholder": "अपने मुद्दे का विस्तार से वर्णन करें। किसी भी त्रुटि संदेश, पुनरुत्पादन के चरणों या प्रासंगिक जानकारी को शामिल करें।"
+            "title": "Tell us more",
+            "subtitle": "Provide details about your inquiry",
+            "subject-label": "Subject",
+            "subject-placeholder": "Brief summary of your issue",
+            "message-label": "Message",
+            "message-placeholder": "Describe your issue in detail. Include any error messages, steps to reproduce, or relevant information."
           },
           "submit": {
-            "title": "समीक्षा करें और सबमिट करें",
-            "subtitle": "सबमिट करने से पहले अपनी जानकारी की समीक्षा करें",
-            "placeholder": "हमें बताएं कि आपको किस चीज में मदद चाहिए..."
+            "title": "Review and Submit",
+            "subtitle": "Please review your information before submitting",
+            "placeholder": "Tell us more about what you need help with..."
           }
         },
         "buttons": {
-          "next": "अगला",
-          "previous": "पिछला",
-          "submit": "टिकट जमा करें",
-          "submitting": "जमा किया जा रहा है..."
+          "next": "Next",
+          "previous": "Previous",
+          "submit": "Submit Ticket",
+          "submitting": "Submitting..."
         },
         "validation": {
-          "name-required": "नाम आवश्यक है",
-          "name-min-length": "नाम कम से कम 2 वर्ण लंबा होना चाहिए",
-          "email-required": "ईमेल आवश्यक है",
-          "email-invalid": "कृपया एक मान्य ईमेल पता दर्ज करें",
-          "subject-required": "विषय आवश्यक है",
-          "message-required": "संदेश आवश्यक है",
-          "category-required": "कृपया एक श्रेणी चुनें",
-          "default": "यह फ़ील्ड आवश्यक है"
+          "name-required": "Name is required",
+          "name-min-length": "Name must be at least 2 characters long",
+          "email-required": "Email is required",
+          "email-invalid": "Please enter a valid email address",
+          "subject-required": "Subject is required",
+          "message-required": "Message is required",
+          "category-required": "Please select a category",
+          "default": "This field is required"
         },
         "success": {
-          "title": "टिकट सफलतापूर्वक जमा किया गया!",
-          "message": "संपर्क करने के लिए धन्यवाद। हमें आपका सपोर्ट टिकट मिल गया है और हम आपसे जल्द से जल्द संपर्क करेंगे।",
-          "button": "एक और टिकट जमा करें"
+          "title": "Ticket Submitted Successfully!",
+          "message": "Thank you for contacting us. We've received your support ticket and will get back to you as soon as possible.",
+          "button": "Submit Another Ticket"
         },
         "error": {
-          "title": "सबमिशन विफल",
-          "message": "आपका टिकट जमा करने में त्रुटि हुई। कृपया पुनः प्रयास करें या सीधे हमसे संपर्क करें।",
-          "button": "फिर से प्रयास करें"
+          "title": "Submission Failed",
+          "message": "There was an error submitting your ticket. Please try again or contact us directly.",
+          "button": "Try Again"
         }
       }
     }

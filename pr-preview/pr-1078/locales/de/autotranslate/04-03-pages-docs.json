@@ -2,17 +2,17 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Dokumentation — Universelle Apps entwickeln",
-        "description": "Alles, was du brauchst, um auf Push Chain zu veröffentlichen: Schnellstarts, SDKs, API-Referenz, Beispiele und Node-Einrichtung.",
-        "og-title": "Push Chain Docs - Schnellstarts, SDKs & API",
-        "og-description": "Entwickle und betreibe Apps auf der universellen Ausführungsschicht mit klaren Anleitungen und Beispielen.",
-        "twitter-title": "Push Chain Docs - Jetzt entwickeln",
-        "twitter-description": "Schnellstarts, SDKs, API-Referenz und Beispiele für schnelle Veröffentlichung."
+        "title": "Dokumentation — Universelle Apps erstellen",
+        "description": "Alles, was Sie zum Starten auf Push Chain benötigen: Schnellstarts, SDKs, API-Referenz, Beispiele und Node-Einrichtung.",
+        "og-title": "Push Chain Docs - Quickstarts, SDKs & API",
+        "og-description": "Erstellen und betreiben Sie Apps auf der universellen Execution Layer mit klaren Anleitungen und Beispielen.",
+        "twitter-title": "Push Chain Docs - Jetzt erstellen",
+        "twitter-description": "Schnellstarts, SDKs, API-Referenz und Beispiele für einen schnellen Start."
       },
       "explore-prelaunch-build": {
         "text": "Pre-Launch Build erkunden",
-        "title": "Zugriff auf die Push Chain Testnet Dokumentation und Pre-Launch Funktionen",
-        "ariaLabel": "Navigiere zur Push Chain Testnet Dokumentation, um die Pre-Launch Funktionen zu erkunden"
+        "title": "Zugriff auf Push Chain Testnet Dokumentation und Pre-Launch Funktionen",
+        "ariaLabel": "Zur Push Chain Testnet Dokumentation navigieren, um Pre-Launch Build Funktionen zu erkunden"
       }
     }
   }
