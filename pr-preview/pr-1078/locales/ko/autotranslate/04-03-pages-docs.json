@@ -9,10 +9,12 @@
         "twitter-title": "Push Chain Docs - 지금 구축하세요",
         "twitter-description": "빠른 시작, SDK, API 참조 및 예제를 통해 빠르게 출시하세요."
       },
-      "explore-prelaunch-build": {
-        "text": "사전 출시 빌드 살펴보기",
-        "title": "Push Chain <1>테스트넷</1> 문서 및 사전 출시 기능에 액세스",
-        "ariaLabel": "사전 출시 빌드 기능을 살펴보기 위해 Push Chain <1>테스트넷</1> 문서로 이동"
+      "header": {
+        "countdown-title": "테스트넷 문서 출시까지",
+        "description": "쉿... 테스트넷 도넛의 미리보기를 원하시나요? #pushchainsecret으로 연락주시면 테스트 빌드 액세스를 보내드리겠습니다.",
+        "tweet-button": "Push Chain에 대해 트윗하기",
+        "title": "Push Chain에 대해 트윗하기",
+        "ariaLabel": "Push Chain에 대해 트윗하기"
       }
     }
   }

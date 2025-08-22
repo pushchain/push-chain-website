@@ -9,10 +9,12 @@
         "twitter-title": "Push Chain Docs - 今すぐ構築",
         "twitter-description": "クイックスタート、SDK、API リファレンス、および例で高速に出荷します。"
       },
-      "explore-prelaunch-build": {
-        "text": "プレローンチビルドを探索",
-        "title": "Push Chain <testnet> ドキュメントとプレローンチ機能にアクセス",
-        "ariaLabel": "プレローンチビルド機能を探求するために Push Chain <testnet> ドキュメントに移動します"
+      "header": {
+        "countdown-title": "テストネットドキュメント開始まで",
+        "description": "ちょっと...テストネット Donut のスニークピークが欲しいですか？ #pushchainsecret で連絡してください。テストビルドへのアクセスをお送りします。",
+        "tweet-button": "Push Chain についてツイート",
+        "title": "Push Chain についてツイート",
+        "ariaLabel": "Push Chain についてツイート"
       }
     }
   }

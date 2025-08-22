@@ -7,12 +7,14 @@
         "og-title": "Push Chain Docs - Quickstarts, SDKs & API",
         "og-description": "क्लियर गाइड और उदाहरणों के साथ यूनिवर्सल एक्ज़ीक्यूशन लेयर पर एप्स बनाएं और चलाएं।",
         "twitter-title": "Push Chain Docs - अभी बनाएं",
-        "twitter-description": "क्विकस्टार्ट, SDK, API रिफ और तेज़ी से शिप करने के लिए उदाहरण।"
+        "twitter-description": "क्विकस्टार्ट, SDK, API रिफ और तेज़ी से शिप करने के लिए उदाहरण।"
       },
-      "explore-prelaunch-build": {
-        "text": "प्री-लॉन्च बिल्ड देखें",
-        "title": "Push Chain टेस्टनेट दस्तावेज़ और प्री-लॉन्च सुविधाओं तक पहुंचें",
-        "ariaLabel": "प्री-लॉन्च बिल्ड सुविधाओं का पता लगाने के लिए Push Chain टेस्टनेट डॉक्स पर नेविगेट करें"
+      "header": {
+        "countdown-title": "टेस्टनेट डॉक्स लॉन्च में",
+        "description": "छुप्प... टेस्टनेट डोनट का स्नीक पीक चाहते हैं? #pushchainsecret के साथ हमसे संपर्क करें और हम आपको टेस्ट बिल्ड का एक्सेस भेजेंगे।",
+        "tweet-button": "Push Chain के बारे में ट्वीट करें",
+        "title": "Push Chain के बारे में ट्वीट करें",
+        "ariaLabel": "Push Chain के बारे में ट्वीट करें"
       }
     }
   }

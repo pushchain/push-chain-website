@@ -9,10 +9,12 @@
         "twitter-title": "Push Chain Docs - Build now",
         "twitter-description": "Quickstarts, SDKs, API ref, and examples to ship fast."
       },
-      "explore-prelaunch-build": {
-        "text": "Explore pre-launch build",
-        "title": "Access Push Chain Testnet documentation and pre-launch features",
-        "ariaLabel": "Navigate to Push Chain Testnet docs to explore pre-launch build features"
+      "header": {
+        "countdown-title": "Testnet Docs Launch in",
+        "description": "Psst... want a sneak peek of Testnet Donut? Drop us a shout with #pushchainsecret and we'll send you access to a test build.",
+        "tweet-button": "Tweet about Push Chain",
+        "title": "Tweet about Push Chain",
+        "ariaLabel": "Tweet about Push Chain"
       }
     }
   }

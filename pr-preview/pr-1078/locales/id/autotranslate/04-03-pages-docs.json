@@ -9,10 +9,12 @@
         "twitter-title": "Dokumentasi Push Chain - Bangun sekarang",
         "twitter-description": "Quickstart, SDK, referensi API, dan contoh untuk meluncur dengan cepat."
       },
-      "explore-prelaunch-build": {
-        "text": "Jelajahi build pra-peluncuran",
-        "title": "Akses dokumentasi Push Chain testnet dan fitur pra-peluncuran",
-        "ariaLabel": "Navigasi ke dokumentasi Push Chain testnet untuk menjelajahi fitur build pra-peluncuran"
+      "header": {
+        "countdown-title": "Peluncuran Docs Testnet dalam",
+        "description": "Psst... ingin mengintip Testnet Donut? Hubungi kami dengan #pushchainsecret dan kami akan mengirimkan akses ke build test.",
+        "tweet-button": "Tweet tentang Push Chain",
+        "title": "Tweet tentang Push Chain",
+        "ariaLabel": "Tweet tentang Push Chain"
       }
     }
   }

@@ -9,10 +9,12 @@
         "twitter-title": "توثيق Push Chain - ابدأ الآن",
         "twitter-description": "البداية السريعة، وSDKs، ومرجع API، وأمثلة للإطلاق السريع."
       },
-      "explore-prelaunch-build": {
-        "text": "استكشف النسخة التجريبية قبل الإطلاق",
-        "title": "الوصول إلى توثيق شبكة Push Chain التجريبية وميزات ما قبل الإطلاق",
-        "ariaLabel": "انتقل إلى توثيق شبكة Push Chain التجريبية لاستكشاف ميزات النسخة التجريبية قبل الإطلاق"
+      "header": {
+        "countdown-title": "إطلاق توثيق الشبكة التجريبية في",
+        "description": "مهلاً... هل تريد لمحة مسبقة عن Testnet Donut؟ تواصل معنا باستخدام #pushchainsecret وسنرسل لك الوصول إلى نسخة تجريبية.",
+        "tweet-button": "غرد عن Push Chain",
+        "title": "غرد عن Push Chain",
+        "ariaLabel": "غرد عن Push Chain"
       }
     }
   }
