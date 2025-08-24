@@ -1,0 +1,12 @@
+{
+  "components": {
+    "breadcrumbs": {
+      "navigation-aria-label": "Điều hướng bằng vụn bánh mì",
+      "home-text": "Trang chủ",
+      "navigate-to-aria-label": "Điều hướng đến {{page}}",
+      "go-to-title": "Đi đến trang {{page}}",
+      "current-page-aria-label": "Trang hiện tại: {{page}}",
+      "separator-aria-label": "Dấu phân cách vụn bánh mì"
+    }
+  }
+}

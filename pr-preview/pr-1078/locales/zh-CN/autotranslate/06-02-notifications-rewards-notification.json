@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Closed beta is Live!",
+      "description": "抢先体验Testnet，Donut，构建 universal 应用并赢取奖品！",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "Close rewards notification",
+      "close-button-aria-label": "Dismiss Push Chain rewards notification",
+      "container-aria-label": "Push Chain rewards notification"
+    }
+  }
+}

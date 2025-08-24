@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "开发者 — 操作指南和教程",
+          "description": "使用 Push Chain 功能的分步指南、模式和示例。",
+          "og-title": "开发者 - 操作指南和教程",
+          "og-description": "使用 Push Chain 构建的指导教程、最佳实践和示例。",
+          "twitter-title": "开发者 - 操作指南和教程",
+          "twitter-description": "在 Push Chain 上发布的逐步指南。"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "知识库"
+          },
+          "blocks": {
+            "title": "在 Push Chain 上构建",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## 开发者\n\n准备好在 Push Chain 上构建了吗？以下是一些资源，可帮助您获得灵感并开始构建。",
+                  "curated-reads": "## 精选阅读 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "让我们构建通用应用 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "仅与共享状态 V1 配合才能构建的应用"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "仅与共享状态 V2 配合才能构建的应用"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "消费者应用 🫶 Push Chain？"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "开发者资源",
+                "items": {
+                  "developer-docs": {
+                    "title": "探索开发者文档"
+                  },
+                  "faucet": {
+                    "title": "获取 Testnet 代币"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet 浏览器"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Документация — Создавайте Универсальные Приложения",
+        "description": "Всё необходимое для запуска на Push Chain: краткие руководства, SDK, справочник API, примеры и настройка ноды.",
+        "og-title": "Push Chain Docs - Quickstarts, SDKs & API",
+        "og-description": "Создавайте и запускайте приложения на универсальном execution layer с понятными инструкциями и примерами.",
+        "twitter-title": "Push Chain Docs - Начните создавать сейчас",
+        "twitter-description": "Quickstarts, SDK, справочник API и примеры для быстрого запуска."
+      },
+      "explore-prelaunch-build": {
+        "text": "Посмотрите предварительную версию",
+        "title": "Получите доступ к документации Push Chain testnet и предварительным функциям",
+        "ariaLabel": "Перейдите к документации Push Chain testnet, чтобы ознакомиться с функциями предварительной версии"
+      }
+    }
+  }
+}

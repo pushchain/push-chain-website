@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Frequently asked questions about Push Chain - Universal Blockchain",
+      "title": "Frequently\nAsked\nQuestions",
+      "title-aria-label": "Common questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive Push Chain FAQ documentation and developer guides",
+      "explore-more-aria-label": "Navigate to complete Push Chain FAQ page",
+      "accordion-aria-label": "Push Chain frequently asked questions list",
+      "answer-aria-label": "Answer to the question - ",
+      "qnas": {
+        "qna1": {
+          "question": "What is Push Chain?",
+          "answer": "<1>Push Chain là một blockchain shared-state giúp <2>loại bỏ sự phân mảnh và giúp các ứng dụng trở nên phổ quát</2>.</1><1>Triển khai một lần trên Push. Người dùng trên bất kỳ chain nào — EVM hoặc non-EVM — sử dụng ứng dụng của bạn với các ví và token hiện có; phí được xử lý ẩn.</1>"
+        },
+        "qna2": {
+          "question": "How it works? (ELI5)",
+          "answer": "<1>Sử dụng ví bạn đã có — Push xử lý các phần cross-chain phía sau.</1><1>1. <2>Bắt đầu ở bất cứ đâu.</2> Sử dụng bất kỳ ví nào trên bất kỳ chain nào — không cần chuyển mạng.</1><1>2. <2>Ký một lần.</2> Thanh toán bằng token bạn đã có; chúng tôi giữ lại phí trên chain chính của bạn.</1><1>3. <2>Chúng tôi định tuyến nó.</2> Một tài khoản liên kết trên Push (vẫn là của bạn) chuyển tiếp cuộc gọi của bạn đến ứng dụng — không giám sát.</1><1>4. <2>Bạn luôn là bạn.</2> Chúng tôi khớp ví chain chính của bạn với tài khoản liên kết của bạn để các hành động được xác minh và ghi nhận chính xác trên Push.</1><1>5. <2>Hoàn thành nhanh chóng.</2> Ứng dụng chạy trên Push; phí được xử lý ẩn. Không cần cầu nối, không cần ví mới.</1><1>Đây là cách người dùng trên bất kỳ chain nào có thể sử dụng cùng một ứng dụng được triển khai trên Push Chain — giúp các ứng dụng thực sự phổ quát.</1>"
+        },
+        "qna3": {
+          "question": "Do I need a different wallet or gas token?",
+          "answer": "<1><2>Không.</2></1><1><2>Giữ ví của bạn.</2> Sử dụng ví bạn đã có — không cần ví hoặc tài khoản mới.</1><1><2>Thanh toán bằng những gì bạn đang giữ.</2> Phí có thể được thanh toán bằng token bạn đã có trên chain chính của mình; chúng tôi xử lý chuyển đổi ẩn.</1><1><2>Không cần chuyển mạng.</2> Luôn ở trên chain chính của bạn — không cần cầu nối chỉ để lấy token gas.</1><1><2>Không giám sát.</2> Bạn ký mọi hành động; Push không bao giờ giữ khóa của bạn.</1><1><2>Ẩn.</2> Mạng sẽ giải quyết phí bằng $PC tự động — bạn không cần quản lý nó.</1>"
+        },
+        "qna4": {
+          "question": "How is this different from bridges or messaging layers?",
+          "answer": "<1><2>Câu trả lời ngắn gọn</2>: Push là nơi ứng dụng của bạn chạy. Cầu nối/tin nhắn chỉ di chuyển token hoặc tin nhắn giữa các chain, điều này làm phức tạp mọi thứ cho người dùng và nhà phát triển.</1><1><2>Một trang chủ duy nhất so với nhiều bản sao.</2> Với cầu nối/tin nhắn, bạn triển khai trên mỗi chain và đồng bộ hóa qua tin nhắn. Trên Push, bạn triển khai một lần; mọi người truy cập cùng một hợp đồng và trạng thái chung.</1><1><2>Không có tài sản được gói lại hoặc cầu nối bắt buộc.</2> Người dùng vẫn ở trên chain chính của họ và thanh toán bằng những gì họ đã có; chúng tôi xử lý định tuyến và chuyển đổi phí ẩn.</1><1><2>Danh tính và xác minh thống nhất.</2> Chúng tôi chấp nhận chữ ký từ bất kỳ ví/chain nào và ghi nhận chúng cho cùng một người dùng trên Push — không giám sát.</1><1><2>Ít bộ phận di chuyển hơn.</2> Không cần sự phê duyệt cross-chain phức tạp, không cần săn token gas, không cần hợp đồng keo để giữ đồng bộ.</1><1><2>Sử dụng cầu nối khi bạn muốn, không phải vì bạn phải.</2> Thanh khoản vẫn có thể di chuyển qua cầu nối, nhưng tương tác với ứng dụng của bạn không bắt buộc.</1><1>Kết quả: ứng dụng đơn giản hơn, một nguồn sự thật duy nhất và trải nghiệm người dùng giống như một chain — ngay cả khi người dùng không như vậy.</1>"
+        },
+        "qna5": {
+          "question": "Is it EVM-only? Which chains are supported?",
+          "answer": "<1><2>Không, Push hỗ trợ cả chain EVM và non-EVM.</2> Mặc dù nó ưu tiên EVM cho việc triển khai, người dùng từ bất kỳ chain nào (bao gồm cả non-EVM) có thể sử dụng ứng dụng của bạn như thể họ đang sử dụng nó một cách tự nhiên.</1>\n<1><2>Triển khai một lần. Khả năng tương tác ở mọi nơi.</2> Viết và triển khai các hợp đồng EVM tiêu chuẩn trên Push (Solidity/Vyper). Công cụ vẫn giữ nguyên.</1>\n<1><2>Người dùng từ bất kỳ chain nào.</2> Ethereum và các L2 EVM chính hoạt động một cách tự nhiên. Người dùng non-EVM (ví dụ: Solana) ký bằng ví chính của họ; chúng tôi xác minh và định tuyến ẩn — không cần chuyển mạng.</1>\n<1><2>Hỗ trợ hôm nay.</2> Xem danh sách trực tiếp của các chain được hỗ trợ → <3>Các Chain được Hỗ Trợ</3>.</1><1><2>Mở rộng phạm vi.</2> Chúng tôi đang thêm các chain liên tục. Nếu bạn muốn yêu cầu bất kỳ chain nào, vui lòng <4>liên hệ với chúng tôi</4>.</1>",
+          "supported-urls-title": "Danh sách tất cả các chain được hỗ trợ bởi Push Chain.",
+          "contact-url-title": "Liên hệ với chúng tôi để thêm các chain mới."
+        },
+        "qna6": {
+          "question": "How fast is it and what do fees look like?",
+          "answer": "<1><2>Tốc độ.</2> Được thiết kế để xác nhận ~1–2 giây với phản hồi UX nhanh chóng. Kiểm tra số liệu trực tiếp trên <3>🍩 Donut Testnet</3>.</1><1><2>Mô hình phí.</2> Bạn thấy phí bằng token bạn chọn thanh toán; mạng sẽ giải quyết bằng $PC ẩn.</1><1><2>Chi phí điển hình.</2> Phí điển hình ít hơn <2>$0.001</2> cho mỗi giao dịch. tuy nhiên, nó khác nhau tùy thuộc vào độ phức tạp của hợp đồng, giá của token và tải mạng. Bạn nhận được báo giá chính xác trước khi ký.</1>",
+          "donut-testnet-title": "Kiểm tra số liệu thống kê của Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

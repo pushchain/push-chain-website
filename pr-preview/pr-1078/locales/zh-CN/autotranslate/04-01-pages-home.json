@@ -1,0 +1,136 @@
+{
+  "translated_content": {
+    "seo": {
+      "title": "推动 web3 通信协议的新时代",
+      "description": "EPNS 是一个分布式的、去中心化的通知协议，为 Web3 项目提供即时、可靠和自定义的通知服务。"
+    },
+    "header": {
+      "links": [
+        {
+          "text": "文档",
+          "href": "/docs"
+        },
+        {
+          "text": "博客",
+          "href": "/blog"
+        }
+      ]
+    },
+    "hero": {
+      "title": "EPNS:  Web3 的去中心化通知协议",
+      "subtitle": "即时、可靠和自定义的分布式通知服务",
+      "cta_text": "开始使用 EPNS",
+      "cta_title": "立即开始使用 EPNS"
+    },
+    "features": {
+      "aria_label": "EPNS 功能介绍",
+      "title": "EPNS 为您提供以下功能：",
+      "items": [
+        {
+          "title": "去中心化的通知服务",
+          "description": "不依赖于单一的服务器或平台，从而确保消息传递的可靠性和安全性。"
+        },
+        {
+          "title": "即时通知",
+          "description": "EPNS 利用区块链技术实现真正意义上的实时通知，帮助您及时获取重要信息。"
+        },
+        {
+          "title": "高度定制化",
+          "description": " EPNS 提供丰富的选项，让您根据需求个性化设置通知内容、格式和频率。"
+        }
+      ]
+    },
+    "how-it-works": {
+      "aria_label": "EPNS 运作方式",
+      "title": "EPNS 如何工作？",
+      "steps": [
+        {
+          "number": 1,
+          "title": "创建 EPNS 通知",
+          "description": "通过我们的 Web3 界面或 API 创建您想发送的通知。"
+        },
+        {
+          "number": 2,
+          "title": "选择接收者",
+          "description": "指定您想要发送消息给哪些地址。"
+        },
+        {
+          "number": 3,
+          "title": "设置通知选项",
+          "description": "自定义通知的内容、格式和频率等选项。"
+        },
+        {
+          "number": 4,
+          "title": "广播消息",
+          "description": "EPNS 通过区块链网络将您的通知发送给指定的接收者地址。"
+        }
+      ]
+    },
+    "use-cases": {
+      "aria_label": "EPNS 用例",
+      "title": "EPNS 的实际应用场景：",
+      "items": [
+        {
+          "image_alt": "DeFi 图标",
+          "title": "去中心化金融（DeFi）",
+          "description": "通知关于新-token、空投、利率变动等重要信息。"
+        },
+        {
+          "image_alt": "NFT 图标",
+          "title": "数字资产（NFT）",
+          "description": "发送 NFT 创建、转移和拍卖通知给相关方。"
+        },
+        {
+          "image_alt": "DAO 图标",
+          "title": "去中心化自治组织（DAOs）",
+          "description": "就重大决策进行投票，并及时通知 DAO 成员结果。"
+        }
+      ]
+    },
+    "team": {
+      "aria_label": "EPNS 团队介绍",
+      "title": "由 Web3 先锋信任的团队打造",
+      "description": "我们的核心团队来自于各种知名 Web3 项目，拥有丰富的经验和专业技能。"
+    },
+    "testimonials": {
+      "aria_label": "EPNS 证言",
+      "title": "EPNS 受到了以下项目的支持：",
+      "items": [
+        {
+          "image_alt": "Unstoppable Domains 图标",
+          "quote": "我们很高兴能够与 EPNS 合作，提供去中心化和可定制的通知服务。"
+        },
+        {
+          "image_alt": "Crypto.com 图标",
+          "quote": "EPNS 为我们的用户带来了实时、可靠和个性化的通知体验。"
+        }
+      ]
+    },
+    "footer": {
+      "links": [
+        {
+          "text": "文档",
+          "href": "/docs"
+        },
+        {
+          "text": "博客",
+          "href": "/blog"
+        }
+      ],
+      "social_links": [
+        {
+          "platform": "Twitter",
+          "href": "https://twitter.com/epnsprotocol"
+        },
+        {
+          "platform": "Telegram",
+          "href": "https://t.me/EPNS_Official"
+        },
+        {
+          "platform": "GitHub",
+          "href": "https://github.com/epns-protocol"
+        }
+      ]
+    }
+  }
+}

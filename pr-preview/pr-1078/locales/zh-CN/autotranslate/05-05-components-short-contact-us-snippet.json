@@ -1,0 +1,64 @@
+{
+  "components": {
+    "short-contact-us-snippet": {
+      "section-aria-label": "联系 Push Chain 团队",
+      "title": "常见\n问题",
+      "title-aria-label": "Push Chain 常见联系问题",
+      "discord-link-text": "加入 Discord",
+      "discord-link-title": "在 Discord 上与 Push Chain 社区聊天",
+      "discord-link-aria-label": "在新标签页中打开 Discord",
+      "explore-more-text": "探索计划",
+      "explore-more-title": "查看资助、BRB 和生态系统计划",
+      "explore-more-aria-label": "导航到 Push Chain 计划",
+      "accordion-aria-label": "联系问题列表",
+      "answer-aria-label": "问题的答案 - ",
+      "qnas": {
+        "qna1": {
+          "question": "我应该选择哪个类别？",
+          "answer": "<1><2>合作伙伴和集成</2>: 钱包、基础设施、交易所、protocol 合作 → <3>联系合作伙伴</3>。<1><2>资助和计划</2>: BRB、Bootcamp、资金 → <4>联系资助</4>。<1><2>媒体和演讲</2>: 采访、声明、演讲 → <5>媒体和活动</5>。<1><2>验证者</2>: 节点运营者意向、RPC 提供者 → <6>验证者</6>。<1><2>法律</2>: 商标、数据请求、协议 → <7>法律</7>。<1>需要技术帮助或状态？请使用 <8>支持</8>。</1>",
+          "contact-partnerships-title": "打开合作伙伴联系",
+          "contact-grants-title": "打开资助联系",
+          "contact-media-title": "打开媒体和演讲联系",
+          "contact-validators-title": "打开验证者联系",
+          "contact-legal-title": "打开法律和合规联系",
+          "support-title": "前往支持中心"
+        },
+        "qna2": {
+          "question": "你们回复速度有多快？",
+          "answer": "<1>我们力求在 <2>1–2 个工作日</2>内确认大多数咨询。紧急请求（例如，媒体截止日期，安全问题）将优先处理。</1><1>对于紧急问题，请包括 <2>截止日期、时区</2>以及 <2>最佳联系方式</2>。</1>"
+        },
+        "qna3": {
+          "question": "哪些信息有助于建立合作伙伴关系？",
+          "answer": "<1>分享你的 <2>公司名称</2>、<2>网站</2>以及 <2>你想要合作的内容</2>。</1><1>有用的附加内容：受众规模、地区、时间表以及任何技术范围或你计划使用的 SDK。</1><1>从这里开始 → <3>合作伙伴</3>。</1>",
+          "contact-partnerships-title": "打开合作伙伴联系"
+        },
+        "qna4": {
+          "question": "资助是如何运作的？",
+          "answer": "<1>告诉我们你的 <2>项目名称</2>、<2>repo/网站</2>、阶段（<2>想法、原型、MVP、在线</2>）以及一个简要计划。</1><1>资助申请始终按照先到先得的原则处理。从这里开始 → <3>资助</3>。</1>",
+          "contact-grants-title": "打开资助联系"
+        },
+        "qna5": {
+          "question": "媒体和演讲请求",
+          "answer": "<1>包括你的媒体、主题、<2>截止日期</2>以及问题。对于演讲/研讨会，添加活动日期、格式和受众。</1><1>通过 <3>媒体和演讲</3>联系我们。我们可以分享徽标、创始人简介和样板。</1>",
+          "contact-media-title": "打开媒体和演讲联系"
+        },
+        "qna6": {
+          "question": "如何报告安全问题？",
+          "answer": "<1>将重现步骤和影响发送到 <3><2>security@push.org</2></3>，请勿在确认修复之前公开披露。</1>",
+          "security-policy-title": "阅读安全和披露政策"
+        },
+        "qna7": {
+          "question": "我想运行验证者/提供基础设施",
+          "answer": "<1>分享你的基础设施档案（经验、地区）、预期正常运行时间/SLA 以及任何首选条款。从这里开始 → <3>验证者</3>。</1>",
+          "contact-validators-title": "打开验证者联系"
+        },
+        "qna8": {
+          "question": "招聘和职业",
+          "answer": "<1>如果岗位空缺，它们将在我们的频道上发布。你仍然可以通过 <3>联系我们</3>分享你的档案和兴趣，或关注 <4>@PushChain</4>以获取更新。</1>",
+          "contact-careers-title": "打开职业联系",
+          "twitter-title": "关注 X 上的 @PushChain"
+        }
+      }
+    }
+  }
+}

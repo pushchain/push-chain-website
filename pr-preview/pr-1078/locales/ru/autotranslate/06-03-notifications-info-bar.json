@@ -1,0 +1,13 @@
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Запуск на Push Testnet сейчас — получите награды за вклад и раннее использование.",
+      "learn-more-text": "Узнать больше",
+      "learn-more-title": "Подробнее об этом объявлении",
+      "dismiss-button-title": "Закрыть объявление",
+      "dismiss-button-aria-label": "Закрыть панель объявлений",
+      "container-aria-label": "Объявление сайта",
+      "star-icon-alt": "Значок звезды объявления"
+    }
+  }
+}

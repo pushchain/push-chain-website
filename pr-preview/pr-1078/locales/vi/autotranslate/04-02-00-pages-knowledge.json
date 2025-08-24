@@ -1,0 +1,78 @@
+{
+  "pages": {
+    "knowledge": {
+      "seo": {
+        "title": "Kho kiến thức — Hướng dẫn, Câu hỏi thường gặp & Hướng dẫn sử dụng",
+        "description": "Bắt đầu từ đây để tìm hiểu các khái niệm, câu hỏi thường gặp, hướng dẫn sử dụng và tài nguyên hệ sinh thái. Hướng dẫn rõ ràng, không quá kỹ thuật về cách sử dụng Push Chain.",
+        "og-title": "Kho kiến thức Push Chain - Hướng dẫn & Câu hỏi thường gặp",
+        "og-description": "Các khái niệm, hướng dẫn từng bước và câu trả lời cho các câu hỏi phổ biến về Push Chain.",
+        "twitter-title": "Kho kiến thức - Hướng dẫn & Câu hỏi thường gặp",
+        "twitter-description": "Hướng dẫn nhanh, câu hỏi thường gặp và hướng dẫn sử dụng Push Chain (không dùng thuật ngữ chuyên ngành)."
+      },
+      "hero-section": {
+        "title": "Kho kiến thức",
+        "description": {
+          "highlighted": "Push Chain là một blockchain đa năng thực sự được thiết kế để loại bỏ sự phân mảnh giữa tất cả các chuỗi.",
+          "developers": "Nhà phát triển",
+          "developers-text": "triển khai một lần và ngay lập tức tương thích với tất cả các chuỗi EVM và non-EVM được hỗ trợ.",
+          "users": "Người dùng",
+          "users-text": "sử dụng cùng một app bất kể họ đến từ chuỗi nào."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Nhận thông báo về Mạng thử nghiệm Push Chain",
+            "short": "Mạng thử nghiệm Push Chain"
+          },
+          "description": "Hãy là người đầu tiên biết khi mạng thử nghiệm Push Chain hoạt động. Tham gia danh sách gửi thư của chúng tôi để cập nhật độc quyền."
+        },
+        "footer": {
+          "description": "Tạo trải nghiệm liền mạch, thân thiện với người dùng cho app của bạn trên bất kỳ blockchain nào với Push Chain.",
+          "cta": {
+            "text": "Nhận thông báo"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Tài nguyên",
+              "items": {
+                "push101": {
+                  "title": "Những điều cơ bản về Push Chain",
+                  "subtitle": "Tìm hiểu về những điều cơ bản của Push Chain, những đổi mới của nó và tại sao nó lại cần thiết",
+                  "ctatitle": "Khám phá thêm"
+                },
+                "builders": {
+                  "title": "Xây dựng trên Push Chain",
+                  "subtitle": "Đi sâu vào cách xây dựng các app đa năng, những gì nó mở khóa và cách bắt đầu!",
+                  "ctatitle": "Tập hợp Người xây dựng"
+                },
+                "deepdives": {
+                  "title": "Đánh giá chuyên sâu về kỹ thuật",
+                  "subtitle": "Bạn muốn tìm hiểu cách làm việc phức tạp của Push? hoặc chỉ là một người tò mò? Dù sao đi nữa, hãy nói lời chào!",
+                  "ctatitle": "Xem hoạt động"
+                },
+                "devdocs": {
+                  "title": "Tài liệu cho nhà phát triển",
+                  "subtitle": "Hãy đi thẳng vào vấn đề! Tôi là một chuỗi đa năng... và bạn là một nhà phát triển, hãy chính thức hóa nó!",
+                  "ctatitle": "Xây dựng ngay bây giờ"
+                },
+                "tokenomics": {
+                  "title": "Khám phá Tokenomics",
+                  "subtitle": "Tìm hiểu cách tokenomics khuyến khích và đảm bảo một mạng lưới bền vững được xây dựng để tồn tại lâu dài",
+                  "ctatitle": "Tìm hiểu thiết kế Token"
+                },
+                "faq": {
+                  "title": "Câu hỏi thường gặp",
+                  "subtitle": "Nơi tìm câu trả lời cho tất cả các câu hỏi phổ biến mà cộng đồng đã hỏi",
+                  "ctatitle": "Đọc thêm"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

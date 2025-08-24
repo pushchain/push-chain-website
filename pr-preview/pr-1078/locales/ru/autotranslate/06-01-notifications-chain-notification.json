@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Узнайте первыми о testnet, Donut, создавайте универсальные apps и выигрывайте призы!",
+      "button-text": "Получить Закрытый Beta Pass",
+      "button-title": "Присоединяйтесь к testnet Push Chain и получите свой закрытый beta pass",
+      "button-aria-label": "Открыть Telegram для получения закрытого beta pass Push Chain",
+      "image-alt": "Push Chain Testnet Donut - Универсальный blockchain",
+      "close-button-title": "Закрыть уведомление testnet",
+      "close-button-aria-label": "Отклонить уведомление testnet Push Chain",
+      "container-aria-label": "Уведомление testnet Push Chain"
+    }
+  }
+}

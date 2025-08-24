@@ -1,0 +1,18 @@
+{
+  "components": {
+    "cookie-banner": {
+      "message": "Мы используем файлы cookie для персонализации вашего опыта. Узнайте больше в нашей",
+      "privacy-policy-link": "Политике конфиденциальности",
+      "privacy-policy-link-title": "Прочитать Политику конфиденциальности Push Chain",
+      "privacy-policy-link-aria-label": "Открыть Политику конфиденциальности в новой вкладке",
+      "accept-button": "Принять",
+      "accept-button-title": "Принять файлы cookie для персонализации вашего опыта",
+      "accept-button-aria-label": "Принять файлы cookie и закрыть баннер",
+      "reject-button": "Отказаться",
+      "reject-button-title": "Отказаться от файлов cookie и закрыть баннер",
+      "reject-button-aria-label": "Отказаться от файлов cookie и закрыть баннер",
+      "banner-aria-label": "Баннер согласия на использование файлов cookie",
+      "banner-role": "Уведомление о настройках файлов cookie"
+    }
+  }
+}

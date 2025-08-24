@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — Hướng dẫn & Bài hướng dẫn",
+          "description": "Hướng dẫn từng bước, mẫu và ví dụ để sử dụng các tính năng của Push Chain.",
+          "og-title": "Builders - Hướng dẫn & Bài hướng dẫn",
+          "og-description": "Hướng dẫn chi tiết, các phương pháp hay nhất và ví dụ để xây dựng với Push Chain.",
+          "twitter-title": "Builders - Hướng dẫn & Bài hướng dẫn",
+          "twitter-description": "Hướng dẫn từng bước để triển khai trên Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Cơ sở kiến thức"
+          },
+          "blocks": {
+            "title": "Xây dựng trên Push Chain",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nSẵn sàng xây dựng trên Push Chain? Đây là một số tài nguyên để bạn có thêm cảm hứng và bắt đầu.",
+                  "curated-reads": "## Bài đọc được tuyển chọn 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Hãy xây dựng Universal Apps 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Các ứng dụng chỉ khả thi với Shared State - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Các ứng dụng chỉ khả thi với Shared State - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Các ứng dụng hướng đến người dùng 🫶 Push Chain?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Tài nguyên dành cho nhà phát triển",
+                "items": {
+                  "developer-docs": {
+                    "title": "Khám phá Tài liệu dành cho nhà phát triển"
+                  },
+                  "faucet": {
+                    "title": "Nhận Token Testnet"
+                  },
+                  "testnet-explorer": {
+                    "title": "Trình khám phá Push Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Perguntas de Suporte sobre Push Chain - Blockchain Universal",
+      "title": "Suporte\nCentral de Ajuda",
+      "title-aria-label": "Perguntas e respostas comuns sobre Push Chain",
+      "discord-link-text": "Pergunte-nos no Discord",
+      "discord-link-title": "Junte-se à comunidade Push Chain no Discord para suporte e perguntas",
+      "discord-link-aria-label": "Abrir a comunidade Discord em uma nova aba",
+      "explore-more-text": "Explore Mais Perguntas Frequentes",
+      "explore-more-title": "Veja a documentação completa de Perguntas Frequentes e guias de desenvolvedor do Push Chain",
+      "explore-more-aria-label": "Navegar para a página completa de Perguntas Frequentes do Push Chain",
+      "accordion-aria-label": "Lista de perguntas de suporte do Push Chain",
+      "answer-aria-label": "Resposta à pergunta - ",
+      "qnas": {
+        "qna1": {
+          "question": "Não consigo conectar minha carteira. O que devo tentar?",
+          "answer": "<1><2>Verificações rápidas:</2> atualize a página, desbloqueie sua carteira e desative bloqueadores agressivos de anúncios/scripts para push.org.</1><1><2>Sem necessidade de mudar de rede:</2> permaneça na sua rede principal; Push lida com o roteamento nos bastidores.</1><1><2>Redefina as permissões do site:</2> na sua carteira, remova a conexão do site e reconecte.</1><1>Ainda travado? Pergunte no <3>Discord</3> ou abra um <4>ticket de suporte</4>.</1>",
+          "discord-url-title": "Junte-se ao Discord do Push Chain para ajuda em tempo real.",
+          "support-url-title": "Abra um ticket de suporte."
+        },
+        "qna2": {
+          "question": "Minha transação está pendente ou falhou — e agora?",
+          "answer": "<1><2>Verifique o status:</2> procure sua tx no <3>Push Scan</3> usando o hash da sua carteira.</1><1><2>Pendente:</2> geralmente confirma em breve; evite reenviar repetidamente.</1><1><2>Falhou:</2> nenhum fundos são debitados. Revise o erro e tente novamente.</1><1>Incidentes em andamento são postados no <4>Status</4>.</1>",
+          "scan-url-title": "Abrir Push Scan (explorer).",
+          "status-url-title": "Veja o status da rede e os incidentes."
+        },
+        "qna3": {
+          "question": "Como obtenho tokens de testnet (Donut)?",
+          "answer": "<1>Use o <3>Faucet</3> para solicitar tokens de teste.</1><1><2>Observações:</2> limites de taxa podem se aplicar; alguns faucets exigem verificação simples. Se o faucet falhar, entre em contato conosco no <4>Discord</4>.</1>",
+          "faucet-url-title": "Abrir o faucet do Push Chain.",
+          "discord-url-title": "Junte-se ao Discord do Push Chain."
+        },
+        "qna4": {
+          "question": "Como reportar um bug ou vulnerabilidade?",
+          "answer": "<1><2>Bugs do app:</2> abra um <3>ticket de suporte</3> ou poste no <4>Discord</4> com as etapas para reproduzir.</1><1><2>Problemas de segurança:</2> envie um e-mail para <5>security@push.org</5>. Evite divulgação pública até confirmarmos uma correção.</1>",
+          "support-url-title": "Abra um ticket de suporte.",
+          "discord-url-title": "Junte-se ao Discord."
+        },
+        "qna5": {
+          "question": "Onde estão os documentos e guias rápidos?",
+          "answer": "<1>Comece com <3>Docs</3> para guias rápidos e APIs, e a <4>Knowledge Base</4> para conceitos, análises aprofundadas e perguntas frequentes.</1>",
+          "docs-url-title": "Abrir a documentação do desenvolvedor.",
+          "kb-url-title": "Abrir a Knowledge Base."
+        },
+        "qna6": {
+          "question": "Posso solicitar suporte para uma nova rede, recurso ou integração?",
+          "answer": "<1>Sim. Informe-nos qual rede/ferramenta você precisa através de <3>Contato</3> ou abra uma issue no <4>GitHub</4>. Estamos expandindo a cobertura continuamente.</1>",
+          "contact-url-title": "Entre em contato com a equipe do Push Chain.",
+          "github-url-title": "Abrir a organização do GitHub."
+        }
+      }
+    }
+  }
+}

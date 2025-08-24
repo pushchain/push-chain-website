@@ -1,0 +1,65 @@
+{
+  "home": {
+    "partners_section": {
+      "title": "Powered by Push Chain",
+      "subtitle": "Explore apps who have multiplied their user base by simply deploying on Push Chain.",
+      "ctatitle": "Check out partners, apps and infra deploy on Push Chain",
+      "ctatext": "Explore Ecosystem"
+    },
+    "blog_section": {
+      "subtitle": "NEWS, DEVLOGS & IDEAS",
+      "title": "Your Pulse of Push Chain",
+      "explore_link_text": "Explore More Articles",
+      "explore_link_title": "Visit Push Chain blog to read all articles and updates"
+    },
+    "ending_section": {
+      "section_title": "Build Universal Apps.",
+      "section_subtitle": "Break the silos. Build once, scale on every blockchain.",
+      "docs_link": {
+        "text": "Explore Push Chain Docs",
+        "title": "Explore Push Chain documentation and developer resources"
+      },
+      "cta_link": {
+        "text": "LFG Push Chain",
+        "title": "Get started with Push Chain - the universal blockchain platform"
+      }
+    },
+    "featured_section": {
+      "tag": "FEATURED ON",
+      "title": "Push Chain in the Spotlight",
+      "subtitle": "Don't just take our word for it. See what the media is saying about the true universal chain."
+    },
+    "stats_section": {
+      "title": "Achieve",
+      "titleGradient": "Instant",
+      "titleThird": "Interoperability",
+      "description": "Optimized for performance.\nHigh TPS, ultra-low gas, and sub-second\nfinality for real-time app execution.",
+      "stats": {
+        "stat1": {
+          "title": "Supported Chains"
+        },
+        "stat2": {
+          "title": "TPS",
+          "description": "4.2k"
+        },
+        "stat3": {
+          "title": "NATIVE FINALITY",
+          "description": "Instant"
+        },
+        "stat4": {
+          "title": "NATIVE BLOCK TIME",
+          "description": "1s"
+        }
+      }
+    },
+    "trustedby_section": {
+      "title": "Built by the team trusted by pioneers of web3"
+    }
+  },
+  "partners_section": {
+    "title": "Powered by Push Chain",
+    "subtitle": "Explore apps who have multiplied their user base by simply deploying on Push Chain.",
+    "ctatitle": "Check out partners, apps and infra deploy on Push Chain",
+    "ctatext": "Explore Ecosystem"
+  }
+}

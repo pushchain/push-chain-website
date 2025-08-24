@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Nhận cái nhìn trước về Testnet, Donut, xây dựng ứng dụng <1>universal</1> và giành giải thưởng!",
+      "button-text": "Nhận Thẻ Beta Đóng",
+      "button-title": "Tham gia <1>Push Chain</1> testnet và nhận thẻ beta đóng của bạn",
+      "button-aria-label": "Mở Telegram để nhận thẻ beta đóng của <1>Push Chain</1>",
+      "image-alt": "Testnet Donut <1>Push Chain</1> - Blockchain <1>universal</1>",
+      "close-button-title": "Đóng thông báo testnet",
+      "close-button-aria-label": "Bỏ qua thông báo testnet <1>Push Chain</1>",
+      "container-aria-label": "Thông báo testnet <1>Push Chain</1>"
+    }
+  }
+}

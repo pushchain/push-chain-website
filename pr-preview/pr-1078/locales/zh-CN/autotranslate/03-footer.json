@@ -1,0 +1,95 @@
+{
+  "footer": {
+    "email-section": {
+      "title": "随时掌握 Push Chain 的最新动态",
+      "title-secondary": "新闻和更新！",
+      "title-aria-label": "Newsletter subscription section",
+      "section-aria-label": "Push Chain newsletter signup"
+    },
+    "main-section": {
+      "section-aria-label": "Footer navigation and links",
+      "logo-link-title": "Push Chain 首页",
+      "logo-link-aria-label": "Push Chain homepage",
+      "logo-alt": "Push Chain logo"
+    },
+    "columns": {
+      "resources": {
+        "title": "资源",
+        "title-aria-label": "Resources navigation"
+      },
+      "developers": {
+        "title": "开发者",
+        "title-aria-label": "Developer navigation"
+      },
+      "community": {
+        "title": "社区",
+        "title-aria-label": "Community navigation"
+      },
+      "help": {
+        "title": "帮助",
+        "title-aria-label": "Help navigation"
+      }
+    },
+    "links": {
+      "get-started": "开始使用",
+      "get-started-title": "开始在 Push Chain 上构建",
+      "docs": "文档",
+      "docs-title": "Push Chain 文档",
+      "github": "GitHub",
+      "github-title": "Push Chain 的 GitHub 仓库",
+      "knowledge-base": "知识库",
+      "knowledge-base-title": "Push Chain 知识库",
+      "blog": "博客",
+      "blog-title": "Push Chain 博客",
+      "litepaper": "轻白皮书",
+      "litepaper-title": "Push Chain 轻白皮书 (PDF)",
+      "brand-kit": "品牌工具包",
+      "brand-kit-title": "Push Chain 品牌素材和指南",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain 区块链浏览器",
+      "faucet": "水龙头",
+      "faucet-title": "从 Push Chain 水龙头获取测试代币",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Chain 社区门户",
+      "support": "支持",
+      "support-title": "帮助中心",
+      "security": "安全与披露",
+      "security-title": "报告漏洞 (负责任披露)",
+      "contact-us": "联系我们",
+      "contact-us-title": "合作、BD、媒体或通用咨询",
+      "careers": "职业",
+      "careers-title": "Push Chain 招聘岗位",
+      "twitter": "X (Twitter)",
+      "twitter-title": "在 X (Twitter) 上关注 Push Chain",
+      "discord": "Discord",
+      "discord-title": "加入 Push Chain Discord",
+      "reddit": "Reddit",
+      "reddit-title": "加入 Push Chain subreddit",
+      "telegram": "Telegram",
+      "telegram-title": "加入 Push Chain Telegram"
+    },
+    "social-section": {
+      "section-aria-label": "Social media links and legal information",
+      "twitter-icon-title": "Push Chain on X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain on X (Twitter)",
+      "github-icon-title": "Push Chain on GitHub",
+      "github-icon-aria-label": "Push Chain on GitHub",
+      "discord-icon-title": "Push Chain on Discord",
+      "discord-icon-aria-label": "Push Chain on Discord"
+    },
+    "legal": {
+      "privacy-policy": "隐私政策",
+      "privacy-policy-title": "阅读隐私政策",
+      "privacy-policy-aria-label": "Privacy Policy",
+      "terms-of-service": "服务条款",
+      "terms-of-service-title": "阅读服务条款",
+      "terms-of-service-aria-label": "Terms of Service",
+      "cookie-preferences": "Cookie 设置",
+      "cookie-preferences-title": "管理 Cookie 设置"
+    },
+    "footer-image": {
+      "alt": "Push Chain footer illustration",
+      "title": "Push Chain - 通用区块链"
+    }
+  }
+}

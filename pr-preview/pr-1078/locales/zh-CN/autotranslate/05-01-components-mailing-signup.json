@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "不错过任何更新",
+      "text": "注册并及时了解生态系统公告、赠品等最新信息。",
+      "email-input": "您的邮箱",
+      "email-input-placeholder": "请输入您的邮箱地址",
+      "email-input-title": "订阅 Push Chain 新闻简报以获取更新",
+      "email-input-aria-label": "订阅新闻简报的邮箱地址",
+      "submit-button": "注册",
+      "submit-button-title": "订阅 Push Chain 新闻简报",
+      "submit-button-aria-label": "订阅新闻简报",
+      "loading-submit-button": "请稍候...",
+      "arrow-button-aria-label": "订阅新闻简报",
+      "arrow-button-title": "订阅 Push Chain 更新",
+      "form-aria-label": "新闻简报订阅表单",
+      "success-message-aria-label": "订阅成功",
+      "error-message-aria-label": "订阅错误信息"
+    }
+  }
+}
