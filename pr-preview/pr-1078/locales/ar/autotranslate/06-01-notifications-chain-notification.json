@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "احصل على نظرة خاطفة على شبكة الاختبار Donut، وقم ببناء تطبيقات عالمية واربح جوائز!",
-      "button-text": "استلام تصريح النسخة التجريبية المغلقة",
-      "button-title": "انضم إلى شبكة اختبار Push Chain واحصل على تصريح النسخة التجريبية المغلقة الخاص بك",
-      "button-aria-label": "افتح Telegram للحصول على تصريح النسخة التجريبية المغلقة لـ Push Chain",
-      "image-alt": "شبكة اختبار Push Chain Donut - بلوكشين عالمي",
-      "close-button-title": "إغلاق إشعار شبكة الاختبار",
-      "close-button-aria-label": "تجاهل إشعار شبكة اختبار Push Chain",
-      "container-aria-label": "إشعار شبكة اختبار Push Chain"
+      "description": "احصل على نظرة خاطفة إلى شبكة الاختبار Donut، وابنِ تطبيقات عالمية واربح جوائز!",
+      "button-text": "احصل على بطاقة الدخول للإصدار التجريبي المغلق",
+      "button-title": "انضم إلى اختبار شبكة Push Chain واحصل على بطاقة المرور الخاصة بالإصدار التجريبي المغلق",
+      "button-aria-label": "افتح Telegram للحصول على مرور النسخة التجريبية المغلقة من Push Chain",
+      "image-alt": "Push Chain Testnet Donut - بلوكشين يونيفرسال",
+      "close-button-title": "إغلاق إشعار testnet",
+      "close-button-aria-label": "إغلاق إشعار اختبار شبكة Push Chain",
+      "container-aria-label": "إشعارات Push Chain testnet"
     }
   }
 }

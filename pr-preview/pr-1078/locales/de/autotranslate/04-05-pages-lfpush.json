@@ -3,28 +3,28 @@
     "lfpush": {
       "seo": {
         "title": "Let's Push — Community Initiative",
-        "description": "Push community initiatives, posts and more.",
-        "og-title": "Let's Push - Community Initiative for Push Chain",
-        "og-description": "Community-driven initiative and shares for Push Chain.",
+        "description": "Push Community-Initiativen, Posts und mehr.",
+        "og-title": "Let's Push - Community Initiative für Push Chain",
+        "og-description": "Eine Community-Initiative und Anteile für Push Chain.",
         "twitter-title": "Let's Push | Community Initiative",
-        "twitter-description": "See Push community initiative for Push Chain."
+        "twitter-description": "Erfahren Sie mehr über die Push-Community-Initiative für Push Chain."
       },
       "hero-section": {
-        "title": "Let's Push",
-        "description": "Die LF Push Builders-Community – wir feiern, was du erreichst und wem du hilfst. Teile deine Erfolge, versehe <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention> mit einem Tag und wir verstärken deine Botschaft."
+        "title": "Lasst uns loslegen",
+        "description": "Die Community der LF Push Builders – wir feiern, was du erreichst und wem du hilfst. Teile deine Erfolge, markiere <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention>, und wir verstärken deine Botschaft."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Deinen Erfolg teilen",
+          "share-win": "Teile deinen Gewinn",
           "join-community": "Community beitreten",
           "learn-more": "Mehr erfahren"
         },
         "meta": {
-          "tweet-alt": "Tweet von einem Community-Mitglied von Push Chain",
-          "loading-alt": "Lade weitere Community-Tweets"
+          "tweet-alt": "Tweet vom Push Chain Community-Mitglied",
+          "loading-alt": "Weitere Community-Tweets werden geladen"
         },
-        "tweets-counter": "{{count}} Tweets und mehr!",
-        "loading": "Lade weitere Tweets...",
+        "tweets-counter": "{{count}} Tweets und immer weiter!",
+        "loading": "Weitere Tweets werden geladen...",
         "end-message": "Du hast das Ende erreicht! 🎉"
       }
     }

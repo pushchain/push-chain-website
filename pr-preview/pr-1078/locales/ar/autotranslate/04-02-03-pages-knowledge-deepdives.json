@@ -3,34 +3,34 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "Deep Dives — Concepts & Architecture",
-          "description": "Readable explainers on shared state, fee abstraction, USV/UEA, and the universal execution layer.",
-          "og-title": "Deep Dives - Concepts & Architecture",
-          "og-description": "In-depth articles on Push Chain modules, design decisions, and performance.",
-          "twitter-title": "Deep Dives - Under the hood",
-          "twitter-description": "Explainers on how Push Chain works."
+          "title": "تعمق — المفاهيم والهيكلة",
+          "description": "شروحات سهلة للقراءة حول الـ shared state، الـ fee abstraction، USV/UEA، والـ universal execution layer.",
+          "og-title": "غوص عميق - المفاهيم والهيكلة",
+          "og-description": "مقالات متعمقة حول وحدات <1>بلوكشين</1> <2>Push Chain</2>، وقرارات التصميم، والأداء.",
+          "twitter-title": "Deep Dives - نظرة معمقة",
+          "twitter-description": "شرح مبسط لكيفية عمل بلوكشين Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge-base": "Knowledge Base"
+            "knowledge-base": "قاعدة المعرفة"
           },
           "blocks": {
-            "title": "Deep Dives",
+            "title": "غوص عميق",
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Architecture Deep Dives\n\nLearn about the intricacies of Push Chain's architecture and how it works - One module at a time.",
-                  "curated-reads": "## Curated Reads 👇"
+                  "intro": "## Architecture Deep Dives\n\nتعرّف على تفاصيل هيكلية Push Chain وكيفية عملها - وحدة واحدة في كل مرة.",
+                  "curated-reads": "## قراءات منتقاة 👇"
                 }
               },
               "learn-push-chain": {
-                "title": "Learn what makes Push Chain tick!",
+                "title": "تعرّف على ما يجعل Push Chain يعمل!",
                 "items": {
                   "interop-spectrum": {
-                    "title": "Interoperability as a Spectrum"
+                    "title": "التشغيل البيني كطيف"
                   },
                   "understand-proof-of-stake-part-1": {
-                    "title": "Understanding Proof of Stake (POS) - Part 1"
+                    "title": "فهم إثبات الحصة (POS) - الجزء الأول"
                   }
                 }
               }

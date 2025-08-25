@@ -1,118 +1,118 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Open a Support Ticket",
-      "expanded-title-for-support": "Need help? 👋",
-      "collapsed-text-for-contact": "Contact the Team",
-      "expanded-title-for-contact": "Hi There! 👋",
+      "collapsed-text-for-support": "افتح تذكرة دعم",
+      "expanded-title-for-support": "هل تحتاج مساعدة؟ 👋",
+      "collapsed-text-for-contact": "تواصل مع الفريق",
+      "expanded-title-for-contact": "مرحباً! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 الدعم الفني",
-          "description": "Bug reports, SDK/API, smart contracts, integration help"
+          "label": "🔧 دعم فني",
+          "description": "تقارير الأخطاء، SDK/API، العقود الذكية، مساعدة في التكامل"
         },
         "network": {
           "label": "🌐 الشبكة و testnet",
-          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet issues"
+          "description": "مستكشف/Push Scan، RPC، صنبور، مشاكل Donut testnet"
         },
         "wallet": {
-          "label": "👛 Universal Wallet",
-          "description": "Push Wallet, universal chain connection or other wallet issues"
+          "label": "👛 محفظة عالمية",
+          "description": "محفظة Push، اتصال سلاسل universal أو مشاكل أخرى في المحفظة"
         },
         "identity": {
           "label": "🪪 الحسابات والهوية",
-          "description": "UEA/UOA, signatures, attribution questions"
+          "description": "UEA/UOA، توقيعات، أسئلة الإسناد"
         },
         "security": {
           "label": "🛡️ الأمان",
-          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
+          "description": "تقارير الثغرات، الإفصاح المسؤول (security@push.org)"
         },
         "general": {
           "label": "💬 استفسار عام",
-          "description": "Questions, feedback, other topics"
+          "description": "أسئلة، تعليقات، مواضيع أخرى"
         },
         "partnerships": {
-          "label": "🤝 الشراكات والتكامل",
-          "description": "BD, ecosystem integrations (wallets, infra, exchanges, protocols)"
+          "label": "🤝 شراكات وتكاملات",
+          "description": "تطوير الأعمال، تكاملات النظام البيئي (محافظ، بنية تحتية، بورصات، بروتوكولات)"
         },
         "grants": {
           "label": "💰 المنح وبرامج النظام البيئي",
-          "description": "BRB, Bootcamp, grants, funding inquiries"
+          "description": "في انتظار الرد، معسكر تدريبي، منح، استفسارات عن التمويل"
         },
         "media": {
-          "label": "📰 وسائل الإعلام والصحافة",
-          "description": "Interviews, statements, assets, fact-checks"
+          "label": "📰 الإعلام والصحافة",
+          "description": "مقابلات، بيانات، أصول، تدقيق الحقائق"
         },
         "events": {
-          "label": "🎤 التحدث والفعاليات",
-          "description": "Talks, workshops, hackathons, sponsorships"
+          "label": "🎤 فعاليات و محاضرات",
+          "description": "محاضرات، ورش عمل، هاكاثون، رعاية"
         },
         "careers": {
-          "label": "👩‍💻 الوظائف",
-          "description": "Open roles, internships, contractor opportunities"
+          "label": "👩‍💻 وظائف",
+          "description": "وظائف شاغرة، تدريب، فرص عمل كمستقل"
         },
         "validators": {
-          "label": "🧡 المدققون / مشغلو العقد",
-          "description": "Operator interest, RPC providers, infra partners"
+          "label": "🧡 مُشغّلو العُقد / المدققون",
+          "description": "اهتمام المشغلين، مزودي RPC، شركاء البنية التحتية"
         },
         "legal": {
-          "label": "⚖️ القانون والامتثال",
-          "description": "Trademarks, data requests, agreements"
+          "label": "⚖️ الشؤون القانونية والامتثال",
+          "description": "العلامات التجارية، طلبات البيانات، الاتفاقيات"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "What can we help you with?",
-            "subtitle": "Choose the category that best describes your inquiry"
+            "title": "بماذا يمكننا مساعدتك؟",
+            "subtitle": "اختر الفئة التي تصف استفسارك على أفضل وجه"
           },
           "contact": {
-            "title": "Let's get to know you",
-            "subtitle": "We'll use this information to get back to you",
-            "name-label": "Your Name",
-            "name-placeholder": "Enter your full name",
-            "name-aftergreet": "Nice to meet you, ",
-            "email-label": "Email Address",
-            "email-placeholder": "Enter your email address"
+            "title": "دعنا نتعرف عليك",
+            "subtitle": "سنستخدم هذه المعلومات للرد عليك",
+            "name-label": "اسمك",
+            "name-placeholder": "أدخل اسمك الكامل",
+            "name-aftergreet": "يسعدني التعرف عليك, ",
+            "email-label": "عنوان البريد الإلكتروني",
+            "email-placeholder": "أدخل عنوان بريدك الإلكتروني"
           },
           "details": {
-            "title": "Tell us more",
-            "subtitle": "Provide details about your inquiry",
-            "subject-label": "Subject",
-            "subject-placeholder": "Brief summary of your issue",
-            "message-label": "Message",
-            "message-placeholder": "Describe your issue in detail. Include any error messages, steps to reproduce, or relevant information."
+            "title": "أخبرنا المزيد",
+            "subtitle": "قدم تفاصيل حول استفسارك",
+            "subject-label": "الموضوع",
+            "subject-placeholder": "ملخص موجز لمشكلتك",
+            "message-label": "رسالة",
+            "message-placeholder": "صف مشكلتك بالتفصيل. قم بتضمين أي رسائل خطأ أو خطوات لإعادة الإنتاج أو معلومات ذات صلة."
           },
           "submit": {
-            "title": "Review and Submit",
-            "subtitle": "Please review your information before submitting",
-            "placeholder": "Tell us more about what you need help with..."
+            "title": "مراجعة وإرسال",
+            "subtitle": "يرجى مراجعة معلوماتك قبل الإرسال",
+            "placeholder": "أخبرنا المزيد عما تحتاج المساعدة فيه..."
           }
         },
         "buttons": {
-          "next": "Next",
-          "previous": "Previous",
-          "submit": "Submit Ticket",
-          "submitting": "Submitting..."
+          "next": "التالي",
+          "previous": "سابق",
+          "submit": "إرسال التذكرة",
+          "submitting": "جاري الإرسال..."
         },
         "validation": {
-          "name-required": "Name is required",
-          "name-min-length": "Name must be at least 2 characters long",
-          "email-required": "Email is required",
-          "email-invalid": "Please enter a valid email address",
-          "subject-required": "Subject is required",
-          "message-required": "Message is required",
-          "category-required": "Please select a category",
-          "default": "This field is required"
+          "name-required": "الاسم مطلوب",
+          "name-min-length": "يجب أن يكون الاسم على الأقل حرفين",
+          "email-required": "البريد الإلكتروني مطلوب",
+          "email-invalid": "الرجاء إدخال عنوان بريد إلكتروني صالح",
+          "subject-required": "الموضوع مطلوب",
+          "message-required": "الرسالة مطلوبة",
+          "category-required": "الرجاء تحديد فئة",
+          "default": "هذا الحقل مطلوب"
         },
         "success": {
-          "title": "Ticket Submitted Successfully!",
-          "message": "Thank you for contacting us. We've received your support ticket and will get back to you as soon as possible.",
-          "button": "Submit Another Ticket"
+          "title": "تم تقديم التذكرة بنجاح!",
+          "message": "شكراً لتواصلك معنا. لقد استلمنا طلب الدعم الخاص بك وسوف نتواصل معك في أقرب وقت ممكن.",
+          "button": "إرسال تذكرة أخرى"
         },
         "error": {
-          "title": "Submission Failed",
-          "message": "There was an error submitting your ticket. Please try again or contact us directly.",
-          "button": "Try Again"
+          "title": "فشل الإرسال",
+          "message": "حدث خطأ أثناء إرسال تذكرتك. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرةً.",
+          "button": "حاول مرة أخرى"
         }
       }
     }

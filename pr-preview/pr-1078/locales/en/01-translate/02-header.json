@@ -17,7 +17,7 @@
       "link1": {
         "text": "Push Scan",
         "subtext": "Block explorer for Push Chain",
-        "title": "Explore Push Chain testnet transactions and blocks on Push Scan"
+        "title": "Explore Push Chain Testnet transactions and blocks on Push Scan"
       },
       "link2": {
         "text": "Faucet",
@@ -104,35 +104,7 @@
     },
     "language": {
       "title": "Language",
-      "aria-label": "Language Selection Dropdown",
-      "english": "English",
-      "english-ctatitle": "Change language to English",
-      "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "切换语言为中文",
-      "spanish": "Español",
-      "spanish-ctatitle": "Cambiar el idioma a español",
-      "hindi": "हिंदी",
-      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-      "korean": "한국어",
-      "korean-ctatitle": "한국어로 언어 변경",
-      "japanese": "日本語",
-      "japanese-ctatitle": "言語を日本語に変更する",
-      "portuguese": "Português",
-      "portuguese-ctatitle": "Mudar o idioma para português",
-      "russian": "Русский",
-      "russian-ctatitle": "Изменить язык на русский",
-      "turkish": "Türkçe",
-      "turkish-ctatitle": "Dili Türkçeye değiştir",
-      "french": "Français",
-      "french-ctatitle": "Changer la langue en français",
-      "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
-      "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
-      "german": "Deutsch",
-      "german-ctatitle": "Sprache auf Deutsch ändern",
-      "arabic": "العربية",
-      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+      "aria-label": "Language Selection Dropdown"
     },
     "app-button": {
       "text": "Push Portal",

@@ -1,117 +1,117 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Open a Support Ticket",
-      "expanded-title-for-support": "Need help? 👋",
-      "collapsed-text-for-contact": "Contact the Team",
-      "expanded-title-for-contact": "Hi There! 👋",
+      "collapsed-text-for-support": "Support-Ticket öffnen",
+      "expanded-title-for-support": "Brauchst du Hilfe? 👋",
+      "collapsed-text-for-contact": "Kontakt zum Team aufnehmen",
+      "expanded-title-for-contact": "Hallo! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 Technical Support",
-          "description": "Bug reports, SDK/API, smart contracts, integration help"
+          "label": "🔧 Technischer Support",
+          "description": "Fehlerberichte, SDK/API, smart contracts, Integrationshilfe"
         },
         "network": {
-          "label": "🌐 Network & Testnet",
-          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet issues"
+          "label": "🌐 Netzwerk & Testnet",
+          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet Probleme"
         },
         "wallet": {
-          "label": "👛 Universal Wallet",
-          "description": "Push Wallet, universal chain connection or other wallet issues"
+          "label": "👛 Universal वॉलेट",
+          "description": "Push Wallet, universelle Kettenverbindung oder andere Probleme mit dem Wallet"
         },
         "identity": {
-          "label": "🪪 Accounts & Identity",
-          "description": "UEA/UOA, signatures, attribution questions"
+          "label": "🪪 Konten & Identität",
+          "description": "UEA/UOA, Signaturen, Fragen zur Zuordnung"
         },
         "security": {
-          "label": "🛡️ Security",
-          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
+          "label": "🛡️ Sicherheit",
+          "description": "Sicherheitslücken melden, verantwortungsvolle Offenlegung (security@push.org)"
         },
         "general": {
-          "label": "💬 General Inquiry",
-          "description": "Questions, feedback, other topics"
+          "label": "💬 Allgemeine Anfrage",
+          "description": "Fragen, Feedback, andere Themen"
         },
         "partnerships": {
-          "label": "🤝 Partnerships & Integrations",
-          "description": "BD, ecosystem integrations (wallets, infra, exchanges, protocols)"
+          "label": "🤝 Partnerschaften & Integrationen",
+          "description": "BD, Ökosystem-Integrationen (Wallets, Infrastruktur, Exchanges, Protokolle)"
         },
         "grants": {
           "label": "💰 Grants & Ecosystem Programs",
-          "description": "BRB, Bootcamp, grants, funding inquiries"
+          "description": "BRB, Bootcamp, Zuschüsse, Finanzierungsanfragen"
         },
         "media": {
-          "label": "📰 Media & Press",
-          "description": "Interviews, statements, assets, fact-checks"
+          "label": "📰 Media & Presse",
+          "description": "Interviews, Stellungnahmen, Assets, Faktenchecks"
         },
         "events": {
           "label": "🎤 Speaking & Events",
-          "description": "Talks, workshops, hackathons, sponsorships"
+          "description": "Vorträge, Workshops, Hackathons, Sponsoring"
         },
         "careers": {
-          "label": "👩‍💻 Careers",
-          "description": "Open roles, internships, contractor opportunities"
+          "label": "👩‍💻 Karriere",
+          "description": "Offene Stellen, Praktika, Aufträge"
         },
         "validators": {
-          "label": "🧡 Validator / Node Operators",
-          "description": "Operator interest, RPC providers, infra partners"
+          "label": "🧡 Validator / Node Betreiber",
+          "description": "Interesse von Betreibern, RPC-Anbietern, Infrastrukturpartnern"
         },
         "legal": {
           "label": "⚖️ Legal & Compliance",
-          "description": "Trademarks, data requests, agreements"
+          "description": "Markenrechte, Datenanfragen, Vereinbarungen"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "Was können wir für Sie tun?",
-            "subtitle": "Wählen Sie die Kategorie, die Ihre Anfrage am besten beschreibt"
+            "title": "Womit können wir Ihnen helfen?",
+            "subtitle": "Wähle die Kategorie, die deine Anfrage am besten beschreibt"
           },
           "contact": {
-            "title": "Lernen wir uns kennen",
-            "subtitle": "Wir verwenden diese Informationen, um Sie zu kontaktieren",
-            "name-label": "Ihr Name",
-            "name-placeholder": "Geben Sie Ihren vollständigen Namen ein",
-            "name-aftergreet": "Schön, Sie kennenzulernen, ",
+            "title": "Lass uns dich kennenlernen",
+            "subtitle": "Wir verwenden diese Informationen, um uns bei Ihnen zu melden",
+            "name-label": "Dein Name",
+            "name-placeholder": "Bitte geben Sie Ihren vollständigen Namen ein",
+            "name-aftergreet": "Schön, dich kennenzulernen, ",
             "email-label": "E-Mail-Adresse",
-            "email-placeholder": "Geben Sie Ihre E-Mail-Adresse ein"
+            "email-placeholder": "Bitte gib deine E-Mail-Adresse ein"
           },
           "details": {
-            "title": "Erzählen Sie uns mehr",
-            "subtitle": "Geben Sie Details zu Ihrer Anfrage an",
+            "title": "Erzähl uns mehr",
+            "subtitle": "Bitte geben Sie Details zu Ihrer Anfrage an",
             "subject-label": "Betreff",
-            "subject-placeholder": "Kurze Zusammenfassung Ihres Problems",
+            "subject-placeholder": "Kurze Zusammenfassung deines Problems",
             "message-label": "Nachricht",
-            "message-placeholder": "Beschreiben Sie Ihr Problem im Detail. Fügen Sie alle Fehlermeldungen, Schritte zur Reproduktion oder relevante Informationen ein."
+            "message-placeholder": "Beschreibe dein Problem im Detail. Füge alle Fehlermeldungen, Schritte zur Reproduktion oder relevante Informationen hinzu."
           },
           "submit": {
             "title": "Überprüfen und Absenden",
-            "subtitle": "Bitte überprüfen Sie Ihre Informationen, bevor Sie sie absenden",
-            "placeholder": "Erzählen Sie uns mehr darüber, wobei Sie Hilfe benötigen..."
+            "subtitle": "Bitte überprüfen Sie Ihre Angaben, bevor Sie sie absenden",
+            "placeholder": "Erzähl uns mehr darüber, wobei du Hilfe brauchst..."
           }
         },
         "buttons": {
           "next": "Weiter",
-          "previous": "Zurück",
+          "previous": "Vorheriger",
           "submit": "Ticket absenden",
-          "submitting": "Wird abgesendet..."
+          "submitting": "Wird gesendet..."
         },
         "validation": {
           "name-required": "Name ist erforderlich",
           "name-min-length": "Der Name muss mindestens 2 Zeichen lang sein",
-          "email-required": "E-Mail ist erforderlich",
+          "email-required": "E-Mail Adresse ist erforderlich",
           "email-invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
           "subject-required": "Betreff ist erforderlich",
           "message-required": "Nachricht ist erforderlich",
-          "category-required": "Bitte wählen Sie eine Kategorie",
+          "category-required": "Bitte wähle eine Kategorie aus",
           "default": "Dieses Feld ist erforderlich"
         },
         "success": {
-          "title": "Ticket erfolgreich abgesendet!",
+          "title": "Ticket erfolgreich übermittelt!",
           "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihr Support-Ticket erhalten und werden uns so schnell wie möglich bei Ihnen melden.",
-          "button": "Ein weiteres Ticket absenden"
+          "button": "Ein weiteres Ticket einreichen"
         },
         "error": {
-          "title": "Absenden fehlgeschlagen",
-          "message": "Beim Absenden Ihres Tickets ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+          "title": "Einsendung fehlgeschlagen",
+          "message": "Beim Absenden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
           "button": "Erneut versuchen"
         }
       }

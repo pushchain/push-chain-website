@@ -2,15 +2,15 @@
   "pages": {
     "privacy": {
       "seo": {
-        "title": "Privacy Policy",
-        "description": "How we collect, use, and protect your data—plus your rights and choices.",
-        "og-title": "Push Chain Privacy Policy - Data Protection",
-        "og-description": "Learn what data we collect, how we use it, and your privacy rights.",
-        "twitter-title": "Privacy Policy - Push Chain",
-        "twitter-description": "Your data. Your rights. How we protect both."
+        "title": "Datenschutzrichtlinie",
+        "description": "Wie wir deine Daten sammeln, nutzen und schützen – und deine Rechte und Wahlmöglichkeiten.",
+        "og-title": "Push Chain Datenschutzrichtlinie – Datenschutz",
+        "og-description": "Erfahren Sie, welche Daten wir sammeln, wie wir sie verwenden und welche Datenschutzrechte Sie haben.",
+        "twitter-title": "Datenschutzrichtlinie - Push Chain",
+        "twitter-description": "Ihre Daten. Ihre Rechte. So schützen wir beides."
       },
       "hero-section": {
-        "title": "DATENSCHUTZRICHTLINIE",
+        "title": "DATENSCHUTZERKLÄRUNG",
         "description": "Definiert, wie Push Daten sammelt, verarbeitet und nutzt.",
         "update-text": "Letzte Aktualisierung: 2. November 2020"
       }

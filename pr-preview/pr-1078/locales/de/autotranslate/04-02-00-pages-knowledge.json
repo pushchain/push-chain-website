@@ -2,33 +2,33 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Wissensdatenbank — Anleitungen, FAQs & Anleitungen",
-        "description": "Starten Sie hier mit Konzepten, FAQs, Anleitungen und Ökosystemressourcen. Klare, nicht-technische Anleitungen zur Verwendung von Push Chain.",
+        "title": "Wissensdatenbank — Anleitungen, FAQs & How-tos",
+        "description": "Hier findest du Grundlagen, FAQs, Anleitungen und Ressourcen für das Ökosystem. Verständliche, nicht-technische Anleitungen zur Nutzung von Push Chain.",
         "og-title": "Push Chain Knowledge Base - Guides & FAQs",
-        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufig gestellte Fragen zu Push Chain.",
-        "twitter-title": "Knowledge Base - Guides & FAQs",
-        "twitter-description": "Schnelle Anleitungen, FAQs und Anleitungen für Push Chain (kein Entwicklerjargon)."
+        "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufige Fragen zu Push Chain.",
+        "twitter-title": "Wissensdatenbank - Anleitungen & FAQs",
+        "twitter-description": "Schnelle Anleitungen, FAQs und Tipps für Push Chain (ohne Fachjargon)."
       },
       "hero-section": {
         "title": "Wissensdatenbank",
         "description": {
-          "highlighted": "Push Chain ist eine echte universelle Blockchain, die Fragmentierung über alle Chains hinweg beseitigt.",
+          "highlighted": "Push Chain ist eine echte universelle Blockchain, die darauf ausgelegt ist, Fragmentierung über alle Chains hinweg zu eliminieren.",
           "developers": "Entwickler",
-          "developers-text": "Einmal bereitstellen und sofort mit allen unterstützten EVM- und Nicht-EVM-Chains kompatibel werden.",
-          "users": "Benutzer",
-          "users-text": "die gleiche App verwenden, egal von welcher Chain sie kommen."
+          "developers-text": "Einmal bereitstellen und sofort mit allen unterstützten EVM- und non-EVM-Chains kompatibel sein.",
+          "users": "Nutzer",
+          "users-text": "nutze die gleiche App, egal von welcher Blockchain sie kommen."
         },
         "email-signup": {
           "title": {
-            "long": "Benachrichtigung über Push Chain Testnet erhalten",
+            "long": "Bleiben Sie über das Push Chain Testnet informiert",
             "short": "Push Chain Testnet"
           },
-          "description": "Seien Sie der Erste, wenn das Push Chain Testnet live geht. Treten Sie unserer Mailingliste für exklusive Updates bei."
+          "description": "Seien Sie der Erste, wenn das Push Chain testnet live geht. Melden Sie sich für unsere Mailingliste an, um exklusive Updates zu erhalten."
         },
         "footer": {
-          "description": "Gestalten Sie nahtlose, benutzerfreundliche Erlebnisse für Ihre App auf jeder Blockchain mit Push Chain.",
+          "description": "Gestalten Sie nahtlose, benutzerfreundliche Erlebnisse für Ihre app auf jeder Blockchain mit Push Chain.",
           "cta": {
-            "text": "Benachrichtigung erhalten"
+            "text": "Benachrichtigen lassen"
           }
         }
       },
@@ -39,34 +39,34 @@
               "title": "Ressourcen",
               "items": {
                 "push101": {
-                  "title": "Push Chain Basics",
-                  "subtitle": "Lernen Sie die Grundlagen von Push Chain, seine Innovationen und warum es benötigt wird",
+                  "title": "Push Chain Grundlagen",
+                  "subtitle": "Lerne die Grundlagen von Push Chain, seine Innovationen und warum es benötigt wird",
                   "ctatitle": "Mehr erfahren"
                 },
                 "builders": {
-                  "title": "Auf Push Chain bauen",
-                  "subtitle": "Tauchen Sie ein in das Bauen von universellen Apps, was es freischaltet und wie Sie anfangen können!",
+                  "title": "Build on Push Chain",
+                  "subtitle": "Entdecke, wie du universelle <app>s entwickelst, welche Möglichkeiten sich dadurch eröffnen und wie du anfängst!",
                   "ctatitle": "Builders Assemble"
                 },
                 "deepdives": {
                   "title": "Technische Deep Dives",
-                  "subtitle": "Möchten Sie die detaillierte Funktionsweise von Push Chain kennenlernen? Oder sind Sie einfach nur neugierig? In jedem Fall, hallo!",
-                  "ctatitle": "Sehen Sie es ticken"
+                  "subtitle": "Neugierig auf die detaillierte Funktionsweise von Push? Oder einfach nur interessiert? Egal wie, wir freuen uns über dein Interesse!",
+                  "ctatitle": "Sehen Sie, wie es funktioniert"
                 },
                 "devdocs": {
-                  "title": "Entwicklerdokumentation",
-                  "subtitle": "Kommen wir gleich zur Sache! Ich bin eine universelle Chain... und Sie sind ein Entwickler, machen wir es offiziell!",
-                  "ctatitle": "Jetzt bauen"
+                  "title": "Entwickler-Dokumentation",
+                  "subtitle": "Kommen wir gleich zur Sache! Ich bin eine universal chain... und Sie sind ein Entwickler, machen wir es offiziell!",
+                  "ctatitle": "Jetzt entwickeln"
                 },
                 "tokenomics": {
                   "title": "Tokenomics erkunden",
-                  "subtitle": "Lernen Sie, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das auf Langlebigkeit ausgelegt ist",
+                  "subtitle": "Erfahren Sie mehr darüber, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das auf Dauer ausgelegt ist",
                   "ctatitle": "Token Design lernen"
                 },
                 "faq": {
                   "title": "FAQs",
-                  "subtitle": "Hier finden Sie Antworten auf alle gängigen Fragen der Community",
-                  "ctatitle": "Mehr lesen"
+                  "subtitle": "Hier findest du Antworten auf alle häufig gestellten Fragen der Community",
+                  "ctatitle": "Mehr erfahren"
                 }
               }
             }

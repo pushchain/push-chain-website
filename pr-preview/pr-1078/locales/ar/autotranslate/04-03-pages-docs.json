@@ -2,19 +2,19 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "توثيق — قم ببناء تطبيقات عالمية",
-        "description": "كل ما تحتاجه لإطلاق مشروعك على Push Chain: البداية السريعة، وSDKs، ومرجع API، وأمثلة، وإعداد العقدة.",
-        "og-title": "توثيق Push Chain - البداية السريعة، وSDKs وAPI",
-        "og-description": "قم ببناء وتشغيل التطبيقات على طبقة التنفيذ العالمية بدليل واضح وأمثلة.",
-        "twitter-title": "توثيق Push Chain - ابدأ الآن",
-        "twitter-description": "البداية السريعة، وSDKs، ومرجع API، وأمثلة للإطلاق السريع."
+        "title": "توثيق — بناء تطبيقات عالمية",
+        "description": "كل ما تحتاجه لإطلاق مشروعك على Push Chain: بدايات سريعة، حزم تطوير البرامج (SDKs)، مرجع واجهة برمجة التطبيقات (API)، أمثلة، وإعداد العقدة.",
+        "og-title": "وثائق Push Chain - البداية السريعة، حزم التطوير (SDKs) وواجهة برمجة التطبيقات (API)",
+        "og-description": "قم ببناء وتشغيل التطبيقات على طبقة التنفيذ العالمية باستخدام أدلة وأمثلة واضحة.",
+        "twitter-title": "Push Chain Docs - ابدأ البناء الآن",
+        "twitter-description": "بدء سريع، ومجموعات تطوير البرامج (SDKs)، ومرجع API، وأمثلة للإطلاق بسرعة."
       },
       "header": {
-        "countdown-title": "إطلاق توثيق الشبكة التجريبية في",
-        "description": "مهلاً... هل تريد لمحة مسبقة عن Testnet Donut؟ تواصل معنا باستخدام #pushchainsecret وسنرسل لك الوصول إلى نسخة تجريبية.",
-        "tweet-button": "غرد عن Push Chain",
-        "title": "غرد عن Push Chain",
-        "ariaLabel": "غرد عن Push Chain"
+        "countdown-title": "إطلاق وثائق الشبكة التجريبية في",
+        "description": "ششش... هل تريد معاينة سريعة لـ Testnet Donut؟ أرسل لنا رسالة مع #pushchainsecret وسنرسل لك الوصول إلى نسخة تجريبية.",
+        "tweet-button": "غرّد عن Push Chain",
+        "title": "غرّد عن Push Chain",
+        "ariaLabel": "غرّد عن بلوكشين"
       }
     }
   }

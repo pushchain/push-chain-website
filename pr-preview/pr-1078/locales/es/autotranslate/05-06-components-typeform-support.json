@@ -2,9 +2,9 @@
   "components": {
     "typeform-support": {
       "collapsed-text-for-support": "Abrir un Ticket de Soporte",
-      "expanded-title-for-support": "Necesitas ayuda? 👋",
-      "collapsed-text-for-contact": "Contacta al Equipo",
-      "expanded-title-for-contact": "Hola! 👋",
+      "expanded-title-for-support": "¿Necesitas ayuda? 👋",
+      "collapsed-text-for-contact": "Contacta al equipo",
+      "expanded-title-for-contact": "¡Hola! 👋",
       "categories": {
         "technical": {
           "label": "🔧 Soporte Técnico",
@@ -12,80 +12,80 @@
         },
         "network": {
           "label": "🌐 Red & testnet",
-          "description": "Explorador/Push Scan, RPC, Faucet, problemas con la testnet Donut"
+          "description": "Explorador/Push Scan, RPC, Faucet, problemas de Donut testnet"
         },
         "wallet": {
-          "label": "👛 Universal Wallet",
-          "description": "Push Wallet, conexión universal a la cadena o otros problemas con la wallet"
+          "label": "👛 Universal वॉलेट",
+          "description": "Push Wallet, conexión universal a la cadena o cualquier otro problema con la billetera"
         },
         "identity": {
-          "label": "🪪 Cuentas & Identidad",
+          "label": "🪪 Cuentas e Identidad",
           "description": "UEA/UOA, firmas, preguntas de atribución"
         },
         "security": {
           "label": "🛡️ Seguridad",
-          "description": "Informes de vulnerabilidades, divulgación responsable (security@push.org)"
+          "description": "Informes de vulnerabilidad, divulgación responsable (security@push.org)"
         },
         "general": {
           "label": "💬 Consulta General",
-          "description": "Preguntas, comentarios, otros temas"
+          "description": "Preguntas, comentarios y otros temas"
         },
         "partnerships": {
-          "label": "🤝 Alianzas & Integraciones",
-          "description": "BD, integraciones de ecosistema (wallets, infra, exchanges, protocols)"
+          "label": "🤝 Partnerships & Integrations",
+          "description": "Desarrollo de negocios, integraciones del ecosistema (वॉलेटs, infra, exchanges, प्रोटोकols)"
         },
         "grants": {
-          "label": "💰 Subvenciones & Programas de Ecosistema",
-          "description": "BRB, Bootcamp, subvenciones, consultas de financiación"
+          "label": "💰 Subvenciones y Programas del Ecosistema",
+          "description": "BRB, Bootcamp, subvenciones, consultas sobre financiación"
         },
         "media": {
-          "label": "📰 Medios & Prensa",
-          "description": "Entrevistas, declaraciones, activos, verificaciones de datos"
+          "label": "📰 Medios e Prensa",
+          "description": "Entrevistas, declaraciones, activos, verificación de datos"
         },
         "events": {
-          "label": "🎤 Charlas & Eventos",
+          "label": "🎤 Charlas y Eventos",
           "description": "Charlas, talleres, hackatones, patrocinios"
         },
         "careers": {
           "label": "👩‍💻 Carreras",
-          "description": "Puestos abiertos, prácticas, oportunidades de contratistas"
+          "description": "Ofertas de empleo, prácticas, oportunidades para contratistas"
         },
         "validators": {
-          "label": "🧡 Validadores / Operadores de Nodos",
-          "description": "Interés del operador, proveedores de RPC, socios de infra"
+          "label": "🧡 Validadores / Operadores de Nodo",
+          "description": "Interés de los operadores, proveedores RPC, socios de infraestructura"
         },
         "legal": {
           "label": "⚖️ Legal & Cumplimiento",
-          "description": "Marcas comerciales, solicitudes de datos, acuerdos"
+          "description": "Marcas registradas, solicitudes de datos, acuerdos"
         }
       },
       "form": {
         "steps": {
           "category": {
             "title": "¿En qué podemos ayudarte?",
-            "subtitle": "Elige la categoría que mejor describa tu consulta"
+            "subtitle": "¿Elige la categoría que mejor describa tu consulta?"
           },
           "contact": {
-            "title": "Conozcamos un poco más",
-            "subtitle": "Utilizaremos esta información para responderte",
+            "title": "Conozcámonos",
+            "subtitle": "Usaremos esta información para comunicarnos contigo",
             "name-label": "Tu Nombre",
             "name-placeholder": "Ingresa tu nombre completo",
-            "name-aftergreet": "Mucho gusto, ",
-            "email-label": "Dirección de Email",
-            "email-placeholder": "Ingresa tu dirección de email"
+            "name-aftergreet": "Mucho gusto conocerte, ",
+            "email-label": "Dirección de correo electrónico",
+            "email-placeholder": "Ingresa tu dirección de correo electrónico"
           },
           "details": {
             "title": "Cuéntanos más",
             "subtitle": "Proporciona detalles sobre tu consulta",
             "subject-label": "Asunto",
-            "subject-placeholder": "Breve resumen de tu problema",
+            "subject-placeholder": "Resumen breve de tu problema",
             "message-label": "Mensaje",
-            "message-placeholder": "Describe tu problema en detalle. Incluye cualquier mensaje de error, pasos para reproducirlo o información relevante."
+            "message-placeholder": "Describe tu problema en detalle. Incluye cualquier mensaje de error, los pasos para reproducirlo o información relevante."
           },
           "submit": {
-            "title": "Revisar y Enviar",
-            "subtitle": "Revisa tu información antes de enviar",
-            "placeholder": "Cuéntanos más sobre lo que necesitas ayuda..."
+            "title": "Revisa y Envía",
+            "subtitle": "Por favor, revisa tu información antes de enviar",
+            "placeholder": "Cuéntanos más sobre lo que necesitas..."
           }
         },
         "buttons": {
@@ -97,22 +97,22 @@
         "validation": {
           "name-required": "El nombre es requerido",
           "name-min-length": "El nombre debe tener al menos 2 caracteres",
-          "email-required": "El email es requerido",
-          "email-invalid": "Ingresa una dirección de email válida",
-          "subject-required": "El asunto es requerido",
-          "message-required": "El mensaje es requerido",
+          "email-required": "Se requiere una dirección de correo electrónico",
+          "email-invalid": "Por favor, introduce una dirección de correo electrónico válida.",
+          "subject-required": "El asunto es obligatorio",
+          "message-required": "El mensaje es obligatorio",
           "category-required": "Por favor, selecciona una categoría",
-          "default": "Este campo es requerido"
+          "default": "Este campo es obligatorio"
         },
         "success": {
-          "title": "Ticket Enviado Exitosamente!",
-          "message": "Gracias por contactarnos. Hemos recibido tu ticket de soporte y te responderemos lo antes posible.",
-          "button": "Enviar Otro Ticket"
+          "title": "¡Ticket enviado exitosamente!",
+          "message": "¡Gracias por contactarnos! Hemos recibido tu solicitud de soporte y nos pondremos en contacto contigo lo antes posible.",
+          "button": "Enviar otra solicitud"
         },
         "error": {
-          "title": "Error al Enviar",
-          "message": "Hubo un error al enviar tu ticket. Inténtalo de nuevo o contáctanos directamente.",
-          "button": "Intentar de Nuevo"
+          "title": "El envío falló",
+          "message": "Hubo un error al enviar tu solicitud. Por favor, inténtalo de nuevo o contáctanos directamente.",
+          "button": "Intentar de nuevo"
         }
       }
     }

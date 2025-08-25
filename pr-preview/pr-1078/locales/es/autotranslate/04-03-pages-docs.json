@@ -3,18 +3,18 @@
     "docs": {
       "seo": {
         "title": "Documentación — Construye Aplicaciones Universales",
-        "description": "Todo lo que necesitas para lanzar en Push Chain: guías rápidas, SDKs, referencia de API, ejemplos y configuración de nodos.",
+        "description": "Todo lo que necesitas para lanzar tu proyecto en Push Chain: guías rápidas, SDKs, referencia de API, ejemplos y configuración de nodos.",
         "og-title": "Push Chain Docs - Guías rápidas, SDKs y API",
-        "og-description": "Construye y ejecuta aplicaciones en la capa de ejecución universal con guías claras y ejemplos.",
-        "twitter-title": "Push Chain Docs - Construye ahora",
-        "twitter-description": "Guías rápidas, SDKs, ref de API y ejemplos para lanzar rápido."
+        "og-description": "Crea y ejecuta apps en la capa de ejecución universal con guías y ejemplos claros.",
+        "twitter-title": "Push Chain Docs - ¡Empieza a construir ahora!",
+        "twitter-description": "Guías rápidas, SDKs, referencia de API y ejemplos para lanzar tu proyecto rápidamente."
       },
       "header": {
-        "countdown-title": "Lanzamiento de Docs de Testnet en",
-        "description": "Psst... ¿quieres un adelanto de Testnet Donut? Contáctanos con #pushchainsecret y te enviaremos acceso a una versión de prueba.",
-        "tweet-button": "Tuitear sobre Push Chain",
-        "title": "Tuitear sobre Push Chain",
-        "ariaLabel": "Tuitear sobre Push Chain"
+        "countdown-title": "Lanzamiento de la documentación de la testnet en",
+        "description": "Psst... ¿quieres echar un vistazo al testnet Donut? Mándanos un mensaje con #pushchainsecret y te enviaremos acceso a una versión de prueba.",
+        "tweet-button": "Publica sobre Push Chain",
+        "title": "Tweet about Push Chain",
+        "ariaLabel": "Comparte en X sobre Push Chain"
       }
     }
   }

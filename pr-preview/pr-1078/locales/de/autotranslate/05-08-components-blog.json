@@ -2,9 +2,9 @@
   "components": {
     "blog": {
       "more-posts": {
-        "title": "More from Push Chain",
-        "follow-button": "Follow",
-        "read-more": "Read More"
+        "title": "Mehr von Push Chain",
+        "follow-button": "Folgen",
+        "read-more": "Mehr lesen"
       },
       "list": {
         "recent-updates": "Aktuelle Updates",
@@ -16,16 +16,16 @@
         "older-entries": "Ältere Einträge"
       },
       "footer-item": {
-        "share-title": "Werden Sie Teil der Diskussion, indem Sie diesen Artikel teilen",
-        "share-button": "Share",
-        "share-modal-title": "Share",
+        "share-title": "Werden Sie Teil des Gesprächs, indem Sie diesen Artikel teilen",
+        "share-button": "Teilen",
+        "share-modal-title": "Teilen",
         "copy-link": "Link kopieren",
         "about-title": "Über Push Chain",
-        "about-description": "Push Chain ist die erste echte universelle Blockchain, die Fragmentation über alle Chains hinweg beseitigen soll. Sie ermöglicht Entwicklern, einmal zu deployen und sofort für Benutzer auf jeder Chain verfügbar zu sein, egal ob EVM oder Non-EVM (einschließlich Ethereum, Solana, Bitcoin und andere). Es handelt sich um eine 100% EVM-kompatible, Proof of Stake (PoS)-Chain, die es Benutzern ermöglicht, mit den auf Push Chain bereitgestellten Apps von jeder Chain aus zu interagieren, so wie sie es nativ auf ihrer eigenen Chain tun.",
+        "about-description": "Push Chain ist die erste echte universelle Blockchain, die darauf ausgelegt ist, Fragmentierung über alle Chains hinweg zu beseitigen. Sie ermöglicht Entwicklern, einmal zu deployen und sofort für Benutzer auf jeder Chain verfügbar zu sein, unabhängig davon, ob EVM oder Non-EVM (einschließlich Ethereum, Solana, Bitcoin und andere). Es handelt sich um eine 100 % EVM-kompatible Proof of Stake (PoS) Chain, die es Benutzern ermöglicht, mit den auf Push Chain deployierten apps von jeder Chain aus zu interagieren, so wie sie es nativ auf ihrer eigenen Chain tun würden.",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",
-        "social-linkedin": "Linkedin"
+        "social-linkedin": "LinkedIn"
       }
     }
   }

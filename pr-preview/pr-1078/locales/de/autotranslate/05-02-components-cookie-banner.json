@@ -2,17 +2,17 @@
   "components": {
     "cookie-banner": {
       "message": "Wir verwenden Cookies, um Ihr Erlebnis zu personalisieren. Erfahren Sie mehr in unseren",
-      "privacy-policy-link": "Datenschutzbestimmungen",
-      "privacy-policy-link-title": "Lesen Sie die Datenschutzbestimmungen von Push Chain",
-      "privacy-policy-link-aria-label": "Datenschutzbestimmungen in einem neuen Tab öffnen",
+      "privacy-policy-link": "Datenschutzrichtlinie",
+      "privacy-policy-link-title": "Lesen Sie die Datenschutzrichtlinien von Push Chain",
+      "privacy-policy-link-aria-label": "Datenschutzrichtlinie in neuem Tab öffnen",
       "accept-button": "Akzeptieren",
-      "accept-button-title": "Akzeptieren Sie Cookies, um Ihr Erlebnis zu personalisieren",
+      "accept-button-title": "Akzeptiere Cookies, um dein Erlebnis zu personalisieren",
       "accept-button-aria-label": "Cookies akzeptieren und Banner schließen",
       "reject-button": "Ablehnen",
       "reject-button-title": "Cookies ablehnen und Banner schließen",
       "reject-button-aria-label": "Cookies ablehnen und Banner schließen",
-      "banner-aria-label": "Cookie-Zustimmungs-Banner",
-      "banner-role": "Cookie-Einstellungen-Benachrichtigung"
+      "banner-aria-label": "Cookie Consent Banner",
+      "banner-role": "Cookie-Einstellungen"
     }
   }
 }

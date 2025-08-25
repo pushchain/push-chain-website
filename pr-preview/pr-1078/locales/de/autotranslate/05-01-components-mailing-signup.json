@@ -1,21 +1,21 @@
 {
   "components": {
     "mailing-signup": {
-      "title": "Keine Updates mehr verpassen",
-      "text": "Melde dich an und bleibe über Ankündigungen des Ökosystems, Gewinnspiele und vieles mehr auf dem Laufenden.",
-      "email-input": "Deine E-Mail",
+      "title": "Keine Updates verpassen",
+      "text": "Melde dich an und bleibe über Neuigkeiten, Gewinnspiele und mehr aus dem Ökosystem auf dem Laufenden.",
+      "email-input": "Ihre E-Mail-Adresse",
       "email-input-placeholder": "Gib deine E-Mail-Adresse ein",
       "email-input-title": "Abonniere den Push Chain Newsletter für Updates",
-      "email-input-aria-label": "E-Mail-Adresse für Newsletter-Abonnement",
+      "email-input-aria-label": "E-Mail-Adresse für den Newsletter-Abonnement",
       "submit-button": "Anmelden",
-      "submit-button-title": "Abonniere den Push Chain Newsletter",
-      "submit-button-aria-label": "Newsletter abonnieren",
+      "submit-button-title": "Abonnieren Sie den Push Chain Newsletter",
+      "submit-button-aria-label": "Für den Newsletter anmelden",
       "loading-submit-button": "Bitte warten...",
-      "arrow-button-aria-label": "Newsletter abonnieren",
-      "arrow-button-title": "Abonniere Push Chain Updates",
-      "form-aria-label": "Newsletter-Abonnementformular",
+      "arrow-button-aria-label": "Abonnieren Sie den Newsletter",
+      "arrow-button-title": "Abonnieren Sie die Push Chain Updates",
+      "form-aria-label": "Formular zur Newsletteranmeldung",
       "success-message-aria-label": "Abonnement erfolgreich",
-      "error-message-aria-label": "Fehlermeldung beim Abonnement"
+      "error-message-aria-label": "Fehlermeldung beim Abonnieren"
     }
   }
 }

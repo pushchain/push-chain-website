@@ -4,82 +4,82 @@
       "logo-aria-label": "Push Chain - Navegar a la página de inicio",
       "language-icon-alt": "Icono de selección de idioma",
       "hamburger-menu-alt": "Abrir menú de navegación",
-      "testnet-badge-alt": "Push Chain Testnet Donut - Ver estado de la testnet"
+      "testnet-badge-alt": "Push Chain Testnet Donut - Ver el estado de la testnet"
     },
     "logo": {
       "imagealt": "Imagen del logo de Push Chain",
-      "imagetitle": "Logo de Push Chain",
-      "ctatitle": "Navegar a la página de inicio de Push Chain"
+      "imagetitle": "Logotipo de Push Chain",
+      "ctatitle": "Navega a la página de inicio de Push Chain"
     },
     "testnet": {
       "title": "Testnet",
-      "aria-label": "Sección de Testnet",
+      "aria-label": "Sección testnet",
       "link1": {
         "text": "Push Scan",
         "subtext": "Explorador de bloques para Push Chain",
-        "title": "Explora las transacciones y bloques de la testnet de Push Chain en Push Scan"
+        "title": "Explora las transacciones y bloques de Push Chain Testnet en Push Scan"
       },
       "link2": {
-        "text": "Faucet",
-        "subtext": "Obtén tokens de la testnet",
-        "title": "Obtén tokens de la testnet gratuitos para el desarrollo de Push Chain"
+        "text": "Grifo",
+        "subtext": "Obtén tokens de testnet",
+        "title": "Obtén tokens de prueba gratuitos para el desarrollo de Push Chain"
       }
     },
     "developers": {
       "title": "Desarrolladores",
       "aria-label": "Sección de Desarrolladores",
       "link1": {
-        "text": "Comenzar",
-        "subtext": "Introducción a la creación en Push Chain",
-        "title": "Comienza a crear apps universales en Push Chain - Documentación para desarrolladores"
+        "text": "Comienza",
+        "subtext": "Introducción a la construcción en Push Chain",
+        "title": "Empieza a construir apps universales en Push Chain - Documentación para desarrolladores"
       },
       "link2": {
-        "text": "Inicio rápido",
-        "subtext": "Configura el entorno de desarrollo en segundos",
+        "text": "Comenzar rápido",
+        "subtext": "Configura tu entorno de desarrollo en segundos",
         "title": "Guía de inicio rápido - Configura el entorno de desarrollo de Push Chain al instante"
       },
       "link3": {
         "text": "Tutoriales",
-        "subtext": "Guías paso a paso para crear con Push",
-        "title": "Aprende con tutoriales prácticos - Crea tu primera app universal en Push Chain"
+        "subtext": "Guías paso a paso para construir con Push",
+        "title": "Aprende con tutoriales prácticos - Construye tu primera app universal en Push Chain"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "Visualiza el código central y herramientas de código abierto",
+        "subtext": "Mira el código principal y las herramientas de código abierto",
         "title": "Explora el código fuente y las herramientas de desarrollo de Push Chain en GitHub"
       },
       "link5": {
         "text": "Discord de Desarrolladores",
         "subtext": "Conéctate con la comunidad de desarrolladores",
-        "title": "Únete a la comunidad de desarrolladores de Push Chain en Discord para soporte y colaboración"
+        "title": "Únete a la comunidad de desarrolladores de Push Chain en Discord para obtener soporte y colaboración"
       }
     },
     "community": {
       "title": "Comunidad",
-      "aria-label": "Sección de Comunidad",
+      "aria-label": "Sección de la comunidad",
       "link1": {
-        "text": "Base de conocimiento",
-        "subtext": "Encuentra análisis profundos de las funciones",
-        "title": "Explora la documentación completa de Push Chain y las guías de funciones"
+        "text": "Base de Conocimiento",
+        "subtext": "Encuentra análisis detallados de las funciones",
+        "title": "Explora la documentación completa de Push Chain y guías de funciones"
       },
       "link2": {
         "text": "Tokenomics",
         "subtext": "Token nativo que impulsa todo en Push Chain",
-        "title": "Aprende sobre la tokenomics de Push Chain y la utilidad del token $PC"
+        "title": "Aprende sobre la tokenómica de Push Chain y la utilidad del token $PC"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "Sigue las actualizaciones y las noticias del ecosistema",
-        "title": "Sigue a Push Chain en X (Twitter) para las últimas actualizaciones y anuncios"
+        "subtext": "Sigue las novedades y noticias del ecosistema",
+        "title": "Sigue a Push Chain en X (Twitter) para conocer las últimas novedades y anuncios"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "Chatea, crea y disfruta con la comunidad",
-        "title": "Únete a la comunidad de Push Chain en Discord para discusiones y soporte"
+        "subtext": "¡Chatea, crea y conecta con la comunidad!",
+        "title": "Únete a la comunidad de Push Chain en Discord para debates y soporte"
       },
       "link5": {
         "text": "Telegram",
-        "subtext": "Únete a la conversación y mantente informado",
+        "subtext": "Únete a la conversación y mantente al día",
         "title": "Conéctate con la comunidad de Push Chain en Telegram para actualizaciones en tiempo real"
       }
     },
@@ -88,55 +88,27 @@
       "aria-label": "Sección de Recursos",
       "link1": {
         "text": "Blog",
-        "subtext": "Actualizaciones, análisis profundos e historias de desarrolladores",
-        "title": "Lee el blog de Push Chain para las últimas actualizaciones, análisis técnicos e historias de desarrolladores"
+        "subtext": "Novedades, análisis en profundidad e historias de desarrollo",
+        "title": "Lee el blog de Push Chain para conocer las últimas novedades, análisis técnicos en profundidad e historias de desarrolladores"
       },
       "link2": {
-        "text": "Litepaper",
+        "text": "Documento técnico",
         "subtext": "La visión y la tecnología, simplificadas",
-        "title": "Lee el Litepaper de Push Chain - Visión y descripción general técnica simplificadas"
+        "title": "Lee el Litepaper de Push Chain - visión simplificada y descripción general técnica"
       },
       "link3": {
         "text": "Preguntas frecuentes",
-        "subtext": "Respuestas rápidas a las preguntas comunes",
+        "subtext": "Respuestas rápidas a preguntas frecuentes",
         "title": "Consulta las preguntas frecuentes sobre Push Chain"
       }
     },
     "language": {
       "title": "Idioma",
-      "aria-label": "Menú desplegable de selección de idioma",
-      "english": "English",
-      "english-ctatitle": "Cambiar idioma a English",
-      "chinese_simplified": "中文",
-      "chinese_simplified-ctatitle": "切换语言为中文",
-      "spanish": "Español",
-      "spanish-ctatitle": "Cambiar el idioma a español",
-      "hindi": "हिंदी",
-      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
-      "korean": "한국어",
-      "korean-ctatitle": "한국어로 언어 변경",
-      "japanese": "日本語",
-      "japanese-ctatitle": "言語を日本語に変更する",
-      "portuguese": "Português",
-      "portuguese-ctatitle": "Mudar o idioma para português",
-      "russian": "Русский",
-      "russian-ctatitle": "Изменить язык на русский",
-      "turkish": "Türkçe",
-      "turkish-ctatitle": "Dili Türkçeye değiştir",
-      "french": "Français",
-      "french-ctatitle": "Changer la langue en français",
-      "indonesian": "Bahasa Indonesia",
-      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
-      "vietnamese": "Tiếng Việt",
-      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
-      "german": "Deutsch",
-      "german-ctatitle": "Sprache auf Deutsch ändern",
-      "arabic": "العربية",
-      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+      "aria-label": "Menú desplegable para seleccionar el idioma"
     },
     "app-button": {
       "text": "Push Portal",
-      "title": "Accede a Push Portal - Gana puntos como desarrollador, usuario o validador"
+      "title": "Accede a Push Portal - Gana puntos como desarrollador, usuario o validator"
     }
   }
 }
