@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[36168],{686407:e=>{e.exports=JSON.parse('{"label":"Push Notifications Governance","permalink":"/push-chain-website/pr-preview/pr-1078/blog/tags/push-notifications-governance","allTagsPath":"/push-chain-website/pr-preview/pr-1078/blog/tags","count":1,"unlisted":false}')}}]);

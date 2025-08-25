@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[6860],{663852:e=>{e.exports=JSON.parse('{"label":"Gitcoin Grants","permalink":"/push-chain-website/pr-preview/pr-1078/blog/tags/gitcoin-grants","allTagsPath":"/push-chain-website/pr-preview/pr-1078/blog/tags","count":1,"unlisted":false}')}}]);
