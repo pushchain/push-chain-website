@@ -3156,8 +3156,7 @@ import \* as readline from 'node:readline/promises';
     // 3) Initialize Push Chain Client
     console.log('🔗 Initializing Push Chain Client...');
     const pushChainClient = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-      rpcUrls: {[PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET]: ['https://weathered-empty-rain.solana-devnet.quiknode.pro/278a5c4fa65bc6656ff0ff65ab2c3d1004fd00f9']}
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
     });
 
     // 4) Prepare transaction parameters
