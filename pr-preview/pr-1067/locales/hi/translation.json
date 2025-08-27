@@ -1,522 +1,1354 @@
 {
+  "global": {
+    "site-name": "Push Chain — यूनिवर्सल L1 फॉर एप्‍स",
+    "site-description": "शेयर्ड-स्टेट L1 यूनिवर्सल एप्‍स के लिए। एक बार डिप्लॉय करें; किसी भी चेन पर यूजर्स तक पहुंचें। कोई भी वॉलेट इस्तेमाल करें। कोई भी टोकन इस्तेमाल करें। नेटवर्क स्विचिंग की जरूरत नहीं।"
+  },
   "header": {
-    "docs": {
-      "title": "दस्तावेज़",
-      "developer-guides": "डेवलपर गाइड्स",
-      "alt-developer-guides": "डेवलपर गाइड्स में Push की सभी चीज़ों का अन्वेषण करें",
-      "governance-guides": "गवर्नेंस गाइड्स",
-      "alt-governance-guides": "गवर्नेंस गाइड्स में गवर्नेंस से संबंधित सभी चीज़ों का अन्वेषण करें",
-      "whitepaper": "व्हाइटपेपर",
-      "alt-whitepaper": "व्हाइटपेपर पढ़ें"
+    "meta": {
+      "logo-aria-label": "Push Chain - Homepage पर नेविगेट करें",
+      "language-icon-alt": "भाषा चयन आइकन",
+      "hamburger-menu-alt": "नेविगेशन मेनू खोलें",
+      "testnet-badge-alt": "Push Chain Testnet Donut - टेस्टनेट स्थिति देखें"
     },
-    "more": {
-      "title": "और अधिक जानें",
-      "faq": "FAQ",
-      "alt-faq": "अक्सर पूछे जाने वाले प्रश्न",
-      "blog": "ब्लॉग",
-      "alt-blog": "हमारी कहानी पढ़ें",
-      "push-ecosystem": "पुश इकोसिस्टम",
-      "alt-push-ecosystem": "पुश इकोसिस्टम",
-      "media-kit": "मीडिया किट",
-      "alt-media-kit": "पुश की मीडिया किट"
+    "logo": {
+      "imagealt": "Push Chain Logo की छवि",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "Push Chain Homepage पर नेविगेट करें"
     },
-    "push-dao": {
-      "title": "पुश डाओ",
-      "notion": "पुश डाओ का नोशन",
-      "alt-notion": "पुश डाओ का नोशन",
-      "forum": "फ़ोरम",
-      "alt-forum": "पुश गवर्नेंस फ़ोरम",
-      "grants": "रिवॉर्ड्स",
-      "alt-grants": "पुश के रिवॉर्ड्स",
-      "missions": "मिशन",
-      "alt-missions": "पुश के मिशन"
-    },
-    "language": {
-      "title": "भाषा",
-      "english": "English",
-      "spanish": "Español",
-      "hindi": "Hindi"
-    },
-    "app-button": {
-      "title": "ऐप खोलें",
-      "alt-title": "पुश डैप"
-    },
-    "products": {
-      "title": "उत्पाद",
+    "testnet": {
+      "title": "Testnet",
+      "aria-label": "Testnet अनुभाग",
       "link1": {
-        "title": "पुश सूचनाएँ",
-        "subtitle": "वेब3 नेटिव सूचना अलर्ट्स"
+        "text": "Push Scan",
+        "subtext": "Push Chain के लिए ब्लॉक एक्सप्लोरर",
+        "title": "Push Scan पर Push Chain टेस्टनेट लेनदेन और ब्लॉक देखें"
       },
       "link2": {
-        "title": "पुश चैट",
-        "subtitle": "समूहों के साथ वेब3 नेटिव चैट प्रोटोकॉल"
-      },
-      "link3": {
-        "title": "पुश वीडियो",
-        "subtitle": "डिसेंट्रलाइज़्ड वीडियो कॉल्स"
-      },
-      "link4": {
-        "title": "पुश स्पेसेज़",
-        "subtitle": "डिसेंट्रलाइज़्ड ऑडियो स्ट्रीमिंग"
+        "text": "Faucet",
+        "subtext": "टेस्टनेट टोकन प्राप्त करें",
+        "title": "Push Chain विकास के लिए मुफ्त टेस्टनेट टोकन प्राप्त करें"
       }
     },
     "developers": {
-      "title": "डेवलपर्स",
+      "title": "Developers",
+      "aria-label": "Developers अनुभाग",
       "link1": {
-        "title": "दस्तावेज़ हब",
-        "subtitle": "पुश प्रोटोकॉल की क्यूरेटेड विकी"
+        "text": "Get Started",
+        "subtext": "Push Chain पर निर्माण का परिचय",
+        "title": "Push Chain पर universal app निर्माण शुरू करें - डेवलपर प्रलेखन"
       },
       "link2": {
-        "title": "उदाहरण",
-        "subtitle": "सहयोगी अनुभवों की गैलरी"
+        "text": "Quick Start",
+        "subtext": "सेकंड में देव वातावरण सेट करें",
+        "title": "त्वरित शुरुआत मार्गदर्शिका - Push Chain विकास वातावरण को तुरंत सेट करें"
       },
       "link3": {
-        "title": "सूचना त्वरण प्रारंभ",
-        "subtitle": "2 मिनट में सूचनाएँ सेट करें"
+        "text": "Tutorials",
+        "subtext": "Push के साथ निर्माण के लिए चरण-दर-चरण मार्गदर्शिकाएँ",
+        "title": "Push Chain पर अपने पहले universal app के निर्माण के साथ सीखें"
       },
       "link4": {
-        "title": "चैट त्वरण प्रारंभ",
-        "subtitle": "2 मिनट में चैट सेट करें"
+        "text": "GitHub",
+        "subtext": "कोर कोड और ओपन-सोर्स टूल देखें",
+        "title": "Push Chain स्रोत कोड और GitHub पर विकास टूल देखें"
       },
       "link5": {
-        "title": "हैकर्स",
-        "subtitle": "क्या आप हैकर हैं? यहां शुरू करें"
-      },
-      "link6": {
-        "title": "रिएक्ट प्लेग्राउंड",
-        "subtitle": "प्लग और प्ले रिएक्ट कॉम्पोनेंट्स"
-      },
-      "link7": {
-        "title": "डेवलपर डिस्कॉर्ड",
-        "subtitle": "हमारे डेवलपर समुदाय में शामिल हों"
+        "text": "Developer Discord",
+        "subtext": "देव समुदाय से जुड़ें",
+        "title": "सहायता और सहयोग के लिए Discord पर Push Chain डेवलपर समुदाय में शामिल हों"
       }
     },
     "community": {
-      "title": "समुदाय",
+      "title": "Community",
+      "aria-label": "Community अनुभाग",
       "link1": {
-        "title": "पारिस्थितिकी",
-        "subtitle": "पुश के साथ निर्माण करने वाले डेवलपरों की अद्भुत समुदाय"
+        "text": "Knowledge Base",
+        "subtext": "फीचर्स पर गहरी जानकारी खोजें",
+        "title": "Push Chain प्रलेखन और फीचर गाइड देखें"
       },
       "link2": {
-        "title": "पुश डाओ",
-        "subtitle": "पुश प्रोटोकॉल को शासन करने में भाग लें"
+        "text": "Tokenomics",
+        "subtext": "Push Chain पर सब कुछ चलाने वाला मूल टोकन",
+        "title": "Push Chain टोकनिक्स और $PC टोकन उपयोगिता के बारे में जानें"
       },
       "link3": {
-        "title": "अनुदान",
-        "subtitle": "पुश अनुदान कार्यक्रम के साथ एक प्रारंभिक छलांग लें"
+        "text": "X/Twitter",
+        "subtext": "अपडेट और पारिस्थितिकी तंत्र समाचारों का पालन करें",
+        "title": "नवीनतम अपडेट और घोषणाओं के लिए X (Twitter) पर Push Chain का पालन करें"
       },
       "link4": {
-        "title": "बिलियन वजहें बिल्ड",
-        "subtitle": "समस्याओं को हल करें और $50K से अधिक के पुरस्कार जीतें"
+        "text": "Discord",
+        "subtext": "चैट करें, निर्माण करें और समुदाय के साथ वाइब करें",
+        "title": "चर्चाओं और समर्थन के लिए Discord पर Push Chain समुदाय में शामिल हों"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "बातचीत में शामिल हों और लूप में रहें",
+        "title": "रीयल-टाइम अपडेट के लिए Telegram पर Push Chain समुदाय से जुड़ें"
       }
     },
     "resources": {
-      "title": "संसाधन",
+      "title": "Resources",
+      "aria-label": "Resources अनुभाग",
       "link1": {
-        "title": "ब्लॉग",
-        "subtitle": "पुश और वेब3 पर समाचार, विचार और अंदाज"
+        "text": "Blog",
+        "subtext": "अपडेट, गहरी जानकारी और डेवलपर कहानियां",
+        "title": "नवीनतम अपडेट, तकनीकी गहरी जानकारी और डेवलपर कहानियों के लिए Push Chain ब्लॉग पढ़ें"
       },
       "link2": {
-        "title": "पूछे जाने वाले प्रश्न",
-        "subtitle": "पुश के बारे में अक्सर पूछे जाने वाले प्रश्न"
+        "text": "Litepaper",
+        "subtext": "दृष्टि और तकनीक, सरल",
+        "title": "Push Chain Litepaper पढ़ें - सरल दृष्टि और तकनीकी अवलोकन"
       },
       "link3": {
-        "title": "रोडमैप",
-        "subtitle": "प्रोटोकॉल के लिए एक जीवंत रोडमैप"
-      },
-      "link4": {
-        "title": "टोकनोमिक्स",
-        "subtitle": "टोकन यूटिलिटी और पुश नेटवर्क"
+        "text": "FAQ",
+        "subtext": "सामान्य प्रश्नों के त्वरित उत्तर",
+        "title": "Push Chain के बारे में अक्सर पूछे जाने वाले प्रश्न देखें"
       }
+    },
+    "language": {
+      "title": "Language",
+      "aria-label": "भाषा चयन ड्रॉपडाउन",
+      "english": "English",
+      "english-ctatitle": "भाषा को अंग्रेजी में बदलें",
+      "chinese_simplified": "中文",
+      "chinese_simplified-ctatitle": "切换语言为中文",
+      "spanish": "Español",
+      "spanish-ctatitle": "Cambiar el idioma a español",
+      "hindi": "हिंदी",
+      "hindi-ctatitle": "भाषा को हिंदी में बदलें",
+      "korean": "한국어",
+      "korean-ctatitle": "한국어로 언어 변경",
+      "japanese": "日本語",
+      "japanese-ctatitle": "言語を日本語に変更する",
+      "portuguese": "Português",
+      "portuguese-ctatitle": "Mudar o idioma para português",
+      "russian": "Русский",
+      "russian-ctatitle": "Изменить язык на русский",
+      "turkish": "Türkçe",
+      "turkish-ctatitle": "Dili Türkçeye değiştir",
+      "french": "Français",
+      "french-ctatitle": "Changer la langue en français",
+      "indonesian": "Bahasa Indonesia",
+      "indonesian-ctatitle": "Ubah bahasa ke bahasa Indonesia",
+      "vietnamese": "Tiếng Việt",
+      "vietnamese-ctatitle": "Thay đổi ngôn ngữ sang tiếng Việt",
+      "german": "Deutsch",
+      "german-ctatitle": "Sprache auf Deutsch ändern",
+      "arabic": "العربية",
+      "arabic-ctatitle": "تغيير اللغة إلى العربية"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal एक्सेस करें - डेवलपर, उपयोगकर्ता या वैलिडेटर के रूप में अंक अर्जित करें"
     }
-  },
-  "home": {
-    "hero": {
-      "title": "वेब3 संचार प्रोटोकॉल",
-      "description": "पुश प्रोटोकॉल एक वेब3 संचार नेटवर्क है, जो डैप, वॉलेट और सेवाओं के लिए क्रॉस-चेन नोटिफिकेशन और मैसेजिंग को सक्षम बनाता है।",
-      "start-button": "निर्माण शुरू करें",
-      "explore-button": "पुश प्रोटोकॉल के बारे में जाने",
-      "alt-start-button": "डेवलपर्स के लिए दस्तावेज़",
-      "alt-explore-button": "पुश डैप"
-    },
-    "stats": {
-      "notifications": {
-        "part1": "सूचनाएँ",
-        "part2": "भेजी गई"
-      },
-      "subscribers": {
-        "part1": "कुल",
-        "part2": "सब्सक्राइबर्स"
-      },
-      "integrations": {
-        "part1": "पुश के कुल",
-        "part2": "एकीकरण"
-      },
-      "grants": {
-        "part1": "रिवॉर्ड्स में",
-        "part2": "दिए गए"
-      }
-    },
-    "partners-section": {
-      "partner-channels-title": "पुश द्वारा प्रायोजित",
-      "partner-channels-description": "उपयोगकर्ताओं को संलग्न करने और अपनाने में वृद्धि करने के लिए पुश के साथ डेवलपर्स के एक अद्भुत समुदाय की खोज करें।",
-      "partner-channels-button": "पारिस्थितिकी तंत्र का अन्वेषण करें",
-      "partner-channels-button-alt": "$PUSH के बारे में जानें",
-      "networks": "पुश दुनिया भर में 100 से अधिक वेब3, NFT, खेल, डेवलपमेंट टूल्स आदि के प्रमुख सेवा प्रदाताओं और डैप्स के लिए संचार की शक्ति प्रदान करता है। वर्तमान में, पुश ईथेरियम, पॉलिगॉन और बीएनबी चेन पर काम करता है।",
-      "alt-missing-web3-image": "छवि जो दिखाती है कि पुश वेब3 का एक लापता कड़ी है",
-      "title-missing-web3-image": "पुश वेब3 में लापता कड़ी है",
-      "missing-web3-title": "पुश वेब3 में लापता कड़ी है",
-      "missing-web3-text": "पुश से पहले, ऑन और ऑफ-चेन डेटा के जवाब में वॉलेट के बीच मूल संचार को सक्षम करने के लिए कोई समाधान मौजूद नहीं था। इसका परिणाम एक टूटा डैप एकोसिस्टम था, जिसे पुरानी और केंद्रीकृत संचार प्लेटफ़ॉर्मों द्वारा संभाला जाता था।",
-      "missing-web3-span": "पुश वेब3 के लिए संचार नेटवर्क बना रहा है, जो एक महत्वपूर्ण बुनियादी ढांचा में एक गैप को हल कर रहा है और ब्लॉकचेन के उपयोगकर्ताओं के लिए दैनिक अनुभव को सुधार रहा है।",
-      "missing-web3-alt-button": "डेवलपर्स के लिए दस्तावेज़",
-      "missing-web3-button": "पुश कैसे काम करता है"
-    },
-    "email-section": {
-      "title": "कभी भी अपडेट मिस न करें",
-      "text": "साइन अप करें और इकोसिस्टम की घोषणाओं, उपहारों आदि के साथ अपडेट रहें।",
-      "email-input": "आपका ईमेल",
-      "submit-button": "साइन अप",
-      "loading-submit-button": "भेज रहा है..."
-    },
-    "horizontal-scroll-section": {
-      "slide1": {
-        "title": "पुश सूचनाएँ",
-        "text": "डैप्स को सीधे उपयोगकर्ताओं से जोड़ते हैं, जिससे उन्हें ऑन और ऑफ चेन की गतिविधि का उत्तरदायित्व वाला सुरक्षित और व्यक्तिगत संवाद करने की अनुमति मिलती है।",
-        "link-text": "पुश सूचनाओं के साथ बनाएँ",
-        "image-alt": "पुश सूचनाएँ दिखाने वाली छवि"
-      },
-      "slide2": {
-        "title": "पुश चैट",
-        "text": "वेब3 का मुख्य विकेन्द्रीकृत चैट ऐप पुश चैट है, जिसमें 1-1 चैट, समूह चैट, वीडियो/तस्वीरें और (जल्द ही) प्रसारण जैसी सुविधाएँ होती हैं।",
-        "link-text": "पुश चैट के साथ बनाएँ",
-        "image-alt": "पुश चैट दिखाने वाली छवि"
-      },
-      "slide3": {
-        "title": "पुश डाओ",
-        "text": "पुश प्रोटोकॉल की सामुदायिक स्वामित्व की जड़ है। पुश टोकन होल्डर्स प्रोटोकॉल के लिए महत्वपूर्ण विकासों का प्रस्ताव देने और वोट करने का अवसर प्राप्त कर सकते हैं।",
-        "link-text": "पुश डाओ को जाने",
-        "image-alt": "पुश डाओ दिखाने वाली छवि"
-      }
-    },
-    "notification-section": {
-      "header": {
-        "main-text": "पुश एक मजबूत और विकेन्द्रीकृत पुश अधिसूचना प्रोटोकॉल प्रदान करता है।",
-        "other-text": "पुश वॉलेट के बीच वेब3 मूल अधिसूचना अलर्ट सक्षम करता है।"
-      },
-      "box1": {
-        "title": "Web3 नेटिव",
-        "imagealt": "चित्रण जो स्मार्ट कॉन्ट्रैक्ट्स, गैसलेस और यहां तक कि ऑफ-चेन अधिसूचनाओं के लिए मूल वेब3 अधिसूचना समर्थन दिखा रहा है",
-        "imagetitle": "किसी भी प्रकार की वेब3 मूल अधिसूचना क्षमताओं का समर्थन करता है"
-      },
-      "box2": {
-        "title": "क्रॉस-श्रृंगार सूचनाएँ",
-        "imagealt": "Illustration showing cross-chain support for Push Protocol",
-        "imagetitle": "Supports cross-chain notifications including EVM and non-EVM chains (Like Polygon, BNB, etc)"
-      },
-      "box3": {
-        "title": "सूचना पसंदीदा करें",
-        "imagealt": "चित्रण जो पुश प्रोटोकॉल के लिए क्रॉस-चेन समर्थन दिखा रहा है",
-        "imagetitle": "EVM और गैर-EVM चेन्स (जैसे पॉलिगॉन, BNB, आदि) सहित क्रॉस-चेन सूचनाओं का समर्थन करता है"
-      },
-      "box4": {
-        "title": "तेज API एकीकरण के साथ हल्का कोड",
-        "imagealt": "पुश प्रोटोकॉल एकीकरण के लिए आवश्यक कोड की पंक्तियों को दिखाता चित्रण",
-        "imagetitle": "पुश प्रोटोकॉल को 4 मिनट से कम समय में और 2 पंक्तियों के कोड के साथ एकीकृत करें",
-        "titletext": "<4 मिनट",
-        "buttontext": "निर्माण शुरू करें",
-        "buttonlink": "https://comms.push.org/docs/notifications/quickstart",
-        "buttontitle": "अपने डैप में पुश प्रोटोकॉल के माध्यम से तत्काल सूचनाओं के एकीकरण के लिए दस्तावेज़ीकरण।"
-      },
-      "box5": {
-        "title": "अंतरोपन मिलनशील सूचनाएँ",
-        "bgtitle": "सभी वेब3 वॉलेट्स और डैप्स में अंतरोपन मिलनशील सूचनाएँ (जैसे अनस्टॉपेबल, मेटामास्क पुश स्नैप, शेपशिफ्ट, पुश, आदि)"
-      },
-      "box6": {
-        "title": "एंटी-स्पैम",
-        "iconalt": "चित्रण जो पुश प्रोटोकॉल की एंटी-स्पैम क्षमताओं को दिखा रहा है",
-        "icontitle": "उपयोगकर्ता केंद्रित, एंटी-स्पैम क्षमताएँ जो स्पैम और अवांछित सूचनाओं को रोकती हैं।"
-      },
-      "box7": {
-        "title": "पुश स्नैप",
-        "imagetitle": "मेटामास्क उपयोगकर्ताओं के लिए पुश स्नैप दिखाते हुए चित्रण",
-        "imagealt": "पुश स्नैप सुनिश्चित करता है कि मेटामास्क के उपयोगकर्ता किसी अतिरिक्त सेटअप के बिना सूचनाएं प्राप्त कर सकें।",
-        "footerText": "मेटामास्क में सूचनाएँ प्राप्त करें"
-      },
-      "box8": {
-        "title": "बढ़ती ब्रह्मी",
-        "imagealt": "चित्रण जो ग्राफ़ दिखा रहा है जो पुश प्रोटोकॉल के साथ उपयोगकर्ता सगाई में वृद्धि (8x द्वारा) को इंगित करता है",
-        "imagetitle": "सूचनाएँ उपयोगकर्ता सगाई को 8x तक बढ़ाती हैं"
-      }
-    },
-    "chat-section": {
-      "header": {
-        "main-text": "पुश चैट अग्रणी विकेन्द्रीकृत है,",
-        "other-text": "समूह चैट, वीडियो कॉल, स्पेस और स्ट्रीमिंग जैसी उपयोगकर्ता अनुकूल सुविधाओं के साथ वेब3 नेटिव चैट प्रोटोकॉल"
-      },
-      "box1": {
-        "title": "छवियों, GIFs, और प्रतिक्रियाएँ साझा करें",
-        "imagealt": "चित्रण जो समूह चैट में भेजे गए संदेशों के साथ एक मीम दिखा रहा है",
-        "imagetitle": "समूह चैट में इमोजी, जिफ्स, और छवियाँ भेजें, वेब3 मूल प्राथमिकताओं द्वारा नियंत्रित"
-      },
-      "box2": {
-        "title": "चैट अनुरोध",
-        "subheader": "निजी और एंटी-स्पैम",
-        "iconalt": "चित्रण जो पुश चैट में 5 चैट अनुरोध दिखा रहा है",
-        "icontitle": "उपयोगकर्ता केंद्रित, एंटी-स्पैम क्षमताएँ जो स्पैम और अवांछित चैट / स्कैम चैट्स को रोकती हैं।"
-      },
-      "box3": {
-        "title": "सुरक्षित, तत्काल, और सत्यापन संबंधित भुगतान"
-      },
-      "box4": {
-        "title": "तेज API एकीकरण के साथ हल्का कोड",
-        "imagealt": "चित्रण जो पुश प्रोटोकॉल एकीकरण के लिए आवश्यक कोड की पंक्तियों को दिखाता है",
-        "imagetitle": "2 मिनट और 2 पंक्तियों के कोड के साथ पुश चैट को एकीकृत करें",
-        "titletext": "<2 मिनट",
-        "buttontext": "निर्माण शुरू करें",
-        "buttonlink": "https://comms.push.org/docs/chat/quickstart",
-        "buttontitle": "अपने डैप में चैट के तत्काल एकीकरण के लिए पुश प्रोटोकॉल के माध्यम से दस्तावेज़ीकरण का अन्वेषण करें"
-      },
-      "box5": {
-        "title": "हाइपरस्केलेबल ग्रुप",
-        "bgtitle": "पुश चैट 100k+ सदस्यों वाले ग्रुप का समर्थन करता है, जो वेब3 इकोसिस्टम में किसी अन्य चैट ऐप के साथ संभव नहीं है।",
-        "afterMessage": "*अन्य चैट ऐप्स: 1024 सदस्य"
-      },
-      "box6": {
-        "title": "प्लग एंड प्ले चैट कॉम्पोनेंट्स",
-        "imagealt": "चित्रण दिखाता है कि कैसे पुश चैट के विभिन्न घटकों को किसी भी डैप में बिना किसी रुकावट के एकीकृत किया जा सकता है",
-        "imagetitle": "पुश चैट या इसके किसी भी मॉड्यूलर घटक को अपने डैप में मिनटों में बिना किसी रुकावट के एकीकृत करें"
-      },
-      "box7": {
-        "title": "चेन एग्नोस्टिक",
-        "subheader": "सभी EVM चेन्स का समर्थन",
-        "iconalt": "चित्रण जो दिखाता है कि पुश चैट सभी EVM और यहां तक कि गैर-EVM श्रृंखलाओं का समर्थन करता है",
-        "icontitle": "पुश चैट चेन अज्ञेय है और बस किसी भी EVM पर काम करता है (गैर-EVM समर्थन जल्द ही आ रहा है)"
-      },
-      "box8": {
-        "imagealt": "चित्रण जो एक ऊब एप NFT और कैसे यह या कोई अन्य NFT, टोकन या कोई शर्तीय तर्क का उपयोग करके गेटेड समूह बनाया जा सकता है, दिखा रहा है",
-        "imagetitle": "NFTs, टोकन या किसी भी शर्तीय तर्क के आधार पर गेटेड समूह बनाएं!",
-        "footertext": "टोकन, NFT, जियो गेटेड समूह बनाएं"
-      },
-      "box9": {
-        "title": "इण्ड-टू-इंड एन्क्रिप्शन",
-        "subheader": "एंड-टू-एंड (ई2ईई)",
-        "iconalt": "चित्रण जो पुश चैट में ई2ईई एन्क्रिप्शन दिखा रहा है",
-        "icontitle": "पुश के उपयोगकर्ताओं के बीच सभी संदेशों और कॉल्स के लिए एंड-टू-एंड एन्क्रिप्शन (ई2ईई)"
-      },
-      "box10": {
-        "title": "किसी भी वेब3 मानक का समर्थन",
-        "imagealt": "चित्रण दिखाता है कि कैसे सभी वेब3 मानकों का उपयोग पुश चैट में किया जा सकता है जिसमें वॉलेट के साथ चैटिंग, NFTs, क्रॉस चेन मैसेजिंग आदि शामिल हैं",
-        "imagetitle": "एक वॉलेट या एक NFT से चैट करें या यहां तक कि विभिन्न चेनों के बीच में भी, पुश चैट सभी वेब3 मानकों का समर्थन करता है"
-      }
-    },
-    "video-section": {
-      "alt": "वास्तविक समय Web3 संवाद को Push वीडियो के साथ दिखाने वाला चित्र",
-      "title": "पुश वीडियो",
-      "subtitle": "पुश वीडियो के साथ वास्तविक समय Web3 संवाद का अनुभव करें",
-      "content": "पुश वीडियो एक श्रृंगारशाली वातावरण में डिसेंट्रलाइज्ड वॉलेट-टू-वॉलेट वीडियो कॉल का समर्थन करता है।",
-      "itemLink": "और अधिक जानें"
-    },
-    "space-section": {
-      "alt": "वास्तविक समय Web3 संवाद को पुश स्पेसेस के साथ दिखाने वाला चित्र",
-      "title": "पुश स्पेसेस",
-      "subtitle": "समुदाय स्ट्रीमिंग के साथ Web3 संवाद को क्रांति करें",
-      "content": "पुश प्रोटोकॉल द्वारा संचालित, पहला Web3 डिसेंट्रलाइज्ड ऑडियो स्ट्रीमिंग ऐप।",
-      "itemLink": "और अधिक जानें"
-    },
-    "grow-section": {
-      "image-alt": "$PUSH टोकन दिखाने वाली छवि",
-      "image-title": "पुश टोकन के साथ बढ़ें",
-      "title": "पुश के साथ बढ़ें",
-      "text": "$PUSH टोकन गवर्नन्स, प्रोटोकॉल की शुल्कों और फ़ंक्शन को संशोधित करने, नेटवर्क की सुरक्षा और पुश के सभी वॉलेट्स के बीच शुल्क प्रबंधन की अनुमति देता है, जिसमें पुश की गवर्नेंस के प्रतिभागियों भी शामिल हैं।",
-      "wallet-text": {
-        "part1": "क्या आप एक क्रिप्टो वॉलेट हैं?",
-        "part2": "शामिल हों और पाएं।"
-      },
-      "button": "$PUSH के बारे में जानें",
-      "button-alt": "$PUSH के बारे में जानें"
-    },
-    "why-push-section": {
-      "title": "पुश का उपयोग क्यों करें?",
-      "text": "पुश से पहले, ब्लॉकचेन एप्लिकेशन, सेवा प्रदाताएँ और वॉलेट्स के बीच प्राकृतिक संवाद की कोई विधि नहीं थी। वर्तमान एकोसिस्टम में अधिकांश संवाद पर पारंपरिक वेब2 समाधानों पर आधारित है, जिसका परिणाम एक टूटी हुई एकोसिस्टम और दैनिक उपयोग में समस्याएँ होती हैं।",
-      "chain-agnostic-text": "चेन-अग्नोस्टिक",
-      "immediate-communication-text": "तुरंत संवाद",
-      "decentralized-stack-text": "विकेन्द्रीकृत स्टैक",
-      "improved-ux-text": "बेहतर UX",
-      "security-alerts-text": "सुरक्षा सूचनाएँ",
-      "censorship-resistant-text": "सेंसरशिप प्रतिरोधी"
-    },
-    "insights-section": {
-      "title": "पुश से संबंधित जानकारी और अपडेट",
-      "link-text": "सभी लेख खोजें"
-    },
-    "investors-section": {
-      "title": "सफल उद्यमियों और वेंचर पूंजीपतियों द्वारा समर्थित।"
-    },
-    "network-section": {
-      "title": "जानें कैसे पुश नेटवर्क वेब3 संचार के लिए L2 बनता है!",
-      "first-text": "स्टेक प्रूफ नेटवर्क",
-      "second-text": "फी पूल और वृत्तचक्र अर्थशास्त्र",
-      "third-text": "नेटवर्क के लिए एपीआई कॉल के लिए पुश में लगाएं",
-      "fourth-text": "फी पूल शेयर को परिभाषित करें",
-      "fifth-text": "गवर्नेंस और वोटिंग"
-    },
-    "featured-section": {
-      "title": "विशेष खबरें",
-      "article1": {
-        "text": "हमने एक प्रेरित, नवाचारी निर्माता को देखा जो ईथेरियम के विकास और सफलता में गहरे समर्थन में था।",
-        "link-text": "और पढ़ें"
-      },
-      "article2": {
-        "text": "कंपनी को आसान संदेशन उपकरणों के साथ अतिरिक्त ब्लॉकचेन संचार की कमी को पता करने की आशा है।",
-        "link-text": "और पढ़ें"
-      },
-      "article3": {
-        "text": "पुश प्रोटोकॉल वेब3 की यह 'गायब टुकड़ा' है जो वेब2 की यूएक्स को वेब3 में लाने के लिए आवश्यक है।",
-        "link-text": "और पढ़ें"
-      },
-      "article4": {
-        "text": "डिसेंट्रलाइज़्ड पुश सूचनाएं डीऐप्स के क्या कर सकती हैं, यह बदल सकता है।",
-        "link-text": "और पढ़ें"
-      },
-      "article5": {
-        "text": "वेब3 संचार नेटवर्क और डिसेंट्रलाइज़्ड टीमें मूंगफली का मक्खन और जेली की तरह हैं।",
-        "link-text": "और पढ़ें"
-      },
-      "article6": {
-        "text": "अनस्टॉपेबल डोमेन्स बैज-गेटेड समूह चैट सुविधा को पुश चैट द्वारा प्रेरित यूजरनेम धारकों के लिए लॉन्च किया।",
-        "link-text": "और पढ़ें"
-      },
-      "article7": {
-        "text": "पुश प्रोटोकॉल के साथ सहयोग झूठी सूचनाओं और धोखाधड़ी को निवारण करने का लक्ष्य रखता है।",
-        "link-text": "और पढ़ें"
-      },
-      "article8": {
-        "text": "पुश प्रोटोकॉल, हाल ही में भारत में अपने (बीआरबी) डेव टूर का चरण 1 पूरा किया। हैकाथॉन प्रतिभागी सफलतापूर्वक हमारी टीम द्वारा प्रस्तावित चुनौती का हल किया: ईथेरियम खातों को क्वांटम प्रूफिंग करें।",
-        "link-text": "और पढ़ें"
-      },
-      "article9": {
-        "text": "Push Chain, एक लेयर 1 ब्लॉकचेन है जो चेन एब्स्ट्रैक्शन और विभिन्न नेटवर्क पर वेब3 अनुप्रयोगों की उपलब्धता पर केंद्रित है। Push Chain बिखरे हुए उपयोगकर्ता अनुभव और स्केलेबिलिटी की समस्याओं को हल करने का प्रयास करता है।",
-        "link-text": "और पढ़ें"
-      },
-      "article10": {
-        "text": "Push Chain का उद्देश्य बिखरे हुए उपयोगकर्ता अनुभव और स्केलेबिलिटी की समस्याओं को हल करना है।",
-        "link-text": "और पढ़ें"
-      },
-      "article11": {
-        "text": "वास्तुकला EVM और गैर-EVM इकोसिस्टम के बीच इंटरैक्शन का समर्थन करती है, जिससे डेवलपर्स को विभिन्न नेटवर्क से वॉलेट की स्थिति तक पहुंचने की सुविधा मिलती है, बिना बिखरी हुई अवसंरचना पर निर्भर किए।",
-        "link-text": "और पढ़ें"
-      }
-    },
-    "bg-section": {
-      "title": "अपने उपयोगकर्ता अनुभव को अगले स्तर पर ले जाएं।",
-      "subtitle": "उपयोगकर्ताओं को जोड़ें, समुदाय बनाएं, और पुश के साथ एक सकारात्मक पारिस्थितिकी बनाएं।",
-      "buttonText": "निर्माण शुरू करें"
-    }
-  },
-  "frens": {
-    "hero": {
-      "title": "पुश के दोस्त",
-      "description": {
-        "part1": "पुश के साथ बन रहे सैकड़ों अनुप्रयोगों का अन्वेषण करें",
-        "part2": "वैश्विक रूप से DeFi, NFTs, गेमिंग, डेव टूल्स, और अधिक में।"
-      }
-    },
-    "powered-section": {
-      "title": "पुश द्वारा संचालित",
-      "search-placeholder": "Dapps खोजें",
-      "no-channels-query": "कोई चैनल आपके पूछताछ से मेल नहीं खाता है, कृपया किसी अन्य नाम/पते की खोज करें",
-      "no-channels-category": "इस प्रकार का कोई चैनल अब तक नहीं है।",
-      "show-more-button": "और दिखाओ"
-    },
-    "email-section": {
-      "title": "कभी भी अपडेट मिस न करें",
-      "text": "साइन अप करें और आवासीय घोषणाओं, उपहारों और अधिक के साथ अपडेट रहें।"
-    }
-  },
-  "terms": {
-    "hero": {
-      "title": "सेवा की शर्तें",
-      "description": "शर्तें और शर्तों की सूची बनाता है",
-      "update-text": "आखिरी अपडेट: 2 नवम्बर 2020"
-    }
-  },
-  "privacy": {
-    "hero": {
-      "title": "गोपनीयता नीति",
-      "description": "पुश कैसे डेटा को एकत्रित, संचालित और प्रोसेस करता है, यह परिभाषित करता है।",
-      "update-text": "आखिरी अपडेट: 2 नवम्बर 2020"
-    }
-  },
-  "faq": {
-    "hero": {
-      "title": "अक्सर पूछे जाने वाले प्रश्न",
-      "description": "अक्सर पूछे जाने वाले प्रश्न और उनके उत्तर!",
-      "update-text": "पुश समुदाय द्वारा पूछे गए प्रसिद्ध प्रश्नों के उत्तर प्राप्त करें!"
-    },
-    "questions": {
-      "question1": {
-        "title": "",
-        "answer": ""
-      }
-    }
-  },
-  "alert": {
-    "know-more": "Install करें"
   },
   "footer": {
-    "mail-section": {
-      "title": "नवीनतम पुश समाचार प्राप्त करें",
-      "privacy": "गोपनीयता नीति",
-      "tos": "उपयोग की शर्तें"
+    "email-section": {
+      "title": "Push Chain के साथ अपडेट रहें",
+      "title-secondary": "और नवीनतम जानकारी!",
+      "title-aria-label": "न्यूज़लेटर सदस्यता अनुभाग",
+      "section-aria-label": "Push Chain न्यूज़लेटर साइनअप"
     },
-
-    "info-section": {
-      "positions-card": {
-        "text": "हमारे साथ जुड़ें और Web3 संचार के भविष्य को बनाएं।",
-        "link-text": "खाली पदों को देखें",
-        "image-title": "हमारे साथ जुड़ें",
-        "image-alt": "खाली पदों को दर्शाने वाला चिन्ह"
-      },
-      "docs-card": {
-        "text": "हमारे सरल मार्गदर्शिकाओं का पालन करें और मिनटों में शुरू हो जाएं।",
-        "link-text": "दस्तावेज़ अन्वेषण करें",
-        "image-title": "शुरू हो जाएं",
-        "image-alt": "आरंभ करने की आसानी दिखाने वाला चिन्ह"
-      }
+    "main-section": {
+      "section-aria-label": "फ़ुटर नेविगेशन और लिंक",
+      "logo-link-title": "Push Chain होमपेज",
+      "logo-link-aria-label": "Push Chain होमपेज",
+      "logo-alt": "Push Chain लोगो"
     },
-    "links-section": {
-      "company-column": {
-        "title": "कंपनी",
-        "push-ecosystem-link": "पुश इकोसिस्टम",
-        "media-kit-link": "मीडिया किट",
-        "terms-link": "शर्तें",
-        "privacy-link": "गोपनीयता"
-      },
-      "governance-column": {
-        "title": "शासन",
-        "push-governance-link": "पुश शासन",
-        "guides-link": "मार्गदर्शिकाएँ",
-        "forum-link": "फ़ोरम",
-        "grants-link": "अनुदान",
-        "snapshot-link": "स्नैपशॉट"
-      },
-      "resources-column": {
+    "columns": {
+      "resources": {
         "title": "संसाधन",
-        "blog-link": "ब्लॉग",
-        "whitepaper-link": "व्हाइटपेपर",
-        "github-link": "गिटहब",
-        "discord-link": "डिस्कॉर्ड",
-        "dev-guides-link": "डेव गाइड्स"
+        "title-aria-label": "संसाधन नेविगेशन"
       },
-      "subscribe-column": {
-        "title": "समर्थन",
-        "contact-us-link": "हमसे संपर्क करें",
-        "faq-link": "अक्सर पूछे जाने वाले प्रश्न"
+      "developers": {
+        "title": "डेवलपर्स",
+        "title-aria-label": "डेवलपर नेविगेशन"
       },
-      "support-column": {
-        "title": "सदस्यता लें",
-        "email-placeholder": "आपका ईमेल"
+      "community": {
+        "title": "समुदाय",
+        "title-aria-label": "समुदाय नेविगेशन"
+      },
+      "help": {
+        "title": "मदद",
+        "title-aria-label": "मदद नेविगेशन"
       }
+    },
+    "links": {
+      "get-started": "शुरू करें",
+      "get-started-title": "Push Chain पर बनाना शुरू करें",
+      "docs": "दस्तावेज़",
+      "docs-title": "Push Chain दस्तावेज़",
+      "github": "GitHub",
+      "github-title": "GitHub पर Push Chain रिपॉजिटरी",
+      "knowledge-base": "ज्ञानकोश",
+      "knowledge-base-title": "Push Chain ज्ञानकोश",
+      "blog": "ब्लॉग",
+      "blog-title": "Push Chain ब्लॉग",
+      "litepaper": "लाइटपेपर",
+      "litepaper-title": "Push Chain लाइटपेपर (PDF)",
+      "brand-kit": "ब्रांड किट",
+      "brand-kit-title": "Push Chain ब्रांड एसेट और दिशानिर्देश",
+      "push-scan": "Push Scan",
+      "push-scan-title": "Push Chain ब्लॉकचेन एक्सप्लोरर",
+      "faucet": "फ़ॉसेट",
+      "faucet-title": "Push Chain फ़ॉसेट से टेस्ट टोकन प्राप्त करें",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Chain समुदाय पोर्टल",
+      "support": "सहायता",
+      "support-title": "सहायता केंद्र",
+      "security": "सुरक्षा और प्रकटीकरण",
+      "security-title": "एक भेद्यता की रिपोर्ट करें (जिम्मेदार प्रकटीकरण)",
+      "contact-us": "संपर्क करें",
+      "contact-us-title": "भागीदारी, BD, मीडिया, या सामान्य पूछताछ",
+      "careers": "कैरियर",
+      "careers-title": "Push Chain में खुले पद",
+      "twitter": "X (Twitter)",
+      "twitter-title": "X (Twitter) पर Push Chain को फॉलो करें",
+      "discord": "Discord",
+      "discord-title": "Push Chain Discord में शामिल हों",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain subreddit में शामिल हों",
+      "telegram": "Telegram",
+      "telegram-title": "Push Chain Telegram में शामिल हों"
+    },
+    "social-section": {
+      "section-aria-label": "सोशल मीडिया लिंक और कानूनी जानकारी",
+      "twitter-icon-title": "X (Twitter) पर Push Chain",
+      "twitter-icon-aria-label": "X (Twitter) पर Push Chain",
+      "github-icon-title": "GitHub पर Push Chain",
+      "github-icon-aria-label": "GitHub पर Push Chain",
+      "discord-icon-title": "Discord पर Push Chain",
+      "discord-icon-aria-label": "Discord पर Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "गोपनीयता नीति",
+      "privacy-policy-title": "गोपनीयता नीति पढ़ें",
+      "privacy-policy-aria-label": "गोपनीयता नीति",
+      "terms-of-service": "सेवा की शर्तें",
+      "terms-of-service-title": "सेवा की शर्तें पढ़ें",
+      "terms-of-service-aria-label": "सेवा की शर्तें",
+      "cookie-preferences": "कुकी प्राथमिकताएं",
+      "cookie-preferences-title": "कुकी सेटिंग्स प्रबंधित करें"
+    },
+    "footer-image": {
+      "alt": "Push Chain फ़ुटर चित्रण",
+      "title": "Push Chain - यूनिवर्सल ब्लॉकचेन"
+    }
+  },
+  "pages": {
+    "knowledge": {
+      "seo": {
+        "title": "Knowledge Base — Guides, FAQs & How-tos",
+        "description": "यहां से अवधारणाओं, FAQs और कैसे करें के बारे में जानें। Push Chain का उपयोग करने के लिए स्पष्ट, गैर-तकनीकी गाइड।",
+        "og-title": "Push Chain Knowledge Base - Guides & FAQs",
+        "og-description": "Push Chain के बारे में अवधारणाएं, चरण-दर-चरण कैसे करें और सामान्य प्रश्नों के उत्तर।",
+        "twitter-title": "Knowledge Base - Guides & FAQs",
+        "twitter-description": "Push Chain के लिए त्वरित गाइड, FAQs, और कैसे करें (कोई dev शब्दजाल नहीं)।"
+      },
+      "hero-section": {
+        "title": "Knowledge Base",
+        "description": {
+          "highlighted": "Push Chain एक सच्चा universal blockchain है जो सभी chains में fragmentation को खत्म करने के लिए डिज़ाइन किया गया है।",
+          "developers": "Developers",
+          "developers-text": "एक बार deploy करें और तुरंत सभी समर्थित EVM और गैर-EVM chains के साथ संगत बनें।",
+          "users": "Users",
+          "users-text": "एक ही app का उपयोग करें चाहे वे किसी भी chain से आएं।"
+        },
+        "email-signup": {
+          "title": {
+            "long": "Push Chain टेस्टनेट के बारे में अधिसूचित करें",
+            "short": "Push Chain टेस्टनेट"
+          },
+          "description": "जब Push Chain टेस्टनेट लाइव हो तो सबसे पहले जानें। विशेष अपडेट के लिए हमारी मेलिंग सूची में शामिल हों।"
+        },
+        "footer": {
+          "description": "Push Chain के साथ किसी भी blockchain पर अपने app के लिए सहज, उपयोगकर्ता के अनुकूल अनुभव बनाएं।",
+          "cta": {
+            "text": "अधिसूचित करें"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Resources",
+              "items": {
+                "push101": {
+                  "title": "Push Chain Basics",
+                  "subtitle": "Push Chain की मूल बातें, इसके नवाचार और क्यों आवश्यक है के बारे में जानें",
+                  "ctatitle": "More Explore"
+                },
+                "builders": {
+                  "title": "Build on Push Chain",
+                  "subtitle": "यह जानें कि universal apps कैसे build करें, यह क्या अनलॉक करता है और कैसे शुरू करें!",
+                  "ctatitle": "Builders Assemble"
+                },
+                "deepdives": {
+                  "title": "Technical Deep Dives",
+                  "subtitle": "क्या आप Push के कामकाज को समझना चाहते हैं? या सिर्फ एक उत्सुक साथी? चाहे तो भी, नमस्ते!",
+                  "ctatitle": "See it Tick"
+                },
+                "devdocs": {
+                  "title": "Developer Docs",
+                  "subtitle": "चलो सीधे मुद्दे पर आते हैं! मैं एक universal chain हूँ… और आप एक dev हैं, चलो इसे आधिकारिक करते हैं!",
+                  "ctatitle": "Build Now"
+                },
+                "tokenomics": {
+                  "title": "Explore Tokenomics",
+                  "subtitle": "Learn how our tokenomics incentivizes and ensures sustainable network that's built to last",
+                  "ctatitle": "Learn Token Design"
+                },
+                "faq": {
+                  "title": "FAQs",
+                  "subtitle": "समुदाय द्वारा पूछे गए सभी लोकप्रिय प्रश्नों के उत्तर खोजने का स्थान",
+                  "ctatitle": "Read More"
+                }
+              }
+            }
+          }
+        }
+      },
+      "push101": {
+        "seo": {
+          "title": "Push Chain Basics — Introduction",
+          "description": "Beginner-friendly intro to Push Chain aur universal apps—what it is, how it works, aur how to get started.",
+          "og-title": "Push Chain Basics - Introduction",
+          "og-description": "Learn the basics: what Push Chain is, how it works, aur aapka first steps.",
+          "twitter-title": "Push Chain Basics - Start here",
+          "twitter-description": "Beginner guides to Push Chain aur universal apps."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Push Chain Basics",
+            "sections": {
+              "push-chain-basics": {
+                "items": {
+                  "why-push-chain": "## Why Push Chain?\n\nPush Chain is the first **true universal L1**, purpose built to enable apps to seamlessly be interact-able by users of any chain.\n\nWrite your smart contract once, deploy it on Push Chain, aur instantly reach users on Ethereum, Solana, aur all other supported chains without changing on-chain code.",
+                  "what-is-push-chain": "## What is Push Chain?\n\nPush Chain is a Proof-of-Stake (PoS) L1 blockchain that is designed to eliminate fragmentation across all chains.\n\nIt is a **shared state L1** blockchain for **Universal (Interoperable) Apps** across chains. Push Chain enables transactions from any chain (Eth, Solana, EVM, or non-EVM), enabling apps from any chain to be accessed by the users of any chain (**polymarket** from any chain, **pump.fun** from any chain, etc).",
+                  "innovations-of-push-chain": "## Innovations of Push Chain\n\nPush Chain introduces several groundbreaking innovations such as:\n\n**True Universal L1** - Natively supports all chains aur enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.\n\n**Universal Fee Abstraction** - Allows users to interact natively while being on the chain of their choice aur using any tokens they want.\n\n**Wallet Abstraction** - Support MetaMask, Phantom, aur other wallets as well as social or email login through one unified provider. Users never need to create a new wallet to access any apps.\n\n**Single transaction, no matter the chain** - users can interact with any app on Push Chain with a single transaction. No matter how they choose to interact with the app, they will only ever need to sign a single transaction.\n\n**Universal Smart Contracts** - Smart contracts are universal aur will work instantly without any on-chain code changes or extra steps.\n\n**Shared State & Programmable Solvers** - Enables developers to read aur write state of other blockchains (Roadmap).\n\nThis results in **fully interoperable applications** for web3. In this paradigm, instead of being a user of \"Uniswap on Ethereum,\" \"Uniswap on Polygon,\" or \"Uniswap on Arbitrum,\" a person simply becomes a **user of Uniswap.**",
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "why-push-chain-future": {
+                "title": "Learn why Push Chain is the future of web3",
+                "items": {
+                  "learn-why-push-chain": {
+                    "title": "Why Push Chain is the Missing Layer in Web3",
+                    "subtitle": "Push Chain is designed as the shared state L1 that enables scalable, consumer-ready universal applications."
+                  },
+                  "innovations-by-push-chain": {
+                    "title": "Innovations by Push Chain",
+                    "subtitle": "Discover ten key innovations that unify any chain, any user, aur any app."
+                  },
+                  "another-l1": {
+                    "title": "Is Push Chain Another L1?",
+                    "subtitle": "Push Chain isn’t about creating another siloed ecosystem — it’s about solving interoperability for everyone."
+                  },
+                  "evolution-of-push": {
+                    "title": "Evolution of Push",
+                    "subtitle": "From Push Protocol to Push Chain — the journey to building a universal, shared-state L1 for scalable Web3 apps."
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Consumer Apps 🫶🏽 on Push Chain",
+                    "subtitle": "Push Chain opens the door for the next wave of consumer apps that can run universally across chains."
+                  },
+                  "faq-push-chain": {
+                    "title": "Push Chain FAQs",
+                    "subtitle": "Got questions? Here are the most common answers about Push Chain aur universal apps."
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "builders": {
+        "seo": {
+          "title": "Builders — हाउ-टू & ट्यूटोरियल",
+          "description": "स्टेप-बाय-स्टेप गाइड, पैटर्न और उदाहरण जो Push Chain सुविधाओं का उपयोग करने के लिए हैं।",
+          "og-title": "Builders - हाउ-टू & ट्यूटोरियल",
+          "og-description": "निर्देशित ट्यूटोरियल, सर्वोत्तम अभ्यास और Push Chain के साथ निर्माण के उदाहरण।",
+          "twitter-title": "Builders - हाउ-टू & ट्यूटोरियल",
+          "twitter-description": "Push Chain पर शिप करने के लिए स्टेप-बाय-स्टेप गाइड।"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "नॉलेज बेस"
+          },
+          "blocks": {
+            "title": "Push Chain पर बनाएँ",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nक्या आप Push Chain पर बनाने के लिए तैयार हैं? यहां कुछ संसाधन हैं जो आपको प्रेरित करने और शुरू करने के लिए हैं।",
+                  "curated-reads": "## क्युरेटेड रीड्स 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "चलो यूनिवर्सल ऐप्स बनाते हैं 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "ऐप्स जो केवल शेयर स्टेट - वॉल्यूम 1 के साथ संभव हैं"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "ऐप्स जो केवल शेयर स्टेट - वॉल्यूम 2 के साथ संभव हैं"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "कंज्यूमर ऐप्स 🫶 पुश चेन?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "डेवलपर रिसोर्सेस",
+                "items": {
+                  "developer-docs": {
+                    "title": "डेवलपर डॉक्यूमेंटेशन एक्सप्लोर करें"
+                  },
+                  "faucet": {
+                    "title": "टेस्टनेट टोकन प्राप्त करें"
+                  },
+                  "testnet-explorer": {
+                    "title": "पुश टेस्टनेट एक्सप्लोरर"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "deepdives": {
+        "seo": {
+          "title": "डीप डाइव्स — कॉन्सेप्ट्स & आर्किटेक्चर",
+          "description": "शेयर्ड स्टेट, फ़ी एब्स्ट्रैक्शन, USV/UEA, और यूनिवर्सल एग्जीक्यूशन लेयर पर रीडेबल एक्सप्लेनर।",
+          "og-title": "डीप डाइव्स - कॉन्सेप्ट्स & आर्किटेक्चर",
+          "og-description": "पुश चेन मॉड्यूल, डिज़ाइन डिसीजन और परफॉर्मेंस पर गहन आर्टिकल्स।",
+          "twitter-title": "डीप डाइव्स - अंडर द हुड",
+          "twitter-description": "एक्सप्लेनर कि पुश चेन कैसे काम करता है।"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "नॉलेज बेस"
+          },
+          "blocks": {
+            "title": "डीप डाइव्स",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## आर्किटेक्चर डीप डाइव्स\n\nपुश चेन के आर्किटेक्चर और यह कैसे काम करता है - एक मॉड्यूल एक बार में के बारे में जानें।",
+                  "curated-reads": "## क्यूरेटेड रीड्स 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "जानें कि पुश चेन को क्या टिक करता है!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "इंटरॉप एज़ ए स्पेक्ट्रम"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "अंडरस्टैंडिंग प्रूफ ऑफ़ स्टेक (POS) - पार्ट 1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "tokenomics": {
+        "seo": {
+          "title": "Tokenomics — $PC Value Accrual & Economics",
+          "description": "How $PC captures value: settlement-driven demand, usage-based sinks (burns/locks), staking economics, and the supply schedule.",
+          "og-title": "Tokenomics - $PC Value Accrual & Economics",
+          "og-description": "Settlement in $PC drives demand; usage-based sinks reduce supply. Includes staking economics and emissions.",
+          "twitter-title": "Push Chain Tokenomics | Token Economics",
+          "twitter-description": "Settlement in $PC, usage-driven sinks, staking economics, and emissions—concise investor overview."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Explore Tokenomics",
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "overview": "## अवलोकन\n\n2024 के अंत में, पुश समुदाय ने पुश चेन के लॉन्च को मंजूरी देने के लिए मतदान किया, जो एक साझा अवस्था लेयर 1 blockchain है, जिसे universal applications के विकास को सक्षम करने और वेब3 में fragmentation को खत्म करने के लिए डिज़ाइन किया गया है।\n\nपुश चेन एक उद्देश्य-निर्मित लेयर है जो L1s, L2s और L3s को लगभग तत्काल finality और वास्तविक scalability के साथ जोड़ती है, जो वेब3 applications के साथ मूलभूत मुद्दे को हल करता है: fragmentation। governance proposal के सफल मतदान के साथ, पुश चेन मिशन अब **any chain, any user, और any app.** बनाने की ओर अग्रसर है।\n\n:::warning ⚠️ टोकन अभी तक लाइव नहीं है\nपुश चेन टोकन लाइव नहीं है, और कोई भी प्रीसेल लाइव नहीं है। पुश चेन टोकन का नाम अभी तक तय नहीं किया गया है।<p />\n\n\nजो कोई भी पुश चेन टोकन तक प्रारंभिक पहुंच प्रदान कर रहा है, उस पर विश्वास न करें। पुश चेन के संबंध में सभी संचार आधिकारिक पुश चैनलों से एक साथ घोषित किए जाएंगे — [X/Twitter](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## Push Chain का विजन क्या है?\n\nसभी blockchains विशिष्ट apps और उपयोग के मामलों के लिए विशेष रूप से उपयोगी साबित हुए हैं। Bitcoin ने स्मार्ट मनी को सक्षम बनाया। Ethereum ने DeFi के लिए नवाचारों को सक्षम बनाया। Solana ने तेज़ apps और meme संस्कृति को सक्षम बनाया। कई L2s और नए L1s चिंता के अन्य क्षेत्रों को लक्षित कर रहे हैं।\n\nहालाँकि, एक blockchain जो chain abstraction और स्पेस में निर्बाध interoperability को सक्षम करने के लिए विशेष रूप से बनाया गया है, अभी भी आवश्यक है। यह chain किसी भी chain (ETH, SOL, EVM या non-EVM) से transactions को सक्षम करेगा ताकि ऐसे apps को संचालित किया जा सके जिनका उपयोग **किसी भी उपयोगकर्ता —** चाहे उनका chain या wallet कुछ भी हो — द्वारा किया जा सके। यह **Universal Apps** की chain है। यह Push Chain है!",
+                  "innovation": "### नवीनता पर आधारित, जिससे blockchain अलगाव समाप्त हो!\n\nPush Chain उपयोगकर्ताओं और डेवलपर्स दोनों के लिए क्रांतिकारी है क्योंकि यह किसी भी डेवलपर के लिए कुछ ही घंटों में एक universal app को सिंगल universal smart contract deployment के माध्यम से तैनात करने के लिए एक वातावरण बनाता है।\n\nयह उपयोगकर्ताओं को अपने इकोसिस्टम की सुविधा, सुविधा और पसंद से लेनदेन करने में भी सक्षम बनाता है, चाहे app कहीं भी स्थित हो।\n\nइसके तहत यह निम्न द्वारा प्राप्त किया जाता है:\n\n- किसी भी chain से **transactions** करने की क्षमता\n- **Universal Fee & Wallet Abstraction** जिससे उपयोगकर्ता किसी भी chain, किसी भी wallet का उपयोग कर सकें और किसी भी token में भुगतान कर सकें\n- **Universal Smart Contract** जिससे devs मिनटों में तत्काल interop apps तैनात कर सकें\n- **Shared State** जिससे दूसरे blockchain से डेटा पढ़ा जा सके\n- **Programmable Solver** जिससे किसी भी दूसरे chain में डेटा लिखा जा सके\n\nइन सभी से **Universal Execution Layer** को सक्षम किया जाता है जिससे किसी भी chain के उपयोगकर्ताओं को एक ही app को एक्सेस और इंटरैक्ट करने की अनुमति मिलती है।",
+                  "fit": "### Push Chain कहां फिट बैठता है?\n\nPush chain **हर प्रोजेक्ट में… हर चेन पर!** फिट बैठता है!\n\n- **यह डेवलपर्स** को किसी भी चेन से सहज फुल इंटरॉप ऐप्स बनाने की अनुमति देता है जिसका उपयोग किसी भी चेन से किसी भी वॉलेट के माध्यम से किया जा सकता है।<br />\n- **यह उपयोगकर्ताओं** को अपनी पसंद के वॉलेट के साथ इंटरैक्ट करने की स्वतंत्रता देता है या Push Universal वॉलेट के साथ सोशल लॉगिन के माध्यम से एक सहज साइनलेस अनुभव प्राप्त करता है।<br />\n- **यह साझा ऐप अनुभवों** की अनुमति देता है जहां सभी चेन के उपयोगकर्ता एक साथ आ सकते हैं और यूनिवर्सल DeFi, यूनिफाइड गेमिंग, यूनिवर्सल NFT, यूनिवर्सल Governance आदि के साथ जुड़ सकते हैं।<br />",
+                  "token-utility": "### पुश चेन टोकन का उपयोग क्या है?\n\n1. **स्टेकिंग और वैलिडेशन** <br />\nटोकन नेटवर्क को सुरक्षित करने और कंसेंसस में भाग लेने के लिए स्टेकिंग के लिए उपयोग किया जाता है। वैलिडेशन और डेलीगेटर अपनी भागीदारी के लिए पुरस्कार अर्जित करते हैं।\n\n2. **ट्रांजेक्शन फीस** <br />\nटोकन ट्रांजेक्शन और ऐप उपयोग के लिए नेटवर्क फीस के प्राथमिक तरीके के रूप में कार्य करता है।\n\n3. **यूनिवर्सल फी एब्स्ट्रैक्शन** <br />\nटोकन उपयोगकर्ताओं को किसी भी टोकन (ETH, SOL, USDC, आदि) में फीस का भुगतान करने में सक्षम बनाता है जबकि प्रोटोकॉल पर्दे के पीछे रूपांतरण को संभालता है।\n\n4. **गवर्नेंस** <br />\nटोकन धारक प्रोटोकॉल गवर्नेंस में भाग ले सकते हैं, अपग्रेड, पैरामीटर परिवर्तनों और पारिस्थितिकी तंत्र के निर्णयों पर मतदान कर सकते हैं।",
+                  "deflationary-design": "### डिफ्लेशनरी डिज़ाइन\n\n1. **ट्रांज़ैक्शन फ़ी बर्न** <br />\nनेटिव Push Chain टोकन में कलेक्ट किए गए ट्रांज़ैक्शन फ़ी का एक भाग बर्न किया जाता है, जिससे समय के साथ कुल सप्लाई कम हो जाती है।\n\n2. **क्रॉस चेन बर्न** <br />\nयूनिवर्सल फ़ी एब्स्ट्रैक्शन का उपयोग करते हुए, दूसरे blockchain के नेटिव टोकन (ETH, SOL) पर कलेक्ट किए गए फ़ी का एक भाग Push Chain नेटिव टोकन में स्वैप किया जाता है और बर्न किया जाता है।\n\nयह एक डिफ्लेशनरी blockchain डिज़ाइन सुनिश्चित करता है जो नेटवर्क और उस पर होने वाले ट्रांज़ैक्शन के बढ़ने के साथ टोकन को बर्न करता है। यह डिज़ाइन Push Chain और उसके सभी प्रतिभागियों के लिए एक इंसेंटिवाइज़्ड, सस्टेनेबल लॉन्ग-टर्म फ़्यूचर बनाने में सक्षम बनाता है।",
+                  "migration-details": "### माइग्रेशन डिटेल्स\n\nPush Chain वर्षों के अनुभव और web3 के अग्रणी नोटिफिकेशन और कम्युनिकेशन protocol को बनाने से प्राप्त नतीजों का परिणाम है, जो क्रिप्टो के लिए पहले उपभोक्ता apps में से एक था।\n\nइसके अलावा, airdrop के अलावा (नीचे देखें) जो Push Chain उपयोगकर्ताओं, क्रिएटर्स, डेवलपर्स और ecosystem भागीदारों को आवंटित है, **$PUSH टोकन धारकों के लिए भी एक माइग्रेशन ड्रॉप आरक्षित है** (जो Push Protocol का मूल टोकन था)।\n\n<details>\n  <summary>\n  <b>मौजूदा $PUSH टोकन धारकों के लिए माइग्रेशन डिटेल्स</b>\n\n  </summary>\n\n  **मौजूदा $PUSH टोकन धारकों के लिए**, Push Chain टोकनॉमिक्स प्रस्ताव विशेष रूप से माइग्रेशन के लिए कुल Push Chain टोकन आपूर्ति का 15% आवंटित करता है। माइग्रेशन **1:15** के अनुपात में होगा—जिसका अर्थ है कि आपके पास मौजूद प्रत्येक Push Protocol ($PUSH) टोकन के लिए, आपको 15 Push Chain टोकन मिलेंगे। उदाहरण के लिए, यदि आपके पास वर्तमान में 40 $PUSH टोकन हैं, तो माइग्रेशन के बाद आपको 600 Push Chain टोकन मिलेंगे।\n\n  Push Chain का लॉन्च पिछले Push Protocol ($PUSH) टोकन धारकों की वफ़ादारी और योगदान को पुरस्कृत करने और उन्हें प्रोत्साहित करने के लिए डिज़ाइन किया गया है। मौजूदा $PUSH टोकन धारकों के लिए माइग्रेशन प्रक्रिया इस प्रकार होगी:\n\n  - टोकन 1:15 के अनुपात में माइग्रेट होंगे (1 Push Protocol टोकन = 15 Push Chain टोकन)।\n  - Push Chain माइग्रेशन में भाग लेने वालों को उनके माइग्रेटेड टोकन का 50% तुरंत अनलॉक मिलेगा, और अतिरिक्त 50% 3 महीने बाद अनलॉक होगा।\n  - टोकन माइग्रेटर को एक समर्पित yield farming pool से भी लाभ मिलेगा, जो उनके लिए आरक्षित है। इन पुरस्कारों को टोकन माइग्रेटर को वितरित किया जाएगा यदि वे अपने माइग्रेटेड Push Chain टोकन को stake करते हैं, ताकि उन्हें ecosystem में दीर्घकालिक योगदान के लिए पुरस्कृत किया जा सके।\n  - उदाहरण के लिए, यदि आपके पास 100 Push Protocol $PUSH टोकन हैं, तो आप माइग्रेट करने पर 750 Push Chain टोकन प्राप्त करेंगे और 3 महीने बाद 750 Push Chain टोकन प्राप्त करेंगे — कुल मिलाकर 1,500 Push Chain टोकन। आप इन टोकन को stake करके Push Chain yield farming pool से अतिरिक्त पुरस्कार प्राप्त करना चुन सकते हैं, जो समय-समय पर वितरित किए जाएंगे।\n\n  Push Chain टोकन माइग्रेशन लॉन्च के 12 महीने बाद तक खुला रहेगा, जिसके बाद शेष कोई भी टोकन समुदाय और ecosystem रिजर्व में चला जाएगा।\n\n</details>\n<p />",
+                  "airdrop-details": "### एयर्ड्रोप डिटेल्स\n\nइसके अतिरिक्त, टोकनॉमिक्स प्रस्ताव पिछले और वर्तमान Push Chain एप्लिकेशन उपयोगकर्ताओं (नोटिफिकेशन्स, मैसेजिंग, चैट) के लिए कुल Push Chain टोकन आपूर्ति का 10% एयर्ड्रोप के लिए आवंटित करता है। नए उपयोगकर्ताओं, क्रिएटर्स, डेवलपर्स और Push Chain के इकोसिस्टम पार्टनर्स के साथ।\n\n<br />",
+                  "token-distribution": "## टोकन वितरण विवरण\n\nपुश चैन टोकन की कुल आपूर्ति **10 बिलियन** होने का प्रस्ताव है, जिसका वितरण इस प्रकार है:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. TGE में एयर्ड्रॉप वितरण शुरू होता है, लेकिन यह कई सीज़न में होगा।\n2. कोर कंट्रीब्यूटर्स में 12 महीने की देरी है, इसके बाद 24 महीने की वेस्टिंग है।\n3. पुश लैब्स ट्रेजरी में 36 महीने की वेस्टिंग है।\n4. निवेशकों में 24 महीने की लीनियर वेस्टिंग है।\n5. कम्युनिटी और इकोसिस्टम रिज़र्व में TGE में 13.5% अनलॉक है, इसके बाद 36 महीने की वेस्टिंग है।\n\n<br />",
+                  "get-involved": "## शामिल हों\n\n- **🧙 डेवलपर्स**\nहमारे SDK और Docs को [Documentation Hub](/docs/) पर देखें\n\n- **🦹 समुदाय**  \n[@PushChain](https://x.com/PushChain) को X/Twitter पर फॉलो करें, हमारे [Discord](https://discord.com/invite/pushchain) और [Telegram](https://t.me/epnsproject) में शामिल हों।\n\nआइए मिलकर **Universal Web3** का भविष्य बनाएं!"
+                }
+              }
+            }
+          }
+        }
+      },
+      "faq": {
+        "seo": {
+          "title": "FAQ — अक्सर पूछे जाने वाले प्रश्न",
+          "description": "वॉलेट, फीस, सपोर्टेड चेन्स और शुरुआत करने के बारे में त्वरित जवाब।",
+          "og-title": "Push Chain FAQ - सभी प्रश्न",
+          "og-description": "तेज़ी से जवाब खोजें, जिसमें गाइड, testnet और सपोर्ट के लिंक शामिल हैं।",
+          "twitter-title": "FAQ - शुरू करने के लिए",
+          "twitter-description": "Push Chain से जुड़े सवालों के तुरंत जवाब।"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "नॉलेज बेस"
+          },
+          "blocks": {
+            "title": "सामान्य पूछे जाने वाले प्रश्न",
+            "sections": {
+              "faq-overview": {
+                "items": {
+                  "overview": "## अवलोकन\n\nPush Chain के बारे में समुदाय द्वारा पूछे गए सभी लोकप्रिय प्रश्नों के उत्तर खोजने का स्थान। Push Fam 🫶 से सामूहिक रूप से प्राप्त और Push टीम 💪 द्वारा क्यूरेट किया गया।\n\n---",
+                  "what-is-push-chain": "### Push Chain क्या है?\n\nPush Chain एक शेयर-स्टेट Layer 1 ब्लॉकचेन है जिसे सभी चेन्स में फ्रेगमेंटेशन को खत्म करने के लिए बनाया गया है।\n\n**किसी भी चेन** (Ethereum, Solana, EVM या non-EVM) से **निर्बाध लेनदेन** को सक्षम करके, यह किसी भी उपयोगकर्ता को कई वॉलेट, टोकन या गैस मैकेनिक्स को जूझने के बिना वेब3 ऐप के साथ इंटरैक्ट करने देता है।\n\nसंक्षेप में, Push Chain L1s 🤝 L2s 🤝 L3s को एक साथ एक सुसंगत परत के तहत एकजुट करता है।\n\n---",
+                  "how-does-push-chain-work": "### Push Chain कैसे काम करता है?\n\n![How Normal Apps Work](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![How Universal Apps Work](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain सभी chains में fragmentation की समस्या को हल करने के लिए एक अनोखा दृष्टिकोण अपनाता है। Interoperability protocols पर निर्भर रहने के बजाय, जो उपयोगकर्ताओं और डेवलपर्स दोनों के लिए जटिलता जोड़ते हैं, यह एक novel दृष्टिकोण अपनाता है जो किसी भी उपयोगकर्ता द्वारा किसी भी chain से natively उपयोग किए जा सकने वाले एक true universal blockchain का निर्माण करता है।\n\nइसे प्राप्त करने के लिए, Push Chain कई **precompiles** का उपयोग करता है जो कस्टम मॉड्यूल हैं जो बनाए गए हैं:\n\n1. **Recognize** अन्य chains के उपयोगकर्ताओं को - Universal address standard जो किसी उपयोगकर्ता के address को blockchain agnostic तक बढ़ाता है (based on [CAIP-10 standards](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md))।\n\n2. **Map** उपयोगकर्ताओं को Push Chain पर - प्रत्येक बाहरी-chain उपयोगकर्ता के लिए एक Universal Executor Account (UEA) तैनात किया जाता है। इस module का उपयोग एक स्मार्ट account को तैनात करने के लिए किया जाता है जो तब अन्य precompiles का उपयोग करके लेनदेन को संसाधित करता है।\n\n3. **Execute** universal transactions - यह USV (Universal Signature Verification) और UTXV (Universal Transaction Verifier) precompiles का उपयोग करके अन्य chains से signatures और transactions को verify और execute करके किया जाता है।\n\n4. **Abstract** वे जिस chain पर हैं उसकी जटिलता से दूर - यह प्रत्येक chain पर universal gateway contracts होने से किया जाता है जो chain के native token में gas funds को लॉक करता है (या कोई अन्य compliant token) और फिर UEA (Executor Account) को gas attribute करने और USV को लेनदेन को execute करने के लिए UTXV precompiles का उपयोग करता है।\n\nयह एक **extremely powerful approach** है जो उपयोगकर्ताओं को बिना किसी chain की चिंता किए Push Chain पर किसी भी app के साथ interact करने की अनुमति देता है जिस पर वे हैं या वे कौन सा wallet उपयोग कर रहे हैं क्योंकि सब कुछ उपयोगकर्ताओं और डेवलपर्स दोनों के लिए abstract दूर कर दिया गया है।",
+                  "why-unique-for-users": "### Push Chain उपयोगकर्ताओं के लिए अद्वितीय क्यों है?\n\nPush Chain मौजूदा blockchains में विशिष्ट कमियों को संबोधित करता है, जैसे interoperability, चेन में state access, programmable solvers और वॉलेट abstraction जिसके परिणामस्वरूप **वास्तविक फुल-स्टैक interoperability** होती है। जबकि मौजूदा blockchains मजबूत हैं, वे अपने ही इकोसिस्टम में काम करते हैं और इन chains को एकजुट करने वाले एक aggregator की आवश्यकता होती है।\n\nPush Chain का ध्यान **shared state chain** होने पर है जो universal (interoperable) applications के लिए है जो एक एकीकृत layer के रूप में काम करता है जहाँ सभी chains एक साथ आ सकते हैं और Push Chain को universal hub के रूप में उपयोग कर सकते हैं या उनके बीच settlement कर सकते हैं।\n\nयह **Any Chain** से काम करने वाले web3 का एक नया प्रतिमान प्रदान करता है। **Any Wallet / User** के लिए। और **Any App** के लिए उपयुक्त है।\n\n---",
+                  "core-innovations": "### Push Chain में क्या अनोखा है?\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\nPush Chain एक Proof-of-Stake Layer 1 है जिसे हर blockchain में fragmentation को खत्म करने के लिए डिज़ाइन किया गया है। इसके अंदर, यह कई प्रमुख नवाचारों को जोड़ता है:\n\n- **True universal Chain**  \n  यह स्वाभाविक रूप से सभी chains को सपोर्ट करता है और यूजर्स को एक ही app के साथ interact करने में सक्षम बनाता है। इसमें किसी केंद्रीकृत relayers, bridges या अन्य हैक्स की आवश्यकता नहीं है।\n\n- **Universal Fee & Wallet Abstraction**  \n  यह यूजर्स को gas या wallet mechanics की चिंता किए बिना किसी भी chain से app के साथ interact करने की अनुमति देता है।\n\n- **किसी भी chain के लिए एक transaction**  \n  यूजर्स केवल एक transaction पर हस्ताक्षर करते हैं, चाहे वे किसी भी chain पर हों।\n\n- **Universal Smart Contract**  \n  100% EVM compatible smart contracts जिन्हें बिना किसी **zero on-chain code changes** के deploy किया जा सकता है। एक बार deploy करने के बाद, वे स्वाभाविक रूप से सभी chains के यूजर्स के साथ compatible हो जाते हैं।\n\n- **Universal EVM**  \n  Push Chain अन्य chains के यूजर्स को स्वाभाविक रूप से पहचानने में सक्षम है और सही ढंग से transactions को उन्हें बताता है।\n\n- **Shared State and Programmable Solvers**  \n  (Roadmap) Push Chain के स्मार्ट contracts को किसी अन्य chain पर state को read और write करने में सक्षम बनाता है।\n\nएक साथ, ये विशेषताएं आपको **universal web3 apps** बनाने देती हैं। \"Ethereum पर Uniswap\" या \"Polygon पर Uniswap\" के बजाय, एक यूजर बस **Uniswap का यूजर** बन जाता है — बस।\n\n---",
+                  "problems-solved": "### Push Chain क्या समस्याएँ हल करता है?\n\n- **Fragmentation**  \n  EVM और non-EVM चेनों को एक साझा-स्टेट L1 के तहत जोड़ता है, इसलिए उपयोगकर्ताओं को कभी भी नेटवर्क या <वॉलेट> बदलने की आवश्यकता नहीं होती है।\n\n- **Interoperability**  \n  किसी भी <ब्लॉकचेन> से लेनदेन के लिए मूल समर्थन और ऑन-चेन साझा स्थिति।\n\n- **Finality**  \n  लगभग 1-2 सेकंड में तात्कालिक, अपरिवर्तनीय मूल <फायनालिटी> – अब इंतजार या <रीऑर्ग> नहीं।\n\n- **Onboarding & UX**  \n  सोशल/ईमेल लॉगिन, किसी भी टोकन में <गैस> और किसी भी <वॉलेट> समर्थन के साथ शून्य-घर्षण पहुंच कई चेनों पर।\n\n- **Universal Apps**  \n  एक बार बनाएं, हर जगह तैनात करें — कोई भी <वेब3> ऐप किसी भी उपयोगकर्ता के लिए किसी भी चेन पर निर्बाध रूप से काम करता है।\n\n---",
+                  "what-apps-can-build": "### आप Push Chain पर कौन से ऐप बना सकते हैं?\n\n![Universal App Examples](/assets/website/chain/knowledge/faq/appusecases.webp)\n\nPush Chain के shared-state, cross-chain आर्किटेक्चर के साथ, संभावनाएं अनंत हैं। यहां कुछ प्रमुख उदाहरण दिए गए हैं:\n\n- **Universal DEX**  \n  हर liquidity pool के लिए एक स्वैप UI–सभी चेन्स पर abstract routing CEX के स्पीड और UX के साथ।\n\n- **Universal DeFi**  \n  आपके ब्राउज़र में एक ग्लोबल बैंक: lending, borrowing, yield aggregators जो मैन्युअल bridging के बिना इकोसिस्टम में फैले हुए हैं।\n\n- **Universal AI Agents**  \n  autonomous agent जो किसी भी chain पर किसी भी टोकन में भुगतान करते हैं और भुगतान प्राप्त करते हैं - subscription services, डेटा bots और बहुत कुछ के लिए एकदम सही।\n\n- **Universal DAOs**  \n  cross-chain governance जहां टोकन धारक मूल chain की परवाह किए बिना प्रस्तावों पर वोट करते हैं और उन्हें लागू करते हैं।\n\n- **Universal Gaming**  \n  multiplayer टूर्नामेंट और इन-गेम अर्थव्यवस्थाएं जो Ethereum, Solana, Polygon और उससे आगे के खिलाड़ियों और संपत्तियों को एकजुट करती हैं।\n\n- **Universal Marketplace**  \n  एक समेकित marketplace में हर chain से NFTs और टोकन खरीदें, बेचें और ट्रेड करें।\n\n- **Universal Name Service**  \n  मानव-पठनीय नाम जो कई blockchains पर wallets को हल करते हैं।\n\nPush Chain पर होने वाले ऐप और इनोवेशन अंतहीन हैं! यहां कुछ [अधिक use cases](/blog/consumer-apps-that-can-be-built-on-push-chain/) हैं ताकि आप शुरू कर सकें। बिल्डर्स [Documentation Hub](/docs/) भी शुरू करने के लिए देख सकते हैं। \n\n---",
+                  "technical-section": "## टेक्निकल",
+                  "why-not-an-l2": "### L1 क्यों, L2 नहीं?\n\nPush Chain को अन्य सभी ब्लॉकचेन के लिए **साझा सेटलमेंट layer** और **universal execution layer** के रूप में निर्मित किया गया है — ऐसी भूमिकाएँ जो केवल एक स्टैंडअलोन L1 ही पूरी कर सकती हैं:\n\n- **नेटिव क्रॉस-चेन सेटलमेंट**  \n  एक L1 के रूप में, Push Chain बिना किसी बाहरी सुरक्षा मॉडल या धोखाधड़ी प्रमाणों पर भरोसा किए किसी भी चेन से सीधे लेनदेन को अंतिम रूप दे सकता है।\n\n- **Universal Execution & State Access**  \n  अपना स्वयं का सहमति और स्टेट मशीन चलाकर, Push Chain Ethereum, Solana, और उससे आगे के लेनदेन की व्याख्या और निष्पादन कर सकता है — कुछ ऐसा जो एक L2 — एक बेस layer से बंधा हुआ — मूल रूप से नहीं कर सकता है।\n\n- **L2 की कोई बाध्यताएँ या देरी नहीं**  \n  L2 अपनी होस्ट चेन (प्लस ब्रिजिंग ओवरहेड) की लेटेंसी, अंतिम रूप देने के नियमों और गैस मॉडल को विरासत में मिलती है। Push Chain इन बाधाओं से बचता है और बेस layer पर तत्काल अंतिम रूप देने और universal fee abstraction प्रदान करता है।\n\n- **ट्रू साझा स्टेट**  \n  स्मार्ट कॉन्ट्रैक्ट के भीतर कई चेन की स्टेट को पढ़ने और लिखने के लिए, आपको प्रत्यक्ष, protocol-level एक्सेस की आवश्यकता है — जो केवल L1 layer पर ही उपलब्ध है।\n\nसंक्षेप में, केवल एक उद्देश्य-निर्मित L1 ही हर चेन को एक सुसंगत execution और settlement layer के तहत एकजुट कर सकता है — बिना किसी अतिरिक्त जटिलता या अतिरिक्त विश्वास मान्यताओं के।\n\n---",
+                  "evm-compatibility": "### क्या पुश चेन EVM संगत है?\n\nहाँ, पुश चेन **EVM संगत** है और इससे भी बहुत कुछ। यह समर्थन करता है:\n\n- **EVM स्मार्ट कॉन्ट्रैक्ट**: एथेरियम की तरह सॉलिडिटी कॉन्ट्रैक्ट तैनात करें\n- **एथेरियम टूलिंग**: मेटामास्क, हार्डहैट, रीमिक्स और अन्य परिचित टूल का उपयोग करें\n- **यूनिवर्सल एक्सटेंशन**: क्रॉस-चेन कार्यक्षमता के लिए अतिरिक्त प्रीकंपाइल\n- **मल्टी-VM समर्थन**: (रोडमैप) एसवीएम (सोलाना), मूववीएम, आदि जैसे अन्य वीएम के लिए समर्थन\n\nइसका मतलब है कि डेवलपर्स:\n- मौजूदा एथेरियम डीएप्स को न्यूनतम बदलावों के साथ पोर्ट कर सकते हैं\n- परिचित विकास कार्यप्रवाह और टूल का उपयोग कर सकते हैं\n- पुश चेन की यूनिवर्सल सुविधाओं के माध्यम से बेहतर क्रॉस-चेन क्षमताओं तक पहुंच सकते हैं\n\nव्यवहार में, किसी भी चेन से उपयोगकर्ता और ऐप्स पुश चेन ऐप्स के साथ सहजता से इंटरैक्ट कर सकते हैं — भले ही अंतर्निहित VM कुछ भी हो।\n\n---",
+                  "evm-non-evm-compatible": "### क्या Push Chain EVM और गैर-EVM दोनों चेनों के साथ संगत होगा?\n\nहाँ! Push Chain हर blockchain प्रतिमान को ब्रिज करने के लिए बनाया गया है।\n\n- **EVM Compatibility**  \n  अपने Solidity अनुबंधों को ड्रॉप करें और वे अपरिवर्तित रूप से चलेंगे, Push Chain के EVM रनटाइम का लाभ उठाते हुए।\n\n- **Non-EVM Support**  \n  मूल प्रीकंपाइल्स (USV/UTXV) और universal address मानक Push Chain को Solana, Bitcoin, Cosmos SDK चेनों, और अन्य से transactions को validate और execute करने देते हैं।\n\nव्यावहारिक रूप से, किसी भी चेन के user और apps निर्बाध रूप से Push Chain apps के साथ interact कर सकते हैं — चाहे अंतर्निहित VM कुछ भी हो।\n\n---",
+                  "why-not-ethereum-or-solana": "### Ethereum और Solana जैसे मौजूदा blockchains पहले से ही मौजूद होने पर नया blockchain क्यों बनाएं?\n\nमौजूदा blockchains अपने विशिष्ट डोमेन में उत्कृष्ट हैं लेकिन **खंडन** पैदा करते हैं:\n\n- **Ethereum**: DeFi के लिए अच्छा है लेकिन महंगा और धीमा\n- **Solana**: तेज़ और सस्ता लेकिन अलग टूलिंग और इकोसिस्टम\n- **L2s**: स्केलिंग को हल करें लेकिन और अधिक खंडन पैदा करें\n\nPush Chain इन chains के साथ प्रतिस्पर्धा नहीं करता है — यह उन्हें **एकीकृत करता है**:\n\n- उपयोगकर्ता मौजूदा wallets (MetaMask, Phantom, आदि) का उपयोग करके Push Chain apps के साथ इंटरैक्ट कर सकते हैं\n- अपनी पसंदीदा टोकन (ETH, SOL, USDC) में gas का भुगतान करें\n- डेवलपर कई chains पर परिनियोजित करने के बजाय एक बार बनाते हैं\n- सभी chains से तरलता और उपयोगकर्ता समान apps में इंटरैक्ट कर सकते हैं\n\nPush Chain वह **लापता टुकड़ा** है जो सभी मौजूदा chains को एक साथ सहज रूप से काम करता है।",
+                  "shared-state-meaning": "### शेयरड स्टेट ब्लॉकचेन का मतलब क्या है?\n\nशेयर्ड स्टेट ऑनचेन डेटा की वर्तमान स्थिति को संदर्भित करता है। एक शेयरड-स्टेट ब्लॉकचेन वह है जिसकी अपनी स्टेट और उन सभी अन्य चेन्स की स्टेट तक रीड-एंड-राइट एक्सेस हो जिनसे यह इंटरैक्ट करता है।\n\nएक शेयरड स्टेट चेन किसी भी अन्य चेन से डेटा, लिक्विडिटी और यूजर्स को संभालने में सक्षम है।\n\n---",
+                  "how-achieve-shared-state": "### Push Chain shared-state कैसे प्राप्त करता है?\n\n![Push Chain Universal App](/assets/website/chain/knowledge/faq/pcuniversalapp.webp)\n\nA पारंपरिक blockchain केवल अपनी ही ledger और wallet मानक को जानता है। Push Chain इस मॉडल को चार मुख्य तरीकों से विस्तारित करता है:\n\n1. **Universal Wallet Compatibility**  \n\t- किसी भी chain (Ethereum, Solana, Bitcoin, Cosmos SDK, etc.) से chain agnostic addresses का समर्थन करता है।  \n\t- किसी भी chain से signatures USV/UTXV precompiles के माध्यम से सत्यापित किए जाते हैं, इसलिए उपयोगकर्ता कभी भी wallets नहीं बदलते हैं।\n\n2. **Universal Smart Contracts**  \n\t- EVM contracts बिना किसी बदलाव के तैनात किए जाते हैं लेकिन क्रॉस-chain transactions को मूल रूप से सत्यापित और निष्पादित कर सकते हैं।  \n\t- Push Chain का runtime प्रत्येक समर्थित नेटवर्क के लिए signature mapping और payload parsing को संभालता है।\n\n3. **On-Chain Shared State**  \n\t- Validators प्रत्येक block में बाहरी chain state के Merkle proofs को commit करते हैं (MPT roots के माध्यम से)।  \n\t- Relayers मांग पर leaf proofs को प्राप्त और submit करते हैं, इसलिए contracts किसी भी chain के डेटा को वास्तविक समय में पढ़ सकते हैं।\n\n4. **Programmable Solvers**  \n\t- एक solver network एक ही transaction के तहत atomic क्रॉस-chain workflows (जैसे, Chain A पर swap, Chain B पर mint) को निष्पादित करता है।  \n\t- डेवलपर्स सरल solver scripts लिखते हैं; नेटवर्क routing और execution को संभालता है।\n\nएक साथ, ये विशेषताएं Push Chain को एक **shared-state L1** में बदल देती हैं जो universal apps को सभी chains के लिए मूल रूप से सक्षम करती हैं। एक ऐसी दुनिया जहां किसी भी chain का कोई भी उपयोगकर्ता किसी भी अन्य chain पर किसी भी app को एक्सेस और इंटरैक्ट करने में सक्षम है।\n\n**Any Chain, Any App, Any User - One Push Chain**\n\n---",
+                  "consensus-mechanism": "### Push Chain कौनसा consensus मैकेनिज्म इस्तेमाल करता है?\n\nPush Chain **Proof-of-Stake (PoS)** consensus इस्तेमाल करता है, जो **CometBFT** इंजन पर बना है, जिसमें कई सुधार किए गए हैं:\n\n- **Fast Finality**: लेनदेन लगभग 1–2 सेकंड में फाइनल हो जाते हैं, जिसमें निश्चित फाइनलिटी होती है (कोई रीऑर्ग नहीं)\n- **Energy Efficient**: PoS, PoW की तुलना में पर्यावरण के लिए बेहतर है\n- **Validator Network**: चेन को सुरक्षित करने वाले विकेंद्रीकृत वैलिडेटर्स का नेटवर्क\n- **Slashing Protection**: आर्थिक प्रोत्साहन वैलिडेटर्स की ईमानदारी सुनिश्चित करते हैं\n\nCometBFT’s युद्ध-परीक्षित BFT consensus को यहां universal transaction processing और क्रॉस-चेन स्टेट मैनेजमेंट की अनूठी आवश्यकताओं के लिए ऑप्टिमाइज़ किया गया है।",
+                  "transaction-fees": "### Push Chain पर लेनदेन शुल्क कैसे काम करते हैं?\n\nPush Chain **यूनिवर्सल फी एब्स्ट्रैक्शन** के साथ शुल्क भुगतान में क्रांति लाता है:\n\n- **किसी भी टोकन में भुगतान करें**: उपयोगकर्ता ETH, SOL, USDC, या किसी भी समर्थित टोकन में गैस का भुगतान कर सकते हैं\n- **क्रॉस-चेन शुल्क भुगतान**: बिना ब्रिजिंग के अपनी मूल चेन से शुल्क का भुगतान करें\n- **गैसलेस लेनदेन**: ऐप्स सहज UX के लिए उपयोगकर्ता लेनदेन को प्रायोजित कर सकते हैं\n- **गतिशील शुल्क बाजार**: शुल्क नेटवर्क की मांग के आधार पर समायोजित होते हैं\n\nइसका मतलब है कि उपयोगकर्ताओं को ऐप्स के साथ इंटरैक्ट करने के लिए कभी भी मूल Push Chain टोकन प्राप्त करने की आवश्यकता नहीं होगी।\n\n---",
+                  "true-universal-chain": "### True Universal Chain का क्या मतलब है?\n\nएक **true universal chain** एक ब्लॉकचेन है जो हर दूसरे नेटवर्क को पहले दर्जे के नागरिक के रूप में मानता है—कोई ब्रिज नहीं, कोई केंद्रीकृत रिलेयर नहीं, और कोई अनुकूलता हैक नहीं। यह प्रदान करता है:\n\n1. **नेटिव मल्टीचेन पहचान**  \n\tEthereum, Solana, किसी भी EVM या गैर-EVM चेन से वॉलेट सभी Push Chain पर मूल रूप से साइन, सत्यापित और निष्पादित करते हैं। इसलिए उपयोगकर्ता कभी भी खाते बदलते नहीं हैं या एकाधिक वॉलेट की जटिलताओं से परेशान नहीं होते हैं।\n\n2. **एकीकृत निपटान**  \n\tकिसी भी नेटवर्क से लेनदेन Push Chain पर अंतिम रूप से पूरे होते हैं, जिससे सभी को सच्चाई का एक ही स्रोत मिलता है और एक ही ऐप को सभी चेन के उपयोगकर्ताओं द्वारा एक्सेस करने में सक्षम किया जाता है।\n\n3. **एकल लेनदेन और यूनिवर्सल फी एब्स्ट्रैक्शन**  \n\tउपयोगकर्ता केवल एक लेनदेन पर हस्ताक्षर करते हैं, चाहे उनका स्रोत चेन कुछ भी हो और किसी भी टोकन में गैस का भुगतान करते हैं। किसी ऐप का उपयोग करने के लिए अब अनगिनत टोकन को बनाए रखने या स्वैप करने की आवश्यकता नहीं है।\n\n4. **एक बार तैनात करें, हर जगह उपयोग करें**  \n\tडेवलपर स्मार्ट अनुबंध एक बार लिखते और तैनात करते हैं (EVM या अन्यथा) बिना किसी अतिरिक्त कोड के—एक तैनाती सभी चेन को कवर करती है।\n\nPush Chain पहली बार इन सुविधाओं को सीधे अपनी सहमति और रनटाइम में शामिल करता है, जिससे वास्तव में विखंडन समाप्त हो जाता है—कोई वर्कअराउंड नहीं, कोई अतिरिक्त परतें नहीं, बस हर किसी के लिए एक यूनिवर्सल चेन।\n\n---",
+                  "competitors-section": "## प्रतिस्पर्धी",
+                  "vs-other-universal": "### Push Chain अन्य Universal Solutions से कैसे अलग है?\n\nआज के तथाकथित \"universal\" Solutions अभी भी Bridges पर निर्भर हैं, डेटा और मूल्य को ले जाने के लिए डबल लेनदेन या केंद्रीकृत relayers की आवश्यकता होती है। Push Chain अलग है—यह पहला **true** universal L1 है जो:\n\n- **विभिन्न chains में उपयोगकर्ताओं को एकीकृत करता है**  \n\tहर blockchain address मूल रूप से समर्थित है। MetaMask, Phantom जैसे wallets Push Chain के साथ संगत हैं। Gas किसी भी chain पर किसी भी token में भुगतान किया जाता है।\n\n- **एक universal execution layer के रूप में कार्य करता है**  \n\tसभी लेनदेन एक ही chain पर finalize होते हैं, यह सुनिश्चित करते हुए कि हर कोई एक ही app के साथ इंटरैक्ट करता है—कोई भी हैक्स, कोई भी कामarounds नहीं।\n\n- **किसी भी chain के लेनदेन को सही ढंग से attributes & execute करता है**  \n\tलेनदेन पर हस्ताक्षर किए जाते हैं, सत्यापित किए जाते हैं और उनके source chains पर wallets को attribute किए जाते हैं। एक true universal chain उन सभी का समर्थन करता है।\n\n---",
+                  "vs-bridges-messaging": "### यह पुलों या मैसेजिंग लेयर्स से कैसे अलग है?\n\n**संक्षिप्त उत्तर**: पुश वह जगह है जहां आपका ऐप चलता है। पुल/मैसेजिंग सिर्फ टोकन या संदेशों को चेन के बीच ले जाते हैं जिससे उपयोगकर्ता और डेवलपर्स दोनों के लिए चीजें जटिल हो जाती हैं।\n\n- **एकल होम बनाम कई क्लोन**  \n\tपुलों/मैसेजिंग के साथ आप प्रति चेन डिप्लॉय करते हैं और संदेशों के माध्यम से सिंक करते हैं। पुश पर आप एक बार डिप्लॉय करते हैं; हर कोई एक ही कॉन्ट्रैक्ट और शेयरड स्टेट को हिट करता है।\n\n- **कोई रैप्ड एसेट्स या अनिवार्य ब्रिजिंग नहीं**  \n\tउपयोगकर्ता अपनी होम चेन पर रहते हैं और जो उनके पास है उससे भुगतान करते हैं; हम पर्दे के पीछे रूटिंग और शुल्क रूपांतरण को संभालते हैं।\n\n- **एकीकृत पहचान और सत्यापन**  \n\tहम किसी भी वॉलेट/चेन से सिग्नेचर स्वीकार करते हैं और उन्हें पुश पर उसी उपयोगकर्ता के लिए जिम्मेदार ठहराते हैं — गैर-कस्टोडियल।\n\n- **कम गतिशील भाग**  \n\tकोई क्रॉस-चेन अनुमोदन नृत्य नहीं, कोई गैस-टोकन शिकार नहीं, कोई गोंद कॉन्ट्रैक्ट नहीं जिन्हें सिंक में रखने की आवश्यकता है।\n\n- **जब आप चाहें तो पुलों का उपयोग करें, क्योंकि आपको करना होगा**  \n\tलिक्विडिटी अभी भी पुलों के माध्यम से जा सकती है, लेकिन आपके ऐप के साथ इंटरैक्ट करने के लिए इसकी आवश्यकता नहीं है।\n\n**परिणाम**: सरल ऐप, सच्चाई का एक स्रोत, और एक UX जो एक चेन जैसा महसूस होता है — भले ही उपयोगकर्ता नहीं हैं।\n\n---",
+                  "vs-layerzero": "### पुश चेन लेयर जीरो से कैसे अलग है?\n\n**लेयर जीरो:**\n- **मेसेजिंग प्रोटोकॉल**: क्रॉस-चेन मेसेज पासिंग को सक्षम बनाता है\n- **रिलेयर निर्भरता**: बाहरी रिलेयर और ओरेकल पर निर्भर करता है\n- **डेवलपर इंटीग्रेशन**: ऐप्स को लेयर जीरो SDK को इंटीग्रेट करना होगा\n- **ट्रस्ट एस्सुम्प्शन**: उपयोगकर्ताओं को रिलेयर इंफ्रास्ट्रक्चर पर भरोसा करना होगा\n\n**पुश चेन:**\n- **नेटिव एग्जीक्यूशन**: किसी भी चेन से डायरेक्ट ट्रांजेक्शन एग्जीक्यूशन\n- **नो रिलेयर**: प्रोटोकॉल स्तर पर इनबिल्ट क्रॉस-चेन फंक्शनैलिटी\n- **जीरो इंटीग्रेशन**: मौजूदा ऐप्स बिना मॉडिफिकेशन के काम करते हैं\n- **ट्रस्ट-मिनिमाइज़्ड**: पुश चेन की अपनी सहमति के अलावा कोई एक्स्ट्रा ट्रस्ट एस्सुम्प्शन नहीं\n\nपुश चेन नेटिव क्रॉस-चेन एग्जीक्यूशन प्रदान करता है जबकि लेयर जीरो को अतिरिक्त इंफ्रास्ट्रक्चर और इंटीग्रेशन की आवश्यकता होती है।\n\n---",
+                  "vs-wormhole": "### Push Chain, Wormhole से कैसे अलग है?\n\n**Wormhole:**\n- **Bridge Protocol**: मुख्य रूप से टोकन और NFT ब्रिजिंग पर केंद्रित\n- **Wrapped Assets**: विभिन्न चेन्स पर टोकन के रैप्ड वर्जन बनाता है\n- **Guardian Network**: क्रॉस-चेन मैसेज को सत्यापित करने के लिए validator set पर निर्भर करता है\n- **Multi-Step Process**: उपयोगकर्ताओं को ऐप्स का उपयोग करने से पहले एसेट्स को ब्रिज करना होगा\n\n**Push Chain:**\n- **Universal Execution**: उपयोगकर्ता सीधे इंटरैक्ट करते हैं, बिना ब्रिजिंग के\n- **Native Assets**: रैप्ड टोकन की आवश्यकता नहीं है, मूल एसेट्स का उपयोग करें\n- **Direct Verification**: किसी भी चेन से मूल हस्ताक्षर सत्यापन\n- **Single Transaction**: उपयोगकर्ता एक चरण में इंटरैक्ट करते हैं, कोई ब्रिजिंग आवश्यक नहीं है\n\nPush Chain क्रॉस-चेन इंटरैक्शन के लिए इसकी आवश्यकता करते समय Wormhole को एसेट ब्रिजिंग की आवश्यकता को समाप्त करता है।\n\n---",
+                  "vs-axelar": "### पुश चेन, एक्सलर से कैसे अलग है?\n\n**एक्सलर:**\n- **नेटवर्क ऑफ़ नेटवर्क्स**: चेन को एक्सलर नेटवर्क के माध्यम से जोड़ता है\n- **वैलिडेटर डिपेंडेंसी**: सुरक्षा के लिए एक्सलर वैलिडेटर सेट पर निर्भर करता है\n- **गेटवे कॉन्ट्रैक्ट्स**: प्रत्येक चेन पर गेटवे डिप्लॉयमेंट की आवश्यकता होती है\n- **मेसेज पासिंग**: क्रॉस-चेन कम्युनिकेशन पर केंद्रित है\n\n**पुश चेन:**\n- **डायरेक्ट एग्जीक्यूशन**: ट्रांजैक्शन बिना किसी इंटरमीडियरी के पुश चेन पर सीधे प्रोसेस होते हैं\n- **इंडिपेंडेंट सिक्योरिटी**: बिना किसी बाहरी निर्भरता के अपना कंसेंनस\n- **यूनिवर्सल कॉन्ट्रैक्ट्स**: सभी चेन के लिए सिंगल डिप्लॉयमेंट काम करता है\n- **नेटिव एग्जीक्यूशन**: किसी भी चेन से डायरेक्ट ट्रांजैक्शन प्रोसेसिंग\n\nपुश चेन डायरेक्ट यूनिवर्सल एक्सेस प्रदान करता है जबकि एक्सलर एक इंटरमीडिएट लेयर जोड़ता है।\n\n---",
+                  "vs-chainlink-ccip": "### पुश चेन, चेनलिंक सीसीआईपी से कैसे अलग है?\n\n**चेनलिंक सीसीआईपी:**\n- **ओरेकल नेटवर्क**: चेनलिंक ओरेकल इंफ्रास्ट्रक्चर का उपयोग करता है\n- **संदेश रूटिंग**: विभिन्न चेनों के बीच संदेश रूट करता है\n- **बाहरी निर्भरता**: चेनलिंक के विकेंद्रीकृत नेटवर्क पर निर्भर करता है\n- **एकीकरण आवश्यक**: क्रॉस-चेन सुविधाओं के लिए ऐप्स को सीसीआईपी को एकीकृत करना होगा\n\n**पुश चेन:**\n- **अंतर्निहित प्रोटोकॉल**: क्रॉस-चेन कार्यक्षमता ब्लॉकचेन के लिए मूल है\n- **प्रत्यक्ष निष्पादन**: किसी बाहरी ओरेकल नेटवर्क की आवश्यकता नहीं है\n- **आत्म-निहित**: सभी सत्यापन और निष्पादन पुश चेन पर होते हैं\n- **स्वचालित अनुकूलता**: मौजूदा अनुबंधों को तैनात करें — वे सभी उपयोगकर्ताओं के लिए तुरंत काम करते हैं\n\nपुश चेन में क्रॉस-चेन क्षमताएं इसके मूल प्रोटोकॉल में निर्मित हैं जबकि सीसीआईपी एक बाहरी सेवा परत है।\n\n---",
+                  "vs-particle-network": "### Push Chain, Particle Network से कैसे अलग है?\n\n**Particle Network:**\n- **Account Abstraction Focus**: मुख्य रूप से वॉलेट एब्स्ट्रैक्शन और सोशल लॉगइन पर ध्यान केंद्रित करता है\n- **Multi-Chain Wallets**: चेन्स के पार एकीकृत वॉलेट अनुभव बनाता है\n- **SDK Integration**: कार्यक्षमता के लिए Particle SDK के एकीकरण की आवश्यकता होती है\n- **User Experience Layer**: मौजूदा चेन्स के शीर्ष पर एक लेयर के रूप में संचालित होता है\n\n**Push Chain:**\n- **Universal Blockchain**: सभी चेन उपयोगकर्ताओं का समर्थन करने वाला मूल ब्लॉकचेन\n- **Protocol-Level Integration**: क्रॉस-चेन कार्यक्षमता सहमति में निर्मित है\n- **No SDK Required**: मौजूदा वॉलेट बिना संशोधन के मूल रूप से काम करते हैं\n- **Base Layer**: सिर्फ एक UX लेयर नहीं, बल्कि अंतर्निहित ब्लॉकचेन इंफ्रास्ट्रक्चर प्रदान करता है\n\nPush Chain एक universal blockchain है जबकि Particle Network एक वॉलेट एब्स्ट्रैक्शन सर्विस है।\n\n---",
+                  "vs-agglayer": "### Push Chain, AggLayer से कैसे अलग है?\n\n**AggLayer (Polygon):**\n- **Aggregation Layer**: Polygon चेन्स पर <1>लिक्विडिटी</1> और <1>स्टेट</1> को एकत्रित करता है\n- **Polygon Ecosystem**: विशेष रूप से Polygon CDK चेन्स के लिए डिज़ाइन किया गया\n- **Shared Sequencing**: जुड़े चेन्स के लिए एकीकृत <1>सीक्वेंसिंग</1> प्रदान करता है\n- **Ecosystem Specific**: Polygon की चेन <1>इकोसिस्टम</1> तक सीमित\n\n**Push Chain:**\n- **Universal Chain**: यह किसी भी <1>ब्लॉकचेन</1> के साथ काम करता है, इकोसिस्टम-विशिष्ट नहीं\n- **Native Execution**: किसी भी चेन से सीधा <1>ट्रांजेक्शन</1> <1>एक्जीक्यूशन</1>\n- **Chain Agnostic**: यह Ethereum, Solana, Bitcoin और सभी को सपोर्ट करता है\n- **One Deployment, Universal Apps**: Push Chain पर एक बार <1>स्मार्ट कॉन्ट्रैक्ट</1> <1>डिप्लॉय</1> करें और यह किसी भी चेन के उपयोगकर्ताओं के लिए एक्सेसिबल हो जाता है — जो सच्चा <1>ऐप</1>-स्तर <1>इंटरऑपरेबिलिटी</1> सक्षम करता है\n\nPush Chain सभी <1>ब्लॉकचेन</1> पर एक बार <1>डिप्लॉय</1> करने पर <1>यूनिवर्सल एप्लिकेशन</1> सक्षम करता है, जबकि AggLayer Polygon <1>इकोसिस्टम</1> के भीतर <1>लिक्विडिटी</1> और <1>सीक्वेंसिंग</1> एकत्रीकरण पर केंद्रित है।\n\n---",
+                  "vs-cosmos": "### <1>Push Chain</1> <2>Cosmos</2> से कैसे अलग है?\n\nजबकि दोनों क्रॉस-चेन कार्यक्षमता को सक्षम करते हैं, दृष्टिकोण मौलिक रूप से अलग हैं:\n\n**Cosmos:**\n- **हब-एंड-स्पोक मॉडल**: चेन IBC प्रोटोकॉल के माध्यम से कनेक्ट होती हैं\n- **अलग इकोसिस्टम**: प्रत्येक चेन अपनी स्थिति और उपयोगकर्ताओं को बनाए रखती है\n- **मैन्युअल ब्रिजिंग**: उपयोगकर्ताओं को चेन के बीच एसेट्स को ब्रिज करना होगा\n- **डेवलपर जटिलता**: कई चेन पर तैनात करने की आवश्यकता है\n\n**<1>Push Chain</1>:**\n- **<1>Universal Chain</1>**: एक ही चेन जो मूल रूप से सभी उपयोगकर्ताओं का समर्थन करती है\n- **Shared State**: एक एकीकृत स्थिति जो किसी भी चेन से सुलभ है\n- **No Bridging**: उपयोगकर्ता अपनी मूल चेन से सीधे बातचीत करते हैं\n- **Deploy Once**: सभी चेन उपयोगकर्ताओं के लिए एक ही तैनाती काम करती है\n\n<1>Push Chain</1> मैनुअल ब्रिजिंग और मल्टी-चेन डिप्लॉयमेंट की आवश्यकता को समाप्त करता है, जो एक सरल, एकीकृत UX प्रदान करता है।",
+                  "vs-polkadot": "### Push Chain, Polkadot se kaisa alag hai?\n\n**Polkadot:**\n- **Parachain Model**: Jude hue slot par connected chains\n- **Relay Chain Dependency**: Saare parachain relay chain security par depend karte hain\n- **Substrate Framework**: Specific development framework ki zaroorat\n- **Auction System**: Mehnge parachain slot auction\n\n**Push Chain:**\n- **Universal Support**: Natively koi bhi existing chain support karta hai\n- **Independent Security**: Apna consensus aur validator set\n- **EVM Compatible**: Existing Ethereum tools aur contracts use kare\n- **No Auctions**: Seedha integration, competitive bidding ke bina\n\nPush Chain existing chains ke saath seedha integrate karta hai, jabki Polkadot ko chains ko parachains ke roop mein rebuild karne ki zaroorat hoti hai.\n\n---",
+                  "token-section": "## टोकन से जुड़े सवाल",
+                  "new-token": "### क्या Push Chain से जुड़ा कोई नया टोकन होगा?\n\nएक नई layer 1 के रूप में, Push Chain का अपना मूल टोकन होगा जिसमें एक blockchain के कार्य, रखरखाव और सुरक्षा के लिए उपयुक्त टोकनॉमिक्स होंगे।\n\nपूर्ण विवरण के लिए, हमारी [Tokenomics deep dive](/knowledge/tokenomics/) 👀 देखें।",
+                  "developers-section": "## डेवलपर्स, यूज़र्स और नोड ऑपरेटर्स",
+                  "early-adopter-incentives": "### क्या **Push Chain** पर शुरुआती अपनाने वालों या नोड ऑपरेटरों के लिए कोई प्रोत्साहन है?\n\nनोड ऑपरेटरों को mainnet लॉन्च होने के बाद staking rewards मिलेंगे और उन्हें **Push Points Program** में भाग लेने के लिए प्रोत्साहित किया जाता है ताकि वे rewards कमा सकें.\n\nशुरुआती अपनाने वालों को **Push Points Program** में भाग लेने के लिए प्रोत्साहित किया जाता है ताकि वे rewards कमा सकें. [Push Portal](https://portal.push.org/) पर जाकर शुरुआत करें.\n\n---",
+                  "developer-user-benefits": "### Push Chain डेवलपर्स और उपयोगकर्ताओं को क्या लाभ प्रदान करता है?\n\n**🧙 डेवलपर्स के लिए**\n\n- **एक बार डिप्लॉय करें, 10 गुना अधिक पहुंच**  \nअपनी <app> को एक बार डिप्लॉय करें — कोई कोड परिवर्तन नहीं — और यह हर समर्थित <blockchain> पर चलती है, यहां तक कि गैर-EVM नेटवर्क पर भी।\n\n- **ऑडिट-फ्रेंडली, 100% EVM संगत**  \nअतिरिक्त ऑडिट या पुनर्लेखन के बिना मौजूदा सॉलिडिटी अनुबंधों का लाभ उठाएं—अपने बजट को सुविधाओं पर केंद्रित करें, न कि बुनियादी ढांचे पर।\n\n- **एकीकृत, घर्षण रहित UX**  \nउपयोगकर्ता एक लेनदेन पर हस्ताक्षर करते हैं, किसी भी <token> में भुगतान करते हैं, और किसी भी <wallet> के माध्यम से इंटरैक्ट करते हैं—आपकी <app> हर जगह काम करती है।\n\n- **लाइटनिंग-फास्ट DX**  \nहमारे SDKs, वर्चुअल एडिटर्स और रिएक्ट प्लेग्राउंड के साथ शुरू करें; मिनटों में शून्य से लाइव जाएं।\n\n**🦹 उपयोगकर्ताओं के लिए**\n\n- **एक-क्लिक ऑनबोर्डिंग**  \nईमेल, सोशल या किसी भी मौजूदा <wallet> से लॉगिन करें—कोई और सीड वाक्यांश या <blockchain> हॉपिंग नहीं।\n\n- **निर्बाध इंटरैक्शन**  \n<gas> शुल्क, <wallet>, और <blockchain> जटिलताएँ छिपी हुई हैं—अपने नेटवर्क के लिए मूल के रूप में <app> का आनंद लें।\n\n- **हम तेज़ हैं**  \nलेनदेन 1-2 सेकंड में अंतिम रूप देते हैं, आप जिस <blockchain> पर हैं, उसके लिए मूल जैसा महसूस होता है।\n\n---",
+                  "how-to-build": "### डेवलपर Push Chain पर कैसे बिल्ड करना शुरू कर सकते हैं?\n\n🚀 हमारे [Documentation Hub](/docs/) पर जाएं और आपको जो कुछ भी चाहिए वह प्राप्त करें:\n\n- 🖥️ **Virtual Code Editors**: अपने ब्राउज़र में SDK फ़ंक्शन कॉल स्पिन करें  \n- ⚛️ **React Playground**: रीयल टाइम में अपने फ्रंटएंड का प्रोटोटाइप बनाएं  \n- 📚 **End-to-End Examples**: संपूर्ण प्रोजेक्ट वॉकथ्रू का पालन करें  \n\nकुछ ही मिनटों में आपके पास एक सैंपल ऐप लाइव होगा—किसी स्थानीय सेटअप की आवश्यकता नहीं है!\n\n---",
+                  "dao-section": "## DAO और अनुदान",
+                  "governance-changes": "### नये टोकन लॉन्च होने पर मौजूदा गवर्नेंस सिस्टम में क्या बदलाव होंगे?\n\nPush DAO गवर्नेंस सिस्टम Push Chain के लॉन्च होने के साथ-साथ विकसित और विस्तारित होगा। यह एक अपेक्षित प्रक्रिया है, क्योंकि Push मूल चीज़ से कुछ बड़ा बन रहा है।\n\nडेलिगेट्स, एंबेसडर प्रोग्राम, सबडीएओ, और अन्य डीएओ पहलों को यूनिवर्सल एप्लीकेशन के केंद्र के रूप में स्थिति प्राप्त करने के प्रमुख लक्ष्यों को दर्शाने के लिए अपग्रेड किया जाएगा, जो उन सभी समूहों द्वारा संचालित किया जाएगा जो उन्हें संभव बनाते हैं।\n\n---",
+                  "doubts-section": "## संदेह",
+                  "push-services-future": "### पुश नोटिफिकेशन और पुश चैट का क्या होगा?\n\nपुश चेन, पुश प्रोटोकॉल की विज़न का एक स्वाभाविक विकास है। पुश प्रोटोकॉल की वर्तमान सेवाएं प्राथमिकता बनी रहती हैं, यह सुनिश्चित करते हुए कि वे नए इंफ्रास्ट्रक्चर से लाभान्वित होते रहें।\n\nआज के पुश नोटिफिकेशन और चैट प्रोटोकॉल पुश चेन पर निर्मित होने से महत्वपूर्ण लाभान्वित होंगे। टीम का एक समर्पित सेक्शन इन प्रोटोकॉल को बनाए रखने और बढ़ाने पर ध्यान केंद्रित करेगा, यह सुनिश्चित करते हुए कि वे अपने-अपने डोमेन में डि-फ़ैक्टो मानक बने रहें।\n\nपुश चेन के साथ संरेखण करके, प्रोटोकॉल के माध्यम से भेजे गए नोटिफिकेशन और चैट को चेन पर लेनदेन के रूप में संसाधित किया जाएगा। यह एकीकरण न केवल इन प्रोटोकॉल को मूल्य प्राप्त करने में सक्षम बनाता है बल्कि वेब3 इकोसिस्टम के भीतर उनकी उपयोगिता और प्रभाव को और बढ़ाता है, उनकी विकास की एक नई शुरुआत को भी चिह्नित करता है।\n\n---",
+                  "project-distraction": "### क्या यह परियोजना वर्तमान सेवाओं को बेहतर बनाने से ध्यान भटकाती है?\n\nनहीं, ☝️ [ऊपर](#what-happens-to-push-notification-and-push-chat) पढ़ें।\n\n---",
+                  "core-focus-shift": "### क्या पुश चेन, पुश प्रोटोकॉल के मुख्य फोकस, नोटिफिकेशन और चैट से दूर जाना है?\n\nनहीं। पुश चेन, पुश प्रोटोकॉल की स्थापित नींव पर आधारित है। पुश चेन, पुश प्रोटोकॉल का **अगला विकास** है, न कि कोई बदलाव।\n\n---",
+                  "partnerships-effect": "### पुश चेन के लॉन्च से मौजूदा साझेदारी और एकीकरण पर कैसे प्रभाव पड़ेगा?\n\nपुश चेन क्रॉस-चेन समर्थन, तेज फाइनलिटी और स्केलेबल समाधान जैसी अतिरिक्त क्षमताओं की पेशकश करके मौजूदा साझेदारियों का पूरक है। यह यूनिवर्सल एप्लिकेशन बनाने और स्केल करने में सक्षम करके सहयोग को मजबूत करता है।\n\n---",
+                  "decentralization-scaling": "### Push Chain विकेंद्रीकरण बनाए रखते हुए स्केलिंग कैसे करेगा?\n\nहमारे Devnet ने प्रदर्शित किया कि हम डायनामिक शार्डिंग और समानांतर निष्पादन का उपयोग करके कैसे स्केल करेंगे—विकेंद्रीकरण से समझौता किए बिना थ्रूपुट को बढ़ाना।\n\ntestnet पर, हमने [CometBFT](https://github.com/cometbft/cometbft) पर श्रृंखला के साथ फुल स्टैक इंटरऑप पर ध्यान केंद्रित किया, जो एक युद्ध-परीक्षित, बाइजेंटाइन-फॉल्ट-टॉलरेंट इंजन है। नेटवर्क ने सब-सेकंड finality हासिल किया और प्रति मिनट [20k transactions](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md) तक संभालने की क्षमता रखता है।\n\nयह अवधारणा का प्रमाण सिर्फ शुरुआत है। जैसे-जैसे हम बाद के चरणों में आगे स्केलिंग अनुकूलन को रोल आउट करते हैं, हमें विश्वास है कि Push Chain universal एप्लीकेशन की मांगों को सुरक्षित रूप से और केंद्रीकरण के बिना पूरा कर सकता है।\n\n---",
+                  "centralization-risks": "### क्या <1>Push Chain</1> के साथ केंद्रीकरण का कोई जोखिम है?\n\n**नहीं.** <1>Push Chain</1> की वास्तुकला विकेंद्रीकरण पर जोर देती है।\n\n<1>Push Chain</1> पूरी तरह से विकेंद्रीकृत है और इसे मजबूत और लचीला बनाने के लिए डिज़ाइन किया गया है। कोई भी एक <1>node</1> चला सकता है और नेटवर्क में भाग ले सकता है और PoS के माध्यम से प्रोत्साहित या दंडित किया जाता है। संक्षेप में:\n\n- <1>Validator</1> और अन्य अभिनेता स्वतंत्र रूप से काम करते हैं और PoS के माध्यम से प्रोत्साहित किए जाते हैं।\n- शासन तंत्र समुदाय की भागीदारी सुनिश्चित करते हैं।\n- हर इकोसिस्टम पार्टी किसी न किसी हद तक शासन में शामिल है।\n\n<1>node</1> चलाने के बारे में अधिक जानने के लिए, हमारे [Knowledge Base](/knowledge/) देखें या हमारे [Validator Node Repo](https://github.com/pushchain/push-chain-node) देखें।",
+                  "support-section": "## सपोर्ट और जुड़ाव",
+                  "need-help": "### मुझे मदद चाहिए, मैं Push Chain से कहाँ संपर्क कर सकता हूँ?\n\nसहायता के लिए, आप [यहाँ एक टिकट सबमिट कर सकते हैं](https://push.org/support) या support@push.org पर हमसे संपर्क कर सकते हैं।\n\nयदि आप एक डेवलपर हैं, तो आप हमारे [Discord](https://discord.com/invite/pushchain) पर भी हमसे संपर्क कर सकते हैं और हम आपकी मदद करने में प्रसन्न होंगे।\n\n---",
+                  "how-to-contribute": "### बहुत बढ़िया, मैं कैसे योगदान कर सकता हूँ?\n\nThe सबसे अच्छा तरीका है कि आप Push Chain की प्रगति पर बने रहें, आधिकारिक Push चैनलों के माध्यम से: वेबसाइट, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), और [Discord](https://discord.com/invite/pushchain).\n\nहमेशा फ़िशिंग प्रयासों, नकली साइटों या घोटालों से सावधान रहें जो आपकी क्रिप्टो मांग रहे हैं। सभी आधिकारिक संचार हमारे आधिकारिक Push हैंडल से जाएंगे।"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "docs": {
+      "seo": {
+        "title": "Documentation — बिल्ड यूनिवर्सल एप्स",
+        "description": "Push Chain पर शिप करने के लिए आपको जो कुछ भी चाहिए: त्वरित शुरुआत, SDK, API संदर्भ, उदाहरण और नोड सेटअप।",
+        "og-title": "Push Chain Docs - Quickstarts, SDKs & API",
+        "og-description": "क्लियर गाइड और उदाहरणों के साथ यूनिवर्सल एक्ज़ीक्यूशन लेयर पर एप्स बनाएं और चलाएं।",
+        "twitter-title": "Push Chain Docs - अभी बनाएं",
+        "twitter-description": "क्विकस्टार्ट, SDK, API रिफ और तेज़ी से शिप करने के लिए उदाहरण।"
+      },
+      "explore-prelaunch-build": {
+        "text": "प्री-लॉन्च बिल्ड देखें",
+        "title": "Push Chain टेस्टनेट दस्तावेज़ और प्री-लॉन्च सुविधाओं तक पहुंचें",
+        "ariaLabel": "प्री-लॉन्च बिल्ड सुविधाओं का पता लगाने के लिए Push Chain टेस्टनेट डॉक्स पर नेविगेट करें"
+      }
+    },
+    "blog": {
+      "seo": {
+        "title": "Blog — अपडेट, गहन विश्लेषण और कहानियां",
+        "description": "Push Chain टीम और पारिस्थितिकी तंत्र से खबरें, रिलीज नोट्स, तकनीकी गहन विश्लेषण और डेवलपर कहानियां।",
+        "og-title": "Push Chain Blog - Updates, Deep Dives & Stories",
+        "og-description": "Push Chain से उत्पाद अपडेट, डेवलपमेंट स्टोरीज़, गहन विश्लेषण और पारिस्थितिकी तंत्र की खबरों का पालन करें।",
+        "twitter-title": "Push Chain Blog - क्या नया है",
+        "twitter-description": "रिलीज़, गहन विश्लेषण और बिल्डर स्टोरीज़ — अपडेट रहें।"
+      }
+    },
+    "lfpush": {
+      "seo": {
+        "title": "चलो पुश करते हैं — सामुदायिक पहल",
+        "description": "पुश समुदाय पहल, पोस्ट और बहुत कुछ।",
+        "og-title": "चलो पुश करते हैं - पुश चेन के लिए सामुदायिक पहल",
+        "og-description": "समुदाय-संचालित पहल और पुश चेन के लिए शेयर।",
+        "twitter-title": "चलो पुश करते हैं | सामुदायिक पहल",
+        "twitter-description": "पुश चेन के लिए पुश समुदाय पहल देखें।"
+      },
+      "hero-section": {
+        "title": "चलो पुश करते हैं",
+        "description": "एलएफ पुश बिल्डर्स समुदाय—आप जो शिप करते हैं और आप जिसकी मदद करते हैं उसका जश्न मनाते हुए। अपनी जीत साझा करें, <hashtag>#LFPush</hashtag> या <mention>@PushChain</mention> को टैग करें, और हम इसे बढ़ाएंगे।"
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "अपनी जीत साझा करें",
+          "join-community": "समुदाय में शामिल हों",
+          "learn-more": "और जानें"
+        },
+        "meta": {
+          "tweet-alt": "पुश चेन समुदाय सदस्य से ट्वीट",
+          "loading-alt": "और अधिक सामुदायिक ट्वीट लोड हो रहे हैं"
+        },
+        "tweets-counter": "{{count}} ट्वीट और गिनती!",
+        "loading": "और ट्वीट लोड हो रहे हैं...",
+        "end-message": "आप अंत तक पहुँच गए हैं! 🎉"
+      }
+    },
+    "support": {
+      "seo": {
+        "title": "Support — Help Center",
+        "description": "Push Chain से मदद पाएं: गाइड, समस्या निवारण, स्थिति और सामुदायिक समर्थन।",
+        "og-title": "Push Chain Support - Help Center",
+        "og-description": "दस्तावेज़, ट्यूटोरियल, स्थिति अपडेट और समर्थन से संपर्क करने के तरीके खोजें।",
+        "twitter-title": "Support - Help & Docs",
+        "twitter-description": "Push Chain के लिए गाइड, ट्यूटोरियल और सामुदायिक मदद।"
+      },
+      "hero-section": {
+        "title": "Support",
+        "description": "Push Chain हेल्प सेंटर: समस्या निवारण, गाइड, Donut testnet, explorer और faucet, स्थिति अपडेट और सुरक्षा। Discord पर पूछें या सपोर्ट टिकट खोलें।"
+      }
+    },
+    "litepaper": {
+      "seo": {
+        "title": "Litepaper — Technical Overview",
+        "description": "A concise look at Push Chain's vision, architecture, and economics for universal apps.",
+        "og-title": "Push Chain Litepaper - Technical Overview",
+        "og-description": "The vision, design, and economic model of the universal execution layer—simplified.",
+        "twitter-title": "Litepaper - Push Chain",
+        "twitter-description": "Vision, architecture, and economics at a glance."
+      }
+    },
+    "tos": {
+      "seo": {
+        "title": "Terms of Service",
+        "description": "पुश चेन वेबसाइटों, ऐप्स और सेवाओं का उपयोग करने के नियम, जिसमें आपके अधिकार और जिम्मेदारियां शामिल हैं।",
+        "og-title": "Push Chain Terms of Service - Legal Terms",
+        "og-description": "हमारी वेबसाइटों, ऐप्स और डेवलपर टूल्स के उपयोग को नियंत्रित करने वाले कानूनी नियम।",
+        "twitter-title": "Terms of Service - Push Chain",
+        "twitter-description": "पुश चेन का उपयोग करने के लिए कानूनी नियमों को पढ़ें।"
+      },
+      "hero-section": {
+        "title": "Terms of Service",
+        "description": "शर्तों और नियमों की रूपरेखा",
+        "update-text": "अंतिम अपडेट: 2 नवंबर 2020"
+      }
+    },
+    "privacy": {
+      "seo": {
+        "title": "Privacy Policy",
+        "description": "How we collect, use, and protect your data—plus your rights and choices.",
+        "og-title": "Push Chain Privacy Policy - Data Protection",
+        "og-description": "Learn what data we collect, how we use it, and your privacy rights.",
+        "twitter-title": "Privacy Policy - Push Chain",
+        "twitter-description": "Your data. Your rights. How we protect both."
+      },
+      "hero-section": {
+        "title": "PRIVACY POLICY",
+        "description": "यह परिभाषित करता है कि पुश डेटा को कैसे एकत्र करता है, संभालता है और संसाधित करता है।",
+        "update-text": "Last Updated: 2nd November 2020"
+      }
+    },
+    "privacymobile": {
+      "seo": {
+        "title": "मोबाइल प्राइवेसी पॉलिसी",
+        "description": "हम Push Chain मोबाइल एप्स में डेटा कैसे एकत्र करते हैं, उपयोग करते हैं, और आपकी पसंद, और डेटा की सुरक्षा कैसे करते हैं।",
+        "og-title": "Push Chain मोबाइल प्राइवेसी पॉलिसी - एप डेटा सुरक्षा",
+        "og-description": "हमारे मोबाइल एप्स के लिए डेटा प्रथाएं और आपके अधिकार।",
+        "twitter-title": "मोबाइल प्राइवेसी पॉलिसी - Push Chain",
+        "twitter-description": "Push मोबाइल एप्स में आपका डेटा और विकल्प।"
+      },
+      "hero-section": {
+        "title": "मोबाइल प्राइवेसी पॉलिसी",
+        "description": "हम Push Chain मोबाइल एप्स में डेटा कैसे एकत्र करते हैं, उपयोग करते हैं, और आपकी पसंद, और डेटा की सुरक्षा कैसे करते हैं।",
+        "update-text": "अंतिम अपडेट: 2 नवंबर 2020"
+      }
+    },
+    "brb": {
+      "seo": {
+        "title": "BRB — Billion Reasons to Build",
+        "description": "Push Chain's flagship hackathon: solve real problems, learn from experts, and win prizes.",
+        "og-title": "BRB - Push Chain Hackathon",
+        "og-description": "Tracks, timelines, and prizes for the Billion Reasons to Build competition.",
+        "twitter-title": "BRB Hackathon - Build & Win",
+        "twitter-description": "Join the Push Chain hackathon to ship and win prizes."
+      }
+    },
+    "contact": {
+      "seo": {
+        "title": "संपर्क करें — संपर्क में रहें",
+        "description": "पार्टनरशिप, इंटीग्रेशन, ग्रांट, मीडिया, सपोर्ट और सुरक्षा के लिए Push Chain टीम से संपर्क करें।",
+        "og-title": "Push Chain संपर्क - संपर्क में रहें",
+        "og-description": "पार्टनरशिप, इंटीग्रेशन, ग्रांट, मीडिया, सपोर्ट और सुरक्षा के बारे में Push Chain टीम से संपर्क करें।",
+        "twitter-title": "संपर्क करें - Push Chain टीम",
+        "twitter-description": "पार्टनरशिप, इंटीग्रेशन, ग्रांट, मीडिया, सपोर्ट और सुरक्षा — Push Chain से संपर्क करें।"
+      },
+      "hero-section": {
+        "title": "Push Chain टीम से संपर्क करें",
+        "description": "पार्टनरशिप और इंटीग्रेशन, ग्रांट, मीडिया और भाषण, validators, कानूनी, करियर, या सामान्य प्रश्न—यहाँ पहुँचें। तकनीकी सहायता या सुरक्षा के लिए, कृपया सहायता केंद्र पर जाएँ।"
+      }
+    },
+    "donutsecret": {
+      "seo": {
+        "title": "शश… <1>Donut Testnet</1> — Secret Beta Access",
+        "description": "सिर्फ़ निमंत्रण पर बंद बीटा बिल्डर्स के लिए। <1>Push Chain Testnet</1> तक पहुँच प्राप्त करने के लिए अपना <1>Donut</1> पास प्राप्त करें, <1>universal</1> ऐप शिप करें और शुरुआती रिवॉर्ड अनलॉक करें।",
+        "og-title": "<1>Donut Testnet</1> — Secret Beta Access",
+        "og-description": "डेवलपर्स के लिए शुरुआती पहुँच: एक Closed Beta Pass का दावा करें, <1>Push Chain</1> (<1>Donut</1>) को आज़माएँ और <1>universal</1> ऐप बनाते समय रिवॉर्ड अर्जित करें।",
+        "twitter-title": "शश… <1>Donut Testnet</1> — Closed Beta",
+        "twitter-description": "सिर्फ़ निमंत्रण पर बिल्डर्स के लिए एक्सेस। अपना पास प्राप्त करें, <1>Push Chain</1> (<1>Donut</1>) को आज़माएँ और रिवॉर्ड अर्जित करें। 🍩"
+      }
+    },
+    "home": {
+      "seo": {
+        "title": "Home - Push Chain | ऐप्स के लिए यूनिवर्सल चेन",
+        "description": "शेयर्ड-स्टेट L1 यूनिवर्सल एप्‍स के लिए। एक बार डिप्लॉय करें; किसी भी चेन पर उपयोगकर्ताओं तक पहुंचें। कोई भी वॉलेट इस्तेमाल करें। कोई भी टोकन से पेमेंट करें।",
+        "og-title": "Push Chain - युनिवर्सल L1 फॉर एप्स",
+        "og-description": "EVM और non-EVM उपयोगकर्ताओं के लिए एक ही डिप्लॉय। कोई भी वॉलेट इस्तेमाल करें और किसी भी टोकन से भुगतान करें — नेटवर्क बदलने की जरूरत नहीं।",
+        "twitter-title": "एक बार डिप्लॉय करें। किसी भी चेन तक पहुँचें।",
+        "twitter-description": "किसी भी चेन से ट्रांसेक्ट करें। कोई भी वॉलेट इस्तेमाल करें। किसी भी टोकन से पे करें। नेटवर्क स्विचिंग की जरूरत नहीं।"
+      },
+      "hero-section": {
+        "title": "कोई भी चेन, कोई भी <app>, सभी यूज़र।\nएक <Push Chain>।",
+        "description": "पहला Layer 1 जो Universal Apps के लिए बनाया गया है। \nएक बार बनाएँ और डिप्लॉय करें, किसी भी चेन से उपयोगकर्ताओं को ऑनबोर्ड करें।",
+        "primary-button": "बिल्डिंग शुरू करें",
+        "primary-button-title": "Push Chain के साथ अपनी बिल्डर की यात्रा शुरू करें!",
+        "secondary-button": "नॉलेज बेस एक्सप्लोर करें",
+        "secondary-button-title": "Push Chain के बारे में जानें और खोजें",
+        "section-aria-label": "Push Chain हीरो सेक्शन - यूनिवर्सल लेयर 1 ब्लॉकचेन का परिचय",
+        "primary-button-aria-label": "Push Chain पर <1>universal</1> app बनाना शुरू करें - डेवलपर दस्तावेज़ पर जाएं",
+        "secondary-button-aria-label": "पुश चेन की विशेषताओं और अवधारणाओं के बारे में नॉलेज बेस में जानें",
+        "hero-background-alt": "Push Chain hero background animation showing universal ब्लॉकचेन connectivity",
+        "hero-background-title": "Push Chain - यूनिवर्सल लेयर 1 फॉर क्रॉस-चेन एप्लिकेशन्स",
+        "schema-headline": "Push Chain - यूनिवर्सल L1 फॉर एप्‍स",
+        "schema-description": "एक बार Push Chain पर डिप्लॉय करें और <1>universal</1> <app>ऐप्स</app> के साथ किसी भी <blockchain>ब्लॉकचेन</blockchain> पर उपयोगकर्ताओं तक पहुँचें"
+      },
+      "whatis-section": {
+        "titleFirst": "एक सच्चा",
+        "titleSecondGraditent": "यूनिवर्सल",
+        "titleThird": "चेन",
+        "bottomTextFirst": "एक बार डिप्लॉय करें,",
+        "bottomTextSecond": "हर जगह पहुंचें",
+        "bottomLinkText": "शुरू करें",
+        "bottomLinkTitle": "दस्तावेज़ हब पर जाएं",
+        "section-aria-label": "क्या है Push Chain - यूनिवर्सल ब्लॉकचेन स्पष्टीकरण",
+        "animation-alt": "Push Chain के universal ऐप डिप्लॉयमेंट का एनिमेशन, जो कई ब्लॉकचेन पर दिखता है",
+        "animation-title": "Push Chain युनिवर्सल डिप्लॉयमेंट विज़ुअलाइज़ेशन - एक बार डिप्लॉय करें, किसी भी चेन तक पहुंचें",
+        "bottom-link-aria-label": "Push Chain डॉक्यूमेंटेशन पर जाएं और युनिवर्सल ऐप्स बनाना शुरू करें"
+      },
+      "chain-features-section": {
+        "section-aria-label": "Push Chain नवाचार और विशेषताओं अनुभाग",
+        "header": {
+          "main-text": "खण्डितता को खत्म करने के लिए नवाचारों पर निर्मित!",
+          "other-text": "Push ही एकमात्र Universal Layer 1 है जिसकी आपको कभी आवश्यकता होगी!"
+        },
+        "box1": {
+          "texttitle": "किसी भी चेन पर ट्रांज़ैक्शन",
+          "bodytext": "Push Chain किसी भी ब्लॉकचेन से लेनदेन को सपोर्ट करता है। उपयोगकर्ता किसी भी टोकन में गैस का भुगतान कर सकते हैं — ब्रिजिंग की आवश्यकता नहीं है।",
+          "imagealt": "ब्लॉकचेन के अलग-अलग लोगो का चित्रण एक पिनबॉल मशीन में गिरते हुए।",
+          "imagetitle": "किसी भी ब्लॉकचेन से transaction को सपोर्ट करता है।"
+        },
+        "box2": {
+          "texttitle": "वॉलेट एब्स्ट्रैक्शन",
+          "bodytext": "किसी भी चेन से किसी भी वॉलेट को कनेक्ट होने, इंटरैक्ट करने और लेनदेन करने दें। सोशल लॉगिन या ईमेल का उपयोग करके वेब3 बाधाओं को तोड़ें। उपयोगकर्ता <1>पुश चेन</1> पर निर्णय लेने के लिए स्वतंत्र हैं।",
+          "imagealt": "Illustration showing MetaMask वॉलेट, Phantom Wallet, etc coming out of a big वॉलेट with Push Chain logo on it.",
+          "imagetitle": "Metamask, Phantom जैसे मौजूदा <wallet> को सपोर्ट करता है, साथ ही सोशल लॉगिन भी"
+        },
+        "box3": {
+          "texttitle": "100% <1>EVM</1>\nसंगत",
+          "bodytext": "कोई ऑन-चेन कोड के बिना डिप्लॉय करें। मिनटों में अपने नेटिव <app> को <universal> <app> में बदलें।",
+          "imagealt": "इलस्ट्रेशन Ethereum Virtual Machine लोगो को घूमते हुए और कह रहे 100% EVM Compatibility को दिखा रहा है।",
+          "imagetitle": "ज़ीरो ऑन-चेन कोड बदलाव की आवश्यकता, 100% ईवीएम कम्पेटिबल।"
+        },
+        "box4": {
+          "texttitle": "यूनिवर्सल स्मार्ट कॉन्ट्रैक्ट्स",
+          "bodytext": "एक बार बनाएं, क्रॉस चेन पर चलाएं, मल्टी स्टेप एक्सपीरियंस एक सिंगल, भविष्य-प्रूफ कॉन्ट्रैक्ट के साथ।",
+          "imagealt": "Illustration showing Ethereum Virtual Maching logo aur uske charo taraf '100% EVM Compatible' likha arc",
+          "imagetitle": "एक बार डिप्लॉय करें, तुरंत सभी समर्थित चेन्स (EVM या non-EVM) के साथ संगत बनें।"
+        },
+        "box5": {
+          "texttitle": "यूनिवर्सल फी\nएब्स्ट्रैक्शन",
+          "bodytext": "उपयोगकर्ताओं को बिना किसी ब्रिजिंग के, किसी भी चेन पर किसी भी टोकन में गैस का भुगतान करने दें।",
+          "imagealt": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
+          "imagetitle": "किसी भी चेन के किसी भी टोकन को लेनदेन के लिए सपोर्ट करता है।"
+        },
+        "box6": {
+          "texttitle": "यूनिवर्सल एग्जीक्यूशन लेयर",
+          "bodytext": "वेब3 पर परमाणु, कंपोज़ेबल ऐप्स बनाएं। कई उपयोगकर्ता विभिन्न चेन्स पर एक ही ऐप के साथ लेन-देन करके पहले कभी नहीं देखे गए ऐप अनुभव बनाएं।",
+          "imagealt": "Illustration showing different tetris blocks entering a wormhole and Push Chain logo emerging from the other end.",
+          "imagetitle": "Push Chain पर किसी भी चेन से होने वाले <transaction> फ़ाइनलाइज़ होते हैं, जिससे किसी भी चेन के यूज़र्स किसी भी चेन पर मूल रूप से एक ही <app> का उपयोग कर सकते हैं, जिसे <universal execution layer> भी कहा जाता है।"
+        },
+        "box7": {
+          "texttitle": "शेयर्ड स्टेट",
+          "bodytext": "अपने स्मार्ट कॉन्ट्रैक्ट में अन्य चेन्स से अकाउंट और स्टेट डेटा एक्सेस करें।",
+          "tagText": "जल्द आ रहा है",
+          "tags": {
+            "title1": "चेन से डेटा पढ़ें"
+          },
+          "imagealt": "Illustration showing Push Chain growing in blocks style animation.",
+          "imagetitle": "(रोडमैप) शेयरड स्टेट आपको अपने स्मार्ट कॉन्ट्रैक्ट में दूसरे चेन्स से अकाउंट और स्टेट डेटा तक पहुँचने की अनुमति देता है।"
+        },
+        "box8": {
+          "texttitle": "प्रोग्रामेबल\nसॉल्वर्स",
+          "bodytext": "अपने स्मार्ट कॉन्ट्रैक्ट का उपयोग करके किसी भी चेन पर लेनदेन को ट्रिगर करें, मान्य करें और पूरा करें।",
+          "tagText": "जल्द आने वाला",
+          "tags": {
+            "title1": "चेन से पढ़ें"
+          },
+          "imagealt": "Illustration showing tetris blocks in different colors merging and changing.",
+          "imagetitle": "(रोडमैप) प्रोग्रामेबल सॉल्वर उपयोगकर्ताओं को किसी भी चेन पर अपने स्मार्ट कॉन्ट्रैक्ट का उपयोग करके लेनदेन को ट्रिगर, मान्य और पूरा करने की अनुमति देते हैं।"
+        },
+        "footer": {
+          "title": "अपने ऐप के उपयोगकर्ता आधार को universal बनाकर बढ़ाएं",
+          "secondary": "बिना किसी प्रयास के!",
+          "ctatext": "अभी बनाना शुरू करें",
+          "ctatitle": "एक बार डिप्लॉय करें, अपने उपयोगकर्ता आधार को 10 गुना बढ़ाएं। डेवलपर डॉक्स पर जाएं।"
+        }
+      },
+      "partners-section": {
+        "section-aria-label": "Push Chain इकोसिस्टम पार्टनर और इंटीग्रेशन",
+        "title": "Powered by Push Chain",
+        "subtitle": "Push Chain पर डिप्लॉय करके अपने यूजर बेस को कई गुना बढ़ाने वाले <app> को खोजें।",
+        "ctatitle": "Push Chain पर पार्टनर्स, ऐप्स और इंफ्रा को चेक करें",
+        "ctatext": "इकोसिस्टम एक्सप्लोर करें",
+        "partners-grid-aria-label": "Web3 प्रोजेक्ट्स जो Push Chain का उपयोग कर रहे हैं, उनके पार्टनर लोगो का ग्रिड",
+        "partner-logo-title-prefix": "Partner logo - ",
+        "partner-logo-alt-prefix": "Logo of ",
+        "mobile-view-aria-label": "Push Chain इकोसिस्टम पार्टनर का मोबाइल व्यू"
+      },
+      "stats-section": {
+        "section-aria-label": "Push Chain प्रदर्शन आंकड़े और मेट्रिक्स",
+        "title": "प्राप्त करें",
+        "titleGradient": "तत्काल",
+        "titleThird": "इंटरऑपरेबिलिटी",
+        "description": "बेहतर परफॉर्मेंस के लिए अनुकूलित।\nउच्च TPS, अल्ट्रा-लो गैस, और वास्तविक समय \nऐप निष्पादन के लिए सब-सेकंड फिनालिटी।",
+        "animation-alt": "इंटरैक्टिव एनीमेशन जो Push Chain की कई blockchains में इंस्टेंट interoperability दिखाता है",
+        "animation-title": "Push Chain की तात्कालिक इंटरऑपरेबिलिटी का विज़ुअलाइज़ेशन",
+        "stats": {
+          "stat1": {
+            "title": "सपोर्टेड चेन्स",
+            "imagealt": "समर्थित चेन्स दिखाने वाला चित्रण",
+            "imagetitle": "एथेरियम, सोलाना, बीएनबी चेन आदि जैसे समर्थित चेनों की सूची"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "नेटिव फ़ाइनलिटी",
+            "description": "तत्काल"
+          },
+          "stat4": {
+            "title": "नेटिव ब्लॉक टाइम",
+            "description": "1s"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "खबरें, डेवलपमेंट लॉग्स और विचार",
+        "subtitle-aria-label": "ब्लॉग श्रेणी की जानकारी",
+        "title": "पुश चेन की धड़कन",
+        "title-aria-label": "नवीनतम Push Chain ब्लॉग पोस्ट और अपडेट",
+        "explore-link-text": "और लेख देखें",
+        "explore-link-title": "Push Chain ब्लॉग पर सभी लेख और अपडेट पढ़ने के लिए जाएं",
+        "explore-link-aria-label": "Push Chain ब्लॉग पेज पर जाएँ",
+        "section-aria-label": "Push Chain ब्लॉग पोस्ट और समाचार अनुभाग",
+        "blog-posts-list-aria-label": "हालिया Push Chain ब्लॉग पोस्ट",
+        "blog-post-aria-label": "{title} के बारे में ब्लॉग पोस्ट पढ़ें",
+        "blog-post-title-prefix": "ब्लॉग पोस्ट पढ़ें - ",
+        "loading-text": "लेटेस्ट ब्लॉग पोस्ट लोड हो रहे हैं...",
+        "error-text": "अभी ब्लॉग पोस्ट लोड करने में असमर्थ",
+        "no-posts-text": "कोई ब्लॉग पोस्ट उपलब्ध नहीं है"
+      },
+      "trustedby-section": {
+        "title": "वेब3 के शुरुआती लोगों द्वारा भरोसेमंद टीम द्वारा निर्मित",
+        "section-aria-label": "Push Chain trusted by section",
+        "trusted-by-alt": "निवेशक - "
+      },
+      "featured-section": {
+        "aria-label": "फ़ीचर्ड ऑन सेक्शन",
+        "tag": "FEATURED ON",
+        "title": "Push Chain Spotlight में",
+        "subtitle": "सिर्फ हमारी बात न मानें। देखें कि मीडिया सच्चे <1>universal</1> <1>blockchain</1> के बारे में क्या कह रहा है।",
+        "articles-image-alt": "मीडिया कवरेज फ्रॉम ",
+        "articles-text": "पूरी कवरेज पढ़ें",
+        "articles-title-1": "पढ़ें ",
+        "articles-title-2": "'s thoughts on Push Chain in full detail",
+        "articles": {
+          "binance-chain": {
+            "text": "हमें यह घोषणा करते हुए खुशी हो रही है कि Push Protocol, Web3 के लिए एक अग्रणी विकेंद्रीकृत संचार प्रोटोकॉल, अब BNB Chain पर लॉन्च हो गया है।"
+          },
+          "coindesk": {
+            "text": "प्रोटोकॉल विलेज: अनस्टॉपेबल वर्क्स विद पुश प्रोटोकॉल टू डिलीवर टोकन-गेटेड ग्रुप चाट्स"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains लॉन्च करता है टोकन गेटेड ग्रुप चैट। पुश प्रोटोकॉल के साथ सहयोग का उद्देश्य गलत सूचना और घोटालों से बचना है।"
+          },
+          "balaji": {
+            "text": "उपयोगकर्ता-नियंत्रित सूचनाएं। दो कंपनियां अरबों स्मार्टफोन पर पुश सूचनाएं नियंत्रित करती हैं: Apple और Google।"
+          },
+          "defiprime": {
+            "text": "Harsh Rajat भविष्य की बैंकिंग, EPNS प्रोटोकॉल इंसेंटिव और डिसेंट्रलाइज्ड पुश नोटिफिकेशन के लिए बिजनेस मॉडल कहां है, इस बारे में बात करते हैं।"
+          },
+          "ethfoundation": {
+            "text": "HackMoney के बाद से, रीचा और हर्ष ने EPNS को 'वेब3 का एक गुम हुआ हिस्सा' जैसा बनाने की ओर अविश्वसनीय ऊर्जा निर्देशित की है।"
+          },
+          "beincrypto": {
+            "text": "वेब3 कम्युनिकेशन नेटवर्क कैसे काम करते हैं: एक तकनीकी गहराई से विश्लेषण"
+          },
+          "the-block": {
+            "text": "Web3 notifications protocol Push to launch its own <layer> chain"
+          },
+          "business-insider": {
+            "text": "Push Unveils Push Chain: भविष्य की <1>universal blockchain</1> <2>app</2>"
+          },
+          "chainwire": {
+            "text": "Push पेश करता है Push Chain: <1>blockchain</1> एप्लीकेशन के भविष्य का यूनिवर्सल।"
+          },
+          "benzinga": {
+            "text": "Push Unveils Push Chain: The Future of यूनिवर्सल ब्लॉकचेन एप्लिकेशन्स"
+          },
+          "crypto-briefing": {
+            "text": "Push Unveils Push Chain: भविष्य के युनिवर्सल ब्लॉकचेन एप्स"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol <1>Push Chain</1> लॉन्च करता है ताकि <blockchain>ब्लॉकचेन</blockchain> कम्युनिकेशन और <transaction>ट्रांजेक्शन</transaction> को एक किया जा सके"
+          },
+          "messari": {
+            "text": "EPNS उपयोगकर्ताओं को विकेंद्रीकृत सूचनाएँ प्राप्त करने के लिए प्रोत्साहन और निष्क्रिय आय सक्षम करता है।"
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, founder aur project lead of Push <protocol>, explain karte hain Web3 chat <app> applications ke latest episode mein Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains अपने username धारकों के लिए बैज-गेटेड ग्रुप चैट सुविधा लॉन्च करता है।"
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "यूनिवर्सल एप्‍स बनाने का सेक्शन",
+        "section-title": "यूनिवर्सल <app> बनाएँ।",
+        "section-subtitle": "सिलों को तोड़ें। एक बार बनाएं, हर <blockchain> पर स्केल करें।",
+        "docs-link": {
+          "text": "Push Chain दस्तावेज़ देखें",
+          "title": "Push Chain डॉक्यूमेंटेशन और डेवलपर रिसोर्सेज एक्सप्लोर करें",
+          "aria-label": "Push Chain दस्तावेज़ एक नए टैब में खोलें"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "Push Chain के साथ शुरुआत करें - सार्वभौमिक ब्लॉकचेन प्लेटफॉर्म",
+          "aria-label": "Push Chain डेवलपमेंट शुरू करें"
+        }
+      }
+    }
+  },
+  "components": {
+    "mailing-signup": {
+      "title": "कभी भी कोई अपडेट मिस न करें",
+      "text": "साइन अप करें और इकोसिस्टम घोषणाओं, उपहारों और बहुत कुछ के साथ अपडेट रहें।",
+      "email-input": "आपका ईमेल",
+      "email-input-placeholder": "अपना ईमेल पता दर्ज करें",
+      "email-input-title": "अपडेट के लिए पुश चेन न्यूज़लेटर की सदस्यता लें",
+      "email-input-aria-label": "न्यूज़लेटर सदस्यता के लिए ईमेल पता",
+      "submit-button": "साइन अप करें",
+      "submit-button-title": "पुश चेन न्यूज़लेटर की सदस्यता लें",
+      "submit-button-aria-label": "न्यूज़लेटर की सदस्यता लें",
+      "loading-submit-button": "कृपया प्रतीक्षा करें...",
+      "arrow-button-aria-label": "न्यूज़लेटर की सदस्यता लें",
+      "arrow-button-title": "पुश चेन अपडेट के लिए सदस्यता लें",
+      "form-aria-label": "न्यूज़लेटर सदस्यता फ़ॉर्म",
+      "success-message-aria-label": "सदस्यता सफल",
+      "error-message-aria-label": "सदस्यता त्रुटि संदेश"
+    },
+    "cookie-banner": {
+      "message": "हम आपकी अनुभव को निजीकृत करने के लिए कुकीज़ का उपयोग करते हैं। हमारी में और जानें",
+      "privacy-policy-link": "गोपनीयता नीति",
+      "privacy-policy-link-title": "Push Chain गोपनीयता नीति पढ़ें",
+      "privacy-policy-link-aria-label": "एक नए टैब में गोपनीयता नीति खोलें",
+      "accept-button": "स्वीकार करें",
+      "accept-button-title": "अपने अनुभव को निजीकृत करने के लिए कुकीज़ स्वीकार करें",
+      "accept-button-aria-label": "कुकीज़ स्वीकार करें और बैनर बंद करें",
+      "reject-button": "हटाएं",
+      "reject-button-title": "कुकीज़ से हटें और बैनर बंद करें",
+      "reject-button-aria-label": "कुकीज़ से हटें और बैनर बंद करें",
+      "banner-aria-label": "कुकी सहमति बैनर",
+      "banner-role": "कुकी प्राथमिकता सूचना"
+    },
+    "short-faq-snippet": {
+      "section-aria-label": "Frequently asked questions about Push Chain - Universal Blockchain",
+      "title": "अक्सर पूछे जाने वाले प्रश्न",
+      "title-aria-label": "Push Chain के बारे में सामान्य प्रश्न और उत्तर",
+      "discord-link-text": "Discord पर हमसे पूछें",
+      "discord-link-title": "सहायता और प्रश्नों के लिए Push Chain Discord समुदाय में शामिल हों",
+      "discord-link-aria-label": "नई टैब में Discord समुदाय खोलें",
+      "explore-more-text": "अधिक अक्सर पूछे जाने वाले प्रश्न देखें",
+      "explore-more-title": "Push Chain FAQ प्रलेखन और डेवलपर गाइड देखें",
+      "explore-more-aria-label": "पूर्ण Push Chain FAQ पृष्ठ पर नेविगेट करें",
+      "accordion-aria-label": "Push Chain के अक्सर पूछे जाने वाले प्रश्नों की सूची",
+      "answer-aria-label": "प्रश्न का उत्तर - ",
+      "qnas": {
+        "qna1": {
+          "question": "Push Chain क्या है?",
+          "answer": "<1>Push Chain एक साझा-स्टेट blockchain है जो <2>खंडन को समाप्त करता है और ऐप्स को universal बनाता है</2>.</1><1>Push पर एक बार डिप्लॉय करें। EVM या गैर-EVM — किसी भी चेन पर उपयोगकर्ता अपने मौजूदा वॉलेट और टोकन के साथ आपके ऐप का उपयोग करते हैं; फीस पर्दे के पीछे संभाली जाती है।</1>"
+        },
+        "qna2": {
+          "question": "यह कैसे काम करता है? (ELI5)",
+          "answer": "<1>अपने पहले से मौजूद वॉलेट का उपयोग करें — Push पर्दे के पीछे क्रॉस-चेन बिट्स को संभालता है।</1><1>1. <2>कहीं से भी शुरुआत करें।</2> किसी भी नेटवर्क को स्विच किए बिना, किसी भी वॉलेट का उपयोग करें।</1><1>2. <2>एक बार साइन करें।</2> अपने पहले से मौजूद टोकन से भुगतान करें; हम आपके होम चेन पर शुल्क अलग रखते हैं।</1><1>3. <2>हम इसे रूट करते हैं।</2> Push पर एक लिंक्ड अकाउंट (अभी भी आपका) आपके कॉल को ऐप को आगे बढ़ाता है — गैर-कस्टोडियल।</1><1>4. <2>आप हमेशा आप ही होते हैं।</2> हम आपके होम-चेन वॉलेट को अपने लिंक्ड अकाउंट से मिलाते हैं ताकि कार्यों को सही ढंग से सत्यापित किया जा सके और Push पर आपको जिम्मेदार ठहराया जा सके।</1><1>5. <2>तेजी से हो गया।</2> ऐप Push पर चलता है; फीस पर्दे के पीछे संभाली जाती है। कोई ब्रिज नहीं, कोई नया वॉलेट नहीं।</1><1>यही कारण है कि किसी भी चेन पर उपयोगकर्ता Push Chain पर डिप्लॉय किए गए एक ही ऐप का उपयोग कर सकते हैं — जिससे ऐप्स वास्तव में universal बन जाते हैं।</1>"
+        },
+        "qna3": {
+          "question": "क्या मुझे एक अलग वॉलेट या गैस टोकन की आवश्यकता है?",
+          "answer": "<1><2>नहीं।</2></1><1><2>अपना वॉलेट रखें।</2> अपने पहले से मौजूद वॉलेट का उपयोग करें — कोई नया वॉलेट या अकाउंट नहीं।</1><1><2>जो आपके पास है उससे भुगतान करें।</2> फीस आपके होम चेन पर आपके पहले से मौजूद टोकन में भुगतान की जा सकती है; हम पर्दे के पीछे रूपांतरण को संभालते हैं।</1><1><2>नेटवर्क स्विचिंग नहीं।</2> अपने होम चेन पर रहें — गैस टोकन प्राप्त करने के लिए केवल ब्रिजिंग नहीं।</1><1><2>गैर-कस्टोडियल।</2> आप हर क्रिया पर हस्ताक्षर करते हैं; Push कभी भी आपकी कुंजियाँ धारण नहीं करता है।</1><1><2>पर्दे के पीछे।</2> नेटवर्क स्वचालित रूप से $PC में बस्तियाँ करता है — आपको इसे प्रबंधित करने की आवश्यकता नहीं है।</1>"
+        },
+        "qna4": {
+          "question": "यह ब्रिज या मैसेजिंग लेयर से कैसे अलग है?",
+          "answer": "<1><2>संक्षिप्त उत्तर</2>: Push वह जगह है जहां आपका ऐप चलता है। ब्रिज/मैसेजिंग केवल टोकन या संदेशों को चेन के बीच ले जाते हैं जिससे उपयोगकर्ता और डेवलपर्स दोनों के लिए सब कुछ जटिल हो जाता है।</1><1><2>एकल होम बनाम कई क्लोन।</2> ब्रिज/मैसेजिंग के साथ आप प्रति चेन डिप्लॉय करते हैं और संदेशों के माध्यम से सिंक करते हैं। Push पर आप एक बार डिप्लॉय करते हैं; हर कोई उसी कॉन्ट्रैक्ट और साझा स्टेट को हिट करता है।</1><1><2>रैप्ड एसेट्स या अनिवार्य ब्रिजिंग नहीं।</2> उपयोगकर्ता अपने होम चेन पर रहें और जो उनके पास है उससे भुगतान करें; हम पर्दे के पीछे रूटिंग और फीस रूपांतरण को संभालते हैं।</1><1><2>एकीकृत पहचान और सत्यापन।</2> हम किसी भी वॉलेट/चेन से हस्ताक्षर स्वीकार करते हैं और उन्हें गैर-कस्टोडियल रूप से Push पर उसी उपयोगकर्ता को जिम्मेदार ठहराते हैं।</1><1><2>कम चलते भाग।</2> क्रॉस-चेन अनुमोदन नृत्य नहीं, गैस-टोकन शिकार नहीं, सिंक रखने के लिए गोंद कॉन्ट्रैक्ट नहीं।</1><1><2>जब चाहें ब्रिज का उपयोग करें, इसलिए नहीं क्योंकि आपको होना चाहिए।</2> तरलता अभी भी ब्रिज के माध्यम से स्थानांतरित हो सकती है, लेकिन आपके ऐप के साथ बातचीत के लिए इसकी आवश्यकता नहीं है।</1><1>परिणाम: सरल ऐप्स, सच्चाई का एक स्रोत और एक UX जो एक चेन जैसा लगता है — भले ही उपयोगकर्ता न हों।</1>"
+        },
+        "qna5": {
+          "question": "क्या यह केवल EVM है? कौन सी चेन समर्थित हैं?",
+          "answer": "<1><2>नहीं, Push EVM और गैर-EVM दोनों चेन का समर्थन करता है।</2> हालांकि यह डिप्लॉयमेंट के लिए EVM-प्रथम है, किसी भी चेन (गैर-EVM सहित) के उपयोगकर्ता आपके ऐप का उपयोग वैसे ही कर सकते हैं जैसे वे मूल रूप से उपयोग कर रहे हों।</1>\n<1><2>एक बार डिप्लॉय करें। हर जगह इंटरऑप।</2> मानक EVM कॉन्ट्रैक्ट (सॉलिडिटी/वाइपर) को Push पर लिखें और डिप्लॉय करें। टूलिंग समान रहता है।</1>\n<1><2>किसी भी चेन के उपयोगकर्ता।</2> एथेरियम और प्रमुख EVM L2 मूल रूप से काम करते हैं। गैर-EVM उपयोगकर्ता (जैसे, Solana) अपने होम वॉलेट के साथ साइन करते हैं; हम पर्दे के पीछे सत्यापित करते हैं और रूट करते हैं — कोई नेटवर्क स्विचिंग नहीं।</1>\n<1><2>आज समर्थित।</2> समर्थित चेन की लाइव सूची देखें → <3>समर्थित चेन</3>.</1><1><2>कवरेज का विस्तार।</2> हम लगातार अधिक चेन जोड़ रहे हैं। यदि आप किसी भी चेन का अनुरोध करना चाहते हैं, तो कृपया <4>हमसे संपर्क करें</4>.</1>",
+          "supported-urls-title": "Push Chain द्वारा समर्थित सभी चेन की सूची।",
+          "contact-url-title": "नई चेन जोड़ने के लिए हमसे संपर्क करें।"
+        },
+        "qna6": {
+          "question": "यह कितना तेज़ है और फीस कैसी दिखती है?",
+          "answer": "<1><2>गति।</2> लगभग 1-2 सेकंड की पुष्टिकरणों और तेज़ UX फीडबैक के लिए डिज़ाइन किया गया है। <3>🍩 Donut Testnet</3> पर लाइव मेट्रिक्स देखें।</1><1><2>शुल्क मॉडल।</2> आप उस टोकन में शुल्क देखते हैं जिसका उपयोग आप भुगतान करने के लिए करते हैं; नेटवर्क पर्दे के पीछे $PC में बसता है।</1><1><2>सामान्य लागत।</2> सामान्य शुल्क <2>$0.001</2> से कम है प्रति लेनदेन, हालांकि, यह कॉन्ट्रैक्ट जटिलता, टोकन की कीमत और नेटवर्क लोड के आधार पर भिन्न होता है। आपको हस्ताक्षर करने से पहले सटीक उद्धरण मिलता है।</1>",
+          "donut-testnet-title": "Push Chain Donut Testnet के आँकड़ों को देखें।"
+        }
+      }
+    },
+    "short-support-snippet": {
+      "section-aria-label": "Push Chain - यूनिवर्सल ब्लॉकचेन के बारे में सहायता प्रश्न",
+      "title": "सहायता\nसहायता डेस्क",
+      "title-aria-label": "Push Chain के बारे में सामान्य सहायता प्रश्न और उत्तर",
+      "discord-link-text": "Discord पर हमसे पूछें",
+      "discord-link-title": "सहायता और प्रश्नों के लिए Push Chain Discord समुदाय में शामिल हों",
+      "discord-link-aria-label": "एक नई टैब में Discord समुदाय खोलें",
+      "explore-more-text": "अधिक FAQs देखें",
+      "explore-more-title": "Push Chain FAQ दस्तावेज़ और डेवलपर मार्गदर्शिकाओं को देखें",
+      "explore-more-aria-label": "संपूर्ण Push Chain FAQ पृष्ठ पर नेविगेट करें",
+      "accordion-aria-label": "Push Chain सहायता प्रश्नों की सूची",
+      "answer-aria-label": "प्रश्न का उत्तर - ",
+      "qnas": {
+        "qna1": {
+          "question": "मैं अपना वॉलेट कनेक्ट नहीं कर पा रहा हूँ। मुझे क्या करना चाहिए?",
+          "answer": "<1><2>त्वरित जाँच:</2> पृष्ठ को रीफ्रेश करें, अपना वॉलेट अनलॉक करें, और push.org के लिए आक्रामक विज्ञापन/स्क्रिप्ट ब्लॉकर्स को अक्षम करें।</1><1><2>कोई नेटवर्क स्विच नहीं:</2> अपनी होम चेन पर रहें; पुश पर्दे के पीछे रूटिंग को संभालता है।</1><1><2>साइट अनुमतियाँ रीसेट करें:</2> अपने वॉलेट में, साइट कनेक्शन को हटा दें और फिर से कनेक्ट करें।</1><1>अभी भी अटक गए हैं? <3>Discord</3> पर पूछें या <4>सहायता टिकट</4> खोलें।</1>",
+          "discord-url-title": "वास्तविक समय में सहायता के लिए Push Chain Discord में शामिल हों।",
+          "support-url-title": "सहायता टिकट खोलें।"
+        },
+        "qna2": {
+          "question": "मेरा लेन-देन लंबित है या विफल हो गया है - अब क्या करें?",
+          "answer": "<1><2>स्थिति जाँचें:</2> अपने वॉलेट से हैश का उपयोग करके <3>Push Scan</3> पर अपने tx को देखें।</1><1><2>लंबित:</2> यह आमतौर पर जल्द ही पुष्टि हो जाता है; बार-बार भेजने से बचें।</1><1><2>विफल:</2> कोई धन नहीं लिया गया है। त्रुटि की समीक्षा करें और फिर से प्रयास करें।</1><1>चल रही घटनाओं को <4>स्थिति</4> पर पोस्ट किया जाता है।</1>",
+          "scan-url-title": "Push Scan (एक्सप्लोरर) खोलें।",
+          "status-url-title": "नेटवर्क स्थिति और घटनाओं को देखें।"
+        },
+        "qna3": {
+          "question": "मुझे टेस्टनेट टोकन (Donut) कैसे प्राप्त करें?",
+          "answer": "<1><3>Faucet</3> का उपयोग करके टेस्ट टोकन का अनुरोध करें।</1><1><2>नोट:</2> दर सीमाएँ लागू हो सकती हैं; कुछ फ़ॉसेट को सरल सत्यापन की आवश्यकता होती है। यदि फ़ॉसेट विफल रहता है, तो हमें <4>Discord</4> पर पिंग करें।</1>",
+          "faucet-url-title": "Push Chain faucet खोलें।",
+          "discord-url-title": "Push Chain Discord में शामिल हों।"
+        },
+        "qna4": {
+          "question": "मैं बग या भेद्यता की रिपोर्ट कैसे करूं?",
+          "answer": "<1><2>ऐप बग:</2> <3>सहायता टिकट</3> फ़ाइल करें या पुनरुत्पादन के चरणों के साथ <4>Discord</4> पर पोस्ट करें।</1><1><2>सुरक्षा मुद्दे:</2> <5>security@push.org</5> को ईमेल करें। हम एक फिक्स की पुष्टि होने तक सार्वजनिक प्रकटीकरण से बचें।</1>",
+          "support-url-title": "सहायता टिकट खोलें।",
+          "discord-url-title": "Discord में शामिल हों।"
+        },
+        "qna5": {
+          "question": "डॉक्स और क्विकस्टार्ट कहाँ हैं?",
+          "answer": "<1>त्वरित शुरुआत और APIs के लिए <3>Docs</3> से शुरुआत करें, और अवधारणाओं, गहन गोता और FAQs के लिए <4>Knowledge Base</4>।</1>",
+          "docs-url-title": "डेवलपर दस्तावेज़ खोलें।",
+          "kb-url-title": "Knowledge Base खोलें।"
+        },
+        "qna6": {
+          "question": "क्या मैं नई चेन, सुविधा या एकीकरण के लिए समर्थन का अनुरोध कर सकता हूँ?",
+          "answer": "<1>हाँ। <3>Contact</3> के माध्यम से हमें बताएं कि आपको किस चेन/उपकरण की आवश्यकता है या <4>GitHub</4> पर एक मुद्दा खोलें। हम लगातार कवरेज का विस्तार कर रहे हैं।</1>",
+          "contact-url-title": "Push Chain टीम से संपर्क करें।",
+          "github-url-title": "GitHub org खोलें।"
+        }
+      }
+    },
+    "short-contact-us-snippet": {
+      "section-aria-label": "Push Chain टीम से संपर्क करें",
+      "title": "लोकप्रिय\nप्रश्न",
+      "title-aria-label": "Push Chain के लिए सामान्य संपर्क प्रश्न",
+      "discord-link-text": "Discord से जुड़ें",
+      "discord-link-title": "Discord पर Push Chain समुदाय से चैट करें",
+      "discord-link-aria-label": "एक नए टैब में Discord खोलें",
+      "explore-more-text": "प्रोग्राम देखें",
+      "explore-more-title": "Push Chain प्रोग्राम, अनुदान और पारिस्थितिकी तंत्र देखें",
+      "explore-more-aria-label": "Push Chain प्रोग्राम पर नेविगेट करें",
+      "accordion-aria-label": "संपर्क प्रश्नों की सूची",
+      "answer-aria-label": "प्रश्न का उत्तर - ",
+      "qnas": {
+        "qna1": {
+          "question": "मुझे कौन सी श्रेणी चुननी चाहिए?",
+          "answer": "<1><2>साझेदारी और एकीकरण</2>: वॉलेट, इन्फ्रा, एक्सचेंज, protocol सहयोग → <3>साझेदारी से संपर्क करें</3>.</1><1><2>अनुदान और प्रोग्राम</2>: BRB, बूटकैंप, फंडिंग → <4>अनुदान से संपर्क करें</4>.</1><1><2>मीडिया और भाषण</2>: साक्षात्कार, बयान, वार्ता → <5>मीडिया और इवेंट</5>.</1><1><2>Validators</2>: नोड ऑपरेटर रुचि, RPC प्रदाता → <6>Validators</6>.</1><1><2>कानूनी</2>: ट्रेडमार्क, डेटा अनुरोध, समझौते → <7>कानूनी</7>.</1><1>क्या आपको तकनीकी सहायता या स्थिति की आवश्यकता है? इसके बजाय <8>सहायता</8> का उपयोग करें.</1>",
+          "contact-partnerships-title": "साझेदारी से संपर्क करें खोलें",
+          "contact-grants-title": "अनुदान से संपर्क करें खोलें",
+          "contact-media-title": "मीडिया और भाषण से संपर्क करें खोलें",
+          "contact-validators-title": "Validators से संपर्क करें खोलें",
+          "contact-legal-title": "कानूनी और अनुपालन से संपर्क करें खोलें",
+          "support-title": "सहायता केंद्र पर जाएं"
+        },
+        "qna2": {
+          "question": "आप कितनी जल्दी जवाब देते हैं?",
+          "answer": "<1>हम अधिकांश पूछताछ को <2>1–2 व्यावसायिक दिनों</2> के भीतर स्वीकार करने का लक्ष्य रखते हैं। समय-संवेदनशील अनुरोध (जैसे, मीडिया की समय सीमा, सुरक्षा) को प्राथमिकता दी जाती है।</1><1>तत्काल मुद्दों के लिए, <2>समय सीमा, समय क्षेत्र</2>, और <2>सबसे अच्छा संपर्क</2> शामिल करें।</1>"
+        },
+        "qna3": {
+          "question": "साझेदारी के लिए क्या विवरण मददगार है?",
+          "answer": "<1>अपनी <2>कंपनी का नाम</2>, <2>वेबसाइट</2>, और <2>आप मिलकर क्या बनाना चाहते हैं</2> साझा करें।</1><1>मददगार अतिरिक्त: दर्शक आकार, क्षेत्र, समयरेखा, और कोई भी तकनीकी दायरा या SDK जिन्हें आप उपयोग करने की योजना बना रहे हैं।</1><1>यहां से शुरुआत करें → <3>साझेदारी</3>.</1>",
+          "contact-partnerships-title": "साझेदारी से संपर्क करें खोलें"
+        },
+        "qna4": {
+          "question": "अनुदान कैसे काम करते हैं?",
+          "answer": "<1>अपना <2>परियोजना का नाम</2>, <2>repo/वेबसाइट</2>, चरण (<2>विचार, प्रोटोटाइप, MVP, लाइव</2>), और एक संक्षिप्त योजना बताएं।</1><1>अनुदान आवेदन हमेशा पहले-आओ-पहले-पाओ आधार पर संसाधित किए जाते हैं। यहां से शुरुआत करें → <3>अनुदान</3>.</1>",
+          "contact-grants-title": "अनुदान से संपर्क करें खोलें"
+        },
+        "qna5": {
+          "question": "मीडिया और भाषण अनुरोध",
+          "answer": "<1>अपना आउटलेट, विषय, <2>समय सीमा</2>, और प्रश्न शामिल करें। भाषणों/कार्यशालाओं के लिए, घटना तिथि, प्रारूप और दर्शक जोड़ें।</1><1>हमें <3>मीडिया और भाषण</3> के माध्यम से पहुंचें। हम लोगो, संस्थापक बायो और बोलचाल साझा कर सकते हैं।</1>",
+          "contact-media-title": "मीडिया और भाषण से संपर्क करें खोलें"
+        },
+        "qna6": {
+          "question": "मैं सुरक्षा मुद्दे की रिपोर्ट कैसे करूँ?",
+          "answer": "<1><3><2>security@push.org</2></3> को पुनरुत्पादन और प्रभाव के चरणों के साथ ईमेल करें। कृपया हमें फिक्स की पुष्टि होने तक सार्वजनिक प्रकटीकरण से बचें।</1>",
+          "security-policy-title": "सुरक्षा और प्रकटीकरण पढ़ें"
+        },
+        "qna7": {
+          "question": "मैं validator चलाने / इन्फ्रा प्रदान करना चाहता हूँ",
+          "answer": "<1>अपनी इन्फ्रा प्रोफाइल (अनुभव, क्षेत्र), अपेक्षित अपटाइम/एसएलए और किसी भी पसंदीदा शर्तों को साझा करें। यहां से शुरुआत करें → <3>Validators</3>.</1>",
+          "contact-validators-title": "Validators से संपर्क करें खोलें"
+        },
+        "qna8": {
+          "question": "कैरियर और भर्ती",
+          "answer": "<1>यदि भूमिकाएँ खुली हैं, तो उन्हें हमारे चैनलों पर पोस्ट किया जाएगा। फिर भी, आप <3>संपर्क करके</3> अपनी प्रोफ़ाइल और रुचियां साझा कर सकते हैं या अपडेट के लिए <4>@PushChain</4> को फॉलो कर सकते हैं।</1>",
+          "contact-careers-title": "कैरियर से संपर्क करें खोलें",
+          "twitter-title": "X पर @PushChain को फॉलो करें"
+        }
+      }
+    },
+    "typeform-support": {
+      "collapsed-text-for-support": "Open a Support Ticket",
+      "expanded-title-for-support": "Need help? 👋",
+      "collapsed-text-for-contact": "Contact the Team",
+      "expanded-title-for-contact": "Hi There! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 Technical Support",
+          "description": "Bug reports, SDK/API, स्मार्ट कॉन्ट्रैक्ट, integration help"
+        },
+        "network": {
+          "label": "🌐 Network & Testnet",
+          "description": "Explorer/Push Scan, RPC, Faucet, Donut टेस्टनेट issues"
+        },
+        "wallet": {
+          "label": "👛 Universal वॉलेट",
+          "description": "Push वॉलेट, universal चेन connection या other वॉलेट issues"
+        },
+        "identity": {
+          "label": "🪪 Accounts & Identity",
+          "description": "UEA/UOA, signatures, attribution questions"
+        },
+        "security": {
+          "label": "🛡️ Security",
+          "description": "Vulnerability reports, responsible disclosure (security@push.org)"
+        },
+        "general": {
+          "label": "💬 General Inquiry",
+          "description": "Questions, feedback, other topics"
+        },
+        "partnerships": {
+          "label": "🤝 Partnerships & Integrations",
+          "description": "BD, ecosystem integrations (wallets, infra, exchanges, प्रोटोकॉल)"
+        },
+        "grants": {
+          "label": "💰 Grants & Ecosystem Programs",
+          "description": "BRB, Bootcamp, grants, funding inquiries"
+        },
+        "media": {
+          "label": "📰 Media & Press",
+          "description": "Interviews, statements, assets, fact-checks"
+        },
+        "events": {
+          "label": "🎤 Speaking & Events",
+          "description": "Talks, workshops, हैकथॉन, sponsorships"
+        },
+        "careers": {
+          "label": "👩‍💻 Careers",
+          "description": "Open roles, internships, contractor opportunities"
+        },
+        "validators": {
+          "label": "🧡 Validator / Node Operators",
+          "description": "Operator interest, RPC providers, infra partners"
+        },
+        "legal": {
+          "label": "⚖️ Legal & Compliance",
+          "description": "Trademarks, data requests, agreements"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "What can we help you with?",
+            "subtitle": "Choose the category that best describes your inquiry"
+          },
+          "contact": {
+            "title": "Let's get to know you",
+            "subtitle": "We'll use this information to get back to you",
+            "name-label": "Your Name",
+            "name-placeholder": "Enter your full name",
+            "name-aftergreet": "Nice to meet you, ",
+            "email-label": "Email Address",
+            "email-placeholder": "Enter your email address"
+          },
+          "details": {
+            "title": "Tell us more",
+            "subtitle": "Provide details about your inquiry",
+            "subject-label": "Subject",
+            "subject-placeholder": "Brief summary of your issue",
+            "message-label": "Message",
+            "message-placeholder": "Describe your issue in detail. Include any error messages, steps to reproduce, or relevant information."
+          },
+          "submit": {
+            "title": "Review and Submit",
+            "subtitle": "Please review your information before submitting",
+            "placeholder": "Tell us more about what you need help with..."
+          }
+        },
+        "buttons": {
+          "next": "Next",
+          "previous": "Previous",
+          "submit": "Submit Ticket",
+          "submitting": "Submitting..."
+        },
+        "validation": {
+          "name-required": "Name is required",
+          "name-min-length": "Name must be at least 2 characters long",
+          "email-required": "Email is required",
+          "email-invalid": "Please enter a valid email address",
+          "subject-required": "Subject is required",
+          "message-required": "Message is required",
+          "category-required": "Please select a category",
+          "default": "This field is required"
+        },
+        "success": {
+          "title": "Ticket Submitted Successfully!",
+          "message": "Thank you for contacting us. We've received your support ticket and will get back to you as soon as possible.",
+          "button": "Submit Another Ticket"
+        },
+        "error": {
+          "title": "Submission Failed",
+          "message": "There was an error submitting your ticket. Please try again or contact us directly.",
+          "button": "Try Again"
+        }
+      }
+    },
+    "breadcrumbs": {
+      "navigation-aria-label": "Breadcrumb navigation",
+      "home-text": "Home",
+      "navigate-to-aria-label": "Navigate to {{page}}",
+      "go-to-title": "Go to {{page}} page",
+      "current-page-aria-label": "Current page: {{page}}",
+      "separator-aria-label": "Breadcrumb separator"
+    },
+    "explainer": {
+      "prepend": "Jump to ",
+      "append": ""
+    },
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "कवर फ़ॉर ",
+        "image-append": "",
+        "link-prepend": "एक्सप्लोर ",
+        "link-append": "",
+        "cta-title": "और पढ़ें"
+      }
+    },
+    "blog": {
+      "more-posts": {
+        "title": "Push Chain से और",
+        "follow-button": "Follow",
+        "read-more": "Read More"
+      },
+      "list": {
+        "recent-updates": "हाल के अपडेट",
+        "page-title": "पेज {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "Blog list page navigation",
+        "newer-entries": "Newer Entries",
+        "older-entries": "Older Entries"
+      },
+      "footer-item": {
+        "share-title": "इस लेख को साझा करके बातचीत का हिस्सा बनें",
+        "share-button": "Share",
+        "share-modal-title": "Share",
+        "copy-link": "Copy link",
+        "about-title": "Push Chain के बारे में",
+        "about-description": "Push Chain पहला वास्तविक <transliterate>ब्लॉकचेन</transliterate> है जिसे सभी <transliterate>चेन</transliterate> में विखंडन को खत्म करने के लिए डिज़ाइन किया गया है। यह डेवलपर्स को एक बार तैनात करने और तुरंत किसी भी <transliterate>चेन</transliterate> पर उपयोगकर्ताओं के लिए उपलब्ध होने देता है, चाहे वह EVM हो या Non-EVM (जिसमें Ethereum, Solana, Bitcoin शामिल हैं)। यह 100% EVM संगत, Proof of Stake (PoS) <transliterate>चेन</transliterate> है जो उपयोगकर्ताओं को EVM या Non-EVM <transliterate>चेन</transliterate> पर ऐप्स के साथ स्वाभाविक रूप से अपनी खुद की <transliterate>चेन</transliterate> पर करते हैं।",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "Linkedin"
+      }
+    }
+  },
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "टेस्टनेट, डोनट में एक झलक पाएं, यूनिवर्सल ऐप्स बनाएं और पुरस्कार जीतें!",
+      "button-text": "Closed Beta Pass प्राप्त करें",
+      "button-title": "पुश चेन टेस्टनेट में शामिल हों और अपना क्लोज्ड बीटा पास प्राप्त करें",
+      "button-aria-label": "पुश चेन क्लोज्ड बीटा पास प्राप्त करने के लिए टेलीग्राम खोलें",
+      "image-alt": "पुश चेन टेस्टनेट डोनट - यूनिवर्सल ब्लॉकचेन",
+      "close-button-title": "टेस्टनेट नोटिफिकेशन बंद करें",
+      "close-button-aria-label": "पुश चेन टेस्टनेट नोटिफिकेशन खारिज करें",
+      "container-aria-label": "पुश चेन टेस्टनेट नोटिफिकेशन"
+    },
+    "rewards-notification": {
+      "title": "Donut Testnet Closed beta अब लाइव है!",
+      "description": "Testnet, Donut में एक झलक पाएं, universal app बनाएं और पुरस्कार जीतें!",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
+      "close-button-title": "पुरस्कार सूचना बंद करें",
+      "close-button-aria-label": "Push Chain पुरस्कार सूचना को खारिज करें",
+      "container-aria-label": "Push Chain पुरस्कार सूचना"
+    },
+    "info-bar": {
+      "title": "Push Testnet पर अब लॉन्च करें — बिल्डर्स और शुरुआती उपयोगकर्ताओं के लिए पुरस्कार अनलॉक करें।",
+      "learn-more-text": "Learn More",
+      "learn-more-title": "इस घोषणा के बारे में और जानें",
+      "dismiss-button-title": "घोषणा खारिज करें",
+      "dismiss-button-aria-label": "घोषणा बार बंद करें",
+      "container-aria-label": "साइट घोषणा",
+      "star-icon-alt": "Announcement star icon"
+    },
+    "alert": {
+      "message": "Push Metamask Snap अब लाइव है,",
+      "know-more-text": "शुरू करें!",
+      "know-more-title": "Push Metamask Snap के साथ शुरुआत करें",
+      "close-button-title": "अलर्ट बंद करें",
+      "close-button-aria-label": "Push Metamask Snap अलर्ट खारिज करें",
+      "container-aria-label": "Push Metamask Snap घोषणा"
     }
   }
 }
