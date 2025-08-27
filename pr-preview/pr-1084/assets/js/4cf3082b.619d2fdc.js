@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[61801],{58818:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1084/blog/tags/nft-collectibles","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

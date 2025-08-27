@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[95845],{445506:e=>{e.exports=JSON.parse('{"label":"Roadmap","permalink":"/push-chain-website/pr-preview/pr-1084/blog/tags/roadmap","allTagsPath":"/push-chain-website/pr-preview/pr-1084/blog/tags","count":5,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[19146],{851742:e=>{e.exports=JSON.parse('{"label":"Monthly Report","permalink":"/push-chain-website/pr-preview/pr-1084/blog/tags/monthly-report","allTagsPath":"/push-chain-website/pr-preview/pr-1084/blog/tags","count":1,"unlisted":false}')}}]);

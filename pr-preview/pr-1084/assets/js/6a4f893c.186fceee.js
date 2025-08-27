@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[60917],{602891:e=>{e.exports=JSON.parse('{"label":"Web Grant","permalink":"/push-chain-website/pr-preview/pr-1084/blog/tags/web-grant","allTagsPath":"/push-chain-website/pr-preview/pr-1084/blog/tags","count":2,"unlisted":false}')}}]);

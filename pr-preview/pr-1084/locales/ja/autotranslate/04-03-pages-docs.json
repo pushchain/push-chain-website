@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "ドキュメンテーション — ユニバーサル <app> の構築",
+        "description": "Push Chain でのローンチに必要なものがすべて揃っています：クイックスタート、SDK、API リファレンス、サンプル、およびノードの設定。",
+        "og-title": "Push Chain Docs - クイックスターツ、SDK & API",
+        "og-description": "ユニバーサル execution layer でアプリを構築・実行するための明確なガイドと例。",
+        "twitter-title": "Push Chain Docs - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、APIリファレンス、そして例を交えて、迅速な開発をサポートします。"
+      },
+      "header": {
+        "countdown-title": "テストネットのドキュメントが公開まであと",
+        "description": "Psst... ドーナツ <testnet> をこっそり見たい？ #pushchainsecret で声をかけてくれたら、テスト版へのアクセスを送ります。",
+        "tweet-button": "Push Chainについてツイート",
+        "title": "Push Chain についてツイート",
+        "ariaLabel": "Push Chain についてツイート"
+      }
+    }
+  }
+}

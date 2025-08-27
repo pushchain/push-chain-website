@@ -1,0 +1,114 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - ホームページへ移動",
+      "language-icon-alt": "言語選択アイコン",
+      "hamburger-menu-alt": "ナビゲーションメニューを開く",
+      "testnet-badge-alt": "Push Chain Testnet Donut - テストネットのステータスを確認"
+    },
+    "logo": {
+      "imagealt": "Push Chain ロゴの画像",
+      "imagetitle": "Push Chain ロゴ",
+      "ctatitle": "Push Chainホームページへ移動"
+    },
+    "testnet": {
+      "title": "テストネット",
+      "aria-label": "テストネットセクション",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "ブロックチェーンのプッシュエクスプローラー",
+        "title": "Push Scan で Push Chain <transliterate>テストネット</transliterate> の <transliterate>トランザクション</transliterate> と <transliterate>ブロック</transliterate> を <transliterate>探検</transliterate> してください"
+      },
+      "link2": {
+        "text": "Faucet",
+        "subtext": "テストネット トークンを入手する",
+        "title": "Push Chain の開発向けに無料のテストネット <token> を入手"
+      }
+    },
+    "developers": {
+      "title": "開発者",
+      "aria-label": "開発者向けセクション",
+      "link1": {
+        "text": "さっそく始める",
+        "subtext": "Push Chain での開発入門",
+        "title": "Push Chainでユニバーサルアプリの開発を始める - 開発者向けドキュメント"
+      },
+      "link2": {
+        "text": "クイックスタート",
+        "subtext": "数秒で開発環境をセットアップ",
+        "title": "クイックスタートガイド - Push Chain 開発環境を即座にセットアップ"
+      },
+      "link3": {
+        "text": "チュートリアル",
+        "subtext": "Push で構築するためのステップバイステップガイド",
+        "title": "実践的なチュートリアルで学ぶ - Push Chain で最初のユニバーサル <app> を構築"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "コアコードとオープンソースツールを見る",
+        "title": "GitHubでPush Chainのソースコードと開発ツールを探索"
+      },
+      "link5": {
+        "text": "開発者 Discord",
+        "subtext": "開発者コミュニティとつながる",
+        "title": "Push Chain の開発者コミュニティにDiscordで参加して、サポートやコラボレーションをしましょう"
+      }
+    },
+    "community": {
+      "title": "コミュニティ",
+      "aria-label": "コミュニティセクション",
+      "link1": {
+        "text": "ナレッジベース",
+        "subtext": "機能に関する詳細情報を探す",
+        "title": "Push Chain の包括的なドキュメントと機能ガイドを探索する"
+      },
+      "link2": {
+        "text": "トークノミクス",
+        "subtext": "Push Chain を動かすネイティブ トークン",
+        "title": "Push Chain トークノミクスと$PC トークンのユーティリティについて学ぶ"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "最新情報とエコシステムのニュースをフォロー",
+        "title": "最新のアップデートや発表については、X (Twitter) で Push Chain をフォローしてください"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "コミュニティとチャット、構築、交流しましょう",
+        "title": "Push ChainコミュニティのDiscordに参加して、議論やサポートをしましょう"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "コミュニティに参加して最新情報を入手しましょう",
+        "title": "TelegramでPush Chainコミュニティと繋がり、リアルタイムの最新情報を入手しましょう"
+      }
+    },
+    "resources": {
+      "title": "リソース",
+      "aria-label": "リソースセクション",
+      "link1": {
+        "text": "ブログ",
+        "subtext": "最新情報、詳細な解説、開発ストーリー",
+        "title": "Push Chainブログで最新情報、技術的な詳細、開発者ストーリーをチェック"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "ビジョンと技術をわかりやすく",
+        "title": "Push Chain Litepaper を読む - シンプルなビジョンと技術概要"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "よくある質問への簡単な回答",
+        "title": "Push Chainに関するよくある質問を見る"
+      }
+    },
+    "language": {
+      "title": "言語",
+      "aria-label": "言語選択ドロップダウン"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal にアクセス - 開発者、ユーザー、またはバリデーターとしてポイントを獲得"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Cover for ",
+        "image-append": "",
+        "link-prepend": "Explore ",
+        "link-append": "",
+        "cta-title": "자세히 보기"
+      }
+    }
+  }
+}

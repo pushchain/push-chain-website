@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[11634],{716339:e=>{e.exports=JSON.parse('{"label":"Dapps","permalink":"/push-chain-website/pr-preview/pr-1084/blog/tags/dapps","allTagsPath":"/push-chain-website/pr-preview/pr-1084/blog/tags","count":1,"unlisted":false}')}}]);

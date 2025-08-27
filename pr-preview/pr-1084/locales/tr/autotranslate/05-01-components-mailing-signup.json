@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Hiçbir Güncellemeyi Kaçırmayın",
+      "text": "Kaydolun ve ekosistem duyurularından, çekilişlerden ve daha fazlasından haberdar olun.",
+      "email-input": "E-posta Adresiniz",
+      "email-input-placeholder": "E-posta adresinizi girin",
+      "email-input-title": "Push Chain bültenine kaydolun ve güncellemeler alın",
+      "email-input-aria-label": "Haber bültenine kaydolmak için e-posta adresi",
+      "submit-button": "Kaydol",
+      "submit-button-title": "Push Chain bültenine abone olun",
+      "submit-button-aria-label": "Haber bültenine abone ol",
+      "loading-submit-button": "Lütfen Bekleyin...",
+      "arrow-button-aria-label": "Haber bültenine abone ol",
+      "arrow-button-title": "Push Chain güncellemelerine abone olun",
+      "form-aria-label": "Bülten aboneliği formu",
+      "success-message-aria-label": "Abonelik başarılı",
+      "error-message-aria-label": "Abone olma hatası mesajı"
+    }
+  }
+}

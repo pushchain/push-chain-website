@@ -1,0 +1,13 @@
+{
+  "components": {
+    "explore-collection": {
+      "explore-card": {
+        "image-prepend": "Cover for ",
+        "image-append": "",
+        "link-prepend": "Keşfet ",
+        "link-append": "",
+        "cta-title": "Daha Fazla Oku"
+      }
+    }
+  }
+}
