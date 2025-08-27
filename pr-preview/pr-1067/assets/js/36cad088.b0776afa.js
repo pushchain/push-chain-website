@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[49826],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[18768],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -96,7 +96,7 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 41674:
+/***/ 400404:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -115,52 +115,52 @@ __webpack_require__.r(__webpack_exports__);
 
 const frontMatter = {
 	slug: 'how-decentralized-notifications-can-revolutionize-on-chain',
-	title: 'How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!',
-	description: 'How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!',
+	title: 'How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)',
+	description: 'How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	text: 'The YAM Protocol may be a familiar term for those who have been following news in the Defi world. But for those who don’t here is a quick run-through.',
+	text: 'In the previous article, we explored the various problems faced by On-Chain Governance and the issues that arise due to a lack of standardized communication medium by Web3 protocols to communicate with their stakeholders with the help of YAM as an example',
 	tags: [
 		'Blockchain',
-		'Ethereum',
 		'Decentralization',
-		'Blog',
-		'Notifications'
+		'Push Notification',
+		'Governance',
+		'Blog'
 	]
 };
 const contentTitle = undefined;
 const metadata = {
   "permalink": "/push-chain-website/pr-preview/pr-1067/blog/how-decentralized-notifications-can-revolutionize-on-chain",
-  "source": "@site/blog/2020-09-08-how-decentralized-notifications-can-revolutionize-on-chain/index.md",
-  "title": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!",
-  "description": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!",
-  "date": "2020-09-08T00:00:00.000Z",
-  "formattedDate": "September 8, 2020",
+  "source": "@site/blog/2020-09-28-how-decentralized-notifications-can-revolutionize-on-chain/index.md",
+  "title": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)",
+  "description": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)",
+  "date": "2020-09-28T00:00:00.000Z",
+  "formattedDate": "September 28, 2020",
   "tags": [
     {
       "label": "Blockchain",
       "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"
     },
     {
-      "label": "Ethereum",
-      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"
-    },
-    {
       "label": "Decentralization",
       "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/decentralization"
     },
     {
-      "label": "Blog",
-      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/blog"
+      "label": "Push Notification",
+      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/push-notification"
     },
     {
-      "label": "Notifications",
-      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/notifications"
+      "label": "Governance",
+      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/governance"
+    },
+    {
+      "label": "Blog",
+      "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/blog"
     }
   ],
-  "readingTime": 6.1466666666666665,
+  "readingTime": 5.63,
   "hasTruncateMarker": true,
   "authors": [
     {
@@ -173,33 +173,33 @@ const metadata = {
   ],
   "frontMatter": {
     "slug": "how-decentralized-notifications-can-revolutionize-on-chain",
-    "title": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!",
-    "description": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!",
+    "title": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)",
+    "description": "How Decentralized Notifications can Revolutionize On-Chain Governance (Part II)",
     "authors": [
       "push"
     ],
     "image": "./cover-image.webp",
-    "text": "The YAM Protocol may be a familiar term for those who have been following news in the Defi world. But for those who don’t here is a quick run-through.",
+    "text": "In the previous article, we explored the various problems faced by On-Chain Governance and the issues that arise due to a lack of standardized communication medium by Web3 protocols to communicate with their stakeholders with the help of YAM as an example",
     "tags": [
       "Blockchain",
-      "Ethereum",
       "Decentralization",
-      "Blog",
-      "Notifications"
+      "Push Notification",
+      "Governance",
+      "Blog"
     ]
   },
   "unlisted": false,
   "prevItem": {
-    "title": "EPNS secures partnership with Matic along with a sweet grant!",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/blog/epns-secures-partnership-with-matic"
+    "title": "Blockchain Game Mode ON — Engage Users using EPNS",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/blog/blockchain-game-mode-on"
   },
   "nextItem": {
-    "title": "A Beginner’s Guide to EPNS Channels!",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/blog/a-beginners-guide-to-epns-channels"
+    "title": "EPNS awarded AAVE grant !!",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/blog/epns-awarded-aave-grant"
   }
 };
 const assets = {
-"image": (__webpack_require__(379168)/* ["default"] */ .A),
+"image": (__webpack_require__(963378)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -216,8 +216,8 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-      alt: "Cover Image of How Decentralized Notifications can Revolutionize On-Chain Governance (Part I)!",
-      src: (__webpack_require__(405789)/* ["default"] */ .A) + "",
+      alt: "Cover Image of How Decentralized Notifications can Revolutionize On-Chain Governance",
+      src: (__webpack_require__(560971)/* ["default"] */ .A) + "",
       width: "1400",
       height: "788"
     })
@@ -240,23 +240,23 @@ function MDXContent(props = {}) {
 
 /***/ }),
 
-/***/ 379168:
+/***/ 560971:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-7ff49028d54c25452a78c0ea367c1721.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-6b78feda7eb55877b80fbf99e68d456d.webp");
 
 /***/ }),
 
-/***/ 405789:
+/***/ 963378:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-7ff49028d54c25452a78c0ea367c1721.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-6b78feda7eb55877b80fbf99e68d456d.webp");
 
 /***/ })
 
