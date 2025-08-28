@@ -3196,6 +3196,10 @@ html[data-theme='dark'] {
   --ifm-surface-alert-danger-subtle: #ffecec;
   --ifm-stroke-alert-danger-subtle: #f11f1f;
   --ifm-border-alert-danger-subtle: #ff4e4e;
+  --ifm-blockquote-color: #2d2D2D;
+  --ifm-blockquote-border-color: #424258;
+  --ifm-pagination-border: #ccc;
+
 
   /* Base Colors */
   --ifm-color-white: #ffffff;
@@ -3569,6 +3573,10 @@ html[data-theme='dark'] {
   --ifm-surface-alert-danger-subtle: #670000;
   --ifm-stroke-alert-danger-subtle: #ff4e4e;
   --ifm-border-alert-danger-subtle: #ffb1b1;
+  --ifm-blockquote-color: #757D8D;
+  --ifm-blockquote-border-color:  #757D8D;
+  --ifm-pagination-border: #202124;
+
 
 
   /* Base Colors */
@@ -5519,6 +5527,11 @@ article .markdown > ol > li > code {
 }
 
 /* footer pagination styling */
+.pagination-nav__link {
+  border: 1px solid var(--ifm-pagination-border);
+}
+
+
 .pagination-nav__link--prev .pagination-nav__label::before {
   content: '';
   display: inline-block;
