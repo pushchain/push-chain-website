@@ -24535,7 +24535,7 @@ __webpack_require__.r(__webpack_exports__);
               "plain-text"
             ],
             "style": {
-              "color": "#AAAAB0"
+              "color": "#6B6B6B"
             }
           },
           {
@@ -24663,7 +24663,7 @@ __webpack_require__.r(__webpack_exports__);
               "plain-text"
             ],
             "style": {
-              "color": "#44444E"
+              "color": "#404041"
             }
           },
           {
