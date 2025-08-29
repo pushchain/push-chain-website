@@ -24400,11 +24400,6 @@ __webpack_require__.r(__webpack_exports__);
           "label": "Docs"
         },
         {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "right"
-        },
-        {
           "to": "https://discord.com/invite/pushchain",
           "label": "Discord",
           "position": "right"
