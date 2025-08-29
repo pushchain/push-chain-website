@@ -5557,6 +5557,12 @@ article .markdown > ol > li > code {
   transform: rotate(180deg);
 }
 
+/* hide any link containing "/blog" inside .PushDocs */
+.PushDocs .navbar__inner a[href*="/blog"],
+.DocsHub .navbar__inner a[href*="/blog"] {
+  display: none !important;
+}
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
