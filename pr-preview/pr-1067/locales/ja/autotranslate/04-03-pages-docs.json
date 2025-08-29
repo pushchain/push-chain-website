@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "ドキュメント — ユニバーサルアプリを構築",
+        "description": "Push Chainでデプロイするために必要なすべて：クイックスタート、SDK、APIリファレンス、例、ノードセットアップ。",
+        "og-title": "Push Chain Docs - クイックスタート、SDK、API",
+        "og-description": "明確なガイドと例でユニバーサル実行レイヤー上でアプリを構築・実行。",
+        "twitter-title": "Push Chain Docs - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、APIリファレンス、例で素早くデプロイ。"
+      },
+      "header": {
+        "countdown-title": "テストネットドキュメントのローンチまで",
+        "description": "シーッ...テストネットドーナツを覗いてみたい？#pushchainsecretで私たちにメッセージを送ってください。テストビルドへのアクセスをお送りします。",
+        "tweet-button": "Push Chainについてツイート",
+        "title": "Push Chainについてツイート",
+        "ariaLabel": "Push Chainについてツイート"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Push Chainとは？",
+                  "subtitle": "Push Chainは真にユニバーサルなアプリを構築するための統合ツールキットを提供します。",
+                  "ctatitle": "詳細を見る"
+                },
+                "builders": {
+                  "title": "構築しましょう！",
+                  "subtitle": "ユニバーサルアプリを作成するためにPush Chain SDKで必要なすべて",
+                  "ctatitle": "詳細を見る"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "5分未満でReactベースのアプリを統合。",
+                  "ctatitle": "詳細を見る"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

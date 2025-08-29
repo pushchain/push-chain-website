@@ -15,6 +15,31 @@
         "tweet-button": "Publica sobre Push Chain",
         "title": "Tweet about Push Chain",
         "ariaLabel": "Comparte en X sobre Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "¿Qué es Push Chain?",
+                  "subtitle": "Push Chain proporciona un kit de herramientas unificado para construir aplicaciones verdaderamente universales.",
+                  "ctatitle": "Aprende Más"
+                },
+                "builders": {
+                  "title": "¡Vamos a construir!",
+                  "subtitle": "Todo lo que necesitas con el SDK de Push Chain para crear tu aplicación universal",
+                  "ctatitle": "Aprende Más"
+                },
+                "ui-kit": {
+                  "title": "Kit de UI",
+                  "subtitle": "Integra cualquier aplicación basada en React en menos de 5 minutos.",
+                  "ctatitle": "Aprende Más"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

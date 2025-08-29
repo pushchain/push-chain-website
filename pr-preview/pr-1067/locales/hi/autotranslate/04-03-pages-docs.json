@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "दस्तावेज़ीकरण — सार्वभौमिक ऐप्स बनाएं",
+        "description": "Push Chain पर शिप करने के लिए आपको जो कुछ भी चाहिए: क्विकस्टार्ट्स, SDKs, API रेफरेंस, उदाहरण और नोड सेटअप।",
+        "og-title": "Push Chain Docs - क्विकस्टार्ट्स, SDKs और API",
+        "og-description": "स्पष्ट गाइड और उदाहरणों के साथ सार्वभौमिक निष्पादन परत पर ऐप्स बनाएं और चलाएं।",
+        "twitter-title": "Push Chain Docs - अभी बनाएं",
+        "twitter-description": "तेजी से शिप करने के लिए क्विकस्टार्ट्स, SDKs, API रेफ और उदाहरण।"
+      },
+      "header": {
+        "countdown-title": "टेस्टनेट डॉक्स लॉन्च में",
+        "description": "प्स्स्ट... टेस्टनेट डोनट का स्नीक पीक चाहते हैं? हमें #pushchainsecret के साथ एक शाउट भेजें और हम आपको एक टेस्ट बिल्ड का एक्सेस भेजेंगे।",
+        "tweet-button": "Push Chain के बारे में ट्वीट करें",
+        "title": "Push Chain के बारे में ट्वीट करें",
+        "ariaLabel": "Push Chain के बारे में ट्वीट करें"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Push Chain क्या है?",
+                  "subtitle": "Push Chain वास्तव में सार्वभौमिक ऐप्स बनाने के लिए एक एकीकृत टूलकिट प्रदान करता है।",
+                  "ctatitle": "और जानें"
+                },
+                "builders": {
+                  "title": "चलो बनाते हैं!",
+                  "subtitle": "अपना सार्वभौमिक ऐप बनाने के लिए Push Chain SDK के साथ आपको जो कुछ भी चाहिए",
+                  "ctatitle": "और जानें"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "5 मिनट से कम समय में किसी भी React आधारित ऐप को एकीकृत करें।",
+                  "ctatitle": "और जानें"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

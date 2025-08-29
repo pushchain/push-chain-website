@@ -15,6 +15,31 @@
         "tweet-button": "غرّد عن Push Chain",
         "title": "غرّد عن Push Chain",
         "ariaLabel": "غرّد عن بلوكشين"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "ما هو Push Chain؟",
+                  "subtitle": "يوفر Push Chain مجموعة أدوات موحدة لبناء تطبيقات عالمية حقيقية.",
+                  "ctatitle": "اعرف المزيد"
+                },
+                "builders": {
+                  "title": "دعنا نبني!",
+                  "subtitle": "كل ما تحتاجه مع Push Chain SDK لإنشاء تطبيقك العالمي",
+                  "ctatitle": "اعرف المزيد"
+                },
+                "ui-kit": {
+                  "title": "مجموعة واجهة المستخدم",
+                  "subtitle": "دمج أي تطبيق يعتمد على React في أقل من 5 دقائق.",
+                  "ctatitle": "اعرف المزيد"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

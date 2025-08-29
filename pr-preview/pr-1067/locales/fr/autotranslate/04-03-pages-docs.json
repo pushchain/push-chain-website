@@ -1,0 +1,46 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Documentation — Construire des Applications Universelles",
+        "description": "Tout ce dont vous avez besoin pour déployer sur Push Chain : démarrages rapides, SDKs, référence API, exemples et configuration de nœuds.",
+        "og-title": "Push Chain Docs - Démarrages rapides, SDKs et API",
+        "og-description": "Construisez et exécutez des applications sur la couche d'exécution universelle avec des guides et exemples clairs.",
+        "twitter-title": "Push Chain Docs - Construisez maintenant",
+        "twitter-description": "Démarrages rapides, SDKs, référence API et exemples pour déployer rapidement."
+      },
+      "header": {
+        "countdown-title": "Lancement de la documentation testnet dans",
+        "description": "Psst... vous voulez un aperçu du testnet Donut ? Envoyez-nous un message avec #pushchainsecret et nous vous enverrons l'accès à une version de test.",
+        "tweet-button": "Tweeter sur Push Chain",
+        "title": "Tweeter sur Push Chain",
+        "ariaLabel": "Tweeter sur Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Qu'est-ce que Push Chain ?",
+                  "subtitle": "Push Chain fournit un kit d'outils unifié pour construire de véritables applications universelles.",
+                  "ctatitle": "En Savoir Plus"
+                },
+                "builders": {
+                  "title": "Construisons !",
+                  "subtitle": "Tout ce dont vous avez besoin avec le SDK Push Chain pour créer votre application universelle",
+                  "ctatitle": "En Savoir Plus"
+                },
+                "ui-kit": {
+                  "title": "Kit UI",
+                  "subtitle": "Intégrez n'importe quelle application basée sur React en moins de 5 minutes.",
+                  "ctatitle": "En Savoir Plus"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

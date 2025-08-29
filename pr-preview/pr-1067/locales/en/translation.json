@@ -40,7 +40,7 @@
       "link2": {
         "text": "Quick Start",
         "subtext": "Setup dev environment in seconds",
-        "title": "Quick start"
+        "title": "Quick Start"
       },
       "link3": {
         "text": "Tutorials",
@@ -55,7 +55,7 @@
       "link5": {
         "text": "Developer Discord",
         "subtext": "Connect with the dev community",
-        "title": "Join Push Chain"
+        "title": "Join"
       },
       "link6": {
         "text": "Explore Examples",
@@ -798,6 +798,31 @@
         "tweet-button": "Tweet about Push Chain",
         "title": "Tweet about Push Chain",
         "ariaLabel": "Tweet about Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "What is Push Chain?",
+                  "subtitle": "Push Chain provides a unified toolkit to build truly universal apps.",
+                  "ctatitle": "Learn More"
+                },
+                "builders": {
+                  "title": "Let's build!",
+                  "subtitle": "Everything you need with Push Chain SDK to create your universal app",
+                  "ctatitle": "Learn More"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "Integrate any React based app in less than 5 minutes.",
+                  "ctatitle": "Learn More"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "blog": {
