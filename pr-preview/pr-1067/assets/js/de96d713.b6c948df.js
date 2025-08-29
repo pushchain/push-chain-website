@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76074],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -912,6 +912,62 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 57220:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ deepdives)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 60 modules
+var Layout = __webpack_require__(957631);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBDeepDivesList.js
+const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/deepdivesComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const DeepDivesComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
+;// ./src/pages/knowledge/deepdives.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function DeepDivesPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.A)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.A)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
+
+/***/ }),
+
 /***/ 57349:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1133,6 +1189,7 @@ var map = {
 	"./static/assets/website/docshub/TechnicalDeepDivesIcon@3x.webp": 826424,
 	"./static/assets/website/docshub/Testnet-Docs-img@3x.webp": 302570,
 	"./static/assets/website/docshub/TokenomicsIcon@3x.webp": 859418,
+	"./static/assets/website/docshub/UIKit@3x.webp": 849089,
 	"./static/assets/website/docshub/WhitePushLogo@3x.webp": 96725,
 	"./static/assets/website/footer/PushFooterImg@3x.webp": 609832,
 	"./static/assets/website/frens/aave@3x.webp": 175868,
@@ -1762,6 +1819,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 90814:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRjYFAABXRUJQVlA4WAoAAAAwAAAAXwAAXQAASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDhMRwMAAC9fQBcQryAWTOYv3RfD/M+/QDbFi6ATTNJU2zENAACjfQAAyJJtK24rISnEJiaKGs78p4oEl3Ov8Gt/IvrvQJIkJWrgXJrZkZ7hBwAAAAAAAAAAAC4eKaWUUkoppZT26CRS09oitXkAAAAAAAAAAAD+mAvirQfC/kwXqdaDgTwUj8+D2SvuPlGkojFeieM+l6RWkpTZnY76qySVSFLeGqTt/6Ni6x6HEmxSNDjEupXUeZWrGqZYaNNXTsGymgwOoS7ylpHrGlVX7z6OsSYWbt0Hv7KP1ot1/TD7Net4E+dEy06SXL1zzjnnnHOOMIlIaQo7aYntc1Ctwlz7oY2xX4qVGhNLKS+yuRBhbc+HwMNeqG10sBz3B6k2WE57qlSa7WfoE2DpBNyw77bwf79QCIJt7ASa6F06AU/+amD6AK0HipjvGbGoGIMtDhZst1mRYsHm1dW06sS6fyUrD2ugiSxHrN4Qsjqp1cj6cooQOwHyKRF7yrwENcNJnSuW9iaZPIHg6sqXzG2RqKnUTJY6FWcnKxSyaj3b/tc8ee4EBsMhyErqJjY53pExi98h3U8Fc5Vtrj6shzjftLCcDPuMRwghhBBCjDF+ecJnshgmXD44SuDuh2zWZ/nhcSMMPjOnvjcePQat3K8zzGX23apJ+ZYDn8obvH6LrEuSO5n4lNMuXvA5Kmr36t1m6Cu7Wb6HnNjUWRY2U+RiQneJZLtfloWO8Sg1dycg0+sVVq4XsO3R1TL0ijIFHPlXugHdvuRi0gsUbasdqhjKoJX1e8B4lPS+oBtv+76VfpIJ0TXd/kIIbR7WoGV6sJpEaodd58jC/o4UlbTyKK7B9DA7+JCPRn0tCjPNiv9BRlCwvMNQy5LXpVdepXTJYy5xWBaXdV3XdV3XdfHicC2eRCtO+RqZtJaPsdS26hlMw5AtOSEYmlLp3lDJbbyvlet49yis8DVVNr931iOMPmlfLkZkrAjuZEylydA/5nM8zRv0KMw8z2hAJ2JzvOtN0cGzMG+WOgPVBfxTBNnCsHm1CEl7Ici2MGTd0Uywso4yv+NsX60Zq/Pt92t9G8OCKjWfUo14fF40vONSyOy999577/08TeMg1u1MSeakqfgAAA==");
+
+/***/ }),
+
 /***/ 91003:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1831,6 +1900,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+
+/***/ }),
+
+/***/ 95518:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
 
 /***/ }),
 
@@ -12517,6 +12597,9 @@ var map = {
 	"./static/assets/website/docshub/TokenomicsIcon.webp": 927751,
 	"./static/assets/website/docshub/TokenomicsIcon@2x.webp": 96735,
 	"./static/assets/website/docshub/TokenomicsIcon@3x.webp": 859418,
+	"./static/assets/website/docshub/UIKit.webp": 90814,
+	"./static/assets/website/docshub/UIKit@2x.webp": 926420,
+	"./static/assets/website/docshub/UIKit@3x.webp": 849089,
 	"./static/assets/website/docshub/WhitePushLogo.webp": 479082,
 	"./static/assets/website/docshub/WhitePushLogo@2x.webp": 227896,
 	"./static/assets/website/docshub/WhitePushLogo@3x.webp": 96725,
@@ -14918,62 +15001,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 721593:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ push101)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 60 modules
-var Layout = __webpack_require__(957631);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBPush101List.js
-const KBPush101List={title:'pages.knowledge.push101.explainer-section.blocks.title',content:[{topGap:false,bottomGap:false,type:'indexlist',value:[{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.why-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.what-is-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.innovations-of-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.curated-reads",hidden:true}]},{type:'list',title:'pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.title',variant:'row',topGap:true,bottomGap:true,items:[{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain",slug:'why-push-chain',image:'/static/assets/website/chain/knowledge/why-push-chain',imageSrcSet:false,url:'/blog/why-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.innovations-by-push-chain",slug:'innovations-by-push-chain',image:'/static/assets/website/chain/knowledge/innovations-by-push-chain',imageSrcSet:false,url:'/blog/innovations-by-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1",slug:'another-l1',image:'/static/assets/website/chain/knowledge/another-l1',imageSrcSet:false,url:'/blog/another-l1',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.evolution-of-push",slug:'evolution-of-push',image:'/static/assets/website/chain/knowledge/evolution-of-push',imageSrcSet:false,url:'/blog/evolution-of-push',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.consumer-apps-that-can-be-built-on-push-chain",slug:'consumer-apps-that-can-be-built-on-push-chain',image:'/static/assets/website/chain/knowledge/consumer-apps',imageSrcSet:false,url:'/blog/consumer-apps-that-can-be-built-on-push-chain/',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain",slug:'faq-push-chain',image:'/static/assets/website/chain/knowledge/frequently-asked-questions-cover',imageSrcSet:false,url:'/blog/faq-push-chain/',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/push101Comp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const Push101Comp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.push101.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBPush101List,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const push101Comp = (Push101Comp);
-;// ./src/pages/knowledge/push101.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function PushBasicsPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.push101.seo.title'),description:t('pages.knowledge.push101.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/push101"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.push101.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.push101.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.A)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.push101.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.push101.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.A)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(push101Comp,{})})]});}/* harmony default export */ const push101 = (PushBasicsPage);
-
-/***/ }),
-
 /***/ 721703:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15946,6 +15973,7 @@ var map = {
 	"./static/assets/website/docshub/TechnicalDeepDivesIcon@2x.webp": 419093,
 	"./static/assets/website/docshub/Testnet-Docs-img@2x.webp": 347311,
 	"./static/assets/website/docshub/TokenomicsIcon@2x.webp": 96735,
+	"./static/assets/website/docshub/UIKit@2x.webp": 926420,
 	"./static/assets/website/docshub/WhitePushLogo@2x.webp": 227896,
 	"./static/assets/website/footer/PushFooterImg@2x.webp": 821637,
 	"./static/assets/website/frens/aave@2x.webp": 76873,
@@ -17788,6 +17816,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 849089:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,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");
+
+/***/ }),
+
 /***/ 849254:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -19336,6 +19376,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 926420:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,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");
+
+/***/ }),
+
 /***/ 927751:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -20269,17 +20321,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-1610fcb762ae65c4cbe377b08bb20d4c.webp");
-
-/***/ }),
-
-/***/ 987744:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbbasicspreview-60fe7c3729c82078fe665ae2f556d86f.png");
 
 /***/ }),
 
