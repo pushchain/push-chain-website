@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Dokumentasi — Bangun Aplikasi Universal",
+        "description": "Semua yang Anda butuhkan untuk memulai di Push Chain: panduan cepat, SDK, referensi API, contoh, dan pengaturan node.",
+        "og-title": "Dokumentasi Push Chain - Panduan Singkat, SDK & API",
+        "og-description": "Bangun dan jalankan aplikasi di universal execution layer dengan panduan dan contoh yang jelas.",
+        "twitter-title": "Dokumentasi Push Chain - Mulai membangun sekarang",
+        "twitter-description": "Panduan cepat, SDK, referensi API, dan contoh untuk meluncurkan aplikasi dengan cepat."
+      },
+      "header": {
+        "countdown-title": "Peluncuran Dokumen Testnet dalam",
+        "description": "Psst... ingin melihat sekilas Testnet Donut? Kirimkan pesan kepada kami dengan #pushchainsecret dan kami akan mengirimkan akses ke build tes.",
+        "tweet-button": "Tweet tentang Push Chain",
+        "title": "Tweet tentang Push Chain",
+        "ariaLabel": "Tweet tentang Push Chain"
+      }
+    }
+  }
+}

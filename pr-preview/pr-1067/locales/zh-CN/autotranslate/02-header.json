@@ -1,0 +1,114 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - 导航到首页",
+      "language-icon-alt": "语言选择图标",
+      "hamburger-menu-alt": "打开导航菜单",
+      "testnet-badge-alt": "Push Chain Testnet Donut - 查看测试网状态"
+    },
+    "logo": {
+      "imagealt": "Push Chain Logo 的图像",
+      "imagetitle": "Push Chain Logo",
+      "ctatitle": "前往 Push Chain 首页"
+    },
+    "testnet": {
+      "title": "测试网",
+      "aria-label": "测试网部分",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "区块链的 Push Chain 区块浏览器",
+        "title": "探索 Push Chain 测试网的交易和区块在 Push Scan 上"
+      },
+      "link2": {
+        "text": "水龙头",
+        "subtext": "获取测试网代币",
+        "title": "获取 Push Chain 开发的免费测试网代币"
+      }
+    },
+    "developers": {
+      "title": "开发者",
+      "aria-label": "开发者专区",
+      "link1": {
+        "text": "开始使用",
+        "subtext": "关于在 Push Chain 上构建的介绍",
+        "title": "开始在 Push Chain 上构建通用应用 - 开发者文档"
+      },
+      "link2": {
+        "text": "快速上手",
+        "subtext": "几秒钟设置开发环境",
+        "title": "快速上手指南 - 立即设置 Push Chain 开发环境"
+      },
+      "link3": {
+        "text": "教程",
+        "subtext": "使用Push构建的分步指南",
+        "title": "通过实践教程学习 - 在 Push Chain 上构建您的第一个 универсальный app"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "查看核心代码和开源工具",
+        "title": "在 GitHub 上探索 Push Chain 源代码和开发工具"
+      },
+      "link5": {
+        "text": "开发者 Discord",
+        "subtext": "加入开发者社区",
+        "title": "加入 Push Chain 开发者社区的 Discord，获取支持和协作"
+      }
+    },
+    "community": {
+      "title": "社区",
+      "aria-label": "社区板块",
+      "link1": {
+        "text": "知识库",
+        "subtext": "查找关于功能的深度解析",
+        "title": "探索全面的 Push Chain 文档和功能指南"
+      },
+      "link2": {
+        "text": "代币经济学",
+        "subtext": "原生代币，驱动 Push Chain 的一切",
+        "title": "了解 Push Chain 代币经济学和 $PC 代币效用"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "关注最新动态和生态系统资讯",
+        "title": "在 X (Twitter) 上关注 Push Chain 以获取最新动态和公告"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "和社区交流、共建、互动",
+        "title": "加入 Push Chain 社区的 Discord，参与讨论和获取支持"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "加入讨论，随时了解最新动态",
+        "title": "在 Telegram 上连接 Push Chain 社区，获取实时更新"
+      }
+    },
+    "resources": {
+      "title": "资源",
+      "aria-label": "资源区",
+      "link1": {
+        "text": "博客",
+        "subtext": "更新、深入分析和开发者故事",
+        "title": "阅读区块链博客，了解最新动态、技术深度分析和开发者故事"
+      },
+      "link2": {
+        "text": "轻白皮书",
+        "subtext": "愿景与技术，简单易懂",
+        "title": "阅读 Push Chain Litepaper - 简化愿景和技术概述"
+      },
+      "link3": {
+        "text": "常见问题解答",
+        "subtext": "快速解答常见问题",
+        "title": "浏览关于区块链的常见问题"
+      }
+    },
+    "language": {
+      "title": "语言",
+      "aria-label": "语言选择下拉菜单"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "访问 Push Portal - 作为开发者、用户或验证者赚取积分"
+    }
+  }
+}
