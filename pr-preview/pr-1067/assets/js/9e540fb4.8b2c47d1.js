@@ -523,7 +523,7 @@ function _createMdxContent(props) {
 
     // Initialize Push Chain SDK
     const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
     });
     console.log('🚀 Got push chain client');
     console.log(JSON.stringify(pushChainClient));
