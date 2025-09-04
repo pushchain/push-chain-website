@@ -151,8 +151,8 @@ const metadata = {
     "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-universal-payment-gateway"
   },
   "next": {
-    "title": "Setup",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/setup"
+    "title": "Build a Universal Airdrop: Proofs, Contract, and Claim UI",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-universal-airdrop"
   }
 };
 const assets = {

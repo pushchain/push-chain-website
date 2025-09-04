@@ -194,8 +194,8 @@ const metadata = {
   },
   "sidebar": "pushChainSidebar",
   "previous": {
-    "title": "Setup Scaffold-ETH for Push",
-    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-scaffoldeth2"
+    "title": "Build a Universal Airdrop: Proofs, Contract, and Claim UI",
+    "permalink": "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-universal-airdrop"
   },
   "next": {
     "title": "Tooling",
