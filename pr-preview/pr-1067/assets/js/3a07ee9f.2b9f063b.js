@@ -923,7 +923,7 @@ function _createMdxContent(props) {
         children: "merkle-proof-generator/data/tree.json"
       }), " and ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "merkle-proof-generator/data/addresses.json"
-      }), " into your web app’s static assets (for example, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      }), " into your web app’s static assets (in our case, ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "frontend/public/"
       }), ")."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
