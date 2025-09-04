@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[26261],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[81231],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -106,48 +106,7 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 152493:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostPage_LikeAndRetweetItem)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js + 1 modules
-var Link = __webpack_require__(175489);
-// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
-var index_esm = __webpack_require__(796710);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/build/modern/useQuery.js + 6 modules
-var useQuery = __webpack_require__(994315);
-;// ./src/api/GetTwitterMetrics.ts
-async function fetchTweetMetrics(tweetId){const url="https://us-east1-push-prod-apps.cloudfunctions.net/pushpointsrewardsystem/api/twitter/tweetMetrics?id="+tweetId;const response=await fetch(url);if(!response.ok){throw new Error("Error "+response.status+": "+response.statusText);}return response.json();}function useTweetMetrics(tweetId){return (0,useQuery/* useQuery */.I)({queryKey:['tweetMetrics',tweetId],queryFn:()=>fetchTweetMetrics(tweetId),enabled:!!tweetId,// only run if tweetId is provided
-staleTime:1000*60// cache for 1 min
-});}
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-;// ./src/utils/FormatTwitterCount.tsx
-function formatTwitterCount(num){if(num===null||num===undefined)return'';if(num<1000)return num.toString();if(num<1000000)return(num/1000).toFixed(num%1000>=100?1:0)+'K';if(num<1000000000)return(num/1000000).toFixed(num%1000000>=100000?1:0)+'M';return(num/1000000000).toFixed(num%1000000000>=100000000?1:0)+'B';}
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-//
-const LikeAndRetweetItem=_ref=>{let{twitterId,text}=_ref;const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);const twitterID=twitterId;const{data:twitterData}=useTweetMetrics(twitterID);if(!twitterData)return null;return/*#__PURE__*/(0,jsx_runtime.jsxs)(ShareRow,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ResponsiveH2,{size:isMobile?'1rem':'1.25rem',weight:"500",spacing:"-0.02em",lineHeight:"110%",color:"#00000",children:text}),/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{justifyContent:"flex-end",flexWrap:"nowrap",gap:"8px",margin:isMobile&&'20px 0 0 0',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(LikeButton,{title:"Developer Docs",self:isMobile?'stretch':'self',href:"https://x.com/PushChain/status/"+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Like this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsHeart,{size:22,color:"var(--ifm-color-primary-text)",style:{marginRight:'10px'}}),formatTwitterCount(twitterData===null||twitterData===void 0?void 0:twitterData.like_count)||'']}),/*#__PURE__*/(0,jsx_runtime.jsxs)(RetweetButton,{title:"Developer Docs",href:"https://twitter.com/intent/retweet?tweet_id="+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Retweet this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsTwitterX,{size:22,color:"var(--ifm-color-white)",style:{marginRight:'10px'}}),"Retweet"]})]})]});};const ResponsiveH2=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling.H2).withConfig({displayName:"LikeAndRetweetItem__ResponsiveH2",componentId:"sc-c60ajk-0"})([""]);const ShareRow=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"LikeAndRetweetItem__ShareRow",componentId:"sc-c60ajk-1"})(["display:flex;justify-content:space-between;align-items:center;@media ","{flex-direction:column;margin-top:52px;align-items:center;}@media ","{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const RetweetButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__RetweetButton",componentId:"sc-c60ajk-2"})(["background:var(--ifm-color-custom-pink);border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:none;color:var(--ifm-color-white);align-self:",";&:hover{color:var(--ifm-color-white);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);const LikeButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__LikeButton",componentId:"sc-c60ajk-3"})(["background:transparent;border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:1.5px solid var(--ifm-like-border-color);color:var(--ifm-color-primary-text);align-self:",";&:hover{color:var(--ifm-color-primary-text);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);/* harmony default export */ const BlogPostPage_LikeAndRetweetItem = (LikeAndRetweetItem);
-
-/***/ }),
-
-/***/ 314659:
+/***/ 340001:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -161,7 +120,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28453);
-/* harmony import */ var _site_src_theme_BlogPostPage_LikeAndRetweetItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(152493);
 
 
 const frontMatter = {
@@ -227,7 +185,7 @@ const metadata = {
       "permalink": "/push-chain-website/pr-preview/pr-1067/blog/tags/testnet"
     }
   ],
-  "readingTime": 1.0233333333333334,
+  "readingTime": 0.9733333333333334,
   "hasTruncateMarker": true,
   "authors": [
     {
@@ -272,22 +230,138 @@ const assets = {
 
 
 
-
-const toc = [];
+const toc = [{
+  "value": "Donut Testnet Closed Beta is Now Live!",
+  "id": "donut-testnet-closed-beta-is-now-live",
+  "level": 2
+}, {
+  "value": "👀 What Early Access Unlocks?",
+  "id": "what-early-access-unlocks",
+  "level": 2
+}, {
+  "value": "🔧 <strong>Powerful SDK, UIKit, Tooling and easy to follow Docs</strong>",
+  "id": "-powerful-sdk-uikit-tooling-and-easy-to-follow-docs",
+  "level": 3
+}, {
+  "value": "💸 <strong>Rewards for Early Testers</strong>",
+  "id": "-rewards-for-early-testers",
+  "level": 3
+}, {
+  "value": "💬 <strong>Private Builder Group</strong>",
+  "id": "-private-builder-group",
+  "level": 3
+}, {
+  "value": "🍩 Why Donut?",
+  "id": "why-donut",
+  "level": 2
+}, {
+  "value": "🎟️ Claim your Donut Testnet Pass HERE",
+  "id": "️claim-your-donut-testnet-pass-here",
+  "level": 2
+}];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
+    em: "em",
+    h2: "h2",
+    h3: "h3",
     img: "img",
     p: "p",
+    strong: "strong",
     ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .useMDXComponents */ .R)(),
     ...props.components
   };
-  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
-      alt: "Donut Testnet Closed Beta is Now Live",
-      src: (__webpack_require__(144432)/* ["default"] */ .A) + "",
-      width: "1600",
-      height: "900"
-    })
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.img, {
+        alt: "Donut Testnet Closed Beta is Now Live",
+        src: (__webpack_require__(144432)/* ["default"] */ .A) + "",
+        width: "1600",
+        height: "900"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "donut-testnet-closed-beta-is-now-live",
+      children: "Donut Testnet Closed Beta is Now Live!"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "We’ve been building the foundation for a new era of universal apps."
+      }), " Now, we're opening the gates. Push Chain's ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Closed Beta Pass"
+      }), " is here."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "This is your chance to be the first to preview our Testnet, Donut. Selected developers will get hands-on with our SDK, UIKit, tooling, docs to be the first to deploy their app on Push Chain."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["This guide will walk you through how to join and start building on ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Donut"
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.strong, {
+        children: ["👉 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+          href: "https://t.me/+dHOCilvxNR9jZjM9",
+          children: "Join the Closed Beta"
+        })]
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "what-early-access-unlocks",
+      children: "👀 What Early Access Unlocks?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "-powerful-sdk-uikit-tooling-and-easy-to-follow-docs",
+      children: ["🔧 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Powerful SDK, UIKit, Tooling and easy to follow Docs"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Start exploring and building with our ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&utm_medium=content&utm_campaign=devdocs",
+        children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+          children: "comprehensive documentation"
+        })
+      }), "."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Use the SDK, 10x your user base, unlock cross-chain liquidity with 100% EVM compatibility. Deploy your app with minimal code changes in minutes."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "-rewards-for-early-testers",
+      children: ["💸 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Rewards for Early Testers"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Up to $500 rewards & exclusive unlocks for testing, deploying, and providing quality feedback. Deploying an app on Push Chain Testnet qualifies for extra points (Developer Exclusive Airdrop)."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
+      id: "-private-builder-group",
+      children: ["💬 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "Private Builder Group"
+      })]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Direct line to Push Chain Core devs & other cracked devs participating in the closed beta."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "Network, team up and learn from the best! Also, unlock special Invites to community meets and private previews."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "why-donut",
+      children: "🍩 Why Donut?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: "The first Layer 1 built for Universal Apps. Build & Deploy once, onboard users from any chain."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "✅ Deploy once, go cross-chain & 10x your user base."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "✅ Skip bridges. Deploy Universal Smart Contracts with Wallet/Fee Abstraction, Any Chain TX & 100% EVM compatibility."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
+        children: "✅ Create unique app experiences, by having users of different chains transact with the same app."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
+      id: "️claim-your-donut-testnet-pass-here",
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
+        href: "https://t.me/+dHOCilvxNR9jZjM9",
+        children: "🎟️ Claim your Donut Testnet Pass HERE"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["PS: ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.em, {
+        children: "(Spots are limited, Early access closes soon)"
+      })]
+    })]
   });
 }
 function MDXContent(props = {}) {

@@ -4325,6 +4325,8 @@ a:hover {
   display: none !important;
 }
 
+
+
 .PushDocs
   .docRoot_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-styles-module,
 .PushDocs .docRoot_UBD9 {
@@ -4334,6 +4336,12 @@ a:hover {
 .PushDocs
   .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
   max-width: 100% !important;
+}
+
+@media (min-width: 997px) {
+  .docItemCol_VOVn {
+    max-width: 100% !important;
+  }
 }
 
 .navbar--fixed-top {
@@ -6134,10 +6142,6 @@ html:not([data-theme]) .themedComponent--light_NVdE {
     max-width: calc(100% - var(--doc-sidebar-hidden-width));
   }
 
-  .docItemCol_VOVn_pRgb {
-      max-width: 100% !important;
-  }
-
   /*.docItemWrapperEnhanced {
     max-width: calc(
       var(--ifm-container-width) + var(--doc-sidebar-width)
@@ -7713,7 +7717,7 @@ the background in custom CSS file due bug https://github.com/facebook/docusaurus
    The .docsWrapper_... .theme-back-to-top-button was merged with the other .theme-back-to-top-button rule.
 */
 
-@media (max-width: 997px) {
+@media (min-width: 997px) {
   .docItemCol_VOVn {
     max-width: 100% !important;
   }
