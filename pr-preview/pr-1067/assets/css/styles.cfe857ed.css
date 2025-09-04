@@ -6134,11 +6134,11 @@ html:not([data-theme]) .themedComponent--light_NVdE {
     max-width: calc(100% - var(--doc-sidebar-hidden-width));
   }
 
-  .docItemWrapperEnhanced_s6pk {
+  /*.docItemWrapperEnhanced {
     max-width: calc(
       var(--ifm-container-width) + var(--doc-sidebar-width)
     ) !important;
-  }
+  }*/
 }
 
 .docRoot_cWv0 {
@@ -7701,7 +7701,7 @@ the background in custom CSS file due bug https://github.com/facebook/docusaurus
 
 .mainWrapper_eExm {
   max-width: 100vw;
-  min-width: 100vw;
+  /*min-width: 100vw;*/
 }
 
 /* Note: The following rules were already consolidated in the first chunk.
@@ -7811,7 +7811,7 @@ the background in custom CSS file due bug https://github.com/facebook/docusaurus
 
 .mainWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-Layout-styles-module {
   max-width: 100vw;
-  min-width: 100vw;
+  /*min-width: 100vw;*/
 }
 
 .docRoot_node_modules-\@docusaurus-theme-classic-lib-theme-DocRoot-Layout-styles-module {
