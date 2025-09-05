@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[37643],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[84813],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -1385,39 +1385,6 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
-/***/ 248809:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ BlogListPage)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117559);
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(169024);
-/* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(144586);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(113490);
-/* harmony import */ var _theme_BlogLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(729520);
-/* harmony import */ var _theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(603345);
-/* harmony import */ var _theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(672852);
-/* harmony import */ var _theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(841463);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(320053);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(21532);
-/* harmony import */ var _docusaurus_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(956347);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(777255);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-function BlogListPageMetadata(props){const{metadata}=props;const{siteConfig:{title:siteTitle}}=(0,_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A)();const{blogDescription,blogTitle,permalink}=metadata;const location=(0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_11__/* .useLocation */ .zy)();const pathname=location===null||location===void 0?void 0:location.pathname;const isBlogOnlyMode=permalink==='/';const isBlogMainPage=pathname.includes('/page/')||pathname=='/blog/'||pathname=='/blog';const title=isBlogOnlyMode?siteTitle:blogTitle;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment,{children:[!isBlogMainPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__/* .PageMetadata */ .be,{title:title,description:blogDescription}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .A,{tag:"blog_posts_list"})]});}function BlogListPageContent(props){const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_12__/* .useTranslation */ .Bd)();const{metadata,items}=props;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(ListItem,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(ListSpan,{children:(metadata===null||metadata===void 0?void 0:metadata.page)==1?t('components.blog.list.recent-updates'):t('components.blog.list.page-title',{page:metadata===null||metadata===void 0?void 0:metadata.page})}),(metadata===null||metadata===void 0?void 0:metadata.page)==1&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{items:items===null||items===void 0?void 0:items.slice(0,4),list:true})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(GridItem,{marginTop:(metadata===null||metadata===void 0?void 0:metadata.page)==1?true:false,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{items:items===null||items===void 0?void 0:items.slice((metadata===null||metadata===void 0?void 0:metadata.page)==1?4:0,11)})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(PaginatorDiv,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A,{metadata:metadata})})]});}function BlogListPage(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__/* .HtmlClassNameProvider */ .e3,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .A)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__/* .ThemeClassNames */ .G.wrapper.blogPages,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__/* .ThemeClassNames */ .G.page.blogListPage),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(_theme_BlogLayout__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(BlogListPageMetadata,Object.assign({},props)),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(BlogListPageContent,Object.assign({},props))]})});}const GridItem=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__GridItem",componentId:"sc-9t9q8y-0"})(["width:1120px !important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:33px;box-sizing:border-box;margin:",";@media (max-width:1200px){width:100% !important;padding:",";box-sizing:border-box;margin:10px auto 0 auto;gap:30px;}@media ","{grid-template-columns:repeat(1,minmax(0,1fr));}"],props=>props.marginTop?'100px auto 0 auto':'30px auto 0 auto',""+_site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__/* ["default"] */ .Ay.STRUCTURE.PADDING.MOBILE,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__/* .device */ .jO.tablet);const PaginatorDiv=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__PaginatorDiv",componentId:"sc-9t9q8y-1"})(["width:100% !important;"]);const ListItem=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__ListItem",componentId:"sc-9t9q8y-2"})(["display:flex;flex-direction:column;width:1120px;margin:50px auto auto auto;@media (max-width:1200px){width:100% !important;box-sizing:border-box;margin:10px auto 0 auto;}"]);const ListSpan=(0,styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_4__/* .Span */ .L9).withConfig({displayName:"BlogListPage__ListSpan",componentId:"sc-9t9q8y-3"})(["color:var(--ifm-color-primary-blog);font-family:DM Sans,sans-serif;font-size:37px;font-style:normal;font-weight:700;line-height:110%;letter-spacing:-1.2px;"]);
-
-/***/ }),
-
 /***/ 254887:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -1502,7 +1469,7 @@ var LikeAndRetweetItem = __webpack_require__(152493);
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */function BlogPostItemContent(_ref){var _metadata$frontMatter;let{children,className}=_ref;const{isBlogPostPage,metadata}=(0,blogPost/* useBlogPost */.e)();return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{// This ID is used for the feed generation to locate the main content
-id:isBlogPostPage?lib.blogPostContainerID:undefined,className:(0,clsx_m/* default */.A)('markdown',className),itemProp:"articleBody",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(LikeSection,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(LikeAndRetweetItem/* default */.A,{twitterId:metadata===null||metadata===void 0||(_metadata$frontMatter=metadata.frontMatter)===null||_metadata$frontMatter===void 0?void 0:_metadata$frontMatter.twitterId,text:"Hooked? Like and retweet to spread the word"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent/* default */.A,{children:children})]});}const LikeSection=styled_components_browser_esm/* styled */.I4.div.withConfig({displayName:"Content__LikeSection",componentId:"sc-9x3kgp-0"})(["margin-bottom:16px;"]);
+id:isBlogPostPage?lib.blogPostContainerID:undefined,className:(0,clsx_m/* default */.A)('markdown',className),itemProp:"articleBody",children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(LikeSection,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(LikeAndRetweetItem/* default */.A,{twitterId:metadata===null||metadata===void 0||(_metadata$frontMatter=metadata.frontMatter)===null||_metadata$frontMatter===void 0?void 0:_metadata$frontMatter.twitterId,text:"Hooked? Like and retweet to spread the word"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent/* default */.A,{children:children})]});}const LikeSection=styled_components_browser_esm/* styled */.I4.div.withConfig({displayName:"Content__LikeSection",componentId:"sc-9x3kgp-0"})(["margin-bottom:16px;"]);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/EditThisPage/index.js + 2 modules
 var EditThisPage = __webpack_require__(361943);
 // EXTERNAL MODULE: ./src/theme/TagsListInline/index.js
@@ -1726,6 +1693,39 @@ const codeEnv=isNodeJSEnv?CodingEnvironment.NODEJS:CodingEnvironment.REACT;(0,re
 /***/ (() => {
 
 /* (ignored) */
+
+/***/ }),
+
+/***/ 549117:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ BlogTagsPostsPage)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(320053);
+/* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(721312);
+/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(853465);
+/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(117559);
+/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(169024);
+/* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(175489);
+/* harmony import */ var _theme_BlogLayout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(729520);
+/* harmony import */ var _theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(603345);
+/* harmony import */ var _theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(841463);
+/* harmony import */ var _theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(672852);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(21532);
+/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(61530);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(474848);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */// Internal Configs
+// Very simple pluralization: probably good enough for now
+function useBlogPostsPlural(){const{selectMessage}=(0,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_3__/* .usePluralForm */ .W)();return count=>selectMessage(count,(0,_docusaurus_Translate__WEBPACK_IMPORTED_MODULE_2__/* .translate */ .T)({id:'theme.blog.post.plurals',description:'Pluralized label for "{count} posts". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',message:'One post|{count} posts'},{count}));}function useBlogTagsPostsPageTitle(tag){const blogPostsPlural=useBlogPostsPlural();return (0,_docusaurus_Translate__WEBPACK_IMPORTED_MODULE_2__/* .translate */ .T)({id:'theme.blog.tagTitle',description:'The title of the page for a blog tag',message:'{nPosts} tagged with "{tagName}"'},{nPosts:blogPostsPlural(tag.count),tagName:tag.label});}function BlogTagsPostsPageMetadata(_ref){let{tag}=_ref;const title=useBlogTagsPostsPageTitle(tag);return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.Fragment,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_5__/* .PageMetadata */ .be,{title:title}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .A,{tag:"blog_tags_posts"})]});}function BlogTagsPostsPageContent(_ref2){let{tag,items,sidebar,listMetadata}=_ref2;const title=useBlogTagsPostsPageTitle(tag);return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(_theme_BlogLayout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(TagsHeader,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)("h1",{children:title}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A,{href:tag.allTagsPath,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_docusaurus_Translate__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A,{id:"theme.tags.tagsPageLink",description:"The label of the link targeting the tag list page",children:"View All Tags"})})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(GridItem,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .A,{items:items}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(_theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .A,{metadata:listMetadata})]})]});}function BlogTagsPostsPage(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsxs)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_5__/* .HtmlClassNameProvider */ .e3,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_4__/* .ThemeClassNames */ .G.wrapper.blogPages,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_4__/* .ThemeClassNames */ .G.page.blogTagPostListPage),children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(BlogTagsPostsPageMetadata,Object.assign({},props)),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(BlogTagsPostsPageContent,Object.assign({},props))]});}const TagsHeader=styled_components__WEBPACK_IMPORTED_MODULE_11__/* ["default"] */ .Ay.header.withConfig({displayName:"BlogTagsPostsPage__TagsHeader",componentId:"sc-ypd5v8-0"})(["display:flex;flex-direction:row;align-items:center;justify-content:space-between;width:1120px !important;margin:20px auto 0 auto;@media ","{flex-direction:column;width:90% !important;align-items:flex-start;}"],_site_src_config_globals__WEBPACK_IMPORTED_MODULE_12__/* .device */ .jO.tablet);const GridItem=styled_components__WEBPACK_IMPORTED_MODULE_11__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogTagsPostsPage__GridItem",componentId:"sc-ypd5v8-1"})(["width:1120px !important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:33px;box-sizing:border-box;margin:50px auto 0 auto;@media ","{width:90% !important;}@media ","{grid-template-columns:repeat(1,minmax(0,1fr));}"],_site_src_config_globals__WEBPACK_IMPORTED_MODULE_12__/* .device */ .jO.laptopL,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_12__/* .device */ .jO.tablet);
 
 /***/ }),
 
