@@ -255,6 +255,8 @@ const assets = {
 
 };
 
+/*Content Start*/
+/*TODO: Update this URL to correct one*/
 
 
 
@@ -266,12 +268,24 @@ const toc = [{
   "id": "tutorial-overview",
   "level": 2
 }, {
-  "value": "Part 1: Smart Contract Development &amp; Deployment",
-  "id": "part-1-smart-contract-development--deployment",
+  "value": "Part 1: Deploy ERC-20 Token to Push Chain",
+  "id": "part-1-deploy-erc-20-token-to-push-chain",
   "level": 3
 }, {
-  "value": "Part 2: Building the Frontend UI",
-  "id": "part-2-building-the-frontend-ui",
+  "value": "Part 2: Mint $WPUSH Tokens",
+  "id": "part-2-mint-wpush-tokens",
+  "level": 3
+}, {
+  "value": "Part 3: Create Liquidity Pool",
+  "id": "part-3-create-liquidity-pool",
+  "level": 3
+}, {
+  "value": "Part 4: Test Token Swaps",
+  "id": "part-4-test-token-swaps",
+  "level": 3
+}, {
+  "value": "Part 5: Build Frontend UI",
+  "id": "part-5-build-frontend-ui",
   "level": 3
 }, {
   "value": "Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat",
@@ -306,28 +320,28 @@ const toc = [{
   "id": "part-3-create-airdropwpush-pool-and-add-liquidity",
   "level": 2
 }, {
-  "value": "Part 4: Programmatic Swap (WPUSH → <code>$AIRDROP</code>)",
+  "value": "Part 4: Programmatic Swap (<code>$WPUSH</code> → <code>$AIRDROP</code>)",
   "id": "part-4-programmatic-swap-wpush--airdrop",
   "level": 2
 }, {
-  "value": "Part 4: Building the Frontend UI",
-  "id": "part-4-building-the-frontend-ui",
+  "value": "Part 5: Building the Frontend UI",
+  "id": "part-5-building-the-frontend-ui",
   "level": 2
 }, {
-  "value": "4.1. Setting up Vite + React + TypeScript frontend",
-  "id": "41-setting-up-vite--react--typescript-frontend",
+  "value": "5.1. Setting up Vite + React + TypeScript frontend",
+  "id": "51-setting-up-vite--react--typescript-frontend",
   "level": 3
 }, {
-  "value": "4.2. Installing <code>@pushchain/ui-kit</code>",
-  "id": "42-installing-pushchainui-kit",
+  "value": "5.2. Installing <code>@pushchain/ui-kit</code>",
+  "id": "52-installing-pushchainui-kit",
   "level": 3
 }, {
-  "value": "4.3. Setting up the Push Chain Wallet",
-  "id": "43-setting-up-the-push-chain-wallet",
+  "value": "5.3. Setting up the Push Chain Wallet",
+  "id": "53-setting-up-the-push-chain-wallet",
   "level": 3
 }, {
-  "value": "4.4. Creating the Application Component",
-  "id": "44-creating-the-application-component",
+  "value": "5.4. Creating the Application Component",
+  "id": "54-creating-the-application-component",
   "level": 3
 }, {
   "value": "Conclusion",
@@ -360,7 +374,7 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("title", {
         children: "Mint Universal ERC-20 Tokens (via Push-Swap) | Tutorials | Push Chain Docs"
       })
-    }), "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+    }), "\n", "\n", "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["This tutorial shows how to let users on any chain mint a universal ERC-20 called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$AIRDROP"
       }), " by leveraging Push Universal Transactions plus a Uniswap v3 pool on Push Chain. Users “mint” by swapping ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
@@ -383,48 +397,55 @@ function _createMdxContent(props) {
         }), " pool and add liquidity"]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
         children: "Test a swap programmatically"
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Build a minimal UI that performs a universal “mint” via SwapRouter"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
+        children: ["Build a minimal UI that allows users to mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "$WPUSH"
+        }), " tokens by depositing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "$PC"
+        }), " tokens"]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "tutorial-overview",
       children: "Tutorial Overview"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This tutorial is divided into two main parts:"
+      children: "This tutorial is divided into five main parts:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "part-1-smart-contract-development--deployment",
-      children: "Part 1: Smart Contract Development & Deployment"
+      id: "part-1-deploy-erc-20-token-to-push-chain",
+      children: "Part 1: Deploy ERC-20 Token to Push Chain"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["We'll deploy a standard ERC-20 token (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      children: ["Set up Hardhat, write and deploy an ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$AIRDROP"
-      }), ") to Push Chain's testnet using Hardhat. This includes:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Setting up the development environment"
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Writing and compiling the smart contract"
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Deploying to Push Chain testnet"
-      }), "\n"]
+      }), " ERC-20 token contract to Push Chain testnet."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "part-2-building-the-frontend-ui",
-      children: "Part 2: Building the Frontend UI"
+      id: "part-2-mint-wpush-tokens",
+      children: "Part 2: Mint $WPUSH Tokens"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["We'll create a React application using ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "@pushchain/ui-kit"
-      }), " to interact with our deployed contract. This includes:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Setting up a Vite + React + TypeScript frontend"
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Integrating Push Chain wallet functionality"
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: ["Calling the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "balanceOf"
-        }), " function from the contract on Push Chain"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
-        children: "Implementing cross-chain transaction capabilities"
-      }), "\n"]
+      children: ["Create a script to mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$WPUSH"
+      }), " tokens (wrapped Push Chain tokens) needed for liquidity pools."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "part-3-create-liquidity-pool",
+      children: "Part 3: Create Liquidity Pool"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Set up a Uniswap V3 ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$AIRDROP/$WPUSH"
+      }), " pool and add initial liquidity for token swapping."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "part-4-test-token-swaps",
+      children: "Part 4: Test Token Swaps"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Build a script to programmatically swap ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$WPUSH"
+      }), " for ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$AIRDROP"
+      }), " tokens through the pool."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
+      id: "part-5-build-frontend-ui",
+      children: "Part 5: Build Frontend UI"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: ["Create a React app with Push Chain wallet integration to enable users to mint tokens by depositing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$PC"
+      }), " tokens."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "part-1-deploying-a-standard-erc-20-token-to-push-chains-testnet-with-hardhat",
       children: "Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat"
@@ -448,27 +469,7 @@ function _createMdxContent(props) {
         children: "# Create the project directory\nmkdir airdrop-token\ncd airdrop-token\n\n# Initialize a new Node.js project\nnpm init -y\n\n# Install Hardhat and its toolbox\nnpm install --save-dev hardhat@2.26.3 @nomicfoundation/hardhat-toolbox@6.1.0\n\n# Initialize Hardhat (select the options \"Hardhat 2\" then \"Create a TypeScript project\")\nnpx hardhat init\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "This will create a basic Hardhat project structure with TypeScript support, including:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "hardhat.config.ts"
-        }), " - Hardhat configuration file"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "contracts/"
-        }), " - Directory for Solidity contracts"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "scripts/"
-        }), " - Directory for deployment scripts"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "test/"
-        }), " - Directory for tests"]
-      }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Install required dependencies:"
+      children: "Now, install required dependencies:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
@@ -551,7 +552,7 @@ function _createMdxContent(props) {
       children: ["Create a ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: ".env"
       }), " file in the root directory and add your private key that you will use to deploy the contract to Push Chain.  If you need ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "PC"
+        children: "$PC"
       }), " tokens to deploy the contract, you can get them from the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
         href: "https://faucet.push.org/",
         children: "Push Chain Faucet"
@@ -563,10 +564,12 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "PRIVATE_KEY=your_private_key\n"
+        children: "PRIVATE_KEY=0xyour_private_key\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Then create a deployment script at scripts/deploy.ts that will also write the deployed address to a file called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      children: ["Then create a deployment script at ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "scripts/deploy.ts"
+      }), " that will also write the deployed address to a file called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "deployed-addresses.json"
       }), " for later use:"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
@@ -593,18 +596,34 @@ function _createMdxContent(props) {
       children: ["Part 2: Minting ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$WPUSH"
       }), " tokens"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "WPUSH is the wrapped version of the native Push Chain gas token ($PC). To mint WPUSH tokens, you deposit $PC into the WPUSH contract. This section provides a Node.js script to mint WPUSH tokens programmatically."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " is the wrapped version of the native Push Chain gas token (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$PC"
+      }), "). To mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " tokens, you deposit ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$PC"
+      }), " into the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " contract. This section provides a Node.js script to mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " tokens programmatically."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["Create ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "scripts/mint-wpush.ts"
       }), " to deposit ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$PC"
-      }), " into the WPUSH contract and mint WPUSH tokens:"]
+      }), " into the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " contract and mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "WPUSH"
+      }), " tokens:"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-typescript",
-        children: "import { ethers } from 'ethers';\nimport * as dotenv from 'dotenv';\n\ndotenv.config();\n\n// Contract addresses\nconst CONTRACTS = {\n  wpush: '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818',\n} as const;\n\n// WPUSH ABI\nconst WPUSH_ABI = [\n  'function balanceOf(address) view returns (uint256)',\n  'function deposit() payable',\n  'function transfer(address,uint256) returns (bool)',\n] as const;\n\nconst PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';\nconst PRIVATE_KEY: string | undefined = process.env.PRIVATE_KEY;\n\n// Configuration - modify these values as needed\nconst AMOUNT_TO_MINT = '1'; // Amount of WPUSH to mint\n\n// Types\ninterface MintResult {\n  targetAddress: string;\n  amount: string;\n  depositTx: string;\n  transferTx: string;\n}\n\n// Helper functions\nfunction getSigner(): ethers.Wallet {\n  if (!PRIVATE_KEY) {\n    throw new Error('PRIVATE_KEY is not configured');\n  }\n  const provider = new ethers.JsonRpcProvider(PUSH_RPC_URL);\n  return new ethers.Wallet(PRIVATE_KEY, provider);\n}\n\nfunction getWpushContract(): ethers.Contract {\n  const signer = getSigner();\n  return new ethers.Contract(CONTRACTS.wpush, WPUSH_ABI, signer);\n}\n\n// Main minting function\nasync function mintWpushToAddress(targetAddress: string, amount: string): Promise<MintResult> {\n  // Validate inputs\n  if (!ethers.isAddress(targetAddress)) {\n    throw new Error(`Invalid Ethereum address: ${targetAddress}`);\n  }\n\n  const amountWei = ethers.parseUnits(amount.toString(), 18);\n  const signer = getSigner();\n  const wpushContract = getWpushContract();\n\n  // Check balance\n  const signerBalance = await signer.provider!.getBalance(signer.address);\n  if (signerBalance < amountWei) {\n    throw new Error(\n      `Insufficient PUSH balance. Required: ${ethers.formatUnits(amountWei)}, Available: ${ethers.formatUnits(\n        signerBalance\n      )}`\n    );\n  }\n\n  // Deposit PUSH to get WPUSH\n  const depositTx = await wpushContract.deposit({ value: amountWei });\n  await depositTx.wait();\n\n  // Transfer WPUSH to target address\n  const transferTx = await wpushContract.transfer(targetAddress, amountWei);\n  await transferTx.wait();\n\n  return {\n    targetAddress,\n    amount,\n    depositTx: depositTx.hash,\n    transferTx: transferTx.hash,\n  };\n}\n\n// Main function\nasync function main(): Promise<void> {\n  const TARGET_ADDRESS = getSigner().address;\n  console.log(`🚀 Minting ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}\\n`);\n\n  try {\n    const result = await mintWpushToAddress(TARGET_ADDRESS, AMOUNT_TO_MINT);\n    console.log(`✅ Successfully minted ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}`);\n    console.log(`📋 Deposit TX: ${result.depositTx}`);\n    console.log(`📋 Transfer TX: ${result.transferTx}`);\n  } catch (error) {\n    const errorMessage = error instanceof Error ? error.message : String(error);\n    console.error('❌ Error:', errorMessage);\n    process.exit(1);\n  }\n}\n\nmain().catch((error) => {\n  console.error('Unhandled error:', error);\n  process.exit(1);\n});\n\n"
+        children: "import { ethers } from 'ethers';\nimport * as dotenv from 'dotenv';\n\ndotenv.config();\n\n// Contract addresses\nconst CONTRACTS = {\n  wpush: '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818',\n} as const;\n\n// WPUSH ABI\nconst WPUSH_ABI = [\n  'function balanceOf(address) view returns (uint256)',\n  'function deposit() payable',\n  'function transfer(address,uint256) returns (bool)',\n] as const;\n\nconst PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';\nconst PRIVATE_KEY: string | undefined = process.env.PRIVATE_KEY;\n\n// Configuration - modify these values as needed\nconst AMOUNT_TO_MINT = '1'; // Amount of WPUSH to mint\n\n// Types\ninterface MintResult {\n  targetAddress: string;\n  amount: string;\n  depositTx: string;\n}\n\n// Helper functions\nfunction getSigner(): ethers.Wallet {\n  if (!PRIVATE_KEY) {\n    throw new Error('PRIVATE_KEY is not configured');\n  }\n  const provider = new ethers.JsonRpcProvider(PUSH_RPC_URL);\n  return new ethers.Wallet(PRIVATE_KEY, provider);\n}\n\nfunction getWpushContract(): ethers.Contract {\n  const signer = getSigner();\n  return new ethers.Contract(CONTRACTS.wpush, WPUSH_ABI, signer);\n}\n\n// Main minting function\nasync function mintWpushToAddress(targetAddress: string, amount: string): Promise<MintResult> {\n  // Validate inputs\n  if (!ethers.isAddress(targetAddress)) {\n    throw new Error(`Invalid Ethereum address: ${targetAddress}`);\n  }\n\n  const amountWei = ethers.parseUnits(amount.toString(), 18);\n  const signer = getSigner();\n  const wpushContract = getWpushContract();\n\n  // Check balance\n  const signerBalance = await signer.provider!.getBalance(signer.address);\n  if (signerBalance < amountWei) {\n    throw new Error(\n      `Insufficient PUSH balance. Required: ${ethers.formatUnits(amountWei)}, Available: ${ethers.formatUnits(\n        signerBalance\n      )}`\n    );\n  }\n\n  // Deposit PUSH to get WPUSH\n  const depositTx = await wpushContract.deposit({ value: amountWei });\n  await depositTx.wait();\n\n  return {\n    targetAddress,\n    amount,\n    depositTx: depositTx.hash,\n  };\n}\n\n// Main function\nasync function main(): Promise<void> {\n  const TARGET_ADDRESS = getSigner().address;\n  console.log(`🚀 Minting ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}\\n`);\n\n  try {\n    const result = await mintWpushToAddress(TARGET_ADDRESS, AMOUNT_TO_MINT);\n    console.log(`✅ Successfully minted ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}`);\n    console.log(`📋 Deposit TX: ${result.depositTx}`);\n  } catch (error) {\n    const errorMessage = error instanceof Error ? error.message : String(error);\n    console.error('❌ Error:', errorMessage);\n    process.exit(1);\n  }\n}\n\nmain().catch((error) => {\n  console.error('Unhandled error:', error);\n  process.exit(1);\n});\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Run:"
@@ -618,7 +637,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "🚀 Minting 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n\n✅ Successfully minted 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n📋 Deposit TX: 0xea1bbf63b5e0b53421134a7fc3ae5b68b7a453fc5ae6f7b7310c483400179298\n📋 Transfer TX: 0x1aee0fe1f6ffe5b3cf4cab857f43e9187af9421994df98e25efc3ebe5b02ba4e\n"
+        children: "🚀 Minting 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n\n✅ Successfully minted 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n📋 Deposit TX: 0xd8a62e24f9157950d46b5d99b94b693e09064147078fe7cace95093de4da8e3a\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
       id: "part-3-create-airdropwpush-pool-and-add-liquidity",
@@ -637,7 +656,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-typescript",
-        children: "import { config } from 'dotenv';\nimport { ethers, JsonRpcProvider, Contract, Wallet, parseUnits } from 'ethers';\nimport { readFileSync } from 'fs';\nimport BN from 'bignumber.js';\n\nconfig();\n\n// --- Constants (update if different) ---\nconst RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';\nconst FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';\nconst POSITION_MANAGER = '0xf90F08fD301190Cd34CC9eFc5A76351e95051670';\n// Use the deployed WPUSH used by other scripts in this repo\nconst WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';\n\n// Read deployed AIRDROP address from file\nlet AIRDROP: string;\ntry {\n  const deployedData = JSON.parse(readFileSync('./deployed-addresses.json', 'utf8'));\n  AIRDROP = deployedData.AIRDROP_ADDR;\n  console.log('📝 Using AIRDROP address from deployed-addresses.json:', AIRDROP);\n} catch (error) {\n  console.error('❌ Could not read deployed-addresses.json. Please run deploy.ts first.');\n  process.exit(1);\n}\n\n// --- Minimal ABIs ---\nconst ABI = {\n  factory: [\n    'function getPool(address,address,uint24) view returns (address)',\n    'function createPool(address,address,uint24) returns (address)',\n    'event PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)',\n  ],\n  pool: [\n    'function initialize(uint160 sqrtPriceX96)',\n    'function fee() view returns (uint24)',\n    'function token0() view returns (address)',\n    'function token1() view returns (address)',\n    'function slot0() view returns (uint160 sqrtPriceX96, int24 tick, uint16, uint16, uint16, uint8, bool)',\n  ],\n  erc20: [\n    'function symbol() view returns (string)',\n    'function decimals() view returns (uint8)',\n    'function balanceOf(address) view returns (uint256)',\n    'function allowance(address,address) view returns (uint256)',\n    'function approve(address,uint256) returns (bool)',\n  ],\n  wpush: [\n    'function deposit() payable',\n    'function balanceOf(address) view returns (uint256)',\n    'function decimals() view returns (uint8)',\n    'function symbol() view returns (string)',\n  ],\n  positionManager: [\n    'function mint((address token0, address token1, uint24 fee, int24 tickLower, int24 tickUpper, uint256 amount0Desired, uint256 amount1Desired, uint256 amount0Min, uint256 amount1Min, address recipient, uint256 deadline)) returns (uint256 tokenId, uint128 liquidity, uint256 amount0, uint256 amount1)',\n  ],\n} as const;\n\n// --- Types ---\ninterface MintParams {\n  token0: string;\n  token1: string;\n  fee: number;\n  tickLower: number;\n  tickUpper: number;\n  amount0Desired: bigint;\n  amount1Desired: bigint;\n  amount0Min: bigint;\n  amount1Min: bigint;\n  recipient: string;\n  deadline: number;\n}\n\n// Precise sqrtPriceX96 calculator matching Uniswap encodePriceSqrt\nfunction sqrtPriceX96FromHumanRatio(\n  priceRatio: number | string,\n  token0Decimals: number,\n  token1Decimals: number\n): bigint {\n  BN.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 });\n  const ratio = new BN(priceRatio.toString());\n  const baseUnitRatio = ratio.multipliedBy(new BN(10).pow(token1Decimals)).dividedBy(new BN(10).pow(token0Decimals));\n  const sqrtPriceTimesQ96 = baseUnitRatio\n    .sqrt()\n    .multipliedBy(new BN(2).pow(96))\n    .integerValue(BN.ROUND_FLOOR)\n    .toString();\n  return BigInt(sqrtPriceTimesQ96);\n}\n\nfunction sortTokens(a: string, b: string): [string, string] {\n  return a.toLowerCase() < b.toLowerCase() ? [a, b] : [b, a];\n}\n\nasync function safeApprove(token: Contract, spender: string, amount: bigint, owner: string): Promise<void> {\n  const current = await token.allowance(owner, spender);\n  if (current >= amount) return;\n  const tx = await token.approve(spender, ethers.MaxUint256);\n  await tx.wait();\n}\n\nasync function main(): Promise<void> {\n  if (!process.env.PRIVATE_KEY) throw new Error('PRIVATE_KEY missing');\n  if (!AIRDROP) throw new Error('AIRDROP address not found. Please run deploy.ts first.');\n\n  const provider = new JsonRpcProvider(RPC);\n  const wallet = new Wallet(process.env.PRIVATE_KEY!, provider);\n\n  const factory = new Contract(FACTORY, ABI.factory, wallet);\n  const positionManager = new Contract(POSITION_MANAGER, ABI.positionManager, wallet);\n\n  const air = new Contract(AIRDROP!, ABI.erc20, wallet);\n  const wpush = new Contract(WPUSH, ABI.wpush, wallet);\n\n  // 1) Ensure WPUSH balance (wrap 5 $PC)\n  const wrapAmount = parseUnits('5', 18);\n  const bal = await wpush.balanceOf(wallet.address);\n  if (bal < wrapAmount) {\n    console.log('Depositing $PC to get WPUSH...');\n    const needed = wrapAmount - bal;\n    const tx = await wpush.deposit({ value: needed });\n    await tx.wait();\n  }\n\n  // 2) Create or fetch pool: AIRDROP/WPUSH @ 0.3%\n  const fee: number = 3000;\n  const [token0, token1]: [string, string] = sortTokens(AIRDROP!, WPUSH);\n\n  let pool: string = await factory.getPool(token0, token1, fee);\n  if (pool === ethers.ZeroAddress) {\n    console.log('Creating pool...');\n    const tx = await factory.createPool(token0, token1, fee);\n    const receipt = await tx.wait();\n\n    // ethers v6 does not populate `events`; parse logs manually\n    let poolAddr: string | undefined;\n    for (const log of receipt.logs) {\n      if ((log as any).address?.toLowerCase() !== FACTORY.toLowerCase()) continue;\n      try {\n        const parsed = (factory as any).interface.parseLog({\n          data: (log as any).data,\n          topics: [...(log as any).topics],\n        });\n        if (parsed?.name === 'PoolCreated') {\n          poolAddr = parsed.args.pool as string;\n          break;\n        }\n      } catch {}\n    }\n\n    // Fallback: query factory for pool address after tx mined\n    pool = poolAddr ?? (await factory.getPool(token0, token1, fee));\n    if (!pool || pool === ethers.ZeroAddress) throw new Error('Pool not created');\n    console.log('Pool:', pool);\n\n    // Initialize with a target price. Example: 1 AIRDROP = 0.001 PC\n    // Convert to token1/token0 ratio depending on sort order\n    const token0Contract = new Contract(token0, ABI.erc20, wallet);\n    const token1Contract = new Contract(token1, ABI.erc20, wallet);\n\n    const dec0: number = await token0Contract.decimals();\n    const dec1: number = await token1Contract.decimals();\n\n    const inputSymbol0: string = await air.symbol();\n    const inputSymbol1: string = await wpush.symbol();\n\n    const sortedSymbol0: string = await token0Contract.symbol();\n    const sortedSymbol1: string = await token1Contract.symbol();\n\n    const humanRatio: number = 0.001; // 1 AIRDROP = 0.001 PC\n    const actualRatio: number =\n      inputSymbol0 === sortedSymbol1 && inputSymbol1 === sortedSymbol0 ? 1 / humanRatio : humanRatio;\n\n    const sqrtP = sqrtPriceX96FromHumanRatio(actualRatio, dec0, dec1);\n    const poolCtr = new Contract(pool, ABI.pool, wallet);\n    await (await poolCtr.initialize(sqrtP)).wait();\n    console.log('Pool initialized');\n  } else {\n    console.log('Pool exists:', pool);\n  }\n\n  // 3) Add liquidity (wide range)\n  const poolCtr = new Contract(pool, ABI.pool, wallet);\n  const poolFee: number = Number(await poolCtr.fee());\n\n  const t0: string = await poolCtr.token0();\n  const t1: string = await poolCtr.token1();\n\n  const tok0 = new Contract(t0, ABI.erc20, wallet);\n  const tok1 = new Contract(t1, ABI.erc20, wallet);\n  const dec0: number = await tok0.decimals();\n  const dec1: number = await tok1.decimals();\n\n  // Desired amounts in human units (example: 1 AIRDROP and 4 WPUSH)\n  const amt0 = '1'; // AIRDROP amount\n  const amt1 = '4'; // WPUSH amount\n\n  const a0 = parseUnits(amt0, dec0);\n  const a1 = parseUnits(amt1, dec1);\n\n  await safeApprove(tok0, POSITION_MANAGER, a0, wallet.address);\n  await safeApprove(tok1, POSITION_MANAGER, a1, wallet.address);\n\n  const poolFeeNum: number = Number(poolFee);\n  const tickSpacing: number = poolFeeNum === 500 ? 10 : poolFeeNum === 3000 ? 60 : 200;\n  const MIN_TICK = -887272;\n  const MAX_TICK = 887272;\n  const tickLower: number = Math.ceil(MIN_TICK / tickSpacing) * tickSpacing;\n  const tickUpper: number = Math.floor(MAX_TICK / tickSpacing) * tickSpacing;\n\n  const params: MintParams = {\n    token0: t0,\n    token1: t1,\n    fee: poolFee,\n    tickLower,\n    tickUpper,\n    amount0Desired: a0,\n    amount1Desired: a1,\n    amount0Min: 0n,\n    amount1Min: 0n,\n    recipient: wallet.address,\n    deadline: Math.floor(Date.now() / 1000) + 600,\n  };\n\n  const mintTx = await positionManager.mint(params);\n  const rc = await mintTx.wait();\n  console.log('Liquidity added. Tx:', rc?.hash);\n}\n\nmain().catch((e) => {\n  console.error(e);\n  process.exit(1);\n});\n"
+        children: "import { config } from 'dotenv';\nimport { ethers, JsonRpcProvider, Contract, Wallet, parseUnits } from 'ethers';\nimport { readFileSync, writeFileSync } from 'fs';\nimport BN from 'bignumber.js';\n\nconfig();\n\n// --- Constants (update if different) ---\nconst RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';\nconst FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';\nconst POSITION_MANAGER = '0xf90F08fD301190Cd34CC9eFc5A76351e95051670';\n// Use the deployed WPUSH used by other scripts in this repo\nconst WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';\n\n// Read deployed AIRDROP address from file\nlet AIRDROP: string;\ntry {\n  const deployedData = JSON.parse(readFileSync('./deployed-addresses.json', 'utf8'));\n  AIRDROP = deployedData.AIRDROP_ADDR;\n  console.log('📝 Using AIRDROP address from deployed-addresses.json:', AIRDROP);\n} catch (error) {\n  console.error('❌ Could not read deployed-addresses.json. Please run deploy.ts first.');\n  process.exit(1);\n}\n\n// --- Minimal ABIs ---\nconst ABI = {\n  factory: [\n    'function getPool(address,address,uint24) view returns (address)',\n    'function createPool(address,address,uint24) returns (address)',\n    'event PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)',\n  ],\n  pool: [\n    'function initialize(uint160 sqrtPriceX96)',\n    'function fee() view returns (uint24)',\n    'function token0() view returns (address)',\n    'function token1() view returns (address)',\n    'function slot0() view returns (uint160 sqrtPriceX96, int24 tick, uint16, uint16, uint16, uint8, bool)',\n  ],\n  erc20: [\n    'function symbol() view returns (string)',\n    'function decimals() view returns (uint8)',\n    'function balanceOf(address) view returns (uint256)',\n    'function allowance(address,address) view returns (uint256)',\n    'function approve(address,uint256) returns (bool)',\n  ],\n  wpush: [\n    'function deposit() payable',\n    'function balanceOf(address) view returns (uint256)',\n    'function decimals() view returns (uint8)',\n    'function symbol() view returns (string)',\n  ],\n  positionManager: [\n    'function mint((address token0, address token1, uint24 fee, int24 tickLower, int24 tickUpper, uint256 amount0Desired, uint256 amount1Desired, uint256 amount0Min, uint256 amount1Min, address recipient, uint256 deadline)) returns (uint256 tokenId, uint128 liquidity, uint256 amount0, uint256 amount1)',\n  ],\n} as const;\n\n// --- Types ---\ninterface MintParams {\n  token0: string;\n  token1: string;\n  fee: number;\n  tickLower: number;\n  tickUpper: number;\n  amount0Desired: bigint;\n  amount1Desired: bigint;\n  amount0Min: bigint;\n  amount1Min: bigint;\n  recipient: string;\n  deadline: number;\n}\n\n// Precise sqrtPriceX96 calculator matching Uniswap encodePriceSqrt\nfunction sqrtPriceX96FromHumanRatio(\n  priceRatio: number | string,\n  token0Decimals: number,\n  token1Decimals: number\n): bigint {\n  BN.config({ EXPONENTIAL_AT: 999999, DECIMAL_PLACES: 40 });\n  const ratio = new BN(priceRatio.toString());\n  const baseUnitRatio = ratio.multipliedBy(new BN(10).pow(token1Decimals)).dividedBy(new BN(10).pow(token0Decimals));\n  const sqrtPriceTimesQ96 = baseUnitRatio\n    .sqrt()\n    .multipliedBy(new BN(2).pow(96))\n    .integerValue(BN.ROUND_FLOOR)\n    .toString();\n  return BigInt(sqrtPriceTimesQ96);\n}\n\nfunction sortTokens(a: string, b: string): [string, string] {\n  return a.toLowerCase() < b.toLowerCase() ? [a, b] : [b, a];\n}\n\nasync function safeApprove(token: Contract, spender: string, amount: bigint, owner: string): Promise<void> {\n  const current = await token.allowance(owner, spender);\n  if (current >= amount) return;\n  const tx = await token.approve(spender, ethers.MaxUint256);\n  await tx.wait();\n}\n\nasync function main(): Promise<void> {\n  if (!process.env.PRIVATE_KEY) throw new Error('PRIVATE_KEY missing');\n  if (!AIRDROP) throw new Error('AIRDROP address not found. Please run deploy.ts first.');\n\n  const provider = new JsonRpcProvider(RPC);\n  const wallet = new Wallet(process.env.PRIVATE_KEY!, provider);\n\n  const factory = new Contract(FACTORY, ABI.factory, wallet);\n  const positionManager = new Contract(POSITION_MANAGER, ABI.positionManager, wallet);\n\n  const air = new Contract(AIRDROP!, ABI.erc20, wallet);\n  const wpush = new Contract(WPUSH, ABI.wpush, wallet);\n\n  // 1) Ensure WPUSH balance (wrap 5 $PC)\n  const wrapAmount = parseUnits('5', 18);\n  const bal = await wpush.balanceOf(wallet.address);\n  if (bal < wrapAmount) {\n    console.log('Depositing $PC to get WPUSH...');\n    const needed = wrapAmount - bal;\n    const tx = await wpush.deposit({ value: needed });\n    await tx.wait();\n  }\n\n  // 2) Create or fetch pool: AIRDROP/WPUSH @ 0.3%\n  const fee: number = 3000;\n  const [token0, token1]: [string, string] = sortTokens(AIRDROP!, WPUSH);\n\n  let pool: string = await factory.getPool(token0, token1, fee);\n  if (pool === ethers.ZeroAddress) {\n    console.log('Creating pool...');\n    const tx = await factory.createPool(token0, token1, fee);\n    const receipt = await tx.wait();\n\n    // ethers v6 does not populate `events`; parse logs manually\n    let poolAddr: string | undefined;\n    for (const log of receipt.logs) {\n      if ((log as any).address?.toLowerCase() !== FACTORY.toLowerCase()) continue;\n      try {\n        const parsed = (factory as any).interface.parseLog({\n          data: (log as any).data,\n          topics: [...(log as any).topics],\n        });\n        if (parsed?.name === 'PoolCreated') {\n          poolAddr = parsed.args.pool as string;\n          break;\n        }\n      } catch {}\n    }\n\n    // Fallback: query factory for pool address after tx mined\n    pool = poolAddr ?? (await factory.getPool(token0, token1, fee));\n    if (!pool || pool === ethers.ZeroAddress) throw new Error('Pool not created');\n    console.log('Pool:', pool);\n\n    // Initialize with a target price. Example: 1 AIRDROP = 0.001 PC\n    // Convert to token1/token0 ratio depending on sort order\n    const token0Contract = new Contract(token0, ABI.erc20, wallet);\n    const token1Contract = new Contract(token1, ABI.erc20, wallet);\n\n    const dec0: number = await token0Contract.decimals();\n    const dec1: number = await token1Contract.decimals();\n\n    const inputSymbol0: string = await air.symbol();\n    const inputSymbol1: string = await wpush.symbol();\n\n    const sortedSymbol0: string = await token0Contract.symbol();\n    const sortedSymbol1: string = await token1Contract.symbol();\n\n    const humanRatio: number = 0.001; // 1 AIRDROP = 0.001 PC\n    const actualRatio: number =\n      inputSymbol0 === sortedSymbol1 && inputSymbol1 === sortedSymbol0 ? 1 / humanRatio : humanRatio;\n\n    const sqrtP = sqrtPriceX96FromHumanRatio(actualRatio, dec0, dec1);\n    const poolCtr = new Contract(pool, ABI.pool, wallet);\n    await (await poolCtr.initialize(sqrtP)).wait();\n    console.log('Pool initialized');\n  } else {\n    console.log('Pool exists:', pool);\n  }\n\n  // Persist pool address to deployed-addresses.json\n  try {\n    const path = './deployed-addresses.json';\n    const data = JSON.parse(readFileSync(path, 'utf8'));\n    (data as any).POOL_ADDR = pool;\n    writeFileSync(path, JSON.stringify(data, null, 2));\n    console.log('📝 Updated deployed-addresses.json with POOL_ADDR:', pool);\n  } catch (error) {\n    console.error('❌ Failed to update deployed-addresses.json with POOL_ADDR', error);\n  }\n\n  // 3) Add liquidity (wide range)\n  const poolCtr = new Contract(pool, ABI.pool, wallet);\n  const poolFee: number = Number(await poolCtr.fee());\n\n  const t0: string = await poolCtr.token0();\n  const t1: string = await poolCtr.token1();\n\n  const tok0 = new Contract(t0, ABI.erc20, wallet);\n  const tok1 = new Contract(t1, ABI.erc20, wallet);\n  const dec0: number = await tok0.decimals();\n  const dec1: number = await tok1.decimals();\n\n  // Target: deposit exactly 1 WPUSH and the equivalent AIRDROP by current price\n  // Get current sqrtPriceX96 and derive base-unit ratio: amount1_base / amount0_base\n  const slot0 = await poolCtr.slot0();\n  const sqrtPriceX96BN = new BN(slot0[0].toString());\n  const ratioBase = sqrtPriceX96BN.multipliedBy(sqrtPriceX96BN).dividedBy(new BN(2).pow(192)); // token1_base per token0_base\n\n  // Compute base-unit amounts for exactly 1 WPUSH\n  const isWPUSH0 = t0.toLowerCase() === WPUSH.toLowerCase();\n  const oneWPUSHBase = new BN(10).pow(isWPUSH0 ? dec0 : dec1);\n\n  let a0: bigint; // amount0Desired (base units of token0)\n  let a1: bigint; // amount1Desired (base units of token1)\n\n  if (isWPUSH0) {\n    // token0 is WPUSH: amount0 = 1 WPUSH, amount1 = ratioBase * amount0\n    const amount0Base = oneWPUSHBase;\n    const amount1Base = ratioBase.multipliedBy(amount0Base).integerValue(BN.ROUND_FLOOR);\n    a0 = BigInt(amount0Base.toFixed(0));\n    a1 = BigInt(amount1Base.toFixed(0));\n  } else {\n    // token1 is WPUSH: amount1 = 1 WPUSH, amount0 = amount1 / ratioBase\n    const amount1Base = oneWPUSHBase;\n    const amount0Base = amount1Base.dividedBy(ratioBase).integerValue(BN.ROUND_FLOOR);\n    a0 = BigInt(amount0Base.toFixed(0));\n    a1 = BigInt(amount1Base.toFixed(0));\n  }\n\n  await safeApprove(tok0, POSITION_MANAGER, a0, wallet.address);\n  await safeApprove(tok1, POSITION_MANAGER, a1, wallet.address);\n\n  const poolFeeNum: number = Number(poolFee);\n  const tickSpacing: number = poolFeeNum === 500 ? 10 : poolFeeNum === 3000 ? 60 : 200;\n  const MIN_TICK = -887272;\n  const MAX_TICK = 887272;\n  const tickLower: number = Math.ceil(MIN_TICK / tickSpacing) * tickSpacing;\n  const tickUpper: number = Math.floor(MAX_TICK / tickSpacing) * tickSpacing;\n\n  const params: MintParams = {\n    token0: t0,\n    token1: t1,\n    fee: poolFee,\n    tickLower,\n    tickUpper,\n    amount0Desired: a0,\n    amount1Desired: a1,\n    amount0Min: 0n,\n    amount1Min: 0n,\n    recipient: wallet.address,\n    deadline: Math.floor(Date.now() / 1000) + 600,\n  };\n\n  const mintTx = await positionManager.mint(params);\n  const rc = await mintTx.wait();\n  console.log('Liquidity added. Tx:', rc?.hash);\n}\n\nmain().catch((e) => {\n  console.error(e);\n  process.exit(1);\n});\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Run:"
@@ -655,13 +674,17 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h2, {
       id: "part-4-programmatic-swap-wpush--airdrop",
-      children: ["Part 4: Programmatic Swap (WPUSH → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      children: ["Part 4: Programmatic Swap (", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$WPUSH"
+      }), " → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$AIRDROP"
       }), ")"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["Create ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "scripts/swap-airdrop.ts"
-      }), " to swap WPUSH to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      }), " to swap ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+        children: "$WPUSH"
+      }), " to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "$AIRDROP"
       }), ":"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
@@ -681,11 +704,11 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-bash",
-        children: "📝 Using AIRDROP address from deployed-addresses.json: 0x64C91bcb3E45c29BBd75CBC344f2F495c37aDD47\n🔄 PERFORMING SWAP\n==================================================\nPool       : 0xEB1EA5EC91ad8917Ce33e73224087164CE573833\nToken In   : WPUSH 0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818\nToken Out  : AIRDROP 0x64C91bcb3E45c29BBd75CBC344f2F495c37aDD47\nAmount In  : 1 WPUSH\nBalances BEFORE:\n  WPUSH  : 6.783933974515507624 WPUSH\n  AIRDROP : 999996.000000000000000008 AIRDROP\nExecuting swap...\nTx Hash    : 0xb8d880dea2cd90b6ad43875bd3b9b1d92f214ef23ef43e12400491bfee68ebb5\n📊 Results\nBalances AFTER:\n  WPUSH  : 5.783933974515507624 WPUSH\n  AIRDROP : 999999.98401598401598401 AIRDROP\nSpent In   : 1.0 WPUSH\nReceived Out: 3.984015984015984002 AIRDROP\n"
+        children: "📝 Using AIRDROP address from deployed-addresses.json: 0x283E86104750B03Ed527Fa049193052778326122\n🔄 PERFORMING SWAP\n==================================================\nPool       : 0xf60F15211FaE940CD5a93d00359838AdD8e4cC54\nToken In   : WPUSH 0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818\nToken Out  : AIRDROP 0x283E86104750B03Ed527Fa049193052778326122\nAmount In  : 1 WPUSH\nBalances BEFORE:\n  WPUSH  : 6.778933973512498589 WPUSH\n  AIRDROP : 999000.000000000000000001 AIRDROP\nExecuting swap...\nTx Hash    : 0x697c47985a1ada0e4ec6219a1a347a9d5702321dbf16be9973303507077e9880\n📊 Results\nBalances AFTER:\n  WPUSH  : 5.778933973512498589 WPUSH\n  AIRDROP : 999499.248873309964946982 AIRDROP\nSpent In   : 1.0 WPUSH\nReceived Out: 499.248873309964946981 AIRDROP\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
-      id: "part-4-building-the-frontend-ui",
-      children: "Part 4: Building the Frontend UI"
+      id: "part-5-building-the-frontend-ui",
+      children: "Part 5: Building the Frontend UI"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.blockquote, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
@@ -696,8 +719,8 @@ function _createMdxContent(props) {
         }), " page."]
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "41-setting-up-vite--react--typescript-frontend",
-      children: "4.1. Setting up Vite + React + TypeScript frontend"
+      id: "51-setting-up-vite--react--typescript-frontend",
+      children: "5.1. Setting up Vite + React + TypeScript frontend"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
       children: "Create a new directory for the frontend and install the necessary dependencies:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
@@ -706,8 +729,8 @@ function _createMdxContent(props) {
         children: "npm create vite@latest my-react-ts-app -- --template react-ts\ncd my-react-ts-app\nnpm install\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.h3, {
-      id: "42-installing-pushchainui-kit",
-      children: ["4.2. Installing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      id: "52-installing-pushchainui-kit",
+      children: ["5.2. Installing ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "@pushchain/ui-kit"
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
@@ -722,8 +745,8 @@ function _createMdxContent(props) {
         children: "npm install @pushchain/ui-kit ethers\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "43-setting-up-the-push-chain-wallet",
-      children: "4.3. Setting up the Push Chain Wallet"
+      id: "53-setting-up-the-push-chain-wallet",
+      children: "5.3. Setting up the Push Chain Wallet"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
       children: ["To use the Push Universal Wallet in your application, you need to wrap your app with the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "PushUniversalWalletProvider"
@@ -744,86 +767,32 @@ function _createMdxContent(props) {
         children: "config"
       }), " prop that specifies the network configuration. In this example, we're using the Push Chain testnet."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
-      id: "44-creating-the-application-component",
-      children: "4.4. Creating the Application Component"
+      id: "54-creating-the-application-component",
+      children: "5.4. Creating the Application Component"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Open the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+      children: ["Open ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         children: "App.tsx"
-      }), " and add the necessary imports:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-tsx",
-        children: "import { useState } from 'react';\nimport { ethers } from 'ethers';\nimport { PushChain } from '@pushchain/core';\nimport { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';\nimport './App.css';\nimport React from 'react';\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Let's add the required hooks to the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "App"
-      }), " component:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-tsx",
-        children: "const { connectionStatus } = usePushWalletContext();\nconst { pushChainClient } = usePushChainClient();\nconst [isLoading, setIsLoading] = useState(false);\nconst [txHash, setTxHash] = useState('');\nconst [tokenBalance, setTokenBalance] = useState<string>('0');\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "usePushChainClient"
-      }), " hook provides the Push Chain client instance, which is used to interact with the Push Chain network."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["The ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "usePushWalletContext"
-      }), " hook provides the connection status and the Push Universal Wallet instance."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Now, on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "App"
-      }), " component, we'll use ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "ethers"
-      }), " to fetch the ERC-20 token balance from our deployed contract on Push Chain. We'll need:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ol, {
-      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Contract ABI"
-        }), ": This comes from the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "artifacts/contracts/AirdropToken.sol/AirdropToken.json"
-        }), " file that was generated when we compiled our contract with Hardhat"]
+      }), " and replace it with the following mint-based implementation. This app:"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Integrates the Push Universal Wallet"
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Contract Address"
-        }), ": This is the address we received after deploying our contract to Push Chain (e.g., ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-          children: "0x0B86e252B035027028C0d4D3B136d80Da4C98Ec1"
-        }), ")"]
+        children: ["Lets users deposit ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "$PC"
+        }), " and mint ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "$WPUSH"
+        }), " by calling ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "deposit()"
+        }), " on the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
+          children: "WPUSH"
+        }), " contract"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.li, {
+        children: "Shows the transaction hash with a link to the explorer"
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Add the following code to fetch the ERC-20 token balance from Push Chain:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
         className: "language-tsx",
-        children: "// Function to get token balance\nconst getTokenBalance = async () => {\n  if (!pushChainClient) return;\n\n  try {\n    const userAddress = pushChainClient.universal.account;\n    console.log('Fetching balance for address:', userAddress);\n\n    // Create a read-only provider using the Push Chaintestnet RPC URL\n    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');\n\n    // Create contract interface\n    const contract = new ethers.Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, provider);\n\n    // Call balanceOf directly\n    const balance = await contract.balanceOf(userAddress);\n    console.log('Raw balance response:', balance);\n\n    // Convert balance from wei to ether and format it\n    const formattedBalance = ethers.formatUnits(balance, 18);\n    setTokenBalance(formattedBalance);\n  } catch (err) {\n    console.error('Error fetching balance:', err);\n  }\n};\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Now, let's create the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "mint"
-      }), " function to mint tokens from Push Chain or Sepolia with Universal Transaction."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["For enconding the transaction data, we'll use the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "encodeTxData"
-      }), " function from the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "PushChain"
-      }), " library. This function takes the ABI of the contract, the function name, and the arguments for the function."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-tsx",
-        children: "// Function to encode transaction data for minting\nconst getMintTxData = () => {\n  if (!pushChainClient) return null;\n\n  const amount = ethers.parseUnits('1', 18); // Mint 1 token (with 18 decimals)\n  const userAddress = pushChainClient.universal.account;\n\n  return PushChain.utils.helpers.encodeTxData({\n    abi: TOKEN_ABI,\n    functionName: 'mint',\n    args: [userAddress, amount],\n  }) as `0x${string}`;\n};\n\n// Handle mint transaction\nconst handleMint = async () => {\n  if (pushChainClient) {\n    try {\n      setIsLoading(true);\n      const data = getMintTxData();\n\n      if (!data) {\n        throw new Error('Failed to encode transaction data');\n      }\n\n      const tx = await pushChainClient.universal.sendTransaction({\n        to: TOKEN_CONTRACT_ADDRESS,\n        value: BigInt(0),\n        data: data,\n      });\n\n      setTxHash(tx.hash);\n\n      // Wait for transaction to be mined\n      await tx.wait();\n      // Update balance after successful mint\n      await getTokenBalance();\n      setIsLoading(false);\n    } catch (err) {\n      console.error('Mint transaction error:', err);\n      setIsLoading(false);\n    }\n  }\n};\n"
-      })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.p, {
-      children: "Now, we can add the button and build the UI to mint tokens from Push Chain or Sepolia with Universal Transaction."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.p, {
-      children: ["Here is the complete ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        children: "App.tsx"
-      }), " file:"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.pre, {
-      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.code, {
-        className: "language-tsx",
-        children: "import { useState } from 'react';\nimport { ethers } from 'ethers';\nimport { PushChain } from '@pushchain/core';\nimport { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';\nimport './App.css';\nimport React from 'react';\n\n// MyToken contract ABI\nconst TOKEN_ABI = [\n  {\n    inputs: [\n      { name: 'to', type: 'address' },\n      { name: 'amount', type: 'uint256' },\n    ],\n    name: 'mint',\n    outputs: [],\n    stateMutability: 'nonpayable',\n    type: 'function',\n  },\n  {\n    inputs: [{ name: 'account', type: 'address' }],\n    name: 'balanceOf',\n    outputs: [{ name: '', type: 'uint256' }],\n    stateMutability: 'view',\n    type: 'function',\n  },\n];\n\nconst TOKEN_CONTRACT_ADDRESS = '0xA6AEA5b75Af70A4a036F0D2E1265590C168A96fa' as `0x${string}`;\n\nfunction App() {\n  const { connectionStatus } = usePushWalletContext();\n  const { pushChainClient } = usePushChainClient();\n  const [isLoading, setIsLoading] = useState(false);\n  const [txHash, setTxHash] = useState('');\n  const [tokenBalance, setTokenBalance] = useState<string>('0');\n\n  // Function to get token balance\n  const getTokenBalance = async () => {\n    if (!pushChainClient) return;\n\n    try {\n      const userAddress = pushChainClient.universal.account;\n      console.log('Fetching balance for address:', userAddress);\n\n      // Create a read-only provider using the testnet RPC URL\n      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');\n\n      // Create contract interface\n      const contract = new ethers.Contract(TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, provider);\n\n      // Call balanceOf directly\n      const balance = await contract.balanceOf(userAddress);\n      console.log('Raw balance response:', balance);\n\n      // Convert balance from wei to ether and format it\n      const formattedBalance = ethers.formatUnits(balance, 18);\n      setTokenBalance(formattedBalance);\n    } catch (err) {\n      console.error('Error fetching balance:', err);\n    }\n  };\n\n  // Fetch balance when connection status changes or when pushChainClient changes\n  React.useEffect(() => {\n    if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && pushChainClient) {\n      console.log('Connection status changed to connected, fetching balance...');\n      getTokenBalance();\n    } else {\n      console.log('Not connected or no client, setting balance to 0');\n      setTokenBalance('0');\n    }\n  }, [connectionStatus, pushChainClient]);\n\n  // Function to encode transaction data for minting\n  const getMintTxData = () => {\n    if (!pushChainClient) return null;\n\n    const amount = ethers.parseUnits('1', 18); // Mint 1 token (with 18 decimals)\n    const userAddress = pushChainClient.universal.account;\n\n    return PushChain.utils.helpers.encodeTxData({\n      abi: TOKEN_ABI,\n      functionName: 'mint',\n      args: [userAddress, amount],\n    }) as `0x${string}`;\n  };\n\n  // Handle mint transaction\n  const handleMint = async () => {\n    if (pushChainClient) {\n      try {\n        setIsLoading(true);\n        const data = getMintTxData();\n\n        if (!data) {\n          throw new Error('Failed to encode transaction data');\n        }\n\n        const tx = await pushChainClient.universal.sendTransaction({\n          to: TOKEN_CONTRACT_ADDRESS,\n          value: BigInt(0),\n          data: data,\n        });\n\n        setTxHash(tx.hash);\n\n        // Wait for transaction to be mined\n        await tx.wait();\n        // Update balance after successful mint\n        await getTokenBalance();\n        setIsLoading(false);\n      } catch (err) {\n        console.error('Mint transaction error:', err);\n        setIsLoading(false);\n      }\n    }\n  };\n\n  return (\n    <div\n      style={{\n        display: 'flex',\n        flexDirection: 'column',\n        alignItems: 'center',\n        gap: '20px',\n        padding: '20px',\n      }}\n    >\n      <h1>Push Chain Token Minter</h1>\n\n      <PushUniversalAccountButton />\n\n      {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px' }}>\n          <div\n            style={{\n              backgroundColor: '#f3e8ff',\n              padding: '12px 24px',\n              borderRadius: '12px',\n              textAlign: 'center',\n            }}\n          >\n            <p style={{ margin: 0, color: '#581c87' }}>\n              Your Token Balance: <strong>{tokenBalance}</strong>\n            </p>\n          </div>\n\n          <button\n            onClick={handleMint}\n            disabled={isLoading}\n            style={{\n              backgroundColor: '#d946ef',\n              color: 'white',\n              border: 'none',\n              borderRadius: '20px',\n              padding: '12px 24px',\n              fontSize: '16px',\n              cursor: 'pointer',\n              fontWeight: 'bold',\n            }}\n          >\n            {isLoading ? 'Minting...' : 'Mint Token'}\n          </button>\n\n          {txHash && pushChainClient && (\n            <div style={{ textAlign: 'center' }}>\n              <p>\n                Transaction Hash:{' '}\n                <a\n                  href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                  target=\"_blank\"\n                  rel=\"noopener noreferrer\"\n                  style={{ color: '#d946ef', textDecoration: 'underline' }}\n                >\n                  {txHash}\n                </a>\n              </p>\n            </div>\n          )}\n        </div>\n      )}\n\n      {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n        <p>Please connect your wallet to mint tokens.</p>\n      )}\n    </div>\n  );\n}\n\nexport default App;\n"
+        children: "import { useState } from 'react';\nimport './App.css';\nimport { ethers } from 'ethers';\nimport { PushUniversalAccountButton, usePushWalletContext, usePushChainClient, PushUI } from '@pushchain/ui-kit';\n\n// Contract\nconst WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';\n\nfunction App() {\n  type PushChainClientMinimal = {\n    universal: {\n      sendTransaction: (args: { to: string; data?: string; value?: bigint }) => Promise<{ hash?: string | undefined }>;\n    };\n    explorer?: { getTransactionUrl?: (hash: string) => string };\n  };\n  const { connectionStatus } = usePushWalletContext() as unknown as {\n    connectionStatus: string;\n  };\n  const { pushChainClient } = (usePushChainClient() as unknown as {\n    pushChainClient?: PushChainClientMinimal | null;\n  }) ?? { pushChainClient: null };\n  // —\n  // Mint WPUSH state\n  const [mintAmount, setMintAmount] = useState('');\n  const [isMintLoading, setIsMintLoading] = useState(false);\n  const [mintTxnHash, setMintTxnHash] = useState<string | null>(null);\n  const [mintError, setMintError] = useState<string | null>(null);\n  // —\n\n  async function handleMintWpush() {\n    try {\n      setMintError(null);\n      setMintTxnHash(null);\n      if (!pushChainClient) throw new Error('Wallet not connected');\n      if (!mintAmount) throw new Error('Enter amount');\n\n      // We will call WPUSH.deposit() with value in PC (18 decimals)\n      const valueWei = ethers.parseUnits(mintAmount, 18);\n      const wpushIface = new ethers.Interface(['function deposit() payable']);\n      const data = wpushIface.encodeFunctionData('deposit');\n\n      const tx = await pushChainClient.universal.sendTransaction({\n        to: WPUSH,\n        data,\n        value: valueWei,\n      });\n      setMintTxnHash(tx?.hash ?? null);\n    } catch (e: unknown) {\n      const message = e instanceof Error ? e.message : String(e);\n      setMintError(message || 'Mint failed');\n    } finally {\n      setIsMintLoading(false);\n    }\n  }\n\n  const isConnected = connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED;\n  // —\n\n  return (\n    <div style={{ maxWidth: 520, margin: '0 auto', padding: 16 }}>\n      <h2>Mint WPUSH</h2>\n      <PushUniversalAccountButton />\n\n      {isConnected && (\n        <div style={{ marginTop: 16 }}>\n          {/* Mint WPUSH Section */}\n          <div style={{ marginBottom: 16, padding: 12, border: '1px solid #eee', borderRadius: 8 }}>\n            <div style={{ fontWeight: 600, marginBottom: 8 }}>Mint WPUSH</div>\n            <div style={{ fontSize: 12, opacity: 0.8, marginBottom: 6 }}>Amount (PC)</div>\n            <input\n              type=\"number\"\n              min=\"0\"\n              step=\"any\"\n              value={mintAmount}\n              onChange={(e) => setMintAmount(e.target.value)}\n              placeholder=\"0.0 PC\"\n              style={{ width: '100%', padding: 10, borderRadius: 8, border: '1px solid #ccc', boxSizing: 'border-box' }}\n            />\n            <div style={{ marginTop: 8 }}>\n              <button\n                disabled={!isConnected || isMintLoading || !mintAmount}\n                onClick={() => {\n                  setIsMintLoading(true);\n                  handleMintWpush();\n                }}\n                style={{\n                  background: 'transparent',\n                  border: '1px solid',\n                  borderRadius: 10,\n                  padding: '8px 14px',\n                  cursor: !isConnected || isMintLoading || !mintAmount ? 'not-allowed' : 'pointer',\n                }}\n              >\n                {isMintLoading ? 'Minting...' : 'Mint WPUSH'}\n              </button>\n            </div>\n            {mintTxnHash && (\n              <div style={{ marginTop: 8 }}>\n                <div style={{ wordBreak: 'break-all', overflowWrap: 'anywhere' }}>Mint Txn: {mintTxnHash}</div>\n                <a\n                  href={pushChainClient?.explorer?.getTransactionUrl?.(mintTxnHash) || '#'}\n                  target=\"_blank\"\n                  rel=\"noopener noreferrer\"\n                >\n                  View in Explorer\n                </a>\n              </div>\n            )}\n            {mintError && <div style={{ marginTop: 8, color: 'crimson' }}>{mintError}</div>}\n          </div>\n        </div>\n      )}\n    </div>\n  );\n}\n\nexport default App;\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h2, {
       id: "conclusion",
@@ -833,15 +802,8 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.h3, {
       id: "next-steps",
       children: "Next Steps"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
+    }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
-        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.strong, {
-          children: "Airdrop Swap on Push Swap"
-        }), ": Learn how to ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
-          href: "/docs/chain/tutorials/",
-          children: "implement token swaps"
-        }), " using your newly minted tokens"]
-      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components.li, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_components.a, {
           href: "/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tutorial-universal-airdrop",
           children: "Universal Airdrop Tutorial"
