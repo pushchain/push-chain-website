@@ -25,38 +25,33 @@
         "title": "Get free testnet tokens for Push Chain development"
       }
     },
-    "developers": {
+     "developers": {
       "title": "Developers",
       "aria-label": "Developers Section",
       "link1": {
         "text": "Get Started",
         "subtext": "Intro to building on Push Chain",
-        "title": "Start building"
+        "title": "Start building universal apps on Push Chain - Developer documentation"
       },
       "link2": {
         "text": "Quick Start",
         "subtext": "Setup dev environment in seconds",
-        "title": "Quick Start"
+        "title": "Quick start guide - Set up Push Chain development environment instantly"
       },
       "link3": {
         "text": "Tutorials",
         "subtext": "Step-by-step guides to build with Push",
-        "title": "Learn with tutorials"
+        "title": "Learn with hands-on tutorials - Build your first universal app on Push Chain"
       },
       "link4": {
         "text": "GitHub",
         "subtext": "View core code and open-source tools",
-        "title": "Explore Push Chain"
+        "title": "Explore Push Chain source code and development tools on GitHub"
       },
       "link5": {
         "text": "Developer Discord",
         "subtext": "Connect with the dev community",
-        "title": "Join"
-      },
-      "link6": {
-        "text": "Explore Examples",
-        "subtext": "Explore Examples",
-        "title": "Explore Examples"
+        "title": "Join Push Chain developer community on Discord for support and collaboration"
       }
     },
     "community": {
@@ -114,6 +109,40 @@
     "app-button": {
       "text": "Push Portal",
       "title": "Access Push Portal - Earn points as developer, user, or validator"
+    },
+    "explore": {
+      "title": "Explore",
+      "aria-label": "Explore Section",
+      "link1": {
+          "text": "Get Started",
+          "subtext": "Intro to building on Push Chain",
+          "title": "Start building"
+      },
+      "link2": {
+          "text": "Quick Start",
+          "subtext": "Setup dev environment in seconds",
+          "title": "Quick Start"
+      },
+      "link3": {
+          "text": "Tutorials",
+          "subtext": "Step-by-step guides to build with Push",
+          "title": "Learn with tutorials"
+      },
+      "link4": {
+          "text": "GitHub",
+          "subtext": "View core code and open-source tools",
+          "title": "Explore Push Chain"
+      },
+      "link5": {
+          "text": "Developer Discord",
+          "subtext": "Connect with the dev community",
+          "title": "Join Discord"
+      },
+      "link6": {
+          "text": "Explore Examples",
+          "subtext": "Explore Examples",
+          "title": "Explore Examples"
+      }
     }
   }
 }
