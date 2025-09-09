@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[41379],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[40569],{
 
 /***/ 285:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
@@ -753,6 +753,20 @@ exports.okc = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=okc.js.map
+
+/***/ }),
+
+/***/ 5342:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const outside = __webpack_require__(697075)
+// Determine if version is less than all the versions possible in the range
+const ltr = (version, range, options) => outside(version, range, '<', options)
+module.exports = ltr
+
 
 /***/ }),
 
@@ -1823,6 +1837,31 @@ exports.lavita = (0, defineChain_js_1.defineChain)({
     testnet: false,
 });
 //# sourceMappingURL=lavita.js.map
+
+/***/ }),
+
+/***/ 11126:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(115744), exports);
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -4389,6 +4428,19 @@ exports.fraxtal = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=fraxtal.js.map
+
+/***/ }),
+
+/***/ 24493:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const patch = (a, loose) => new SemVer(a, loose).patch
+module.exports = patch
+
 
 /***/ }),
 
@@ -7361,6 +7413,22 @@ exports.diode = (0, defineChain_js_1.defineChain)({
     testnet: false,
 });
 //# sourceMappingURL=diode.js.map
+
+/***/ }),
+
+/***/ 31729:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const parse = __webpack_require__(830144)
+const prerelease = (version, options) => {
+  const parsed = parse(version, options)
+  return (parsed && parsed.prerelease.length) ? parsed.prerelease : null
+}
+module.exports = prerelease
+
 
 /***/ }),
 
@@ -13785,6 +13853,22 @@ async function dropTransaction(client, { hash }) {
     });
 }
 //# sourceMappingURL=dropTransaction.js.map
+
+/***/ }),
+
+/***/ 57414:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const parse = __webpack_require__(830144)
+const clean = (version, options) => {
+  const s = parse(version.trim().replace(/^[=v]+/, ''), options)
+  return s ? s.version : null
+}
+module.exports = clean
+
 
 /***/ }),
 
@@ -22404,6 +22488,16 @@ function publicActions(client) {
 
 /***/ }),
 
+/***/ 82190:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=encryption-types.cjs.map
+
+/***/ }),
+
 /***/ 83277:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -22602,6 +22696,157 @@ exports.redstone = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=redstone.js.map
+
+/***/ }),
+
+/***/ 84570:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   findCauseByReference: () => (/* binding */ findCauseByReference),
+/* harmony export */   getErrorCause: () => (/* binding */ getErrorCause),
+/* harmony export */   messageWithCauses: () => (/* binding */ messageWithCauses),
+/* harmony export */   stackWithCauses: () => (/* binding */ stackWithCauses)
+/* harmony export */ });
+
+
+/**
+ * @template {Error} T
+ * @param {unknown} err
+ * @param {new(...args: any[]) => T} reference
+ * @returns {T|undefined}
+ */
+const findCauseByReference = (err, reference) => {
+  if (!err || !reference) return;
+  if (!(err instanceof Error)) return;
+  if (
+    !(reference.prototype instanceof Error) &&
+    // @ts-ignore
+    reference !== Error
+  ) return;
+
+  /**
+   * Ensures we don't go circular
+   *
+   * @type {Set<Error>}
+   */
+  const seen = new Set();
+
+  /** @type {Error|undefined} */
+  let currentErr = err;
+
+  while (currentErr && !seen.has(currentErr)) {
+    seen.add(currentErr);
+
+    if (currentErr instanceof reference) {
+      return currentErr;
+    }
+
+    currentErr = getErrorCause(currentErr);
+  }
+};
+
+/**
+ * @param {Error|{ cause?: unknown|(()=>err)}} err
+ * @returns {Error|undefined}
+ */
+const getErrorCause = (err) => {
+  if (!err || typeof err !== 'object' || !('cause' in err)) {
+    return;
+  }
+
+  // VError / NError style causes
+  if (typeof err.cause === 'function') {
+    const causeResult = err.cause();
+
+    return causeResult instanceof Error
+      ? causeResult
+      : undefined;
+  } else {
+    return err.cause instanceof Error
+      ? err.cause
+      : undefined;
+  }
+};
+
+/**
+ * Internal method that keeps a track of which error we have already added, to avoid circular recursion
+ *
+ * @private
+ * @param {Error} err
+ * @param {Set<Error>} seen
+ * @returns {string}
+ */
+const _stackWithCauses = (err, seen) => {
+  if (!(err instanceof Error)) return '';
+
+  const stack = err.stack || '';
+
+  // Ensure we don't go circular or crazily deep
+  if (seen.has(err)) {
+    return stack + '\ncauses have become circular...';
+  }
+
+  const cause = getErrorCause(err);
+
+  // TODO: Follow up in https://github.com/nodejs/node/issues/38725#issuecomment-920309092 on how to log stuff
+
+  if (cause) {
+    seen.add(err);
+    return (stack + '\ncaused by: ' + _stackWithCauses(cause, seen));
+  } else {
+    return stack;
+  }
+};
+
+/**
+ * @param {Error} err
+ * @returns {string}
+ */
+const stackWithCauses = (err) => _stackWithCauses(err, new Set());
+
+/**
+ * Internal method that keeps a track of which error we have already added, to avoid circular recursion
+ *
+ * @private
+ * @param {Error} err
+ * @param {Set<Error>} seen
+ * @param {boolean} [skip]
+ * @returns {string}
+ */
+const _messageWithCauses = (err, seen, skip) => {
+  if (!(err instanceof Error)) return '';
+
+  const message = skip ? '' : (err.message || '');
+
+  // Ensure we don't go circular or crazily deep
+  if (seen.has(err)) {
+    return message + ': ...';
+  }
+
+  const cause = getErrorCause(err);
+
+  if (cause) {
+    seen.add(err);
+
+    const skipIfVErrorStyleCause = 'cause' in err && typeof err.cause === 'function';
+
+    return (message +
+      (skipIfVErrorStyleCause ? '' : ': ') +
+      _messageWithCauses(cause, seen, skipIfVErrorStyleCause));
+  } else {
+    return message;
+  }
+};
+
+/**
+ * @param {Error} err
+ * @returns {string}
+ */
+const messageWithCauses = (err) => _messageWithCauses(err, new Set());
+
 
 /***/ }),
 
@@ -23697,6 +23942,157 @@ exports.RIPEMD160 = legacy_ts_1.RIPEMD160;
 /** @deprecated Use import from `noble/hashes/legacy` module */
 exports.ripemd160 = legacy_ts_1.ripemd160;
 //# sourceMappingURL=ripemd160.js.map
+
+/***/ }),
+
+/***/ 93904:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const ANY = Symbol('SemVer ANY')
+// hoisted class for cyclic dependency
+class Comparator {
+  static get ANY () {
+    return ANY
+  }
+
+  constructor (comp, options) {
+    options = parseOptions(options)
+
+    if (comp instanceof Comparator) {
+      if (comp.loose === !!options.loose) {
+        return comp
+      } else {
+        comp = comp.value
+      }
+    }
+
+    comp = comp.trim().split(/\s+/).join(' ')
+    debug('comparator', comp, options)
+    this.options = options
+    this.loose = !!options.loose
+    this.parse(comp)
+
+    if (this.semver === ANY) {
+      this.value = ''
+    } else {
+      this.value = this.operator + this.semver.version
+    }
+
+    debug('comp', this)
+  }
+
+  parse (comp) {
+    const r = this.options.loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR]
+    const m = comp.match(r)
+
+    if (!m) {
+      throw new TypeError(`Invalid comparator: ${comp}`)
+    }
+
+    this.operator = m[1] !== undefined ? m[1] : ''
+    if (this.operator === '=') {
+      this.operator = ''
+    }
+
+    // if it literally is just '>' or '' then allow anything.
+    if (!m[2]) {
+      this.semver = ANY
+    } else {
+      this.semver = new SemVer(m[2], this.options.loose)
+    }
+  }
+
+  toString () {
+    return this.value
+  }
+
+  test (version) {
+    debug('Comparator.test', version, this.options.loose)
+
+    if (this.semver === ANY || version === ANY) {
+      return true
+    }
+
+    if (typeof version === 'string') {
+      try {
+        version = new SemVer(version, this.options)
+      } catch (er) {
+        return false
+      }
+    }
+
+    return cmp(version, this.operator, this.semver, this.options)
+  }
+
+  intersects (comp, options) {
+    if (!(comp instanceof Comparator)) {
+      throw new TypeError('a Comparator is required')
+    }
+
+    if (this.operator === '') {
+      if (this.value === '') {
+        return true
+      }
+      return new Range(comp.value, options).test(this.value)
+    } else if (comp.operator === '') {
+      if (comp.value === '') {
+        return true
+      }
+      return new Range(this.value, options).test(comp.semver)
+    }
+
+    options = parseOptions(options)
+
+    // Special cases where nothing can possibly be lower
+    if (options.includePrerelease &&
+      (this.value === '<0.0.0-0' || comp.value === '<0.0.0-0')) {
+      return false
+    }
+    if (!options.includePrerelease &&
+      (this.value.startsWith('<0.0.0') || comp.value.startsWith('<0.0.0'))) {
+      return false
+    }
+
+    // Same direction increasing (> or >=)
+    if (this.operator.startsWith('>') && comp.operator.startsWith('>')) {
+      return true
+    }
+    // Same direction decreasing (< or <=)
+    if (this.operator.startsWith('<') && comp.operator.startsWith('<')) {
+      return true
+    }
+    // same SemVer and both sides are inclusive (<= or >=)
+    if (
+      (this.semver.version === comp.semver.version) &&
+      this.operator.includes('=') && comp.operator.includes('=')) {
+      return true
+    }
+    // opposite directions less than
+    if (cmp(this.semver, '<', comp.semver, options) &&
+      this.operator.startsWith('>') && comp.operator.startsWith('<')) {
+      return true
+    }
+    // opposite directions greater than
+    if (cmp(this.semver, '>', comp.semver, options) &&
+      this.operator.startsWith('<') && comp.operator.startsWith('>')) {
+      return true
+    }
+    return false
+  }
+}
+
+module.exports = Comparator
+
+const parseOptions = __webpack_require__(398587)
+const { safeRe: re, t } = __webpack_require__(199718)
+const cmp = __webpack_require__(272111)
+const debug = __webpack_require__(257272)
+const SemVer = __webpack_require__(853908)
+const Range = __webpack_require__(778311)
+
 
 /***/ }),
 
@@ -35272,6 +35668,19 @@ function hashSignature(sig) {
 
 /***/ }),
 
+/***/ 111763:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const compareLoose = (a, b) => compare(a, b, true)
+module.exports = compareLoose
+
+
+/***/ }),
+
 /***/ 112634:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -36505,6 +36914,27 @@ exports.flare = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 113874:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const Range = __webpack_require__(778311)
+const validRange = (range, options) => {
+  try {
+    // Return '*' instead of '' so that truthiness works.
+    // This will throw if it's invalid anyway
+    return new Range(range, options).range || '*'
+  } catch (er) {
+    return null
+  }
+}
+module.exports = validRange
+
+
+/***/ }),
+
 /***/ 114808:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -36600,6 +37030,16 @@ exports.fantom = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=fantom.js.map
+
+/***/ }),
+
+/***/ 115744:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=abi.js.map
 
 /***/ }),
 
@@ -39985,6 +40425,46 @@ exports.hela = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 127754:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * A `StructFailure` represents a single specific failure in validation.
+ */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StructError = void 0;
+/**
+ * `StructError` objects are thrown (or returned) when validation fails.
+ *
+ * Validation logic is design to exit early for maximum performance. The error
+ * represents the first error encountered during validation. For more detail,
+ * the `error.failures` property is a generator function that can be run to
+ * continue validation and receive all the failures in the data.
+ */
+class StructError extends TypeError {
+    constructor(failure, failures) {
+        let cached;
+        const { message, explanation, ...rest } = failure;
+        const { path } = failure;
+        const cause = path.length === 0 ? message : `At path: ${path.join('.')} -- ${message}`;
+        super(explanation ?? cause);
+        if (explanation !== null && explanation !== undefined) {
+            this.cause = cause;
+        }
+        Object.assign(this, rest);
+        this.name = this.constructor.name;
+        this.failures = () => {
+            return (cached ?? (cached = [failure, ...failures()]));
+        };
+    }
+}
+exports.StructError = StructError;
+//# sourceMappingURL=error.cjs.map
+
+/***/ }),
+
 /***/ 127894:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -40142,6 +40622,16 @@ function encode(type, value, isArray = false) {
     throw new abi_js_1.UnsupportedPackedAbiType(type);
 }
 //# sourceMappingURL=encodePacked.js.map
+
+/***/ }),
+
+/***/ 128160:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=parser.js.map
 
 /***/ }),
 
@@ -40673,6 +41163,133 @@ class InvalidSelectorSizeError extends Errors.BaseError {
 }
 exports.InvalidSelectorSizeError = InvalidSelectorSizeError;
 //# sourceMappingURL=AbiItem.js.map
+
+/***/ }),
+
+/***/ 130717:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.tuple = exports.getTupleElements = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const packer_1 = __webpack_require__(537700);
+const TUPLE_REGEX = /^\((.+)\)$/u;
+const isTupleType = (type) => TUPLE_REGEX.test(type);
+/**
+ * Get elements from a tuple type.
+ *
+ * @param type - The tuple type to get the types for.
+ * @returns The elements of the tuple as string array.
+ */
+const getTupleElements = (type) => {
+    (0, utils_1.assert)(type.startsWith('(') && type.endsWith(')'), new errors_1.ParserError(`Invalid tuple type. Expected tuple type, but received "${type}".`));
+    const elements = [];
+    let current = '';
+    let depth = 0;
+    for (let i = 1; i < type.length - 1; i++) {
+        const char = type[i];
+        if (char === ',' && depth === 0) {
+            elements.push(current.trim());
+            current = '';
+        }
+        else {
+            current += char;
+            if (char === '(') {
+                depth += 1;
+            }
+            else if (char === ')') {
+                depth -= 1;
+            }
+        }
+    }
+    if (current.trim()) {
+        elements.push(current.trim());
+    }
+    return elements;
+};
+exports.getTupleElements = getTupleElements;
+exports.tuple = {
+    /**
+     * Check if the tuple is dynamic. Tuples are dynamic if one or more elements
+     * of the tuple are dynamic.
+     *
+     * @param type - The type to check.
+     * @returns Whether the tuple is dynamic.
+     */
+    isDynamic(type) {
+        const elements = (0, exports.getTupleElements)(type);
+        return elements.some((element) => {
+            const parser = (0, packer_1.getParser)(element);
+            return (0, packer_1.isDynamicParser)(parser, element);
+        });
+    },
+    /**
+     * Check if a type is a tuple type.
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a tuple type.
+     */
+    isType(type) {
+        return isTupleType(type);
+    },
+    /**
+     * Get the byte length of a tuple type. If the tuple is dynamic, this will
+     * always return 32. If the tuple is static, this will return the sum of the
+     * byte lengths of the tuple elements.
+     *
+     * @param type - The type to get the byte length for.
+     * @returns The byte length of the tuple type.
+     */
+    getByteLength(type) {
+        if ((0, packer_1.isDynamicParser)(this, type)) {
+            return 32;
+        }
+        const elements = (0, exports.getTupleElements)(type);
+        return elements.reduce((total, element) => {
+            return total + (0, packer_1.getParser)(element).getByteLength(element);
+        }, 0);
+    },
+    /**
+     * Encode a tuple value.
+     *
+     * @param args - The encoding arguments.
+     * @param args.type - The type of the value.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The value to encode.
+     * @param args.packed - Whether to use non-standard packed encoding.
+     * @param args.tight - Whether to use non-standard tight encoding.
+     * @returns The bytes with the encoded value added to it.
+     */
+    encode({ type, buffer, value, packed, tight }) {
+        const elements = (0, exports.getTupleElements)(type);
+        return (0, packer_1.pack)({
+            types: elements,
+            values: value,
+            byteArray: buffer,
+            packed,
+            tight,
+        });
+    },
+    /**
+     * Decode a tuple value.
+     *
+     * @param args - The decoding arguments.
+     * @param args.type - The type of the value.
+     * @param args.value - The value to decode.
+     * @param args.skip - A function to skip a number of bytes.
+     * @returns The decoded value.
+     */
+    decode({ type, value, skip }) {
+        const elements = (0, exports.getTupleElements)(type);
+        const length = this.getByteLength(type) - 32;
+        skip(length);
+        return (0, packer_1.unpack)(elements, value);
+    },
+};
+//# sourceMappingURL=tuple.js.map
 
 /***/ }),
 
@@ -43144,6 +43761,52 @@ exports.goerli = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 144144:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.compare = exports.concat = exports.toHex = exports.toBytes = void 0;
+const utils_1 = __webpack_require__(190185);
+function toBytes(value) {
+    if (value instanceof Uint8Array) {
+        return value;
+    }
+    else if (typeof value === 'string') {
+        return (0, utils_1.hexToBytes)(value);
+    }
+    else {
+        return new Uint8Array(value);
+    }
+}
+exports.toBytes = toBytes;
+function toHex(value) {
+    if (typeof value === 'string') {
+        (0, utils_1.hexToBytes)(value); // assert hex string
+        return value.replace(/^(0x)?/, '0x');
+    }
+    else if (value instanceof Uint8Array) {
+        return '0x' + (0, utils_1.bytesToHex)(value);
+    }
+    else {
+        return '0x' + (0, utils_1.bytesToHex)(new Uint8Array(value));
+    }
+}
+exports.toHex = toHex;
+function concat(values) {
+    return (0, utils_1.concatBytes)(...values.map(toBytes));
+}
+exports.concat = concat;
+function compare(a, b) {
+    const diff = BigInt(toHex(a)) - BigInt(toHex(b));
+    return diff > 0 ? 1 : diff < 0 ? -1 : 0;
+}
+exports.compare = compare;
+//# sourceMappingURL=bytes.js.map
+
+/***/ }),
+
 /***/ 144199:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -43323,6 +43986,40 @@ exports.sepolia = (0, defineChain_js_1.defineChain)({
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const tslib_1 = __webpack_require__(331635);
 tslib_1.__exportStar(__webpack_require__(219745), exports);
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 146207:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(591563), exports);
+__exportStar(__webpack_require__(400186), exports);
+__exportStar(__webpack_require__(947435), exports);
+__exportStar(__webpack_require__(199356), exports);
+__exportStar(__webpack_require__(683415), exports);
+__exportStar(__webpack_require__(327827), exports);
+__exportStar(__webpack_require__(306150), exports);
+__exportStar(__webpack_require__(128160), exports);
+__exportStar(__webpack_require__(808446), exports);
+__exportStar(__webpack_require__(130717), exports);
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -46834,6 +47531,19 @@ function poll(fn, { emitOnBegin, initialWaitTime, interval }) {
     return unwatch;
 }
 //# sourceMappingURL=poll.js.map
+
+/***/ }),
+
+/***/ 154089:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const gte = (a, b, loose) => compare(a, b, loose) >= 0
+module.exports = gte
+
 
 /***/ }),
 
@@ -53859,6 +54569,32 @@ exports.haustTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 171843:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const { ErrorWithCause } = __webpack_require__(747066); // linemod-replace-with: export { ErrorWithCause } from './lib/error-with-cause.mjs';
+
+const { // linemod-replace-with: export {
+  findCauseByReference,
+  getErrorCause,
+  messageWithCauses,
+  stackWithCauses,
+} = __webpack_require__(84570); // linemod-replace-with: } from './lib/helpers.mjs';
+
+module.exports = {      // linemod-remove
+  ErrorWithCause,       // linemod-remove
+  findCauseByReference, // linemod-remove
+  getErrorCause,        // linemod-remove
+  stackWithCauses,      // linemod-remove
+  messageWithCauses,    // linemod-remove
+};                      // linemod-remove
+
+
+/***/ }),
+
 /***/ 172054:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -59920,6 +60656,62 @@ exports.Secp256k1 = Secp256k1;
 
 /***/ }),
 
+/***/ 190185:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.assertBytes = exports.assertBool = exports.utf8ToBytes = exports.toHex = exports.createView = exports.concatBytes = exports.bytesToHex = void 0;
+exports.bytesToUtf8 = bytesToUtf8;
+exports.hexToBytes = hexToBytes;
+exports.equalsBytes = equalsBytes;
+exports.wrapHash = wrapHash;
+const utils_1 = __webpack_require__(619459);
+Object.defineProperty(exports, "assertBool", ({ enumerable: true, get: function () { return utils_1.abool; } }));
+const _assert_1 = __webpack_require__(667557);
+Object.defineProperty(exports, "assertBytes", ({ enumerable: true, get: function () { return _assert_1.abytes; } }));
+const utils_2 = __webpack_require__(899175);
+var utils_3 = __webpack_require__(899175);
+Object.defineProperty(exports, "bytesToHex", ({ enumerable: true, get: function () { return utils_3.bytesToHex; } }));
+Object.defineProperty(exports, "concatBytes", ({ enumerable: true, get: function () { return utils_3.concatBytes; } }));
+Object.defineProperty(exports, "createView", ({ enumerable: true, get: function () { return utils_3.createView; } }));
+Object.defineProperty(exports, "toHex", ({ enumerable: true, get: function () { return utils_3.bytesToHex; } }));
+Object.defineProperty(exports, "utf8ToBytes", ({ enumerable: true, get: function () { return utils_3.utf8ToBytes; } }));
+// buf.toString('utf8') -> bytesToUtf8(buf)
+function bytesToUtf8(data) {
+    if (!(data instanceof Uint8Array)) {
+        throw new TypeError(`bytesToUtf8 expected Uint8Array, got ${typeof data}`);
+    }
+    return new TextDecoder().decode(data);
+}
+function hexToBytes(data) {
+    const sliced = data.startsWith("0x") ? data.substring(2) : data;
+    return (0, utils_2.hexToBytes)(sliced);
+}
+// buf.equals(buf2) -> equalsBytes(buf, buf2)
+function equalsBytes(a, b) {
+    if (a.length !== b.length) {
+        return false;
+    }
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] !== b[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+// Internal utils
+function wrapHash(hash) {
+    return (msg) => {
+        (0, _assert_1.abytes)(msg);
+        return hash(msg);
+    };
+}
+
+
+/***/ }),
+
 /***/ 190190:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -60150,6 +60942,47 @@ function encodeField({ types, name, type, value, }) {
     return [{ type }, value];
 }
 //# sourceMappingURL=hashTypedData.js.map
+
+/***/ }),
+
+/***/ 190522:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.invariant = exports.validateArgument = exports.InvalidArgumentError = exports.InvariantError = exports.throwError = void 0;
+function throwError(message) {
+    throw new Error(message);
+}
+exports.throwError = throwError;
+class InvariantError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'InvariantError';
+    }
+}
+exports.InvariantError = InvariantError;
+class InvalidArgumentError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'InvalidArgumentError';
+    }
+}
+exports.InvalidArgumentError = InvalidArgumentError;
+function validateArgument(condition, message) {
+    if (!condition) {
+        throw new InvalidArgumentError(message);
+    }
+}
+exports.validateArgument = validateArgument;
+function invariant(condition, message) {
+    if (!condition) {
+        throw new InvariantError(message);
+    }
+}
+exports.invariant = invariant;
+//# sourceMappingURL=errors.js.map
 
 /***/ }),
 
@@ -61489,6 +62322,81 @@ function parseAbiParameters(params) {
 
 /***/ }),
 
+/***/ 199356:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.bytes = void 0;
+const utils_1 = __webpack_require__(672495);
+const utils_2 = __webpack_require__(448746);
+exports.bytes = {
+    isDynamic: true,
+    /**
+     * Check if a type is a bytes type. Since `bytes` is a simple type, this is
+     * just a check that the type is "bytes".
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a bytes type.
+     */
+    isType: (type) => type === 'bytes',
+    /**
+     * Get the byte length of an encoded bytes value. Since `bytes` is a simple
+     * type, this always returns 32.
+     *
+     * Note that actual length of a bytes value is variable, but the encoded
+     * static value (pointer) is always 32 bytes long.
+     *
+     * @returns The byte length of an encoded bytes value.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode the given bytes value to a byte array.
+     *
+     * @param args - The encoding arguments.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The bytes value to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @returns The bytes with the encoded bytes value added to it.
+     */
+    encode({ buffer, value, packed }) {
+        const bufferValue = (0, utils_1.createBytes)(value);
+        // For packed encoding, we can just add the bytes value to the byte array,
+        // without adding any padding or alignment. There is also no need to
+        // encode the length of the bytes.
+        if (packed) {
+            return (0, utils_1.concatBytes)([buffer, bufferValue]);
+        }
+        const paddedSize = Math.ceil(bufferValue.byteLength / 32) * 32;
+        // Bytes of length `k` are encoded as `k pad_right(bytes)`.
+        return (0, utils_1.concatBytes)([
+            buffer,
+            (0, utils_2.padStart)((0, utils_1.numberToBytes)(bufferValue.byteLength)),
+            (0, utils_2.padEnd)(bufferValue, paddedSize),
+        ]);
+    },
+    /**
+     * Decode the given byte array to a bytes value.
+     *
+     * @param args - The decoding arguments.
+     * @param args.value - The byte array to decode.
+     * @returns The decoded bytes value as a `Uint8Array`.
+     */
+    decode({ value }) {
+        const bytesValue = value.subarray(0, 32);
+        const length = (0, utils_1.bytesToNumber)(bytesValue);
+        // Since we're returning a `Uint8Array`, we use `slice` to copy the bytes
+        // into a new array.
+        return value.slice(32, 32 + length);
+    },
+};
+//# sourceMappingURL=bytes.js.map
+
+/***/ }),
+
 /***/ 199560:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -61544,6 +62452,237 @@ function encodeFunctionData(parameters) {
     return (0, concat_js_1.concatHex)([signature, data ?? '0x']);
 }
 //# sourceMappingURL=encodeFunctionData.js.map
+
+/***/ }),
+
+/***/ 199718:
+/***/ ((module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+const {
+  MAX_SAFE_COMPONENT_LENGTH,
+  MAX_SAFE_BUILD_LENGTH,
+  MAX_LENGTH,
+} = __webpack_require__(416874)
+const debug = __webpack_require__(257272)
+exports = module.exports = {}
+
+// The actual regexps go on exports.re
+const re = exports.re = []
+const safeRe = exports.safeRe = []
+const src = exports.src = []
+const safeSrc = exports.safeSrc = []
+const t = exports.t = {}
+let R = 0
+
+const LETTERDASHNUMBER = '[a-zA-Z0-9-]'
+
+// Replace some greedy regex tokens to prevent regex dos issues. These regex are
+// used internally via the safeRe object since all inputs in this library get
+// normalized first to trim and collapse all extra whitespace. The original
+// regexes are exported for userland consumption and lower level usage. A
+// future breaking change could export the safer regex only with a note that
+// all input should have extra whitespace removed.
+const safeRegexReplacements = [
+  ['\\s', 1],
+  ['\\d', MAX_LENGTH],
+  [LETTERDASHNUMBER, MAX_SAFE_BUILD_LENGTH],
+]
+
+const makeSafeRegex = (value) => {
+  for (const [token, max] of safeRegexReplacements) {
+    value = value
+      .split(`${token}*`).join(`${token}{0,${max}}`)
+      .split(`${token}+`).join(`${token}{1,${max}}`)
+  }
+  return value
+}
+
+const createToken = (name, value, isGlobal) => {
+  const safe = makeSafeRegex(value)
+  const index = R++
+  debug(name, index, value)
+  t[name] = index
+  src[index] = value
+  safeSrc[index] = safe
+  re[index] = new RegExp(value, isGlobal ? 'g' : undefined)
+  safeRe[index] = new RegExp(safe, isGlobal ? 'g' : undefined)
+}
+
+// The following Regular Expressions can be used for tokenizing,
+// validating, and parsing SemVer version strings.
+
+// ## Numeric Identifier
+// A single `0`, or a non-zero digit followed by zero or more digits.
+
+createToken('NUMERICIDENTIFIER', '0|[1-9]\\d*')
+createToken('NUMERICIDENTIFIERLOOSE', '\\d+')
+
+// ## Non-numeric Identifier
+// Zero or more digits, followed by a letter or hyphen, and then zero or
+// more letters, digits, or hyphens.
+
+createToken('NONNUMERICIDENTIFIER', `\\d*[a-zA-Z-]${LETTERDASHNUMBER}*`)
+
+// ## Main Version
+// Three dot-separated numeric identifiers.
+
+createToken('MAINVERSION', `(${src[t.NUMERICIDENTIFIER]})\\.` +
+                   `(${src[t.NUMERICIDENTIFIER]})\\.` +
+                   `(${src[t.NUMERICIDENTIFIER]})`)
+
+createToken('MAINVERSIONLOOSE', `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
+                        `(${src[t.NUMERICIDENTIFIERLOOSE]})\\.` +
+                        `(${src[t.NUMERICIDENTIFIERLOOSE]})`)
+
+// ## Pre-release Version Identifier
+// A numeric identifier, or a non-numeric identifier.
+// Non-numberic identifiers include numberic identifiers but can be longer.
+// Therefore non-numberic identifiers must go first.
+
+createToken('PRERELEASEIDENTIFIER', `(?:${src[t.NONNUMERICIDENTIFIER]
+}|${src[t.NUMERICIDENTIFIER]})`)
+
+createToken('PRERELEASEIDENTIFIERLOOSE', `(?:${src[t.NONNUMERICIDENTIFIER]
+}|${src[t.NUMERICIDENTIFIERLOOSE]})`)
+
+// ## Pre-release Version
+// Hyphen, followed by one or more dot-separated pre-release version
+// identifiers.
+
+createToken('PRERELEASE', `(?:-(${src[t.PRERELEASEIDENTIFIER]
+}(?:\\.${src[t.PRERELEASEIDENTIFIER]})*))`)
+
+createToken('PRERELEASELOOSE', `(?:-?(${src[t.PRERELEASEIDENTIFIERLOOSE]
+}(?:\\.${src[t.PRERELEASEIDENTIFIERLOOSE]})*))`)
+
+// ## Build Metadata Identifier
+// Any combination of digits, letters, or hyphens.
+
+createToken('BUILDIDENTIFIER', `${LETTERDASHNUMBER}+`)
+
+// ## Build Metadata
+// Plus sign, followed by one or more period-separated build metadata
+// identifiers.
+
+createToken('BUILD', `(?:\\+(${src[t.BUILDIDENTIFIER]
+}(?:\\.${src[t.BUILDIDENTIFIER]})*))`)
+
+// ## Full Version String
+// A main version, followed optionally by a pre-release version and
+// build metadata.
+
+// Note that the only major, minor, patch, and pre-release sections of
+// the version string are capturing groups.  The build metadata is not a
+// capturing group, because it should not ever be used in version
+// comparison.
+
+createToken('FULLPLAIN', `v?${src[t.MAINVERSION]
+}${src[t.PRERELEASE]}?${
+  src[t.BUILD]}?`)
+
+createToken('FULL', `^${src[t.FULLPLAIN]}$`)
+
+// like full, but allows v1.2.3 and =1.2.3, which people do sometimes.
+// also, 1.0.0alpha1 (prerelease without the hyphen) which is pretty
+// common in the npm registry.
+createToken('LOOSEPLAIN', `[v=\\s]*${src[t.MAINVERSIONLOOSE]
+}${src[t.PRERELEASELOOSE]}?${
+  src[t.BUILD]}?`)
+
+createToken('LOOSE', `^${src[t.LOOSEPLAIN]}$`)
+
+createToken('GTLT', '((?:<|>)?=?)')
+
+// Something like "2.*" or "1.2.x".
+// Note that "x.x" is a valid xRange identifer, meaning "any version"
+// Only the first item is strictly required.
+createToken('XRANGEIDENTIFIERLOOSE', `${src[t.NUMERICIDENTIFIERLOOSE]}|x|X|\\*`)
+createToken('XRANGEIDENTIFIER', `${src[t.NUMERICIDENTIFIER]}|x|X|\\*`)
+
+createToken('XRANGEPLAIN', `[v=\\s]*(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:\\.(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:\\.(${src[t.XRANGEIDENTIFIER]})` +
+                   `(?:${src[t.PRERELEASE]})?${
+                     src[t.BUILD]}?` +
+                   `)?)?`)
+
+createToken('XRANGEPLAINLOOSE', `[v=\\s]*(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:\\.(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:\\.(${src[t.XRANGEIDENTIFIERLOOSE]})` +
+                        `(?:${src[t.PRERELEASELOOSE]})?${
+                          src[t.BUILD]}?` +
+                        `)?)?`)
+
+createToken('XRANGE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAIN]}$`)
+createToken('XRANGELOOSE', `^${src[t.GTLT]}\\s*${src[t.XRANGEPLAINLOOSE]}$`)
+
+// Coercion.
+// Extract anything that could conceivably be a part of a valid semver
+createToken('COERCEPLAIN', `${'(^|[^\\d])' +
+              '(\\d{1,'}${MAX_SAFE_COMPONENT_LENGTH}})` +
+              `(?:\\.(\\d{1,${MAX_SAFE_COMPONENT_LENGTH}}))?` +
+              `(?:\\.(\\d{1,${MAX_SAFE_COMPONENT_LENGTH}}))?`)
+createToken('COERCE', `${src[t.COERCEPLAIN]}(?:$|[^\\d])`)
+createToken('COERCEFULL', src[t.COERCEPLAIN] +
+              `(?:${src[t.PRERELEASE]})?` +
+              `(?:${src[t.BUILD]})?` +
+              `(?:$|[^\\d])`)
+createToken('COERCERTL', src[t.COERCE], true)
+createToken('COERCERTLFULL', src[t.COERCEFULL], true)
+
+// Tilde ranges.
+// Meaning is "reasonably at or greater than"
+createToken('LONETILDE', '(?:~>?)')
+
+createToken('TILDETRIM', `(\\s*)${src[t.LONETILDE]}\\s+`, true)
+exports.tildeTrimReplace = '$1~'
+
+createToken('TILDE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAIN]}$`)
+createToken('TILDELOOSE', `^${src[t.LONETILDE]}${src[t.XRANGEPLAINLOOSE]}$`)
+
+// Caret ranges.
+// Meaning is "at least and backwards compatible with"
+createToken('LONECARET', '(?:\\^)')
+
+createToken('CARETTRIM', `(\\s*)${src[t.LONECARET]}\\s+`, true)
+exports.caretTrimReplace = '$1^'
+
+createToken('CARET', `^${src[t.LONECARET]}${src[t.XRANGEPLAIN]}$`)
+createToken('CARETLOOSE', `^${src[t.LONECARET]}${src[t.XRANGEPLAINLOOSE]}$`)
+
+// A simple gt/lt/eq thing, or just "" to indicate "any version"
+createToken('COMPARATORLOOSE', `^${src[t.GTLT]}\\s*(${src[t.LOOSEPLAIN]})$|^$`)
+createToken('COMPARATOR', `^${src[t.GTLT]}\\s*(${src[t.FULLPLAIN]})$|^$`)
+
+// An expression to strip any whitespace between the gtlt and the thing
+// it modifies, so that `> 1.2.3` ==> `>1.2.3`
+createToken('COMPARATORTRIM', `(\\s*)${src[t.GTLT]
+}\\s*(${src[t.LOOSEPLAIN]}|${src[t.XRANGEPLAIN]})`, true)
+exports.comparatorTrimReplace = '$1$2$3'
+
+// Something like `1.2.3 - 1.2.4`
+// Note that these all use the loose form, because they'll be
+// checked against either the strict or loose comparator form
+// later.
+createToken('HYPHENRANGE', `^\\s*(${src[t.XRANGEPLAIN]})` +
+                   `\\s+-\\s+` +
+                   `(${src[t.XRANGEPLAIN]})` +
+                   `\\s*$`)
+
+createToken('HYPHENRANGELOOSE', `^\\s*(${src[t.XRANGEPLAINLOOSE]})` +
+                        `\\s+-\\s+` +
+                        `(${src[t.XRANGEPLAINLOOSE]})` +
+                        `\\s*$`)
+
+// Star ranges basically just allow anything at all.
+createToken('STAR', '(<|>)?=?\\s*\\*')
+// >=0.0.0 is like a star
+createToken('GTE0', '^\\s*>=\\s*0\\.0\\.0\\s*$')
+createToken('GTE0PRE', '^\\s*>=\\s*0\\.0\\.0-0\\s*$')
+
 
 /***/ }),
 
@@ -62916,6 +64055,76 @@ Object.defineProperty(exports, "sha512_256", ({ enumerable: true, get: function 
 
 /***/ }),
 
+/***/ 205961:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ParserError = exports.getErrorStack = exports.getErrorMessage = void 0;
+const utils_1 = __webpack_require__(672495);
+/**
+ * Attempt to get an error message from a value.
+ *
+ * - If the value is an error, the error's message is returned.
+ * - If the value is an object with a `message` property, the value of that
+ * property is returned.
+ * - If the value is a string, the value is returned.
+ * - Otherwise, "Unknown error." is returned.
+ *
+ * @param error - The value to get an error message from.
+ * @returns The error message.
+ * @internal
+ */
+const getErrorMessage = (error) => {
+    if (typeof error === 'string') {
+        return error;
+    }
+    if (error instanceof Error) {
+        return error.message;
+    }
+    if ((0, utils_1.isObject)(error) &&
+        (0, utils_1.hasProperty)(error, 'message') &&
+        typeof error.message === 'string') {
+        return error.message;
+    }
+    return 'Unknown error.';
+};
+exports.getErrorMessage = getErrorMessage;
+/**
+ * Get the error stack from a value. If the value is an error, the error's stack
+ * is returned. Otherwise, it returns `undefined`.
+ *
+ * @param error - The value to get an error stack from.
+ * @returns The error stack, or `undefined` if the value is not an error.
+ * @internal
+ */
+const getErrorStack = (error) => {
+    if (error instanceof Error) {
+        return error.stack;
+    }
+    return undefined;
+};
+exports.getErrorStack = getErrorStack;
+/**
+ * An error that is thrown when the ABI encoder or decoder encounters an
+ * issue.
+ */
+class ParserError extends Error {
+    constructor(message, originalError) {
+        super(message);
+        this.name = 'ParserError';
+        const originalStack = (0, exports.getErrorStack)(originalError);
+        if (originalStack) {
+            this.stack = originalStack;
+        }
+    }
+}
+exports.ParserError = ParserError;
+//# sourceMappingURL=errors.js.map
+
+/***/ }),
+
 /***/ 205972:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -62991,6 +64200,19 @@ exports.enuls = (0, defineChain_js_1.defineChain)({
     testnet: false,
 });
 //# sourceMappingURL=enuls.js.map
+
+/***/ }),
+
+/***/ 207059:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const lt = (a, b, loose) => compare(a, b, loose) < 0
+module.exports = lt
+
 
 /***/ }),
 
@@ -69577,6 +70799,108 @@ exports.etherlink = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 230834:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.satisfiesVersionRange = exports.gtRange = exports.gtVersion = exports.assertIsSemVerRange = exports.assertIsSemVerVersion = exports.isValidSemVerRange = exports.isValidSemVerVersion = exports.VersionRangeStruct = exports.VersionStruct = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const semver_1 = __webpack_require__(999589);
+const assert_1 = __webpack_require__(405915);
+/**
+ * A struct for validating a version string.
+ */
+exports.VersionStruct = (0, superstruct_1.refine)((0, superstruct_1.string)(), 'Version', (value) => {
+    if ((0, semver_1.valid)(value) === null) {
+        return `Expected SemVer version, got "${value}"`;
+    }
+    return true;
+});
+exports.VersionRangeStruct = (0, superstruct_1.refine)((0, superstruct_1.string)(), 'Version range', (value) => {
+    if ((0, semver_1.validRange)(value) === null) {
+        return `Expected SemVer range, got "${value}"`;
+    }
+    return true;
+});
+/**
+ * Checks whether a SemVer version is valid.
+ *
+ * @param version - A potential version.
+ * @returns `true` if the version is valid, and `false` otherwise.
+ */
+function isValidSemVerVersion(version) {
+    return (0, superstruct_1.is)(version, exports.VersionStruct);
+}
+exports.isValidSemVerVersion = isValidSemVerVersion;
+/**
+ * Checks whether a SemVer version range is valid.
+ *
+ * @param versionRange - A potential version range.
+ * @returns `true` if the version range is valid, and `false` otherwise.
+ */
+function isValidSemVerRange(versionRange) {
+    return (0, superstruct_1.is)(versionRange, exports.VersionRangeStruct);
+}
+exports.isValidSemVerRange = isValidSemVerRange;
+/**
+ * Asserts that a value is a valid concrete SemVer version.
+ *
+ * @param version - A potential SemVer concrete version.
+ */
+function assertIsSemVerVersion(version) {
+    (0, assert_1.assertStruct)(version, exports.VersionStruct);
+}
+exports.assertIsSemVerVersion = assertIsSemVerVersion;
+/**
+ * Asserts that a value is a valid SemVer range.
+ *
+ * @param range - A potential SemVer range.
+ */
+function assertIsSemVerRange(range) {
+    (0, assert_1.assertStruct)(range, exports.VersionRangeStruct);
+}
+exports.assertIsSemVerRange = assertIsSemVerRange;
+/**
+ * Checks whether a SemVer version is greater than another.
+ *
+ * @param version1 - The left-hand version.
+ * @param version2 - The right-hand version.
+ * @returns `version1 > version2`.
+ */
+function gtVersion(version1, version2) {
+    return (0, semver_1.gt)(version1, version2);
+}
+exports.gtVersion = gtVersion;
+/**
+ * Checks whether a SemVer version is greater than all possibilities in a range.
+ *
+ * @param version - A SemvVer version.
+ * @param range - The range to check against.
+ * @returns `version > range`.
+ */
+function gtRange(version, range) {
+    return (0, semver_1.gtr)(version, range);
+}
+exports.gtRange = gtRange;
+/**
+ * Returns whether a SemVer version satisfies a SemVer range.
+ *
+ * @param version - The SemVer version to check.
+ * @param versionRange - The SemVer version range to check against.
+ * @returns Whether the version satisfied the version range.
+ */
+function satisfiesVersionRange(version, versionRange) {
+    return (0, semver_1.satisfies)(version, versionRange, {
+        includePrerelease: true,
+    });
+}
+exports.satisfiesVersionRange = satisfiesVersionRange;
+//# sourceMappingURL=versions.cjs.map
+
+/***/ }),
+
 /***/ 231662:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -71369,6 +72693,23 @@ const WalletContextProvider = ({ children, config, app, themeMode = constants_1.
 };
 exports.WalletContextProvider = WalletContextProvider;
 //# sourceMappingURL=WalletContext.js.map
+
+/***/ }),
+
+/***/ 240909:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const compareBuild = (a, b, loose) => {
+  const versionA = new SemVer(a, loose)
+  const versionB = new SemVer(b, loose)
+  return versionA.compare(versionB) || versionA.compareBuild(versionB)
+}
+module.exports = compareBuild
+
 
 /***/ }),
 
@@ -73928,6 +75269,74 @@ function defineFormatter(type, format) {
 
 /***/ }),
 
+/***/ 251832:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const parse = __webpack_require__(830144)
+
+const diff = (version1, version2) => {
+  const v1 = parse(version1, null, true)
+  const v2 = parse(version2, null, true)
+  const comparison = v1.compare(v2)
+
+  if (comparison === 0) {
+    return null
+  }
+
+  const v1Higher = comparison > 0
+  const highVersion = v1Higher ? v1 : v2
+  const lowVersion = v1Higher ? v2 : v1
+  const highHasPre = !!highVersion.prerelease.length
+  const lowHasPre = !!lowVersion.prerelease.length
+
+  if (lowHasPre && !highHasPre) {
+    // Going from prerelease -> no prerelease requires some special casing
+
+    // If the low version has only a major, then it will always be a major
+    // Some examples:
+    // 1.0.0-1 -> 1.0.0
+    // 1.0.0-1 -> 1.1.1
+    // 1.0.0-1 -> 2.0.0
+    if (!lowVersion.patch && !lowVersion.minor) {
+      return 'major'
+    }
+
+    // If the main part has no difference
+    if (lowVersion.compareMain(highVersion) === 0) {
+      if (lowVersion.minor && !lowVersion.patch) {
+        return 'minor'
+      }
+      return 'patch'
+    }
+  }
+
+  // add the `pre` prefix if we are going to a prerelease version
+  const prefix = highHasPre ? 'pre' : ''
+
+  if (v1.major !== v2.major) {
+    return prefix + 'major'
+  }
+
+  if (v1.minor !== v2.minor) {
+    return prefix + 'minor'
+  }
+
+  if (v1.patch !== v2.patch) {
+    return prefix + 'patch'
+  }
+
+  // high and low are preleases
+  return 'prerelease'
+}
+
+module.exports = diff
+
+
+/***/ }),
+
 /***/ 251939:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -75814,6 +77223,26 @@ exports.shimmerTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=shimmerTestnet.js.map
+
+/***/ }),
+
+/***/ 257272:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+/* provided dependency */ var process = __webpack_require__(365606);
+
+
+const debug = (
+  typeof process === 'object' &&
+  process.env &&
+  process.env.NODE_DEBUG &&
+  /\bsemver\b/i.test(process.env.NODE_DEBUG)
+) ? (...args) => console.error('SEMVER', ...args)
+  : () => {}
+
+module.exports = debug
+
 
 /***/ }),
 
@@ -82817,6 +84246,68 @@ function clear() {
 
 /***/ }),
 
+/***/ 272111:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const eq = __webpack_require__(694641)
+const neq = __webpack_require__(613999)
+const gt = __webpack_require__(535580)
+const gte = __webpack_require__(154089)
+const lt = __webpack_require__(207059)
+const lte = __webpack_require__(825200)
+
+const cmp = (a, op, b, loose) => {
+  switch (op) {
+    case '===':
+      if (typeof a === 'object') {
+        a = a.version
+      }
+      if (typeof b === 'object') {
+        b = b.version
+      }
+      return a === b
+
+    case '!==':
+      if (typeof a === 'object') {
+        a = a.version
+      }
+      if (typeof b === 'object') {
+        b = b.version
+      }
+      return a !== b
+
+    case '':
+    case '=':
+    case '==':
+      return eq(a, b, loose)
+
+    case '!=':
+      return neq(a, b, loose)
+
+    case '>':
+      return gt(a, b, loose)
+
+    case '>=':
+      return gte(a, b, loose)
+
+    case '<':
+      return lt(a, b, loose)
+
+    case '<=':
+      return lte(a, b, loose)
+
+    default:
+      throw new TypeError(`Invalid operator: ${op}`)
+  }
+}
+module.exports = cmp
+
+
+/***/ }),
+
 /***/ 272278:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -84718,6 +86209,24 @@ function hashAuthorization(parameters) {
     return hash;
 }
 //# sourceMappingURL=hashAuthorization.js.map
+
+/***/ }),
+
+/***/ 277631:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const Range = __webpack_require__(778311)
+
+// Mostly just for testing and legacy API reasons
+const toComparators = (range, options) =>
+  new Range(range, options).set
+    .map(comp => comp.map(c => c.value).join(' ').trim().split(' '))
+
+module.exports = toComparators
+
 
 /***/ }),
 
@@ -92518,6 +94027,40 @@ async function signAuthorization(parameters) {
 
 /***/ }),
 
+/***/ 300270:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const Range = __webpack_require__(778311)
+const minSatisfying = (versions, range, options) => {
+  let min = null
+  let minSV = null
+  let rangeObj = null
+  try {
+    rangeObj = new Range(range, options)
+  } catch (er) {
+    return null
+  }
+  versions.forEach((v) => {
+    if (rangeObj.test(v)) {
+      // satisfies(v, range, options)
+      if (!min || minSV.compare(v) === 1) {
+        // compare(min, v, true)
+        min = v
+        minSV = new SemVer(min, options)
+      }
+    }
+  })
+  return min
+}
+module.exports = minSatisfying
+
+
+/***/ }),
+
 /***/ 300552:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -93515,6 +95058,168 @@ Object.defineProperty(exports, "coin", ({ enumerable: true, get: function () { r
 Object.defineProperty(exports, "coins", ({ enumerable: true, get: function () { return amino_1.coins; } }));
 Object.defineProperty(exports, "parseCoins", ({ enumerable: true, get: function () { return amino_1.parseCoins; } }));
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 306150:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.number = exports.getBigInt = exports.assertNumberLength = exports.getLength = exports.isSigned = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const utils_2 = __webpack_require__(448746);
+const NUMBER_REGEX = /^u?int(?<length>[0-9]*)?$/u;
+/**
+ * Check if a number type is signed.
+ *
+ * @param type - The type to check.
+ * @returns Whether the type is signed.
+ */
+const isSigned = (type) => {
+    return !type.startsWith('u');
+};
+exports.isSigned = isSigned;
+/**
+ * Get the length of the specified type. If a length is not specified, if the
+ * length is out of range (8 <= n <= 256), or if the length is not a multiple of
+ * 8, this will throw an error.
+ *
+ * @param type - The type to get the length for.
+ * @returns The bit length of the type.
+ */
+const getLength = (type) => {
+    if (type === 'int' || type === 'uint') {
+        return 256;
+    }
+    const match = type.match(NUMBER_REGEX);
+    (0, utils_1.assert)(match?.groups?.length, new errors_1.ParserError(`Invalid number type. Expected a number type, but received "${type}".`));
+    const length = parseInt(match.groups.length, 10);
+    (0, utils_1.assert)(length >= 8 && length <= 256, new errors_1.ParserError(`Invalid number length. Expected a number between 8 and 256, but received "${type}".`));
+    (0, utils_1.assert)(length % 8 === 0, new errors_1.ParserError(`Invalid number length. Expected a multiple of 8, but received "${type}".`));
+    return length;
+};
+exports.getLength = getLength;
+/**
+ * Assert that the byte length of the given value is in range for the given
+ * number type.
+ *
+ * @param value - The value to check.
+ * @param type - The type of the value.
+ * @throws If the value is out of range for the type.
+ */
+const assertNumberLength = (value, type) => {
+    const length = (0, exports.getLength)(type);
+    const maxValue = BigInt(2) ** BigInt(length - ((0, exports.isSigned)(type) ? 1 : 0)) - BigInt(1);
+    if ((0, exports.isSigned)(type)) {
+        // Signed types must be in the range of `-(2^(length - 1))` to
+        // `2^(length - 1) - 1`.
+        (0, utils_1.assert)(value >= -(maxValue + BigInt(1)) && value <= maxValue, new errors_1.ParserError(`Number "${value}" is out of range for type "${type}".`));
+        return;
+    }
+    // Unsigned types must be in the range of `0` to `2^length - 1`.
+    (0, utils_1.assert)(value <= maxValue, new errors_1.ParserError(`Number "${value}" is out of range for type "${type}".`));
+};
+exports.assertNumberLength = assertNumberLength;
+/**
+ * Normalize a `bigint` value. This accepts the value as:
+ *
+ * - A `bigint`.
+ * - A `number`.
+ * - A decimal string, i.e., a string that does not start with "0x".
+ * - A hexadecimal string, i.e., a string that starts with "0x".
+ *
+ * @param value - The number-like value to parse.
+ * @returns The value parsed as bigint.
+ */
+const getBigInt = (value) => {
+    try {
+        return (0, utils_1.createBigInt)(value);
+    }
+    catch {
+        throw new errors_1.ParserError(`Invalid number. Expected a valid number value, but received "${value}".`);
+    }
+};
+exports.getBigInt = getBigInt;
+exports.number = {
+    isDynamic: false,
+    /**
+     * Check if a type is a number type.
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a number type.
+     */
+    isType(type) {
+        return NUMBER_REGEX.test(type);
+    },
+    /**
+     * Get the byte length of an encoded number type. Since `int` and `uint` are
+     * simple types, this will always return 32.
+     *
+     * @returns The byte length of the type.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode a number value.
+     *
+     * @param args - The arguments to encode.
+     * @param args.type - The type of the value.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The value to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @returns The bytes with the encoded value added to it.
+     */
+    encode({ type, buffer, value, packed }) {
+        const bigIntValue = (0, exports.getBigInt)(value);
+        (0, exports.assertNumberLength)(bigIntValue, type);
+        if ((0, exports.isSigned)(type)) {
+            // For packed encoding, the value is padded to the length of the type, and
+            // then added to the byte array.
+            if (packed) {
+                const length = (0, exports.getLength)(type) / 8;
+                return (0, utils_1.concatBytes)([buffer, (0, utils_1.signedBigIntToBytes)(bigIntValue, length)]);
+            }
+            return (0, utils_1.concatBytes)([
+                buffer,
+                (0, utils_2.padStart)((0, utils_1.signedBigIntToBytes)(bigIntValue, 32)),
+            ]);
+        }
+        // For packed encoding, the value is padded to the length of the type, and
+        // then added to the byte array.
+        if (packed) {
+            const length = (0, exports.getLength)(type) / 8;
+            return (0, utils_1.concatBytes)([
+                buffer,
+                (0, utils_2.padStart)((0, utils_1.bigIntToBytes)(bigIntValue), length),
+            ]);
+        }
+        return (0, utils_1.concatBytes)([buffer, (0, utils_2.padStart)((0, utils_1.bigIntToBytes)(bigIntValue))]);
+    },
+    /**
+     * Decode a number value.
+     *
+     * @param args - The decoding arguments.
+     * @param args.type - The type of the value.
+     * @param args.value - The value to decode.
+     * @returns The decoded value.
+     */
+    decode({ type, value }) {
+        const buffer = value.subarray(0, 32);
+        if ((0, exports.isSigned)(type)) {
+            const numberValue = (0, utils_1.bytesToSignedBigInt)(buffer);
+            (0, exports.assertNumberLength)(numberValue, type);
+            return numberValue;
+        }
+        const numberValue = (0, utils_1.bytesToBigInt)(buffer);
+        (0, exports.assertNumberLength)(numberValue, type);
+        return numberValue;
+    },
+};
+//# sourceMappingURL=number.js.map
 
 /***/ }),
 
@@ -99089,6 +100794,124 @@ function validate(uuid) {
 
 /***/ }),
 
+/***/ 316676:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.wrapError = exports.getErrorMessage = exports.isErrorWithStack = exports.isErrorWithMessage = exports.isErrorWithCode = void 0;
+const pony_cause_1 = __webpack_require__(171843);
+const misc_1 = __webpack_require__(658897);
+/**
+ * Type guard for determining whether the given value is an instance of Error.
+ * For errors generated via `fs.promises`, `error instanceof Error` won't work,
+ * so we have to come up with another way of testing.
+ *
+ * @param error - The object to check.
+ * @returns A boolean.
+ */
+function isError(error) {
+    return (error instanceof Error ||
+        ((0, misc_1.isObject)(error) && error.constructor.name === 'Error'));
+}
+/**
+ * Type guard for determining whether the given value is an error object with a
+ * `code` property such as the type of error that Node throws for filesystem
+ * operations, etc.
+ *
+ * @param error - The object to check.
+ * @returns A boolean.
+ */
+function isErrorWithCode(error) {
+    return typeof error === 'object' && error !== null && 'code' in error;
+}
+exports.isErrorWithCode = isErrorWithCode;
+/**
+ * Type guard for determining whether the given value is an error object with a
+ * `message` property, such as an instance of Error.
+ *
+ * @param error - The object to check.
+ * @returns A boolean.
+ */
+function isErrorWithMessage(error) {
+    return typeof error === 'object' && error !== null && 'message' in error;
+}
+exports.isErrorWithMessage = isErrorWithMessage;
+/**
+ * Type guard for determining whether the given value is an error object with a
+ * `stack` property, such as an instance of Error.
+ *
+ * @param error - The object to check.
+ * @returns A boolean.
+ */
+function isErrorWithStack(error) {
+    return typeof error === 'object' && error !== null && 'stack' in error;
+}
+exports.isErrorWithStack = isErrorWithStack;
+/**
+ * Attempts to obtain the message from a possible error object, defaulting to an
+ * empty string if it is impossible to do so.
+ *
+ * @param error - The possible error to get the message from.
+ * @returns The message if `error` is an object with a `message` property;
+ * the string version of `error` if it is not `undefined` or `null`; otherwise
+ * an empty string.
+ */
+function getErrorMessage(error) {
+    if (isErrorWithMessage(error) && typeof error.message === 'string') {
+        return error.message;
+    }
+    if ((0, misc_1.isNullOrUndefined)(error)) {
+        return '';
+    }
+    return String(error);
+}
+exports.getErrorMessage = getErrorMessage;
+/**
+ * Builds a new error object, linking it to the original error via the `cause`
+ * property if it is an Error.
+ *
+ * This function is useful to reframe error messages in general, but is
+ * _critical_ when interacting with any of Node's filesystem functions as
+ * provided via `fs.promises`, because these do not produce stack traces in the
+ * case of an I/O error (see <https://github.com/nodejs/node/issues/30944>).
+ *
+ * @param originalError - The error to be wrapped (something throwable).
+ * @param message - The desired message of the new error.
+ * @returns A new error object.
+ */
+function wrapError(originalError, message) {
+    if (isError(originalError)) {
+        let error;
+        if (Error.length === 2) {
+            // for some reason `tsserver` is not complaining that the
+            // Error constructor doesn't support a second argument in the editor,
+            // but `tsc` does. Error causes are not supported by our current tsc target (ES2020, we need ES2022 to make this work)
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            error = new Error(message, { cause: originalError });
+        }
+        else {
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            error = new pony_cause_1.ErrorWithCause(message, { cause: originalError });
+        }
+        if (isErrorWithCode(originalError)) {
+            error.code = originalError.code;
+        }
+        return error;
+    }
+    if (message.length > 0) {
+        return new Error(`${String(originalError)}: ${message}`);
+    }
+    return new Error(String(originalError));
+}
+exports.wrapError = wrapError;
+//# sourceMappingURL=errors.cjs.map
+
+/***/ }),
+
 /***/ 316926:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -101650,6 +103473,110 @@ function stringToBytes(value, opts = {}) {
     return bytes;
 }
 //# sourceMappingURL=toBytes.js.map
+
+/***/ }),
+
+/***/ 327827:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.fn = exports.getFunction = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const fixed_bytes_1 = __webpack_require__(683415);
+/**
+ * A struct that represents a Solidity function. The value must be a hex string
+ * or a byte array. The created value will always be an object with an `address`
+ * and `selector` property.
+ */
+const FunctionStruct = (0, superstruct_1.coerce)((0, superstruct_1.object)({
+    address: utils_1.StrictHexStruct,
+    selector: utils_1.StrictHexStruct,
+}), (0, superstruct_1.union)([utils_1.StrictHexStruct, (0, superstruct_1.instance)(Uint8Array)]), (value) => {
+    const bytes = (0, utils_1.createBytes)(value);
+    (0, utils_1.assert)(bytes.length === 24, new errors_1.ParserError(`Invalid Solidity function. Expected function to be 24 bytes long, but received ${bytes.length} bytes.`));
+    return {
+        address: (0, utils_1.bytesToHex)(bytes.subarray(0, 20)),
+        selector: (0, utils_1.bytesToHex)(bytes.subarray(20, 24)),
+    };
+});
+/**
+ * Normalize a function. This accepts the function as:
+ *
+ * - A {@link SolidityFunction} object.
+ * - A hexadecimal string.
+ * - A byte array.
+ *
+ * @param input - The function-like input.
+ * @returns The function as buffer.
+ */
+const getFunction = (input) => {
+    const value = (0, superstruct_1.create)(input, FunctionStruct);
+    return (0, utils_1.concatBytes)([(0, utils_1.hexToBytes)(value.address), (0, utils_1.hexToBytes)(value.selector)]);
+};
+exports.getFunction = getFunction;
+exports.fn = {
+    isDynamic: false,
+    /**
+     * Check if a type is a function type. Since `function` is a simple type, this
+     * is just a check that the type is "function".
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a function type.
+     */
+    isType: (type) => type === 'function',
+    /**
+     * Get the byte length of an encoded function. Since `function` is a simple
+     * type, this always returns 32.
+     *
+     * Note that actual functions are only 24 bytes long, but the encoding of
+     * the `function` type is always 32 bytes long.
+     *
+     * @returns The byte length of an encoded function.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode the given function to a byte array.
+     *
+     * @param args - The encoding arguments.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The function to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @param args.tight - Whether to use non-standard tight encoding.
+     * @returns The bytes with the encoded function added to it.
+     */
+    encode({ buffer, value, packed, tight }) {
+        const fnValue = (0, exports.getFunction)(value);
+        // Functions are encoded as `bytes24`, so we use the fixedBytes parser to
+        // encode the function.
+        return fixed_bytes_1.fixedBytes.encode({
+            type: 'bytes24',
+            buffer,
+            value: fnValue,
+            packed,
+            tight,
+        });
+    },
+    /**
+     * Decode the given byte array to a function.
+     *
+     * @param args - The decoding arguments.
+     * @param args.value - The byte array to decode.
+     * @returns The decoded function as a {@link SolidityFunction} object.
+     */
+    decode({ value }) {
+        return {
+            address: (0, utils_1.bytesToHex)(value.slice(0, 20)),
+            selector: (0, utils_1.bytesToHex)(value.slice(20, 24)),
+        };
+    },
+};
+//# sourceMappingURL=function.js.map
 
 /***/ }),
 
@@ -105136,6 +107063,19 @@ exports.vechain = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=vechain.js.map
+
+/***/ }),
+
+/***/ 343927:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compareBuild = __webpack_require__(240909)
+const sort = (list, loose) => list.sort((a, b) => compareBuild(a, b, loose))
+module.exports = sort
+
 
 /***/ }),
 
@@ -110651,6 +112591,21 @@ exports.jocMainnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 350560:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const compare = (a, b, loose) =>
+  new SemVer(a, loose).compare(new SemVer(b, loose))
+
+module.exports = compare
+
+
+/***/ }),
+
 /***/ 350616:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -114389,6 +116344,61 @@ exports.palm = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 359194:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.padEnd = exports.padStart = exports.set = void 0;
+const utils_1 = __webpack_require__(672495);
+const BUFFER_WIDTH = 32;
+/**
+ * Set `buffer` in `target` at the specified position.
+ *
+ * @param target - The buffer to set to.
+ * @param buffer - The buffer to set in the target.
+ * @param position - The position at which to set the target.
+ * @returns The combined buffer.
+ */
+const set = (target, buffer, position) => {
+    return (0, utils_1.concatBytes)([
+        target.subarray(0, position),
+        buffer,
+        target.subarray(position + buffer.length),
+    ]);
+};
+exports.set = set;
+/**
+ * Add padding to a buffer. If the buffer is larger than `length`, this function won't do anything. If it's smaller, the
+ * buffer will be padded to the specified length, with extra zeroes at the start.
+ *
+ * @param buffer - The buffer to add padding to.
+ * @param length - The number of bytes to pad the buffer to.
+ * @returns The padded buffer.
+ */
+const padStart = (buffer, length = BUFFER_WIDTH) => {
+    const padding = new Uint8Array(Math.max(length - buffer.length, 0)).fill(0x00);
+    return (0, utils_1.concatBytes)([padding, buffer]);
+};
+exports.padStart = padStart;
+/**
+ * Add padding to a buffer. If the buffer is larger than `length`, this function won't do anything. If it's smaller, the
+ * buffer will be padded to the specified length, with extra zeroes at the end.
+ *
+ * @param buffer - The buffer to add padding to.
+ * @param length - The number of bytes to pad the buffer to.
+ * @returns The padded buffer.
+ */
+const padEnd = (buffer, length = BUFFER_WIDTH) => {
+    const padding = new Uint8Array(Math.max(length - buffer.length, 0)).fill(0x00);
+    return (0, utils_1.concatBytes)([buffer, padding]);
+};
+exports.padEnd = padEnd;
+//# sourceMappingURL=buffer.js.map
+
+/***/ }),
+
 /***/ 359247:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -115234,6 +117244,53 @@ exports.storyTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 365020:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createDeferredPromise = void 0;
+/**
+ * Create a defered Promise.
+ *
+ * If the Promise is rejected prior to a handler being added, this can result in an
+ * `UnhandledPromiseRejection` error. Optionally this can be suppressed with the
+ * `suppressUnhandledRejection` flag, as it's common to belatedly handle deferred Promises, or to
+ * ignore them if they're no longer relevant (e.g. related to a cancelled request).
+ *
+ * However, be very careful that you have handled the Promise if you do this. Suppressing these
+ * errors is dangerous, they exist for good reason. An unhandled rejection can hide errors, making
+ * debugging extremely difficult. They should only be suppressed if you're confident that the
+ * Promise is always handled correctly, in both the success and failure cases.
+ *
+ * @param args - The arguments.
+ * @param args.suppressUnhandledRejection - This option adds an empty error handler
+ * to the Promise to suppress the UnhandledPromiseRejection error. This can be
+ * useful if the deferred Promise is sometimes intentionally not used.
+ * @returns A deferred Promise.
+ * @template Result - The result type of the Promise.
+ */
+function createDeferredPromise({ suppressUnhandledRejection = false, } = {}) {
+    let resolve;
+    let reject;
+    const promise = new Promise((innerResolve, innerReject) => {
+        resolve = innerResolve;
+        reject = innerReject;
+    });
+    if (suppressUnhandledRejection) {
+        promise.catch((_error) => {
+            // This handler is used to suppress the UnhandledPromiseRejection error
+        });
+    }
+    // @ts-expect-error We know that these are assigned, but TypeScript doesn't
+    return { promise, resolve, reject };
+}
+exports.createDeferredPromise = createDeferredPromise;
+//# sourceMappingURL=promise.cjs.map
+
+/***/ }),
+
 /***/ 365079:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -115819,6 +117876,543 @@ async function setNextBlockTimestamp(client, { timestamp }) {
     });
 }
 //# sourceMappingURL=setNextBlockTimestamp.js.map
+
+/***/ }),
+
+/***/ 367792:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.unknown = exports.union = exports.type = exports.tuple = exports.string = exports.set = exports.regexp = exports.record = exports.exactOptional = exports.optional = exports.object = exports.number = exports.nullable = exports.never = exports.map = exports.literal = exports.intersection = exports.integer = exports.instance = exports.func = exports.enums = exports.date = exports.boolean = exports.bigint = exports.array = exports.any = void 0;
+const struct_js_1 = __webpack_require__(899067);
+const utils_js_1 = __webpack_require__(570639);
+const utilities_js_1 = __webpack_require__(865991);
+/**
+ * Ensure that any value passes validation.
+ *
+ * @returns A struct that will always pass validation.
+ */
+function any() {
+    return (0, utilities_js_1.define)('any', () => true);
+}
+exports.any = any;
+/**
+ * Ensure that a value is an array and that its elements are of a specific type.
+ *
+ * Note: If you omit the element struct, the arrays elements will not be
+ * iterated at all. This can be helpful for cases where performance is critical,
+ * and it is preferred to using `array(any())`.
+ *
+ * @param Element - The struct to validate each element in the array against.
+ * @returns A new struct that will only accept arrays of the given type.
+ */
+function array(Element) {
+    return new struct_js_1.Struct({
+        type: 'array',
+        schema: Element,
+        *entries(value) {
+            if (Element && Array.isArray(value)) {
+                for (const [index, arrayValue] of value.entries()) {
+                    yield [index, arrayValue, Element];
+                }
+            }
+        },
+        coercer(value) {
+            return Array.isArray(value) ? value.slice() : value;
+        },
+        validator(value) {
+            return (Array.isArray(value) ||
+                `Expected an array value, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.array = array;
+/**
+ * Ensure that a value is a bigint.
+ *
+ * @returns A new struct that will only accept bigints.
+ */
+function bigint() {
+    return (0, utilities_js_1.define)('bigint', (value) => {
+        return typeof value === 'bigint';
+    });
+}
+exports.bigint = bigint;
+/**
+ * Ensure that a value is a boolean.
+ *
+ * @returns A new struct that will only accept booleans.
+ */
+function boolean() {
+    return (0, utilities_js_1.define)('boolean', (value) => {
+        return typeof value === 'boolean';
+    });
+}
+exports.boolean = boolean;
+/**
+ * Ensure that a value is a valid `Date`.
+ *
+ * Note: this also ensures that the value is *not* an invalid `Date` object,
+ * which can occur when parsing a date fails but still returns a `Date`.
+ *
+ * @returns A new struct that will only accept valid `Date` objects.
+ */
+function date() {
+    return (0, utilities_js_1.define)('date', (value) => {
+        return ((value instanceof Date && !isNaN(value.getTime())) ||
+            `Expected a valid \`Date\` object, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.date = date;
+/**
+ * Ensure that a value is one of a set of potential values.
+ *
+ * Note: after creating the struct, you can access the definition of the
+ * potential values as `struct.schema`.
+ *
+ * @param values - The potential values that the input can be.
+ * @returns A new struct that will only accept the given values.
+ */
+function enums(values) {
+    const schema = {};
+    const description = values.map((value) => (0, utils_js_1.print)(value)).join();
+    for (const key of values) {
+        schema[key] = key;
+    }
+    return new struct_js_1.Struct({
+        type: 'enums',
+        schema,
+        validator(value) {
+            return (values.includes(value) ||
+                `Expected one of \`${description}\`, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.enums = enums;
+/**
+ * Ensure that a value is a function.
+ *
+ * @returns A new struct that will only accept functions.
+ */
+// eslint-disable-next-line @typescript-eslint/ban-types
+function func() {
+    return (0, utilities_js_1.define)('func', (value) => {
+        return (typeof value === 'function' ||
+            `Expected a function, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.func = func;
+/**
+ * Ensure that a value is an instance of a specific class.
+ *
+ * @param Class - The class that the value must be an instance of.
+ * @returns A new struct that will only accept instances of the given class.
+ */
+function instance(Class) {
+    return (0, utilities_js_1.define)('instance', (value) => {
+        return (value instanceof Class ||
+            `Expected a \`${Class.name}\` instance, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.instance = instance;
+/**
+ * Ensure that a value is an integer.
+ *
+ * @returns A new struct that will only accept integers.
+ */
+function integer() {
+    return (0, utilities_js_1.define)('integer', (value) => {
+        return ((typeof value === 'number' && !isNaN(value) && Number.isInteger(value)) ||
+            `Expected an integer, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.integer = integer;
+/**
+ * Ensure that a value matches all of a set of types.
+ *
+ * @param Structs - The set of structs that the value must match.
+ * @returns A new struct that will only accept values that match all of the
+ * given structs.
+ */
+function intersection(Structs) {
+    return new struct_js_1.Struct({
+        type: 'intersection',
+        schema: null,
+        *entries(value, context) {
+            for (const { entries } of Structs) {
+                yield* entries(value, context);
+            }
+        },
+        *validator(value, context) {
+            for (const { validator } of Structs) {
+                yield* validator(value, context);
+            }
+        },
+        *refiner(value, context) {
+            for (const { refiner } of Structs) {
+                yield* refiner(value, context);
+            }
+        },
+    });
+}
+exports.intersection = intersection;
+/**
+ * Ensure that a value is an exact value, using `===` for comparison.
+ *
+ * @param constant - The exact value that the input must be.
+ * @returns A new struct that will only accept the exact given value.
+ */
+function literal(constant) {
+    const description = (0, utils_js_1.print)(constant);
+    const valueType = typeof constant;
+    return new struct_js_1.Struct({
+        type: 'literal',
+        schema: valueType === 'string' ||
+            valueType === 'number' ||
+            valueType === 'boolean'
+            ? constant
+            : null,
+        validator(value) {
+            return (value === constant ||
+                `Expected the literal \`${description}\`, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.literal = literal;
+/**
+ * Ensure that a value is a `Map` object, and that its keys and values are of
+ * specific types.
+ *
+ * @param Key - The struct to validate each key in the map against.
+ * @param Value - The struct to validate each value in the map against.
+ * @returns A new struct that will only accept `Map` objects.
+ */
+function map(Key, Value) {
+    return new struct_js_1.Struct({
+        type: 'map',
+        schema: null,
+        *entries(value) {
+            if (Key && Value && value instanceof Map) {
+                for (const [mapKey, mapValue] of value.entries()) {
+                    yield [mapKey, mapKey, Key];
+                    yield [mapKey, mapValue, Value];
+                }
+            }
+        },
+        coercer(value) {
+            return value instanceof Map ? new Map(value) : value;
+        },
+        validator(value) {
+            return (value instanceof Map ||
+                `Expected a \`Map\` object, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.map = map;
+/**
+ * Ensure that no value ever passes validation.
+ *
+ * @returns A new struct that will never pass validation.
+ */
+function never() {
+    return (0, utilities_js_1.define)('never', () => false);
+}
+exports.never = never;
+/**
+ * Augment an existing struct to allow `null` values.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will accept `null` values.
+ */
+function nullable(struct) {
+    return new struct_js_1.Struct({
+        ...struct,
+        validator: (value, ctx) => value === null || struct.validator(value, ctx),
+        refiner: (value, ctx) => value === null || struct.refiner(value, ctx),
+    });
+}
+exports.nullable = nullable;
+/**
+ * Ensure that a value is a number.
+ *
+ * @returns A new struct that will only accept numbers.
+ */
+function number() {
+    return (0, utilities_js_1.define)('number', (value) => {
+        return ((typeof value === 'number' && !isNaN(value)) ||
+            `Expected a number, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.number = number;
+/**
+ * Ensure that a value is an object, that it has a known set of properties,
+ * and that its properties are of specific types.
+ *
+ * Note: Unrecognized properties will fail validation.
+ *
+ * @param schema - An object that defines the structure of the object.
+ * @returns A new struct that will only accept objects.
+ */
+function object(schema) {
+    const knowns = schema ? Object.keys(schema) : [];
+    const Never = never();
+    return new struct_js_1.Struct({
+        type: 'object',
+        schema: schema ?? null,
+        *entries(value) {
+            if (schema && (0, utils_js_1.isObject)(value)) {
+                const unknowns = new Set(Object.keys(value));
+                for (const key of knowns) {
+                    unknowns.delete(key);
+                    const propertySchema = schema[key];
+                    if (struct_js_1.ExactOptionalStruct.isExactOptional(propertySchema) &&
+                        !Object.prototype.hasOwnProperty.call(value, key)) {
+                        continue;
+                    }
+                    yield [key, value[key], schema[key]];
+                }
+                for (const key of unknowns) {
+                    yield [key, value[key], Never];
+                }
+            }
+        },
+        validator(value) {
+            return ((0, utils_js_1.isObject)(value) || `Expected an object, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+        coercer(value) {
+            return (0, utils_js_1.isObject)(value) ? { ...value } : value;
+        },
+    });
+}
+exports.object = object;
+/**
+ * Augment a struct to allow `undefined` values.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will accept `undefined` values.
+ */
+function optional(struct) {
+    return new struct_js_1.Struct({
+        ...struct,
+        validator: (value, ctx) => value === undefined || struct.validator(value, ctx),
+        refiner: (value, ctx) => value === undefined || struct.refiner(value, ctx),
+    });
+}
+exports.optional = optional;
+/**
+ * Augment a struct such that, if it is the property of an object, it is exactly optional.
+ * In other words, it is either present with the correct type, or not present at all.
+ *
+ * NOTE: Only intended for use with `object()` structs.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that can be used to create exactly optional properties of `object()`
+ * structs.
+ */
+function exactOptional(struct) {
+    return new struct_js_1.ExactOptionalStruct(struct);
+}
+exports.exactOptional = exactOptional;
+/**
+ * Ensure that a value is an object with keys and values of specific types, but
+ * without ensuring any specific shape of properties.
+ *
+ * Like TypeScript's `Record` utility.
+ */
+/**
+ * Ensure that a value is an object with keys and values of specific types, but
+ * without ensuring any specific shape of properties.
+ *
+ * @param Key - The struct to validate each key in the record against.
+ * @param Value - The struct to validate each value in the record against.
+ * @returns A new struct that will only accept objects.
+ */
+function record(Key, Value) {
+    return new struct_js_1.Struct({
+        type: 'record',
+        schema: null,
+        *entries(value) {
+            if ((0, utils_js_1.isObject)(value)) {
+                // eslint-disable-next-line guard-for-in
+                for (const objectKey in value) {
+                    const objectValue = value[objectKey];
+                    yield [objectKey, objectKey, Key];
+                    yield [objectKey, objectValue, Value];
+                }
+            }
+        },
+        validator(value) {
+            return ((0, utils_js_1.isObject)(value) || `Expected an object, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.record = record;
+/**
+ * Ensure that a value is a `RegExp`.
+ *
+ * Note: this does not test the value against the regular expression! For that
+ * you need to use the `pattern()` refinement.
+ *
+ * @returns A new struct that will only accept `RegExp` objects.
+ */
+function regexp() {
+    return (0, utilities_js_1.define)('regexp', (value) => {
+        return value instanceof RegExp;
+    });
+}
+exports.regexp = regexp;
+/**
+ * Ensure that a value is a `Set` object, and that its elements are of a
+ * specific type.
+ *
+ * @param Element - The struct to validate each element in the set against.
+ * @returns A new struct that will only accept `Set` objects.
+ */
+function set(Element) {
+    return new struct_js_1.Struct({
+        type: 'set',
+        schema: null,
+        *entries(value) {
+            if (Element && value instanceof Set) {
+                for (const setValue of value) {
+                    yield [setValue, setValue, Element];
+                }
+            }
+        },
+        coercer(value) {
+            return value instanceof Set ? new Set(value) : value;
+        },
+        validator(value) {
+            return (value instanceof Set ||
+                `Expected a \`Set\` object, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.set = set;
+/**
+ * Ensure that a value is a string.
+ *
+ * @returns A new struct that will only accept strings.
+ */
+function string() {
+    return (0, utilities_js_1.define)('string', (value) => {
+        return (typeof value === 'string' ||
+            `Expected a string, but received: ${(0, utils_js_1.print)(value)}`);
+    });
+}
+exports.string = string;
+/**
+ * Ensure that a value is a tuple of a specific length, and that each of its
+ * elements is of a specific type.
+ *
+ * @param Structs - The set of structs that the value must match.
+ * @returns A new struct that will only accept tuples of the given types.
+ */
+function tuple(Structs) {
+    const Never = never();
+    return new struct_js_1.Struct({
+        type: 'tuple',
+        schema: null,
+        *entries(value) {
+            if (Array.isArray(value)) {
+                const length = Math.max(Structs.length, value.length);
+                for (let i = 0; i < length; i++) {
+                    yield [i, value[i], Structs[i] || Never];
+                }
+            }
+        },
+        validator(value) {
+            return (Array.isArray(value) ||
+                `Expected an array, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+    });
+}
+exports.tuple = tuple;
+/**
+ * Ensure that a value has a set of known properties of specific types.
+ *
+ * Note: Unrecognized properties are allowed and untouched. This is similar to
+ * how TypeScript's structural typing works.
+ *
+ * @param schema - An object that defines the structure of the object.
+ * @returns A new struct that will only accept objects.
+ */
+function type(schema) {
+    const keys = Object.keys(schema);
+    return new struct_js_1.Struct({
+        type: 'type',
+        schema,
+        *entries(value) {
+            if ((0, utils_js_1.isObject)(value)) {
+                for (const k of keys) {
+                    yield [k, value[k], schema[k]];
+                }
+            }
+        },
+        validator(value) {
+            return ((0, utils_js_1.isObject)(value) || `Expected an object, but received: ${(0, utils_js_1.print)(value)}`);
+        },
+        coercer(value) {
+            return (0, utils_js_1.isObject)(value) ? { ...value } : value;
+        },
+    });
+}
+exports.type = type;
+/**
+ * Ensure that a value matches one of a set of types.
+ *
+ * @param Structs - The set of structs that the value must match.
+ * @returns A new struct that will only accept values that match one of the
+ * given structs.
+ */
+function union(Structs) {
+    const description = Structs.map((struct) => struct.type).join(' | ');
+    return new struct_js_1.Struct({
+        type: 'union',
+        schema: null,
+        coercer(value) {
+            for (const InnerStruct of Structs) {
+                const [error, coerced] = InnerStruct.validate(value, { coerce: true });
+                if (!error) {
+                    return coerced;
+                }
+            }
+            return value;
+        },
+        validator(value, ctx) {
+            const failures = [];
+            for (const InnerStruct of Structs) {
+                const [...tuples] = (0, utils_js_1.run)(value, InnerStruct, ctx);
+                const [first] = tuples;
+                if (!first?.[0]) {
+                    return [];
+                }
+                for (const [failure] of tuples) {
+                    if (failure) {
+                        failures.push(failure);
+                    }
+                }
+            }
+            return [
+                `Expected the value to satisfy a union of \`${description}\`, but received: ${(0, utils_js_1.print)(value)}`,
+                ...failures,
+            ];
+        },
+    });
+}
+exports.union = union;
+/**
+ * Ensure that any value passes validation, without widening its type to `any`.
+ *
+ * @returns A struct that will always pass validation.
+ */
+function unknown() {
+    return (0, utilities_js_1.define)('unknown', () => true);
+}
+exports.unknown = unknown;
+//# sourceMappingURL=types.cjs.map
 
 /***/ }),
 
@@ -116701,6 +119295,20 @@ function clear() {
         cache.clear();
 }
 //# sourceMappingURL=Caches.js.map
+
+/***/ }),
+
+/***/ 375571:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+// Determine if version is greater than all the versions possible in the range.
+const outside = __webpack_require__(697075)
+const gtr = (version, range, options) => outside(version, range, '>', options)
+module.exports = gtr
+
 
 /***/ }),
 
@@ -123242,6 +125850,54 @@ exports.fusion = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 389949:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.SimpleMerkleTree = exports.formatLeaf = void 0;
+const abi_utils_1 = __webpack_require__(593256);
+const bytes_1 = __webpack_require__(144144);
+const core_1 = __webpack_require__(946452);
+const merkletree_1 = __webpack_require__(550065);
+const errors_1 = __webpack_require__(190522);
+function formatLeaf(value) {
+    return (0, bytes_1.toHex)((0, abi_utils_1.encode)(['bytes32'], [value]));
+}
+exports.formatLeaf = formatLeaf;
+class SimpleMerkleTree extends merkletree_1.MerkleTreeImpl {
+    static of(values, options = {}) {
+        const [tree, indexedValues] = merkletree_1.MerkleTreeImpl.prepare(values, options, formatLeaf, options.nodeHash);
+        return new SimpleMerkleTree(tree, indexedValues, formatLeaf, options.nodeHash);
+    }
+    static load(data, nodeHash) {
+        (0, errors_1.validateArgument)(data.format === 'simple-v1', `Unknown format '${data.format}'`);
+        (0, errors_1.validateArgument)((nodeHash == undefined) !== (data.hash == 'custom'), nodeHash ? 'Data does not expect a custom node hashing function' : 'Data expects a custom node hashing function');
+        const tree = new SimpleMerkleTree(data.tree, data.values, formatLeaf, nodeHash);
+        tree.validate();
+        return tree;
+    }
+    static verify(root, leaf, proof, nodeHash) {
+        return (0, bytes_1.toHex)(root) === (0, core_1.processProof)(formatLeaf(leaf), proof, nodeHash);
+    }
+    static verifyMultiProof(root, multiproof, nodeHash) {
+        return (0, bytes_1.toHex)(root) === (0, core_1.processMultiProof)(multiproof, nodeHash);
+    }
+    dump() {
+        return {
+            format: 'simple-v1',
+            tree: this.tree,
+            values: this.values.map(({ value, treeIndex }) => ({ value: (0, bytes_1.toHex)(value), treeIndex })),
+            ...(this.nodeHash ? { hash: 'custom' } : {}),
+        };
+    }
+}
+exports.SimpleMerkleTree = SimpleMerkleTree;
+//# sourceMappingURL=simple.js.map
+
+/***/ }),
+
 /***/ 390135:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -126422,6 +129078,31 @@ function signatureToCompactSignature(signature) {
 
 /***/ }),
 
+/***/ 398587:
+/***/ ((module) => {
+
+"use strict";
+
+
+// parse out just the options we care about
+const looseOption = Object.freeze({ loose: true })
+const emptyOpts = Object.freeze({ })
+const parseOptions = options => {
+  if (!options) {
+    return emptyOpts
+  }
+
+  if (typeof options !== 'object') {
+    return looseOption
+  }
+
+  return options
+}
+module.exports = parseOptions
+
+
+/***/ }),
+
 /***/ 398861:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -126847,6 +129528,185 @@ exports.chips = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=chips.js.map
+
+/***/ }),
+
+/***/ 400186:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.array = exports.getTupleType = exports.getArrayType = exports.isArrayType = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const packer_1 = __webpack_require__(537700);
+const utils_2 = __webpack_require__(448746);
+const fixed_bytes_1 = __webpack_require__(683415);
+const tuple_1 = __webpack_require__(130717);
+const ARRAY_REGEX = /^(?<type>.*)\[(?<length>\d*?)\]$/u;
+const isArrayType = (type) => ARRAY_REGEX.test(type);
+exports.isArrayType = isArrayType;
+/**
+ * Get the type of the array.
+ *
+ * @param type - The type to get the array type for.
+ * @returns The array type.
+ */
+const getArrayType = (type) => {
+    const match = type.match(ARRAY_REGEX);
+    (0, utils_1.assert)(match?.groups?.type, new errors_1.ParserError(`Invalid array type. Expected an array type, but received "${type}".`));
+    return [
+        match.groups.type,
+        match.groups.length ? parseInt(match.groups.length, 10) : undefined,
+    ];
+};
+exports.getArrayType = getArrayType;
+/**
+ * Get the type of the array as a tuple type. This is used for encoding fixed
+ * length arrays, which are encoded as tuples.
+ *
+ * @param innerType - The type of the array.
+ * @param length - The length of the array.
+ * @returns The tuple type.
+ */
+const getTupleType = (innerType, length) => {
+    return `(${new Array(length).fill(innerType).join(',')})`;
+};
+exports.getTupleType = getTupleType;
+exports.array = {
+    /**
+     * Check if the array is dynamic. Arrays are dynamic if the array does not
+     * have a fixed length, or if the array type is dynamic.
+     *
+     * @param type - The type to check.
+     * @returns Whether the array is dynamic.
+     */
+    isDynamic(type) {
+        const [innerType, length] = (0, exports.getArrayType)(type);
+        return (
+        // `T[]` is dynamic for any `T`. `T[k]` is dynamic for any dynamic `T` and
+        // any `k >= 0`.
+        length === undefined || (0, packer_1.isDynamicParser)((0, packer_1.getParser)(innerType), innerType));
+    },
+    /**
+     * Check if a type is an array type.
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is an array type.
+     */
+    isType(type) {
+        return (0, exports.isArrayType)(type);
+    },
+    /**
+     * Get the byte length of an encoded array. If the array is dynamic, this
+     * returns 32, i.e., the length of the pointer to the array. If the array is
+     * static, this returns the byte length of the resulting tuple type.
+     *
+     * @param type - The type to get the byte length for.
+     * @returns The byte length of an encoded array.
+     */
+    getByteLength(type) {
+        (0, utils_1.assert)((0, exports.isArrayType)(type), new errors_1.ParserError(`Expected an array type, but received "${type}".`));
+        const [innerType, length] = (0, exports.getArrayType)(type);
+        if (!(0, packer_1.isDynamicParser)(this, type) && length !== undefined) {
+            return tuple_1.tuple.getByteLength((0, exports.getTupleType)(innerType, length));
+        }
+        return 32;
+    },
+    /**
+     * Encode the given array to a byte array. If the array is static, this uses
+     * the tuple encoder.
+     *
+     * @param args - The encoding arguments.
+     * @param args.type - The type of the array.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The array to encode.
+     * @param args.packed - Whether to use non-standard packed encoding.
+     * @param args.tight - Whether to use non-standard tight encoding.
+     * @returns The bytes with the encoded array added to it.
+     */
+    encode({ type, buffer, value, packed, tight }) {
+        const [arrayType, fixedLength] = (0, exports.getArrayType)(type);
+        // Packed encoding does not support nested arrays.
+        (0, utils_1.assert)(!packed || !(0, exports.isArrayType)(arrayType), new errors_1.ParserError(`Cannot pack nested arrays.`));
+        // Tightly pack `T[]` where `T` is a dynamic type. This is not supported in
+        // Solidity, but is commonly used in the Ethereum ecosystem.
+        if (packed && (0, packer_1.isDynamicParser)((0, packer_1.getParser)(arrayType), arrayType)) {
+            return (0, packer_1.pack)({
+                types: new Array(value.length).fill(arrayType),
+                values: value,
+                byteArray: buffer,
+                packed,
+                arrayPacked: true,
+                tight,
+            });
+        }
+        if (fixedLength) {
+            (0, utils_1.assert)(fixedLength === value.length, new errors_1.ParserError(`Array length does not match type length. Expected a length of ${fixedLength}, but received ${value.length}.`));
+            // `T[k]` for any `T` and `k` is encoded as `(T[0], ..., T[k - 1])`.
+            return tuple_1.tuple.encode({
+                type: (0, exports.getTupleType)(arrayType, fixedLength),
+                buffer,
+                value,
+                // In "tight" mode, we don't pad the values to 32 bytes if the value is
+                // of type `bytesN`. This is an edge case in `ethereumjs-abi` that we
+                // support to provide compatibility with it.
+                packed: fixed_bytes_1.fixedBytes.isType(arrayType) && tight,
+                tight,
+            });
+        }
+        // For packed encoding, we don't need to encode the length of the array,
+        // so we can just encode the values.
+        if (packed) {
+            return (0, packer_1.pack)({
+                types: new Array(value.length).fill(arrayType),
+                values: value,
+                byteArray: buffer,
+                // In "tight" mode, we don't pad the values to 32 bytes if the value is
+                // of type `bytesN`. This is an edge case in `ethereumjs-abi` that we
+                // support to provide compatibility with it.
+                packed: fixed_bytes_1.fixedBytes.isType(arrayType) && tight,
+                arrayPacked: true,
+                tight,
+            });
+        }
+        // `T[]` with `k` elements is encoded as `k (T[0], ..., T[k - 1])`. That
+        // means that we just need to encode the length of the array, and then the
+        // array itself. The pointer is encoded by the {@link pack} function.
+        const arrayLength = (0, utils_2.padStart)((0, utils_1.numberToBytes)(value.length));
+        return (0, packer_1.pack)({
+            types: new Array(value.length).fill(arrayType),
+            values: value,
+            byteArray: (0, utils_1.concatBytes)([buffer, arrayLength]),
+            packed,
+            tight,
+        });
+    },
+    /**
+     * Decode an array from the given byte array.
+     *
+     * @param args - The decoding arguments.
+     * @param args.type - The type of the array.
+     * @param args.value - The byte array to decode.
+     * @returns The decoded array.
+     */
+    decode({ type, value, ...rest }) {
+        const [arrayType, fixedLength] = (0, exports.getArrayType)(type);
+        if (fixedLength) {
+            const result = tuple_1.tuple.decode({
+                type: (0, exports.getTupleType)(arrayType, fixedLength),
+                value,
+                ...rest,
+            });
+            (0, utils_1.assert)(result.length === fixedLength, new errors_1.ParserError(`Array length does not match type length. Expected a length of ${fixedLength}, but received ${result.length}.`));
+            return result;
+        }
+        const arrayLength = (0, utils_1.bytesToNumber)(value.subarray(0, 32));
+        return (0, packer_1.unpack)(new Array(arrayLength).fill(arrayType), value.subarray(32));
+    },
+};
+//# sourceMappingURL=array.js.map
 
 /***/ }),
 
@@ -131478,6 +134338,140 @@ async function requestAddresses(client) {
 
 /***/ }),
 
+/***/ 405915:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.assertExhaustive = exports.assertStruct = exports.assert = exports.AssertionError = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const errors_1 = __webpack_require__(316676);
+/**
+ * Check if a value is a constructor, i.e., a function that can be called with
+ * the `new` keyword.
+ *
+ * @param fn - The value to check.
+ * @returns `true` if the value is a constructor, or `false` otherwise.
+ */
+function isConstructable(fn) {
+    /* istanbul ignore next */
+    return Boolean(typeof fn?.prototype?.constructor?.name === 'string');
+}
+/**
+ * Attempts to obtain the message from a possible error object. If it is
+ * possible to do so, any trailing period will be removed from the message;
+ * otherwise an empty string is returned.
+ *
+ * @param error - The error object to get the message from.
+ * @returns The message without any trailing period if `error` is an object
+ * with a `message` property; the string version of `error` without any trailing
+ * period if it is not `undefined` or `null`; otherwise an empty string.
+ */
+function getErrorMessageWithoutTrailingPeriod(error) {
+    // We'll add our own period.
+    return (0, errors_1.getErrorMessage)(error).replace(/\.$/u, '');
+}
+/**
+ * Initialise an {@link AssertionErrorConstructor} error.
+ *
+ * @param ErrorWrapper - The error class to use.
+ * @param message - The error message.
+ * @returns The error object.
+ */
+// eslint-disable-next-line @typescript-eslint/naming-convention
+function getError(ErrorWrapper, message) {
+    if (isConstructable(ErrorWrapper)) {
+        return new ErrorWrapper({
+            message,
+        });
+    }
+    return ErrorWrapper({
+        message,
+    });
+}
+/**
+ * The default error class that is thrown if an assertion fails.
+ */
+class AssertionError extends Error {
+    constructor(options) {
+        super(options.message);
+        this.code = 'ERR_ASSERTION';
+    }
+}
+exports.AssertionError = AssertionError;
+/**
+ * Same as Node.js assert.
+ * If the value is falsy, throws an error, does nothing otherwise.
+ *
+ * @throws {@link AssertionError} If value is falsy.
+ * @param value - The test that should be truthy to pass.
+ * @param message - Message to be passed to {@link AssertionError} or an
+ * {@link Error} instance to throw.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}. If a custom error class is provided for
+ * the `message` argument, this argument is ignored.
+ */
+function assert(value, message = 'Assertion failed.', 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper = AssertionError) {
+    if (!value) {
+        if (message instanceof Error) {
+            throw message;
+        }
+        throw getError(ErrorWrapper, message);
+    }
+}
+exports.assert = assert;
+/**
+ * Assert a value against a Superstruct struct.
+ *
+ * @param value - The value to validate.
+ * @param struct - The struct to validate against.
+ * @param errorPrefix - A prefix to add to the error message. Defaults to
+ * "Assertion failed".
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the value is not valid.
+ */
+function assertStruct(value, struct, errorPrefix = 'Assertion failed', 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper = AssertionError) {
+    try {
+        (0, superstruct_1.assert)(value, struct);
+    }
+    catch (error) {
+        throw getError(ErrorWrapper, `${errorPrefix}: ${getErrorMessageWithoutTrailingPeriod(error)}.`);
+    }
+}
+exports.assertStruct = assertStruct;
+/**
+ * Use in the default case of a switch that you want to be fully exhaustive.
+ * Using this function forces the compiler to enforce exhaustivity during
+ * compile-time.
+ *
+ * @example
+ * ```
+ * const number = 1;
+ * switch (number) {
+ *   case 0:
+ *     ...
+ *   case 1:
+ *     ...
+ *   default:
+ *     assertExhaustive(snapPrefix);
+ * }
+ * ```
+ * @param _object - The object on which the switch is being operated.
+ */
+function assertExhaustive(_object) {
+    throw new Error('Invalid branch reached. Should be detected during compilation.');
+}
+exports.assertExhaustive = assertExhaustive;
+//# sourceMappingURL=assert.cjs.map
+
+/***/ }),
+
 /***/ 406400:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -133052,6 +136046,51 @@ function withDedupe(fn, { enabled = true, id }) {
 
 /***/ }),
 
+/***/ 416874:
+/***/ ((module) => {
+
+"use strict";
+
+
+// Note: this is the semver.org version of the spec that it implements
+// Not necessarily the package version of this code.
+const SEMVER_SPEC_VERSION = '2.0.0'
+
+const MAX_LENGTH = 256
+const MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER ||
+/* istanbul ignore next */ 9007199254740991
+
+// Max safe segment length for coercion.
+const MAX_SAFE_COMPONENT_LENGTH = 16
+
+// Max safe length for a build identifier. The max length minus 6 characters for
+// the shortest version with a build 0.0.0+BUILD.
+const MAX_SAFE_BUILD_LENGTH = MAX_LENGTH - 6
+
+const RELEASE_TYPES = [
+  'major',
+  'premajor',
+  'minor',
+  'preminor',
+  'patch',
+  'prepatch',
+  'prerelease',
+]
+
+module.exports = {
+  MAX_LENGTH,
+  MAX_SAFE_COMPONENT_LENGTH,
+  MAX_SAFE_BUILD_LENGTH,
+  MAX_SAFE_INTEGER,
+  RELEASE_TYPES,
+  SEMVER_SPEC_VERSION,
+  FLAG_INCLUDE_PRERELEASE: 0b001,
+  FLAG_LOOSE: 0b010,
+}
+
+
+/***/ }),
+
 /***/ 417102:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -134561,6 +137600,56 @@ exports.soneiumMinato = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=soneiumMinato.js.map
+
+/***/ }),
+
+/***/ 425888:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createModuleLogger = exports.createProjectLogger = void 0;
+const debug_1 = __importDefault(__webpack_require__(817833));
+const globalLogger = (0, debug_1.default)('metamask');
+/**
+ * Creates a logger via the `debug` library whose log messages will be tagged
+ * using the name of your project. By default, such messages will be
+ * suppressed, but you can reveal them by setting the `DEBUG` environment
+ * variable to `metamask:<projectName>`. You can also set this variable to
+ * `metamask:*` if you want to see log messages from all MetaMask projects that
+ * are also using this function to create their loggers.
+ *
+ * @param projectName - The name of your project. This should be the name of
+ * your NPM package if you're developing one.
+ * @returns An instance of `debug`.
+ */
+function createProjectLogger(projectName) {
+    return globalLogger.extend(projectName);
+}
+exports.createProjectLogger = createProjectLogger;
+/**
+ * Creates a logger via the `debug` library which is derived from the logger for
+ * the whole project whose log messages will be tagged using the name of your
+ * module. By default, such messages will be suppressed, but you can reveal them
+ * by setting the `DEBUG` environment variable to
+ * `metamask:<projectName>:<moduleName>`. You can also set this variable to
+ * `metamask:<projectName>:*` if you want to see log messages from the project,
+ * or `metamask:*` if you want to see log messages from all MetaMask projects.
+ *
+ * @param projectLogger - The logger created via {@link createProjectLogger}.
+ * @param moduleName - The name of your module. You could use the name of the
+ * file where you're using this logger or some other name.
+ * @returns An instance of `debug`.
+ */
+function createModuleLogger(projectLogger, moduleName) {
+    return projectLogger.extend(moduleName);
+}
+exports.createModuleLogger = createModuleLogger;
+//# sourceMappingURL=logging.cjs.map
 
 /***/ }),
 
@@ -155657,6 +158746,47 @@ exports.glideL2Protocol = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 440056:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.base64 = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const assert_1 = __webpack_require__(405915);
+/**
+ * Ensure that a provided string-based struct is valid base64.
+ *
+ * @param struct - The string based struct.
+ * @param options - Optional options to specialize base64 validation. See {@link Base64Options} documentation.
+ * @returns A superstruct validating base64.
+ */
+const base64 = (struct, options = {}) => {
+    const paddingRequired = options.paddingRequired ?? false;
+    const characterSet = options.characterSet ?? 'base64';
+    let letters;
+    if (characterSet === 'base64') {
+        letters = String.raw `[A-Za-z0-9+\/]`;
+    }
+    else {
+        (0, assert_1.assert)(characterSet === 'base64url');
+        letters = String.raw `[-_A-Za-z0-9]`;
+    }
+    let re;
+    if (paddingRequired) {
+        re = new RegExp(`^(?:${letters}{4})*(?:${letters}{3}=|${letters}{2}==)?$`, 'u');
+    }
+    else {
+        re = new RegExp(`^(?:${letters}{4})*(?:${letters}{2,3}|${letters}{3}=|${letters}{2}==)?$`, 'u');
+    }
+    return (0, superstruct_1.pattern)(struct, re);
+};
+exports.base64 = base64;
+//# sourceMappingURL=base64.cjs.map
+
+/***/ }),
+
 /***/ 440397:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -155739,6 +158869,77 @@ exports.dodochainTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=dodochainTestnet.js.map
+
+/***/ }),
+
+/***/ 441261:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const Range = __webpack_require__(778311)
+const gt = __webpack_require__(535580)
+
+const minVersion = (range, loose) => {
+  range = new Range(range, loose)
+
+  let minver = new SemVer('0.0.0')
+  if (range.test(minver)) {
+    return minver
+  }
+
+  minver = new SemVer('0.0.0-0')
+  if (range.test(minver)) {
+    return minver
+  }
+
+  minver = null
+  for (let i = 0; i < range.set.length; ++i) {
+    const comparators = range.set[i]
+
+    let setMin = null
+    comparators.forEach((comparator) => {
+      // Clone to avoid manipulating the comparator's semver object.
+      const compver = new SemVer(comparator.semver.version)
+      switch (comparator.operator) {
+        case '>':
+          if (compver.prerelease.length === 0) {
+            compver.patch++
+          } else {
+            compver.prerelease.push(0)
+          }
+          compver.raw = compver.format()
+          /* fallthrough */
+        case '':
+        case '>=':
+          if (!setMin || gt(compver, setMin)) {
+            setMin = compver
+          }
+          break
+        case '<':
+        case '<=':
+          /* Ignore maximum versions */
+          break
+        /* istanbul ignore next */
+        default:
+          throw new Error(`Unexpected operation: ${comparator.operator}`)
+      }
+    })
+    if (setMin && (!minver || gt(minver, setMin))) {
+      minver = setMin
+    }
+  }
+
+  if (minver && range.test(minver)) {
+    return minver
+  }
+
+  return null
+}
+module.exports = minVersion
+
 
 /***/ }),
 
@@ -159907,6 +163108,31 @@ exports.huddle01Testnet = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=huddle01Testnet.js.map
+
+/***/ }),
+
+/***/ 448746:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(359194), exports);
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -166764,6 +169990,197 @@ exports.TallyParams = {
 
 /***/ }),
 
+/***/ 463498:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.toCaipChainId = exports.parseCaipAccountId = exports.parseCaipChainId = exports.isCaipAssetId = exports.isCaipAssetType = exports.isCaipAccountAddress = exports.isCaipAccountId = exports.isCaipReference = exports.isCaipNamespace = exports.isCaipChainId = exports.KnownCaipNamespace = exports.CaipAssetIdStruct = exports.CaipAssetTypeStruct = exports.CaipAccountAddressStruct = exports.CaipAccountIdStruct = exports.CaipReferenceStruct = exports.CaipNamespaceStruct = exports.CaipChainIdStruct = exports.CAIP_ASSET_ID_REGEX = exports.CAIP_ASSET_TYPE_REGEX = exports.CAIP_ACCOUNT_ADDRESS_REGEX = exports.CAIP_ACCOUNT_ID_REGEX = exports.CAIP_REFERENCE_REGEX = exports.CAIP_NAMESPACE_REGEX = exports.CAIP_CHAIN_ID_REGEX = void 0;
+const superstruct_1 = __webpack_require__(635620);
+exports.CAIP_CHAIN_ID_REGEX = /^(?<namespace>[-a-z0-9]{3,8}):(?<reference>[-_a-zA-Z0-9]{1,32})$/u;
+exports.CAIP_NAMESPACE_REGEX = /^[-a-z0-9]{3,8}$/u;
+exports.CAIP_REFERENCE_REGEX = /^[-_a-zA-Z0-9]{1,32}$/u;
+exports.CAIP_ACCOUNT_ID_REGEX = /^(?<chainId>(?<namespace>[-a-z0-9]{3,8}):(?<reference>[-_a-zA-Z0-9]{1,32})):(?<accountAddress>[-.%a-zA-Z0-9]{1,128})$/u;
+exports.CAIP_ACCOUNT_ADDRESS_REGEX = /^[-.%a-zA-Z0-9]{1,128}$/u;
+exports.CAIP_ASSET_TYPE_REGEX = /^(?<chainId>(?<namespace>[-a-z0-9]{3,8}):(?<reference>[-_a-zA-Z0-9]{1,32}))\/(?<assetNamespace>[-a-z0-9]{3,8}):(?<assetReference>[-.%a-zA-Z0-9]{1,128})$/u;
+exports.CAIP_ASSET_ID_REGEX = /^(?<chainId>(?<namespace>[-a-z0-9]{3,8}):(?<reference>[-_a-zA-Z0-9]{1,32}))\/(?<assetNamespace>[-a-z0-9]{3,8}):(?<assetReference>[-.%a-zA-Z0-9]{1,128})\/(?<tokenId>[-.%a-zA-Z0-9]{1,78})$/u;
+/**
+ * A CAIP-2 chain ID, i.e., a human-readable namespace and reference.
+ */
+exports.CaipChainIdStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_CHAIN_ID_REGEX);
+/**
+ * A CAIP-2 namespace, i.e., the first part of a CAIP chain ID.
+ */
+exports.CaipNamespaceStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_NAMESPACE_REGEX);
+/**
+ * A CAIP-2 reference, i.e., the second part of a CAIP chain ID.
+ */
+exports.CaipReferenceStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_REFERENCE_REGEX);
+/**
+ * A CAIP-10 account ID, i.e., a human-readable namespace, reference, and account address.
+ */
+exports.CaipAccountIdStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_ACCOUNT_ID_REGEX);
+/**
+ * A CAIP-10 account address, i.e., the third part of the CAIP account ID.
+ */
+exports.CaipAccountAddressStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_ACCOUNT_ADDRESS_REGEX);
+/**
+ * A CAIP-19 asset type identifier, i.e., a human-readable type of asset identifier.
+ */
+exports.CaipAssetTypeStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_ASSET_TYPE_REGEX);
+/**
+ * A CAIP-19 asset ID identifier, i.e., a human-readable type of asset ID.
+ */
+exports.CaipAssetIdStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), exports.CAIP_ASSET_ID_REGEX);
+/** Known CAIP namespaces. */
+var KnownCaipNamespace;
+(function (KnownCaipNamespace) {
+    /** BIP-122 (Bitcoin) compatible chains. */
+    KnownCaipNamespace["Bip122"] = "bip122";
+    /** EIP-155 compatible chains. */
+    KnownCaipNamespace["Eip155"] = "eip155";
+    KnownCaipNamespace["Wallet"] = "wallet";
+})(KnownCaipNamespace = exports.KnownCaipNamespace || (exports.KnownCaipNamespace = {}));
+/**
+ * Check if the given value is a {@link CaipChainId}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipChainId}.
+ */
+function isCaipChainId(value) {
+    return (0, superstruct_1.is)(value, exports.CaipChainIdStruct);
+}
+exports.isCaipChainId = isCaipChainId;
+/**
+ * Check if the given value is a {@link CaipNamespace}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipNamespace}.
+ */
+function isCaipNamespace(value) {
+    return (0, superstruct_1.is)(value, exports.CaipNamespaceStruct);
+}
+exports.isCaipNamespace = isCaipNamespace;
+/**
+ * Check if the given value is a {@link CaipReference}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipReference}.
+ */
+function isCaipReference(value) {
+    return (0, superstruct_1.is)(value, exports.CaipReferenceStruct);
+}
+exports.isCaipReference = isCaipReference;
+/**
+ * Check if the given value is a {@link CaipAccountId}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipAccountId}.
+ */
+function isCaipAccountId(value) {
+    return (0, superstruct_1.is)(value, exports.CaipAccountIdStruct);
+}
+exports.isCaipAccountId = isCaipAccountId;
+/**
+ * Check if a value is a {@link CaipAccountAddress}.
+ *
+ * @param value - The value to validate.
+ * @returns True if the value is a valid {@link CaipAccountAddress}.
+ */
+function isCaipAccountAddress(value) {
+    return (0, superstruct_1.is)(value, exports.CaipAccountAddressStruct);
+}
+exports.isCaipAccountAddress = isCaipAccountAddress;
+/**
+ * Check if the given value is a {@link CaipAssetType}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipAssetType}.
+ */
+function isCaipAssetType(value) {
+    return (0, superstruct_1.is)(value, exports.CaipAssetTypeStruct);
+}
+exports.isCaipAssetType = isCaipAssetType;
+/**
+ * Check if the given value is a {@link CaipAssetId}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a {@link CaipAssetId}.
+ */
+function isCaipAssetId(value) {
+    return (0, superstruct_1.is)(value, exports.CaipAssetIdStruct);
+}
+exports.isCaipAssetId = isCaipAssetId;
+/**
+ * Parse a CAIP-2 chain ID to an object containing the namespace and reference.
+ * This validates the CAIP-2 chain ID before parsing it.
+ *
+ * @param caipChainId - The CAIP-2 chain ID to validate and parse.
+ * @returns The parsed CAIP-2 chain ID.
+ */
+function parseCaipChainId(caipChainId) {
+    const match = exports.CAIP_CHAIN_ID_REGEX.exec(caipChainId);
+    if (!match?.groups) {
+        throw new Error('Invalid CAIP chain ID.');
+    }
+    return {
+        namespace: match.groups.namespace,
+        reference: match.groups.reference,
+    };
+}
+exports.parseCaipChainId = parseCaipChainId;
+/**
+ * Parse an CAIP-10 account ID to an object containing the chain ID, parsed chain ID, and account address.
+ * This validates the CAIP-10 account ID before parsing it.
+ *
+ * @param caipAccountId - The CAIP-10 account ID to validate and parse.
+ * @returns The parsed CAIP-10 account ID.
+ */
+function parseCaipAccountId(caipAccountId) {
+    const match = exports.CAIP_ACCOUNT_ID_REGEX.exec(caipAccountId);
+    if (!match?.groups) {
+        throw new Error('Invalid CAIP account ID.');
+    }
+    return {
+        address: match.groups.accountAddress,
+        chainId: match.groups.chainId,
+        chain: {
+            namespace: match.groups.namespace,
+            reference: match.groups.reference,
+        },
+    };
+}
+exports.parseCaipAccountId = parseCaipAccountId;
+/**
+ * Chain ID as defined per the CAIP-2
+ * {@link https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md}.
+ *
+ * It defines a way to uniquely identify any blockchain in a human-readable
+ * way.
+ *
+ * @param namespace - The standard (ecosystem) of similar blockchains.
+ * @param reference - Identify of a blockchain within a given namespace.
+ * @throws {@link Error}
+ * This exception is thrown if the inputs does not comply with the CAIP-2
+ * syntax specification
+ * {@link https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-2.md#syntax}.
+ * @returns A CAIP chain ID.
+ */
+function toCaipChainId(namespace, reference) {
+    if (!isCaipNamespace(namespace)) {
+        throw new Error(`Invalid "namespace", must match: ${exports.CAIP_NAMESPACE_REGEX.toString()}`);
+    }
+    if (!isCaipReference(reference)) {
+        throw new Error(`Invalid "reference", must match: ${exports.CAIP_REFERENCE_REGEX.toString()}`);
+    }
+    return `${namespace}:${reference}`;
+}
+exports.toCaipChainId = toCaipChainId;
+//# sourceMappingURL=caip-types.cjs.map
+
+/***/ }),
+
 /***/ 465304:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -169017,6 +172434,276 @@ class DefaultValueProducer {
 }
 exports.DefaultValueProducer = DefaultValueProducer;
 //# sourceMappingURL=defaultvalueproducer.js.map
+
+/***/ }),
+
+/***/ 474277:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compareBuild = __webpack_require__(240909)
+const rsort = (list, loose) => list.sort((a, b) => compareBuild(b, a, loose))
+module.exports = rsort
+
+
+/***/ }),
+
+/***/ 475032:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const Range = __webpack_require__(778311)
+const Comparator = __webpack_require__(93904)
+const { ANY } = Comparator
+const satisfies = __webpack_require__(897638)
+const compare = __webpack_require__(350560)
+
+// Complex range `r1 || r2 || ...` is a subset of `R1 || R2 || ...` iff:
+// - Every simple range `r1, r2, ...` is a null set, OR
+// - Every simple range `r1, r2, ...` which is not a null set is a subset of
+//   some `R1, R2, ...`
+//
+// Simple range `c1 c2 ...` is a subset of simple range `C1 C2 ...` iff:
+// - If c is only the ANY comparator
+//   - If C is only the ANY comparator, return true
+//   - Else if in prerelease mode, return false
+//   - else replace c with `[>=0.0.0]`
+// - If C is only the ANY comparator
+//   - if in prerelease mode, return true
+//   - else replace C with `[>=0.0.0]`
+// - Let EQ be the set of = comparators in c
+// - If EQ is more than one, return true (null set)
+// - Let GT be the highest > or >= comparator in c
+// - Let LT be the lowest < or <= comparator in c
+// - If GT and LT, and GT.semver > LT.semver, return true (null set)
+// - If any C is a = range, and GT or LT are set, return false
+// - If EQ
+//   - If GT, and EQ does not satisfy GT, return true (null set)
+//   - If LT, and EQ does not satisfy LT, return true (null set)
+//   - If EQ satisfies every C, return true
+//   - Else return false
+// - If GT
+//   - If GT.semver is lower than any > or >= comp in C, return false
+//   - If GT is >=, and GT.semver does not satisfy every C, return false
+//   - If GT.semver has a prerelease, and not in prerelease mode
+//     - If no C has a prerelease and the GT.semver tuple, return false
+// - If LT
+//   - If LT.semver is greater than any < or <= comp in C, return false
+//   - If LT is <=, and LT.semver does not satisfy every C, return false
+//   - If GT.semver has a prerelease, and not in prerelease mode
+//     - If no C has a prerelease and the LT.semver tuple, return false
+// - Else return true
+
+const subset = (sub, dom, options = {}) => {
+  if (sub === dom) {
+    return true
+  }
+
+  sub = new Range(sub, options)
+  dom = new Range(dom, options)
+  let sawNonNull = false
+
+  OUTER: for (const simpleSub of sub.set) {
+    for (const simpleDom of dom.set) {
+      const isSub = simpleSubset(simpleSub, simpleDom, options)
+      sawNonNull = sawNonNull || isSub !== null
+      if (isSub) {
+        continue OUTER
+      }
+    }
+    // the null set is a subset of everything, but null simple ranges in
+    // a complex range should be ignored.  so if we saw a non-null range,
+    // then we know this isn't a subset, but if EVERY simple range was null,
+    // then it is a subset.
+    if (sawNonNull) {
+      return false
+    }
+  }
+  return true
+}
+
+const minimumVersionWithPreRelease = [new Comparator('>=0.0.0-0')]
+const minimumVersion = [new Comparator('>=0.0.0')]
+
+const simpleSubset = (sub, dom, options) => {
+  if (sub === dom) {
+    return true
+  }
+
+  if (sub.length === 1 && sub[0].semver === ANY) {
+    if (dom.length === 1 && dom[0].semver === ANY) {
+      return true
+    } else if (options.includePrerelease) {
+      sub = minimumVersionWithPreRelease
+    } else {
+      sub = minimumVersion
+    }
+  }
+
+  if (dom.length === 1 && dom[0].semver === ANY) {
+    if (options.includePrerelease) {
+      return true
+    } else {
+      dom = minimumVersion
+    }
+  }
+
+  const eqSet = new Set()
+  let gt, lt
+  for (const c of sub) {
+    if (c.operator === '>' || c.operator === '>=') {
+      gt = higherGT(gt, c, options)
+    } else if (c.operator === '<' || c.operator === '<=') {
+      lt = lowerLT(lt, c, options)
+    } else {
+      eqSet.add(c.semver)
+    }
+  }
+
+  if (eqSet.size > 1) {
+    return null
+  }
+
+  let gtltComp
+  if (gt && lt) {
+    gtltComp = compare(gt.semver, lt.semver, options)
+    if (gtltComp > 0) {
+      return null
+    } else if (gtltComp === 0 && (gt.operator !== '>=' || lt.operator !== '<=')) {
+      return null
+    }
+  }
+
+  // will iterate one or zero times
+  for (const eq of eqSet) {
+    if (gt && !satisfies(eq, String(gt), options)) {
+      return null
+    }
+
+    if (lt && !satisfies(eq, String(lt), options)) {
+      return null
+    }
+
+    for (const c of dom) {
+      if (!satisfies(eq, String(c), options)) {
+        return false
+      }
+    }
+
+    return true
+  }
+
+  let higher, lower
+  let hasDomLT, hasDomGT
+  // if the subset has a prerelease, we need a comparator in the superset
+  // with the same tuple and a prerelease, or it's not a subset
+  let needDomLTPre = lt &&
+    !options.includePrerelease &&
+    lt.semver.prerelease.length ? lt.semver : false
+  let needDomGTPre = gt &&
+    !options.includePrerelease &&
+    gt.semver.prerelease.length ? gt.semver : false
+  // exception: <1.2.3-0 is the same as <1.2.3
+  if (needDomLTPre && needDomLTPre.prerelease.length === 1 &&
+      lt.operator === '<' && needDomLTPre.prerelease[0] === 0) {
+    needDomLTPre = false
+  }
+
+  for (const c of dom) {
+    hasDomGT = hasDomGT || c.operator === '>' || c.operator === '>='
+    hasDomLT = hasDomLT || c.operator === '<' || c.operator === '<='
+    if (gt) {
+      if (needDomGTPre) {
+        if (c.semver.prerelease && c.semver.prerelease.length &&
+            c.semver.major === needDomGTPre.major &&
+            c.semver.minor === needDomGTPre.minor &&
+            c.semver.patch === needDomGTPre.patch) {
+          needDomGTPre = false
+        }
+      }
+      if (c.operator === '>' || c.operator === '>=') {
+        higher = higherGT(gt, c, options)
+        if (higher === c && higher !== gt) {
+          return false
+        }
+      } else if (gt.operator === '>=' && !satisfies(gt.semver, String(c), options)) {
+        return false
+      }
+    }
+    if (lt) {
+      if (needDomLTPre) {
+        if (c.semver.prerelease && c.semver.prerelease.length &&
+            c.semver.major === needDomLTPre.major &&
+            c.semver.minor === needDomLTPre.minor &&
+            c.semver.patch === needDomLTPre.patch) {
+          needDomLTPre = false
+        }
+      }
+      if (c.operator === '<' || c.operator === '<=') {
+        lower = lowerLT(lt, c, options)
+        if (lower === c && lower !== lt) {
+          return false
+        }
+      } else if (lt.operator === '<=' && !satisfies(lt.semver, String(c), options)) {
+        return false
+      }
+    }
+    if (!c.operator && (lt || gt) && gtltComp !== 0) {
+      return false
+    }
+  }
+
+  // if there was a < or >, and nothing in the dom, then must be false
+  // UNLESS it was limited by another range in the other direction.
+  // Eg, >1.0.0 <1.0.1 is still a subset of <2.0.0
+  if (gt && hasDomLT && !lt && gtltComp !== 0) {
+    return false
+  }
+
+  if (lt && hasDomGT && !gt && gtltComp !== 0) {
+    return false
+  }
+
+  // we needed a prerelease range in a specific tuple, but didn't get one
+  // then this isn't a subset.  eg >=1.2.3-pre is not a subset of >=1.0.0,
+  // because it includes prereleases in the 1.2.3 tuple
+  if (needDomGTPre || needDomLTPre) {
+    return false
+  }
+
+  return true
+}
+
+// >=1.2.3 is lower than >1.2.3
+const higherGT = (a, b, options) => {
+  if (!a) {
+    return b
+  }
+  const comp = compare(a.semver, b.semver, options)
+  return comp > 0 ? a
+    : comp < 0 ? b
+    : b.operator === '>' && a.operator === '>=' ? b
+    : a
+}
+
+// <=1.2.3 is higher than <1.2.3
+const lowerLT = (a, b, options) => {
+  if (!a) {
+    return b
+  }
+  const comp = compare(a.semver, b.semver, options)
+  return comp < 0 ? a
+    : comp > 0 ? b
+    : b.operator === '<' && a.operator === '<=' ? b
+    : a
+}
+
+module.exports = subset
+
 
 /***/ }),
 
@@ -173169,6 +176856,98 @@ exports.zeroNetwork = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 491704:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.trimmed = exports.defaulted = exports.coerce = void 0;
+const struct_js_1 = __webpack_require__(899067);
+const utils_js_1 = __webpack_require__(570639);
+const types_js_1 = __webpack_require__(367792);
+/**
+ * Augment a `Struct` to add an additional coercion step to its input.
+ *
+ * This allows you to transform input data before validating it, to increase the
+ * likelihood that it passes validation—for example for default values, parsing
+ * different formats, etc.
+ *
+ * Note: You must use `create(value, Struct)` on the value to have the coercion
+ * take effect! Using simply `assert()` or `is()` will not use coercion.
+ *
+ * @param struct - The struct to augment.
+ * @param condition - A struct that the input must pass to be coerced.
+ * @param coercer - A function that takes the input and returns the coerced
+ * value.
+ * @returns A new struct that will coerce its input before validating it.
+ */
+function coerce(struct, condition, coercer) {
+    return new struct_js_1.Struct({
+        ...struct,
+        coercer: (value, ctx) => {
+            return (0, struct_js_1.is)(value, condition)
+                ? struct.coercer(coercer(value, ctx), ctx)
+                : struct.coercer(value, ctx);
+        },
+    });
+}
+exports.coerce = coerce;
+/**
+ * Augment a struct to replace `undefined` values with a default.
+ *
+ * Note: You must use `create(value, Struct)` on the value to have the coercion
+ * take effect! Using simply `assert()` or `is()` will not use coercion.
+ *
+ * @param struct - The struct to augment.
+ * @param fallback - The value to use when the input is `undefined`.
+ * @param options - An optional options object.
+ * @param options.strict - When `true`, the fallback will only be used when the
+ * input is `undefined`. When `false`, the fallback will be used when the input
+ * is `undefined` or when the input is a plain object and the fallback is a
+ * plain object, and any keys in the fallback are missing from the input.
+ * @returns A new struct that will replace `undefined` inputs with a default.
+ */
+function defaulted(struct, fallback, options = {}) {
+    return coerce(struct, (0, types_js_1.unknown)(), (value) => {
+        const result = typeof fallback === 'function' ? fallback() : fallback;
+        if (value === undefined) {
+            return result;
+        }
+        if (!options.strict && (0, utils_js_1.isPlainObject)(value) && (0, utils_js_1.isPlainObject)(result)) {
+            const ret = { ...value };
+            let changed = false;
+            for (const key in result) {
+                if (ret[key] === undefined) {
+                    ret[key] = result[key];
+                    changed = true;
+                }
+            }
+            if (changed) {
+                return ret;
+            }
+        }
+        return value;
+    });
+}
+exports.defaulted = defaulted;
+/**
+ * Augment a struct to trim string inputs.
+ *
+ * Note: You must use `create(value, Struct)` on the value to have the coercion
+ * take effect! Using simply `assert()` or `is()` will not use coercion.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will trim string inputs before validating them.
+ */
+function trimmed(struct) {
+    return coerce(struct, (0, types_js_1.string)(), (value) => value.trim());
+}
+exports.trimmed = trimmed;
+//# sourceMappingURL=coercions.cjs.map
+
+/***/ }),
+
 /***/ 491926:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -173427,6 +177206,175 @@ exports.snaxTestnet = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=snaxTestnet.js.map
+
+/***/ }),
+
+/***/ 493243:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createHex = exports.createBytes = exports.createBigInt = exports.createNumber = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const assert_1 = __webpack_require__(405915);
+const bytes_1 = __webpack_require__(522310);
+const hex_1 = __webpack_require__(668824);
+const NumberLikeStruct = (0, superstruct_1.union)([(0, superstruct_1.number)(), (0, superstruct_1.bigint)(), (0, superstruct_1.string)(), hex_1.StrictHexStruct]);
+const NumberCoercer = (0, superstruct_1.coerce)((0, superstruct_1.number)(), NumberLikeStruct, Number);
+const BigIntCoercer = (0, superstruct_1.coerce)((0, superstruct_1.bigint)(), NumberLikeStruct, BigInt);
+const BytesLikeStruct = (0, superstruct_1.union)([hex_1.StrictHexStruct, (0, superstruct_1.instance)(Uint8Array)]);
+const BytesCoercer = (0, superstruct_1.coerce)((0, superstruct_1.instance)(Uint8Array), (0, superstruct_1.union)([hex_1.StrictHexStruct]), bytes_1.hexToBytes);
+const HexCoercer = (0, superstruct_1.coerce)(hex_1.StrictHexStruct, (0, superstruct_1.instance)(Uint8Array), bytes_1.bytesToHex);
+/**
+ * Create a number from a number-like value.
+ *
+ * - If the value is a number, it is returned as-is.
+ * - If the value is a `bigint`, it is converted to a number.
+ * - If the value is a string, it is interpreted as a decimal number.
+ * - If the value is a hex string (i.e., it starts with "0x"), it is
+ * interpreted as a hexadecimal number.
+ *
+ * This validates that the value is a number-like value, and that the resulting
+ * number is not `NaN` or `Infinity`.
+ *
+ * @example
+ * ```typescript
+ * const value = createNumber('0x010203');
+ * console.log(value); // 66051
+ *
+ * const otherValue = createNumber(123n);
+ * console.log(otherValue); // 123
+ * ```
+ * @param value - The value to create the number from.
+ * @returns The created number.
+ * @throws If the value is not a number-like value, or if the resulting number
+ * is `NaN` or `Infinity`.
+ */
+function createNumber(value) {
+    try {
+        const result = (0, superstruct_1.create)(value, NumberCoercer);
+        (0, assert_1.assert)(Number.isFinite(result), `Expected a number-like value, got "${value}".`);
+        return result;
+    }
+    catch (error) {
+        if (error instanceof superstruct_1.StructError) {
+            throw new Error(`Expected a number-like value, got "${value}".`);
+        }
+        /* istanbul ignore next */
+        throw error;
+    }
+}
+exports.createNumber = createNumber;
+/**
+ * Create a `bigint` from a number-like value.
+ *
+ * - If the value is a number, it is converted to a `bigint`.
+ * - If the value is a `bigint`, it is returned as-is.
+ * - If the value is a string, it is interpreted as a decimal number and
+ * converted to a `bigint`.
+ * - If the value is a hex string (i.e., it starts with "0x"), it is
+ * interpreted as a hexadecimal number and converted to a `bigint`.
+ *
+ * @example
+ * ```typescript
+ * const value = createBigInt('0x010203');
+ * console.log(value); // 16909060n
+ *
+ * const otherValue = createBigInt(123);
+ * console.log(otherValue); // 123n
+ * ```
+ * @param value - The value to create the bigint from.
+ * @returns The created bigint.
+ * @throws If the value is not a number-like value.
+ */
+function createBigInt(value) {
+    try {
+        // The `BigInt` constructor throws if the value is not a number-like value.
+        // There is no need to validate the value manually.
+        return (0, superstruct_1.create)(value, BigIntCoercer);
+    }
+    catch (error) {
+        if (error instanceof superstruct_1.StructError) {
+            throw new Error(`Expected a number-like value, got "${String(error.value)}".`);
+        }
+        /* istanbul ignore next */
+        throw error;
+    }
+}
+exports.createBigInt = createBigInt;
+/**
+ * Create a byte array from a bytes-like value.
+ *
+ * - If the value is a byte array, it is returned as-is.
+ * - If the value is a hex string (i.e., it starts with "0x"), it is interpreted
+ * as a hexadecimal number and converted to a byte array.
+ *
+ * @example
+ * ```typescript
+ * const value = createBytes('0x010203');
+ * console.log(value); // Uint8Array [ 1, 2, 3 ]
+ *
+ * const otherValue = createBytes('0x010203');
+ * console.log(otherValue); // Uint8Array [ 1, 2, 3 ]
+ * ```
+ * @param value - The value to create the byte array from.
+ * @returns The created byte array.
+ * @throws If the value is not a bytes-like value.
+ */
+function createBytes(value) {
+    if (typeof value === 'string' && value.toLowerCase() === '0x') {
+        return new Uint8Array();
+    }
+    try {
+        return (0, superstruct_1.create)(value, BytesCoercer);
+    }
+    catch (error) {
+        if (error instanceof superstruct_1.StructError) {
+            throw new Error(`Expected a bytes-like value, got "${String(error.value)}".`);
+        }
+        /* istanbul ignore next */
+        throw error;
+    }
+}
+exports.createBytes = createBytes;
+/**
+ * Create a hexadecimal string from a bytes-like value.
+ *
+ * - If the value is a hex string (i.e., it starts with "0x"), it is returned
+ * as-is.
+ * - If the value is a `Uint8Array`, it is converted to a hex string.
+ *
+ * @example
+ * ```typescript
+ * const value = createHex(new Uint8Array([1, 2, 3]));
+ * console.log(value); // '0x010203'
+ *
+ * const otherValue = createHex('0x010203');
+ * console.log(otherValue); // '0x010203'
+ * ```
+ * @param value - The value to create the hex string from.
+ * @returns The created hex string.
+ * @throws If the value is not a bytes-like value.
+ */
+function createHex(value) {
+    if ((value instanceof Uint8Array && value.length === 0) ||
+        (typeof value === 'string' && value.toLowerCase() === '0x')) {
+        return '0x';
+    }
+    try {
+        return (0, superstruct_1.create)(value, HexCoercer);
+    }
+    catch (error) {
+        if (error instanceof superstruct_1.StructError) {
+            throw new Error(`Expected a bytes-like value, got "${String(error.value)}".`);
+        }
+        /* istanbul ignore next */
+        throw error;
+    }
+}
+exports.createHex = createHex;
+//# sourceMappingURL=coercers.cjs.map
 
 /***/ }),
 
@@ -176329,6 +180277,16 @@ exports.visionTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=visionTestnet.js.map
+
+/***/ }),
+
+/***/ 510268:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=keyring.cjs.map
 
 /***/ }),
 
@@ -183141,6 +187099,32 @@ function parseAbi(signatures) {
 
 /***/ }),
 
+/***/ 522011:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.standardNodeHash = exports.standardLeafHash = exports.keccak256 = void 0;
+const abi_utils_1 = __webpack_require__(593256);
+const keccak_1 = __webpack_require__(786996);
+const bytes_1 = __webpack_require__(144144);
+function keccak256(input) {
+    return (0, bytes_1.toHex)((0, keccak_1.keccak256)((0, bytes_1.toBytes)(input)));
+}
+exports.keccak256 = keccak256;
+function standardLeafHash(types, value) {
+    return keccak256(keccak256((0, abi_utils_1.encode)(types, value)));
+}
+exports.standardLeafHash = standardLeafHash;
+function standardNodeHash(a, b) {
+    return keccak256((0, bytes_1.concat)([a, b].sort(bytes_1.compare)));
+}
+exports.standardNodeHash = standardNodeHash;
+//# sourceMappingURL=hashes.js.map
+
+/***/ }),
+
 /***/ 522106:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -184859,6 +188843,413 @@ function mapToCurveSimpleSWU(Fp, opts) {
     };
 }
 //# sourceMappingURL=weierstrass.js.map
+
+/***/ }),
+
+/***/ 522310:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createDataView = exports.concatBytes = exports.valueToBytes = exports.base64ToBytes = exports.stringToBytes = exports.numberToBytes = exports.signedBigIntToBytes = exports.bigIntToBytes = exports.hexToBytes = exports.bytesToBase64 = exports.bytesToString = exports.bytesToNumber = exports.bytesToSignedBigInt = exports.bytesToBigInt = exports.bytesToHex = exports.assertIsBytes = exports.isBytes = void 0;
+const base_1 = __webpack_require__(963203);
+const assert_1 = __webpack_require__(405915);
+const hex_1 = __webpack_require__(668824);
+// '0'.charCodeAt(0) === 48
+const HEX_MINIMUM_NUMBER_CHARACTER = 48;
+// '9'.charCodeAt(0) === 57
+const HEX_MAXIMUM_NUMBER_CHARACTER = 58;
+const HEX_CHARACTER_OFFSET = 87;
+/**
+ * Memoized function that returns an array to be used as a lookup table for
+ * converting bytes to hexadecimal values.
+ *
+ * The array is created lazily and then cached for future use. The benefit of
+ * this approach is that the performance of converting bytes to hex is much
+ * better than if we were to call `toString(16)` on each byte.
+ *
+ * The downside is that the array is created once and then never garbage
+ * collected. This is not a problem in practice because the array is only 256
+ * elements long.
+ *
+ * @returns A function that returns the lookup table.
+ */
+function getPrecomputedHexValuesBuilder() {
+    // To avoid issues with tree shaking, we need to use a function to return the
+    // array. This is because the array is only used in the `bytesToHex` function
+    // and if we were to use a global variable, the array might be removed by the
+    // tree shaker.
+    const lookupTable = [];
+    return () => {
+        if (lookupTable.length === 0) {
+            for (let i = 0; i < 256; i++) {
+                lookupTable.push(i.toString(16).padStart(2, '0'));
+            }
+        }
+        return lookupTable;
+    };
+}
+/**
+ * Function implementation of the {@link getPrecomputedHexValuesBuilder}
+ * function.
+ */
+const getPrecomputedHexValues = getPrecomputedHexValuesBuilder();
+/**
+ * Check if a value is a `Uint8Array`.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a `Uint8Array`.
+ */
+function isBytes(value) {
+    return value instanceof Uint8Array;
+}
+exports.isBytes = isBytes;
+/**
+ * Assert that a value is a `Uint8Array`.
+ *
+ * @param value - The value to check.
+ * @throws If the value is not a `Uint8Array`.
+ */
+function assertIsBytes(value) {
+    (0, assert_1.assert)(isBytes(value), 'Value must be a Uint8Array.');
+}
+exports.assertIsBytes = assertIsBytes;
+/**
+ * Convert a `Uint8Array` to a hexadecimal string.
+ *
+ * @param bytes - The bytes to convert to a hexadecimal string.
+ * @returns The hexadecimal string.
+ */
+function bytesToHex(bytes) {
+    assertIsBytes(bytes);
+    if (bytes.length === 0) {
+        return '0x';
+    }
+    const lookupTable = getPrecomputedHexValues();
+    const hexadecimal = new Array(bytes.length);
+    for (let i = 0; i < bytes.length; i++) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        hexadecimal[i] = lookupTable[bytes[i]];
+    }
+    return (0, hex_1.add0x)(hexadecimal.join(''));
+}
+exports.bytesToHex = bytesToHex;
+/**
+ * Convert a `Uint8Array` to a `bigint`.
+ *
+ * To convert a `Uint8Array` to a `number` instead, use {@link bytesToNumber}.
+ * To convert a two's complement encoded `Uint8Array` to a `bigint`, use
+ * {@link bytesToSignedBigInt}.
+ *
+ * @param bytes - The bytes to convert to a `bigint`.
+ * @returns The `bigint`.
+ */
+function bytesToBigInt(bytes) {
+    assertIsBytes(bytes);
+    const hexadecimal = bytesToHex(bytes);
+    return BigInt(hexadecimal);
+}
+exports.bytesToBigInt = bytesToBigInt;
+/**
+ * Convert a `Uint8Array` to a signed `bigint`. This assumes that the bytes are
+ * encoded in two's complement.
+ *
+ * To convert a `Uint8Array` to an unsigned `bigint` instead, use
+ * {@link bytesToBigInt}.
+ *
+ * @see https://en.wikipedia.org/wiki/Two%27s_complement
+ * @param bytes - The bytes to convert to a signed `bigint`.
+ * @returns The signed `bigint`.
+ */
+function bytesToSignedBigInt(bytes) {
+    assertIsBytes(bytes);
+    let value = BigInt(0);
+    for (const byte of bytes) {
+        // eslint-disable-next-line no-bitwise
+        value = (value << BigInt(8)) + BigInt(byte);
+    }
+    return BigInt.asIntN(bytes.length * 8, value);
+}
+exports.bytesToSignedBigInt = bytesToSignedBigInt;
+/**
+ * Convert a `Uint8Array` to a `number`.
+ *
+ * To convert a `Uint8Array` to a `bigint` instead, use {@link bytesToBigInt}.
+ *
+ * @param bytes - The bytes to convert to a number.
+ * @returns The number.
+ * @throws If the resulting number is not a safe integer.
+ */
+function bytesToNumber(bytes) {
+    assertIsBytes(bytes);
+    const bigint = bytesToBigInt(bytes);
+    (0, assert_1.assert)(bigint <= BigInt(Number.MAX_SAFE_INTEGER), 'Number is not a safe integer. Use `bytesToBigInt` instead.');
+    return Number(bigint);
+}
+exports.bytesToNumber = bytesToNumber;
+/**
+ * Convert a UTF-8 encoded `Uint8Array` to a `string`.
+ *
+ * @param bytes - The bytes to convert to a string.
+ * @returns The string.
+ */
+function bytesToString(bytes) {
+    assertIsBytes(bytes);
+    return new TextDecoder().decode(bytes);
+}
+exports.bytesToString = bytesToString;
+/**
+ * Convert a `Uint8Array` to a base64 encoded string.
+ *
+ * @param bytes - The bytes to convert to a base64 encoded string.
+ * @returns The base64 encoded string.
+ */
+function bytesToBase64(bytes) {
+    assertIsBytes(bytes);
+    return base_1.base64.encode(bytes);
+}
+exports.bytesToBase64 = bytesToBase64;
+/**
+ * Convert a hexadecimal string to a `Uint8Array`. The string can optionally be
+ * prefixed with `0x`. It accepts even and odd length strings.
+ *
+ * If the value is "0x", an empty `Uint8Array` is returned.
+ *
+ * @param value - The hexadecimal string to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ */
+function hexToBytes(value) {
+    // "0x" is often used as empty byte array.
+    if (value?.toLowerCase?.() === '0x') {
+        return new Uint8Array();
+    }
+    (0, hex_1.assertIsHexString)(value);
+    // Remove the `0x` prefix if it exists, and pad the string to have an even
+    // number of characters.
+    const strippedValue = (0, hex_1.remove0x)(value).toLowerCase();
+    const normalizedValue = strippedValue.length % 2 === 0 ? strippedValue : `0${strippedValue}`;
+    const bytes = new Uint8Array(normalizedValue.length / 2);
+    for (let i = 0; i < bytes.length; i++) {
+        // While this is not the prettiest way to convert a hexadecimal string to a
+        // `Uint8Array`, it is a lot faster than using `parseInt` to convert each
+        // character.
+        const c1 = normalizedValue.charCodeAt(i * 2);
+        const c2 = normalizedValue.charCodeAt(i * 2 + 1);
+        const n1 = c1 -
+            (c1 < HEX_MAXIMUM_NUMBER_CHARACTER
+                ? HEX_MINIMUM_NUMBER_CHARACTER
+                : HEX_CHARACTER_OFFSET);
+        const n2 = c2 -
+            (c2 < HEX_MAXIMUM_NUMBER_CHARACTER
+                ? HEX_MINIMUM_NUMBER_CHARACTER
+                : HEX_CHARACTER_OFFSET);
+        bytes[i] = n1 * 16 + n2;
+    }
+    return bytes;
+}
+exports.hexToBytes = hexToBytes;
+/**
+ * Convert a `bigint` to a `Uint8Array`.
+ *
+ * This assumes that the `bigint` is an unsigned integer. To convert a signed
+ * `bigint` instead, use {@link signedBigIntToBytes}.
+ *
+ * @param value - The bigint to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ */
+function bigIntToBytes(value) {
+    (0, assert_1.assert)(typeof value === 'bigint', 'Value must be a bigint.');
+    (0, assert_1.assert)(value >= BigInt(0), 'Value must be a non-negative bigint.');
+    const hexadecimal = value.toString(16);
+    return hexToBytes(hexadecimal);
+}
+exports.bigIntToBytes = bigIntToBytes;
+/**
+ * Check if a `bigint` fits in a certain number of bytes.
+ *
+ * @param value - The `bigint` to check.
+ * @param bytes - The number of bytes.
+ * @returns Whether the `bigint` fits in the number of bytes.
+ */
+function bigIntFits(value, bytes) {
+    (0, assert_1.assert)(bytes > 0);
+    /* eslint-disable no-bitwise */
+    const mask = value >> BigInt(31);
+    return !(((~value & mask) + (value & ~mask)) >> BigInt(bytes * 8 + ~0));
+    /* eslint-enable no-bitwise */
+}
+/**
+ * Convert a signed `bigint` to a `Uint8Array`. This uses two's complement
+ * encoding to represent negative numbers.
+ *
+ * To convert an unsigned `bigint` to a `Uint8Array` instead, use
+ * {@link bigIntToBytes}.
+ *
+ * @see https://en.wikipedia.org/wiki/Two%27s_complement
+ * @param value - The number to convert to bytes.
+ * @param byteLength - The length of the resulting `Uint8Array`. If the number
+ * is larger than the maximum value that can be represented by the given length,
+ * an error is thrown.
+ * @returns The bytes as `Uint8Array`.
+ */
+function signedBigIntToBytes(value, byteLength) {
+    (0, assert_1.assert)(typeof value === 'bigint', 'Value must be a bigint.');
+    (0, assert_1.assert)(typeof byteLength === 'number', 'Byte length must be a number.');
+    (0, assert_1.assert)(byteLength > 0, 'Byte length must be greater than 0.');
+    (0, assert_1.assert)(bigIntFits(value, byteLength), 'Byte length is too small to represent the given value.');
+    // ESLint doesn't like mutating function parameters, so to avoid having to
+    // disable the rule, we create a new variable.
+    let numberValue = value;
+    const bytes = new Uint8Array(byteLength);
+    for (let i = 0; i < bytes.length; i++) {
+        bytes[i] = Number(BigInt.asUintN(8, numberValue));
+        // eslint-disable-next-line no-bitwise
+        numberValue >>= BigInt(8);
+    }
+    return bytes.reverse();
+}
+exports.signedBigIntToBytes = signedBigIntToBytes;
+/**
+ * Convert a `number` to a `Uint8Array`.
+ *
+ * @param value - The number to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ * @throws If the number is not a safe integer.
+ */
+function numberToBytes(value) {
+    (0, assert_1.assert)(typeof value === 'number', 'Value must be a number.');
+    (0, assert_1.assert)(value >= 0, 'Value must be a non-negative number.');
+    (0, assert_1.assert)(Number.isSafeInteger(value), 'Value is not a safe integer. Use `bigIntToBytes` instead.');
+    const hexadecimal = value.toString(16);
+    return hexToBytes(hexadecimal);
+}
+exports.numberToBytes = numberToBytes;
+/**
+ * Convert a `string` to a UTF-8 encoded `Uint8Array`.
+ *
+ * @param value - The string to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ */
+function stringToBytes(value) {
+    (0, assert_1.assert)(typeof value === 'string', 'Value must be a string.');
+    return new TextEncoder().encode(value);
+}
+exports.stringToBytes = stringToBytes;
+/**
+ * Convert a base64 encoded string to a `Uint8Array`.
+ *
+ * @param value - The base64 encoded string to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ */
+function base64ToBytes(value) {
+    (0, assert_1.assert)(typeof value === 'string', 'Value must be a string.');
+    return base_1.base64.decode(value);
+}
+exports.base64ToBytes = base64ToBytes;
+/**
+ * Convert a byte-like value to a `Uint8Array`. The value can be a `Uint8Array`,
+ * a `bigint`, a `number`, or a `string`.
+ *
+ * This will attempt to guess the type of the value based on its type and
+ * contents. For more control over the conversion, use the more specific
+ * conversion functions, such as {@link hexToBytes} or {@link stringToBytes}.
+ *
+ * If the value is a `string`, and it is prefixed with `0x`, it will be
+ * interpreted as a hexadecimal string. Otherwise, it will be interpreted as a
+ * UTF-8 string. To convert a hexadecimal string to bytes without interpreting
+ * it as a UTF-8 string, use {@link hexToBytes} instead.
+ *
+ * If the value is a `bigint`, it is assumed to be unsigned. To convert a signed
+ * `bigint` to bytes, use {@link signedBigIntToBytes} instead.
+ *
+ * If the value is a `Uint8Array`, it will be returned as-is.
+ *
+ * @param value - The value to convert to bytes.
+ * @returns The bytes as `Uint8Array`.
+ */
+function valueToBytes(value) {
+    if (typeof value === 'bigint') {
+        return bigIntToBytes(value);
+    }
+    if (typeof value === 'number') {
+        return numberToBytes(value);
+    }
+    if (typeof value === 'string') {
+        if (value.startsWith('0x')) {
+            return hexToBytes(value);
+        }
+        return stringToBytes(value);
+    }
+    if (isBytes(value)) {
+        return value;
+    }
+    throw new TypeError(`Unsupported value type: "${typeof value}".`);
+}
+exports.valueToBytes = valueToBytes;
+/**
+ * Concatenate multiple byte-like values into a single `Uint8Array`. The values
+ * can be `Uint8Array`, `bigint`, `number`, or `string`. This uses
+ * {@link valueToBytes} under the hood to convert each value to bytes. Refer to
+ * the documentation of that function for more information.
+ *
+ * @param values - The values to concatenate.
+ * @returns The concatenated bytes as `Uint8Array`.
+ */
+function concatBytes(values) {
+    const normalizedValues = new Array(values.length);
+    let byteLength = 0;
+    for (let i = 0; i < values.length; i++) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        const value = valueToBytes(values[i]);
+        normalizedValues[i] = value;
+        byteLength += value.length;
+    }
+    const bytes = new Uint8Array(byteLength);
+    for (let i = 0, offset = 0; i < normalizedValues.length; i++) {
+        // While we could simply spread the values into an array and use
+        // `Uint8Array.from`, that is a lot slower than using `Uint8Array.set`.
+        bytes.set(normalizedValues[i], offset);
+        offset += normalizedValues[i].length;
+    }
+    return bytes;
+}
+exports.concatBytes = concatBytes;
+/**
+ * Create a {@link DataView} from a {@link Uint8Array}. This is a convenience
+ * function that avoids having to create a {@link DataView} manually, which
+ * requires passing the `byteOffset` and `byteLength` parameters every time.
+ *
+ * Not passing the `byteOffset` and `byteLength` parameters can result in
+ * unexpected behavior when the {@link Uint8Array} is a view of a larger
+ * {@link ArrayBuffer}, e.g., when using {@link Uint8Array.subarray}.
+ *
+ * This function also supports Node.js {@link Buffer}s.
+ *
+ * @example
+ * ```typescript
+ * const bytes = new Uint8Array([1, 2, 3]);
+ *
+ * // This is equivalent to:
+ * // const dataView = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+ * const dataView = createDataView(bytes);
+ * ```
+ * @param bytes - The bytes to create the {@link DataView} from.
+ * @returns The {@link DataView}.
+ */
+function createDataView(bytes) {
+    // To maintain compatibility with Node.js, we need to check if the bytes are
+    // a Buffer. If so, we need to slice the buffer to get the underlying
+    // ArrayBuffer.
+    // eslint-disable-next-line no-restricted-globals
+    if (typeof Buffer !== 'undefined' && bytes instanceof Buffer) {
+        const buffer = bytes.buffer.slice(bytes.byteOffset, bytes.byteOffset + bytes.byteLength);
+        return new DataView(buffer);
+    }
+    return new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+}
+exports.createDataView = createDataView;
+//# sourceMappingURL=bytes.cjs.map
 
 /***/ }),
 
@@ -190432,6 +194823,426 @@ zoologie`.split('\n');
 
 /***/ }),
 
+/***/ 530327:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.getJsonRpcIdValidator = exports.assertIsJsonRpcError = exports.isJsonRpcError = exports.assertIsJsonRpcFailure = exports.isJsonRpcFailure = exports.assertIsJsonRpcSuccess = exports.isJsonRpcSuccess = exports.assertIsJsonRpcResponse = exports.isJsonRpcResponse = exports.assertIsPendingJsonRpcResponse = exports.isPendingJsonRpcResponse = exports.JsonRpcResponseStruct = exports.JsonRpcFailureStruct = exports.JsonRpcSuccessStruct = exports.PendingJsonRpcResponseStruct = exports.assertIsJsonRpcRequest = exports.isJsonRpcRequest = exports.assertIsJsonRpcNotification = exports.isJsonRpcNotification = exports.JsonRpcNotificationStruct = exports.JsonRpcRequestStruct = exports.JsonRpcParamsStruct = exports.JsonRpcErrorStruct = exports.JsonRpcIdStruct = exports.JsonRpcVersionStruct = exports.jsonrpc2 = exports.getJsonSize = exports.getSafeJson = exports.isValidJson = exports.JsonStruct = exports.UnsafeJsonStruct = exports.exactOptional = exports.object = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const assert_1 = __webpack_require__(405915);
+const misc_1 = __webpack_require__(658897);
+/**
+ * A struct to check if the given value is a valid object, with support for
+ * {@link exactOptional} types.
+ *
+ * @param schema - The schema of the object.
+ * @returns A struct to check if the given value is an object.
+ */
+const object = (schema) => 
+// The type is slightly different from a regular object struct, because we
+// want to make properties with `undefined` in their type optional, but not
+// `undefined` itself. This means that we need a type cast.
+(0, superstruct_1.object)(schema);
+exports.object = object;
+/**
+ * Check the last field of a path is present.
+ *
+ * @param context - The context to check.
+ * @param context.path - The path to check.
+ * @param context.branch - The branch to check.
+ * @returns Whether the last field of a path is present.
+ */
+function hasOptional({ path, branch }) {
+    const field = path[path.length - 1];
+    return (0, misc_1.hasProperty)(branch[branch.length - 2], field);
+}
+/**
+ * A struct which allows the property of an object to be absent, or to be present
+ * as long as it's valid and not set to `undefined`.
+ *
+ * This struct should be used in conjunction with the {@link object} from this
+ * library, to get proper type inference.
+ *
+ * @param struct - The struct to check the value against, if present.
+ * @returns A struct to check if the given value is valid, or not present.
+ * @example
+ * ```ts
+ * const struct = object({
+ *   foo: exactOptional(string()),
+ *   bar: exactOptional(number()),
+ *   baz: optional(boolean()),
+ *   qux: unknown(),
+ * });
+ *
+ * type Type = Infer<typeof struct>;
+ * // Type is equivalent to:
+ * // {
+ * //   foo?: string;
+ * //   bar?: number;
+ * //   baz?: boolean | undefined;
+ * //   qux: unknown;
+ * // }
+ * ```
+ */
+function exactOptional(struct) {
+    return new superstruct_1.Struct({
+        ...struct,
+        type: `optional ${struct.type}`,
+        validator: (value, context) => !hasOptional(context) || struct.validator(value, context),
+        refiner: (value, context) => !hasOptional(context) || struct.refiner(value, context),
+    });
+}
+exports.exactOptional = exactOptional;
+/**
+ * A struct to check if the given value is finite number. Superstruct's
+ * `number()` struct does not check if the value is finite.
+ *
+ * @returns A struct to check if the given value is finite number.
+ */
+const finiteNumber = () => (0, superstruct_1.define)('finite number', (value) => {
+    return (0, superstruct_1.is)(value, (0, superstruct_1.number)()) && Number.isFinite(value);
+});
+/**
+ * A struct to check if the given value is a valid JSON-serializable value.
+ *
+ * Note that this struct is unsafe. For safe validation, use {@link JsonStruct}.
+ */
+// We cannot infer the type of the struct, because it is recursive.
+exports.UnsafeJsonStruct = (0, superstruct_1.union)([
+    (0, superstruct_1.literal)(null),
+    (0, superstruct_1.boolean)(),
+    finiteNumber(),
+    (0, superstruct_1.string)(),
+    (0, superstruct_1.array)((0, superstruct_1.lazy)(() => exports.UnsafeJsonStruct)),
+    (0, superstruct_1.record)((0, superstruct_1.string)(), (0, superstruct_1.lazy)(() => exports.UnsafeJsonStruct)),
+]);
+/**
+ * A struct to check if the given value is a valid JSON-serializable value.
+ *
+ * This struct sanitizes the value before validating it, so that it is safe to
+ * use with untrusted input.
+ */
+exports.JsonStruct = (0, superstruct_1.coerce)(exports.UnsafeJsonStruct, (0, superstruct_1.any)(), (value) => {
+    (0, assert_1.assertStruct)(value, exports.UnsafeJsonStruct);
+    return JSON.parse(JSON.stringify(value, (propKey, propValue) => {
+        // Strip __proto__ and constructor properties to prevent prototype pollution.
+        if (propKey === '__proto__' || propKey === 'constructor') {
+            return undefined;
+        }
+        return propValue;
+    }));
+});
+/**
+ * Check if the given value is a valid {@link Json} value, i.e., a value that is
+ * serializable to JSON.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a valid {@link Json} value.
+ */
+function isValidJson(value) {
+    try {
+        getSafeJson(value);
+        return true;
+    }
+    catch {
+        return false;
+    }
+}
+exports.isValidJson = isValidJson;
+/**
+ * Validate and return sanitized JSON.
+ *
+ * Note:
+ * This function uses sanitized JsonStruct for validation
+ * that applies stringify and then parse of a value provided
+ * to ensure that there are no getters which can have side effects
+ * that can cause security issues.
+ *
+ * @param value - JSON structure to be processed.
+ * @returns Sanitized JSON structure.
+ */
+function getSafeJson(value) {
+    return (0, superstruct_1.create)(value, exports.JsonStruct);
+}
+exports.getSafeJson = getSafeJson;
+/**
+ * Get the size of a JSON value in bytes. This also validates the value.
+ *
+ * @param value - The JSON value to get the size of.
+ * @returns The size of the JSON value in bytes.
+ */
+function getJsonSize(value) {
+    (0, assert_1.assertStruct)(value, exports.JsonStruct, 'Invalid JSON value');
+    const json = JSON.stringify(value);
+    return new TextEncoder().encode(json).byteLength;
+}
+exports.getJsonSize = getJsonSize;
+/**
+ * The string '2.0'.
+ */
+exports.jsonrpc2 = '2.0';
+exports.JsonRpcVersionStruct = (0, superstruct_1.literal)(exports.jsonrpc2);
+exports.JsonRpcIdStruct = (0, superstruct_1.nullable)((0, superstruct_1.union)([(0, superstruct_1.number)(), (0, superstruct_1.string)()]));
+exports.JsonRpcErrorStruct = (0, exports.object)({
+    code: (0, superstruct_1.integer)(),
+    message: (0, superstruct_1.string)(),
+    data: exactOptional(exports.JsonStruct),
+    stack: exactOptional((0, superstruct_1.string)()),
+});
+exports.JsonRpcParamsStruct = (0, superstruct_1.union)([(0, superstruct_1.record)((0, superstruct_1.string)(), exports.JsonStruct), (0, superstruct_1.array)(exports.JsonStruct)]);
+exports.JsonRpcRequestStruct = (0, exports.object)({
+    id: exports.JsonRpcIdStruct,
+    jsonrpc: exports.JsonRpcVersionStruct,
+    method: (0, superstruct_1.string)(),
+    params: exactOptional(exports.JsonRpcParamsStruct),
+});
+exports.JsonRpcNotificationStruct = (0, exports.object)({
+    jsonrpc: exports.JsonRpcVersionStruct,
+    method: (0, superstruct_1.string)(),
+    params: exactOptional(exports.JsonRpcParamsStruct),
+});
+/**
+ * Check if the given value is a valid {@link JsonRpcNotification} object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the given value is a valid {@link JsonRpcNotification}
+ * object.
+ */
+function isJsonRpcNotification(value) {
+    return (0, superstruct_1.is)(value, exports.JsonRpcNotificationStruct);
+}
+exports.isJsonRpcNotification = isJsonRpcNotification;
+/**
+ * Assert that the given value is a valid {@link JsonRpcNotification} object.
+ *
+ * @param value - The value to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcNotification} object.
+ */
+function assertIsJsonRpcNotification(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcNotificationStruct, 'Invalid JSON-RPC notification', ErrorWrapper);
+}
+exports.assertIsJsonRpcNotification = assertIsJsonRpcNotification;
+/**
+ * Check if the given value is a valid {@link JsonRpcRequest} object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the given value is a valid {@link JsonRpcRequest} object.
+ */
+function isJsonRpcRequest(value) {
+    return (0, superstruct_1.is)(value, exports.JsonRpcRequestStruct);
+}
+exports.isJsonRpcRequest = isJsonRpcRequest;
+/**
+ * Assert that the given value is a valid {@link JsonRpcRequest} object.
+ *
+ * @param value - The JSON-RPC request or notification to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcRequest} object.
+ */
+function assertIsJsonRpcRequest(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcRequestStruct, 'Invalid JSON-RPC request', ErrorWrapper);
+}
+exports.assertIsJsonRpcRequest = assertIsJsonRpcRequest;
+exports.PendingJsonRpcResponseStruct = (0, superstruct_1.object)({
+    id: exports.JsonRpcIdStruct,
+    jsonrpc: exports.JsonRpcVersionStruct,
+    result: (0, superstruct_1.optional)((0, superstruct_1.unknown)()),
+    error: (0, superstruct_1.optional)(exports.JsonRpcErrorStruct),
+});
+exports.JsonRpcSuccessStruct = (0, exports.object)({
+    id: exports.JsonRpcIdStruct,
+    jsonrpc: exports.JsonRpcVersionStruct,
+    result: exports.JsonStruct,
+});
+exports.JsonRpcFailureStruct = (0, exports.object)({
+    id: exports.JsonRpcIdStruct,
+    jsonrpc: exports.JsonRpcVersionStruct,
+    error: exports.JsonRpcErrorStruct,
+});
+exports.JsonRpcResponseStruct = (0, superstruct_1.union)([
+    exports.JsonRpcSuccessStruct,
+    exports.JsonRpcFailureStruct,
+]);
+/**
+ * Type guard to check whether specified JSON-RPC response is a
+ * {@link PendingJsonRpcResponse}.
+ *
+ * @param response - The JSON-RPC response to check.
+ * @returns Whether the specified JSON-RPC response is pending.
+ */
+function isPendingJsonRpcResponse(response) {
+    return (0, superstruct_1.is)(response, exports.PendingJsonRpcResponseStruct);
+}
+exports.isPendingJsonRpcResponse = isPendingJsonRpcResponse;
+/**
+ * Assert that the given value is a valid {@link PendingJsonRpcResponse} object.
+ *
+ * @param response - The JSON-RPC response to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link PendingJsonRpcResponse}
+ * object.
+ */
+function assertIsPendingJsonRpcResponse(response, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(response, exports.PendingJsonRpcResponseStruct, 'Invalid pending JSON-RPC response', ErrorWrapper);
+}
+exports.assertIsPendingJsonRpcResponse = assertIsPendingJsonRpcResponse;
+/**
+ * Type guard to check if a value is a {@link JsonRpcResponse}.
+ *
+ * @param response - The object to check.
+ * @returns Whether the object is a JsonRpcResponse.
+ */
+function isJsonRpcResponse(response) {
+    return (0, superstruct_1.is)(response, exports.JsonRpcResponseStruct);
+}
+exports.isJsonRpcResponse = isJsonRpcResponse;
+/**
+ * Assert that the given value is a valid {@link JsonRpcResponse} object.
+ *
+ * @param value - The value to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcResponse} object.
+ */
+function assertIsJsonRpcResponse(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcResponseStruct, 'Invalid JSON-RPC response', ErrorWrapper);
+}
+exports.assertIsJsonRpcResponse = assertIsJsonRpcResponse;
+/**
+ * Check if the given value is a valid {@link JsonRpcSuccess} object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the given value is a valid {@link JsonRpcSuccess} object.
+ */
+function isJsonRpcSuccess(value) {
+    return (0, superstruct_1.is)(value, exports.JsonRpcSuccessStruct);
+}
+exports.isJsonRpcSuccess = isJsonRpcSuccess;
+/**
+ * Assert that the given value is a valid {@link JsonRpcSuccess} object.
+ *
+ * @param value - The value to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcSuccess} object.
+ */
+function assertIsJsonRpcSuccess(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcSuccessStruct, 'Invalid JSON-RPC success response', ErrorWrapper);
+}
+exports.assertIsJsonRpcSuccess = assertIsJsonRpcSuccess;
+/**
+ * Check if the given value is a valid {@link JsonRpcFailure} object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the given value is a valid {@link JsonRpcFailure} object.
+ */
+function isJsonRpcFailure(value) {
+    return (0, superstruct_1.is)(value, exports.JsonRpcFailureStruct);
+}
+exports.isJsonRpcFailure = isJsonRpcFailure;
+/**
+ * Assert that the given value is a valid {@link JsonRpcFailure} object.
+ *
+ * @param value - The value to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcFailure} object.
+ */
+function assertIsJsonRpcFailure(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcFailureStruct, 'Invalid JSON-RPC failure response', ErrorWrapper);
+}
+exports.assertIsJsonRpcFailure = assertIsJsonRpcFailure;
+/**
+ * Check if the given value is a valid {@link JsonRpcError} object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the given value is a valid {@link JsonRpcError} object.
+ */
+function isJsonRpcError(value) {
+    return (0, superstruct_1.is)(value, exports.JsonRpcErrorStruct);
+}
+exports.isJsonRpcError = isJsonRpcError;
+/**
+ * Assert that the given value is a valid {@link JsonRpcError} object.
+ *
+ * @param value - The value to check.
+ * @param ErrorWrapper - The error class to throw if the assertion fails.
+ * Defaults to {@link AssertionError}.
+ * @throws If the given value is not a valid {@link JsonRpcError} object.
+ */
+function assertIsJsonRpcError(value, 
+// eslint-disable-next-line @typescript-eslint/naming-convention
+ErrorWrapper) {
+    (0, assert_1.assertStruct)(value, exports.JsonRpcErrorStruct, 'Invalid JSON-RPC error', ErrorWrapper);
+}
+exports.assertIsJsonRpcError = assertIsJsonRpcError;
+/**
+ * Gets a function for validating JSON-RPC request / response `id` values.
+ *
+ * By manipulating the options of this factory, you can control the behavior
+ * of the resulting validator for some edge cases. This is useful because e.g.
+ * `null` should sometimes but not always be permitted.
+ *
+ * Note that the empty string (`''`) is always permitted by the JSON-RPC
+ * specification, but that kind of sucks and you may want to forbid it in some
+ * instances anyway.
+ *
+ * For more details, see the
+ * [JSON-RPC Specification](https://www.jsonrpc.org/specification).
+ *
+ * @param options - An options object.
+ * @param options.permitEmptyString - Whether the empty string (i.e. `''`)
+ * should be treated as a valid ID. Default: `true`
+ * @param options.permitFractions - Whether fractional numbers (e.g. `1.2`)
+ * should be treated as valid IDs. Default: `false`
+ * @param options.permitNull - Whether `null` should be treated as a valid ID.
+ * Default: `true`
+ * @returns The JSON-RPC ID validator function.
+ */
+function getJsonRpcIdValidator(options) {
+    const { permitEmptyString, permitFractions, permitNull } = {
+        permitEmptyString: true,
+        permitFractions: false,
+        permitNull: true,
+        ...options,
+    };
+    /**
+     * Type guard for {@link JsonRpcId}.
+     *
+     * @param id - The JSON-RPC ID value to check.
+     * @returns Whether the given ID is valid per the options given to the
+     * factory.
+     */
+    const isValidJsonRpcId = (id) => {
+        return Boolean((typeof id === 'number' && (permitFractions || Number.isInteger(id))) ||
+            (typeof id === 'string' && (permitEmptyString || id.length > 0)) ||
+            (permitNull && id === null));
+    };
+    return isValidJsonRpcId;
+}
+exports.getJsonRpcIdValidator = getJsonRpcIdValidator;
+//# sourceMappingURL=json.cjs.map
+
+/***/ }),
+
 /***/ 530340:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -192930,6 +197741,19 @@ function isPushChain(chain) {
 
 /***/ }),
 
+/***/ 532938:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const major = (a, loose) => new SemVer(a, loose).major
+module.exports = major
+
+
+/***/ }),
+
 /***/ 533377:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -193320,6 +198144,19 @@ exports.lisk = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 535580:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const gt = (a, b, loose) => compare(a, b, loose) > 0
+module.exports = gt
+
+
+/***/ }),
+
 /***/ 536045:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -193505,6 +198342,157 @@ exports.bob = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=bob.js.map
+
+/***/ }),
+
+/***/ 537700:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.unpack = exports.pack = exports.isDynamicParser = exports.getParser = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const iterator_1 = __webpack_require__(557924);
+const parsers_1 = __webpack_require__(146207);
+const utils_2 = __webpack_require__(448746);
+/**
+ * Get the parser for the specified type.
+ *
+ * @param type - The type to get a parser for.
+ * @returns The parser.
+ * @throws If there is no parser for the specified type.
+ */
+const getParser = (type) => {
+    const parsers = {
+        address: parsers_1.address,
+        array: parsers_1.array,
+        bool: parsers_1.bool,
+        bytes: parsers_1.bytes,
+        fixedBytes: parsers_1.fixedBytes,
+        function: parsers_1.fn,
+        number: parsers_1.number,
+        string: parsers_1.string,
+        tuple: parsers_1.tuple,
+    };
+    const staticParser = parsers[type];
+    if (staticParser) {
+        return staticParser;
+    }
+    const parser = Object.values(parsers).find((value) => value.isType(type));
+    if (parser) {
+        return parser;
+    }
+    throw new errors_1.ParserError(`The type "${type}" is not supported.`);
+};
+exports.getParser = getParser;
+/**
+ * Check if the specified parser is dynamic, for the provided types. This is
+ * primarily used for parsing tuples, where a tuple can be dynamic based on the
+ * types. For other parsers, it will simply use the set `isDynamic` value.
+ *
+ * @param parser - The parser to check.
+ * @param type - The type to check the parser with.
+ * @returns Whether the parser is dynamic.
+ */
+const isDynamicParser = (parser, type) => {
+    const { isDynamic } = parser;
+    if (typeof isDynamic === 'function') {
+        return isDynamic(type);
+    }
+    return isDynamic;
+};
+exports.isDynamicParser = isDynamicParser;
+/**
+ * Pack the provided values in a buffer, encoded with the specified types. If a
+ * buffer is specified, the resulting value will be concatenated with the
+ * buffer.
+ *
+ * @param args - The arguments object.
+ * @param args.types - The types of the values to pack.
+ * @param args.values - The values to pack.
+ * @param args.packed - Whether to use the non-standard packed mode. Defaults to
+ * `false`.
+ * @param args.arrayPacked - Whether to use the non-standard packed mode for
+ * arrays. Defaults to `false`.
+ * @param args.byteArray - The byte array to encode the values into. Defaults to
+ * an empty array.
+ * @param args.tight - Whether to use tight packing mode. Only applicable when
+ * `packed` is true. When true, the packed mode will not add any padding bytes.
+ * This matches the packing behaviour of `ethereumjs-abi`, but is not standard.
+ * @returns The resulting encoded buffer.
+ */
+const pack = ({ types, values, packed = false, tight = false, arrayPacked = false, byteArray = new Uint8Array(), }) => {
+    (0, utils_1.assert)(types.length === values.length, new errors_1.ParserError(`The number of types (${types.length}) does not match the number of values (${values.length}).`));
+    const { staticBuffer, dynamicBuffer, pointers } = types.reduce(
+    // eslint-disable-next-line @typescript-eslint/no-shadow
+    ({ staticBuffer, dynamicBuffer, pointers }, type, index) => {
+        const parser = (0, exports.getParser)(type);
+        const value = values[index];
+        // If packed mode is enabled, we can skip the dynamic check, as all
+        // values are encoded in the static buffer.
+        if (packed || arrayPacked || !(0, exports.isDynamicParser)(parser, type)) {
+            return {
+                staticBuffer: parser.encode({
+                    buffer: staticBuffer,
+                    value,
+                    type,
+                    packed,
+                    tight,
+                }),
+                dynamicBuffer,
+                pointers,
+            };
+        }
+        const newStaticBuffer = (0, utils_1.concatBytes)([staticBuffer, new Uint8Array(32)]);
+        const newDynamicBuffer = parser.encode({
+            buffer: dynamicBuffer,
+            value,
+            type,
+            packed,
+            tight,
+        });
+        return {
+            staticBuffer: newStaticBuffer,
+            dynamicBuffer: newDynamicBuffer,
+            pointers: [
+                ...pointers,
+                { position: staticBuffer.length, pointer: dynamicBuffer.length },
+            ],
+        };
+    }, {
+        staticBuffer: new Uint8Array(),
+        dynamicBuffer: new Uint8Array(),
+        pointers: [],
+    });
+    // If packed mode is enabled, there shouldn't be any dynamic values.
+    (0, utils_1.assert)((!packed && !arrayPacked) || dynamicBuffer.length === 0, new errors_1.ParserError('Invalid pack state.'));
+    const dynamicStart = staticBuffer.length;
+    const updatedBuffer = pointers.reduce((target, { pointer, position }) => {
+        const offset = (0, utils_2.padStart)((0, utils_1.numberToBytes)(dynamicStart + pointer));
+        return (0, utils_2.set)(target, offset, position);
+    }, staticBuffer);
+    return (0, utils_1.concatBytes)([byteArray, updatedBuffer, dynamicBuffer]);
+};
+exports.pack = pack;
+const unpack = (types, buffer) => {
+    const iterator = (0, iterator_1.iterate)(buffer);
+    return types.map((type) => {
+        const { value: { value, skip }, done, } = iterator.next();
+        (0, utils_1.assert)(!done, new errors_1.ParserError(`The encoded value is invalid for the provided types. Reached end of buffer while attempting to parse "${type}".`));
+        const parser = (0, exports.getParser)(type);
+        const isDynamic = (0, exports.isDynamicParser)(parser, type);
+        if (isDynamic) {
+            const pointer = (0, utils_1.bytesToNumber)(value.subarray(0, 32));
+            const target = buffer.subarray(pointer);
+            return parser.decode({ type, value: target, skip });
+        }
+        return parser.decode({ type, value, skip });
+    });
+};
+exports.unpack = unpack;
+//# sourceMappingURL=packer.js.map
 
 /***/ }),
 
@@ -194950,6 +199938,76 @@ exports.sophonTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 546170:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const parse = __webpack_require__(830144)
+const { safeRe: re, t } = __webpack_require__(199718)
+
+const coerce = (version, options) => {
+  if (version instanceof SemVer) {
+    return version
+  }
+
+  if (typeof version === 'number') {
+    version = String(version)
+  }
+
+  if (typeof version !== 'string') {
+    return null
+  }
+
+  options = options || {}
+
+  let match = null
+  if (!options.rtl) {
+    match = version.match(options.includePrerelease ? re[t.COERCEFULL] : re[t.COERCE])
+  } else {
+    // Find the right-most coercible string that does not share
+    // a terminus with a more left-ward coercible string.
+    // Eg, '1.2.3.4' wants to coerce '2.3.4', not '3.4' or '4'
+    // With includePrerelease option set, '1.2.3.4-rc' wants to coerce '2.3.4-rc', not '2.3.4'
+    //
+    // Walk through the string checking with a /g regexp
+    // Manually set the index so as to pick up overlapping matches.
+    // Stop when we get a match that ends at the string end, since no
+    // coercible string can be more right-ward without the same terminus.
+    const coerceRtlRegex = options.includePrerelease ? re[t.COERCERTLFULL] : re[t.COERCERTL]
+    let next
+    while ((next = coerceRtlRegex.exec(version)) &&
+        (!match || match.index + match[0].length !== version.length)
+    ) {
+      if (!match ||
+            next.index + next[0].length !== match.index + match[0].length) {
+        match = next
+      }
+      coerceRtlRegex.lastIndex = next.index + next[1].length + next[2].length
+    }
+    // leave it in a clean state
+    coerceRtlRegex.lastIndex = -1
+  }
+
+  if (match === null) {
+    return null
+  }
+
+  const major = match[2]
+  const minor = match[3] || '0'
+  const patch = match[4] || '0'
+  const prerelease = options.includePrerelease && match[5] ? `-${match[5]}` : ''
+  const build = options.includePrerelease && match[6] ? `+${match[6]}` : ''
+
+  return parse(`${major}.${minor}.${patch}${prerelease}${build}`, options)
+}
+module.exports = coerce
+
+
+/***/ }),
+
 /***/ 546654:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -195473,6 +200531,134 @@ exports.ektaTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 550065:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.MerkleTreeImpl = void 0;
+const bytes_1 = __webpack_require__(144144);
+const core_1 = __webpack_require__(946452);
+const options_1 = __webpack_require__(565577);
+const errors_1 = __webpack_require__(190522);
+class MerkleTreeImpl {
+    constructor(tree, values, leafHash, nodeHash) {
+        this.tree = tree;
+        this.values = values;
+        this.leafHash = leafHash;
+        this.nodeHash = nodeHash;
+        (0, errors_1.validateArgument)(values.every(({ value }) => typeof value != 'number'), 'Leaf values cannot be numbers');
+        this.hashLookup = Object.fromEntries(values.map(({ treeIndex }, valueIndex) => [tree[treeIndex], valueIndex]));
+    }
+    static prepare(values, options = {}, leafHash, nodeHash) {
+        const sortLeaves = options.sortLeaves ?? options_1.defaultOptions.sortLeaves;
+        const hashedValues = values.map((value, valueIndex) => ({
+            value,
+            valueIndex,
+            hash: leafHash(value),
+        }));
+        if (sortLeaves) {
+            hashedValues.sort((a, b) => (0, bytes_1.compare)(a.hash, b.hash));
+        }
+        const tree = (0, core_1.makeMerkleTree)(hashedValues.map(v => v.hash), nodeHash);
+        const indexedValues = values.map(value => ({ value, treeIndex: 0 }));
+        for (const [leafIndex, { valueIndex }] of hashedValues.entries()) {
+            indexedValues[valueIndex].treeIndex = tree.length - leafIndex - 1;
+        }
+        return [tree, indexedValues];
+    }
+    get root() {
+        return this.tree[0];
+    }
+    get length() {
+        return this.values.length;
+    }
+    at(index) {
+        return this.values.at(index)?.value;
+    }
+    render() {
+        return (0, core_1.renderMerkleTree)(this.tree);
+    }
+    *entries() {
+        for (const [i, { value }] of this.values.entries()) {
+            yield [i, value];
+        }
+    }
+    validate() {
+        this.values.forEach((_, i) => this._validateValueAt(i));
+        (0, errors_1.invariant)((0, core_1.isValidMerkleTree)(this.tree, this.nodeHash), 'Merkle tree is invalid');
+    }
+    leafLookup(leaf) {
+        const lookup = this.hashLookup[this.leafHash(leaf)];
+        (0, errors_1.validateArgument)(typeof lookup !== 'undefined', 'Leaf is not in tree');
+        return lookup;
+    }
+    getProof(leaf) {
+        // input validity
+        const valueIndex = typeof leaf === 'number' ? leaf : this.leafLookup(leaf);
+        this._validateValueAt(valueIndex);
+        // rebuild tree index and generate proof
+        const { treeIndex } = this.values[valueIndex];
+        const proof = (0, core_1.getProof)(this.tree, treeIndex);
+        // sanity check proof
+        (0, errors_1.invariant)(this._verify(this.tree[treeIndex], proof), 'Unable to prove value');
+        // return proof in hex format
+        return proof;
+    }
+    getMultiProof(leaves) {
+        // input validity
+        const valueIndices = leaves.map(leaf => (typeof leaf === 'number' ? leaf : this.leafLookup(leaf)));
+        for (const valueIndex of valueIndices) {
+            this._validateValueAt(valueIndex);
+        }
+        // rebuild tree indices and generate proof
+        const indices = valueIndices.map(i => this.values[i].treeIndex);
+        const proof = (0, core_1.getMultiProof)(this.tree, indices);
+        // sanity check proof
+        (0, errors_1.invariant)(this._verifyMultiProof(proof), 'Unable to prove values');
+        // return multiproof in hex format
+        return {
+            leaves: proof.leaves.map(hash => this.values[this.hashLookup[hash]].value),
+            proof: proof.proof,
+            proofFlags: proof.proofFlags,
+        };
+    }
+    verify(leaf, proof) {
+        return this._verify(this._leafHash(leaf), proof);
+    }
+    verifyMultiProof(multiproof) {
+        return this._verifyMultiProof({
+            leaves: multiproof.leaves.map(l => this._leafHash(l)),
+            proof: multiproof.proof,
+            proofFlags: multiproof.proofFlags,
+        });
+    }
+    _validateValueAt(index) {
+        const value = this.values[index];
+        (0, errors_1.validateArgument)(value !== undefined, 'Index out of bounds');
+        (0, errors_1.invariant)(this.tree[value.treeIndex] === this.leafHash(value.value), 'Merkle tree does not contain the expected value');
+    }
+    _leafHash(leaf) {
+        if (typeof leaf === 'number') {
+            const lookup = this.values[leaf];
+            (0, errors_1.validateArgument)(lookup !== undefined, 'Index out of bounds');
+            leaf = lookup.value;
+        }
+        return this.leafHash(leaf);
+    }
+    _verify(leafHash, proof) {
+        return this.root === (0, core_1.processProof)(leafHash, proof, this.nodeHash);
+    }
+    _verifyMultiProof(multiproof) {
+        return this.root === (0, core_1.processMultiProof)(multiproof, this.nodeHash);
+    }
+}
+exports.MerkleTreeImpl = MerkleTreeImpl;
+//# sourceMappingURL=merkletree.js.map
+
+/***/ }),
+
 /***/ 550744:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -195831,6 +201017,16 @@ exports.vestingTypes = [
     ["/cosmos.vesting.v1beta1.MsgCreateVestingAccount", tx_1.MsgCreateVestingAccount],
 ];
 //# sourceMappingURL=messages.js.map
+
+/***/ }),
+
+/***/ 551175:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=transaction-types.cjs.map
 
 /***/ }),
 
@@ -198534,6 +203730,22 @@ exports.ProviderRpcError = ProviderRpcError;
 
 /***/ }),
 
+/***/ 556953:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const parse = __webpack_require__(830144)
+const valid = (version, options) => {
+  const v = parse(version, options)
+  return v ? v.version : null
+}
+module.exports = valid
+
+
+/***/ }),
+
 /***/ 557349:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -198610,6 +203822,46 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.crypto = void 0;
 exports.crypto = typeof globalThis === 'object' && 'crypto' in globalThis ? globalThis.crypto : undefined;
 //# sourceMappingURL=crypto.js.map
+
+/***/ }),
+
+/***/ 557924:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.iterate = void 0;
+const utils_1 = __webpack_require__(672495);
+/**
+ * Iterate over a buffer with the specified size. This will yield a part of the
+ * buffer starting at an increment of the specified size, until the end of the
+ * buffer is reached.
+ *
+ * Calling the `skip` function will make it skip the specified number of bytes.
+ *
+ * @param buffer - The buffer to iterate over.
+ * @param size - The number of bytes to iterate with.
+ * @returns An iterator that yields the parts of the byte array.
+ * @yields The parts of the byte array.
+ */
+const iterate = function* (buffer, size = 32) {
+    for (let pointer = 0; pointer < buffer.length; pointer += size) {
+        const skip = (length) => {
+            (0, utils_1.assert)(length >= 0, 'Cannot skip a negative number of bytes.');
+            (0, utils_1.assert)(length % size === 0, 'Length must be a multiple of the size.');
+            pointer += length;
+        };
+        const value = buffer.subarray(pointer);
+        yield { skip, value };
+    }
+    return {
+        skip: () => undefined,
+        value: new Uint8Array(),
+    };
+};
+exports.iterate = iterate;
+//# sourceMappingURL=iterator.js.map
 
 /***/ }),
 
@@ -200641,6 +205893,22 @@ exports.abstractTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 565577:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.defaultOptions = void 0;
+// Recommended (default) MerkleTree options.
+// - leaves are sorted by default to facilitate onchain verification of multiproofs.
+exports.defaultOptions = {
+    sortLeaves: true,
+};
+//# sourceMappingURL=options.js.map
+
+/***/ }),
+
 /***/ 565729:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -201473,6 +206741,225 @@ Object.defineProperty(exports, "extractChain", ({ enumerable: true, get: functio
 var getChainContractAddress_js_1 = __webpack_require__(526957);
 Object.defineProperty(exports, "getChainContractAddress", ({ enumerable: true, get: function () { return getChainContractAddress_js_1.getChainContractAddress; } }));
 //# sourceMappingURL=utils.js.map
+
+/***/ }),
+
+/***/ 570639:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.run = exports.toFailures = exports.toFailure = exports.shiftIterator = exports.print = exports.isPlainObject = exports.isObject = void 0;
+/**
+ * Check if a value is an iterator.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is an iterator.
+ */
+function isIterable(value) {
+    return isObject(value) && typeof value[Symbol.iterator] === 'function';
+}
+/**
+ * Check if a value is a plain object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a plain object.
+ */
+function isObject(value) {
+    return typeof value === 'object' && value !== null;
+}
+exports.isObject = isObject;
+/**
+ * Check if a value is a plain object.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a plain object.
+ */
+function isPlainObject(value) {
+    if (Object.prototype.toString.call(value) !== '[object Object]') {
+        return false;
+    }
+    const prototype = Object.getPrototypeOf(value);
+    return prototype === null || prototype === Object.prototype;
+}
+exports.isPlainObject = isPlainObject;
+/**
+ * Return a value as a printable string.
+ *
+ * @param value - The value to print.
+ * @returns The value as a string.
+ */
+function print(value) {
+    if (typeof value === 'symbol') {
+        return value.toString();
+    }
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    return typeof value === 'string' ? JSON.stringify(value) : `${value}`;
+}
+exports.print = print;
+/**
+ * Shift (remove and return) the first value from the `input` iterator.
+ * Like `Array.prototype.shift()` but for an `Iterator`.
+ *
+ * @param input - The iterator to shift.
+ * @returns The first value of the iterator, or `undefined` if the iterator is
+ * empty.
+ */
+function shiftIterator(input) {
+    const { done, value } = input.next();
+    return done ? undefined : value;
+}
+exports.shiftIterator = shiftIterator;
+/**
+ * Convert a single validation result to a failure.
+ *
+ * @param result - The result to convert.
+ * @param context - The context of the validation.
+ * @param struct - The struct being validated.
+ * @param value - The value being validated.
+ * @returns A failure if the result is a failure, or `undefined` if the result
+ * is a success.
+ */
+function toFailure(result, context, struct, value) {
+    if (result === true) {
+        return undefined;
+    }
+    else if (result === false) {
+        // eslint-disable-next-line no-param-reassign
+        result = {};
+    }
+    else if (typeof result === 'string') {
+        // eslint-disable-next-line no-param-reassign
+        result = { message: result };
+    }
+    const { path, branch } = context;
+    const { type } = struct;
+    const { refinement, message = `Expected a value of type \`${type}\`${refinement ? ` with refinement \`${refinement}\`` : ''}, but received: \`${print(value)}\``, } = result;
+    return {
+        value,
+        type,
+        refinement,
+        key: path[path.length - 1],
+        path,
+        branch,
+        ...result,
+        message,
+    };
+}
+exports.toFailure = toFailure;
+/**
+ * Convert a validation result to an iterable of failures.
+ *
+ * @param result - The result to convert.
+ * @param context - The context of the validation.
+ * @param struct - The struct being validated.
+ * @param value - The value being validated.
+ * @yields The failures.
+ * @returns An iterable of failures.
+ */
+function* toFailures(result, context, struct, value) {
+    if (!isIterable(result)) {
+        // eslint-disable-next-line no-param-reassign
+        result = [result];
+    }
+    for (const validationResult of result) {
+        const failure = toFailure(validationResult, context, struct, value);
+        if (failure) {
+            yield failure;
+        }
+    }
+}
+exports.toFailures = toFailures;
+/**
+ * Check a value against a struct, traversing deeply into nested values, and
+ * returning an iterator of failures or success.
+ *
+ * @param value - The value to check.
+ * @param struct - The struct to check against.
+ * @param options - Optional settings.
+ * @param options.path - The path to the value in the input data.
+ * @param options.branch - The branch of the value in the input data.
+ * @param options.coerce - Whether to coerce the value before validating it.
+ * @param options.mask - Whether to mask the value before validating it.
+ * @param options.message - An optional message to include in the error.
+ * @yields An iterator of failures or success.
+ * @returns An iterator of failures or success.
+ */
+function* run(value, struct, options = {}) {
+    const { path = [], branch = [value], coerce = false, mask = false } = options;
+    const context = { path, branch };
+    if (coerce) {
+        // eslint-disable-next-line no-param-reassign
+        value = struct.coercer(value, context);
+        if (mask &&
+            struct.type !== 'type' &&
+            isObject(struct.schema) &&
+            isObject(value) &&
+            !Array.isArray(value)) {
+            for (const key in value) {
+                if (struct.schema[key] === undefined) {
+                    delete value[key];
+                }
+            }
+        }
+    }
+    let status = 'valid';
+    for (const failure of struct.validator(value, context)) {
+        failure.explanation = options.message;
+        status = 'not_valid';
+        yield [failure, undefined];
+    }
+    // eslint-disable-next-line prefer-const
+    for (let [innerKey, innerValue, innerStruct] of struct.entries(value, context)) {
+        const iterable = run(innerValue, innerStruct, {
+            path: innerKey === undefined ? path : [...path, innerKey],
+            branch: innerKey === undefined ? branch : [...branch, innerValue],
+            coerce,
+            mask,
+            message: options.message,
+        });
+        for (const result of iterable) {
+            if (result[0]) {
+                status =
+                    result[0].refinement === null || result[0].refinement === undefined
+                        ? 'not_valid'
+                        : 'not_refined';
+                yield [result[0], undefined];
+            }
+            else if (coerce) {
+                innerValue = result[1];
+                if (innerKey === undefined) {
+                    // eslint-disable-next-line no-param-reassign
+                    value = innerValue;
+                }
+                else if (value instanceof Map) {
+                    value.set(innerKey, innerValue);
+                }
+                else if (value instanceof Set) {
+                    value.add(innerValue);
+                }
+                else if (isObject(value)) {
+                    if (innerValue !== undefined || innerKey in value) {
+                        value[innerKey] = innerValue;
+                    }
+                }
+            }
+        }
+    }
+    if (status !== 'not_valid') {
+        for (const failure of struct.refiner(value, context)) {
+            failure.explanation = options.message;
+            status = 'not_refined';
+            yield [failure, undefined];
+        }
+    }
+    if (status === 'valid') {
+        yield [undefined, value];
+    }
+}
+exports.run = run;
+//# sourceMappingURL=utils.cjs.map
 
 /***/ }),
 
@@ -204854,6 +210341,90 @@ function randomBytes(bytesLength = 32) {
 
 /***/ }),
 
+/***/ 591563:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.address = exports.getAddress = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const utils_2 = __webpack_require__(448746);
+/**
+ * Normalize an address value. This accepts the address as:
+ *
+ * - A hex string starting with the `0x` prefix.
+ * - A byte array (`Uint8Array` or `Buffer`).
+ *
+ * It checks that the address is 20 bytes long.
+ *
+ * @param value - The value to normalize.
+ * @returns The normalized address as `Uint8Array`.
+ */
+const getAddress = (value) => {
+    const bytesValue = (0, utils_1.createBytes)(value);
+    (0, utils_1.assert)(bytesValue.length <= 20, new errors_1.ParserError(`Invalid address value. Expected address to be 20 bytes long, but received ${bytesValue.length} bytes.`));
+    return (0, utils_2.padStart)(bytesValue, 20);
+};
+exports.getAddress = getAddress;
+exports.address = {
+    isDynamic: false,
+    /**
+     * Get if the given value is a valid address type. Since `address` is a simple
+     * type, this is just a check that the value is "address".
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a valid address type.
+     */
+    isType: (type) => type === 'address',
+    /**
+     * Get the byte length of an encoded address. Since `address` is a simple
+     * type, this always returns 32.
+     *
+     * Note that actual addresses are only 20 bytes long, but the encoding of
+     * the `address` type is always 32 bytes long.
+     *
+     * @returns The byte length of an encoded address.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode the given address to a 32-byte-long byte array.
+     *
+     * @param args - The encoding arguments.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The address to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @returns The bytes with the encoded address added to it.
+     */
+    encode({ buffer, value, packed }) {
+        const addressValue = (0, exports.getAddress)(value);
+        // If we're using packed encoding, we can just add the address bytes to the
+        // byte array, without adding any padding.
+        if (packed) {
+            return (0, utils_1.concatBytes)([buffer, addressValue]);
+        }
+        const addressBuffer = (0, utils_2.padStart)(addressValue);
+        return (0, utils_1.concatBytes)([buffer, addressBuffer]);
+    },
+    /**
+     * Decode the given byte array to an address.
+     *
+     * @param args - The decoding arguments.
+     * @param args.value - The byte array to decode.
+     * @returns The decoded address as a hexadecimal string, starting with the
+     * "0x"-prefix.
+     */
+    decode({ value }) {
+        return (0, utils_1.add0x)((0, utils_1.bytesToHex)(value.slice(12, 32)));
+    },
+};
+//# sourceMappingURL=address.js.map
+
+/***/ }),
+
 /***/ 592037:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -205251,6 +210822,33 @@ exports.skaleNebula = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=nebula.js.map
+
+/***/ }),
+
+/***/ 593256:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(956498), exports);
+__exportStar(__webpack_require__(205961), exports);
+__exportStar(__webpack_require__(11126), exports);
+//# sourceMappingURL=index.js.map
 
 /***/ }),
 
@@ -208987,6 +214585,64 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.version = void 0;
 exports.version = '0.1.1';
 //# sourceMappingURL=version.js.map
+
+/***/ }),
+
+/***/ 603438:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StandardMerkleTree = void 0;
+const bytes_1 = __webpack_require__(144144);
+const core_1 = __webpack_require__(946452);
+const merkletree_1 = __webpack_require__(550065);
+const hashes_1 = __webpack_require__(522011);
+const errors_1 = __webpack_require__(190522);
+class StandardMerkleTree extends merkletree_1.MerkleTreeImpl {
+    constructor(tree, values, leafEncoding) {
+        super(tree, values, leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf));
+        this.tree = tree;
+        this.values = values;
+        this.leafEncoding = leafEncoding;
+    }
+    static of(values, leafEncoding, options = {}) {
+        // use default nodeHash (standardNodeHash)
+        const [tree, indexedValues] = merkletree_1.MerkleTreeImpl.prepare(values, options, leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf));
+        return new StandardMerkleTree(tree, indexedValues, leafEncoding);
+    }
+    static load(data) {
+        (0, errors_1.validateArgument)(data.format === 'standard-v1', `Unknown format '${data.format}'`);
+        (0, errors_1.validateArgument)(data.leafEncoding !== undefined, 'Expected leaf encoding');
+        const tree = new StandardMerkleTree(data.tree, data.values, data.leafEncoding);
+        tree.validate();
+        return tree;
+    }
+    static verify(root, leafEncoding, leaf, proof) {
+        // use default nodeHash (standardNodeHash) for processProof
+        return (0, bytes_1.toHex)(root) === (0, core_1.processProof)((0, hashes_1.standardLeafHash)(leafEncoding, leaf), proof);
+    }
+    static verifyMultiProof(root, leafEncoding, multiproof) {
+        // use default nodeHash (standardNodeHash) for processMultiProof
+        return ((0, bytes_1.toHex)(root) ===
+            (0, core_1.processMultiProof)({
+                leaves: multiproof.leaves.map(leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf)),
+                proof: multiproof.proof,
+                proofFlags: multiproof.proofFlags,
+            }));
+    }
+    dump() {
+        return {
+            format: 'standard-v1',
+            leafEncoding: this.leafEncoding,
+            tree: this.tree,
+            values: this.values,
+        };
+    }
+}
+exports.StandardMerkleTree = StandardMerkleTree;
+//# sourceMappingURL=standard.js.map
 
 /***/ }),
 
@@ -213147,6 +218803,80 @@ async function verifyAuthorization({ address, authorization, signature, }) {
 
 /***/ }),
 
+/***/ 612026:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.timeSince = exports.inMilliseconds = exports.Duration = void 0;
+/**
+ * Common duration constants, in milliseconds.
+ */
+var Duration;
+(function (Duration) {
+    /**
+     * A millisecond.
+     */
+    Duration[Duration["Millisecond"] = 1] = "Millisecond";
+    /**
+     * A second, in milliseconds.
+     */
+    Duration[Duration["Second"] = 1000] = "Second";
+    /**
+     * A minute, in milliseconds.
+     */
+    Duration[Duration["Minute"] = 60000] = "Minute";
+    /**
+     * An hour, in milliseconds.
+     */
+    Duration[Duration["Hour"] = 3600000] = "Hour";
+    /**
+     * A day, in milliseconds.
+     */
+    Duration[Duration["Day"] = 86400000] = "Day";
+    /**
+     * A week, in milliseconds.
+     */
+    Duration[Duration["Week"] = 604800000] = "Week";
+    /**
+     * A year, in milliseconds.
+     */
+    Duration[Duration["Year"] = 31536000000] = "Year";
+})(Duration = exports.Duration || (exports.Duration = {}));
+const isNonNegativeInteger = (number) => Number.isInteger(number) && number >= 0;
+const assertIsNonNegativeInteger = (number, name) => {
+    if (!isNonNegativeInteger(number)) {
+        throw new Error(`"${name}" must be a non-negative integer. Received: "${number}".`);
+    }
+};
+/**
+ * Calculates the millisecond value of the specified number of units of time.
+ *
+ * @param count - The number of units of time.
+ * @param duration - The unit of time to count.
+ * @returns The count multiplied by the specified duration.
+ */
+function inMilliseconds(count, duration) {
+    assertIsNonNegativeInteger(count, 'count');
+    return count * duration;
+}
+exports.inMilliseconds = inMilliseconds;
+/**
+ * Gets the milliseconds since a particular Unix epoch timestamp.
+ *
+ * @param timestamp - A Unix millisecond timestamp.
+ * @returns The number of milliseconds elapsed since the specified timestamp.
+ */
+function timeSince(timestamp) {
+    assertIsNonNegativeInteger(timestamp, 'timestamp');
+    return Date.now() - timestamp;
+}
+exports.timeSince = timeSince;
+//# sourceMappingURL=time.cjs.map
+
+/***/ }),
+
 /***/ 612167:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -214155,6 +219885,19 @@ function watchBlockNumber(client, { emitOnBegin = false, emitMissed = false, onB
     return enablePolling ? pollBlockNumber() : subscribeBlockNumber();
 }
 //# sourceMappingURL=watchBlockNumber.js.map
+
+/***/ }),
+
+/***/ 613999:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const neq = (a, b, loose) => compare(a, b, loose) !== 0
+module.exports = neq
+
 
 /***/ }),
 
@@ -216601,6 +222344,390 @@ exports.auroraTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=auroraTestnet.js.map
+
+/***/ }),
+
+/***/ 619459:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+/**
+ * Hex, bytes and number utilities.
+ * @module
+ */
+/*! noble-curves - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.notImplemented = exports.bitMask = void 0;
+exports.isBytes = isBytes;
+exports.abytes = abytes;
+exports.abool = abool;
+exports.numberToHexUnpadded = numberToHexUnpadded;
+exports.hexToNumber = hexToNumber;
+exports.bytesToHex = bytesToHex;
+exports.hexToBytes = hexToBytes;
+exports.bytesToNumberBE = bytesToNumberBE;
+exports.bytesToNumberLE = bytesToNumberLE;
+exports.numberToBytesBE = numberToBytesBE;
+exports.numberToBytesLE = numberToBytesLE;
+exports.numberToVarBytesBE = numberToVarBytesBE;
+exports.ensureBytes = ensureBytes;
+exports.concatBytes = concatBytes;
+exports.equalBytes = equalBytes;
+exports.utf8ToBytes = utf8ToBytes;
+exports.inRange = inRange;
+exports.aInRange = aInRange;
+exports.bitLen = bitLen;
+exports.bitGet = bitGet;
+exports.bitSet = bitSet;
+exports.createHmacDrbg = createHmacDrbg;
+exports.validateObject = validateObject;
+exports.memoized = memoized;
+// 100 lines of code in the file are duplicated from noble-hashes (utils).
+// This is OK: `abstract` directory does not use noble-hashes.
+// User may opt-in into using different hashing library. This way, noble-hashes
+// won't be included into their bundle.
+const _0n = /* @__PURE__ */ BigInt(0);
+const _1n = /* @__PURE__ */ BigInt(1);
+function isBytes(a) {
+    return a instanceof Uint8Array || (ArrayBuffer.isView(a) && a.constructor.name === 'Uint8Array');
+}
+function abytes(item) {
+    if (!isBytes(item))
+        throw new Error('Uint8Array expected');
+}
+function abool(title, value) {
+    if (typeof value !== 'boolean')
+        throw new Error(title + ' boolean expected, got ' + value);
+}
+// Used in weierstrass, der
+function numberToHexUnpadded(num) {
+    const hex = num.toString(16);
+    return hex.length & 1 ? '0' + hex : hex;
+}
+function hexToNumber(hex) {
+    if (typeof hex !== 'string')
+        throw new Error('hex string expected, got ' + typeof hex);
+    return hex === '' ? _0n : BigInt('0x' + hex); // Big Endian
+}
+// Built-in hex conversion https://caniuse.com/mdn-javascript_builtins_uint8array_fromhex
+const hasHexBuiltin = 
+// @ts-ignore
+typeof Uint8Array.from([]).toHex === 'function' && typeof Uint8Array.fromHex === 'function';
+// Array where index 0xf0 (240) is mapped to string 'f0'
+const hexes = /* @__PURE__ */ Array.from({ length: 256 }, (_, i) => i.toString(16).padStart(2, '0'));
+/**
+ * Convert byte array to hex string. Uses built-in function, when available.
+ * @example bytesToHex(Uint8Array.from([0xca, 0xfe, 0x01, 0x23])) // 'cafe0123'
+ */
+function bytesToHex(bytes) {
+    abytes(bytes);
+    // @ts-ignore
+    if (hasHexBuiltin)
+        return bytes.toHex();
+    // pre-caching improves the speed 6x
+    let hex = '';
+    for (let i = 0; i < bytes.length; i++) {
+        hex += hexes[bytes[i]];
+    }
+    return hex;
+}
+// We use optimized technique to convert hex string to byte array
+const asciis = { _0: 48, _9: 57, A: 65, F: 70, a: 97, f: 102 };
+function asciiToBase16(ch) {
+    if (ch >= asciis._0 && ch <= asciis._9)
+        return ch - asciis._0; // '2' => 50-48
+    if (ch >= asciis.A && ch <= asciis.F)
+        return ch - (asciis.A - 10); // 'B' => 66-(65-10)
+    if (ch >= asciis.a && ch <= asciis.f)
+        return ch - (asciis.a - 10); // 'b' => 98-(97-10)
+    return;
+}
+/**
+ * Convert hex string to byte array. Uses built-in function, when available.
+ * @example hexToBytes('cafe0123') // Uint8Array.from([0xca, 0xfe, 0x01, 0x23])
+ */
+function hexToBytes(hex) {
+    if (typeof hex !== 'string')
+        throw new Error('hex string expected, got ' + typeof hex);
+    // @ts-ignore
+    if (hasHexBuiltin)
+        return Uint8Array.fromHex(hex);
+    const hl = hex.length;
+    const al = hl / 2;
+    if (hl % 2)
+        throw new Error('hex string expected, got unpadded hex of length ' + hl);
+    const array = new Uint8Array(al);
+    for (let ai = 0, hi = 0; ai < al; ai++, hi += 2) {
+        const n1 = asciiToBase16(hex.charCodeAt(hi));
+        const n2 = asciiToBase16(hex.charCodeAt(hi + 1));
+        if (n1 === undefined || n2 === undefined) {
+            const char = hex[hi] + hex[hi + 1];
+            throw new Error('hex string expected, got non-hex character "' + char + '" at index ' + hi);
+        }
+        array[ai] = n1 * 16 + n2; // multiply first octet, e.g. 'a3' => 10*16+3 => 160 + 3 => 163
+    }
+    return array;
+}
+// BE: Big Endian, LE: Little Endian
+function bytesToNumberBE(bytes) {
+    return hexToNumber(bytesToHex(bytes));
+}
+function bytesToNumberLE(bytes) {
+    abytes(bytes);
+    return hexToNumber(bytesToHex(Uint8Array.from(bytes).reverse()));
+}
+function numberToBytesBE(n, len) {
+    return hexToBytes(n.toString(16).padStart(len * 2, '0'));
+}
+function numberToBytesLE(n, len) {
+    return numberToBytesBE(n, len).reverse();
+}
+// Unpadded, rarely used
+function numberToVarBytesBE(n) {
+    return hexToBytes(numberToHexUnpadded(n));
+}
+/**
+ * Takes hex string or Uint8Array, converts to Uint8Array.
+ * Validates output length.
+ * Will throw error for other types.
+ * @param title descriptive title for an error e.g. 'private key'
+ * @param hex hex string or Uint8Array
+ * @param expectedLength optional, will compare to result array's length
+ * @returns
+ */
+function ensureBytes(title, hex, expectedLength) {
+    let res;
+    if (typeof hex === 'string') {
+        try {
+            res = hexToBytes(hex);
+        }
+        catch (e) {
+            throw new Error(title + ' must be hex string or Uint8Array, cause: ' + e);
+        }
+    }
+    else if (isBytes(hex)) {
+        // Uint8Array.from() instead of hash.slice() because node.js Buffer
+        // is instance of Uint8Array, and its slice() creates **mutable** copy
+        res = Uint8Array.from(hex);
+    }
+    else {
+        throw new Error(title + ' must be hex string or Uint8Array');
+    }
+    const len = res.length;
+    if (typeof expectedLength === 'number' && len !== expectedLength)
+        throw new Error(title + ' of length ' + expectedLength + ' expected, got ' + len);
+    return res;
+}
+/**
+ * Copies several Uint8Arrays into one.
+ */
+function concatBytes(...arrays) {
+    let sum = 0;
+    for (let i = 0; i < arrays.length; i++) {
+        const a = arrays[i];
+        abytes(a);
+        sum += a.length;
+    }
+    const res = new Uint8Array(sum);
+    for (let i = 0, pad = 0; i < arrays.length; i++) {
+        const a = arrays[i];
+        res.set(a, pad);
+        pad += a.length;
+    }
+    return res;
+}
+// Compares 2 u8a-s in kinda constant time
+function equalBytes(a, b) {
+    if (a.length !== b.length)
+        return false;
+    let diff = 0;
+    for (let i = 0; i < a.length; i++)
+        diff |= a[i] ^ b[i];
+    return diff === 0;
+}
+/**
+ * @example utf8ToBytes('abc') // new Uint8Array([97, 98, 99])
+ */
+function utf8ToBytes(str) {
+    if (typeof str !== 'string')
+        throw new Error('string expected');
+    return new Uint8Array(new TextEncoder().encode(str)); // https://bugzil.la/1681809
+}
+// Is positive bigint
+const isPosBig = (n) => typeof n === 'bigint' && _0n <= n;
+function inRange(n, min, max) {
+    return isPosBig(n) && isPosBig(min) && isPosBig(max) && min <= n && n < max;
+}
+/**
+ * Asserts min <= n < max. NOTE: It's < max and not <= max.
+ * @example
+ * aInRange('x', x, 1n, 256n); // would assume x is in (1n..255n)
+ */
+function aInRange(title, n, min, max) {
+    // Why min <= n < max and not a (min < n < max) OR b (min <= n <= max)?
+    // consider P=256n, min=0n, max=P
+    // - a for min=0 would require -1:          `inRange('x', x, -1n, P)`
+    // - b would commonly require subtraction:  `inRange('x', x, 0n, P - 1n)`
+    // - our way is the cleanest:               `inRange('x', x, 0n, P)
+    if (!inRange(n, min, max))
+        throw new Error('expected valid ' + title + ': ' + min + ' <= n < ' + max + ', got ' + n);
+}
+// Bit operations
+/**
+ * Calculates amount of bits in a bigint.
+ * Same as `n.toString(2).length`
+ * TODO: merge with nLength in modular
+ */
+function bitLen(n) {
+    let len;
+    for (len = 0; n > _0n; n >>= _1n, len += 1)
+        ;
+    return len;
+}
+/**
+ * Gets single bit at position.
+ * NOTE: first bit position is 0 (same as arrays)
+ * Same as `!!+Array.from(n.toString(2)).reverse()[pos]`
+ */
+function bitGet(n, pos) {
+    return (n >> BigInt(pos)) & _1n;
+}
+/**
+ * Sets single bit at position.
+ */
+function bitSet(n, pos, value) {
+    return n | ((value ? _1n : _0n) << BigInt(pos));
+}
+/**
+ * Calculate mask for N bits. Not using ** operator with bigints because of old engines.
+ * Same as BigInt(`0b${Array(i).fill('1').join('')}`)
+ */
+const bitMask = (n) => (_1n << BigInt(n)) - _1n;
+exports.bitMask = bitMask;
+// DRBG
+const u8n = (len) => new Uint8Array(len); // creates Uint8Array
+const u8fr = (arr) => Uint8Array.from(arr); // another shortcut
+/**
+ * Minimal HMAC-DRBG from NIST 800-90 for RFC6979 sigs.
+ * @returns function that will call DRBG until 2nd arg returns something meaningful
+ * @example
+ *   const drbg = createHmacDRBG<Key>(32, 32, hmac);
+ *   drbg(seed, bytesToKey); // bytesToKey must return Key or undefined
+ */
+function createHmacDrbg(hashLen, qByteLen, hmacFn) {
+    if (typeof hashLen !== 'number' || hashLen < 2)
+        throw new Error('hashLen must be a number');
+    if (typeof qByteLen !== 'number' || qByteLen < 2)
+        throw new Error('qByteLen must be a number');
+    if (typeof hmacFn !== 'function')
+        throw new Error('hmacFn must be a function');
+    // Step B, Step C: set hashLen to 8*ceil(hlen/8)
+    let v = u8n(hashLen); // Minimal non-full-spec HMAC-DRBG from NIST 800-90 for RFC6979 sigs.
+    let k = u8n(hashLen); // Steps B and C of RFC6979 3.2: set hashLen, in our case always same
+    let i = 0; // Iterations counter, will throw when over 1000
+    const reset = () => {
+        v.fill(1);
+        k.fill(0);
+        i = 0;
+    };
+    const h = (...b) => hmacFn(k, v, ...b); // hmac(k)(v, ...values)
+    const reseed = (seed = u8n(0)) => {
+        // HMAC-DRBG reseed() function. Steps D-G
+        k = h(u8fr([0x00]), seed); // k = hmac(k || v || 0x00 || seed)
+        v = h(); // v = hmac(k || v)
+        if (seed.length === 0)
+            return;
+        k = h(u8fr([0x01]), seed); // k = hmac(k || v || 0x01 || seed)
+        v = h(); // v = hmac(k || v)
+    };
+    const gen = () => {
+        // HMAC-DRBG generate() function
+        if (i++ >= 1000)
+            throw new Error('drbg: tried 1000 values');
+        let len = 0;
+        const out = [];
+        while (len < qByteLen) {
+            v = h();
+            const sl = v.slice();
+            out.push(sl);
+            len += v.length;
+        }
+        return concatBytes(...out);
+    };
+    const genUntil = (seed, pred) => {
+        reset();
+        reseed(seed); // Steps D-G
+        let res = undefined; // Step H: grind until k is in [1..n-1]
+        while (!(res = pred(gen())))
+            reseed();
+        reset();
+        return res;
+    };
+    return genUntil;
+}
+// Validating curves and fields
+const validatorFns = {
+    bigint: (val) => typeof val === 'bigint',
+    function: (val) => typeof val === 'function',
+    boolean: (val) => typeof val === 'boolean',
+    string: (val) => typeof val === 'string',
+    stringOrUint8Array: (val) => typeof val === 'string' || isBytes(val),
+    isSafeInteger: (val) => Number.isSafeInteger(val),
+    array: (val) => Array.isArray(val),
+    field: (val, object) => object.Fp.isValid(val),
+    hash: (val) => typeof val === 'function' && Number.isSafeInteger(val.outputLen),
+};
+// type Record<K extends string | number | symbol, T> = { [P in K]: T; }
+function validateObject(object, validators, optValidators = {}) {
+    const checkField = (fieldName, type, isOptional) => {
+        const checkVal = validatorFns[type];
+        if (typeof checkVal !== 'function')
+            throw new Error('invalid validator function');
+        const val = object[fieldName];
+        if (isOptional && val === undefined)
+            return;
+        if (!checkVal(val, object)) {
+            throw new Error('param ' + String(fieldName) + ' is invalid. Expected ' + type + ', got ' + val);
+        }
+    };
+    for (const [fieldName, type] of Object.entries(validators))
+        checkField(fieldName, type, false);
+    for (const [fieldName, type] of Object.entries(optValidators))
+        checkField(fieldName, type, true);
+    return object;
+}
+// validate type tests
+// const o: { a: number; b: number; c: number } = { a: 1, b: 5, c: 6 };
+// const z0 = validateObject(o, { a: 'isSafeInteger' }, { c: 'bigint' }); // Ok!
+// // Should fail type-check
+// const z1 = validateObject(o, { a: 'tmp' }, { c: 'zz' });
+// const z2 = validateObject(o, { a: 'isSafeInteger' }, { c: 'zz' });
+// const z3 = validateObject(o, { test: 'boolean', z: 'bug' });
+// const z4 = validateObject(o, { a: 'boolean', z: 'bug' });
+/**
+ * throws not implemented error
+ */
+const notImplemented = () => {
+    throw new Error('not implemented');
+};
+exports.notImplemented = notImplemented;
+/**
+ * Memoizes (caches) computation result.
+ * Uses WeakMap: the value is going auto-cleaned by GC after last reference is removed.
+ */
+function memoized(fn) {
+    const map = new WeakMap();
+    return (arg, ...args) => {
+        const val = map.get(arg);
+        if (val !== undefined)
+            return val;
+        const computed = fn(arg, ...args);
+        map.set(arg, computed);
+        return computed;
+    };
+}
+//# sourceMappingURL=utils.js.map
 
 /***/ }),
 
@@ -221960,6 +228087,36 @@ exports.btr = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=btr.js.map
+
+/***/ }),
+
+/***/ 635620:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(127754), exports);
+__exportStar(__webpack_require__(899067), exports);
+__exportStar(__webpack_require__(491704), exports);
+__exportStar(__webpack_require__(950401), exports);
+__exportStar(__webpack_require__(367792), exports);
+__exportStar(__webpack_require__(865991), exports);
+//# sourceMappingURL=index.cjs.map
 
 /***/ }),
 
@@ -231545,6 +237702,162 @@ function memoized(fn) {
 
 /***/ }),
 
+/***/ 658897:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+//
+// Types
+//
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.calculateNumberSize = exports.calculateStringSize = exports.isASCII = exports.isPlainObject = exports.ESCAPE_CHARACTERS_REGEXP = exports.JsonSize = exports.getKnownPropertyNames = exports.hasProperty = exports.isObject = exports.isNullOrUndefined = exports.isNonEmptyArray = void 0;
+//
+// Type Guards
+//
+/**
+ * A {@link NonEmptyArray} type guard.
+ *
+ * @template Element - The non-empty array member type.
+ * @param value - The value to check.
+ * @returns Whether the value is a non-empty array.
+ */
+function isNonEmptyArray(value) {
+    return Array.isArray(value) && value.length > 0;
+}
+exports.isNonEmptyArray = isNonEmptyArray;
+/**
+ * Type guard for "nullishness".
+ *
+ * @param value - Any value.
+ * @returns `true` if the value is null or undefined, `false` otherwise.
+ */
+function isNullOrUndefined(value) {
+    return value === null || value === undefined;
+}
+exports.isNullOrUndefined = isNullOrUndefined;
+/**
+ * A type guard for {@link RuntimeObject}.
+ *
+ * @param value - The value to check.
+ * @returns Whether the specified value has a runtime type of `object` and is
+ * neither `null` nor an `Array`.
+ */
+function isObject(value) {
+    return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
+}
+exports.isObject = isObject;
+//
+// Other utility functions
+//
+/**
+ * A type guard for ensuring an object has a property.
+ *
+ * @param objectToCheck - The object to check.
+ * @param name - The property name to check for.
+ * @returns Whether the specified object has an own property with the specified
+ * name, regardless of whether it is enumerable or not.
+ */
+const hasProperty = (objectToCheck, name) => Object.hasOwnProperty.call(objectToCheck, name);
+exports.hasProperty = hasProperty;
+/**
+ * `Object.getOwnPropertyNames()` is intentionally generic: it returns the
+ * immediate property names of an object, but it cannot make guarantees about
+ * the contents of that object, so the type of the property names is merely
+ * `string[]`. While this is technically accurate, it is also unnecessary if we
+ * have an object with a type that we own (such as an enum).
+ *
+ * @param object - The plain object.
+ * @returns The own property names of the object which are assigned a type
+ * derived from the object itself.
+ */
+function getKnownPropertyNames(object) {
+    return Object.getOwnPropertyNames(object);
+}
+exports.getKnownPropertyNames = getKnownPropertyNames;
+/**
+ * Predefined sizes (in Bytes) of specific parts of JSON structure.
+ */
+var JsonSize;
+(function (JsonSize) {
+    JsonSize[JsonSize["Null"] = 4] = "Null";
+    JsonSize[JsonSize["Comma"] = 1] = "Comma";
+    JsonSize[JsonSize["Wrapper"] = 1] = "Wrapper";
+    JsonSize[JsonSize["True"] = 4] = "True";
+    JsonSize[JsonSize["False"] = 5] = "False";
+    JsonSize[JsonSize["Quote"] = 1] = "Quote";
+    JsonSize[JsonSize["Colon"] = 1] = "Colon";
+    // eslint-disable-next-line @typescript-eslint/no-shadow
+    JsonSize[JsonSize["Date"] = 24] = "Date";
+})(JsonSize = exports.JsonSize || (exports.JsonSize = {}));
+/**
+ * Regular expression with pattern matching for (special) escaped characters.
+ */
+exports.ESCAPE_CHARACTERS_REGEXP = /"|\\|\n|\r|\t/gu;
+/**
+ * Check if the value is plain object.
+ *
+ * @param value - Value to be checked.
+ * @returns True if an object is the plain JavaScript object,
+ * false if the object is not plain (e.g. function).
+ */
+function isPlainObject(value) {
+    if (typeof value !== 'object' || value === null) {
+        return false;
+    }
+    try {
+        let proto = value;
+        while (Object.getPrototypeOf(proto) !== null) {
+            proto = Object.getPrototypeOf(proto);
+        }
+        return Object.getPrototypeOf(value) === proto;
+    }
+    catch (_) {
+        return false;
+    }
+}
+exports.isPlainObject = isPlainObject;
+/**
+ * Check if character is ASCII.
+ *
+ * @param character - Character.
+ * @returns True if a character code is ASCII, false if not.
+ */
+function isASCII(character) {
+    return character.charCodeAt(0) <= 127;
+}
+exports.isASCII = isASCII;
+/**
+ * Calculate string size.
+ *
+ * @param value - String value to calculate size.
+ * @returns Number of bytes used to store whole string value.
+ */
+function calculateStringSize(value) {
+    const size = value.split('').reduce((total, character) => {
+        if (isASCII(character)) {
+            return total + 1;
+        }
+        return total + 2;
+    }, 0);
+    // Also detect characters that need backslash escape
+    return size + (value.match(exports.ESCAPE_CHARACTERS_REGEXP) ?? []).length;
+}
+exports.calculateStringSize = calculateStringSize;
+/**
+ * Calculate size of a number ofter JSON serialization.
+ *
+ * @param value - Number value to calculate size.
+ * @returns Number of bytes used to store whole number in JSON.
+ */
+function calculateNumberSize(value) {
+    return value.toString().length;
+}
+exports.calculateNumberSize = calculateNumberSize;
+//# sourceMappingURL=misc.cjs.map
+
+/***/ }),
+
 /***/ 659018:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -233769,6 +240082,31 @@ exports.skaleEuropa = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 667557:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.aoutput = exports.anumber = exports.aexists = exports.abytes = void 0;
+/**
+ * Internal assertion helpers.
+ * @module
+ * @deprecated
+ */
+const utils_ts_1 = __webpack_require__(899175);
+/** @deprecated Use import from `noble/hashes/utils` module */
+exports.abytes = utils_ts_1.abytes;
+/** @deprecated Use import from `noble/hashes/utils` module */
+exports.aexists = utils_ts_1.aexists;
+/** @deprecated Use import from `noble/hashes/utils` module */
+exports.anumber = utils_ts_1.anumber;
+/** @deprecated Use import from `noble/hashes/utils` module */
+exports.aoutput = utils_ts_1.aoutput;
+//# sourceMappingURL=_assert.js.map
+
+/***/ }),
+
 /***/ 667829:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -233887,6 +240225,56 @@ exports.statusSepolia = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 668794:
+/***/ ((module) => {
+
+"use strict";
+
+
+class LRUCache {
+  constructor () {
+    this.max = 1000
+    this.map = new Map()
+  }
+
+  get (key) {
+    const value = this.map.get(key)
+    if (value === undefined) {
+      return undefined
+    } else {
+      // Remove the key from the map and add it to the end
+      this.map.delete(key)
+      this.map.set(key, value)
+      return value
+    }
+  }
+
+  delete (key) {
+    return this.map.delete(key)
+  }
+
+  set (key, value) {
+    const deleted = this.delete(key)
+
+    if (!deleted && value !== undefined) {
+      // If cache is full, delete the least recently used item
+      if (this.map.size >= this.max) {
+        const firstKey = this.map.keys().next().value
+        this.delete(firstKey)
+      }
+
+      this.map.set(key, value)
+    }
+
+    return this
+  }
+}
+
+module.exports = LRUCache
+
+
+/***/ }),
+
 /***/ 668819:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -233920,6 +240308,147 @@ exports.fluence = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=fluence.js.map
+
+/***/ }),
+
+/***/ 668824:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.remove0x = exports.add0x = exports.isValidChecksumAddress = exports.getChecksumAddress = exports.isValidHexAddress = exports.assertIsStrictHexString = exports.assertIsHexString = exports.isStrictHexString = exports.isHexString = exports.HexChecksumAddressStruct = exports.HexAddressStruct = exports.StrictHexStruct = exports.HexStruct = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const sha3_1 = __webpack_require__(432955);
+const assert_1 = __webpack_require__(405915);
+const bytes_1 = __webpack_require__(522310);
+exports.HexStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), /^(?:0x)?[0-9a-f]+$/iu);
+exports.StrictHexStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), /^0x[0-9a-f]+$/iu);
+exports.HexAddressStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), /^0x[0-9a-f]{40}$/u);
+exports.HexChecksumAddressStruct = (0, superstruct_1.pattern)((0, superstruct_1.string)(), /^0x[0-9a-fA-F]{40}$/u);
+/**
+ * Check if a string is a valid hex string.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a valid hex string.
+ */
+function isHexString(value) {
+    return (0, superstruct_1.is)(value, exports.HexStruct);
+}
+exports.isHexString = isHexString;
+/**
+ * Strictly check if a string is a valid hex string. A valid hex string must
+ * start with the "0x"-prefix.
+ *
+ * @param value - The value to check.
+ * @returns Whether the value is a valid hex string.
+ */
+function isStrictHexString(value) {
+    return (0, superstruct_1.is)(value, exports.StrictHexStruct);
+}
+exports.isStrictHexString = isStrictHexString;
+/**
+ * Assert that a value is a valid hex string.
+ *
+ * @param value - The value to check.
+ * @throws If the value is not a valid hex string.
+ */
+function assertIsHexString(value) {
+    (0, assert_1.assert)(isHexString(value), 'Value must be a hexadecimal string.');
+}
+exports.assertIsHexString = assertIsHexString;
+/**
+ * Assert that a value is a valid hex string. A valid hex string must start with
+ * the "0x"-prefix.
+ *
+ * @param value - The value to check.
+ * @throws If the value is not a valid hex string.
+ */
+function assertIsStrictHexString(value) {
+    (0, assert_1.assert)(isStrictHexString(value), 'Value must be a hexadecimal string, starting with "0x".');
+}
+exports.assertIsStrictHexString = assertIsStrictHexString;
+/**
+ * Validate that the passed prefixed hex string is an all-lowercase
+ * hex address, or a valid mixed-case checksum address.
+ *
+ * @param possibleAddress - Input parameter to check against.
+ * @returns Whether or not the input is a valid hex address.
+ */
+function isValidHexAddress(possibleAddress) {
+    return ((0, superstruct_1.is)(possibleAddress, exports.HexAddressStruct) ||
+        isValidChecksumAddress(possibleAddress));
+}
+exports.isValidHexAddress = isValidHexAddress;
+/**
+ * Encode a passed hex string as an ERC-55 mixed-case checksum address.
+ *
+ * @param address - The hex address to encode.
+ * @returns The address encoded according to ERC-55.
+ * @see https://eips.ethereum.org/EIPS/eip-55
+ */
+function getChecksumAddress(address) {
+    (0, assert_1.assert)((0, superstruct_1.is)(address, exports.HexChecksumAddressStruct), 'Invalid hex address.');
+    const unPrefixed = remove0x(address.toLowerCase());
+    const unPrefixedHash = remove0x((0, bytes_1.bytesToHex)((0, sha3_1.keccak_256)(unPrefixed)));
+    return `0x${unPrefixed
+        .split('')
+        .map((character, nibbleIndex) => {
+        const hashCharacter = unPrefixedHash[nibbleIndex];
+        (0, assert_1.assert)((0, superstruct_1.is)(hashCharacter, (0, superstruct_1.string)()), 'Hash shorter than address.');
+        return parseInt(hashCharacter, 16) > 7
+            ? character.toUpperCase()
+            : character;
+    })
+        .join('')}`;
+}
+exports.getChecksumAddress = getChecksumAddress;
+/**
+ * Validate that the passed hex string is a valid ERC-55 mixed-case
+ * checksum address.
+ *
+ * @param possibleChecksum - The hex address to check.
+ * @returns True if the address is a checksum address.
+ */
+function isValidChecksumAddress(possibleChecksum) {
+    if (!(0, superstruct_1.is)(possibleChecksum, exports.HexChecksumAddressStruct)) {
+        return false;
+    }
+    return getChecksumAddress(possibleChecksum) === possibleChecksum;
+}
+exports.isValidChecksumAddress = isValidChecksumAddress;
+/**
+ * Add the `0x`-prefix to a hexadecimal string. If the string already has the
+ * prefix, it is returned as-is.
+ *
+ * @param hexadecimal - The hexadecimal string to add the prefix to.
+ * @returns The prefixed hexadecimal string.
+ */
+function add0x(hexadecimal) {
+    if (hexadecimal.startsWith('0x')) {
+        return hexadecimal;
+    }
+    if (hexadecimal.startsWith('0X')) {
+        return `0x${hexadecimal.substring(2)}`;
+    }
+    return `0x${hexadecimal}`;
+}
+exports.add0x = add0x;
+/**
+ * Remove the `0x`-prefix from a hexadecimal string. If the string doesn't have
+ * the prefix, it is returned as-is.
+ *
+ * @param hexadecimal - The hexadecimal string to remove the prefix from.
+ * @returns The un-prefixed hexadecimal string.
+ */
+function remove0x(hexadecimal) {
+    if (hexadecimal.startsWith('0x') || hexadecimal.startsWith('0X')) {
+        return hexadecimal.substring(2);
+    }
+    return hexadecimal;
+}
+exports.remove0x = remove0x;
+//# sourceMappingURL=hex.cjs.map
 
 /***/ }),
 
@@ -234924,6 +241453,50 @@ function withRetry(fn, { delay: delay_ = 100, retryCount = 2, shouldRetry = () =
     });
 }
 //# sourceMappingURL=withRetry.js.map
+
+/***/ }),
+
+/***/ 672495:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+__exportStar(__webpack_require__(405915), exports);
+__exportStar(__webpack_require__(440056), exports);
+__exportStar(__webpack_require__(522310), exports);
+__exportStar(__webpack_require__(463498), exports);
+__exportStar(__webpack_require__(865388), exports);
+__exportStar(__webpack_require__(493243), exports);
+__exportStar(__webpack_require__(866484), exports);
+__exportStar(__webpack_require__(82190), exports);
+__exportStar(__webpack_require__(316676), exports);
+__exportStar(__webpack_require__(668824), exports);
+__exportStar(__webpack_require__(530327), exports);
+__exportStar(__webpack_require__(510268), exports);
+__exportStar(__webpack_require__(425888), exports);
+__exportStar(__webpack_require__(658897), exports);
+__exportStar(__webpack_require__(981322), exports);
+__exportStar(__webpack_require__(832564), exports);
+__exportStar(__webpack_require__(365020), exports);
+__exportStar(__webpack_require__(612026), exports);
+__exportStar(__webpack_require__(551175), exports);
+__exportStar(__webpack_require__(230834), exports);
+//# sourceMappingURL=index.cjs.map
 
 /***/ }),
 
@@ -236479,6 +243052,23 @@ Object.defineProperty(exports, "InvalidParenthesisError", ({ enumerable: true, g
 var struct_js_1 = __webpack_require__(117872);
 Object.defineProperty(exports, "CircularReferenceError", ({ enumerable: true, get: function () { return struct_js_1.CircularReferenceError; } }));
 //# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 676780:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const Range = __webpack_require__(778311)
+const intersects = (r1, r2, options) => {
+  r1 = new Range(r1, options)
+  r2 = new Range(r2, options)
+  return r1.intersects(r2, options)
+}
+module.exports = intersects
+
 
 /***/ }),
 
@@ -238277,6 +244867,91 @@ exports.baseGoerli = (0, defineChain_js_1.defineChain)({
     sourceId,
 });
 //# sourceMappingURL=baseGoerli.js.map
+
+/***/ }),
+
+/***/ 683415:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.fixedBytes = exports.getByteLength = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const utils_2 = __webpack_require__(448746);
+const BYTES_REGEX = /^bytes([0-9]{1,2})$/u;
+/**
+ * Get the length of the specified type. If a length is not specified, or if the
+ * length is out of range (0 < n <= 32), this will throw an error.
+ *
+ * @param type - The type to get the length for.
+ * @returns The byte length of the type.
+ */
+const getByteLength = (type) => {
+    const bytes = type.match(BYTES_REGEX)?.[1];
+    (0, utils_1.assert)(bytes, `Invalid byte length. Expected a number between 1 and 32, but received "${type}".`);
+    const length = Number(bytes);
+    (0, utils_1.assert)(length > 0 && length <= 32, new errors_1.ParserError(`Invalid byte length. Expected a number between 1 and 32, but received "${type}".`));
+    return length;
+};
+exports.getByteLength = getByteLength;
+exports.fixedBytes = {
+    isDynamic: false,
+    /**
+     * Check if a type is a fixed bytes type.
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a fixed bytes type.
+     */
+    isType(type) {
+        return BYTES_REGEX.test(type);
+    },
+    /**
+     * Get the byte length of an encoded fixed bytes type.
+     *
+     * @returns The byte length of the type.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode a fixed bytes value.
+     *
+     * @param args - The arguments to encode.
+     * @param args.type - The type of the value.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The value to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @returns The bytes with the encoded value added to it.
+     */
+    encode({ type, buffer, value, packed }) {
+        const length = (0, exports.getByteLength)(type);
+        const bufferValue = (0, utils_1.createBytes)(value);
+        (0, utils_1.assert)(bufferValue.length <= length, new errors_1.ParserError(`Expected a value of length ${length}, but received a value of length ${bufferValue.length}.`));
+        // For packed encoding, the value is padded to the length of the type, and
+        // then added to the byte array.
+        if (packed) {
+            return (0, utils_1.concatBytes)([buffer, (0, utils_2.padEnd)(bufferValue, length)]);
+        }
+        return (0, utils_1.concatBytes)([buffer, (0, utils_2.padEnd)(bufferValue)]);
+    },
+    /**
+     * Decode a fixed bytes value.
+     *
+     * @param args - The arguments to decode.
+     * @param args.type - The type of the value.
+     * @param args.value - The value to decode.
+     * @returns The decoded value as a `Uint8Array`.
+     */
+    decode({ type, value }) {
+        const length = (0, exports.getByteLength)(type);
+        // Since we're returning a `Uint8Array`, we use `slice` to copy the bytes
+        // into a new array.
+        return value.slice(0, length);
+    },
+};
+//# sourceMappingURL=fixed-bytes.js.map
 
 /***/ }),
 
@@ -244092,6 +250767,19 @@ exports.OffchainLookupSenderMismatchError = OffchainLookupSenderMismatchError;
 
 /***/ }),
 
+/***/ 694641:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const eq = (a, b, loose) => compare(a, b, loose) === 0
+module.exports = eq
+
+
+/***/ }),
+
 /***/ 694966:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -244625,6 +251313,96 @@ exports.skaleTitanTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=titanTestnet.js.map
+
+/***/ }),
+
+/***/ 697075:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const Comparator = __webpack_require__(93904)
+const { ANY } = Comparator
+const Range = __webpack_require__(778311)
+const satisfies = __webpack_require__(897638)
+const gt = __webpack_require__(535580)
+const lt = __webpack_require__(207059)
+const lte = __webpack_require__(825200)
+const gte = __webpack_require__(154089)
+
+const outside = (version, range, hilo, options) => {
+  version = new SemVer(version, options)
+  range = new Range(range, options)
+
+  let gtfn, ltefn, ltfn, comp, ecomp
+  switch (hilo) {
+    case '>':
+      gtfn = gt
+      ltefn = lte
+      ltfn = lt
+      comp = '>'
+      ecomp = '>='
+      break
+    case '<':
+      gtfn = lt
+      ltefn = gte
+      ltfn = gt
+      comp = '<'
+      ecomp = '<='
+      break
+    default:
+      throw new TypeError('Must provide a hilo val of "<" or ">"')
+  }
+
+  // If it satisfies the range it is not outside
+  if (satisfies(version, range, options)) {
+    return false
+  }
+
+  // From now on, variable terms are as if we're in "gtr" mode.
+  // but note that everything is flipped for the "ltr" function.
+
+  for (let i = 0; i < range.set.length; ++i) {
+    const comparators = range.set[i]
+
+    let high = null
+    let low = null
+
+    comparators.forEach((comparator) => {
+      if (comparator.semver === ANY) {
+        comparator = new Comparator('>=0.0.0')
+      }
+      high = high || comparator
+      low = low || comparator
+      if (gtfn(comparator.semver, high.semver, options)) {
+        high = comparator
+      } else if (ltfn(comparator.semver, low.semver, options)) {
+        low = comparator
+      }
+    })
+
+    // If the edge version comparator has a operator then our version
+    // isn't outside it
+    if (high.operator === comp || high.operator === ecomp) {
+      return false
+    }
+
+    // If the lowest version comparator has an operator and our version
+    // is less than it then it isn't higher than the range
+    if ((!low.operator || low.operator === comp) &&
+        ltefn(version, low.semver)) {
+      return false
+    } else if (low.operator === ecomp && ltfn(version, low.semver)) {
+      return false
+    }
+  }
+  return true
+}
+
+module.exports = outside
+
 
 /***/ }),
 
@@ -265794,6 +272572,19 @@ function parseAbiItem(signature) {
 
 /***/ }),
 
+/***/ 746254:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const minor = (a, loose) => new SemVer(a, loose).minor
+module.exports = minor
+
+
+/***/ }),
+
 /***/ 746769:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -265866,6 +272657,39 @@ exports.berachain = (0, defineChain_js_1.defineChain)({
     testnet: false,
 });
 //# sourceMappingURL=berachain.js.map
+
+/***/ }),
+
+/***/ 747066:
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ErrorWithCause: () => (/* binding */ ErrorWithCause)
+/* harmony export */ });
+
+
+/** @template [T=undefined] */
+class ErrorWithCause extends Error {
+  /**
+   * @param {string} message
+   * @param {{ cause?: T }} options
+   */
+  constructor (message, { cause } = {}) {
+    super(message);
+
+    /** @type {string} */
+    this.name = ErrorWithCause.name;
+    if (cause) {
+      /** @type {T} */
+      this.cause = cause;
+    }
+    /** @type {string} */
+    this.message = message;
+  }
+}
+
 
 /***/ }),
 
@@ -295619,6 +302443,570 @@ async function stopImpersonatingAccount(client, { address }) {
 
 /***/ }),
 
+/***/ 778311:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SPACE_CHARACTERS = /\s+/g
+
+// hoisted class for cyclic dependency
+class Range {
+  constructor (range, options) {
+    options = parseOptions(options)
+
+    if (range instanceof Range) {
+      if (
+        range.loose === !!options.loose &&
+        range.includePrerelease === !!options.includePrerelease
+      ) {
+        return range
+      } else {
+        return new Range(range.raw, options)
+      }
+    }
+
+    if (range instanceof Comparator) {
+      // just put it in the set and return
+      this.raw = range.value
+      this.set = [[range]]
+      this.formatted = undefined
+      return this
+    }
+
+    this.options = options
+    this.loose = !!options.loose
+    this.includePrerelease = !!options.includePrerelease
+
+    // First reduce all whitespace as much as possible so we do not have to rely
+    // on potentially slow regexes like \s*. This is then stored and used for
+    // future error messages as well.
+    this.raw = range.trim().replace(SPACE_CHARACTERS, ' ')
+
+    // First, split on ||
+    this.set = this.raw
+      .split('||')
+      // map the range to a 2d array of comparators
+      .map(r => this.parseRange(r.trim()))
+      // throw out any comparator lists that are empty
+      // this generally means that it was not a valid range, which is allowed
+      // in loose mode, but will still throw if the WHOLE range is invalid.
+      .filter(c => c.length)
+
+    if (!this.set.length) {
+      throw new TypeError(`Invalid SemVer Range: ${this.raw}`)
+    }
+
+    // if we have any that are not the null set, throw out null sets.
+    if (this.set.length > 1) {
+      // keep the first one, in case they're all null sets
+      const first = this.set[0]
+      this.set = this.set.filter(c => !isNullSet(c[0]))
+      if (this.set.length === 0) {
+        this.set = [first]
+      } else if (this.set.length > 1) {
+        // if we have any that are *, then the range is just *
+        for (const c of this.set) {
+          if (c.length === 1 && isAny(c[0])) {
+            this.set = [c]
+            break
+          }
+        }
+      }
+    }
+
+    this.formatted = undefined
+  }
+
+  get range () {
+    if (this.formatted === undefined) {
+      this.formatted = ''
+      for (let i = 0; i < this.set.length; i++) {
+        if (i > 0) {
+          this.formatted += '||'
+        }
+        const comps = this.set[i]
+        for (let k = 0; k < comps.length; k++) {
+          if (k > 0) {
+            this.formatted += ' '
+          }
+          this.formatted += comps[k].toString().trim()
+        }
+      }
+    }
+    return this.formatted
+  }
+
+  format () {
+    return this.range
+  }
+
+  toString () {
+    return this.range
+  }
+
+  parseRange (range) {
+    // memoize range parsing for performance.
+    // this is a very hot path, and fully deterministic.
+    const memoOpts =
+      (this.options.includePrerelease && FLAG_INCLUDE_PRERELEASE) |
+      (this.options.loose && FLAG_LOOSE)
+    const memoKey = memoOpts + ':' + range
+    const cached = cache.get(memoKey)
+    if (cached) {
+      return cached
+    }
+
+    const loose = this.options.loose
+    // `1.2.3 - 1.2.4` => `>=1.2.3 <=1.2.4`
+    const hr = loose ? re[t.HYPHENRANGELOOSE] : re[t.HYPHENRANGE]
+    range = range.replace(hr, hyphenReplace(this.options.includePrerelease))
+    debug('hyphen replace', range)
+
+    // `> 1.2.3 < 1.2.5` => `>1.2.3 <1.2.5`
+    range = range.replace(re[t.COMPARATORTRIM], comparatorTrimReplace)
+    debug('comparator trim', range)
+
+    // `~ 1.2.3` => `~1.2.3`
+    range = range.replace(re[t.TILDETRIM], tildeTrimReplace)
+    debug('tilde trim', range)
+
+    // `^ 1.2.3` => `^1.2.3`
+    range = range.replace(re[t.CARETTRIM], caretTrimReplace)
+    debug('caret trim', range)
+
+    // At this point, the range is completely trimmed and
+    // ready to be split into comparators.
+
+    let rangeList = range
+      .split(' ')
+      .map(comp => parseComparator(comp, this.options))
+      .join(' ')
+      .split(/\s+/)
+      // >=0.0.0 is equivalent to *
+      .map(comp => replaceGTE0(comp, this.options))
+
+    if (loose) {
+      // in loose mode, throw out any that are not valid comparators
+      rangeList = rangeList.filter(comp => {
+        debug('loose invalid filter', comp, this.options)
+        return !!comp.match(re[t.COMPARATORLOOSE])
+      })
+    }
+    debug('range list', rangeList)
+
+    // if any comparators are the null set, then replace with JUST null set
+    // if more than one comparator, remove any * comparators
+    // also, don't include the same comparator more than once
+    const rangeMap = new Map()
+    const comparators = rangeList.map(comp => new Comparator(comp, this.options))
+    for (const comp of comparators) {
+      if (isNullSet(comp)) {
+        return [comp]
+      }
+      rangeMap.set(comp.value, comp)
+    }
+    if (rangeMap.size > 1 && rangeMap.has('')) {
+      rangeMap.delete('')
+    }
+
+    const result = [...rangeMap.values()]
+    cache.set(memoKey, result)
+    return result
+  }
+
+  intersects (range, options) {
+    if (!(range instanceof Range)) {
+      throw new TypeError('a Range is required')
+    }
+
+    return this.set.some((thisComparators) => {
+      return (
+        isSatisfiable(thisComparators, options) &&
+        range.set.some((rangeComparators) => {
+          return (
+            isSatisfiable(rangeComparators, options) &&
+            thisComparators.every((thisComparator) => {
+              return rangeComparators.every((rangeComparator) => {
+                return thisComparator.intersects(rangeComparator, options)
+              })
+            })
+          )
+        })
+      )
+    })
+  }
+
+  // if ANY of the sets match ALL of its comparators, then pass
+  test (version) {
+    if (!version) {
+      return false
+    }
+
+    if (typeof version === 'string') {
+      try {
+        version = new SemVer(version, this.options)
+      } catch (er) {
+        return false
+      }
+    }
+
+    for (let i = 0; i < this.set.length; i++) {
+      if (testSet(this.set[i], version, this.options)) {
+        return true
+      }
+    }
+    return false
+  }
+}
+
+module.exports = Range
+
+const LRU = __webpack_require__(668794)
+const cache = new LRU()
+
+const parseOptions = __webpack_require__(398587)
+const Comparator = __webpack_require__(93904)
+const debug = __webpack_require__(257272)
+const SemVer = __webpack_require__(853908)
+const {
+  safeRe: re,
+  t,
+  comparatorTrimReplace,
+  tildeTrimReplace,
+  caretTrimReplace,
+} = __webpack_require__(199718)
+const { FLAG_INCLUDE_PRERELEASE, FLAG_LOOSE } = __webpack_require__(416874)
+
+const isNullSet = c => c.value === '<0.0.0-0'
+const isAny = c => c.value === ''
+
+// take a set of comparators and determine whether there
+// exists a version which can satisfy it
+const isSatisfiable = (comparators, options) => {
+  let result = true
+  const remainingComparators = comparators.slice()
+  let testComparator = remainingComparators.pop()
+
+  while (result && remainingComparators.length) {
+    result = remainingComparators.every((otherComparator) => {
+      return testComparator.intersects(otherComparator, options)
+    })
+
+    testComparator = remainingComparators.pop()
+  }
+
+  return result
+}
+
+// comprised of xranges, tildes, stars, and gtlt's at this point.
+// already replaced the hyphen ranges
+// turn into a set of JUST comparators.
+const parseComparator = (comp, options) => {
+  debug('comp', comp, options)
+  comp = replaceCarets(comp, options)
+  debug('caret', comp)
+  comp = replaceTildes(comp, options)
+  debug('tildes', comp)
+  comp = replaceXRanges(comp, options)
+  debug('xrange', comp)
+  comp = replaceStars(comp, options)
+  debug('stars', comp)
+  return comp
+}
+
+const isX = id => !id || id.toLowerCase() === 'x' || id === '*'
+
+// ~, ~> --> * (any, kinda silly)
+// ~2, ~2.x, ~2.x.x, ~>2, ~>2.x ~>2.x.x --> >=2.0.0 <3.0.0-0
+// ~2.0, ~2.0.x, ~>2.0, ~>2.0.x --> >=2.0.0 <2.1.0-0
+// ~1.2, ~1.2.x, ~>1.2, ~>1.2.x --> >=1.2.0 <1.3.0-0
+// ~1.2.3, ~>1.2.3 --> >=1.2.3 <1.3.0-0
+// ~1.2.0, ~>1.2.0 --> >=1.2.0 <1.3.0-0
+// ~0.0.1 --> >=0.0.1 <0.1.0-0
+const replaceTildes = (comp, options) => {
+  return comp
+    .trim()
+    .split(/\s+/)
+    .map((c) => replaceTilde(c, options))
+    .join(' ')
+}
+
+const replaceTilde = (comp, options) => {
+  const r = options.loose ? re[t.TILDELOOSE] : re[t.TILDE]
+  return comp.replace(r, (_, M, m, p, pr) => {
+    debug('tilde', comp, _, M, m, p, pr)
+    let ret
+
+    if (isX(M)) {
+      ret = ''
+    } else if (isX(m)) {
+      ret = `>=${M}.0.0 <${+M + 1}.0.0-0`
+    } else if (isX(p)) {
+      // ~1.2 == >=1.2.0 <1.3.0-0
+      ret = `>=${M}.${m}.0 <${M}.${+m + 1}.0-0`
+    } else if (pr) {
+      debug('replaceTilde pr', pr)
+      ret = `>=${M}.${m}.${p}-${pr
+      } <${M}.${+m + 1}.0-0`
+    } else {
+      // ~1.2.3 == >=1.2.3 <1.3.0-0
+      ret = `>=${M}.${m}.${p
+      } <${M}.${+m + 1}.0-0`
+    }
+
+    debug('tilde return', ret)
+    return ret
+  })
+}
+
+// ^ --> * (any, kinda silly)
+// ^2, ^2.x, ^2.x.x --> >=2.0.0 <3.0.0-0
+// ^2.0, ^2.0.x --> >=2.0.0 <3.0.0-0
+// ^1.2, ^1.2.x --> >=1.2.0 <2.0.0-0
+// ^1.2.3 --> >=1.2.3 <2.0.0-0
+// ^1.2.0 --> >=1.2.0 <2.0.0-0
+// ^0.0.1 --> >=0.0.1 <0.0.2-0
+// ^0.1.0 --> >=0.1.0 <0.2.0-0
+const replaceCarets = (comp, options) => {
+  return comp
+    .trim()
+    .split(/\s+/)
+    .map((c) => replaceCaret(c, options))
+    .join(' ')
+}
+
+const replaceCaret = (comp, options) => {
+  debug('caret', comp, options)
+  const r = options.loose ? re[t.CARETLOOSE] : re[t.CARET]
+  const z = options.includePrerelease ? '-0' : ''
+  return comp.replace(r, (_, M, m, p, pr) => {
+    debug('caret', comp, _, M, m, p, pr)
+    let ret
+
+    if (isX(M)) {
+      ret = ''
+    } else if (isX(m)) {
+      ret = `>=${M}.0.0${z} <${+M + 1}.0.0-0`
+    } else if (isX(p)) {
+      if (M === '0') {
+        ret = `>=${M}.${m}.0${z} <${M}.${+m + 1}.0-0`
+      } else {
+        ret = `>=${M}.${m}.0${z} <${+M + 1}.0.0-0`
+      }
+    } else if (pr) {
+      debug('replaceCaret pr', pr)
+      if (M === '0') {
+        if (m === '0') {
+          ret = `>=${M}.${m}.${p}-${pr
+          } <${M}.${m}.${+p + 1}-0`
+        } else {
+          ret = `>=${M}.${m}.${p}-${pr
+          } <${M}.${+m + 1}.0-0`
+        }
+      } else {
+        ret = `>=${M}.${m}.${p}-${pr
+        } <${+M + 1}.0.0-0`
+      }
+    } else {
+      debug('no pr')
+      if (M === '0') {
+        if (m === '0') {
+          ret = `>=${M}.${m}.${p
+          }${z} <${M}.${m}.${+p + 1}-0`
+        } else {
+          ret = `>=${M}.${m}.${p
+          }${z} <${M}.${+m + 1}.0-0`
+        }
+      } else {
+        ret = `>=${M}.${m}.${p
+        } <${+M + 1}.0.0-0`
+      }
+    }
+
+    debug('caret return', ret)
+    return ret
+  })
+}
+
+const replaceXRanges = (comp, options) => {
+  debug('replaceXRanges', comp, options)
+  return comp
+    .split(/\s+/)
+    .map((c) => replaceXRange(c, options))
+    .join(' ')
+}
+
+const replaceXRange = (comp, options) => {
+  comp = comp.trim()
+  const r = options.loose ? re[t.XRANGELOOSE] : re[t.XRANGE]
+  return comp.replace(r, (ret, gtlt, M, m, p, pr) => {
+    debug('xRange', comp, ret, gtlt, M, m, p, pr)
+    const xM = isX(M)
+    const xm = xM || isX(m)
+    const xp = xm || isX(p)
+    const anyX = xp
+
+    if (gtlt === '=' && anyX) {
+      gtlt = ''
+    }
+
+    // if we're including prereleases in the match, then we need
+    // to fix this to -0, the lowest possible prerelease value
+    pr = options.includePrerelease ? '-0' : ''
+
+    if (xM) {
+      if (gtlt === '>' || gtlt === '<') {
+        // nothing is allowed
+        ret = '<0.0.0-0'
+      } else {
+        // nothing is forbidden
+        ret = '*'
+      }
+    } else if (gtlt && anyX) {
+      // we know patch is an x, because we have any x at all.
+      // replace X with 0
+      if (xm) {
+        m = 0
+      }
+      p = 0
+
+      if (gtlt === '>') {
+        // >1 => >=2.0.0
+        // >1.2 => >=1.3.0
+        gtlt = '>='
+        if (xm) {
+          M = +M + 1
+          m = 0
+          p = 0
+        } else {
+          m = +m + 1
+          p = 0
+        }
+      } else if (gtlt === '<=') {
+        // <=0.7.x is actually <0.8.0, since any 0.7.x should
+        // pass.  Similarly, <=7.x is actually <8.0.0, etc.
+        gtlt = '<'
+        if (xm) {
+          M = +M + 1
+        } else {
+          m = +m + 1
+        }
+      }
+
+      if (gtlt === '<') {
+        pr = '-0'
+      }
+
+      ret = `${gtlt + M}.${m}.${p}${pr}`
+    } else if (xm) {
+      ret = `>=${M}.0.0${pr} <${+M + 1}.0.0-0`
+    } else if (xp) {
+      ret = `>=${M}.${m}.0${pr
+      } <${M}.${+m + 1}.0-0`
+    }
+
+    debug('xRange return', ret)
+
+    return ret
+  })
+}
+
+// Because * is AND-ed with everything else in the comparator,
+// and '' means "any version", just remove the *s entirely.
+const replaceStars = (comp, options) => {
+  debug('replaceStars', comp, options)
+  // Looseness is ignored here.  star is always as loose as it gets!
+  return comp
+    .trim()
+    .replace(re[t.STAR], '')
+}
+
+const replaceGTE0 = (comp, options) => {
+  debug('replaceGTE0', comp, options)
+  return comp
+    .trim()
+    .replace(re[options.includePrerelease ? t.GTE0PRE : t.GTE0], '')
+}
+
+// This function is passed to string.replace(re[t.HYPHENRANGE])
+// M, m, patch, prerelease, build
+// 1.2 - 3.4.5 => >=1.2.0 <=3.4.5
+// 1.2.3 - 3.4 => >=1.2.0 <3.5.0-0 Any 3.4.x will do
+// 1.2 - 3.4 => >=1.2.0 <3.5.0-0
+// TODO build?
+const hyphenReplace = incPr => ($0,
+  from, fM, fm, fp, fpr, fb,
+  to, tM, tm, tp, tpr) => {
+  if (isX(fM)) {
+    from = ''
+  } else if (isX(fm)) {
+    from = `>=${fM}.0.0${incPr ? '-0' : ''}`
+  } else if (isX(fp)) {
+    from = `>=${fM}.${fm}.0${incPr ? '-0' : ''}`
+  } else if (fpr) {
+    from = `>=${from}`
+  } else {
+    from = `>=${from}${incPr ? '-0' : ''}`
+  }
+
+  if (isX(tM)) {
+    to = ''
+  } else if (isX(tm)) {
+    to = `<${+tM + 1}.0.0-0`
+  } else if (isX(tp)) {
+    to = `<${tM}.${+tm + 1}.0-0`
+  } else if (tpr) {
+    to = `<=${tM}.${tm}.${tp}-${tpr}`
+  } else if (incPr) {
+    to = `<${tM}.${tm}.${+tp + 1}-0`
+  } else {
+    to = `<=${to}`
+  }
+
+  return `${from} ${to}`.trim()
+}
+
+const testSet = (set, version, options) => {
+  for (let i = 0; i < set.length; i++) {
+    if (!set[i].test(version)) {
+      return false
+    }
+  }
+
+  if (version.prerelease.length && !options.includePrerelease) {
+    // Find the set of versions that are allowed to have prereleases
+    // For example, ^1.2.3-pr.1 desugars to >=1.2.3-pr.1 <2.0.0
+    // That should allow `1.2.3-pr.2` to pass.
+    // However, `1.2.4-alpha.notready` should NOT be allowed,
+    // even though it's within the range set by the comparators.
+    for (let i = 0; i < set.length; i++) {
+      debug(set[i].semver)
+      if (set[i].semver === Comparator.ANY) {
+        continue
+      }
+
+      if (set[i].semver.prerelease.length > 0) {
+        const allowed = set[i].semver
+        if (allowed.major === version.major &&
+            allowed.minor === version.minor &&
+            allowed.patch === version.patch) {
+          return true
+        }
+      }
+    }
+
+    // Version has a -pre, but it's not one of the ones we like.
+    return false
+  }
+
+  return true
+}
+
+
+/***/ }),
+
 /***/ 778348:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -296623,6 +304011,21 @@ function parseEther(ether, unit = 'wei') {
 
 /***/ }),
 
+/***/ 782971:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.StandardMerkleTree = exports.SimpleMerkleTree = void 0;
+var simple_1 = __webpack_require__(389949);
+Object.defineProperty(exports, "SimpleMerkleTree", ({ enumerable: true, get: function () { return simple_1.SimpleMerkleTree; } }));
+var standard_1 = __webpack_require__(603438);
+Object.defineProperty(exports, "StandardMerkleTree", ({ enumerable: true, get: function () { return standard_1.StandardMerkleTree; } }));
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
 /***/ 783290:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -296761,6 +304164,27 @@ function toRpc(withdrawal) {
     };
 }
 //# sourceMappingURL=Withdrawal.js.map
+
+/***/ }),
+
+/***/ 786996:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.keccak512 = exports.keccak384 = exports.keccak256 = exports.keccak224 = void 0;
+const sha3_1 = __webpack_require__(432955);
+const utils_js_1 = __webpack_require__(190185);
+exports.keccak224 = (0, utils_js_1.wrapHash)(sha3_1.keccak_224);
+exports.keccak256 = (() => {
+    const k = (0, utils_js_1.wrapHash)(sha3_1.keccak_256);
+    k.create = sha3_1.keccak_256.create;
+    return k;
+})();
+exports.keccak384 = (0, utils_js_1.wrapHash)(sha3_1.keccak_384);
+exports.keccak512 = (0, utils_js_1.wrapHash)(sha3_1.keccak_512);
+
 
 /***/ }),
 
@@ -314982,6 +322406,35 @@ exports.fireChain = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 793007:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+
+const inc = (version, release, options, identifier, identifierBase) => {
+  if (typeof (options) === 'string') {
+    identifierBase = identifier
+    identifier = options
+    options = undefined
+  }
+
+  try {
+    return new SemVer(
+      version instanceof SemVer ? version.version : version,
+      options
+    ).inc(release, identifier, identifierBase).version
+  } catch (er) {
+    return null
+  }
+}
+module.exports = inc
+
+
+/***/ }),
+
 /***/ 793154:
 /***/ ((__unused_webpack_module, exports) => {
 
@@ -317725,6 +325178,74 @@ function extract(value_, { format }) {
 
 /***/ }),
 
+/***/ 808446:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.string = void 0;
+const utils_1 = __webpack_require__(672495);
+const bytes_1 = __webpack_require__(199356);
+exports.string = {
+    isDynamic: true,
+    /**
+     * Check if a type is a string type. Since `string` is a simple type, this
+     * is just a check if the type is "string".
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a string type.
+     */
+    isType: (type) => type === 'string',
+    /**
+     * Get the byte length of an encoded string type. Since `string` is a simple
+     * type, this will always return 32.
+     *
+     * Note that actual strings are variable in length, but the encoded static
+     * value (pointer) is always 32 bytes long.
+     *
+     * @returns The byte length of an encoded string.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode the given string value to a byte array.
+     *
+     * @param args - The encoding arguments.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The string value to encode.
+     * @param args.packed - Whether to use packed encoding.
+     * @param args.tight - Whether to use non-standard tight encoding.
+     * @returns The bytes with the encoded string value added to it.
+     */
+    encode({ buffer, value, packed, tight }) {
+        // Strings are encoded as UTF-8 bytes, so we use the bytes parser to encode
+        // the string as bytes.
+        return bytes_1.bytes.encode({
+            type: 'bytes',
+            buffer,
+            value: (0, utils_1.stringToBytes)(value),
+            packed,
+            tight,
+        });
+    },
+    /**
+     * Decode the given byte array to a string value.
+     *
+     * @param args - The decoding arguments.
+     * @returns The decoded string value.
+     */
+    decode(args) {
+        // Strings are encoded as UTF-8 bytes, so we use the bytes parser to decode
+        // the bytes, and convert them to a string.
+        return (0, utils_1.bytesToString)(bytes_1.bytes.decode(args));
+    },
+};
+//# sourceMappingURL=string.js.map
+
+/***/ }),
+
 /***/ 808557:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -318035,6 +325556,19 @@ Service.prototype.create = function create(rpcImpl, requestDelimited, responseDe
     }
     return rpcService;
 };
+
+
+/***/ }),
+
+/***/ 809970:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const rcompare = (a, b, loose) => compare(b, a, loose)
+module.exports = rcompare
 
 
 /***/ }),
@@ -322191,6 +329725,19 @@ exports.areonNetwork = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 825200:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const compare = __webpack_require__(350560)
+const lte = (a, b, loose) => compare(a, b, loose) <= 0
+module.exports = lte
+
+
+/***/ }),
+
 /***/ 826673:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -322515,6 +330062,32 @@ tslib_1.__exportStar(__webpack_require__(602746), exports);
 
 /***/ }),
 
+/***/ 830144:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const parse = (version, options, throwErrors = false) => {
+  if (version instanceof SemVer) {
+    return version
+  }
+  try {
+    return new SemVer(version, options)
+  } catch (er) {
+    if (!throwErrors) {
+      return null
+    }
+    throw er
+  }
+}
+
+module.exports = parse
+
+
+/***/ }),
+
 /***/ 830482:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -322681,6 +330254,16 @@ exports.mantaTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=mantaTestnet.js.map
+
+/***/ }),
+
+/***/ 832564:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+//# sourceMappingURL=opaque.cjs.map
 
 /***/ }),
 
@@ -328852,6 +336435,333 @@ exports.linea = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 853908:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const debug = __webpack_require__(257272)
+const { MAX_LENGTH, MAX_SAFE_INTEGER } = __webpack_require__(416874)
+const { safeRe: re, t } = __webpack_require__(199718)
+
+const parseOptions = __webpack_require__(398587)
+const { compareIdentifiers } = __webpack_require__(961123)
+class SemVer {
+  constructor (version, options) {
+    options = parseOptions(options)
+
+    if (version instanceof SemVer) {
+      if (version.loose === !!options.loose &&
+        version.includePrerelease === !!options.includePrerelease) {
+        return version
+      } else {
+        version = version.version
+      }
+    } else if (typeof version !== 'string') {
+      throw new TypeError(`Invalid version. Must be a string. Got type "${typeof version}".`)
+    }
+
+    if (version.length > MAX_LENGTH) {
+      throw new TypeError(
+        `version is longer than ${MAX_LENGTH} characters`
+      )
+    }
+
+    debug('SemVer', version, options)
+    this.options = options
+    this.loose = !!options.loose
+    // this isn't actually relevant for versions, but keep it so that we
+    // don't run into trouble passing this.options around.
+    this.includePrerelease = !!options.includePrerelease
+
+    const m = version.trim().match(options.loose ? re[t.LOOSE] : re[t.FULL])
+
+    if (!m) {
+      throw new TypeError(`Invalid Version: ${version}`)
+    }
+
+    this.raw = version
+
+    // these are actually numbers
+    this.major = +m[1]
+    this.minor = +m[2]
+    this.patch = +m[3]
+
+    if (this.major > MAX_SAFE_INTEGER || this.major < 0) {
+      throw new TypeError('Invalid major version')
+    }
+
+    if (this.minor > MAX_SAFE_INTEGER || this.minor < 0) {
+      throw new TypeError('Invalid minor version')
+    }
+
+    if (this.patch > MAX_SAFE_INTEGER || this.patch < 0) {
+      throw new TypeError('Invalid patch version')
+    }
+
+    // numberify any prerelease numeric ids
+    if (!m[4]) {
+      this.prerelease = []
+    } else {
+      this.prerelease = m[4].split('.').map((id) => {
+        if (/^[0-9]+$/.test(id)) {
+          const num = +id
+          if (num >= 0 && num < MAX_SAFE_INTEGER) {
+            return num
+          }
+        }
+        return id
+      })
+    }
+
+    this.build = m[5] ? m[5].split('.') : []
+    this.format()
+  }
+
+  format () {
+    this.version = `${this.major}.${this.minor}.${this.patch}`
+    if (this.prerelease.length) {
+      this.version += `-${this.prerelease.join('.')}`
+    }
+    return this.version
+  }
+
+  toString () {
+    return this.version
+  }
+
+  compare (other) {
+    debug('SemVer.compare', this.version, this.options, other)
+    if (!(other instanceof SemVer)) {
+      if (typeof other === 'string' && other === this.version) {
+        return 0
+      }
+      other = new SemVer(other, this.options)
+    }
+
+    if (other.version === this.version) {
+      return 0
+    }
+
+    return this.compareMain(other) || this.comparePre(other)
+  }
+
+  compareMain (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    return (
+      compareIdentifiers(this.major, other.major) ||
+      compareIdentifiers(this.minor, other.minor) ||
+      compareIdentifiers(this.patch, other.patch)
+    )
+  }
+
+  comparePre (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    // NOT having a prerelease is > having one
+    if (this.prerelease.length && !other.prerelease.length) {
+      return -1
+    } else if (!this.prerelease.length && other.prerelease.length) {
+      return 1
+    } else if (!this.prerelease.length && !other.prerelease.length) {
+      return 0
+    }
+
+    let i = 0
+    do {
+      const a = this.prerelease[i]
+      const b = other.prerelease[i]
+      debug('prerelease compare', i, a, b)
+      if (a === undefined && b === undefined) {
+        return 0
+      } else if (b === undefined) {
+        return 1
+      } else if (a === undefined) {
+        return -1
+      } else if (a === b) {
+        continue
+      } else {
+        return compareIdentifiers(a, b)
+      }
+    } while (++i)
+  }
+
+  compareBuild (other) {
+    if (!(other instanceof SemVer)) {
+      other = new SemVer(other, this.options)
+    }
+
+    let i = 0
+    do {
+      const a = this.build[i]
+      const b = other.build[i]
+      debug('build compare', i, a, b)
+      if (a === undefined && b === undefined) {
+        return 0
+      } else if (b === undefined) {
+        return 1
+      } else if (a === undefined) {
+        return -1
+      } else if (a === b) {
+        continue
+      } else {
+        return compareIdentifiers(a, b)
+      }
+    } while (++i)
+  }
+
+  // preminor will bump the version up to the next minor release, and immediately
+  // down to pre-release. premajor and prepatch work the same way.
+  inc (release, identifier, identifierBase) {
+    if (release.startsWith('pre')) {
+      if (!identifier && identifierBase === false) {
+        throw new Error('invalid increment argument: identifier is empty')
+      }
+      // Avoid an invalid semver results
+      if (identifier) {
+        const match = `-${identifier}`.match(this.options.loose ? re[t.PRERELEASELOOSE] : re[t.PRERELEASE])
+        if (!match || match[1] !== identifier) {
+          throw new Error(`invalid identifier: ${identifier}`)
+        }
+      }
+    }
+
+    switch (release) {
+      case 'premajor':
+        this.prerelease.length = 0
+        this.patch = 0
+        this.minor = 0
+        this.major++
+        this.inc('pre', identifier, identifierBase)
+        break
+      case 'preminor':
+        this.prerelease.length = 0
+        this.patch = 0
+        this.minor++
+        this.inc('pre', identifier, identifierBase)
+        break
+      case 'prepatch':
+        // If this is already a prerelease, it will bump to the next version
+        // drop any prereleases that might already exist, since they are not
+        // relevant at this point.
+        this.prerelease.length = 0
+        this.inc('patch', identifier, identifierBase)
+        this.inc('pre', identifier, identifierBase)
+        break
+      // If the input is a non-prerelease version, this acts the same as
+      // prepatch.
+      case 'prerelease':
+        if (this.prerelease.length === 0) {
+          this.inc('patch', identifier, identifierBase)
+        }
+        this.inc('pre', identifier, identifierBase)
+        break
+      case 'release':
+        if (this.prerelease.length === 0) {
+          throw new Error(`version ${this.raw} is not a prerelease`)
+        }
+        this.prerelease.length = 0
+        break
+
+      case 'major':
+        // If this is a pre-major version, bump up to the same major version.
+        // Otherwise increment major.
+        // 1.0.0-5 bumps to 1.0.0
+        // 1.1.0 bumps to 2.0.0
+        if (
+          this.minor !== 0 ||
+          this.patch !== 0 ||
+          this.prerelease.length === 0
+        ) {
+          this.major++
+        }
+        this.minor = 0
+        this.patch = 0
+        this.prerelease = []
+        break
+      case 'minor':
+        // If this is a pre-minor version, bump up to the same minor version.
+        // Otherwise increment minor.
+        // 1.2.0-5 bumps to 1.2.0
+        // 1.2.1 bumps to 1.3.0
+        if (this.patch !== 0 || this.prerelease.length === 0) {
+          this.minor++
+        }
+        this.patch = 0
+        this.prerelease = []
+        break
+      case 'patch':
+        // If this is not a pre-release version, it will increment the patch.
+        // If it is a pre-release it will bump up to the same patch version.
+        // 1.2.0-5 patches to 1.2.0
+        // 1.2.0 patches to 1.2.1
+        if (this.prerelease.length === 0) {
+          this.patch++
+        }
+        this.prerelease = []
+        break
+      // This probably shouldn't be used publicly.
+      // 1.0.0 'pre' would become 1.0.0-0 which is the wrong direction.
+      case 'pre': {
+        const base = Number(identifierBase) ? 1 : 0
+
+        if (this.prerelease.length === 0) {
+          this.prerelease = [base]
+        } else {
+          let i = this.prerelease.length
+          while (--i >= 0) {
+            if (typeof this.prerelease[i] === 'number') {
+              this.prerelease[i]++
+              i = -2
+            }
+          }
+          if (i === -1) {
+            // didn't increment anything
+            if (identifier === this.prerelease.join('.') && identifierBase === false) {
+              throw new Error('invalid increment argument: identifier already exists')
+            }
+            this.prerelease.push(base)
+          }
+        }
+        if (identifier) {
+          // 1.2.0-beta.1 bumps to 1.2.0-beta.2,
+          // 1.2.0-beta.fooblz or 1.2.0-beta bumps to 1.2.0-beta.0
+          let prerelease = [identifier, base]
+          if (identifierBase === false) {
+            prerelease = [identifier]
+          }
+          if (compareIdentifiers(this.prerelease[0], identifier) === 0) {
+            if (isNaN(this.prerelease[1])) {
+              this.prerelease = prerelease
+            }
+          } else {
+            this.prerelease = prerelease
+          }
+        }
+        break
+      }
+      default:
+        throw new Error(`invalid increment argument: ${release}`)
+    }
+    this.raw = this.format()
+    if (this.build.length) {
+      this.raw += `+${this.build.join('.')}`
+    }
+    return this
+  }
+}
+
+module.exports = SemVer
+
+
+/***/ }),
+
 /***/ 854254:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -332731,6 +340641,335 @@ exports.meter = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=meter.js.map
+
+/***/ }),
+
+/***/ 865388:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.ChecksumStruct = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const base64_1 = __webpack_require__(440056);
+exports.ChecksumStruct = (0, superstruct_1.size)((0, base64_1.base64)((0, superstruct_1.string)(), { paddingRequired: true }), 44, 44);
+//# sourceMappingURL=checksum.cjs.map
+
+/***/ }),
+
+/***/ 865991:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.pick = exports.partial = exports.omit = exports.lazy = exports.dynamic = exports.deprecated = exports.define = exports.assign = void 0;
+const struct_js_1 = __webpack_require__(899067);
+const types_js_1 = __webpack_require__(367792);
+/**
+ * Create a new struct that combines the properties from multiple object or type
+ * structs. Its return type will match the first parameter's type.
+ *
+ * @param Structs - The structs to combine.
+ * @returns A new struct that combines the properties of the input structs.
+ */
+function assign(...Structs) {
+    const isType = Structs[0]?.type === 'type';
+    const schemas = Structs.map(({ schema }) => schema);
+    const schema = Object.assign({}, ...schemas);
+    return isType ? (0, types_js_1.type)(schema) : (0, types_js_1.object)(schema);
+}
+exports.assign = assign;
+/**
+ * Define a new struct type with a custom validation function.
+ *
+ * @param name - The name of the struct type.
+ * @param validator - The validation function.
+ * @returns A new struct type.
+ */
+function define(name, validator) {
+    return new struct_js_1.Struct({ type: name, schema: null, validator });
+}
+exports.define = define;
+/**
+ * Create a new struct based on an existing struct, but the value is allowed to
+ * be `undefined`. `log` will be called if the value is not `undefined`.
+ *
+ * @param struct - The struct to augment.
+ * @param log - The function to call when the value is not `undefined`.
+ * @returns A new struct that will only accept `undefined` or values that pass
+ * the input struct.
+ */
+function deprecated(struct, log) {
+    return new struct_js_1.Struct({
+        ...struct,
+        refiner: (value, ctx) => value === undefined || struct.refiner(value, ctx),
+        validator(value, ctx) {
+            if (value === undefined) {
+                return true;
+            }
+            log(value, ctx);
+            return struct.validator(value, ctx);
+        },
+    });
+}
+exports.deprecated = deprecated;
+/**
+ * Create a struct with dynamic validation logic.
+ *
+ * The callback will receive the value currently being validated, and must
+ * return a struct object to validate it with. This can be useful to model
+ * validation logic that changes based on its input.
+ *
+ * @param fn - The callback to create the struct.
+ * @returns A new struct with dynamic validation logic.
+ */
+function dynamic(fn) {
+    return new struct_js_1.Struct({
+        type: 'dynamic',
+        schema: null,
+        *entries(value, ctx) {
+            const struct = fn(value, ctx);
+            yield* struct.entries(value, ctx);
+        },
+        validator(value, ctx) {
+            const struct = fn(value, ctx);
+            return struct.validator(value, ctx);
+        },
+        coercer(value, ctx) {
+            const struct = fn(value, ctx);
+            return struct.coercer(value, ctx);
+        },
+        refiner(value, ctx) {
+            const struct = fn(value, ctx);
+            return struct.refiner(value, ctx);
+        },
+    });
+}
+exports.dynamic = dynamic;
+/**
+ * Create a struct with lazily evaluated validation logic.
+ *
+ * The first time validation is run with the struct, the callback will be called
+ * and must return a struct object to use. This is useful for cases where you
+ * want to have self-referential structs for nested data structures to avoid a
+ * circular definition problem.
+ *
+ * @param fn - The callback to create the struct.
+ * @returns A new struct with lazily evaluated validation logic.
+ */
+function lazy(fn) {
+    let struct;
+    return new struct_js_1.Struct({
+        type: 'lazy',
+        schema: null,
+        *entries(value, ctx) {
+            struct ?? (struct = fn());
+            yield* struct.entries(value, ctx);
+        },
+        validator(value, ctx) {
+            struct ?? (struct = fn());
+            return struct.validator(value, ctx);
+        },
+        coercer(value, ctx) {
+            struct ?? (struct = fn());
+            return struct.coercer(value, ctx);
+        },
+        refiner(value, ctx) {
+            struct ?? (struct = fn());
+            return struct.refiner(value, ctx);
+        },
+    });
+}
+exports.lazy = lazy;
+/**
+ * Create a new struct based on an existing object struct, but excluding
+ * specific properties.
+ *
+ * Like TypeScript's `Omit` utility.
+ *
+ * @param struct - The struct to augment.
+ * @param keys - The keys to omit.
+ * @returns A new struct that will not accept the input keys.
+ */
+function omit(struct, keys) {
+    const { schema } = struct;
+    const subschema = { ...schema };
+    for (const key of keys) {
+        delete subschema[key];
+    }
+    switch (struct.type) {
+        case 'type':
+            return (0, types_js_1.type)(subschema);
+        default:
+            return (0, types_js_1.object)(subschema);
+    }
+}
+exports.omit = omit;
+/**
+ * Create a new struct based on an existing object struct, but with all of its
+ * properties allowed to be `undefined`.
+ *
+ * Like TypeScript's `Partial` utility.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will accept the input keys as `undefined`.
+ */
+function partial(struct) {
+    const isStruct = struct instanceof struct_js_1.Struct;
+    const schema = isStruct ? { ...struct.schema } : { ...struct };
+    // eslint-disable-next-line guard-for-in
+    for (const key in schema) {
+        schema[key] = (0, types_js_1.optional)(schema[key]);
+    }
+    if (isStruct && struct.type === 'type') {
+        return (0, types_js_1.type)(schema);
+    }
+    return (0, types_js_1.object)(schema);
+}
+exports.partial = partial;
+/**
+ * Create a new struct based on an existing object struct, but only including
+ * specific properties.
+ *
+ * Like TypeScript's `Pick` utility.
+ *
+ * @param struct - The struct to augment.
+ * @param keys - The keys to pick.
+ * @returns A new struct that will only accept the input keys.
+ */
+function pick(struct, keys) {
+    const { schema } = struct;
+    const subschema = {};
+    for (const key of keys) {
+        subschema[key] = schema[key];
+    }
+    switch (struct.type) {
+        case 'type':
+            return (0, types_js_1.type)(subschema);
+        default:
+            return (0, types_js_1.object)(subschema);
+    }
+}
+exports.pick = pick;
+//# sourceMappingURL=utilities.cjs.map
+
+/***/ }),
+
+/***/ 866484:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (receiver, state, kind, f) {
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a getter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+    return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
+};
+var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (receiver, state, value, kind, f) {
+    if (kind === "m") throw new TypeError("Private method is not writable");
+    if (kind === "a" && !f) throw new TypeError("Private accessor was defined without a setter");
+    if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+    return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
+};
+var _FrozenMap_map, _FrozenSet_set;
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.FrozenSet = exports.FrozenMap = void 0;
+/**
+ * A {@link ReadonlyMap} that cannot be modified after instantiation.
+ * The implementation uses an inner map hidden via a private field, and the
+ * immutability guarantee relies on it being impossible to get a reference
+ * to this map.
+ */
+class FrozenMap {
+    get size() {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").size;
+    }
+    [(_FrozenMap_map = new WeakMap(), Symbol.iterator)]() {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f")[Symbol.iterator]();
+    }
+    constructor(entries) {
+        _FrozenMap_map.set(this, void 0);
+        __classPrivateFieldSet(this, _FrozenMap_map, new Map(entries), "f");
+        Object.freeze(this);
+    }
+    entries() {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").entries();
+    }
+    forEach(callbackfn, thisArg) {
+        // We have to wrap the specified callback in order to prevent it from
+        // receiving a reference to the inner map.
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").forEach((value, key, _map) => callbackfn.call(thisArg, value, key, this));
+    }
+    get(key) {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").get(key);
+    }
+    has(key) {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").has(key);
+    }
+    keys() {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").keys();
+    }
+    values() {
+        return __classPrivateFieldGet(this, _FrozenMap_map, "f").values();
+    }
+    toString() {
+        return `FrozenMap(${this.size}) {${this.size > 0
+            ? ` ${[...this.entries()]
+                .map(([key, value]) => `${String(key)} => ${String(value)}`)
+                .join(', ')} `
+            : ''}}`;
+    }
+}
+exports.FrozenMap = FrozenMap;
+/**
+ * A {@link ReadonlySet} that cannot be modified after instantiation.
+ * The implementation uses an inner set hidden via a private field, and the
+ * immutability guarantee relies on it being impossible to get a reference
+ * to this set.
+ */
+class FrozenSet {
+    get size() {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").size;
+    }
+    [(_FrozenSet_set = new WeakMap(), Symbol.iterator)]() {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f")[Symbol.iterator]();
+    }
+    constructor(values) {
+        _FrozenSet_set.set(this, void 0);
+        __classPrivateFieldSet(this, _FrozenSet_set, new Set(values), "f");
+        Object.freeze(this);
+    }
+    entries() {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").entries();
+    }
+    forEach(callbackfn, thisArg) {
+        // We have to wrap the specified callback in order to prevent it from
+        // receiving a reference to the inner set.
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").forEach((value, value2, _set) => callbackfn.call(thisArg, value, value2, this));
+    }
+    has(value) {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").has(value);
+    }
+    keys() {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").keys();
+    }
+    values() {
+        return __classPrivateFieldGet(this, _FrozenSet_set, "f").values();
+    }
+    toString() {
+        return `FrozenSet(${this.size}) {${this.size > 0
+            ? ` ${[...this.values()].map((member) => String(member)).join(', ')} `
+            : ''}}`;
+    }
+}
+exports.FrozenSet = FrozenSet;
+Object.freeze(FrozenMap);
+Object.freeze(FrozenMap.prototype);
+Object.freeze(FrozenSet);
+Object.freeze(FrozenSet.prototype);
+//# sourceMappingURL=collections.cjs.map
 
 /***/ }),
 
@@ -348399,6 +356638,26 @@ exports.unique = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 897638:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const Range = __webpack_require__(778311)
+const satisfies = (version, range, options) => {
+  try {
+    range = new Range(range, options)
+  } catch (er) {
+    return false
+  }
+  return range.test(version)
+}
+module.exports = satisfies
+
+
+/***/ }),
+
 /***/ 897782:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -348592,6 +356851,200 @@ function getSelector(abiItem) {
     return AbiItem.getSelector(abiItem);
 }
 //# sourceMappingURL=AbiFunction.js.map
+
+/***/ }),
+
+/***/ 899067:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.validate = exports.is = exports.mask = exports.create = exports.assert = exports.ExactOptionalStruct = exports.Struct = void 0;
+const error_js_1 = __webpack_require__(127754);
+const utils_js_1 = __webpack_require__(570639);
+/**
+ * `Struct` objects encapsulate the validation logic for a specific type of
+ * values. Once constructed, you use the `assert`, `is` or `validate` helpers to
+ * validate unknown input data against the struct.
+ */
+class Struct {
+    constructor(props) {
+        const { type, schema, validator, refiner, coercer = (value) => value, entries = function* () {
+            /* noop */
+        }, } = props;
+        this.type = type;
+        this.schema = schema;
+        this.entries = entries;
+        this.coercer = coercer;
+        if (validator) {
+            this.validator = (value, context) => {
+                const result = validator(value, context);
+                return (0, utils_js_1.toFailures)(result, context, this, value);
+            };
+        }
+        else {
+            this.validator = () => [];
+        }
+        if (refiner) {
+            this.refiner = (value, context) => {
+                const result = refiner(value, context);
+                return (0, utils_js_1.toFailures)(result, context, this, value);
+            };
+        }
+        else {
+            this.refiner = () => [];
+        }
+    }
+    /**
+     * Assert that a value passes the struct's validation, throwing if it doesn't.
+     */
+    assert(value, message) {
+        return assert(value, this, message);
+    }
+    /**
+     * Create a value with the struct's coercion logic, then validate it.
+     */
+    create(value, message) {
+        return create(value, this, message);
+    }
+    /**
+     * Check if a value passes the struct's validation.
+     */
+    is(value) {
+        return is(value, this);
+    }
+    /**
+     * Mask a value, coercing and validating it, but returning only the subset of
+     * properties defined by the struct's schema.
+     */
+    mask(value, message) {
+        return mask(value, this, message);
+    }
+    /**
+     * Validate a value with the struct's validation logic, returning a tuple
+     * representing the result.
+     *
+     * You may optionally pass `true` for the `withCoercion` argument to coerce
+     * the value before attempting to validate it. If you do, the result will
+     * contain the coerced result when successful.
+     */
+    validate(value, options = {}) {
+        return validate(value, this, options);
+    }
+}
+exports.Struct = Struct;
+// String instead of a Symbol in case of multiple different versions of this library.
+const ExactOptionalBrand = 'EXACT_OPTIONAL';
+/**
+ * An `ExactOptionalStruct` is a `Struct` that is used to create exactly optional
+ * properties of `object()` structs.
+ */
+class ExactOptionalStruct extends Struct {
+    constructor(props) {
+        super({
+            ...props,
+            type: `exact optional ${props.type}`,
+        });
+        this.brand = ExactOptionalBrand;
+    }
+    static isExactOptional(value) {
+        return ((0, utils_js_1.isObject)(value) && 'brand' in value && value.brand === ExactOptionalBrand);
+    }
+}
+exports.ExactOptionalStruct = ExactOptionalStruct;
+/**
+ * Assert that a value passes a struct, throwing if it doesn't.
+ *
+ * @param value - The value to validate.
+ * @param struct - The struct to validate against.
+ * @param message - An optional message to include in the error.
+ */
+function assert(value, struct, message) {
+    const result = validate(value, struct, { message });
+    if (result[0]) {
+        throw result[0];
+    }
+}
+exports.assert = assert;
+/**
+ * Create a value with the coercion logic of struct and validate it.
+ *
+ * @param value - The value to coerce and validate.
+ * @param struct - The struct to validate against.
+ * @param message - An optional message to include in the error.
+ * @returns The coerced and validated value.
+ */
+function create(value, struct, message) {
+    const result = validate(value, struct, { coerce: true, message });
+    if (result[0]) {
+        throw result[0];
+    }
+    else {
+        return result[1];
+    }
+}
+exports.create = create;
+/**
+ * Mask a value, returning only the subset of properties defined by a struct.
+ *
+ * @param value - The value to mask.
+ * @param struct - The struct to mask against.
+ * @param message - An optional message to include in the error.
+ * @returns The masked value.
+ */
+function mask(value, struct, message) {
+    const result = validate(value, struct, { coerce: true, mask: true, message });
+    if (result[0]) {
+        throw result[0];
+    }
+    else {
+        return result[1];
+    }
+}
+exports.mask = mask;
+/**
+ * Check if a value passes a struct.
+ *
+ * @param value - The value to validate.
+ * @param struct - The struct to validate against.
+ * @returns `true` if the value passes the struct, `false` otherwise.
+ */
+function is(value, struct) {
+    const result = validate(value, struct);
+    return !result[0];
+}
+exports.is = is;
+/**
+ * Validate a value against a struct, returning an error if invalid, or the
+ * value (with potential coercion) if valid.
+ *
+ * @param value - The value to validate.
+ * @param struct - The struct to validate against.
+ * @param options - Optional settings.
+ * @param options.coerce - Whether to coerce the value before validating it.
+ * @param options.mask - Whether to mask the value before validating it.
+ * @param options.message - An optional message to include in the error.
+ * @returns A tuple containing the error (if invalid) and the validated value.
+ */
+function validate(value, struct, options = {}) {
+    const tuples = (0, utils_js_1.run)(value, struct, options);
+    const tuple = (0, utils_js_1.shiftIterator)(tuples);
+    if (tuple[0]) {
+        const error = new error_js_1.StructError(tuple[0], function* () {
+            for (const innerTuple of tuples) {
+                if (innerTuple[0]) {
+                    yield innerTuple[0];
+                }
+            }
+        });
+        return [error, undefined];
+    }
+    const validatedValue = tuple[1];
+    return [undefined, validatedValue];
+}
+exports.validate = validate;
+//# sourceMappingURL=struct.cjs.map
 
 /***/ }),
 
@@ -356187,6 +364640,41 @@ exports.beam = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 919628:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+const SemVer = __webpack_require__(853908)
+const Range = __webpack_require__(778311)
+
+const maxSatisfying = (versions, range, options) => {
+  let max = null
+  let maxSV = null
+  let rangeObj = null
+  try {
+    rangeObj = new Range(range, options)
+  } catch (er) {
+    return null
+  }
+  versions.forEach((v) => {
+    if (rangeObj.test(v)) {
+      // satisfies(v, range, options)
+      if (!max || maxSV.compare(v) === -1) {
+        // compare(max, v, true)
+        max = v
+        maxSV = new SemVer(max, options)
+      }
+    }
+  })
+  return max
+}
+module.exports = maxSatisfying
+
+
+/***/ }),
+
 /***/ 919772:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -363569,6 +372057,151 @@ function shouldRetry(error) {
 
 /***/ }),
 
+/***/ 946452:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.renderMerkleTree = exports.isValidMerkleTree = exports.processMultiProof = exports.getMultiProof = exports.processProof = exports.getProof = exports.makeMerkleTree = void 0;
+const bytes_1 = __webpack_require__(144144);
+const hashes_1 = __webpack_require__(522011);
+const errors_1 = __webpack_require__(190522);
+const leftChildIndex = (i) => 2 * i + 1;
+const rightChildIndex = (i) => 2 * i + 2;
+const parentIndex = (i) => (i > 0 ? Math.floor((i - 1) / 2) : (0, errors_1.throwError)('Root has no parent'));
+const siblingIndex = (i) => (i > 0 ? i - (-1) ** (i % 2) : (0, errors_1.throwError)('Root has no siblings'));
+const isTreeNode = (tree, i) => i >= 0 && i < tree.length;
+const isInternalNode = (tree, i) => isTreeNode(tree, leftChildIndex(i));
+const isLeafNode = (tree, i) => isTreeNode(tree, i) && !isInternalNode(tree, i);
+const isValidMerkleNode = (node) => (0, bytes_1.toBytes)(node).length === 32;
+const checkLeafNode = (tree, i) => void (isLeafNode(tree, i) || (0, errors_1.throwError)('Index is not a leaf'));
+const checkValidMerkleNode = (node) => void (isValidMerkleNode(node) || (0, errors_1.throwError)('Merkle tree nodes must be Uint8Array of length 32'));
+function makeMerkleTree(leaves, nodeHash = hashes_1.standardNodeHash) {
+    leaves.forEach(checkValidMerkleNode);
+    (0, errors_1.validateArgument)(leaves.length !== 0, 'Expected non-zero number of leaves');
+    const tree = new Array(2 * leaves.length - 1);
+    for (const [i, leaf] of leaves.entries()) {
+        tree[tree.length - 1 - i] = (0, bytes_1.toHex)(leaf);
+    }
+    for (let i = tree.length - 1 - leaves.length; i >= 0; i--) {
+        tree[i] = nodeHash(tree[leftChildIndex(i)], tree[rightChildIndex(i)]);
+    }
+    return tree;
+}
+exports.makeMerkleTree = makeMerkleTree;
+function getProof(tree, index) {
+    checkLeafNode(tree, index);
+    const proof = [];
+    while (index > 0) {
+        proof.push((0, bytes_1.toHex)(tree[siblingIndex(index)]));
+        index = parentIndex(index);
+    }
+    return proof;
+}
+exports.getProof = getProof;
+function processProof(leaf, proof, nodeHash = hashes_1.standardNodeHash) {
+    checkValidMerkleNode(leaf);
+    proof.forEach(checkValidMerkleNode);
+    return (0, bytes_1.toHex)(proof.reduce(nodeHash, leaf));
+}
+exports.processProof = processProof;
+function getMultiProof(tree, indices) {
+    indices.forEach(i => checkLeafNode(tree, i));
+    indices.sort((a, b) => b - a);
+    (0, errors_1.validateArgument)(indices.slice(1).every((i, p) => i !== indices[p]), 'Cannot prove duplicated index');
+    const stack = Array.from(indices); // copy
+    const proof = [];
+    const proofFlags = [];
+    while (stack.length > 0 && stack[0] > 0) {
+        const j = stack.shift(); // take from the beginning
+        const s = siblingIndex(j);
+        const p = parentIndex(j);
+        if (s === stack[0]) {
+            proofFlags.push(true);
+            stack.shift(); // consume from the stack
+        }
+        else {
+            proofFlags.push(false);
+            proof.push((0, bytes_1.toHex)(tree[s]));
+        }
+        stack.push(p);
+    }
+    if (indices.length === 0) {
+        proof.push((0, bytes_1.toHex)(tree[0]));
+    }
+    return {
+        leaves: indices.map(i => (0, bytes_1.toHex)(tree[i])),
+        proof,
+        proofFlags,
+    };
+}
+exports.getMultiProof = getMultiProof;
+function processMultiProof(multiproof, nodeHash = hashes_1.standardNodeHash) {
+    multiproof.leaves.forEach(checkValidMerkleNode);
+    multiproof.proof.forEach(checkValidMerkleNode);
+    (0, errors_1.validateArgument)(multiproof.proof.length >= multiproof.proofFlags.filter(b => !b).length, 'Invalid multiproof format');
+    (0, errors_1.validateArgument)(multiproof.leaves.length + multiproof.proof.length === multiproof.proofFlags.length + 1, 'Provided leaves and multiproof are not compatible');
+    const stack = Array.from(multiproof.leaves); // copy
+    const proof = Array.from(multiproof.proof); // copy
+    for (const flag of multiproof.proofFlags) {
+        const a = stack.shift();
+        const b = flag ? stack.shift() : proof.shift();
+        (0, errors_1.invariant)(a !== undefined && b !== undefined);
+        stack.push(nodeHash(a, b));
+    }
+    (0, errors_1.invariant)(stack.length + proof.length === 1);
+    return (0, bytes_1.toHex)(stack.pop() ?? proof.shift());
+}
+exports.processMultiProof = processMultiProof;
+function isValidMerkleTree(tree, nodeHash = hashes_1.standardNodeHash) {
+    for (const [i, node] of tree.entries()) {
+        if (!isValidMerkleNode(node)) {
+            return false;
+        }
+        const l = leftChildIndex(i);
+        const r = rightChildIndex(i);
+        if (r >= tree.length) {
+            if (l < tree.length) {
+                return false;
+            }
+        }
+        else if ((0, bytes_1.compare)(node, nodeHash(tree[l], tree[r]))) {
+            return false;
+        }
+    }
+    return tree.length > 0;
+}
+exports.isValidMerkleTree = isValidMerkleTree;
+function renderMerkleTree(tree) {
+    (0, errors_1.validateArgument)(tree.length !== 0, 'Expected non-zero number of nodes');
+    const stack = [[0, []]];
+    const lines = [];
+    while (stack.length > 0) {
+        const [i, path] = stack.pop();
+        lines.push(path
+            .slice(0, -1)
+            .map(p => ['   ', '│  '][p])
+            .join('') +
+            path
+                .slice(-1)
+                .map(p => ['└─ ', '├─ '][p])
+                .join('') +
+            i +
+            ') ' +
+            (0, bytes_1.toHex)(tree[i]));
+        if (rightChildIndex(i) < tree.length) {
+            stack.push([rightChildIndex(i), path.concat(0)]);
+            stack.push([leftChildIndex(i), path.concat(1)]);
+        }
+    }
+    return lines.join('\n');
+}
+exports.renderMerkleTree = renderMerkleTree;
+//# sourceMappingURL=core.js.map
+
+/***/ }),
+
 /***/ 946563:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -364734,6 +373367,106 @@ exports.stratis = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
+/***/ 947435:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.bool = exports.getBooleanValue = void 0;
+const superstruct_1 = __webpack_require__(635620);
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const number_1 = __webpack_require__(306150);
+const BooleanCoercer = (0, superstruct_1.coerce)((0, superstruct_1.boolean)(), (0, superstruct_1.union)([(0, superstruct_1.literal)('true'), (0, superstruct_1.literal)('false')]), (value) => value === 'true');
+/**
+ * Normalize a boolean value. This accepts the boolean as:
+ *
+ * - A boolean literal.
+ * - The string "true" or "false".
+ *
+ * @param value - The value to get a boolean for.
+ * @returns The parsed boolean value. This is `BigInt(1)` for truthy values, or
+ * `BigInt(0)` for falsy values.
+ */
+const getBooleanValue = (value) => {
+    try {
+        const booleanValue = (0, superstruct_1.create)(value, BooleanCoercer);
+        if (booleanValue) {
+            return BigInt(1);
+        }
+        return BigInt(0);
+    }
+    catch {
+        throw new errors_1.ParserError(`Invalid boolean value. Expected a boolean literal, or the string "true" or "false", but received "${value}".`);
+    }
+};
+exports.getBooleanValue = getBooleanValue;
+exports.bool = {
+    isDynamic: false,
+    /**
+     * Get if the given value is a valid boolean type. Since `bool` is a simple
+     * type, this is just a check that the value is "bool".
+     *
+     * @param type - The type to check.
+     * @returns Whether the type is a valid boolean type.
+     */
+    isType: (type) => type === 'bool',
+    /**
+     * Get the byte length of an encoded boolean. Since `bool` is a simple
+     * type, this always returns 32.
+     *
+     * Note that actual booleans are only 1 byte long, but the encoding of
+     * the `bool` type is always 32 bytes long.
+     *
+     * @returns The byte length of an encoded boolean.
+     */
+    getByteLength() {
+        return 32;
+    },
+    /**
+     * Encode the given boolean to a byte array.
+     *
+     * @param args - The encoding arguments.
+     * @param args.buffer - The byte array to add to.
+     * @param args.value - The boolean to encode.
+     * @param args.packed - Whether the value is packed.
+     * @param args.tight - Whether to use non-standard tight encoding.
+     * @returns The bytes with the encoded boolean added to it.
+     */
+    encode({ buffer, value, packed, tight }) {
+        const booleanValue = (0, exports.getBooleanValue)(value);
+        // For packed encoding, we add a single byte (`0x00` or `0x01`) to the byte
+        // array.
+        if (packed) {
+            return (0, utils_1.concatBytes)([buffer, (0, utils_1.bigIntToBytes)(booleanValue)]);
+        }
+        // Booleans are encoded as 32-byte integers, so we use the number parser
+        // to encode the boolean value.
+        return number_1.number.encode({
+            type: 'uint256',
+            buffer,
+            value: booleanValue,
+            packed,
+            tight,
+        });
+    },
+    /**
+     * Decode the given byte array to a boolean.
+     *
+     * @param args - The decoding arguments.
+     * @returns The decoded boolean.
+     */
+    decode(args) {
+        // Booleans are encoded as 32-byte integers, so we use the number parser
+        // to decode the boolean value.
+        return number_1.number.decode({ ...args, type: 'uint256' }) === BigInt(1);
+    },
+};
+//# sourceMappingURL=bool.js.map
+
+/***/ }),
+
 /***/ 947552:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -365277,6 +374010,181 @@ var LinesAndColumns = /** @class */ (function () {
 __webpack_unused_export__ = LinesAndColumns;
 __webpack_unused_export__ = LinesAndColumns;
 
+
+/***/ }),
+
+/***/ 950401:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.refine = exports.size = exports.pattern = exports.nonempty = exports.min = exports.max = exports.empty = void 0;
+const struct_js_1 = __webpack_require__(899067);
+const utils_js_1 = __webpack_require__(570639);
+/**
+ * Ensure that a string, array, map, or set is empty.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will only accept empty values.
+ */
+function empty(struct) {
+    return refine(struct, 'empty', (value) => {
+        // eslint-disable-next-line @typescript-eslint/no-shadow
+        const size = getSize(value);
+        return (size === 0 ||
+            `Expected an empty ${struct.type} but received one with a size of \`${size}\``);
+    });
+}
+exports.empty = empty;
+/**
+ * Get the size of a string, array, map, or set.
+ *
+ * @param value - The value to measure.
+ * @returns The size of the value.
+ */
+function getSize(value) {
+    if (value instanceof Map || value instanceof Set) {
+        return value.size;
+    }
+    return value.length;
+}
+/**
+ * Ensure that a number or date is below a threshold.
+ *
+ * @param struct - The struct to augment.
+ * @param threshold - The maximum value that the input can be.
+ * @param options - An optional options object.
+ * @param options.exclusive - When `true`, the input must be strictly less than
+ * the threshold. When `false`, the input must be less than or equal to the
+ * threshold.
+ * @returns A new struct that will only accept values below the threshold.
+ */
+function max(struct, threshold, options = {}) {
+    const { exclusive } = options;
+    return refine(struct, 'max', (value) => {
+        return exclusive
+            ? value < threshold
+            : value <= threshold ||
+                `Expected a ${struct.type} less than ${exclusive ? '' : 'or equal to '
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                }${threshold} but received \`${value}\``;
+    });
+}
+exports.max = max;
+/**
+ * Ensure that a number or date is above a threshold.
+ *
+ * @param struct - The struct to augment.
+ * @param threshold - The minimum value that the input can be.
+ * @param options - An optional options object.
+ * @param options.exclusive - When `true`, the input must be strictly greater
+ * than the threshold. When `false`, the input must be greater than or equal to
+ * the threshold.
+ * @returns A new struct that will only accept values above the threshold.
+ */
+function min(struct, threshold, options = {}) {
+    const { exclusive } = options;
+    return refine(struct, 'min', (value) => {
+        return exclusive
+            ? value > threshold
+            : value >= threshold ||
+                `Expected a ${struct.type} greater than ${exclusive ? '' : 'or equal to '
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                }${threshold} but received \`${value}\``;
+    });
+}
+exports.min = min;
+/**
+ * Ensure that a string, array, map or set is not empty.
+ *
+ * @param struct - The struct to augment.
+ * @returns A new struct that will only accept non-empty values.
+ */
+function nonempty(struct) {
+    return refine(struct, 'nonempty', (value) => {
+        // eslint-disable-next-line @typescript-eslint/no-shadow
+        const size = getSize(value);
+        return (size > 0 || `Expected a nonempty ${struct.type} but received an empty one`);
+    });
+}
+exports.nonempty = nonempty;
+/**
+ * Ensure that a string matches a regular expression.
+ *
+ * @param struct - The struct to augment.
+ * @param regexp - The regular expression to match against.
+ * @returns A new struct that will only accept strings matching the regular
+ * expression.
+ */
+function pattern(struct, regexp) {
+    return refine(struct, 'pattern', (value) => {
+        return (regexp.test(value) ||
+            `Expected a ${struct.type} matching \`/${regexp.source}/\` but received "${value}"`);
+    });
+}
+exports.pattern = pattern;
+/**
+ * Ensure that a string, array, number, date, map, or set has a size (or length,
+ * or time) between `min` and `max`.
+ *
+ * @param struct - The struct to augment.
+ * @param minimum - The minimum size that the input can be.
+ * @param maximum - The maximum size that the input can be.
+ * @returns A new struct that will only accept values within the given size
+ * range.
+ */
+function size(struct, minimum, maximum = minimum) {
+    const expected = `Expected a ${struct.type}`;
+    const of = minimum === maximum
+        ? `of \`${minimum}\``
+        : `between \`${minimum}\` and \`${maximum}\``;
+    return refine(struct, 'size', (value) => {
+        if (typeof value === 'number' || value instanceof Date) {
+            return ((minimum <= value && value <= maximum) ||
+                // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+                `${expected} ${of} but received \`${value}\``);
+        }
+        else if (value instanceof Map || value instanceof Set) {
+            // eslint-disable-next-line @typescript-eslint/no-shadow
+            const { size } = value;
+            return ((minimum <= size && size <= maximum) ||
+                `${expected} with a size ${of} but received one with a size of \`${size}\``);
+        }
+        const { length } = value;
+        return ((minimum <= length && length <= maximum) ||
+            `${expected} with a length ${of} but received one with a length of \`${length}\``);
+    });
+}
+exports.size = size;
+/**
+ * Augment a `Struct` to add an additional refinement to the validation.
+ *
+ * The refiner function is guaranteed to receive a value of the struct's type,
+ * because the struct's existing validation will already have passed. This
+ * allows you to layer additional validation on top of existing structs.
+ *
+ * @param struct - The struct to augment.
+ * @param name - The name of the refinement.
+ * @param refiner - The refiner function.
+ * @returns A new struct that will run the refiner function after the existing
+ * validation.
+ */
+function refine(struct, name, refiner) {
+    return new struct_js_1.Struct({
+        ...struct,
+        *refiner(value, ctx) {
+            yield* struct.refiner(value, ctx);
+            const result = refiner(value, ctx);
+            const failures = (0, utils_js_1.toFailures)(result, ctx, struct, value);
+            for (const failure of failures) {
+                yield { ...failure, refinement: name };
+            }
+        },
+    });
+}
+exports.refine = refine;
+//# sourceMappingURL=refinements.cjs.map
 
 /***/ }),
 
@@ -367068,6 +375976,245 @@ function labelhash(label) {
 
 /***/ }),
 
+/***/ 956498:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+// ESLint gets confused by the nested list and tables in the docs, so we disable
+// the rule for this file.
+/* eslint-disable jsdoc/check-indentation, jsdoc/match-description */
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.decodeSingle = exports.decode = exports.encodePacked = exports.encodeSingle = exports.encode = void 0;
+const utils_1 = __webpack_require__(672495);
+const errors_1 = __webpack_require__(205961);
+const packer_1 = __webpack_require__(537700);
+/**
+ * Encode the data with the provided types. The types must be valid Solidity
+ * ABI types.
+ *
+ * This will attempt to parse the values into the correct types. For example,
+ * if you pass in a hex string for a `uint256`, it will be parsed into a
+ * `bigint`. Regular strings are interpreted as UTF-8 strings. If you want to
+ * pass in a hex string, you must pass it in as a `Uint8Array`, or use the
+ * "0x"-prefix.
+ *
+ * It will also attempt to infer the types of the values. For example, if you
+ * pass in a string for a `uint256`, it will result in a TypeScript compile-time
+ * error. This does not work for all types, however. For example, if you use
+ * nested arrays or tuples, the type will be inferred as `unknown`.
+ *
+ * The following types are supported:
+ *
+ * - `address`: A 20-byte Ethereum address.
+ *   - As a 40-character-long hexadecimal string, starting with "0x".
+ *   - As a 20-byte-long byte array, i.e., `Uint8Array`.
+ * - `bool`: A boolean value.
+ *   - As a boolean literal, i.e., `true` or `false`.
+ *   - As the strings "true" or "false".
+ * - `bytes(n)`: A dynamic byte array.
+ *   - As a hexadecimal string, starting with "0x".
+ *   - As a byte array, i.e., `Uint8Array`.
+ *   - As a regular string, which will be interpreted as UTF-8.
+ * - `function`: A Solidity function.
+ *   - As a 48-character-long hexadecimal string, starting with "0x".
+ *   - As a 24-byte-long byte array, i.e., `Uint8Array`.
+ *   - As a {@link SolidityFunction} object.
+ * - `int(n)`: A signed integer.
+ *   - As a number.
+ *   - As a `bigint`.
+ *   - As a hexadecimal string, starting with "0x".
+ * - `string`: A dynamic UTF-8 string.
+ *   - As a regular string.
+ *   - As a hexadecimal string, starting with "0x".
+ *   - As a byte array, i.e., `Uint8Array`.
+ * - `tuple`: A tuple of values.
+ *   - As an array of values.
+ * - `uint(n)`: An unsigned integer.
+ *   - As a number.
+ *   - As a `bigint`.
+ *   - As a hexadecimal string, starting with "0x".
+ *
+ * @example
+ * ```typescript
+ * import { encode, decode } from '@metamask/abi-utils';
+ *
+ * const types = ['uint256', 'string'];
+ * const encoded = encode(types, [42, 'Hello, world!']);
+ * const decoded = decode(types, encoded);
+ *
+ * console.log(decoded); // [42n, 'Hello, world!']
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html
+ * @param types - The types to encode.
+ * @param values - The values to encode. This array must have the same length as
+ * the types array.
+ * @param packed - Whether to use the non-standard packed mode. Defaults to
+ * `false`.
+ * @param tight - Whether to pack the values tightly. When enabled, the values
+ * will be packed without any padding. This matches the behaviour of
+ * `ethereumjs-abi`. Defaults to `false`.
+ * @returns The ABI encoded bytes.
+ */
+const encode = (types, values, packed, tight) => {
+    try {
+        return (0, packer_1.pack)({ types, values, packed, tight });
+    }
+    catch (error) {
+        if (error instanceof errors_1.ParserError) {
+            throw new errors_1.ParserError(`Unable to encode value: ${error.message}`, error);
+        }
+        throw new errors_1.ParserError(`An unexpected error occurred: ${(0, errors_1.getErrorMessage)(error)}`, error);
+    }
+};
+exports.encode = encode;
+/**
+ * Encode the data with the provided type. The type must be a valid Solidity
+ * ABI type.
+ *
+ * See {@link encode} for more information on how values are parsed.
+ *
+ * @example
+ * ```typescript
+ * import { encodeSingle, decodeSingle } from '@metamask/abi-utils';
+ *
+ * const encoded = encodeSingle('uint256', 42);
+ * const decoded = decodeSingle('uint256', encoded);
+ *
+ * console.log(decoded); // 42n
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @param type - The type to encode.
+ * @param value - The value to encode.
+ * @returns The ABI encoded bytes.
+ */
+const encodeSingle = (type, value) => {
+    return (0, exports.encode)([type], [value]);
+};
+exports.encodeSingle = encodeSingle;
+/**
+ * Encode the data with the provided types. The types must be valid Solidity
+ * ABI types. This is similar to {@link encode}, but the values are encoded in
+ * the non-standard packed mode. This differs from the standard encoding in the
+ * following ways:
+ *
+ * - Most values are packed tightly, without alignment padding.
+ *   - The exception is array values, which are padded to 32 bytes.
+ * - Values are still padded to their full size, i.e., `uint16` values are still
+ *  padded to 2 bytes, regardless of the length of the value.
+ * - The encoding of dynamic types (`bytes`, `string`) is different. The length
+ * of the dynamic type is not included in the encoding, and the dynamic type is
+ * not padded to a multiple of 32 bytes.
+ * - All values are encoded in-place, without any offsets.
+ *
+ * The encoding of this is ambiguous as soon as there is more than one dynamic
+ * type. That means that these values cannot be decoded with {@link decode} or
+ * Solidity's `abi.decode` function.
+ *
+ * See {@link encode} for more information on how values are parsed.
+ *
+ * @example
+ * ```typescript
+ * import { encodePacked } from '@metamask/abi-utils';
+ *
+ * const encoded = encodePacked(['uint8'], [42]);
+ *
+ * console.log(encoded); // `Uint8Array [ 42 ]`
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#non-standard-packed-mode
+ * @param types - The types to encode.
+ * @param values - The values to encode.
+ * @param tight - Whether to pack the values tightly. When enabled, `bytesN`
+ * values in arrays will be packed without any padding. This matches the
+ * behaviour of `ethereumjs-abi`. Defaults to `false`.
+ * @returns The ABI encoded bytes.
+ */
+const encodePacked = (types, values, tight) => {
+    return (0, exports.encode)(types, values, true, tight);
+};
+exports.encodePacked = encodePacked;
+/**
+ * Decode an ABI encoded buffer with the specified types. The types must be
+ * valid Solidity ABI types.
+ *
+ * This will attempt to infer the output types from the input types. For
+ * example, if you use `uint256` as an input type, the output type will be
+ * `bigint`. This does not work for all types, however. For example, if you use
+ * nested array types or tuple types, the output type will be `unknown`.
+ *
+ * The resulting types of the values will be as follows:
+ *
+ * | Contract ABI Type | Resulting JavaScript Type |
+ * | ----------------- | ------------------------- |
+ * | `address`         | `string`                  |
+ * | `bool`            | `boolean`                 |
+ * | `bytes(n)`        | `Uint8Array`              |
+ * | `function`        | {@link SolidityFunction}  |
+ * | `int(n)`          | `bigint`                  |
+ * | `string`          | `string`                  |
+ * | `tuple`           | `Array`                   |
+ * | `array`           | `Array`                   |
+ * | `uint(n)`         | `bigint`                  |
+ *
+ * @example
+ * ```typescript
+ * import { encode, decode } from '@metamask/abi-utils';
+ *
+ * const types = ['uint256', 'string'];
+ * const encoded = encode(types, [42, 'Hello, world!']);
+ * const decoded = decode(types, encoded);
+ *
+ * console.log(decoded); // [42n, 'Hello, world!']
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @param types - The types to decode the bytes with.
+ * @param value - The bytes-like value to decode.
+ * @returns The decoded values as array.
+ */
+const decode = (types, value) => {
+    const bytes = (0, utils_1.createBytes)(value);
+    try {
+        return (0, packer_1.unpack)(types, bytes);
+    }
+    catch (error) {
+        if (error instanceof errors_1.ParserError) {
+            throw new errors_1.ParserError(`Unable to decode value: ${error.message}`, error);
+        }
+        throw new errors_1.ParserError(`An unexpected error occurred: ${(0, errors_1.getErrorMessage)(error)}`, error);
+    }
+};
+exports.decode = decode;
+/**
+ * Decode the data with the provided type. The type must be a valid Solidity
+ * ABI type.
+ *
+ * See {@link decode} for more information on how values are parsed.
+ *
+ * @example
+ * ```typescript
+ * import { encodeSingle, decodeSingle } from '@metamask/abi-utils';
+ *
+ * const encoded = encodeSingle('uint256', 42);
+ * const decoded = decodeSingle('uint256', encoded);
+ *
+ * console.log(decoded); // 42n
+ * ```
+ * @see https://docs.soliditylang.org/en/v0.8.17/abi-spec.html#types
+ * @param type - The type to decode.
+ * @param value - The bytes-like value to decode.
+ * @returns The decoded value.
+ */
+const decodeSingle = (type, value) => {
+    const result = (0, exports.decode)([type], value);
+    (0, utils_1.assert)(result.length === 1, new errors_1.ParserError('Decoded value array has unexpected length.'));
+    return result[0];
+};
+exports.decodeSingle = decodeSingle;
+//# sourceMappingURL=abi.js.map
+
+/***/ }),
+
 /***/ 956737:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -367635,6 +376782,39 @@ function setupFeegrantExtension(base) {
 }
 exports.setupFeegrantExtension = setupFeegrantExtension;
 //# sourceMappingURL=queries.js.map
+
+/***/ }),
+
+/***/ 961123:
+/***/ ((module) => {
+
+"use strict";
+
+
+const numeric = /^[0-9]+$/
+const compareIdentifiers = (a, b) => {
+  const anum = numeric.test(a)
+  const bnum = numeric.test(b)
+
+  if (anum && bnum) {
+    a = +a
+    b = +b
+  }
+
+  return a === b ? 0
+    : (anum && !bnum) ? -1
+    : (bnum && !anum) ? 1
+    : a < b ? -1
+    : 1
+}
+
+const rcompareIdentifiers = (a, b) => compareIdentifiers(b, a)
+
+module.exports = {
+  compareIdentifiers,
+  rcompareIdentifiers,
+}
+
 
 /***/ }),
 
@@ -374943,6 +384123,63 @@ function withResolvers() {
 
 /***/ }),
 
+/***/ 972525:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+// given a set of versions and a range, create a "simplified" range
+// that includes the same versions that the original range does
+// If the original range is shorter than the simplified one, return that.
+const satisfies = __webpack_require__(897638)
+const compare = __webpack_require__(350560)
+module.exports = (versions, range, options) => {
+  const set = []
+  let first = null
+  let prev = null
+  const v = versions.sort((a, b) => compare(a, b, options))
+  for (const version of v) {
+    const included = satisfies(version, range, options)
+    if (included) {
+      prev = version
+      if (!first) {
+        first = version
+      }
+    } else {
+      if (prev) {
+        set.push([first, prev])
+      }
+      prev = null
+      first = null
+    }
+  }
+  if (first) {
+    set.push([first, null])
+  }
+
+  const ranges = []
+  for (const [min, max] of set) {
+    if (min === max) {
+      ranges.push(min)
+    } else if (!max && min === v[0]) {
+      ranges.push('*')
+    } else if (!max) {
+      ranges.push(`>=${min}`)
+    } else if (min === v[0]) {
+      ranges.push(`<=${max}`)
+    } else {
+      ranges.push(`${min} - ${max}`)
+    }
+  }
+  const simplified = ranges.join(' || ')
+  const original = typeof range.raw === 'string' ? range.raw : String(range)
+  return simplified.length < original.length ? simplified : range
+}
+
+
+/***/ }),
+
 /***/ 972846:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -376381,6 +385618,115 @@ function toPrefixedMessage(message_) {
     return (0, concat_js_1.concat)([prefix, message]);
 }
 //# sourceMappingURL=toPrefixedMessage.js.map
+
+/***/ }),
+
+/***/ 981322:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.hexToBigInt = exports.hexToNumber = exports.bigIntToHex = exports.numberToHex = void 0;
+const assert_1 = __webpack_require__(405915);
+const hex_1 = __webpack_require__(668824);
+/**
+ * Convert a number to a hexadecimal string. This verifies that the number is a
+ * non-negative safe integer.
+ *
+ * To convert a `bigint` to a hexadecimal string instead, use
+ * {@link bigIntToHex}.
+ *
+ * @example
+ * ```typescript
+ * numberToHex(0); // '0x0'
+ * numberToHex(1); // '0x1'
+ * numberToHex(16); // '0x10'
+ * ```
+ * @param value - The number to convert to a hexadecimal string.
+ * @returns The hexadecimal string, with the "0x"-prefix.
+ * @throws If the number is not a non-negative safe integer.
+ */
+const numberToHex = (value) => {
+    (0, assert_1.assert)(typeof value === 'number', 'Value must be a number.');
+    (0, assert_1.assert)(value >= 0, 'Value must be a non-negative number.');
+    (0, assert_1.assert)(Number.isSafeInteger(value), 'Value is not a safe integer. Use `bigIntToHex` instead.');
+    return (0, hex_1.add0x)(value.toString(16));
+};
+exports.numberToHex = numberToHex;
+/**
+ * Convert a `bigint` to a hexadecimal string. This verifies that the `bigint`
+ * is a non-negative integer.
+ *
+ * To convert a number to a hexadecimal string instead, use {@link numberToHex}.
+ *
+ * @example
+ * ```typescript
+ * bigIntToHex(0n); // '0x0'
+ * bigIntToHex(1n); // '0x1'
+ * bigIntToHex(16n); // '0x10'
+ * ```
+ * @param value - The `bigint` to convert to a hexadecimal string.
+ * @returns The hexadecimal string, with the "0x"-prefix.
+ * @throws If the `bigint` is not a non-negative integer.
+ */
+const bigIntToHex = (value) => {
+    (0, assert_1.assert)(typeof value === 'bigint', 'Value must be a bigint.');
+    (0, assert_1.assert)(value >= 0, 'Value must be a non-negative bigint.');
+    return (0, hex_1.add0x)(value.toString(16));
+};
+exports.bigIntToHex = bigIntToHex;
+/**
+ * Convert a hexadecimal string to a number. This verifies that the string is a
+ * valid hex string, and that the resulting number is a safe integer. Both
+ * "0x"-prefixed and unprefixed strings are supported.
+ *
+ * To convert a hexadecimal string to a `bigint` instead, use
+ * {@link hexToBigInt}.
+ *
+ * @example
+ * ```typescript
+ * hexToNumber('0x0'); // 0
+ * hexToNumber('0x1'); // 1
+ * hexToNumber('0x10'); // 16
+ * ```
+ * @param value - The hexadecimal string to convert to a number.
+ * @returns The number.
+ * @throws If the value is not a valid hexadecimal string, or if the resulting
+ * number is not a safe integer.
+ */
+const hexToNumber = (value) => {
+    (0, hex_1.assertIsHexString)(value);
+    // `parseInt` accepts values without the "0x"-prefix, whereas `Number` does
+    // not. Using this is slightly faster than `Number(add0x(value))`.
+    const numberValue = parseInt(value, 16);
+    (0, assert_1.assert)(Number.isSafeInteger(numberValue), 'Value is not a safe integer. Use `hexToBigInt` instead.');
+    return numberValue;
+};
+exports.hexToNumber = hexToNumber;
+/**
+ * Convert a hexadecimal string to a `bigint`. This verifies that the string is
+ * a valid hex string. Both "0x"-prefixed and unprefixed strings are supported.
+ *
+ * To convert a hexadecimal string to a number instead, use {@link hexToNumber}.
+ *
+ * @example
+ * ```typescript
+ * hexToBigInt('0x0'); // 0n
+ * hexToBigInt('0x1'); // 1n
+ * hexToBigInt('0x10'); // 16n
+ * ```
+ * @param value - The hexadecimal string to convert to a `bigint`.
+ * @returns The `bigint`.
+ * @throws If the value is not a valid hexadecimal string.
+ */
+const hexToBigInt = (value) => {
+    (0, hex_1.assertIsHexString)(value);
+    // The `BigInt` constructor requires the "0x"-prefix to parse a hex string.
+    return BigInt((0, hex_1.add0x)(value));
+};
+exports.hexToBigInt = hexToBigInt;
+//# sourceMappingURL=number.cjs.map
 
 /***/ }),
 
@@ -384103,6 +393449,105 @@ exports.swanSaturnTestnet = (0, defineChain_js_1.defineChain)({
     testnet: true,
 });
 //# sourceMappingURL=swanSaturnTestnet.js.map
+
+/***/ }),
+
+/***/ 999589:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+
+// just pre-load all the stuff that index.js lazily exports
+const internalRe = __webpack_require__(199718)
+const constants = __webpack_require__(416874)
+const SemVer = __webpack_require__(853908)
+const identifiers = __webpack_require__(961123)
+const parse = __webpack_require__(830144)
+const valid = __webpack_require__(556953)
+const clean = __webpack_require__(57414)
+const inc = __webpack_require__(793007)
+const diff = __webpack_require__(251832)
+const major = __webpack_require__(532938)
+const minor = __webpack_require__(746254)
+const patch = __webpack_require__(24493)
+const prerelease = __webpack_require__(31729)
+const compare = __webpack_require__(350560)
+const rcompare = __webpack_require__(809970)
+const compareLoose = __webpack_require__(111763)
+const compareBuild = __webpack_require__(240909)
+const sort = __webpack_require__(343927)
+const rsort = __webpack_require__(474277)
+const gt = __webpack_require__(535580)
+const lt = __webpack_require__(207059)
+const eq = __webpack_require__(694641)
+const neq = __webpack_require__(613999)
+const gte = __webpack_require__(154089)
+const lte = __webpack_require__(825200)
+const cmp = __webpack_require__(272111)
+const coerce = __webpack_require__(546170)
+const Comparator = __webpack_require__(93904)
+const Range = __webpack_require__(778311)
+const satisfies = __webpack_require__(897638)
+const toComparators = __webpack_require__(277631)
+const maxSatisfying = __webpack_require__(919628)
+const minSatisfying = __webpack_require__(300270)
+const minVersion = __webpack_require__(441261)
+const validRange = __webpack_require__(113874)
+const outside = __webpack_require__(697075)
+const gtr = __webpack_require__(375571)
+const ltr = __webpack_require__(5342)
+const intersects = __webpack_require__(676780)
+const simplifyRange = __webpack_require__(972525)
+const subset = __webpack_require__(475032)
+module.exports = {
+  parse,
+  valid,
+  clean,
+  inc,
+  diff,
+  major,
+  minor,
+  patch,
+  prerelease,
+  compare,
+  rcompare,
+  compareLoose,
+  compareBuild,
+  sort,
+  rsort,
+  gt,
+  lt,
+  eq,
+  neq,
+  gte,
+  lte,
+  cmp,
+  coerce,
+  Comparator,
+  Range,
+  satisfies,
+  toComparators,
+  maxSatisfying,
+  minSatisfying,
+  minVersion,
+  validRange,
+  outside,
+  gtr,
+  ltr,
+  intersects,
+  simplifyRange,
+  subset,
+  SemVer,
+  re: internalRe.re,
+  src: internalRe.src,
+  tokens: internalRe.t,
+  SEMVER_SPEC_VERSION: constants.SEMVER_SPEC_VERSION,
+  RELEASE_TYPES: constants.RELEASE_TYPES,
+  compareIdentifiers: identifiers.compareIdentifiers,
+  rcompareIdentifiers: identifiers.rcompareIdentifiers,
+}
+
 
 /***/ })
 

@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[30859],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[47151],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -366,6 +366,2104 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
+/***/ 220101:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_03_build_05_universal_send_transaction_mdx_b7d_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-05-universal-send-transaction-mdx-b7d.json
+const site_docs_chain_03_build_05_universal_send_transaction_mdx_b7d_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-send-universal-transaction","title":"Send Universal Transaction","description":"Send Transaction | Build | Push Chain Docs","source":"@site/docs/chain/03-build/05-Universal-Send-Transaction.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/send-universal-transaction","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/send-universal-transaction","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/05-Universal-Send-Transaction.mdx","tags":[],"version":"current","sidebarPosition":5,"frontMatter":{"id":"docs-chain-build-send-universal-transaction","title":"Send Universal Transaction","hide_title":false,"slug":"./send-universal-transaction","displayed_sidebar":"pushChainSidebar","sidebar_position":5,"image":"/assets/docs/previews/docs_chain_build--send_universal_transaction.png"},"sidebar":"pushChainSidebar","previous":{"title":"Initialize EVM Client","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/initialize-evm-client"},"next":{"title":"Sign Universal Message","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/sign-universal-message"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
+var PushAPIReference = __webpack_require__(303547);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+;// ./docs/chain/03-build/05-Universal-Send-Transaction.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-build-send-universal-transaction',
+	title: 'Send Universal Transaction',
+	hide_title: false,
+	slug: './send-universal-transaction',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 5,
+	image: '/assets/docs/previews/docs_chain_build--send_universal_transaction.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Overview",
+  "id": "overview",
+  "level": 2
+}, {
+  "value": "Sending Universal Transaction",
+  "id": "sending-universal-transaction",
+  "level": 2
+}, {
+  "value": "Send Transaction with Contract Interaction",
+  "id": "send-transaction-with-contract-interaction",
+  "level": 2
+}, {
+  "value": "Live Playground",
+  "id": "live-playground",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    em: "em",
+    h2: "h2",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Send Transaction | Build | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "overview",
+      children: "Overview"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Universal transactions let you send ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "native"
+      }), " transactions from any Layer 1 chain—EVM or non-EVM, even Push Chain itself—without wrapping, bridging or extra tooling required."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Under the hood"
+      }), ", the SDK automatically ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "estimates gas, orchestrates signatures, and replays any EVM or non-EVM proofs"
+      }), ", so you can focus on your app—not the network plumbing."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "sending-universal-transaction",
+      children: "Sending Universal Transaction"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "pushChainClient.universal.sendTransaction({tx}): Promise<TransactionReceipt>"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const txHash = await pushChainClient.universal.sendTransaction({\n  to: '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF',\n  value: PushChain.utils.helpers.parseUnits('0.1', 18), // 0.1 PC in uPC\n  // value: BigInt('100000000000000000') is equivalent here\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "tx.to"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The address of the recipient."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "tx.value"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The value to send in uPC. smallest unit of PC, like wei in ETH"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.data"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The data to send."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.gasLimit"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The gas limit for the transaction."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.maxFeePerGas"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The maximum fee per gas for the transaction."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.maxPriorityFeePerGas"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The maximum priority fee per gas for the transaction."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+      summary: "Advanced Arguments",
+      className: "alert alert--minimal code",
+      children: [(0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Arguments"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Default"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.deadline"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The deadline for the transaction."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "tx.progressHook"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "(progress: ProgressHookType) => void"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "A callback function to receive progress updates during transaction lifecycle, especially useful for tracking cross-chain transactions."
+            })]
+          })]
+        })]
+      }), (0,jsx_runtime.jsxs)(Details/* default */.A, {
+        summary: "ProgressHook Type and Response",
+        className: "alert alert--minimal code",
+        children: [(0,jsx_runtime.jsxs)(_components.table, {
+          children: [(0,jsx_runtime.jsx)(_components.thead, {
+            children: (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.th, {
+                children: "Field"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                children: "Type"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                children: "Description"
+              })]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.tbody, {
+            children: [(0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "Object"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "The progress of the transaction."
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress.id"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "string"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Unique identifier for the progress event."
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress.title"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "string"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Brief title of the progress event."
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress.message"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "string"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Detailed message describing the event."
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress.level"
+                })
+              }), (0,jsx_runtime.jsxs)(_components.td, {
+                children: [(0,jsx_runtime.jsx)(_components.code, {
+                  children: "INFO"
+                }), " | ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SUCCESS"
+                }), " | ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "WARNING"
+                }), " | ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "ERROR"
+                })]
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Severity level of the event."
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "progress.timestamp"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "string"
+                })
+              }), (0,jsx_runtime.jsxs)(_components.td, {
+                children: ["ISO-8601 timestamp when the event occurred (e.g. ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "2025-06-26T15:04:05.000Z"
+                }), ")."]
+              })]
+            })]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.table, {
+          children: [(0,jsx_runtime.jsx)(_components.thead, {
+            children: (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.th, {
+                children: "ID"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                children: "Title"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                children: "Message"
+              }), (0,jsx_runtime.jsx)(_components.th, {
+                children: "Level"
+              })]
+            })
+          }), (0,jsx_runtime.jsxs)(_components.tbody, {
+            children: [(0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Origin Chain Detected"
+              }), (0,jsx_runtime.jsxs)(_components.td, {
+                children: ["Origin chain: solana", ":EtWTRABZaYq6iMfeYKouRu166VU2xqa1"]
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-02-01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Estimating Gas"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Estimating and fetching gas limit, gas price for TX…"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-02-02"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Gas Estimated"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Total execution cost (Gas cost + value): 1011250000000000000 UPC"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "SUCCESS"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-03-01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Resolving UEA"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Resolving Execution Account (UEA) – computing address, checking deployment status and balance"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-03-02"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "UEA Resolved"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "UEA: 0x4f17B798A7d643d4F89cb2d8D42A72F84e83e566, Deployed: true"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "SUCCESS"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND_TX_04_01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Awaiting Signature for Tx Execution"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Universal Payload Hash: 0x1a579f18…fabac4309"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND_TX_04_02"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Generated Universal Payload"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Signature Completed"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "SUCCESS"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-05-01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Locking Origin Chain Fee"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Locking fee: 1000063864000000000 UPC on origin chain"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-05-02"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Awaiting Origin Chain Confirmations"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Tx sent: 0xabc..234, waiting for 2 confirmations."
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-05-03"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Confirmations Received"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Required confirmations received."
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "SUCCESS"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-06"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Broadcasting to Push Chain"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Sending Tx to Push Chain…"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "INFO"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-99-01"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Push Chain TX Success"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "…"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "SUCCESS"
+              })]
+            }), (0,jsx_runtime.jsxs)(_components.tr, {
+              children: [(0,jsx_runtime.jsx)(_components.td, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "SEND-TX-99-02"
+                })
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "Push Chain TX Failed"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "…"
+              }), (0,jsx_runtime.jsx)(_components.td, {
+                children: "ERROR"
+              })]
+            })]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+      summary: "Returns `TxResponse` <object>",
+      className: "alert alert--fn-args",
+      children: [(0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "{\n  hash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',\n  origin: 'eip155:42101:0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',\n  blockNumber: 0n,\n  blockHash: '',\n  transactionIndex: 0,\n  chainId: '42101',\n  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',\n  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',\n  nonce: 341,\n  data: '0x',\n  value: 1000n,\n  gasLimit: 21000n,\n  gasPrice: 1325000000n,\n  maxFeePerGas: 1325000000n,\n  maxPriorityFeePerGas: 125000000n,\n  accessList: [],\n  wait: [Function: wait],\n  type: '2',\n  typeVerbose: 'eip1559',\n  signature: {\n    r: '0x556566ba1304bf8e93025fc82daff32eb24b7ee9804a76d0baa0098dfa7237de',\n    s: '0x4495d7811d3dcb1beac16f29261903b542b0b65f51aa5942f65dbaf67e735724',\n    v: 1,\n    yParity: 1\n  },\n  raw: {\n    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',\n    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',\n    nonce: 341,\n    data: '0x',\n    value: 1000n\n  }\n}\n"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Property"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "hash"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Unique transaction hash identifier"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "origin"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Origin identifier in format \"eip155:chainId", ":address", "\" or \"solana:chainId", ":address", "\""]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "blockNumber"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Block number where transaction was included"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "blockHash"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Hash of the block containing this transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "transactionIndex"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Position/index of transaction within the block"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "chainId"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Chain identifier (e.g. Push Chain = ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "42101"
+              }), ")"]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "from"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "UEA (Universal Execution Address) that executed the transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "to"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Target address the UEA executed against"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "nonce"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Derived nonce for the UEA"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "data"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Perceived calldata (transaction input data)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "value"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Amount of native tokens transferred (in wei)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "gasLimit"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Maximum gas units allocated for transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "gasPrice"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Gas price for legacy transactions (in wei)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "maxFeePerGas"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Maximum fee per gas for EIP-1559 transactions"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "maxPriorityFeePerGas"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Maximum priority fee (tip) per gas for EIP-1559"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "accessList"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "array"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "EIP-2930 access list for optimized storage access"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Transaction type identifier"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "typeVerbose"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Human-readable transaction type"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "signature"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "object"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "ECDSA signature components"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "signature.r"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "R component of ECDSA signature"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "signature.s"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "S component of ECDSA signature"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "signature.v"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Recovery ID (legacy format)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "signature.yParity"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Y-parity for EIP-1559 (0 or 1)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "object"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Original on-chain transaction data"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.from"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual from address that went on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.to"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual to address that went on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.nonce"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual raw nonce used on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.data"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual raw data that went on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.value"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual derived value that went on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "wait"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "function"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Async function that returns a Promise resolving to UniversalTxReceipt"
+            })]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+      summary: "Getting `txReceipt` <object> from `txResponse` <object>",
+      children: [(0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["Calling the ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "wait()"
+        }), " function from ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "txResponse"
+        }), " object will give you a ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "Promise<UniversalTxReceipt>"
+        }), " once the transaction is confirmed on-chain."]
+      }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "const txReceipt = await txResponse.wait(1); // number of blocks confirmations to wait for\n"
+        })
+      }), (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "{\n  hash: '0xb52706db4116dd6bbea87be5142ac2c69b17fe8ccf8e2b88ac176adb30b90dd6',\n  blockNumber: 3413247n,\n  blockHash: '0x5a7b6e2716f7d4450b6ca08aebfe74cea3d876367a8afe6f603196ba8c346a2d',\n  transactionIndex: 0,\n  from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',\n  to: '0x35B84d6848D16415177c64D64504663b998A6ab4',\n  contractAddress: null,\n  gasPrice: 1325000000n,\n  gasUsed: 21000n,\n  cumulativeGasUsed: 21000n,\n  logs: [],\n  logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000',\n  status: 1,\n  raw: {\n    from: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',\n    to: '0x35B84d6848D16415177c64D64504663b998A6ab4',\n    nonce: 342,\n    data: '0x',\n    value: 1000n\n  }\n}\n"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Property"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "hash"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Transaction hash (same as in transaction response)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "blockNumber"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Block number where transaction was confirmed"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "blockHash"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Hash of the block containing the transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "transactionIndex"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Position/index of transaction within the block"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "from"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Executor account address (UEA on Push Chain)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "to"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual intended target address of the transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "contractAddress"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              }), " | ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "null"
+              })]
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Address of deployed contract (null for regular transfers)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "gasPrice"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Gas price used for the transaction (in wei)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "gasUsed"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual gas consumed by the transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "cumulativeGasUsed"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Total gas used by all transactions in the block up to this one"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "logs"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "array"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Array of log objects emitted by the transaction"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "logsBloom"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Bloom filter for efficient log searching"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "status"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Transaction status (1 = success, 0 = failure)"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "object"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Raw on-chain transaction data"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.from"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual from address that executed on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.to"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual to address that was called on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.nonce"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual nonce used on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.data"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual calldata sent on chain"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "raw.value"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "BigInt"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Actual value transferred on chain"
+            })]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "send-transaction-with-contract-interaction",
+      children: "Send Transaction with Contract Interaction"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["When calling a smart contract method via sendTransaction, supply the ABI-encoded function call as a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "hex string in the data field"
+      }), ". You can choose ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "ethers"
+      }), " or ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "viem"
+      }), " or any of your favorite libraries to encode the function data. Or, use our utility function ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "PushChain.utils.helpers.encodeTxData"
+      }), " to encode the function data."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// Define the ABI for the ERC20 transfer function\nconst erc20Abi = [\n  'function transfer(address to, uint256 amount) returns (bool)',\n];\n\n// Generate the encoded function data using viem\nconst data = PushChain.utils.helpers.encodeTxData({\n  abi: erc20Abi,\n  functionName: 'transfer',\n  // Transfer 10 tokens, converted to 18 decimal places\n  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)],\n});\n\n// Send the transaction using Push Chain SDK\nconst txHash = await pushChainClient.universal.sendTransaction({\n  to: '0xTokenContractAddress', // The smart contract address on Push Chain\n  value: BigInt('0'), // No $PC being sent, just contract interaction\n  data: data, // The encoded function call\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "live-playground",
+      children: "Live Playground"
+    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+      className: "liveplaytab",
+      groupId: "send-universal-transaction-coding",
+      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ethers_v6_quick",
+        label: "Quickstart",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+          },
+          children: `
+
+  // customPropHighlightRegexStart=universal\.sendTransaction
+  // customPropHighlightRegexEnd=\\);
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+
+  async function main() {
+    console.log('Quickstart Example - See rest of the tabs for end-to-end flow');
+
+    // Set up wallet, provider and signer
+    const wallet = ethers.Wallet.createRandom();
+
+    // Replace it with different JsonRpcProvider to target Ethereum Account, BNB Account, etc
+    // const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia');
+    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const signer = wallet.connect(provider);
+
+    // Convert to Universal Signer and Initialize Push Chain SDK
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    try {
+      // Note: This would fail in playground without funds
+      // In production, ensure wallet has funds
+      const txResponse = await pushChainClient.universal.sendTransaction({
+        to: '0x0000000000000000000000000000000000042101',
+        value: PushChain.utils.helpers.parseUnits('1', 18), // 1 PC in uPC (wei)
+      });
+      console.log('Transaction Response:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('Transaction failed:', error);
+
+      // In playground, this will fail without funds
+      console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+    }
+  }
+
+  await main().catch(console.error);
+
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ethers_v6",
+        label: "Ethers (v6)",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+          },
+          children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import \* as readline from 'node:readline/promises';
+
+  // ——— CONFIG ———
+  // RPC URL OF DIFFERENT CHAINS
+  const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+  // Dummy Address
+  const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // Choose chain from which to send transaction
+    const chainMeta = await returnUserChainSelection();
+
+    // 1) Create a wallet (in production, you'd use your own wallet)
+    const wallet = ethers.Wallet.createRandom();
+    console.log('📝 Created wallet:', wallet.address);
+
+    // 2) Set up provider and connect wallet
+    const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+    const signer = wallet.connect(provider);
+
+    // 3) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer...');
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+    // 4) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+    });
+
+    // 5) Prepare transaction parameters
+    const txParams = {
+      to: RECIPIENT,
+      value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC (wei)
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', RECIPIENT);
+
+    try {
+      // Note: This would fail in playground without funds
+      // In production, ensure wallet has funds
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+      // In playground, this will fail without funds
+      console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+    }
+  }
+
+  await main().catch(console.error);
+
+  // --- HELPER FUNCTIONS ---
+  async function returnUserChainSelection() {
+    const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+    if (selection !== '1' && selection !== '2') {
+      console.log('Invalid selection. Please select 1 or 2.');
+      process.exit(0);
+    }
+
+    const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+    return {id: selection, name: name};
+  }
+
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "viem",
+        label: "Viem",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+          },
+          children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { createWalletClient, http } from 'viem';
+import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+import \* as readline from 'node:readline/promises';
+
+  // Dummy Address
+  const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+  const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // Choose chain from which to send transaction
+    const chainMeta = await returnUserChainSelection();
+
+    // 1) Create a wallet (in production, you'd use your own wallet)
+    const privateKey = generatePrivateKey();
+    const account = privateKeyToAccount(privateKey);
+    console.log('🔑 Got account: ', account.address);
+
+    // 2) Create viem client
+    const client = createWalletClient({
+      account,
+      transport: http(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA),
+    });
+
+    // 3) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer...');
+    const universalSigner = await PushChain.utils.signer.toUniversal(client);
+
+    // 4) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // 5) Prepare transaction parameters
+    const txParams = {
+      to: RECIPIENT,
+      value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+      // data: '0x...', // For contract interactions - hex encoded
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + account.address + ' on ' + chainMeta.name + ' to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', RECIPIENT);
+
+    try {
+      // Note: This would fail in playground without funds
+      // In production, ensure wallet has funds
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+      // In playground, this will fail without funds
+      console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+    }
+  }
+
+  await main().catch(console.error);
+
+  // --- HELPER FUNCTIONS ---
+  async function returnUserChainSelection() {
+    const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+    if (selection !== '1' && selection !== '2') {
+      console.log('Invalid selection. Please select 1 or 2.');
+      process.exit(0);
+    }
+
+    const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+    return { id: selection, name: name };
+  }
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "solana_web3js",
+        label: "Solana (Web3 JS)",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+          },
+          children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { Connection, Keypair } from '@solana/web3.js';
+import \* as readline from 'node:readline/promises';
+
+  // ——— CONFIG ———
+
+  // Dummy Address
+  const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // 1) Create a keypair
+    const keypair = Keypair.generate();
+    console.log('🔑 Got keypair: ', keypair.publicKey.toBase58());
+
+    // 2) Convert to Universal Signer from Keypair
+    console.log('🔄 Converting to Universal Signer from Keypair...');
+    const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keypair, {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    });
+
+    // 3) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+    });
+
+    // 4) Prepare transaction parameters
+    const txParams = {
+      to: RECIPIENT,
+      value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+      // data: '0x...', // For contract interactions - hex encoded
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + keypair.publicKey.toBase58() + ' on SOLANA_DEVNET to continue.');
+
+    // 5) Send universal transaction
+    console.log('📤 Sending transaction to:', RECIPIENT);
+
+    try {
+      // Note: This would fail in playground without funds
+      // In production, ensure wallet has funds
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Hash:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+      // In playground, this will fail without funds
+      console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+    }
+  }
+
+  await main().catch(console.error);
+
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ui_kit",
+        label: "UI Kit",
+        children: (0,jsx_runtime.jsx)(_components.pre, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            className: "language-jsx",
+            metastring: "live",
+            live: true,
+            children: "// customPropHighlightRegexStart=<PushUniversalWalletProvider\n// customPropHighlightRegexEnd=</PushUniversalWalletProvider>\n// customPropMinimized='false'\n// Import necessary components from @pushchain/ui-kit\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction App() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  function Component() {\n    const [txnHash, setTxnHash] = useState<string | null>(null);\n    const [isLoading, setIsLoading] = useState(false);\n\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        setIsLoading(true);\n        try {\n          const res = await pushChainClient.universal.sendTransaction({\n            to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',\n            value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC\n            data: '0x',\n          });\n          setTxnHash(res.hash);\n        } catch (err) {\n          console.log(err);\n        }  finally {\n          setIsLoading(false);\n        }\n      }\n    };\n\n    return (\n      <div>\n        <PushUniversalAccountButton />\n\n        {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&\n          <button\n            disabled={isLoading}\n            style={{\n                background: 'transparent',\n                border: '1px solid',\n                borderRadius: '10px',\n                padding: '12px 18px',\n                cursor: 'pointer',\n                margin: '8px 0',\n            }}\n            onClick={handleSendTransaction}\n          >\n            Send Transaction\n          </button>\n        }\n        {txnHash && (\n            <>\n                <p>Txn Hash: {txnHash}</p>\n                <a\n                    href={pushChainClient.explorer.getTransactionUrl(txnHash)}\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                >\n                    View in Explorer\n                </a>\n            </>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+          })
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+      summary: "Live Playground: Interact with Smart Contract",
+      className: "alert alert--live-play",
+      children: [(0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+        className: "liveplaytab",
+        groupId: "send-universal-transaction-coding",
+        children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+          value: "ethers_v6_pushchain",
+          label: "From Push Chain",
+          children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+            repo: {
+              title: "Open in Github",
+              url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+            },
+            children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import \* as readline from 'node:readline/promises';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // Contract ABI for UniversalCounter.sol
+  // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+  // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+  const testAbi = [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "countPC",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "CountIncremented",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "countPC",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // 1) Create a wallet (in production, you'd use your own wallet)
+    const wallet = ethers.Wallet.createRandom();
+    console.log('📝 Created wallet:', wallet.address);
+
+    // 2) Set up provider and connect wallet
+    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const signer = wallet.connect(provider);
+
+    // 3) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer...');
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+    // 4) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // 5) Prepare transaction parameters
+    // Encode the increment() function call
+    const data = PushChain.utils.helpers.encodeTxData({
+      abi: testAbi,
+      functionName: 'increment',
+      args: []
+    }); // 0xd09de08a
+    console.log('data', data);
+
+    // Prepare transaction parameters
+    const txParams = {
+      to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+      data: data,
+      value: BigInt(0),
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on Push Testnet Donut to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+    try {
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+    }
+  }
+
+  await main().catch(console.error);
+
+`
+          })
+        }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+          value: "ethers_v6_sepolia",
+          label: "From Sepolia",
+          children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+            repo: {
+              title: "Open in Github",
+              url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+            },
+            children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import \* as readline from 'node:readline/promises';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // Contract ABI for UniversalCounter.sol
+  // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+  // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+  const testAbi = [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "countPC",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "CountIncremented",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "countPC",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // 1) Create a wallet (in production, you'd use your own wallet)
+    const wallet = ethers.Wallet.createRandom();
+    console.log('📝 Created wallet:', wallet.address);
+
+    // 2) Set up provider and connect wallet
+    const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co');
+    const signer = wallet.connect(provider);
+
+    // 3) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer...');
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+    // 4) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // 5) Prepare transaction parameters
+    // Encode the increment() function call
+    const data = PushChain.utils.helpers.encodeTxData({
+      abi: testAbi,
+      functionName: 'increment',
+      args: []
+    }); // 0xd09de08a
+    console.log('data', data);
+
+    // Prepare transaction parameters
+    const txParams = {
+      to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+      data: data,
+      value: BigInt(0),
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on Sepolia to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+    try {
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+    }
+  }
+
+  await main().catch(console.error);
+
+`
+          })
+        }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+          value: "solana_webJs_devnet",
+          label: "From Solana Devnet",
+          children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+            repo: {
+              title: "Open in Github",
+              url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+            },
+            children: `
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import \* as readline from 'node:readline/promises';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  // Contract ABI for UniversalCounter.sol
+  // Source: https://github.com/pushchain/push-chain-examples/blob/counter-example/contracts/universal-counter/src/UniversalCounter.sol
+  // Deployed at: https://donut.push.network/address/0xA22E6B51586C80fED805c31d606e14F7AD77E164?tab=contract
+  const testAbi = [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "countPC",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "caller",
+          "type": "address"
+        }
+      ],
+      "name": "CountIncremented",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "reset",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "countPC",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // 1) Create a keypair
+    const keypair = Keypair.generate();
+    console.log('🔑 Got keypair: ', keypair.publicKey.toBase58());
+
+    // 2) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer from Keypair...');
+    const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keypair, {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    });
+
+    // 3) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // 4) Prepare transaction parameters
+    // Encode the increment() function call
+    const data = PushChain.utils.helpers.encodeTxData({
+      abi: testAbi,
+      functionName: 'increment',
+      args: []
+    }); // 0xd09de08a
+    console.log('data', data);
+
+    // Prepare transaction parameters
+    const txParams = {
+      to: '0x959ED7f6943bdd56B3a359BAE0115fef4aa07e17',
+      data: data,
+      value: BigInt(0),
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + keypair.publicKey.toBase58() + ' on Sepolia to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', '0xA22E6B51586C80fED805c31d606e14F7AD77E164');
+
+    try {
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+    }
+  }
+
+  await main().catch(console.error);
+
+`
+          })
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: (Advanced) Track the progress lifecycle of a transaction",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
+        },
+        children: `
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import \* as readline from 'node:readline/promises';
+
+  // ——— CONFIG ———
+  // RPC URL OF DIFFERENT CHAINS
+  const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+  // Dummy Address
+  const RECIPIENT = '0x0000000000000000000000000000000000042101';
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+
+  // ⭐️ MAIN FUNCTION ⭐️
+  async function main() {
+    console.log('🚀 Initializing Universal Transaction Example');
+
+    // Choose chain from which to send transaction
+    const chainMeta = await returnUserChainSelection();
+
+    // 1) Create a wallet (in production, you'd use your own wallet)
+    const wallet = ethers.Wallet.createRandom();
+    console.log('📝 Created wallet:', wallet.address);
+
+    // 2) Set up provider and connect wallet
+    const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+    const signer = wallet.connect(provider);
+
+    // 3) Convert to Universal Signer
+    console.log('🔄 Converting to Universal Signer...');
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+
+    // 4) Initialize Push Chain Client
+    console.log('🔗 Initializing Push Chain Client...');
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      progressHook: async (progress) => {
+        console.log('TX Progress: ', progress.title, ' | Time:', progress.timestamp);
+      }
+    });
+
+    // 5) Prepare transaction parameters
+    const txParams = {
+      to: RECIPIENT,
+      value: PushChain.utils.helpers.parseUnits(".001", 18) // 0.001 PC in uPC (wei)
+    };
+
+    // wait for user to send funds first
+    await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on ' + chainMeta.name + ' to continue.');
+
+    // 6) Send universal transaction
+    console.log('📤 Sending transaction to:', RECIPIENT);
+
+    try {
+      // Note: This would fail in playground without funds
+      // In production, ensure wallet has funds
+      const txResponse = await pushChainClient.universal.sendTransaction(txParams);
+      console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
+    } catch (error) {
+      console.error('❌ Transaction failed:', error.message);
+      // In playground, this will fail without funds
+      console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+    }
+  }
+
+  await main().catch(console.error);
+
+  // --- HELPER FUNCTIONS ---
+  async function returnUserChainSelection() {
+    const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+
+    if (selection !== '1' && selection !== '2') {
+      console.log('Invalid selection. Please select 1 or 2.');
+      process.exit(0);
+    }
+
+    const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
+
+    return {id: selection, name: name};
+  }
+`
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Sign arbitrary data with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/sign-universal-message",
+          children: "Sign Universal Message"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Surface live feedback in your UI by handling the ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "progressHook"
+        }), " events"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Leverage pre-built utilities in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/contract-helpers",
+          children: "Contract Helpers"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Integrate transaction flows into your frontend app using the ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit",
+          children: "UI Kit"
+        })]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+/***/ }),
+
 /***/ 242634:
 /***/ (() => {
 
@@ -510,13 +2608,14 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryViemChains(constantName){return typeof window!=='undefined'?__webpack_require__(314498)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryViemUtils(constantName){return typeof window!=='undefined'?__webpack_require__(304661)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryBS58(){return typeof window!=='undefined'?(__webpack_require__(698957)["default"])||__webpack_require__(698957):{};// Return an empty object or appropriate placeholder for SSR.
+}function loadClientSideLibraryOpenZepplinMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(782971)[constantName]:{};// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolRestAPI(constantName){return typeof window!=='undefined'?__webpack_require__(514086)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
-ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
+ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
 SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
@@ -1630,346 +3729,6 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 844428:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_03_build_01_advanced_01_custom_universal_signer_mdx_fad_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
-
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-01-advanced-01-custom-universal-signer-mdx-fad.json
-const site_docs_chain_03_build_01_advanced_01_custom_universal_signer_mdx_fad_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/advanced/docs-chain-build-advanced-create-universal-signer","title":"Custom Universal Signer","description":"Custom Universal Signer | Build | Advanced | Push Chain Docs","source":"@site/docs/chain/03-build/01-advanced/01-Custom-Universal-Signer.mdx","sourceDirName":"chain/03-build/01-advanced","slug":"/chain/build/advanced/custom-universal-signer","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/advanced/custom-universal-signer","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/01-advanced/01-Custom-Universal-Signer.mdx","tags":[],"version":"current","sidebarPosition":1,"frontMatter":{"id":"docs-chain-build-advanced-create-universal-signer","title":"Custom Universal Signer","hide_title":false,"slug":"./custom-universal-signer","displayed_sidebar":"pushChainSidebar","sidebar_position":1,"image":"/assets/docs/previews/docs_chain_build_advanced_create_universal_signer--custom_universal_signer.png"},"sidebar":"pushChainSidebar","previous":{"title":"Advanced","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/advanced"},"next":{"title":"UI Kit","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
-var Details = __webpack_require__(303999);
-// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
-var PushAPIReference = __webpack_require__(303547);
-// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
-var NodeJSVirtualIDE = __webpack_require__(891517);
-;// ./docs/chain/03-build/01-advanced/01-Custom-Universal-Signer.mdx
-
-
-const frontMatter = {
-	id: 'docs-chain-build-advanced-create-universal-signer',
-	title: 'Custom Universal Signer',
-	hide_title: false,
-	slug: './custom-universal-signer',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 1,
-	image: '/assets/docs/previews/docs_chain_build_advanced_create_universal_signer--custom_universal_signer.png'
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-
-
-
-
-
-
-
-const toc = [{
-  "value": "Overview",
-  "id": "overview",
-  "level": 2
-}, {
-  "value": "Custom Universal Signer",
-  "id": "custom-universal-signer",
-  "level": 2
-}, {
-  "value": "Next Steps",
-  "id": "next-steps",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    code: "code",
-    em: "em",
-    h2: "h2",
-    li: "li",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    table: "table",
-    tbody: "tbody",
-    td: "td",
-    th: "th",
-    thead: "thead",
-    tr: "tr",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: "Custom Universal Signer | Build | Advanced | Push Chain Docs"
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "overview",
-      children: "Overview"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "If you don't have a supported library signer or want to create a custom implementation, you can construct a Universal Signer manually."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "custom-universal-signer",
-      children: "Custom Universal Signer"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.signer.construct(account, {options}): Promise<UniversalSigner>"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const account = {\n  address: '<WALLET_ADDRESS>',\n  chain: '<PushChain.CONSTANTS.CHAIN.CHAIN_TYPE'>\n};\n\nconst customSignAndSendTransaction = async (unsignedTx) => {\n  return new Uint8Array('<RESPONSE_TO_SIGN_AND_SEND_TRANSACTION>');\n};\n\nconst customSignMessage = async (data) => {\n  return new Uint8Array('<RESPONSE_TO_SIGN_MESSAGE>');\n};\n\nconst customSignTypedData = async (typedDataArgs) => {\n  return new Uint8Array('<RESPONSE_TO_SIGN_TYPED_DATA>');\n};\n\nconst skeleton = PushChain.utils.signer.construct(account, {\n  signMessage: customSignMessage,\n  signTransaction: customSignTransaction,\n  signTypedData: customSignTypedData\n});\n\nconst universalSigner = await PushChain.utils.signer.toUniversal(skeleton);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "account"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "UniversalAccount"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Account information containing address and chain"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "options"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "Object"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Object containing the signing function implementations"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "options.signAndSendTransaction"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "(unsignedTx: Uint8Array) => Promise<Uint8Array>"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Function to sign transaction data"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "options.signMessage"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "(data: Uint8Array) => Promise<Uint8Array>"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Function to sign raw message data"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "options.signTypedData"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "(params) => Promise<Uint8Array>"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Function to sign typed data (EIP-712)"
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `UniversalSignerSkeleton` <object>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// UniversalSignerSkeleton object\n{\n  signerId: 'CustomGeneratedSigner',\n  account: {\n    chain: 'eip155:42101',\n    address: '0x98cA97d2FB78B3C0597E2F78cd11868cACF423C5'\n  },\n  signMessage: [AsyncFunction: customSignMessage],\n  signAndSendTransaction: [AsyncFunction: customSignAndSendTransaction],\n  signTypedData: [AsyncFunction: customSignTypedData]\n}\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "Live Playground"
-      }), ": Creating Custom Universal Signer from Ethers.js 👇."]
-    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-      repo: {
-        title: "Open in Github",
-        url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"
-      },
-      children: `
-// customPropHighlightRegexStart== PushChain\.utils\.signer\.construct
-// customPropHighlightRegexEnd=\\);
-// Import Push Chain Core
-import { PushChain } from '@pushchain/core';
-
-  // Import if you are using ethers
-  import { ethers } from 'ethers';
-  import readline from 'readline';
-
-  async function main() {
-    // We need to pass the following to PushChain.utils.signer.construct(account, {options})
-    // 1. account which is a universal account
-    // 2. options which is an object with the following properties
-    // 2.1 signAndSendTransaction
-    // 2.2 signMessage
-    // 2.3 signTypedData
-
-    // 1. account to universal account
-    // Create random wallet
-    const wallet = ethers.Wallet.createRandom();
-
-    // Convert wallet.address to Universal Account
-    const universalAccount = PushChain.utils.account.toUniversal(wallet.address, {
-      chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
-    });
-    console.log('Created Universal Account', JSON.stringify(universalAccount))
-
-    // 2. options to construct
-    // 2.1 signAndSendTransaction
-
-    // create custom Sign and Send Transaction
-    const customSignAndSendTransaction = async (unsignedTx) => {
-      // Sign the transaction using ethers wallet
-      const signedTx = await wallet.signTransaction(unsignedTx);
-      const sendTx = await wallet.sendTransaction(signedTx);
-
-      // Always a Uint8Array
-      return Uint8Array.from(sendTx);
-    };
-
-    // 2.2 signMessage
-    const customSignMessage = async (message) => {
-      // Sign message using ethers wallet
-      const signature = await wallet.signMessage(message);
-
-      // Always a Uint8Array
-      return Uint8Array.from(signature);
-    };
-
-    // 2.3 signMessage
-    const customSignTypedData = async (domain, types, value) => {
-      // Sign typed data using ethers wallet
-      const signature = await wallet._signTypedData(domain, types, value);
-
-      // Always a Uint8Array
-      return Uint8Array.from(signature);
-    };
-
-    // * Construct the universal signer skeleton with custom signing functions
-    const universalSignerSkeleton = PushChain.utils.signer.construct(universalAccount, {
-      signAndSendTransaction: customSignAndSendTransaction,
-      signMessage: customSignMessage,
-      signTypedData: customSignTypedData
-    });
-    console.log('Created Universal Signer Skeleton', JSON.stringify(universalSignerSkeleton));
-
-
-    // ** Pass constructed universal signer skeleton to create universal signer **
-    const universalSigner = await PushChain.utils.signer.toUniversal(universalSignerSkeleton);
-    console.log('Created Universal Signer', JSON.stringify(universalSigner));
-  }
-  await main().catch(console.error);
-
-
-`
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "next-steps",
-      children: "Next Steps"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/build/initialize-push-chain-client",
-          children: "Initialize Push Chain Client"
-        }), " with the Universal Signer"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Abstract away creation of the Universal Signer using ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/ui-kit",
-          children: "UI Kit"
-        })]
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-/***/ }),
-
 /***/ 847790:
 /***/ (() => {
 
@@ -2001,7 +3760,7 @@ let highlightRegexEnd=null;// Look for a line that starts with any whitespace, t
 lines=userPassedCode.split('\n');const highlightLineEnd=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexEnd=');});const matchEnd=highlightLineEnd===null||highlightLineEnd===void 0?void 0:highlightLineEnd.match(/\/\/\s*customPropHighlightRegexEnd=(.+)$/);if(matchEnd){// rawValue is everything after the “=” on that comment line
 highlightRegexEnd=matchEnd[1].trim();// remove the line from the code
 lines.splice(lines.indexOf(highlightLineEnd),1);userPassedCode=lines.join('\n');}// escape backticks in the snippet
-const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
+const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        StandardMerkleTree,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
 
 /***/ }),
 

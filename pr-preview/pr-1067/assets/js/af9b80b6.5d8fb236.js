@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[37643],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[34763],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -323,72 +323,6 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 117290:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ TagsListInline)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(721312);
-/* harmony import */ var _theme_Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(293751);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21532);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-// import styles from "./styles.module.css";
-function TagsListInline(_ref){let{tags}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Ul,{children:tags.map(_ref2=>{let{label,permalink:tagPermalink}=_ref2;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Li,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_theme_Tag__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A,{label:label,permalink:tagPermalink})},tagPermalink);})})});}const Li=styled_components__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Ay.li.withConfig({displayName:"TagsListInline__Li",componentId:"sc-1ggehkj-0"})(["list-style:none;display:flex !important;flex-direction:row;flex-wrap:wrap;margin:0 0.4rem 0.5rem 0;@media ","{display:flex !important;flex-direction:row;flex-wrap:wrap;}"],_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.laptopL);const Ul=styled_components__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Ay.ul.withConfig({displayName:"TagsListInline__Ul",componentId:"sc-1ggehkj-1"})(["margin:0 0;padding:0 0;display:flex !important;flex-direction:row;flex-wrap:wrap;"]);
-
-/***/ }),
-
-/***/ 152493:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostPage_LikeAndRetweetItem)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
-var index_esm = __webpack_require__(796710);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/build/modern/useQuery.js + 6 modules
-var useQuery = __webpack_require__(994315);
-;// ./src/api/GetTwitterMetrics.ts
-async function fetchTweetMetrics(tweetId){const url="https://us-east1-push-prod-apps.cloudfunctions.net/pushpointsrewardsystem/api/twitter/tweetMetrics?id="+tweetId;const response=await fetch(url);if(!response.ok){throw new Error("Error "+response.status+": "+response.statusText);}return response.json();}function useTweetMetrics(tweetId){return (0,useQuery/* useQuery */.I)({queryKey:['tweetMetrics',tweetId],queryFn:()=>fetchTweetMetrics(tweetId),enabled:!!tweetId,// only run if tweetId is provided
-staleTime:1000*60// cache for 1 min
-});}
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-;// ./src/utils/FormatTwitterCount.tsx
-function formatTwitterCount(num){if(num===null||num===undefined)return'';if(num<1000)return num.toString();if(num<1000000)return(num/1000).toFixed(num%1000>=100?1:0)+'K';if(num<1000000000)return(num/1000000).toFixed(num%1000000>=100000?1:0)+'M';return(num/1000000000).toFixed(num%1000000000>=100000000?1:0)+'B';}
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-//
-const LikeAndRetweetItem=_ref=>{let{twitterId,text}=_ref;const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);const twitterID=twitterId;const{data:twitterData}=useTweetMetrics(twitterID);if(!twitterData)return null;return/*#__PURE__*/(0,jsx_runtime.jsxs)(ShareRow,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ResponsiveH2,{weight:"500",spacing:"-0.02em",lineHeight:"110%",color:"#00000",children:text}),/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{justifyContent:"flex-end",flexWrap:"nowrap",gap:"8px",margin:isMobile&&'20px 0 0 0',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(LikeButton,{title:"Developer Docs",self:isMobile?'stretch':'self',href:"https://x.com/PushChain/status/"+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Like this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsHeart,{size:22,color:"var(--ifm-color-primary-text)",style:{marginRight:'10px'}}),formatTwitterCount(twitterData===null||twitterData===void 0?void 0:twitterData.like_count)||'']}),/*#__PURE__*/(0,jsx_runtime.jsxs)(RetweetButton,{title:"Developer Docs",href:"https://twitter.com/intent/retweet?tweet_id="+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Retweet this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsTwitterX,{size:22,color:"var(--ifm-color-white)",style:{marginRight:'10px'}}),"Retweet"]})]})]});};const ResponsiveH2=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling.H2).withConfig({displayName:"LikeAndRetweetItem__ResponsiveH2",componentId:"sc-c60ajk-0"})(["font-size:1.25rem;@media ","{font-size:1.25rem;}"],globals/* device */.jO.mobileL);const ShareRow=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"LikeAndRetweetItem__ShareRow",componentId:"sc-c60ajk-1"})(["display:flex;justify-content:space-between;align-items:center;@media ","{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}"],globals/* device */.jO.mobileL);const RetweetButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__RetweetButton",componentId:"sc-c60ajk-2"})(["background:var(--ifm-color-custom-pink);border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:none;color:var(--ifm-color-white);align-self:",";&:hover{color:var(--ifm-color-white);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);const LikeButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__LikeButton",componentId:"sc-c60ajk-3"})(["background:transparent;border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:1.5px solid var(--ifm-like-border-color);color:var(--ifm-color-primary-text);align-self:",";&:hover{color:var(--ifm-color-primary-text);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);/* harmony default export */ const BlogPostPage_LikeAndRetweetItem = (LikeAndRetweetItem);
-
-/***/ }),
-
 /***/ 192668:
 /***/ (() => {
 
@@ -410,204 +344,6 @@ const LikeAndRetweetItem=_ref=>{let{twitterId,text}=_ref;const isMobile=(0,useMe
 
 /***/ }),
 
-/***/ 247712:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostItemHeaderInfo)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(244096);
-;// ./src/theme/BlogPostItem/Header/Info/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"container":"container_iJTo"});
-// EXTERNAL MODULE: ./src/components/reusables/date.tsx
-var reusables_date = __webpack_require__(856977);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostItem/Header/Info/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemHeaderInfo(_ref){let{className,morePosts}=_ref;const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{date,formattedDate,readingTime}=metadata;if(morePosts){const blogDate=morePosts.date;const blogFormattedDate=morePosts.formattedDate;const blogReadingTime=morePosts.readingTime;return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.container,!isBlogPostPage?'margin-vert--sm':'',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Date */.n9,{date:blogDate,formattedDate:blogFormattedDate}),typeof blogReadingTime!=='undefined'&&/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Spacer */.hK,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* ReadingTime */.uR,{readingTime:blogReadingTime})]})]});}else{return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.container,!isBlogPostPage?'margin-vert--sm':'',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Date */.n9,{date:date,formattedDate:formattedDate}),typeof readingTime!=='undefined'&&/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Spacer */.hK,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* ReadingTime */.uR,{readingTime:readingTime})]})]});}}
-
-/***/ }),
-
-/***/ 248809:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ BlogListPage)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(117559);
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(445500);
-/* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(144586);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(113490);
-/* harmony import */ var _theme_BlogLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(729520);
-/* harmony import */ var _theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(603345);
-/* harmony import */ var _theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(672852);
-/* harmony import */ var _theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(841463);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(320053);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(21532);
-/* harmony import */ var _docusaurus_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(956347);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(777255);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-function BlogListPageMetadata(props){const{metadata}=props;const{siteConfig:{title:siteTitle}}=(0,_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .A)();const{blogDescription,blogTitle,permalink}=metadata;const location=(0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_11__/* .useLocation */ .zy)();const pathname=location===null||location===void 0?void 0:location.pathname;const isBlogOnlyMode=permalink==='/';const isBlogMainPage=pathname.includes('/page/')||pathname=='/blog/'||pathname=='/blog';const title=isBlogOnlyMode?siteTitle:blogTitle;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment,{children:[!isBlogMainPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__/* .PageMetadata */ .be,{title:title,description:blogDescription}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_SearchMetadata__WEBPACK_IMPORTED_MODULE_8__/* ["default"] */ .A,{tag:"blog_posts_list"})]});}function BlogListPageContent(props){const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_12__/* .useTranslation */ .Bd)();const{metadata,items}=props;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.Fragment,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(ListItem,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(ListSpan,{children:(metadata===null||metadata===void 0?void 0:metadata.page)==1?t('components.blog.list.recent-updates'):t('components.blog.list.page-title',{page:metadata===null||metadata===void 0?void 0:metadata.page})}),(metadata===null||metadata===void 0?void 0:metadata.page)==1&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{items:items===null||items===void 0?void 0:items.slice(0,4),list:true})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(GridItem,{marginTop:(metadata===null||metadata===void 0?void 0:metadata.page)==1?true:false,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogPostItems__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{items:items===null||items===void 0?void 0:items.slice((metadata===null||metadata===void 0?void 0:metadata.page)==1?4:0,11)})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(PaginatorDiv,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_theme_BlogListPaginator__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A,{metadata:metadata})})]});}function BlogListPage(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_2__/* .HtmlClassNameProvider */ .e3,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_9__/* ["default"] */ .A)(_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__/* .ThemeClassNames */ .G.wrapper.blogPages,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_1__/* .ThemeClassNames */ .G.page.blogListPage),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsxs)(_theme_BlogLayout__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(BlogListPageMetadata,Object.assign({},props)),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_14__.jsx)(BlogListPageContent,Object.assign({},props))]})});}const GridItem=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__GridItem",componentId:"sc-9t9q8y-0"})(["width:1120px !important;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:33px;box-sizing:border-box;margin:",";@media (max-width:1200px){width:100% !important;padding:",";box-sizing:border-box;margin:10px auto 0 auto;gap:30px;}@media ","{grid-template-columns:repeat(1,minmax(0,1fr));}"],props=>props.marginTop?'100px auto 0 auto':'30px auto 0 auto',""+_site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__/* ["default"] */ .Ay.STRUCTURE.PADDING.MOBILE,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_13__/* .device */ .jO.tablet);const PaginatorDiv=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__PaginatorDiv",componentId:"sc-9t9q8y-1"})(["width:100% !important;"]);const ListItem=styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay.div.withConfig({displayName:"BlogListPage__ListItem",componentId:"sc-9t9q8y-2"})(["display:flex;flex-direction:column;width:1120px;margin:50px auto auto auto;@media (max-width:1200px){width:100% !important;box-sizing:border-box;margin:10px auto 0 auto;}"]);const ListSpan=(0,styled_components__WEBPACK_IMPORTED_MODULE_10__/* ["default"] */ .Ay)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_4__/* .Span */ .L9).withConfig({displayName:"BlogListPage__ListSpan",componentId:"sc-9t9q8y-3"})(["color:var(--ifm-color-primary-blog);font-family:DM Sans,sans-serif;font-size:37px;font-style:normal;font-weight:700;line-height:110%;letter-spacing:-1.2px;"]);
-
-/***/ }),
-
-/***/ 254887:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostItem)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(244096);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostItem/Container/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemContainer(_ref){var _assets$image,_frontMatter$keywords;let{children,className}=_ref;const{frontMatter,assets,metadata:{description}}=(0,client/* useBlogPost */.e7)();const{withBaseUrl}=(0,useBaseUrl/* useBaseUrlUtils */.hH)();const image=(_assets$image=assets.image)!==null&&_assets$image!==void 0?_assets$image:frontMatter.image;const keywords=(_frontMatter$keywords=frontMatter.keywords)!==null&&_frontMatter$keywords!==void 0?_frontMatter$keywords:[];return/*#__PURE__*/(0,jsx_runtime.jsxs)("article",{className:className,itemProp:"blogPost",itemScope:true,itemType:"https://schema.org/BlogPosting",children:[description&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{itemProp:"description",content:description}),image&&/*#__PURE__*/(0,jsx_runtime.jsx)("link",{itemProp:"image",href:withBaseUrl(image,{absolute:true})}),keywords.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{itemProp:"keywords",content:keywords.join(',')}),children]});}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-;// ./src/theme/BlogPostItem/Header/Title/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-function BlogPostItemHeaderTitle(){const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{permalink,title}=metadata;return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:isBlogPostPage?/*#__PURE__*/(0,jsx_runtime.jsx)(PostTitle,{children:title}):/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{itemProp:"url",to:permalink,children:/*#__PURE__*/(0,jsx_runtime.jsx)(LinkText,{children:title})})});}const LinkText=styled_components_browser_esm/* default */.Ay.h1.withConfig({displayName:"Title__LinkText",componentId:"sc-1u7sfya-0"})(["overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--ifm-color-primary-blog) !important;font-family:DM Sans;font-size:1.5rem;font-style:normal;font-weight:700;line-height:36px;&:hover{color:var(--ifm-color-primary) !important;}"]);const PostTitle=styled_components_browser_esm/* default */.Ay.h1.withConfig({displayName:"Title__PostTitle",componentId:"sc-1u7sfya-1"})(["color:var(--ifm-color-primary-blog) !important;font-family:DM Sans;font-size:2.625rem;font-style:normal;font-weight:700;line-height:55.5px;@media ","{font-size:25px;line-height:30px;}"],globals/* device */.jO.tablet);
-// EXTERNAL MODULE: ./src/theme/BlogPostItem/Header/Info/index.js + 1 modules
-var Info = __webpack_require__(247712);
-// EXTERNAL MODULE: ./src/hooks/useSiteBaseUrl.tsx
-var useSiteBaseUrl = __webpack_require__(811494);
-;// ./src/theme/BlogPostItem/Header/Author/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function MaybeLink(props){if(props.href){return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,Object.assign({},props));}return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:props.children});}function BlogPostItemHeaderAuthor(_ref){let{author,index}=_ref;const baseURL=(0,useSiteBaseUrl/* useSiteBaseUrl */.p)()||'';const{name,title,url,imageURL,email}=author;const link=url||email&&"mailto:"+email||undefined;// Handle image URL construction for different environments
-const getImageSrc=()=>{if(!imageURL)return'';// If imageURL already starts with '/', use it as-is (for local development)
-if(imageURL.startsWith('/')){return imageURL;}// If imageURL doesn't start with '/', prepend baseURL (for preview deployments)
-return baseURL+'/'+imageURL;};return/*#__PURE__*/(0,jsx_runtime.jsxs)(AvatarDiv,{children:[imageURL&&/*#__PURE__*/(0,jsx_runtime.jsx)(MaybeLink,{href:link,className:"avatar__photo-link",children:/*#__PURE__*/(0,jsx_runtime.jsx)(Img,{src:getImageSrc(),alt:name,itemProp:"image"})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(AvatarItem,{children:[name&&/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{itemProp:"author",itemScope:true,itemType:"https://schema.org/Person",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"avatar__name",children:/*#__PURE__*/(0,jsx_runtime.jsx)(MaybeLink,{href:link,itemProp:"url",children:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{itemProp:"name",children:name})})}),title&&/*#__PURE__*/(0,jsx_runtime.jsx)("small",{className:"avatar__subtitle",itemProp:"description",children:title})]}),index===0&&/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{})]})]});}const AvatarItem=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"Author__AvatarItem",componentId:"sc-zksgx5-0"})(["display:flex;flex-direction:column;"]);const Img=styled_components_browser_esm/* default */.Ay.img.withConfig({displayName:"Author__Img",componentId:"sc-zksgx5-1"})(["width:56px;height:56px;border:var(--ifm-blog-avatar-border);border-radius:100%;background:white;"]);const AvatarDiv=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"Author__AvatarDiv",componentId:"sc-zksgx5-2"})(["display:flex;flex-direction:row;gap:16px;align-items:center;"]);
-;// ./src/theme/BlogPostItem/Header/Authors/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"authorCol":"authorCol_q4o9","imageOnlyAuthorRow":"imageOnlyAuthorRow_lXe7","imageOnlyAuthorCol":"imageOnlyAuthorCol_cxD5"});
-;// ./src/theme/BlogPostItem/Header/Authors/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Component responsible for the authors layout
-function BlogPostItemHeaderAuthors(_ref){let{className}=_ref;const{metadata:{authors},assets}=(0,client/* useBlogPost */.e7)();const authorsCount=authors.length;if(authorsCount===0){return null;}const imageOnly=authors.every(_ref2=>{let{name}=_ref2;return!name;});return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('margin-top--md margin-bottom--sm',imageOnly?styles_module.imageOnlyAuthorRow:'row',className),children:authors.map((author,idx)=>{var _assets$authorsImageU;return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)(!imageOnly&&'col col--6',imageOnly?styles_module.imageOnlyAuthorCol:styles_module.authorCol),children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderAuthor,{index:idx,author:Object.assign({},author,{// Handle author images using relative paths
-imageURL:(_assets$authorsImageU=assets.authorsImageUrls[idx])!==null&&_assets$authorsImageU!==void 0?_assets$authorsImageU:author.imageURL})})},idx);})});}
-;// ./src/theme/BlogPostItem/Header/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemHeader(_ref){let{list}=_ref;const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();if(list){return/*#__PURE__*/(0,jsx_runtime.jsxs)("header",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderTitle,{})]});}else{return/*#__PURE__*/(0,jsx_runtime.jsxs)("header",{children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderAuthors,{}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderTitle,{})]});}}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/utils-common/lib/index.js
-var lib = __webpack_require__(270440);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js + 21 modules
-var MDXContent = __webpack_require__(952944);
-// EXTERNAL MODULE: ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx + 2 modules
-var LikeAndRetweetItem = __webpack_require__(152493);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/node_modules/@tanstack/query-core/build/modern/queryClient.js + 4 modules
-var modern_queryClient = __webpack_require__(242685);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js
-var QueryClientProvider = __webpack_require__(497665);
-;// ./src/theme/BlogPostItem/Content/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemContent(_ref){var _metadata$frontMatter2;let{children,className}=_ref;const{isBlogPostPage,metadata}=(0,client/* useBlogPost */.e7)();const[hasInjectedSocialButtons,setHasInjectedSocialButtons]=(0,react.useState)(false);const contentRef=(0,react.useRef)(null);const injectSocialButtons=()=>{var _contentRef$current;const firstImage=(_contentRef$current=contentRef.current)===null||_contentRef$current===void 0?void 0:_contentRef$current.querySelector('p > img');if(!firstImage)return false;const socialContainer=createSocialContainer();const insertionPoint=firstImage.parentNode.nextSibling;firstImage.parentNode.parentNode.insertBefore(socialContainer,insertionPoint);renderSocialButtons(socialContainer);return true;};const createSocialContainer=()=>{const container=document.createElement('div');return container;};const renderSocialButtons=container=>{var _metadata$frontMatter;const{createRoot}=__webpack_require__(205338);const queryClient=new modern_queryClient/* QueryClient */.E();const root=createRoot(container);root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(QueryClientProvider/* QueryClientProvider */.Ht,{client:queryClient,children:/*#__PURE__*/(0,jsx_runtime.jsx)(LikeAndRetweetItem/* default */.A,{twitterId:metadata===null||metadata===void 0||(_metadata$frontMatter=metadata.frontMatter)===null||_metadata$frontMatter===void 0?void 0:_metadata$frontMatter.twitterId})}));};(0,react.useEffect)(()=>{if(!isBlogPostPage||hasInjectedSocialButtons||!contentRef.current){return;}const timer=setTimeout(()=>{const success=injectSocialButtons();if(success){setHasInjectedSocialButtons(true);}},100);return()=>clearTimeout(timer);},[isBlogPostPage,hasInjectedSocialButtons,metadata===null||metadata===void 0||(_metadata$frontMatter2=metadata.frontMatter)===null||_metadata$frontMatter2===void 0?void 0:_metadata$frontMatter2.twitterId]);return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{// This ID is used for the feed generation to locate the main content
-id:isBlogPostPage?lib/* blogPostContainerID */.LU:undefined,className:(0,clsx_m/* default */.A)('markdown',className),itemProp:"articleBody",ref:contentRef,children:/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent/* default */.A,{children:children})});}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/EditThisPage/index.js + 2 modules
-var EditThisPage = __webpack_require__(361943);
-// EXTERNAL MODULE: ./src/theme/TagsListInline/index.js
-var TagsListInline = __webpack_require__(117290);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(721312);
-;// ./src/theme/BlogPostItem/Footer/ReadMoreLink/index.js
-const _excluded=["blogPostTitle"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function ReadMoreLabel(){return/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Translate/* default */.A,{id:"theme.blog.post.readMore",description:"The label used in blog post item excerpts to link to full blog posts",children:"Read More"})});}function BlogPostItemFooterReadMoreLink(props){const{blogPostTitle}=props,linkProps=(0,objectWithoutPropertiesLoose/* default */.A)(props,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,Object.assign({"aria-label":(0,Translate/* translate */.T)({message:'Read more about {title}',id:'theme.blog.post.readMoreLabel',description:'The ARIA label for the link to full blog posts from excerpts'},{title:blogPostTitle})},linkProps,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ReadMoreLabel,{})}));}
-;// ./src/theme/BlogPostItem/Footer/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const Footer_styles_module = ({"blogPostFooterDetailsFull":"blogPostFooterDetailsFull_Wr5y"});
-;// ./src/theme/BlogPostItem/Footer/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemFooter(){const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{tags,title,editUrl,hasTruncateMarker}=metadata;// A post is truncated if it's in the "list view" and it has a truncate marker
-const truncatedPost=!isBlogPostPage&&hasTruncateMarker;const tagsExists=tags.length>0;const renderFooter=tagsExists||truncatedPost||editUrl;if(!renderFooter){return null;}return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsxs)("footer",{className:(0,clsx_m/* default */.A)('row docusaurus-mt-lg',isBlogPostPage&&Footer_styles_module.blogPostFooterDetailsFull),children:[tagsExists&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('col',{'col--9':truncatedPost}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(TagsListInline/* default */.A,{tags:tags})}),editUrl&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"col margin-top--sm",children:/*#__PURE__*/(0,jsx_runtime.jsx)(EditThisPage/* default */.A,{editUrl:editUrl})}),truncatedPost&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('col text--right',{'col--3':tagsExists}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooterReadMoreLink,{blogPostTitle:title,to:metadata===null||metadata===void 0?void 0:metadata.permalink})})]}),!isBlogPostPage&&truncatedPost&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooterReadMoreLink,{blogPostTitle:title,to:metadata===null||metadata===void 0?void 0:metadata.permalink})})]});}
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-;// ./src/theme/BlogPostItem/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-// apply a bottom margin in list view
-function useContainerClassName(){const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);return!isBlogPostPage&&!isMobile?'margin-bottom--xl':!isBlogPostPage&&isMobile?'margin-bottom--md':undefined;}function BlogPostItem(_ref){let{children,className,list}=_ref;const containerClassName=useContainerClassName();const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();if(list){var _children$type;return/*#__PURE__*/(0,jsx_runtime.jsxs)(ListView,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Content,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemContent,{children:children})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(TextView,{children:[!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{list:list}),/*#__PURE__*/(0,jsx_runtime.jsx)(TextSpan,{children:children===null||children===void 0||(_children$type=children.type)===null||_children$type===void 0||(_children$type=_children$type.frontMatter)===null||_children$type===void 0?void 0:_children$type.text}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooter,{})]})]});}else{var _children$type2;return/*#__PURE__*/(0,jsx_runtime.jsxs)(BlogPostItemContainer,{className:(0,clsx_m/* default */.A)(containerClassName,className),children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemContent,{children:children}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(TextSpan,{children:children===null||children===void 0||(_children$type2=children.type)===null||_children$type2===void 0||(_children$type2=_children$type2.frontMatter)===null||_children$type2===void 0?void 0:_children$type2.text}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooter,{})]});}}const ListView=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__ListView",componentId:"sc-wy7hmx-0"})(["display:flex;flex-direction:row;margin:32px 0;align-items:center;gap:32px;@media (max-width:1200px){flex-direction:column;gap:0px;}"]);const Content=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__Content",componentId:"sc-wy7hmx-1"})(["min-width:544px;max-width:544px;@media (max-width:1200px){min-width:100%;max-width:100%;}"]);const TextView=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__TextView",componentId:"sc-wy7hmx-2"})(["@media (max-width:1200px){width:100%;}"]);const TextSpan=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__TextSpan",componentId:"sc-wy7hmx-3"})(["color:var(--ifm-color-secondary-blog);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:300;line-height:32px;margin-bottom:20px;overflow:hidden;display:-webkit-box !important;-webkit-line-clamp:3;-webkit-box-orient:vertical;"]);
-
-/***/ }),
-
 /***/ 271281:
 /***/ (() => {
 
@@ -626,37 +362,6 @@ function useContainerClassName(){const{isBlogPostPage}=(0,client/* useBlogPost *
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 293751:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ Tag)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-;// ./src/theme/Tag/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tagRegular":"tagRegular_bmnp","tagWithCount":"tagWithCount_vddX"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/Tag/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function Tag(_ref){let{permalink,label,count}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:permalink,className:(0,clsx_m/* default */.A)(count?styles_module.tagWithCount:styles_module.tagRegular),children:label});}
 
 /***/ }),
 
@@ -689,27 +394,17 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryViemChains(constantName){return typeof window!=='undefined'?__webpack_require__(314498)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryViemUtils(constantName){return typeof window!=='undefined'?__webpack_require__(304661)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryBS58(){return typeof window!=='undefined'?(__webpack_require__(698957)["default"])||__webpack_require__(698957):{};// Return an empty object or appropriate placeholder for SSR.
+}function loadClientSideLibraryOpenZepplinMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(782971)[constantName]:{};// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolRestAPI(constantName){return typeof window!=='undefined'?__webpack_require__(514086)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
-ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
+ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
 SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
-
-/***/ }),
-
-/***/ 381418:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/blogpreview-a0354f504a7d016efc694f4da0f5bac6.png");
 
 /***/ }),
 
@@ -1734,27 +1429,444 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 603345:
+/***/ 615258:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ BlogListPaginator)
-/* harmony export */ });
-/* harmony import */ var _theme_PaginatorNavLink__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(880222);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(296540);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21532);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(777255);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-function BlogListPaginator(props){const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_3__/* .useTranslation */ .Bd)();const{metadata}=props;const{previousPage,nextPage}=metadata;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(NavItem// className="pagination-nav"
-,{"aria-label":t('components.blog.paginator.nav-aria-label'),children:[previousPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_theme_PaginatorNavLink__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{permalink:previousPage,title:t('components.blog.paginator.newer-entries')}),nextPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_theme_PaginatorNavLink__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{permalink:nextPage,title:t('components.blog.paginator.older-entries'),isNext:true})]});}const NavItem=styled_components__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.nav.withConfig({displayName:"BlogListPaginator__NavItem",componentId:"sc-1wmbmmd-0"})(["margin:0 auto 72px auto;display:flex;flex-direction:row;gap:32px;justify-content:center;width:1120px !important;@media ","{width:100% !important;}@media ","{grid-template-columns:repeat(1,minmax(0,1fr));}"],_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.laptopL,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.tablet);
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_03_important_concepts_mdx_af9_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-important-concepts-mdx-af9.json
+const site_docs_chain_03_important_concepts_mdx_af9_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/docs-chain-important-concepts","title":"Important Concepts","description":"Important Concepts | Push Chain Docs","source":"@site/docs/chain/03-Important-Concepts.mdx","sourceDirName":"chain","slug":"/chain/important-concepts","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/important-concepts","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-Important-Concepts.mdx","tags":[],"version":"current","sidebarPosition":3,"frontMatter":{"id":"docs-chain-important-concepts","title":"Important Concepts","hide_title":false,"slug":"./important-concepts","displayed_sidebar":"pushChainSidebar","sidebar_position":3,"image":"/assets/docs/previews/docs_chain--important_concepts.png"},"sidebar":"pushChainSidebar","previous":{"title":"Quickstart","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/quickstart"},"next":{"title":"Tutorials","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+;// ./docs/chain/03-Important-Concepts.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-important-concepts',
+	title: 'Important Concepts',
+	hide_title: false,
+	slug: './important-concepts',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 3,
+	image: '/assets/docs/previews/docs_chain--important_concepts.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+const toc = [{
+  "value": "100% EVM Compatibility",
+  "id": "100-evm-compatibility",
+  "level": 2
+}, {
+  "value": "Wallet Integration Across Chains",
+  "id": "wallet-integration-across-chains",
+  "level": 2
+}, {
+  "value": "Fee Abstraction and Cross-Chain Execution",
+  "id": "fee-abstraction-and-cross-chain-execution",
+  "level": 2
+}, {
+  "value": "Universal Gateway (UG) Contracts",
+  "id": "universal-gateway-ug-contracts",
+  "level": 2
+}, {
+  "value": "Account Types on Push Chain",
+  "id": "account-types-on-push-chain",
+  "level": 2
+}, {
+  "value": "Understanding Universal Account",
+  "id": "understanding-universal-account",
+  "level": 2
+}, {
+  "value": "Understanding Universal Signer",
+  "id": "understanding-universal-signer",
+  "level": 2
+}, {
+  "value": "Chain Agnostic Address Examples",
+  "id": "chain-agnostic-address-examples",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    blockquote: "blockquote",
+    code: "code",
+    h2: "h2",
+    li: "li",
+    p: "p",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Important Concepts | Push Chain Docs"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Before integrating the SDK, here are the core ideas you need to know to build truly universal dApps on Push Chain."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Deep dives and conceptual guides"
+        }), " live in our ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/knowledge",
+          children: "Knowledge Base"
+        }), "."]
+      }), "\n"]
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "100-evm-compatibility",
+      children: "100% EVM Compatibility"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain is an EVM-compatible Universal Layer 1 blockchain that runs any Solidity contract as-is. Your existing Ethereum dApp will work without touching a single byte of on-chain code."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "wallet-integration-across-chains",
+      children: "Wallet Integration Across Chains"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain introduces groundbreaking support for wallets from different Layer 1 blockchains, enabling them to transact directly on Push Chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Users can leverage their existing wallets, whether Ethereum-based (MetaMask), Solana-based (Phantom), or wallets from other chains, to execute transactions seamlessly on Push Chain. Under the hood, we:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Detect the source-chain wallet signature."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Map it to a Push Chain Universal Executor Account (UEA)."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Route the transaction through our gateway onto Push Chain."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Your users sign exactly as they do today;"
+      }), " Push Chain handles the cross-chain plumbing."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "fee-abstraction-and-cross-chain-execution",
+      children: "Fee Abstraction and Cross-Chain Execution"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain lets users execute contracts without holding $PC (Push Chain native token). Instead, users can initiate transactions from their source chains, such as Ethereum Sepolia or Solana Devnet, and pay gas fees in their native tokens like ETH or SOL."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "When a user signs a transaction from a source chain such as Ethereum Sepolia or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Your users interact exactly as they would on their home chain"
+      }), ", with no additional steps."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "universal-gateway-ug-contracts",
+      children: "Universal Gateway (UG) Contracts"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain uses a set of contracts to enable cross-chain transactions. These contracts are deployed on source chains from where the transactions originate and are used to route transactions from source chains to Push Chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "account-types-on-push-chain",
+      children: "Account Types on Push Chain"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "As an EVM-compatible Universal Layer 1 blockchain, Push Chain naturally supports standard Ethereum accounts:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Externally Owned Accounts (EOAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nStandard private-key-controlled addresses (e.g. MetaMask wallets)."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Smart Contract Accounts (Smart Accounts)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nOn-chain contracts that hold logic (e.g. multisigs, social recovery wallets)."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "Additionally, Push Chain innovates by introducing:"
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Executor Accounts (UEAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nProxy accounts that represent external chain wallets ( users ) on Push Chain.\nUEAs let Ethereum, Solana, and other wallets execute Push Chain logic without the need for a native Push Chain wallet. This significantly enhances accessibility and overal UX."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Origin Accounts (UOAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nThe original source-chain wallet in chain agnostic address format that is behind each UEA.\nUOAs let you attribute activity back to the user’s home chain."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "understanding-universal-account",
+      children: "Understanding Universal Account"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalAccount"
+      }), " is a chain-agnostic way of representing a wallet address, designed to work seamlessly across multiple blockchain ecosystems."]
+    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+      repo: {
+        title: "Open in Github",
+        url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"
+      },
+      children: `
+
+  // customPropHighlightRegexStart=PushChain\.utils\.account\.toUniversal
+  // customPropHighlightRegexEnd=(\\);|\\}\\);)
+  import { PushChain } from '@pushchain/core';
+
+  async function main() {
+    // Ethereum Sepolia
+    const ethereumAccount = PushChain.utils.account.toUniversal('0x742d35Cc6370C742Fc60f8b67da6c68F091C42b5', {
+      chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+    });
+
+    console.log(JSON.stringify(ethereumAccount, null, 2));
+
+    // Solana Testnet
+    const solanaAccount = PushChain.utils.account.toUniversal('ySYrGNLLJSK9hvGGpoxg8TzWfRe8ftBtDSMECtx2eJR', {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+    });
+
+    console.log(JSON.stringify(solanaAccount, null, 2));
+  }
+
+  await main().catch(console.error);
+
+`
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "address"
+        }), " follows each chain’s format (EVM checksummed, Solana base58)."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "chain"
+        }), " is the identifier of the origin chain of an address (e.g. ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA"
+        }), " resolves to ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "eip155:11155111"
+        }), " for Sepolia)"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "UniversalAccount"
+        }), " return a ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#chain-agnostic-address-examples",
+          title: "Examples of chain agnostic address",
+          children: "chain agnostic address"
+        }), " format. It can be used to represent any address from any chain."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "understanding-universal-signer",
+      children: "Understanding Universal Signer"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["A ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalSigner"
+      }), " extends ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalAccount"
+      }), " with signing capabilities."]
+    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+      repo: {
+        title: "Open in Github",
+        url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"
+      },
+      children: `
+
+  // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversal
+  // customPropHighlightRegexEnd=(\\);|\\}\\);)
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import { Keypair } from '@solana/web3.js';
+
+  async function main() {
+    // Ethereum Sepolia
+    const ethwallet = ethers.Wallet.createRandom();
+    const ethprovider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co');
+    const signer = ethwallet.connect(ethprovider);
+
+    const universalSignerFromEth = await PushChain.utils.signer.toUniversal(signer);
+
+    // Solana Testnet
+    const solKeypair = Keypair.generate();
+
+    const universalSignerFromSol = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET,
+      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    });
+
+    console.log(JSON.stringify(universalSignerFromEth, null, 2));
+    console.log(JSON.stringify(universalSignerFromSol, null, 2));
+  }
+
+  await main().catch(console.error);
+
+`
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "signer"
+        }), " is the signer object from the library you are using (e.g. ethers, viem, solana-web3.js)"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "chain-agnostic-address-examples",
+      children: "Chain Agnostic Address Examples"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Chain"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Network"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "CAIP-10 Identifier"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Mainnet (1)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:1:0x742d35Cc6370C742Fc60f8b67da6c68F091C42b5"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Sepolia Testnet(11155111)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:11155111:0x5FbDB2315678afecB367f032d93F642f64180aa3"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Mainnet-Beta"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp:9xQeWvGFvPEZZY3Yvj5V14xi4tYmEXjfSDrm5sVqTvcAg"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Testnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z:7fCAbbLejF64HTZ39rjFBUXJEMYT9z7d6NM6ovaoyNaW"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Cosmos"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "cosmoshub-4"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "cosmos:cosmoshub-4:cosmos1sk8uyz4u6zmxus3aurayrjyvfgtytvpnr685ur"
+            })
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["The addresses are inspired from ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md",
+          title: "Link to caip-10 proposal",
+          children: "caip-10"
+        }), " format."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Setup your ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/",
+          children: "Environment and Tooling"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["See SDK reference in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/",
+          children: "Build"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Try your first transaction in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/send-universal-transaction",
+          children: "Send Transaction"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Integrate and abstract implementation and UI via ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit/",
+          children: "UI Kit"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Follow a full walkthrough in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/tutorials/",
+          children: "Tutorials"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Dive deeper in the ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://push.org/knowledge/",
+          children: "Knowledge Base"
+        })]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
 
 /***/ }),
 
@@ -1765,53 +1877,10 @@ function BlogListPaginator(props){const{t}=(0,react_i18next__WEBPACK_IMPORTED_MO
 
 /***/ }),
 
-/***/ 672852:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ BlogPostItems)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_plugin_content_blog_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(244096);
-/* harmony import */ var _theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(254887);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(474848);
-function BlogPostItems(_ref){let{items,component:BlogPostItemComponent=_theme_BlogPostItem__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A,list}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment,{children:items===null||items===void 0?void 0:items.map((_ref2,index)=>{let{content:BlogPostContent}=_ref2;if(typeof BlogPostContent!=='function'){console.warn("Skipping item at index "+index+": content is not a valid React component.");return null;}const metadata=BlogPostContent===null||BlogPostContent===void 0?void 0:BlogPostContent.metadata;const frontMatter=BlogPostContent===null||BlogPostContent===void 0?void 0:BlogPostContent.frontMatter;if(!metadata||!frontMatter||!metadata.permalink){console.warn("Skipping invalid blog post metadata at index "+index+".",{metadata,frontMatter});return null;}return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_docusaurus_plugin_content_blog_client__WEBPACK_IMPORTED_MODULE_1__/* .BlogPostProvider */ ["in"],{content:BlogPostContent,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(BlogPostItemComponent,{list:list,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(BlogPostContent,{})})},metadata===null||metadata===void 0?void 0:metadata.permalink);})});}
-
-/***/ }),
-
 /***/ 715340:
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 729520:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ BlogLayout)
-/* harmony export */ });
-/* harmony import */ var _docusaurus_Head__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(705260);
-/* harmony import */ var _docusaurus_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(956347);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(296540);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(777255);
-/* harmony import */ var _site_src_components_SEO_SchemaMarkup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(172619);
-/* harmony import */ var _site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(941398);
-/* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(330922);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Components
-// External Components
-function BlogLayout(props){const{children}=props;// Internationalization
-const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_4__/* .useTranslation */ .Bd)();const location=(0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_1__/* .useLocation */ .zy)();const pathname=location===null||location===void 0?void 0:location.pathname;const isBlogMainPage=pathname.includes('/page/')||pathname=='/blog/'||pathname=='/blog';return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_theme_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{title:isBlogMainPage?t('pages.blog.seo.title'):'',description:isBlogMainPage?t('pages.blog.seo.description'):'',children:[isBlogMainPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_docusaurus_Head__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:url",content:"https://push.org/blog"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:title",content:t('pages.blog.seo.og-title')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:description",content:t('pages.blog.seo.og-description')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:image",content:(__webpack_require__(381418)/* ["default"] */ .A)}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:title",content:t('pages.blog.seo.twitter-title')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:description",content:t('pages.blog.seo.twitter-description')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:image",content:(__webpack_require__(381418)/* ["default"] */ .A)})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_components_SEO_SchemaMarkup__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A,{type:"Blog",pageDescription:t('pages.blog.seo.description'),pageUrl:"https://push.org/blog"})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Section */ .wn,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Content */ .UC,{className:"skeletonextrasmall blog clip",children:children})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A,{})]});}
 
 /***/ }),
 
@@ -1829,52 +1898,31 @@ const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_4__/* .useTranslation */ .Bd)
 
 /***/ }),
 
-/***/ 856977:
+/***/ 891517:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   hK: () => (/* binding */ Spacer),
-/* harmony export */   n9: () => (/* binding */ Date),
-/* harmony export */   uR: () => (/* binding */ ReadingTime)
+/* harmony export */   A: () => (/* binding */ NodeJSVirtualIDE)
 /* harmony export */ });
-/* unused harmony export useReadingTimePlural */
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(853465);
-/* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(721312);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(795093);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(296540);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(474848);
-function useReadingTimePlural(){const{selectMessage}=(0,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_0__/* .usePluralForm */ .W)();return readingTimeFloat=>{const readingTime=Math.ceil(readingTimeFloat);return selectMessage(readingTime,(0,_docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__/* .translate */ .T)({id:'theme.blog.post.readingTime.plurals',description:'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',message:'One min read|{readingTime} min read'},{readingTime}));};}function Spacer(){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment,{children:' · '});}function ReadingTime(_ref){let{readingTime}=_ref;const readingTimePlural=useReadingTimePlural();return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment,{children:readingTimePlural(readingTime)});}function Date(_temp){var _parsedDate,_parsedDate2,_parsedDate3;let{date,formattedDate,mr}=_temp===void 0?{}:_temp;// Early return if no date data is available
-if(!date&&!formattedDate){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},itemProp:"datePublished",children:"Unknown date"});}const year=moment__WEBPACK_IMPORTED_MODULE_2___default()().year();// Try multiple parsing strategies
-let parsedDate;// Strategy 1: Try parsing formattedDate with expected format
-if(formattedDate){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(formattedDate,'MMM DD, YYYY');}// Strategy 2: Try parsing formattedDate without strict format
-if(!((_parsedDate=parsedDate)!==null&&_parsedDate!==void 0&&_parsedDate.isValid())&&formattedDate){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(formattedDate);}// Strategy 3: Try parsing raw date
-if(!((_parsedDate2=parsedDate)!==null&&_parsedDate2!==void 0&&_parsedDate2.isValid())&&date){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(date);}// If all parsing fails, return the original strings
-if(!((_parsedDate3=parsedDate)!==null&&_parsedDate3!==void 0&&_parsedDate3.isValid())){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},dateTime:date,itemProp:"datePublished",children:formattedDate||date||'Unknown date'});}const isPresentYear=parsedDate.year()===year;const newDate=parsedDate.format(!isPresentYear?'MMM DD, YYYY':'MMM DD');return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},dateTime:date,itemProp:"datePublished",children:newDate});}
-
-/***/ }),
-
-/***/ 880222:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ PaginatorNavLink)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(320053);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(956347);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(354625);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(21532);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
-/* eslint-disable no-unsafe-optional-chaining *//**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// import Link from "@docusaurus/Link";
-function PaginatorNavLink(props){var _history$location;const{permalink,title,subLabel,isNext}=props;const history=(0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__/* .useHistory */ .W6)();if((history===null||history===void 0||(_history$location=history.location)===null||_history$location===void 0?void 0:_history$location.pathname).includes('blog')){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(NavLink,{onClick:()=>history.push(permalink),children:[subLabel&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div",{children:subLabel}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div",{children:title})]});}else return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__/* .Link */ .N_,{className:(0,clsx__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A)('pagination-nav__link',isNext?'pagination-nav__link--next':'pagination-nav__link--prev'),to:permalink,children:[subLabel&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div",{className:"pagination-nav__sublabel",children:subLabel}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div",{className:"pagination-nav__label",children:title})]});}const NavLink=styled_components__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Ay.div.withConfig({displayName:"PaginatorNavLink__NavLink",componentId:"sc-1f40au1-0"})(["text-decoration:none;color:var(--ifm-color-primary-blog);padding:10px 20px;border-radius:62px;font-size:15px;font-weight:500;font-family:DM Sans,sans-serif;border:1px solid #bac4d6;width:fit-content;cursor:pointer;"]);
+/* harmony import */ var _theme_Playground__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(404588);
+/* harmony import */ var _theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(351433);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+function NodeJSVirtualIDE(_ref){let{repo=null,children}=_ref;const userPassedCode=children.trim().split('\n').map(line=>line.startsWith(' ')?line.slice(2):line).join('\n');return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_theme_Playground__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{showLineNumbers:true// pass everything your snippet needs into the scope
+,scope:Object.assign({},_theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{Buffer:(__webpack_require__(348287).Buffer)})// no-op: we already hand it the fully-wrapped code below
+,transformCode:code=>code,children:returnPlaygroundCode({userPassedCode,repo})});}// wrap the raw snippet into your full IDE harness
+function returnPlaygroundCode(_ref2){let{userPassedCode,repo=null}=_ref2;// check if customPropHighlightRegexStart is present
+let highlightRegexStart=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexStart=
+let lines=userPassedCode.split('\n');const highlightLine=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexStart=');});const match=highlightLine===null||highlightLine===void 0?void 0:highlightLine.match(/\/\/\s*customPropHighlightRegexStart=(.+)$/);if(match){// rawValue is everything after the “=” on that comment line
+highlightRegexStart=match[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLine),1);userPassedCode=lines.join('\n');}// check if customPropHighlightRegexEnd is present
+let highlightRegexEnd=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexEnd=
+lines=userPassedCode.split('\n');const highlightLineEnd=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexEnd=');});const matchEnd=highlightLineEnd===null||highlightLineEnd===void 0?void 0:highlightLineEnd.match(/\/\/\s*customPropHighlightRegexEnd=(.+)$/);if(matchEnd){// rawValue is everything after the “=” on that comment line
+highlightRegexEnd=matchEnd[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLineEnd),1);userPassedCode=lines.join('\n');}// escape backticks in the snippet
+const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        StandardMerkleTree,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
 
 /***/ }),
 
