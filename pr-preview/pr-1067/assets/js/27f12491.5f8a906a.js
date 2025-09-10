@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[66061],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[3117],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -323,6 +323,35 @@ webpackContext.id = 35358;
 
 /***/ }),
 
+/***/ 119365:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ TabItem)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"tabItem":"tabItem_Ymn6"});
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function TabItem(_ref){let{children,hidden,className}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{role:"tabpanel",className:(0,clsx/* default */.A)(styles_module.tabItem,className),hidden,children:children});}
+
+/***/ }),
+
 /***/ 192668:
 /***/ (() => {
 
@@ -365,6 +394,93 @@ webpackContext.id = 35358;
 
 /***/ }),
 
+/***/ 303547:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (/* binding */ PushAPIReference)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21532);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+/**
+ * PushAPIReference component for rendering API documentation with consistent styling
+ *
+ * @param children - The content to display within the API reference section
+ * @param showRequiredNotice - Whether to show the required notice (default: true)
+ * @param className - Additional CSS classes to apply
+ */function PushAPIReference(_ref){let{children,showRequiredNotice=true,className=''}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(ReferenceContainer,{className:className,children:[showRequiredNotice&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(RequiredNotice,{hasNotice:showRequiredNotice,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p",{children:["These",/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("code",{children:"Arguments"}),"are mandatory"]})}),children]});}const ReferenceContainer=styled_components__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Ay.div.withConfig({displayName:"PushAPIReference__ReferenceContainer",componentId:"sc-1g1yayv-0"})([""]);const RequiredNotice=styled_components__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Ay.div.withConfig({displayName:"PushAPIReference__RequiredNotice",componentId:"sc-1g1yayv-1"})(["border-radius:var(--ifm-global-radius);margin-bottom:-8px;padding:12px 12px 20px 12px;text-align:end;border-bottom-left-radius:0;border-bottom-right-radius:0px;color:var(--ifm-navbar-dropdown-subtext);font-size:0.875rem;font-weight:400;line-height:188.571%;code{background:transparent;padding:2px 9px;display:inline-block !important;border-radius:12px;border:1px solid var(--ifm-sidebar-activetext-color);color:var(--ifm-color-primary-text);font-family:'Fira Code';font-weight:600;line-height:165%;margin:0px 4px;}"]);
+
+/***/ }),
+
+/***/ 303999:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ Details_Details)
+});
+
+;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
+function _objectDestructuringEmpty(t) {
+  if (null == t) throw new TypeError("Cannot destructure " + t);
+}
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(198587);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
+var dist_clsx = __webpack_require__(15066);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBrokenLinks.js + 1 modules
+var useBrokenLinks = __webpack_require__(163427);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
+var Collapsible = __webpack_require__(41422);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
+const _excluded=["summary","children"];/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
+ * A mostly un-styled `<details>` element with smooth collapsing. Provides some
+ * very lightweight styles, but you should bring your UI.
+ */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);(0,useBrokenLinks/* default */.A)().collectAnchor(props.id);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
+// only after animation completes, otherwise close animations won't work
+const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
+if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
+const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
+// setOpen(false);
+}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
+,collapsed:collapsed,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */// Should we have a custom details/summary comp in Infima instead of reusing
+// alert classes?
+const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
+
+/***/ }),
+
 /***/ 321638:
 /***/ (() => {
 
@@ -399,14 +515,12 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}function loadClientSideLibraryMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(360737)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideLibraryBigNumber(constantName){return typeof window!=='undefined'?__webpack_require__(461594)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
+}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
 ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
-SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight'),MerkleTree:loadClientSideLibraryMerkleTree('MerkleTree'),BigNumber:loadClientSideLibraryBigNumber('BigNumber')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
+SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
 
 /***/ }),
 
@@ -477,105 +591,68 @@ const codeEnv=isNodeJSEnv?CodingEnvironment.NODEJS:CodingEnvironment.REACT;(0,re
 
 /***/ }),
 
-/***/ 419153:
+/***/ 411470:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ TOC)
+  A: () => (/* binding */ Tabs)
 });
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./src/components/CopyPageButton/index.ts + 1 modules
-var CopyPageButton = __webpack_require__(423466);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
-var TOCItems = __webpack_require__(865195);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(296540);
-;// ./src/theme/TOC/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tableOfContents":"tableOfContents_jeP5","copyPageButtonWrapper":"copyPageButtonWrapper_NNHz","table-of-contents":"table-of-contents_fYeW"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/TOC/index.js
-const _excluded=["className"];/**
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
+var scrollUtils = __webpack_require__(823104);
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(956347);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsomorphicLayoutEffect.js
+var useIsomorphicLayoutEffect = __webpack_require__(300205);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/historyUtils.js
+var historyUtils = __webpack_require__(757485);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/jsUtils.js
+var jsUtils = __webpack_require__(231682);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/storageUtils.js + 1 modules
+var storageUtils = __webpack_require__(70679);
+;// ./node_modules/@docusaurus/theme-common/lib/utils/tabsUtils.js
+/**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */// Using a custom className
-// This prevents TOCInline/TOCCollapsible getting highlighted by mistake
-const LINK_CLASS_NAME='table-of-contents__link toc-highlight';const LINK_ACTIVE_CLASS_NAME='table-of-contents__link--active';function TOC(_ref){let{className}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.tableOfContents,'thin-scrollbar',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.copyPageButtonWrapper,children:/*#__PURE__*/(0,jsx_runtime.jsx)(CopyPageButton/* CopyPageButton */.N,{})}),/*#__PURE__*/(0,jsx_runtime.jsx)(TOCItems/* default */.A,Object.assign({},props,{linkClassName:LINK_CLASS_NAME,linkActiveClassName:LINK_ACTIVE_CLASS_NAME}))]});}
-
-/***/ }),
-
-/***/ 423466:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  N: () => (/* reexport */ CopyPageButton)
-});
-
-// UNUSED EXPORTS: default
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
-var doc = __webpack_require__(60542);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
-var useDocusaurusContext = __webpack_require__(144586);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./node_modules/react-icons/fi/index.esm.js
-var index_esm = __webpack_require__(242644);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
+ */// A very rough duck type, but good enough to guard against mistakes while
+// allowing customization
+function isTabItem(comp){const{props}=comp;return!!props&&typeof props==='object'&&'value'in props;}function sanitizeTabsChildren(children){var _React$Children$toArr,_React$Children$toArr2;return(_React$Children$toArr=(_React$Children$toArr2=react.Children.toArray(children).filter(child=>child!=='\n').map(child=>{if(!child||/*#__PURE__*/(0,react.isValidElement)(child)&&isTabItem(child)){return child;}// child.type.name will give non-sensical values in prod because of
+// minification, but we assume it won't throw in prod.
+throw new Error("Docusaurus error: Bad <Tabs> child <"+(// @ts-expect-error: guarding against unexpected cases
+typeof child.type==='string'?child.type:child.type.name)+">: all children of the <Tabs> component should be <TabItem>, and every <TabItem> should have a unique \"value\" prop.");}))===null||_React$Children$toArr2===void 0?void 0:_React$Children$toArr2.filter(Boolean))!==null&&_React$Children$toArr!==void 0?_React$Children$toArr:[];}function extractChildrenTabValues(children){return sanitizeTabsChildren(children).map(_ref=>{let{props:{value,label,attributes,default:isDefault}}=_ref;return{value,label,attributes,default:isDefault};});}function ensureNoDuplicateValue(values){const dup=(0,jsUtils/* duplicates */.XI)(values,(a,b)=>a.value===b.value);if(dup.length>0){throw new Error("Docusaurus error: Duplicate values \""+dup.map(a=>a.value).join(', ')+"\" found in <Tabs>. Every value needs to be unique.");}}function useTabValues(props){const{values:valuesProp,children}=props;return (0,react.useMemo)(()=>{const values=valuesProp!==null&&valuesProp!==void 0?valuesProp:extractChildrenTabValues(children);ensureNoDuplicateValue(values);return values;},[valuesProp,children]);}function isValidValue(_ref2){let{value,tabValues}=_ref2;return tabValues.some(a=>a.value===value);}function getInitialStateValue(_ref3){var _tabValues$find;let{defaultValue,tabValues}=_ref3;if(tabValues.length===0){throw new Error('Docusaurus error: the <Tabs> component requires at least one <TabItem> children component');}if(defaultValue){// Warn user about passing incorrect defaultValue as prop.
+if(!isValidValue({value:defaultValue,tabValues})){throw new Error("Docusaurus error: The <Tabs> has a defaultValue \""+defaultValue+"\" but none of its children has the corresponding value. Available values are: "+tabValues.map(a=>a.value).join(', ')+". If you intend to show no default tab, use defaultValue={null} instead.");}return defaultValue;}const defaultTabValue=(_tabValues$find=tabValues.find(tabValue=>tabValue.default))!==null&&_tabValues$find!==void 0?_tabValues$find:tabValues[0];if(!defaultTabValue){throw new Error('Unexpected error: 0 tabValues');}return defaultTabValue.value;}function getStorageKey(groupId){if(!groupId){return null;}return"docusaurus.tab."+groupId;}function getQueryStringKey(_ref4){let{queryString=false,groupId}=_ref4;if(typeof queryString==='string'){return queryString;}if(queryString===false){return null;}if(queryString===true&&!groupId){throw new Error("Docusaurus error: The <Tabs> component groupId prop is required if queryString=true, because this value is used as the search param name. You can also provide an explicit value such as queryString=\"my-search-param\".");}return groupId!==null&&groupId!==void 0?groupId:null;}function useTabQueryString(_ref5){let{queryString=false,groupId}=_ref5;const history=(0,react_router/* useHistory */.W6)();const key=getQueryStringKey({queryString,groupId});const value=(0,historyUtils/* useQueryStringValue */.aZ)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
+}const searchParams=new URLSearchParams(history.location.search);searchParams.set(key,newValue);history.replace(Object.assign({},history.location,{search:searchParams.toString()}));},[key,history]);return[value,setValue];}function useTabStorage(_ref6){let{groupId}=_ref6;const key=getStorageKey(groupId);const[value,storageSlot]=(0,storageUtils/* useStorageSlot */.Dv)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
+}storageSlot.set(newValue);},[key,storageSlot]);return[value,setValue];}function useTabs(props){const{defaultValue,queryString=false,groupId}=props;const tabValues=useTabValues(props);const[selectedValue,setSelectedValue]=(0,react.useState)(()=>getInitialStateValue({defaultValue,tabValues}));const[queryStringValue,setQueryString]=useTabQueryString({queryString,groupId});const[storageValue,setStorageValue]=useTabStorage({groupId});// We sync valid querystring/storage value to state on change + hydration
+const valueToSync=(()=>{const value=queryStringValue!==null&&queryStringValue!==void 0?queryStringValue:storageValue;if(!isValidValue({value,tabValues})){return null;}return value;})();// Sync in a layout/sync effect is important, for useScrollPositionBlocker
+// See https://github.com/facebook/docusaurus/issues/8625
+(0,useIsomorphicLayoutEffect/* default */.A)(()=>{if(valueToSync){setSelectedValue(valueToSync);}},[valueToSync]);const selectValue=(0,react.useCallback)(newValue=>{if(!isValidValue({value:newValue,tabValues})){throw new Error("Can't select invalid tab value="+newValue);}setSelectedValue(newValue);setQueryString(newValue);setStorageValue(newValue);},[setQueryString,setStorageValue,tabValues]);return{selectedValue,selectValue,tabValues};}
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"tabList":"tabList__CuJ","tabItem":"tabItem_LNqP"});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
-;// ./src/components/CopyPageButton/CopyPageButton.tsx
-/* eslint-disable */// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Configs
-const CopyPageButton=_ref=>{let{pageContent='',pageTitle='Documentation Page',pageUrl=''}=_ref;const[isDropdownOpen,setIsDropdownOpen]=(0,react.useState)(false);const[copySuccess,setCopySuccess]=(0,react.useState)(false);const dropdownRef=(0,react.useRef)(null);const{t}=(0,es/* useTranslation */.Bd)();// Get Docusaurus context and doc metadata
-const{siteConfig}=(0,useDocusaurusContext/* default */.A)();let docMetadata=null;try{docMetadata=(0,doc/* useDoc */.u)();}catch(error){// useDoc hook is only available in doc pages, ignore error for other pages
-}// Close dropdown when clicking outside
-(0,react.useEffect)(()=>{const handleClickOutside=event=>{if(dropdownRef.current&&!dropdownRef.current.contains(event.target)){setIsDropdownOpen(false);}};document.addEventListener('mousedown',handleClickOutside);return()=>{document.removeEventListener('mousedown',handleClickOutside);};},[]);// Get page content for copying
-const getPageContent=async()=>{if(pageContent)return pageContent;// Try to get the actual markdown from GitHub first
-const currentUrl=pageUrl||window.location.href;const githubMarkdown=await fetchGitHubMarkdown(currentUrl);if(githubMarkdown){return githubMarkdown;}// Fallback to extracting content from the rendered page
-const docContent=document.querySelector('[class*="docMainContainer"]')||document.querySelector('main')||document.querySelector('article')||document.body;const titleElement=document.querySelector('h1')||document.querySelector('title');const actualTitle=(titleElement===null||titleElement===void 0?void 0:titleElement.textContent)||pageTitle||document.title;const textContent=(docContent===null||docContent===void 0?void 0:docContent.innerText)||'';return"# "+actualTitle+"\n\nSource: "+currentUrl+"\n\n"+textContent;};// Get GitHub raw URL for direct viewing
-const getGitHubRawUrl=async url=>{try{var _docMetadata;// Try to get edit URL from Docusaurus metadata first
-let editUrl=(_docMetadata=docMetadata)===null||_docMetadata===void 0||(_docMetadata=_docMetadata.metadata)===null||_docMetadata===void 0?void 0:_docMetadata.editUrl;// If no metadata available, try to find the edit link in DOM (for production)
-if(!editUrl){const editLink=document.querySelector('a[href*="github.com"][href*="/edit/"]');editUrl=editLink===null||editLink===void 0?void 0:editLink.getAttribute('href');}// If still no edit URL, try to construct it manually from current path
-if(!editUrl){const currentPath=window.location.pathname;if(currentPath.startsWith('/docs/')){var _siteConfig$presets;const docsPath=currentPath.replace('/docs/','');// Use the editUrl from docusaurus config
-const baseEditUrl=(siteConfig===null||siteConfig===void 0||(_siteConfig$presets=siteConfig.presets)===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets[0])===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets[1])===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets.docs)===null||_siteConfig$presets===void 0?void 0:_siteConfig$presets.editUrl)||'https://github.com/pushchain/push-chain-website/edit/main';editUrl=baseEditUrl+"/docs/"+docsPath+".mdx";}}if(!editUrl){return null;}// Convert GitHub edit URL to raw URL
-let rawUrl=editUrl.replace('github.com','raw.githubusercontent.com');// Handle different GitHub URL patterns
-if(rawUrl.includes('/blob/')){rawUrl=rawUrl.replace('/blob/','/refs/heads/');}else if(rawUrl.includes('/edit/')){rawUrl=rawUrl.replace('/edit/','/refs/heads/');}else if(rawUrl.includes('/pull/')){// PR URLs: /pull/123/files or /pull/123/commits/sha/path
-const prMatch=rawUrl.match(/\/pull\/(\d+)/);if(prMatch){const prNumber=prMatch[1];const repoMatch=rawUrl.match(/raw\.githubusercontent\.com\/([^\/]+\/[^\/]+)/);if(repoMatch){const repoPath=repoMatch[1];try{// Get PR information from GitHub API to find the head branch
-const prApiUrl="https://api.github.com/repos/"+repoPath+"/pulls/"+prNumber;const prResponse=await fetch(prApiUrl);if(prResponse.ok){const prData=await prResponse.json();const headBranch=prData.head.ref;// Extract file path from the original URL
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/"+headBranch+filePath;}}else{// Fallback to main branch if API call fails
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/main"+filePath;}}}catch(error){// Fallback to main branch if API call fails
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/main"+filePath;}}}}}return rawUrl;}catch(error){console.warn('Failed to get GitHub raw URL:',error);return null;}};// Fetch actual markdown from GitHub repository using Docusaurus metadata
-const fetchGitHubMarkdown=async url=>{try{const rawUrl=await getGitHubRawUrl(url);if(!rawUrl){return null;}const response=await fetch(rawUrl);if(response.ok){const markdown=await response.text();return"# "+(pageTitle||'Push Chain Documentation')+"\n\nSource: "+url+"\nGitHub: "+rawUrl+"\n\n"+markdown;}}catch(error){console.warn('Failed to fetch GitHub markdown:',error);}return null;};// Copy page content to clipboard
-const handleCopyPage=async()=>{try{const content=await getPageContent();await navigator.clipboard.writeText(content);setCopySuccess(true);setIsDropdownOpen(false);setTimeout(()=>setCopySuccess(false),2000);}catch(err){console.error('Failed to copy content:',err);}};// View as markdown in new window - opens GitHub raw URL directly
-const handleViewAsMarkdown=async()=>{try{const currentUrl=pageUrl||window.location.href;const githubRawUrl=await getGitHubRawUrl(currentUrl);if(githubRawUrl){// Open GitHub raw URL directly - much cleaner and faster
-window.open(githubRawUrl,'_blank');}else{// Fallback: create a new window with extracted content
-const content=await getPageContent();const newWindow=window.open('','_blank');if(newWindow){newWindow.document.write("\n            <html>\n              <head>\n                <title>"+pageTitle+" - Markdown View</title>\n                <style>\n                  body { \n                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; \n                    padding: 20px; \n                    background: #1a1a1a; \n                    color: #e0e0e0; \n                    line-height: 1.6;\n                    max-width: 800px;\n                    margin: 0 auto;\n                  }\n                  pre { \n                    white-space: pre-wrap; \n                    word-wrap: break-word; \n                  }\n                </style>\n              </head>\n              <body>\n                <pre>"+content+"</pre>\n              </body>\n            </html>\n          ");newWindow.document.close();}}setIsDropdownOpen(false);}catch(err){console.error('Failed to open markdown view:',err);}};// Open in ChatGPT
-const handleOpenInChatGPT=async()=>{try{const content=await getPageContent();const prompt=encodeURIComponent("Please help me understand this documentation:\n\n"+content);window.open("https://chat.openai.com/?q="+prompt,'_blank');setIsDropdownOpen(false);}catch(err){console.error('Failed to get content for ChatGPT:',err);}};// Open in Claude
-const handleOpenInClaude=async()=>{try{const content=await getPageContent();const prompt=encodeURIComponent("Please help me understand this documentation:\n\n"+content);window.open("https://claude.ai/chat?q="+prompt,'_blank');setIsDropdownOpen(false);}catch(err){console.error('Failed to get content for Claude:',err);}};return/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageContainer,{ref:dropdownRef,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageTrigger,{onClick:()=>setIsDropdownOpen(!isDropdownOpen),$isOpen:isDropdownOpen,$copySuccess:copySuccess,title:"Copy page options","aria-label":"Copy page options",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiCopy */.nxz,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:copySuccess?'Copied!':'Copy page'}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiChevronDown */.fK4,{size:14,className:"chevron "+(isDropdownOpen?'open':'')})]}),isDropdownOpen&&/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageDropdown,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleCopyPage,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiCopy */.nxz,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Copy page"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Copy the page as Markdown for LLMs"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleViewAsMarkdown,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiEye */.Vap,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"View as Markdown"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"View this page as plain text"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(DropdownSeparator,{}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleOpenInChatGPT,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiMessageCircle */.X6_,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Open in ChatGPT"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Ask questions about this page"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleOpenInClaude,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiMessageCircle */.X6_,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Open in Claude"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Ask questions about this page"})]})]})]})]});};// Styled Components
-const CopyPageContainer=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__CopyPageContainer",componentId:"sc-oxn2jy-0"})(["position:relative;display:inline-block;@media ","{display:none;}"],globals/* device */.jO.tablet);const CopyPageTrigger=styled_components_browser_esm/* default */.Ay.button.withConfig({displayName:"CopyPageButton__CopyPageTrigger",componentId:"sc-oxn2jy-1"})(["display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 10px;width:100%;background:transparent;border:1px solid ",";border-radius:4px;color:",";font-size:12px;font-weight:500;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;&:hover{background:",";border-color:",";}.chevron{transition:transform 0.2s ease;transform:",";flex-shrink:0;}@media ","{padding:6px 8px;font-size:11px;}"],props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-emphasis-200)',props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-content)',props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-emphasis-200)',props=>props.$copySuccess?'var(--ifm-color-success-darker)':'var(--ifm-color-emphasis-200)',props=>props.$isOpen?'rotate(180deg)':'rotate(0deg)',globals/* device */.jO.tablet);const CopyPageDropdown=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__CopyPageDropdown",componentId:"sc-oxn2jy-2"})(["position:absolute;top:calc(100% + 4px);left:0;width:280px;background:var(--ifm-color-emphasis-0);border:1px solid var(--ifm-color-emphasis-200);border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:1000;overflow:hidden;@media ","{left:-20px;width:260px;}"],globals/* device */.jO.tablet);const DropdownItem=styled_components_browser_esm/* default */.Ay.button.withConfig({displayName:"CopyPageButton__DropdownItem",componentId:"sc-oxn2jy-3"})(["display:flex;align-items:flex-start;gap:12px;width:100%;padding:12px 16px;background:none;border:none;text-align:left;cursor:pointer;transition:background-color 0.2s ease;&:hover{background:var(--ifm-color-emphasis-100);}svg{margin-top:2px;color:var(--ifm-color-content-secondary);flex-shrink:0;}div{flex:1;}"]);const ItemTitle=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__ItemTitle",componentId:"sc-oxn2jy-4"})(["font-size:14px;font-weight:500;color:var(--ifm-color-content);margin-bottom:2px;"]);const ItemDescription=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__ItemDescription",componentId:"sc-oxn2jy-5"})(["font-size:12px;color:var(--ifm-color-content-secondary);line-height:1.4;"]);const DropdownSeparator=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__DropdownSeparator",componentId:"sc-oxn2jy-6"})(["height:1px;background:var(--ifm-color-emphasis-200);margin:4px 0;"]);/* harmony default export */ const CopyPageButton_CopyPageButton = ((/* unused pure expression or super */ null && (CopyPageButton)));
-;// ./src/components/CopyPageButton/index.ts
-
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function TabList(_ref){let{className,block,selectedValue,selectValue,tabValues}=_ref;const tabRefs=[];const{blockElementScrollPositionUntilNextRender}=(0,scrollUtils/* useScrollPositionBlocker */.a_)();const handleTabChange=event=>{const newTab=event.currentTarget;const newTabIndex=tabRefs.indexOf(newTab);const newTabValue=tabValues[newTabIndex].value;if(newTabValue!==selectedValue){blockElementScrollPositionUntilNextRender(newTab);selectValue(newTabValue);}};const handleKeydown=event=>{var _focusElement;let focusElement=null;switch(event.key){case'Enter':{handleTabChange(event);break;}case'ArrowRight':{var _tabRefs$nextTab;const nextTab=tabRefs.indexOf(event.currentTarget)+1;focusElement=(_tabRefs$nextTab=tabRefs[nextTab])!==null&&_tabRefs$nextTab!==void 0?_tabRefs$nextTab:tabRefs[0];break;}case'ArrowLeft':{var _tabRefs$prevTab;const prevTab=tabRefs.indexOf(event.currentTarget)-1;focusElement=(_tabRefs$prevTab=tabRefs[prevTab])!==null&&_tabRefs$prevTab!==void 0?_tabRefs$prevTab:tabRefs[tabRefs.length-1];break;}default:break;}(_focusElement=focusElement)===null||_focusElement===void 0||_focusElement.focus();};return/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{role:"tablist","aria-orientation":"horizontal",className:(0,clsx/* default */.A)('tabs',{'tabs--block':block},className),children:tabValues.map(_ref2=>{let{value,label,attributes}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)("li",Object.assign({// TODO extract TabListItem
+role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===value,ref:tabControl=>{tabRefs.push(tabControl);},onKeyDown:handleKeydown,onClick:handleTabChange},attributes,{className:(0,clsx/* default */.A)('tabs__item',styles_module.tabItem,attributes===null||attributes===void 0?void 0:attributes.className,{'tabs__item--active':selectedValue===value}),children:label!==null&&label!==void 0?label:value}),value);})});}function TabContent(_ref3){let{lazy,children,selectedValue}=_ref3;const childTabs=(Array.isArray(children)?children:[children]).filter(Boolean);if(lazy){const selectedTabItem=childTabs.find(tabItem=>tabItem.props.value===selectedValue);if(!selectedTabItem){// fail-safe or fail-fast? not sure what's best here
+return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
+// Temporary fix for https://github.com/facebook/docusaurus/issues/5653
+,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
 
 /***/ }),
 
@@ -1540,7 +1617,7 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 667973:
+/***/ 685089:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1549,39 +1626,656 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ MDXPage)
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_03_build_09_contract_helpers_mdx_27f_namespaceObject),
+  toc: () => (/* binding */ toc)
 });
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(618215);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js
-var metadataUtils = __webpack_require__(445500);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__(117559);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
-var Layout = __webpack_require__(330922);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js + 21 modules
-var MDXContent = __webpack_require__(952944);
-// EXTERNAL MODULE: ./src/theme/TOC/index.js + 1 modules
-var TOC = __webpack_require__(419153);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ContentVisibility/index.js + 3 modules
-var ContentVisibility = __webpack_require__(586896);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/EditMetaRow/index.js + 2 modules
-var EditMetaRow = __webpack_require__(514198);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/MDXPage/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"mdxPageWrapper":"mdxPageWrapper_j9I6"});
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-09-contract-helpers-mdx-27f.json
+const site_docs_chain_03_build_09_contract_helpers_mdx_27f_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-contract-helpers","title":"Contract Helpers","description":"Contract Helpers | Build | Push Chain Docs","source":"@site/docs/chain/03-build/09-Contract-Helpers.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/contract-helpers","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/contract-helpers","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/09-Contract-Helpers.mdx","tags":[],"version":"current","sidebarPosition":9,"frontMatter":{"id":"docs-chain-build-contract-helpers","title":"Contract Helpers","hide_title":false,"slug":"./contract-helpers","displayed_sidebar":"pushChainSidebar","sidebar_position":9,"image":"/assets/docs/previews/docs_chain_build--contract_helpers.png"},"sidebar":"pushChainSidebar","previous":{"title":"Reading Blockchain State","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/reading-blockchain-state"},"next":{"title":"Advanced","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/advanced"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/MDXPage/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function MDXPage(props){var _assets$image;const{content:MDXPageContent}=props;const{metadata,assets}=MDXPageContent;const{title,editUrl,description,frontMatter,lastUpdatedBy,lastUpdatedAt}=metadata;const{keywords,wrapperClassName,hide_table_of_contents:hideTableOfContents}=frontMatter;const image=(_assets$image=assets.image)!==null&&_assets$image!==void 0?_assets$image:frontMatter.image;const canDisplayEditMetaRow=!!(editUrl||lastUpdatedAt||lastUpdatedBy);return/*#__PURE__*/(0,jsx_runtime.jsx)(metadataUtils/* HtmlClassNameProvider */.e3,{className:(0,clsx/* default */.A)(wrapperClassName!==null&&wrapperClassName!==void 0?wrapperClassName:ThemeClassNames/* ThemeClassNames */.G.wrapper.mdxPages,ThemeClassNames/* ThemeClassNames */.G.page.mdxPage),children:/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(metadataUtils/* PageMetadata */.be,{title:title,description:description,keywords:keywords,image:image}),/*#__PURE__*/(0,jsx_runtime.jsx)("main",{className:"container container--fluid margin-vert--lg",children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('row',styles_module.mdxPageWrapper),children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('col',!hideTableOfContents&&'col--8'),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ContentVisibility/* default */.A,{metadata:metadata}),/*#__PURE__*/(0,jsx_runtime.jsx)("article",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent/* default */.A,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(MDXPageContent,{})})}),canDisplayEditMetaRow&&/*#__PURE__*/(0,jsx_runtime.jsx)(EditMetaRow/* default */.A,{className:(0,clsx/* default */.A)('margin-top--sm',ThemeClassNames/* ThemeClassNames */.G.pages.pageFooterEditMetaRow),editUrl:editUrl,lastUpdatedAt:lastUpdatedAt,lastUpdatedBy:lastUpdatedBy})]}),!hideTableOfContents&&MDXPageContent.toc.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"col col--2",children:/*#__PURE__*/(0,jsx_runtime.jsx)(TOC/* default */.A,{toc:MDXPageContent.toc,minHeadingLevel:frontMatter.toc_min_heading_level,maxHeadingLevel:frontMatter.toc_max_heading_level})})]})})]})});}
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
+var PushAPIReference = __webpack_require__(303547);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+;// ./docs/chain/03-build/09-Contract-Helpers.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-build-contract-helpers',
+	title: 'Contract Helpers',
+	hide_title: false,
+	slug: './contract-helpers',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 9,
+	image: '/assets/docs/previews/docs_chain_build--contract_helpers.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Overview",
+  "id": "overview",
+  "level": 2
+}, {
+  "value": "Universal Executor Account Factory",
+  "id": "universal-executor-account-factory",
+  "level": 2
+}, {
+  "value": "UEAFactory Features",
+  "id": "ueafactory-features",
+  "level": 3
+}, {
+  "value": "UEAFactory Interface",
+  "id": "ueafactory-interface",
+  "level": 3
+}, {
+  "value": "1. Import it directly from Push Chain Core Repository",
+  "id": "1-import-it-directly-from-push-chain-core-repository",
+  "level": 4
+}, {
+  "value": "Or 2. Define the interface manually in your solidity contract",
+  "id": "or-2-define-the-interface-manually-in-your-solidity-contract",
+  "level": 4
+}, {
+  "value": "UEAFactory Methods",
+  "id": "ueafactory-methods",
+  "level": 3
+}, {
+  "value": "UEAFactory → getOriginForUEA",
+  "id": "ueafactory--getoriginforuea",
+  "level": 3
+}, {
+  "value": "UEAFactory → getUEAForOrigin",
+  "id": "ueafactory--getueafororigin",
+  "level": 3
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    blockquote: "blockquote",
+    code: "code",
+    em: "em",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Contract Helpers | Build | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "overview",
+      children: "Overview"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "When building smart contract applications on Push Chain, you’ll at times need helper contracts to surface on-chain metadata—like identifying external chain users or computing deterministic smart account addresses. Push Chain provides a set of helper interfaces under the hood to simplify these workflows."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "One primary helper is the Universal Executor Account Factory (UEAFactory), which underpins Push Chain’s multi‐chain smart account abstraction."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "universal-executor-account-factory",
+      children: "Universal Executor Account Factory"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["As previously mentioned, ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/important-concepts#account-types-on-push-chain",
+          children: "Universal Executor Accounts (UEAs)"
+        }), " are a type of executor smart accounts that represent external chain users on Push Chain, allowing them to interact with Push Chain applications without having to connect, bridge, or move to Push Chain."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://github.com/pushchain/push-chain-contracts/blob/main/src/Interfaces/IUEAFactory.sol",
+        children: "Universal Executor Account Factory"
+      }), " is the central contract responsible for deploying and managing Universal Executor Accounts (UEAs) for users from different blockchains."]
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "ueafactory-features",
+      children: "UEAFactory Features"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://github.com/pushchain/push-chain-contracts/blob/main/src/UEAFactoryV1.sol",
+        children: "UEA Factory"
+      }), " serves these key features:"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Multi-Chain Support"
+        }), ": Register and manage UEAs for users from different blockchains"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Deterministic Addresses"
+        }), ": Uses ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "CREATE2"
+        }), " + minimal proxies for predictable UEA addresses"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Deployment Status"
+        }), ": Optionally check if a UEA is already deployed"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Owner ↔ UEA Mapping"
+        }), ": Bidirectional mapping between Universal Accounts and their UEAs, VM types and implementations."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "ueafactory-interface",
+      children: "UEAFactory Interface"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Deployed Address"
+      }), ": ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "0x00000000000000000000000000000000000000eA"
+          })
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This helper contract helps in fetching cross-chain information about an address. It also provides identity-mapping between source chain wallet address and Push Chain address and can determine if the address is native to Push Chain or is proxy for external chain user."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In order to use the UEAFactory in your contract, you can either:"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "1-import-it-directly-from-push-chain-core-repository",
+      children: "1. Import it directly from Push Chain Core Repository"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-solidity",
+        children: "import \"push-chain-core-contracts/src/Interfaces/IUEAFactory.sol\";\n"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+      summary: "For Foundry Developers",
+      children: [(0,jsx_runtime.jsxs)(_components.p, {
+        children: ["Do the additional steps to enable the same in your Foundry:", (0,jsx_runtime.jsx)("br", {})]
+      }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.ol, {
+        children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+          children: "Run forge install"
+        }), "\n"]
+      }), (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-bash",
+          children: "forge install pushchain/push-chain-core-contracts\n"
+        })
+      }), (0,jsx_runtime.jsxs)(_components.ol, {
+        start: "2",
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["Add remappings to your ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: "foundry.toml"
+          }), " file"]
+        }), "\n"]
+      }), (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-toml",
+          children: "remappings = [\"push-chain-core-contracts/=lib/push-chain-core-contracts/\"]\n"
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
+      id: "or-2-define-the-interface-manually-in-your-solidity-contract",
+      children: "Or 2. Define the interface manually in your solidity contract"
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Use the following interface directly in your contract",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-solidity",
+          children: "pragma solidity ^0.8.0;\n\nstruct UniversalAccountId {\n    string chainNamespace; // Chain namespace identifier of the owner account (e.g., \"eip155\" or \"solana\")\n    string chainId; // Chain ID of the source chain of the owner of this UEA.\n    bytes owner; // Owner's public key or address in bytes format\n}\n\n/// @title Universal Executor Account Factory Interface\n/// @notice Helper interface for deploying and querying UEAs on Push Chain\ninterface IUEAFactory {\n    /**\n     * @dev Returns the owner key (UOA) for a given UEA address\n     * @param addr Any given address ( msg.sender ) on push chain\n     * @return account The Universal Account identity information associated with this UEA\n     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)\n     */\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n\n    /**\n     * @dev Returns the computed UEA address for a given Universal Account ID and deployment status\n     * @param _id The Universal Account identity information\n     * @return uea The address of the UEA (computed deterministically)\n     * @return isDeployed True if the UEA has already been deployed\n     */\n    function getUEAForOrigin(UniversalAccountId memory _id) external view returns (address uea, bool isDeployed);\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "ueafactory-methods",
+      children: "UEAFactory Methods"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "ueafactory--getoriginforuea",
+      children: "UEAFactory → getOriginForUEA"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "getOriginForUEA(address): (UniversalAccountId, bool)"
+          })
+        })
+      }), " ", (0,jsx_runtime.jsxs)("div", {
+        style: {
+          textAlign: 'right',
+          fontSize: '1rem'
+        },
+        children: ["is ", (0,jsx_runtime.jsx)("em", {
+          children: (0,jsx_runtime.jsx)("code", {
+            style: {
+              color: 'var(--ifm-sidebar-activetext-color)',
+              background: 'transparent'
+            },
+            children: "external view"
+          })
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Returns the owner information and UEA status for a given address on Push Chain."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Commonly used for"
+      }), ":"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Checking if a given address is a native account on Push Chain or is controlled by another chain user."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Determining the source chain of a given address on Push Chain."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Getting the Universal Account identity information associated with this address."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "Note: The returned origin address will be encoded in Hex format. For example, for Solana addresses, a base58 conversion should be done to get the readable format."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-solidity",
+        children: "/**\n * @dev Returns the owner key (UOA) for a given UEA address\n * @param addr Any given address ( msg.sender ) on push chain\n * @return account The Universal Account identity information associated with this UEA\n * @return isUEA True if the address addr is a UEA contract. False if it is a native account on PUSH chain (i.e., isUEA = false)\n*/\nfunction getOriginForUEA(\n    address addr\n)\n    external\n    view\n    returns (\n        UniversalAccountId memory account,\n        bool isUEA\n    );\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      showRequiredNotice: false,
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Arguments"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "addr"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "address"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Any address on Push Chain (typically msg.sender)."
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `UniversalAccountId`<struct> and `bool`",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Response"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "account"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "UniversalAccountId"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The Universal Account identity information containing:", (0,jsx_runtime.jsx)("br", {}), " ", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "chainNamespace"
+              }), ": Chain namespace identifier (e.g., \"eip155\" for EVM based chains, \"solana\" for Solana, etc.)", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "chainId"
+              }), ": Chain ID of the source chain of the owner of this UEA.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "owner"
+              }), ": Owner's public key or address in bytes format."]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "isUEA"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "bool"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "True if the address addr is a UEA contract. False if it is a native address on PUSH chain (i.e., isUEA = false)."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "On-chain usage",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-solidity",
+          children: "function checkCallerType() public view returns (bool isUEA) {\n  (UniversalAccountId memory account, bool isUEA) = IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(msg.sender);\n\n  if (isUEA) {\n      // Do something with the UEA\n  } else {\n      // Do something with the native account\n  }\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Off-chain usage",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"
+        },
+        children: `
+
+  // customPropHighlightRegexStart=factory\.getOriginForUEA
+  // customPropHighlightRegexEnd=\\);
+  import { ethers } from 'ethers';
+  import { bs58 } from 'bs58';
+
+  // ——— CONFIG ———
+  const RPC_URL          = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const FACTORY_ADDRESS  = '0x00000000000000000000000000000000000000eA';
+
+  // Corrected ABI
+  const IUEAFactoryABI = [
+    // returns (UniversalAccountId account, bool isUEA)
+    "function getOriginForUEA(address addr) view returns (tuple(string chainNamespace, string chainId, bytes owner) account, bool isUEA)"
+  ]
+
+  async function main() {
+    // 1) set up
+    const provider = new ethers.JsonRpcProvider(RPC_URL);
+    const factory  = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+    // 2) <insert any address ( UEA or Native Addresses) to check its origin details>
+    const someAddress = '0x25A2d5EF3d2f76B55069502D17aCBf53ed6A6977';
+
+    // 3) call getOriginForUEA
+    console.log("Calling getOriginForUEA on PushChain");
+    const originResult = await factory.getOriginForUEA(someAddress);
+    console.log("Note: The address returned are always in hex format even for non-EVM chains.")
+    console.log("Result -", JSON.stringify(originResult));
+
+    // 4) optional: convert non-evm chain address according to their standards
+    if (originResult[0][0] === "solana") {
+      // Convert hex-encoded address to base58 address format
+      const bytesAddress = ethers.getBytes(originResult[0][2]);
+      const base58Address = bs58.encode(bytesAddress);
+      console.log("Solana (Base58) Address -", base58Address);
+    }
+    
+    // Note: If the origin is Solana (chainNamespace === "solana"), the owner address 
+    // will be in hex format and needs to be converted to base58 for readable format
+  }
+
+await main().catch(console.error);
+
+`
+      })
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "ueafactory--getueafororigin",
+      children: "UEAFactory → getUEAForOrigin"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "getUEAForOrigin(UniversalAccountId): (address, bool)"
+          })
+        })
+      }), " ", (0,jsx_runtime.jsxs)("div", {
+        style: {
+          textAlign: 'right',
+          fontSize: '1rem'
+        },
+        children: ["is ", (0,jsx_runtime.jsx)("em", {
+          children: (0,jsx_runtime.jsx)("code", {
+            style: {
+              color: 'var(--ifm-sidebar-activetext-color)',
+              background: 'transparent'
+            },
+            children: "external view"
+          })
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Returns the computed UEA address for a given Universal Account.\nAdditionaly, it also returns the deployment status of the UEA."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Commonly used for"
+      }), ":"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Get or compute the UEA address for a given Universal Account."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Check if a given Universal Account is deployed or not."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["Note: UniversalAccountId is a struct that returns chainNamespace, chainId and owner. ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "chainNamespace"
+        }), " contains the ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/chain-config/#universal-chain-namespace",
+          children: "chain namespace"
+        }), " (e.g., \"eip155\" for EVM based chains, \"solana\" for Solana, etc.) and ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "chainId"
+        }), " contains the chain ID of the source chain of the owner of this UEA. ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "owner"
+        }), " contains the wallet address in bytes."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-solidity",
+        children: "/**\n * @dev Returns the computed UEA address for a given Universal Account ID and deployment status\n * @param _id The Universal Account identity information\n * @return uea The address of the UEA (computed deterministically)\n * @return isDeployed True if the UEA has already been deployed\n*/\nfunction getUEAForOrigin(\n    UniversalAccountId memory _id\n)\n    external\n    view\n    returns (\n        address uea,\n        bool    isDeployed\n    );\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      showRequiredNotice: false,
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Arguments"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "_id"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "UniversalAccountId"
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The Universal Account identity information containing:", (0,jsx_runtime.jsx)("br", {}), " ", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "chainNamespace"
+              }), ": Chain namespace identifier (e.g., \"eip155\" for EVM based chains, \"solana\" for Solana, etc.)", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "chainId"
+              }), ": Chain ID of the source chain of the owner of this UEA.", (0,jsx_runtime.jsx)("br", {}), "- ", (0,jsx_runtime.jsx)(_components.strong, {
+                children: "owner"
+              }), ": Owner's public key or address in bytes format."]
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `address` and `bool`",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Response"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "uea"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "address"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The address of the UEA (computed deterministically)."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: "isDeployed"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "bool"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "True if the UEA has already been deployed."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "On-chain usage",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-solidity",
+          children: "function checkUEAType() public view returns (address uea, bool isDeployed) {\n    (address uea, bool isDeployed) = IUEAFactory(0x00000000000000000000000000000000000000eA).getUEAForOrigin(account);\n\n    if (isDeployed) {\n        // Do something with the deployed UEA\n    } else {\n        // UEA is not deployed yet but you have deterministic address for the UEA.\n    }\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Off-chain usage",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/others-contract-helpers"
+        },
+        children: `
+// customPropHighlightRegexStart=factory\.getUEAForOrigin
+// customPropHighlightRegexEnd=\\);
+  import { ethers } from 'ethers';
+
+  // ——— CONFIG ———
+  const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const FACTORY_ADDRESS = '0x00000000000000000000000000000000000000eA';
+
+  // Corrected ABI
+  const IUEAFactoryABI = [
+  "function getUEAForOrigin(tuple(string chainNamespace, string chainId, bytes owner) _id) view returns (address uea, bool isDeployed)"
+]
+
+  async function main() {
+    // 1) set up
+    const provider = new ethers.JsonRpcProvider(RPC_URL);
+    const factory = new ethers.Contract(FACTORY_ADDRESS, IUEAFactoryABI, provider);
+
+    // 2) create UniversalAccountId struct
+    const universalAccountId = {
+      chainNamespace: 'eip155', // EVM chain
+      chainId: '11155111', // Sepolia testnet (more likely to be registered on Push testnet)
+      owner: '0xa96CaA79eb2312DbEb0B8E93c1Ce84C98b67bF11', // owner address in bytes format
+    };
+
+    // 3) call getUEAForOrigin
+    console.log('Calling getUEAForOrigin on PushChain');
+    const originResult = await factory.getUEAForOrigin(universalAccountId);
+    console.log('Result -', JSON.stringify(originResult));
+  }
+
+  await main().catch(console.error);
+
+
+`
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Wire up your SDK in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/initialize-push-chain-client",
+          children: "Initialize Push Chain Client"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Simplify cross-chain workflows via ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/utility-functions",
+          children: "Utility Functions"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Dive into on-chain reads with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/reading-blockchain-state",
+          children: "Reading Blockchain State"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Abstract wallet & UI flows with our ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit",
+          children: "UI Kit"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Go deeper into advanced patterns in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/deep-dives",
+          children: "Deep Dives"
+        })]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
 
 /***/ }),
 
@@ -1603,6 +2297,34 @@ var jsx_runtime = __webpack_require__(474848);
 /***/ (() => {
 
 /* (ignored) */
+
+/***/ }),
+
+/***/ 891517:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (/* binding */ NodeJSVirtualIDE)
+/* harmony export */ });
+/* harmony import */ var _theme_Playground__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(404588);
+/* harmony import */ var _theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(351433);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+function NodeJSVirtualIDE(_ref){let{repo=null,children}=_ref;const userPassedCode=children.trim().split('\n').map(line=>line.startsWith(' ')?line.slice(2):line).join('\n');return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_theme_Playground__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{showLineNumbers:true// pass everything your snippet needs into the scope
+,scope:Object.assign({},_theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{Buffer:(__webpack_require__(348287).Buffer)})// no-op: we already hand it the fully-wrapped code below
+,transformCode:code=>code,children:returnPlaygroundCode({userPassedCode,repo})});}// wrap the raw snippet into your full IDE harness
+function returnPlaygroundCode(_ref2){let{userPassedCode,repo=null}=_ref2;// check if customPropHighlightRegexStart is present
+let highlightRegexStart=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexStart=
+let lines=userPassedCode.split('\n');const highlightLine=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexStart=');});const match=highlightLine===null||highlightLine===void 0?void 0:highlightLine.match(/\/\/\s*customPropHighlightRegexStart=(.+)$/);if(match){// rawValue is everything after the “=” on that comment line
+highlightRegexStart=match[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLine),1);userPassedCode=lines.join('\n');}// check if customPropHighlightRegexEnd is present
+let highlightRegexEnd=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexEnd=
+lines=userPassedCode.split('\n');const highlightLineEnd=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexEnd=');});const matchEnd=highlightLineEnd===null||highlightLineEnd===void 0?void 0:highlightLineEnd.match(/\/\/\s*customPropHighlightRegexEnd=(.+)$/);if(matchEnd){// rawValue is everything after the “=” on that comment line
+highlightRegexEnd=matchEnd[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLineEnd),1);userPassedCode=lines.join('\n');}// escape backticks in the snippet
+const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        StandardMerkleTree,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
 
 /***/ }),
 

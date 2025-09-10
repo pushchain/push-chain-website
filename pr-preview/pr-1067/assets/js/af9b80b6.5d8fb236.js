@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[42350],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[34763],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -323,35 +323,6 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 119365:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ TabItem)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(618215);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tabItem":"tabItem_Ymn6"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function TabItem(_ref){let{children,hidden,className}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{role:"tabpanel",className:(0,clsx/* default */.A)(styles_module.tabItem,className),hidden,children:children});}
-
-/***/ }),
-
 /***/ 192668:
 /***/ (() => {
 
@@ -428,14 +399,12 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}function loadClientSideLibraryMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(360737)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideLibraryBigNumber(constantName){return typeof window!=='undefined'?__webpack_require__(461594)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
+}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
 ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
-SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight'),MerkleTree:loadClientSideLibraryMerkleTree('MerkleTree'),BigNumber:loadClientSideLibraryBigNumber('BigNumber')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
+SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
 
 /***/ }),
 
@@ -503,71 +472,6 @@ if(lines[idx].trim()==='//'){lines.splice(idx,1);}else{idx++;}}const strippedChi
 const execCode=changeToExecutableCode(strippedChildren,isNodeJSEnv);// ——— remove empty lines from top and bottom for execution ———
 const displayCode=strippedChildren.trim();// decide code environment
 const codeEnv=isNodeJSEnv?CodingEnvironment.NODEJS:CodingEnvironment.REACT;(0,react.useEffect)(()=>{const attachGlobals=async()=>{if(typeof globalThis.Buffer==='undefined'){const buffer=await Promise.resolve(/* import() */).then(__webpack_require__.t.bind(__webpack_require__, 348287, 19));globalThis.Buffer=buffer.Buffer;}if(typeof globalThis.process==='undefined'){globalThis.process={env:{}};}if(typeof globalThis.global==='undefined'){globalThis.global=globalThis;}setLiveScope({Buffer:globalThis.Buffer,process:globalThis.process,global:globalThis});};attachGlobals();},[]);return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.playgroundContainer,children:/*#__PURE__*/(0,jsx_runtime.jsx)(dist/* LiveProvider */.Q,Object.assign({code:execCode,noInline:noInline,transformCode:code=>changeToExecutableCode(code,isNodeJSEnv)+";",theme:prismTheme,scope:liveScope},props,{children:playgroundPosition==='top'?/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ResultWithHeader,{title:isNodeJSEnv?'VIRTUAL NODE IDE':'LIVE APP PREVIEW',codeEnv:codeEnv,hidden:hidden,code:execCode}),!hidden&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor',"data-highlight-regex-start":highlightRegexStart,"data-highlight-regex-end":highlightRegexEnd,children:/*#__PURE__*/(0,jsx_runtime.jsx)(EditorWithHeader,{code:displayCode,minimized:minimized,title:isNodeJSEnv?'VIRTUAL NODE IDE INNER':'REACT PLAYGROUND',codeEnv:codeEnv})})]}):/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[!hidden&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor',"data-highlight-regex-start":highlightRegexStart,"data-highlight-regex-end":highlightRegexEnd,children:/*#__PURE__*/(0,jsx_runtime.jsx)(EditorWithHeader,{code:displayCode,minimized:minimized,title:isNodeJSEnv?'VIRTUAL NODE IDE INNER':'REACT PLAYGROUND',codeEnv:codeEnv})}),/*#__PURE__*/(0,jsx_runtime.jsx)(ResultWithHeader,{title:isNodeJSEnv?'VIRTUAL NODE IDE':'LIVE APP PREVIEW',codeEnv:codeEnv,hidden:hidden,code:execCode})]})}))});}
-
-/***/ }),
-
-/***/ 411470:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ Tabs)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(618215);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
-var scrollUtils = __webpack_require__(823104);
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(956347);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsomorphicLayoutEffect.js
-var useIsomorphicLayoutEffect = __webpack_require__(300205);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/historyUtils.js
-var historyUtils = __webpack_require__(757485);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/jsUtils.js
-var jsUtils = __webpack_require__(231682);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/storageUtils.js + 1 modules
-var storageUtils = __webpack_require__(70679);
-;// ./node_modules/@docusaurus/theme-common/lib/utils/tabsUtils.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// A very rough duck type, but good enough to guard against mistakes while
-// allowing customization
-function isTabItem(comp){const{props}=comp;return!!props&&typeof props==='object'&&'value'in props;}function sanitizeTabsChildren(children){var _React$Children$toArr,_React$Children$toArr2;return(_React$Children$toArr=(_React$Children$toArr2=react.Children.toArray(children).filter(child=>child!=='\n').map(child=>{if(!child||/*#__PURE__*/(0,react.isValidElement)(child)&&isTabItem(child)){return child;}// child.type.name will give non-sensical values in prod because of
-// minification, but we assume it won't throw in prod.
-throw new Error("Docusaurus error: Bad <Tabs> child <"+(// @ts-expect-error: guarding against unexpected cases
-typeof child.type==='string'?child.type:child.type.name)+">: all children of the <Tabs> component should be <TabItem>, and every <TabItem> should have a unique \"value\" prop.");}))===null||_React$Children$toArr2===void 0?void 0:_React$Children$toArr2.filter(Boolean))!==null&&_React$Children$toArr!==void 0?_React$Children$toArr:[];}function extractChildrenTabValues(children){return sanitizeTabsChildren(children).map(_ref=>{let{props:{value,label,attributes,default:isDefault}}=_ref;return{value,label,attributes,default:isDefault};});}function ensureNoDuplicateValue(values){const dup=(0,jsUtils/* duplicates */.XI)(values,(a,b)=>a.value===b.value);if(dup.length>0){throw new Error("Docusaurus error: Duplicate values \""+dup.map(a=>a.value).join(', ')+"\" found in <Tabs>. Every value needs to be unique.");}}function useTabValues(props){const{values:valuesProp,children}=props;return (0,react.useMemo)(()=>{const values=valuesProp!==null&&valuesProp!==void 0?valuesProp:extractChildrenTabValues(children);ensureNoDuplicateValue(values);return values;},[valuesProp,children]);}function isValidValue(_ref2){let{value,tabValues}=_ref2;return tabValues.some(a=>a.value===value);}function getInitialStateValue(_ref3){var _tabValues$find;let{defaultValue,tabValues}=_ref3;if(tabValues.length===0){throw new Error('Docusaurus error: the <Tabs> component requires at least one <TabItem> children component');}if(defaultValue){// Warn user about passing incorrect defaultValue as prop.
-if(!isValidValue({value:defaultValue,tabValues})){throw new Error("Docusaurus error: The <Tabs> has a defaultValue \""+defaultValue+"\" but none of its children has the corresponding value. Available values are: "+tabValues.map(a=>a.value).join(', ')+". If you intend to show no default tab, use defaultValue={null} instead.");}return defaultValue;}const defaultTabValue=(_tabValues$find=tabValues.find(tabValue=>tabValue.default))!==null&&_tabValues$find!==void 0?_tabValues$find:tabValues[0];if(!defaultTabValue){throw new Error('Unexpected error: 0 tabValues');}return defaultTabValue.value;}function getStorageKey(groupId){if(!groupId){return null;}return"docusaurus.tab."+groupId;}function getQueryStringKey(_ref4){let{queryString=false,groupId}=_ref4;if(typeof queryString==='string'){return queryString;}if(queryString===false){return null;}if(queryString===true&&!groupId){throw new Error("Docusaurus error: The <Tabs> component groupId prop is required if queryString=true, because this value is used as the search param name. You can also provide an explicit value such as queryString=\"my-search-param\".");}return groupId!==null&&groupId!==void 0?groupId:null;}function useTabQueryString(_ref5){let{queryString=false,groupId}=_ref5;const history=(0,react_router/* useHistory */.W6)();const key=getQueryStringKey({queryString,groupId});const value=(0,historyUtils/* useQueryStringValue */.aZ)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
-}const searchParams=new URLSearchParams(history.location.search);searchParams.set(key,newValue);history.replace(Object.assign({},history.location,{search:searchParams.toString()}));},[key,history]);return[value,setValue];}function useTabStorage(_ref6){let{groupId}=_ref6;const key=getStorageKey(groupId);const[value,storageSlot]=(0,storageUtils/* useStorageSlot */.Dv)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
-}storageSlot.set(newValue);},[key,storageSlot]);return[value,setValue];}function useTabs(props){const{defaultValue,queryString=false,groupId}=props;const tabValues=useTabValues(props);const[selectedValue,setSelectedValue]=(0,react.useState)(()=>getInitialStateValue({defaultValue,tabValues}));const[queryStringValue,setQueryString]=useTabQueryString({queryString,groupId});const[storageValue,setStorageValue]=useTabStorage({groupId});// We sync valid querystring/storage value to state on change + hydration
-const valueToSync=(()=>{const value=queryStringValue!==null&&queryStringValue!==void 0?queryStringValue:storageValue;if(!isValidValue({value,tabValues})){return null;}return value;})();// Sync in a layout/sync effect is important, for useScrollPositionBlocker
-// See https://github.com/facebook/docusaurus/issues/8625
-(0,useIsomorphicLayoutEffect/* default */.A)(()=>{if(valueToSync){setSelectedValue(valueToSync);}},[valueToSync]);const selectValue=(0,react.useCallback)(newValue=>{if(!isValidValue({value:newValue,tabValues})){throw new Error("Can't select invalid tab value="+newValue);}setSelectedValue(newValue);setQueryString(newValue);setStorageValue(newValue);},[setQueryString,setStorageValue,tabValues]);return{selectedValue,selectValue,tabValues};}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
-var useIsBrowser = __webpack_require__(992303);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tabList":"tabList__CuJ","tabItem":"tabItem_LNqP"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function TabList(_ref){let{className,block,selectedValue,selectValue,tabValues}=_ref;const tabRefs=[];const{blockElementScrollPositionUntilNextRender}=(0,scrollUtils/* useScrollPositionBlocker */.a_)();const handleTabChange=event=>{const newTab=event.currentTarget;const newTabIndex=tabRefs.indexOf(newTab);const newTabValue=tabValues[newTabIndex].value;if(newTabValue!==selectedValue){blockElementScrollPositionUntilNextRender(newTab);selectValue(newTabValue);}};const handleKeydown=event=>{var _focusElement;let focusElement=null;switch(event.key){case'Enter':{handleTabChange(event);break;}case'ArrowRight':{var _tabRefs$nextTab;const nextTab=tabRefs.indexOf(event.currentTarget)+1;focusElement=(_tabRefs$nextTab=tabRefs[nextTab])!==null&&_tabRefs$nextTab!==void 0?_tabRefs$nextTab:tabRefs[0];break;}case'ArrowLeft':{var _tabRefs$prevTab;const prevTab=tabRefs.indexOf(event.currentTarget)-1;focusElement=(_tabRefs$prevTab=tabRefs[prevTab])!==null&&_tabRefs$prevTab!==void 0?_tabRefs$prevTab:tabRefs[tabRefs.length-1];break;}default:break;}(_focusElement=focusElement)===null||_focusElement===void 0||_focusElement.focus();};return/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{role:"tablist","aria-orientation":"horizontal",className:(0,clsx/* default */.A)('tabs',{'tabs--block':block},className),children:tabValues.map(_ref2=>{let{value,label,attributes}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)("li",Object.assign({// TODO extract TabListItem
-role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===value,ref:tabControl=>{tabRefs.push(tabControl);},onKeyDown:handleKeydown,onClick:handleTabChange},attributes,{className:(0,clsx/* default */.A)('tabs__item',styles_module.tabItem,attributes===null||attributes===void 0?void 0:attributes.className,{'tabs__item--active':selectedValue===value}),children:label!==null&&label!==void 0?label:value}),value);})});}function TabContent(_ref3){let{lazy,children,selectedValue}=_ref3;const childTabs=(Array.isArray(children)?children:[children]).filter(Boolean);if(lazy){const selectedTabItem=childTabs.find(tabItem=>tabItem.props.value===selectedValue);if(!selectedTabItem){// fail-safe or fail-fast? not sure what's best here
-return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
-// Temporary fix for https://github.com/facebook/docusaurus/issues/5653
-,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
 
 /***/ }),
 
@@ -1525,28 +1429,7 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 650477:
-/***/ (() => {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 715340:
-/***/ (() => {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 751069:
-/***/ (() => {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 754698:
+/***/ 615258:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1559,33 +1442,29 @@ __webpack_require__.d(__webpack_exports__, {
   contentTitle: () => (/* binding */ contentTitle),
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_03_build_08_reading_blockchain_state_mdx_acf_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_chain_03_important_concepts_mdx_af9_namespaceObject),
   toc: () => (/* binding */ toc)
 });
 
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-08-reading-blockchain-state-mdx-acf.json
-const site_docs_chain_03_build_08_reading_blockchain_state_mdx_acf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-reading-blockchain-state","title":"Reading Blockchain State","description":"Reading Blockchain State | Build | Push Chain Docs","source":"@site/docs/chain/03-build/08-Reading-Blockchain-State.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/reading-blockchain-state","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/reading-blockchain-state","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/08-Reading-Blockchain-State.mdx","tags":[],"version":"current","sidebarPosition":8,"frontMatter":{"id":"docs-chain-build-reading-blockchain-state","title":"Reading Blockchain State","hide_title":false,"slug":"./reading-blockchain-state","displayed_sidebar":"pushChainSidebar","sidebar_position":8,"image":"/assets/docs/previews/docs_chain_build--reading_blockchain_state.png"},"sidebar":"pushChainSidebar","previous":{"title":"Utility Functions","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/utility-functions"},"next":{"title":"Contract Helpers","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/contract-helpers"}}');
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-important-concepts-mdx-af9.json
+const site_docs_chain_03_important_concepts_mdx_af9_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/docs-chain-important-concepts","title":"Important Concepts","description":"Important Concepts | Push Chain Docs","source":"@site/docs/chain/03-Important-Concepts.mdx","sourceDirName":"chain","slug":"/chain/important-concepts","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/important-concepts","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-Important-Concepts.mdx","tags":[],"version":"current","sidebarPosition":3,"frontMatter":{"id":"docs-chain-important-concepts","title":"Important Concepts","hide_title":false,"slug":"./important-concepts","displayed_sidebar":"pushChainSidebar","sidebar_position":3,"image":"/assets/docs/previews/docs_chain--important_concepts.png"},"sidebar":"pushChainSidebar","previous":{"title":"Quickstart","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/quickstart"},"next":{"title":"Tutorials","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
 var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
 // EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
 var NodeJSVirtualIDE = __webpack_require__(891517);
-;// ./docs/chain/03-build/08-Reading-Blockchain-State.mdx
+;// ./docs/chain/03-Important-Concepts.mdx
 
 
 const frontMatter = {
-	id: 'docs-chain-build-reading-blockchain-state',
-	title: 'Reading Blockchain State',
+	id: 'docs-chain-important-concepts',
+	title: 'Important Concepts',
 	hide_title: false,
-	slug: './reading-blockchain-state',
+	slug: './important-concepts',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 8,
-	image: '/assets/docs/previews/docs_chain_build--reading_blockchain_state.png'
+	sidebar_position: 3,
+	image: '/assets/docs/previews/docs_chain--important_concepts.png'
 };
 const contentTitle = undefined;
 
@@ -1596,48 +1475,38 @@ const assets = {
 
 
 
-
-
 const toc = [{
-  "value": "Overview",
-  "id": "overview",
+  "value": "100% EVM Compatibility",
+  "id": "100-evm-compatibility",
   "level": 2
 }, {
-  "value": "Initialize HTTP Client",
-  "id": "initialize-http-client",
+  "value": "Wallet Integration Across Chains",
+  "id": "wallet-integration-across-chains",
   "level": 2
 }, {
-  "value": "Fetch a Transaction by Hash",
-  "id": "fetch-a-transaction-by-hash",
+  "value": "Fee Abstraction and Cross-Chain Execution",
+  "id": "fee-abstraction-and-cross-chain-execution",
   "level": 2
 }, {
-  "value": "Fetch Blocks",
-  "id": "fetch-blocks",
+  "value": "Universal Gateway (UG) Contracts",
+  "id": "universal-gateway-ug-contracts",
   "level": 2
 }, {
-  "value": "Latest Block",
-  "id": "latest-block",
-  "level": 3
-}, {
-  "value": "Block by Hash",
-  "id": "block-by-hash",
-  "level": 3
-}, {
-  "value": "Websocket Client",
-  "id": "websocket-client",
+  "value": "Account Types on Push Chain",
+  "id": "account-types-on-push-chain",
   "level": 2
 }, {
-  "value": "Initialize WebSocket Client",
-  "id": "initialize-websocket-client",
-  "level": 3
+  "value": "Understanding Universal Account",
+  "id": "understanding-universal-account",
+  "level": 2
 }, {
-  "value": "Subscribing to New Blocks",
-  "id": "subscribing-to-new-blocks",
-  "level": 3
+  "value": "Understanding Universal Signer",
+  "id": "understanding-universal-signer",
+  "level": 2
 }, {
-  "value": "Filtering New Blocks for Specific Transactions",
-  "id": "filtering-new-blocks-for-specific-transactions",
-  "level": 3
+  "value": "Chain Agnostic Address Examples",
+  "id": "chain-agnostic-address-examples",
+  "level": 2
 }, {
   "value": "Next Steps",
   "id": "next-steps",
@@ -1646,10 +1515,18 @@ const toc = [{
 function _createMdxContent(props) {
   const _components = {
     a: "a",
+    blockquote: "blockquote",
+    code: "code",
     h2: "h2",
-    h3: "h3",
     li: "li",
     p: "p",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
     ul: "ul",
     ...(0,lib/* useMDXComponents */.R)(),
     ...props.components
@@ -1658,451 +1535,317 @@ function _createMdxContent(props) {
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(Head, {
       children: (0,jsx_runtime.jsx)("title", {
-        children: "Reading Blockchain State | Build | Push Chain Docs"
+        children: "Important Concepts | Push Chain Docs"
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Before integrating the SDK, here are the core ideas you need to know to build truly universal dApps on Push Chain."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Deep dives and conceptual guides"
+        }), " live in our ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/knowledge",
+          children: "Knowledge Base"
+        }), "."]
+      }), "\n"]
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "overview",
-      children: "Overview"
+      id: "100-evm-compatibility",
+      children: "100% EVM Compatibility"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Push Chain is an EVM-compatible blockchain, so you can use familiar Ethereum tools to fetch on-chain data. This guide shows you how to:"
+      children: "Push Chain is an EVM-compatible Universal Layer 1 blockchain that runs any Solidity contract as-is. Your existing Ethereum dApp will work without touching a single byte of on-chain code."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "wallet-integration-across-chains",
+      children: "Wallet Integration Across Chains"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain introduces groundbreaking support for wallets from different Layer 1 blockchains, enabling them to transact directly on Push Chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Users can leverage their existing wallets, whether Ethereum-based (MetaMask), Solana-based (Phantom), or wallets from other chains, to execute transactions seamlessly on Push Chain. Under the hood, we:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Initialize HTTP client for one-off requests"
+        children: "Detect the source-chain wallet signature."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Fetch transactions and blocks"
+        children: "Map it to a Push Chain Universal Executor Account (UEA)."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Initialize WebSocket client for real-time streaming"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Subscribe to new blocks and filter for specific transactions"
+        children: "Route the transaction through our gateway onto Push Chain."
       }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Your users sign exactly as they do today;"
+      }), " Push Chain handles the cross-chain plumbing."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "fee-abstraction-and-cross-chain-execution",
+      children: "Fee Abstraction and Cross-Chain Execution"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "For full reference on each library, see:"
+      children: "Push Chain lets users execute contracts without holding $PC (Push Chain native token). Instead, users can initiate transactions from their source chains, such as Ethereum Sepolia or Solana Devnet, and pay gas fees in their native tokens like ETH or SOL."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "When a user signs a transaction from a source chain such as Ethereum Sepolia or Solana Devnet, the orchestrator deploys a smart wallet (UEA) on Push Chain for that user, locks the required gas fees in their native tokens, and executes the contract on Push Chain using the signed payload."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Your users interact exactly as they would on their home chain"
+      }), ", with no additional steps."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "universal-gateway-ug-contracts",
+      children: "Universal Gateway (UG) Contracts"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain uses a set of contracts to enable cross-chain transactions. These contracts are deployed on source chains from where the transactions originate and are used to route transactions from source chains to Push Chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "account-types-on-push-chain",
+      children: "Account Types on Push Chain"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "As an EVM-compatible Universal Layer 1 blockchain, Push Chain naturally supports standard Ethereum accounts:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://docs.ethers.org/",
-          children: "ethers.js documentation"
-        })
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://viem.sh/",
-          children: "viem documentation"
-        })
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Externally Owned Accounts (EOAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nStandard private-key-controlled addresses (e.g. MetaMask wallets)."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Smart Contract Accounts (Smart Accounts)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nOn-chain contracts that hold logic (e.g. multisigs, social recovery wallets)."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.p, {
+        children: "Additionally, Push Chain innovates by introducing:"
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Executor Accounts (UEAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nProxy accounts that represent external chain wallets ( users ) on Push Chain.\nUEAs let Ethereum, Solana, and other wallets execute Push Chain logic without the need for a native Push Chain wallet. This significantly enhances accessibility and overal UX."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Origin Accounts (UOAs)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nThe original source-chain wallet in chain agnostic address format that is behind each UEA.\nUOAs let you attribute activity back to the user’s home chain."]
+        }), "\n"]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "initialize-http-client",
-      children: "Initialize HTTP Client"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=ethers\.JsonRpcProvider
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
+      id: "understanding-universal-account",
+      children: "Understanding Universal Account"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalAccount"
+      }), " is a chain-agnostic way of representing a wallet address, designed to work seamlessly across multiple blockchain ecosystems."]
+    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+      repo: {
+        title: "Open in Github",
+        url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"
+      },
+      children: `
 
-  // HTTP JSON-RPC provider
-  const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  console.log('Ethers provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
+  // customPropHighlightRegexStart=PushChain\.utils\.account\.toUniversal
+  // customPropHighlightRegexEnd=(\\);|\\}\\);)
+  import { PushChain } from '@pushchain/core';
+
+  async function main() {
+    // Ethereum Sepolia
+    const ethereumAccount = PushChain.utils.account.toUniversal('0x742d35Cc6370C742Fc60f8b67da6c68F091C42b5', {
+      chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+    });
+
+    console.log(JSON.stringify(ethereumAccount, null, 2));
+
+    // Solana Testnet
+    const solanaAccount = PushChain.utils.account.toUniversal('ySYrGNLLJSK9hvGGpoxg8TzWfRe8ftBtDSMECtx2eJR', {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+    });
+
+    console.log(JSON.stringify(solanaAccount, null, 2));
+  }
+
+  await main().catch(console.error);
 
 `
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=createPublicClient\\(
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  // HTTP client
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  console.log('Viem client:', JSON.stringify(viemClient, null, 2));
-`
-        })
-      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "address"
+        }), " follows each chain’s format (EVM checksummed, Solana base58)."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "chain"
+        }), " is the identifier of the origin chain of an address (e.g. ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA"
+        }), " resolves to ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "eip155:11155111"
+        }), " for Sepolia)"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "UniversalAccount"
+        }), " return a ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#chain-agnostic-address-examples",
+          title: "Examples of chain agnostic address",
+          children: "chain agnostic address"
+        }), " format. It can be used to represent any address from any chain."]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "fetch-a-transaction-by-hash",
-      children: "Fetch a Transaction by Hash"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=provider\.getTransaction
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
+      id: "understanding-universal-signer",
+      children: "Understanding Universal Signer"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["A ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalSigner"
+      }), " extends ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalAccount"
+      }), " with signing capabilities."]
+    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+      repo: {
+        title: "Open in Github",
+        url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/custom-universal-signer"
+      },
+      children: `
 
-  const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const txHash  = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
+  // customPropHighlightRegexStart=PushChain\.utils\.signer\.toUniversal
+  // customPropHighlightRegexEnd=(\\);|\\}\\);)
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+  import { Keypair } from '@solana/web3.js';
 
-  const tx = await provider.getTransaction(txHash);
-  console.log(JSON.stringify(tx, null, 2));
+  async function main() {
+    // Ethereum Sepolia
+    const ethwallet = ethers.Wallet.createRandom();
+    const ethprovider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co');
+    const signer = ethwallet.connect(ethprovider);
+
+    const universalSignerFromEth = await PushChain.utils.signer.toUniversal(signer);
+
+    // Solana Testnet
+    const solKeypair = Keypair.generate();
+
+    const universalSignerFromSol = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET,
+      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    });
+
+    console.log(JSON.stringify(universalSignerFromEth, null, 2));
+    console.log(JSON.stringify(universalSignerFromSol, null, 2));
+  }
+
+  await main().catch(console.error);
 
 `
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getTransaction
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const txHash = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
-
-  const tx = await viemClient.getTransaction({ hash: txHash });
-  console.log(JSON.stringify(tx, null, 2));
-`
-        })
-      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "signer"
+        }), " is the signer object from the library you are using (e.g. ethers, viem, solana-web3.js)"]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "fetch-blocks",
-      children: "Fetch Blocks"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "latest-block",
-      children: "Latest Block"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-
-  // customPropHighlightRegexStart=provider\.getBlock
-  // customPropHighlightRegexEnd=\\);
-  import { ethers } from 'ethers';
-
-  const provider   = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const latestBlock = await provider.getBlock('latest');
-  console.log(JSON.stringify(latestBlock, null, 2));
-
-`
+      id: "chain-agnostic-address-examples",
+      children: "Chain Agnostic Address Examples"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Chain"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Network"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "CAIP-10 Identifier"
+          })]
         })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient   = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const latestBlock  = await viemClient.getBlock();
-  console.log(JSON.stringify(latestBlock, null, 2));
-`
-        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Mainnet (1)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:1:0x742d35Cc6370C742Fc60f8b67da6c68F091C42b5"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Sepolia Testnet(11155111)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:11155111:0x5FbDB2315678afecB367f032d93F642f64180aa3"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Mainnet-Beta"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp:9xQeWvGFvPEZZY3Yvj5V14xi4tYmEXjfSDrm5sVqTvcAg"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "Testnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z:7fCAbbLejF64HTZ39rjFBUXJEMYT9z7d6NM6ovaoyNaW"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Cosmos"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "cosmoshub-4"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "cosmos:cosmoshub-4:cosmos1sk8uyz4u6zmxus3aurayrjyvfgtytvpnr685ur"
+            })
+          })]
+        })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "block-by-hash",
-      children: "Block by Hash"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=provider\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
-
-  const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const blockHash = '0x59d41d93c7090255a7525d914d0ee2c399a3b6871b06b84e7088e78f540d2cfb';
-
-  const block = await provider.getBlock(blockHash);
-  console.log(JSON.stringify(block, null, 2));
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const blockHash = '0x59d41d93c7090255a7525d914d0ee2c399a3b6871b06b84e7088e78f540d2cfb';
-
-  const block = await viemClient.getBlock({ blockHash });
-  console.log(JSON.stringify(block, null, 2));
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "websocket-client",
-      children: "Websocket Client"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "initialize-websocket-client",
-      children: "Initialize WebSocket Client"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=const ws = new ethers\.Web
-  // customPropHighlightRegexEnd=\\);
-  import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-
-  console.log('Connection Opened!');
-
-  ws.on('block', async (blockNumber) => {
-    console.log("Block produced: ", blockNumber);
-  });
-
-  // Stop after 10s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-
-  // customPropHighlightRegexStart=createPublicClient\\(
-  // customPropHighlightRegexEnd=\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  console.log('Connection Opened!');
-
-  const stop = client.watchBlocks({
-    onBlock: (b) => console.log("Block produced: ", b.number),
-    onError: console.error,
-  });
-
-  // Stop after 10s
-  setTimeout(stop, 10000);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "subscribing-to-new-blocks",
-      children: "Subscribing to New Blocks"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=ws\.on
-  // customPropHighlightRegexEnd=}\\);
-  import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-
-  console.log('Connection Opened!');
-  ws.on('block', async (blockNumber) => {
-    console.log("Block produced: ", blockNumber);
-  });
-
-  // Stop after 10s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=client\.watchBlocks
-  // customPropHighlightRegexEnd=}\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  const stop = client.watchBlocks({
-    onBlock: (b) => console.log("Block produced: ", b.number),
-    onError: console.error,
-  });
-
-  // Stop after 10s
-  setTimeout(stop, 10000);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "filtering-new-blocks-for-specific-transactions",
-      children: "Filtering New Blocks for Specific Transactions"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=ws\.on
-// customPropHighlightRegexEnd=}\\);
-import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const watchedAddress = '0x0000000000000000000000000000000000042101';
-
-  console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
-
-  ws.on('block', async (blockNumber) => {
-    const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org');
-    const block = await provider.getBlock(blockNumber, true);
-
-    if (block && block.transactions) {
-      const txs = await Promise.all(block.transactions.map(hash => block.getTransaction(hash)));
-
-      txs
-        .filter((tx) => tx.to === watchedAddress)
-        .forEach((tx) => console.log('Tx detected →', tx.hash));
-
-      console.log("Block produced: ", blockNumber);
-    }
-  });
-
-  // Stop after 20s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=viemClient\.watchBlocks
-  // customPropHighlightRegexEnd=}\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  const watchedAddress = '0x0000000000000000000000000000000000042101';
-
-  console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
-
-  const stop = client.watchBlocks({
-    onBlock: async (block) => {
-      console.log('Block produced: ', block.number)
-
-      for (const txHash of block.transactions) {
-        try {
-          const tx = await client.getTransaction({ hash: txHash })
-          // Check if transaction is from watched address
-          if (tx.to?.toLowerCase() === watchedAddress.toLowerCase()) {
-            console.log('Tx detected →', tx.hash)
-          }
-        } catch (error) {
-          console.error('Error fetching transaction:', txHash, error)
-        }
-      }
-    },
-  });
-
-  // Stop after 20s
-  setTimeout(stop, 20000);
-`
-        })
-      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["The addresses are inspired from ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md",
+          title: "Link to caip-10 proposal",
+          children: "caip-10"
+        }), " format."]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "next-steps",
       children: "Next Steps"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Dive into our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/build/contract-helpers",
-          children: "Contract Helpers"
-        }), " to detect and work with both cross-chain accounts and native Push Chain smart accounts."]
+        children: ["Setup your ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/",
+          children: "Environment and Tooling"
+        })]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Use our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/ui-kit",
+        children: ["See SDK reference in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/",
+          children: "Build"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Try your first transaction in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/send-universal-transaction",
+          children: "Send Transaction"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Integrate and abstract implementation and UI via ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit/",
           children: "UI Kit"
-        }), " to abstract away wallet and chain logic and accelerate your front-end development."]
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Follow a full walkthrough in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/tutorials/",
+          children: "Tutorials"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Dive deeper in the ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://push.org/knowledge/",
+          children: "Knowledge Base"
+        })]
       }), "\n"]
     })]
   });
@@ -2124,6 +1867,27 @@ function _missingMdxReference(id, component) {
 }
 
 
+
+/***/ }),
+
+/***/ 650477:
+/***/ (() => {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 715340:
+/***/ (() => {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 751069:
+/***/ (() => {
+
+/* (ignored) */
 
 /***/ }),
 

@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[92630],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[57634],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -316,17 +316,6 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 87768:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBlZmQ5NjEtYTM1ZC00ODZiLTlmNDQtOTc1NTkzOGRiM2E4IiB4bXBNTTpEb2N1bWVudElE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");
-
-/***/ }),
-
 /***/ 91053:
 /***/ (() => {
 
@@ -405,25 +394,90 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
-/***/ 311100:
+/***/ 303547:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   A: () => (/* binding */ PushAPIReference)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNyswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNyswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YmYxMGFmM2EtODMxYS00OGVkLWE4ZGMtMGUxMGMwZjQyOGE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmJmMTBhZjNhLTgzMWEtNDhlZC1hOGRjLTBlMTBjMGY0MjhhNSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmJmMTBhZjNhLTgzMWEtNDhlZC1hOGRjLTBlMTBjMGY0MjhhNSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YmYxMGFmM2EtODMxYS00OGVkLWE4ZGMtMGUxMGMwZjQyOGE1IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7Cp82yAAAEBElEQVRIx+2WW2hcRRzGv//MnLPXs5vdZLebJU1WK41F8CVYbUCllV6keMFq076JESoYQSgB6WIptqhQraIiFilFEKvUC4UipKJQGm+0Fi9gS2tL0mSz2Wza3c3unr2cOTM+xApqIg0hb/2/zuU3833ff86h4h9bsFSlQIaAbi4hAFoADEtYbEl3B5b4+DcBNwE3AbMlbnCeK3U0JtDCoeHmZanocoO0ghAItgn4GTQAoOQWCy4AooUACPAF2ZmztUtXHEa4c5Wns8uszbjhCOchfma4eubXml3XrRG+rjewfJWnMiEdR88+QzcGIPhi4oN9U+8cnAbo0FvJ7rt8BDBB6d2Thz8uFsuuK2GalFwmXhqM9z0eruSlqxfkgQsrwIIRHo1zr4dBw9vK9789/fKBvNdLsai4tdNoCbPctNzWP3r8+EwwaSzYZMbAOXFORIDB85eaR7+ciSdEKMj2p+PHPrulvy9CwHM72rpXeuold2Em/1e27JSsVJV0keowt/bHAEoPsI33B9bcG0BdX5uWXCwqpjoe5X4f83np3KXGwQM5lJpGh7lmk1XOycI1lwtaXB9IlVjpWXuPP5OVhqD0/qnN20cPv5u3xxwrZZoGKbXIRpNaVtTuwfjD661zFxtBPzv7W31gV3bdttFjnxQD7cLjJa0XAyCUp2Uowr84vPzV9LJohJcrbmtUjGWcLf1jh96/6o8LfiM3IALNN8SplJOMYzAdP/FR55t727sSgnNKdRp7Xs+f/6lmtfH/AyhXhy0W6jL9PqYcDQbDIK2hNVwFaB2yWLhdwIWckG0h/vRAbOjTVG+Pr9HUxRk1fNqGxaHnAWipI0ljpqL27Mpmck74dj+8wrYVEZQGJ4Czkq32vTLV98w4CEgYKEt/MtDb479WdEGw62pWybn7IJQ0hr4qP//i5PnfGxdGmjt3InOh/s131bYot2t6ZcqEwZ59IXvkaCHQYmwfyOx4MhKPiV9+Lnz4ebEjYUzm5W2dJqSet9EYg2B0edRpTYhTp+1vt45IjWCAXb7i9G0O9az2a9vd/lj46+Fqw8HJH6rDP9rBECuV3ICfjYw7TzwY2rDeauQlIOaWqDThPLDJGj6W6l5hVqo6X3JLZTVdcB/dYL2xNwGgPNZ8aEvL0JGu++72GwZV6yoz4dSb2pF4amvLe6+1C4NsWwGg4sVH5vBAg4DwcqM2JYdOVsYnJGNYkTI3rg3CoELWIU4EhDsM2OrU99ULl5u2rYMBdke3ubo3AEcXcpIJDTLmBsxClIJlMdEq/oqCRD0vazXF+Gx0tVLweZk3yuEhaICAmq5elU1HM0bX/67nCzoR46jagC3/YQ//W1ViDI0mGpPuv1YyRtc/VPQnsQ2xzdpLMKEAAAAASUVORK5CYII=");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21532);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+/**
+ * PushAPIReference component for rendering API documentation with consistent styling
+ *
+ * @param children - The content to display within the API reference section
+ * @param showRequiredNotice - Whether to show the required notice (default: true)
+ * @param className - Additional CSS classes to apply
+ */function PushAPIReference(_ref){let{children,showRequiredNotice=true,className=''}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(ReferenceContainer,{className:className,children:[showRequiredNotice&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(RequiredNotice,{hasNotice:showRequiredNotice,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p",{children:["These",/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("code",{children:"Arguments"}),"are mandatory"]})}),children]});}const ReferenceContainer=styled_components__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Ay.div.withConfig({displayName:"PushAPIReference__ReferenceContainer",componentId:"sc-1g1yayv-0"})([""]);const RequiredNotice=styled_components__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Ay.div.withConfig({displayName:"PushAPIReference__RequiredNotice",componentId:"sc-1g1yayv-1"})(["border-radius:var(--ifm-global-radius);margin-bottom:-8px;padding:12px 12px 20px 12px;text-align:end;border-bottom-left-radius:0;border-bottom-right-radius:0px;color:var(--ifm-navbar-dropdown-subtext);font-size:0.875rem;font-weight:400;line-height:188.571%;code{background:transparent;padding:2px 9px;display:inline-block !important;border-radius:12px;border:1px solid var(--ifm-sidebar-activetext-color);color:var(--ifm-color-primary-text);font-family:'Fira Code';font-weight:600;line-height:165%;margin:0px 4px;}"]);
 
 /***/ }),
 
-/***/ 314199:
+/***/ 303999:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZmUxN2M2YTMtZTc1MS00NWVlLTgzNTQtMDQwZmJmNjc4YjFhIiB4bXBNTTpEb2N1bWVudElE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");
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ Details_Details)
+});
+
+;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
+function _objectDestructuringEmpty(t) {
+  if (null == t) throw new TypeError("Cannot destructure " + t);
+}
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(198587);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
+var dist_clsx = __webpack_require__(15066);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBrokenLinks.js + 1 modules
+var useBrokenLinks = __webpack_require__(163427);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
+var Collapsible = __webpack_require__(41422);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
+const _excluded=["summary","children"];/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
+ * A mostly un-styled `<details>` element with smooth collapsing. Provides some
+ * very lightweight styles, but you should bring your UI.
+ */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);(0,useBrokenLinks/* default */.A)().collectAnchor(props.id);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
+// only after animation completes, otherwise close animations won't work
+const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
+if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
+const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
+// setOpen(false);
+}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
+,collapsed:collapsed,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */// Should we have a custom details/summary comp in Infima instead of reusing
+// alert classes?
+const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
 
 /***/ }),
 
@@ -461,14 +515,12 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}function loadClientSideLibraryMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(360737)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideLibraryBigNumber(constantName){return typeof window!=='undefined'?__webpack_require__(461594)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
+}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
 ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
-SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight'),MerkleTree:loadClientSideLibraryMerkleTree('MerkleTree'),BigNumber:loadClientSideLibraryBigNumber('BigNumber')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
+SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
 
 /***/ }),
 
@@ -601,573 +653,6 @@ role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===v
 return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
 // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
 ,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
-
-/***/ }),
-
-/***/ 414723:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/reactNative@2x-e1351e83b48fbbccde989c8fa295e358.png");
-
-/***/ }),
-
-/***/ 436873:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_01_intro_push_chain_mdx_559_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
-
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-intro-push-chain-mdx-559.json
-const site_docs_chain_01_intro_push_chain_mdx_559_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/introduction","title":"Intro to Push Chain","description":"Introduction | Push Chain Docs","source":"@site/docs/chain/01-Intro-Push-Chain.mdx","sourceDirName":"chain","slug":"/chain/","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-Intro-Push-Chain.mdx","tags":[],"version":"current","sidebarPosition":1,"frontMatter":{"id":"introduction","title":"Intro to Push Chain","hide_title":false,"slug":"./","displayed_sidebar":"pushChainSidebar","sidebar_position":1,"image":"/assets/docs/previews/introduction--intro_to_push_chain.png"},"sidebar":"pushChainSidebar","next":{"title":"Quickstart","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/quickstart"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
-var NodeJSVirtualIDE = __webpack_require__(891517);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ThemedImage/index.js + 2 modules
-var ThemedImage = __webpack_require__(721122);
-;// ./docs/chain/01-Intro-Push-Chain.mdx
-
-
-const frontMatter = {
-	id: 'introduction',
-	title: 'Intro to Push Chain',
-	hide_title: false,
-	slug: './',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 1,
-	image: '/assets/docs/previews/introduction--intro_to_push_chain.png'
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-
-
-
-
-
-
-
-const toc = [{
-  "value": "Hello Push Chain 👋",
-  "id": "hello-push-chain-",
-  "level": 2
-}, {
-  "value": "Key Innovations (Why Push Chain)",
-  "id": "key-innovations-why-push-chain",
-  "level": 2
-}, {
-  "value": "Why Build on Push Chain?",
-  "id": "why-build-on-push-chain",
-  "level": 2
-}, {
-  "value": "Developer SDKs",
-  "id": "developer-sdks",
-  "level": 2
-}, {
-  "value": "Experience Push Chain",
-  "id": "experience-push-chain",
-  "level": 2
-}, {
-  "value": "Next Steps",
-  "id": "next-steps",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    em: "em",
-    h2: "h2",
-    li: "li",
-    ol: "ol",
-    p: "p",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: "Introduction | Push Chain Docs"
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Push Chain is the first ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "True Universal Layer 1"
-      }), " blockchain, built as a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "100% EVM-compatible"
-      }), " Proof of Stake (PoS) chain. It runs seamlessly across every chain and wallet."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Write your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "Ready to build?"
-      }), " ", (0,jsx_runtime.jsx)("br", {})]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Follow our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/quickstart",
-          children: "Quickstart"
-        }), " to deploy your app in minutes. ", (0,jsx_runtime.jsx)("br", {})]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Explore core abstractions in ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/important-concepts",
-          children: "Important Concepts"
-        }), ". ", (0,jsx_runtime.jsx)("br", {})]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)("p", {
-      children: (0,jsx_runtime.jsx)(ThemedImage/* default */.A, {
-        alt: "Diagram to show how an existing EVM or non-EVM application can be deployed on Push Chain to instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.",
-        sources: {
-          light: (__webpack_require__(757244)["default"]),
-          dark: (__webpack_require__(515468)["default"])
-        }
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "hello-push-chain-",
-      children: "Hello Push Chain 👋"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      groupId: "code-examples",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "pushchain",
-        label: "Ethers (v6) Push Chain",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
-          },
-          children: `
-  // customPropHighlightRegexStart=PushChain\.initialize
-  // customPropHighlightRegexEnd=}\\)
-  // Import Push Chain SDK and Ethers
-  // You can use other library like veim, etc
-  import { PushChain } from '@pushchain/core';
-  import { ethers } from 'ethers';
-
-  async function main() {
-    // 1. Connect to a provider (e.g., Push Chain RPC URL)
-    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-
-    // 2. Create a random wallet (or use your own private key)
-    const wallet = ethers.Wallet.createRandom(provider);
-
-    // 3. Convert ethers signer to Universal Signer
-    // Most popular libraries can pass just the signer to get universal signer
-    // Or use PushChain.utils.signer.construct to create a custom one
-    const universalSigner = await PushChain.utils.signer.toUniversal(wallet);
-
-    // Initialize Push Chain SDK for use from Push Chain account
-    const pushChainClient = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-    });
-
-    console.log(JSON.stringify(pushChainClient, null, 2));
-  }
-
-  await main().catch(console.error);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6) Sepolia",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples"
-          },
-          children: `
-  // customPropHighlightRegexStart=PushChain\.initialize
-  // customPropHighlightRegexEnd=}\\)
-  // Import Push Chain SDK and Ethers
-  // You can use other library like veim, etc
-  import { PushChain } from '@pushchain/core'
-  import { ethers } from 'ethers'
-
-  async function main() {
-    // 1. Connect to a provider (e.g., Push Chain RPC URL)
-    const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co')
-
-    // 2. Create a random wallet (or use your own private key)
-    const wallet = ethers.Wallet.createRandom(provider)
-
-    // 3. Convert ethers signer to Universal Signer
-    // Most popular libraries can pass just the signer to get universal signer
-    // Or use PushChain.utils.signer.construct to create a custom one
-    const universalSigner = await PushChain.utils.signer.toUniversal(wallet)
-
-    // Initialize Push Chain SDK for use from Push Chain account
-    const pushChainClient = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-    })
-
-    console.log(JSON.stringify(pushChainClient, null, 2))
-  }
-
-  await main().catch(console.error)
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples"
-          },
-          children: `
-  // customPropHighlightRegexStart=PushChain\.initialize
-  // customPropHighlightRegexEnd=}\\)
-  // Import Push Chain SDK and Viem
-  // You can use other library like ethers, etc
-  import { PushChain } from '@pushchain/core';
-  import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts'
-  import { createWalletClient, http } from 'viem'
-  import { sepolia } from 'viem/chains'
-
-  async function main() {
-    // 1. Construct account
-    const account = privateKeyToAccount(generatePrivateKey())
-
-    // 2. Initialize signer
-    const signer = createWalletClient({
-      transport: http('https://sepolia.gateway.tenderly.co'), // or your preferred RPC URL
-      chain: sepolia,
-      account, // <-- our signer
-    })
-
-    // 3. Convert signer to Universal Signer
-    // Most of the popular libraries can pass just the signer to get universal signer
-    // Or use PushChain.utils.signer.construct to create a custom one
-    const universalSigner = await PushChain.utils.signer.toUniversal(signer)
-
-    // Initialize Push Chain SDK for use from Ethereum account
-    const pushChainClient = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-    })
-
-    console.log(JSON.stringify(pushChainClient, null, 2))
-  }
-
-  await main().catch(console.error);
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "solana_web3js",
-        label: "Solana (Web3 JS)",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples"
-          },
-          children: `
-  // customPropHighlightRegexStart=PushChain\.initialize
-  // customPropHighlightRegexEnd=}\\)
-  // Import Push Chain SDK and Solana Web3.js
-  // You can use other library like @solana/kit, etc
-  import { PushChain } from '@pushchain/core';
-  import { Keypair } from '@solana/web3.js';
-
-  async function main() {
-    // 1. Generate or import your Solana keypair
-    const solKeypair = Keypair.generate()
-
-    // 2. Convert the Solana Keypair into a Push Chain universal signer.
-    //    We use the helper toUniversalFromKeypair, which internally builds
-    //    the necessary adapter (signTransaction, signMessage).
-    const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
-      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
-      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
-    })
-
-    // 3. Initialize Push Chain SDK
-    const pushChainClient = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-    })
-
-    console.log(JSON.stringify(pushChainClient, null, 2))
-  }
-
-  await main().catch(console.error);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "key-innovations-why-push-chain",
-      children: "Key Innovations (Why Push Chain)"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Push Chain provides a unified toolkit to build truly universal dApps. Without custom bridges or multi-chain deployments, you gain:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Zero EVM Code Changes"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nDeploy your existing Solidity contract on Push Chain without modifying ABI, bytecode, or on-chain logic."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Single Transaction from any Chain"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nSend transactions from any chain to Push Chain with just a single transaction, massively reducing the complexity of multi-chain users interaction."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Wallet Abstraction"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nSupport MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet simply to access your dApp."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Universal Fee Abstraction"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nAllow users to pay gas fees in their native tokens (for example ETH or SOL). Push Chain automatically routes fees so users do not have to bridge or hold $PC tokens (native token of Push Chain)."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Universal Smart Contracts and Cross-Chain Mapping"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nContracts on Push Chain automatically recognize addresses from Ethereum, Solana, and other chains and ", (0,jsx_runtime.jsx)(_components.strong, {
-            children: (0,jsx_runtime.jsx)(_components.em, {
-              children: "natively attribute transactions"
-            })
-          }), " to the correct chain."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Shared State and Programmable Solvers (Roadmap)"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nRead from and write to external chains and coordinate multi-chain workflows using a distributed solver network (coming soon)."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "why-build-on-push-chain",
-      children: "Why Build on Push Chain?"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Building on Push Chain delivers immediate benefits for developers and users:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Expand Your Userbase Instantly"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nDeploy your existing EVM or non-EVM application on Push Chain without any on-chain code changes. Users on Ethereum, Solana, and other supported chains can access your dApp right away."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Avoid Audit Friction"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nSince you do not modify your Solidity code, there is no need for a full re-audit. Simply deploy on Push Chain and use our SDKs to enable universal access."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Deliver a Unified, Seamless UX"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nOne application, any wallet. Users can connect with MetaMask, Phantom, or a social/email login and pay gas fees in their native token (for example ETH or SOL). No bridges or extra steps required."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Simplify Fee Management"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nPush Chain automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Future-Proof Your Application"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nShared state and programmable solvers (coming soon) enable multi-chain read and write operations. Your dApp can orchestrate cross-chain workflows without building separate adapters."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Consistent Developer Tooling"
-          }), (0,jsx_runtime.jsx)("br", {}), "\nUse one SDK, one set of JSON-RPC endpoints, and a unified API to build and deploy. Whether you prefer Viem, ethers, or our Push Chain client, the experience is the same across languages and frameworks."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "developer-sdks",
-      children: "Developer SDKs"
-    }), "\n", (0,jsx_runtime.jsxs)(SharedStyling/* ModalContainer */.Bs, {
-      children: [(0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
-        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
-        children: [(0,jsx_runtime.jsx)("img", {
-          src: (__webpack_require__(311100)/* ["default"] */ .A),
-          srcSet: `${(__webpack_require__(884876)/* ["default"] */ .A)} 2x, ${(__webpack_require__(314199)/* ["default"] */ .A)} 3x`,
-          alt: "Image representation of Javascript SDK of Push Protocol"
-        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
-          children: (0,jsx_runtime.jsxs)("span", {
-            children: [(0,jsx_runtime.jsx)(_components.p, {
-              children: "Javascript"
-            }), (0,jsx_runtime.jsx)("svg", {
-              width: "20",
-              height: "28",
-              viewBox: "0 0 29 28",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              children: (0,jsx_runtime.jsx)("path", {
-                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
-                stroke: "#A0A3B1",
-                "stroke-width": "2",
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round"
-              })
-            })]
-          })
-        })]
-      }), (0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
-        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
-        children: [(0,jsx_runtime.jsx)("img", {
-          src: (__webpack_require__(740688)/* ["default"] */ .A),
-          srcSet: `${(__webpack_require__(798744)/* ["default"] */ .A)} 2x, ${(__webpack_require__(548995)/* ["default"] */ .A)} 3x`
-        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
-          children: (0,jsx_runtime.jsxs)("span", {
-            children: [(0,jsx_runtime.jsx)(_components.p, {
-              children: "React"
-            }), (0,jsx_runtime.jsx)("svg", {
-              width: "20",
-              height: "28",
-              viewBox: "0 0 29 28",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              children: (0,jsx_runtime.jsx)("path", {
-                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
-                stroke: "#A0A3B1",
-                "stroke-width": "2",
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round"
-              })
-            })]
-          })
-        })]
-      }), (0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
-        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
-        children: [(0,jsx_runtime.jsx)("img", {
-          src: (__webpack_require__(762273)/* ["default"] */ .A),
-          srcSet: `${(__webpack_require__(414723)/* ["default"] */ .A)} 2x, ${(__webpack_require__(87768)/* ["default"] */ .A)} 3x`
-        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
-          children: (0,jsx_runtime.jsxs)("span", {
-            children: [(0,jsx_runtime.jsx)(_components.p, {
-              children: "React Native"
-            }), (0,jsx_runtime.jsx)("svg", {
-              width: "20",
-              height: "28",
-              viewBox: "0 0 29 28",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-              children: (0,jsx_runtime.jsx)("path", {
-                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
-                stroke: "#A0A3B1",
-                "stroke-width": "2",
-                "stroke-linecap": "round",
-                "stroke-linejoin": "round"
-              })
-            })]
-          })
-        })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "experience-push-chain",
-      children: "Experience Push Chain"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "To get started with Push Chain, you can:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsxs)(_components.strong, {
-            children: ["Visit ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/examples/send-transaction-example/",
-              children: "Send Transaction Example"
-            })]
-          }), " to interact directly.\n", (0,jsx_runtime.jsx)(_components.em, {
-            children: "You can log in with your existing wallet, email, or social accounts."
-          })]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Use our live playgrounds"
-          }), " to experiment with code within our documentation."]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-          children: [(0,jsx_runtime.jsx)(_components.strong, {
-            children: "Deep dive into Push Chain"
-          }), " fundamentals, how it works, and developer resources in our comprehensive ", (0,jsx_runtime.jsx)(_components.a, {
-            href: "https://push.org/knowledge"
-          }), "."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "next-steps",
-      children: "Next Steps"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Explore core abstractions in ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/important-concepts",
-          children: "Important Concepts"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Jump to Frontend Integration via ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/ui-kit/integrate-push-universal-wallet/",
-          children: "UI Kit"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Try a full-app walkthrough in ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/tutorials/",
-          children: "Tutorials"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["For deep dives visit our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://push.org/knowledge/",
-          children: "Knowledge Base"
-        })]
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
 
 /***/ }),
 
@@ -2118,29 +1603,6 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 515468:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/unichain_dark-dad5437ea59fe1b20511f58f0190f698.webp");
-
-/***/ }),
-
-/***/ 548995:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBlZmQ5NjEtYTM1ZC00ODZiLTlmNDQtOTc1NTkzOGRiM2E4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjcwZWZkOTYxLWEzNWQtNDg2Yi05ZjQ0LTk3NTU5MzhkYjNhOCIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjcwZWZkOTYxLWEzNWQtNDg2Yi05ZjQ0LTk3NTU5MzhkYjNhOCI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NzBlZmQ5NjEtYTM1ZC00ODZiLTlmNDQtOTc1NTkzOGRiM2E4IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7Gw6xBAAAfEklEQVR42u19aYAU1dX2c6pu9bAMojHuyuJM1bBEMXGJ+0pMom/ccQvL9ICjH8a4R19FWUQSl6iJIVHCdLWgSMAXNe5KUBEkKqioMPSCAy6IGwozwkzXcr4fXeBM961eZrobGOf8m6qeWu596t5zzn3Oc4mZ0WU/XKMuAHQBoKsVugDQZV0A6LIuAHRZFwC6rAsAXfaDAwARbdeHGLaCA70CzlkM9xww/QRAJYCyVj/ZQMA7TFgI4FVto3h92mFk7UgNWbuUNau3fTQDJxJwPBiHAPhRq580A4gT+AOXlHnfJdQn5w6mxPZ8Zmbe/gCojtkjiN3JAPXJ/cmxnoGwqjp1dZXd4tuzEUfWNxuqqo4GMArAXnm0/lpWlFvCupj5gwTA2BVc3hywZzLjrA69A/AswOPCRuDdUj7/qHjiUNWhyUz4JYCONOA8e4sYOXMIffeDAcCwj7l7+Rb7ZQA/L9S7gHgOK+4t4YpusWI+e82q5ioo6m0MnNfBjm9tS1gTJ4f7U/MPAgDBqF0HcE0RLm0RcE9PEuPv16ml0HN8ord9DTEmAQgUwRmbGaoKjOz0AKiJJi5j0D98TrsAniXCYhe0mlwoRO5uYOUgJj4RwMAcv7oPAB5jGoE3CgLYuHU0XEz37p99NAJWMtErCrsfgJQNLsAKuIIZxwA4DYAiBQH40pARmNZpAfDbGO8SYLshxTveau8qijuirrLsA1+HazX3UW17NAg1APbPcjuHgSnf6WLiXCKnXVMVs9orbk9ixo1+ndaqOT9iohCRCJmV9LGv01vfchCpykwAQySnv+5uiX5/H0xNnRIA1RHrJiLcLjm1glxxVGgANebaMT3jzsVgTCRw/8xjKxaoqrh4+oH0eV5D/krexxL2LAAnZhm84wyM76ersycQuXl8CEsADErrFMKNYV27o9MB4IoYlzWx/QmAH6ec2uI4ziEzBnaLtit/IKxLmGiSz6iydUz+jAgXmbr2ak7TVNw6iR3MAmHvDD/7msDjxCatrj05iZpVzVWsqO8C6JZy6ssmS+xfihxBSQEQjFm/BON5yam/moZ2ZUeuPeZD3su1rLuYaESGn9kEviJkBB7InJdI1BDTAwA0/0EFcy1F/G5mJX3RwRzI34j58jRHiDH0oSrtP50LAFHrPgBXpjl9iuiXac7M66uK2Gcz8YMA9sjws9tNXdwCIk5pDaqJ2X9k4IYM//sFE40J6+KpQjzv6JXc1xV2Q5pjy7jXrNKu6WwAiALQUw6/ZRraEYW8z5gY7++w/SiAYzO8+qPlpAW3horVDdxNsewZDAzLMI0sVFxxUWgArStsVGQtZeDQlMMR09AGdBoAjF3B5Vs0e5ME6ZPMKm18oe834WUWa/azpxBwXYaw8YWm7uLsbhugaN3tJxk4xa+dCLizz6di3ISTyC7Ch3EbgHGp99TKRfm0fWlzpwDA6Fjipy7T25LZ9DemIZ4uXs7BPpfBMwF09/msX4cCC4wTfC7RwqCasCFmFc83ss8E8xNpj+a4B4cHlr3fKQAQjNgXgHh2WqDuOFXt8f7zc7QSRxLTkwD2zPNfv2bG2eEq7bXiOsctg8DKinRHk84LGeL/OgcAotZ1AO5K9cq1TaJHKZZ1R8ebK11XfVbig/hZhOCcFjK6fVii8HhzWqKJ+BpTD9zbKQBQE7EmMGF8Sij1TcjQfoQS2Yg476m69ksEHJzlpys1WwydNog+K9WzBaNWE4CeKYdvMQ1tcmcZAe4A8IeUw+tMQ9sPJbQRcd5TZTtCjF19frKRLTEgPJjWl/K5glHri9TQlQhTQrp2c+cYAaL2Xxl8RcosFzcNoZeqkScwKx/FrEcYdGGWZpnVV9dG5JrWLQwAEg0A9St1LqCUI8BfAPy+7ftRQ9gQB5bwK5MloqRGhHtCunZtCQGwNo0R1ckAMBlA6nD2lWloe5SigasjiUuIKK9lVia+PKwH/l4icH4DtJ2WiDExVKVN6BQAqI5ZNxDjT6kxtmlo3YreuMk1iKcBCEkvr02+vCvjIzoAnVXMPEUrAFipz0eM60JV2p87CQASY4lpatoDaKJ7MWlQ3tr7IgC7SE6vU137WBakuq66CHJC50ZFcY/NxFHosGO6nHuK7rZk/Z8vM43Ag50EAPYwYp6T9gCqYxSLwzeynndXVWtpmnOVtO9chU94qDKwDABGRxJHuESvQJIxZFCDaqmH1Q2mDcWZnloGECn1kvueGzbEvM4BgEjicCJ6M/0lcWrY0F4qiscftZ9hwq8kp11iOi9UJR5PiVTOZfAcyJk/85t08av2Mosytk3c+hW5eC7dE+VDTT3wdqcAQG2Ef2yR/WXaOxaJAxeMWVPA+F+f09ebhnZ3Hr7KVrQWZeEqGEv8PzClOZuKJXYv1qhTcgB4js4mAL1SDt9pGtoNhW1Q+0wwPw7ZKiDRdFMXl2R+Tl/GsgvQmYV2Cquj1p0EXJ9yeJNpaL2L3SelBsC7SCFCEuP5UJX264I15upmnRz1LQCyxnujnMQJ2ejiXm7+NQCHS05/S3AOLeQaQTBqPQ/glymH3zEN7WedDACJMECjUg5/YRraXoW4/oSXWazdz14EebHJFyqJQ6fr9ElOzxrnA+DayyBnFr2lbRLHFGoRS5YGBsg0DVHTqQBQHU1cSaD70kZlV+xXCJZNTdT6kw+dyyHCaSFdezGvjlllnQwFLwJQJacnm4Z2S4c7Pwm0j9LdDf592Ajc37lGgJh1AhivpDk7oP+pM8Qz+V5v2AoO9A5gT4et/QD6BQOTSDLvE+gTBhIMkALetVUEUgagh/fnZgJavp/s6VsCGIwyEO8njyRwi6vwAgHtk40JfNEeFm9NzD6DmZ9MDwBwXKhKW9SpAOBx4b9Ndc4yrXqNWM49tTJroEtKJRFXMqiCwJUMVBCwD3YkY6wHIc6gOIHjYIq7qhsv66HV+1G7fFZJXXLFrrnWSOw0APBe+AMAg1MOLzEN7eiaVbwvVOcwZj7YcxaHAKhA1oqcHd4cAHEC3mNgORO9F7DUpdMG0WfVUesNAo5IyY28Fza0ISXBbMkrg2Q8eIILRhTAAPyQjLCeGXtJpq2/mIZ2VacDwMh63l0R9k3EuAZd5o8Llx9wy7SJ4f7FJ6UUHQAjV3Mf4dgXMHCOF1erxX8pJBTCCiZ8A8ZGgDcRlE0Ab/aG2CYmWJ6z5QAAU/K5iKERUO51RQ+GuwsR9WZgFzB2A2gwwIES4MAB8CaAeVDEvwpVOFMSANRG+Mc2rAuY6EIAx6BwIgoJIqxhRpxAzODTJb+xmfnocFXgrSLlMn4O0GIZkAn0DBMrYFQC6IcMpWV5mgtgMRPPDrjanGlV9NUOCYBgNPFzYlzOROejrcBTu5wmMC9n0HIieo9gr2zUy9bOJXKqG3hXStj1ssJNAu4IGdqNRXZk70Ky4CTV1mmqGDStgjYOY1Z7R5r7OIo2mJkPJvAQEA1BUvyqI6NgCzHPIeBvdVWBN7c7AIYxq+Vx5yJivkpS3pSvPUuMP4pe4u1MFTHBmH0/mH8nORVhTRxSbJkVL1X8NiSl3dkcuNp13CPRaB9KhJuRnv7N14lcykz35lOWXjAATGBW1kSd84l4fDu89y3MrBJRICX8WRg2tBMyRhFJgsfbSGf3uMQ4oRTJk2QCxzqKGa9JvmaHwYdlE6wKRq3XARyV0hkJSnZkviypeiKa0KdSfSxfILQLAKMi1ikK4T4AP8njXl8x6DGF8e/GHuor5VucqQAHUxtPs8UBvnx8ZgrG7MWpDVfq0CnrSMR43TTEsWnVx555xatr0/IbRNO1nuqViUbnRCKcAfC5SNdSyDQivE+EK0OV2stFAUAwxnuQa/05Sw1+a9sE4ieY6NF+H4v5rQsrqyP2WUT8ePpL+FfDeHX7dentjc8sEgMe0WlTKQFQu5p7W44dgZRKxjWmETClo0fUup6BOyU92KZOsnYpa3YvZygr7oVgOgtyWlt6cxDP1Fzt2lycxZwBEIzZ54H5QWRQ4WiDROa/d7O0h/20bqobuBtZ9nqkLNsSsCxkaIel/v7itbxbWYsdgWR1joiGh3TxyPaI2ZMilzxDcurLljJRNasvfSMZ/t8BcEjKe3/TaIm9/dYTxq7g8mbNGs6gy3Mceb8m0KXZaguzAmAYs1oes6cgSVjINkw8rQB31Rnawty8aTnxwiX3Jw/pZW2KJYMR6x4QrpZcZpGpi+P9htsSpNIoGLX/A8JJ6cBMry0YE20Z6EBZKflqppmGuDS3qcc6gRnXE3B6Dh/4Hd8ZYpwflS0jALzFm/8DMDTLjV4AeHy+kmzecqtMBuV209DGfT9kNh/IUOuRrs1nueT+NBUs2WzEcu6pdnN+QeCB20JJxnootNLerM7PV7FzdLzlJ66rvC2J+1sIzqDW5BFfqhrhxFz1i1pNiUeCaSIBp2aeE/Ci4orzZItLvgDwqMrPI4PKBhGijoux7dWymcCsrI3ZHwFIXW79pEkX/baiNhhJ/AvJ3ELqm+VVOZNkCykTATo7g6e9BeDHFcUdn48Gse8IRfwvUw9cCGwjrKxJf1/+uK+u9WtvKFcTtYYmdRe5MgMIFgbKxa9Tw2spADy5lKczKGYkwPgTB8QfOxpz+yVViOjMkC7+7dX2vy6Zfja0lIlK2RwrG6ZrovZ4JtyUR3bOAmGyWSluy2V68XyUuMRHYoCPMo3AG55+kYzm3WFepCe9ezOSS8t+7/gSa+KM1n0mB0DU/geBL/O5yJdMOD+sa68UxIlKcuJXSjr4WdPQTq+JWYs8dc0UgPDVIT1wX9aGWcGBcs1+FMm1iPbYY9omcXEu9K/qiHUNEWSVPEtMXRxTHbOflwzX7DjOgEKJZIxaZR1DCub6ciWI/mbq4gpfACSHE7woc/gYeDNgi7MKXTcfjFqvAGkSLS4rfBm5sno+Wt1kqYNyYeAEo/YDAF/asSekkGmI0bllCJ2VAB8omWtrieiB9NgfC0xdO6WgSapVvC8r9hOQk1oZLoaaA7QFaQBIDiPWKpluPwHLXE0MDfenbwseSkXsC4n40fR70ucM3kuC4mGmLh7LIVEzHMwF0eJnpovCVWJ2dl9ALoUDovVgTlu7YKLzw7qYW/A2beBdybIXAPip5GXWNvXQBs49gLa0AUBNxB7JxA9JvoAPHUc9YsZA+roYkZQ3TH+M3DR8lpi6OCbbvJzMM1iRvDahyAyBNeWkDciqQJ7MVi5BLjL4jPVao+hTLImcZDGO9ZasNI6JRoZ1MbMNAIIRazEIR6cOxSCcnG+I0o5pQMaNSzcXp2wdvjJ7xolqBpmFfEZiGhWqEjOy3jtmncqMF3K4ZJtwtxhWE7GOZcKrSKfVvWYa2vHbADBmdUul66qx9GGYZ4eMwEVFz6jVb+lHqohBVsLdKpTJtljUClBPAjijwI/5uGloOTmTfs5rmyhDERXFInq0nZbkYTTBqajTyz4kZkZN3JHPl+1IULQbrdHEo5nkW0jBybkudASj1kbkljvPx741DW233GNzvJRhqnjYrAqMKEm7xq2T2MWC9A+Kfmvq6qwkAGL2OAC3pSZFmnTRqxgVsfLhKjGEid6BPOW8yDS043L0gnuxYhdlYai7JXrlquVfHbVeJeB42TmF+Gd1euCdUrSrl4BqlCS/xoV0cTsxM0bH7LSqGgY+CxvaviihVUetDQTslo5WvipsBP6Sx3TSUIznU2zRr24Qrc1tFHKuA9y7JHPZBrNK273E7bouNTdAwB11urgx0wjQ3PdT0asY+rjyLzdxGCv0ljx/gcUhXTs2l+t4usRFKaqwt4jyXNcKglFrIYDjdpARoAkpND1m3GwaYkpyBIg7v2Xmhzsy73bYWYklZoPpgo5GAF7jfwt5hXBpfIAskQCDHwkbgeGlaFePwDM/ow9QHW+pUFiNS2KfbYsZ2zsK2Bq65Ob5Wk+AcGaBH3OeaWjn5gjANMrX9ooCaqLWHIkMPhOcym1RABEhGLVeQ/rqHxPhV/lW1hYrD5DrThrBiD0KxOHtkQfwlXzZDnkAb8l9vsSxftU0tBPbJIL82S28RmPt8ELy0Vubx7L9GJl3+dhq/zV1cXS2TGAyu+jUy/LyJcgEvgF5Hj4tE9hki77F2hsoGOM94Fpvgahvuk+VZFGlrwVstupl/wDgHW9ny28L//XbFwE8S+L5SfPnRHRBSBdz2n3d9nz9Od7Tb10DTOtB7X+XfM1bnl6AFOqZN/c3QFMHhftTc9pqYIYhAyAsJUecWegtU3xWAx0wXQbif0q6I+fVwCxL27l9+0RTw7r4XS4jWSM79bJt7MjlMazQNKSmZBkvm1XayYVszzEx3t9l+wmfOg2XCadsXc6X8wF8drLy7Eu4uDBXbzz7FyPnAzDwTNjQ/sfHL8lZS792KWvWLvYsJPf5bUfv8xytURuey4JNTcS6lgl3p39xyRR2TcR6TipbR+5gUy9bWZj2tI4jYE6G7e7a0OelAEgi2f53Bq6ZRYS7GruJyXMPoC0dm6esu8G4VvLVnRHWxVNeLd4SdJQRFLPHcXJfnlwLOxMAJpm6mNJRRpDCfGRdVeBNXyp8ARhBteu4h91k38rAtX6RFDGe76mIs1r7Mb6cwNp13CPRZD/nl8rcOhQT8dj2Rgj+nED+uEnX+m/jBPrlB/LkBI6KNVcQKxMJdA789hACNoN5HpE7Ph8lMD9OYOvFNC8h04C0LW87xglMRh00NYvD+0pTd3Fa6gebkRVcs4p7uYr9WDbWKYD5RLg1pGtLCpGgQIoAk8cKXon0glNLUdyf5avjW7uOe9jfOUNd8EBi7OsFxesUUL3oqc7Pd6euTKxg1bUHTh/QvaFVguh2ZtyUPuLhpHxpdsG4dTS5mJSBu7ntyweL8/NiBW8Lp5jVnlF7MhFuQLa6AMJzDNyZ64sEo3ZIUh4mnRNrYtafWS4ssf3rAmL2Asj2Fyb82dS1NoRXv7oAIvpnSBe1Od0vYp9EhOt9ZHBT3A9MadLF+HbVBaR40+cQ+EHkVqu2AsRTydEe9hM68lis65G6ZEtYaura4T5zrLQyCEQjTF08vD36359FlbEy6G2kULUI+KYniX388gw1q7iXq1ojiOlyyKuS0511oktMXTyZGU951AbWRvjHCXLuIvAo5Cb60AjmJxVSZqub1Bdbe9J+FOlMbF+/2kAw1mtCDJhWQRtL2fke724V8q0N9IsWPMc3JZl1Kti9AERnIl1m1+erJ9Nx1D/kQuFrV3Vwdcw6kRj3IUX2NYttANE8Ap6yNqv/Ed2tqRLVUIc1sb+vNk6yDGuRhLYGAt0fMsTvS/z1T2XisekgxuJQpTjOb1oaGeH9VLI/Ss0JMFNdD1u9akvAOYVd/IaIz0YutZjf27sgXJUPgaf9AhHMVB13ziPm8UiXfcuSVkMLmBWAUp2mV0xDOykj+DLoAzDjxGJv8tjaAYOL15DOtctVH0CW39ia2MpXg+gDAk0I6eq8fH2hDiuEJEM55wIGX5Wqd5e/P+U+D0W5Q3HEskwiifIdyJKlao3dxCEdzU3kEkVYTfa7kGxCycB9YUO72u9/fxvjXQKOfRgpuIGzR1fZ7A0w3dvXUOeWXCFEnoVKHA5SxhL4QuSvcpE6j33I4HeJ8B5AyxWyV6jflq2ddhhZtau5d8Kx62XVLwzcFTa0PxQTABkiknUJEgMf0WlT7VLWnF1b+rosBgM8BIwhAA3xYvWONHYzg2Yrrjs1NCCwtONBTBFUwkbW8+5CtYZ5BM/jUDilTxugtQDHPXFJmcy8ozAfXQgBJZ/O95OGAUDPMlgQqALgvsjMbfCN2yQ94QJYCPBsxdLmFnITieLrBEZ4P1WxzgfTOQCObE+j5G+UAHglgG8BbCLmja6ibFKYm7xWbnYVbPGSJG10AhUX3UHJ0cslKldcdxcm6g1gFwZ2o2QIphX/HWADWELE8+Bocwq9AFcyALS2Ecu5p+hp3woXf0CXZfKv7090U8fntM6xMwHAN3QiuHARBaEKhROV3Al6mtZA4T7gtCnyr6ahXVkasJVeLXxFWiaL8bpZpR0zIs57ao5zKBQewuBDwHQwAAMlkJctwXAeBXg5Ey0HYTmxWGbq9GUwav0XqXWEhPdNXTu40wHAy5xtkHzlvty4YR9z9x4t1iCVlQp2uYJBFURcgaTi5r7YcaTkHYDXAbQaRHECr3ZBq1W4cUdo9X5CGj67nHCCxK6lUD3bIXYMYabTw1Xi2XyvN4xZ7RXBXo6w9lGYTmXG7SSfQj4FaEsSLNyLPEeUk86cJwyNJkJSQJoBC6AmAC6Ye4AgK45x2cVNLHi+amufNVbh8/ZUUFXH7N8Q87/T2wTHlyKpVWIAJK4G0z1pD6GJfQohje631IpkhfNppq69kM/1vOXqF6RTUIH2EPTSwpKNrPhK0wj8tbMB4CEwjUw5/LlpaHsX4voe4WIh5Hz8DaprH9Z6bT5jx6zmPqpjL4N89bPQu4atR8qCEoPCYUMEOxcAJAKJIDxn6tpphbrHqFhzhcLqUqRsxb6148pJHJeN2u2JZC3yIVVuYMc+NDyw+5rCRUZSrmBn3DcwfefQYsi7e/PqE3IHMbveT3XUNglcLZ33mX7THn8lS7vIimI6186hfnsHM3NtuCrwz4JHHFFrEgF++/rdYBrandLOiFj/C8IUediOCWFdm1jw3Eg0cVlS56+ttZSJHxU7GbTddw8n4BchQ5tf6PtNYFbWxu2nfdYLmJkuThV98vSQ/+UTWr7UpItfd+0e3v5heRgxp1XAKIqj56PImY+NXsE/cjVrmUwkCcBmhfmkrYtGniDlAkjZwvShYqmHF2sn75pVzVWsqKvSAw06N2yIeZ0EAImxxDRVEgJ2L+YOHx5jdzFkcjGM9a7iHEsKFHLURZCrlG10yT0mXz3ivKbHJL9AojnAl5lG4MFOAYCamHUjM/6YOs2ZhtYNRbZgzPolGE9DshJJoHUMdpHG1QcAWAycHja0l0rgIFuS57veNLS7OwsAZEmar0xD2wMlsJpYYjQzTc/rn4jHmnrgH6V4vmDU+iYtdC1QsmnHAICExsWghrAhDkSJLMOeA5LZofjMorYASKxNFbXMRi/b6QEA0GrTEJWlauRkEYdTJy1Gafu7h/sa2qj28uzaCYCGNGc1z9K3HRwA0lWvdaah7YcS2vA1vI+WsOvhrx+0sbslBvx9cPG3bU2ZAj6XOKFFVxApYRRgjSfGhJTDOYsuFeQZGnhvsuyXkH3PnXpyxdBi0bB8ANCI71cmt9o409Bu7xQACEat6wCkaubZ2ibRo1hiyemxtngG4Ioc/yWmKM5pxcpRtDZPImdzagIq1z0Rdg4A+MioO45TVajNEnzvnSzieAK5aRC1tg0KcHaum2C1P0xtGQRWVnTqRNDoWOKnLpMkrdl2r7zCTz32ME/4qpuPu7+IAIslu35tzVUQ0ehibksXjNlnIrl41cYUxT0o39L3HRYA3iZUjUhl7BQp1q1dyprd2/4TM66GP9H0WdbEuYEyKIkm+/EMOgjMwN39PhU3FUM1NRi1bkNSvaS1uU3dRXmxq5xKuhxcE7MizDBSDr9lGtoRhbyPR+aYjUxCjcwPN9na6K1CU1fEuOw7tsIZ1coJixWIC6fr9EmBAbAMQOraf71paIOK3SelJYVGrXsJuCoV6Y4q+s+ooI8KOOT/A8DuGb7myWFdjE8rpEyKPdwG4OYMt/iKQZcWam72FFI/TB2lZJtOdoYRQKqfW4jS7uoG3huW/TcCMkm52gS+PGQEpmXOWSSqGfQgMlfpPu2wuGxGFX3aoTbxKTHPRxd5pwGAF+58gnSeXTO5ziGhAd0i7blmI1uXEWgC5DSwbUknBbgo521tk9uzPuq7/Vryk/2GmW9tsrVp7VH79CTy3pE4qF80WeKAYimIbjcAJMNBX8bNygSJo3LlwicJoNYIMMb7KJu2tpdsRQyfWUlf5POsYz7kvVzbfiSbCBODGhTGhEZDfSRXwoi38/gSAAMlp30ZSzs9ALzdPBpkczQD78Fxh4cHlr3v2ymrtvR3FDEaQBBAts0sbAIm9dHF7e3N6w9jVsuj9q0g3IzsFUqfAjDZsesykUar61sOIqE8AsZBMh+juyX657oryU4HAG+OrfXmWJm5AJ5nxmIQeY3o7q6QchAzHw+gKsfbLHcVHv1QZWBZQfIYkcQRrkLTfTpNZqsAWgh232dSNiSnDO5PjGOZcCr8KpqYLzGrAtNL1RfbBQDJ+c+eTsSji3Bpi4B7Gi1xa6Hn0NqlrCV629cQYyLSNQs7bsQzTD0wqpT9sP0A0MDdvJ0tjyrQJV0wz8pX4bNdo0G8udJ1lUkAXYAC1SYSYXFPiFOyytF3FgAA27KDM9D+jZ29jsdT7Lq3ZPIdijKVJXc5mwzgdHSsrP0xrVyMylehdKcHwPchlz0crjs5B2++TVgHwFRduy7Xcq/i+TTNB4LU0S4jmClslDT/GpByy/YSudxhALB1frV3cc5guOcANBhJBa4e3mkHwAZiLHOB1xRgYZ914r+l2s0sV5vwMouP9rWPZMIJSGoj/QxJnb+t0cNmADEGfwAo8wKb1KdKsRSeEwC67IdrXQDoAkAXALoA0GVdAOiyLgB0WRcAuqwLAF3WBYAu++HY/wfveJgAy2aWxAAAAABJRU5ErkJggg==");
-
-/***/ }),
-
 /***/ 578982:
 /***/ (() => {
 
@@ -2155,21 +1617,721 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 709206:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_03_build_03_initialize_push_chain_client_mdx_ffc_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-03-initialize-push-chain-client-mdx-ffc.json
+const site_docs_chain_03_build_03_initialize_push_chain_client_mdx_ffc_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-push-chain-client","title":"Initialize Push Chain Client","description":"Initialize Push Chain Client | Build | Push Chain Docs","source":"@site/docs/chain/03-build/03-Initialize-Push-Chain-Client.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/initialize-push-chain-client","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/initialize-push-chain-client","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/03-Initialize-Push-Chain-Client.mdx","tags":[],"version":"current","sidebarPosition":3,"frontMatter":{"id":"docs-chain-build-push-chain-client","title":"Initialize Push Chain Client","hide_title":false,"slug":"./initialize-push-chain-client","displayed_sidebar":"pushChainSidebar","sidebar_position":3,"image":"/assets/docs/previews/docs_chain_build_push_chain_client--initialize_push_chain_client.png"},"sidebar":"pushChainSidebar","previous":{"title":"Create Universal Signer","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/create-universal-signer"},"next":{"title":"Initialize EVM Client","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/initialize-evm-client"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
+var PushAPIReference = __webpack_require__(303547);
+;// ./docs/chain/03-build/03-Initialize-Push-Chain-Client.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-build-push-chain-client',
+	title: 'Initialize Push Chain Client',
+	hide_title: false,
+	slug: './initialize-push-chain-client',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 3,
+	image: '/assets/docs/previews/docs_chain_build_push_chain_client--initialize_push_chain_client.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+/*Content Start*/
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Overview",
+  "id": "overview",
+  "level": 2
+}, {
+  "value": "Initialize Push Chain Client",
+  "id": "initialize-push-chain-client",
+  "level": 2
+}, {
+  "value": "Read-only Mode",
+  "id": "read-only-mode",
+  "level": 2
+}, {
+  "value": "Reinitialize Client",
+  "id": "reinitialize-client",
+  "level": 2
+}, {
+  "value": "Access Account Information",
+  "id": "access-account-information",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    em: "em",
+    h2: "h2",
+    li: "li",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    table: "table",
+    tbody: "tbody",
+    td: "td",
+    th: "th",
+    thead: "thead",
+    tr: "tr",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Initialize Push Chain Client | Build | Push Chain Docs"
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "overview",
+      children: "Overview"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Initializing the SDK client gives you:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Chain-agnostic"
+        }), " ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "PushChainClient"
+        }), " for submitting on-chain calls"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Automatic ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "RPC & block-explorer resolution"
+        }), " (with optional overrides)"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Built-in ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "UEA"
+        }), " (Universal Executor Account) and ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "origin-account"
+        }), " getters"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["End-to-end ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Universal fee abstraction"
+        }), ", signature orchestration & debug traces"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Just pass your universal signer and network, and you’re ready to write and transact on Push Chain from any wallet."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "initialize-push-chain-client",
+      children: "Initialize Push Chain Client"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.initialize(signer, {options}): Promise<PushChainClient>"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Signer. \n// If not done, then check out Create Universal Signer.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalSigner, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Arguments"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Default"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "signer"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "UniversalSigner | UniversalAccount"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Pass a ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "UniversalSigner"
+              }), " to enable full write/sign capabilities, or a ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "UniversalAccount"
+              }), " to initialize the client in read-only mode (no signing or transaction sending)."]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "options.network"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "PushChain.CONSTANTS.PUSH_NETWORK"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Push Chain network to connect to. For example: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET"
+              }), " ", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+                summary: "PushChain.CONSTANTS.PUSH_NETWORK",
+                className: "alert alert--minimal-api-table",
+                children: [(0,jsx_runtime.jsx)(_components.code, {
+                  children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET"
+                }), " ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT"
+                }), " ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET"
+                })]
+              })]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.rpcUrls"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "Partial<Record<CHAIN, string[]>>"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "{}"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Custom RPC URLs mapped by chain IDs. If not provided, the default RPC URLs for the network will be used. Example: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "rpcUrls: {[CHAIN.ETHEREUM_SEPOLIA]: ['https://sepolia.infura.io/v3/your-api-key'], [CHAIN.SOLANA_DEVNET]: ['https://api.devnet.solana.com']}"
+              })]
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Advanced Arguments",
+      className: "alert alert--minimal code",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Arguments"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Default"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.blockExplorers"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "Partial<Record<CHAIN, string[]>>"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "{[CHAIN.PUSH_TESTNET_DONUT]: ['https://donut.push.network']}"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Custom block explorer URLs mapped by chain IDs. If not provided, the default block explorer URLs for the network will be used."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.printTraces"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "boolean"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "false"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "When true, console logs the internal trace logs for debugging requests to nodes"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.progressHook"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "(progress: ProgressEvent) => void"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "undefined"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Optional callback to receive progress events from long-running operations."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `PushChainClient` <object>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// PushChainClient object\n{\n  orchestrator: Orchestrator {\n    universalSigner: {\n      account: [Object],\n      signMessage: [Function: signMessage],\n      signAndSendTransaction: [Function: signAndSendTransaction],\n      signTypedData: [Function: signTypedData]\n    },\n    pushNetwork: 'TESTNET_DONUT',\n    rpcUrls: {},\n    printTraces: false,\n    progressHook: undefined,\n    pushClient: PushClient {\n      publicClient: [Object],\n      pushChainInfo: [Object],\n      ephemeralKey: '...'\n    }\n  },\n  universalSigner: {\n    account: {\n      address: '0xC8AE31cF444CAB447921277c4DcF65128d5B25a8',\n      chain: 'eip155:11155111'\n    },\n    signMessage: [Function: signMessage],\n    signAndSendTransaction: [Function: signAndSendTransaction],\n    signTypedData: [Function: signTypedData]\n  },\n  blockExplorers: { 'eip155:42101': [ 'https://donut.push.network' ] },\n  universal: {\n    origin: [Getter],\n    account: [Getter],\n    sendTransaction: [Function: bound execute],\n    signMessage: [Function: signMessage],\n    signTypedData: [Function: signTypedData]\n  },\n  explorer: {\n    getTransactionUrl: [Function: getTransactionUrl],\n    listUrls: [Function: listUrls]\n  }\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Let's create your first Push Chain client!"
+      }), " Try the code in live playground 👇."]
+    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+      className: "liveplaytab",
+      groupId: "initialize-push-chain-client",
+      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ethers_v6",
+        label: "Ethers (v6)",
+        default: true,
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+          },
+          children: `
+// customPropHighlightRegexStart=PushChain\.initialize
+// customPropHighlightRegexEnd=}\\);
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+
+async function main() {
+    console.log('Creating Universal Signer - Ethers V6');
+
+    // Create random wallet
+    const wallet = ethers.Wallet.createRandom();
+
+    // Set up provider connected to Ethereum Sepolia Testnet
+    const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia');
+    const signer = wallet.connect(provider);
+
+    // Convert ethers signer to Universal Signer
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+    console.log('🔑 Got universal signer');
+
+    // Initialize Push Chain SDK
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+    console.log('🔑 Got push chain client');
+    console.log(JSON.stringify(pushChainClient));
+}
+
+await main().catch(console.error);
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "viem",
+        label: "Viem",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+          },
+          children: `
+// customPropHighlightRegexStart=PushChain\.initialize
+// customPropHighlightRegexEnd=}\\);
+import { PushChain } from '@pushchain/core';
+import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+async function main() {
+    console.log('Creating Universal Signer - Viem');
+
+    // Create random wallet
+    const account = privateKeyToAccount(generatePrivateKey());
+    const walletClient = createWalletClient({
+        account,
+        chain: sepolia,
+        transport: http(),
+    });
+
+    // Convert viem wallet client to Universal Signer
+    const universalSigner = await PushChain.utils.signer.toUniversal(walletClient);
+    console.log('🔑 Got universal signer');
+
+    // Initialize Push Chain SDK
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+    console.log('🔑 Got push chain client');
+    console.log(JSON.stringify(pushChainClient));
+}
+
+await main().catch(console.error);
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "solana_web3js",
+        label: "Solana (Web3 JS)",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+          },
+          children: `
+// customPropHighlightRegexStart=PushChain\.initialize
+// customPropHighlightRegexEnd=}\\);
+import { PushChain } from '@pushchain/core';
+import { Keypair } from '@solana/web3.js';
+
+async function main() {
+    console.log('Creating Universal Signer - Solana Web3.js');
+
+    const keyPair = Keypair.generate();
+
+    const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keyPair, {
+        chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+        library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    });
+    console.log('🔑 Got universal signer');
+
+    // Initialize Push Chain SDK
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+    console.log('🔑 Got push chain client');
+    console.log(JSON.stringify(pushChainClient));
+}
+
+await main().catch(console.error)
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ui_kit",
+        label: "UI Kit (Frontend / Abstracted)",
+        children: (0,jsx_runtime.jsx)(_components.pre, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            className: "language-jsx",
+            metastring: "live",
+            live: true,
+            children: "// customPropHighlightRegexStart=<PushUniversalWalletProvider\n// customPropHighlightRegexEnd=</PushUniversalWalletProvider>\n// customPropMinimized='false'\n// Import necessary components from @pushchain/ui-kit\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction App() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    return (\n      <div>\n        <PushUniversalAccountButton />\n\n        {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&\n          <p>Push Chain Client Initialized: ${JSON.stringify(pushChainClient)}</p>\n        }\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+          })
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "read-only-mode",
+      children: "Read-only Mode"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.initialize(account, {options}): Promise<PushChainClient>"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["You can initialize a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "read-only"
+      }), " ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "PushChainClient"
+      }), " by passing a ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalAccount"
+      }), " (address + chain) instead of a ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "UniversalSigner"
+      }), ". This is useful when you want to inspect account state, resolve explorer URLs, or read metadata without signing or sending transactions."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account. \n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalAccount, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Initialize Read-only Push Chain Client",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.initialize
+// customPropHighlightRegexEnd=}\\);
+import { PushChain } from '@pushchain/core';
+
+async function main() {
+    console.log('Initializing Read-only Push Chain Client');
+
+    // Create a UniversalAccount (read-only)
+    const universalAccount = {
+        address: '0x1234567890123456789012345678901234567890',
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+    };
+
+    // Initialize read-only client
+    const readOnlyClient = await PushChain.initialize(universalAccount, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // Allowed operations (prettified)
+    const origin = readOnlyClient.universal.origin;
+    const account = readOnlyClient.universal.account;
+    const txUrl = readOnlyClient.explorer.getTransactionUrl('0x123');
+    console.log('✅ Initialized (read-only)');
+    console.log('Origin:', 'address=' + origin.address + ', chain=' + origin.chain);
+    console.log('Account:', account);
+    console.log('Tx URL:', txUrl);
+
+    // Restricted operations (will throw/reject)
+    try {
+        const message = new TextEncoder().encode('Hello, Push Chain!');
+        await readOnlyClient.universal.signMessage(message);
+    } catch (e) {
+      console.log('🛡️ Restricted call blocked: ' + e.message);
+    }
+
+    try {
+        await readOnlyClient.universal.sendTransaction({
+          to: '0x0000000000000000000000000000000000042101',
+          value: 1n,
+        });
+    } catch (e) {
+      console.log('🛡️ Restricted call blocked: ' + e.message);
+    }
+}
+
+await main().catch(console.error);
+`
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "reinitialize-client",
+      children: "Reinitialize Client"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "pushChainClient.reinitialize(signerOrAccount, {options}): Promise<PushChainClient>"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["You can reinitialize a ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "PushChainClient"
+      }), " with a different signer/account and/or updated configuration (RPCs, explorers, traces, progress hook)."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Reinitialize will take the same parameters that you have passed for initializing the previous client."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["To update the parameters, simply pass new ones in options object. ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Parameters list"
+        }), " is same as ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "#initialize-push-chain-client",
+          children: "initialize(...)"
+        }), "."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Reinitialize always returns a new client instance; swap references accordingly."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Changing the signer/account updates ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "universal.origin"
+        }), " and ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "universal.account"
+        }), "."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account. \n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient2 = await pushChainClient1.reinitialize(newSignerOrAccount, {\n  // pass new parameters if needed\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Reinitialize Push Chain Client",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+        },
+        children: `
+// customPropHighlightRegexStart=client1\.reinitialize
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+async function main() {
+    console.log('Reinitialize Client Demo');
+
+    // Single EVM signer
+    const account = privateKeyToAccount(generatePrivateKey());
+    const walletClient = createWalletClient({ account, chain: sepolia, transport: http() });
+    const signer = await PushChain.utils.signer.toUniversal(walletClient);
+
+    // Initialize with default options
+    const client1 = await PushChain.initialize(signer, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+    console.log('Before (explorer URLs):', client1.explorer.listUrls());
+
+    // Reinitialize with SAME signer, change only ONE option (blockExplorers)
+    const client2 = await client1.reinitialize(signer, {
+      blockExplorers: { 
+        [PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT]: ['https://custom-explorer.push.network'] },
+      }
+    );
+    console.log('After  (explorer URLs):', client2.explorer.listUrls());
+}
+
+await main().catch(console.error);
+`
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "access-account-information",
+      children: "Access Account Information"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Once initialized, your ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "PushChainClient"
+      }), " exposes:"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Property"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Description"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "pushChainClient.universal.account"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["Push Chain ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "execution account"
+            }), ": for native Push Chain wallets this is your EOA or smart account; for cross-chain wallets this is your UEA (Universal Executor Account) that holds gas and executes txns."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "pushChainClient.universal.origin"
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Origin account"
+            }), " on the source chain (e.g. ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:1"
+            }), "), representing your wallet’s native address."]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// execution vs. origin accounts\nconst execAccount = pushChainClient.universal.account; // Account that writes on Push Chain\nconst originAccount = pushChainClient.universal.origin; // Source chain account that is mapped to the execution account\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Initialize your EVM client with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/initialize-evm-client",
+          children: "Initialize EVM Client"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Send your first Universal Transaction with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/send-universal-transaction",
+          children: "Send Universal Transaction"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Explore on-chain helper contracts in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/contract-helpers",
+          children: "Contract Helpers"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Build wallet flows and abstract core SDK with the ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit",
+          children: "UI Kit"
+        })]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+/***/ }),
+
 /***/ 715340:
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 740688:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFwWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZGEyZDA5OTEtYTI1OC00MTJmLTk5OWQtODI0MWQ1OGQwNzY4IiB4bXBNTTpEb2N1bWVudElE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");
 
 /***/ }),
 
@@ -2180,55 +2342,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 757244:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/unichain_light-74deb5257f2c445e06692a66732a7bee.webp");
-
-/***/ }),
-
-/***/ 762273:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFwWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZGEyZDA5OTEtYTI1OC00MTJmLTk5OWQtODI0MWQ1OGQwNzY4IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjc2N2MwN2EzLWU0N2EtNGM5OC04MWZkLTkyZjc5ODNjODM4OSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOjc2N2MwN2EzLWU0N2EtNGM5OC04MWZkLTkyZjc5ODNjODM4OSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6NzY3YzA3YTMtZTQ3YS00Yzk4LTgxZmQtOTJmNzk4M2M4Mzg5IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGEyZDA5OTEtYTI1OC00MTJmLTk5OWQtODI0MWQ1OGQwNzY4IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTMxVDA1OjE0OjMwKzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7x3rkaAAAN/klEQVRYw+2Ze6xcV3XGf2vtfWbunfvwvb52nLdjkpS4oAKFthSEGgIoqXioUYkdHkmUivBqS1Fxq0oloRRSqaVxG1JBBWnJg5cJlJQW0oinCmqgDSEEFfK0E4Odhx+x72vuzDl7ff3jzA1JIHb+Reoebc1o5syctb/97W99a41J4hdpOL9gI5+35+gXhcF0X1hTzsY5H1iPsc8au1keN5qz4u4wZuwvIkgUIFPY4Ea9JEyBjDEL/x1lnY1YD+wrwafN8s10QfY0AuZpMMIAwfOT6a8Dew60b+B6DWbPBl1psE9H+HK7SHunXG9FrF39OJmeG6Z9JrvNnk4sb7j3yFcJcGJDpdhtoiPjm4hbgV8BXrZ6mSXe4eP+D/ubn0V4uBK/bw0fJOESGHwV4w7EC4CXyDTslHRyKv7w0VDOk0/j0JXQFY2pA36loXcKsDCGk36ir8S7Uol3lrCruot6aTPO6wWDpkW3mxf1qUHmXBwy9ndVz69YXo49CRGAZH+fTH80RB+oiy58bFeeCuG33lmOhvBY7dGXUWPewYAIrBj9NU5aFmNNvECy6106Y6GrO8Oq54ewRH3r9MDOCLM7G+eCLnZrZ9JYWAzMhBVHAZailpHp+JgZgyPRNBeOSonNMqBwizUaUQSUR0AYeOO3pmWe9ehE2TExsNdaau5AoODUBelzs4t+XkwgVTCiBBUGSViCRtwCvMRDm824/YgB135USmwAcNlOrw0ZGEZkgUMEkGByrcXEXDrv8CE+MuzHJQLGxvzqE2fsknTQiFqogHmLQjIwa4MvYlegl0StDUdVCXs6Wi2ITMT0T3G3IuKgmJkxTl5vLAxg8RCOOH2VhILT6CstHOtlsWvYw6IcEpaCfgFk7Y45xcywp5EXXAiZQEIGRSLUvhftXEBgphlc4IIwTEBfjE8YUwkGA/Hg3vLt4VBnpqztVdb24UBn7tsbtzwyFI8mGE4aTV8tyiRUHIqDmDETMi3IRvdGFI20WWL1kS0nooHShaoWndwehIjHJHRvWEDoGRbRItcklMAmoNkL+3NweDw+OjHlv5bNvoriXQZk9+fEJC/rLZaPTsz7JRo6jLfEz10RKRDCsGdIhoXvRa2UJgfP0IQoE443EAInOzKn6TgBVFMQ04YiCAtk8WNQA/5si6ol7Or2JGOwJPbviwv7S3pTSnZPMl4tEkEiGa8h2T1pSW8a2x8XpGUR6TG6gByjAtmzgEamH8vaHZ5YY0zOtEGq45g7uP8001m0L0LQuMgSgVObDbPiJkevxvUcYDfGrwKnVkWbB9OaG5guGCuG0Mk13AUcC1CLh4D1uDGc1nVSvCKJAxI/suBeE98DnRJGNtkXMKvN1Mpmsp+KRYy4Icg/V5zVKoG38wRkfZmA+AqwzhKkgPBW5ghDEEABTgLq0U+dBCwLApk7ugADayDSSN/QgVFKHsjseBN7DXtM/o7q1txbuQnYKulLTvmJWWwZLXcdxn0e2jHo8ZZI9i8WgPEDdzZVwXEGPTmTMiaB8SyOy8amBD8IQST73LDHWzy0A2cnMDeC8Tyj7BH6kmCrWRvLz4B58QOiDKHpic5K0Elc0ATvjVqbcJGKHWjcbsD0xiQ03tiaPeOmXXPG8x4u90wMdVrH8i/Nd7inbw3dxhCtwJpEP4sNJTPVcPpBmruXK7v39mPS6SfPi+NX5MPQYTlC9nFCW3DNSUaubFdOXLYy5OMx5eQVowj8MdgLs2a6abgc12moTeZ80bBzxwe2rhP+NiW/kcLU0ni8stsRv/xIfHrNQKf9cMa333iS3fPDMePBruMBBOOo1YPDyflRx/jMRrvnzhnfPr2i0057ND597JLIK/HKkpgs+Ocj0ttz8XWOnYvzxWagTStLcT2mm6wwM8IAbwzMtLazXG6j0Tlku0NuZyK9SuLG7MYJG8TMtD4WRTSVbx1DG6dWytaObL50fduiQ2cZusU2WtInLGmnmXaS9IkqbOPUQThcYNjxbV1sYe2gbF2WNi6mtEVFTM/GNRuOLXgCBTeCXqVsL1Vld1jROWmp3KbQbDGwrbtFb9DcYqEXQvqknDeIwCTcHB8aUYnawYK9KWKdYXtInLKn8ouS/LpNQ1iWNhQr/5ucuccMoEERB2ZW0rOm3R7eNQNLERetX45rDozxQEecMNlnn0zHO0BJqBLFgiYbhFMVPgnldYHd0h/PL/LeoD7HghfWld02GLM31F2oq1VnJJY8mB/CYEUoYjvJKjdO8eBH/3m8XXfrMRAEKZe/zGjuCW5VkNDcSi/e20/BN2fEl4+za8O5c0OfjRO1cnG/wgYVZVBRzKkEOaBxaDKUyl4fyb7n8Ju9QX22/d7d9RUF/fEYaUu32A0YNAbLqSE1jlRanWshq+R+COgBr+pKX6xqY8WMJutOjGf+PI1U+F2dQTqji6g7hYHbK0H/Diy7swajAchhzLsRXjjloUynbuXz0JS2HJgpO3Jj292kwzikgZ7RWQJfBh8IwygmsJEet6XASUB2wIIzvr/GuXeN0RMkWNJTVEhIS3UEd6yBO9Y6jja3JlE5ZCc1xWmKU9XGI2PwaGV4V/R7MD8Ow6xNLWY67MuV77BiLI/Hex6Z4+SH5sTBNcJDGJDNoUm4Ep78PZI6HpCcy3+4Jk3ePpmYD2eA/1P35xhZDxjLdvWGMXhorXH3Gp9EXG6AGZ0Ie8/ywFjsG4NiVAG5wMHZwsPHigc3sHFxIi5LxYjsO9xTusvNLveG8Tws3+3UenHVtLleGBHG1DqR12iqbngjyXbXmWtC6r5uV7nitw7AQjbGD/uH5t0/A08k8ULyHd1D6cMH3DnzALx+Z9leTJ0Iu4biu1G54Ji5ZurE4wpVCkIQDrlxqoFe3F0p300NPXd7X+XpLj9mAL2U3l266R/DtC6HvuWhK2V2vBBJ4N2EOn6+N/JmnOutp4vHhtS9iDfftT423Xwa7O3BfretVvFaM7sas6s989pDbuff1YVrN8J/zcQmL3FJV9TTK3HxWK2PN45XKW2tciJG/tCw4ym6kqJvuWuu6aQPZ0uXTdVg77hblATzk8IXy1vykKsKVNa6jE95bR9bKv4Nq+JrvaQXuXTSo2O+91Blbzr1UPnofMe+c3giv9AL2ErDMW6otDjnBA+GsF6mSTC90Hx7ZqjfuG82XbJ2oKtnlnXCMLPba/tWU/zlynGmVboYeF2qwaBWhz9YmUwfmVowevH4gCdEdz7YO2lr54r+tFrSNjkJAwsOIWaUWMjhZy10dN++ikdPXNZ/9Bqd3VTpwmHi+lwXYrUGoiWpIuiNJXLDhYNBubaf/eY9E5yzbsjsxNBOl8VXBFMmHpUxmwUWlJVJ+9sDbn9z3JIO9qedycU24PzkinPQ5WDC/kwL+ivMzlVoK8ZvkwAxVVv8z9QA1i1z+1Jlw34GU/xzalgjs/2gFWhlCim72Vh/EOuB7WTDxewZh/S9Yea5tbUH21obNuvipsB2EPp8NW7zA4DFJ3d+njRSsHri5mV2LcmvVYkPmeJtkn3WDGrnFXXiuRatBwwjp+CqkWV9gi3UkzpAhn59uQOIwwZfBsyk323MPyz3t1dNe3PF40uFIwQ8TG0p3priAAcTL0WGUjrfFaVJIg85rozZJsfW5+W4omRONbgvw8cC26i2ELxf4mJDp1nNvU3Pt5lrX+5rZyR7SALJs1upXTpT0aJlo1UXe1zOWg3YaZ033nJubqktQ8wdBKqZDoszwA65ooxWA9KDzRgPTh8yxvbZ7Q+fEPePyeaS/BqIPY0LLJ1IlG1EUM37y6NjD5QJwfIq/MIiGpxDBpuVmarNFyyDGqOH0eRAPnJqgC9S6EfBl4JiYt1igcUg3AgZwjaOzO33jVgtR1rLvQLVOmP9s/2BtVO+pQyZGUi7i8UkaNJKeSANNVuvyVsOPzM9UM8aaWVEG4eURKoCM+4YNQ82jko9bDFYt1gIF9VS0KiwSMFrCwpBGrbcGeSg5CCsEF6Qlw2jO+yNnFBOJLVlvmrIszC71pjupRtKo/ebyZF/x8L/G3Aa3l9P+g1LM8ZwZrSdMWqiVI5VCYy9EuSmbKiGhaou5AgsglwHeSUoClYIcpI/dihWa7knja5MUFjyuvUWJogEc30oe8Q3ZmFhAP11fumGIcesGejNQ6Cq7CNjc3Zpry9WGlhYgqYLnaFguHogBcayGUjWfapCzlq/QuboTdkVAd6o54P2qMsNeqIT0J8XzTLMNjA3oeNzY5vLSK6i2OalWifM7NOeJkGuQFPCDDrurMIzUOkFIhn9o/WrczPwo3Wzd6UqUOZ5dbWqU20SLYBVMJUgi7NU869ETEb2q9wgmvjDqO2ufsWr68TXVYGZIYkVCVHag2f+PMMYdmxXOEfEMHfyUbvvOwvsF2wGO1HGT0bWEG9pn4T+oiS9u6rhkZ5doZS2jWcYDDQ8dpl39bvxNQsux9JlcsWqPo96ISeb8cwC+4a13f+4jv3P761V5jzl9PbZw94HwiL+zSNOHy3k5JUOb69NP/bQu5PD+JhdWLttqx2GQJNsG+N20ehef14pducVvU3GSW3m9tPN0xfChBd73/iyM7bsjPWfetpF9xy9A+9tN+arEGeNNG0JmGhS63e98Fkq+5O5nt1/50AoJcYc6qZwTMco89po6AMyzntcJlwCJmTCsa/3Ip2Vw476x4xb1fLwSFPZCPnLrNilwM5Rhtw1PuDK3Oj5gc6TuH/UK3wipQIseAC0xaUXdBo+COwa/cZOFbu0SumsnI1StY3yI037/z8W/z/gJ47/AzYctO3YNjWrAAAAAElFTkSuQmCC");
-
-/***/ }),
-
-/***/ 798744:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/react@2x-e1351e83b48fbbccde989c8fa295e358.png");
-
-/***/ }),
-
 /***/ 847790:
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 884876:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNSswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNSswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzQ5ZTdiNmQtMDdiZi00MzdjLTgwMmYtN2E2MGYyNzdjYjE5IiB4bXBNTTpEb2N1bWVudElE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");
 
 /***/ }),
 

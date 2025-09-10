@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[54322],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -909,62 +909,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-826dad22941d3f43c5701934c795e9f1.webp");
-
-/***/ }),
-
-/***/ 57220:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ deepdives)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
-var Layout = __webpack_require__(330922);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBDeepDivesList.js
-const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/deepdivesComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const DeepDivesComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
-;// ./src/pages/knowledge/deepdives.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function DeepDivesPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
 
 /***/ }),
 
@@ -1900,17 +1844,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
-
-/***/ }),
-
-/***/ 95518:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
 
 /***/ }),
 
@@ -14668,6 +14601,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 697991:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbfaqpreview-979f2c1007ddcbc0325c9dbc855a2f4b.png");
+
+/***/ }),
+
 /***/ 698265:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15411,7 +15355,7 @@ if(result===md){const lines=md.split('\n');let inAdmonition=false;let admonition
 const match=trimmedLine.match(/:::(\w+)(?:\s+(.+))?/);if(match){inAdmonition=true;admonitionType=match[1];admonitionTitle=match[2]||'';admonitionContent=[];}}else{// End of admonition
 inAdmonition=false;const titleText=admonitionTitle||admonitionType.charAt(0).toUpperCase()+admonitionType.slice(1);const content=admonitionContent.join('\n').trim();const admonitionHtml="<div class=\"admonition admonition-"+admonitionType.toLowerCase()+"\">\n  <div class=\"admonition-title\">"+titleText+"</div>\n  <div class=\"admonition-content\">"+content+"</div>\n</div>";processedLines.push(admonitionHtml);}}else if(inAdmonition){admonitionContent.push(line);}else{processedLines.push(line);}}result=processedLines.join('\n');}return result;}// Removes emojis, numbering and spaces from header texts
 // so it can generates an id for the header
-function generateIdFromHeadingText(text){const plain=String(text).replace(/(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDFF\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFF]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])/g,'').replace(/^\d+\.\s*/,'');return plain.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+$/,'');}// Process block values and resolve translation keys
+function generateIdFromHeadingText(text){const plain=String(text).replace(/(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2604\u260E\u2611\u2614\u2615\u2618\u261D\u2620\u2622\u2623\u2626\u262A\u262E\u262F\u2638-\u263A\u2640\u2642\u2648-\u2653\u265F\u2660\u2663\u2665\u2666\u2668\u267B\u267E\u267F\u2692-\u2697\u2699\u269B\u269C\u26A0\u26A1\u26A7\u26AA\u26AB\u26B0\u26B1\u26BD\u26BE\u26C4\u26C5\u26C8\u26CE\u26CF\u26D1\u26D3\u26D4\u26E9\u26EA\u26F0-\u26F5\u26F7-\u26FA\u26FD\u2702\u2705\u2708-\u270D\u270F\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763\u2764\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC04\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCCF\uDCD0\uDCF6-\uDCFF\uDD70\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAE-\uDDFF\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDE5F\uDE66-\uDF21\uDF24-\uDF93\uDF96\uDF97\uDF99-\uDF9B\uDF9E-\uDFF0\uDFF3-\uDFF5\uDFF8-\uDFFF]|\uD83D[\uDC00-\uDCFD]|\uD83C[\uDFF7-\uDFFA]|\uD83D[\uDCFF-\uDD3D\uDD49-\uDD4E\uDD50-\uDD67\uDD6F\uDD70\uDD73-\uDD7A\uDD87\uDD8A-\uDD8D\uDD90\uDD95\uDD96\uDDA4\uDDA5\uDDA8\uDDB1\uDDB2\uDDBC\uDDC2-\uDDC4\uDDD1-\uDDD3\uDDDC-\uDDDE\uDDE1\uDDE3\uDDE8\uDDEF\uDDF3\uDDFA-\uDE4F\uDE80-\uDEC5\uDECB-\uDED2\uDED5-\uDEE5\uDEE9\uDEEB-\uDEF0\uDEF3-\uDEFF\uDFDA-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCBC-\uDCBF\uDCC2-\uDCCF\uDCD9-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDDFF\uDE58-\uDE5F\uDE6E-\uDEFF]|\uD83F[\uDC00-\uDFFD])/g,'').replace(/^\d+\.\s*/,'');return plain.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+$/,'');}// Process block values and resolve translation keys
 const processedBlockValue=react.useMemo(()=>{if(!(block!==null&&block!==void 0&&block.value))return[];return block.value.map(item=>{if(item.type==='text'&&item.valueKey){// Resolve translation key to get the actual content
 const translatedValue=t(item.valueKey,'');return Object.assign({},item,{value:translatedValue||item.value||''// Fallback to original value if translation not found
 });}return item;});},[block===null||block===void 0?void 0:block.value,t]);const texts=processedBlockValue.filter(v=>v.type==='text'&&!v.hidden)||[];const rawMarkdown=texts===null||texts===void 0?void 0:texts.map(t=>t.value).join('\n\n');// Memoize the processed markdown to prevent unnecessary re-processing
@@ -19880,6 +19824,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRpoEAABXRUJQVlA4TI4EAAAvPkASEFfCNpIkJ/P6Fx+LmIiRDDV4WsbAtpEkRX2MP5u/9Snu28gYkiRBOQRb5/84tUPYIxiDbCMV4f0lf0/wBJM01XYMAB4EAoHAgf950OPx7xb2MGDCFCPHv2OPGIgBAimwrhxQFpaRqtG2yA4Y0vF6w8qKgSMAQ4phSZEiRRYp9f3p/er9Gq7f8a+f7/1qzhcoCgBYpXEISJ/WASqwKVuoCWWRecc6Ywgwz0ct8v9fBOEVfiCi/xAkSXLiVM8Giz0ZSiN4gtI7y7lpTKevz8/T6cyw5orMLI1XXXX9IIyiH3EcRSREPpg8ziwpWK+aG/ygCe/MYU989dFYDDz/TUVbyvsniUP30RxwvO42twzagDSjH4tHd5twKaFhr8lvv1czaTl4+qJrq44Yl5qtOmsf2pbLDvPe2ob6L5cf5r+1zMcYnCfNqveOU55Z8xbysULVZbUNsNHgZKoo05CPR1ItJocR4chaOnxMdi8WGpX/HsxgVKhuoJEx1+Ou6BZIxiSs2I3JumLM1Z+rihEXbH2qcdho+7+zSQVYj1QRtFPNAqNVBNMKE4g1zrDrFSGO7IsxhEvbtnO9AQCh1I0752LXOT9XyJ/Qd5zaAnfdAEDyJNkhnNtiUqAbHmgP+hy4gRKnnjW4OrrlENAVn9Ce9h52gYMvpd2S1K1V3XudtcIrH5EdpYxxzhPGaByFvgOLU2m3B/7zXoEOThfQtrPj9YYxhACAFYS4uJ2y0u5M8TcDugUAjbuRkwLxsKjxOXXkk+IP/hOKtyvhzJNNDrecOWlD1YgnpPUQCVvvHuVsfRFUFat941DK65/bpBpfdgsgYJzHnhTyop7xz79OHaquP4V/1oaSX6FfzxICM7vi/werSzQWBwDcjmmfH1V2LlYeocLfGOdbvPsK3exjKo2Qu8L36/l0zPP8eDpdizt0fRIzwdVojbPm/a4bbpepSUNouo9IGCCEgjCM4j3r5+oJ6OYagY4EA1xPKPHgV6s00NctEIPurIMdPXQde4gJcvBXbrfmGgYV0bYTmB1vGAJPOCwMA+Q5q01xyTtl/eVRUOEkHz1VTYUrnE7HPC373Twui6BuAUD4xxim/3IPzBGaI6B8K53y5jH+/iWq6jAee3LJ4UfCyb21ObKwreSIzsmmrBAbhLPnnCFJ5Hd3m/AE4bK1OYJIMHU45Rl7tat0/W0Lpi9Bu+os9ivSvvvyK3YJ5YLoudgcXxStTTTKRdc9iK/HvO3UNDueiw1AhIquOk1jsKlMO0xtNO59FCAPAFhnBVwvIPEhabpapM1vR1OUpdqhWUjb+3+d1lbHdmjV6moxVZRq0RUH7fp1RxYTb3VrdzXXhMfASXdzvAndMYr3tM4+3hGhN16yrtsOmo1HsD6qZvnlWtxxnXtxu/TqjeWm2taoMVRN69FS8sngtOO5WzZn1VQ6MtNkNsd8oy96PPg/STM9x5rw+mPAxB7o6sRQemdhaDWDtvzxaCnDMn+ZAHzNsx698VRA9dlYSnnhY77oKtjg4nYVUhQbqE6eZ5JfGs0tYzYVYhjzhdI3Cg==");
+
+/***/ }),
+
+/***/ 961887:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ faq)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
+var Layout = __webpack_require__(330922);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBFaqList.js
+const KBFaqList={title:'pages.knowledge.faq.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-does-push-chain-work'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-unique-for-users'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-innovations'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.technical-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-an-l2'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-compatibility'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-non-evm-compatible'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-ethereum-or-solana'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.shared-state-meaning'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-achieve-shared-state'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.transaction-fees'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.true-universal-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.competitors-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-other-universal'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-layerzero'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-axelar'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-chainlink-ccip'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-particle-network'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-agglayer'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-cosmos'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-polkadot'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.new-token'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.early-adopter-incentives'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developer-user-benefits'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.dao-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.governance-changes'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.doubts-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.push-services-future'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.project-distraction'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-focus-shift'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.partnerships-effect'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.support-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.need-help'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-contribute'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/faqComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const FAQComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.faq.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBFaqList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const faqComp = (FAQComp);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+;// ./src/pages/knowledge/faq.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function FAQPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.faq.seo.title'),description:t('pages.knowledge.faq.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/faq"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.faq.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.faq.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.faq.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.faq.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(faqComp,{})})]});}/* harmony default export */ const faq = (FAQPage);
 
 /***/ }),
 

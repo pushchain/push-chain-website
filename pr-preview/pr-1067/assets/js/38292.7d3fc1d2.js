@@ -53965,6 +53965,19 @@ const multicall3Abi = [
         stateMutability: 'view',
         type: 'function',
     },
+    {
+        inputs: [],
+        name: 'getCurrentBlockTimestamp',
+        outputs: [
+            {
+                internalType: 'uint256',
+                name: 'timestamp',
+                type: 'uint256',
+            },
+        ],
+        stateMutability: 'view',
+        type: 'function',
+    },
 ];
 const batchGatewayAbi = [
     {
@@ -98146,7 +98159,7 @@ __webpack_require__.d(__webpack_exports__, {
 // UNUSED EXPORTS: setErrorConfig
 
 ;// ./node_modules/viem/_esm/errors/version.js
-const version = '2.37.3';
+const version = '2.37.5';
 //# sourceMappingURL=version.js.map
 ;// ./node_modules/viem/_esm/errors/base.js
 
@@ -233042,7 +233055,7 @@ var constants_contracts = __webpack_require__(945945);
  * // [{ result: 424122n, status: 'success' }, { result: 1000000n, status: 'success' }]
  */
 async function multicall(client, parameters) {
-    const { account, authorizationList, allowFailure = true, blockNumber, blockTag, stateOverride, } = parameters;
+    const { account, authorizationList, allowFailure = true, blockNumber, blockOverrides, blockTag, stateOverride, } = parameters;
     const contracts = parameters.contracts;
     const { batchSize = parameters.batchSize ?? 1024, deployless = parameters.deployless ?? false, } = typeof client.batch?.multicall === 'object' ? client.batch.multicall : {};
     const multicallAddress = (() => {
@@ -233118,6 +233131,7 @@ async function multicall(client, parameters) {
         args: [calls],
         authorizationList,
         blockNumber,
+        blockOverrides,
         blockTag,
         functionName: 'aggregate3',
         stateOverride,
@@ -239848,7 +239862,7 @@ function watchBlockNumber(client, { emitOnBegin = false, emitMissed = false, onB
         return observe(observerId, { onBlockNumber, onError }, (emit) => poll(async () => {
             try {
                 const blockNumber = await getAction(client, getBlockNumber, 'getBlockNumber')({ cacheTime: 0 });
-                if (prevBlockNumber) {
+                if (prevBlockNumber !== undefined) {
                     // If the current block number is the same as the previous,
                     // we can skip.
                     if (blockNumber === prevBlockNumber)
@@ -239864,7 +239878,8 @@ function watchBlockNumber(client, { emitOnBegin = false, emitMissed = false, onB
                 }
                 // If the next block number is greater than the previous,
                 // it is not in the past, and we can emit the new block number.
-                if (!prevBlockNumber || blockNumber > prevBlockNumber) {
+                if (prevBlockNumber === undefined ||
+                    blockNumber > prevBlockNumber) {
                     emit.onBlockNumber(blockNumber, prevBlockNumber);
                     prevBlockNumber = blockNumber;
                 }

@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76074],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[90024],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -465,6 +465,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pune@3x-8afdca358191f5128dd3e84660a76810.webp");
+
+/***/ }),
+
+/***/ 31730:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ tokenomics)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
+var Layout = __webpack_require__(330922);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBTokenomicsList.js
+const KBTokenomicsList={title:'pages.knowledge.tokenomics.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.vision'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.innovation'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.fit'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-utility'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.deflationary-design'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.migration-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.airdrop-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-distribution'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.get-involved'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/tokenomicsComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const TokenomicsComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.tokenomics.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTokenomicsList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const tokenomicsComp = (TokenomicsComp);
+;// ./src/pages/knowledge/tokenomics.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function TokenomicsPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.tokenomics.seo.title'),description:t('pages.knowledge.tokenomics.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/tokenomics"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.tokenomics.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.tokenomics.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.tokenomics.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.tokenomics.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(tokenomicsComp,{})})]});}/* harmony default export */ const tokenomics = (TokenomicsPage);
 
 /***/ }),
 
@@ -2324,6 +2380,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/true@3x-c93eba88ac846df3737ef7105df4574e.webp");
+
+/***/ }),
+
+/***/ 121205:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbtokenomicspreview-8eeafd37aa2f145eb670a6f807c450e6.png");
 
 /***/ }),
 
@@ -14925,62 +14992,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 721593:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ push101)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
-var Layout = __webpack_require__(330922);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBPush101List.js
-const KBPush101List={title:'pages.knowledge.push101.explainer-section.blocks.title',content:[{topGap:false,bottomGap:false,type:'indexlist',value:[{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.why-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.what-is-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.innovations-of-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.curated-reads",hidden:true}]},{type:'list',title:'pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.title',variant:'row',topGap:true,bottomGap:true,items:[{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain",slug:'why-push-chain',image:'/static/assets/website/chain/knowledge/why-push-chain',imageSrcSet:false,url:'/blog/why-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.innovations-by-push-chain",slug:'innovations-by-push-chain',image:'/static/assets/website/chain/knowledge/innovations-by-push-chain',imageSrcSet:false,url:'/blog/innovations-by-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1",slug:'another-l1',image:'/static/assets/website/chain/knowledge/another-l1',imageSrcSet:false,url:'/blog/another-l1',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.evolution-of-push",slug:'evolution-of-push',image:'/static/assets/website/chain/knowledge/evolution-of-push',imageSrcSet:false,url:'/blog/evolution-of-push',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.consumer-apps-that-can-be-built-on-push-chain",slug:'consumer-apps-that-can-be-built-on-push-chain',image:'/static/assets/website/chain/knowledge/consumer-apps',imageSrcSet:false,url:'/blog/consumer-apps-that-can-be-built-on-push-chain/',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain",slug:'faq-push-chain',image:'/static/assets/website/chain/knowledge/frequently-asked-questions-cover',imageSrcSet:false,url:'/blog/faq-push-chain/',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/push101Comp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const Push101Comp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.push101.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBPush101List,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const push101Comp = (Push101Comp);
-;// ./src/pages/knowledge/push101.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function PushBasicsPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.push101.seo.title'),description:t('pages.knowledge.push101.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/push101"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.push101.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.push101.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.push101.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.push101.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(push101Comp,{})})]});}/* harmony default export */ const push101 = (PushBasicsPage);
-
-/***/ }),
-
 /***/ 721703:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15400,7 +15411,7 @@ if(result===md){const lines=md.split('\n');let inAdmonition=false;let admonition
 const match=trimmedLine.match(/:::(\w+)(?:\s+(.+))?/);if(match){inAdmonition=true;admonitionType=match[1];admonitionTitle=match[2]||'';admonitionContent=[];}}else{// End of admonition
 inAdmonition=false;const titleText=admonitionTitle||admonitionType.charAt(0).toUpperCase()+admonitionType.slice(1);const content=admonitionContent.join('\n').trim();const admonitionHtml="<div class=\"admonition admonition-"+admonitionType.toLowerCase()+"\">\n  <div class=\"admonition-title\">"+titleText+"</div>\n  <div class=\"admonition-content\">"+content+"</div>\n</div>";processedLines.push(admonitionHtml);}}else if(inAdmonition){admonitionContent.push(line);}else{processedLines.push(line);}}result=processedLines.join('\n');}return result;}// Removes emojis, numbering and spaces from header texts
 // so it can generates an id for the header
-function generateIdFromHeadingText(text){const plain=String(text).replace(/(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u2388\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2605\u2607-\u2612\u2614-\u2685\u2690-\u2705\u2708-\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763-\u2767\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC00-\uDCFF\uDD0D-\uDD0F\uDD2F\uDD6C-\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAD-\uDDFF\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDFFF]|\uD83D[\uDC00-\uDD3D\uDD46-\uDE4F\uDE80-\uDEFF\uDF74-\uDF7F\uDFD5-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDEFF]|\uD83F[\uDC00-\uDFFD])/g,'').replace(/^\d+\.\s*/,'');return plain.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+$/,'');}// Process block values and resolve translation keys
+function generateIdFromHeadingText(text){const plain=String(text).replace(/(?:[\xA9\xAE\u203C\u2049\u2122\u2139\u2194-\u2199\u21A9\u21AA\u231A\u231B\u2328\u23CF\u23E9-\u23F3\u23F8-\u23FA\u24C2\u25AA\u25AB\u25B6\u25C0\u25FB-\u25FE\u2600-\u2604\u260E\u2611\u2614\u2615\u2618\u261D\u2620\u2622\u2623\u2626\u262A\u262E\u262F\u2638-\u263A\u2640\u2642\u2648-\u2653\u265F\u2660\u2663\u2665\u2666\u2668\u267B\u267E\u267F\u2692-\u2697\u2699\u269B\u269C\u26A0\u26A1\u26A7\u26AA\u26AB\u26B0\u26B1\u26BD\u26BE\u26C4\u26C5\u26C8\u26CE\u26CF\u26D1\u26D3\u26D4\u26E9\u26EA\u26F0-\u26F5\u26F7-\u26FA\u26FD\u2702\u2705\u2708-\u270D\u270F\u2712\u2714\u2716\u271D\u2721\u2728\u2733\u2734\u2744\u2747\u274C\u274E\u2753-\u2755\u2757\u2763\u2764\u2795-\u2797\u27A1\u27B0\u27BF\u2934\u2935\u2B05-\u2B07\u2B1B\u2B1C\u2B50\u2B55\u3030\u303D\u3297\u3299]|\uD83C[\uDC04\uDC2C-\uDC2F\uDC94-\uDC9F\uDCAF\uDCB0\uDCC0\uDCCF\uDCD0\uDCF6-\uDCFF\uDD70\uDD71\uDD7E\uDD7F\uDD8E\uDD91-\uDD9A\uDDAE-\uDDFF\uDE01-\uDE0F\uDE1A\uDE2F\uDE32-\uDE3A\uDE3C-\uDE3F\uDE49-\uDE5F\uDE66-\uDF21\uDF24-\uDF93\uDF96\uDF97\uDF99-\uDF9B\uDF9E-\uDFF0\uDFF3-\uDFF5\uDFF8-\uDFFF]|\uD83D[\uDC00-\uDCFD]|\uD83C[\uDFF7-\uDFFA]|\uD83D[\uDCFF-\uDD3D\uDD49-\uDD4E\uDD50-\uDD67\uDD6F\uDD70\uDD73-\uDD7A\uDD87\uDD8A-\uDD8D\uDD90\uDD95\uDD96\uDDA4\uDDA5\uDDA8\uDDB1\uDDB2\uDDBC\uDDC2-\uDDC4\uDDD1-\uDDD3\uDDDC-\uDDDE\uDDE1\uDDE3\uDDE8\uDDEF\uDDF3\uDDFA-\uDE4F\uDE80-\uDEC5\uDECB-\uDED2\uDED5-\uDEE5\uDEE9\uDEEB-\uDEF0\uDEF3-\uDEFF\uDFDA-\uDFFF]|\uD83E[\uDC0C-\uDC0F\uDC48-\uDC4F\uDC5A-\uDC5F\uDC88-\uDC8F\uDCAE\uDCAF\uDCBC-\uDCBF\uDCC2-\uDCCF\uDCD9-\uDCFF\uDD0C-\uDD3A\uDD3C-\uDD45\uDD47-\uDDFF\uDE58-\uDE5F\uDE6E-\uDEFF]|\uD83F[\uDC00-\uDFFD])/g,'').replace(/^\d+\.\s*/,'');return plain.toLowerCase().replace(/[^a-z0-9\s-]/g,'').replace(/\s+/g,'-').replace(/-+$/,'');}// Process block values and resolve translation keys
 const processedBlockValue=react.useMemo(()=>{if(!(block!==null&&block!==void 0&&block.value))return[];return block.value.map(item=>{if(item.type==='text'&&item.valueKey){// Resolve translation key to get the actual content
 const translatedValue=t(item.valueKey,'');return Object.assign({},item,{value:translatedValue||item.value||''// Fallback to original value if translation not found
 });}return item;});},[block===null||block===void 0?void 0:block.value,t]);const texts=processedBlockValue.filter(v=>v.type==='text'&&!v.hidden)||[];const rawMarkdown=texts===null||texts===void 0?void 0:texts.map(t=>t.value).join('\n\n');// Memoize the processed markdown to prevent unnecessary re-processing
@@ -20301,17 +20312,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-1610fcb762ae65c4cbe377b08bb20d4c.webp");
-
-/***/ }),
-
-/***/ 987744:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbbasicspreview-60fe7c3729c82078fe665ae2f556d86f.png");
 
 /***/ }),
 
