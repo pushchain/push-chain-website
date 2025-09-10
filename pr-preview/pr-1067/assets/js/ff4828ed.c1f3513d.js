@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[81388,83249],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[90798],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -302,41 +302,6 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 60542:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   _: () => (/* binding */ DocProvider),
-/* harmony export */   u: () => (/* binding */ useDoc)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_theme_common_internal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(689532);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */const Context=/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);/**
- * Note: we don't use `PropDoc` as context value on purpose. Metadata is
- * currently stored inside the MDX component, but we may want to change that in
- * the future. This layer is a good opportunity to decouple storage from
- * consuming API, potentially allowing us to provide metadata as both props and
- * route context without duplicating the chunks in the future.
- */function useContextValue(content){return (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>({metadata:content.metadata,frontMatter:content.frontMatter,assets:content.assets,contentTitle:content.contentTitle,toc:content.toc}),[content]);}/**
- * This is a very thin layer around the `content` received from the MDX loader.
- * It provides metadata about the doc to the children tree.
- */function DocProvider(_ref){let{children,content}=_ref;const contextValue=useContextValue(content);return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(Context.Provider,{value:contextValue,children:children});}/**
- * Returns the data of the currently browsed doc. Gives access to the doc's MDX
- * Component, front matter, metadata, TOC, etc. When swizzling a low-level
- * component (e.g. the "Edit this page" link) and you need some extra metadata,
- * you don't have to drill the props all the way through the component tree:
- * simply use this hook instead.
- */function useDoc(){const doc=(0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(Context);if(doc===null){throw new _docusaurus_theme_common_internal__WEBPACK_IMPORTED_MODULE_1__/* .ReactContextError */ .dV('DocProvider');}return doc;}
-
-/***/ }),
-
 /***/ 73776:
 /***/ (() => {
 
@@ -358,69 +323,32 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 117290:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ TagsListInline)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(721312);
-/* harmony import */ var _theme_Tag__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(293751);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21532);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-// import styles from "./styles.module.css";
-function TagsListInline(_ref){let{tags}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Ul,{children:tags.map(_ref2=>{let{label,permalink:tagPermalink}=_ref2;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Li,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_theme_Tag__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .A,{label:label,permalink:tagPermalink})},tagPermalink);})})});}const Li=styled_components__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Ay.li.withConfig({displayName:"TagsListInline__Li",componentId:"sc-1ggehkj-0"})(["list-style:none;display:flex !important;flex-direction:row;flex-wrap:wrap;margin:0 0.4rem 0.5rem 0;@media ","{display:flex !important;flex-direction:row;flex-wrap:wrap;}"],_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.laptopL);const Ul=styled_components__WEBPACK_IMPORTED_MODULE_3__/* ["default"] */ .Ay.ul.withConfig({displayName:"TagsListInline__Ul",componentId:"sc-1ggehkj-1"})(["margin:0 0;padding:0 0;display:flex !important;flex-direction:row;flex-wrap:wrap;"]);
-
-/***/ }),
-
-/***/ 152493:
+/***/ 119365:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostPage_LikeAndRetweetItem)
+  A: () => (/* binding */ TabItem)
 });
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
-var index_esm = __webpack_require__(796710);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/build/modern/useQuery.js + 6 modules
-var useQuery = __webpack_require__(994315);
-;// ./src/api/GetTwitterMetrics.ts
-async function fetchTweetMetrics(tweetId){const url="https://us-east1-push-prod-apps.cloudfunctions.net/pushpointsrewardsystem/api/twitter/tweetMetrics?id="+tweetId;const response=await fetch(url);if(!response.ok){throw new Error("Error "+response.status+": "+response.statusText);}return response.json();}function useTweetMetrics(tweetId){return (0,useQuery/* useQuery */.I)({queryKey:['tweetMetrics',tweetId],queryFn:()=>fetchTweetMetrics(tweetId),enabled:!!tweetId,// only run if tweetId is provided
-staleTime:1000*60// cache for 1 min
-});}
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-;// ./src/utils/FormatTwitterCount.tsx
-function formatTwitterCount(num){if(num===null||num===undefined)return'';if(num<1000)return num.toString();if(num<1000000)return(num/1000).toFixed(num%1000>=100?1:0)+'K';if(num<1000000000)return(num/1000000).toFixed(num%1000000>=100000?1:0)+'M';return(num/1000000000).toFixed(num%1000000000>=100000000?1:0)+'B';}
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"tabItem":"tabItem_Ymn6"});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-//
-const LikeAndRetweetItem=_ref=>{let{twitterId,text}=_ref;const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);const twitterID=twitterId;const{data:twitterData}=useTweetMetrics(twitterID);if(!twitterData)return null;return/*#__PURE__*/(0,jsx_runtime.jsxs)(ShareRow,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ResponsiveH2,{weight:"500",spacing:"-0.02em",lineHeight:"110%",color:"#00000",children:text}),/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{justifyContent:"flex-end",flexWrap:"nowrap",gap:"8px",margin:isMobile&&'20px 0 0 0',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(LikeButton,{title:"Developer Docs",self:isMobile?'stretch':'self',href:"https://x.com/PushChain/status/"+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Like this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsHeart,{size:22,color:"var(--ifm-color-primary-text)",style:{marginRight:'10px'}}),formatTwitterCount(twitterData===null||twitterData===void 0?void 0:twitterData.like_count)||'']}),/*#__PURE__*/(0,jsx_runtime.jsxs)(RetweetButton,{title:"Developer Docs",href:"https://twitter.com/intent/retweet?tweet_id="+twitterId,target:"_blank",rel:"noopener noreferrer",title:"Retweet this post",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsTwitterX,{size:22,color:"var(--ifm-color-white)",style:{marginRight:'10px'}}),"Retweet"]})]})]});};const ResponsiveH2=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling.H2).withConfig({displayName:"LikeAndRetweetItem__ResponsiveH2",componentId:"sc-c60ajk-0"})(["font-size:1.25rem;@media ","{font-size:1.25rem;}"],globals/* device */.jO.mobileL);const ShareRow=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"LikeAndRetweetItem__ShareRow",componentId:"sc-c60ajk-1"})(["display:flex;justify-content:space-between;align-items:center;@media ","{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}"],globals/* device */.jO.mobileL);const RetweetButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__RetweetButton",componentId:"sc-c60ajk-2"})(["background:var(--ifm-color-custom-pink);border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:none;color:var(--ifm-color-white);align-self:",";&:hover{color:var(--ifm-color-white);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);const LikeButton=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"LikeAndRetweetItem__LikeButton",componentId:"sc-c60ajk-3"})(["background:transparent;border-radius:16px;padding:14px 20px;font-size:1rem;font-weight:500;letter-spacing:-0.03em;line-height:26px;display:flex;flex-direction:row;align-items:center;border:1.5px solid var(--ifm-like-border-color);color:var(--ifm-color-primary-text);align-self:",";&:hover{color:var(--ifm-color-primary-text);opacity:0.8;cursor:pointer;}@media ","{width:100%;justify-content:center;}"],props=>props.self,globals/* device */.jO.mobileL);/* harmony default export */ const BlogPostPage_LikeAndRetweetItem = (LikeAndRetweetItem);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function TabItem(_ref){let{children,hidden,className}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{role:"tabpanel",className:(0,clsx/* default */.A)(styles_module.tabItem,className),hidden,children:children});}
 
 /***/ }),
 
@@ -445,171 +373,6 @@ const LikeAndRetweetItem=_ref=>{let{twitterId,text}=_ref;const isMobile=(0,useMe
 
 /***/ }),
 
-/***/ 247712:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostItemHeaderInfo)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(244096);
-;// ./src/theme/BlogPostItem/Header/Info/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"container":"container_iJTo"});
-// EXTERNAL MODULE: ./src/components/reusables/date.tsx
-var reusables_date = __webpack_require__(856977);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostItem/Header/Info/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemHeaderInfo(_ref){let{className,morePosts}=_ref;const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{date,formattedDate,readingTime}=metadata;if(morePosts){const blogDate=morePosts.date;const blogFormattedDate=morePosts.formattedDate;const blogReadingTime=morePosts.readingTime;return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.container,!isBlogPostPage?'margin-vert--sm':'',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Date */.n9,{date:blogDate,formattedDate:blogFormattedDate}),typeof blogReadingTime!=='undefined'&&/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Spacer */.hK,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* ReadingTime */.uR,{readingTime:blogReadingTime})]})]});}else{return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.container,!isBlogPostPage?'margin-vert--sm':'',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Date */.n9,{date:date,formattedDate:formattedDate}),typeof readingTime!=='undefined'&&/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* Spacer */.hK,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(reusables_date/* ReadingTime */.uR,{readingTime:readingTime})]})]});}}
-
-/***/ }),
-
-/***/ 254887:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ BlogPostItem)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(244096);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostItem/Container/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemContainer(_ref){var _assets$image,_frontMatter$keywords;let{children,className}=_ref;const{frontMatter,assets,metadata:{description}}=(0,client/* useBlogPost */.e7)();const{withBaseUrl}=(0,useBaseUrl/* useBaseUrlUtils */.hH)();const image=(_assets$image=assets.image)!==null&&_assets$image!==void 0?_assets$image:frontMatter.image;const keywords=(_frontMatter$keywords=frontMatter.keywords)!==null&&_frontMatter$keywords!==void 0?_frontMatter$keywords:[];return/*#__PURE__*/(0,jsx_runtime.jsxs)("article",{className:className,itemProp:"blogPost",itemScope:true,itemType:"https://schema.org/BlogPosting",children:[description&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{itemProp:"description",content:description}),image&&/*#__PURE__*/(0,jsx_runtime.jsx)("link",{itemProp:"image",href:withBaseUrl(image,{absolute:true})}),keywords.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{itemProp:"keywords",content:keywords.join(',')}),children]});}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-;// ./src/theme/BlogPostItem/Header/Title/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-function BlogPostItemHeaderTitle(){const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{permalink,title}=metadata;return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:isBlogPostPage?/*#__PURE__*/(0,jsx_runtime.jsx)(PostTitle,{children:title}):/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{itemProp:"url",to:permalink,children:/*#__PURE__*/(0,jsx_runtime.jsx)(LinkText,{children:title})})});}const LinkText=styled_components_browser_esm/* default */.Ay.h1.withConfig({displayName:"Title__LinkText",componentId:"sc-1u7sfya-0"})(["overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--ifm-color-primary-blog) !important;font-family:DM Sans;font-size:1.5rem;font-style:normal;font-weight:700;line-height:36px;&:hover{color:var(--ifm-color-primary) !important;}"]);const PostTitle=styled_components_browser_esm/* default */.Ay.h1.withConfig({displayName:"Title__PostTitle",componentId:"sc-1u7sfya-1"})(["color:var(--ifm-color-primary-blog) !important;font-family:DM Sans;font-size:2.625rem;font-style:normal;font-weight:700;line-height:55.5px;@media ","{font-size:25px;line-height:30px;}"],globals/* device */.jO.tablet);
-// EXTERNAL MODULE: ./src/theme/BlogPostItem/Header/Info/index.js + 1 modules
-var Info = __webpack_require__(247712);
-// EXTERNAL MODULE: ./src/hooks/useSiteBaseUrl.tsx
-var useSiteBaseUrl = __webpack_require__(811494);
-;// ./src/theme/BlogPostItem/Header/Author/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function MaybeLink(props){if(props.href){return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,Object.assign({},props));}return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:props.children});}function BlogPostItemHeaderAuthor(_ref){let{author,index}=_ref;const baseURL=(0,useSiteBaseUrl/* useSiteBaseUrl */.p)()||'';const{name,title,url,imageURL,email}=author;const link=url||email&&"mailto:"+email||undefined;// Handle image URL construction for different environments
-const getImageSrc=()=>{if(!imageURL)return'';// If imageURL already starts with '/', use it as-is (for local development)
-if(imageURL.startsWith('/')){return imageURL;}// If imageURL doesn't start with '/', prepend baseURL (for preview deployments)
-return baseURL+'/'+imageURL;};return/*#__PURE__*/(0,jsx_runtime.jsxs)(AvatarDiv,{children:[imageURL&&/*#__PURE__*/(0,jsx_runtime.jsx)(MaybeLink,{href:link,className:"avatar__photo-link",children:/*#__PURE__*/(0,jsx_runtime.jsx)(Img,{src:getImageSrc(),alt:name,itemProp:"image"})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(AvatarItem,{children:[name&&/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{itemProp:"author",itemScope:true,itemType:"https://schema.org/Person",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"avatar__name",children:/*#__PURE__*/(0,jsx_runtime.jsx)(MaybeLink,{href:link,itemProp:"url",children:/*#__PURE__*/(0,jsx_runtime.jsx)("span",{itemProp:"name",children:name})})}),title&&/*#__PURE__*/(0,jsx_runtime.jsx)("small",{className:"avatar__subtitle",itemProp:"description",children:title})]}),index===0&&/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{})]})]});}const AvatarItem=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"Author__AvatarItem",componentId:"sc-zksgx5-0"})(["display:flex;flex-direction:column;"]);const Img=styled_components_browser_esm/* default */.Ay.img.withConfig({displayName:"Author__Img",componentId:"sc-zksgx5-1"})(["width:56px;height:56px;border:var(--ifm-blog-avatar-border);border-radius:100%;background:white;"]);const AvatarDiv=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"Author__AvatarDiv",componentId:"sc-zksgx5-2"})(["display:flex;flex-direction:row;gap:16px;align-items:center;"]);
-;// ./src/theme/BlogPostItem/Header/Authors/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"authorCol":"authorCol_q4o9","imageOnlyAuthorRow":"imageOnlyAuthorRow_lXe7","imageOnlyAuthorCol":"imageOnlyAuthorCol_cxD5"});
-;// ./src/theme/BlogPostItem/Header/Authors/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Component responsible for the authors layout
-function BlogPostItemHeaderAuthors(_ref){let{className}=_ref;const{metadata:{authors},assets}=(0,client/* useBlogPost */.e7)();const authorsCount=authors.length;if(authorsCount===0){return null;}const imageOnly=authors.every(_ref2=>{let{name}=_ref2;return!name;});return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('margin-top--md margin-bottom--sm',imageOnly?styles_module.imageOnlyAuthorRow:'row',className),children:authors.map((author,idx)=>{var _assets$authorsImageU;return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)(!imageOnly&&'col col--6',imageOnly?styles_module.imageOnlyAuthorCol:styles_module.authorCol),children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderAuthor,{index:idx,author:Object.assign({},author,{// Handle author images using relative paths
-imageURL:(_assets$authorsImageU=assets.authorsImageUrls[idx])!==null&&_assets$authorsImageU!==void 0?_assets$authorsImageU:author.imageURL})})},idx);})});}
-;// ./src/theme/BlogPostItem/Header/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemHeader(_ref){let{list}=_ref;const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();if(list){return/*#__PURE__*/(0,jsx_runtime.jsxs)("header",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderTitle,{})]});}else{return/*#__PURE__*/(0,jsx_runtime.jsxs)("header",{children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderAuthors,{}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeaderTitle,{})]});}}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/utils-common/lib/index.js
-var lib = __webpack_require__(270440);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/MDXContent/index.js + 21 modules
-var MDXContent = __webpack_require__(952944);
-// EXTERNAL MODULE: ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx + 2 modules
-var LikeAndRetweetItem = __webpack_require__(152493);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/node_modules/@tanstack/query-core/build/modern/queryClient.js + 4 modules
-var modern_queryClient = __webpack_require__(242685);
-// EXTERNAL MODULE: ./node_modules/@tanstack/react-query/build/modern/QueryClientProvider.js
-var QueryClientProvider = __webpack_require__(497665);
-;// ./src/theme/BlogPostItem/Content/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemContent(_ref){var _metadata$frontMatter2;let{children,className}=_ref;const{isBlogPostPage,metadata}=(0,client/* useBlogPost */.e7)();const[hasInjectedSocialButtons,setHasInjectedSocialButtons]=(0,react.useState)(false);const contentRef=(0,react.useRef)(null);const injectSocialButtons=()=>{var _contentRef$current;const firstImage=(_contentRef$current=contentRef.current)===null||_contentRef$current===void 0?void 0:_contentRef$current.querySelector('p > img');if(!firstImage)return false;const socialContainer=createSocialContainer();const insertionPoint=firstImage.parentNode.nextSibling;firstImage.parentNode.parentNode.insertBefore(socialContainer,insertionPoint);renderSocialButtons(socialContainer);return true;};const createSocialContainer=()=>{const container=document.createElement('div');return container;};const renderSocialButtons=container=>{var _metadata$frontMatter;const{createRoot}=__webpack_require__(205338);const queryClient=new modern_queryClient/* QueryClient */.E();const root=createRoot(container);root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(QueryClientProvider/* QueryClientProvider */.Ht,{client:queryClient,children:/*#__PURE__*/(0,jsx_runtime.jsx)(LikeAndRetweetItem/* default */.A,{twitterId:metadata===null||metadata===void 0||(_metadata$frontMatter=metadata.frontMatter)===null||_metadata$frontMatter===void 0?void 0:_metadata$frontMatter.twitterId})}));};(0,react.useEffect)(()=>{if(!isBlogPostPage||hasInjectedSocialButtons||!contentRef.current){return;}const timer=setTimeout(()=>{const success=injectSocialButtons();if(success){setHasInjectedSocialButtons(true);}},100);return()=>clearTimeout(timer);},[isBlogPostPage,hasInjectedSocialButtons,metadata===null||metadata===void 0||(_metadata$frontMatter2=metadata.frontMatter)===null||_metadata$frontMatter2===void 0?void 0:_metadata$frontMatter2.twitterId]);return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{// This ID is used for the feed generation to locate the main content
-id:isBlogPostPage?lib/* blogPostContainerID */.LU:undefined,className:(0,clsx_m/* default */.A)('markdown',className),itemProp:"articleBody",ref:contentRef,children:/*#__PURE__*/(0,jsx_runtime.jsx)(MDXContent/* default */.A,{children:children})});}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/EditThisPage/index.js + 2 modules
-var EditThisPage = __webpack_require__(361943);
-// EXTERNAL MODULE: ./src/theme/TagsListInline/index.js
-var TagsListInline = __webpack_require__(117290);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
-var Translate = __webpack_require__(721312);
-;// ./src/theme/BlogPostItem/Footer/ReadMoreLink/index.js
-const _excluded=["blogPostTitle"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function ReadMoreLabel(){return/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Translate/* default */.A,{id:"theme.blog.post.readMore",description:"The label used in blog post item excerpts to link to full blog posts",children:"Read More"})});}function BlogPostItemFooterReadMoreLink(props){const{blogPostTitle}=props,linkProps=(0,objectWithoutPropertiesLoose/* default */.A)(props,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,Object.assign({"aria-label":(0,Translate/* translate */.T)({message:'Read more about {title}',id:'theme.blog.post.readMoreLabel',description:'The ARIA label for the link to full blog posts from excerpts'},{title:blogPostTitle})},linkProps,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ReadMoreLabel,{})}));}
-;// ./src/theme/BlogPostItem/Footer/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const Footer_styles_module = ({"blogPostFooterDetailsFull":"blogPostFooterDetailsFull_Wr5y"});
-;// ./src/theme/BlogPostItem/Footer/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostItemFooter(){const{metadata,isBlogPostPage}=(0,client/* useBlogPost */.e7)();const{tags,title,editUrl,hasTruncateMarker}=metadata;// A post is truncated if it's in the "list view" and it has a truncate marker
-const truncatedPost=!isBlogPostPage&&hasTruncateMarker;const tagsExists=tags.length>0;const renderFooter=tagsExists||truncatedPost||editUrl;if(!renderFooter){return null;}return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsxs)("footer",{className:(0,clsx_m/* default */.A)('row docusaurus-mt-lg',isBlogPostPage&&Footer_styles_module.blogPostFooterDetailsFull),children:[tagsExists&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('col',{'col--9':truncatedPost}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(TagsListInline/* default */.A,{tags:tags})}),editUrl&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"col margin-top--sm",children:/*#__PURE__*/(0,jsx_runtime.jsx)(EditThisPage/* default */.A,{editUrl:editUrl})}),truncatedPost&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:(0,clsx_m/* default */.A)('col text--right',{'col--3':tagsExists}),children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooterReadMoreLink,{blogPostTitle:title,to:metadata===null||metadata===void 0?void 0:metadata.permalink})})]}),!isBlogPostPage&&truncatedPost&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooterReadMoreLink,{blogPostTitle:title,to:metadata===null||metadata===void 0?void 0:metadata.permalink})})]});}
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-;// ./src/theme/BlogPostItem/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Configs
-// apply a bottom margin in list view
-function useContainerClassName(){const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);return!isBlogPostPage&&!isMobile?'margin-bottom--xl':!isBlogPostPage&&isMobile?'margin-bottom--md':undefined;}function BlogPostItem(_ref){let{children,className,list}=_ref;const containerClassName=useContainerClassName();const{isBlogPostPage}=(0,client/* useBlogPost */.e7)();if(list){var _children$type;return/*#__PURE__*/(0,jsx_runtime.jsxs)(ListView,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Content,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemContent,{children:children})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(TextView,{children:[!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{list:list}),/*#__PURE__*/(0,jsx_runtime.jsx)(TextSpan,{children:children===null||children===void 0||(_children$type=children.type)===null||_children$type===void 0||(_children$type=_children$type.frontMatter)===null||_children$type===void 0?void 0:_children$type.text}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooter,{})]})]});}else{var _children$type2;return/*#__PURE__*/(0,jsx_runtime.jsxs)(BlogPostItemContainer,{className:(0,clsx_m/* default */.A)(containerClassName,className),children:[isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemContent,{children:children}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemHeader,{}),!isBlogPostPage&&/*#__PURE__*/(0,jsx_runtime.jsx)(TextSpan,{children:children===null||children===void 0||(_children$type2=children.type)===null||_children$type2===void 0||(_children$type2=_children$type2.frontMatter)===null||_children$type2===void 0?void 0:_children$type2.text}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItemFooter,{})]});}}const ListView=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__ListView",componentId:"sc-wy7hmx-0"})(["display:flex;flex-direction:row;margin:32px 0;align-items:center;gap:32px;@media (max-width:1200px){flex-direction:column;gap:0px;}"]);const Content=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__Content",componentId:"sc-wy7hmx-1"})(["min-width:544px;max-width:544px;@media (max-width:1200px){min-width:100%;max-width:100%;}"]);const TextView=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__TextView",componentId:"sc-wy7hmx-2"})(["@media (max-width:1200px){width:100%;}"]);const TextSpan=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostItem__TextSpan",componentId:"sc-wy7hmx-3"})(["color:var(--ifm-color-secondary-blog);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:300;line-height:32px;margin-bottom:20px;overflow:hidden;display:-webkit-box !important;-webkit-line-clamp:3;-webkit-box-orient:vertical;"]);
-
-/***/ }),
-
 /***/ 271281:
 /***/ (() => {
 
@@ -631,34 +394,70 @@ function useContainerClassName(){const{isBlogPostPage}=(0,client/* useBlogPost *
 
 /***/ }),
 
-/***/ 293751:
+/***/ 303999:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ Tag)
+  A: () => (/* binding */ Details_Details)
 });
+
+;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
+function _objectDestructuringEmpty(t) {
+  if (null == t) throw new TypeError("Cannot destructure " + t);
+}
 
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-;// ./src/theme/Tag/styles.module.css
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(198587);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
+var dist_clsx = __webpack_require__(15066);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBrokenLinks.js + 1 modules
+var useBrokenLinks = __webpack_require__(163427);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
+var Collapsible = __webpack_require__(41422);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tagRegular":"tagRegular_bmnp","tagWithCount":"tagWithCount_vddX"});
+/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/Tag/index.js
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
+const _excluded=["summary","children"];/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
+ * A mostly un-styled `<details>` element with smooth collapsing. Provides some
+ * very lightweight styles, but you should bring your UI.
+ */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);(0,useBrokenLinks/* default */.A)().collectAnchor(props.id);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
+// only after animation completes, otherwise close animations won't work
+const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
+if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
+const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
+// setOpen(false);
+}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
+,collapsed:collapsed,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */function Tag(_ref){let{permalink,label,count}=_ref;return/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{href:permalink,className:(0,clsx_m/* default */.A)(count?styles_module.tagWithCount:styles_module.tagRegular),children:label});}
+ */// Should we have a custom details/summary comp in Infima instead of reusing
+// alert classes?
+const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
 
 /***/ }),
 
@@ -696,23 +495,14 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
+}function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}function loadClientSideLibraryMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(360737)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
+}function loadClientSideLibraryBigNumber(constantName){return typeof window!=='undefined'?__webpack_require__(461594)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
+}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
 ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
-SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
-
-/***/ }),
-
-/***/ 381418:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/blogpreview-a0354f504a7d016efc694f4da0f5bac6.png");
+SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight'),MerkleTree:loadClientSideLibraryMerkleTree('MerkleTree'),BigNumber:loadClientSideLibraryBigNumber('BigNumber')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
 
 /***/ }),
 
@@ -783,105 +573,68 @@ const codeEnv=isNodeJSEnv?CodingEnvironment.NODEJS:CodingEnvironment.REACT;(0,re
 
 /***/ }),
 
-/***/ 419153:
+/***/ 411470:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ TOC)
+  A: () => (/* binding */ Tabs)
 });
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./src/components/CopyPageButton/index.ts + 1 modules
-var CopyPageButton = __webpack_require__(423466);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js + 3 modules
-var TOCItems = __webpack_require__(865195);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(296540);
-;// ./src/theme/TOC/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"tableOfContents":"tableOfContents_jeP5","copyPageButtonWrapper":"copyPageButtonWrapper_NNHz","table-of-contents":"table-of-contents_fYeW"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/TOC/index.js
-const _excluded=["className"];/**
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
+var scrollUtils = __webpack_require__(823104);
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(956347);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsomorphicLayoutEffect.js
+var useIsomorphicLayoutEffect = __webpack_require__(300205);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/historyUtils.js
+var historyUtils = __webpack_require__(757485);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/jsUtils.js
+var jsUtils = __webpack_require__(231682);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/storageUtils.js + 1 modules
+var storageUtils = __webpack_require__(70679);
+;// ./node_modules/@docusaurus/theme-common/lib/utils/tabsUtils.js
+/**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */// Using a custom className
-// This prevents TOCInline/TOCCollapsible getting highlighted by mistake
-const LINK_CLASS_NAME='table-of-contents__link toc-highlight';const LINK_ACTIVE_CLASS_NAME='table-of-contents__link--active';function TOC(_ref){let{className}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx_m/* default */.A)(styles_module.tableOfContents,'thin-scrollbar',className),children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.copyPageButtonWrapper,children:/*#__PURE__*/(0,jsx_runtime.jsx)(CopyPageButton/* CopyPageButton */.N,{})}),/*#__PURE__*/(0,jsx_runtime.jsx)(TOCItems/* default */.A,Object.assign({},props,{linkClassName:LINK_CLASS_NAME,linkActiveClassName:LINK_ACTIVE_CLASS_NAME}))]});}
-
-/***/ }),
-
-/***/ 423466:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  N: () => (/* reexport */ CopyPageButton)
-});
-
-// UNUSED EXPORTS: default
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/doc.js
-var doc = __webpack_require__(60542);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
-var useDocusaurusContext = __webpack_require__(144586);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./node_modules/react-icons/fi/index.esm.js
-var index_esm = __webpack_require__(242644);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
+ */// A very rough duck type, but good enough to guard against mistakes while
+// allowing customization
+function isTabItem(comp){const{props}=comp;return!!props&&typeof props==='object'&&'value'in props;}function sanitizeTabsChildren(children){var _React$Children$toArr,_React$Children$toArr2;return(_React$Children$toArr=(_React$Children$toArr2=react.Children.toArray(children).filter(child=>child!=='\n').map(child=>{if(!child||/*#__PURE__*/(0,react.isValidElement)(child)&&isTabItem(child)){return child;}// child.type.name will give non-sensical values in prod because of
+// minification, but we assume it won't throw in prod.
+throw new Error("Docusaurus error: Bad <Tabs> child <"+(// @ts-expect-error: guarding against unexpected cases
+typeof child.type==='string'?child.type:child.type.name)+">: all children of the <Tabs> component should be <TabItem>, and every <TabItem> should have a unique \"value\" prop.");}))===null||_React$Children$toArr2===void 0?void 0:_React$Children$toArr2.filter(Boolean))!==null&&_React$Children$toArr!==void 0?_React$Children$toArr:[];}function extractChildrenTabValues(children){return sanitizeTabsChildren(children).map(_ref=>{let{props:{value,label,attributes,default:isDefault}}=_ref;return{value,label,attributes,default:isDefault};});}function ensureNoDuplicateValue(values){const dup=(0,jsUtils/* duplicates */.XI)(values,(a,b)=>a.value===b.value);if(dup.length>0){throw new Error("Docusaurus error: Duplicate values \""+dup.map(a=>a.value).join(', ')+"\" found in <Tabs>. Every value needs to be unique.");}}function useTabValues(props){const{values:valuesProp,children}=props;return (0,react.useMemo)(()=>{const values=valuesProp!==null&&valuesProp!==void 0?valuesProp:extractChildrenTabValues(children);ensureNoDuplicateValue(values);return values;},[valuesProp,children]);}function isValidValue(_ref2){let{value,tabValues}=_ref2;return tabValues.some(a=>a.value===value);}function getInitialStateValue(_ref3){var _tabValues$find;let{defaultValue,tabValues}=_ref3;if(tabValues.length===0){throw new Error('Docusaurus error: the <Tabs> component requires at least one <TabItem> children component');}if(defaultValue){// Warn user about passing incorrect defaultValue as prop.
+if(!isValidValue({value:defaultValue,tabValues})){throw new Error("Docusaurus error: The <Tabs> has a defaultValue \""+defaultValue+"\" but none of its children has the corresponding value. Available values are: "+tabValues.map(a=>a.value).join(', ')+". If you intend to show no default tab, use defaultValue={null} instead.");}return defaultValue;}const defaultTabValue=(_tabValues$find=tabValues.find(tabValue=>tabValue.default))!==null&&_tabValues$find!==void 0?_tabValues$find:tabValues[0];if(!defaultTabValue){throw new Error('Unexpected error: 0 tabValues');}return defaultTabValue.value;}function getStorageKey(groupId){if(!groupId){return null;}return"docusaurus.tab."+groupId;}function getQueryStringKey(_ref4){let{queryString=false,groupId}=_ref4;if(typeof queryString==='string'){return queryString;}if(queryString===false){return null;}if(queryString===true&&!groupId){throw new Error("Docusaurus error: The <Tabs> component groupId prop is required if queryString=true, because this value is used as the search param name. You can also provide an explicit value such as queryString=\"my-search-param\".");}return groupId!==null&&groupId!==void 0?groupId:null;}function useTabQueryString(_ref5){let{queryString=false,groupId}=_ref5;const history=(0,react_router/* useHistory */.W6)();const key=getQueryStringKey({queryString,groupId});const value=(0,historyUtils/* useQueryStringValue */.aZ)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
+}const searchParams=new URLSearchParams(history.location.search);searchParams.set(key,newValue);history.replace(Object.assign({},history.location,{search:searchParams.toString()}));},[key,history]);return[value,setValue];}function useTabStorage(_ref6){let{groupId}=_ref6;const key=getStorageKey(groupId);const[value,storageSlot]=(0,storageUtils/* useStorageSlot */.Dv)(key);const setValue=(0,react.useCallback)(newValue=>{if(!key){return;// no-op
+}storageSlot.set(newValue);},[key,storageSlot]);return[value,setValue];}function useTabs(props){const{defaultValue,queryString=false,groupId}=props;const tabValues=useTabValues(props);const[selectedValue,setSelectedValue]=(0,react.useState)(()=>getInitialStateValue({defaultValue,tabValues}));const[queryStringValue,setQueryString]=useTabQueryString({queryString,groupId});const[storageValue,setStorageValue]=useTabStorage({groupId});// We sync valid querystring/storage value to state on change + hydration
+const valueToSync=(()=>{const value=queryStringValue!==null&&queryStringValue!==void 0?queryStringValue:storageValue;if(!isValidValue({value,tabValues})){return null;}return value;})();// Sync in a layout/sync effect is important, for useScrollPositionBlocker
+// See https://github.com/facebook/docusaurus/issues/8625
+(0,useIsomorphicLayoutEffect/* default */.A)(()=>{if(valueToSync){setSelectedValue(valueToSync);}},[valueToSync]);const selectValue=(0,react.useCallback)(newValue=>{if(!isValidValue({value:newValue,tabValues})){throw new Error("Can't select invalid tab value="+newValue);}setSelectedValue(newValue);setQueryString(newValue);setStorageValue(newValue);},[setQueryString,setStorageValue,tabValues]);return{selectedValue,selectValue,tabValues};}
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"tabList":"tabList__CuJ","tabItem":"tabItem_LNqP"});
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
-;// ./src/components/CopyPageButton/CopyPageButton.tsx
-/* eslint-disable */// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Configs
-const CopyPageButton=_ref=>{let{pageContent='',pageTitle='Documentation Page',pageUrl=''}=_ref;const[isDropdownOpen,setIsDropdownOpen]=(0,react.useState)(false);const[copySuccess,setCopySuccess]=(0,react.useState)(false);const dropdownRef=(0,react.useRef)(null);const{t}=(0,es/* useTranslation */.Bd)();// Get Docusaurus context and doc metadata
-const{siteConfig}=(0,useDocusaurusContext/* default */.A)();let docMetadata=null;try{docMetadata=(0,doc/* useDoc */.u)();}catch(error){// useDoc hook is only available in doc pages, ignore error for other pages
-}// Close dropdown when clicking outside
-(0,react.useEffect)(()=>{const handleClickOutside=event=>{if(dropdownRef.current&&!dropdownRef.current.contains(event.target)){setIsDropdownOpen(false);}};document.addEventListener('mousedown',handleClickOutside);return()=>{document.removeEventListener('mousedown',handleClickOutside);};},[]);// Get page content for copying
-const getPageContent=async()=>{if(pageContent)return pageContent;// Try to get the actual markdown from GitHub first
-const currentUrl=pageUrl||window.location.href;const githubMarkdown=await fetchGitHubMarkdown(currentUrl);if(githubMarkdown){return githubMarkdown;}// Fallback to extracting content from the rendered page
-const docContent=document.querySelector('[class*="docMainContainer"]')||document.querySelector('main')||document.querySelector('article')||document.body;const titleElement=document.querySelector('h1')||document.querySelector('title');const actualTitle=(titleElement===null||titleElement===void 0?void 0:titleElement.textContent)||pageTitle||document.title;const textContent=(docContent===null||docContent===void 0?void 0:docContent.innerText)||'';return"# "+actualTitle+"\n\nSource: "+currentUrl+"\n\n"+textContent;};// Get GitHub raw URL for direct viewing
-const getGitHubRawUrl=async url=>{try{var _docMetadata;// Try to get edit URL from Docusaurus metadata first
-let editUrl=(_docMetadata=docMetadata)===null||_docMetadata===void 0||(_docMetadata=_docMetadata.metadata)===null||_docMetadata===void 0?void 0:_docMetadata.editUrl;// If no metadata available, try to find the edit link in DOM (for production)
-if(!editUrl){const editLink=document.querySelector('a[href*="github.com"][href*="/edit/"]');editUrl=editLink===null||editLink===void 0?void 0:editLink.getAttribute('href');}// If still no edit URL, try to construct it manually from current path
-if(!editUrl){const currentPath=window.location.pathname;if(currentPath.startsWith('/docs/')){var _siteConfig$presets;const docsPath=currentPath.replace('/docs/','');// Use the editUrl from docusaurus config
-const baseEditUrl=(siteConfig===null||siteConfig===void 0||(_siteConfig$presets=siteConfig.presets)===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets[0])===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets[1])===null||_siteConfig$presets===void 0||(_siteConfig$presets=_siteConfig$presets.docs)===null||_siteConfig$presets===void 0?void 0:_siteConfig$presets.editUrl)||'https://github.com/pushchain/push-chain-website/edit/main';editUrl=baseEditUrl+"/docs/"+docsPath+".mdx";}}if(!editUrl){return null;}// Convert GitHub edit URL to raw URL
-let rawUrl=editUrl.replace('github.com','raw.githubusercontent.com');// Handle different GitHub URL patterns
-if(rawUrl.includes('/blob/')){rawUrl=rawUrl.replace('/blob/','/refs/heads/');}else if(rawUrl.includes('/edit/')){rawUrl=rawUrl.replace('/edit/','/refs/heads/');}else if(rawUrl.includes('/pull/')){// PR URLs: /pull/123/files or /pull/123/commits/sha/path
-const prMatch=rawUrl.match(/\/pull\/(\d+)/);if(prMatch){const prNumber=prMatch[1];const repoMatch=rawUrl.match(/raw\.githubusercontent\.com\/([^\/]+\/[^\/]+)/);if(repoMatch){const repoPath=repoMatch[1];try{// Get PR information from GitHub API to find the head branch
-const prApiUrl="https://api.github.com/repos/"+repoPath+"/pulls/"+prNumber;const prResponse=await fetch(prApiUrl);if(prResponse.ok){const prData=await prResponse.json();const headBranch=prData.head.ref;// Extract file path from the original URL
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/"+headBranch+filePath;}}else{// Fallback to main branch if API call fails
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/main"+filePath;}}}catch(error){// Fallback to main branch if API call fails
-const pathIndex=rawUrl.indexOf('/docs/');if(pathIndex!==-1){const filePath=rawUrl.substring(pathIndex);rawUrl="https://raw.githubusercontent.com/"+repoPath+"/refs/heads/main"+filePath;}}}}}return rawUrl;}catch(error){console.warn('Failed to get GitHub raw URL:',error);return null;}};// Fetch actual markdown from GitHub repository using Docusaurus metadata
-const fetchGitHubMarkdown=async url=>{try{const rawUrl=await getGitHubRawUrl(url);if(!rawUrl){return null;}const response=await fetch(rawUrl);if(response.ok){const markdown=await response.text();return"# "+(pageTitle||'Push Chain Documentation')+"\n\nSource: "+url+"\nGitHub: "+rawUrl+"\n\n"+markdown;}}catch(error){console.warn('Failed to fetch GitHub markdown:',error);}return null;};// Copy page content to clipboard
-const handleCopyPage=async()=>{try{const content=await getPageContent();await navigator.clipboard.writeText(content);setCopySuccess(true);setIsDropdownOpen(false);setTimeout(()=>setCopySuccess(false),2000);}catch(err){console.error('Failed to copy content:',err);}};// View as markdown in new window - opens GitHub raw URL directly
-const handleViewAsMarkdown=async()=>{try{const currentUrl=pageUrl||window.location.href;const githubRawUrl=await getGitHubRawUrl(currentUrl);if(githubRawUrl){// Open GitHub raw URL directly - much cleaner and faster
-window.open(githubRawUrl,'_blank');}else{// Fallback: create a new window with extracted content
-const content=await getPageContent();const newWindow=window.open('','_blank');if(newWindow){newWindow.document.write("\n            <html>\n              <head>\n                <title>"+pageTitle+" - Markdown View</title>\n                <style>\n                  body { \n                    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace; \n                    padding: 20px; \n                    background: #1a1a1a; \n                    color: #e0e0e0; \n                    line-height: 1.6;\n                    max-width: 800px;\n                    margin: 0 auto;\n                  }\n                  pre { \n                    white-space: pre-wrap; \n                    word-wrap: break-word; \n                  }\n                </style>\n              </head>\n              <body>\n                <pre>"+content+"</pre>\n              </body>\n            </html>\n          ");newWindow.document.close();}}setIsDropdownOpen(false);}catch(err){console.error('Failed to open markdown view:',err);}};// Open in ChatGPT
-const handleOpenInChatGPT=async()=>{try{const content=await getPageContent();const prompt=encodeURIComponent("Please help me understand this documentation:\n\n"+content);window.open("https://chat.openai.com/?q="+prompt,'_blank');setIsDropdownOpen(false);}catch(err){console.error('Failed to get content for ChatGPT:',err);}};// Open in Claude
-const handleOpenInClaude=async()=>{try{const content=await getPageContent();const prompt=encodeURIComponent("Please help me understand this documentation:\n\n"+content);window.open("https://claude.ai/chat?q="+prompt,'_blank');setIsDropdownOpen(false);}catch(err){console.error('Failed to get content for Claude:',err);}};return/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageContainer,{ref:dropdownRef,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageTrigger,{onClick:()=>setIsDropdownOpen(!isDropdownOpen),$isOpen:isDropdownOpen,$copySuccess:copySuccess,title:"Copy page options","aria-label":"Copy page options",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiCopy */.nxz,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsx)("span",{children:copySuccess?'Copied!':'Copy page'}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiChevronDown */.fK4,{size:14,className:"chevron "+(isDropdownOpen?'open':'')})]}),isDropdownOpen&&/*#__PURE__*/(0,jsx_runtime.jsxs)(CopyPageDropdown,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleCopyPage,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiCopy */.nxz,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Copy page"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Copy the page as Markdown for LLMs"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleViewAsMarkdown,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiEye */.Vap,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"View as Markdown"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"View this page as plain text"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(DropdownSeparator,{}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleOpenInChatGPT,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiMessageCircle */.X6_,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Open in ChatGPT"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Ask questions about this page"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(DropdownItem,{onClick:handleOpenInClaude,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiMessageCircle */.X6_,{size:16}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ItemTitle,{children:"Open in Claude"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ItemDescription,{children:"Ask questions about this page"})]})]})]})]});};// Styled Components
-const CopyPageContainer=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__CopyPageContainer",componentId:"sc-oxn2jy-0"})(["position:relative;display:inline-block;@media ","{display:none;}"],globals/* device */.jO.tablet);const CopyPageTrigger=styled_components_browser_esm/* default */.Ay.button.withConfig({displayName:"CopyPageButton__CopyPageTrigger",componentId:"sc-oxn2jy-1"})(["display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 10px;width:100%;background:transparent;border:1px solid ",";border-radius:4px;color:",";font-size:12px;font-weight:500;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;&:hover{background:",";border-color:",";}.chevron{transition:transform 0.2s ease;transform:",";flex-shrink:0;}@media ","{padding:6px 8px;font-size:11px;}"],props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-emphasis-200)',props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-content)',props=>props.$copySuccess?'var(--ifm-color-success-dark)':'var(--ifm-color-emphasis-200)',props=>props.$copySuccess?'var(--ifm-color-success-darker)':'var(--ifm-color-emphasis-200)',props=>props.$isOpen?'rotate(180deg)':'rotate(0deg)',globals/* device */.jO.tablet);const CopyPageDropdown=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__CopyPageDropdown",componentId:"sc-oxn2jy-2"})(["position:absolute;top:calc(100% + 4px);left:0;width:280px;background:var(--ifm-color-emphasis-0);border:1px solid var(--ifm-color-emphasis-200);border-radius:6px;box-shadow:0 4px 12px rgba(0,0,0,0.15);z-index:1000;overflow:hidden;@media ","{left:-20px;width:260px;}"],globals/* device */.jO.tablet);const DropdownItem=styled_components_browser_esm/* default */.Ay.button.withConfig({displayName:"CopyPageButton__DropdownItem",componentId:"sc-oxn2jy-3"})(["display:flex;align-items:flex-start;gap:12px;width:100%;padding:12px 16px;background:none;border:none;text-align:left;cursor:pointer;transition:background-color 0.2s ease;&:hover{background:var(--ifm-color-emphasis-100);}svg{margin-top:2px;color:var(--ifm-color-content-secondary);flex-shrink:0;}div{flex:1;}"]);const ItemTitle=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__ItemTitle",componentId:"sc-oxn2jy-4"})(["font-size:14px;font-weight:500;color:var(--ifm-color-content);margin-bottom:2px;"]);const ItemDescription=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__ItemDescription",componentId:"sc-oxn2jy-5"})(["font-size:12px;color:var(--ifm-color-content-secondary);line-height:1.4;"]);const DropdownSeparator=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"CopyPageButton__DropdownSeparator",componentId:"sc-oxn2jy-6"})(["height:1px;background:var(--ifm-color-emphasis-200);margin:4px 0;"]);/* harmony default export */ const CopyPageButton_CopyPageButton = ((/* unused pure expression or super */ null && (CopyPageButton)));
-;// ./src/components/CopyPageButton/index.ts
-
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function TabList(_ref){let{className,block,selectedValue,selectValue,tabValues}=_ref;const tabRefs=[];const{blockElementScrollPositionUntilNextRender}=(0,scrollUtils/* useScrollPositionBlocker */.a_)();const handleTabChange=event=>{const newTab=event.currentTarget;const newTabIndex=tabRefs.indexOf(newTab);const newTabValue=tabValues[newTabIndex].value;if(newTabValue!==selectedValue){blockElementScrollPositionUntilNextRender(newTab);selectValue(newTabValue);}};const handleKeydown=event=>{var _focusElement;let focusElement=null;switch(event.key){case'Enter':{handleTabChange(event);break;}case'ArrowRight':{var _tabRefs$nextTab;const nextTab=tabRefs.indexOf(event.currentTarget)+1;focusElement=(_tabRefs$nextTab=tabRefs[nextTab])!==null&&_tabRefs$nextTab!==void 0?_tabRefs$nextTab:tabRefs[0];break;}case'ArrowLeft':{var _tabRefs$prevTab;const prevTab=tabRefs.indexOf(event.currentTarget)-1;focusElement=(_tabRefs$prevTab=tabRefs[prevTab])!==null&&_tabRefs$prevTab!==void 0?_tabRefs$prevTab:tabRefs[tabRefs.length-1];break;}default:break;}(_focusElement=focusElement)===null||_focusElement===void 0||_focusElement.focus();};return/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{role:"tablist","aria-orientation":"horizontal",className:(0,clsx/* default */.A)('tabs',{'tabs--block':block},className),children:tabValues.map(_ref2=>{let{value,label,attributes}=_ref2;return/*#__PURE__*/(0,jsx_runtime.jsx)("li",Object.assign({// TODO extract TabListItem
+role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===value,ref:tabControl=>{tabRefs.push(tabControl);},onKeyDown:handleKeydown,onClick:handleTabChange},attributes,{className:(0,clsx/* default */.A)('tabs__item',styles_module.tabItem,attributes===null||attributes===void 0?void 0:attributes.className,{'tabs__item--active':selectedValue===value}),children:label!==null&&label!==void 0?label:value}),value);})});}function TabContent(_ref3){let{lazy,children,selectedValue}=_ref3;const childTabs=(Array.isArray(children)?children:[children]).filter(Boolean);if(lazy){const selectedTabItem=childTabs.find(tabItem=>tabItem.props.value===selectedValue);if(!selectedTabItem){// fail-safe or fail-fast? not sure what's best here
+return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
+// Temporary fix for https://github.com/facebook/docusaurus/issues/5653
+,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
 
 /***/ }),
 
@@ -1839,6 +1592,260 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
+/***/ 644117:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_03_build_04_initialize_evm_client_mdx_ff4_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-04-initialize-evm-client-mdx-ff4.json
+const site_docs_chain_03_build_04_initialize_evm_client_mdx_ff4_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-initialize-evm-client","title":"Initialize EVM Client","description":"Initialize EVM Client | Build | Push Chain Docs","source":"@site/docs/chain/03-build/04-Initialize-EVM-Client.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/initialize-evm-client","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/initialize-evm-client","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/04-Initialize-EVM-Client.mdx","tags":[],"version":"current","sidebarPosition":4,"frontMatter":{"id":"docs-chain-build-initialize-evm-client","title":"Initialize EVM Client","hide_title":false,"slug":"./initialize-evm-client","displayed_sidebar":"pushChainSidebar","sidebar_position":4,"image":"/assets/docs/previews/docs_chain_build--initialize_evm_client.png"},"sidebar":"pushChainSidebar","previous":{"title":"Initialize Push Chain Client","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/initialize-push-chain-client"},"next":{"title":"Send Universal Transaction","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/send-universal-transaction"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+;// ./docs/chain/03-build/04-Initialize-EVM-Client.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-build-initialize-evm-client',
+	title: 'Initialize EVM Client',
+	hide_title: false,
+	slug: './initialize-evm-client',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 4,
+	image: '/assets/docs/previews/docs_chain_build--initialize_evm_client.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Overview",
+  "id": "overview",
+  "level": 2
+}, {
+  "value": "Initialize EVM Client",
+  "id": "initialize-evm-client",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    h2: "h2",
+    li: "li",
+    p: "p",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Initialize EVM Client | Build | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "overview",
+      children: "Overview"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum tooling—whether that’s Ethers.js or Viem. For more details on each library, check out:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://docs.ethers.org/",
+          children: "ethers.js documentation"
+        })
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://viem.sh/",
+          children: "viem documentation"
+        })
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "initialize-evm-client",
+      children: "Initialize EVM Client"
+    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+      className: "liveplaytab",
+      groupId: "initialize-evm-client",
+      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ethers_v6",
+        label: "Ethers (v6)",
+        default: true,
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in GitHub",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"
+          },
+          children: `    
+  // customPropHighlightRegexStart=ethers\.JsonRpcProvider
+  // customPropHighlightRegexEnd=\\);
+  import { ethers } from 'ethers';
+
+  // ——— CONFIG ———
+  const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+
+  function initEthers() {
+    const provider = new ethers.JsonRpcProvider(RPC_URL);
+    console.log('Got Ethers.js provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
+  }
+
+  initEthers();
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "viem",
+        label: "Viem",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in GitHub",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"
+          },
+          children: `
+  // customPropHighlightRegexStart=createPublicClient\\(
+  // customPropHighlightRegexEnd=\\);
+  import { createPublicClient, http } from 'viem';
+
+  function initViem() {
+    const publicClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    console.log('Viem publicClient:', JSON.stringify(publicClient, null, 2));
+  }
+
+  initViem();
+`
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Fetch a Transaction by Hash",
+      className: "alert alert--live-play alert-top-pad-20",
+      children: (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+        className: "liveplaytab",
+        groupId: "initialize-evm-client",
+        children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+          value: "ethers_v6",
+          label: "Ethers (v6)",
+          default: true,
+          children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+            repo: {
+              title: "Open in GitHub",
+              url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"
+            },
+            children: `
+  // customPropHighlightRegexStart=provider\.getTransaction
+  // customPropHighlightRegexEnd=\\);
+  import { ethers } from 'ethers';
+
+  async function fetchTxEthers() {
+    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const txHash = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
+    const tx = await provider.getTransaction(txHash);
+    console.log('Transaction:', JSON.stringify(tx, null, 2));
+  }
+
+  console.log('Fetching transaction...');
+  await fetchTxEthers().catch(console.error);
+`
+          })
+        }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+          value: "viem",
+          label: "Viem",
+          children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+            repo: {
+              title: "Open in GitHub",
+              url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-evm-client"
+            },
+            children: `
+  // customPropHighlightRegexStart=client\.getTransaction
+  // customPropHighlightRegexEnd=\\);
+  import { createPublicClient, http } from 'viem';
+
+  async function fetchTxViem() {
+    const client      = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    const txHash = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
+    const tx = await client.getTransaction({ hash: txHash });
+    console.log('Transaction:', JSON.stringify(tx, null, 2));
+  }
+
+  console.log('Fetching transaction...');
+  await fetchTxViem().catch(console.error);
+`
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Send your first universal transaction with ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/send-universal-transaction",
+          children: "Send Universal Transaction"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Learn about popular utilities in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/build/utility-functions",
+          children: "Utility Functions"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Skip core and directly jump to ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit",
+          children: "UI Kit"
+        }), " that provides complete abstraction"]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
+
+/***/ }),
+
 /***/ 650477:
 /***/ (() => {
 
@@ -1853,119 +1860,10 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 729520:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ BlogLayout)
-/* harmony export */ });
-/* harmony import */ var _docusaurus_Head__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(705260);
-/* harmony import */ var _docusaurus_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(956347);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(296540);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(777255);
-/* harmony import */ var _site_src_components_SEO_SchemaMarkup__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(172619);
-/* harmony import */ var _site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(941398);
-/* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(330922);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(474848);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Internal Components
-// External Components
-function BlogLayout(props){const{children}=props;// Internationalization
-const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_4__/* .useTranslation */ .Bd)();const location=(0,_docusaurus_router__WEBPACK_IMPORTED_MODULE_1__/* .useLocation */ .zy)();const pathname=location===null||location===void 0?void 0:location.pathname;const isBlogMainPage=pathname.includes('/page/')||pathname=='/blog/'||pathname=='/blog';return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_theme_Layout__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .A,{title:isBlogMainPage?t('pages.blog.seo.title'):'',description:isBlogMainPage?t('pages.blog.seo.description'):'',children:[isBlogMainPage&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(_docusaurus_Head__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:url",content:"https://push.org/blog"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:title",content:t('pages.blog.seo.og-title')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:description",content:t('pages.blog.seo.og-description')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{property:"og:image",content:(__webpack_require__(381418)/* ["default"] */ .A)}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:title",content:t('pages.blog.seo.twitter-title')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:description",content:t('pages.blog.seo.twitter-description')}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("meta",{name:"twitter:image",content:(__webpack_require__(381418)/* ["default"] */ .A)})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_components_SEO_SchemaMarkup__WEBPACK_IMPORTED_MODULE_5__/* ["default"] */ .A,{type:"Blog",pageDescription:t('pages.blog.seo.description'),pageUrl:"https://push.org/blog"})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Section */ .wn,{children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Content */ .UC,{className:"skeletonextrasmall blog clip",children:children})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .A,{})]});}
-
-/***/ }),
-
 /***/ 751069:
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 773140:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ BlogPostPage)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/metadataUtils.js
-var metadataUtils = __webpack_require__(445500);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/ThemeClassNames.js
-var ThemeClassNames = __webpack_require__(117559);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-blog/lib/client/index.js + 3 modules
-var client = __webpack_require__(244096);
-// EXTERNAL MODULE: ./src/theme/BlogLayout/index.js
-var BlogLayout = __webpack_require__(729520);
-// EXTERNAL MODULE: ./src/theme/BlogPostItem/index.js + 10 modules
-var BlogPostItem = __webpack_require__(254887);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/theme/BlogPostPage/Metadata/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostPageMetadata(){var _assets$image;const{assets,metadata}=(0,client/* useBlogPost */.e7)();const{title,description,date,tags,authors,frontMatter}=metadata;const{keywords}=frontMatter;const image=(_assets$image=assets.image)!==null&&_assets$image!==void 0?_assets$image:frontMatter.image;return/*#__PURE__*/(0,jsx_runtime.jsxs)(metadataUtils/* PageMetadata */.be,{title:title,description:description,keywords:keywords,image:image,children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"article"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"article:published_time",content:date}),authors.some(author=>author.url)&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"article:author",content:authors.map(author=>author.url).filter(Boolean).join(',')}),tags.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"article:tag",content:tags.map(tag=>tag.label).join(',')})]});}
-// EXTERNAL MODULE: ./src/theme/TOC/index.js + 1 modules
-var TOC = __webpack_require__(419153);
-// EXTERNAL MODULE: ./node_modules/clsx/dist/clsx.m.js
-var clsx_m = __webpack_require__(320053);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(21532);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
-var index_esm = __webpack_require__(796710);
-// EXTERNAL MODULE: ./node_modules/react-icons/fa/index.esm.js
-var fa_index_esm = __webpack_require__(801612);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./src/theme/BlogPostPage/LikeAndRetweetItem.tsx + 2 modules
-var LikeAndRetweetItem = __webpack_require__(152493);
-;// ./src/theme/BlogPostPage/FooterItem.js
-// Internal Components
-// Internal Configs
-const FooterItem=_ref=>{var _post$metadata;let{post}=_ref;const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(LikeAndRetweetItem/* default */.A,{twitterId:post===null||post===void 0||(_post$metadata=post.metadata)===null||_post$metadata===void 0?void 0:_post$metadata.twitterId,text:"If it\u2019s worth reading, it\u2019s worth sharing. Like and retweet."}),/*#__PURE__*/(0,jsx_runtime.jsxs)(AboutSection,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(AboutTitle,{children:t('components.blog.footer-item.about-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)(AboutSpan,{fontFamily:"DM Sans, sans-serif",textAlign:"center",fontSize:"19px",fontWeight:"400",lineHeight:"32px",children:t('components.blog.footer-item.about-description')})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(KPIBanner,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(BannerItem,{to:'https://x.com/PushChain',target:"_blank",gap:"18px",className:"kpiItem",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsTwitterX,{size:32}),/*#__PURE__*/(0,jsx_runtime.jsx)(KPIMetric,{children:t('components.blog.footer-item.social-twitter')})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(BannerItem,{to:'https://discord.com/invite/pushchain',target:"_blank",gap:"18px",className:"kpiItem",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(fa_index_esm/* FaDiscord */.O4U,{size:32}),/*#__PURE__*/(0,jsx_runtime.jsx)(KPIMetric,{children:t('components.blog.footer-item.social-discord')})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(BannerItem,{to:'https://www.youtube.com/@pushprotocol',target:"_blank",gap:"18px",className:"kpiItem",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsYoutube,{size:32}),/*#__PURE__*/(0,jsx_runtime.jsx)(KPIMetric,{children:t('components.blog.footer-item.social-youtube')})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(BannerItem,{to:'https://www.linkedin.com/company/push-protocol/',target:"_blank",gap:"18px",className:"kpiItem",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsLinkedin,{size:32}),/*#__PURE__*/(0,jsx_runtime.jsx)(KPIMetric,{children:t('components.blog.footer-item.social-linkedin')})]})]})]});};/* harmony default export */ const BlogPostPage_FooterItem = (FooterItem);const AboutSection=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"FooterItem__AboutSection",componentId:"sc-wqmvol-0"})(["margin-top:99px;span{font-size:18px;line-height:37px;color:#282a2d;letter-spacing:-0.002em;@media ","{font-size:16px;line-height:36px;}}"],globals/* device */.jO.mobileL);const AboutTitle=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"FooterItem__AboutTitle",componentId:"sc-wqmvol-1"})(["font-family:DM Sans,sans-serif !important;font-weight:700;font-size:28px;line-height:38px;color:var(--ifm-color-primary-blog);margin-bottom:10px;letter-spacing:-0.02em;@media ","{font-weight:700;font-size:24px;line-height:30px;}"],globals/* device */.jO.mobileL);const AboutSpan=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling/* Span */.L9).withConfig({displayName:"FooterItem__AboutSpan",componentId:"sc-wqmvol-2"})(["color:var(--ifm-color-blog-tag) !important;"]);const KPIBanner=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"FooterItem__KPIBanner",componentId:"sc-wqmvol-3"})(["background:var(--ifm-color-blog-footer);border-radius:24px;display:flex;align-items:center;justify-content:space-around;width:100%;padding:20px 0px;font-family:DM Sans,sans-serif;font-style:normal;margin-top:30px;& .kpiItem{display:flex;flex-direction:row;align-items:center !important;}@media ","{flex-direction:row;flex-wrap:wrap;width:100%;row-gap:32px;column-gap:8px;margin-top:30px;& .kpiItem{flex-direction:row;row-gap:8px;flex:0 0 48%;}}"],globals/* device */.jO.tablet);const BannerItem=(0,styled_components_browser_esm/* default */.Ay)(Link/* default */.A).withConfig({displayName:"FooterItem__BannerItem",componentId:"sc-wqmvol-4"})(["color:var(--ifm-color-footer);grid-gap:8px;cursor:pointer align-items:center !important;&:hover{color:#d53893;}"]);const KPIMetric=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"FooterItem__KPIMetric",componentId:"sc-wqmvol-5"})(["font-weight:500;font-size:16px;line-height:110%;letter-spacing:-0.03em;@media ","{font-size:16px;font-weight:400;}"],globals/* device */.jO.tablet);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./src/theme/BlogPostItem/Header/Info/index.js + 1 modules
-var Info = __webpack_require__(247712);
-;// ./src/theme/BlogPostPage/MorePosts.js
-// Internal Components
-// Internal Configs
-const MorePosts=_ref=>{let{allPosts,post}=_ref;const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.tablet);const[filteredArray,setFilteredArray]=(0,react.useState)();const filterPost=()=>{var _post$Preview;const tagList=post===null||post===void 0||(_post$Preview=post.Preview)===null||_post$Preview===void 0||(_post$Preview=_post$Preview.metadata)===null||_post$Preview===void 0?void 0:_post$Preview.tags;// Get tags of the current post
-const allOtherPosts=allPosts.filter(item=>item!==post);// Exclude current post
-const seenPosts=new Set();// To track blogs already added
-const filteredPosts=[];tagList===null||tagList===void 0||tagList.forEach(tag=>{const matchingTags=allOtherPosts.filter(obj=>{var _obj$Preview;return(obj===null||obj===void 0||(_obj$Preview=obj.Preview)===null||_obj$Preview===void 0||(_obj$Preview=_obj$Preview.metadata)===null||_obj$Preview===void 0||(_obj$Preview=_obj$Preview.tags)===null||_obj$Preview===void 0?void 0:_obj$Preview.some(t=>(t===null||t===void 0?void 0:t.label)===(tag===null||tag===void 0?void 0:tag.label)))&&!seenPosts.has(obj);}// Ensure it's not already added
-);if(matchingTags.length>0){// Randomly select one from matchingTags
-const randomIndex=Math.floor(Math.random()*matchingTags.length);const selectedPost=matchingTags[randomIndex];// Add to results and mark as seen
-filteredPosts.push(selectedPost);seenPosts.add(selectedPost);}});setFilteredArray(filteredPosts);};(0,react.useEffect)(()=>{filterPost();},[allPosts,post]);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(MoreRow,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(ResponsiveH2,{size:isMobile?'16px':'24px',weight:"500",spacing:"-0.02em",lineHeight:"110%",color:"#00000",children:t('components.blog.more-posts.title')}),/*#__PURE__*/(0,jsx_runtime.jsxs)(MoreButton,{title:"Developer Docs",background:"var(--ifm-color-custom-pink)",radius:"12px",padding:"14px 20px",size:"1rem",weight:"500",spacing:"-0.03em",lineHeight:"26px",display:"flex",flexDirection:"row",alignItems:"center",self:isMobile?'stretch':'self',onClick:()=>{window.open("https://x.com/PushChain",'_blank');},children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsTwitterX,{size:23,color:"var(--ifm-color-white)",style:{marginRight:'10px'}}),t('components.blog.more-posts.follow-button')," @PushChain"]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(GridItem,{marginTop:false,children:filteredArray===null||filteredArray===void 0?void 0:filteredArray.slice(0,4).map(item=>{var _item$Preview,_item$Preview2,_item$Preview3,_item$Preview4,_item$Preview5,_item$Preview6;return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:item!==null&&/*#__PURE__*/(0,jsx_runtime.jsxs)(GridItemPost,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Image */._V,{src:item===null||item===void 0||(_item$Preview=item.Preview)===null||_item$Preview===void 0||(_item$Preview=_item$Preview.assets)===null||_item$Preview===void 0?void 0:_item$Preview.image}),/*#__PURE__*/(0,jsx_runtime.jsxs)(TextView,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Info/* default */.A,{morePosts:item===null||item===void 0||(_item$Preview2=item.Preview)===null||_item$Preview2===void 0?void 0:_item$Preview2.metadata}),/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{itemProp:"url",to:item===null||item===void 0||(_item$Preview3=item.Preview)===null||_item$Preview3===void 0||(_item$Preview3=_item$Preview3.metadata)===null||_item$Preview3===void 0?void 0:_item$Preview3.permalink,children:/*#__PURE__*/(0,jsx_runtime.jsx)(LinkText,{children:item===null||item===void 0||(_item$Preview4=item.Preview)===null||_item$Preview4===void 0||(_item$Preview4=_item$Preview4.frontMatter)===null||_item$Preview4===void 0?void 0:_item$Preview4.title})}),/*#__PURE__*/(0,jsx_runtime.jsx)(TextSpan,{children:item===null||item===void 0||(_item$Preview5=item.Preview)===null||_item$Preview5===void 0||(_item$Preview5=_item$Preview5.frontMatter)===null||_item$Preview5===void 0?void 0:_item$Preview5.text})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:item===null||item===void 0||(_item$Preview6=item.Preview)===null||_item$Preview6===void 0||(_item$Preview6=_item$Preview6.metadata)===null||_item$Preview6===void 0?void 0:_item$Preview6.permalink,style:{color:'var(--ifm-color-primary)'},children:t('components.blog.more-posts.read-more')})]})});})})]});};const ResponsiveH2=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling.H2).withConfig({displayName:"MorePosts__ResponsiveH2",componentId:"sc-ollbsk-0"})([""]);const MoreRow=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__MoreRow",componentId:"sc-ollbsk-1"})(["margin:50px 0 0px 0;display:flex;justify-content:space-between;align-items:center;@media ","{flex-direction:row;margin-top:52px;align-items:center;}@media ","{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const MoreButton=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling/* Button */.$n).withConfig({displayName:"MorePosts__MoreButton",componentId:"sc-ollbsk-2"})(["@media ","{width:100%;margin:20px;}"],globals/* device */.jO.mobileL);const GridItem=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__GridItem",componentId:"sc-ollbsk-3"})(["display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:33px;box-sizing:border-box;margin:",";@media (max-width:820px){width:100% !important;box-sizing:border-box;gap:30px;}@media ","{grid-template-columns:repeat(1,minmax(0,1fr));}"],props=>props.marginTop?'100px auto 0 auto':'30px auto 100px auto',globals/* device */.jO.tablet);const GridItemPost=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__GridItemPost",componentId:"sc-ollbsk-4"})([""]);const TextView=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__TextView",componentId:"sc-ollbsk-5"})(["margin-top:20px;@media (max-width:1200px){width:100%;}"]);const TextSpan=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__TextSpan",componentId:"sc-ollbsk-6"})(["color:var(--ifm-color-secondary-blog);font-family:DM Sans,sans-serif;font-size:19px;font-style:normal;font-weight:300;line-height:32px;margin-bottom:20px;overflow:hidden;display:-webkit-box !important;-webkit-line-clamp:3;-webkit-box-orient:vertical;"]);const LinkText=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"MorePosts__LinkText",componentId:"sc-ollbsk-7"})(["overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:var(--ifm-color-primary-blog) !important;font-family:DM Sans,sans-serif;font-size:22px;font-style:normal;font-weight:700;line-height:36px;&:hover{color:var(--ifm-color-primary) !important;}"]);/* harmony default export */ const BlogPostPage_MorePosts = (MorePosts);
-;// ./src/theme/BlogPostPage/index.js
-/* eslint-disable @docusaurus/prefer-docusaurus-heading *//**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function BlogPostPageContent(_ref){let{allPosts,post,children}=_ref;const{metadata,toc}=(0,client/* useBlogPost */.e7)();const{frontMatter}=metadata;const{hide_table_of_contents:hideTableOfContents,toc_min_heading_level:tocMinHeadingLevel,toc_max_heading_level:tocMaxHeadingLevel}=frontMatter;return/*#__PURE__*/(0,jsx_runtime.jsxs)(BlogLayout/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* MultiContent */.H,{flexDirection:"row",gap:"clamp(64px, 8vw, 128px)",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostItem/* default */.A,{children:children}),/*#__PURE__*/(0,jsx_runtime.jsx)(TOCWrapper,{className:"",children:!hideTableOfContents&&toc.length>0?/*#__PURE__*/(0,jsx_runtime.jsx)(TOC/* default */.A,{toc:toc,minHeadingLevel:tocMinHeadingLevel,maxHeadingLevel:tocMaxHeadingLevel}):undefined})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(StyledMultiContent,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostPage_FooterItem,{post:post})}),/*#__PURE__*/(0,jsx_runtime.jsx)(StyledMultiContent,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostPage_MorePosts,{allPosts:allPosts,post:post})})]});}function BlogPostPage(props){const blogPath=props.location.pathname.substring(0,props.location.pathname.length-1);const allPosts=props.allPosts;const contentName=allPosts===null||allPosts===void 0?void 0:allPosts.find(x=>{var _x$Preview;return x===null||x===void 0||(_x$Preview=x.Preview)===null||_x$Preview===void 0||(_x$Preview=_x$Preview.metadata)===null||_x$Preview===void 0||(_x$Preview=_x$Preview.permalink)===null||_x$Preview===void 0?void 0:_x$Preview.includes(blogPath);});const BlogPostContent=contentName===null||contentName===void 0?void 0:contentName.Preview;const isValidComponent=BlogPostContent&&typeof BlogPostContent==='function';if(!isValidComponent){console.warn("Invalid blog post component for path: "+blogPath);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{style:{padding:'2rem',textAlign:'center'},children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{children:"Blog post not found or invalid."}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:"Please check the metadata or route configuration."})]});}return/*#__PURE__*/(0,jsx_runtime.jsx)(client/* BlogPostProvider */["in"],{content:BlogPostContent,isBlogPostPage:true,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(metadataUtils/* HtmlClassNameProvider */.e3,{className:(0,clsx_m/* default */.A)(ThemeClassNames/* ThemeClassNames */.G.wrapper.blogPages,ThemeClassNames/* ThemeClassNames */.G.page.blogPostPage),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostPageMetadata,{}),/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostPageContent,{allPosts:allPosts,post:contentName,children:/*#__PURE__*/(0,jsx_runtime.jsx)(BlogPostContent,{})})]})});}const StyledMultiContent=(0,styled_components_browser_esm/* default */.Ay)(SharedStyling/* MultiContent */.H).withConfig({displayName:"BlogPostPage__StyledMultiContent",componentId:"sc-jhnfyo-0"})(["@media (min-width:1200px){width:75%;}"]);const TOCWrapper=styled_components_browser_esm/* default */.Ay.div.withConfig({displayName:"BlogPostPage__TOCWrapper",componentId:"sc-jhnfyo-1"})(["display:none;@media (min-width:1200px){max-width:250px;display:block;margin-top:100px;}"]);
 
 /***/ }),
 
@@ -1976,135 +1874,31 @@ filteredPosts.push(selectedPost);seenPosts.add(selectedPost);}});setFilteredArra
 
 /***/ }),
 
-/***/ 856977:
+/***/ 891517:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   hK: () => (/* binding */ Spacer),
-/* harmony export */   n9: () => (/* binding */ Date),
-/* harmony export */   uR: () => (/* binding */ ReadingTime)
+/* harmony export */   A: () => (/* binding */ NodeJSVirtualIDE)
 /* harmony export */ });
-/* unused harmony export useReadingTimePlural */
-/* harmony import */ var _docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(853465);
-/* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(721312);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(795093);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(296540);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(474848);
-function useReadingTimePlural(){const{selectMessage}=(0,_docusaurus_theme_common__WEBPACK_IMPORTED_MODULE_0__/* .usePluralForm */ .W)();return readingTimeFloat=>{const readingTime=Math.ceil(readingTimeFloat);return selectMessage(readingTime,(0,_docusaurus_Translate__WEBPACK_IMPORTED_MODULE_1__/* .translate */ .T)({id:'theme.blog.post.readingTime.plurals',description:'Pluralized label for "{readingTime} min read". Use as much plural forms (separated by "|") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)',message:'One min read|{readingTime} min read'},{readingTime}));};}function Spacer(){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment,{children:' · '});}function ReadingTime(_ref){let{readingTime}=_ref;const readingTimePlural=useReadingTimePlural();return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment,{children:readingTimePlural(readingTime)});}function Date(_temp){var _parsedDate,_parsedDate2,_parsedDate3;let{date,formattedDate,mr}=_temp===void 0?{}:_temp;// Early return if no date data is available
-if(!date&&!formattedDate){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},itemProp:"datePublished",children:"Unknown date"});}const year=moment__WEBPACK_IMPORTED_MODULE_2___default()().year();// Try multiple parsing strategies
-let parsedDate;// Strategy 1: Try parsing formattedDate with expected format
-if(formattedDate){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(formattedDate,'MMM DD, YYYY');}// Strategy 2: Try parsing formattedDate without strict format
-if(!((_parsedDate=parsedDate)!==null&&_parsedDate!==void 0&&_parsedDate.isValid())&&formattedDate){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(formattedDate);}// Strategy 3: Try parsing raw date
-if(!((_parsedDate2=parsedDate)!==null&&_parsedDate2!==void 0&&_parsedDate2.isValid())&&date){parsedDate=moment__WEBPACK_IMPORTED_MODULE_2___default()(date);}// If all parsing fails, return the original strings
-if(!((_parsedDate3=parsedDate)!==null&&_parsedDate3!==void 0&&_parsedDate3.isValid())){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},dateTime:date,itemProp:"datePublished",children:formattedDate||date||'Unknown date'});}const isPresentYear=parsedDate.year()===year;const newDate=parsedDate.format(!isPresentYear?'MMM DD, YYYY':'MMM DD');return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("time",{style:{marginRight:mr},dateTime:date,itemProp:"datePublished",children:newDate});}
-
-/***/ }),
-
-/***/ 865195:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ TOCItems)
-});
-
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/useThemeConfig.js
-var useThemeConfig = __webpack_require__(406342);
-;// ./node_modules/@docusaurus/theme-common/lib/utils/tocUtils.js
-const _excluded=["parentIndex"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function treeifyTOC(flatTOC){const headings=flatTOC.map(heading=>Object.assign({},heading,{parentIndex:-1,children:[]}));// Keep track of which previous index would be the current heading's direct
-// parent. Each entry <i> is the last index of the `headings` array at heading
-// level <i>. We will modify these indices as we iterate through all headings.
-// e.g. if an ### H3 was last seen at index 2, then prevIndexForLevel[3] === 2
-// indices 0 and 1 will remain unused.
-const prevIndexForLevel=Array(7).fill(-1);headings.forEach((curr,currIndex)=>{// Take the last seen index for each ancestor level. the highest index will
-// be the direct ancestor of the current heading.
-const ancestorLevelIndexes=prevIndexForLevel.slice(2,curr.level);curr.parentIndex=Math.max(...ancestorLevelIndexes);// Mark that curr.level was last seen at the current index.
-prevIndexForLevel[curr.level]=currIndex;});const rootNodes=[];// For a given parentIndex, add each Node into that parent's `children` array
-headings.forEach(heading=>{const{parentIndex}=heading,rest=(0,objectWithoutPropertiesLoose/* default */.A)(heading,_excluded);if(parentIndex>=0){headings[parentIndex].children.push(rest);}else{rootNodes.push(rest);}});return rootNodes;}/**
- * Takes a flat TOC list (from the MDX loader) and treeifies it into what the
- * TOC components expect. Memoized for performance.
- */function useTreeifiedTOC(toc){return useMemo(()=>treeifyTOC(toc),[toc]);}function filterTOC(_ref){let{toc,minHeadingLevel,maxHeadingLevel}=_ref;function isValid(item){return item.level>=minHeadingLevel&&item.level<=maxHeadingLevel;}return toc.flatMap(item=>{const filteredChildren=filterTOC({toc:item.children,minHeadingLevel,maxHeadingLevel});if(isValid(item)){return[Object.assign({},item,{children:filteredChildren})];}return filteredChildren;});}/**
- * Takes a flat TOC list (from the MDX loader) and treeifies it into what the
- * TOC components expect, applying the `minHeadingLevel` and `maxHeadingLevel`.
- * Memoized for performance.
- *
- * **Important**: this is not the same as `useTreeifiedTOC(toc.filter(...))`,
- * because we have to filter the TOC after it has been treeified. This is mostly
- * to ensure that weird TOC structures preserve their semantics. For example, an
- * h3-h2-h4 sequence should not be treeified as an "h3 > h4" hierarchy with
- * min=3, max=4, but should rather be "[h3, h4]" (since the h2 heading has split
- * the two headings and they are not parent-children)
- */function useFilteredAndTreeifiedTOC(_ref2){let{toc,minHeadingLevel,maxHeadingLevel}=_ref2;return (0,react.useMemo)(()=>filterTOC({toc:treeifyTOC(toc),minHeadingLevel,maxHeadingLevel}),[toc,minHeadingLevel,maxHeadingLevel]);}
-;// ./node_modules/@docusaurus/theme-common/lib/hooks/useTOCHighlight.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// TODO make the hardcoded theme-classic classnames configurable (or add them
-// to ThemeClassNames?)
-/**
- * If the anchor has no height and is just a "marker" in the DOM; we'll use the
- * parent (normally the link text) rect boundaries instead
- */function getVisibleBoundingClientRect(element){const rect=element.getBoundingClientRect();const hasNoHeight=rect.top===rect.bottom;if(hasNoHeight){return getVisibleBoundingClientRect(element.parentNode);}return rect;}/**
- * Considering we divide viewport into 2 zones of each 50vh, this returns true
- * if an element is in the first zone (i.e., appear in viewport, near the top)
- */function isInViewportTopHalf(boundingRect){return boundingRect.top>0&&boundingRect.bottom<window.innerHeight/2;}function getAnchors(_ref){let{minHeadingLevel,maxHeadingLevel}=_ref;const selectors=[];for(let i=minHeadingLevel;i<=maxHeadingLevel;i+=1){selectors.push("h"+i+".anchor");}return Array.from(document.querySelectorAll(selectors.join()));}function getActiveAnchor(anchors,_ref2){var _anchors2;let{anchorTopOffset}=_ref2;// Naming is hard: The "nextVisibleAnchor" is the first anchor that appear
-// under the viewport top boundary. It does not mean this anchor is visible
-// yet, but if user continues scrolling down, it will be the first to become
-// visible
-const nextVisibleAnchor=anchors.find(anchor=>{const boundingRect=getVisibleBoundingClientRect(anchor);return boundingRect.top>=anchorTopOffset;});if(nextVisibleAnchor){var _anchors;const boundingRect=getVisibleBoundingClientRect(nextVisibleAnchor);// If anchor is in the top half of the viewport: it is the one we consider
-// "active" (unless it's too close to the top and and soon to be scrolled
-// outside viewport)
-if(isInViewportTopHalf(boundingRect)){return nextVisibleAnchor;}// If anchor is in the bottom half of the viewport, or under the viewport,
-// we consider the active anchor is the previous one. This is because the
-// main text appearing in the user screen mostly belong to the previous
-// anchor. Returns null for the first anchor, see
-// https://github.com/facebook/docusaurus/issues/5318
-return(_anchors=anchors[anchors.indexOf(nextVisibleAnchor)-1])!==null&&_anchors!==void 0?_anchors:null;}// No anchor under viewport top (i.e. we are at the bottom of the page),
-// highlight the last anchor found
-return(_anchors2=anchors[anchors.length-1])!==null&&_anchors2!==void 0?_anchors2:null;}function getLinkAnchorValue(link){return decodeURIComponent(link.href.substring(link.href.indexOf('#')+1));}function getLinks(linkClassName){return Array.from(document.getElementsByClassName(linkClassName));}function getNavbarHeight(){// Not ideal to obtain actual height this way
-// Using TS ! (not ?) because otherwise a bad selector would be un-noticed
-return document.querySelector('.navbar').clientHeight;}function useAnchorTopOffsetRef(){const anchorTopOffsetRef=(0,react.useRef)(0);const{navbar:{hideOnScroll}}=(0,useThemeConfig/* useThemeConfig */.p)();(0,react.useEffect)(()=>{anchorTopOffsetRef.current=hideOnScroll?0:getNavbarHeight();},[hideOnScroll]);return anchorTopOffsetRef;}/**
- * Side-effect that applies the active class name to the TOC heading that the
- * user is currently viewing. Disabled when `config` is undefined.
- */function useTOCHighlight(config){const lastActiveLinkRef=(0,react.useRef)(undefined);const anchorTopOffsetRef=useAnchorTopOffsetRef();(0,react.useEffect)(()=>{if(!config){// No-op, highlighting is disabled
-return()=>{};}const{linkClassName,linkActiveClassName,minHeadingLevel,maxHeadingLevel}=config;function updateLinkActiveClass(link,active){if(active){if(lastActiveLinkRef.current&&lastActiveLinkRef.current!==link){lastActiveLinkRef.current.classList.remove(linkActiveClassName);}link.classList.add(linkActiveClassName);lastActiveLinkRef.current=link;// link.scrollIntoView({block: 'nearest'});
-}else{link.classList.remove(linkActiveClassName);}}function updateActiveLink(){const links=getLinks(linkClassName);const anchors=getAnchors({minHeadingLevel,maxHeadingLevel});const activeAnchor=getActiveAnchor(anchors,{anchorTopOffset:anchorTopOffsetRef.current});const activeLink=links.find(link=>activeAnchor&&activeAnchor.id===getLinkAnchorValue(link));links.forEach(link=>{updateLinkActiveClass(link,link===activeLink);});}document.addEventListener('scroll',updateActiveLink);document.addEventListener('resize',updateActiveLink);updateActiveLink();return()=>{document.removeEventListener('scroll',updateActiveLink);document.removeEventListener('resize',updateActiveLink);};},[config,anchorTopOffsetRef]);}
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
-var Link = __webpack_require__(328774);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/Tree.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Recursive component rendering the toc tree
-function TOCItemTree(_ref){let{toc,className,linkClassName,isChild}=_ref;if(!toc.length){return null;}return/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{className:isChild?undefined:className,children:toc.map(heading=>/*#__PURE__*/(0,jsx_runtime.jsxs)("li",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"#"+heading.id,className:linkClassName!==null&&linkClassName!==void 0?linkClassName:undefined// Developer provided the HTML, so assume it's safe.
-,dangerouslySetInnerHTML:{__html:heading.value}}),/*#__PURE__*/(0,jsx_runtime.jsx)(TOCItemTree,{isChild:true,toc:heading.children,className:className,linkClassName:linkClassName})]},heading.id))});}// Memo only the tree root is enough
-/* harmony default export */ const Tree = (/*#__PURE__*/react.memo(TOCItemTree));
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/TOCItems/index.js
-const TOCItems_excluded=["toc","className","linkClassName","linkActiveClassName","minHeadingLevel","maxHeadingLevel"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function TOCItems(_ref){let{toc,className='table-of-contents table-of-contents__left-border',linkClassName='table-of-contents__link',linkActiveClassName=undefined,minHeadingLevel:minHeadingLevelOption,maxHeadingLevel:maxHeadingLevelOption}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,TOCItems_excluded);const themeConfig=(0,useThemeConfig/* useThemeConfig */.p)();const minHeadingLevel=minHeadingLevelOption!==null&&minHeadingLevelOption!==void 0?minHeadingLevelOption:themeConfig.tableOfContents.minHeadingLevel;const maxHeadingLevel=maxHeadingLevelOption!==null&&maxHeadingLevelOption!==void 0?maxHeadingLevelOption:themeConfig.tableOfContents.maxHeadingLevel;const tocTree=useFilteredAndTreeifiedTOC({toc,minHeadingLevel,maxHeadingLevel});const tocHighlightConfig=(0,react.useMemo)(()=>{if(linkClassName&&linkActiveClassName){return{linkClassName,linkActiveClassName,minHeadingLevel,maxHeadingLevel};}return undefined;},[linkClassName,linkActiveClassName,minHeadingLevel,maxHeadingLevel]);useTOCHighlight(tocHighlightConfig);return/*#__PURE__*/(0,jsx_runtime.jsx)(Tree,Object.assign({toc:tocTree,className:className,linkClassName:linkClassName},props));}
+/* harmony import */ var _theme_Playground__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(404588);
+/* harmony import */ var _theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(351433);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+function NodeJSVirtualIDE(_ref){let{repo=null,children}=_ref;const userPassedCode=children.trim().split('\n').map(line=>line.startsWith(' ')?line.slice(2):line).join('\n');return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_theme_Playground__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{showLineNumbers:true// pass everything your snippet needs into the scope
+,scope:Object.assign({},_theme_ReactLiveScope__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{Buffer:(__webpack_require__(348287).Buffer)})// no-op: we already hand it the fully-wrapped code below
+,transformCode:code=>code,children:returnPlaygroundCode({userPassedCode,repo})});}// wrap the raw snippet into your full IDE harness
+function returnPlaygroundCode(_ref2){let{userPassedCode,repo=null}=_ref2;// check if customPropHighlightRegexStart is present
+let highlightRegexStart=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexStart=
+let lines=userPassedCode.split('\n');const highlightLine=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexStart=');});const match=highlightLine===null||highlightLine===void 0?void 0:highlightLine.match(/\/\/\s*customPropHighlightRegexStart=(.+)$/);if(match){// rawValue is everything after the “=” on that comment line
+highlightRegexStart=match[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLine),1);userPassedCode=lines.join('\n');}// check if customPropHighlightRegexEnd is present
+let highlightRegexEnd=null;// Look for a line that starts with any whitespace, then //, then customPropHighlightRegexEnd=
+lines=userPassedCode.split('\n');const highlightLineEnd=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexEnd=');});const matchEnd=highlightLineEnd===null||highlightLineEnd===void 0?void 0:highlightLineEnd.match(/\/\/\s*customPropHighlightRegexEnd=(.+)$/);if(matchEnd){// rawValue is everything after the “=” on that comment line
+highlightRegexEnd=matchEnd[1].trim();// remove the line from the code
+lines.splice(lines.indexOf(highlightLineEnd),1);userPassedCode=lines.join('\n');}// escape backticks in the snippet
+const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        StandardMerkleTree,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
 
 /***/ }),
 
