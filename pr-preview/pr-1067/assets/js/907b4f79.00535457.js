@@ -1941,25 +1941,77 @@ function _createMdxContent(props) {
       }), " contract and mint ", (0,jsx_runtime.jsx)(_components.code, {
         children: "WPUSH"
       }), " tokens:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "import { ethers } from 'ethers';\nimport * as dotenv from 'dotenv';\n\ndotenv.config();\n\n// Contract addresses\nconst CONTRACTS = {\n  wpush: '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818',\n} as const;\n\n// WPUSH ABI\nconst WPUSH_ABI = [\n  'function balanceOf(address) view returns (uint256)',\n  'function deposit() payable',\n  'function transfer(address,uint256) returns (bool)',\n] as const;\n\nconst PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';\nconst PRIVATE_KEY: string | undefined = process.env.PRIVATE_KEY;\n\n// Configuration - modify these values as needed\nconst AMOUNT_TO_MINT = '5'; // Amount of WPUSH to mint\n\n// Types\ninterface MintResult {\n  targetAddress: string;\n  amount: string;\n  depositTx: string;\n}\n\n// Helper functions\nfunction getSigner(): ethers.Wallet {\n  if (!PRIVATE_KEY) {\n    throw new Error('PRIVATE_KEY is not configured');\n  }\n  const provider = new ethers.JsonRpcProvider(PUSH_RPC_URL);\n  return new ethers.Wallet(PRIVATE_KEY, provider);\n}\n\nfunction getWpushContract(): ethers.Contract {\n  const signer = getSigner();\n  return new ethers.Contract(CONTRACTS.wpush, WPUSH_ABI, signer);\n}\n\n// Main minting function\nasync function mintWpushToAddress(\n  targetAddress: string,\n  amount: string\n): Promise<MintResult> {\n  // Validate inputs\n  if (!ethers.isAddress(targetAddress)) {\n    throw new Error(`Invalid Ethereum address: ${targetAddress}`);\n  }\n\n  const amountWei = ethers.parseUnits(amount.toString(), 18);\n  const signer = getSigner();\n  const wpushContract = getWpushContract();\n\n  // Check balance\n  const signerBalance = await signer.provider!.getBalance(signer.address);\n  if (signerBalance < amountWei) {\n    throw new Error(\n      `Insufficient PUSH balance. Required: ${ethers.formatUnits(amountWei)}, Available: ${ethers.formatUnits(\n        signerBalance\n      )}`\n    );\n  }\n\n  // Deposit PUSH to get WPUSH\n  const depositTx = await wpushContract.deposit({ value: amountWei });\n  await depositTx.wait();\n\n  return {\n    targetAddress,\n    amount,\n    depositTx: depositTx.hash,\n  };\n}\n\n// Main function\nasync function main(): Promise<void> {\n  const TARGET_ADDRESS = getSigner().address;\n  console.log(`🚀 Minting ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}\\n`);\n\n  try {\n    const result = await mintWpushToAddress(TARGET_ADDRESS, AMOUNT_TO_MINT);\n    console.log(\n      `✅ Successfully minted ${AMOUNT_TO_MINT} WPUSH to ${TARGET_ADDRESS}`\n    );\n    console.log(`📋 Deposit TX: ${result.depositTx}`);\n\n    // Check final WPUSH balance\n    const wpushContract = getWpushContract();\n    const finalBalance = await wpushContract.balanceOf(TARGET_ADDRESS);\n    const formattedBalance = ethers.formatUnits(finalBalance, 18);\n    console.log(`💰 Final WPUSH balance: ${formattedBalance} WPUSH`);\n  } catch (error) {\n    const errorMessage = error instanceof Error ? error.message : String(error);\n    console.error('❌ Error:', errorMessage);\n    process.exit(1);\n  }\n}\n\nmain().catch((error) => {\n  console.error('Unhandled error:', error);\n  process.exit(1);\n});\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Run:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npx ts-node scripts/mint-wpush.ts\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Example output:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "🚀 Minting 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n\n✅ Successfully minted 1 WPUSH to 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n📋 Deposit TX: 0xd8a62e24f9157950d46b5d99b94b693e09064147078fe7cace95093de4da8e3a\n"
-      })
+    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+      children: `
+  import { ethers } from 'ethers';
+  import * as readline from 'node:readline/promises';
+
+  // Contract addresses
+  const CONTRACTS = {
+    wpush: '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818',
+  };
+
+  // WPUSH ABI
+  const WPUSH_ABI = ['function balanceOf(address) view returns (uint256)', 'function deposit() payable'];
+
+  const PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+
+  // Configuration - modify these values as needed
+  const AMOUNT_TO_MINT = '5'; // Amount of WPUSH to mint
+
+  // Enable User Input
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+  });
+
+  async function main() {
+    const provider = new ethers.JsonRpcProvider(PUSH_RPC_URL);
+    const ephemeral = ethers.Wallet.createRandom();
+    const wallet = ephemeral.connect(provider);
+
+    console.log('🔑 Ephemeral wallet address:', wallet.address);
+
+    const wpush = new ethers.Contract(CONTRACTS.wpush, WPUSH_ABI, wallet);
+    const amountWei = ethers.parseUnits(AMOUNT_TO_MINT, 18);
+
+    // Wait for sufficient native PUSH balance
+    let nativeBal = await provider.getBalance(wallet.address);
+    while (nativeBal < amountWei) {
+      console.log(
+        '⏳ Insufficient native PUSH. Needed:',
+        ethers.formatUnits(amountWei, 18),
+        'PUSH; Have:',
+        ethers.formatUnits(nativeBal, 18)
+      );
+      await rl.question(':::prompt:::Please send native PUSH to ' + wallet.address + ' and press Enter to retry.');
+      nativeBal = await provider.getBalance(wallet.address);
+      console.log('💰 Native PUSH balance:', ethers.formatUnits(nativeBal, 18));
+    }
+
+    try {
+      console.log('Depositing native PUSH to mint WPUSH...');
+      const tx = await wpush.deposit({ value: amountWei });
+      const rc = await tx.wait();
+      console.log('✅ Successfully minted', AMOUNT_TO_MINT, 'WPUSH');
+      console.log('📋 Deposit TX:', rc?.hash ?? tx.hash);
+
+      const finalBalance = await wpush.balanceOf(wallet.address);
+      console.log('💰 Final WPUSH balance:', ethers.formatUnits(finalBalance, 18), 'WPUSH');
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.error('❌ Error:', errorMessage);
+      process.exit(1);
+    } finally {
+      rl.close();
+    }
+  }
+
+  main().catch((error) => {
+    console.error('Unhandled error:', error);
+    process.exit(1);
+  });
+`
     }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
       id: "part-3-create-airdropwpush-pool-and-add-liquidity",
       children: ["Part 3: Create ", (0,jsx_runtime.jsx)(_components.code, {
