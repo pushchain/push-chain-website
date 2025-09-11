@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[40569],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[62224],{
 
 /***/ 285:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
@@ -125930,54 +125930,6 @@ exports.fusion = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
-/***/ 389949:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.SimpleMerkleTree = exports.formatLeaf = void 0;
-const abi_utils_1 = __webpack_require__(593256);
-const bytes_1 = __webpack_require__(144144);
-const core_1 = __webpack_require__(946452);
-const merkletree_1 = __webpack_require__(550065);
-const errors_1 = __webpack_require__(190522);
-function formatLeaf(value) {
-    return (0, bytes_1.toHex)((0, abi_utils_1.encode)(['bytes32'], [value]));
-}
-exports.formatLeaf = formatLeaf;
-class SimpleMerkleTree extends merkletree_1.MerkleTreeImpl {
-    static of(values, options = {}) {
-        const [tree, indexedValues] = merkletree_1.MerkleTreeImpl.prepare(values, options, formatLeaf, options.nodeHash);
-        return new SimpleMerkleTree(tree, indexedValues, formatLeaf, options.nodeHash);
-    }
-    static load(data, nodeHash) {
-        (0, errors_1.validateArgument)(data.format === 'simple-v1', `Unknown format '${data.format}'`);
-        (0, errors_1.validateArgument)((nodeHash == undefined) !== (data.hash == 'custom'), nodeHash ? 'Data does not expect a custom node hashing function' : 'Data expects a custom node hashing function');
-        const tree = new SimpleMerkleTree(data.tree, data.values, formatLeaf, nodeHash);
-        tree.validate();
-        return tree;
-    }
-    static verify(root, leaf, proof, nodeHash) {
-        return (0, bytes_1.toHex)(root) === (0, core_1.processProof)(formatLeaf(leaf), proof, nodeHash);
-    }
-    static verifyMultiProof(root, multiproof, nodeHash) {
-        return (0, bytes_1.toHex)(root) === (0, core_1.processMultiProof)(multiproof, nodeHash);
-    }
-    dump() {
-        return {
-            format: 'simple-v1',
-            tree: this.tree,
-            values: this.values.map(({ value, treeIndex }) => ({ value: (0, bytes_1.toHex)(value), treeIndex })),
-            ...(this.nodeHash ? { hash: 'custom' } : {}),
-        };
-    }
-}
-exports.SimpleMerkleTree = SimpleMerkleTree;
-//# sourceMappingURL=simple.js.map
-
-/***/ }),
-
 /***/ 390135:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -200611,134 +200563,6 @@ exports.ektaTestnet = (0, defineChain_js_1.defineChain)({
 
 /***/ }),
 
-/***/ 550065:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.MerkleTreeImpl = void 0;
-const bytes_1 = __webpack_require__(144144);
-const core_1 = __webpack_require__(946452);
-const options_1 = __webpack_require__(565577);
-const errors_1 = __webpack_require__(190522);
-class MerkleTreeImpl {
-    constructor(tree, values, leafHash, nodeHash) {
-        this.tree = tree;
-        this.values = values;
-        this.leafHash = leafHash;
-        this.nodeHash = nodeHash;
-        (0, errors_1.validateArgument)(values.every(({ value }) => typeof value != 'number'), 'Leaf values cannot be numbers');
-        this.hashLookup = Object.fromEntries(values.map(({ treeIndex }, valueIndex) => [tree[treeIndex], valueIndex]));
-    }
-    static prepare(values, options = {}, leafHash, nodeHash) {
-        const sortLeaves = options.sortLeaves ?? options_1.defaultOptions.sortLeaves;
-        const hashedValues = values.map((value, valueIndex) => ({
-            value,
-            valueIndex,
-            hash: leafHash(value),
-        }));
-        if (sortLeaves) {
-            hashedValues.sort((a, b) => (0, bytes_1.compare)(a.hash, b.hash));
-        }
-        const tree = (0, core_1.makeMerkleTree)(hashedValues.map(v => v.hash), nodeHash);
-        const indexedValues = values.map(value => ({ value, treeIndex: 0 }));
-        for (const [leafIndex, { valueIndex }] of hashedValues.entries()) {
-            indexedValues[valueIndex].treeIndex = tree.length - leafIndex - 1;
-        }
-        return [tree, indexedValues];
-    }
-    get root() {
-        return this.tree[0];
-    }
-    get length() {
-        return this.values.length;
-    }
-    at(index) {
-        return this.values.at(index)?.value;
-    }
-    render() {
-        return (0, core_1.renderMerkleTree)(this.tree);
-    }
-    *entries() {
-        for (const [i, { value }] of this.values.entries()) {
-            yield [i, value];
-        }
-    }
-    validate() {
-        this.values.forEach((_, i) => this._validateValueAt(i));
-        (0, errors_1.invariant)((0, core_1.isValidMerkleTree)(this.tree, this.nodeHash), 'Merkle tree is invalid');
-    }
-    leafLookup(leaf) {
-        const lookup = this.hashLookup[this.leafHash(leaf)];
-        (0, errors_1.validateArgument)(typeof lookup !== 'undefined', 'Leaf is not in tree');
-        return lookup;
-    }
-    getProof(leaf) {
-        // input validity
-        const valueIndex = typeof leaf === 'number' ? leaf : this.leafLookup(leaf);
-        this._validateValueAt(valueIndex);
-        // rebuild tree index and generate proof
-        const { treeIndex } = this.values[valueIndex];
-        const proof = (0, core_1.getProof)(this.tree, treeIndex);
-        // sanity check proof
-        (0, errors_1.invariant)(this._verify(this.tree[treeIndex], proof), 'Unable to prove value');
-        // return proof in hex format
-        return proof;
-    }
-    getMultiProof(leaves) {
-        // input validity
-        const valueIndices = leaves.map(leaf => (typeof leaf === 'number' ? leaf : this.leafLookup(leaf)));
-        for (const valueIndex of valueIndices) {
-            this._validateValueAt(valueIndex);
-        }
-        // rebuild tree indices and generate proof
-        const indices = valueIndices.map(i => this.values[i].treeIndex);
-        const proof = (0, core_1.getMultiProof)(this.tree, indices);
-        // sanity check proof
-        (0, errors_1.invariant)(this._verifyMultiProof(proof), 'Unable to prove values');
-        // return multiproof in hex format
-        return {
-            leaves: proof.leaves.map(hash => this.values[this.hashLookup[hash]].value),
-            proof: proof.proof,
-            proofFlags: proof.proofFlags,
-        };
-    }
-    verify(leaf, proof) {
-        return this._verify(this._leafHash(leaf), proof);
-    }
-    verifyMultiProof(multiproof) {
-        return this._verifyMultiProof({
-            leaves: multiproof.leaves.map(l => this._leafHash(l)),
-            proof: multiproof.proof,
-            proofFlags: multiproof.proofFlags,
-        });
-    }
-    _validateValueAt(index) {
-        const value = this.values[index];
-        (0, errors_1.validateArgument)(value !== undefined, 'Index out of bounds');
-        (0, errors_1.invariant)(this.tree[value.treeIndex] === this.leafHash(value.value), 'Merkle tree does not contain the expected value');
-    }
-    _leafHash(leaf) {
-        if (typeof leaf === 'number') {
-            const lookup = this.values[leaf];
-            (0, errors_1.validateArgument)(lookup !== undefined, 'Index out of bounds');
-            leaf = lookup.value;
-        }
-        return this.leafHash(leaf);
-    }
-    _verify(leafHash, proof) {
-        return this.root === (0, core_1.processProof)(leafHash, proof, this.nodeHash);
-    }
-    _verifyMultiProof(multiproof) {
-        return this.root === (0, core_1.processMultiProof)(multiproof, this.nodeHash);
-    }
-}
-exports.MerkleTreeImpl = MerkleTreeImpl;
-//# sourceMappingURL=merkletree.js.map
-
-/***/ }),
-
 /***/ 550744:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -205999,22 +205823,6 @@ exports.abstractTestnet = (0, defineChain_js_1.defineChain)({
     },
 });
 //# sourceMappingURL=abstractTestnet.js.map
-
-/***/ }),
-
-/***/ 565577:
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.defaultOptions = void 0;
-// Recommended (default) MerkleTree options.
-// - leaves are sorted by default to facilitate onchain verification of multiproofs.
-exports.defaultOptions = {
-    sortLeaves: true,
-};
-//# sourceMappingURL=options.js.map
 
 /***/ }),
 
@@ -214694,64 +214502,6 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.version = void 0;
 exports.version = '0.1.1';
 //# sourceMappingURL=version.js.map
-
-/***/ }),
-
-/***/ 603438:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StandardMerkleTree = void 0;
-const bytes_1 = __webpack_require__(144144);
-const core_1 = __webpack_require__(946452);
-const merkletree_1 = __webpack_require__(550065);
-const hashes_1 = __webpack_require__(522011);
-const errors_1 = __webpack_require__(190522);
-class StandardMerkleTree extends merkletree_1.MerkleTreeImpl {
-    constructor(tree, values, leafEncoding) {
-        super(tree, values, leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf));
-        this.tree = tree;
-        this.values = values;
-        this.leafEncoding = leafEncoding;
-    }
-    static of(values, leafEncoding, options = {}) {
-        // use default nodeHash (standardNodeHash)
-        const [tree, indexedValues] = merkletree_1.MerkleTreeImpl.prepare(values, options, leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf));
-        return new StandardMerkleTree(tree, indexedValues, leafEncoding);
-    }
-    static load(data) {
-        (0, errors_1.validateArgument)(data.format === 'standard-v1', `Unknown format '${data.format}'`);
-        (0, errors_1.validateArgument)(data.leafEncoding !== undefined, 'Expected leaf encoding');
-        const tree = new StandardMerkleTree(data.tree, data.values, data.leafEncoding);
-        tree.validate();
-        return tree;
-    }
-    static verify(root, leafEncoding, leaf, proof) {
-        // use default nodeHash (standardNodeHash) for processProof
-        return (0, bytes_1.toHex)(root) === (0, core_1.processProof)((0, hashes_1.standardLeafHash)(leafEncoding, leaf), proof);
-    }
-    static verifyMultiProof(root, leafEncoding, multiproof) {
-        // use default nodeHash (standardNodeHash) for processMultiProof
-        return ((0, bytes_1.toHex)(root) ===
-            (0, core_1.processMultiProof)({
-                leaves: multiproof.leaves.map(leaf => (0, hashes_1.standardLeafHash)(leafEncoding, leaf)),
-                proof: multiproof.proof,
-                proofFlags: multiproof.proofFlags,
-            }));
-    }
-    dump() {
-        return {
-            format: 'standard-v1',
-            leafEncoding: this.leafEncoding,
-            tree: this.tree,
-            values: this.values,
-        };
-    }
-}
-exports.StandardMerkleTree = StandardMerkleTree;
-//# sourceMappingURL=standard.js.map
 
 /***/ }),
 
@@ -304149,21 +303899,6 @@ function parseEther(ether, unit = 'wei') {
     return (0, parseUnits_js_1.parseUnits)(ether, unit_js_1.etherUnits[unit]);
 }
 //# sourceMappingURL=parseEther.js.map
-
-/***/ }),
-
-/***/ 782971:
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
-
-"use strict";
-
-Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.StandardMerkleTree = exports.SimpleMerkleTree = void 0;
-var simple_1 = __webpack_require__(389949);
-Object.defineProperty(exports, "SimpleMerkleTree", ({ enumerable: true, get: function () { return simple_1.SimpleMerkleTree; } }));
-var standard_1 = __webpack_require__(603438);
-Object.defineProperty(exports, "StandardMerkleTree", ({ enumerable: true, get: function () { return standard_1.StandardMerkleTree; } }));
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 

@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[42350],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[92630],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -316,6 +316,17 @@ webpackContext.id = 35358;
 
 /***/ }),
 
+/***/ 87768:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBlZmQ5NjEtYTM1ZC00ODZiLTlmNDQtOTc1NTkzOGRiM2E4IiB4bXBNTTpEb2N1bWVudElE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");
+
+/***/ }),
+
 /***/ 91053:
 /***/ (() => {
 
@@ -394,6 +405,28 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
+/***/ 311100:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNyswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNyswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6YmYxMGFmM2EtODMxYS00OGVkLWE4ZGMtMGUxMGMwZjQyOGE1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmJmMTBhZjNhLTgzMWEtNDhlZC1hOGRjLTBlMTBjMGY0MjhhNSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmJmMTBhZjNhLTgzMWEtNDhlZC1hOGRjLTBlMTBjMGY0MjhhNSI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YmYxMGFmM2EtODMxYS00OGVkLWE4ZGMtMGUxMGMwZjQyOGE1IiBzdEV2dDp3aGVuPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMCAoTWFjaW50b3NoKSIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7Cp82yAAAEBElEQVRIx+2WW2hcRRzGv//MnLPXs5vdZLebJU1WK41F8CVYbUCllV6keMFq076JESoYQSgB6WIptqhQraIiFilFEKvUC4UipKJQGm+0Fi9gS2tL0mSz2Wza3c3unr2cOTM+xApqIg0hb/2/zuU3833ff86h4h9bsFSlQIaAbi4hAFoADEtYbEl3B5b4+DcBNwE3AbMlbnCeK3U0JtDCoeHmZanocoO0ghAItgn4GTQAoOQWCy4AooUACPAF2ZmztUtXHEa4c5Wns8uszbjhCOchfma4eubXml3XrRG+rjewfJWnMiEdR88+QzcGIPhi4oN9U+8cnAbo0FvJ7rt8BDBB6d2Thz8uFsuuK2GalFwmXhqM9z0eruSlqxfkgQsrwIIRHo1zr4dBw9vK9789/fKBvNdLsai4tdNoCbPctNzWP3r8+EwwaSzYZMbAOXFORIDB85eaR7+ciSdEKMj2p+PHPrulvy9CwHM72rpXeuold2Em/1e27JSsVJV0keowt/bHAEoPsI33B9bcG0BdX5uWXCwqpjoe5X4f83np3KXGwQM5lJpGh7lmk1XOycI1lwtaXB9IlVjpWXuPP5OVhqD0/qnN20cPv5u3xxwrZZoGKbXIRpNaVtTuwfjD661zFxtBPzv7W31gV3bdttFjnxQD7cLjJa0XAyCUp2Uowr84vPzV9LJohJcrbmtUjGWcLf1jh96/6o8LfiM3IALNN8SplJOMYzAdP/FR55t727sSgnNKdRp7Xs+f/6lmtfH/AyhXhy0W6jL9PqYcDQbDIK2hNVwFaB2yWLhdwIWckG0h/vRAbOjTVG+Pr9HUxRk1fNqGxaHnAWipI0ljpqL27Mpmck74dj+8wrYVEZQGJ4Czkq32vTLV98w4CEgYKEt/MtDb479WdEGw62pWybn7IJQ0hr4qP//i5PnfGxdGmjt3InOh/s131bYot2t6ZcqEwZ59IXvkaCHQYmwfyOx4MhKPiV9+Lnz4ebEjYUzm5W2dJqSet9EYg2B0edRpTYhTp+1vt45IjWCAXb7i9G0O9az2a9vd/lj46+Fqw8HJH6rDP9rBECuV3ICfjYw7TzwY2rDeauQlIOaWqDThPLDJGj6W6l5hVqo6X3JLZTVdcB/dYL2xNwGgPNZ8aEvL0JGu++72GwZV6yoz4dSb2pF4amvLe6+1C4NsWwGg4sVH5vBAg4DwcqM2JYdOVsYnJGNYkTI3rg3CoELWIU4EhDsM2OrU99ULl5u2rYMBdke3ubo3AEcXcpIJDTLmBsxClIJlMdEq/oqCRD0vazXF+Gx0tVLweZk3yuEhaICAmq5elU1HM0bX/67nCzoR46jagC3/YQ//W1ViDI0mGpPuv1YyRtc/VPQnsQ2xzdpLMKEAAAAASUVORK5CYII=");
+
+/***/ }),
+
+/***/ 314199:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZmUxN2M2YTMtZTc1MS00NWVlLTgzNTQtMDQwZmJmNjc4YjFhIiB4bXBNTTpEb2N1bWVudElE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");
+
+/***/ }),
+
 /***/ 321638:
 /***/ (() => {
 
@@ -423,14 +456,16 @@ function loadClientSideLibraryEthers(constantName){return typeof window!=='undef
 }function loadClientSideLibraryViemChains(constantName){return typeof window!=='undefined'?__webpack_require__(314498)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryViemUtils(constantName){return typeof window!=='undefined'?__webpack_require__(304661)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryBS58(){return typeof window!=='undefined'?(__webpack_require__(698957)["default"])||__webpack_require__(698957):{};// Return an empty object or appropriate placeholder for SSR.
-}function loadClientSideLibraryOpenZepplinMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(782971)[constantName]:{};// Return an empty object or appropriate placeholder for SSR.
+}function loadClientSideLibraryOpenZepplinMerkleTree(constantName){return typeof window!=='undefined'?__webpack_require__(946452)[constantName]:{};// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolRestAPI(constantName){return typeof window!=='undefined'?__webpack_require__(514086)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushProtocolUIWeb(constantName){return typeof window!=='undefined'?__webpack_require__(817471)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainUIKit(constantName){return typeof window!=='undefined'?__webpack_require__(527130)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideLibraryPushChainCore(constantName){return typeof window!=='undefined'?__webpack_require__(861282)[constantName]:Promise.resolve({});// Return an empty object or appropriate placeholder for SSR.
 }function loadClientSideReactIconsBS(iconName){return typeof window!=='undefined'?__webpack_require__(796710)[iconName]:()=>null;}// For @pushprotocol/UIWeb components, we will dynamically load them in the BrowserOnly component.
 function createBrowserOnlyLibComponentUIWeb(componentExportName){return function LibComponentBrowserOnly(props){return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{fallback:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,{size:42,color:_site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay.COLORS.PRIMARY_COLOR,type:_site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N.PROCESSING}),children:()=>{const Component=__webpack_require__(817471)[componentExportName];return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Component,Object.assign({},props));}});};}const ReactLiveScope=Object.assign({React: react__WEBPACK_IMPORTED_MODULE_3__},react__WEBPACK_IMPORTED_MODULE_3__,{LiveEditor: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveEditor */ .w,LiveProvider: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveProvider */ .Q,LiveError: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LiveError */ .p1,LivePreview: react_live__WEBPACK_IMPORTED_MODULE_4__/* .LivePreview */ .pA,BrowserOnly: _docusaurus_BrowserOnly__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,Spinner: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .A,SPINNER_TYPE: _site_src_components_reusables_spinners_SpinnerUnit__WEBPACK_IMPORTED_MODULE_1__/* .SPINNER_TYPE */ .N,GLOBALS: _site_src_config_globals__WEBPACK_IMPORTED_MODULE_2__/* ["default"] */ .Ay,// Asynchronously import ethers and PushAPI only on the client side
-ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),StandardMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
+ethers:loadClientSideLibraryEthers('ethers'),Keypair:loadClientSideLibrarySolana('Keypair'),PublicKey:loadClientSideLibrarySolana('PublicKey'),createWalletClient:loadClientSideLibraryViem('createWalletClient'),createPublicClient:loadClientSideLibraryViem('createPublicClient'),http:loadClientSideLibraryViem('http'),parseTransaction:loadClientSideLibraryViem('parseTransaction'),TypedData:loadClientSideLibraryViem('TypedData'),TypedDataDomain:loadClientSideLibraryViem('TypedDataDomain'),defineChain:loadClientSideLibraryViem('defineChain'),webSocket:loadClientSideLibraryViem('webSocket'),keccak256:loadClientSideLibraryViem('keccak256'),privateKeyToAccount:loadClientSideLibraryViemAccounts('privateKeyToAccount'),generatePrivateKey:loadClientSideLibraryViemAccounts('generatePrivateKey'),sepolia:loadClientSideLibraryViemChains('sepolia'),hexToBytes:loadClientSideLibraryViemUtils('hexToBytes'),bytesToHex:loadClientSideLibraryViemUtils('bytesToHex'),bs58:loadClientSideLibraryBS58(),// StandardMerkleTree:
+//   loadClientSideLibraryOpenZepplinMerkleTree('StandardMerkleTree'),
+getProof:loadClientSideLibraryOpenZepplinMerkleTree('getProof'),makeMerkleTree:loadClientSideLibraryOpenZepplinMerkleTree('makeMerkleTree'),PushAPI:loadClientSideLibraryPushProtocolRestAPI('PushAPI'),// CONSTANTS: loadClientSideLibraryPushProtocolRestAPI('CONSTANTS'),
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
 SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
@@ -566,6 +601,573 @@ role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===v
 return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
 // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
 ,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
+
+/***/ }),
+
+/***/ 414723:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/reactNative@2x-e1351e83b48fbbccde989c8fa295e358.png");
+
+/***/ }),
+
+/***/ 436873:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_01_intro_push_chain_mdx_559_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-intro-push-chain-mdx-559.json
+const site_docs_chain_01_intro_push_chain_mdx_559_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/introduction","title":"Intro to Push Chain","description":"Introduction | Push Chain Docs","source":"@site/docs/chain/01-Intro-Push-Chain.mdx","sourceDirName":"chain","slug":"/chain/","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-Intro-Push-Chain.mdx","tags":[],"version":"current","sidebarPosition":1,"frontMatter":{"id":"introduction","title":"Intro to Push Chain","hide_title":false,"slug":"./","displayed_sidebar":"pushChainSidebar","sidebar_position":1,"image":"/assets/docs/previews/introduction--intro_to_push_chain.png"},"sidebar":"pushChainSidebar","next":{"title":"Quickstart","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/quickstart"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/ThemedImage/index.js + 2 modules
+var ThemedImage = __webpack_require__(721122);
+;// ./docs/chain/01-Intro-Push-Chain.mdx
+
+
+const frontMatter = {
+	id: 'introduction',
+	title: 'Intro to Push Chain',
+	hide_title: false,
+	slug: './',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 1,
+	image: '/assets/docs/previews/introduction--intro_to_push_chain.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Hello Push Chain 👋",
+  "id": "hello-push-chain-",
+  "level": 2
+}, {
+  "value": "Key Innovations (Why Push Chain)",
+  "id": "key-innovations-why-push-chain",
+  "level": 2
+}, {
+  "value": "Why Build on Push Chain?",
+  "id": "why-build-on-push-chain",
+  "level": 2
+}, {
+  "value": "Developer SDKs",
+  "id": "developer-sdks",
+  "level": 2
+}, {
+  "value": "Experience Push Chain",
+  "id": "experience-push-chain",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    em: "em",
+    h2: "h2",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Introduction | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Push Chain is the first ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "True Universal Layer 1"
+      }), " blockchain, built as a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "100% EVM-compatible"
+      }), " Proof of Stake (PoS) chain. It runs seamlessly across every chain and wallet."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Write your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: [(0,jsx_runtime.jsx)(_components.strong, {
+        children: "Ready to build?"
+      }), " ", (0,jsx_runtime.jsx)("br", {})]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Follow our ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/quickstart",
+          children: "Quickstart"
+        }), " to deploy your app in minutes. ", (0,jsx_runtime.jsx)("br", {})]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Explore core abstractions in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/important-concepts",
+          children: "Important Concepts"
+        }), ". ", (0,jsx_runtime.jsx)("br", {})]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)("p", {
+      children: (0,jsx_runtime.jsx)(ThemedImage/* default */.A, {
+        alt: "Diagram to show how an existing EVM or non-EVM application can be deployed on Push Chain to instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.",
+        sources: {
+          light: (__webpack_require__(757244)["default"]),
+          dark: (__webpack_require__(515468)["default"])
+        }
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "hello-push-chain-",
+      children: "Hello Push Chain 👋"
+    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+      groupId: "code-examples",
+      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "pushchain",
+        label: "Ethers (v6) Push Chain",
+        default: true,
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+          },
+          children: `
+  // customPropHighlightRegexStart=PushChain\.initialize
+  // customPropHighlightRegexEnd=}\\)
+  // Import Push Chain SDK and Ethers
+  // You can use other library like veim, etc
+  import { PushChain } from '@pushchain/core';
+  import { ethers } from 'ethers';
+
+  async function main() {
+    // 1. Connect to a provider (e.g., Push Chain RPC URL)
+    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+
+    // 2. Create a random wallet (or use your own private key)
+    const wallet = ethers.Wallet.createRandom(provider);
+
+    // 3. Convert ethers signer to Universal Signer
+    // Most popular libraries can pass just the signer to get universal signer
+    // Or use PushChain.utils.signer.construct to create a custom one
+    const universalSigner = await PushChain.utils.signer.toUniversal(wallet);
+
+    // Initialize Push Chain SDK for use from Push Chain account
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    console.log(JSON.stringify(pushChainClient, null, 2));
+  }
+
+  await main().catch(console.error);
+
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "ethers_v6",
+        label: "Ethers (v6) Sepolia",
+        default: true,
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples"
+          },
+          children: `
+  // customPropHighlightRegexStart=PushChain\.initialize
+  // customPropHighlightRegexEnd=}\\)
+  // Import Push Chain SDK and Ethers
+  // You can use other library like veim, etc
+  import { PushChain } from '@pushchain/core'
+  import { ethers } from 'ethers'
+
+  async function main() {
+    // 1. Connect to a provider (e.g., Push Chain RPC URL)
+    const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co')
+
+    // 2. Create a random wallet (or use your own private key)
+    const wallet = ethers.Wallet.createRandom(provider)
+
+    // 3. Convert ethers signer to Universal Signer
+    // Most popular libraries can pass just the signer to get universal signer
+    // Or use PushChain.utils.signer.construct to create a custom one
+    const universalSigner = await PushChain.utils.signer.toUniversal(wallet)
+
+    // Initialize Push Chain SDK for use from Push Chain account
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    })
+
+    console.log(JSON.stringify(pushChainClient, null, 2))
+  }
+
+  await main().catch(console.error)
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "viem",
+        label: "Viem",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples"
+          },
+          children: `
+  // customPropHighlightRegexStart=PushChain\.initialize
+  // customPropHighlightRegexEnd=}\\)
+  // Import Push Chain SDK and Viem
+  // You can use other library like ethers, etc
+  import { PushChain } from '@pushchain/core';
+  import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts'
+  import { createWalletClient, http } from 'viem'
+  import { sepolia } from 'viem/chains'
+
+  async function main() {
+    // 1. Construct account
+    const account = privateKeyToAccount(generatePrivateKey())
+
+    // 2. Initialize signer
+    const signer = createWalletClient({
+      transport: http('https://sepolia.gateway.tenderly.co'), // or your preferred RPC URL
+      chain: sepolia,
+      account, // <-- our signer
+    })
+
+    // 3. Convert signer to Universal Signer
+    // Most of the popular libraries can pass just the signer to get universal signer
+    // Or use PushChain.utils.signer.construct to create a custom one
+    const universalSigner = await PushChain.utils.signer.toUniversal(signer)
+
+    // Initialize Push Chain SDK for use from Ethereum account
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    })
+
+    console.log(JSON.stringify(pushChainClient, null, 2))
+  }
+
+  await main().catch(console.error);
+`
+        })
+      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "solana_web3js",
+        label: "Solana (Web3 JS)",
+        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples"
+          },
+          children: `
+  // customPropHighlightRegexStart=PushChain\.initialize
+  // customPropHighlightRegexEnd=}\\)
+  // Import Push Chain SDK and Solana Web3.js
+  // You can use other library like @solana/kit, etc
+  import { PushChain } from '@pushchain/core';
+  import { Keypair } from '@solana/web3.js';
+
+  async function main() {
+    // 1. Generate or import your Solana keypair
+    const solKeypair = Keypair.generate()
+
+    // 2. Convert the Solana Keypair into a Push Chain universal signer.
+    //    We use the helper toUniversalFromKeypair, which internally builds
+    //    the necessary adapter (signTransaction, signMessage).
+    const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
+      chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+      library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+    })
+
+    // 3. Initialize Push Chain SDK
+    const pushChainClient = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    })
+
+    console.log(JSON.stringify(pushChainClient, null, 2))
+  }
+
+  await main().catch(console.error);
+`
+        })
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "key-innovations-why-push-chain",
+      children: "Key Innovations (Why Push Chain)"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Push Chain provides a unified toolkit to build truly universal dApps. Without custom bridges or multi-chain deployments, you gain:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Zero EVM Code Changes"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nDeploy your existing Solidity contract on Push Chain without modifying ABI, bytecode, or on-chain logic."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Single Transaction from any Chain"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nSend transactions from any chain to Push Chain with just a single transaction, massively reducing the complexity of multi-chain users interaction."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Wallet Abstraction"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nSupport MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet simply to access your dApp."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Fee Abstraction"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nAllow users to pay gas fees in their native tokens (for example ETH or SOL). Push Chain automatically routes fees so users do not have to bridge or hold $PC tokens (native token of Push Chain)."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Universal Smart Contracts and Cross-Chain Mapping"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nContracts on Push Chain automatically recognize addresses from Ethereum, Solana, and other chains and ", (0,jsx_runtime.jsx)(_components.strong, {
+            children: (0,jsx_runtime.jsx)(_components.em, {
+              children: "natively attribute transactions"
+            })
+          }), " to the correct chain."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Shared State and Programmable Solvers (Roadmap)"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nRead from and write to external chains and coordinate multi-chain workflows using a distributed solver network (coming soon)."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "why-build-on-push-chain",
+      children: "Why Build on Push Chain?"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Building on Push Chain delivers immediate benefits for developers and users:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Expand Your Userbase Instantly"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nDeploy your existing EVM or non-EVM application on Push Chain without any on-chain code changes. Users on Ethereum, Solana, and other supported chains can access your dApp right away."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Avoid Audit Friction"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nSince you do not modify your Solidity code, there is no need for a full re-audit. Simply deploy on Push Chain and use our SDKs to enable universal access."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Deliver a Unified, Seamless UX"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nOne application, any wallet. Users can connect with MetaMask, Phantom, or a social/email login and pay gas fees in their native token (for example ETH or SOL). No bridges or extra steps required."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Simplify Fee Management"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nPush Chain automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Future-Proof Your Application"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nShared state and programmable solvers (coming soon) enable multi-chain read and write operations. Your dApp can orchestrate cross-chain workflows without building separate adapters."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Consistent Developer Tooling"
+          }), (0,jsx_runtime.jsx)("br", {}), "\nUse one SDK, one set of JSON-RPC endpoints, and a unified API to build and deploy. Whether you prefer Viem, ethers, or our Push Chain client, the experience is the same across languages and frameworks."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "developer-sdks",
+      children: "Developer SDKs"
+    }), "\n", (0,jsx_runtime.jsxs)(SharedStyling/* ModalContainer */.Bs, {
+      children: [(0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
+        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
+        children: [(0,jsx_runtime.jsx)("img", {
+          src: (__webpack_require__(311100)/* ["default"] */ .A),
+          srcSet: `${(__webpack_require__(884876)/* ["default"] */ .A)} 2x, ${(__webpack_require__(314199)/* ["default"] */ .A)} 3x`,
+          alt: "Image representation of Javascript SDK of Push Protocol"
+        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
+          children: (0,jsx_runtime.jsxs)("span", {
+            children: [(0,jsx_runtime.jsx)(_components.p, {
+              children: "Javascript"
+            }), (0,jsx_runtime.jsx)("svg", {
+              width: "20",
+              height: "28",
+              viewBox: "0 0 29 28",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0,jsx_runtime.jsx)("path", {
+                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
+                stroke: "#A0A3B1",
+                "stroke-width": "2",
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round"
+              })
+            })]
+          })
+        })]
+      }), (0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
+        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
+        children: [(0,jsx_runtime.jsx)("img", {
+          src: (__webpack_require__(740688)/* ["default"] */ .A),
+          srcSet: `${(__webpack_require__(798744)/* ["default"] */ .A)} 2x, ${(__webpack_require__(548995)/* ["default"] */ .A)} 3x`
+        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
+          children: (0,jsx_runtime.jsxs)("span", {
+            children: [(0,jsx_runtime.jsx)(_components.p, {
+              children: "React"
+            }), (0,jsx_runtime.jsx)("svg", {
+              width: "20",
+              height: "28",
+              viewBox: "0 0 29 28",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0,jsx_runtime.jsx)("path", {
+                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
+                stroke: "#A0A3B1",
+                "stroke-width": "2",
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round"
+              })
+            })]
+          })
+        })]
+      }), (0,jsx_runtime.jsxs)(SharedStyling/* ModalSmall */.N4, {
+        onClick: () => window.open('https://github.com/pushchain/push-chain-sdk', '_blank'),
+        children: [(0,jsx_runtime.jsx)("img", {
+          src: (__webpack_require__(762273)/* ["default"] */ .A),
+          srcSet: `${(__webpack_require__(414723)/* ["default"] */ .A)} 2x, ${(__webpack_require__(87768)/* ["default"] */ .A)} 3x`
+        }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
+          children: (0,jsx_runtime.jsxs)("span", {
+            children: [(0,jsx_runtime.jsx)(_components.p, {
+              children: "React Native"
+            }), (0,jsx_runtime.jsx)("svg", {
+              width: "20",
+              height: "28",
+              viewBox: "0 0 29 28",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              children: (0,jsx_runtime.jsx)("path", {
+                d: "m7.501 21.001 14-14M10.125 7.001H21.5v11.375",
+                stroke: "#A0A3B1",
+                "stroke-width": "2",
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round"
+              })
+            })]
+          })
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "experience-push-chain",
+      children: "Experience Push Chain"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "To get started with Push Chain, you can:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsxs)(_components.strong, {
+            children: ["Visit ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/examples/send-transaction-example/",
+              children: "Send Transaction Example"
+            })]
+          }), " to interact directly.\n", (0,jsx_runtime.jsx)(_components.em, {
+            children: "You can log in with your existing wallet, email, or social accounts."
+          })]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Use our live playgrounds"
+          }), " to experiment with code within our documentation."]
+        }), "\n"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+          children: [(0,jsx_runtime.jsx)(_components.strong, {
+            children: "Deep dive into Push Chain"
+          }), " fundamentals, how it works, and developer resources in our comprehensive ", (0,jsx_runtime.jsx)(_components.a, {
+            href: "https://push.org/knowledge"
+          }), "."]
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Explore core abstractions in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/important-concepts",
+          children: "Important Concepts"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Jump to Frontend Integration via ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/ui-kit/integrate-push-universal-wallet/",
+          children: "UI Kit"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Try a full-app walkthrough in ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/tutorials/",
+          children: "Tutorials"
+        })]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["For deep dives visit our ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://push.org/knowledge/",
+          children: "Knowledge Base"
+        })]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
 
 /***/ }),
 
@@ -1516,6 +2118,29 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
+/***/ 515468:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/unichain_dark-dad5437ea59fe1b20511f58f0190f698.webp");
+
+/***/ }),
+
+/***/ 548995:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDowOCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBlZmQ5NjEtYTM1ZC00ODZiLTlmNDQtOTc1NTkzOGRiM2E4IiB4bXBNTTpEb2N1bWVudElE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");
+
+/***/ }),
+
 /***/ 578982:
 /***/ (() => {
 
@@ -1537,6 +2162,17 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
+/***/ 740688:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFwWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZGEyZDA5OTEtYTI1OC00MTJmLTk5OWQtODI0MWQ1OGQwNzY4IiB4bXBNTTpEb2N1bWVudElE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");
+
+/***/ }),
+
 /***/ 751069:
 /***/ (() => {
 
@@ -1544,584 +2180,37 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 754698:
+/***/ 757244:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/unichain_light-74deb5257f2c445e06692a66732a7bee.webp");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_03_build_08_reading_blockchain_state_mdx_acf_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
+/***/ }),
 
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-03-build-08-reading-blockchain-state-mdx-acf.json
-const site_docs_chain_03_build_08_reading_blockchain_state_mdx_acf_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/build/docs-chain-build-reading-blockchain-state","title":"Reading Blockchain State","description":"Reading Blockchain State | Build | Push Chain Docs","source":"@site/docs/chain/03-build/08-Reading-Blockchain-State.mdx","sourceDirName":"chain/03-build","slug":"/chain/build/reading-blockchain-state","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/reading-blockchain-state","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/03-build/08-Reading-Blockchain-State.mdx","tags":[],"version":"current","sidebarPosition":8,"frontMatter":{"id":"docs-chain-build-reading-blockchain-state","title":"Reading Blockchain State","hide_title":false,"slug":"./reading-blockchain-state","displayed_sidebar":"pushChainSidebar","sidebar_position":8,"image":"/assets/docs/previews/docs_chain_build--reading_blockchain_state.png"},"sidebar":"pushChainSidebar","previous":{"title":"Utility Functions","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/utility-functions"},"next":{"title":"Contract Helpers","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/build/contract-helpers"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
-var NodeJSVirtualIDE = __webpack_require__(891517);
-;// ./docs/chain/03-build/08-Reading-Blockchain-State.mdx
+/***/ 762273:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFwWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjEyOjM1KzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxNDozMCswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ZGEyZDA5OTEtYTI1OC00MTJmLTk5OWQtODI0MWQ1OGQwNzY4IiB4bXBNTTpEb2N1bWVudElE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");
 
-const frontMatter = {
-	id: 'docs-chain-build-reading-blockchain-state',
-	title: 'Reading Blockchain State',
-	hide_title: false,
-	slug: './reading-blockchain-state',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 8,
-	image: '/assets/docs/previews/docs_chain_build--reading_blockchain_state.png'
-};
-const contentTitle = undefined;
+/***/ }),
 
-const assets = {
+/***/ 798744:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-};
-
-
-
-
-
-
-const toc = [{
-  "value": "Overview",
-  "id": "overview",
-  "level": 2
-}, {
-  "value": "Initialize HTTP Client",
-  "id": "initialize-http-client",
-  "level": 2
-}, {
-  "value": "Fetch a Transaction by Hash",
-  "id": "fetch-a-transaction-by-hash",
-  "level": 2
-}, {
-  "value": "Fetch Blocks",
-  "id": "fetch-blocks",
-  "level": 2
-}, {
-  "value": "Latest Block",
-  "id": "latest-block",
-  "level": 3
-}, {
-  "value": "Block by Hash",
-  "id": "block-by-hash",
-  "level": 3
-}, {
-  "value": "Websocket Client",
-  "id": "websocket-client",
-  "level": 2
-}, {
-  "value": "Initialize WebSocket Client",
-  "id": "initialize-websocket-client",
-  "level": 3
-}, {
-  "value": "Subscribing to New Blocks",
-  "id": "subscribing-to-new-blocks",
-  "level": 3
-}, {
-  "value": "Filtering New Blocks for Specific Transactions",
-  "id": "filtering-new-blocks-for-specific-transactions",
-  "level": 3
-}, {
-  "value": "Next Steps",
-  "id": "next-steps",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    h2: "h2",
-    h3: "h3",
-    li: "li",
-    p: "p",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: "Reading Blockchain State | Build | Push Chain Docs"
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "overview",
-      children: "Overview"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Push Chain is an EVM-compatible blockchain, so you can use familiar Ethereum tools to fetch on-chain data. This guide shows you how to:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Initialize HTTP client for one-off requests"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Fetch transactions and blocks"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Initialize WebSocket client for real-time streaming"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Subscribe to new blocks and filter for specific transactions"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "For full reference on each library, see:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://docs.ethers.org/",
-          children: "ethers.js documentation"
-        })
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://viem.sh/",
-          children: "viem documentation"
-        })
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "initialize-http-client",
-      children: "Initialize HTTP Client"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=ethers\.JsonRpcProvider
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
-
-  // HTTP JSON-RPC provider
-  const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  console.log('Ethers provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=createPublicClient\\(
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  // HTTP client
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  console.log('Viem client:', JSON.stringify(viemClient, null, 2));
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "fetch-a-transaction-by-hash",
-      children: "Fetch a Transaction by Hash"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=provider\.getTransaction
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
-
-  const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const txHash  = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
-
-  const tx = await provider.getTransaction(txHash);
-  console.log(JSON.stringify(tx, null, 2));
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getTransaction
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const txHash = '0x7ab175ee10a115ebd6529e41837074def2500bd6cb16e212b07a5d43b9ffee96';
-
-  const tx = await viemClient.getTransaction({ hash: txHash });
-  console.log(JSON.stringify(tx, null, 2));
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "fetch-blocks",
-      children: "Fetch Blocks"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "latest-block",
-      children: "Latest Block"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-
-  // customPropHighlightRegexStart=provider\.getBlock
-  // customPropHighlightRegexEnd=\\);
-  import { ethers } from 'ethers';
-
-  const provider   = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const latestBlock = await provider.getBlock('latest');
-  console.log(JSON.stringify(latestBlock, null, 2));
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient   = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const latestBlock  = await viemClient.getBlock();
-  console.log(JSON.stringify(latestBlock, null, 2));
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "block-by-hash",
-      children: "Block by Hash"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=provider\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { ethers } from 'ethers';
-
-  const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const blockHash = '0x59d41d93c7090255a7525d914d0ee2c399a3b6871b06b84e7088e78f540d2cfb';
-
-  const block = await provider.getBlock(blockHash);
-  console.log(JSON.stringify(block, null, 2));
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=viemClient\.getBlock
-// customPropHighlightRegexEnd=\\);
-import { createPublicClient, http } from 'viem';
-
-  const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
-  const blockHash = '0x59d41d93c7090255a7525d914d0ee2c399a3b6871b06b84e7088e78f540d2cfb';
-
-  const block = await viemClient.getBlock({ blockHash });
-  console.log(JSON.stringify(block, null, 2));
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "websocket-client",
-      children: "Websocket Client"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "initialize-websocket-client",
-      children: "Initialize WebSocket Client"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=const ws = new ethers\.Web
-  // customPropHighlightRegexEnd=\\);
-  import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-
-  console.log('Connection Opened!');
-
-  ws.on('block', async (blockNumber) => {
-    console.log("Block produced: ", blockNumber);
-  });
-
-  // Stop after 10s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 10000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-
-  // customPropHighlightRegexStart=createPublicClient\\(
-  // customPropHighlightRegexEnd=\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  console.log('Connection Opened!');
-
-  const stop = client.watchBlocks({
-    onBlock: (b) => console.log("Block produced: ", b.number),
-    onError: console.error,
-  });
-
-  // Stop after 10s
-  setTimeout(stop, 10000);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "subscribing-to-new-blocks",
-      children: "Subscribing to New Blocks"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=ws\.on
-  // customPropHighlightRegexEnd=}\\);
-  import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-
-  console.log('Connection Opened!');
-  ws.on('block', async (blockNumber) => {
-    console.log("Block produced: ", blockNumber);
-  });
-
-  // Stop after 10s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=client\.watchBlocks
-  // customPropHighlightRegexEnd=}\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  const stop = client.watchBlocks({
-    onBlock: (b) => console.log("Block produced: ", b.number),
-    onError: console.error,
-  });
-
-  // Stop after 10s
-  setTimeout(stop, 10000);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "filtering-new-blocks-for-specific-transactions",
-      children: "Filtering New Blocks for Specific Transactions"
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "reading-blockchain-state",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "ethers_v6",
-        label: "Ethers (v6)",
-        default: true,
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-// customPropHighlightRegexStart=ws\.on
-// customPropHighlightRegexEnd=}\\);
-import { ethers } from 'ethers';
-
-  const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
-  const watchedAddress = '0x0000000000000000000000000000000000042101';
-
-  console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
-
-  ws.on('block', async (blockNumber) => {
-    const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org');
-    const block = await provider.getBlock(blockNumber, true);
-
-    if (block && block.transactions) {
-      const txs = await Promise.all(block.transactions.map(hash => block.getTransaction(hash)));
-
-      txs
-        .filter((tx) => tx.to === watchedAddress)
-        .forEach((tx) => console.log('Tx detected →', tx.hash));
-
-      console.log("Block produced: ", blockNumber);
-    }
-  });
-
-  // Stop after 20s
-  setTimeout(() => { ws.removeAllListeners(); ws.destroy(); console.log('Connection closed!'); }, 20000);
-
-`
-        })
-      }), (0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "viem",
-        label: "Viem",
-        children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/reading-push-chain-state"
-          },
-          children: `
-  // customPropHighlightRegexStart=viemClient\.watchBlocks
-  // customPropHighlightRegexEnd=}\\);
-  import { createPublicClient, webSocket } from 'viem';
-
-  const client = createPublicClient({ transport: webSocket('wss://evm.rpc-testnet-donut-node1.push.org/') });
-
-  const watchedAddress = '0x0000000000000000000000000000000000042101';
-
-  console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");
-
-  const stop = client.watchBlocks({
-    onBlock: async (block) => {
-      console.log('Block produced: ', block.number)
-
-      for (const txHash of block.transactions) {
-        try {
-          const tx = await client.getTransaction({ hash: txHash })
-          // Check if transaction is from watched address
-          if (tx.to?.toLowerCase() === watchedAddress.toLowerCase()) {
-            console.log('Tx detected →', tx.hash)
-          }
-        } catch (error) {
-          console.error('Error fetching transaction:', txHash, error)
-        }
-      }
-    },
-  });
-
-  // Stop after 20s
-  setTimeout(stop, 20000);
-`
-        })
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "next-steps",
-      children: "Next Steps"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Dive into our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/build/contract-helpers",
-          children: "Contract Helpers"
-        }), " to detect and work with both cross-chain accounts and native Push Chain smart accounts."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Use our ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/ui-kit",
-          children: "UI Kit"
-        }), " to abstract away wallet and chain logic and accelerate your front-end development."]
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/react@2x-e1351e83b48fbbccde989c8fa295e358.png");
 
 /***/ }),
 
@@ -2129,6 +2218,17 @@ function _missingMdxReference(id, component) {
 /***/ (() => {
 
 /* (ignored) */
+
+/***/ }),
+
+/***/ 884876:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE8mlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuZGFiYWNiYiwgMjAyMS8wNC8xNC0wMDozOTo0NCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDIzLjAgKE1hY2ludG9zaCkiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA4LTMxVDA1OjE4OjMyKzA0OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNSswNDowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0wOC0zMVQwNToxOTozNSswNDowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MzQ5ZTdiNmQtMDdiZi00MzdjLTgwMmYtN2E2MGYyNzdjYjE5IiB4bXBNTTpEb2N1bWVudElE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");
 
 /***/ }),
 
@@ -2156,7 +2256,7 @@ let highlightRegexEnd=null;// Look for a line that starts with any whitespace, t
 lines=userPassedCode.split('\n');const highlightLineEnd=lines.find(line=>{return line.trim().startsWith('// customPropHighlightRegexEnd=');});const matchEnd=highlightLineEnd===null||highlightLineEnd===void 0?void 0:highlightLineEnd.match(/\/\/\s*customPropHighlightRegexEnd=(.+)$/);if(matchEnd){// rawValue is everything after the “=” on that comment line
 highlightRegexEnd=matchEnd[1].trim();// remove the line from the code
 lines.splice(lines.indexOf(highlightLineEnd),1);userPassedCode=lines.join('\n');}// escape backticks in the snippet
-const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        StandardMerkleTree,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
+const escaped=userPassedCode.replace(/`/g,'\\`');return("\n  // customPropHidden='true'\n  // customPropNodeJSEnv='true'\nfunction App() {\n  const defaultCode = `"+escaped+"`;\n\n  const [code, setCode] = useState(defaultCode);\n  const [logs, setLogs] = useState<string[]>([]);\n  const [isRunning, setIsRunning] = useState(false);\n\n  // tiny ASCII spinner\n  function AsciiLoader() {\n    const frames = ['|','/','\u2014', '\\\\'];\n    const [i, setI] = useState(0);\n    useEffect(() => {\n      const t = setInterval(() => setI((n) => (n + 1) % frames.length), 100);\n      return () => clearInterval(t);\n    }, []);\n    return <span style={{ fontFamily: 'Fira Code' }}>{frames[i]}</span>;\n  }\n\n  const consoleContainerRef = useRef<HTMLDivElement>(null);\n\n  // whenever logs change, scroll to bottom\n  useEffect(() => {\n    const c = consoleContainerRef.current;\n    if (c) {\n      c.scrollTop = c.scrollHeight;\n    }\n  }, [logs]);\n\n  // run virtual node code\n  const runCode = async () => {\n    setIsRunning(true);\n    setLogs([]);\n\n    // let React paint the loader\n    await new Promise((r) => setTimeout(r, 0));\n\n    // clean imports\n    const cleaned = code.replace(/^\\s*import.*$/gm, '');\n\n       // our JSON.stringify shim: BigInts \u2192 strings\n    const jsonShim = `\n      const _orig = JSON.stringify;\n      JSON.stringify = (value, replacer, space) =>\n       _orig(value, (key, val) =>\n           typeof val === 'bigint' ? val.toString() : val\n       , space);\n     `;\n\n    // stub out process.stdin/stdout so readline won't crash, and support process.exit()\n    const processShim = `\n      const process = {\n        stdin: {},\n        stdout: {},\n        exit: (code = 0) => {\n          // you can decide how you want to handle an exit,\n          // e.g. throw so your \u201Cwrapped\u201D async IIFE bails out:\n          throw new Error('Process exited with code ' + code);\n        },\n      };\n    `;\n\n    // a very minimal browser\u2010side readline shim\n    const readlineShim = `;\n      // override Node\u2019s readline to support both callback and Promise\n      const readline = {\n        createInterface: ({ input, output }) => {\n          const iface = {\n            question(questionText, callback) {\n              const isPrompt = typeof questionText === 'string' && questionText.startsWith(':::prompt:::');\n              const text = isPrompt\n                ? questionText.replace(/^:::prompt:::/, '')\n                : questionText;\n\n              // If no callback provided, return a Promise\n              if (typeof callback !== 'function') {\n                return Promise.resolve().then(() => {\n                  if (isPrompt) {\n                    window.alert(text);\n                    return '';\n                  } else {\n                    return window.prompt(text);\n                  }\n                });\n              }\n\n              // callback-style\n              if (isPrompt) {\n                window.alert(text);\n                callback('');\n              } else {\n                const answer = window.prompt(text);\n                callback(answer);\n              }\n            },\n            close() {},\n          };\n          return iface;\n        },\n      };\n    `;\n\n    // shim console\n    const consoleShim = {\n      log: (...args: any[]) => setLogs(prev => [...prev, args.join(' ')]),\n      error: (...args: any[]) => setLogs(prev => [...prev, 'Error: ' + args.join(' ')]),\n    };\n\n    // pass the wrapped code\n      const fnBody = `\n      return (async () => {\n        ${jsonShim}\n        ${processShim}\n        ${readlineShim}\n        ${cleaned}\n      })();\n     `;\n\n      const scope = {\n        ethers,\n        PushChain,\n        http,\n        defineChain,\n        Keypair,\n        PublicKey,\n        parseTransaction,\n        webSocket,\n        TypedData,\n        TypedDataDomain,\n        privateKeyToAccount,\n        generatePrivateKey,\n        sepolia,\n        hexToBytes,\n        bs58,\n        keccak256,\n        makeMerkleTree,\n        getProof,\n        bytesToHex,\n        createWalletClient,\n        createPublicClient,\n        console: consoleShim,\n      }\n\n    try {\n      const executor = new Function(...Object.keys(scope), fnBody);\n      await executor(...Object.values(scope));\n    } catch (e: any) {\n      consoleShim.error(e.message || e.toString());\n    } finally {\n      setIsRunning(false);\n    }\n  };\n\n  const wrapper =  {\n    margin: '0 auto',\n    width: '100%'\n  }\n\n  const highlightRegexStart = {\n    margin: '0 auto',\n    width: 'inherit',\n  }\n\n  const newCodeDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 16,\n    width: 'inherit',\n  }\n\n  const repoWrapper = {\n    padding: '0px',\n    display: 'flex',\n    flexWrap: 'wrap',\n    flexDirection: 'row',\n    justifyContent: 'flex-end',\n    gap: '12px',\n  }\n\n  const repoUrlDiv = {\n    display: 'flex',\n    flex: 'none',\n    flexDirection: 'row',\n    alignItems: 'center',\n    gap: '12px',\n    padding: '8.5px 13px 8.59px 13px',\n  }\n\n  const buttonDiv = {\n    display: 'flex',\n    flexWrap: 'wrap',\n    gap: '12px',\n    flex: '1',\n    justifyContent: 'flex-end'\n  }\n\n  const terminalDiv = {\n    fontFamily: 'Fira Code',\n    fontSize: 13,\n    borderRadius: 12,\n    overflow: \"hidden\",\n    position: \"relative\",\n    background: \"var(--ifm-playground-header-terminalbg)\",\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n  }\n\n  const headerDiv = {\n    display: \"flex\",\n    alignItems: \"center\",\n    padding: \"12px 16px\",\n    background: \"transparent\",\n  }\n\n  const repoButton = {\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '0.875rem',\n    color: 'var(--ifm-playground-buttontext-color)',\n    cursor: 'pointer',\n  }\n\n  const clearButton = {\n    borderRadius: '12px',\n    border: 'var(--ifm-playground-button-border)',\n    display: 'flex',\n    padding: '12.55px 13px 13.04px 13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    backgroundColor: 'transparent',\n    fontSize: '0.875rem',\n    fontWeight: '600',\n    color: 'var(--ifm-playground-buttontextcolor)',\n    cursor: 'pointer',\n  }\n\n  const runCodeButton = {\n    borderRadius: '12px',\n    background: '#D548EC',\n    display: 'flex',\n    padding: '13px',\n    justifyContent: 'center',\n    alignItems: 'center',\n    gap: '4px',\n    fontSize: '14px',\n    fontWeight: 600,\n    lineHeight: 'normal',\n    border: 'none',\n    cursor: 'pointer',\n    fontFamily: 'DM Sans',\n    color: '#FFF',\n  }\n\n  const arrowIcon = {\n    color: 'var(--ifm-header-caret-color)',\n    marginTop: '-6px'\n  }\n\n\n  const dotRed = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#f25f58\",\n    marginRight: 6,\n  };\n\n  const dotYellow = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#febe2e\",\n    marginRight: 6,\n  };\n\n  const dotGreen = {\n    display: \"inline-block\",\n    width: 12,\n    height: 12,\n    borderRadius: \"50%\",\n    background: \"#58cb42\",\n  };\n\n  const consoleContainer = {\n    color: \"var(--ifm-playground-header-terminalcolor)\",\n    padding: 12,\n    minHeight: 180,\n    maxHeight: 300,\n    overflowY: \"auto\",\n  }\n\n  const bottomSection = {\n    margin: '0 auto',\n    background: 'var(--ifm-playground-header-bg)',\n    padding: '16px',\n    display: 'flex',\n    flexDirection: 'column',\n    gap: '16px',\n    borderRadius: '0 0 16px 16px',\n    borderTop: 'var(--ifm-playground-button-border)',\n }\n\n  const asciiDiv = {\n    position: 'absolute',\n    bottom: 8,\n    right: 12,\n    padding: '4px 6px',\n    background: '#333',\n    borderRadius: 4,\n    color: '#50fa7b',\n    display: 'flex',\n    alignItems: 'center',\n    gap: '4px',\n  }\n\n  return (\n    <div style={wrapper}>\n      <div\n        style={highlightRegexStart}\n        className=\""+(highlightRegexStart?'push-live-editor push-apply-highlight-in-live-editor':'push-live-editor')+"\"\n        "+(highlightRegexStart?"data-highlight-regex-start=\""+highlightRegexStart+"\"":'')+"\n        "+(highlightRegexEnd?"data-highlight-regex-end=\""+highlightRegexEnd+"\"":'')+"\n      >\n\n        {/* FIX: add empty line at the end of the code to ensure typing is not unfocused first time */}\n        <LiveEditor\n          code={code.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').concat('\\n                                                                                                                               ')}\n          onChange={(newCode) => {\n            // Remove trailing newlines and spaces before setting the code\n            setCode(newCode.replace(/^(?:\\r?\\n)+|(?:\\r?\\n)+$/g, '').replace(/\\n\\s+$/g, ''));\n          }}\n          style={newCodeDiv}\n        />\n      </div>\n\n      <div style={bottomSection}>\n        <div\n          style={repoWrapper}\n        >\n          {/* Repo button if available */}\n          "+(repo&&repo.url?"\n                <div\n                  style={repoUrlDiv}\n                >\n                  <a\n                    href=\""+repo.url+"\"\n                    target=\"_blank\"\n                    rel=\"noopener noreferrer\"\n                    style={repoButton}\n                    className='btn'\n                  >\n                    "+(repo.title||'View Code')+"\n                  </a>\n\n                  <BsBoxArrowUpRight style={arrowIcon} />\n                </div>\n              ":'')+"\n          <div\n            style={buttonDiv}\n          >\n            <button\n              onClick={() => setLogs([])}\n              title=\"Clear console\"\n              style={clearButton}\n              className='btn'\n            >\n              Clear Console\n            </button>\n\n            <button\n              style={runCodeButton}\n              onClick={runCode}\n              className='btn'\n            >\n              <span style={{ fontSize: '16px', lineHeight: 1, marginTop: '2px' }}>\u25BA</span>\n              <span>Run Code</span>\n            </button>\n          </div>\n\n          {/* Hover & focus styles */}\n          <style>{`\n            .btn:hover {\n                opacity: 0.8;\n            }\n          `}</style>\n        </div>\n\n        {/* Virtual \u201Cterminal\u201D console */}\n        <div\n          style={terminalDiv}\n        >\n          {/* header bar */}\n          <div\n            style={headerDiv}\n          >\n            <span style={dotRed} />\n            <span style={dotYellow} />\n            <span style={dotGreen} />\n          </div>\n\n          {/* log output */}\n          <div\n            ref={consoleContainerRef}\n            style={consoleContainer}\n          >\n            {logs.length === 0 ? (\n              <div style={{ opacity: 0.6 }}>$ Virtual Node Environment with limited capabilities.<br />$ Hit \"Run Code\" to Execute.</div>\n            ) : (\n              logs.map((line, i) => (\n                <div key={i}>\n                  <span style={{ color: \"#6a9955\", marginRight: 4 }}>$</span>\n                  {line}\n                </div>\n              ))\n            )}\n          </div>\n\n          {/* ASCII loader, bottom-right */}\n          {isRunning && (\n            <div\n              style={asciiDiv}\n            >\n              <AsciiLoader /> Running...\n            </div>\n          )}\n        </div>\n      </div>\n      </div>\n    );\n  }\n  ").replace(/^(?:\s*[\r\n])+/,'').trim();}
 
 /***/ }),
 
