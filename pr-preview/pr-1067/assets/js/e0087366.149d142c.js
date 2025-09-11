@@ -870,7 +870,6 @@ function _createMdxContent(props) {
           },
           children: `
 
-  //@ts-nocheck
   import { keccak256 } from 'viem';
   import { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';
   import bs58 from 'bs58';
