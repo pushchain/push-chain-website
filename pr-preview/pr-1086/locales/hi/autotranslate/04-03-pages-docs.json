@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Documentation — यूनिवर्सल एप्‍स बनाएँ",
+        "description": "Push Chain पर शिप करने के लिए आपको जो कुछ भी चाहिए: क्विकस्टार्ट, SDK, API संदर्भ, उदाहरण और नोड सेटअप।",
+        "og-title": "Push Chain Docs - क्विकस्टार्ट्स, SDKs और API",
+        "og-description": "यूनिवर्सल एग्जीक्यूशन लेयर पर ऐप्स बनाएँ और चलाएँ, स्पष्ट गाइड और उदाहरणों के साथ।",
+        "twitter-title": "Push Chain Docs - अभी बनाएं",
+        "twitter-description": "क्विकस्टार्ट्स, SDKs, API रेफ़, और उदाहरण तेज़ शिपिंग के लिए।"
+      },
+      "header": {
+        "countdown-title": "टेस्टनेट डॉक्स लॉन्च होने में",
+        "description": "Psst... क्या आप टेस्टनेट डोनट की एक झलक चाहते हैं? #pushchainsecret के साथ हमें एक संदेश भेजें और हम आपको एक टेस्ट बिल्ड भेज देंगे।",
+        "tweet-button": "Push Chain के बारे में ट्वीट करें",
+        "title": "Push Chain के बारे में ट्वीट करें",
+        "ariaLabel": "Push Chain के बारे में ट्वीट करें"
+      }
+    }
+  }
+}

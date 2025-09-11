@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "文档 — 构建通用应用",
+        "description": "您在 Push Chain 上启动所需的一切：快速入门、SDK、API 参考、示例和节点设置。",
+        "og-title": "Push Chain 文档 - 快速入门、SDK 和 API",
+        "og-description": "使用清晰的指南和示例，在universal execution layer上构建和运行app。",
+        "twitter-title": "Push Chain 文档 - 立即构建",
+        "twitter-description": "快速入门、SDK、API 参考和示例，助您快速上线。"
+      },
+      "header": {
+        "countdown-title": "测试网文档即将发布",
+        "description": "嘘…想提前体验 Donut <testnet> 吗？ 在 #<pushchain>secret 中留下消息，我们将向您发送测试版访问权限。",
+        "tweet-button": "在 Twitter 上分享 Push Chain",
+        "title": "关于 Push Chain 的推文",
+        "ariaLabel": "在 Twitter 上分享 Push Chain"
+      }
+    }
+  }
+}

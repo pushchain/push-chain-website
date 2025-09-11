@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[31909],{245078:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1086/blog/tags/digital-art","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

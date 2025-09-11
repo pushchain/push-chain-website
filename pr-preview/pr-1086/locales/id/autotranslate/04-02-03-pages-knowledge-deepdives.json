@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Deep Dives — Konsep & Arsitektur",
+          "description": "Penjelasan yang mudah dipahami tentang shared state, fee abstraction, USV/UEA, dan universal execution layer.",
+          "og-title": "Deep Dives - Konsep & Arsitektur",
+          "og-description": "Artikel mendalam tentang modul Push Chain, keputusan desain, dan performa.",
+          "twitter-title": "Deep Dives - Di Balik Layar",
+          "twitter-description": "Penjelasan tentang cara kerja Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Basis Pengetahuan"
+          },
+          "blocks": {
+            "title": "Pendalaman",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Arsitektur Mendalam\n\nPelajari tentang seluk-beluk arsitektur Push Chain dan cara kerjanya - Satu modul setiap saat.",
+                  "curated-reads": "## Bacaan Kurasi 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Pelajari apa yang membuat Push Chain berdetak!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "Interoperabilitas sebagai Spektrum"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Memahami Proof of Stake (POS) - Bagian 1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[32150],{906225:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1086/blog/tags/ama","page":1,"postsPerPage":10,"totalPages":2,"totalCount":12,"nextPage":"/push-chain-website/pr-preview/pr-1086/blog/tags/ama/page/2","blogDescription":"Blog","blogTitle":"Blog"}')}}]);

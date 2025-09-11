@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[96634],{196434:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1086/blog/tags/adoption","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
