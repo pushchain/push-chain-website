@@ -3500,7 +3500,7 @@ html[data-theme='dark'] {
   --ifm-color-primary-unified: #dd44b9;
   --ifm-color-primary-unified-inverse: #ffffff;
   --ifm-color-primary-unified-text: #fff;
-  --ifm-color-primary-unified-inverse: #000;
+  --ifm-color-primary-unified-text-inverse: #000;
   --ifm-color-primary-text: #fff;
   --ifm-color-title-text-color: #f5f6f8;
   --ifm-color-secondary-text: #8f99bd;
