@@ -612,23 +612,15 @@ const toc = [{
   "id": "why-universal-airdrops",
   "level": 2
 }, {
-  "value": "Create the TestToken contract (<code>TestToken.sol</code>)",
-  "id": "create-the-testtoken-contract-testtokensol",
+  "value": "Understanding the <code>TestToken</code> contract",
+  "id": "understanding-the-testtoken-contract",
   "level": 3
 }, {
-  "value": "Create the UEAFactory interface for the contracts (<code>IUEAFactory.sol</code>)",
-  "id": "create-the-ueafactory-interface-for-the-contracts-iueafactorysol",
+  "value": "Understanding the <code>UniversalAirdrop</code> contract",
+  "id": "understanding-the-universalairdrop-contract",
   "level": 3
 }, {
-  "value": "Create the UniversalAirdrop contract (<code>UniversalAirdrop.sol</code>)",
-  "id": "create-the-universalairdrop-contract-universalairdropsol",
-  "level": 3
-}, {
-  "value": "1.1. Set up the Merkle proof generator",
-  "id": "11-set-up-the-merkle-proof-generator",
-  "level": 3
-}, {
-  "value": "How the Merkle proof works:",
+  "value": "How the Merkle proof works",
   "id": "how-the-merkle-proof-works",
   "level": 4
 }, {
@@ -638,6 +630,7 @@ const toc = [{
 }];
 function _createMdxContent(props) {
   const _components = {
+    a: "a",
     blockquote: "blockquote",
     code: "code",
     h2: "h2",
@@ -716,7 +709,11 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
         value: "Deploy ERC-20 Token",
         label: "Deploy ERC-20 Token",
-        children: [(0,jsx_runtime.jsxs)(_components.ul, {
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "TestToken"
+          }), " contract on Remix below:"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
             children: "Set the Solidity compiler version to 0.8.22 in Remix."
           }), "\n", (0,jsx_runtime.jsx)(_components.li, {
@@ -730,6 +727,17 @@ function _createMdxContent(props) {
               children: "TEST"
             }), ")."]
           }), "\n"]
+        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Note:"
+            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "$PC"
+            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://faucet.push.org/",
+              children: "Push Chain Faucet"
+            }), "."]
+          }), "\n"]
         }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
           examples: {
             'TestToken.sol': {
@@ -739,23 +747,10 @@ function _createMdxContent(props) {
             }
           }
         }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
-          id: "create-the-testtoken-contract-testtokensol",
-          children: ["Create the TestToken contract (", (0,jsx_runtime.jsx)(_components.code, {
-            children: "TestToken.sol"
-          }), ")"]
-        }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Here is the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "TestToken.sol"
-          }), " - a simple ERC-20 token for testing our airdrop:"]
-        }), (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-solidity",
-            children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract TestToken is ERC20 {\n    constructor(string memory name, string memory symbol) ERC20(name, symbol) {\n        _mint(msg.sender, 1_000_000 * 10 ** decimals());\n    }\n\n    function mint(address to, uint256 amount) external {\n        _mint(to, amount);\n    }\n}\n"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Understanding the TestToken contract:"
-          })
+          id: "understanding-the-testtoken-contract",
+          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "TestToken"
+          }), " contract"]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -778,7 +773,11 @@ function _createMdxContent(props) {
       }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
         value: "Deploy Universal Airdrop",
         label: "Deploy Universal Airdrop",
-        children: [(0,jsx_runtime.jsxs)(_components.ul, {
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "UniversalAirdrop"
+          }), " contract on Remix below:"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
             children: "Set the Solidity compiler version to 0.8.22 in Remix."
           }), "\n", (0,jsx_runtime.jsx)(_components.li, {
@@ -786,7 +785,20 @@ function _createMdxContent(props) {
           }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: ["When deploying ", (0,jsx_runtime.jsx)(_components.code, {
               children: "UniversalAirdrop"
-            }), ", pass constructor arguments: token address deployed in the previous step and merkle root."]
+            }), ", pass constructor arguments: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "token address deployed in the previous step and merkle root you can get from the next step"
+            }), "."]
+          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Note:"
+            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "$PC"
+            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://faucet.push.org/",
+              children: "Push Chain Faucet"
+            }), "."]
           }), "\n"]
         }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
           examples: {
@@ -797,37 +809,10 @@ function _createMdxContent(props) {
             }
           }
         }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
-          id: "create-the-ueafactory-interface-for-the-contracts-iueafactorysol",
-          children: ["Create the UEAFactory interface for the contracts (", (0,jsx_runtime.jsx)(_components.code, {
-            children: "IUEAFactory.sol"
-          }), ")"]
-        }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Here is the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "IUEAFactory.sol"
-          }), " - the interface for the UEAFactory contract:"]
-        }), (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-solidity",
-            children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.22;\n\nstruct UniversalAccountId {\n    string chainNamespace;\n    string chainId;\n    bytes owner;\n}\n\ninterface IUEAFactory {\n    function getOriginForUEA(\n        address addr\n    ) external view returns (UniversalAccountId memory account, bool isUEA);\n}\n"
-          })
-        }), (0,jsx_runtime.jsxs)(_components.h3, {
-          id: "create-the-universalairdrop-contract-universalairdropsol",
-          children: ["Create the UniversalAirdrop contract (", (0,jsx_runtime.jsx)(_components.code, {
-            children: "UniversalAirdrop.sol"
-          }), ")"]
-        }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Here is the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "UniversalAirdrop.sol"
-          }), " - the main airdrop contract that matches our Merkle proof generator:"]
-        }), (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-solidity",
-            children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.22;\n\nimport \"@openzeppelin/contracts/token/ERC20/IERC20.sol\";\nimport \"@openzeppelin/contracts/utils/cryptography/MerkleProof.sol\";\nimport \"@openzeppelin/contracts/access/Ownable.sol\";\nimport \"@openzeppelin/contracts/utils/ReentrancyGuard.sol\";\nimport \"./interfaces/IUEAFactory.sol\";\n\n/**\n * @title Universal Airdrop Contract for Push Chain\n * @dev Airdrop contract that supports claims from multiple origin chains using UEA (Universal External Accounts)\n * @notice This contract binds claims to the caller's origin chain to prevent cross-chain spoofing\n */\ncontract UniversalAirdrop is Ownable, ReentrancyGuard {\n    // Push Chain UEAFactory address - hardcoded as per specification\n    address public constant UEA_FACTORY =\n        0x00000000000000000000000000000000000000eA;\n\n    // State variables\n    bytes32 public merkleRoot;\n    mapping(bytes32 => bool) public claimed; // keyed by claimId to prevent double claims per (address, chainNamespace, chainId)\n    IERC20 public immutable token;\n\n    // Push Chain Donut testnet chain ID constant\n    string public constant PUSH_CHAIN_ID = \"push-donut\";\n\n    // Events\n    event Claimed(\n        address indexed recipient,\n        string chainNamespace,\n        string chainId,\n        uint256 amount\n    );\n    event MerkleRootUpdated(bytes32 newRoot);\n\n    /**\n     * @dev Constructor\n     * @param _token The ERC20 token to be airdropped\n     * @param _merkleRoot The initial Merkle root for the airdrop\n     */\n    constructor(IERC20 _token, bytes32 _merkleRoot) Ownable(msg.sender) {\n        token = _token;\n        merkleRoot = _merkleRoot;\n    }\n\n    /**\n     * @dev Claim tokens using a Merkle proof\n     * @param proof The Merkle proof proving inclusion in the airdrop\n     * @param amount The amount of tokens to claim\n     * @param chainNamespace The origin chain namespace (e.g., \"eip155\", \"solana\", \"push\")\n     * @param chainId The origin chain ID (e.g., \"11155111\" for Sepolia, \"push-donut\" for Push)\n     * @notice The claim is bound to the caller's origin chain to prevent cross-chain spoofing\n     */\n    function claim(\n        bytes32[] calldata proof,\n        uint256 amount,\n        string calldata chainNamespace,\n        string calldata chainId\n    ) external nonReentrant {\n        address caller = msg.sender;\n\n        // Get origin chain information from UEAFactory for verification\n        (UniversalAccountId memory account, bool isUEA) = IUEAFactory(\n            UEA_FACTORY\n        ).getOriginForUEA(caller);\n\n        address recipientAddress;\n\n        if (isUEA) {\n            // For UEA accounts, verify the provided chain info matches the origin\n            require(\n                keccak256(abi.encodePacked(chainNamespace)) ==\n                    keccak256(abi.encodePacked(account.chainNamespace)) &&\n                    keccak256(abi.encodePacked(chainId)) ==\n                    keccak256(abi.encodePacked(account.chainId)),\n                \"Provided chain info does not match UEA origin\"\n            );\n            // Convert owner bytes to address for leaf computation\n            // If owner is 20 bytes (EVM), cast directly; otherwise derive address from keccak256(owner)\n            if (account.owner.length == 20) {\n                recipientAddress = address(bytes20(account.owner));\n            } else {\n                recipientAddress = address(\n                    uint160(uint256(keccak256(account.owner)))\n                );\n            }\n        } else {\n            // For non-UEA accounts (could be native Push Chain or direct connections)\n            // Allow claiming from any chain - the Merkle proof will verify eligibility\n            recipientAddress = caller;\n        }\n\n        // Generate claimId to prevent double claims for the same (address, chainNamespace, chainId) tuple\n        bytes32 claimId = keccak256(\n            abi.encodePacked(recipientAddress, chainNamespace, chainId)\n        );\n        require(!claimed[claimId], \"Already claimed for this origin chain\");\n\n        // Compute the leaf as per specification: keccak256(abi.encodePacked(recipientOnPush, chainNamespace, chainId, amount))\n        bytes32 leaf = keccak256(\n            abi.encodePacked(recipientAddress, chainNamespace, chainId, amount)\n        );\n\n        // Verify the Merkle proof\n        require(\n            MerkleProof.verify(proof, merkleRoot, leaf),\n            \"Invalid Merkle proof\"\n        );\n\n        // Mark as claimed and transfer tokens\n        claimed[claimId] = true;\n        require(\n            token.transfer(recipientAddress, amount),\n            \"Token transfer failed\"\n        );\n\n        emit Claimed(recipientAddress, chainNamespace, chainId, amount);\n    }\n\n    /**\n     * @dev Update the Merkle root (only owner)\n     * @param newRoot The new Merkle root\n     * @notice This allows updating the airdrop with new recipients\n     */\n    function setMerkleRoot(bytes32 newRoot) external onlyOwner {\n        merkleRoot = newRoot;\n        emit MerkleRootUpdated(newRoot);\n    }\n\n    /**\n     * @dev Recover ERC20 tokens (only owner)\n     * @param tokenAddress The address of the token to recover\n     * @param amount The amount to recover\n     * @notice Allows the owner to recover mistakenly sent tokens\n     */\n    function recoverERC20(\n        address tokenAddress,\n        uint256 amount\n    ) external onlyOwner {\n        require(tokenAddress != address(token), \"Cannot recover airdrop token\");\n        IERC20(tokenAddress).transfer(owner(), amount);\n    }\n}\n"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: (0,jsx_runtime.jsx)(_components.strong, {
-            children: "Key features of the UniversalAirdrop contract:"
-          })
+          id: "understanding-the-universalairdrop-contract",
+          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "UniversalAirdrop"
+          }), " contract"]
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -860,18 +845,8 @@ function _createMdxContent(props) {
         label: "Generate Merkle Tree",
         children: [(0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.p, {
           children: "In this part, we'll create a Merkle proof generator that produces cryptographic proofs for a universal airdrop system. This generator will create a Merkle tree from recipient data and generate proofs that can be verified on-chain."
-        }), (0,jsx_runtime.jsx)(_components.h3, {
-          id: "11-set-up-the-merkle-proof-generator",
-          children: "1.1. Set up the Merkle proof generator"
         }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Create the project directory and install the required dependencies:"
-        }), (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-bash",
-            children: "mkdir merkle-proof-generator\ncd merkle-proof-generator\nnpm init -y\ntsc --init\nnpm install bs58 merkletreejs viem\nnpm i -D @types/node\n"
-          })
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "The dependencies you'll need:"
+          children: "The dependencies you'll need for the Merkle proof generator:"
         }), (0,jsx_runtime.jsxs)(_components.ul, {
           children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
             children: [(0,jsx_runtime.jsx)(_components.code, {
@@ -891,156 +866,159 @@ function _createMdxContent(props) {
         }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
           repo: {
             title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+            url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/scripts/merkle-proof-generator.ts"
           },
           children: `
-import { keccak256 } from 'viem';
-import { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';
-import bs58 from 'bs58';
 
-// Hardcoded airdrop data (previously read from data/airdrop.json)
-const AIRDROP_ENTRIES = [
-{
-  recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
-  chainNamespace: 'eip155',
-  chainId: '11155111',
-  amount: '10000000000000000000',
-},
-];
+  //@ts-nocheck
+  import { keccak256 } from 'viem';
+  import { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';
+  import bs58 from 'bs58';
 
-/**
-* Generate a leaf hash matching the Solidity contract
-* leaf = keccak256(abi.encodePacked(recipientOnPush, chainNamespace, chainId, amount))
-*/
-function generateLeaf(entry) {
-const { recipient, chainNamespace, chainId, amount } = entry;
+  // Hardcoded airdrop data (previously read from data/airdrop.json)
+  const AIRDROP_ENTRIES = [
+    {
+      recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+      chainNamespace: 'eip155',
+      chainId: '11155111',
+      amount: '10000000000000000000',
+    },
+  ];
 
-// Normalize recipient address:
-// - If hex 0x address (length 42), parse as 20-byte address
-// - Else treat as base58 (e.g., Solana), hash bytes and take last 20 bytes
-let recipientAddressHex;
-if (recipient.startsWith('0x')) {
-  const addr = recipient.toLowerCase();
-  const addressBytes = addr.slice(2).padStart(40, '0');
-  recipientAddressHex = addressBytes;
-} else {
-  const raw = Buffer.from(bs58.decode(recipient));
-  const hashed = Buffer.from(keccak256('0x' + raw.toString('hex')).slice(2), 'hex');
-  const last20 = hashed.slice(-20);
-  recipientAddressHex = last20.toString('hex');
-}
+  /**
+   * Generate a leaf hash matching the Solidity contract
+   * leaf = keccak256(abi.encodePacked(recipientOnPush, chainNamespace, chainId, amount))
+   */
+  function generateLeaf(entry) {
+    const { recipient, chainNamespace, chainId, amount } = entry;
 
-const namespaceBytes = Buffer.from(chainNamespace, 'utf8');
-const chainIdBytes = Buffer.from(chainId, 'utf8');
-const amountBytes = Buffer.alloc(32);
-amountBytes.writeBigUInt64BE(BigInt(amount), 24);
+    // Normalize recipient address:
+    // - If hex 0x address (length 42), parse as 20-byte address
+    // - Else treat as base58 (e.g., Solana), hash bytes and take last 20 bytes
+    let recipientAddressHex;
+    if (recipient.startsWith('0x')) {
+      const addr = recipient.toLowerCase();
+      const addressBytes = addr.slice(2).padStart(40, '0');
+      recipientAddressHex = addressBytes;
+    } else {
+      const raw = Buffer.from(bs58.decode(recipient));
+      const hashed = Buffer.from(keccak256('0x' + raw.toString('hex')).slice(2), 'hex');
+      const last20 = hashed.slice(-20);
+      recipientAddressHex = last20.toString('hex');
+    }
 
-const packedBytes = Buffer.concat([
-  Buffer.from(recipientAddressHex, 'hex'),
-  namespaceBytes,
-  chainIdBytes,
-  amountBytes,
-]);
+    const namespaceBytes = Buffer.from(chainNamespace, 'utf8');
+    const chainIdBytes = Buffer.from(chainId, 'utf8');
+    const amountBytes = Buffer.alloc(32);
+    amountBytes.writeBigUInt64BE(BigInt(amount), 24);
 
-return keccak256('0x' + packedBytes.toString('hex'));
-}
+    const packedBytes = Buffer.concat([
+      Buffer.from(recipientAddressHex, 'hex'),
+      namespaceBytes,
+      chainIdBytes,
+      amountBytes,
+    ]);
 
-/**
-* Build Merkle tree from airdrop entries
-*/
-function buildMerkleTree(entries) {
-// Generate leaves
-const leaves = entries.map((entry) => generateLeaf(entry));
-
-// Create Merkle tree with sorted node hashing (default)
-const tree = makeMerkleTree(leaves);
-const merkleRoot = tree[0];
-
-// Generate proofs for each entry
-const entriesWithProofs = entries.map((entry, index) => {
-  const leafIndex = tree.length - 1 - index;
-  const proof = getProof(tree, leafIndex);
-
-  return {
-    ...entry,
-    leaf: leaves[index],
-    proof,
-  };
-});
-
-return {
-  merkleRoot,
-  entries: entriesWithProofs,
-};
-}
-
-/**
-* Print summary of the airdrop data
-*/
-function printSummary(treeData) {
-const { entries, merkleRoot } = treeData;
-
-console.log('🌳 Universal Airdrop Merkle Tree Summary');
-console.log('=====================================');
-console.log('📁 Merkle Root: ' + merkleRoot);
-console.log('👥 Total Recipients: ' + entries.length);
-
-// Calculate totals per chain namespace
-const chainStats = entries.reduce((acc, entry) => {
-  const key = entry.chainNamespace + ':' + entry.chainId;
-  if (!acc[key]) {
-    acc[key] = { count: 0, totalAmount: BigInt(0) };
+    return keccak256('0x' + packedBytes.toString('hex'));
   }
-  acc[key].count += 1;
-  acc[key].totalAmount += BigInt(entry.amount);
-  return acc;
-}, {});
 
-console.log('\n📊 Per-Chain Breakdown:');
-Object.entries(chainStats).forEach(([chain, stats]) => {
-  console.log('  ' + chain + ': ' + stats.count + ' recipients, ' + stats.totalAmount.toString() + ' tokens');
-});
+  /**
+   * Build Merkle tree from airdrop entries
+   */
+  function buildMerkleTree(entries) {
+    // Generate leaves
+    const leaves = entries.map((entry) => generateLeaf(entry));
 
-// Calculate total amount
-const totalAmount = entries.reduce((sum, entry) => sum + BigInt(entry.amount), BigInt(0));
-console.log('\n💰 Total Airdrop Amount: ' + totalAmount.toString() + ' tokens');
-}
+    // Create Merkle tree with sorted node hashing (default)
+    const tree = makeMerkleTree(leaves);
+    const merkleRoot = tree[0];
 
-// Main execution
-async function main() {
-// Use hardcoded airdrop entries
-const entries = AIRDROP_ENTRIES;
+    // Generate proofs for each entry
+    const entriesWithProofs = entries.map((entry, index) => {
+      const leafIndex = tree.length - 1 - index;
+      const proof = getProof(tree, leafIndex);
 
-// Validate entries
-for (const entry of entries) {
-  const isHex = entry.recipient.startsWith('0x') && entry.recipient.length === 42;
-  const isBase58 = !entry.recipient.startsWith('0x');
-  if (!isHex && !isBase58) {
-    throw new Error('Invalid recipient: ' + entry.recipient + ' (must be 0x-address or base58)');
+      return {
+        ...entry,
+        leaf: leaves[index],
+        proof,
+      };
+    });
+
+    return {
+      merkleRoot,
+      entries: entriesWithProofs,
+    };
   }
-  if (!entry.chainNamespace || !entry.chainId) {
-    throw new Error('Missing chain info for ' + entry.recipient);
+
+  /**
+   * Print summary of the airdrop data
+   */
+  function printSummary(treeData) {
+    const { entries, merkleRoot } = treeData;
+
+    console.log('🌳 Universal Airdrop Merkle Tree Summary');
+    console.log('=====================================');
+    console.log('📁 Merkle Root: ' + merkleRoot);
+    console.log('👥 Total Recipients: ' + entries.length);
+
+    // Calculate totals per chain namespace
+    const chainStats = entries.reduce((acc, entry) => {
+      const key = entry.chainNamespace + ':' + entry.chainId;
+      if (!acc[key]) {
+        acc[key] = { count: 0, totalAmount: BigInt(0) };
+      }
+      acc[key].count += 1;
+      acc[key].totalAmount += BigInt(entry.amount);
+      return acc;
+    }, {});
+
+    console.log('📊 Per-Chain Breakdown:');
+    Object.entries(chainStats).forEach(([chain, stats]) => {
+      console.log('  ' + chain + ': ' + stats.count + ' recipients, ' + stats.totalAmount.toString() + ' tokens');
+    });
+
+    // Calculate total amount
+    const totalAmount = entries.reduce((sum, entry) => sum + BigInt(entry.amount), BigInt(0));
+    console.log('💰 Total Airdrop Amount: ' + totalAmount.toString() + ' tokens');
   }
-  if (isNaN(parseInt(entry.amount)) || BigInt(entry.amount) <= 0) {
-    throw new Error('Invalid amount for ' + entry.recipient + ': ' + entry.amount);
+
+  // Main execution
+  async function main() {
+    // Use hardcoded airdrop entries
+    const entries = AIRDROP_ENTRIES;
+
+    // Validate entries
+    for (const entry of entries) {
+      const isHex = entry.recipient.startsWith('0x') && entry.recipient.length === 42;
+      const isBase58 = !entry.recipient.startsWith('0x');
+      if (!isHex && !isBase58) {
+        throw new Error('Invalid recipient: ' + entry.recipient + ' (must be 0x-address or base58)');
+      }
+      if (!entry.chainNamespace || !entry.chainId) {
+        throw new Error('Missing chain info for ' + entry.recipient);
+      }
+      if (isNaN(parseInt(entry.amount)) || BigInt(entry.amount) <= 0) {
+        throw new Error('Invalid amount for ' + entry.recipient + ': ' + entry.amount);
+      }
+    }
+
+    console.log('🔨 Building Merkle tree for ' + entries.length + ' recipients...');
+
+    // Build Merkle tree
+    const treeData = buildMerkleTree(entries);
+
+    // Output Merkle tree data to console instead of writing to a file
+    console.log(JSON.stringify(treeData, null, 2));
+    console.log('✅ Merkle tree built successfully!');
+
+    // Print summary
+    printSummary(treeData);
   }
-}
 
-console.log('🔨 Building Merkle tree for ' + entries.length + ' recipients...');
+  main().catch(console.error);
 
-// Build Merkle tree
-const treeData = buildMerkleTree(entries);
-
-// Output Merkle tree data to console instead of writing to a file
-console.log(JSON.stringify(treeData, null, 2));
-console.log('✅ Merkle tree built successfully!');
-
-// Print summary
-printSummary(treeData);
-}
-
-await main().catch(console.error);
-
+                                                                                                                                
 `
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "Each entry in the array represents a recipient with:"
@@ -1064,7 +1042,7 @@ await main().catch(console.error);
           }), "\n"]
         }), (0,jsx_runtime.jsx)(_components.h4, {
           id: "how-the-merkle-proof-works",
-          children: "How the Merkle proof works:"
+          children: "How the Merkle proof works"
         }), (0,jsx_runtime.jsx)(_components.p, {
           children: "The proof allows anyone to verify that a specific recipient is included in the airdrop without revealing the entire recipient list. The smart contract can verify the proof by:"
         }), (0,jsx_runtime.jsxs)(_components.ol, {
@@ -1089,8 +1067,6 @@ await main().catch(console.error);
           }), "\n"]
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The UI will use this file to interact with the deployed contracts and validate airdrop claims."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "conclusion",
       children: "Conclusion"
