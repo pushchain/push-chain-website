@@ -27459,6 +27459,13 @@ __webpack_require__.r(__webpack_exports__);
     "liveCodeBlock": {
       "playgroundPosition": "bottom"
     },
+    "mermaid": {
+      "theme": {
+        "dark": "dark",
+        "light": "default"
+      },
+      "options": {}
+    },
     "docs": {
       "versionPersistence": "localStorage",
       "sidebar": {
@@ -27475,13 +27482,6 @@ __webpack_require__.r(__webpack_exports__);
     "tableOfContents": {
       "minHeadingLevel": 2,
       "maxHeadingLevel": 3
-    },
-    "mermaid": {
-      "theme": {
-        "dark": "dark",
-        "light": "default"
-      },
-      "options": {}
     }
   },
   "baseUrlIssueBanner": true,
