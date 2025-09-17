@@ -844,6 +844,193 @@ import { PushChain } from '@pushchain/core';
 </Details>
 {/* API Section Ends*/}
 
+### Calculate Minimum Amount From Slippage
+
+**_`PushChain.utils.helpers.slippageToMinAmount(amount, { slippageBps }): string`_**
+
+```typescript
+const minOut = PushChain.utils.helpers.slippageToMinAmount('100000000', {
+  slippageBps: 100, // 1%
+});
+// → '99000000'
+```
+
+<PushAPIReference>
+
+| **Arguments**         | **Type**             | **Description**                                               |
+| --------------------- | -------------------- | ------------------------------------------------------------- |
+| _`amount`_            | `string`             | Input amount in smallest units (e.g., '100000000' for 100 USDC). |
+| _`options.slippageBps`_ | `number` (integer) | Slippage in basis points. `100 = 1%`, `50 = 0.5%`.            |
+
+</PushAPIReference>
+
+<Details summary="Returns `minOut` <string>" className="alert alert--fn-args">
+
+```typescript
+// minOut string (in smallest units)
+'99000000'
+```
+
+</Details>
+
+<Details summary="Live Playground: Calculate minimum amount out from slippage" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.slippageToMinAmount
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+    function main() {
+      const minOut = PushChain.utils.helpers.slippageToMinAmount('100000000', {
+        slippageBps: 100,
+      });
+      console.log('Min out with 1% slippage:', minOut);
+    }
+
+    main();
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+{/* API Section Ends*/}
+
+## Token Utilities
+
+{/* API Section Start*/}
+
+### Get Moveable Tokens
+
+**_`PushChain.utils.getMoveableTokens(chainOrClient?): { tokens: { chain, symbol, decimals, address }[] }`_**
+
+```typescript
+// All supported moveable tokens across chains
+const { tokens: allMoveable } = PushChain.utils.getMoveableTokens();
+
+// Filtered for a specific chain
+const { tokens: sepoliaMoveable } = PushChain.utils.getMoveableTokens(
+  PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
+);
+```
+
+<PushAPIReference>
+
+| **Arguments**      | **Type**               | **Description**                                                                 |
+| ------------------ | ---------------------- | ------------------------------------------------------------------------------- |
+| _`chainOrClient`_  | `CHAIN \| PushChain` | Optional. A chain enum or an initialized client to filter tokens for that chain. |
+
+</PushAPIReference>
+
+<Details summary="Returns `{ tokens }` <object>" className="alert alert--fn-args">
+
+```typescript
+// tokens array entries
+{
+  tokens: [
+    { chain: 'eip155:11155111', symbol: 'ETH', decimals: 18, address: '0x...' },
+    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },
+    // ...
+  ]
+}
+```
+
+</Details>
+
+<Details summary="Live Playground: List moveable tokens (all and Sepolia)" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.getMoveableTokens
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+    function main() {
+      const { tokens: all } = PushChain.utils.getMoveableTokens();
+      console.log('All moveable tokens (count):', all.length);
+
+      const { tokens: sepolia } = PushChain.utils.getMoveableTokens(
+        PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
+      );
+      console.log(JSON.stringify(sepolia, null, 2));
+    }
+
+    main();
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+{/* API Section Ends*/}
+
+{/* API Section Start*/}
+
+### Get Payable Tokens
+
+**_`PushChain.utils.getPayableTokens(chainOrClient?): { tokens: { chain, symbol, decimals, address }[] }`_**
+
+```typescript
+// All supported payable tokens across chains
+const { tokens: allPayable } = PushChain.utils.getPayableTokens();
+
+// Filtered for a specific chain
+const { tokens: solanaDevnetPayable } = PushChain.utils.getPayableTokens(
+  PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET
+);
+```
+
+<PushAPIReference>
+
+| **Arguments**      | **Type**               | **Description**                                                                 |
+| ------------------ | ---------------------- | ------------------------------------------------------------------------------- |
+| _`chainOrClient`_  | `CHAIN \| PushChain` | Optional. A chain enum or an initialized client to filter tokens for that chain. |
+
+</PushAPIReference>
+
+<Details summary="Returns `{ tokens }` <object>" className="alert alert--fn-args">
+
+```typescript
+// tokens array entries
+{
+  tokens: [
+    { chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', symbol: 'SOL', decimals: 9, address: 'So11111111111111111111111111111111111111112' },
+    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },
+    // ...
+  ]
+}
+```
+
+</Details>
+
+<Details summary="Live Playground: List payable tokens (all and Solana Devnet)" className="alert alert--live-play">
+
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"}}>
+{`
+// customPropHighlightRegexStart=PushChain\.utils\.getPayableTokens
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+    function main() {
+      const { tokens: all } = PushChain.utils.getPayableTokens();
+      console.log('All payable tokens (count):', all.length);
+
+      const { tokens: devnet } = PushChain.utils.getPayableTokens(
+        PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET
+      );
+      console.log(JSON.stringify(devnet, null, 2));
+    }
+
+    main();
+
+`}
+
+</NodeJSVirtualIDE>
+
+</Details>
+{/* API Section Ends*/}
+
 ## Next Steps
 
 - Dive into [reading blockchain state](/docs/chain/build/reading-blockchain-state)
