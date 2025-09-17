@@ -1595,12 +1595,8 @@ const toc = [{
   "id": "part-3-create-liquidity-pool",
   "level": 3
 }, {
-  "value": "Part 4: Test Token Swaps",
-  "id": "part-4-test-token-swaps",
-  "level": 3
-}, {
-  "value": "Part 5: Build Frontend UI",
-  "id": "part-5-build-frontend-ui",
+  "value": "Part 4: Build Frontend UI",
+  "id": "part-4-build-frontend-ui",
   "level": 3
 }, {
   "value": "Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat",
@@ -1707,11 +1703,13 @@ function _createMdxContent(props) {
           children: "$AIRDROP"
         }), " token on Push Chain"]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Mint ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "$WPUSH"
+        }), " tokens for liquidity and swaps"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["Create a ", (0,jsx_runtime.jsx)(_components.code, {
           children: "$AIRDROP/$WPUSH"
         }), " pool and add liquidity"]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Test a swap programmatically"
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["Build a frontend UI that lets users mint ", (0,jsx_runtime.jsx)(_components.code, {
           children: "$WPUSH"
@@ -1725,7 +1723,7 @@ function _createMdxContent(props) {
       id: "tutorial-overview",
       children: "Tutorial Overview"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This tutorial is divided into five main parts:"
+      children: "This tutorial is divided into four main parts:"
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "part-1-deploy-erc-20-token-to-push-chain",
       children: "Part 1: Deploy ERC-20 Token to Push Chain"
@@ -1748,17 +1746,8 @@ function _createMdxContent(props) {
         children: "$AIRDROP/$WPUSH"
       }), " pool and add initial liquidity for token swapping."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-4-test-token-swaps",
-      children: "Part 4: Test Token Swaps"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Build a script to programmatically swap ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " for ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP"
-      }), " tokens through the pool."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-5-build-frontend-ui",
-      children: "Part 5: Build Frontend UI"
+      id: "part-4-build-frontend-ui",
+      children: "Part 4: Build Frontend UI"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["Create a React app with Push Universal Wallet integration that allows users to mint ", (0,jsx_runtime.jsx)(_components.code, {
         children: "$WPUSH"
