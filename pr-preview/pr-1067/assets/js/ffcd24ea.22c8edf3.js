@@ -1699,6 +1699,10 @@ const toc = [{
   "id": "access-account-information",
   "level": 2
 }, {
+  "value": "Tokens and Conversion Quotes",
+  "id": "tokens-and-conversion-quotes",
+  "level": 2
+}, {
   "value": "Next Steps",
   "id": "next-steps",
   "level": 2
@@ -2281,6 +2285,170 @@ await main().catch(console.error);
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
         children: "// execution vs. origin accounts\nconst execAccount = pushChainClient.universal.account; // Account that writes on Push Chain\nconst originAccount = pushChainClient.universal.origin; // Source chain account that is mapped to the execution account\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "tokens-and-conversion-quotes",
+      children: "Tokens and Conversion Quotes"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Once initialized, the client exposes token registries and a quoting helper:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "moveable.token"
+        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "MoveableTokenAccessor"
+        }), " for tokens that can be bridged/moved on Push Chain (scoped to your origin chain)"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "payable.token"
+        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "PayableTokenAccessor"
+        }), " for tokens you can pay with on the origin chain"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "funds.getConversionQuote(amountIn, { from, to }) → Promise<ConversionQuote>"
+        }), ": fetches a spot quote for converting a payable token into a moveable token on supported chains"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const weth = pushChainClient.payable.token.WETH; // PayableToken\nconst usdt = pushChainClient.moveable.token.USDT; // MoveableToken\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "ConversionQuote shape",
+      className: "alert alert--minimal-api-table",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Field"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "amountIn"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Input amount in smallest units"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "amountOut"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Output amount in smallest units"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "rate"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Normalized rate: tokenOut per tokenIn"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "route"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string[]"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Optional swap path (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "[\"WETH\",\"USDT\"]"
+              }), ")"]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "timestamp"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Unix time (ms)"
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Supported origins and behavior",
+      className: "alert alert--minimal",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: [(0,jsx_runtime.jsx)(_components.code, {
+            children: "funds.getConversionQuote"
+          }), " currently works on Ethereum Mainnet and Sepolia. Other origins will throw an error."]
+        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: ["Token availability is derived from your origin chain; see ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "MoveableTokenAccessor"
+          }), " and ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "PayableTokenAccessor"
+          }), " types in the SDK."]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Quote WETH → USDT on Sepolia",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+        },
+        children: `
+import { PushChain } from '@pushchain/core';
+import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+async function main() {
+    // Create a Sepolia wallet client
+    const account = privateKeyToAccount(generatePrivateKey());
+    const walletClient = createWalletClient({ account, chain: sepolia, transport: http() });
+
+    // Convert to Universal Signer and initialize
+    const universalSigner = await PushChain.utils.signer.toUniversal(walletClient);
+    const client = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // Amount: 0.005 WETH (18 decimals)
+    const amountIn = PushChain.utils.helpers.parseUnits('0.005', 18);
+
+    // Get quote: pay with WETH → move as USDT
+    const quote = await client.funds.getConversionQuote(amountIn, {
+      from: client.payable.token.WETH,
+      to: client.moveable.token.USDT,
+    });
+
+    console.log('Quote:', JSON.stringify(quote, null, 2));
+}
+
+await main().catch(console.error);
+`
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "next-steps",
