@@ -18,7 +18,7 @@ import Details from '@theme/Details';
 import PushAPIReference from '@site/src/components/PushAPIReference/PushAPIReference';
 import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
 
-<!-- Content Start -->
+{/* Content Start */}
 
 ## Overview
 
@@ -48,6 +48,7 @@ const txHash = await pushChainClient.universal.sendTransaction({
 | `tx.gasLimit`             | `BigInt` | The gas limit for the transaction.                    |
 | `tx.maxFeePerGas`         | `BigInt` | The maximum fee per gas for the transaction.          |
 | `tx.maxPriorityFeePerGas` | `BigInt` | The maximum priority fee per gas for the transaction. |
+| `tx.funds`                | `{ amount: BigInt; token?: MoveableToken }` | Bridges funds from the origin chain to Push Chain within the same call (move + execute when `tx.data` is provided). |
 
 </PushAPIReference>
 
@@ -219,6 +220,8 @@ const txReceipt = await txResponse.wait(1); // number of blocks confirmations to
 | `raw.data` | `string` | Actual calldata sent on chain |
 | `raw.value` | `BigInt` | Actual value transferred on chain |
 </Details>
+
+ 
 
 ## Send Transaction with Contract Interaction
 
@@ -1158,6 +1161,208 @@ import \* as readline from 'node:readline/promises';
 </NodeJSVirtualIDE>
 
 </Details>
+
+## Bridge Funds with `sendTransaction`
+
+Below are end-to-end examples showing how to use the new `funds` parameter.
+
+<Tabs className="liveplaytab" groupId="send-universal-funds-examples">
+  <TabItem value='funds_payload' label='Funds + Payload (ERC-20, Sepolia)'>
+
+  ### Example A: Funds + payload (ERC-20 only, origin = Sepolia)
+
+  When you pass a `funds` object, the SDK performs a “move + execute” flow in a single call: it first locks the specified asset on the origin chain (here, Sepolia), then credits your Universal Execution Address (UEA) on Push Chain with the Push-native representation, and finally (if `data` is provided) executes the call on the target `to` contract on Push Chain. Use `client.moveable.token.<SYMBOL>` to choose supported ERC-20 tokens for the origin, and fund the generated address with both ETH (for gas) and the ERC-20 you plan to move.
+
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+  {`
+  // customPropHighlightRegexStart=universal\.sendTransaction
+  // customPropHighlightRegexEnd=\);
+  import { PushChain } from '@pushchain/core';
+  import { createWalletClient, http } from 'viem';
+  import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+  import { sepolia } from 'viem/chains';
+  import * as readline from 'node:readline/promises';
+
+    // RPC
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+
+    // Enable User Input
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    async function main() {
+      // Create a fresh Sepolia account and viem wallet client
+      const privateKey = generatePrivateKey();
+      const account = privateKeyToAccount(privateKey);
+      console.log('🔑 Sepolia account:', account.address);
+
+      const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
+
+      // Convert to Universal signer and initialize SDK
+      const signer = await PushChain.utils.signer.toUniversal(walletClient);
+      const client = await PushChain.initialize(signer, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
+      });
+
+      // Prepare ERC-20 funds + payload call
+      const bridgeAmount = BigInt(1); // 1 unit (6 decimals) to bridge
+      const UCABI = [
+        { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+      ];
+      const COUNTER_ADDRESS = '0x9F95857e43d25Bb9DaFc6376055eFf63bC0887C1';
+      const data = PushChain.utils.helpers.encodeTxData({ abi: UCABI, functionName: 'increment' });
+
+      // Require user to fund gas in ETH and supply USDT to bridge
+      await rl.question(':::prompt:::Please send Sepolia ETH to: ' + account.address + ' and press Enter to continue.');
+      await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
+
+      const usdt = client.moveable.token.USDT;
+
+      try {
+        const res = await client.universal.sendTransaction({
+          to: COUNTER_ADDRESS,
+          value: BigInt(222422285779573), // example non-zero value (ERC-20 + payload only)
+          data,
+          funds: { amount: bridgeAmount, token: usdt },
+        });
+        console.log('✅ Sent. Tx:', JSON.stringify(res));
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+        console.log('Note: Ensure adequate Sepolia ETH for gas and USDT balance.');
+      }
+    }
+
+    await main().catch(console.error);
+  `}
+
+  </NodeJSVirtualIDE>
+
+  Notes:
+
+  - Replace `funds: { amount }` with `funds: { amount, token: client.moveable.token.USDT }` to bridge ERC-20 explicitly.
+  - Native token with payload is not supported yet.
+
+  </TabItem>
+
+  <TabItem value='funds_erc20_only' label='ERC-20 Funds Only'>
+
+  ### Example B: Bridge ERC-20 funds only (no payload)
+
+  This moves an ERC-20 from the origin to your UEA on Push Chain without executing calldata. Fund the generated address with Sepolia ETH (for gas) and the ERC-20 you want to move.
+
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+  {`
+  // customPropHighlightRegexStart=universal\.sendTransaction
+  // customPropHighlightRegexEnd=\);
+  import { PushChain } from '@pushchain/core';
+  import { createWalletClient, http } from 'viem';
+  import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+  import { sepolia } from 'viem/chains';
+  import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    async function main() {
+      const privateKey = generatePrivateKey();
+      const account = privateKeyToAccount(privateKey);
+      console.log('🔑 Sepolia account:', account.address);
+
+      const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
+      const signer = await PushChain.utils.signer.toUniversal(walletClient);
+      const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT });
+
+      // Require user to fund gas and USDT
+      await rl.question(':::prompt:::Please send Sepolia ETH (for gas) to: ' + account.address + ' and press Enter to continue.');
+      await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
+
+      const usdt = client.moveable.token.USDT;
+      const tenUsdt = PushChain.utils.helpers.parseUnits('10', { decimals: usdt.decimals });
+
+      try {
+        const res = await client.universal.sendTransaction({
+          to: client.universal.account,
+          value: BigInt(0),
+          data: '0x',
+          funds: { amount: tenUsdt, token: usdt },
+        });
+
+        const receipt = await res.wait();
+        console.log('✅ Receipt status:', receipt.status);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+        console.log('Note: Ensure Sepolia ETH for gas and USDT balance.');
+      }
+    }
+
+    await main().catch(console.error);
+  `}
+
+  </NodeJSVirtualIDE>
+
+  </TabItem>
+
+  <TabItem value='funds_native_only' label='Native Funds Only'>
+
+  ### Example C: Bridge native funds only (no payload)
+
+  This bridges the native asset from the origin to your UEA without calldata. Fund the generated address with Sepolia ETH to cover gas.
+
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+
+  {`
+  // customPropHighlightRegexStart=universal\.sendTransaction
+  // customPropHighlightRegexEnd=\);
+  import { PushChain } from '@pushchain/core';
+  import { createWalletClient, http } from 'viem';
+  import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+  import { sepolia } from 'viem/chains';
+  import * as readline from 'node:readline/promises';
+
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    async function main() {
+      const privateKey = generatePrivateKey();
+      const account = privateKeyToAccount(privateKey);
+      console.log('🔑 Sepolia account:', account.address);
+
+      const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
+      const signer = await PushChain.utils.signer.toUniversal(walletClient);
+      const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT });
+
+      // Require user to fund gas in ETH
+      await rl.question(':::prompt:::Please send Sepolia ETH (for gas) to: ' + account.address + ' and press Enter to continue.');
+
+      try {
+        const res = await client.universal.sendTransaction({
+          to: client.universal.account,
+          funds: { amount: BigInt(1) },
+        });
+        const receipt = await res.wait();
+        console.log('✅ Receipt status:', receipt.status);
+      } catch (err) {
+        console.error('❌ Failed:', err && err.message ? err.message : err);
+        console.log('Note: Ensure adequate Sepolia ETH for gas.');
+      }
+    }
+
+    await main().catch(console.error);
+  `}
+
+  </NodeJSVirtualIDE>
+
+  </TabItem>
+
+</Tabs>
+
+### Tokens and types
+
+- `MoveableToken` includes: `symbol`, `decimals`, `address`, and `mechanism`.
+- Access tokens via `client.moveable.token.<SYMBOL>`; common options are `ETH`, `USDT`, `WETH` (availability depends on chain).
+
 
 ## Next Steps
 
