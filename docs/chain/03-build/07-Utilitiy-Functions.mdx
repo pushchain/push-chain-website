@@ -948,11 +948,13 @@ import { PushChain } from '@pushchain/core';
 
     function main() {
       const { tokens: all } = PushChain.utils.getMoveableTokens();
-      console.log('All moveable tokens (count):', all.length);
+      console.log('All moveable tokens:');
+      console.log(JSON.stringify(all, null, 2));
 
       const { tokens: sepolia } = PushChain.utils.getMoveableTokens(
         PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
       );
+      console.log('Sepolia moveable tokens:');
       console.log(JSON.stringify(sepolia, null, 2));
     }
 
@@ -1014,11 +1016,13 @@ import { PushChain } from '@pushchain/core';
 
     function main() {
       const { tokens: all } = PushChain.utils.getPayableTokens();
-      console.log('All payable tokens (count):', all.length);
+      console.log('All payable tokens:');
+      console.log(JSON.stringify(all, null, 2));
 
       const { tokens: devnet } = PushChain.utils.getPayableTokens(
         PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET
       );
+      console.log('Solana Devnet payable tokens:');
       console.log(JSON.stringify(devnet, null, 2));
     }
 
