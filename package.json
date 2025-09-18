@@ -48,7 +48,7 @@
     "@docusaurus/theme-mermaid": "^3.8.1",
     "@mdx-js/react": "^3.0.0",
     "@openzeppelin/merkle-tree": "^1.0.8",
-    "@pushchain/core": "1.1.33",
+    "@pushchain/core": "^1.1.40",
     "@pushchain/ui-kit": "1.1.33",
     "@pushprotocol/restapi": "1.7.20",
     "@pushprotocol/uiweb": "1.7.1",
