@@ -431,31 +431,50 @@ const originAccount = pushChainClient.universal.origin; // Source chain account 
 
 Once initialized, the client exposes token registries and a quoting helper:
 
-- **moveable.token**: `MoveableTokenAccessor` for tokens that can be bridged/moved on Push Chain (scoped to your origin chain)
+### Token Accessors
+
+- **moveable.token**: `MoveableTokenAccessor` for tokens that can be bridged/moved on Push Chain
 - **payable.token**: `PayableTokenAccessor` for tokens you can pay with on the origin chain
-- `funds.getConversionQuote(amountIn, { from, to }) → Promise<ConversionQuote>`: fetches a spot quote for converting a payable token into a moveable token on supported chains
 
 ```typescript
 const weth = pushChainClient.payable.token.WETH; // PayableToken
 const usdt = pushChainClient.moveable.token.USDT; // MoveableToken
 ```
 
-<Details summary="ConversionQuote shape" className="alert alert--minimal-api-table">
+### Conversion Quotes
 
-| Field | Type | Description |
-| --- | --- | --- |
+Use `funds.getConversionQuote(amountIn, { from, to }) → Promise<ConversionQuote>` to fetch a spot quote for converting a payable token into a moveable token on supported origins.
+
+<Details summary="Getting `ConversionQuote` <object> from `funds.getConversionQuote`">
+<br />
+Calling `funds.getConversionQuote(amountIn, { from, to })` returns a `Promise<ConversionQuote>` with the computed spot quote.
+<br />
+
+```typescript
+const amountIn = PushChain.utils.helpers.parseUnits('0.005', 18);
+const quote = await pushChainClient.funds.getConversionQuote(amountIn, {
+  from: pushChainClient.payable.token.WETH,
+  to: pushChainClient.moveable.token.USDT,
+});
+```
+
+```typescript
+{
+  amountIn: '5000000000000000',
+  amountOut: '7500000',
+  rate: 1.5,
+  route: ['WETH', 'USDT'],
+  timestamp: 1733333333000
+}
+```
+
+| Property | Type | Description |
+|----------|------|-------------|
 | `amountIn` | `string` | Input amount in smallest units |
 | `amountOut` | `string` | Output amount in smallest units |
 | `rate` | `number` | Normalized rate: tokenOut per tokenIn |
 | `route` | `string[]` | Optional swap path (e.g., `["WETH","USDT"]`) |
 | `timestamp` | `number` | Unix time (ms) |
-
-</Details>
-
-<Details summary="Supported origins and behavior" className="alert alert--minimal">
-
-- `funds.getConversionQuote` currently works on Ethereum Mainnet and Sepolia. Other origins will throw an error.
-- Token availability is derived from your origin chain; see `MoveableTokenAccessor` and `PayableTokenAccessor` types in the SDK.
 
 </Details>
 
