@@ -417,7 +417,6 @@ const assets = {
 
 };
 
-/*Content Start*/
 
 
 
@@ -440,10 +439,6 @@ const toc = [{
 }, {
   "value": "Live Playground",
   "id": "live-playground",
-  "level": 2
-}, {
-  "value": "Bridge Funds with <code>sendTransaction</code>",
-  "id": "bridge-funds-with-sendtransaction",
   "level": 2
 }, {
   "value": "Next Steps",
@@ -476,7 +471,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)("title", {
         children: "Send Transaction | Build | Push Chain Docs"
       })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "overview",
       children: "Overview"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
@@ -599,20 +594,6 @@ function _createMdxContent(props) {
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: "The maximum priority fee per gas for the transaction."
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "tx.funds"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "{ amount: BigInt; token?: MoveableToken }"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["Bridges funds from the origin chain to Push Chain within the same call (move + execute when ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "tx.data"
-              }), " is provided)."]
             })]
           })]
         })]
@@ -2436,202 +2417,6 @@ import \* as readline from 'node:readline/promises';
   }
 `
       })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "bridge-funds-with-sendtransaction",
-      children: ["Bridge Funds with ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "sendTransaction"
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Below are end-to-end examples showing how to bridge assets to Push Chain and execute your call in one step."
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "send-universal-funds-examples",
-      children: [(0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "funds_payload",
-        label: "Funds + Payload (ERC-20, Sepolia)",
-        children: [(0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Passing the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "funds"
-          }), " field bridges assets from your origin chain to Push Chain and then executes your call on Push Chain in one step. Pick an ERC-20 via ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "client.moveable.token.<SYMBOL>"
-          }), " and set ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "amount"
-          }), "; the SDK handles approvals and a small ETH deposit for Push gas."]
-        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Below, we call the Counter contract’s increment() from the Simple Counter tutorial (", (0,jsx_runtime.jsx)(_components.a, {
-            href: "/docs/chain/tutorials/basics/tutorial-simple-counter/",
-            children: "01‑Tutorial‑Simple‑Counter"
-          }), "), deployed on Push Testnet Donut. The SDK bridges ERC‑20 funds from Sepolia and executes the call on Push in one request."]
-        }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
-          },
-          children: `
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\);
-import { PushChain } from '@pushchain/core';
-import { createWalletClient, http } from 'viem';
-import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import { sepolia } from 'viem/chains';
-import * as readline from 'node:readline/promises';
-
-  // RPC
-  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-
-  // Enable User Input
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-  async function main() {
-    // Create a fresh Sepolia account and viem wallet client
-    const privateKey = generatePrivateKey();
-    const account = privateKeyToAccount(privateKey);
-    console.log('🔑 Sepolia account:', account.address);
-
-    const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
-
-    // Convert to Universal signer and initialize SDK
-    const signer = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(signer, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
-      progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
-    });
-
-    // Prepare ERC-20 funds + payload call
-    const bridgeAmount = BigInt(1); // 1 unit (6 decimals) to bridge
-    const UCABI = [
-      { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
-    ];
-    const COUNTER_ADDRESS = '0x9F95857e43d25Bb9DaFc6376055eFf63bC0887C1';
-    const data = PushChain.utils.helpers.encodeTxData({ abi: UCABI, functionName: 'increment' });
-
-    // Require user to fund gas in ETH and supply USDT to bridge (for gas and to bridge)
-    await rl.question(':::prompt:::Please send Sepolia ETH to: ' + account.address + ' and press Enter to continue.');
-    await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
-
-    try {
-      const res = await client.universal.sendTransaction({
-        to: COUNTER_ADDRESS,
-        value: BigInt(0),
-        data,
-        funds: { amount: bridgeAmount, token: client.moveable.token.USDT },
-      });
-      console.log('✅ Sent. Tx:', JSON.stringify(res));
-    } catch (err) {
-      console.error('❌ Failed:', err && err.message ? err.message : err);
-      console.log('Note: Ensure adequate Sepolia ETH for gas and USDT balance.');
-    }
-  }
-
-  await main().catch(console.error);
-`
-        })]
-      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "funds_erc20_only",
-        label: "ERC-20 Funds Only",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: "Bridges an ERC-20 from Sepolia to your UEA on Push Chain with no calldata. Make sure the Sepolia account has ETH for gas and the ERC-20 you want to move."
-        }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
-          },
-          children: `
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\);
-import { PushChain } from '@pushchain/core';
-import { createWalletClient, http } from 'viem';
-import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import { sepolia } from 'viem/chains';
-import * as readline from 'node:readline/promises';
-
-  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-  async function main() {
-    const privateKey = generatePrivateKey();
-    const account = privateKeyToAccount(privateKey);
-    console.log('🔑 Sepolia account:', account.address);
-
-    const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
-    const signer = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT });
-
-    // Require user to fund gas and USDT
-    await rl.question(':::prompt:::Please send Sepolia ETH (for gas) to: ' + account.address + ' and press Enter to continue.');
-    await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
-
-    const usdt = client.moveable.token.USDT;
-    const oneUsdt = PushChain.utils.helpers.parseUnits('1', { decimals: usdt.decimals });
-
-    try {
-      const res = await client.universal.sendTransaction({
-        to: client.universal.account,
-        funds: { amount: oneUsdt, token: usdt },
-      });
-
-      const receipt = await res.wait();
-      console.log('✅ Receipt status:', receipt.status);
-    } catch (err) {
-      console.error('❌ Failed:', err && err.message ? err.message : err);
-      console.log('Note: Ensure Sepolia ETH for gas and USDT balance.');
-    }
-  }
-
-  await main().catch(console.error);
-`
-        })]
-      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "funds_native_only",
-        label: "Native Funds Only",
-        children: [(0,jsx_runtime.jsx)(_components.p, {
-          children: "Bridges the native asset from your origin chain to your UEA on Push Chain with no calldata. Ensure the Sepolia account has ETH for gas."
-        }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"
-          },
-          children: `
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\);
-import { PushChain } from '@pushchain/core';
-import { createWalletClient, http } from 'viem';
-import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import { sepolia } from 'viem/chains';
-import * as readline from 'node:readline/promises';
-
-  const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-  async function main() {
-    const privateKey = generatePrivateKey();
-    const account = privateKeyToAccount(privateKey);
-    console.log('🔑 Sepolia account:', account.address);
-
-    const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
-    const signer = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT });
-
-    // Require user to fund gas in ETH
-    await rl.question(':::prompt:::Please send Sepolia ETH (for gas) to: ' + account.address + ' and press Enter to continue.');
-
-    try {
-      const res = await client.universal.sendTransaction({
-        to: client.universal.account,
-        funds: { amount: BigInt(1) }, // same as { amount: BigInt(1), token: client.moveable.token.ETH }
-      });
-      const receipt = await res.wait();
-      console.log('✅ Receipt status:', receipt.status);
-    } catch (err) {
-      console.error('❌ Failed:', err && err.message ? err.message : err);
-      console.log('Note: Ensure adequate Sepolia ETH for gas.');
-    }
-  }
-
-  await main().catch(console.error);
-`
-        })]
-      })]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "next-steps",
       children: "Next Steps"
