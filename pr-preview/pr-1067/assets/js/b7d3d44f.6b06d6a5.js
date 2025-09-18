@@ -446,22 +446,6 @@ const toc = [{
   "id": "bridge-funds-with-sendtransaction",
   "level": 2
 }, {
-  "value": "Example A: Funds + payload (ERC-20 only, origin = Sepolia)",
-  "id": "example-a-funds--payload-erc-20-only-origin--sepolia",
-  "level": 3
-}, {
-  "value": "Example B: Bridge ERC-20 funds only (no payload)",
-  "id": "example-b-bridge-erc-20-funds-only-no-payload",
-  "level": 3
-}, {
-  "value": "Example C: Bridge native funds only (no payload)",
-  "id": "example-c-bridge-native-funds-only-no-payload",
-  "level": 3
-}, {
-  "value": "Tokens and types",
-  "id": "tokens-and-types",
-  "level": 3
-}, {
   "value": "Next Steps",
   "id": "next-steps",
   "level": 2
@@ -472,7 +456,6 @@ function _createMdxContent(props) {
     code: "code",
     em: "em",
     h2: "h2",
-    h3: "h3",
     li: "li",
     p: "p",
     pre: "pre",
@@ -2458,29 +2441,27 @@ import \* as readline from 'node:readline/promises';
       children: ["Bridge Funds with ", (0,jsx_runtime.jsx)(_components.code, {
         children: "sendTransaction"
       })]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Below are end-to-end examples showing how to use the new ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "funds"
-      }), " parameter."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Below are end-to-end examples showing how to bridge assets to Push Chain and execute your call in one step."
     }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
       className: "liveplaytab",
       groupId: "send-universal-funds-examples",
       children: [(0,jsx_runtime.jsxs)(TabItem/* default */.A, {
         value: "funds_payload",
         label: "Funds + Payload (ERC-20, Sepolia)",
-        children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "example-a-funds--payload-erc-20-only-origin--sepolia",
-          children: "Example A: Funds + payload (ERC-20 only, origin = Sepolia)"
-        }), (0,jsx_runtime.jsxs)(_components.p, {
-          children: ["When you pass a ", (0,jsx_runtime.jsx)(_components.code, {
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Passing the ", (0,jsx_runtime.jsx)(_components.code, {
             children: "funds"
-          }), " object, the SDK performs a “move + execute” flow in a single call: it first locks the specified asset on the origin chain (here, Sepolia), then credits your Universal Execution Address (UEA) on Push Chain with the Push-native representation, and finally (if ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "data"
-          }), " is provided) executes the call on the target ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "to"
-          }), " contract on Push Chain. Use ", (0,jsx_runtime.jsx)(_components.code, {
+          }), " field bridges assets from your origin chain to Push Chain and then executes your call on Push Chain in one step. Pick an ERC-20 via ", (0,jsx_runtime.jsx)(_components.code, {
             children: "client.moveable.token.<SYMBOL>"
-          }), " to choose supported ERC-20 tokens for the origin, and fund the generated address with both ETH (for gas) and the ERC-20 you plan to move."]
+          }), " and set ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "amount"
+          }), "; the SDK handles approvals and a small ETH deposit for Push gas."]
+        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Below, we call the Counter contract’s increment() from the Simple Counter tutorial (", (0,jsx_runtime.jsx)(_components.a, {
+            href: "/docs/chain/tutorials/basics/tutorial-simple-counter/",
+            children: "01‑Tutorial‑Simple‑Counter"
+          }), "), deployed on Push Testnet Donut. The SDK bridges ERC‑20 funds from Sepolia and executes the call on Push in one request."]
         }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
           repo: {
             title: "Open in Github",
@@ -2524,18 +2505,16 @@ import * as readline from 'node:readline/promises';
     const COUNTER_ADDRESS = '0x9F95857e43d25Bb9DaFc6376055eFf63bC0887C1';
     const data = PushChain.utils.helpers.encodeTxData({ abi: UCABI, functionName: 'increment' });
 
-    // Require user to fund gas in ETH and supply USDT to bridge
+    // Require user to fund gas in ETH and supply USDT to bridge (for gas and to bridge)
     await rl.question(':::prompt:::Please send Sepolia ETH to: ' + account.address + ' and press Enter to continue.');
     await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
-
-    const usdt = client.moveable.token.USDT;
 
     try {
       const res = await client.universal.sendTransaction({
         to: COUNTER_ADDRESS,
-        value: BigInt(222422285779573), // example non-zero value (ERC-20 + payload only)
+        value: BigInt(0),
         data,
-        funds: { amount: bridgeAmount, token: usdt },
+        funds: { amount: bridgeAmount, token: client.moveable.token.USDT },
       });
       console.log('✅ Sent. Tx:', JSON.stringify(res));
     } catch (err) {
@@ -2546,27 +2525,12 @@ import * as readline from 'node:readline/promises';
 
   await main().catch(console.error);
 `
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Notes:"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["Replace ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "funds: { amount }"
-            }), " with ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "funds: { amount, token: client.moveable.token.USDT }"
-            }), " to bridge ERC-20 explicitly."]
-          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "Native token with payload is not supported yet."
-          }), "\n"]
         })]
       }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
         value: "funds_erc20_only",
         label: "ERC-20 Funds Only",
-        children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "example-b-bridge-erc-20-funds-only-no-payload",
-          children: "Example B: Bridge ERC-20 funds only (no payload)"
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "This moves an ERC-20 from the origin to your UEA on Push Chain without executing calldata. Fund the generated address with Sepolia ETH (for gas) and the ERC-20 you want to move."
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: "Bridges an ERC-20 from Sepolia to your UEA on Push Chain with no calldata. Make sure the Sepolia account has ETH for gas and the ERC-20 you want to move."
         }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
           repo: {
             title: "Open in Github",
@@ -2598,14 +2562,12 @@ import * as readline from 'node:readline/promises';
     await rl.question(':::prompt:::Please send Sepolia USDT (ERC-20) to: ' + account.address + ' and press Enter to continue.');
 
     const usdt = client.moveable.token.USDT;
-    const tenUsdt = PushChain.utils.helpers.parseUnits('10', { decimals: usdt.decimals });
+    const oneUsdt = PushChain.utils.helpers.parseUnits('1', { decimals: usdt.decimals });
 
     try {
       const res = await client.universal.sendTransaction({
         to: client.universal.account,
-        value: BigInt(0),
-        data: '0x',
-        funds: { amount: tenUsdt, token: usdt },
+        funds: { amount: oneUsdt, token: usdt },
       });
 
       const receipt = await res.wait();
@@ -2622,11 +2584,8 @@ import * as readline from 'node:readline/promises';
       }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
         value: "funds_native_only",
         label: "Native Funds Only",
-        children: [(0,jsx_runtime.jsx)(_components.h3, {
-          id: "example-c-bridge-native-funds-only-no-payload",
-          children: "Example C: Bridge native funds only (no payload)"
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "This bridges the native asset from the origin to your UEA without calldata. Fund the generated address with Sepolia ETH to cover gas."
+        children: [(0,jsx_runtime.jsx)(_components.p, {
+          children: "Bridges the native asset from your origin chain to your UEA on Push Chain with no calldata. Ensure the Sepolia account has ETH for gas."
         }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
           repo: {
             title: "Open in Github",
@@ -2659,7 +2618,7 @@ import * as readline from 'node:readline/promises';
     try {
       const res = await client.universal.sendTransaction({
         to: client.universal.account,
-        funds: { amount: BigInt(1) },
+        funds: { amount: BigInt(1) }, // same as { amount: BigInt(1), token: client.moveable.token.ETH }
       });
       const receipt = await res.wait();
       console.log('✅ Receipt status:', receipt.status);
@@ -2673,33 +2632,6 @@ import * as readline from 'node:readline/promises';
 `
         })]
       })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "tokens-and-types",
-      children: "Tokens and types"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "MoveableToken"
-        }), " includes: ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "symbol"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "decimals"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "address"
-        }), ", and ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "mechanism"
-        }), "."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Access tokens via ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "client.moveable.token.<SYMBOL>"
-        }), "; common options are ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "ETH"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "USDT"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "WETH"
-        }), " (availability depends on chain)."]
-      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "next-steps",
       children: "Next Steps"
