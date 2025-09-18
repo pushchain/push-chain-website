@@ -27,20 +27,19 @@
 <li><strong>Avoid Audit Friction</strong>: Since you do not modify your solidity code, there is no need for a full re-audit.</li>
 <li><strong>Simplified Fees</strong>: Automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions.</li>
 <li><strong>Consistent DevEx</strong>: One <strong>Push SDK</strong>, one set of JSON-RPC endpoints, and a unified API to build and deploy. Supports Viem, ethers, and our own Push Chain client.</li>
-<li><strong>Future-Proof Builds</strong>: With ****Shared state and programmable solvers (coming soon), you can orchestrate complex workflows with multichain R/W operations - without building separate adapters.</li>
+<li><strong>Future-Proof Builds</strong>: With Shared state and programmable solvers (coming soon), you can orchestrate complex workflows with multichain R/W operations - without building separate adapters.</li>
 </ul>
 <p>👉 <em>Note: Push Chain SDK is only accessible to contest participants.</em> <a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer">Register</a> to unlock SDK + docs.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-rewards--incentives">🏆 Rewards &amp; Incentives<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-rewards--incentives" class="hash-link" aria-label="Direct link to 🏆 Rewards &amp; Incentives" title="Direct link to 🏆 Rewards &amp; Incentives">​</a></h2>
 <p>💰 $4000 Reward Pool + $1000 Additional through community voting (Stables)</p>
 <p>Jury Rewards:</p>
 <table><thead><tr><th>Rank</th><th>Prize (USD)</th></tr></thead><tbody><tr><td>🥇 First Place</td><td>$2000</td></tr><tr><td>🥈 Second Place</td><td>$1000</td></tr><tr><td>🥉 Third Place</td><td>$600</td></tr><tr><td>⛳️ Fourth Place</td><td>$400</td></tr></tbody></table>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="community-voting-rewards">Community Voting Rewards:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#community-voting-rewards" class="hash-link" aria-label="Direct link to Community Voting Rewards:" title="Direct link to Community Voting Rewards:">​</a></h3>
 <p>Community Voting Rewards:</p>
 <table><thead><tr><th>Rank</th><th>Prize (USD)</th></tr></thead><tbody><tr><td>🥇 First Place</td><td>$500</td></tr><tr><td>🥈 Second Place</td><td>$300</td></tr><tr><td>🥉 Third Place</td><td>$200</td></tr></tbody></table>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-prize-pool">💰 Prize Pool<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-prize-pool" class="hash-link" aria-label="Direct link to 💰 Prize Pool" title="Direct link to 💰 Prize Pool">​</a></h3>
-<ul>
-<li><strong>$4,000 Reward Pool (Stables)</strong></li>
-<li><strong>$1,000 Community Voting Rewards</strong></li>
-</ul>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-community-voting">🗳 Community Voting<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-community-voting" class="hash-link" aria-label="Direct link to 🗳 Community Voting" title="Direct link to 🗳 Community Voting">​</a></h3>
+<p>Once the public testnet is live, users will crown their favorites. Top community picks win:</p>
+<p>(<em>Voting will be sybil-resistant for fair outcomes.</em>)</p>
 <p><strong>Evaluation Criteria:</strong></p>
 <ul>
 <li>Functionality</li>
@@ -56,14 +55,6 @@
 <li><strong>Onchain</strong> perks (Secret passes, Badges) and <strong>Offchain</strong> perks (Meet the founders, 1-1 Mentorship)</li>
 <li>Winners gain a chance to access Push Chains VC and partner network.</li>
 </ul>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-community-voting">🗳 Community Voting<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-community-voting" class="hash-link" aria-label="Direct link to 🗳 Community Voting" title="Direct link to 🗳 Community Voting">​</a></h3>
-<p>Once the public testnet is live, users will crown their favorites. Top community picks win:</p>
-<ul>
-<li><strong>Rank 1:</strong> $500</li>
-<li><strong>Rank 2:</strong> $300</li>
-<li><strong>Rank 3:</strong> $200</li>
-</ul>
-<p>(<em>Voting will be sybil-resistant for fair outcomes.</em>)</p>
 <hr>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-who-should-apply-what-can-you-build">👩‍💻 Who Should Apply? What Can You Build?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-who-should-apply-what-can-you-build" class="hash-link" aria-label="Direct link to 👩‍💻 Who Should Apply? What Can You Build?" title="Direct link to 👩‍💻 Who Should Apply? What Can You Build?">​</a></h2>
 <p>This contest is open to <strong>all developers</strong>, whether you’re shipping production-grade EVM apps, experimenting with new universal use case, or just curious about universal apps.</p>
@@ -74,11 +65,12 @@
 <p>A universal app doesn't have to start from scratch. Your submissions can be**:**</p>
 <table><thead><tr><th>Deploy Your Existing EVM App</th><th>Build a New Universal App</th></tr></thead><tbody><tr><td>No contract rewrites - deploy &amp; instantly reach all chains.</td><td>Start fresh and explore bold new ideas that could scale into profitable startups.</td></tr></tbody></table>
 <hr>
-<p><img loading="lazy" alt="Announcing Project G.U.D — Go Universal &amp;amp; Deploy on Push Chain, Win $5,000" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/assets/images/image-2-db7732eeb05cd1906c0b84da63a3a296.webp" width="3140" height="1448" class="img_ev3q"></p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-how-to-participate">📋 How to Participate<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-how-to-participate" class="hash-link" aria-label="Direct link to 📋 How to Participate" title="Direct link to 📋 How to Participate">​</a></h2>
+<p><img loading="lazy" alt="Announcing Project G.U.D — Go Universal &amp;amp; Deploy on Push Chain, Win $5,000" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/assets/images/image-2-bec321179ca5d6b76cdd25bb8ff0cd38.webp" width="3204" height="1720" class="img_ev3q"></p>
 <ol>
-<li><strong>Register</strong> on Dorahacks [LINK]. Fill-in basic details and share your build ideas.</li>
-<li><strong>Join the Closed Beta TG Chat</strong> [LINK] for support + mentoring.</li>
-<li><strong>Find Teammates</strong> or hack solo via <a href="https://x.com/i/communities/1957696067207651630" target="_blank" rel="noopener noreferrer">Push X Community</a>.</li>
+<li><a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer"><strong>Register on Dorahacks</strong></a>. Fill-in basic details and share your build ideas.</li>
+<li><strong>Join the <a href="https://t.me/+HBr_tyPvACFhM2Vl" target="_blank" rel="noopener noreferrer">Donut Early Access TG Chat</a></strong> for support + mentoring.</li>
+<li><strong>Find Teammates</strong> or hack solo via <a href="https://x.com/i/communities/1957696067207651630" target="_blank" rel="noopener noreferrer">**Push X Community</a>.**</li>
 <li><strong>Build Build Build!</strong> 🚀</li>
 </ol>
 <hr>
@@ -95,8 +87,6 @@ Could be as simple as your project ideas, daily/ weekly progress, sneak peaks or
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="-resources--support">📚 Resources &amp; Support<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1089/blog/announcing-project-gud-go-universal-and-deploy#-resources--support" class="hash-link" aria-label="Direct link to 📚 Resources &amp; Support" title="Direct link to 📚 Resources &amp; Support">​</a></h2>
 <p>We’ve got you covered with everything you need to build, deploy and shine during Project G.U.D:</p>
 <ul>
-<li><strong>Developer Documentation</strong> → <a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer">Register to Access</a></li>
-<li><strong>Universal Apps Idea Bucket</strong> → App ideas</li>
 <li><strong>Mentorship &amp; Guidance</strong> → <a href="https://t.me/+HBr_tyPvACFhM2Vl" target="_blank" rel="noopener noreferrer">Join Closed Beta TG Chat</a></li>
 <li><strong>Community Support</strong> → <a href="https://x.com/i/communities/1957696067207651630" target="_blank" rel="noopener noreferrer">Push X Community</a></li>
 </ul>
@@ -110,14 +100,13 @@ Could be as simple as your project ideas, daily/ weekly progress, sneak peaks or
             <name>Push Chain</name>
             <uri>https://x.com/PushChain</uri>
         </author>
-        <category label="Push Chain" term="Push Chain"/>
-        <category label="Donut" term="Donut"/>
-        <category label="Closed Beta" term="Closed Beta"/>
+        <category label="Deployathon" term="Deployathon"/>
+        <category label="Donut Testnet" term="Donut Testnet"/>
         <category label="Early Access" term="Early Access"/>
+        <category label="Universal Apps" term="Universal Apps"/>
         <category label="Shared App Experience" term="Shared App Experience"/>
         <category label="Shared State Blockchain" term="Shared State Blockchain"/>
         <category label="Universal Smart Contracts" term="Universal Smart Contracts"/>
-        <category label="Testnet" term="Testnet"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Donut Testnet Closed Beta is Now Live!]]></title>
