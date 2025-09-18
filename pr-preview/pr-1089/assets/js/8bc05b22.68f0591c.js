@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[9457],{619793:e=>{e.exports=JSON.parse('{"label":"Consumer Crypto","permalink":"/push-chain-website/pr-preview/pr-1089/blog/tags/consumer-crypto","allTagsPath":"/push-chain-website/pr-preview/pr-1089/blog/tags","count":6,"unlisted":false}')}}]);

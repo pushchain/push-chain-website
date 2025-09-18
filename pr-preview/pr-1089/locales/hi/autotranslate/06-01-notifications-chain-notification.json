@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "टेस्टनेट, डोनट में एक झलक पाएं, universal apps बनाएं और पुरस्कार जीतें!",
+      "button-text": "क्लैम क्लोज्ड बीटा पास",
+      "button-title": "Push Chain टेस्टनेट में शामिल हों और अपना क्लोज्ड बीटा पास प्राप्त करें",
+      "button-aria-label": "Telegram खोलें और Push Chain क्लोज्ड बीटा पास प्राप्त करें",
+      "image-alt": "Push Chain टेस्टनेट डोनट - युनिवर्सल ब्लॉकचेन",
+      "close-button-title": "टेस्टनेट नोटिफिकेशन बंद करें",
+      "close-button-aria-label": "Dismiss Push Chain testnet notification",
+      "container-aria-label": "Push Chain testnet सूचना"
+    }
+  }
+}
