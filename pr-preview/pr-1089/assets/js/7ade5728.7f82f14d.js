@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[50564],{794479:e=>{e.exports=JSON.parse('{"label":"Blockchain Technology","permalink":"/push-chain-website/pr-preview/pr-1089/blog/tags/blockchain-technology","allTagsPath":"/push-chain-website/pr-preview/pr-1089/blog/tags","count":77,"unlisted":false}')}}]);

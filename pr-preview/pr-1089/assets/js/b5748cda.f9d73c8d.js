@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[82415],{648374:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1089/blog/tags/boba-network","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
