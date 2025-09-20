@@ -349,9 +349,9 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
       examples: {
         'Counter.sol': {
-          absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-counter/contracts/src/Counter.sol',
+          absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/simple-counter/contracts/src/Counter.sol',
           ctaTitle: 'View on GitHub',
-          ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-counter/contracts/src/Counter.sol'
+          ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/simple-counter/contracts/src/Counter.sol'
         }
       }
     }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {

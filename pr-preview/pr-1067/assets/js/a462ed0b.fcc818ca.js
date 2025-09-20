@@ -397,7 +397,7 @@ function _createMdxContent(props) {
                 children: "Ethereum Sepolia Testnet"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "0x28E0F09bE2321c1420Dc60Ee146aACbD68B335Fe"
+                  children: "0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A"
                 })
               })]
             }), (0,jsx_runtime.jsxs)(_components.tr, {
@@ -405,7 +405,7 @@ function _createMdxContent(props) {
                 children: "Solana Devnet"
               }), (0,jsx_runtime.jsx)(_components.td, {
                 children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "3zrWaMknHTRQpZSxY4BvQxw9TStSXiHcmcp3NMPTFkke"
+                  children: "CFVSincHYbETh2k7w6u1ENEkjbSLtveRCEBupKidw2VS"
                 })
               })]
             })]
