@@ -192,6 +192,10 @@ const toc = [{
   "id": "write-the-contract",
   "level": 2
 }, {
+  "value": "Understanding the Contract",
+  "id": "understanding-the-contract",
+  "level": 2
+}, {
   "value": "Compile &amp; Deploy",
   "id": "compile--deploy",
   "level": 2
@@ -200,8 +204,8 @@ const toc = [{
   "id": "verify-contract",
   "level": 2
 }, {
-  "value": "Interact with SimpleCounter App",
-  "id": "interact-with-simplecounter-app",
+  "value": "Interact with Counter",
+  "id": "interact-with-counter",
   "level": 2
 }, {
   "value": "Live Playground",
@@ -224,6 +228,7 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     blockquote: "blockquote",
+    br: "br",
     code: "code",
     h2: "h2",
     li: "li",
@@ -281,21 +286,36 @@ function _createMdxContent(props) {
           children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.22;\n\ncontract Counter {\n    uint256 public countPC;\n    event CountIncremented(uint256 indexed countPC, address indexed caller);\n\n    function increment() public {\n        countPC += 1;\n        emit CountIncremented(countPC, msg.sender);\n    }\n\n    function reset() public {\n        countPC = 0;\n    }\n}\n"
         })
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "understanding-the-contract",
+      children: "Understanding the Contract"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The contract is a simple counter contract that:"
+      children: "This contract is a minimal counter:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Allows the caller to increment the variable ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countPC"
-        }), "."]
+        children: ["The variable ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "count"
+        }), " stores the number of times the counter has been incremented."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Emits an event with the current value of ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countPC"
-        }), " and the caller’s address."]
+        children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "increment()"
+        }), " function adds ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "+1"
+        }), " each time it is called."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Allows anyone to reset the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countPC"
-        }), " to zero."]
+        children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "getCount()"
+        }), " function lets anyone read the current counter value."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Key takeaway"
+        }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", "On Push Chain, this contract works ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "universally"
+        }), ". A user on Ethereum, Solana, Push or any other chain itself can all call ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "increment()"
+        }), " — with no code changes."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "compile--deploy",
@@ -330,10 +350,10 @@ function _createMdxContent(props) {
         children: "verify and publish contract"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "interact-with-simplecounter-app",
-      children: "Interact with SimpleCounter App"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "An easier way to interact with the contract is to use the LivePlayground below.\nThe SimpleCounter app is already deployed on Push Chain Testnet."
+      id: "interact-with-counter",
+      children: "Interact with Counter"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The easiest way to interact with the contract is through the Live Playground.", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "The Simple Counter is already deployed on Push Chain Testnet."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -343,27 +363,25 @@ function _createMdxContent(props) {
           children: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
         })]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "Note:"
-      }), " Push Chain easily allows you to interact with the SimpleCounter from any chain."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Follow the steps below to interact with the SimpleCounter:"
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Steps to interact:"
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Connect your wallet to the LivePlayground."
+        children: "Connect your wallet to the Live Playground."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)"
+        children: "You can connect a wallet from any supported chain (Push Chain, Ethereum, or Solana)."
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Increment Counter"
-        }), " button to increment the counter."]
+        }), " to increase the counter."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Refresh Counter Values"
-        }), " button to refresh the counter values."]
+        }), " to update the display."]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "After each transaction, click the hash link to view it on Push Chain Explorer."
+        children: "After each transaction, use the transaction hash link to view details in Push Chain Explorer."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "live-playground",

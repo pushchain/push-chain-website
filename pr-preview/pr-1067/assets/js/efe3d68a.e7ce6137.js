@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[34866],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76773],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -323,25 +323,6 @@ webpackContext.id = 35358;
 
 /***/ }),
 
-/***/ 104747:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ RemixIDE)
-/* harmony export */ });
-/* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(328774);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(296540);
-/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(796710);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(474848);
-function RemixIDE(_ref){var _examplesObj$selected,_examplesObj$selected2;let{examples}=_ref;// Force examples to be treated as a plain object to ensure proper key extraction
-const examplesObj=Object.assign({},examples);// Extract keys directly from the examples object
-const exampleKeys=Object.keys(examplesObj);const defaultRemixURL='https://remix.push.org';// Initialize state with the first key from our extracted keys
-const[selected,setSelected]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(exampleKeys.length>0?exampleKeys[0]:null);// Force update selected if it doesn't match any key in examples
-(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{if(exampleKeys.length>0&&(!selected||!exampleKeys.includes(selected))){setSelected(exampleKeys[0]);}},[exampleKeys,selected]);const[isFullScreen,setIsFullScreen]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);const[isLoading,setIsLoading]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);const getRemixURL=()=>{if(!selected||!examplesObj[selected]||!examplesObj[selected].absoluteFileURL){return defaultRemixURL;}try{const githubUrl=examplesObj[selected].absoluteFileURL;const remixUrl=new URL(defaultRemixURL);remixUrl.hash="url="+githubUrl;return remixUrl.toString();}catch(error){return defaultRemixURL;}};(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{document.body.style.overflow=isFullScreen?'hidden':'auto';return()=>{document.body.style.overflow='auto';};},[isFullScreen]);const arrowIcon={color:'var(--ifm-header-caret-color)',marginTop:'-6px'};const repoButton={display:'flex',alignItems:'center',gap:'4px',fontSize:'0.875rem',color:'var(--ifm-playground-buttontext-color)',cursor:'pointer',fontWeight:'600'};const repoUrlDiv={display:'flex',flex:'none',flexDirection:'row',alignItems:'center',gap:'12px',padding:'8.5px 13px 8.59px 13px'};const selectButton={borderRadius:'12px',border:'var(--ifm-playground-button-border)',display:'flex',padding:'12.55px 13px 13.04px 13px',justifyContent:'center',alignItems:'center',backgroundColor:'transparent',fontSize:'0.875rem',fontWeight:'600',color:'var(--ifm-playground-buttontextcolor)',cursor:'pointer'};return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{width:'100%',backgroundColor:'var(--ifm-table-header-bg)',borderRadius:'12px',border:'none',overflow:'hidden',position:isFullScreen?'fixed':'relative',top:isFullScreen?0:'auto',left:isFullScreen?0:'auto',right:isFullScreen?0:'auto',bottom:isFullScreen?0:'auto',zIndex:isFullScreen?9999:1},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("style",{children:"\n        @keyframes spin {\n          0% { transform: rotate(0deg); }\n          100% { transform: rotate(360deg); }\n        }\n      "}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'10px 15px',gap:'16px'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{fontSize:'16px',fontWeight:500,color:'var(--ifm-color-title-text-color)'},children:"Remix IDE"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{display:'flex',gap:'10px',alignItems:'center',flex:'1',flexWrap:'wrap',justifyContent:'flex-end'},children:[exampleKeys.length>0&&selected&&((_examplesObj$selected=examplesObj[selected])===null||_examplesObj$selected===void 0?void 0:_examplesObj$selected.ctaURL)&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:repoUrlDiv,children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{to:examplesObj[selected].ctaURL,target:"_blank",rel:"noopener noreferrer",style:repoButton,children:((_examplesObj$selected2=examplesObj[selected])===null||_examplesObj$selected2===void 0?void 0:_examplesObj$selected2.ctaTitle)||'View Code'}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_bs__WEBPACK_IMPORTED_MODULE_2__.BsBoxArrowUpRight,{style:arrowIcon})]}),exampleKeys.length>0&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("select",{value:selected!==null&&selected!==void 0?selected:'',onChange:e=>setSelected(e.target.value),style:selectButton,children:exampleKeys.map(key=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option",{value:key,children:key},key))}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_bs__WEBPACK_IMPORTED_MODULE_2__.BsArrowsAngleExpand,{size:27,style:{color:'var(--ifm-header-caret-color)',cursor:'pointer',transition:'color 0.2s',padding:'2px'},onClick:()=>setIsFullScreen(!isFullScreen)}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("style",{children:"\n            .topbar-btn {\n              padding: 8px 12px;\n              height: 35px;\n              font-size: 14px;\n              border-radius: 6px;\n              border: 1px solid #e2e8f0;\n              background-color: #fff;\n              color: #475569;\n              cursor: pointer;\n              display: flex;\n              align-items: center;\n              gap: 6px;\n              transition: background-color 0.2s, border-color 0.2s;\n            }\n            .topbar-btn:hover {\n              background-color: #dd44b9;\n              border-color: #dd44b9;\n              color: #fff;\n            }\n          "})]})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{width:'100%',height:isFullScreen?'calc(100vh - 56px)':'600px',position:'relative'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("iframe",{src:getRemixURL(),title:"Remix IDE",style:{width:'100%',height:'100%',border:'none',position:'relative',zIndex:1},allowFullScreen:true,onLoad:()=>setIsLoading(false)}),isLoading&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{position:'absolute',top:0,left:0,right:0,bottom:0,display:'flex',alignItems:'center',justifyContent:'center',backgroundColor:'rgba(255, 255, 255, 0.8)',zIndex:2},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{width:'40px',height:'40px',border:'3px solid #D548EC',borderTop:'3px solid transparent',borderRadius:'50%',animation:'spin 1s linear infinite'}})})]})]});}
-
-/***/ }),
-
 /***/ 119365:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -413,93 +394,6 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
-/***/ 303547:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ PushAPIReference)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(944404);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
-/**
- * PushAPIReference component for rendering API documentation with consistent styling
- *
- * @param children - The content to display within the API reference section
- * @param showRequiredNotice - Whether to show the required notice (default: true)
- * @param className - Additional CSS classes to apply
- */function PushAPIReference(_ref){let{children,showRequiredNotice=true,className=''}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(ReferenceContainer,{className:className,children:[showRequiredNotice&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(RequiredNotice,{hasNotice:showRequiredNotice,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p",{children:["These",/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("code",{children:"Arguments"}),"are mandatory"]})}),children]});}const ReferenceContainer=styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({displayName:"PushAPIReference__ReferenceContainer",componentId:"sc-1g1yayv-0"})([""]);const RequiredNotice=styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({displayName:"PushAPIReference__RequiredNotice",componentId:"sc-1g1yayv-1"})(["border-radius:var(--ifm-global-radius);margin-bottom:-8px;padding:12px 12px 20px 12px;text-align:end;border-bottom-left-radius:0;border-bottom-right-radius:0px;color:var(--ifm-navbar-dropdown-subtext);font-size:0.875rem;font-weight:400;line-height:188.571%;code{background:transparent;padding:2px 9px;display:inline-block !important;border-radius:12px;border:1px solid var(--ifm-sidebar-activetext-color);color:var(--ifm-color-primary-text);font-family:'Fira Code';font-weight:600;line-height:165%;margin:0px 4px;}"]);
-
-/***/ }),
-
-/***/ 303999:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ Details_Details)
-});
-
-;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
-function _objectDestructuringEmpty(t) {
-  if (null == t) throw new TypeError("Cannot destructure " + t);
-}
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
-var clsx = __webpack_require__(618215);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
-var objectWithoutPropertiesLoose = __webpack_require__(198587);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
-var dist_clsx = __webpack_require__(15066);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBrokenLinks.js + 1 modules
-var useBrokenLinks = __webpack_require__(163427);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
-var useIsBrowser = __webpack_require__(992303);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
-var Collapsible = __webpack_require__(41422);
-;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
-const _excluded=["summary","children"];/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
- * A mostly un-styled `<details>` element with smooth collapsing. Provides some
- * very lightweight styles, but you should bring your UI.
- */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);(0,useBrokenLinks/* default */.A)().collectAnchor(props.id);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
-// only after animation completes, otherwise close animations won't work
-const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
-(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
-if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
-const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
-// setOpen(false);
-}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
-,collapsed:collapsed,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
-// extracted by mini-css-extract-plugin
-/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
-;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */// Should we have a custom details/summary comp in Infima instead of reusing
-// alert classes?
-const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
-
-/***/ }),
-
 /***/ 321638:
 /***/ (() => {
 
@@ -542,581 +436,6 @@ getProof:loadClientSideLibraryOpenZepplinMerkleTree('getProof'),makeMerkleTree:l
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
 SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
-
-/***/ }),
-
-/***/ 378680:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_02_tokens_and_airdrops_02_tutorial_universal_airdrop_mdx_e00_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
-
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-02-tokens-and-airdrops-02-tutorial-universal-airdrop-mdx-e00.json
-const site_docs_chain_01_tutorials_02_tokens_and_airdrops_02_tutorial_universal_airdrop_mdx_e00_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/tokens-and-airdrops/docs-chain-tutorials-universal-airdrop","title":"Build a Claimable Universal Airdrop","description":"{Build a Universal Airdrop: Generate Merkle Proofs, Deploy Contract, and Add a Claim UI | Tutorials | Push Chain Docs}","source":"@site/docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx","sourceDirName":"chain/01-tutorials/02-tokens-and-airdrops","slug":"/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx","tags":[],"version":"current","sidebarPosition":6,"frontMatter":{"id":"docs-chain-tutorials-universal-airdrop","title":"Build a Claimable Universal Airdrop","hide_title":false,"slug":"./tutorial-universal-airdrop","displayed_sidebar":"pushChainSidebar","sidebar_position":6,"image":"/assets/docs/previews/docs_chain_tutorials_universal_airdrop--build_a_claimable_universal_airdrop.png"},"sidebar":"pushChainSidebar","previous":{"title":"Mint Universal ERC-20 Tokens","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops/tutorial-mint-erc-20-tokens"},"next":{"title":"Payments and DeFi","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/payments-and-defi"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
-var Details = __webpack_require__(303999);
-// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
-var PushAPIReference = __webpack_require__(303547);
-// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
-var NodeJSVirtualIDE = __webpack_require__(891517);
-// EXTERNAL MODULE: ./src/components/RemixIDE/RemixIDE.tsx
-var RemixIDE = __webpack_require__(104747);
-;// ./docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx
-
-
-const frontMatter = {
-	id: 'docs-chain-tutorials-universal-airdrop',
-	title: 'Build a Claimable Universal Airdrop',
-	hide_title: false,
-	slug: './tutorial-universal-airdrop',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 6,
-	image: '/assets/docs/previews/docs_chain_tutorials_universal_airdrop--build_a_claimable_universal_airdrop.png'
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-/*Content Start*/
-
-
-
-
-
-
-
-
-const toc = [{
-  "value": "Why Universal Airdrops?",
-  "id": "why-universal-airdrops",
-  "level": 2
-}, {
-  "value": "Understanding the <code>TestToken</code> contract",
-  "id": "understanding-the-testtoken-contract",
-  "level": 3
-}, {
-  "value": "Understanding the <code>UniversalAirdrop</code> contract",
-  "id": "understanding-the-universalairdrop-contract",
-  "level": 3
-}, {
-  "value": "How the Merkle proof works",
-  "id": "how-the-merkle-proof-works",
-  "level": 4
-}, {
-  "value": "Conclusion",
-  "id": "conclusion",
-  "level": 2
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    blockquote: "blockquote",
-    code: "code",
-    h2: "h2",
-    h3: "h3",
-    h4: "h4",
-    li: "li",
-    ol: "ol",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: `Build a Universal Airdrop: Generate Merkle Proofs, Deploy Contract, and Add a Claim UI | Tutorials | Push Chain Docs`
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Welcome! In this tutorial, you'll build a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Universal Airdrop"
-      }), " system that revolutionizes cross-chain token distribution. Unlike traditional airdrops that require deploying contracts on every blockchain, this universal approach lets you ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "deploy once on Push Chain"
-      }), " and enable users from ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "any blockchain"
-      }), " (Ethereum, Solana, Polygon, etc.) to claim their tokens seamlessly."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "why-universal-airdrops",
-      children: "Why Universal Airdrops?"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The beauty of this system lies in its efficiency and cross-chain compatibility:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Single Deployment"
-        }), ": Deploy your airdrop contract once on Push Chain instead of managing multiple contracts across different networks"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Cross-Chain Claims"
-        }), ": Users from Ethereum, Solana, Polygon, and other chains can all claim tokens from the same contract"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "No Multi-Chain Token Deployment"
-        }), ": Keep your ERC-20 token on one chain while enabling universal claiming"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "User Simplicity"
-        }), ": Recipients can claim their tokens using their preferred wallet on their own chain, making the process seamless and familiar"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "We'll build the complete flow:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Generate Merkle proofs with cross-chain recipient data"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Deploy a universal Merkle claim contract to Push Chain"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Create a UI for recipients to claim their tokens from any chain"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
-      className: "liveplaytab",
-      groupId: "send-universal-transaction-coding",
-      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
-        value: "Full Application",
-        label: "Full Application",
-        children: (0,jsx_runtime.jsx)(_components.pre, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            className: "language-jsx",
-            metastring: "live",
-            live: true,
-            children: "// customPropMinimized='true'\nimport { useState, useEffect, useCallback } from 'react';\nimport { ethers } from 'ethers';\nimport { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';\nimport { keccak256 } from 'viem';\nimport bs58 from 'bs58';\nimport {\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n  PushUniversalWalletProvider,\n} from '@pushchain/ui-kit';\nimport { PushChain } from '@pushchain/core';\n\nfunction UniversalAirdrop() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Universal Airdrop Contract ABI - Standard format for PushChain encoding\n  const AIRDROP_ABI = [\n    {\n      inputs: [\n        { internalType: 'bytes32[]', name: 'proof', type: 'bytes32[]' },\n        { internalType: 'uint256', name: 'amount', type: 'uint256' },\n        { internalType: 'string', name: 'chainNamespace', type: 'string' },\n        { internalType: 'string', name: 'chainId', type: 'string' },\n      ],\n      name: 'claim',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n  ];\n\n  // Chain options for the UI (now used only for display names)\n  const CHAIN_OPTIONS = [\n    { namespace: 'eip155', id: '11155111', name: 'Ethereum Sepolia' },\n    { namespace: 'solana', id: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1', name: 'Solana Devnet' },\n    { namespace: 'eip155', id: '42101', name: 'Push Chain Testnet' },\n  ];\n\n  // Helper function to get chain name from namespace and id\n  const getChainName = (namespace, id) => {\n    const chain = CHAIN_OPTIONS.find((chain) => chain.namespace === namespace && chain.id === id);\n    return chain ? chain.name : `${namespace}:${id}`;\n  };\n\n  // Normalize origin.chain (e.g., 'eip155:42101') to our app's namespace/id scheme\n  const normalizeChainFromOrigin = (originChain) => {\n    const [ns, chainId] = String(originChain).split(':');\n\n    // No special mapping; tree.json uses 'eip155' with id '42101'\n\n    // Default passthrough (EVM chains, Solana, etc.)\n    return { namespace: ns, id: chainId, name: getChainName(ns, chainId) };\n  };\n\n  // ---------- Helpers for Merkle tree and origin address mapping ----------\n\n  // Using bs58 package for base58 decoding; custom decoder removed\n\n  const deriveRecipientEvmAddress = (recipientRaw) => {\n    try {\n      if (recipientRaw.startsWith('0x')) {\n        return ethers.getAddress(recipientRaw);\n      }\n      const raw = Uint8Array.from(bs58.decode(recipientRaw));\n      const hashed = keccak256(raw);\n      const addressBytes = ethers.dataSlice(hashed, 12);\n      return ethers.getAddress(addressBytes);\n    } catch {\n      throw new Error('Invalid recipient for the selected chain');\n    }\n  };\n\n  const hashLeaf = (evmRecipient, chainNamespace, chainId, amount) => {\n    // Mirror merkle-proof-generator/index.ts manual packed layout\n    const recipientBytes = ethers.getBytes(evmRecipient);\n    const namespaceBytes = ethers.toUtf8Bytes(chainNamespace);\n    const chainIdBytes = ethers.toUtf8Bytes(chainId);\n    const amountHex = ethers.toBeHex(amount);\n    const amountBytes = ethers.getBytes(ethers.zeroPadValue(amountHex, 32));\n    const packed = ethers.concat([recipientBytes, namespaceBytes, chainIdBytes, amountBytes]);\n    return keccak256(packed);\n  };\n\n  function Component() {\n    // Three-step UI\n    const [currentStep, setCurrentStep] = useState(1);\n\n    // User-provided contract addresses\n    const [contractAddresses, setContractAddresses] = useState(null);\n\n    // All hooks must be called before any conditional returns\n    const [isClaiming, setIsClaiming] = useState(false);\n    const [isLoadingProof, setIsLoadingProof] = useState(false);\n    const [hasClaimed, setHasClaimed] = useState(false);\n    const [claimAmount, setClaimAmount] = useState('');\n    const [proof, setProof] = useState([]);\n    const [detectedChain, setDetectedChain] = useState(null);\n    const [entries, setEntries] = useState([]);\n    const [computedEntries, setComputedEntries] = useState([]);\n    const [merkleRoot, setMerkleRoot] = useState('');\n    const [error, setError] = useState('');\n    const [success, setSuccess] = useState('');\n\n    // Push Universal Wallet hooks\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // No external JSON loads; everything is user-provided\n    useEffect(() => {}, []);\n\n    // Detect chain when connection status changes\n    useEffect(() => {\n      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && pushChainClient) {\n        // Try to get the origin chain from the Push client\n        try {\n          console.log('Detecting origin chain from Push client...');\n          console.log('Universal object:', pushChainClient.universal);\n\n          if (pushChainClient.universal?.origin) {\n            const origin = pushChainClient.universal.origin;\n            console.log('Origin from universal.origin:', origin);\n\n            const normalized = normalizeChainFromOrigin(String(origin.chain));\n            setDetectedChain(normalized);\n            console.log('Detected chain:', normalized);\n          } else {\n            // Fallback: assume Sepolia if we can't detect\n            console.log('Could not detect origin chain, defaulting to Sepolia');\n            setDetectedChain({\n              namespace: 'eip155',\n              id: '11155111',\n              name: 'Ethereum Sepolia',\n            });\n          }\n        } catch (err) {\n          console.log('Error detecting chain:', err);\n          // Fallback: assume Sepolia\n          setDetectedChain({\n            namespace: 'eip155',\n            id: '11155111',\n            name: 'Ethereum Sepolia',\n          });\n        }\n      } else {\n        setDetectedChain(null);\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Check if address has already claimed for the selected chain\n    const checkClaimStatus = useCallback(async () => {\n      if (!contractAddresses) return;\n\n      try {\n        // For now, we'll use a simple approach - in production you'd use the client's provider\n        // This is a simplified version; you might need to adapt based on pushChainClient API\n        console.log('Checking claim status with Push Chain client');\n        // TODO: Implement claim status check using pushChainClient\n      } catch (err) {\n        console.error('Error checking claim status:', err);\n      }\n    }, [contractAddresses]);\n\n    // Load user's proof from computed entries\n    const loadUserProof = useCallback(async () => {\n      if (!pushChainClient) {\n        setError('Wallet not connected');\n        return;\n      }\n\n      setIsLoadingProof(true);\n      setError('');\n      setSuccess('');\n\n      try {\n        if (!Array.isArray(computedEntries) || computedEntries.length === 0) {\n          setError('Please generate the Merkle tree in Step 1 first');\n          return;\n        }\n\n        console.log('computedEntries', computedEntries);\n        console.log('pushChainClient.universal', pushChainClient.universal);\n\n        let currentLookupAddress;\n        const origin = pushChainClient.universal?.origin;\n        console.log('origin', origin);\n        if (origin?.address) {\n          currentLookupAddress = origin.address;\n          console.log('Using origin address for lookup:', currentLookupAddress);\n        } else {\n          currentLookupAddress = pushChainClient.universal.account;\n          console.log('Origin not available, using UEA address for lookup:', currentLookupAddress);\n        }\n\n        if (!currentLookupAddress) {\n          setError('Unable to determine lookup address from Push Chain client');\n          return;\n        }\n\n        console.log('Using lookup address:', currentLookupAddress);\n        console.log('Detected chain:', detectedChain);\n\n        if (!detectedChain) {\n          setError('Could not detect your origin chain. Please try reconnecting your wallet.');\n          return;\n        }\n\n        const userEntry = computedEntries.find(\n          (entry) =>\n            entry.recipient.toLowerCase() === currentLookupAddress.toLowerCase() &&\n            entry.chainNamespace === detectedChain.namespace &&\n            entry.chainId === detectedChain.id\n        );\n\n        console.log('userEntry', userEntry);\n\n        if (userEntry) {\n          setProof(userEntry.proof);\n          setClaimAmount(ethers.formatEther(userEntry.amountWei));\n          setError('');\n          setSuccess(`Found your proof for ${detectedChain.name}!`);\n        } else {\n          setError(\n            `No proof found for address ${currentLookupAddress.slice(0, 6)}...${currentLookupAddress.slice(-4)} on ${\n              detectedChain.name\n            }.`\n          );\n        }\n      } catch (err) {\n        setError('Failed to load proof data');\n        console.error('Error loading proof:', err);\n      } finally {\n        setIsLoadingProof(false);\n      }\n    }, [computedEntries, pushChainClient, detectedChain]);\n\n    // Check claim status and auto-load proof when detected chain changes\n    useEffect(() => {\n      if (\n        connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&\n        pushChainClient &&\n        contractAddresses &&\n        detectedChain &&\n        computedEntries.length > 0\n      ) {\n        checkClaimStatus();\n        loadUserProof();\n      }\n    }, [\n      detectedChain,\n      connectionStatus,\n      pushChainClient,\n      contractAddresses,\n      computedEntries,\n      checkClaimStatus,\n      loadUserProof,\n    ]);\n\n    // Step helpers\n    const [newRecipient, setNewRecipient] = useState('');\n    const [newChainNamespace, setNewChainNamespace] = useState('eip155');\n    const [newChainId, setNewChainId] = useState('11155111');\n    const [newAmount, setNewAmount] = useState('');\n\n    const addEntry = () => {\n      setError('');\n      try {\n        if (!newRecipient || !newAmount) {\n          setError('Please enter recipient and amount');\n          return;\n        }\n        // quick validation\n        if (newChainNamespace === 'eip155' && !/^0x[0-9a-fA-F]{40}$/.test(newRecipient)) {\n          setError('Invalid EVM address');\n          return;\n        }\n        if (Number(newAmount) <= 0) {\n          setError('Amount must be greater than 0');\n          return;\n        }\n        setEntries((prev) => [\n          ...prev,\n          {\n            recipient: newRecipient.trim(),\n            chainNamespace: newChainNamespace,\n            chainId: newChainId,\n            amount: newAmount.trim(),\n          },\n        ]);\n        setNewRecipient('');\n        setNewAmount('');\n      } catch (e) {\n        const msg = e instanceof Error ? e.message : 'Failed to add entry';\n        setError(msg);\n      }\n    };\n\n    const removeEntry = (idx) => {\n      setEntries((prev) => prev.filter((_, i) => i !== idx));\n    };\n\n    const generateMerkle = () => {\n      try {\n        setError('');\n        setSuccess('');\n        if (entries.length === 0) {\n          setError('Add at least one entry');\n          return;\n        }\n        const computed = [];\n\n        // build computed entries (unsorted)\n        for (const entry of entries) {\n          const derived = deriveRecipientEvmAddress(entry.recipient);\n          const wei = ethers.parseEther(entry.amount);\n          const leaf = hashLeaf(derived, entry.chainNamespace, entry.chainId, wei);\n          computed.push({\n            recipient: entry.recipient,\n            chainNamespace: entry.chainNamespace,\n            chainId: entry.chainId,\n            amount: entry.amount,\n            amountWei: wei,\n            derivedRecipient: derived,\n            leaf,\n            proof: [],\n          });\n        }\n\n        // Sort deterministically by leaf to make root independent of input order\n        computed.sort((a, b) => a.leaf.localeCompare(b.leaf));\n        const leaves = computed.map((c) => c.leaf);\n\n        const tree = makeMerkleTree(leaves);\n        const root = tree[0];\n\n        for (let i = 0; i < computed.length; i++) {\n          const leafTreeIndex = tree.length - 1 - i;\n          computed[i].proof = getProof(tree, leafTreeIndex);\n        }\n\n        setComputedEntries(computed);\n        setMerkleRoot(root);\n        setSuccess('Merkle tree generated');\n        setCurrentStep(2);\n      } catch (e) {\n        const msg = e instanceof Error ? e.message : 'Failed to generate Merkle tree';\n        setError(msg);\n      }\n    };\n\n    // Claim tokens using Push Universal Transaction\n    const claimTokens = async () => {\n      if (!pushChainClient || !contractAddresses || !detectedChain) return;\n      if (!claimAmount) {\n        setError('Please check eligibility to load your claim amount');\n        return;\n      }\n\n      setIsClaiming(true);\n      setError('');\n      setSuccess('');\n\n      try {\n        const amount = ethers.parseEther(claimAmount);\n\n        // Encode the claim function call\n        const claimData = PushChain.utils.helpers.encodeTxData({\n          abi: AIRDROP_ABI,\n          functionName: 'claim',\n          args: [proof, amount, detectedChain.namespace, detectedChain.id],\n        });\n\n        console.log('proof', proof);\n        console.log('amount', amount);\n        console.log('claimData', claimData);\n\n        // Send universal transaction using Push Chain client\n        const tx = await pushChainClient.universal.sendTransaction({\n          to: contractAddresses.airdropAddress,\n          data: claimData,\n          value: BigInt('0'), // No PC value needed for claim\n        });\n        console.log('tx', tx);\n        const receipt = await tx.wait();\n        console.log('receipt', receipt);\n\n        setSuccess(`Tokens claimed successfully from ${detectedChain.name}! Transaction: ${tx.hash}`);\n        setHasClaimed(true);\n\n        // TODO: Update balance using pushChainClient\n      } catch (err) {\n        const msg = err instanceof Error ? err.message : 'Claim failed';\n        setError(msg);\n        console.error('Claim error:', err);\n      } finally {\n        setIsClaiming(false);\n      }\n    };\n\n    return (\n      <div\n        style={{\n          maxWidth: '500px',\n          margin: '0 auto',\n          padding: '20px',\n          fontFamily: 'system-ui, sans-serif',\n        }}\n      >\n        <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Universal Airdrop</h1>\n        <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>\n          Claim tokens using Push Chain's Universal External Accounts\n        </p>\n\n        <div style={{ marginBottom: '30px' }}>\n          <PushUniversalAccountButton />\n        </div>\n\n        {/* Steps */}\n        <div style={{ marginBottom: '24px', display: 'flex', gap: '8px', justifyContent: 'center' }}>\n          {[1, 2, 3].map((s) => (\n            <div\n              key={s}\n              style={{\n                width: '28px',\n                height: '28px',\n                borderRadius: '50%',\n                backgroundColor: currentStep >= s ? '#646cff' : '#e0e0e0',\n                color: currentStep >= s ? '#fff' : '#555',\n                display: 'flex',\n                alignItems: 'center',\n                justifyContent: 'center',\n                fontWeight: 'bold',\n                fontSize: '14px',\n              }}\n            >\n              {s}\n            </div>\n          ))}\n        </div>\n\n        {/* Step 1: Build Merkle tree */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 1: Create airdrop entries & generate proof</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>\n            <input\n              placeholder=\"Recipient address (0x... or Solana base58)\"\n              value={newRecipient}\n              onChange={(e) => setNewRecipient(e.target.value)}\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <div style={{ display: 'flex', gap: '8px' }}>\n              <select\n                value={newChainNamespace}\n                onChange={(e) => {\n                  const ns = e.target.value;\n                  setNewChainNamespace(ns);\n                  // default chain id based on ns\n                  if (ns === 'solana') setNewChainId('EtWTRABZaYq6iMfeYKouRu166VU2xqa1');\n                  else setNewChainId('11155111');\n                }}\n                style={{ flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n              >\n                <option value=\"eip155\">EVM (eip155)</option>\n                <option value=\"solana\">Solana</option>\n              </select>\n              <select\n                value={newChainId}\n                onChange={(e) => setNewChainId(e.target.value)}\n                style={{ flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n              >\n                <option value=\"11155111\">Ethereum Sepolia</option>\n                <option value=\"42101\">Push Chain Testnet</option>\n                <option value=\"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\">Solana Devnet</option>\n              </select>\n            </div>\n            <input\n              placeholder=\"Amount (tokens)\"\n              value={newAmount}\n              onChange={(e) => setNewAmount(e.target.value)}\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <button\n              onClick={addEntry}\n              style={{\n                width: '100%',\n                padding: '12px',\n                fontWeight: 'bold',\n                backgroundColor: '#646cff',\n                color: 'white',\n                border: 'none',\n                borderRadius: '8px',\n                cursor: 'pointer',\n              }}\n            >\n              ➕ Add Entry\n            </button>\n          </div>\n\n          {entries.length > 0 && (\n            <div style={{ marginTop: '12px' }}>\n              {entries.map((e, i) => (\n                <div\n                  key={`${e.recipient}-${i}`}\n                  style={{\n                    display: 'flex',\n                    justifyContent: 'space-between',\n                    alignItems: 'center',\n                    padding: '8px',\n                    border: '1px solid #eee',\n                    borderRadius: '6px',\n                    marginBottom: '8px',\n                    fontSize: '12px',\n                  }}\n                >\n                  <div>\n                    <div style={{ fontFamily: 'monospace' }}>{e.recipient}</div>\n                    <div style={{ color: '#666' }}>\n                      {e.chainNamespace}:{e.chainId} · {e.amount} tokens\n                    </div>\n                  </div>\n                  <button\n                    onClick={() => removeEntry(i)}\n                    style={{ background: 'transparent', border: 'none', color: '#c62828', cursor: 'pointer' }}\n                  >\n                    ✖\n                  </button>\n                </div>\n              ))}\n              <button\n                onClick={generateMerkle}\n                style={{\n                  width: '100%',\n                  padding: '12px',\n                  fontWeight: 'bold',\n                  backgroundColor: '#2e7d32',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '8px',\n                  cursor: 'pointer',\n                  marginTop: '8px',\n                }}\n              >\n                🌳 Generate Merkle Tree\n              </button>\n              {merkleRoot && (\n                <div style={{ marginTop: '10px', fontSize: '12px' }}>\n                  <div style={{ color: '#666' }}>Merkle Root:</div>\n                  <div style={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>{merkleRoot}</div>\n                </div>\n              )}\n            </div>\n          )}\n        </div>\n\n        {/* Step 2: Contract addresses */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 2: Enter contract addresses</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>\n            <input\n              placeholder=\"Token contract address (0x...)\"\n              value={contractAddresses?.tokenAddress || ''}\n              onChange={(e) =>\n                setContractAddresses({\n                  tokenAddress: e.target.value,\n                  airdropAddress: contractAddresses?.airdropAddress || '',\n                })\n              }\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <input\n              placeholder=\"Airdrop (Merkle) contract address (0x...)\"\n              value={contractAddresses?.airdropAddress || ''}\n              onChange={(e) =>\n                setContractAddresses({\n                  tokenAddress: contractAddresses?.tokenAddress || '',\n                  airdropAddress: e.target.value,\n                })\n              }\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <button\n              onClick={() => setCurrentStep(3)}\n              disabled={!merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress}\n              style={{\n                width: '100%',\n                padding: '12px',\n                fontWeight: 'bold',\n                backgroundColor:\n                  !merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress\n                    ? '#ccc'\n                    : '#646cff',\n                color: 'white',\n                border: 'none',\n                borderRadius: '8px',\n                cursor:\n                  !merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress\n                    ? 'not-allowed'\n                    : 'pointer',\n              }}\n            >\n              Continue to Step 3\n            </button>\n          </div>\n        </div>\n\n        {/* Step 3: Eligibility & Claim */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 3: Check eligibility & claim</h3>\n          {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED ? (\n            <div>\n              <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                <p style={{ marginBottom: '5px', fontSize: '14px', color: '#666' }}>Connected Account</p>\n                <p style={{ fontFamily: 'monospace', fontSize: '14px' }}>\n                  {pushChainClient?.universal?.account?.slice(0, 8)}...{pushChainClient?.universal?.account?.slice(-6)}\n                </p>\n              </div>\n\n              <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                <p style={{ marginBottom: '5px', fontSize: '14px', color: '#666' }}>Origin Chain</p>\n                <p style={{ fontWeight: 'bold' }}>{detectedChain ? detectedChain.name : 'Detecting...'}</p>\n              </div>\n\n              {hasClaimed ? (\n                <div\n                  style={{\n                    padding: '16px',\n                    backgroundColor: '#4CAF50',\n                    color: 'white',\n                    borderRadius: '8px',\n                    textAlign: 'center',\n                  }}\n                >\n                  ✅ Tokens claimed successfully!\n                </div>\n              ) : (\n                <div>\n                  <button\n                    onClick={loadUserProof}\n                    disabled={isLoadingProof || !merkleRoot}\n                    style={{\n                      width: '100%',\n                      padding: '12px',\n                      fontWeight: 'bold',\n                      backgroundColor: isLoadingProof || !merkleRoot ? '#ccc' : '#2196F3',\n                      color: 'white',\n                      border: 'none',\n                      borderRadius: '8px',\n                      cursor: isLoadingProof || !merkleRoot ? 'not-allowed' : 'pointer',\n                      marginBottom: '12px',\n                    }}\n                  >\n                    {isLoadingProof ? '⏳ Loading Your Proof...' : '🔍 Check Eligibility'}\n                  </button>\n\n                  {!isLoadingProof && !claimAmount && (\n                    <div\n                      style={{\n                        padding: '16px',\n                        backgroundColor: '#fff3cd',\n                        color: '#856404',\n                        borderRadius: '6px',\n                        marginBottom: '16px',\n                        textAlign: 'center',\n                      }}\n                    >\n                      ⚠️ No tokens available to claim on this chain\n                    </div>\n                  )}\n\n                  {claimAmount && (\n                    <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                      <div\n                        style={{\n                          display: 'inline-block',\n                          backgroundColor: '#f0f8ff',\n                          padding: '12px 20px',\n                          borderRadius: '8px',\n                          border: '2px solid #646cff',\n                        }}\n                      >\n                        <p style={{ margin: '0 0 4px 0', fontSize: '12px', color: '#666', fontWeight: 'bold' }}>\n                          CLAIM AMOUNT\n                        </p>\n                        <p style={{ margin: 0, fontSize: '24px', fontWeight: 'bold', color: '#646cff' }}>\n                          {claimAmount} <span style={{ fontSize: '16px', color: '#666' }}>TOKENS</span>\n                        </p>\n                      </div>\n                    </div>\n                  )}\n\n                  <button\n                    onClick={claimTokens}\n                    disabled={isClaiming || isLoadingProof || !claimAmount}\n                    style={{\n                      width: '100%',\n                      padding: '16px',\n                      fontSize: '18px',\n                      fontWeight: 'bold',\n                      backgroundColor: isClaiming || isLoadingProof || !claimAmount ? '#ccc' : '#646cff',\n                      color: 'white',\n                      border: 'none',\n                      borderRadius: '8px',\n                      cursor: isClaiming || isLoadingProof || !claimAmount ? 'not-allowed' : 'pointer',\n                      transition: 'all 0.2s ease',\n                      transform: isClaiming || isLoadingProof || !claimAmount ? 'none' : 'scale(1)',\n                      boxShadow:\n                        isClaiming || isLoadingProof || !claimAmount ? 'none' : '0 4px 12px rgba(100, 108, 255, 0.3)',\n                    }}\n                  >\n                    {isClaiming ? '⏳ Claiming Tokens...' : `🚀 Claim ${claimAmount || '0'} Tokens`}\n                  </button>\n                </div>\n              )}\n            </div>\n          ) : (\n            <div style={{ padding: '12px', background: '#fff3cd', color: '#856404', borderRadius: '6px' }}>\n              Connect your wallet to check eligibility\n            </div>\n          )}\n        </div>\n\n        {error && (\n          <div\n            style={{\n              padding: '12px',\n              backgroundColor: '#ffebee',\n              color: '#c62828',\n              borderRadius: '6px',\n              marginTop: '20px',\n              textAlign: 'center',\n            }}\n          >\n            {error}\n          </div>\n        )}\n\n        {success && (\n          <div\n            style={{\n              padding: '12px',\n              backgroundColor: '#e8f5e8',\n              color: '#2e7d32',\n              borderRadius: '6px',\n              marginTop: '20px',\n              textAlign: 'center',\n            }}\n          >\n            {success}\n          </div>\n        )}\n\n        <div style={{ marginTop: '30px', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>\n          <p style={{ fontSize: '14px', color: '#666', margin: 0, textAlign: 'center' }}>\n            Build your airdrop list, enter contract addresses, then connect and claim\n          </p>\n        </div>\n      </div>\n    );\n  }\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
-          })
-        })
-      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "Deploy ERC-20 Token",
-        label: "Deploy ERC-20 Token",
-        children: [(0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "TestToken"
-          }), " contract on Remix below:"]
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "Set the Solidity compiler version to 0.8.22 in Remix."
-          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "For Environment, choose Injected Provider (connect your wallet to Push Chain Donut Testnet)."
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["When deploying ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "TestToken"
-            }), ", pass constructor arguments: token name and symbol (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "TestToken"
-            }), " and ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "TEST"
-            }), ")."]
-          }), "\n"]
-        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Note:"
-            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "$PC"
-            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://faucet.push.org/",
-              children: "Push Chain Faucet"
-            }), "."]
-          }), "\n"]
-        }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
-          examples: {
-            'TestToken.sol': {
-              absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/TestToken.sol',
-              ctaTitle: 'View on GitHub',
-              ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/TestToken.sol'
-            }
-          }
-        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
-          id: "understanding-the-testtoken-contract",
-          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "TestToken"
-          }), " contract"]
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Inherits from ERC20"
-            }), ": Uses OpenZeppelin's battle-tested ERC20 implementation"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Constructor"
-            }), ": Mints 1 million tokens to the deployer upon creation"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Mint function"
-            }), ": Allows additional tokens to be minted (useful for testing)"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Standard ERC20 features"
-            }), ": Transfer, balance checking, approvals, etc."]
-          }), "\n"]
-        })]
-      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "Deploy Universal Airdrop",
-        label: "Deploy Universal Airdrop",
-        children: [(0,jsx_runtime.jsxs)(_components.p, {
-          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "UniversalAirdrop"
-          }), " contract on Remix below:"]
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "Set the Solidity compiler version to 0.8.22 in Remix."
-          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "For Environment, choose Injected Provider (connect your wallet to Push Chain Donut Testnet)."
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["When deploying ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "UniversalAirdrop"
-            }), ", pass constructor arguments: ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "token address deployed in the previous step and merkle root you can get from the next step"
-            }), "."]
-          }), "\n"]
-        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Note:"
-            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "$PC"
-            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
-              href: "https://faucet.push.org/",
-              children: "Push Chain Faucet"
-            }), "."]
-          }), "\n"]
-        }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
-          examples: {
-            'UniversalAirdrop.sol': {
-              absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/UniversalAirdrop.sol',
-              ctaTitle: 'View on GitHub',
-              ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/UniversalAirdrop.sol'
-            }
-          }
-        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
-          id: "understanding-the-universalairdrop-contract",
-          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "UniversalAirdrop"
-          }), " contract"]
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Merkle Proof Verification"
-            }), ": Uses OpenZeppelin's ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "MerkleProof.verify()"
-            }), " to validate inclusion proofs"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Universal Support"
-            }), ": Accepts any recipient address format (the proof generation handles the conversion)"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Reentrancy Protection"
-            }), ": Uses ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "ReentrancyGuard"
-            }), " to prevent reentrancy attacks"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Claim Tracking"
-            }), ": Maps claim IDs (address + origin chain) to prevent double claims per recipient per origin chain"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.strong, {
-              children: "Owner Controls"
-            }), ": Allows updating the Merkle root for future airdrop rounds"]
-          }), "\n"]
-        })]
-      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
-        value: "Generate Merkle Tree",
-        label: "Generate Merkle Tree",
-        children: [(0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.p, {
-          children: "In this part, we'll create a Merkle proof generator that produces cryptographic proofs for a universal airdrop system. This generator will create a Merkle tree from recipient data and generate proofs that can be verified on-chain."
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "The dependencies you'll need for the Merkle proof generator:"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "@openzeppelin/merkle-tree"
-            }), ": Core library for building Merkle trees with cryptographic hashing"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "viem"
-            }), ": Ethereum library providing ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "keccak256"
-            }), " hashing and ABI encoding utilities"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "bs58"
-            }), ": Base58 encoding/decoding library for Solana addresses"]
-          }), "\n"]
-        }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-          repo: {
-            title: "Open in Github",
-            url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/scripts/merkle-proof-generator.ts"
-          },
-          children: `
-
-  import { keccak256 } from 'viem';
-  import { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';
-  import bs58 from 'bs58';
-
-  // Hardcoded airdrop data
-  const AIRDROP_ENTRIES = [
-    {
-      recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
-      chainNamespace: 'eip155',
-      chainId: '42101',
-      amount: '10000000000000000000',
-    },
-    {
-      recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
-      chainNamespace: 'eip155',
-      chainId: '11155111',
-      amount: '10000000000000000000',
-    },
-    {
-      recipient: '72JBejJFXrRKpQ69Hmaqr7vWJr6pdZXFEL6jt3sadsXU',
-      chainNamespace: 'solana',
-      chainId: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1',
-      amount: '10000000000000000000',
-    },
-  ];
-
-  /**
-   * Generate a leaf hash matching the Solidity contract
-   * leaf = keccak256(abi.encodePacked(recipientOnPush, chainNamespace, chainId, amount))
-   */
-  function generateLeaf(entry) {
-    const { recipient, chainNamespace, chainId, amount } = entry;
-
-    // Normalize recipient address:
-    // - If hex 0x address (length 42), parse as 20-byte address
-    // - Else treat as base58 (e.g., Solana), hash bytes and take last 20 bytes
-    let recipientAddressHex;
-    if (recipient.startsWith('0x')) {
-      const addr = recipient.toLowerCase();
-      const addressBytes = addr.slice(2).padStart(40, '0');
-      recipientAddressHex = addressBytes;
-    } else {
-      const raw = Buffer.from(bs58.decode(recipient));
-      const hashed = Buffer.from(keccak256('0x' + raw.toString('hex')).slice(2), 'hex');
-      const last20 = hashed.slice(-20);
-      recipientAddressHex = last20.toString('hex');
-    }
-
-    const namespaceBytes = Buffer.from(chainNamespace, 'utf8');
-    const chainIdBytes = Buffer.from(chainId, 'utf8');
-    const amountBytes = Buffer.alloc(32);
-    amountBytes.writeBigUInt64BE(BigInt(amount), 24);
-
-    const packedBytes = Buffer.concat([
-      Buffer.from(recipientAddressHex, 'hex'),
-      namespaceBytes,
-      chainIdBytes,
-      amountBytes,
-    ]);
-
-    return keccak256('0x' + packedBytes.toString('hex'));
-  }
-
-  /**
-   * Build Merkle tree from airdrop entries
-   */
-  function buildMerkleTree(entries) {
-    // Generate leaves
-    const leaves = entries.map((entry) => generateLeaf(entry));
-
-    // Pair entries with leaves and sort deterministically by leaf.
-    // This makes the Merkle root independent of input order (matches frontend UI behavior).
-    const paired = entries.map((entry, i) => ({ entry, leaf: leaves[i] }));
-    paired.sort((a, b) => a.leaf.localeCompare(b.leaf));
-    const sortedLeaves = paired.map((p) => p.leaf);
-
-    // Create Merkle tree with sorted node hashing (default)
-    const tree = makeMerkleTree(sortedLeaves);
-    const merkleRoot = tree[0];
-
-    // Generate proofs for each entry based on sorted leaf order
-    const entriesWithProofs = paired.map((p, index) => {
-      const leafIndex = tree.length - 1 - index;
-      const proof = getProof(tree, leafIndex);
-
-      return {
-        ...p.entry,
-        leaf: p.leaf,
-        proof,
-      };
-    });
-
-    return {
-      merkleRoot,
-      entries: entriesWithProofs,
-    };
-  }
-
-  /**
-   * Print summary of the airdrop data
-   */
-  function printSummary(treeData) {
-    const { entries, merkleRoot } = treeData;
-
-    console.log('🌳 Universal Airdrop Merkle Tree Summary');
-    console.log('=====================================');
-    console.log('📁 Merkle Root: ' + merkleRoot);
-    console.log('👥 Total Recipients: ' + entries.length);
-
-    // Calculate totals per chain namespace
-    const chainStats = entries.reduce((acc, entry) => {
-      const key = entry.chainNamespace + ':' + entry.chainId;
-      if (!acc[key]) {
-        acc[key] = { count: 0, totalAmount: BigInt(0) };
-      }
-      acc[key].count += 1;
-      acc[key].totalAmount += BigInt(entry.amount);
-      return acc;
-    }, {});
-
-    console.log('📊 Per-Chain Breakdown:');
-    Object.entries(chainStats).forEach(([chain, stats]) => {
-      console.log('  ' + chain + ': ' + stats.count + ' recipients, ' + stats.totalAmount.toString() + ' tokens');
-    });
-
-    // Calculate total amount
-    const totalAmount = entries.reduce((sum, entry) => sum + BigInt(entry.amount), BigInt(0));
-    console.log('💰 Total Airdrop Amount: ' + totalAmount.toString() + ' tokens');
-  }
-
-  // Main execution
-  async function main() {
-    // Use hardcoded airdrop entries
-    const entries = AIRDROP_ENTRIES;
-
-    // Validate entries
-    for (const entry of entries) {
-      const isHex = entry.recipient.startsWith('0x') && entry.recipient.length === 42;
-      const isBase58 = !entry.recipient.startsWith('0x');
-      if (!isHex && !isBase58) {
-        throw new Error('Invalid recipient: ' + entry.recipient + ' (must be 0x-address or base58)');
-      }
-      if (!entry.chainNamespace || !entry.chainId) {
-        throw new Error('Missing chain info for ' + entry.recipient);
-      }
-      if (isNaN(parseInt(entry.amount)) || BigInt(entry.amount) <= 0) {
-        throw new Error('Invalid amount for ' + entry.recipient + ': ' + entry.amount);
-      }
-    }
-
-    console.log('🔨 Building Merkle tree for ' + entries.length + ' recipients...');
-
-    // Build Merkle tree
-    const treeData = buildMerkleTree(entries);
-
-    // Output Merkle tree data to console instead of writing to a file
-    console.log(JSON.stringify(treeData, null, 2));
-    console.log('✅ Merkle tree built successfully!');
-
-    // Print summary
-    printSummary(treeData);
-  }
-
-  main().catch(console.error);
-
-                                                                                                                                
-`
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "Each entry in the array represents a recipient with:"
-        }), (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "recipient"
-            }), ": Wallet address (format varies by blockchain)"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "chainNamespace"
-            }), ": Blockchain type (\"eip155\", \"solana\", \"push\", etc.)"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "chainId"
-            }), ": Specific chain identifier within that namespace"]
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "amount"
-            }), ": Token amount in smallest units (as string to avoid precision issues)"]
-          }), "\n"]
-        }), (0,jsx_runtime.jsx)(_components.h4, {
-          id: "how-the-merkle-proof-works",
-          children: "How the Merkle proof works"
-        }), (0,jsx_runtime.jsx)(_components.p, {
-          children: "The proof allows anyone to verify that a specific recipient is included in the airdrop without revealing the entire recipient list. The smart contract can verify the proof by:"
-        }), (0,jsx_runtime.jsxs)(_components.ol, {
-          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "Recalculating the leaf hash from the recipient's data"
-          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-            children: "Using the provided proof hashes to reconstruct the path to the root"
-          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: ["Comparing the reconstructed root with the stored ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "merkleRoot"
-            })]
-          }), "\n"]
-        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-            children: ["✅ ", (0,jsx_runtime.jsx)(_components.strong, {
-              children: "Next steps"
-            }), ": You'll use the ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "merkleRoot"
-            }), " when deploying the UniversalAirdrop contract, and the frontend will use each recipient's ", (0,jsx_runtime.jsx)(_components.code, {
-              children: "proof"
-            }), " array to submit claims on-chain."]
-          }), "\n"]
-        })]
-      })]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conclusion",
-      children: "Conclusion"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["You generated ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Merkle proofs"
-      }), " from an airdrop list, deployed a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Universal Merkle‑verified airdrop contract"
-      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Push Chain Donut Testnet"
-      }), ", and added a ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "claim UI"
-      }), ". With this universal airdrop system, users from different chains can claim their tokens seamlessly using Push Chain's Universal External Accounts (UEA) system."]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
 
 /***/ }),
 
@@ -1249,6 +568,342 @@ role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===v
 return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
 // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
 ,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
+
+/***/ }),
+
+/***/ 424881:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_01_basics_03_tutorial_mint_erc_20_tokens_mdx_efe_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-01-basics-03-tutorial-mint-erc-20-tokens-mdx-efe.json
+const site_docs_chain_01_tutorials_01_basics_03_tutorial_mint_erc_20_tokens_mdx_efe_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/basics/docs-chain-tutorials-mint-erc-20-tokens","title":"Mint Universal ERC-20 Tokens","description":"Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/01-basics/03-Tutorial-Mint-ERC-20-Tokens.mdx","sourceDirName":"chain/01-tutorials/01-basics","slug":"/chain/tutorials/basics/tutorial-mint-erc-20-tokens","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/01-basics/03-Tutorial-Mint-ERC-20-Tokens.mdx","tags":[],"version":"current","sidebarPosition":3,"frontMatter":{"id":"docs-chain-tutorials-mint-erc-20-tokens","title":"Mint Universal ERC-20 Tokens","hide_title":false,"slug":"./tutorial-mint-erc-20-tokens","displayed_sidebar":"pushChainSidebar","sidebar_position":3,"image":"/assets/docs/previews/docs_chain_tutorials_mint_erc_20_tokens--mint_universal_erc-20_tokens.png"},"sidebar":"pushChainSidebar","previous":{"title":"Build a Universal Counter App","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-universal-counter"},"next":{"title":"Tokens and Airdrops","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/IFrameModal/IFrameModal.tsx
+var IFrameModal = __webpack_require__(602999);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+// EXTERNAL MODULE: ./src/components/TutorialTimer/index.ts + 1 modules
+var TutorialTimer = __webpack_require__(546772);
+// EXTERNAL MODULE: ./src/components/SolidityCode/index.ts + 1 modules
+var SolidityCode = __webpack_require__(531836);
+// EXTERNAL MODULE: ./src/components/GitHubRepo/index.ts + 1 modules
+var GitHubRepo = __webpack_require__(531855);
+;// ./docs/chain/01-tutorials/01-basics/03-Tutorial-Mint-ERC-20-Tokens.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-tutorials-mint-erc-20-tokens',
+	title: 'Mint Universal ERC-20 Tokens',
+	hide_title: false,
+	slug: './tutorial-mint-erc-20-tokens',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 3,
+	image: '/assets/docs/previews/docs_chain_tutorials_mint_erc_20_tokens--mint_universal_erc-20_tokens.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Write the Contract",
+  "id": "write-the-contract",
+  "level": 2
+}, {
+  "value": "Understanding the Contract",
+  "id": "understanding-the-contract",
+  "level": 2
+}, {
+  "value": "Compile &amp; Deploy",
+  "id": "compile--deploy",
+  "level": 2
+}, {
+  "value": "Verify Contract",
+  "id": "verify-contract",
+  "level": 2
+}, {
+  "value": "Interact with Universal ERC-20 Token",
+  "id": "interact-with-universal-erc-20-token",
+  "level": 2
+}, {
+  "value": "Live Playground",
+  "id": "live-playground",
+  "level": 2
+}, {
+  "value": "Source Code",
+  "id": "source-code",
+  "level": 2
+}, {
+  "value": "What we Achieved",
+  "id": "what-we-achieved",
+  "level": 2
+}, {
+  "value": "Next Tutorial",
+  "id": "next-tutorial",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    blockquote: "blockquote",
+    br: "br",
+    code: "code",
+    em: "em",
+    h2: "h2",
+    hr: "hr",
+    li: "li",
+    mermaid: "mermaid",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(TutorialTimer/* default */.A, {
+      estimatedMinutes: 10
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In this tutorial, you'll create, deploy, and interact with a simple ERC-20 token on Push Chain. The main difference is that this ERC-20 token is a universal token that can be minted by anyone on any chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "By the end of this tutorial you’ll be able to:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["✅ Build a universal ERC-20 token, we will call it ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "$UNICORN"
+        }), "."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "✅ Have users from any chain connect and interact with it."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "write-the-contract",
+      children: "Write the Contract"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["We will start with taking the ERC-20 contract from OpenZeppelin. The only change we will make is removing the restriction of ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "onlyOwner"
+      }), " modifier in the functionality of minting new tokens."]
+    }), "\n", (0,jsx_runtime.jsx)(SolidityCode/* SolidityCode */.L, {
+      title: "Universal ERC-20 Contract",
+      fileName: "ERC20.sol",
+      url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-erc-20-mint/contracts/src/ERC20.sol",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-solidity",
+          children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.22;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract Token is ERC20 {\n    constructor(string memory name, string memory symbol) ERC20(name, symbol) {\n        _mint(msg.sender, 1_000_000 * 10 ** decimals());\n    }\n\n    function mint(address to, uint256 amount) external {\n        _mint(to, amount);\n    }\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "understanding-the-contract",
+      children: "Understanding the Contract"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This contract is a simple ERC-20 token:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "We are minting 1,000,000 tokens with 18 decimals and giving it to the deployer of the contract."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["We have removed ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "onlyOwner"
+        }), " from ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "mint()"
+        }), " function in order to enable anyone to mint freely from this contract."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "compile--deploy",
+      children: "Compile & Deploy"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "You can use any of the following guides to build and deploy this contract on Push Chain:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://remix.ethereum.org/",
+          children: "Remix IDE"
+        })
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/smart-contract-environment/configure-foundry/",
+          children: "Foundry Configuration"
+        })
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/smart-contract-environment/configure-hardhat/",
+          children: "Hardhat Configuration"
+        })
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Once deployed, you can interact with the ERC-20 contract just like on any other EVM-compatible chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "verify-contract",
+      children: "Verify Contract"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["If you are using Foundry or Hardhat, the contract is already verified for you. If you are using Remix, you can verify the contract on the Push Chain Explorer by going to ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://donut.push.network/contract-verification",
+        children: "verify and publish contract"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "interact-with-universal-erc-20-token",
+      children: "Interact with Universal ERC-20 Token"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The Universal ERC-20 contract is deployed on Push Chain Testnet.", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "This app lets any user — whether on Ethereum, Solana, or Push Chain — mint ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "$UNICORN"
+      }), " tokens directly from the frontend."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Demo Token ERC-20 Contract Address:"
+        }), " ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://donut.push.network/address/0x0165878A594ca255338adfa4d48449f69242Eb8F?tab=contract",
+          children: "0x0165878A594ca255338adfa4d48449f69242Eb8F"
+        })]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Steps to interact:"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Connect your wallet (Ethereum, Solana, or Push Chain)."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Click the ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Mint Token"
+        }), " button — this calls the ERC-20’s ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "mint()"
+        }), " function through Push Universal Transactions."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Wait for the transaction to confirm."
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Your ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "$UNICORN"
+        }), " balance will update in the UI automatically."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["(Optional) Click ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "View in Explorer"
+        }), " to inspect the transaction on Push Chain Explorer."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.hr, {}), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["💡 ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Tip: Why this matters"
+        }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", "This is the simplest form of a ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Universal Token"
+        }), ".", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "Without bridges or wrapped assets, users on ", (0,jsx_runtime.jsx)(_components.em, {
+          children: "any chain"
+        }), " can mint and hold the same ERC-20 natively on Push Chain."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "live-playground",
+      children: "Live Playground"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-jsx",
+        metastring: "live",
+        live: true,
+        children: "// customPropMinimized='true'\nimport React, { useEffect, useState } from \"react\";\nimport { ethers } from \"ethers\";\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from \"@pushchain/ui-kit\";\n\nfunction UniversalMintExample() {\n  // Wallet config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define ERC-20 ABI, taking minimal ABI for the demo\n  const ERC20ABI = [\n    {\n      \"inputs\": [\n        { \"name\": \"to\", \"type\": \"address\" },\n        { \"name\": \"amount\", \"type\": \"uint256\" }\n      ],\n      \"name\": \"mint\",\n      \"outputs\": [],\n      \"stateMutability\": \"nonpayable\",\n      \"type\": \"function\"\n    },\n    {\n      \"inputs\": [\n        { \"name\": \"account\", \"type\": \"address\" }\n      ],\n      \"name\": \"balanceOf\",\n      \"outputs\": [\n        { \"name\": \"\", \"type\": \"uint256\" }\n      ],\n      \"stateMutability\": \"view\",\n      \"type\": \"function\"\n    }\n  ];\n\n  // ERC-20 deployed on Push Chain Testnet\n  const CONTRACT_ADDRESS = \"0x0165878A594ca255338adfa4d48449f69242Eb8F\";\n\n  // Provider to read balances\n  const provider = new ethers.JsonRpcProvider(\n    \"https://evm.rpc-testnet-donut-node1.push.org/\"\n  );\n\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    const [balance, setBalance] = useState<number>(-1);\n    const [isLoading, setIsLoading] = useState(false);\n    const [txHash, setTxHash] = useState<string>(\"\");\n\n    // Fetch balance of connected account\n    const readBalance = async () => {\n      if (connectionStatus === \"connected\" && pushChainClient) {\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, ERC20ABI, provider);\n        const bal = await contract.balanceOf(pushChainClient.universal.account);\n        setBalance(Number(ethers.formatUnits(bal, 18)));\n      }\n    };\n\n    useEffect(() => {\n      if (connectionStatus === \"connected\" && pushChainClient) {\n        readBalance();\n      } else {\n        setBalance(-1);\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Mint function\n    const mintToken = async () => {\n      if (connectionStatus === \"connected\" && pushChainClient) {\n        try {\n          setIsLoading(true);\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            data: PushChain.utils.helpers.encodeTxData({\n              abi: ERC20ABI,\n              functionName: \"mint\",\n              args: [pushChainClient.universal.account, PushChain.utils.helpers.parseUnits(\"100\", 18)], // Mint 100 tokens\n            }),\n            value: BigInt(0),\n          });\n\n          setTxHash(tx.hash);\n          await tx.wait();\n          await readBalance();\n        } catch (err) {\n          console.error(\"Transaction error:\", err);\n        } finally {\n          setIsLoading(false);\n        }\n      }\n    };\n\n    return (\n      <div style={{ display: \"flex\", flexDirection: \"column\", alignItems: \"center\", gap: \"16px\" }}>\n        <h2>Universal ERC-20 Mint</h2>\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to mint tokens.</p>\n        )}\n\n        <div style={{ marginTop: \"12px\" }}>\n          <h3>\n            Balance: {balance === -1 ? \"...\" : balance} $UNICORN\n          </h3>\n        </div>\n\n        {balance !== -1 &&\n          <div style={{ maxWidth: \"500px\", textAlign: \"center\", fontSize: \"0.75rem\" }}>\n            <p>\n            Optional: Add <b>0x0165878A594ca255338adfa4d48449f69242Eb8F</b> ($UNICORN Token Address) to your wallet to see your balance in the wallet.\n            </p>\n          </div>\n        }\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <>\n            <button\n              onClick={mintToken}\n              disabled={isLoading}\n              style={{\n                backgroundColor: \"#d946ef\",\n                color: \"white\",\n                border: \"none\",\n                borderRadius: \"20px\",\n                padding: \"8px 16px\",\n                fontSize: \"14px\",\n                cursor: \"pointer\",\n                fontWeight: \"bold\",\n              }}\n            >\n              {isLoading ? \"Minting...\" : \"Mint 100 Tokens\"}\n            </button>\n\n            {txHash && (\n              <p>\n                Transaction:{\" \"}\n                <a\n                  href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                  target=\"_blank\"\n                  rel=\"noopener noreferrer\"\n                  style={{ color: \"#d946ef\" }}\n                >\n                  {txHash}\n                </a>\n              </p>\n            )}\n          </>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "source-code",
+      children: "Source Code"
+    }), "\n", (0,jsx_runtime.jsx)(GitHubRepo/* GitHubRepo */.M, {
+      title: "Mint Universal ERC-20 Tutorial",
+      repoUrl: "https://github.com/pushchain/push-chain-examples/tree/main/tutorials/universal-erc-20-mint",
+      description: "Full source code for the Universal ERC-20 Mint Token smart contract and example frontend."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "what-we-achieved",
+      children: "What we Achieved"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In this tutorial, we built the simplest possible ERC-20-style token interaction."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "We wrote and deployed a minimal ERC-20 contract with an open mint() function."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "We minted tokens and confirmed balances via the frontend."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "With just these two functions, you now have the foundation of a token system."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-tutorial",
+      children: "Next Tutorial"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Up until now, we’ve been sending one transaction at a time."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In real-world apps, users often need to perform several actions together (for example: approve → transfer, or multiple contract calls in a single flow)."
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      style: {
+        textAlign: 'center'
+      },
+      children: (0,jsx_runtime.jsx)(_components.mermaid, {
+        value: "flowchart TD\n    EU[Ethereum User] --> UB[Universal Batcher]\n    SU[Solana User] --> UB\n    OU[Other Chain User] --> UB\n    \n    UB --> TX1[Execute Transaction 1]\n    TX1 --> TX2[Execute Transaction 2]\n    TX2 --> TX3[Execute Transaction 3]\n    TX3 --> EOL[Complete]\n    \n    style EOL fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style UB fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EU fill:#627eea,color:#fff\n    style SU fill:#16c492,color:#fff\n    style OU fill:#853dff,color:#fff"
+      })
+    }), "\n", (0,jsx_runtime.jsx)("hr", {}), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In the next tutorial, we’ll explore batching multiple transactions as one universal transaction:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "How to combine several actions into a single transaction."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Why batching improves user experience (fewer wallet popups, less friction)."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Practical code examples of executing multiple calls in sequence or atomically."
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This will help you take the step from simple token interactions to more powerful app logic on Push Chain. 🚀"
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
 
 /***/ }),
 
@@ -2199,10 +1854,138 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
+/***/ 531836:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  L: () => (/* reexport */ SolidityCode)
+});
+
+// UNUSED EXPORTS: default
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-icons/fi/index.esm.js
+var index_esm = __webpack_require__(242644);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
+var styled_components_browser_esm = __webpack_require__(944404);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/components/SolidityCode/SolidityCode.tsx
+/* eslint-disable */// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Configs
+const SolidityCode=_ref=>{let{children,title='Solidity Contract',fileName='Contract.sol',url=null,showRemixButton=true,className=''}=_ref;const getRemixUrl=()=>{let remixUrl='https://remix.ethereum.org/';if(url){// Convert GitHub blob URL to format Remix can understand
+if(url.includes('github.com')&&url.includes('/blob/')){// Use GitHub import format for Remix
+remixUrl="https://remix.ethereum.org/#url="+url;}else if(url.includes('raw.githubusercontent.com')){// Already a raw URL, use directly
+remixUrl="https://remix.ethereum.org/#url="+url;}else{// Fallback to just opening Remix
+remixUrl='https://remix.ethereum.org/';}}return remixUrl;};return/*#__PURE__*/(0,jsx_runtime.jsxs)(SolidityCodeContainer,{className:className,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(CodeHeader,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(CodeTitle,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TitleText,{children:title}),/*#__PURE__*/(0,jsx_runtime.jsx)(FileNameText,{children:fileName})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)(ButtonGroup,{children:showRemixButton&&/*#__PURE__*/(0,jsx_runtime.jsxs)(ActionButton,{href:getRemixUrl(),target:"_blank",rel:"noopener noreferrer",children:["Open in Remix",/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiExternalLink */.HaR,{size:16})]})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(CodeBlock,{children:children})]});};// Styled Components
+const SolidityCodeContainer=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__SolidityCodeContainer",componentId:"sc-1w77983-0"})(["margin:24px 0;border-radius:var(--ifm-global-radius);overflow:hidden;@media ","{margin:20px 0;}"],globals/* device */.jO.tablet);const CodeHeader=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeHeader",componentId:"sc-1w77983-1"})(["display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--ifm-playground-header-bg);@media ","{padding:10px 12px;flex-direction:row;align-items:flex-start;gap:8px;}"],globals/* device */.jO.tablet);const CodeTitle=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeTitle",componentId:"sc-1w77983-2"})(["display:flex;align-items:center;gap:10px;"]);const FileIcon=styled_components_browser_esm["default"].span.withConfig({displayName:"SolidityCode__FileIcon",componentId:"sc-1w77983-3"})(["font-size:1.125rem;@media ","{font-size:1rem;}"],globals/* device */.jO.tablet);const TitleText=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__TitleText",componentId:"sc-1w77983-4"})(["font-size:0.875rem;font-weight:600;color:var(--ifm-color-content);margin-bottom:2px;@media ","{font-size:0.8125rem;}"],globals/* device */.jO.tablet);const FileNameText=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__FileNameText",componentId:"sc-1w77983-5"})(["font-size:0.75rem;color:var(--ifm-color-content-secondary);font-family:var(--ifm-font-family-monospace);@media ","{font-size:0.6875rem;}"],globals/* device */.jO.tablet);const ButtonGroup=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__ButtonGroup",componentId:"sc-1w77983-6"})(["display:flex;align-items:center;gap:8px;@media ","{justify-content:flex-end;align-self:center;}"],globals/* device */.jO.tablet);const ActionButton=styled_components_browser_esm["default"].a.withConfig({displayName:"SolidityCode__ActionButton",componentId:"sc-1w77983-7"})(["display:flex;align-items:center;gap:6px;padding:6px 12px;background:transparent;border:1px solid var(--ifm-playground-header-tag);border-radius:4px;color:var(--ifm-color-primary-text);font-size:0.75rem;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;font-weight:500;text-decoration:none;&:hover{border:1px solid var(--ifm-color-primary);text-decoration:none;}@media ","{padding:5px 10px;font-size:0.6875rem;}"],globals/* device */.jO.tablet);const CodeBlock=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeBlock",componentId:"sc-1w77983-8"})(["overflow-x:auto;background:var(--ifm-playground-header-terminalbg);& > div{margin:0px;}"]);/* harmony default export */ const SolidityCode_SolidityCode = ((/* unused pure expression or super */ null && (SolidityCode)));
+;// ./src/components/SolidityCode/index.ts
+
+
+/***/ }),
+
+/***/ 531855:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  M: () => (/* reexport */ GitHubRepo)
+});
+
+// UNUSED EXPORTS: default
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-icons/fi/index.esm.js
+var index_esm = __webpack_require__(242644);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
+var styled_components_browser_esm = __webpack_require__(944404);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/components/GitHubRepo/GitHubRepo.tsx
+/* eslint-disable */// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Configs
+const GitHubRepo=_ref=>{let{title,repoUrl,description='View complete source code on GitHub',className=''}=_ref;const handleRepoClick=()=>{window.open(repoUrl,'_blank','noopener,noreferrer');};return/*#__PURE__*/(0,jsx_runtime.jsx)(GitHubRepoContainer,{className:className,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(RepoButton,{onClick:handleRepoClick,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(GitHubIcon,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiGithub */.BR8,{size:20})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(RepoContent,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(RepoTitle,{children:title}),/*#__PURE__*/(0,jsx_runtime.jsx)(RepoSubtext,{children:description})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(ExternalLinkIcon,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiExternalLink */.HaR,{size:16})})]})});};// Styled Components
+const GitHubRepoContainer=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__GitHubRepoContainer",componentId:"sc-102xx6v-0"})(["margin:24px 0;padding:0;"]);const RepoButton=styled_components_browser_esm["default"].button.withConfig({displayName:"GitHubRepo__RepoButton",componentId:"sc-102xx6v-1"})(["display:flex;align-items:center;gap:12px;width:100%;padding:16px 20px;background:transparent;border:1px solid var(--ifm-color-emphasis-200);border-radius:8px;cursor:pointer;transition:all 0.2s ease;text-align:left;&:hover{border-color:var(--ifm-color-primary-unified);}&:active{transform:translateY(0);}@media ","{padding:14px 16px;gap:10px;}@media ","{padding:12px 14px;gap:8px;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const GitHubIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__GitHubIcon",componentId:"sc-102xx6v-2"})(["display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:var(--ifm-color-black);border-radius:6px;color:var(--ifm-color-white);flex-shrink:0;@media ","{width:36px;height:36px;}@media ","{width:32px;height:32px;svg{width:16px;height:16px;}}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const RepoContent=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__RepoContent",componentId:"sc-102xx6v-3"})(["flex:1;min-width:0;"]);const RepoTitle=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__RepoTitle",componentId:"sc-102xx6v-4"})(["font-size:16px;font-weight:600;color:var(--ifm-color-content);margin-bottom:4px;word-break:break-word;@media ","{font-size:15px;}@media ","{font-size:14px;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const RepoSubtext=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__RepoSubtext",componentId:"sc-102xx6v-5"})(["font-size:14px;color:var(--ifm-color-content-secondary);font-weight:400;@media ","{font-size:13px;}@media ","{font-size:12px;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const ExternalLinkIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"GitHubRepo__ExternalLinkIcon",componentId:"sc-102xx6v-6"})(["display:flex;align-items:center;justify-content:center;color:var(--ifm-color-content-secondary);flex-shrink:0;opacity:0.7;transition:opacity 0.2s ease;",":hover &{opacity:1;}@media ","{svg{width:14px;height:14px;}}"],RepoButton,globals/* device */.jO.mobileL);/* harmony default export */ const GitHubRepo_GitHubRepo = ((/* unused pure expression or super */ null && (GitHubRepo)));
+;// ./src/components/GitHubRepo/index.ts
+
+
+/***/ }),
+
+/***/ 546772:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ components_TutorialTimer)
+});
+
+// UNUSED EXPORTS: TutorialTimer
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./node_modules/react-icons/bi/index.esm.js
+var index_esm = __webpack_require__(635504);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
+var styled_components_browser_esm = __webpack_require__(944404);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/components/TutorialTimer/TutorialTimer.tsx
+/* eslint-disable */// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Components
+// Internal Configs
+const TutorialTimer=_ref=>{let{estimatedMinutes,label,className}=_ref;const{t}=(0,es/* useTranslation */.Bd)();// Format time display
+const formatTime=minutes=>{if(minutes<60){return minutes+" min"+(minutes!==1?'s':'');}const hours=Math.floor(minutes/60);const remainingMinutes=minutes%60;if(remainingMinutes===0){return hours+" hour"+(hours!==1?'s':'');}return hours+"h "+remainingMinutes+"m";};const timeDisplay=formatTime(estimatedMinutes);return/*#__PURE__*/(0,jsx_runtime.jsxs)(TimerContainer,{className:className,children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TimerIcon,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* BiTime */.FOv,{size:"16px","aria-hidden":"true"})}),/*#__PURE__*/(0,jsx_runtime.jsx)(TimerContent,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(TimerValue,{children:timeDisplay})})]});};// Styled Components
+const TimerContainer=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemH */.Oj).withConfig({displayName:"TutorialTimer__TimerContainer",componentId:"sc-oucx4h-0"})(["display:flex;align-items:center;gap:8px;padding:8px 12px 8px 0px;width:fit-content;margin:-30px 0 28px 0 !important;@media ","{padding:6px 10px;gap:6px;}"],globals/* device */.jO.tablet);const TimerIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"TutorialTimer__TimerIcon",componentId:"sc-oucx4h-1"})(["align-items:center;color:var(--ifm-color-primary-unified);flex-shrink:0;display:flex;"]);const TimerContent=styled_components_browser_esm["default"].div.withConfig({displayName:"TutorialTimer__TimerContent",componentId:"sc-oucx4h-2"})(["display:flex;flex-direction:row;gap:8px;align-items:center;"]);const TimerLabel=styled_components_browser_esm["default"].span.withConfig({displayName:"TutorialTimer__TimerLabel",componentId:"sc-oucx4h-3"})(["font-size:12px;font-weight:500;line-height:1.2;@media ","{font-size:11px;}"],globals/* device */.jO.tablet);const TimerValue=styled_components_browser_esm["default"].span.withConfig({displayName:"TutorialTimer__TimerValue",componentId:"sc-oucx4h-4"})(["font-size:1rem;font-weight:600;color:var(--ifm-color-secondary-text);line-height:1.2;@media ","{font-size:12px;}"],globals/* device */.jO.tablet);
+;// ./src/components/TutorialTimer/index.ts
+/* harmony default export */ const components_TutorialTimer = (TutorialTimer);
+
+/***/ }),
+
 /***/ 578982:
 /***/ (() => {
 
 /* (ignored) */
+
+/***/ }),
+
+/***/ 602999:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (/* binding */ IFrameModal)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
+function IFrameModal(_ref){let{url,buttonTitle='Load Interactive Demo',maxHeight='600px'}=_ref;const[isLoading,setIsLoading]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);const[isIframeVisible,setIsIframeVisible]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);const iframeRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);// Use proxy for push explorer URLs to bypass CSP
+const getProxiedUrl=originalUrl=>{if(originalUrl.includes('push.network')||originalUrl.includes('donut.push.network')){// Extract the base URL from the original URL to construct the proxy URL
+const urlObj=new URL(originalUrl);const baseUrl=urlObj.protocol+"//"+urlObj.host;// Use the push explorer's proxy endpoint if it's publicly accessible
+return baseUrl+"/node-api/iframe-proxy?url="+encodeURIComponent(originalUrl);}return originalUrl;};const proxiedUrl=getProxiedUrl(url);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{setIsLoading(true);},[url]);const handleIframeLoad=()=>{setIsLoading(false);};const handleRefresh=()=>{setIsLoading(true);if(iframeRef.current){iframeRef.current.src=proxiedUrl;}};return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div",{style:{display:'flex',flexDirection:'column',width:'100%',height:isIframeVisible?'80vh':'auto',maxHeight,borderRadius:'12px',overflow:'hidden',margin:'20px 0'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style",{children:"\n        @keyframes spin {\n          to { transform: rotate(360deg); }\n        }\n        .loading-spinner {\n          width: 40px;\n          height: 40px;\n          border: 4px solid #f3f3f3;\n          border-top: 4px solid #D548EC;\n          border-radius: 50%;\n          animation: spin 1s linear infinite;\n        }\n      "}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div",{style:{display:'flex',alignItems:'center',gap:'10px',padding:'10px',backgroundColor:'var(--ifm-playground-header-bg)'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{flex:1,padding:'8px 12px',backgroundColor:'var(--ifm-navbar-search-bg)',borderRadius:'12px',color:'var(--ifm-color-title-text-color)',fontSize:'0.875rem',fontFamily:'Fira Code',whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'},children:url}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button",{onClick:handleRefresh,style:{display:'flex',alignItems:'center',justifyContent:'center',width:'32px',height:'32px',padding:'6px',borderRadius:'12px',cursor:'pointer',transition:'all 0.2s ease',border:'var(--ifm-playground-button-border)',backgroundColor:'var(--ifm-table-body-bg)'},onMouseEnter:e=>{e.currentTarget.style.opacity='0.8';},onMouseLeave:e=>{e.currentTarget.style.opacity='1';},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 16 16",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path",{d:"M14 8c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c1.8 0 3.4.8 4.5 2h-2.5v1h4V1h-1v2.1C11.9 1.8 10 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7h-1z",fill:"var(--ifm-iframe-icon-color)",opacity:"1"})})})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{position:'relative',flex:1,backgroundColor:'var(--ifm-playground-header-bg)',borderRadius:'0 0 12px 12px'},children:!isIframeVisible?/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{display:'flex',alignItems:'center',justifyContent:'center',padding:'40px 20px'},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button",{onClick:()=>setIsIframeVisible(true),style:{padding:'12px 24px',fontSize:'0.875rem',fontWeight:'600',backgroundColor:'#D548EC',color:'#fff',border:'none',borderRadius:'12px',cursor:'pointer',transition:'opacity 0.2s ease',opacity:0.9,fontFamily:'DM Sans'},onMouseEnter:e=>{e.currentTarget.style.opacity='1';},onMouseLeave:e=>{e.currentTarget.style.opacity='0.9';},children:buttonTitle})}):/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment,{children:[isLoading&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%, -50%)',zIndex:1},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{className:"loading-spinner"})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe",{ref:iframeRef,src:proxiedUrl,title:"IFrame Content",onLoad:handleIframeLoad,sandbox:"allow-scripts allow-same-origin allow-forms allow-popups",style:{width:'100%',height:'100%',border:'none'}})]})})]});}
 
 /***/ }),
 

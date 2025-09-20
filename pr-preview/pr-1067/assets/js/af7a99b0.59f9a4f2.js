@@ -141,7 +141,7 @@ __webpack_require__.d(__webpack_exports__, {
 });
 
 ;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-01-basics-02-tutorial-universal-counter-mdx-af7.json
-const site_docs_chain_01_tutorials_01_basics_02_tutorial_universal_counter_mdx_af7_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/basics/docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","description":"Build a Universal Counter App | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","sourceDirName":"chain/01-tutorials/01-basics","slug":"/chain/tutorials/basics/tutorial-universal-counter","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-universal-counter","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","hide_title":false,"slug":"./tutorial-universal-counter","displayed_sidebar":"pushChainSidebar","sidebar_position":2,"image":"/assets/docs/previews/docs_chain_tutorials_universal_counter--build_a_universal_counter_app.png"},"sidebar":"pushChainSidebar","previous":{"title":"Build a Counter App","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-simple-counter"},"next":{"title":"Tokens and Airdrops","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops"}}');
+const site_docs_chain_01_tutorials_01_basics_02_tutorial_universal_counter_mdx_af7_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/basics/docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","description":"Build a Universal Counter App | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","sourceDirName":"chain/01-tutorials/01-basics","slug":"/chain/tutorials/basics/tutorial-universal-counter","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-universal-counter","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","hide_title":false,"slug":"./tutorial-universal-counter","displayed_sidebar":"pushChainSidebar","sidebar_position":2,"image":"/assets/docs/previews/docs_chain_tutorials_universal_counter--build_a_universal_counter_app.png"},"sidebar":"pushChainSidebar","previous":{"title":"Build a Counter App","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-simple-counter"},"next":{"title":"Mint Universal ERC-20 Tokens","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -220,8 +220,8 @@ const toc = [{
   "id": "verify-contract",
   "level": 2
 }, {
-  "value": "Interact with UniversalCounter App",
-  "id": "interact-with-universalcounter-app",
+  "value": "Interact with Universal Counter",
+  "id": "interact-with-universal-counter",
   "level": 2
 }, {
   "value": "Live Playground",
@@ -245,6 +245,7 @@ function _createMdxContent(props) {
     a: "a",
     admonition: "admonition",
     blockquote: "blockquote",
+    br: "br",
     code: "code",
     em: "em",
     h2: "h2",
@@ -267,7 +268,7 @@ function _createMdxContent(props) {
         children: "Build a Universal Counter App | Tutorials | Push Chain Docs"
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(TutorialTimer/* default */.A, {
-      estimatedMinutes: 10
+      estimatedMinutes: 18
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
       title: "Extends Counter App",
       type: "info",
@@ -582,10 +583,10 @@ function _createMdxContent(props) {
         children: "verify and publish contract"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "interact-with-universalcounter-app",
-      children: "Interact with UniversalCounter App"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "An easier way to interact with the contract is to use the LivePlayground below.\nThe UniversalCounter app is already deployed on Push Chain Testnet."
+      id: "interact-with-universal-counter",
+      children: "Interact with Universal Counter"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The easiest way to interact with the contract is through the Live Playground.", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "The Universal Counter is already deployed on Push Chain Testnet."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
@@ -595,29 +596,27 @@ function _createMdxContent(props) {
           children: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
         })]
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.strong, {
-        children: "Note:"
-      }), " Push Chain easily allows you to interact with the UniversalCounter from any chain."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Follow the steps below to interact with the UniversalCounter:"
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Steps to interact:"
+      })
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Connect your wallet to the LivePlayground."
+        children: "Connect your wallet to the Live Playground."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "You can connect wallet of any supported chain ( Push Chain, Ethereum or Solana)"
+        children: "You can connect a wallet from any supported chain (Push Chain, Ethereum, or Solana)."
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Increment Counter"
-        }), " button to increment the counter."]
+        }), " to increase the counter for your chain."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Refresh Counter Values"
-        }), " button to refresh the counter values."]
+        }), " to see updated counts across chains."]
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Click ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "View in Explorer"
-        }), " button to view the transaction in the explorer."]
+        }), " to open the transaction in Push Chain Explorer."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "live-playground",
@@ -666,18 +665,18 @@ function _createMdxContent(props) {
       children: "With Universal Counter, you can now:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["A contract that natively identifies the caller of ", (0,jsx_runtime.jsx)(_components.em, {
-          children: "ANY"
+        children: ["Identify callers natively from ", (0,jsx_runtime.jsx)(_components.em, {
+          children: "any"
         }), " chain."]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Allows devs to build logic specific to the users for a particular chain."
+        children: "Build logic that adapts to the user’s origin chain."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Simplifies developer experience for building multi-chain universal apps."
+        children: "Simplify the developer experience for multi-chain apps."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Eliminates any use of third-party tooling, oracles, to achieve universal behavior."
+        children: "Eliminate reliance on third-party tooling or oracles."
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This makes our Counter smart contract ", (0,jsx_runtime.jsx)(_components.strong, {
+      children: ["This makes your Counter smart contract ", (0,jsx_runtime.jsx)(_components.strong, {
         children: "truly universal, all in just a few lines of Solidity"
       }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {

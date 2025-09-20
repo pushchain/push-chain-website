@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[34653],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[34866],{
 
 /***/ 35358:
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
@@ -323,6 +323,25 @@ webpackContext.id = 35358;
 
 /***/ }),
 
+/***/ 104747:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (/* binding */ RemixIDE)
+/* harmony export */ });
+/* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(328774);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(296540);
+/* harmony import */ var react_icons_bs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(796710);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(474848);
+function RemixIDE(_ref){var _examplesObj$selected,_examplesObj$selected2;let{examples}=_ref;// Force examples to be treated as a plain object to ensure proper key extraction
+const examplesObj=Object.assign({},examples);// Extract keys directly from the examples object
+const exampleKeys=Object.keys(examplesObj);const defaultRemixURL='https://remix.push.org';// Initialize state with the first key from our extracted keys
+const[selected,setSelected]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(exampleKeys.length>0?exampleKeys[0]:null);// Force update selected if it doesn't match any key in examples
+(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{if(exampleKeys.length>0&&(!selected||!exampleKeys.includes(selected))){setSelected(exampleKeys[0]);}},[exampleKeys,selected]);const[isFullScreen,setIsFullScreen]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);const[isLoading,setIsLoading]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);const getRemixURL=()=>{if(!selected||!examplesObj[selected]||!examplesObj[selected].absoluteFileURL){return defaultRemixURL;}try{const githubUrl=examplesObj[selected].absoluteFileURL;const remixUrl=new URL(defaultRemixURL);remixUrl.hash="url="+githubUrl;return remixUrl.toString();}catch(error){return defaultRemixURL;}};(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{document.body.style.overflow=isFullScreen?'hidden':'auto';return()=>{document.body.style.overflow='auto';};},[isFullScreen]);const arrowIcon={color:'var(--ifm-header-caret-color)',marginTop:'-6px'};const repoButton={display:'flex',alignItems:'center',gap:'4px',fontSize:'0.875rem',color:'var(--ifm-playground-buttontext-color)',cursor:'pointer',fontWeight:'600'};const repoUrlDiv={display:'flex',flex:'none',flexDirection:'row',alignItems:'center',gap:'12px',padding:'8.5px 13px 8.59px 13px'};const selectButton={borderRadius:'12px',border:'var(--ifm-playground-button-border)',display:'flex',padding:'12.55px 13px 13.04px 13px',justifyContent:'center',alignItems:'center',backgroundColor:'transparent',fontSize:'0.875rem',fontWeight:'600',color:'var(--ifm-playground-buttontextcolor)',cursor:'pointer'};return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{width:'100%',backgroundColor:'var(--ifm-table-header-bg)',borderRadius:'12px',border:'none',overflow:'hidden',position:isFullScreen?'fixed':'relative',top:isFullScreen?0:'auto',left:isFullScreen?0:'auto',right:isFullScreen?0:'auto',bottom:isFullScreen?0:'auto',zIndex:isFullScreen?9999:1},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("style",{children:"\n        @keyframes spin {\n          0% { transform: rotate(0deg); }\n          100% { transform: rotate(360deg); }\n        }\n      "}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'10px 15px',gap:'16px'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{fontSize:'16px',fontWeight:500,color:'var(--ifm-color-title-text-color)'},children:"Remix IDE"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{display:'flex',gap:'10px',alignItems:'center',flex:'1',flexWrap:'wrap',justifyContent:'flex-end'},children:[exampleKeys.length>0&&selected&&((_examplesObj$selected=examplesObj[selected])===null||_examplesObj$selected===void 0?void 0:_examplesObj$selected.ctaURL)&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:repoUrlDiv,children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{to:examplesObj[selected].ctaURL,target:"_blank",rel:"noopener noreferrer",style:repoButton,children:((_examplesObj$selected2=examplesObj[selected])===null||_examplesObj$selected2===void 0?void 0:_examplesObj$selected2.ctaTitle)||'View Code'}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_bs__WEBPACK_IMPORTED_MODULE_2__.BsBoxArrowUpRight,{style:arrowIcon})]}),exampleKeys.length>0&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("select",{value:selected!==null&&selected!==void 0?selected:'',onChange:e=>setSelected(e.target.value),style:selectButton,children:exampleKeys.map(key=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option",{value:key,children:key},key))}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_icons_bs__WEBPACK_IMPORTED_MODULE_2__.BsArrowsAngleExpand,{size:27,style:{color:'var(--ifm-header-caret-color)',cursor:'pointer',transition:'color 0.2s',padding:'2px'},onClick:()=>setIsFullScreen(!isFullScreen)}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("style",{children:"\n            .topbar-btn {\n              padding: 8px 12px;\n              height: 35px;\n              font-size: 14px;\n              border-radius: 6px;\n              border: 1px solid #e2e8f0;\n              background-color: #fff;\n              color: #475569;\n              cursor: pointer;\n              display: flex;\n              align-items: center;\n              gap: 6px;\n              transition: background-color 0.2s, border-color 0.2s;\n            }\n            .topbar-btn:hover {\n              background-color: #dd44b9;\n              border-color: #dd44b9;\n              color: #fff;\n            }\n          "})]})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div",{style:{width:'100%',height:isFullScreen?'calc(100vh - 56px)':'600px',position:'relative'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("iframe",{src:getRemixURL(),title:"Remix IDE",style:{width:'100%',height:'100%',border:'none',position:'relative',zIndex:1},allowFullScreen:true,onLoad:()=>setIsLoading(false)}),isLoading&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{position:'absolute',top:0,left:0,right:0,bottom:0,display:'flex',alignItems:'center',justifyContent:'center',backgroundColor:'rgba(255, 255, 255, 0.8)',zIndex:2},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div",{style:{width:'40px',height:'40px',border:'3px solid #D548EC',borderTop:'3px solid transparent',borderRadius:'50%',animation:'spin 1s linear infinite'}})})]})]});}
+
+/***/ }),
+
 /***/ 119365:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -394,6 +413,93 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
+/***/ 303547:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (/* binding */ PushAPIReference)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(944404);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+/**
+ * PushAPIReference component for rendering API documentation with consistent styling
+ *
+ * @param children - The content to display within the API reference section
+ * @param showRequiredNotice - Whether to show the required notice (default: true)
+ * @param className - Additional CSS classes to apply
+ */function PushAPIReference(_ref){let{children,showRequiredNotice=true,className=''}=_ref;return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(ReferenceContainer,{className:className,children:[showRequiredNotice&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(RequiredNotice,{hasNotice:showRequiredNotice,children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p",{children:["These",/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("code",{children:"Arguments"}),"are mandatory"]})}),children]});}const ReferenceContainer=styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({displayName:"PushAPIReference__ReferenceContainer",componentId:"sc-1g1yayv-0"})([""]);const RequiredNotice=styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div.withConfig({displayName:"PushAPIReference__RequiredNotice",componentId:"sc-1g1yayv-1"})(["border-radius:var(--ifm-global-radius);margin-bottom:-8px;padding:12px 12px 20px 12px;text-align:end;border-bottom-left-radius:0;border-bottom-right-radius:0px;color:var(--ifm-navbar-dropdown-subtext);font-size:0.875rem;font-weight:400;line-height:188.571%;code{background:transparent;padding:2px 9px;display:inline-block !important;border-radius:12px;border:1px solid var(--ifm-sidebar-activetext-color);color:var(--ifm-color-primary-text);font-family:'Fira Code';font-weight:600;line-height:165%;margin:0px 4px;}"]);
+
+/***/ }),
+
+/***/ 303999:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ Details_Details)
+});
+
+;// ./node_modules/@babel/runtime/helpers/esm/objectDestructuringEmpty.js
+function _objectDestructuringEmpty(t) {
+  if (null == t) throw new TypeError("Cannot destructure " + t);
+}
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/node_modules/clsx/dist/clsx.mjs
+var clsx = __webpack_require__(618215);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+var objectWithoutPropertiesLoose = __webpack_require__(198587);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/node_modules/clsx/dist/clsx.mjs
+var dist_clsx = __webpack_require__(15066);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBrokenLinks.js + 1 modules
+var useBrokenLinks = __webpack_require__(163427);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useIsBrowser.js
+var useIsBrowser = __webpack_require__(992303);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/components/Collapsible/index.js
+var Collapsible = __webpack_require__(41422);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const styles_module = ({"details":"details_lb9f","isBrowser":"isBrowser_bmU9","collapsibleContent":"collapsibleContent_i85q"});
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./node_modules/@docusaurus/theme-common/lib/components/Details/index.js
+const _excluded=["summary","children"];/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function isInSummary(node){if(!node){return false;}return node.tagName==='SUMMARY'||isInSummary(node.parentElement);}function hasParent(node,parent){if(!node){return false;}return node===parent||hasParent(node.parentElement,parent);}/**
+ * A mostly un-styled `<details>` element with smooth collapsing. Provides some
+ * very lightweight styles, but you should bring your UI.
+ */function Details(_ref){let{summary,children}=_ref,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref,_excluded);(0,useBrokenLinks/* default */.A)().collectAnchor(props.id);const isBrowser=(0,useIsBrowser/* default */.A)();const detailsRef=(0,react.useRef)(null);const{collapsed,setCollapsed}=(0,Collapsible/* useCollapsible */.u)({initialState:!props.open});// Use a separate state for the actual details prop, because it must be set
+// only after animation completes, otherwise close animations won't work
+const[open,setOpen]=(0,react.useState)(props.open);const summaryElement=/*#__PURE__*/react.isValidElement(summary)?summary:/*#__PURE__*/(0,jsx_runtime.jsx)("summary",{children:summary!==null&&summary!==void 0?summary:'Details'});return(/*#__PURE__*/// eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
+(0,jsx_runtime.jsxs)("details",Object.assign({},props,{ref:detailsRef,open:open,"data-collapsed":collapsed,className:(0,dist_clsx/* default */.A)(styles_module.details,isBrowser&&styles_module.isBrowser,props.className),onMouseDown:e=>{const target=e.target;// Prevent a double-click to highlight summary text
+if(isInSummary(target)&&e.detail>1){e.preventDefault();}},onClick:e=>{e.stopPropagation();// For isolation of multiple nested details/summary
+const target=e.target;const shouldToggle=isInSummary(target)&&hasParent(target,detailsRef.current);if(!shouldToggle){return;}e.preventDefault();if(collapsed){setCollapsed(false);setOpen(true);}else{setCollapsed(true);// Don't do this, it breaks close animation!
+// setOpen(false);
+}},children:[summaryElement,/*#__PURE__*/(0,jsx_runtime.jsx)(Collapsible/* Collapsible */.N,{lazy:false// Content might matter for SEO in this case
+,collapsed:collapsed,onCollapseTransitionEnd:newCollapsed=>{setCollapsed(newCollapsed);setOpen(!newCollapsed);},children:/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:styles_module.collapsibleContent,children:children})})]})));}
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/styles.module.css
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const Details_styles_module = ({"details":"details_b_Ee"});
+;// ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */// Should we have a custom details/summary comp in Infima instead of reusing
+// alert classes?
+const InfimaClasses='alert alert--info';function Details_Details(_ref){let props=Object.assign({},(_objectDestructuringEmpty(_ref),_ref));return/*#__PURE__*/(0,jsx_runtime.jsx)(Details,Object.assign({},props,{className:(0,clsx/* default */.A)(InfimaClasses,Details_styles_module.details,props.className)}));}
+
+/***/ }),
+
 /***/ 321638:
 /***/ (() => {
 
@@ -436,6 +542,581 @@ getProof:loadClientSideLibraryOpenZepplinMerkleTree('getProof'),makeMerkleTree:l
 MODAL_POSITION_TYPE:loadClientSideLibraryPushProtocolUIWeb('MODAL_POSITION_TYPE'),// Continue using the BrowserOnly component for UI components
 SupportChat:createBrowserOnlyLibComponentUIWeb('SupportChat'),ChatWidget:createBrowserOnlyLibComponentUIWeb('ChatWidget'),NotificationItem:createBrowserOnlyLibComponentUIWeb('NotificationItem'),ChatUIProvider:createBrowserOnlyLibComponentUIWeb('ChatUIProvider'),ChatView:createBrowserOnlyLibComponentUIWeb('ChatView'),CreateGroupModal:createBrowserOnlyLibComponentUIWeb('CreateGroupModal'),ChatProfile:createBrowserOnlyLibComponentUIWeb('ChatProfile'),MessageInput:createBrowserOnlyLibComponentUIWeb('MessageInput'),ChatViewBubble:createBrowserOnlyLibComponentUIWeb('ChatViewBubble'),ChatViewList:createBrowserOnlyLibComponentUIWeb('ChatViewList'),UserProfile:createBrowserOnlyLibComponentUIWeb('UserProfile'),ChatPreview:createBrowserOnlyLibComponentUIWeb('ChatPreview'),ChatPreviewList:createBrowserOnlyLibComponentUIWeb('ChatPreviewList'),darkChatTheme:createBrowserOnlyLibComponentUIWeb('darkChatTheme'),lightChatTheme:createBrowserOnlyLibComponentUIWeb('lightChatTheme'),// NotificationItem: createBrowserOnlyLibComponentUIWeb('NotificationItem'),
 SubscriptionManager:createBrowserOnlyLibComponentUIWeb('SubscriptionManager'),WidgetUIProvider:createBrowserOnlyLibComponentUIWeb('WidgetUIProvider'),PushUniversalWalletProvider:loadClientSideLibraryPushChainUIKit('PushUniversalWalletProvider'),PushUniversalAccountButton:loadClientSideLibraryPushChainUIKit('PushUniversalAccountButton'),usePushWalletContext:loadClientSideLibraryPushChainUIKit('usePushWalletContext'),usePushChainClient:loadClientSideLibraryPushChainUIKit('usePushChainClient'),usePushChain:loadClientSideLibraryPushChainUIKit('usePushChain'),PushUI:loadClientSideLibraryPushChainUIKit('PushUI'),PushChain:loadClientSideLibraryPushChainCore('PushChain'),BsBoxArrowUpRight:loadClientSideReactIconsBS('BsBoxArrowUpRight')});/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ReactLiveScope);
+
+/***/ }),
+
+/***/ 378680:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_02_tokens_and_airdrops_02_tutorial_universal_airdrop_mdx_e00_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-02-tokens-and-airdrops-02-tutorial-universal-airdrop-mdx-e00.json
+const site_docs_chain_01_tutorials_02_tokens_and_airdrops_02_tutorial_universal_airdrop_mdx_e00_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/tokens-and-airdrops/docs-chain-tutorials-universal-airdrop","title":"Build a Claimable Universal Airdrop","description":"{Build a Universal Airdrop: Generate Merkle Proofs, Deploy Contract, and Add a Claim UI | Tutorials | Push Chain Docs}","source":"@site/docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx","sourceDirName":"chain/01-tutorials/02-tokens-and-airdrops","slug":"/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"docs-chain-tutorials-universal-airdrop","title":"Build a Claimable Universal Airdrop","hide_title":false,"slug":"./tutorial-universal-airdrop","displayed_sidebar":"pushChainSidebar","sidebar_position":2,"image":"/assets/docs/previews/docs_chain_tutorials_universal_airdrop--build_a_claimable_universal_airdrop.png"},"sidebar":"pushChainSidebar","previous":{"title":"Tokens and Airdrops","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops"},"next":{"title":"Payments and DeFi","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/payments-and-defi"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/components/PushAPIReference/PushAPIReference.tsx
+var PushAPIReference = __webpack_require__(303547);
+// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
+var NodeJSVirtualIDE = __webpack_require__(891517);
+// EXTERNAL MODULE: ./src/components/RemixIDE/RemixIDE.tsx
+var RemixIDE = __webpack_require__(104747);
+;// ./docs/chain/01-tutorials/02-tokens-and-airdrops/02-Tutorial-Universal-Airdrop.mdx
+
+
+const frontMatter = {
+	id: 'docs-chain-tutorials-universal-airdrop',
+	title: 'Build a Claimable Universal Airdrop',
+	hide_title: false,
+	slug: './tutorial-universal-airdrop',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 2,
+	image: '/assets/docs/previews/docs_chain_tutorials_universal_airdrop--build_a_claimable_universal_airdrop.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+/*Content Start*/
+
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Why Universal Airdrops?",
+  "id": "why-universal-airdrops",
+  "level": 2
+}, {
+  "value": "Understanding the <code>TestToken</code> contract",
+  "id": "understanding-the-testtoken-contract",
+  "level": 3
+}, {
+  "value": "Understanding the <code>UniversalAirdrop</code> contract",
+  "id": "understanding-the-universalairdrop-contract",
+  "level": 3
+}, {
+  "value": "How the Merkle proof works",
+  "id": "how-the-merkle-proof-works",
+  "level": 4
+}, {
+  "value": "Conclusion",
+  "id": "conclusion",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    blockquote: "blockquote",
+    code: "code",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    pre: "pre",
+    strong: "strong",
+    ul: "ul",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: `Build a Universal Airdrop: Generate Merkle Proofs, Deploy Contract, and Add a Claim UI | Tutorials | Push Chain Docs`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Welcome! In this tutorial, you'll build a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Universal Airdrop"
+      }), " system that revolutionizes cross-chain token distribution. Unlike traditional airdrops that require deploying contracts on every blockchain, this universal approach lets you ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "deploy once on Push Chain"
+      }), " and enable users from ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "any blockchain"
+      }), " (Ethereum, Solana, Polygon, etc.) to claim their tokens seamlessly."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "why-universal-airdrops",
+      children: "Why Universal Airdrops?"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "The beauty of this system lies in its efficiency and cross-chain compatibility:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Single Deployment"
+        }), ": Deploy your airdrop contract once on Push Chain instead of managing multiple contracts across different networks"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Cross-Chain Claims"
+        }), ": Users from Ethereum, Solana, Polygon, and other chains can all claim tokens from the same contract"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "No Multi-Chain Token Deployment"
+        }), ": Keep your ERC-20 token on one chain while enabling universal claiming"]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "User Simplicity"
+        }), ": Recipients can claim their tokens using their preferred wallet on their own chain, making the process seamless and familiar"]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "We'll build the complete flow:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Generate Merkle proofs with cross-chain recipient data"
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Deploy a universal Merkle claim contract to Push Chain"
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Create a UI for recipients to claim their tokens from any chain"
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(Tabs/* default */.A, {
+      className: "liveplaytab",
+      groupId: "send-universal-transaction-coding",
+      children: [(0,jsx_runtime.jsx)(TabItem/* default */.A, {
+        value: "Full Application",
+        label: "Full Application",
+        children: (0,jsx_runtime.jsx)(_components.pre, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            className: "language-jsx",
+            metastring: "live",
+            live: true,
+            children: "// customPropMinimized='true'\nimport { useState, useEffect, useCallback } from 'react';\nimport { ethers } from 'ethers';\nimport { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';\nimport { keccak256 } from 'viem';\nimport bs58 from 'bs58';\nimport {\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n  PushUniversalWalletProvider,\n} from '@pushchain/ui-kit';\nimport { PushChain } from '@pushchain/core';\n\nfunction UniversalAirdrop() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Universal Airdrop Contract ABI - Standard format for PushChain encoding\n  const AIRDROP_ABI = [\n    {\n      inputs: [\n        { internalType: 'bytes32[]', name: 'proof', type: 'bytes32[]' },\n        { internalType: 'uint256', name: 'amount', type: 'uint256' },\n        { internalType: 'string', name: 'chainNamespace', type: 'string' },\n        { internalType: 'string', name: 'chainId', type: 'string' },\n      ],\n      name: 'claim',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n  ];\n\n  // Chain options for the UI (now used only for display names)\n  const CHAIN_OPTIONS = [\n    { namespace: 'eip155', id: '11155111', name: 'Ethereum Sepolia' },\n    { namespace: 'solana', id: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1', name: 'Solana Devnet' },\n    { namespace: 'eip155', id: '42101', name: 'Push Chain Testnet' },\n  ];\n\n  // Helper function to get chain name from namespace and id\n  const getChainName = (namespace, id) => {\n    const chain = CHAIN_OPTIONS.find((chain) => chain.namespace === namespace && chain.id === id);\n    return chain ? chain.name : `${namespace}:${id}`;\n  };\n\n  // Normalize origin.chain (e.g., 'eip155:42101') to our app's namespace/id scheme\n  const normalizeChainFromOrigin = (originChain) => {\n    const [ns, chainId] = String(originChain).split(':');\n\n    // No special mapping; tree.json uses 'eip155' with id '42101'\n\n    // Default passthrough (EVM chains, Solana, etc.)\n    return { namespace: ns, id: chainId, name: getChainName(ns, chainId) };\n  };\n\n  // ---------- Helpers for Merkle tree and origin address mapping ----------\n\n  // Using bs58 package for base58 decoding; custom decoder removed\n\n  const deriveRecipientEvmAddress = (recipientRaw) => {\n    try {\n      if (recipientRaw.startsWith('0x')) {\n        return ethers.getAddress(recipientRaw);\n      }\n      const raw = Uint8Array.from(bs58.decode(recipientRaw));\n      const hashed = keccak256(raw);\n      const addressBytes = ethers.dataSlice(hashed, 12);\n      return ethers.getAddress(addressBytes);\n    } catch {\n      throw new Error('Invalid recipient for the selected chain');\n    }\n  };\n\n  const hashLeaf = (evmRecipient, chainNamespace, chainId, amount) => {\n    // Mirror merkle-proof-generator/index.ts manual packed layout\n    const recipientBytes = ethers.getBytes(evmRecipient);\n    const namespaceBytes = ethers.toUtf8Bytes(chainNamespace);\n    const chainIdBytes = ethers.toUtf8Bytes(chainId);\n    const amountHex = ethers.toBeHex(amount);\n    const amountBytes = ethers.getBytes(ethers.zeroPadValue(amountHex, 32));\n    const packed = ethers.concat([recipientBytes, namespaceBytes, chainIdBytes, amountBytes]);\n    return keccak256(packed);\n  };\n\n  function Component() {\n    // Three-step UI\n    const [currentStep, setCurrentStep] = useState(1);\n\n    // User-provided contract addresses\n    const [contractAddresses, setContractAddresses] = useState(null);\n\n    // All hooks must be called before any conditional returns\n    const [isClaiming, setIsClaiming] = useState(false);\n    const [isLoadingProof, setIsLoadingProof] = useState(false);\n    const [hasClaimed, setHasClaimed] = useState(false);\n    const [claimAmount, setClaimAmount] = useState('');\n    const [proof, setProof] = useState([]);\n    const [detectedChain, setDetectedChain] = useState(null);\n    const [entries, setEntries] = useState([]);\n    const [computedEntries, setComputedEntries] = useState([]);\n    const [merkleRoot, setMerkleRoot] = useState('');\n    const [error, setError] = useState('');\n    const [success, setSuccess] = useState('');\n\n    // Push Universal Wallet hooks\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // No external JSON loads; everything is user-provided\n    useEffect(() => {}, []);\n\n    // Detect chain when connection status changes\n    useEffect(() => {\n      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && pushChainClient) {\n        // Try to get the origin chain from the Push client\n        try {\n          console.log('Detecting origin chain from Push client...');\n          console.log('Universal object:', pushChainClient.universal);\n\n          if (pushChainClient.universal?.origin) {\n            const origin = pushChainClient.universal.origin;\n            console.log('Origin from universal.origin:', origin);\n\n            const normalized = normalizeChainFromOrigin(String(origin.chain));\n            setDetectedChain(normalized);\n            console.log('Detected chain:', normalized);\n          } else {\n            // Fallback: assume Sepolia if we can't detect\n            console.log('Could not detect origin chain, defaulting to Sepolia');\n            setDetectedChain({\n              namespace: 'eip155',\n              id: '11155111',\n              name: 'Ethereum Sepolia',\n            });\n          }\n        } catch (err) {\n          console.log('Error detecting chain:', err);\n          // Fallback: assume Sepolia\n          setDetectedChain({\n            namespace: 'eip155',\n            id: '11155111',\n            name: 'Ethereum Sepolia',\n          });\n        }\n      } else {\n        setDetectedChain(null);\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Check if address has already claimed for the selected chain\n    const checkClaimStatus = useCallback(async () => {\n      if (!contractAddresses) return;\n\n      try {\n        // For now, we'll use a simple approach - in production you'd use the client's provider\n        // This is a simplified version; you might need to adapt based on pushChainClient API\n        console.log('Checking claim status with Push Chain client');\n        // TODO: Implement claim status check using pushChainClient\n      } catch (err) {\n        console.error('Error checking claim status:', err);\n      }\n    }, [contractAddresses]);\n\n    // Load user's proof from computed entries\n    const loadUserProof = useCallback(async () => {\n      if (!pushChainClient) {\n        setError('Wallet not connected');\n        return;\n      }\n\n      setIsLoadingProof(true);\n      setError('');\n      setSuccess('');\n\n      try {\n        if (!Array.isArray(computedEntries) || computedEntries.length === 0) {\n          setError('Please generate the Merkle tree in Step 1 first');\n          return;\n        }\n\n        console.log('computedEntries', computedEntries);\n        console.log('pushChainClient.universal', pushChainClient.universal);\n\n        let currentLookupAddress;\n        const origin = pushChainClient.universal?.origin;\n        console.log('origin', origin);\n        if (origin?.address) {\n          currentLookupAddress = origin.address;\n          console.log('Using origin address for lookup:', currentLookupAddress);\n        } else {\n          currentLookupAddress = pushChainClient.universal.account;\n          console.log('Origin not available, using UEA address for lookup:', currentLookupAddress);\n        }\n\n        if (!currentLookupAddress) {\n          setError('Unable to determine lookup address from Push Chain client');\n          return;\n        }\n\n        console.log('Using lookup address:', currentLookupAddress);\n        console.log('Detected chain:', detectedChain);\n\n        if (!detectedChain) {\n          setError('Could not detect your origin chain. Please try reconnecting your wallet.');\n          return;\n        }\n\n        const userEntry = computedEntries.find(\n          (entry) =>\n            entry.recipient.toLowerCase() === currentLookupAddress.toLowerCase() &&\n            entry.chainNamespace === detectedChain.namespace &&\n            entry.chainId === detectedChain.id\n        );\n\n        console.log('userEntry', userEntry);\n\n        if (userEntry) {\n          setProof(userEntry.proof);\n          setClaimAmount(ethers.formatEther(userEntry.amountWei));\n          setError('');\n          setSuccess(`Found your proof for ${detectedChain.name}!`);\n        } else {\n          setError(\n            `No proof found for address ${currentLookupAddress.slice(0, 6)}...${currentLookupAddress.slice(-4)} on ${\n              detectedChain.name\n            }.`\n          );\n        }\n      } catch (err) {\n        setError('Failed to load proof data');\n        console.error('Error loading proof:', err);\n      } finally {\n        setIsLoadingProof(false);\n      }\n    }, [computedEntries, pushChainClient, detectedChain]);\n\n    // Check claim status and auto-load proof when detected chain changes\n    useEffect(() => {\n      if (\n        connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&\n        pushChainClient &&\n        contractAddresses &&\n        detectedChain &&\n        computedEntries.length > 0\n      ) {\n        checkClaimStatus();\n        loadUserProof();\n      }\n    }, [\n      detectedChain,\n      connectionStatus,\n      pushChainClient,\n      contractAddresses,\n      computedEntries,\n      checkClaimStatus,\n      loadUserProof,\n    ]);\n\n    // Step helpers\n    const [newRecipient, setNewRecipient] = useState('');\n    const [newChainNamespace, setNewChainNamespace] = useState('eip155');\n    const [newChainId, setNewChainId] = useState('11155111');\n    const [newAmount, setNewAmount] = useState('');\n\n    const addEntry = () => {\n      setError('');\n      try {\n        if (!newRecipient || !newAmount) {\n          setError('Please enter recipient and amount');\n          return;\n        }\n        // quick validation\n        if (newChainNamespace === 'eip155' && !/^0x[0-9a-fA-F]{40}$/.test(newRecipient)) {\n          setError('Invalid EVM address');\n          return;\n        }\n        if (Number(newAmount) <= 0) {\n          setError('Amount must be greater than 0');\n          return;\n        }\n        setEntries((prev) => [\n          ...prev,\n          {\n            recipient: newRecipient.trim(),\n            chainNamespace: newChainNamespace,\n            chainId: newChainId,\n            amount: newAmount.trim(),\n          },\n        ]);\n        setNewRecipient('');\n        setNewAmount('');\n      } catch (e) {\n        const msg = e instanceof Error ? e.message : 'Failed to add entry';\n        setError(msg);\n      }\n    };\n\n    const removeEntry = (idx) => {\n      setEntries((prev) => prev.filter((_, i) => i !== idx));\n    };\n\n    const generateMerkle = () => {\n      try {\n        setError('');\n        setSuccess('');\n        if (entries.length === 0) {\n          setError('Add at least one entry');\n          return;\n        }\n        const computed = [];\n\n        // build computed entries (unsorted)\n        for (const entry of entries) {\n          const derived = deriveRecipientEvmAddress(entry.recipient);\n          const wei = ethers.parseEther(entry.amount);\n          const leaf = hashLeaf(derived, entry.chainNamespace, entry.chainId, wei);\n          computed.push({\n            recipient: entry.recipient,\n            chainNamespace: entry.chainNamespace,\n            chainId: entry.chainId,\n            amount: entry.amount,\n            amountWei: wei,\n            derivedRecipient: derived,\n            leaf,\n            proof: [],\n          });\n        }\n\n        // Sort deterministically by leaf to make root independent of input order\n        computed.sort((a, b) => a.leaf.localeCompare(b.leaf));\n        const leaves = computed.map((c) => c.leaf);\n\n        const tree = makeMerkleTree(leaves);\n        const root = tree[0];\n\n        for (let i = 0; i < computed.length; i++) {\n          const leafTreeIndex = tree.length - 1 - i;\n          computed[i].proof = getProof(tree, leafTreeIndex);\n        }\n\n        setComputedEntries(computed);\n        setMerkleRoot(root);\n        setSuccess('Merkle tree generated');\n        setCurrentStep(2);\n      } catch (e) {\n        const msg = e instanceof Error ? e.message : 'Failed to generate Merkle tree';\n        setError(msg);\n      }\n    };\n\n    // Claim tokens using Push Universal Transaction\n    const claimTokens = async () => {\n      if (!pushChainClient || !contractAddresses || !detectedChain) return;\n      if (!claimAmount) {\n        setError('Please check eligibility to load your claim amount');\n        return;\n      }\n\n      setIsClaiming(true);\n      setError('');\n      setSuccess('');\n\n      try {\n        const amount = ethers.parseEther(claimAmount);\n\n        // Encode the claim function call\n        const claimData = PushChain.utils.helpers.encodeTxData({\n          abi: AIRDROP_ABI,\n          functionName: 'claim',\n          args: [proof, amount, detectedChain.namespace, detectedChain.id],\n        });\n\n        console.log('proof', proof);\n        console.log('amount', amount);\n        console.log('claimData', claimData);\n\n        // Send universal transaction using Push Chain client\n        const tx = await pushChainClient.universal.sendTransaction({\n          to: contractAddresses.airdropAddress,\n          data: claimData,\n          value: BigInt('0'), // No PC value needed for claim\n        });\n        console.log('tx', tx);\n        const receipt = await tx.wait();\n        console.log('receipt', receipt);\n\n        setSuccess(`Tokens claimed successfully from ${detectedChain.name}! Transaction: ${tx.hash}`);\n        setHasClaimed(true);\n\n        // TODO: Update balance using pushChainClient\n      } catch (err) {\n        const msg = err instanceof Error ? err.message : 'Claim failed';\n        setError(msg);\n        console.error('Claim error:', err);\n      } finally {\n        setIsClaiming(false);\n      }\n    };\n\n    return (\n      <div\n        style={{\n          maxWidth: '500px',\n          margin: '0 auto',\n          padding: '20px',\n          fontFamily: 'system-ui, sans-serif',\n        }}\n      >\n        <h1 style={{ textAlign: 'center', marginBottom: '10px' }}>Universal Airdrop</h1>\n        <p style={{ textAlign: 'center', color: '#666', marginBottom: '30px' }}>\n          Claim tokens using Push Chain's Universal External Accounts\n        </p>\n\n        <div style={{ marginBottom: '30px' }}>\n          <PushUniversalAccountButton />\n        </div>\n\n        {/* Steps */}\n        <div style={{ marginBottom: '24px', display: 'flex', gap: '8px', justifyContent: 'center' }}>\n          {[1, 2, 3].map((s) => (\n            <div\n              key={s}\n              style={{\n                width: '28px',\n                height: '28px',\n                borderRadius: '50%',\n                backgroundColor: currentStep >= s ? '#646cff' : '#e0e0e0',\n                color: currentStep >= s ? '#fff' : '#555',\n                display: 'flex',\n                alignItems: 'center',\n                justifyContent: 'center',\n                fontWeight: 'bold',\n                fontSize: '14px',\n              }}\n            >\n              {s}\n            </div>\n          ))}\n        </div>\n\n        {/* Step 1: Build Merkle tree */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 1: Create airdrop entries & generate proof</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>\n            <input\n              placeholder=\"Recipient address (0x... or Solana base58)\"\n              value={newRecipient}\n              onChange={(e) => setNewRecipient(e.target.value)}\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <div style={{ display: 'flex', gap: '8px' }}>\n              <select\n                value={newChainNamespace}\n                onChange={(e) => {\n                  const ns = e.target.value;\n                  setNewChainNamespace(ns);\n                  // default chain id based on ns\n                  if (ns === 'solana') setNewChainId('EtWTRABZaYq6iMfeYKouRu166VU2xqa1');\n                  else setNewChainId('11155111');\n                }}\n                style={{ flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n              >\n                <option value=\"eip155\">EVM (eip155)</option>\n                <option value=\"solana\">Solana</option>\n              </select>\n              <select\n                value={newChainId}\n                onChange={(e) => setNewChainId(e.target.value)}\n                style={{ flex: 1, padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n              >\n                <option value=\"11155111\">Ethereum Sepolia</option>\n                <option value=\"42101\">Push Chain Testnet</option>\n                <option value=\"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\">Solana Devnet</option>\n              </select>\n            </div>\n            <input\n              placeholder=\"Amount (tokens)\"\n              value={newAmount}\n              onChange={(e) => setNewAmount(e.target.value)}\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <button\n              onClick={addEntry}\n              style={{\n                width: '100%',\n                padding: '12px',\n                fontWeight: 'bold',\n                backgroundColor: '#646cff',\n                color: 'white',\n                border: 'none',\n                borderRadius: '8px',\n                cursor: 'pointer',\n              }}\n            >\n              ➕ Add Entry\n            </button>\n          </div>\n\n          {entries.length > 0 && (\n            <div style={{ marginTop: '12px' }}>\n              {entries.map((e, i) => (\n                <div\n                  key={`${e.recipient}-${i}`}\n                  style={{\n                    display: 'flex',\n                    justifyContent: 'space-between',\n                    alignItems: 'center',\n                    padding: '8px',\n                    border: '1px solid #eee',\n                    borderRadius: '6px',\n                    marginBottom: '8px',\n                    fontSize: '12px',\n                  }}\n                >\n                  <div>\n                    <div style={{ fontFamily: 'monospace' }}>{e.recipient}</div>\n                    <div style={{ color: '#666' }}>\n                      {e.chainNamespace}:{e.chainId} · {e.amount} tokens\n                    </div>\n                  </div>\n                  <button\n                    onClick={() => removeEntry(i)}\n                    style={{ background: 'transparent', border: 'none', color: '#c62828', cursor: 'pointer' }}\n                  >\n                    ✖\n                  </button>\n                </div>\n              ))}\n              <button\n                onClick={generateMerkle}\n                style={{\n                  width: '100%',\n                  padding: '12px',\n                  fontWeight: 'bold',\n                  backgroundColor: '#2e7d32',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '8px',\n                  cursor: 'pointer',\n                  marginTop: '8px',\n                }}\n              >\n                🌳 Generate Merkle Tree\n              </button>\n              {merkleRoot && (\n                <div style={{ marginTop: '10px', fontSize: '12px' }}>\n                  <div style={{ color: '#666' }}>Merkle Root:</div>\n                  <div style={{ fontFamily: 'monospace', wordBreak: 'break-all' }}>{merkleRoot}</div>\n                </div>\n              )}\n            </div>\n          )}\n        </div>\n\n        {/* Step 2: Contract addresses */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 2: Enter contract addresses</h3>\n          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>\n            <input\n              placeholder=\"Token contract address (0x...)\"\n              value={contractAddresses?.tokenAddress || ''}\n              onChange={(e) =>\n                setContractAddresses({\n                  tokenAddress: e.target.value,\n                  airdropAddress: contractAddresses?.airdropAddress || '',\n                })\n              }\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <input\n              placeholder=\"Airdrop (Merkle) contract address (0x...)\"\n              value={contractAddresses?.airdropAddress || ''}\n              onChange={(e) =>\n                setContractAddresses({\n                  tokenAddress: contractAddresses?.tokenAddress || '',\n                  airdropAddress: e.target.value,\n                })\n              }\n              style={{ padding: '10px', borderRadius: '6px', border: '1px solid #ddd' }}\n            />\n            <button\n              onClick={() => setCurrentStep(3)}\n              disabled={!merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress}\n              style={{\n                width: '100%',\n                padding: '12px',\n                fontWeight: 'bold',\n                backgroundColor:\n                  !merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress\n                    ? '#ccc'\n                    : '#646cff',\n                color: 'white',\n                border: 'none',\n                borderRadius: '8px',\n                cursor:\n                  !merkleRoot || !contractAddresses?.airdropAddress || !contractAddresses?.tokenAddress\n                    ? 'not-allowed'\n                    : 'pointer',\n              }}\n            >\n              Continue to Step 3\n            </button>\n          </div>\n        </div>\n\n        {/* Step 3: Eligibility & Claim */}\n        <div style={{ marginBottom: '20px', border: '1px solid #eee', borderRadius: '8px', padding: '16px' }}>\n          <h3 style={{ marginTop: 0, marginBottom: '12px' }}>Step 3: Check eligibility & claim</h3>\n          {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED ? (\n            <div>\n              <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                <p style={{ marginBottom: '5px', fontSize: '14px', color: '#666' }}>Connected Account</p>\n                <p style={{ fontFamily: 'monospace', fontSize: '14px' }}>\n                  {pushChainClient?.universal?.account?.slice(0, 8)}...{pushChainClient?.universal?.account?.slice(-6)}\n                </p>\n              </div>\n\n              <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                <p style={{ marginBottom: '5px', fontSize: '14px', color: '#666' }}>Origin Chain</p>\n                <p style={{ fontWeight: 'bold' }}>{detectedChain ? detectedChain.name : 'Detecting...'}</p>\n              </div>\n\n              {hasClaimed ? (\n                <div\n                  style={{\n                    padding: '16px',\n                    backgroundColor: '#4CAF50',\n                    color: 'white',\n                    borderRadius: '8px',\n                    textAlign: 'center',\n                  }}\n                >\n                  ✅ Tokens claimed successfully!\n                </div>\n              ) : (\n                <div>\n                  <button\n                    onClick={loadUserProof}\n                    disabled={isLoadingProof || !merkleRoot}\n                    style={{\n                      width: '100%',\n                      padding: '12px',\n                      fontWeight: 'bold',\n                      backgroundColor: isLoadingProof || !merkleRoot ? '#ccc' : '#2196F3',\n                      color: 'white',\n                      border: 'none',\n                      borderRadius: '8px',\n                      cursor: isLoadingProof || !merkleRoot ? 'not-allowed' : 'pointer',\n                      marginBottom: '12px',\n                    }}\n                  >\n                    {isLoadingProof ? '⏳ Loading Your Proof...' : '🔍 Check Eligibility'}\n                  </button>\n\n                  {!isLoadingProof && !claimAmount && (\n                    <div\n                      style={{\n                        padding: '16px',\n                        backgroundColor: '#fff3cd',\n                        color: '#856404',\n                        borderRadius: '6px',\n                        marginBottom: '16px',\n                        textAlign: 'center',\n                      }}\n                    >\n                      ⚠️ No tokens available to claim on this chain\n                    </div>\n                  )}\n\n                  {claimAmount && (\n                    <div style={{ marginBottom: '20px', textAlign: 'center' }}>\n                      <div\n                        style={{\n                          display: 'inline-block',\n                          backgroundColor: '#f0f8ff',\n                          padding: '12px 20px',\n                          borderRadius: '8px',\n                          border: '2px solid #646cff',\n                        }}\n                      >\n                        <p style={{ margin: '0 0 4px 0', fontSize: '12px', color: '#666', fontWeight: 'bold' }}>\n                          CLAIM AMOUNT\n                        </p>\n                        <p style={{ margin: 0, fontSize: '24px', fontWeight: 'bold', color: '#646cff' }}>\n                          {claimAmount} <span style={{ fontSize: '16px', color: '#666' }}>TOKENS</span>\n                        </p>\n                      </div>\n                    </div>\n                  )}\n\n                  <button\n                    onClick={claimTokens}\n                    disabled={isClaiming || isLoadingProof || !claimAmount}\n                    style={{\n                      width: '100%',\n                      padding: '16px',\n                      fontSize: '18px',\n                      fontWeight: 'bold',\n                      backgroundColor: isClaiming || isLoadingProof || !claimAmount ? '#ccc' : '#646cff',\n                      color: 'white',\n                      border: 'none',\n                      borderRadius: '8px',\n                      cursor: isClaiming || isLoadingProof || !claimAmount ? 'not-allowed' : 'pointer',\n                      transition: 'all 0.2s ease',\n                      transform: isClaiming || isLoadingProof || !claimAmount ? 'none' : 'scale(1)',\n                      boxShadow:\n                        isClaiming || isLoadingProof || !claimAmount ? 'none' : '0 4px 12px rgba(100, 108, 255, 0.3)',\n                    }}\n                  >\n                    {isClaiming ? '⏳ Claiming Tokens...' : `🚀 Claim ${claimAmount || '0'} Tokens`}\n                  </button>\n                </div>\n              )}\n            </div>\n          ) : (\n            <div style={{ padding: '12px', background: '#fff3cd', color: '#856404', borderRadius: '6px' }}>\n              Connect your wallet to check eligibility\n            </div>\n          )}\n        </div>\n\n        {error && (\n          <div\n            style={{\n              padding: '12px',\n              backgroundColor: '#ffebee',\n              color: '#c62828',\n              borderRadius: '6px',\n              marginTop: '20px',\n              textAlign: 'center',\n            }}\n          >\n            {error}\n          </div>\n        )}\n\n        {success && (\n          <div\n            style={{\n              padding: '12px',\n              backgroundColor: '#e8f5e8',\n              color: '#2e7d32',\n              borderRadius: '6px',\n              marginTop: '20px',\n              textAlign: 'center',\n            }}\n          >\n            {success}\n          </div>\n        )}\n\n        <div style={{ marginTop: '30px', padding: '16px', backgroundColor: '#f8f9fa', borderRadius: '8px' }}>\n          <p style={{ fontSize: '14px', color: '#666', margin: 0, textAlign: 'center' }}>\n            Build your airdrop list, enter contract addresses, then connect and claim\n          </p>\n        </div>\n      </div>\n    );\n  }\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+          })
+        })
+      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
+        value: "Deploy ERC-20 Token",
+        label: "Deploy ERC-20 Token",
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "TestToken"
+          }), " contract on Remix below:"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "Set the Solidity compiler version to 0.8.22 in Remix."
+          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "For Environment, choose Injected Provider (connect your wallet to Push Chain Donut Testnet)."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["When deploying ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "TestToken"
+            }), ", pass constructor arguments: token name and symbol (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "TestToken"
+            }), " and ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "TEST"
+            }), ")."]
+          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Note:"
+            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "$PC"
+            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://faucet.push.org/",
+              children: "Push Chain Faucet"
+            }), "."]
+          }), "\n"]
+        }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
+          examples: {
+            'TestToken.sol': {
+              absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/TestToken.sol',
+              ctaTitle: 'View on GitHub',
+              ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/TestToken.sol'
+            }
+          }
+        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
+          id: "understanding-the-testtoken-contract",
+          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "TestToken"
+          }), " contract"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Inherits from ERC20"
+            }), ": Uses OpenZeppelin's battle-tested ERC20 implementation"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Constructor"
+            }), ": Mints 1 million tokens to the deployer upon creation"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Mint function"
+            }), ": Allows additional tokens to be minted (useful for testing)"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Standard ERC20 features"
+            }), ": Transfer, balance checking, approvals, etc."]
+          }), "\n"]
+        })]
+      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
+        value: "Deploy Universal Airdrop",
+        label: "Deploy Universal Airdrop",
+        children: [(0,jsx_runtime.jsxs)(_components.p, {
+          children: ["Here are the steps to deploy the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "UniversalAirdrop"
+          }), " contract on Remix below:"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "Set the Solidity compiler version to 0.8.22 in Remix."
+          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "For Environment, choose Injected Provider (connect your wallet to Push Chain Donut Testnet)."
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["When deploying ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "UniversalAirdrop"
+            }), ", pass constructor arguments: ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "token address deployed in the previous step and merkle root you can get from the next step"
+            }), "."]
+          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Note:"
+            }), " If you need ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "$PC"
+            }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "https://faucet.push.org/",
+              children: "Push Chain Faucet"
+            }), "."]
+          }), "\n"]
+        }), (0,jsx_runtime.jsx)(RemixIDE/* default */.A, {
+          examples: {
+            'UniversalAirdrop.sol': {
+              absoluteFileURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/UniversalAirdrop.sol',
+              ctaTitle: 'View on GitHub',
+              ctaURL: 'https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/contracts/UniversalAirdrop.sol'
+            }
+          }
+        }), (0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsxs)(_components.h3, {
+          id: "understanding-the-universalairdrop-contract",
+          children: ["Understanding the ", (0,jsx_runtime.jsx)(_components.code, {
+            children: "UniversalAirdrop"
+          }), " contract"]
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Merkle Proof Verification"
+            }), ": Uses OpenZeppelin's ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "MerkleProof.verify()"
+            }), " to validate inclusion proofs"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Universal Support"
+            }), ": Accepts any recipient address format (the proof generation handles the conversion)"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Reentrancy Protection"
+            }), ": Uses ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "ReentrancyGuard"
+            }), " to prevent reentrancy attacks"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Claim Tracking"
+            }), ": Maps claim IDs (address + origin chain) to prevent double claims per recipient per origin chain"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.strong, {
+              children: "Owner Controls"
+            }), ": Allows updating the Merkle root for future airdrop rounds"]
+          }), "\n"]
+        })]
+      }), (0,jsx_runtime.jsxs)(TabItem/* default */.A, {
+        value: "Generate Merkle Tree",
+        label: "Generate Merkle Tree",
+        children: [(0,jsx_runtime.jsx)("br", {}), (0,jsx_runtime.jsx)(_components.p, {
+          children: "In this part, we'll create a Merkle proof generator that produces cryptographic proofs for a universal airdrop system. This generator will create a Merkle tree from recipient data and generate proofs that can be verified on-chain."
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "The dependencies you'll need for the Merkle proof generator:"
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "@openzeppelin/merkle-tree"
+            }), ": Core library for building Merkle trees with cryptographic hashing"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "viem"
+            }), ": Ethereum library providing ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "keccak256"
+            }), " hashing and ABI encoding utilities"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "bs58"
+            }), ": Base58 encoding/decoding library for Solana addresses"]
+          }), "\n"]
+        }), (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+          repo: {
+            title: "Open in Github",
+            url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/universal-airdrop/scripts/merkle-proof-generator.ts"
+          },
+          children: `
+
+  import { keccak256 } from 'viem';
+  import { makeMerkleTree, getProof } from '@openzeppelin/merkle-tree/dist/core.js';
+  import bs58 from 'bs58';
+
+  // Hardcoded airdrop data
+  const AIRDROP_ENTRIES = [
+    {
+      recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+      chainNamespace: 'eip155',
+      chainId: '42101',
+      amount: '10000000000000000000',
+    },
+    {
+      recipient: '0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9',
+      chainNamespace: 'eip155',
+      chainId: '11155111',
+      amount: '10000000000000000000',
+    },
+    {
+      recipient: '72JBejJFXrRKpQ69Hmaqr7vWJr6pdZXFEL6jt3sadsXU',
+      chainNamespace: 'solana',
+      chainId: 'EtWTRABZaYq6iMfeYKouRu166VU2xqa1',
+      amount: '10000000000000000000',
+    },
+  ];
+
+  /**
+   * Generate a leaf hash matching the Solidity contract
+   * leaf = keccak256(abi.encodePacked(recipientOnPush, chainNamespace, chainId, amount))
+   */
+  function generateLeaf(entry) {
+    const { recipient, chainNamespace, chainId, amount } = entry;
+
+    // Normalize recipient address:
+    // - If hex 0x address (length 42), parse as 20-byte address
+    // - Else treat as base58 (e.g., Solana), hash bytes and take last 20 bytes
+    let recipientAddressHex;
+    if (recipient.startsWith('0x')) {
+      const addr = recipient.toLowerCase();
+      const addressBytes = addr.slice(2).padStart(40, '0');
+      recipientAddressHex = addressBytes;
+    } else {
+      const raw = Buffer.from(bs58.decode(recipient));
+      const hashed = Buffer.from(keccak256('0x' + raw.toString('hex')).slice(2), 'hex');
+      const last20 = hashed.slice(-20);
+      recipientAddressHex = last20.toString('hex');
+    }
+
+    const namespaceBytes = Buffer.from(chainNamespace, 'utf8');
+    const chainIdBytes = Buffer.from(chainId, 'utf8');
+    const amountBytes = Buffer.alloc(32);
+    amountBytes.writeBigUInt64BE(BigInt(amount), 24);
+
+    const packedBytes = Buffer.concat([
+      Buffer.from(recipientAddressHex, 'hex'),
+      namespaceBytes,
+      chainIdBytes,
+      amountBytes,
+    ]);
+
+    return keccak256('0x' + packedBytes.toString('hex'));
+  }
+
+  /**
+   * Build Merkle tree from airdrop entries
+   */
+  function buildMerkleTree(entries) {
+    // Generate leaves
+    const leaves = entries.map((entry) => generateLeaf(entry));
+
+    // Pair entries with leaves and sort deterministically by leaf.
+    // This makes the Merkle root independent of input order (matches frontend UI behavior).
+    const paired = entries.map((entry, i) => ({ entry, leaf: leaves[i] }));
+    paired.sort((a, b) => a.leaf.localeCompare(b.leaf));
+    const sortedLeaves = paired.map((p) => p.leaf);
+
+    // Create Merkle tree with sorted node hashing (default)
+    const tree = makeMerkleTree(sortedLeaves);
+    const merkleRoot = tree[0];
+
+    // Generate proofs for each entry based on sorted leaf order
+    const entriesWithProofs = paired.map((p, index) => {
+      const leafIndex = tree.length - 1 - index;
+      const proof = getProof(tree, leafIndex);
+
+      return {
+        ...p.entry,
+        leaf: p.leaf,
+        proof,
+      };
+    });
+
+    return {
+      merkleRoot,
+      entries: entriesWithProofs,
+    };
+  }
+
+  /**
+   * Print summary of the airdrop data
+   */
+  function printSummary(treeData) {
+    const { entries, merkleRoot } = treeData;
+
+    console.log('🌳 Universal Airdrop Merkle Tree Summary');
+    console.log('=====================================');
+    console.log('📁 Merkle Root: ' + merkleRoot);
+    console.log('👥 Total Recipients: ' + entries.length);
+
+    // Calculate totals per chain namespace
+    const chainStats = entries.reduce((acc, entry) => {
+      const key = entry.chainNamespace + ':' + entry.chainId;
+      if (!acc[key]) {
+        acc[key] = { count: 0, totalAmount: BigInt(0) };
+      }
+      acc[key].count += 1;
+      acc[key].totalAmount += BigInt(entry.amount);
+      return acc;
+    }, {});
+
+    console.log('📊 Per-Chain Breakdown:');
+    Object.entries(chainStats).forEach(([chain, stats]) => {
+      console.log('  ' + chain + ': ' + stats.count + ' recipients, ' + stats.totalAmount.toString() + ' tokens');
+    });
+
+    // Calculate total amount
+    const totalAmount = entries.reduce((sum, entry) => sum + BigInt(entry.amount), BigInt(0));
+    console.log('💰 Total Airdrop Amount: ' + totalAmount.toString() + ' tokens');
+  }
+
+  // Main execution
+  async function main() {
+    // Use hardcoded airdrop entries
+    const entries = AIRDROP_ENTRIES;
+
+    // Validate entries
+    for (const entry of entries) {
+      const isHex = entry.recipient.startsWith('0x') && entry.recipient.length === 42;
+      const isBase58 = !entry.recipient.startsWith('0x');
+      if (!isHex && !isBase58) {
+        throw new Error('Invalid recipient: ' + entry.recipient + ' (must be 0x-address or base58)');
+      }
+      if (!entry.chainNamespace || !entry.chainId) {
+        throw new Error('Missing chain info for ' + entry.recipient);
+      }
+      if (isNaN(parseInt(entry.amount)) || BigInt(entry.amount) <= 0) {
+        throw new Error('Invalid amount for ' + entry.recipient + ': ' + entry.amount);
+      }
+    }
+
+    console.log('🔨 Building Merkle tree for ' + entries.length + ' recipients...');
+
+    // Build Merkle tree
+    const treeData = buildMerkleTree(entries);
+
+    // Output Merkle tree data to console instead of writing to a file
+    console.log(JSON.stringify(treeData, null, 2));
+    console.log('✅ Merkle tree built successfully!');
+
+    // Print summary
+    printSummary(treeData);
+  }
+
+  main().catch(console.error);
+
+                                                                                                                                
+`
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "Each entry in the array represents a recipient with:"
+        }), (0,jsx_runtime.jsxs)(_components.ul, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "recipient"
+            }), ": Wallet address (format varies by blockchain)"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "chainNamespace"
+            }), ": Blockchain type (\"eip155\", \"solana\", \"push\", etc.)"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "chainId"
+            }), ": Specific chain identifier within that namespace"]
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "amount"
+            }), ": Token amount in smallest units (as string to avoid precision issues)"]
+          }), "\n"]
+        }), (0,jsx_runtime.jsx)(_components.h4, {
+          id: "how-the-merkle-proof-works",
+          children: "How the Merkle proof works"
+        }), (0,jsx_runtime.jsx)(_components.p, {
+          children: "The proof allows anyone to verify that a specific recipient is included in the airdrop without revealing the entire recipient list. The smart contract can verify the proof by:"
+        }), (0,jsx_runtime.jsxs)(_components.ol, {
+          children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "Recalculating the leaf hash from the recipient's data"
+          }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+            children: "Using the provided proof hashes to reconstruct the path to the root"
+          }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+            children: ["Comparing the reconstructed root with the stored ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "merkleRoot"
+            })]
+          }), "\n"]
+        }), (0,jsx_runtime.jsxs)(_components.blockquote, {
+          children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+            children: ["✅ ", (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Next steps"
+            }), ": You'll use the ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "merkleRoot"
+            }), " when deploying the UniversalAirdrop contract, and the frontend will use each recipient's ", (0,jsx_runtime.jsx)(_components.code, {
+              children: "proof"
+            }), " array to submit claims on-chain."]
+          }), "\n"]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "conclusion",
+      children: "Conclusion"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["You generated ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Merkle proofs"
+      }), " from an airdrop list, deployed a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Universal Merkle‑verified airdrop contract"
+      }), " to ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Push Chain Donut Testnet"
+      }), ", and added a ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "claim UI"
+      }), ". With this universal airdrop system, users from different chains can claim their tokens seamlessly using Push Chain's Universal External Accounts (UEA) system."]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
+
 
 /***/ }),
 
@@ -1518,1080 +2199,10 @@ function Spinner(_ref){let{size=42,color=globals/* default */.Ay.COLORS.PRIMARY_
 
 /***/ }),
 
-/***/ 572220:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_02_tokens_and_airdrops_01_tutorial_mint_erc_20_tokens_mdx_907_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
-
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-02-tokens-and-airdrops-01-tutorial-mint-erc-20-tokens-mdx-907.json
-const site_docs_chain_01_tutorials_02_tokens_and_airdrops_01_tutorial_mint_erc_20_tokens_mdx_907_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/tokens-and-airdrops/docs-chain-tutorials-mint-erc-20-tokens","title":"Mint Universal ERC-20 Tokens","description":"Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/02-tokens-and-airdrops/01-Tutorial-Mint-ERC-20-Tokens.mdx","sourceDirName":"chain/01-tutorials/02-tokens-and-airdrops","slug":"/chain/tutorials/tokens-and-airdrops/tutorial-mint-erc-20-tokens","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops/tutorial-mint-erc-20-tokens","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/02-tokens-and-airdrops/01-Tutorial-Mint-ERC-20-Tokens.mdx","tags":[],"version":"current","sidebarPosition":3,"frontMatter":{"id":"docs-chain-tutorials-mint-erc-20-tokens","title":"Mint Universal ERC-20 Tokens","hide_title":false,"slug":"./tutorial-mint-erc-20-tokens","displayed_sidebar":"pushChainSidebar","sidebar_position":3,"image":"/assets/docs/previews/docs_chain_tutorials_mint_erc_20_tokens--mint_universal_erc-20_tokens.png"},"sidebar":"pushChainSidebar","previous":{"title":"Tokens and Airdrops","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops"},"next":{"title":"Build a Claimable Universal Airdrop","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/IFrameModal/IFrameModal.tsx
-var IFrameModal = __webpack_require__(602999);
-// EXTERNAL MODULE: ./src/components/NodeJSVirtualIDE/NodeJSVirtualIDE.tsx
-var NodeJSVirtualIDE = __webpack_require__(891517);
-;// ./docs/chain/01-tutorials/02-tokens-and-airdrops/01-Tutorial-Mint-ERC-20-Tokens.mdx
-
-
-const frontMatter = {
-	id: 'docs-chain-tutorials-mint-erc-20-tokens',
-	title: 'Mint Universal ERC-20 Tokens',
-	hide_title: false,
-	slug: './tutorial-mint-erc-20-tokens',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 3,
-	image: '/assets/docs/previews/docs_chain_tutorials_mint_erc_20_tokens--mint_universal_erc-20_tokens.png'
-};
-const contentTitle = undefined;
-
-const assets = {
-
-};
-
-/*Content Start*/
-/*TODO: Update this URL to correct one*/
-
-
-
-
-
-
-
-const toc = [{
-  "value": "Tutorial Overview",
-  "id": "tutorial-overview",
-  "level": 2
-}, {
-  "value": "Part 1: Deploy ERC-20 Token to Push Chain",
-  "id": "part-1-deploy-erc-20-token-to-push-chain",
-  "level": 3
-}, {
-  "value": "Part 2: Mint $WPUSH Tokens",
-  "id": "part-2-mint-wpush-tokens",
-  "level": 3
-}, {
-  "value": "Part 3: Create Liquidity Pool",
-  "id": "part-3-create-liquidity-pool",
-  "level": 3
-}, {
-  "value": "Part 4: Build Frontend UI",
-  "id": "part-4-build-frontend-ui",
-  "level": 3
-}, {
-  "value": "Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat",
-  "id": "part-1-deploying-a-standard-erc-20-token-to-push-chains-testnet-with-hardhat",
-  "level": 2
-}, {
-  "value": "1.1. Setting up Hardhat",
-  "id": "11-setting-up-hardhat",
-  "level": 3
-}, {
-  "value": "1.2. Configuring Hardhat (<code>hardhat.config.ts</code>)",
-  "id": "12-configuring-hardhat-hardhatconfigts",
-  "level": 3
-}, {
-  "value": "1.4. Create the Airdrop Token Contract",
-  "id": "14-create-the-airdrop-token-contract",
-  "level": 3
-}, {
-  "value": "1.5. Compiling the Contract",
-  "id": "15-compiling-the-contract",
-  "level": 3
-}, {
-  "value": "1.6. Deploying the Airdrop Token Contract to Push Chain",
-  "id": "16-deploying-the-airdrop-token-contract-to-push-chain",
-  "level": 3
-}, {
-  "value": "Part 2: Minting <code>$WPUSH</code> tokens",
-  "id": "part-2-minting-wpush-tokens",
-  "level": 2
-}, {
-  "value": "Part 3: Create <code>$AIRDROP/$WPUSH</code> Pool and Add Liquidity",
-  "id": "part-3-create-airdropwpush-pool-and-add-liquidity",
-  "level": 2
-}, {
-  "value": "Part 4: Building the Frontend UI",
-  "id": "part-4-building-the-frontend-ui",
-  "level": 2
-}, {
-  "value": "4.1. Setting up Vite + React + TypeScript frontend",
-  "id": "41-setting-up-vite--react--typescript-frontend",
-  "level": 3
-}, {
-  "value": "4.2. Installing <code>@pushchain/ui-kit</code>",
-  "id": "42-installing-pushchainui-kit",
-  "level": 3
-}, {
-  "value": "4.3. Setting up the Push Chain Wallet",
-  "id": "43-setting-up-the-push-chain-wallet",
-  "level": 3
-}, {
-  "value": "4.4. Set constants for addresses",
-  "id": "44-set-constants-for-addresses",
-  "level": 3
-}, {
-  "value": "4.5. Creating the Application Component",
-  "id": "45-creating-the-application-component",
-  "level": 3
-}, {
-  "value": "Conclusion",
-  "id": "conclusion",
-  "level": 2
-}, {
-  "value": "Next Steps",
-  "id": "next-steps",
-  "level": 3
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    blockquote: "blockquote",
-    code: "code",
-    h2: "h2",
-    h3: "h3",
-    li: "li",
-    ol: "ol",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: "Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs"
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This tutorial shows how to let users on any chain mint a universal ERC-20 called ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP"
-      }), " by leveraging Push Universal Transactions plus a Uniswap v3 pool on Push Chain. Users “mint” by swapping ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " (Wrapped Push Token) to ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP"
-      }), " through the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP/$WPUSH"
-      }), " pool; the universal wallet abstracts cross-chain execution."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "What you’ll do:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Deploy a standard ERC-20 ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$AIRDROP"
-        }), " token on Push Chain"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Mint ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$WPUSH"
-        }), " tokens for liquidity and swaps"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Create a ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$AIRDROP/$WPUSH"
-        }), " pool and add liquidity"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Build a frontend UI that lets users mint ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$WPUSH"
-        }), " and swap between ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$WPUSH"
-        }), " and ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$AIRDROP"
-        })]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "tutorial-overview",
-      children: "Tutorial Overview"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This tutorial is divided into four main parts:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-1-deploy-erc-20-token-to-push-chain",
-      children: "Part 1: Deploy ERC-20 Token to Push Chain"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set up Hardhat, write and deploy an ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP"
-      }), " ERC-20 token contract to Push Chain testnet."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-2-mint-wpush-tokens",
-      children: "Part 2: Mint $WPUSH Tokens"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Create a script to mint ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " tokens (wrapped Push Chain tokens) needed for liquidity pools."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-3-create-liquidity-pool",
-      children: "Part 3: Create Liquidity Pool"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Set up a Uniswap V3 ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP/$WPUSH"
-      }), " pool and add initial liquidity for token swapping."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "part-4-build-frontend-ui",
-      children: "Part 4: Build Frontend UI"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Create a React app with Push Universal Wallet integration that allows users to mint ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " by depositing ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$PC"
-      }), " and swap between ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " and ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP"
-      }), " using the Uniswap v3 router on Push Chain."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "part-1-deploying-a-standard-erc-20-token-to-push-chains-testnet-with-hardhat",
-      children: "Part 1: Deploying a standard ERC-20 token to Push Chain’s testnet with Hardhat"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Note:"
-        }), " For a deeper dive on how to configure Hardhat to Push Chain, please refer to this page ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/push-chain-website/pr-preview/pr-1067/docs/chain/setup/smart-contract-environment/configure-hardhat",
-          children: "Configure Hardhat"
-        })]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "11-setting-up-hardhat",
-      children: "1.1. Setting up Hardhat"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "First, let’s set up a new Hardhat project."
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "# Create the project directory\nmkdir airdrop-token\ncd airdrop-token\n\n# Initialize a new Node.js project\nnpm init -y\n\n# Install Hardhat and its toolbox\nnpm install --save-dev hardhat@2.26.3 @nomicfoundation/hardhat-toolbox@6.1.0\n\n# Initialize Hardhat (select the options \"Hardhat 2\" then \"Create a TypeScript project\")\nnpx hardhat init\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Now, install required dependencies:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "# Install dotenv for environment variable management\nnpm install dotenv\n\n# Install OpenZeppelin contracts library\nnpm install @openzeppelin/contracts\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "dotenv"
-        }), ": Allows us to load environment variables from a .env file, keeping sensitive information like private keys secure"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "@openzeppelin/contracts"
-        }), ": Provides battle-tested smart contract implementations including ERC-20"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "12-configuring-hardhat-hardhatconfigts",
-      children: ["1.2. Configuring Hardhat (", (0,jsx_runtime.jsx)(_components.code, {
-        children: "hardhat.config.ts"
-      }), ")"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Update your ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "hardhat.config.ts"
-      }), " to include network configurations and compiler settings:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "import { HardhatUserConfig } from 'hardhat/config';\nimport '@nomicfoundation/hardhat-toolbox';\nimport { config as dotenvConfig } from 'dotenv';\n\n// Load environment variables\ndotenvConfig();\n\nconst config: HardhatUserConfig = {\n  solidity: {\n    version: '0.8.22',\n    settings: {\n      optimizer: {\n        enabled: true,\n        runs: 200,\n      },\n      viaIR: true,\n    },\n  },\n  networks: {\n    pushDonut: {\n      url: 'https://evm.rpc-testnet-donut-node1.push.org/',\n      accounts: process.env.PRIVATE_KEY\n        ? [\n            process.env.PRIVATE_KEY.startsWith('0x')\n              ? process.env.PRIVATE_KEY\n              : `0x${process.env.PRIVATE_KEY}`,\n          ]\n        : [],\n      chainId: 42101,\n    },\n  },\n  paths: {\n    sources: './contracts',\n    tests: './test',\n    cache: './cache',\n    artifacts: './artifacts',\n  },\n};\n\nexport default config;\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Key configuration details:"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Solidity Compiler"
-        }), ": Version 0.8.22 with optimization enabled (200 runs) and viaIR enabled for better gas efficiency"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Networks"
-        }), ":", "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-          children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-            children: [(0,jsx_runtime.jsx)(_components.code, {
-              children: "pushDonut"
-            }), ": Push Chain Donut Testnet with environment-based private key"]
-          }), "\n"]
-        }), "\n"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Paths"
-        }), ": Standard Hardhat directory structure"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "14-create-the-airdrop-token-contract",
-      children: "1.4. Create the Airdrop Token Contract"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Create a new file ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "contracts/AirdropToken.sol"
-      }), " with the following content:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-solidity",
-        children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.19;\n\nimport \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\ncontract AirdropToken is ERC20 {\n    constructor(string memory name, string memory symbol) ERC20(name, symbol) {\n        _mint(msg.sender, 1_000_000 * 10 ** decimals());\n    }\n\n    function mint(address to, uint256 amount) external {\n        _mint(to, amount);\n    }\n}\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "15-compiling-the-contract",
-      children: "1.5. Compiling the Contract"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Compile the contract with:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npx hardhat compile\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "16-deploying-the-airdrop-token-contract-to-push-chain",
-      children: "1.6. Deploying the Airdrop Token Contract to Push Chain"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Create a ", (0,jsx_runtime.jsx)(_components.code, {
-        children: ".env"
-      }), " file in the root directory and add your private key that you will use to deploy the contract to Push Chain. If you need ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$PC"
-      }), " tokens to deploy the contract, you can get them from the ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "https://faucet.push.org/",
-        children: "Push Chain Faucet"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Add the following to the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: ".env"
-      }), " file:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "PRIVATE_KEY=0xyour_private_key\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Then create a deployment script at ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "scripts/deploy.ts"
-      }), " that will also write the deployed address to a file called ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "deployed-addresses.json"
-      }), " for later use:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "import { config } from 'dotenv';\nimport { ethers } from 'hardhat';\nimport hre from 'hardhat';\nimport { writeFileSync } from 'fs';\nimport { AirdropToken__factory, AirdropToken } from '../typechain-types';\n\n// Load environment variables\nconfig();\n\nasync function main() {\n  console.log('🚀 Starting deployment...');\n\n  // Debug: Check environment and network\n  console.log('🔍 Checking environment...');\n  console.log('📝 PRIVATE_KEY exists:', !!process.env.PRIVATE_KEY);\n\n  // Get the deployer account\n  const signers = await ethers.getSigners();\n  console.log('👥 Number of signers:', signers.length);\n\n  console.log('Current network:', hre.network.name);\n\n  if (signers.length === 0) {\n    console.log('❌ Current network:', hre.network.name);\n    console.log('❌ Network config:', hre.network.config);\n    throw new Error(\n      'No accounts available. Please check your PRIVATE_KEY in .env file and network configuration.'\n    );\n  }\n\n  const [deployer] = signers;\n  console.log('📝 Deploying contracts with account:', deployer.address);\n  console.log(\n    '💰 Account balance:',\n    ethers.formatEther(await ethers.provider.getBalance(deployer.address))\n  );\n\n  // Deploy AirdropToken (ERC20)\n  console.log('\\n📄 Deploying AirdropToken...');\n  const tokenFactory = new AirdropToken__factory(deployer);\n  const token: AirdropToken = await tokenFactory.deploy(\n    'AirdropToken',\n    'AIRDROP'\n  );\n  await token.waitForDeployment();\n  const tokenAddress = await token.getAddress();\n  console.log('✅ AirdropToken deployed to:', tokenAddress);\n\n  // Write deployed address to file for setup-pool.ts to use\n  const deployedData = {\n    AIRDROP_ADDR: tokenAddress,\n    network: hre.network.name,\n  };\n  writeFileSync(\n    './deployed-addresses.json',\n    JSON.stringify(deployedData, null, 2)\n  );\n  console.log('📝 Deployed address saved to: ./deployed-addresses.json');\n\n  // Read token details\n  const [name, symbol, decimals] = await Promise.all([\n    token.name(),\n    token.symbol(),\n    token.decimals(),\n  ]);\n\n  const [totalSupply, deployerBalance] = await Promise.all([\n    token.totalSupply(),\n    token.balanceOf(deployer.address),\n  ]);\n\n  console.log(`🔎 Token: ${name} (${symbol}), Decimals: ${decimals}`);\n  console.log(`🏦 Total supply: ${ethers.formatEther(totalSupply)} ${symbol}`);\n  console.log(\n    `👤 Deployer balance: ${ethers.formatEther(deployerBalance)} ${symbol}`\n  );\n\n  console.log('\\n🎉 Deployment completed successfully!');\n  console.log('\\n📋 Summary:');\n  console.log(`   Token Contract: ${tokenAddress}`);\n  console.log(`   Token Name: ${name}`);\n  console.log(`   Token Symbol: ${symbol}`);\n  console.log(`   Total Supply: ${ethers.formatEther(totalSupply)} ${symbol}`);\n}\n\n// Handle errors\nmain().catch((error) => {\n  console.error('❌ Deployment failed:', error);\n  process.exitCode = 1;\n});\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Now, deploy the Airdrop Token Contract to Push Chain:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npx hardhat run scripts/deploy.js --network pushDonut\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Example output:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "🚀 Starting deployment...\n🔍 Checking environment...\n📝 PRIVATE_KEY exists: true\n👥 Number of signers: 1\nCurrent network: pushDonut\n📝 Deploying contracts with account: 0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9\n💰 Account balance: 9876.865290171749999941\n\n📄 Deploying AirdropToken...\n✅ AirdropToken deployed to: 0x64C91bcb3E45c29BBd75CBC344f2F495c37aDD47\n📝 Deployed address saved to: ./deployed-addresses.json\n🔎 Token: AirdropToken (AIRDROP), Decimals: 18\n🏦 Total supply: 1000000.0 AIRDROP\n👤 Deployer balance: 1000000.0 AIRDROP\n\n🎉 Deployment completed successfully!\n\n📋 Summary:\n   Token Contract: 0x64C91bcb3E45c29BBd75CBC344f2F495c37aDD47\n   Token Name: AirdropToken\n   Token Symbol: AIRDROP\n   Total Supply: 1000000.0 AIRDROP\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "part-2-minting-wpush-tokens",
-      children: ["Part 2: Minting ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$WPUSH"
-      }), " tokens"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: [(0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " is the wrapped version of the native Push Chain gas token (", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$PC"
-      }), "). To mint ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " tokens, you deposit ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$PC"
-      }), " into the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " contract. This section provides a Node.js script to mint ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " tokens programmatically."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Create ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "scripts/mint-wpush.ts"
-      }), " to deposit ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$PC"
-      }), " into the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " contract and mint ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "WPUSH"
-      }), " tokens:"]
-    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-      children: `
-  import { ethers } from 'ethers';
-  import * as readline from 'node:readline/promises';
-
-  // Contract addresses
-  const CONTRACTS = {
-    wpush: '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818',
-  };
-
-  // WPUSH ABI
-  const WPUSH_ABI = ['function balanceOf(address) view returns (uint256)', 'function deposit() payable'];
-
-  const PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
-
-  // Configuration - modify these values as needed
-  const AMOUNT_TO_MINT = '5'; // Amount of WPUSH to mint
-
-  // Enable User Input
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-
-  async function main() {
-    const provider = new ethers.JsonRpcProvider(PUSH_RPC_URL);
-    const ephemeral = ethers.Wallet.createRandom();
-    const wallet = ephemeral.connect(provider);
-
-    console.log('🔑 Ephemeral wallet address:', wallet.address);
-
-    const wpush = new ethers.Contract(CONTRACTS.wpush, WPUSH_ABI, wallet);
-    const amountWei = ethers.parseUnits(AMOUNT_TO_MINT, 18);
-
-    // Wait for sufficient native PUSH balance
-    let nativeBal = await provider.getBalance(wallet.address);
-    while (nativeBal < amountWei) {
-      console.log(
-        '⏳ Insufficient native PUSH. Needed:',
-        ethers.formatUnits(amountWei, 18),
-        'PUSH; Have:',
-        ethers.formatUnits(nativeBal, 18)
-      );
-      await rl.question(':::prompt:::Please send native PUSH to ' + wallet.address + ' and press Enter to retry.');
-      nativeBal = await provider.getBalance(wallet.address);
-      console.log('💰 Native PUSH balance:', ethers.formatUnits(nativeBal, 18));
-    }
-
-    try {
-      console.log('Depositing native PUSH to mint WPUSH...');
-      const tx = await wpush.deposit({ value: amountWei });
-      const rc = await tx.wait();
-      console.log('✅ Successfully minted', AMOUNT_TO_MINT, 'WPUSH');
-      console.log('📋 Deposit TX:', rc?.hash ?? tx.hash);
-
-      const finalBalance = await wpush.balanceOf(wallet.address);
-      console.log('💰 Final WPUSH balance:', ethers.formatUnits(finalBalance, 18), 'WPUSH');
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : String(error);
-      console.error('❌ Error:', errorMessage);
-      process.exit(1);
-    } finally {
-      rl.close();
-    }
-  }
-
-  main().catch((error) => {
-    console.error('Unhandled error:', error);
-    process.exit(1);
-  });
-`
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h2, {
-      id: "part-3-create-airdropwpush-pool-and-add-liquidity",
-      children: ["Part 3: Create ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "$AIRDROP/$WPUSH"
-      }), " Pool and Add Liquidity"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["For this part, we'll use the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "ethers"
-      }), " library to interact with the Push Chain network. Install ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "ethers"
-      }), " by running:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npm install ethers\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Then create ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "scripts/create-pool.ts"
-      }), " to create and initialize the pool and add liquidity via PositionManager:"]
-    }), "\n", (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-      children: `
-import { ethers } from 'ethers';
-import \* as readline from 'node:readline/promises';
-
-  // --- Constants (update if different) ---
-  const RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';
-  const FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';
-  const POSITION_MANAGER = '0xf90F08fD301190Cd34CC9eFc5A76351e95051670';
-  // Use the deployed WPUSH used by other scripts in this repo
-  const WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';
-  const AIRDROP = '0x59cf8bF716157ec7f7d7d37f8Bcb0EeacE826c7B';
-
-  // Enable User Input
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-
-  // Using in-file constant for AIRDROP address
-  console.log('📝 Using AIRDROP address:', AIRDROP);
-
-  // --- Minimal ABIs ---
-  const ABI = {
-    factory: [
-      'function getPool(address,address,uint24) view returns (address)',
-      'function createPool(address,address,uint24) returns (address)',
-      'event PoolCreated(address indexed token0, address indexed token1, uint24 indexed fee, int24 tickSpacing, address pool)',
-    ],
-    pool: [
-      'function initialize(uint160 sqrtPriceX96)',
-      'function fee() view returns (uint24)',
-      'function token0() view returns (address)',
-      'function token1() view returns (address)',
-      'function slot0() view returns (uint160 sqrtPriceX96, int24 tick, uint16, uint16, uint16, uint8, bool)',
-    ],
-    erc20: [
-      'function symbol() view returns (string)',
-      'function decimals() view returns (uint8)',
-      'function balanceOf(address) view returns (uint256)',
-      'function allowance(address,address) view returns (uint256)',
-      'function approve(address,uint256) returns (bool)',
-    ],
-    wpush: [
-      'function deposit() payable',
-      'function balanceOf(address) view returns (uint256)',
-      'function decimals() view returns (uint8)',
-      'function symbol() view returns (string)',
-    ],
-    positionManager: [
-      'function mint((address token0, address token1, uint24 fee, int24 tickLower, int24 tickUpper, uint256 amount0Desired, uint256 amount1Desired, uint256 amount0Min, uint256 amount1Min, address recipient, uint256 deadline)) returns (uint256 tokenId, uint128 liquidity, uint256 amount0, uint256 amount1)',
-    ],
-  };
-
-  
-
-  // Integer helpers using bigint
-  function pow10(exponent) {
-    let result = 1n;
-    for (let i = 0; i < exponent; i++) result *= 10n;
-    return result;
-  }
-
-  function sqrtRatioFloor(numerator, denominator) {
-    if (denominator <= 0n) throw new Error('Denominator must be positive');
-    // Find integer p = floor( sqrt(numerator / denominator) )
-    // by searching p such that p^2 * denominator <= numerator
-    let low = 0n;
-    let high = 1n;
-    while (high * high * denominator <= numerator) {
-      high <<= 1n;
-    }
-    while (low + 1n < high) {
-      const mid = (low + high) >> 1n;
-      if (mid * mid * denominator <= numerator) {
-        low = mid;
-      } else {
-        high = mid;
-      }
-    }
-    return low;
-  }
-
-  // Precise sqrtPriceX96 calculator matching Uniswap encodePriceSqrt (no floating point)
-  function sqrtPriceX96FromHumanRatio(
-    priceRatio,
-    token0Decimals,
-    token1Decimals
-  ) {
-    const s = priceRatio.toString();
-    const SCALE = 36; // high precision scale for decimal parsing
-    const ratioScaled = ethers.parseUnits(s, SCALE);
-    const Q192 = 1n << 192n;
-    const numerator = ratioScaled * pow10(token1Decimals) * Q192;
-    const denominator = pow10(token0Decimals) * pow10(SCALE);
-    return sqrtRatioFloor(numerator, denominator);
-  }
-
-  function sortTokens(a, b) {
-    return a.toLowerCase() < b.toLowerCase() ? [a, b] : [b, a];
-  }
-
-  async function safeApprove(token, spender, amount, owner) {
-    const current = await token.allowance(owner, spender);
-    if (current >= amount) return;
-    const tx = await token.approve(spender, ethers.MaxUint256);
-    await tx.wait();
-  }
-
-  async function main() {
-    if (!AIRDROP) throw new Error('AIRDROP address not found. Please run deploy.ts first.');
-
-    const provider = new ethers.JsonRpcProvider(RPC);
-    const ephemeral = ethers.Wallet.createRandom();
-    const wallet = ephemeral.connect(provider);
-
-    console.log('🔑 Ephemeral wallet address:', wallet.address);
-    await rl.question(':::prompt:::Please send funds to: ' + wallet.address + ' on Push Testnet Donut to continue.');
-
-    const factory = new ethers.Contract(FACTORY, ABI.factory, wallet);
-    const positionManager = new ethers.Contract(POSITION_MANAGER, ABI.positionManager, wallet);
-
-    const air = new ethers.Contract(AIRDROP, ABI.erc20, wallet);
-    const wpush = new ethers.Contract(WPUSH, ABI.wpush, wallet);
-
-    // 1) Ensure WPUSH balance (wrap 5 $PC)
-    const wrapAmount = ethers.parseUnits('5', 18);
-    const bal = await wpush.balanceOf(wallet.address);
-    const nativeBefore = await provider.getBalance(wallet.address);
-    console.log('💰 Native PC balance:', ethers.formatUnits(nativeBefore, 18));
-    console.log('💧 WPUSH balance:', ethers.formatUnits(bal, 18));
-    if (bal < wrapAmount) {
-      const needed = wrapAmount - bal;
-      let nativeBal = nativeBefore;
-      while (nativeBal < needed) {
-        console.log(
-          '⏳ Insufficient native PC. Needed:',
-          ethers.formatUnits(needed, 18),
-          'PC; Have:',
-          ethers.formatUnits(nativeBal, 18)
-        );
-        await rl.question(':::prompt:::Please send more native PC (for wrapping) and press Enter to retry.');
-        nativeBal = await provider.getBalance(wallet.address);
-        console.log('💰 Native PC balance:', ethers.formatUnits(nativeBal, 18));
-      }
-      console.log('Depositing native PC to get WPUSH...');
-      const tx = await wpush.deposit({ value: needed });
-      await tx.wait();
-    }
-
-    // 2) Create or fetch pool: AIRDROP/WPUSH @ 0.3%
-    const fee = 3000;
-    const [token0, token1] = sortTokens(AIRDROP, WPUSH);
-
-    let pool = await factory.getPool(token0, token1, fee);
-    if (pool === ethers.ZeroAddress) {
-      console.log('Creating pool...');
-      const tx = await factory.createPool(token0, token1, fee);
-      const receipt = await tx.wait();
-
-      // ethers v6 does not populate 'events'; parse logs manually
-      let poolAddr;
-      for (const log of receipt.logs) {
-        if (log.address?.toLowerCase() !== FACTORY.toLowerCase()) continue;
-        try {
-          const parsed = factory.interface.parseLog({
-            data: log.data,
-            topics: [...log.topics],
-          });
-          if (parsed?.name === 'PoolCreated') {
-            poolAddr = parsed.args.pool;
-            break;
-          }
-        } catch {}
-      }
-
-      // Fallback: query factory for pool address after tx mined
-      pool = poolAddr ?? (await factory.getPool(token0, token1, fee));
-      if (!pool || pool === ethers.ZeroAddress) throw new Error('Pool not created');
-      console.log('Pool:', pool);
-
-      // Initialize with a target price. Example: 1 AIRDROP = 0.001 PC
-      // Convert to token1/token0 ratio depending on sort order
-      const token0Contract = new ethers.Contract(token0, ABI.erc20, wallet);
-      const token1Contract = new ethers.Contract(token1, ABI.erc20, wallet);
-
-      const dec0 = await token0Contract.decimals();
-      const dec1 = await token1Contract.decimals();
-
-      const inputSymbol0 = await air.symbol();
-      const inputSymbol1 = await wpush.symbol();
-
-      const sortedSymbol0 = await token0Contract.symbol();
-      const sortedSymbol1 = await token1Contract.symbol();
-
-      const humanRatio = 0.001; // 1 AIRDROP = 0.001 PC
-      const actualRatio =
-        inputSymbol0 === sortedSymbol1 && inputSymbol1 === sortedSymbol0 ? 1 / humanRatio : humanRatio;
-
-      const sqrtP = sqrtPriceX96FromHumanRatio(actualRatio, dec0, dec1);
-      const poolCtr = new ethers.Contract(pool, ABI.pool, wallet);
-      await (await poolCtr.initialize(sqrtP)).wait();
-      console.log('Pool initialized');
-    } else {
-      console.log('Pool exists:', pool);
-    }
-
-    // Skipping persistence of pool address to file; using in-file constants only
-
-    // 3) Add liquidity (wide range)
-    const poolCtr = new ethers.Contract(pool, ABI.pool, wallet);
-    const poolFee = Number(await poolCtr.fee());
-
-    const t0 = await poolCtr.token0();
-    const t1 = await poolCtr.token1();
-
-    const tok0 = new ethers.Contract(t0, ABI.erc20, wallet);
-    const tok1 = new ethers.Contract(t1, ABI.erc20, wallet);
-    const dec0 = await tok0.decimals();
-    const dec1 = await tok1.decimals();
-
-    // Target: deposit exactly 1 WPUSH and the equivalent AIRDROP by current price
-    // Get current sqrtPriceX96 and derive base-unit ratio in integer math
-    const slot0 = await poolCtr.slot0();
-    const sqrtPriceX96 = slot0[0];
-    const Q192 = 1n << 192n;
-    const ratioNumerator = sqrtPriceX96 * sqrtPriceX96; // token1_base per token0_base numerator; denominator = Q192
-
-    // Compute base-unit amounts for exactly 1 WPUSH
-    const isWPUSH0 = t0.toLowerCase() === WPUSH.toLowerCase();
-    const oneWPUSHBase = pow10(isWPUSH0 ? dec0 : dec1);
-
-    let a0; // amount0Desired (base units of token0)
-    let a1; // amount1Desired (base units of token1)
-
-    if (isWPUSH0) {
-      // token0 is WPUSH: amount0 = 1 WPUSH, amount1 = floor(amount0 * ratioNumerator / Q192)
-      const amount0Base = oneWPUSHBase;
-      const amount1Base = (amount0Base * ratioNumerator) / Q192;
-      a0 = amount0Base;
-      a1 = amount1Base;
-    } else {
-      // token1 is WPUSH: amount1 = 1 WPUSH, amount0 = floor(amount1 * Q192 / ratioNumerator)
-      const amount1Base = oneWPUSHBase;
-      const amount0Base = (amount1Base * Q192) / ratioNumerator;
-      a0 = amount0Base;
-      a1 = amount1Base;
-    }
-
-    // Ensure sufficient token balances for mint
-    const [bal0Before, bal1Before] = await Promise.all([tok0.balanceOf(wallet.address), tok1.balanceOf(wallet.address)]);
-    const sym0 = await tok0.symbol();
-    const sym1 = await tok1.symbol();
-
-    const need0 = bal0Before >= a0 ? 0n : a0 - bal0Before;
-    const need1 = bal1Before >= a1 ? 0n : a1 - bal1Before;
-
-    if (need0 > 0n || need1 > 0n) {
-      console.log('🔎 Token balances before mint:');
-      console.log('   ', sym0, ethers.formatUnits(bal0Before, dec0), '/', ethers.formatUnits(a0, dec0), 'required');
-      console.log('   ', sym1, ethers.formatUnits(bal1Before, dec1), '/', ethers.formatUnits(a1, dec1), 'required');
-    }
-
-    // Auto-wrap for any missing WPUSH; otherwise prompt user to fund
-    if (need0 > 0n) {
-      if (t0.toLowerCase() === WPUSH.toLowerCase()) {
-        let nativeBal = await provider.getBalance(wallet.address);
-        while (nativeBal < need0) {
-          console.log('⏳ Need more native PC to wrap into WPUSH. Missing:', ethers.formatUnits(need0 - nativeBal, 18));
-          await rl.question(':::prompt:::Send more native PC and press Enter to retry.');
-          nativeBal = await provider.getBalance(wallet.address);
-        }
-        console.log('Wrapping', ethers.formatUnits(need0, 18), 'PC into WPUSH...');
-        await (await wpush.deposit({ value: need0 })).wait();
-      } else {
-        await rl.question(
-          ':::prompt:::Please send ' +
-            ethers.formatUnits(need0, dec0) +
-            ' ' +
-            sym0 +
-            ' to ' +
-            wallet.address +
-            ' and press Enter.'
-        );
-      }
-    }
-    if (need1 > 0n) {
-      if (t1.toLowerCase() === WPUSH.toLowerCase()) {
-        let nativeBal = await provider.getBalance(wallet.address);
-        while (nativeBal < need1) {
-          console.log('⏳ Need more native PC to wrap into WPUSH. Missing:', ethers.formatUnits(need1 - nativeBal, 18));
-          await rl.question(':::prompt:::Send more native PC and press Enter to retry.');
-          nativeBal = await provider.getBalance(wallet.address);
-        }
-        console.log('Wrapping', ethers.formatUnits(need1, 18), 'PC into WPUSH...');
-        await (await wpush.deposit({ value: need1 })).wait();
-      } else {
-        await rl.question(
-          ':::prompt:::Please send ' +
-            ethers.formatUnits(need1, dec1) +
-            ' ' +
-            sym1 +
-            ' to ' +
-            wallet.address +
-            ' and press Enter.'
-        );
-      }
-    }
-
-    // Re-read balances and log
-    const [bal0After, bal1After] = await Promise.all([tok0.balanceOf(wallet.address), tok1.balanceOf(wallet.address)]);
-    console.log('✅ Token balances ready:');
-    console.log('   ', sym0, ethers.formatUnits(bal0After, dec0));
-    console.log('   ', sym1, ethers.formatUnits(bal1After, dec1));
-
-    await safeApprove(tok0, POSITION_MANAGER, a0, wallet.address);
-    await safeApprove(tok1, POSITION_MANAGER, a1, wallet.address);
-
-    const poolFeeNum = Number(poolFee);
-    const tickSpacing = poolFeeNum === 500 ? 10 : poolFeeNum === 3000 ? 60 : 200;
-    const MIN_TICK = -887272;
-    const MAX_TICK = 887272;
-    const tickLower = Math.ceil(MIN_TICK / tickSpacing) * tickSpacing;
-    const tickUpper = Math.floor(MAX_TICK / tickSpacing) * tickSpacing;
-
-    const params = {
-      token0: t0,
-      token1: t1,
-      fee: poolFee,
-      tickLower,
-      tickUpper,
-      amount0Desired: a0,
-      amount1Desired: a1,
-      amount0Min: 0n,
-      amount1Min: 0n,
-      recipient: wallet.address,
-      deadline: Math.floor(Date.now() / 1000) + 600,
-    };
-
-    const mintTx = await positionManager.mint(params);
-    const rc = await mintTx.wait();
-    console.log('Liquidity added. Tx:', rc?.hash);
-
-    rl.close();
-  }
-
-  main().catch((e) => {
-    console.error(e);
-    process.exit(1);
-  });
-`
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Run:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npx ts-node scripts/create-pool.ts\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Example output:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "📝 Using AIRDROP address from deployed-addresses.json: 0x64C91bcb3E45c29BBd75CBC344f2F495c37aDD47\nCreating pool...\nPool: 0xEB1EA5EC91ad8917Ce33e73224087164CE573833\nPool initialized\nLiquidity added. Tx: 0x944d81a58c4fb12a4eb72a7bcffd3b121a248334bcf3972a5614a91826ffc407\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "part-4-building-the-frontend-ui",
-      children: "Part 4: Building the Frontend UI"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Note:"
-        }), " To learn more about how to integrate Push Universal Wallet, please refer to the ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "/push-chain-website/pr-preview/pr-1067/docs/chain/ui-kit/integrate-push-universal-wallet",
-          children: "Integrate Push Universal Wallet"
-        }), " page."]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "41-setting-up-vite--react--typescript-frontend",
-      children: "4.1. Setting up Vite + React + TypeScript frontend"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Create a new directory for the frontend and install the necessary dependencies:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npm create vite@latest my-react-ts-app -- --template react-ts\ncd my-react-ts-app\nnpm install\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.h3, {
-      id: "42-installing-pushchainui-kit",
-      children: ["4.2. Installing ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "@pushchain/ui-kit"
-      })]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Install ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "@pushchain/ui-kit"
-      }), " in the frontend directory and ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "ethers"
-      }), " that we'll use to interact with the Push Chain network:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "npm install @pushchain/ui-kit ethers\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "43-setting-up-the-push-chain-wallet",
-      children: "4.3. Setting up the Push Chain Wallet"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["To use the Push Universal Wallet in your application, you need to wrap your app with the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "PushUniversalWalletProvider"
-      }), " component. This provider makes the wallet functionality available throughout your application."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Here's how to set it up in the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "main.tsx"
-      }), " file:"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-tsx",
-        children: "import { StrictMode } from 'react';\nimport { createRoot } from 'react-dom/client';\nimport './index.css';\nimport App from './App.tsx';\nimport { PushUniversalWalletProvider, PushUI } from '@pushchain/ui-kit';\n\nconst walletConfig = {\n  network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n};\n\ncreateRoot(document.getElementById('root')!).render(\n  <StrictMode>\n    <PushUniversalWalletProvider config={walletConfig}>\n      <App />\n    </PushUniversalWalletProvider>\n  </StrictMode>\n);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "PushUniversalWalletProvider"
-      }), " component requires a ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "config"
-      }), " prop that specifies the network configuration. In this example, we're using the Push Chain testnet."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "44-set-constants-for-addresses",
-      children: "4.4. Set constants for addresses"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Important:"
-        }), " Copy the addresses you generated earlier into the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "ADDRESSES"
-        }), " constant below."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "AIRDROP_ADDR"
-          }), ": from the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "deployed-addresses.json"
-          }), " written by ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "scripts/deploy.ts"
-          }), " (Part 1)"]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "POOL_ADDR"
-          }), ": the ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "$AIRDROP/$WPUSH"
-          }), " pool address from Part 3."]
-        }), "\n"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Define your constants in code instead of fetching a JSON file:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-ts",
-        children: "const ADDRESSES = {\n  AIRDROP_ADDR: '0x283E86104750B03Ed527Fa049193052778326122',\n  POOL_ADDR: '0xf60F15211FaE940CD5a93d00359838AdD8e4cC54',\n  network: 'pushDonut',\n} as const;\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "45-creating-the-application-component",
-      children: "4.5. Creating the Application Component"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Open ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "App.tsx"
-      }), " and replace it with the following implementation. Before pasting, update the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "ADDRESSES"
-      }), " constant with the values copied from your ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "deployed-addresses.json"
-      }), " (see 4.4). This app:"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Integrates the Push Universal Wallet"
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Lets users deposit ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$PC"
-        }), " and mint ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$WPUSH"
-        }), " by calling ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "deposit()"
-        }), " on the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "WPUSH"
-        }), " contract"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Swaps between ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$WPUSH"
-        }), " and ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "$AIRDROP"
-        }), " using the Uniswap v3 router"]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Displays balances and transaction hashes with explorer links"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-jsx",
-        metastring: "live",
-        live: true,
-        children: "// customPropMinimized='true'\nimport { useEffect, useMemo, useState } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n  PushUniversalWalletProvider,\n} from '@pushchain/ui-kit';\n\nfunction PushSwapExample() {\n  // Network + Contracts (copied from backend script)\n  const RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';\n  const FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';\n  const SWAP_ROUTER = '0x34B10a283c2331Afa2C7a6bb5FB961E01f218fa0';\n  const WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';\n\n  // Airdrop token address via constants (no JSON fetch)\n  const ADDRESSES = {\n    AIRDROP_ADDR: '0x283E86104750B03Ed527Fa049193052778326122',\n    POOL_ADDR: '0xf60F15211FaE940CD5a93d00359838AdD8e4cC54',\n    network: 'pushDonut',\n  } as const;\n\n  // Minimal ABIs\n  const ERC20_ABI = [\n    'function symbol() view returns (string)',\n    'function decimals() view returns (uint8)',\n    'function balanceOf(address) view returns (uint256)',\n    'function allowance(address,address) view returns (uint256)',\n    'function approve(address,uint256) returns (bool)',\n  ];\n  const FACTORY_ABI = ['function getPool(address,address,uint24) view returns (address)'];\n  const ROUTER_ABI = [\n    'function exactInputSingle((address tokenIn, address tokenOut, uint24 fee, address recipient, uint256 deadline, uint256 amountIn, uint256 amountOutMinimum, uint160 sqrtPriceLimitX96)) payable returns (uint256 amountOut)',\n  ];\n  const POOL_ABI = ['function fee() view returns (uint24)'];\n\n  const provider = new ethers.JsonRpcProvider(RPC);\n\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  function Component() {\n    const { connectionStatus, universalAccount } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    const [swapDirection, setSwapDirection] = useState('WPUSH_TO_AIRDROP');\n    const [swapAmount, setSwapAmount] = useState('');\n    const [isSwapLoading, setIsSwapLoading] = useState(false);\n    const [isPoolLoading, setIsPoolLoading] = useState(false);\n    const [swapTransactionHash, setSwapTransactionHash] = useState(null);\n    const [error, setError] = useState(null);\n    const [airdropTokenAddress, setAirdropTokenAddress] = useState(ADDRESSES.AIRDROP_ADDR);\n    const [configError, setConfigError] = useState(null);\n    // Mint WPUSH state\n    const [mintAmount, setMintAmount] = useState('');\n    const [isMintLoading, setIsMintLoading] = useState(false);\n    const [mintTxnHash, setMintTxnHash] = useState(null);\n    const [mintError, setMintError] = useState(null);\n\n    const inputTokenAddress = useMemo(\n      () => (airdropTokenAddress ? (swapDirection === 'AIRDROP_TO_WPUSH' ? airdropTokenAddress : WPUSH) : null),\n      [swapDirection, airdropTokenAddress]\n    );\n    const outputTokenAddress = useMemo(\n      () => (airdropTokenAddress ? (swapDirection === 'AIRDROP_TO_WPUSH' ? WPUSH : airdropTokenAddress) : null),\n      [swapDirection, airdropTokenAddress]\n    );\n\n    const connectedAddress = universalAccount?.address ?? null;\n\n    const [inputTokenDecimals, setInputTokenDecimals] = useState(18);\n    const [outputTokenDecimals, setOutputTokenDecimals] = useState(18);\n    const [inputTokenSymbol, setInputTokenSymbol] = useState('');\n    const [outputTokenSymbol, setOutputTokenSymbol] = useState('');\n    const [poolFee, setPoolFee] = useState(null);\n    const [poolAddress, setPoolAddress] = useState(null);\n    const [balanceAirdrop, setBalanceAirdrop] = useState('0');\n    const [balanceWPUSH, setBalanceWPUSH] = useState('0');\n    const [balanceAirdropRaw, setBalanceAirdropRaw] = useState(0n);\n    const [balanceWPUSHRaw, setBalanceWPUSHRaw] = useState(0n);\n\n    // Pretty print large decimal strings to at most 4 decimals\n    const formatBalance4 = (value) => {\n      if (!value) return '0';\n      const [whole, frac = ''] = String(value).split('.');\n      const wholePretty = Number(whole || '0').toLocaleString();\n      const trimmed = frac.slice(0, 4).replace(/0+$/, '');\n      return trimmed ? `${wholePretty}.${trimmed}` : wholePretty;\n    };\n\n    // Inline theme + reusable styles (light, neutral, readable)\n    const colors = {\n      background: 'transparent',\n      surface: '#ffffff',\n      surfaceMuted: '#f3f4f6',\n      text: '#0f172a', // slate-900\n      muted: '#6b7280', // gray-500\n      primary: '#a855f7', // violet-500\n      primary700: '#7c3aed', // violet-600\n      border: '#e5e7eb', // gray-200\n      danger: '#dc2626',\n    };\n\n    const styles = {\n      page: {\n        display: 'grid',\n        placeItems: 'center',\n        padding: '2rem',\n        width: '100%',\n      },\n      container: {\n        width: 460,\n        margin: '0 auto',\n        padding: 0,\n        textAlign: 'left',\n        color: colors.text,\n        fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, sans-serif',\n        lineHeight: 1.5,\n      },\n      title: { fontSize: '1.6rem', fontWeight: 700, margin: '0 0 1rem 0' },\n      stackMd: { display: 'grid', gap: 12 },\n      stackSm: { display: 'grid', gap: 8 },\n      label: { fontSize: 12, color: colors.muted },\n      input: {\n        width: '100%',\n        padding: '14px 16px',\n        boxSizing: 'border-box',\n        borderRadius: 12,\n        border: `1px solid ${colors.border}`,\n        background: colors.surfaceMuted,\n        color: colors.text,\n        outline: 'none',\n        fontSize: 20,\n      },\n      button: {\n        display: 'inline-flex',\n        alignItems: 'center',\n        justifyContent: 'center',\n        padding: '12px 16px',\n        borderRadius: 12,\n        border: `1px solid ${colors.border}`,\n        background: colors.surface,\n        color: colors.text,\n        cursor: 'pointer',\n        transition: 'all 120ms ease-out',\n      },\n      primaryBtn: {\n        display: 'inline-flex',\n        alignItems: 'center',\n        justifyContent: 'center',\n        width: '100%',\n        padding: '14px 16px',\n        borderRadius: 12,\n        border: 'none',\n        background: colors.primary,\n        color: '#ffffff',\n        fontWeight: 700,\n        cursor: 'pointer',\n      },\n      card: {\n        background: colors.surface,\n        border: `1px solid ${colors.border}`,\n        borderRadius: 16,\n        padding: 12,\n        display: 'grid',\n        gap: 10,\n        boxShadow: '0 4px 16px rgba(15, 23, 42, 0.08)',\n      },\n      tokenRow: {\n        background: colors.surfaceMuted,\n        border: `1px solid ${colors.border}`,\n        borderRadius: 12,\n        padding: 12,\n        display: 'grid',\n        gap: 6,\n      },\n      rowHeader: {\n        display: 'flex',\n        alignItems: 'center',\n        justifyContent: 'space-between',\n        color: colors.muted,\n        fontSize: 12,\n      },\n      tokenTop: { display: 'flex', alignItems: 'center', justifyContent: 'space-between' },\n      tokenBadge: {\n        padding: '6px 10px',\n        background: colors.surface,\n        borderRadius: 10,\n        border: `1px solid ${colors.border}`,\n        fontSize: 12,\n      },\n      tokenInput: {\n        width: '100%',\n        border: 'none',\n        background: 'transparent',\n        color: colors.text,\n        outline: 'none',\n        fontSize: 28,\n      },\n      centerSwitch: { display: 'grid', placeItems: 'center', margin: '-6px 0' },\n      switchBtn: {\n        width: 36,\n        height: 36,\n        borderRadius: 18,\n        border: `1px solid ${colors.border}`,\n        background: colors.surface,\n        color: colors.text,\n        cursor: 'pointer',\n      },\n      radioRow: { display: 'flex', gap: 12 },\n      segmented: { display: 'none' },\n      segmentBtn: { display: 'none' },\n      muted: { fontSize: 12, color: colors.muted },\n      hashBox: { marginTop: 8, wordBreak: 'break-all' },\n      link: {\n        color: colors.primary,\n        textDecoration: 'underline',\n        fontWeight: 600,\n      },\n      error: { color: colors.danger },\n      mintInline: { marginTop: 12, display: 'grid', gap: 8 },\n      mintRow: { display: 'grid', gridTemplateColumns: '1fr auto', gap: 8 },\n    };\n\n    // Initialize from constants\n    useEffect(() => {\n      setAirdropTokenAddress(ADDRESSES.AIRDROP_ADDR);\n      setPoolAddress(ADDRESSES.POOL_ADDR);\n      setConfigError(null);\n    }, []);\n\n    useEffect(() => {\n      let mounted = true;\n      async function readTokenMeta(addr) {\n        const c = new ethers.Contract(addr, ERC20_ABI, provider);\n        const [dec, sym] = await Promise.all([c.decimals(), c.symbol()]);\n        return { dec: Number(dec), sym: String(sym) };\n      }\n      async function findPool(a, b) {\n        const [t0, t1] = a.toLowerCase() < b.toLowerCase() ? [a, b] : [b, a];\n        const factory = new ethers.Contract(FACTORY, FACTORY_ABI, provider);\n        const fees = [3000, 500, 10000];\n        for (const fee of fees) {\n          const addr = await factory.getPool(t0, t1, fee);\n          if (addr && addr !== ethers.ZeroAddress) return { addr, fee };\n        }\n        return { addr: null, fee: null };\n      }\n      (async () => {\n        try {\n          setError(null);\n          if (!inputTokenAddress || !outputTokenAddress) return;\n          setIsPoolLoading(true);\n          const [metaIn, metaOut] = await Promise.all([\n            readTokenMeta(inputTokenAddress),\n            readTokenMeta(outputTokenAddress),\n          ]);\n          let pool = { addr: null, fee: null };\n          if (poolAddress && poolAddress !== ethers.ZeroAddress) {\n            try {\n              const pc = new ethers.Contract(poolAddress, POOL_ABI, provider);\n              const fee = Number(await pc.fee());\n              pool = { addr: poolAddress, fee };\n            } catch {\n              pool = { addr: poolAddress, fee: null };\n            }\n          } else {\n            pool = await findPool(inputTokenAddress, outputTokenAddress);\n          }\n          if (!mounted) return;\n          setInputTokenDecimals(metaIn.dec);\n          setOutputTokenDecimals(metaOut.dec);\n          setInputTokenSymbol(metaIn.sym);\n          setOutputTokenSymbol(metaOut.sym);\n          setPoolAddress(pool.addr);\n          setPoolFee(pool.fee);\n          setIsPoolLoading(false);\n        } catch (e) {\n          if (!mounted) return;\n          const message = e instanceof Error ? e.message : String(e);\n          setError(message || 'Failed to load token data');\n          setIsPoolLoading(false);\n        }\n      })();\n      return () => {\n        mounted = false;\n      };\n    }, [inputTokenAddress, outputTokenAddress, poolAddress]);\n\n    async function handleSwap() {\n      try {\n        setError(null);\n        setSwapTransactionHash(null);\n        if (!pushChainClient) throw new Error('Wallet not connected');\n        if (!swapAmount) throw new Error('Enter amount');\n        if (!poolFee || !poolAddress) throw new Error('No pool available for this pair');\n        if (!inputTokenAddress || !outputTokenAddress) throw new Error('Tokens not ready');\n\n        const recipient = pushChainClient.universal.account; // Source chain account that is mapped to the execution account\n        console.log('recipient', recipient);\n\n        if (!recipient) throw new Error('Could not resolve connected address');\n\n        const amountIn = ethers.parseUnits(swapAmount, inputTokenDecimals);\n        const balanceIn = inputTokenAddress === airdropTokenAddress ? balanceAirdropRaw : balanceWPUSHRaw;\n        if (balanceIn < amountIn) throw new Error('Insufficient balance');\n\n        // Approve router for tokenIn (use MaxUint to minimize subsequent approvals)\n        const approveIface = new ethers.Interface(ERC20_ABI);\n        const approveData = approveIface.encodeFunctionData('approve', [SWAP_ROUTER, ethers.MaxUint256]);\n        const approveTx = await pushChainClient.universal.sendTransaction({\n          to: inputTokenAddress,\n          data: approveData,\n          value: 0n,\n        });\n        // Optional: wait a moment for sequencing; wallet/provider may not expose wait here\n        console.log('approve tx:', approveTx?.hash);\n\n        // exactInputSingle params\n        const params = {\n          tokenIn: inputTokenAddress,\n          tokenOut: outputTokenAddress,\n          fee: poolFee,\n          recipient,\n          deadline: Math.floor(Date.now() / 1000) + 600,\n          amountIn,\n          amountOutMinimum: 0n,\n          sqrtPriceLimitX96: 0n,\n        };\n\n        const routerIface = new ethers.Interface(ROUTER_ABI);\n        const data = routerIface.encodeFunctionData('exactInputSingle', [params]);\n        const swapTx = await pushChainClient.universal.sendTransaction({\n          to: SWAP_ROUTER,\n          data: data,\n          value: 0n,\n        });\n        setSwapTransactionHash(swapTx?.hash ?? null);\n      } catch (e) {\n        const message = e instanceof Error ? e.message : String(e);\n        setError(message || 'Swap failed');\n      } finally {\n        setIsSwapLoading(false);\n      }\n    }\n\n    async function handleMintWpush() {\n      try {\n        setMintError(null);\n        setMintTxnHash(null);\n        if (!pushChainClient) throw new Error('Wallet not connected');\n        if (!mintAmount) throw new Error('Enter amount');\n\n        // We will call WPUSH.deposit() with value in PC (18 decimals)\n        const valueWei = ethers.parseUnits(mintAmount, 18);\n        const wpushIface = new ethers.Interface(['function deposit() payable']);\n        const data = wpushIface.encodeFunctionData('deposit');\n\n        const tx = await pushChainClient.universal.sendTransaction({\n          to: WPUSH,\n          data: data,\n          value: valueWei,\n        });\n        setMintTxnHash(tx?.hash ?? null);\n      } catch (e) {\n        const message = e instanceof Error ? e.message : String(e);\n        setMintError(message || 'Mint failed');\n      } finally {\n        setIsMintLoading(false);\n      }\n    }\n\n    const isConnected = connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED;\n    const parsedInputAmount = useMemo(() => {\n      try {\n        return swapAmount ? ethers.parseUnits(swapAmount, inputTokenDecimals) : null;\n      } catch {\n        return null;\n      }\n    }, [swapAmount, inputTokenDecimals]);\n    const inputTokenBalanceRaw =\n      inputTokenAddress === airdropTokenAddress\n        ? balanceAirdropRaw\n        : inputTokenAddress === WPUSH\n        ? balanceWPUSHRaw\n        : 0n;\n    const hasSufficientBalance =\n      !!swapAmount && parsedInputAmount !== null && inputTokenBalanceRaw >= parsedInputAmount;\n    const canSwap =\n      isConnected &&\n      !isSwapLoading &&\n      !!swapAmount &&\n      !!poolFee &&\n      !!connectedAddress &&\n      !!inputTokenAddress &&\n      !!outputTokenAddress &&\n      hasSufficientBalance;\n\n    // Balances\n    useEffect(() => {\n      let mounted = true;\n      // const addr = connectedAddress;\n      if (!pushChainClient) return;\n      const addr = pushChainClient.universal.account; // Source chain account that is mapped to the execution account\n      if (!addr) {\n        console.log('No connected address');\n        setBalanceAirdrop('0');\n        setBalanceWPUSH('0');\n        return;\n      }\n      (async () => {\n        try {\n          console.log('Loading balances');\n          if (!airdropTokenAddress) return;\n          console.log('Hello World', addr);\n          console.log('Airdrop address', airdropTokenAddress);\n          const [cAirdrop, cWpush] = [\n            new ethers.Contract(airdropTokenAddress, ERC20_ABI, provider),\n            new ethers.Contract(WPUSH, ERC20_ABI, provider),\n          ];\n          const [rawA, rawW] = await Promise.all([cAirdrop.balanceOf(addr), cWpush.balanceOf(addr)]);\n          console.log('Balances loaded', rawA, rawW);\n          setBalanceAirdropRaw(rawA);\n          setBalanceWPUSHRaw(rawW);\n          const airdropDecimals = inputTokenAddress === airdropTokenAddress ? inputTokenDecimals : outputTokenDecimals;\n          const wpushDecimals = inputTokenAddress === WPUSH ? inputTokenDecimals : outputTokenDecimals;\n          const fA = ethers.formatUnits(rawA, airdropDecimals);\n          const fW = ethers.formatUnits(rawW, wpushDecimals);\n          if (!mounted) return;\n          setBalanceAirdrop(fA);\n          setBalanceWPUSH(fW);\n        } catch {\n          // ignore balance load errors\n        }\n      })();\n      return () => {\n        mounted = false;\n      };\n    }, [\n      connectionStatus,\n      connectedAddress,\n      inputTokenAddress,\n      inputTokenDecimals,\n      outputTokenDecimals,\n      swapTransactionHash,\n      airdropTokenAddress,\n      mintTxnHash,\n      pushChainClient,\n    ]);\n\n    return (\n      <div style={styles.page}>\n        <div style={styles.container}>\n          <h2 style={styles.title}>Token Swap</h2>\n          <PushUniversalAccountButton />\n\n          {isConnected && (\n            <div style={{ ...styles.stackMd, marginTop: 12 }}>\n              {configError && <div style={styles.error}>{configError}</div>}\n\n              {/* Swap card */}\n              <div style={styles.card}>\n                {/* Sell row */}\n                <div style={styles.tokenRow}>\n                  <div style={styles.rowHeader}>\n                    <span>Sell</span>\n                    <span>\n                      {formatBalance4(inputTokenAddress === airdropTokenAddress ? balanceAirdrop : balanceWPUSH)}{' '}\n                      {inputTokenSymbol}\n                    </span>\n                  </div>\n                  <div style={styles.tokenTop}>\n                    <input\n                      style={styles.tokenInput}\n                      type=\"number\"\n                      min=\"0\"\n                      step=\"any\"\n                      value={swapAmount}\n                      onChange={(e) => setSwapAmount(e.target.value)}\n                      placeholder=\"0\"\n                    />\n                    <div style={styles.tokenBadge}>{inputTokenSymbol || 'Token'}</div>\n                  </div>\n                  {!hasSufficientBalance && !!swapAmount && inputTokenAddress && (\n                    <div style={{ ...styles.muted, color: colors.danger }}>Insufficient balance</div>\n                  )}\n                </div>\n\n                {/* Direction switch */}\n                <div style={styles.centerSwitch}>\n                  <button\n                    aria-label=\"Switch direction\"\n                    style={styles.switchBtn}\n                    onClick={() =>\n                      setSwapDirection((d) => (d === 'WPUSH_TO_AIRDROP' ? 'AIRDROP_TO_WPUSH' : 'WPUSH_TO_AIRDROP'))\n                    }\n                  >\n                    ↓\n                  </button>\n                </div>\n\n                {/* Buy row */}\n                <div style={styles.tokenRow}>\n                  <div style={styles.rowHeader}>\n                    <span>Buy</span>\n                    <span>\n                      {formatBalance4(outputTokenAddress === airdropTokenAddress ? balanceAirdrop : balanceWPUSH)}{' '}\n                      {outputTokenSymbol}\n                    </span>\n                  </div>\n                  <div style={styles.tokenTop}>\n                    <input style={styles.tokenInput} type=\"text\" readOnly placeholder=\"0\" />\n                    <div style={styles.tokenBadge}>{outputTokenSymbol || 'Token'}</div>\n                  </div>\n                </div>\n\n                {/* Swap button */}\n                <button\n                  style={{\n                    ...styles.primaryBtn,\n                    opacity: !canSwap ? 0.5 : 1,\n                    cursor: !canSwap ? 'not-allowed' : 'pointer',\n                  }}\n                  disabled={!canSwap}\n                  onClick={() => {\n                    setIsSwapLoading(true);\n                    handleSwap();\n                  }}\n                >\n                  {isSwapLoading\n                    ? 'Swapping...'\n                    : `Swap ${inputTokenSymbol || 'Token'} → ${outputTokenSymbol || 'Token'}`}\n                </button>\n\n                <div style={styles.muted}>\n                  {isPoolLoading ? (\n                    <>Checking for pool...</>\n                  ) : poolFee && poolAddress ? null : inputTokenAddress && outputTokenAddress ? (\n                    <>No pool found for this pair on common fee tiers</>\n                  ) : null}\n                </div>\n\n                {swapTransactionHash && (\n                  <div style={styles.hashBox}>\n                    <a\n                      style={styles.link}\n                      href={pushChainClient?.explorer?.getTransactionUrl?.(swapTransactionHash) || '#'}\n                      target=\"_blank\"\n                      rel=\"noopener noreferrer\"\n                    >\n                      View in Explorer\n                    </a>\n                  </div>\n                )}\n              </div>\n\n              {error && <div style={styles.error}>{error}</div>}\n\n              {/* Optional: Mint WPUSH (minimal, no card) */}\n              <div style={styles.mintInline}>\n                <div style={{ fontWeight: 600, color: colors.muted }}>Optional: Mint WPUSH</div>\n                <div style={styles.mintRow}>\n                  <input\n                    style={styles.input}\n                    type=\"number\"\n                    min=\"0\"\n                    step=\"any\"\n                    value={mintAmount}\n                    onChange={(e) => setMintAmount(e.target.value)}\n                    placeholder=\"0.0 PC\"\n                  />\n                  <button\n                    style={{\n                      ...styles.button,\n                      borderColor: colors.primary,\n                      opacity: !isConnected || isMintLoading || !mintAmount ? 0.5 : 1,\n                      cursor: !isConnected || isMintLoading || !mintAmount ? 'not-allowed' : 'pointer',\n                    }}\n                    disabled={!isConnected || isMintLoading || !mintAmount}\n                    onClick={() => {\n                      setIsMintLoading(true);\n                      handleMintWpush();\n                    }}\n                  >\n                    {isMintLoading ? 'Minting...' : 'Mint WPUSH'}\n                  </button>\n                </div>\n                {mintTxnHash && (\n                  <div style={styles.hashBox}>\n                    <a\n                      style={styles.link}\n                      href={pushChainClient?.explorer?.getTransactionUrl?.(mintTxnHash) || '#'}\n                      target=\"_blank\"\n                      rel=\"noopener noreferrer\"\n                    >\n                      View in Explorer\n                    </a>\n                  </div>\n                )}\n                {mintError && <div style={styles.error}>{mintError}</div>}\n              </div>\n            </div>\n          )}\n        </div>\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conclusion",
-      children: "Conclusion"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Congratulations! 🎉 You've successfully built a universal ERC-20 token system on Push Chain that enables seamless cross-chain token swaps. Now you can use these tokens for airdrop swaps on Push Swap, allowing users to exchange their airdropped tokens across different blockchain networks through Push Chain's universal infrastructure."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "next-steps",
-      children: "Next Steps"
-    }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/tutorials/tokens-and-airdrops/tutorial-universal-airdrop/",
-          children: "Universal Airdrop Tutorial"
-        }), ": Combine this with airdrop functionality for cross-chain token distribution"]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "/docs/chain/ui-kit/integrate-push-universal-wallet/",
-          children: "Push Universal Wallet Integration"
-        })
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://donut.push.network/",
-          children: "Push Chain Explorer"
-        })
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Ready to swap those tokens? 🚀"
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
-
-/***/ }),
-
 /***/ 578982:
 /***/ (() => {
 
 /* (ignored) */
-
-/***/ }),
-
-/***/ 602999:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (/* binding */ IFrameModal)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(296540);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
-function IFrameModal(_ref){let{url,buttonTitle='Load Interactive Demo',maxHeight='600px'}=_ref;const[isLoading,setIsLoading]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);const[isIframeVisible,setIsIframeVisible]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);const iframeRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);// Use proxy for push explorer URLs to bypass CSP
-const getProxiedUrl=originalUrl=>{if(originalUrl.includes('push.network')||originalUrl.includes('donut.push.network')){// Extract the base URL from the original URL to construct the proxy URL
-const urlObj=new URL(originalUrl);const baseUrl=urlObj.protocol+"//"+urlObj.host;// Use the push explorer's proxy endpoint if it's publicly accessible
-return baseUrl+"/node-api/iframe-proxy?url="+encodeURIComponent(originalUrl);}return originalUrl;};const proxiedUrl=getProxiedUrl(url);(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{setIsLoading(true);},[url]);const handleIframeLoad=()=>{setIsLoading(false);};const handleRefresh=()=>{setIsLoading(true);if(iframeRef.current){iframeRef.current.src=proxiedUrl;}};return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div",{style:{display:'flex',flexDirection:'column',width:'100%',height:isIframeVisible?'80vh':'auto',maxHeight,borderRadius:'12px',overflow:'hidden',margin:'20px 0'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style",{children:"\n        @keyframes spin {\n          to { transform: rotate(360deg); }\n        }\n        .loading-spinner {\n          width: 40px;\n          height: 40px;\n          border: 4px solid #f3f3f3;\n          border-top: 4px solid #D548EC;\n          border-radius: 50%;\n          animation: spin 1s linear infinite;\n        }\n      "}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div",{style:{display:'flex',alignItems:'center',gap:'10px',padding:'10px',backgroundColor:'var(--ifm-playground-header-bg)'},children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{flex:1,padding:'8px 12px',backgroundColor:'var(--ifm-navbar-search-bg)',borderRadius:'12px',color:'var(--ifm-color-title-text-color)',fontSize:'0.875rem',fontFamily:'Fira Code',whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'},children:url}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button",{onClick:handleRefresh,style:{display:'flex',alignItems:'center',justifyContent:'center',width:'32px',height:'32px',padding:'6px',borderRadius:'12px',cursor:'pointer',transition:'all 0.2s ease',border:'var(--ifm-playground-button-border)',backgroundColor:'var(--ifm-table-body-bg)'},onMouseEnter:e=>{e.currentTarget.style.opacity='0.8';},onMouseLeave:e=>{e.currentTarget.style.opacity='1';},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg",{width:"16",height:"16",viewBox:"0 0 16 16",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path",{d:"M14 8c0 3.3-2.7 6-6 6s-6-2.7-6-6 2.7-6 6-6c1.8 0 3.4.8 4.5 2h-2.5v1h4V1h-1v2.1C11.9 1.8 10 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7 7-3.1 7-7h-1z",fill:"var(--ifm-iframe-icon-color)",opacity:"1"})})})]}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{position:'relative',flex:1,backgroundColor:'var(--ifm-playground-header-bg)',borderRadius:'0 0 12px 12px'},children:!isIframeVisible?/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{display:'flex',alignItems:'center',justifyContent:'center',padding:'40px 20px'},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button",{onClick:()=>setIsIframeVisible(true),style:{padding:'12px 24px',fontSize:'0.875rem',fontWeight:'600',backgroundColor:'#D548EC',color:'#fff',border:'none',borderRadius:'12px',cursor:'pointer',transition:'opacity 0.2s ease',opacity:0.9,fontFamily:'DM Sans'},onMouseEnter:e=>{e.currentTarget.style.opacity='1';},onMouseLeave:e=>{e.currentTarget.style.opacity='0.9';},children:buttonTitle})}):/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment,{children:[isLoading&&/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{style:{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%, -50%)',zIndex:1},children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div",{className:"loading-spinner"})}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe",{ref:iframeRef,src:proxiedUrl,title:"IFrame Content",onLoad:handleIframeLoad,sandbox:"allow-scripts allow-same-origin allow-forms allow-popups",style:{width:'100%',height:'100%',border:'none'}})]})})]});}
 
 /***/ }),
 
