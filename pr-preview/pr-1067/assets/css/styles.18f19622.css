@@ -5588,6 +5588,11 @@ article .markdown > ol > li > code {
   background: transparent !important;
 }
 
+/* for action buttons in code blocks */
+.theme-code-block .buttonGroup_M5ko button {
+  background: var(--ifm-color-primary-inverse);
+}
+
 /* for deploy preview only */
 .collapsibleContent_i85q {
   margin-top: 0 rem !important;

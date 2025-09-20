@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[14450],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[85535],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -124,7 +124,7 @@ var jsx_runtime = __webpack_require__(474848);
 
 /***/ }),
 
-/***/ 258494:
+/***/ 268426:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 // ESM COMPAT FLAG
@@ -136,12 +136,12 @@ __webpack_require__.d(__webpack_exports__, {
   contentTitle: () => (/* binding */ contentTitle),
   "default": () => (/* binding */ MDXContent),
   frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_01_basics_02_tutorial_universal_counter_mdx_af7_namespaceObject),
+  metadata: () => (/* reexport */ site_docs_chain_01_tutorials_01_basics_01_tutorial_simple_counter_mdx_504_namespaceObject),
   toc: () => (/* binding */ toc)
 });
 
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-01-basics-02-tutorial-universal-counter-mdx-af7.json
-const site_docs_chain_01_tutorials_01_basics_02_tutorial_universal_counter_mdx_af7_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/basics/docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","description":"Build a Universal Counter App | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","sourceDirName":"chain/01-tutorials/01-basics","slug":"/chain/tutorials/basics/tutorial-universal-counter","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-universal-counter","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"docs-chain-tutorials-universal-counter","title":"Build a Universal Counter App","hide_title":false,"slug":"./tutorial-universal-counter","displayed_sidebar":"pushChainSidebar","sidebar_position":2,"image":"/assets/docs/previews/docs_chain_tutorials_universal_counter--build_a_universal_counter_app.png"},"sidebar":"pushChainSidebar","previous":{"title":"Build a Counter App","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-simple-counter"},"next":{"title":"Tokens and Airdrops","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/tokens-and-airdrops"}}');
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-01-tutorials-01-basics-01-tutorial-simple-counter-mdx-504.json
+const site_docs_chain_01_tutorials_01_basics_01_tutorial_simple_counter_mdx_504_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/tutorials/basics/docs-chain-tutorials-simple-counter","title":"Build a Counter App","description":"Build a Counter App | Tutorials | Push Chain Docs","source":"@site/docs/chain/01-tutorials/01-basics/01-Tutorial-Simple-Counter.mdx","sourceDirName":"chain/01-tutorials/01-basics","slug":"/chain/tutorials/basics/tutorial-simple-counter","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-simple-counter","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/01-tutorials/01-basics/01-Tutorial-Simple-Counter.mdx","tags":[],"version":"current","sidebarPosition":1,"frontMatter":{"id":"docs-chain-tutorials-simple-counter","title":"Build a Counter App","hide_title":false,"slug":"./tutorial-simple-counter","displayed_sidebar":"pushChainSidebar","sidebar_position":1,"image":"/assets/docs/previews/docs_chain_tutorials_simple_counter--build_a_counter_app.png"},"sidebar":"pushChainSidebar","previous":{"title":"Basics","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics"},"next":{"title":"Build a Universal Counter App","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/tutorials/basics/tutorial-universal-counter"}}');
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(474848);
 // EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
@@ -156,19 +156,21 @@ var SharedStyling = __webpack_require__(113490);
 var IFrameModal = __webpack_require__(602999);
 // EXTERNAL MODULE: ./src/components/TutorialTimer/index.ts + 1 modules
 var TutorialTimer = __webpack_require__(546772);
+// EXTERNAL MODULE: ./src/components/SolidityCode/index.ts + 1 modules
+var SolidityCode = __webpack_require__(531836);
 // EXTERNAL MODULE: ./src/components/GitHubRepo/index.ts + 1 modules
 var GitHubRepo = __webpack_require__(531855);
-;// ./docs/chain/01-tutorials/01-basics/02-Tutorial-Universal-Counter.mdx
+;// ./docs/chain/01-tutorials/01-basics/01-Tutorial-Simple-Counter.mdx
 
 
 const frontMatter = {
-	id: 'docs-chain-tutorials-universal-counter',
-	title: 'Build a Universal Counter App',
+	id: 'docs-chain-tutorials-simple-counter',
+	title: 'Build a Counter App',
 	hide_title: false,
-	slug: './tutorial-universal-counter',
+	slug: './tutorial-simple-counter',
 	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 2,
-	image: '/assets/docs/previews/docs_chain_tutorials_universal_counter--build_a_universal_counter_app.png'
+	sidebar_position: 1,
+	image: '/assets/docs/previews/docs_chain_tutorials_simple_counter--build_a_counter_app.png'
 };
 const contentTitle = undefined;
 
@@ -184,52 +186,48 @@ const assets = {
 
 
 
+
 const toc = [{
-  "value": "What’s Unique About This App?",
-  "id": "whats-unique-about-this-app",
+  "value": "Write the Contract",
+  "id": "write-the-contract",
   "level": 2
 }, {
-  "value": "Example Behavior",
-  "id": "example-behavior",
-  "level": 3
-}, {
-  "value": "Let&#39;s Build",
-  "id": "lets-build",
+  "value": "Compile &amp; Deploy",
+  "id": "compile--deploy",
   "level": 2
 }, {
-  "value": "Understanding the Universal Counter App",
-  "id": "understanding-the-universal-counter-app",
+  "value": "Verify Contract",
+  "id": "verify-contract",
   "level": 2
 }, {
-  "value": "Using the UEAFactory Interface",
-  "id": "using-the-ueafactory-interface",
-  "level": 3
-}, {
-  "value": "Designing the Increment Function",
-  "id": "designing-the-increment-function",
-  "level": 3
-}, {
-  "value": "Summary",
-  "id": "summary",
+  "value": "Interact with SimpleCounter App",
+  "id": "interact-with-simplecounter-app",
   "level": 2
 }, {
-  "value": "Interact with UniversalCounter App",
-  "id": "interact-with-universalcounter-app",
+  "value": "Live Playground",
+  "id": "live-playground",
   "level": 2
 }, {
-  "value": "Let&#39;s Test our UniversalCounter App",
-  "id": "lets-test-our-universalcounter-app",
-  "level": 3
+  "value": "Source Code",
+  "id": "source-code",
+  "level": 2
+}, {
+  "value": "What we Achieved",
+  "id": "what-we-achieved",
+  "level": 2
+}, {
+  "value": "Next Tutorial",
+  "id": "next-tutorial",
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     blockquote: "blockquote",
     code: "code",
-    em: "em",
     h2: "h2",
-    h3: "h3",
     li: "li",
+    mermaid: "mermaid",
     ol: "ol",
     p: "p",
     pre: "pre",
@@ -237,272 +235,120 @@ function _createMdxContent(props) {
     ul: "ul",
     ...(0,lib/* useMDXComponents */.R)(),
     ...props.components
-  }, {Details, Head} = _components;
-  if (!Details) _missingMdxReference("Details", true);
+  }, {Head} = _components;
   if (!Head) _missingMdxReference("Head", true);
   return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
     children: [(0,jsx_runtime.jsx)(Head, {
       children: (0,jsx_runtime.jsx)("title", {
-        children: "Build a Universal Counter App | Tutorials | Push Chain Docs"
+        children: "Build a Counter App | Tutorials | Push Chain Docs"
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(TutorialTimer/* default */.A, {
       estimatedMinutes: 10
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Welcome to the first tutorial of building a truly universal smart contract. The smart contract we are going to build here is the popular ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Counter app"
-      }), ", that all Solidity developers are familiar with. This counter app, however, is going to be ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Universal"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["We will first understand what we are building and why it is a unique (", (0,jsx_runtime.jsx)(_components.em, {
-        children: "one-of-a-kind"
-      }), ") counter app. Let’s dive in 🤿."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "whats-unique-about-this-app",
-      children: "What’s Unique About This App?"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["A typical Solidity counter app allows you to increment a specific variable when a caller (", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "msg.sender"
-      }), ") calls it."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "However, the counter app we will build now will be a sophisticated version of the simple counter contract."
+      children: "In this tutorial, you’ll write, deploy, and interact with a simple Counter contract on Push Chain."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "UniversalCounter"
-      }), " app we are going to build includes:"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Different ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "uint256"
-        }), " counter variables for different chains (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countETH"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countPC"
-        }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countSOL"
-        }), ", etc)."]
+      children: ["We will start with the most popular smart contract, i.e., ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "Counter.sol"
+      }), ", that all Solidity devs are familiar with. You would have done the following by the end:"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "✅ Build and deploy Counter.sol"
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "✅ Interact with it from any chain"
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "✅ Understand the benefits of building Universal Apps"
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["A check on the caller (", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "msg.sender"
-        }), ") who invokes the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "increment()"
-        }), " function."]
+        children: ["✅ Use ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "Live Playground"
+        }), " to test and interact with SimpleCounter"]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Native identification of the origin chain of the caller."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Increment logic that updates only the counter specific to the caller’s origin chain."
+        children: "🔜 Extend to a Universal Counter that tracks chain specific users"
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "example-behavior",
-      children: "Example Behavior"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "write-the-contract",
+      children: "Write the Contract"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "The process of building a simple smart contract like a counter is exactly similar to any other EVM Chain.\nYou can use the same tools, such as, remix, foundry, hardhat, etc."
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "To get started, you can use the following contract:"
+    }), "\n", (0,jsx_runtime.jsx)(SolidityCode/* SolidityCode */.L, {
+      title: "Simple Counter Contract",
+      fileName: "Counter.sol",
+      url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/simple-counter/contracts/src/Counter.sol",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-solidity",
+          children: "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.22;\n\ncontract Counter {\n    uint256 public countPC;\n    event CountIncremented(uint256 indexed countPC, address indexed caller);\n\n    function increment() public {\n        countPC += 1;\n        emit CountIncremented(countPC, msg.sender);\n    }\n\n    function reset() public {\n        countPC = 0;\n    }\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "The contract is a simple counter contract that:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Bob is an Ethereum user → Bob calls ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "increment()"
-        }), " → ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countETH"
-        }), " variable is incremented."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Dan is a Push Chain user → Dan calls ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "increment()"
-        }), " → ", (0,jsx_runtime.jsx)(_components.code, {
+        children: ["Allows the caller to increment the variable ", (0,jsx_runtime.jsx)(_components.code, {
           children: "countPC"
-        }), " variable is incremented."]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "🚀 The Best Part:"
-        }), "\nYou’ll be able to build this cross-chain functionality ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "without"
-        }), " using oracles, message passing systems, or third-party interoperability providers."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: ["It’s all ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "natively supported on Push Chain"
         }), "."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Emits an event with the current value of ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "countPC"
+        }), " and the caller’s address."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Allows anyone to reset the ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "countPC"
+        }), " to zero."]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "lets-build",
-      children: "Let's Build"
+      id: "compile--deploy",
+      children: "Compile & Deploy"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Here is the solidity code for our Universal Counter smart contract."
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-solidity",
-        children: "// SPDX-License-Identifier: MIT\npragma solidity 0.8.22;\n\n// Universal Account ID Struct and IUEAFactory Interface\n\nstruct UniversalAccountId {\n    string chainNamespace;\n    string chainId;\n    bytes owner;\n}\n\ninterface IUEAFactory {\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n}\n\ncontract UniversalCounter {\n    uint256 public countEth;\n    uint256 public countSol;\n    uint256 public countPC;\n\n    event CountIncremented(\n        uint256 newCount,\n        address indexed caller,\n        string chainNamespace,\n        string chainId\n    );\n\n    constructor() {}\n\n    function increment() public {\n        address caller = msg.sender;\n        (UniversalAccountId memory originAccount, bool isUEA) =\n            IUEAFactory(0x00000000000000000000000000000000000000eA).getOriginForUEA(caller);\n\n        if (!isUEA) {\n            // If it's a native Push Chain EOA (isUEA = false)\n            countPC += 1;\n        } else {\n            bytes32 chainHash = keccak256(abi.encodePacked(originAccount.chainNamespace, originAccount.chainId));\n\n            if (chainHash == keccak256(abi.encodePacked(\"solana\",\"EtWTRABZaYq6iMfeYKouRu166VU2xqa1\"))) {\n                countSol += 1;\n            } else if (chainHash == keccak256(abi.encodePacked(\"eip155\",\"11155111\"))) {\n                countEth += 1;\n            } else {\n                revert(\"Invalid chain\");\n            }\n        }\n\n        emit CountIncremented(getCount(), caller, originAccount.chainNamespace, originAccount.chainId);\n    }\n\n    function reset() public {\n        countEth = 0;\n        countSol = 0;\n        countPC = 0;\n    }\n\n    function getCount() public view returns (uint256) {\n        return countEth + countSol + countPC;\n    }\n}\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "understanding-the-universal-counter-app",
-      children: "Understanding the Universal Counter App"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The unique aspect of this smart contract is its ability to determine all imperative details of the user ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "( msg.sender )"
-      }), " instantly and natively."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["In simpler terms, for any given ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "msg.sender"
-      }), " address, the contract is able to quickly identify:"]
+      children: "You can use any of the following guides to build and deploy this contract on Push Chain:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: "the actual source chain of the caller"
-        })
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: "the chain id of the source chain of the caller."
-        })
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: "the address of the caller on the source chain."
-        })
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["These details are natively available for any smart contract built on Push Chain.\nThis is enabled via ", (0,jsx_runtime.jsx)(_components.strong, {
         children: (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://github.com/pushchain/push-chain-core-contracts/blob/main/src/Interfaces/IUEAFactory.sol",
-          children: "UEAFactory Interface"
+          href: "https://remix.ethereum.org/",
+          children: "Remix IDE"
         })
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "using-the-ueafactory-interface",
-      children: "Using the UEAFactory Interface"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The first step is to achieve the universal functionality is to use the UEAFactory interface in our contract.\n", (0,jsx_runtime.jsx)(_components.em, {
-        children: "This can either be imported or directly included in your contract."
-      })]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This interfaces provides you with the function - ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "getOriginForUEA()"
-      }), "."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-solidity",
-        children: "    /**\n     * @dev Returns the owner key (UOA) for a given UEA address\n     * @param addr Any given address ( msg.sender ) on push chain\n     * @return account The Universal Account information associated with this UEA\n     * @return isUEA True if the address addr is a UEA contract. Else it is a native EOA of PUSH chain (i.e., isUEA = false)\n     */\n    function getOriginForUEA(address addr) external view returns (UniversalAccountId memory account, bool isUEA);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This function plays the critical role of fetching and returning the information about the caller ( ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "msg.sender"
-      }), " )."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "The function mainly returns 2 crucial values:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["The ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "UniversalAccountId"
-        }), " of the user, and"]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "A boolean that indicates whether or not this caller is a UEA."
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "designing-the-increment-function",
-      children: "Designing the Increment Function"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "increment"
-      }), " function is the main logic of this contract that updates the count variables based on user’s origin type."]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["In order to achieve this, the ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "increment"
-      }), " function does the following:"]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["calls the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "getOriginForUEA()"
-        }), " with ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "msg.sender"
-        }), " as argument"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["this provides us with ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "isUEA and UniversalAccountId"
-        }), " for the caller."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["then we check if ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "isUEA is false,"
-        }), " this means the caller is a native Push User."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["for such users, the function increments ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "countPC"
-        }), " variable by 1"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsxs)(Details, {
-      children: [(0,jsx_runtime.jsx)("summary", {
-        children: (0,jsx_runtime.jsx)("strong", {
-          children: "Why isUEA = false means native Push User?"
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/smart-contract-environment/configure-foundry/",
+          children: "Foundry Configuration"
         })
-      }), (0,jsx_runtime.jsx)("p", {
-        children: "1. Every external chain user (ETH, Solana, etc) in Push Chain has a UEA account deployed for them."
-      }), (0,jsx_runtime.jsx)("p", {
-        children: "2. These UEA accounts represent the external chain users on Push Chain and are directly controlled by their signatures."
-      }), (0,jsx_runtime.jsx)("p", {
-        children: "3. UEAs allow external users to interact and use Push Chain apps without natively being on Push Chain."
-      }), (0,jsx_runtime.jsxs)("p", {
-        children: ["4. Therefore, for a given ", (0,jsx_runtime.jsx)("code", {
-          children: "msg.sender"
-        }), ":"]
-      }), (0,jsx_runtime.jsxs)("ul", {
-        children: [(0,jsx_runtime.jsxs)("li", {
-          children: [(0,jsx_runtime.jsx)("strong", {
-            children: "isUEA = false"
-          }), " → the caller is a native Push Chain account and not an external chain user."]
-        }), (0,jsx_runtime.jsxs)("li", {
-          children: [(0,jsx_runtime.jsx)("strong", {
-            children: "isUEA = true"
-          }), " → the caller is an external chain user interacting via a UEA. For such a user, the ", (0,jsx_runtime.jsx)("code", {
-            children: "UniversalAccountId"
-          }), " shall provide all information like ", (0,jsx_runtime.jsx)("em", {
-            children: "{ chainName, chainId, ownerAddress }"
-          }), "."]
-        })]
-      })]
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["however, if ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "isUEA is true,"
-        }), " this indicates the user is a external chain user."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["for such users the function checks the ", (0,jsx_runtime.jsx)(_components.strong, {
-          children: "UniversalAccountId.chainNamespace and UniversalAccountId.chainId"
-        }), " of the user and identifies if the user is a Solana or Ethereum user and updates the countSol or countEth variable accordingly."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: (0,jsx_runtime.jsx)(_components.a, {
+          href: "/docs/chain/setup/smart-contract-environment/configure-hardhat/",
+          children: "Hardhat Configuration"
+        })
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "summary",
-      children: "Summary"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "With this, we have simply achieved:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "a contract that natively identifies the caller of ANY chain."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "allows devs to build logic specific to the users for a particular chain."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "simplifies developer experience for building multi-chain universal apps."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "eliminates any use of third-party tooling, oracles, to achieve universal behavior."
-      }), "\n"]
+      children: "Once deployed, you can interact with the Counter contract just like on any other EVM-compatible chain."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "verify-contract",
+      children: "Verify Contract"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["This makes our Counter smart contract ", (0,jsx_runtime.jsx)(_components.strong, {
-        children: "truly universal"
-      }), " with just a few lines of solidity codes."]
+      children: ["If you are using Foundry or Hardhat, the contract is already verified for you. If you are using Remix, you can verify the contract on the Push Chain Explorer by going to ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://donut.push.network/contract-verification",
+        children: "verify and publish contract"
+      }), "."]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "interact-with-universalcounter-app",
-      children: "Interact with UniversalCounter App"
+      id: "interact-with-simplecounter-app",
+      children: "Interact with SimpleCounter App"
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "A easier way to interact with the contract is to use the LivePlayground below.\nThe UniversalCounter app is already deployed on Push Chain Testnet."
+      children: "An easier way to interact with the contract is to use the LivePlayground below.\nThe SimpleCounter app is already deployed on Push Chain Testnet."
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "UniversalCounter Contract Address:"
+          children: "SimpleCounter Contract Address:"
         }), " ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://donut.push.network/address/0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512?tab=contract",
-          children: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+          href: "https://donut.push.network/address/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266?tab=contract",
+          children: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: [(0,jsx_runtime.jsx)(_components.strong, {
         children: "Note:"
-      }), " Push Chain easily allows you to interact with the UniversalCounter from any chain."]
+      }), " Push Chain easily allows you to interact with the SimpleCounter from any chain."]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Follow the steps below to interact with the UniversalCounter:"
+      children: "Follow the steps below to interact with the SimpleCounter:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Connect your wallet to the LivePlayground."
@@ -516,21 +362,75 @@ function _createMdxContent(props) {
         children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
           children: "Refresh Counter Values"
         }), " button to refresh the counter values."]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Click on the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "View in Explorer"
-        }), " button to view the transaction in the explorer."]
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "After each transaction, click the hash link to view it on Push Chain Explorer."
       }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "lets-test-our-universalcounter-app",
-      children: "Let's Test our UniversalCounter App"
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "live-playground",
+      children: "Live Playground"
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-jsx",
         metastring: "live",
         live: true,
-        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction UniversalCounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Universal Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countEth',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countSol',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for Universal Counter\n  const CONTRACT_ADDRESS = '0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countEth, setCountEth] = useState(-1);\n    const [countSol, setCountSol] = useState(-1);\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoading, setIsLoading] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode transaction data\n    const getTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      if (!pushChainClient) return;\n\n      try {\n        // Create a contract instance for read operations\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        // Fetch counter values\n        const ethCount = await contract.countEth();\n        const solCount = await contract.countSol();\n        const pcCount = await contract.countPC();\n\n        // Update state\n        setCountEth(Number(ethCount));\n        setCountSol(Number(solCount));\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount and when connection status changes\n    useEffect(() => {\n      if (connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED) {\n        fetchCounters();\n      }\n    }, [connectionStatus, pushChainClient]);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoading(true);\n          const data = getTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n\n          // Wait for transaction to be mined\n          await tx.wait();\n\n          // Refresh counter values\n          await fetchCounters();\n          setIsLoading(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoading(false);\n        }\n      }\n    };\n\n    // Function to determine which chain is winning\n    const getWinningChain = () => {\n      if (countEth === -1 || countSol === -1 || countPC === -1) return null;\n\n      if (countEth > countSol && countEth > countPC) {\n        return `Ethereum is winning with ${countEth} counts`;\n      } else if (countSol > countEth && countSol > countPC) {\n        return `Solana is winning with ${countSol} counts`;\n      } else if (countPC > countEth && countPC > countSol) {\n        return `Push Chain is winning with ${countPC} counts`;\n      } else {\n        // Handle ties\n        if (countEth === countSol && countEth === countPC && countEth > 0) {\n          return `It's a three-way tie with ${countEth} counts each`;\n        } else if (countEth === countSol && countEth > countPC) {\n          return `Ethereum and Solana are tied with ${countEth} counts each`;\n        } else if (countEth === countPC && countEth > countSol) {\n          return `Ethereum and Push Chain are tied with ${countEth} counts each`;\n        } else if (countSol === countPC && countSol > countEth) {\n          return `Solana and Push Chain are tied with ${countSol} counts each`;\n        } else {\n          return null; // No winner yet or all zeros\n        }\n      }\n    };\n\n    const winningMessage = getWinningChain();\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Universal Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>\n            Total Universal Count:{' '}\n            {countEth == -1 ? '...' : countEth + countSol + countPC}\n          </h3>\n\n          <div\n            style={{\n              display: 'flex',\n              flexDirection: 'row',\n              alignItems: 'center',\n              justifyContent: 'space-around',\n              gap: '12px',\n              width: '100%',\n            }}\n          >\n            <div className='counter-box'>\n              <h3>ETH Counter: {countEth == -1 ? '...' : countEth}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>Sol Counter: {countSol == -1 ? '...' : countSol}</h3>\n            </div>\n\n            <div className='counter-box'>\n              <h3>PC Counter: {countPC == -1 ? '...' : countPC}</h3>\n            </div>\n          </div>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>\n            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>\n              <button\n                className='increment-button'\n                onClick={handleSendTransaction}\n                disabled={isLoading}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                {isLoading ? 'Processing...' : 'Increment Counter'}\n              </button>\n\n              <button\n                className='refresh-button'\n                onClick={fetchCounters}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                Refresh Counter Values\n              </button>\n            </div>\n\n            {winningMessage && (\n              <div style={{ margin: '10px 0', fontWeight: 'bold', color: '#d946ef' }}>\n                {winningMessage}\n              </div>\n            )}\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ textAlign: 'center' }}>\n                <p>\n                  Transaction Hash:{' '}\n                  <a\n                    href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                    target='_blank'\n                    style={{ color: '#d946ef', textDecoration: 'underline' }}\n                  >\n                    {txHash}\n                  </a>\n                </p>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction SimpleCounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Simple Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for Simple Counter\n  const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoadingIncrement, setIsLoadingIncrement] = useState(false);\n    const [isLoadingReset, setIsLoadingReset] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode increment transaction data\n    const getIncrementTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      try {\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        const pcCount = await contract.countPC();\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount\n    useEffect(() => {\n      fetchCounters();\n    }, []);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoadingIncrement(true);\n          const data = getIncrementTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n          await tx.wait();\n\n          await fetchCounters();\n          setIsLoadingIncrement(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoadingIncrement(false);\n        }\n      }\n    };\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Simple Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>Counter: {countPC == -1 ? '...' : countPC}</h3>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>\n            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>\n              <button\n                className='increment-button'\n                onClick={handleSendTransaction}\n                disabled={isLoadingIncrement}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}\n              </button>\n            </div>\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ textAlign: 'center' }}>\n                <p>\n                  Transaction Hash:{' '}\n                  <a\n                    href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                    target='_blank'\n                    style={{ color: '#d946ef', textDecoration: 'underline' }}\n                  >\n                    {txHash}\n                  </a>\n                </p>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "source-code",
+      children: "Source Code"
+    }), "\n", (0,jsx_runtime.jsx)(GitHubRepo/* GitHubRepo */.M, {
+      title: "Simple Counter Tutorial",
+      repoUrl: "https://github.com/pushchain/push-chain-examples/tree/main/tutorials/simple-counter",
+      description: "Full source code for the Universal Simple Counter smart contract and example frontend."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "what-we-achieved",
+      children: "What we Achieved"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "This was just a simple tutorial. What we did in this tutorial:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Deployed a simple counter contract on Push Chain."
+      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
+        children: "Interacted seamlessly with the contract from any chain. (Ethereum, Solana or Push Chain)"
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "next-tutorial",
+      children: "Next Tutorial"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The next tutorial introduces the true power of ", (0,jsx_runtime.jsx)(_components.strong, {
+        children: "Universal Apps"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)("div", {
+      style: {
+        textAlign: 'center'
+      },
+      children: (0,jsx_runtime.jsx)(_components.mermaid, {
+        value: "flowchart TD\n    EU[Ethereum User] --> UC[Universal Counter Contract]\n    SU[Solana User] --> UC\n    PU[Push Chain User] --> UC\n    \n    UC --> EC[Ethereum Counter: 5]\n    UC --> SC[Solana Counter: 3] \n    UC --> PC[Push Chain Counter: 8]\n    \n    style UC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EC fill:#627eea,stroke:#fff,stroke-width:2px,color:#fff\n    style SC fill:#16c492,stroke:#fff,stroke-width:2px,color:#fff\n    style PC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EU fill:#627eea,color:#fff\n    style SU fill:#16c492,color:#fff\n    style PU fill:#dd44b9,color:#fff"
+      })
+    }), "\n", (0,jsx_runtime.jsx)("hr", {}), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "In the next part, we modify this contract to implement the following:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: [(0,jsx_runtime.jsx)(_components.code, {
+          children: "increment()"
+        }), " called by users of ", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "any chain"
+        }), " will now be attributed to them."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["The contract will natively detect which chain the ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "msg.sender"
+        }), " belongs to."]
+      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["The contract will maintain a ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "count"
+        }), " for each chain based on the caller’s origin."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["All of these features will be natively supported in the contract with no requirement of\nthird-party oracles, interop providers or packages.\n", (0,jsx_runtime.jsx)(_components.strong, {
+          children: "This is only possible on Push Chain."
+        })]
+      }), "\n"]
     })]
   });
 }
@@ -615,6 +515,43 @@ role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===v
 return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
 // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
 ,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
+
+/***/ }),
+
+/***/ 531836:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  L: () => (/* reexport */ SolidityCode)
+});
+
+// UNUSED EXPORTS: default
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-icons/fi/index.esm.js
+var index_esm = __webpack_require__(242644);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
+var styled_components_browser_esm = __webpack_require__(944404);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/components/SolidityCode/SolidityCode.tsx
+/* eslint-disable */// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Configs
+const SolidityCode=_ref=>{let{children,title='Solidity Contract',fileName='Contract.sol',url=null,showRemixButton=true,className=''}=_ref;const getRemixUrl=()=>{let remixUrl='https://remix.ethereum.org/';if(url){// Convert GitHub blob URL to format Remix can understand
+if(url.includes('github.com')&&url.includes('/blob/')){// Use GitHub import format for Remix
+remixUrl="https://remix.ethereum.org/#url="+url;}else if(url.includes('raw.githubusercontent.com')){// Already a raw URL, use directly
+remixUrl="https://remix.ethereum.org/#url="+url;}else{// Fallback to just opening Remix
+remixUrl='https://remix.ethereum.org/';}}return remixUrl;};return/*#__PURE__*/(0,jsx_runtime.jsxs)(SolidityCodeContainer,{className:className,children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(CodeHeader,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(CodeTitle,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TitleText,{children:title}),/*#__PURE__*/(0,jsx_runtime.jsx)(FileNameText,{children:fileName})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)(ButtonGroup,{children:showRemixButton&&/*#__PURE__*/(0,jsx_runtime.jsxs)(ActionButton,{href:getRemixUrl(),target:"_blank",rel:"noopener noreferrer",children:["Open in Remix",/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm/* FiExternalLink */.HaR,{size:16})]})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(CodeBlock,{children:children})]});};// Styled Components
+const SolidityCodeContainer=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__SolidityCodeContainer",componentId:"sc-1w77983-0"})(["margin:24px 0;border-radius:var(--ifm-global-radius);overflow:hidden;@media ","{margin:20px 0;}"],globals/* device */.jO.tablet);const CodeHeader=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeHeader",componentId:"sc-1w77983-1"})(["display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:var(--ifm-playground-header-bg);@media ","{padding:10px 12px;flex-direction:row;align-items:flex-start;gap:8px;}"],globals/* device */.jO.tablet);const CodeTitle=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeTitle",componentId:"sc-1w77983-2"})(["display:flex;align-items:center;gap:10px;"]);const FileIcon=styled_components_browser_esm["default"].span.withConfig({displayName:"SolidityCode__FileIcon",componentId:"sc-1w77983-3"})(["font-size:1.125rem;@media ","{font-size:1rem;}"],globals/* device */.jO.tablet);const TitleText=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__TitleText",componentId:"sc-1w77983-4"})(["font-size:0.875rem;font-weight:600;color:var(--ifm-color-content);margin-bottom:2px;@media ","{font-size:0.8125rem;}"],globals/* device */.jO.tablet);const FileNameText=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__FileNameText",componentId:"sc-1w77983-5"})(["font-size:0.75rem;color:var(--ifm-color-content-secondary);font-family:var(--ifm-font-family-monospace);@media ","{font-size:0.6875rem;}"],globals/* device */.jO.tablet);const ButtonGroup=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__ButtonGroup",componentId:"sc-1w77983-6"})(["display:flex;align-items:center;gap:8px;@media ","{justify-content:flex-end;align-self:center;}"],globals/* device */.jO.tablet);const ActionButton=styled_components_browser_esm["default"].a.withConfig({displayName:"SolidityCode__ActionButton",componentId:"sc-1w77983-7"})(["display:flex;align-items:center;gap:6px;padding:6px 12px;background:transparent;border:1px solid var(--ifm-playground-header-tag);border-radius:4px;color:var(--ifm-color-primary-text);font-size:0.75rem;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;font-weight:500;text-decoration:none;&:hover{border:1px solid var(--ifm-color-primary);text-decoration:none;}@media ","{padding:5px 10px;font-size:0.6875rem;}"],globals/* device */.jO.tablet);const CodeBlock=styled_components_browser_esm["default"].div.withConfig({displayName:"SolidityCode__CodeBlock",componentId:"sc-1w77983-8"})(["overflow-x:auto;background:var(--ifm-playground-header-terminalbg);& > div{margin:0px;}"]);/* harmony default export */ const SolidityCode_SolidityCode = ((/* unused pure expression or super */ null && (SolidityCode)));
+;// ./src/components/SolidityCode/index.ts
+
 
 /***/ }),
 
