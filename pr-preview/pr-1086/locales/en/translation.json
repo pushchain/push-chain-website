@@ -788,11 +788,11 @@
         "twitter-description": "Quickstarts, SDKs, API ref, and examples to ship fast."
       },
       "header": {
-        "countdown-title": "Testnet Docs Launch in",
-        "description": "Psst... want a sneak peek of Testnet Donut? Drop us a shout with #pushchainsecret and we'll send you access to a test build.",
-        "tweet-button": "Tweet about Push Chain",
-        "title": "Tweet about Push Chain",
-        "ariaLabel": "Tweet about Push Chain"
+        "countdown-title": "Testnet Docs Launching Soon",
+        "description": "Psst... want a sneak peek of Push Chain Testnet - Donut? You can access the secret preview build by signing up for our Project G.U.D Deployathon on DoraHacks.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
       }
     },
     "blog": {
@@ -1291,10 +1291,10 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Get a sneak peek into Testnet, Donut, build universal apps and win prizes!",
-      "button-text": "Claim Closed Beta Pass",
-      "button-title": "Join Push Chain testnet and claim your closed beta pass",
-      "button-aria-label": "Open Telegram to claim Push Chain closed beta pass",
+      "description": "Project G.U.D deployathon is LIVE! Deploy apps, win $5000",
+      "button-text": "Go Universal & Deploy",
+      "button-title": "Project G.U.D deployathon is LIVE",
+      "button-aria-label": "Project G.U.D deployathon is LIVE. You can check it out here",
       "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
       "close-button-title": "Close testnet notification",
       "close-button-aria-label": "Dismiss Push Chain testnet notification",
