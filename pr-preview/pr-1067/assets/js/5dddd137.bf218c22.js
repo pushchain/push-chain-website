@@ -1941,7 +1941,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: (0,jsx_runtime.jsx)(_components.em, {
           children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.helpers.parseUnits(value, {options}): bigint"
+            children: "PushChain.utils.helpers.parseUnits(value, exponent): bigint"
           })
         })
       })
@@ -2001,17 +2001,21 @@ function _createMdxContent(props) {
             children: [(0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.em, {
                 children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "options.decimals"
+                  children: "exponent"
                 })
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
               children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "number"
+                children: "number | { decimals: number }"
               })
             }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["The number of decimal places to scale by. Must be a non-negative integer. For example, use ", (0,jsx_runtime.jsx)(_components.code, {
+              children: ["Number of decimal places to scale by. Provide either a number (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "18"
-              }), " for PC or ETH, ", (0,jsx_runtime.jsx)(_components.code, {
+              }), ") or an object with ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "decimals"
+              }), ". Must be a non-negative integer. Examples: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "18"
+              }), " for PC/ETH, ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "6"
               }), " for USDC, ", (0,jsx_runtime.jsx)(_components.code, {
                 children: "8"
