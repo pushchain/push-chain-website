@@ -1831,8 +1831,6 @@ function _createMdxContent(props) {
                 children: [(0,jsx_runtime.jsx)(_components.code, {
                   children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT"
-                }), " ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET"
                 })]
               })]

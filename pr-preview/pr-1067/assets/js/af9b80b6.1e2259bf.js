@@ -1510,6 +1510,10 @@ const toc = [{
   "id": "chain-agnostic-address-examples",
   "level": 2
 }, {
+  "value": "Universal Chain Namespace",
+  "id": "universal-chain-namespace",
+  "level": 2
+}, {
   "value": "Next Steps",
   "id": "next-steps",
   "level": 2
@@ -1768,7 +1772,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Ethereum"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Sepolia Testnet(11155111)"
+            children: "Sepolia Testnet (11155111)"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.code, {
               children: "eip155:11155111:0x5FbDB2315678afecB367f032d93F642f64180aa3"
@@ -1778,7 +1782,7 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Solana"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Mainnet-Beta"
+            children: "Mainnet-Beta (5eykt4...)"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.code, {
               children: "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp:9xQeWvGFvPEZZY3Yvj5V14xi4tYmEXjfSDrm5sVqTvcAg"
@@ -1788,17 +1792,17 @@ function _createMdxContent(props) {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Solana"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "Testnet"
+            children: "Devnet (EtWTRA...)"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.code, {
-              children: "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z:7fCAbbLejF64HTZ39rjFBUXJEMYT9z7d6NM6ovaoyNaW"
+              children: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1:7fCAbbLejF64HTZ39rjFBUXJEMYT9z7d6NM6ovaoyNaW"
             })
           })]
         }), (0,jsx_runtime.jsxs)(_components.tr, {
           children: [(0,jsx_runtime.jsx)(_components.td, {
             children: "Cosmos"
           }), (0,jsx_runtime.jsx)(_components.td, {
-            children: "cosmoshub-4"
+            children: "cosmoshub-4 (cosmos1sk8...)"
           }), (0,jsx_runtime.jsx)(_components.td, {
             children: (0,jsx_runtime.jsx)(_components.code, {
               children: "cosmos:cosmoshub-4:cosmos1sk8uyz4u6zmxus3aurayrjyvfgtytvpnr685ur"
@@ -1809,6 +1813,105 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: ["The addresses are inspired from ", (0,jsx_runtime.jsx)(_components.a, {
+          href: "https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md",
+          title: "Link to caip-10 proposal",
+          children: "caip-10"
+        }), " format."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "universal-chain-namespace",
+      children: "Universal Chain Namespace"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Every external chain is represented as a particular constant on Push Chain. Mentioned below are some of the supported testnet and mainnet chain namespaces on Push Chain. Some namespaces are only available on testnet or mainnet."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: "Chain"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Namespace"
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: "Assigned Constant"
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Push Testnet (Donut)"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:42101"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "PUSH_TESTNET_DONUT"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum Sepolia"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:11155111"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "ETHEREUM_SEPOLIA"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana Devnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "SOLANA_DEVNET"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Push Mainnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "To Be Announced"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "PUSH_MAINNET"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Ethereum Mainnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "eip155:1"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "ETHEREUM_MAINNET"
+            })
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: "Solana Mainnet"
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "SOLANA_MAINNET"
+            })
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: ["The namespaces are inspired from ", (0,jsx_runtime.jsx)(_components.a, {
           href: "https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md",
           title: "Link to caip-10 proposal",
           children: "caip-10"

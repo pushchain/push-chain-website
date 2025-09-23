@@ -554,7 +554,7 @@ function _createMdxContent(props) {
                 children: "BigInt"
               })
             }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "The value to send in uPC. smallest unit of PC, like wei in ETH"
+              children: "The value to send in uPC. smallest unit of PC, like wei in ETH."
             })]
           }), (0,jsx_runtime.jsxs)(_components.tr, {
             children: [(0,jsx_runtime.jsx)(_components.td, {
@@ -2683,7 +2683,7 @@ import * as readline from 'node:readline/promises';
     // Convert to Universal signer and initialize SDK
     const signer = await PushChain.utils.signer.toUniversal(walletClient);
     const client = await PushChain.initialize(signer, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
     });
 
@@ -2747,7 +2747,7 @@ import * as readline from 'node:readline/promises';
     const signer = await PushChain.utils.signer.toUniversal(walletClient);
     const client = await PushChain.initialize(signer, 
       { 
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT,
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
         progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
       }
     );
@@ -2805,7 +2805,7 @@ import * as readline from 'node:readline/promises';
 
     const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
     const signer = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT, progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id) });
+    const client = await PushChain.initialize(signer, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET, progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id) });
 
     // Require user to fund gas in ETH
     await rl.question(':::prompt:::Please send Sepolia ETH (for gas) to: ' + account.address + ' and press Enter to continue.');

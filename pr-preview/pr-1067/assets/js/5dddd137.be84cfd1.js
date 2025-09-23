@@ -1734,6 +1734,18 @@ const assets = {
 };
 
 /*Content Start*/
+/*API Section Start*/
+/*API Section Ends*/
+/*API Section Start*/
+/*API Section Ends*/
+/*API Section Start*/
+/*API Section Ends*/
+/*API Section Start*/
+/*API Section Ends*/
+/*API Section Start*/
+/*API Section Ends*/
+/*API Section Start*/
+/*API Section Ends*/
 /*API Section Begins*/
 /*API Section Ends*/
 /*API Section Begins*/
@@ -1750,6 +1762,7 @@ const assets = {
 /*API Section Ends*/
 /*API Section Start*/
 /*API Section Ends*/
+/*API Section Begins*/
 /*API Section Ends*/
 /*API Section Start*/
 /*API Section Ends*/
@@ -1766,6 +1779,38 @@ const toc = [{
   "value": "Overview",
   "id": "overview",
   "level": 2
+}, {
+  "value": "Helper Utilities",
+  "id": "helper-utilities",
+  "level": 2
+}, {
+  "value": "Parse Units",
+  "id": "parse-units",
+  "level": 3
+}, {
+  "value": "Format Units",
+  "id": "format-units",
+  "level": 3
+}, {
+  "value": "Encode Transaction Data",
+  "id": "encode-transaction-data",
+  "level": 3
+}, {
+  "value": "Chain Utilities",
+  "id": "chain-utilities",
+  "level": 2
+}, {
+  "value": "Get Chain Namespace from Chain Name",
+  "id": "get-chain-namespace-from-chain-name",
+  "level": 3
+}, {
+  "value": "Get Chain Name from Chain Namespace",
+  "id": "get-chain-name-from-chain-namespace",
+  "level": 3
+}, {
+  "value": "Get Supported Chains",
+  "id": "get-supported-chains",
+  "level": 3
 }, {
   "value": "Account Utilities",
   "id": "account-utilities",
@@ -1799,42 +1844,6 @@ const toc = [{
   "id": "create-universal-signer-from-keypair",
   "level": 3
 }, {
-  "value": "Explorer Utilities",
-  "id": "explorer-utilities",
-  "level": 2
-}, {
-  "value": "Get Transaction URL",
-  "id": "get-transaction-url",
-  "level": 3
-}, {
-  "value": "List all Explorer URLs",
-  "id": "list-all-explorer-urls",
-  "level": 3
-}, {
-  "value": "Conversion Utilities",
-  "id": "conversion-utilities",
-  "level": 2
-}, {
-  "value": "Helper Utilities",
-  "id": "helper-utilities",
-  "level": 2
-}, {
-  "value": "Get Chain Name from Chain Namespace",
-  "id": "get-chain-name-from-chain-namespace",
-  "level": 3
-}, {
-  "value": "Encode Transaction Data",
-  "id": "encode-transaction-data",
-  "level": 3
-}, {
-  "value": "Parse Units",
-  "id": "parse-units",
-  "level": 3
-}, {
-  "value": "Calculate Minimum Amount From Slippage",
-  "id": "calculate-minimum-amount-from-slippage",
-  "level": 3
-}, {
   "value": "Token Utilities",
   "id": "token-utilities",
   "level": 2
@@ -1845,6 +1854,30 @@ const toc = [{
 }, {
   "value": "Get Payable Tokens",
   "id": "get-payable-tokens",
+  "level": 3
+}, {
+  "value": "Conversion Utilities",
+  "id": "conversion-utilities",
+  "level": 2
+}, {
+  "value": "Calculate Minimum Amount from Slippage",
+  "id": "calculate-minimum-amount-from-slippage",
+  "level": 3
+}, {
+  "value": "Get Conversion Quote",
+  "id": "get-conversion-quote",
+  "level": 3
+}, {
+  "value": "Explorer Utilities",
+  "id": "explorer-utilities",
+  "level": 2
+}, {
+  "value": "Get Transaction URL",
+  "id": "get-transaction-url",
+  "level": 3
+}, {
+  "value": "List all Explorer URLs",
+  "id": "list-all-explorer-urls",
   "level": 3
 }, {
   "value": "Next Steps",
@@ -1885,6 +1918,754 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "This section covers the most commonly used helpers in the Push Chain Core SDK to simplify common workflows."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "helper-utilities",
+      children: "Helper Utilities"
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "parse-units",
+      children: "Parse Units"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.helpers.parseUnits(value, {options}): bigint"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Converts a human-readable token amount into its smallest unit representation (bigint). It multiplies the given value by 10^decimals, ensuring amounts are safe for on-chain use."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Commonly used when preparing transaction parameters (e.g., converting ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "1.5"
+      }), " into ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "1500000000000000000"
+      }), ", similar to how you convert ETH to wei, PC to uPC, or any other tokens to its smallest denominator)."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const result = PushChain.utils.helpers.parseUnits('1.5', { decimals: 18 });\n// variation: const result = PushChain.utils.helpers.parseUnits('1.5', 18);\n\n// Returns: 1500000000000000000n (1.5 PC in uPC)\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "value"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The string representation of the number to parse. Can include decimals (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "\"1.5\""
+              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "\"420\""
+              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "\"0.1\""
+              }), ")."]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "options.decimals"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The number of decimal places to scale by. Must be a non-negative integer. For example, use ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "18"
+              }), " for PC or ETH, ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "6"
+              }), " for USDC, ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "8"
+              }), " for BTC."]
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `value` <bigint>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// bigint - the scaled integer value\n1500000000000000000n\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Parse Units for Common Token Scenarios",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.parseUnits
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    console.log('=== Common Token Conversion Examples ===');
+    
+    // ETH to Wei or PC to uPC (18 decimals)
+    const ethToWei = PushChain.utils.helpers.parseUnits('1.5', { decimals: 18 });
+    console.log('1.5 ETH to Wei:', ethToWei.toString());
+    
+    // USDC amount (6 decimals) 
+    const usdcAmount = PushChain.utils.helpers.parseUnits('100.50', { decimals: 6 });
+    console.log('100.50 USDC to smallest unit:', usdcAmount.toString());
+    
+    // BTC to Satoshi (8 decimals)
+    const btcToSatoshi = PushChain.utils.helpers.parseUnits('0.00000001', { decimals: 8 });
+    console.log('0.00000001 BTC to Satoshi:', btcToSatoshi.toString());
+    
+    console.log('=== Basic Number Parsing ===');
+    
+    // Integer values
+    const integerResult = PushChain.utils.helpers.parseUnits('420', { decimals: 9 });
+    console.log('420 with 9 decimal places:', integerResult.toString());
+    
+    // Decimal values
+    const decimalResult = PushChain.utils.helpers.parseUnits('0.1', { decimals: 6 });
+    console.log('0.1 with 6 decimal places:', decimalResult.toString());
+    
+    console.log('=== Variation Examples ===');
+    
+    // Push token amount (18 decimals)
+    const pushAmount = PushChain.utils.helpers.parseUnits('1000.5', 18);
+    console.log('1000.5 PC tokens:', pushAmount.toString());
+    
+    // Precise decimal matching
+    const preciseAmount = PushChain.utils.helpers.parseUnits('1.123456', 6);
+    console.log('Precise 6-decimal amount:', preciseAmount.toString());
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "format-units",
+      children: "Format Units"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.helpers.formatUnits(value, {options}): string"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Converts a raw token amount in smallest units (bigint) into a human-readable decimal string. It divides the given value by 10^decimals, making it easy to display amounts for users."
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Commonly used in UI or logs (e.g., turning ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "1500000000000000000"
+      }), " into ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "1.5"
+      }), " or any token from smallest unit to its human-readable value)."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const result = PushChain.utils.helpers.formatUnits('1500000000000000000', { decimals: 18 });\n// variation: const result = PushChain.utils.helpers.formatUnits('1500000000000000000', 18);\n\n// Returns: 1.5 (1.5 PC in uPC)\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "value"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "bigint | string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Raw amount in smallest units (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "'1500000000000000000'"
+              }), " for 1.5 assuming ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "18"
+              }), " decimals)."]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "options.decimals"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The number of decimal places to scale by. Must be a non-negative integer. For example, use ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "18"
+              }), " for PC or ETH, ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "6"
+              }), " for USDC, ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "8"
+              }), " for BTC."]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.precision"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The number of precision to scale by, will round up the value. Must be a non-negative integer. For example, use ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "4"
+              }), " for returning 4 digits after the decimal."]
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `value` <string>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// string - human readable value\n1.5\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Format Units for Common Token Scenarios",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.formatUnits
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    console.log('=== Common Token Conversion Examples ===');
+    
+    // Wei to ETH or uPC to PC (18 decimals)
+    const ethToWei = PushChain.utils.helpers.formatUnits('1500000000000000000', { decimals: 18 });
+    console.log('1500000000000000000 Wei to ETH (1.5):', ethToWei);
+    
+    // USDC amount (6 decimals) 
+    const usdcAmount = PushChain.utils.helpers.formatUnits('100500000', { decimals: 6 });
+    console.log('100500000 unit of USDC to human readable USDC (100.5):', usdcAmount);
+    
+    console.log('=== Basic Number Formatting ===');
+    
+    // Integer values
+    const integerResult = PushChain.utils.helpers.formatUnits('420000000000', { decimals: 9, precision: 2 });
+    console.log('420000000000 with 9 decimals and 2 precision (420.00):', integerResult);
+    
+    // Decimal values
+    const decimalResult = PushChain.utils.helpers.formatUnits('123456', { decimals: 5, precision: 4 });
+    console.log('123456 with 6 decimal places and 4 precision (1.2346):', decimalResult);
+    
+    console.log('=== Variation Examples ===');
+    
+    // Push token amount (18 decimals)
+    const pushAmount = PushChain.utils.helpers.formatUnits('1000500000000000000000', 18);
+    console.log('1000500000000000000000 uPC tokens to PC tokens (1000.5):', pushAmount);
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "encode-transaction-data",
+      children: "Encode Transaction Data"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.helpers.encodeTxData({abi, functionName, args}): string"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const encodedData = PushChain.utils.helpers.encodeTxData({\n  abi,\n  functionName: 'functionName',\n  args: []\n});\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Default"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "abi"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "any[]"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The ABI array of the smart contract containing function definitions."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "functionName"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "-"
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The name of the function to encode transaction data for."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "args"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "any[]"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "[]"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "The arguments to pass to the function. Defaults to empty array for functions with no parameters."
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `encodedData` <string>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// encodedData string - the encoded function call data\n'0xd09de08a';\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Encode Transaction Data for Smart Contract Function",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.helpers\.encodeTxData
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    // Example ABI for a simple counter contract
+    const testAbi = [
+      {
+        inputs: [],
+        stateMutability: 'nonpayable',
+        type: 'constructor',
+      },
+      {
+        inputs: [],
+        name: 'increment',
+        outputs: [],
+        stateMutability: 'nonpayable',
+        type: 'function',
+      },
+      {
+        inputs: [],
+        name: 'countPC',
+        outputs: [
+          {
+            internalType: 'uint256',
+            name: '',
+            type: 'uint256',
+          },
+        ],
+        stateMutability: 'view',
+        type: 'function',
+      },
+    ];
+
+    // Encode transaction data for the increment function
+    const result = PushChain.utils.helpers.encodeTxData({
+      abi: testAbi,
+      functionName: 'increment'
+    });
+    
+    console.log('Encoded transaction data:', result);
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "chain-utilities",
+      children: "Chain Utilities"
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-chain-namespace-from-chain-name",
+      children: "Get Chain Namespace from Chain Name"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.chains.getChainNamespace(chainName): string"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Every external chain is represented as a particular string on Push Chain. You can see the list of supported chains in the ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/docs/chain/setup/chain-config#universal-chain-namespace",
+        children: "Chain Configuration"
+      }), " section."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const chainName = PushChain.utils.chains.getChainNamespace('PUSH_TESTNET_DONUT');\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "name"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The chain name to convert to chain namespace. Eg: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "PUSH_TESTNET_DONUT"
+              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "eip155:42101"
+              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "ETHEREUM_SEPOLIA"
+              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "eip155:11155111"
+              }), "."]
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `chainNamespace` <string>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// chainNamespace string\n'eip155:42101';\n\n// NOTE: returns undefined if chainName is unsupported\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Get Chain Namespace from Chain Name",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.chains\.getChainNamespace
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const chainName = PushChain.utils.chains.getChainNamespace('PUSH_TESTNET_DONUT');
+    console.log(chainName);
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-chain-name-from-chain-namespace",
+      children: "Get Chain Name from Chain Namespace"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.chains.getChainName(chainNamespace): string"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Every external chain is represented as a particular string on Push Chain. You can see the list of supported chains in the ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/docs/chain/setup/chain-config#universal-chain-namespace",
+        children: "chain configuration"
+      }), " section."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const chainName = PushChain.utils.chains.getChainName('eip155:42101');\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "namespace"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["The chain namespace to convert to chain name. Eg: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "eip155:42101"
+              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "PUSH_TESTNET_DONUT"
+              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "eip155:11155111"
+              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "ETHEREUM_SEPOLIA"
+              }), "."]
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `chainName` <string>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// chainName string\n'PUSH_TESTNET_DONUT';\n\n// NOTE: returns undefined if chainNamespace is unsupported\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Get Chain Name from Chain Namespace",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.chains\.getChainName
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const chainName = PushChain.utils.chains.getChainName('eip155:42101');
+    console.log(chainName);
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-supported-chains",
+      children: "Get Supported Chains"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.chains.getSupportedChains(pushNetwork): { chains: [] }"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Returns the list of chains supported for a given Push Network."
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const chains = PushChain.utils.chains.getSupportedChains(PushChain.CONSTANTS.PUSH_NETWORK.TESTNET);\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "pushNetwork"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "PushChain.CONSTANTS.PUSH_NETWORK\t"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Push Chain network to retrieve list of supported chains from. For example: ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET"
+              }), " ", (0,jsx_runtime.jsxs)(Details/* default */.A, {
+                summary: "PushChain.CONSTANTS.PUSH_NETWORK",
+                className: "alert alert--minimal-api-table",
+                children: [(0,jsx_runtime.jsx)(_components.code, {
+                  children: "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET"
+                }), " ", (0,jsx_runtime.jsx)(_components.code, {
+                  children: "PushChain.CONSTANTS.PUSH_NETWORK.LOCALNET"
+                })]
+              })]
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `{ chains }` <object>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// { chains } object\n{\n  chains: [\n    PushChain.CONSTANTS.CHAIN.PUSH_TESTNET,\n    PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,\n    PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,\n    // ...\n  ]\n}\n\n// NOTE: returns empty chains array if pushNetwork is unsupported\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Get Supported Chains for a given Push Network",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.chains\.getSupportedChains
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const chains = PushChain.utils.chains.getSupportedChains(PushChain.CONSTANTS.PUSH_NETWORK.TESTNET);
+    console.log(JSON.stringify(chains));
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "account-utilities",
       children: "Account Utilities"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -1894,7 +2675,7 @@ function _createMdxContent(props) {
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: (0,jsx_runtime.jsx)(_components.em, {
           children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.account.toUniversal(address, {options}): UniversalAccount"
+            children: "PushChain.utils.account.toUniversal(address, {options}): <UniversalAccount>"
           })
         })
       })
@@ -1956,13 +2737,13 @@ function _createMdxContent(props) {
                 summary: "PushChain.CONSTANTS.CHAIN",
                 className: "alert alert--minimal-api-table",
                 children: [(0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_MAINNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_MAINNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_TESTNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_TESTNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_TESTNET_DONUT"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_LOCALNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_LOCALNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
@@ -2083,13 +2864,13 @@ import { PushChain } from '@pushchain/core';
                 summary: "PushChain.CONSTANTS.CHAIN",
                 className: "alert alert--minimal-api-table",
                 children: [(0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_MAINNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_MAINNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_TESTNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_TESTNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_TESTNET_DONUT"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
-                  children: "PushChain.CONSTANTS.PUSH_LOCALNET"
+                  children: "PushChain.CONSTANTS.CHAIN.PUSH_LOCALNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
                   children: "PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET"
                 }), " ", (0,jsx_runtime.jsx)(_components.code, {
@@ -2116,7 +2897,7 @@ import { PushChain } from '@pushchain/core';
         })
       })
     }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Convert Ethereum Mainnet address to chain agnostic address",
+      summary: "Live Playground: Convert Ethereum Sepolia address to chain agnostic address",
       className: "alert alert--live-play",
       children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
         repo: {
@@ -2689,6 +3470,530 @@ import { Keypair } from '@solana/web3.js';
         })]
       })
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "token-utilities",
+      children: "Token Utilities"
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-moveable-tokens",
+      children: "Get Moveable Tokens"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.tokens.getMoveableTokens(chainOrClient?): { tokens: [] }"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Commonly used to get list of supported assets that can be moved across chains. See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/docs/chain/build/send-universal-transaction/#sending-universal-transaction",
+        children: "send universal transaction"
+      }), " for more info."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// All supported moveable tokens across chains\nconst { tokens: allMoveable } = PushChain.utils.tokens.getMoveableTokens();\n\n// Filtered for a specific chain\nconst { tokens: sepoliaMoveable } = PushChain.utils.tokens.getMoveableTokens(\n  PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA\n);\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "chainOrClient"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "CHAIN | PushChain"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Optional. A chain enum or an initialized client to filter tokens for that chain."
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `{ tokens }` <object>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// tokens object { tokens: [] }\n{\n  tokens: [\n    { chain: 'eip155:11155111', symbol: 'ETH', decimals: 18, address: '0x...' },\n    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },\n    // ...\n  ]\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: List moveable tokens for a specific chain",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.tokens\.getMoveableTokens
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const { tokens: sepolia } = PushChain.utils.tokens.getMoveableTokens(
+      PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
+    );
+    console.log("Sepolia moveable supported tokens:", JSON.stringify(sepolia, null, 2));
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-payable-tokens",
+      children: "Get Payable Tokens"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.tokens.getPayableTokens(chainOrClient?): { tokens: [] }"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Commonly used to get list of supported assets to pay with (either for gas or token movement) across chains. See ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/docs/chain/build/send-universal-transaction/#sending-universal-transaction",
+        children: "send universal transaction"
+      }), " for more info."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// All supported payable tokens across chains\nconst { tokens: allPayable } = PushChain.utils.tokens.getPayableTokens();\n\n// Filtered for a specific chain\nconst { tokens: solanaDevnetPayable } = PushChain.utils.tokens.getPayableTokens(\n  PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET\n);\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsx)(_components.tbody, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "chainOrClient"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "CHAIN | PushChain"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Optional. A chain enum or an initialized client to filter tokens for that chain."
+            })]
+          })
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `{ tokens }` <object>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// tokens object { tokens: [] }\n{\n  tokens: [\n    { chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', symbol: 'SOL', decimals: 9, address: 'So11111111111111111111111111111111111111112' },\n    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },\n    // ...\n  ]\n}\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: List payable tokens for a specific chain",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.tokens\.getPayableTokens
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const { tokens: devnet } = PushChain.utils.tokens.getPayableTokens(
+      PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET
+    );
+    console.log("Solana supported payable tokens:", JSON.stringify(devnet, null, 2));
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "conversion-utilities",
+      children: "Conversion Utilities"
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "calculate-minimum-amount-from-slippage",
+      children: "Calculate Minimum Amount from Slippage"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "PushChain.utils.conversion.slippageToMinAmount(amount, { slippageBps }): string"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const minOut = PushChain.utils.conversion.slippageToMinAmount('100000000', {\n  slippageBps: 100, // 1%\n});\n// Returns: '99000000'\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Arguments"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Type"
+              })
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: (0,jsx_runtime.jsx)(_components.strong, {
+                children: "Description"
+              })
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "amount"
+                })
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Input amount in smallest units (e.g., '100000000' for 100 USDC as it has 6 decimals)."
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.em, {
+                children: (0,jsx_runtime.jsx)(_components.code, {
+                  children: "options.slippageBps"
+                })
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: [(0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              }), " (integer)"]
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Slippage in basis points. ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "100 = 1%"
+              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "50 = 0.5%"
+              }), "."]
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `minOut` <string>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsx)(_components.pre, {
+        children: (0,jsx_runtime.jsx)(_components.code, {
+          className: "language-typescript",
+          children: "// minOut `string` (in smallest units)\n'99000000'\n"
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Calculate minimum amount out from slippage",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
+        },
+        children: `
+// customPropHighlightRegexStart=PushChain\.utils\.conversion\.slippageToMinAmount
+// customPropHighlightRegexEnd=\\);
+import { PushChain } from '@pushchain/core';
+
+  function main() {
+    const minOut = PushChain.utils.conversion.slippageToMinAmount('100000000', {
+      slippageBps: 100,
+    });
+    console.log('Min out with 1% slippage:', minOut);
+  }
+
+  main();
+
+`
+      })
+    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-conversion-quote",
+      children: "Get Conversion Quote"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: (0,jsx_runtime.jsx)(_components.strong, {
+        children: (0,jsx_runtime.jsx)(_components.em, {
+          children: (0,jsx_runtime.jsx)(_components.code, {
+            children: "pushChainClient.funds.getConversionQuote(amount, {options}): Promise<ConversionQuote>"
+          })
+        })
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Note"
+        }), ": This function is available only after initializing the Push Chain client."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["The function is used to get conversion quote especially when you want to pay with (from) one token, move as (to) another token. Used in ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "/docs/chain/build/send-universal-transaction/#sending-universal-transaction",
+        children: "send universal transaction"
+      }), " for token movement across chains or to pay gas in other tokens instead of native token of the source chain."]
+    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
+        children: [(0,jsx_runtime.jsx)(_components.strong, {
+          children: "Convention:"
+        }), " from = the token you pay with (Payable), to = the token you move as (Moveable)."]
+      }), "\n"]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "const quote = pushChainClient.funds.getConversionQuote('100000000', {\n  from: pushChainClient.payable.token.WETH, // PayableToken - Assuming client initialized with ETHEREUM_ \n  to: pushChainClient.moveable.token.USDT // MoveableToken - Assuming client initialized with ETHEREUM_ \n});\n\n// Returns: { \"amountIn\": \"5000000000000000\", \"amountOut\": \"11813463066488417\", \"rate\": 2362692613297.683, \"route\": [ \"WETH\", \"USDT\" ], \"timestamp\": 1758582899267 }\n"
+      })
+    }), "\n", (0,jsx_runtime.jsxs)(_components.table, {
+      children: [(0,jsx_runtime.jsx)(_components.thead, {
+        children: (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.th, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Arguments"
+            })
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Type"
+            })
+          }), (0,jsx_runtime.jsx)(_components.th, {
+            children: (0,jsx_runtime.jsx)(_components.strong, {
+              children: "Description"
+            })
+          })]
+        })
+      }), (0,jsx_runtime.jsxs)(_components.tbody, {
+        children: [(0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.em, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "amount"
+              })
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.code, {
+              children: "string"
+            })
+          }), (0,jsx_runtime.jsx)(_components.td, {
+            children: "The string representation of the amount to parse. Can include decimals (e.g., \"1.5\", \"420\", \"0.1\")."
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.em, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.from"
+              })
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "<PayableToken>"
+            }), " (dynamic)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["List of supported tokens provided dynamically through get ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#get-payable-tokens",
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "getPayableTokens"
+              })
+            }), "."]
+          })]
+        }), (0,jsx_runtime.jsxs)(_components.tr, {
+          children: [(0,jsx_runtime.jsx)(_components.td, {
+            children: (0,jsx_runtime.jsx)(_components.em, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "options.to"
+              })
+            })
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: [(0,jsx_runtime.jsx)(_components.code, {
+              children: "<MoveableToken>"
+            }), " (dynamic)"]
+          }), (0,jsx_runtime.jsxs)(_components.td, {
+            children: ["List of supported tokens provided dynamically through get ", (0,jsx_runtime.jsx)(_components.a, {
+              href: "#get-moveable-tokens",
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "getMoveableTokens"
+              })
+            }), "."]
+          })]
+        })]
+      })]
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Supported chains",
+      className: "alert alert--minimal",
+      children: (0,jsx_runtime.jsxs)(_components.ul, {
+        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+          children: [(0,jsx_runtime.jsx)(_components.code, {
+            children: "funds.getConversionQuote"
+          }), " currently works on Ethereum Mainnet and Sepolia. Other origins will throw an error."]
+        }), "\n"]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Returns `ConversionQuote` <object>",
+      className: "alert alert--fn-args",
+      children: (0,jsx_runtime.jsxs)(_components.table, {
+        children: [(0,jsx_runtime.jsx)(_components.thead, {
+          children: (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.th, {
+              children: "Field"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Type"
+            }), (0,jsx_runtime.jsx)(_components.th, {
+              children: "Description"
+            })]
+          })
+        }), (0,jsx_runtime.jsxs)(_components.tbody, {
+          children: [(0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "amountIn"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Input amount in smallest units"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "amountOut"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Output amount in smallest units"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "rate"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Normalized rate: tokenOut per tokenIn"
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "route"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "string[]"
+              })
+            }), (0,jsx_runtime.jsxs)(_components.td, {
+              children: ["Optional swap path (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
+                children: "[\"WETH\",\"USDT\"]"
+              }), ")"]
+            })]
+          }), (0,jsx_runtime.jsxs)(_components.tr, {
+            children: [(0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "timestamp"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: (0,jsx_runtime.jsx)(_components.code, {
+                children: "number"
+              })
+            }), (0,jsx_runtime.jsx)(_components.td, {
+              children: "Unix time (ms)"
+            })]
+          })]
+        })]
+      })
+    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
+      summary: "Live Playground: Quote WETH → USDT on Sepolia",
+      className: "alert alert--live-play",
+      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
+        repo: {
+          title: "Open in Github",
+          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
+        },
+        children: `
+import { PushChain } from '@pushchain/core';
+import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
+import { createWalletClient, http } from 'viem';
+import { sepolia } from 'viem/chains';
+
+async function main() {
+    // Create a Sepolia wallet client
+    const account = privateKeyToAccount(generatePrivateKey());
+    const walletClient = createWalletClient({ account, chain: sepolia, transport: http() });
+
+    // Convert to Universal Signer and initialize
+    const universalSigner = await PushChain.utils.signer.toUniversal(walletClient);
+    const client = await PushChain.initialize(universalSigner, {
+      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+    });
+
+    // Amount: 0.005 WETH (18 decimals)
+    const amountIn = PushChain.utils.helpers.parseUnits('0.005', 18);
+
+    // Get quote: pay with WETH → move as USDT
+    const quote = await client.funds.getConversionQuote(amountIn, {
+      from: client.payable.token.WETH,
+      to: client.moveable.token.USDT,
+    });
+
+    console.log('Quote:', JSON.stringify(quote, null, 2));
+}
+
+await main().catch(console.error);
+`
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "explorer-utilities",
       children: "Explorer Utilities"
     }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
@@ -2711,7 +4016,7 @@ import { Keypair } from '@solana/web3.js';
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
-        children: "// ... Intialize Push Chain Client\nconst url = pushChainClient.explorer.getTransactionUrl(txHash);\n"
+        children: "// ... Initialize Push Chain Client\nconst url = pushChainClient.explorer.getTransactionUrl(txHash);\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -2792,7 +4097,7 @@ import { Keypair } from '@solana/web3.js';
 
     const exploredTxHashUrl = pushChainClient.explorer.getTransactionUrl('0x828911db033c65de8faab4906cfcb7d13ce225c3cd283534d110414a5b78cf87');
 
-    console.log(JSON.stringify(exploredTxHashUrl));
+    console.log("url:", exploredTxHashUrl);
   }
 
   await main().catch(console.error);
@@ -2806,7 +4111,7 @@ import { Keypair } from '@solana/web3.js';
       children: (0,jsx_runtime.jsx)(_components.strong, {
         children: (0,jsx_runtime.jsx)(_components.em, {
           children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChainClient.explorer.listUrls(): string[]"
+            children: "pushChainClient.explorer.listUrls(): { urls: string[] }"
           })
         })
       })
@@ -2819,15 +4124,15 @@ import { Keypair } from '@solana/web3.js';
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
-        children: "// ... Intialize Push Chain Client\nconst explorerUrls = pushChainClient.explorer.listUrls();\n"
+        children: "// ... Initialize Push Chain Client\nconst urls = pushChainClient.explorer.listUrls();\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `explorerUrls` <string[]>",
+      summary: "Returns `urls` <{ urls: string[] }>",
       className: "alert alert--fn-args",
       children: (0,jsx_runtime.jsx)(_components.pre, {
         children: (0,jsx_runtime.jsx)(_components.code, {
           className: "language-typescript",
-          children: "// explorerUrls string[]\n{\n  ['https://donut.push.network', 'https://scan.push.org'];\n}\n"
+          children: "// urls object { urls:[] }\n{\n  urls: ['https://donut.push.network', 'https://scan.push.org'];\n}\n"
         })
       })
     }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
@@ -2867,852 +4172,6 @@ import { Keypair } from '@solana/web3.js';
   }
 
   await main().catch(console.error);
-
-`
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "conversion-utilities",
-      children: "Conversion Utilities"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Once initialized, the client exposes token registries and a quoting helper:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "moveable.token"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "MoveableTokenAccessor"
-        }), " for tokens that can be bridged/moved on Push Chain (scoped to your origin chain)"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "payable.token"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "PayableTokenAccessor"
-        }), " for tokens you can pay with on the origin chain"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "funds.getConversionQuote(amountIn, { from, to }) → Promise<ConversionQuote>"
-        }), ": fetches a spot quote for converting a payable token into a moveable token on supported chains"]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const weth = pushChainClient.payable.token.WETH; // PayableToken\nconst usdt = pushChainClient.moveable.token.USDT; // MoveableToken\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "ConversionQuote shape",
-      className: "alert alert--minimal-api-table",
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: "Field"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Type"
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: "Description"
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "amountIn"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Input amount in smallest units"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "amountOut"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Output amount in smallest units"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "rate"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "number"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Normalized rate: tokenOut per tokenIn"
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "route"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string[]"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["Optional swap path (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "[\"WETH\",\"USDT\"]"
-              }), ")"]
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "timestamp"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "number"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Unix time (ms)"
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Supported origins and behavior",
-      className: "alert alert--minimal",
-      children: (0,jsx_runtime.jsxs)(_components.ul, {
-        children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: [(0,jsx_runtime.jsx)(_components.code, {
-            children: "funds.getConversionQuote"
-          }), " currently works on Ethereum Mainnet and Sepolia. Other origins will throw an error."]
-        }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-          children: ["Token availability is derived from your origin chain; see ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "MoveableTokenAccessor"
-          }), " and ", (0,jsx_runtime.jsx)(_components.code, {
-            children: "PayableTokenAccessor"
-          }), " types in the SDK."]
-        }), "\n"]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Quote WETH → USDT on Sepolia",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"
-        },
-        children: `
-import { PushChain } from '@pushchain/core';
-import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts';
-import { createWalletClient, http } from 'viem';
-import { sepolia } from 'viem/chains';
-
-async function main() {
-    // Create a Sepolia wallet client
-    const account = privateKeyToAccount(generatePrivateKey());
-    const walletClient = createWalletClient({ account, chain: sepolia, transport: http() });
-
-    // Convert to Universal Signer and initialize
-    const universalSigner = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(universalSigner, {
-      network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-    });
-
-    // Amount: 0.005 WETH (18 decimals)
-    const amountIn = PushChain.utils.helpers.parseUnits('0.005', 18);
-
-    // Get quote: pay with WETH → move as USDT
-    const quote = await client.funds.getConversionQuote(amountIn, {
-      from: client.payable.token.WETH,
-      to: client.moveable.token.USDT,
-    });
-
-    console.log('Quote:', JSON.stringify(quote, null, 2));
-}
-
-await main().catch(console.error);
-`
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "helper-utilities",
-      children: "Helper Utilities"
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "get-chain-name-from-chain-namespace",
-      children: "Get Chain Name from Chain Namespace"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.helpers.getChainName(chainNamespace): string"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Every external chain is represented as a particular string on Push Chain. You can see the list of supported chains in the ", (0,jsx_runtime.jsx)(_components.a, {
-        href: "/docs/chain/setup/chain-config#universal-chain-namespace",
-        children: "Chain Configuration"
-      }), " section."]
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const chainName = PushChain.utils.helpers.getChainName(namespace);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsx)(_components.tbody, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "namespace"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["The chain namespace to convert to chain name. Eg: ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "eip155:42101"
-              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "PUSH_TESTNET_DONUT"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "eip155:11155111"
-              }), " converts to ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "ETHEREUM_SEPOLIA"
-              })]
-            })]
-          })
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `chainName` <string>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// chainName string\n'PUSH_TESTNET_DONUT';\n\n// NOTE: returns undefined if chainId is unsupported\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Get Chain Name from Chain ID",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.helpers\.getChainName
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    const chainName = PushChain.utils.helpers.getChainName('eip155:42101');
-    console.log(chainName);
-  }
-
-  main();
-
-`
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "encode-transaction-data",
-      children: "Encode Transaction Data"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.helpers.encodeTxData({abi, functionName, args}): string"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const encodedData = PushChain.utils.helpers.encodeTxData({\n  abi,\n  functionName: 'functionName',\n  args: []\n});\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Default"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "abi"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "any[]"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "-"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "The ABI array of the smart contract containing function definitions."
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "functionName"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "-"
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "The name of the function to encode transaction data for."
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "args"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "any[]"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "[]"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "The arguments to pass to the function. Defaults to empty array for functions with no parameters."
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `encodedData` <string>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// encodedData string - the encoded function call data\n'0xd09de08a';\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Encode Transaction Data for Smart Contract Function",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.helpers\.encodeTxData
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    // Example ABI for a simple counter contract
-    const testAbi = [
-      {
-        inputs: [],
-        stateMutability: 'nonpayable',
-        type: 'constructor',
-      },
-      {
-        inputs: [],
-        name: 'increment',
-        outputs: [],
-        stateMutability: 'nonpayable',
-        type: 'function',
-      },
-      {
-        inputs: [],
-        name: 'countPC',
-        outputs: [
-          {
-            internalType: 'uint256',
-            name: '',
-            type: 'uint256',
-          },
-        ],
-        stateMutability: 'view',
-        type: 'function',
-      },
-    ];
-
-    // Encode transaction data for the increment function
-    const result = PushChain.utils.helpers.encodeTxData({
-      abi: testAbi,
-      functionName: 'increment'
-    });
-    
-    console.log('Encoded transaction data:', result);
-  }
-
-  main();
-
-`
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "parse-units",
-      children: "Parse Units"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.helpers.parseUnits(value, exponent): bigint"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Converts a human-readable string representation of a number to a scaled integer (bigint) by multiplying by 10^exponent. This is commonly used for handling token amounts where you need to convert from human-readable decimals to the smallest unit (like converting ETH to wei or PC to uPC)."
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const result = PushChain.utils.helpers.parseUnits('1.5', 18);\n// Returns: 1500000000000000000n (1.5 PC in uPC)\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "value"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["The string representation of the number to parse. Can include decimals (e.g., ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "\"1.5\""
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "\"420\""
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "\"0.1\""
-              }), ")."]
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "exponent"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "number"
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["The number of decimal places to scale by. Must be a non-negative integer. For example, use ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "18"
-              }), " for PC or ETH, ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "6"
-              }), " for USDC, ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "8"
-              }), " for BTC."]
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `bigint`",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// bigint - the scaled integer value\n1500000000000000000n\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Parse Units for Common Token Scenarios",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.helpers\.parseUnits
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    console.log('=== Common Token Conversion Examples ===');
-    
-    // ETH to Wei (18 decimals)
-    const ethToWei = PushChain.utils.helpers.parseUnits('1.5', 18);
-    console.log('1.5 ETH to Wei:', ethToWei.toString());
-    
-    // USDC amount (6 decimals) 
-    const usdcAmount = PushChain.utils.helpers.parseUnits('100.50', 6);
-    console.log('100.50 USDC to smallest unit:', usdcAmount.toString());
-    
-    // BTC to Satoshi (8 decimals)
-    const btcToSatoshi = PushChain.utils.helpers.parseUnits('0.00000001', 8);
-    console.log('0.00000001 BTC to Satoshi:', btcToSatoshi.toString());
-    
-    console.log('=== Basic Number Parsing ===');
-    
-    // Integer values
-    const integerResult = PushChain.utils.helpers.parseUnits('420', 9);
-    console.log('420 with 9 decimal places:', integerResult.toString());
-    
-    // Decimal values
-    const decimalResult = PushChain.utils.helpers.parseUnits('0.1', 6);
-    console.log('0.1 with 6 decimal places:', decimalResult.toString());
-    
-    // Values starting with decimal point
-    const dotDecimal = PushChain.utils.helpers.parseUnits('.5', 18);
-    console.log('0.5 ETH to Wei:', dotDecimal.toString());
-    
-    console.log('=== Real-World Token Examples ===');
-    
-    // Push token amount (18 decimals)
-    const pushAmount = PushChain.utils.helpers.parseUnits('1000.5', 18);
-    console.log('1000.5 PUSH tokens:', pushAmount.toString());
-    
-    // Precise decimal matching
-    const preciseAmount = PushChain.utils.helpers.parseUnits('1.123456', 6);
-    console.log('Precise 6-decimal amount:', preciseAmount.toString());
-  }
-
-  main();
-
-`
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "calculate-minimum-amount-from-slippage",
-      children: "Calculate Minimum Amount From Slippage"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.helpers.slippageToMinAmount(amount, { slippageBps }): string"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "const minOut = PushChain.utils.helpers.slippageToMinAmount('100000000', {\n  slippageBps: 100, // 1%\n});\n// → '99000000'\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsxs)(_components.tbody, {
-          children: [(0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "amount"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "string"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Input amount in smallest units (e.g., '100000000' for 100 USDC)."
-            })]
-          }), (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "options.slippageBps"
-                })
-              })
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: [(0,jsx_runtime.jsx)(_components.code, {
-                children: "number"
-              }), " (integer)"]
-            }), (0,jsx_runtime.jsxs)(_components.td, {
-              children: ["Slippage in basis points. ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "100 = 1%"
-              }), ", ", (0,jsx_runtime.jsx)(_components.code, {
-                children: "50 = 0.5%"
-              }), "."]
-            })]
-          })]
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `minOut` <string>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// minOut string (in smallest units)\n'99000000'\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: Calculate minimum amount out from slippage",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.helpers\.slippageToMinAmount
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    const minOut = PushChain.utils.helpers.slippageToMinAmount('100000000', {
-      slippageBps: 100,
-    });
-    console.log('Min out with 1% slippage:', minOut);
-  }
-
-  main();
-
-`
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "token-utilities",
-      children: "Token Utilities"
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "get-moveable-tokens",
-      children: "Get Moveable Tokens"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.getMoveableTokens(chainOrClient?): { tokens: { chain, symbol, decimals, address }[] }"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "// All supported moveable tokens across chains\nconst { tokens: allMoveable } = PushChain.utils.getMoveableTokens();\n\n// Filtered for a specific chain\nconst { tokens: sepoliaMoveable } = PushChain.utils.getMoveableTokens(\n  PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA\n);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsx)(_components.tbody, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "chainOrClient"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "CHAIN | PushChain"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Optional. A chain enum or an initialized client to filter tokens for that chain."
-            })]
-          })
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `{ tokens }` <object>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// tokens array entries\n{\n  tokens: [\n    { chain: 'eip155:11155111', symbol: 'ETH', decimals: 18, address: '0x...' },\n    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },\n    // ...\n  ]\n}\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: List moveable tokens (all and Sepolia)",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.getMoveableTokens
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    const { tokens: all } = PushChain.utils.getMoveableTokens();
-    console.log('All moveable tokens (count):', all.length);
-
-    const { tokens: sepolia } = PushChain.utils.getMoveableTokens(
-      PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
-    );
-    console.log(JSON.stringify(sepolia, null, 2));
-  }
-
-  main();
-
-`
-      })
-    }), "\n", "\n", "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "get-payable-tokens",
-      children: "Get Payable Tokens"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: (0,jsx_runtime.jsx)(_components.em, {
-          children: (0,jsx_runtime.jsx)(_components.code, {
-            children: "PushChain.utils.getPayableTokens(chainOrClient?): { tokens: { chain, symbol, decimals, address }[] }"
-          })
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-typescript",
-        children: "// All supported payable tokens across chains\nconst { tokens: allPayable } = PushChain.utils.getPayableTokens();\n\n// Filtered for a specific chain\nconst { tokens: solanaDevnetPayable } = PushChain.utils.getPayableTokens(\n  PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET\n);\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
-      children: (0,jsx_runtime.jsxs)(_components.table, {
-        children: [(0,jsx_runtime.jsx)(_components.thead, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Arguments"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Type"
-              })
-            }), (0,jsx_runtime.jsx)(_components.th, {
-              children: (0,jsx_runtime.jsx)(_components.strong, {
-                children: "Description"
-              })
-            })]
-          })
-        }), (0,jsx_runtime.jsx)(_components.tbody, {
-          children: (0,jsx_runtime.jsxs)(_components.tr, {
-            children: [(0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.em, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "chainOrClient"
-                })
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: (0,jsx_runtime.jsx)(_components.code, {
-                children: "CHAIN | PushChain"
-              })
-            }), (0,jsx_runtime.jsx)(_components.td, {
-              children: "Optional. A chain enum or an initialized client to filter tokens for that chain."
-            })]
-          })
-        })]
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Returns `{ tokens }` <object>",
-      className: "alert alert--fn-args",
-      children: (0,jsx_runtime.jsx)(_components.pre, {
-        children: (0,jsx_runtime.jsx)(_components.code, {
-          className: "language-typescript",
-          children: "// tokens array entries\n{\n  tokens: [\n    { chain: 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1', symbol: 'SOL', decimals: 9, address: 'So11111111111111111111111111111111111111112' },\n    { chain: 'eip155:11155111', symbol: 'USDC', decimals: 6, address: '0x...' },\n    // ...\n  ]\n}\n"
-        })
-      })
-    }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
-      summary: "Live Playground: List payable tokens (all and Solana Devnet)",
-      className: "alert alert--live-play",
-      children: (0,jsx_runtime.jsx)(NodeJSVirtualIDE/* default */.A, {
-        repo: {
-          title: "Open in Github",
-          url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/utility-functions"
-        },
-        children: `
-// customPropHighlightRegexStart=PushChain\.utils\.getPayableTokens
-// customPropHighlightRegexEnd=\\);
-import { PushChain } from '@pushchain/core';
-
-  function main() {
-    const { tokens: all } = PushChain.utils.getPayableTokens();
-    console.log('All payable tokens (count):', all.length);
-
-    const { tokens: devnet } = PushChain.utils.getPayableTokens(
-      PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET
-    );
-    console.log(JSON.stringify(devnet, null, 2));
-  }
-
-  main();
 
 `
       })

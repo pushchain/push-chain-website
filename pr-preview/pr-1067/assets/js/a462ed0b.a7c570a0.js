@@ -493,18 +493,6 @@ function _createMdxContent(props) {
                   children: "SOLANA_DEVNET"
                 })
               })]
-            }), (0,jsx_runtime.jsxs)(_components.tr, {
-              children: [(0,jsx_runtime.jsx)(_components.td, {
-                children: "Solana Testnet"
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z"
-                })
-              }), (0,jsx_runtime.jsx)(_components.td, {
-                children: (0,jsx_runtime.jsx)(_components.code, {
-                  children: "SOLANA_TESTNET"
-                })
-              })]
             })]
           })]
         })
