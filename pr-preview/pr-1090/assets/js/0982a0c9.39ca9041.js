@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[98139],{248592:e=>{e.exports=JSON.parse('{"label":"WebChat","permalink":"/push-chain-website/pr-preview/pr-1090/blog/tags/web-chat","allTagsPath":"/push-chain-website/pr-preview/pr-1090/blog/tags","count":1,"unlisted":false}')}}]);

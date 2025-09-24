@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[32380],{532220:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1090/blog/tags/social-media","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

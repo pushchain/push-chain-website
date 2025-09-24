@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[36228],{7310:e=>{e.exports=JSON.parse('{"label":"Cybersecurity","permalink":"/push-chain-website/pr-preview/pr-1090/blog/tags/cybersecurity","allTagsPath":"/push-chain-website/pr-preview/pr-1090/blog/tags","count":1,"unlisted":false}')}}]);
