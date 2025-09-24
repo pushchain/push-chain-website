@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[30201],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[66253],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -96,7 +96,34 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 276468:
+/***/ 400219:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/hack-the-future-of-defi","source":"@site/blog/2022-05-06-hack-the-future-of-defi/index.md","title":"Hack the future of DeFi powered with Web3 communication aka EPNS","description":"Hack the future of DeFi powered with Web3 communication aka EPNS","date":"2022-05-06T00:00:00.000Z","tags":[{"inline":true,"label":"Nft","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/nft"},{"inline":true,"label":"Epnsproject","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/epnsproject"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"}],"readingTime":4.66,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"hack-the-future-of-defi","title":"Hack the future of DeFi powered with Web3 communication aka EPNS","description":"Hack the future of DeFi powered with Web3 communication aka EPNS","authors":["push"],"image":"./cover-image.webp","text":"EPNS and NFT TiX strike a strategic alliance to bring decentralized push notifications for users.","tags":["Nft","Epnsproject","Blockchain","Newsletter","Ethereum"]},"unlisted":false,"prevItem":{"title":"EPNS Allies With NFT-TiX to Bring Push Notifications to the Platform","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-allies-with-nft-tix"},"nextItem":{"title":"Simplifying NFT Trading: EPNS Team Up With OpenBiSea To Facilitate Notifications for NFT Traders","permalink":"/push-chain-website/pr-preview/pr-1067/blog/simplifying-nft-trading"}}');
+
+/***/ }),
+
+/***/ 782845:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-f7f59562da48f355d64c1ce84e61160d.webp");
+
+/***/ }),
+
+/***/ 884574:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-f7f59562da48f355d64c1ce84e61160d.webp");
+
+/***/ }),
+
+/***/ 932237:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -105,36 +132,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_01_31_epns_collaborates_with_gro_protocol_index_md_805_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_05_06_hack_the_future_of_defi_index_md_d97_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_01_31_epns_collaborates_with_gro_protocol_index_md_805_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(526461);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_05_06_hack_the_future_of_defi_index_md_d97_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(400219);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 /* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
-	slug: 'epns-collaborates-with-gro-protocol',
-	title: 'EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users',
-	description: 'EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users',
+	slug: 'hack-the-future-of-defi',
+	title: 'Hack the future of DeFi powered with Web3 communication aka EPNS',
+	description: 'Hack the future of DeFi powered with Web3 communication aka EPNS',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	text: 'With interest rates and stock markets plummeting in the wake of the pandemic, the DeFi industry came as an attractive new opportunity for investors who benefited from its global accessibility and higher returns. Yet, the majority of financial products in DeFi still cater to investors with a higher risk appetite.',
+	text: 'EPNS and NFT TiX strike a strategic alliance to bring decentralized push notifications for users.',
 	tags: [
-		'Ethereum',
+		'Nft',
 		'Epnsproject',
-		'Gro Protocol',
+		'Blockchain',
 		'Newsletter',
-		'Blockchain'
+		'Ethereum'
 	]
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(291298)/* ["default"] */ .A),
+"image": (__webpack_require__(782845)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -151,10 +178,10 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover image of EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users",
-      src: (__webpack_require__(663486)/* ["default"] */ .A) + "",
+      alt: "Cover image of Hack the future of DeFi powered with Web3 communication aka EPNS",
+      src: (__webpack_require__(884574)/* ["default"] */ .A) + "",
       width: "1400",
-      height: "788"
+      height: "700"
     })
   });
 }
@@ -172,33 +199,6 @@ function MDXContent(props = {}) {
 }
 
 
-
-/***/ }),
-
-/***/ 291298:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-3d8d57b5a62ca5220d078973112c4d4f.webp");
-
-/***/ }),
-
-/***/ 526461:
-/***/ ((module) => {
-
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-collaborates-with-gro-protocol","source":"@site/blog/2022-01-31-epns-collaborates-with-gro-protocol/index.md","title":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","description":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","date":"2022-01-31T00:00:00.000Z","tags":[{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"},{"inline":true,"label":"Epnsproject","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/epnsproject"},{"inline":true,"label":"Gro Protocol","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/gro-protocol"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"}],"readingTime":1.96,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"epns-collaborates-with-gro-protocol","title":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","description":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","authors":["push"],"image":"./cover-image.webp","text":"With interest rates and stock markets plummeting in the wake of the pandemic, the DeFi industry came as an attractive new opportunity for investors who benefited from its global accessibility and higher returns. Yet, the majority of financial products in DeFi still cater to investors with a higher risk appetite.","tags":["Ethereum","Epnsproject","Gro Protocol","Newsletter","Blockchain"]},"unlisted":false,"prevItem":{"title":"EPNS Allies With mStable to Facilitate Decentralized Notifications for Users","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-allies-with-mstable"},"nextItem":{"title":"EPNS Monthly Blocks","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-monthly-blocks-jan-2022"}}');
-
-/***/ }),
-
-/***/ 663486:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-3d8d57b5a62ca5220d078973112c4d4f.webp");
 
 /***/ })
 

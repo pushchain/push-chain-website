@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[54322],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -909,6 +909,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-826dad22941d3f43c5701934c795e9f1.webp");
+
+/***/ }),
+
+/***/ 57220:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ deepdives)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
+var Layout = __webpack_require__(330922);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBDeepDivesList.js
+const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/deepdivesComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const DeepDivesComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
+;// ./src/pages/knowledge/deepdives.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function DeepDivesPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
 
 /***/ }),
 
@@ -1844,6 +1900,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+
+/***/ }),
+
+/***/ 95518:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
 
 /***/ }),
 
@@ -13436,7 +13503,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/hero-bg-62839c470d21846b064c77cc14094dd5.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/hero-bg-a6bd523da21ec480ed7ffec74ec33381.webp");
 
 /***/ }),
 
@@ -14625,17 +14692,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,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");
-
-/***/ }),
-
-/***/ 697991:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbfaqpreview-979f2c1007ddcbc0325c9dbc855a2f4b.png");
 
 /***/ }),
 
@@ -19863,64 +19919,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRpoEAABXRUJQVlA4TI4EAAAvPkASEFfCNpIkJ/P6Fx+LmIiRDDV4WsbAtpEkRX2MP5u/9Snu28gYkiRBOQRb5/84tUPYIxiDbCMV4f0lf0/wBJM01XYMAB4EAoHAgf950OPx7xb2MGDCFCPHv2OPGIgBAimwrhxQFpaRqtG2yA4Y0vF6w8qKgSMAQ4phSZEiRRYp9f3p/er9Gq7f8a+f7/1qzhcoCgBYpXEISJ/WASqwKVuoCWWRecc6Ywgwz0ct8v9fBOEVfiCi/xAkSXLiVM8Giz0ZSiN4gtI7y7lpTKevz8/T6cyw5orMLI1XXXX9IIyiH3EcRSREPpg8ziwpWK+aG/ygCe/MYU989dFYDDz/TUVbyvsniUP30RxwvO42twzagDSjH4tHd5twKaFhr8lvv1czaTl4+qJrq44Yl5qtOmsf2pbLDvPe2ob6L5cf5r+1zMcYnCfNqveOU55Z8xbysULVZbUNsNHgZKoo05CPR1ItJocR4chaOnxMdi8WGpX/HsxgVKhuoJEx1+Ou6BZIxiSs2I3JumLM1Z+rihEXbH2qcdho+7+zSQVYj1QRtFPNAqNVBNMKE4g1zrDrFSGO7IsxhEvbtnO9AQCh1I0752LXOT9XyJ/Qd5zaAnfdAEDyJNkhnNtiUqAbHmgP+hy4gRKnnjW4OrrlENAVn9Ce9h52gYMvpd2S1K1V3XudtcIrH5EdpYxxzhPGaByFvgOLU2m3B/7zXoEOThfQtrPj9YYxhACAFYS4uJ2y0u5M8TcDugUAjbuRkwLxsKjxOXXkk+IP/hOKtyvhzJNNDrecOWlD1YgnpPUQCVvvHuVsfRFUFat941DK65/bpBpfdgsgYJzHnhTyop7xz79OHaquP4V/1oaSX6FfzxICM7vi/werSzQWBwDcjmmfH1V2LlYeocLfGOdbvPsK3exjKo2Qu8L36/l0zPP8eDpdizt0fRIzwdVojbPm/a4bbpepSUNouo9IGCCEgjCM4j3r5+oJ6OYagY4EA1xPKPHgV6s00NctEIPurIMdPXQde4gJcvBXbrfmGgYV0bYTmB1vGAJPOCwMA+Q5q01xyTtl/eVRUOEkHz1VTYUrnE7HPC373Twui6BuAUD4xxim/3IPzBGaI6B8K53y5jH+/iWq6jAee3LJ4UfCyb21ObKwreSIzsmmrBAbhLPnnCFJ5Hd3m/AE4bK1OYJIMHU45Rl7tat0/W0Lpi9Bu+os9ivSvvvyK3YJ5YLoudgcXxStTTTKRdc9iK/HvO3UNDueiw1AhIquOk1jsKlMO0xtNO59FCAPAFhnBVwvIPEhabpapM1vR1OUpdqhWUjb+3+d1lbHdmjV6moxVZRq0RUH7fp1RxYTb3VrdzXXhMfASXdzvAndMYr3tM4+3hGhN16yrtsOmo1HsD6qZvnlWtxxnXtxu/TqjeWm2taoMVRN69FS8sngtOO5WzZn1VQ6MtNkNsd8oy96PPg/STM9x5rw+mPAxB7o6sRQemdhaDWDtvzxaCnDMn+ZAHzNsx698VRA9dlYSnnhY77oKtjg4nYVUhQbqE6eZ5JfGs0tYzYVYhjzhdI3Cg==");
-
-/***/ }),
-
-/***/ 961887:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ faq)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 65 modules
-var Layout = __webpack_require__(330922);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBFaqList.js
-const KBFaqList={title:'pages.knowledge.faq.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-does-push-chain-work'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-unique-for-users'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-innovations'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.technical-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-an-l2'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-compatibility'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-non-evm-compatible'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-ethereum-or-solana'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.shared-state-meaning'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-achieve-shared-state'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.transaction-fees'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.true-universal-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.competitors-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-other-universal'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-layerzero'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-axelar'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-chainlink-ccip'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-particle-network'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-agglayer'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-cosmos'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-polkadot'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.new-token'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.early-adopter-incentives'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developer-user-benefits'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.dao-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.governance-changes'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.doubts-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.push-services-future'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.project-distraction'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-focus-shift'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.partnerships-effect'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.support-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.need-help'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-contribute'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/faqComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const FAQComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.faq.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBFaqList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const faqComp = (FAQComp);
-// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
-var SchemaMarkup = __webpack_require__(172619);
-;// ./src/pages/knowledge/faq.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function FAQPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.faq.seo.title'),description:t('pages.knowledge.faq.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/faq"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.faq.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.faq.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.faq.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.faq.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(faqComp,{})})]});}/* harmony default export */ const faq = (FAQPage);
 
 /***/ }),
 
