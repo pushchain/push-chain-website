@@ -382,10 +382,6 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Build a Universal Payment Gateway"
-        }), " - Create a payment system that accepts transactions from any chain using our Universal Gateway Payment tutorial"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "Integrate Push Universal Wallet"
         }), " - Add wallet abstraction to your app with our ", (0,jsx_runtime.jsx)(_components.a, {
           href: "/docs/chain/ui-kit/integrate-push-universal-wallet",

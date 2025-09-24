@@ -34332,6 +34332,13 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
 		digest = undefined;
 	}
 
+	checkParameters(iterations, keylen);
+	password = toBuffer(password, defaultEncoding, 'Password');
+	salt = toBuffer(salt, defaultEncoding, 'Salt');
+	if (typeof callback !== 'function') {
+		throw new Error('No callback provided to pbkdf2');
+	}
+
 	digest = digest || 'sha1';
 	var algo = toBrowser[digest.toLowerCase()];
 
@@ -34347,13 +34354,6 @@ module.exports = function (password, salt, iterations, keylen, digest, callback)
 			callback(null, out);
 		});
 		return;
-	}
-
-	checkParameters(iterations, keylen);
-	password = toBuffer(password, defaultEncoding, 'Password');
-	salt = toBuffer(salt, defaultEncoding, 'Salt');
-	if (typeof callback !== 'function') {
-		throw new Error('No callback provided to pbkdf2');
 	}
 
 	resolvePromise(checkNative(algo).then(function (resp) {
@@ -150587,7 +150587,7 @@ function create_language_async_loader_regeneratorRuntime() { "use strict"; /*! r
     return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_apl */ 64789).then(__webpack_require__.t.bind(__webpack_require__, 687341, 23));
   }),
   applescript: create_language_async_loader("applescript", function () {
-    return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_applescript */ 15873).then(__webpack_require__.t.bind(__webpack_require__, 310793, 23));
+    return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_applescript */ 15873).then(__webpack_require__.t.bind(__webpack_require__, 533174, 23));
   }),
   aql: create_language_async_loader("aql", function () {
     return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_aql */ 42258).then(__webpack_require__.t.bind(__webpack_require__, 878672, 23));
@@ -319132,6 +319132,7 @@ module.exports = {
 "use strict";
 
 
+var $isFinite = isFinite;
 var MAX_ALLOC = Math.pow(2, 30) - 1; // default in iojs
 
 module.exports = function (iterations, keylen) {
@@ -319139,7 +319140,7 @@ module.exports = function (iterations, keylen) {
 		throw new TypeError('Iterations not a number');
 	}
 
-	if (iterations < 0) {
+	if (iterations < 0 || !$isFinite(iterations)) {
 		throw new TypeError('Bad iterations');
 	}
 

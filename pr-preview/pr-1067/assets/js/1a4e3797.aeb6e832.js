@@ -2918,7 +2918,7 @@ var LogLevelEnum = {
 
 // lite/src/liteClient.ts
 
-var apiClientVersion = "5.37.0";
+var apiClientVersion = "5.38.0";
 function getDefaultHosts(appId) {
   return [
     {

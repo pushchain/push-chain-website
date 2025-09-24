@@ -670,22 +670,16 @@ const toc = [{
   "value": "What we Achieved",
   "id": "what-we-achieved",
   "level": 2
-}, {
-  "value": "Next Tutorial",
-  "id": "next-tutorial",
-  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     blockquote: "blockquote",
-    br: "br",
     code: "code",
     em: "em",
     h2: "h2",
     hr: "hr",
     li: "li",
-    mermaid: "mermaid",
     ol: "ol",
     p: "p",
     pre: "pre",
@@ -782,7 +776,7 @@ function _createMdxContent(props) {
       id: "interact-with-universal-erc-20-token",
       children: "Interact with Universal ERC-20 Token"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The Universal ERC-20 contract is deployed on Push Chain Testnet.", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "This app lets any user — whether on Ethereum, Solana, or Push Chain — mint ", (0,jsx_runtime.jsx)(_components.code, {
+      children: ["The Universal ERC-20 contract is deployed on Push Chain Testnet.\nThis app lets any user — whether on Ethereum, Solana, or Push Chain — mint ", (0,jsx_runtime.jsx)(_components.code, {
         children: "$UNICORN"
       }), " tokens directly from the frontend."]
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
@@ -822,9 +816,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: ["💡 ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Tip: Why this matters"
-        }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", "This is the simplest form of a ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), "\nThis is the simplest form of a ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Universal Token"
-        }), ".", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "Without bridges or wrapped assets, users on ", (0,jsx_runtime.jsx)(_components.em, {
+        }), ".\nWithout bridges or wrapped assets, users on ", (0,jsx_runtime.jsx)(_components.em, {
           children: "any chain"
         }), " can mint and hold the same ERC-20 natively on Push Chain."]
       }), "\n"]
@@ -858,32 +852,6 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "With just these two functions, you now have the foundation of a token system."
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "next-tutorial",
-      children: "Next Tutorial"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "Up until now, we’ve been sending one transaction at a time."
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "In real-world apps, users often need to perform several actions together (for example: approve → transfer, or multiple contract calls in a single flow)."
-    }), "\n", (0,jsx_runtime.jsx)("div", {
-      style: {
-        textAlign: 'center'
-      },
-      children: (0,jsx_runtime.jsx)(_components.mermaid, {
-        value: "flowchart TD\n    EU[Ethereum User] --> UB[\"Batch Transactions (Multicall)\"]\n    SU[Solana User] --> UB\n    OU[Other Chain User] --> UB\n    \n    UB --> TX1[Execute Transaction 1]\n    TX1 --> TX2[Execute Transaction 2]\n    TX2 --> TX3[Execute Transaction 3]\n    TX3 --> EOL[Complete]\n    \n    style EOL fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style UB fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EU fill:#627eea,color:#fff\n    style SU fill:#16c492,color:#fff\n    style OU fill:#853dff,color:#fff"
-      })
-    }), "\n", (0,jsx_runtime.jsx)("hr", {}), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "In the next tutorial, we’ll explore batching multiple transactions as one universal transaction:"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ol, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "How to combine several actions into a single transaction."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Why batching improves user experience (fewer wallet popups, less friction)."
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Practical code examples of executing multiple calls in sequence or atomically."
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This will help you take the step from simple token interactions to more powerful app logic on Push Chain. 🚀"
     })]
   });
 }

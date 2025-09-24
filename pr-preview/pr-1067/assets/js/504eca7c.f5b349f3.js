@@ -228,7 +228,6 @@ function _createMdxContent(props) {
   const _components = {
     a: "a",
     blockquote: "blockquote",
-    br: "br",
     code: "code",
     h2: "h2",
     li: "li",
@@ -250,7 +249,7 @@ function _createMdxContent(props) {
     }), "\n", "\n", (0,jsx_runtime.jsx)(TutorialTimer/* default */.A, {
       estimatedMinutes: 10
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "In this tutorial, you’ll write, deploy, and interact with a simple Counter contract on Push Chain."
+      children: "In this tutorial, you’ll write, deploy, and interact with a Counter contract on Push Chain."
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["We will start with the most popular smart contract, i.e., ", (0,jsx_runtime.jsx)(_components.code, {
         children: "Counter.sol"
@@ -265,7 +264,7 @@ function _createMdxContent(props) {
       }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
         children: ["✅ Use ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "Live Playground"
-        }), " to test and interact with SimpleCounter"]
+        }), " to test and interact with Counter"]
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "🔜 Extend to a Universal Counter that tracks chain specific users"
       }), "\n"]
@@ -277,7 +276,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "To get started, you can use the following contract:"
     }), "\n", (0,jsx_runtime.jsx)(SolidityCode/* SolidityCode */.L, {
-      title: "Simple Counter Contract",
+      title: "Counter Contract",
       fileName: "Counter.sol",
       url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/simple-counter/contracts/src/Counter.sol",
       children: (0,jsx_runtime.jsx)(_components.pre, {
@@ -311,7 +310,7 @@ function _createMdxContent(props) {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
           children: "Key takeaway"
-        }), (0,jsx_runtime.jsx)(_components.br, {}), "\n", "On Push Chain, this contract works ", (0,jsx_runtime.jsx)(_components.strong, {
+        }), "\nOn Push Chain, this contract works ", (0,jsx_runtime.jsx)(_components.strong, {
           children: "universally"
         }), ". A user on Ethereum, Solana, Push or any other chain itself can all call ", (0,jsx_runtime.jsx)(_components.code, {
           children: "increment()"
@@ -352,15 +351,15 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "interact-with-counter",
       children: "Interact with Counter"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["The easiest way to interact with the contract is through the Live Playground.", (0,jsx_runtime.jsx)(_components.br, {}), "\n", "The Simple Counter is already deployed on Push Chain Testnet."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "The easiest way to interact with the contract is through the Live Playground.\nThe Counter is already deployed on Push Chain Testnet."
     }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
       children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
         children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "SimpleCounter Contract Address:"
+          children: "Counter Contract Address:"
         }), " ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://donut.push.network/address/0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266?tab=contract",
-          children: "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+          href: "https://donut.push.network/address/0x5FbDB2315678afecb367f032d93F642f64180aa3?tab=contract",
+          children: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
         })]
       }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.p, {
@@ -391,15 +390,15 @@ function _createMdxContent(props) {
         className: "language-jsx",
         metastring: "live",
         live: true,
-        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction SimpleCounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Simple Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for Simple Counter\n  const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoadingIncrement, setIsLoadingIncrement] = useState(false);\n    const [isLoadingReset, setIsLoadingReset] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode increment transaction data\n    const getIncrementTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      try {\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        const pcCount = await contract.countPC();\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount\n    useEffect(() => {\n      fetchCounters();\n    }, []);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoadingIncrement(true);\n          const data = getIncrementTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n          await tx.wait();\n\n          await fetchCounters();\n          setIsLoadingIncrement(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoadingIncrement(false);\n        }\n      }\n    };\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Simple Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>Counter: {countPC == -1 ? '...' : countPC}</h3>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>\n            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>\n              <button\n                className='increment-button'\n                onClick={handleSendTransaction}\n                disabled={isLoadingIncrement}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}\n              </button>\n            </div>\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ textAlign: 'center' }}>\n                <p>\n                  Transaction Hash:{' '}\n                  <a\n                    href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                    target='_blank'\n                    style={{ color: '#d946ef', textDecoration: 'underline' }}\n                  >\n                    {txHash}\n                  </a>\n                </p>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
+        children: "import React, { useState, useEffect } from 'react';\nimport { ethers } from 'ethers';\nimport {\n  PushUniversalWalletProvider,\n  PushUniversalAccountButton,\n  usePushWalletContext,\n  usePushChainClient,\n  PushUI,\n} from '@pushchain/ui-kit';\n\nfunction CounterExample() {\n  // Define Wallet Config\n  const walletConfig = {\n    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,\n  };\n\n  // Define Counter ABI, taking minimal ABI for the demo\n  const UCABI = [\n    {\n      inputs: [],\n      name: 'increment',\n      outputs: [],\n      stateMutability: 'nonpayable',\n      type: 'function',\n    },\n    {\n      inputs: [],\n      name: 'countPC',\n      outputs: [\n        {\n          internalType: 'uint256',\n          name: '',\n          type: 'uint256',\n        },\n      ],\n      stateMutability: 'view',\n      type: 'function',\n    },\n  ];\n\n  // Contract address for Counter\n  const CONTRACT_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';\n\n  function Component() {\n    const { connectionStatus } = usePushWalletContext();\n    const { pushChainClient } = usePushChainClient();\n\n    // State to store counter values\n    const [countPC, setCountPC] = useState(-1);\n    const [isLoadingIncrement, setIsLoadingIncrement] = useState(false);\n    const [isLoadingReset, setIsLoadingReset] = useState(false);\n    const [txHash, setTxHash] = useState('');\n\n    // Function to encode increment transaction data\n    const getIncrementTxData = () => {\n      return PushChain.utils.helpers.encodeTxData({\n        abi: UCABI,\n        functionName: 'increment',\n      });\n    };\n\n    // Function to fetch counter values\n    const fetchCounters = async () => {\n      try {\n        const provider = new ethers.JsonRpcProvider(\n          'https://evm.rpc-testnet-donut-node1.push.org/'\n        );\n        const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);\n\n        const pcCount = await contract.countPC();\n        setCountPC(Number(pcCount));\n      } catch (err) {\n        console.error('Error fetching counter values:', err);\n      }\n    };\n\n    // Fetch counter values on component mount\n    useEffect(() => {\n      fetchCounters();\n    }, []);\n\n    // Handle transaction to increment counter\n    const handleSendTransaction = async () => {\n      if (pushChainClient) {\n        try {\n          setIsLoadingIncrement(true);\n          const data = getIncrementTxData();\n\n          const tx = await pushChainClient.universal.sendTransaction({\n            to: CONTRACT_ADDRESS,\n            value: BigInt(0),\n            data: data,\n          });\n\n          setTxHash(tx.hash);\n          await tx.wait();\n\n          await fetchCounters();\n          setIsLoadingIncrement(false);\n        } catch (err) {\n          console.error('Transaction error:', err);\n          setIsLoadingIncrement(false);\n        }\n      }\n    };\n\n    return (\n      <div\n        style={{\n          display: 'flex',\n          flexDirection: 'column',\n          alignItems: 'center',\n          gap: '12px',\n        }}\n      >\n        <h2>Counter Example</h2>\n\n        <PushUniversalAccountButton />\n\n        {connectionStatus !== PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <p>Please connect your wallet to interact with the counter.</p>\n        )}\n\n        <div\n          style={{\n            display: 'flex',\n            flexDirection: 'column',\n            alignItems: 'center',\n            gap: '12px',\n            width: '100%',\n            flexWrap: 'nowrap',\n          }}\n        >\n          <h3>Counter: {countPC == -1 ? '...' : countPC}</h3>\n        </div>\n\n        {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (\n          <div className='counter-container' style={{ display: 'flex', flexDirection: 'column', gap: '16px', alignItems: 'center' }}>\n            <div style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>\n              <button\n                className='increment-button'\n                onClick={handleSendTransaction}\n                disabled={isLoadingIncrement}\n                style={{\n                  backgroundColor: '#d946ef',\n                  color: 'white',\n                  border: 'none',\n                  borderRadius: '20px',\n                  padding: '8px 16px',\n                  fontSize: '14px',\n                  cursor: 'pointer',\n                  fontWeight: 'bold'\n                }}\n              >\n                {isLoadingIncrement ? 'Processing...' : 'Increment Counter'}\n              </button>\n            </div>\n\n            {txHash && pushChainClient && (\n              <div className='transaction-info' style={{ textAlign: 'center' }}>\n                <p>\n                  Transaction Hash:{' '}\n                  <a\n                    href={pushChainClient.explorer.getTransactionUrl(txHash)}\n                    target='_blank'\n                    style={{ color: '#d946ef', textDecoration: 'underline' }}\n                  >\n                    {txHash}\n                  </a>\n                </p>\n              </div>\n            )}\n          </div>\n        )}\n      </div>\n    );\n  }\n\n  return (\n    <PushUniversalWalletProvider config={walletConfig}>\n      <Component />\n    </PushUniversalWalletProvider>\n  );\n}\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "source-code",
       children: "Source Code"
     }), "\n", (0,jsx_runtime.jsx)(GitHubRepo/* GitHubRepo */.M, {
-      title: "Simple Counter Tutorial",
+      title: "Counter Tutorial",
       repoUrl: "https://github.com/pushchain/push-chain-examples/tree/main/tutorials/simple-counter",
-      description: "Full source code for the Universal Simple Counter smart contract and example frontend."
+      description: "Full source code for the Universal Counter smart contract and example frontend."
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "what-we-achieved",
       children: "What we Achieved"
@@ -407,7 +406,7 @@ function _createMdxContent(props) {
       children: "This was just a simple tutorial. What we did in this tutorial:"
     }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
       children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Deployed a simple counter contract on Push Chain."
+        children: "Deployed a counter contract on Push Chain."
       }), "\n", (0,jsx_runtime.jsx)(_components.li, {
         children: "Interacted seamlessly with the contract from any chain. (Ethereum, Solana or Push Chain)"
       }), "\n"]
@@ -423,7 +422,7 @@ function _createMdxContent(props) {
         textAlign: 'center'
       },
       children: (0,jsx_runtime.jsx)(_components.mermaid, {
-        value: "flowchart TD\n    EU[Ethereum User] --> UC[Universal Counter Contract]\n    SU[Solana User] --> UC\n    PU[Push Chain User] --> UC\n    \n    UC --> EC[Ethereum Counter: 5]\n    UC --> SC[Solana Counter: 3] \n    UC --> PC[Push Chain Counter: 8]\n    \n    style UC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EC fill:#627eea,stroke:#fff,stroke-width:2px,color:#fff\n    style SC fill:#16c492,stroke:#fff,stroke-width:2px,color:#fff\n    style PC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EU fill:#627eea,color:#fff\n    style SU fill:#16c492,color:#fff\n    style PU fill:#dd44b9,color:#fff"
+        value: "flowchart TD\n    EU[Ethereum User] --> UC[Universal Counter Contract]\n    SU[Solana User] --> UC\n    PU[Push Chain User] --> UC\n\n    UC --> EC[Ethereum Counter: 5]\n    UC --> SC[Solana Counter: 3]\n    UC --> PC[Push Chain Counter: 8]\n\n    style UC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EC fill:#627eea,stroke:#fff,stroke-width:2px,color:#fff\n    style SC fill:#16c492,stroke:#fff,stroke-width:2px,color:#fff\n    style PC fill:#dd44b9,stroke:#fff,stroke-width:2px,color:#fff\n    style EU fill:#627eea,color:#fff\n    style SU fill:#16c492,color:#fff\n    style PU fill:#dd44b9,color:#fff"
       })
     }), "\n", (0,jsx_runtime.jsx)("hr", {}), "\n", (0,jsx_runtime.jsx)(_components.p, {
       children: "In the next part, we modify this contract to implement the following:"

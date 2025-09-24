@@ -2444,7 +2444,7 @@ import * as readline from 'node:readline/promises';
     try {
       const res = await client.universal.sendTransaction({
         to: client.universal.account,
-        funds: { 
+        funds: {
           amount: BigInt(1),
           token: client.moveable.token.ETH // for native, can omit token, ie: same as { amount: BigInt(1) }
         },
@@ -2488,8 +2488,8 @@ import * as readline from 'node:readline/promises';
 
     const walletClient = createWalletClient({ account, chain: sepolia, transport: http(RPC_SEPOLIA) });
     const signer = await PushChain.utils.signer.toUniversal(walletClient);
-    const client = await PushChain.initialize(signer, 
-      { 
+    const client = await PushChain.initialize(signer,
+      {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
         progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
       }
@@ -2620,7 +2620,7 @@ import * as readline from 'node:readline/promises';
     output: process.stdout,
   });
 
-  // Simple Counter ABI on Push Chain (used in tests) with an increment function
+  // Counter ABI on Push Chain (used in tests) with an increment function
   const CounterABI = [
     {
       inputs: [],
