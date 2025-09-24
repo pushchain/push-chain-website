@@ -2713,7 +2713,6 @@ import * as readline from 'node:readline/promises';
         args: [],
       }));
 
-      // Important: When using multicall, 'to' must be a 0x-prefixed address.
       // 'data' is the array of calls constructed above.
       const txResponse = await pushChainClient.universal.sendTransaction({
         to: pushChainClient.universal.account,
