@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[22857],{999810:e=>{e.exports=JSON.parse('{"label":"Shared State Blockchain","permalink":"/push-chain-website/pr-preview/pr-1090/blog/tags/shared-state-blockchain","allTagsPath":"/push-chain-website/pr-preview/pr-1090/blog/tags","count":7,"unlisted":false}')}}]);

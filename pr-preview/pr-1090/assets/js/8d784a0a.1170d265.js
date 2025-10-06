@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[60078],{408554:e=>{e.exports=JSON.parse('{"label":"Non Fungible Tokens","permalink":"/push-chain-website/pr-preview/pr-1090/blog/tags/non-fungible-tokens","allTagsPath":"/push-chain-website/pr-preview/pr-1090/blog/tags","count":1,"unlisted":false}')}}]);
