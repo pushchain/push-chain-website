@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[73337],{280939:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1093/blog/tags/customer-success","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

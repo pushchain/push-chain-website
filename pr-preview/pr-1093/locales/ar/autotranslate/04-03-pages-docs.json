@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "توثيق — بناء تطبيقات عالمية",
+        "description": "كل ما تحتاجه لإطلاق مشروعك على Push Chain: بدايات سريعة، حزم تطوير البرامج (SDKs)، مرجع واجهة برمجة التطبيقات (API)، أمثلة، وإعداد العقدة.",
+        "og-title": "وثائق Push Chain - البداية السريعة، حزم التطوير (SDKs) وواجهة برمجة التطبيقات (API)",
+        "og-description": "قم ببناء وتشغيل التطبيقات على طبقة التنفيذ العالمية باستخدام أدلة وأمثلة واضحة.",
+        "twitter-title": "Push Chain Docs - ابدأ البناء الآن",
+        "twitter-description": "بدء سريع، ومجموعات تطوير البرامج (SDKs)، ومرجع API، وأمثلة للإطلاق بسرعة."
+      },
+      "header": {
+        "countdown-title": "إطلاق وثائق الشبكة التجريبية قريباً",
+        "description": "ششش... هل تريد معاينة سريعة لـ Push Chain Testnet - Donut؟ يمكنك الوصول إلى النسخة التجريبية السرية من خلال التسجيل في Project G.U.D Deployathon على DoraHacks.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
+      }
+    }
+  }
+}

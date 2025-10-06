@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[71700],{713152:e=>{e.exports=JSON.parse('{"label":"Case Study","permalink":"/push-chain-website/pr-preview/pr-1093/blog/tags/case-study","allTagsPath":"/push-chain-website/pr-preview/pr-1093/blog/tags","count":1,"unlisted":false}')}}]);

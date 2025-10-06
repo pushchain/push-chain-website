@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[48039],{798839:e=>{e.exports=JSON.parse('{"label":"Gitcoin","permalink":"/push-chain-website/pr-preview/pr-1093/blog/tags/gitcoin","allTagsPath":"/push-chain-website/pr-preview/pr-1093/blog/tags","count":11,"unlisted":false}')}}]);
