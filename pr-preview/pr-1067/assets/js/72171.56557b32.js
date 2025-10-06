@@ -17344,7 +17344,7 @@ Utils.helpers = {
         // Note: Keeping message explicit for SDK consumers
         console.warn('[DEPRECATED] PushChain.utils.helper.getChainName is deprecated. ' +
             'Use PushChain.utils.chains.getChainNamespace(chainName) instead.');
-        return Utils.chains.getChainNamespace(chainName);
+        return Utils.chains.getChainName(chainName);
     },
     encodeTxData({ abi, functionName, args = [], }) {
         // Validate inputs
@@ -213071,7 +213071,8 @@ class Orchestrator {
                                 this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_03_02, ueaAddress, deployed);
                                 this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_04_01);
                                 this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_04_02);
-                                const eip712Signature = yield this.signUniversalPayload(universalPayload, ueaAddress);
+                                const ueaVersion = yield this.fetchUEAVersion();
+                                const eip712Signature = yield this.signUniversalPayload(universalPayload, ueaAddress, ueaVersion);
                                 this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_04_03);
                                 const eip712SignatureHex = typeof eip712Signature === 'string'
                                     ? eip712Signature
@@ -213112,7 +213113,8 @@ class Orchestrator {
                                 };
                                 // Compute signature for universal payload on SVM
                                 const ueaAddressSvm = this.computeUEAOffchain();
-                                const svmSignature = yield this.signUniversalPayload(universalPayload, ueaAddressSvm);
+                                const ueaVersion = yield this.fetchUEAVersion();
+                                const svmSignature = yield this.signUniversalPayload(universalPayload, ueaAddressSvm, ueaVersion);
                                 if (isNative) {
                                     // Native SOL as bridge + gas
                                     const [whitelistPdaLocal] = web3_js_1.PublicKey.findProgramAddressSync([(0, viem_1.stringToBytes)('whitelist')], programId);
@@ -213221,7 +213223,7 @@ class Orchestrator {
                                 feeLockTxHash = (0, viem_1.bytesToHex)(new Uint8Array(decoded));
                             }
                         }
-                        yield this.sendUniversalTx(deployed, feeLockTxHash);
+                        const txs = yield this.sendUniversalTx(deployed, feeLockTxHash);
                         this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_06_06);
                         // After sending Cosmos tx to Push Chain, query UniversalTx status
                         if (chain_1.CHAIN_INFO[this.universalSigner.account.chain].vm === enums_1.VM.EVM) {
@@ -213239,59 +213241,7 @@ class Orchestrator {
                             return yield this.transformToUniversalTxResponse(evmTx);
                         }
                         else {
-                            const chainId = chain_1.CHAIN_INFO[chain].chainId;
-                            const vm = chain_1.CHAIN_INFO[chain].vm;
-                            const origin = `${chain_1.VM_NAMESPACE[vm]}:${chainId}:${this.universalSigner.account.address}`;
-                            const universalTxResponse = {
-                                hash: txHash,
-                                origin,
-                                blockNumber: BigInt(0),
-                                blockHash: '',
-                                transactionIndex: 0,
-                                chainId,
-                                from: this.universalSigner.account.address,
-                                to: '0x0000000000000000000000000000000000000000',
-                                nonce: 0,
-                                data: '0x',
-                                value: BigInt(0),
-                                gasLimit: BigInt(0),
-                                gasPrice: undefined,
-                                maxFeePerGas: undefined,
-                                maxPriorityFeePerGas: undefined,
-                                accessList: [],
-                                wait: () => tslib_1.__awaiter(this, void 0, void 0, function* () {
-                                    return ({
-                                        hash: txHash,
-                                        blockNumber: BigInt(0),
-                                        blockHash: '',
-                                        transactionIndex: 0,
-                                        from: this.universalSigner.account.address,
-                                        to: '0x0000000000000000000000000000000000000000',
-                                        contractAddress: null,
-                                        gasPrice: BigInt(0),
-                                        gasUsed: BigInt(0),
-                                        cumulativeGasUsed: BigInt(0),
-                                        logs: [],
-                                        logsBloom: '0x',
-                                        status: 1,
-                                        raw: {
-                                            from: this.universalSigner.account.address,
-                                            to: '0x0000000000000000000000000000000000000000',
-                                        },
-                                    });
-                                }),
-                                type: '99',
-                                typeVerbose: 'universal',
-                                signature: { r: '0x0', s: '0x0', v: 0 },
-                                raw: {
-                                    from: this.universalSigner.account.address,
-                                    to: '0x0000000000000000000000000000000000000000',
-                                    nonce: 0,
-                                    data: '0x',
-                                    value: BigInt(0),
-                                },
-                            };
-                            return universalTxResponse;
+                            return txs[txs.length - 1];
                         }
                     }
                 }
@@ -213402,9 +213352,11 @@ class Orchestrator {
                         ? tx_1.VerificationType.universalTxVerification
                         : tx_1.VerificationType.signedVerification,
                 }, this.bigintReplacer));
+                const ueaVersion = yield this.fetchUEAVersion();
                 const executionHash = this.computeExecutionHash({
                     verifyingContract: UEA,
                     payload: universalPayload,
+                    version: ueaVersion,
                 });
                 /**
                  * Prepare verification data by either signature or fund locking
@@ -213421,7 +213373,7 @@ class Orchestrator {
                      * Sign Universal Payload
                      */
                     this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_04_01, executionHash);
-                    const signature = yield this.signUniversalPayload(universalPayload, UEA);
+                    const signature = yield this.signUniversalPayload(universalPayload, UEA, ueaVersion);
                     verificationData = (0, viem_1.bytesToHex)(signature);
                     this.executeProgressHook(progress_hook_types_1.PROGRESS_HOOK.SEND_TX_04_02, verificationData);
                 }
@@ -214379,6 +214331,32 @@ class Orchestrator {
                 }
                 yield new Promise((r) => setTimeout(r, 12000));
             }
+        });
+    }
+    // Fetch and cache UEA version from the contract on Push Chain
+    fetchUEAVersion() {
+        return tslib_1.__awaiter(this, void 0, void 0, function* () {
+            if (this.ueaVersionCache)
+                return this.ueaVersionCache;
+            const chain = this.universalSigner.account.chain;
+            const { vm } = chain_1.CHAIN_INFO[chain];
+            const abi = vm === enums_1.VM.EVM ? uea_evm_1.UEA_EVM : abi_1.UEA_SVM;
+            const predictedUEA = this.computeUEAOffchain();
+            // Only attempt to read VERSION if UEA is deployed; otherwise default to 0.1.0
+            const code = yield this.pushClient.publicClient.getCode({
+                address: predictedUEA,
+            });
+            if (code === undefined) {
+                this.ueaVersionCache = '0.1.0';
+                return '0.1.0';
+            }
+            const version = yield this.pushClient.readContract({
+                address: predictedUEA,
+                abi,
+                functionName: 'VERSION',
+            });
+            this.ueaVersionCache = version;
+            return version;
         });
     }
 }
