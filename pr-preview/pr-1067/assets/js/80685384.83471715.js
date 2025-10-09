@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[66715],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[17725],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -92,6 +92,183 @@ function MDXProvider(properties) {
     properties.children
   )
 }
+
+
+/***/ }),
+
+/***/ 40674:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  assets: () => (/* binding */ assets),
+  contentTitle: () => (/* binding */ contentTitle),
+  "default": () => (/* binding */ MDXContent),
+  frontMatter: () => (/* binding */ frontMatter),
+  metadata: () => (/* reexport */ site_docs_chain_05_deep_dives_01_json_rpc_functions_mdx_806_namespaceObject),
+  toc: () => (/* binding */ toc)
+});
+
+;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-05-deep-dives-01-json-rpc-functions-mdx-806.json
+const site_docs_chain_05_deep_dives_01_json_rpc_functions_mdx_806_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/deep-dives/docs-deep-dives-json-rpc-functions","title":"JSON-RPC Functions","description":"JSON-RPC Functions | Deep Dives | Push Chain Docs","source":"@site/docs/chain/05-deep-dives/01-JSON-RPC-Functions.mdx","sourceDirName":"chain/05-deep-dives","slug":"/chain/deep-dives/json-rpc-functions","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/json-rpc-functions","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/05-deep-dives/01-JSON-RPC-Functions.mdx","tags":[],"version":"current","sidebarPosition":1,"frontMatter":{"id":"docs-deep-dives-json-rpc-functions","title":"JSON-RPC Functions","hide_title":false,"slug":"./json-rpc-functions","displayed_sidebar":"pushChainSidebar","sidebar_position":1,"image":"/assets/docs/previews/docs_deep_dives--json-rpc_functions.png"},"sidebar":"pushChainSidebar","previous":{"title":"Deep Dives","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives"},"next":{"title":"Push Validator Manager","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/push-validator-manager"}}');
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
+var lib = __webpack_require__(28453);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
+var Tabs = __webpack_require__(411470);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
+var TabItem = __webpack_require__(119365);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
+var Details = __webpack_require__(303999);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+;// ./docs/chain/05-deep-dives/01-JSON-RPC-Functions.mdx
+
+
+const frontMatter = {
+	id: 'docs-deep-dives-json-rpc-functions',
+	title: 'JSON-RPC Functions',
+	hide_title: false,
+	slug: './json-rpc-functions',
+	displayed_sidebar: 'pushChainSidebar',
+	sidebar_position: 1,
+	image: '/assets/docs/previews/docs_deep_dives--json-rpc_functions.png'
+};
+const contentTitle = undefined;
+
+const assets = {
+
+};
+
+
+
+
+
+
+
+const toc = [{
+  "value": "Examples",
+  "id": "examples",
+  "level": 2
+}, {
+  "value": "Get Block by Number",
+  "id": "get-block-by-number",
+  "level": 3
+}, {
+  "value": "Get Current Block Number",
+  "id": "get-current-block-number",
+  "level": 3
+}, {
+  "value": "Get Transaction by txHash",
+  "id": "get-transaction-by-txhash",
+  "level": 3
+}, {
+  "value": "Get Account Balance",
+  "id": "get-account-balance",
+  "level": 3
+}, {
+  "value": "Further Information",
+  "id": "further-information",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    code: "code",
+    h2: "h2",
+    h3: "h3",
+    p: "p",
+    pre: "pre",
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  }, {Head} = _components;
+  if (!Head) _missingMdxReference("Head", true);
+  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
+    children: [(0,jsx_runtime.jsx)(Head, {
+      children: (0,jsx_runtime.jsx)("title", {
+        children: "JSON-RPC Functions | Deep Dives | Push Chain Docs"
+      })
+    }), "\n", "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["Push Chain is an EVM-compatible blockchain, and thus supports the standard JSON-RPC functions available on all Ethereum-compatible networks. This document provides examples of how to call basic JSON-RPC functions on Push Chain. For comprehensive details, visit the official ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://ethereum.org/en/developers/docs/apis/json-rpc/",
+        children: "Ethereum JSON-RPC Documentation"
+      }), "."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "examples",
+      children: "Examples"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Here are examples showcasing how to make JSON-RPC requests using CURL."
+    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-block-by-number",
+      children: "Get Block by Number"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Fetch block details for a specific block number:"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-bash",
+        children: "curl -X POST https://evm.rpc-testnet-donut-node1.push.org/ \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getBlockByNumber\",\n       \"params\":[\"0x10d4f\", true],\n       \"id\":1\n     }'\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-current-block-number",
+      children: "Get Current Block Number"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Retrieve the current block number:"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-bash",
+        children: "curl -X POST https://evm.rpc-testnet-donut-node1.push.org/ \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_blockNumber\",\n       \"params\":[],\n       \"id\":1\n     }'\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-transaction-by-txhash",
+      children: "Get Transaction by txHash"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Fetch transaction details using its hash:"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-bash",
+        children: "curl -X POST https://evm.rpc-testnet-donut-node1.push.org/ \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getTransactionByHash\",\n       \"params\":[\"0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238\"],\n       \"id\":1\n     }'\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)("br", {}), "\n", (0,jsx_runtime.jsx)(_components.h3, {
+      id: "get-account-balance",
+      children: "Get Account Balance"
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Retrieve the balance of an address:"
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-bash",
+        children: "curl -X POST https://evm.rpc-testnet-donut-node1.push.org/ \\\n     -H \"Content-Type: application/json\" \\\n     -d '{\n       \"jsonrpc\":\"2.0\",\n       \"method\":\"eth_getBalance\",\n       \"params\":[\"0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266\", \"latest\"],\n       \"id\":1\n     }'\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "further-information",
+      children: "Further Information"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["For more JSON-RPC methods and their usage, refer to the ", (0,jsx_runtime.jsx)(_components.a, {
+        href: "https://ethereum.org/en/developers/docs/apis/json-rpc/",
+        children: "Ethereum JSON-RPC API Reference"
+      }), "."]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,lib/* useMDXComponents */.R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
+    ...props,
+    children: (0,jsx_runtime.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+function _missingMdxReference(id, component) {
+  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
+}
+
 
 
 /***/ }),
@@ -251,422 +428,6 @@ role:"tab",tabIndex:selectedValue===value?0:-1,"aria-selected":selectedValue===v
 return null;}return/*#__PURE__*/(0,react.cloneElement)(selectedTabItem,{className:(0,clsx/* default */.A)('margin-top--md',selectedTabItem.props.className)});}return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"margin-top--md",children:childTabs.map((tabItem,i)=>/*#__PURE__*/(0,react.cloneElement)(tabItem,{key:i,hidden:tabItem.props.value!==selectedValue}))});}function TabsComponent(props){const tabs=useTabs(props);return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:(0,clsx/* default */.A)('tabs-container',styles_module.tabList),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(TabList,Object.assign({},tabs,props)),/*#__PURE__*/(0,jsx_runtime.jsx)(TabContent,Object.assign({},tabs,props))]});}function Tabs(props){const isBrowser=(0,useIsBrowser/* default */.A)();return/*#__PURE__*/(0,jsx_runtime.jsx)(TabsComponent// Remount tabs after hydration
 // Temporary fix for https://github.com/facebook/docusaurus/issues/5653
 ,Object.assign({},props,{children:sanitizeTabsChildren(props.children)}),String(isBrowser));}
-
-/***/ }),
-
-/***/ 607589:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  assets: () => (/* binding */ assets),
-  contentTitle: () => (/* binding */ contentTitle),
-  "default": () => (/* binding */ MDXContent),
-  frontMatter: () => (/* binding */ frontMatter),
-  metadata: () => (/* reexport */ site_docs_chain_05_deep_dives_02_push_node_manager_mdx_620_namespaceObject),
-  toc: () => (/* binding */ toc)
-});
-
-;// ./.docusaurus/docusaurus-plugin-content-docs/default/site-docs-chain-05-deep-dives-02-push-node-manager-mdx-620.json
-const site_docs_chain_05_deep_dives_02_push_node_manager_mdx_620_namespaceObject = /*#__PURE__*/JSON.parse('{"id":"chain/deep-dives/docs-chain-deep-dives-push-node-manager","title":"Push Node Manager","description":"Push Node Manager | Deep Dives | Push Chain Docs","source":"@site/docs/chain/05-deep-dives/02-Push-Node-Manager.mdx","sourceDirName":"chain/05-deep-dives","slug":"/chain/deep-dives/push-node-manager","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/push-node-manager","draft":false,"unlisted":false,"editUrl":"https://github.com/pushchain/push-chain-website/blob/main/docs/chain/05-deep-dives/02-Push-Node-Manager.mdx","tags":[],"version":"current","sidebarPosition":2,"frontMatter":{"id":"docs-chain-deep-dives-push-node-manager","title":"Push Node Manager","hide_title":false,"slug":"./push-node-manager","displayed_sidebar":"pushChainSidebar","sidebar_position":2,"image":"/assets/docs/previews/docs_chain_deep_dives--push_node_manager.png"},"sidebar":"pushChainSidebar","previous":{"title":"JSON-RPC Functions","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/json-rpc-functions"},"next":{"title":"Localnet","permalink":"/push-chain-website/pr-preview/pr-1067/docs/chain/deep-dives/localnet"}}');
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-// EXTERNAL MODULE: ./node_modules/@mdx-js/react/lib/index.js
-var lib = __webpack_require__(28453);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Tabs/index.js + 2 modules
-var Tabs = __webpack_require__(411470);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/TabItem/index.js + 1 modules
-var TabItem = __webpack_require__(119365);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Details/index.js + 4 modules
-var Details = __webpack_require__(303999);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-;// ./docs/chain/05-deep-dives/02-Push-Node-Manager.mdx
-
-
-const frontMatter = {
-	id: 'docs-chain-deep-dives-push-node-manager',
-	title: 'Push Node Manager',
-	hide_title: false,
-	slug: './push-node-manager',
-	displayed_sidebar: 'pushChainSidebar',
-	sidebar_position: 2,
-	image: '/assets/docs/previews/docs_chain_deep_dives--push_node_manager.png'
-};
-const contentTitle = 'Push Node Manager';
-
-const assets = {
-
-};
-
-
-
-
-
-
-
-const toc = [{
-  "value": "🚀 Quick Start",
-  "id": "-quick-start",
-  "level": 2
-}, {
-  "value": "Step 1: Install &amp; Start",
-  "id": "step-1-install--start",
-  "level": 3
-}, {
-  "value": "Step 2: Check Sync Status",
-  "id": "step-2-check-sync-status",
-  "level": 3
-}, {
-  "value": "Step 3: Become a Validator",
-  "id": "step-3-become-a-validator",
-  "level": 3
-}, {
-  "value": "📖 Commands",
-  "id": "-commands",
-  "level": 2
-}, {
-  "value": "Essential Commands",
-  "id": "essential-commands",
-  "level": 3
-}, {
-  "value": "Additional Commands",
-  "id": "additional-commands",
-  "level": 3
-}, {
-  "value": "Public Setup Commands (Optional)",
-  "id": "public-setup-commands-optional",
-  "level": 3
-}, {
-  "value": "📊 Network Info",
-  "id": "-network-info",
-  "level": 2
-}, {
-  "value": "🔧 File Locations",
-  "id": "-file-locations",
-  "level": 2
-}, {
-  "value": "🌍 Public Setup (Optional)",
-  "id": "-public-setup-optional",
-  "level": 2
-}, {
-  "value": "Making Your Node Publicly Accessible",
-  "id": "making-your-node-publicly-accessible",
-  "level": 3
-}, {
-  "value": "Setup NGINX with SSL",
-  "id": "setup-nginx-with-ssl",
-  "level": 4
-}, {
-  "value": "Setup Log Rotation",
-  "id": "setup-log-rotation",
-  "level": 4
-}, {
-  "value": "Create Backups",
-  "id": "create-backups",
-  "level": 4
-}];
-function _createMdxContent(props) {
-  const _components = {
-    a: "a",
-    blockquote: "blockquote",
-    code: "code",
-    h1: "h1",
-    h2: "h2",
-    h3: "h3",
-    h4: "h4",
-    header: "header",
-    li: "li",
-    p: "p",
-    pre: "pre",
-    strong: "strong",
-    ul: "ul",
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  }, {Head} = _components;
-  if (!Head) _missingMdxReference("Head", true);
-  return (0,jsx_runtime.jsxs)(jsx_runtime.Fragment, {
-    children: [(0,jsx_runtime.jsx)(Head, {
-      children: (0,jsx_runtime.jsx)("title", {
-        children: "Push Node Manager | Deep Dives | Push Chain Docs"
-      })
-    }), "\n", "\n", (0,jsx_runtime.jsx)(_components.header, {
-      children: (0,jsx_runtime.jsx)(_components.h1, {
-        id: "push-node-manager",
-        children: "Push Node Manager"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Push Chain validator management"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "-quick-start",
-      children: "🚀 Quick Start"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "step-1-install--start",
-      children: "Step 1: Install & Start"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "curl -fsSL https://get.push.network/node/install.sh | bash\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "This installs and starts your validator automatically."
-    }), "\n", (0,jsx_runtime.jsxs)(_components.blockquote, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.p, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Note:"
-        }), " After installation, restart your terminal or run ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "source ~/.bashrc"
-        }), " (or ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/.zshrc"
-        }), ") to use the ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "push-node-manager"
-        }), " command from anywhere."]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "step-2-check-sync-status",
-      children: "Step 2: Check Sync Status"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager status\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
-      children: ["Wait for: ", (0,jsx_runtime.jsx)(_components.code, {
-        children: "✅ Catching Up: false"
-      }), " (fully synced)"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "step-3-become-a-validator",
-      children: "Step 3: Become a Validator"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager register-validator\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Requirements:"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Node must be synced (catching_up: false)"
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Need 2+ PC tokens from ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://faucet.push.org",
-          children: "faucet"
-        })]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Account must be funded first"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "That's it! You're now running a Push Chain validator! 🎉"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "-commands",
-      children: "📖 Commands"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "essential-commands",
-      children: "Essential Commands"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager start              # Setup + start node  \npush-node-manager stop               # Stop node\npush-node-manager status             # Show sync status & validator info\npush-node-manager register-validator # Become a validator\npush-node-manager logs               # View live logs\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "additional-commands",
-      children: "Additional Commands"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager restart    # Restart node\npush-node-manager sync       # Real-time sync monitor\npush-node-manager validators # List all validators\npush-node-manager balance    # Check wallet balance\npush-node-manager reset      # Reset blockchain data\npush-node-manager help       # Show all commands\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "public-setup-commands-optional",
-      children: "Public Setup Commands (Optional)"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager setup-nginx <domain> # Setup NGINX + SSL for public RPC\npush-node-manager setup-logs           # Configure log rotation\npush-node-manager backup               # Create node backup\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "-network-info",
-      children: "📊 Network Info"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Chain ID"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "push_42101-1"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Network"
-        }), ": Push Chain Testnet"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Min Stake"
-        }), ": 2 PC"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Faucet"
-        }), ": ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://faucet.push.org",
-          children: "https://faucet.push.org"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Explorer"
-        }), ": ", (0,jsx_runtime.jsx)(_components.a, {
-          href: "https://donut.push.network",
-          children: "https://donut.push.network"
-        })]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "-file-locations",
-      children: "🔧 File Locations"
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Binary"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "./build/pchaind"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Config"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/.pchain/config/"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Data"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/.pchain/data/"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Keys"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/.pchain/keyring-test/"
-        })]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.strong, {
-          children: "Logs"
-        }), ": ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/.pchain/logs/pchaind.log"
-        })]
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "-public-setup-optional",
-      children: "🌍 Public Setup (Optional)"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
-      id: "making-your-node-publicly-accessible",
-      children: "Making Your Node Publicly Accessible"
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: "By default, your validator runs locally. These optional commands help set up public HTTPS endpoints:"
-    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "setup-nginx-with-ssl",
-      children: "Setup NGINX with SSL"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager setup-nginx yourdomain.com\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Creates:"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "https://yourdomain.com"
-        }), " - Cosmos RPC endpoint"]
-      }), "\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: [(0,jsx_runtime.jsx)(_components.code, {
-          children: "https://evm.yourdomain.com"
-        }), " - EVM RPC endpoint"]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Automatic SSL certificates via Let's Encrypt"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Rate limiting and security headers"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Requirements:"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Domain pointing to your server IP"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Ports 80/443 open"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Ubuntu/Debian system"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "setup-log-rotation",
-      children: "Setup Log Rotation"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager setup-logs\n"
-      })
-    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
-      children: (0,jsx_runtime.jsx)(_components.strong, {
-        children: "Configures:"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Daily log rotation"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "14-day retention"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Automatic compression"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "System logrotate integration"
-      }), "\n"]
-    }), "\n", (0,jsx_runtime.jsx)(_components.h4, {
-      id: "create-backups",
-      children: "Create Backups"
-    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
-      children: (0,jsx_runtime.jsx)(_components.code, {
-        className: "language-bash",
-        children: "push-node-manager backup\n"
-      })
-    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
-      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
-        children: ["Timestamped backup in ", (0,jsx_runtime.jsx)(_components.code, {
-          children: "~/push-node-backups/"
-        })]
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Includes all config, keys, and blockchain data"
-      }), "\n", (0,jsx_runtime.jsx)(_components.li, {
-        children: "Compressed archive with integrity verification"
-      }), "\n"]
-    })]
-  });
-}
-function MDXContent(props = {}) {
-  const {wrapper: MDXLayout} = {
-    ...(0,lib/* useMDXComponents */.R)(),
-    ...props.components
-  };
-  return MDXLayout ? (0,jsx_runtime.jsx)(MDXLayout, {
-    ...props,
-    children: (0,jsx_runtime.jsx)(_createMdxContent, {
-      ...props
-    })
-  }) : _createMdxContent(props);
-}
-function _missingMdxReference(id, component) {
-  throw new Error("Expected " + (component ? "component" : "object") + " `" + id + "` to be defined: you likely forgot to import, pass, or provide it.");
-}
-
-
 
 /***/ })
 
