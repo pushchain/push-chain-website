@@ -106,6 +106,16 @@ function MDXProvider(properties) {
 
 /***/ }),
 
+/***/ 441105:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-3d8d57b5a62ca5220d078973112c4d4f.webp");
+
+/***/ }),
+
 /***/ 490536:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -173,7 +183,7 @@ function _createMdxContent(props) {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Cover image of EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users",
-        src: (__webpack_require__(663486)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(441105)/* ["default"] */ .A) + "",
         width: "1400",
         height: "788"
       })
@@ -265,16 +275,6 @@ function MDXContent(props = {}) {
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-collaborates-with-gro-protocol","source":"@site/blog/2022-01-31-epns-collaborates-with-gro-protocol/index.md","title":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","description":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","date":"2022-01-31T00:00:00.000Z","tags":[{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"},{"inline":true,"label":"Epnsproject","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/epnsproject"},{"inline":true,"label":"Gro Protocol","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/gro-protocol"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"}],"readingTime":1.96,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"epns-collaborates-with-gro-protocol","title":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","description":"EPNS Collaborates With Gro Protocol to Enable Decentralized Notifications for Users","authors":["push"],"image":"./cover-image.webp","text":"With interest rates and stock markets plummeting in the wake of the pandemic, the DeFi industry came as an attractive new opportunity for investors who benefited from its global accessibility and higher returns. Yet, the majority of financial products in DeFi still cater to investors with a higher risk appetite.","tags":["Ethereum","Epnsproject","Gro Protocol","Newsletter","Blockchain"]},"unlisted":false,"prevItem":{"title":"EPNS Allies With mStable to Facilitate Decentralized Notifications for Users","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-allies-with-mstable"},"nextItem":{"title":"EPNS Monthly Blocks","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-monthly-blocks-jan-2022"}}');
-
-/***/ }),
-
-/***/ 663486:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-3d8d57b5a62ca5220d078973112c4d4f.webp");
 
 /***/ })
 
