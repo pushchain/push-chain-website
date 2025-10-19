@@ -8,22 +8,382 @@ sidebar_position: 1
 image: '/assets/docs/previews/introduction--intro_to_push_chain.png'
 ---
 
-import { useEffect } from 'react';
-import { useHistory } from '@docusaurus/router';
+<head>
+  <title>Introduction | Push Chain Docs</title>
+</head>
 
-export default function ChainRedirect() {
-  const history = useHistory();
-  
-  useEffect(() => {
-    history.replace('/docs');
-  }, [history]);
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import {
+  ModalContainer,
+  ModalSmall,
+  ModalWrapper,
+} from '@site/src/css/SharedStyling';
+import NodeJSVirtualIDE from '@site/src/components/NodeJSVirtualIDE/NodeJSVirtualIDE';
+import IFrameModal from '@site/src/components/IFrameModal/IFrameModal';
+import ThemedImage from '@theme/ThemedImage';
 
-return (
-<div>
-<h1>Redirecting...</h1>
-<p>If you are not redirected automatically, <a href="/docs">click here to go to the main docs</a>.</p>
-</div>
-);
-}
+<!-- Content Start -->
 
-<ChainRedirect />
+Push Chain is the first **True Universal Layer 1** blockchain, built as a **100% EVM-compatible** Proof of Stake (PoS) chain. It runs seamlessly across every chain and wallet.
+
+Write your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.
+
+**Ready to build?** <br/ >
+- Follow our [Quickstart](/docs/chain/quickstart) to deploy your app in minutes. <br/ >
+- Explore core abstractions in [Important Concepts](/docs/chain/important-concepts). <br/ >
+
+<p>
+  <ThemedImage
+    alt="Diagram to show how an existing EVM or non-EVM application can be deployed on Push Chain to instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code."
+    sources={{
+      light: require('/static/assets/docs/chain/build/chain_comparision_light.webp').default,
+      dark: require('/static/assets/docs/chain/build/chain_comparision_dark.webp').default,
+    }}
+  />
+</p>
+
+## Hello Push Chain 👋
+
+<Tabs groupId="code-examples">
+  <TabItem value="pushchain" label="Ethers (v6) Push Chain" default>
+
+  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/initialize-push-chain-client"}}>
+
+{`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
+    // Import Push Chain SDK and Ethers
+    // You can use other library like veim, etc
+    import { PushChain } from '@pushchain/core';
+    import { ethers } from 'ethers';
+
+    async function main() {
+      // 1. Connect to a provider (e.g., Push Chain RPC URL)
+      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+
+      // 2. Create a random wallet (or use your own private key)
+      const wallet = ethers.Wallet.createRandom(provider);
+
+      // 3. Convert ethers signer to Universal Signer
+      // Most popular libraries can pass just the signer to get universal signer
+      // Or use PushChain.utils.signer.construct to create a custom one
+      const universalSigner = await PushChain.utils.signer.toUniversal(wallet);
+
+      // Initialize Push Chain SDK for use from Push Chain account
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+
+      console.log(JSON.stringify(pushChainClient, null, 2));
+    }
+
+    await main().catch(console.error);
+
+`}
+    </NodeJSVirtualIDE>
+
+  </TabItem>
+
+      <TabItem value='ethers_v6' label='Ethers (v6) Sepolia' default>
+
+      <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
+
+{`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
+    // Import Push Chain SDK and Ethers
+    // You can use other library like veim, etc
+    import { PushChain } from '@pushchain/core'
+    import { ethers } from 'ethers'
+
+    async function main() {
+      // 1. Connect to a provider (e.g., Push Chain RPC URL)
+      const provider = new ethers.JsonRpcProvider('https://sepolia.gateway.tenderly.co')
+
+      // 2. Create a random wallet (or use your own private key)
+      const wallet = ethers.Wallet.createRandom(provider)
+
+      // 3. Convert ethers signer to Universal Signer
+      // Most popular libraries can pass just the signer to get universal signer
+      // Or use PushChain.utils.signer.construct to create a custom one
+      const universalSigner = await PushChain.utils.signer.toUniversal(wallet)
+
+      // Initialize Push Chain SDK for use from Push Chain account
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      })
+
+      console.log(JSON.stringify(pushChainClient, null, 2))
+    }
+
+    await main().catch(console.error)
+`}
+
+      </NodeJSVirtualIDE>
+
+    </TabItem>
+
+    <TabItem value='viem' label='Viem'>
+
+    <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
+
+{`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
+    // Import Push Chain SDK and Viem
+    // You can use other library like ethers, etc
+    import { PushChain } from '@pushchain/core';
+    import { privateKeyToAccount, generatePrivateKey } from 'viem/accounts'
+    import { createWalletClient, http } from 'viem'
+    import { sepolia } from 'viem/chains'
+
+    async function main() {
+      // 1. Construct account
+      const account = privateKeyToAccount(generatePrivateKey())
+
+      // 2. Initialize signer
+      const signer = createWalletClient({
+        transport: http('https://sepolia.gateway.tenderly.co'), // or your preferred RPC URL
+        chain: sepolia,
+        account, // <-- our signer
+      })
+
+      // 3. Convert signer to Universal Signer
+      // Most of the popular libraries can pass just the signer to get universal signer
+      // Or use PushChain.utils.signer.construct to create a custom one
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer)
+
+      // Initialize Push Chain SDK for use from Ethereum account
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      })
+
+      console.log(JSON.stringify(pushChainClient, null, 2))
+    }
+
+    await main().catch(console.error);
+`}
+
+    </NodeJSVirtualIDE>
+
+  </TabItem>
+
+    <TabItem value='solana_web3js' label='Solana (Web3 JS)'>
+
+    <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples"}}>
+
+{`
+    // customPropHighlightRegexStart=PushChain\.initialize
+    // customPropHighlightRegexEnd=}\\)
+    // Import Push Chain SDK and Solana Web3.js
+    // You can use other library like @solana/kit, etc
+    import { PushChain } from '@pushchain/core';
+    import { Keypair } from '@solana/web3.js';
+
+    async function main() {
+      // 1. Generate or import your Solana keypair
+      const solKeypair = Keypair.generate()
+
+      // 2. Convert the Solana Keypair into a Push Chain universal signer.
+      //    We use the helper toUniversalFromKeypair, which internally builds
+      //    the necessary adapter (signTransaction, signMessage).
+      const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(solKeypair, {
+        chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
+        library: PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS,
+      })
+
+      // 3. Initialize Push Chain SDK
+      const pushChainClient = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      })
+
+      console.log(JSON.stringify(pushChainClient, null, 2))
+    }
+
+    await main().catch(console.error);
+`}
+    </NodeJSVirtualIDE>
+
+  </TabItem>
+</Tabs>
+
+## Key Innovations (Why Push Chain)
+
+Push Chain provides a unified toolkit to build truly universal dApps. Without custom bridges or multi-chain deployments, you gain:
+
+- **Universal Smart Contracts**<br />
+  Deploy your existing Solidity contract on Push Chain and instantly become compatible with every chain (even **different layer 1s**).
+  <!-- Optional: [Learn more](../01-build/05-Universal-Smart-Contract) -->
+
+- **Zero EVM Code Changes**<br />
+  Deploy your existing Solidity contract on Push Chain without modifying ABI, bytecode, or on-chain logic.
+  <!-- Optional: [Learn more](../01-build/05-Universal-Smart-Contract) -->
+
+- **Single Transaction from any Chain**<br />
+  Send transactions from any chain to Push Chain with just a single transaction, massively reducing the complexity of multi-chain users interaction.
+
+- **Universal Fee Abstraction**<br />
+  Allow users to pay gas fees in their native tokens (for example ETH or SOL). Push Chain automatically routes fees so users do not have to bridge or hold $PC tokens (native token of Push Chain).
+  <!-- Optional: [Learn more](../01-build/02-Important-Concepts#fee-abstraction) -->
+
+- **Wallet Abstraction**<br />
+  Support MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet simply to access your dApp.
+  <!-- Optional: [Learn more](../01-build/02-Important-Concepts#wallet-abstraction) -->
+
+- **True Native Experience**<br />
+  Users from any chain will always feel that they are **interacting natively** with your App. Drawbacks of multi-chain deployments are eliminated and transactions are natively attributed to the correct chain.
+  <!-- Optional: [Learn more](../01-build/02-Important-Concepts#shared-state) -->
+
+## Why Build on Push Chain?
+
+Building on Push Chain delivers immediate benefits for developers and users:
+
+- **Expand Your Userbase Instantly**<br />
+  Deploy your existing EVM or non-EVM application on Push Chain without any on-chain code changes. Users on Ethereum, Solana, and other supported chains can access your dApp right away.
+
+- **Avoid Audit Friction**<br />
+  Since you do not modify your Solidity code, there is no need for a full re-audit. Simply deploy on Push Chain and use our SDKs to enable universal access.
+
+- **Deliver a Unified, Seamless UX**<br />
+  One application, any wallet. Users can connect with MetaMask, Phantom, or a social/email login and pay gas fees in their native token (for example ETH or SOL). No bridges or extra steps required.
+
+- **Simplify Fee Management**<br />
+  Push Chain automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions.
+
+- **Future-Proof Your Application**<br />
+  Your App can orchestrate cross-chain workflows without building separate adapters. Any added chain support on Push natively flows to your app without any codebase changes.
+
+- **Consistent Developer Tooling**<br />
+  Use one SDK, one set of JSON-RPC endpoints, and a unified API to build and deploy. Whether you prefer **Viem**, **Ethers**, or our **custom client**, the experience is the same across languages and frameworks.
+
+## Developer SDKs
+
+<ModalContainer>
+  <ModalSmall
+    onClick={() =>
+      window.open('https://github.com/pushchain/push-chain-sdk', '_blank')
+    }
+  >
+    <img
+      src={require('/static/assets/docs/techstack/javascript.png').default}
+      srcSet={`${
+        require('/static/assets/docs/techstack/javascript@2x.png').default
+      } 2x, ${
+        require('/static/assets/docs/techstack/javascript@3x.png').default
+      } 3x`}
+      alt='Image representation of Javascript SDK of Push Protocol'
+    />
+    <ModalWrapper>
+    <span>
+      Javascript
+      <svg
+        width='20'
+        height='28'
+        viewBox='0 0 29 28'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          d='m7.501 21.001 14-14M10.125 7.001H21.5v11.375'
+          stroke='#A0A3B1'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+        ></path>
+      </svg>
+    </span>
+    </ModalWrapper>
+  </ModalSmall>
+
+<ModalSmall
+  onClick={() =>
+    window.open('https://github.com/pushchain/push-chain-sdk', '_blank')
+  }
+>
+  <img
+    src={require('/static/assets/docs/techstack/react.png').default}
+    srcSet={`${
+      require('/static/assets/docs/techstack/react@2x.png').default
+    } 2x, ${require('/static/assets/docs/techstack/react@3x.png').default} 3x`}
+  />
+  <ModalWrapper>
+    <span>
+      React
+      <svg
+        width='20'
+        height='28'
+        viewBox='0 0 29 28'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          d='m7.501 21.001 14-14M10.125 7.001H21.5v11.375'
+          stroke='#A0A3B1'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+        ></path>
+      </svg>
+    </span>
+  </ModalWrapper>
+</ModalSmall>
+
+<ModalSmall
+  onClick={() =>
+    window.open('https://github.com/pushchain/push-chain-sdk', '_blank')
+  }
+>
+  <img
+    src={require('/static/assets/docs/techstack/reactNative.png').default}
+    srcSet={`${
+      require('/static/assets/docs/techstack/reactNative@2x.png').default
+    } 2x, ${
+      require('/static/assets/docs/techstack/reactNative@3x.png').default
+    } 3x`}
+  />
+  <ModalWrapper>
+    <span>
+      React Native
+      <svg
+        width='20'
+        height='28'
+        viewBox='0 0 29 28'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          d='m7.501 21.001 14-14M10.125 7.001H21.5v11.375'
+          stroke='#A0A3B1'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+        ></path>
+      </svg>
+    </span>
+  </ModalWrapper>
+</ModalSmall>
+
+</ModalContainer>
+
+## Experience Push Chain
+
+To get started with Push Chain, you can:
+
+1. **Checkout** [Ballsy App](https://ballsy.push.org) to experience Push Chain.
+*You can log in with your existing wallet, email, or social accounts.*
+   <IFrameModal
+     url='https://ballsy.push.org'
+     buttonTitle='Load Ballsy Apps'
+     maxHeight='840px'
+   />
+2. **Goto** [Send Transaction Example](/docs/chain/ui-kit/examples/send-transaction-example/) to learn and play.
+3. **Use our live playgrounds** to experiment with code within our documentation.
+4. **Deep dive into Push Chain** fundamentals, how it works, and developer resources in our comprehensive [Knowledge Base](https://push.org/knowledge).
+
+## Next Steps
+
+- Explore core abstractions in [Important Concepts](/docs/chain/important-concepts)
+- Jump to Frontend Integration via [UI Kit](/docs/chain/ui-kit/integrate-push-universal-wallet/)
+- Try a full-app walkthrough in [Tutorials](/docs/chain/tutorials/)
+- For deep dives visit our [Knowledge Base](https://push.org/knowledge/)
