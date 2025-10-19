@@ -106,6 +106,16 @@ function MDXProvider(properties) {
 
 /***/ }),
 
+/***/ 100460:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/popularapps-d28e170524758eb6301b38888aa3e588.webp");
+
+/***/ }),
+
 /***/ 106602:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -372,9 +382,9 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Universal app use cases of Push Chain",
-        src: (__webpack_require__(731106)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(100460)/* ["default"] */ .A) + "",
         width: "1600",
-        height: "881"
+        height: "760"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("hr", {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "-push-chain-tokenomics",
@@ -538,16 +548,6 @@ function MDXContent(props = {}) {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/usecasesmain-7bf3f161414466d0fcb388aebc850a92.webp");
-
-/***/ }),
-
-/***/ 731106:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/appusecases-9fe86d3d9cad2e692b490a8d75c340da.webp");
 
 /***/ }),
 

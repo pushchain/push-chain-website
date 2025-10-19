@@ -2946,6 +2946,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 142189:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/popularapps-d28e170524758eb6301b38888aa3e588.webp");
+
+/***/ }),
+
 /***/ 143065:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8683,6 +8695,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 457684:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/popularapps-d28e170524758eb6301b38888aa3e588.webp");
+
+/***/ }),
+
 /***/ 460144:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -10401,7 +10425,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/appusecases-9fe86d3d9cad2e692b490a8d75c340da.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/appusecases-d28e170524758eb6301b38888aa3e588.webp");
 
 /***/ }),
 
@@ -10461,7 +10485,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/usecasesmain-7bf3f161414466d0fcb388aebc850a92.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/usecasesmain-cc343d3a1f132cb620c2de820e8ca6b7.webp");
 
 /***/ }),
 
@@ -10510,18 +10534,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-4ee5877a5151b7068d141e915627354e.webp");
-
-/***/ }),
-
-/***/ 503530:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/appusecases-9fe86d3d9cad2e692b490a8d75c340da.webp");
 
 /***/ }),
 
@@ -11641,7 +11653,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/consumerusecases-fb5a802dd9698e5f6eec1feb441e7bb3.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/consumerusecases-ee3774b30a2177aebb7615818cddbf15.webp");
 
 /***/ }),
 
@@ -12910,6 +12922,7 @@ var map = {
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/appusecases.webp": 499587,
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/consumerusecases.webp": 338868,
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/cover-image.webp": 930155,
+	"./blog/2025-03-18-introducing-push-chain-tokenomics/popularapps.webp": 142189,
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/usecasesmain.webp": 687569,
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/vestingdetailspc.webp": 578757,
 	"./blog/2025-03-18-introducing-push-chain-tokenomics/vestingpc.webp": 803943,
@@ -13223,9 +13236,9 @@ var map = {
 	"./static/assets/website/chain/knowledge/knowledge_tokenomics.webp": 57403,
 	"./static/assets/website/chain/knowledge/push-chain-partners.webp": 996204,
 	"./static/assets/website/chain/knowledge/randomized-parallel.webp": 464487,
-	"./static/assets/website/chain/knowledge/tokenomics/appusecases.webp": 503530,
 	"./static/assets/website/chain/knowledge/tokenomics/consumerusecases.webp": 572371,
 	"./static/assets/website/chain/knowledge/tokenomics/cover-image.webp": 792530,
+	"./static/assets/website/chain/knowledge/tokenomics/popularapps.webp": 457684,
 	"./static/assets/website/chain/knowledge/tokenomics/usecasesmain.webp": 501030,
 	"./static/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp": 974706,
 	"./static/assets/website/chain/knowledge/tokenomics/vestingpc.webp": 573930,
