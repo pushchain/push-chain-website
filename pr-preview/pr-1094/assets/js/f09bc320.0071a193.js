@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[28408],{86140:e=>{e.exports=JSON.parse('{"label":"Web3 Development","permalink":"/push-chain-website/pr-preview/pr-1094/blog/tags/web-3-development","allTagsPath":"/push-chain-website/pr-preview/pr-1094/blog/tags","count":3,"unlisted":false}')}}]);
