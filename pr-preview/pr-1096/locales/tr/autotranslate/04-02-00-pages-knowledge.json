@@ -1,0 +1,78 @@
+{
+  "pages": {
+    "knowledge": {
+      "seo": {
+        "title": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır?",
+        "description": "Push Chain'i kullanmak için kavramlar, sık sorulan sorular, nasıl yapılır kılavuzları ve ekosistem kaynakları için buradan başlayın. Push Chain'i kullanmak için açık, teknik olmayan rehberler.",
+        "og-title": "Push Chain Bilgi Tabanı - Rehberler ve SSS",
+        "og-description": "Push Chain hakkında kavramlar, adım adım nasıl yapılır kılavuzları ve sık sorulan soruların cevapları.",
+        "twitter-title": "Bilgi Bankası - Rehberler ve Sıkça Sorulan Sorular",
+        "twitter-description": "Push Chain için hızlı rehberler, sık sorulan sorular ve teknik olmayan dilde nasıl yapılır açıklamaları."
+      },
+      "hero-section": {
+        "title": "Bilgi Tabanı",
+        "description": {
+          "highlighted": "Push Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış gerçek bir evrensel blok zinciridir.",
+          "developers": "Geliştiriciler",
+          "developers-text": "Tek seferde dağıtın ve anında tüm desteklenen EVM ve non-EVM <transliterate>blockchain</transliterate> ağlarıyla uyumlu olun.",
+          "users": "Kullanıcılar",
+          "users-text": "Zincirlerinden bağımsız olarak gelen kullanıcılar için aynı uygulamayı kullanın."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Push Chain testnet hakkında bildirim alın",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Push Chain testnet'in canlıya geçtiğini ilk bilenlerden olun. Özel güncellemeler için posta listemize katılın."
+        },
+        "footer": {
+          "description": "Push Chain ile uygulamanız için herhangi bir blokcheyn üzerinde kusursuz ve kullanıcı dostu deneyimler yaratın.",
+          "cta": {
+            "text": "Bildirim Al"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "Kaynaklar",
+              "items": {
+                "push101": {
+                  "title": "Push Chain Temelleri",
+                  "subtitle": "Push Chain temelleri, yenilikleri ve neden gerekli olduğunu öğrenin",
+                  "ctatitle": "Daha Fazlasını Keşfet"
+                },
+                "builders": {
+                  "title": "Push Chain üzerinde geliştir",
+                  "subtitle": "Evrensel uygulamaları nasıl oluşturabileceğinizi, bunların neler sunduğunu ve nasıl başlayabileceğinizi keşfedin!",
+                  "ctatitle": "Yaratıcılar Bir Araya Geliyor"
+                },
+                "deepdives": {
+                  "title": "Teknik Derinlemesine İncelemeler",
+                  "subtitle": "Push'in karmaşık çalışma prensiplerini öğrenmek mi istiyorsunuz? Yoksa sadece meraklı bir gezginsiniz? Her durumda, merhaba!",
+                  "ctatitle": "Nasıl Çalıştığını Gör"
+                },
+                "devdocs": {
+                  "title": "Geliştirici Belgeleri",
+                  "subtitle": "Hemen konuya girelim! Ben evrensel bir blockchain'im... ve sen bir geliştiricisin, resmiyet verelim!",
+                  "ctatitle": "Hemen Oluştur"
+                },
+                "tokenomics": {
+                  "title": "Tokenomics'i Keşfet",
+                  "subtitle": "Tokenomiğimizi öğrenin, ağımızı nasıl teşvik ettiğini ve sürdürülebilir bir ağın nasıl inşa edildiğini keşfedin",
+                  "ctatitle": "Token Tasarımını Öğrenin"
+                },
+                "faq": {
+                  "title": "Sıkça Sorulan Sorular",
+                  "subtitle": "Toplulukta en sık sorulan soruların cevaplarını bulabileceğiniz yer",
+                  "ctatitle": "Daha Fazla Bilgi"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

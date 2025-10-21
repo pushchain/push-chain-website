@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[65974],{528141:e=>{e.exports=JSON.parse('{"label":"Yam Finance","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/yam-finance","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":4,"unlisted":false}')}}]);

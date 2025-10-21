@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[18993],{573130:e=>{e.exports=JSON.parse('{"label":"Polygon Network","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/polygon-network","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":4,"unlisted":false}')}}]);

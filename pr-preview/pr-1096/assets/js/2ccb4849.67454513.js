@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[43536],{644558:e=>{e.exports=JSON.parse('{"label":"Cryptocom","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/cryptocom","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":1,"unlisted":false}')}}]);

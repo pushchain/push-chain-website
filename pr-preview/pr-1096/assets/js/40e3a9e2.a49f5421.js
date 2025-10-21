@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[36556],{195132:e=>{e.exports=JSON.parse('{"label":"Latam","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/latam","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":1,"unlisted":false}')}}]);
