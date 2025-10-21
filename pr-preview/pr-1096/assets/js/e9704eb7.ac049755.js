@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[1304],{305730:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/universal-smart-contracts","page":1,"postsPerPage":10,"totalPages":1,"totalCount":5,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

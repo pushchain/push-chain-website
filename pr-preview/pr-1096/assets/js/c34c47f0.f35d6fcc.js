@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[60211],{18527:e=>{e.exports=JSON.parse('{"label":"Hackathons","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/hackathons","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":8,"unlisted":false}')}}]);

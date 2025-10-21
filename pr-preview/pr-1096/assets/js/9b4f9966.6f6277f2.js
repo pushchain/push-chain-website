@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[1930],{648421:e=>{e.exports=JSON.parse('{"label":"Partnerships","permalink":"/push-chain-website/pr-preview/pr-1096/blog/tags/partnerships","allTagsPath":"/push-chain-website/pr-preview/pr-1096/blog/tags","count":27,"unlisted":false}')}}]);
