@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "Deep Dives — Conceitos & Arquitetura",
+          "description": "Explicações fáceis de entender sobre shared state, fee abstraction, USV/UEA e o universal execution layer.",
+          "og-title": "Mergulhos Profundos - Conceitos & Arquitetura",
+          "og-description": "Artigos aprofundados sobre os módulos do Push Chain, decisões de design e desempenho.",
+          "twitter-title": "Deep Dives - Por dentro",
+          "twitter-description": "Explicações sobre como a Push Chain funciona."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Base de Conhecimento"
+          },
+          "blocks": {
+            "title": "Mergulhos Profundos",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Mergulhos Profundos na Arquitetura\n\nSaiba mais sobre as complexidades da arquitetura da Push Chain e como ela funciona - Um módulo de cada vez.",
+                  "curated-reads": "## Leituras Selecionadas 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Descubra o que faz o Push Chain funcionar!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "Interop como um Espectro"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Entendendo Proof of Stake (POS) - Parte 1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
