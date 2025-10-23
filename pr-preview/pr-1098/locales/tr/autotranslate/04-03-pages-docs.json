@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Belgeler — Evrensel Uygulamalar Oluşturun",
+        "description": "Push Chain'de yayınlamak için ihtiyacınız olan her şey: hızlı başlangıçlar, SDK'lar, API referansı, örnekler ve düğüm kurulumu.",
+        "og-title": "Push Chain Docs - Hızlı Başlangıçlar, SDK'lar ve API",
+        "og-description": "Evrensel yürütme katmanında net rehberler ve örneklerle uygulamalar oluşturun ve çalıştırın.",
+        "twitter-title": "Push Chain Docs - Şimdi Oluştur",
+        "twitter-description": "Hızlı başlangıçlar, SDK'lar, API referansı ve hızlı bir şekilde yayınlamak için örnekler."
+      },
+      "header": {
+        "countdown-title": "Testnet Belgeleri Yakında Yayınlanacak",
+        "description": "Sshh... Push Chain Testnet - Donut hakkında gizli bir ön izleme ister misin? DoraHacks'taki Project G.U.D Deployathon'umuza kaydolarak gizli önizleme sürümüne erişebilirsin.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Frequently asked questions about Push Chain - Universal Blockchain",
+      "title": "Frequently\nAsked\nQuestions",
+      "title-aria-label": "Common questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive Push Chain FAQ documentation and developer guides",
+      "explore-more-aria-label": "Navigate to complete Push Chain FAQ page",
+      "accordion-aria-label": "Push Chain frequently asked questions list",
+      "answer-aria-label": "Answer to the question - ",
+      "qnas": {
+        "qna1": {
+          "question": "What is Push Chain?",
+          "answer": "<1>Push Chain is a shared-state blockchain that <2>eliminates fragmentation and makes apps universal</2>.</1><1>Deploy once on Push. Users on any chain — EVM or non-EVM — use your app with their existing wallets and tokens; fees are handled under the hood.</1>"
+        },
+        "qna2": {
+          "question": "How it works? (ELI5)",
+          "answer": "<1>Use the wallet you already have — Push handles the cross-chain bits behind the scenes.</1><1>1. <2>Start anywhere.</2> Use any wallet on any chain — no network switching.</1><1>2. <2>Sign once.</2> Pay with a token you already hold; we set aside the fee on your home chain.</1><1>3. <2>We route it.</2> A linked account on Push (still yours) forwards your call to the app — non-custodial.</1><1>4. <2>You're always you.</2> We match your home-chain wallet to your linked account so actions are correctly verified and attributed to you on Push.</1><1>5. <2>Done fast.</2> The app runs on Push; fees are handled under the hood. No bridges, no new wallet.</1><1>This is how users on any chain can use the same app deployed on Push Chain — making apps truly universal.</1>"
+        },
+        "qna3": {
+          "question": "Do I need a different wallet or gas token?",
+          "answer": "<1><2>No.</2></1><1><2>Keep your wallet.</2> Use the wallet you already have — no new wallet or account.</1><1><2>Pay in what you hold.</2> Fees can be paid in the tokens you already have on your home chain; we handle conversion behind the scenes.</1><1><2>No network switching.</2> Stay on your home chain — no bridging just to get a gas token.</1><1><2>Non-custodial.</2> You sign every action; Push never holds your keys.</1><1><2>Under the hood.</2> The network settles fees in $PC automatically — you don't need to manage it.</1>"
+        },
+        "qna4": {
+          "question": "How is this different from bridges or messaging layers?",
+          "answer": "<1><2>Short Answer</2>: Push is where your app runs. Bridges/messaging just move tokens or messages between chains which complicates everything for the user and developers.</1><1><2>Single home vs many clones.</2> With bridges/messaging you deploy per chain and sync via messages. On Push you deploy once; everyone hits the same contract and shared state.</1><1><2>No wrapped assets or mandatory bridging.</2> Users stay on their home chain and pay with what they already hold; we handle routing and fee conversion under the hood.</1><1><2>Unified identity & verification.</2> We accept signatures from any wallet/chain and attribute them to the same user on Push — non-custodial.</1><1><2>Fewer moving parts.</2> No cross-chain approval dance, no gas-token hunting, no glue contracts to keep in sync.</1><1><2>Use bridges when you want, not because you must.</2> Liquidity can still move via bridges, but interacting with your app doesn't require it.</1><1>Result: simpler apps, one source of truth, and a UX that feels like one chain — even when users aren't.</1>"
+        },
+        "qna5": {
+          "question": "Is it EVM-only? Which chains are supported?",
+          "answer": "<1><2>No, Push supports both EVM and non-EVM chains.</2> Though it is EVM-first for deployment, users from any chains (including non-EVM) can use your app as if they are using it natively.</1>\n<1><2>Deploy once. Interop everywhere.</2> Write and deploy standard EVM contracts on Push (Solidity/Vyper). Tooling stays the same.</1>\n<1><2>Users from any chain.</2> Ethereum and major EVM L2s work natively. Non-EVM users (e.g., Solana) sign with their home wallets; we verify and route under the hood — no network switching.</1>\n<1><2>Supported today.</2> See the live list of supported chains → <3>Supported Chains</3>.</1><1><2>Expanding coverage.</2> We're adding more chains constantly. If you want to request any chain, please <4>contact us</4>.</1>",
+          "supported-urls-title": "List of all chains supported by Push Chain.",
+          "contact-url-title": "Contact us for adding new chains."
+        },
+        "qna6": {
+          "question": "How fast is it and what do fees look like?",
+          "answer": "<1><2>Speed.</2> Designed for ~1–2s confirmations with fast UX feedback. Check live metrics on <3>🍩 Donut Testnet</3>.</1><1><2>Fee model.</2> You see the fee in the token you choose to pay; the network settles in $PC under the hood.</1><1><2>Typical costs.</2> Typical fees is less than <2>$0.001</2> per transaction. though, it varies by contract complexity, price of the token and network load. You get an exact quote before you sign.</1>",
+          "donut-testnet-title": "Check out stats of Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

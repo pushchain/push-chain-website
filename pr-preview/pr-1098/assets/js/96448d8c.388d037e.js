@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[78141],{190010:e=>{e.exports=JSON.parse('{"label":"Matic Network","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/matic-network","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);

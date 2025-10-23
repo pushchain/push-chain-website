@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[67016],{378550:e=>{e.exports=JSON.parse('{"label":"Closed Beta","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/closed-beta","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);

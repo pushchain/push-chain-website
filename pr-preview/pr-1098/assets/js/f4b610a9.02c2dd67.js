@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[71416],{306879:e=>{e.exports=JSON.parse('{"label":"Push Tokenomics","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/push-tokenomics","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);

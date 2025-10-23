@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[10860],{726791:e=>{e.exports=JSON.parse('{"label":"Bounty Program","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/bounty-program","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":5,"unlisted":false}')}}]);
