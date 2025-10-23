@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[77926],{105717:e=>{e.exports=JSON.parse('{"label":"Web3 Communication","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/web-3-communication","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":2,"unlisted":false}')}}]);

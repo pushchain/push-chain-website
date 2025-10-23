@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[34597],{10721:e=>{e.exports=JSON.parse('{"label":"Software Development","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/software-development","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);

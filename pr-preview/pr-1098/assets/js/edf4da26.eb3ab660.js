@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[19891],{340808:e=>{e.exports=JSON.parse('{"label":"Immuenfi","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/immuenfi","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);

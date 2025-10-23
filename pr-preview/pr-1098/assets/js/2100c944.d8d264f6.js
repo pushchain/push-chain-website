@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[65068],{166319:e=>{e.exports=JSON.parse('{"label":"Testnet","permalink":"/push-chain-website/pr-preview/pr-1098/blog/tags/testnet","allTagsPath":"/push-chain-website/pr-preview/pr-1098/blog/tags","count":1,"unlisted":false}')}}]);
