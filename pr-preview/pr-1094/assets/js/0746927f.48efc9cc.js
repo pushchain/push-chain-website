@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[1240],{549571:e=>{e.exports=JSON.parse('{"label":"Blockchain Development","permalink":"/push-chain-website/pr-preview/pr-1094/blog/tags/blockchain-development","allTagsPath":"/push-chain-website/pr-preview/pr-1094/blog/tags","count":17,"unlisted":false}')}}]);

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[30219],{88430:e=>{e.exports=JSON.parse('{"label":"Delegation","permalink":"/push-chain-website/pr-preview/pr-1094/blog/tags/delegation","allTagsPath":"/push-chain-website/pr-preview/pr-1094/blog/tags","count":2,"unlisted":false}')}}]);
