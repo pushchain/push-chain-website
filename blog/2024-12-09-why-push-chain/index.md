@@ -13,7 +13,7 @@ tags:
     Universal Smart Contracts,
     Shared State Blockchain,
   ]
-  twitterId: '1869392237379092482'
+twitterId: '1869392237379092482'
 ---
 
 ![Cover Image of Why Push Chain](./cover-image.webp)

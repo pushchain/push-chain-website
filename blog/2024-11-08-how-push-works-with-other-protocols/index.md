@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: 'Ecosystem Integrations: How Push Works with Other Protocols'
 text: 'As the web3 ecosystem expands, seamless communication and timely information flow have become essential for effective user engagement and enhanced user experience.'
 tags: [Technical, Push Tech]
-  twitterId: '1854936924282405256'
+twitterId: '1854936924282405256'
 ---
 
 ![Cover Image of Ecosystem Integrations: How Push Works with Other Protocols](./cover-image.webp)

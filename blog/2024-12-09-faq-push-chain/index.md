@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: 'Push Chain’s Frequently Asked Questions'
 text: 'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.'
 tags: [Push Chain, Shared App Experience, Community & Ecosystem, Tokenomics]
-  twitterId: '1869789799810277800'
+twitterId: '1869789799810277800'
 ---
 
 ![Cover Image of Push Chain’s Frequently Asked Questions](./cover-image.webp)

@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: 'Understand Proof of Stake (POS) - Part 1'
 text: 'In a globally distributed computing environment, achieving collective agreement on the true state of the system has always been a complex challenge. Proof of Stake is a modern take on solving this problem.'
 tags: [Push Chain, Proof of Stake, Push Chain Nodes, Insights]
-  twitterId: '1876998342112059691'
+twitterId: '1876998342112059691'
 ---
 
 ![Cover Image of Understand Proof of Stake (POS)](./cover-image.webp)

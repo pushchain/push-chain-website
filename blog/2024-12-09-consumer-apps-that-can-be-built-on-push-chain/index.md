@@ -8,7 +8,7 @@ text: 'Web 3 is growing at lightning speed!
 Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!!
 While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal'
 tags: [Push Chain, Universal Apps, Shared App Experience, Consumer Crypto, Community & Ecosystem]
-  twitterId: '1881607795570860403'
+twitterId: '1881607795570860403'
 ---
 
 ![Cover Image of Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain](./cover-image.webp)
