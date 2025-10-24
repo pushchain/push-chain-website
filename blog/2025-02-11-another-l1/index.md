@@ -34,7 +34,7 @@ Let's find out how..
 
 ## Don't we have enough L1s, L2s already?
 
-Yes, crypto has tens of layer 1s, hundreds of layer 2s, and - who knows - maybe thousands of layer 3s in the near future!  
+Yes, crypto has tens of layer 1s, hundreds of layer 2s, and - who knows - maybe thousands of layer 3s in the near future!
 But what it didn't have was a means to unify all of these amazing chains together - and that's exactly what Push chain does.
 
 **Push is not just another silo** - it's a universal chain that unites every existing and forthcoming chain together (under one roof). It is a shared-state L1 blockchain designed to function as a universal settlement layer for users across any chain, wallet, and app.
@@ -60,7 +60,7 @@ Push Chain introduces Universal Apps that can:
 ![Simple app vs cross-chain app](./image1-1.webp)
 ![Universal app](./image1-2.webp)
 
-_Want to build a universal app? Or make your existing Dapp universal?_  
+_Want to build a universal app? Or make your existing Dapp universal?_
 _Check out [Push Chain Docs](/docs)._
 
 ## Is Push Chain EVM compatible? SVM compatible? Or Move compatible?
@@ -134,8 +134,8 @@ _Push Chain will soon, also support all other L1 chains (be it Move-based or any
 
 Web2 native users or users with no active wallets can always interact with apps deployed on Push Chain - because of its inbuilt wallet abstraction support.
 
-Any user can :  
- -> Login using their web2 socials (email, google account) OR  
+Any user can :
+ -> Login using their web2 socials (email, google account) OR
  -> Existing wallets (Phantom, Metamask, Rabbi etc)
 
 **Note**: As we unlock support to more Layer 1s - you'll only be required to upgrade the package of the wallet abstraction frontend component. No more complex chain integration nightmares ;)

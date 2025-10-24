@@ -74,22 +74,22 @@ It offers a new paradigm of web3 that works from **Any Chain.** For **Any Wallet
 
 Push Chain is a Proof-of-Stake Layer 1 designed to eliminate fragmentation across every blockchain. Under the hood, it combines several key innovations:
 
-- **True Universal Chain**  
+- **True Universal Chain**
   Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.
 
-- **Universal Fee & Wallet Abstraction**  
+- **Universal Fee & Wallet Abstraction**
   Allows users to interact with the app from any chain without worrying about gas or wallet mechanics.
 
-- **Single transaction for any chain**  
+- **Single transaction for any chain**
   Users only ever sign a single transaction, no matter from what chain they are interacting from.
 
-- **Universal Smart Contracts**  
+- **Universal Smart Contracts**
   100% EVM compatible smart contracts that can be deployed with **zero on-chain code changes**. Once deployed, they become instantly compatible with users of all chains.
 
-- **Universal EVM**  
+- **Universal EVM**
   Push Chain is smart enough to natively recognize users of other chains and correctly attributes and maps the transactions to them.
 
-- **Shared State and Programmable Solvers**  
+- **Shared State and Programmable Solvers**
   (Roadmap) Enables smart contracts of Push Chain to read and write state to any other chain.
 
 Together, these features let you build **universal web3 apps**. Instead of “Uniswap on Ethereum” or “Uniswap on Polygon,” a user simply becomes **user of Uniswap**—period.
@@ -98,19 +98,19 @@ Together, these features let you build **universal web3 apps**. Instead of “Un
 
 ### What problems does Push Chain solve?
 
-- **Fragmentation**  
+- **Fragmentation**
   Unites EVM & non-EVM chains under one shared-state L1, so users never need to hop networks or wallets.
 
-- **Interoperability**  
+- **Interoperability**
   Native support for transactions from any blockchain and on-chain shared state.
 
-- **Finality**  
+- **Finality**
   Instant, irreversible native finality in ~1–2 seconds—no more waiting or reorgs.
 
-- **Onboarding & UX**  
+- **Onboarding & UX**
   Social/email login, gas-in-any-token & any-wallet support for zero-friction access across chains.
 
-- **Universal Apps**  
+- **Universal Apps**
   Build once, deploy everywhere — any web3 app works seamlessly for any user on any chain.
 
 ---
@@ -143,16 +143,16 @@ Builders can also check out the [Documentation Hub](/docs/) to get started.
 
 Push Chain is built to serve as a **shared settlement layer** and **universal execution layer** for all other blockchains—roles that only a standalone L1 can fulfill:
 
-- **Native Cross-Chain Settlement**  
+- **Native Cross-Chain Settlement**
   As an L1, Push Chain can directly finalize transactions from any chain without relying on a separate security or fraud-proof model.
 
-- **Universal Execution & State Access**  
+- **Universal Execution & State Access**
   Running its own consensus and state machine lets Push Chain interpret and execute transactions from Ethereum, Solana, and beyond—something an L2 (tied to a single base layer) cannot do natively.
 
-- **No L2 Constraints or Delays**  
+- **No L2 Constraints or Delays**
   L2s inherit the latency, finality rules, and gas model of their host chain (plus bridging overhead). Push Chain avoids those bottlenecks by offering instant finality and fee abstraction on its own.
 
-- **True Shared State**  
+- **True Shared State**
   To read & write the state of multiple chains within smart contracts, you need direct, protocol-level access—only available at the L1 layer.
 
 In short, only a purpose-built L1 can unify every chain under one cohesive execution and settlement layer without introducing extra complexity or trust assumptions.
@@ -169,10 +169,10 @@ Absolutely! Push Chain is fully EVM compatible. You can deploy any EVM smart con
 
 Yes! Push Chain is built to bridge every blockchain paradigm.
 
-- **EVM Compatibility**  
+- **EVM Compatibility**
   Drop in your Solidity contracts and they run unchanged, leveraging Push Chain’s EVM runtime.
 
-- **Non-EVM Support**  
+- **Non-EVM Support**
   Native precompiles (USV/UTXV) and the universal address standard let Push Chain validate and execute transactions from Solana, Bitcoin, Cosmos SDK chains, and more.
 
 In practice, users and apps from any chain can interact with Push Chain apps seamlessly — no matter the underlying VM.
@@ -183,16 +183,16 @@ In practice, users and apps from any chain can interact with Push Chain apps sea
 
 Push Chain fills critical gaps that today’s blockchains, despite being robust, don’t address:
 
-- **Interoperability**  
+- **Interoperability**
   Existing networks operate in silos, making cross-chain data and asset transfers cumbersome.
 
-- **Zero-Friction UX**  
+- **Zero-Friction UX**
   Forget switching wallets or buying chain-specific gas. Social/email login + pay-with-any-token means users jump straight into apps without any onboarding hurdles.
 
-- **Shared App Experience**  
+- **Shared App Experience**
   With every user on the same Push Chain, your app feels like one cohesive product, not a patchwork of “Uniswap on X” or “Uniswap on Y”.
 
-- **Universal Execution Layer**  
+- **Universal Execution Layer**
   No single chain today can natively run transactions and smart contracts that support users from any chain.
 
 Push Chain is designed as a **shared-state L1 for universal applications**, unifying state and execution across EVM and non-EVM ecosystems. **The result?** Seamless cross-chain interactions and truly universal apps that any user on any chain can access without friction.
@@ -243,19 +243,19 @@ Together, these features turn Push Chain into a **shared-state L1** that enables
 
 Today’s so-called “universal” solutions still rely on bridges, wants double transactions or centralized relayers to move data and value. Push Chain is different—it’s the first **true** universal L1 that:
 
-- **Unifies users across chains**  
+- **Unifies users across chains**
   Every blockchain address is natively supported. Wallets like MetaMask, Phantom, etc are all compatible with Push Chain. Gas is paid in any token on any chain.
 
-- **Acts as a universal execution layer**  
+- **Acts as a universal execution layer**
   All transactions finalize on the same chain, ensuring everyone interacts with the same app—no hacks, no workarounds.
 
-- **Correctly attributes & executes any chain’s transactions**  
+- **Correctly attributes & executes any chain’s transactions**
   Transactions are signed, verified and attributed to the wallet on the source chain. A True universal chain supports all!
 
-- **Single Transaction for any chain**  
+- **Single Transaction for any chain**
   Users sign just one transaction, regardless of their source chain.
 
-- **Requires just one deployment**  
+- **Requires just one deployment**
   Deploy your EVM contract one time with no code changes and everything else just magically works.
 
 Together, these innovations make Push Chain the only blockchain offering **true protocol-level interoperability**—no bridges, no relayers, no fragmentation. Just one universal chain for all.
@@ -266,16 +266,16 @@ Together, these innovations make Push Chain the only blockchain offering **true 
 
 A **true universal chain** is a blockchain that treats every other network as first class citizens—no bridges, no centralized relayers, and no compatibility hacks. It delivers:
 
-1. **Native Multichain Identity**  
+1. **Native Multichain Identity**
    Wallets from Ethereum, Solana, any EVM or non-EVM chains all sign, verify and execute natively on Push Chain. So users never switch accounts or are troubled by the complexities of multiple wallets.
 
-2. **Unified Settlement**  
+2. **Unified Settlement**
    Transactions from any network finalize on Push Chain, giving everyone a single source of truth and enabling same app to be accessible by users of all chains.
 
-3. **Single Transaction and Universal Fee Abstraction**  
+3. **Single Transaction and Universal Fee Abstraction**
    Users sign just one transaction, regardless of their source chain and pay gas in any token. No more maintaining or swapping countless tokens to use an app.
 
-4. **Deploy Once, Use Everywhere**  
+4. **Deploy Once, Use Everywhere**
    Developers write and deploy smart contracts once (EVM or otherwise) with **zero** extra code — one deployment covers all chains.
 
 Push Chain is the first to bake these features directly into its consensus and runtime, truly eliminating fragmentation — no workarounds, no extra layers, just one universal chain for everyone.
@@ -374,27 +374,27 @@ Early adopters are also encouraged to take part in points program to earn reward
 
 #### For Developers
 
-- **Deploy Once, 10× Your Reach**  
+- **Deploy Once, 10× Your Reach**
   Deploy your App a single time — no code changes — and it runs on every supported chain, even non-EVM networks.
 
-- **Audit-Friendly, 100% EVM Compatible**  
+- **Audit-Friendly, 100% EVM Compatible**
   Leverage existing Solidity contracts without extra audits or rewrites—focus your budget on features, not infrastructure.
 
-- **Unified, Frictionless UX**  
+- **Unified, Frictionless UX**
   Users sign one transaction, pay in any token, and interact via any wallet — your app just works everywhere.
 
-- **Lightning-Fast DX**  
+- **Lightning-Fast DX**
   Spin up with our SDKs, virtual editors, and React playgrounds; go from zero to live in minutes.
 
 #### For Users
 
-- **One-Click Onboarding**  
+- **One-Click Onboarding**
   Login with email, social, or any existing wallet — no more seed phrases or chain-hopping.
 
-- **Seamless Interactions**  
+- **Seamless Interactions**
   Gas, wallet, and chain complexities are hidden — enjoy apps as if they were native to your network.
 
-- **We're Fast**  
+- **We're Fast**
   Transactions finalize in 1-2 seconds, feels like native to the chain you are on.
 
 ---

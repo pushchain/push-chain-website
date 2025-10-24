@@ -5,15 +5,8 @@ description: 'Welcome on board, Sandeep'
 authors: [push]
 image: './cover-image.webp'
 text: "We at EPNS are thrilled to announce that Sandeep Nailwal, Co-Founder of Polygon will be joining EPNS as an Advisor."
-tags: [ Annoucements
-,Advisor
-,Polygon
-,Ethereum
-,Blockchain
-]
+tags: [ Annoucements, Advisor, Polygon, Ethereum, Blockchain ]
 ---
-
-import { ImageText } from '@site/src/css/SharedStyling';
 
 ![Cover Image of Welcome on board, Sandeep](./cover-image.webp)
 
