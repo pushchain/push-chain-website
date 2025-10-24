@@ -119,7 +119,7 @@ function MDXProvider(properties) {
 /***/ 379586:
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1100/blog/welcome-on-board-sandeep","source":"@site/blog/2021-07-13-welcome-on-board-sandeep/index.md","title":"Welcome on board, Sandeep","description":"Welcome on board, Sandeep","date":"2021-07-13T00:00:00.000Z","tags":[{"inline":true,"label":"Annoucements","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/annoucements"},{"inline":true,"label":"Advisor","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/advisor"},{"inline":true,"label":"Polygon","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/polygon"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/ethereum"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/blockchain"}],"readingTime":1.2,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1100/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1100/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"welcome-on-board-sandeep","title":"Welcome on board, Sandeep","description":"Welcome on board, Sandeep","authors":["push"],"image":"./cover-image.webp","text":"We at EPNS are thrilled to announce that Sandeep Nailwal, Co-Founder of Polygon will be joining EPNS as an Advisor.","tags":["Annoucements","Advisor","Polygon","Ethereum","Blockchain"]},"unlisted":false,"prevItem":{"title":"EPNS Push Notifications Arrive at DeFi on Oasis.app","permalink":"/push-chain-website/pr-preview/pr-1100/blog/epns-push-notifications-arrive-at-defi"},"nextItem":{"title":"TrueFi Taking DeFi to New Horizons with EPNS","permalink":"/push-chain-website/pr-preview/pr-1100/blog/truefi-taking-defi-to-new"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1100/blog/welcome-on-board-sandeep","source":"@site/blog/2021-07-13-welcome-on-board-sandeep/index.md","title":"Welcome on board, Sandeep","description":"Welcome on board, Sandeep","date":"2021-07-13T00:00:00.000Z","tags":[{"inline":true,"label":"Annoucements","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/annoucements"},{"inline":true,"label":"Advisor","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/advisor"},{"inline":true,"label":"Polygon","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/polygon"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/ethereum"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1100/blog/tags/blockchain"}],"readingTime":1.18,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1100/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1100/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"welcome-on-board-sandeep","title":"Welcome on board, Sandeep","description":"Welcome on board, Sandeep","authors":["push"],"image":"./cover-image.webp","text":"We at EPNS are thrilled to announce that Sandeep Nailwal, Co-Founder of Polygon will be joining EPNS as an Advisor.","tags":["Annoucements","Advisor","Polygon","Ethereum","Blockchain"]},"unlisted":false,"prevItem":{"title":"EPNS Push Notifications Arrive at DeFi on Oasis.app","permalink":"/push-chain-website/pr-preview/pr-1100/blog/epns-push-notifications-arrive-at-defi"},"nextItem":{"title":"TrueFi Taking DeFi to New Horizons with EPNS","permalink":"/push-chain-website/pr-preview/pr-1100/blog/truefi-taking-defi-to-new"}}');
 
 /***/ }),
 
@@ -138,7 +138,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_07_13_welcome_on_board_sandeep_index_md_521_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(379586);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
@@ -164,7 +163,6 @@ const assets = {
 "image": (__webpack_require__(15920)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
-
 
 
 
