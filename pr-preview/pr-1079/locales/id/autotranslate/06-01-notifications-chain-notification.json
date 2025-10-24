@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Dapatkan intip tesnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
+      "button-text": "Klaim Kartu Akses Beta Tertutup",
+      "button-title": "Bergabunglah dengan testnet Push Chain dan klaim akses beta tertutupmu",
+      "button-aria-label": "Buka Telegram untuk klaim Push Chain closed beta pass",
+      "image-alt": "Push Chain Testnet Donut - युनिव्हर्सल ब्लॉकचेन",
+      "close-button-title": "Tutup notifikasi testnet",
+      "close-button-aria-label": "Tutup notifikasi Push Chain testnet",
+      "container-aria-label": "Push Chain testnet notification"
+    }
+  }
+}

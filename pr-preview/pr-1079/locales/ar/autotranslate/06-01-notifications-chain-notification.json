@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "احصل على نظرة خاطفة إلى شبكة الاختبار Donut، وابنِ تطبيقات عالمية واربح جوائز!",
+      "button-text": "احصل على بطاقة الدخول للإصدار التجريبي المغلق",
+      "button-title": "انضم إلى اختبار شبكة Push Chain واحصل على بطاقة المرور الخاصة بالإصدار التجريبي المغلق",
+      "button-aria-label": "افتح Telegram للحصول على مرور النسخة التجريبية المغلقة من Push Chain",
+      "image-alt": "Push Chain Testnet Donut - بلوكشين يونيفرسال",
+      "close-button-title": "إغلاق إشعار testnet",
+      "close-button-aria-label": "إغلاق إشعار اختبار شبكة Push Chain",
+      "container-aria-label": "إشعارات Push Chain testnet"
+    }
+  }
+}

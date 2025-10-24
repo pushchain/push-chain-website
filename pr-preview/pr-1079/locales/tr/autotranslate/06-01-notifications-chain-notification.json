@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Testnet, Donut'ı keşfedin, evrensel uygulamalar oluşturun ve ödüller kazanın!",
+      "button-text": "Kapalı Beta Pass'ı Talep Et",
+      "button-title": "Push Chain testnet'e katılın ve kapalı beta geçişinizi alın",
+      "button-aria-label": "Telegram'ı açarak Push Chain kapalı beta geçiş hakkını talep et",
+      "image-alt": "Push Chain Testnet Donut - యూనివర్சல் બ્લોકચેન",
+      "close-button-title": "testnet bildirimini kapat",
+      "close-button-aria-label": "Push Chain testnet bildirimini kapat",
+      "container-aria-label": "Push Chain testnet bildirimi"
+    }
+  }
+}
