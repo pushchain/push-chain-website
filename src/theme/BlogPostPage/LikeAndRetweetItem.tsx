@@ -16,7 +16,7 @@ import { formatTwitterCount } from '@site/src/utils/FormatTwitterCount';
 
 const LikeAndRetweetItem = ({ twitterId, text }) => {
   const isMobile = useMediaQuery(device.tablet);
-  const { data: twitterData } = useTweetMetrics(twitterID);
+  const { data: twitterData } = useTweetMetrics(twitterId);
 
   if (!twitterData) return null;
 
