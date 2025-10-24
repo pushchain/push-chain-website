@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[50700],{119108:e=>{e.exports=JSON.parse('{"label":"Opensea","permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/opensea","allTagsPath":"/push-chain-website/pr-preview/pr-1102/blog/tags","count":1,"unlisted":false}')}}]);

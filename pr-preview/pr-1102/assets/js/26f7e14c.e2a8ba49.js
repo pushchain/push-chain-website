@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[73991],{918193:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/pushnotification","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

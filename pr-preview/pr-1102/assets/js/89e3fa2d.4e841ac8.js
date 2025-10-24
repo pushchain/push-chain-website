@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[1003],{752526:e=>{e.exports=JSON.parse('{"label":"Monthly Recap","permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/monthly-recap","allTagsPath":"/push-chain-website/pr-preview/pr-1102/blog/tags","count":1,"unlisted":false}')}}]);

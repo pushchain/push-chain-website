@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[70627],{992628:e=>{e.exports=JSON.parse('{"label":"Insurance","permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/insurance","allTagsPath":"/push-chain-website/pr-preview/pr-1102/blog/tags","count":1,"unlisted":false}')}}]);

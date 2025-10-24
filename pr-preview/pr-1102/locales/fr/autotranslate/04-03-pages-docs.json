@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Documentation — Construire des applications universelles",
+        "description": "Tout ce dont vous avez besoin pour lancer votre projet sur Push Chain : guides de démarrage rapide, SDKs, documentation de l'API, exemples et configuration des nœuds.",
+        "og-title": "Push Chain Docs - Démarrages rapides, SDKs & API",
+        "og-description": "Construisez et exécutez des apps sur la universal execution layer avec des guides et des exemples clairs.",
+        "twitter-title": "Push Chain Docs - Construisez maintenant",
+        "twitter-description": "Démarrages rapides, SDK, références API et exemples pour lancer votre projet rapidement."
+      },
+      "header": {
+        "countdown-title": "Documentation Testnet Bientôt Disponible",
+        "description": "Pssst… envie d'un aperçu de Push Chain Testnet - Donut? Vous pouvez accéder à la version de prévisualisation secrète en vous inscrivant à notre Project G.U.D Deployathon sur DoraHacks.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
+      }
+    }
+  }
+}

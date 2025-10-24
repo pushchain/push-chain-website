@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[49010],{832780:e=>{e.exports=JSON.parse('{"label":"Blockhain Development","permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/blockhain-development","allTagsPath":"/push-chain-website/pr-preview/pr-1102/blog/tags","count":1,"unlisted":false}')}}]);

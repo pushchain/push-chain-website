@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[49178],{831830:e=>{e.exports=JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1102/blog/tags/gaming","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

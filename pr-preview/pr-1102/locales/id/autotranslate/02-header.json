@@ -1,0 +1,114 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Navigasi ke halaman utama",
+      "language-icon-alt": "Ikon pemilihan bahasa",
+      "hamburger-menu-alt": "Buka menu navigasi",
+      "testnet-badge-alt": "Push Chain Testnet Donut - Lihat status testnet"
+    },
+    "logo": {
+      "imagealt": "Gambar Logo Push Chain",
+      "imagetitle": "Logo Push Chain",
+      "ctatitle": "Arahkan ke beranda Push Chain"
+    },
+    "testnet": {
+      "title": "Testnet",
+      "aria-label": "Bagian testnet",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "ब्लॉकचेन के लिए ब्लॉक एक्सप्लोरर",
+        "title": "Jelajahi transaksi dan blok di Push Chain testnet di Push Scan"
+      },
+      "link2": {
+        "text": "Kran",
+        "subtext": "Dapatkan token testnet",
+        "title": "Dapatkan token testnet gratis untuk pengembangan Push Chain"
+      }
+    },
+    "developers": {
+      "title": "Pengembang",
+      "aria-label": "Bagian Pengembang",
+      "link1": {
+        "text": "Mulai",
+        "subtext": "Pengantar membangun di Push Chain",
+        "title": "Mulai membangun aplikasi universal di Push Chain - Dokumentasi Pengembang"
+      },
+      "link2": {
+        "text": "Mulai Cepat",
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Panduan cepat memulai - Atur lingkungan pengembangan Push Chain secara instan"
+      },
+      "link3": {
+        "text": "Tutorial",
+        "subtext": "Panduan langkah-demi-langkah untuk membangun dengan Push",
+        "title": "Belajar dengan tutorial praktis - Bangun aplikasi universal pertama Anda di Push Chain"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "Lihat kode inti dan alat sumber terbuka",
+        "title": "Jelajahi kode sumber dan alat pengembangan Push Chain di GitHub"
+      },
+      "link5": {
+        "text": "Discord Pengembang",
+        "subtext": "Bergabung dengan komunitas pengembang",
+        "title": "Bergabunglah dengan komunitas pengembang Push Chain di Discord untuk dukungan dan kolaborasi"
+      }
+    },
+    "community": {
+      "title": "Komunitas",
+      "aria-label": "Bagian Komunitas",
+      "link1": {
+        "text": "Basis Pengetahuan",
+        "subtext": "Temukan pembahasan mendalam tentang fitur",
+        "title": "Jelajahi dokumentasi lengkap Push Chain dan panduan fitur"
+      },
+      "link2": {
+        "text": "Tokenomik",
+        "subtext": "टोकन asli yang menggerakkan segalanya di Push Chain",
+        "title": "Pelajari tentang tokenomics Push Chain dan kegunaan token $PC"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "Ikuti perkembangan terbaru dan berita ekosistem",
+        "title": "Ikuti Push Chain di X (Twitter) untuk update dan pengumuman terbaru"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "Ngobrol, membangun, dan seru-seruan bersama komunitas",
+        "title": "Bergabunglah dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "Bergabunglah dengan diskusi dan tetap terhubung",
+        "title": "Bergabunglah dengan komunitas Push Chain di Telegram untuk mendapatkan pembaruan secara langsung"
+      }
+    },
+    "resources": {
+      "title": "Sumber Daya",
+      "aria-label": "Bagian Sumber Daya",
+      "link1": {
+        "text": "Blog",
+        "subtext": "Pembaruan, pembahasan mendalam, dan cerita dari pengembang",
+        "title": "Baca blog Push Chain untuk pembaruan terbaru, pembahasan teknis mendalam, dan cerita dari pengembang"
+      },
+      "link2": {
+        "text": "Litepaper",
+        "subtext": "Visi dan teknologinya, disederhanakan",
+        "title": "Baca Whitepaper Ringan Push Chain - visi sederhana dan tinjauan teknis"
+      },
+      "link3": {
+        "text": "FAQ",
+        "subtext": "Jawaban cepat untuk pertanyaan umum",
+        "title": "Telusuri pertanyaan yang sering diajukan tentang Push Chain"
+      }
+    },
+    "language": {
+      "title": "Bahasa",
+      "aria-label": "Pilihan Bahasa"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Akses Push Portal - Dapatkan poin sebagai developer, user, atau validator"
+    }
+  }
+}
