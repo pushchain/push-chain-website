@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[75597],{137132:e=>{e.exports=JSON.parse('{"label":"Eip 1559","permalink":"/push-chain-website/pr-preview/pr-1103/blog/tags/eip-1559","allTagsPath":"/push-chain-website/pr-preview/pr-1103/blog/tags","count":1,"unlisted":false}')}}]);

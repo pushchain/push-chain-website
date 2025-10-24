@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[19712],{60171:e=>{e.exports=JSON.parse('{"label":"Web3 UX","permalink":"/push-chain-website/pr-preview/pr-1103/blog/tags/web-3-ux","allTagsPath":"/push-chain-website/pr-preview/pr-1103/blog/tags","count":2,"unlisted":false}')}}]);
