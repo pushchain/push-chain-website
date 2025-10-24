@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[97503],{522775:e=>{e.exports=JSON.parse('{"label":"Zebpay","permalink":"/push-chain-website/pr-preview/pr-1103/blog/tags/zebpay","allTagsPath":"/push-chain-website/pr-preview/pr-1103/blog/tags","count":1,"unlisted":false}')}}]);

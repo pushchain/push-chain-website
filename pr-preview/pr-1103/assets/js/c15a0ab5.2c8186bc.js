@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[36255],{663960:e=>{e.exports=JSON.parse('{"label":"Donut Testnet","permalink":"/push-chain-website/pr-preview/pr-1103/blog/tags/donut-testnet","allTagsPath":"/push-chain-website/pr-preview/pr-1103/blog/tags","count":2,"unlisted":false}')}}]);
