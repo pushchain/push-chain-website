@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Documentação — Crie Apps Universais",
+        "description": "Tudo o que você precisa para lançar na Push Chain: guias rápidos, SDKs, referência da API, exemplos e configuração de nós.",
+        "og-title": "Push Chain Docs - Guias rápidos, SDKs e API",
+        "og-description": "Construa e execute apps na universal execution layer com guias e exemplos claros.",
+        "twitter-title": "Push Chain Docs - Comece a construir agora",
+        "twitter-description": "Guias rápidos, SDKs, referência da API e exemplos para lançar rápido."
+      },
+      "header": {
+        "countdown-title": "Documentação do Testnet Lançando Em Breve",
+        "description": "Psst... quer dar uma espiadinha no Push Chain Testnet - Donut? Você pode acessar a versão de prévia secreta se inscrevendo no nosso Project G.U.D Deployathon no DoraHacks.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
+      }
+    }
+  }
+}
