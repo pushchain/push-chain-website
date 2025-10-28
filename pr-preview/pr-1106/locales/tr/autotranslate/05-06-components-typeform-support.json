@@ -1,0 +1,120 @@
+{
+  "components": {
+    "typeform-support": {
+      "collapsed-text-for-support": "Destek Bileti Aç",
+      "expanded-title-for-support": "Yardıma mı ihtiyacınız var? 👋",
+      "collapsed-text-for-contact": "Takımı İletişime Geç",
+      "expanded-title-for-contact": "Merhaba! 👋",
+      "categories": {
+        "technical": {
+          "label": "🔧 Teknik Destek",
+          "description": "Hata raporları, SDK/API, स्मार्ट कॉन्ट्रैक्ट, entegrasyon yardımı"
+        },
+        "network": {
+          "label": "🌐 Ağ ve Testnet",
+          "description": "Ağ Gezgini/Push Tarayıcı, RPC, Musluk, Donut testnet sorunları"
+        },
+        "wallet": {
+          "label": "👛 Universal वॉलेट",
+          "description": "Push Wallet, evrensel zincir bağlantısı veya diğer cüzdan sorunları"
+        },
+        "identity": {
+          "label": "🪪 Hesaplar & Kimlik",
+          "description": "UEA/UOA, imzalar, atıf soruları"
+        },
+        "security": {
+          "label": "🛡️ Güvenlik",
+          "description": "Güvenlik açıkları, sorumlu açıklama (security@push.org)"
+        },
+        "general": {
+          "label": "💬 Genel Sorgu",
+          "description": "Sorular, geri bildirim, diğer konular"
+        },
+        "partnerships": {
+          "label": "🤝 Ortaklıklar & Entegrasyonlar",
+          "description": "İş geliştirme, ekosistem entegrasyonları (वॉलेट, altyapı, borsalar, protokoller)"
+        },
+        "grants": {
+          "label": "💰 Hibeler & Ekosistem Programları",
+          "description": "BRB, Bootcamp, bağışlar, finansman sorguları"
+        },
+        "media": {
+          "label": "📰 Medya & Basın",
+          "description": "Röportajlar, açıklamalar, varlıklar, gerçek kontrolü"
+        },
+        "events": {
+          "label": "🎤 Konuşma & Etkinlikler",
+          "description": "Konuşmalar, çalıştaylar, hackathon'lar, sponsorluklar"
+        },
+        "careers": {
+          "label": "👩‍💻 Kariyer",
+          "description": "Açık pozisyonlar, staj imkanları, sözleşmeli fırsatlar"
+        },
+        "validators": {
+          "label": "🧡 Doğrulayıcı / Düğüm Operatörleri",
+          "description": "Operatör ilgisi, RPC sağlayıcıları, altyapı ortakları"
+        },
+        "legal": {
+          "label": "⚖️ Hukuki & Uyumluluk",
+          "description": "Markalar, veri talepleri, anlaşmalar"
+        }
+      },
+      "form": {
+        "steps": {
+          "category": {
+            "title": "Size ne yardımcı olabiliriz?",
+            "subtitle": "Sorununuzu en iyi tanımlayan kategoriyi seçin"
+          },
+          "contact": {
+            "title": "Tanışalım",
+            "subtitle": "Bu bilgileri size geri dönmek için kullanacağız",
+            "name-label": "Adınız",
+            "name-placeholder": "Adınızı ve soyadınızı girin",
+            "name-aftergreet": "Tanışmak güzel, ",
+            "email-label": "E-posta Adresi",
+            "email-placeholder": "E-posta adresinizi girin"
+          },
+          "details": {
+            "title": "Bize daha fazla bilgi verin",
+            "subtitle": "Sorununuzu detayları hakkında bilgi verin",
+            "subject-label": "Konu",
+            "subject-placeholder": "Sorununuzun kısa bir özeti",
+            "message-label": "Mesaj",
+            "message-placeholder": "Sorununuzu detaylı olarak açıklayın. Hata mesajlarını, yeniden üretme adımlarını veya ilgili bilgileri ekleyin."
+          },
+          "submit": {
+            "title": "Gözden Geçir ve Gönder",
+            "subtitle": "Lütfen göndermeden önce bilgilerinizi kontrol edin",
+            "placeholder": "Bize ne konuda yardıma ihtiyacınız olduğunu anlatın..."
+          }
+        },
+        "buttons": {
+          "next": "İleri",
+          "previous": "Önceki",
+          "submit": "Bileti Gönder",
+          "submitting": "Gönderiliyor..."
+        },
+        "validation": {
+          "name-required": "Adınız zorunlu.",
+          "name-min-length": "Adınız en az 2 karakter uzunluğunda olmalıdır",
+          "email-required": "E-posta adresi gerekli.",
+          "email-invalid": "Lütfen geçerli bir e-posta adresi girin",
+          "subject-required": "Konu zorunlu.",
+          "message-required": "Mesaj zorunlu.",
+          "category-required": "Lütfen bir kategori seçin",
+          "default": "Bu alanın doldurulması zorunludur"
+        },
+        "success": {
+          "title": "Başvurunuz Başarıyla Gönderildi!",
+          "message": "Bize ulaştığınız için teşekkür ederiz. Destek talebinizi aldık ve en kısa sürede size geri dönüş yapacağız.",
+          "button": "Başka Bir Talep Gönder"
+        },
+        "error": {
+          "title": "Gönderim Başarısız",
+          "message": "Biletinizi göndermede bir hata oluştu. Lütfen tekrar deneyin veya doğrudan bizimle iletişime geçin.",
+          "button": "Tekrar Dene"
+        }
+      }
+    }
+  }
+}
