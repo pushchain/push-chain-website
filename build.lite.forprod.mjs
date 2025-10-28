@@ -149,7 +149,7 @@ export const prepAndMoveFilesFromTempLocationToActual = async (
 
   if (mode === 'lite') {
     // Create blog-lite directory with recent posts
-    await createBlogLiteDirectory(15);
+    await createBlogLiteDirectory(30);
   } else if (mode === 'full') {
     // Clean up blog-lite directory (full mode uses original blog directory)
     await cleanupBlogLiteDirectory();

@@ -109,7 +109,7 @@ Build <b>chain-agnostic AI agents</b> that can:
 
 - Reads the user's balances across Ethereum, Arbitrum, Optimism, and Solana.
 - Notices idle assets on Base and recommends moving them into a higher-yield protocol on Polygon.
-- Automatically constructs and <b>executes a cross-chain investment action</b> via Push Chain's programmable solvers.
+- Automatically constructs and <b>executes a cross-chain investment action</b> via Push Chain's universal validators.
 
 #### 🤔Why it needs shared-state:
 

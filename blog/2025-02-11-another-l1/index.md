@@ -98,15 +98,18 @@ Push Chain utilizes a different approach with the help of:
 **1. Universal Smart Contracts** <br />
 Devs deploy one contract that is instantly compatible across all chains. It is 100% EVM compatible and required **zero on-chain code changes**.
 
-**2. Shared State**<br />
-An innovation by Push Chain where smart contracts can read and use states from other chains.
+**2. Universal Fee & Wallet Abstraction**<br />
+Universal fee abstraction ensures that user can pay fees in any chain's native token. While wallet abstraction ensures that users can interact with apps using their existing wallets.
 
-Using shared state, apps on Push Chain can easily query verified state from any supported chain (token balances, contract state, user activity).
+**3. Shared State**<br />
+An innovation by Push Chain where apps are shared between chains.
 
-**3. Programmable Solvers**<br />
+This means, that any app deployed on Push Chain is automatically accessible by users from any other chain.
+
+**4. Universal Validators**<br />
 Provides paths to execute any multichain action - enabling apps to act across chains without forcing users to bridge or switch networks.
 
-This is what we call the **Fullstack universal interop** → Universal Wallet + Generalized Programmable Solvers + Shared State + Universal Smart Contracts.
+This is what we call the **Fullstack universal interop** → Universal Smart Contracts + Universal Fee & Wallet Abstraction + Shared State + Universal Validators.
 
 ## Why build on Push Chain?
 

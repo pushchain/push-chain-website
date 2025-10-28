@@ -39,6 +39,6 @@ export default function BlogPostItemContainer({ children, className }) {
 
 const StyledArticle = styled.article`
   @media (min-width: 1200px) {
-    width: 75%;
+    max-width: 75%;
   }
 `;

@@ -28,7 +28,8 @@ This article will help you understand:
 
 ### TLDR;
 
-[Push Chain](https://push.org/chain/) is a Proof of Stake shared state blockchain designed to support the development of hyper-scalable, consumer-centric, universal web3 applications by unifying settlement from any L1s, L2s and L3s.
+[Push Chain](https://push.org/chain/) is a shared state universal blockchain designed to enables apps to deploy once and instantly become compatible with users from any chain - EVM or non-EVM.
+
 
 <!-- architecture diagram -->
 
@@ -40,7 +41,7 @@ Key Innovations and Superpowers of Push Chain include:
 
 → 2. **Support Txns from any chain**
 
-→ 3. **UniversalFee Abstraction**
+→ 3. **Universal Fee Abstraction**
 
 → 4. **Wallet Abstraction**
 
@@ -50,7 +51,7 @@ Key Innovations and Superpowers of Push Chain include:
 
 → 7. **True Identity and Cross-Chain Mapping**
 
-→ 8. **Shared State and Programmable Solvers (Roadmap)**
+→ 8. **Universal Executor Account (UEA)**
 
 Let’s take a closer look at each of these innovations and enhancements.
 
@@ -133,21 +134,9 @@ Contracts on Push Chain automatically recognize the wallet of the user and the c
 
 Imagine multi-chain enabled safes, prediction markets accessible by all users, poker games played between different chains, defi that can tap into liquidity from all chains, and so much more!
 
-### 8. Shared State and Programmable Solvers (Roadmap)
+### 8. Universal Executor Account (UEA)
 
-<!-- shared state diagram -->
-
-![shared state diagram](./image2.webp)
-
-- **Shared State**<br />
-
-Shared state allows Push Chain to access data from any supported external chains in the smart contract, further giving power to developers to enquire and act on the state of a wallet or a smart contract from any other chain.
-
-With shared state, you can read wallet activities like NFTs, DeFi positions, governance participation, and so much more!
-
-- **Programmable Solvers**<br />
-
-Programmable solvers on the other hand enables developers to give atomic instructions of what they want to execute on other chains from the smart contract.
+Smart accounts that is controlled natively by user of a source chain. Ensuring that the app experience is native no matter the chain the user is coming from and providing security and non-custodial experience to wallets that are ever outside of Push Chain.
 
 ## Conclusion
 

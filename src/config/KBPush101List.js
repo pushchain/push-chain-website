@@ -34,6 +34,15 @@ export const KBPush101List = {
       bottomGap: true,
       items: [
         {
+          valueKey: `pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.apps-of-the-future`,
+          slug: 'apps-of-the-future-building-without-the-chaos',
+          image:
+            '/static/assets/website/chain/knowledge/apps-of-the-future-building-without-the-chaos',
+          imageSrcSet: false,
+          url: '/blog/apps-of-the-future-building-without-the-chaos',
+          target: '_blank',
+        },
+        {
           valueKey: `pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain`,
           slug: 'why-push-chain',
           image: '/static/assets/website/chain/knowledge/why-push-chain',

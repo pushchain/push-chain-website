@@ -46,14 +46,14 @@ It also enables users to transact from the comfort, convenience, and choice of t
 Under the hood, this is achieved by:
 
 - Ability to do **transactions from any chain**
-- **Fee & Wallet Abstraction** (universal wallet \+ guest wallet)
-- **Shared State** (read data from other blockchain) 👀
-- **Generalised Programmable Solve**r (enables acting on the data read from other chains)
 - **Universal Smart Contract** (enables devs to deploy universal interop apps in hours)
+- **Shared State** (enables using same app between different chains) 👀
+- **Universal Validators** (enables writing data on external blockchain)
+- **Fee & Wallet Abstraction** (enables payment of transaction on any chain + any wallet)
 - **Shared App Experience** (any user from any chain can access any app of any chain)
 
 :::info
-**Full Stack Interop (Universal Apps)** \= Universal Wallet \+ Generalized Programmable Solvers \+ Shared State \+ Universal Smart Contracts
+**Full Stack Native Interop (Universal Apps)** \= Universal Smart Contract \+ Universal Fee & Wallet Abstraction \+ Universal Validators \+ Shared State
 :::
 
 ### Where does Push Chain fit in?

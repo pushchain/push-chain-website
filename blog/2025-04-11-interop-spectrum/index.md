@@ -109,7 +109,7 @@ These problems have led us to design a new approach or the **next iterative inno
 
 **Programmable solvers** is a term that we have coined at Push Chain to distinguish the next step in innovation that the solvers require to work at scale.
 
-At its simplest, it means that developers will have shared state access to other blockchains, i.e. the ability to read, fetch and utilise the state of other chains. This will allow them to create custom pathways for fulfilling intents, all from a single universal EVM smart contract deployed on Push Chain.
+At its simplest, it means that developers will have state access to other blockchains, i.e. the ability to read, fetch and utilise the state of other chains. This will allow them to create custom pathways for fulfilling intents, all from a single universal EVM smart contract deployed on Push Chain.
 
 
 ![Universal Smart Contract Example (Pseudocode)](./image-2.webp)
@@ -137,11 +137,13 @@ Which, of course, brings us to the **next and final iterative solution - Full St
 ![Image](./image-3.webp)
 
 
-Push Chain which is a universal L1 chain offers full stack interop to enable a synergetic, unified web3, where **any apps** of **any chain** become accessible by **any user or wallet** of any chain.
+Push Chain which is a universal L1 chain offers full stack interop to enable a synergetic, unified web3, where **any apps** of **Push Chain** become accessible by **any user or wallet** of any chain.
 
-To facilitate seamless functionality for **developers**, it enables **programmable solvers, shared state** and **universal smart contracts** making it the most seamless Developer Experience (DevEX) crypto has ever seen.
+To facilitate seamless functionality for **developers**. It enables **universal smart contracts** to allow singulare instance of the app to be accessible by users of any chain. It also enables **universal validators** to allow writing txs on any other chains. While **state access** and **programmable solvers** in the later phase of roadmap ensures added functionality and ease of use.
 
-And to ensure a frictionless, zero-learning and hassle-free environment for users, it employs **Cross-chain fee** & **Wallet Abstraction**.
+These features ensures the the most seamless Developer Experience (DevEX) crypto has ever seen.
+
+For **users**, a seamless, zero-learning and hassle-free experience is acheive by employing **Cross-chain fee** & **Wallet Abstraction**.
 
 **Cross-chain fee abstraction** enables the user, no matter which chain they are on, to fund the gas for their transaction on Push Chain using native token of the chain they are currently on, eliminating the hassle for the user to bridge gas and allowing them to use the app from any chain.
 

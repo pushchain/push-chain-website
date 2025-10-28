@@ -137,23 +137,23 @@ It is a shared state blockchain built to allow developers to deploy once, and in
 
 Under the hood, Push chain provides a unified toolkit that enables developers to build truly universal apps. It brings in several innoations such as:
 
+- **Universal Smart Contracts**<br />
+  Push Chain is a fully EVM compatible chain. Any EVM compatible smart contract can be deployed on Push Chain with zero on-chain code changes to instantly become compatible with all L1s (including non-EVM chains).
+
 - **Any Chain Transaction**<br />
   Push Chain is designed to allow transactions from any chain. Users are able to interact with the apps deployed on Push Chain from any chain as they natively do on their own chain.
 
 - **True Universal L1**<br />
   Push Chain natively recognizes the wallets of other chains and attributes transactions to those wallets. Your identity and signature is used to verify and interact with the apps. This enables a shared app experience for users across all chains. Never again an app experience or user will be siloed to a single chain.
 
-- **Wallet Abstraction**<br />
-  Wallet abstraction enables users from any existing wallet (metamask, phantom, etc) to seamlessly interact with the apps deployed on Push Chain. Any existing wallet simply works out of the box.
+- **Native App Experience**<br />
+  Push Chain ensures that the app experience is native no matter the chain the user is coming from. The user will always only ever do a single transaction and will not have to deal with any on-chain intricacies.
 
 - **Universal Fee Abstraction**<br />
   Any tokens on any chain can be used to pay for the fees on Push Chain including native tokens of Ethereum, Solana, etc. Using an app no longer requires funding the wallet with native tokens of Push Chain.
 
-- **Universal Smart Contracts**<br />
-  Push Chain is a fully EVM compatible chain. Any EVM compatible smart contract can be deployed on Push Chain with zero on-chain code changes to instantly become compatible with all L1s (including non-EVM chains).
-
-- **Shared State and Programmable Solvers (Roadmap)**<br />
-  In the future, Push Chain will be able to access the state of other chains and perform any action on them, all through the smart contract.
+- **Wallet Abstraction**<br />
+  Wallet abstraction enables users from any existing wallet (metamask, phantom, etc) to seamlessly interact with the apps deployed on Push Chain. Any existing wallet simply works out of the box.
 
 Push Chain is a massive leap towards a unified web3. It makes every app experience truly universal and native with **zero hassle** for users or the developers.
 

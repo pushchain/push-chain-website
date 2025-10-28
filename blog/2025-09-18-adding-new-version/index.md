@@ -37,7 +37,7 @@ Here’s why building on Push Chain gives you a real edge:
 - **Avoid Audit Friction**: Since you do not modify your solidity code, there is no need for a full re-audit.
 - **Simplified Fees**: Automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions.
 - **Consistent DevEx**: One **Push SDK**, one set of JSON-RPC endpoints, and a unified API to build and deploy. Supports Viem, ethers, and our own Push Chain client.
-- **Future-Proof Builds**: With Shared state and programmable solvers (coming soon), you can orchestrate complex workflows with multichain R/W operations - without building separate adapters.
+- **Future-Proof Builds**: With chain-native interop, your builds are future-proof as additional chains support are just a package update instead of the current broken interop protocol route.
 
 👉 *Note: Push Chain SDK is only accessible to contest participants.* [Register](https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&utm_medium=referral&utm_campaign=project_gud) to unlock SDK + docs.
 

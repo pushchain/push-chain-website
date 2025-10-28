@@ -28,6 +28,23 @@ export const KBBuildersList = {
       variant: 'row',
       items: [
         {
+          valueKey: `pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.apps-of-the-future`,
+          slug: 'apps-of-the-future-building-without-the-chaos',
+          image:
+            '/static/assets/website/chain/knowledge/apps-of-the-future-building-without-the-chaos',
+          imageSrcSet: false,
+          url: '/blog/apps-of-the-future-building-without-the-chaos',
+          target: '_blank',
+        },
+        {
+          slug: 'consumer-apps-that-can-be-built-on-push-chain',
+          image: '/static/assets/website/chain/knowledge/consumer-apps',
+          imageSrcSet: false,
+          title: 'Consumer Apps 🫶🏽 Push Chain?',
+          url: '/blog/consumer-apps-that-can-be-built-on-push-chain/',
+          target: '_blank',
+        },
+        {
           slug: 'apps-only-possible-with-shared-state-v1',
           image:
             '/static/assets/website/chain/knowledge/apps-only-possible-with-shared-state-v1',
@@ -43,14 +60,6 @@ export const KBBuildersList = {
           imageSrcSet: false,
           title: 'Apps Possible Only with Shared State - Vol.2',
           url: '/blog/apps-only-possible-with-shared-state-v2',
-          target: '_blank',
-        },
-        {
-          slug: 'consumer-apps-that-can-be-built-on-push-chain',
-          image: '/static/assets/website/chain/knowledge/consumer-apps',
-          imageSrcSet: false,
-          title: 'Consumer Apps 🫶🏽 Push Chain?',
-          url: '/blog/consumer-apps-that-can-be-built-on-push-chain/',
           target: '_blank',
         },
       ],

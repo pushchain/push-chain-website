@@ -19,34 +19,32 @@ Web 3 is growing at lightning speed!
 
 Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!!
 
-While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal - **To expand the boundaries of web3 for all users.**
+While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal - **To make web3 unified and accessible for all users.**
 
 And with increasing fragmentation coupled with complex pre-requisites to interact on-chain, inflexible infrastructure for consumer apps, and a lack of chain unification, the barrier to entry is rising, leading to the emergence of more closed and isolated systems.
 
-But not anymore.
+But not anymore. 
 
-**Introducing Push Chain - A shared state blockchain for shared app experiences!**
+**Introducing Push Chain - A shared state blockchain for universal app experiences!**
 
 ## What is Push Chain?
 
-Push Chain is a Proof of Stake shared state blockchain designed to support the development of hyper-scalable, consumer-centric, universal web3 applications by unifying settlement from any L1s, L2s and L3s.
+Push Chain is a universal blockchain that enables apps to be built once and become instantly compatible with any blockchain. The same app is now used by users of every chain (EVM, non-EVM, L1s, L2s, etc).
 
 ### Push Chain Superpowers Include:
 
-- **Any Chain Tx (Solana, Eth, EVM, or non-EVM)**⛓️ :
-  - Enables cross-chain transactions from EVM, Solana or any nonEVM by accepting signed payloads verified by Push validator nodes.
-- **Sub-second finality ⚡⏱️ :**
-  - With CometBFT Consensus.
-- **True Universal Chain 🚀 :**
-  - Natively recognizes and attributes transactions to the right wallet and the source chain.
-- **Universal Fee Abstraction**💰 :
-  - Non-push chain wallets can seamlessly pay fees through native token swaps, delegation, web3 applications, or the traditional wallet-pays-fees model.
+- **Universal Smart Contract** 🌐 :
+  - 100% EVM compatible smart contracts that can be deployed with **zero on-chain code changes**. Once deployed, they become instantly compatible with users of all chains.
+- **Transtctions from Any Chain (EVM or non-EVM)**⛓️ :
+  - Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.
+- **Universal Fee & Wallet Abstraction**💰 :
+  - Allows users to interact with the app from any chain without worrying about gas or wallet mechanics.
+- **Deterministic finality and sub-second transactions ⚡⏱️ :**
+  - With battle tested CometBFT Consensus. Transactions have instant finality (ie: no reorg) and are done in a second.
 - **Wallet Abstraction** 🔐 :
   - Simplify blockchain access by offering social logins, phone or email authentication, and secure recovery.
 - **Consumer tx (unordered) and Traditional tx (ordered)** 🛍️:
   - Introduces _'consumer transactions'_ for unordered, high-speed scalability, leveraging parallel execution, and dynamic sharding.
-- **Universal Smart Contract** 🌐 :
-  - Smart contracts that can read the state of EVM or non-EVM wallets of other chains in the future, enabling developers to create a seamless universal app.
 - **Shared App Experience** 🤝 :
   - App is truly shared by all users of all chains
 
