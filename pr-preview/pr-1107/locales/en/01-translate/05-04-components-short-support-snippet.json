@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Support Questions about Push Chain - Universal Blockchain",
+      "title": "Support\nHelp Desk",
+      "title-aria-label": "Common support questions and answers about Push Chain",
+      "discord-link-text": "Ask us on Discord",
+      "discord-link-title": "Join Push Chain Discord community for support and questions",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "Explore More FAQs",
+      "explore-more-title": "View comprehensive Push Chain FAQ documentation and developer guides",
+      "explore-more-aria-label": "Navigate to complete Push Chain FAQ page",
+      "accordion-aria-label": "Push Chain support questions list",
+      "answer-aria-label": "Answer to the question - ",
+      "qnas": {
+        "qna1": {
+          "question": "I can’t connect my wallet. What should I try?",
+          "answer": "<1><2>Quick checks:</2> refresh the page, unlock your wallet, and disable aggressive ad/script blockers for push.org.</1><1><2>No network switch needed:</2> stay on your home chain; Push handles routing behind the scenes.</1><1><2>Reset site permissions:</2> in your wallet, remove the site’s connection and reconnect.</1><1>Still stuck? Ask on <3>Discord</3> or open a <4>Support ticket</4>.</1>",
+          "discord-url-title": "Join the Push Chain Discord for real-time help.",
+          "support-url-title": "Open a support ticket."
+        },
+        "qna2": {
+          "question": "My transaction is pending or failed — what now?",
+          "answer": "<1><2>Check status:</2> look up your tx on <3>Push Scan</3> using the hash from your wallet.</1><1><2>Pending:</2> it usually confirms shortly; avoid resending repeatedly.</1><1><2>Failed:</2> no funds are taken. Review the error and try again.</1><1>Ongoing incidents are posted on <4>Status</4>.</1>",
+          "scan-url-title": "Open Push Scan (explorer).",
+          "status-url-title": "View network status and incidents."
+        },
+        "qna3": {
+          "question": "How do I get testnet tokens (Donut)?",
+          "answer": "<1>Use the <3>Faucet</3> to request test tokens.</1><1><2>Notes:</2> rate limits may apply; some faucets require simple verification. If the faucet fails, ping us on <4>Discord</4>.</1>",
+          "faucet-url-title": "Open the Push Chain faucet.",
+          "discord-url-title": "Join the Push Chain Discord."
+        },
+        "qna4": {
+          "question": "How do I report a bug or vulnerability?",
+          "answer": "<1><2>App bugs:</2> file a <3>Support ticket</3> or post in <4>Discord</4> with steps to reproduce.</1><1><2>Security issues:</2> email <5>security@push.org</5>. Please avoid public disclosure until we confirm a fix.</1>",
+          "support-url-title": "Open a support ticket.",
+          "discord-url-title": "Join the Discord."
+        },
+        "qna5": {
+          "question": "Where are the docs and quickstarts?",
+          "answer": "<1>Start with <3>Docs</3> for quickstarts and APIs, and the <4>Knowledge Base</4> for concepts, deep dives, and FAQs.</1>",
+          "docs-url-title": "Open developer documentation.",
+          "kb-url-title": "Open the Knowledge Base."
+        },
+        "qna6": {
+          "question": "Can I request support for a new chain, feature or integration?",
+          "answer": "<1>Yes. Tell us which chain/tooling you need via <3>Contact</3> or open an issue on <4>GitHub</4>. We’re expanding coverage continuously.</1>",
+          "contact-url-title": "Contact the Push Chain team.",
+          "github-url-title": "Open the GitHub org."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "footer": {
+    "email-section": {
+      "title": "Push Chain से अपडेट रहें",
+      "title-secondary": "खबरें और अपडेट!",
+      "title-aria-label": "न्यूज़लेटर सदस्यता अनुभाग",
+      "section-aria-label": "Push Chain न्यूज़लेटर के लिए साइन अप करें"
+    },
+    "main-section": {
+      "section-aria-label": "फ़ुटर नेविगेशन और लिंक",
+      "logo-link-title": "Push Chain homepage",
+      "logo-link-aria-label": "Push Chain homepage",
+      "logo-alt": "Push Chain logo"
+    },
+    "columns": {
+      "resources": {
+        "title": "संसाधन",
+        "title-aria-label": "संसाधन नेविगेशन"
+      },
+      "developers": {
+        "title": "डेवलपर्स",
+        "title-aria-label": "डेवलपर नेविगेशन"
+      },
+      "community": {
+        "title": "कम्युनिटी",
+        "title-aria-label": "Community navigation"
+      },
+      "help": {
+        "title": "मदद",
+        "title-aria-label": "सहायता नेविगेशन"
+      }
+    },
+    "links": {
+      "get-started": "शुरू करें",
+      "get-started-title": "Push Chain पर निर्माण शुरू करें",
+      "docs": "दस्तावेज़",
+      "docs-title": "Push Chain documentation",
+      "github": "GitHub",
+      "github-title": "Push Chain रिपॉजिटरीज़ ऑन GitHub",
+      "knowledge-base": "नॉलेज बेस",
+      "knowledge-base-title": "Push Chain Knowledge Base",
+      "blog": "ब्लॉग",
+      "blog-title": "Push Chain blog",
+      "litepaper": "लाइटपेपर",
+      "litepaper-title": "Push Chain litepaper (PDF)",
+      "brand-kit": "ब्रांड किट",
+      "brand-kit-title": "Push Chain ब्रांड एसेट्स और गाइडलाइन",
+      "push-scan": "पुश स्कैन",
+      "push-scan-title": "Push Chain ब्लॉकचेन एक्सप्लोरर",
+      "faucet": "फ़ॉसेट",
+      "faucet-title": "Push Chain फ़ॉसेट से टेस्ट टोकन प्राप्त करें",
+      "push-portal": "Push Portal",
+      "push-portal-title": "Push Chain समुदाय पोर्टल",
+      "support": "सहायता",
+      "support-title": "सहायता केंद्र",
+      "security": "सुरक्षा और प्रकटीकरण",
+      "security-title": "सुरक्षा भेद्यता की रिपोर्ट करें (जिम्मेदार प्रकटीकरण)",
+      "contact-us": "हमसे संपर्क करें",
+      "contact-us-title": "साझेदारी, व्यवसाय विकास, मीडिया, या सामान्य पूछताछ",
+      "careers": "कैरियर",
+      "careers-title": "Push Chain में खुली नौकरियां",
+      "twitter": "X (Twitter)",
+      "twitter-title": "Push Chain को X (Twitter) पर फॉलो करें",
+      "discord": "डिस्कॉर्ड",
+      "discord-title": "Push Chain Discord से जुड़ें",
+      "reddit": "Reddit",
+      "reddit-title": "Push Chain subreddit से जुड़ें",
+      "telegram": "टेलीग्राम",
+      "telegram-title": "Push Chain Telegram से जुड़ें"
+    },
+    "social-section": {
+      "section-aria-label": "सोशल मीडिया लिंक और कानूनी जानकारी",
+      "twitter-icon-title": "Push Chain on X (Twitter)",
+      "twitter-icon-aria-label": "Push Chain on X (Twitter)",
+      "github-icon-title": "Push Chain पर GitHub",
+      "github-icon-aria-label": "Push Chain पर GitHub",
+      "discord-icon-title": "Push Chain पर Discord",
+      "discord-icon-aria-label": "Push Chain पर Discord"
+    },
+    "legal": {
+      "privacy-policy": "गोपनीयता नीति",
+      "privacy-policy-title": "गोपनीयता नीति पढ़ें",
+      "privacy-policy-aria-label": "गोपनीयता नीति",
+      "terms-of-service": "सेवा की शर्तें",
+      "terms-of-service-title": "सेवा की शर्तें पढ़ें",
+      "terms-of-service-aria-label": "सेवा की शर्तें",
+      "cookie-preferences": "कुकी प्राथमिकताएं",
+      "cookie-preferences-title": "कुकी सेटिंग प्रबंधित करें"
+    },
+    "footer-image": {
+      "alt": "Push Chain फुटर इलस्ट्रेशन",
+      "title": "Push Chain - युनिवर्सल ब्लॉकचेन"
+    }
+  }
+}

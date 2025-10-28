@@ -1,0 +1,109 @@
+{
+  "pages": {
+    "home": {
+      "seo": {},
+      "hero-section": {
+        "title": "Jeder Blockchain, Jede App, Alle Benutzer.\nEine Push-Kette.",
+        "description": "Das erste Layer 1 für Universelle Apps. \nEinmal aufbauen und ausliefern, Benutzer von jeder Kette einbinden.",
+        "section-aria-label": "Push Chain Heldersatz - Universelle Schicht 1 Blockchain-Einführung",
+        "schema-description": "Einmal auf Push Chain bereitstellen und mit universellen Apps Nutzer auf jeder Blockchain erreichen"
+      },
+      "whatis-section": {
+        "titleThird": "Kette",
+        "bottomLinkTitle": "Zur Dokumentations-Hub-Seite gehen"
+      },
+      "chain-features-section": {
+        "header": {
+          "main-text": "Auf innovativen Technologien basierend, um Fragmentierung zu eliminieren!",
+          "other-text": "Push ist der einzige universelle Layer 1, den du jemals benötigen wirst!"
+        },
+        "box1": {
+          "bodytext": "Push Chain unterstützt Transaktionen von jedem Blockchain. Benutzer können Gas in jeder Token zahlen — kein Brückenbedarf.",
+          "imagealt": "Illustration zeigend, wie verschiedene Blockchain-Logos in einem Billardball-Maschine fallen."
+        },
+        "box2": {},
+        "box3": {
+          "texttitle": "100% EVM-kompatibel\n"
+        },
+        "box4": {},
+        "box5": {
+          "texttitle": "Universelle Gebühr\nAbstraktion",
+          "bodytext": "Lassen wir die Nutzer Gas in jedem Token auf jeder Kette ohne Bridging bezahlen können.",
+          "imagetitle": "Unterstützt jeden Token jeder Kette für Transaktionen."
+        },
+        "box6": {
+          "texttitle": "Universaler Ausführungsschicht",
+          "bodytext": "Entwickeln Sie atomare, komponierbare Apps über Web3. Erstellen Sie App-Erfahrungen, die noch nie dagewesen sind, indem mehrere Benutzer unterschiedlicher Ketten mit derselben Anwendung interagieren."
+        },
+        "box7": {
+          "tags": {
+            "title1": "Aus CHAINs lesen"
+          }
+        },
+        "box8": {
+          "tags": {
+            "title1": "ZU CHAINs SCHREIBEN"
+          },
+          "imagetitle": "(Roadmap) Programmable Solvers erlauben Benutzern, Transaktionen über beliebige Ketten auszulösen, zu validieren und abzuschließen, mithilfe Ihres Smart-Contracts."
+        },
+        "footer": {
+          "title": "Machen Sie Ihre App-Anwenderbasis universal",
+          "secondary": "mit nullbemühung!",
+          "ctatext": "Loslegen"
+        }
+      },
+      "partners-section": {
+        "subtitle": "Entdecke Apps, die ihre Nutzerbasis einfach durch das Bereitstellen auf Push Chain vermehrt haben.",
+        "partners-grid-aria-label": "Gitter von Partnerlogos zeigt Web3-Projekte, die Push Chain verwenden",
+        "partner-logo-alt-prefix": "Logo von ",
+        "mobile-view-aria-label": "Mobilansicht des Push Chain Ecosystem Partner"
+      },
+      "stats-section": {
+        "description": "Optimiert für Leistung.\nHohe Transaktionsprozesse (TPS), extrem niedrige Gaserweise und untersekundenlange Endgültigkeit für ein Echtzeit-App-Ausführung.",
+        "stats": {
+          "stat1": {},
+          "stat2": {},
+          "stat3": {},
+          "stat4": {}
+        }
+      },
+      "blog-section": {
+        "explore-link-text": "Weitere Artikel entdecken",
+        "explore-link-title": "Besuchen Sie den Push Chain Blog, um alle Artikel und Updates zu lesen",
+        "blog-post-title-prefix": "Lese den Blog-Beitrag - "
+      },
+      "trustedby-section": {
+        "title": "Durch die von Pionieren des Web3 getrauenswürdigen Team entwickelt"
+      },
+      "featured-section": {
+        "subtitle": "Hören Sie nicht nur auf unsere Worte. Sehen Sie, was die Medien über den wahren universellen Chain sagen.",
+        "articles": {
+          "binance-chain": {
+            "text": "Wir freuen uns, dass Push Protocol, ein führender dezentraler Kommunikationsprotokoll für Web3, nun auf BNB Chain verfügbar ist."
+          },
+          "coindesk": {},
+          "defiant": {},
+          "ethfoundation": {
+            "text": "Seit HackMoney haben Richa und Harsh unglaubliche Energie in die Entwicklung von EPNS investiert, das sie als „eine fehlende Stückelung im Web3“ bezeichnen."
+          },
+          "the-block": {},
+          "business-insider": {},
+          "chainwire": {},
+          "crypto-briefing": {},
+          "cryptoslate": {},
+          "messari": {},
+          "coin-telegraph-1": {},
+          "coin-telegraph-2": {}
+        }
+      },
+      "ending-section": {
+        "aria-label": "Apps auf der Blockchain entwickeln Abschnitt",
+        "section-subtitle": "Brechen Sie die Silos. Bauen Sie einmal, skalieren auf jeder Blockchain.",
+        "docs-link": {},
+        "cta-link": {
+          "aria-label": "Mit der Entwicklung von Push Chain beginnen"
+        }
+      }
+    }
+  }
+}

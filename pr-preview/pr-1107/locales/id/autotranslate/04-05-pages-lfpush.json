@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "Ayo Dorong — Inisiatif Komunitas",
+        "description": "Inisiatif komunitas Push, postingan, dan lainnya.",
+        "og-title": "Ayo Push - Inisiatif Komunitas untuk Push Chain",
+        "og-description": "Inisiatif yang digerakkan oleh komunitas dan saham untuk Push Chain.",
+        "twitter-title": "Ayo Push | Inisiatif Komunitas",
+        "twitter-description": "Lihat inisiatif komunitas Push untuk Push Chain."
+      },
+      "hero-section": {
+        "title": "Mari Kita Push",
+        "description": "Komunitas pembangun LF Push—merayakan apa yang Anda luncurkan dan siapa yang Anda bantu. Bagikan kemenangan Anda, tandai <hashtag>#LFPush</hashtag> atau <mention>@PushChain</mention>, dan kami akan memperluas jangkauannya."
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "Bagikan Kemenanganmu",
+          "join-community": "Bergabung dengan Komunitas",
+          "learn-more": "Pelajari Lebih Lanjut"
+        },
+        "meta": {
+          "tweet-alt": "Tweet dari anggota komunitas Push Chain",
+          "loading-alt": "Memuat lebih banyak tweet komunitas"
+        },
+        "tweets-counter": "{{count}} Tweet dan terus bertambah!",
+        "loading": "Memuat lebih banyak tweet...",
+        "end-message": "Anda sudah sampai di akhir! 🎉"
+      }
+    }
+  }
+}
