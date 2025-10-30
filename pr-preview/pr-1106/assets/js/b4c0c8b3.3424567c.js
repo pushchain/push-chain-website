@@ -444,7 +444,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-bash",
-        children: "push-validator increase-stake       # Increase validator stake and voting power\npush-validator unjail               # Restore jailed validator to active status\npush-validator withdraw-rewards     # Withdraw validator rewards and commission\n"
+        children: "push-validator increase-stake       # Increase validator stake and voting power\npush-validator unjail               # Restore jailed validator to active status\npush-validator withdraw-rewards     # Withdraw validator rewards and commission\npush-validator restake              # Auto-withdraw and restake all rewards to increase validator power\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h3, {
       id: "monitoring",
