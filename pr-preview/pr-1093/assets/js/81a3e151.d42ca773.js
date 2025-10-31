@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkpush_website=self.webpackChunkpush_website||[]).push([[88974],{595927:e=>{e.exports=JSON.parse('{"label":"Timeswap","permalink":"/push-chain-website/pr-preview/pr-1093/blog/tags/timeswap","allTagsPath":"/push-chain-website/pr-preview/pr-1093/blog/tags","count":1,"unlisted":false}')}}]);
