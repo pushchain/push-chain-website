@@ -5656,9 +5656,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:2.1.5":
-  version: 2.1.5
-  resolution: "@pushchain/core@npm:2.1.5"
+"@pushchain/core@npm:2.1.1-alpha-v0":
+  version: 2.1.1-alpha-v0
+  resolution: "@pushchain/core@npm:2.1.1-alpha-v0"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@coral-xyz/anchor": "npm:^0.31.0"
@@ -5675,11 +5675,11 @@ __metadata:
     tslib: "npm:^2.3.0"
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
-  checksum: 10c0/e6dfc91e99874c17a0aed2447fffd8a1b346d4112c4ac0c62ae87c32f303a36b52532bccbc7bbb2947aab0fa737152338387450af439d7d245f3d140b5301950
+  checksum: 10c0/3b7182da2d38a9925b4c52a036a04e79aa6c8f4f1246a72ec17e9b7dec5111822713d359f530497acff4f0abccc07ddd5d9a2101b09f14849e0c9aa50da58747
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^2.1.5":
+"@pushchain/core@npm:^2.1.1-alpha-v0":
   version: 2.1.6
   resolution: "@pushchain/core@npm:2.1.6"
   dependencies:
@@ -5702,13 +5702,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:2.0.15":
-  version: 2.0.15
-  resolution: "@pushchain/ui-kit@npm:2.0.15"
+"@pushchain/ui-kit@npm:2.0.16-alpha.0":
+  version: 2.0.16-alpha.0
+  resolution: "@pushchain/ui-kit@npm:2.0.16-alpha.0"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^2.1.5"
+    "@pushchain/core": "npm:^2.1.1-alpha-v0"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.5"
     buffer: "npm:^6.0.3"
@@ -5720,7 +5720,7 @@ __metadata:
   peerDependencies:
     react: ">=18.3.0 <20.0.0"
     react-dom: ">=18.3.0 <20.0.0"
-  checksum: 10c0/a1bc24e962de4f27d8042d75e7ec1b64f4af14bc00cce7969b4d791565cd0bbdf9fdc3ff72bfb78cfd1815b56d6619973dec5c33db7e11a873f27459191dc7e5
+  checksum: 10c0/c05147191f350227ee7fe1453428dde8bf5bd936a8c5cb2776f4adaf92625ef44c8a38bb666fb0403d41f1c4588bf02f05323f84e38f11b08bac1c51aacece30
   languageName: node
   linkType: hard
 
@@ -21350,8 +21350,8 @@ __metadata:
     "@docusaurus/types": "npm:^3.8.1"
     "@mdx-js/react": "npm:^3.0.0"
     "@openzeppelin/merkle-tree": "npm:^1.0.8"
-    "@pushchain/core": "npm:2.1.5"
-    "@pushchain/ui-kit": "npm:2.0.15"
+    "@pushchain/core": "npm:2.1.1-alpha-v0"
+    "@pushchain/ui-kit": "npm:2.0.16-alpha.0"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
