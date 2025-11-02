@@ -1,0 +1,13 @@
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Запуск на Push Testnet уже доступен — откройте возможности для разработчиков и первых пользователей.",
+      "learn-more-text": "Подробнее",
+      "learn-more-title": "Узнать больше об этом объявлении",
+      "dismiss-button-title": "Закрыть объявление",
+      "dismiss-button-aria-label": "Закрыть строку объявлений",
+      "container-aria-label": "Объявление на сайте",
+      "star-icon-alt": "Иконка звездочки для объявления"
+    }
+  }
+}

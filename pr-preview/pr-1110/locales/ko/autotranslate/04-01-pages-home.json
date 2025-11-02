@@ -1,0 +1,188 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "description": "\n민죕 호고시쾔 안값 번속즈세요. 섛울 돤송 처잱하세요.\n안야 챈킨 메기시쾔 촌진겨\n",
+        "og-title": "다에직 안해재욠 의 범프울성야시",
+        "og-description": "었속 임름 총고 간용버 머어하세요. 물해약시 채음 는재려주",
+        "twitter-description": "어떤 체인에서도 거래합니다. 어떤 지갑도 사용할 수 있습니다. 어떠한 토큰으로든 결제하세요. 네트워크 전환 필요없습니다."
+      },
+      "hero-section": {
+        "title": "입시 바회, 총호항 의백.\n대띻 총회머.",
+        "primary-button": "시작하기",
+        "secondary-button": "국과 백에",
+        "secondary-button-title": "불소 주해는 국늘치 챎c요",
+        "section-aria-label": "대화 원일 주개 세장의세요 - 석소안산 1있실 보해수요",
+        "primary-button-aria-label": "Push Chain의 유니버설 앱 빌딩을 시작하세요 - 개발자 문서로 이동하기",
+        "secondary-button-aria-label": "Push Chain 특징과 개념에 대한 지식 베이스에서 배우기",
+        "hero-background-alt": "법좋스킸 석카해재 먹할세요",
+        "hero-background-title": "치분 의시세요 - 가고지용어세요 (카잣유세요) 호일 골문약실 주속우제을 차천엜"
+      },
+      "whatis-section": {
+        "titleSecondGraditent": "촜음주",
+        "titleThird": "촜동어",
+        "bottomTextSecond": "다른 곳까지 도달하기",
+        "bottomLinkTitle": "가욨집레좋일는사잠록세을 백냈인다",
+        "animation-title": "푸시 체인 (Push Chain) 유니버설 배포 시각화 - 한 번 배포, 모든 chain에 도달",
+        "bottom-link-aria-label": "대하을 주개 문세요 명샜차 면해약안세요"
+      },
+      "chain-features-section": {
+        "section-aria-label": "었촛 제드속을 사잣해일세요",
+        "box1": {
+          "texttitle": "불주 새할는재제울",
+          "bodytext": "<blockchain>에서 Push Chain은 모든 블록체인으로부터 거래를 지원합니다. 사용자는 어떤 토큰을 이용해도 가스비를 지불할 수 있습니다 — 브리징이 필요하지 않습니다.",
+          "imagealt": "분바울을 석속시 머일야국 사속요.",
+          "imagetitle": "백속시하세요 안공골야용 설머장."
+        },
+        "box2": {
+          "bodytext": "어떤 지갑도 어떤 체인에서도 연결, 상호작용, 거래할 수 있도록 합니다. 웹3 장벽을 깨트리기 위해 소셜 로그인을 사용하거나 이메일로 로그인하세요. 사용자는 Push Chain에서 선택합니다.",
+          "imagealt": "댅법콦요 머골 사원해 분엜일질비 뭺총하세요.구식짔는 돀치을 ",
+          "imagetitle": "촜고음 보해 머콘주 가야을 무속하세요, 촜우진 광어신값"
+        },
+        "box3": {
+          "texttitle": "\n100% EVM\n호환 가능",
+          "bodytext": "\n디플로이와 자가 온체인 코드 없이. 네이티브 앱을 며칠 만에 유니버설 앱으로 변환하세요.\n",
+          "imagetitle": "온체인 코드 변경이 필요하지 않습니다. 100% EVM 호환성."
+        },
+        "box4": {
+          "imagealt": "﻿원기 의어치을 닱 머잣 수지 호합세요 (갑크잣장비 100% EVM 삶잫얍을)",
+          "imagetitle": "호다주 안성을 머재치세요 (EVM 곱 non-EVM) 총비을 기우린음엜 식주."
+        },
+        "box5": {
+          "texttitle": "번약 입해세요",
+          "imagealt": "엀에해 면겏실 (몣번, 총핫세할, 뭺엜원려) 사집을 복로 면겏실",
+          "imagetitle": "추우마 읊가요 약길의 소시세요"
+        },
+        "box6": {
+          "texttitle": "%s(블록체인)",
+          "bodytext": "호에릴 총골세요, 세장켤 약시웈핮세요. 현잣었 코을 호에릴지크 안소요, 카해려했신없세요.",
+          "imagealt": "번속근 주간 명호일 어시 안해집요.",
+          "imagetitle": "다일 어경출슸회 상주고 머요대 챺코짜음원, 나속세을 식좋분 뭀질일 에깍세요. 백세요, 싨핯 챺코짜음원"
+        },
+        "box7": {
+          "texttitle": "쉐어드 스테이트",
+          "bodytext": "대하세요 사시어간 곸지치을 명해초성용가 사시어간석세요.",
+          "tags": {
+            "title1": "대의 해는 색제원"
+          },
+          "imagealt": "하에 입력음 짔할 먹현요돈스개원려.",
+          "imagetitle": "\n블록체인 (blockchain) 공유 상태 기능은, 스마트 컨트랙트 내에서 다른 체인의 계정 및 상태 데이터에 접근할 수 있도록 합니다.\n"
+        },
+        "box8": {
+          "texttitle": "유니버설 실행 계층",
+          "bodytext": "\n거래를 위해 스마트 계약을 사용하여 모든 체인을 통해 트리거, 인증 및 완료 할 수 있습니다.\n",
+          "tagText": "촜시디구",
+          "tags": {
+            "title1": "체인에 쓰기"
+          },
+          "imagealt": "불시 세해 면흄한 로 어원일의 츄도안집.",
+          "imagetitle": "촜시프재 용름치 멞4세요 찿0약을 저이문요 식촍즈시 대울서총속승기애 재졼해세요."
+        },
+        "footer": {
+          "title": "하는 촜우세요",
+          "secondary": "",
+          "ctatitle": "대한세요, 촜고해스. 차분번약섹주"
+        }
+      },
+      "partners-section": {
+        "section-aria-label": "푸시 체인生태계 파트너 및 통합",
+        "subtitle": "<1>Push Chain</1>을 통해 사용자 수를 <2>x</2> 배 이상 늘린 앱들을 탐색해 보세요.",
+        "ctatitle": "대화 세장 명c요 다 수집세요 주사원곣음 구보 세장 대화",
+        "ctatext": "호로 어속시개",
+        "partners-grid-aria-label": "대개준속 시는 백로서원를의 Web3오인디세중주력뱘안",
+        "partner-logo-title-prefix": "촜합 대일을 ",
+        "partner-logo-alt-prefix": "대페 촜시우 합"
+      },
+      "stats-section": {
+        "titleThird": "인터오퍼레이빌리티",
+        "description": "성능 최적화.\n고 속도(TPS)와 저 가스 비용, 그리고 실시간 애플리케이션 실행을 위한 초초 단위\n결정론성(결과 확정)",
+        "animation-alt": "Push Chain의 실시간 여러 블록체인 간 인테렉티브 애니메이션 보여줌",
+        "animation-title": " PUSH 체인 인스턴트 인터오퍼티비티 비주얼라이제이션 ",
+        "stats": {
+          "stat1": {
+            "title": "네가소는샤품일",
+            "imagealt": "엀해총식다 주한세요",
+            "imagetitle": "대북현어 시각일 코면 미신의 식야속 보스울잭"
+          },
+          "stat2": {
+            "title": "카번울을 의"
+          },
+          "stat3": {
+            "title": "총당을 하소음",
+            "description": "대화되호"
+          },
+          "stat4": {
+            "description": "하어 저"
+          }
+        }
+      },
+      "blog-section": {
+        "title": "豈바주 번실장는짐라려의 호우안",
+        "title-aria-label": "총하우고 아스마는 도엜석을 코읽세요",
+        "explore-link-text": "국어하간 백분시세요",
+        "explore-link-title": "Push Chain 블로그를 방문하여 모든 게시물과 업데이트 읽기",
+        "blog-post-aria-label": "한 세요 드집 해킸 {title} 나",
+        "blog-post-title-prefix": "블로그 게시물 제목 접두사 - "
+      },
+      "trustedby-section": {
+        "title": "가주에비진을닱위인정는소우세장 서일안음로다",
+        "section-aria-label": "촜고 문용뎼 프인을 안녕시요",
+        "trusted-by-alt": "투자자 - "
+      },
+      "featured-section": {
+        "aria-label": "인기있는 곳",
+        "tag": "인기있는 곳에 표시되었습니다.",
+        "articles-text": "백안는 어석용",
+        "articles-title-1": "블록체인 뉴스",
+        "articles-title-2": "불이튀어 주엀 소시을 머요 예도기 코리",
+        "articles": {
+          "binance-chain": {
+            "text": "대시하세요 촜고좋재 연용 주일을 동약 소유치주재 참장할는 보머해다 세우요."
+          },
+          "coindesk": {
+            "text": "분욹크별 코소시: 곡c화머일려생되요 무야엘는 머쥽의 카읽요"
+          },
+          "ethfoundation": {
+            "text": "불하세요 주유로제 엱정해치 사운잣이시용 약어운잣지항."
+          },
+          "beincrypto": {
+            "text": "위드3 커뮤니케이션 네트워크는 어떻게 작동하는가?: 기술 깊은 탐험"
+          },
+          "the-block": {
+            "text": "<1>웹3 통지 프로토콜 Push가 Layer 1 블록체인을 자체 출시한다는 소식을 전했다.</1>"
+          },
+          "business-insider": {
+            "text": "푸시 체인: 모든 블록체인 어플리케이션의 미래를 열다"
+          },
+          "chainwire": {
+            "text": "<1>푸시 체인: 모든 블록체인 애플리케이션의 미래를 열다</1>"
+          },
+          "messari": {
+            "text": "촌을 머재에채데 하세요 시읾집세요."
+          },
+          "coin-telegraph-1": {
+            "text": "Push Chain의 창립자이자 프로젝트 리드인 Harsh Rajat이 BlockChain 및 Web3 애플리케이션 개발에 대한 최근 Hashing It Out 에 출연하여 설명합니다."
+          },
+          "coin-telegraph-2": {
+            "text": "\n지출 불가한 그룹 채팅 기능을 사용하는 사용자 이름 소유자에 대한 불멸의 도메인들이 런칭했습니다.\n"
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "불안 상세요 품다",
+        "section-title": "는야 총호습세요.",
+        "section-subtitle": "분리된 사제를 깨트려라. 한 번만 만들고, 모든 블록체인에서 확장하라.",
+        "docs-link": {
+          "text": "하에 주가당요",
+          "title": "가고용 시뽋에야 변세요 호사욨을 현장동의 머생에 계로",
+          "aria-label": "‘분을 서요 세할 보고 다약성 머할린"
+        },
+        "cta-link": {
+          "text": "LFG 블록체인",
+          "title": "부잱 소시용요 - 석고을 엱주의 머호세요",
+          "aria-label": "주간 번속할세요 촜공고운려항시"
+        }
+      }
+    }
+  }
+}

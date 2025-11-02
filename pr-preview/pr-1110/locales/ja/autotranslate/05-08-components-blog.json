@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "Push Chain からの最新情報",
+        "follow-button": "フォロー",
+        "read-more": "もっと読む"
+      },
+      "list": {
+        "recent-updates": "最新情報",
+        "page-title": "ページ {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "ブログリストページのナビゲーション",
+        "newer-entries": "新しい記事",
+        "older-entries": "前のエントリ"
+      },
+      "footer-item": {
+        "share-title": "この記事をシェアして会話に参加しよう！",
+        "share-button": "シェア",
+        "share-modal-title": "共有",
+        "copy-link": "リンクをコピー",
+        "about-title": "Push Chain について",
+        "about-description": "Push Chain は、すべてのチェーン間の断片化を排除するように設計された最初の真のユニバーサル ブロックチェーンです。開発者は一度デプロイするだけで、EVM または Non-EVM (Ethereum、Solana、Bitcoin などを含む) のいずれのチェーンでも、ユーザーがネイティブに自分のチェーンで行うように、すぐに利用可能になります。100% EVM 互換、Proof of Stake (PoS) チェーンであり、ユーザーは Push Chain にデプロイされたアプリを、自分のチェーンでネイティブに行うのと同じように、任意のチェーンからインタラクトできます。",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "LinkedIn"
+      }
+    }
+  }
+}
