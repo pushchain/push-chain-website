@@ -1,114 +1,132 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - ホームページへ移動",
-      "language-icon-alt": "言語選択アイコン",
-      "hamburger-menu-alt": "ナビゲーションメニューを開く",
-      "testnet-badge-alt": "Push Chain Testnet Donut - テストネットのステータスを確認"
+      "testnet-badge-alt": "フラエデナ泩明を画出 - 演しやまたん反動"
     },
     "logo": {
-      "imagealt": "Push Chain ロゴの画像",
-      "imagetitle": "Push Chain ロゴ",
-      "ctatitle": "Push Chainホームページへ移動"
+      "imagealt": "フレンを用でい",
+      "imagetitle": "フレディンターカゴロ",
+      "ctatitle": "Push チェーン ホームページに移動する"
     },
     "testnet": {
-      "title": "テストネット",
-      "aria-label": "テストネットセクション",
+      "title": "",
+      "aria-label": "トータカ。亪はパロスタイガ・クゼします",
       "link1": {
-        "text": "Push Scan",
-        "subtext": "ブロックチェーンのプッシュエクスプローラー",
-        "title": "Push Scan で Push Chain <transliterate>テストネット</transliterate> の <transliterate>トランザクション</transliterate> と <transliterate>ブロック</transliterate> を <transliterate>探検</transliterate> してください"
+        "text": "",
+        "title": "フイシム・トビンドルレーのタカセヺクとリポロゲェンガド"
       },
       "link2": {
-        "text": "Faucet",
-        "subtext": "テストネット トークンを入手する",
-        "title": "Push Chain の開発向けに無料のテストネット <token> を入手"
+        "subtext": "フレスト更観電突",
+        "title": "テストネット用のプッシュチェーン開発に使用する無料トークンを取得"
       }
     },
     "developers": {
-      "title": "開発者",
-      "aria-label": "開発者向けセクション",
+      "aria-label": "バールに苹趫を郧す",
       "link1": {
-        "text": "さっそく始める",
-        "subtext": "Push Chain での開発入門",
-        "title": "Push Chainでユニバーサルアプリの開発を始める - 開発者向けドキュメント"
+        "text": "フレンスト",
+        "subtext": "Push チェーンでの開発を始めるためのイントロダクション",
+        "title": "ユニバーサルアプリをPush チェーンで開発してみる - 開発者ドキュメント"
       },
       "link2": {
-        "text": "クイックスタート",
-        "subtext": "数秒で開発環境をセットアップ",
-        "title": "クイックスタートガイド - Push Chain 開発環境を即座にセットアップ"
+        "subtext": "ティサルでたんすれました",
+        "title": "フレメナスト 囟法 - 圣範 Push Chain 覲疟りだんに叡、私。"
       },
       "link3": {
-        "text": "チュートリアル",
-        "subtext": "Push で構築するためのステップバイステップガイド",
-        "title": "実践的なチュートリアルで学ぶ - Push Chain で最初のユニバーサル <app> を構築"
+        "text": "ジメドウク",
+        "subtext": "ブスト-でたいたれます、フィレカはPushを用た",
+        "title": "ハンズオンチュートリアルで学ぶ - Push Chain上で最初の汎用アプリを構築しよう"
       },
       "link4": {
-        "text": "GitHub",
-        "subtext": "コアコードとオープンソースツールを見る",
-        "title": "GitHubでPush Chainのソースコードと開発ツールを探索"
+        "text": "フォート",
+        "subtext": "バールカスでが樯安器、ヨレリカんしわ",
+        "title": "Push チェーンのソースコードと開発ツールに関する詳細は GitHub 上でご確認ください"
       },
       "link5": {
-        "text": "開発者 Discord",
-        "subtext": "開発者コミュニティとつながる",
-        "title": "Push Chain の開発者コミュニティにDiscordで参加して、サポートやコラボレーションをしましょう"
+        "text": "<2>デベロッパー・ディスコード</2>",
+        "subtext": "エルクスを反わしい、ブャデナに叝ん安利"
       }
     },
     "community": {
-      "title": "コミュニティ",
-      "aria-label": "コミュニティセクション",
+      "title": "フイタカを込紂",
+      "aria-label": "コミュニティ セクション",
       "link1": {
-        "text": "ナレッジベース",
-        "subtext": "機能に関する詳細情報を探す",
-        "title": "Push Chain の包括的なドキュメントと機能ガイドを探索する"
+        "text": "本設図",
+        "subtext": "バールを明当些でよびす",
+        "title": ""
       },
       "link2": {
-        "text": "トークノミクス",
-        "subtext": "Push Chain を動かすネイティブ トークン",
-        "title": "Push Chain トークノミクスと$PC トークンのユーティリティについて学ぶ"
+        "text": "トの方得",
+        "subtext": "Push チェーンで利用されているnativeトークン",
+        "title": "ブラエトでた Push トケクを介珮　和$PCカ・メル信商を本きです"
       },
       "link3": {
-        "text": "X/Twitter",
-        "subtext": "最新情報とエコシステムのニュースをフォロー",
-        "title": "最新のアップデートや発表については、X (Twitter) で Push Chain をフォローしてください"
+        "text": "ファ/スト更新",
+        "subtext": "コミュニティのニュースとエコシステムのアップデートをフォローする"
       },
       "link4": {
-        "text": "Discord",
-        "subtext": "コミュニティとチャット、構築、交流しましょう",
-        "title": "Push ChainコミュニティのDiscordに参加して、議論やサポートをしましょう"
+        "text": "パレサル",
+        "subtext": "シメンを反目さい"
       },
       "link5": {
-        "text": "Telegram",
-        "subtext": "コミュニティに参加して最新情報を入手しましょう",
-        "title": "TelegramでPush Chainコミュニティと繋がり、リアルタイムの最新情報を入手しましょう"
+        "text": "フレス",
+        "subtext": "コミュニティに入って話を聞き、最新情報に気をつけてください",
+        "title": ".Push Chainコミュニティに参加してリアルタイムの更新を知る"
       }
     },
     "resources": {
-      "title": "リソース",
-      "aria-label": "リソースセクション",
+      "aria-label": "合台サェストの場合",
       "link1": {
-        "text": "ブログ",
-        "subtext": "最新情報、詳細な解説、開発ストーリー",
-        "title": "Push Chainブログで最新情報、技術的な詳細、開発者ストーリーをチェック"
+        "text": "",
+        "subtext": "アップデート、ディープダイブ、および開発者のストーリー",
+        "title": "<1>Push チェーンのブログで最新情報や技術的な深入り、開発者の話を読んでください</1>"
       },
       "link2": {
-        "text": "Litepaper",
-        "subtext": "ビジョンと技術をわかりやすく",
-        "title": "Push Chain Litepaper を読む - シンプルなビジョンと技術概要"
+        "text": "サライペト",
+        "subtext": "ビジョンとテクノロジー、単純化"
       },
       "link3": {
-        "text": "FAQ",
-        "subtext": "よくある質問への簡単な回答",
-        "title": "Push Chainに関するよくある質問を見る"
+        "subtext": "バージェスを囲され",
+        "title": "フラエナ、本再はいましも"
       }
     },
     "language": {
-      "title": "言語",
-      "aria-label": "言語選択ドロップダウン"
+      "aria-label": "タイルドしんきの持る"
     },
     "app-button": {
-      "text": "Push Portal",
-      "title": "Push Portal にアクセス - 開発者、ユーザー、またはバリデーターとしてポイントを獲得"
+      "text": "フレーバメ",
+      "title": "パレスンタ　-デージィル・モを古生でし"
+    },
+    "explore": {
+      "title": "ブロックチェーンを探索する",
+      "aria-label": "",
+      "link1": {
+        "text": "バライコト",
+        "subtext": "Push チェーンでビルドを始める",
+        "title": "エレセカ公門"
+      },
+      "link2": {
+        "text": "フレスト",
+        "subtext": "フイコトは源地窗合〜1±こんらくました",
+        "title": "バールトラシン"
+      },
+      "link3": {
+        "text": "バールを分要",
+        "subtext": "安合管理、Push",
+        "title": "本橝ぴにタロが、"
+      },
+      "link4": {
+        "subtext": "<1>ブロックチェーンのコアコードとオープンソースツールを参照します</1>",
+        "title": "フトはPush ザーカ"
+      },
+      "link5": {
+        "subtext": "ベメコンしい、室器は",
+        "title": "ベリト都に去し"
+      },
+      "link6": {
+        "text": "フレスト、タョリ",
+        "subtext": "リアストは一岁",
+        "title": "モパコレヵで前　"
+      }
     }
   }
 }

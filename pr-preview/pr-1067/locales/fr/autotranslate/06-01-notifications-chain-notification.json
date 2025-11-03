@@ -1,15 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "title": "",
-      "description": "Recevez un aperçu de Testnet, Donut, créez des apps universelles et gagnez des prix !",
-      "button-text": "Réclamer le Pass Bêta Fermée",
-      "button-title": "Rejoignez le testnet Push Chain et réclamez votre accès bêta fermé",
-      "button-aria-label": "Ouvrir Telegram pour réclamer le pass bêta fermé de Push Chain",
-      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
-      "close-button-title": "Fermer la notification du testnet",
-      "close-button-aria-label": "Dismiss Push Chain testnet notification",
-      "container-aria-label": "Push Chain testnet notification"
+      "description": "Déployez le projet G.U.D ! Le déployathon est en marche et les prix sont de $5000",
+      "button-text": "Allez Universel et Déployer",
+      "button-aria-label": "Projet G.U.D déployathon est EN LIGNE. Vous pouvez le consulter ici.",
+      "close-button-title": "Fermer la notification de testnet",
+      "close-button-aria-label": "Fermer la notification de testnet de Push Chain"
     }
   }
 }

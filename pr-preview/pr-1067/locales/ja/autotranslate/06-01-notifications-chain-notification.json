@@ -2,14 +2,11 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "テストネット、Donutをいち早く体験して、ユニバーサル<app>を構築して賞品をゲット！",
-      "button-text": "クローズドベータパスを獲得する",
-      "button-title": "Push Chain testnetに参加して、クローズドベータパスを獲得しましょう",
-      "button-aria-label": "TelegramでPush Chainのクローズドベータパスを受け取る",
-      "image-alt": "Push Chain Testnet Donut - ユニバーサル ブロックチェーン",
-      "close-button-title": "テストネット通知を閉じる",
-      "close-button-aria-label": "Push Chain テストネットの通知を閉じる",
-      "container-aria-label": "Push Chain testnet notification"
+      "description": "プロジェクトG.U.Dのデプロイメント祭りがオンラインで開催されています!アプリをデプロイして、$5000を獲得",
+      "button-title": "フイコト、G.U.D。ミムンガに前セでい",
+      "button-aria-label": "フリカトンを反る.しまちいらう",
+      "image-alt": "シントアゼヺカ そんちる游朡",
+      "close-button-title": ""
     }
   }
 }

@@ -5,114 +5,97 @@
   },
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Zur Startseite navigieren",
-      "language-icon-alt": "Symbol für die Sprachauswahl",
-      "hamburger-menu-alt": "Navigationsmenü öffnen",
-      "testnet-badge-alt": "Push Chain Testnet Donut - Testnet-Status anzeigen"
+      "logo-aria-label": "Push Chain - zur Homepage navigieren",
+      "hamburger-menu-alt": "Menüsymbol öffnen",
+      "testnet-badge-alt": "Push-Chain Testnet Donut - Status der Testnetzwerks ansehen"
     },
     "logo": {
-      "imagealt": "Image of Push Chain Logo",
-      "imagetitle": "Push Chain Logo",
-      "ctatitle": "Zur Push Chain-Homepage navigieren"
+      "imagealt": "Bild des Push Chain Logos",
+      "ctatitle": "Navigiere zur Push-Chain-Hauptseite"
     },
     "testnet": {
-      "title": "Testnet",
-      "aria-label": "Testnet Bereich",
+      "aria-label": "Testnet-Sektion",
       "link1": {
-        "text": "Push Scan",
-        "subtext": "Block Explorer für Push Chain",
-        "title": "Entdecken Sie Push Chain Testnet-Transaktionen und -Blöcke auf Push Scan"
+        "subtext": "Blöckeigner für Push-Kette"
       },
       "link2": {
-        "text": "Faucet",
-        "subtext": "Testnet-Token erhalten",
-        "title": "Erhalte kostenlose Testnet-Token für die Push Chain-Entwicklung"
+        "subtext": "Erhalte Testnetztokens",
+        "title": "Erhalte kostenlose Testnetztokens für die Entwicklung von Push Chain"
       }
     },
     "developers": {
-      "title": "Entwickler",
-      "aria-label": "Bereich für Entwickler",
-      "link1": {
-        "text": "Loslegen",
-        "subtext": "Einführung in die Entwicklung auf der Push Chain",
-        "title": "Start building universal Apps on Push Chain – Entwicklerdokumentation"
-      },
-      "link2": {
-        "text": "Schnellstart",
-        "subtext": "Richten Sie die Entwicklungsumgebung in Sekundenschnelle ein",
-        "title": "Schnellstartanleitung – Richten Sie die Push Chain Entwicklungsumgebung sofort ein"
-      },
-      "link3": {
-        "text": "Tutorials",
-        "subtext": "Schritt-für-Schritt-Anleitungen zum Entwickeln mit Push",
-        "title": "Lerne mit praktischen Tutorials – Baue deine erste universelle app auf Push Chain"
-      },
-      "link4": {
-        "text": "GitHub",
-        "subtext": "Kerncode und Open-Source-Tools anzeigen",
-        "title": "Entdecke den Quellcode und die Entwicklungstools von Push Chain auf GitHub"
-      },
-      "link5": {
-        "text": "Entwickler Discord",
-        "subtext": "Verbinde dich mit der Dev-Community",
-        "title": "Trete der Push Chain Entwickler-Community auf Discord für Unterstützung und Zusammenarbeit bei"
-      }
+      "link1": {},
+      "link2": {},
+      "link3": {},
+      "link4": {},
+      "link5": {}
     },
     "community": {
-      "title": "Community",
-      "aria-label": "Community Bereich",
+      "aria-label": "Gemeinschaftsabschnitt",
       "link1": {
         "text": "Wissensdatenbank",
-        "subtext": "Entdecke detaillierte Einblicke in Funktionen",
-        "title": "Entdecke die umfassende Push Chain Dokumentation und Feature-Anleitungen"
+        "title": "Erforsche umfassende Push Chain-Dokumentation und Funktionenführer"
       },
       "link2": {
-        "text": "Tokenomics",
-        "subtext": "Nativer Token, der alles auf der Push Chain antreibt",
-        "title": "Erfahren Sie mehr über die Push Chain Tokenomics und den Nutzen des $PC Tokens"
+        "subtext": "Native Token, der alles auf Push Chain antrieb",
+        "title": "Lernen Sie über die Tokenomics von Push Chain und den Einsatz des $PC-Tokens"
       },
       "link3": {
-        "text": "X/Twitter",
-        "subtext": "Verfolge Updates und Neuigkeiten aus dem Ökosystem",
-        "title": "Folgen Sie Push Chain auf X (Twitter) für die neuesten Updates und Ankündigungen"
+        "subtext": "Folge den Updates und Ökosystem-Neuigkeiten",
+        "title": "Folge Push Chain auf X (Twitter) für die neuesten Updates und Ankündigungen"
       },
       "link4": {
         "text": "Discord",
-        "subtext": "Tausche dich mit der Community aus, entwickle gemeinsam und genieße die gute Atmosphäre",
-        "title": "Trete der Push Chain Community auf Discord bei, um dich auszutauschen und Support zu erhalten"
+        "subtext": "Verbindung, Aufbau und Vibe mit der Community",
+        "title": "Bei der Push Chain Gemeinschaft auf Discord für Diskussionen und Unterstützung beitreten"
       },
       "link5": {
         "text": "Telegram",
-        "subtext": "Werden Sie Teil der Community und bleiben Sie auf dem Laufenden",
-        "title": "Verbinden Sie sich mit der Push Chain Community auf Telegram für aktuelle Informationen"
+        "subtext": "Betreibe den Konvo und bleib im Bilde",
+        "title": "Verbinde dich mit der Push Chain Community auf Telegram für Echtzeit-Updates"
       }
     },
     "resources": {
       "title": "Ressourcen",
-      "aria-label": "Ressourcen",
+      "link1": {},
+      "link2": {
+        "subtext": "Die Vision und Tech, vereinfacht"
+      },
+      "link3": {}
+    },
+    "language": {},
+    "app-button": {
+      "title": "Zugriff auf Push Portal - Erwerb von Punkten als Entwickler, Benutzer oder Validator"
+    },
+    "explore": {
+      "title": "Entdecken",
+      "aria-label": "Erforschungsbereich erforschen",
       "link1": {
-        "text": "Blog",
-        "subtext": "Updates, tiefe Einblicke und Entwicklergeschichten",
-        "title": "Lies den Push Chain-Blog für die neuesten Updates, technische Einblicke und Entwicklergeschichten"
+        "text": "Loslegen",
+        "subtext": "Einführung in das Bauen auf Push Chain",
+        "title": "Loslegen Sie Ihr Projekt"
       },
       "link2": {
-        "text": "Litepaper",
-        "subtext": "Die Vision und die Technologie, vereinfacht",
-        "title": "Lies den Push Chain Litepaper – vereinfachte Vision und technischer Überblick"
+        "text": "Schnelleinstieg",
+        "subtext": "Setup-Entwicklungsumgebung in Sekunden einrichten",
+        "title": "Schnellstart"
       },
       "link3": {
-        "text": "FAQ",
-        "subtext": "Schnelle Antworten auf häufige Fragen",
-        "title": "Durchstöbern Sie häufig gestellte Fragen zu Push Chain"
+        "text": "Anleitungen"
+      },
+      "link4": {
+        "subtext": "Betrachten Sie die Core-Code und offenen Quellcode",
+        "title": "Push-Kette erkunden"
+      },
+      "link5": {
+        "text": "Entwickler-Discord",
+        "subtext": "Verbinden Sie sich mit der Entwicklergemeinschaft",
+        "title": "Bei Discord beitreten"
+      },
+      "link6": {
+        "text": "Beispiel-Exploration",
+        "title": "Beispielanwendungen erkunden"
       }
-    },
-    "language": {
-      "title": "Sprache",
-      "aria-label": "Sprachauswahl"
-    },
-    "app-button": {
-      "text": "Push Portal",
-      "title": "Zugang zu Push Portal - Verdiene Punkte als Entwickler, Nutzer oder Validator"
     }
   },
   "footer": {
@@ -210,250 +193,113 @@
   },
   "pages": {
     "home": {
-      "seo": {
-        "title": "Startseite - Push Chain | Die universelle Blockchain für Apps",
-        "description": "Gemeinsam genutzter L1 für universelle Apps. Einsatz einmalig; erreichen Sie Nutzer auf jeder Kette. Jeder Wallet wird unterstützt. Bezahlen Sie mit jedem Token.",
-        "og-title": "Push Chain - Universelle L1 für Apps",
-        "og-description": "Ein einziger Deploy für EVM- und non-EVM-Nutzer. Verwende jede Wallet und zahle mit jedem Token – kein Netzwerkwechsel erforderlich.",
-        "twitter-title": "Einmal bereitstellen. Jede Kette erreichen.",
-        "twitter-description": "Transaktionen von jeder Kette durchführen. Jede Wallet nutzen. Mit jedem Token bezahlen. Kein Wechseln von Netzwerken."
-      },
+      "seo": {},
       "hero-section": {
-        "title": "Jede Chain, Jede App, Alle Nutzer.\nEine Push Chain.",
-        "description": "Die erste Layer 1, die für universelle Apps entwickelt wurde. \nEinmal bauen & bereitstellen, Nutzer von jeder Kette an Bord holen.",
-        "primary-button": "Mit dem Aufbau beginnen",
-        "primary-button-title": "Starte deine Builder-Reise mit Push Chain!",
-        "secondary-button": "Wissensdatenbank erkunden",
-        "secondary-button-title": "Push Chain kennenlernen und erkunden",
-        "section-aria-label": "Push Chain hero section - Einführung in die universelle Layer 1 Blockchain",
-        "primary-button-aria-label": "Starte mit dem Aufbau universeller Apps auf Push Chain - Gehe zur Entwicklerdokumentation",
-        "secondary-button-aria-label": "Erfahren Sie mehr über die Funktionen und Konzepte von Push Chain in der Wissensdatenbank",
-        "hero-background-alt": "Push Chain Hintergrundanimation, die universelle Blockchain-Konnektivität zeigt",
-        "hero-background-title": "Push Chain - universelle Layer 1 für cross-chain Anwendungen",
-        "schema-headline": "Push Chain - Universal L1 für Apps",
-        "schema-description": "Einmal auf Push Chain deployen und Nutzer auf jeder Blockchain mit universellen Apps erreichen"
+        "title": "Jeder Blockchain, Jede App, Alle Benutzer.\nEine Push-Kette.",
+        "description": "Das erste Layer 1 für Universelle Apps. \nEinmal aufbauen und ausliefern, Benutzer von jeder Kette einbinden.",
+        "section-aria-label": "Push Chain Heldersatz - Universelle Schicht 1 Blockchain-Einführung",
+        "schema-description": "Einmal auf Push Chain bereitstellen und mit universellen Apps Nutzer auf jeder Blockchain erreichen"
       },
       "whatis-section": {
-        "titleFirst": "Eine wahre",
-        "titleSecondGraditent": "Universal",
-        "titleThird": "Chain",
-        "bottomTextFirst": "Einmal deployen,",
-        "bottomTextSecond": "Überall erreichbar",
-        "bottomLinkText": "Loslegen",
-        "bottomLinkTitle": "Zum Dokumentations-Hub",
-        "section-aria-label": "Was ist Push Chain - Universelle Blockchain-Erklärung",
-        "animation-alt": "Animation, die die universelle App-Bereitstellung von Push Chain über mehrere blockchains hinweg demonstriert",
-        "animation-title": "Push Chain universelle Bereitstellungsvisualisierung - einmal bereitstellen, jede Chain erreichen",
-        "bottom-link-aria-label": "Zur Push Chain Dokumentation navigieren, um mit dem Aufbau von universalen Apps zu beginnen"
+        "titleThird": "Kette",
+        "bottomLinkTitle": "Zur Dokumentations-Hub-Seite gehen"
       },
       "chain-features-section": {
-        "section-aria-label": "Push Chain Innovationen und Features",
         "header": {
-          "main-text": "Auf Basis von Innovationen aufgebaut, um Fragmentierung zu beseitigen!",
-          "other-text": "Push ist die einzige Universal Layer 1, die du jemals brauchen wirst!"
+          "main-text": "Auf innovativen Technologien basierend, um Fragmentierung zu eliminieren!",
+          "other-text": "Push ist der einzige universelle Layer 1, den du jemals benötigen wirst!"
         },
         "box1": {
-          "texttitle": "Transaktionen auf jeder Blockchain",
-          "bodytext": "Push Chain unterstützt Transaktionen von jeder Blockchain. Nutzer können Gas mit jedem Token bezahlen – kein Bridging erforderlich.",
-          "imagealt": "Illustration showing different Blockchain logos falling in a pin ball machine.",
-          "imagetitle": "Unterstützt Transaktionen von jeder Blockchain."
+          "bodytext": "Push Chain unterstützt Transaktionen von jedem Blockchain. Benutzer können Gas in jeder Token zahlen — kein Brückenbedarf.",
+          "imagealt": "Illustration zeigend, wie verschiedene Blockchain-Logos in einem Billardball-Maschine fallen."
         },
-        "box2": {
-          "texttitle": "Wallet Abstraction",
-          "bodytext": "Jede Wallet von jeder Blockchain kann verbinden, interagieren und Transaktionen durchführen. Breche Web3-Barrieren, indem du Social Login oder E-Mail verwendest. Nutzer können auf Push Chain entscheiden.",
-          "imagealt": "Illustration showing MetaMask Wallet, Phantom Wallet, etc coming out of a big wallet with Push Chain logo on it.",
-          "imagetitle": "Unterstützt beliebige bestehende Wallets wie MetaMask, Phantom usw. sowie Social Login"
-        },
+        "box2": {},
         "box3": {
-          "texttitle": "100% EVM\nKompatibel",
-          "bodytext": "Bereite die Bereitstellung mit null On-Chain-Code vor. Verwandle deine native app in wenigen Minuten in eine universelle app.",
-          "imagealt": "Illustration showing Ethereum Virtual Machine Logo drehend und sagen 100% EVM Kompatibilität.",
-          "imagetitle": "Keine Änderungen am On-Chain-Code erforderlich, 100% EVM-kompatibel."
+          "texttitle": "100% EVM-kompatibel\n"
         },
-        "box4": {
-          "texttitle": "Universelle Smart Contracts",
-          "bodytext": "Einmal entwickeln, Cross-Chain- und mehrstufige Erlebnisse ermöglichen – mit einem einzigen, zukunftssicheren Vertrag.",
-          "imagealt": "Illustration showing Ethereum Virtual Maching logo und ein Bogen, der sich darum dreht und '100% EVM Compatible' sagt",
-          "imagetitle": "Einmal bereitstellen, sofort kompatibel mit allen unterstützten Chains (EVM oder non-EVM)."
-        },
+        "box4": {},
         "box5": {
-          "texttitle": "Universal Fee\nAbstraction",
-          "bodytext": "Ermöglicht es Nutzern, Gas in jedem Token auf jeder Chain zu bezahlen, ohne Bridging.",
-          "imagealt": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
-          "imagetitle": "Unterstützt jeden Token jeder Chain für Transaktionen."
+          "texttitle": "Universelle Gebühr\nAbstraktion",
+          "bodytext": "Lassen wir die Nutzer Gas in jedem Token auf jeder Kette ohne Bridging bezahlen können.",
+          "imagetitle": "Unterstützt jeden Token jeder Kette für Transaktionen."
         },
         "box6": {
-          "texttitle": "Universal Execution Layer",
-          "bodytext": "Erstelle atomare, zusammensetzbare Apps über Web3 hinweg. Erschaffe noch nie dagewesene App-Erlebnisse, indem du mehrere Benutzer verschiedener Chains mit derselben App transaktieren lässt.",
-          "imagealt": "Abbildung, die verschiedene Tetris-Blöcke zeigt, die in ein Wurmloch eintreten und Push Chain-Logo aus dem anderen Ende hervorkommen.",
-          "imagetitle": "Transaktionen von jeder Blockchain finalisieren auf Push Chain, wodurch Nutzer jeder Blockchain die gleiche App, auch bekannt als Universal Execution Layer, nativ nutzen können."
+          "texttitle": "Universaler Ausführungsschicht",
+          "bodytext": "Entwickeln Sie atomare, komponierbare Apps über Web3. Erstellen Sie App-Erfahrungen, die noch nie dagewesen sind, indem mehrere Benutzer unterschiedlicher Ketten mit derselben Anwendung interagieren."
         },
         "box7": {
-          "texttitle": "Shared State",
-          "bodytext": "Greifen Sie in Ihrem smart contract auf Konto- und Zustandsdaten anderer blockchains zu.",
-          "tagText": "DEMNÄCHST VERFÜGBAR",
           "tags": {
-            "title1": "AUS KETTEN LESEN"
-          },
-          "imagealt": "Illustration showing Push Chain growing in blocks style animation.",
-          "imagetitle": "(Roadmap) shared-state ermöglicht den Zugriff auf Konto- und Zustandsdaten von anderen Chains in Ihrem smart contract."
+            "title1": "Aus CHAINs lesen"
+          }
         },
         "box8": {
-          "texttitle": "Programmierbare\nLöser",
-          "bodytext": "Löse Transaktionen auf jeder Kette mithilfe deines smart contract aus, validiere sie und schließe sie ab.",
-          "tagText": "DEMNÄCHST VERFÜGBAR",
           "tags": {
-            "title1": "AUS KETTEN LESEN"
+            "title1": "ZU CHAINs SCHREIBEN"
           },
-          "imagealt": "Illustration showing tetris blocks in different colors merging and changing.",
-          "imagetitle": "(Roadmap) Programmable Solvers ermöglichen es Benutzern, Transaktionen über jede Kette mithilfe Ihres smart contract auszulösen, zu validieren und abzuschließen."
+          "imagetitle": "(Roadmap) Programmable Solvers erlauben Benutzern, Transaktionen über beliebige Ketten auszulösen, zu validieren und abzuschließen, mithilfe Ihres Smart-Contracts."
         },
         "footer": {
-          "title": "erweitern Sie Ihren app's Nutzerstamm, indem Sie universal werden",
-          "secondary": "mit null Aufwand!",
-          "ctatext": "Jetzt loslegen",
-          "ctatitle": "Einmal deployen, zehne mal deine Nutzerbasis erreichen. Besuche die Entwickler-Dokumentation."
+          "title": "Machen Sie Ihre App-Anwenderbasis universal",
+          "secondary": "mit nullbemühung!",
+          "ctatext": "Loslegen"
         }
       },
       "partners-section": {
-        "section-aria-label": "Partner und Integrationen im Push Chain Ökosystem",
-        "title": "Powered by Push Chain",
-        "subtitle": "Entdecke Apps, die ihre Nutzerbasis einfach durch Bereitstellung auf Push Chain vervielfacht haben.",
-        "ctatitle": "Entdecke Partner, apps und Infrastruktur auf Push Chain",
-        "ctatext": "Erkunde das Ökosystem",
-        "partners-grid-aria-label": "Grid von Partner-Logos, die Web3-Projekte zeigen, die Push Chain verwenden",
-        "partner-logo-title-prefix": "Partner-Logo - ",
+        "subtitle": "Entdecke Apps, die ihre Nutzerbasis einfach durch das Bereitstellen auf Push Chain vermehrt haben.",
+        "partners-grid-aria-label": "Gitter von Partnerlogos zeigt Web3-Projekte, die Push Chain verwenden",
         "partner-logo-alt-prefix": "Logo von ",
-        "mobile-view-aria-label": "Mobile Ansicht der Push Chain Ökosystem-Partner"
+        "mobile-view-aria-label": "Mobilansicht des Push Chain Ecosystem Partner"
       },
       "stats-section": {
-        "section-aria-label": "Push Chain Leistungsstatistiken und Metriken",
-        "title": "Erreiche",
-        "titleGradient": "Sofort",
-        "titleThird": "Interoperabilität",
-        "description": "Optimiert für Performance.\nHohe TPS, extrem niedrige Gas-Gebühren und Sub-Sekunden-\nFinalität für Echtzeit-App-Ausführung.",
-        "animation-alt": "Interaktive Animation, die die sofortige Interoperabilität von Push Chain über mehrere Blockchains hinweg zeigt",
-        "animation-title": "Push Chain – Visualisierung der sofortigen Interoperabilität",
+        "description": "Optimiert für Leistung.\nHohe Transaktionsprozesse (TPS), extrem niedrige Gaserweise und untersekundenlange Endgültigkeit für ein Echtzeit-App-Ausführung.",
         "stats": {
-          "stat1": {
-            "title": "Unterstützte Blockchains",
-            "imagealt": "Illustration showing supported chains",
-            "imagetitle": "Liste aller unterstützten Blockchains wie Ethereum, Solana, BNB Chain, usw."
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "NATIVE FINALITY",
-            "description": "Sofort"
-          },
-          "stat4": {
-            "title": "NATIVE BLOCK TIME",
-            "description": "1s"
-          }
+          "stat1": {},
+          "stat2": {},
+          "stat3": {},
+          "stat4": {}
         }
       },
       "blog-section": {
-        "subtitle": "NEWS, DEVLOGS & IDEAS",
-        "subtitle-aria-label": "Blog-Kategorie-Informationen",
-        "title": "Ihr Puls von Push Chain",
-        "title-aria-label": "Neueste Push Chain Blogbeiträge und Updates",
         "explore-link-text": "Weitere Artikel entdecken",
         "explore-link-title": "Besuchen Sie den Push Chain Blog, um alle Artikel und Updates zu lesen",
-        "explore-link-aria-label": "Zur Push Chain Blog-Seite navigieren",
-        "section-aria-label": "Push Chain Blogbeiträge und Nachrichten",
-        "blog-posts-list-aria-label": "Aktuelle Push Chain Blogbeiträge",
-        "blog-post-aria-label": "Blogpost über {title} lesen",
-        "blog-post-title-prefix": "Lies den Blogbeitrag - ",
-        "loading-text": "Lade die neuesten Blogbeiträge...",
-        "error-text": "Blogbeiträge konnten im Moment nicht geladen werden",
-        "no-posts-text": "Keine Blogbeiträge verfügbar"
+        "blog-post-title-prefix": "Lese den Blog-Beitrag - "
       },
       "trustedby-section": {
-        "title": "Von dem Team entwickelt, dem Pioniere von Web3 vertrauen",
-        "section-aria-label": "Push Chain trusted by section",
-        "trusted-by-alt": "Investor - "
+        "title": "Durch die von Pionieren des Web3 getrauenswürdigen Team entwickelt"
       },
       "featured-section": {
-        "aria-label": "Im Fokus",
-        "tag": "FEATURED ON",
-        "title": "Push Chain im Rampenlicht",
-        "subtitle": "Lass dir nicht nur unser Wort darauf geben. Sieh, was die Medien über die wahre universal Chain sagen.",
-        "articles-image-alt": "Medienberichterstattung von ",
-        "articles-text": "Vollständige Berichterstattung lesen",
-        "articles-title-1": "Lies ",
-        "articles-title-2": "'s Gedanken zu Push Chain im Detail",
+        "subtitle": "Hören Sie nicht nur auf unsere Worte. Sehen Sie, was die Medien über den wahren universellen Chain sagen.",
         "articles": {
           "binance-chain": {
-            "text": "Wir freuen uns, bekannt zu geben, dass Push Protocol, ein führendes dezentrales Kommunikationsprotokoll für Web3, nun auf BNB Chain gestartet ist."
+            "text": "Wir freuen uns, dass Push Protocol, ein führender dezentraler Kommunikationsprotokoll für Web3, nun auf BNB Chain verfügbar ist."
           },
-          "coindesk": {
-            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
-          },
-          "defiant": {
-            "text": "Unstoppable Domains startet Token-gesteuerte Gruppenchats. Die Zusammenarbeit mit Push Protocol zielt darauf ab, Desinformation und Betrug abzuwehren."
-          },
-          "balaji": {
-            "text": "Benutzergesteuerte Benachrichtigungen. Zwei Unternehmen kontrollieren Push-Benachrichtigungen an Milliarden von Smartphones: Apple und Google."
-          },
-          "defiprime": {
-            "text": "Harsh Rajat spricht über die Zukunft des Bankwesens, EPNS protocol Anreize und wo es ein Geschäftsmodell für dezentrale Push-Benachrichtigungen gibt."
-          },
+          "coindesk": {},
+          "defiant": {},
           "ethfoundation": {
-            "text": "Seit HackMoney haben Richa und Harsh unglaubliche Energie in den Aufbau von EPNS gesteckt, was sie als \"ein fehlendes Puzzleteil von web3\" bezeichnen."
+            "text": "Seit HackMoney haben Richa und Harsh unglaubliche Energie in die Entwicklung von EPNS investiert, das sie als „eine fehlende Stückelung im Web3“ bezeichnen."
           },
-          "beincrypto": {
-            "text": "Wie Web3 Kommunikationsnetzwerke funktionieren: Ein technischer Überblick"
-          },
-          "the-block": {
-            "text": "Web3 Benachrichtigungsprotokoll Push startet seine eigene Layer 1 Blockchain"
-          },
-          "business-insider": {
-            "text": "Push stellt Push Chain vor: Die Zukunft von Universal Blockchain Anwendungen"
-          },
-          "chainwire": {
-            "text": "Push präsentiert Push Chain: Die Zukunft universeller Blockchain Anwendungen."
-          },
-          "benzinga": {
-            "text": "Push enthüllt Push Chain: Die Zukunft von universellen Blockchain Anwendungen"
-          },
-          "crypto-briefing": {
-            "text": "Push stellt Push Chain vor: Die Zukunft universeller Blockchain-Anwendungen"
-          },
-          "cryptoslate": {
-            "text": "Push Protocol startet Push Chain, um die Blockchain-Kommunikation und Transaktionen zu vereinheitlichen"
-          },
-          "messari": {
-            "text": "EPNS ermöglicht Anreize und passives Einkommen für Nutzer, die dezentrale Benachrichtigungen erhalten."
-          },
-          "coin-telegraph-1": {
-            "text": "Harsh Rajat, Gründer und Projektleiter von Push Protocol, erklärt den Anstieg der Entwicklung von Web3 Chat-Anwendungen in der neuesten Episode von Hashing It Out."
-          },
-          "coin-telegraph-2": {
-            "text": "Unstoppable Domains startet eine Funktion für gruppenbasierte Chats mit Zugangsbeschränkungen für Inhaber von Benutzernamen."
-          }
+          "the-block": {},
+          "business-insider": {},
+          "chainwire": {},
+          "crypto-briefing": {},
+          "cryptoslate": {},
+          "messari": {},
+          "coin-telegraph-1": {},
+          "coin-telegraph-2": {}
         }
       },
       "ending-section": {
-        "aria-label": "Abschnitt zum Erstellen universeller Apps",
-        "section-title": "Baue universelle Apps.",
-        "section-subtitle": "Breche die Silos. Einmal bauen, auf jeder Blockchain skalieren.",
-        "docs-link": {
-          "text": "Push Chain Docs erkunden",
-          "title": "Entdecke die Push Chain Dokumentation und Entwicklerressourcen",
-          "aria-label": "Push Chain Dokumentation in neuem Tab öffnen"
-        },
+        "aria-label": "Apps auf der Blockchain entwickeln Abschnitt",
+        "section-subtitle": "Brechen Sie die Silos. Bauen Sie einmal, skalieren auf jeder Blockchain.",
+        "docs-link": {},
         "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Starte mit Push Chain – der universellen Blockchain-Plattform",
-          "aria-label": "Beginne mit der Push Chain-Entwicklung"
+          "aria-label": "Mit der Entwicklung von Push Chain beginnen"
         }
       }
     },
     "knowledge": {
       "seo": {
-        "title": "Wissensdatenbank — Anleitungen, FAQs & Anleitungen",
+        "title": "Wissensdatenbank — Anleitungen, FAQs & How-tos",
         "description": "Hier findest du Grundlagen, FAQs, Anleitungen und Ressourcen für das Ökosystem. Verständliche, nicht-technische Anleitungen zur Nutzung von Push Chain.",
         "og-title": "Push Chain Knowledge Base - Guides & FAQs",
         "og-description": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufige Fragen zu Push Chain.",
@@ -496,7 +342,7 @@
                 },
                 "builders": {
                   "title": "Build on Push Chain",
-                  "subtitle": "Entdecke, wie man universelle Apps erstellt, welche Möglichkeiten sich dadurch eröffnen und wie du anfängst!",
+                  "subtitle": "Entdecke, wie du universelle <app>s entwickelst, welche Möglichkeiten sich dadurch eröffnen und wie du anfängst!",
                   "ctatitle": "Builders Assemble"
                 },
                 "deepdives": {
@@ -544,7 +390,7 @@
                 "items": {
                   "why-push-chain": "## Warum Push Chain?\n\nPush Chain ist die erste **echte universelle L1**, speziell entwickelt, um Apps zu ermöglichen, nahtlos von Nutzern jeder Chain interagierbar zu sein.\n\nSchreibe deinen Smart Contract einmal, deploye ihn auf Push Chain und erreiche sofort Nutzer auf Ethereum, Solana und allen anderen unterstützten Chains, ohne den On-Chain-Code zu ändern.",
                   "what-is-push-chain": "## Was ist Push Chain?\n\nPush Chain ist eine Proof-of-Stake (PoS) L1 Blockchain, die entwickelt wurde, um Fragmentierung über alle Chains hinweg zu eliminieren.\n\nEs handelt sich um eine **shared state L1** Blockchain für **Universal (Interoperable) Apps** über Chains hinweg. Push Chain ermöglicht Transaktionen von jeder Chain (Eth, Solana, EVM oder non-EVM) und ermöglicht Apps von jeder Chain, von Benutzern jeder Chain genutzt zu werden (**polymarket** von jeder Chain, **pump.fun** von jeder Chain, etc.).",
-                  "innovations-of-push-chain": "## Innovationen von Push Chain\n\nPush Chain führt verschiedene bahnbrechende Innovationen ein, wie:\n\n**Wahrhaft universelles L1** - unterstützt nativ alle Ketten und ermöglicht es Benutzern, mit der gleichen App zu interagieren. Keine zentralen Relayer, Brücken oder andere Hacks sind erforderlich.\n\n**Universale Gebühr Abstractierung** - Ermöglicht es Benutzern, nativ zu interagieren, während sie sich auf der Kette ihrer Wahl befinden und beliebige Token verwenden.\n\n**Wallet-Abstraction** - unterstützt MetaMask, Phantom und andere Wallets sowie soziale oder E-Mail-Anmeldung über einen einheitlichen Anbieter. Benutzer müssen nie ein neues Wallet erstellen, um auf Apps zuzugreifen.\n\n**Einzelne Transaktion, unabhängig von der Kette** - Benutzer können mit jeder App auf Push Chain interagieren und benötigen immer nur eine einzige Signatur für die Transaktion.\n\n**Universelle Smart Contracts** - Smart Contracts sind universell und funktionieren sofort ohne Änderung des On-Chain-Codes oder zusätzliche Schritte.\n\n**Gemeinsamer Zustand & programmierbare Lösungen** - Ermöglicht Entwicklern, den Zustand anderer Blockchains zu lesen und schreiben (Roadmap).\n\nDies führt zu **vollständig interoperablen Anwendungen** für Web3. In diesem Paradigma hört der Benutzer auf damit, \"Uniswap auf Ethereum\", \"Uniswap auf Polygon\" oder \"Uniswap auf Arbitrum\" zu sein und wird einfach ein **Benutzer von Uniswap**.",
+                  "innovations-of-push-chain": "## Innovations of Push Chain\n\nPush Chain introduces several groundbreaking innovations such as:\n\n**True Universal L1** - Natively supports all chains and enables users to interact with the same app. No centralized relayers, bridges, or other hacks needed.\n\n**Universal Fee Abstraction** - Allows users to interact natively while being on the chain of their choice and using any tokens they want.\n\n**Wallet Abstraction** - Support MetaMask, Phantom, and other wallets as well as social or email login through one unified provider. Users never need to create a new wallet to access any apps.\n\n**Single transaction, no matter the chain** - users can interact with any app on Push Chain with a single transaction. No matter how they choose to interact with the app, they will only ever need to sign a single transaction.\n\n**Universal smart contract** - smart contracts are universal and will work instantly without any on-chain code changes or extra steps.\n\n**Shared State & Programmable Solvers** - Enables developers to read and write state of other blockchains (Roadmap).\n\nThis results in **fully interoperable applications** for web3. In this paradigm, instead of being a user of \"Uniswap on Ethereum,\" \"Uniswap on Polygon,\" or \"Uniswap on Arbitrum,\" a person simply becomes a **user of Uniswap.**",
                   "curated-reads": "## Ausgewählte Lektüren 👇"
                 }
               },
@@ -658,7 +504,7 @@
                 }
               },
               "learn-push-chain": {
-                "title": "Erfahren Sie mehr darüber, was Push Chain antreibt!",
+                "title": "Entdecke, was Push Chain antreibt!",
                 "items": {
                   "interop-spectrum": {
                     "title": "Interoperabilität als Spektrum"
@@ -699,8 +545,7 @@
                   "migration-details": "### Migrationsdetails\n\nPush Chain ist das Ergebnis jahrelanger Erfahrung beim Aufbau des führenden Benachrichtigungs- und Kommunikationsprotokolls von Web3, das eine der ersten Consumer-Apps für Krypto war.\n\nAufgrund dessen ist neben dem Airdrop, der den Push Chain-Nutzern, Creatorn, Entwicklern und Ecosystem-Partnern zugewiesen wurde (siehe Details unten), auch ein Migrationsdrop für die $PUSH-Holder reserviert (das der native Token von Push Protocol war).\n\n<details>\n  <summary>\n  <b>Migrationsdetails für bestehende $PUSH-Token-Holder</b>\n\n  </summary>\n\n  **Für bestehende $PUSH-Token-Holder** weist der Push Chain Tokenomics Vorschlag 15 % des gesamten Push Chain Token-Angebots speziell für die Migration zu. Die Migration erfolgt im Verhältnis **1:15**—bedeutet, dass Sie für jeden Push Protocol ($PUSH)-Token, den Sie halten, 15 Push Chain-Token erhalten. Wenn Sie beispielsweise derzeit 40 $PUSH-Token halten, erhalten Sie 600 Push Chain-Token nach der Migration.\n\n  Der Start von Push Chain soll frühere Push Protocol ($PUSH)-Holder für ihre Loyalität und ihren Beitrag belohnen und incentivieren. Der Migrationsprozess für bestehende $PUSH-Token-Holder funktioniert wie folgt:\n\n  - Token migrieren im Verhältnis 1:15 (1 Push Protocol Token = 15 Push Chain Token).\n  - Teilnehmer an der Push Chain Migration erhalten 50 % ihrer migrierten Token sofort freigeschaltet und weitere 50 % nach 3 Monaten freigeschaltet.\n  - Token-Migratoren profitieren auch von einem dedizierten Yield-Farming-Pool, der für sie reserviert ist. Diese Belohnungen werden an Token-Migratoren verteilt, wenn sie ihre migrierten Push Chain-Token staken, um sie für ihren langfristigen Beitrag zum Ecosystem zu belohnen.\n  - Wenn Sie beispielsweise 100 Push Protocol $PUSH-Token haben, erhalten Sie 750 Push Chain-Token bei der Migration und 750 Push Chain-Token nach 3 Monaten — insgesamt 1.500 Push Chain-Token. Sie können diese Token staken, um zusätzliche Belohnungen aus dem Push Chain Yield-Farming-Pool zu erhalten, der in regelmäßigen Abständen verteilt wird.\n\n  Die Push Chain Token Migration ist 12 Monate nach dem Start geöffnet, danach gehen alle verbleibenden Token an die Community und die Ecosystem-Reserve.\n\n</details>\n<p />",
                   "airdrop-details": "### Details zur Airdrop-Verteilung\n\nZusätzlich weist der Tokenomics-Vorschlag 10 % des gesamten Push Chain Token-Angebots für Airdrops an vergangene und gegenwärtige Nutzer der Push Protocol app (Benachrichtigungen, Nachrichtenübermittlung, Chat) zu. Neben neuen Nutzern, Creatorn, Entwicklern und Ecosystem-Partnern von Push Chain.\n\n<br />",
                   "token-distribution": "## Token Distribution Details\n\nThe total supply of Push Chain tokens is proposed at **10 billion**, distributed as follows:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Airdrop distributions begin at TGE, but will happen over the course of multiple seasons.\n2. Core Contributors have a 12-month delay, followed by 24-month vesting.\n3. Push Labs Treasury has a 36-month vesting.\n4. Investors have 24-month linear vesting.\n5. Community and Ecosystem Reserves has a 13.5% unlock at TGE, followed by 36-month vesting.\n\n<br />",
-                  "get-involved": "## Mitmachen!\n\n- **🧙 Entwickler**\nEntdecke unser SDK & Docs im [Dokumentations-Hub](/docs/)\n\n- **🦹 Community**  \nFolge [@PushChain](https://x.com/PushChain) auf X/Twitter, tritt unserem [Discord](https://discord.com/invite/pushchain) und [Telegram](https://t.me/epnsproject) bei.\n\nLasst uns gemeinsam die Zukunft von **Universal Web3** gestalten!",
-                  "use-cases": "### Was kann auf Push Chain gebaut werden?\n\nPush Chain bietet nahtlose Interoperabilität und vereint alle L1s, L2s & L3s und ist daher perfekt positioniert, um das Spielplatz für Innovation und Interop zu werden. Du kannst bestehende Web3-Anwendungsfälle wie folgt aufbauen:\n\n![Primäre Anwendungsfälle von Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nOder verbessere Web3 und schaffe Innovationen:\n\n![Verbraucheranwendungsfälle von Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nOder sieh dir einige beliebte App-Beispiele an und lasse dich inspirieren:\n\n![Beliebte App-Beispiele auf Push Chain](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)"
+                  "get-involved": "## Mitmachen!\n\n- **🧙 Entwickler**\nEntdecke unser SDK & Docs im [Dokumentations-Hub](/docs/)\n\n- **🦹 Community**  \nFolge [@PushChain](https://x.com/PushChain) auf X/Twitter, tritt unserem [Discord](https://discord.com/invite/pushchain) und [Telegram](https://t.me/epnsproject) bei.\n\nLasst uns gemeinsam die Zukunft von **Universal Web3** gestalten!"
                 }
               }
             }
@@ -744,7 +589,7 @@
                   "true-universal-chain": "### Was bedeutet True Universal Chain?\n\nEine **true universal chain** ist eine Blockchain, die jedes andere Netzwerk als gleichberechtigt behandelt – keine Bridges, keine zentralisierten Relayer und keine Kompatibilitäts-Hacks. Sie bietet:\n\n1. **Native Multichain-Identität**  \n\tWallets von Ethereum, Solana, jeder EVM- oder non-EVM-Chain signieren, verifizieren und führen nativ auf Push Chain aus. So müssen Benutzer niemals Konten wechseln oder sich mit der Komplexität mehrerer Wallets herumschlagen.\n\n2. **Einheitliche Abwicklung**  \n\tTransaktionen von jedem Netzwerk werden auf Push Chain endgültig abgewickelt und bieten so eine einzige Quelle der Wahrheit und ermöglichen es derselben app, von Benutzern aller Chains zugänglich zu sein.\n\n3. **Single Transaction und Universal Fee Abstraction**  \n\tBenutzer signieren nur eine Transaktion, unabhängig von ihrer Quell-Chain und zahlen gas in jedem Token. Kein ständiges Warten oder Tauschen unzähliger Token, um eine app zu nutzen.\n\n4. **Einmal deployen, überall nutzen**  \n\tEntwickler schreiben und deployen smart contracts einmal (EVM oder anders) mit **zero** zusätzlichem Code – ein Deployment deckt alle Chains ab.\n\nPush Chain ist die erste, die diese Funktionen direkt in ihren consensus und ihre runtime einbaut und so Fragmentierung wirklich beseitigt – keine Workarounds, keine zusätzlichen layer, nur eine universal chain für alle.\n\n---",
                   "competitors-section": "## Wettbewerber",
                   "vs-other-universal": "### Was Push Chain von anderen \"Universal\" Lösungen unterscheidet?\n\nHeutige sogenannte \"universal\" Lösungen verlassen sich immer noch auf Bridges, erfordern doppelte Transaktionen oder zentralisierte Relayer, um Daten und Wert zu bewegen. Push Chain ist anders—es ist die erste **wahre** Universal L1, die:\n\n- **Nutzer über Ketten hinweg vereinheitlicht**\n\tJede Blockchain-Adresse wird nativ unterstützt. Wallets wie MetaMask, Phantom usw. sind alle mit Push Chain kompatibel. Gas wird in jedem Token auf jeder Kette bezahlt.\n\n- **Als universelle Ausführungsschicht dient**\n\tAlle Transaktionen werden auf derselben Kette endgültig abgeschlossen, was sicherstellt, dass jeder mit derselben app interagiert—keine Hacks, keine Workarounds.\n\n- **Transaktionen jeder Kette korrekt zuordnet und ausführt**\n\tTransaktionen werden signiert, verifiziert und Wallets auf ihren Quellketten zugeordnet. Eine wahre universelle Kette unterstützt sie alle.\n\n---",
-                  "vs-bridges-messaging": "### Wie unterscheidet sich dies von Bridges oder Messaging-Layern?\n\n**Kurze Antwort**: Push ist der Ort, an dem deine app ausgeführt wird. Bridges/Messaging bewegen lediglich tokens oder Nachrichten zwischen Chains, was die Dinge sowohl für Nutzer als auch Entwickler kompliziert macht.\n\n- **Ein Home vs viele Klone**  \n\tMit Bridges/Messaging deployierst du pro Chain und synchronisierst über Nachrichten. Bei Push deployierst du einmal; jeder greift auf denselben Vertrag und shared state zu.\n\n- **Keine Wrapped Assets oder obligatorische Bridging**  \n\tNutzer bleiben auf ihrer Home Chain und zahlen mit dem, was sie bereits haben; wir kümmern uns im Hintergrund um Routing und Gebührenumrechnung.\n\n- **Einheitliche Identität & Verifizierung**  \n\tWir akzeptieren Signaturen von jedem Wallet/Chain und schreiben sie demselben Nutzer auf Push zu – nicht-custodial.\n\n- **Weniger bewegliche Teile**  \n\tKein Cross-Chain-Approval-Tanz, keine Gas-Token-Jagd, keine Klebekontrakte, die synchron gehalten werden müssen.\n\n- **Nutze Bridges, wenn du willst, nicht weil du musst**  \n\tLiquidität kann weiterhin über Bridges bewegt werden, aber die Interaktion mit deiner app erfordert dies nicht.\n\n**Resultat**: einfachere apps, eine Quelle der Wahrheit und eine UX, die sich wie eine Chain anfühlt – auch wenn die Nutzer es nicht sind.\n\n---",
+                  "vs-bridges-messaging": "### Wie unterscheidet sich das von Bridges oder Messaging-Layern?\n\n**Kurze Antwort**: Push ist, wo deine app läuft. Bridges/Messaging bewegen nur <token> oder Nachrichten zwischen Chains, was alles für Nutzer und Entwickler kompliziert macht.\n\n- **Ein Home vs viele Klone**  \n\tMit Bridges/Messaging deployst du pro Chain und synchronisierst über Nachrichten. Auf Push deployst du einmal; jeder greift auf denselben Contract und <shared-state> zu.\n\n- **Keine Wrapped Assets oder obligatorische Bridges**  \n\tNutzer bleiben auf ihrer Home Chain und zahlen mit dem, was sie bereits haben; wir kümmern uns im Hintergrund um Routing und Gebührenumrechnung.\n\n- **Einheitliche Identität & Verifizierung**  \n\tWir akzeptieren Signaturen von jedem <wallet>/Chain und schreiben sie demselben Nutzer auf Push zu — nicht-verwahrungsbasiert.\n\n- **Weniger bewegliche Teile**  \n\tKein Cross-Chain-Approval-Tanz, keine Gas-<token>-Jagd, keine Klebeverträge, die synchron gehalten werden müssen.\n\n- **Nutze Bridges, wenn du willst, nicht weil du musst**  \n\t<liquidity> kann weiterhin über Bridges fließen, aber die Interaktion mit deiner app erfordert dies nicht.\n\n**Ergebnis**: einfachere apps, eine einzige Quelle der Wahrheit und ein UX, das sich wie eine Chain anfühlt — auch wenn die Nutzer es nicht sind.\n\n---",
                   "vs-layerzero": "### Wie unterscheidet sich Push Chain von LayerZero?\n\n**LayerZero:**\n- **Messaging Protocol**: Ermöglicht Cross-Chain-Nachrichtenübertragung\n- **Relayer Dependency**: Verlässt sich auf externe Relayer und Oracles\n- **Developer Integration**: Apps müssen das LayerZero SDK integrieren\n- **Trust Assumptions**: Nutzer müssen der Relayer-Infrastruktur vertrauen\n\n**Push Chain:**\n- **Native Execution**: Direkte Transaktionsausführung von jeder Chain aus\n- **No Relayers**: Integrierte Cross-Chain-Funktionalität auf Protokollebene\n- **Zero Integration**: Bestehende Apps funktionieren ohne Änderungen\n- **Trust-Minimized**: Keine zusätzlichen Vertrauensannahmen über den eigenen Konsens von Push Chain hinaus\n\nPush Chain bietet native Cross-Chain-Ausführung, während LayerZero zusätzliche Infrastruktur und Integration erfordert.\n\n---",
                   "vs-wormhole": "### Wie unterscheidet sich Push Chain von Wormhole?\n\n**Wormhole:**\n- **Bridge Protocol**: Konzentriert sich hauptsächlich auf das Bridging von Token und NFTs\n- **Wrapped Assets**: Erstellt gerappte Versionen von Token auf verschiedenen Chains\n- **Guardian Network**: Verlässt sich auf ein Validator Set zur Überprüfung von Cross-Chain-Nachrichten\n- **Multi-Step Process**: Benutzer müssen Assets brücken, bevor sie Apps nutzen\n\n**Push Chain:**\n- **Universal Execution**: Benutzer interagieren direkt, ohne Bridging\n- **Native Assets**: Keine gerappten Token erforderlich, nutzen Sie Original-Assets\n- **Direct Verification**: Native Signaturüberprüfung von jeder Chain\n- **Single Transaction**: Benutzer interagieren in einem Schritt, kein Bridging erforderlich\n\nPush Chain eliminiert die Notwendigkeit des Asset-Bridgings, während Wormhole dies für Cross-Chain-Interaktionen erfordert.\n\n---",
                   "vs-axelar": "### Wie unterscheidet sich Push Chain von Axelar?\n\n**Axelar:**\n- **Netzwerk der Netzwerke**: Verbindet Chains über das Axelar-Netzwerk\n- **Validator-Abhängigkeit**: Verlässt sich auf das Axelar-Validator-Set für Sicherheit\n- **Gateway-Contracts**: Benötigt Gateway-Deployments auf jeder Chain\n- **Message Passing**: Konzentriert sich auf Cross-Chain-Kommunikation\n\n**Push Chain:**\n- **Direkte Ausführung**: Transaktionen werden nativ auf Push Chain ohne Zwischenhändler verarbeitet\n- **Unabhängige Sicherheit**: Eigenständiger Konsens ohne externe Abhängigkeiten\n- **Universelle Contracts**: Ein einziges Deployment funktioniert für alle Chains\n- **Native Ausführung**: Direkte Transaktionsverarbeitung von jeder Chain\n\nPush Chain bietet direkten universellen Zugang, während Axelar eine Zwischenschicht hinzufügt.\n\n---",
@@ -779,20 +624,25 @@
       }
     },
     "docs": {
-      "seo": {
-        "title": "Dokumentation — Universale Apps erstellen",
-        "description": "Alles, was du zum Start auf Push Chain benötigst: Schnellstarts, SDKs, API-Referenz, Beispiele und Node-Setup.",
-        "og-title": "Push Chain Docs - Schnellstarts, SDKs & API",
-        "og-description": "Baue und betreibe Apps auf der universal execution layer mit klaren Anleitungen und Beispielen.",
-        "twitter-title": "Push Chain Docs - Jetzt bauen",
-        "twitter-description": "Schnellstarts, SDKs, API-Referenz und Beispiele für schnellen Erfolg."
-      },
+      "seo": {},
       "header": {
-        "countdown-title": "Testnet-Dokumentation startet in",
-        "description": "Psst... neugierig auf einen Blick in das Testnet Donut? Schick uns einfach eine Nachricht mit #pushchainsecret und wir schicken dir Zugang zu einer Testversion.",
-        "tweet-button": "Über Push Chain auf Twitter teilen",
-        "title": "Tweet über Push Chain",
-        "ariaLabel": "Tweet über Push Chain"
+        "title": "Tweet über Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {},
+                "builders": {},
+                "ui-kit": {
+                  "title": "UI-Kit",
+                  "subtitle": "Integriere jede React-basierte App in weniger als 5 Minuten."
+                }
+              }
+            }
+          }
+        }
       }
     },
     "blog": {
@@ -807,11 +657,11 @@
     },
     "lfpush": {
       "seo": {
-        "title": "Lasst uns drücken — Community Initiative",
+        "title": "Let's Push — Community Initiative",
         "description": "Push Community-Initiativen, Posts und mehr.",
         "og-title": "Let's Push - Community Initiative für Push Chain",
         "og-description": "Eine Community-Initiative und Anteile für Push Chain.",
-        "twitter-title": "Lasst uns Pushen | Community Initiative",
+        "twitter-title": "Let's Push | Community Initiative",
         "twitter-description": "Erfahren Sie mehr über die Push-Community-Initiative für Push Chain."
       },
       "hero-section": {
@@ -859,18 +709,9 @@
     },
     "tos": {
       "seo": {
-        "title": "Nutzungsbedingungen",
-        "description": "Regeln für die Nutzung von Push Chain-Websites, Apps und Diensten, einschließlich Ihrer Rechte und Pflichten.",
-        "og-title": "Push Chain Nutzungsbedingungen - Rechtliche Bedingungen",
-        "og-description": "Rechtliche Bedingungen für die Nutzung unserer Websites, Apps und Entwicklertools.",
-        "twitter-title": "Nutzungsbedingungen - Push Chain",
-        "twitter-description": "Lesen Sie die rechtlichen Bedingungen für die Nutzung von Push Chain."
+        "twitter-title": "Nutzungsbedingungen - Push Chain"
       },
-      "hero-section": {
-        "title": "Nutzungsbedingungen",
-        "description": "Legt die Allgemeinen Geschäftsbedingungen fest",
-        "update-text": "Letzte Aktualisierung: 2. November 2020"
-      }
+      "hero-section": {}
     },
     "privacy": {
       "seo": {
@@ -890,7 +731,7 @@
     "privacymobile": {
       "seo": {
         "title": "Datenschutzrichtlinie für Mobilgeräte",
-        "description": "Wie wir Daten in Push Chain mobile Apps sammeln, verwenden und schützen, und Ihre Wahlmöglichkeiten.",
+        "description": "Wie wir Daten in Push Chain Mobile <app> sammeln, nutzen und schützen – und Ihre Wahlmöglichkeiten.",
         "og-title": "Push Chain Mobile Datenschutzerklärung - App Datenschutz",
         "og-description": "Datenschutzrichtlinien und Ihre Rechte für unsere mobilen Anwendungen.",
         "twitter-title": "Mobile Datenschutzrichtlinie - Push Chain",
@@ -991,7 +832,7 @@
           "answer": "<1>Nutze die Wallet, die du bereits hast – Push erledigt die Cross-Chain-Aufgaben im Hintergrund.</1><1>1. <2>Überall starten.</2> Verwende jede Wallet auf jeder Chain – kein Netzwerkwechsel erforderlich.</1><1>2. <2>Einmal signieren.</2> Bezahle mit einem Token, den du bereits besitzt; wir legen die Gebühr auf deiner Home-Chain bereit.</1><1>3. <2>Wir leiten es weiter.</2> Ein verknüpftes Konto bei Push (immer noch deins) leitet deinen Aufruf an die app weiter – nicht-custodial.</1><1>4. <2>Du bist immer du.</2> Wir ordnen deine Home-Chain-Wallet deinem verknüpften Konto zu, damit Aktionen korrekt verifiziert und dir auf Push zugeschrieben werden.</1><1>5. <2>Schnell erledigt.</2> Die app läuft auf Push; Gebühren werden im Hintergrund erledigt. Keine Bridges, keine neue Wallet.</1><1>So können Nutzer auf jeder Chain dieselbe app verwenden, die auf Push Chain bereitgestellt wird – und apps wirklich universal machen.</1>"
         },
         "qna3": {
-          "question": "Brauche ich eine andere Wallet oder einen anderen Gas Token?",
+          "question": "Benötige ich eine andere <token> oder einen anderen <gas fees>?",
           "answer": "<1><2>Nein.</2></1><1><2>Behalte deine Wallet.</2> Nutze die Wallet, die du bereits hast – keine neue Wallet oder Konto.</1><1><2>Zahle mit dem, was du besitzt.</2> Gebühren können mit den Tokens bezahlt werden, die du bereits auf deiner Home-Chain hast; wir kümmern uns im Hintergrund um die Umwandlung.</1><1><2>Kein Netzwerk-Wechsel.</2> Bleibe auf deiner Home-Chain – kein Bridging nur, um einen Gas-Token zu bekommen.</1><1><2>Nicht-verwahrungsbasiert.</2> Du signierst jede Aktion; Push hält niemals deine Schlüssel.</1><1><2>Unter der Haube.</2> Das Netzwerk begleicht Gebühren automatisch in $PC – du musst dich nicht darum kümmern.</1>"
         },
         "qna4": {
@@ -1038,7 +879,7 @@
         },
         "qna3": {
           "question": "Wie erhalte ich Testnet-Token (Donut)?",
-          "answer": "<1>Benutze den <3>Faucet</3>, um Test-Tokens anzufordern.</1><1><2>Hinweise:</2> Es können Ratenbegrenzungen gelten; einige Faucets erfordern eine einfache Verifizierung. Wenn der Faucet fehlschlägt, pinge uns auf <4>Discord</4>.</1>",
+          "answer": "<1>Nutze den <3>Faucet</3>, um Test <token> anzufordern.</1><1><2>Hinweise:</2> Es können Ratenbegrenzungen gelten; einige Faucets erfordern eine einfache Verifizierung. Wenn der Faucet fehlschlägt, pinge uns auf <4>Discord</4>.</1>",
           "faucet-url-title": "Öffne den Push Chain Faucet.",
           "discord-url-title": "Trete dem Push Chain Discord bei."
         },
@@ -1137,7 +978,7 @@
           "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet Probleme"
         },
         "wallet": {
-          "label": "👛 Universal Wallet",
+          "label": "👛 Universal वॉलेट",
           "description": "Push Wallet, universelle Kettenverbindung oder andere Probleme mit dem Wallet"
         },
         "identity": {
@@ -1290,19 +1131,13 @@
   },
   "notifications": {
     "chain-notification": {
-      "title": "",
-      "description": "Erhalten Sie einen ersten Einblick in Testnet, Donut, erstellen Sie universelle apps und gewinnen Sie Preise!",
-      "button-text": "Closed Beta Pass beanspruchen",
-      "button-title": "Tritt dem Push Chain testnet bei und sichere dir deinen geschlossenen Beta-Pass",
-      "button-aria-label": "Öffne Telegram, um deinen Push Chain Closed Beta Pass zu erhalten",
-      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
-      "close-button-title": "Testnet-Benachrichtigung schließen",
-      "close-button-aria-label": "Push Chain Testnet-Benachrichtigung schließen",
-      "container-aria-label": "Push Chain testnet Benachrichtigung"
+      "description": "Projekt G.U.D. deployathon ist LIVE! Apps deployen, $5000 gewinnen",
+      "image-alt": "Push Chain Testnet Donut - Universale Blockchain",
+      "close-button-aria-label": "Benachrichtigung von Push Chain Testnet abwählen"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed Beta ist live!",
-      "description": "Erhalten Sie einen exklusiven Einblick in Testnet, Donut, bauen Sie universelle apps und gewinnen Sie Preise!",
+      "description": "Erhalte einen exklusiven Einblick in Testnet, Donut, entwickle universelle <app>s und gewinne Preise!",
       "image-alt": "Push Chain Testnet Belohnungen - Erstelle universelle Apps",
       "close-button-title": "Belohnungsbenachrichtigung schließen",
       "close-button-aria-label": "Push Chain Belohnungen schließen",
