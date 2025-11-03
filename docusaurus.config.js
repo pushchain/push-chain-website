@@ -227,6 +227,24 @@ const config = {
         })(window.location);
       `,
     },
+    {
+      tagName: 'script',
+      innerHTML: `
+        (function () {
+          try {
+            var prefix = '/push-chain-website/pr-preview/pr-1067';
+            var loc = window.location;
+            if (loc.hostname === 'pushchain.github.io' && loc.pathname.startsWith(prefix)) {
+              var rest = loc.pathname.slice(prefix.length) || '/';
+              var target = 'https://push.org' + rest + loc.search + loc.hash;
+              window.location.replace(target);
+            }
+          } catch (err) {
+            console.error('Redirect script error:', err);
+          }
+        })();
+      `,
+    }
   ],
 
   themeConfig:
