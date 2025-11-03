@@ -207,7 +207,7 @@ const GLOBALS = {
 
   NAVBAR: {
     BLOG: {
-      MAX_WIDTH: 1600,
+      MAX_WIDTH: 1356,
     },
     DOCS: {
       MAX_WIDTH: 1600,

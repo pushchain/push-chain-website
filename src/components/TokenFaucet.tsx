@@ -166,7 +166,7 @@ export const TokenFaucet = ({
           }
           border='1px solid var(--ifm-color-discord-blue)'
           padding='6.5px 8.5px'
-          onClick={() => openLink('https://discord.gg/cTRqvYzXpW')}
+          onClick={() => openLink('https://discord.com/invite/pushchain')}
         >
           {!isJoined && <Discord />}
           {isJoined && <DiscordCompleted />}

@@ -58,6 +58,6 @@ We’re proud to have partnered with **CoinDesk** to launch the first media chan
 
 And there you have it! And yet, that’s only the beginning. Expect a lot more channels and notifications to go live in the days, weeks, and months to come. Let’s #PUSH it!
 
-_\*Note: the EPNS protocol has been under development for 1+ year, and completed a_ [_ChainSafe audit_](https://epns.io/EPNS-Protocol-Audit2021.pdf) _in October 2021. However, the mainnet is still a new product milestone. Always DYOR, and anticipate bugs and UI improvements. Learn how to report any bugs in our_ [_Discord_](https://discord.gg/YVPB99F9W5)_._
+_\*Note: the EPNS protocol has been under development for 1+ year, and completed a_ [_ChainSafe audit_](https://epns.io/EPNS-Protocol-Audit2021.pdf) _in October 2021. However, the mainnet is still a new product milestone. Always DYOR, and anticipate bugs and UI improvements. Learn how to report any bugs in our_ [_Discord_](https://discord.com/invite/pushchain)_._
 
-Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.gg/YVPB99F9W5), [Telegram](https://t.me/epnsproject).
+Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.com/invite/pushchain), [Telegram](https://t.me/epnsproject).

@@ -45,7 +45,7 @@ This month several tasks took place in the development front not only in prepara
 
 Additionally, we released our [**EPNS Roadmap 2022**](https://twitter.com/epnsproject/status/1485673774510796801?s=20&t=nFDC9CXOStcai9Ph2CyEzg) together with our guide for Developers on [**How to get started with EPNS (for Devs!)**](https://twitter.com/epnsproject/status/1485976070008360961?s=20&t=nFDC9CXOStcai9Ph2CyEzg)
 
-Don’t forget to join our [Discord](https://discord.gg/S3GvkHjWvU) if you have any question or suggestion, our Dev team will gladly assist all of you BUIDLERS to implement EPNS notifications on your projects!
+Don’t forget to join our [Discord](https://discord.com/invite/pushchain) if you have any question or suggestion, our Dev team will gladly assist all of you BUIDLERS to implement EPNS notifications on your projects!
 
 # Governance 🗳️
 

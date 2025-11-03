@@ -34,10 +34,10 @@ _How to get started as a channel?_ Head to [app.epns.io](http://app.epns.io) and
 
 _How to get started as a subscriber?_ Head to [app.epns.io](http://app.epns.io) and click on ‘Channels’. You can browse the list of all published channels, each with a description of which notification(s) you’ll receive if you subscribe. You may opt-in to receive notifications from any of them, and opt-out at any time.
 
-\*_Note: the EPNS protocol has been under development for 1+ year, and completed a_ [_ChainSafe audit_](https://epns.io/EPNS-Protocol-Audit2021.pdf) _in October 2021. However, the mainnet is still a new product milestone. Always DYOR, and anticipate bugs and UI improvements. Learn how to report any bugs in our_ [_Discord_](https://discord.gg/YVPB99F9W5)_._
+\*_Note: the EPNS protocol has been under development for 1+ year, and completed a_ [_ChainSafe audit_](https://epns.io/EPNS-Protocol-Audit2021.pdf) _in October 2021. However, the mainnet is still a new product milestone. Always DYOR, and anticipate bugs and UI improvements. Learn how to report any bugs in our_ [_Discord_](https://discord.com/invite/pushchain)_._
 
 **What’s Next for EPNS**
 
 Mainnet launch is just the beginning for EPNS. Stay tuned for more channel releases in the days and weeks to come — and ask your favorite dapps to create channels of their own! We’ll post more information about the post-mainnet roadmap for EPNS soon, but expect incentives, governance, multi-chain support, and more!
 
-Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.gg/YVPB99F9W5), [Telegram](https://t.me/epnsproject).
+Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.com/invite/pushchain), [Telegram](https://t.me/epnsproject).

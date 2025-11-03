@@ -53,4 +53,4 @@ Check out the [BRB Bootcamp Discussion](https://github.com/orgs/push-protocol/di
 
 For the latest on development, hackathons, and exclusive insights, follow Push Builders on X [@pushbuilders](https://twitter.com/pushbuilders) & [@PushChain](https://x.com/PushChain). It's your gateway to all things BRB Bootcamp.
 
-Join our [BRB Bootcamp Discord channel](https://discord.gg/uhSRbPVE) to get any support from the team! Let's drive the future of Web3 together.
+Join our [BRB Bootcamp Discord channel](https://discord.com/invite/pushchain) to get any support from the team! Let's drive the future of Web3 together.

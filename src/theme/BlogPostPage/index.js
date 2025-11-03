@@ -35,7 +35,7 @@ function BlogPostPageContent({ allPosts, post, children }) {
 
   return (
     <BlogLayout>
-      <MultiContent flexDirection='row' gap='clamp(64px, 8vw, 128px)'>
+      <MultiContent flexDirection='row' gap='64px'>
         <BlogPostItem>{children}</BlogPostItem>
         <TOCWrapper className=''>
           {!hideTableOfContents && toc.length > 0 ? (

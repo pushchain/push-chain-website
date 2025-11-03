@@ -52,7 +52,7 @@ For example, if the DS-Chief contract in Maker elects a new rule across the prot
 
 While we named a few use cases in this article that relate to governance, there are plenty more, and we encourage you to start building yourself!
 
-Stay up-to-date with EPNS through [Twitter](https://twitter.com/epnsproject), [Telegram](https://t.me/epnsproject), [Discord](https://discord.gg/epns), [Forum](https://gov.epns.io/), [Docs](https://docs.epns.io/), and [YouTube](https://www.youtube.com/c/EthereumPushNotificationService).
+Stay up-to-date with EPNS through [Twitter](https://twitter.com/epnsproject), [Telegram](https://t.me/epnsproject), [Discord](https://discord.com/invite/pushchain), [Forum](https://gov.epns.io/), [Docs](https://docs.epns.io/), and [YouTube](https://www.youtube.com/c/EthereumPushNotificationService).
 
 And stay tuned for the subsequent use case article on NFTs and the Metaverse!
 

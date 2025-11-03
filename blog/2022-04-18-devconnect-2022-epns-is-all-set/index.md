@@ -94,6 +94,6 @@ You can simply opt-in to ‘**Push For Devconnect’** channel on [**https://app
 
 P.S If you’re a BUIDLer who wants to BUIDL the next phase of the internet then this is the perfect event for that!
 
-Check out our [**docs**](https://docs.epns.io/) and tutorials to learn more about how to build with EPNS Make sure to **join our** [**Discord Community**](https://discord.gg/YVPB99F9W5) **too while you’re at it!** And yes, our team will be there to support you at the event too!
+Check out our [**docs**](https://docs.epns.io/) and tutorials to learn more about how to build with EPNS Make sure to **join our** [**Discord Community**](https://discord.com/invite/pushchain) **too while you’re at it!** And yes, our team will be there to support you at the event too!
 
 All the best at **ETHAmsterdam**, we look forward to seeing you there!

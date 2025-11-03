@@ -39,4 +39,4 @@ We’re inviting ElementDAO members to embrace this new era of empowerment and a
 
 ElementDAO is a decentralized autonomous organization tasked with the responsibility of running and maintaining Element Finance: an open source protocol for fixed and variable yield markets.
 
-To keep up to date with Element: [Element.fi](https://www.element.fi/) [Twitter](https://twitter.com/element_dao) [Discord](https://discord.gg/pvnUHuAsQ2)
+To keep up to date with Element: [Element.fi](https://www.element.fi/) [Twitter](https://twitter.com/element_dao) [Discord](https://discord.com/invite/pushchain)

@@ -72,4 +72,4 @@ Dubbed as the Uniswap of Prediction Markets due to its simplicity, PlotX uses an
 
 The PlotX v2 Mainnet was launched on the Polygon Network on 14th May with a multitude of interesting features like gasless prediction experience. The v2 app has seen significant traction from crypto traders since launch.
 
-Stay in touch! [Website](https://plotx.io/), [Twitter](https://twitter.com/tryplotx), [Telegram](https://t.me/plotx_official), [Medium](https://medium.com/tryplotx), [Discord](https://discord.gg/8CWNQnG)
+Stay in touch! [Website](https://plotx.io/), [Twitter](https://twitter.com/tryplotx), [Telegram](https://t.me/plotx_official), [Medium](https://medium.com/tryplotx), [Discord](https://discord.com/invite/pushchain)

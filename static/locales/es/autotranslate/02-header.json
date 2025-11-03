@@ -1,114 +1,72 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Navegar a la página de inicio",
-      "language-icon-alt": "Icono de selección de idioma",
-      "hamburger-menu-alt": "Abrir menú de navegación",
-      "testnet-badge-alt": "Push Chain Testnet Donut - Ver el estado de la testnet"
+      "hamburger-menu-alt": "Abrir menú de navegación"
     },
     "logo": {
-      "imagealt": "Imagen del logo de Push Chain",
-      "imagetitle": "Logotipo de Push Chain",
-      "ctatitle": "Navega a la página de inicio de Push Chain"
+      "imagealt": "Imagen del logo de Push Chain"
     },
     "testnet": {
-      "title": "Testnet",
-      "aria-label": "Sección testnet",
-      "link1": {
-        "text": "Push Scan",
-        "subtext": "Explorador de bloques para Push Chain",
-        "title": "Explora las transacciones y bloques de Push Chain Testnet en Push Scan"
-      },
-      "link2": {
-        "text": "Grifo",
-        "subtext": "Obtén tokens de testnet",
-        "title": "Obtén tokens de prueba gratuitos para el desarrollo de Push Chain"
-      }
+      "title": "Prueba de red",
+      "link1": {},
+      "link2": {}
     },
     "developers": {
       "title": "Desarrolladores",
-      "aria-label": "Sección de Desarrolladores",
-      "link1": {
-        "text": "Comienza",
-        "subtext": "Introducción a la construcción en Push Chain",
-        "title": "Empieza a construir apps universales en Push Chain - Documentación para desarrolladores"
-      },
-      "link2": {
-        "text": "Comenzar rápido",
-        "subtext": "Configura tu entorno de desarrollo en segundos",
-        "title": "Guía de inicio rápido - Configura el entorno de desarrollo de Push Chain al instante"
-      },
+      "link1": {},
+      "link2": {},
       "link3": {
-        "text": "Tutoriales",
         "subtext": "Guías paso a paso para construir con Push",
-        "title": "Aprende con tutoriales prácticos - Construye tu primera app universal en Push Chain"
+        "title": "Aprende con tutoriales prácticos - Crea tu primera aplicación universal en Push Chain"
       },
       "link4": {
-        "text": "GitHub",
-        "subtext": "Mira el código principal y las herramientas de código abierto",
-        "title": "Explora el código fuente y las herramientas de desarrollo de Push Chain en GitHub"
+        "title": "Explora el código fuente de Push Chain y las herramientas de desarrollo en GitHub"
       },
-      "link5": {
-        "text": "Discord de Desarrolladores",
-        "subtext": "Conéctate con la comunidad de desarrolladores",
-        "title": "Únete a la comunidad de desarrolladores de Push Chain en Discord para obtener soporte y colaboración"
-      }
+      "link5": {}
     },
     "community": {
-      "title": "Comunidad",
-      "aria-label": "Sección de la comunidad",
       "link1": {
-        "text": "Base de Conocimiento",
-        "subtext": "Encuentra análisis detallados de las funciones",
-        "title": "Explora la documentación completa de Push Chain y guías de funciones"
+        "text": "Base de Conocimientos",
+        "title": "Explora la documentación integral de Push Chain y las guías de características"
       },
       "link2": {
-        "text": "Tokenomics",
-        "subtext": "Token nativo que impulsa todo en Push Chain",
-        "title": "Aprende sobre la tokenómica de Push Chain y la utilidad del token $PC"
+        "subtext": "Moneda nativa que impulsa todo en Push Chain"
       },
-      "link3": {
-        "text": "X/Twitter",
-        "subtext": "Sigue las novedades y noticias del ecosistema",
-        "title": "Sigue a Push Chain en X (Twitter) para conocer las últimas novedades y anuncios"
-      },
-      "link4": {
-        "text": "Discord",
-        "subtext": "¡Chatea, crea y conecta con la comunidad!",
-        "title": "Únete a la comunidad de Push Chain en Discord para debates y soporte"
-      },
-      "link5": {
-        "text": "Telegram",
-        "subtext": "Únete a la conversación y mantente al día",
-        "title": "Conéctate con la comunidad de Push Chain en Telegram para actualizaciones en tiempo real"
-      }
+      "link3": {},
+      "link4": {},
+      "link5": {}
     },
     "resources": {
-      "title": "Recursos",
-      "aria-label": "Sección de Recursos",
       "link1": {
-        "text": "Blog",
-        "subtext": "Novedades, análisis en profundidad e historias de desarrollo",
-        "title": "Lee el blog de Push Chain para conocer las últimas novedades, análisis técnicos en profundidad e historias de desarrolladores"
+        "subtext": "Actualizaciones, profundas penetraciones y historias de desarrollo"
       },
-      "link2": {
-        "text": "Documento técnico",
-        "subtext": "La visión y la tecnología, simplificadas",
-        "title": "Lee el Litepaper de Push Chain - visión simplificada y descripción general técnica"
-      },
+      "link2": {},
       "link3": {
-        "text": "Preguntas frecuentes",
-        "subtext": "Respuestas rápidas a preguntas frecuentes",
-        "title": "Consulta las preguntas frecuentes sobre Push Chain"
+        "text": "Preguntas Frecuentes"
       }
     },
     "language": {
       "title": "Idioma",
-      "aria-label": "Menú desplegable para seleccionar el idioma"
+      "aria-label": "Selección de idioma"
     },
     "app-button": {
-      "text": "Push Portal",
-      "title": "Accede a Push Portal - Gana puntos como desarrollador, usuario o validator"
+      "title": "Acceda a Push Portal - Gane puntos como desarrollador, usuario o validador"
+    },
+    "explore": {
+      "link1": {
+        "text": "Comenzar"
+      },
+      "link2": {
+        "subtext": "Configura el entorno de desarrollo en segundos"
+      },
+      "link3": {},
+      "link4": {},
+      "link5": {
+        "subtext": "Conéctese con la comunidad de desarrolladores"
+      },
+      "link6": {
+        "text": "Explorar Ejemplos"
+      }
     }
   }
 }

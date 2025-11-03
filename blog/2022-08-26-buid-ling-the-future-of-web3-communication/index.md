@@ -43,8 +43,8 @@ If you are unfamiliar with what we do, [EPNS](https://epns.io/) is a decentraliz
 - [ETHOnline 2022 — Checklist](https://www.notion.so/epns/ETHOnline-Hackathon-Doc-List-cd9d0fc69f0d4e4691c60c772b03d48a) <br />
   If you are new to EPNS, don’t worry! We curated a list of resources that will be handy all throughout your journey during this hackathon.
 - [EPNS Documentation Hub](https://docs.epns.io/)
-- [EPNS Discord](https://discord.gg/n4EYGyPJcF) <br />
-  If you have any questions or want to chat about where or even how to begin, please reach out to us on the [EPNS-hackathon](https://discord.gg/rEhxYtxa) Discord channel!
+- [EPNS Discord](https://discord.com/invite/pushchain) <br />
+  If you have any questions or want to chat about where or even how to begin, please reach out to us on the [EPNS-hackathon](https://discord.com/invite/pushchain) Discord channel!
 
 ## 💡Ideas to BUIDL to Help You Think Outside the Box
 

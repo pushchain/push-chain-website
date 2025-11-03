@@ -317,7 +317,7 @@ Until next time, bye for now.
 
 **ZETALEAK**: Come join our community if you love DeFi and NFTs :)
 
-[https://discord.gg/4cs6MePvDs](https://discord.gg/4cs6MePvDs)
+[https://discord.com/invite/pushchain](https://discord.com/invite/pushchain)
 
 [https://twitter.com/YamFinance](https://twitter.com/YamFinance)
 

@@ -21,7 +21,7 @@ export const AccountProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [showAlertBar, setShowAlertBarState] = useState<boolean>(true);
+  const [showAlertBar, setShowAlertBarState] = useState<boolean>(false);
   const [isHydrated, setIsHydrated] = useState<boolean>(false);
   const [shouldShowAlertBar, setShouldShowAlertBar] = useState<boolean>(false);
   const [delayedShowAlertBar, setDelayedShowAlertBar] =
@@ -32,18 +32,18 @@ export const AccountProvider = ({
     setIsHydrated(true);
   }, []);
 
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('showAlertBar');
-      const shouldShow = stored === null ? true : stored === 'true';
-      setShowAlertBarState(shouldShow);
-      setShouldShowAlertBar(shouldShow);
-      if (shouldShow) setWasEverVisible(true);
-    } else {
-      setShouldShowAlertBar(showAlertBar);
-      if (showAlertBar) setWasEverVisible(true);
-    }
-  }, [showAlertBar]);
+  // React.useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const stored = localStorage.getItem('showAlertBar');
+  //     const shouldShow = stored === null ? true : stored === 'true';
+  //     setShowAlertBarState(shouldShow);
+  //     setShouldShowAlertBar(shouldShow);
+  //     if (shouldShow) setWasEverVisible(true);
+  //   } else {
+  //     setShouldShowAlertBar(showAlertBar);
+  //     if (showAlertBar) setWasEverVisible(true);
+  //   }
+  // }, [showAlertBar]);
 
   React.useEffect(() => {
     if (shouldShowAlertBar) {

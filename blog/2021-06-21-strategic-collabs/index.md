@@ -95,4 +95,4 @@ We want to finish with a big thank you to our community and the teams working an
 
 #### Stay Connected
 
-If you are interested in providing feedback and working more closely with our development team to improve EPNS for developers, we invite you to join our [Discord Community Server](https://discord.gg/nYrqZ734nu).
+If you are interested in providing feedback and working more closely with our development team to improve EPNS for developers, we invite you to join our [Discord Community Server](https://discord.com/invite/pushchain).

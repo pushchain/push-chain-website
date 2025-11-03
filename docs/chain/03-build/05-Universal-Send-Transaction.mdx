@@ -322,7 +322,7 @@ For multicall, the to field must always be set to the Universal Execution Accoun
 
       // Replace it with different JsonRpcProvider to target Ethereum Account, BNB Account, etc
       // const provider = new ethers.JsonRpcProvider('https://gateway.tenderly.co/public/sepolia');
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
       const signer = wallet.connect(provider);
 
       // Convert to Universal Signer and Initialize Push Chain SDK
@@ -368,7 +368,7 @@ import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address
@@ -466,7 +466,7 @@ import \* as readline from 'node:readline/promises';
     // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Enable User Input
@@ -803,7 +803,7 @@ import \* as readline from 'node:readline/promises';
       console.log('📝 Created wallet:', wallet.address);
 
       // 2) Set up provider and connect wallet
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
       const signer = wallet.connect(provider);
 
       // 3) Convert to Universal Signer
@@ -1411,7 +1411,7 @@ import \* as readline from 'node:readline/promises';
       try {
         // Create a public client to read the Counter on Push Chain
         const publicClientPush = createPublicClient({
-          transport: http('https://evm.rpc-testnet-donut-node1.push.org/'),
+          transport: http('https://evm.donut.rpc.push.org/'),
         });
 
         // Read counter BEFORE
@@ -1472,7 +1472,7 @@ import \* as readline from 'node:readline/promises';
 
     // ——— CONFIG ———
     // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
 
     // Dummy Address

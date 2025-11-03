@@ -44,7 +44,7 @@ For full reference on each library, see:
 import { ethers } from 'ethers';
 
     // HTTP JSON-RPC provider
-    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
     console.log('Ethers provider methods:', Object.getOwnPropertyNames(Object.getPrototypeOf(provider)));
 
 `}
@@ -61,7 +61,7 @@ import { ethers } from 'ethers';
 import { createPublicClient, http } from 'viem';
 
     // HTTP client
-    const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    const viemClient = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
     console.log('Viem client:', JSON.stringify(viemClient, null, 2));
 `}
 
@@ -80,7 +80,7 @@ import { createPublicClient, http } from 'viem';
 // customPropHighlightRegexEnd=\\);
 import { ethers } from 'ethers';
 
-    const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
     const txHash  = '0x04ee80f072ab06ec88092701e7ba223451d0a1376e26755085271bc6de45a6a1';
 
     const tx = await provider.getTransaction(txHash);
@@ -99,7 +99,7 @@ import { ethers } from 'ethers';
 // customPropHighlightRegexEnd=\\);
 import { createPublicClient, http } from 'viem';
 
-    const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    const viemClient = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
     const txHash = '0x04ee80f072ab06ec88092701e7ba223451d0a1376e26755085271bc6de45a6a1';
 
     const tx = await viemClient.getTransaction({ hash: txHash });
@@ -124,7 +124,7 @@ import { createPublicClient, http } from 'viem';
     // customPropHighlightRegexEnd=\\);
     import { ethers } from 'ethers';
 
-    const provider   = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const provider   = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
     const latestBlock = await provider.getBlock('latest');
     console.log(JSON.stringify(latestBlock, null, 2));
 
@@ -141,7 +141,7 @@ import { createPublicClient, http } from 'viem';
 // customPropHighlightRegexEnd=\\);
 import { createPublicClient, http } from 'viem';
 
-    const viemClient   = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    const viemClient   = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
     const latestBlock  = await viemClient.getBlock();
     console.log(JSON.stringify(latestBlock, null, 2));
 `}
@@ -164,7 +164,7 @@ import { createPublicClient, http } from 'viem';
 // customPropHighlightRegexEnd=\\);
 import { ethers } from 'ethers';
 
-    const provider  = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const provider  = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
     const blockHash = '0xa1a69fa217d219f71d44f4707f8aa4ded2aec52a0c737e0dca0dbf9096252b89';
 
     const block = await provider.getBlock(blockHash);
@@ -183,7 +183,7 @@ import { ethers } from 'ethers';
 // customPropHighlightRegexEnd=\\);
 import { createPublicClient, http } from 'viem';
 
-    const viemClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+    const viemClient = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
     const blockHash = '0xa1a69fa217d219f71d44f4707f8aa4ded2aec52a0c737e0dca0dbf9096252b89';
 
     const block = await viemClient.getBlock({ blockHash });
@@ -206,7 +206,7 @@ import { createPublicClient, http } from 'viem';
     // customPropHighlightRegexEnd=\\);
     import { ethers } from 'ethers';
 
-    const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const ws = new ethers.WebSocketProvider('https://evm.donut.rpc.push.org/');
 
     console.log('Connection Opened!');
 
@@ -261,7 +261,7 @@ import { createPublicClient, http } from 'viem';
     // customPropHighlightRegexEnd=}\\);
     import { ethers } from 'ethers';
 
-    const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const ws = new ethers.WebSocketProvider('https://evm.donut.rpc.push.org/');
 
     console.log('Connection Opened!');
     ws.on('block', async (blockNumber) => {
@@ -314,7 +314,7 @@ import { createPublicClient, http } from 'viem';
 // customPropHighlightRegexEnd=}\\);
 import { ethers } from 'ethers';
 
-    const ws = new ethers.WebSocketProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+    const ws = new ethers.WebSocketProvider('https://evm.donut.rpc.push.org/');
     const watchedAddress = '0x0000000000000000000000000000000000042101';
 
     console.log('Listening for tx on:', watchedAddress, "Try sending some $PC here");

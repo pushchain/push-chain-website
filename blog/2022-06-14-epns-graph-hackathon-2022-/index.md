@@ -47,7 +47,7 @@ Submission https://github.com/babivillanova/EarthSaviours
 
 Winner- $500 bounty
 
-While for few bounties we didn’t receive any formal submission, we encourage those of you who were interested — not only in the bounty but in EPNS in general — to get in touch with us ([discord](https://discord.gg/CG3JcZgu)) to express your interest in collaborating.
+While for few bounties we didn’t receive any formal submission, we encourage those of you who were interested — not only in the bounty but in EPNS in general — to get in touch with us ([discord](https://discord.com/invite/pushchain)) to express your interest in collaborating.
 
 💖💖💖 Thank you!
 

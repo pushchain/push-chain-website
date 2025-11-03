@@ -70,7 +70,7 @@ Push Chain can unleash DeFi 3.0 by finally supporting **financial applications**
 
 ### Universal AI Apps
 
-Build on-chain Ai agents and platforms that are not bound to any single-chain and operate across chains autonomously using Push Chain’s shared state and Universal Smart Contract capabilies.
+Build on-chain Ai agents and platforms that are not bound to any single-chain and operate across chains autonomously using Push Chain’s shared state and Universal Smart Contract capabilities.
 
 Examples include:
 
@@ -167,9 +167,13 @@ Push Chain supports **decentralized education platforms** that enhance learnin
 
 ---
 
+## So What’s next?
+
 These ideas are just the tip of the iceberg - we're merely scratching the surface!
 Push Chain gives you a **Billion Reasons to Build** Any App _for_ Any User _on_ Any Chain.
 
 Already have an idea to build? Want guidance to make it happen?
 
-Reach out to us on our [Push Discord Community](https://discord.com/invite/pushchain).
+1. Reach out to us on our [Push Discord Community](https://discord.com/invite/pushchain)
+2. Check out [Push Chain Docs](https://push.org/docs?utm_source=pushblog&utm_medium=referral)
+3. Try out [Ballsy App](https://ballsy.push.org) that showcases users interacting from every chain

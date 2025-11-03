@@ -10,6 +10,7 @@ import NavbarMobileSidebar from '@theme/Navbar/MobileSidebar';
 import styles from './styles.module.css';
 // Internal Components
 import { Content, Section } from '@site/src/css/SharedStyling';
+import { useLocation } from '@docusaurus/router';
 
 function NavbarBackdrop(props) {
   return (
@@ -26,6 +27,10 @@ export default function NavbarLayout({ children }) {
   } = useThemeConfig();
   const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
+  const { pathname } = useLocation();
+
+  const section = pathname.startsWith('/blog') ? 'blog' : 'docs';
+
   return (
     <nav
       ref={navbarRef}
@@ -49,7 +54,7 @@ export default function NavbarLayout({ children }) {
       )}
     >
       <Section>
-        <Content className='docs vertfluid'>
+        <Content className={clsx(section, 'vertfluid')}>
           {children}
           <NavbarBackdrop onClick={mobileSidebar.toggle} />
           <NavbarMobileSidebar />

@@ -29,7 +29,7 @@ We have designed the points program from the ground up to incentivize users by r
 **How to Register (required):**
 
 1. Connect your X account and Follow [@PushChain](https://x.com/PushChain)
-2. Connect your Discord profile and Join [Push Discord](http://discord.gg/pushprotocol) Server.
+2. Connect your Discord profile and Join [Push Discord](https://discord.com/invite/pushchain) Server.
 
 > **Note:** We perform multiple checks to ensure your twitter account is legitimate. Verification may take up to 24 hours. If the verification fails, please make sure you are following @PushChain and have at-least 50 followers.
 >

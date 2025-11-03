@@ -23,15 +23,6 @@ import {
   Span,
 } from '@site/src/css/SharedStyling';
 
-// Internal Configs
-
-// Interfaces and Props
-
-// Helper Functions
-
-// Helper Component
-
-// Main
 const PrivacyComp = () => {
   // Internationalization
   const { t } = useTranslation();
@@ -40,12 +31,12 @@ const PrivacyComp = () => {
     <>
       {/* Hero Section */}
       <Section>
-        <Content className='skeletonsmall'>
+        <BodyContent className='skeletonsmall'>
           <MultiContent>
             <H1>{t('pages.privacy.hero-section.title')}</H1>
             <Span>{t('pages.privacy.hero-section.description')}</Span>
             <Span style={{ fontSize: '0.8rem', opacity: 0.7 }}>
-              {t('pages.privacy.hero-section.update-text')}
+              Last Updated on: 25th October 2025
             </Span>
           </MultiContent>
 
@@ -56,24 +47,14 @@ const PrivacyComp = () => {
               justifyContent='flex-start'
               flexDirection='column'
             >
-              {/* SUMMARY */}
-              <H2>SUMMARY</H2>
-
               <Span margin='12px 0'>
-                We recognise our responsibilities in relation to the collection,
-                holding, processing, use and/or transfer of personal data. Your
-                privacy is of utmost importance to us.
-              </Span>
-
-              <Span margin='12px 0'>
-                This policy (the <B>Policy</B>) outlines how we collect, use,
-                store and disclose your personal data. Please take a moment to
-                read about how we collect, use and/or disclose your personal
-                data so that you know and understand the purposes for which we
-                may collect, use and/or disclose your personal data. By
-                accessing the website at{' '}
+                We value and respect your right to privacy, and to this end are
+                committed to protecting your personal data provided to us
+                directly or indirectly. This Privacy Policy sets out our
+                commitment and explains in detail what information we may gather
+                from your visit to our{' '}
                 <A
-                  href='https://push.org'
+                  href='https://push.org/'
                   target='_blank'
                   display=' inline'
                   color='var(--ifm-link-color)'
@@ -82,11 +63,24 @@ const PrivacyComp = () => {
                   letterSpacing='inherit'
                   textTransform='initial'
                 >
-                  push.org
+                  https://push.org/
+                </A>{' '}
+                including{' '}
+                <A
+                  href='https://wallet.push.org'
+                  target='_blank'
+                  display=' inline'
+                  color='var(--ifm-link-color)'
+                  background='transparent'
+                  padding='0px'
+                  letterSpacing='inherit'
+                  textTransform='initial'
+                >
+                  https://wallet.push.org
                 </A>
                 ,{' '}
                 <A
-                  href='https://app.push.org'
+                  href='https://portal.push.org'
                   target='_blank'
                   display=' inline'
                   color='var(--ifm-link-color)'
@@ -95,41 +89,39 @@ const PrivacyComp = () => {
                   letterSpacing='inherit'
                   textTransform='initial'
                 >
-                  app.push.org
-                </A>{' '}
-                or{' '}
-                <A
-                  href='https://staging.push.org'
-                  target='_blank'
-                  display=' inline'
-                  color='var(--ifm-link-color)'
-                  background='transparent'
-                  padding='0px'
-                  letterSpacing='inherit'
-                  textTransform='initial'
-                >
-                  staging.push.org
-                </A>{' '}
-                or any other subdomains of <B>push.org</B> (the{' '}
-                <B>Website(s)</B>), you agree and consent to Ethereum Push
-                Notification Service Foundation (the <B>Company</B>), its
-                related corporations, business units and affiliates, as well as
-                their respective representatives and/or agents (collectively
-                referred to herein as “Push”, “us”, “we” or “our”), collecting,
-                using, disclosing and sharing amongst themselves the personal
-                data, and to disclosing such personal data to relevant third
-                party providers. This Policy supplements but does not supersede
-                nor replace any other consent which you may have previously
-                provided to us nor does it affect any rights that we may have at
-                law in connection with the collection, use and/or disclosure of
-                your personal data. We may from time to time update this Policy
-                to ensure that this Policy is consistent with our future
+                  https://portal.push.org
+                </A>
+                , or other subdomains of push (the <B>Website</B> or{' '}
+                <B>Platform</B>) and, why and how your personal data may be
+                processed when you use our Services.
+              </Span>
+              <Span margin='12px 0'>
+                This Policy (the <B>Policy</B>) outlines how we collect, use,
+                store and disclose your ("you", "your", "user") Personal Data.
+                By accessing the Website, you agree and consent to Push Labs
+                Ltd., (the <B>Company</B>), its related corporations, business
+                units and affiliates, as well as their respective
+                representatives and/or agents (collectively referred to herein
+                as Push, (<B>"us", "we", or "our"</B>)), collecting, using,
+                disclosing and sharing amongst themselves the personal data, and
+                to disclosing such personal data to relevant third-party
+                providers. This Policy supplements but does not supersede nor
+                replace any other consent which you may have previously provided
+                to us nor does it affect any rights that we may have at law in
+                connection with the collection, use and/or disclosure of your
+                personal data. We may from time to time update this Policy to
+                ensure that this Policy is consistent with our future
                 developments, industry trends and/or any changes in legal or
                 regulatory requirements. Subject to your rights at law, the
                 prevailing terms of this Policy shall apply. For the avoidance
-                of doubt, this Policy forms part of the Terms of Service
+                of doubt, this Policy forms part of the terms and conditions
                 governing your relationship with us and should be read in
-                conjunction with such{' '}
+                conjunction with such terms and conditions.
+              </Span>
+              <Span margin='12px 0'>
+                The terms of this Policy are applicable to you for accessing our
+                various Services as detailed in our 'Terms of Services' document
+                that can be accessed through the Website and is available at{' '}
                 <A
                   href={useBaseUrl('./tos')}
                   target='_blank'
@@ -142,546 +134,636 @@ const PrivacyComp = () => {
                 >
                   Terms of Service
                 </A>
-                . All capitalised terms used but not defined herein shall have
-                the meaning ascribed to them in the Terms of Service.
+                .
               </Span>
-
-              <Span margin='12px 0'>
-                The security of your personal data is important to us. At each
-                stage of data collection, use and disclosure, Push has in place
-                physical, electronic, administrative and procedural safeguards
-                to protect the personal data stored with us. However, do note
-                that no transmission of personal data over the internet can be
-                guaranteed to be 100% secure – accordingly and despite our
-                efforts, Push cannot guarantee or warrant the security of any
-                information you transmit to us, or to or from our online
-                services. Push shall not have any responsibility or liability
-                for the security of information transmitted via the internet.
-              </Span>
-
               <Span margin='12px 0'>
                 This Policy describes how Push may collect, use, disclose,
                 process and manage your personal data, and applies to any
                 individual’s personal data which is in our possession or under
-                our control.
+                our control. The capitalized terms not defined in this Privacy
+                Policy shall have the meanings defined in Terms of Service.
               </Span>
 
-              {/* What personal data is collected by Push */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.1 What personal data is collected by Push
+              <H2 margin='12px 0'>1. Introduction</H2>
+              <Span>
+                Push Chain is a shared state blockchain for shared app
+                experiences. It is a Proof of Stake (PoS) chain built to allow
+                developers to create Universal Apps and act as a shared
+                settlement layer for multiple layer 1, layer 2 and layer 3. It
+                allows transactions from any chain, uses gas abstraction to
+                ensure no hassle for interaction from other chains and provides
+                wallet abstraction for seamless onboarding and signing for
+                existing users. To summarize, it is a shared-state blockchain
+                that eliminates fragmentation and makes apps universal. <br />
+                Deploy once on Push. Users on any chain — EVM or non-EVM — use
+                your app with their existing wallets and tokens; fees are
+                handled under the hood.
               </Span>
 
+              {/* What personal data is collected by Push? */}
+              <H2 margin='12px 0'>
+                2. What personal data is collected by Push?
+              </H2>
               <Span margin='12px 0'>
-                &quot;Personal data&rdquo; means data, whether true or not,
+                <B>2.1.</B> “Personal data” means data, whether true or not,
                 about an individual who can be identified (i) from that data, or
-                (ii) from that data and other information to which the
-                organisation has or is likely to have access. Some examples of
-                personal data that Push may collect are:
+                (ii) other information to which Push has or is likely to have
+                access. Some examples of Personal Data that Push may collect
+                are:
               </Span>
-
-              <Span margin='12px 0'>
-                <B>(a)</B> personal particulars (e.g. name, contact details,
-                residential address, date of birth, identity card/passport
-                details, social media handles and other social media profile
-                information, and/or education details);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(b)</B> financial details (e.g. income, expenses, credit
-                history and/or credit card and bank information);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(c)</B> images and voice recordings of our conversations with
-                you, whether from our events or office surveillances or
-                otherwise;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(d)</B> work experience and employment details (e.g.
-                occupation, directorships and other positions held, employment
-                history, salary, and/or benefits);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(e)</B> tax and insurance information;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(f)</B> information about your risk profile, investments,
-                investment objectives, knowledge and experience and/or business
-                interests and assets;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(g)</B> information about your use of our services and
-                Website;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(h)</B> usernames and password, third party account
-                credentials (such as your Facebook login credentials, Google
-                login credentials) and IP address;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(i)</B> banking information (e.g. account numbers and banking
-                transactions);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(j)</B> private or public cryptographic key relating to
-                addresses on distributed ledger networks and/or similar
-                information; and/or
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(k)</B> personal opinions made known to us (e.g. feedback or
-                responses to surveys).
-              </Span>
-
-              <Span margin='12px 0'>
-                Personal data may be collected when you interact with our
-                services or use the Website, or may be received by Push from
-                third-party databases or service providers that provide business
-                information.
-              </Span>
-
-              {/* Purposes for collection, use and disclosure */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.2 Purposes for collection, use and disclosure of your personal
-                data
-              </Span>
-
-              <Span margin='12px 0'>
-                Push may collect, use and/or disclose your personal data for its
-                business purposes, including operations for these purposes.
-                These may include, without limitation, the following:
-              </Span>
-
               <ListGroup>
                 <Span margin='6px 0'>
-                  <B>(a)</B> developing and providing facilities, products or
-                  services (whether made available by us or through us),
-                  including but not limited to:
+                  <B>2.2.</B> Information you provide to us directly
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(i)</B> sale of digital tokens or virtual currencies;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.2.1.</B> personal particulars for account (e.g., name,
+                  contact details, residential address, date of birth, identity
+                  card/passport details,);
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(ii)</B> acting as intermediaries through any blockchain,
-                  network or platform developed or managed by us;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.2.3.</B> images and voice recordings of our conversations
+                  with you,;
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(iii)</B> recording and/or encryption on any blockchain,
-                  network or platform developed or managed by us;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.2.4.</B> information about your use of our Services and
+                  Website;
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(iv)</B> promoting advertisements or marketing material,
-                  whether from us or third parties;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.1.4.</B> financial details (e.g., account numbers and
+                  banking transactions private or public cryptographic key
+                  relating to addresses on distributed ledger networks and/or
+                  similar information); and/or
                 </Span>
-
                 <Span margin='6px 0'>
-                  <B>(v)</B> various products and/or services (whether digital
-                  or not, and whether provided through an external service
-                  provider or otherwise), including without limitation the
-                  Services as set out in the Terms of Service;
+                  <B>2.3.</B> Your use of Platform and other Services
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(vi)</B> providing, managing or accessing digital wallets
-                  for holding digital assets;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.3.1.</B> personal opinions made known to us (e.g.,
+                  feedback or responses to surveys).
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(vii)</B> access to smart contracts on and/or interacting
-                  with the Push Protocol, the Website or the App;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.3.2.</B> correspondence data which is provided directly
+                  to us via email, social media or another channel.
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(viii)</B> sending and receiving notifications and Content
-                  from various channels on the Push Protocol;
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.3.3.</B> other transaction information and details
+                  associated with your activities on our Services, including to
+                  deliver you your rewards associated with your use of the
+                  Services
                 </Span>
-
-                <Span margin='6px 0'>
-                  <B>(ix)</B> making payments to you for participation in any
-                  blockchain, network or platform developed or managed by us (as
-                  applicable);
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(x)</B> various products and/or services related to digital
-                  assets;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(xi)</B> any escrow, courier, anti-counterfeiting or
-                  dispute resolution services;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(xii)</B> transactions and clearing or reporting on these
-                  transactions;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(xiii)</B> carrying out research, planning and statistical
-                  analysis; and/or
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(xiv)</B> analytics for the purposes of developing or
-                  improving our products, services, security, service quality,
-                  staff training, and advertising strategies;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(b)</B> assessing and processing applications,
-                  instructions, transactions, or requests from you or our
-                  customers;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(c)</B> communicating with you, including providing you
-                  with updates on changes to products, services and banking
-                  facilities (whether made available by us or through us)
-                  including any additions, expansions, suspensions and
-                  replacements of or to such products, services and banking
-                  facilities and their terms and conditions;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(d)</B> managing our infrastructure and business operations
-                  and complying with internal policies and procedures;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(e)</B> responding to queries or feedback;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(f)</B> addressing or investigating any complaints, claims
-                  or disputes;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(g)</B> verifying your identity for the purposes of
-                  providing facilities, products or services, which would
-                  require comparison of your personal information against third
-                  party databases and/or provision of such information to third
-                  party service providers;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(h)</B> conducting credit checks, screenings or due
-                  diligence checks as may be required under applicable law,
-                  regulation or directive;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(i)</B> complying with all applicable laws, regulations,
-                  rules, directives, orders, instructions and requests from any
-                  local or foreign authorities, including regulatory,
-                  governmental, tax and law enforcement authorities or other
-                  authorities;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(j)</B> enforcing obligations owed to us;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(k)</B> monitoring products and services provided by or
-                  made available through us;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(l)</B> complying with obligations and requirements imposed
-                  by us from time to time by any credit bureau or credit
-                  information sharing services of which we are a member or
-                  subscriber;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(m)</B> creating and maintaining credit and risk related
-                  models;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(n)</B> financial reporting, regulatory reporting,
-                  management reporting, risk management (including monitoring
-                  credit exposures, preventing, detecting and investigating
-                  crime, including fraud and any form of financial crime), audit
-                  and record keeping purposes;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(o)</B> enabling any actual or proposed assignee or
-                  transferee, participant or sub-participant of Push&apos;s
-                  rights or obligations to evaluate any proposed transaction;
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(p)</B> enforcing obligations owed to us; and/or
-                </Span>
-
-                <Span margin='6px 0'>
-                  <B>(q)</B> seeking professional advice, including legal or tax
-                  advice.
-                </Span>
-
-                <Span margin='6px 0'>
-                  We may also use personal data for purposes set out in the
-                  Terms of Service that govern our relationship with you or our
-                  customer.
+                <Span margin='6px 0 6px 20px'>
+                  <B>2.3.</B> We may post job openings and opportunities on our
+                  Website. If you reply to one of these postings by submitting
+                  your application, CV and/or cover letter to us, we will
+                  collect and use this information to assess your
+                  qualifications.
                 </Span>
               </ListGroup>
 
-              {/* Use of personal data for marketing purposes */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.3 Use of personal data for marketing purposes
+              <Span margin='12px 0'>
+                <B>2.4.</B> Personal data may be collected when you interact
+                with our services or use the Website, or may be received by Push
+                from third-party databases or service providers that provide
+                business information.
               </Span>
+
+              {/* Purpose of Collection of Data */}
+              <H2 margin='12px 0'>3. Purpose of Collection of Data</H2>
+              <Span margin='12px 0'>
+                <B>3.1.</B> At Push, we prioritize the privacy, security, and
+                transparency of the user’s data. By using Push platform and
+                services, you agree to allow us to collect, store, process, and
+                use data related to your activities on our systems. The purpose
+                of collection your Personal Data shall assist Push in:
+              </Span>
+              <P margin='0px'>
+                <B>3.2.</B> Provide our Services
+              </P>
+              <ListGroup>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.2.1.</B> Managing your information
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.2.2.</B> Providing access to certain areas,
+                  functionalities, and features of our Services
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.2.3.</B> Communicating with you about your activities on
+                  our Services, terms of service and Policy changes
+                </Span>
+              </ListGroup>
+
+              <P margin='10px 0px 0px 0px'>
+                <B>3.3.</B> Administrative Purpose
+              </P>
+              <ListGroup>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.1.</B> Enhancing your experience on our platform.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.2.</B> Develop new products and service
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.3.</B> Conducting research and surveys
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.4.</B> Auditing relating to interactions, transfers and
+                  other compliance activities
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.5.</B> Improving the functionality, reliability, and
+                  efficiency of our services.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.6.</B> Conducting analytics and research.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.7.</B> Facilitating marketing, promotional efforts, and
+                  service updates.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.8.</B> Ensuring compliance with legal and regulatory
+                  obligations.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.9.</B> Ensuring internal quality control and safety.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.10.</B> Other uses as required to comply with our legal
+                  obligations.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>3.3.11.</B> Sharing information with third parties as
+                  needed to provide the Services
+                </Span>
+              </ListGroup>
 
               <Span margin='12px 0'>
-                We may use your personal data to offer you products or services,
-                including special offers, promotions, contests or entitlements
-                that may be of interest to you or for which you may be eligible.
-                Such marketing messages may be sent to you in various modes
-                including but not limited to electronic mail, direct mailers,
-                short message service, telephone calls, facsimile and other
-                mobile messaging services. In doing so, we will comply with all
-                applicable data protection and privacy laws.
+                <B>3.4.</B> Marketing and Advertising our Services: We may use
+                personal information to tailor and provide you with content and
+                advertisements. We may provide you with these materials as
+                permitted by applicable law. Some of the ways we may market to
+                you include email campaigns, custom audiences advertising, and
+                “interest-based” or “personalized advertising,” including
+                through cross-device tracking. If you have any questions about
+                our marketing practices or if you would like to opt out of the
+                use of your personal information for marketing purposes, you may
+                contact us at any time as set forth in “Contact Us” below.
               </Span>
 
+              <P margin='6px 0 6px 20px'>
+                <B>3.4.1.</B> Security purpose
+                <P margin='6px 0 6px 20px'>
+                  <B>3.4.1.1</B> We may use personal information for fraud and
+                  security purposes, such as monitoring to detect and prevent
+                  cyberattacks or identity theft attempts.
+                </P>
+                <P margin='6px 0 6px 20px'>
+                  <B>3.4.1.1</B> Prevention of criminal activity or harm to
+                  users, such as illegal or harmful content being posted on our
+                  Platform and/or reward board.
+                </P>
+              </P>
+
+              <P margin='6px 0px 6px 20px'>
+                <B>3.4.2.</B> Business transactions
+                <P margin='6px 0 6px 20px'>
+                  <B>3.4.2.1.</B> In connection with a reorganization, merger,
+                  sale, joint venture, assignment, transfer, or other
+                  disposition of all or any portion of our business, assets, or
+                  stock (including in connection with any bankruptcy or similar
+                  proceedings). You will be notified of any such business
+                  transaction and possible changes to the processing of your
+                  personal information in accordance with applicable law.
+                </P>
+              </P>
+
+              {/* Disclosure of Personal Data */}
+              <H2 margin='12px 0'>4. Disclosure of Personal Data</H2>
               <Span margin='12px 0'>
-                In respect of sending telemarketing messages to your telephone
-                number via short message service, telephone calls, facsimile and
-                other mobile messaging services, please be assured that we shall
-                only do so if we have your clear and unambiguous consent in
-                writing or other recorded form to do so or if you have not
-                otherwise made the appropriate registration of that number with
-                the Do Not Call Registry. If we have an ongoing relationship
-                with you and you have not indicated to us that you do not wish
-                to receive telemarketing messages sent to your telephone number,
-                we may send you telemarketing messages to that number related to
-                the subject of our ongoing relationship via short message
-                service, facsimile and other mobile messaging services (other
-                than a voice or video call).
+                <B>4.1.</B> For the provision of the Services and as set out
+                under Clause 4, you understand and accept that we may disclose
+                your Personal Data to:
               </Span>
+              <ListGroup>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.1</B> our employees, contractors and/or related
+                  entities,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.2</B> our existing or potential agents or business
+                  partners,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.3.</B> sponsors or promoters of any competition we run,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.4.</B> anyone to whom our business or assets are, or
+                  may be, transferred,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.5.</B> credit reporting agencies, courts, tribunals and
+                  regulatory authorities, in the event you fail to pay for goods
+                  or services we have provided to you,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.6.</B> courts, tribunals, regulatory authorities and
+                  law enforcement officers, as required by law, or in order to
+                  establish, exercise or defend our legal rights;
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.7.</B> third parties, including agents or
+                  sub-contractors, who assist us in providing information,
+                  products, services or direct marketing to you,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.8.</B> third parties to collect and process data, such
+                  as Google Analytics or other relevant businesses,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.9.</B> operate and maintain the security or integrity
+                  of the Services, including to prevent or stop an attack on our
+                  computer systems or networks,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.10.</B> protect the rights, interests, or property of
+                  our or third parties,
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>4.1.11.</B> prevent or investigate possible wrongdoing in
+                  connection with the Services, or enforce our Terms of Services
+                </Span>
+              </ListGroup>
 
+              {/* International Data Transfer */}
+              <H2 margin='12px 0'>5. International Data Transfer</H2>
               <Span margin='12px 0'>
-                You may at any time request that we stop contacting you for
-                marketing purposes via selected or all modes.
+                <B>5.1.</B> Upon your consent, all information processed by us
+                transferred, processed, and stored anywhere in the world,
+                including, but not limited to, the United States or other
+                countries, which may have data protection laws that are
+                different from the laws where you live. We endeavour to
+                safeguard your information consistent with the requirements of
+                applicable laws.
               </Span>
 
+              {/* Sensitive Personal Information (SPI) */}
+              <H2 margin='12px 0'>6. Sensitive Personal Information (SPI)</H2>
               <Span margin='12px 0'>
-                To find out more on how you can change the way we use your
-                personal data for marketing purposes, please contact us at{' '}
-                <A
-                  href='mailto://support@push.org'
-                  display=' inline'
-                  color='var(--ifm-link-color)'
-                  background='transparent'
-                  padding='0px'
-                  letterSpacing='inherit'
-                  textTransform='initial'
-                >
-                  support@push.org
-                </A>
-                .
+                <B>6.1.</B> SPI is Personal Data consisting of racial or ethnic
+                origin, political opinions, religious or philosophical beliefs,
+                trade union membership, genetic data, biometric data, data
+                concerning health or data concerning a natural person's sex life
+                or sexual orientation. SPI may only be used and disclosed for
+                purposes for which the SPI was collected, as permitted by the
+                provider of the SPI and if required by law.
               </Span>
 
+              {/* Biometric Information */}
+              <H2 margin='12px 0'>7. Biometric Information</H2>
               <Span margin='12px 0'>
-                Nothing in this section shall vary or supersede the Terms of
-                Service that govern our relationship with you.
+                <B>7.1.</B> Please note that the Company does not collect,
+                access, or store any biometric information of users. In certain
+                cases, depending on how you use our Services, your device’s
+                biometric authentication may be used to facilitate secure login
+                or encryption processes. Any biometric data used for such
+                purposes is processed and stored locally on your device through
+                your device’s native authentication mechanisms and is never
+                transmitted to or retained by the Company. In limited
+                circumstances, a non-personal, encrypted identifier derived from
+                your biometric data may be stored solely for the purpose of
+                enabling secure access or authentication. This encrypted
+                identifier cannot be reverse-engineered or used to identify you
+                personally. The Company does not share, sell, or disclose any
+                such encrypted identifiers or biometric-related information to
+                any third parties.
               </Span>
 
-              {/* Disclosure and sharing of personal data */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.4 Disclosure and sharing of personal data
-              </Span>
-
+              {/* Information Automatically Collected */}
+              <H2 margin='12px 0'>8. Information Automatically Collected</H2>
               <Span margin='12px 0'>
-                We may from time to time and in compliance with all applicable
-                laws on data privacy, disclose your personal data to any
-                personnel of Push or to third parties (including without
-                limitation banks, financial institutions, credit card companies,
-                credit bureaus and their respective service providers, companies
-                providing services relating to insurance and/or reinsurance to
-                us, and associations of insurance companies, agents, contractors
-                or third party service providers who provide services to us such
-                as telecommunications, information technology, payment, data
-                processing, storage and archival, and our professional advisers
-                such as our auditors and lawyers, and regulators and
-                authorities), whether located in Singapore or elsewhere, in
-                order to carry out the purposes set out above. Please be assured
-                that when we disclose your personal data to such parties, we
-                require them to ensure that any personal data disclosed to them
-                are kept confidential and secure.
+                <B>8.1.</B> We automatically collect certain types of usage
+                information when you visit our Website or use our Service. When
+                you visit the Service, we may send one or more cookies a small
+                text file containing a string of alphanumeric characters to your
+                computer that uniquely identifies your browser and lets us help
+                you log in faster and enhance your navigation through the site.
+                A cookie may also convey information to us about how you use the
+                Service (e.g., the pages you view, the links you click and other
+                actions you take on the Service), and allow us to track your
+                usage of the Service over time. We may collect log file
+                information from your browser or mobile device each time you
+                access the Service. Log file information may include anonymous
+                information such as your web request, Internet Protocol ("
+                <B>IP</B>") address, browser type, identity of your internet
+                service provider, information about your mobile device,
+                referring / exit pages and URLs, the number and duration of page
+                views, number of clicks and how you interact with links on the
+                Service, domain names, landing pages, and other such
+                information.
               </Span>
-
               <Span margin='12px 0'>
-                For more information about the third parties with whom we share
-                your personal data, you may, where appropriate, wish to refer to
-                the agreement(s) and/or Terms of Service that govern our
-                relationship with you or our customer. You may also contact us
-                for more information (please see section 1.9 below).
+                <B>8.2.</B> When you access our Website through a mobile device,
+                we may receive or collect and store a unique identification
+                number associated with your device and other device information.
+                We may also employ clear gifs (also known as web beacons) which
+                are used to anonymously track the online usage patterns of our
+                Users. In addition, we may also use clear gifs in HTML-based
+                emails sent to our users to track which emails are opened and
+                which links are clicked by recipients. The information allows
+                for more accurate reporting and improvement of the Service. We
+                may also collect analytics data, or use third-party analytics
+                tools, to help us measure traffic and usage trends for the
+                Service. These tools collect information sent by your browser or
+                mobile device, including the pages you visit, your use of
+                third-party applications, and other information that assists us
+                in analysing and improving the Service.
               </Span>
 
+              {/* Cookies */}
+              <H2 margin='12px 0'>9. The Website uses cookies.</H2>
               <Span margin='12px 0'>
-                We wish to emphasise that Push does not sell personal data to
-                any third parties and we shall remain fully compliant of any
-                duty or obligation of confidentiality imposed on us under the
-                applicable agreement(s) and/or Terms of Service that govern our
-                relationship with you or our customer or any applicable law.
-              </Span>
-
-              <Span margin='12px 0'>
-                You are responsible for ensuring that the personal data you
-                provide to us is accurate, complete, and not misleading and that
-                such personal data is kept up to date. You acknowledge that
-                failure on your part to do so may result in our inability to
-                provide you with the products and services you have requested.
-                To update your personal data, please contact us (please see
-                section 1.9 below for contact details). Where you provide us
-                with personal data concerning individuals other than yourself,
-                you are responsible for obtaining all legally required consents
-                from the concerned individuals and you shall retain proof of
-                such consent(s), such proof to be provided to us upon our
-                request.
-              </Span>
-
-              <Span margin='12px 0'>
-                We may transfer, store, process and/or deal with your personal
-                data outside Singapore. In doing so, we will comply with all
-                applicable data protection and privacy laws.
-              </Span>
-
-              {/* Cookies and related technologies */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.5 Cookies and related technologies
-              </Span>
-
-              <Span margin='12px 0'>
-                The Website uses cookies. A cookie is a small text file placed
-                on your computer or mobile device when you visit a Website or
-                use an app. Cookies collect information about users and their
-                visit to the Website or use of the app, such as their Internet
-                protocol (IP) address, how they arrived at the Website (for
-                example, through a search engine or a link from another
-                Website), how they navigate within the Website or app, browser
-                information, computer or device type, operating system, internet
-                service provider, website usage, referring/exit pages, platform
-                type, date/time stamp, number of clicks, and ads viewed. We use
+                <B>9.1.</B> A cookie is a small text file placed on your
+                computer or mobile device when you visit a Website or use an
+                app. Cookies collect information about users and their visit to
+                the Website or use of the app, such as their Internet protocol
+                (IP) address, how they arrived at the Website (for example,
+                through a search engine or a link from another Website), how
+                they navigate within the Website or app, browser information,
+                computer or device type, operating system, internet service
+                provider, Website usage, referring/exit pages, platform type,
+                date/time stamp, number of clicks, and ads viewed. We use
                 cookies and other technologies to facilitate your internet
                 sessions and use of our apps, offer you products and/or services
-                according to your preferred settings, track use of our websites
+                according to your preferred settings, track use of our Website
                 and apps and to compile statistics about activities carried out
-                on our websites.
+                on our Website.
               </Span>
-
               <Span margin='12px 0'>
-                You may set up your web browser to block cookies from monitoring
-                your website visit. You may also remove cookies stored from your
-                computer or mobile device. However, if you do block cookies you
-                may not be able to use certain features and functions of our web
-                sites.
+                <B>9.2.</B> You may set up your web browser to block cookies
+                from monitoring your Website visit. You may also remove cookies
+                stored from your computer or mobile device. However, if you do
+                block cookies you may not be able to use certain features and
+                functions of our web sites.
               </Span>
 
-              {/* Other web sites */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.6 Other web sites
-              </Span>
-
+              {/* Data Security */}
+              <H2 margin='12px 0'>10. Data Security</H2>
               <Span margin='12px 0'>
-                Our websites may contain links to other websites which are not
-                maintained by Push. This Policy only applies to the websites of
-                Push. When visiting these third party websites, you should read
-                their privacy policies which will apply to your use of such
-                websites.
+                <B>10.1.</B> We employ a variety of measures to safeguard the
+                collection, transmission, and storage of the information we
+                collect. These measures vary based on the sensitivity of the
+                information that we collect, process, and store, and the current
+                state of technology. All data is hosted on third-party servers
+                as decided by the Company. We employ industry standard data
+                security practices to keep your personal information safe from
+                cyber-attacks and threats. Without prejudice to the inherent
+                risk of sharing and accessing data over the internet, we will
+                use appropriate security measures (organizational and technical)
+                to prevent your Personal Data from being accidentally lost,
+                used, damaged, or accessed in an unauthorised or unlawful way,
+                altered, or disclosed. Please note that no system can be
+                guaranteed to be 100% secure. In addition, we will allow access
+                to your Personal Data only to those employees, agents,
+                contractors and other third parties who have a legitimate
+                business need to know and are subject to a duty of
+                confidentiality. Despite the fact that we have implemented
+                appropriate security measures, we cannot guarantee that the
+                Personal Data we collect will not be shared/disclosed in a way
+                that is inconsistent with this Privacy Policy. Where we have
+                given you (or where you have chosen) a credential which enables
+                you to access certain parts of our Platform, you are responsible
+                for keeping this password confidential. We ask you not to share
+                a credential with anyone. We have internal policies to respond
+                to personal information breaches and will notify you and
+                applicable regulators as required by law.
               </Span>
-
-              {/* Retention of personal data */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.7 Retention of personal data
-              </Span>
-
               <Span margin='12px 0'>
-                Your personal data is retained as long as the purpose for which
-                it was collected remains and until it is no longer necessary for
-                any legal or business purposes.
+                <B>10.2.</B> If you have reason to believe that your interaction
+                with us is no longer secure, please immediately notify us in
+                accordance with the Contact Details section below.
               </Span>
+
+              {/* Data Retention */}
+              <H2 margin='12px 0'>11. Data Retention</H2>
+              <Span margin='12px 0'>
+                <B>11.1.</B> We will retain your Personal Data if you are using
+                the Services, have an account with us or required for the
+                purpose provided in this Privacy Policy. Further, we may retain
+                Personal Data for an additional period permitted or required
+                under applicable laws, for legal, tax, or regulatory reasons, or
+                for legitimate and lawful business purposes.
+              </Span>
+              <Span margin='12px 0'>
+                <B>11.2.</B> The criteria to determine our retention periods
+                include:
+              </Span>
+              <Span margin='6px 0 6px 20px'>
+                <B>11.2.1.</B> The length of time we have an ongoing
+                relationship with you and provide the Services to you (for
+                example, for as long as you have an account with us or keep
+                using the Services);
+              </Span>
+              <Span margin='6px 0 6px 20px'>
+                <B>11.2.2.</B> Whether there is a legal obligation to which we
+                are subject (for example, certain laws require us to keep
+                records of your transactions for a certain period of time before
+                we can delete them); or
+              </Span>
+              <Span margin='6px 0 6px 20px'>
+                <B>11.2.3.</B> Whether retention is advisable in light of our
+                legal position (such as in regard to applicable statutes of
+                limitations, litigation or regulatory investigations)
+              </Span>
+              <P margin='6px 0 6px 20px'>
+                <B>11.2.4.</B> Where a legal obligation arises or retention is
+                advisable in light of our legal position, in some circumstances,
+                we will retain certain Personal Information, even after your
+                account has been deleted and/or we no longer provide the
+                Services to you; for example:
+                <P margin='6px 0 6px 20px'>
+                  <B>11.2.4.1.</B> To cooperate with law enforcement or public,
+                  regulatory and government authorities: If we receive a
+                  preservation order or search warrant, related to your Services
+                  or account, we will preserve personal information subject to
+                  such order or warrant after you delete your Services or
+                  account.
+                </P>
+                <P margin='6px 0 6px 20px'>
+                  <B>11.2.4.2.</B> To comply with legal provisions on tax and
+                  accounting: We may retain your personal information, such as
+                  name, email address, account information, after you delete
+                  your account, as required by tax law and to comply with
+                  bookkeeping requirements. Please note the length of time may
+                  vary by country.
+                </P>
+                <P margin='6px 0 6px 20px'>
+                  <B>11.2.4.3.</B> For fraud and security purposes: We may
+                  retain your personal information for fraud or security
+                  purposes. In the event you have acted fraudulently through the
+                  use of the Services) we may retain Name and email details,
+                  account information, and IP address.
+                </P>
+              </P>
+
+              <Span margin='6px 0'>
+                <B>11.3.</B> To pursue or defend a legal action: We may retain
+                relevant personal information in the event of a legal claim or
+                complaint, including regulatory investigations or legal
+                proceedings about a claim related to your personal information,
+                or if we reasonably believe there is a prospect of litigation
+                (whether in respect of our relationship with you or otherwise)
+                after the dispute has been settled or decided by a court or
+                tribunal from which there is no further right of appeal. The
+                criteria for determining the length of time we will retain this
+                information include: a. whether there is a legal obligation to
+                which we are subject (for example, if the settlement or decision
+                requires us to keep the records for a certain period of time
+                before we can delete them); or b. whether retention is advisable
+                in light of our legal position (such as in regard to applicable
+                statutes of limitations, litigation or regulatory
+                investigations).
+              </Span>
+
+              {/* Your Rights */}
+              <H2 margin='12px 0'>12. Your Rights</H2>
+              <Span margin='12px 0'>
+                This Privacy Policy grants you certain rights with respect to
+                your Personal Data as set out below:
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.1. Right to Consent:</B> By using our Services and/or
+                providing your Personal Data, you agree to allow us to collect,
+                hold, use, and disclose such data in accordance with this
+                Privacy Policy. You have the right not to consent/provide us any
+                such data, however, if you do so, we may not be able to provide
+                you with the Services, or the products and/or services offered
+                through the Platform.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.2. Access:</B> You have the right to request details of
+                your Personal Data from us.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.3. Data Erasure:</B> You can request for deletion of your
+                Personal Data. However, if such data is required for the
+                provision of the Services, you may be required to delete your
+                profile and/or may not be able to use our Services.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.4. Correction:</B> If you believe any Personal Data held
+                by us is inaccurate, out of date, incomplete, irrelevant, or
+                misleading, please contact us to correct such information, or
+                update the same via your account, if allowed.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.5. Concerns and Queries:</B> If you have any concerns and
+                queries on how we process, handle, and keep your Personal Data,
+                please contact us with full details of your concerns and
+                queries. We will take appropriate steps to address them.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.6. Object and Restriction to processing:</B> Subject to
+                data processing such as profiling, You may upon giving written
+                notice to withdraw your consent to collect, use or disclose your
+                personal data. Upon receipt of such withdrawal request, the
+                Company shall, within thirty (30) days or within a reasonable
+                period thereafter, make reasonable efforts to cease the
+                collection, use, and disclosure of your personal data, however,
+                if you do so, we may not be able to provide you with the
+                Services, or the products and/or services offered through the
+                Platform.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.7. Data Portability:</B> You may obtain your personal data
+                in a structured, machine readable format for transfer to another
+                service.
+              </Span>
+              <Span margin='6px 0'>
+                <B>12.8. Right to Lodge a Complaint:</B> You may lodge a
+                complaint with the respective data protection authority for your
+                country or region where you have your habitual residence or
+                place of work or where an alleged infringement of applicable
+                data protection law occurs.
+              </Span>
+
+              {/* Additional Rights - GDPR */}
+              <H2 margin='12px 0'>13. Additional Rights</H2>
+              <Span margin='12px 0'>
+                <B>13.1.</B>
+                General Data Protection Regulation (GDPR) Data Protection
+                Rights: The Company invites you to be fully aware of all your
+                personal data protection rights if you are a resident where the
+                GDPR is applicable. Every such user is entitled to the
+                following:
+              </Span>
+              <ListGroup>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.1</B> The right to access: The user has the right to
+                  request copies of your personal data. The Company may charge
+                  additional costs for the same.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.2.</B> The right to rectification: The user has the
+                  right to request that we correct any information you believe
+                  is inaccurate. The user additionally has the right to request
+                  that we complete the information the user believes is
+                  incomplete.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.3.</B> The right to erasure: The user has the right to
+                  request that the Company erases your personal data, under
+                  certain circumstances.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.4.</B> The right to restrict processing: The user has
+                  the right to request that the Company restricts the processing
+                  of your personal data, under certain circumstances.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.5.</B> The right to object to processing: The user has
+                  the right to object to the Company’s processing of your
+                  personal data, under certain circumstances.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.6.</B> The right to data portability: The user has the
+                  right to request that the Company transfers the data that the
+                  Company has collected to another Company/ organization, or
+                  directly to you, under certain circumstances.
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>13.1.7.</B> If the GDPR is applicable to you, you may make
+                  a request, and the Company will endeavour to respond to you
+                  within the timeline as per applicable law.
+                </Span>
+              </ListGroup>
 
               {/* Queries, Access/Correction Requests and Withdrawal of Consent */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.8 Queries, Access/Correction Requests and Withdrawal of
+              <H2 margin='12px 0'>
+                14. Queries, Access/Correction Requests and Withdrawal of
                 Consent
-              </Span>
-
-              <Span margin='8px 0'>If you:</Span>
-
+              </H2>
               <Span margin='12px 0'>
-                <B>(a)</B> have queries about our data protection processes and
-                practices;
+                <B>14.1.</B> If you:
               </Span>
-
+              <ListGroup>
+                <Span margin='6px 0 6px 20px'>
+                  <B>14.1.1.</B> have queries about our data protection
+                  processes and practices;
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>14.1.2.</B> wish to request access to and/or make
+                  corrections to your personal data in our possession or under
+                  our control; or
+                </Span>
+                <Span margin='6px 0 6px 20px'>
+                  <B>14.1.3.</B> wish to withdraw your consent to our
+                  collection, use or disclosure of your personal data,
+                </Span>
+              </ListGroup>
               <Span margin='12px 0'>
-                <B>(b)</B> wish to request access to and/or make corrections to
-                your personal data in our possession or under our control; or
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(c)</B> wish to withdraw your consent to our collection, use
-                or disclosure of your personal data,
-              </Span>
-
-              <Span margin='20px 0 12px'>
-                please submit a written request (with supporting documents, (if
-                any) to our Compliance Officer at:{' '}
+                <B>14.2.</B> Please submit a written request (with supporting
+                documents, (if any) to our Compliance Officer at:{' '}
                 <A
                   href='mailto://support@push.org'
                   display=' inline'
@@ -694,37 +776,71 @@ const PrivacyComp = () => {
                   support@push.org
                 </A>
                 . Our Compliance Officer shall endeavour to respond to you
-                within 30 days of your submission. Please note that if you
-                withdraw your consent to any or all use or disclosure of your
-                personal data, depending on the nature of your request, we may
-                not be in a position to continue to provide our services or
+                within 30 days of your submission. As part of our response
+                process, we may conduct a basic background verification to
+                confirm that the requester is a genuine user and to determine
+                whether any breach, misuse, or unauthorised disclosure of
+                personal data has occurred. This verification is carried out
+                solely for security and compliance purposes. Please note that if
+                you withdraw your consent to any or all use or disclosure of
+                your personal data, depending on the nature of your request, we
+                may not be in a position to continue to provide our services or
                 products to you or administer any contractual relationship in
                 place. Such withdrawal may also result in the termination of any
                 agreement you may have with us. Our legal rights and remedies
-                are expressly reserved in such event.
+                are expressly reserved in such an event.
               </Span>
-
               <Span margin='12px 0'>
-                We may charge you a fee for processing your request for access.
-                Such a fee depends on the nature and complexity of your access
-                request. Information on the processing fee will be made
-                available to you.
+                <B>14.3.</B> We may charge you a fee for processing your request
+                for access. Such a fee depends on the nature and complexity of
+                your access request. Information on the processing fee will be
+                made available to you.
               </Span>
 
-              {/* Contact information */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.9 Contact information
-              </Span>
-
+              {/* Links to Other Sites */}
+              <H2 margin='12px 0'>15. Links to Other Sites</H2>
               <Span margin='12px 0'>
-                To contact us on any aspect of this Policy or your personal data
-                or to provide any feedback that you may have, please contact our
-                Compliance Officer at{' '}
+                <B>15.1.</B> The Platform may contain links to other Websites.
+                Those Websites are not governed by this Privacy Policy. Clicking
+                on those links or enabling those connections may allow third
+                parties to collect or share data about you. Please read the
+                Privacy Policy and Terms and Conditions of such Websites before
+                using such Websites. We have no control over and shall not be
+                responsible for the content, privacy policies or practices of
+                any third-party sites or services.
+              </Span>
+
+              {/* Changes to our Privacy Policy */}
+              <H2 margin='12px 0'>16. Changes to our Privacy Policy</H2>
+              <Span margin='12px 0'>
+                <B>16.1.</B> We reserve the right to update this Privacy Policy
+                at any time and at our sole discretion. Any changes to or
+                modifications of this Privacy Policy shall be in effect as of
+                the “Last Updated Date” referred to at the top of this page. We
+                will notify you of such changes prominently either by posting a
+                notice of such changes before they take effect, or by sending
+                you a notification directly. The amended Privacy Policy is
+                effective once we notify you of the change. We encourage you to
+                periodically review this Privacy Policy.
+              </Span>
+
+              {/* Minor */}
+              <H2 margin='12px 0'>17. Minor</H2>
+              <Span margin='12px 0'>
+                <B>17.1.</B> As provided in our Terms of Service, our Service is
+                not intended for anyone under the age of 18 (eighteen) years or
+                minor under the law of the country where the Services are
+                accessed (“<B>Minor</B>”). We do not intend to or knowingly
+                collect any Personal Data related to a Minor. If you believe
+                that Personal Data of any minor has been collected or provided
+                to us, please contact us.
+              </Span>
+
+              {/* Contact Details */}
+              <H2 margin='12px 0'>18. Contact Details</H2>
+              <Span margin='12px 0'>
+                <B>18.1.</B> For queries on any aspect of this Privacy Policy or
+                to provide any feedback please contact our office at:{' '}
                 <A
                   href='mailto://support@push.org'
                   display=' inline'
@@ -736,167 +852,10 @@ const PrivacyComp = () => {
                 >
                   support@push.org
                 </A>
-                .
-              </Span>
-
-              {/* Governing Law and Jurisdiction */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.10 Governing Law and Jurisdiction
-              </Span>
-
-              <Span margin='12px 0'>
-                This Policy and your use of the Website shall be governed and
-                construed in accordance with the laws of Singapore. You agree to
-                submit to the exclusive jurisdiction of the Singapore courts.
-              </Span>
-
-              {/* Amendments and updates */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.11 Amendments and updates to Push Privacy Policy
-              </Span>
-
-              <Span margin='12px 0'>
-                We reserve the right to amend this Policy from time to time to
-                ensure that this Policy is consistent with any developments to
-                the way Push uses your personal data or any changes to the laws
-                and regulations applicable to Push. We will make available the
-                updated Policy on the Website. You are encouraged to visit the
-                Website from time to time to ensure that you are well informed
-                of our latest policies in relation to personal data protection.
-                All communications, transactions and dealings with us shall be
-                subject to the latest version of this Policy in force at the
-                time.
-              </Span>
-
-              {/* EU/EEA Residents */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.12 For European Union or European Economic Area Residents
-              </Span>
-
-              <Span margin='12px 0'>
-                This section applies if you are an individual located in the
-                European Union or European Economic Area. Subject to applicable
-                law, you have the following additional rights in relation to
-                your personal data:
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(a)</B> the right to access your personal data (if you ask
-                us, we will confirm whether we are processing your personal data
-                in a structured, commonly used and machine-readable format and,
-                if so, provide you with a copy of that personal data (along with
-                certain other details). If you require additional copies, we may
-                need to charge a reasonable fee;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(b)</B> the right to ensure the accuracy of your personal
-                data;
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(c)</B> the right to have us delete your personal data (we
-                will do so in some circumstances, such as where we no longer
-                need it, but do note that we may not delete your data when other
-                interests outweigh your right to deletion);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(d)</B> the right to restrict further processing of your
-                personal data (unless we demonstrate compelling legitimate
-                grounds for the processing);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(e)</B> rights in relation to automated decision-making and
-                profiling (you have the right to be free from decisions based
-                solely on automated processing of your personal data, including
-                profiling, that affect you, unless such processing is necessary
-                for entering into, or the performance of, a contract between you
-                and us or you provide your explicit consent to such processing);
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(f)</B> the right to withdraw consent (if we rely on your
-                consent to process your personal data, you have the right to
-                withdraw that consent at any time, but provided always that this
-                shall not affect the lawfulness of processing based on your
-                prior consent); and
-              </Span>
-
-              <Span margin='12px 0'>
-                <B>(g)</B> the right to complain to a supervisory authority in
-                your country of residence in the event that data is misused.
-              </Span>
-
-              <Span margin='12px 0'>
-                If you believe that our processing of your personal information
-                infringes data protection laws, you have a legal right to lodge
-                a complaint with a supervisory authority responsible for data
-                protection. You may do so in the EU member state of your
-                residence, your place of work or the place of the alleged
-                infringement. You may exercise any of your rights in relation to
-                your personal data by contacting our Compliance Officer at:{' '}
-                <A
-                  href='mailto://support@push.org'
-                  display=' inline'
-                  color='var(--ifm-link-color)'
-                  background='transparent'
-                  padding='0px'
-                  letterSpacing='inherit'
-                  textTransform='initial'
-                >
-                  support@push.org
-                </A>
-                .
-              </Span>
-
-              {/* Your acceptance of these terms */}
-              <Span
-                weight='400'
-                spacing='0.2em'
-                textTransform='uppercase'
-                margin='24px 0 8px'
-              >
-                1.13 Contact information
-              </Span>
-
-              <Span margin='12px 0'>
-                This Policy applies in conjunction with any other notices,
-                contractual clauses and consent clauses that apply in relation
-                to the collection, use and disclosure of your personal data by
-                us. We may revise this Policy from time to time without any
-                prior notice. You may determine if any such revision has taken
-                place by referring to the date on which this Policy was last
-                updated.
-              </Span>
-
-              <Span margin='12px 0'>
-                By using the Website and/or any services provided by Push, you
-                signify your acceptance of this Policy and terms of service. If
-                you do not agree to this Policy or terms of service, please do
-                not use the Website or any services provided by Push. Your
-                continued use of the Website following the posting of changes to
-                this Policy will be deemed your acceptance of those changes.
               </Span>
             </ItemV>
           </MultiContent>
-        </Content>
+        </BodyContent>
       </Section>
     </>
   );
@@ -907,8 +866,17 @@ const ListGroup = styled.div`
   flex-direction: column;
 `;
 
-const HeroSection = styled(Section)`
-  border-radius: 0 0 48px 48px;
+const BodyContent = styled(Content)`
+  & :where(p, li, a, span) {
+    font-weight: 200;
+    line-height: 170%;
+  }
+
+  & :where(p, li, a, span) :where(b, strong),
+  & :where(p, li, a, span) ${B} {
+    font-weight: 700;
+    line-height: 170%;
+  }
 `;
 
 export default PrivacyComp;

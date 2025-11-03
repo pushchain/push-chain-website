@@ -65,4 +65,4 @@ We are pleased to be partnering with B.Protocol and anticipate EPNS push notific
 
 B.Protocol is a backstop liquidity protocol for decentralized lending platforms. A new DeFi lego primitive, bringing traditional finance systems best practices into DeFi, aiming to stabilize the ever growing market of DeFi assets which are crucially dependent on adequate liquidation processes. By creating better liquidation systems we unleash better capital efficiency for the entire DeFi ecosystem. B.Protocol is a fully decentralized protocol which is being governed by $BPRO token holders.
 
-Get involved — [Website](https://www.bprotocol.org/), [Twitter](https://twitter.com/bprotocoleth), [Discord](https://discord.gg/bJ4guuw), [Forum](https://forum.bprotocol.org/), [Medium](https://medium.com/b-protocol)
+Get involved — [Website](https://www.bprotocol.org/), [Twitter](https://twitter.com/bprotocoleth), [Discord](https://discord.com/invite/pushchain), [Forum](https://forum.bprotocol.org/), [Medium](https://medium.com/b-protocol)

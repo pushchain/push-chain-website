@@ -1074,7 +1074,7 @@ export const objChannelList = [
     ipfshash: 'bafkreie56cb6aslmjgs3yofld5gtlaj35n654hkbtczq2bsh2wa5utkytm',
     name: 'Pine Protocol',
     info: 'Notification for Pine Protocol (NFT Collateral Loan) liquidations',
-    url: 'https://discord.gg/EfKVfTUQeK',
+    url: 'https://discord.com/invite/pushchain',
     icon: 'https://gateway.ipfs.io/ipfs/QmXSG5owiiHnhhka3nj3dwBG3HjwNZr9QeNyFxD2yhv2Zj',
     processed: 1,
     attempts: 0,

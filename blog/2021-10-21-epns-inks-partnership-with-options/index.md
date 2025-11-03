@@ -44,4 +44,4 @@ As Pods Finance continues to revolutionize crypto derivatives, we’re pleased t
 
 Pods is a decentralized non-custodial options protocol. Users can create options and trade them through an Options AMM on the Ethereum Blockchain. Pods is the easiest way to hedge crypto in DeFi. Join the Pods community
 
-[App](https://app.pods.finance/) | [Website](https://pods.finance/) | [Documentation](https://docs.pods.finance/) | [Blog](https://blog.pods.finance/) | [Twitter](https://twitter.com/PodsFinance) | [Youtube](https://www.youtube.com/channel/UCRbBvHcv2jVDFj7Mk5m1mSw) | [Telegram](https://t.me/podsfinance) | [Discord](https://discord.gg/Qf7utym)
+[App](https://app.pods.finance/) | [Website](https://pods.finance/) | [Documentation](https://docs.pods.finance/) | [Blog](https://blog.pods.finance/) | [Twitter](https://twitter.com/PodsFinance) | [Youtube](https://www.youtube.com/channel/UCRbBvHcv2jVDFj7Mk5m1mSw) | [Telegram](https://t.me/podsfinance) | [Discord](https://discord.com/invite/pushchain)

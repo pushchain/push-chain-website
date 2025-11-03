@@ -5656,9 +5656,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:2.1.2":
-  version: 2.1.2
-  resolution: "@pushchain/core@npm:2.1.2"
+"@pushchain/core@npm:2.1.5":
+  version: 2.1.5
+  resolution: "@pushchain/core@npm:2.1.5"
   dependencies:
     "@bufbuild/protobuf": "npm:^2.0.0"
     "@coral-xyz/anchor": "npm:^0.31.0"
@@ -5675,17 +5675,40 @@ __metadata:
     tslib: "npm:^2.3.0"
     tweetnacl: "npm:^1.0.3"
     viem: "npm:2.27.2"
-  checksum: 10c0/d32318ba61d41727c9aa001bd2dad1b3e9395abfaffc014122b0ec0c317bf367e297b8218a9faf2018da67d062bcbfbc3cb8a0b49d44dbac5fd156aa7646fed1
+  checksum: 10c0/e6dfc91e99874c17a0aed2447fffd8a1b346d4112c4ac0c62ae87c32f303a36b52532bccbc7bbb2947aab0fa737152338387450af439d7d245f3d140b5301950
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:2.0.15-alpha.0":
-  version: 2.0.15-alpha.0
-  resolution: "@pushchain/ui-kit@npm:2.0.15-alpha.0"
+"@pushchain/core@npm:^2.1.5":
+  version: 2.1.6
+  resolution: "@pushchain/core@npm:2.1.6"
+  dependencies:
+    "@bufbuild/protobuf": "npm:^2.0.0"
+    "@coral-xyz/anchor": "npm:^0.31.0"
+    "@cosmjs/crypto": "npm:0.33.1"
+    "@cosmjs/encoding": "npm:0.33.1"
+    "@cosmjs/proto-signing": "npm:^0.33.1"
+    "@cosmjs/stargate": "npm:^0.33.1"
+    "@cosmjs/tendermint-rpc": "npm:0.33.1"
+    "@solana/web3.js": "npm:^1.68.0"
+    buffer: "npm:^6.0.3"
+    cosmjs-types: "npm:0.9.0"
+    ethers: "npm:^6.14.3"
+    protobufjs: "npm:7.4.0"
+    tslib: "npm:^2.3.0"
+    tweetnacl: "npm:^1.0.3"
+    viem: "npm:2.27.2"
+  checksum: 10c0/a5a6826b1488244d9261e4570cf3052f76c09f1f923ce365fc1ff4c2ee4266a93346c3df1e17a0347ecf90e3d77ebb99ae550bb6c93579d20bf5710ed0a39497
+  languageName: node
+  linkType: hard
+
+"@pushchain/ui-kit@npm:2.0.15":
+  version: 2.0.15
+  resolution: "@pushchain/ui-kit@npm:2.0.15"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:2.1.2"
+    "@pushchain/core": "npm:^2.1.5"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.5"
     buffer: "npm:^6.0.3"
@@ -5697,7 +5720,7 @@ __metadata:
   peerDependencies:
     react: ">=18.3.0 <20.0.0"
     react-dom: ">=18.3.0 <20.0.0"
-  checksum: 10c0/e5140be8c2e45782f392d3b8368cda1a8e133958c61669da7d1356fe67c6255d9de612fc5061fd1b8258ff66656977bd23b7a21b96f4cbefc7af663e91caee2a
+  checksum: 10c0/a1bc24e962de4f27d8042d75e7ec1b64f4af14bc00cce7969b4d791565cd0bbdf9fdc3ff72bfb78cfd1815b56d6619973dec5c33db7e11a873f27459191dc7e5
   languageName: node
   linkType: hard
 
@@ -21327,8 +21350,8 @@ __metadata:
     "@docusaurus/types": "npm:^3.8.1"
     "@mdx-js/react": "npm:^3.0.0"
     "@openzeppelin/merkle-tree": "npm:^1.0.8"
-    "@pushchain/core": "npm:2.1.2"
-    "@pushchain/ui-kit": "npm:2.0.15-alpha.0"
+    "@pushchain/core": "npm:2.1.5"
+    "@pushchain/ui-kit": "npm:2.0.15"
     "@pushprotocol/restapi": "npm:1.7.20"
     "@pushprotocol/uiweb": "npm:1.7.1"
     "@radix-ui/react-dialog": "npm:^1.1.2"
@@ -21361,6 +21384,7 @@ __metadata:
     ethers: "npm:^6.13.5"
     form-data: "npm:^4.0.4"
     gh-pages: "npm:^6.3.0"
+    gray-matter: "npm:^4.0.3"
     gsap: "npm:3.11.1"
     hast-util-sanitize: "npm:^5.0.2"
     https-browserify: "npm:^1.0.0"

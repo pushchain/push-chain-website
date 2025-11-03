@@ -2,19 +2,16 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "ドキュメント — ユニバーサルアプリを構築",
-        "description": "Push Chainでデプロイするために必要なすべて：クイックスタート、SDK、APIリファレンス、例、ノードセットアップ。",
-        "og-title": "Push Chain Docs - クイックスタート、SDK、API",
-        "og-description": "明確なガイドと例でユニバーサル実行レイヤー上でアプリを構築・実行。",
-        "twitter-title": "Push Chain Docs - 今すぐ構築",
-        "twitter-description": "クイックスタート、SDK、APIリファレンス、例で素早くデプロイ。"
+        "title": "フランマト、今新檔复で",
+        "description": "エグテサは Push 科一線を勓で３、SDK３API前場がそら日忘へいなたしたを正だ",
+        "og-title": "ヒータセカ Docs - Quickstarts, SDKs & API",
+        "og-description": "ユニバーサル実行レイヤーでアプリを構築および実行するための明確なガイダンスと例が含まれています。",
+        "twitter-title": "フレァント・ニスト です",
+        "twitter-description": "クイックスタート、SDK、APIリファレンス、サンプルを迅速に実装するためのもの。"
       },
       "header": {
-        "countdown-title": "テストネットドキュメントのローンチまで",
-        "description": "シーッ...テストネットドーナツを覗いてみたい？#pushchainsecretで私たちにメッセージを送ってください。テストビルドへのアクセスをお送りします。",
-        "tweet-button": "Push Chainについてツイート",
-        "title": "Push Chainについてツイート",
-        "ariaLabel": "Push Chainについてツイート"
+        "countdown-title": "テストネットドキュメントのリリースまで",
+        "ariaLabel": "パントに以内を抎う"
       },
       "grid-section": {
         "blocks": {
@@ -22,19 +19,19 @@
             "resources": {
               "items": {
                 "whatispush": {
-                  "title": "Push Chainとは？",
-                  "subtitle": "Push Chainは真にユニバーサルなアプリを構築するための統合ツールキットを提供します。",
-                  "ctatitle": "詳細を見る"
+                  "title": "ファスャンを表本した",
+                  "subtitle": "Push Chain における、普遍的でユニバーサルなアプリを構築するための統一されたツールキットが提供されます。",
+                  "ctatitle": "もっと知る"
                 },
                 "builders": {
-                  "title": "構築しましょう！",
-                  "subtitle": "ユニバーサルアプリを作成するためにPush Chain SDKで必要なすべて",
-                  "ctatitle": "詳細を見る"
+                  "title": "ブロックチェーンを作りましょう!",
+                  "subtitle": "あなたが Push Chain SDK で作成するための、すべての必要なもの",
+                  "ctatitle": "ティルフレスしは"
                 },
                 "ui-kit": {
-                  "title": "UI Kit",
-                  "subtitle": "5分未満でReactベースのアプリを統合。",
-                  "ctatitle": "詳細を見る"
+                  "title": "ブトサ",
+                  "subtitle": "フォタカは、レームトを歴为いるよみきおるし",
+                  "ctatitle": "もっと詳しく学ぼう"
                 }
               }
             }
@@ -44,4 +41,3 @@
     }
   }
 }
-

@@ -5,7 +5,7 @@ hide_title: false
 slug: ./running-push-validator
 displayed_sidebar: pushChainSidebar
 sidebar_position: 1
-image: "/assets/docs/previews/docs_chain_deep_dives--push_validator_manager.png"
+image: "/assets/docs/previews/docs_chain_node_and_system_tools_running_validator--running_push_validator.png"
 ---
 
 <head>
@@ -18,9 +18,9 @@ import Details from '@theme/Details';
 
 <!-- Content Start -->
 
-**Fast validator setup with automatic recovery for Push Chain**
+**Fast validator setup for Push Chain**
 
-## 🚀 Quick Start (2-3 minutes)
+## 🚀 Quick Start (1-2 minutes)
 
 ### Step 1: Install & Start
 ```bash
@@ -28,53 +28,80 @@ curl -fsSL https://get.push.network/node/install.sh | bash
 ```
 Automatically installs and starts your validator using state sync (no full sync needed).
 
-> **Note:** Restart terminal or run `source ~/.bashrc` to use `push-validator-manager` from anywhere.
+> **Note:** Restart terminal or run `source ~/.bashrc` to use `push-validator` from anywhere.
 
 ### Step 2: Verify Sync
 ```bash
-push-validator-manager status
+push-validator status
 ```
-Wait for: `✅ Catching Up: false` (takes ~2-3 minutes with state sync)
+Wait for: `✅ Catching Up: false` (takes ~1-2 minutes with state sync)
 
 ### Step 3: Register Validator
 ```bash
-push-validator-manager register-validator
+push-validator register-validator
 ```
-**Requirements:** 2+ PC tokens from [faucet](https://faucet.push.org)
+**Requirements:** 1.5+ PC tokens from [faucet](https://faucet.push.org)
 
 **Done! Your validator is running with automatic recovery enabled! 🎉**
+
+## 📊 Dashboard
+
+Monitor your validator in real-time with an interactive dashboard:
+
+```bash
+push-validator dashboard
+```
+
+**Features:**
+- **Node Status** - Process state, RPC connectivity, resource usage (CPU, memory, disk)
+- **Chain Sync** - Real-time block height, sync progress with ETA, network latency
+- **Validator Metrics** - Bonding status, voting power, commission rate, accumulated rewards
+- **Network Overview** - Connected peers, chain ID, active validators list
+- **Live Logs** - Stream node activity with search and filtering
+- **Auto-Refresh** - Updates every 2 seconds for real-time monitoring
+
+The dashboard provides everything you need to monitor validator health and performance at a glance.
 
 ## 📖 Commands
 
 ### Core
 ```bash
-push-validator-manager start                # Start with state sync (2-3 min)
-push-validator-manager stop                 # Stop node
-push-validator-manager status               # Check sync & validator status
-push-validator-manager register-validator   # Register as validator
-push-validator-manager logs                 # View logs
+push-validator start                # Start with state sync (2-3 min)
+push-validator stop                 # Stop node
+push-validator status               # Check sync & validator status
+push-validator dashboard            # Live interactive monitoring dashboard
+push-validator register-validator   # Register as validator
+push-validator logs                 # View logs
+```
+
+### Validator Operations
+```bash
+push-validator increase-stake       # Increase validator stake and voting power
+push-validator unjail               # Restore jailed validator to active status
+push-validator withdraw-rewards     # Withdraw validator rewards and commission
+push-validator restake              # Auto-withdraw and restake all rewards to increase validator power
 ```
 
 ### Monitoring
 ```bash
-push-validator-manager sync            # Monitor sync progress
-push-validator-manager peers           # Show peer connections
-push-validator-manager doctor          # Run health diagnostics
+push-validator sync            # Monitor sync progress
+push-validator peers           # Show peer connections (from local RPC)
+push-validator doctor          # Run diagnostic checks on validator setup
 ```
 
 ### Management
 ```bash
-push-validator-manager restart         # Restart node
-push-validator-manager validators      # List validators
-push-validator-manager balance         # Check balance
-push-validator-manager reset           # Reset data
-push-validator-manager backup          # Backup node
-push-validator-manager update          # Update to latest version
+push-validator restart         # Restart node
+push-validator validators      # List validators (supports --output json)
+push-validator balance         # Check balance (defaults to validator key)
+push-validator reset           # Reset chain data (keeps address book)
+push-validator full-reset      # ⚠️ Complete reset (deletes ALL keys and data)
+push-validator backup          # Backup config and validator state
 ```
 
 ## ⚡ Features
 
-- **State Sync**: 2-3 minute setup (no full blockchain download)
+- **State Sync**: 1-2 minute setup (no full blockchain download)
 - **Interactive Logs**: Real-time log viewer with search and filtering
 - **Smart Detection**: Monitors for sync stalls and network issues
 - **Reliable Snapshots**: Uses trusted RPC nodes for recovery
@@ -83,27 +110,15 @@ push-validator-manager update          # Update to latest version
 ## 📊 Network
 
 - **Chain**: `push_42101-1` (Testnet)
-- **Min Stake**: 2 PC
+- **Min Stake**: 1.5 PC
 - **Faucet**: https://faucet.push.org
 - **Explorer**: https://donut.push.network
 
-### File Locations
-- **Manager**: `~/.local/bin/push-validator-manager`
-- **Binary**: `~/.local/bin/pchaind`
-- **Config**: `~/.pchain/config/`
-- **Data**: `~/.pchain/data/`
-- **Logs**: `~/.pchain/logs/pchaind.log`
-- **Backups**: `~/push-node-backups/`
+## 🔧 Advanced Setup (Optional)
 
-## 🌍 Public Setup (Optional)
-
-### Making Your Node Publicly Accessible
-
-By default, your validator runs locally. These optional commands help set up public HTTPS endpoints:
-
-#### Setup NGINX with SSL
+### Setup NGINX with SSL
 ```bash
-push-validator-manager setup-nginx yourdomain.com
+bash scripts/setup-nginx.sh yourdomain.com
 ```
 **Creates:**
 - `https://yourdomain.com` - Cosmos RPC endpoint
@@ -116,20 +131,16 @@ push-validator-manager setup-nginx yourdomain.com
 - Ports 80/443 open
 - Ubuntu/Debian system
 
-#### Setup Log Rotation
+### Log Rotation
 ```bash
-push-validator-manager setup-logs
+bash scripts/setup-log-rotation.sh
 ```
-**Configures:**
-- Daily log rotation
-- 14-day retention
-- Automatic compression
-- System logrotate integration
+Configures daily rotation with 14-day retention and compression.
 
-#### Create Backups
-```bash
-push-validator-manager backup
-```
-- Timestamped backup in `~/push-node-backups/`
-- Includes all config, keys, and blockchain data
-- Compressed archive with integrity verification
+### File Locations
+- **Manager**: `~/.local/bin/push-validator`
+- **Binary**: `~/.local/bin/pchaind`
+- **Config**: `~/.pchain/config/`
+- **Data**: `~/.pchain/data/`
+- **Logs**: `~/.pchain/logs/pchaind.log`
+- **Backups**: `~/push-node-backups/`

@@ -143,8 +143,7 @@ export const Content = styled.div`
 
   &.blog {
     max-width: ${(props) =>
-      props.maxWidth ||
-      `${GLOBALS.NAVBAR.BLOG.MAX_WIDTH + structure.PADDING.DESKTOP.LEFT + structure.PADDING.DESKTOP.RIGHT}px`};
+      props.maxWidth || `${GLOBALS.NAVBAR.BLOG.MAX_WIDTH}px`};
 
     overflow: visible;
   }

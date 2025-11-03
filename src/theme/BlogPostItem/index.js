@@ -13,6 +13,7 @@ import BlogPostItemContent from '@theme/BlogPostItem/Content';
 import BlogPostItemFooter from '@theme/BlogPostItem/Footer';
 import styled from 'styled-components';
 import useMediaQuery from '@site/src/hooks/useMediaQuery';
+import Link from '@docusaurus/Link';
 
 // Internal Configs
 import { device } from '@site/src/config/globals';
@@ -29,21 +30,24 @@ function useContainerClassName() {
 }
 export default function BlogPostItem({ children, className, list }) {
   const containerClassName = useContainerClassName();
-  const { isBlogPostPage } = useBlogPost();
+  const { isBlogPostPage, metadata } = useBlogPost();
+  const { permalink } = metadata;
 
   if (list) {
     return (
-      <ListView>
-        <Content>
-          <BlogPostItemContent>{children}</BlogPostItemContent>
-        </Content>
+      <Link itemProp='url' to={permalink}>
+        <ListView>
+          <Content>
+            <BlogPostItemContent>{children}</BlogPostItemContent>
+          </Content>
 
-        <TextView>
-          {!isBlogPostPage && <BlogPostItemHeader list={list} />}
-          <TextSpan>{children?.type?.frontMatter?.text}</TextSpan>
-          <BlogPostItemFooter />
-        </TextView>
-      </ListView>
+          <TextView>
+            {!isBlogPostPage && <BlogPostItemHeader list={list} />}
+            <TextSpan>{children?.type?.frontMatter?.text}</TextSpan>
+            <BlogPostItemFooter />
+          </TextView>
+        </ListView>
+      </Link>
     );
   } else {
     return (
@@ -73,6 +77,10 @@ const ListView = styled.div`
   @media (max-width: 1200px) {
     flex-direction: column;
     gap: 0px;
+  }
+
+  &:hover h1 {
+    color: var(--ifm-color-primary) !important;
   }
 `;
 

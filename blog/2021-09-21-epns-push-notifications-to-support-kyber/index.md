@@ -73,4 +73,4 @@ Through Kyber, anyone can contribute or access liquidity, and developers can bui
 
 Kyber is powering more than 100 integrated projects and has facilitated over US$6 billion worth of transactions for thousands of users since its inception.
 
-[Discord](https://discord.gg/HdXWUb2pQM) | [Website](https://kyber.network/) | [Forum](https://gov.kyber.org/) | [Blog](https://blog.kyber.network/) | [Twitter](https://twitter.com/kybernetwork/) | [](https://www.reddit.com/r/kybernetwork/) [KyberDMM](https://dmm.exchange/#/about)
+[Discord](https://discord.com/invite/pushchain) | [Website](https://kyber.network/) | [Forum](https://gov.kyber.org/) | [Blog](https://blog.kyber.network/) | [Twitter](https://twitter.com/kybernetwork/) | [](https://www.reddit.com/r/kybernetwork/) [KyberDMM](https://dmm.exchange/#/about)

@@ -136,4 +136,4 @@ Once you are ready to deploy you can generate a container with the Dockerfile in
 
 This integration is being tested out with [Comet](https://x.com/Comet_ing/status/1837041254166589535) - a Cartesi DApp.
 
-Got any questions? Feel free to drop us a line on our [Discord](http://discord.gg/pushprotocol); our team will help you.
+Got any questions? Feel free to drop us a line on our [Discord](https://discord.com/invite/pushchain); our team will help you.

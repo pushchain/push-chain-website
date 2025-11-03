@@ -200,4 +200,4 @@ const epnsUnSubscribe = () => {
 
 **Front-end SDK Staging** -[https://www.npmjs.com/package/@epnsproject/frontend-sdk-staging](https://www.npmjs.com/package/@epnsproject/frontend-sdk-staging)
 
-Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.gg/YVPB99F9W5), [Telegram](https://t.me/epnsproject).
+Follow us to stay up to date: [Twitter](https://twitter.com/epnsproject), [Discord](https://discord.com/invite/pushchain), [Telegram](https://t.me/epnsproject).

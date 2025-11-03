@@ -424,7 +424,7 @@ Important: Please beware of scams. The token contract address will only be publi
 **I’m a creative developer who loves working on cool tech, and would love to work with EPNS, how do I reach out?**
 
 **Richa | EPNS 📨 | won’t DM first:**  
-Thank you for being so awesome and willing to contribute to EPNS. Please join us on telegram [https://t.me/epnsproject](https://t.me/epnsproject) or if you want to deep dive into tech join our discord [https://discord.gg/UUdjemmQbc](https://discord.gg/UUdjemmQbc)
+Thank you for being so awesome and willing to contribute to EPNS. Please join us on telegram [https://t.me/epnsproject](https://t.me/epnsproject) or if you want to deep dive into tech join our discord [https://discord.com/invite/pushchain](https://discord.com/invite/pushchain)
 
 **_Q7from Telegram user @Femi Oyinloye_**
 

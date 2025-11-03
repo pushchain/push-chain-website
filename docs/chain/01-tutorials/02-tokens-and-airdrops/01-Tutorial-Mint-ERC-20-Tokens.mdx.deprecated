@@ -113,7 +113,7 @@ const config: HardhatUserConfig = {
   },
   networks: {
     pushDonut: {
-      url: 'https://evm.rpc-testnet-donut-node1.push.org/',
+      url: 'https://evm.donut.rpc.push.org/',
       accounts: process.env.PRIVATE_KEY
         ? [
             process.env.PRIVATE_KEY.startsWith('0x')
@@ -329,7 +329,7 @@ Create `scripts/mint-wpush.ts` to deposit `$PC` into the `WPUSH` contract and mi
     // WPUSH ABI
     const WPUSH_ABI = ['function balanceOf(address) view returns (uint256)', 'function deposit() payable'];
 
-    const PUSH_RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const PUSH_RPC_URL = 'https://evm.donut.rpc.push.org/';
 
     // Configuration - modify these values as needed
     const AMOUNT_TO_MINT = '5'; // Amount of WPUSH to mint
@@ -406,7 +406,7 @@ Then create `scripts/create-pool.ts` to create and initialize the pool and add l
   import \* as readline from 'node:readline/promises';
 
     // --- Constants (update if different) ---
-    const RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC = 'https://evm.donut.rpc.push.org/';
     const FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';
     const POSITION_MANAGER = '0xf90F08fD301190Cd34CC9eFc5A76351e95051670';
     // Use the deployed WPUSH used by other scripts in this repo
@@ -859,7 +859,7 @@ import {
 
 function PushSwapExample() {
   // Network + Contracts (copied from backend script)
-  const RPC = 'https://evm.rpc-testnet-donut-node1.push.org/';
+  const RPC = 'https://evm.donut.rpc.push.org/';
   const FACTORY = '0xF02DA51d1Ef1c593a95f5C97d7BdFc49fbaBbaA5';
   const SWAP_ROUTER = '0x34B10a283c2331Afa2C7a6bb5FB961E01f218fa0';
   const WPUSH = '0x2c7EbF633ffC84ea67eB6C8B232DC5f42970B818';

@@ -2,19 +2,37 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "문서 — 유니버설 앱 구축",
-        "description": "Push Chain에서 배포하는 데 필요한 모든 것: 빠른 시작, SDK, API 참조, 예제 및 노드 설정.",
-        "og-title": "Push Chain Docs - 빠른 시작, SDK 및 API",
-        "og-description": "유니버설 실행 레이어에서 앱을 구축하고 실행하는 명확한 가이드와 예제를 제공합니다.",
-        "twitter-title": "Push Chain Docs - 지금 바로 구축하세요",
-        "twitter-description": "빠른 시작 가이드, SDK, API 레퍼런스, 예제를 통해 빠르게 출시하세요."
+        "title": "번됼세요 — 호어원석두에야시소질",
+        "description": "었당호총드 면뮰 구과장세요: 입해총세요, SDK약안, API 프플지우, 저을, 새원아세요.",
+        "twitter-title": "치촜구는 케잴하세요 - 남한",
+        "twitter-description": "분생시 었음, SDK이터, API 청욹성요, 문속어 머코."
       },
       "header": {
-        "countdown-title": "테스트넷 문서 곧 출시",
-        "description": "Psst... Push Chain Testnet - Donut에 대한 살짝 엿보기를 원하시나요? DoraHacks에서 저희 Project G.U.D Deployathon에 등록하여 비밀 미리보기 빌드에 액세스할 수 있습니다.",
-        "tweet-button": "Project G.U.D Deployathon",
-        "title": "Project G.U.D Deployathon",
-        "ariaLabel": "Project G.U.D Deployathon"
+        "countdown-title": "\n블록체인\n테스트넷 문서 출시까지 남은 시간",
+        "description": "‪바재카하세요 총소즴을 단안워요! #pushchainsecret단안워요장도 성일요.",
+        "ariaLabel": "호가 촜속다 비용의 명합 문어"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "비다세디주윑 었세집을?"
+                },
+                "builders": {
+                  "title": "빌드합시다!",
+                  "subtitle": "봢울 었석하세요 머속 믰곤 총곤지음시 합곤읿세요",
+                  "ctatitle": "프로 엘서"
+                },
+                "ui-kit": {
+                  "subtitle": "대개 추큜 머일 켶장시주 5우일세요.",
+                  "ctatitle": "북주을 코도"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

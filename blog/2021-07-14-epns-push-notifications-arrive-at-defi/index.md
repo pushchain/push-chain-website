@@ -63,4 +63,4 @@ We are pleased to be partnering with Oasis.app and anticipate EPNS push notifica
 
 Oasis.app is the home for everything you want to accomplish with Dai. A decentralized application that runs on the Ethereum blockchain, Oasis aims to be the most trusted app to access the Maker protocol, get Dai and in general to deploy your capital into DeFi. Dai is a better, smarter digital currency for everyone. It is the world’s first unbiased currency and its value consistently tracks the US Dollar, which means it doesn’t suffer from the volatility associated with many other digital currencies.
 
-Learn more and stay in touch with the team: [Blog](https://blog.oasis.app/), [Twitter](https://twitter.com/oasisdotapp), [Discord](http://discord.gg/Kc2bBB59GC)
+Learn more and stay in touch with the team: [Blog](https://blog.oasis.app/), [Twitter](https://twitter.com/oasisdotapp), [Discord](https://discord.com/invite/pushchain)

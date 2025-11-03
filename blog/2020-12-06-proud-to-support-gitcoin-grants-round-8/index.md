@@ -43,7 +43,7 @@ We currently have 3exciting bounties to start working on:
 
 Learn about EPNS bounties, ask questions and learn about upcoming updates by joining our social platforms:
 
-Discord chat: [https://discord.gg/32Jarc42](https://discord.gg/32Jarc42)
+Discord chat: [https://discord.com/invite/pushchain](https://discord.com/invite/pushchain)
 
 Telegram: [https://t.me/epnsproject](https://t.me/epnsproject)
 
@@ -63,4 +63,4 @@ Good luck and Happy Hacking!
 
 EPNS is a decentralized notifications protocol which enables users (wallet addresses) to receive notifications. Using the protocol, any dApp, smart contract or service can send notifications to users(wallet addresses) in a platform agnostic fashion (mobile, web, or user wallets). The DeFi aspect of the protocol also ensures that the user receives and earns from those notifications.
 
-Stay in touch with Push! [Twitter](http://x.com/PushChain), [Telegram](https://t.me/epnsproject), [Newsletter](https://epns.substack.com/), [Website,](http://epns.io) [Discord](https://discord.gg/32Jarc42)
+Stay in touch with Push! [Twitter](http://x.com/PushChain), [Telegram](https://t.me/epnsproject), [Newsletter](https://epns.substack.com/), [Website,](http://epns.io) [Discord](https://discord.com/invite/pushchain)

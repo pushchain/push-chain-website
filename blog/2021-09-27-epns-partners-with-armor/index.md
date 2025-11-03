@@ -45,4 +45,4 @@ These are just the first 4 out of a few dozen useful notifications we have ident
 
 Armor makes investing in DeFi as safe as possible with crypto-native, dynamic smart coverage aggregation. As a decentralized brokerage, Armor’s innovations provide on-demand, real-time coverage and non-custodial security solutions for user assets. Armor’s focus is on building an ecosystem of interoperable protocols and products to secure and scale mass adoption of DeFi both with institutions and individuals.
 
-[Twitter](https://twitter.com/armorfi) | [Telegram](http://t.me/ArmorFi) | [Discord](https://discord.gg/8HuTB22) | [Website](https://armor.fi/) | [Github](https://github.com/ArmorFi) | [Announcements](http://t.me/armor_ann)
+[Twitter](https://twitter.com/armorfi) | [Telegram](http://t.me/ArmorFi) | [Discord](https://discord.com/invite/pushchain) | [Website](https://armor.fi/) | [Github](https://github.com/ArmorFi) | [Announcements](http://t.me/armor_ann)

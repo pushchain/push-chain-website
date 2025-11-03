@@ -443,7 +443,7 @@ function UniversalCounterExample() {
       try {
         // Create a contract instance for read operations
         const provider = new ethers.JsonRpcProvider(
-          'https://evm.rpc-testnet-donut-node1.push.org/'
+          'https://evm.donut.rpc.push.org/'
         );
         const contract = new ethers.Contract(CONTRACT_ADDRESS, UCABI, provider);
 
@@ -788,7 +788,7 @@ function UniversalCounterExample() {
     const fetchCounter = async () => {
       try {
         const provider = new ethers.JsonRpcProvider(
-          'https://evm.rpc-testnet-donut-node1.push.org/'
+          'https://evm.donut.rpc.push.org/'
         );
 
         const contract = new ethers.Contract(

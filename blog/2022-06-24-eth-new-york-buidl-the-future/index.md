@@ -43,8 +43,8 @@ This you’ll also be able to partake in and it’s running all the way up until
 
 ### 🔗 Important Reference links for Developers
 
-- [EPNS Documentation Hub](https://docs.epns.io/)
-- [EPNS Discord](https://discord.gg/n4EYGyPJcF)
+- [EPNS Documentation Hub](https://push.org/docs)
+- [EPNS Discord](https://discord.com/invite/pushchain)
 
 Also, while you’re at the venue, come to our table & grab our Cheat Sheet! Will come in handy! And we’d get to meet you too irl… 🤝😊
 

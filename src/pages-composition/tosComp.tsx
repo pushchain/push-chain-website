@@ -9,7 +9,6 @@ import {
   A,
   B,
   Content,
-  H2,
   H3,
   HeroHeader,
   ItemH,
@@ -18,7 +17,6 @@ import {
   MultiContent,
   P,
   Section,
-  Span,
   UL,
 } from '@site/src/css/SharedStyling';
 
@@ -52,23 +50,12 @@ const TosComp = () => {
               >
                 {t('pages.tos.hero-section.update-text')}
               </H3>
-              <P
-                testAlign='center'
-                size='1.3rem'
-                color='var(--ifm-color-white)'
-              >
-                <B color='var(--ifm-color-white)'>IMPORTANT NOTICE: </B>THIS
-                AGREEMENT IS SUBJECT TO BINDING ARBITRATION AND A WAIVER OF
-                CLASS ACTION RIGHTS AS DETAILED IN{' '}
-                <B color='var(--ifm-color-white)'>SCHEDULE B</B>. PLEASE READ
-                THE AGREEMENT CAREFULLY.
-              </P>
             </ItemV>
           </HeroContent>
         </HeroSection>
 
         <Section curve='bottom' data-bkg='light'>
-          <Content className='contentBox'>
+          <BodyContent className='contentBox'>
             <MultiContent>
               <ItemH
                 alignSelf='stretch'
@@ -81,1435 +68,1374 @@ const TosComp = () => {
                   margin='30px 0px 20px 0px'
                   justifyContent='flex-start'
                 >
-                  <P
-                    fontWeight='400'
-                    letterSpacing='0.2em'
-                    textTransform='uppercase'
-                    fontSize='1.2em'
-                  >
-                    1. ACCEPTANCE OF TERMS
-                  </P>
-                  <P margin='-10px 0px 0px'>
-                    <B>&quot;Push&rdquo;</B>, <B>&quot;we,&rdquo;</B>{' '}
-                    <B>&quot;us&rdquo;</B> or <B>&quot;our&rdquo;</B> provides
-                    an experimental open source protocol comprising a set of
-                    Ethereum based smart contracts (the{' '}
-                    <B>&quot;Push Protocol&rdquo;</B>) that enables any service
-                    / DApp or Ethereum based smart contract to create channels,
-                    whereby they may display, publish or distribute
-                    decentralized and incentivized notifications to subscribers
-                    to those channels (each with a unique wallet addresses).
-                    Each user/subscriber (unique wallet addresses) will be able
-                    to control what notifications they opt in to receive, or are
-                    rewarded for indirect opt in by channels. Users may interact
-                    with the Push Protocol directly via the smart contracts, or
-                    the dApp located at{' '}
+                  <P>
+                    These Terms and Conditions ("<B>Terms</B>") establish the
+                    agreement ("<B>Agreement</B>") between You (hereinafter
+                    referred to as <B>"You," "Your," or "User"</B>) and PUSH
+                    ("Push," "We," "Us," Or "Our"), governing Your access to and
+                    use of the Services for its Apps, Smart Contracts, Services
+                    or Platform as detailed in Section 4 (“<B>Services</B>”),
+                    provided through our Website https://push.org and its
+                    subdomains (including, but not limited to,{' '}
+                    <A
+                      href='https://wallet.push.org'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://wallet.push.org
+                    </A>
+                    ,{' '}
+                    <A
+                      href='https://portal.push.org'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://portal.push.org
+                    </A>
+                    ,{' '}
+                    <A
+                      href='https://faucet.push.org'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://faucet.push.org
+                    </A>
+                    ,{' '}
+                    <A
+                      href='https://push.network'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://push.network
+                    </A>
+                    ,{' '}
+                    <A
+                      href='https://donut.push.network'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://donut.push.network
+                    </A>
+                    ) (collectively, the "Website" or "Platform") and excluding{' '}
+                    <A
+                      href='https://comms.push.org'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
+                    >
+                      https://comms.push.org
+                    </A>
+                    , and{' '}
                     <A
                       href='https://app.push.org'
                       target='_blank'
                       display=' inline'
-                      color='var(--ifm-color-pink-500)'
+                      color='var(--ifm-link-color)'
                       background='transparent'
                       padding='0px'
                       letterSpacing='inherit'
                       textTransform='initial'
                     >
-                      app.push.org
+                      https://app.push.org
                     </A>{' '}
-                    or at{' '}
-                    <A
-                      href='https://staging.push.org'
-                      target='_blank'
-                      display=' inline'
-                      color='var(--ifm-color-pink-500)'
-                      background='transparent'
-                      padding='0px'
-                      letterSpacing='inherit'
-                      textTransform='initial'
-                    >
-                      staging.push.org
-                    </A>{' '}
-                    or any other subdomains associated with <B>push.org</B>,
-                    including any mobile application or any similar frontend
-                    interface that can interact with blockchain smart contracts
-                    (the <B>&quot;App&rdquo;</B>). Channels and
-                    subscribers/users interact directly in a peer to peer manner
-                    via the Push Protocol (for example, transaction requests and
-                    notifications are sent directly from each channel to the
-                    subscriber), and Push is not, under any circumstances, a
-                    party or intermediary to that process.
+                    . This Agreement constitutes a binding and enforceable legal
+                    contract between Push, its affiliates, and subsidiaries
+                    worldwide, and you, an end-user of the Platform. In relation
+                    to the Platform, you and PUSH are referred to separately as
+                    "Party" and collectively as "Parties."
                   </P>
 
-                  <P margin='20px 0px 0px'>
-                    The content of the notifications will be created by you, is
-                    presented to the subscriber/user in a variety of ways
-                    including images, data, text, messages, video or audio
-                    (collectively, the <B>&quot;Content&rdquo;</B>). All Content
-                    created by you is solely your responsibility and you must
-                    evaluate and bear all risks associated with the use and
-                    distribution of any of your Content.
+                  <P textTransform='uppercase'>
+                    PLEASE READ THESE TERMS CAREFULLY BEFORE USING THE PLATFORM,
+                    APPS, SMART CONTRACTS, PARTICIPATING IN AIRDROP REWARDS
+                    THESE TERMS GOVERN YOUR USE OF THE WEBSITE, UNLESS WE HAVE
+                    EXECUTED A SEPARATE WRITTEN AGREEMENT WITH YOU FOR THAT
+                    PURPOSE. WE ARE ONLY WILLING TO MAKE THE WEBSITE AVAILABLE
+                    TO YOU IF YOU ACCEPT ALL OF THESE TERMS. BY USING THE
+                    WEBSITE, APPS, SMART CONTRACTS OR ANY PART OF THEM, YOU ARE
+                    CONFIRMING THAT YOU UNDERSTAND AND AGREE TO BE BOUND BY ALL
+                    OF THESE TERMS. IF YOU ARE ACCEPTING THESE TERMS ON BEHALF
+                    OF A COMPANY OR OTHER LEGAL ENTITY, YOU REPRESENT THAT YOU
+                    HAVE THE LEGAL AUTHORITY TO ACCEPT THESE TERMS ON THAT
+                    ENTITY’S BEHALF, IN WHICH CASE "YOU" WILL MEAN THAT ENTITY.
+                    IF YOU DO NOT HAVE SUCH AUTHORITY, OR IF YOU DO NOT ACCEPT
+                    ALL OF THESE TERMS, THEN WE ARE UNWILLING TO MAKE THE
+                    PLATFORM, AVAILABLE TO YOU. IF YOU DO NOT AGREE TO THESE
+                    TERMS, YOU MAY NOT ACCESS OR USE THE WEBSITE OR THE
+                    SERVICES, APPS, OR SMART CONTRACTS.
                   </P>
 
-                  <P margin='20px 0px 0px'>
-                    The Site, the App and any other features, tools, materials,
-                    or other services offered from time to time by Push are
-                    referred to here as (the <B>&quot;Services&rdquo;</B>).
-                    Please read these Terms of Use (these{' '}
-                    <B>&quot;Terms&rdquo;</B>) carefully before using the
-                    Services. By using or otherwise accessing the Services, or
-                    clicking to accept or agree to these Terms where that option
-                    is made available, you (1) accept and agree to these Terms,
-                    (2) consent to the collection, use, disclosure and other
-                    handling of information as described in our{' '}
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>1.</B> INTERPRETATION
+                  </P>
+                  <P margin='0px 0px 0px 20px'>
+                    <B>1.1.</B> Modifications: We reserve the right to change or
+                    modify these Terms at any time and at our sole discretion.
+                    Any changes to or modifications of these Terms will be in
+                    effect as of the “Last Updated Date” referred to at the top
+                    of this page. You should review these Terms before using any
+                    services. Your continued access or participation in using
+                    the Services after the modifications will be deemed as your
+                    acceptance of the modified Terms.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>1.2.</B> Comprehensive Agreement: These Terms, along with
+                    the{' '}
                     <A
-                      href='./privacy'
+                      href='https://push.org/privacy'
                       target='_blank'
                       display=' inline'
-                      color='var(--ifm-color-pink-500)'
+                      color='var(--ifm-link-color)'
                       background='transparent'
                       padding='0px'
                       letterSpacing='inherit'
                       textTransform='initial'
                     >
                       Privacy Policy
-                    </A>{' '}
-                    and (3) agree to any additional terms, rules and conditions
-                    of participation issued by Push from time to time. If you do
-                    not agree to these Terms, then you may not access or use the
-                    Content or Services.
+                    </A>
+                    outlined on the Website, or its related Apps constitute the
+                    complete and exclusive Agreement between you and Push
+                    pertaining to Your use of the Platform.
                   </P>
 
-                  <P margin='20px 0px 0px'>
-                    In no circumstances shall the Site, the App or the Services
-                    be utilised for distributing Content relating to: (a)
-                    investment products, financial transactions or payment
-                    services, (b) gambling, lottery, sweepstakes or contests,
-                    (c) racism, (d) violence and weapons, (e) self-harm, (f)
-                    nudity, pornography or sexual services, (g) illegal
-                    substances, (h) terrorism (i) emergency calling or messaging
-                    to any emergency services personnel or public safety
-                    answering points or (j) malicious programs, viruses, Trojan
-                    horses and worms.
+                  <P margin='10px 0px 0px 20px'>
+                    <B>1.3.</B> Headings: The headings and sub-headings in the
+                    Terms are for ease of reference only and are not to be taken
+                    into account in the construction or interpretation of any
+                    provision or provisions to which they refer.
                   </P>
 
-                  <P>
-                    We reserve the right to revise these Terms at any time,
-                    which revised Terms shall become effectively immediately
-                    upon posting on the Site or the App (as the case may be),
-                    and the amended Terms shall supersede and replace these
-                    Terms.{' '}
-                    <B>
-                      YOU ARE HEREBY ADVISED THAT YOUR CONTINUED USE OF THE
-                      SITE, THE APP AND/OR THE SERVICES CONSTITUTES YOUR
-                      ACCEPTANCE OF THESE TERMS OF USE, AND ANY APPLICABLE
-                      CURRENT AND PRIOR VERSIONS, AND ANY AMENDMENTS THERETO.
-                    </B>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>1.4.</B> Extended meaning: Unless otherwise specified in
+                    these Terms, words importing the singular include the plural
+                    and vice versa and words importing gender include all
+                    genders. The word “include”, “includes” or “including” will
+                    be interpreted on an inclusive basis and be deemed to be
+                    followed by the words “without limitation”.
+                    <br />
+                    <br />
+                    The language in these Terms will be interpreted as to its
+                    fair meaning, and not strictly for or against any party.
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.2em'
+                    fontSize='1.2em'
                   >
-                    2. MODIFICATIONS TO TERMS OF SERVICE / USE
+                    <B>2.</B> ABOUT THE PLATFORM
                   </P>
-                  <P margin='-10px 0px 20px 0px' color='var(--ifm-color-white)'>
-                    Push reserves the right, at its sole discretion, to modify
-                    or replace these Terms at any time, including the Schedules
-                    hereto. The most current version of these Terms will be
-                    posted on our Site. You shall be responsible for reviewing
-                    and becoming familiar with any such modifications. Use of
-                    the Services by you after any modification to these Terms
-                    constitutes your acceptance of these Terms as modified.
+                  <P margin='0px 0px 0px 20px'>
+                    <B>2.1.</B> Push Chain is a universal Layer 1 blockchain
+                    built for all Web3 applications.It is designed to eliminate
+                    fragmentation across blockchains and unify L1s, L2s, and L3s
+                    for both developers and users.
                   </P>
 
-                  <TermsHeaderGroup>
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      textTransform='uppercase'
-                      size='1.2em'
-                    >
-                      3. REPRESENTATIONS
-                    </P>
-                    <P margin='0' color='var(--ifm-color-white)'>
-                      You hereby represent and warrant that:
-                    </P>
-                  </TermsHeaderGroup>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(a)</B> you are of the legal age of majority in your
-                    jurisdiction as is required to access such Services and
-                    Content and enter into arrangements as provided by the
-                    Services;
+                  <P margin='10px 0px 0px 20px'>
+                    <B>2.2.</B> Push Chain supports transactions from any chain
+                    and implements cross-chain gas abstraction, allowing
+                    seamless interaction without friction. It also offers wallet
+                    abstraction for smooth onboarding—whether you're a seasoned
+                    Web3 user or coming from Web2.
                   </P>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(b)</B> (in the case of a corporation) you are duly
-                    incorporated and in good standing under the laws of your
-                    jurisdiction of incorporation;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(c)</B> you are fully able and competent to enter into
-                    the terms, conditions, obligations, affirmations,
-                    representations and warranties set forth in these Terms and
-                    to abide by and comply with these Terms;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(d)</B> the execution and performance of these Terms
-                    shall not violate or conflict with the terms or conditions
-                    of any other agreement to which you are a party or by which
-                    you are bound;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(e)</B> you have the right, power, and authority to enter
-                    into these terms, grant the rights granted by it herein, and
-                    perform your obligations without the consent or approval of
-                    any third party or governmental or regulatory authority;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(f)</B> you are legally permitted to use the service in
-                    your jurisdiction including owning cryptographic tokens of
-                    value, and interacting with the Services or Content in any
-                    way;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(g)</B> you are responsible for ensuring compliance with
-                    the laws of all applicable jurisdictions at your own expense
-                    (including without limitation all intellectual property,
-                    data protection and privacy laws) and acknowledge that Push
-                    is not liable for your failure to comply with such laws.
-                    Push reserves the right to disclose any information as it
-                    deems necessary to satisfy any applicable law, regulation,
-                    legal process or governmental request;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(h)</B> you have not relied and shall not rely upon Push
-                    for legal advice regarding your compliance with applicable
-                    law; and
-                  </P>
-
-                  <P margin='20px 0px 20px 20px'>
-                    <B>(i)</B> you and your financial institutions, or any party
-                    that owns or controls you or your financial institutions,
-                    are (i) not subject to sanctions or otherwise designated on
-                    any list of prohibited or restricted parties, including but
-                    not limited to the lists maintained by the United Nations
-                    Security Council, the U.S. Government (e.g., the Specially
-                    Designated Nationals List and Foreign Sanctions Evaders List
-                    of the U.S. Department of Treasury and the Entity List of
-                    the U.S. Department of Commerce), the European Union or its
-                    Member States, or other applicable government authority and
-                    (ii) not located in any country to which the United States
-                    has embargoed goods or has otherwise applied any sanctions.
+                  <P margin='10px 0px 0px 20px'>
+                    <B>2.3.</B> For developers, Push Chain introduces universal
+                    smart contracts, enabling interaction from users on any
+                    chain with apps deployed on Push. It supports shared
+                    state—allowing smart contracts to read data from other
+                    chains—and programmable solvers, enabling them to write to
+                    other chains. This creates a frictionless developer
+                    experience and an ideal environment for consumer and
+                    universal apps to thrive, accessible to users across the
+                    entire Web3 ecosystem.
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.2em'
+                    fontSize='1.2em'
                   >
-                    4. ACCOUNT RELATED, PASSWORD AND SECURITY
+                    <B>3.</B> SERVICES
                   </P>
-                  <P margin='-10px 0px 20px'>
-                    When setting up an account within Push, you will be
-                    responsible for keeping your own account secrets, which may
-                    be a seed phrase with a number of secret words, an account
-                    file, or other locally stored secret information or any
-                    other information associated with the account. Push encrypts
-                    this information locally with a password you provide, and
-                    it&apos;s never accessible to us or our servers. You agree
-                    to (a) never use the same password for Push that you have
-                    ever used outside of this service, (b) keep your secret
-                    information and password confidential and do not share them
-                    with anyone else and (c) immediately notify Push of any
-                    unauthorized use of your account or breach of security. Push
-                    cannot and will not be liable for any loss or damage arising
-                    from your failure to comply with this section.
+                  <P margin='0px 0px 0px 20px'>
+                    We provide a suite of blockchain-based services
+                    (collectively, the “Services”) designed to enable
+                    interoperability, asset management, and decentralized
+                    interaction across multiple blockchain networks. The
+                    Services currently include, but are not limited to, the
+                    following components:
                   </P>
 
-                  <TermsHeaderGroup>
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      textTransform='uppercase'
-                      size='1.2em'
-                    >
-                      5. CODE OF CONDUCT
+                  <P margin='10px 0px 0px 20px'>
+                    <B>3.1. Components</B>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>3.1.1. Blockchain:</B> Push Chain is a universal
+                      blockchain network that enables users from other chains to
+                      interact with smart contracts deployed on the Push Chain.
+                      This interoperability facilitates cross-chain
+                      communication and decentralized application (DApp)
+                      functionality across multiple blockchain ecosystems.
                     </P>
-                    <P margin='0'>
-                      While using the Site, the App or the Services you agree
-                      not to:
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>3.1.2. Wallet:</B> Push Chain provides an abstracted
+                      wallet interface that allows users to connect their
+                      existing digital wallets or access the Push Chain
+                      ecosystem through social login or other authentication
+                      methods. This enables seamless user interaction and
+                      transaction execution on Push Chain.
                     </P>
-                  </TermsHeaderGroup>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(a)</B> restrict or inhibit any other user from using the
-                    Site, the App, the Services or the Content, including
-                    without limitation, by means of &quot;hacking&rdquo; or
-                    defacing any portion of the Site or the App;
+                    <P margin='10px 0px 0px 20px'>
+                      <B>3.1.3. Digital Assets:</B> Push Chain issues and
+                      supports a range of native and non-native digital assets
+                      (collectively, “Push Digital Assets”). These include: The
+                      native Push Chain cryptographic token (“<B>PC</B>”);
+                      Soulbound NFTs; Collectibles; Tokens and other
+                      blockchain-based assets. All Push Digital Assets are
+                      provided without warranty of any kind, express or implied.
+                    </P>
                   </P>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(b)</B> use the Site, the App, the Services or Content
-                    for any unlawful purpose or in any manner not intended by
-                    Company or as contemplated herein and on the Site or the
-                    App;
+                  <P margin='10px 0px 0px 20px'>
+                    <B>3.2. Push Digital Tokens: </B>
+                    The <B>PC token</B> is the native cryptographic token of the
+                    Push Chain. Push Chain (like other blockchain networks)
+                    requires the payment of transaction fees (“gas”) for the
+                    execution of transactions or smart contracts. Gas fees are
+                    typically paid in PCs by the sender or creator of a
+                    transaction. PCs may also be used to pay transaction fees on
+                    certain external blockchains that support Push
+                    interoperability. Push Digital Assets, including PCs and any
+                    other tokens, NFTs, or collectibles issued by us or our
+                    affiliates, are intended solely for use within the Push
+                    Chain ecosystem and for their stated functionality. They are
+                    not intended as investments or securities, and no guarantee
+                    or promise of future value, appreciation, or return is made.
+                    You acknowledge and understand that:
+                    <UList>
+                      <LI>
+                        The market value of Push Digital Assets may be highly
+                        volatile and could decrease, including to zero, at any
+                        time.
+                      </LI>
+
+                      <LI>
+                        The secondary market for Push Digital Assets may be
+                        illiquid, non-existent, or discontinued at any time.
+                      </LI>
+
+                      <LI>
+                        If the value of PCs reduces to zero, it may become
+                        impossible to use applications (“Apps”) on Push Chain
+                        for cross-chain transactions or messaging.
+                      </LI>
+
+                      <LI>
+                        Push Chain, its affiliates, and related entities shall
+                        have <B>no liability</B> whatsoever for any loss,
+                        depreciation, or devaluation of Push Digital Assets,
+                        including total loss of value.
+                      </LI>
+                    </UList>
                   </P>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(c)</B> engage in rude, unlawful, harassing, vulgar,
-                    obscene, hateful, threatening, abusive or otherwise
-                    objectionable behaviour;
-                  </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>3.3.</B> You understand and agree that:
+                    <UList>
+                      <LI>
+                        Push Digital Assets are <B>not</B> intended to generate
+                        profit, interest, dividends, or any other form of
+                        return.
+                      </LI>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(d)</B> institute an attack upon any server used in
-                    connection with the Site or the App or any portion thereof
-                    or otherwise attempt to disrupt such servers;
-                  </P>
+                      <LI>
+                        Holding Push Digital Assets does <B>not</B> confer any
+                        governance, voting, ownership, or similar rights in Push
+                        Chain or any affiliated entities.
+                      </LI>
 
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(e)</B> express or imply that any statements you make are
-                    endorsed by Push, without our prior express written consent;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(f)</B> knowingly transmit: (i) any content or
-                    information that is unlawful, fraudulent, threatening,
-                    abusive, libellous, defamatory, obscene or otherwise
-                    objectionable, or infringes our or any third party's
-                    intellectual property or other rights; (ii) any material,
-                    non-public information about companies without the
-                    authorization to do so; (iii) any trade secret of any third
-                    party; or (iv) any advertisements, solicitations, chain
-                    letters, pyramid schemes, investment opportunities or other
-                    unsolicited commercial communication;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(g)</B> engage in spamming or flooding;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(h)</B> transmit any software or other materials that
-                    contain any viruses, worms, trojan horses, defects, date
-                    bombs, time bombs or other items of a destructive nature;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(i)</B> modify, adapt, sublicense, translate, reverse
-                    engineer, decompile or disassemble all or any portion of the
-                    Site or the App;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(j)</B> remove, alter, conceal any copyright, trademark,
-                    patent or other proprietary rights notices contained in the
-                    Site or the App;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(k)</B> link the Site or the App or any Content thereon
-                    to any third party website or portion thereof;
-                  </P>
-
-                  <P margin='20px 0px 0px 20px'>
-                    <B>(l)</B> use any robot, spider, site search/retrieval
-                    application or other manual or automatic device or process
-                    to retrieve, index, &quot;data mine&rdquo; or in any way
-                    reproduce or circumvent the navigational structure or
-                    presentation of the Site or the App or its contents; or
-                  </P>
-
-                  <P margin='20px 0px 20px 20px'>
-                    <B>(m)</B> harvest or collect information about users of the
-                    Site or the App without their express consent.
+                      <LI>
+                        Any published roadmap, whitepaper, or forward-looking
+                        statement does <B>not</B> constitute a commitment,
+                        warranty, or promise of future value or services.
+                      </LI>
+                    </UList>
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.2em'
+                    fontSize='1.2em'
                   >
-                    6. Disclaimers and Associated Risks
+                    <B>4.</B> SECURITY MEASURES
+                  </P>
+                  <P margin='0px 0px 0px 20px'>
+                    <B>4.1.</B> A crucial security mechanism of the Push is the
+                    randomized selection of validators for transaction
+                    validation or block production. This mechanism leverages
+                    cryptographic randomness to ensure an unpredictable
+                    selection of validators & attestors to enhance the network's
+                    resilience and fairness.
                   </P>
 
-                  <ListGroup>
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='0px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.1 Risk of Cryptographic Systems
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      By utilizing the Services or interacting with the Content
-                      or platform in any way, you represent that you understand
-                      the inherent risks associated with cryptographic systems;
-                      and warrant that you have an understanding of the usage
-                      and intricacies of native cryptographic tokens such as
-                      Ether (ETH) and Bitcoin (BTC), smart contract based tokens
-                      such as those that follow an Ethereum token standard (e.g.{' '}
-                      <A
-                        href='https://github.com/ethereum/EIPs/issues/20'
-                        tarrget='_blank'
-                        display=' inline'
-                        color='var(--ifm-color-pink-500)'
-                        background='transparent'
-                        padding='0px'
-                        letterSpacing='inherit'
-                        textTransform='initial'
-                      >
-                        github.com/ethereum/EIPs/issues/20
-                      </A>
-                      ), and blockchain-based software systems.
-                    </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>4.2.</B> To send a transaction to the network, the
+                    Software Development Kit (SDK)/sender must attach a randomly
+                    generated token number to the transaction. To fetch this
+                    token, the SDK can request the same from any validator. Once
+                    received, the SDK attaches this token to the transaction and
+                    sends it to the network. The network then uses this random
+                    token to cryptographically decide the specific validator to
+                    verify the particular transaction for further processing.
+                    Additionally, the validator also randomly decides the
+                    validator set responsible for attesting to the transaction.
+                    Such are, generation of Random Token, SDK Requests for
+                    Random Token, and Randomized Selection of Validators
+                  </P>
 
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.2 Risk of Regulatory Actions
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      Push and any supported cryptographic token and blockchain
-                      could be impacted by one or more regulatory inquiries or
-                      regulatory action, which could impede or limit the ability
-                      of Push to continue to develop, or which could impede or
-                      limit your ability to access or use the Services or the
-                      underlying blockchain network.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.3 Warranty Disclaimer
-                    </P>
-
-                    <P margin='-10px 0px 0px 20px'>
-                      You expressly understand and agree that your use of the
-                      Services is at your sole risk. The Services (including the
-                      Site, the App and the Content) are provided on an &quot;as
-                      is&quot; and &quot;as available&quot; basis, without
-                      warranties of any kind, either express or implied,
-                      including, without limitation, implied warranties of
-                      merchantability, fitness for a particular purpose or
-                      non-infringement. You acknowledge that Push has no control
-                      over, and no duty to take any action regarding: which
-                      users gain access to or use the Services; what effects the
-                      Content may have on you; how you may interpret or use the
-                      Content; or what actions you may take as a result of
-                      having been exposed to the Content. You release Push from
-                      all liability for you having acquired or not acquired
-                      Content through the Services. Push makes no
-                      representations concerning any Content contained in or
-                      accessed through the Services, and Push will not be
-                      responsible or liable for the accuracy, copyright
-                      compliance, compliance with data protection laws, legality
-                      or decency of material contained in or accessed through
-                      the Services.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      We do not represent or warrant that access to the Services
-                      will be continuous, uninterrupted, timely or secure. You
-                      acknowledge and accept that the Services (a) may contain
-                      bugs, errors and defects, (b) may behave improperly or be
-                      subject to periods of downtime and unavailability, (c) may
-                      result in total or partial loss or corruption of data and
-                      (d) may be modified at any time, including through the
-                      release of subsequent versions, all with or without notice
-                      to you.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      You acknowledge that Push is not responsible for
-                      transferring, safeguarding, or maintaining your private
-                      keys or any digital currency associated therewith. If you
-                      lose, mishandle or have stolen associated digital currency
-                      private keys, you acknowledge that you may not be able to
-                      recover associated digital currency, and that Push is not
-                      responsible for such loss. You acknowledge that Push is
-                      not responsible for any loss, damage or liability arising
-                      from your failure to comply with these Terms hereunder.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      <B>
-                        THE SITE, THE APP AND THE SERVICES ARE PROVIDED BY PUSH
-                        (AND ITS LICENSORS AND SUPPLIERS) ON AN
-                        &quot;AS-IS&rdquo; BASIS, WITHOUT WARRANTIES OR ANY
-                        KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT
-                        LIMITATION, IMPLIED WARRANTIES OF MERCHANTABILITY,
-                        FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, THAT
-                        USE OF THE SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE,
-                        OR THE SECURITY ASSOCIATED USE OF, OR TRANSMISSION OF
-                        INFORMATION THROUGH, THE SERVICES. SOME JURISDICTIONS DO
-                        NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY
-                        LASTS, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.
-                        YOU ASSUME ALL RESPONSIBILITY AND RISK FOR YOUR USE OF
-                        THE SITE, THE APP, AND THE SERVICES, AND YOUR RELIANCE
-                        THEREON. NO OPINION, ADVICE OR STATEMENT OF PUSH OR ITS
-                        AFFILIATES, LICENSORS, CUSTOMERS, SUPPLIERS,
-                        ADVERTISERS, SPONSORS, AGENTS, MEMBERS OR VISITORS,
-                        WHETHER MADE ON THE SITE, THE APP, OR IN CONNECTION WITH
-                        THE SERVICES OR OTHERWISE, SHALL CREATE ANY WARRANTY.
-                        YOUR USE OF THE SITE, THE APP AND THE SERVICES ARE
-                        ENTIRELY AT YOUR OWN RISK.
-                      </B>{' '}
-                      There is a risk that the Site or the App could include
-                      inaccuracies or errors. Additionally, a possibility exists
-                      that unauthorised alterations could be made by third
-                      parties to the Site or the App. Although we attempt to
-                      maintain and ensure the integrity of the Site and the App,
-                      we make no guarantees as to the completeness or
-                      correctness or the Site or the App.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.4 Risk of Exploits and Weaknesses in Cryptography Field
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      You acknowledge and understand that Cryptography is a
-                      progressing field. Advances in code cracking or technical
-                      advances such as the development of quantum computers may
-                      present risks to cryptocurrencies and Services of Content,
-                      which could result in the theft or loss of your
-                      cryptographic tokens or property. To the extent possible,
-                      Push intends to update the protocol underlying Services to
-                      account for any advances in cryptography and to
-                      incorporate additional security measures, but does not
-                      guarantee or otherwise represent full security of the
-                      system. By using the Services or accessing Content, you
-                      acknowledge these inherent risks.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.5 Cryptocurrency and Volatility
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      You understand that Ethereum and other blockchain
-                      technologies and associated cryptographic tokens are
-                      highly volatile due to many factors including but not
-                      limited to adoption, speculation, technology and security
-                      risks. You also acknowledge that the cost of transacting
-                      on such technologies is variable and may increase at any
-                      time causing impact to any activities taking place on the
-                      blockchain network. You acknowledge these risks and agree
-                      that Push cannot be held liable for such fluctuations or
-                      increased costs.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.6 Application Security
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      You further acknowledge that blockchain applications are
-                      code subject to flaws and acknowledge that you are solely
-                      responsible for evaluating any code provided by the
-                      Services or Content and the trustworthiness of any
-                      third-party websites, products, smart-contracts, or
-                      Content you access or use through the Services. You
-                      further expressly acknowledge and represent that
-                      blockchain applications can be written maliciously or
-                      negligently, that Push cannot be held liable for your
-                      interaction with such applications and that such
-                      applications may cause the loss of property or even
-                      identity. This warning and others later provided by Push
-                      in no way evidence or represent an on-going duty to alert
-                      you to all of the potential risks of utilizing the
-                      Services or Content.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.7 Affiliated Service / Third Party Service
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      Software and services provided by our affiliates (
-                      <B>&quot;Affiliated Services&rdquo;</B>) and third party
-                      software and services (
-                      <B>&quot;Third Party Services&rdquo;</B> and, together
-                      with Affiliated Services,{' '}
-                      <B>&quot;Additional Services&rdquo;</B>) included in,
-                      integrated into, or made accessible through, the Services,
-                      including through the Snap System, are made available to
-                      you under the terms of use of such service providers
-                      (collectively, <B>&quot;Service Providers&rdquo;</B>) (for
-                      example, Infura, Google Analytics, etc). Please conduct
-                      your own research and due diligence, and review the
-                      applicable terms of use on their websites prior to using
-                      or accessing their services.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      Service Providers may charge you a fee for use of, or
-                      access to, such Additional Services. You acknowledge that
-                      Push may earn fees from Service Providers in connection
-                      with your use of such Additional Services.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      You agree that Push and its affiliates are not in any way
-                      associated with the owner or operator of any Third Party
-                      Services or responsible or liable for the software and
-                      services offered by them or for anything in connection
-                      with such Third Party Services. Push does not endorse or
-                      approve and makes no warranties, representations or
-                      undertakings relating to the software, service or content
-                      of any Third Party Services.
-                    </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      In addition, Push disclaims liability for any loss, damage
-                      and any other consequence resulting directly or indirectly
-                      from or relating to your use or access of Third Party
-                      Services or any information that you may provide or any
-                      transaction conducted with or through the Third Party
-                      Services or the failure of any information, software or
-                      services posted or offered by such Service Providers or
-                      any error, omission or misrepresentation by such Service
-                      Providers or any computer virus arising from or system
-                      failure associated with the Third Party Services.
-                    </P>
-
-                    <P margin='20px 0px 20px 20px'>
-                      In the event of any inconsistency between the terms herein
-                      and the terms of the Additional Services, the terms herein
-                      will prevail.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.8 Push Not Liable
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      Without prejudice to the generality of any of the
-                      provisions in these Terms, Push shall not be liable for
-                      your usage of the Site, the App or the Services in the
-                      event of any unavailability, downtime, suspension or
-                      termination:
-                    </P>
-
-                    <P margin='20px 0px 0px 40px'>
-                      <B>(a)</B> caused by factors outside of our reasonable
-                      control, including any force majeure event or Internet
-                      access or related problems;
-                    </P>
-
-                    <P margin='20px 0px 0px 40px'>
-                      <B>(b)</B> that result from any voluntary actions or
-                      inactions from you or any third party (including without
-                      limitation capacity scaling issues, misconfiguration of
-                      settings or credentials, disabling encryption keys or
-                      making the encryption keys inaccessible etc.);
-                    </P>
-
-                    <P margin='20px 0px 0px 40px'>
-                      <B>(c)</B> that result from you not following any
-                      best/industry practices or standards as notified to you;
-                    </P>
-
-                    <P margin='20px 0px 0px 40px'>
-                      <B>(d)</B> that result from your equipment, software or
-                      other technology and/or third party equipment, software or
-                      other technology (other than third party equipment within
-                      our direct control); or
-                    </P>
-
-                    <P margin='20px 0px 20px 40px'>
-                      <B>(e)</B> arising from our suspension or termination of
-                      your right to use the Site, the App or the Service in
-                      accordance with these Terms.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      6.9 Sensitive Data
-                    </P>
-                    <P margin='-10px 0px 20px 20px'>
-                      Sensitive Data (as defined below) will not be provided to
-                      Push at any time and without prejudice to the generality
-                      of any of the provisions in these Terms, Push will have no
-                      liability whatsoever for Sensitive Data, whether in
-                      connection with a security incident or otherwise. For
-                      purposes of these Terms,{' '}
-                      <B>&quot;Sensitive Data&rdquo;</B> means (a) social
-                      security number, passport number, driver's license number,
-                      or similar identifier (or any portion thereof), (b) credit
-                      or debit card number, (c) employment, financial, genetic,
-                      biometric or health information, (d) racial, ethnic,
-                      political or religious affiliation, trade union
-                      membership, or information about sexual life or sexual
-                      orientation, (e) account passwords, (f) date of birth, (g)
-                      criminal history, (h) mother's maiden name or (i) any
-                      other information or combinations of information that is
-                      deemed sensitive or private under the legal framework of
-                      any applicable jurisdiction.
-                    </P>
-                  </ListGroup>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>4.3.</B> Another crucial security mechanism used by the
+                    Push is slashing which penalizes validators or participants
+                    who act maliciously or fail to fulfill their
+                    responsibilities, such as validating transactions correctly.
+                    When slashing occurs, a portion of the participant's staked
+                    tokens is forfeited and removed as a penalty, discouraging
+                    harmful behavior and ensuring the integrity of the network.
+                  </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.2em'
+                    fontSize='1.2em'
                   >
-                    7. Intellectual Property
+                    <B>5.</B> INTELLECTUAL PROPERTY RIGHTS
+                  </P>
+                  <P margin='0px 0px 0px 20px'>
+                    <B>5.1.</B> All rights, titles, and interests in and to the
+                    Push, including but not limited to its copyrights, patents,
+                    patent applications, copyright applications, trademark
+                    applications, code, sources, data, information, software,
+                    user interfaces, underlying algorithms, designs, graphics,
+                    trademarks, service marks, logos, and any other proprietary
+                    technology or content associated with the Services
+                    (collectively, the "<B>Intellectual Property</B>") developed
+                    or licensed or made for hire by , are and shall remain the
+                    exclusive property of Push.
                   </P>
 
-                  <ListGroup>
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='0px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      7.1 OWNERSHIP AND INTELLECTUAL PROPERTY
-                    </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      All title, ownership and intellectual property rights in
-                      and to the Site, the App and the Services are owned by
-                      Push or its licensors. You acknowledge and agree that the
-                      Services contains proprietary and confidential information
-                      that is protected by applicable intellectual property and
-                      other laws. Except as expressly authorized by Push in
-                      writing, you agree not to copy, modify, rent, lease, loan,
-                      sell, distribute, perform, display or create derivative
-                      works based on the Site, the App or the Services, in whole
-                      or in part.
-                    </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>5.2.</B> Subject to your compliance with these Terms,
+                    Push grants You a limited, revocable, non-exclusive,
+                    non-transferable, non-sublicensable license to access and
+                    use the Push’s Intellectual Property solely for the purpose
+                    of utilizing the Services provided by the Push in accordance
+                    with this Agreement.
+                  </P>
 
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      7.2 LIMITED AND REVOCABLE LICENSE
+                  <P margin='10px 0px 0px 20px'>
+                    <B>5.3.</B> You shall not use the Push’s Intellectual
+                    Property in any way that infringes upon the Intellectual
+                    Property rights for any third party. Push reserves the right
+                    to suspend or terminate Your access to Services if it
+                    determines that You have violated this provision.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>5.4.</B> You shall not engage in any of the following
+                    activities with respect to Push’s Intellectual Property:
+                    <P margin='10px 0px 0px 20px'>
+                      <B>5.4.1</B> Copy, reproduce, modify, adapt, translate, or
+                      create derivative works of the Platform, its software, or
+                      any other Intellectual Property without the prior written
+                      consent of Push.
                     </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      We grant you limited, non-exclusive, non-transferrable,
-                      revocable permission to make use of the Site, the App and
-                      the Services (collectively, <B>&quot;Access&rdquo;</B>).
-                      This Access shall remain in effect until and unless
-                      terminated by you or us. You promise and agree that you
-                      will not rent, redistribute, disclose, publish, sell,
-                      assign, lease, sublicense, market or transfer the
+                    <P margin='10px 0px 0px 20px'>
+                      <B>5.4.2</B> Distribute, lease, sublicense, assign, sell,
+                      rent, loan, or otherwise transfer the Platform or any part
+                      thereof to any third party without the prior written
+                      consent of Push.
+                    </P>
+                    <P margin='10px 0px 0px 20px'>
+                      <B>5.4.3</B> Reverse engineer, decompile, disassemble, or
+                      otherwise attempt to derive the source code, algorithms,
+                      or underlying technology of the Platform, except to the
+                      extent such activities are expressly permitted by
+                      applicable law notwithstanding this limitation.
+                    </P>
+                    <P margin='10px 0px 0px 20px'>
+                      <B>5.4.4</B> Access or use the Platform for any purpose
+                      other than as expressly permitted under these Terms,
+                      including any commercial use, data mining, scraping, or
+                      similar activities intended to extract data from the
                       Services.
                     </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      The Push software application, including without
-                      limitation the Site, the App and the Services, are not
-                      sold or transferred to you, and Push and its licensors
-                      retain ownership of all copies of the software
-                      applications even after installation on your personal
-                      computers, mobile handsets, tablets, wearable devices,
-                      speakers and/or other devices (<B>&quot;Devices&rdquo;</B>
-                      ).
+                    <P margin='10px 0px 0px 20px'>
+                      <B>5.4.5</B> Remove, alter, or obscure any copyright,
+                      trademark, or other proprietary notices displayed in or on
+                      the Services or related materials
                     </P>
+                  </P>
 
-                    <P margin='20px 0px 0px 20px'>
-                      All Push trademarks, service marks, trade names, logos,
-                      domain names, and any other features of the Push brand
-                      ("Push Brand Features") are the sole property of Push or
-                      its licensors. The Terms do not grant you any rights to
-                      use any Push Brand Features whether for commercial or
-                      non-commercial use.
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>6.</B> CONFIDENTIAL INFORMATION
+                  </P>
+                  <P margin='0px 0px 0px 20px'>
+                    <B>6.1.</B> Personal Information sharing Liability: You
+                    acknowledge and agree that if You choose to share any of
+                    Your personal information with a third party, whether
+                    intentionally or inadvertently, it is solely Your
+                    responsibility. We shall not be liable for any loss,
+                    damages, or consequences arising from such sharing of
+                    personal information.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>6.2.</B> Protection of Sensitive Personal Information:
+                    You are responsible for protecting your own sensitive
+                    personal information and ensuring its confidentiality.
+                    Sensitive personal information includes but is not limited
+                    to:
+                    <P margin='10px 0px 0px 20px'>
+                      <B>6.2.1</B> Personally identifiable information such as
+                      your name, address, email address, phone number, date of
+                      birth, and social security number.
                     </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      All Push trademarks, service marks, trade names, logos,
-                      domain names, and any other features of the Push brand (
-                      <B>&quot;Push Brand Features&rdquo;</B>) are the sole
-                      property of Push or its licensors. These Terms do not
-                      grant you any rights to use any Push Brand Features
-                      whether for commercial or non-commercial use.
+                    <P margin='10px 0px 0px 20px'>
+                      <B>6.2.2</B> Financial information such as bank account
+                      details, credit card numbers, and financial transactions.
                     </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      You agree to abide by our user guidelines and not to use
-                      the Services or any part thereof in any manner not
-                      expressly permitted by these Terms. Except for the rights
-                      expressly granted to you in these Terms, Push grants no
-                      right, title, or interest to you in the Site, the App or
-                      the Services.
+                    <P margin='10px 0px 0px 20px'>
+                      <B>6.2.3</B> Health information such as medical history,
+                      treatment records, and health insurance information.
                     </P>
-
-                    <P margin='20px 0px 0px 20px'>
-                      Third party software (for example, open source software
-                      libraries) included in the Services are made available to
-                      you under the relevant third party software library's
-                      license terms.
+                    <P margin='10px 0px 0px 20px'>
+                      <B>6.2.4</B> Any other information that may be considered
+                      sensitive or confidential under applicable laws and
+                      regulations.
                     </P>
+                  </P>
 
-                    <P margin='20px 0px 0px 20px'>
-                      Notwithstanding anything herein to the contrary, nothing
-                      in these Terms entitle you to copy, modify, fork, merge,
-                      combine with another program or create a derivative work
-                      of the Services, including without limitation the Site and
-                      the App.
-                    </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>6.3.</B> You agree not to share Your sensitive personal
+                    information with any third party without proper
+                    authorization or consent. If You choose to share such
+                    information contrary to this agreement, We shall not be
+                    liable for any loss, damages, or platform consequences
+                    resulting from such disclosure
+                  </P>
 
+                  <ItemV alignItems='flex-start'>
                     <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      margin='20px 0px 20px 20px'
+                      fontWeight='400 !important'
+                      letterSpacing='0.1em'
                       textTransform='uppercase'
-                      size='1.1em'
+                      fontSize='1.2em'
                     >
-                      7.3 CONTENT
+                      <B>7.</B> YOUR REPRESENTATIONS AND WARRANTIES
                     </P>
-                    <P margin='-10px 0px 0px 20px'>
-                      By displaying, publishing or distributing Content via the
-                      Site, the App or the Services, you hereby grant to Push an
-                      irrevocable, perpetual, worldwide, royalty-free,
-                      non-exclusive license to use, modify, delete from, add to,
-                      create derivative works of, publicly perform, publicly
-                      display, reproduce and distribute (and to sublicense the
-                      foregoing rights through multiple tiers of licensees) such
-                      Content via the Site or the App. From time to time, we may
-                      remove Content from the Site or the App, permanently or
-                      temporarily.
-                    </P>
-
-                    <P margin='20px 0px 20px 20px'>
-                      You represent and warrant that: (a) you own the Content
-                      displayed, published or distributed via the Site, the App
-                      or the Services, or otherwise have the right to grant the
-                      licenses set forth above, and (b) the display, publishing
-                      or distribution of your Content on or through the Site,
-                      the App or the Services does not violate the privacy
-                      rights, publicity rights, contract rights, intellectual
-                      property or any other rights of any person or entity. You
-                      agree to be fully responsible for and to pay any and all
-                      royalties, fees, and any other monies owing any person or
-                      entity by reason of any Content displayed published or
-                      distributed by you.
-                    </P>
-                  </ListGroup>
-
-                  <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
-                    textTransform='uppercase'
-                    size='1.1em'
-                  >
-                    8. Links
-                  </P>
-                  <P margin='-10px 0px 20px 0px'>
-                    The Services provide, or third parties may provide, links to
-                    other World Wide Web or accessible sites, applications or
-                    resources. Because Push has no control over such sites,
-                    applications and resources, you acknowledge and agree that
-                    Push is not responsible for the availability of such
-                    external sites, applications or resources, and does not
-                    endorse and is not responsible or liable for any content,
-                    advertising, products or other materials on or available
-                    from such sites or resources. You further acknowledge and
-                    agree that Push shall not be responsible or liable, directly
-                    or indirectly, for any damage or loss caused or alleged to
-                    be caused by or in connection with use of or reliance on any
-                    such content, goods or services available on or through any
-                    such site or resource.
-                  </P>
-
-                  <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
-                    textTransform='uppercase'
-                    size='1.1em'
-                  >
-                    9. INDEMNITY
-                  </P>
-                  <P margin='-10px 0px 20px 0px'>
-                    You agree to release and to indemnify, defend and hold
-                    harmless Push and its parents, subsidiaries, affiliates and
-                    agencies, as well as the officers, directors, employees,
-                    shareholders and representatives of any of the foregoing
-                    entities, from and against any and all losses, liabilities,
-                    expenses, damages, costs (including attorneys' fees and
-                    court costs) claims or actions of any kind whatsoever
-                    arising or resulting from:
-                  </P>
-
-                  <ListGroup>
                     <P margin='0px 0px 0px 20px'>
-                      <B>(a)</B> your use of the Site, App or Services;
+                      You hereby represent and warrant to us as follows:
+                    </P>
+                  </ItemV>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.1.</B> You are at least eighteen (18) years’ old, or
+                    the age of majority in Your jurisdiction, whichever higher,
+                    (“<B>Eligible Person</B>”) and have the full right, power,
+                    and authority to enter into and comply with these Terms;
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.2.</B> You have the legal capacity to enter into
+                    contracts under applicable laws and have read, understood,
+                    and accepted these Terms.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.3.</B> You are not permitted to access the Platform if
+                    You are not an Eligible Person or are acting on behalf of a
+                    person who is not an Eligible Person and must disconnect
+                    Your Wallet and any linked accounts, cease usage of and exit
+                    the website immediately.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.4.</B> Entering into and performing your obligations
+                    under these Terms does not and will not conflict with any
+                    other agreement or obligation to which you are bound.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.4.</B> Entering into and performing your obligations
+                    under these Terms does not and will not conflict with any
+                    other agreement or obligation to which you are bound.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.5.</B> Your use of the Platform does not infringe on
+                    the intellectual property rights or other rights of any
+                    third party.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.6.</B> You will not introduce any viruses, worms,
+                    malware, Trojan horses, or other harmful code to the
+                    Platform.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.7.</B> You will not misrepresent your affiliation with
+                    any person or entity, including by impersonating another
+                    person or entity.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>7.8.</B> You will not engage in any activity that is
+                    illegal, fraudulent, or harmful to the Platform, its users,
+                    or our reputation.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>8.</B> NO REPRESENTATIONS AND WARRANTIES
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.1.</B> We will not be liable for any delay or failure
+                    to render the Services resulting from any Force Majeure
+                    Event.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.2.</B> You may access Our Platform at Your own risk. We
+                    are not responsible or liable for any loss or damage
+                    (including injuries, death, or loss of property) that You or
+                    anyone else may suffer while accessing Our Platform.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.3.</B> You agree that Our Platform may contain
+                    third-party advertisements and links to websites/services
+                    owned and operated by Our affiliates and/ or third parties
+                    (“<B>Third Party Content</B>”). We do not endorse the Third
+                    Party Content or services of any third parties included on
+                    Our platform. We cannot guarantee the accuracy, reliability
+                    or quality of such Third Party Content. Your reliance on
+                    Third Party Content is at Your own risk. Any claims that You
+                    have regarding Third-Party Content should be directed to the
+                    third party in question.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.4.</B> We will not be held responsible for any issues
+                    with the storage, deletion, delivery, or accessibility of
+                    information or materials to the extent allowed by law.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.5.</B> We do not provide any warranty for Our Content,
+                    which is provided on an "as is, as available basis”.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.6.</B> We are not responsible for any errors or
+                    inaccuracies in the team starting line-up data provided on
+                    Our Platform, as it is obtained from external sources or
+                    publicly available information.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.7.</B> We are not responsible for any inaccuracies in
+                    calculating reward points or the selection of winners due to
+                    inaccurate or incomplete information received from any
+                    third-party service provider.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.8.</B> We make no representations or warranties
+                    regarding the quality, suitability or merchantability of any
+                    prizes and are not liable with respect to the same.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.9.</B> We will not be liable for your inability to
+                    access Our Platform for any reason beyond our control such
+                    as network outage, telecommunication failure, internet
+                    suspension, virus, malware etc.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.10.</B> We are not responsible for any errors in
+                    communication, or omissions in communication, including any
+                    errors made by You, which may prevent the results from being
+                    communicated to You.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>8.11.</B> We are not liable for any consequences arising
+                    from You sharing any Confidential Information including but
+                    not limited to OTP with any other person.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>9.</B> NO FIDUCIARY DUTIES
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>9.1.</B> This Agreement is not intended to, and does not,
+                    establish or impose any fiduciary duties on Push . To the
+                    maximum extent permitted by applicable law, You acknowledge
+                    and agree that Push has no fiduciary duties or liabilities
+                    to You or any other party. Any such duties or liabilities
+                    that may be recognized at law or in equity are hereby
+                    explicitly disclaimed, waived, and nullified by Push . You
+                    further acknowledge and agree that Push 's only obligations
+                    to You are those expressly outlined in this Agreement.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>9.2.</B> Professional Advice: All information provided in
+                    connection with Your access and use of Push 's Services is
+                    solely for informational purposes and should not be
+                    construed as professional advice. Prior to making any
+                    financial, legal, or other decisions based on the Services,
+                    You are strongly encouraged to seek independent professional
+                    advice from a licensed and qualified individual in the
+                    relevant area.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>9.3.</B> Tax Advice: Nothing contained herein constitutes
+                    legal, financial, business, or tax advice. You are strongly
+                    advised to consult with appropriate advisors before engaging
+                    in any activities. All information provided by Push is for
+                    informational purposes only and should not be construed as
+                    tax advice.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>10.</B> THIRD PARTY LINKS
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>10.1.</B> If Push contains links to other sites and
+                    resources provided by third parties, these links are
+                    provided for Your convenience only. This includes links
+                    contained in advertisements, such as banner advertisements
+                    and sponsored links. You acknowledge and agree that Push is
+                    not responsible or liable for: (i) the availability or
+                    accuracy of such websites or resources; or (ii) the content,
+                    products, or Services on or available from such websites or
+                    resources.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>10.2.</B> Links to such websites or resources do not
+                    imply any endorsement by us of such websites or resources or
+                    the content, products, or services available from such
+                    websites or resources. You acknowledge sole responsibility
+                    for and assume all risk arising from Your use of any such
+                    websites or resources. If You access a third-party website
+                    or service or share Your Content on or through any
+                    third-party website or service, You do so at Your own risk,
+                    and You understand that these Terms and the Privacy Policy
+                    do not apply to Your use of such sites.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>11.</B> WARRANTIES AND DISCLAIMER
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>11.1.</B> THE PLATFORM IS PROVIDED ON AN "AS IS" AND "AS
+                    AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, WHETHER
+                    EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED
+                    WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
+                    PURPOSE, OR NON-INFRINGEMENT. Push DOES NOT WARRANT THAT THE
+                    PLATFORM WILL BE UNINTERRUPTED, TIMELY, SECURE, OR
+                    ERROR-FREE, OR THAT ANY DEFECTS OR ERRORS WILL BE CORRECTED.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>11.2.</B> YOU ACKNOWLEDGE THAT DATA YOU PROVIDE WHILE
+                    ACCESSING OR USING THE SERVICES MAY BECOME IRRETRIEVABLY
+                    LOST OR CORRUPTED OR TEMPORARILY UNAVAILABLE DUE TO A
+                    VARIETY OF CAUSES, AND AGREE THAT, TO THE MAXIMUM EXTENT
+                    PERMITTED UNDER APPLICABLE LAW, WE WILL NOT BE LIABLE FOR
+                    ANY LOSS OR DAMAGE CAUSED BY DENIAL-OF-SERVICE ATTACKS,
+                    SOFTWARE FAILURES, VIRUSES OR OTHER TECHNOLOGICALLY HARMFUL
+                    MATERIALS (INCLUDING THOSE WHICH MAY INFECT YOUR COMPUTER
+                    EQUIPMENT), PROTOCOL CHANGES BY THIRD-PARTY PROVIDERS,
+                    INTERNET OUTAGES, FORCE MAJEURE EVENTS OR OTHER DISASTERS,
+                    SCHEDULED OR UNSCHEDULED MAINTENANCE, OR OTHER CAUSES EITHER
+                    WITHIN OR OUTSIDE OF OUR CONTROL.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>12.</B> PROHIBITED ACTIVITIES
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>12.1.</B> Cyberattack: Activities that seek to interfere
+                    with or compromise the integrity, security, or proper
+                    functioning of any computer, server, network, personal
+                    device, or other IT system, including deploying viruses and
+                    denial-of-service attacks.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>12.2.</B> Fraud and Misrepresentation: Activities that
+                    seek to defraud us or any other person or entity, including
+                    providing false, inaccurate, or misleading information to
+                    unlawfully obtain property.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>12.3.</B> Market Manipulation: Activities that violate
+                    any applicable law, rule, or regulation concerning the
+                    integrity of trading markets, including manipulative tactics
+                    such as “rug pulls,” pumping and dumping, and wash trading.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>13.</B> BREACH OF THESE TERMS
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    In case of breach of these Terms or if We reasonably believe
+                    that You have breached these Terms, We may choose to:
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>13.1.</B> Restrict, suspend, deactivate or permanently
+                    delete Your account with Us (including all related
+                    information that You might have provided to Us)
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>13.2.</B> Disqualify You from participating on our
+                    Website.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>13.3.</B> Refrain from awarding any prizes to You or
+                    forfeit Your rewards.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>13.4.</B> Initiate appropriate civil/criminal proceedings
+                    as We may consider appropriate in addition to forfeiture
+                    and/or recovery of rewards.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>14.</B> LIMITATION OF LIABILITY
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>14.1.</B> You acknowledge and agree that you assume full
+                    responsibility for your use of the Push Website and
+                    Services. You acknowledge and agree that any information you
+                    send or receive during your use of the Website and service
+                    may not be secure and may be intercepted or later acquired
+                    by unauthorized parties. You acknowledge and agree that your
+                    use of the Website and the Service is at your own risk.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>14.2.</B> Recognizing such, you understand and agree
+                    that, to the fullest extent permitted by applicable law,
+                    neither Push nor any related entities, suppliers, or
+                    licensors will be liable to you for any direct, indirect,
+                    incidental, special, consequential, punitive, exemplary, or
+                    other damages of any kind, including without limitation
+                    damages for loss of profits, goodwill, use, data, or other
+                    tangible or intangible losses or any other damages based on
+                    contract, tort, strict liability, or any other theory (even
+                    if any of Push or related entities had been advised of the
+                    possibility of such damages), resulting from:
+                    <UList>
+                      <LI>The Website or Service;</LI>
+
+                      <LI>Blockchain and the digital assets;</LI>
+
+                      <LI>
+                        The use or the inability to use the Website or Service;
+                      </LI>
+
+                      <LI>
+                        Unauthorized access to or alteration of your
+                        transmissions or data;
+                      </LI>
+
+                      <LI>
+                        Statements or conduct of any third party on the Website
+                        or Service;
+                      </LI>
+
+                      <LI>
+                        Any actions we take or fail to take as a result of
+                        communications you send to us; Human errors;
+                      </LI>
+
+                      <LI>Technical malfunctions;</LI>
+
+                      <LI>
+                        Failures, including public utility or telephone outages;
+                      </LI>
+
+                      <LI>
+                        Omissions, interruptions, latency, deletions, or defects
+                        of any device or network, providers, or software
+                        (including, but not limited to, those that do not permit
+                        participation in the service);
+                      </LI>
+
+                      <LI>Any injury or damage to computer equipment;</LI>
+
+                      <LI>
+                        Inability to fully access the website or service or any
+                        other website;
+                      </LI>
+
+                      <LI>
+                        Theft, tampering, destruction, or unauthorized access
+                        to, images, or other content of any kind;
+                      </LI>
+
+                      <LI>
+                        Data that is processed late or incorrectly or is
+                        incomplete or lost;
+                      </LI>
+
+                      <LI>
+                        Typographical, printing, or other errors, or any
+                        combination thereof; Or any other matter relating to the
+                        website or service.
+                      </LI>
+                    </UList>
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>14.3.</B> In no event shall the total liability of Push
+                    for all claims arising out of or relating to the Terms or
+                    the use of or inability to use the Website or the Services
+                    exceed the lower of USD 100 or the amount you paid to Push,
+                    if any, in the past six months for the Services giving rise
+                    to the claim. The currency of any such payment shall be
+                    determined at the sole discretion of Push, and Push may, at
+                    its discretion, discharge its liability (if any) through
+                    payment in digital assets held by Push.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>14.4.</B> Some jurisdictions do not allow the exclusion
+                    of certain warranties or the limitation or exclusion of
+                    liability for incidental or consequential damages.
+                    Accordingly, some of the above limitations may not apply to
+                    You.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>15.</B> INDEMNITY
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>15.1.</B> You agree to defend, indemnify, and hold
+                    harmless us and our licensors, and each of their respective
+                    employees, officers, directors, and representatives
+                    (collectively, the “<B>Push Parties</B>”) from and against
+                    all liability for monetary damages, contractual claims of
+                    any nature, economic loss (including direct, incidental or
+                    consequential damages), loss of income or profits, fines,
+                    penalties, exemplary or punitive damages, and any other
+                    injury, damage, or harm, including reasonable attorney’s
+                    fees (“<B>Damages</B>”) that relate in any way to any
+                    demand, claim, regulatory action, proceeding or lawsuit,
+                    regardless of the cause or alleged cause, whether the
+                    allegations are groundless, fraudulent, false, or lack merit
+                    and regardless of the theory of recovery (“<B>Claim(s)</B>”)
+                    arising out of or relating to: (i) your use of the Platform
+                    (including any use by your customers, users, employees, and
+                    other personnel); (ii) breach of the Terms or violation of
+                    applicable law by you, your customers, users, employees and
+                    other personnel; (iii) a dispute between you and any third
+                    party; (iv) your alleged or actual infringement or
+                    misappropriation of any third party’s intellectual property
+                    or other rights; and (v) your Feedback. In the event we
+                    receive any third party subpoena or other compulsory legal
+                    order or process associated with Claims described in (i)
+                    through (v) above, then in addition to the indemnification
+                    set forth above, you will reimburse us for our employees’
+                    and contractors’ time and materials spent responding to such
+                    matters at our then-current hourly rates as well as our
+                    reasonable attorneys’ fees.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>15.2.</B> If you are obligated to indemnify us, then you
+                    agree that we will have the right, in our sole discretion,
+                    to control any action or proceeding and to determine whether
+                    we wish to settle, and if so, on what terms, and you agree
+                    to fully cooperate with us in the defense or settlement of
+                    such Claim.
+                  </P>
+
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
+                  >
+                    <B>16.</B> RESTRICTION AND SUSPENSION
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>16.1.</B> We may restrict or suspend Your access to the
+                    Platform, delete and any content or information or prohibit
+                    You from using or accessing the Platform (or any portion,
+                    aspect or feature of the Platform) if You violate these
+                    Terms, effective immediately, which may result in the
+                    forfeiture and destruction of all information associated
+                    with You and Your activities in connection with the
+                    Platform. Any fees paid hereunder are non-refundable. In the
+                    event of restriction, You will still be bound by Your
+                    obligations under these Terms.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>16.2.</B> If You access or use Our Services from any
+                    jurisdiction mentioned below or as amended from time to
+                    time, it is solely your responsibility, and You agree to
+                    indemnify and hold Us harmless from any loss, damages, or
+                    liabilities incurred as a result of such use.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>16.3.</B> You agree to refrain from using our Services if
+                    You are located in any of the restricted jurisdictions
+                    mentioned below or as amended from time to time. By
+                    accessing or using Our Services, You warrant that You are
+                    not located in any such restricted jurisdiction and agree to
+                    comply with all applicable laws and regulations.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>16.4. Effect of Suspension</B>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.4.1.</B> Your access to your account and its
+                      associated functionalities, including transactions and
+                      balances, will be temporarily disabled until the
+                      suspension is resolved.
                     </P>
 
-                    <P margin='20px 0px 0px 20px'>
-                      <B>(b)</B> your breach of these Terms;
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.4.2.</B> During the suspension, you will not be able
+                      to initiate, complete, or access any transactions or
+                      associated accounts.
                     </P>
 
-                    <P margin='20px 0px 0px 20px'>
-                      <B>(c)</B> any of your acts or omissions that implicate
-                      publicity rights, defamation or invasion of privacy.
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.4.3.</B> Suspension does not absolve you of ongoing
+                      obligations, such as fees, indemnification requirements,
+                      or liabilities resulting from prior use of the Services.
                     </P>
-                  </ListGroup>
 
-                  <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
-                    textTransform='uppercase'
-                    size='1.1em'
-                  >
-                    10. LIMITATION ON LIABILITY
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.4.4.</B> We shall not be liable to you or any third
+                      party for any suspension or related consequences,
+                      including loss of data, assets, or other impacts.
+                    </P>
                   </P>
-                  <P margin='-10px 0px 0px 0px'>
-                    <B>
-                      YOU ACKNOWLEDGE AND AGREE THAT YOU ASSUME FULL
-                      RESPONSIBILITY FOR YOUR USE OF THE SITE, THE APP AND THE
-                      SERVICES. YOU ACKNOWLEDGE AND AGREE THAT ANY INFORMATION
-                      YOU SEND OR RECEIVE DURING YOUR USE OF THE SITE, THE APP
-                      AND THE SERVICES MAY NOT BE SECURE AND MAY BE INTERCEPTED
-                      OR LATER ACQUIRED BY UNAUTHORIZED PARTIES. YOU ACKNOWLEDGE
-                      AND AGREE THAT YOUR USE OF THE SITE, THE APP AND THE
-                      SERVICES IS AT YOUR OWN RISK. RECOGNIZING SUCH, YOU
-                      UNDERSTAND AND AGREE THAT, TO THE FULLEST EXTENT PERMITTED
-                      BY APPLICABLE LAW, NEITHER PUSH NOR ITS SUPPLIERS OR
-                      LICENSORS WILL BE LIABLE TO YOU FOR ANY DIRECT, INDIRECT,
-                      INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY OR
-                      OTHER DAMAGES OF ANY KIND, INCLUDING WITHOUT LIMITATION
-                      DAMAGES FOR LOSS OF PROFITS, GOODWILL, USE, DATA OR OTHER
-                      TANGIBLE OR INTANGIBLE LOSSES OR ANY OTHER DAMAGES BASED
-                      ON CONTRACT, TORT, STRICT LIABILITY OR ANY OTHER THEORY
-                      (EVEN IF PUSH HAD BEEN ADVISED OF THE POSSIBILITY OF SUCH
-                      DAMAGES), RESULTING FROM THE SITE, THE APP OR SERVICES;
-                      THE USE OR THE INABILITY TO USE THE SITE, THE APP OR THE
-                      SERVICES; UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR
-                      TRANSMISSIONS OR DATA; STATEMENTS OR CONDUCT OF ANY THIRD
-                      PARTY ON THE SITE, THE APP OR THE SERVICES; ANY ACTIONS WE
-                      TAKE OR FAIL TO TAKE AS A RESULT OF COMMUNICATIONS YOU
-                      SEND TO US; HUMAN ERRORS; TECHNICAL MALFUNCTIONS;
-                      FAILURES, INCLUDING PUBLIC UTILITY OR TELEPHONE OUTAGES;
-                      OMISSIONS, INTERRUPTIONS, LATENCY, DELETIONS OR DEFECTS OF
-                      ANY DEVICE OR NETWORK, PROVIDERS, OR SOFTWARE (INCLUDING,
-                      BUT NOT LIMITED TO, THOSE THAT DO NOT PERMIT PARTICIPATION
-                      IN THE SERVICES); ANY INJURY OR DAMAGE TO COMPUTER
-                      EQUIPMENT; INABILITY TO FULLY ACCESS THE SITE, THE APP OR
-                      THE SERVICES OR ANY OTHER WEBSITE; THEFT, TAMPERING,
-                      DESTRUCTION, OR UNAUTHORIZED ACCESS TO, IMAGES OR OTHER
-                      CONTENT OF ANY KIND; DATA THAT IS PROCESSED LATE OR
-                      INCORRECTLY OR IS INCOMPLETE OR LOST; TYPOGRAPHICAL,
-                      PRINTING OR OTHER ERRORS, OR ANY COMBINATION THEREOF; OR
-                      ANY OTHER MATTER RELATING TO THE SITE, THE APP OR ANY
-                      OTHER ASPECT OF THE SERVICES.
-                    </B>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>16.5. Effect of Termination</B>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.5.1.</B> All functionalities associated with your
+                      account, including access to transactions, balances, and
+                      information, will be permanently disabled.
+                    </P>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.5.2.</B> Any remaining balances in your account at
+                      the time of termination may be forfeited. We reserve the
+                      right to restrict access to these balances without
+                      obligation for return or compensation.
+                    </P>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.5.3.</B> Termination does not relieve you of
+                      obligations incurred prior to termination, such as
+                      outstanding fees or liabilities.
+                    </P>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.5.4.</B> You may terminate your use of the Services
+                      at any time by discontinuing access. However, any
+                      obligations or liabilities incurred prior to termination
+                      will remain your responsibility.
+                    </P>
+
+                    <P margin='10px 0px 0px 20px'>
+                      <B>16.5.5.</B> We shall not be liable to you or any third
+                      party for termination-related consequences, including loss
+                      of data, assets, or other impacts.
+                    </P>
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.1em'
+                    fontSize='1.2em'
                   >
-                    11. NO OTHER BENEFICARY (THIRD PARTY)
+                    <B>17.</B> RESTRICTED JURISDICTION
                   </P>
-                  <P margin='-10px 0px 20px 0px'>
-                    You agree that, except as otherwise expressly provided in
-                    these Terms, there shall be no third party beneficiaries to
-                    these Terms.
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>17.1.</B> We may refuse Services for following Users that
+                    are citizens and residents (tax residency including as a
+                    lawful permanent resident or other) of the Algeria, Bolivia,
+                    Morocco, Nepal, Pakistan, Vietnam, Afghanistan, Ivory Coast,
+                    Cuba, Iraq, Iran, Liberia, North Korea, Syria, Sudan, South
+                    Sudan, Zimbabwe, Antigua, American Samoa, Guam, Northern
+                    Mariana Islands, Puerto Rico, United States Minor Outlying
+                    Islands, US Virgin Islands, Ukraine, Belarus, Albania,
+                    Burma, Central African Republic, Democratic Republic of
+                    Congo, Lybia, Somalia, Yemen, and Thailand. The list of
+                    restricted jurisdictions may be amended from time to time
+                    depending on the legal requirements of state authorities in
+                    such territories and/or states.
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.1em'
+                    fontSize='1.2em'
                   >
-                    12. Termination and Suspension
-                  </P>
-                  <P margin='-10px 0px 0px 0px'>
-                    Push may terminate or suspend all or part of the Services
-                    and your Push access immediately, without prior notice or
-                    liability, if you breach any of the provisions of these
-                    Terms, or in the event of any adverse change of regulatory
-                    environment. Upon termination of your access, your right to
-                    use the Services will immediately cease.
+                    <B>18.</B> GOVERNING LAW AND DISPUTE RESOLUTION
                   </P>
 
-                  <P margin='20px 0px 20px 0px'>
-                    The following provisions of these Terms survive any
-                    termination of these Terms: WARRANTY DISCLAIMERS; OWNERSHIP
-                    AND INTELLECTUAL PROPERTY; LINKS; INDEMNITY; LIMITATION ON
-                    LIABILITY; NO OTHER BENEFICARY (THIRD PARTY); TERMINATION;
-                    GENERAL INFORMATION (Schedule A); BINDING ARBITRATION AND
-                    CLASS ACTION WAIVER (Schedule B).
+                  <P margin='10px 0px 0px 20px'>
+                    <B>18.1.</B> Governing Law: The Terms – and your use of the
+                    Platform– are governed by the laws of the Cayman Islands,
+                    without regard to conflict of laws rules.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>18.2.</B> Negotiation: In the event of any dispute
+                    arising out of or relating to this Agreement, the parties
+                    agree to first attempt to resolve the dispute informally
+                    through good-faith negotiation. Either party may initiate
+                    negotiations by providing written notice via email to the
+                    other party, clearly stating the nature of the dispute. If
+                    the dispute cannot be resolved through negotiation within
+                    thirty (30) days of the initiation of negotiations, the
+                    parties agree to submit the dispute in court as mentioned
+                    above.
                   </P>
 
                   <P
-                    weight='400'
-                    spacing='0.2em'
-                    color='var(--ifm-color-white)'
-                    margin='20px 0px 20px 0px'
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
                     textTransform='uppercase'
-                    size='1.1em'
+                    fontSize='1.2em'
                   >
-                    13. NOTICE AND PROCEDURE FOR MAKING CLAIMS
+                    <B>19.</B> GRIEVANCE REDRESSAL MECHANISMS
                   </P>
-                  <P margin='10px 0px 0px 0px'>
-                    If you believe that your copyright or the copyright of a
-                    person on whose behalf you are authorized to act has been
-                    infringed, please provide Push a written Notice containing
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>19.1.</B> If you have any complaints or grievances
+                    regarding:
+                    <UList>
+                      <LI>
+                        any User content that you believe violates the terms of
+                        use;
+                      </LI>
+                      <LI>your access to the Push Platform; or</LI>
+                      <LI>
+                        any User content that You believe is, prima facie,
+                        obscene, defamatory towards You or any other person, or
+                        involves impersonation in an electronic form, including
+                        artificially morphed images of individuals, please share
+                        the same with Us by writing to{' '}
+                        <A
+                          href='https://support@push.org'
+                          target='_blank'
+                          display=' inline'
+                          color='var(--ifm-link-color)'
+                          background='transparent'
+                          padding='0px'
+                          letterSpacing='inherit'
+                          textTransform='initial'
+                        >
+                          support@push.org
+                        </A>
+                      </LI>
+                    </UList>
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>19.2.</B> In your complaint or grievance, please include
                     the following information:
+                    <UList>
+                      <LI>
+                        Your name, address, contact number, and email address;
+                      </LI>
+                      <LI>
+                        Your relation to the subject matter of the complaint,
+                        whether you are the complainant or acting on behalf of
+                        an affected person;
+                      </LI>
+                      <LI>
+                        The name and age of the person aggrieved or affected by
+                        the subject matter of the complaint, if you are acting
+                        on behalf of such person, and a statement, under penalty
+                        of perjury, that you are authorized to act on behalf of
+                        such person and to provide such person's personal
+                        information to us in relation to the
+                        complaint/grievance;
+                      </LI>
+                      <LI>
+                        Description of the complaint or grievance with clear
+                        identification of the User content in relation to which
+                        such complaint or grievance is made;
+                      </LI>
+                      <LI>
+                        A statement that you believe that the User content
+                        violates the terms of use;
+                      </LI>
+                      <LI>
+                        A statement that the information provided in the
+                        complaint or grievance is accurate.
+                      </LI>
+                    </UList>
                   </P>
 
-                  <P margin='10px 0px 20px 0px'>
-                    <UL>
-                      <LI>
-                        <B>
-                          An electronic (or) physical signature of the person
-                          authorized to act on behalf of the owner (or) the
-                          owner themselves of the copyright or other
-                          intellectual property interest.
-                        </B>
-                      </LI>
-                      <LI>
-                        <B>
-                          A detailed description of the copyrighted work in
-                          question or the intellectual property that you claim
-                          has been infringed.
-                        </B>
-                      </LI>
-                      <LI>
-                        <B>
-                          A detailed description of where the material that you
-                          claim is infringing and where it is located on the
-                          Services.
-                        </B>
-                      </LI>
-                      <LI>
-                        <B>Your address, Phone Number, and Email.</B>
-                      </LI>
-                      <LI>
-                        <B>
-                          A statement by you that you have a good faith belief
-                          that the disputed use is not authorized by the
-                          copyright owner, its agent, or the law.
-                        </B>
-                      </LI>
-                      <LI>
-                        <B>
-                          A statement by you, made under penalty of perjury,
-                          that the above information in your Notice is accurate
-                          and that you are the copyright or intellectual
-                          property owner or authorized to act on the copyright
-                          or intellectual property owner's behalf.
-                        </B>
-                      </LI>
-                    </UL>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>19.3.</B> At times, we may need to verify your identity
+                    before proceeding with the resolution of your complaint or
+                    grievance. In such cases, we may request reasonable
+                    identification or additional information to confirm your
+                    identity and authority to submit the complaint.
                   </P>
 
-                  <P margin='0px 0px 20px 0px'>
-                    The above information should be sent to:{' '}
+                  <P margin='10px 0px 0px 20px'>
+                    <B>19.4.</B> For any further assistance or clarification,
+                    You may contact Our Grievance Redressal Officer at {''}
                     <A
-                      href='mailto://support@epns.io'
+                      href='https://support@push.org'
+                      target='_blank'
                       display=' inline'
-                      color='var(--ifm-color-pink-500)'
+                      color='var(--ifm-link-color)'
                       background='transparent'
                       padding='0px'
                       letterSpacing='inherit'
                       textTransform='initial'
                     >
-                      support@epns.io
+                      support@push.org
                     </A>
                   </P>
 
-                  <ItemH
-                    alignItems='flex-start'
-                    margin='0px 0px 20px 0px'
-                    justifyContent='flex-start'
+                  <P
+                    fontWeight='400 !important'
+                    letterSpacing='0.1em'
+                    textTransform='uppercase'
+                    fontSize='1.2em'
                   >
-                    <H2
-                      textTransform='uppercase'
-                      letterSpacing='0.1em'
-                      className='scheduleHeader'
+                    <B>20.</B> MISCELLANEOUS
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.1.</B> Entire Agreement: These Terms, along with any
+                    policies published by Push on the Platform, constitute the
+                    entire agreement between You and Push , superseding any
+                    prior agreements or arrangements regarding the Services.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.2.</B> Maintenance of Platform: Your access and use of
+                    the Service may be occasionally interrupted for various
+                    reasons, such as equipment malfunctions, periodic updates,
+                    maintenance, or repairs initiated by Push . While we strive
+                    to notify Users of such maintenance activities via the
+                    website whenever feasible, please note that urgent
+                    maintenance may occur without prior notice. During these
+                    maintenance periods, temporary unavailability or reduced
+                    functionality of certain features on the Platform may occur.
+                    Push endeavors to minimize such interruptions and schedules
+                    maintenance during off-peak usage hours whenever feasible.
+                    These maintenance efforts are essential to ensure optimal
+                    performance, security, and functionality of the Website.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.3.</B> Waiver: The failure of Push to enforce any
+                    right or provision of these Terms shall not constitute a
+                    waiver of such right or provision.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.4.</B> Severability: If any provision of these Terms
+                    is found to be illegal, invalid, or unenforceable under any
+                    law, such provision shall be deemed severable. The remaining
+                    provisions shall remain in full force and effect, and shall
+                    not be affected by the illegal, invalid, or unenforceable
+                    provision or its severance.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.5.</B> Successor and Assigns: This Agreement shall be
+                    binding upon and inure to the benefit of Push 's successors
+                    and assigns. You may not assign this Agreement or any rights
+                    or licenses granted hereunder without Push 's prior written
+                    consent. Push reserves the right to assign this Agreement
+                    and any granted rights to any person, firm, corporation, or
+                    entity, without User consent.
+                  </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.6.</B> Relationship: These Terms do not create a joint
+                    venture, partnership, employment, or agency relationship
+                    between You and Push.
+                  </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.7.</B> Force Majeure: Push shall not be liable for any
+                    delays, failures, or interruptions of Services resulting
+                    from causes beyond its reasonable control, including, but
+                    not limited to, acts of god, civil or military authorities,
+                    terrorists, civil disturbances, strikes, fires,
+                    telecommunication or Internet interruptions, equipment or
+                    software failures, pandemics, or other catastrophic events.
+                  </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.8.</B> Construction: The rule of construction that a
+                    contract should be interpreted against the party responsible
+                    for its drafting shall not apply.
+                  </P>
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.9.</B> Survival: Provisions that, by their nature,
+                    should survive termination of these Terms, including payment
+                    obligations, indemnity, disclaimers, limitations of
+                    liability, intellectual property rights, applicable law,
+                    dispute resolution, and miscellaneous provisions, shall
+                    survive termination.
+                  </P>
+
+                  <P margin='10px 0px 0px 20px'>
+                    <B>20.10.</B> Reporting: To report a vulnerability or
+                    security concern regarding Our Services, please email {''}{' '}
+                    <A
+                      href='https://support@push.org'
+                      target='_blank'
+                      display=' inline'
+                      color='var(--ifm-link-color)'
+                      background='transparent'
+                      padding='0px'
+                      letterSpacing='inherit'
+                      textTransform='initial'
                     >
-                      <Span
-                        background='var(--ifm-color-black)'
-                        color='var(--ifm-color-white)'
-                        fontWeight='600'
-                        padding='0px 8px'
-                      >
-                        Schedule
-                      </Span>
-                      <Span
-                        fontWeight='600'
-                        color='var(--ifm-color-white)'
-                        background='var(--ifm-color-tos-highlight)'
-                        padding='0px 8px'
-                      >
-                        A
-                      </Span>
-                    </H2>
-                  </ItemH>
-
-                  <ItemH
-                    alignItems='flex-start'
-                    margin='-30px 0px 20px 0px'
-                    justifyContent='flex-start'
-                  >
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-white)'
-                      textTransform='uppercase'
-                      size='1.2em'
-                    >
-                      GENERAL INFORMATION
-                    </P>
-
-                    <ListGroup>
-                      <P
-                        weight='400'
-                        spacing='0.2em'
-                        color='var(--ifm-color-white)'
-                        margin='0px 0px 20px 0px'
-                        textTransform='uppercase'
-                        size='1.1em'
-                      >
-                        1. ENTIRE AGREEMENT
-                      </P>
-                      <P margin='-10px 0px 0px 20px'>
-                        These Terms (and any additional terms, rules and
-                        conditions of participation that Push may post on the
-                        Services) constitute the entire agreement between you
-                        and Push with respect to the Services and supersedes any
-                        prior agreements, oral or written, between you and Push.
-                        In the event of a conflict between these Terms and the
-                        additional terms, rules and conditions of participation,
-                        the latter will prevail over these Terms to the extent
-                        of the conflict.
-                      </P>
-
-                      <P
-                        weight='400'
-                        spacing='0.2em'
-                        color='var(--ifm-color-white)'
-                        margin='20px 0px 20px 0px'
-                        textTransform='uppercase'
-                        size='1.1em'
-                      >
-                        2. WAIVER AND SEVERABILITY
-                      </P>
-                      <P margin='-10px 0px 0px 20px'>
-                        The failure of Push to exercise or enforce any right or
-                        provision of these Terms shall not constitute a waiver
-                        of such right or provision. If any provision of these
-                        Terms is found by an arbitrator or court of competent
-                        jurisdiction to be invalid, the parties nevertheless
-                        agree that the arbitrator or court should endeavour to
-                        give effect to the parties' intentions as reflected in
-                        the provision, and the other provisions of these Terms
-                        remain in full force and effect.
-                      </P>
-
-                      <P
-                        weight='400'
-                        spacing='0.2em'
-                        color='var(--ifm-color-white)'
-                        margin='20px 0px 20px 0px'
-                        textTransform='uppercase'
-                        size='1.1em'
-                      >
-                        3. STATUTE OF LIMITATIONS
-                      </P>
-                      <P margin='-10px 0px 0px 20px'>
-                        You agree that regardless of any statute or law to the
-                        contrary, any claim or cause of action arising out of or
-                        related to the use of the Services or these Terms must
-                        be filed within one (1) year after such claim or cause
-                        of action arose or be forever barred.
-                      </P>
-
-                      <P
-                        weight='400'
-                        spacing='0.2em'
-                        color='var(--ifm-color-gray-900)'
-                        margin='20px 0px 20px 0px'
-                        textTransform='uppercase'
-                        size='1.1em'
-                      >
-                        4. MISCELLANEOUS
-                      </P>
-                      <P margin='-10px 0px 0px 20px'>
-                        The section subject in these Terms are only for your
-                        convenience and have no legal or contractual effect.
-                      </P>
-                    </ListGroup>
-                  </ItemH>
-
-                  <ItemH
-                    alignItems='flex-start'
-                    margin='20px 0px 20px 0px'
-                    justifyContent='flex-start'
-                  >
-                    <H2
-                      textTransform='uppercase'
-                      letterSpacing='0.1em'
-                      className='scheduleHeader'
-                    >
-                      <Span
-                        background='var(--ifm-color-black)'
-                        color='var(--ifm-color-white)'
-                        fontWeight='600'
-                        padding='0px 8px'
-                      >
-                        Schedule
-                      </Span>
-                      <Span
-                        fontWeight='600'
-                        color='var(--ifm-color-white)'
-                        background='var(--ifm-color-tos-highlight)'
-                        padding='0px 8px'
-                      >
-                        B
-                      </Span>
-                    </H2>
-                  </ItemH>
-
-                  <ItemH
-                    align='flex-start'
-                    margin='-30px 0px 20px 0px'
-                    justifyContent='flex-start'
-                  >
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-gray-900)'
-                      textTransform='uppercase'
-                      size='1.2em'
-                    >
-                      BINDING ARBITRATION AND CLASS ACTION WAIVER
-                    </P>
-
-                    <P
-                      color='var(--ifm-color-white)'
-                      margin='-10px 0px 20px 0px'
-                      textTransform='uppercase'
-                    >
-                      <B>
-                        PLEASE READ THIS SECTION CAREFULLY – IT MAY
-                        SIGNIFICANTLY AFFECT YOUR LEGAL RIGHTS, INCLUDING YOUR
-                        RIGHT TO FILE A LAWSUIT IN COURT
-                      </B>
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-gray-900)'
-                      margin='0px 0px 20px 0px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      1. INITIAL DISPUTE RESOLUTION
-                    </P>
-                    <P margin='-10px 0px 0px 0px'>
-                      The parties shall use their best efforts to engage
-                      directly to settle any dispute, claim, question, or
-                      disagreement and engage in good faith negotiations which
-                      shall be a condition to either party initiating an
-                      arbitration or lawsuit.
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-gray-900)'
-                      margin='20px 0px 20px 0px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      2. BINDING ARBITRATION
-                    </P>
-                    <P margin='-10px 0px 20px 0px'>
-                      If the parties do not reach an agreed upon solution within
-                      a period of 30 days from the time informal dispute
-                      resolution under the Initial Dispute Resolution provision
-                      begins, then either party may initiate binding arbitration
-                      as the sole means to resolve claims, subject to the
-                      provisions set forth below. Specifically, all claims
-                      arising out of or relating to these Terms (including their
-                      formation, performance and breach), the parties'
-                      relationship with each other and/or your use of the
-                      Services shall be finally settled by binding arbitration.
-                    </P>
-                    <P margin='0px 0px 20px 0px'>
-                      You may not assign, delegate or transfer these Terms or
-                      your rights or obligations hereunder, in any way (by
-                      operation of law or otherwise) without our prior written
-                      consent. We may transfer, assign, or delegate these Terms
-                      and our rights and obligations without consent. These
-                      Terms are governed by and will be construed under the laws
-                      of Singapore, without regard to the conflicts of laws
-                      provisions thereof. Any dispute arising from or relating
-                      to the subject matter of these Terms shall be finally
-                      settled in Singapore, in English, in accordance with the
-                      Arbitration Rules of the Singapore International
-                      Arbitration Centre (the <B>&quot;Rules&rdquo;</B>) for the
-                      time being in force, which rules are deemed to be
-                      incorporated by reference in this Section, by one
-                      commercial arbitrator with substantial experience in
-                      resolving intellectual property and commercial contract
-                      disputes, who shall be selected from the appropriate list
-                      of arbitrators in accordance with such Rules. The seat of
-                      the arbitration shall be Singapore.
-                    </P>
-                    <P margin='0px 0px 20px 0px'>
-                      Judgment upon the award rendered by such arbitrator may be
-                      entered in any court of competent jurisdiction. Despite
-                      the foregoing obligation to arbitrate disputes, each party
-                      shall have the right to pursue injunctive or other
-                      equitable relief at any time, from any court of competent
-                      jurisdiction. For all purposes of this Agreement, the
-                      parties consent to exclusive jurisdiction and venue in
-                      Singapore.{' '}
-                      <B>
-                        {' '}
-                        Any arbitration under these Terms will take place on an
-                        individual basis: class arbitrations and class actions
-                        are not permitted. YOU UNDERSTAND AND AGREE THAT BY
-                        ENTERING INTO THESE TERMS, YOU AND PUSH ARE EACH WAIVING
-                        THE RIGHT TO TRIAL BY JURY OR TO PARTICIPATE IN A CLASS
-                        ACTION
-                      </B>
-                    </P>
-
-                    <P
-                      weight='400'
-                      spacing='0.2em'
-                      color='var(--ifm-color-gray-900)'
-                      margin='0px 0px 20px 0px'
-                      textTransform='uppercase'
-                      size='1.1em'
-                    >
-                      3. CLASS ACTION WAIVER
-                    </P>
-                    <P margin='-10px 0px 20px 0px'>
-                      The parties further agree that any arbitration shall be
-                      conducted in their individual capacities only and not as a
-                      class action or other representative action, and the
-                      parties expressly waive their right to file a class action
-                      or seek relief on a class basis.{' '}
-                      <B>
-                        YOU AND PUSH AGREE THAT EACH MAY BRING CLAIMS AGAINST
-                        THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY, AND
-                        NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED
-                        CLASS OR REPRESENTATIVE PROCEEDING.
-                      </B>{' '}
-                      If any court or arbitrator determines that the class
-                      action waiver set forth in this Pgraph is void or
-                      unenforceable for any reason or that an arbitration can
-                      proceed on a class basis, then the arbitration provision
-                      set forth above shall be deemed null and void in its
-                      entirety and the parties shall be deemed to have not
-                      agreed to arbitrate disputes.
-                    </P>
-                  </ItemH>
+                      support@push.org
+                    </A>
+                  </P>
                 </ItemH>
               </ItemH>
             </MultiContent>
-          </Content>
+          </BodyContent>
         </Section>
       </Section>
     </>
   );
 };
-
-const TermsHeaderGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const ListGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 const HeroSection = styled(Section)`
   border-radius: 0 0 48px 48px;
@@ -1517,18 +1443,40 @@ const HeroSection = styled(Section)`
 
 const HeroContent = styled(Content)`
   align-self: stretch;
-  padding-top: 250px;
-  padding-bottom: 40px;
+  padding-top: 150px;
+  padding-bottom: 20px;
 
   @media ${device.laptop} {
-    padding-top: 200px;
-    padding-bottom: 40px;
+    padding-top: 100px;
+    padding-bottom: 20px;
   }
 
   @media ${device.mobileL} {
-    padding-top: 112px;
-    padding-bottom: 40px;
+    padding-top: 72px;
+    padding-bottom: 20px;
   }
 `;
 
+const BodyContent = styled(Content)`
+  padding-top: 0px;
+  padding-bottom: 30px;
+
+  & :where(p, li, a) {
+    font-weight: 200;
+    line-height: 170%;
+  }
+
+  /* Preserve bold text inside body content */
+  & :where(p, li, a) :where(b, strong),
+  & :where(p, li, a) ${B} {
+    font-weight: 700;
+    line-height: 170%;
+  }
+`;
+
+const UList = styled(UL)`
+  li {
+    list-style: disc;
+  }
+`;
 export default TosComp;

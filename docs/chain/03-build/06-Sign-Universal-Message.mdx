@@ -60,7 +60,7 @@ const signature = await pushChainClient.universal.signMessage(message)
       const wallet = ethers.Wallet.createRandom();
 
       // Setup provide and signer
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
       const signer = wallet.connect(provider);
 
       // Convert to Universal Signer and Initialize Push Chain SDK
@@ -120,7 +120,7 @@ const signature = await pushChainClient.universal.signTypedData({<TYPED_DATA>})
       const wallet = ethers.Wallet.createRandom();
 
       // Setup provide and signer
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
       const signer = wallet.connect(provider);
 
       // Convert to Universal Signer and Initialize Push Chain SDK

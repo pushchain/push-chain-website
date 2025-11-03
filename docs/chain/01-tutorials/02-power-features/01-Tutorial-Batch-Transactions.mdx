@@ -5,7 +5,7 @@ hide_title: false
 slug: ./tutorial-batch-transactions
 displayed_sidebar: pushChainSidebar
 sidebar_position: 1
-image: '/assets/docs/previews/docs_chain_tutorials_mint_erc_20_tokens--mint_universal_erc-20_tokens_(via_push-swap).png'
+image: "/assets/docs/previews/docs_chain_tutorials_batch_transactions--batch_transactions_(multicall).png"
 ---
 
 <head>
@@ -302,7 +302,7 @@ function BatchTransactionExample() {
 
   // Provider to read balances
   const provider = new ethers.JsonRpcProvider(
-    "https://evm.rpc-testnet-donut-node1.push.org/"
+    "https://evm.donut.rpc.push.org/"
   );
 
   // Counter ABI on Push Chain (used in tests) with an increment function

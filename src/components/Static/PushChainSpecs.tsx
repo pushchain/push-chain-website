@@ -13,10 +13,7 @@ const TESTNET_CONFIG = {
     symbol: 'PC',
     decimals: 18,
   },
-  rpcUrls: [
-    'https://evm.rpc-testnet-donut-node1.push.org/',
-    'https://evm.rpc-testnet-donut-node1.push.org/',
-  ],
+  rpcUrls: ['https://evm.donut.rpc.push.org/'],
   iconUrls: [],
   blockExplorerUrls: ['https://donut.push.network'],
 };
@@ -51,9 +48,7 @@ const PushChainSpecs: React.FC = () => {
                 <strong>RPC URL</strong>
               </td>
               <td>
-                <code>https://evm.rpc-testnet-donut-node1.push.org/</code>
-                {', '}
-                <code>https://evm.rpc-testnet-donut-node2.push.org/</code>
+                <code>https://evm.donut.rpc.push.org/</code>
               </td>
             </tr>
             <tr>
@@ -106,8 +101,8 @@ const PushChainSpecs: React.FC = () => {
               </li>
               <li>
                 Join our{' '}
-                <Link to='https://discord.gg/pushprotocol'>Discord</Link> to be
-                part of the community
+                <Link to='https://discord.com/invite/pushchain'>Discord</Link>{' '}
+                to be part of the community
               </li>
             </ul>
           </div>

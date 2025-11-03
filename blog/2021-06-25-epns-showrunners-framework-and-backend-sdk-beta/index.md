@@ -50,6 +50,6 @@ To help developers get started with the Showrunners Framework and using the new 
 
 ### Stay Connected
 
-If you are interested in providing feedback and working more closely with our development team to improve EPNS for developers, we invite you to join our [Discord Community Server](https://discord.gg/nYrqZ734nu).
+If you are interested in providing feedback and working more closely with our development team to improve EPNS for developers, we invite you to join our [Discord Community Server](https://discord.com/invite/pushchain).
 
 As usual, this is evergreen documentation that we will keep building, updating, and improving.

@@ -202,7 +202,7 @@ const BRBComp = () => {
                   <NavigationMenuItem
                     onClick={() => {
                       if (isMobileMenuOpen) toggleMobileMenu();
-                      openLink('https://discord.gg/cTRqvYzXpW');
+                      openLink('https://discord.com/invite/pushchain');
                     }}
                   >
                     <NavigationMenuHeader>

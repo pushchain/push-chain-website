@@ -38,7 +38,7 @@ With 53% of PUSH allocated to the community, we plan on giving PUSH to the hands
 
 **3\. Governance Engagement**
 
-Push Governance in the long run would be an inevitable part of EPNS that drives the protocol. As we move towards that goal, we invite the Rockstars to hold the baton for Push Governance, be the community leaders & engage in all Push Governance activities ([Forum](https://gov.epns.io/), [Discord](https://discord.gg/YVPB99F9W5)).
+Push Governance in the long run would be an inevitable part of EPNS that drives the protocol. As we move towards that goal, we invite the Rockstars to hold the baton for Push Governance, be the community leaders & engage in all Push Governance activities ([Forum](https://gov.epns.io/), [Discord](https://discord.com/invite/pushchain)).
 
 ## Thank you!
 

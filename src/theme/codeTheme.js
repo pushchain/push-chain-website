@@ -75,7 +75,7 @@ const darkCodeTheme = {
     {
       types: ['comment', 'plain-text'],
       style: {
-        color: '#404041',
+        color: '#5D616B',
       },
     },
     {

@@ -48,7 +48,7 @@ Check out the new resources in detail below, and to promote the Governance Upgra
 
 [mirror.xyz](https://mirror.xyz/0xd0a99De1eD63d9F1Dd7F1a69787764E39e0F5baC?source=post_page-----8effc7a15291--------------------------------)
 
-- **Office Hours:** We have weekly community calls where the governance team will be on Discord to answer your questions! Do you want to find a way to contribute to EPNS or do you want to ask a question to the team members? Hop on [Discord](https://discord.gg/MaZmYTZZ) and let’s chat! 🔔
+- **Office Hours:** We have weekly community calls where the governance team will be on Discord to answer your questions! Do you want to find a way to contribute to EPNS or do you want to ask a question to the team members? Hop on [Discord](https://discord.com/invite/pushchain) and let’s chat! 🔔
 - **Rewards Campaign to promote this release:** Rewards will be given to users who follow the Gleam Campaign tasks! 💰 The tasks are easy to be completed and will take no more than a couple of minutes! **#PushGovEARNance**
 
 # Governance Engagement Rewards Campaign 🏛💰

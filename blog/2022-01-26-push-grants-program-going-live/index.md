@@ -71,6 +71,6 @@ The requirements for proposals to advance to a Snapshot vote, and the process th
 
 The #EPNSgov team has been working hard to deliver this initiative to the EPNS community and Push Governance users. Our part in this process is all about giving the tools over to the users and trying to respond to that feedback. This new grants channel is just the type of avenue we needed to open up in order to spark the type of discourse we’re trying to attract.
 
-Moving forward, there are several #EPNSgov projects in the works and we’ll be steadily announcing those across the EPNS network. Come visit us during [office hours](https://twitter.com/epnsproject/status/1485250968656781316?s=20) on [EPNS Discord](https://medium.com/push-protocol/discord.gg/YVPB99F9W5)!
+Moving forward, there are several #EPNSgov projects in the works and we’ll be steadily announcing those across the EPNS network. Come visit us during [office hours](https://twitter.com/epnsproject/status/1485250968656781316?s=20) on [EPNS Discord](https://discord.com/invite/pushchain)!
 
 Check out [PIP-02: Incentives proposal](https://snapshot.org/#/epns.eth/proposal/0x1c928002d6cb8d563ff79dc06f1f28a5963f0ed81460765d937a7ad08a779215) which passed today as well!

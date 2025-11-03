@@ -68,21 +68,21 @@ export const useChainNotification = () => {
     );
   };
 
-  useEffect(() => {
-    // Ensure this code only runs in the browser
-    if (typeof window !== 'undefined') {
-      const notificationAlreadyShown =
-        localStorage.getItem('testnetNotificationShown') === 'true';
+  // useEffect(() => {
+  //   // Ensure this code only runs in the browser
+  //   if (typeof window !== 'undefined') {
+  //     const notificationAlreadyShown =
+  //       localStorage.getItem('testnetNotificationShown') === 'true';
 
-      if (!notificationAlreadyShown && !hasMounted) {
-        showNotification();
-        setHasMounted(true);
-      } else {
-        toast.dismiss();
-        setHasMounted(false);
-      }
-    }
-  }, []);
+  //     if (!notificationAlreadyShown && !hasMounted) {
+  //       showNotification();
+  //       setHasMounted(true);
+  //     } else {
+  //       toast.dismiss();
+  //       setHasMounted(false);
+  //     }
+  //   }
+  // }, []);
 };
 
 export const Notification = () => {

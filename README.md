@@ -496,7 +496,7 @@ yarn build
 - [Push Chain Docs](https://push.org/docs)
 - [Developer Portal](https://push.org/docs/developers)
 - [API Reference](https://push.org/docs/api)
-- [Community Discord](https://discord.gg/pushchain)
+- [Community Discord](https://discord.com/invite/pushchain)
 
 ### Design Resources
 
@@ -513,7 +513,7 @@ Need help? Here's how to get support:
 - **Documentation Issues**: Open an issue with the `documentation` label
 - **Bug Reports**: Use the bug report template
 - **Feature Requests**: Use the feature request template
-- **General Questions**: Join our [Discord community](https://discord.gg/pushchain)
+- **General Questions**: Join our [Discord community](https://discord.com/invite/pushchain)
 
 ## 📄 License
 

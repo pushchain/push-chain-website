@@ -1,0 +1,8 @@
+---
+id: "push-2025-10-04-01"
+type: "info"
+apps: "faucet, simulate"
+env: "testnet"
+title: ""
+bodytext: ""
+---

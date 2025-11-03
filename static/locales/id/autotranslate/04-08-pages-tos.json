@@ -2,17 +2,14 @@
   "pages": {
     "tos": {
       "seo": {
-        "title": "Ketentuan Layanan",
-        "description": "Aturan penggunaan situs web, aplikasi, dan layanan Push Chain, termasuk hak dan tanggung jawab Anda.",
-        "og-title": "Ketentuan Layanan Push Chain - Syarat Hukum",
-        "og-description": "Syarat dan ketentuan hukum yang mengatur penggunaan situs web, aplikasi, dan alat pengembang kami.",
-        "twitter-title": "Ketentuan Layanan - Push Chain",
-        "twitter-description": "Baca persyaratan hukum untuk menggunakan Push Chain."
+        "title": "Syarat dan Ketentuan",
+        "description": "Aturan untuk menggunakan situs web Push Chain, aplikasi, dan layanan termasuk hak dan kewajiban Anda.",
+        "og-description": "Syarat dan Ketentuan Hukum mengenai penggunaan situs web, aplikasi, dan alat developer kami.",
+        "twitter-title": "Syarat dan Ketentuan - Push Chain",
+        "twitter-description": "Baca syarat dan ketentuan penggunaan Push Chain."
       },
       "hero-section": {
-        "title": "Ketentuan Layanan",
-        "description": "Menguraikan syarat dan ketentuan",
-        "update-text": "Terakhir Diperbarui: 2 November 2020"
+        "description": "Menggariskan syarat dan ketentuan"
       }
     }
   }

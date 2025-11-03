@@ -66,14 +66,12 @@ export const pushDonutChain: chains.Chain = {
   rpcUrls: {
     default: {
       http: [
-        'https://evm.rpc-testnet-donut-node1.push.org/',
-        'https://evm.rpc-testnet-donut-node2.push.org/',
+        'https://evm.donut.rpc.push.org/',
       ],
     },
     public: {
       http: [
-        'https://evm.rpc-testnet-donut-node1.push.org/',
-        'https://evm.rpc-testnet-donut-node2.push.org/',
+        'https://evm.donut.rpc.push.org/',
       ],
     },
   },
@@ -160,7 +158,7 @@ const config: HardhatUserConfig = {
     // highlight-start
     // Push Chain Donut Testnet
     pushDonut: {
-      url: 'https://evm.rpc-testnet-donut-node1.push.org/',
+      url: 'https://evm.donut.rpc.push.org/',
       chainId: 42101,
       accounts: [deployerPrivateKey],
     },

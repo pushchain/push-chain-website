@@ -39,7 +39,7 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
     import { ethers } from 'ethers';
 
     // ——— CONFIG ———
-    const RPC_URL = 'https://evm.rpc-testnet-donut-node1.push.org/';
+    const RPC_URL = 'https://evm.donut.rpc.push.org/';
 
     function initEthers() {
       const provider = new ethers.JsonRpcProvider(RPC_URL);
@@ -62,7 +62,7 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
     import { createPublicClient, http } from 'viem';
   
     function initViem() {
-      const publicClient = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+      const publicClient = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
       console.log('Viem publicClient:', JSON.stringify(publicClient, null, 2));
     }
 
@@ -87,7 +87,7 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
     import { ethers } from 'ethers';
 
     async function fetchTxEthers() {
-      const provider = new ethers.JsonRpcProvider('https://evm.rpc-testnet-donut-node1.push.org/');
+      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
       const txHash = '0x04ee80f072ab06ec88092701e7ba223451d0a1376e26755085271bc6de45a6a1';
       const tx = await provider.getTransaction(txHash);
       console.log('Transaction:', JSON.stringify(tx, null, 2));
@@ -110,7 +110,7 @@ Push Chain is fully EVM-compatible, so you can plug in your favorite Ethereum to
     import { createPublicClient, http } from 'viem';
 
     async function fetchTxViem() {
-      const client      = createPublicClient({ transport: http('https://evm.rpc-testnet-donut-node1.push.org/') });
+      const client      = createPublicClient({ transport: http('https://evm.donut.rpc.push.org/') });
       const txHash = '0x04ee80f072ab06ec88092701e7ba223451d0a1376e26755085271bc6de45a6a1';
       const tx = await client.getTransaction({ hash: txHash });
       console.log('Transaction:', JSON.stringify(tx, null, 2));
