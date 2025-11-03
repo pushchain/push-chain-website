@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[65108],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[57362],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -96,14 +96,7 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 206942:
-/***/ ((module) => {
-
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-roadmap-2021","source":"@site/blog/2021-04-27-epns-roadmap-2021/index.md","title":"EPNS Roadmap 2021","description":"EPNS Roadmap 2021","date":"2021-04-27T00:00:00.000Z","tags":[{"inline":true,"label":"Announcements","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/announcements"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"},{"inline":true,"label":"Roadmaps","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/roadmaps"}],"readingTime":7.1,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"epns-roadmap-2021","title":"EPNS Roadmap 2021","authors":["push"],"image":"./cover-image.webp","description":"EPNS Roadmap 2021","text":"This past year has been an unbelievable adventure of learning and growth for us at EPNS since we originally came up with our PoC during ETHGlobal’s Hack Money 2020 Hackathon. We have received so much support and appreciation from the entire Ethereum community, and we can’t thank you enough.","tags":["Announcements","Ethereum","Blockchain","Newsletter","Roadmaps"]},"unlisted":false,"prevItem":{"title":"DeFi Aggregator Frontier to Support Web3 Notifs","permalink":"/push-chain-website/pr-preview/pr-1067/blog/defi-aggregator-frontier-to-support"},"nextItem":{"title":"Scaling Web3Notifs on Polygon’s Layer-2","permalink":"/push-chain-website/pr-preview/pr-1067/blog/scaling-web3notifs-on-polygon"}}');
-
-/***/ }),
-
-/***/ 259283:
+/***/ 106529:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -112,36 +105,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_27_epns_roadmap_2021_index_md_0b7_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_28_defi_aggregator_frontier_to_support_index_md_86f_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_27_epns_roadmap_2021_index_md_0b7_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(206942);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_28_defi_aggregator_frontier_to_support_index_md_86f_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(551379);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 /* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
-	slug: 'epns-roadmap-2021',
-	title: 'EPNS Roadmap 2021',
+	slug: 'defi-aggregator-frontier-to-support',
+	title: 'DeFi Aggregator Frontier to Support Web3 Notifs',
+	description: 'DeFi Aggregator Frontier to Support Web3 Notifs',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	description: 'EPNS Roadmap 2021',
-	text: 'This past year has been an unbelievable adventure of learning and growth for us at EPNS since we originally came up with our PoC during ETHGlobal’s Hack Money 2020 Hackathon. We have received so much support and appreciation from the entire Ethereum community, and we can’t thank you enough.',
+	text: 'Ethereum Push Notification Service is proud to announce that we’ve formed a strategic partnership with Frontier.Frontier is a chain-agnostic DeFi aggregator that enables users to manage all of their DeFi applications and assets in a safe, simple portal. Frontier’s platform is blockchain-agnostic and currently supports multiple DeFi protocols, including Uniswap, Aave, Compound and MakerDAO.',
 	tags: [
 		'Announcements',
-		'Ethereum',
-		'Blockchain',
-		'Newsletter',
-		'Roadmaps'
+		'Notifications',
+		'Polygon Network',
+		'Partnerships',
+		'Ethereum'
 	]
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(438363)/* ["default"] */ .A),
+"image": (__webpack_require__(199169)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -158,10 +151,10 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover Image of EPNS Roadmap 2021",
-      src: (__webpack_require__(554108)/* ["default"] */ .A) + "",
+      alt: "Cover Image of DeFi Aggregator Frontier to Support Web3 Notifs",
+      src: (__webpack_require__(692490)/* ["default"] */ .A) + "",
       width: "1400",
-      height: "700"
+      height: "788"
     })
   });
 }
@@ -182,23 +175,30 @@ function MDXContent(props = {}) {
 
 /***/ }),
 
-/***/ 438363:
+/***/ 199169:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-615b3cfc84712bfea296964aedf4ee7e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-a8c52902b446e02d7ebaceda5f88ed11.webp");
 
 /***/ }),
 
-/***/ 554108:
+/***/ 551379:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/defi-aggregator-frontier-to-support","source":"@site/blog/2021-04-28-defi-aggregator-frontier-to-support/index.md","title":"DeFi Aggregator Frontier to Support Web3 Notifs","description":"DeFi Aggregator Frontier to Support Web3 Notifs","date":"2021-04-28T00:00:00.000Z","tags":[{"inline":true,"label":"Announcements","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/announcements"},{"inline":true,"label":"Notifications","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/notifications"},{"inline":true,"label":"Polygon Network","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/polygon-network"},{"inline":true,"label":"Partnerships","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/partnerships"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"}],"readingTime":0.96,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"defi-aggregator-frontier-to-support","title":"DeFi Aggregator Frontier to Support Web3 Notifs","description":"DeFi Aggregator Frontier to Support Web3 Notifs","authors":["push"],"image":"./cover-image.webp","text":"Ethereum Push Notification Service is proud to announce that we’ve formed a strategic partnership with Frontier.Frontier is a chain-agnostic DeFi aggregator that enables users to manage all of their DeFi applications and assets in a safe, simple portal. Frontier’s platform is blockchain-agnostic and currently supports multiple DeFi protocols, including Uniswap, Aave, Compound and MakerDAO.","tags":["Announcements","Notifications","Polygon Network","Partnerships","Ethereum"]},"unlisted":false,"prevItem":{"title":"Gitcoin Growing Open Source with Web3 Notifs","permalink":"/push-chain-website/pr-preview/pr-1067/blog/gitcoin-growing-open-source"},"nextItem":{"title":"Scaling Web3Notifs on Polygon’s Layer-2","permalink":"/push-chain-website/pr-preview/pr-1067/blog/scaling-web3notifs-on-polygon"}}');
+
+/***/ }),
+
+/***/ 692490:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-615b3cfc84712bfea296964aedf4ee7e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-a8c52902b446e02d7ebaceda5f88ed11.webp");
 
 /***/ })
 

@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[3169],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[65108],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -96,27 +96,14 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 499159:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ 206942:
+/***/ ((module) => {
 
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-0b05205522bb4695534bf51212c5c4a5.webp");
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-roadmap-2021","source":"@site/blog/2021-04-27-epns-roadmap-2021/index.md","title":"EPNS Roadmap 2021","description":"EPNS Roadmap 2021","date":"2021-04-27T00:00:00.000Z","tags":[{"inline":true,"label":"Announcements","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/announcements"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/ethereum"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/blockchain"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"},{"inline":true,"label":"Roadmaps","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/roadmaps"}],"readingTime":7.1,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"epns-roadmap-2021","title":"EPNS Roadmap 2021","authors":["push"],"image":"./cover-image.webp","description":"EPNS Roadmap 2021","text":"This past year has been an unbelievable adventure of learning and growth for us at EPNS since we originally came up with our PoC during ETHGlobal’s Hack Money 2020 Hackathon. We have received so much support and appreciation from the entire Ethereum community, and we can’t thank you enough.","tags":["Announcements","Ethereum","Blockchain","Newsletter","Roadmaps"]},"unlisted":false,"prevItem":{"title":"Scaling Web3Notifs on Polygon’s Layer-2","permalink":"/push-chain-website/pr-preview/pr-1067/blog/scaling-web3notifs-on-polygon"},"nextItem":{"title":"EPNS Monthly Blocks","permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-monthly-blocks-march-2021"}}');
 
 /***/ }),
 
-/***/ 887242:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-0b05205522bb4695534bf51212c5c4a5.webp");
-
-/***/ }),
-
-/***/ 893148:
+/***/ 259283:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -125,32 +112,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_24_epns_monthly_blocks_march_2021_index_md_278_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_27_epns_roadmap_2021_index_md_0b7_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_24_epns_monthly_blocks_march_2021_index_md_278_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(981259);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2021_04_27_epns_roadmap_2021_index_md_0b7_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(206942);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 /* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
-	slug: 'epns-monthly-blocks-march-2021',
-	title: 'EPNS Monthly Blocks',
-	description: 'EPNS Monthly Blocks',
+	slug: 'epns-roadmap-2021',
+	title: 'EPNS Roadmap 2021',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	text: 'This one is coming a tad late, but we wanted to share our updates with the awesome community as always. Another month has passed in the blink of an eye proving that fun never ends in the crypto-lands.',
+	description: 'EPNS Roadmap 2021',
+	text: 'This past year has been an unbelievable adventure of learning and growth for us at EPNS since we originally came up with our PoC during ETHGlobal’s Hack Money 2020 Hackathon. We have received so much support and appreciation from the entire Ethereum community, and we can’t thank you enough.',
 	tags: [
-		'Newsletter'
+		'Announcements',
+		'Ethereum',
+		'Blockchain',
+		'Newsletter',
+		'Roadmaps'
 	]
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(887242)/* ["default"] */ .A),
+"image": (__webpack_require__(438363)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -167,8 +158,8 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover Image of EPNS Monthly Blocks",
-      src: (__webpack_require__(499159)/* ["default"] */ .A) + "",
+      alt: "Cover Image of EPNS Roadmap 2021",
+      src: (__webpack_require__(554108)/* ["default"] */ .A) + "",
       width: "1400",
       height: "700"
     })
@@ -191,10 +182,23 @@ function MDXContent(props = {}) {
 
 /***/ }),
 
-/***/ 981259:
-/***/ ((module) => {
+/***/ 438363:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/epns-monthly-blocks-march-2021","source":"@site/blog/2021-04-24-epns-monthly-blocks-march-2021/index.md","title":"EPNS Monthly Blocks","description":"EPNS Monthly Blocks","date":"2021-04-24T00:00:00.000Z","tags":[{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1067/blog/tags/newsletter"}],"readingTime":2.41,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1067/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1067/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"epns-monthly-blocks-march-2021","title":"EPNS Monthly Blocks","description":"EPNS Monthly Blocks","authors":["push"],"image":"./cover-image.webp","text":"This one is coming a tad late, but we wanted to share our updates with the awesome community as always. Another month has passed in the blink of an eye proving that fun never ends in the crypto-lands.","tags":["Newsletter"]},"unlisted":false,"prevItem":{"title":"Scaling Web3Notifs on Polygon’s Layer-2","permalink":"/push-chain-website/pr-preview/pr-1067/blog/scaling-web3notifs-on-polygon"},"nextItem":{"title":"KERNEL, A Gitcoin Collective, Joins EPNS Advisory 🌱","permalink":"/push-chain-website/pr-preview/pr-1067/blog/kernel-a-gitcoin-collective-joins"}}');
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-615b3cfc84712bfea296964aedf4ee7e.webp");
+
+/***/ }),
+
+/***/ 554108:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-615b3cfc84712bfea296964aedf4ee7e.webp");
 
 /***/ })
 
