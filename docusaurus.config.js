@@ -229,6 +229,7 @@ const config = {
     },
     {
       tagName: 'script',
+      attributes: {},
       innerHTML: `
         (function () {
           try {
