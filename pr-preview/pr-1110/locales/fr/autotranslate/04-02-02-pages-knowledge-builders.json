@@ -3,37 +3,40 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Constructeurs — Guides et tutoriels",
-          "description": "Guides pas à pas, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
-          "og-title": "Créateurs - Guides pratiques & Tutoriels",
-          "og-description": "Tutoriels guidés, meilleures pratiques et exemples pour développer avec Push Chain.",
-          "twitter-title": "Créateurs - Guides et tutoriels",
-          "twitter-description": "Guides étape par étape pour déployer sur Push Chain."
+          "title": "Builders — Guides pratiques et tutoriels",
+          "description": "Guides étape par étape, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
+          "og-title": "Créateurs - Guides et Tutoriels",
+          "og-description": "Des tutoriels guidés, des bonnes pratiques et des exemples pour construire avec Push Chain.",
+          "twitter-title": "Créateurs - Guides et Tutoriels",
+          "twitter-description": "Guides étape par étape pour lancer votre projet sur Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
             "knowledge-base": "Base de connaissances"
           },
           "blocks": {
-            "title": "Construisez sur Push Chain",
+            "title": "Construire sur Push Chain",
             "sections": {
               "builders-intro": {
                 "items": {
                   "intro": "## Builders\n\nPrêt à construire sur Push Chain ? Voici quelques ressources pour vous inspirer et vous aider à démarrer.",
-                  "curated-reads": "## Lectures intéressantes 👇"
+                  "curated-reads": "## Lectures utiles 👇"
                 }
               },
               "universal-apps": {
-                "title": "Construisons ensemble des Apps Universelles 💪",
+                "title": "Créons des apps Universelles 💪",
                 "items": {
-                  "apps-only-possible-with-shared-state-v1": {
-                    "title": "Apps Possible Only with Shared State - Vol.1"
-                  },
-                  "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps possibles uniquement avec le shared-state - Vol. 2"
+                  "apps-of-the-future": {
+                    "title": "Les apps du futur — Construire sans le chaos"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Des applications pour les utilisateurs 🫶 Blockchain ?"
+                    "title": "Des applications grand public 🫶 Blockchain ?"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Possibles Seulement avec État Partagé - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Possible Only with Shared State - Vol.2"
                   }
                 }
               },
@@ -44,10 +47,10 @@
                     "title": "Explore Developer Documentation"
                   },
                   "faucet": {
-                    "title": "Obtenez des Tokens de Testnet"
+                    "title": "Obtenez des टोकन de testnet"
                   },
                   "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
+                    "title": "Donut Testnet Explorer"
                   }
                 }
               }

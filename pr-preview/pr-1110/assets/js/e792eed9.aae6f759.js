@@ -96,7 +96,7 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 622600:
+/***/ 400219:
 /***/ ((module) => {
 
 module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1110/blog/hack-the-future-of-defi","source":"@site/blog/2022-05-06-hack-the-future-of-defi/index.md","title":"Hack the future of DeFi powered with Web3 communication aka EPNS","description":"Hack the future of DeFi powered with Web3 communication aka EPNS","date":"2022-05-06T00:00:00.000Z","tags":[{"inline":true,"label":"Nft","permalink":"/push-chain-website/pr-preview/pr-1110/blog/tags/nft"},{"inline":true,"label":"Epnsproject","permalink":"/push-chain-website/pr-preview/pr-1110/blog/tags/epnsproject"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1110/blog/tags/blockchain"},{"inline":true,"label":"Newsletter","permalink":"/push-chain-website/pr-preview/pr-1110/blog/tags/newsletter"},{"inline":true,"label":"Ethereum","permalink":"/push-chain-website/pr-preview/pr-1110/blog/tags/ethereum"}],"readingTime":4.66,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1110/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1110/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"hack-the-future-of-defi","title":"Hack the future of DeFi powered with Web3 communication aka EPNS","description":"Hack the future of DeFi powered with Web3 communication aka EPNS","authors":["push"],"image":"./cover-image.webp","text":"EPNS and NFT TiX strike a strategic alliance to bring decentralized push notifications for users.","tags":["Nft","Epnsproject","Blockchain","Newsletter","Ethereum"]},"unlisted":false,"prevItem":{"title":"EPNS Allies With NFT-TiX to Bring Push Notifications to the Platform","permalink":"/push-chain-website/pr-preview/pr-1110/blog/epns-allies-with-nft-tix"},"nextItem":{"title":"Simplifying NFT Trading: EPNS Team Up With OpenBiSea To Facilitate Notifications for NFT Traders","permalink":"/push-chain-website/pr-preview/pr-1110/blog/simplifying-nft-trading"}}');
@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_05_06_hack_the_future_of_defi_index_md_d97_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_05_06_hack_the_future_of_defi_index_md_d97_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(622600);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2022_05_06_hack_the_future_of_defi_index_md_d97_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(400219);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 /* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);

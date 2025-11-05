@@ -442,6 +442,10 @@ const toc = [{
   "id": "send-transaction-with-funds",
   "level": 2
 }, {
+  "value": "Pay Gas Fees with ERC-20 Tokens",
+  "id": "pay-gas-fees-with-erc-20-tokens",
+  "level": 2
+}, {
   "value": "Send Batch Transactions (Multicall)",
   "id": "send-batch-transactions-multicall",
   "level": 2
@@ -1631,6 +1635,26 @@ function _createMdxContent(props) {
         className: "language-typescript",
         children: "// Send 1 USDT to the recipient address\nconst txHash = await pushChainClient.universal.sendTransaction({\n  to: '0xRecipientAddress', // The recipient address on Push Chain\n  data: data, // pass this if you want to execute a function on Push Chain as well\n  funds: {\n    amount: PushChain.utils.helpers.parseUnits('1', 6), // 1 USDT\n    token: client.moveable.token.USDT, // MoveableToken accessor from client\n  },\n});\n"
       })
+    }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
+      id: "pay-gas-fees-with-erc-20-tokens",
+      children: "Pay Gas Fees with ERC-20 Tokens"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
+      children: ["You can pay the origin-chain gas and Push Chain settlement fees using supported ERC-20 tokens (e.g., USDT) instead of the native coin. Use the ", (0,jsx_runtime.jsx)(_components.code, {
+        children: "funds.payWith"
+      }), " field to specify the token to pay fees with."]
+    }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
+      children: (0,jsx_runtime.jsx)(_components.code, {
+        className: "language-typescript",
+        children: "// Pay gas with USDT while bridging 1 USDT and calling a contract on Push Chain\nconst COUNTER_ABI = [\n  { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },\n];\n\nconst COUNTER_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';\nconst data = PushChain.utils.helpers.encodeTxData({\n  abi: COUNTER_ABI,\n  functionName: 'increment',\n});\n\nconst usdt = client.moveable.token.USDT; // ERC-20 on the origin chain\n\nconst res = await client.universal.sendTransaction({\n  to: COUNTER_ADDRESS,\n  value: 0n,\n  data,\n  funds: {\n    amount: BigInt(100000),        // bridge 1 USDT\n    token: usdt,              // move USDT to Push Chain\n    payWith: {\n      token: client.payable.token.USDT, // pay gas with USDT instead of native ETH\n    },\n  },\n});\n\nawait res.wait();\n"
+      })
+    }), "\n", (0,jsx_runtime.jsx)(_components.p, {
+      children: "Notes:"
+    }), "\n", (0,jsx_runtime.jsxs)(_components.ul, {
+      children: ["\n", (0,jsx_runtime.jsxs)(_components.li, {
+        children: ["Ensure the account holds sufficient balance of the selected ", (0,jsx_runtime.jsx)(_components.code, {
+          children: "payWith.token"
+        }), " on the origin chain to cover gas and settlement fees."]
+      }), "\n"]
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
       id: "send-batch-transactions-multicall",
       children: "Send Batch Transactions (Multicall)"

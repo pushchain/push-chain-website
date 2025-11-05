@@ -236393,7 +236393,7 @@ function create_language_async_loader_regeneratorRuntime() { "use strict"; /*! r
     return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_apl */ 64789).then(__webpack_require__.t.bind(__webpack_require__, 687341, 23));
   }),
   applescript: create_language_async_loader("applescript", function () {
-    return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_applescript */ 15873).then(__webpack_require__.t.bind(__webpack_require__, 533174, 23));
+    return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_applescript */ 15873).then(__webpack_require__.t.bind(__webpack_require__, 310793, 23));
   }),
   aql: create_language_async_loader("aql", function () {
     return __webpack_require__.e(/* import() | react-syntax-highlighter_languages_refractor_aql */ 42258).then(__webpack_require__.t.bind(__webpack_require__, 878672, 23));
