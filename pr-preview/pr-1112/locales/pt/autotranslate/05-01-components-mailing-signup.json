@@ -1,0 +1,21 @@
+{
+  "components": {
+    "mailing-signup": {
+      "title": "Nunca Perca uma Atualização",
+      "text": "Cadastre-se e fique por dentro das novidades do ecossistema, sorteios e muito mais.",
+      "email-input": "Seu Email",
+      "email-input-placeholder": "Digite seu endereço de e-mail",
+      "email-input-title": "Inscreva-se na newsletter do Push Chain para receber atualizações",
+      "email-input-aria-label": "Endereço de email para inscrição na newsletter",
+      "submit-button": "Cadastre-se",
+      "submit-button-title": "Assinar a newsletter Push Chain",
+      "submit-button-aria-label": "Assinar a newsletter",
+      "loading-submit-button": "Aguarde...",
+      "arrow-button-aria-label": "Inscreva-se na newsletter",
+      "arrow-button-title": "Assinar as atualizações do Push Chain",
+      "form-aria-label": "Formulário de inscrição para a newsletter",
+      "success-message-aria-label": "Inscrição realizada com sucesso",
+      "error-message-aria-label": "Erro ao se inscrever"
+    }
+  }
+}
