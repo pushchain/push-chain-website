@@ -442,8 +442,8 @@ const toc = [{
   "id": "send-transaction-with-funds",
   "level": 2
 }, {
-  "value": "Pay Gas Fees with Tokens (Non-Native)",
-  "id": "pay-gas-fees-with-tokens-non-native",
+  "value": "Pay Gas Fees with ERC-20 Tokens",
+  "id": "pay-gas-fees-with-erc-20-tokens",
   "level": 2
 }, {
   "value": "Send Batch Transactions (Multicall)",
@@ -1636,8 +1636,8 @@ function _createMdxContent(props) {
         children: "// Send 1 USDT to the recipient address\nconst txHash = await pushChainClient.universal.sendTransaction({\n  to: '0xRecipientAddress', // The recipient address on Push Chain\n  data: data, // pass this if you want to execute a function on Push Chain as well\n  funds: {\n    amount: PushChain.utils.helpers.parseUnits('1', 6), // 1 USDT\n    token: client.moveable.token.USDT, // MoveableToken accessor from client\n  },\n});\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.h2, {
-      id: "pay-gas-fees-with-tokens-non-native",
-      children: "Pay Gas Fees with Tokens (Non-Native)"
+      id: "pay-gas-fees-with-erc-20-tokens",
+      children: "Pay Gas Fees with ERC-20 Tokens"
     }), "\n", (0,jsx_runtime.jsxs)(_components.p, {
       children: ["You can pay the origin-chain gas and Push Chain settlement fees using supported ERC-20 tokens (e.g., USDT) instead of the native coin. Use the ", (0,jsx_runtime.jsx)(_components.code, {
         children: "funds.payWith"
