@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "Больше от Push Chain",
+        "follow-button": "Подписаться",
+        "read-more": "Читать далее"
+      },
+      "list": {
+        "recent-updates": "Последние обновления",
+        "page-title": "Страница {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "Навигация по страницам блога",
+        "newer-entries": "Более новые записи",
+        "older-entries": "Более ранние записи"
+      },
+      "footer-item": {
+        "share-title": "Присоединяйтесь к обсуждению, поделившись этой статьей",
+        "share-button": "Поделиться",
+        "share-modal-title": "Поделиться",
+        "copy-link": "Копировать ссылку",
+        "about-title": "О Push Chain",
+        "about-description": "Push Chain – это первый универсальный блокчейн, разработанный для устранения фрагментации между всеми сетями. Он позволяет разработчикам развертывать приложения один раз и мгновенно делать их доступными для пользователей в любой сети, будь то EVM или non-EVM (включая Ethereum, Solana, Bitcoin и другие). Это 100% EVM-совместимый блокчейн на основе Proof of Stake (PoS), который позволяет пользователям взаимодействовать с приложениями, развернутыми в Push Chain, так же, как они взаимодействуют с приложениями в своей собственной сети.",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "Linkedin"
+      }
+    }
+  }
+}
