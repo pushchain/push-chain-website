@@ -49,17 +49,72 @@ function removeFile(filePath) {
   }
 }
 
+function resetTranslateMeta() {
+  const translationMetaFile = path.join(__dirname, 'translatemeta.json');
+  
+  try {
+    if (fs.existsSync(translationMetaFile)) {
+      const metaContent = JSON.parse(fs.readFileSync(translationMetaFile, 'utf8'));
+      
+      // Reset language chunks while preserving English chunk structure
+      if (metaContent.languageChunks) {
+        for (const languageCode of Object.keys(metaContent.languageChunks)) {
+          if (languageCode !== 'en') { // Preserve English if it exists
+            for (const chunkFile of Object.keys(metaContent.languageChunks[languageCode])) {
+              // Reset chunk-level translation status
+              metaContent.languageChunks[languageCode][chunkFile].translated = false;
+              metaContent.languageChunks[languageCode][chunkFile].checksum = null;
+              metaContent.languageChunks[languageCode][chunkFile].lastUpdated = null;
+              
+              // Reset all key-level translation status if exists
+              if (metaContent.languageChunks[languageCode][chunkFile].keys) {
+                for (const keyPath of Object.keys(metaContent.languageChunks[languageCode][chunkFile].keys)) {
+                  metaContent.languageChunks[languageCode][chunkFile].keys[keyPath].translated = false;
+                  metaContent.languageChunks[languageCode][chunkFile].keys[keyPath].checksum = null;
+                  metaContent.languageChunks[languageCode][chunkFile].keys[keyPath].lastUpdated = null;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      // Reset translation generation status
+      if (metaContent.translations && metaContent.translations.generated) {
+        for (const languageCode of Object.keys(metaContent.translations.generated)) {
+          if (languageCode !== 'en') {
+            metaContent.translations.generated[languageCode] = false;
+          }
+        }
+      }
+      
+      // Save the reset metadata
+      fs.writeFileSync(translationMetaFile, JSON.stringify(metaContent, null, 2), 'utf8');
+      log('✅ Reset: translatemeta.json (preserved English chunks, reset all translations)', 'green');
+      return true;
+    } else {
+      log('⚠️  Not found: translatemeta.json', 'yellow');
+      return false;
+    }
+  } catch (error) {
+    log(`❌ Error resetting translatemeta.json: ${error.message}`, 'red');
+    return false;
+  }
+}
+
 function main() {
-  log('🧹 Starting translation nuke process...', 'cyan');
+  log('🧹 Starting enhanced translation nuke process...', 'cyan');
+  log('   Enhanced for key-level tracking support', 'gray');
   log('', 'reset');
 
   const localesDir = path.join(__dirname, 'static', 'locales');
-  const translationMetaFile = path.join(__dirname, 'translatemeta.json');
-
+  
   let removedDirectories = 0;
   let totalDirectories = 0;
+  let removedFiles = 0;
+  let totalFiles = 0;
 
-  // Remove all autotranslate directories
+  // Remove all autotranslate directories and translation.json files
   if (fs.existsSync(localesDir)) {
     const languageDirs = fs
       .readdirSync(localesDir, { withFileTypes: true })
@@ -67,44 +122,67 @@ function main() {
       .map((dirent) => dirent.name);
 
     for (const langDir of languageDirs) {
-      const autotranslateDir = path.join(localesDir, langDir, 'autotranslate');
+      if (langDir === 'en') {
+        log(`⏭️  Skipping: ${langDir} (English source preserved)`, 'blue');
+        continue;
+      }
+      
+      const langPath = path.join(localesDir, langDir);
+      const autotranslateDir = path.join(langPath, 'autotranslate');
+      const translationFile = path.join(langPath, 'translation.json');
+      
       totalDirectories++;
+      totalFiles++;
 
+      // Remove autotranslate directory
       if (removeDirectory(autotranslateDir)) {
-        log(`✅ Removed: ${langDir}/autotranslate`, 'green');
+        log(`✅ Removed: ${langDir}/autotranslate/`, 'green');
         removedDirectories++;
       } else {
-        log(`⚠️  Not found: ${langDir}/autotranslate`, 'yellow');
+        log(`⚠️  Not found: ${langDir}/autotranslate/`, 'yellow');
+      }
+      
+      // Remove translation.json file
+      if (removeFile(translationFile)) {
+        log(`✅ Removed: ${langDir}/translation.json`, 'green');
+        removedFiles++;
+      } else {
+        log(`⚠️  Not found: ${langDir}/translation.json`, 'yellow');
       }
     }
   } else {
     log('⚠️  Locales directory not found', 'yellow');
   }
 
-  // Remove translatemeta.json
-  const metaFileRemoved = removeFile(translationMetaFile);
-  if (metaFileRemoved) {
-    log('✅ Removed: translatemeta.json', 'green');
-  } else {
-    log('⚠️  Not found: translatemeta.json', 'yellow');
-  }
+  // Reset translatemeta.json (preserve structure, reset translation status)
+  const metaFileReset = resetTranslateMeta();
 
   log('', 'reset');
-  log('📊 Summary:', 'bold');
+  log('📊 Enhanced Nuke Summary:', 'bold');
   log(
     `   • Autotranslate directories removed: ${removedDirectories}/${totalDirectories}`,
     'cyan'
   );
   log(
-    `   • Translation metadata cleaned: ${metaFileRemoved ? 'Yes' : 'No'}`,
+    `   • Translation.json files removed: ${removedFiles}/${totalFiles}`,
+    'cyan'
+  );
+  log(
+    `   • Translation metadata reset: ${metaFileReset ? 'Yes' : 'No'}`,
+    'cyan'
+  );
+  log(
+    `   • Key-level tracking preserved: ${metaFileReset ? 'Yes' : 'N/A'}`,
     'cyan'
   );
   log('', 'reset');
   
-  if (removedDirectories > 0 || metaFileRemoved) {
-    log('🎉 Translation nuke completed successfully!', 'green');
-    log('   All auto-translated content has been removed.', 'green');
-    log('   English (en) source translations are preserved.', 'green');
+  if (removedDirectories > 0 || removedFiles > 0 || metaFileReset) {
+    log('🎉 Enhanced translation nuke completed successfully!', 'green');
+    log('   ✅ All auto-translated content removed', 'green');
+    log('   ✅ English (en) source translations preserved', 'green');
+    log('   ✅ Enhanced key-level tracking structure preserved', 'green');
+    log('   ✅ Translation progress reset for fresh start', 'green');
   } else {
     log('ℹ️  No auto-translated content found to remove.', 'blue');
   }
@@ -116,7 +194,15 @@ function main() {
     'cyan'
   );
   log(
+    '   • Enhanced system will only translate changed/new keys',
+    'cyan'
+  );
+  log(
     '   • Or run "yarn translations:generate:force" to nuke and regenerate',
+    'cyan'
+  );
+  log(
+    '   • Use "node upgrade-translatemeta.mjs" to upgrade to key-level tracking',
     'cyan'
   );
 }

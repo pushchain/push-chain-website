@@ -1,72 +1,7 @@
 {
   "header": {
     "meta": {
-      "hamburger-menu-alt": "Abrir menú de navegación"
-    },
-    "logo": {
-      "imagealt": "Imagen del logo de Push Chain"
-    },
-    "testnet": {
-      "title": "Prueba de red",
-      "link1": {},
-      "link2": {}
-    },
-    "developers": {
-      "title": "Desarrolladores",
-      "link1": {},
-      "link2": {},
-      "link3": {
-        "subtext": "Guías paso a paso para construir con Push",
-        "title": "Aprende con tutoriales prácticos - Crea tu primera aplicación universal en Push Chain"
-      },
-      "link4": {
-        "title": "Explora el código fuente de Push Chain y las herramientas de desarrollo en GitHub"
-      },
-      "link5": {}
-    },
-    "community": {
-      "link1": {
-        "text": "Base de Conocimientos",
-        "title": "Explora la documentación integral de Push Chain y las guías de características"
-      },
-      "link2": {
-        "subtext": "Moneda nativa que impulsa todo en Push Chain"
-      },
-      "link3": {},
-      "link4": {},
-      "link5": {}
-    },
-    "resources": {
-      "link1": {
-        "subtext": "Actualizaciones, profundas penetraciones y historias de desarrollo"
-      },
-      "link2": {},
-      "link3": {
-        "text": "Preguntas Frecuentes"
-      }
-    },
-    "language": {
-      "title": "Idioma",
-      "aria-label": "Selección de idioma"
-    },
-    "app-button": {
-      "title": "Acceda a Push Portal - Gane puntos como desarrollador, usuario o validador"
-    },
-    "explore": {
-      "link1": {
-        "text": "Comenzar"
-      },
-      "link2": {
-        "subtext": "Configura el entorno de desarrollo en segundos"
-      },
-      "link3": {},
-      "link4": {},
-      "link5": {
-        "subtext": "Conéctese con la comunidad de desarrolladores"
-      },
-      "link6": {
-        "text": "Explorar Ejemplos"
-      }
+      "language-icon-alt": "Icono de selección de idioma"
     }
   }
 }

@@ -251,21 +251,21 @@ async function generatePNGImage(imagePath, title) {
 
   if (subTitle && subTitle.includes('_')) {
     // Convert # to : for the top left title
-    let formattedSubTitle = subTitle.replace(/_/g, ':');
-    formattedSubTitle = formattedSubTitle.replaceAll('::', ':');
-    formattedSubTitle = formattedSubTitle.replaceAll(':', '/');
-    formattedSubTitle = formattedSubTitle.replaceAll('/section', '');
+    // let formattedSubTitle = subTitle.replace(/_/g, ':');
+    // formattedSubTitle = formattedSubTitle.replaceAll('::', ':');
+    // formattedSubTitle = formattedSubTitle.replaceAll(':', '/');
+    // formattedSubTitle = formattedSubTitle.replaceAll('/section', '');
 
     // load font
-    const subFont = Jimp.FONT_SANS_32_BLACK;
-    const loadedSubFont = await Jimp.loadFont(subFont);
+    // const subFont = Jimp.FONT_SANS_32_BLACK;
+    // const loadedSubFont = await Jimp.loadFont(subFont);
 
     // create transparent overlay
     let overlayImage = new Jimp(1200, 630, 0x0, (err, textImage) => {
       //((0x0 = 0 = rgba(0, 0, 0, 0)) = transparent)
       if (err) throw err;
     });
-    overlayImage.print(loadedSubFont, 30, 30, formattedSubTitle);
+    // overlayImage.print(loadedSubFont, 30, 30, formattedSubTitle);
     overlayImage.color([{ apply: 'xor', params: ['#cf3fad'] }]);
 
     // Print the subTitle (top left corner)

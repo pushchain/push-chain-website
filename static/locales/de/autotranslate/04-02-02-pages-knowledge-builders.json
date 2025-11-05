@@ -4,9 +4,9 @@
       "builders": {
         "seo": {
           "title": "Builders – Anleitungen & Tutorials",
-          "description": "Schritt-für-Schritt-Anleitungen, Muster und Beispiele zur Verwendung der Push Chain Funktionen.",
+          "description": "Schritt-für-Schritt-Anleitungen, Muster und Beispiele zur Verwendung von Push Chain-Funktionen.",
           "og-title": "Builders - Anleitungen & Tutorials",
-          "og-description": "Anleitungen, bewährte Verfahren und Beispiele für das Entwickeln mit Push Chain.",
+          "og-description": "Geführte Tutorials, bewährte Verfahren und Beispiele für die Entwicklung mit Push Chain.",
           "twitter-title": "Builders - Anleitungen & Tutorials",
           "twitter-description": "Schritt-für-Schritt-Anleitungen für den erfolgreichen Start auf Push Chain."
         },
@@ -20,31 +20,34 @@
               "builders-intro": {
                 "items": {
                   "intro": "## Builders\n\nBereit, auf Push Chain zu entwickeln? Hier sind einige Ressourcen, um dich zu inspirieren und loszulegen.",
-                  "curated-reads": "## Ausgewählte Lektüre 👇"
+                  "curated-reads": "## Ausgewählte Lektüren 👇"
                 }
               },
               "universal-apps": {
                 "title": "Lasst uns universelle Apps bauen 💪",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Apps der Zukunft – Entwicklung ohne Chaos"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Consumer Apps 🫶 Blockchain?"
+                  },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "Apps Möglich Nur mit Shared State - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps Möglich Nur mit Shared State - Vol.2"
-                  },
-                  "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Consumer Apps 🫶 Blockchain?"
+                    "title": "Apps Möglich Nur Mit Shared State - Vol.2"
                   }
                 }
               },
               "developer-resources": {
-                "title": "Entwickler-Ressourcen",
+                "title": "Entwicklerressourcen",
                 "items": {
                   "developer-docs": {
-                    "title": "Entdecken Sie die Entwicklerdokumentation"
+                    "title": "Entdecke die Entwickler-Dokumentation"
                   },
                   "faucet": {
-                    "title": "Testnet Tokens bekommen"
+                    "title": "Testnet Tokens erhalten"
                   },
                   "testnet-explorer": {
                     "title": "Push Testnet Explorer"

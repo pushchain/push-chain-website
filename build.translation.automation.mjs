@@ -2386,6 +2386,99 @@ function deleteValueByPath(obj, path) {
 }
 
 /**
+ * Ensure autotranslate directory exists for a language
+ */
+async function ensureAutoTranslateDir(languageCode) {
+  const autoTranslateDir = path.join(
+    process.cwd(),
+    'static',
+    'locales',
+    languageCode,
+    'autotranslate'
+  );
+  await fs.mkdir(autoTranslateDir, { recursive: true });
+  return autoTranslateDir;
+}
+
+/**
+ * Extract all keys from a nested object with their values and paths
+ */
+function extractAllKeys(obj, prefix = '') {
+  const keys = {};
+  
+  for (const key in obj) {
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      const currentPath = prefix ? `${prefix}.${key}` : key;
+      
+      if (
+        typeof obj[key] === 'object' &&
+        obj[key] !== null &&
+        !Array.isArray(obj[key])
+      ) {
+        // Recursively extract keys from nested objects
+        Object.assign(keys, extractAllKeys(obj[key], currentPath));
+      } else {
+        // This is a leaf node (actual translatable value)
+        keys[currentPath] = {
+          value: obj[key],
+          checksum: crypto.createHash('md5').update(String(obj[key])).digest('hex')
+        };
+      }
+    }
+  }
+  
+  return keys;
+}
+
+/**
+ * Calculate checksums for all individual keys in a chunk
+ */
+function calculateKeyChecksums(chunkContent) {
+  const keys = extractAllKeys(chunkContent);
+  const keyChecksums = {};
+  
+  for (const [keyPath, keyData] of Object.entries(keys)) {
+    keyChecksums[keyPath] = {
+      checksum: keyData.checksum,
+      value: keyData.value,
+      lastUpdated: new Date().toISOString()
+    };
+  }
+  
+  return keyChecksums;
+}
+
+/**
+ * Compare key checksums and identify changed keys
+ */
+function compareKeyChecksums(currentKeys, storedKeys) {
+  const changedKeys = [];
+  const newKeys = [];
+  const deletedKeys = [];
+  
+  // Check for changed and new keys
+  for (const [keyPath, keyData] of Object.entries(currentKeys)) {
+    const storedKey = storedKeys[keyPath];
+    
+    if (!storedKey) {
+      newKeys.push(keyPath);
+    } else if (storedKey.checksum !== keyData.checksum) {
+      changedKeys.push(keyPath);
+    }
+  }
+  
+  // Check for deleted keys
+  for (const keyPath of Object.keys(storedKeys)) {
+    if (!currentKeys[keyPath]) {
+      deletedKeys.push(keyPath);
+    }
+  }
+  
+  return { changedKeys, newKeys, deletedKeys };
+}
+
+
+/**
  * Main function to automate translations with dynamic chunk-based tracking
  * @param {string[]} targetLanguages - Optional array of specific languages to process
  */
@@ -2478,21 +2571,58 @@ async function automateTranslations(targetLanguages = null) {
       }
     }
 
-    // Step 5: Detect changed chunks and update English checksums
+    // Step 5: Enhanced key-level detection and tracking
+    console.log(chalk.blue('🔍 Analyzing individual keys within chunks...'));
+    
     const changedChunks = [];
+    const chunkKeyChanges = {}; // Track which keys changed in each chunk
+    
     for (const chunkFile of chunkFiles) {
-      const currentChecksum = currentChunkChecksums[chunkFile];
-      const storedChecksum = buildMeta.enChunks[chunkFile]?.checksum;
-
-      if (currentChecksum !== storedChecksum) {
+      const chunkPath = path.join(SOURCE_CHUNKS_DIR, chunkFile);
+      const chunkContent = JSON.parse(await fs.readFile(chunkPath, 'utf8'));
+      
+      // Calculate current key checksums for this chunk
+      const currentKeyChecksums = calculateKeyChecksums(chunkContent);
+      
+      // Get stored key checksums
+      const storedChunk = buildMeta.enChunks[chunkFile];
+      const storedKeyChecksums = storedChunk?.keys || {};
+      
+      // Compare key checksums to detect changes
+      const keyChanges = compareKeyChecksums(currentKeyChecksums, storedKeyChecksums);
+      const hasKeyChanges = keyChanges.changedKeys.length > 0 || keyChanges.newKeys.length > 0 || keyChanges.deletedKeys.length > 0;
+      
+      if (hasKeyChanges) {
         changedChunks.push(chunkFile);
+        chunkKeyChanges[chunkFile] = keyChanges;
+        
         console.log(chalk.yellow(`🔄 Changed chunk detected: ${chunkFile}`));
-
-        // Update English chunk checksum
+        if (keyChanges.changedKeys.length > 0) {
+          console.log(chalk.gray(`  📝 Changed keys: ${keyChanges.changedKeys.slice(0, 3).join(', ')}${keyChanges.changedKeys.length > 3 ? ` ... and ${keyChanges.changedKeys.length - 3} more` : ''}`));
+        }
+        if (keyChanges.newKeys.length > 0) {
+          console.log(chalk.gray(`  ➕ New keys: ${keyChanges.newKeys.slice(0, 3).join(', ')}${keyChanges.newKeys.length > 3 ? ` ... and ${keyChanges.newKeys.length - 3} more` : ''}`));
+        }
+        if (keyChanges.deletedKeys.length > 0) {
+          console.log(chalk.gray(`  🗑️ Deleted keys: ${keyChanges.deletedKeys.slice(0, 3).join(', ')}${keyChanges.deletedKeys.length > 3 ? ` ... and ${keyChanges.deletedKeys.length - 3} more` : ''}`));
+        }
+        
+        // Update English chunk with new structure
         buildMeta.enChunks[chunkFile] = {
-          checksum: currentChecksum,
+          checksum: currentChunkChecksums[chunkFile], // Overall chunk checksum
           lastUpdated: new Date().toISOString(),
+          keys: currentKeyChecksums // Individual key tracking
         };
+      } else {
+        // No key changes, but ensure we have the enhanced structure
+        if (!storedChunk?.keys) {
+          console.log(chalk.gray(`📋 Upgrading ${chunkFile} to enhanced key tracking...`));
+          buildMeta.enChunks[chunkFile] = {
+            checksum: currentChunkChecksums[chunkFile],
+            lastUpdated: storedChunk?.lastUpdated || new Date().toISOString(),
+            keys: currentKeyChecksums
+          };
+        }
       }
     }
 
@@ -2509,20 +2639,48 @@ async function automateTranslations(targetLanguages = null) {
         )
       );
 
-      // Step 6: ONLY invalidate translations for chunks that actually changed
+      // Step 6: Enhanced key-level invalidation for changed chunks
       for (const chunkFile of changedChunks) {
+        const keyChanges = chunkKeyChanges[chunkFile];
+        
         for (const languageCode of Object.keys(SUPPORTED_LANGUAGES)) {
-          // Mark this specific changed chunk as needing translation
-          buildMeta.languageChunks[languageCode][chunkFile].translated = false;
-          buildMeta.languageChunks[languageCode][chunkFile].checksum = null;
-          buildMeta.languageChunks[languageCode][chunkFile].lastUpdated = null;
+          // Initialize key tracking for this language chunk if not exists
+          if (!buildMeta.languageChunks[languageCode][chunkFile].keys) {
+            buildMeta.languageChunks[languageCode][chunkFile].keys = {};
+          }
+          
+          // Mark specific changed/new keys as needing translation
+          const keysToInvalidate = [...keyChanges.changedKeys, ...keyChanges.newKeys];
+          
+          for (const keyPath of keysToInvalidate) {
+            buildMeta.languageChunks[languageCode][chunkFile].keys[keyPath] = {
+              translated: false,
+              checksum: null,
+              lastUpdated: null
+            };
+          }
+          
+          // Remove deleted keys from language tracking
+          for (const keyPath of keyChanges.deletedKeys) {
+            delete buildMeta.languageChunks[languageCode][chunkFile].keys[keyPath];
+          }
+          
+          // Update chunk-level status
+          const allKeysTranslated = Object.values(buildMeta.languageChunks[languageCode][chunkFile].keys)
+            .every(keyData => keyData.translated);
+          
+          buildMeta.languageChunks[languageCode][chunkFile].translated = allKeysTranslated;
+          buildMeta.languageChunks[languageCode][chunkFile].checksum = allKeysTranslated ? 
+            buildMeta.enChunks[chunkFile].checksum : null;
+          buildMeta.languageChunks[languageCode][chunkFile].lastUpdated = allKeysTranslated ? 
+            new Date().toISOString() : null;
 
-          // Mark language as needing deployment (combination) when chunks change
+          // Mark language as needing deployment when chunks change
           buildMeta.translations.generated[languageCode] = false;
 
           console.log(
             chalk.gray(
-              `  ↳ Invalidated ${languageCode}/${chunkFile} (chunk changed)`
+              `  ↳ Invalidated ${keysToInvalidate.length} keys in ${languageCode}/${chunkFile}`
             )
           );
         }
@@ -2587,12 +2745,57 @@ async function automateTranslations(targetLanguages = null) {
           buildMeta.languageChunks[languageCode] = {};
         }
 
-        // Determine which chunks need translation for this language
+        // Enhanced key-level determination of what needs translation
         const chunksToTranslate = [];
+        const chunkKeysToTranslate = {}; // Track specific keys per chunk
+        
         for (const chunkFile of chunkFiles) {
           const chunkStatus = buildMeta.languageChunks[languageCode][chunkFile];
+          const enChunkKeys = buildMeta.enChunks[chunkFile]?.keys || {};
+          
+          // Check if chunk needs translation (either not translated or has untranslated keys)
+          let needsTranslation = false;
+          let keysToTranslate = [];
+          
           if (!chunkStatus || !chunkStatus.translated) {
+            // Chunk is not translated at all
+            needsTranslation = true;
+            if (chunkStatus?.keys && Object.keys(enChunkKeys).length > 0) {
+              // Use key-level tracking to find specific keys
+              for (const keyPath of Object.keys(enChunkKeys)) {
+                const keyStatus = chunkStatus.keys[keyPath];
+                if (!keyStatus || !keyStatus.translated) {
+                  keysToTranslate.push(keyPath);
+                }
+              }
+            } else {
+              // No key-level tracking, translate entire chunk
+              keysToTranslate = 'all';
+            }
+          } else if (chunkStatus.keys && Object.keys(enChunkKeys).length > 0) {
+            // Chunk is marked as translated, but check individual keys
+            for (const keyPath of Object.keys(enChunkKeys)) {
+              const keyStatus = chunkStatus.keys[keyPath];
+              if (!keyStatus || !keyStatus.translated) {
+                keysToTranslate.push(keyPath);
+              }
+            }
+            
+            if (keysToTranslate.length > 0) {
+              needsTranslation = true;
+              console.log(chalk.yellow(`  🔍 ${chunkFile}: chunk marked translated but ${keysToTranslate.length} keys need translation`));
+            }
+          }
+          
+          if (needsTranslation) {
             chunksToTranslate.push(chunkFile);
+            chunkKeysToTranslate[chunkFile] = keysToTranslate;
+            
+            if (Array.isArray(keysToTranslate)) {
+              console.log(chalk.gray(`  🔑 ${chunkFile}: ${keysToTranslate.length} keys need translation`));
+            } else {
+              console.log(chalk.gray(`  📦 ${chunkFile}: full chunk needs translation`));
+            }
           }
         }
 
@@ -2610,15 +2813,8 @@ async function automateTranslations(targetLanguages = null) {
             )
           );
 
-          // Create autotranslate directory for this language
-          const autoTranslateDir = path.join(
-            process.cwd(),
-            'static',
-            'locales',
-            languageCode,
-            'autotranslate'
-          );
-          await fs.mkdir(autoTranslateDir, { recursive: true });
+          // Ensure autotranslate directory exists for this language
+          const autoTranslateDir = await ensureAutoTranslateDir(languageCode);
 
           let allChunksSuccess = true;
 
@@ -2636,32 +2832,26 @@ async function automateTranslations(targetLanguages = null) {
                 await fs.readFile(chunkPath, 'utf8')
               );
 
-              // Check if using local AI - if so, process keys one by one
+              // Enhanced key-level translation with tracking
+              const keysToTranslate = chunkKeysToTranslate[chunkFile];
               const isLocalAI = process.env.AI_PROVIDER === 'local';
+              const useKeyLevelTranslation = keysToTranslate !== 'all' && Array.isArray(keysToTranslate);
 
-              if (isLocalAI) {
+              if (useKeyLevelTranslation) {
                 console.log(
                   chalk.cyan(
-                    `🔑 Local AI detected - processing ${chunkFile} keys one by one...`
+                    `🔑 Processing ${keysToTranslate.length} specific keys in ${chunkFile}...`
                   )
-                );
-
-                // Get all keys from the chunk
-                const allKeys = getAllKeys(chunkContent);
-                console.log(
-                  chalk.gray(`   Found ${allKeys.length} keys to translate`)
                 );
 
                 let combinedTranslation = {};
                 let successCount = 0;
                 let failCount = 0;
 
-                // Process each key individually
-                for (let k = 0; k < allKeys.length; k++) {
-                  const keyPath = allKeys[k];
-                  const keyProgress = `${chunkProgress}[${k + 1}/${
-                    allKeys.length
-                  }]`;
+                // Process each specific key that needs translation
+                for (let k = 0; k < keysToTranslate.length; k++) {
+                  const keyPath = keysToTranslate[k];
+                  const keyProgress = `${chunkProgress}[${k + 1}/${keysToTranslate.length}]`;
 
                   console.log(chalk.gray(`   ${keyProgress} 🔄 ${keyPath}`));
 
@@ -2674,27 +2864,34 @@ async function automateTranslations(targetLanguages = null) {
                     setValueByPath(singleKeyObject, keyPath, englishValue);
 
                     // Translate this single key
-                    const translatedSingle =
-                      await translateContentWithValidation(
-                        singleKeyObject,
-                        languageCode,
-                        languageName
-                      );
+                    const translatedSingle = await translateContentWithValidation(
+                      singleKeyObject,
+                      languageCode,
+                      languageName
+                    );
 
                     // Extract the translated value and set it in the combined translation
-                    const translatedValue = getValueByPath(
-                      translatedSingle,
-                      keyPath
-                    );
-                    setValueByPath(
-                      combinedTranslation,
-                      keyPath,
-                      translatedValue
+                    const translatedValue = getValueByPath(translatedSingle, keyPath);
+                    setValueByPath(combinedTranslation, keyPath, translatedValue);
+
+                    // Update key-level tracking
+                    const enKeyData = buildMeta.enChunks[chunkFile].keys[keyPath];
+                    buildMeta.languageChunks[languageCode][chunkFile].keys[keyPath] = {
+                      translated: true,
+                      checksum: enKeyData.checksum,
+                      lastUpdated: new Date().toISOString()
+                    };
+
+                    // Save progress immediately after each successful key translation
+                    await fs.writeFile(
+                      BUILD_META_FILE,
+                      JSON.stringify(buildMeta, null, 2),
+                      'utf8'
                     );
 
                     console.log(
                       chalk.green(
-                        `   ${keyProgress} ✅ ${keyPath} → "${translatedValue}"`
+                        `   ${keyProgress} ✅ ${keyPath} → "${translatedValue}" (saved)`
                       )
                     );
                     successCount++;
@@ -2714,16 +2911,123 @@ async function automateTranslations(targetLanguages = null) {
                   )
                 );
 
-                // Save the translated chunk
-                const translatedChunkPath = path.join(
-                  autoTranslateDir,
-                  chunkFile
-                );
+                // Ensure directory exists and save the translated chunk (partial or complete)
+                await ensureAutoTranslateDir(languageCode);
+                const translatedChunkPath = path.join(autoTranslateDir, chunkFile);
                 await fs.writeFile(
                   translatedChunkPath,
                   JSON.stringify(combinedTranslation, null, 2),
                   'utf8'
                 );
+                
+                // Update chunk-level status based on key completion
+                const allKeysTranslated = Object.values(buildMeta.languageChunks[languageCode][chunkFile].keys)
+                  .every(keyData => keyData.translated);
+                
+                buildMeta.languageChunks[languageCode][chunkFile].translated = allKeysTranslated;
+                buildMeta.languageChunks[languageCode][chunkFile].checksum = allKeysTranslated ? 
+                  buildMeta.enChunks[chunkFile].checksum : null;
+                buildMeta.languageChunks[languageCode][chunkFile].lastUpdated = allKeysTranslated ? 
+                  new Date().toISOString() : null;
+              } else if (isLocalAI) {
+                console.log(
+                  chalk.cyan(
+                    `🔑 Local AI detected - processing all ${chunkFile} keys one by one...`
+                  )
+                );
+
+                // Get all keys from the chunk
+                const allKeys = extractAllKeys(chunkContent);
+                const allKeyPaths = Object.keys(allKeys);
+                console.log(
+                  chalk.gray(`   Found ${allKeyPaths.length} keys to translate`)
+                );
+
+                let combinedTranslation = {};
+                let successCount = 0;
+                let failCount = 0;
+
+                // Initialize key tracking if not exists
+                if (!buildMeta.languageChunks[languageCode][chunkFile].keys) {
+                  buildMeta.languageChunks[languageCode][chunkFile].keys = {};
+                }
+
+                // Process each key individually
+                for (let k = 0; k < allKeyPaths.length; k++) {
+                  const keyPath = allKeyPaths[k];
+                  const keyProgress = `${chunkProgress}[${k + 1}/${allKeyPaths.length}]`;
+
+                  console.log(chalk.gray(`   ${keyProgress} 🔄 ${keyPath}`));
+
+                  try {
+                    // Get the English value for this specific key
+                    const englishValue = getValueByPath(chunkContent, keyPath);
+
+                    // Create a minimal object with just this one key
+                    const singleKeyObject = {};
+                    setValueByPath(singleKeyObject, keyPath, englishValue);
+
+                    // Translate this single key
+                    const translatedSingle = await translateContentWithValidation(
+                      singleKeyObject,
+                      languageCode,
+                      languageName
+                    );
+
+                    // Extract the translated value and set it in the combined translation
+                    const translatedValue = getValueByPath(translatedSingle, keyPath);
+                    setValueByPath(combinedTranslation, keyPath, translatedValue);
+
+                    // Update key-level tracking
+                    const enKeyData = buildMeta.enChunks[chunkFile].keys[keyPath];
+                    buildMeta.languageChunks[languageCode][chunkFile].keys[keyPath] = {
+                      translated: true,
+                      checksum: enKeyData.checksum,
+                      lastUpdated: new Date().toISOString()
+                    };
+
+                    // Save progress immediately after each successful key translation
+                    await fs.writeFile(
+                      BUILD_META_FILE,
+                      JSON.stringify(buildMeta, null, 2),
+                      'utf8'
+                    );
+
+                    console.log(
+                      chalk.green(
+                        `   ${keyProgress} ✅ ${keyPath} → "${translatedValue}" (saved)`
+                      )
+                    );
+                    successCount++;
+                  } catch (error) {
+                    console.log(
+                      chalk.red(
+                        `   ${keyProgress} ❌ ${keyPath} - ${error.message}`
+                      )
+                    );
+                    failCount++;
+                  }
+                }
+
+                console.log(
+                  chalk.blue(
+                    `   📊 ${chunkFile}: ${successCount} success, ${failCount} failed`
+                  )
+                );
+
+                // Ensure directory exists and save the translated chunk
+                await ensureAutoTranslateDir(languageCode);
+                const translatedChunkPath = path.join(autoTranslateDir, chunkFile);
+                await fs.writeFile(
+                  translatedChunkPath,
+                  JSON.stringify(combinedTranslation, null, 2),
+                  'utf8'
+                );
+                
+                // Update chunk-level status
+                buildMeta.languageChunks[languageCode][chunkFile].translated = true;
+                buildMeta.languageChunks[languageCode][chunkFile].checksum = buildMeta.enChunks[chunkFile].checksum;
+                buildMeta.languageChunks[languageCode][chunkFile].lastUpdated = new Date().toISOString();
               } else if (isChunkTooLarge(chunkContent)) {
                 console.log(
                   chalk.yellow(
@@ -2768,7 +3072,8 @@ async function automateTranslations(targetLanguages = null) {
                   );
                 }
 
-                // Save combined translated chunk
+                // Ensure directory exists and save combined translated chunk
+                await ensureAutoTranslateDir(languageCode);
                 const translatedChunkPath = path.join(
                   autoTranslateDir,
                   chunkFile
@@ -2792,7 +3097,8 @@ async function automateTranslations(targetLanguages = null) {
                   languageName
                 );
 
-                // Save translated chunk to autotranslate directory
+                // Ensure directory exists and save translated chunk to autotranslate directory
+                await ensureAutoTranslateDir(languageCode);
                 const translatedChunkPath = path.join(
                   autoTranslateDir,
                   chunkFile

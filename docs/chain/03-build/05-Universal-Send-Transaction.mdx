@@ -268,6 +268,43 @@ const txHash = await pushChainClient.universal.sendTransaction({
 });
 ```
 
+## Pay Gas Fees with ERC-20 Tokens
+
+You can pay the origin-chain gas and Push Chain settlement fees using supported ERC-20 tokens (e.g., USDT) instead of the native coin. Use the `funds.payWith` field to specify the token to pay fees with.
+
+```typescript
+// Pay gas with USDT while bridging 1 USDT and calling a contract on Push Chain
+const COUNTER_ABI = [
+  { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+];
+
+const COUNTER_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
+const data = PushChain.utils.helpers.encodeTxData({
+  abi: COUNTER_ABI,
+  functionName: 'increment',
+});
+
+const usdt = client.moveable.token.USDT; // ERC-20 on the origin chain
+
+const res = await client.universal.sendTransaction({
+  to: COUNTER_ADDRESS,
+  value: 0n,
+  data,
+  funds: {
+    amount: BigInt(100000),        // bridge 1 USDT
+    token: usdt,              // move USDT to Push Chain
+    payWith: {
+      token: client.payable.token.USDT, // pay gas with USDT instead of native ETH
+    },
+  },
+});
+
+await res.wait();
+```
+
+Notes:
+- Ensure the account holds sufficient balance of the selected `payWith.token` on the origin chain to cover gas and settlement fees.
+
 ## Send Batch Transactions (Multicall)
 
 You can batch multiple calls into a single transaction on Push Chain. This pattern is commonly referred to as **Multicall** in EVM ecosystems.

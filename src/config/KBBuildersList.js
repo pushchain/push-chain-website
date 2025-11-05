@@ -78,7 +78,7 @@ export const KBBuildersList = {
           image: '/static/assets/website/chain/knowledge/developer-docs',
           imageSrcSet: false,
           title: 'Explore Developer Documentation',
-          url: '/docs/developer-docs',
+          url: '/docs/',
           target: '_blank',
         },
         {
