@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {},
+      "header": {
+        "title": "Tweet über Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {},
+                "builders": {},
+                "ui-kit": {
+                  "title": "UI-Kit",
+                  "subtitle": "Integriere jede React-basierte App in weniger als 5 Minuten."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

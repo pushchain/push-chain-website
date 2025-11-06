@@ -1,0 +1,11 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "Déployez le projet G.U.D ! Le déployathon est en marche et les prix sont de $5000",
+      "button-text": "Allez Universel et Déployer",
+      "button-aria-label": "Projet G.U.D déployathon est EN LIGNE. Vous pouvez le consulter ici.",
+      "close-button-title": "Fermer la notification de testnet",
+      "close-button-aria-label": "Fermer la notification de testnet de Push Chain"
+    }
+  }
+}

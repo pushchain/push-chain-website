@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "빌더 — 사용법 및 튜토리얼",
+          "description": "Push Chain 기능을 사용하는 단계별 가이드, 패턴, 예시입니다.",
+          "og-title": "Builders - 방법 및 튜토리얼",
+          "og-description": "Push Chain을 사용한 빌드에 대한 가이드 튜토리얼, 모범 사례 및 예제.",
+          "twitter-title": "빌더 - 사용법 및 튜토리얼",
+          "twitter-description": "Push Chain에서 시작하는 단계별 가이드입니다."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "지식 기반"
+          },
+          "blocks": {
+            "title": "Push Chain에서 구축하기",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain에서 빌딩할 준비가 되셨나요? 영감을 얻고 시작하는 데 도움이 되는 몇 가지 자료를 모아봤습니다.",
+                  "curated-reads": "## 엄선된 자료 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "유니버설 앱을 만들어 봅시다 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "공유 상태에서만 가능한 앱 - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "공유 상태로만 가능한 앱 - Vol.2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "소비자 앱이 Push Chain에서 구축될 수 있을까요?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "개발자 자료",
+                "items": {
+                  "developer-docs": {
+                    "title": "개발자 문서 살펴보기"
+                  },
+                  "faucet": {
+                    "title": "테스트넷 토큰 받기"
+                  },
+                  "testnet-explorer": {
+                    "title": "Donut Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

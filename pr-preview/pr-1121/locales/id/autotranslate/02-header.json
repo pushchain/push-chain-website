@@ -1,0 +1,127 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Beralih ke halaman utama",
+      "language-icon-alt": "Ikon pilihan bahasa",
+      "hamburger-menu-alt": "Buka menu navigasi",
+      "testnet-badge-alt": "Testnet Push Chain Donut - Lihat status testnet"
+    },
+    "logo": {
+      "imagealt": "Logo Push Chain",
+      "imagetitle": "Logo Push Chain",
+      "ctatitle": "Navigasikan ke Push Chain homepage"
+    },
+    "testnet": {
+      "aria-label": "Sesawangan Uji",
+      "link1": {
+        "subtext": "Pengelola Blok untuk Chain Push",
+        "title": "Eksplorasi Transaksi dan Blok Testnet Push Chain di Push Scan"
+      },
+      "link2": {
+        "text": "Fasilitas Air",
+        "title": "Dapatkan token tes gratis untuk pengembangan Push Chain"
+      }
+    },
+    "developers": {
+      "title": "Pengembang",
+      "aria-label": "Bagian Pengembang",
+      "link1": {
+        "subtext": "Pengenalan untuk membangun di Push Chain"
+      },
+      "link2": {
+        "text": "Mulai Cepat",
+        "subtext": "Atur lingkungan dev dalam beberapa detik",
+        "title": "Petunjuk cepat - Bangun lingkungan pengembangan Push Chain secara instan"
+      },
+      "link3": {
+        "text": "Panduan"
+      },
+      "link4": {
+        "text": "GitHub",
+        "title": "Explore source code dan alat pengembangan Push Chain di GitHub"
+      },
+      "link5": {
+        "subtext": "Hubungi komunitas dev",
+        "title": "Join Push Chain developer community on Discord untuk dukungan dan kerja sama"
+      }
+    },
+    "community": {
+      "title": "Masyarakat",
+      "link1": {
+        "text": "Basis Pengetahuan",
+        "subtext": "Temukan ulasan mendalam tentang fitur"
+      },
+      "link2": {
+        "text": "Tokenomik",
+        "title": "Pelajari tentang Push Chain tokenomics dan utilitas $PC token"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "Ikuti update dan berita ekosistem",
+        "title": "Ikuti Push Chain di X (Twitter) untuk berita terbaru dan pengumuman terkini"
+      },
+      "link4": {
+        "title": "Bergabung dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
+      },
+      "link5": {
+        "subtext": "Gabung dalam diskusi dan tetap update"
+      }
+    },
+    "resources": {
+      "title": "Sumber Daya",
+      "aria-label": "Bagian Sumber Daya",
+      "link1": {
+        "subtext": "Perbarui, analisis mendalam, dan cerita pengembang",
+        "title": "Baca blog Push Chain untuk update terbaru, analisis teknis, dan cerita pengembang"
+      },
+      "link2": {
+        "subtext": "Visi dan teknologi, dijelaskan dengan sederhana",
+        "title": "Baca Dokumen Litepaper Push Chain - visi dan gambaran teknis yang disederhanakan"
+      },
+      "link3": {
+        "subtext": "Jawaban cepat untuk pertanyaan umum",
+        "title": "Browse frequently asked questions tentang Push Chain"
+      }
+    },
+    "language": {
+      "title": "Bahasa",
+      "aria-label": "Pemilihan Bahasa Dropdown"
+    },
+    "app-button": {
+      "title": "Akses Push Portal - Dapatkan poin sebagai pengembang, pengguna, atau validator"
+    },
+    "explore": {
+      "title": "Eksplorasi",
+      "aria-label": "Bagian Eksplorasi",
+      "link1": {
+        "text": "Mulai Berikutnya",
+        "subtext": "Pendahuluan Pembangunan di Push Chain"
+      },
+      "link2": {
+        "text": "Mulai Cepat",
+        "subtext": "Setup dev environment dalam beberapa detik",
+        "title": "Pemula Cepat"
+      },
+      "link3": {
+        "text": "Tutorial",
+        "subtext": "Petunjuk Langkah demi Langkah untuk Membangun dengan Push",
+        "title": "Pelajari dengan tutorial"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "Lihat kode inti dan alat-alat terbuka sumber",
+        "title": "Eksplorasi Push Chain"
+      },
+      "link5": {
+        "text": "Developer Discord",
+        "subtext": "Hubungi komunitas dev",
+        "title": "Bergabung dengan Discord"
+      },
+      "link6": {
+        "text": "Eksplor Contoh",
+        "subtext": "Eksplor Contoh",
+        "title": "Eksplorasi Contoh"
+      }
+    }
+  }
+}

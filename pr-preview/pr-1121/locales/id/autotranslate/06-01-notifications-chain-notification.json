@@ -1,0 +1,13 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "Proyek G.U.D deployathon sudah ONLINE! Deploy aplikasi, menang $5000",
+      "button-text": "Bergabung & Mengaktifkan",
+      "button-title": "Proyek G.U.D deployathon LIVE",
+      "button-aria-label": "Proyek G.U.D deployathon LIVE. Kamu bisa cek di sini",
+      "image-alt": "Push Chain Tesnet Donut - Blok Keterampilan Seimbang",
+      "close-button-aria-label": "Tutup Notifikasi Jaringan Blockchain",
+      "container-aria-label": "Notifikasi jaringan Push Chain uji coba"
+    }
+  }
+}
