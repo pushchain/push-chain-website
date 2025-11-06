@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[35884],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[55682],{
 
 /***/ 28453:
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
@@ -96,34 +96,34 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 134211:
+/***/ 51360:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-8fef209b02018162b80d8fdc5ee94416.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-e9b379d6d266d806f85aa1f4fef626c9.webp");
 
 /***/ }),
 
-/***/ 149540:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-8fef209b02018162b80d8fdc5ee94416.webp");
-
-/***/ }),
-
-/***/ 478916:
+/***/ 371659:
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1115/blog/getting-started-with-push-sdk-rest-api","source":"@site/blog/2023-02-01-getting-started-with-push/index.md","title":"Getting Started With Push SDK REST API⚙️","description":"Cover image of Getting Started With Push SDK REST API⚙️","date":"2023-02-01T00:00:00.000Z","tags":[{"inline":true,"label":"Web3","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/web-3"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/blockchain"},{"inline":true,"label":"SDK","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/sdk"},{"inline":true,"label":"Push Notification Service","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/push-notification-service"},{"inline":true,"label":"Developer","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/developer"}],"readingTime":5.36,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1115/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1115/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"getting-started-with-push-sdk-rest-api","title":"Getting Started With Push SDK REST API⚙️","authors":["push"],"image":"./cover-image.webp","text":"The PUSH-SDK, is a growing JavaScript-based SDK that allows developers to add push notification functionality to their dapps.","tags":["Web3","Blockchain","SDK","Push Notification Service","Developer"]},"unlisted":false,"prevItem":{"title":"January Monthly Recap❄️","permalink":"/push-chain-website/pr-preview/pr-1115/blog/january-monthly-recap"},"nextItem":{"title":"QiDAO Taps Push to Update Users on their Debt Positions🪙","permalink":"/push-chain-website/pr-preview/pr-1115/blog/qi-dao-taps-push-to-update-users-on-their-debt-positions"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1115/blog/push-and-wherever-team-up-to-bring-web3-communication-tools-to-dapps","source":"@site/blog/2023-02-02-push-and-wherever-team-up/index.md","title":"Push and Wherever Team Up to Bring Web3 Communication Tools to Dapps🛠️","description":"Cover image of Push and Wherever Team Up to Bring Web3 Communication Tools to Dapps🛠️","date":"2023-02-02T00:00:00.000Z","tags":[{"inline":true,"label":"Frensofpush","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/frensofpush"},{"inline":true,"label":"Web3","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/web-3"},{"inline":true,"label":"Blockchain","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/blockchain"},{"inline":true,"label":"Blockchain Technology","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/blockchain-technology"},{"inline":true,"label":"Push Notification","permalink":"/push-chain-website/pr-preview/pr-1115/blog/tags/push-notification"}],"readingTime":3.16,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1115/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1115/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"push-and-wherever-team-up-to-bring-web3-communication-tools-to-dapps","title":"Push and Wherever Team Up to Bring Web3 Communication Tools to Dapps🛠️","authors":["push"],"image":"./cover-image.webp","text":"This week, our featured fren is a wallet-first customer communication platform, Wherever 😊 Imagine wallet-to-wallet communication on dapps that protects users’ data and privacy, all the while ensuring they get the best possible experience. That’s Wherever for you. The platform enables web3 dapps to communicate with wallets directly, no matter where they are. Communication wherever, literally!","tags":["Frensofpush","Web3","Blockchain","Blockchain Technology","Push Notification"]},"unlisted":false,"prevItem":{"title":"January Monthly Recap❄️","permalink":"/push-chain-website/pr-preview/pr-1115/blog/january-monthly-recap"},"nextItem":{"title":"Getting Started With Push SDK REST API⚙️","permalink":"/push-chain-website/pr-preview/pr-1115/blog/getting-started-with-push-sdk-rest-api"}}');
 
 /***/ }),
 
-/***/ 726710:
+/***/ 392343:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-e9b379d6d266d806f85aa1f4fef626c9.webp");
+
+/***/ }),
+
+/***/ 498178:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -132,34 +132,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2023_02_01_getting_started_with_push_index_md_0bb_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2023_02_02_push_and_wherever_team_up_index_md_ff9_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2023_02_01_getting_started_with_push_index_md_0bb_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(478916);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2023_02_02_push_and_wherever_team_up_index_md_ff9_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(371659);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 
 
 const frontMatter = {
-	slug: 'getting-started-with-push-sdk-rest-api',
-	title: 'Getting Started With Push SDK REST API⚙️',
+	slug: 'push-and-wherever-team-up-to-bring-web3-communication-tools-to-dapps',
+	title: 'Push and Wherever Team Up to Bring Web3 Communication Tools to Dapps🛠️',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	text: 'The PUSH-SDK, is a growing JavaScript-based SDK that allows developers to add push notification functionality to their dapps.',
+	text: 'This week, our featured fren is a wallet-first customer communication platform, Wherever 😊 Imagine wallet-to-wallet communication on dapps that protects users’ data and privacy, all the while ensuring they get the best possible experience. That’s Wherever for you. The platform enables web3 dapps to communicate with wallets directly, no matter where they are. Communication wherever, literally!',
 	tags: [
+		'Frensofpush',
 		'Web3',
 		'Blockchain',
-		'SDK',
-		'Push Notification Service',
-		'Developer'
+		'Blockchain Technology',
+		'Push Notification'
 	]
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(149540)/* ["default"] */ .A),
+"image": (__webpack_require__(51360)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -175,10 +175,10 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover image of Getting Started With Push SDK REST API⚙️",
-      src: (__webpack_require__(134211)/* ["default"] */ .A) + "",
-      width: "1400",
-      height: "735"
+      alt: "Cover image of Push and Wherever Team Up to Bring Web3 Communication Tools to Dapps🛠️",
+      src: (__webpack_require__(392343)/* ["default"] */ .A) + "",
+      width: "720",
+      height: "405"
     })
   });
 }

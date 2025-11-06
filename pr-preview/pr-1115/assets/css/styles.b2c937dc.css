@@ -3870,16 +3870,10 @@ html[data-theme='dark'] {
   --ifm-color-tag-hover: #d53a94;
 }
 
-htm {
+html {
     height: 100%;
     padding-bottom: env(safe-area-inset-bottom);
-  }
-
-  body {
-    min-height: 100vh;
-    min-height: 100dvh;
-    background: var(--ifm-color-black);
-  }
+}
 
 /* update docs/blogs dark mode color */
 html[data-theme='dark'],
@@ -3890,7 +3884,6 @@ html[data-theme='dark'] .theme-doc-markdown,
 html[data-theme='dark'] .theme-doc-page,
 html[data-theme='dark'] .container {
   background-color: #202124 !important;
-  background: #202124 !important;
 }
 
 /* Custom styles for admonitions/alerts */
