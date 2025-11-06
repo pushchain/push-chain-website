@@ -2,11 +2,203 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/</id>
     <title>Push Chain — Universal Blockchain for Apps Blog</title>
-    <updated>2025-10-20T00:00:00.000Z</updated>
+    <updated>2025-11-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/"/>
     <subtitle>Push Chain — Universal Blockchain for Apps Blog</subtitle>
     <icon>https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/website/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[What are Universal Executor Accounts (UEAs) and How do they work?]]></title>
+        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/</id>
+        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/"/>
+        <updated>2025-11-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What are Universal Executor Accounts (UEAs) and How do they work?]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="What are Universal Executor Accounts (UEAs) and How do they work?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/cover-image-7eba1b2428ea568bfbf23c82c42d8a3f.webp" width="1600" height="900" class="img_ev3q"></p>
+<p><b>Universal Executor Accounts (UEAs)</b> are magical entities that let users from any blockchain pay and transact on Universal Apps on Push Chain.</p>
+<p>With UEAs, you can use your <b>source-chain wallet</b> (e.g., Solana, Ethereum, Base, BSC) to interact directly with apps on Push Chain — paying in your native token or any other approved asset.</p>
+<p>💡 <i>No bridging. No swapping. No new wallet setup. Just one click.</i></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-do-we-need-ueas">Why do we need UEAs?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#why-do-we-need-ueas" class="hash-link" aria-label="Direct link to Why do we need UEAs?" title="Direct link to Why do we need UEAs?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-everyday-user-pain">The Everyday User Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#the-everyday-user-pain" class="hash-link" aria-label="Direct link to The Everyday User Pain" title="Direct link to The Everyday User Pain" translate="no">​</a></h3>
+<p>Let’s consider a scenario that thousands of crypto users face every day.</p>
+<p>Suppose Tim, a Solana user, wants to use a DEX on Ethereum. To do this, he must:
+to:</p>
+<ol>
+<li class=""><b>Bridge or wrap his assets</b> to Ethereum - just to use an app that lives on another chain.</li>
+<li class=""><b>Swap tokens</b> to get the native gas asset (ETH)</li>
+<li class=""><b>Set up a new wallet</b> compatible with EVM (like MetaMask) or switch between networks within the same multichain wallet.</li>
+<li class=""><b>Fund it again</b> with gas fees</li>
+</ol>
+<p>Only then can he make a simple trade. The prep time often exceeds the transaction time. 😩</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-developer-pain">The Developer Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#the-developer-pain" class="hash-link" aria-label="Direct link to The Developer Pain" title="Direct link to The Developer Pain" translate="no">​</a></h3>
+<p>Meanwhile, developers face their own headaches:</p>
+<ul>
+<li class="">
+<p><b>Fragmented identity logic</b>:  Build separate wallet and signature handling for every chain (EVM, Solana, etc.).</p>
+</li>
+<li class="">
+<p><b>Manual cross‑chain routing</b>: Forced to integrate bridges, relayers, or off‑chain services to move assets and data.</p>
+</li>
+<li class="">
+<p><b>Inconsistent verification rules</b>: each chain uses a different cryptographic scheme (ECDSA vs Ed25519), making cross‑chain validation painful.</p>
+</li>
+<li class="">
+<p><b>Fee‑routing complexity</b>:  need to manage gas logic for each supported network, often involving swap layers or middleware.</p>
+</li>
+<li class="">
+<p><b>Extra deployment overheads</b>;  app smart contracts must be redeployed per chain; no unified execution or shared state.</p>
+</li>
+</ul>
+<p>Instead of focusing on building their apps and their cool features. The devs are now stuck in an endless infrastructure + devops loop.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="enter-ueas--the-universal-solution-">Enter UEAs — the Universal Solution ✨<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#enter-ueas--the-universal-solution-" class="hash-link" aria-label="Direct link to Enter UEAs — the Universal Solution ✨" title="Direct link to Enter UEAs — the Universal Solution ✨" translate="no">​</a></h3>
+<p><strong>Now imagine Tim using a Universal App built on Push Chain:</strong></p>
+<ol>
+<li class="">
+<p>Clicks "BUY $1000 worth of Memecoin”</p>
+</li>
+<li class="">
+<p>Wallet shows: "Pay 5 SOL" (gas included)</p>
+</li>
+<li class="">
+<p>Signs once</p>
+</li>
+<li class="">
+<p>Transaction executes on Push Chain</p>
+</li>
+<li class="">
+<p>Token appears in his existing multichain wallet.</p>
+</li>
+</ol>
+<p>That’s it.
+No need for bridging, no new wallets, 1-click process.</p>
+<blockquote>
+<b>But how is it even possible to make Solana and EVM, two totally incompatible systems to coordinate with each other?</b>
+</blockquote>
+<blockquote>
+<b>The reason behind this magic lies with the Universal Executor Accounts</b>
+</blockquote>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="so-what-exactly-is-a-uea">So, What Exactly is a UEA?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#so-what-exactly-is-a-uea" class="hash-link" aria-label="Direct link to So, What Exactly is a UEA?" title="Direct link to So, What Exactly is a UEA?" translate="no">​</a></h2>
+<p>At a high level:</p>
+<blockquote>
+<p>A Universal Executor Account (UEA) is a smart account that lives on Push Chain, but can be controlled from any origin chain — Ethereum, Solana, Base, Polygon, and beyond.</p>
+</blockquote>
+<p>Think of it as your <b>personal on-chain butler</b>:</p>
+<ul>
+<li class="">
+<p>Executes your transactions on Push Chain</p>
+</li>
+<li class="">
+<p>Holds balances and state</p>
+</li>
+<li class="">
+<p>Verifies cross-chain signatures</p>
+</li>
+<li class="">
+<p>Ensures your source wallet remains in control</p>
+</li>
+<li class="">
+<p>Handles fee abstraction (no native token needed)</p>
+</li>
+</ul>
+<p>UEAs make your wallet <i>universal</i>. Any wallet is now able to act anywhere, anytime.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-create-a-uea">How to create a UEA?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#how-to-create-a-uea" class="hash-link" aria-label="Direct link to How to create a UEA?" title="Direct link to How to create a UEA?" translate="no">​</a></h2>
+<p>You don’t create them manually. UEAs are <b>auto-deployed behind the scenes</b> when you first interact with Push Chain from any supported chain.
+The process:</p>
+<ol>
+<li class="">
+<p>You sign a transaction from your origin wallet (say, Solana).</p>
+</li>
+<li class="">
+<p>Push Chain deterministically generates your UEA address.</p>
+</li>
+<li class="">
+<p>A mapping is forever linked between your <b>origin address</b> and your <b>UEA</b>.</p>
+</li>
+</ol>
+<p>From that point onward, your wallet = your UEA identity on Push Chain.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-uea-work-behind-the-scenes">How does UEA work behind the scenes?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#how-does-uea-work-behind-the-scenes" class="hash-link" aria-label="Direct link to How does UEA work behind the scenes?" title="Direct link to How does UEA work behind the scenes?" translate="no">​</a></h2>
+<p><strong>The entire process is divided into 3 phases.</strong></p>
+<ol>
+<li class=""><b>Routing</b> - Handles the steps involved in teleporting txns from ext. Chains to Push Chain</li>
+<li class=""><b>Verification</b> - Forming a Consensus on the validity of txn and ensuring whether the txn is indeed initiated by the user's private key.</li>
+<li class=""><b>Execution</b> - Finally, executing the transaction and settling it on Push Chain.</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-architecture">The Architecture<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#the-architecture" class="hash-link" aria-label="Direct link to The Architecture" title="Direct link to The Architecture" translate="no">​</a></h3>
+<p>Within these three above-described stages, 4 key innovative modules play a crucial role in abstracting the entire interop away from the app and the user</p>
+<table><thead><tr><th>Component</th><th>Role</th><th>Description</th></tr></thead><tbody><tr><td><strong>Universal Gateway</strong></td><td>Routing</td><td>These smart contracts are deployed on every supported chain. Their objective is to handle inbound and outbound routing between origin chains and the Push Chain. Locks user fees and relays payloads.</td></tr><tr><td><strong>Universal Validators</strong></td><td>Verification / Security</td><td>Special entities that keep a close eye on the inflows/outflows happening at the Universal gateways and form a consensus on the validity of cross-chain transactions before relaying to Push Chain.<br><br><strong>Note:</strong> Universal Validators != Validators. Want a quick detour to unravel Universal Validators? <a href="" class="">Find out here</a></td></tr><tr><td><strong>Universal Verification Layer (UVL)</strong></td><td>Signature Verification</td><td>Security mechanism that verifies signatures from multiple chain types (EVM, Solana, etc.) via pluggable verifiers.</td></tr><tr><td><strong>Universal Executor Account (UEA)</strong></td><td>Execution</td><td>Executes encoded transactions and manages account state on Push Chain.</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="First Image of What are Universal Executor Accounts (UEAs) and How do they work?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image-1-30fd7c2b2d3985396d65580e3a2689c3.webp" width="1790" height="888" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-it-work">How does it work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#how-does-it-work" class="hash-link" aria-label="Direct link to How does it work?" title="Direct link to How does it work?" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1️⃣-routing">1️⃣ Routing:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#1%EF%B8%8F%E2%83%A3-routing" class="hash-link" aria-label="Direct link to 1️⃣ Routing:" title="Direct link to 1️⃣ Routing:" translate="no">​</a></h4>
+<p>The routing phase involves a series of steps that dictate how transactions originated by users from external chains flow towards the Push Chain for execution.</p>
+<p>The steps include:</p>
+<ul>
+<li class="">
+<p><b>Gas Estimation</b>: Based on the current value of users' native token, the SDK calculates the required amount of PC to pay the gas</p>
+</li>
+<li class="">
+<p><b>Transaction Signing</b>: Converts the gas, tallies the total txn cost, prepares and initiates the transaction payload, which is then signed by the user’s wallet cryptographically</p>
+</li>
+<li class="">
+<p><b>Locking of Fees</b>: This fee payment (in the user's native funds) is locked into the Universal Gateway Contract. These are contracts on external chains that facilitate fee and asset locking and unlocking.</p>
+</li>
+<li class="">
+<p><b>Proof Verification</b>: Gateway events are verified by consensus through Universal Validators (UVs), who then pass this to Push Chain’s Validators.</p>
+</li>
+<li class="">
+<p><b>User Creation</b>: Based on the new or returning user, Push validators create new UEA accounts or deposit to existing UEAs.</p>
+</li>
+</ul>
+<p><b>Side note</b>: Since the UEA is deterministically generated, the validators can derive addresses from a Solana or Ethereum address automatically to check if they are new or returning users.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2️⃣-verification">2️⃣ Verification<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#2%EF%B8%8F%E2%83%A3-verification" class="hash-link" aria-label="Direct link to 2️⃣ Verification" title="Direct link to 2️�⃣ Verification" translate="no">​</a></h4>
+<p>Verification ensures the transaction request from the external chain is signed by the rightful owner and validated through cryptographic checks.</p>
+<p>Verification of the txs is never offloaded to any third party. Each tx that lands in the UEAs smart account must always be accompanied with the signature from the native chain.</p>
+<p>The UAE, upon receiving a transaction request, sends the signature to a custom module in Push Chain that is called <b>Universal Verification Layer (UVL)</b>.</p>
+<p>Its job is to verify whether the <b>controller of the UEA</b> is the same wallet that signed the transaction on the source chain.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3️⃣-execution-smart-account-execution">3️⃣ Execution (Smart Account Execution)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#3%EF%B8%8F%E2%83%A3-execution-smart-account-execution" class="hash-link" aria-label="Direct link to 3️⃣ Execution (Smart Account Execution)" title="Direct link to 3️⃣ Execution (Smart Account Execution)" translate="no">​</a></h4>
+<p>Once the signature is verified:</p>
+<ul>
+<li class="">UEA <b>executes the transaction</b> using the instructions signed by the external wallet.</li>
+<li class="">The execution is seamless and respects the rules/UX of the originating chain.</li>
+</ul>
+<p>Of course, all this happens <b>under the hood</b>. From the user’s perspective:</p>
+<ul>
+<li class="">They simply interact using their <b>native wallet</b>.</li>
+<li class=""><b>Pay gas in their native token</b>.</li>
+<li class=""><b>Execute cross-chain logic in a single flow</b>.</li>
+</ul>
+<p>And validate if the <b>user's private key did actually sign this transaction</b>?
+On successful verification, → <b>signal is sent to the UEA to execute the transaction</b>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="transaction-routing-optimizations">Transaction Routing Optimizations<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#transaction-routing-optimizations" class="hash-link" aria-label="Direct link to Transaction Routing Optimizations" title="Direct link to Transaction Routing Optimizations" translate="no">​</a></h2>
+<p>Not all cross-chain transactions require full routing through the Universal Gateway. The SDK dynamically detects whether the user’s UEA already holds sufficient fees for execution.</p>
+<p>If fees exist on the UEA:</p>
+<ul>
+<li class="">The transaction bypasses both the Gateway and Validators.</li>
+<li class="">It’s sent directly to the UEA for immediate execution.</li>
+<li class="">This removes source-chain confirmation latency, giving users a near-instant experience after their first funded transaction.</li>
+</ul>
+<p>Subsequent transactions feel instant because the UEA can self-fund execution once fees are already available.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-a-uea-preserve-a-users-identity-universally">How does a UEA preserve a user’s identity universally?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#how-does-a-uea-preserve-a-users-identity-universally" class="hash-link" aria-label="Direct link to How does a UEA preserve a user’s identity universally?" title="Direct link to How does a UEA preserve a user’s identity universally?" translate="no">​</a></h2>
+<p>The answer lies in the 1:1 deterministic mapping between the user’s source chain wallet address and its UEAs that exist on various chains.</p>
+<p>No.</p>
+<p>A new UEA is only created when a new user wallet transacts on Push Chain.</p>
+<p>As said above each UEA is deterministically linked to the user’s origin wallet address.</p>
+<p>This linkage is achieved by using the origin wallet as the <b>seed for UEA address generation</b>.
+Users origin address -&gt; UEA Generator Function (User’s origin address) -&gt; UEA Address</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tldr">TL;DR<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/what-are-universal-executor-accounts/#tldr" class="hash-link" aria-label="Direct link to TL;DR" title="Direct link to TL;DR" translate="no">​</a></h2>
+<p>At last, for Users, UEAs help eliminate:</p>
+<table><thead><tr><th>UEAs Eliminate</th><th>UEAs Enable</th></tr></thead><tbody><tr><td>Bridging tokens across chains just to use one dApp</td><td>Direct access to any Universal App from their source chain wallet</td></tr><tr><td>Installing or learning new wallets</td><td>Keep using existing wallets (Phantom, Solflare, MetaMask, etc.) with no changes</td></tr><tr><td>Trust unknown relayers &amp; give them custody to your funds</td><td>Chain-native routing with full control and attribution retained</td></tr><tr><td>Being forced to pay gas in Push Chain native token</td><td>Pay gas in any approved token from their own chain, even stablecoins!</td></tr></tbody></table>
+<p>And for developers:</p>
+<table><thead><tr><th>UEAs Eliminate</th><th>UEAs Enable</th></tr></thead><tbody><tr><td>The need to integrate third-party interoperability or messaging protocols</td><td>Interoperability embedded inside the chain</td></tr><tr><td>Writing or maintaining custom relayers</td><td>Automatic execution routing via chain-native UEAs</td></tr><tr><td>Managing complex gas logic for every supported network</td><td>Native Fee abstraction to pay for gas in any preferred token. Learn more about the magic of Fee Abstraction here</td></tr><tr><td>Devoting engineering time to infra management</td><td>Focus purely on app features &amp; experience</td></tr></tbody></table>]]></content>
+        <author>
+            <name>Push Chain</name>
+            <uri>https://x.com/PushChain</uri>
+        </author>
+        <category label="Donut Testnet" term="Donut Testnet"/>
+        <category label="Early Access" term="Early Access"/>
+        <category label="Universal Apps" term="Universal Apps"/>
+        <category label="Shared App Experience" term="Shared App Experience"/>
+        <category label="Shared State Blockchain" term="Shared State Blockchain"/>
+        <category label="Universal Smart Contracts" term="Universal Smart Contracts"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Apps of the Future - Building without the Chaos]]></title>
         <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/apps-of-the-future-building-without-the-chaos/</id>
@@ -1773,200 +1965,5 @@ built to allow developers to create universal apps and act as a shared settlemen
         </author>
         <category label="Push Chain" term="Push Chain"/>
         <category label="Partnerships" term="Partnerships"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Push Year In Review 2024]]></title>
-        <id>https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/</id>
-        <link href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/"/>
-        <updated>2024-12-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Push Year In Review 2024]]></summary>
-        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Year In Review 2024" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/cover-image-e8477261a7d388e62c65433b435e9046.webp" width="1600" height="900" class="img_ev3q"></p>
-<p><strong>2024 was a Push-tastic year for Push!</strong></p>
-<p>Marked with super ambitious achievements, incredible growth and everlasting community support!</p>
-<p>We crossed multiple milestones with Push Notifications Protocol and unveiled the next - most awaited phase of our evolution: <a href="https://push.org/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain - A shared state blockchain for shared app experiences</a>.</p>
-<p>Special thanks to all our Push Communications Protocol users for supporting our journey and making Push the de-facto communication layer for web3!</p>
-<p>Let’s take a quick look at ‘Push Rewind 2024’
-<em>Don't miss the final reel (We have a major alpha reveal!)</em></p>
-<!-- -->
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-by-numbers">Push by Numbers<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-by-numbers" class="hash-link" aria-label="Direct link to Push by Numbers" title="Direct link to Push by Numbers" translate="no">​</a></h2>
-<p>We finally achieved one of our most ambitious goals of sending over <strong>100M</strong> notifications to date!!</p>
-<p>As of year-end - Push has sent over <strong>138+ Million notifications to its 300k+ subscribers</strong>.</p>
-<p>That’s almost <strong>3x</strong> the number of notifications sent and double the number of <a href="https://push.org/blog/push-roadmap-recap-2023/" target="_blank" rel="noopener noreferrer" class="">subscribers from last year</a> 😱.</p>
-<p><img decoding="async" loading="lazy" alt="subscribers gained in 2024" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image1-2600a2bfab9e9abdf59298254150ee02.webp" width="1600" height="840" class="img_ev3q"></p>
-<p>The Push ecosystem has expanded to <strong>500 amazing projects</strong>, including - <a href="https://app.push.org/channels/0xf198eBCc8dB86F707bAdDdBa236aB5b619c59D3c" target="_blank" rel="noopener noreferrer" class="">QuickSwap</a>, <a href="https://app.push.org/channels/0xf1A1542Ca902AE861B59bffE77D92E8CD76146f1" target="_blank" rel="noopener noreferrer" class="">HyperLiquid</a>,<a href="https://app.push.org/channels/0x65bB67c2416186aE3107F7c2C6728b272a579e3d" target="_blank" rel="noopener noreferrer" class="">Revoke</a>, <a href="https://x.com/PushChain/status/1859145460939628803" target="_blank" rel="noopener noreferrer" class="">ethOS</a> and many more.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="highlights">Highlights<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#highlights" class="hash-link" aria-label="Direct link to Highlights" title="Direct link to Highlights" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-push-points-program-">1. Push Points Program ✨<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#1-push-points-program-" class="hash-link" aria-label="Direct link to 1. Push Points Program ✨" title="Direct link to 1. Push Points Program ✨" translate="no">​</a></h3>
-<p><img decoding="async" loading="lazy" alt="push points program" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image2-abc93e9a518d10c2741d1ed526740859.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>We kickstarted Phase 1 of <a href="https://app.push.org/points?utm_source=push_blog&amp;utm_medium=referral&amp;utm_campaign=Push+Points&amp;utm_content=blog_post" target="_blank" rel="noopener noreferrer" class="">Push Points Program</a> - a gamified reputation system, aimed at giving back to our Push Fam, ecosystem communities and devs who have supported Push every step of the way and helped us reach greater heights.</p>
-<p>Within three months of its launch, the program distributed millions of points to thousands of users for completing various activities centred around Push Communications Protocol, its ecosystem, and $PUSH staking.</p>
-<a href="https://app.push.org/points" title="Push Points Program Link" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq">Push Points Program S1 concludes soon - Explore Now!</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-sdk-support-for-ethers-v6-and-viem-️">2. SDK Support for Ethers V6 and Viem 🛠️<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#2-sdk-support-for-ethers-v6-and-viem-%EF%B8%8F" class="hash-link" aria-label="Direct link to 2. SDK Support for Ethers V6 and Viem 🛠️" title="Direct link to 2. SDK Support for Ethers V6 and Viem 🛠️" translate="no">​</a></h2>
-<p>The builder activity with Push Protocol SDKs continues to reach new ATHs!
-To better support their journey the Push SDK underwent massive upgrades and optimisations!</p>
-<p>We upgraded our Push SDK to support Ethers V6 along with Ethers V5 and viem enabling devs to use our SDK with the latest version of Ethers.</p>
-<a href="https://github.com/push-protocol/push-sdk" title="Push Communications Protocol SDK " class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq">Checkout our upgraded SDK here</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-introduced-cross-chain-requests-">3. Introduced Cross Chain Requests 🔗<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#3-introduced-cross-chain-requests-" class="hash-link" aria-label="Direct link to 3. Introduced Cross Chain Requests 🔗" title="Direct link to 3. Introduced Cross Chain Requests 🔗" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="cross chain requests" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image3-57bca9ea6556a16c996e32f0d3721977.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Extending a step towards seamless cross-chain communication and UX, we launched the <strong>Cross Chain Requests</strong> Feature - Where users can interact with Push Communication Protocol smart contracts on the Ethereum blockchain from any other blockchain network, whether it’s EVM or non-EVM. Which enables users to stay on their preferred blockchain while accessing Push Communication Protocol's services, offering enhanced convenience and flexibility.</p>
-<a href="https://push.org/blog/cross-chain-requests-pre-pip/" title="Cross Chain Requests " class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq">Click here to learn how we achieve cross-chain requests</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-notification-and-channel-categories-️">4. Notification and Channel Categories 🗂️<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#4-notification-and-channel-categories-%EF%B8%8F" class="hash-link" aria-label="Direct link to 4. Notification and Channel Categories 🗂️" title="Direct link to 4. Notification and Channel Categories 🗂️" translate="no">​</a></h2>
-<p>Exploring over 500+ channels on Push can be a time-consuming adventure.
-We launched the channel category feature so that you can better track and find the channel of your choice!</p>
-<a href="https://app.push.org/channels?chain=1&amp;category=All" title="Cross Chain Requests " class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq">Explore over 500 channels and 13 channel categories today!</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-added-open-frames-reaction-and-reply-to-chat-">5. Added open Frames, Reaction and Reply to Chat 💬<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#5-added-open-frames-reaction-and-reply-to-chat-" class="hash-link" aria-label="Direct link to 5. Added open Frames, Reaction and Reply to Chat 💬" title="Direct link to 5. Added open Frames, Reaction and Reply to Chat 💬" translate="no">​</a></h2>
-<p>Addressing the growing adoption of Push Chat we added some extra cool features to make your on-chain wallet-to-wallet and group chatting experience more fun!</p>
-<p>Starting with adding support for <strong>Farcaster frames</strong>!
-With the growing adoption of <a href="https://www.farcaster.xyz/" target="_blank" rel="noopener noreferrer" class="">Farcaster</a>, a popular web3 social app on Base, we’ve integrated support for Farcaster Frames in Push Chat. These frames unlock unique in-chat experiences, from making payments and subscribing to notifications to playing games or building any functionality developers envision.</p>
-<p>In addition to frames, we added two of the most wildly used web2 chat features - <strong>Reactions and Reply to Chat features!</strong></p>
-<p>Especially helpful in group and conditionally gated group chats where a user needs to revert to a specific user's conversation.</p>
-<a href="https://app.push.org/chat" title="Cross Chain Requests " class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq">Start chatting using your wallets today!</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="6-push-web3-app-gets-better-️">6. Push WEB3 App Gets Better!! ⚡️<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#6-push-web3-app-gets-better-%EF%B8%8F" class="hash-link" aria-label="Direct link to 6. Push WEB3 App Gets Better!! ⚡️" title="Direct link to 6. Push WEB3 App Gets Better!! ⚡️" translate="no">​</a></h2>
-<p>Push Communications DApp, underwent some super cool upgrades to smoothen as well as fasten users' on-chain communication journey even more!
-Starting with:</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="user-dashboard">User dashboard:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#user-dashboard" class="hash-link" aria-label="Direct link to User dashboard:" title="Direct link to User dashboard:" translate="no">​</a></h3>
-<p>We unveiled a brand-new dashboard for Push Communication Protocol users, designed to provide a quick and intuitive overview of the entire Push Communications ecosystem - all within a single page.</p>
-<p><strong>Subscribed Channels:</strong> View and manage your channel subscriptions effortlessly.</p>
-<p><strong>Trending Notification Channels:</strong> Discover the most popular channels right now.</p>
-<p><strong>Latest Push Chat Recommendations:</strong> Stay updated with chat groups tailored to your interests.</p>
-<p><strong>Analytics Overview:</strong> Get insights into Push Notifications and Staking Fee Pools at a glance.</p>
-<p>The dashboard brings everything you need to explore and engage with Push Protocol, making your experience seamless and efficient! 🚀</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="guest-mode--remember-me">Guest Mode + Remember Me<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#guest-mode--remember-me" class="hash-link" aria-label="Direct link to Guest Mode + Remember Me" title="Direct link to Guest Mode + Remember Me" translate="no">​</a></h3>
-<p>Ensuring an all-around inclusive, smooth and Privacy-packed user onboarding has always been Push’s top priority, this is why we introduced the <strong>'Guest' mode</strong> feature on our dApp, making it easier than ever to explore Push without connecting your wallet!</p>
-<p><img decoding="async" loading="lazy" alt="Guest mode" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image4-b5596747df8aa54d70281fb91a843ff3.gif" width="800" height="800" class="img_ev3q"></p>
-<p>With the ‘<strong>Remember Me</strong>’ feature Checking the option on our PushChat Login keeps you logged in for days, even after closing your browser.</p>
-<p>No more repeated logins and wallet signings - Just a one-click access to your fav chats every time you return!</p>
-<p><img decoding="async" loading="lazy" alt="Remember me" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image5-8a5b908cbb1ff616a8577cb9a22a4117.gif" width="800" height="499" class="img_ev3q"></p>
-<a href="https://app.push.org/" title="Push Communications Protocol" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Safeguard your on-chain privacy by trying out these features today!</a>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="redesigned-channel-dashboard">Redesigned Channel Dashboard:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#redesigned-channel-dashboard" class="hash-link" aria-label="Direct link to Redesigned Channel Dashboard:" title="Direct link to Redesigned Channel Dashboard:" translate="no">​</a></h3>
-<p>With the launch of the channel categories feature, we also revamped our Channel Dashboard - organizing over 500+ channels across 13 categories including Defi, media, DAO and many more.
-Users can now filter and explore channels based on specific networks, such as <a href="https://app.push.org/channels?chain=1&amp;category=DeFi" target="_blank" rel="noopener noreferrer" class="">DeFi channels on Arbitrum</a>, <a href="https://app.push.org/channels?chain=1&amp;category=Media" target="_blank" rel="noopener noreferrer" class="">Media channels on Polygon</a>, and beyond—making channel discovery more intuitive and personalized.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="7-push-expands-into-base-arbitrum-fuse-linea-and-cyber-networks-">7. Push expands into Base, Arbitrum, Fuse, Linea and Cyber Networks 💹<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#7-push-expands-into-base-arbitrum-fuse-linea-and-cyber-networks-" class="hash-link" aria-label="Direct link to 7. Push expands into Base, Arbitrum, Fuse, Linea and Cyber Networks 💹" title="Direct link to 7. Push expands into Base, Arbitrum, Fuse, Linea and Cyber Networks 💹" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="moving across an open web" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image6-8cb3c06fad5597712c2e5903ee769b30.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>With our quest of making push Communications Protocol the universal layer of communication, supporting any and every chain, this year, we expanded our reach to more chains including <strong>Arbitrum, Fuse and Cyber</strong>!</p>
-<p>Push now supports over 9 networks including <strong>Ethereum, Polygon, Polygon Zkevm, BNB, and Fuse.</strong></p>
-<p><a href="https://push.org/blog/interoperable-communications-moving-across-an-open-web-with-push/" target="_blank" rel="noopener noreferrer" class="">Time to move across the open web with Push!</a></p>
-<a href="https://app.push.org/channels?chain=1&amp;category=All" title="Networks Supported by Push" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> More networks, More new channels → Check them out here</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="8-analytics-dashboard-and-website-revamp-">8. Analytics Dashboard (and Website Revamp) 📊<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#8-analytics-dashboard-and-website-revamp-" class="hash-link" aria-label="Direct link to 8. Analytics Dashboard (and Website Revamp) 📊" title="Direct link to 8. Analytics Dashboard (and Website Revamp) 📊" translate="no">​</a></h2>
-<p>Want a glance at Protocol’s LIVE numbers?</p>
-<p>Meet the Push Analytics Dashboard - A comprehensive source of real-time data, tracking every aspect of Push Protocol’s services - notifications, subscribers, channel performance and many more!</p>
-<a href="https://push.network/dashboard" title="Push Communications Protocol Dashboard" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Checkout Push Communications Protocol’s Analytics here</a>
-<p>User activity and footprint on Push’s landing page have been growing immensely, every passing day!</p>
-<p>To ensure any unique (new) as well as seasoned web3 user understands the protocol’s mission, features and offerings - we’ve taken our website to the next level! This upgrade spans both Push Communications Protocol and Push Chain.</p>
-<p><em>If you’ve read so far: a. you’re the best! b. more about Push Chain, in our final section 🏁</em></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="9-launched-wallet-to-email--telegram-notifications-">9. Launched Wallet to Email / Telegram Notifications 📧<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#9-launched-wallet-to-email--telegram-notifications-" class="hash-link" aria-label="Direct link to 9. Launched Wallet to Email / Telegram Notifications 📧" title="Direct link to 9. Launched Wallet to Email / Telegram Notifications 📧" translate="no">​</a></h2>
-<p>After tapping into over 300,000 wallets and sending over 100 million notifications we thought - <strong><em>how about sending on-chain notifications directly to your email or telegram?</em></strong></p>
-<p>This helps Push Communications to reach billions of everyday Email and TG users while paving the way for much smoother onboarding for web2 normies and budding web2 users.</p>
-<p>Now, users can receive web3 notifications from over 500 DApps straight to their Telegram or email accounts - no need to connect a wallet or endure various friction points while entering the web3 space. Simply, connect your TG and Email and receive notifs.</p>
-<p>It's that easy!</p>
-<a href="https://app.push.org/points/activity" title="Push Notifications on Telegram and Email" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Connect your Tg and Email to receive instant alerts!</a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="10-push-metmamask-snap-v2">10. Push Metmamask Snap V2<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#10-push-metmamask-snap-v2" class="hash-link" aria-label="Direct link to 10. Push Metmamask Snap V2" title="Direct link to 10. Push Metmamask Snap V2" translate="no">​</a></h2>
-<p>In 2023, we bought Push Notifications to over 30 million Metamask users -by launching the <a href="https://app.push.org/?/snap" target="_blank" rel="noopener noreferrer" class="">Push Metamask Snap</a>. In 2024, we upgraded the snap to <strong>support chat and snooze notifications features</strong> - to help users manage their notifications at their own pace and other forms of communication as well.</p>
-<p>Due to Metamasks limitations for supporting communications across its mobile apps, we introduced in-app chat notifications on Push Mobile App <a href="https://apps.apple.com/us/app/push-epns/id1528614910" target="_blank" rel="noopener noreferrer" class="">iOS</a> and <a href="https://play.google.com/store/apps/details?id=io.epns.epns&amp;hl=en" target="_blank" rel="noopener noreferrer" class="">Android</a></p>
-<a href="https://app.push.org/snap" title="Push Metamask Snap" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Get notified on your Metamask Wallet </a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="11-incredible-integrations-">11. Incredible Integrations! 🤝<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#11-incredible-integrations-" class="hash-link" aria-label="Direct link to 11. Incredible Integrations! 🤝" title="Direct link to 11. Incredible Integrations! 🤝" translate="no">​</a></h2>
-<p>2024 was a year filled with incredible integrations. The Push Ecosystem has expanded to 500+ Projects!</p>
-<p>Notable mentions include - <a href="https://x.com/PushChain/status/1851625233654153716" target="_blank" rel="noopener noreferrer" class="">Hyperliquid</a>, <a href="https://x.com/PushChain/status/1826957066520383638" target="_blank" rel="noopener noreferrer" class="">QuickSwap</a>,<a href="https://x.com/PushChain/status/1844008819954970813" target="_blank" rel="noopener noreferrer" class="">Cartesi</a>, <a href="https://x.com/PushChain/status/1842198518418612357" target="_blank" rel="noopener noreferrer" class="">Revoke</a> and many more.</p>
-<a href="https://push.org/frens/" title="Frens Of Push" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Explore the Push Ecosystem here </a>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="12-push-dao-soaring-to-new-heights-">12. Push DAO soaring to new heights 🔝<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#12-push-dao-soaring-to-new-heights-" class="hash-link" aria-label="Direct link to 12. Push DAO soaring to new heights 🔝" title="Direct link to 12. Push DAO soaring to new heights 🔝" translate="no">​</a></h2>
-<p>Push DAO witnessed extraordinary exposure and participation in 2024.</p>
-<p>With hundreds of new participants, over 50 regular contributors, global exposure, quality grantees, and tremendous support from the Push Fam community, we've made exceptional progress.</p>
-<p>In June 2024, we launched Push DAO V2 to advance our journey toward progressive decentralization.
-This new framework, supported by the DAO Council, streamlines engagement for contributors and builders.</p>
-<p>The launch of our <strong>Push Grants Program V3</strong> empowered both, early-stage and established projects building innovative social, gaming, and mobile apps. This initiative has driven impressive results—increasing grant applications tenfold and multiplying our active grantees five times over since the beginning of the year.</p>
-<p>Our Push DAO BD SubDAO Program now offers rewards ranging from <strong>$500–$1500</strong> for successful integrations of Push Notifications/Chat with DAOs, DeFi protocols, dApps, and other projects. Through our council and contributors' dedicated efforts, this program has generated over 80 qualified leads for our ecosystem.</p>
-<p>Our revamped ambassador programs have reached new heights of influence, establishing a student hub at <strong>Texas Tech University</strong> and forming connections with event organizers across more than four continents.</p>
-<p>As we prepare to launch Push Chain, our DAO stands ready to make a significant impact on the ecosystem and beyond. Our core team brings together professionals with cross-industry expertise, while our current and prospective grantees span key industry sectors.
-Having achieved extraordinary growth in less than a year, we're positioned for even greater achievements in 2025.</p>
-<p>With our coordinated event and marketing strategy for the launch in place, you can expect to see the DAO everywhere next year, driving the chain's progress.</p>
-<p>With hundreds of new contributors, global exposures, quality grantees and a lot of love from the Push Fam community!</p>
-<p>To continue our journey of Push DAO towards progressive decentralisation we introduced a new DAO framework, <a href="https://gov.push.org/t/push-dao-v2-push-dao-council/1631" target="_blank" rel="noopener noreferrer" class="">Push DAO V2</a>. This framework simplifies the process for contributors and builders to engage with the DAO, with the support of the DAO Council.</p>
-<p><img decoding="async" loading="lazy" alt="Push Grants Council" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/assets/images/image8-fb63f99e0dde1f5b49996626d2618524.webp" width="2000" height="1127" class="img_ev3q"></p>
-<a href="https://gov.push.org/" title="Push Governance Forum" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Explore Push Governance Forum </a>
-<p><em>And now - time for the special ALPHA!</em></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="13-gm-push-chain">13. GM Push Chain!👋<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#13-gm-push-chain" class="hash-link" aria-label="Direct link to 13. GM Push Chain!👋" title="Direct link to 13. GM Push Chain!👋" translate="no">​</a></h2>
-<p>After years of building one of the first consumer apps in web3, one key takeaway we learnt, was the pressing need for a consumer app-centric chain capable of unifying the entire web3 ecosystem under a shared state.</p>
-<p>This realization inspired the creation of <a href="https://push.org/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain</a> - <strong>a shared-state Layer 1 blockchain that unifies the settlement of all the incredible L1s, L2s, and L3s, enabling any user from any chain to access any app through one unified shared state.</strong></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="governance">Governance<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#governance" class="hash-link" aria-label="Direct link to Governance" title="Direct link to Governance" translate="no">​</a></h3>
-<p>The Push Chain proposal received an overwhelming response at the Push Gov Forum with over 92% acceptance.
-The proposal then went on to SnapShot for formal voting - and we’re super stoked to announce that the community heavily participated in showing their voice and <a href="https://snapshot.box/#/s:pushdao.eth/proposal/0xa4a301c9a346356326d59e425245459d9fbde71b02aabc49a4ce191f0504f66a" target="_blank" rel="noopener noreferrer" class="">passing the massive majority!</a> Indicating a positive alignment with the team’s and the community’s vision.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-chain-whitepaper">Push Chain WhitePaper<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-chain-whitepaper" class="hash-link" aria-label="Direct link to Push Chain WhitePaper" title="Direct link to Push Chain WhitePaper" translate="no">​</a></h3>
-<p>If you're curious about Push Chain's philosophical and technical foundations and want to take a detailed look, dive into the <a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>.</p>
-<p>The Whitepaper constitutes everything you need to know about Push Chain’s Vision, Mission and all the underlying technical innovations that solve the current hardships in Web3.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-chain-litepaper">Push Chain LitePaper<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-chain-litepaper" class="hash-link" aria-label="Direct link to Push Chain LitePaper" title="Direct link to Push Chain LitePaper" translate="no">​</a></h3>
-<p>Want a quick tour of Push Chain - And learn about the problem it solves, key innovations it brings and the usecases it unlocks - explore the <a href="https://push.org/litepaper.pdf" target="_blank" rel="noopener noreferrer" class="">Push LitePaper</a>!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="14-launched-push-chain-devnet--push-scan--push-chain-website-">14. Launched Push Chain Devnet + Push Scan + Push Chain Website 🌐<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#14-launched-push-chain-devnet--push-scan--push-chain-website-" class="hash-link" aria-label="Direct link to 14. Launched Push Chain Devnet + Push Scan + Push Chain Website 🌐" title="Direct link to 14. Launched Push Chain Devnet + Push Scan + Push Chain Website 🌐" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-chain-devnet">Push Chain Devnet<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-chain-devnet" class="hash-link" aria-label="Direct link to Push Chain Devnet" title="Direct link to Push Chain Devnet" translate="no">​</a></h3>
-<p>We launched the <strong>Push Chain Devnet</strong>, offering an exciting sneak peek into transactions confirmed with sub-second finality - all while interacting with the chain in a <strong>chain-and wallet-agnostic</strong> manner. 🫣</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-scan">Push Scan<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-scan" class="hash-link" aria-label="Direct link to Push Scan" title="Direct link to Push Scan" translate="no">​</a></h3>
-<p>Also, say hello to <a href="https://scan.push.org/home" target="_blank" rel="noopener noreferrer" class="">Push Scan</a> 👋 - A comprehensive explorer to view and analyze all transactions on the Push Chain.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-website">Push Website<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-website" class="hash-link" aria-label="Direct link to Push Website" title="Direct link to Push Website" translate="no">​</a></h3>
-<p>Alongside, we unveiled the <a href="https://push.org/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a> - your go-to hub for all things Push Chain! Whether you’re looking for insights into its vision, key innovations, ecosystem, or developer tooling, the website acts as your gateway to the <strong>Universe of Universal Apps.</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="15-push-nodes-are-here">15. Push Nodes are here!<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#15-push-nodes-are-here" class="hash-link" aria-label="Direct link to 15. Push Nodes are here!" title="Direct link to 15. Push Nodes are here!" translate="no">​</a></h2>
-<p>Push fam, we know you were extremely eager for Push Nodes, after its announcement early, this year.</p>
-<p>Unlike most of the L1s, Push Chain too is a Proof Of Stake network - but with its own innovative flavour.</p>
-<p>Push Chain splits the nodes into three types - Validator, Storage and Archival and enables a node governance smart contract that keeps track of all the nodes that are present in the network.</p>
-<p><strong>Validator nodes</strong> - Responsible for validating transactions;</p>
-<p><strong>Storage nodes</strong> - Dynamically shard data based on the hash of blockchain-agnostic addresses and store it; and</p>
-<p><strong>Archival nodes</strong> - Maintain a full snapshot of all transactions on the network.</p>
-<p>Push Chain also introduced <strong>Node Registry Smart Contracts</strong> a key innovation that : - Registers nodes. - Manage dynamic sharding. - Set replication factors. - Enable parallel validators that scale dynamically with the number of nodes in the network and thus achieve <strong>True Scale</strong>!</p>
-<a href="https://push.org/blog/innovations-by-push-chain/" title="Push Governance Forum" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Innovations by Push Chain </a>
-<p><strong>Want a trial run and learn more about Push Nodes?</strong>
-Checkout Push Nodes GitHub Repos:</p>
-<p>👉 <a href="https://github.com/push-protocol/push-vnode" target="_blank" rel="noopener noreferrer" class="">Run Validator Node</a></p>
-<p>👉 <a href="https://github.com/push-protocol/push-snode" target="_blank" rel="noopener noreferrer" class="">Run Storage Node</a></p>
-<p>👉 <a href="https://github.com/push-protocol/push-anode" target="_blank" rel="noopener noreferrer" class="">Run Archival Node</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="15-launched-push-wallet--simulate-tx-">15. Launched Push Wallet + Simulate Tx 👝<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#15-launched-push-wallet--simulate-tx-" class="hash-link" aria-label="Direct link to 15. Launched Push Wallet + Simulate Tx 👝" title="Direct link to 15. Launched Push Wallet + Simulate Tx 👝" translate="no">​</a></h2>
-<p>Push Chain incorporates <strong>Wallet Abstraction to diminish the growing divide in operational level comfort experienced by Existing Web3 users and New users (Web2 normies) by creating a balanced ground for every web3 user persona.</strong></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="push-wallet">Push Wallet<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#push-wallet" class="hash-link" aria-label="Direct link to Push Wallet" title="Direct link to Push Wallet" translate="no">​</a></h3>
-<p>We were thrilled to introduce the <a href="https://wallet.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Wallet</a>—a secure, user-friendly, and interoperable key management solution designed for the Push unified network.</p>
-<p>Push Wallet offers: - A flexible and embeddable wallet experience tailored to individual user journeys. - Web2-style sign-ins. - Seamless connectivity, interaction, and transactions for wallets from any chain.</p>
-<a href="https://wallet.push.org/" title="Push Governance Forum" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Try Push Wallet</a>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="simulate-transactions">Simulate Transactions<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#simulate-transactions" class="hash-link" aria-label="Direct link to Simulate Transactions" title="Direct link to Simulate Transactions" translate="no">​</a></h3>
-<p>To offer an early glimpse into transacting on Push Chain, we launched the Push Simulate Transactions App. This app showcases:</p>
-<ul>
-<li class="">Consumer (unordered) transactions on Push Devnet.</li>
-<li class="">Key innovations like PoS consensus, parallel validators, dynamic sharding, and wallet abstraction in action.</li>
-</ul>
-<a href="https://simulate.push.org/" title="Simulate Push" class="SharedStyling__ABlock-sc-o9a0o0-23 jWVARq"> Experience Push Chain with Simulate Transactions</a>
-<p><strong><em>There's so much more to reveal and even more to ship! 🚀</em></strong>
-<strong><em>Can't wait for Q1 2025.</em></strong></p>
-<p>The entire Push Team is equally proud and excited to bring Push Chain to the public!</p>
-<p>Push Chain is the future of an all-inclusive web3 - and we’re super humbled and honoured to build it with all of you.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="honorary-mentions-">Honorary mentions 🙌<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1115/blog/push-year-in-review-2024/#honorary-mentions-" class="hash-link" aria-label="Direct link to Honorary mentions 🙌" title="Direct link to Honorary mentions 🙌" translate="no">​</a></h2>
-<p>→ <strong>Hyper Scalable Group Chats</strong> - With new architectural upgrades, <a href="https://app.push.org/chat" target="_blank" rel="noopener noreferrer" class="">Push Chats</a> have become faster and more scalable. Public group limits have skyrocketed from 1500 to an impressive 25,000 members. Similarly, private groups once capped at 50 members, now support up to 5,000 participants. <a href="https://push.org/blog/benchmarking-push-chat-message/" target="_blank" rel="noopener noreferrer" class="">Checkout our Push Chat Benchmarks here</a></p>
-<p>→ <strong>Push Group Chats for Guilds</strong> - We <a href="https://guild.xyz/explorer" target="_blank" rel="noopener noreferrer" class="">Guild</a> gated the group chats. Now, any guild LIVE on Guild.xyz can start a Push-based group chat, bringing us closer to our goal of providing customizable support for all forms of group conversations. <a href="https://push.org/blog/push-group-chats-for-guilds/" target="_blank" rel="noopener noreferrer" class="">Know, how to create your guild gated chat today!</a></p>
-<p>→ <strong>Billion Reasons to Build (BRB) Bootcamp was back with a bang!</strong> - This time with a <a href="https://push.org/blog/billion-reason-to-build-bootcamp-covering-every-dimension-of-the-web3-ecosystem/" target="_blank" rel="noopener noreferrer" class="">global online edition</a> with participation from over <strong>21</strong>countries and prizes worth <strong>5,500$</strong>!
-The 6-week boot camp inducted over 80 gem students amongst thousands of competing applications. Spanned over 11 sessions, the BRB boot camp was built to - Equip participants with the skills and knowledge needed to thrive in the evolving landscape of blockchain and web3 technologies, as well as essential skills in marketing, design, and startup development.</p>
-<p>The boot camp gained a global outreach with over <strong>60,000</strong> impressions and unmeasurable love!</p>
-<p>→ <strong>More SDK Upgrades</strong> - We further enhanced the Push SDK by optimizing the code to align with the new design system, added support for <strong>ERC1155 Gated Chat Groups</strong>, launched the <strong>Push SDK Demo React app</strong>, ensured <strong>compatibility with the Base chain</strong>, and integrated <strong>SpaceID’s</strong> package to resolve .arb and .bnb domains.</p>
-<p>→ <strong>Say hello to the Push Alpha Community</strong> - We created an exclusive community for long-time Push Supporters and various contest winners - called <a href="https://push.org/blog/how-to-join-the-push-alpha-community/" target="_blank" rel="noopener noreferrer" class="">Push Alpha Community</a> - The Alpha Access NFT holders gain exclusive access to alpha-only events, campaigns, airdrops, and partner surprises.</p>
-<p>→ Launched exclusive <a href="https://push.org/blog/announcing-group-chat-from-push-unstoppable/" target="_blank" rel="noopener noreferrer" class="">domain-gated group chats</a> for 3.8M+ Unstoppable Domain users</p>
-<p>→ Revamped the channel creation process for a more intuitive UX.</p>
-<p>→ Made tons of improvements to our Developer Docs to make your building journey with Push Protocol truly <em>Pushtastic!</em> 🚀</p>
-<p>→ A plethora of podcast appearances including <a href="https://www.youtube.com/watch?v=zpqP_b-ch1A" target="_blank" rel="noopener noreferrer" class="">Hipther Podcast Show</a>, <a href="https://www.charlieshrem.com/pushing-crypto-to-the-edge-redefining-communication-and-security-with-ian-leviness-and-pascal-gauth/" target="_blank" rel="noopener noreferrer" class="">Charlie Shrem Podcast</a> and many more.</p>
-<p>→ Participated in major hackathons, conferences and sponsored bounties around the globe including, <a href="https://x.com/PushChain/status/1811046959353880785" target="_blank" rel="noopener noreferrer" class="">Eth CC Brussels</a>, Token 2049 Singapore &amp; Dubai, <a href="https://x.com/PushChain/status/1857365249239679134" target="_blank" rel="noopener noreferrer" class="">ETH Bangkok</a>, <a href="https://x.com/PushChain/status/1846597335859540055" target="_blank" rel="noopener noreferrer" class="">Eth Safari</a>, <a href="https://x.com/PushChain/status/1840669685177557334" target="_blank" rel="noopener noreferrer" class="">Invisible Gardens</a>, <a href="https://x.com/PushChain/status/1849709744002630131" target="_blank" rel="noopener noreferrer" class="">Binance Blockchain Week(Dubai)</a>, India Blockchain Week.</p>
-<p>→ Kickstarted <a href="https://x.com/PushChain/status/1826313152176251142" target="_blank" rel="noopener noreferrer" class="">Write for Push</a> initiative - aimed at enabling anyone in the Push community to contribute to the protocol’s blog repository and help shape its voice.</p>
-<p>Before looking at what's ahead this coming year, we want to take a moment to thank the entire Push team, all our partners, investors and builders. 2024 was an amazing year for Push and we are excited to share what we have planned for 2025! Stay tuned. With loads of love ❤️ from the Push team!</p>
-<p>That’s a wrap!
-See you all in 2025 🫡</p>]]></content>
-        <author>
-            <name>Harsh Rajat</name>
-            <uri>https://twitter.com/harshrajat</uri>
-        </author>
-        <author>
-            <name>Richa Joshi</name>
-            <uri>https://twitter.com/Riijo</uri>
-        </author>
-        <category label="Push Chain" term="Push Chain"/>
-        <category label="Updates" term="Updates"/>
-        <category label="Insights" term="Insights"/>
-        <category label="Year In Review" term="Year In Review"/>
-        <category label="Shared App Experience" term="Shared App Experience"/>
-        <category label="Any Chain Tx" term="Any Chain Tx"/>
-        <category label="Universal Smart Contracts" term="Universal Smart Contracts"/>
-        <category label="Shared State Blockchain" term="Shared State Blockchain"/>
-        <category label="Consumer Tx" term="Consumer Tx"/>
-        <category label="Parallel Validators" term="Parallel Validators"/>
-        <category label="Dynamic Sharding" term="Dynamic Sharding"/>
     </entry>
 </feed>
