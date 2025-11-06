@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "المزيد من Push Chain",
+        "follow-button": "تابع",
+        "read-more": "اقرأ المزيد"
+      },
+      "list": {
+        "recent-updates": "آخر التحديثات",
+        "page-title": "الصفحة {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "تصفح صفحات قائمة المدونة",
+        "newer-entries": "إدخالات أحدث",
+        "older-entries": "مدونات أقدم"
+      },
+      "footer-item": {
+        "share-title": "شارك في الحديث من خلال مشاركة هذه المقالة",
+        "share-button": "مشاركة",
+        "share-modal-title": "مشاركة",
+        "copy-link": "نسخ الرابط",
+        "about-title": "عن بلوكشين",
+        "about-description": "Push Chain هو أول بلوكشين عالمي حقيقي مصمم للقضاء على التجزئة عبر جميع السلاسل. يمكّن المطورين من النشر مرة واحدة، ويصبحون متاحين على الفور للمستخدمين على أي سلسلة، سواء كانت EVM أو Non-EVM (بما في ذلك Ethereum و Solana و Bitcoin وغيرها). إنه سلسلة Proof of Stake (PoS) متوافقة بنسبة 100٪ مع EVM تسمح للمستخدمين بالتفاعل مع التطبيقات المنشورة على Push Chain من أي سلسلة، كما يفعلون بشكل أصلي على سلاسلهم الخاصة.",
+        "social-twitter": "تويتر",
+        "social-discord": "Discord",
+        "social-youtube": "يوتيوب",
+        "social-linkedin": "لينكد إن"
+      }
+    }
+  }
+}

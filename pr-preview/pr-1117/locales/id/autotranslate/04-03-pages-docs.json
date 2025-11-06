@@ -1,0 +1,41 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Dokumentasi — Bangun Aplikasi Universal",
+        "description": "Semua yang Anda butuhkan untuk mengirim di Push Chain: Quickstart, SDK, Referensi API, contoh, dan konfigurasi node.",
+        "og-title": "Push Chain Dokumen - Quickstarts, SDKs & API",
+        "og-description": "Buat dan jalankan aplikasi pada lapisan eksekusi universal dengan panduan dan contoh yang jelas.",
+        "twitter-title": "Dokumentasi Push Chain - Mulai sekarang"
+      },
+      "header": {
+        "countdown-title": "Rilis Dokumen Testnet dalam",
+        "title": "Berbicara tentang Push Chain di Twitter",
+        "ariaLabel": "Tweets tentang Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Apa itu Push Chain?",
+                  "subtitle": "Push Chain menyediakan toolkit yang seragam untuk membangun aplikasi universal yang benar-benar.",
+                  "ctatitle": "Pelajari Lebih Lanjut"
+                },
+                "builders": {
+                  "title": "Mari Membangun!",
+                  "subtitle": "Semua yang Anda butuhkan dengan SDK Push Chain untuk membuat aplikasi universal Anda",
+                  "ctatitle": "Pelajari Lebih Lanjut"
+                },
+                "ui-kit": {
+                  "subtitle": "Integrasi aplikasi React berbasis apa pun dalam waktu kurang dari 5 menit."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
