@@ -1,0 +1,47 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "文档 — 构建通用应用",
+        "description": "在 Push Chain 上部署所需的一切：快速入门、SDK、API 参考、示例和节点设置。",
+        "og-title": "Push Chain 文档 - 快速入门、SDK 和 API",
+        "og-description": "使用清晰的指南和示例在通用执行层上构建和运行应用程序。",
+        "twitter-title": "Push Chain 文档 - 立即构建",
+        "twitter-description": "快速入门、SDK、API 参考和示例，快速部署。"
+      },
+      "header": {
+        "countdown-title": "测试网文档发布倒计时",
+        "description": "嘘...想看看测试网 Donut 的预览吗？用 #pushchainsecret 给我们发消息，我们会给你发送测试版本的访问权限。",
+        "tweet-button": "关于 Push Chain 发推文",
+        "title": "关于 Push Chain 发推文",
+        "ariaLabel": "关于 Push Chain 发推文"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "什么是 Push Chain？",
+                  "subtitle": "Push Chain 提供了构建真正通用应用程序的统一工具包。",
+                  "ctatitle": "了解更多"
+                },
+                "builders": {
+                  "title": "让我们构建吧！",
+                  "subtitle": "使用 Push Chain SDK 创建通用应用程序所需的一切",
+                  "ctatitle": "了解更多"
+                },
+                "ui-kit": {
+                  "title": "UI 套件",
+                  "subtitle": "在不到 5 分钟的时间内集成任何基于 React 的应用程序。",
+                  "ctatitle": "了解更多"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

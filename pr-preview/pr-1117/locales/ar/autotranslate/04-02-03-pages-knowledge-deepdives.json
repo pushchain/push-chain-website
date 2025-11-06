@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "تعمق — المفاهيم والهيكلة",
+          "description": "شروحات سهلة للقراءة حول الـ shared state، الـ fee abstraction، USV/UEA، والـ universal execution layer.",
+          "og-title": "غوص عميق - المفاهيم والهيكلة",
+          "og-description": "مقالات متعمقة حول وحدات <1>بلوكشين</1> <2>Push Chain</2>، وقرارات التصميم، والأداء.",
+          "twitter-title": "Deep Dives - نظرة معمقة",
+          "twitter-description": "شرح مبسط لكيفية عمل بلوكشين Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "قاعدة المعرفة"
+          },
+          "blocks": {
+            "title": "غوص عميق",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Architecture Deep Dives\n\nتعرّف على تفاصيل هيكلية Push Chain وكيفية عملها - وحدة واحدة في كل مرة.",
+                  "curated-reads": "## قراءات منتقاة 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "تعرّف على ما يجعل Push Chain يعمل!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "التشغيل البيني كطيف"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "فهم إثبات الحصة (POS) - الجزء الأول"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "बिल्डर्स — कैसे करें & ट्यूटोरियल",
+          "description": "Push Chain की विशेषताओं का उपयोग करने के लिए चरण-दर-चरण मार्गदर्शिकाएँ, पैटर्न और उदाहरण।",
+          "og-title": "Builders - कैसे करें और ट्यूटोरियल",
+          "og-description": "Push Chain के साथ बनाने के लिए निर्देशित ट्यूटोरियल, सर्वोत्तम अभ्यास और उदाहरण।",
+          "twitter-title": "बिल्डर्स - कैसे करें और ट्यूटोरियल",
+          "twitter-description": "Push Chain पर शिप करने के लिए स्टेप-बाय-स्टेप गाइड।"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "नॉलेज बेस"
+          },
+          "blocks": {
+            "title": "Push Chain पर बनाएँ",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain पर निर्माण करने के लिए तैयार हैं? यहां कुछ संसाधन दिए गए हैं जो आपको प्रेरित करेंगे और आरंभ करने में मदद करेंगे।",
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "चलो, युनिवर्सल ऐप्स बनाते हैं 💪",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "भविष्य के एप्प — बिना किसी परेशानी के निर्माण"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "उपभोक्ता ऐप्स 🫶 Push Chain?"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "शेयर्ड स्टेट के साथ ही संभव होने वाले एप्‍स - खंड 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्स - खंड 2"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "डेवलपर रिसोर्सेस",
+                "items": {
+                  "developer-docs": {
+                    "title": "डेवलपर डॉक्यूमेंटेशन देखें"
+                  },
+                  "faucet": {
+                    "title": "टेस्टनेट टोकन प्राप्त करें"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
