@@ -1,0 +1,21 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Tài liệu — Xây dựng Ứng dụng Universal",
+        "description": "Tất cả những gì bạn cần để triển khai trên Push Chain: hướng dẫn nhanh, SDK, tài liệu API, ví dụ và thiết lập node.",
+        "og-title": "Tài liệu Push Chain - Bắt đầu nhanh, SDK & API",
+        "og-description": "Xây dựng và chạy ứng dụng trên universal execution layer với các hướng dẫn và ví dụ rõ ràng.",
+        "twitter-title": "Push Chain Docs - Xây dựng ngay",
+        "twitter-description": "Hướng dẫn nhanh, SDK, tham khảo API và ví dụ để triển khai ứng dụng một cách nhanh chóng."
+      },
+      "header": {
+        "countdown-title": "Tài liệu Testnet Sắp Ra Mắt",
+        "description": "Psst... muốn xem trước Push Chain Testnet - Donut không? Bạn có thể truy cập phiên bản xem trước bí mật bằng cách đăng ký Project G.U.D Deployathon của chúng tôi trên DoraHacks.",
+        "tweet-button": "Project G.U.D Deployathon",
+        "title": "Project G.U.D Deployathon",
+        "ariaLabel": "Project G.U.D Deployathon"
+      }
+    }
+  }
+}

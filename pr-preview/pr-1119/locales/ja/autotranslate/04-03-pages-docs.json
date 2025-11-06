@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "フランマト、今新檔复で",
+        "description": "エグテサは Push 科一線を勓で３、SDK３API前場がそら日忘へいなたしたを正だ",
+        "og-title": "ヒータセカ Docs - Quickstarts, SDKs & API",
+        "og-description": "ユニバーサル実行レイヤーでアプリを構築および実行するための明確なガイダンスと例が含まれています。",
+        "twitter-title": "フレァント・ニスト です",
+        "twitter-description": "クイックスタート、SDK、APIリファレンス、サンプルを迅速に実装するためのもの。"
+      },
+      "header": {
+        "countdown-title": "テストネットドキュメントのリリースまで",
+        "ariaLabel": "パントに以内を抎う"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "ファスャンを表本した",
+                  "subtitle": "Push Chain における、普遍的でユニバーサルなアプリを構築するための統一されたツールキットが提供されます。",
+                  "ctatitle": "もっと知る"
+                },
+                "builders": {
+                  "title": "ブロックチェーンを作りましょう!",
+                  "subtitle": "あなたが Push Chain SDK で作成するための、すべての必要なもの",
+                  "ctatitle": "ティルフレスしは"
+                },
+                "ui-kit": {
+                  "title": "ブトサ",
+                  "subtitle": "フォタカは、レームトを歴为いるよみきおるし",
+                  "ctatitle": "もっと詳しく学ぼう"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
