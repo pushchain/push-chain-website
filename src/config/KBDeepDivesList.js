@@ -44,6 +44,16 @@ export const KBDeepDivesList = {
           url: '/blog/understand-proof-of-stake',
           target: '_blank',
         },
+        {
+          slug: 'what-are-universal-executor-accounts',
+          image:
+            '/static/assets/website/chain/knowledge/what-are-executor-accounts',
+          imageSrcSet: false,
+          title:
+            'What are Universal Executor Accounts (UEAs) and How do they work?',
+          url: '/blog/what-are-universal-executor-accounts',
+          target: '_blank',
+        },
       ],
     },
   ],

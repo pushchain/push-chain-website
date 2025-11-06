@@ -868,7 +868,7 @@ const ListGroup = styled.div`
 
 const BodyContent = styled(Content)`
   & :where(p, li, a, span) {
-    font-weight: 200;
+    font-weight: 300;
     line-height: 170%;
   }
 

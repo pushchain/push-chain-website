@@ -25,7 +25,7 @@
         "title": "Get free testnet tokens for Push Chain development"
       }
     },
-     "developers": {
+    "developers": {
       "title": "Developers",
       "aria-label": "Developers Section",
       "link1": {
@@ -63,21 +63,26 @@
         "title": "Explore comprehensive Push Chain documentation and feature guides"
       },
       "link2": {
+        "text": "LFPush",
+        "subtext": "Featured tweets by Push community #LFPush",
+        "title": "Featured tweets by Push community #LFPush"
+      },
+      "link3": {
         "text": "Tokenomics",
         "subtext": "Native token powering everything on Push Chain",
         "title": "Learn about Push Chain tokenomics and $PC token utility"
       },
-      "link3": {
+      "link4": {
         "text": "X/Twitter",
         "subtext": "Follow updates and ecosystem news",
         "title": "Follow Push Chain on X (Twitter) for latest updates and announcements"
       },
-      "link4": {
+      "link5": {
         "text": "Discord",
         "subtext": "Chat, build, and vibe with the community",
         "title": "Join Push Chain community on Discord for discussions and support"
       },
-      "link5": {
+      "link6": {
         "text": "Telegram",
         "subtext": "Join the convo and stay in the loop",
         "title": "Connect with Push Chain community on Telegram for real-time updates"
@@ -114,34 +119,34 @@
       "title": "Explore",
       "aria-label": "Explore Section",
       "link1": {
-          "text": "Get Started",
-          "subtext": "Intro to building on Push Chain",
-          "title": "Start building"
+        "text": "Get Started",
+        "subtext": "Intro to building on Push Chain",
+        "title": "Start building"
       },
       "link2": {
-          "text": "Quick Start",
-          "subtext": "Setup dev environment in seconds",
-          "title": "Quick Start"
+        "text": "Quick Start",
+        "subtext": "Setup dev environment in seconds",
+        "title": "Quick Start"
       },
       "link3": {
-          "text": "Tutorials",
-          "subtext": "Step-by-step guides to build with Push",
-          "title": "Learn with tutorials"
+        "text": "Tutorials",
+        "subtext": "Step-by-step guides to build with Push",
+        "title": "Learn with tutorials"
       },
       "link4": {
-          "text": "GitHub",
-          "subtext": "View core code and open-source tools",
-          "title": "Explore Push Chain"
+        "text": "GitHub",
+        "subtext": "View core code and open-source tools",
+        "title": "Explore Push Chain"
       },
       "link5": {
-          "text": "Developer Discord",
-          "subtext": "Connect with the dev community",
-          "title": "Join Discord"
+        "text": "Developer Discord",
+        "subtext": "Connect with the dev community",
+        "title": "Join Discord"
       },
       "link6": {
-          "text": "Explore Examples",
-          "subtext": "Explore Examples",
-          "title": "Explore Examples"
+        "text": "Explore Examples",
+        "subtext": "Explore Examples",
+        "title": "Explore Examples"
       }
     }
   }
