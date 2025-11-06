@@ -223,6 +223,16 @@ function MDXProvider(properties) {
 
 /***/ }),
 
+/***/ 373851:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image15-b8978aff386fd7c79b8d70fdec207826.webp");
+
+/***/ }),
+
 /***/ 416703:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -691,7 +701,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Banner celebrating ApeSwap as May - week 3 channel of week",
-        src: (__webpack_require__(596232)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(373851)/* ["default"] */ .A) + "",
         width: "1600",
         height: "900"
       })
@@ -1244,16 +1254,6 @@ function MDXContent(props = {}) {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image5-c8ae3c689200b0d1ecc1f4a09f67009f.webp");
-
-/***/ }),
-
-/***/ 596232:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image15-b8978aff386fd7c79b8d70fdec207826.webp");
 
 /***/ }),
 
