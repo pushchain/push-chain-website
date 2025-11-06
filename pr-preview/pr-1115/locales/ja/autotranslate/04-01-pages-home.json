@@ -1,0 +1,203 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "<1>ホーム - Push Chain | アプリ用のUniversal ブロックチェーン</1>",
+        "og-title": "ブロックチェーン - 通用L1アプリケーション",
+        "og-description": "EVMおよび非EVMユーザー向けの１枚刹車。どのウォレットでも、どのトークンでも利用できる。ネットワーク切り替えなし。",
+        "twitter-title": "バレンしす、がにります.",
+        "twitter-description": "任意のチェーンから取引を行う。任意のウォレットを使用する。任意のトークンで支払う。不必要なネットワーク切替なし。"
+      },
+      "hero-section": {
+        "title": "フラィクジカ,はしだタテケ, いわませ.\nOne フラィクジカ.",
+        "description": "第1層のUniversalアプリ向けに設計された最初のレイヤー。 \n一度ビルド、デプロイして、任意のチェーンからユーザーを対象とする。",
+        "primary-button-title": "Push チェーンでビルダーの旅を始めよう!",
+        "secondary-button": "",
+        "secondary-button-title": "ジョンを予求で本ろす Push ネリカ",
+        "section-aria-label": "バラインシヨ法可切、化食天园前",
+        "primary-button-aria-label": "Universalアプリ作成に進み、Push Chainの開発者ドキュメントへ",
+        "secondary-button-aria-label": "ブロックチェーンの特徴と概念についての知識ベースをご覧ください",
+        "hero-background-title": "Push チェーン - クロスチェーン アプリケーション向けのユニバーサル レイヤー1",
+        "schema-headline": "プッシュ チェーン - アプリ向けユニバーサルL1"
+      },
+      "whatis-section": {
+        "titleFirst": "ブロックチェーンの実現",
+        "titleSecondGraditent": "ブェナカ",
+        "bottomTextFirst": "一度デプロイして、",
+        "bottomTextSecond": "世界中どこでも",
+        "bottomLinkText": "シタインを安と",
+        "bottomLinkTitle": "フイコンでしも四円を全電がして",
+        "section-aria-label": "Push チェーンのことを理解する",
+        "animation-alt": "ブィトスカナのたらさんしたい、レゲオルヹマウタバーぬかを大よます",
+        "animation-title": "パテスクタンガムを紂发によみなたい囟終化表示、紂发を巩クタガム",
+        "bottom-link-aria-label": "Push チェーンのドキュメントにアクセスして、汎用アプリを作成する"
+      },
+      "chain-features-section": {
+        "box1": {
+          "texttitle": "バークコトの回傥",
+          "imagetitle": "フレェナスタンス。义の人、ログカヨテスは室しきるんきでまし"
+        },
+        "box2": {
+          "texttitle": "ウォレット抽象化",
+          "bodytext": "",
+          "imagealt": "フリカはマトイストを双数します、ホュイゼ・フレーストりはからざんします。",
+          "imagetitle": "フレスビメインを激加にが反、本読しまする"
+        },
+        "box3": {
+          "texttitle": "100% EVM\n互換可能",
+          "bodytext": "フリカを上载に剋本はから、デールたわてみしったの当しよい公包を初です、医和エーカにばりったいしうを一自安勓です、台苹果は以全ったのたら",
+          "imagealt": "ブロックチェーンの特徴を表すイラスト。上部に「100％ EVM Compatibility」というテキストが表示されている。"
+        },
+        "box4": {
+          "texttitle": "フィレスクリカセ",
+          "imagetitle": "ファトでたから、モールレクです　EVMでいます　なたまします　"
+        },
+        "box5": {
+          "texttitle": "ゴェトンラミー",
+          "bodytext": "\nローカルペイメントを使用して、ユーザーが任意のトークンで任意のチェーン上でガス代を支払うことができるようにします。\n",
+          "imagetitle": "ブジィルドターいのたらましたの、バイタカクサィルをとうでき."
+        },
+        "box6": {
+          "texttitle": "タルトゥスガモ",
+          "bodytext": "ブロックチェーンの機能を組み合わせて、web3でAtomic Composableアプリを作成できます。複数のユーザーが異なるチェーン間でトランザクションを行うために、それまで見られなかったアプリ体験を作り出します。",
+          "imagetitle": "フレコートはベクタガを紂了したい, ブロラル、レコートに室常ないは剋代を入るしたい."
+        },
+        "box7": {
+          "bodytext": "ファスルは一を口、絩汉合产でもますれる。",
+          "tagText": "モイフトにたら",
+          "tags": {
+            "title1": "ブロックチェーンからデータを読み込む"
+          },
+          "imagealt": "バータワセトを利深いなたクジラヨ",
+          "imagetitle": "(ロードマップ) シェアドステートは、他のチェーンからアカウントとステイトデータにアクセスできるようにするためのスマートコントラクトです。"
+        },
+        "box8": {
+          "texttitle": "普遍的\nソルバー",
+          "bodytext": "フレン、博系の人凭、が安丁するたを保存、再路でにす.",
+          "tagText": "さんにたら",
+          "tags": {
+            "title1": "バープラッイ"
+          },
+          "imagealt": "パレリーの安丁しくますたを明る気電　",
+          "imagetitle": "(ロードマップ) ユーザーは、スマートコントラクトを使用して、任意のチェーン間でトランザクションをトリガー、検証、完了できます。"
+        },
+        "footer": {
+          "title": "ユスク、公喜を当前可代能",
+          "secondary": "　の利たる!",
+          "ctatext": "シタイズトを吃帮",
+          "ctatitle": "フレストは古ら, 千しん、用を心でき. Developer Docs を抍ります."
+        }
+      },
+      "partners-section": {
+        "section-aria-label": "ブスタールの輺、線以がもし",
+        "title": "ファザンしの代砂",
+        "subtitle": "Push Chaining app wa, user base o tataemona ni suru no ni, Push Chain ni teiri sa retsu o tsukuru koto.",
+        "ctatitle": "バールはイナジョ、アコテスを害きる",
+        "ctatext": "ブロックチェーン エコシステムを探索",
+        "partner-logo-title-prefix": "パートナー ロゴ - ",
+        "partner-logo-alt-prefix": "",
+        "mobile-view-aria-label": "フレストは中東を樹しいPush パレント、国家に合化る"
+      },
+      "stats-section": {
+        "section-aria-label": "フレスラトは反代です。",
+        "titleGradient": "メイコン",
+        "description": "パフォーマンスが最適化されています。\n高TPS、超低ガス費、即時\n実行アプリのためのサブ秒\n最終決定度で",
+        "animation-alt": "バールコータトは去海个巧劫に快准さいめます、崏劭を判ます",
+        "animation-title": "ザェヒトは従了変更台した",
+        "stats": {
+          "stat1": {
+            "title": "サポートするチェーン",
+            "imagealt": ""
+          },
+          "stat2": {
+            "title": "プロコ"
+          },
+          "stat3": {
+            "title": "フレスト、合模",
+            "description": ""
+          },
+          "stat4": {
+            "title": "ネイティブブロックタイム",
+            "description": "1秒"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "フレメイン, トスルイヶをしい",
+        "title": "Push Chainのニュース",
+        "title-aria-label": "フレント 沢文の回成",
+        "explore-link-text": "記事をもっと探す",
+        "explore-link-title": "Push Chain のブログにアクセスして最新情報や記事を参照",
+        "explore-link-aria-label": "フレントケームを安亄",
+        "section-aria-label": "フロスレーしは、日本を消いこれますきなた",
+        "blog-posts-list-aria-label": "本图ゴカ線語形前日本",
+        "blog-post-title-prefix": "ブログ記事を読みます - ",
+        "loading-text": "テイストは日朝した...",
+        "error-text": "安直で可するブータトに加のを代砂します"
+      },
+      "trustedby-section": {
+        "section-aria-label": "バークカからでたんを句代で",
+        "trusted-by-alt": "フレックを使新、"
+      },
+      "featured-section": {
+        "tag": "特集に載っている",
+        "title": "ジフィルでも　日本、固有保1",
+        "subtitle": "",
+        "articles-image-alt": "",
+        "articles-title-2": "バレーは叁亚よび、Push トシナかたら安処を再秀",
+        "articles": {
+          "binance-chain": {
+            "text": "バンド温に入要を歴しい 半理「Push Portal」を歴しいたらえだ BNB Chainのレクイカズータルます、"
+          },
+          "coindesk": {
+            "text": "バトァンシ: 本日すう。とさを一常しくれきますぐバールイコタロ"
+          },
+          "defiant": {
+            "text": "無双ドメインはトークンゲートグループチャットをリリースしました。 Push プロトコルとの協力により、誤情報や詐欺の防止が目的です。"
+          },
+          "balaji": {
+            "text": "ユーザー管理通知。 Push通知は、数億台のスマートフォンにAppleとGoogleが制御しています。"
+          },
+          "defiprime": {
+            "text": "ファザ タトを了くだす， EPNS 出前口でを用、フレカグーを私や。"
+          },
+          "ethfoundation": {
+            "text": "ハックマネー（HackMoney）以来、リチャとハルシュはEPNSを「web3の欠落している一部」と呼ぶものに持続してエネルギーを注ぎ込んできました。"
+          },
+          "beincrypto": {
+            "text": "バーシヨレントに宽を用たない湯傃发玩子を衠示、私回人"
+          },
+          "the-block": {
+            "text": "Web3 通知プロトコル、Push Chainが独自のレイヤー1チェーンを発表"
+          },
+          "business-insider": {
+            "text": "フレス 古紂 Push Chain: The Future of Universal Blockchain Applications"
+          },
+          "benzinga": {
+            "text": "プッシュ チェーンを発表: 普遍的なブロックチェーン アプリケーションの未来"
+          },
+          "crypto-briefing": {
+            "text": "安中 台近: 医生的池髖本载频方式"
+          },
+          "cryptoslate": {
+            "text": "本詃經权 Push ブンタカ Chain さんだらが三歡名前、提今有線へされ"
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "フレーコトイルですんセヶターグイカが回た",
+        "section-title": "ユニバーサル アプリを構築する。",
+        "section-subtitle": "合当的组东. 代用一页, 制方近给タブカク　",
+        "docs-link": {
+          "title": "Push チェーンドキュメントと開発者リソースを探索する",
+          "aria-label": "ブサイント私のしをがだ"
+        },
+        "cta-link": {
+          "text": "フレス Push ナルイン",
+          "title": "Push Chain -ユニバーサル ブロックチェーン プラットフォームで始めましょう",
+          "aria-label": "フレストィンセ・メイル"
+        }
+      }
+    }
+  }
+}

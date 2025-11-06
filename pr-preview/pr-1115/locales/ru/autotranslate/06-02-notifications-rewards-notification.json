@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "rewards-notification": {
+      "title": "Donut Testnet Закрытое бета-тестирование запущено!",
+      "description": "Узнайте первыми о Testnet, Donut, создавайте universal apps и выигрывайте призы!",
+      "image-alt": "Вознаграждения Push Chain Testnet – Создавайте Универсальные Приложения",
+      "close-button-title": "Закрыть уведомление о вознаграждениях",
+      "close-button-aria-label": "Закрыть уведомление о вознаграждениях Push Chain",
+      "container-aria-label": "Push Chain rewards notification"
+    }
+  }
+}
