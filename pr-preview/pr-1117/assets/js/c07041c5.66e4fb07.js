@@ -165,10 +165,6 @@ const toc = [{
 }, {
   "value": "Enter UEAs — the Universal Solution ✨",
   "id": "enter-ueas--the-universal-solution-",
-  "level": 2
-}, {
-  "value": "Now imagine Tim using a Universal App built on Push Chain:",
-  "id": "now-imagine-tim-using-a-universal-app-built-on-push-chain",
   "level": 3
 }, {
   "value": "So, What Exactly is a UEA?",
@@ -183,13 +179,9 @@ const toc = [{
   "id": "how-does-uea-work-behind-the-scenes",
   "level": 2
 }, {
-  "value": "The entire process is divided into 3 phases.",
-  "id": "the-entire-process-is-divided-into-3-phases",
-  "level": 3
-}, {
   "value": "The Architecture",
   "id": "the-architecture",
-  "level": 2
+  "level": 3
 }, {
   "value": "How does it work?",
   "id": "how-does-it-work",
@@ -209,11 +201,11 @@ const toc = [{
 }, {
   "value": "Transaction Routing Optimizations",
   "id": "transaction-routing-optimizations",
-  "level": 3
+  "level": 2
 }, {
   "value": "How does a UEA preserve a user’s identity universally?",
   "id": "how-does-a-uea-preserve-a-users-identity-universally",
-  "level": 3
+  "level": 2
 }];
 function _createMdxContent(props) {
   const _components = {
@@ -326,12 +318,13 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Instead of focusing on building their apps and their cool features. The devs are now stuck in an endless infrastructure + devops loop."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
       id: "enter-ueas--the-universal-solution-",
       children: "Enter UEAs — the Universal Solution ✨"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
-      id: "now-imagine-tim-using-a-universal-app-built-on-push-chain",
-      children: "Now imagine Tim using a Universal App built on Push Chain:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Now imagine Tim using a Universal App built on Push Chain:"
+      })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -433,9 +426,10 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "how-does-uea-work-behind-the-scenes",
       children: "How does UEA work behind the scenes?"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
-      id: "the-entire-process-is-divided-into-3-phases",
-      children: "The entire process is divided into 3 phases."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "The entire process is divided into 3 phases."
+      })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
@@ -450,7 +444,7 @@ function _createMdxContent(props) {
           children: "Execution"
         }), " - Finally, executing the transaction and settling it on Push Chain."]
       }), "\n"]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
       id: "the-architecture",
       children: "The Architecture"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -469,7 +463,9 @@ function _createMdxContent(props) {
       }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.tbody, {
         children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.tr, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
-            children: "Universal Gateway"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+              children: "Universal Gateway"
+            })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
             children: "Routing"
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
@@ -477,7 +473,9 @@ function _createMdxContent(props) {
           })]
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.tr, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
-            children: "Universal Validators"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+              children: "Universal Validators"
+            })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
             children: "Verification / Security"
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.td, {
@@ -490,7 +488,9 @@ function _createMdxContent(props) {
           })]
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.tr, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
-            children: "Universal Verification Layer (UVL)"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+              children: "Universal Verification Layer (UVL)"
+            })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
             children: "Signature Verification"
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
@@ -498,7 +498,9 @@ function _createMdxContent(props) {
           })]
         }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.tr, {
           children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
-            children: "Universal Executor Account (UEA)"
+            children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+              children: "Universal Executor Account (UEA)"
+            })
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
             children: "Execution"
           }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.td, {
@@ -611,7 +613,7 @@ function _createMdxContent(props) {
       }), "?\nOn successful verification, → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("b", {
         children: "signal is sent to the UEA to execute the transaction"
       }), "."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "transaction-routing-optimizations",
       children: "Transaction Routing Optimizations"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -628,7 +630,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Subsequent transactions feel instant because the UEA can self-fund execution once fees are already available."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "how-does-a-uea-preserve-a-users-identity-universally",
       children: "How does a UEA preserve a user’s identity universally?"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
