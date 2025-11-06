@@ -6,7 +6,7 @@
  */
 
 .tableOfContents {
-  max-height: calc(100vh - var(--ifm-navbar-height) - 2rem);
+  max-height: calc(100dvh - var(--ifm-navbar-height) - 2rem);
   overflow-y: auto;
   position: sticky;
   top: calc(var(--ifm-navbar-height) + 1rem);
@@ -33,7 +33,7 @@
 
 /* Adjust TOC height when Copy Page Button is present */
 .tableOfContents:has(.copyPageButtonWrapper) {
-  max-height: calc(100vh - var(--ifm-navbar-height) - 2rem);
+  max-height: calc(100dvh - var(--ifm-navbar-height) - 2rem);
 }
 
 /* Ensure proper scrolling for TOC items when Copy Page Button is present */

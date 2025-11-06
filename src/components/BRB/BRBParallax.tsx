@@ -143,9 +143,9 @@ const Container = styled.div`
 
 const BRBWrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   @media ${device.mobileL} {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 `;
 

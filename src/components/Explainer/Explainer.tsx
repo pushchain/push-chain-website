@@ -1051,7 +1051,7 @@ const DesktopTOC = styled(ItemV)`
 
   justify-content: flex-start;
 
-  max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
   overflow-x: hidden; /* Prevent horizontal scrollbar */
 

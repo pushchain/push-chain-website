@@ -113,7 +113,7 @@ const PageContainer = styled.div<{ isDocsPage?: boolean }>`
   flex-direction: column;
   ${({ isDocsOrBlogsPage }) =>
     !isDocsOrBlogsPage && 'background: var(--ifm-color-black)'};
-  ${({ isDocsOrBlogsPage }) => isDocsOrBlogsPage && 'min-height: 100vh;'};
+  ${({ isDocsOrBlogsPage }) => isDocsOrBlogsPage && 'min-height: 100dvh;'};
   ${({ isDocsOrBlogsPage }) =>
     isDocsOrBlogsPage
       ? 'color: var(--ifm-color-primary-text) !important'
@@ -125,7 +125,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100dvh;
   color: white;
   text-align: center;
 `;

@@ -264,6 +264,6 @@ const PlayGround = styled(Section)`
   background-repeat: no-repeat;
   background-size: contain;
   width: 100%;
-  height: 75vh;
+  height: 75dvh;
   margin: 0 auto;
 `;

@@ -28,7 +28,7 @@ const TosComp = () => {
   return (
     <>
       <Section flexDirection='column'>
-        <HeroSection minHeight='70vh'>
+        <HeroSection minHeight='70dvh'>
           <HeroContent className='contentBox' flex='1' alignSelf='center'>
             <ItemV>
               <HeroHeader>{t('pages.tos.hero-section.title')}</HeroHeader>

@@ -226,7 +226,7 @@ export default function RemixIDE({ examples }: RemixIDEProps) {
       <div
         style={{
           width: '100%',
-          height: isFullScreen ? 'calc(100vh - 56px)' : '600px',
+          height: isFullScreen ? 'calc(100dvh - 56px)' : '600px',
           position: 'relative',
         }}
       >

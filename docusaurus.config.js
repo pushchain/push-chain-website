@@ -170,6 +170,27 @@ const config = {
       },
     },
     {
+      tagName: 'meta',
+      attributes: {
+        name: 'theme-color',
+        content: 'rgba(0, 0, 0, 0)',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'apple-mobile-web-app-capable',
+        content: 'yes',
+      },
+    },
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: 'black-translucent',
+      },
+    },
+    {
       tagName: 'link',
       attributes: {
         rel: 'preconnect',

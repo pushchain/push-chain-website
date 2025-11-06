@@ -23,7 +23,7 @@ const PrivacyMobileComp = () => {
   return (
     <>
       <Section flexDirection='column'>
-        <HeroSection minHeight='70vh'>
+        <HeroSection minHeight='70dvh'>
           <Content className='contentBox' flex='1'>
             <ItemV>
               <HeroHeader textAlign='center'>

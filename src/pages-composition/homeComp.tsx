@@ -698,7 +698,9 @@ const HomeWrapper = styled(ItemV)`
   background: var(--ifm-color-black);
   margin: 0;
   padding: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   overflow-x: hidden !important;
+  min-height: 100dvh;
   font-family:
     DM Sans,
     san-serif !important;
@@ -735,7 +737,7 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
-  min-height: 100vh;
+  min-height: 100dvh;
 `;
 
 const HeroContent = styled(Content)`

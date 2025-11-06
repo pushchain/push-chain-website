@@ -90,8 +90,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  justify-condtent: center;
+  height: 100dvh;
   background-color: black;
   color: white;
   text-align: center;

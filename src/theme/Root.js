@@ -159,7 +159,8 @@ export default function Root({ children }) {
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
 `;
 
 // The main content should take up all remaining space

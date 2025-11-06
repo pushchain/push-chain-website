@@ -54,7 +54,7 @@ export default function IFrameModal({
         display: 'flex',
         flexDirection: 'column',
         width: '100%',
-        height: isIframeVisible ? '80vh' : 'auto',
+        height: isIframeVisible ? '80dvh' : 'auto',
         maxHeight,
         borderRadius: '12px',
         overflow: 'hidden',
