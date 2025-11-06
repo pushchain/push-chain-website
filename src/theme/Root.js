@@ -1,7 +1,7 @@
 // React + Web3 Essentials
 import { useLocation } from '@docusaurus/router';
 
-import React, { useContext } from 'react';
+import React, { useContext, useLayoutEffect } from 'react';
 
 // External Components
 import i18nInitialize from '@site/src/utils/i18n';
@@ -61,6 +61,31 @@ export default function Root({ children }) {
   const shouldRenderFooter = excludePaths.every((path) =>
     excludeDefaultConfigAt(path)
   );
+
+  useLayoutEffect(() => {
+    if (location.pathname === '/') {
+      document.body.style.boxSizing = 'border-box';
+      document.body.style.margin = '0';
+      document.body.style.minHeight = '100dvh';
+      document.body.style.background = '#000000';
+      document.body.style.paddingBottom = 'env(safe-area-inset-bottom)';
+    } else {
+      // Reset for other pages
+      document.body.style.boxSizing = '';
+      document.body.style.margin = '';
+      document.body.style.minHeight = '';
+      document.body.style.background = '';
+      document.body.style.paddingBottom = '';
+    }
+
+    return () => {
+      document.body.style.boxSizing = '';
+      document.body.style.margin = '';
+      document.body.style.minHeight = '';
+      document.body.style.background = '';
+      document.body.style.paddingBottom = '';
+    };
+  }, [location.pathname]);
 
   // return superimposed class names if conditions are met
   function returnAdditionalClasses(conditions) {
