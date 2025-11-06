@@ -1,0 +1,114 @@
+{
+  "header": {
+    "meta": {
+      "logo-aria-label": "Push Chain - Điều hướng đến trang chủ",
+      "language-icon-alt": "Biểu tượng chọn ngôn ngữ",
+      "hamburger-menu-alt": "Mở menu điều hướng",
+      "testnet-badge-alt": "Push Chain Testnet Donut - Xem trạng thái testnet"
+    },
+    "logo": {
+      "imagealt": "Hình ảnh Logo của Push Chain",
+      "imagetitle": "Logo Push Chain",
+      "ctatitle": "Truy cập trang chủ Push Chain"
+    },
+    "testnet": {
+      "title": "Mạng thử nghiệm",
+      "aria-label": "Phần testnet",
+      "link1": {
+        "text": "Push Scan",
+        "subtext": "Trình khám phá <blockchain> cho <Push Chain>",
+        "title": "Khám phá các giao dịch và khối trên Push Chain testnet tại Push Scan"
+      },
+      "link2": {
+        "text": "Nhận Token Miễn Phí",
+        "subtext": "Nhận token testnet",
+        "title": "Nhận token testnet miễn phí để phát triển Push Chain"
+      }
+    },
+    "developers": {
+      "title": "Nhà phát triển",
+      "aria-label": "Phần dành cho Nhà phát triển",
+      "link1": {
+        "text": "Bắt đầu",
+        "subtext": "Giới thiệu về việc xây dựng trên Push Chain",
+        "title": "Bắt đầu xây dựng ứng dụng universal trên Push Chain - Tài liệu dành cho nhà phát triển"
+      },
+      "link2": {
+        "text": "Bắt đầu nhanh",
+        "subtext": "Thiết lập môi trường phát triển trong tích tắc",
+        "title": "Hướng dẫn bắt đầu nhanh - Thiết lập môi trường phát triển Push Chain ngay lập tức"
+      },
+      "link3": {
+        "text": "Hướng dẫn",
+        "subtext": "Hướng dẫn từng bước để xây dựng với Push",
+        "title": "Tìm hiểu qua hướng dẫn thực hành - Xây dựng ứng dụng universal đầu tiên của bạn trên Push Chain"
+      },
+      "link4": {
+        "text": "GitHub",
+        "subtext": "Xem mã nguồn cốt lõi và các công cụ nguồn mở",
+        "title": "Khám phá mã nguồn và các công cụ phát triển của Push Chain trên GitHub"
+      },
+      "link5": {
+        "text": "Discord dành cho Nhà phát triển",
+        "subtext": "Kết nối với cộng đồng các nhà phát triển",
+        "title": "Tham gia cộng đồng phát triển Push Chain trên Discord để được hỗ trợ và cộng tác"
+      }
+    },
+    "community": {
+      "title": "Cộng đồng",
+      "aria-label": "Phần Cộng đồng",
+      "link1": {
+        "text": "Cơ sở kiến thức",
+        "subtext": "Tìm hiểu sâu hơn về các tính năng",
+        "title": "Khám phá tài liệu đầy đủ và hướng dẫn tính năng của Push Chain"
+      },
+      "link2": {
+        "text": "Tokenomics",
+        "subtext": "Token gốc vận hành mọi thứ trên Push Chain",
+        "title": "Tìm hiểu về tokenomics của Push Chain và tiện ích token $PC"
+      },
+      "link3": {
+        "text": "X/Twitter",
+        "subtext": "Theo dõi các cập nhật và tin tức hệ sinh thái",
+        "title": "Theo dõi Push Chain trên X (Twitter) để cập nhật và thông báo mới nhất"
+      },
+      "link4": {
+        "text": "Discord",
+        "subtext": "Trao đổi, xây dựng và cùng nhau tận hưởng với cộng đồng",
+        "title": "Tham gia cộng đồng Push Chain trên Discord để thảo luận và hỗ trợ"
+      },
+      "link5": {
+        "text": "Telegram",
+        "subtext": "Tham gia cộng đồng và cập nhật thông tin mới nhất",
+        "title": "Kết nối với cộng đồng Push Chain trên Telegram để cập nhật thông tin theo thời gian thực"
+      }
+    },
+    "resources": {
+      "title": "Tài nguyên",
+      "aria-label": "Phần Tài Nguyên",
+      "link1": {
+        "text": "Blog",
+        "subtext": "Cập nhật, phân tích chuyên sâu và câu chuyện từ đội ngũ phát triển",
+        "title": "Đọc blog Push Chain để cập nhật những thông tin mới nhất, các phân tích kỹ thuật sâu và câu chuyện của các nhà phát triển"
+      },
+      "link2": {
+        "text": "Bản tóm tắt kỹ thuật",
+        "subtext": "Tầm nhìn và công nghệ, đơn giản hóa",
+        "title": "Đọc tài liệu kỹ thuật của Push Chain Litepaper – tầm nhìn đơn giản và tổng quan kỹ thuật"
+      },
+      "link3": {
+        "text": "Câu hỏi thường gặp",
+        "subtext": "Giải đáp nhanh các câu hỏi thường gặp",
+        "title": "Xem các câu hỏi thường gặp về Push Chain"
+      }
+    },
+    "language": {
+      "title": "Ngôn ngữ",
+      "aria-label": "Chọn ngôn ngữ"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Truy cập Push Portal - Kiếm điểm với vai trò nhà phát triển, người dùng hoặc trình xác thực"
+    }
+  }
+}

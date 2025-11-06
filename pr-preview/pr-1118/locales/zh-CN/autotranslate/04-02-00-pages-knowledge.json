@@ -1,0 +1,78 @@
+{
+  "pages": {
+    "knowledge": {
+      "seo": {
+        "title": "知识库 — 指南、常见问题解答和操作指南",
+        "description": "从这里开始了解概念、常见问题解答、操作指南和生态系统资源。清晰、非技术性的 Push Chain 使用指南。",
+        "og-title": "Push Chain 知识库 - 指南和常见问题",
+        "og-description": "关于 Push Chain 的概念、逐步操作指南以及常见问题的解答。",
+        "twitter-title": "知识库 - 指南与常见问题解答",
+        "twitter-description": "Push Chain 的快速指南、常见问题解答和操作指南（不含开发术语）。"
+      },
+      "hero-section": {
+        "title": "知识库",
+        "description": {
+          "highlighted": "Push Chain 是一个真正的通用区块链，旨在消除所有链之间的碎片化。",
+          "developers": "开发者",
+          "developers-text": "只需部署一次，即可立即兼容所有支持的 EVM 和 non-EVM 链。",
+          "users": "用户",
+          "users-text": "无论用户来自哪个链，都可以使用相同的app。"
+        },
+        "email-signup": {
+          "title": {
+            "long": "了解 Push Chain <transliterate>testnet</transliterate> 的最新动态",
+            "short": "Push Chain Testnet"
+          },
+          "description": "第一时间了解Push Chain testnet上线信息。加入我们的邮件列表，获取独家更新。"
+        },
+        "footer": {
+          "description": "使用 Push Chain 为您的 app 在任何区块链上打造无缝、用户友好的体验。",
+          "cta": {
+            "text": "获取通知"
+          }
+        }
+      },
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "title": "资源",
+              "items": {
+                "push101": {
+                  "title": "Push Chain 基础知识",
+                  "subtitle": "了解 Push Chain 的基础知识、创新之处以及为什么需要它",
+                  "ctatitle": "探索更多"
+                },
+                "builders": {
+                  "title": "在 Push Chain 上构建",
+                  "subtitle": "深入了解如何构建通用app，它能解锁什么以及如何开始！",
+                  "ctatitle": "建设者集结"
+                },
+                "deepdives": {
+                  "title": "技术深度解读",
+                  "subtitle": "想了解 Push 的复杂工作原理吗？或者你只是一个好奇的朋友？无论如何，欢迎来了解！",
+                  "ctatitle": "了解其工作原理"
+                },
+                "devdocs": {
+                  "title": "开发者文档",
+                  "subtitle": "咱们直奔主题吧！我是一个通用的链…而你是一名开发者，让我们正式开始！",
+                  "ctatitle": "立即构建"
+                },
+                "tokenomics": {
+                  "title": "探索代币经济学",
+                  "subtitle": "了解我们的代币经济学如何激励并确保可持续发展的网络，使其经久耐用",
+                  "ctatitle": "了解代币经济学"
+                },
+                "faq": {
+                  "title": "常见问题",
+                  "subtitle": "这里可以找到社区成员最常问问题的答案",
+                  "ctatitle": "了解更多"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

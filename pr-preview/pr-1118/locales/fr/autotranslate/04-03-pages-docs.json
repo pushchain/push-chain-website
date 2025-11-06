@@ -1,0 +1,41 @@
+{
+  "pages": {
+    "docs": {
+      "seo": {
+        "title": "Documentation — Créez des Applications Universelles",
+        "description": "Tout ce dont vous avez besoin pour déployer sur la Chaîne de Push : tutoriels rapides, SDK, référence API, exemples et configuration de nœud.",
+        "og-title": "Push Chain Docs - Démarrages Rapides, SDK & API",
+        "og-description": "Construirez et exécuterez des applications sur la couche d'exécution universelle avec des guides clairs et des exemples.",
+        "twitter-description": "Quickstarts, SDKs, API ref, et exemples pour déployer rapidement."
+      },
+      "header": {
+        "countdown-title": "Lancement des documents Testnet dans",
+        "description": "Psst... vous voulez un aperçu de Testnet Donut? Faites-nous savoir avec #pushchainsecret et nous vous envoyerons accès à une build de test.",
+        "title": "Parlez de la chaîne d&#39;envoi",
+        "ariaLabel": "Parlez de la chaîne Push sur Twitter"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Qu'est-ce que Push Chain ?",
+                  "subtitle": "Push Chain fournit un toolkit unifié pour construire des applications vraiment universelles.",
+                  "ctatitle": "Découvrez plus"
+                },
+                "builders": {
+                  "title": "Construons ensemble !",
+                  "ctatitle": "En apprendre davantage"
+                },
+                "ui-kit": {
+                  "subtitle": "Intégrer n'importe quel application basée sur React en moins de 5 minutes."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

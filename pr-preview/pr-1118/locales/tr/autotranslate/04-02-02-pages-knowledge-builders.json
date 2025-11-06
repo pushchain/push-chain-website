@@ -1,0 +1,60 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Yapımcılar — Nasıl Yapılır & Eğitimler",
+          "description": "Push Chain özelliklerini kullanmak için adım adım kılavuzlar, desenler ve örnekler.",
+          "og-title": "Yaratıcılar - Nasıl Yapılır & Öğreticiler",
+          "og-description": "Push Chain ile oluşturma konusunda rehberli öğreticiler, en iyi uygulamalar ve örnekler.",
+          "twitter-title": "Builders - Nasıl Yapılır & Eğitimler",
+          "twitter-description": "Push Chain üzerinde yayın yapmak için adım adım kılavuzlar."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Bilgi Tabanı"
+          },
+          "blocks": {
+            "title": "Push Chain üzerinde inşa et",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain üzerinde inşa etmeye hazır mısınız? Size ilham verecek ve başlamanıza yardımcı olacak bazı kaynaklar burada.",
+                  "curated-reads": "## Özenle Seçilmiş Okumalar 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Hadi Evrensel Uygulamalar Yapalım 💪",
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Paylaşımlı Durum ile Sadece Mümkün Olan Uygulamalar - Cilt 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Paylaşımlı Durum ile Mümkün Olan Uygulamalar - Cilt 2"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Tüketici Uygulamaları 🫶 Push Chain mi?"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Geliştirici Kaynakları",
+                "items": {
+                  "developer-docs": {
+                    "title": "Geliştirici Belgelerini Keşfedin"
+                  },
+                  "faucet": {
+                    "title": "Testnet టోకెన్ları Alın"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push टेस्टनेट Explorer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
