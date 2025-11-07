@@ -5,7 +5,10 @@ export function useHomepageStyles() {
   const location = useLocation();
 
   useLayoutEffect(() => {
-    const isHomepage = location.pathname === '/';
+    // Check for both local homepage and preview homepage
+    const isHomepage =
+      location.pathname === '/' ||
+      /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(location.pathname);
 
     if (isHomepage) {
       document.body.classList.add('homepage-body');
