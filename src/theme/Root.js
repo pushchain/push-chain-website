@@ -1,7 +1,7 @@
 // React + Web3 Essentials
 import { useLocation } from '@docusaurus/router';
 
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext } from 'react';
 
 // External Components
 import i18nInitialize from '@site/src/utils/i18n';
@@ -17,6 +17,7 @@ import AccountContext from '../context/accountContext';
 import { useChainNotification } from '../hooks/useChainNotification';
 import { Notification } from '../hooks/useRewardsNotification';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
+import { useHomepageStyles } from '../hooks/useHomeBodyStyles';
 
 // Initialize Internalization
 i18nInitialize();
@@ -51,6 +52,7 @@ export default function Root({ children }) {
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
   useChainNotification();
+  useHomepageStyles();
   const { showAlertBar } = useContext(AccountContext);
   const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
     location.pathname
@@ -61,18 +63,6 @@ export default function Root({ children }) {
   const shouldRenderFooter = excludePaths.every((path) =>
     excludeDefaultConfigAt(path)
   );
-
-  useLayoutEffect(() => {
-    if (location.pathname === '/') {
-      document.body.classList.add('homepage-body');
-    } else {
-      document.body.classList.remove('homepage-body');
-    }
-
-    return () => {
-      document.body.classList.remove('homepage-body');
-    };
-  }, [location.pathname]);
 
   // return superimposed class names if conditions are met
   function returnAdditionalClasses(conditions) {
