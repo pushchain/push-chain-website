@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[2177],{
+
+/***/ 579588:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"tag":{"label":"Push Protocol","permalink":"/push-chain-website/pr-preview/pr-1122/blog/tags/push-protocol","allTagsPath":"/push-chain-website/pr-preview/pr-1122/blog/tags","count":79,"unlisted":false},"listMetadata":{"permalink":"/push-chain-website/pr-preview/pr-1122/blog/tags/push-protocol","page":1,"postsPerPage":10,"totalPages":8,"totalCount":79,"nextPage":"/push-chain-website/pr-preview/pr-1122/blog/tags/push-protocol/page/2","blogDescription":"Blog","blogTitle":"Blog"}}');
+
+/***/ })
+
+}]);

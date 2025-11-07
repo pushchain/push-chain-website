@@ -1,0 +1,246 @@
+{
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "الرئيسية - بلوكشين push | البلوكشين الشامل للتطبيقات",
+        "description": "بلوكشين ذو حالة مشتركة للتطبيقات العالمية. انشر مرة واحدة؛ تصل إلى المستخدمين على أي سلسلة. استخدم أي محفظة. ادفع بأي توكن.",
+        "og-title": "Push Chain - بلوكشين عالمي لـ التطبيقات",
+        "og-description": "نشر واحد لمستخدمي EVM وغير EVM. استخدم أي محفظة وادفع بأي توكن — بدون تبديل الشبكات.",
+        "twitter-title": "انشر مرة واحدة. الوصول إلى أي سلسلة.",
+        "twitter-description": "أجرِ معاملات من أي سلسلة. استخدم أي محفظة. ادفع بأي توكن. لا حاجة للتبديل بين الشبكات."
+      },
+      "hero-section": {
+        "title": "أي سلسلة، أي تطبيق، جميع المستخدمين.\nسلسلة دفع واحدة.",
+        "description": "الجيل الأول من الطبقة الأولى المصممة للتطبيقات الشاملة. \nابنِ وانشر مرة واحدة، وقم باستقبال المستخدمين من أي سلسلة.",
+        "primary-button": "ابدأ البناء",
+        "primary-button-title": "ابدأ رحلتك كمطور مع Push Chain!",
+        "secondary-button": "استكشف قاعدة المعرفة",
+        "secondary-button-title": "تعرّف على Push Chain واستكشفه",
+        "section-aria-label": "قسم البداية لـ Push Chain - مقدمة لـ blockchain الطبقة الأولى العالمية",
+        "primary-button-aria-label": "ابدأ بناء تطبيقات عالمية على بلوكشين Push Chain - انتقل إلى وثائق المطورين",
+        "secondary-button-aria-label": "اعرف المزيد حول مميزات ومفاهيم Push Chain في قاعدة المعرفة",
+        "hero-background-alt": "خلفية رسوم متحركة لـ Push Chain تعرض اتصالات عالمية بـ بلوكشين",
+        "hero-background-title": "بلوشكين - طبقة أولى عالمية للتطبيقات عبر السلاسل",
+        "schema-headline": "Push Chain - بلوكشين عالمي لـ التطبيقات",
+        "schema-description": "انشر مرة واحدة على بلوكشين Push Chain ووصل إلى المستخدمين على أي بلوكشين باستخدام التطبيقات universale"
+      },
+      "whatis-section": {
+        "titleFirst": "بلوكشين حقيقي",
+        "titleSecondGraditent": "يونيفيرسال",
+        "titleThird": "بلوكشين",
+        "bottomTextFirst": "انشر مرة واحدة,",
+        "bottomTextSecond": "الوصول إلى كل مكان",
+        "bottomLinkText": "ابدأ الآن",
+        "bottomLinkTitle": "الانتقال إلى مركز الوثائق",
+        "section-aria-label": "ما هو بلوكشين Push Chain - شرح بلوكشين عالمي",
+        "animation-alt": "رسوم متحركة توضح نشر التطبيقات الشاملة في Push Chain عبر سلاسل الكتل المتعددة",
+        "animation-title": "تصور نشر عالمي لمنصة Push Chain - انشر مرة واحدة، واصل أي سلسلة",
+        "bottom-link-aria-label": "الانتقال إلى وثائق بلوكشين لبدء بناء تطبيقات عالمية"
+      },
+      "chain-features-section": {
+        "section-aria-label": "قسم ابتكارات وميزات بلوكشين",
+        "header": {
+          "main-text": "مبني على ابتكارات لإزالة التجزئة!",
+          "other-text": "Push هو الطبقة الأولى الشاملة الوحيدة التي ستحتاجها على الإطلاق!"
+        },
+        "box1": {
+          "texttitle": "معاملات على أي بلوكشين",
+          "bodytext": "Push Chain يدعم المعاملات من أي بلوكشين. يمكن للمستخدمين دفع رسوم الغاز بأي توكن - لا حاجة للجسور.",
+          "imagealt": "تصوير توضيحي يظهر شعارات مختلفة لـ بلوكشين وهي تسقط في آلة بينبول.",
+          "imagetitle": "يدعم معاملات من أي بلوكشين."
+        },
+        "box2": {
+          "texttitle": "تبسيط المحفظة",
+          "bodytext": "اسمح لأي محفظة من أي <1>بلوكشين</1> بالاتصال والتفاعل وإجراء المعاملات. اكسر حواجز <2>ويب3</2> باستخدام تسجيل الدخول الاجتماعي أو البريد الإلكتروني. المستخدم يقرر في <1>بلوكشين</1>.",
+          "imagealt": "تصوير توضيحي يظهر محافظ MetaMask و Phantom Wallet وغيرها تخرج من محفظة كبيرة عليها شعار Push Chain.",
+          "imagetitle": "يدعم أي محافظ حالية مثل MetaMask و Phantom وغيرها، بالإضافة إلى تسجيل الدخول الاجتماعي"
+        },
+        "box3": {
+          "texttitle": "100% EVM\nمتوافق",
+          "bodytext": "انشر بدون أي كود على السلسلة. حوّل تطبيقك الأصلي إلى تطبيق عالمي في دقائق.",
+          "imagealt": "صورة توضيحية لشعار آلة افتراضية إيثريوم تدور وتقول توافق 100٪ مع آلة افتراضية إيثريوم.",
+          "imagetitle": "لا توجد تغييرات برمجية مطلوبة على السلسلة، توافق كامل مع EVM."
+        },
+        "box4": {
+          "texttitle": "عقود ذكية عالمية",
+          "bodytext": "قم بالبناء مرة واحدة، وقم بتشغيل تجارب متعددة الخطوات عبر السلاسل باستخدام عقد ذكي واحد ومستقبلاً مضمونًا.",
+          "imagealt": "رسم توضيحي يظهر شعار Ethereum Virtual Maching وقوس يدور حوله يقول 'متوافق 100٪ مع EVM'",
+          "imagetitle": "انشر مرة واحدة، وتوافق فورًا مع جميع السلاسل المدعومة (EVM أو غير EVM)."
+        },
+        "box5": {
+          "texttitle": "Universal Fee\nAbstraction",
+          "bodytext": "دع المستخدمين دفع رسوم الغاز بأي توكن، على أي بلوكشين دون الحاجة إلى ربط الشبكات.",
+          "imagealt": "تصوير توضيحي يظهر شعارات مختلفة لـ Bitcoin و Ethereum و Solana تدور حول بلوكشين",
+          "imagetitle": "يدعم أي توكن من أي سلسلة للمعاملات."
+        },
+        "box6": {
+          "texttitle": "Universal Execution Layer",
+          "bodytext": "قم ببناء تطبيقات ذرية وقابلة للتركيب عبر الـ web3. ابتكر تجارب تطبيقات لم يسبق لها مثيل، من خلال السماح لعدة مستخدمين من سلاسل مختلفة بإجراء معاملات مع نفس التطبيق.",
+          "imagealt": "Illustration showing different tetris blocks entering a wormhole and Push Chain logo emerging from the other end.",
+          "imagetitle": "المعاملات من أي سلسلة تكتمل على بلوكشين Push Chain، مما يتيح لمستخدمي أي سلسلة استخدام نفس الـapp المعروف أيضًا باسم Universal Execution Layer."
+        },
+        "box7": {
+          "texttitle": "الوصول إلى الحالة",
+          "bodytext": "الوصول إلى بيانات الحساب والحالة من سلاسل أخرى في عقذك الذكي.",
+          "tagText": "قريباً",
+          "tags": {
+            "title1": "قراءة من سلاسل البلوكشين"
+          },
+          "imagealt": "رسم توضيحي يوضح نمو Push Chain بأسلوب الرسوم المتحركة القائم على الكتل.",
+          "imagetitle": "(خريطة الطريق) الحالة المشتركة تسمح بالوصول إلى بيانات الحساب والحالة من سلاسل أخرى في العقد الذكي الخاص بك."
+        },
+        "box8": {
+          "texttitle": "Universal\nValidators",
+          "bodytext": "قم بتشغيل والتحقق وإكمال المعاملات عبر أي سلسلة باستخدام العقد الذكي الخاص بك.",
+          "tagText": "قريباً",
+          "tags": {
+            "title1": "الكتابة إلى الـبلوكشين"
+          },
+          "imagealt": "رسم توضيحي يظهر مكعبات تيتريس بألوان مختلفة تندمج وتتغير.",
+          "imagetitle": "(خارطة الطريق) تسمح المدققون <transliterate>universal</transliterate> للمستخدمين بتشغيل والتحقق من إكمال المعاملات عبر أي <transliterate>blockchain</transliterate> باستخدام <transliterate>smart contract</transliterate> الخاص بك."
+        },
+        "footer": {
+          "title": "وسّع قاعدة مستخدمي تطبيقك بالانتقال إلى عالمية",
+          "secondary": "بكل سهولة!",
+          "ctatext": "ابدأ البناء",
+          "ctatitle": "انشر مرة واحدة، وضاعف قاعدة مستخدميك بعشرة أضعاف. تفضل بزيارة وثائق المطورين."
+        }
+      },
+      "partners-section": {
+        "section-aria-label": "شركاء ومنتجات تكامل نظام بلوكشين Push Chain",
+        "title": "مدعوم من Push Chain",
+        "subtitle": "اكتشف التطبيقات التي ضاعفت قاعدة مستخدميها ببساطة عن طريق النشر على بلوكشين Push Chain.",
+        "ctatitle": "اطلع على الشركاء والتطبيقات والبنية التحتية المنشورة على Push Chain",
+        "ctatext": "استكشف النظام البيئي",
+        "partners-grid-aria-label": "شبكة من شعارات الشركاء تعرض مشاريع Web3 التي تستخدم Push Chain",
+        "partner-logo-title-prefix": "شعار الشريك - ",
+        "partner-logo-alt-prefix": "شعار ",
+        "mobile-view-aria-label": "عرض شركاء نظام Push Chain على الهاتف المحمول"
+      },
+      "stats-section": {
+        "section-aria-label": "إحصائيات ومقاييس أداء بلوكشين Push Chain",
+        "title": "تحقيق",
+        "titleGradient": "فوري",
+        "titleThird": "إمكانية التشغيل البيني",
+        "description": "محسّن للأداء.\nنظام معالجة معاملات مرتفع، رسوم منخفضة للغاية، وسرعة\nنهائية دون الثانية لتنفيذ التطبيقات في الوقت الفعلي.",
+        "animation-alt": "رسوم متحركة تفاعلية توضح التوافق الفوري لـ بلوكشين Push Chain عبر سلاسل كتل متعددة",
+        "animation-title": "تصور تفاعلي للتعامل الفوري في بلوكشين Push Chain",
+        "stats": {
+          "stat1": {
+            "title": "السلاسل المدعومة",
+            "imagealt": "تصوير توضيحي لسلاسل الدعم",
+            "imagetitle": "قائمة بجميع السلاسل المدعومة مثل إيثريوم وسولانا وسلسلة BNB، إلخ"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "النهائية الأصلية",
+            "description": "فوري"
+          },
+          "stat4": {
+            "title": "وقت البلوك الأصلي",
+            "description": "1s"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "أخبار، مدونات المطورين والأفكار",
+        "subtitle-aria-label": "معلومات فئة المدونة",
+        "title": "نبضك في بلوكشين Push Chain",
+        "title-aria-label": "أحدث مقالات ومدونات Push Chain والتحديثات",
+        "explore-link-text": "استكشف المزيد من المقالات",
+        "explore-link-title": "زر Push Chain مدونة لقراءة جميع المقالات والتحديثات",
+        "explore-link-aria-label": "الانتقال إلى صفحة مدونة Push Chain",
+        "section-aria-label": "قسم مقالات وأخبار Push Chain",
+        "blog-posts-list-aria-label": "أحدث مقالات مدونة Push Chain",
+        "blog-post-aria-label": "اقرأ منشور المدونة حول {title}",
+        "blog-post-title-prefix": "اقرأ منشور المدونة - ",
+        "loading-text": "جارِ تحميل أحدث منشورات المدونة...",
+        "error-text": "تعذر تحميل منشورات المدونة في الوقت الحالي",
+        "no-posts-text": "لا توجد مقالات مدونة متاحة"
+      },
+      "trustedby-section": {
+        "title": "مبني بواسطة فريق موثوق به من رواد الـ web3",
+        "section-aria-label": "قسم الثقة بـ Push Chain",
+        "trusted-by-alt": "مستثمر - "
+      },
+      "featured-section": {
+        "aria-label": "قسم المميز في",
+        "tag": "مُظَهَّرٌ فِي",
+        "title": "Push Chain في دائرة الضوء",
+        "subtitle": "لا تحكم بناءً على كلامنا فقط. اطلع على ما تقوله وسائل الإعلام حول سلسلة بلوكشين العالمية الحقيقية.",
+        "articles-image-alt": "تغطية إعلامية من ",
+        "articles-text": "اقرأ التغطية الكاملة",
+        "articles-title-1": "اقرأ ",
+        "articles-title-2": "'s thoughts on بلوكشين in full detail",
+        "articles": {
+          "binance-chain": {
+            "text": "يسعدنا أن نعلن أن بروتوكول Push، وهو بروتوكول اتصالات لامركزي رائد لـ Web3، قد تم إطلاقه الآن على سلسلة BNB."
+          },
+          "coindesk": {
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver توكن-Gated Group Chats"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains تطلق دردشات جماعية مقيدة بالـ <token>. يهدف التعاون مع <protocol> إلى التصدي للمعلومات المضللة والاحتيال."
+          },
+          "balaji": {
+            "text": "إشعارات مُدارة من قبل المستخدم. تتحكم شركتان في إشعارات الدفع إلى مليارات الهواتف الذكية: آبل وجوجل."
+          },
+          "defiprime": {
+            "text": "يتحدث Harsh Rajat عن مستقبل الخدمات المصرفية، وحوافز بروتوكول EPNS، وأين يكمن نموذج العمل للإشعارات اللامركزية."
+          },
+          "ethfoundation": {
+            "text": "منذ HackMoney، وجهت ريتشا وهارش طاقة كبيرة نحو بناء EPNS لما يسمونه \"قطعة مفقودة من الويب 3.\""
+          },
+          "beincrypto": {
+            "text": "كيف تعمل شبكات التواصل Web3: نظرة متعمقة تقنية"
+          },
+          "the-block": {
+            "text": "بروتوكول الإشعارات Web3 Push يطلق سلسلته Layer 1 الخاصة به"
+          },
+          "business-insider": {
+            "text": "Push تكشف عن Push Chain: مستقبل تطبيقات بلوكشين عالمية"
+          },
+          "chainwire": {
+            "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوكشين العالمية."
+          },
+          "benzinga": {
+            "text": "Push تكشف عن Push Chain: مستقبل تطبيقات الـ blockchain العالمية"
+          },
+          "crypto-briefing": {
+            "text": "Push تكشف عن Push Chain: مستقبل تطبيقات البلوكشين العالمية"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify blockchain communication and transactions"
+          },
+          "messari": {
+            "text": "يُمكّن EPNS الحوافز والدخل السلبي للمستخدمين الذين يتلقون الإشعارات اللامركزية."
+          },
+          "coin-telegraph-1": {
+            "text": "يشرح Harsh Rajat، المؤسس والرئيس التنفيذي لمشروع Push Protocol، الزيادة في تطوير تطبيقات Web3 للدردشة في أحدث حلقة من Hashing It Out."
+          },
+          "coin-telegraph-2": {
+            "text": "تطلق Unstoppable Domains ميزة دردشة جماعية مبنية على نظام الشارات لحاملي أسماء المستخدمين."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "قسم بناء التطبيقات العالمية",
+        "section-title": "قم ببناء تطبيقات عالمية.",
+        "section-subtitle": "اكسر الحواجز. ابنِ مرة واحدة، وتوسع على كل بلوكشين.",
+        "docs-link": {
+          "text": "استكشف وثائق بلوكشين",
+          "title": "استكشف وثائق بلوكشين و مصادر المطورين",
+          "aria-label": "افتح وثائق بلوكشين في علامة تبويب جديدة"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "ابدأ مع بلوكشين Push Chain - منصة البلوكشين الشاملة",
+          "aria-label": "ابدأ تطوير تطبيقاتك على بلوكشين Push Chain"
+        }
+      }
+    }
+  }
+}

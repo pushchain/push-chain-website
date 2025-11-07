@@ -1,0 +1,14 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "qnas": {
+        "qna2": {
+          "answer": "<1>Zaten sahip olduğunuz cüzdanı kullanın — Push arka planda zincirler arası işlemleri halleder.</1><1>1. <2>Her yerden başlayın.</2> Herhangi bir zincirdeki herhangi bir cüzdanı kullanın — zincir değiştirmeye gerek yok.</1><1>2. <2>Tek seferde imzalayın.</2> Zaten sahip olduğunuz bir token ile ödeme yapın; ücreti ana zincirinizde ayırıyoruz.</1><1>3. <2>Yönlendiriyoruz.</2> Push'taki bağlantılı bir hesap (hala sizinki) çağrınızı uygulamaya yönlendirir — saklama dışı.</1><1>4. <2>Her zaman sizsiniz.</2> Ana zincir cüzdanınızı Push'taki bağlantılı hesabınızla eşleştiriyoruz, böylece işlemler doğru şekilde doğrulanır ve Push'ta size atfedilir.</1><1>5. <2>Hızlıca tamamlandı.</2> Uygulama Push'ta çalışır; ücretler perde arkasında halledilir. Köprü yok, yeni cüzdan yok.</1><1>Bu sayede, herhangi bir zincirdeki kullanıcılar Push Chain'de dağıtılmış aynı uygulamayı kullanabilir — uygulamaları gerçekten evrensel hale getirir.</1>"
+        },
+        "qna3": {
+          "question": "Farklı bir cüzdan veya gas token'a ihtiyacım var mı?"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Câu hỏi thường gặp về Push Chain - Universal Blockchain",
+      "title": "Những Câu Hỏi Thường Gặp\n",
+      "title-aria-label": "Các câu hỏi thường gặp về Push Chain",
+      "discord-link-text": "Hỏi chúng tôi trên Discord",
+      "discord-link-title": "Tham gia cộng đồng Discord của Push Chain để được hỗ trợ và giải đáp thắc mắc",
+      "discord-link-aria-label": "Mở cộng đồng Discord trong tab mới",
+      "explore-more-text": "Xem thêm Câu hỏi thường gặp",
+      "explore-more-title": "Xem tài liệu FAQ đầy đủ và hướng dẫn dành cho nhà phát triển của Push Chain",
+      "explore-more-aria-label": "Truy cập trang Câu hỏi thường gặp đầy đủ của Push Chain",
+      "accordion-aria-label": "Danh sách câu hỏi thường gặp của Push Chain",
+      "answer-aria-label": "Trả lời câu hỏi - ",
+      "qnas": {
+        "qna1": {
+          "question": "Push Chain là gì?",
+          "answer": "<1>Push Chain là một blockchain shared-state giúp <2>loại bỏ tình trạng phân mảnh và khiến các ứng dụng trở nên phổ quát</2>.</1><1>Triển khai một lần trên Push. Người dùng từ bất kỳ chuỗi nào — EVM hoặc non-EVM — có thể sử dụng ứng dụng của bạn với các ví và token hiện có của họ; phí được xử lý ẩn.</1>"
+        },
+        "qna2": {
+          "question": "Nó hoạt động như thế nào? (Giải thích đơn giản)",
+          "answer": "<1>Sử dụng ví bạn đã có — Push xử lý phần cross-chain phía sau.</1><1>1. <2>Bắt đầu ở bất cứ đâu.</2> Sử dụng bất kỳ ví nào trên bất kỳ blockchain nào — không cần chuyển mạng.</1><1>2. <2>Ký một lần.</2> Thanh toán bằng token bạn đã có; chúng tôi để dành phí trên blockchain chính của bạn.</1><1>3. <2>Chúng tôi định tuyến nó.</2> Một tài khoản liên kết trên Push (vẫn là của bạn) chuyển cuộc gọi của bạn đến app — không phải là giao quyền.</1><1>4. <2>Bạn luôn là bạn.</2> Chúng tôi khớp ví blockchain chính của bạn với tài khoản liên kết để các hành động được xác minh chính xác và ghi công cho bạn trên Push.</1><1>5. <2>Xong nhanh chóng.</2> App chạy trên Push; phí được xử lý ẩn. Không cầu nối, không ví mới.</1><1>Đây là cách người dùng trên bất kỳ blockchain nào có thể sử dụng cùng một app được triển khai trên Push Chain — làm cho app thực sự universal.</1>"
+        },
+        "qna3": {
+          "question": "Tôi có cần ví khác hoặc <token> phí không?",
+          "answer": "<1><2>Không.</2></1><1><2>Giữ ví của bạn.</2> Sử dụng ví bạn đã có — không cần ví mới hoặc tài khoản mới.</1><1><2>Thanh toán bằng những gì bạn đang có.</2> Phí có thể được thanh toán bằng các <token> bạn đã có trên chuỗi chính của bạn; chúng tôi xử lý chuyển đổi ở hậu trường.</1><1><2>Không cần chuyển mạng.</2> Luôn ở trên chuỗi chính của bạn — không cần cầu nối chỉ để lấy <token> gas.</1><1><2>Không lưu ký.</2> Bạn ký mọi hành động; Push không bao giờ giữ <token> khóa của bạn.</1><1><2>Ẩn dưới lớp vỏ.</2> Mạng tự động thanh toán phí bằng $PC — bạn không cần quản lý nó.</1>"
+        },
+        "qna4": {
+          "question": "Cái này khác gì so với cầu nối hoặc các lớp nhắn tin?",
+          "answer": "<1><2>Câu trả lời ngắn gọn:</2> Push là nơi ứng dụng của bạn chạy. Các cầu nối/tin nhắn chỉ di chuyển <token> hoặc tin nhắn giữa các chuỗi, gây phức tạp cho cả người dùng và nhà phát triển.</1><1><2>Một trang chủ so với nhiều bản sao.</2> Với cầu nối/tin nhắn, bạn triển khai trên mỗi chuỗi và đồng bộ hóa qua tin nhắn. Trên Push, bạn triển khai một lần; mọi người truy cập cùng một hợp đồng và <shared-state>.</1><1><2>Không có <token> được gói hoặc cầu nối bắt buộc.</2> Người dùng ở lại chuỗi chính của họ và thanh toán bằng những gì họ đã có; chúng tôi xử lý định tuyến và chuyển đổi phí dưới nền.</1><1><2>Đồng nhất danh tính & xác minh.</2> Chúng tôi chấp nhận chữ ký từ bất kỳ <wallet> nào/chuỗi nào và gán chúng cho cùng một người dùng trên Push — không kiểm soát.</1><1><2>Ít bộ phận di chuyển hơn.</2> Không cần phê duyệt chéo chuỗi phức tạp, không săn <token> <gas fees>, không có hợp đồng kết dính để giữ đồng bộ.</1><1><2>Cầu nối tạo ra sự phức tạp. Khả năng tương tác gốc chuỗi giải quyết nó.</2> Cầu nối yêu cầu nỗ lực kỹ thuật phức tạp, thời gian, chi phí kiểm toán và cơ sở hạ tầng bổ sung. Khả năng tương tác gốc chuỗi chỉ hoạt động khi ứng dụng của bạn kế thừa nó một cách tự nhiên.</2><1>Kết quả: ứng dụng đơn giản hơn, một nguồn sự thật duy nhất và trải nghiệm người dùng giống như một chuỗi — ngay cả khi người dùng không ở đó.</1>"
+        },
+        "qna5": {
+          "question": "Chỉ hỗ trợ EVM thôi sao? Những blockchain nào được hỗ trợ?",
+          "answer": "<1><2>Không, Push hỗ trợ cả EVM và non-EVM chains.</2> Mặc dù ưu tiên EVM cho việc triển khai, người dùng từ bất kỳ chains nào (bao gồm cả non-EVM) đều có thể sử dụng ứng dụng của bạn như thể họ đang sử dụng nó một cách tự nhiên.</1>\n<1><2>Triển khai một lần. Tương tác khắp mọi nơi.</2> Viết và triển khai các hợp đồng EVM tiêu chuẩn trên Push (Solidity/Vyper). Công cụ vẫn giữ nguyên.</1>\n<1><2>Người dùng từ bất kỳ chain nào.</2> Ethereum và các L2 EVM chính hoạt động một cách tự nhiên. Người dùng non-EVM (ví dụ: Solana) ký bằng ví tại home wallets của họ; chúng tôi xác minh và định tuyến dưới nền — không cần chuyển đổi mạng.</1>\n<1><2>Được hỗ trợ hôm nay.</2> Xem danh sách các chains được hỗ trợ trực tiếp → <3>Supported Chains</3>.</1><1><2>Mở rộng phạm vi.</2> Chúng tôi đang liên tục thêm các chains mới. Nếu bạn muốn yêu cầu bất kỳ chain nào, vui lòng <4>liên hệ với chúng tôi</4>.</1>",
+          "supported-urls-title": "Danh sách tất cả các blockchain được hỗ trợ bởi Push Chain.",
+          "contact-url-title": "Liên hệ với chúng tôi để thêm các chuỗi mới."
+        },
+        "qna6": {
+          "question": "Tốc độ nhanh như thế nào và phí ra sao?",
+          "answer": "<1><2>Tốc độ.</2> Được thiết kế cho thời gian xác nhận khoảng 1s trên Push Chain với tính ổn định cao và phản hồi nhanh chóng. Đối với các giao dịch universal, thời gian xác nhận phụ thuộc vào từng blockchain, nhưng hầu hết các blockchain hiện đại nên mất khoảng 2-3s hoặc ít hơn. Kiểm tra số liệu trực tiếp trên <3>🍩 Donut Testnet</3>.</1><1><2>Mô hình phí.</2> Bạn thấy phí bằng token bạn chọn để thanh toán; mạng sẽ được giải quyết bằng $PC ở phía sau.</1><1><2>Chi phí điển hình.</2> Chi phí điển hình ít hơn <2>$0.001</2> mỗi giao dịch, tuy nhiên nó thay đổi tùy thuộc vào độ phức tạp của hợp đồng, giá token và tải mạng. Bạn nhận được báo giá chính xác trước khi ký.</1>",
+          "donut-testnet-title": "Xem thống kê của Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

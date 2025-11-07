@@ -1,0 +1,67 @@
+{
+  "pages": {
+    "knowledge": {
+      "push101": {
+        "seo": {
+          "title": "区块链基础 — 简介",
+          "description": "针对初学者的 Push Chain 和 通用 应用 的简单介绍——它是什么、如何运作以及如何开始。",
+          "og-title": "区块链基础 - 介绍",
+          "og-description": "了解基础知识：什么是 Push Chain，它是如何工作的，以及您的第一步。",
+          "twitter-title": "Push Chain 基础 - 从这里开始",
+          "twitter-description": "Push Chain 和 universal app 的新手指南。"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "知识库"
+          },
+          "blocks": {
+            "title": "Push Chain 基础知识",
+            "sections": {
+              "push-chain-basics": {
+                "items": {
+                  "why-push-chain": "## 为什么选择 Push Chain？\n\nPush Chain 是第一个**真正的 universal L1**，专门为实现应用能够被任何链上的用户无缝交互而设计。\n\n只需编写一次智能合约，部署在 Push Chain 上，即可立即触达以太坊、Solana 和所有其他支持的链上的用户，而无需更改链上代码。",
+                  "what-is-push-chain": "## Push Chain 是什么？\n\nPush Chain 是一个权益证明 (PoS) L1 区块链，旨在消除所有链之间的碎片化。\n\n它是一个用于**Universal (互操作) App** 的 **shared state L1** 链，实现跨链应用。Push Chain 能够实现来自任何链（Eth, Solana, EVM 或非 EVM）的交易，使来自任何链的应用都可以被任何链的用户访问（来自任何链的 **polymarket**，来自任何链的 **pump.fun** 等）。",
+                  "innovations-of-push-chain": "## Push Chain 的创新\n\nPush Chain 引入了多项突破性创新，例如：\n\n**真正的通用 L1** - 本地支持所有链，并使用户能够与相同的 app 进行交互。无需集中式中继器、桥接或其他解决方法。\n\n**通用智能合约** - 智能合约是通用的，无需任何链上代码更改或额外步骤即可立即工作。\n\n**一次交易，无论在哪条链上** - 用户可以使用一次交易与 Push Chain 上的任何 app 进行交互。无论他们选择如何与 app 交互，他们只需要签名一次交易。\n\n**通用费用抽象** - 允许用户在他们选择的链上本地交互，并使用他们想要的任何 token。\n\n**钱包抽象** - 支持 MetaMask、Phantom 和其他钱包，以及通过统一提供商进行社交或电子邮件登录。用户无需创建新钱包即可访问任何 app。\n\n**原生 App 体验** - 用户始终感觉他们在他们的链上原生使用 app。\n\n由此产生的是 web3 的 **完全可互操作的应用程序**。在这种模式下，与其成为 “以太坊上的 Uniswap” 用户、“Polygon 上的 Uniswap” 用户或“Arbitrum 上的 Uniswap” 用户，一个人简单地成为 **Uniswap 用户**。",
+                  "curated-reads": "## 精选阅读 👇"
+                }
+              },
+              "why-push-chain-future": {
+                "title": "了解为什么 Push Chain 是 web3 的未来",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "未来应用 — 无需混乱的构建",
+                    "subtitle": "未来的应用不会属于一条链。相反，它们将由所有链的用户共享。"
+                  },
+                  "learn-why-push-chain": {
+                    "title": "为什么 Push Chain 是 Web3 中缺失的一层",
+                    "subtitle": "Push Chain 被设计为共享状态 L1，能够实现可扩展的、面向消费者的通用应用。"
+                  },
+                  "innovations-by-push-chain": {
+                    "title": "Push Chain 的创新",
+                    "subtitle": "探索十个关键创新，统一任何链、任何用户和任何应用。"
+                  },
+                  "another-l1": {
+                    "title": "区块链Push Chain是另一条L1吗？",
+                    "subtitle": "Push Chain 并非旨在创建另一个孤立的生态系统——而是致力于为所有人解决互操作性问题。"
+                  },
+                  "evolution-of-push": {
+                    "title": "Push 的演变",
+                    "subtitle": "从 Push 协议到区块链 — 构建可扩展 Web3 应用的通用、shared-state L1 的旅程。"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "消费级应用 🫶🏽 on Push Chain",
+                    "subtitle": "Push Chain 为下一波可以在链上普遍运行的消费者应用打开了大门。"
+                  },
+                  "faq-push-chain": {
+                    "title": "Push Chain 常见问题",
+                    "subtitle": "有疑问？这里有关于 Push Chain 和 universal apps 最常见的答案。"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "غوص عميق — مفاهيم وهيكلة",
+          "description": "شرح مبسط حول الـ shared state، و universal fee abstraction، و USV/UEA، والـ universal execution layer.",
+          "og-title": "تعمق - المفاهيم والهيكلة",
+          "og-description": "مقالات متعمقة حول وحدات Push Chain، وقرارات التصميم، والأداء.",
+          "twitter-title": "Deep Dives - تحت الأغطية",
+          "twitter-description": "شرح مبسط لكيفية عمل Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "قاعدة المعرفة"
+          },
+          "blocks": {
+            "title": "غوص عميق",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## غوص عميق في البنية التحتية\n\nتعرّف على تعقيدات بنية Push Chain وكيفية عملها - وحدة تلو الأخرى.",
+                  "curated-reads": "## قراءات منتقاة 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "تعرّف على ما يجعل Push Chain يعمل!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "التشغيل البيني كطيف"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "فهم إثبات الحصة (POS) - الجزء الأول"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

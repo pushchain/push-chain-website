@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "심층 분석 — 개념 및 아키텍처",
+          "description": "공유 상태, 수수료 추상화, USV/UEA, 그리고 유니버설 실행 레이어에 대한 이해하기 쉬운 설명입니다.",
+          "og-title": "심층 분석 - 개념 & 아키텍처",
+          "og-description": "Push Chain 모듈, 디자인 결정, 성능에 대한 심층적인 기사.",
+          "twitter-title": "심층 분석 - 내부 작동 원리",
+          "twitter-description": "Push Chain 작동 방식에 대한 설명입니다."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "지식 기반"
+          },
+          "blocks": {
+            "title": "심층 분석",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## Architecture Deep Dives\n\nPush Chain의 아키텍처와 작동 방식에 대해 자세히 알아보세요. 한 모듈씩 단계별로 학습합니다.",
+                  "curated-reads": "## 엄선된 자료 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Push Chain이 어떻게 작동하는지 알아볼까요!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "상호운용성 스펙트럼"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "Proof of Stake (POS) 이해하기 - 1부"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
