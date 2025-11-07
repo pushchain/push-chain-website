@@ -298,7 +298,6 @@ export default function NavbarContent() {
 
 const NavigationMenuItem = styled.div`
   position: relative;
-  // Styles for the flags
   .flag-icon {
     width: 24px;
     height: 24px;
@@ -313,17 +312,11 @@ const NavigationMenuItem = styled.div`
     font-size: 16px;
     line-height: 150%;
     letter-spacing: normal;
-    // color: var(--ifm-color-neutral-700);
   }
 
   &:hover {
-    & span {
-      // color: var(--ifm-color-white);
-    }
-
     & .chevronIcon {
       transform: rotate(180deg);
-      // color: var(--ifm-color-white);
     }
 
     & .menuContent {
@@ -344,10 +337,6 @@ const NavigationMenuHeader = styled.div`
     padding: 0px 4px 0px 12px;
     border-left: 1px solid var(--ifm-header-caret-color);
     font-family: DM Sans !important;
-
-    &:hover {
-      // color: var(--ifm-navbar-text-color);
-    }
   }
 
   &:hover {
@@ -362,7 +351,6 @@ const NavigationMenuHeader = styled.div`
 
   @media ${device.laptopM} {
     justify-content: space-between;
-    margin: 24px 0 0px 0;
 
     & span {
       padding: 0px;
@@ -374,6 +362,10 @@ const NavigationMenuHeader = styled.div`
       transform: ${(props) =>
         props.expanded ? 'rotate(180deg)' : 'none  !important'};
     }
+  }
+
+  @media ${device.laptopM} {
+    display: none;
   }
 `;
 
@@ -480,5 +472,9 @@ const NavItem = styled(LinkTo)`
 
   &:hover {
     color: var(--ifm-color-primary-text);
+  }
+
+  @media ${device.laptopM} {
+    display: none;
   }
 `;
