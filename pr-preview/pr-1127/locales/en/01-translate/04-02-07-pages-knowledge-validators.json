@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "knowledge":{
+    "validators": {
+      "seo": {
+        "title": "Validators",
+        "description": "Quick answers about wallets, fees, supported chains, and getting started.",
+        "og-title": "Push Chain FAQ - All Questions",
+        "og-description": "Find fast answers with links to guides, testnet, and support.",
+        "twitter-title": "FAQ - Start here",
+        "twitter-description": "Quick answers to Push Chain questions."
+      },
+      "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Validators"
+            }
+          }
+      }
+    }
+  }
+}
