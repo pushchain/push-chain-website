@@ -234,6 +234,23 @@ const config = {
         type: 'text/javascript',
       },
       innerHTML: `
+          (function() {
+            var isHomepage =
+              window.location.pathname === '/' ||
+              /^\\/push-chain-website\\/pr-preview\\/pr-\\d+\\/?$/.test(window.location.pathname);
+
+            if (isHomepage) {
+              document.body.classList.add('homepage-body');
+            }
+          })();
+        `,
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        type: 'text/javascript',
+      },
+      innerHTML: `
        (function (l) {
           if (l.search[1] === '/') {
             var decoded = l.search

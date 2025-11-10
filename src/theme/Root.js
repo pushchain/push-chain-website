@@ -161,6 +161,7 @@ export default function Root({ children }) {
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  min-height: 100svh;
   min-height: 100dvh;
   position: relative;
 `;

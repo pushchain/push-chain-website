@@ -700,6 +700,7 @@ const HomeWrapper = styled(ItemV)`
   padding: 0;
   padding-bottom: env(safe-area-inset-bottom);
   overflow-x: hidden !important;
+  min-height: 100svh;
   min-height: 100dvh;
   font-family:
     DM Sans,
@@ -737,6 +738,7 @@ const HomeWrapper = styled(ItemV)`
 const HeroSection = styled(Section)`
   overflow-y: visible;
   overflow-x: clip;
+  min-height: 100svh;
   min-height: 100dvh;
 `;
 

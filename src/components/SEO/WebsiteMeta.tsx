@@ -59,16 +59,7 @@ export default function WebsiteMeta() {
       />
 
       {/* Browser UI chrome */}
-      <meta
-        name='theme-color'
-        content='var(--ifm-color-theme-purple)'
-        media='(prefers-color-scheme: dark)'
-      />
-      <meta
-        name='theme-color'
-        content='var(--ifm-color-white)'
-        media='(prefers-color-scheme: light)'
-      />
+      <meta name='theme-color' content='rgba(0, 0, 0, 0)' />
       <meta
         name='msapplication-TileColor'
         content='var(--ifm-color-theme-purple)'
