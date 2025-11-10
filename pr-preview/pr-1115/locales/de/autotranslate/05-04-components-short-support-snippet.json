@@ -1,53 +1,21 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Support Fragen zu Push Chain - Universal Blockchain",
+      "section-aria-label": "Support Fragen zu Push Chain - universale Blockchain",
       "title": "Support\nHilfe-Center",
       "title-aria-label": "Häufig gestellte Fragen und Antworten zu Push Chain",
       "discord-link-text": "Frag uns auf Discord",
-      "discord-link-title": "Trete der Push Chain Discord Community für Support und Fragen bei",
+      "discord-link-title": "Trete der Push Chain Discord-Community für Unterstützung und Fragen bei.",
       "discord-link-aria-label": "Discord-Community in neuem Tab öffnen",
       "explore-more-text": "Weitere FAQs entdecken",
-      "explore-more-title": "Weitere Informationen zu den umfassenden Push Chain FAQs und Entwicklerhandbüchern finden Sie hier",
+      "explore-more-title": "Sieh dir die umfassende Push Chain FAQ-Dokumentation und Entwicklerhandbücher an",
       "explore-more-aria-label": "Zur vollständigen Push Chain FAQ-Seite navigieren",
-      "accordion-aria-label": "Liste mit Fragen zum Push Chain Support",
+      "accordion-aria-label": "Liste der Fragen zum Push Chain Support",
       "answer-aria-label": "Antwort auf die Frage - ",
       "qnas": {
         "qna1": {
-          "question": "Ich kann meine Wallet nicht verbinden. Was sollte ich versuchen?",
-          "answer": "<1><2>Schnelle Überprüfungen:</2> Seite aktualisieren, Wallet entsperren und aggressive Ad-/Scriptblocker für push.org deaktivieren.</1><1><2>Kein Netzwerkwechsel erforderlich:</2> Bleiben Sie auf Ihrer Home-Chain; Push übernimmt die Weiterleitung im Hintergrund.</1><1><2>Website-Berechtigungen zurücksetzen:</2> Entfernen Sie die Verbindung der Website in Ihrer Wallet und stellen Sie sie erneut her.</1><1>Immer noch festgefahren? Fragen Sie auf <3>Discord</3> oder öffnen Sie ein <4>Support-Ticket</4>.</1>",
-          "discord-url-title": "Trete dem Push Chain Discord bei, um Hilfe in Echtzeit zu erhalten.",
-          "support-url-title": "Ein Support-Ticket öffnen."
-        },
-        "qna2": {
-          "question": "Meine Transaktion ist ausstehend oder fehlgeschlagen – was jetzt?",
-          "answer": "<1><2>Status prüfen:</2> suchen Sie Ihre Tx auf <3>Push Scan</3> mit dem Hash aus Ihrer Wallet.</1><1><2>Ausstehend:</2> es bestätigt normalerweise kurz; vermeiden Sie wiederholtes erneutes Senden.</1><1><2>Fehlgeschlagen:</2> keine Gelder wurden entnommen. Überprüfen Sie den Fehler und versuchen Sie es erneut.</1><1>Laufende Vorfälle werden auf <4>Status</4> veröffentlicht.</1>",
-          "scan-url-title": "Push Scan öffnen (Explorer).",
-          "status-url-title": "Netzwerkstatus und Vorfälle anzeigen."
-        },
-        "qna3": {
-          "question": "Wie erhalte ich Testnet-Token (Donut)?",
-          "answer": "<1>Nutze den <3>Faucet</3>, um Test <token> anzufordern.</1><1><2>Hinweise:</2> Es können Ratenbegrenzungen gelten; einige Faucets erfordern eine einfache Verifizierung. Wenn der Faucet fehlschlägt, pinge uns auf <4>Discord</4>.</1>",
-          "faucet-url-title": "Öffne den Push Chain Faucet.",
-          "discord-url-title": "Trete dem Push Chain Discord bei."
-        },
-        "qna4": {
-          "question": "Wie melde ich einen Fehler oder eine Sicherheitslücke?",
-          "answer": "<1><2>App Fehler:</2> reiche ein <3>Support Ticket</3> ein oder poste in <4>Discord</4> mit Schritten zur Reproduktion.</1><1><2>Sicherheitsprobleme:</2> sende eine E-Mail an <5>security@push.org</5>. Bitte vermeide öffentliche Veröffentlichungen, bis wir einen Fix bestätigen.</1>",
-          "support-url-title": "Ein Support-Ticket öffnen.",
-          "discord-url-title": "Tritt dem Discord bei."
-        },
-        "qna5": {
-          "question": "Wo finde ich die Dokumentation und Schnellstarts?",
-          "answer": "<1>Beginne mit <3>Docs</3> für Schnellstarts und APIs, und der <4>Knowledge Base</4> für Konzepte, tiefere Einblicke und FAQs.</1>",
-          "docs-url-title": "Öffne die Entwicklerdokumentation.",
-          "kb-url-title": "Öffne die Wissensdatenbank."
-        },
-        "qna6": {
-          "question": "Kann ich Support für eine neue Kette, Funktion oder Integration anfordern?",
-          "answer": "<1>Ja. Teile uns mit, welche Chain/Tooling du benötigst, über <3>Kontakt</3> oder erstelle ein Issue auf <4>GitHub</4>. Wir erweitern die Abdeckung kontinuierlich.</1>",
-          "contact-url-title": "Kontaktieren Sie das Push Chain Team.",
-          "github-url-title": "Öffne die GitHub Organisation."
+          "question": "Ich kann meine <wallet> nicht verbinden. Was sollte ich versuchen?",
+          "answer": "<1><2>Schnelle Überprüfungen:</2> Seite aktualisieren, Wallet entsperren und aggressive Werbe-/Script-Blocker für push.org deaktivieren.</1><1><2>Kein Netzwerkwechsel erforderlich:</2> Bleiben Sie auf Ihrer Home-Chain; Push übernimmt die Weiterleitung im Hintergrund.</1><1><2>Website-Berechtigungen zurücksetzen:</2> Entfernen Sie die Verbindung der Website in Ihrer Wallet und verbinden Sie sie erneut.</1><1>Immer noch Probleme? Fragen Sie auf <3>Discord</3> oder öffnen Sie ein <4>Support-Ticket</4>.</1>"
         }
       }
     }

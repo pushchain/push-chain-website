@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "الإطلاق على Donut Testnet الآن — افتح المكافآت للبناة والمستخدمين الأوائل.",
+      "title": "الإطلاق على Donut Testnet الآن — افتح المكافآت للمطورين والمستخدمين الأوائل.",
       "learn-more-text": "اعرف المزيد",
-      "learn-more-title": "اعرف المزيد عن هذا الإعلان",
+      "learn-more-title": "تعرّف على المزيد حول هذا الإعلان",
       "dismiss-button-title": "إغلاق الإعلان",
       "dismiss-button-aria-label": "إغلاق شريط الإعلانات",
       "container-aria-label": "إعلان الموقع",
-      "star-icon-alt": "أيقونة نجمة الإعلان"
+      "star-icon-alt": "أيقونة نجم الإعلان"
     }
   }
 }

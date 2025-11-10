@@ -1,12 +1,12 @@
 {
   "notifications": {
     "alert": {
-      "message": "Push Metamask Snap 已经上线,",
-      "know-more-text": "开始体验！",
-      "know-more-title": "开始使用 Push MetaMask Snap",
-      "close-button-title": "关闭提醒",
-      "close-button-aria-label": "关闭 Push MetaMask Snap 提醒",
-      "container-aria-label": "Push Metamask Snap 通知"
+      "message": "Push Metamask Snap 现已上线！",
+      "know-more-text": "立即开始!",
+      "know-more-title": "立即开始使用 Push MetaMask Snap",
+      "close-button-title": "关闭提示",
+      "close-button-aria-label": "关闭 Push MetaMask Snap 警报",
+      "container-aria-label": "Push MetaMask Snap announcement"
     }
   }
 }

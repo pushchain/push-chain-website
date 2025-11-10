@@ -2,7 +2,7 @@
   "footer": {
     "email-section": {
       "title": "Push Chain 소식을 받아보세요",
-      "title-secondary": "뉴스 및 업데이트!",
+      "title-secondary": "소식과 업데이트!",
       "title-aria-label": "뉴스레터 구독 섹션",
       "section-aria-label": "Push Chain 뉴스레터 구독"
     },
@@ -36,19 +36,19 @@
       "docs": "문서",
       "docs-title": "Push Chain documentation",
       "github": "GitHub",
-      "github-title": "Push Chain 저장소 (repositories)를 GitHub에서 확인하세요",
+      "github-title": "Push Chain 저장소 (repositories) 보기 (GitHub)",
       "knowledge-base": "지식 기반",
-      "knowledge-base-title": "Push Chain 지식 기반",
+      "knowledge-base-title": "Push Chain Knowledge Base",
       "blog": "블로그",
       "blog-title": "Push Chain 블로그",
       "litepaper": "라이트페이퍼",
-      "litepaper-title": "Push Chain litepaper (PDF)",
+      "litepaper-title": "Push Chain 라이트페이퍼 (PDF)",
       "brand-kit": "브랜드 키트",
       "brand-kit-title": "Push Chain 브랜드 자산 및 가이드라인",
       "push-scan": "Push 스캔",
       "push-scan-title": "Push Chain 블록체인 탐색기",
       "faucet": "Faucet",
-      "faucet-title": "Push Chain faucet에서 테스트 토큰 받기",
+      "faucet-title": "Push Chain 탭에서 테스트 토큰 받기",
       "push-portal": "Push Portal",
       "push-portal-title": "Push Chain 커뮤니티 포털",
       "support": "지원",
@@ -56,7 +56,7 @@
       "security": "보안 및 고지 사항",
       "security-title": "보안 취약점 신고 (책임 있는 공개)",
       "contact-us": "문의하기",
-      "contact-us-title": "파트너십, BD, 미디어 또는 일반 문의",
+      "contact-us-title": "파트너십, 비즈니스 개발, 미디어 관련 문의 또는 일반 문의",
       "careers": "채용",
       "careers-title": "Push Chain의 채용 공고",
       "twitter": "X (Twitter)",
@@ -66,20 +66,20 @@
       "reddit": "레딧",
       "reddit-title": "Push Chain subreddit에 참여하세요",
       "telegram": "Telegram",
-      "telegram-title": "Push Chain Telegram에 참여하세요"
+      "telegram-title": "Push Chain 텔레그램에 참여하세요"
     },
     "social-section": {
       "section-aria-label": "소셜 미디어 링크 및 법적 정보",
       "twitter-icon-title": "Push Chain on X (Twitter)",
       "twitter-icon-aria-label": "Push Chain on X (Twitter)",
-      "github-icon-title": "Push Chain의 GitHub",
-      "github-icon-aria-label": "Push Chain GitHub에서",
+      "github-icon-title": "Push Chain on GitHub",
+      "github-icon-aria-label": "Push Chain on GitHub",
       "discord-icon-title": "Push Chain에서 Discord",
       "discord-icon-aria-label": "Push Chain의 Discord"
     },
     "legal": {
-      "privacy-policy": "개인정보처리방침",
-      "privacy-policy-title": "개인정보처리방침 읽기",
+      "privacy-policy": "개인정보 처리방침",
+      "privacy-policy-title": "개인 정보 보호 정책 읽기",
       "privacy-policy-aria-label": "개인정보 처리방침",
       "terms-of-service": "이용 약관",
       "terms-of-service-title": "서비스 약관 읽기",
@@ -89,7 +89,7 @@
     },
     "footer-image": {
       "alt": "Push Chain 푸터 일러스트레이션",
-      "title": "Push Chain - 유니버설 블록체인"
+      "title": "Push Chain - Universal 블록체인"
     }
   }
 }

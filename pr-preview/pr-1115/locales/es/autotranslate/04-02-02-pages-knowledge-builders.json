@@ -7,55 +7,7 @@
           "description": "Guías paso a paso, patrones y ejemplos para usar las funciones de Push Chain.",
           "og-title": "Creadores - Guías y Tutoriales",
           "og-description": "Tutoriales guiados, mejores prácticas y ejemplos para construir con Push Chain.",
-          "twitter-title": "Creadores - Guías y Tutoriales",
-          "twitter-description": "Guías paso a paso para lanzar en Push Chain."
-        },
-        "explainer-section": {
-          "breadcrumbs": {
-            "knowledge-base": "Base de Conocimiento"
-          },
-          "blocks": {
-            "title": "Construye en Push Chain",
-            "sections": {
-              "builders-intro": {
-                "items": {
-                  "intro": "## Builders\n\n¿Listo para construir en Push Chain? Aquí tienes algunos recursos para inspirarte y comenzar.",
-                  "curated-reads": "## Lecturas seleccionadas 👇"
-                }
-              },
-              "universal-apps": {
-                "title": "¡Construyamos Apps Universales 💪",
-                "items": {
-                  "apps-of-the-future": {
-                    "title": "Aplicaciones del Futuro — Construyendo sin el caos"
-                  },
-                  "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "¿Aplicaciones de Consumidor 🫶 Blockchain?"
-                  },
-                  "apps-only-possible-with-shared-state-v1": {
-                    "title": "Apps Posibles Solo con Estado Compartido - Vol. 1"
-                  },
-                  "apps-only-possible-with-shared-state-v2": {
-                    "title": "Aplicaciones Posibles Solo con शेयर्ड-स्टेट - Vol.2"
-                  }
-                }
-              },
-              "developer-resources": {
-                "title": "Recursos para Desarrolladores",
-                "items": {
-                  "developer-docs": {
-                    "title": "Explora la documentación para desarrolladores"
-                  },
-                  "faucet": {
-                    "title": "Obtén Tokens de testnet"
-                  },
-                  "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
-                  }
-                }
-              }
-            }
-          }
+          "twitter-title": "Creadores - Guías y Tutoriales"
         }
       }
     }

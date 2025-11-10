@@ -1,13 +1,1 @@
-{
-  "components": {
-    "explore-collection": {
-      "explore-card": {
-        "image-prepend": "Portada para ",
-        "image-append": "",
-        "link-prepend": "Explora ",
-        "link-append": "",
-        "cta-title": "Leer más"
-      }
-    }
-  }
-}
+{}

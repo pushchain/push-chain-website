@@ -1,118 +1,13 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Support-Ticket öffnen",
-      "expanded-title-for-support": "Brauchst du Hilfe? 👋",
-      "collapsed-text-for-contact": "Kontakt zum Team aufnehmen",
-      "expanded-title-for-contact": "Hallo! 👋",
-      "categories": {
-        "technical": {
-          "label": "🔧 Technischer Support",
-          "description": "Fehlerberichte, SDK/API, smart contracts, Integrationshilfe"
-        },
-        "network": {
-          "label": "🌐 Netzwerk & Testnet",
-          "description": "Explorer/Push Scan, RPC, Faucet, Donut testnet Probleme"
-        },
-        "wallet": {
-          "label": "👛 Universal वॉलेट",
-          "description": "Push Wallet, universelle Kettenverbindung oder andere Probleme mit dem Wallet"
-        },
-        "identity": {
-          "label": "🪪 Konten & Identität",
-          "description": "UEA/UOA, Signaturen, Fragen zur Zuordnung"
-        },
-        "security": {
-          "label": "🛡️ Sicherheit",
-          "description": "Sicherheitslücken melden, verantwortungsvolle Offenlegung (security@push.org)"
-        },
-        "general": {
-          "label": "💬 Allgemeine Anfrage",
-          "description": "Fragen, Feedback, andere Themen"
-        },
-        "partnerships": {
-          "label": "🤝 Partnerschaften & Integrationen",
-          "description": "BD, Ökosystem-Integrationen (Wallets, Infrastruktur, Exchanges, Protokolle)"
-        },
-        "grants": {
-          "label": "💰 Grants & Ecosystem Programs",
-          "description": "BRB, Bootcamp, Zuschüsse, Finanzierungsanfragen"
-        },
-        "media": {
-          "label": "📰 Media & Presse",
-          "description": "Interviews, Stellungnahmen, Assets, Faktenchecks"
-        },
-        "events": {
-          "label": "🎤 Speaking & Events",
-          "description": "Vorträge, Workshops, Hackathons, Sponsoring"
-        },
-        "careers": {
-          "label": "👩‍💻 Karriere",
-          "description": "Offene Stellen, Praktika, Aufträge"
-        },
-        "validators": {
-          "label": "🧡 Validator / Node Betreiber",
-          "description": "Interesse von Betreibern, RPC-Anbietern, Infrastrukturpartnern"
-        },
-        "legal": {
-          "label": "⚖️ Legal & Compliance",
-          "description": "Markenrechte, Datenanfragen, Vereinbarungen"
-        }
-      },
+      "collapsed-text-for-support": "Ein Support-Ticket öffnen",
+      "expanded-title-for-support": "Brauchen Sie Hilfe? 👋",
       "form": {
-        "steps": {
-          "category": {
-            "title": "Womit können wir Ihnen helfen?",
-            "subtitle": "Wähle die Kategorie, die deine Anfrage am besten beschreibt"
-          },
-          "contact": {
-            "title": "Lass uns dich kennenlernen",
-            "subtitle": "Wir verwenden diese Informationen, um uns bei Ihnen zu melden",
-            "name-label": "Dein Name",
-            "name-placeholder": "Bitte geben Sie Ihren vollständigen Namen ein",
-            "name-aftergreet": "Schön, dich kennenzulernen, ",
-            "email-label": "E-Mail-Adresse",
-            "email-placeholder": "Bitte gib deine E-Mail-Adresse ein"
-          },
-          "details": {
-            "title": "Erzähl uns mehr",
-            "subtitle": "Bitte geben Sie Details zu Ihrer Anfrage an",
-            "subject-label": "Betreff",
-            "subject-placeholder": "Kurze Zusammenfassung deines Problems",
-            "message-label": "Nachricht",
-            "message-placeholder": "Beschreibe dein Problem im Detail. Füge alle Fehlermeldungen, Schritte zur Reproduktion oder relevante Informationen hinzu."
-          },
-          "submit": {
-            "title": "Überprüfen und Absenden",
-            "subtitle": "Bitte überprüfen Sie Ihre Angaben, bevor Sie sie absenden",
-            "placeholder": "Erzähl uns mehr darüber, wobei du Hilfe brauchst..."
-          }
-        },
         "buttons": {
-          "next": "Weiter",
           "previous": "Vorheriger",
           "submit": "Ticket absenden",
           "submitting": "Wird gesendet..."
-        },
-        "validation": {
-          "name-required": "Name ist erforderlich",
-          "name-min-length": "Der Name muss mindestens 2 Zeichen lang sein",
-          "email-required": "E-Mail Adresse ist erforderlich",
-          "email-invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
-          "subject-required": "Betreff ist erforderlich",
-          "message-required": "Nachricht ist erforderlich",
-          "category-required": "Bitte wähle eine Kategorie aus",
-          "default": "Dieses Feld ist erforderlich"
-        },
-        "success": {
-          "title": "Ticket erfolgreich übermittelt!",
-          "message": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihr Support-Ticket erhalten und werden uns so schnell wie möglich bei Ihnen melden.",
-          "button": "Ein weiteres Ticket einreichen"
-        },
-        "error": {
-          "title": "Einsendung fehlgeschlagen",
-          "message": "Beim Absenden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
-          "button": "Erneut versuchen"
         }
       }
     }

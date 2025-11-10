@@ -2,16 +2,17 @@
   "pages": {
     "tos": {
       "seo": {
-        "title": "Conditions d'utilisation des services",
-        "description": "Règles pour l'utilisation des sites web, des applications et des services Push Chain, y compris vos droits et responsabilités.",
-        "og-title": "Termes de Push Chain de Service - Conditions Légales",
-        "og-description": "Termes légaux régissant l'utilisation de nos sites web, applications et outils pour les développeurs.",
-        "twitter-title": "Conditions d'utilisation - BlocChain",
-        "twitter-description": "Lisez les termes légaux pour utiliser Chain Push."
+        "title": "Conditions d'utilisation",
+        "description": "Règles d'utilisation des sites web, applications et services Push Chain, incluant vos droits et responsabilités.",
+        "og-title": "Conditions d'utilisation de Push Chain - Conditions légales",
+        "og-description": "Conditions d'utilisation légales régissant l'utilisation de nos sites web, apps et outils de développement.",
+        "twitter-title": "Conditions d'utilisation - Push Chain",
+        "twitter-description": "Lisez les conditions d'utilisation de Push Chain."
       },
       "hero-section": {
         "title": "Conditions d'utilisation",
-        "update-text": "Mis à jour le : 25 octobre 2025"
+        "description": "Présente les conditions d'utilisation",
+        "update-text": "Dernière mise à jour : 25 octobre 2025"
       }
     }
   }

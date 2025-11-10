@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "지금 Push <testnet>에서 출시하세요 — 개발자와 얼리 어답터를 위한 보상을 잠금 해제하세요.",
+      "title": "지금 Push 테스트넷에서 시작하세요 — 빌더와 얼리 어답터에게 보상을 제공합니다.",
       "learn-more-text": "자세히 알아보기",
-      "learn-more-title": "이 발표에 대해 자세히 알아보기",
+      "learn-more-title": "이 공지에 대해 자세히 알아보세요",
       "dismiss-button-title": "공지 닫기",
-      "dismiss-button-aria-label": "공지 바 닫기",
+      "dismiss-button-aria-label": "공지사항 막기",
       "container-aria-label": "사이트 공지",
-      "star-icon-alt": "공지사항 별 아이콘"
+      "star-icon-alt": "공지 스타 아이콘"
     }
   }
 }

@@ -2,117 +2,117 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Ana Sayfa - Push Chain | Uygulamalar İçin Evrensel Chain",
-        "description": "Şerded-stat L1 evrensel uygulamalar için. Bir kez dağıtın; herhangi bir zincirdeki kullanıcılara ulaşın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeyin.",
-        "og-title": "Push Chain - Evrensel L1 Uygulamaları İçin",
+        "title": "Ana Sayfa - Push Chain | Uygulamalar İçin Evrensel 블록체인",
+        "description": "Evrensel uygulamalar için paylaşılan durum blok zinciri. Bir kez dağıtın; herhangi bir zincirdeki kullanıcılara ulaşın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeme yapın.",
+        "og-title": "Push Chain - Evrensel L1 for Uygulamalar",
         "og-description": "EVM ve non-EVM kullanıcıları için tek bir dağıtım. İstediğiniz cüzdanı kullanın ve istediğiniz token ile ödeme yapın — ağ değiştirmeye gerek yok.",
-        "twitter-title": "Tek seferde dağıt, herhangi bir zincire ulaş.",
-        "twitter-description": "Herhangi bir zincirden işlem yapın. Herhangi bir cüzdan kullanın. Herhangi bir token ile ödeme yapın. Ağ değiştirmeye gerek yok."
+        "twitter-title": "Bir kere dağıt, herhangi bir zincire ulaş.",
+        "twitter-description": "Herhangi bir zincirden işlem yapın. Herhangi bir cüzdanı kullanın. Herhangi bir token ile ödeme yapın. Ağ değiştirmeye gerek yok."
       },
       "hero-section": {
         "title": "Herhangi Bir Zincir, Herhangi Bir Uygulama, Tüm Kullanıcılar.\nTek Push Chain.",
-        "description": "Evrensel Uygulamalar için inşa edilen ilk Katman 1. \nBir kez oluşturun ve dağıtın, herhangi bir zincirden kullanıcıları dahil edin.",
+        "description": "Evrensel Uygulamalar için inşa edilen ilk Katman 1. \nBir kere oluşturun, herhangi bir zincirden kullanıcıları dahil edin.",
         "primary-button": "İnşaya Başla",
         "primary-button-title": "Push Chain ile yapımcı yolculuğunuza başlayın!",
         "secondary-button": "Bilgi Tabanını Keşfet",
-        "secondary-button-title": "Push Chain hakkında öğrenin ve keşfedin",
-        "section-aria-label": "Push Chain ana sayfası - Evrensel Katman 1 blokzinciri tanıtımı",
-        "primary-button-aria-label": "Push Chain üzerinde evrensel uygulamalar geliştirmeye başlayın - Geliştirici dokümantasyonuna git",
-        "secondary-button-aria-label": "Bilgi tabanında Push Chain özellikleri ve kavramları hakkında bilgi edinin",
+        "secondary-button-title": "Push Chain'i öğrenin ve keşfedin",
+        "section-aria-label": "Push Chain ana sayfası - Evrensel Katman 1 blockchain'e giriş",
+        "primary-button-aria-label": "Push Chain üzerinde evrensel uygulamalar geliştirmeye başlayın - Geliştirici belgelerine gidin",
+        "secondary-button-aria-label": "Push Chain özelliklerini ve kavramlarını bilgi tabanında öğrenin",
         "hero-background-alt": "Push Chain hero background animation showing universal blockchain connectivity",
-        "hero-background-title": "Push Chain - Evrensel Katman 1, çapraz zincirli uygulamalar için",
-        "schema-headline": "Push Chain - Evrensel L1 Uygulamaları İçin",
-        "schema-description": "Push Chain'de tek seferde yayınlayın ve evrensel uygulamalarla herhangi bir blokzincirindeki kullanıcılara ulaşın"
+        "hero-background-title": "Push Chain - Evrensel Katman 1, çapraz zincir uygulamaları için",
+        "schema-headline": "Push Chain - Universal L1 for Apps",
+        "schema-description": "Push Chain'de bir kez dağıtın ve evrensel uygulamalarla herhangi bir blokçeine kullanıcılara ulaşın"
       },
       "whatis-section": {
         "titleFirst": "Gerçek Bir",
         "titleSecondGraditent": "Evrensel",
-        "titleThird": "Chain",
-        "bottomTextFirst": "Bir Kez Dağıtın,",
+        "titleThird": "Zincir",
+        "bottomTextFirst": "Tek Seferde Dağıt,",
         "bottomTextSecond": "Her Yere Ulaş",
         "bottomLinkText": "Başlayın",
         "bottomLinkTitle": "Dokümantasyon Merkezine Git",
-        "section-aria-label": "Push Chain Nedir - Evrensel blokzincir açıklaması",
-        "animation-alt": "Push Chain'in çoklu <blockchain>lar üzerinde <universal> <app> dağıtımını gösteren animasyon",
+        "section-aria-label": "Push Chain Nedir - Evrensel blok zinciri açıklaması",
+        "animation-alt": "Push Chain'in çoklu <blockchain>lar arasında evrensel <app> dağıtımını gösteren animasyon",
         "animation-title": "Push Chain evrensel dağıtım görselleştirmesi - bir kez dağıtın, herhangi bir zincire ulaşın",
-        "bottom-link-aria-label": "Push Chain belgelerine giderek evrensel uygulamalar geliştirmeye başlayın"
+        "bottom-link-aria-label": "Push Chain belgelerine giderek evrensel uygulamalar oluşturmaya başlayın"
       },
       "chain-features-section": {
-        "section-aria-label": "Push Chain yenilikleri ve özellikler bölümü",
+        "section-aria-label": "Push Chain yenilikleri ve özellikleri bölümü",
         "header": {
           "main-text": "Parçalanmayı ortadan kaldırmak için yenilikler üzerine inşa edildi!",
-          "other-text": "Push, ihtiyacınız olan tek Evrensel Katman 1'dir!"
+          "other-text": "Push, ihtiyacınız duyacağınız tek Evrensel Katman 1'dir!"
         },
         "box1": {
-          "texttitle": "Herhangi Bir Zincirde İşlemler",
-          "bodytext": "Push Chain, herhangi bir blokzincirinden gelen işlemleri destekler. Kullanıcılar herhangi bir tokende gas ödeyebilir — Köprüleme gerek yok.",
-          "imagealt": "Farklı blokzincir logolarının pinball makinesine düştüğünü gösteren illüstrasyon.",
+          "texttitle": "Herhangi Bir Zincir Üzerinde İşlemler",
+          "bodytext": "Push Chain, herhangi bir blokzincirinden gelen işlemleri destekler. Kullanıcılar herhangi bir token ile gas ödeyebilir — Köprüleme gerek yok.",
+          "imagealt": "ब्लॉकचेन logolarının pinball makinesinde düştüğünü gösteren illüstrasyon.",
           "imagetitle": "Herhangi bir blokzincirinden işlemleri destekler."
         },
         "box2": {
           "texttitle": "Cüzdan Soyutlama",
-          "bodytext": "Herhangi bir zincirden gelen herhangi bir <wallet> bağlanabilir, etkileşim kurabilir ve <transaction> gerçekleştirebilir. Sosyal giriş veya e-posta kullanarak web3 engellerini aşın. Kullanıcılar <Push Chain> üzerinde karar verme hakkına sahiptir.",
-          "imagealt": "Metamask cüzdanı, Phantom Cüzdanı vb. Push Chain logosuyla büyük bir cüzdandan çıkan bir illüstrasyon.",
-          "imagetitle": "Metamask, Phantom gibi mevcut cüzdanları ve sosyal girişleri destekler"
+          "bodytext": "Herhangi bir zincirden gelen herhangi bir cüzdanın bağlanmasına, etkileşimde bulunmasına ve işlem yapmasına izin verin. Sosyal giriş veya e-posta kullanarak web3 engellerini aşın. Kullanıcılar Push Chain'de karar verme hakkına sahip olur.",
+          "imagealt": "Metamask cüzdanı, Phantom Cüzdanı vb.'nin Push Chain logosuyla büyük bir cüzdandan çıktığını gösteren illüstrasyon.",
+          "imagetitle": "MetaMask gibi mevcut tüm cüzdanları ve sosyal girişleri destekler"
         },
         "box3": {
-          "texttitle": "100% EVM\nUygun",
-          "bodytext": "Zincir üzerinde sıfır kodla dağıtım yapın. Yerel uygulamanızı dakikalar içinde evrensel bir uygulamaya dönüştürün.",
+          "texttitle": "100% EVM\nUyumlu",
+          "bodytext": "Zincir üzerinde kod olmadan dağıtım yapın. Yerel uygulamanızı dakikalar içinde universal bir uygulamaya dönüştürün.",
           "imagealt": "Ethereum Virtual Machine logosunu gösteren ve %100 EVM Uyumluluğu diyen bir illüstrasyon.",
-          "imagetitle": "Zincir üzerinde kod değişikliği gerektirmiyor, %100 EVM Uyumlu."
+          "imagetitle": "Zincir üzerinde sıfır kod değişikliği gerektiriyor, %100 EVM Uyumlu."
         },
         "box4": {
           "texttitle": "Evrensel Akıllı Sözleşmeler",
-          "bodytext": "Tek seferde oluştur, çoklu zincirde çalıştır, geleceğe dönük tek bir sözleşmeyle çok adımlı deneyimler yarat.",
-          "imagealt": "Ethereum Virtual Maching logosu ve etrafında 'Yüzde 100 EVM Uyumlu' yazan bir yay gösteren illüstrasyon",
+          "bodytext": "Tek seferde oluşturun, çapraz zincirde çalıştırın, geleceğe dayanıklı tek bir sözleşmeyle çok adımlı deneyimler yaşayın.",
+          "imagealt": "Ethereum Virtual Maching logosu ve etrafında dönen 'Yüzde 100 EVM Uyumlu' yazılı bir yay görseli",
           "imagetitle": "Tek seferde dağıtın, anında tüm desteklenen zincelerle (EVM veya non-EVM) uyumlu olun."
         },
         "box5": {
           "texttitle": "Evrensel Ücret\nSoyutlama",
-          "bodytext": "Kullanıcıların herhangi bir zincirde, köprüleme yapmadan herhangi bir <token> ile <gas fees> ödemesine olanak tanıyın.",
-          "imagealt": "Bitcoin, Ethereum ve Solana logolarının Push Chain etrafında döndürülmesini gösteren illüstrasyon",
-          "imagetitle": "Herhangi bir zincirdeki herhangi bir token'ı işlemleri için destekler."
+          "bodytext": "Kullanıcıların herhangi bir zincirde, köprüleme yapmadan herhangi bir token ile gas ödemesine izin verin.",
+          "imagealt": "Bitcoin, Ethereum ve Solana logolarının <1>Push Chain<1> etrafında döndürüldüğü illüstrasyon",
+          "imagetitle": "Herhangi bir zincir üzerindeki herhangi bir <token>’ı <transaction>lar için destekler."
         },
         "box6": {
           "texttitle": "Universal Execution Layer",
-          "bodytext": "Web3 üzerinde atomik ve birleşik uygulamalar oluşturun. Farklı zincirlerden birden fazla kullanıcının aynı uygulama ile işlem yapabilmesi sayesinde daha önce hiç görülmemiş uygulama deneyimleri yaratın.",
-          "imagealt": "Farklı tetris bloklarının bir solucan deliğine girdiğini ve diğer uçtan Push Chain logosunun çıktığını gösteren illüstrasyon.",
-          "imagetitle": "Herhangi bir zincirden gelen транзакцияlar Push Chain üzerinde sonuçlanır, bu sayede herhangi bir zincirdeki kullanıcılar aynı uygulamayı doğal olarak kullanabilir, yani Evrensel транзакция Katmanı."
+          "bodytext": "Web3 üzerinde atomik ve birleşik uygulamalar oluşturun. Farklı zincirlerden birden fazla kullanıcının aynı uygulama ile işlem yapabilmesi sayesinde daha önce görülmemiş uygulama deneyimleri yaratın.",
+          "imagealt": "Farklı tetris bloklarının bir solucan deliğinden geçtiği ve diğer uçtan Push Chain logosunun çıktığı bir illüstrasyon.",
+          "imagetitle": "Herhangi bir zincirden gelen işlemler Push Chain üzerinde sonuçlanır, bu da herhangi bir zincirin kullanıcılarının aynı uygulamayı yani Evrensel Yürütme Katmanını doğal olarak kullanmasını sağlar."
         },
         "box7": {
-          "texttitle": "Paylaşımlı Durum",
+          "texttitle": "Durum Erişim",
           "bodytext": "Akıllı sözleşmenizden diğer zincirlerden hesap ve durum verilerine erişin.",
           "tagText": "ÇOK YAKINDA",
           "tags": {
             "title1": "ZİNCİRLERDEN OKU"
           },
-          "imagealt": "Push Chain'in blok stilinde animasyonla büyüdüğünü gösteren illüstrasyon.",
-          "imagetitle": "(Yol Haritası) Shared State, akıllı sözleşmenizdeki diğer zincirlerden hesap ve durum verilerine erişmenizi sağlar."
+          "imagealt": "Push Chain'in blok stilindeki animasyonda büyüdüğünü gösteren illüstrasyon.",
+          "imagetitle": "(Yol Haritası) Paylaşılan Durum, akıllı sözleşmenizde diğer zincirlerden hesap ve durum verilerine erişmenizi sağlar."
         },
         "box8": {
-          "texttitle": "Programlanabilir\nÇözücüler",
-          "bodytext": "Akıllı sözleşmenizi kullanarak herhangi bir zincirde işlemleri tetikleyin, doğrulayın ve tamamlayın.",
+          "texttitle": "Evrensel\nDoğrulayıcılar",
+          "bodytext": "Akıllı sözleşmenizi kullanarak herhangi bir zincirde işlemleri başlatın, doğrulayın ve tamamlayın.",
           "tagText": "ÇOK YAKINDA",
           "tags": {
             "title1": "ZİNCİRLERE YAZ"
           },
-          "imagealt": "Farklı renklerdeki tetris bloklarının birleştiği ve değiştiği bir illüstrasyon.",
-          "imagetitle": "(Yol Haritası) Programlanabilir Çözücüler, akıllı sözleşmenizi kullanarak herhangi bir zincirde işlemleri tetiklemenize, doğrulamanıza ve tamamlamanıza olanak tanır."
+          "imagealt": "Farklı renklerdeki tetris bloklarının birleştiğini ve değiştiğini gösteren illüstrasyon.",
+          "imagetitle": "(Yol Haritası) Evrensel Validatörler, kullanıcıların akıllı sözleşmenizi kullanarak herhangi bir zincirde işlemleri tetiklemesini, doğrulamasına ve tamamlamasına olanak tanır."
         },
         "footer": {
-          "title": "uygulamanızın kullanıcı tabanını evrensel hale getirerek",
-          "secondary": "sıfır çaba ile!",
-          "ctatext": "İnşa Etmeye Başla",
-          "ctatitle": "Tek seferde dağıt, kullanıcı tabanını 10 katına çıkar. Geliştirici Belgelerini Ziyaret Et."
+          "title": "uygulamanızın kullanıcı tabanını genişletin",
+          "secondary": "zahmetsizce!",
+          "ctatext": "İnşaata Başla",
+          "ctatitle": "Bir kez konuşlandırın, kullanıcı kitlenizi 10 katına çıkarın. Geliştirici Belgelerini ziyaret edin."
         }
       },
       "partners-section": {
         "section-aria-label": "Push Chain ekosistem ortakları ve entegrasyonları",
         "title": "Powered by Push Chain",
-        "subtitle": "Push Chain üzerinde dağıtım yaparak kullanıcı tabanlarını katlayan uygulamaları keşfedin.",
-        "ctatitle": "Push Chain üzerinde konuşlandırılan ortakları, uygulamaları ve altyapıyı inceleyin",
+        "subtitle": "Push Chain üzerinde konuşlandırarak kullanıcı tabanlarını katlayan uygulamaları keşfedin.",
+        "ctatitle": "Push Chain üzerinde konuşlandırılmış ortakları, uygulamaları ve altyapıyı inceleyin",
         "ctatext": "Ekosistemi Keşfet",
-        "partners-grid-aria-label": "Web3 projelerini kullanan ortak logolarının ızgarası Push Chain",
+        "partners-grid-aria-label": "Push Chain'i kullanan Web3 projelerinin partner logoları ızgarası",
         "partner-logo-title-prefix": "Partner logosu - ",
         "partner-logo-alt-prefix": "Logo of ",
         "mobile-view-aria-label": "Push Chain ekosistem ortaklarının mobil görünümü"
@@ -122,8 +122,8 @@
         "title": "Başar",
         "titleGradient": "Anında",
         "titleThird": "Interoperabilite",
-        "description": "Performans için optimize edildi.\nYüksek TPS, ultra düşük gas ve gerçek zamanlı uygulama yürütümü için saniyenin altındaki\nfinality.",
-        "animation-alt": "Push Chain'in birden fazla blockchain üzerinde anında birlikte çalışabilirliğini gösteren etkileşimli animasyon",
+        "description": "Performans için optimize edildi.\nYüksek TPS, ultra düşük gas ve gerçek zamanlı uygulama çalıştırması için saniyenin altındaki\nfinality.",
+        "animation-alt": "Push Chain'in birden fazla blokzincir üzerindeki anında birlikte çalışabilirliğini gösteren etkileşimli animasyon",
         "animation-title": "Push Chain anında birlikte çalışabilirlik görselleştirmesi",
         "stats": {
           "stat1": {
@@ -136,78 +136,78 @@
             "description": "4.2k"
           },
           "stat3": {
-            "title": "YEREL FİNALİTE",
+            "title": "YEREL SONUÇLANMA",
             "description": "Anında"
           },
           "stat4": {
-            "title": "YEREL BLOK SÜRESİ",
+            "title": "YEREL BLOK ZAMANI",
             "description": "1s"
           }
         }
       },
       "blog-section": {
-        "subtitle": "HABERLER, GELİŞTİRME GÜNLÜKLERİ VE FİKİRLER",
-        "subtitle-aria-label": "Blog kategorisi bilgisi",
+        "subtitle": "HABERLER, GELİŞTİRME GÜNLÜKLERİ & FİKİRLER",
+        "subtitle-aria-label": "Blog kategori bilgisi",
         "title": "Push Chain'ın Nabzı",
-        "title-aria-label": "En son Push Chain blog yazıları ve güncellemeleri",
+        "title-aria-label": "Son Push Chain blog gönderileri ve güncellemeleri",
         "explore-link-text": "Daha Fazla Makale Keşfet",
         "explore-link-title": "Push Chain blog'u ziyaret ederek tüm makaleleri ve güncellemeleri okuyun",
         "explore-link-aria-label": "Push Chain blog sayfasına git",
-        "section-aria-label": "Push Chain blog yazıları ve haberler bölümü",
-        "blog-posts-list-aria-label": "Son Push Chain blog yazıları",
-        "blog-post-aria-label": "{title} hakkında blog yazısını oku",
+        "section-aria-label": "Push Chain blog yazıları ve haber bölümü",
+        "blog-posts-list-aria-label": "Son Push Chain blog gönderileri",
+        "blog-post-aria-label": "{title} hakkında blog gönderisini oku",
         "blog-post-title-prefix": "Blog yazısını oku - ",
-        "loading-text": "Son blog gönderileri yükleniyor...",
-        "error-text": "Şu anda blog gönderileri yüklenemedi",
+        "loading-text": "En son blog yazıları yükleniyor...",
+        "error-text": "Şu anda blog yazılarını yükleyemiyoruz.",
         "no-posts-text": "Blog yazısı bulunmuyor"
       },
       "trustedby-section": {
         "title": "Web3 öncülerinin güvendiği ekip tarafından geliştirildi",
-        "section-aria-label": "Push Chain güvenilenler bölümü",
+        "section-aria-label": "Push Chain tarafından güvenilenler bölümü",
         "trusted-by-alt": "Yatırımcı - "
       },
       "featured-section": {
         "aria-label": "Öne Çıkanlar bölümü",
         "tag": "ÖNE ÇIKANLAR",
-        "title": "Push Chain Merceğinde",
-        "subtitle": "Sadece bizim sözümüzü dinlemeyin. Medyanın gerçek evrensel blockchain hakkında ne söylediğine bakın.",
-        "articles-image-alt": "Medya haberleri",
+        "title": "Push Chain Odak Noktasında",
+        "subtitle": "Sadece bizim sözümüz değil. Medyanın gerçek <universal> zinciri hakkında ne söylediğine bakın.",
+        "articles-image-alt": "Medya kapsamı ",
         "articles-text": "Tam Kapsamlı Okuma",
-        "articles-title-1": "Okuyun ",
-        "articles-title-2": "'nin Push Chain hakkındaki düşünceleri detaylı olarak",
+        "articles-title-1": "Oku ",
+        "articles-title-2": "'nin Push Chain hakkındaki düşünceleri tüm detaylarıyla",
         "articles": {
           "binance-chain": {
-            "text": "Sevinerek duyuruyoruz ki Push Protocol, Web3 için önde gelen merkeziyetsiz iletişim protokolü, artık BNB Chain'de kullanıma sunuldu."
+            "text": "Sevinerek duyuruyoruz ki Push Protocol, Web3 için önde gelen merkeziyetsiz iletişim protokolü, artık BNB Zinciri'nde başlatıldı."
           },
           "coindesk": {
-            "text": "Protocol Köyü: Unstoppable, Push Protocol ile Token ile Kilitleme Gruplu Sohbetler Sunmak İçin İşbirliği Yapıyor"
+            "text": "Protocol Köyü: Durdurulamaz, Push Protocol ile Token-Kapılı Grup Sohbetleri Sunmak İçin İş Birliği Yapıyor"
           },
           "defiant": {
-            "text": "Unstoppable Domains, Token ile Erişim Kontrollü Grup Sohbetlerini Başlattı. Push protokolü ile işbirliği, yanlış bilgilendirme ve dolandırıcılıkla mücadele etmeyi amaçlıyor."
+            "text": "Unstoppable Domains, Token ile Erişim Kontrollü Grup Sohbetlerini Başlattı. Push protokol ile işbirliği, yanlış bilgilendirme ve dolandırıcılıkla mücadele etmeyi amaçlıyor."
           },
           "balaji": {
-            "text": "Kullanıcı kontrollü bildirimler. Milyarlarca akıllı telefona itme bildirimlerini iki şirket kontrol ediyor: Apple ve Google."
+            "text": "Kullanıcı kontrollü bildirimler. Milyarlarca akıllı telefona bildirimleri iki şirket kontrol ediyor: Apple ve Google."
           },
           "defiprime": {
-            "text": "Harsh Rajat bankacılığın geleceği, EPNS protokol teşvikleri ve merkeziyetsiz push bildirimleri için bir iş modelinin nerede olduğu hakkında konuşuyor."
+            "text": "Harsh Rajat, bankacılığın geleceği, EPNS protokol teşvikleri ve merkeziyetsiz bildirimler için bir iş modelinin nerede olduğu hakkında konuşuyor."
           },
           "ethfoundation": {
-            "text": "HackMoney'den bu yana, Richa ve Harsh muazzam bir enerjiyle EPNS'yi \"web3'ün eksik bir parçası\" olarak tanımladıkları şeye yönlendirdiler."
+            "text": "HackMoney'den bu yana Richa ve Harsh, EPNS'yi \"web3'ün eksik parçası\" olarak adlandırdıkları şeye inanılmaz bir enerji yönlendirdiler."
           },
           "beincrypto": {
-            "text": "Web3 iletişim ağları nasıl çalışır: Teknik bir derinlemesine inceleme"
+            "text": "Web3 iletişim ağlarının nasıl çalıştığı: Teknik bir derinlemesine inceleme"
           },
           "the-block": {
-            "text": "Web3 bildirim <protocol> Push, kendi Layer 1 <layer>’ını başlatmak üzere"
+            "text": "Web3 bildirim protokolü Push, kendi Katman 1 zincirini başlatmaya hazırlanıyor"
           },
           "business-insider": {
-            "text": "Push, Push Chain'i Tanıtıyor: Evrensel Blockchain Uygulamalarının Geleceği"
+            "text": "Push, Push Chain’i Tanıtıyor: Evrensel 블록체인 Uygulamalarının Geleceği"
           },
           "chainwire": {
             "text": "Push, Push Chain'i Tanıtıyor: Evrensel Blockchain Uygulamalarının Geleceği."
           },
           "benzinga": {
-            "text": "Push, Push Chain’i Tanıttı: Evrensel Blockchain Uygulamalarının Geleceği"
+            "text": "Push, Push Chain'i Tanıtıyor: Evrensel Blockchain Uygulamalarının Geleceği"
           },
           "crypto-briefing": {
             "text": "Push, Push Chain'i Tanıtıyor: Evrensel Blockchain Uygulamalarının Geleceği"
@@ -216,29 +216,29 @@
             "text": "Push Protocol, blockchain iletişimi ve işlemleri birleştirmek için Push Chain'i başlatıyor"
           },
           "messari": {
-            "text": "EPNS, merkeziyetsiz bildirimleri alan kullanıcılar için teşvikler ve pasif gelir elde etmenizi sağlıyor."
+            "text": "EPNS, merkeziyetsiz bildirimleri alan kullanıcılar için teşvikler ve pasif gelir elde etmeyi mümkün kılar."
           },
           "coin-telegraph-1": {
-            "text": "Harsh Rajat, Push Protocol'un kurucusu ve proje lideri, Web3 sohbet uygulamalarının son gelişmeleri Hashing It Out'un son bölümünde açıklıyor."
+            "text": "Harsh Rajat, プロトコル の創設者でありプロジェクトリーダーである Push プロトコル は、Hashing It Out の最新エピソードで Web3 チャット アプリケーションの開発の急増を説明しています。"
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains, kullanıcı adı sahipleri için rozetli grup sohbet özelliği başlattı."
+            "text": "Unstoppable Domains, kullanıcı adı sahipleri için rozetle sınırlı grup sohbet özelliği başlattı."
           }
         }
       },
       "ending-section": {
         "aria-label": "Evrensel Uygulamalar Oluşturma bölümü",
         "section-title": "Evrensel Uygulamalar Oluşturun.",
-        "section-subtitle": "Silo bariyerlerini aşın. Bir kez oluşturun, her blockchain üzerinde ölçekleyin.",
+        "section-subtitle": "Silosları yıkın. Bir kez oluşturun, her blockchain üzerinde ölçeklendirin.",
         "docs-link": {
-          "text": "Push Chain Dokümanlarını Keşfet",
-          "title": "Push Chain dokümantasyonunu ve geliştirici kaynaklarını keşfedin",
-          "aria-label": "Push Chain belgelerini yeni sekmede aç"
+          "text": "Push Chain Dokümanlarını Keşfedin",
+          "title": "Push Chain belgelerini ve geliştirici kaynaklarını keşfedin",
+          "aria-label": "Yeni sekmede Push Chain belgelerini aç"
         },
         "cta-link": {
           "text": "LFG Push Chain",
           "title": "Push Chain ile başlayın - evrensel blokzincir platformu",
-          "aria-label": "Push Chain geliştirme ile başlayın"
+          "aria-label": "Push Chain geliştirmeye başlayın"
         }
       }
     }

@@ -2,12 +2,19 @@
   "pages": {
     "docs": {
       "seo": {
-        "og-description": "यूनिवर्सल एक्जिक्यूशन लेयर पर ऐप्स को बनाएं और चलाएं। शार्ट गाइड्स और उदाहरणों से मदद मिलेगी।",
-        "twitter-title": "पुश चेन डॉक्स - अब बनाएं"
+        "title": "Documentation — Универсаल ऐप्स बनाएँ",
+        "description": "Push Chain पर शिप करने के लिए आपको जो कुछ भी चाहिए: क्विकस्टार्ट, SDKs, API संदर्भ, उदाहरण और नोड सेटअप।",
+        "og-title": "Push Chain Docs - क्विकस्टार्ट्स, SDKs और API",
+        "og-description": "यूनिवर्सल एग्जीक्यूशन <layer> पर <app> बनाएं और चलाएं, स्पष्ट गाइड और उदाहरणों के साथ।",
+        "twitter-title": "Push Chain Docs - अभी बनाएं",
+        "twitter-description": "शुरूआत के लिए आसान गाइड, SDK, API संदर्भ, और जल्दी शिप करने के उदाहरण।"
       },
       "header": {
-        "description": "ब्लॉकचेन टेस्टनेट डॉनट का एक झलक देखना चाहते हैं? हमें #पुशचेनसीक्रेट संदेश भेजें, और हम आपको एक टेस्ट बिल्ड तक पहुँच प्रदान करेंगे।",
-        "ariaLabel": "ट्वीट के लिए पुश चेन"
+        "countdown-title": "टेस्टनेट दस्तावेज़ <1>दिन में लॉन्च हो रहा है",
+        "description": "Psst... क्या आप Testnet Donut की एक झलक चाहते हैं? #pushchainsecret के साथ हमें बताएं और हम आपको एक टेस्ट बिल्ड भेज देंगे।",
+        "tweet-button": "Push Chain के बारे में ट्वीट करें",
+        "title": "Push Chain के बारे में ट्वीट करें",
+        "ariaLabel": "Push Chain के बारे में ट्वीट करें"
       },
       "grid-section": {
         "blocks": {
@@ -15,17 +22,19 @@
             "resources": {
               "items": {
                 "whatispush": {
-                  "title": "ब्लॉकचेन क्या है?",
-                  "subtitle": "पुश चेन एक यूनिफाइड टूलकिट प्रदान करता है जिससे वास्तविक रूप से यूनिवर्सल ऐप बनाए जा सकते हैं।",
-                  "ctatitle": "ज्यादा सीखने के लिए"
+                  "title": "Push Chain क्या है?",
+                  "subtitle": "Push Chain एक एकीकृत टूलकिट प्रदान करता है जिससे आप वास्तव में <transliterate>universal</transliterate> <app>ऐप्स</app> बना सकते हैं।",
+                  "ctatitle": "और जानें"
                 },
                 "builders": {
-                  "title": "बनाने का समय!",
-                  "ctatitle": "अधिक जानें"
+                  "title": "चलो बनाते हैं!",
+                  "subtitle": "Push Chain SDK के साथ universal app बनाने के लिए आपको जो कुछ भी चाहिए",
+                  "ctatitle": "और जानें"
                 },
                 "ui-kit": {
-                  "subtitle": " किसी भी रिएक्ट आधारित ऐप को 5 मिनट से कम समय में एकीकृत करें।",
-                  "ctatitle": "अधिक सीखें"
+                  "title": "UI किट",
+                  "subtitle": "किसी भी React आधारित ऐप को 5 मिनट से कम समय में इंटीग्रेट करें।",
+                  "ctatitle": "और जानें"
                 }
               }
             }

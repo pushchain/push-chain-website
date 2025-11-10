@@ -2,12 +2,9 @@
   "pages": {
     "litepaper": {
       "seo": {
-        "title": "Litepaper — Descripción Técnica",
-        "description": "Una visión concisa de la visión, la arquitectura y la economía de Push Chain para apps universales.",
-        "og-title": "Push Chain Litepaper - Resumen técnico",
-        "og-description": "La visión, el diseño y el modelo económico de la capa de ejecución universal—simplificado.",
-        "twitter-title": "Litepaper - Push Chain",
-        "twitter-description": "Visión, arquitectura y economía de un vistazo."
+        "title": "Litepaper — Resumen Técnico",
+        "description": "Una mirada concisa a la visión, arquitectura y economía de Push Chain para apps universales.",
+        "og-title": "Push Chain Litepaper - Descripción técnica"
       }
     }
   }

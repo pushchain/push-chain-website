@@ -4,26 +4,26 @@
       "seo": {
         "title": "Let's Push — Initiative Communautaire",
         "description": "Initiatives communautaires Push, publications et bien plus encore.",
-        "og-title": "Let's Push - Initiative communautaire pour Push Chain",
-        "og-description": "Initiative portée par la communauté et parts pour Push Chain.",
+        "og-title": "Let's Push - Initiative Communautaire pour Push Chain",
+        "og-description": "Initiative communautaire et parts pour Push Chain.",
         "twitter-title": "Let's Push | Initiative Communautaire",
         "twitter-description": "Découvrez l'initiative communautaire Push pour Push Chain."
       },
       "hero-section": {
         "title": "Allons-y !",
-        "description": "La communauté des créateurs de LF Push – célébrant ce que vous publiez et ceux que vous aidez. Partagez vos succès, identifiez <hashtag>#LFPush</hashtag> ou <mention>@PushChain</mention>, et nous amplifierons votre portée."
+        "description": "La communauté des créateurs de LF Push – célébrant ce que vous lancez et ceux que vous aidez. Partagez vos succès, utilisez le <hashtag>#LFPush</hashtag> ou mentionnez <mention>@PushChain</mention>, et nous les mettrons en avant."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Partagez votre succès !",
-          "join-community": "Rejoindre la communauté",
+          "share-win": "Partagez votre victoire",
+          "join-community": "Rejoignez la communauté",
           "learn-more": "En savoir plus"
         },
         "meta": {
           "tweet-alt": "Tweet d'un membre de la communauté Push Chain",
-          "loading-alt": "Chargement des tweets de la communauté..."
+          "loading-alt": "Chargement de plus de tweets de la communauté"
         },
-        "tweets-counter": "{{count}} Tweets et ça ne s'arrête pas !",
+        "tweets-counter": "{{count}} Tweets et plus encore !",
         "loading": "Chargement de plus de tweets...",
         "end-message": "Vous avez atteint la fin ! 🎉"
       }

@@ -371,8 +371,8 @@ function _createMdxContent(props) {
         children: "Remix IDE"
       }), " or use the embedded IDE below."]
     }), "\n", (0,jsx_runtime.jsx)(SolidityCode/* SolidityCode */.L, {
-      title: "Universal ERC-20 Contract",
-      fileName: "ERC20.sol",
+      title: "Universal Counter Contract",
+      fileName: "Counter.sol",
       url: "https://github.com/pushchain/push-chain-examples/blob/main/tutorials/simple-counter/contracts/src/Counter.sol",
       children: (0,jsx_runtime.jsx)(_components.pre, {
         children: (0,jsx_runtime.jsx)(_components.code, {

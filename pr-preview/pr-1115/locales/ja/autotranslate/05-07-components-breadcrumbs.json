@@ -3,8 +3,8 @@
     "breadcrumbs": {
       "navigation-aria-label": "Breadcrumb navigation",
       "home-text": "ホーム",
-      "navigate-to-aria-label": "{{page}} に移動",
-      "go-to-title": "「{{page}}」ページへ移動",
+      "navigate-to-aria-label": "「{{page}}」へ移動",
+      "go-to-title": "{{page}} ページへ移動",
       "current-page-aria-label": "現在のページ: {{page}}",
       "separator-aria-label": "Breadcrumb separator"
     }

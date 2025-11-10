@@ -1,61 +1,61 @@
 {
   "components": {
     "short-contact-us-snippet": {
-      "section-aria-label": "Liên hệ với đội ngũ Push Chain",
-      "title": "Các câu hỏi thường gặp\n",
-      "title-aria-label": "Các câu hỏi liên hệ thường gặp cho Push Chain",
+      "section-aria-label": "Liên hệ với Đội ngũ Push Chain",
+      "title": "Các Câu Hỏi Phổ Biến\n",
+      "title-aria-label": "Các câu hỏi liên hệ phổ biến cho Push Chain",
       "discord-link-text": "Tham gia Discord",
       "discord-link-title": "Tham gia cộng đồng Push Chain trên Discord",
       "discord-link-aria-label": "Mở Discord trong một tab mới",
-      "explore-more-text": "Khám phá thêm",
-      "explore-more-title": "Xem các khoản tài trợ, BRB và các chương trình hệ sinh thái",
-      "explore-more-aria-label": "Điều hướng đến các chương trình Push Chain",
+      "explore-more-text": "Khám phá thêm các chương trình",
+      "explore-more-title": "Xem thêm về các khoản tài trợ, BRB và các chương trình hệ sinh thái",
+      "explore-more-aria-label": "Đi đến các chương trình của Push Chain",
       "accordion-aria-label": "Danh sách các câu hỏi liên hệ",
       "answer-aria-label": "Trả lời câu hỏi - ",
       "qnas": {
         "qna1": {
           "question": "Tôi nên chọn danh mục nào?",
-          "answer": "<1><2>Đối tác & Tích hợp</2>: ví, cơ sở hạ tầng, sàn giao dịch, hợp tác protocol → <3>Liên hệ Đối tác</3>.</1><1><2>Chương trình Hỗ trợ & Tài trợ</2>: BRB, Bootcamp, tài trợ → <4>Liên hệ Tài trợ</4>.</1><1><2>Truyền thông & Sự kiện</2>: phỏng vấn, tuyên bố, diễn thuyết → <5>Truyền thông & Sự kiện</5>.</1><1><2>Validators</2>: quan tâm đến node operator, nhà cung cấp RPC → <6>Validators</6>.</1><1><2>Pháp lý</2>: thương hiệu, yêu cầu dữ liệu, thỏa thuận → <7>Pháp lý</7>.</1><1>Cần trợ giúp kỹ thuật hoặc thông tin về tình trạng? Hãy sử dụng <8>Hỗ trợ</8> thay vào đó.</1>",
-          "contact-partnerships-title": "Liên hệ Đối tác",
+          "answer": "<1><2>Đối tác & Tích hợp</2>: ví, cơ sở hạ tầng, sàn giao dịch, hợp tác protocol → <3>Liên hệ Đối tác</3>.</1><1><2>Chương trình Hỗ trợ & Tài trợ</2>: BRB, Bootcamp, nguồn vốn → <4>Liên hệ Tài trợ</4>.</1><1><2>Truyền thông & Diễn thuyết</2>: phỏng vấn, tuyên bố, bài phát biểu → <5>Truyền thông & Sự kiện</5>.</1><1><2>Validators</2>: quan tâm đến việc vận hành node, nhà cung cấp RPC → <6>Validators</6>.</1><1><2>Pháp lý</2>: nhãn hiệu, yêu cầu dữ liệu, thỏa thuận → <7>Pháp lý</7>.</1><1>Cần trợ giúp kỹ thuật hoặc thông tin trạng thái? Hãy sử dụng <8>Hỗ trợ</8> thay vào đó.</1>",
+          "contact-partnerships-title": "Liên hệ đối tác",
           "contact-grants-title": "Liên hệ Open Grants",
-          "contact-media-title": "Liên hệ Truyền thông & Chia sẻ",
+          "contact-media-title": "Liên hệ về truyền thông & phát biểu",
           "contact-validators-title": "Liên hệ Open Validators",
           "contact-legal-title": "Liên hệ Pháp lý & Tuân thủ",
           "support-title": "Truy cập Trung tâm Hỗ trợ"
         },
         "qna2": {
           "question": "Bạn phản hồi nhanh như thế nào?",
-          "answer": "<1>Chúng tôi cố gắng phản hồi hầu hết các câu hỏi trong vòng <2>1–2 ngày làm việc</2>. Các yêu cầu khẩn cấp (ví dụ: thời hạn báo chí, bảo mật) được ưu tiên.</1><1>Đối với các vấn đề khẩn cấp, vui lòng cung cấp <2>thời hạn, múi giờ</2>, và <2>thông tin liên hệ tốt nhất</2>.</1>"
+          "answer": "<1>Chúng tôi cố gắng phản hồi hầu hết các câu hỏi trong vòng <2>1–2 ngày làm việc</2>. Các yêu cầu khẩn cấp (ví dụ: thời hạn báo chí, bảo mật) được ưu tiên.</1><1>Đối với các vấn đề khẩn cấp, vui lòng cung cấp <2>thời hạn, múi giờ</2> và <2>thông tin liên hệ tốt nhất</2>.</1>"
         },
         "qna3": {
-          "question": "Thông tin gì hữu ích cho các đối tác tiềm năng?",
-          "answer": "<1>Chia sẻ <2>tên công ty</2>, <2>trang web</2> và <2>bạn muốn xây dựng cùng nhau</2>.</1><1>Thông tin bổ sung hữu ích: quy mô khán giả, khu vực, thời gian và bất kỳ phạm vi kỹ thuật hoặc SDK nào bạn dự định sử dụng.</1><1>Bắt đầu tại đây → <3>Đối tác</3>.</1>",
-          "contact-partnerships-title": "Liên hệ đối tác"
+          "question": "Chi tiết nào hữu ích cho các đối tác tiềm năng?",
+          "answer": "<1>Hãy chia sẻ <2>tên công ty</2>, <2>trang web</2> và <2>bạn muốn xây dựng cùng nhau</2>.</1><1>Thông tin bổ sung hữu ích: quy mô khán giả, khu vực, thời gian và bất kỳ phạm vi kỹ thuật hoặc SDK nào bạn dự định sử dụng.</1><1>Bắt đầu tại đây → <3>Quan hệ đối tác</3>.</1>",
+          "contact-partnerships-title": "Liên hệ Đối tác"
         },
         "qna4": {
-          "question": "Các khoản tài trợ hoạt động như thế nào?",
-          "answer": "<1>Hãy cho chúng tôi biết tên <2>dự án</2>, <2>repo/website</2>, giai đoạn (<2>ý tưởng, nguyên mẫu, MVP, đang hoạt động</2>) và kế hoạch ngắn gọn.</1><1>Các đơn xin tài trợ luôn được xử lý theo thứ tự đến trước phục vụ trước. Bắt đầu tại đây → <3>Grants</3>.</1>",
+          "question": "Cơ chế cấp vốn hoạt động như thế nào?",
+          "answer": "<1>Hãy cho chúng tôi biết tên <2>dự án</2> của bạn, <2>repo/website</2>, giai đoạn (<2>ý tưởng, nguyên mẫu, MVP, đang hoạt động</2>) và một kế hoạch ngắn gọn.</1><1>Các đơn xin tài trợ luôn được xử lý theo thứ tự đến trước phục vụ trước. Bắt đầu tại đây → <3>Grants</3>.</1>",
           "contact-grants-title": "Liên hệ chương trình tài trợ"
         },
         "qna5": {
-          "question": "Yêu cầu về truyền thông & thuyết trình",
-          "answer": "<1>Vui lòng bao gồm địa chỉ liên hệ, chủ đề, <2>thời hạn</2> và câu hỏi của bạn. Đối với các buổi nói chuyện/hội thảo, hãy thêm ngày, định dạng và đối tượng tham gia.</1><1>Liên hệ với chúng tôi qua <3>Truyền thông & Các buổi nói chuyện</3>. Chúng tôi có thể chia sẻ logo, tiểu sử người sáng lập và thông tin cơ bản.</1>",
-          "contact-media-title": "Liên hệ về Mở rộng Truyền thông & Diễn thuyết"
+          "question": "Yêu cầu về truyền thông & phỏng vấn",
+          "answer": "<1>Vui lòng cung cấp cửa hàng, chủ đề, <2>thời hạn</2> và câu hỏi của bạn. Đối với các buổi nói chuyện/hội thảo, hãy thêm ngày sự kiện, định dạng và đối tượng.</1><1>Liên hệ với chúng tôi qua <3>Truyền thông & Phát biểu</3>. Chúng tôi có thể chia sẻ logo, tiểu sử người sáng lập và thông tin giới thiệu.</1>",
+          "contact-media-title": "Liên hệ Truyền thông & Diễn thuyết"
         },
         "qna6": {
-          "question": "Tôi báo cáo vấn đề bảo mật như thế nào?",
-          "answer": "<1>Email <3><2>security@push.org</2></3> với các bước tái hiện và tác động. Vui lòng tránh tiết lộ công khai cho đến khi chúng tôi xác nhận bản sửa lỗi.</1>",
+          "question": "Làm thế nào để báo cáo một vấn đề bảo mật?",
+          "answer": "<1>Email <3><2>security@push.org</2></3> với các bước tái hiện và tác động. Vui lòng tránh công khai thông tin cho đến khi chúng tôi xác nhận bản sửa lỗi.</1>",
           "security-policy-title": "Đọc Chính sách Bảo mật & Công bố"
         },
         "qna7": {
-          "question": "Tôi muốn vận hành một validator / cung cấp cơ sở hạ tầng",
-          "answer": "<1>Chia sẻ hồ sơ hạ tầng của bạn (kinh nghiệm, khu vực), thời gian hoạt động mong muốn/SLAs và bất kỳ điều khoản ưu tiên nào. Bắt đầu tại đây → <3>Validators</3>.</1>",
+          "question": "Tôi muốn chạy validator / cung cấp hạ tầng",
+          "answer": "<1>Chia sẻ hồ sơ hạ tầng của bạn (kinh nghiệm, khu vực), thời gian hoạt động/SLA mong muốn và bất kỳ điều khoản ưu tiên nào. Bắt đầu tại đây → <3>Validators</3>.</1>",
           "contact-validators-title": "Liên hệ Open Validators"
         },
         "qna8": {
           "question": "Tuyển dụng & việc làm",
-          "answer": "<1>Nếu có vị trí tuyển dụng, chúng sẽ được đăng trên các kênh của chúng tôi. Bạn vẫn có thể chia sẻ hồ sơ và sở thích của mình qua <3>Liên hệ với chúng tôi</3> hoặc theo dõi <4>@PushChain</4> để cập nhật.</1>",
-          "contact-careers-title": "Liên hệ Tuyển dụng",
+          "answer": "<1>Nếu có vị trí mở, chúng sẽ được đăng trên các kênh của chúng tôi. Bạn vẫn có thể chia sẻ hồ sơ và sở thích của mình qua <3>Liên hệ với chúng tôi</3> hoặc theo dõi <4>@PushChain</4> để cập nhật.</1>",
+          "contact-careers-title": "Liên hệ tuyển dụng",
           "twitter-title": "Theo dõi @PushChain trên X"
         }
       }

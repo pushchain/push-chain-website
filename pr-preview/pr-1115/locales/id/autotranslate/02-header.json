@@ -1,126 +1,147 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Beralih ke halaman utama",
-      "language-icon-alt": "Ikon pilihan bahasa",
+      "logo-aria-label": "Push Chain - Navigasi ke halaman utama",
+      "language-icon-alt": "Ikon pemilihan bahasa",
       "hamburger-menu-alt": "Buka menu navigasi",
-      "testnet-badge-alt": "Testnet Push Chain Donut - Lihat status testnet"
+      "testnet-badge-alt": "Push Chain Testnet Donut - Lihat status testnet"
     },
     "logo": {
-      "imagealt": "Logo Push Chain",
+      "imagealt": "Gambar Logo Push Chain",
       "imagetitle": "Logo Push Chain",
-      "ctatitle": "Navigasikan ke Push Chain homepage"
+      "ctatitle": "Buka halaman utama Push Chain"
     },
     "testnet": {
-      "aria-label": "Sesawangan Uji",
+      "title": "Testnet",
+      "aria-label": "Bagian testnet",
       "link1": {
-        "subtext": "Pengelola Blok untuk Chain Push",
-        "title": "Eksplorasi Transaksi dan Blok Testnet Push Chain di Push Scan"
+        "text": "Push Scan",
+        "subtext": "ब्लॉकचेन के लिए ब्लॉक एक्सप्लोरर",
+        "title": "Jelajahi transaksi dan blok di Push Chain testnet di Push Scan"
       },
       "link2": {
-        "text": "Fasilitas Air",
-        "title": "Dapatkan token tes gratis untuk pengembangan Push Chain"
+        "text": "Keran",
+        "subtext": "Dapatkan token testnet",
+        "title": "Dapatkan token testnet gratis untuk pengembangan Push Chain"
       }
     },
     "developers": {
       "title": "Pengembang",
       "aria-label": "Bagian Pengembang",
       "link1": {
-        "subtext": "Pengenalan untuk membangun di Push Chain"
+        "text": "Mulai",
+        "subtext": "Pengenalan membangun di Push Chain",
+        "title": "Mulai membangun aplikasi universal di Push Chain - Dokumentasi Pengembang"
       },
       "link2": {
         "text": "Mulai Cepat",
-        "subtext": "Atur lingkungan dev dalam beberapa detik",
-        "title": "Petunjuk cepat - Bangun lingkungan pengembangan Push Chain secara instan"
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Panduan cepat memulai - Siapkan lingkungan pengembangan Push Chain secara instan"
       },
       "link3": {
-        "text": "Panduan"
+        "text": "Tutorial",
+        "subtext": "Panduan langkah demi langkah untuk membangun dengan Push",
+        "title": "Belajar dengan tutorial praktis - Bangun aplikasi universal pertamamu di Push Chain"
       },
       "link4": {
         "text": "GitHub",
-        "title": "Explore source code dan alat pengembangan Push Chain di GitHub"
+        "subtext": "Lihat kode inti dan alat sumber terbuka",
+        "title": "Jelajahi kode sumber dan alat pengembangan Push Chain di GitHub"
       },
       "link5": {
-        "subtext": "Hubungi komunitas dev",
-        "title": "Join Push Chain developer community on Discord untuk dukungan dan kerja sama"
+        "text": "Discord Pengembang",
+        "subtext": "Bergabung dengan komunitas pengembang",
+        "title": "Bergabunglah dengan komunitas pengembang Push Chain di Discord untuk dukungan dan kolaborasi"
       }
     },
     "community": {
-      "title": "Masyarakat",
+      "title": "Komunitas",
+      "aria-label": "Bagian Komunitas",
       "link1": {
         "text": "Basis Pengetahuan",
-        "subtext": "Temukan ulasan mendalam tentang fitur"
+        "subtext": "Temukan pembahasan mendalam tentang fitur-fitur",
+        "title": "Jelajahi dokumentasi lengkap Push Chain dan panduan fitur"
       },
       "link2": {
         "text": "Tokenomik",
-        "title": "Pelajari tentang Push Chain tokenomics dan utilitas $PC token"
+        "subtext": "Token asli yang mendukung semua hal di Push Chain",
+        "title": "Pelajari tentang tokenomics Push Chain dan kegunaan token $PC"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "Ikuti update dan berita ekosistem",
-        "title": "Ikuti Push Chain di X (Twitter) untuk berita terbaru dan pengumuman terkini"
+        "subtext": "Ikuti perkembangan terbaru dan berita ekosistem",
+        "title": "Ikuti Push Chain di X (Twitter) untuk berita dan pengumuman terbaru"
       },
       "link4": {
-        "title": "Bergabung dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
+        "text": "Discord",
+        "subtext": "Ngobrol, bangun, dan rasakan semangat komunitas",
+        "title": "Bergabunglah dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
       },
       "link5": {
-        "subtext": "Gabung dalam diskusi dan tetap update"
+        "text": "Telegram",
+        "subtext": "Bergabunglah dalam diskusi dan tetap terinformasi",
+        "title": "Bergabunglah dengan komunitas Push Chain di Telegram untuk pembaruan *real-time*"
       }
     },
     "resources": {
       "title": "Sumber Daya",
       "aria-label": "Bagian Sumber Daya",
       "link1": {
-        "subtext": "Perbarui, analisis mendalam, dan cerita pengembang",
-        "title": "Baca blog Push Chain untuk update terbaru, analisis teknis, dan cerita pengembang"
+        "text": "Blog",
+        "subtext": "Pembaruan, pembahasan mendalam, dan cerita dari pengembang",
+        "title": "Baca blog Push Chain untuk berita terbaru, pembahasan teknis mendalam, dan cerita dari pengembang"
       },
       "link2": {
-        "subtext": "Visi dan teknologi, dijelaskan dengan sederhana",
-        "title": "Baca Dokumen Litepaper Push Chain - visi dan gambaran teknis yang disederhanakan"
+        "text": "Litepaper",
+        "subtext": "Visi dan teknologinya, disederhanakan",
+        "title": "Baca Litepaper Push Chain - visi yang disederhanakan dan gambaran teknis"
       },
       "link3": {
+        "text": "FAQ",
         "subtext": "Jawaban cepat untuk pertanyaan umum",
-        "title": "Browse frequently asked questions tentang Push Chain"
+        "title": "Lihat pertanyaan yang sering diajukan tentang Push Chain"
       }
     },
     "language": {
       "title": "Bahasa",
-      "aria-label": "Pemilihan Bahasa Dropdown"
+      "aria-label": "Pilihan Bahasa"
     },
     "app-button": {
-      "title": "Akses Push Portal - Dapatkan poin sebagai pengembang, pengguna, atau validator"
+      "text": "Push Portal",
+      "title": "Akses Push Portal - Dapatkan poin sebagai developer, user, atau validator"
     },
     "explore": {
-      "title": "Eksplorasi",
-      "aria-label": "Bagian Eksplorasi",
+      "title": "Jelajahi",
+      "aria-label": "Jelajahi Bagian",
       "link1": {
-        "text": "Mulai Berikutnya",
-        "subtext": "Pendahuluan Pembangunan di Push Chain"
+        "text": "Mulai",
+        "subtext": "Pengantar membangun di Push Chain",
+        "title": "Mulai membangun"
       },
       "link2": {
         "text": "Mulai Cepat",
-        "subtext": "Setup dev environment dalam beberapa detik",
-        "title": "Pemula Cepat"
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Mulai Cepat"
       },
       "link3": {
         "text": "Tutorial",
-        "subtext": "Petunjuk Langkah demi Langkah untuk Membangun dengan Push",
+        "subtext": "Panduan langkah demi langkah untuk membangun dengan Push",
         "title": "Pelajari dengan tutorial"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "Lihat kode inti dan alat-alat terbuka sumber",
-        "title": "Eksplorasi Push Chain"
+        "subtext": "Lihat kode inti dan alat sumber terbuka",
+        "title": "Jelajahi Push Chain"
       },
       "link5": {
-        "text": "Developer Discord",
-        "subtext": "Hubungi komunitas dev",
+        "text": "Discord Pengembang",
+        "subtext": "Terhubung dengan komunitas pengembang",
         "title": "Bergabung dengan Discord"
       },
       "link6": {
-        "text": "Eksplor Contoh",
-        "subtext": "Eksplor Contoh",
-        "title": "Eksplorasi Contoh"
+        "text": "Jelajahi Contoh",
+        "subtext": "Jelajahi Contoh",
+        "title": "Jelajahi Contoh"
       }
     }
   }

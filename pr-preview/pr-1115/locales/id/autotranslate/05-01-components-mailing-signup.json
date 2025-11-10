@@ -2,10 +2,10 @@
   "components": {
     "mailing-signup": {
       "title": "Jangan Lewatkan Informasi Terbaru",
-      "text": "Daftar dan tetap dapat informasi terbaru tentang pengumuman ekosistem, hadiah, dan banyak lagi.",
+      "text": "Daftar dan tetap dapatkan informasi terbaru mengenai pengumuman ekosistem, hadiah, dan banyak lagi.",
       "email-input": "Email Anda",
       "email-input-placeholder": "Masukkan alamat email Anda",
-      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan update terbaru",
+      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan pembaruan",
       "email-input-aria-label": "Alamat email untuk berlangganan newsletter",
       "submit-button": "Daftar",
       "submit-button-title": "Berlangganan newsletter Push Chain",
@@ -15,7 +15,7 @@
       "arrow-button-title": "Berlangganan pembaruan Push Chain",
       "form-aria-label": "Formulir berlangganan newsletter",
       "success-message-aria-label": "Berlangganan berhasil",
-      "error-message-aria-label": "Pesan kesalahan langganan"
+      "error-message-aria-label": "Pesan kesalahan berlangganan"
     }
   }
 }

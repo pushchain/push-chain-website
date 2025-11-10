@@ -2,16 +2,16 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "لنطلق معًا — مبادرة مجتمعية",
+        "title": "لنبدأ الدفع — مبادرة مجتمعية",
         "description": "مبادرات مجتمع Push ومنشوراته والمزيد.",
         "og-title": "لنطلق العنان - مبادرة مجتمعية لـ Push Chain",
-        "og-description": "مبادرة مجتمعية وأسهم لـ بلوكشين.",
+        "og-description": "مبادرة مجتمعية وأسهم لـ Push Chain.",
         "twitter-title": "لنطلق معًا | مبادرة مجتمعية",
-        "twitter-description": "اطلع على مبادرة مجتمع Push لسلسلة Push بلوكشين."
+        "twitter-description": "اطلع على مبادرة مجتمع Push لـ Push Chain."
       },
       "hero-section": {
-        "title": "لنبدأ بالدفع",
-        "description": "مجتمع LF Push—نحتفل بما ترسله ومن تساعد. شارك إنجازاتك، وقم بوضع علامة <hashtag>#LFPush</hashtag> أو <mention>@PushChain</mention>، وسوف نعززها."
+        "title": "لنبدأ الدفع",
+        "description": "مجتمع مطوري LF Push—نحتفل بما ترسله ومن تساعده. شارك انتصاراتك، واستخدم الهاشتاج <hashtag>#LFPush</hashtag> أو <mention>@PushChain</mention>، وسنعمل على تضخيمها."
       },
       "tweets-section": {
         "actions": {
@@ -20,7 +20,7 @@
           "learn-more": "اعرف المزيد"
         },
         "meta": {
-          "tweet-alt": "تغريدة من عضو مجتمع بلوكشين",
+          "tweet-alt": "تغريدة من عضو في مجتمع Push Chain",
           "loading-alt": "جارٍ تحميل المزيد من تغريدات المجتمع"
         },
         "tweets-counter": "{{count}} تغريدة وما زال العدد في ازدياد!",

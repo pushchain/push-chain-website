@@ -4,11 +4,11 @@
       "push101": {
         "seo": {
           "title": "Push Chain Temelleri — Giriş",
-          "description": "Push Chain ve evrensel uygulamalara yeni başlayanlar için kolay bir giriş—nedir, nasıl çalışır ve nasıl başlayabilirsiniz.",
+          "description": "Push Chain ve evrensel uygulamalara yeni başlayanlar için—nedir, nasıl çalışır ve nasıl başlanır.",
           "og-title": "Push Chain Temelleri - Giriş",
-          "og-description": "Temel bilgileri öğrenin: Push Chain nedir, nasıl çalışır ve ilk adımlarınız.",
-          "twitter-title": "Push Chain Temelleri - Buradan başlayın",
-          "twitter-description": "Push Chain ve <universal> <app>lar için başlangıç kılavuzları."
+          "og-description": "Temel konuları öğrenin: Push Chain'in ne olduğu, nasıl çalıştığı ve ilk adımlarınız.",
+          "twitter-title": "Push Chain Temelleri - Başlangıç noktası",
+          "twitter-description": "Push Chain ve evrensel uygulamalar için yeni başlayanlar rehberleri."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,38 +19,42 @@
             "sections": {
               "push-chain-basics": {
                 "items": {
-                  "why-push-chain": "## Neden Push Chain?\n\nPush Chain, ilk **gerçek evrensel L1** olup, uygulamaların herhangi bir zincirdeki kullanıcılar tarafından sorunsuz bir şekilde etkileşim kurulabilmesini sağlamak amacıyla özel olarak tasarlanmıştır.\n\nAkıllı sözleşmenizi bir kez yazın, Push Chain'e dağıtın ve zincir üzerindeki kodu değiştirmeden Ethereum, Solana ve diğer desteklenen zincirlerdeki kullanıcılara anında ulaşın.",
-                  "what-is-push-chain": "## Push Chain Nedir?\n\nPush Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış bir Proof-of-Stake (PoS) L1 blok zinciridir.\n\nZincirler arası **Universal (Birlikte Çalışabilir) Uygulamalar** için bir **shared state L1** blok zinciridir. Push Chain, herhangi bir zincirden (Eth, Solana, EVM veya non-EVM) gelen işlemleri mümkün kılar ve herhangi bir zincirden gelen uygulamaların herhangi bir zincirin kullanıcıları tarafından erişilebilir olmasını sağlar (**polymarket** herhangi bir zincirden, **pump.fun** herhangi bir zincirden vb.).",
-                  "innovations-of-push-chain": "## Push Chain'daki Yenilikler\n\nPush Chain, şunlar gibi bir dizi çığır açan yenilik sunar:\n\n**Gerçek Evrensel L1** - Tüm zincirleri yerel olarak destekler ve kullanıcıların aynı uygulamayla etkileşim kurmasını sağlar. Merkezi röleler, köprüler veya başka numaralar gerekmez.\n\n**Evrensel Ücret Soyutlaması** - Kullanıcıların, seçtikleri zincirde ve istedikleri herhangi bir token'ı kullanarak yerel olarak etkileşim kurmasına olanak tanır.\n\n**Cüzdan Soyutlaması** - MetaMask, Phantom ve diğer cüzdanları ve ayrıca tek bir birleşik sağlayıcı aracılığıyla sosyal veya e-posta oturum açmayı destekler. Kullanıcıların herhangi bir uygulamaya erişmek için asla yeni bir cüzdan oluşturmasına gerek yoktur.\n\n**Tek işlem, zincire bakılmaksızın** - kullanıcılar, Push Chain üzerinde herhangi bir uygulamayla tek bir işlemle etkileşim kurabilir. Uygulama ile nasıl etkileşim kurmayı seçerlerse seçsinler, yalnızca tek bir işlemi imzalamaları gerekecektir.\n\n**Evrensel Akıllı Sözleşmeler** - Akıllı sözleşmeler evrenseldir ve zincir üzerinde herhangi bir kod değişikliği veya ek adım olmaksızın anında çalışacaktır.\n\n**Paylaşılan Durum ve Programlanabilir Çözücüler** - Geliştiricilerin diğer blok zincirlerinin durumunu okumasına ve yazmasına olanak tanır (Yol Haritası).\n\nBu, web3 için **tamamen birlikte çalışabilir uygulamalar** ile sonuçlanır. Bu paradigmada, \"Ethereum üzerinde Uniswap\", \"Polygon üzerinde Uniswap\" veya \"Arbitrum üzerinde Uniswap\" kullanıcısı olmak yerine, kişi basitçe **Uniswap kullanıcısı** olur.",
+                  "why-push-chain": "## Neden Push Chain?\n\nPush Chain, kullanıcıların herhangi bir zincirinden sorunsuz bir şekilde etkileşim kurmasını sağlamak için tasarlanmış ilk **gerçek evrensel L1**'dir.\n\nAkıllı sözleşmenizi bir kez yazın, Push Chain'e dağıtın ve zincir üzerindeki kodu değiştirmeden Ethereum, Solana ve diğer desteklenen zincirlerdeki kullanıcılara anında ulaşın.",
+                  "what-is-push-chain": "## Push Chain Nedir?\n\nPush Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış bir Proof-of-Stake (PoS) L1 blokzinciridir.\n\nZincirler arası **Universal (Birbiriyle Çalışabilen) Uygulamalar** için bir **shared state L1** blokzinciridir. Push Chain, herhangi bir zincirdeki (Eth, Solana, EVM veya non-EVM) işlemleri mümkün kılar ve herhangi bir zincirdeki uygulamaların herhangi bir zincirdeki kullanıcılar tarafından erişilebilmesini sağlar (**polymarket** herhangi bir zincirden, **pump.fun** herhangi bir zincirden, vb.).",
+                  "innovations-of-push-chain": "## Push Chain'ın Yenilikleri\n\nPush Chain, şunlar gibi bir dizi çığır açan yenilik sunar:\n\n**Gerçek Evrensel L1** - Tüm zincirleri yerel olarak destekler ve kullanıcıların aynı uygulamayla etkileşim kurmasını sağlar. Merkezi olmayan röleler, köprüler veya diğer hilelere ihtiyaç duyulmaz.\n\n**Evrensel Akıllı Sözleşmeler** - Akıllı sözleşmeler evrenseldir ve zincir üzerinde herhangi bir kod değişikliği veya ek adım olmadan anında çalışacaktır.\n\n**Tek işlem, zincir ne olursa olsun** - kullanıcılar, Push Chain üzerindeki herhangi bir uygulamayla tek bir işlemle etkileşim kurabilir. Uygulama ile nasıl etkileşim kurmayı seçerlerse seçsinler, yalnızca tek bir işlemi imzalamaları gerekir.\n\n**Evrensel Ücret Soyutlaması** - Kullanıcıların, kendi zincirlerinde kalırken ve istedikleri token'ları kullanırken yerel olarak etkileşim kurmasını sağlar.\n\n**Cüzdan Soyutlaması** - MetaMask, Phantom ve diğer cüzdanları destekler ve ayrıca tek bir birleşik sağlayıcı aracılığıyla sosyal veya e-posta oturum açma. Kullanıcıların herhangi bir uygulamaya erişmek için asla yeni bir cüzdan oluşturmasına gerek yoktur.\n\n**Yerel Uygulama Deneyimleri** - Kullanıcılar her zaman uygulamayı zincirlerinde yerel olarak kullandıklarını hissederler.\n\nBu, web3 için **tamamen birlikte çalışabilen uygulamalar**la sonuçlanır. Bu paradigmada, \"Ethereum üzerindeki Uniswap\", \"Polygon üzerindeki Uniswap\" veya \"Arbitrum üzerindeki Uniswap\" kullanıcısı olmak yerine, kişi basitçe **Uniswap kullanıcısı** olur.",
                   "curated-reads": "## Özenle Seçilmiş Kaynaklar 👇"
                 }
               },
               "why-push-chain-future": {
                 "title": "Push Chain'ın web3'ün geleceği olmasının nedenlerini öğrenin",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Geleceğin Uygulamaları — Kaos olmadan inşa etmek",
+                    "subtitle": "Geleceğin uygulamaları tek bir zincire ait olmayacak. Bunun yerine, tüm zincirlerin kullanıcıları tarafından paylaşılacak."
+                  },
                   "learn-why-push-chain": {
-                    "title": "Neden Push Chain Web3’te Eksik Katman",
-                    "subtitle": "Push Chain, ölçeklenebilir, tüketiciye hazır evrensel uygulamaları mümkün kılan paylaşımlı durum L1 olarak tasarlanmıştır."
+                    "title": "Web3’deki Eksik Katman Olan Push Chain Neden Önemli?",
+                    "subtitle": "Push Chain, ölçeklenebilir, tüketiciye hazır evrensel uygulamaları mümkün kılan paylaşımlı durum L1 olarak tasarlandı."
                   },
                   "innovations-by-push-chain": {
                     "title": "Push Chain ile Yenilikler",
                     "subtitle": "Push Chain'deki on temel yeniliği keşfedin; herhangi bir zinciri, herhangi bir kullanıcıyı ve herhangi bir uygulamayı bir araya getiriyor."
                   },
                   "another-l1": {
-                    "title": "Push Chain Başka Bir L1 mı?",
-                    "subtitle": "Push Chain, herkes için birlikte çalışabilirliği çözmekle ilgili — başka yalıtılmış bir ekosistem yaratmakla değil."
+                    "title": "Push Chain başka bir L1 mi?",
+                    "subtitle": "Push Chain, herkes için birlikte çalışabilirliği çözmekle ilgili — başka izole bir ekosistem yaratmakla değil."
                   },
                   "evolution-of-push": {
                     "title": "Push zincirinin evrimi",
-                    "subtitle": "Push Protocol'dan Push Chain'e — ölçeklenebilir Web3 uygulamaları için evrensel, paylaşılan durum katmanı oluşturma yolculuğu."
+                    "subtitle": "Push Protocol'dan Push Chain'e — ölçeklenebilir Web3 uygulamaları için evrensel, paylaşılan durumlu L1 oluşturma yolculuğu."
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
                     "title": "Tüketici Uygulamaları 🫶🏽 Push Chain Üzerinde",
                     "subtitle": "Push Chain, evrensel olarak farklı zincirlerde çalışabilen yeni nesil tüketici uygulamalarının kapısını açıyor."
                   },
                   "faq-push-chain": {
-                    "title": "Push Chain SSS",
-                    "subtitle": "Sorunuz var mı? Push Chain ve evrensel uygulamalarla ilgili en sık sorulan soruların cevapları burada."
+                    "title": "Push Chain Sıkça Sorulan Sorular",
+                    "subtitle": "Sorularınız var mı? İşte Push Chain ve evrensel uygulamalarla ilgili en sık sorulan soruların cevapları."
                   }
                 }
               }

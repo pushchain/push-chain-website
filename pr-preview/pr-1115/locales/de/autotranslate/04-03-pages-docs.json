@@ -1,20 +1,40 @@
 {
   "pages": {
     "docs": {
-      "seo": {},
+      "seo": {
+        "title": "Dokumentation — Universale Apps erstellen",
+        "description": "Alles, was Sie für den Versand auf Push Chain benötigen: Schnellstarts, SDKs, API-Referenz, Beispiele und Node-Setup.",
+        "og-title": "Push Chain Docs - Schnellstarts, SDKs & API",
+        "og-description": "Baue und starte <app> auf der universellen <execution layer> mit klaren Anleitungen und Beispielen.",
+        "twitter-title": "Push Chain Docs - Jetzt entwickeln",
+        "twitter-description": "Schnellstarts, SDKs, API-Referenz und Beispiele, um schnell loszulegen."
+      },
       "header": {
-        "title": "Tweet über Push Chain"
+        "countdown-title": "Testnet Dokumente starten in",
+        "description": "Psst... Lust auf einen ersten Blick auf das Testnet Donut? Schick uns einfach eine Nachricht mit #pushchainsecret und wir schicken dir Zugang zu einer Testversion.",
+        "tweet-button": "Tweet über Push Chain",
+        "title": "Tweet about Push Chain",
+        "ariaLabel": "Tweet über Push Chain"
       },
       "grid-section": {
         "blocks": {
           "sections": {
             "resources": {
               "items": {
-                "whatispush": {},
-                "builders": {},
+                "whatispush": {
+                  "title": "Was ist Push Chain?",
+                  "subtitle": "Push Chain bietet ein vereinheitlichtes Toolkit zum Aufbau wirklich universeller Apps.",
+                  "ctatitle": "Mehr erfahren"
+                },
+                "builders": {
+                  "title": "Lasst uns loslegen!",
+                  "subtitle": "Alles, was Sie mit dem Push Chain SDK benötigen, um Ihre universelle app zu erstellen",
+                  "ctatitle": "Mehr erfahren"
+                },
                 "ui-kit": {
-                  "title": "UI-Kit",
-                  "subtitle": "Integriere jede React-basierte App in weniger als 5 Minuten."
+                  "title": "UI Kit",
+                  "subtitle": "Integriere jede React-basierte App in weniger als 5 Minuten.",
+                  "ctatitle": "Mehr erfahren"
                 }
               }
             }

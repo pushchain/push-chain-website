@@ -3,18 +3,43 @@
     "docs": {
       "seo": {
         "title": "Документация — Создавайте Универсальные Приложения",
-        "description": "Всё, что вам нужно для запуска на Push Chain: краткие руководства, SDK, справочник API, примеры и настройка ноды.",
-        "og-title": "Push Chain Docs - Быстрый старт, SDK и API",
-        "og-description": "Создавайте и запускайте приложения на универсальном исполняющем слое с понятными руководствами и примерами.",
-        "twitter-title": "Документация Push Chain - Создавайте прямо сейчас",
+        "description": "Всё необходимое для запуска на Push Chain: краткие руководства, SDK, справочник API, примеры и настройка ноды.",
+        "og-title": "Документация Push Chain - Быстрый старт, SDK и API",
+        "og-description": "Создавайте и запускайте приложения на универсальном уровне исполнения с помощью понятных руководств и примеров.",
+        "twitter-title": "Документация Push Chain - Начинайте разработку",
         "twitter-description": "Быстрый старт, SDK, справочник API и примеры для быстрой разработки."
       },
       "header": {
-        "countdown-title": "Документация тестнета скоро запустится",
-        "description": "Псс... хотите взглянуть на Push Chain Testnet - Donut? Вы можете получить доступ к секретной предварительной версии, зарегистрировавшись на наш Project G.U.D Deployathon на DoraHacks.",
-        "tweet-button": "Project G.U.D Deployathon",
-        "title": "Project G.U.D Deployathon",
-        "ariaLabel": "Project G.U.D Deployathon"
+        "countdown-title": "Запуск документации testnet через",
+        "description": "Пссст... хотите взглянуть на Testnet Donut? Напишите нам с #pushchainsecret, и мы отправим вам доступ к тестовой версии.",
+        "tweet-button": "Опубликовать о Push Chain",
+        "title": "Расскажите о Push Chain в Твиттере",
+        "ariaLabel": "Поделитесь в X/Twitter о Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Что такое Push Chain?",
+                  "subtitle": "Push Chain предоставляет унифицированный инструментарий для создания по-настоящему универсальных приложений.",
+                  "ctatitle": "Узнать больше"
+                },
+                "builders": {
+                  "title": "Давайте строить!",
+                  "subtitle": "Всё необходимое с Push Chain SDK для создания вашего универсального app",
+                  "ctatitle": "Узнать больше"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "Интегрируйте любое React-приложение менее чем за 5 минут.",
+                  "ctatitle": "Узнать больше"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

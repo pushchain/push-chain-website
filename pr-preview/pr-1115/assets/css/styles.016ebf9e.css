@@ -3878,9 +3878,23 @@ html {
 body.homepage-body {
   box-sizing: border-box !important;
   margin: 0;
+  min-height: 100svh !important;
   min-height: 100dvh !important;
   background: #000000 !important;
   padding-bottom: env(safe-area-inset-bottom) !important;
+}
+
+/* Ensure homepage uses black background under translucent bars and fills viewport */
+body.homepage-body,
+body.homepage-body #__docusaurus,
+body.homepage-body .main-wrapper {
+  background: #000000 !important;
+}
+
+/* Guard against any component adding white bg on homepage */
+body.homepage-body .navbar--fixed-top,
+body.homepage-body .navbar__inner {
+  background-color: transparent !important;
 }
 
 /* update docs/blogs dark mode color */

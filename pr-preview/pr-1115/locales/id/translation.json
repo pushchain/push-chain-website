@@ -1,138 +1,159 @@
 {
   "global": {
-    "site-name": "Push Chain — Universal L1 untuk Aplikasi",
-    "site-description": "शेयर्ड-स्टेट L1 untuk aplikasi universal. Deploy sekali; jangkau pengguna di rantai mana pun. Gunakan dompet apa pun. Bayar dengan token apa pun. Tanpa perlu berpindah jaringan."
+    "site-name": "Push Chain — Universal L1 untuk Apps",
+    "site-description": "L1 berbagi keadaan untuk aplikasi universals. Deploy sekali; mencapai pengguna di setiap rantai. Gunakan apapun dompet. Bayar dengan apa pun token. Tidak ada pertukaran jaringan."
   },
   "header": {
     "meta": {
-      "logo-aria-label": "Push Chain - Beralih ke halaman utama",
-      "language-icon-alt": "Ikon pilihan bahasa",
+      "logo-aria-label": "Push Chain - Navigasi ke halaman utama",
+      "language-icon-alt": "Ikon pemilihan bahasa",
       "hamburger-menu-alt": "Buka menu navigasi",
-      "testnet-badge-alt": "Testnet Push Chain Donut - Lihat status testnet"
+      "testnet-badge-alt": "Push Chain Testnet Donut - Lihat status testnet"
     },
     "logo": {
-      "imagealt": "Logo Push Chain",
+      "imagealt": "Gambar Logo Push Chain",
       "imagetitle": "Logo Push Chain",
-      "ctatitle": "Navigasikan ke Push Chain homepage"
+      "ctatitle": "Buka halaman utama Push Chain"
     },
     "testnet": {
-      "aria-label": "Sesawangan Uji",
+      "title": "Testnet",
+      "aria-label": "Bagian testnet",
       "link1": {
-        "subtext": "Pengelola Blok untuk Chain Push",
-        "title": "Eksplorasi Transaksi dan Blok Testnet Push Chain di Push Scan"
+        "text": "Push Scan",
+        "subtext": "Pengekplor blok untuk Push Chain",
+        "title": "Jelajahi transaksi dan blok di Push Chain testnet di Push Scan"
       },
       "link2": {
-        "text": "Fasilitas Air",
-        "title": "Dapatkan token tes gratis untuk pengembangan Push Chain"
+        "text": "Keran",
+        "subtext": "Dapatkan token testnet",
+        "title": "Dapatkan token testnet gratis untuk pengembangan Push Chain"
       }
     },
     "developers": {
       "title": "Pengembang",
       "aria-label": "Bagian Pengembang",
       "link1": {
-        "subtext": "Pengenalan untuk membangun di Push Chain"
+        "text": "Mulai",
+        "subtext": "Pengenalan membangun di Push Chain",
+        "title": "Mulai membangun aplikasi universal di Push Chain - Dokumentasi Pengembang"
       },
       "link2": {
         "text": "Mulai Cepat",
-        "subtext": "Atur lingkungan dev dalam beberapa detik",
-        "title": "Petunjuk cepat - Bangun lingkungan pengembangan Push Chain secara instan"
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Panduan cepat memulai - Siapkan lingkungan pengembangan Push Chain secara instan"
       },
       "link3": {
-        "text": "Panduan"
+        "text": "Tutorial",
+        "subtext": "Panduan langkah demi langkah untuk membangun dengan Push",
+        "title": "Belajar dengan tutorial praktis - Bangun aplikasi universal pertamamu di Push Chain"
       },
       "link4": {
         "text": "GitHub",
-        "title": "Explore source code dan alat pengembangan Push Chain di GitHub"
+        "subtext": "Lihat kode inti dan alat sumber terbuka",
+        "title": "Jelajahi kode sumber dan alat pengembangan Push Chain di GitHub"
       },
       "link5": {
-        "subtext": "Hubungi komunitas dev",
-        "title": "Join Push Chain developer community on Discord untuk dukungan dan kerja sama"
+        "text": "Discord Pengembang",
+        "subtext": "Bergabung dengan komunitas pengembang",
+        "title": "Bergabunglah dengan komunitas pengembang Push Chain di Discord untuk dukungan dan kolaborasi"
       }
     },
     "community": {
-      "title": "Masyarakat",
+      "title": "Komunitas",
+      "aria-label": "Bagian Komunitas",
       "link1": {
         "text": "Basis Pengetahuan",
-        "subtext": "Temukan ulasan mendalam tentang fitur"
+        "subtext": "Temukan pembahasan mendalam tentang fitur-fitur",
+        "title": "Jelajahi dokumentasi lengkap Push Chain dan panduan fitur"
       },
       "link2": {
         "text": "Tokenomik",
-        "title": "Pelajari tentang Push Chain tokenomics dan utilitas $PC token"
+        "subtext": "Token asli yang mendukung semua hal di Push Chain",
+        "title": "Pelajari tentang tokenomics Push Chain dan kegunaan token $PC"
       },
       "link3": {
         "text": "X/Twitter",
-        "subtext": "Ikuti update dan berita ekosistem",
-        "title": "Ikuti Push Chain di X (Twitter) untuk berita terbaru dan pengumuman terkini"
+        "subtext": "Ikuti perkembangan terbaru dan berita ekosistem",
+        "title": "Ikuti Push Chain di X (Twitter) untuk berita dan pengumuman terbaru"
       },
       "link4": {
-        "title": "Bergabung dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
+        "text": "Discord",
+        "subtext": "Ngobrol, bangun, dan rasakan semangat komunitas",
+        "title": "Bergabunglah dengan komunitas Push Chain di Discord untuk diskusi dan dukungan"
       },
       "link5": {
-        "subtext": "Gabung dalam diskusi dan tetap update"
+        "text": "Telegram",
+        "subtext": "Bergabunglah dalam diskusi dan tetap terinformasi",
+        "title": "Bergabunglah dengan komunitas Push Chain di Telegram untuk pembaruan *real-time*"
       }
     },
     "resources": {
       "title": "Sumber Daya",
       "aria-label": "Bagian Sumber Daya",
       "link1": {
-        "subtext": "Perbarui, analisis mendalam, dan cerita pengembang",
-        "title": "Baca blog Push Chain untuk update terbaru, analisis teknis, dan cerita pengembang"
+        "text": "Blog",
+        "subtext": "Pembaruan, pembahasan mendalam, dan cerita dari pengembang",
+        "title": "Baca blog Push Chain untuk berita terbaru, pembahasan teknis mendalam, dan cerita dari pengembang"
       },
       "link2": {
-        "subtext": "Visi dan teknologi, dijelaskan dengan sederhana",
-        "title": "Baca Dokumen Litepaper Push Chain - visi dan gambaran teknis yang disederhanakan"
+        "text": "Litepaper",
+        "subtext": "Visi dan teknologinya, disederhanakan",
+        "title": "Baca Litepaper Push Chain - visi yang disederhanakan dan gambaran teknis"
       },
       "link3": {
+        "text": "FAQ",
         "subtext": "Jawaban cepat untuk pertanyaan umum",
-        "title": "Browse frequently asked questions tentang Push Chain"
+        "title": "Lihat pertanyaan yang sering diajukan tentang Push Chain"
       }
     },
     "language": {
       "title": "Bahasa",
-      "aria-label": "Pemilihan Bahasa Dropdown"
+      "aria-label": "Pilihan Bahasa"
     },
     "app-button": {
-      "title": "Akses Push Portal - Dapatkan poin sebagai pengembang, pengguna, atau validator"
+      "text": "Push Portal",
+      "title": "Akses Push Portal - Dapatkan poin sebagai developer, user, atau validator"
     },
     "explore": {
-      "title": "Eksplorasi",
-      "aria-label": "Bagian Eksplorasi",
+      "title": "Jelajahi",
+      "aria-label": "Jelajahi Bagian",
       "link1": {
-        "text": "Mulai Berikutnya",
-        "subtext": "Pendahuluan Pembangunan di Push Chain"
+        "text": "Mulai",
+        "subtext": "Pengantar membangun di Push Chain",
+        "title": "Mulai membangun"
       },
       "link2": {
         "text": "Mulai Cepat",
-        "subtext": "Setup dev environment dalam beberapa detik",
-        "title": "Pemula Cepat"
+        "subtext": "Siapkan lingkungan pengembangan dalam hitungan detik",
+        "title": "Mulai Cepat"
       },
       "link3": {
         "text": "Tutorial",
-        "subtext": "Petunjuk Langkah demi Langkah untuk Membangun dengan Push",
+        "subtext": "Panduan langkah demi langkah untuk membangun dengan Push",
         "title": "Pelajari dengan tutorial"
       },
       "link4": {
         "text": "GitHub",
-        "subtext": "Lihat kode inti dan alat-alat terbuka sumber",
-        "title": "Eksplorasi Push Chain"
+        "subtext": "Lihat kode inti dan alat sumber terbuka",
+        "title": "Jelajahi Push Chain"
       },
       "link5": {
-        "text": "Developer Discord",
-        "subtext": "Hubungi komunitas dev",
+        "text": "Discord Pengembang",
+        "subtext": "Terhubung dengan komunitas pengembang",
         "title": "Bergabung dengan Discord"
       },
       "link6": {
-        "text": "Eksplor Contoh",
-        "subtext": "Eksplor Contoh",
-        "title": "Eksplorasi Contoh"
+        "text": "Jelajahi Contoh",
+        "subtext": "Jelajahi Contoh",
+        "title": "Jelajahi Contoh"
       }
     }
   },
   "footer": {
     "email-section": {
-      "title": "Tetap terhubung dengan Push Chain",
-      "title-secondary": "Berita dan pembaruan!",
-      "title-aria-label": "Bagian berlangganan newsletter",
+      "title": "Tetap dapatkan informasi terbaru dari Push Chain",
+      "title-secondary": "berita dan pembaruan!",
+      "title-aria-label": "Bagian langganan newsletter",
       "section-aria-label": "Pendaftaran newsletter Push Chain"
     },
     "main-section": {
@@ -170,14 +191,14 @@
       "knowledge-base-title": "Basis Pengetahuan Push Chain",
       "blog": "Blog",
       "blog-title": "Blog Push Chain",
-      "litepaper": "Whitepaper",
-      "litepaper-title": "Push Chain litepaper (PDF)",
+      "litepaper": "Litepaper",
+      "litepaper-title": "litepaper Push Chain (PDF)",
       "brand-kit": "Kit Merek",
       "brand-kit-title": "Aset dan panduan merek Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "Eksplorer blokcheyn Push Chain",
+      "push-scan-title": "Penjelajah blockchain Push Chain",
       "faucet": "Faucet",
-      "faucet-title": "Dapatkan token uji coba dari keran Push Chain",
+      "faucet-title": "Dapatkan token uji dari keran Push Chain",
       "push-portal": "Push Portal",
       "push-portal-title": "Portal komunitas Push Chain",
       "support": "Dukungan",
@@ -187,15 +208,15 @@
       "contact-us": "Hubungi Kami",
       "contact-us-title": "Kemitraan, BD, media, atau pertanyaan umum",
       "careers": "Karir",
-      "careers-title": "Lowongan terbuka di Push Chain",
+      "careers-title": "Lowongan kerja di Push Chain",
       "twitter": "X (Twitter)",
       "twitter-title": "Ikuti Push Chain di X (Twitter)",
       "discord": "Discord",
       "discord-title": "Bergabunglah dengan Discord Push Chain",
       "reddit": "Reddit",
-      "reddit-title": "Bergabunglah dengan subreddit Push Chain",
+      "reddit-title": "Bergabung dengan subreddit Push Chain",
       "telegram": "Telegram",
-      "telegram-title": "Bergabunglah dengan Push Chain Telegram"
+      "telegram-title": "Bergabung dengan Telegram Push Chain"
     },
     "social-section": {
       "section-aria-label": "Tautan media sosial dan informasi hukum",
@@ -210,7 +231,7 @@
       "privacy-policy": "Kebijakan Privasi",
       "privacy-policy-title": "Baca Kebijakan Privasi",
       "privacy-policy-aria-label": "Kebijakan Privasi",
-      "terms-of-service": "Ketentuan Layanan",
+      "terms-of-service": "Syarat dan Ketentuan",
       "terms-of-service-title": "Baca Ketentuan Layanan",
       "terms-of-service-aria-label": "Ketentuan Layanan",
       "cookie-preferences": "Preferensi Cookie",
@@ -218,208 +239,281 @@
     },
     "footer-image": {
       "alt": "Ilustrasi footer Push Chain",
-      "title": "Push Chain - Universal 블록체인"
+      "title": "Push Chain - Blokchai Universal"
     }
   },
   "pages": {
     "home": {
       "seo": {
-        "twitter-description": "Transaksi dari segala jaringan. Gunakan apapun dompet. Bayar dengan apapun token. Tidak ada perubahan jaringan."
+        "title": "Beranda - Push Chain | blokcheyn Universal untuk Aplikasi",
+        "description": "Blokchai berkongsi keadaan untuk aplikasi universitas.Deploy satu kali; capai pengguna di semua rantai. Gunakan apapun dompet. Bayar dengan apapun token.",
+        "og-title": "Push Chain - Universal L1 untuk Apps",
+        "og-description": "Cukup satu kali deploy untuk pengguna EVM dan non-EVM. Gunakan dompet apa saja dan bayar dengan token apa saja — tanpa perlu berpindah jaringan.",
+        "twitter-title": "Deploy sekali. Capai semua jaringan.",
+        "twitter-description": "Bertransaksi dari rantai mana pun. Gunakan dompet mana pun. Bayar dengan token apa pun. Tidak perlu berpindah jaringan."
       },
       "hero-section": {
-        "title": "Siapa Saja, Apapun Aplikasi, Semua Pengguna.\nSatu Push Chain.",
-        "primary-button-title": "Mulai perjalanan pembangunmu bersama Push Chain!",
-        "secondary-button-title": "Pelajari dan eksplorasi Push Chain",
-        "section-aria-label": "Push Chain hero section - Lapisan Blockchain Universal Layer 1 pengenalan",
-        "hero-background-title": "Push Chain - Layer 1 Universal untuk aplikasi lintas-lintas",
-        "schema-headline": "Push Chain - L1 Universal untuk Aplikasi",
-        "schema-description": "Mengeluarkan sekali di Push Chain dan menjangkau pengguna pada blockchain mana pun dengan aplikasi universal"
+        "title": "Rantai Apa Saja, Aplikasi Apa Saja, Semua Pengguna.\nSatu Push Chain.",
+        "description": "Lapisan 1 pertama yang dibuat untuk Aplikasi Universal. \nBangun & Deploy sekali, onboard pengguna dari rantai mana pun.",
+        "primary-button": "Mulai Membangun",
+        "primary-button-title": "Mulai perjalananmu sebagai builder dengan Push Chain!",
+        "secondary-button": "Jelajahi Basis Pengetahuan",
+        "secondary-button-title": "Pelajari dan jelajahi Push Chain",
+        "section-aria-label": "Bagian hero Push Chain - Pengenalan blockchain Layer 1 universal",
+        "primary-button-aria-label": "Mulai membangun aplikasi universal di Push Chain - Buka dokumentasi pengembang",
+        "secondary-button-aria-label": "Pelajari lebih lanjut tentang fitur dan konsep Push Chain di basis pengetahuan",
+        "hero-background-alt": "Latar belakang animasi hero Push Chain yang menunjukkan konektivitas blockchain universal",
+        "hero-background-title": "Push Chain - Lapisan Universal L1 untuk aplikasi lintas rantai",
+        "schema-headline": "Push Chain - Universal L1 untuk Apps",
+        "schema-description": "Deploy sekali di Push Chain dan jangkau pengguna di blockchain mana pun dengan aplikasi universal"
       },
       "whatis-section": {
-        "titleThird": "Jaringan",
-        "bottomTextFirst": "Dapat Digunakan Satu Kali,",
-        "bottomTextSecond": "Bisa Dicari di Mana Saja",
+        "titleFirst": "Sebuah Kebenaran",
+        "titleSecondGraditent": "Universal",
+        "titleThird": "rantai",
+        "bottomTextFirst": "Deploy Sekali,",
+        "bottomTextSecond": "Jangkau Semua Tempat",
         "bottomLinkText": "Mulai Sekarang",
-        "bottomLinkTitle": "Pergi ke Dokumentasi Hub",
+        "bottomLinkTitle": "Buka Pusat Dokumentasi",
         "section-aria-label": "Apa itu Push Chain - Penjelasan blockchain universal",
-        "animation-title": "Push Chain pembuatan universal - terdeploystepenerusatu, mencapai jaringan manapun"
+        "animation-alt": "Animasi yang mendemonstrasikan deployment aplikasi universal Push Chain di berbagai blokchain",
+        "animation-title": "Visualisasi deployment universal Push Chain - deploy sekali, jangkau semua rantai",
+        "bottom-link-aria-label": "Buka dokumentasi Push Chain untuk mulai membangun aplikasi universal"
       },
       "chain-features-section": {
-        "header": {},
+        "section-aria-label": "Bagian inovasi dan fitur Push Chain",
+        "header": {
+          "main-text": "Dibangun di atas inovasi untuk menghilangkan fragmentasi!",
+          "other-text": "Push adalah satu-satunya Universal Layer 1 yang akan Anda butuhkan!"
+        },
         "box1": {
-          "bodytext": "Push Chain mendukung transaksi dari berbagai blockchain. Pengguna dapat membayar gas dalam bentuk token apa saja — Tidak perlu bridging.",
-          "imagetitle": "Mendukung transaksi dari blockchain apa saja."
+          "texttitle": "Transaksi di Chain Mana Saja",
+          "bodytext": "Push Chain mendukung transaksi dari blockchain mana pun. Pengguna dapat membayar gas dalam token apa pun — Tidak perlu bridging.",
+          "imagealt": "Ilustrasi yang menunjukkan berbagai logo blokcheyn jatuh di mesin pinball.",
+          "imagetitle": "Mendukung transaksi dari blockchain mana pun."
         },
         "box2": {
-          "texttitle": "Abstraksi Dompet",
-          "imagealt": "Ilustrasi menunjukkan MetaMask, Phantom Wallet, dll keluar dari dompet besar dengan logo Push Chain di atasnya."
+          "texttitle": "Abstraksi Wallet",
+          "bodytext": "Biarkan dompet mana pun dari rantai mana pun terhubung, berinteraksi, dan bertransaksi. Hancurkan hambatan Web3 dengan menggunakan login sosial atau email. Pengguna dapat memutuskan di Push Chain.",
+          "imagealt": "Ilustrasi yang menampilkan dompet Metamask, Phantom Wallet, dll keluar dari dompet besar dengan logo Push Chain di atasnya.",
+          "imagetitle": "Mendukung dompet yang sudah ada seperti Metamask, Phantom, dll beserta login sosial"
         },
         "box3": {
-          "texttitle": "100% EVM\nKompatibel",
-          "bodytext": "Tingkatkan aplikasi Anda menjadi aplikasi universal hanya dalam beberapa menit. Tanpa kode on-chain apa pun, tunggal."
+          "texttitle": "100% EVM\nCompatible",
+          "bodytext": "Deploy dengan tanpa kode on-chain. Ubah aplikasi asli Anda menjadi aplikasi universal dalam hitungan menit.",
+          "imagealt": "Ilustrasi yang menampilkan logo Ethereum Virtual Machine berputar dan mengatakan Kompatibilitas 100% EVM.",
+          "imagetitle": "Tidak diperlukan perubahan kode on-chain, 100% Kompatibel dengan EVM."
         },
         "box4": {
-          "texttitle": "Smart Kontrak Universal",
-          "bodytext": "Buat sekali, jalankan cross chain, multi langkah pengalaman dengan kontrak tunggal yang dapat dipertahankan masa depan.",
-          "imagealt": "Ikon Ethereum Virtual Maching dan busur mengelilingi itu berbunyi '100% EVM Kompatibel'",
-          "imagetitle": "Berkirim satu kali saja, secara instan menjadi kompatibel dengan semua rantai yang didukung (EVM atau non-EVM)."
+          "texttitle": "Kontrak Pintar Universal",
+          "bodytext": "Bangun sekali, jalankan lintas rantai, pengalaman multi langkah dengan satu kontrak yang tahan lama.",
+          "imagealt": "Ilustrasi yang menampilkan logo Ethereum Virtual Maching dan lengkungan yang mengelilinginya bertuliskan '100% EVM Compatible'",
+          "imagetitle": "Deploy sekali saja, dan langsung kompatibel dengan semua rantai yang didukung (EVM atau non-EVM)."
         },
         "box5": {
-          "texttitle": "Abstraksi Biaya Universal",
-          "imagetitle": "Mendukung setiap token dari setiap rantai untuk transaksi."
+          "texttitle": "Universal Fee\nAbstraksi",
+          "bodytext": "Biarkan pengguna membayar gas dalam token apa pun, di rantai apa pun tanpa bridging.",
+          "imagealt": "Ilustrasi yang menampilkan berbagai logo Bitcoin, Ethereum, Solana yang berputar di sekitar Push Chain",
+          "imagetitle": "Mendukung token apa pun dari rantai apa pun untuk transaksi."
         },
         "box6": {
-          "texttitle": "Lapisan Eksekusi Universal",
-          "imagetitle": "Transaksi dari mana saja dari rantai finalisasi pada Push Chain, memungkinkan pengguna dari berbagai rantai dapat menggunakan aplikasi yang sama secara native aka Layer Eksekusi Universal."
+          "texttitle": "Universal Execution Layer",
+          "bodytext": "Buat aplikasi atomik dan komposabel di seluruh web3. Ciptakan pengalaman aplikasi yang belum pernah ada sebelumnya, dengan memungkinkan banyak pengguna dari rantai yang berbeda bertransaksi dengan aplikasi yang sama.",
+          "imagealt": "Ilustrasi yang menunjukkan berbagai blok tetris memasuki lubang cacing dan logo Push Chain muncul dari ujung yang lain.",
+          "imagetitle": "Transaksi dari rantai mana pun difinalisasi di Push Chain, memungkinkan pengguna dari rantai mana pun untuk secara natif menggunakan aplikasi yang sama alias Universal Execution Layer."
         },
         "box7": {
-          "bodytext": "Akses data akun dan status dari jaringan lain di kontrak pintar Anda.",
-          "tagText": "SEDANG DIPERSIAPKAN",
+          "texttitle": "Akses State",
+          "bodytext": "Akses data akun dan state dari rantai lain di smart contract Anda.",
+          "tagText": "SEGERA HADIR",
           "tags": {
-            "title1": "MENDENGAR DARI JARINGAN"
+            "title1": "READ FROM CHAINS"
           },
-          "imagetitle": "(Roadmap) Shared State memungkinkan akses ke data akun dan state dari jaringan lain di dalam kontrak pintar."
+          "imagealt": "Ilustrasi yang menunjukkan Push Chain berkembang dalam animasi bergaya blok.",
+          "imagetitle": "(Roadmap) Shared State memungkinkan akses ke data akun dan state dari chain lain di smart contract Anda."
         },
         "box8": {
-          "texttitle": "Solusi Bergerak",
-          "bodytext": "Aktifkan, validasi, dan lengkapi transaksi di mana saja menggunakan kontrak pintar Anda.",
-          "tagText": "SINGKAT SOON",
+          "texttitle": "Universal\nValidators",
+          "bodytext": "Memicu, memvalidasi, dan menyelesaikan transaksi di rantai mana pun menggunakan smart contract Anda.",
+          "tagText": "SEGERA HADIR",
           "tags": {
-            "title1": "TULIS KE JARINGAN"
-          }
+            "title1": "TULIS KE RANTAI"
+          },
+          "imagealt": "Ilustrasi yang menunjukkan balok tetris dalam berbagai warna yang bergabung dan berubah.",
+          "imagetitle": "(Roadmap) Universal Validators memungkinkan pengguna untuk memicu, memvalidasi, dan menyelesaikan transaksi di rantai mana pun menggunakan smart contract Anda."
         },
         "footer": {
-          "ctatext": "Mulai Membangun"
+          "title": "basis pengguna aplikasi Anda dengan menjadi universal",
+          "secondary": "dengan mudah!",
+          "ctatext": "Mulai Bangun",
+          "ctatitle": "Deploy sekali, perluas basis pengguna Anda 10 kali lipat. Kunjungi Dokumentasi Pengembang."
         }
       },
       "partners-section": {
-        "title": "Ditunjang oleh Push Chain",
-        "subtitle": "Explore apps who have multiplied their user base by simply deploying on blockchain.",
-        "ctatitle": "Cek partner, aplikasi dan infrastruktur yang terdeploy di Push Chain",
-        "ctatext": "Eksplorasi Ekosistem",
-        "partner-logo-title-prefix": "Logo mitra - "
+        "section-aria-label": "Mitra dan integrasi ekosistem Push Chain",
+        "title": "Powered by Push Chain",
+        "subtitle": "Jelajahi aplikasi yang telah melipatgandakan basis pengguna mereka hanya dengan menerapkan di Push Chain.",
+        "ctatitle": "Lihat mitra, aplikasi, dan infrastruktur yang diterapkan di Push Chain",
+        "ctatext": "Jelajahi Ekosistem",
+        "partners-grid-aria-label": "Grid logo mitra yang menampilkan proyek Web3 yang menggunakan Push Chain",
+        "partner-logo-title-prefix": "Logo Mitra - ",
+        "partner-logo-alt-prefix": "Logo dari ",
+        "mobile-view-aria-label": "Tampilan mitra ekosistem Push Chain di perangkat seluler"
       },
       "stats-section": {
-        "section-aria-label": "Performa dan Metrik Blockchain Push Chain",
-        "title": "Capai",
+        "section-aria-label": "Statistik dan metrik kinerja Push Chain",
+        "title": "Raih",
+        "titleGradient": "Seketika",
         "titleThird": "Interoperabilitas",
-        "description": "Dipilih untuk kinerja optimal.\nTinggi TPS, gas ultra rendah, dan kecepatan sub-detik\nuntuk eksekusi aplikasi waktu nyata.",
+        "description": "Dioptimalkan untuk kinerja.\nTPS tinggi, gas sangat rendah, dan finality kurang dari satu detik\nuntuk eksekusi aplikasi real-time.",
+        "animation-alt": "Animasi interaktif yang menunjukkan interoperabilitas instan Push Chain di berbagai blokchain",
+        "animation-title": "Visualisasi interoperabilitas instan Push Chain",
         "stats": {
           "stat1": {
-            "imagealt": "Ilustrasi menunjukkan jaringan yang didukung"
+            "title": "Rantai yang Didukung",
+            "imagealt": "Ilustrasi yang menunjukkan rantai yang didukung",
+            "imagetitle": "Daftar semua rantai yang didukung seperti Ethereum, Solana, BNB Chain, dll"
           },
-          "stat2": {},
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
           "stat3": {
-            "title": "FINALITAS NATIF"
+            "title": "FINALITAS ASLI",
+            "description": "Seketika"
           },
           "stat4": {
-            "title": "WAKTU BLOCK ASLI"
+            "title": "WAKTU BLOK ASLI",
+            "description": "1 detik"
           }
         }
       },
       "blog-section": {
-        "subtitle": "BERITA, LOG KODE & IDE-A",
-        "subtitle-aria-label": "Informasi kategori blog",
-        "title": "Pulsamu dari Push Chain",
-        "explore-link-text": "Eksplor Artikel Lainnya",
-        "explore-link-title": "Kunjungi blog Push Chain untuk membaca semua artikel dan update",
-        "explore-link-aria-label": "Navigasi ke halaman blog Push Chain",
-        "blog-posts-list-aria-label": "Artikel Blog Push Chain terkini",
-        "blog-post-aria-label": "Baca artikel blog tentang {title}"
+        "subtitle": "BERITA, CATATAN PENGEMBANG & GAGASAN",
+        "subtitle-aria-label": "Informasi kategori Blog",
+        "title": "Denyut Nadi Push Chain Anda",
+        "title-aria-label": "Postingan blog dan pembaruan Push Chain terbaru",
+        "explore-link-text": "Jelajahi Artikel Lainnya",
+        "explore-link-title": "Kunjungi blog Push Chain untuk membaca semua artikel dan pembaruan",
+        "explore-link-aria-label": "Buka halaman blog Push Chain",
+        "section-aria-label": "Bagian posting blog dan berita Push Chain",
+        "blog-posts-list-aria-label": "Postingan blog Push Chain terbaru",
+        "blog-post-aria-label": "Baca postingan blog tentang {title}",
+        "blog-post-title-prefix": "Baca postingan blog - ",
+        "loading-text": "Memuat postingan blog terbaru...",
+        "error-text": "Tidak dapat memuat postingan blog saat ini.",
+        "no-posts-text": "Tidak ada postingan blog yang tersedia"
       },
       "trustedby-section": {
-        "section-aria-label": "Push Chain dipercaya oleh",
-        "trusted-by-alt": "Pengguna - "
+        "title": "Dibangun oleh tim yang dipercaya oleh pelopor web3",
+        "section-aria-label": "Bagian yang dipercaya oleh Push Chain",
+        "trusted-by-alt": "Investor - "
       },
       "featured-section": {
-        "subtitle": "Tidak hanya kata-kata kami saja. Lihat apa yang media tulis tentang rantai universal yang benar.",
+        "aria-label": "Bagian Unggulan",
+        "tag": "DIUNGGUNGKAN DI",
+        "title": "Push Chain dalam Sorotan",
+        "subtitle": "Jangan hanya percaya kata kami. Lihat apa kata media tentang rantai universal sejati.",
+        "articles-image-alt": "Liputan media dari ",
+        "articles-text": "Baca Selengkapnya",
+        "articles-title-1": "Baca ",
+        "articles-title-2": "'s pendapat lengkap tentang Push Chain",
         "articles": {
           "binance-chain": {
-            "text": "Kami sangat gembira mengumumkan bahwa Push Portal, sebuah protokol komunikasi desentralisasi terkemuka untuk Web3, telah sekarang diluncurkan di BNB Chain."
+            "text": "Kami sangat senang mengumumkan bahwa Push Protocol, sebuah protokol komunikasi terdesentralisasi terkemuka untuk Web3, kini telah diluncurkan di BNB Chain."
           },
           "coindesk": {
-            "text": "Village Protokol: Bekerja Sama dengan Push Protocol untuk Membawa Token-Gated Group Chats"
+            "text": "Protocol Village: Unstoppable Bekerja Sama Dengan Push Protocol untuk Menyampaikan Obrolan Grup yang Terikat Token"
           },
-          "defiant": {},
+          "defiant": {
+            "text": "Unstoppable Domains Meluncurkan Grup Obrolan dengan Akses Token. Kolaborasi dengan Push protokol bertujuan untuk mencegah misinformasi dan penipuan."
+          },
           "balaji": {
-            "text": "Pengguna dapat mengontrol notifikasi. Dua perusahaan yang mengendalikan notifikasi push ke miliaran smartphone: Apple dan Google."
+            "text": "Notifikasi yang dikendalikan pengguna. Dua perusahaan mengendalikan notifikasi push ke miliaran smartphone: Apple dan Google."
           },
           "defiprime": {
-            "text": "Harsh Rajat membicarakan masa depan perbankan, insentif EPNS protocol dan di mana model bisnis untuk notifikasi push yang terdesentralisasi."
+            "text": "Harsh Rajat berbicara tentang masa depan perbankan, insentif protokol EPNS dan di mana model bisnis untuk notifikasi push terdesentralisasi berada."
           },
-          "ethfoundation": {},
+          "ethfoundation": {
+            "text": "Sejak HackMoney, Richa dan Harsh telah mengerahkan energi luar biasa untuk membangun EPNS menjadi apa yang mereka sebut \"bagian yang hilang dari web3.\""
+          },
           "beincrypto": {
-            "text": "Bagaimana Jaringan Komunikasi Web3 Bekerja: Penelitian Teknis dalam Dalam"
+            "text": "Bagaimana Jaringan Komunikasi Web3 Bekerja: Analisis Mendalam Secara Teknis"
           },
           "the-block": {
-            "text": "Protokol pemberitahuan Web3 Push akan meluncurkan rantai lapisan 1 miliknya"
+            "text": " protokol notifikasi Web3 Push akan meluncurkan rantai Layer 1 sendiri"
           },
           "business-insider": {
-            "text": "Push Menampilkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Memperkenalkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
           },
-          "chainwire": {},
+          "chainwire": {
+            "text": "Push Memperkenalkan Push Chain: Masa Depan Aplikasi Blockchain Universal."
+          },
           "benzinga": {
-            "text": "Push Mengumumkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Mengungkapkan Push Chain: Masa Depan Aplikasi Universal Berbasis Blockchain"
           },
           "crypto-briefing": {
-            "text": "Push Membuka Push Chain: Masa Depan Aplikasi Blockchain Universal"
+            "text": "Push Memperkenalkan Push Chain: Masa Depan Aplikasi Blockchain Universal"
           },
           "cryptoslate": {
             "text": "Push Protocol meluncurkan Push Chain untuk menyatukan komunikasi dan transaksi blockchain"
           },
           "messari": {
-            "text": "EPNS memungkinkan insentif dan pendapatan pasif bagi pengguna yang menerima notifikasi dekatentralisasi."
+            "text": "EPNS memungkinkan insentif dan penghasilan pasif bagi pengguna yang menerima notifikasi terdesentralisasi."
           },
           "coin-telegraph-1": {
             "text": "Harsh Rajat, pendiri dan pemimpin proyek Push Protocol, menjelaskan lonjakan dalam pengembangan aplikasi obrolan Web3 di episode terbaru Hashing It Out."
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains meluncurkan fitur grup percakapan dengan batas yang dipatok untuk pemegang nama pengguna."
+            "text": "Unstoppable Domains meluncurkan fitur obrolan grup dengan akses terbatas untuk pemegang nama pengguna."
           }
         }
       },
       "ending-section": {
-        "aria-label": "Buat Aplikasi Universal section",
-        "section-subtitle": "Buatlah satu, skalakan di setiap blockchain.",
+        "aria-label": "Bagian Bangun Aplikasi Universal",
+        "section-title": "Bangun Aplikasi Universal.",
+        "section-subtitle": "Hancurkan batasan. Bangun sekali, perluas di setiap blokcheyn.",
         "docs-link": {
-          "text": "Explore Dokumentasi Push Chain",
-          "aria-label": "Buka dokumen Push Chain di tab baru"
+          "text": "Jelajahi Dokumen Push Chain",
+          "title": "Jelajahi dokumentasi Push Chain dan sumber daya pengembang",
+          "aria-label": "Buka dokumentasi Push Chain di tab baru"
         },
         "cta-link": {
-          "text": "Push Chain",
-          "aria-label": "Mulai bekerja sama dengan Push Chain development"
+          "text": "LFG Push Chain",
+          "title": "Mulai dengan Push Chain - platform blokchein universal",
+          "aria-label": "Mulai mengembangkan dengan Push Chain"
         }
       }
     },
     "knowledge": {
       "seo": {
         "title": "Basis Pengetahuan — Panduan, FAQ & Cara Melakukannya",
-        "description": "Mulai di sini untuk konsep, FAQ, panduan, dan sumber daya ekosistem. Panduan yang jelas dan tidak teknis untuk menggunakan Push Chain.",
+        "description": "Mulai di sini untuk konsep, FAQ, cara penggunaan, dan sumber daya ekosistem. Panduan yang jelas dan tidak teknis untuk menggunakan Push Chain.",
         "og-title": "Basis Pengetahuan Push Chain - Panduan & FAQ",
-        "og-description": "Konsep, panduan langkah demi langkah, dan jawaban atas pertanyaan umum tentang Push Chain.",
+        "og-description": "Konsep, panduan langkah-demi-langkah, dan jawaban untuk pertanyaan umum tentang Push Chain.",
         "twitter-title": "Basis Pengetahuan - Panduan & FAQ",
-        "twitter-description": "Panduan singkat, FAQ, dan cara penggunaan Push Chain (tanpa istilah teknis yang rumit)."
+        "twitter-description": "Panduan cepat, FAQ, dan cara kerja untuk Push Chain (tanpa istilah teknis yang rumit)."
       },
       "hero-section": {
         "title": "Basis Pengetahuan",
         "description": {
-          "highlighted": "Push Chain adalah sebuah blokchein universal sejati yang dirancang untuk menghilangkan fragmentasi di seluruh rantai.",
+          "highlighted": "Push Chain adalah sebuah blockchain universal sejati yang dirancang untuk menghilangkan fragmentasi di seluruh rantai.",
           "developers": "Pengembang",
-          "developers-text": "deploy sekali dan langsung kompatibel dengan semua rantai EVM dan non-EVM yang didukung.",
+          "developers-text": "terapkan sekali dan langsung kompatibel dengan semua rantai EVM dan non-EVM yang didukung.",
           "users": "Pengguna",
-          "users-text": "gunakan aplikasi yang sama terlepas dari rantai asal mereka."
+          "users-text": "gunakan aplikasi yang sama, berapapun rantai yang mereka gunakan."
         },
         "email-signup": {
           "title": {
             "long": "Dapatkan Notifikasi tentang Push Chain testnet",
             "short": "Push Chain Testnet"
           },
-          "description": "Jadilah yang pertama tahu ketika Push Chain testnet aktif. Bergabunglah dengan daftar surat kabar kami untuk mendapatkan pembaruan eksklusif."
+          "description": "Jadilah yang pertama tahu ketika testnet Push Chain diluncurkan. Bergabunglah dengan daftar email kami untuk mendapatkan pembaruan eksklusif."
         },
         "footer": {
-          "description": "Buat pengalaman yang mulus dan ramah pengguna untuk aplikasi Anda di blockchain mana pun dengan Push Chain.",
+          "description": "Buat pengalaman yang lancar dan mudah digunakan untuk aplikasi Anda di blockchain mana pun dengan Push Chain.",
           "cta": {
-            "text": "Dapatkan Notifikasi"
+            "text": "Dapatkan Pemberitahuan"
           }
         }
       },
@@ -436,26 +530,26 @@
                 },
                 "builders": {
                   "title": "Bangun di Push Chain",
-                  "subtitle": "Pelajari lebih lanjut tentang cara membangun aplikasi universal, apa yang dimungkinkan, dan cara memulai!",
-                  "ctatitle": "Para Builder Berkumpul"
+                  "subtitle": "Pelajari lebih lanjut tentang cara membangun aplikasi universal, apa yang dimilikinya dan cara memulainya!",
+                  "ctatitle": "Para Builder, Ayo Berkumpul"
                 },
                 "deepdives": {
                   "title": "Pembahasan Mendalam Teknis",
-                  "subtitle": "Ingin tahu cara kerja Push secara mendalam? Atau hanya ingin tahu lebih banyak? Apapun alasannya, selamat datang!",
+                  "subtitle": "Ingin tahu cara kerja Push secara mendalam? Atau hanya ingin tahu lebih banyak? Bagaimanapun, selamat datang!",
                   "ctatitle": "Lihat Cara Kerjanya"
                 },
                 "devdocs": {
                   "title": "Dokumentasi Pengembang",
-                  "subtitle": "Langsung saja ke intinya! Saya adalah sebuah universal chain… dan kamu seorang developer, mari kita resmi!",
-                  "ctatitle": "Mulai Berkarya"
+                  "subtitle": "Mari langsung ke intinya! Saya adalah universal chain... dan kamu adalah seorang dev, mari kita resmi!",
+                  "ctatitle": "Mulai Membangun"
                 },
                 "tokenomics": {
                   "title": "Jelajahi Tokenomics",
-                  "subtitle": "Pelajari bagaimana sistem tokenomics kami memberikan insentif dan memastikan jaringan berkelanjutan yang dirancang untuk tahan lama",
-                  "ctatitle": "Pelajari Desain टोकन"
+                  "subtitle": "Pelajari bagaimana tokenomics kami memberikan insentif dan memastikan jaringan berkelanjutan yang dirancang untuk bertahan lama",
+                  "ctatitle": "Pelajari Desain Token"
                 },
                 "faq": {
-                  "title": "Pertanyaan yang Sering Diajukan",
+                  "title": "Pertanyaan yang Sering Diajukan (FAQ)",
                   "subtitle": "Tempat untuk menemukan jawaban atas semua pertanyaan populer yang diajukan komunitas",
                   "ctatitle": "Baca Selengkapnya"
                 }
@@ -467,11 +561,11 @@
       "push101": {
         "seo": {
           "title": "Dasar-Dasar Push Chain — Pengantar",
-          "description": "Pengantar ramah pemula untuk Push Chain dan aplikasi universal—apa itu, bagaimana cara kerjanya, dan bagaimana cara memulainya.",
+          "description": "Pengantar ramah pemula untuk Push Chain dan aplikasi universal—apa itu, cara kerjanya, dan cara memulainya.",
           "og-title": "Dasar-Dasar Push Chain - Pengantar",
           "og-description": "Pelajari dasar-dasarnya: apa itu Push Chain, bagaimana cara kerjanya, dan langkah pertama Anda.",
           "twitter-title": "Dasar-Dasar Push Chain - Mulai dari sini",
-          "twitter-description": "Panduan untuk pemula tentang Push Chain dan aplikasi universal."
+          "twitter-description": "Panduan pemula untuk Push Chain dan universal apps."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -482,34 +576,38 @@
             "sections": {
               "push-chain-basics": {
                 "items": {
-                  "why-push-chain": "## Mengapa Push Chain?\n\nPush Chain adalah **L1 universal sejati pertama**, yang dibangun khusus untuk memungkinkan aplikasi dapat berinteraksi dengan mulus oleh pengguna dari rantai mana pun.\n\nTulis smart contract Anda sekali, deploy di Push Chain, dan langsung jangkau pengguna di Ethereum, Solana, dan rantai lain yang didukung tanpa mengubah kode on-chain.",
-                  "what-is-push-chain": "## Apa itu Push Chain?\n\nPush Chain adalah blockchain L1 Proof-of-Stake (PoS) yang dirancang untuk menghilangkan fragmentasi di seluruh chain.\n\nIni adalah blockchain L1 **shared state** untuk **Universal (Interoperable) Apps** lintas chain. Push Chain memungkinkan transaksi dari chain mana pun (Eth, Solana, EVM, atau non-EVM), memungkinkan aplikasi dari chain mana pun dapat diakses oleh pengguna chain mana pun (**polymarket** dari chain mana pun, **pump.fun** dari chain mana pun, dll.).",
-                  "innovations-of-push-chain": "## Inovasi dari Push Chain\n\nPush Chain memperkenalkan beberapa inovasi terobosan seperti:\n\n**True Universal L1** - Secara native mendukung semua chain dan memungkinkan pengguna untuk berinteraksi dengan aplikasi yang sama. Tidak diperlukan relayer terpusat, bridge, atau peretasan lainnya.\n\n**Universal Fee Abstraction** - Memungkinkan pengguna untuk berinteraksi secara native sambil berada di chain pilihan mereka dan menggunakan token apa pun yang mereka inginkan.\n\n**Wallet Abstraction** - Mendukung MetaMask, Phantom, dan wallet lain serta login sosial atau email melalui satu penyedia terpadu. Pengguna tidak perlu membuat wallet baru untuk mengakses aplikasi apa pun.\n\n**Satu transaksi, tidak peduli chain-nya** - pengguna dapat berinteraksi dengan aplikasi apa pun di Push Chain dengan satu transaksi. Tidak peduli bagaimana mereka memilih untuk berinteraksi dengan aplikasi, mereka hanya perlu menandatangani satu transaksi.\n\n**Universal Smart Contracts** - Smart contract bersifat universal dan akan berfungsi secara instan tanpa perubahan kode on-chain atau langkah tambahan.\n\n**Shared State & Programmable Solvers** - Memungkinkan pengembang untuk membaca dan menulis state dari blockchain lain (Roadmap).\n\nIni menghasilkan **aplikasi yang sepenuhnya interoperable** untuk web3. Dalam paradigma ini, alih-alih menjadi pengguna \"Uniswap di Ethereum,\" \"Uniswap di Polygon,\" atau \"Uniswap di Arbitrum,\" seseorang menjadi **pengguna Uniswap.**",
-                  "curated-reads": "## Bacaan Pilihan 👇"
+                  "why-push-chain": "## Mengapa Push Chain?\n\nPush Chain adalah **L1 universal sejati** pertama, yang dirancang khusus untuk memungkinkan aplikasi dapat berinteraksi dengan lancar oleh pengguna dari rantai mana pun.\n\nTulislah smart contract Anda sekali, deploy di Push Chain, dan langsung jangkau pengguna di Ethereum, Solana, dan rantai lain yang didukung tanpa mengubah kode on-chain.",
+                  "what-is-push-chain": "## Apa itu Push Chain?\n\nPush Chain adalah blockchain L1 Proof-of-Stake (PoS) yang dirancang untuk menghilangkan fragmentasi di seluruh chain.\n\nIni adalah blockchain L1 **shared state** untuk **Universal (Interoperable) Apps** di seluruh chain. Push Chain memungkinkan transaksi dari chain mana pun (Eth, Solana, EVM, atau non-EVM), memungkinkan aplikasi dari chain mana pun dapat diakses oleh pengguna chain mana pun (**polymarket** dari chain mana pun, **pump.fun** dari chain mana pun, dll).",
+                  "innovations-of-push-chain": "## Inovasi dari Push Chain\n\nPush Chain memperkenalkan beberapa inovasi terobosan seperti:\n\n**True Universal L1** - Secara native mendukung semua chain dan memungkinkan pengguna untuk berinteraksi dengan app yang sama. Tidak memerlukan relayer terpusat, bridge, atau hack lainnya.\n\n**Universal Smart Contracts** - Smart contracts bersifat universal dan akan langsung berfungsi tanpa perubahan kode on-chain atau langkah tambahan.\n\n**Satu transaksi, tidak peduli chainnya** - pengguna dapat berinteraksi dengan app apa pun di Push Chain dengan satu transaksi. Tidak peduli bagaimana mereka memilih untuk berinteraksi dengan app, mereka hanya perlu menandatangani satu transaksi.\n\n**Universal Fee Abstraction** - Memungkinkan pengguna untuk berinteraksi secara native sambil berada di chain pilihan mereka dan menggunakan token apa pun yang mereka inginkan.\n\n**Wallet Abstraction** - Mendukung MetaMask, Phantom, dan dompet lain serta login sosial atau email melalui satu provider terpadu. Pengguna tidak perlu membuat dompet baru untuk mengakses app apa pun.\n\n**Native App Experiences** - Pengguna selalu merasa bahwa mereka menggunakan app secara native di chain mereka. \n\nIni menghasilkan **aplikasi yang sepenuhnya interoperable** untuk web3. Dalam paradigma ini, alih-alih menjadi pengguna \"Uniswap di Ethereum,\" \"Uniswap di Polygon,\" atau \"Uniswap di Arbitrum,\" seseorang cukup menjadi **pengguna Uniswap.**",
+                  "curated-reads": "## Bacaan Terkurasi 👇"
                 }
               },
               "why-push-chain-future": {
-                "title": "Pelajari mengapa Push Chain adalah masa depan web3",
+                "title": "Pelajari mengapa Push Chain adalah masa depan dari Web3",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Aplikasi Masa Depan — Membangun tanpa kekacauan",
+                    "subtitle": "Aplikasi masa depan tidak akan menjadi milik satu rantai. Mereka akan dibagikan oleh pengguna dari semua rantai."
+                  },
                   "learn-why-push-chain": {
                     "title": "Mengapa Push Chain adalah Lapisan yang Hilang dalam Web3",
-                    "subtitle": "Push Chain dirancang sebagai shared state L1 yang memungkinkan aplikasi universal yang skalabel dan siap pakai untuk konsumen."
+                    "subtitle": "Push Chain dirancang sebagai L1 shared state yang memungkinkan aplikasi universal yang skalabel dan siap konsumen."
                   },
                   "innovations-by-push-chain": {
                     "title": "Inovasi oleh Push Chain",
-                    "subtitle": "Temukan sepuluh inovasi utama yang menyatukan setiap rantai, setiap pengguna, dan setiap app."
+                    "subtitle": "Temukan sepuluh inovasi utama yang menyatukan setiap rantai blok, setiap pengguna, dan setiap aplikasi."
                   },
                   "another-l1": {
                     "title": "Apakah Push Chain L1 Lainnya?",
-                    "subtitle": "Push Chain bukan tentang menciptakan ekosistem yang terisolasi lagi — ini tentang menyelesaikan interoperabilitas untuk semua orang."
+                    "subtitle": "Push Chain bukan tentang menciptakan ekosistem terisolasi lainnya — ini tentang menyelesaikan interoperabilitas untuk semua orang."
                   },
                   "evolution-of-push": {
                     "title": "Evolusi Push",
-                    "subtitle": "Dari Push Protocol ke Push Chain — perjalanan membangun sebuah L1 universal, shared-state untuk aplikasi Web3 yang skalabel."
+                    "subtitle": "Dari Push Protocol ke Push Chain — perjalanan membangun L1 universal, shared-state untuk aplikasi Web3 yang skalabel."
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
                     "title": "Aplikasi Konsumen 🫶🏽 di Push Chain",
-                    "subtitle": "Push Chain membuka pintu bagi gelombang berikutnya aplikasi konsumen yang dapat berjalan secara universal di berbagai rantai."
+                    "subtitle": "Push Chain membuka pintu untuk gelombang berikutnya aplikasi konsumen yang dapat berjalan secara universal di berbagai chains."
                   },
                   "faq-push-chain": {
                     "title": "Pertanyaan Umum tentang Push Chain",
@@ -523,12 +621,12 @@
       },
       "builders": {
         "seo": {
-          "title": "Builders — Panduan & Tutorial",
+          "title": "Pembuat — Cara & Tutorial",
           "description": "Panduan langkah demi langkah, pola, dan contoh untuk menggunakan fitur Push Chain.",
           "og-title": "Builders - Panduan & Tutorial",
-          "og-description": "Tutorial terpandu, praktik terbaik, dan contoh untuk membangun dengan Push Chain.",
-          "twitter-title": "Builders - Panduan & Tutorial",
-          "twitter-description": "Panduan langkah demi langkah untuk memulai di Push Chain."
+          "og-description": "Tutorial langkah demi langkah, praktik terbaik, dan contoh untuk membangun dengan Push Chain.",
+          "twitter-title": "Pembuat - Cara & Tutorial",
+          "twitter-description": "Panduan langkah demi langkah untuk meluncurkan proyek di Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -539,21 +637,24 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nPsiap untuk membangun di Push Chain? Berikut adalah beberapa sumber daya untuk menginspirasi dan memulai Anda.",
+                  "intro": "## Builders\n\nPunya ide untuk membangun di Push Chain? Berikut adalah beberapa sumber daya untuk memberikan inspirasi dan memulai.",
                   "curated-reads": "## Bacaan Kurasi 👇"
                 }
               },
               "universal-apps": {
-                "title": "Mari Kita Bangun Aplikasi Universal 💪",
+                "title": "Ayo Bangun Aplikasi Universal 💪",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Aplikasi Masa Depan — Membangun tanpa kekacauan"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Aplikasi Konsumen 🫶 Blockchain?"
+                  },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "Aplikasi yang Hanya Mungkin dengan Shared State - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Aplikasi yang Hanya Mungkin dengan Shared State - Vol.2"
-                  },
-                  "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Aplikasi Konsumen 🫶 blockchain?"
+                    "title": "Aplikasi Hanya Mungkin dengan Shared State - Vol.2"
                   }
                 }
               },
@@ -564,10 +665,10 @@
                     "title": "Jelajahi Dokumentasi Pengembang"
                   },
                   "faucet": {
-                    "title": "Dapatkan टोकन Testnet"
+                    "title": "Dapatkan Token Testnet"
                   },
                   "testnet-explorer": {
-                    "title": "Donut Testnet Explorer"
+                    "title": "Push Testnet Explorer"
                   }
                 }
               }
@@ -593,7 +694,7 @@
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Arsitektur Mendalam\n\nPelajari tentang seluk-beluk arsitektur Push Chain dan cara kerjanya - Satu modul setiap saat.",
+                  "intro": "## Arsitektur Mendalam\n\nPelajari tentang seluk-beluk arsitektur Push Chain dan cara kerjanya - Satu modul setiap kalinya.",
                   "curated-reads": "## Bacaan Kurasi 👇"
                 }
               },
@@ -614,12 +715,12 @@
       },
       "tokenomics": {
         "seo": {
-          "title": "Tokenomics — $PC Nilai Akrual & Ekonomi",
-          "description": "Bagaimana $PC menangkap nilai: permintaan yang didorong oleh penyelesaian, sumber (membakar/mengunci) berdasarkan penggunaan, ekonomi staking, dan jadwal pasokan.",
-          "og-title": "Tokenomics - $PC Akumulasi Nilai & Ekonomi",
-          "og-description": "Penyelesaian dalam $PC mendorong permintaan; mekanisme pembakaran berbasis penggunaan mengurangi suplai. Termasuk ekonomi staking dan emisi.",
-          "twitter-title": "Push Chain tokenomics | Token Ekonomi",
-          "twitter-description": "Penyelesaian dalam $PC, penggunaan sink yang didorong, ekonomi staking, dan emisi—gambaran ringkas investor."
+          "title": "Tokenomics — $PC Value Accrual & Economics",
+          "description": "Bagaimana $PC menangkap nilai: permintaan yang didorong oleh penyelesaian, sink berbasis penggunaan (membakar/mengunci), ekonomi staking, dan jadwal pasokan.",
+          "og-title": "Tokenomics - $PC Nilai Akrual & Ekonomi",
+          "og-description": "Penyelesaian dalam $PC mendorong permintaan; sink berbasis penggunaan mengurangi pasokan. Termasuk ekonomi staking dan emisi.",
+          "twitter-title": "Tokenomics Push Chain | Token Ekonomi",
+          "twitter-description": "Penyelesaian dalam $PC, mekanisme sink berbasis penggunaan, ekonomi staking, dan emisi—gambaran ringkas untuk investor."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -630,16 +731,17 @@
             "sections": {
               "tokenomics-overview": {
                 "items": {
-                  "overview": "## Gambaran Umum\n\nPada akhir tahun 2024, komunitas Push memilih untuk menyetujui peluncuran Push Chain, sebuah layer 1 shared state yang dirancang untuk memungkinkan pengembangan aplikasi universal dan menghilangkan fragmentasi di seluruh web3.\n\nPush Chain adalah layer yang dibuat khusus yang menghubungkan L1, L2, dan L3 dengan finalitas yang hampir instan dan skalabilitas sejati, yang menyelesaikan masalah mendasar dengan aplikasi web3: fragmentasi. Dengan pemungutan suara proposal tata kelola yang berhasil, misi Push Chain sekarang sedang menuju pembangunan **rantai apa pun, pengguna apa pun, dan aplikasi apa pun.**\n\n:::warning ⚠️ token belum aktif\nThe Push Chain token belum aktif, dan tidak ada pra-penjualan yang aktif. The Push Chain token belum dinamai.<p />\n\n\nJangan percaya siapa pun yang menawarkan akses awal ke token Push Chain. Semua komunikasi mengenai Push Chain akan diumumkan secara bersamaan dari saluran resmi Push — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
-                  "vision": "## Apa Visi dari Push Chain?\n\nSemua blockchain telah terbukti sangat berguna untuk aplikasi dan kasus penggunaan tertentu. Bitcoin memungkinkan uang pintar. Ethereum memungkinkan inovasi untuk DeFi. Solana memungkinkan aplikasi cepat dan budaya meme. Beberapa L2 dan L1 baru menargetkan area masalah lainnya.\n\nNamun, blockchain yang dibangun khusus untuk memungkinkan abstraksi rantai dan interoperabilitas yang mulus di ruang ini masih diperlukan. Rantai ini akan memungkinkan transaksi dari rantai mana pun (ETH, SOL, EVM atau non-EVM) untuk mendukung aplikasi yang dapat digunakan oleh **pengguna mana pun —** tidak peduli rantai atau wallet mereka. Inilah rantai **Universal Apps**. Inilah Push Chain!",
-                  "innovation": "### Dibangun di atas inovasi untuk menghilangkan isolasi blockchain!\n\nPush Chain adalah revolusioner bagi pengguna dan pengembang karena menciptakan lingkungan bagi pengembang mana pun untuk menerapkan universal app mereka dalam hitungan jam melalui satu deployment universal smart contract.\n\nIni juga memungkinkan pengguna untuk bertransaksi dari kenyamanan, kemudahan, dan pilihan ekosistem mereka, di mana pun app tersebut berada.\n\nDi balik layar, ini dicapai dengan:\n\n- Kemampuan untuk melakukan **transaksi dari rantai mana pun**\n- **Universal Fee & Wallet Abstraction** untuk memungkinkan pengguna menggunakan rantai mana pun, dompet mana pun dan membayar dalam token mana pun\n- **Universal Smart Contract** untuk memungkinkan pengembang menerapkan app interop instan dalam hitungan menit\n- **Shared State** untuk membaca data dari blockchain lain\n- **Programmable Solver** untuk menulis data ke rantai lain\n\nSemua ini memungkinkan **Universal Execution Layer** untuk memungkinkan pengguna dari rantai mana pun untuk mengakses dan berinteraksi dengan app yang sama.",
-                  "fit": "### Di mana Push Chain masuk?\n\nPush chain cocok untuk **setiap proyek… di setiap rantai!**\n\n- **Memungkinkan pengembang** dari rantai mana pun untuk membuat aplikasi interop penuh yang mulus yang dapat digunakan dari rantai mana pun, melalui dompet mana pun.<br />\n- **Memungkinkan pengguna** kebebasan untuk berinteraksi dengan dompet pilihan mereka atau memiliki pengalaman tanpa tanda tangan yang mulus melalui Push Universal Wallet dengan login sosial.<br />\n- **Memungkinkan pengalaman aplikasi bersama** di mana pengguna dari semua rantai dapat berkumpul dan berinteraksi dengan DeFi universal, game terpadu, NFT universal, Tata Kelola universal, dll.<br />",
-                  "token-utility": "### Apa kegunaan dari token Push Chain?\n\n1. **Staking & Validasi** <br />\nToken digunakan untuk staking guna mengamankan jaringan dan berpartisipasi dalam konsensus. Validator dan delegator mendapatkan imbalan atas partisipasi mereka.\n\n2. **Biaya Transaksi** <br />\nToken berfungsi sebagai metode utama untuk biaya jaringan untuk transaksi dan penggunaan aplikasi.\n\n3. **Universal Fee Abstraction** <br />\nToken memungkinkan pengguna untuk membayar biaya dalam token apa pun (ETH, SOL, USDC, dll.) sementara protokol menangani konversi di balik layar.\n\n4. **Governance** <br />\nPemegang token dapat berpartisipasi dalam tata kelola protokol, memberikan suara pada peningkatan, perubahan parameter, dan keputusan ekosistem.",
-                  "deflationary-design": "### Desain Deflasi\n\n1. **Pembakaran Biaya Transaksi** <br />\nSebagian dari biaya transaksi yang terkumpul dalam token asli Push Chain dibakar, mengurangi total pasokan dari waktu ke waktu.\n\n2. **Pembakaran Lintas Rantai** <br />\nDengan Abstraksi Biaya Universal, sebagian dari biaya yang terkumpul pada token asli blockchain lain (ETH, SOL) ditukar dengan token asli Push Chain dan dibakar.\n\nIni memastikan desain blockchain deflasi yang membakar token seiring pertumbuhan jaringan dan transaksi yang terjadi di dalamnya. Desain ini memungkinkan penciptaan masa depan jangka panjang yang terinsentif dan berkelanjutan untuk Push Chain dan semua pesertanya.",
-                  "migration-details": "### Rincian Migrasi\n\nPush Chain adalah hasil dari bertahun-tahun pembelajaran dari membangun protokol notifikasi dan komunikasi terkemuka di web3, yang merupakan salah satu aplikasi konsumen pertama untuk kripto.\n\nKarena ini, selain airdrop yang dialokasikan (lihat detail di bawah) kepada pengguna Push Chain, kreator, pengembang dan mitra ekosistem, **ada juga drop migrasi yang diperuntukkan bagi pemegang $PUSH** (yang merupakan token asli dari Push Protocol).\n\n<details>\n  <summary>\n  <b>Rincian migrasi untuk pemegang token $PUSH yang ada</b>\n\n  </summary>\n\n  **Untuk pemegang token $PUSH yang ada**, proposal tokenomics Push Chain mengalokasikan 15% dari total pasokan token Push Chain khusus untuk migrasi. Migrasi akan terjadi dengan rasio **1:15**—artinya untuk setiap token Push Protocol ($PUSH) yang Anda pegang, Anda akan menerima 15 token Push Chain. Misalnya, jika Anda saat ini memegang 40 token $PUSH, Anda akan menerima 600 token Push Chain setelah migrasi.\n\n  Peluncuran Push Chain dirancang untuk memberi penghargaan dan mendorong pemegang token Push Protocol ($PUSH) sebelumnya atas kesetiaan dan kontribusi mereka. Proses migrasi untuk pemegang token $PUSH yang ada akan berfungsi sebagai berikut:\n\n  - Token akan bermigrasi dengan rasio 1:15 (1 token Push Protocol = 15 token Push Chain).\n  - Peserta dalam migrasi Push Chain akan melihat 50% dari token mereka yang dimigrasi dibuka kuncinya secara instan, dan tambahan 50% dibuka kuncinya setelah 3 bulan.\n  - Migrator token juga akan mendapatkan manfaat dari kumpulan yield farming khusus yang diperuntukkan bagi mereka. Hadiah ini akan didistribusikan kepada migrator token jika mereka melakukan staking token Push Chain mereka yang dimigrasi, untuk memberi penghargaan kepada mereka atas kontribusi jangka panjang terhadap ekosistem.\n  - Misalnya, jika Anda memiliki 100 token Push Protocol $PUSH, Anda akan menerima 750 token Push Chain saat Anda bermigrasi dan 750 token Push Chain setelah 3 bulan — untuk total 1.500 token Push Chain. Anda dapat memilih untuk melakukan staking token ini untuk mendapatkan hadiah tambahan dari kumpulan yield farming Push Chain, didistribusikan secara berkala.\n\n  Migrasi token Push Chain akan terbuka selama 12 bulan setelah peluncuran, setelah itu token yang tersisa akan diberikan kepada komunitas dan cadangan ekosistem.\n\n</details>\n<p />",
-                  "airdrop-details": "### Detail Airdrop\n\nSelain itu, proposal tokenomics mengalokasikan 10% dari total suplai token Push Chain untuk airdrop kepada pengguna aplikasi Push Protocol sebelumnya dan saat ini (notifikasi, pesan, obrolan). Bersama dengan pengguna baru, kreator, developer, dan mitra ekosistem Push Chain.\n\n<br />",
-                  "token-distribution": "## Rincian Distribusi <token>\n\nTotal suplai <token> <PC> diusulkan sebesar **10 miliar**, didistribusikan sebagai berikut:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Distribusi Airdrop dimulai pada TGE, tetapi akan terjadi selama beberapa musim.\n2. Kontributor Inti memiliki penundaan 12 bulan, diikuti dengan vesting 24 bulan.\n3. Treasury Push Labs memiliki vesting 36 bulan.\n4. Investor memiliki vesting linier 24 bulan.\n5. Cadangan Komunitas dan Ekosistem memiliki unlock 13.5% pada TGE, diikuti dengan vesting 36 bulan.\n\n<br />",
-                  "get-involved": "## Ikut Terlibat\n\n- **🧙 Para Pengembang**\nJelajahi SDK & Docs kami di [Pusat Dokumentasi](/docs/)\n\n- **🦹 Komunitas**  \nIkuti [@PushChain](https://x.com/PushChain) di X/Twitter, bergabunglah dengan [Discord](https://discord.com/invite/pushchain) dan [Telegram](https://t.me/epnsproject).\n\nBersama-sama, mari kita bangun masa depan **Universal Web3**!"
+                  "overview": "## Ikhtisar\n\nPada akhir tahun 2024, komunitas Push memberikan suara untuk menyetujui peluncuran Push Chain, sebuah layer 1 blockchain shared state yang dirancang untuk memungkinkan pengembangan aplikasi universal dan menghilangkan fragmentasi di seluruh web3.\n\nPush Chain adalah layer yang dibuat khusus yang menghubungkan L1, L2, dan L3 dengan finality yang hampir instan dan skalabilitas sejati, yang menyelesaikan masalah mendasar dengan aplikasi web3: fragmentasi. Dengan voting yang berhasil dari proposal tata kelola, misi Push Chain sekarang menuju pembangunan **rantai apa pun, pengguna apa pun, dan aplikasi apa pun.**\n\n:::warning ⚠️ Token belum aktif\nThe Push Chain token belum aktif, dan tidak ada pra-penjualan yang aktif. The Push Chain token belum diberi nama.<p />\n\n\nJangan percayai siapa pun yang menawarkan akses awal ke The Push Chain token. Semua komunikasi mengenai Push Chain akan diumumkan secara bersamaan dari saluran resmi Push — [Twitter / X](https://x.com/PushChain 'X handle of Push Chain'), [Discord](https://discord.com/invite/pushchain 'Discord of Push Chain'), [Telegram](https://t.me/epnsproject 'Telegram of Push Chain'), [Website](https://push.org 'Push Website').\n:::\n\n<br />",
+                  "vision": "## Apa Visi Push Chain?\n\nSemua blockchain telah terbukti sangat berguna untuk aplikasi dan kasus penggunaan tertentu. Bitcoin memungkinkan uang pintar. Ethereum memungkinkan inovasi untuk DeFi. Solana memungkinkan aplikasi cepat dan budaya meme. Beberapa L2 dan L1 baru menargetkan area lain yang menjadi perhatian.\n\nNamun, sebuah blockchain yang dirancang khusus untuk mengaktifkan abstraksi rantai dan interoperabilitas tanpa batas di ruang ini masih diperlukan. Rantai ini akan memungkinkan transaksi dari rantai mana pun (ETH, SOL, EVM atau non-EVM) untuk mendukung aplikasi yang dapat digunakan oleh **pengguna mana pun —** tidak peduli rantai atau wallet mereka. Inilah rantai **Universal Apps**. Inilah Push Chain!",
+                  "innovation": "### Dibangun di atas inovasi untuk menghilangkan isolasi blockchain!\n\nPush Chain adalah revolusioner bagi pengguna dan pengembang karena menciptakan lingkungan bagi pengembang mana pun untuk menerapkan universal app mereka dalam hitungan jam melalui satu deployment universal smart contract.\n\nIni juga memungkinkan pengguna untuk bertransaksi dari kenyamanan, kemudahan, dan pilihan ekosistem mereka, di mana pun app tersebut berada.\n\nDi balik layar, ini dicapai dengan:\n\n- Kemampuan untuk melakukan **transaksi dari rantai mana pun**\n- **Universal Fee & Wallet Abstraction** untuk memungkinkan pengguna menggunakan rantai mana pun, dompet mana pun, dan membayar dengan token apa pun\n- **Universal Smart Contract** untuk memungkinkan pengembang menerapkan app interop instan dalam hitungan menit\n- **Shared State** untuk membaca data dari blockchain lain\n- **Programmable Solver** untuk menulis data ke rantai lain mana pun\n\nSemua ini memungkinkan **Universal Execution Layer** untuk memungkinkan pengguna dari rantai mana pun untuk mengakses dan berinteraksi dengan app yang sama.",
+                  "fit": "### Di mana Push Chain cocok?\n\nPush Chain cocok untuk **setiap proyek… di setiap rantai!**\n\n- **Ini memungkinkan pengembang** dari rantai mana pun untuk membuat aplikasi interop penuh yang mulus yang dapat digunakan dari rantai mana pun, melalui dompet mana pun.<br />\n- **Ini memungkinkan pengguna** kebebasan untuk berinteraksi dengan dompet pilihan mereka atau memiliki pengalaman tanpa tanda tangan yang mulus melalui Push Universal Wallet dengan login sosial.<br />\n- **Ini memungkinkan pengalaman aplikasi bersama** di mana pengguna dari semua rantai dapat berkumpul dan terlibat dengan DeFi universal, game terpadu, NFT universal, Tata Kelola universal, dll.<br />",
+                  "token-utility": "### Apa saja kegunaan token Push Chain?\n\n1. **Staking & Validasi** <br />\nToken digunakan untuk staking guna mengamankan jaringan dan berpartisipasi dalam konsensus. Validator dan delegator mendapatkan imbalan atas partisipasi mereka.\n\n2. **Biaya Transaksi** <br />\nToken berfungsi sebagai metode utama untuk biaya jaringan untuk transaksi dan penggunaan aplikasi.\n\n3. **Universal Fee Abstraction** <br />\nToken memungkinkan pengguna untuk membayar biaya dalam token apa pun (ETH, SOL, USDC, dll.) sementara protokol menangani konversi di belakang layar.\n\n4. **Governance** <br />\nPemegang token dapat berpartisipasi dalam tata kelola protokol, memberikan suara pada peningkatan, perubahan parameter, dan keputusan ekosistem.",
+                  "deflationary-design": "### Desain Deflasi\n\n1. **Pembakaran Biaya Transaksi** <br />\nSebagian dari biaya transaksi yang terkumpul dalam token asli Push Chain dibakar, mengurangi total pasokan dari waktu ke waktu.\n\n2. **Pembakaran Lintas Rantai** <br />\nDengan Abstraksi Biaya Universal, sebagian dari biaya yang terkumpul pada token asli blockchain lain (ETH, SOL) ditukar dengan token asli Push Chain dan dibakar.\n\nIni memastikan desain blockchain deflasi yang membakar token seiring dengan pertumbuhan jaringan dan transaksi yang terjadi di dalamnya. Desain ini memungkinkan terciptanya masa depan jangka panjang yang diinsentifkan dan berkelanjutan bagi Push Chain dan semua pesertanya.",
+                  "migration-details": "### Detail Migrasi\n\nPush Chain adalah hasil dari bertahun-tahun pembelajaran dari membangun protokol notifikasi dan komunikasi terkemuka di web3, yang merupakan salah satu aplikasi konsumen pertama untuk kripto.\n\nKarena ini, selain airdrop yang dialokasikan (lihat detail di bawah) kepada pengguna Push Chain, kreator, pengembang, dan mitra ekosistem, **juga ada drop migrasi yang diperuntukkan bagi pemegang $PUSH** (yang merupakan token asli dari Push Protocol).\n\n<details>\n  <summary>\n  <b>Detail migrasi untuk pemegang token $PUSH yang ada</b>\n\n  </summary>\n\n  **Untuk pemegang token $PUSH yang ada**, proposal tokenomics Push Chain mengalokasikan 15% dari total pasokan token Push Chain secara khusus untuk migrasi. Migrasi akan terjadi dengan rasio **1:15**—artinya untuk setiap token Push Protocol ($PUSH) yang Anda pegang, Anda akan menerima 15 token Push Chain. Misalnya, jika Anda saat ini memegang 40 token $PUSH, Anda akan menerima 600 token Push Chain setelah migrasi.\n\n  Peluncuran Push Chain dirancang untuk memberi penghargaan dan mendorong pemegang token Push Protocol ($PUSH) sebelumnya atas kesetiaan dan kontribusi mereka. Proses migrasi untuk pemegang token $PUSH yang ada akan berfungsi sebagai berikut:\n\n  - Token akan bermigrasi dengan rasio 1:15 (1 token Push Protocol = 15 token Push Chain).\n  - Peserta dalam migrasi Push Chain akan melihat 50% dari token mereka yang dimigrasi dibuka kuncinya secara instan, dan tambahan 50% dibuka kuncinya setelah 3 bulan.\n  - Migrator token juga akan mendapatkan manfaat dari pool yield farming khusus yang diperuntukkan bagi mereka. Hadiah ini akan didistribusikan kepada migrator token jika mereka melakukan staking token Push Chain mereka yang dimigrasi, untuk memberi penghargaan atas kontribusi jangka panjang kepada ekosistem.\n  - Misalnya, jika Anda memiliki 100 token Push Protocol $PUSH, Anda akan menerima 750 token Push Chain ketika Anda bermigrasi dan 750 token Push Chain setelah 3 bulan — untuk total 1,500 token Push Chain. Anda dapat memilih untuk melakukan staking token ini untuk mendapatkan hadiah tambahan dari pool yield farming Push Chain, didistribusikan secara berkala.\n\n  Migrasi token Push Chain akan terbuka selama 12 bulan setelah peluncuran, setelah itu sisa token akan diberikan kepada komunitas dan cadangan ekosistem.\n\n</details>\n<p />",
+                  "airdrop-details": "### Detail Airdrop\n\nSelain itu, proposal tokenomics mengalokasikan 10% dari total pasokan token Push Chain untuk airdrop kepada pengguna aplikasi Push Protocol sebelumnya dan saat ini (notifikasi, pesan, obrolan). Bersama dengan pengguna baru, kreator, pengembang, dan mitra ekosistem Push Chain.\n\n<br />",
+                  "token-distribution": "## Detail Distribusi Token\n\nTotal suplai token Push Chain diusulkan sebesar **10 miliar**, didistribusikan sebagai berikut:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Distribusi Airdrop dimulai pada TGE, tetapi akan terjadi selama beberapa musim.\n2. Kontributor Inti memiliki penundaan 12 bulan, diikuti dengan vesting 24 bulan.\n3. Treasury Push Labs memiliki vesting 36 bulan.\n4. Investor memiliki vesting linier 24 bulan.\n5. Cadangan Komunitas dan Ekosistem memiliki unlock 13,5% pada TGE, diikuti dengan vesting 36 bulan.\n\n<br />",
+                  "get-involved": "## Ayo Terlibat\n\n- **🧙 Pengembang**\nJelajahi SDK & Dokumentasi kami di [Pusat Dokumentasi](/docs/)\n\n- **🦹 Komunitas**  \nIkuti [@PushChain](https://x.com/PushChain) di X/Twitter, bergabung dengan [Discord](https://discord.com/invite/pushchain) dan [Telegram](https://t.me/epnsproject).\n\nBersama-sama, mari kita bangun masa depan **Universal Web3**!",
+                  "use-cases": "### Apa yang bisa dibangun di Push Chain?\n\nPush Chain memberi integrasi mudah dan mengintegrasikan semua L1s, L2s & L3s sehingga menjadi tanah persaingan inovasi dan integrasi. Anda dapat membangun penggunaan web3 yang ada seperti:\n\n![Penggunaan utama Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nAtau Anda dapat meningkatkan web3 dan menciptakan inovasi:\n\n![Penggunaan konsumen Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nAtau Anda dapat melihat contoh aplikasi populer dan mengambil inspirasi dari:\n\n![Contoh aplikasi populer di Push Chain](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)"
                 }
               }
             }
@@ -650,10 +752,10 @@
         "seo": {
           "title": "FAQ — Pertanyaan yang Sering Diajukan Terkurasi",
           "description": "Jawaban cepat tentang dompet, biaya, rantai yang didukung, dan memulai.",
-          "og-title": "FAQ Push Chain - Semua Pertanyaan",
+          "og-title": "Pertanyaan Umum Push Chain - Semua Pertanyaan",
           "og-description": "Temukan jawaban cepat dengan tautan ke panduan, testnet, dan dukungan.",
           "twitter-title": "FAQ - Mulai di sini",
-          "twitter-description": "Jawaban cepat untuk pertanyaan Push Chain."
+          "twitter-description": "Jawaban cepat untuk pertanyaan tentang Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -664,52 +766,52 @@
             "sections": {
               "faq-overview": {
                 "items": {
-                  "overview": "## Ikhtisar\n\nTempat untuk menemukan jawaban atas semua pertanyaan populer yang diajukan oleh komunitas tentang Push Chain. Dikumpulkan dari Push Fam 🫶 dan dikurasi oleh tim Push 💪.\n\n---",
-                  "what-is-push-chain": "### Apa itu Push Chain?\n\nPush Chain adalah blockchain Layer 1 dengan <shared-state> yang dibuat untuk menghilangkan fragmentasi di seluruh chain.\n\nDengan memungkinkan **transaksi mulus dari chain mana pun** (Ethereum, Solana, EVM atau non-EVM), Push Chain memungkinkan setiap pengguna berinteraksi dengan aplikasi web3 tanpa harus berganti-ganti dompet, <token>, atau mekanisme gas.\n\nSingkatnya, Push Chain menyatukan L1 🤝 L2 🤝 L3 di bawah satu layer yang kohesif.\n\n---",
-                  "how-does-push-chain-work": "### Bagaimana cara kerja Push Chain?\n\n![How Normal Apps Work](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![How Universal Apps Work](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain mengambil pendekatan unik untuk menyelesaikan masalah fragmentasi di seluruh rantai. Alih-alih mengandalkan protokol interoperabilitas, yang menambahkan kompleksitas bagi pengguna dan pengembang, Push Chain mengambil pendekatan baru dengan membangun blockchain universal sejati yang dapat digunakan secara native oleh pengguna mana pun dari rantai mana pun.\n\nUntuk mencapai ini, Push Chain memanfaatkan beberapa **precompiles** yang merupakan modul khusus yang dibuat untuk:\n\n1. **Mengenali** pengguna rantai lain - Standar alamat universal yang memperluas alamat pengguna agar menjadi agnostik blockchain (berdasarkan [standar CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)).\n\n2. **Memetakan** pengguna ke Push Chain - Akun Eksekutor Universal (UEA) digunakan untuk setiap pengguna rantai eksternal. Modul ini digunakan untuk men-deploy smart account yang kemudian menggunakan precompiles lain untuk memproses transaksi.\n\n3. **Mengeksekusi** transaksi universal - Ini dilakukan dengan menggunakan USV (Universal Signature Verification) dan UTXV (Universal Transaction Verifier) precompiles untuk memverifikasi dan mengeksekusi tanda tangan dan transaksi dari rantai lain.\n\n4. **Mengabstraksi** kompleksitas rantai tempat mereka berada - Ini dilakukan dengan memiliki kontrak gateway universal di setiap rantai yang mengunci dana gas dalam token asli rantai (atau token lain yang sesuai) dan kemudian menggunakan precompiles UTXV untuk mengaitkan gas ke UEA (Akun Eksekutor) dan USV untuk mengeksekusi transaksi.\n\nIni adalah pendekatan **yang sangat kuat** yang memungkinkan pengguna untuk berinteraksi dengan aplikasi apa pun di Push Chain tanpa khawatir tentang rantai tempat mereka berada atau dompet yang mereka gunakan karena semuanya diabstraksi, baik untuk pengguna maupun pengembang.\n\n---",
-                  "why-unique-for-users": "### Mengapa Push Chain unik bagi pengguna?\n\nPush Chain mengatasi kesenjangan spesifik dalam blockchain yang ada, seperti interoperabilitas, akses state lintas rantai, programmable solvers, dan abstraksi wallet yang menghasilkan **interoperabilitas full-stack sejati**. Meskipun blockchain yang ada kuat, mereka beroperasi dalam ekosistemnya sendiri dan agregator untuk menyatukan rantai-rantai ini dibutuhkan.\n\nFokus Push Chain adalah menjadi **shared state chain** untuk aplikasi universal (interoperable) yang bertindak sebagai layer penyatu di mana semua rantai dapat berkumpul dan menggunakan Push Chain sebagai hub universal atau melakukan penyelesaian di antara mereka.\n\nIa menawarkan paradigma baru web3 yang berfungsi dari **Any Chain.** Untuk **Any Wallet / Pengguna.** Dan cocok untuk **Any App.**\n\n---",
-                  "core-innovations": "### Apa yang Membuat Push Chain Inovatif?\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\nPush Chain adalah Layer 1 Proof-of-Stake yang dirancang untuk menghilangkan fragmentasi di setiap blockchain. Di balik layarnya, Push Chain menggabungkan beberapa inovasi utama:\n\n- **Chain Universal Sejati**  \n  Mendukung semua chain secara native dan memungkinkan pengguna berinteraksi dengan aplikasi yang sama. Tidak diperlukan relayer terpusat, bridge, atau trik lainnya.\n\n- **Abstraksi Fee & Wallet Universal**  \n  Memungkinkan pengguna berinteraksi dengan aplikasi dari chain mana pun tanpa khawatir tentang gas atau mekanisme wallet.\n\n- **Satu transaction untuk chain mana pun**  \n  Pengguna hanya perlu menandatangani satu transaction, tidak peduli chain mana yang mereka gunakan.\n\n- **Smart Contract Universal**  \n  Smart contract yang 100% kompatibel dengan EVM yang dapat di-deploy dengan **zero perubahan kode on-chain**. Setelah di-deploy, mereka langsung kompatibel dengan pengguna dari semua chain.\n\n- **EVM Universal**  \n  Push Chain cukup cerdas untuk secara native mengenali pengguna dari chain lain dan secara benar mengatribusikan dan memetakan transaction kepada mereka.\n\n- **Shared State dan Programmable Solvers**  \n  (Roadmap) Memungkinkan smart contract Push Chain membaca dan menulis state ke chain lain.\n\nBersama-sama, fitur-fitur ini memungkinkan Anda membangun **aplikasi web3 universal**. Alih-alih \"Uniswap di Ethereum\" atau \"Uniswap di Polygon,\" seorang pengguna menjadi **pengguna Uniswap** — titik.",
-                  "problems-solved": "### Masalah apa saja yang dipecahkan oleh Push Chain?\n\n- **Fragmentasi**  \nMenyatukan rantai EVM & non-EVM di bawah satu layer shared-state L1, sehingga pengguna tidak perlu berpindah jaringan atau dompet.\n\n- **Interoperabilitas**  \nDukungan bawaan untuk transaksi dari blockchain mana pun dan shared state on-chain.\n\n- **Finality**  \nFinality native instan dan tidak dapat dibalik dalam ~1-2 detik – tidak perlu menunggu atau reorg lagi.\n\n- **Onboarding & UX**  \nLogin sosial/email, dukungan gas-in-any-token & any-wallet untuk akses tanpa hambatan di seluruh rantai.\n\n- **Universal Apps**  \nBangun sekali, deploy di mana saja — aplikasi web3 mana pun berfungsi dengan mulus untuk pengguna mana pun di rantai mana pun.\n\n---",
-                  "what-apps-can-build": "### Aplikasi apa saja yang dapat dibangun di Push Chain?\n\n![Universal App Examples](/assets/website/chain/knowledge/faq/appusecases.webp)\n\nDengan shared-state dan arsitektur cross-chain Push Chain, kemungkinannya tidak terbatas. Berikut adalah beberapa contoh andalan:\n\n- **Universal DEX**  \nSatu UI swap untuk setiap liquidity pool–routing abstrak di seluruh chain dengan kecepatan dan UX seperti CEX.\n\n- **Universal DeFi**  \nBank global di browser Anda: pinjaman, peminjaman, agregator yield yang menjangkau ekosistem tanpa bridging manual.\n\n- **Universal AI Agents**  \nAgen otonom yang membayar dan dibayar dalam token apa pun di chain mana pun — sempurna untuk layanan berlangganan, bot data, dan banyak lagi.\n\n- **Universal DAOs**  \nTata kelola cross-chain di mana pemegang token memilih dan mengesahkan proposal tanpa memandang chain asal mereka.\n\n- **Universal Gaming**  \nTurnamen multipemain dan ekonomi dalam game yang menyatukan pemain dan aset dari Ethereum, Solana, Polygon, dan sekitarnya.\n\n- **Universal Marketplace**  \nBeli, jual, dan perdagangkan NFT dan token dari setiap chain di satu marketplace konsolidasi.\n\n- **Universal Name Service**  \nNama yang mudah dibaca manusia yang menyelesaikan ke wallet di berbagai blockchain.\n\nAplikasi dan inovasi yang dapat terjadi di Push Chain tidak terbatas! Berikut adalah beberapa [use case lainnya](/blog/consumer-apps-that-can-be-built-on-push-chain/) untuk memulai. Builder juga dapat memeriksa [Documentation Hub](/docs/) untuk memulai.\n\n---",
+                  "overview": "## Ikhtisar\n\nTempat untuk menemukan jawaban atas semua pertanyaan populer yang diajukan komunitas tentang Push Chain. Dikumpulkan dari Push Fam 🫶 dan dikurasi oleh tim Push 💪.\n\n---",
+                  "what-is-push-chain": "### Apa itu Push Chain?\n\nPush Chain adalah sebuah blockchain Layer 1 dengan *shared-state* yang dibangun untuk menghilangkan fragmentasi di seluruh chain.\n\nDengan mengaktifkan **transaksi yang mulus dari chain mana pun** (Ethereum, Solana, EVM atau non-EVM), Push Chain memungkinkan setiap pengguna berinteraksi dengan aplikasi Web3 tanpa harus berganti-ganti dompet, *token*, atau mekanisme *gas*.\n\nSingkatnya, Push Chain menyatukan L1 🤝 L2 🤝 L3 di bawah satu layer yang kohesif.\n\n---",
+                  "how-does-push-chain-work": "### Bagaimana cara kerja Push Chain?\n\n![How Normal Apps Work](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![How Universal Apps Work](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain mengambil pendekatan unik untuk menyelesaikan masalah fragmentasi di seluruh rantai. Alih-alih mengandalkan protokol interoperabilitas, yang menambah kompleksitas bagi pengguna dan pengembang, Push Chain mengambil pendekatan baru dengan membangun blockchain universal sejati yang dapat digunakan secara native oleh pengguna mana pun dari rantai mana pun.\n\nUntuk mencapai ini, Push Chain memanfaatkan beberapa **precompiles** yang merupakan modul khusus yang dibuat untuk:\n\n1. **Mengenali** pengguna rantai lain - Standar alamat universal yang memperluas alamat pengguna agar menjadi blockchain agnostic (berdasarkan [standar CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)).\n\n2. **Memetakan** pengguna ke Push Chain - Akun Eksekutor Universal (UEA) diterapkan untuk setiap pengguna rantai eksternal. Modul ini digunakan untuk menerapkan smart account yang kemudian menggunakan precompiles lain untuk memproses transaksi.\n\n3. **Menjalankan** transaksi universal - Ini dilakukan dengan menggunakan USV (Universal Signature Verification) dan UTXV (Universal Transaction Verifier) precompiles untuk memverifikasi dan menjalankan tanda tangan dan transaksi dari rantai lain.\n\n4. **Mengabstraksi** kompleksitas rantai tempat mereka berada - Ini dilakukan dengan memiliki kontrak gateway universal di setiap rantai yang mengunci dana gas dalam token native rantai (atau token compliant lainnya) dan kemudian menggunakan UTXV precompiles untuk mengatribusikan gas ke UEA (Akun Eksekutor) dan USV untuk menjalankan transaksi.\n\nIni adalah pendekatan **yang sangat kuat** yang memungkinkan pengguna berinteraksi dengan aplikasi apa pun di Push Chain tanpa khawatir tentang rantai tempat mereka berada atau dompet yang mereka gunakan karena semuanya diabstraksi, baik bagi pengguna maupun pengembang.\n\n---",
+                  "why-unique-for-users": "### Mengapa Push Chain unik bagi pengguna?\n\nPush Chain mengatasi kesenjangan spesifik dalam blockchain yang ada, seperti interoperabilitas, akses state lintas rantai, programmable solvers dan abstraksi wallet yang menghasilkan **interoperabilitas full-stack yang sebenarnya**. Meskipun blockchain yang ada kuat, mereka beroperasi dalam ekosistem sendiri dan aggregator untuk menyatukan rantai ini diperlukan.\n\nFokus Push Chain adalah menjadi rantai **shared state** untuk aplikasi universal (interoperabel) yang bertindak sebagai layer penyatu di mana semua rantai dapat berkumpul dan menggunakan Push Chain sebagai hub universal atau melakukan settlement di antara mereka.\n\nMenawarkan paradigma baru web3 yang berfungsi dari **Any Chain.** Untuk **Any Wallet / User.** Dan cocok untuk **Any App.**\n\n---",
+                  "core-innovations": "### Apa yang Membuat Push Chain Inovatif?\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\nPush Chain adalah Layer 1 Proof-of-Stake yang dirancang untuk menghilangkan fragmentasi di setiap blockchain. Di balik tampilannya, ia menggabungkan beberapa inovasi utama:\n\n- **Universal Smart Contracts**  \nKontrak pintar 100% kompatibel EVM yang dapat diterapkan dengan **zero on-chain code changes**. Setelah diterapkan, mereka akan langsung kompatibel dengan pengguna dari semua chain.\n\n- **True Universal Chain**  \nSecara native mendukung semua chain dan memungkinkan pengguna untuk berinteraksi dengan app yang sama. Tidak perlu relayer terpusat, bridge, atau trik lainnya.\n\n- **Universal Fee & Wallet Abstraction**  \nMemungkinkan pengguna untuk berinteraksi dengan app dari chain mana pun tanpa khawatir tentang gas atau mekanisme wallet.\n\n- **Satu transaksi untuk chain mana pun**  \nPengguna hanya perlu menandatangani satu transaksi, tidak peduli chain mana yang mereka gunakan.\n\n- **Universal EVM**  \nPush Chain cukup pintar untuk secara native mengenali pengguna dari chain lain dan mengatribusikan dan memetakan transaksi kepada mereka dengan benar. \n\nBersama-sama, fitur-fitur ini memungkinkan Anda untuk membangun **universal Web3 app**. Alih-alih \"Uniswap di Ethereum\" atau \"Uniswap di Polygon,\" seorang pengguna cukup menjadi **pengguna Uniswap** — titik.\n\n---",
+                  "problems-solved": "### Masalah apa yang diselesaikan Push Chain?\n\n- **Fragmentasi**  \nMenyatukan rantai EVM & non-EVM di bawah L1 shared-state tunggal, sehingga pengguna tidak perlu berpindah jaringan atau dompet.\n\n- **Interoperabilitas**  \n dukungan asli untuk transaksi dari blockchain mana pun dan shared state on-chain.\n\n- **Finality**  \n Finality asli instan dan tidak dapat diubah dalam ~1-2 detik – tidak perlu menunggu atau reorg lagi.\n\n- **Onboarding & UX**  \nLogin sosial/email, dukungan gas-in-any-token & any-wallet untuk akses tanpa hambatan di seluruh rantai.\n\n- **Universal Apps**  \nBangun sekali, sebarkan di mana saja — aplikasi web3 apa pun berfungsi dengan mulus untuk pengguna mana pun di rantai mana pun.\n\n---",
+                  "what-apps-can-build": "### Aplikasi apa saja yang bisa dibangun di Push Chain?\n\n![Universal App Examples](/assets/website/chain/knowledge/faq/appusecases.webp)\n\nDengan shared-state dan arsitektur cross-chain Push Chain, kemungkinannya tak terbatas. Berikut beberapa contoh unggulan:\n\n- **Universal DEX**  \n  Satu UI swap untuk setiap liquidity pool–routing yang diabstrakkan di seluruh chain dengan kecepatan dan UX seperti CEX.\n\n- **Universal DeFi**  \n  Bank global di browser Anda: pinjaman, peminjaman, agregator yield yang menjangkau ekosistem tanpa bridging manual.\n\n- **Universal AI Agents**  \n  Agen otonom yang membayar dan dibayar dalam token apa pun di chain mana pun — sempurna untuk layanan berlangganan, bot data, dan lainnya.\n\n- **Universal DAOs**  \n  Governance lintas-chain di mana pemegang token memilih dan menerapkan proposal tanpa memandang chain asalnya.\n\n- **Universal Gaming**  \n  Turnamen multipemain dan ekonomi dalam game yang menyatukan pemain dan aset dari Ethereum, Solana, Polygon, dan lainnya.\n\n- **Universal Marketplace**  \n  Beli, jual, dan perdagangkan NFT dan token dari setiap chain di satu marketplace konsolidasi.\n\n- **Universal Name Service**  \n  Nama yang mudah dibaca manusia yang menyelesaikan ke wallet di berbagai blockchain.\n\nAplikasi dan inovasi yang dapat terjadi di Push Chain tak terbatas! Berikut beberapa [use case lainnya](/blog/consumer-apps-that-can-be-built-on-push-chain/) untuk memulai. Builder juga dapat memeriksa [Documentation Hub](/docs/) untuk memulai.\n\n---",
                   "technical-section": "## Teknis",
-                  "why-not-an-l2": "### Mengapa L1 dan bukan L2?\n\nPush Chain dibangun untuk berfungsi sebagai **shared settlement layer** dan **universal execution layer** untuk semua blockchain lainnya—peran yang hanya dapat dipenuhi oleh L1 mandiri:\n\n- **Penyelesaian Lintas-Rantai Asli**\n  Sebagai L1, Push Chain dapat langsung memfinalisasi transaksi dari rantai mana pun tanpa bergantung pada model keamanan eksternal atau bukti kecurangan.\n\n- **Eksekusi & Akses State Universal**\n  Menjalankan konsensus dan mesin state sendiri memungkinkan Push Chain menafsirkan dan mengeksekusi transaksi dari Ethereum, Solana, dan lainnya—sesuatu yang tidak dapat dilakukan secara native oleh L2—yang terikat pada satu layer dasar.\n\n- **Tanpa Batasan atau Penundaan L2**\n  L2 mewarisi latensi, aturan finalitas, dan model gas dari rantai hostnya (ditambah overhead bridging). Push Chain menghindari hambatan ini dengan menawarkan finalitas instan dan abstraksi biaya universal di layer dasar.\n\n- **State Bersama Sejati**\n  Untuk membaca & menulis state dari banyak rantai dalam smart contract, Anda membutuhkan akses langsung di level protokol—hanya tersedia di layer L1.\n\nSingkatnya, hanya L1 yang dibangun khusus yang dapat menyatukan setiap rantai di bawah satu layer eksekusi dan penyelesaian yang kohesif—tanpa kompleksitas tambahan atau asumsi kepercayaan tambahan.\n\n---",
-                  "evm-compatibility": "### Apakah Push Chain Kompatibel dengan EVM?\n\nYa, Push Chain **kompatibel dengan EVM** dan bahkan lebih dari itu. Ini mendukung:\n\n- **Smart Contract EVM**: Deploy kontrak Solidity seperti di Ethereum\n- **Alat Ethereum**: Gunakan MetaMask, Hardhat, Remix, dan alat yang familiar lainnya\n- **Ekstensi universal**: Precompiles tambahan untuk fungsionalitas cross-chain\n- **Dukungan Multi-VM**: (Roadmap) Dukungan untuk VM lain seperti SVM (Solana), MoveVM, dll.\n\nIni berarti pengembang dapat:\n- Memindahkan dApp Ethereum yang ada dengan perubahan minimal\n- Menggunakan alur kerja dan alat pengembangan yang familiar\n- Mengakses kemampuan cross-chain yang ditingkatkan melalui fitur universal Push Chain\n\nDalam praktiknya, pengguna dan aplikasi dari rantai mana pun dapat berinteraksi dengan aplikasi Push Chain dengan lancar — tidak peduli VM yang mendasarinya.\n\n---",
-                  "evm-non-evm-compatible": "### Apakah Push Chain akan kompatibel dengan rantai EVM dan non-EVM?\n\nYa! Push Chain dibangun untuk menjembatani setiap paradigma blockchain.\n\n- **Kompatibilitas EVM**  \n  Langsung gunakan kontrak Solidity Anda dan mereka berjalan tanpa perubahan, memanfaatkan runtime EVM Push Chain.\n\n- **Dukungan Non-EVM**  \n  Precompile asli (USV/UTXV) dan standar alamat universal memungkinkan Push Chain memvalidasi dan menjalankan transaksi dari Solana, Bitcoin, rantai Cosmos SDK, dan banyak lagi.\n\nDalam praktiknya, pengguna dan aplikasi dari rantai mana pun dapat berinteraksi dengan aplikasi Push Chain secara lancar — apa pun VM yang mendasarinya.\n\n---",
-                  "why-not-ethereum-or-solana": "### Mengapa membuat blockchain baru ketika sudah ada blockchain yang sudah ada seperti Ethereum dan Solana?\n\nBlockchain yang sudah ada unggul di domain spesifiknya, tetapi menciptakan **fragmentasi**:\n\n- **Ethereum**: Bagus untuk DeFi tetapi mahal dan lambat\n- **Solana**: Cepat dan murah tetapi memiliki tooling dan ekosistem yang berbeda\n- **L2s**: Memecahkan masalah scaling tetapi menciptakan lebih banyak fragmentasi\n\nPush Chain tidak bersaing dengan blockchain ini — ia **mempersatukannya**:\n\n- Pengguna dapat berinteraksi dengan aplikasi Push Chain menggunakan wallet yang sudah ada (MetaMask, Phantom, dll.)\n- Bayar gas dalam token pilihan mereka (ETH, SOL, USDC)\n- Developer membangun sekali saja daripada men-deploy di banyak blockchain\n- Likuiditas dan pengguna dari semua blockchain dapat berinteraksi di aplikasi yang sama\n\nPush Chain adalah **bagian yang hilang** yang membuat semua blockchain yang sudah ada bekerja sama dengan mulus.\n\n---",
-                  "shared-state-meaning": "### Apa arti blockchain shared state?\n\nShared state mengacu pada status saat ini dari data onchain. Blockchain shared-state adalah blockchain yang memiliki akses baca dan tulis ke state-nya sendiri dan state dari semua blockchain lain yang berinteraksi dengannya.\n\nBlockchain shared-state mampu menangani data, likuiditas, dan pengguna dari blockchain mana pun.\n\n---",
-                  "how-achieve-shared-state": "### Bagaimana Push Chain mencapai shared state?\n\n![Push Chain Universal App](/assets/website/chain/knowledge/faq/pcuniversalapp.webp)\n\nA blockchain tradisional hanya mengetahui ledger dan standar wallet-nya sendiri. Push Chain memperluas model itu dalam empat cara utama:\n\n1. **Kompatibilitas Wallet Universal**  \n\t- Mendukung alamat chain agnostic dari chain mana pun (Ethereum, Solana, Bitcoin, Cosmos SDK, dll.)  \n\t- Tanda tangan dari chain mana pun diverifikasi melalui precompile USV/UTXV, sehingga pengguna tidak perlu mengganti wallet.\n\n2. **Smart Contract Universal**  \n\t- Kontrak EVM di-deploy tanpa perubahan tetapi dapat secara native memverifikasi dan mengeksekusi transaksi cross-chain.  \n\t- Runtime Push Chain menangani pemetaan tanda tangan dan parsing payload untuk setiap jaringan yang didukung.\n\n3. **Shared State On-Chain**  \n\t- Validator melakukan commit Merkle proof dari state chain eksternal (melalui root MPT) setiap blok.  \n\t- Relayer mengambil dan mengirimkan leaf proof sesuai permintaan, sehingga kontrak dapat membaca data chain mana pun secara real time.\n\n4. **Programmable Solvers**  \n\t- Jaringan solver mengeksekusi alur kerja cross-chain atomik (misalnya, swap di Chain A, mint di Chain B) di bawah satu transaksi.  \n\t- Developer menulis skrip solver sederhana; jaringan menangani routing dan eksekusi.\n\nBersama-sama, fitur-fitur ini mengubah Push Chain menjadi **shared-state L1** yang memungkinkan universal app menjadi native ke semua chain. Dunia di mana setiap pengguna dari chain mana pun dapat mengakses dan berinteraksi dengan app mana pun di chain lain.\n\n**Chain Mana Pun, App Mana Pun, Pengguna Mana Pun - Satu Push Chain**\n\n---",
-                  "consensus-mechanism": "### Mekanisme konsensus apa yang digunakan Push Chain?\n\nPush Chain menggunakan konsensus **Proof-of-Stake (PoS)**, dibangun di atas engine **CometBFT**, dengan beberapa peningkatan:\n\n- **Finalisasi Cepat**: Transaksi difinalisasi dalam ~1–2 detik, dengan finalisasi deterministik (tanpa reorg)\n- **Efisien Energi**: PoS ramah lingkungan dibandingkan dengan PoW\n- **Jaringan Validator**: Jaringan validator terdesentralisasi yang mengamankan rantai\n- **Perlindungan Slashing**: Insentif ekonomi memastikan kejujuran validator\n\nKonsensus BFT CometBFT yang teruji dengan baik dioptimalkan di sini untuk persyaratan unik pemrosesan transaksi universal dan manajemen state lintas rantai.\n\n---",
-                  "transaction-fees": "### Bagaimana cara kerja biaya transaksi di Push Chain?\n\nPush Chain merevolusi pembayaran biaya dengan **Universal Fee Abstraction**:\n\n- **Bayar dengan Token Apa Pun**: Pengguna dapat membayar gas dengan ETH, SOL, USDC, atau token yang didukung lainnya\n- **Pembayaran Biaya Lintas-Rantai**: Bayar biaya dari rantai asal Anda tanpa perlu bridging\n- **Transaksi Tanpa Biaya Gas**: Aplikasi dapat mensponsori transaksi pengguna untuk pengalaman pengguna yang lancar\n- **Pasar Biaya Dinamis**: Biaya menyesuaikan berdasarkan permintaan jaringan\n\nIni berarti pengguna tidak perlu mengakuisisi token asli Push Chain hanya untuk berinteraksi dengan aplikasi.\n\n---",
-                  "true-universal-chain": "### Apa yang dimaksud dengan True Universal Chain?\n\nSebuah **true universal chain** adalah blockchain yang memperlakukan setiap jaringan lain sebagai warga kelas satu—tanpa jembatan, tanpa relayer terpusat, dan tanpa peretasan kompatibilitas. Ia memberikan:\n\n1. **Identitas Multichain Asli**\n\tDompet dari Ethereum, Solana, atau rantai EVM atau non-EVM manapun semuanya menandatangani, memverifikasi, dan mengeksekusi secara asli di Push Chain. Jadi pengguna tidak pernah mengganti akun atau mengalami kerumitan dompet ganda.\n\n2. **Penyelesaian Terpadu**\n\tTransaksi dari jaringan manapun diselesaikan di Push Chain, memberikan satu sumber kebenaran tunggal kepada semua orang dan memungkinkan aplikasi yang sama dapat diakses oleh pengguna semua rantai.\n\n3. **Transaksi Tunggal dan Abstraksi Biaya Universal**\n\tPengguna hanya menandatangani satu transaksi, terlepas dari rantai sumber mereka dan membayar gas dalam token manapun. Tidak perlu lagi memelihara atau menukar banyak token untuk menggunakan aplikasi.\n\n4. **Deploy Sekali, Gunakan di Mana Saja**\n\tPengembang menulis dan men-deploy smart contract sekali (EVM atau lainnya) tanpa kode tambahan—satu deployment mencakup semua rantai.\n\nPush Chain adalah yang pertama membangun fitur-fitur ini langsung ke dalam konsensus dan runtime-nya, benar-benar menghilangkan fragmentasi—tanpa jalan pintas, tanpa lapisan tambahan, hanya satu universal chain untuk semua orang.\n\n---",
+                  "why-not-an-l2": "### Mengapa L1 dan bukan L2?\n\nPush Chain dibangun untuk berfungsi sebagai **lapisan penyelesaian bersama** dan **lapisan eksekusi universal** untuk semua blockchain lainnya—peran yang hanya dapat dipenuhi oleh L1 mandiri:\n\n- **Penyelesaian Lintas-Rantai Asli**  \n  Sebagai L1, Push Chain dapat secara langsung memfinalisasi transaksi dari rantai mana pun tanpa bergantung pada model keamanan eksternal atau bukti kecurangan.\n\n- **Eksekusi & Akses Status Universal**  \n  Dengan menjalankan konsensus dan mesin statusnya sendiri, Push Chain dapat menginterpretasikan dan mengeksekusi transaksi dari Ethereum, Solana, dan lainnya — sesuatu yang tidak dapat dilakukan secara asli oleh L2 — yang terikat pada satu lapisan dasar.\n\n- **Tanpa Batasan atau Penundaan L2**  \n  L2 mewarisi latensi, aturan finalitas, dan model gas dari rantai hostnya (ditambah overhead bridging). Push Chain menghindari hambatan ini dengan menawarkan finalitas instan dan abstraksi biaya universal di lapisan dasar.\n\n- **Status Bersama Sejati**  \n  Untuk membaca & menulis status beberapa rantai dalam smart contract, Anda memerlukan akses tingkat protokol langsung—hanya tersedia di lapisan L1.\n\nSingkatnya, hanya L1 yang dibangun khusus yang dapat menyatukan setiap rantai di bawah satu lapisan eksekusi dan penyelesaian yang kohesif — tanpa kompleksitas tambahan atau asumsi kepercayaan yang ditambahkan.\n\n---",
+                  "evm-compatibility": "### Apakah Push Chain Kompatibel dengan EVM?\n\nYa, Push Chain **kompatibel dengan EVM** dan bahkan lebih dari itu. Push Chain mendukung:\n\n- **Kontrak Pintar EVM**: Deploy kontrak Solidity seperti di Ethereum\n- **Alat Ethereum**: Gunakan MetaMask, Hardhat, Remix, dan alat lain yang familiar\n- **Ekstensi Universal**: Precompile tambahan untuk fungsionalitas lintas-rantai\n- **Dukungan Multi-VM**: (Roadmap) Dukungan untuk VM lain seperti SVM (Solana), MoveVM, dll.\n\nIni berarti pengembang dapat:\n- Memindahkan dApp Ethereum yang ada dengan perubahan minimal\n- Menggunakan alur kerja dan alat pengembangan yang familiar\n- Mengakses kemampuan lintas-rantai yang ditingkatkan melalui fitur universal Push Chain\n\nDalam praktiknya, pengguna dan aplikasi dari rantai mana pun dapat berinteraksi dengan aplikasi Push Chain secara lancar — tidak peduli VM yang mendasarinya.\n\n---",
+                  "evm-non-evm-compatible": "### Apakah Push Chain akan kompatibel dengan blockchain EVM dan non-EVM?\n\nYa! Push Chain dirancang untuk menjembatani setiap paradigma blockchain.\n\n- **Kompatibilitas EVM**  \n  Kontrak Solidity Anda dapat langsung digunakan dan berjalan tanpa perubahan, memanfaatkan runtime EVM Push Chain.\n\n- **Dukungan Non-EVM**  \n  Precompile asli (USV/UTXV) dan standar alamat universal memungkinkan Push Chain memvalidasi dan mengeksekusi transaksi dari Solana, Bitcoin, rantai Cosmos SDK, dan lainnya.\n\nDalam praktiknya, pengguna dan aplikasi dari rantai mana pun dapat berinteraksi dengan aplikasi Push Chain dengan lancar — tidak peduli VM yang mendasarinya.\n\n---",
+                  "why-not-ethereum-or-solana": "### Mengapa membuat blockchain baru ketika blockchain yang sudah ada seperti Ethereum dan Solana sudah ada?\n\nBlockchain yang sudah ada unggul di domain spesifik mereka tetapi menciptakan **fragmentasi**:\n\n- **Ethereum**: Hebat untuk DeFi tetapi mahal dan lambat\n- **Solana**: Cepat dan murah tetapi memiliki tooling dan ekosistem yang berbeda\n- **L2s**: Menyelesaikan scaling tetapi menciptakan lebih banyak fragmentasi\n\nPush Chain tidak bersaing dengan blockchain ini — blockchain ini **menyatukannya**:\n\n- Pengguna dapat berinteraksi dengan aplikasi Push Chain menggunakan wallet yang sudah ada (MetaMask, Phantom, dll.)\n- Bayar gas dalam token yang mereka sukai (ETH, SOL, USDC)\n- Pengembang membangun sekali saja daripada menerapkan di banyak blockchain\n- Likuiditas dan pengguna dari semua blockchain dapat berinteraksi dalam aplikasi yang sama\n\nPush Chain adalah **bagian yang hilang** yang membuat semua blockchain yang sudah ada bekerja sama dengan lancar.\n\n---",
+                  "shared-state-meaning": "### Apa yang dimaksud dengan blockchain shared state?\n\nShared state mengacu pada status saat ini dari data onchain. Blockchain shared-state adalah blockchain yang memiliki akses baca dan tulis ke statusnya sendiri dan status semua rantai lain yang berinteraksi dengannya.\n\nRantai shared state mampu menangani data, likuiditas, dan pengguna dari rantai lain mana pun.\n\n---",
+                  "how-achieve-shared-state": "### Bagaimana Push Chain mencapai shared state?\n\n![Push Chain Universal App](/assets/website/chain/knowledge/faq/pcuniversalapp.webp)\n\nA blockchain tradisional hanya mengetahui ledger dan standar wallet-nya sendiri. Push Chain memperluas model tersebut dalam empat cara utama:\n\n1. **Kompatibilitas Wallet Universal**  \n\t- Mendukung alamat chain agnostic dari chain mana pun (Ethereum, Solana, Bitcoin, Cosmos SDK, dll.)  \n\t- Tanda tangan dari chain mana pun diverifikasi melalui precompiles USV/UTXV, sehingga pengguna tidak perlu mengganti wallet.\n\n2. **Smart Contract Universal**  \n\t- Kontrak EVM di-deploy tanpa perubahan tetapi dapat secara native memverifikasi dan mengeksekusi transaksi cross-chain.  \n\t- Runtime Push Chain menangani pemetaan tanda tangan dan parsing payload untuk setiap jaringan yang didukung.\n\n3. **Shared State On-Chain**  \n\t- Validator melakukan commit bukti Merkle dari status chain eksternal (melalui akar MPT) setiap blok.  \n\t- Relayer mengambil dan mengirimkan bukti daun sesuai permintaan, sehingga kontrak dapat membaca data chain mana pun secara real time.\n\n4. **Programmable Solvers**  \n\t- Jaringan solver mengeksekusi alur kerja cross-chain atomik (misalnya, swap di Chain A, mint di Chain B) di bawah satu transaksi.  \n\t- Developer menulis skrip solver sederhana; jaringan menangani routing dan eksekusi.\n\nBersama-sama, fitur-fitur ini mengubah Push Chain menjadi **shared-state L1** yang memungkinkan aplikasi universal menjadi native untuk semua chain. Dunia di mana setiap pengguna chain mana pun dapat mengakses dan berinteraksi dengan aplikasi mana pun di chain lain.\n\n**Chain Mana Pun, Aplikasi Mana Pun, Pengguna Mana Pun - Satu Push Chain**\n\n---",
+                  "consensus-mechanism": "### Mekanisme konsensus apa yang digunakan Push Chain?\n\nPush Chain menggunakan konsensus **Proof-of-Stake (PoS)**, dibangun di atas mesin **CometBFT**, dengan beberapa peningkatan:\n\n- **Finalitas Cepat**: Transaksi difinalisasi dalam ~1–2 detik, dengan finalitas deterministik (tidak ada reorg)\n- **Efisien Energi**: PoS berkelanjutan secara lingkungan dibandingkan dengan PoW\n- **Jaringan Validator**: Jaringan validator terdesentralisasi yang mengamankan rantai\n- **Perlindungan Slashing**: Insentif ekonomi memastikan kejujuran validator\n\nKonsensus BFT yang telah teruji dari CometBFT dioptimalkan di sini untuk persyaratan unik pemrosesan transaksi universal dan manajemen status lintas rantai.\n\n---",
+                  "transaction-fees": "### Bagaimana cara kerja biaya transaksi di Push Chain?\n\nPush Chain merevolusi pembayaran biaya dengan **Universal Fee Abstraction**:\n\n- **Bayar dengan Token Apa Pun**: Pengguna dapat membayar gas dalam ETH, SOL, USDC, atau token yang didukung lainnya\n- **Pembayaran Biaya Lintas-Rantai**: Bayar biaya dari rantai asal Anda tanpa bridging\n- **Transaksi Tanpa Biaya Gas**: Aplikasi dapat mensponsori transaksi pengguna untuk pengalaman pengguna yang mulus\n- **Pasar Biaya Dinamis**: Biaya menyesuaikan berdasarkan permintaan jaringan\n\nIni berarti pengguna tidak pernah perlu memperoleh token Push Chain asli hanya untuk berinteraksi dengan aplikasi.\n\n---",
+                  "true-universal-chain": "### Apa yang dimaksud dengan True Universal Chain?\n\n**True universal chain** adalah sebuah blokchain yang memperlakukan setiap jaringan lain sebagai warga kelas satu—tanpa *bridge*, tanpa perelai terpusat, dan tanpa *hack* kompatibilitas. Fitur ini menghadirkan:\n\n1. **Identitas Multichain Asli**  \n\tDompet dari Ethereum, Solana, atau EVM atau non-EVM chain mana pun semuanya menandatangani, memverifikasi, dan mengeksekusi secara asli di Push Chain. Jadi pengguna tidak perlu mengganti akun atau kesulitan dengan kompleksitas banyak dompet.\n\n2. **Penyelesaian Terpadu**  \n\tTransaksi dari jaringan mana pun diselesaikan di Push Chain, memberikan satu sumber kebenaran tunggal kepada semua orang dan memungkinkan aplikasi yang sama dapat diakses oleh pengguna dari semua chain.\n\n3. **Satu Transaksi dan Abstraksi Biaya Universal**  \n\tPengguna hanya menandatangani satu transaksi, terlepas dari chain sumber mereka dan membayar gas dalam token apa pun. Tidak perlu lagi memelihara atau menukar banyak token untuk menggunakan aplikasi.\n\n4. **Deploy Sekali, Gunakan di Mana Saja**  \n\tPengembang menulis dan *deploy smart contract* sekali (EVM atau lainnya) tanpa kode tambahan—satu *deployment* mencakup semua chain.\n\nPush Chain adalah yang pertama memasukkan fitur-fitur ini secara langsung ke dalam konsensus dan *runtime*-nya, benar-benar menghilangkan fragmentasi—tanpa solusi alternatif, tanpa lapisan tambahan, hanya satu chain universal untuk semua orang.\n\n---",
                   "competitors-section": "## Pesaing",
-                  "vs-other-universal": "### Apa yang membuat Push Chain berbeda dari Solusi Universal lainnya?\n\nSolusi \"universal\" yang ada saat ini masih bergantung pada bridge, memerlukan transaksi ganda atau relayer terpusat untuk memindahkan data dan nilai. Push Chain berbeda—ini adalah L1 universal **sejati** pertama yang:\n\n- **Menyatukan pengguna di berbagai chain**  \n\tSetiap alamat blockchain didukung secara native. Dompet seperti MetaMask, Phantom, dll kompatibel dengan Push Chain. Gas dibayarkan dalam token apa pun di chain mana pun.\n\n- **Berfungsi sebagai universal execution layer**  \n\tSemua transaksi diselesaikan di chain yang sama, memastikan semua orang berinteraksi dengan app yang sama—tanpa peretasan, tanpa solusi alternatif.\n\n- **Mengaitkan & mengeksekusi transaksi dari chain mana pun dengan benar**  \n\tTransaksi ditandatangani, diverifikasi, dan dikaitkan dengan dompet di chain asalnya. Chain universal sejati mendukung semuanya.\n\n---",
-                  "vs-bridges-messaging": "### Bagaimana ini berbeda dari jembatan atau lapisan pesan?\n\n**Jawaban Singkat**: Push adalah tempat aplikasi Anda berjalan. Jembatan/pesan hanya memindahkan <token> atau pesan antar rantai yang mempersulit segalanya bagi pengguna dan pengembang.\n\n- **Satu rumah vs banyak klon**  \n\tDengan jembatan/pesan, Anda melakukan *deploy* per rantai dan melakukan sinkronisasi melalui pesan. Di Push, Anda melakukan *deploy* sekali; semua orang mengakses kontrak dan *shared state* yang sama.\n\n- **Tidak ada aset terbungkus atau jembatan wajib**  \n\tPengguna tetap di rantai utama mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani perutean dan konversi biaya di balik layar.\n\n- **Identitas & verifikasi terpadu**  \n\tKami menerima tanda tangan dari dompet/rantai mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-kustodial.\n\n- **Lebih sedikit bagian yang bergerak**  \n\tTidak ada tarian persetujuan lintas-rantai, tidak ada perburuan <token> <gas fees>, tidak ada kontrak lem untuk tetap sinkron.\n\n- **Gunakan jembatan saat Anda mau, bukan karena Anda harus**  \n\tLikuiditas masih dapat bergerak melalui jembatan, tetapi berinteraksi dengan aplikasi Anda tidak mengharuskannya.\n\n**Hasil**: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu rantai — bahkan ketika pengguna tidak.\n\n---",
-                  "vs-layerzero": "### Bagaimana cara kerja Push Chain berbeda dengan LayerZero?\n\n**LayerZero:**\n- **Protokol Pesan**: Mengaktifkan pengiriman pesan lintas-rantai\n- **Ketergantungan Relayer**: Bergantung pada relayer dan oracle eksternal\n- **Integrasi Pengembang**: Aplikasi harus mengintegrasikan SDK LayerZero\n- **Asumsi Kepercayaan**: Pengguna harus mempercayai infrastruktur relayer\n\n**Push Chain:**\n- **Eksekusi Asli**: Eksekusi transaksi langsung dari rantai mana pun\n- **Tanpa Relayer**: Fungsionalitas lintas-rantai bawaan di level protokol\n- **Zero Integration**: Aplikasi yang sudah ada berfungsi tanpa modifikasi\n- **Minimalkan Kepercayaan**: Tidak ada asumsi kepercayaan tambahan selain konsensus Push Chain sendiri\n\nPush Chain menyediakan eksekusi lintas-rantai asli sementara LayerZero memerlukan infrastruktur dan integrasi tambahan.\n\n---",
-                  "vs-wormhole": "### Bagaimana perbedaan Push Chain dengan Wormhole?\n\n**Wormhole:**\n- **Bridge Protocol**: Terutama berfokus pada bridging token dan NFT\n- **Wrapped Assets**: Menciptakan versi terbungkus dari token di berbagai chain\n- **Guardian Network**: Bergantung pada validator set untuk memverifikasi pesan lintas-chain\n- **Multi-Step Process**: Pengguna harus melakukan bridging aset sebelum menggunakan app\n\n**Push Chain:**\n- **Universal Execution**: Pengguna berinteraksi langsung tanpa bridging\n- **Native Assets**: Tidak perlu token terbungkus, gunakan aset asli\n- **Direct Verification**: Verifikasi tanda tangan asli langsung dari chain mana pun\n- **Single Transaction**: Pengguna berinteraksi dalam satu langkah, tanpa bridging\n\nPush Chain menghilangkan kebutuhan untuk bridging aset sementara Wormhole membutuhkannya untuk interaksi lintas-chain.\n\n---",
-                  "vs-axelar": "### Bagaimana perbedaan Push Chain dengan Axelar?\n\n**Axelar:**\n- **Jaringan dari Jaringan**: Menghubungkan rantai melalui jaringan Axelar\n- **Ketergantungan Validator**: Bergantung pada validator set Axelar untuk keamanan\n- **Kontrak Gateway**: Membutuhkan deployment gateway di setiap rantai\n- **Pesan**: Berfokus pada komunikasi lintas rantai\n\n**Push Chain:**\n- **Eksekusi Langsung**: Transaksi diproses secara native di Push Chain tanpa perantara\n- **Keamanan Independen**: Konsensus sendiri tanpa ketergantungan eksternal\n- **Kontrak Universal**: Satu deployment bekerja untuk semua rantai\n- **Eksekusi Native**: Pemrosesan transaksi langsung dari rantai mana pun\n\nPush Chain menyediakan akses universal langsung sementara Axelar menambahkan lapisan perantara.\n\n---",
-                  "vs-chainlink-ccip": "### Bagaimana perbedaan Push Chain dengan Chainlink CCIP?\n\n**Chainlink CCIP:**\n- **Jaringan Oracle**: Menggunakan infrastruktur oracle Chainlink\n- **Perutean Pesan**: Merutekan pesan antar rantai yang berbeda\n- **Ketergantungan Eksternal**: Bergantung pada jaringan terdesentralisasi Chainlink\n- **Integrasi Diperlukan**: Aplikasi harus mengintegrasikan CCIP untuk fitur lintas-rantai\n\n**Push Chain:**\n- **Protokol Bawaan**: Fungsionalitas lintas-rantai bersifat native pada blockchain\n- **Eksekusi Langsung**: Tidak memerlukan jaringan oracle eksternal\n- **Mandiri**: Semua verifikasi dan eksekusi terjadi di Push Chain\n- **Kompatibilitas Otomatis**: Deploy kontrak yang ada — mereka langsung berfungsi untuk semua pengguna\n\nPush Chain memiliki kemampuan lintas-rantai yang dibangun ke dalam protokol intinya sementara CCIP adalah lapisan layanan eksternal.\n\n---",
-                  "vs-particle-network": "### Bagaimana perbedaan Push Chain dengan Particle Network?\n\n**Particle Network:**\n- **Fokus Abstraksi Akun**: Terutama berfokus pada abstraksi dompet dan login sosial\n- **Dompet Multi-Chain**: Menciptakan pengalaman dompet terpadu di berbagai chain\n- **Integrasi SDK**: Membutuhkan integrasi SDK Particle untuk fungsionalitas\n- **Layer Pengalaman Pengguna**: Beroperasi sebagai layer di atas chain yang ada\n\n**Push Chain:**\n- **Blockchain Universal**: Blockchain native yang mendukung semua pengguna chain\n- **Integrasi Level Protokol**: Fungsionalitas lintas-chain dibangun ke dalam konsensus\n- **Tidak Membutuhkan SDK**: Dompet yang ada bekerja secara native tanpa modifikasi\n- **Layer Dasar**: Menyediakan infrastruktur blockchain yang mendasarinya, bukan hanya layer UX\n\nPush Chain adalah blockchain universal sementara Particle Network adalah layanan abstraksi dompet.\n\n---",
-                  "vs-agglayer": "### Bagaimana Push Chain berbeda dari AggLayer?\n\n**AggLayer (Polygon):**\n- **Aggregation Layer**: Mengagregasi likuiditas dan state di seluruh chain Polygon\n- **Polygon Ecosystem**: Dirancang khusus untuk chain CDK Polygon\n- **Shared Sequencing**: Menyediakan sequencing terpadu untuk chain yang terhubung\n- **Ecosystem Specific**: Terbatas pada ekosistem chain Polygon\n\n**Push Chain:**\n- **Universal Chain**: Bekerja dengan blockchain apa pun, tidak spesifik ekosistem\n- **Native Execution**: Eksekusi transaksi langsung dari chain apa pun\n- **Chain Agnostic**: Mendukung Ethereum, Solana, Bitcoin, dan lainnya\n- **One Deployment, Universal Apps**: Deploy smart contract sekali di Push Chain, dan menjadi dapat diakses oleh pengguna dari chain mana pun — memungkinkan interoperabilitas tingkat app yang sebenarnya\n\nPush Chain memungkinkan aplikasi universal dengan satu deployment di seluruh blockchain, sementara AggLayer berfokus pada agregasi likuiditas dan sequencing dalam ekosistem Polygon.\n\n---",
-                  "vs-cosmos": "### Bagaimana perbedaan Push Chain dengan Cosmos?\n\nKedua-duanya memungkinkan fungsionalitas lintas-rantai, tetapi pendekatannya sangat berbeda:\n\n**Cosmos:**\n- **Model Hub-dan-Spoke**: Rantai terhubung melalui protokol IBC\n- **Ekosistem Terpisah**: Setiap rantai mempertahankan statenya sendiri dan penggunanya\n- **Bridging Manual**: Pengguna harus menjembatani aset antar rantai\n- **Kompleksitas Pengembang**: Perlu diterapkan di banyak rantai\n\n**Push Chain:**\n- **Rantai Universal**: Rantai tunggal yang secara native mendukung semua pengguna\n- **Shared State**: Satu status terpadu yang dapat diakses dari rantai mana pun\n- **Tidak Perlu Bridging**: Pengguna berinteraksi langsung dari rantai asalnya\n- **Deploy Sekali**: Satu deployment berfungsi untuk semua pengguna rantai\n\nPush Chain menghilangkan kebutuhan akan bridging manual dan deployment multi-rantai, menawarkan UX yang lebih sederhana dan terpadu.\n\n---",
-                  "vs-polkadot": "### Bagaimana perbedaan Push Chain dengan Polkadot?\n\n**Polkadot:**\n- **Model Parachain**: Slot terbatas untuk rantai yang terhubung\n- **Ketergantungan Rantai Relay**: Semua parachain bergantung pada keamanan rantai relay\n- **Framework Substrate**: Membutuhkan framework pengembangan spesifik\n- **Sistem Lelang**: Lelang slot parachain yang mahal\n\n**Push Chain:**\n- **Dukungan Universal**: Mendukung secara native rantai yang sudah ada\n- **Keamanan Independen**: Konsensus dan validator set sendiri\n- **Kompatibel EVM**: Gunakan alat dan kontrak Ethereum yang ada\n- **Tanpa Lelang**: Integrasi langsung tanpa penawaran kompetitif\n\nPush Chain terintegrasi dengan rantai yang sudah ada secara langsung, sementara Polkadot membutuhkan rantai untuk dibangun kembali sebagai parachain.\n\n---",
-                  "token-section": "## Terkait टोकन",
-                  "new-token": "### Apakah akan ada token baru yang terkait dengan Push Chain?\n\nSebagai layer 1 yang baru, Push Chain akan memiliki token asli sendiri dengan tokenomics yang sesuai dengan fungsi, pemeliharaan, dan keamanan sebuah blockchain.\n\nUntuk detail lengkap, lihat [Penjelasan Mendalam Tokenomics](/knowledge/tokenomics/) 👀.",
-                  "developers-section": "## Pengembang, Pengguna, dan Operator Node",
-                  "early-adopter-incentives": "### Apakah ada insentif untuk pengadopsi awal atau operator <node> di <Push Chain>?\n\nOperator <node> akan mendapatkan <staking rewards> setelah <mainnet> diluncurkan dan didorong untuk berpartisipasi dalam **Program <Push Points>** untuk mendapatkan hadiah.\n\nPengadopsi awal didorong untuk berpartisipasi dalam **Program <Push Points>** untuk mendapatkan hadiah. Mulai dengan mengunjungi [Push Portal](https://portal.push.org/).\n\n---",
-                  "developer-user-benefits": "### Apa manfaat yang ditawarkan Push Chain kepada pengembang dan pengguna?\n\n**🧙 Untuk Pengembang**\n\n- **Deploy Sekali, 10x Jangkauan Anda**\nDeploy Aplikasi Anda sekali saja — tanpa perubahan kode — dan aplikasi tersebut berjalan di setiap rantai yang didukung, bahkan jaringan non-EVM.\n\n- **Ramah Audit, 100% Kompatibel dengan EVM**\nManfaatkan kontrak Solidity yang ada tanpa audit atau penulisan ulang tambahan—fokuskan anggaran Anda pada fitur, bukan infrastruktur.\n\n- **UX Terpadu, Tanpa Gesekan**\nPengguna menandatangani satu transaksi, membayar dalam token apa pun, dan berinteraksi melalui dompet apa pun — aplikasi Anda hanya berfungsi di mana saja.\n\n- **DX Secepat Kilat**\nMulai dengan SDK kami, editor virtual, dan playground React; dari nol hingga langsung dalam hitungan menit.\n\n**🦹 Untuk Pengguna**\n\n- **Onboarding Sekali Klik**\nLogin dengan email, sosial, atau dompet yang ada — tidak ada lagi frasa seed atau lompatan rantai.\n\n- **Interaksi yang Mulus**\nKompleksitas gas, dompet, dan rantai tersembunyi — nikmati aplikasi seolah-olah mereka asli ke jaringan Anda.\n\n- **Kami Cepat**\nTransaksi difinalisasi dalam 1-2 detik, terasa asli ke rantai yang Anda gunakan.\n\n---",
-                  "how-to-build": "### Bagaimana cara pengembang memulai membangun di Push Chain?\n\n🚀 Kunjungi [Pusat Dokumentasi](/docs/) kami untuk mendapatkan semua yang Anda butuhkan:\n\n- 🖥️ **Editor Kode Virtual**: Luncurkan panggilan fungsi SDK di browser Anda\n- ⚛️ **Playground React**: Prototipe frontend Anda secara real time\n- 📚 **Contoh End-to-End**: Ikuti walkthrough proyek lengkap\n\nAnda akan memiliki aplikasi contoh langsung dalam beberapa menit—tidak memerlukan pengaturan lokal!\n\n---",
+                  "vs-other-universal": "### Apa yang membedakan Push Chain dari Solusi Universal lainnya?\n\nSolusi \"universal\" yang ada saat ini masih bergantung pada jembatan (bridge), membutuhkan transaksi ganda atau relayer terpusat untuk memindahkan data dan nilai. Push Chain berbeda—ini adalah L1 universal **sejati** pertama yang:\n\n- **Menyatukan pengguna di seluruh rantai**  \n\tSetiap alamat blockchain didukung secara native. Dompet seperti MetaMask, Phantom, dll, semuanya kompatibel dengan Push Chain. Gas dibayarkan dalam token apa pun di rantai mana pun.\n\n- **Bertindak sebagai universal execution layer**  \n\tSemua transaksi difinalisasi di rantai yang sama, memastikan semua orang berinteraksi dengan aplikasi yang sama—tanpa peretasan, tanpa solusi alternatif.\n\n- **Mengatribusikan & mengeksekusi transaksi rantai mana pun dengan benar**  \n\tTransaksi ditandatangani, diverifikasi, dan diatribusikan ke dompet di rantai sumbernya. Rantai universal sejati mendukung semuanya.\n\n---",
+                  "vs-bridges-messaging": "### Bagaimana ini berbeda dari bridge atau layer pesan?\n\n**Jawaban Singkat**: Push adalah tempat aplikasi Anda berjalan. Bridge/pesan hanya memindahkan token atau pesan antar chain yang mempersulit segalanya bagi pengguna dan pengembang.\n\n- **Satu home vs banyak klon**  \n\tDengan bridge/pesan, Anda deploy per chain dan sinkronkan melalui pesan. Di Push, Anda deploy sekali; semua orang mengakses kontrak dan shared state yang sama.\n\n- **Tidak ada aset terbungkus atau bridging wajib**  \n\tPengguna tetap di chain mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani routing dan konversi biaya di balik layar.\n\n- **Identitas & verifikasi terpadu**  \n\tKami menerima tanda tangan dari dompet/chain mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-custodial.\n\n- **Lebih sedikit bagian yang bergerak**  \n\tTidak ada tarian persetujuan lintas-chain, tidak ada perburuan gas-token, tidak ada kontrak lem untuk disinkronkan.\n\n- **Bridge memperkenalkan kompleksitas. Interop native chain menyelesaikannya**  \n\tBridge membutuhkan upaya rekayasa kompleks, waktu, biaya audit, dan infrastruktur tambahan. Interop native chain hanya berfungsi karena aplikasi Anda secara native mewarisinya.\n\n**Hasil**: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu chain — bahkan ketika pengguna tidak.\n\n---",
+                  "vs-layerzero": "### Bagaimana perbedaan Push Chain dengan LayerZero?\n\n**LayerZero:**\n- **Protokol Pesan**: Memungkinkan pengiriman pesan lintas-rantai\n- **Ketergantungan Relayer**: Bergantung pada relayer dan oracle eksternal\n- **Integrasi Pengembang**: Aplikasi harus mengintegrasikan LayerZero SDK\n- **Asumsi Kepercayaan**: Pengguna harus mempercayai infrastruktur relayer\n\n**Push Chain:**\n- **Eksekusi Asli**: Eksekusi transaksi langsung dari rantai mana pun\n- **Tanpa Relayer**: Fungsionalitas lintas-rantai bawaan di level protokol\n- **Integrasi Nol**: Aplikasi yang ada berfungsi tanpa modifikasi\n- **Minimalisasi Kepercayaan**: Tidak ada asumsi kepercayaan tambahan di luar konsensus Push Chain sendiri\n\nPush Chain menyediakan eksekusi lintas-rantai asli sementara LayerZero memerlukan infrastruktur dan integrasi tambahan.\n\n---",
+                  "vs-wormhole": "### Bagaimana perbedaan Push Chain dengan Wormhole?\n\nWormhole:\n- **Protokol Jembatan**: Terutama berfokus pada jembatan token dan NFT\n- **Aset Terbungkus**: Membuat versi terbungkus dari token di berbagai rantai\n- **Jaringan Penjaga**: Mengandalkan validator set untuk memverifikasi pesan lintas rantai\n- **Proses Multi-Langkah**: Pengguna harus menjembatani aset sebelum menggunakan aplikasi\n\nPush Chain:\n- **Eksekusi Universal**: Pengguna berinteraksi langsung tanpa menjembatani\n- **Aset Asli**: Tidak memerlukan token terbungkus, gunakan aset asli\n- **Verifikasi Langsung**: Verifikasi tanda tangan asli dari rantai mana pun\n- **Satu Transaksi**: Pengguna berinteraksi dalam satu langkah, tanpa menjembatani\n\nPush Chain menghilangkan kebutuhan untuk menjembatani aset, sementara Wormhole memerlukannya untuk interaksi lintas rantai.\n\n---",
+                  "vs-axelar": "### Bagaimana perbedaan Push Chain dengan Axelar?\n\n**Axelar:**\n- **Jaringan dari Jaringan**: Menghubungkan rantai melalui jaringan Axelar\n- **Ketergantungan Validator**: Bergantung pada validator set Axelar untuk keamanan\n- **Kontrak Gateway**: Memerlukan deployment gateway di setiap rantai\n- **Pesan Passing**: Berfokus pada komunikasi lintas-rantai\n\n**Push Chain:**\n- **Eksekusi Langsung**: Transaksi diproses secara native di Push Chain tanpa perantara\n- **Keamanan Independen**: Konsensus sendiri tanpa dependensi eksternal\n- **Kontrak Universal**: Satu deployment berfungsi untuk semua rantai\n- **Eksekusi Native**: Pemrosesan transaksi langsung dari rantai mana pun\n\nPush Chain menyediakan akses universal langsung sementara Axelar menambahkan lapisan perantara.\n\n---",
+                  "vs-chainlink-ccip": "### Bagaimana perbedaan Push Chain dengan Chainlink CCIP?\n\n**Chainlink CCIP:**\n- **Jaringan Oracle**: Menggunakan infrastruktur oracle Chainlink\n- **Perutean Pesan**: Merutekan pesan antar rantai yang berbeda\n- **Dependensi Eksternal**: Bergantung pada jaringan terdesentralisasi Chainlink\n- **Integrasi Diperlukan**: Aplikasi harus mengintegrasikan CCIP untuk fitur lintas rantai\n\n**Push Chain:**\n- **Protokol Bawaan**: Fungsionalitas lintas rantai adalah bawaan dari blockchain\n- **Eksekusi Langsung**: Tidak diperlukan jaringan oracle eksternal\n- **Mandiri**: Semua verifikasi dan eksekusi terjadi di Push Chain\n- **Kompatibilitas Otomatis**: Deploy kontrak yang ada — mereka langsung berfungsi untuk semua pengguna\n\nPush Chain memiliki kemampuan lintas rantai yang dibangun ke dalam protokol intinya sementara CCIP adalah lapisan layanan eksternal.\n\n---",
+                  "vs-particle-network": "### Push Chain, Particle Network se kaise alag hai?\n\n**Particle Network:**\n- **Account Abstraction Focus**: Mudhya roop se wallet abstraction aur social login par dhyan deta hai\n- **Multi-Chain Wallets**: chaino mein ekjut wallet ka anubhav banata hai\n- **SDK Integration**: functionality ke liye Particle SDK ko sammilan karna padta hai\n- **User Experience Layer**: maujud chaino ke upar layer ke roop mein kaam karta hai\n\n**Push Chain:**\n- **Universal Blockchain**: sab chain upyogkartaon ko support karne wala native blockchain\n- **Protocol-Level Integration**: cross-chain functionality konsensus mein banaya gaya\n- **SDK Required Nahi**: maujud wallet badlav ke bina natively kaam karte hai\n- **Base Layer**: sirf UX layer nahi, underlying blockchain infrastructure provide karta hai\n\nPush Chain ek universal blockchain hai jabki Particle Network ek wallet abstraction service hai.\n\n---",
+                  "vs-agglayer": "### Bagaimana Push Chain berbeda dari AggLayer?\n\n**AggLayer (Polygon):**\n- **Aggregation Layer**: Menggabungkan likuiditas dan state di seluruh rantai Polygon\n- **Polygon Ecosystem**: Dirancang khusus untuk rantai Polygon CDK\n- **Shared Sequencing**: Menyediakan sequencing terpadu untuk rantai yang terhubung\n- **Ecosystem Specific**: Terbatas pada ekosistem rantai Polygon\n\n**Push Chain:**\n- **Universal Chain**: Bekerja dengan blockchain apa pun, tidak spesifik ekosistem\n- **Native Execution**: Eksekusi transaksi langsung dari rantai mana pun\n- **Chain Agnostic**: Mendukung Ethereum, Solana, Bitcoin, dan semua yang lainnya\n- **One Deployment, Universal Apps**: Deploy smart contract sekali di Push Chain, dan menjadi dapat diakses oleh pengguna dari rantai mana pun — memungkinkan interoperabilitas tingkat aplikasi sejati\n\nPush Chain memungkinkan aplikasi universal dengan satu deployment di semua blockchain, sementara AggLayer berfokus pada agregasi likuiditas dan sequencing dalam ekosistem Polygon.\n\n---",
+                  "vs-cosmos": "### Bagaimana perbedaan Push Chain dengan Cosmos?\n\nKedua platform sama-sama memungkinkan fungsionalitas lintas-rantai, namun pendekatannya sangat berbeda:\n\n**Cosmos:**\n- **Model Hub-and-Spoke**: Rantai terhubung melalui protokol IBC\n- **Ekosistem Terpisah**: Setiap rantai mempertahankan state dan penggunanya sendiri\n- **Bridging Manual**: Pengguna harus menjembatani aset antar rantai\n- **Kompleksitas Pengembangan**: Perlu melakukan deployment di beberapa rantai\n\n**Push Chain:**\n- **Rantai Universal**: Satu rantai yang secara native mendukung semua pengguna\n- **Shared State**: Satu state terpadu yang dapat diakses dari rantai mana pun\n- **Tidak Perlu Bridging**: Pengguna berinteraksi langsung dari rantai asalnya\n- **Deploy Sekali**: Satu deployment berfungsi untuk semua pengguna rantai\n\nPush Chain menghilangkan kebutuhan akan bridging manual dan deployment multi-rantai, menawarkan UX yang lebih sederhana dan terpadu.\n\n---",
+                  "vs-polkadot": "### Bagaimana perbedaan Push Chain dengan Polkadot?\n\n**Polkadot:**\n- **Model Parachain**: Slot terbatas untuk rantai yang terhubung\n- **Ketergantungan Rantai Relay**: Semua parachain bergantung pada keamanan rantai relay\n- **Framework Substrate**: Memerlukan framework pengembangan khusus\n- **Sistem Lelang**: Lelang slot parachain yang mahal\n\n**Push Chain:**\n- **Dukungan Universal**: Secara native mendukung rantai yang sudah ada\n- **Keamanan Independen**: Konsensus dan validator set sendiri\n- **Kompatibel EVM**: Gunakan alat dan kontrak Ethereum yang sudah ada\n- **Tanpa Lelang**: Integrasi langsung tanpa penawaran kompetitif\n\nPush Chain terintegrasi dengan rantai yang sudah ada secara langsung, sementara Polkadot mengharuskan rantai dibangun ulang sebagai parachain.\n\n---",
+                  "token-section": "## Token Related",
+                  "new-token": "### Apakah akan ada token baru yang terkait dengan Push Chain?\n\nSebagai layer 1 yang baru, Push Chain akan memiliki token asli sendiri dengan tokenomics yang sesuai dengan fungsi, pemeliharaan, dan keamanan sebuah blockchain.\n\nUntuk detail lengkap, lihat [Tokenomics deep dive](/knowledge/tokenomics/) 👀.\n\n---",
+                  "developers-section": "## Pengembang, Pengguna dan Operator Node",
+                  "early-adopter-incentives": "### Apakah ada insentif untuk pengadopsi awal atau operator node di Push Chain?\n\nOperator node akan mendapatkan *staking rewards* setelah *mainnet* diluncurkan dan didorong untuk berpartisipasi dalam **Push Points Program** untuk mendapatkan hadiah.\n\nPengadopsi awal didorong untuk berpartisipasi dalam **Push Points Program** untuk mendapatkan hadiah. Mulai dengan mengunjungi [Push Portal](https://portal.push.org/).\n\n---",
+                  "developer-user-benefits": "### Apa manfaat yang ditawarkan Push Chain kepada developer dan pengguna?\n\n**🧙 Untuk Developer**\n\n- **Deploy Sekali, 10× Jangkauan Anda**  \nDeploy App Anda sekali saja — tanpa perubahan kode — dan jalankan di setiap chain yang didukung, bahkan network non-EVM.\n\n- **Audit-Friendly, 100% EVM Compatible**  \nManfaatkan kontrak Solidity yang ada tanpa audit atau penulisan ulang tambahan—fokuskan anggaran Anda pada fitur, bukan infrastruktur.\n\n- **UX Terpadu, Tanpa Hambatan**  \nPengguna menandatangani satu transaksi, membayar dengan token apa pun, dan berinteraksi melalui wallet apa pun — aplikasi Anda berfungsi di mana saja.\n\n- **DX Sangat Cepat**  \nSpin up dengan SDK kami, editor virtual, dan React playgrounds; dari nol ke live dalam hitungan menit.\n\n**🦹 Untuk Pengguna**\n\n- **Onboarding Satu Klik**  \nLogin dengan email, sosial, atau wallet yang ada — tidak perlu seed phrase atau berpindah chain.\n\n- **Interaksi Tanpa Hambatan**  \nKompleksitas gas, wallet, dan chain tersembunyi — nikmati aplikasi seolah-olah itu native ke network Anda.\n\n- **Kami Cepat**  \nTransaksi final dalam 1-2 detik, terasa native ke chain yang Anda gunakan.\n\n---",
+                  "how-to-build": "### Bagaimana cara pengembang memulai membangun di Push Chain?\n\n🚀 Kunjungi [Documentation Hub](/docs/) kami untuk mendapatkan semua yang Anda butuhkan:\n\n- 🖥️ **Virtual Code Editors**: Jalankan panggilan fungsi SDK di browser Anda  \n- ⚛️ **React Playground**: Buat prototipe frontend Anda secara real-time  \n- 📚 **End-to-End Examples**: Ikuti walkthrough proyek lengkap  \n\nAnda akan memiliki aplikasi contoh yang aktif dalam hitungan menit—tanpa pengaturan lokal yang diperlukan!\n\n---",
                   "dao-section": "## DAO dan Hibah",
-                  "governance-changes": "### Bagaimana sistem tata kelola saat ini akan berubah ketika token baru diluncurkan?\n\nSistem tata kelola Push DAO akan berkembang dan meluas seiring peluncuran Push Chain. Ini adalah proses yang diharapkan, karena Push menjadi sesuatu yang lebih komprehensif dari sebelumnya.\n\nDelegasi, program duta, subDAO, dan inisiatif DAO lainnya akan ditingkatkan untuk mencerminkan tujuan utama pencapaian status sebagai pusat untuk aplikasi universal, yang dijalankan oleh semua kelompok yang memungkinkannya.\n\n---",
+                  "governance-changes": "### Bagaimana sistem tata kelola saat ini akan berubah ketika token baru diluncurkan?\n\nSistem tata kelola Push DAO akan berkembang dan meluas seiring dengan peluncuran Push Chain. Ini adalah proses yang diharapkan, karena Push menjadi sesuatu yang lebih komprehensif daripada asalnya.\n\nDelegasi, program duta, subDAO, dan inisiatif DAO lainnya akan ditingkatkan untuk mencerminkan tujuan utama mencapai status sebagai pusat untuk aplikasi universal, yang dijalankan oleh semua kelompok yang mewujudkannya.\n\n---",
                   "doubts-section": "## Keraguan",
-                  "push-services-future": "### Apa yang Terjadi pada Notifikasi Push dan Obrolan Push?\n\nPush Chain adalah evolusi alami dari visi Push Protocol. Layanan Push Protocol saat ini tetap menjadi prioritas, memastikan mereka terus meningkat sambil mendapatkan manfaat dari infrastruktur baru.\n\nProtokol notifikasi push dan obrolan saat ini akan mendapatkan manfaat signifikan dari dibangun di atas Push Chain. Bagian khusus dari tim akan fokus pada pemeliharaan dan peningkatan protokol ini, memastikan mereka tetap menjadi standar de-facto di domain masing-masing.\n\nDengan menyelaraskan dengan Push Chain, notifikasi dan obrolan yang dikirim melalui protokol akan diproses sebagai transaksi di rantai. Integrasi ini tidak hanya memungkinkan protokol ini untuk mengakumulasi nilai tetapi juga menandai dimulainya babak baru dalam evolusi mereka, lebih meningkatkan utilitas dan dampaknya dalam ekosistem web3.\n\n---",
+                  "push-services-future": "### Apa yang Terjadi dengan Notifikasi Dorong dan Obrolan Dorong?\n\nPush Chain adalah evolusi alami dari visi Push Protocol. Layanan Push Protocol saat ini tetap menjadi prioritas, memastikan mereka terus membaik sambil mendapatkan manfaat dari infrastruktur baru.\n\nProtokol notifikasi dan obrolan dorong saat ini akan mendapatkan manfaat signifikan dari pembangunan di atas Push Chain. Bagian khusus dari tim akan fokus pada pemeliharaan dan peningkatan protokol ini, memastikan mereka tetap menjadi standar de-facto di domain masing-masing.\n\nDengan menyelaraskan dengan Push Chain, notifikasi dan obrolan yang dikirim melalui protokol akan diproses sebagai transaksi di chain. Integrasi ini tidak hanya memungkinkan protokol ini untuk mengakumulasi nilai tetapi juga menandai awal dari babak baru dalam evolusi mereka, lebih meningkatkan utilitas dan dampaknya dalam ekosistem web3.\n\n---",
                   "project-distraction": "### Apakah proyek ini mengalihkan perhatian dari peningkatan layanan yang ada?\n\nTidak, baca ☝️ [di atas](#what-happens-to-push-notification-and-push-chat).\n\n---",
                   "core-focus-shift": "### Apakah Push Chain merupakan pergeseran dari fokus utama Push Protocol pada notifikasi dan obrolan?\n\nTidak. Push Chain dibangun di atas fondasi yang telah mapan dari Push Protocol. Push Chain mewakili **evolusi berikutnya** dari Push Protocol, bukan sebuah penyimpangan.\n\n---",
                   "partnerships-effect": "### Bagaimana peluncuran Push Chain akan memengaruhi kemitraan dan integrasi yang ada?\n\nPush Chain melengkapi kemitraan yang ada dengan menawarkan kemampuan tambahan seperti dukungan lintas-rantai, finalitas lebih cepat, dan solusi yang dapat diskalakan. Ini memperkuat kolaborasi dengan memungkinkan mitra untuk membangun dan menskalakan aplikasi universal.\n\n---",
-                  "decentralization-scaling": "### Bagaimana cara Push Chain mempertahankan desentralisasi sambil meningkatkan skala?\n\nDevnet kami mendemonstrasikan bagaimana kami akan meningkatkan skala menggunakan sharding dinamis dan eksekusi paralel—meningkatkan throughput tanpa mengorbankan desentralisasi.\n\nDi testnet, kami berfokus pada interoperabilitas stack penuh dengan chain yang berjalan di [CometBFT](https://github.com/cometbft/cometbft), engine yang telah diuji dan terbukti toleran terhadap kesalahan Byzantine. Jaringan mencapai finality sub-detik dan memiliki kemampuan untuk menangani hingga [20k transaksi per menit](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nBukti konsep ini hanyalah permulaan. Saat kami meluncurkan optimalisasi penskalaan lebih lanjut di fase selanjutnya, kami yakin Push Chain dapat memenuhi kebutuhan aplikasi universal—dengan aman dan tanpa sentralisasi.\n\n---",
-                  "centralization-risks": "### Apakah ada risiko sentralisasi dengan Push Chain?\n\n**Tidak.** Arsitektur Push Chain menekankan desentralisasi.\n\nPush Chain sepenuhnya terdesentralisasi dan dirancang agar kuat dan tahan lama. Siapa pun dapat menjalankan <node> dan berpartisipasi dalam jaringan dan diberi insentif atau dihukum melalui PoS. Singkatnya:\n\n- <validator> dan aktor lain beroperasi secara independen dan diberi insentif melalui PoS.\n- Mekanisme <governance> memastikan keterlibatan komunitas.\n- Setiap pihak ekosistem terlibat dalam <governance> sampai batas tertentu.\n\nUntuk mempelajari lebih lanjut tentang cara menjalankan <node>, lihat [Basis Pengetahuan](/knowledge/) atau lihat [Repo <validator> Node](https://github.com/pushchain/push-chain-node).\n\n---",
+                  "decentralization-scaling": "### Bagaimana cara Push Chain mempertahankan desentralisasi sambil meningkatkan skala?\n\nDevnet kami mendemonstrasikan bagaimana kami akan meningkatkan skala menggunakan sharding dinamis dan eksekusi paralel—meningkatkan throughput tanpa mengorbankan desentralisasi.\n\nDi testnet, kami fokus pada interoperabilitas full stack dengan chain yang berjalan di [CometBFT](https://github.com/cometbft/cometbft), sebuah engine yang sudah teruji dan toleran terhadap kesalahan Byzantine. Jaringan mencapai finality sub-detik dan memiliki kemampuan untuk menangani hingga [20k transaksi per menit](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nBukti konsep ini hanyalah permulaan. Saat kami meluncurkan optimasi penskalaan lebih lanjut di fase-fase selanjutnya, kami yakin Push Chain dapat memenuhi kebutuhan aplikasi universal—dengan aman dan tanpa sentralisasi.\n\n---",
+                  "centralization-risks": "### Apakah ada risiko sentralisasi dengan Push Chain?\n\n**Tidak.** Arsitektur Push Chain menekankan desentralisasi.\n\nPush Chain sepenuhnya terdesentralisasi dan dirancang agar kuat dan tahan lama. Siapa pun dapat menjalankan node dan berpartisipasi dalam jaringan dan diberi insentif atau dihukum melalui PoS. Singkatnya:\n\n- Validator dan aktor lain beroperasi secara independen dan diberi insentif melalui PoS.\n- Mekanisme tata kelola memastikan keterlibatan komunitas.\n- Setiap pihak ekosistem disertakan dalam tata kelola sampai batas tertentu.\n\nUntuk mempelajari lebih lanjut tentang cara menjalankan node, lihat [Basis Pengetahuan](/knowledge/) kami atau lihat [Repo Node Validator](https://github.com/pushchain/push-chain-node).\n\n---",
                   "support-section": "## Dukungan dan Keterlibatan",
-                  "need-help": "### Saya butuh bantuan, saya bisa menghubungi Push Chain di mana?\n\nUntuk dukungan, Anda dapat [kirim tiket di sini](https://push.org/support) atau hubungi kami di support@push.org.\n\nJika Anda seorang pengembang, Anda juga dapat menghubungi kami di [Discord](https://discord.com/invite/pushchain) dan kami akan dengan senang hati membantu Anda.\n\n---",
-                  "how-to-contribute": "### Bagus, bagaimana cara saya berkontribusi?\n\nCara terbaik untuk tetap mendapatkan informasi terbaru tentang kemajuan Push Chain adalah melalui saluran resmi Push: situs web, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), dan [Discord](https://discord.com/invite/pushchain).\n\nSelalu waspada terhadap upaya *phishing*, situs palsu, atau penipuan yang meminta *crypto* Anda. Semua komunikasi resmi akan dikirimkan dari *handle* resmi Push.\n\n---"
+                  "need-help": "### Saya butuh bantuan, di mana saya bisa menghubungi Push Chain?\n\nUntuk dukungan, Anda dapat [kirim tiket di sini](https://push.org/support) atau hubungi kami di support@push.org.\n\nJika Anda seorang pengembang, Anda juga dapat menghubungi kami di [Discord](https://discord.com/invite/pushchain) dan kami akan dengan senang hati membantu Anda.\n\n---",
+                  "how-to-contribute": "### Bagus, bagaimana cara saya berkontribusi?\n\nCara terbaik untuk tetap mengikuti perkembangan Push Chain adalah melalui saluran resmi Push: situs web, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), dan [Discord](https://discord.com/invite/pushchain).\n\nSelalu waspada terhadap upaya phishing, situs palsu, atau penipuan yang meminta crypto Anda. Semua komunikasi resmi akan dikirim dari akun resmi Push.\n\n---"
                 }
               }
             }
@@ -720,15 +822,18 @@
     "docs": {
       "seo": {
         "title": "Dokumentasi — Bangun Aplikasi Universal",
-        "description": "Semua yang Anda butuhkan untuk mengirim di Push Chain: Quickstart, SDK, Referensi API, contoh, dan konfigurasi node.",
-        "og-title": "Push Chain Dokumen - Quickstarts, SDKs & API",
-        "og-description": "Buat dan jalankan aplikasi pada lapisan eksekusi universal dengan panduan dan contoh yang jelas.",
-        "twitter-title": "Dokumentasi Push Chain - Mulai sekarang"
+        "description": "Semua yang Anda butuhkan untuk memulai di Push Chain: panduan cepat, SDK, referensi API, contoh, dan pengaturan node.",
+        "og-title": "Dokumentasi Push Chain - Panduan Cepat, SDK & API",
+        "og-description": "Bangun dan jalankan aplikasi di universal execution layer dengan panduan dan contoh yang jelas.",
+        "twitter-title": "Dokumentasi Push Chain - Mulai Bangun Sekarang",
+        "twitter-description": "Panduan cepat, SDK, referensi API, dan contoh untuk meluncurkan dengan cepat."
       },
       "header": {
-        "countdown-title": "Rilis Dokumen Testnet dalam",
-        "title": "Berbicara tentang Push Chain di Twitter",
-        "ariaLabel": "Tweets tentang Push Chain"
+        "countdown-title": "Peluncuran Dokumen Testnet dalam",
+        "description": "Psst... ingin melihat sekilas Testnet Donut? Kirim pesan kepada kami dengan #pushchainsecret dan kami akan mengirimkan akses ke build tes.",
+        "tweet-button": "Tweet tentang Push Chain",
+        "title": "Tweet tentang Push Chain",
+        "ariaLabel": "Tweet tentang Push Chain"
       },
       "grid-section": {
         "blocks": {
@@ -737,16 +842,18 @@
               "items": {
                 "whatispush": {
                   "title": "Apa itu Push Chain?",
-                  "subtitle": "Push Chain menyediakan toolkit yang seragam untuk membangun aplikasi universal yang benar-benar.",
+                  "subtitle": "Push Chain menyediakan seperangkat alat terpadu untuk membangun aplikasi yang benar-benar universal.",
                   "ctatitle": "Pelajari Lebih Lanjut"
                 },
                 "builders": {
-                  "title": "Mari Membangun!",
-                  "subtitle": "Semua yang Anda butuhkan dengan SDK Push Chain untuk membuat aplikasi universal Anda",
+                  "title": "Ayo bangun!",
+                  "subtitle": "Semua yang Anda butuhkan dengan Push Chain SDK untuk membuat aplikasi universal Anda",
                   "ctatitle": "Pelajari Lebih Lanjut"
                 },
                 "ui-kit": {
-                  "subtitle": "Integrasi aplikasi React berbasis apa pun dalam waktu kurang dari 5 menit."
+                  "title": "UI Kit",
+                  "subtitle": "Integrasikan aplikasi berbasis React apa pun dalam waktu kurang dari 5 menit.",
+                  "ctatitle": "Pelajari Lebih Lanjut"
                 }
               }
             }
@@ -757,20 +864,20 @@
     "blog": {
       "seo": {
         "title": "Blog — Pembaruan, Analisis Mendalam & Cerita",
-        "description": "Berita, catatan rilis, pembahasan mendalam tentang teknis, dan kisah pengembang dari tim Push Chain dan ekosistem.",
+        "description": "Berita, catatan rilis, pembahasan mendalam teknis, dan kisah pengembang dari tim Push Chain dan ekosistem.",
         "og-title": "Blog Push Chain - Pembaruan, Analisis Mendalam & Cerita",
-        "og-description": "Ikuti pembaruan produk, cerita pengembangan, analisis mendalam, dan berita ekosistem dari Push Chain.",
-        "twitter-title": "Blog Push Chain - Ada Apa Baru",
-        "twitter-description": "Rilis terbaru, pembahasan mendalam, dan cerita dari para pengembang — tetap dapatkan informasi terbaru."
+        "og-description": "Ikuti pembaruan produk, cerita pengembang, pembahasan mendalam, dan berita ekosistem dari Push Chain.",
+        "twitter-title": "Blog Push Chain - Apa yang Baru",
+        "twitter-description": "Rilis terbaru, pembahasan mendalam, dan kisah dari para pengembang — tetap dapatkan informasi terbaru."
       }
     },
     "lfpush": {
       "seo": {
-        "title": "Ayo Dorong — Inisiatif Komunitas",
+        "title": "Mari Kita Dorong — Inisiatif Komunitas",
         "description": "Inisiatif komunitas Push, postingan, dan lainnya.",
         "og-title": "Ayo Push - Inisiatif Komunitas untuk Push Chain",
-        "og-description": "Inisiatif yang digerakkan oleh komunitas dan saham untuk Push Chain.",
-        "twitter-title": "Ayo Push | Inisiatif Komunitas",
+        "og-description": "Inisiatif yang digerakkan oleh komunitas dan bagian untuk Push Chain.",
+        "twitter-title": "Mari Kita Dorong | Inisiatif Komunitas",
         "twitter-description": "Lihat inisiatif komunitas Push untuk Push Chain."
       },
       "hero-section": {
@@ -785,17 +892,17 @@
         },
         "meta": {
           "tweet-alt": "Tweet dari anggota komunitas Push Chain",
-          "loading-alt": "Memuat lebih banyak tweet komunitas"
+          "loading-alt": "Memuat lebih banyak tweet dari komunitas"
         },
         "tweets-counter": "{{count}} Tweet dan terus bertambah!",
         "loading": "Memuat lebih banyak tweet...",
-        "end-message": "Anda sudah sampai di akhir! 🎉"
+        "end-message": "Anda telah sampai di akhir! 🎉"
       }
     },
     "support": {
       "seo": {
         "title": "Dukungan — Pusat Bantuan",
-        "description": "Dapatkan bantuan untuk Push Chain: panduan, pemecahan masalah, status, dan dukungan komunitas.",
+        "description": "Dapatkan bantuan dengan Push Chain: panduan, pemecahan masalah, status, dan dukungan komunitas.",
         "og-title": "Dukungan Push Chain - Pusat Bantuan",
         "og-description": "Temukan dokumentasi, tutorial, pembaruan status, dan cara menghubungi dukungan.",
         "twitter-title": "Dukungan - Bantuan & Dokumentasi",
@@ -803,13 +910,13 @@
       },
       "hero-section": {
         "title": "Dukungan",
-        "description": "Pusat Bantuan Push Chain: pemecahan masalah, panduan, testnet Donut, explorer & faucet, pembaruan status, dan keamanan. Tanyakan di Discord atau buka tiket dukungan."
+        "description": "Pusat Bantuan Push Chain: pemecahan masalah, panduan, Donut testnet, explorer & faucet, pembaruan status, dan keamanan. Tanyakan di Discord atau buka tiket dukungan."
       }
     },
     "litepaper": {
       "seo": {
-        "title": "Litepaper — Gambaran Teknis",
-        "description": "Tinjauan singkat tentang visi, arsitektur, dan ekonomi Push Chain untuk aplikasi universal.",
+        "title": "Litepaper — Ikhtisar Teknis",
+        "description": "Tinjauan singkat visi, arsitektur, dan ekonomi Push Chain untuk aplikasi universal.",
         "og-title": "Litepaper Push Chain - Gambaran Teknis",
         "og-description": "Visi, desain, dan model ekonomi dari universal execution layer—disederhanakan.",
         "twitter-title": "Litepaper - Push Chain",
@@ -818,14 +925,17 @@
     },
     "tos": {
       "seo": {
-        "title": "Syarat dan Ketentuan",
-        "description": "Aturan untuk menggunakan situs web Push Chain, aplikasi, dan layanan termasuk hak dan kewajiban Anda.",
-        "og-description": "Syarat dan Ketentuan Hukum mengenai penggunaan situs web, aplikasi, dan alat developer kami.",
-        "twitter-title": "Syarat dan Ketentuan - Push Chain",
-        "twitter-description": "Baca syarat dan ketentuan penggunaan Push Chain."
+        "title": "Ketentuan Layanan",
+        "description": "Aturan penggunaan situs web, aplikasi, dan layanan Push Chain, termasuk hak dan tanggung jawab Anda.",
+        "og-title": "Syarat dan Ketentuan Push Chain - Ketentuan Hukum",
+        "og-description": "Ketentuan hukum yang mengatur penggunaan situs web, aplikasi, dan alat pengembang kami.",
+        "twitter-title": "Ketentuan Layanan - Push Chain",
+        "twitter-description": "Baca persyaratan hukum untuk menggunakan Push Chain."
       },
       "hero-section": {
-        "description": "Menggariskan syarat dan ketentuan"
+        "title": "Syarat Layanan",
+        "description": "Menguraikan syarat dan ketentuan",
+        "update-text": "Terakhir Diperbarui: 25 Oktober 2025"
       }
     },
     "privacy": {
@@ -833,20 +943,20 @@
         "title": "Kebijakan Privasi",
         "description": "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data Anda—serta hak dan pilihan Anda.",
         "og-title": "Kebijakan Privasi Push Chain - Perlindungan Data",
-        "og-description": "Pelajari data apa yang kami kumpulkan, bagaimana kami menggunakannya, dan hak privasi Anda.",
+        "og-description": "Pelajari data apa saja yang kami kumpulkan, bagaimana kami menggunakannya, dan hak privasi Anda.",
         "twitter-title": "Kebijakan Privasi - Push Chain",
         "twitter-description": "Data Anda. Hak Anda. Bagaimana kami melindungi keduanya."
       },
       "hero-section": {
         "title": "KEBIJAKAN PRIVASI",
         "description": "Menjelaskan bagaimana Push mengumpulkan, menangani, dan memproses data.",
-        "update-text": "Terakhir diperbarui: 2 November 2020"
+        "update-text": "Terakhir Diperbarui: 2 November 2020"
       }
     },
     "privacymobile": {
       "seo": {
         "title": "Kebijakan Privasi Seluler",
-        "description": "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data di aplikasi seluler Push Chain, dan pilihan Anda.",
+        "description": "Bagaimana kami mengumpulkan, menggunakan, dan melindungi data di aplikasi seluler Push Chain, serta pilihan Anda.",
         "og-title": "Kebijakan Privasi Seluler Push Chain - Perlindungan Data Aplikasi",
         "og-description": "Praktik data dan hak Anda untuk aplikasi seluler kami.",
         "twitter-title": "Kebijakan Privasi Seluler - Push Chain",
@@ -860,46 +970,46 @@
     },
     "brb": {
       "seo": {
-        "title": "BRB — Miliaran Alasan untuk Membangun",
+        "title": "BRB — Billion Reasons to Build",
         "description": "Hackathon andalan Push Chain: pecahkan masalah nyata, belajar dari para ahli, dan menangkan hadiah.",
         "og-title": "BRB - Push Chain Hackathon",
-        "og-description": "Melacak, garis waktu, dan hadiah untuk kompetisi Billion Reasons to Build.",
+        "og-description": "Melacak, linimasa, dan hadiah untuk kompetisi Billion Reasons to Build.",
         "twitter-title": "BRB Hackathon - Bangun & Menang",
         "twitter-description": "Bergabunglah dengan hackathon Push Chain untuk mengirimkan proyek dan menangkan hadiah."
       }
     },
     "contact": {
       "seo": {
-        "title": "Kontak — Hubungi Kami",
+        "title": "Hubungi Kami — Mari Terhubung",
         "description": "Hubungi tim Push Chain untuk kemitraan, integrasi, hibah, media, dukungan, dan pengungkapan keamanan.",
         "og-title": "Kontak Push Chain - Hubungi Kami",
-        "og-description": "Hubungi tim Push Chain untuk kemitraan, integrasi, hibah, media, dukungan, dan keamanan.",
-        "twitter-title": "Kontak - Tim Push Chain",
+        "og-description": "Hubungi tim Push Chain mengenai kemitraan, integrasi, hibah, media, dukungan, dan keamanan.",
+        "twitter-title": "Hubungi - Tim Push Chain",
         "twitter-description": "Kemitraan, integrasi, hibah, media, dukungan, dan keamanan — hubungi Push Chain."
       },
       "hero-section": {
         "title": "Hubungi Tim Push Chain",
-        "description": "Kemitraan & integrasi, hibah, media & berbicara, validator, hukum, karir, atau pertanyaan umum—hubungi kami di sini. Untuk bantuan teknis atau pengungkapan keamanan, silakan kunjungi Pusat Dukungan."
+        "description": "Kemitraan & integrasi, hibah, media & berbicara, validator, legal, karir, atau pertanyaan umum—hubungi kami di sini. Untuk bantuan teknis atau pengungkapan keamanan, silakan kunjungi Pusat Dukungan."
       }
     },
     "donutsecret": {
       "seo": {
         "title": "Ssst… Donut Testnet — Akses Beta Rahasia",
-        "description": "Beta tertutup hanya untuk pengembang. Klaim akses Donut Anda untuk mengakses Push Chain <testnet>, luncurkan <app> <universal>, dan buka hadiah awal.",
+        "description": "Beta tertutup eksklusif untuk pencipta. Klaim kartu Donut Anda untuk mengakses Push Chain Testnet, kirim aplikasi universal, dan kunci hadiah awal.",
         "og-title": "Donut Testnet — Akses Beta Rahasia",
         "og-description": "Akses awal untuk pengembang: klaim Closed Beta Pass, coba Push Chain (Donut), dan dapatkan hadiah sambil membangun aplikasi universal.",
         "twitter-title": "Ssst… Donut Testnet — Beta Tertutup",
-        "twitter-description": "Akses eksklusif hanya untuk pengembang. Klaim pass Anda, coba Push Chain (Donut), dan dapatkan hadiah. 🍩"
+        "twitter-description": "Akses eksklusif hanya untuk para pengembang. Klaim pass Anda, coba Push Chain (Donut), dan dapatkan hadiah. 🍩"
       }
     }
   },
   "components": {
     "mailing-signup": {
       "title": "Jangan Lewatkan Informasi Terbaru",
-      "text": "Daftar dan tetap dapat informasi terbaru tentang pengumuman ekosistem, hadiah, dan banyak lagi.",
+      "text": "Daftar dan tetap dapatkan informasi terbaru mengenai pengumuman ekosistem, hadiah, dan banyak lagi.",
       "email-input": "Email Anda",
       "email-input-placeholder": "Masukkan alamat email Anda",
-      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan update terbaru",
+      "email-input-title": "Berlangganan newsletter Push Chain untuk mendapatkan pembaruan",
       "email-input-aria-label": "Alamat email untuk berlangganan newsletter",
       "submit-button": "Daftar",
       "submit-button-title": "Berlangganan newsletter Push Chain",
@@ -909,7 +1019,7 @@
       "arrow-button-title": "Berlangganan pembaruan Push Chain",
       "form-aria-label": "Formulir berlangganan newsletter",
       "success-message-aria-label": "Berlangganan berhasil",
-      "error-message-aria-label": "Pesan kesalahan langganan"
+      "error-message-aria-label": "Pesan kesalahan berlangganan"
     },
     "cookie-banner": {
       "message": "Kami menggunakan cookie untuk mempersonalisasi pengalaman Anda. Pelajari lebih lanjut di",
@@ -919,100 +1029,100 @@
       "accept-button": "Setuju",
       "accept-button-title": "Terima cookie untuk personalisasi pengalaman Anda",
       "accept-button-aria-label": "Terima cookie dan tutup banner",
-      "reject-button": "Menolak",
+      "reject-button": "Tolak",
       "reject-button-title": "Tolak cookie dan tutup banner",
       "reject-button-aria-label": "Tolak cookie dan tutup banner",
-      "banner-aria-label": "Pemberitahuan izin penggunaan cookie",
+      "banner-aria-label": "Pemberitahuan izin cookie",
       "banner-role": "Notifikasi preferensi cookie"
     },
     "short-faq-snippet": {
-      "section-aria-label": "Pertanyaan yang sering diajukan tentang Push Chain - Blockchain Universal",
-      "title": "Pertanyaan yang Sering Diajukan\n(FAQ)",
-      "title-aria-label": "Pertanyaan umum dan jawaban tentang Push Chain",
-      "discord-link-text": "Tanyakan pada kami di Discord",
+      "section-aria-label": "Pertanyaan umum tentang Push Chain - Blokchain Universal",
+      "title": "Pertanyaan\nYang Sering\nDitanyakan",
+      "title-aria-label": "Pertanyaan dan jawaban umum tentang Push Chain",
+      "discord-link-text": "Tanyakan kami di Discord",
       "discord-link-title": "Bergabunglah dengan komunitas Discord Push Chain untuk dukungan dan pertanyaan",
       "discord-link-aria-label": "Buka komunitas Discord di tab baru",
       "explore-more-text": "Jelajahi Lebih Banyak FAQ",
       "explore-more-title": "Lihat dokumentasi FAQ lengkap Push Chain dan panduan pengembang",
       "explore-more-aria-label": "Arahkan ke halaman FAQ lengkap Push Chain",
-      "accordion-aria-label": "Daftar pertanyaan yang sering diajukan Push Chain",
+      "accordion-aria-label": "Daftar pertanyaan yang sering diajukan tentang Push Chain",
       "answer-aria-label": "Jawaban untuk pertanyaan - ",
       "qnas": {
         "qna1": {
           "question": "Apa itu Push Chain?",
-          "answer": "<1>Push Chain adalah sebuah blockchain shared-state yang <2>menghilangkan fragmentasi dan membuat aplikasi menjadi universal</2>.</1><1>Deploy sekali di Push. Pengguna di rantai mana pun — EVM atau non-EVM — menggunakan aplikasi Anda dengan dompet dan token yang sudah ada; biaya ditangani di balik layar.</1>"
+          "answer": "<1>Push Chain adalah sebuah blockchain shared-state yang <2>menghilangkan fragmentasi dan membuat aplikasi menjadi universal</2>.</1><1>Deploy sekali saja di Push. Pengguna di rantai manapun — EVM atau non-EVM — menggunakan aplikasi Anda dengan dompet dan token yang sudah ada; biaya ditangani di balik layar.</1>"
         },
         "qna2": {
           "question": "Bagaimana cara kerjanya? (Dijelaskan dengan sederhana)",
-          "answer": "<1>Gunakan wallet yang sudah kamu miliki — Push yang mengurus bagian lintas rantai di balik layar.</1><1>1. <2>Mulai di mana saja.</2> Gunakan wallet apa saja di rantai mana saja — tanpa perlu berpindah jaringan.</1><1>2. <2>Tandatangani sekali.</2> Bayar dengan token yang sudah kamu miliki; kami menyisihkan biaya di rantai utama kamu.</1><1>3. <2>Kami mengarahkannya.</2> Akun tertaut di Push (masih milikmu) meneruskan panggilanmu ke app — non-custodial.</1><1>4. <2>Kamu selalu menjadi kamu.</2> Kami mencocokkan wallet rantai utama kamu dengan akun tertautmu sehingga tindakan diverifikasi dengan benar dan diatribusikan kepadamu di Push.</1><1>5. <2>Selesai dengan cepat.</2> App berjalan di Push; biaya ditangani di balik layar. Tidak perlu bridge, tidak perlu wallet baru.</1><1>Beginilah cara pengguna di rantai mana pun dapat menggunakan app yang sama yang di-deploy di Push Chain — membuat app benar-benar universal.</1>"
+          "answer": "<1>Gunakan wallet yang sudah Anda miliki — Push mengurus bagian lintas-rantai di balik layar.</1><1>1. <2>Mulai di mana saja.</2> Gunakan wallet apa pun di rantai mana pun — tanpa perlu berpindah jaringan.</1><1>2. <2>Tandatangani sekali.</2> Bayar dengan token yang sudah Anda miliki; kami menyediakan biaya di rantai utama Anda.</1><1>3. <2>Kami mengarahkannya.</2> Akun tertaut di Push (masih milik Anda) meneruskan panggilan Anda ke aplikasi — non-custodial.</1><1>4. <2>Anda tetap Anda.</2> Kami mencocokkan wallet rantai utama Anda dengan akun tertaut Anda sehingga tindakan diverifikasi dengan benar dan diatribusikan kepada Anda di Push.</1><1>5. <2>Selesai dengan cepat.</2> Aplikasi berjalan di Push; biaya ditangani di balik layar. Tidak perlu jembatan, tidak perlu wallet baru.</1><1>Beginilah cara pengguna di rantai mana pun dapat menggunakan aplikasi yang sama yang diterapkan di Push Chain — menjadikan aplikasi benar-benar universal.</1>"
         },
         "qna3": {
           "question": "Apakah saya memerlukan dompet atau token gas yang berbeda?",
-          "answer": "<1><2>Tidak.</2></1><1><2>Simpan dompet Anda.</2> Gunakan dompet yang sudah Anda miliki — tidak perlu dompet atau akun baru.</1><1><2>Bayar dengan apa yang Anda punya.</2> Biaya dapat dibayarkan dalam token yang sudah Anda miliki di rantai utama Anda; kami menangani konversi di balik layar.</1><1><2>Tidak perlu berpindah jaringan.</2> Tetap di rantai utama Anda — tidak perlu bridging hanya untuk mendapatkan token gas.</1><1><2>Non-custodial.</2> Anda menandatangani setiap tindakan; Push tidak pernah menyimpan kunci Anda.</1><1><2>Di balik layar.</2> Jaringan menyelesaikan biaya dalam $PC secara otomatis — Anda tidak perlu mengelolanya.</1>"
+          "answer": "<1><2>Tidak.</2></1><1><2>Simpan dompet Anda.</2> Gunakan dompet yang sudah Anda miliki — tidak perlu dompet atau akun baru.</1><1><2>Bayar dengan apa yang Anda miliki.</2> Biaya dapat dibayarkan dalam token yang sudah Anda miliki di rantai utama Anda; kami menangani konversi di balik layar.</1><1><2>Tidak perlu berpindah jaringan.</2> Tetap di rantai utama Anda — tidak perlu bridging hanya untuk mendapatkan token gas.</1><1><2>Non-custodial.</2> Anda menandatangani setiap tindakan; Push tidak pernah menyimpan kunci Anda.</1><1><2>Di balik layar.</2> Jaringan menyelesaikan biaya dalam $PC secara otomatis — Anda tidak perlu mengelolanya.</1>"
         },
         "qna4": {
-          "question": "Bagaimana ini berbeda dari jembatan atau lapisan perpesanan?",
-          "answer": "<1><2>Jawaban Singkat</2>: Push adalah tempat aplikasi Anda berjalan. Jembatan/pesan hanya memindahkan token atau pesan antar rantai yang mempersulit segalanya bagi pengguna dan pengembang.</1><1><2>Satu rumah vs banyak klon.</2> Dengan jembatan/pesan Anda menerapkan per rantai dan menyinkronkan melalui pesan. Di Push Anda menerapkan sekali; semua orang mengenai kontrak dan shared state yang sama.</1><1><2>Tidak ada aset terbungkus atau jembatan wajib.</2> Pengguna tetap di rantai utama mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani perutean dan konversi biaya di balik layar.</1><1><2>Identitas & verifikasi terpadu.</2> Kami menerima tanda tangan dari dompet/rantai mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-custodial.</1><1><2>Lebih sedikit bagian yang bergerak.</2> Tidak ada tarian persetujuan lintas rantai, tidak ada perburuan token gas, tidak ada kontrak lem yang perlu disinkronkan.</1><1><2>Gunakan jembatan saat Anda mau, bukan karena Anda harus.</2> Likuiditas masih dapat bergerak melalui jembatan, tetapi berinteraksi dengan aplikasi Anda tidak membutuhkannya.</1><1>Hasil: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu rantai — bahkan ketika pengguna tidak.</1>"
+          "question": "Bagaimana ini berbeda dari jembatan atau lapisan pesan?",
+          "answer": "<1><2>Jawaban Singkat</2>: Push adalah tempat aplikasi Anda berjalan. Bridge/messaging hanya memindahkan token atau pesan antar rantai yang mempersulit segalanya bagi pengguna dan pengembang.</1><1><2>Satu rumah vs banyak klon.</2> Dengan bridge/messaging Anda melakukan deployment per rantai dan sinkronisasi melalui pesan. Di Push, Anda melakukan deployment sekali; semua orang mengakses kontrak dan shared state yang sama.</1><1><2>Tidak ada aset terbungkus atau bridging wajib.</2> Pengguna tetap berada di rantai utama mereka dan membayar dengan apa yang sudah mereka miliki; kami menangani routing dan konversi biaya di balik layar.</1><1><2>Identitas & verifikasi terpadu.</2> Kami menerima tanda tangan dari dompet/rantai mana pun dan mengatribusikannya ke pengguna yang sama di Push — non-custodial.</1><1><2>Lebih sedikit bagian yang bergerak.</2> Tidak ada tarian persetujuan lintas-rantai, tidak ada perburuan token gas, tidak ada kontrak lem yang perlu disinkronkan.</1><1><2>Bridge memperkenalkan kompleksitas. Interop asli rantai menyelesaikannya.</2> Bridge membutuhkan upaya rekayasa kompleks, waktu, biaya audit, dan infrastruktur tambahan. Interop asli rantai langsung berfungsi karena aplikasi Anda secara alami mewarisinya.</1><1>Hasil: aplikasi yang lebih sederhana, satu sumber kebenaran, dan UX yang terasa seperti satu rantai — bahkan ketika pengguna tidak.</1>"
         },
         "qna5": {
           "question": "Apakah hanya mendukung EVM? Rantai mana saja yang didukung?",
-          "answer": "<1><2>Tidak, Push mendukung rantai EVM dan non-EVM.</2> Meskipun EVM-first untuk deployment, pengguna dari rantai mana pun (termasuk non-EVM) dapat menggunakan aplikasi Anda seolah-olah mereka menggunakannya secara native.</1>\n<1><2>Deploy sekali. Interop di mana saja.</2> Tulis dan deploy kontrak EVM standar di Push (Solidity/Vyper). Tooling tetap sama.</1>\n<1><2>Pengguna dari rantai mana pun.</2> Ethereum dan major EVM L2s berfungsi secara native. Pengguna non-EVM (misalnya, Solana) menandatangani dengan dompet mereka masing-masing; kami memverifikasi dan merutekan di balik layar — tidak perlu peralihan jaringan.</1>\n<1><2>Didukung hari ini.</2> Lihat daftar rantai yang didukung secara langsung → <3>Supported Chains</3>.</1><1><2>Cakupan perluasan.</2> Kami terus menambahkan lebih banyak rantai. Jika Anda ingin meminta rantai apa pun, silakan <4>hubungi kami</4>.</1>",
-          "supported-urls-title": "Daftar semua blockchain yang didukung oleh Push Chain.",
+          "answer": "<1><2>Tidak, Push mendukung rantai EVM dan non-EVM.</2> Meskipun EVM adalah prioritas utama untuk deployment, pengguna dari rantai mana pun (termasuk non-EVM) dapat menggunakan aplikasi Anda seolah-olah mereka menggunakannya secara native.</1>\n<1><2>Deploy sekali. Interop di mana saja.</2> Tulis dan deploy kontrak EVM standar di Push (Solidity/Vyper). Tooling tetap sama.</1>\n<1><2>Pengguna dari rantai mana pun.</2> Ethereum dan major L2 EVM berfungsi secara native. Pengguna non-EVM (misalnya, Solana) menandatangani dengan dompet asli mereka; kami memverifikasi dan merutekan di bawahnya — tidak perlu pergantian jaringan.</1>\n<1><2>Didukung hari ini.</2> Lihat daftar langsung rantai yang didukung → <3>Rantai yang Didukung</3>.</1><1><2>Cakupan diperluas.</2> Kami terus menambahkan lebih banyak rantai. Jika Anda ingin meminta rantai apa pun, silakan <4>hubungi kami</4>.</1>",
+          "supported-urls-title": "Daftar semua rantai yang didukung oleh Push Chain.",
           "contact-url-title": "Hubungi kami untuk menambahkan rantai baru."
         },
         "qna6": {
-          "question": "Seberapa cepat prosesnya dan bagaimana perkiraan biayanya?",
-          "answer": "<1><2>Kecepatan.</2> Dirancang untuk konfirmasi sekitar 1–2 detik dengan umpan balik UX yang cepat. Periksa metrik langsung di <3>🍩 Donut Testnet</3>.</1><1><2>Model biaya.</2> Anda melihat biaya dalam token yang Anda pilih untuk dibayarkan; jaringan diselesaikan dalam $PC di balik layar.</1><1><2>Biaya tipikal.</2> Biaya tipikal kurang dari <2>$0.001</2> per transaksi. meskipun, bervariasi berdasarkan kompleksitas kontrak, harga token, dan beban jaringan. Anda mendapatkan kutipan yang tepat sebelum Anda menandatangani.</1>",
-          "donut-testnet-title": "Lihat statistik Push Chain Donut testnet."
+          "question": "Seberapa cepat prosesnya dan bagaimana dengan biaya yang dikenakan?",
+          "answer": "<1><2>Kecepatan.</2> Dirancang untuk konfirmasi ~1 detik di Push Chain dengan finalitas determinitis dan umpan balik UX yang cepat. Untuk transaksi universal, tergantung per rantai tetapi sebagian besar blockchain modern seharusnya membutuhkan konfirmasi ~2-3 detik atau kurang. Periksa metrik langsung di <3>🍩 Donut Testnet</3>.</1><1><2>Model biaya.</2> Anda melihat biaya dalam token yang Anda pilih untuk dibayarkan; jaringan diselesaikan dalam $PC di balik layar.</1><1><2>Biaya tipikal.</2> Biaya tipikal kurang dari <2>$0.001</2> per transaksi. meskipun, bervariasi berdasarkan kompleksitas kontrak, harga token dan beban jaringan. Anda mendapatkan kutipan yang tepat sebelum Anda menandatangani.</1>",
+          "donut-testnet-title": "Lihat statistik Push Chain Donut Testnet."
         }
       }
     },
     "short-support-snippet": {
-      "section-aria-label": "Pertanyaan Dukungan tentang Push Chain - Universal 블록체인",
+      "section-aria-label": "Pertanyaan Dukungan tentang Push Chain - Universal Blockchain",
       "title": "Dukungan\nBantuan",
       "title-aria-label": "Pertanyaan dan jawaban umum tentang Push Chain",
       "discord-link-text": "Tanya kami di Discord",
       "discord-link-title": "Bergabunglah dengan komunitas Discord Push Chain untuk dukungan dan pertanyaan",
       "discord-link-aria-label": "Buka komunitas Discord di tab baru",
       "explore-more-text": "Jelajahi Lebih Banyak FAQ",
-      "explore-more-title": "Lihat dokumentasi FAQ Push Chain yang komprehensif dan panduan pengembang",
+      "explore-more-title": "Lihat dokumentasi FAQ lengkap Push Chain dan panduan pengembang",
       "explore-more-aria-label": "Buka halaman FAQ lengkap Push Chain",
       "accordion-aria-label": "Daftar pertanyaan dukungan Push Chain",
       "answer-aria-label": "Jawaban untuk pertanyaan - ",
       "qnas": {
         "qna1": {
           "question": "Saya tidak bisa menghubungkan dompet saya. Apa yang harus saya coba?",
-          "answer": "<1><2>Cek cepat:</2> segarkan halaman, buka kunci dompetmu, dan nonaktifkan pemblokir iklan/skrip agresif untuk push.org.</1><1><2>Tidak perlu mengganti jaringan:</2> tetap di rantai utama; Push menangani perutean di balik layar.</1><1><2>Reset izin situs:</2> di dompetmu, hapus koneksi situs dan sambungkan kembali.</1><1>Masih kesulitan? Tanyakan di <3>Discord</3> atau buka <4>Tiket Dukungan</4>.</1>",
+          "answer": "<1><2>Cek cepat:</2> segarkan halaman, buka kunci dompetmu, dan nonaktifkan pemblokir iklan/skrip agresif untuk push.org.</1><1><2>Tidak perlu beralih jaringan:</2> tetaplah di rantai utama; Push menangani perutean di balik layar.</1><1><2>Reset izin situs:</2> di dompetmu, hapus koneksi situs dan sambungkan kembali.</1><1>Masih kesulitan? Tanyakan di <3>Discord</3> atau buka <4>Tiket Dukungan</4>.</1>",
           "discord-url-title": "Bergabunglah dengan Discord Push Chain untuk bantuan secara langsung.",
           "support-url-title": "Buka tiket dukungan."
         },
         "qna2": {
-          "question": "Transaksi saya sedang menunggu atau gagal — apa yang harus saya lakukan?",
-          "answer": "<1><2>Periksa status:</2> cari transaksi Anda di <3>Push Scan</3> menggunakan hash dari dompet Anda.</1><1><2>Menunggu konfirmasi:</2> biasanya akan dikonfirmasi sebentar lagi; hindari mengirim ulang berulang kali.</1><1><2>Gagal:</2> tidak ada dana yang terambil. Tinjau kembali pesan kesalahan dan coba lagi.</1><1>Insiden yang sedang berlangsung diposting di <4>Status</4>.</1>",
+          "question": "Transaksi saya sedang menunggu atau gagal — apa yang harus saya lakukan sekarang?",
+          "answer": "<1><2>Periksa status:</2> cari transaksi Anda di <3>Push Scan</3> menggunakan hash dari dompet Anda.</1><1><2>Menunggu Konfirmasi:</2> biasanya dikonfirmasi sebentar lagi; hindari mengirim ulang berulang kali.</1><1><2>Gagal:</2> tidak ada dana yang terambil. Tinjau kesalahan dan coba lagi.</1><1>Insiden yang sedang berlangsung diposting di <4>Status</4>.</1>",
           "scan-url-title": "Buka Push Scan (penjelajah).",
           "status-url-title": "Lihat status jaringan dan insiden."
         },
         "qna3": {
           "question": "Bagaimana cara mendapatkan token testnet (Donut)?",
-          "answer": "<1>Gunakan <3>Faucet</3> untuk meminta token uji.</1><1><2>Catatan:</2> batasan tarif mungkin berlaku; beberapa faucet memerlukan verifikasi sederhana. Jika faucet gagal, hubungi kami di <4>Discord</4>.</1>",
+          "answer": "<1>Gunakan <3>Faucet</3> untuk meminta token uji.</1><1><2>Catatan:</2> batas laju mungkin berlaku; beberapa faucet memerlukan verifikasi sederhana. Jika faucet gagal, hubungi kami di <4>Discord</4>.</1>",
           "faucet-url-title": "Buka keran Push Chain.",
           "discord-url-title": "Bergabunglah dengan Discord Push Chain."
         },
         "qna4": {
-          "question": "Bagaimana cara saya melaporkan bug atau kerentanan?",
-          "answer": "<1><2>Kesalahan aplikasi:</2> laporkan <3>Tiket Dukungan</3> atau posting di <4>Discord</4> dengan langkah-langkah untuk mereproduksi.</1><1><2>Masalah keamanan:</2> kirim email ke <5>security@push.org</5>. Harap hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
+          "question": "Bagaimana cara melaporkan bug atau kerentanan?",
+          "answer": "<1><2>Bug aplikasi:</2> laporkan <3>Tiket Dukungan</3> atau posting di <4>Discord</4> dengan langkah-langkah untuk mereproduksi masalah.</1><1><2>Masalah keamanan:</2> kirim email ke <5>security@push.org</5>. Hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
           "support-url-title": "Buka tiket dukungan.",
-          "discord-url-title": "Bergabunglah dengan Discord."
+          "discord-url-title": "Bergabung dengan Discord."
         },
         "qna5": {
-          "question": "Di mana dokumentasi dan panduan cepatnya?",
+          "question": "Di mana saya bisa menemukan dokumentasi dan panduan cepat?",
           "answer": "<1>Mulai dengan <3>Dokumentasi</3> untuk panduan cepat dan API, dan <4>Basis Pengetahuan</4> untuk konsep, pembahasan mendalam, dan FAQ.</1>",
-          "docs-url-title": "Buka dokumentasi developer.",
+          "docs-url-title": "Buka dokumentasi pengembang.",
           "kb-url-title": "Buka Basis Pengetahuan."
         },
         "qna6": {
-          "question": "Bisakah saya meminta dukungan untuk rantai baru, fitur, atau integrasi?",
-          "answer": "<1>Ya. Beri tahu kami rantai/alat yang Anda butuhkan melalui <3>Kontak</3> atau buka isu di <4>GitHub</4>. Kami terus memperluas cakupan.</1>",
+          "question": "Bisakah saya meminta dukungan untuk rantai, fitur, atau integrasi baru?",
+          "answer": "<1>Ya. Beri tahu kami rantai/alat apa yang Anda butuhkan melalui <3>Kontak</3> atau buka masalah di <4>GitHub</4>. Kami terus memperluas cakupan.</1>",
           "contact-url-title": "Hubungi tim Push Chain.",
           "github-url-title": "Buka organisasi GitHub."
         }
@@ -1027,53 +1137,53 @@
       "discord-link-aria-label": "Buka Discord di tab baru",
       "explore-more-text": "Jelajahi Program",
       "explore-more-title": "Lihat hibah, BRB, dan program ekosistem",
-      "explore-more-aria-label": "Navigasi ke program Push Chain",
+      "explore-more-aria-label": "Arahkan ke program Push Chain",
       "accordion-aria-label": "Daftar pertanyaan kontak",
       "answer-aria-label": "Jawaban untuk pertanyaan - ",
       "qnas": {
         "qna1": {
           "question": "Kategori mana yang sebaiknya saya pilih?",
-          "answer": "<1><2>Kemitraan & Integrasi</2>: dompet, infra, bursa, kolaborasi protokol → <3>Hubungi Kemitraan</3>.</1><1><2>Hibah & Program</2>: BRB, Bootcamp, pendanaan → <4>Hubungi Hibah</4>.</1><1><2>Media & Pembicaraan</2>: wawancara, pernyataan, presentasi → <5>Media & Acara</5>.</1><1><2>Validator</2>: minat operator node, penyedia RPC → <6>Validator</6>.</1><1><2>Hukum</2>: merek dagang, permintaan data, perjanjian → <7>Hukum</7>.</1><1>Butuh bantuan teknis atau info status? Gunakan <8>Dukungan</8> saja.</1>",
-          "contact-partnerships-title": "Hubungi Kontak Kemitraan",
+          "answer": "<1><2>Kemitraan & Integrasi</2>: dompet, infra, bursa, kolaborasi protokol → <3>Hubungi Kemitraan</3>.</1><1><2>Hibah & Program</2>: BRB, Bootcamp, pendanaan → <4>Hubungi Hibah</4>.</1><1><2>Media & Pembicara</2>: wawancara, pernyataan, ceramah → <5>Media & Acara</5>.</1><1><2>Validator</2>: minat operator node, penyedia RPC → <6>Validator</6>.</1><1><2>Legal</2>: merek dagang, permintaan data, perjanjian → <7>Legal</7>.</1><1>Butuh bantuan teknis atau status? Gunakan <8>Dukungan</8> sebagai gantinya.</1>",
+          "contact-partnerships-title": "Hubungi Kemitraan",
           "contact-grants-title": "Hubungi Kontak Hibah",
-          "contact-media-title": "Kontak Media & Pembicara Terbuka",
+          "contact-media-title": "Hubungi Media & Kontak Pembicara",
           "contact-validators-title": "Hubungi Validator Terbuka",
-          "contact-legal-title": "Buka Kontak Hukum & Kepatuhan",
-          "support-title": "Kunjungi Pusat Bantuan"
+          "contact-legal-title": "Hubungi Bagian Hukum & Kepatuhan",
+          "support-title": "Kunjungi Pusat Dukungan"
         },
         "qna2": {
-          "question": "Seberapa cepat Anda merespons?",
-          "answer": "<1>Kami bertujuan untuk membalas sebagian besar pertanyaan dalam <2>1–2 hari kerja</2>. Permintaan mendesak (misalnya, tenggat waktu media, keamanan) akan diprioritaskan.</1><1>Untuk masalah mendesak, sertakan <2>tenggat waktu, zona waktu</2>, dan <2>kontak terbaik</2>.</1>"
+          "question": "Seberapa cepat Anda membalas?",
+          "answer": "<1>Kami berusaha untuk merespons sebagian besar pertanyaan dalam <2>1–2 hari kerja</2>. Permintaan mendesak (misalnya, tenggat waktu media, keamanan) akan diprioritaskan.</1><1>Untuk masalah mendesak, sertakan <2>tenggat waktu, zona waktu</2>, dan <2>kontak terbaik</2>.</1>"
         },
         "qna3": {
-          "question": "Detail apa saja yang membantu untuk kemitraan?",
-          "answer": "<1>Bagikan <2>nama perusahaan</2>, <2>website</2>, dan <2>apa yang ingin Anda bangun bersama kami</2>.</1><1>Informasi tambahan yang berguna: ukuran audiens, wilayah, perkiraan waktu, dan cakupan teknis atau SDK yang Anda rencanakan untuk digunakan.</1><1>Mulai di sini → <3>Kemitraan</3>.</1>",
+          "question": "Detail apa yang membantu untuk kemitraan?",
+          "answer": "<1>Bagikan <2>nama perusahaan</2>, <2>situs web</2>, dan <2>apa yang ingin Anda bangun bersama</2>.</1><1>Informasi tambahan yang bermanfaat: ukuran audiens, wilayah, waktu, dan cakupan teknis atau SDK yang Anda rencanakan untuk digunakan.</1><1>Mulai di sini → <3>Kemitraan</3>.</1>",
           "contact-partnerships-title": "Hubungi Kemitraan"
         },
         "qna4": {
           "question": "Bagaimana cara kerja hibah?",
-          "answer": "<1>Ceritakan nama <2>proyek Anda</2>, <2>repo/website</2>, tahapannya (<2>ide, prototipe, MVP, live</2>), dan rencana singkatnya.</1><1>Aplikasi hibah selalu diproses berdasarkan urutan kedatangan. Mulai di sini → <3>Hibah</3>.</1>",
+          "answer": "<1>Ceritakan tentang <2>nama proyek</2>, <2>repo/website</2>, tahapannya (<2>ide, prototipe, MVP, live</2>), dan rencana singkatnya.</1><1>Permohonan hibah selalu diproses berdasarkan urutan kedatangan. Mulai di sini → <3>Hibah</3>.</1>",
           "contact-grants-title": "Hubungi Kontak Hibah"
         },
         "qna5": {
-          "question": "Permintaan media & permintaan berbicara",
-          "answer": "<1>Sertakan outlet Anda, topik, <2>batas waktu</2>, dan pertanyaan. Untuk talk/workshop, tambahkan tanggal acara, format, dan audiens.</1><1>Hubungi kami melalui <3>Media & Pembicaraan</3>. Kami dapat berbagi logo, bio pendiri, dan boilerplate.</1>",
-          "contact-media-title": "Hubungi Media & Pembicara"
+          "question": "Permintaan media & berbicara",
+          "answer": "<1>Sertakan outlet Anda, topik, <2>batas waktu</2>, dan pertanyaan. Untuk pembicaraan/lokakarya, tambahkan tanggal acara, format, dan audiens.</1><1>Hubungi kami melalui <3>Media & Pembicaraan</3>. Kami dapat membagikan logo, biodata pendiri, dan materi boilerplate.</1>",
+          "contact-media-title": "Hubungi Media & Kontak Bicara"
         },
         "qna6": {
           "question": "Bagaimana cara melaporkan masalah keamanan?",
-          "answer": "<1>Email <3><2>security@push.org</2></3> dengan langkah-langkah untuk mereproduksi dan dampaknya. Hindari pengungkapan publik sampai kami mengkonfirmasi perbaikan.</1>",
+          "answer": "<1>Email <3><2>security@push.org</2></3> dengan langkah-langkah untuk mereproduksi dan dampaknya. Hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
           "security-policy-title": "Baca Kebijakan Keamanan & Pengungkapan"
         },
         "qna7": {
           "question": "Saya ingin menjalankan validator / menyediakan infrastruktur",
-          "answer": "<1>Bagikan profil infra Anda (pengalaman, wilayah), perkiraan waktu aktif/SLA, dan ketentuan pilihan. Mulai di sini → <3>Validators</3>.</1>",
+          "answer": "<1>Bagikan profil infra Anda (pengalaman, wilayah), perkiraan waktu aktif/SLA, dan persyaratan pilihan Anda. Mulai di sini → <3>Validators</3>.</1>",
           "contact-validators-title": "Hubungi Validator Terbuka"
         },
         "qna8": {
-          "question": "Karier & perekrutan",
-          "answer": "<1>Jika ada lowongan yang tersedia, mereka akan diposting di saluran kami. Anda masih dapat membagikan profil dan minat Anda melalui <3>Menghubungi kami</3> atau ikuti <4>@PushChain</4> untuk pembaruan.</1>",
-          "contact-careers-title": "Kontak untuk Karir Terbuka",
+          "question": "Karir & perekrutan",
+          "answer": "<1>Jika ada lowongan yang tersedia, akan diposting di saluran kami. Anda tetap bisa membagikan profil dan minat Anda melalui <3>Menghubungi kami</3> atau ikuti <4>@PushChain</4> untuk mendapatkan pembaruan.</1>",
+          "contact-careers-title": "Kontak Karir Terbuka",
           "twitter-title": "Ikuti @PushChain di X"
         }
       }
@@ -1089,8 +1199,8 @@
           "description": "Laporan bug, SDK/API, smart contract, bantuan integrasi"
         },
         "network": {
-          "label": "🌐 Jaringan & testnet",
-          "description": "Eksplorer/Push Scan, RPC, Keran, Donut testnet masalah"
+          "label": "🌐 Jaringan & Testnet",
+          "description": "Eksplorer/Push Scan, RPC, Keran, masalah Donut testnet"
         },
         "wallet": {
           "label": "👛 Dompet Universal",
@@ -1102,7 +1212,7 @@
         },
         "security": {
           "label": "🛡️ Keamanan",
-          "description": "Laporan kerentanan, pengungkapan bertanggung jawab (security@push.org)"
+          "description": "Laporan kerentanan, pengungkapan yang bertanggung jawab (security@push.org)"
         },
         "general": {
           "label": "💬 Pertanyaan Umum",
@@ -1110,10 +1220,10 @@
         },
         "partnerships": {
           "label": "🤝 Kemitraan & Integrasi",
-          "description": "Pengembangan bisnis, integrasi ekosistem (dompet, infrastruktur, bursa, protokol)"
+          "description": "Pengembangan Bisnis, integrasi ekosistem (dompet, infrastruktur, bursa, protokol)"
         },
         "grants": {
-          "label": "💰 Hibah & Program Ekosistem",
+          "label": "💰 Grants & Program Ekosistem",
           "description": "BRB, Bootcamp, hibah, pertanyaan pendanaan"
         },
         "media": {
@@ -1121,8 +1231,8 @@
           "description": "Wawancara, pernyataan, aset, pengecekan fakta"
         },
         "events": {
-          "label": "🎤 Bicara & Acara",
-          "description": "Pembicaraan, lokakarya, hackathon, sponsor"
+          "label": "🎤 Pembicaraan & Acara",
+          "description": "Acara, lokakarya, hackathon, sponsorship"
         },
         "careers": {
           "label": "👩‍💻 Karier",
@@ -1130,7 +1240,7 @@
         },
         "validators": {
           "label": "🧡 Validator / Operator Node",
-          "description": "Minat operator, penyedia RPC, mitra infra"
+          "description": "Minat operator, penyedia RPC, mitra infrastruktur"
         },
         "legal": {
           "label": "⚖️ Legal & Kepatuhan",
@@ -1144,7 +1254,7 @@
             "subtitle": "Pilih kategori yang paling sesuai dengan pertanyaan Anda"
           },
           "contact": {
-            "title": "Mari berkenalan",
+            "title": "Mari Kenalan",
             "subtitle": "Kami akan menggunakan informasi ini untuk menghubungi Anda kembali",
             "name-label": "Nama Anda",
             "name-placeholder": "Masukkan nama lengkap Anda",
@@ -1153,16 +1263,16 @@
             "email-placeholder": "Masukkan alamat email Anda"
           },
           "details": {
-            "title": "Ceritakan lebih lanjut",
+            "title": "Ceritakan lebih banyak",
             "subtitle": "Berikan detail mengenai pertanyaan Anda",
             "subject-label": "Subjek",
             "subject-placeholder": "Ringkasan singkat masalah Anda",
             "message-label": "Pesan",
-            "message-placeholder": "Jelaskan masalah Anda secara detail. Sertakan pesan kesalahan apa pun, langkah-langkah untuk mereproduksinya, atau informasi yang relevan."
+            "message-placeholder": "Jelaskan masalah Anda secara detail. Sertakan pesan kesalahan, langkah-langkah untuk mereproduksi, atau informasi yang relevan."
           },
           "submit": {
             "title": "Tinjau dan Kirim",
-            "subtitle": "Mohon periksa kembali informasi Anda sebelum mengirim",
+            "subtitle": "Mohon tinjau kembali informasi Anda sebelum mengirim",
             "placeholder": "Ceritakan lebih banyak tentang bantuan yang Anda butuhkan..."
           }
         },
@@ -1173,10 +1283,10 @@
           "submitting": "Memproses..."
         },
         "validation": {
-          "name-required": "Nama dibutuhkan",
-          "name-min-length": "Nama harus memiliki setidaknya 2 karakter",
+          "name-required": "Nama diperlukan",
+          "name-min-length": "Nama harus setidaknya 2 karakter",
           "email-required": "Email diperlukan",
-          "email-invalid": "Masukkan alamat email yang valid",
+          "email-invalid": "Mohon masukkan alamat email yang valid",
           "subject-required": "Subjek wajib diisi",
           "message-required": "Pesan diperlukan",
           "category-required": "Silakan pilih kategori",
@@ -1184,12 +1294,12 @@
         },
         "success": {
           "title": "Tiket Berhasil Dikirim!",
-          "message": "Terima kasih telah menghubungi kami. Kami telah menerima tiket dukungan Anda dan akan segera menghubungi Anda kembali.",
+          "message": "Terima kasih sudah menghubungi kami. Kami sudah menerima tiket dukungan Anda dan akan segera menghubungi Anda kembali.",
           "button": "Kirim Tiket Lain"
         },
         "error": {
           "title": "Pengiriman Gagal",
-          "message": "Terjadi kesalahan saat mengirimkan tiket Anda. Silakan coba lagi atau hubungi kami langsung.",
+          "message": "Terjadi kesalahan saat mengirimkan tiket Anda. Silakan coba lagi atau hubungi kami secara langsung.",
           "button": "Coba Lagi"
         }
       }
@@ -1200,7 +1310,7 @@
       "navigate-to-aria-label": "Navigasi ke {{page}}",
       "go-to-title": "Buka halaman {{page}}",
       "current-page-aria-label": "Halaman saat ini: {{page}}",
-      "separator-aria-label": "Pemisah remah roti"
+      "separator-aria-label": "Pemisah jejak roti"
     },
     "explainer": {
       "prepend": "Langsung ke ",
@@ -1236,7 +1346,7 @@
         "share-modal-title": "Bagikan",
         "copy-link": "Salin tautan",
         "about-title": "Tentang Push Chain",
-        "about-description": "Push Chain adalah blockchain universal pertama yang dirancang untuk menghilangkan fragmentasi di seluruh chain. Ini memungkinkan pengembang untuk melakukan deploy sekali, dan langsung tersedia untuk pengguna di chain mana pun, baik EVM atau Non-EVM (termasuk Ethereum, Solana, Bitcoin dan lainnya). Ini adalah chain Proof of Stake (PoS) yang 100% kompatibel dengan EVM yang memungkinkan pengguna untuk berinteraksi dengan aplikasi yang di-deploy di Push Chain dari chain mana pun, seperti yang mereka lakukan secara native di chain mereka sendiri.",
+        "about-description": "Push Chain adalah blockchain universal pertama yang dirancang untuk menghilangkan fragmentasi di seluruh rantai. Ini memungkinkan pengembang untuk menerapkan sekali, dan langsung tersedia untuk pengguna di rantai mana pun, baik EVM atau Non-EVM (termasuk Ethereum, Solana, Bitcoin dan lainnya). Ini adalah rantai Proof of Stake (PoS) yang 100% kompatibel dengan EVM yang memungkinkan pengguna untuk berinteraksi dengan aplikasi yang diterapkan di Push Chain dari rantai mana pun, sebagaimana mereka lakukan secara native di rantai mereka sendiri.",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",
@@ -1246,28 +1356,30 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Proyek G.U.D deployathon sudah ONLINE! Deploy aplikasi, menang $5000",
-      "button-text": "Bergabung & Mengaktifkan",
-      "button-title": "Proyek G.U.D deployathon LIVE",
-      "button-aria-label": "Proyek G.U.D deployathon LIVE. Kamu bisa cek di sini",
-      "image-alt": "Push Chain Tesnet Donut - Blok Keterampilan Seimbang",
-      "close-button-aria-label": "Tutup Notifikasi Jaringan Blockchain",
-      "container-aria-label": "Notifikasi jaringan Push Chain uji coba"
+      "title": "",
+      "description": "Deployathon Proyek G.U.D SEKARANG BERLANGSUNG! Deploy aplikasi, menangkan $5000",
+      "button-text": "Buka Universal & Deploy",
+      "button-title": "Project G.U.D deployathon SEDANG BERLANGSUNG",
+      "button-aria-label": "Deployathon Project G.U.D. sedang berlangsung. Anda bisa cek di sini",
+      "image-alt": "Jaringan Uji Push Chain Donut - Blokchai Umum",
+      "close-button-title": "Tutup notifikasi testnet",
+      "close-button-aria-label": "Tutup notifikasi Push Chain testnet",
+      "container-aria-label": "Notifikasi testnet Push Chain"
     },
     "rewards-notification": {
-      "title": "Beta Tertutup Donut Testnet Telah Dibuka!",
+      "title": "Donut Testnet Closed beta sudah dibuka!",
       "description": "Dapatkan bocoran tentang Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
-      "image-alt": "Hadiah Push Chain टेस्टनेट - Bangun Aplikasi Universal",
+      "image-alt": "Push Chain Testnet Rewards - Build Universal Apps",
       "close-button-title": "Tutup notifikasi hadiah",
       "close-button-aria-label": "Tutup notifikasi hadiah Push Chain",
       "container-aria-label": "Notifikasi hadiah Push Chain"
     },
     "info-bar": {
-      "title": "Peluncuran di Donut Testnet Sekarang — Buka Kunci Hadiah untuk Pengembang dan Pengguna Awal.",
+      "title": "Peluncuran di Push Testnet Sekarang – Buka Kunci Hadiah untuk Pembuat dan Pengguna Awal.",
       "learn-more-text": "Pelajari Lebih Lanjut",
       "learn-more-title": "Pelajari lebih lanjut tentang pengumuman ini",
       "dismiss-button-title": "Tutup pengumuman",
-      "dismiss-button-aria-label": "Tutup bilah pengumuman",
+      "dismiss-button-aria-label": "Tutup pengumuman",
       "container-aria-label": "Pengumuman Situs",
       "star-icon-alt": "Ikon bintang pengumuman"
     },
@@ -1275,7 +1387,7 @@
       "message": "Push Metamask Snap sekarang aktif,",
       "know-more-text": "Mulai sekarang!",
       "know-more-title": "Mulai dengan Push Metamask Snap",
-      "close-button-title": "Tutup pemberitahuan",
+      "close-button-title": "Tutup notifikasi",
       "close-button-aria-label": "Tutup Pemberitahuan Snap MetaMask",
       "container-aria-label": "Pengumuman Push Metamask Snap"
     }

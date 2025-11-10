@@ -2,11 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "プロジェクトG.U.Dのデプロイメント祭りがオンラインで開催されています!アプリをデプロイして、$5000を獲得",
-      "button-title": "フイコト、G.U.D。ミムンガに前セでい",
-      "button-aria-label": "フリカトンを反る.しまちいらう",
-      "image-alt": "シントアゼヺカ そんちる游朡",
-      "close-button-title": ""
+      "description": "プロジェクト G.U.D デプロイアソンが開始されました！<1>app</1>をデプロイして、$5000を獲得しましょう！",
+      "button-text": "ユニバーサルに移行してデプロイ",
+      "button-title": "Project G.U.D deployathon が開始されました",
+      "button-aria-label": "Project G.U.D deployathon が開始されました。こちらで詳細をご確認いただけます: ",
+      "image-alt": "Push Chain Testnet Donut - ユニバーサル ブロックチェーン",
+      "close-button-title": "テストネット通知を閉じる",
+      "close-button-aria-label": "Push Chain テストネットの通知を閉じる",
+      "container-aria-label": "Push Chain testnet の通知"
     }
   }
 }

@@ -4,16 +4,16 @@
       "more-posts": {
         "title": "Push Chain से और जानें",
         "follow-button": "फॉलो करें",
-        "read-more": "और पढ़ें"
+        "read-more": "और पढ़ें"
       },
       "list": {
-        "recent-updates": "नवीनतम अपडेट",
+        "recent-updates": "हालिया अपडेट",
         "page-title": "पेज {{page}}"
       },
       "paginator": {
         "nav-aria-label": "ब्लॉग लिस्ट पेज नेविगेशन",
         "newer-entries": "और प्रविष्टियाँ",
-        "older-entries": "पहले की प्रविष्टियाँ"
+        "older-entries": "पुराने लेख"
       },
       "footer-item": {
         "share-title": "इस लेख को साझा करके बातचीत का हिस्सा बनें",
@@ -21,7 +21,7 @@
         "share-modal-title": "शेयर करें",
         "copy-link": "लिंक कॉपी करें",
         "about-title": "Push Chain के बारे में",
-        "about-description": "Push Chain पहला सच्चा <blockchain> है जिसे सभी <blockchain> में खंडन को खत्म करने के लिए डिज़ाइन किया गया है। यह डेवलपर्स को एक बार तैनात करने और तुरंत किसी भी <blockchain> पर उपयोगकर्ताओं के लिए उपलब्ध होने में सक्षम बनाता है, चाहे वह EVM हो या Non-EVM (Ethereum, Solana, Bitcoin सहित)। यह 100% EVM संगत, Proof of Stake (PoS) <blockchain> है जो उपयोगकर्ताओं को किसी भी <blockchain> से Push Chain पर तैनात <app> के साथ इंटरैक्ट करने की अनुमति देता है, जैसे कि वे स्वाभाविक रूप से अपनी <blockchain> पर करते हैं।",
+        "about-description": "Push Chain पहला सच्चा <blockchain> है जिसे सभी <blockchain> में मौजूद विखंडन को खत्म करने के लिए डिज़ाइन किया गया है। यह डेवलपर्स को एक बार डिप्लॉय करने और तुरंत किसी भी <blockchain> पर यूजर्स के लिए उपलब्ध होने की अनुमति देता है, चाहे EVM हो या गैर-EVM (जिसमें Ethereum, Solana, Bitcoin आदि शामिल हैं)। यह 100% EVM कम्पेटिबल, प्रूफ ऑफ़ स्टेक (PoS) <blockchain> है जो यूजर्स को किसी भी <blockchain> से Push Chain पर डिप्लॉय किए गए <app> के साथ इंटरैक्ट करने की अनुमति देता है, जैसा कि वे मूल रूप से अपनी श्रृंखला पर करते हैं।",
         "social-twitter": "ट्विटर",
         "social-discord": "Discord",
         "social-youtube": "YouTube",

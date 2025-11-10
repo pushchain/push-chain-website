@@ -3,34 +3,34 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "深掘り — コンセプトとアーキテクチャ",
-          "description": "わかりやすい解説記事：シェーアードステート、手数料抽象化、USV/UEA、そしてユニバーサルエグゼキューションレイヤーについて。",
-          "og-title": "ディープダイブ - コンセプトとアーキテクチャ",
-          "og-description": "Push Chainモジュール、設計上の決定、パフォーマンスに関する詳細な記事。",
-          "twitter-title": "ディープダイブ - 裏側を探る",
-          "twitter-description": "Push Chain の仕組みについてわかりやすく解説します。"
+          "title": "ディープダイブ — コンセプトとアーキテクチャ",
+          "description": "共有ステート、手数料抽象化、USV/UEA、そしてユニバーサル・エグゼキューション・レイヤーに関する読みやすい解説。",
+          "og-title": "ディープダイブ - コンセプト＆アーキテクチャ",
+          "og-description": "Push Chainのモジュール、設計決定、パフォーマンスに関する詳細な記事。",
+          "twitter-title": "深掘り - 裏側を覗いてみよう",
+          "twitter-description": "Push Chain の仕組みを解説します。"
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge-base": "ナレッジベース"
+            "knowledge-base": "知識ベース"
           },
           "blocks": {
             "title": "深掘り",
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Architecture Deep Dives\n\nPush Chain のアーキテクチャと仕組みについて、1つずつモジュールごとに詳しく学びましょう。",
-                  "curated-reads": "## 整理された読み物 👇"
+                  "intro": "## Architecture Deep Dives\n\nPush Chain のアーキテクチャと動作の仕組みについて、1つのモジュールずつ詳しく学びましょう。",
+                  "curated-reads": "## 厳選された読み物 👇"
                 }
               },
               "learn-push-chain": {
                 "title": "Push Chain の仕組みを学びましょう！",
                 "items": {
                   "interop-spectrum": {
-                    "title": "インターオペラビリティのスペクトラム"
+                    "title": "インターオペラビリティのスペクトル"
                   },
                   "understand-proof-of-stake-part-1": {
-                    "title": "Proof of Stake (POS) を理解する - パート 1"
+                    "title": "Proof of Stake（POS）の理解 - パート1"
                   }
                 }
               }

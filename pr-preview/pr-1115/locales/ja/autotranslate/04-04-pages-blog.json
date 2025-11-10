@@ -2,12 +2,12 @@
   "pages": {
     "blog": {
       "seo": {
-        "title": "ブログ — アップデート、詳細解説 & ストーリー",
-        "description": "Push Chain チームとエコシステムからのニュース、リリースノート、技術的な詳細な解説、そして開発者のストーリー。",
-        "og-title": "Push Chain Blog - アップデート、深掘り & ストーリー",
-        "og-description": "Push Chain のプロダクトアップデート、開発ストーリー、詳細な解説、そしてエコシステムニュースをフォローしてください。",
+        "title": "ブログ — 最新情報、詳細解説、ストーリー",
+        "description": "Push Chain チームとエコシステムからのニュース、リリースノート、技術的な詳細、開発者のストーリー。",
+        "og-title": "Push Chain Blog - 最新情報、詳細解説＆ストーリー",
+        "og-description": "Push Chain のプロダクトアップデート、開発ストーリー、詳細な解説、エコシステムニュースをフォローしてください。",
         "twitter-title": "Push Chain Blog - 最新情報",
-        "twitter-description": "リリース情報、詳細解説、開発者ストーリー — 最新情報をチェック！"
+        "twitter-description": "最新情報、詳細な解説、開発者ストーリー — 最新情報をチェック。"
       }
     }
   }

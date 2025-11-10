@@ -1,18 +1,18 @@
 {
   "components": {
     "mailing-signup": {
-      "title": "Đừng bỏ lỡ bất kỳ thông tin nào",
-      "text": "Đăng ký để cập nhật các thông báo mới nhất về hệ sinh thái, các chương trình ưu đãi và nhiều hơn nữa.",
+      "title": "Đừng Bỏ Lỡ Bất Cứ Thông Tin Nào",
+      "text": "Đăng ký để cập nhật thông tin về các thông báo của hệ sinh thái, các sự kiện tặng quà và nhiều hơn nữa.",
       "email-input": "Email của bạn",
       "email-input-placeholder": "Nhập địa chỉ email của bạn",
-      "email-input-title": "Đăng ký nhận bản tin Push Chain để cập nhật thông tin",
+      "email-input-title": "Đăng ký nhận bản tin từ Push Chain để cập nhật thông tin",
       "email-input-aria-label": "Địa chỉ email để đăng ký nhận bản tin",
       "submit-button": "Đăng ký",
       "submit-button-title": "Đăng ký nhận bản tin Push Chain",
       "submit-button-aria-label": "Đăng ký nhận bản tin",
-      "loading-submit-button": "Vui lòng chờ...",
+      "loading-submit-button": "Xin chờ một chút...",
       "arrow-button-aria-label": "Đăng ký nhận bản tin",
-      "arrow-button-title": "Đăng ký nhận bản cập nhật từ Push Chain",
+      "arrow-button-title": "Đăng ký nhận thông tin cập nhật từ Push Chain",
       "form-aria-label": "Biểu mẫu đăng ký nhận bản tin",
       "success-message-aria-label": "Đăng ký thành công",
       "error-message-aria-label": "Thông báo lỗi đăng ký"

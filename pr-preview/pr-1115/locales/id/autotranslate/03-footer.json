@@ -1,9 +1,9 @@
 {
   "footer": {
     "email-section": {
-      "title": "Tetap terhubung dengan Push Chain",
-      "title-secondary": "Berita dan pembaruan!",
-      "title-aria-label": "Bagian berlangganan newsletter",
+      "title": "Tetap dapatkan informasi terbaru dari Push Chain",
+      "title-secondary": "berita dan pembaruan!",
+      "title-aria-label": "Bagian langganan newsletter",
       "section-aria-label": "Pendaftaran newsletter Push Chain"
     },
     "main-section": {
@@ -41,14 +41,14 @@
       "knowledge-base-title": "Basis Pengetahuan Push Chain",
       "blog": "Blog",
       "blog-title": "Blog Push Chain",
-      "litepaper": "Whitepaper",
-      "litepaper-title": "Push Chain litepaper (PDF)",
+      "litepaper": "Litepaper",
+      "litepaper-title": "litepaper Push Chain (PDF)",
       "brand-kit": "Kit Merek",
       "brand-kit-title": "Aset dan panduan merek Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "Eksplorer blokcheyn Push Chain",
+      "push-scan-title": "Penjelajah blockchain Push Chain",
       "faucet": "Faucet",
-      "faucet-title": "Dapatkan token uji coba dari keran Push Chain",
+      "faucet-title": "Dapatkan token uji dari keran Push Chain",
       "push-portal": "Push Portal",
       "push-portal-title": "Portal komunitas Push Chain",
       "support": "Dukungan",
@@ -58,15 +58,15 @@
       "contact-us": "Hubungi Kami",
       "contact-us-title": "Kemitraan, BD, media, atau pertanyaan umum",
       "careers": "Karir",
-      "careers-title": "Lowongan terbuka di Push Chain",
+      "careers-title": "Lowongan kerja di Push Chain",
       "twitter": "X (Twitter)",
       "twitter-title": "Ikuti Push Chain di X (Twitter)",
       "discord": "Discord",
       "discord-title": "Bergabunglah dengan Discord Push Chain",
       "reddit": "Reddit",
-      "reddit-title": "Bergabunglah dengan subreddit Push Chain",
+      "reddit-title": "Bergabung dengan subreddit Push Chain",
       "telegram": "Telegram",
-      "telegram-title": "Bergabunglah dengan Push Chain Telegram"
+      "telegram-title": "Bergabung dengan Telegram Push Chain"
     },
     "social-section": {
       "section-aria-label": "Tautan media sosial dan informasi hukum",
@@ -81,7 +81,7 @@
       "privacy-policy": "Kebijakan Privasi",
       "privacy-policy-title": "Baca Kebijakan Privasi",
       "privacy-policy-aria-label": "Kebijakan Privasi",
-      "terms-of-service": "Ketentuan Layanan",
+      "terms-of-service": "Syarat dan Ketentuan",
       "terms-of-service-title": "Baca Ketentuan Layanan",
       "terms-of-service-aria-label": "Ketentuan Layanan",
       "cookie-preferences": "Preferensi Cookie",
@@ -89,7 +89,7 @@
     },
     "footer-image": {
       "alt": "Ilustrasi footer Push Chain",
-      "title": "Push Chain - Universal 블록체인"
+      "title": "Push Chain - Universal ブロックチェーン"
     }
   }
 }

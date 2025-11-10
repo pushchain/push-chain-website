@@ -2,11 +2,11 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Ayo Dorong — Inisiatif Komunitas",
+        "title": "Mari Kita Dorong — Inisiatif Komunitas",
         "description": "Inisiatif komunitas Push, postingan, dan lainnya.",
         "og-title": "Ayo Push - Inisiatif Komunitas untuk Push Chain",
-        "og-description": "Inisiatif yang digerakkan oleh komunitas dan saham untuk Push Chain.",
-        "twitter-title": "Ayo Push | Inisiatif Komunitas",
+        "og-description": "Inisiatif yang digerakkan oleh komunitas dan bagian untuk Push Chain.",
+        "twitter-title": "Mari Kita Dorong | Inisiatif Komunitas",
         "twitter-description": "Lihat inisiatif komunitas Push untuk Push Chain."
       },
       "hero-section": {
@@ -21,11 +21,11 @@
         },
         "meta": {
           "tweet-alt": "Tweet dari anggota komunitas Push Chain",
-          "loading-alt": "Memuat lebih banyak tweet komunitas"
+          "loading-alt": "Memuat lebih banyak tweet dari komunitas"
         },
         "tweets-counter": "{{count}} Tweet dan terus bertambah!",
         "loading": "Memuat lebih banyak tweet...",
-        "end-message": "Anda sudah sampai di akhir! 🎉"
+        "end-message": "Anda telah sampai di akhir! 🎉"
       }
     }
   }

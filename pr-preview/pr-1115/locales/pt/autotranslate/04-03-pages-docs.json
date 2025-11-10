@@ -2,19 +2,44 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Documentação — Crie Apps Universais",
+        "title": "Documentação — Construa Apps Universais",
         "description": "Tudo o que você precisa para lançar na Push Chain: guias rápidos, SDKs, referência da API, exemplos e configuração de nós.",
         "og-title": "Push Chain Docs - Guias rápidos, SDKs e API",
-        "og-description": "Construa e execute apps na universal execution layer com guias e exemplos claros.",
+        "og-description": "Crie e execute apps na universal execution layer com guias e exemplos claros.",
         "twitter-title": "Push Chain Docs - Comece a construir agora",
-        "twitter-description": "Guias rápidos, SDKs, referência da API e exemplos para lançar rápido."
+        "twitter-description": "Inícios rápidos, SDKs, referência da API e exemplos para lançar rapidamente."
       },
       "header": {
-        "countdown-title": "Documentação do Testnet Lançando Em Breve",
-        "description": "Psst... quer dar uma espiadinha no Push Chain Testnet - Donut? Você pode acessar a versão de prévia secreta se inscrevendo no nosso Project G.U.D Deployathon no DoraHacks.",
-        "tweet-button": "Project G.U.D Deployathon",
-        "title": "Project G.U.D Deployathon",
-        "ariaLabel": "Project G.U.D Deployathon"
+        "countdown-title": "Lançamento da Documentação do testnet em",
+        "description": "Psst... quer dar uma espiada no Testnet Donut? Mande um alô com #pushchainsecret e te enviaremos acesso a uma versão de teste.",
+        "tweet-button": "Tweet sobre Push Chain",
+        "title": "Tweet sobre o Push Chain",
+        "ariaLabel": "Compartilhe no Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "O que é Push Chain?",
+                  "subtitle": "Push Chain oferece um conjunto de ferramentas unificado para construir aplicativos verdadeiramente universais.",
+                  "ctatitle": "Saiba Mais"
+                },
+                "builders": {
+                  "title": "Vamos construir!",
+                  "subtitle": "Tudo o que você precisa com o Push Chain SDK para criar seu app universal",
+                  "ctatitle": "Saiba Mais"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "Integre qualquer app baseado em React em menos de 5 minutos.",
+                  "ctatitle": "Saiba Mais"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

@@ -4,11 +4,11 @@
       "push101": {
         "seo": {
           "title": "Dasar-Dasar Push Chain — Pengantar",
-          "description": "Pengantar ramah pemula untuk Push Chain dan aplikasi universal—apa itu, bagaimana cara kerjanya, dan bagaimana cara memulainya.",
+          "description": "Pengantar ramah pemula untuk Push Chain dan aplikasi universal—apa itu, cara kerjanya, dan cara memulainya.",
           "og-title": "Dasar-Dasar Push Chain - Pengantar",
           "og-description": "Pelajari dasar-dasarnya: apa itu Push Chain, bagaimana cara kerjanya, dan langkah pertama Anda.",
           "twitter-title": "Dasar-Dasar Push Chain - Mulai dari sini",
-          "twitter-description": "Panduan untuk pemula tentang Push Chain dan aplikasi universal."
+          "twitter-description": "Panduan pemula untuk Push Chain dan universal apps."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,34 +19,38 @@
             "sections": {
               "push-chain-basics": {
                 "items": {
-                  "why-push-chain": "## Mengapa Push Chain?\n\nPush Chain adalah **L1 universal sejati pertama**, yang dibangun khusus untuk memungkinkan aplikasi dapat berinteraksi dengan mulus oleh pengguna dari rantai mana pun.\n\nTulis smart contract Anda sekali, deploy di Push Chain, dan langsung jangkau pengguna di Ethereum, Solana, dan rantai lain yang didukung tanpa mengubah kode on-chain.",
-                  "what-is-push-chain": "## Apa itu Push Chain?\n\nPush Chain adalah blockchain L1 Proof-of-Stake (PoS) yang dirancang untuk menghilangkan fragmentasi di seluruh chain.\n\nIni adalah blockchain L1 **shared state** untuk **Universal (Interoperable) Apps** lintas chain. Push Chain memungkinkan transaksi dari chain mana pun (Eth, Solana, EVM, atau non-EVM), memungkinkan aplikasi dari chain mana pun dapat diakses oleh pengguna chain mana pun (**polymarket** dari chain mana pun, **pump.fun** dari chain mana pun, dll.).",
-                  "innovations-of-push-chain": "## Inovasi dari Push Chain\n\nPush Chain memperkenalkan beberapa inovasi terobosan seperti:\n\n**True Universal L1** - Secara native mendukung semua chain dan memungkinkan pengguna untuk berinteraksi dengan aplikasi yang sama. Tidak diperlukan relayer terpusat, bridge, atau peretasan lainnya.\n\n**Universal Fee Abstraction** - Memungkinkan pengguna untuk berinteraksi secara native sambil berada di chain pilihan mereka dan menggunakan token apa pun yang mereka inginkan.\n\n**Wallet Abstraction** - Mendukung MetaMask, Phantom, dan wallet lain serta login sosial atau email melalui satu penyedia terpadu. Pengguna tidak perlu membuat wallet baru untuk mengakses aplikasi apa pun.\n\n**Satu transaksi, tidak peduli chain-nya** - pengguna dapat berinteraksi dengan aplikasi apa pun di Push Chain dengan satu transaksi. Tidak peduli bagaimana mereka memilih untuk berinteraksi dengan aplikasi, mereka hanya perlu menandatangani satu transaksi.\n\n**Universal Smart Contracts** - Smart contract bersifat universal dan akan berfungsi secara instan tanpa perubahan kode on-chain atau langkah tambahan.\n\n**Shared State & Programmable Solvers** - Memungkinkan pengembang untuk membaca dan menulis state dari blockchain lain (Roadmap).\n\nIni menghasilkan **aplikasi yang sepenuhnya interoperable** untuk web3. Dalam paradigma ini, alih-alih menjadi pengguna \"Uniswap di Ethereum,\" \"Uniswap di Polygon,\" atau \"Uniswap di Arbitrum,\" seseorang menjadi **pengguna Uniswap.**",
-                  "curated-reads": "## Bacaan Pilihan 👇"
+                  "why-push-chain": "## Mengapa Push Chain?\n\nPush Chain adalah **L1 universal sejati** pertama, yang dirancang khusus untuk memungkinkan aplikasi dapat berinteraksi dengan lancar oleh pengguna dari rantai mana pun.\n\nTulislah smart contract Anda sekali, deploy di Push Chain, dan langsung jangkau pengguna di Ethereum, Solana, dan rantai lain yang didukung tanpa mengubah kode on-chain.",
+                  "what-is-push-chain": "## Apa itu Push Chain?\n\nPush Chain adalah blockchain L1 Proof-of-Stake (PoS) yang dirancang untuk menghilangkan fragmentasi di seluruh chain.\n\nIni adalah blockchain L1 **shared state** untuk **Universal (Interoperable) Apps** di seluruh chain. Push Chain memungkinkan transaksi dari chain mana pun (Eth, Solana, EVM, atau non-EVM), memungkinkan aplikasi dari chain mana pun dapat diakses oleh pengguna chain mana pun (**polymarket** dari chain mana pun, **pump.fun** dari chain mana pun, dll).",
+                  "innovations-of-push-chain": "## Inovasi dari Push Chain\n\nPush Chain memperkenalkan beberapa inovasi terobosan seperti:\n\n**True Universal L1** - Secara native mendukung semua chain dan memungkinkan pengguna untuk berinteraksi dengan app yang sama. Tidak memerlukan relayer terpusat, bridge, atau hack lainnya.\n\n**Universal Smart Contracts** - Smart contracts bersifat universal dan akan langsung berfungsi tanpa perubahan kode on-chain atau langkah tambahan.\n\n**Satu transaksi, tidak peduli chainnya** - pengguna dapat berinteraksi dengan app apa pun di Push Chain dengan satu transaksi. Tidak peduli bagaimana mereka memilih untuk berinteraksi dengan app, mereka hanya perlu menandatangani satu transaksi.\n\n**Universal Fee Abstraction** - Memungkinkan pengguna untuk berinteraksi secara native sambil berada di chain pilihan mereka dan menggunakan token apa pun yang mereka inginkan.\n\n**Wallet Abstraction** - Mendukung MetaMask, Phantom, dan dompet lain serta login sosial atau email melalui satu provider terpadu. Pengguna tidak perlu membuat dompet baru untuk mengakses app apa pun.\n\n**Native App Experiences** - Pengguna selalu merasa bahwa mereka menggunakan app secara native di chain mereka. \n\nIni menghasilkan **aplikasi yang sepenuhnya interoperable** untuk web3. Dalam paradigma ini, alih-alih menjadi pengguna \"Uniswap di Ethereum,\" \"Uniswap di Polygon,\" atau \"Uniswap di Arbitrum,\" seseorang cukup menjadi **pengguna Uniswap.**",
+                  "curated-reads": "## Bacaan Terkurasi 👇"
                 }
               },
               "why-push-chain-future": {
-                "title": "Pelajari mengapa Push Chain adalah masa depan web3",
+                "title": "Pelajari mengapa Push Chain adalah masa depan dari Web3",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Aplikasi Masa Depan — Membangun tanpa kekacauan",
+                    "subtitle": "Aplikasi masa depan tidak akan menjadi milik satu rantai. Mereka akan dibagikan oleh pengguna dari semua rantai."
+                  },
                   "learn-why-push-chain": {
                     "title": "Mengapa Push Chain adalah Lapisan yang Hilang dalam Web3",
-                    "subtitle": "Push Chain dirancang sebagai shared state L1 yang memungkinkan aplikasi universal yang skalabel dan siap pakai untuk konsumen."
+                    "subtitle": "Push Chain dirancang sebagai L1 shared state yang memungkinkan aplikasi universal yang skalabel dan siap konsumen."
                   },
                   "innovations-by-push-chain": {
                     "title": "Inovasi oleh Push Chain",
-                    "subtitle": "Temukan sepuluh inovasi utama yang menyatukan setiap rantai, setiap pengguna, dan setiap app."
+                    "subtitle": "Temukan sepuluh inovasi utama yang menyatukan setiap rantai blok, setiap pengguna, dan setiap aplikasi."
                   },
                   "another-l1": {
                     "title": "Apakah Push Chain L1 Lainnya?",
-                    "subtitle": "Push Chain bukan tentang menciptakan ekosistem yang terisolasi lagi — ini tentang menyelesaikan interoperabilitas untuk semua orang."
+                    "subtitle": "Push Chain bukan tentang menciptakan ekosistem terisolasi lainnya — ini tentang menyelesaikan interoperabilitas untuk semua orang."
                   },
                   "evolution-of-push": {
                     "title": "Evolusi Push",
-                    "subtitle": "Dari Push Protocol ke Push Chain — perjalanan membangun sebuah L1 universal, shared-state untuk aplikasi Web3 yang skalabel."
+                    "subtitle": "Dari Push Protocol ke Push Chain — perjalanan membangun L1 universal, shared-state untuk aplikasi Web3 yang skalabel."
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
                     "title": "Aplikasi Konsumen 🫶🏽 di Push Chain",
-                    "subtitle": "Push Chain membuka pintu bagi gelombang berikutnya aplikasi konsumen yang dapat berjalan secara universal di berbagai rantai."
+                    "subtitle": "Push Chain membuka pintu untuk gelombang berikutnya aplikasi konsumen yang dapat berjalan secara universal di berbagai chains."
                   },
                   "faq-push-chain": {
                     "title": "Pertanyaan Umum tentang Push Chain",

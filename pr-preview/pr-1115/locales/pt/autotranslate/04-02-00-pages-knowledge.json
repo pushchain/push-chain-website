@@ -3,11 +3,11 @@
     "knowledge": {
       "seo": {
         "title": "Base de Conhecimento — Guias, Perguntas Frequentes e Tutoriais",
-        "description": "Comece aqui para conceitos, FAQs, tutoriais e recursos do ecossistema. Guias claros e não técnicos para usar o Push Chain.",
+        "description": "Comece aqui para conceitos, perguntas frequentes, tutoriais e recursos do ecossistema. Guias claros e não técnicos para usar o Push Chain.",
         "og-title": "Base de Conhecimento Push Chain - Guias e FAQs",
-        "og-description": "Conceitos, guias passo a passo e respostas para perguntas comuns sobre Push Chain.",
-        "twitter-title": "Base de Conhecimento - Guias e FAQs",
-        "twitter-description": "Guias rápidos, perguntas frequentes e tutoriais para Push Chain (sem termos técnicos complicados)."
+        "og-description": "Conceitos, tutoriais passo a passo e respostas para perguntas frequentes sobre Push Chain.",
+        "twitter-title": "Base de Conhecimento - Guias e Perguntas Frequentes",
+        "twitter-description": "Guias rápidos, perguntas frequentes e tutoriais para Push Chain (sem jargões de desenvolvimento)."
       },
       "hero-section": {
         "title": "Base de Conhecimento",
@@ -16,14 +16,14 @@
           "developers": "Desenvolvedores",
           "developers-text": "implante uma vez e seja instantaneamente compatível com todas as chains EVM e não-EVM suportadas.",
           "users": "Usuários",
-          "users-text": "use a mesma app, independentemente da cadeia de onde venham."
+          "users-text": "use a mesma app não importa de qual blockchain eles venham."
         },
         "email-signup": {
           "title": {
             "long": "Seja Notificado sobre o Testnet Push Chain",
             "short": "Push Chain Testnet"
           },
-          "description": "Seja o primeiro a saber quando o Push Chain testnet entrar no ar. Junte-se à nossa lista de e-mail para atualizações exclusivas."
+          "description": "Seja o primeiro a saber quando o testnet do Push Chain estiver ativo. Junte-se à nossa lista de e-mail para atualizações exclusivas."
         },
         "footer": {
           "description": "Crie experiências contínuas e fáceis de usar para o seu app em qualquer blockchain com Push Chain.",
@@ -39,34 +39,34 @@
               "title": "Recursos",
               "items": {
                 "push101": {
-                  "title": "Push Chain Basics",
-                  "subtitle": "Aprenda sobre os fundamentos da Push Chain, suas inovações e por que ela é necessária",
+                  "title": "Noções Básicas do Push Chain",
+                  "subtitle": "Aprenda sobre os fundamentos do Push Chain, suas inovações e por que ele é necessário",
                   "ctatitle": "Explore Mais"
                 },
                 "builders": {
                   "title": "Construa na Push Chain",
                   "subtitle": "Mergulhe em como construir apps universais, o que isso desbloqueia e como começar!",
-                  "ctatitle": "Construtores se unem"
+                  "ctatitle": "Construtores Unidos"
                 },
                 "deepdives": {
-                  "title": "Análises Técnicas Aprofundadas",
-                  "subtitle": "Quer saber como o Push funciona por dentro? Ou é só um curioso? De qualquer forma, diga olá!",
+                  "title": "Explorações Técnicas Profundas",
+                  "subtitle": "Quer saber como o Push funciona em detalhes? Ou você é apenas um curioso? De qualquer forma, diga olá!",
                   "ctatitle": "Veja como funciona"
                 },
                 "devdocs": {
                   "title": "Documentação para Desenvolvedores",
-                  "subtitle": "Vamos direto ao ponto! Eu sou uma universal chain... e você é um desenvolvedor, vamos oficializar!",
+                  "subtitle": "Vamos direto ao ponto! Eu sou uma universal chain... e você é um dev, vamos oficializar!",
                   "ctatitle": "Comece a construir agora"
                 },
                 "tokenomics": {
-                  "title": "Explore tokenomics",
+                  "title": "Explore टोकनॉमिक्स",
                   "subtitle": "Aprenda como nossa tokenomics incentiva e garante uma rede sustentável construída para durar",
-                  "ctatitle": "Aprenda sobre Design de Token"
+                  "ctatitle": "Aprenda sobre o Design de Token"
                 },
                 "faq": {
                   "title": "Perguntas Frequentes",
-                  "subtitle": "O lugar para encontrar respostas para todas as perguntas frequentes da comunidade",
-                  "ctatitle": "Leia Mais"
+                  "subtitle": "O lugar para encontrar respostas para todas as perguntas mais frequentes da comunidade",
+                  "ctatitle": "Saiba Mais"
                 }
               }
             }

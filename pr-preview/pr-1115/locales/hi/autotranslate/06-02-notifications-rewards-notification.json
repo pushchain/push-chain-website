@@ -1,11 +1,11 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Donut Testnet Closed beta लाइव है!",
-      "description": "Testnet, Donut में झाँकें, universal app बनाएं और पुरस्कार जीतें!",
-      "image-alt": "Push Chain Testnet Rewards - यूनिवर्सल ऐप बनाएँ",
-      "close-button-title": "रिवॉर्ड नोटिफिकेशन बंद करें",
-      "close-button-aria-label": "Push Chain rewards नोटिफिकेशन बंद करें",
+      "title": "Donut Testnet Closed beta अब लाइव है!",
+      "description": "टेस्टनेट, डोनट में एक झलक पाएं, universal ऐप बनाएं और पुरस्कार जीतें!",
+      "image-alt": "Push Chain Testnet Rewards - युनिवर्सल ऐप्स बनाएं",
+      "close-button-title": "इनामों की सूचना बंद करें",
+      "close-button-aria-label": "Push Chain रिवार्ड नोटिफिकेशन को खारिज करें",
       "container-aria-label": "Push Chain rewards notification"
     }
   }

@@ -1,21 +1,21 @@
 {
   "components": {
     "mailing-signup": {
-      "title": "لا تفوت أي تحديث",
-      "text": "اشترك وابقَ على اطلاع دائم بإعلانات النظام البيئي، والجوائز الترويجية والمزيد.",
+      "title": "لا تفوّت أي تحديث",
+      "text": "سجل الآن وابقَ على اطلاع دائم بإعلانات النظام البيئي، والجوائز والمزيد.",
       "email-input": "بريدك الإلكتروني",
       "email-input-placeholder": "أدخل عنوان بريدك الإلكتروني",
       "email-input-title": "اشترك في نشرة Push Chain الإخبارية للحصول على آخر التحديثات",
       "email-input-aria-label": "عنوان البريد الإلكتروني للاشتراك في النشرة الإخبارية",
       "submit-button": "اشتراك",
-      "submit-button-title": "الاشتراك في نشرة أخبار Push Chain الإخبارية",
+      "submit-button-title": "الاشتراك في نشرة Push Chain الإخبارية",
       "submit-button-aria-label": "الاشتراك في النشرة الإخبارية",
       "loading-submit-button": "الرجاء الانتظار...",
       "arrow-button-aria-label": "الاشتراك في النشرة الإخبارية",
-      "arrow-button-title": "اشترك في تحديثات Push Chain",
+      "arrow-button-title": "الاشتراك في تحديثات Push Chain",
       "form-aria-label": "نموذج الاشتراك في النشرة الإخبارية",
       "success-message-aria-label": "تم الاشتراك بنجاح",
-      "error-message-aria-label": "رسالة خطأ الاشتراك"
+      "error-message-aria-label": "رسالة خطأ في الاشتراك"
     }
   }
 }

@@ -4,11 +4,11 @@
       "deepdives": {
         "seo": {
           "title": "Derinlemesine İncelemeler — Kavramlar ve Mimari",
-          "description": "Paylaşılmış durum, ücret soyutlama, USV/UEA ve evrensel çalıştırma katmanı hakkında okunabilir açıklamalar.",
-          "og-title": "Derinlemesine İncelemeler - Kavramlar ve Mimari",
+          "description": "Paylaşılmış durum, ücret soyutlama, USV/UEA ve evrensel yürütme katmanı hakkında okunabilir açıklamalar.",
+          "og-title": "Derin İncelemeler - Kavramlar ve Mimari",
           "og-description": "Push Chain modülleri, tasarım kararları ve performans üzerine derinlemesine makaleler.",
-          "twitter-title": "Derinlemesine İncelemeler - Perde Arkası",
-          "twitter-description": "Push Chain'in nasıl çalıştığına dair açıklamalar."
+          "twitter-title": "Derinlemesine İncelemeler - Perdelerin Arkası",
+          "twitter-description": "Push Chain'in nasıl çalıştığını anlatan açıklamalar."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,15 +19,15 @@
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Mimari Derinlemesine İncelemeler\n\nPush Chain'in mimarisinin inceliklerini ve nasıl çalıştığını - Tek modül tek modül öğrenin.",
-                  "curated-reads": "## Özenle Seçilmiş Kaynaklar 👇"
+                  "intro": "## Architecture Deep Dives\n\nPush Chain'ın mimarisini ve nasıl çalıştığını - Bir modül birer olarak öğrenin.",
+                  "curated-reads": "## Özenle Seçilmiş Okumalar 👇"
                 }
               },
               "learn-push-chain": {
                 "title": "Push Chain'in nasıl çalıştığını öğrenin!",
                 "items": {
                   "interop-spectrum": {
-                    "title": "Interop bir Spektrum Olarak"
+                    "title": "Karşılıklı Çalışabilirlik Spektrumu"
                   },
                   "understand-proof-of-stake-part-1": {
                     "title": "Proof of Stake (POS) - Bölüm 1'i Anlamak"

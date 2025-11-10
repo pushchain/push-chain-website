@@ -3,8 +3,8 @@
     "breadcrumbs": {
       "navigation-aria-label": "Ekmek kırıntısı navigasyonu",
       "home-text": "Ana Sayfa",
-      "navigate-to-aria-label": "{{sayfa}} sayfasına git",
-      "go-to-title": " {{page}} sayfasına git",
+      "navigate-to-aria-label": "Şu sayfaya git: {{page}}",
+      "go-to-title": "{{page}} sayfasına git",
       "current-page-aria-label": "Mevcut sayfa: {{page}}",
       "separator-aria-label": "Ekmek kırıntısı ayırıcı"
     }

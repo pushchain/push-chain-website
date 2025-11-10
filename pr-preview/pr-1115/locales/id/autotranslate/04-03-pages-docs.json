@@ -3,15 +3,18 @@
     "docs": {
       "seo": {
         "title": "Dokumentasi — Bangun Aplikasi Universal",
-        "description": "Semua yang Anda butuhkan untuk mengirim di Push Chain: Quickstart, SDK, Referensi API, contoh, dan konfigurasi node.",
-        "og-title": "Push Chain Dokumen - Quickstarts, SDKs & API",
-        "og-description": "Buat dan jalankan aplikasi pada lapisan eksekusi universal dengan panduan dan contoh yang jelas.",
-        "twitter-title": "Dokumentasi Push Chain - Mulai sekarang"
+        "description": "Semua yang Anda butuhkan untuk memulai di Push Chain: panduan cepat, SDK, referensi API, contoh, dan pengaturan node.",
+        "og-title": "Dokumentasi Push Chain - Panduan Cepat, SDK & API",
+        "og-description": "Bangun dan jalankan aplikasi di universal execution layer dengan panduan dan contoh yang jelas.",
+        "twitter-title": "Dokumentasi Push Chain - Mulai Bangun Sekarang",
+        "twitter-description": "Panduan cepat, SDK, referensi API, dan contoh untuk meluncurkan dengan cepat."
       },
       "header": {
-        "countdown-title": "Rilis Dokumen Testnet dalam",
-        "title": "Berbicara tentang Push Chain di Twitter",
-        "ariaLabel": "Tweets tentang Push Chain"
+        "countdown-title": "Peluncuran Dokumen Testnet dalam",
+        "description": "Psst... ingin melihat sekilas Testnet Donut? Kirim pesan kepada kami dengan #pushchainsecret dan kami akan mengirimkan akses ke build tes.",
+        "tweet-button": "Tweet tentang Push Chain",
+        "title": "Tweet tentang Push Chain",
+        "ariaLabel": "Tweet tentang Push Chain"
       },
       "grid-section": {
         "blocks": {
@@ -20,16 +23,18 @@
               "items": {
                 "whatispush": {
                   "title": "Apa itu Push Chain?",
-                  "subtitle": "Push Chain menyediakan toolkit yang seragam untuk membangun aplikasi universal yang benar-benar.",
+                  "subtitle": "Push Chain menyediakan seperangkat alat terpadu untuk membangun aplikasi yang benar-benar universal.",
                   "ctatitle": "Pelajari Lebih Lanjut"
                 },
                 "builders": {
-                  "title": "Mari Membangun!",
-                  "subtitle": "Semua yang Anda butuhkan dengan SDK Push Chain untuk membuat aplikasi universal Anda",
+                  "title": "Ayo bangun!",
+                  "subtitle": "Semua yang Anda butuhkan dengan Push Chain SDK untuk membuat aplikasi universal Anda",
                   "ctatitle": "Pelajari Lebih Lanjut"
                 },
                 "ui-kit": {
-                  "subtitle": "Integrasi aplikasi React berbasis apa pun dalam waktu kurang dari 5 menit."
+                  "title": "UI Kit",
+                  "subtitle": "Integrasikan aplikasi berbasis React apa pun dalam waktu kurang dari 5 menit.",
+                  "ctatitle": "Pelajari Lebih Lanjut"
                 }
               }
             }

@@ -1,11 +1,11 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Donut Testnet Closed beta الآن مُتاح!",
-      "description": "احصل على نظرة خاطفة على Testnet و Donut، وابنِ تطبيقات عالمية واربح جوائز!",
-      "image-alt": "مكافآت شبكة Push Chain Testnet - بناء تطبيقات عالمية",
+      "title": "Donut Testnet Closed beta is Live!",
+      "description": "احصل على نظرة خاطفة على Donut، و testnet، وابنِ تطبيقات عالمية واربح جوائز!",
+      "image-alt": "مكافآت Push Chain Testnet - بناء تطبيقات عالمية",
       "close-button-title": "إغلاق إشعار المكافآت",
-      "close-button-aria-label": "Dismiss Push Chain rewards notification",
+      "close-button-aria-label": "إغلاق إشعار مكافآت Push Chain",
       "container-aria-label": "إشعارات مكافآت Push Chain"
     }
   }

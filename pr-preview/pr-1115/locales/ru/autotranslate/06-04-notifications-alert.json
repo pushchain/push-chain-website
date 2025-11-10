@@ -2,10 +2,10 @@
   "notifications": {
     "alert": {
       "message": "Push Metamask Snap теперь доступен!",
-      "know-more-text": "Начните прямо сейчас!",
+      "know-more-text": "Начать!",
       "know-more-title": "Начните работу с Push Metamask Snap",
-      "close-button-title": "Закрыть уведомление",
-      "close-button-aria-label": "Закрыть Push Metamask Snap уведомление",
+      "close-button-title": "Закрыть оповещение",
+      "close-button-aria-label": "Закрыть уведомление Push Metamask Snap",
       "container-aria-label": "Push Metamask Snap announcement"
     }
   }

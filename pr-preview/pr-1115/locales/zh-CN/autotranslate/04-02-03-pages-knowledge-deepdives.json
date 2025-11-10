@@ -5,10 +5,10 @@
         "seo": {
           "title": "深度解读 — 概念与架构",
           "description": "易于理解的解释，涵盖共享状态、费用抽象、USV/UEA 以及通用执行层。",
-          "og-title": "深度研究 - 概念与架构",
-          "og-description": "关于Push Chain模块、设计决策和性能的深入文章。",
-          "twitter-title": "深入研究 - 幕后一览",
-          "twitter-description": "关于 Push Chain 工作原理的解释。"
+          "og-title": "深度解读 - 概念与架构",
+          "og-description": "关于 Push Chain 模块、设计决策和性能的深度文章。",
+          "twitter-title": "深度解析 - 深入了解",
+          "twitter-description": "关于 Push Chain 如何运作的解释说明。"
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,15 +19,15 @@
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## 架构深度解析\n\n了解 Push Chain 架构的复杂性和其工作原理 - 逐个模块学习。",
-                  "curated-reads": "## 精选文章 👇"
+                  "intro": "## 架构深度解析\n\n了解 Push Chain 的架构复杂性和工作原理 - 一次一个模块。",
+                  "curated-reads": "## 精选阅读 👇"
                 }
               },
               "learn-push-chain": {
-                "title": "了解Push Chain的运行机制！",
+                "title": "了解 Push Chain 的工作原理！",
                 "items": {
                   "interop-spectrum": {
-                    "title": "互操作性光谱"
+                    "title": "互操作的广度"
                   },
                   "understand-proof-of-stake-part-1": {
                     "title": "理解权益证明 (POS) - 第一部分"

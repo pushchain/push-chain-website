@@ -1,13 +1,13 @@
 {
   "footer": {
     "email-section": {
-      "title": "Cập nhật tin tức mới nhất về Push Chain",
+      "title": "Cập nhật thông tin mới nhất về Push Chain",
       "title-secondary": "tin tức và cập nhật!",
       "title-aria-label": "Phần đăng ký nhận bản tin",
       "section-aria-label": "Đăng ký nhận bản tin Push Chain"
     },
     "main-section": {
-      "section-aria-label": "Điều hướng và liên kết chân trang",
+      "section-aria-label": "Điều hướng và liên kết cuối trang",
       "logo-link-title": "Trang chủ Push Chain",
       "logo-link-aria-label": "Trang chủ Push Chain",
       "logo-alt": "Logo Push Chain"
@@ -23,10 +23,10 @@
       },
       "community": {
         "title": "Cộng đồng",
-        "title-aria-label": "Điều hướng Cộng đồng"
+        "title-aria-label": "Điều hướng cộng đồng"
       },
       "help": {
-        "title": "Trợ giúp",
+        "title": "Hỗ trợ",
         "title-aria-label": "Điều hướng Trợ giúp"
       }
     },
@@ -41,24 +41,24 @@
       "knowledge-base-title": "Push Chain Knowledge Base",
       "blog": "Blog",
       "blog-title": "Blog Push Chain",
-      "litepaper": "Giấy trắng",
-      "litepaper-title": "litepaper Push Chain (PDF)",
+      "litepaper": "Bản trắng",
+      "litepaper-title": "Tài liệu kỹ thuật Push Chain (PDF)",
       "brand-kit": "Bộ nhận diện thương hiệu",
       "brand-kit-title": "Tài nguyên và hướng dẫn thương hiệu Push Chain",
       "push-scan": "Push Scan",
       "push-scan-title": "Trình khám phá blockchain Push Chain",
-      "faucet": "Nhận Token Miễn Phí",
-      "faucet-title": "Nhận <token> thử nghiệm từ vòi nước Push Chain",
+      "faucet": "Nhận token miễn phí",
+      "faucet-title": "Nhận token thử nghiệm từ vòi Push Chain",
       "push-portal": "Push Portal",
       "push-portal-title": "Cổng cộng đồng Push Chain",
       "support": "Hỗ trợ",
       "support-title": "Trung tâm Hỗ trợ",
-      "security": "Bảo mật & Công bố",
-      "security-title": "Báo cáo lỗ hổng bảo mật (công khai có trách nhiệm)",
+      "security": "Bảo mật & Công khai thông tin",
+      "security-title": "Báo cáo lỗ hổng bảo mật (công bố có trách nhiệm)",
       "contact-us": "Liên hệ chúng tôi",
-      "contact-us-title": "Liên hệ đối tác, hợp tác kinh doanh, truyền thông hoặc các thắc mắc chung",
+      "contact-us-title": "Hợp tác, phát triển kinh doanh, truyền thông hoặc các thắc mắc chung",
       "careers": "Tuyển dụng",
-      "careers-title": "Cơ hội việc làm tại Push Chain",
+      "careers-title": "Các vị trí đang tuyển dụng tại Push Chain",
       "twitter": "X (Twitter)",
       "twitter-title": "Theo dõi Push Chain trên X (Twitter)",
       "discord": "Discord",
@@ -66,7 +66,7 @@
       "reddit": "Reddit",
       "reddit-title": "Tham gia cộng đồng Push Chain trên Reddit",
       "telegram": "Telegram",
-      "telegram-title": "Tham gia cộng đồng Push Chain trên Telegram"
+      "telegram-title": "Tham gia cộng đồng Telegram của Push Chain"
     },
     "social-section": {
       "section-aria-label": "Liên kết mạng xã hội và thông tin pháp lý",
@@ -79,17 +79,17 @@
     },
     "legal": {
       "privacy-policy": "Chính sách bảo mật",
-      "privacy-policy-title": "Đọc Chính sách Quyền riêng tư",
-      "privacy-policy-aria-label": "Chính sách quyền riêng tư",
+      "privacy-policy-title": "Đọc Chính sách Bảo mật",
+      "privacy-policy-aria-label": "Chính sách bảo mật",
       "terms-of-service": "Điều khoản dịch vụ",
       "terms-of-service-title": "Đọc Điều khoản dịch vụ",
       "terms-of-service-aria-label": "Điều khoản dịch vụ",
-      "cookie-preferences": "Tùy chọn cookie",
+      "cookie-preferences": "Tùy chọn Cookie",
       "cookie-preferences-title": "Quản lý cài đặt cookie"
     },
     "footer-image": {
-      "alt": "Hình ảnh minh họa chân trang Push Chain",
-      "title": "Push Chain - Universal Blockchain"
+      "alt": "Hình minh họa chân trang Push Chain",
+      "title": "Push Chain - Universal ブロックチェーン"
     }
   }
 }

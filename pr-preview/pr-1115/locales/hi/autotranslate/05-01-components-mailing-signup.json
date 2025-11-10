@@ -1,18 +1,18 @@
 {
   "components": {
     "mailing-signup": {
-      "title": "कभी भी अपडेट मिस न करें",
-      "text": "साइन अप करें और इकोसिस्टम घोषणाओं, उपहारों और बहुत कुछ के बारे में अपडेट रहें।",
+      "title": "कभी भी कोई अपडेट मिस न करें",
+      "text": "साइन अप करें और इकोसिस्टम घोषणाओं, giveaways और बहुत कुछ के साथ अपडेट रहें।",
       "email-input": "आपका ईमेल",
       "email-input-placeholder": "अपना ईमेल पता दर्ज करें",
-      "email-input-title": "Push Chain न्यूज़लेटर के अपडेट के लिए सब्सक्राइब करें",
+      "email-input-title": "Push Chain न्यूज़लेटर के लिए अपडेट के लिए सब्सक्राइब करें",
       "email-input-aria-label": "न्यूज़लेटर सदस्यता के लिए ईमेल पता",
       "submit-button": "साइन अप करें",
       "submit-button-title": "Push Chain न्यूज़लेटर के लिए सब्सक्राइब करें",
-      "submit-button-aria-label": "न्यूज़लेटर के लिए सब्सक्राइब करें",
+      "submit-button-aria-label": "न्यूज़लेटर के लिए सदस्यता लें",
       "loading-submit-button": "कृपया प्रतीक्षा करें...",
       "arrow-button-aria-label": "न्यूज़लेटर के लिए सदस्यता लें",
-      "arrow-button-title": "Push Chain अपडेट के लिए सब्सक्राइब करें",
+      "arrow-button-title": "Push Chain अपडेट के लिए सदस्यता लें",
       "form-aria-label": "न्यूज़लेटर सदस्यता फॉर्म",
       "success-message-aria-label": "सब्सक्रिप्शन सफल",
       "error-message-aria-label": "सब्सक्रिप्शन में त्रुटि संदेश"

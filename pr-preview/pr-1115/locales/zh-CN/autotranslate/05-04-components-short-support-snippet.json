@@ -1,51 +1,51 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "关于 Push Chain - 通用区块链的常见问题",
+      "section-aria-label": "关于 Push Chain - 通用区块链的支持问题",
       "title": "支持\n帮助中心",
       "title-aria-label": "关于 Push Chain 的常见支持问题和解答",
       "discord-link-text": "在 Discord 上提问",
-      "discord-link-title": "加入 Push Chain Discord 社区寻求支持和解答问题",
+      "discord-link-title": "加入 Push Chain Discord 社区获取支持和解答问题",
       "discord-link-aria-label": "在新标签页中打开 Discord 社区",
       "explore-more-text": "查看更多常见问题",
       "explore-more-title": "查看全面的 Push Chain 常见问题解答文档和开发者指南",
-      "explore-more-aria-label": "前往完整的 Push Chain FAQ 页面",
-      "accordion-aria-label": "Push Chain 支持问题列表",
-      "answer-aria-label": "问题答案 - ",
+      "explore-more-aria-label": "跳转至完整的 Push Chain FAQ 页面",
+      "accordion-aria-label": "Push Chain 支持常见问题列表",
+      "answer-aria-label": "问题的答案 - ",
       "qnas": {
         "qna1": {
-          "question": "我无法连接我的<wallet>。我应该尝试什么？",
-          "answer": "<1><2>快速检查：</2> 刷新页面，解锁您的钱包，并为 push.org 禁用激进的广告/脚本拦截器。</1><1><2>无需切换网络：</2> 保持在您的主链上；Push 会在后台处理路由。</1><1><2>重置站点权限：</2> 在您的钱包中，删除站点的连接并重新连接。</1><1>仍然卡住？请在 <3>Discord</3> 上提问或提交 <4>支持工单</4>。</1>",
+          "question": "我无法连接我的钱包。我应该尝试什么？",
+          "answer": "<1><2>快速检查：</2> 刷新页面，解锁您的<1>钱包</1>，并为 push.org 禁用激进的广告/脚本拦截器。</1><1><2>无需切换网络：</2> 保持在您的主链上；Push 在后台处理路由。</1><1><2>重置站点权限：</2> 在您的<1>钱包</1>中，删除站点的连接并重新连接。</1><1>仍然卡住？请在 <3>Discord</3> 上提问或提交 <4>Support ticket</4>.</1>",
           "discord-url-title": "加入 Push Chain Discord 获得实时帮助。",
-          "support-url-title": "提交支持工单。"
+          "support-url-title": "提交支持工单"
         },
         "qna2": {
-          "question": "我的交易正在挂起或失败了 — 现在怎么办？",
-          "answer": "<1><2>查看状态:</2> 在 <3>Push Scan</3> 上使用钱包中的哈希查找您的 tx。</1><1><2>待处理:</2> 通常会很快确认；避免重复发送。</1><1><2>失败:</2> 没有扣除资金。查看错误并重试。</1><1>正在进行中的事件发布在 <4>Status</4>.</1>",
-          "scan-url-title": "打开 Push Scan (浏览器).",
+          "question": "我的交易正在处理中或失败了怎么办？",
+          "answer": "<1><2>查看状态:</2> 在 <3>Push Scan</3> 中使用钱包中的哈希查找您的 tx。</1><1><2>待处理:</2> 通常会很快确认；避免重复发送。</1><1><2>失败:</2> 没有扣除资金。查看错误并重试。</1><1>正在进行中的事件发布在 <4>Status</4> 上。</1>",
+          "scan-url-title": "打开 Push Scan (区块浏览器)。",
           "status-url-title": "查看网络状态和事件。"
         },
         "qna3": {
-          "question": "如何获取测试网代币（Donut）？",
-          "answer": "<1>使用 <3>Faucet</3> 请求测试代币。</1><1><2>提示：</2> 可能会有速率限制；有些Faucet需要简单的验证。如果Faucet失败，请在 <4>Discord</4> 上联系我们。</1>",
-          "faucet-url-title": "打开 Push Chain 的水龙头。",
+          "question": "如何获取测试网代币 (Donut)？",
+          "answer": "<1>使用<3>Faucet</3>请求测试代币。</1><1><2>提示：</2>可能存在速率限制；有些Faucet需要简单的验证。如果Faucet失败，请在<4>Discord</4>上联系我们。</1>",
+          "faucet-url-title": "打开 Push Chain 水龙头。",
           "discord-url-title": "加入 Push Chain Discord。"
         },
         "qna4": {
           "question": "如何报告错误或漏洞？",
-          "answer": "<1><2>应用 Bug:</2> 提交 <3>支持工单</3> 或在 <4>Discord</4> 中发布包含重现步骤的帖子。</1><1><2>安全问题:</2> 发送邮件至 <5>security@push.org</5>。请在确认修复之前避免公开披露。</1>",
-          "support-url-title": "提交支持工单",
+          "answer": "<1><2>应用错误:</2> 提交 <3>支持工单</3> 或在 <4>Discord</4> 中发布包含重现步骤的帖子。</1><1><2>安全问题:</2> 发送电子邮件至 <5>security@push.org</5>。 请在确认修复之前避免公开披露。</1>",
+          "support-url-title": "提交支持请求",
           "discord-url-title": "加入 Discord。"
         },
         "qna5": {
           "question": "文档和快速入门在哪里？",
-          "answer": "<1>从 <3>文档</3> 开始，快速上手和 APIs，以及 <4>知识库</4>，了解概念、深入研究和常见问题解答。</1>",
-          "docs-url-title": "打开开发者文档",
+          "answer": "<1>从 <3>文档</3> 开始，快速入门和 API 参考，以及 <4>知识库</4> 了解概念、深入分析和常见问题解答。</1>",
+          "docs-url-title": "打开开发者文档。",
           "kb-url-title": "打开知识库。"
         },
         "qna6": {
-          "question": "我能申请为新的链、功能或集成提供支持吗？",
-          "answer": "<1>是的。请通过<3>联系我们</3>告知您需要的链/工具，或在<4>GitHub</4>上提交问题。我们正在不断扩展覆盖范围。</1>",
+          "question": "我可以申请为新的区块链、功能或集成提供支持吗？",
+          "answer": "<1>是的。请通过<3>联系我们</3>或在<4>GitHub</4>上提交问题告诉我们您需要哪个链/工具。我们正在不断扩展覆盖范围。</1>",
           "contact-url-title": "联系 Push Chain 团队。",
           "github-url-title": "打开 GitHub 组织"
         }

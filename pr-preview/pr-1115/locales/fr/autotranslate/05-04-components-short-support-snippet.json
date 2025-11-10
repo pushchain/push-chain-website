@@ -2,50 +2,50 @@
   "components": {
     "short-support-snippet": {
       "section-aria-label": "Questions de support concernant Push Chain - Blockchain Universel",
-      "title": "Support\nService d'assistance",
-      "title-aria-label": "Foire aux questions et réponses fréquentes sur Push Chain",
+      "title": "Support\nCentre d'aide",
+      "title-aria-label": "Foire aux questions fréquemment posées et réponses concernant Push Chain",
       "discord-link-text": "Posez votre question sur Discord",
       "discord-link-title": "Rejoignez la communauté Push Chain Discord pour obtenir de l'aide et poser vos questions",
       "discord-link-aria-label": "Ouvrir la communauté Discord dans un nouvel onglet",
-      "explore-more-text": "Découvrez plus de FAQs",
-      "explore-more-title": "Consultez la documentation complète et les guides pour développeurs de Push Chain",
+      "explore-more-text": "Découvrez plus de FAQ",
+      "explore-more-title": "Consultez la documentation complète et les guides de développement de Push Chain",
       "explore-more-aria-label": "Accéder à la FAQ complète de Push Chain",
       "accordion-aria-label": "Liste des questions d'assistance Push Chain",
       "answer-aria-label": "Réponse à la question - ",
       "qnas": {
         "qna1": {
-          "question": "Je n'arrive pas à connecter mon <wallet>. Que devrais-je essayer ?",
-          "answer": "<1><2>Vérifications rapides :</2> actualisez la page, déverrouillez votre wallet, et désactivez les bloqueurs de publicités/scripts agressifs pour push.org.</1><1><2>Pas besoin de changer de réseau :</2> restez sur votre chaîne principale ; Push gère le routage en arrière-plan.</1><1><2>Réinitialisez les permissions du site :</2> dans votre wallet, supprimez la connexion du site et reconnectez-vous.</1><1>Toujours bloqué ? Posez votre question sur <3>Discord</3> ou ouvrez un <4>ticket de Support</4>.</1>",
+          "question": "Je n’arrive pas à connecter mon <wallet>. Que devrais-je essayer ?",
+          "answer": "<1><2>Vérifications rapides:</2> actualisez la page, déverrouillez votre wallet, et désactivez les bloqueurs de publicités/scripts agressifs pour push.org.</1><1><2>Pas de changement de réseau nécessaire:</2> restez sur votre chaîne principale ; Push gère le routage en arrière-plan.</1><1><2>Réinitialisez les permissions du site:</2> dans votre wallet, supprimez la connexion du site et reconnectez-vous.</1><1>Toujours bloqué ? Posez votre question sur <3>Discord</3> ou ouvrez un <4>ticket de support</4>.</1>",
           "discord-url-title": "Rejoignez le Discord de Push Chain pour une aide en temps réel.",
-          "support-url-title": "Ouvrez un ticket de support."
+          "support-url-title": "Ouvrir un ticket de support."
         },
         "qna2": {
-          "question": "Ma transaction est en attente ou a échoué – que faire maintenant ?",
-          "answer": "<1><2>Vérifiez le statut:</2> recherchez votre tx sur <3>Push Scan</3> en utilisant le hash de votre wallet.</1><1><2>En attente:</2> la confirmation est généralement rapide ; évitez de renvoyer plusieurs fois.</1><1><2>Échoué:</2> aucun fonds n’est prélevé. Vérifiez l’erreur et réessayez.</1><1>Les incidents en cours sont publiés sur <4>Status</4>.</1>",
+          "question": "Ma transaction est en attente ou a échoué – que faire ?",
+          "answer": "<1><2>Vérifier le statut :</2> recherchez votre tx sur <3>Push Scan</3> en utilisant le hash de votre wallet.</1><1><2>En attente :</2> il confirme généralement rapidement ; évitez de renvoyer à plusieurs reprises.</1><1><2>Échoué :</2> aucun fonds n’est prélevé. Vérifiez l'erreur et réessayez.</1><1>Les incidents en cours sont publiés sur <4>Status</4>.</1>",
           "scan-url-title": "Ouvrir Push Scan (explorateur).",
           "status-url-title": "Consultez l'état du réseau et les incidents."
         },
         "qna3": {
-          "question": "Comment obtenir des jetons de testnet (Donut) ?",
-          "answer": "<1>Utilisez le <3>Robinnet</3> pour demander des <token> de test.</1><1><2>Remarques:</2> des limites de débit peuvent s'appliquer ; certains robinets nécessitent une simple vérification. Si le robinet échoue, contactez-nous sur <4>Discord</4>.</1>",
+          "question": "Comment obtenir des tokens de testnet (Donut) ?",
+          "answer": "<1>Utilisez le <3>Faucet</3> pour demander des tokens de test.</1><1><2>Remarques :</2> des limites de débit peuvent s'appliquer ; certains faucets nécessitent une simple vérification. Si le faucet échoue, contactez-nous sur <4>Discord</4>.</1>",
           "faucet-url-title": "Ouvrez le robinet Push Chain.",
           "discord-url-title": "Rejoignez le Discord de Push Chain."
         },
         "qna4": {
           "question": "Comment signaler un bug ou une vulnérabilité ?",
-          "answer": "<1><2>Bugs de l'app:</2> soumettez un <3>ticket de Support</3> ou postez sur <4>Discord</4> avec les étapes pour reproduire le problème.</1><1><2>Problèmes de sécurité:</2> envoyez un email à <5>security@push.org</5>. Veuillez éviter toute divulgation publique jusqu'à ce que nous confirmions une solution.</1>",
-          "support-url-title": "Ouvrez un ticket de support.",
+          "answer": "<1><2>Bugs de l'app :</2> soumettez un <3>ticket de support</3> ou postez dans <4>Discord</4> avec les étapes pour reproduire le problème.</1><1><2>Problèmes de sécurité :</2> envoyez un email à <5>security@push.org</5>. Merci d'éviter toute divulgation publique jusqu'à ce que nous confirmions une correction.</1>",
+          "support-url-title": "Ouvrir un ticket de support.",
           "discord-url-title": "Rejoignez le Discord."
         },
         "qna5": {
           "question": "Où se trouvent la documentation et les guides de démarrage rapide ?",
-          "answer": "<1>Commencez par <3>Docs</3> pour les guides de démarrage rapide et les APIs, et la <4>Knowledge Base</4> pour les concepts, les analyses approfondies et les FAQs.</1>",
+          "answer": "<1>Commencez par <3>Docs</3> pour les guides de démarrage rapide et les APIs, et la <4>Knowledge Base</4> pour les concepts, les approfondissements et les FAQs.</1>",
           "docs-url-title": "Ouvrez la documentation développeur.",
-          "kb-url-title": "Ouvrez la base de connaissances."
+          "kb-url-title": "Ouvrir la base de connaissances."
         },
         "qna6": {
           "question": "Puis-je demander de l'assistance pour une nouvelle chaîne, fonctionnalité ou intégration ?",
-          "answer": "<1>Oui. Dites-nous quelle chaîne/outil vous est nécessaire via <3>Contact</3> ou ouvrez un problème sur <4>GitHub</4>. Nous élargissons continuellement la couverture.</1>",
+          "answer": "<1>Oui. Dites-nous quelle chaîne/outil vous intéresse via <3>Contact</3> ou ouvrez un problème sur <4>GitHub</4>. Nous élargissons continuellement notre couverture.</1>",
           "contact-url-title": "Contactez l'équipe Push Chain.",
           "github-url-title": "Ouvrir l'organisation GitHub."
         }

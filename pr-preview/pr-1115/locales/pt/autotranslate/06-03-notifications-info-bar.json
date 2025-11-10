@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "Lançamento no Donut Testnet Agora — Desbloqueie Recompensas para Desenvolvedores e Usuários Pioneiros.",
+      "title": "Lançamento na Push Testnet Agora — Desbloqueie Recompensas para Desenvolvedores e Usuários Pioneiros.",
       "learn-more-text": "Saiba Mais",
       "learn-more-title": "Saiba mais sobre este anúncio",
-      "dismiss-button-title": "Dismiss announcement",
-      "dismiss-button-aria-label": "Fechar barra de anúncios",
+      "dismiss-button-title": "Descartar anúncio",
+      "dismiss-button-aria-label": "Fechar barra de anúncio",
       "container-aria-label": "Anúncio do site",
-      "star-icon-alt": "Ícone de estrela para anúncio"
+      "star-icon-alt": "Ícone de estrela de anúncio"
     }
   }
 }

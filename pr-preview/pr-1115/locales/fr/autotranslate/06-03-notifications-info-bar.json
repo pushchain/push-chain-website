@@ -1,13 +1,13 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "Lancement sur le Push Testnet maintenant — Débloquez des récompenses pour les développeurs et les premiers utilisateurs.",
+      "title": "Lancement sur Push Testnet maintenant — Débloquez des récompenses pour les développeurs et les premiers utilisateurs.",
       "learn-more-text": "En savoir plus",
       "learn-more-title": "En savoir plus sur cette annonce",
       "dismiss-button-title": "Fermer l'annonce",
       "dismiss-button-aria-label": "Fermer la barre d'annonce",
       "container-aria-label": "Annonce du site",
-      "star-icon-alt": "Icône d'étoile pour l'annonce"
+      "star-icon-alt": "Icône d'étoile d'annonce"
     }
   }
 }

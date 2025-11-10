@@ -4,14 +4,14 @@
       "seo": {
         "title": "चलो पुश करते हैं — सामुदायिक पहल",
         "description": "पुश समुदाय पहल, पोस्ट और बहुत कुछ।",
-        "og-title": "चलो पुश करते हैं - पुश चेन के लिए सामुदायिक पहल",
+        "og-title": "चलो पुश करते हैं - पुश ब्लॉकचेन के लिए सामुदायिक पहल",
         "og-description": "Push Chain के लिए समुदाय-संचालित पहल और शेयर।",
-        "twitter-title": "Let's Push | समुदाय पहल",
-        "twitter-description": "पुश चेन के लिए पुश समुदाय की पहल देखें।"
+        "twitter-title": "Let's Push | सामुदायिक पहल",
+        "twitter-description": "Push Chain के लिए Push समुदाय की पहल देखें।"
       },
       "hero-section": {
-        "title": "चलो पुश करते हैं",
-        "description": "एलएफ पुश बिल्डर्स समुदाय—आप जो शिप करते हैं और जिसकी मदद करते हैं उसका जश्न मनाते हैं। अपनी जीत साझा करें, <hashtag>#LFPush</hashtag> या <mention>@PushChain</mention> को टैग करें, और हम इसे बढ़ाएंगे।"
+        "title": "चलो Push करते हैं",
+        "description": "LF Push बिल्डर्स समुदाय—आप जो शिप करते हैं और आप जिसकी मदद करते हैं, उसका जश्न मनाते हैं। अपनी जीत साझा करें, <hashtag>#LFPush</hashtag> या <mention>@PushChain</mention> को टैग करें, और हम इसे बढ़ाएंगे।"
       },
       "tweets-section": {
         "actions": {
@@ -20,7 +20,7 @@
           "learn-more": "और जानें"
         },
         "meta": {
-          "tweet-alt": "Push Chain समुदाय के सदस्य का ट्वीट",
+          "tweet-alt": "Push Chain समुदाय के सदस्य की ट्वीट",
           "loading-alt": "Loading more community tweets"
         },
         "tweets-counter": "{{count}} ट्वीट और गिनती!",

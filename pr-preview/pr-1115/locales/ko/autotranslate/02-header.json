@@ -1,120 +1,147 @@
 {
   "header": {
     "meta": {
-      "logo-aria-label": "다울세요 상곢하세요 - 복북을 면이별",
-      "hamburger-menu-alt": "하는 주세요 안녕려",
-      "testnet-badge-alt": "하는 촌요참늸구 시주요치세장"
+      "logo-aria-label": "Push Chain - 홈페이지로 이동",
+      "language-icon-alt": "언어 선택 아이콘",
+      "hamburger-menu-alt": "탐색 메뉴 열기",
+      "testnet-badge-alt": "Push Chain Testnet Donut - 테스트넷 상태 확인"
     },
     "logo": {
-      "imagealt": "마호 수원석거면",
-      "imagetitle": "피안내 의속시 문집요",
-      "ctatitle": "국식 머는오는"
+      "imagealt": "Push Chain 로고 이미지",
+      "imagetitle": "Push Chain 로고",
+      "ctatitle": "Push Chain 홈페이지로 이동"
     },
     "testnet": {
+      "title": "테스트넷",
+      "aria-label": "테스트넷 섹션",
       "link1": {
-        "text": "",
-        "subtext": "촜읿 문호 어을 Push Chain",
-        "title": "Push Chain 테스트넷 트랜잭션 및 블록을 Push Scan에서 탐색하세요"
+        "text": "Push 스캔",
+        "subtext": "Push Chain 블록체인 탐색기",
+        "title": "Push Scan에서 Push Chain 테스트넷 트랜잭션 및 블록을 탐색하세요"
       },
       "link2": {
-        "subtext": "\n번주 총주구야 해간속",
-        "title": "백하늨 총식는품됨야관 명해우도"
+        "text": "Faucet",
+        "subtext": "테스트넷 토큰 받기",
+        "title": "Push Chain 개발을 위한 무료 testnet 토큰을 받으세요"
       }
     },
     "developers": {
-      "aria-label": "최실핯 명석울돈",
+      "title": "개발자",
+      "aria-label": "개발자 섹션",
       "link1": {
-        "title": "유니버설 앱 개발을 위한 Push Chain 문서 시작하기"
+        "text": "시작하기",
+        "subtext": "Push Chain에서 빌드하는 방법에 대한 소개",
+        "title": "Push Chain에서 유니버설 앱 개발 시작 - 개발자 문서"
       },
       "link2": {
-        "text": "현로 에국",
-        "subtext": "초단위로 개발 환경을 설정하세요"
+        "text": "빠른 시작",
+        "subtext": "몇 초 만에 개발 환경을 설정하세요.",
+        "title": "빠른 시작 가이드 - Push Chain 개발 환경을 즉시 설정하세요"
       },
       "link3": {
-        "title": "국재안프 번속을 머호띺치 주세요 - 우앏곡 보민 대화치 를 징한의 머호세요"
+        "text": "튜토리얼",
+        "subtext": "Push를 사용한 단계별 가이드",
+        "title": "핸즈온 튜토리얼로 배우기 - Push Chain에서 첫 번째 유니버설 앱 구축"
       },
       "link4": {
-        "text": "",
-        "subtext": "총곮 간산호시속요",
-        "title": "풀 스파이로 소스 코드와 개발 도구를 GitHub에서 살펴보세요"
+        "text": "GitHub",
+        "subtext": "핵심 코드 및 오픈 소스 도구 보기",
+        "title": "Push Chain 소스 코드와 개발 도구를 GitHub에서 살펴보기"
       },
       "link5": {
-        "text": "페동을 촌경를",
-        "title": "Push 체인 개발자 커뮤니티에 가입하여 디스코드에서 지원과 협력을 받으세요."
+        "text": "개발자 Discord",
+        "subtext": "개발 커뮤니티와 연결하세요",
+        "title": "Push Chain 개발자 커뮤니티에 Discord로 참여하여 지원 및 협업을 받으세요"
       }
     },
     "community": {
+      "title": "커뮤니티",
+      "aria-label": "커뮤니티 섹션",
       "link1": {
-        "text": "일해의 명동",
-        "subtext": "구법 주세요 합식세요",
-        "title": "블록체인 문서와 기능 안내서를 확인하세요"
+        "text": "지식 기반",
+        "subtext": "기능에 대한 심층 분석을 찾아보세요",
+        "title": "Push Chain에 대한 종합적인 문서 및 기능 가이드를 살펴보세요"
       },
       "link2": {
-        "text": "촜네야안세요",
-        "subtext": "Push 체인 네이티브 토큰으로 모든 것을 운영합니다."
+        "text": "토큰 이코노미",
+        "subtext": "Push Chain을 구동하는 기본 토큰",
+        "title": "Push Chain 토큰 이코노미와 $PC 토큰 유틸리티에 대해 알아보세요"
       },
       "link3": {
-        "subtext": "소식과 생태계 뉴스 업데이트",
-        "title": "입늴 원회 명곮음엘하세요 뾄문약세요"
+        "text": "X/Twitter",
+        "subtext": "업데이트 및 생태계 소식을 팔로우하세요",
+        "title": "X(Twitter)에서 Push Chain을 팔로우하여 최신 업데이트 및 공지사항을 확인하세요."
       },
       "link4": {
-        "text": "디스코드",
-        "subtext": "채팅, 빌딩, 커뮤니티와 함께하세요"
+        "text": "Discord",
+        "subtext": "커뮤니티와 함께 소통하고, 함께 만들고, 즐거운 시간을 보내세요",
+        "title": "Push Chain 커뮤니티에 참여하여 Discord에서 토론하고 지원을 받으세요"
       },
       "link5": {
-        "text": "한록",
-        "subtext": "대번소용 버석안녕주쇌",
-        "title": "푸시 체인 커뮤니티와 Telegram에서 실시간 업데이트 받으세요."
+        "text": "Telegram",
+        "subtext": "커뮤니티에 참여하고 최신 소식을 받아보세요",
+        "title": "텔레그램에서 Push Chain 커뮤니티와 연결하여 실시간 업데이트를 받으세요"
       }
     },
     "resources": {
-      "title": "분스한",
+      "title": "리소스",
+      "aria-label": "리소스 섹션",
       "link1": {
-        "text": "",
-        "subtext": "<a href=\"#\">업데이트, 깊은 지식, 개발 이야기</a>"
+        "text": "블로그",
+        "subtext": "업데이트, 심층 분석, 개발 스토리",
+        "title": "최신 업데이트, 기술 심층 분석, 개발자 스토리를 보려면 Push Chain 블로그를 읽어보세요"
       },
       "link2": {
-        "text": "주원시다해",
-        "subtext": "백에제 세합동, 코곧운음"
+        "text": "Litepaper",
+        "subtext": "비전과 기술을 간결하게 설명합니다.",
+        "title": "Push Chain Litepaper 읽기 - 간소화된 비전 및 기술 개요"
       },
       "link3": {
-        "subtext": "하는 촜우을 해세요",
-        "title": "<1>Push Chain</1>에 대한 자주 묻는 질문을 둘러보세요"
+        "text": "FAQ",
+        "subtext": "자주 묻는 질문에 대한 빠른 답변",
+        "title": "Push Chain 관련 자주 묻는 질문을 찾아보세요"
       }
     },
     "language": {
-      "title": "대댈일집"
+      "title": "언어",
+      "aria-label": "언어 선택 드롭다운"
+    },
+    "app-button": {
+      "text": "Push Portal",
+      "title": "Push Portal에 접속하여 개발자, 사용자 또는 validator로서 포인트를 획득하세요"
     },
     "explore": {
-      "title": "불성원의 해트",
-      "aria-label": "한국에 입력하세요",
+      "title": "탐색",
+      "aria-label": "탐색 섹션",
       "link1": {
-        "text": "한간다 머하",
-        "subtext": "백일 사해세요",
-        "title": "최 우c시"
+        "text": "시작하기",
+        "subtext": "Push Chain 기반 빌딩 소개",
+        "title": "빌딩 시작하기"
       },
       "link2": {
-        "text": "세요 먹하",
-        "subtext": "불음 주의 제일 용하세요",
-        "title": "불안하세요"
+        "text": "빠른 시작",
+        "subtext": "몇 초 만에 개발 환경을 설정하세요",
+        "title": "빠른 시작"
       },
       "link3": {
-        "text": "불려호 안",
-        "title": "하는 었세요"
+        "text": "튜토리얼",
+        "subtext": "Push로 구축하는 단계별 가이드",
+        "title": "튜토리얼로 배우기"
       },
       "link4": {
-        "subtext": "백횥 안승카읽세요",
-        "title": ""
+        "text": "GitHub",
+        "subtext": "코어 코드와 오픈 소스 도구를 확인해보세요",
+        "title": "Push Chain 살펴보기"
       },
       "link5": {
-        "text": "하주백촌 읊을즴",
-        "subtext": "구간 안세요",
-        "title": "한안다 총호"
+        "text": "개발자 Discord",
+        "subtext": "개발 커뮤니티와 연결하세요",
+        "title": "Discord에 참여하세요"
       },
       "link6": {
-        "text": "한국네고주",
-        "subtext": "대화 촜속슸",
-        "title": "번호 에세요"
+        "text": "예제 살펴보기",
+        "subtext": "예제 살펴보기",
+        "title": "예제 살펴보기"
       }
     }
   }

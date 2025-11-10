@@ -2,11 +2,11 @@
   "pages": {
     "blog": {
       "seo": {
-        "title": "Blog — Actualités, Analyses approfondies & Histoires",
-        "description": "Actualités, notes de publication, analyses techniques approfondies et histoires de développeurs de l'équipe Push Chain et de son écosystème.",
-        "og-title": "Blog Push Chain - Actualités, analyses approfondies & histoires",
-        "og-description": "Suivez les mises à jour des produits, les récits de développement, les analyses approfondies et les actualités de l'écosystème Push Chain.",
-        "twitter-title": "Push Chain Blog - Quoi de neuf",
+        "title": "Blog — Actualités, Analyses Approfondies & Histoires",
+        "description": "Actualités, notes de version, analyses techniques approfondies et histoires de développeurs de l'équipe Push Chain et de son écosystème.",
+        "og-title": "Blog Push Chain - Actualités, Analyses approfondies & Histoires",
+        "og-description": "Suivez les mises à jour des produits, les histoires des développeurs, les analyses approfondies et les actualités de l'écosystème Push Chain.",
+        "twitter-title": "Blog Push Chain - Les nouveautés",
         "twitter-description": "Dernières nouveautés, analyses approfondies et témoignages de développeurs — restez informé."
       }
     }

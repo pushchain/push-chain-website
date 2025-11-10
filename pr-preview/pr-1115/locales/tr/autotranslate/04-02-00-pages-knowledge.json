@@ -2,31 +2,31 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır?",
-        "description": "Push Chain'i kullanmak için kavramlar, sık sorulan sorular, nasıl yapılır kılavuzları ve ekosistem kaynakları için buradan başlayın. Push Chain'i kullanmak için açık, teknik olmayan rehberler.",
-        "og-title": "Push Chain Bilgi Tabanı - Rehberler ve SSS",
+        "title": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır",
+        "description": "Push Chain'i kullanmaya yönelik kavramlar, sık sorulan sorular, nasıl yapılır kılavuzları ve ekosistem kaynakları için buraya başlayın. Push Chain'i kullanmak için açık, teknik olmayan rehberler.",
+        "og-title": "Push Chain Bilgi Bankası - Rehberler ve SSS",
         "og-description": "Push Chain hakkında kavramlar, adım adım nasıl yapılır kılavuzları ve sık sorulan soruların cevapları.",
-        "twitter-title": "Bilgi Bankası - Rehberler ve Sıkça Sorulan Sorular",
-        "twitter-description": "Push Chain için hızlı rehberler, sık sorulan sorular ve teknik olmayan dilde nasıl yapılır açıklamaları."
+        "twitter-title": "Bilgi Tabanı - Rehberler ve SSS",
+        "twitter-description": "Push Chain hakkında hızlı kılavuzlar, sık sorulan sorular ve teknik jargon içermeyen nasıl yapılır öğretileri."
       },
       "hero-section": {
-        "title": "Bilgi Tabanı",
+        "title": "Bilgi Merkezi",
         "description": {
-          "highlighted": "Push Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış gerçek bir evrensel blok zinciridir.",
+          "highlighted": "Push Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış gerçek bir evrensel blokzincirdir.",
           "developers": "Geliştiriciler",
-          "developers-text": "Tek seferde dağıtın ve anında tüm desteklenen EVM ve non-EVM <transliterate>blockchain</transliterate> ağlarıyla uyumlu olun.",
+          "developers-text": "Tek seferde dağıtın ve tüm desteklenen EVM ve non-EVM blockchain'leriyle anında uyumlu olun.",
           "users": "Kullanıcılar",
-          "users-text": "Zincirlerinden bağımsız olarak gelen kullanıcılar için aynı uygulamayı kullanın."
+          "users-text": "Çözüm olarak, kullanıcıların geldikleri zincirden bağımsız olarak aynı uygulamayı kullanmalarını sağlıyoruz."
         },
         "email-signup": {
           "title": {
-            "long": "Push Chain testnet hakkında bildirim alın",
+            "long": "Push Chain टेस्टनेट Hakkında Bildirim Alın",
             "short": "Push Chain Testnet"
           },
-          "description": "Push Chain testnet'in canlıya geçtiğini ilk bilenlerden olun. Özel güncellemeler için posta listemize katılın."
+          "description": "Push Chain testnet'in canlıya geçtiğini ilk öğrenen siz olun. Özel güncellemeler için haber listemize katılın."
         },
         "footer": {
-          "description": "Push Chain ile uygulamanız için herhangi bir blokcheyn üzerinde kusursuz ve kullanıcı dostu deneyimler yaratın.",
+          "description": "Push Chain ile uygulamanız için herhangi bir blokzincirinde sorunsuz, kullanıcı dostu deneyimler oluşturun.",
           "cta": {
             "text": "Bildirim Al"
           }
@@ -40,33 +40,33 @@
               "items": {
                 "push101": {
                   "title": "Push Chain Temelleri",
-                  "subtitle": "Push Chain temelleri, yenilikleri ve neden gerekli olduğunu öğrenin",
+                  "subtitle": "Push Chain temellerini, yeniliklerini ve neden gerekli olduğunu öğrenin",
                   "ctatitle": "Daha Fazlasını Keşfet"
                 },
                 "builders": {
                   "title": "Push Chain üzerinde geliştir",
-                  "subtitle": "Evrensel uygulamaları nasıl oluşturabileceğinizi, bunların neler sunduğunu ve nasıl başlayabileceğinizi keşfedin!",
-                  "ctatitle": "Yaratıcılar Bir Araya Geliyor"
+                  "subtitle": "Evrensel uygulamaları nasıl oluşturabileceğinizi, neler açığa çıkardığını ve nasıl başlayabileceğinizi öğrenin!",
+                  "ctatitle": "Yapımcılar Bir Araya Geliyor"
                 },
                 "deepdives": {
                   "title": "Teknik Derinlemesine İncelemeler",
-                  "subtitle": "Push'in karmaşık çalışma prensiplerini öğrenmek mi istiyorsunuz? Yoksa sadece meraklı bir gezginsiniz? Her durumda, merhaba!",
-                  "ctatitle": "Nasıl Çalıştığını Gör"
+                  "subtitle": "Push'in karmaşık çalışma şeklini öğrenmek mi istiyorsun? Yoksa sadece meraklı bir gezginsin? Her neyse, merhaba de!",
+                  "ctatitle": "Çalışmasını Görün"
                 },
                 "devdocs": {
                   "title": "Geliştirici Belgeleri",
-                  "subtitle": "Hemen konuya girelim! Ben evrensel bir blockchain'im... ve sen bir geliştiricisin, resmiyet verelim!",
+                  "subtitle": "Hadi lafı uzatmayalım! Ben <transliterate>universal</transliterate> bir <transliterate>blockchain</transliterate>’im… ve sen de bir geliştiricisin, resmiyet verelim!",
                   "ctatitle": "Hemen Oluştur"
                 },
                 "tokenomics": {
-                  "title": "Tokenomics'i Keşfet",
-                  "subtitle": "Tokenomiğimizi öğrenin, ağımızı nasıl teşvik ettiğini ve sürdürülebilir bir ağın nasıl inşa edildiğini keşfedin",
-                  "ctatitle": "Token Tasarımını Öğrenin"
+                  "title": "Tokenomics'i Keşfedin",
+                  "subtitle": "Token ekonomimizin ağımızı nasıl teşvik ettiğini ve uzun ömürlü, sürdürülebilir bir ağın nasıl sağlandığını öğrenin",
+                  "ctatitle": "Token Tasarımını Öğren"
                 },
                 "faq": {
-                  "title": "Sıkça Sorulan Sorular",
-                  "subtitle": "Toplulukta en sık sorulan soruların cevaplarını bulabileceğiniz yer",
-                  "ctatitle": "Daha Fazla Bilgi"
+                  "title": "SSS",
+                  "subtitle": "Topluluğun en sık sorduğu soruların cevaplarını bulabileceğiniz yer",
+                  "ctatitle": "Daha Fazlasını Oku"
                 }
               }
             }

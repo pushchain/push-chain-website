@@ -1,22 +1,22 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Abrir um Chamado de Suporte",
+      "collapsed-text-for-support": "Abrir um Ticket de Suporte",
       "expanded-title-for-support": "Precisa de ajuda? 👋",
       "collapsed-text-for-contact": "Entre em contato com a equipe",
       "expanded-title-for-contact": "Olá! 👋",
       "categories": {
         "technical": {
           "label": "🔧 Suporte Técnico",
-          "description": "Relatos de bugs, SDK/API, smart contracts, ajuda com integração"
+          "description": "Relatórios de bugs, SDK/API, smart contracts, ajuda para integração"
         },
         "network": {
-          "label": "🌐 Rede & testnet",
+          "label": "🌐 Rede & Testnet",
           "description": "Explorador/Push Scan, RPC, Torneira, problemas do Donut testnet"
         },
         "wallet": {
           "label": "👛 Carteira Universal",
-          "description": "Push Wallet, conexão universal de cadeia ou outros problemas de carteira"
+          "description": "Push Wallet, conexão universal de cadeia ou outros problemas com a carteira"
         },
         "identity": {
           "label": "🪪 Contas & Identidade",
@@ -32,7 +32,7 @@
         },
         "partnerships": {
           "label": "🤝 Parcerias e Integrações",
-          "description": "Desenvolvimento de negócios, integrações do ecossistema (वॉलेट, infraestrutura, exchanges, प्रोटोकॉल)"
+          "description": "Desenvolvimento de negócios, integrações de ecossistema (वॉलेटs, infraestrutura, exchanges, प्रोटोकॉलs)"
         },
         "grants": {
           "label": "💰 Subvenções & Programas do Ecossistema",
@@ -51,28 +51,28 @@
           "description": "Vagas abertas, estágios, oportunidades de contrato"
         },
         "validators": {
-          "label": "🧡 Validadores / Operadores de नोड",
+          "label": "🧡 Validadores / Operadores de Node",
           "description": "Interesse de operadores, provedores RPC, parceiros de infraestrutura"
         },
         "legal": {
-          "label": "⚖️ Questões Legais e Conformidade",
+          "label": "⚖️ Legal & Conformidade",
           "description": "Marcas registradas, solicitações de dados, acordos"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "Com o que podemos ajudar?",
+            "title": "Em que podemos ajudar?",
             "subtitle": "Escolha a categoria que melhor descreve sua dúvida"
           },
           "contact": {
-            "title": "Prazer em te conhecer",
-            "subtitle": "Usaremos essas informações para responder você",
+            "title": "Vamos nos conhecer",
+            "subtitle": "Usaremos essas informações para entrar em contato com você",
             "name-label": "Seu Nome",
             "name-placeholder": "Digite seu nome completo",
             "name-aftergreet": "Prazer em conhecê-lo(a), ",
             "email-label": "Endereço de Email",
-            "email-placeholder": "Digite seu endereço de email"
+            "email-placeholder": "Digite seu endereço de e-mail"
           },
           "details": {
             "title": "Conte-nos mais",
@@ -80,10 +80,10 @@
             "subject-label": "Assunto",
             "subject-placeholder": "Resumo breve do seu problema",
             "message-label": "Mensagem",
-            "message-placeholder": "Descreva seu problema em detalhes. Inclua quaisquer mensagens de erro, passos para reproduzir ou informações relevantes."
+            "message-placeholder": "Descreva o seu problema em detalhes. Inclua quaisquer mensagens de erro, passos para reproduzir ou informações relevantes."
           },
           "submit": {
-            "title": "Revisar e Enviar",
+            "title": "Revise e Envie",
             "subtitle": "Por favor, revise suas informações antes de enviar",
             "placeholder": "Conte-nos mais sobre o que você precisa de ajuda..."
           }
@@ -95,10 +95,10 @@
           "submitting": "Enviando..."
         },
         "validation": {
-          "name-required": "O nome é obrigatório",
+          "name-required": "Nome é obrigatório",
           "name-min-length": "O nome deve ter pelo menos 2 caracteres",
-          "email-required": "O email é obrigatório",
-          "email-invalid": "Por favor, insira um endereço de e-mail válido.",
+          "email-required": "O e-mail é obrigatório",
+          "email-invalid": "Por favor, insira um endereço de email válido",
           "subject-required": "Assunto é obrigatório",
           "message-required": "A mensagem é obrigatória",
           "category-required": "Por favor, selecione uma categoria",
@@ -106,11 +106,11 @@
         },
         "success": {
           "title": "Ticket enviado com sucesso!",
-          "message": "Obrigado por entrar em contato conosco. Recebemos seu ticket de suporte e entraremos em contato o mais rápido possível.",
+          "message": "Obrigado por entrar em contato conosco. Recebemos seu ticket de suporte e entraremos em contato o mais breve possível.",
           "button": "Enviar Outro Ticket"
         },
         "error": {
-          "title": "Envio Falhou",
+          "title": "Falha no envio",
           "message": "Ocorreu um erro ao enviar sua solicitação. Tente novamente ou entre em contato diretamente conosco.",
           "button": "Tentar Novamente"
         }

@@ -10,7 +10,7 @@
       "section-aria-label": "Navegação e links do rodapé",
       "logo-link-title": "Página inicial do Push Chain",
       "logo-link-aria-label": "Página inicial do Push Chain",
-      "logo-alt": "Logo da Push Chain"
+      "logo-alt": "Logo do Push Chain"
     },
     "columns": {
       "resources": {
@@ -23,7 +23,7 @@
       },
       "community": {
         "title": "Comunidade",
-        "title-aria-label": "Navegação da Comunidade"
+        "title-aria-label": "Navegação da comunidade"
       },
       "help": {
         "title": "Ajuda",
@@ -34,29 +34,29 @@
       "get-started": "Começar",
       "get-started-title": "Comece a construir na Push Chain",
       "docs": "Documentação",
-      "docs-title": "Documentação Push Chain",
+      "docs-title": "Documentação do Push Chain",
       "github": "GitHub",
-      "github-title": "Repositórios Push Chain no GitHub",
+      "github-title": "Repositórios do Push Chain no GitHub",
       "knowledge-base": "Base de Conhecimento",
-      "knowledge-base-title": "Base de Conhecimento Push Chain",
+      "knowledge-base-title": "Push Chain Knowledge Base",
       "blog": "Blog",
       "blog-title": "Blog do Push Chain",
-      "litepaper": "Whitepaper",
-      "litepaper-title": "Whitepaper da Push Chain (PDF)",
+      "litepaper": "Litepaper",
+      "litepaper-title": "Push Chain litepaper (PDF)",
       "brand-kit": "Kit de Marca",
-      "brand-kit-title": "Ativos de marca e guias do Push Chain",
+      "brand-kit-title": "Ativos de marca e diretrizes Push Chain",
       "push-scan": "Push Scan",
-      "push-scan-title": "Explorador de blocos Push Chain",
+      "push-scan-title": "Explorador de blockchain Push Chain",
       "faucet": "Torneira",
-      "faucet-title": "Obtenha tokens de teste da Push Chain faucet",
+      "faucet-title": "Obtenha tokens de teste da torneira Push Chain",
       "push-portal": "Push Portal",
       "push-portal-title": "Portal da comunidade Push Chain",
       "support": "Suporte",
       "support-title": "Central de Ajuda",
-      "security": "Segurança & Divulgação",
-      "security-title": "Relatar uma vulnerabilidade (divulgação responsável)",
+      "security": "Segurança e Divulgação",
+      "security-title": "Reportar uma vulnerabilidade (divulgação responsável)",
       "contact-us": "Entre em Contato",
-      "contact-us-title": "Parcerias, desenvolvimento de negócios, mídia ou consultas gerais",
+      "contact-us-title": "Parcerias, Desenvolvimento de Negócios, mídia ou perguntas gerais",
       "careers": "Carreiras",
       "careers-title": "Vagas abertas na Push Chain",
       "twitter": "X (Twitter)",
@@ -69,7 +69,7 @@
       "telegram-title": "Junte-se ao Telegram do Push Chain"
     },
     "social-section": {
-      "section-aria-label": "Links para as redes sociais e informações legais",
+      "section-aria-label": "Links para redes sociais e informações legais",
       "twitter-icon-title": "Push Chain no X (Twitter)",
       "twitter-icon-aria-label": "Push Chain no X (Twitter)",
       "github-icon-title": "Push Chain no GitHub",

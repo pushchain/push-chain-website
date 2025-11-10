@@ -4,11 +4,11 @@
       "builders": {
         "seo": {
           "title": "开发者 — 使用指南和教程",
-          "description": "逐步指南、模式和示例，用于使用 Push Chain 的功能。",
-          "og-title": "Builders - 使用指南和教程",
-          "og-description": "关于使用Push Chain的指导教程、最佳实践和示例。",
-          "twitter-title": "开发者 - 教程与指南",
-          "twitter-description": "关于如何在 Push Chain 上部署应用的逐步指南。"
+          "description": "使用 Push Chain 功能的分步指南、模式和示例。",
+          "og-title": "开发者 - 使用指南 & 教程",
+          "og-description": "关于使用Push Chain的教程、最佳实践和示例。",
+          "twitter-title": "创作者 - 操作指南和教程",
+          "twitter-description": "关于如何在 Push Chain 上发布的逐步指南。"
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,21 +19,24 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\n准备好在 Push Chain 上构建了吗？ 这里有一些资源，希望能激励您并帮助您入门。",
-                  "curated-reads": "## 精选阅读 👇"
+                  "intro": "## Builders\n\n准备好在Push Chain上构建了吗？这里有一些资源可以帮助您获得灵感并开始构建。",
+                  "curated-reads": "## 精选文章 👇"
                 }
               },
               "universal-apps": {
-                "title": "让我们一起构建通用应用 💪",
+                "title": "让我们构建通用应用 💪",
                 "items": {
-                  "apps-only-possible-with-shared-state-v1": {
-                    "title": "仅在共享状态下才能实现的app - Vol.1"
-                  },
-                  "apps-only-possible-with-shared-state-v2": {
-                    "title": "仅通过共享状态才能实现的app - Vol.2"
+                  "apps-of-the-future": {
+                    "title": "未来的应用 — 无需混乱地构建"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "消费级应用 🫶 Push Chain?"
+                    "title": "面向消费者的应用能在 Push Chain 上构建吗？"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "只有在共享状态下才能实现的app - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "只有在共享状态下才能实现的app - Vol.2"
                   }
                 }
               },
@@ -47,7 +50,7 @@
                     "title": "获取测试网代币"
                   },
                   "testnet-explorer": {
-                    "title": "Donut Testnet Explorer"
+                    "title": "Push 测试网浏览器"
                   }
                 }
               }

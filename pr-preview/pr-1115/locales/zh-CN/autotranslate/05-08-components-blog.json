@@ -13,15 +13,15 @@
       "paginator": {
         "nav-aria-label": "博客列表页面导航",
         "newer-entries": "更多文章",
-        "older-entries": "更多文章"
+        "older-entries": "更多旧文章"
       },
       "footer-item": {
-        "share-title": "通过分享这篇文章参与讨论",
+        "share-title": "参与对话，分享这篇文章",
         "share-button": "分享",
         "share-modal-title": "分享",
         "copy-link": "复制链接",
         "about-title": "关于 Push Chain",
-        "about-description": "Push Chain 是第一个真正的通用区块链，旨在消除所有链之间的碎片化。它使开发者能够一次部署，并立即为任何链上的用户可用，无论 EVM 或非 EVM（包括以太坊、Solana、比特币等）。它 100% EVM 兼容，权益证明 (PoS) 链，允许用户像在自己的链上一样，与部署在 Push Chain 上的app进行交互。",
+        "about-description": "Push Chain 是首个真正的通用区块链，旨在消除所有链之间的碎片化。它使开发者能够一次部署，并立即为任何链上的用户提供服务，无论是 EVM 链还是非 EVM 链（包括以太坊、Solana、比特币等）。它是一个 100% EVM 兼容的权益证明 (PoS) 链，允许用户像在自己的链上原生一样，与部署在 Push Chain 上的应用进行交互。",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",

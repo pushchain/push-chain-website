@@ -1,12 +1,1 @@
-{
-  "components": {
-    "breadcrumbs": {
-      "navigation-aria-label": "Navegación de migas de pan",
-      "home-text": "Inicio",
-      "navigate-to-aria-label": "Navegar a {{page}}",
-      "go-to-title": "Ir a la página de {{page}}",
-      "current-page-aria-label": "Página actual: {{page}}",
-      "separator-aria-label": "Separador de migas de pan"
-    }
-  }
-}
+{}

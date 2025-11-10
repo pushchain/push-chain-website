@@ -1,7 +1,21 @@
 {
   "header": {
-    "meta": {
-      "language-icon-alt": "Icono de selección de idioma"
+    "community": {
+      "link5": {
+        "subtext": "Únete a la conversación y manténte al día",
+        "title": "Conéctate con la comunidad de Push Chain en Telegram para actualizaciones en tiempo real"
+      }
+    },
+    "resources": {
+      "title": "Recursos",
+      "aria-label": "Sección de Recursos"
+    },
+    "explore": {
+      "link6": {
+        "text": "Explorar Ejemplos",
+        "subtext": "Explora Ejemplos",
+        "title": "Explorar Ejemplos"
+      }
     }
   }
 }

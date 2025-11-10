@@ -6,7 +6,7 @@
         "description": "Các sáng kiến cộng đồng Push, bài đăng và nhiều hơn nữa.",
         "og-title": "Hãy Cùng Push - Sáng Kiến Cộng Đồng cho Push Chain",
         "og-description": "Sáng kiến cộng đồng và chia sẻ cho Push Chain.",
-        "twitter-title": "Hãy Cùng Push | Sáng Kiến Cộng Đồng",
+        "twitter-title": "Hãy cùng Push | Sáng kiến cộng đồng",
         "twitter-description": "Xem sáng kiến cộng đồng Push dành cho Push Chain."
       },
       "hero-section": {
@@ -15,15 +15,15 @@
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Chia sẻ Chiến Thắng của Bạn",
+          "share-win": "Chia sẻ Chiến Thắng Của Bạn",
           "join-community": "Tham gia cộng đồng",
           "learn-more": "Tìm hiểu thêm"
         },
         "meta": {
           "tweet-alt": "Tweet từ thành viên cộng đồng Push Chain",
-          "loading-alt": "Đang tải thêm các tweet từ cộng đồng"
+          "loading-alt": "Đang tải thêm bài viết cộng đồng"
         },
-        "tweets-counter": "{{count}} Tweet và vẫn còn tiếp tục!",
+        "tweets-counter": "{{count}} Tweets và vẫn đang tăng!",
         "loading": "Đang tải thêm các tweet...",
         "end-message": "Bạn đã đến cuối rồi! 🎉"
       }

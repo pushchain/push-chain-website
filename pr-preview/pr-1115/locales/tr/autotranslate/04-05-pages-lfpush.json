@@ -2,30 +2,30 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Hadi Şuraya Basalım — Topluluk Girişimi",
+        "title": "Hadi İtelim — Topluluk Girişimi",
         "description": "Push topluluğu girişimleri, gönderiler ve daha fazlası.",
-        "og-title": "Hadi İtelim - Push Chain İçin Topluluk Girişimi",
-        "og-description": "Push Chain topluluğu tarafından yönetilen bir girişim ve hisseler.",
-        "twitter-title": "Let's Push | Topluluk Girişimi",
-        "twitter-description": "Push Chain için Push topluluğu girişimini görün."
+        "og-title": "Hadi İtelim - Push Chain için Topluluk Girişimi",
+        "og-description": "Topluluk odaklı girişim ve Push Chain hisseleri.",
+        "twitter-title": "Hadi İtelim | Topluluk Girişimi",
+        "twitter-description": "Push Chain için topluluk girişimini görün."
       },
       "hero-section": {
-        "title": "Hadi Şurayı İlerletelim",
-        "description": "LF Push topluluğu—başardıklarınızı ve yardım ettiğiniz kişileri kutluyoruz. Kazançlarınızı <hashtag>#LFPush</hashtag> veya <mention>@PushChain</mention> etiketleyerek paylaşın, biz de duyuralım."
+        "title": "Hadi İlerleyelim",
+        "description": "LF Push topluluğu—neler yayınladığınızı ve kime yardım ettiğinizi kutluyoruz. Başarılarınızı paylaşın, <hashtag>#LFPush</hashtag> veya <mention>@PushChain</mention> etiketleyin ve biz de duyuralım."
       },
       "tweets-section": {
         "actions": {
           "share-win": "Kazanımını Paylaş",
           "join-community": "Topluluğa Katıl",
-          "learn-more": "Daha Fazla Öğren"
+          "learn-more": "Daha Fazla Bilgi Edinin"
         },
         "meta": {
           "tweet-alt": "Push Chain topluluğu üyesinden gelen Tweet",
           "loading-alt": "Topluluktan daha fazla tweet yükleniyor"
         },
-        "tweets-counter": "{{count}} Tweet ve saymaya devam ediyor!",
+        "tweets-counter": "{{count}} Tweet ve artıyor!",
         "loading": "Daha fazla tweet yükleniyor...",
-        "end-message": "Sonuna ulaştın! 🎉"
+        "end-message": "Sonuna ulaştınız! 🎉"
       }
     }
   }

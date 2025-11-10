@@ -3,11 +3,11 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Criadores — Tutoriais e Guias",
+          "title": "Construtores — Tutoriais e Guias",
           "description": "Guias passo a passo, padrões e exemplos para usar os recursos do Push Chain.",
           "og-title": "Construtores - Guias e Tutoriais",
-          "og-description": "Tutoriais passo a passo, melhores práticas e exemplos para construir com Push Chain.",
-          "twitter-title": "Construtores - Guias & Tutoriais",
+          "og-description": "Tutoriais guiados, melhores práticas e exemplos para construir com Push Chain.",
+          "twitter-title": "Construtores - Tutoriais e Guias",
           "twitter-description": "Guias passo a passo para lançar no Push Chain."
         },
         "explainer-section": {
@@ -26,14 +26,17 @@
               "universal-apps": {
                 "title": "Vamos Construir Apps Universais 💪",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Apps do Futuro — Construindo sem o caos"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Apps para o Usuário 🫶 Push Chain?"
+                  },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "Apps Possíveis Somente com Shared State - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps Possíveis Somente com Estado Compartilhado - Vol.2"
-                  },
-                  "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Aplicativos para Usuários 🫶 Push Chain?"
+                    "title": "Aplicativos Possíveis Apenas com Shared State - Vol.2"
                   }
                 }
               },
@@ -44,7 +47,7 @@
                     "title": "Explore Documentação para Desenvolvedores"
                   },
                   "faucet": {
-                    "title": "Obtenha टोकन de Testnet"
+                    "title": "Obtenha Tokens da Testnet"
                   },
                   "testnet-explorer": {
                     "title": "Push Testnet Explorer"

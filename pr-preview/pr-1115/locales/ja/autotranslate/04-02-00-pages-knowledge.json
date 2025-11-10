@@ -2,31 +2,31 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "ナレッジベース — ガイド、FAQ & チュートリアル",
-        "description": "Push Chain の概念、FAQ、使い方、エコシステムのリソースから始めましょう。Push Chain の使用方法に関する、明確で専門用語を使わないガイドです。",
-        "og-title": "Push Chain ナレッジベース - ガイドとFAQ",
-        "og-description": "Push Chainに関するコンセプト、ステップバイステップのハウツー、およびよくある質問への回答。",
+        "title": "知識ベース — ガイド、FAQ & 方法",
+        "description": "Push Chain のコンセプト、FAQ、ハウツー、エコシステムリソースを始める場所です。 Push Chain の使用方法に関するわかりやすく、専門知識のないガイドです。",
+        "og-title": "Push Chain Knowledge Base - ガイドとFAQ",
+        "og-description": "Push Chain に関する概念、段階的な方法、および一般的な質問への回答。",
         "twitter-title": "ナレッジベース - ガイドとFAQ",
-        "twitter-description": "Push Chain に関する簡単なガイド、FAQ、ハウツー。専門用語なし。"
+        "twitter-description": "Push Chain (専門用語なし) のクイックガイド、FAQ、方法。"
       },
       "hero-section": {
         "title": "知識ベース",
         "description": {
-          "highlighted": "Push Chain は、すべてのチェーン間の分断をなくすように設計された、真のユニバーサル ブロックチェーン です。",
+          "highlighted": "Push Chain は、すべてのチェーン間の断片化を排除するために設計された、真のユニバーサル ブロックチェーンです。",
           "developers": "開発者",
-          "developers-text": "一度デプロイするだけで、サポートされているすべてのEVMおよびnon-EVMチェーンと瞬時に互換性を持つようになります。",
+          "developers-text": "一度デプロイすれば、サポートされているすべてのEVMおよびnon-EVMチェーンと瞬時に互換性を持つようになります。",
           "users": "ユーザー",
-          "users-text": "どのチェーンから来たとしても、同じappを使えるように。"
+          "users-text": "どのチェーンから来ても同じappを使えるように。"
         },
         "email-signup": {
           "title": {
-            "long": "Push Chain <testnet> の最新情報を受け取る",
+            "long": "Push Chain テストネットの通知を受け取る",
             "short": "Push Chain Testnet"
           },
-          "description": "Push Chain のテストネット公開情報をいち早く入手しましょう。限定アップデートのためにメーリングリストにご登録ください。"
+          "description": "Push Chain のテストネット公開情報をいち早く入手しましょう。限定アップデートのために、メーリングリストにご登録ください。"
         },
         "footer": {
-          "description": "Push Chain を使って、どんなブロックチェーンでも使いやすく、シームレスなユーザーエクスペリエンスをあなたのアプリで実現しましょう。",
+          "description": "Push Chain を使用することで、どのブロックチェーンでも使いやすくシームレスな app のユーザーエクスペリエンスを構築できます。",
           "cta": {
             "text": "通知を受け取る"
           }
@@ -40,32 +40,32 @@
               "items": {
                 "push101": {
                   "title": "Push Chain の基本",
-                  "subtitle": "Push Chainの基本、革新性、そしてなぜ必要なのかを学びましょう",
+                  "subtitle": "Push Chain の基本、革新性、そしてなぜ必要なのかを学びましょう",
                   "ctatitle": "もっと詳しく"
                 },
                 "builders": {
                   "title": "Push Chain で構築",
-                  "subtitle": "ユニバーサル <app> をどのように構築するか、それがどのような可能性を秘めているか、そしてどのように始めるかについて掘り下げてみましょう！",
+                  "subtitle": "ユニバーサル <app> の構築方法、その可能性、そして始め方について学びましょう！",
                   "ctatitle": "Builders Assemble"
                 },
                 "deepdives": {
                   "title": "技術的な詳細解説",
-                  "subtitle": "Pushの仕組みを詳しく知りたいですか？それとも単に好奇心旺盛な方ですか？どちらにしても、こんにちは！",
+                  "subtitle": "Pushの複雑な仕組みについてもっと知りたいですか？ それとも単なる好奇心旺盛な方ですか？ どちらでも構いません、こんにちは！",
                   "ctatitle": "仕組みを見る"
                 },
                 "devdocs": {
                   "title": "開発者向けドキュメント",
-                  "subtitle": "早速本題に入りましょう！私はユニバーサルチェーンです…あなたは開発者さん、公式にしましょう！",
+                  "subtitle": "早速本題に入りましょう！私はユニバーサルチェーンです... そしてあなたは開発者、公式にしましょう！",
                   "ctatitle": "今すぐ構築"
                 },
                 "tokenomics": {
-                  "title": "トークノミクスを探索",
+                  "title": "トークノミクスの探求",
                   "subtitle": "私たちのトークノミクスの仕組みと、持続可能なネットワークを構築するためのインセンティブについて学びましょう",
-                  "ctatitle": "トークノミクスの学び方"
+                  "ctatitle": "トークン設計を学ぶ"
                 },
                 "faq": {
                   "title": "よくある質問",
-                  "subtitle": "コミュニティからのよくある質問に対する答えを見つける場所",
+                  "subtitle": "コミュニティから寄せられたよくある質問の答えを見つける場所",
                   "ctatitle": "もっと詳しく"
                 }
               }

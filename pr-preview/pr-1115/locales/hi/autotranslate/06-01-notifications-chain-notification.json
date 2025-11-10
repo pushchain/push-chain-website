@@ -1,13 +1,15 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "प्रोजेक्ट जेडीयू.डी डिप्लॉयाथॉन लाइव है! ऐप्स को तैनात करें, $5000 जीतें",
-      "button-text": "यूनिवर्सल में जाएं और विकसित करें",
-      "button-aria-label": "Project G.U.D डिप्लॉयमेंट प्रतियोगिता जीवंत हो गई। आप इसकी जांच यहां कर सकते हैं",
-      "image-alt": "पुश चेन टेस्टनेट डोनट - यूनिवर्सल ब्लॉकचेन",
-      "close-button-title": "टेस्टनेट अलर्ट बंद करें",
-      "close-button-aria-label": "बंद करें पुश चेन टेस्टनेट नोटिफिकेशन",
-      "container-aria-label": "पुश चेन टेस्टनेट नोटिफिकेशन "
+      "title": "",
+      "description": "प्रोजेक्ट G.U.D डिप्लॉयथॉन LIVE है! ऐप्स डिप्लॉय करें, $5000 जीतें",
+      "button-text": "यूनिवर्सल पर जाएं और डिप्लॉय करें",
+      "button-title": "Project G.U.D deployathon LIVE है",
+      "button-aria-label": "Project G.U.D deployathon is LIVE. आप इसे यहां देख सकते हैं",
+      "image-alt": "Push Chain Testnet Donut - युनिवर्सल ब्लॉकचेन",
+      "close-button-title": "टेस्टनेट नोटिफिकेशन बंद करें",
+      "close-button-aria-label": "Push Chain टेस्टनेट नोटिफिकेशन खारिज करें",
+      "container-aria-label": "Push Chain testnet सूचना"
     }
   }
 }

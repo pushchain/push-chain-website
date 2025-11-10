@@ -2,16 +2,16 @@
   "components": {
     "cookie-banner": {
       "message": "Chúng tôi sử dụng cookie để cá nhân hóa trải nghiệm của bạn. Tìm hiểu thêm trong chính sách",
-      "privacy-policy-link": "Chính sách quyền riêng tư",
+      "privacy-policy-link": "Chính sách bảo mật",
       "privacy-policy-link-title": "Đọc chính sách bảo mật của Push Chain",
       "privacy-policy-link-aria-label": "Mở chính sách quyền riêng tư trong tab mới",
       "accept-button": "Chấp nhận",
       "accept-button-title": "Chấp nhận cookie để cá nhân hóa trải nghiệm của bạn",
-      "accept-button-aria-label": "Chấp nhận cookie và đóng banner",
+      "accept-button-aria-label": "Chấp nhận cookie và đóng thông báo",
       "reject-button": "Từ chối",
-      "reject-button-title": "Từ chối cookie và đóng banner",
+      "reject-button-title": "Từ chối cookie và đóng thông báo",
       "reject-button-aria-label": "Từ chối cookie và đóng banner",
-      "banner-aria-label": "Thông báo chấp nhận cookie",
+      "banner-aria-label": "Thông báo chấp thuận Cookie",
       "banner-role": "Thông báo tùy chọn cookie"
     }
   }

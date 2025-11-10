@@ -2,30 +2,30 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "レッツプッシュ — コミュニティイニシアチブ",
+        "title": "レッツ プッシュ — コミュニティ・イニシアチブ",
         "description": "Push コミュニティの取り組み、投稿など。",
-        "og-title": "レッツプッシュ - プッシュチェーンのためのコミュニティイニシアチブ",
-        "og-description": "Push Chain コミュニティ主導のイニシアチブとシェア。",
-        "twitter-title": "Let's Push | コミュニティイニシアチブ",
-        "twitter-description": "Push Chain コミュニティの取り組みをご覧ください。"
+        "og-title": "レッツ プッシュ - プッシュ チェーンのためのコミュニティイニシアチブ",
+        "og-description": "コミュニティ主導のイニシアチブとPush Chainのシェア。",
+        "twitter-title": "Let's Push | コミュニティの取り組み",
+        "twitter-description": "Push Chain のコミュニティイニシアチブをご覧ください。"
       },
       "hero-section": {
-        "title": "さあ、プッシュしましょう",
-        "description": "LF Push ビルダーコミュニティ—あなたの成果と助け合いを称えます。あなたの勝利を共有し、<hashtag>#LFPush</hashtag> または <mention>@PushChain</mention> をタグ付けすると、より多くの人に広めます。"
+        "title": "さあ、Push しましょう！",
+        "description": "LF Push ビルダーコミュニティ—あなたが何を構築し、誰を助けるかを称えます。あなたの成果を共有し、<hashtag>#LFPush</hashtag>または<mention>@PushChain</mention>をタグ付けすると、私たちが広めます。"
       },
       "tweets-section": {
         "actions": {
           "share-win": "勝利をシェア",
           "join-community": "コミュニティに参加",
-          "learn-more": "もっと詳しく"
+          "learn-more": "詳しくはこちら"
         },
         "meta": {
           "tweet-alt": "Push Chainコミュニティメンバーからのツイート",
           "loading-alt": "コミュニティのツイートを読み込んでいます"
         },
-        "tweets-counter": "{{count}} 件のツイートとカウント中！",
-        "loading": "ツイートの読み込み中…",
-        "end-message": "これで終わりです！🎉"
+        "tweets-counter": "{{count}} ツイート、そしてまだまだ続いています！",
+        "loading": "ツイートを読み込んでいます...",
+        "end-message": "これで全てです！🎉"
       }
     }
   }

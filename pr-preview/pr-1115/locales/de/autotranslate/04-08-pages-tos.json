@@ -2,9 +2,18 @@
   "pages": {
     "tos": {
       "seo": {
-        "twitter-title": "Nutzungsbedingungen - Push Chain"
+        "title": "Nutzungsbedingungen",
+        "description": "Regeln für die Nutzung von Push Chain Websites, Apps und Services, einschließlich Ihrer Rechte und Pflichten.",
+        "og-title": "Push Chain Nutzungsbedingungen - Rechtliche Bedingungen",
+        "og-description": "Rechtliche Bedingungen für die Nutzung unserer Websites, <app>s und Entwicklertools.",
+        "twitter-title": "Nutzungsbedingungen - Push Chain",
+        "twitter-description": "Lesen Sie die rechtlichen Bedingungen für die Nutzung von Push Chain."
       },
-      "hero-section": {}
+      "hero-section": {
+        "title": "Nutzungsbedingungen",
+        "description": "Legt die Allgemeinen Geschäftsbedingungen fest",
+        "update-text": "Letzt aktualisiert: 25. Oktober 2025"
+      }
     }
   }
 }

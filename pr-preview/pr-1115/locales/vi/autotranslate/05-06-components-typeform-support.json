@@ -1,58 +1,58 @@
 {
   "components": {
     "typeform-support": {
-      "collapsed-text-for-support": "Mở Ticket Hỗ Trợ",
+      "collapsed-text-for-support": "Mở yêu cầu hỗ trợ",
       "expanded-title-for-support": "Cần hỗ trợ? 👋",
-      "collapsed-text-for-contact": "Liên hệ với Nhóm hỗ trợ",
+      "collapsed-text-for-contact": "Liên hệ với đội ngũ hỗ trợ",
       "expanded-title-for-contact": "Chào bạn! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 Hỗ trợ Kỹ thuật",
+          "label": "🔧 Hỗ trợ kỹ thuật",
           "description": "Báo cáo lỗi, SDK/API, smart contracts, trợ giúp tích hợp"
         },
         "network": {
           "label": "🌐 Mạng lưới & testnet",
-          "description": "Khám phá/Push Scan, RPC, Vòi, các vấn đề trên Donut testnet"
+          "description": "Khám phá/Push Scan, RPC, Vòi, các vấn đề về Donut testnet"
         },
         "wallet": {
           "label": "👛 Ví Universal",
-          "description": "Push Wallet, kết nối đa chuỗi hoặc các vấn đề khác liên quan đến ví"
+          "description": "Ví Push, kết nối đa chuỗi hoặc các vấn đề khác liên quan đến ví"
         },
         "identity": {
-          "label": "🪪 Tài khoản & Danh tính",
-          "description": "UEA/UOA, chữ ký, các câu hỏi về quyền sở hữu"
+          "label": "🪪 Tài khoản & Xác minh danh tính",
+          "description": "UEA/UOA, chữ ký, các câu hỏi về ghi công"
         },
         "security": {
           "label": "🛡️ Bảo mật",
-          "description": "Báo cáo lỗ hổng bảo mật, công bố trách nhiệm (security@push.org)"
+          "description": "Báo cáo lỗ hổng bảo mật, tiết lộ có trách nhiệm (security@push.org)"
         },
         "general": {
           "label": "💬 Hỏi đáp chung",
-          "description": "Các câu hỏi, phản hồi, hoặc các chủ đề khác"
+          "description": "Các câu hỏi, phản hồi hoặc các chủ đề khác"
         },
         "partnerships": {
-          "label": "🤝 Đối tác & Tích hợp",
+          "label": "🤝 Hợp tác & Tích hợp",
           "description": "Hợp tác kinh doanh, tích hợp hệ sinh thái (ví, cơ sở hạ tầng, sàn giao dịch, giao thức)"
         },
         "grants": {
-          "label": "💰 Khoản tài trợ & Chương trình Hệ sinh thái",
-          "description": "BRB, Bootcamp, các khoản tài trợ, thắc mắc về nguồn vốn"
+          "label": "💰 Các khoản tài trợ & Chương trình Hệ sinh thái",
+          "description": "BRB, Bootcamp, tài trợ, các câu hỏi về nguồn vốn"
         },
         "media": {
           "label": "📰 Truyền thông & Báo chí",
-          "description": "Phỏng vấn, tuyên bố, tài sản, kiểm chứng thông tin"
+          "description": "Phỏng vấn, tuyên bố, tài sản, kiểm tra thực tế"
         },
         "events": {
           "label": "🎤 Diễn thuyết & Sự kiện",
           "description": "Các buổi nói chuyện, hội thảo, hackathon, tài trợ"
         },
         "careers": {
-          "label": "👩‍💻 Cơ hội nghề nghiệp",
-          "description": "Các vị trí đang tuyển, thực tập, cơ hội làm việc theo hợp đồng"
+          "label": "👩‍💻 Cơ hội việc làm",
+          "description": "Các vị trí đang tuyển dụng, thực tập, cơ hội hợp đồng"
         },
         "validators": {
           "label": "🧡 Người điều phối / Vận hành Node",
-          "description": "Sự quan tâm của nhà vận hành, các nhà cung cấp RPC, đối tác cơ sở hạ tầng"
+          "description": "Sự quan tâm của nhà vận hành, nhà cung cấp RPC, đối tác cơ sở hạ tầng"
         },
         "legal": {
           "label": "⚖️ Pháp lý & Tuân thủ",
@@ -66,12 +66,12 @@
             "subtitle": "Chọn danh mục phù hợp nhất với thắc mắc của bạn"
           },
           "contact": {
-            "title": "Hãy làm quen với bạn",
+            "title": "Hãy làm quen nhé",
             "subtitle": "Chúng tôi sẽ sử dụng thông tin này để liên hệ lại với bạn",
             "name-label": "Tên của bạn",
             "name-placeholder": "Nhập họ và tên đầy đủ của bạn",
             "name-aftergreet": "Rất vui được làm quen với bạn, ",
-            "email-label": "Địa chỉ Email",
+            "email-label": "Địa chỉ email",
             "email-placeholder": "Nhập địa chỉ email của bạn"
           },
           "details": {
@@ -89,29 +89,29 @@
           }
         },
         "buttons": {
-          "next": "Tiếp tục",
+          "next": "Tiếp theo",
           "previous": "Quay lại",
           "submit": "Gửi yêu cầu",
           "submitting": "Đang gửi..."
         },
         "validation": {
-          "name-required": "Vui lòng nhập tên của bạn",
+          "name-required": "Vui lòng nhập tên.",
           "name-min-length": "Tên phải dài ít nhất 2 ký tự",
           "email-required": "Email là bắt buộc",
           "email-invalid": "Vui lòng nhập địa chỉ email hợp lệ",
-          "subject-required": "Vui lòng nhập chủ đề",
+          "subject-required": "Vui lòng nhập tiêu đề",
           "message-required": "Vui lòng nhập tin nhắn",
           "category-required": "Vui lòng chọn một danh mục",
-          "default": "Trường này bắt buộc phải điền"
+          "default": "Vui lòng điền vào trường này"
         },
         "success": {
           "title": "Đã gửi ticket thành công!",
-          "message": "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi đã nhận được yêu cầu hỗ trợ của bạn và sẽ phản hồi bạn sớm nhất có thể.",
+          "message": "Cảm ơn bạn đã liên hệ với chúng tôi. Chúng tôi đã nhận được yêu cầu hỗ trợ của bạn và sẽ phản hồi bạn trong thời gian sớm nhất.",
           "button": "Gửi yêu cầu khác"
         },
         "error": {
-          "title": "Gửi không thành công",
-          "message": "Có lỗi xảy ra khi gửi yêu cầu của bạn. Vui lòng thử lại hoặc liên hệ trực tiếp với chúng tôi.",
+          "title": "Gửi bài đăng thất bại",
+          "message": "Đã xảy ra lỗi khi gửi yêu cầu của bạn. Vui lòng thử lại hoặc liên hệ trực tiếp với chúng tôi.",
           "button": "Thử lại"
         }
       }

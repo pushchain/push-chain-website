@@ -3,10 +3,10 @@
     "alert": {
       "message": "Push Metamask Snap متوفر الآن,",
       "know-more-text": "لنبدأ!",
-      "know-more-title": "ابدأ مع Push Metamask Snap",
+      "know-more-title": "ابدأ باستخدام Push MetaMask Snap",
       "close-button-title": "إغلاق التنبيه",
-      "close-button-aria-label": "إغلاق تنبيه Push Metamask Snap",
-      "container-aria-label": "إعلان Push Metamask Snap"
+      "close-button-aria-label": "Dismiss Push MetaMask Snap alert",
+      "container-aria-label": "إشعارات Push Metamask Snap"
     }
   }
 }

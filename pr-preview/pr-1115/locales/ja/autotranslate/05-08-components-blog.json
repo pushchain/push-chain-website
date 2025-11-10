@@ -2,30 +2,30 @@
   "components": {
     "blog": {
       "more-posts": {
-        "title": "Push Chain からの最新情報",
+        "title": "More from Push Chain",
         "follow-button": "フォロー",
         "read-more": "もっと読む"
       },
       "list": {
-        "recent-updates": "最新情報",
+        "recent-updates": "最近のアップデート",
         "page-title": "ページ {{page}}"
       },
       "paginator": {
-        "nav-aria-label": "ブログリストページのナビゲーション",
+        "nav-aria-label": "ブログ一覧ページのナビゲーション",
         "newer-entries": "新しい記事",
-        "older-entries": "前のエントリ"
+        "older-entries": "前の記事"
       },
       "footer-item": {
-        "share-title": "この記事をシェアして会話に参加しよう！",
+        "share-title": "この記事を共有して会話に参加しましょう",
         "share-button": "シェア",
         "share-modal-title": "共有",
         "copy-link": "リンクをコピー",
-        "about-title": "Push Chain について",
-        "about-description": "Push Chain は、すべてのチェーン間の断片化を排除するように設計された最初の真のユニバーサル ブロックチェーンです。開発者は一度デプロイするだけで、EVM または Non-EVM (Ethereum、Solana、Bitcoin などを含む) のいずれのチェーンでも、ユーザーがネイティブに自分のチェーンで行うように、すぐに利用可能になります。100% EVM 互換、Proof of Stake (PoS) チェーンであり、ユーザーは Push Chain にデプロイされたアプリを、自分のチェーンでネイティブに行うのと同じように、任意のチェーンからインタラクトできます。",
+        "about-title": "Push Chainについて",
+        "about-description": "Push Chain は、すべてのチェーン間の断片化を排除するように設計された最初の真のユニバーサル ブロックチェーン です。開発者は一度デプロイするだけで、EVM または Non-EVM (Ethereum、Solana、Bitcoin などを含む) のいずれのチェーンでも、すぐにユーザーが利用できるようになります。100% EVM 互換の Proof of Stake (PoS) チェーンであり、ユーザーは Push Chain 上にデプロイされた アプリ を、自分たちのチェーンで行うのと同様に、どのチェーンからでも操作できます。",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",
-        "social-linkedin": "LinkedIn"
+        "social-linkedin": "Linkedin"
       }
     }
   }

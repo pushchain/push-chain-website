@@ -8,23 +8,23 @@
       "categories": {
         "technical": {
           "label": "🔧 기술 지원",
-          "description": "버그 보고, SDK/API, 스마트 컨트랙트, 통합 도움말"
+          "description": "버그 보고, SDK/API, 스마트 계약, 통합 도움말"
         },
         "network": {
           "label": "🌐 네트워크 & 테스트넷",
-          "description": "탐색기/Push 스캔, RPC, 수돗꼭지, Donut testnet 관련 문제"
+          "description": "탐색기/Push 스캔, RPC, faucet, Donut testnet 문제"
         },
         "wallet": {
-          "label": "👛 유니버설 월렛",
-          "description": "Push Wallet, 유니버설 체인 연결 또는 다른 지갑 관련 문제"
+          "label": "👛 유니버설 ₩อล렛",
+          "description": "Push Wallet, 유니버설 체인 연결 또는 기타 월렛 문제"
         },
         "identity": {
           "label": "🪪 계정 및 신원 확인",
-          "description": "UEA/UOA, 서명, 귀속 질문"
+          "description": "UEA/UOA, 서명, 귀속 관련 질문"
         },
         "security": {
           "label": "🛡️ 보안",
-          "description": "취약점 보고, 책임 있는 공개 (security@push.org)"
+          "description": "취약점 신고, 책임감 있는 공개 (security@push.org)"
         },
         "general": {
           "label": "💬 일반 문의",
@@ -36,14 +36,14 @@
         },
         "grants": {
           "label": "💰 지원금 및 생태계 프로그램",
-          "description": "BRB, 부트캠프, гранты, 자금 지원 문의"
+          "description": "BRB, 부트캠프, 보조금, 자금 지원 문의"
         },
         "media": {
           "label": "📰 미디어 & 언론",
-          "description": "인터뷰, 성명, 자산, 팩트 체크"
+          "description": "인터뷰, 성명, 에셋, 팩트 체크"
         },
         "events": {
-          "label": "🎤 강연 & 이벤트",
+          "label": "🎤 강연 및 이벤트",
           "description": "강연, 워크숍, 해커톤, 스폰서십"
         },
         "careers": {
@@ -55,8 +55,8 @@
           "description": "운영자 관심, RPC 제공업체, 인프라 파트너"
         },
         "legal": {
-          "label": "⚖️ 법률 & 규정 준수",
-          "description": "상표권, 데이터 요청, 계약"
+          "label": "⚖️ 법률 및 규정 준수",
+          "description": "상표, 데이터 요청, 계약"
         }
       },
       "form": {
@@ -66,8 +66,8 @@
             "subtitle": "문의 유형을 가장 잘 설명하는 항목을 선택하세요"
           },
           "contact": {
-            "title": "알려주세요",
-            "subtitle": "이 정보를 사용하여 연락드리겠습니다",
+            "title": "알아보도록 해요",
+            "subtitle": "이 정보를 사용하여 다시 연락드리겠습니다",
             "name-label": "이름",
             "name-placeholder": "이름을 입력하세요",
             "name-aftergreet": "만나서 반가워요, ",
@@ -76,42 +76,42 @@
           },
           "details": {
             "title": "자세히 알려주세요",
-            "subtitle": "문의 사항에 대한 자세한 내용을 알려주세요",
+            "subtitle": "문의 사항에 대한 세부 정보를 제공해주세요",
             "subject-label": "제목",
-            "subject-placeholder": "문의 내용 요약",
+            "subject-placeholder": "간단하게 문의 내용 요약",
             "message-label": "메시지",
-            "message-placeholder": "문제 상황을 자세히 설명해주세요. 오류 메시지, 재현 단계, 관련 정보 등을 포함해주세요."
+            "message-placeholder": "자세하게 문제를 설명해주세요. 오류 메시지, 재현 단계 또는 관련 정보를 포함해주세요."
           },
           "submit": {
-            "title": "확인 및 제출",
-            "subtitle": "제출하기 전에 정보를 다시 한번 확인해주세요.",
-            "placeholder": "어떤 도움이 필요하신지 자세히 알려주세요..."
+            "title": "확인 후 제출",
+            "subtitle": "제출하기 전에 정보를 다시 확인해주세요",
+            "placeholder": "어떤 도움을 원하시는지 자세히 알려주세요..."
           }
         },
         "buttons": {
           "next": "다음",
           "previous": "이전",
-          "submit": "티켓 제출",
+          "submit": "문의 제출",
           "submitting": "제출 중..."
         },
         "validation": {
           "name-required": "이름을 입력해주세요",
-          "name-min-length": "이름은 최소 2자 이상이어야 합니다",
+          "name-min-length": "이름은 최소 2자 이상이어야 합니다.",
           "email-required": "이메일 주소를 입력해주세요.",
           "email-invalid": "유효한 이메일 주소를 입력해주세요.",
           "subject-required": "제목은 필수 입력 항목입니다.",
-          "message-required": "메시지를 입력해주세요.",
-          "category-required": "카테고리를 선택해주세요",
-          "default": "이 필드는 필수 항목입니다."
+          "message-required": "메시지는 필수입니다",
+          "category-required": "카테고리를 선택해주세요.",
+          "default": "이 필드는 필수입니다"
         },
         "success": {
-          "title": "티켓 제출 성공!",
+          "title": "티켓이 성공적으로 제출되었습니다!",
           "message": "문의해 주셔서 감사합니다. 지원 티켓을 접수했으며 최대한 빨리 답변드리겠습니다.",
-          "button": "다른 문의 제출"
+          "button": "다른 티켓 제출"
         },
         "error": {
           "title": "제출 실패",
-          "message": "티켓 제출 중 오류가 발생했습니다. 다시 시도하거나 직접 문의해 주세요.",
+          "message": "티켓 제출 중 오류가 발생했습니다. 다시 시도하거나 직접 문의해주세요.",
           "button": "다시 시도"
         }
       }

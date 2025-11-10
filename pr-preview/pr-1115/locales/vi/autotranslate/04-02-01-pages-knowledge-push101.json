@@ -4,53 +4,57 @@
       "push101": {
         "seo": {
           "title": "Giới thiệu về Push Chain — Những điều cơ bản",
-          "description": "Giới thiệu dễ hiểu về Push Chain và các ứng dụng đa năng – đây là gì, nó hoạt động như thế nào và cách bắt đầu.",
-          "og-title": "Cơ bản về Push Chain - Giới thiệu",
-          "og-description": "Tìm hiểu những kiến thức cơ bản: Push Chain là gì, cách thức hoạt động của nó và những bước đầu tiên của bạn.",
-          "twitter-title": "Cơ bản về Push Chain - Bắt đầu từ đây",
-          "twitter-description": "Hướng dẫn cho người mới bắt đầu về Push Chain và các ứng dụng universal."
+          "description": "Giới thiệu thân thiện cho người mới bắt đầu về Push Chain và các ứng dụng universal—đó là gì, cách thức hoạt động và cách bắt đầu.",
+          "og-title": "Giới thiệu về Push Chain - Những điều cơ bản",
+          "og-description": "Tìm hiểu những kiến thức cơ bản: Push Chain là gì, cách nó hoạt động và những bước đầu tiên của bạn.",
+          "twitter-title": "Các kiến thức cơ bản về Push Chain - Bắt đầu từ đây",
+          "twitter-description": "Hướng dẫn dành cho người mới bắt đầu về Push Chain và các ứng dụng universal."
         },
         "explainer-section": {
           "breadcrumbs": {
             "knowledge-base": "Cơ sở kiến thức"
           },
           "blocks": {
-            "title": "Cơ bản về Push Chain",
+            "title": "Những kiến thức cơ bản về Push Chain",
             "sections": {
               "push-chain-basics": {
                 "items": {
-                  "why-push-chain": "## Tại sao Push Chain?\n\nPush Chain là **L1 universal thực sự đầu tiên**, được xây dựng đặc biệt để cho phép các ứng dụng tương tác dễ dàng với người dùng từ bất kỳ chuỗi nào.\n\nViết smart contract của bạn một lần, triển khai nó trên Push Chain, và ngay lập tức tiếp cận người dùng trên Ethereum, Solana và tất cả các chuỗi khác được hỗ trợ mà không cần thay đổi mã trên chuỗi.",
-                  "what-is-push-chain": "## Push Chain là gì?\n\nPush Chain là một blockchain L1 Proof-of-Stake (PoS) được thiết kế để loại bỏ sự phân mảnh trên tất cả các chain.\n\nĐây là một blockchain L1 **shared state** cho **Universal (Interoperable) Apps** trên các chain. Push Chain cho phép các giao dịch từ bất kỳ chain nào (Eth, Solana, EVM, hoặc non-EVM), cho phép các ứng dụng từ bất kỳ chain nào có thể được truy cập bởi người dùng của bất kỳ chain nào (**polymarket** từ bất kỳ chain nào, **pump.fun** từ bất kỳ chain nào, v.v.).",
-                  "innovations-of-push-chain": "## Những đổi mới của Push Chain\n\nPush Chain giới thiệu một số đổi mới đột phá như:\n\n**L1 Universal thực sự** - Hỗ trợ tất cả các chuỗi một cách tự nhiên và cho phép người dùng tương tác với cùng một ứng dụng. Không cần các bộ chuyển tiếp tập trung, cầu nối hoặc các thủ thuật khác.\n\n**Trừu tượng hóa phí Universal** - Cho phép người dùng tương tác một cách tự nhiên trong khi ở trên chuỗi mà họ chọn và sử dụng bất kỳ token nào họ muốn.\n\n**Trừu tượng hóa Ví** - Hỗ trợ MetaMask, Phantom và các ví khác cũng như đăng nhập xã hội hoặc email thông qua một nhà cung cấp thống nhất. Người dùng không bao giờ cần tạo ví mới để truy cập bất kỳ ứng dụng nào.\n\n**Một giao dịch duy nhất, bất kể chuỗi nào** - người dùng có thể tương tác với bất kỳ ứng dụng nào trên Push Chain chỉ với một giao dịch duy nhất. Bất kể họ chọn tương tác với ứng dụng như thế nào, họ sẽ chỉ cần ký một giao dịch duy nhất.\n\n**Smart Contract Universal** - Smart contract là universal và sẽ hoạt động ngay lập tức mà không cần bất kỳ thay đổi mã nào trên chuỗi hoặc các bước bổ sung nào.\n\n**Shared State & Programmable Solvers** - Cho phép các nhà phát triển đọc và ghi trạng thái của các blockchain khác (Roadmap).\n\nKết quả là **các ứng dụng tương tác hoàn toàn** cho web3. Trong mô hình này, thay vì là người dùng của \"Uniswap trên Ethereum\", \"Uniswap trên Polygon\" hoặc \"Uniswap trên Arbitrum\", một người đơn giản trở thành **người dùng của Uniswap.**",
-                  "curated-reads": "## Bài đọc được tuyển chọn 👇"
+                  "why-push-chain": "## Tại sao Push Chain?\n\nPush Chain là **L1 đa năng thực sự** đầu tiên, được tạo ra để cho phép các ứng dụng dễ dàng tương tác với người dùng từ bất kỳ chuỗi nào.\n\nViết smart contract một lần, triển khai nó trên Push Chain và ngay lập tức tiếp cận người dùng trên Ethereum, Solana và tất cả các chuỗi khác được hỗ trợ mà không cần thay đổi mã on-chain.",
+                  "what-is-push-chain": "## Push Chain là gì?\n\nPush Chain là một blockchain L1 Proof-of-Stake (PoS) được thiết kế để loại bỏ sự phân mảnh trên tất cả các chuỗi.\n\nĐây là một blockchain **shared state L1** cho **Universal (Interoperable) Apps** trên các chuỗi. Push Chain cho phép các giao dịch từ bất kỳ chuỗi nào (Eth, Solana, EVM, hoặc non-EVM), cho phép các ứng dụng từ bất kỳ chuỗi nào có thể được truy cập bởi người dùng của bất kỳ chuỗi nào (**polymarket** từ bất kỳ chuỗi nào, **pump.fun** từ bất kỳ chuỗi nào, v.v.).",
+                  "innovations-of-push-chain": "## Những đổi mới của Push Chain\n\nPush Chain giới thiệu một số đổi mới đột phá như:\n\n**L1 Thực sự Universal** - Hỗ trợ tất cả các chuỗi một cách bản địa và cho phép người dùng tương tác với cùng một ứng dụng. Không cần các bộ điều chuyển tập trung, cầu nối hoặc các thủ thuật khác.\n\n**Hợp đồng thông minh Universal** - Hợp đồng thông minh là universal và sẽ hoạt động ngay lập tức mà không cần bất kỳ thay đổi mã trên chuỗi hoặc các bước bổ sung nào.\n\n**Một giao dịch duy nhất, bất kể chuỗi** - người dùng có thể tương tác với bất kỳ ứng dụng nào trên Push Chain chỉ bằng một giao dịch duy nhất. Bất kể họ chọn tương tác với ứng dụng như thế nào, họ chỉ cần ký một giao dịch duy nhất.\n\n**Trừu tượng hóa phí Universal** - Cho phép người dùng tương tác một cách bản địa trong khi ở trên chuỗi mà họ chọn và sử dụng bất kỳ token nào họ muốn.\n\n**Trừu tượng hóa ví** - Hỗ trợ MetaMask, Phantom và các ví khác cũng như đăng nhập qua mạng xã hội hoặc email thông qua một nhà cung cấp thống nhất. Người dùng không cần tạo một ví mới để truy cập bất kỳ ứng dụng nào.\n\n**Trải nghiệm ứng dụng bản địa** - Người dùng luôn cảm thấy rằng họ đang sử dụng ứng dụng một cách bản địa trên chuỗi của họ.\n\nKết quả là **các ứng dụng hoàn toàn có khả năng tương tác** cho web3. Trong mô hình này, thay vì là người dùng \"Uniswap trên Ethereum,\" \"Uniswap trên Polygon,\" hoặc \"Uniswap trên Arbitrum,\" một người đơn giản trở thành **người dùng Uniswap.**",
+                  "curated-reads": "## Bài đọc chọn lọc 👇"
                 }
               },
               "why-push-chain-future": {
-                "title": "Tìm hiểu lý do Push Chain là tương lai của web3",
+                "title": "Tìm hiểu lý do tại sao Push Chain là tương lai của Web3",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Các ứng dụng của tương lai — Xây dựng mà không cần hỗn loạn",
+                    "subtitle": "Các ứng dụng của tương lai sẽ không thuộc về một blockchain duy nhất. Thay vào đó, chúng sẽ được chia sẻ bởi người dùng của tất cả các blockchain."
+                  },
                   "learn-why-push-chain": {
                     "title": "Tại sao Push Chain là lớp còn thiếu trong Web3",
-                    "subtitle": "Push Chain được thiết kế như L1 shared state, cho phép các ứng dụng universal có khả năng mở rộng, sẵn sàng cho người dùng."
+                    "subtitle": "Push Chain được thiết kế như L1 trạng thái chung, cho phép các ứng dụng đa năng, sẵn sàng cho người dùng, có khả năng mở rộng."
                   },
                   "innovations-by-push-chain": {
-                    "title": "Những đổi mới từ Push Chain",
-                    "subtitle": "Khám phá mười cải tiến đột phá thống nhất mọi chuỗi, mọi người dùng và mọi ứng dụng."
+                    "title": "Những đổi mới của Push Chain",
+                    "subtitle": "Khám phá mười đổi mới chính thống nhất mọi chain, mọi người dùng và mọi app."
                   },
                   "another-l1": {
                     "title": "Push Chain có phải là một L1 khác không?",
-                    "subtitle": "Push Chain không phải là tạo ra một hệ sinh thái biệt lập khác — nó là giải quyết vấn đề tương tác lẫn nhau cho tất cả mọi người."
+                    "subtitle": "Push Chain không phải là tạo ra một hệ sinh thái riêng biệt khác — mà là giải quyết vấn đề khả năng tương tác cho tất cả mọi người."
                   },
                   "evolution-of-push": {
                     "title": "Sự phát triển của Push",
-                    "subtitle": "Từ Push Protocol đến Push Chain — hành trình xây dựng một L1 chung, trạng thái chia sẻ, toàn diện cho các ứng dụng Web3 có khả năng mở rộng."
+                    "subtitle": "Từ Push Protocol đến Push Chain — hành trình xây dựng một L1 chung, trạng thái-chia sẻ, toàn cầu cho các ứng dụng Web3 có khả năng mở rộng."
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Ứng dụng tiêu dùng 🫶🏽 trên Push Chain",
-                    "subtitle": "Push Chain mở ra cánh cửa cho làn sóng tiếp theo của các ứng dụng dành cho người tiêu dùng có thể chạy phổ biến trên nhiều blockchain."
+                    "title": "Các ứng dụng dành cho người dùng 🫶🏽 trên Push Chain",
+                    "subtitle": "Push Chain mở ra cánh cửa cho làn sóng tiếp theo của các ứng dụng dành cho người tiêu dùng có thể chạy phổ quát trên nhiều blockchain."
                   },
                   "faq-push-chain": {
                     "title": "Các câu hỏi thường gặp về Push Chain",
-                    "subtitle": "Có câu hỏi nào không? Dưới đây là những câu trả lời phổ biến nhất về Push Chain và universal apps."
+                    "subtitle": "Có câu hỏi nào không? Dưới đây là những câu trả lời thường gặp nhất về Push Chain và các ứng dụng universal."
                   }
                 }
               }

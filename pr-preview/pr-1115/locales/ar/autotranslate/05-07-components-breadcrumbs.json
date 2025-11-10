@@ -3,10 +3,10 @@
     "breadcrumbs": {
       "navigation-aria-label": "تصفح المسار",
       "home-text": "الرئيسية",
-      "navigate-to-aria-label": "انتقل إلى {{page}}",
+      "navigate-to-aria-label": "الانتقال إلى {{page}}",
       "go-to-title": "الانتقال إلى صفحة {{page}}",
       "current-page-aria-label": "الصفحة الحالية: {{page}}",
-      "separator-aria-label": "Breadcrumb separator"
+      "separator-aria-label": "مُفصِّل مسار التنقل"
     }
   }
 }

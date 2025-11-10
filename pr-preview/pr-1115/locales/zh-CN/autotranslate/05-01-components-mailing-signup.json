@@ -2,20 +2,20 @@
   "components": {
     "mailing-signup": {
       "title": "不错过任何更新",
-      "text": "注册订阅，及时获取生态系统公告、空投活动等最新信息。",
+      "text": "注册订阅，及时了解生态系统公告、赠品活动等最新信息。",
       "email-input": "您的邮箱",
       "email-input-placeholder": "请输入您的邮箱地址",
-      "email-input-title": "订阅 Push Chain 邮件列表，获取最新动态",
-      "email-input-aria-label": "用于订阅新闻通讯的电子邮件地址",
+      "email-input-title": "订阅 Push Chain 新闻邮件，获取最新动态",
+      "email-input-aria-label": "用于订阅新闻通讯的邮箱地址",
       "submit-button": "注册",
-      "submit-button-title": "订阅 Push Chain newsletter",
-      "submit-button-aria-label": "订阅邮件",
+      "submit-button-title": "订阅 Push Chain 新闻邮件",
+      "submit-button-aria-label": "订阅新闻简报",
       "loading-submit-button": "请稍等...",
-      "arrow-button-aria-label": "订阅 newsletter",
+      "arrow-button-aria-label": "订阅邮件列表",
       "arrow-button-title": "订阅 Push Chain 更新",
-      "form-aria-label": "新闻通讯订阅表单",
+      "form-aria-label": "邮件订阅表单",
       "success-message-aria-label": "订阅成功",
-      "error-message-aria-label": "订阅出错信息"
+      "error-message-aria-label": "订阅出错提示"
     }
   }
 }

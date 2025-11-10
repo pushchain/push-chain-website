@@ -3,32 +3,32 @@
     "knowledge": {
       "seo": {
         "title": "Basis Pengetahuan — Panduan, FAQ & Cara Melakukannya",
-        "description": "Mulai di sini untuk konsep, FAQ, panduan, dan sumber daya ekosistem. Panduan yang jelas dan tidak teknis untuk menggunakan Push Chain.",
+        "description": "Mulai di sini untuk konsep, FAQ, cara penggunaan, dan sumber daya ekosistem. Panduan yang jelas dan tidak teknis untuk menggunakan Push Chain.",
         "og-title": "Basis Pengetahuan Push Chain - Panduan & FAQ",
-        "og-description": "Konsep, panduan langkah demi langkah, dan jawaban atas pertanyaan umum tentang Push Chain.",
+        "og-description": "Konsep, panduan langkah-demi-langkah, dan jawaban untuk pertanyaan umum tentang Push Chain.",
         "twitter-title": "Basis Pengetahuan - Panduan & FAQ",
-        "twitter-description": "Panduan singkat, FAQ, dan cara penggunaan Push Chain (tanpa istilah teknis yang rumit)."
+        "twitter-description": "Panduan cepat, FAQ, dan cara kerja untuk Push Chain (tanpa istilah teknis yang rumit)."
       },
       "hero-section": {
         "title": "Basis Pengetahuan",
         "description": {
-          "highlighted": "Push Chain adalah sebuah blokchein universal sejati yang dirancang untuk menghilangkan fragmentasi di seluruh rantai.",
+          "highlighted": "Push Chain adalah sebuah blockchain universal sejati yang dirancang untuk menghilangkan fragmentasi di seluruh rantai.",
           "developers": "Pengembang",
-          "developers-text": "deploy sekali dan langsung kompatibel dengan semua rantai EVM dan non-EVM yang didukung.",
+          "developers-text": "terapkan sekali dan langsung kompatibel dengan semua rantai EVM dan non-EVM yang didukung.",
           "users": "Pengguna",
-          "users-text": "gunakan aplikasi yang sama terlepas dari rantai asal mereka."
+          "users-text": "gunakan aplikasi yang sama, berapapun rantai yang mereka gunakan."
         },
         "email-signup": {
           "title": {
             "long": "Dapatkan Notifikasi tentang Push Chain testnet",
             "short": "Push Chain Testnet"
           },
-          "description": "Jadilah yang pertama tahu ketika Push Chain testnet aktif. Bergabunglah dengan daftar surat kabar kami untuk mendapatkan pembaruan eksklusif."
+          "description": "Jadilah yang pertama tahu ketika testnet Push Chain diluncurkan. Bergabunglah dengan daftar email kami untuk mendapatkan pembaruan eksklusif."
         },
         "footer": {
-          "description": "Buat pengalaman yang mulus dan ramah pengguna untuk aplikasi Anda di blockchain mana pun dengan Push Chain.",
+          "description": "Buat pengalaman yang lancar dan mudah digunakan untuk aplikasi Anda di blockchain mana pun dengan Push Chain.",
           "cta": {
-            "text": "Dapatkan Notifikasi"
+            "text": "Dapatkan Pemberitahuan"
           }
         }
       },
@@ -45,26 +45,26 @@
                 },
                 "builders": {
                   "title": "Bangun di Push Chain",
-                  "subtitle": "Pelajari lebih lanjut tentang cara membangun aplikasi universal, apa yang dimungkinkan, dan cara memulai!",
-                  "ctatitle": "Para Builder Berkumpul"
+                  "subtitle": "Pelajari lebih lanjut tentang cara membangun aplikasi universal, apa yang dimilikinya dan cara memulainya!",
+                  "ctatitle": "Para Builder, Ayo Berkumpul"
                 },
                 "deepdives": {
                   "title": "Pembahasan Mendalam Teknis",
-                  "subtitle": "Ingin tahu cara kerja Push secara mendalam? Atau hanya ingin tahu lebih banyak? Apapun alasannya, selamat datang!",
+                  "subtitle": "Ingin tahu cara kerja Push secara mendalam? Atau hanya ingin tahu lebih banyak? Bagaimanapun, selamat datang!",
                   "ctatitle": "Lihat Cara Kerjanya"
                 },
                 "devdocs": {
                   "title": "Dokumentasi Pengembang",
-                  "subtitle": "Langsung saja ke intinya! Saya adalah sebuah universal chain… dan kamu seorang developer, mari kita resmi!",
-                  "ctatitle": "Mulai Berkarya"
+                  "subtitle": "Mari langsung ke intinya! Saya adalah universal chain... dan kamu adalah seorang dev, mari kita resmi!",
+                  "ctatitle": "Mulai Membangun"
                 },
                 "tokenomics": {
                   "title": "Jelajahi Tokenomics",
-                  "subtitle": "Pelajari bagaimana sistem tokenomics kami memberikan insentif dan memastikan jaringan berkelanjutan yang dirancang untuk tahan lama",
+                  "subtitle": "Pelajari bagaimana tokenomics kami memberikan insentif dan memastikan jaringan berkelanjutan yang dirancang untuk bertahan lama",
                   "ctatitle": "Pelajari Desain टोकन"
                 },
                 "faq": {
-                  "title": "Pertanyaan yang Sering Diajukan",
+                  "title": "Pertanyaan yang Sering Diajukan (FAQ)",
                   "subtitle": "Tempat untuk menemukan jawaban atas semua pertanyaan populer yang diajukan komunitas",
                   "ctatitle": "Baca Selengkapnya"
                 }

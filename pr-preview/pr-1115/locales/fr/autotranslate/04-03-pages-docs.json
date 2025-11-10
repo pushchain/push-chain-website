@@ -2,17 +2,19 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Documentation — Créez des Applications Universelles",
-        "description": "Tout ce dont vous avez besoin pour déployer sur la Chaîne de Push : tutoriels rapides, SDK, référence API, exemples et configuration de nœud.",
-        "og-title": "Push Chain Docs - Démarrages Rapides, SDK & API",
-        "og-description": "Construirez et exécuterez des applications sur la couche d'exécution universelle avec des guides clairs et des exemples.",
-        "twitter-description": "Quickstarts, SDKs, API ref, et exemples pour déployer rapidement."
+        "title": "Documentation — Build Universal Apps",
+        "description": "Tout ce dont vous avez besoin pour lancer votre projet sur Push Chain : guides de démarrage rapide, SDK, documentation de l'API, exemples et configuration des nœuds.",
+        "og-title": "Push Chain Docs - Démarrages rapides, SDK et API",
+        "og-description": "Construisez et exécutez des apps sur la universal execution layer avec des guides et des exemples clairs.",
+        "twitter-title": "Push Chain Docs - Commencez dès maintenant",
+        "twitter-description": "Démarrages rapides, SDKs, référence API et exemples pour lancer votre projet rapidement."
       },
       "header": {
-        "countdown-title": "Lancement des documents Testnet dans",
-        "description": "Psst... vous voulez un aperçu de Testnet Donut? Faites-nous savoir avec #pushchainsecret et nous vous envoyerons accès à une build de test.",
-        "title": "Parlez de la chaîne d&#39;envoi",
-        "ariaLabel": "Parlez de la chaîne Push sur Twitter"
+        "countdown-title": "Lancement des Docs du testnet dans",
+        "description": "Chut... envie de jeter un coup d'œil à Testnet Donut ? Envoyez-nous un message avec #pushchainsecret et nous vous enverrons l'accès à une version test.",
+        "tweet-button": "Tweeter sur Push Chain",
+        "title": "Tweet about Push Chain",
+        "ariaLabel": "Partager Push Chain sur X"
       },
       "grid-section": {
         "blocks": {
@@ -21,15 +23,18 @@
               "items": {
                 "whatispush": {
                   "title": "Qu'est-ce que Push Chain ?",
-                  "subtitle": "Push Chain fournit un toolkit unifié pour construire des applications vraiment universelles.",
-                  "ctatitle": "Découvrez plus"
+                  "subtitle": "Push Chain fournit une boîte à outils unifiée pour créer des apps véritablement universelles.",
+                  "ctatitle": "En savoir plus"
                 },
                 "builders": {
-                  "title": "Construons ensemble !",
-                  "ctatitle": "En apprendre davantage"
+                  "title": "Construisons ensemble !",
+                  "subtitle": "Tout ce dont vous avez besoin avec Push Chain SDK pour créer votre app universelle",
+                  "ctatitle": "En savoir plus"
                 },
                 "ui-kit": {
-                  "subtitle": "Intégrer n'importe quel application basée sur React en moins de 5 minutes."
+                  "title": "Kit d'interface utilisateur",
+                  "subtitle": "Intégrez n'importe quelle app basée sur React en moins de 5 minutes.",
+                  "ctatitle": "En savoir plus"
                 }
               }
             }

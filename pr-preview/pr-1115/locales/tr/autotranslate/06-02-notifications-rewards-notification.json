@@ -1,12 +1,12 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Donut Testnet Kapalı Beta Sürümü Yayında!",
-      "description": "Testnet, Donut'u keşfedin, evrensel uygulamalar oluşturun ve ödüller kazanın!",
+      "title": "Donut Testnet Kapalı Beta Sürümü Başladı!",
+      "description": "Testnet, Donut'u keşfedin, evrensel <app>ler oluşturun ve ödüller kazanın!",
       "image-alt": "Push Chain Testnet Ödülleri - Evrensel Uygulamalar Oluştur",
       "close-button-title": "Ödül bildirimini kapat",
       "close-button-aria-label": "Push Chain ödül bildirimini kapat",
-      "container-aria-label": "Push Chain ödül bildirimi"
+      "container-aria-label": "Push Chain rewards notification"
     }
   }
 }

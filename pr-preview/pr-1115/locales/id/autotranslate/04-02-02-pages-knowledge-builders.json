@@ -3,12 +3,12 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders — Panduan & Tutorial",
+          "title": "Pembuat — Cara & Tutorial",
           "description": "Panduan langkah demi langkah, pola, dan contoh untuk menggunakan fitur Push Chain.",
           "og-title": "Builders - Panduan & Tutorial",
-          "og-description": "Tutorial terpandu, praktik terbaik, dan contoh untuk membangun dengan Push Chain.",
-          "twitter-title": "Builders - Panduan & Tutorial",
-          "twitter-description": "Panduan langkah demi langkah untuk memulai di Push Chain."
+          "og-description": "Tutorial langkah demi langkah, praktik terbaik, dan contoh untuk membangun dengan Push Chain.",
+          "twitter-title": "Pembuat - Cara & Tutorial",
+          "twitter-description": "Panduan langkah demi langkah untuk meluncurkan proyek di Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,21 +19,24 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nPsiap untuk membangun di Push Chain? Berikut adalah beberapa sumber daya untuk menginspirasi dan memulai Anda.",
+                  "intro": "## Builders\n\nPunya ide untuk membangun di Push Chain? Berikut adalah beberapa sumber daya untuk memberikan inspirasi dan memulai.",
                   "curated-reads": "## Bacaan Kurasi 👇"
                 }
               },
               "universal-apps": {
-                "title": "Mari Kita Bangun Aplikasi Universal 💪",
+                "title": "Ayo Bangun Aplikasi Universal 💪",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "Aplikasi Masa Depan — Membangun tanpa kekacauan"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Aplikasi Konsumen 🫶 Blockchain?"
+                  },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "Aplikasi yang Hanya Mungkin dengan Shared State - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Aplikasi yang Hanya Mungkin dengan Shared State - Vol.2"
-                  },
-                  "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Aplikasi Konsumen 🫶 blockchain?"
+                    "title": "Aplikasi Hanya Mungkin dengan Shared State - Vol.2"
                   }
                 }
               },
@@ -44,10 +47,10 @@
                     "title": "Jelajahi Dokumentasi Pengembang"
                   },
                   "faucet": {
-                    "title": "Dapatkan टोकन Testnet"
+                    "title": "Dapatkan टोकन टेस्टनेट"
                   },
                   "testnet-explorer": {
-                    "title": "Donut Testnet Explorer"
+                    "title": "Push Testnet Explorer"
                   }
                 }
               }

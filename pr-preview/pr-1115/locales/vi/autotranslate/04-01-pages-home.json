@@ -2,27 +2,27 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Trang chủ - Push Chain | Chuỗi Universal dành cho Ứng dụng",
-        "description": "Lớp 1 trạng thái dùng chung cho các ứng dụng đa năng. Triển khai một lần; tiếp cận người dùng trên mọi chuỗi. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ <token> nào.",
-        "og-title": "Push Chain - Universal L1 for Apps",
-        "og-description": "Chỉ cần triển khai một lần cho người dùng EVM và non-EVM. Sử dụng bất kỳ ví nào và thanh toán bằng bất kỳ <token> nào — không cần chuyển mạng.",
-        "twitter-title": "Triển khai một lần. Tiếp cận mọi blockchain.",
-        "twitter-description": "Thực hiện giao dịch từ bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ <token> nào. Không cần chuyển đổi mạng."
+        "title": "Trang chủ - Push Chain | Универсальный блокчейн для ứng dụng",
+        "description": "Blockchain trạng thái chia sẻ cho các ứng dụng đa năng. Triển khai một lần; tiếp cận người dùng trên mọi chuỗi. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ token nào.",
+        "og-title": "Push Chain - Universal L1 cho Ứng dụng",
+        "og-description": "Chỉ cần một lần triển khai cho người dùng EVM và non-EVM. Sử dụng bất kỳ ví nào và thanh toán bằng bất kỳ <token> nào — không cần chuyển mạng.",
+        "twitter-title": "Triển khai một lần. Tiếp cận mọi chuỗi.",
+        "twitter-description": "Thực hiện giao dịch từ bất kỳ chuỗi nào. Sử dụng bất kỳ ví nào. Thanh toán bằng bất kỳ <token> nào. Không cần chuyển mạng."
       },
       "hero-section": {
-        "title": "Bất kỳ Blockchain nào, Bất kỳ <app> nào, Tất cả Người dùng.\nMột Push Chain.",
-        "description": "Lớp 1 đầu tiên được xây dựng cho Universal <app>s. \nXây dựng & Triển khai một lần, tiếp cận người dùng từ bất kỳ chuỗi nào.",
-        "primary-button": "Bắt đầu Xây dựng",
+        "title": "Bất kỳ Blockchain nào, Bất kỳ Ứng dụng nào, Dành cho Tất cả Người dùng.\nMột Push Chain.",
+        "description": "Lớp 1 đầu tiên được xây dựng cho các Ứng dụng Tổng quát. \nXây dựng & Triển khai một lần, tiếp cận người dùng từ mọi chuỗi.",
+        "primary-button": "Bắt đầu xây dựng",
         "primary-button-title": "Bắt đầu hành trình xây dựng với Push Chain!",
         "secondary-button": "Khám phá Cơ sở Kiến thức",
         "secondary-button-title": "Tìm hiểu và khám phá Push Chain",
-        "section-aria-label": "Phần giới thiệu về blockchain Layer 1 Universal của Push Chain",
-        "primary-button-aria-label": "Bắt đầu xây dựng ứng dụng đa năng trên Push Chain - Truy cập tài liệu dành cho nhà phát triển",
+        "section-aria-label": "Phần giới thiệu blockchain Layer 1 универсал của Push Chain",
+        "primary-button-aria-label": "Bắt đầu xây dựng ứng dụng universal trên Push Chain - Đến trang tài liệu dành cho nhà phát triển",
         "secondary-button-aria-label": "Tìm hiểu về các tính năng và khái niệm của Push Chain trong cơ sở kiến thức",
-        "hero-background-alt": "Push Chain hero background animation showing universal blockchain connectivity",
-        "hero-background-title": "Push Chain - Universal Layer 1 cho các ứng dụng đa chuỗi",
+        "hero-background-alt": "Hình nền động của Push Chain thể hiện kết nối blockchain toàn cầu",
+        "hero-background-title": "Push Chain - Universal Layer 1 cho các ứng dụng cross-chain",
         "schema-headline": "Push Chain - Universal L1 for Apps",
-        "schema-description": "Triển khai một lần trên Push Chain và tiếp cận người dùng trên mọi blockchain với các ứng dụng đa nền tảng"
+        "schema-description": "Triển khai một lần trên Push Chain và tiếp cận người dùng trên bất kỳ blockchain nào với các ứng dụng đa năng"
       },
       "whatis-section": {
         "titleFirst": "Một",
@@ -32,88 +32,88 @@
         "bottomTextSecond": "Tiếp cận mọi nơi",
         "bottomLinkText": "Bắt đầu",
         "bottomLinkTitle": "Truy cập Trung tâm Tài liệu",
-        "section-aria-label": "Push Chain là gì - Giải thích blockchain đa năng",
-        "animation-alt": "Hình ảnh minh họa cách Push Chain triển khai ứng dụng đa năng trên nhiều blockchain khác nhau",
-        "animation-title": "Hình ảnh minh họa việc triển khai đa chuỗi của Push Chain - triển khai một lần, tiếp cận mọi chuỗi",
+        "section-aria-label": "Push Chain là gì - Giải thích về blockchain đa năng",
+        "animation-alt": "Hình ảnh minh họa cách Push Chain triển khai ứng dụng đa năng trên nhiều blockchain",
+        "animation-title": "Hình ảnh minh họa việc triển khai universal của Push Chain - triển khai một lần, tiếp cận mọi blockchain",
         "bottom-link-aria-label": "Truy cập tài liệu Push Chain để bắt đầu xây dựng ứng dụng đa năng"
       },
       "chain-features-section": {
-        "section-aria-label": "Các tính năng và đổi mới của Push Chain",
+        "section-aria-label": "Phần giới thiệu về các tính năng và đổi mới của Push Chain",
         "header": {
           "main-text": "Được xây dựng trên những đổi mới để loại bỏ tình trạng phân mảnh!",
-          "other-text": "Push là Universal Layer 1 duy nhất bạn cần!"
+          "other-text": "Push là Layer 1 Duy nhất mà bạn cần!"
         },
         "box1": {
-          "texttitle": "Giao dịch trên mọi Blockchain",
-          "bodytext": "Push Chain hỗ trợ giao dịch từ bất kỳ blockchain nào. Người dùng có thể trả gas bằng bất kỳ token nào — Không cần cầu nối.",
-          "imagealt": "Hình minh họa hiển thị các logo blockchain khác nhau rơi trong một máy chơi pinball.",
-          "imagetitle": "Hỗ trợ giao dịch từ bất kỳ blockchain nào."
+          "texttitle": "Giao dịch trên mọi chuỗi",
+          "bodytext": "Push Chain hỗ trợ các giao dịch từ bất kỳ blockchain nào. Người dùng có thể trả gas bằng bất kỳ token nào – Không cần cầu nối.",
+          "imagealt": "Hình ảnh minh họa cho thấy các logo blockchain khác nhau rơi trong một máy pinball.",
+          "imagetitle": "Hỗ trợ các giao dịch từ bất kỳ blockchain nào."
         },
         "box2": {
-          "texttitle": "Tóm tắt ví",
-          "bodytext": "Cho phép bất kỳ ví từ bất kỳ chuỗi nào kết nối, tương tác và giao dịch. Phá vỡ rào cản Web3 bằng cách sử dụng đăng nhập mạng xã hội hoặc email. Người dùng được quyền quyết định trên Push Chain.",
-          "imagealt": "Hình minh họa cho thấy ví Metamask, Phantom Wallet, v.v. xuất hiện từ một chiếc ví lớn có logo Push Chain.",
-          "imagetitle": "Hỗ trợ bất kỳ ví hiện có nào như MetaMask, Phantom, v.v. cùng với đăng nhập mạng xã hội"
+          "texttitle": "Abstraction Ví",
+          "bodytext": "Cho phép bất kỳ ví từ bất kỳ chuỗi nào kết nối, tương tác và giao dịch. Phá vỡ rào cản web3 bằng cách sử dụng đăng nhập mạng xã hội hoặc email. Người dùng tự quyết định trên Push Chain.",
+          "imagealt": "Hình minh họa hiển thị ví Metamask, Phantom Wallet, v.v. xuất phát từ một chiếc ví lớn có logo Push Chain trên đó.",
+          "imagetitle": "Hỗ trợ mọi ví hiện có như MetaMask, Phantom, v.v. cùng với đăng nhập qua mạng xã hội"
         },
         "box3": {
           "texttitle": "100% EVM\nCompatible",
-          "bodytext": "Triển khai không cần code trên chuỗi. Biến ứng dụng gốc của bạn thành ứng dụng đa năng trong vài phút.",
-          "imagealt": "Hình minh họa cho thấy logo Máy ảo Ethereum đang xoay và nói 100% Tương thích EVM.",
-          "imagetitle": "Không cần thay đổi code trên chuỗi, 100% tương thích EVM."
+          "bodytext": "Triển khai mà không cần code trên chuỗi. Biến ứng dụng gốc của bạn thành một ứng dụng <transliterate>app</transliterate> toàn diện chỉ trong vài phút.",
+          "imagealt": "Hình ảnh minh họa logo Máy ảo Ethereum đang xoay và nói 100% Tương thích EVM.",
+          "imagetitle": "Không yêu cầu thay đổi mã trên chuỗi, 100% tương thích EVM."
         },
         "box4": {
-          "texttitle": "Hợp đồng thông minh Universal",
+          "texttitle": "Smart Contract Universal",
           "bodytext": "Xây dựng một lần, chạy đa chuỗi, trải nghiệm nhiều bước với một hợp đồng duy nhất, chống lỗi thời.",
-          "imagealt": "Hình minh họa hiển thị logo Ethereum Virtual Maching và một cung tròn xoay quanh nó ghi '100% EVM Compatible'",
-          "imagetitle": "Triển khai một lần, tương thích ngay lập tức với tất cả các chain được hỗ trợ (EVM hoặc non-EVM)."
+          "imagealt": "Hình minh họa cho thấy logo Ethereum Virtual Maching và một vòng cung xoay quanh nó nói '100% EVM Compatible'",
+          "imagetitle": "Triển khai một lần, tương thích tức thì với tất cả các chuỗi được hỗ trợ (EVM hoặc non-EVM)."
         },
         "box5": {
           "texttitle": "Universal Fee\nAbstraction",
-          "bodytext": "Cho phép người dùng thanh toán gas bằng bất kỳ <token> nào, trên bất kỳ chuỗi nào mà không cần bắc cầu.",
-          "imagealt": "Hình minh họa hiển thị các logo khác nhau của Bitcoin, Ethereum, Solana xoay quanh Push Chain",
-          "imagetitle": "Hỗ trợ bất kỳ token nào của bất kỳ blockchain nào cho các giao dịch."
+          "bodytext": "Cho phép người dùng thanh toán gas bằng bất kỳ token nào, trên bất kỳ blockchain nào mà không cần bridging.",
+          "imagealt": "Hình ảnh minh họa hiển thị các logo khác nhau của Bitcoin, Ethereum, Solana xoay quanh Push Chain",
+          "imagetitle": "Hỗ trợ mọi token của mọi blockchain cho các giao dịch."
         },
         "box6": {
           "texttitle": "Universal Execution Layer",
-          "bodytext": "Xây dựng ứng dụng đa nguyên tử, có thể kết hợp trên web3. Tạo ra những trải nghiệm ứng dụng chưa từng có, bằng cách cho phép nhiều người dùng từ các chuỗi khác nhau giao dịch với cùng một ứng dụng.",
-          "imagealt": "Hình minh họa cho thấy các khối Tetris khác nhau đi vào lỗ sâu và logo Push Chain xuất hiện từ phía bên kia.",
-          "imagetitle": "Các giao dịch từ bất kỳ blockchain nào đều được xác nhận trên Push Chain, cho phép người dùng của bất kỳ blockchain nào sử dụng ứng dụng tương tự một cách tự nhiên, hay còn gọi là Universal Execution Layer."
+          "bodytext": "Xây dựng các ứng dụng nguyên tử, có thể ghép nối trên toàn bộ web3. Tạo ra những trải nghiệm ứng dụng chưa từng thấy trước đây, bằng cách cho phép nhiều người dùng từ các chuỗi khác nhau giao dịch với cùng một ứng dụng.",
+          "imagealt": "Hình minh họa cho thấy các khối Tetris khác nhau đi vào lỗ sâu đục và logo Push Chain xuất hiện từ phía bên kia.",
+          "imagetitle": "Các giao dịch từ bất kỳ blockchain nào đều được xác nhận trên Push Chain, cho phép người dùng của bất kỳ blockchain nào sử dụng ứng dụng giống nhau, hay còn gọi là Universal Execution Layer."
         },
         "box7": {
-          "texttitle": "Shared state",
+          "texttitle": "Truy cập trạng thái",
           "bodytext": "Truy cập dữ liệu tài khoản và trạng thái từ các blockchain khác trong smart contract của bạn.",
           "tagText": "SẮP RA MẮT",
           "tags": {
-            "title1": "ĐỌC DỮ LIỆU TỪ <blockchain>"
+            "title1": "ĐỌC DỮ LIỆU TỪ CHAINS"
           },
-          "imagealt": "Hình minh họa cho thấy Push Chain phát triển theo phong cách hoạt hình khối.",
-          "imagetitle": "(Roadmap) <shared-state> cho phép truy cập dữ liệu tài khoản và trạng thái từ các chuỗi khác trong <smart contract> của bạn."
+          "imagealt": "Hình minh họa hiển thị Push Chain phát triển theo phong cách hoạt hình khối.",
+          "imagetitle": "(Lộ trình) Shared State cho phép truy cập dữ liệu tài khoản và trạng thái từ các chuỗi khác trong smart contract của bạn."
         },
         "box8": {
-          "texttitle": "Programmable\nSolvers",
-          "bodytext": "Kích hoạt, xác thực và hoàn thành giao dịch trên bất kỳ chuỗi nào bằng cách sử dụng smart contract của bạn.",
+          "texttitle": "Universal\nValidators",
+          "bodytext": "Kích hoạt, xác thực và hoàn tất các giao dịch trên bất kỳ blockchain nào bằng smart contract của bạn.",
           "tagText": "SẮP RA MẮT",
           "tags": {
-            "title1": "GHI DỮ LIỆU VÀO CHAINS"
+            "title1": "GHI VÀO CÁC <blockchain>"
           },
-          "imagealt": "Hình minh họa cho thấy các khối Tetris với các màu sắc khác nhau hợp nhất và thay đổi.",
-          "imagetitle": "(Lộ trình) Programmable Solvers cho phép người dùng kích hoạt, xác thực và hoàn tất các giao dịch trên bất kỳ chuỗi nào bằng hợp đồng thông minh của bạn."
+          "imagealt": "Hình minh họa cho thấy các khối tetris với nhiều màu sắc khác nhau hòa nhập và thay đổi.",
+          "imagetitle": "(Roadmap) Universal Validators cho phép người dùng kích hoạt, xác thực và hoàn thành các giao dịch trên bất kỳ blockchain nào bằng smart contract của bạn."
         },
         "footer": {
-          "title": "mở rộng cơ sở người dùng của ứng dụng của bạn bằng cách đi toàn cầu",
+          "title": "mở rộng cơ sở người dùng ứng dụng của bạn bằng cách trở nên universal",
           "secondary": "với sự nỗ lực bằng không!",
           "ctatext": "Bắt đầu Xây dựng",
-          "ctatitle": "Triển khai một lần, mở rộng 10x lượng người dùng của bạn. Truy cập Tài liệu dành cho Nhà phát triển."
+          "ctatitle": "Triển khai một lần, mở rộng cơ sở người dùng gấp 10 lần. Ghé thăm Tài liệu dành cho Nhà phát triển."
         }
       },
       "partners-section": {
         "section-aria-label": "Các đối tác và tích hợp hệ sinh thái Push Chain",
         "title": "Powered by Push Chain",
-        "subtitle": "Khám phá các ứng dụng đã nhân số lượng người dùng của họ chỉ bằng cách triển khai trên Push Chain.",
+        "subtitle": "Khám phá các ứng dụng đã nhân rộng lượng người dùng của họ chỉ bằng cách triển khai trên Push Chain.",
         "ctatitle": "Khám phá các đối tác, ứng dụng và cơ sở hạ tầng được triển khai trên Push Chain",
         "ctatext": "Khám phá Hệ sinh thái",
         "partners-grid-aria-label": "Lưới logo đối tác hiển thị các dự án Web3 sử dụng Push Chain",
-        "partner-logo-title-prefix": "Logo đối tác - ",
+        "partner-logo-title-prefix": "Đối tác logo - ",
         "partner-logo-alt-prefix": "Logo của ",
         "mobile-view-aria-label": "Chế độ xem dành cho thiết bị di động của các đối tác hệ sinh thái Push Chain"
       },
@@ -122,13 +122,13 @@
         "title": "Đạt được",
         "titleGradient": "Ngay lập tức",
         "titleThird": "Khả năng tương tác",
-        "description": "Tối ưu hóa hiệu suất.\nTPS cao, gas cực thấp và thời gian\nfinality dưới một giây cho việc thực thi app theo thời gian thực.",
-        "animation-alt": "Hình ảnh động tương tác thể hiện khả năng tương tác tức thì của Push Chain trên nhiều blockchains",
-        "animation-title": "Hình ảnh trực quan về khả năng tương tác tức thời của Push Chain",
+        "description": "Tối ưu hóa hiệu suất.\nTPS cao, gas cực thấp và độ trễ dưới một giây\nđể thực thi <app> theo thời gian thực.",
+        "animation-alt": "Hoạt ảnh tương tác thể hiện khả năng tương tác tức thì của Push Chain trên nhiều blockchains",
+        "animation-title": "Trực quan hóa khả năng tương tác tức thời của Push Chain",
         "stats": {
           "stat1": {
             "title": "Các chuỗi được hỗ trợ",
-            "imagealt": "Hình minh họa thể hiện các chuỗi được hỗ trợ",
+            "imagealt": "Hình minh họa cho thấy các chuỗi được hỗ trợ",
             "imagetitle": "Danh sách tất cả các blockchain được hỗ trợ như Ethereum, Solana, BNB Chain, v.v."
           },
           "stat2": {
@@ -149,21 +149,21 @@
         "subtitle": "TIN TỨC, NHẬT KÝ PHÁT TRIỂN & Ý TƯỞNG",
         "subtitle-aria-label": "Thông tin danh mục blog",
         "title": "Nhịp đập của Push Chain",
-        "title-aria-label": "Các bài đăng và cập nhật mới nhất về Push Chain",
+        "title-aria-label": "Các bài viết và cập nhật mới nhất về Push Chain",
         "explore-link-text": "Xem thêm bài viết",
-        "explore-link-title": "Truy cập blog của Push Chain để đọc tất cả các bài viết và cập nhật",
+        "explore-link-title": "Truy cập blog Push Chain để đọc tất cả các bài viết và cập nhật",
         "explore-link-aria-label": "Điều hướng đến trang blog Push Chain",
-        "section-aria-label": "Các bài đăng trên blog và tin tức của Push Chain",
-        "blog-posts-list-aria-label": "Bài đăng blog Push Chain gần đây",
-        "blog-post-aria-label": "Đọc bài đăng blog về {title}",
-        "blog-post-title-prefix": "Đọc bài viết trên blog - ",
+        "section-aria-label": "Phần tin tức và bài đăng blog của Push Chain",
+        "blog-posts-list-aria-label": "Các bài viết gần đây trên Push Chain",
+        "blog-post-aria-label": "Đọc bài viết blog về {title}",
+        "blog-post-title-prefix": "Đọc bài viết blog - ",
         "loading-text": "Đang tải các bài viết blog mới nhất...",
-        "error-text": "Không thể tải các bài đăng trên blog vào lúc này",
-        "no-posts-text": "Không có bài viết blog nào"
+        "error-text": "Không thể tải bài viết blog vào lúc này",
+        "no-posts-text": "Chưa có bài viết blog nào"
       },
       "trustedby-section": {
         "title": "Được xây dựng bởi đội ngũ đáng tin cậy của những người tiên phong trong Web3",
-        "section-aria-label": "Phần các tổ chức tin cậy Push Chain",
+        "section-aria-label": "Phần tin cậy của Push Chain",
         "trusted-by-alt": "Nhà đầu tư - "
       },
       "featured-section": {
@@ -171,8 +171,8 @@
         "tag": "ĐƯỢC GIỚI THIỆU TRÊN",
         "title": "Push Chain in the Spotlight",
         "subtitle": "Đừng chỉ nghe chúng tôi nói. Hãy xem giới truyền thông đang nói gì về chuỗi đa năng thực sự.",
-        "articles-image-alt": "Đưa tin từ ",
-        "articles-text": "Đọc Toàn Bộ Bài Viết",
+        "articles-image-alt": "Đưa tin trên truyền thông từ ",
+        "articles-text": "Đọc Toàn Bộ Tin Tức",
         "articles-title-1": "Đọc ",
         "articles-title-2": "'s suy nghĩ chi tiết về Push Chain",
         "articles": {
@@ -180,55 +180,55 @@
             "text": "Chúng tôi rất vui mừng thông báo rằng Push Protocol, một giao thức liên lạc phi tập trung hàng đầu cho Web3, đã chính thức ra mắt trên BNB Chain."
           },
           "coindesk": {
-            "text": "Protocol Village: Unstoppable hợp tác với Push Protocol để cung cấp các cuộc trò chuyện nhóm được khóa bằng Token"
+            "text": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats"
           },
           "defiant": {
-            "text": "Unstoppable Domains ra mắt nhóm trò chuyện được giới hạn bằng <token>. Hợp tác với <protocol> nhằm chống lại thông tin sai lệch và lừa đảo."
+            "text": "Unstoppable Domains ra mắt nhóm trò chuyện có cổng kiểm soát bằng token. Hợp tác với Push Protocol nhằm ngăn chặn thông tin sai lệch và lừa đảo."
           },
           "balaji": {
             "text": "Thông báo được kiểm soát bởi người dùng. Hai công ty kiểm soát thông báo đẩy đến hàng tỷ điện thoại thông minh: Apple và Google."
           },
           "defiprime": {
-            "text": "Harsh Rajat nói về tương lai của ngân hàng, các ưu đãi giao thức EPNS và mô hình kinh doanh cho thông báo đẩy phi tập trung."
+            "text": "Harsh Rajat chia sẻ về tương lai của ngân hàng, các ưu đãi của giao thức EPNS và mô hình kinh doanh cho thông báo đẩy phi tập trung."
           },
           "ethfoundation": {
-            "text": "Kể từ HackMoney, Richa và Harsh đã dồn rất nhiều tâm huyết vào việc xây dựng EPNS trở thành điều họ gọi là \"một mảnh ghép còn thiếu của web3\"."
+            "text": "Kể từ HackMoney, Richa và Harsh đã dồn rất nhiều năng lượng vào việc xây dựng EPNS trở thành thứ họ gọi là \"một mảnh ghép còn thiếu của Web3\"."
           },
           "beincrypto": {
-            "text": "Cách Mạng Truyền Thông Web3 Hoạt Động: Phân Tích Kỹ Thuật Sâu"
+            "text": "Cách Mạng Mạng Giao Tiếp Web3 Hoạt Động: Phân Tích Kỹ Thuật Chi Tiết"
           },
           "the-block": {
-            "text": "Giao thức thông báo Web3 Push sẽ ra mắt chain Layer 1 của riêng mình"
+            "text": "Giao thức thông báo Web3 Push sẽ ra mắt chuỗi Layer 1 của riêng mình"
           },
           "business-insider": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng Blockchain đa năng"
+            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng Blockchain Toàn năng"
           },
           "chainwire": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng Blockchain đa năng."
+            "text": "Push giới thiệu Push Chain: Tương lai của ứng dụng Blockchain đa năng."
           },
           "benzinga": {
-            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng Blockchain Toàn diện"
+            "text": "Push giới thiệu Push Chain: Tương lai của ứng dụng Blockchain toàn diện"
           },
           "crypto-briefing": {
-            "text": "Push giới thiệu Push Chain: Tương lai của ứng dụng Blockchain Toàn diện"
+            "text": "Push giới thiệu Push Chain: Tương lai của các ứng dụng Blockchain đa năng"
           },
           "cryptoslate": {
-            "text": "Push Protocol launches Push Chain để thống nhất giao tiếp và giao dịch blockchain"
+            "text": "Push Protocol launches Push Chain để thống nhất giao tiếp và giao dịch trên blockchain"
           },
           "messari": {
             "text": "EPNS cho phép tạo động lực và thu nhập thụ động cho người dùng nhận thông báo phi tập trung."
           },
           "coin-telegraph-1": {
-            "text": "Harsh Rajat, người sáng lập và trưởng dự án của Push Protocol, giải thích sự tăng vọt trong quá trình phát triển ứng dụng chat Web3 trong tập mới nhất của Hashing It Out."
+            "text": "Harsh Rajat, người sáng lập và trưởng dự án của Push Protocol, giải thích sự gia tăng phát triển của các ứng dụng chat Web3 trong tập mới nhất của Hashing It Out."
           },
           "coin-telegraph-2": {
-            "text": "Unstoppable Domains ra mắt tính năng trò chuyện nhóm có kiểm soát bằng badge dành cho người nắm giữ tên miền."
+            "text": "Unstoppable Domains ra mắt tính năng trò chuyện nhóm có cổng bảo mật cho người nắm giữ tên miền."
           }
         }
       },
       "ending-section": {
-        "aria-label": "Phần xây dựng ứng dụng <universal> đa năng",
-        "section-title": "Xây dựng ứng dụng đa năng.",
+        "aria-label": "Phần xây dựng ứng dụng universal",
+        "section-title": "Xây dựng các ứng dụng toàn diện.",
         "section-subtitle": "Phá vỡ các rào cản. Xây dựng một lần, mở rộng trên mọi blockchain.",
         "docs-link": {
           "text": "Khám phá tài liệu Push Chain",

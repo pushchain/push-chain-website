@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Nhận thông tin sớm nhất về testnet Donut, xây dựng ứng dụng đa năng và giành giải thưởng!",
-      "button-text": "Nhận Thẻ Beta Đóng",
-      "button-title": "Tham gia Push Chain testnet và nhận ngay vé beta bản đóng!",
-      "button-aria-label": "Mở Telegram để nhận vé beta kín Push Chain",
-      "image-alt": "Push Chain Testnet Donut - Universal 블록체인",
+      "description": "Dự án G.U.D deployathon đã diễn ra! Triển khai ứng dụng, giành giải thưởng $5000",
+      "button-text": "Đi đến Universal & Triển khai",
+      "button-title": "Dự án G.U.D deployathon ĐÃ KHỞI ĐỘNG",
+      "button-aria-label": "Dự án G.U.D deployathon đã TRỰC TIẾP. Bạn có thể xem tại đây",
+      "image-alt": "Push Chain Testnet Donut - Universal ブロックチェーン",
       "close-button-title": "Đóng thông báo testnet",
-      "close-button-aria-label": "Đóng thông báo Push Chain testnet",
-      "container-aria-label": "Thông báo testnet Push Chain"
+      "close-button-aria-label": "Đóng thông báo kiểm tra Push Chain",
+      "container-aria-label": "Thông báo Push Chain testnet"
     }
   }
 }

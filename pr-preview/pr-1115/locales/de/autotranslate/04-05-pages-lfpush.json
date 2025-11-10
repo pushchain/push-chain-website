@@ -2,29 +2,29 @@
   "pages": {
     "lfpush": {
       "seo": {
-        "title": "Let's Push — Community Initiative",
+        "title": "Lasst uns Push machen — Community Initiative",
         "description": "Push Community-Initiativen, Posts und mehr.",
         "og-title": "Let's Push - Community Initiative für Push Chain",
         "og-description": "Eine Community-Initiative und Anteile für Push Chain.",
         "twitter-title": "Let's Push | Community Initiative",
-        "twitter-description": "Erfahren Sie mehr über die Push-Community-Initiative für Push Chain."
+        "twitter-description": "Sehen Sie die Community-Initiative für Push Chain."
       },
       "hero-section": {
-        "title": "Lasst uns loslegen",
-        "description": "Die Community der LF Push Builders – wir feiern, was du erreichst und wem du hilfst. Teile deine Erfolge, markiere <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention>, und wir verstärken deine Botschaft."
+        "title": "Lass uns loslegen",
+        "description": "Die LF Push Entwickler-Community – wir feiern deine Erfolge und die Hilfe, die du leistest. Teile deine Siege, markiere <hashtag>#LFPush</hashtag> oder <mention>@PushChain</mention>, und wir verstärken deine Botschaft."
       },
       "tweets-section": {
         "actions": {
-          "share-win": "Teile deinen Gewinn",
+          "share-win": "Teilen Sie Ihren Gewinn",
           "join-community": "Community beitreten",
           "learn-more": "Mehr erfahren"
         },
         "meta": {
-          "tweet-alt": "Tweet vom Push Chain Community-Mitglied",
-          "loading-alt": "Weitere Community-Tweets werden geladen"
+          "tweet-alt": "Tweet von einem Community-Mitglied von Push Chain",
+          "loading-alt": "Lade weitere Community-Tweets"
         },
         "tweets-counter": "{{count}} Tweets und immer weiter!",
-        "loading": "Weitere Tweets werden geladen...",
+        "loading": "Lade weitere Tweets…",
         "end-message": "Du hast das Ende erreicht! 🎉"
       }
     }

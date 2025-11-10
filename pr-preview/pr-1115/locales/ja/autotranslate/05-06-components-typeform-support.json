@@ -8,15 +8,15 @@
       "categories": {
         "technical": {
           "label": "🔧 テクニカルサポート",
-          "description": "バグ報告、SDK/API、スマートコントラクト、連携に関するヘルプ"
+          "description": "バグ報告、SDK/API、スマートコントラクト、連携サポート"
         },
         "network": {
-          "label": "🌐 ネットワーク & テストネット",
-          "description": "エクスプローラー/プッシュスキャン、RPC、Faucet、Donut testnetの問題"
+          "label": "🌐 ネットワークとテストネット",
+          "description": "エクスプローラー/Push Scan、RPC、Faucet、Donut testnet の問題"
         },
         "wallet": {
-          "label": "👛 ウォレット",
-          "description": "Push ウォレット、universal チェーン接続やその他のウォレットに関する問題"
+          "label": "👛 ユニバーサル ウォレット",
+          "description": "Push ウォレット、ユニバーサルチェーン接続またはその他のウォレットの問題"
         },
         "identity": {
           "label": "🪪 アカウントと身元確認",
@@ -24,7 +24,7 @@
         },
         "security": {
           "label": "🛡️ セキュリティ",
-          "description": "脆弱性報告、責任開示（security@push.org）"
+          "description": "脆弱性レポート、責任ある情報開示 (security@push.org)"
         },
         "general": {
           "label": "💬 全般のお問い合わせ",
@@ -32,7 +32,7 @@
         },
         "partnerships": {
           "label": "🤝 パートナーシップと連携",
-          "description": "BD、エコシステム連携（ウォレット、インフラ、取引所、プロトコル）"
+          "description": "BD、エコシステム連携（ウォレット、インフラ、エクスチェンジ、プロトコル）"
         },
         "grants": {
           "label": "💰 助成金とエコシステムプログラム",
@@ -43,49 +43,49 @@
           "description": "インタビュー、声明、アセット、ファクトチェック"
         },
         "events": {
-          "label": "🎤 スピーチ & イベント",
-          "description": "トークス、ワークショップ、ハッカソン、スポンサーシップ"
+          "label": "🎤 スピーキング & イベント",
+          "description": "イベント、ワークショップ、ハッカソン、スポンサーシップ"
         },
         "careers": {
           "label": "👩‍💻 キャリア",
-          "description": "求人、インターンシップ、契約社員の機会"
+          "description": "募集中の職種、インターンシップ、契約社員の機会"
         },
         "validators": {
-          "label": "🧡 バリデータ / ノードオペレーター",
+          "label": "🧡 バリデーター / ノードオペレーター",
           "description": "オペレーターの関心、RPCプロバイダー、インフラパートナー"
         },
         "legal": {
-          "label": "⚖️ 法務 & コンプライアンス",
+          "label": "⚖️ 法務・コンプライアンス",
           "description": "商標、データリクエスト、契約"
         }
       },
       "form": {
         "steps": {
           "category": {
-            "title": "どのようなご質問でしょうか？",
-            "subtitle": "お問い合わせの内容に最も近いカテゴリをお選びください"
+            "title": "どのようなご質問がありますか？",
+            "subtitle": "お問い合わせの種類を最も適切に選択してください"
           },
           "contact": {
             "title": "あなたについて教えてください",
             "subtitle": "この情報を使ってご連絡させていただきます",
             "name-label": "お名前",
-            "name-placeholder": "お名前を入力してください",
+            "name-placeholder": "氏名を入力してください",
             "name-aftergreet": "お会いできて嬉しいです、",
             "email-label": "メールアドレス",
             "email-placeholder": "メールアドレスを入力してください"
           },
           "details": {
             "title": "詳細を教えてください",
-            "subtitle": "お問い合わせ内容の詳細をご記入ください",
+            "subtitle": "お問い合わせ内容の詳細を教えてください",
             "subject-label": "件名",
             "subject-placeholder": "問題の簡単な要約",
             "message-label": "メッセージ",
-            "message-placeholder": "問題の詳細を説明してください。エラーメッセージ、再現手順、または関連情報を含めてください。"
+            "message-placeholder": "問題の詳細を説明してください。エラーメッセージ、再現手順、関連情報を含めてください。"
           },
           "submit": {
             "title": "確認と送信",
             "subtitle": "送信前に情報を確認してください",
-            "placeholder": "どのようなご用件でしょうか？"
+            "placeholder": "どんなサポートが必要か詳しく教えてください..."
           }
         },
         "buttons": {
@@ -95,9 +95,9 @@
           "submitting": "送信中..."
         },
         "validation": {
-          "name-required": "名前が必須です",
+          "name-required": "名前は必須です",
           "name-min-length": "名前は2文字以上である必要があります",
-          "email-required": "メールアドレスが必要です",
+          "email-required": "メールアドレスは必須です",
           "email-invalid": "有効なメールアドレスを入力してください",
           "subject-required": "件名を入力してください",
           "message-required": "メッセージは必須です",
@@ -105,14 +105,14 @@
           "default": "この項目は必須です"
         },
         "success": {
-          "title": "チケットを送信しました！",
-          "message": "お問い合わせありがとうございます。サポートチケットを受け取りましたので、できるだけ早くご連絡いたします。",
+          "title": "チケットが正常に送信されました！",
+          "message": "お問い合わせありがとうございます。サポートチケットを受け取りましたので、なるべく早くご連絡いたします。",
           "button": "別のチケットを送信"
         },
         "error": {
           "title": "送信に失敗しました",
           "message": "チケットの送信中にエラーが発生しました。もう一度お試しいただくか、直接お問い合わせください。",
-          "button": "もう一度試す"
+          "button": "再試し"
         }
       }
     }

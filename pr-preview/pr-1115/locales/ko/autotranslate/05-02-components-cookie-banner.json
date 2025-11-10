@@ -1,14 +1,14 @@
 {
   "components": {
     "cookie-banner": {
-      "message": "저희는 사용자 경험을 맞춤 설정하기 위해 쿠키를 사용합니다. 자세한 내용은",
-      "privacy-policy-link": "개인 정보 보호 정책",
-      "privacy-policy-link-title": "Push Chain 개인정보 보호정책 읽기",
-      "privacy-policy-link-aria-label": "새 탭에서 개인 정보 처리 방침 열기",
+      "message": "저희는 사용자 경험을 맞춤 설정하기 위해 쿠키를 사용합니다. 자세한 내용은 저희의",
+      "privacy-policy-link": "개인정보처리방침",
+      "privacy-policy-link-title": "Push Chain 개인정보 보호 정책 읽어보기",
+      "privacy-policy-link-aria-label": "새 탭에서 개인 정보 보호 정책 열기",
       "accept-button": "수락",
-      "accept-button-title": "쿠키를 허용하여 맞춤형 경험을 제공합니다",
-      "accept-button-aria-label": "쿠키를 수락하고 배너를 닫으세요",
-      "reject-button": "동의하지 않음",
+      "accept-button-title": "쿠키를 허용하여 개인화된 경험을 제공합니다",
+      "accept-button-aria-label": "쿠키 수락 및 배너 닫기",
+      "reject-button": "거부",
       "reject-button-title": "쿠키 사용 거부 및 배너 닫기",
       "reject-button-aria-label": "쿠키 거부 및 배너 닫기",
       "banner-aria-label": "쿠키 동의 배너",

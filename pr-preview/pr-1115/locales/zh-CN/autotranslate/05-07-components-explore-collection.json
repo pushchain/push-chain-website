@@ -2,7 +2,7 @@
   "components": {
     "explore-collection": {
       "explore-card": {
-        "image-prepend": "封面图为 ",
+        "image-prepend": "封面来自 ",
         "image-append": "",
         "link-prepend": "探索 ",
         "link-append": "",

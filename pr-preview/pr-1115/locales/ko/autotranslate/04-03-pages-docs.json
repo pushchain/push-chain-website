@@ -2,15 +2,19 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "번됼세요 — 호어원석두에야시소질",
-        "description": "었당호총드 면뮰 구과장세요: 입해총세요, SDK약안, API 프플지우, 저을, 새원아세요.",
-        "twitter-title": "치촜구는 케잴하세요 - 남한",
-        "twitter-description": "분생시 었음, SDK이터, API 청욹성요, 문속어 머코."
+        "title": "문서 — 유니버설 앱 구축",
+        "description": "Push Chain에서 시작하는 데 필요한 모든 것: 빠른 시작 가이드, SDK, API 레퍼런스, 예제, 그리고 노드 설정 방법.",
+        "og-title": "Push Chain Docs - 빠른 시작, SDK 및 API",
+        "og-description": "유니버설 execution layer에서 앱을 구축하고 실행하는 명확한 가이드와 예제를 제공합니다.",
+        "twitter-title": "Push Chain Docs - 지금 시작하세요",
+        "twitter-description": "빠른 시작, SDK, API 참조 및 예제를 통해 빠르게 출시하세요."
       },
       "header": {
-        "countdown-title": "\n블록체인\n테스트넷 문서 출시까지 남은 시간",
-        "description": "‪바재카하세요 총소즴을 단안워요! #pushchainsecret단안워요장도 성일요.",
-        "ariaLabel": "호가 촜속다 비용의 명합 문어"
+        "countdown-title": "테스트넷 문서 출시까지 남은 시간",
+        "description": "쉿... 테스트넷 도넛을 미리 보고 싶으신가요? #pushchainsecret 해시태그와 함께 메시지를 보내주시면 테스트 빌드 액세스를 보내드릴게요.",
+        "tweet-button": "Push Chain에 대해 트윗하기",
+        "title": "Push Chain에 대해 트윗하기",
+        "ariaLabel": "Push Chain에 대해 트윗하기"
       },
       "grid-section": {
         "blocks": {
@@ -18,16 +22,19 @@
             "resources": {
               "items": {
                 "whatispush": {
-                  "title": "비다세디주윑 었세집을?"
+                  "title": "Push Chain이 무엇인가요?",
+                  "subtitle": "Push Chain은 진정으로 유니버설 앱을 구축하기 위한 통합 툴킷을 제공합니다.",
+                  "ctatitle": "자세히 알아보기"
                 },
                 "builders": {
-                  "title": "빌드합시다!",
-                  "subtitle": "봢울 었석하세요 머속 믰곤 총곤지음시 합곤읿세요",
-                  "ctatitle": "프로 엘서"
+                  "title": "함께 만들어 봐요!",
+                  "subtitle": "Push Chain SDK를 이용해 유니버설 앱을 만드는 데 필요한 모든 것",
+                  "ctatitle": "더 알아보기"
                 },
                 "ui-kit": {
-                  "subtitle": "대개 추큜 머일 켶장시주 5우일세요.",
-                  "ctatitle": "북주을 코도"
+                  "title": "UI Kit",
+                  "subtitle": "React 기반 앱을 5분 안에 통합하세요.",
+                  "ctatitle": "더 알아보기"
                 }
               }
             }

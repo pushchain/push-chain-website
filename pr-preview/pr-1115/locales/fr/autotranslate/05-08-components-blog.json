@@ -2,7 +2,7 @@
   "components": {
     "blog": {
       "more-posts": {
-        "title": "Plus d'articles sur Push Chain",
+        "title": "Plus de contenu sur Push Chain",
         "follow-button": "Suivre",
         "read-more": "Lire la suite"
       },
@@ -12,7 +12,7 @@
       },
       "paginator": {
         "nav-aria-label": "Navigation des pages de la liste du blog",
-        "newer-entries": "Entrées plus récentes",
+        "newer-entries": "Articles plus récents",
         "older-entries": "Articles plus anciens"
       },
       "footer-item": {
@@ -21,7 +21,7 @@
         "share-modal-title": "Partager",
         "copy-link": "Copier le lien",
         "about-title": "À propos de Push Chain",
-        "about-description": "Push Chain est la première véritable blockchain universelle conçue pour éliminer la fragmentation entre toutes les chaînes. Elle permet aux développeurs de déployer une seule fois et d'être immédiatement disponibles pour les utilisateurs sur n'importe quelle chaîne, qu'elle soit EVM ou non-EVM (y compris Ethereum, Solana, Bitcoin entre autres). C'est une chaîne Proof of Stake (PoS) 100% compatible EVM qui permet aux utilisateurs d'interagir avec les apps déployées sur Push Chain depuis n'importe quelle chaîne, comme ils le feraient nativement sur leur propre chaîne.",
+        "about-description": "Push Chain est la première véritable blockchain universelle conçue pour éliminer la fragmentation entre toutes les chaînes. Elle permet aux développeurs de déployer une seule fois, et de devenir instantanément disponibles pour les utilisateurs sur n'importe quelle chaîne, qu'elle soit EVM ou non-EVM (y compris Ethereum, Solana, Bitcoin, entre autres). C'est une chaîne Proof of Stake (PoS) 100 % compatible EVM qui permet aux utilisateurs d'interagir avec les apps déployées sur Push Chain depuis n'importe quelle chaîne, comme ils le feraient nativement sur leur propre chaîne.",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",

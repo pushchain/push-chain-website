@@ -3,7 +3,7 @@
     "breadcrumbs": {
       "navigation-aria-label": "面包屑导航",
       "home-text": "首页",
-      "navigate-to-aria-label": "导航到 {{page}}",
+      "navigate-to-aria-label": "导航至 {{page}}",
       "go-to-title": "前往 {{page}} 页面",
       "current-page-aria-label": "当前页面: {{page}}",
       "separator-aria-label": "面包屑分隔符"

@@ -4,11 +4,11 @@
       "deepdives": {
         "seo": {
           "title": "Đi sâu — Khái niệm & Kiến trúc",
-          "description": "Các bài giải thích dễ hiểu về shared state, universal fee abstraction, USV/UEA và universal execution layer.",
+          "description": "Các bài giải thích dễ hiểu về shared state, fee abstraction, USV/UEA, và universal execution layer.",
           "og-title": "Đi sâu - Khái niệm & Kiến trúc",
           "og-description": "Các bài viết chuyên sâu về các mô-đun của Push Chain, quyết định thiết kế và hiệu suất.",
-          "twitter-title": "Deep Dives - Khám phá sâu bên trong",
-          "twitter-description": "Giải thích cách thức hoạt động của Push Chain."
+          "twitter-title": "Deep Dives - Giải mã sâu bên trong",
+          "twitter-description": "Giải thích về cách Push Chain hoạt động."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,18 +19,18 @@
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Kiến trúc chuyên sâu\n\nTìm hiểu sâu về kiến trúc của Push Chain và cách nó hoạt động - từng mô-đun một.",
-                  "curated-reads": "## Các bài đọc được tuyển chọn 👇"
+                  "intro": "## Kiến trúc tổng quan\n\nTìm hiểu sâu về kiến trúc của Push Chain và cách nó hoạt động - Từng mô-đun một.",
+                  "curated-reads": "## Các bài viết chọn lọc 👇"
                 }
               },
               "learn-push-chain": {
-                "title": "Tìm hiểu điều gì khiến Push Chain hoạt động!",
+                "title": "Tìm hiểu điều gì làm nên sức mạnh của Push Chain!",
                 "items": {
                   "interop-spectrum": {
-                    "title": "Tính tương tác như một phổ"
+                    "title": "Khả năng tương tác như một dải quang phổ"
                   },
                   "understand-proof-of-stake-part-1": {
-                    "title": "Tìm hiểu về Proof of Stake (POS) - Phần 1"
+                    "title": "Hiểu về Cơ chế Proof of Stake (POS) - Phần 1"
                   }
                 }
               }

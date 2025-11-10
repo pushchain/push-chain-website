@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Fique por dentro do Testnet, Donut, crie apps universais e ganhe prêmios!",
-      "button-text": "Reivindicar Passe Beta Fechado",
-      "button-title": "Participe do testnet Push Chain e reivindique seu passe de acesso antecipado",
-      "button-aria-label": "Abra o Telegram para resgatar o passe de acesso ao beta fechado do Push Chain",
+      "description": "O deployathon do Projeto G.U.D está AO VIVO! Implemente apps, ganhe $5000",
+      "button-text": "Vá para o Universal & Implante",
+      "button-title": "Projeto G.U.D deployathon está AO VIVO",
+      "button-aria-label": "Projeto G.U.D deployathon está AO VIVO. Você pode conferir aqui",
       "image-alt": "Push Chain Testnet Donut - Universal ब्लॉकचेन",
       "close-button-title": "Fechar notificação da testnet",
       "close-button-aria-label": "Dismiss Push Chain testnet notification",
-      "container-aria-label": "Push Chain testnet notification"
+      "container-aria-label": "Notificação do Push Chain testnet"
     }
   }
 }

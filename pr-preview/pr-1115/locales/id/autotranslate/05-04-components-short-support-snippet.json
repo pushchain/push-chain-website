@@ -1,51 +1,51 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Pertanyaan Dukungan tentang Push Chain - Universal 블록체인",
+      "section-aria-label": "Pertanyaan Dukungan tentang Push Chain - Universal Blockchain",
       "title": "Dukungan\nBantuan",
       "title-aria-label": "Pertanyaan dan jawaban umum tentang Push Chain",
       "discord-link-text": "Tanya kami di Discord",
       "discord-link-title": "Bergabunglah dengan komunitas Discord Push Chain untuk dukungan dan pertanyaan",
       "discord-link-aria-label": "Buka komunitas Discord di tab baru",
       "explore-more-text": "Jelajahi Lebih Banyak FAQ",
-      "explore-more-title": "Lihat dokumentasi FAQ Push Chain yang komprehensif dan panduan pengembang",
+      "explore-more-title": "Lihat dokumentasi FAQ lengkap Push Chain dan panduan pengembang",
       "explore-more-aria-label": "Buka halaman FAQ lengkap Push Chain",
       "accordion-aria-label": "Daftar pertanyaan dukungan Push Chain",
       "answer-aria-label": "Jawaban untuk pertanyaan - ",
       "qnas": {
         "qna1": {
           "question": "Saya tidak bisa menghubungkan dompet saya. Apa yang harus saya coba?",
-          "answer": "<1><2>Cek cepat:</2> segarkan halaman, buka kunci dompetmu, dan nonaktifkan pemblokir iklan/skrip agresif untuk push.org.</1><1><2>Tidak perlu mengganti jaringan:</2> tetap di rantai utama; Push menangani perutean di balik layar.</1><1><2>Reset izin situs:</2> di dompetmu, hapus koneksi situs dan sambungkan kembali.</1><1>Masih kesulitan? Tanyakan di <3>Discord</3> atau buka <4>Tiket Dukungan</4>.</1>",
+          "answer": "<1><2>Cek cepat:</2> segarkan halaman, buka kunci dompetmu, dan nonaktifkan pemblokir iklan/skrip agresif untuk push.org.</1><1><2>Tidak perlu beralih jaringan:</2> tetaplah di rantai utama; Push menangani perutean di balik layar.</1><1><2>Reset izin situs:</2> di dompetmu, hapus koneksi situs dan sambungkan kembali.</1><1>Masih kesulitan? Tanyakan di <3>Discord</3> atau buka <4>Tiket Dukungan</4>.</1>",
           "discord-url-title": "Bergabunglah dengan Discord Push Chain untuk bantuan secara langsung.",
           "support-url-title": "Buka tiket dukungan."
         },
         "qna2": {
-          "question": "Transaksi saya sedang menunggu atau gagal — apa yang harus saya lakukan?",
-          "answer": "<1><2>Periksa status:</2> cari transaksi Anda di <3>Push Scan</3> menggunakan hash dari dompet Anda.</1><1><2>Menunggu konfirmasi:</2> biasanya akan dikonfirmasi sebentar lagi; hindari mengirim ulang berulang kali.</1><1><2>Gagal:</2> tidak ada dana yang terambil. Tinjau kembali pesan kesalahan dan coba lagi.</1><1>Insiden yang sedang berlangsung diposting di <4>Status</4>.</1>",
+          "question": "Transaksi saya sedang menunggu atau gagal — apa yang harus saya lakukan sekarang?",
+          "answer": "<1><2>Periksa status:</2> cari transaksi Anda di <3>Push Scan</3> menggunakan hash dari dompet Anda.</1><1><2>Menunggu Konfirmasi:</2> biasanya dikonfirmasi sebentar lagi; hindari mengirim ulang berulang kali.</1><1><2>Gagal:</2> tidak ada dana yang terambil. Tinjau kesalahan dan coba lagi.</1><1>Insiden yang sedang berlangsung diposting di <4>Status</4>.</1>",
           "scan-url-title": "Buka Push Scan (penjelajah).",
           "status-url-title": "Lihat status jaringan dan insiden."
         },
         "qna3": {
           "question": "Bagaimana cara mendapatkan token testnet (Donut)?",
-          "answer": "<1>Gunakan <3>Faucet</3> untuk meminta token uji.</1><1><2>Catatan:</2> batasan tarif mungkin berlaku; beberapa faucet memerlukan verifikasi sederhana. Jika faucet gagal, hubungi kami di <4>Discord</4>.</1>",
+          "answer": "<1>Gunakan <3>Faucet</3> untuk meminta token uji.</1><1><2>Catatan:</2> batas laju mungkin berlaku; beberapa faucet memerlukan verifikasi sederhana. Jika faucet gagal, hubungi kami di <4>Discord</4>.</1>",
           "faucet-url-title": "Buka keran Push Chain.",
           "discord-url-title": "Bergabunglah dengan Discord Push Chain."
         },
         "qna4": {
-          "question": "Bagaimana cara saya melaporkan bug atau kerentanan?",
-          "answer": "<1><2>Kesalahan aplikasi:</2> laporkan <3>Tiket Dukungan</3> atau posting di <4>Discord</4> dengan langkah-langkah untuk mereproduksi.</1><1><2>Masalah keamanan:</2> kirim email ke <5>security@push.org</5>. Harap hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
+          "question": "Bagaimana cara melaporkan bug atau kerentanan?",
+          "answer": "<1><2>Bug aplikasi:</2> laporkan <3>Tiket Dukungan</3> atau posting di <4>Discord</4> dengan langkah-langkah untuk mereproduksi masalah.</1><1><2>Masalah keamanan:</2> kirim email ke <5>security@push.org</5>. Hindari pengungkapan publik sampai kami mengonfirmasi perbaikan.</1>",
           "support-url-title": "Buka tiket dukungan.",
-          "discord-url-title": "Bergabunglah dengan Discord."
+          "discord-url-title": "Bergabung dengan Discord."
         },
         "qna5": {
-          "question": "Di mana dokumentasi dan panduan cepatnya?",
+          "question": "Di mana saya bisa menemukan dokumentasi dan panduan cepat?",
           "answer": "<1>Mulai dengan <3>Dokumentasi</3> untuk panduan cepat dan API, dan <4>Basis Pengetahuan</4> untuk konsep, pembahasan mendalam, dan FAQ.</1>",
-          "docs-url-title": "Buka dokumentasi developer.",
+          "docs-url-title": "Buka dokumentasi pengembang.",
           "kb-url-title": "Buka Basis Pengetahuan."
         },
         "qna6": {
-          "question": "Bisakah saya meminta dukungan untuk rantai baru, fitur, atau integrasi?",
-          "answer": "<1>Ya. Beri tahu kami rantai/alat yang Anda butuhkan melalui <3>Kontak</3> atau buka isu di <4>GitHub</4>. Kami terus memperluas cakupan.</1>",
+          "question": "Bisakah saya meminta dukungan untuk rantai, fitur, atau integrasi baru?",
+          "answer": "<1>Ya. Beri tahu kami rantai/alat apa yang Anda butuhkan melalui <3>Kontak</3> atau buka masalah di <4>GitHub</4>. Kami terus memperluas cakupan.</1>",
           "contact-url-title": "Hubungi tim Push Chain.",
           "github-url-title": "Buka organisasi GitHub."
         }

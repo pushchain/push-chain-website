@@ -3,7 +3,7 @@
     "typeform-support": {
       "collapsed-text-for-support": "Destek Bileti Aç",
       "expanded-title-for-support": "Yardıma mı ihtiyacınız var? 👋",
-      "collapsed-text-for-contact": "Takımı İletişime Geç",
+      "collapsed-text-for-contact": "Ekiple İletişime Geç",
       "expanded-title-for-contact": "Merhaba! 👋",
       "categories": {
         "technical": {
@@ -11,11 +11,11 @@
           "description": "Hata raporları, SDK/API, स्मार्ट कॉन्ट्रैक्ट, entegrasyon yardımı"
         },
         "network": {
-          "label": "🌐 Ağ ve Testnet",
-          "description": "Ağ Gezgini/Push Tarayıcı, RPC, Musluk, Donut testnet sorunları"
+          "label": "🌐 Ağ & testnet",
+          "description": "Ağ Gezgini/Push Tarama, RPC, Musluk, Donut testnet sorunları"
         },
         "wallet": {
-          "label": "👛 Universal वॉलेट",
+          "label": "👛 Evrensel Cüzdan",
           "description": "Push Wallet, evrensel zincir bağlantısı veya diğer cüzdan sorunları"
         },
         "identity": {
@@ -24,27 +24,27 @@
         },
         "security": {
           "label": "🛡️ Güvenlik",
-          "description": "Güvenlik açıkları, sorumlu açıklama (security@push.org)"
+          "description": "Güvenlik açığı bildirimleri, sorumlu açıklama (security@push.org)"
         },
         "general": {
           "label": "💬 Genel Sorgu",
           "description": "Sorular, geri bildirim, diğer konular"
         },
         "partnerships": {
-          "label": "🤝 Ortaklıklar & Entegrasyonlar",
-          "description": "İş geliştirme, ekosistem entegrasyonları (वॉलेट, altyapı, borsalar, protokoller)"
+          "label": "🤝 Ortaklıklar ve Entegrasyonlar",
+          "description": "İş geliştirme, ekosistem entegrasyonları (cüzdanlar, altyapı, borsalar, protokoller)"
         },
         "grants": {
-          "label": "💰 Hibeler & Ekosistem Programları",
-          "description": "BRB, Bootcamp, bağışlar, finansman sorguları"
+          "label": "💰 Hibe & Ekosistem Programları",
+          "description": "BRB, Bootcamp, hibe, finansman sorguları"
         },
         "media": {
           "label": "📰 Medya & Basın",
-          "description": "Röportajlar, açıklamalar, varlıklar, gerçek kontrolü"
+          "description": "Röportajlar, açıklamalar, varlıklar, gerçeklik kontrolü"
         },
         "events": {
-          "label": "🎤 Konuşma & Etkinlikler",
-          "description": "Konuşmalar, çalıştaylar, hackathon'lar, sponsorluklar"
+          "label": "🎤 Konuşmalar & Etkinlikler",
+          "description": "Konuşmalar, atölyeler, hackathon'lar, sponsorluklar"
         },
         "careers": {
           "label": "👩‍💻 Kariyer",
@@ -66,11 +66,11 @@
             "subtitle": "Sorununuzu en iyi tanımlayan kategoriyi seçin"
           },
           "contact": {
-            "title": "Tanışalım",
+            "title": "Sizinle tanışalım",
             "subtitle": "Bu bilgileri size geri dönmek için kullanacağız",
-            "name-label": "Adınız",
-            "name-placeholder": "Adınızı ve soyadınızı girin",
-            "name-aftergreet": "Tanışmak güzel, ",
+            "name-label": "Adınız Soyadınız",
+            "name-placeholder": "Adınızı soyadınızı girin",
+            "name-aftergreet": "Tanıştığıma memnun oldum, ",
             "email-label": "E-posta Adresi",
             "email-placeholder": "E-posta adresinizi girin"
           },
@@ -80,11 +80,11 @@
             "subject-label": "Konu",
             "subject-placeholder": "Sorununuzun kısa bir özeti",
             "message-label": "Mesaj",
-            "message-placeholder": "Sorununuzu detaylı olarak açıklayın. Hata mesajlarını, yeniden üretme adımlarını veya ilgili bilgileri ekleyin."
+            "message-placeholder": "Sorununuzu ayrıntılı olarak açıklayın. Hata mesajlarını, tekrar etme adımlarını veya ilgili bilgileri ekleyin."
           },
           "submit": {
             "title": "Gözden Geçir ve Gönder",
-            "subtitle": "Lütfen göndermeden önce bilgilerinizi kontrol edin",
+            "subtitle": "Lütfen bilgilerinizi göndermeden önce kontrol edin",
             "placeholder": "Bize ne konuda yardıma ihtiyacınız olduğunu anlatın..."
           }
         },
@@ -97,7 +97,7 @@
         "validation": {
           "name-required": "Adınız zorunlu.",
           "name-min-length": "Adınız en az 2 karakter uzunluğunda olmalıdır",
-          "email-required": "E-posta adresi gerekli.",
+          "email-required": "E-posta adresi gerekli",
           "email-invalid": "Lütfen geçerli bir e-posta adresi girin",
           "subject-required": "Konu zorunlu.",
           "message-required": "Mesaj zorunlu.",
@@ -105,7 +105,7 @@
           "default": "Bu alanın doldurulması zorunludur"
         },
         "success": {
-          "title": "Başvurunuz Başarıyla Gönderildi!",
+          "title": "Bilet Başarıyla Gönderildi!",
           "message": "Bize ulaştığınız için teşekkür ederiz. Destek talebinizi aldık ve en kısa sürede size geri dönüş yapacağız.",
           "button": "Başka Bir Talep Gönder"
         },

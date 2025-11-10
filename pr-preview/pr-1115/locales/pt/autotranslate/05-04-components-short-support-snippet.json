@@ -1,39 +1,39 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Perguntas de Suporte sobre Push Chain - Blockchain Universal",
+      "section-aria-label": "Perguntas de Suporte sobre Push Chain - blockchain Universal",
       "title": "Suporte\nCentral de Ajuda",
-      "title-aria-label": "Perguntas frequentes e respostas sobre Push Chain",
+      "title-aria-label": "Perguntas frequentes e respostas comuns sobre Push Chain",
       "discord-link-text": "Pergunte-nos no Discord",
       "discord-link-title": "Junte-se à comunidade Push Chain no Discord para suporte e dúvidas",
       "discord-link-aria-label": "Abrir comunidade Discord em uma nova aba",
-      "explore-more-text": "Explore mais perguntas frequentes",
+      "explore-more-text": "Explore mais Perguntas Frequentes",
       "explore-more-title": "Veja a documentação completa de perguntas frequentes e guias para desenvolvedores do Push Chain",
-      "explore-more-aria-label": "Navegar para a página completa de Perguntas Frequentes do Push Chain",
+      "explore-more-aria-label": "Navegue para a página completa de Perguntas Frequentes do Push Chain",
       "accordion-aria-label": "Lista de perguntas de suporte Push Chain",
       "answer-aria-label": "Resposta à pergunta - ",
       "qnas": {
         "qna1": {
-          "question": "Não consigo conectar minha carteira. O que devo tentar?",
-          "answer": "<1><2>Verificações rápidas:</2> atualize a página, desbloqueie sua carteira e desative bloqueadores de anúncios/scripts agressivos para push.org.</1><1><2>Sem necessidade de trocar de rede:</2> permaneça na sua rede principal; o Push lida com o roteamento nos bastidores.</1><1><2>Redefina as permissões do site:</2> na sua carteira, remova a conexão do site e reconecte.</1><1>Ainda com problemas? Pergunte no <3>Discord</3> ou abra um <4>ticket de suporte</4>.</1>",
+          "question": "Não consigo conectar minha <wallet>. O que devo tentar?",
+          "answer": "<1><2>Verificações rápidas:</2> atualize a página, desbloqueie sua <token>wallet</token>, e desative bloqueadores de anúncios/scripts agressivos para push.org.</1><1><2>Sem necessidade de mudar de rede:</2> permaneça na sua rede principal; Push cuida do roteamento nos bastidores.</1><1><2>Redefina as permissões do site:</2> na sua <token>wallet</token>, remova a conexão do site e reconecte.</1><1>Ainda com problemas? Pergunte no <3>Discord</3> ou abra um <4>ticket de suporte</4>.</1>",
           "discord-url-title": "Junte-se ao Discord do Push Chain para obter ajuda em tempo real.",
           "support-url-title": "Abra um chamado de suporte."
         },
         "qna2": {
           "question": "Minha transação está pendente ou falhou — e agora?",
-          "answer": "<1><2>Verifique o status:</2> procure sua tx no <3>Push Scan</3> usando o hash da sua carteira.</1><1><2>Pendente:</2> geralmente confirma em breve; evite reenviar repetidamente.</1><1><2>Falhou:</2> nenhum fundo foi retirado. Revise o erro e tente novamente.</1><1>Incidentes em andamento são postados no <4>Status</4>.</1>",
+          "answer": "<1><2>Verifique o status:</2> procure sua tx no <3>Push Scan</3> usando o hash da sua carteira.</1><1><2>Pendente:</2> geralmente confirma em breve; evite reenviar repetidamente.</1><1><2>Falhou:</2> nenhum fundo foi debitado. Revise o erro e tente novamente.</1><1>Incidentes em andamento são postados no <4>Status</4>.</1>",
           "scan-url-title": "Abrir Push Scan (explorador).",
           "status-url-title": "Veja o status da rede e os incidentes."
         },
         "qna3": {
-          "question": "Como eu consigo tokens de testnet (Donut)?",
-          "answer": "<1>Use a <3>Faucet</3> para solicitar tokens de teste.</1><1><2>Observações:</2> podem se aplicar limites de taxa; alguns faucets exigem verificação simples. Se o faucet falhar, nos avise no <4>Discord</4>.</1>",
+          "question": "Como consigo tokens de testnet (Donut)?",
+          "answer": "<1>Use a <3>Faucet</3> para solicitar tokens de teste.</1><1><2>Observações:</2> limites de taxa podem ser aplicados; alguns faucets exigem verificação simples. Se o faucet falhar, entre em contato conosco no <4>Discord</4>.</1>",
           "faucet-url-title": "Abra a torneira do Push Chain.",
           "discord-url-title": "Junte-se ao Discord do Push Chain."
         },
         "qna4": {
-          "question": "Como posso relatar um bug ou vulnerabilidade?",
-          "answer": "<1><2>Erros no app:</2> abra um <3>Ticket de suporte</3> ou publique no <4>Discord</4> com os passos para reproduzir.</1><1><2>Problemas de segurança:</2> envie um e-mail para <5>security@push.org</5>. Evite divulgação pública até confirmarmos uma correção.</1>",
+          "question": "Como posso reportar um bug ou vulnerabilidade?",
+          "answer": "<1><2>Bugs no app:</2> abra um <3>ticket de suporte</3> ou poste no <4>Discord</4> com os passos para reproduzir.</1><1><2>Problemas de segurança:</2> envie um email para <5>security@push.org</5>. Por favor, evite divulgar publicamente até confirmarmos uma correção.</1>",
           "support-url-title": "Abra um chamado de suporte.",
           "discord-url-title": "Junte-se ao Discord."
         },
@@ -44,10 +44,10 @@
           "kb-url-title": "Abra a Base de Conhecimento."
         },
         "qna6": {
-          "question": "Posso solicitar suporte para uma nova cadeia, funcionalidade ou integração?",
-          "answer": "<1>Sim. Conte-nos qual <blockchain> ou ferramenta você precisa através de <3>Contato</3> ou abra uma issue no <4>GitHub</4>. Estamos expandindo a cobertura continuamente.</1>",
-          "contact-url-title": "Entre em contato com a equipe do Push Chain.",
-          "github-url-title": "Abra a organização GitHub."
+          "question": "Posso solicitar suporte para uma nova cadeia, recurso ou integração?",
+          "answer": "<1>Sim. Nos diga qual cadeia/ferramenta você precisa através de <3>Contato</3> ou abra uma issue no <4>GitHub</4>. Estamos expandindo a cobertura continuamente.</1>",
+          "contact-url-title": "Entre em contato com a equipe Push Chain.",
+          "github-url-title": "Abra a organização no GitHub."
         }
       }
     }

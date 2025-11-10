@@ -3,54 +3,58 @@
     "knowledge": {
       "push101": {
         "seo": {
-          "title": "Push Chain の基本 — はじめに",
-          "description": "Push Chainとユニバーサルappへの簡単な入門—それは何であるか、どのように機能するか、そしてどのように始めるか。",
-          "og-title": "Push Chainの基本 - はじめに",
-          "og-description": "基本を学ぶ: Push Chain とは何か、どのように機能するか、そして最初のステップ。",
-          "twitter-title": "Push Chain の基本 - ここから始めましょう",
-          "twitter-description": "Push Chainとユニバーサル <app> の初心者向けガイド。"
+          "title": "Push Chain の基本 — 概要",
+          "description": "初心者向けのPush Chainとユニバーサル<app>の紹介—概要、仕組み、始め方。",
+          "og-title": "Push Chain の基本 - 概要",
+          "og-description": "基本を学ぶ：Push Chainとは何か、仕組み、そして最初のステップ。",
+          "twitter-title": "Push Chain の基本 - まずはここから",
+          "twitter-description": "Push Chainとユニバーサルアプリの初心者向けガイド。"
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge-base": "ナレッジベース"
+            "knowledge-base": "知識ベース"
           },
           "blocks": {
             "title": "Push Chain の基本",
             "sections": {
               "push-chain-basics": {
                 "items": {
-                  "why-push-chain": "## Why Push Chain?\n\nPush Chain is the first **true universal L1**, purpose built to enable apps to seamlessly be interact-able by users of any chain.\n\nWrite your smart contract once, deploy it on Push Chain, and instantly reach users on Ethereum, Solana, and all other supported chains without changing on-chain code.",
-                  "what-is-push-chain": "## Push Chainとは？\n\nPush Chainは、Proof-of-Stake (PoS) L1 ブロックチェーンであり、すべてのチェーンにわたる断片化を排除するように設計されています。\n\nそれは、すべてのチェーンにわたる**shared state L1**ブロックチェーンであり、**Universal (Interoperable) Apps**を可能にします。Push Chainは、どのチェーン (Eth, Solana, EVM, またはnon-EVM) からのトランザクションも可能にし、どのチェーンのアプリも、どのチェーンのユーザーがアクセスできるようにします (**polymarket** from any chain, **pump.fun** from any chain, etc).",
-                  "innovations-of-push-chain": "## Push Chain の革新\n\nPush Chain は、以下のような画期的な革新を導入します。\n\n**真のユニバーサル L1** - すべてのチェーンをネイティブにサポートし、ユーザーは同じ app とインタラクトできます。 中央集権的なリレイヤー、ブリッジ、その他のハックは必要ありません。\n\n**ユニバーサル Fee Abstraction** - ユーザーは、選択したチェーン上にいながら、任意の トークン を使用してネイティブにインタラクトできます。\n\n**Wallet Abstraction** - MetaMask、Phantom、およびその他の ウォレット をサポートするだけでなく、ソーシャルログインやメールログインも統一プロバイダを通じて可能です。 ユーザーは、app にアクセスするために新しい ウォレット を作成する必要はありません。\n\n**単一の トランザクション 、チェーンに関わらず** - ユーザーは、単一の トランザクション で Push Chain の app とインタラクトできます。 どのように app とインタラクトするかにかかわらず、常に単一の トランザクション に署名するだけで済みます。\n\n**ユニバーサル Smart Contract** - Smart Contract はユニバーサルであり、オンチェーンのコード変更や追加の手順なしに即座に動作します。\n\n**Shared State & Programmable Solvers** - 開発者は、他の ブロックチェーン の状態を読み書きできるようになります (ロードマップ)。\n\nその結果、web3 において **完全に相互運用可能なアプリケーション** が実現します。 このパラダイムでは、「Ethereum の Uniswap のユーザー」、「Polygon の Uniswap のユーザー」、「Arbitrum の Uniswap のユーザー」であるのではなく、単に **Uniswap のユーザー** となります。",
-                  "curated-reads": "## 厳選された情報集 👇"
+                  "why-push-chain": "## Why Push Chain?\n\nPush Chain は初の **真のユニバーサル L1** で、あらゆるチェーンのユーザーがシームレスにインタラクションできるように設計されています。\n\nスマートコントラクトを一度記述し、Push Chain にデプロイするだけで、オンチェーンコードを変更することなく、Ethereum、Solana、およびその他のサポートされているチェーンのユーザーに瞬時にリーチできます。",
+                  "what-is-push-chain": "## What is Push Chain?\n\nPush Chain は、PoS（Proof-of-Stake）L1 ブロックチェーンであり、すべてのチェーンにわたる断片化を排除するように設計されています。\n\nそれは、すべてのチェーンにわたる **shared state L1** ブロックチェーンであり、**Universal (Interoperable) Apps** を実現します。Push Chain は、任意のチェーン（Eth、Solana、EVM、または non-EVM）からのトランザクションを可能にし、任意のチェーンのアプリを任意のチェーンのユーザーが利用できるようにします（**polymarket** from any chain、**pump.fun** from any chain など）。",
+                  "innovations-of-push-chain": "## Push Chain の革新的な機能\n\nPush Chain は、次のような画期的な革新的な機能を提供します:\n\n**真のユニバーサル L1** - すべてのチェーンをネイティブにサポートし、ユーザーが同じappと相互作用できるようにします。 中央集権的なリレーヤー、ブリッジ、その他のハックは必要ありません。\n\n**ユニバーサル スマートコントラクト** - スマートコントラクトはユニバーサルであり、オンチェーンのコード変更や追加の手順なしに即座に動作します。\n\n**単一のトランザクション、チェーンに関わらず** - ユーザーは、単一のトランザクションで Push Chain の任意のappと相互作用できます。 ユーザーがappとどのように相互作用することを選択しても、常に単一のトランザクションに署名するだけで済みます。\n\n**ユニバーサル 手数料抽象化** - ユーザーは、選択したチェーン上に存在しながら、任意のトークンを使用してネイティブに相互作用できます。\n\n**ウォレット抽象化** - MetaMask、Phantom、およびその他のウォレットをサポートし、1つの統一されたプロバイダーを通じてソーシャルログインまたはメールログインも可能です。 ユーザーは、任意のappにアクセスするために新しいウォレットを作成する必要はありません。\n\n**ネイティブapp体験** - ユーザーは、常にチェーン上でネイティブにappを使用していると感じます。\n\nその結果、web3向けの**完全に相互運用可能なアプリケーション**が実現します。 このパラダイムでは、「Ethereum上のUniswap」や「Polygon上のUniswap」などのユーザーではなく、単に**Uniswapのユーザー**となります。",
+                  "curated-reads": "## Curated Reads 👇"
                 }
               },
               "why-push-chain-future": {
                 "title": "Push Chain が Web3 の未来である理由を学ぶ",
                 "items": {
+                  "apps-of-the-future": {
+                    "title": "未来のアプリ — 混沌を乗り越えて構築する",
+                    "subtitle": "未来のアプリは単一のチェーンに属しません。代わりに、すべてのチェーンのユーザーによって共有されます。"
+                  },
                   "learn-why-push-chain": {
-                    "title": "Web3の欠けているレイヤーであるPush Chainの理由",
-                    "subtitle": "Push Chainは、スケーラブルで、消費者向けのユニバーサルアプリケーションを可能にする共有ステートL1として設計されています。"
+                    "title": "Why Push Chain is the Missing <layer> in <Web3>",
+                    "subtitle": "Push Chainは、スケーラブルで、コンシューマー向けのユニバーサルアプリケーションを可能にする共有ステートL1として設計されています。"
                   },
                   "innovations-by-push-chain": {
                     "title": "Push Chainによる革新",
-                    "subtitle": "Push Chain の10の主要なイノベーションを発見し、あらゆるチェーン、あらゆるユーザー、あらゆる<app>を統合しましょう。"
+                    "subtitle": "ブロックチェーンならびにアプリとユーザーを繋ぐ10の重要なイノベーションをご覧ください。"
                   },
                   "another-l1": {
                     "title": "Push Chain は別の L1 ですか？",
-                    "subtitle": "Push Chain は、別の閉鎖的なエコシステムを作成するのではなく、すべての人にとっての相互運用性の問題を解決することを目指しています。"
+                    "subtitle": "Push Chain は、別の閉鎖的なエコシステムを作るのではなく、誰もが<transliterate>interoperability</transliterate>を解決するためのものです。"
                   },
                   "evolution-of-push": {
                     "title": "Push の進化",
-                    "subtitle": "Push ProtocolからPush Chainへ—スケーラブルなWeb3アプリのためのユニバーサルな、シェアードステートL1を構築する旅。"
+                    "subtitle": "Push ProtocolからPush Chainへ — スケーラブルなWeb3アプリのためのユニバーサル、シェヤードステートL1を構築する旅。"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Push Chain で構築できるコンシューマー <app>🫶🏽",
-                    "subtitle": "Push Chain は、チェーンを横断して普遍的に実行できる次世代の消費者向け app を実現する扉を開きます。"
+                    "title": "Consumer 🫶🏽 Apps on Push Chain",
+                    "subtitle": "Push Chain は、クロスチェーンで普遍的に動作する次世代のコンシューマーアプリの可能性を拓きます。"
                   },
                   "faq-push-chain": {
                     "title": "Push Chain よくある質問",
-                    "subtitle": "質問がありますか？Push Chainとユニバーサル <app> についてのよくある質問はこちらです。"
+                    "subtitle": "質問がありますか？ Push Chainとユニバーサル <app> についてのよくある質問をまとめました。"
                   }
                 }
               }

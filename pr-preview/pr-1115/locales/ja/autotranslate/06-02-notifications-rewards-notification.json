@@ -1,9 +1,9 @@
 {
   "notifications": {
     "rewards-notification": {
-      "title": "Donut Testnet Closed beta が開始されました！",
-      "description": "テストネット、Donutをチェックして、ユニバーサル <app> を構築し、賞品を獲得しましょう！",
-      "image-alt": "Push Chain Testnet Rewards - ユニバーサルアプリを構築",
+      "title": "Donut Testnet クロースドベータ版が開始されました！",
+      "description": "テストネット、Donut で先取り体験！ユニバーサル アプリを構築して賞品を獲得しましょう！",
+      "image-alt": "Push Chain Testnet Rewards - ユニバーサル<app>を構築",
       "close-button-title": "報酬通知を閉じる",
       "close-button-aria-label": "Push Chain の報酬通知を閉じる",
       "container-aria-label": "Push Chain rewards notification"

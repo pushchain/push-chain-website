@@ -3,12 +3,12 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders – Anleitungen & Tutorials",
-          "description": "Schritt-für-Schritt-Anleitungen, Muster und Beispiele zur Verwendung von Push Chain-Funktionen.",
+          "title": "Builders — Anleitungen & Tutorials",
+          "description": "Schritt-für-Schritt-Anleitungen, Muster und Beispiele zur Verwendung der Push Chain Funktionen.",
           "og-title": "Builders - Anleitungen & Tutorials",
-          "og-description": "Geführte Tutorials, bewährte Verfahren und Beispiele für die Entwicklung mit Push Chain.",
+          "og-description": "Anleitungen, bewährte Verfahren und Beispiele für die Entwicklung mit Push Chain.",
           "twitter-title": "Builders - Anleitungen & Tutorials",
-          "twitter-description": "Schritt-für-Schritt-Anleitungen für den erfolgreichen Start auf Push Chain."
+          "twitter-description": "Schritt-für-Schritt-Anleitungen für Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -24,7 +24,7 @@
                 }
               },
               "universal-apps": {
-                "title": "Lasst uns universelle Apps bauen 💪",
+                "title": "Lasst uns universelle <app> bauen 💪",
                 "items": {
                   "apps-of-the-future": {
                     "title": "Apps der Zukunft – Entwicklung ohne Chaos"
@@ -36,7 +36,7 @@
                     "title": "Apps Möglich Nur mit Shared State - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps Möglich Nur Mit Shared State - Vol.2"
+                    "title": "Apps Möglich Nur mit Shared State - Vol.2"
                   }
                 }
               },
@@ -44,13 +44,13 @@
                 "title": "Entwicklerressourcen",
                 "items": {
                   "developer-docs": {
-                    "title": "Entdecke die Entwickler-Dokumentation"
+                    "title": "Entdecke die Entwicklerdokumentation"
                   },
                   "faucet": {
-                    "title": "Testnet Tokens erhalten"
+                    "title": "Testnet Tokens bekommen"
                   },
                   "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
+                    "title": "Donut Testnet Explorer"
                   }
                 }
               }

@@ -2,16 +2,19 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "フランマト、今新檔复で",
-        "description": "エグテサは Push 科一線を勓で３、SDK３API前場がそら日忘へいなたしたを正だ",
-        "og-title": "ヒータセカ Docs - Quickstarts, SDKs & API",
-        "og-description": "ユニバーサル実行レイヤーでアプリを構築および実行するための明確なガイダンスと例が含まれています。",
-        "twitter-title": "フレァント・ニスト です",
-        "twitter-description": "クイックスタート、SDK、APIリファレンス、サンプルを迅速に実装するためのもの。"
+        "title": "ドキュメント — ユニバーサルアプリを構築",
+        "description": "Push Chain でのリリースに必要なものがすべて揃っています：クイックスタート、SDK、API リファレンス、サンプル、およびノードのセットアップ。",
+        "og-title": "Push Chain Docs - クイックスターツ、SDK、API",
+        "og-description": "ユニバーサル実行レイヤーでアプリを構築・実行するための明確なガイドと例。",
+        "twitter-title": "Push Chain Docs - 今すぐ構築",
+        "twitter-description": "クイックスタート、SDK、APIリファレンス、サンプルコードで迅速な開発を支援します。"
       },
       "header": {
-        "countdown-title": "テストネットドキュメントのリリースまで",
-        "ariaLabel": "パントに以内を抎う"
+        "countdown-title": "テストネットドキュメントローンチまであと",
+        "description": "Psst... ドーナツ <testnet> をこっそり覗いてみませんか？ #pushchainsecret で教えていただければ、テスト版へのアクセスをお送りします。",
+        "tweet-button": "Push Chainについてツイート",
+        "title": "Push Chainについてツイート",
+        "ariaLabel": "Push Chain についてツイート"
       },
       "grid-section": {
         "blocks": {
@@ -19,19 +22,19 @@
             "resources": {
               "items": {
                 "whatispush": {
-                  "title": "ファスャンを表本した",
-                  "subtitle": "Push Chain における、普遍的でユニバーサルなアプリを構築するための統一されたツールキットが提供されます。",
-                  "ctatitle": "もっと知る"
+                  "title": "Push Chainとは何ですか？",
+                  "subtitle": "Push Chain は、真にユニバーサルなアプリを構築するための統一ツールキットを提供します。",
+                  "ctatitle": "詳しくはこちら"
                 },
                 "builders": {
-                  "title": "ブロックチェーンを作りましょう!",
-                  "subtitle": "あなたが Push Chain SDK で作成するための、すべての必要なもの",
-                  "ctatitle": "ティルフレスしは"
+                  "title": "さあ、一緒に作りましょう！",
+                  "subtitle": "Push Chain SDK を使ってユニバーサル app を作成するために必要なものがすべて揃っています",
+                  "ctatitle": "詳しくはこちら"
                 },
                 "ui-kit": {
-                  "title": "ブトサ",
-                  "subtitle": "フォタカは、レームトを歴为いるよみきおるし",
-                  "ctatitle": "もっと詳しく学ぼう"
+                  "title": "UI Kit",
+                  "subtitle": "Reactベースのアプリなら、わずか5分で簡単に連携できます。",
+                  "ctatitle": "詳しくはこちら"
                 }
               }
             }

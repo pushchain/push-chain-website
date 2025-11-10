@@ -1,62 +1,14 @@
 {
   "components": {
     "short-contact-us-snippet": {
-      "section-aria-label": "Kontaktieren Sie das Push Chain Team",
-      "title": "Beliebte\nFragen",
-      "title-aria-label": "Häufig gestellte Kontaktfragen für Push Chain",
-      "discord-link-text": "Discord beitreten",
-      "discord-link-title": "Chatte mit der Push Chain Community auf Discord",
-      "discord-link-aria-label": "Discord in einem neuen Tab öffnen",
-      "explore-more-text": "Weitere Programme entdecken",
-      "explore-more-title": "Sehen Sie sich Stipendien, BRB und Ökosystem-Programme an",
-      "explore-more-aria-label": "Zu den Push Chain Programmen navigieren",
-      "accordion-aria-label": "Liste der Kontaktfragen",
-      "answer-aria-label": "Antwort auf die Frage - ",
       "qnas": {
-        "qna1": {
-          "question": "Welche Kategorie sollte ich wählen?",
-          "answer": "<1><2>Partnerschaften & Integrationen</2>: Wallets, Infrastruktur, Exchanges, Protokoll-Kooperationen → <3>Kontakt Partnerschaften</3>.</1><1><2>Zuschüsse & Programme</2>: BRB, Bootcamp, Finanzierung → <4>Kontakt Zuschüsse</4>.</1><1><2>Medien & Vorträge</2>: Interviews, Erklärungen, Vorträge → <5>Medien & Events</5>.</1><1><2>Validators</2>: Interesse als Node-Betreiber, RPC-Provider → <6>Validators</6>.</1><1><2>Rechtliches</2>: Markenrechte, Datenanfragen, Vereinbarungen → <7>Rechtliches</7>.</1><1>Technische Hilfe oder Status-Update benötigt? Nutze <8>Support</8> stattdessen.</1>",
-          "contact-partnerships-title": "Kontakt für offene Partnerschaften",
-          "contact-grants-title": "Kontakt für Open Grants",
-          "contact-media-title": "Kontakt für Medien & Vorträge",
-          "contact-validators-title": "Kontakt zu Open Validators",
-          "contact-legal-title": "Kontakt für Recht & Compliance öffnen",
-          "support-title": "Gehe zum Support Center"
-        },
-        "qna2": {
-          "question": "Wie schnell antworten Sie?",
-          "answer": "<1>Wir bemühen uns, die meisten Anfragen innerhalb von <2>1–2 Werktagen</2> zu beantworten. Zeitkritische Anfragen (z. B. Medienfristen, Sicherheit) werden priorisiert.</1><1>Für dringende Anliegen geben Sie bitte <2>Frist, Zeitzone</2> und einen <2>bester Kontakt</2> an.</1>"
-        },
-        "qna3": {
-          "question": "Welche Details sind für Partnerschaften hilfreich?",
-          "answer": "<1>Teilen Sie uns Ihren <2>Firmennamen</2>, Ihre <2>Website</2> und <2>was Sie gemeinsam entwickeln möchten</2> mit.</1><1>Hilfreiche Zusatzinformationen: Zielgruppengröße, Regionen, Zeitpläne und alle technischen Anforderungen oder SDKs, die Sie verwenden möchten.</1><1>Starten Sie hier → <3>Partnerschaften</3>.</1>",
-          "contact-partnerships-title": "Kontakt für Partnerschaften"
-        },
-        "qna4": {
-          "question": "Wie funktionieren Zuschüsse?",
-          "answer": "<1>Erzähl uns von deinem <2>Projektnamen</2>, <2>Repo/Website</2>, der Phase (<2>Idee, Prototyp, MVP, live</2>) und einem kurzen Plan.</1><1>Grant-Anträge werden immer nach dem Prinzip „First-Come-First-Serve“ bearbeitet. Hier geht's los → <3>Grants</3>.</1>",
-          "contact-grants-title": "Kontakt für Open Grants"
-        },
-        "qna5": {
-          "question": "Anfragen von Medien & für Vorträge",
-          "answer": "<1>Bitte gib deine Plattform, dein Thema und <2>deine Frist</2> sowie deine Fragen an. Für Vorträge/Workshops füge bitte das Datum, das Format und das Publikum hinzu.</1><1>Kontaktiere uns über <3>Medien & Vorträge</3>. Wir können Logos, Lebensläufe der Gründer und Standardtexte bereitstellen.</1>",
-          "contact-media-title": "Kontakt für Medien & Vorträge"
-        },
-        "qna6": {
-          "question": "Wie melde ich ein Sicherheitsproblem?",
-          "answer": "<1>E-Mail <3><2>security@push.org</2></3> mit Schritten zur Reproduktion und Auswirkungen. Bitte vermeiden Sie öffentliche Veröffentlichungen, bis wir einen Fix bestätigt haben.</1>",
-          "security-policy-title": "Lesen Sie die Sicherheits- & Offenlegungsrichtlinien"
-        },
         "qna7": {
           "question": "Ich möchte einen Validator betreiben / Infrastruktur bereitstellen",
-          "answer": "<1>Teilen Sie Ihr Infra-Profil (Erfahrung, Regionen), die erwartete Betriebszeit/SLAs und alle bevorzugten Bedingungen mit. Beginnen Sie hier → <3>Validators</3>.</1>",
-          "contact-validators-title": "Kontakt zu Open Validators"
+          "answer": "<1>Teilen Sie uns Ihr Infra-Profil (Erfahrung, Regionen), erwartete Betriebszeit/SLAs und bevorzugte Bedingungen mit. Hier geht es los → <3>Validators</3>.</1>",
+          "contact-validators-title": "Kontakt zu Open Validators aufnehmen"
         },
         "qna8": {
-          "question": "Karriere & Einstellung",
-          "answer": "<1>Wenn offene Stellen verfügbar sind, werden diese auf unseren Kanälen ausgeschrieben. Sie können Ihr Profil und Ihre Interessen dennoch über <3>Kontaktieren Sie uns</3> teilen oder <4>@PushChain</4> für Updates folgen.</1>",
-          "contact-careers-title": "Offene Karriere-Kontakte",
-          "twitter-title": "Folge @PushChain auf X"
+          "twitter-title": "Folgen Sie @PushChain auf X"
         }
       }
     }

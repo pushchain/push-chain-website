@@ -2,17 +2,17 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Cơ sở kiến thức — Hướng dẫn, Câu hỏi thường gặp & Hướng dẫn sử dụng",
+        "title": "Cơ sở dữ liệu — Hướng dẫn, Câu hỏi thường gặp & Cách thực hiện",
         "description": "Bắt đầu tại đây để tìm hiểu các khái niệm, câu hỏi thường gặp, hướng dẫn và tài nguyên hệ sinh thái. Hướng dẫn rõ ràng, không quá kỹ thuật về cách sử dụng Push Chain.",
         "og-title": "Cơ sở kiến thức Push Chain - Hướng dẫn & Câu hỏi thường gặp",
         "og-description": "Các khái niệm, hướng dẫn từng bước và trả lời các câu hỏi thường gặp về Push Chain.",
-        "twitter-title": "Kho Tàng Kiến Thức - Hướng Dẫn & Câu Hỏi Thường Gặp",
-        "twitter-description": "Hướng dẫn nhanh, Câu hỏi thường gặp và hướng dẫn sử dụng Push Chain (không dùng thuật ngữ kỹ thuật khó hiểu)."
+        "twitter-title": "Cơ sở kiến thức - Hướng dẫn & Câu hỏi thường gặp",
+        "twitter-description": "Hướng dẫn nhanh, câu hỏi thường gặp và cách thực hiện cho Push Chain (không dùng thuật ngữ kỹ thuật)."
       },
       "hero-section": {
-        "title": "Cơ sở kiến thức",
+        "title": "Kho Tàng Kiến Thức",
         "description": {
-          "highlighted": "Push Chain là một blockchain đa năng thực sự được thiết kế để loại bỏ tình trạng phân mảnh giữa tất cả các chuỗi.",
+          "highlighted": "Push Chain là một blockchain đa năng thực sự, được thiết kế để loại bỏ sự phân mảnh trên tất cả các chuỗi.",
           "developers": "Các nhà phát triển",
           "developers-text": "triển khai một lần và ngay lập tức tương thích với tất cả các chain EVM và non-EVM được hỗ trợ.",
           "users": "Người dùng",
@@ -20,15 +20,15 @@
         },
         "email-signup": {
           "title": {
-            "long": "Nhận thông báo về Push Chain Testnet",
+            "long": "Nhận thông báo về Testnet Push Chain",
             "short": "Push Chain Testnet"
           },
-          "description": "Hãy là người đầu tiên biết khi Push Chain testnet chính thức ra mắt. Tham gia danh sách email của chúng tôi để nhận các bản cập nhật độc quyền."
+          "description": "Hãy là người đầu tiên biết khi Push Chain testnet chính thức ra mắt. Tham gia danh sách email của chúng tôi để cập nhật những thông tin độc quyền."
         },
         "footer": {
-          "description": "Tạo trải nghiệm liền mạch, thân thiện với người dùng cho ứng dụng của bạn trên bất kỳ blockchain nào với Push Chain.",
+          "description": "Tạo trải nghiệm liền mạch, thân thiện với người dùng cho ứng dụng của bạn trên bất kỳ <blockchain> nào với <Push Chain>.",
           "cta": {
-            "text": "Nhận thông báo"
+            "text": "Nhận Thông Báo"
           }
         }
       },
@@ -45,17 +45,17 @@
                 },
                 "builders": {
                   "title": "Xây dựng trên Push Chain",
-                  "subtitle": "Khám phá cách xây dựng ứng dụng <1>universal</1>, những tiềm năng mà nó mở ra và cách bắt đầu!",
-                  "ctatitle": "Các nhà xây dựng tập hợp lại"
+                  "subtitle": "Khám phá cách xây dựng các ứng dụng đa năng, những tiềm năng mà nó mang lại và cách bắt đầu!",
+                  "ctatitle": "Các Nhà Xây Dựng Tập Hợp"
                 },
                 "deepdives": {
                   "title": "Các bài phân tích chuyên sâu về kỹ thuật",
-                  "subtitle": "Bạn muốn tìm hiểu sâu về cách hoạt động của Push? Hoặc đơn giản là một người tò mò? Dù thế nào, hãy chào hỏi nhé!",
-                  "ctatitle": "Xem nó hoạt động như thế nào"
+                  "subtitle": "Muốn tìm hiểu sâu về Push? Hoặc đơn giản là bạn tò mò? Dù sao thì, chào bạn nhé!",
+                  "ctatitle": "Xem cách nó hoạt động"
                 },
                 "devdocs": {
                   "title": "Tài liệu dành cho nhà phát triển",
-                  "subtitle": "Đi thẳng vào vấn đề thôi! Tôi là một universal chain... và bạn là dev, hãy chính thức hóa điều đó!",
+                  "subtitle": "Chúng ta đi thẳng vào vấn đề nhé! Tôi là một universal chain... và bạn là một dev, hãy chính thức hóa điều đó!",
                   "ctatitle": "Bắt đầu xây dựng"
                 },
                 "tokenomics": {
@@ -65,7 +65,7 @@
                 },
                 "faq": {
                   "title": "Câu hỏi thường gặp",
-                  "subtitle": "Nơi bạn có thể tìm thấy câu trả lời cho tất cả các câu hỏi phổ biến mà cộng đồng đã hỏi",
+                  "subtitle": "Nơi tìm câu trả lời cho tất cả các câu hỏi phổ biến mà cộng đồng đã hỏi",
                   "ctatitle": "Đọc thêm"
                 }
               }

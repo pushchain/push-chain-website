@@ -3,28 +3,28 @@
     "knowledge": {
       "deepdives": {
         "seo": {
-          "title": "Deep Dives — Konzepte & Architektur",
+          "title": "Deep Dives – Konzepte & Architektur",
           "description": "Verständliche Erklärungen zu shared state, Fee-Abstraktion, USV/UEA und der universal execution layer.",
           "og-title": "Deep Dives - Konzepte & Architektur",
           "og-description": "Detaillierte Artikel zu Push Chain Modulen, Designentscheidungen und Performance.",
           "twitter-title": "Deep Dives - Unter der Haube",
-          "twitter-description": "Erklärungen, wie Push Chain funktioniert."
+          "twitter-description": "Erläuterungen zur Funktionsweise von Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
             "knowledge-base": "Wissensdatenbank"
           },
           "blocks": {
-            "title": "Tiefe Einblicke",
+            "title": "Deep Dives",
             "sections": {
               "architecture-deep-dives": {
                 "items": {
-                  "intro": "## Architektur Deep Dives\n\nErfahren Sie mehr über die Feinheiten der Push Chain-Architektur und ihre Funktionsweise – Modul für Modul.",
-                  "curated-reads": "## Ausgewählte Lektüren 👇"
+                  "intro": "## Architektur Deep Dives\n\nErfahren Sie mehr über die Feinheiten der Push Chain Architektur und wie sie funktioniert – Modul für Modul.",
+                  "curated-reads": "## Ausgewählte Lektüre 👇"
                 }
               },
               "learn-push-chain": {
-                "title": "Entdecke, was Push Chain antreibt!",
+                "title": "Erfahren Sie mehr über die Funktionsweise von Push Chain!",
                 "items": {
                   "interop-spectrum": {
                     "title": "Interoperabilität als Spektrum"

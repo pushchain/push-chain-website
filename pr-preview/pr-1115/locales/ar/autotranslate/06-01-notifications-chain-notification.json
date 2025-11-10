@@ -1,13 +1,15 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "أحداث تنفيذ مشروع G.U.D قيد التشغيل الآن! ابدأ في تثبيت التطبيقات، وحصل على $5000",
-      "button-text": "يذهب إلى عالم شامل وتنفيذ",
-      "button-title": "بليعكشین ايختر الدرحة الموثاقر أين الجزا",
-      "button-aria-label": "مشروع جود إكس (G.U.D) قيد التنفيذ الآن. يمكنك زيارة الموقع هنا",
-      "image-alt": "بلعن الأييشین",
-      "close-button-aria-label": "إغلاق إشعار من زنجر تشين للاختبار",
-      "container-aria-label": "إشعار تبلوكشين للنتورك"
+      "title": "",
+      "description": "هاكاثون مشروع G.U.D. مُباشر! انشر تطبيقاتك، واربح 5000 دولار",
+      "button-text": "انتقل إلى Universal وانشر",
+      "button-title": "Project G.U.D deployathon is LIVE",
+      "button-aria-label": "هاثون نشر مشروع G.U.D. مباشر! يمكنك التحقق منه هنا",
+      "image-alt": "Push Chain Testnet Donut - بلوكشين يونيفرسال",
+      "close-button-title": "إغلاق إشعار testnet",
+      "close-button-aria-label": "إغلاق إشعار اختبار شبكة Push Chain",
+      "container-aria-label": "إشعار اختبار شبكة بلوكشين"
     }
   }
 }

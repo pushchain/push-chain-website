@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[90024],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[54322],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -465,62 +465,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pune@3x-8afdca358191f5128dd3e84660a76810.webp");
-
-/***/ }),
-
-/***/ 31730:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ tokenomics)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBTokenomicsList.js
-const KBTokenomicsList={title:'pages.knowledge.tokenomics.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.vision'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.innovation'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.fit'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-utility'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.deflationary-design'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.migration-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.airdrop-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-distribution'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.get-involved'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/tokenomicsComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const TokenomicsComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.tokenomics.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTokenomicsList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const tokenomicsComp = (TokenomicsComp);
-;// ./src/pages/knowledge/tokenomics.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function TokenomicsPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.tokenomics.seo.title'),description:t('pages.knowledge.tokenomics.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/tokenomics"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.tokenomics.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.tokenomics.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.tokenomics.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.tokenomics.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(tokenomicsComp,{})})]});}/* harmony default export */ const tokenomics = (TokenomicsPage);
 
 /***/ }),
 
@@ -2392,17 +2336,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/true@3x-c93eba88ac846df3737ef7105df4574e.webp");
-
-/***/ }),
-
-/***/ 121205:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbtokenomicspreview-8eeafd37aa2f145eb670a6f807c450e6.png");
 
 /***/ }),
 
@@ -6122,7 +6055,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-ccfd211be682c930e5de06491c42356e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-0150c28d0cfa52814bada47073ae6bb0.webp");
 
 /***/ }),
 
@@ -8702,7 +8635,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-d33d0ec5feb42f5fea2e83d71ba4f2f1.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-dd80475621dbe74e137d45bcfbfa695e.webp");
 
 /***/ }),
 
@@ -12633,6 +12566,7 @@ var map = {
 	"./static/assets/website/chain/knowledge/evolution-of-push-chain.webp": 512300,
 	"./static/assets/website/chain/knowledge/evolution-of-push.webp": 252296,
 	"./static/assets/website/chain/knowledge/faq/appusecases.webp": 803884,
+	"./static/assets/website/chain/knowledge/faq/devanduserbenefits.webp": 950814,
 	"./static/assets/website/chain/knowledge/faq/normalapps.webp": 716678,
 	"./static/assets/website/chain/knowledge/faq/pcisolatedenv.webp": 169646,
 	"./static/assets/website/chain/knowledge/faq/pcoverview.webp": 483587,
@@ -14840,6 +14774,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 697991:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbfaqpreview-979f2c1007ddcbc0325c9dbc855a2f4b.png");
+
+/***/ }),
+
 /***/ 698265:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15112,7 +15057,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-d49c59d7ee8d2910fd4d28ef1cdc006b.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-032defa439cf5b671069d8ef653e3c44.webp");
 
 /***/ }),
 
@@ -18239,7 +18184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-b76c39b765cd3e847da9764dab125c9f.webp");
 
 /***/ }),
 
@@ -19947,6 +19892,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 950814:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/devanduserbenefits-dd80475621dbe74e137d45bcfbfa695e.webp");
+
+/***/ }),
+
 /***/ 951081:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -20088,6 +20045,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRpoEAABXRUJQVlA4TI4EAAAvPkASEFfCNpIkJ/P6Fx+LmIiRDDV4WsbAtpEkRX2MP5u/9Snu28gYkiRBOQRb5/84tUPYIxiDbCMV4f0lf0/wBJM01XYMAB4EAoHAgf950OPx7xb2MGDCFCPHv2OPGIgBAimwrhxQFpaRqtG2yA4Y0vF6w8qKgSMAQ4phSZEiRRYp9f3p/er9Gq7f8a+f7/1qzhcoCgBYpXEISJ/WASqwKVuoCWWRecc6Ywgwz0ct8v9fBOEVfiCi/xAkSXLiVM8Giz0ZSiN4gtI7y7lpTKevz8/T6cyw5orMLI1XXXX9IIyiH3EcRSREPpg8ziwpWK+aG/ygCe/MYU989dFYDDz/TUVbyvsniUP30RxwvO42twzagDSjH4tHd5twKaFhr8lvv1czaTl4+qJrq44Yl5qtOmsf2pbLDvPe2ob6L5cf5r+1zMcYnCfNqveOU55Z8xbysULVZbUNsNHgZKoo05CPR1ItJocR4chaOnxMdi8WGpX/HsxgVKhuoJEx1+Ou6BZIxiSs2I3JumLM1Z+rihEXbH2qcdho+7+zSQVYj1QRtFPNAqNVBNMKE4g1zrDrFSGO7IsxhEvbtnO9AQCh1I0752LXOT9XyJ/Qd5zaAnfdAEDyJNkhnNtiUqAbHmgP+hy4gRKnnjW4OrrlENAVn9Ce9h52gYMvpd2S1K1V3XudtcIrH5EdpYxxzhPGaByFvgOLU2m3B/7zXoEOThfQtrPj9YYxhACAFYS4uJ2y0u5M8TcDugUAjbuRkwLxsKjxOXXkk+IP/hOKtyvhzJNNDrecOWlD1YgnpPUQCVvvHuVsfRFUFat941DK65/bpBpfdgsgYJzHnhTyop7xz79OHaquP4V/1oaSX6FfzxICM7vi/werSzQWBwDcjmmfH1V2LlYeocLfGOdbvPsK3exjKo2Qu8L36/l0zPP8eDpdizt0fRIzwdVojbPm/a4bbpepSUNouo9IGCCEgjCM4j3r5+oJ6OYagY4EA1xPKPHgV6s00NctEIPurIMdPXQde4gJcvBXbrfmGgYV0bYTmB1vGAJPOCwMA+Q5q01xyTtl/eVRUOEkHz1VTYUrnE7HPC373Twui6BuAUD4xxim/3IPzBGaI6B8K53y5jH+/iWq6jAee3LJ4UfCyb21ObKwreSIzsmmrBAbhLPnnCFJ5Hd3m/AE4bK1OYJIMHU45Rl7tat0/W0Lpi9Bu+os9ivSvvvyK3YJ5YLoudgcXxStTTTKRdc9iK/HvO3UNDueiw1AhIquOk1jsKlMO0xtNO59FCAPAFhnBVwvIPEhabpapM1vR1OUpdqhWUjb+3+d1lbHdmjV6moxVZRq0RUH7fp1RxYTb3VrdzXXhMfASXdzvAndMYr3tM4+3hGhN16yrtsOmo1HsD6qZvnlWtxxnXtxu/TqjeWm2taoMVRN69FS8sngtOO5WzZn1VQ6MtNkNsd8oy96PPg/STM9x5rw+mPAxB7o6sRQemdhaDWDtvzxaCnDMn+ZAHzNsx698VRA9dlYSnnhY77oKtjg4nYVUhQbqE6eZ5JfGs0tYzYVYhjzhdI3Cg==");
+
+/***/ }),
+
+/***/ 961887:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ faq)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBFaqList.js
+const KBFaqList={title:'pages.knowledge.faq.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-does-push-chain-work'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-unique-for-users'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-innovations'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.technical-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-an-l2'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-compatibility'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-non-evm-compatible'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-ethereum-or-solana'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.shared-state-meaning'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-achieve-shared-state'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.transaction-fees'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.true-universal-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.competitors-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-other-universal'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-layerzero'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-axelar'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-chainlink-ccip'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-particle-network'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-agglayer'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-cosmos'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-polkadot'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.new-token'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.early-adopter-incentives'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developer-user-benefits'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.dao-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.governance-changes'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.doubts-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.push-services-future'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.project-distraction'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-focus-shift'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.partnerships-effect'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.support-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.need-help'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-contribute'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/faqComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const FAQComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.faq.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBFaqList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const faqComp = (FAQComp);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+;// ./src/pages/knowledge/faq.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function FAQPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.faq.seo.title'),description:t('pages.knowledge.faq.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/faq"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.faq.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.faq.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.faq.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.faq.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(faqComp,{})})]});}/* harmony default export */ const faq = (FAQPage);
 
 /***/ }),
 

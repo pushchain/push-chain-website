@@ -4,17 +4,42 @@
       "seo": {
         "title": "Tài liệu — Xây dựng Ứng dụng Universal",
         "description": "Tất cả những gì bạn cần để triển khai trên Push Chain: hướng dẫn nhanh, SDK, tài liệu API, ví dụ và thiết lập node.",
-        "og-title": "Tài liệu Push Chain - Bắt đầu nhanh, SDK & API",
-        "og-description": "Xây dựng và chạy ứng dụng trên universal execution layer với các hướng dẫn và ví dụ rõ ràng.",
-        "twitter-title": "Push Chain Docs - Xây dựng ngay",
-        "twitter-description": "Hướng dẫn nhanh, SDK, tham khảo API và ví dụ để triển khai ứng dụng một cách nhanh chóng."
+        "og-title": "Push Chain Docs - Bắt đầu nhanh, SDK & API",
+        "og-description": "Xây dựng và chạy ứng dụng trên universal execution layer với hướng dẫn và ví dụ rõ ràng.",
+        "twitter-title": "Tài liệu Push Chain - Bắt đầu xây dựng ngay",
+        "twitter-description": "Hướng dẫn nhanh, SDK, tài liệu API và ví dụ để triển khai nhanh chóng."
       },
       "header": {
-        "countdown-title": "Tài liệu Testnet Sắp Ra Mắt",
-        "description": "Psst... muốn xem trước Push Chain Testnet - Donut không? Bạn có thể truy cập phiên bản xem trước bí mật bằng cách đăng ký Project G.U.D Deployathon của chúng tôi trên DoraHacks.",
-        "tweet-button": "Project G.U.D Deployathon",
-        "title": "Project G.U.D Deployathon",
-        "ariaLabel": "Project G.U.D Deployathon"
+        "countdown-title": "Ra mắt tài liệu Testnet trong",
+        "description": "Psst... muốn xem trước Testnet Donut không? Hãy nhắn tin cho chúng tôi với #pushchainsecret và chúng tôi sẽ gửi bạn quyền truy cập vào bản dùng thử.",
+        "tweet-button": "Tweet về Push Chain",
+        "title": "Tweet về Push Chain",
+        "ariaLabel": "Chia sẻ về Push Chain"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Push Chain là gì?",
+                  "subtitle": "Push Chain cung cấp một bộ công cụ thống nhất để xây dựng các ứng dụng <transliterate>app> thực sự <transliterate>universal>.",
+                  "ctatitle": "Tìm hiểu thêm"
+                },
+                "builders": {
+                  "title": "Hãy cùng xây dựng!",
+                  "subtitle": "Tất cả những gì bạn cần với Push Chain SDK để tạo ứng dụng đa năng của bạn",
+                  "ctatitle": "Tìm hiểu thêm"
+                },
+                "ui-kit": {
+                  "title": "Bộ công cụ giao diện người dùng",
+                  "subtitle": "Tích hợp bất kỳ ứng dụng React nào trong vòng chưa đến 5 phút.",
+                  "ctatitle": "Tìm hiểu thêm"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

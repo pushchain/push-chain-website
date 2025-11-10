@@ -3,18 +3,18 @@
     "docs": {
       "seo": {
         "title": "文档 — 构建通用应用",
-        "description": "在 Push Chain 上部署所需的一切：快速入门、SDK、API 参考、示例和节点设置。",
-        "og-title": "Push Chain 文档 - 快速入门、SDK 和 API",
-        "og-description": "使用清晰的指南和示例在通用执行层上构建和运行应用程序。",
+        "description": "您在 Push Chain 上启动项目所需的一切：快速入门、SDK、API 参考、示例和节点设置。",
+        "og-title": "区块链文档 - 快速上手、SDK 和 API",
+        "og-description": "使用清晰的指南和示例，在通用执行层构建和运行应用。",
         "twitter-title": "Push Chain 文档 - 立即构建",
-        "twitter-description": "快速入门、SDK、API 参考和示例，快速部署。"
+        "twitter-description": "快速入门、SDK、API 文档和示例，助您快速上线。"
       },
       "header": {
-        "countdown-title": "测试网文档发布倒计时",
-        "description": "嘘...想看看测试网 Donut 的预览吗？用 #pushchainsecret 给我们发消息，我们会给你发送测试版本的访问权限。",
-        "tweet-button": "关于 Push Chain 发推文",
-        "title": "关于 Push Chain 发推文",
-        "ariaLabel": "关于 Push Chain 发推文"
+        "countdown-title": "Testnet 文档即将发布",
+        "description": "嘘... 想提前预览测试网 Donut 吗？在 #pushchainsecret 处留下你的消息，我们将向你发送测试版本的访问权限。",
+        "tweet-button": "在 Twitter 上分享 Push Chain",
+        "title": "在 Push Chain 上发推文",
+        "ariaLabel": "在推特上分享关于 Push Chain"
       },
       "grid-section": {
         "blocks": {
@@ -23,17 +23,17 @@
               "items": {
                 "whatispush": {
                   "title": "什么是 Push Chain？",
-                  "subtitle": "Push Chain 提供了构建真正通用应用程序的统一工具包。",
+                  "subtitle": "区块链 提供了一个统一的工具包来构建真正通用的应用。",
                   "ctatitle": "了解更多"
                 },
                 "builders": {
-                  "title": "让我们构建吧！",
-                  "subtitle": "使用 Push Chain SDK 创建通用应用程序所需的一切",
+                  "title": "让我们一起构建吧！",
+                  "subtitle": "使用 Push Chain SDK 创建您的 universal app 的一切所需",
                   "ctatitle": "了解更多"
                 },
                 "ui-kit": {
-                  "title": "UI 套件",
-                  "subtitle": "在不到 5 分钟的时间内集成任何基于 React 的应用程序。",
+                  "title": "UI 工具包",
+                  "subtitle": "在不到5分钟的时间内集成任何基于React的app。",
                   "ctatitle": "了解更多"
                 }
               }
@@ -44,4 +44,3 @@
     }
   }
 }
-

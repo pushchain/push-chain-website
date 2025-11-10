@@ -3,16 +3,16 @@
     "privacymobile": {
       "seo": {
         "title": "移动隐私政策",
-        "description": "我们如何收集、使用和保护Push Chain移动app中的数据，以及您的选择。",
-        "og-title": "区块链移动端隐私政策 - 应用数据保护",
-        "og-description": "我们移动应用的数据处理方式及您的权利。",
+        "description": "我们如何收集、使用和保护 <1>Push Chain</1> 移动应用中的数据，以及您的选择。",
+        "og-title": "Push Chain 移动隐私政策 - App 数据保护",
+        "og-description": "我们移动应用的数据实践和您的权利。",
         "twitter-title": "移动隐私政策 - Push Chain",
-        "twitter-description": "您在 Push 移动应用中的数据和选择。"
+        "twitter-description": "Push 移动应用中的您的数据和选择。"
       },
       "hero-section": {
         "title": "移动隐私政策",
         "description": "我们如何收集、使用和保护 Push Chain 移动应用中的数据，以及您的选择。",
-        "update-text": "最后更新时间：2020年11月2日"
+        "update-text": "上次更新：2020年11月2日"
       }
     }
   }

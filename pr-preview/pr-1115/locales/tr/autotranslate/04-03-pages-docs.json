@@ -2,19 +2,44 @@
   "pages": {
     "docs": {
       "seo": {
-        "title": "Belgeler — Evrensel Uygulamalar Oluşturun",
-        "description": "Push Chain'de yayınlamak için ihtiyacınız olan her şey: hızlı başlangıçlar, SDK'lar, API referansı, örnekler ve düğüm kurulumu.",
+        "title": "Belgeleme — Evrensel Uygulamalar Oluşturun",
+        "description": "Push Chain üzerinde yayınlamak için ihtiyacınız olan her şey: hızlı başlangıç kılavuzları, SDK'lar, API referansı, örnekler ve node kurulumu.",
         "og-title": "Push Chain Docs - Hızlı Başlangıçlar, SDK'lar ve API",
-        "og-description": "Evrensel yürütme katmanında net rehberler ve örneklerle uygulamalar oluşturun ve çalıştırın.",
+        "og-description": "Evrensel ekseküsyon katmanında uygulamalar oluşturun ve çalıştırın; anlaşılır kılavuzlar ve örneklerle.",
         "twitter-title": "Push Chain Docs - Şimdi Oluştur",
-        "twitter-description": "Hızlı başlangıçlar, SDK'lar, API referansı ve hızlı bir şekilde yayınlamak için örnekler."
+        "twitter-description": "Hızlı başlangıçlar, SDK'lar, API referansı ve hızlı geliştirme için örnekler."
       },
       "header": {
-        "countdown-title": "Testnet Belgeleri Yakında Yayınlanacak",
-        "description": "Sshh... Push Chain Testnet - Donut hakkında gizli bir ön izleme ister misin? DoraHacks'taki Project G.U.D Deployathon'umuza kaydolarak gizli önizleme sürümüne erişebilirsin.",
-        "tweet-button": "Project G.U.D Deployathon",
-        "title": "Project G.U.D Deployathon",
-        "ariaLabel": "Project G.U.D Deployathon"
+        "countdown-title": "Testnet Belgeleri <1>…1> Kısa Sürede Başlıyor",
+        "description": "Psst... Testnet Donut'a gizlice bir göz atmak ister misin? #pushchainsecret ile bize ulaş ve sana bir test sürümü göndereceğiz.",
+        "tweet-button": "Push Chain hakkında Tweet paylaş",
+        "title": "Push Chain hakkında tweet at",
+        "ariaLabel": "Push Chain hakkında tweet at"
+      },
+      "grid-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "whatispush": {
+                  "title": "Push Chain nedir?",
+                  "subtitle": "Push Chain, gerçekten evrensel uygulamalar oluşturmak için birleşik bir araç seti sunar.",
+                  "ctatitle": "Daha Fazla Öğren"
+                },
+                "builders": {
+                  "title": "Haydi inşa edelim!",
+                  "subtitle": "Push Chain SDK ile evrensel uygulamanızı oluşturmak için ihtiyacınız olan her şey",
+                  "ctatitle": "Daha Fazla Öğren"
+                },
+                "ui-kit": {
+                  "title": "UI Kit",
+                  "subtitle": "Herhangi bir React tabanlı uygulamayı 5 dakikadan kısa sürede entegre edin.",
+                  "ctatitle": "Daha Fazla Öğren"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

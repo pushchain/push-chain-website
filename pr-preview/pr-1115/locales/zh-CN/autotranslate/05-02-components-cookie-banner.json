@@ -1,17 +1,17 @@
 {
   "components": {
     "cookie-banner": {
-      "message": "我们使用 cookies 来个性化您的体验。了解更多信息请访问我们的",
+      "message": "我们使用 cookies 来个性化您的体验。 了解更多信息，请访问我们的",
       "privacy-policy-link": "隐私政策",
       "privacy-policy-link-title": "阅读 Push Chain 隐私政策",
       "privacy-policy-link-aria-label": "在新标签页中打开隐私政策",
       "accept-button": "接受",
-      "accept-button-title": "接受 Cookie 以个性化您的体验",
+      "accept-button-title": "接受Cookie以个性化您的体验",
       "accept-button-aria-label": "接受 Cookie 并关闭横幅",
       "reject-button": "选择退出",
       "reject-button-title": "拒绝使用 Cookie 并关闭横幅",
-      "reject-button-aria-label": "拒绝 cookies 并关闭横幅",
-      "banner-aria-label": "Cookie 饼干同意横幅",
+      "reject-button-aria-label": "拒绝 cookie 并关闭横幅",
+      "banner-aria-label": "Cookie consent banner",
       "banner-role": "Cookie 偏好设置通知"
     }
   }

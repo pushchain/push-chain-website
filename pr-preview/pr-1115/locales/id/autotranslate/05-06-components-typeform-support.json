@@ -11,8 +11,8 @@
           "description": "Laporan bug, SDK/API, smart contract, bantuan integrasi"
         },
         "network": {
-          "label": "🌐 Jaringan & testnet",
-          "description": "Eksplorer/Push Scan, RPC, Keran, Donut testnet masalah"
+          "label": "🌐 Jaringan & Testnet",
+          "description": "Eksplorer/Push Scan, RPC, Keran, masalah Donut testnet"
         },
         "wallet": {
           "label": "👛 Dompet Universal",
@@ -24,7 +24,7 @@
         },
         "security": {
           "label": "🛡️ Keamanan",
-          "description": "Laporan kerentanan, pengungkapan bertanggung jawab (security@push.org)"
+          "description": "Laporan kerentanan, pengungkapan yang bertanggung jawab (security@push.org)"
         },
         "general": {
           "label": "💬 Pertanyaan Umum",
@@ -32,10 +32,10 @@
         },
         "partnerships": {
           "label": "🤝 Kemitraan & Integrasi",
-          "description": "Pengembangan bisnis, integrasi ekosistem (dompet, infrastruktur, bursa, protokol)"
+          "description": "Pengembangan Bisnis, integrasi ekosistem (dompet, infrastruktur, bursa, protokol)"
         },
         "grants": {
-          "label": "💰 Hibah & Program Ekosistem",
+          "label": "💰 Grants & Program Ekosistem",
           "description": "BRB, Bootcamp, hibah, pertanyaan pendanaan"
         },
         "media": {
@@ -43,8 +43,8 @@
           "description": "Wawancara, pernyataan, aset, pengecekan fakta"
         },
         "events": {
-          "label": "🎤 Bicara & Acara",
-          "description": "Pembicaraan, lokakarya, hackathon, sponsor"
+          "label": "🎤 Pembicaraan & Acara",
+          "description": "Acara, lokakarya, hackathon, sponsorship"
         },
         "careers": {
           "label": "👩‍💻 Karier",
@@ -52,7 +52,7 @@
         },
         "validators": {
           "label": "🧡 Validator / Operator Node",
-          "description": "Minat operator, penyedia RPC, mitra infra"
+          "description": "Minat operator, penyedia RPC, mitra infrastruktur"
         },
         "legal": {
           "label": "⚖️ Legal & Kepatuhan",
@@ -66,7 +66,7 @@
             "subtitle": "Pilih kategori yang paling sesuai dengan pertanyaan Anda"
           },
           "contact": {
-            "title": "Mari berkenalan",
+            "title": "Mari Kenalan",
             "subtitle": "Kami akan menggunakan informasi ini untuk menghubungi Anda kembali",
             "name-label": "Nama Anda",
             "name-placeholder": "Masukkan nama lengkap Anda",
@@ -75,16 +75,16 @@
             "email-placeholder": "Masukkan alamat email Anda"
           },
           "details": {
-            "title": "Ceritakan lebih lanjut",
+            "title": "Ceritakan lebih banyak",
             "subtitle": "Berikan detail mengenai pertanyaan Anda",
             "subject-label": "Subjek",
             "subject-placeholder": "Ringkasan singkat masalah Anda",
             "message-label": "Pesan",
-            "message-placeholder": "Jelaskan masalah Anda secara detail. Sertakan pesan kesalahan apa pun, langkah-langkah untuk mereproduksinya, atau informasi yang relevan."
+            "message-placeholder": "Jelaskan masalah Anda secara detail. Sertakan pesan kesalahan, langkah-langkah untuk mereproduksi, atau informasi yang relevan."
           },
           "submit": {
             "title": "Tinjau dan Kirim",
-            "subtitle": "Mohon periksa kembali informasi Anda sebelum mengirim",
+            "subtitle": "Mohon tinjau kembali informasi Anda sebelum mengirim",
             "placeholder": "Ceritakan lebih banyak tentang bantuan yang Anda butuhkan..."
           }
         },
@@ -95,10 +95,10 @@
           "submitting": "Memproses..."
         },
         "validation": {
-          "name-required": "Nama dibutuhkan",
-          "name-min-length": "Nama harus memiliki setidaknya 2 karakter",
+          "name-required": "Nama diperlukan",
+          "name-min-length": "Nama harus setidaknya 2 karakter",
           "email-required": "Email diperlukan",
-          "email-invalid": "Masukkan alamat email yang valid",
+          "email-invalid": "Mohon masukkan alamat email yang valid",
           "subject-required": "Subjek wajib diisi",
           "message-required": "Pesan diperlukan",
           "category-required": "Silakan pilih kategori",
@@ -106,12 +106,12 @@
         },
         "success": {
           "title": "Tiket Berhasil Dikirim!",
-          "message": "Terima kasih telah menghubungi kami. Kami telah menerima tiket dukungan Anda dan akan segera menghubungi Anda kembali.",
+          "message": "Terima kasih sudah menghubungi kami. Kami sudah menerima tiket dukungan Anda dan akan segera menghubungi Anda kembali.",
           "button": "Kirim Tiket Lain"
         },
         "error": {
           "title": "Pengiriman Gagal",
-          "message": "Terjadi kesalahan saat mengirimkan tiket Anda. Silakan coba lagi atau hubungi kami langsung.",
+          "message": "Terjadi kesalahan saat mengirimkan tiket Anda. Silakan coba lagi atau hubungi kami secara langsung.",
           "button": "Coba Lagi"
         }
       }

@@ -1,7 +1,7 @@
 {
   "components": {
     "cookie-banner": {
-      "message": "Deneyimini kişiselleştirmek için çerezleri kullanıyoruz. Daha fazla bilgiyi",
+      "message": "Kişiselleştirilmiş bir deneyim için çerezleri kullanıyoruz. Daha fazla bilgiyi",
       "privacy-policy-link": "Gizlilik Politikası",
       "privacy-policy-link-title": "Push Chain gizlilik politikasını oku",
       "privacy-policy-link-aria-label": "Yeni sekmede gizlilik politikasını aç",
@@ -10,9 +10,9 @@
       "accept-button-aria-label": "Çerezleri kabul et ve banner'ı kapat",
       "reject-button": "Reddet",
       "reject-button-title": "Çerezleri reddet ve banner'ı kapat",
-      "reject-button-aria-label": "Çerezleri reddet ve banner'ı kapat",
+      "reject-button-aria-label": "Çerezleri Reddet ve Banner'ı Kapat",
       "banner-aria-label": "Çerez onayı banner'ı",
-      "banner-role": "Çerez tercihleriniz bildirimi"
+      "banner-role": "Çerez tercihleriniz hakkında bildirim"
     }
   }
 }

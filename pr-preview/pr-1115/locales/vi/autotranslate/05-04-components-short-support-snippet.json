@@ -1,52 +1,52 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Các câu hỏi Hỗ trợ về Push Chain - Blockchain Universal",
-      "title": "Hỗ trợ\nBộ phận hỗ trợ khách hàng",
+      "section-aria-label": "Các câu hỏi Hỗ trợ về Push Chain - universal blockchain",
+      "title": "Hỗ trợ\nBộ phận hỗ trợ",
       "title-aria-label": "Các câu hỏi thường gặp và giải đáp về Push Chain",
       "discord-link-text": "Hỏi chúng tôi trên Discord",
       "discord-link-title": "Tham gia cộng đồng Discord của Push Chain để được hỗ trợ và giải đáp thắc mắc",
       "discord-link-aria-label": "Mở cộng đồng Discord trong tab mới",
       "explore-more-text": "Xem thêm Câu hỏi thường gặp",
-      "explore-more-title": "Xem tài liệu FAQ toàn diện về Push Chain và hướng dẫn dành cho nhà phát triển",
-      "explore-more-aria-label": "Truy cập trang Câu hỏi thường gặp đầy đủ của Push Chain",
-      "accordion-aria-label": "Danh sách câu hỏi hỗ trợ Push Chain",
+      "explore-more-title": "Xem tài liệu FAQ toàn diện và hướng dẫn dành cho nhà phát triển của Push Chain",
+      "explore-more-aria-label": "Truy cập trang FAQ đầy đủ của Push Chain",
+      "accordion-aria-label": "Danh sách các câu hỏi thường gặp về Push Chain",
       "answer-aria-label": "Trả lời câu hỏi - ",
       "qnas": {
         "qna1": {
           "question": "Tôi không thể kết nối ví của mình. Tôi nên thử gì?",
-          "answer": "<1><2>Kiểm tra nhanh:</2> làm mới trang, mở khóa ví của bạn và tắt các trình chặn quảng cáo/script mạnh mẽ cho push.org.</1><1><2>Không cần chuyển mạng:</2> ở lại chuỗi chính của bạn; Push xử lý định tuyến phía sau hậu trường.</1><1><2>Đặt lại quyền của trang web:</2> trong ví của bạn, xóa kết nối của trang web và kết nối lại.</1><1>Vẫn gặp sự cố? Hỏi trên <3>Discord</3> hoặc mở một <4>Phiếu hỗ trợ</4>.</1>",
-          "discord-url-title": "Tham gia Discord của Push Chain để được hỗ trợ trực tiếp.",
+          "answer": "<1><2>Kiểm tra nhanh:</2> làm mới trang, mở khóa ví của bạn và tắt các trình chặn quảng cáo/script quá mức cho push.org.</1><1><2>Không cần chuyển mạng:</2> bạn vẫn có thể ở trên chuỗi chính của mình; Push xử lý định tuyến tự động.</1><1><2>Đặt lại quyền truy cập trang web:</2> trong ví của bạn, hãy xóa kết nối của trang web và kết nối lại.</1><1>Vẫn gặp sự cố? Hãy hỏi trên <3>Discord</3> hoặc mở <4>Ticket hỗ trợ</4>.</1>",
+          "discord-url-title": "Tham gia Discord của Push Chain để được hỗ trợ nhanh chóng.",
           "support-url-title": "Mở yêu cầu hỗ trợ."
         },
         "qna2": {
-          "question": "Giao dịch của tôi đang chờ xử lý hoặc thất bại — tôi nên làm gì bây giờ?",
-          "answer": "<1><2>Kiểm tra trạng thái:</2> tìm giao dịch của bạn trên <3>Push Scan</3> bằng hash từ ví của bạn.</1><1><2>Đang chờ xử lý:</2> thường sẽ xác nhận sớm; tránh gửi lại nhiều lần.</1><1><2>Thất bại:</2> không có tiền bị trừ. Xem lại lỗi và thử lại.</1><1>Các sự cố đang diễn ra được đăng trên <4>Status</4>.</1>",
+          "question": "Giao dịch của tôi đang chờ xử lý hoặc thất bại — tôi phải làm gì bây giờ?",
+          "answer": "<1><2>Kiểm tra trạng thái:</2> tra cứu giao dịch của bạn trên <3>Push Scan</3> bằng mã hash từ ví của bạn.</1><1><2>Đang chờ xử lý:</2> thường sẽ được xác nhận sớm; tránh gửi lại nhiều lần.</1><1><2>Thất bại:</2> không có tiền bị trừ. Xem lại lỗi và thử lại.</1><1>Các sự cố đang diễn ra được đăng trên <4>Status</4>.</1>",
           "scan-url-title": "Mở Push Scan (trình khám phá).",
           "status-url-title": "Xem trạng thái mạng và các sự cố."
         },
         "qna3": {
-          "question": "Làm cách nào để lấy token testnet (Donut)?",
-          "answer": "<1>Sử dụng <3>Faucet</3> để yêu cầu các <token> thử nghiệm.</1><1><2>Lưu ý:</2> có thể áp dụng giới hạn tỷ lệ; một số faucet yêu cầu xác minh đơn giản. Nếu faucet không thành công, hãy liên hệ với chúng tôi trên <4>Discord</4>.</1>",
+          "question": "Làm thế nào để nhận token testnet (Donut)?",
+          "answer": "<1>Sử dụng <3>Faucet</3> để yêu cầu test <token>.</1><1><2>Lưu ý:</2> có thể áp dụng giới hạn tốc độ; một số faucet yêu cầu xác minh đơn giản. Nếu faucet không hoạt động, hãy báo cho chúng tôi trên <4>Discord</4>.</1>",
           "faucet-url-title": "Mở vòi Push Chain.",
           "discord-url-title": "Tham gia cộng đồng Push Chain trên Discord."
         },
         "qna4": {
-          "question": "Làm thế nào để báo cáo lỗi hoặc lỗ hổng?",
-          "answer": "<1><2>Lỗi ứng dụng:</2> gửi <3>Vé hỗ trợ</3> hoặc đăng bài trong <4>Discord</4> với các bước tái hiện.</1><1><2>Vấn đề bảo mật:</2> email <5>security@push.org</5>. Vui lòng tránh công khai cho đến khi chúng tôi xác nhận bản sửa lỗi.</1>",
+          "question": "Làm thế nào để báo cáo lỗi hoặc lỗ hổng bảo mật?",
+          "answer": "<1><2>Lỗi ứng dụng:</2> gửi <3>Vé hỗ trợ</3> hoặc đăng bài trên <4>Discord</4> với các bước tái hiện lỗi.</1><1><2>Vấn đề bảo mật:</2> gửi email đến <5>security@push.org</5>. Vui lòng tránh tiết lộ công khai cho đến khi chúng tôi xác nhận bản sửa lỗi.</1>",
           "support-url-title": "Mở yêu cầu hỗ trợ.",
           "discord-url-title": "Tham gia Discord."
         },
         "qna5": {
           "question": "Tài liệu và hướng dẫn nhanh ở đâu?",
-          "answer": "<1>Bắt đầu với <3>Tài liệu</3> để bắt đầu nhanh và APIs, và <4>Cơ sở kiến thức</4> để tìm hiểu các khái niệm, đi sâu vào chi tiết và các câu hỏi thường gặp.</1>",
+          "answer": "<1>Bắt đầu với <3>Tài liệu</3> để có hướng dẫn nhanh và APIs, và <4>Cơ sở kiến thức</4> để tìm hiểu các khái niệm, đi sâu và các câu hỏi thường gặp.</1>",
           "docs-url-title": "Mở tài liệu dành cho nhà phát triển.",
-          "kb-url-title": "Mở Cơ sở Kiến thức."
+          "kb-url-title": "Mở Cơ sở Tri thức."
         },
         "qna6": {
           "question": "Tôi có thể yêu cầu hỗ trợ cho một blockchain mới, tính năng hoặc tích hợp không?",
-          "answer": "<1>Có. Hãy cho chúng tôi biết bạn cần chuỗi/công cụ nào qua <3>Liên hệ</3> hoặc mở một vấn đề trên <4>GitHub</4>. Chúng tôi liên tục mở rộng phạm vi hỗ trợ.</1>",
-          "contact-url-title": "Liên hệ đội ngũ Push Chain.",
+          "answer": "<1>Có. Hãy cho chúng tôi biết bạn cần chain/tooling nào qua <3>Liên hệ</3> hoặc mở issue trên <4>GitHub</4>. Chúng tôi đang mở rộng phạm vi liên tục.</1>",
+          "contact-url-title": "Liên hệ với đội ngũ Push Chain.",
           "github-url-title": "Mở tổ chức GitHub."
         }
       }

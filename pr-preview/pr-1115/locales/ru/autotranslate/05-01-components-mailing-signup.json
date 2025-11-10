@@ -1,8 +1,8 @@
 {
   "components": {
     "mailing-signup": {
-      "title": "Никогда не пропустите обновления",
-      "text": "Подпишитесь, чтобы быть в курсе новостей экосистемы, розыгрышей и многого другого.",
+      "title": "Никогда не пропускайте обновления",
+      "text": "Подпишитесь и будьте в курсе новостей, розыгрышей и других событий экосистемы.",
       "email-input": "Ваш Email",
       "email-input-placeholder": "Введите ваш адрес электронной почты",
       "email-input-title": "Подпишитесь на рассылку Push Chain, чтобы быть в курсе новостей",
@@ -10,11 +10,11 @@
       "submit-button": "Подписаться",
       "submit-button-title": "Подписаться на рассылку Push Chain",
       "submit-button-aria-label": "Подписаться на рассылку",
-      "loading-submit-button": "Подождите, пожалуйста...",
+      "loading-submit-button": "Пожалуйста, подождите...",
       "arrow-button-aria-label": "Подписаться на рассылку",
       "arrow-button-title": "Подписаться на обновления Push Chain",
       "form-aria-label": "Форма подписки на рассылку",
-      "success-message-aria-label": "Подписка успешна",
+      "success-message-aria-label": "Подписка успешно оформлена",
       "error-message-aria-label": "Ошибка подписки"
     }
   }

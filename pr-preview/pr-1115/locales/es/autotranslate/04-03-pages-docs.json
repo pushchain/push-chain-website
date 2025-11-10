@@ -1,38 +1,17 @@
 {
   "pages": {
     "docs": {
-      "seo": {
-        "title": "Documentación — Construye Aplicaciones Universales",
-        "og-title": "Push Chain Docs - Quickstarts, SDKs y API",
-        "og-description": "Crea y ejecuta aplicaciones en el capa de ejecución universal con guías claras y ejemplos.",
-        "twitter-title": "Push Chain Docs - Construye ahora",
-        "twitter-description": "Rápidos enlaces de inicio, SDKs, referencias API y ejemplos para empezar a funcionar rápido."
-      },
-      "header": {
-        "countdown-title": "Lanzamiento de Documentación de Testnet en",
-        "description": "Psst... ¿Quieres una visión previa de la red de pruebas Donut? ¡Envíanos un mensaje con #pushchainsecret y te enviaremos acceso a una versión de prueba!",
-        "title": "Hable sobre Push Chain en Twitter",
-        "ariaLabel": "Tuitea sobre Chain Push"
-      },
       "grid-section": {
         "blocks": {
           "sections": {
             "resources": {
               "items": {
                 "whatispush": {
-                  "title": "¿Qué es Push Blockchain?",
-                  "subtitle": "Push Chain proporciona un conjunto de herramientas unificado para crear aplicaciones verdaderamente universales.",
                   "ctatitle": "Aprende más"
                 },
                 "builders": {
-                  "title": "¡Vamos a construir!",
-                  "subtitle": "Todo lo que necesitas con Push Chain SDK para crear tu aplicación universal",
-                  "ctatitle": "Aprende Más"
-                },
-                "ui-kit": {
-                  "title": "Kit de UI",
-                  "subtitle": "Integra cualquier app basada en React en menos de 5 minutos.",
-                  "ctatitle": "Aprende más"
+                  "title": "¡Manos a la obra!",
+                  "subtitle": "Todo lo que necesitas con Push Chain SDK para crear tu app universal"
                 }
               }
             }

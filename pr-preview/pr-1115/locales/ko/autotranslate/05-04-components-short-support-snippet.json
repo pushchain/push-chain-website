@@ -1,51 +1,51 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Push Chain 지원 질문 - 유니버설 블록체인",
-      "title": "지원\n고객 센터",
+      "section-aria-label": "Push Chain - 유니버설 블록체인 관련 지원 질문",
+      "title": "지원\n헬프 데스크",
       "title-aria-label": "Push Chain에 대한 일반적인 지원 질문 및 답변",
       "discord-link-text": "Discord에서 문의하기",
       "discord-link-title": "Push Chain Discord 커뮤니티에 참여하여 지원 및 질문을 받으세요",
       "discord-link-aria-label": "새 탭에서 Discord 커뮤니티 열기",
       "explore-more-text": "자세히 알아보기",
-      "explore-more-title": "Push Chain의 포괄적인 FAQ 문서 및 개발자 가이드를 확인하세요",
+      "explore-more-title": "Push Chain에 대한 자세한 FAQ 문서 및 개발자 가이드 보기",
       "explore-more-aria-label": "Push Chain FAQ 전체 페이지로 이동",
       "accordion-aria-label": "Push Chain 지원 질문 목록",
       "answer-aria-label": "질문에 대한 답변 - ",
       "qnas": {
         "qna1": {
-          "question": "지갑 연결이 안 돼요. 무엇을 시도해 봐야 할까요?",
-          "answer": "<1><2>빠른 확인:</2> 페이지 새로 고침, 지갑 잠금 해제, push.org에 대한 과도한 광고/스크립트 차단기 비활성화.</1><1><2>네트워크 전환 불필요:</2> 홈 체인에 머무세요. Push는 백그라운드에서 라우팅을 처리합니다.</1><1><2>사이트 권한 재설정:</2> 지갑에서 사이트 연결을 제거하고 다시 연결하세요.</1><1>여전히 문제가 있으신가요? <3>Discord</3>에서 문의하거나 <4>지원 티켓</4>을 열어주세요.</1>",
-          "discord-url-title": "Push Chain Discord에 가입하여 실시간 도움을 받으세요.",
-          "support-url-title": "지원 티켓을 여세요."
+          "question": "지갑 연결이 안 돼요. 어떻게 해야 할까요?",
+          "answer": "<1><2>빠른 확인:</2> 페이지 새로 고침, 지갑 잠금 해제, push.org에 대한 과도한 광고/스크립트 차단기 비활성화.</1><1><2>네트워크 전환 불필요:</2> 홈 체인에 머물러 있으세요. Push는 백그라운드에서 라우팅을 처리합니다.</1><1><2>사이트 권한 재설정:</2> 지갑에서 사이트 연결을 제거하고 다시 연결하십시오.</1><1>여전히 문제가 있나요? <3>Discord</3>에서 문의하거나 <4>지원 티켓</4>을 제출하십시오.</1>",
+          "discord-url-title": "실시간 도움을 받으려면 Push Chain Discord에 참여하세요.",
+          "support-url-title": "지원 티켓을 열어보세요."
         },
         "qna2": {
-          "question": "내 트랜잭션이 보류 중이거나 실패했습니다 — 어떻게 해야 하나요?",
-          "answer": "<1><2>상태 확인:</2> <3>Push Scan</3>을 사용하여 지갑의 해시로 tx를 조회합니다.</1><1><2>보류 중:</2> 보통 곧 확인됩니다. 반복적으로 다시 보내는 것을 피하십시오.</1><1><2>실패:</2> 자금이 차감되지 않습니다. 오류를 검토하고 다시 시도하십시오.</1><1><4>Status</4>에서 진행 중인 사고가 게시됩니다.</1>",
-          "scan-url-title": "Push Scan (탐색기) 열기.",
-          "status-url-title": "네트워크 상태 및 사고를 확인하세요."
+          "question": "내 트랜잭션이 보류 중이거나 실패했어요 – 어떻게 해야 하나요?",
+          "answer": "<1><2>상태 확인:</2> 지갑의 해시를 사용하여 <3>Push Scan</3>에서 tx를 확인하세요.</1><1><2>대기 중:</2> 보통 곧 확인되므로 반복적으로 다시 보내지 마세요.</1><1><2>실패:</2> 자금이 차감되지 않았습니다. 오류를 검토하고 다시 시도하세요.</1><1>진행 중인 문제는 <4>Status</4>에 게시됩니다.</1>",
+          "scan-url-title": "Push Scan (블록체인 탐색기) 열기.",
+          "status-url-title": "네트워크 상태 및 문제 확인하기."
         },
         "qna3": {
-          "question": "Donut testnet 토큰은 어떻게 얻을 수 있나요?",
-          "answer": "<1>테스트 <token>을 요청하려면 <3>Faucet</3>를 사용하세요.</1><1><2>참고:</2> 속도 제한이 적용될 수 있습니다. 일부 퍼싯은 간단한 확인이 필요합니다. 퍼싯이 실패하면 <4>Discord</4>에서 저희에게 문의하세요.</1>",
-          "faucet-url-title": "Push Chain 탭솔을 여세요.",
+          "question": "Donut 테스트넷 토큰은 어떻게 얻을 수 있나요?",
+          "answer": "<1>테스트 <token>을(를) 요청하려면 <3>Faucet</3>을(를) 사용하세요.</1><1><2>참고:</2> 속도 제한이 적용될 수 있으며, 일부 faucet은 간단한 인증을 요구합니다. faucet이 실패하면 <4>Discord</4>에서 저희에게 문의해주세요.</1>",
+          "faucet-url-title": "Push Chain 탭에서 탭 열기.",
           "discord-url-title": "Push Chain Discord에 참여하세요."
         },
         "qna4": {
-          "question": "버그나 취약점을 어떻게 신고하나요?",
-          "answer": "<1><2>앱 버그:</2> <3>지원 티켓</3>을 제출하거나 재현 단계를 포함하여 <4>Discord</4>에 게시하세요.</1><1><2>보안 문제:</2> <5>security@push.org</5>로 이메일을 보내주세요. 수정 사항을 확인하기 전까지 공개적인 게시를 피해주세요.</1>",
-          "support-url-title": "지원 티켓을 엽니다.",
+          "question": "버그나 보안 취약점을 어떻게 신고하나요?",
+          "answer": "<1><2>앱 버그:</2> <3>지원 티켓</3>을 제출하거나 재현 단계와 함께 <4>Discord</4>에 게시하세요.</1><1><2>보안 문제:</2> <5>security@push.org</5>로 이메일을 보내주세요. 수정 사항을 확인하기 전까지 공개적인 게시를 피해주세요.</1>",
+          "support-url-title": "지원 티켓을 여세요.",
           "discord-url-title": "Discord에 참여하세요."
         },
         "qna5": {
-          "question": "문서와 빠른 시작 가이드는 어디에서 찾을 수 있나요?",
-          "answer": "<1>빠른 시작 및 API는 <3>Docs</3>부터 시작하고, 개념, 심층 분석 및 FAQ는 <4>Knowledge Base</4>를 참고하세요.</1>",
-          "docs-url-title": "개발자 문서를 열어보세요.",
+          "question": "문서와 빠른 시작 가이드는 어디에 있나요?",
+          "answer": "<1>빠른 시작과 API는 <3>문서</3>에서, 그리고 개념, 심층 분석 및 FAQ는 <4>지식 기반</4>에서 시작하세요.</1>",
+          "docs-url-title": "개발자 문서를 엽니다.",
           "kb-url-title": "지식 기반 열기."
         },
         "qna6": {
           "question": "새로운 체인, 기능 또는 통합에 대한 지원을 요청할 수 있나요?",
-          "answer": "<1>네, 어떤 체인/툴링이 필요한지 <3>문의하기</3> 또는 <4>GitHub</4>에 이슈를 열어 알려주세요. 지속적으로 지원 범위를 확장하고 있습니다.</1>",
+          "answer": "<1>네, <3>Contact</3>를 통해 필요하신 체인/툴링을 알려주시거나 <4>GitHub</4>에 이슈를 열어주세요. 지속적으로 지원 범위를 확장하고 있습니다.</1>",
           "contact-url-title": "Push Chain 팀에 문의하세요.",
           "github-url-title": "GitHub 조직 열기"
         }

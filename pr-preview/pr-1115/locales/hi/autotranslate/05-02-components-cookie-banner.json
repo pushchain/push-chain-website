@@ -1,18 +1,18 @@
 {
   "components": {
     "cookie-banner": {
-      "message": "हम आपकी अनुभव को निजीकृत करने के लिए कुकीज़ का उपयोग करते हैं। हमारी में और जानें",
+      "message": "हम आपकी अनुभव को व्यक्तिगत बनाने के लिए कुकीज़ का उपयोग करते हैं। हमारी <1>में और जानें",
       "privacy-policy-link": "गोपनीयता नीति",
       "privacy-policy-link-title": "Push Chain गोपनीयता नीति पढ़ें",
       "privacy-policy-link-aria-label": "नई टैब में गोपनीयता नीति खोलें",
       "accept-button": "स्वीकार करें",
       "accept-button-title": "अपने अनुभव को निजीकृत करने के लिए कुकीज़ स्वीकार करें",
       "accept-button-aria-label": "कुकीज़ स्वीकार करें और बैनर बंद करें",
-      "reject-button": "मना करें",
+      "reject-button": "नहीं चाहिए",
       "reject-button-title": "कुकीज़ से ऑप्ट आउट करें और बैनर बंद करें",
       "reject-button-aria-label": "कुकीज़ अस्वीकार करें और बैनर बंद करें",
       "banner-aria-label": "कुकी सहमति बैनर",
-      "banner-role": "कुकी प्राथमिकता सूचना"
+      "banner-role": "कुकी प्राथमिकताएं सूचना"
     }
   }
 }

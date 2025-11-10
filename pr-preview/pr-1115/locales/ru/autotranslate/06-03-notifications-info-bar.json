@@ -1,11 +1,11 @@
 {
   "notifications": {
     "info-bar": {
-      "title": "Запуск на Push Testnet уже доступен — откройте возможности для разработчиков и первых пользователей.",
+      "title": "Запуск на Donut Testnet уже доступен — разблокируйте награды для разработчиков и первых пользователей.",
       "learn-more-text": "Подробнее",
       "learn-more-title": "Узнать больше об этом объявлении",
       "dismiss-button-title": "Закрыть объявление",
-      "dismiss-button-aria-label": "Закрыть строку объявлений",
+      "dismiss-button-aria-label": "Закрыть панель объявлений",
       "container-aria-label": "Объявление на сайте",
       "star-icon-alt": "Иконка звездочки для объявления"
     }

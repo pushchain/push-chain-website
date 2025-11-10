@@ -1,12 +1,12 @@
 {
   "notifications": {
     "alert": {
-      "message": "Push Metamask Snap đã hoạt động!",
+      "message": "Push Metamask Snap đã khả dụng,",
       "know-more-text": "Bắt đầu ngay!",
       "know-more-title": "Bắt đầu với Push Metamask Snap",
       "close-button-title": "Đóng cảnh báo",
-      "close-button-aria-label": "Đóng thông báo Push Metamask Snap",
-      "container-aria-label": "Push Thông báo Snap Metamask"
+      "close-button-aria-label": "Đóng cảnh báo Push Metamask Snap",
+      "container-aria-label": "Thông báo Push Metamask Snap"
     }
   }
 }

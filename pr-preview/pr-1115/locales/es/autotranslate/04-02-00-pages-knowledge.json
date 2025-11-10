@@ -2,76 +2,9 @@
   "pages": {
     "knowledge": {
       "seo": {
-        "title": "Base de Conocimiento — Guías, Preguntas Frecuentes y Tutoriales",
-        "description": "Comienza aquí para conocer conceptos, preguntas frecuentes, guías y recursos del ecosistema. Guías claras y no técnicas para usar Push Chain.",
-        "og-title": "Base de Conocimiento de Push Chain - Guías y Preguntas Frecuentes",
+        "og-title": "Push Chain Knowledge Base - Guides & FAQs",
         "og-description": "Conceptos, guías paso a paso y respuestas a preguntas frecuentes sobre Push Chain.",
-        "twitter-title": "Base de Conocimiento - Guías y Preguntas Frecuentes",
-        "twitter-description": "Guías rápidas, preguntas frecuentes y tutoriales para Push Chain (sin jerga técnica)."
-      },
-      "hero-section": {
-        "title": "Base de Conocimiento",
-        "description": {
-          "highlighted": "Push Chain es una verdadera blockchain universal diseñada para eliminar la fragmentación entre todas las cadenas.",
-          "developers": "Desarrolladores",
-          "developers-text": "Despliega una vez y sé compatible instantáneamente con todas las cadenas EVM y no EVM compatibles.",
-          "users": "Usuarios",
-          "users-text": "usa la misma app sin importar de qué cadena provengan."
-        },
-        "email-signup": {
-          "title": {
-            "long": "Recibe notificaciones sobre la testnet de Push Chain",
-            "short": "Push Chain Testnet"
-          },
-          "description": "Sé el primero en saber cuándo se lanza la testnet de Push Chain. Únete a nuestra lista de correo para recibir actualizaciones exclusivas."
-        },
-        "footer": {
-          "description": "Crea experiencias fluidas y fáciles de usar para tu app en cualquier blockchain con Push Chain.",
-          "cta": {
-            "text": "Recibe Notificaciones"
-          }
-        }
-      },
-      "explainer-section": {
-        "blocks": {
-          "sections": {
-            "resources": {
-              "title": "Recursos",
-              "items": {
-                "push101": {
-                  "title": "Básicos de Push Chain",
-                  "subtitle": "Aprende sobre los fundamentos de Push Chain, sus innovaciones y por qué es necesario",
-                  "ctatitle": "Explora más"
-                },
-                "builders": {
-                  "title": "Construye en Push Chain",
-                  "subtitle": "Sumérgete en cómo construir apps universales, qué desbloquea y cómo empezar!",
-                  "ctatitle": "Constructores, ¡a ensamblar!"
-                },
-                "deepdives": {
-                  "title": "Análisis técnicos en profundidad",
-                  "subtitle": "¿Quieres saber cómo funciona Push en detalle? ¿O simplemente sientes curiosidad? ¡En cualquier caso, te damos la bienvenida!",
-                  "ctatitle": "Mira cómo funciona"
-                },
-                "devdocs": {
-                  "title": "Documentación para Desarrolladores",
-                  "subtitle": "¡Vamos directo al grano! Soy una universal chain... y tú eres un desarrollador, ¡hagámoslo oficial!",
-                  "ctatitle": "Construye Ahora"
-                },
-                "tokenomics": {
-                  "title": "Explora la Tokenómica",
-                  "subtitle": "Aprende cómo nuestra tokenomics incentiva y asegura una red sostenible construida para durar",
-                  "ctatitle": "Aprende sobre el diseño de Tokens"
-                },
-                "faq": {
-                  "title": "Preguntas frecuentes",
-                  "subtitle": "El lugar para encontrar respuestas a todas las preguntas comunes que ha hecho la comunidad",
-                  "ctatitle": "Leer más"
-                }
-              }
-            }
-          }
-        }
+        "twitter-title": "Base de Conocimiento - Guías y Preguntas Frecuentes"
       }
     }
   }

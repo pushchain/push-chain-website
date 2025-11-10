@@ -1044,7 +1044,7 @@ function _createMdxContent(props) {
         children: [(0,jsx_runtime.jsx)("img", {
           src: (__webpack_require__(311100)/* ["default"] */ .A),
           srcSet: `${(__webpack_require__(884876)/* ["default"] */ .A)} 2x, ${(__webpack_require__(314199)/* ["default"] */ .A)} 3x`,
-          alt: "Image representation of Javascript SDK of Push Protocol"
+          alt: "Image representation of Javascript SDK of Push Chain"
         }), (0,jsx_runtime.jsx)(SharedStyling/* ModalWrapper */.FQ, {
           children: (0,jsx_runtime.jsxs)("span", {
             children: [(0,jsx_runtime.jsx)(_components.p, {

@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[1700],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -864,59 +864,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 55505:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  A: () => (/* binding */ QnA_QnA)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(944404);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
-var index_esm = __webpack_require__(796710);
-// EXTERNAL MODULE: ./node_modules/react-icons/ai/index.esm.js
-var ai_index_esm = __webpack_require__(154263);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./src/hooks/useSiteBaseUrl.tsx
-var useSiteBaseUrl = __webpack_require__(811494);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/components/Accordion/index.tsx
-/* eslint-disable @docusaurus/no-html-links */// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// External Components
-// Internal Components
-// Internal Configs
-const Accordion=_ref=>{let{items,firstOpen,fontWeight,fontSize}=_ref;const[activeIndex,setActiveIndex]=(0,react.useState)(firstOpen===false?null:0);const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const toggleAccordion=index=>{setActiveIndex(activeIndex===index?null:index);};const baseUrl=(0,useSiteBaseUrl/* useSiteBaseUrl */.p)()||'';return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:items.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)(AccordionSection,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(AccordionParent,{onClick:()=>toggleAccordion(index),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H3,{color:'var(--ifm-color-white)',fontSize:fontSize?fontSize:isMobile?'20px':'1.5rem',fontFamily:'DM Sans, sans-serif',fontWeight:fontWeight||'600',lineHeight:"140%",children:item.title||item.question}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:activeIndex===index?/*#__PURE__*/(0,jsx_runtime.jsx)(ai_index_esm/* AiOutlineMinus */.NIP,{color:'var(--ifm-color-white)',size:22}):/*#__PURE__*/(0,jsx_runtime.jsx)(ai_index_esm/* AiOutlinePlus */.tNe,{color:'var(--ifm-color-white)',size:22})})]}),activeIndex===index&&item.content!==undefined&&/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.H3,{color:'var(--ifm-color-white)',fontSize:isMobile?'16px':'19px',fontFamily:'DM Sans, sans-serif',fontWeight:"400",padding:"0 0 24px 0",children:[item.content,item.link&&/*#__PURE__*/(0,jsx_runtime.jsxs)("a",{color:"var(--ifm-color-white)",fontFamily:'DM Sans, sans-serif',fontSize:"16px",fontWeight:"300",letterSpacing:"normal",target:"_blank",href:item.link,children:[' ',"- Link"]})]})}),activeIndex===index&&item.renderAnswer!==undefined&&item.renderAnswer(baseUrl)]},index))});};const AccordionSection=styled_components_browser_esm["default"].div.withConfig({displayName:"Accordion__AccordionSection",componentId:"sc-fx4kxq-0"})(["border-bottom:1px solid var(--ifm-color-gray-200);h3{white-space:pre-wrap;}"]);const AccordionParent=styled_components_browser_esm["default"].div.withConfig({displayName:"Accordion__AccordionParent",componentId:"sc-fx4kxq-1"})(["padding:24px 0;display:flex;flex-direction:row;flex:1;justify-content:space-between;align-items:center;cursor:pointer;gap:24px;"]);/* harmony default export */ const components_Accordion = (Accordion);
-// EXTERNAL MODULE: ./src/config/ShortFAQsList.tsx
-var ShortFAQsList = __webpack_require__(889013);
-;// ./src/components/QnA/QnA.tsx
-// React + Web3 Essentials
-// External Components
-// Import Assets
-// Internal Components
-// Internal Configs
-const QnA=_ref=>{let{titleKey='components.short-faq-snippet.title',titleAriaLabelKey='components.short-faq-snippet.title-aria-label',discordLinkTitleKey='components.short-faq-snippet.discord-link-title',discordLinkAriaLabelKey='components.short-faq-snippet.discord-link-aria-label',discordLinkTextKey='components.short-faq-snippet.discord-link-text',accordionAriaLabelKey='components.short-faq-snippet.accordion-aria-label',exploreMoreTitleKey='components.short-faq-snippet.explore-more-title',exploreMoreAriaLabelKey='components.short-faq-snippet.explore-more-aria-label',exploreMoreTextKey='components.short-faq-snippet.explore-more-text',discordUrl='https://discord.com/invite/pushchain',exploreMoreUrl='/knowledge/faq',faqsList,getQnAsFunction=ShortFAQsList/* getShortFAQsList */._}=_ref;// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const isLaptop=(0,useMediaQuery/* default */.A)(globals/* device */.jO.laptop);const finalFaqsList=faqsList||getQnAsFunction();return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{flexDirection:isLaptop&&'column',alignItems:"flex-start",justifyContent:"space-between",gap:isLaptop?'24px':'120px',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{flexDirection:isLaptop?'row':'column',alignItems:"flex-start",justifyContent:isLaptop?'space-between':'flex-start',flex:"0 0 auto",gap:"24px",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H2,{color:"var(--ifm-color-white)",fontSize:isMobile?'2.5rem':'3rem',fontFamily:"DM Sans, sans-serif",fontWeight:"600",lineHeight:"120%",whiteSpace:"break-spaces",role:"heading","aria-level":"2","aria-label":t(titleAriaLabelKey),children:t(titleKey)}),/*#__PURE__*/(0,jsx_runtime.jsxs)(QnAPrimaryLink,{href:discordUrl,target:"_blank",title:t(discordLinkTitleKey),"aria-label":t(discordLinkAriaLabelKey),rel:"noopener",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsDiscord,{size:28,"aria-hidden":"true"}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:t(discordLinkTextKey)}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsArrowRight,{size:24,className:"anchorSvgLink","aria-hidden":"true"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{alignItems:"flex-start",justifyContent:"flex-start",flex:"1",margin:isLaptop?'48px 0 0 0':'-20px 0 0 0',children:[/*#__PURE__*/(0,jsx_runtime.jsx)(AccordionGrid,{role:"region","aria-label":t(accordionAriaLabelKey),children:/*#__PURE__*/(0,jsx_runtime.jsx)(components_Accordion,{items:finalFaqsList})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(QnAMoreInfoLink,{href:(0,useBaseUrl/* default */.Ay)(exploreMoreUrl),title:t(exploreMoreTitleKey),"aria-label":t(exploreMoreAriaLabelKey),target:"_self",className:"button",margin:isMobile?'24px auto 0px 0px':'24px 0px 0px auto',hoverBackground:"transparent",hover:"transparent",background:"transparent",filter:"none",color:"var(--ifm-color-pink-400)",borderRadius:"0",padding:"0px 0px",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SpanLink,{children:t(exploreMoreTextKey)}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsArrowRight,{className:"anchorSVGlink","aria-hidden":"true"})]})]})]});};// Styled Components
-const QnAPrimaryLink=(0,styled_components_browser_esm["default"])(SharedStyling.A).withConfig({displayName:"QnA__QnAPrimaryLink",componentId:"sc-5ntub1-0"})(["display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;transition:all 0.2s ease;font-size:16px;background:var(--ifm-color-qna-discord);color:var(--ifm-color-white);font-family:'DM Sans',sans-serif;border:1px solid rgba(255,255,255,0.3);border-radius:12px;&:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(88,101,242,0.3);}p{margin:0;font-weight:500;color:inherit;}"]);const AccordionGrid=styled_components_browser_esm["default"].div.withConfig({displayName:"QnA__AccordionGrid",componentId:"sc-5ntub1-1"})(["width:100%;display:flex;flex-direction:column;gap:16px;"]);const SpanLink=(0,styled_components_browser_esm["default"])(SharedStyling/* Span */.L9).withConfig({displayName:"QnA__SpanLink",componentId:"sc-5ntub1-2"})(["position:relative;text-decoration:none;font-size:1.125rem;font-weight:600;letter-spacing:-0.36px;line-height:142%;&:after{content:'';position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:0;left:0;background-color:var(--ifm-color-pink-400);transform-origin:bottom right;transition:transform 0.25s ease-out;}&:hover:after{transform:scaleX(1);transform-origin:bottom left;}"]);const QnAMoreInfoLink=(0,styled_components_browser_esm["default"])(SharedStyling.A).withConfig({displayName:"QnA__QnAMoreInfoLink",componentId:"sc-5ntub1-3"})(["overflow:inherit;.anchorSVGlink{color:var(--ifm-color-pink-400);top:3px;margin-left:8px;}&:hover{.anchorSVGlink{color:var(--ifm-color-pink-400);}}"]);/* harmony default export */ const QnA_QnA = (QnA);
-
-/***/ }),
-
 /***/ 55647:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -962,6 +909,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-826dad22941d3f43c5701934c795e9f1.webp");
+
+/***/ }),
+
+/***/ 57220:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ deepdives)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBDeepDivesList.js
+const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'},{slug:'what-are-universal-executor-accounts',image:'/static/assets/website/chain/knowledge/what-are-executor-accounts',imageSrcSet:false,title:'What are Universal Executor Accounts (UEAs) and How do they work?',url:'/blog/what-are-universal-executor-accounts',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/deepdivesComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const DeepDivesComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
+;// ./src/pages/knowledge/deepdives.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function DeepDivesPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
 
 /***/ }),
 
@@ -1909,6 +1912,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+
+/***/ }),
+
+/***/ 95518:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
 
 /***/ }),
 
@@ -6108,7 +6122,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-ccfd211be682c930e5de06491c42356e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-0150c28d0cfa52814bada47073ae6bb0.webp");
 
 /***/ }),
 
@@ -6865,44 +6879,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/qidao@3x-530d322093d89f035d63da5537493f51.webp");
-
-/***/ }),
-
-/***/ 385186:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./any-chain@2x.webp": 728013,
-	"./cheap-storage@2x.webp": 540226,
-	"./explore-knowledgebase@2x.webp": 651722,
-	"./infinitely-scalable@2x.webp": 175816,
-	"./instant-finality@2x.webp": 66653,
-	"./knowledge-frame@2x.webp": 878259,
-	"./one-chain@2x.webp": 813355,
-	"./seamless-instant@2x.webp": 212464,
-	"./second-hero-image@2x.webp": 946074,
-	"./supported-chains@2x.webp": 851148
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 385186;
 
 /***/ }),
 
@@ -7722,44 +7698,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 435789:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./any-chain@3x.webp": 670768,
-	"./cheap-storage@3x.webp": 109767,
-	"./explore-knowledgebase@3x.webp": 585167,
-	"./infinitely-scalable@3x.webp": 955557,
-	"./instant-finality@3x.webp": 774976,
-	"./knowledge-frame@3x.webp": 866110,
-	"./one-chain@3x.webp": 498198,
-	"./seamless-instant@3x.webp": 49805,
-	"./second-hero-image@3x.webp": 856671,
-	"./supported-chains@3x.webp": 317721
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 435789;
-
-/***/ }),
-
 /***/ 435939:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8096,103 +8034,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 451355:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ knowledge)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
-var SchemaMarkup = __webpack_require__(172619);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 9 modules
-var styled_components_browser_esm = __webpack_require__(944404);
-// EXTERNAL MODULE: ./src/components/ImageHolder.tsx
-var ImageHolder = __webpack_require__(728339);
-// EXTERNAL MODULE: ./src/components/MailingSignup/MailingSignup.tsx + 3 modules
-var MailingSignup = __webpack_require__(441804);
-// EXTERNAL MODULE: ./src/config/globals.js
-var globals = __webpack_require__(61530);
-// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
-var useMediaQuery = __webpack_require__(452005);
-// EXTERNAL MODULE: ./src/components/QnA/QnA.tsx + 1 modules
-var QnA = __webpack_require__(55505);
-// EXTERNAL MODULE: ./src/config/ShortFAQsList.tsx
-var ShortFAQsList = __webpack_require__(889013);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBRootResourcesList.ts
-/* eslint-disable no-irregular-whitespace */// Knowledge Base Content Configuration:
-// - Add a new object with the following fields:
-//   - `id`: identifier for the knowledge base item.
-//   - `image`, `subtitle`: Metadata for the item.
-//   - `title` & `content`: Each object has a title & content, which is in the /content folder. Add the title in the object in this directory and  // Use HTML or Markdown to create the article (similar to the blog section).
-//   - `url`: For external links, provide the full URL instead of using `content`.
-const KBRootResourcesList={content:[{type:'list',title:'pages.knowledge.explainer-section.blocks.sections.resources.title',variant:'tile',items:[{id:'push101',url:'push101',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.push101',target:'_self',image:'/static/assets/website/docshub/WhitePushLogo',// bgImage: require(`@site/static/assets/website/docshub/BG.png`).default,
-bgColor:'#dd6fff',bgStylizing:{type:'sparkle',density:40,size:10,minOpacity:0.25,maxOpacity:0.55},customWidth:'70px'},{id:'builders',url:'builders',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.builders',target:'_self',image:'/static/assets/website/docshub/BuildOnPushIcon',// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
-bgColor:'#101010',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'113px'},{id:'deepdives',url:'deepdives',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives',target:'_self',image:'/static/assets/website/docshub/TechnicalDeepDivesIcon',// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
-bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'103px'},{id:'devdocs',url:'/docs',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs',target:'_self',image:'/static/assets/website/docshub/DeveloperDocsIcon',// bgImage: require(`@site/static/assets/website/docshub/BlueBG.png`).default,
-bgColor:'var(--ifm-color-kb-blue)',bgStylizing:{type:'lines',gridSize:30,color:'white',opacity:0.2},customWidth:'90px'},{id:'tokenomics',url:'tokenomics',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics',target:'_self',image:'/static/assets/website/docshub/TokenomicsIcon',// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
-bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10}},{id:'faq',url:'faq',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.faq',target:'_self',image:'/static/assets/website/docshub/FAQIcons',// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
-bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'70px'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/knowledgeComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Components
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const KnowledgeComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const[showEmailSignup,setShowEmailSignup]=(0,react.useState)(false);const heroConfig={title:t('pages.knowledge.hero-section.title'),description:()=>/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SpanHighlighted,{children:t('pages.knowledge.hero-section.description.highlighted')}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:t('pages.knowledge.hero-section.description.developers')}),' ',t('pages.knowledge.hero-section.description.developers-text'),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:t('pages.knowledge.hero-section.description.users')}),' ',t('pages.knowledge.hero-section.description.users-text')]}),// video: {
-//   src: 'https://www.youtube.com/embed/0J2QdDbelmY',
-//   title: 'title',
-// },
-image:"knowledge-frame",footer:{description:t('pages.knowledge.hero-section.footer.description'),cta:{text:t('pages.knowledge.hero-section.footer.cta.text'),action:'showEmailSignup'}}};const handleCTAClick=()=>{if(heroConfig.footer.cta.action==='openModal'){open();}else if(heroConfig.footer.cta.action==='showEmailSignup'){setShowEmailSignup(!showEmailSignup);}};return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(KnowledgeBaseHero,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(HeroTextContent,{justifyContent:"flex-start",alignItems:"flex-start",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H1,{children:heroConfig.title}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{children:heroConfig===null||heroConfig===void 0?void 0:heroConfig.description()})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(HeroMediaCard,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaDisplayContainer,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(EmailSignupSection,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(EmailSignupContent,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(EmailSignupTitle,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{className:"long",children:t('pages.knowledge.hero-section.email-signup.title.long')}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{className:"short",children:t('pages.knowledge.hero-section.email-signup.title.short')})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(EmailSignupDescription,{children:t('pages.knowledge.hero-section.email-signup.description')}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{flex:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(MailingSignup/* MailingSignup */.c,{showButton:true,background:'var(--ifm-color-knowledge-bg)',borderColor:'var(--ifm-color-knowledge-border)',textColor:'var(--ifm-color-white)',placeholderColor:'var(--ifm-color-knowledge-placeholder)',buttonBg:'var(--ifm-color-custom-pink)',buttonBorder:'1px solid var(--ifm-color-knowledge-button-border)',arrowColor:'var(--ifm-color-white)',loaderColor:'var(--ifm-color-white)',blendMode:"lighten",boxShadow:"2.788px 2.598px 12px rgba(255, 255, 255, 0.15) inset, 1.858px 1.732px 6px rgba(255, 255, 255, 0.15) inset",backdrop:"blur(10px)"})})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)(HeroMediaCardInner,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaDisplay,{showEmailSignup:showEmailSignup,type:heroConfig!==null&&heroConfig!==void 0&&heroConfig.image?'image':'video',borderRadius:"32px",children:[(heroConfig===null||heroConfig===void 0?void 0:heroConfig.video)&&/*#__PURE__*/(0,jsx_runtime.jsx)("iframe",{width:isMobile?'100%':'560px',height:isMobile?'100%':'325px',src:heroConfig.video.src,title:heroConfig.video.title,allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",referrerPolicy:"strict-origin-when-cross-origin",allowFullScreen:true}),(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)&&/*#__PURE__*/(0,jsx_runtime.jsx)(ImageHolder/* default */.A,{src:__webpack_require__(459506)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+".webp").default,srcSet:__webpack_require__(385186)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+"@2x.webp").default+" 2x, "+__webpack_require__(435789)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+"@3x.webp").default+" 3x",alt:'alt',title:'title'})]})})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaFooter,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{fontSize:isMobile?'0.875rem':'0.938rem',fontWeight:"400",lineHeight:isMobile?'100%':'132%',letterSpacing:"-0.64px",color:"var(--ifm-color-neutral-300)",flex:"1",children:heroConfig.footer.description}),/*#__PURE__*/(0,jsx_runtime.jsx)(CTAPrimaryA,{onClick:handleCTAClick,children:showEmailSignup?'Hide Email Signup':heroConfig.footer.cta.text})]})]})]})})}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{id:"resources",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBRootResourcesList})})}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{id:"faq",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(QnA/* default */.A,{titleKey:"components.short-faq-snippet.title",titleAriaLabelKey:"components.short-faq-snippet.title-aria-label",discordLinkTitleKey:"components.short-faq-snippet.discord-link-title",discordLinkAriaLabelKey:"components.short-faq-snippet.discord-link-aria-label",discordLinkTextKey:"components.short-faq-snippet.discord-link-text",accordionAriaLabelKey:"components.short-faq-snippet.accordion-aria-label",exploreMoreTitleKey:"components.short-faq-snippet.explore-more-title",exploreMoreAriaLabelKey:"components.short-faq-snippet.explore-more-aria-label",exploreMoreTextKey:"components.short-faq-snippet.explore-more-text",discordUrl:"https://discord.com/invite/pushchain",exploreMoreUrl:"/knowledge/faq",getQnAsFunction:ShortFAQsList/* getShortFAQsList */._})})})]});};/* harmony default export */ const knowledgeComp = (KnowledgeComp);// Knowledge Base Hero Section - Main container for the header content
-const KnowledgeBaseHero=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemH */.Oj).withConfig({displayName:"knowledgeComp__KnowledgeBaseHero",componentId:"sc-bgrzc4-0"})(["display:flex;align-items:center;gap:128px;justify-content:space-between;flex:1;@media ","{gap:80px;}@media ","{gap:48px;flex-direction:column;justify-content:flex-start;align-items:flex-start;}@media ","{flex-direction:column;gap:32px;justify-content:flex-start;align-items:center;}"],globals/* device */.jO.laptop,globals/* device */.jO.tablet,globals/* device */.jO.mobileL);// Hero Text Content - Container for title and description
-const HeroTextContent=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"knowledgeComp__HeroTextContent",componentId:"sc-bgrzc4-1"})(["justify-content:flex-start;align-items:flex-start;"]);// Media Display - Container for image/video content
-const MediaDisplay=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemH */.Oj).withConfig({displayName:"knowledgeComp__MediaDisplay",componentId:"sc-bgrzc4-2"})(["aspect-ratio:16/9;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);transform:",";background:",";z-index:2;"],props=>props.showEmailSignup?'translateY(-90%)':'translateY(0)',props=>props.type==='image'?'var(--ifm-color-knowledge-media-pink)':'var(--ifm-color-card-dark)');// Hero Media Card - Card container for media and footer
-const HeroMediaCard=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__HeroMediaCard",componentId:"sc-bgrzc4-3"})(["padding:16px;background:var(--ifm-color-neutral-1100);display:flex;border-radius:40px;flex-direction:column;justify-content:flex-start;align-self:flex-start;min-width:350px;flex:1;iframe{border-radius:24px;}@media ","{min-width:300px;flex-grow:1;align-self:center;padding:16px;}@media ","{min-width:100%;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const HeroMediaCardInner=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__HeroMediaCardInner",componentId:"sc-bgrzc4-4"})(["overflow:hidden;border-radius:32px;position:relative;"]);// Media Footer - Footer section with description and CTA
-const MediaFooter=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__MediaFooter",componentId:"sc-bgrzc4-5"})(["display:grid;margin:16px 0 0 0;grid-template-columns:1fr auto;align-items:center;gap:16px;@media ","{display:flex;flex-direction:column;button{width:100%;}}"],globals/* device */.jO.laptopM);// CTA Button - Call-to-action button styling
-const CTAPrimaryA=(0,styled_components_browser_esm["default"])(SharedStyling/* PrimaryA */.OW).withConfig({displayName:"knowledgeComp__CTAPrimaryA",componentId:"sc-bgrzc4-6"})(["text-align:center;width:100%;cursor:pointer;line-height:180.513%;"]);// Media Display Container - Container for layered content
-const MediaDisplayContainer=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__MediaDisplayContainer",componentId:"sc-bgrzc4-7"})(["position:relative;overflow:visible;"]);// Email Signup Section - Container for email signup form (positioned behind)
-const EmailSignupSection=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__EmailSignupSection",componentId:"sc-bgrzc4-8"})(["position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:var(--ifm-color-primary-unified-text-inverse);border-radius:32px;padding:32px 24px;display:flex;align-items:center;justify-content:center;opacity:1;@media ","{padding:20px;}@media ","{padding:24px;}@media ","{padding:24px 16px;}"],globals/* device */.jO.laptopM,globals/* device */.jO.mobileL,globals/* device */.jO.mobile);// Email Signup Content - Inner content wrapper
-const EmailSignupContent=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__EmailSignupContent",componentId:"sc-bgrzc4-9"})(["display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center;justify-content:center;width:100%;height:100%;"]);// Email Signup Title - Title for email signup
-const EmailSignupTitle=styled_components_browser_esm["default"].h3.withConfig({displayName:"knowledgeComp__EmailSignupTitle",componentId:"sc-bgrzc4-10"})(["font-size:24px;font-weight:700;color:var(--ifm-color-white);margin:0;line-height:1.2;& Span{font-size:24px;text-align:center;}& Span.long{display:block;}& Span.short{display:none;}@media ","{& Span.long{display:none;}& Span.short{display:block;}}@media ","{}@media ","{display:none;}"],globals/* device */.jO.desktop,globals/* device */.jO.tablet,globals/* device */.jO.mobileM);// Email Signup Description - Description text
-const EmailSignupDescription=styled_components_browser_esm["default"].p.withConfig({displayName:"knowledgeComp__EmailSignupDescription",componentId:"sc-bgrzc4-11"})(["font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;color:var(--ifm-color-neutral-400);margin:0;line-height:1.5;max-width:400px;@media ","{display:none;}@media ","{display:block;font-size:14px;}@media ","{display:none;}"],globals/* device */.jO.laptopM,globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const SpanHighlighted=styled_components_browser_esm["default"].span.withConfig({displayName:"knowledgeComp__SpanHighlighted",componentId:"sc-bgrzc4-12"})(["color:color-mix( in srgb,var(--ifm-color-primary-unified) 25%,var(--ifm-color-primary-unified-inverse) 75% );b{color:color-mix( in srgb,var(--ifm-color-primary-unified) 25%,var(--ifm-color-primary-unified-inverse) 75% );}"]);
-;// ./src/pages/knowledge.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Main
-function KnowledgeBasePage(){const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.seo.title'),description:t('pages.knowledge.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(500517)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(500517)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(knowledgeComp,{})})]});}/* harmony default export */ const knowledge = (KnowledgeBasePage);
-
-/***/ }),
-
 /***/ 452353:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -8298,104 +8139,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/popularapps-d28e170524758eb6301b38888aa3e588.webp");
-
-/***/ }),
-
-/***/ 459506:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var map = {
-	"./StatsSectionBG.webp": 412636,
-	"./any-chain.webp": 920005,
-	"./any-chain@2x.webp": 728013,
-	"./any-chain@3x.webp": 670768,
-	"./cheap-storage.webp": 961556,
-	"./cheap-storage@2x.webp": 540226,
-	"./cheap-storage@3x.webp": 109767,
-	"./explore-knowledgebase.webp": 410012,
-	"./explore-knowledgebase@2x.webp": 651722,
-	"./explore-knowledgebase@3x.webp": 585167,
-	"./infinitely-scalable.webp": 517658,
-	"./infinitely-scalable@2x.webp": 175816,
-	"./infinitely-scalable@3x.webp": 955557,
-	"./instant-finality.webp": 146037,
-	"./instant-finality@2x.webp": 66653,
-	"./instant-finality@3x.webp": 774976,
-	"./knowledge-frame.webp": 42627,
-	"./knowledge-frame@2x.webp": 878259,
-	"./knowledge-frame@3x.webp": 866110,
-	"./knowledge/Easter-Egg-5.webp": 360692,
-	"./knowledge/another-l1.webp": 649585,
-	"./knowledge/apps-of-the-future-building-without-the-chaos.webp": 559057,
-	"./knowledge/apps-only-possible-with-shared-state-v1.webp": 535862,
-	"./knowledge/apps-only-possible-with-shared-state-v2.webp": 96535,
-	"./knowledge/benchmarking-push-chain-nodes.webp": 813788,
-	"./knowledge/consumer-apps.webp": 282843,
-	"./knowledge/developer-docs.webp": 785714,
-	"./knowledge/developer-explorer.webp": 895514,
-	"./knowledge/developer-faucet.webp": 357653,
-	"./knowledge/evolution-of-push-chain.webp": 512300,
-	"./knowledge/evolution-of-push.webp": 252296,
-	"./knowledge/faq/appusecases.webp": 803884,
-	"./knowledge/faq/normalapps.webp": 716678,
-	"./knowledge/faq/pcisolatedenv.webp": 169646,
-	"./knowledge/faq/pcoverview.webp": 483587,
-	"./knowledge/faq/pcuniversalapp.webp": 340960,
-	"./knowledge/faq/pcwalletabstraction.webp": 699599,
-	"./knowledge/faq/universalapps.webp": 859214,
-	"./knowledge/frequently-asked-questions-cover.webp": 158482,
-	"./knowledge/frequently-asked-questions.webp": 201272,
-	"./knowledge/innovations-by-push-chain.webp": 428117,
-	"./knowledge/interop-spectrum.webp": 75,
-	"./knowledge/knowledge_101.webp": 74775,
-	"./knowledge/knowledge_builders.webp": 57349,
-	"./knowledge/knowledge_deepdives.webp": 869790,
-	"./knowledge/knowledge_devdocs.webp": 981851,
-	"./knowledge/knowledge_tokenomics.webp": 57403,
-	"./knowledge/push-chain-partners.webp": 996204,
-	"./knowledge/randomized-parallel.webp": 464487,
-	"./knowledge/tokenomics/consumerusecases.webp": 572371,
-	"./knowledge/tokenomics/cover-image.webp": 792530,
-	"./knowledge/tokenomics/popularapps.webp": 457684,
-	"./knowledge/tokenomics/usecasesmain.webp": 501030,
-	"./knowledge/tokenomics/vestingdetailspc.webp": 974706,
-	"./knowledge/tokenomics/vestingpc.webp": 573930,
-	"./knowledge/understand-proof-of-stake.webp": 227602,
-	"./knowledge/what-are-executor-accounts.webp": 507048,
-	"./knowledge/why-push-chain.webp": 786977,
-	"./one-chain.webp": 709595,
-	"./one-chain@2x.webp": 813355,
-	"./one-chain@3x.webp": 498198,
-	"./seamless-instant.webp": 124258,
-	"./seamless-instant@2x.webp": 212464,
-	"./seamless-instant@3x.webp": 49805,
-	"./second-hero-image.webp": 426252,
-	"./second-hero-image@2x.webp": 946074,
-	"./second-hero-image@3x.webp": 856671,
-	"./supported-chains.webp": 702806,
-	"./supported-chains@2x.webp": 851148,
-	"./supported-chains@3x.webp": 317721
-};
-
-
-function webpackContext(req) {
-	var id = webpackContextResolve(req);
-	return __webpack_require__(id);
-}
-function webpackContextResolve(req) {
-	if(!__webpack_require__.o(map, req)) {
-		var e = new Error("Cannot find module '" + req + "'");
-		e.code = 'MODULE_NOT_FOUND';
-		throw e;
-	}
-	return map[req];
-}
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = 459506;
 
 /***/ }),
 
@@ -8959,7 +8702,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-d33d0ec5feb42f5fea2e83d71ba4f2f1.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-dd80475621dbe74e137d45bcfbfa695e.webp");
 
 /***/ }),
 
@@ -10109,17 +9852,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-a0a9cede609100a378e717f4d3e556d5.webp");
-
-/***/ }),
-
-/***/ 500517:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/knowledgebasepreview-c48a978387c103d92a4a4823e284448e.png");
 
 /***/ }),
 
@@ -12901,6 +12633,7 @@ var map = {
 	"./static/assets/website/chain/knowledge/evolution-of-push-chain.webp": 512300,
 	"./static/assets/website/chain/knowledge/evolution-of-push.webp": 252296,
 	"./static/assets/website/chain/knowledge/faq/appusecases.webp": 803884,
+	"./static/assets/website/chain/knowledge/faq/devanduserbenefits.webp": 950814,
 	"./static/assets/website/chain/knowledge/faq/normalapps.webp": 716678,
 	"./static/assets/website/chain/knowledge/faq/pcisolatedenv.webp": 169646,
 	"./static/assets/website/chain/knowledge/faq/pcoverview.webp": 483587,
@@ -15380,7 +15113,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-d49c59d7ee8d2910fd4d28ef1cdc006b.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-032defa439cf5b671069d8ef653e3c44.webp");
 
 /***/ }),
 
@@ -15525,23 +15258,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/any-chain@2x-5fa04f8610064bbfe520d22ede075304.webp");
-
-/***/ }),
-
-/***/ 728339:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _home_runner_work_push_chain_website_push_chain_website_node_modules_babel_runtime_helpers_esm_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(198587);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(296540);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
-const _excluded=["srcWebp","fallback","src","srcSet","alt"];// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-/* eslint-disable */// React + Web3 Essentials
-function getPublicImagePath(relativePath){return relativePath;}function getSrcSet(srcSet){return srcSet.split(',').map(srcSetItem=>srcSetItem.trim()).map(srcSetItem=>getPublicImagePath(srcSetItem)).join(', ');}function ImageHolder(props){const _ref=props||{},{srcWebp,fallback,src,srcSet,alt}=_ref,restProps=(0,_home_runner_work_push_chain_website_push_chain_website_node_modules_babel_runtime_helpers_esm_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(_ref,_excluded);return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("picture",{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("source",{srcSet:srcWebp,type:"image/webp"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("source",{srcSet:fallback,type:"image/jpeg"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img",Object.assign({src:getPublicImagePath(src),srcSet:getSrcSet(srcSet),alt:alt},restProps))]});}/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.memo(ImageHolder));
 
 /***/ }),
 
@@ -18524,7 +18240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-b76c39b765cd3e847da9764dab125c9f.webp");
 
 /***/ }),
 
@@ -19101,31 +18817,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-540f19492dc25e81915fdcb9c4ef4d00.webp");
-
-/***/ }),
-
-/***/ 889013:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   _: () => (/* binding */ getShortFAQsList)
-/* harmony export */ });
-/* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(328774);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(777255);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(944404);
-/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
-/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61530);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// External Components
-// Internal Components
-// Internal Configs
-// Function to generate FAQ list with translations
-const getShortFAQsList=()=>{const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .useTranslation */ .Bd)();return[{question:t('components.short-faq-snippet.qnas.qna1.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna1.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna1.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna2.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna2.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna2.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna3.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna3.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna3.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna4.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna4.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna4.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna5.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna5.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna5.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{}),3:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"#useful-stats",title:t('components.short-faq-snippet.qnas.qna5.answer.supported-urls-title')}),4:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"/contact",title:t('components.short-faq-snippet.qnas.qna5.answer.contact-url-title'),target:"_self"})}})})},{question:t('components.short-faq-snippet.qnas.qna6.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna6.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna6.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{}),3:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"https://donut.push.network",title:t('components.short-faq-snippet.qnas.qna6.answer.donut-testnet-title')})}})})}];};// Note: ShortqnasList is now dynamically generated via getShortqnasList()
-// and should be called within React components to access translation context
-const Answer=(0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .ItemH */ .Oj).withConfig({displayName:"ShortFAQsList__Answer",componentId:"sc-ubty7n-0"})(["align-items:stretch;align-self:stretch;justify-content:flex-start;margin:0px;padding:0 0 24px 0;& ","{color:var(--ifm-color-neutral-300);font-size:1.25rem;font-style:normal;font-weight:400;line-height:150%;width:100%;@media ","{font-size:16px;}}& Span:not(:first-child){margin-top:24px;}& a{text-decoration:none;&:hover{text-decoration:underline;}}& b{color:var(--ifm-color-white);font-weight:600;}"],_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.mobileL);
 
 /***/ }),
 
@@ -20254,6 +19945,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,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");
+
+/***/ }),
+
+/***/ 950814:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/devanduserbenefits-dd80475621dbe74e137d45bcfbfa695e.webp");
 
 /***/ }),
 

@@ -2,9 +2,9 @@
   "components": {
     "blog": {
       "more-posts": {
-        "title": "Push Chain'den Daha Fazlası",
+        "title": "Push Chain'dan Daha Fazlası",
         "follow-button": "Takip Et",
-        "read-more": "Devamını Oku"
+        "read-more": "Daha Fazlasını Oku"
       },
       "list": {
         "recent-updates": "Son Güncellemeler",
@@ -19,9 +19,9 @@
         "share-title": "Bu makaleyi paylaşarak sohbete katılın",
         "share-button": "Paylaş",
         "share-modal-title": "Paylaş",
-        "copy-link": "Bağlantıyı Kopyala",
+        "copy-link": "Bağlantıyı kopyala",
         "about-title": "Push Chain Hakkında",
-        "about-description": "Push Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış ilk gerçek evrensel blokcheyn'dir. Geliştiricilerin tek bir kez dağıtım yapmasına ve ister EVM ister Non-EVM (Ethereum, Solana, Bitcoin vb. dahil) herhangi bir zincirdeki kullanıcılar için anında kullanılabilir olmasına olanak tanır. %100 EVM uyumlu, Proof of Stake (PoS) zinciri olup, kullanıcıların kendi zincirlerinde yerel olarak yaptıkları gibi, Push Chain'de dağıtılan uygulamalarla herhangi bir zincirden etkileşim kurmalarını sağlar.",
+        "about-description": "Push Chain, tüm zincirler arasındaki parçalanmayı ortadan kaldırmak için tasarlanmış ilk gerçek evrensel blokcheyn'dir. Geliştiricilerin bir kez dağıtım yapmasını ve ister EVM ister Non-EVM (Ethereum, Solana, Bitcoin vb. dahil) herhangi bir zincirdeki kullanıcılar için anında kullanılabilir olmalarını sağlar. %100 EVM uyumlu, Kullanıcıların Push Chain'de dağıtılan uygulamalarla kendi zincirlerinde yerel olarak yaptıkları gibi herhangi bir zincirden etkileşim kurmalarını sağlayan Proof of Stake (PoS) zinciridir.",
         "social-twitter": "Twitter",
         "social-discord": "Discord",
         "social-youtube": "YouTube",

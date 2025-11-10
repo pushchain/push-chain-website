@@ -4,9 +4,9 @@
       "navigation-aria-label": "Điều hướng bằng đường dẫn",
       "home-text": "Trang chủ",
       "navigate-to-aria-label": "Điều hướng đến {{page}}",
-      "go-to-title": "Đi tới trang {{page}}",
+      "go-to-title": "Đi đến trang {{page}}",
       "current-page-aria-label": "Trang hiện tại: {{page}}",
-      "separator-aria-label": "Breadcrumb separator"
+      "separator-aria-label": "Dấu phân cách đường dẫn"
     }
   }
 }

@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "抢先体验测试网 Donut，构建通用app并赢取奖品！",
-      "button-text": "领取封闭测试版通行证",
-      "button-title": "加入 Push Chain testnet 并领取您的封闭 Beta 邀请码",
-      "button-aria-label": "打开 Telegram 获取 Push Chain 封闭 beta 通行证",
-      "image-alt": "Push Chain Testnet Donut - 通用区块链",
+      "description": "G.U.D 项目部署马拉松现已启动！部署app，赢取$5000",
+      "button-text": "前往Universal并部署",
+      "button-title": "Project G.U.D. 部署大赛已启动",
+      "button-aria-label": "Project G.U.D. 部署马拉松已上线。您可以在这里查看: ",
+      "image-alt": "Push Chain 测试网 Donut - 通用区块链",
       "close-button-title": "关闭测试网通知",
       "close-button-aria-label": "关闭 Push Chain testnet 通知",
-      "container-aria-label": "Push Chain testnet notification"
+      "container-aria-label": "Push Chain testnet 通知"
     }
   }
 }

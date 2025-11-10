@@ -1,15 +1,15 @@
 {
   "footer": {
     "email-section": {
-      "title": "Bleiben Sie mit Push Chain auf dem Laufenden",
+      "title": "Bleibe mit Push Chain auf dem Laufenden",
       "title-secondary": "Neuigkeiten und Updates!",
-      "title-aria-label": "Bereich für den Newsletter-Abonnement",
+      "title-aria-label": "Newsletter-Abonnement-Bereich",
       "section-aria-label": "Push Chain Newsletter anmelden"
     },
     "main-section": {
-      "section-aria-label": "Fußzeilen-Navigation und -Links",
-      "logo-link-title": "Push Chain homepage",
-      "logo-link-aria-label": "Push Chain Startseite",
+      "section-aria-label": "Fußnavigation und -links",
+      "logo-link-title": "Push Chain Homepage",
+      "logo-link-aria-label": "Push Chain Homepage",
       "logo-alt": "Push Chain logo"
     },
     "columns": {
@@ -27,12 +27,12 @@
       },
       "help": {
         "title": "Hilfe",
-        "title-aria-label": "Hilfenavigation"
+        "title-aria-label": "Hilfe-Navigation"
       }
     },
     "links": {
       "get-started": "Loslegen",
-      "get-started-title": "Starte mit dem Aufbau auf Push Chain",
+      "get-started-title": "Beginne jetzt mit dem Aufbau auf Push Chain",
       "docs": "Dokumentation",
       "docs-title": "Push Chain documentation",
       "github": "GitHub",
@@ -44,17 +44,17 @@
       "litepaper": "Litepaper",
       "litepaper-title": "Push Chain Litepaper (PDF)",
       "brand-kit": "Brand Kit",
-      "brand-kit-title": "Push Chain Marken-Assets und Richtlinien",
+      "brand-kit-title": "Push Chain Markenressourcen und Richtlinien",
       "push-scan": "Push Scan",
       "push-scan-title": "Push Chain Blockchain Explorer",
       "faucet": "Faucet",
-      "faucet-title": "Test-Token vom Push Chain Faucet erhalten",
+      "faucet-title": "Erhalte Test-Token vom Push Chain Faucet",
       "push-portal": "Push Portal",
       "push-portal-title": "Push Chain Community-Portal",
       "support": "Support",
-      "support-title": "Hilfe Center",
+      "support-title": "Hilfe-Center",
       "security": "Sicherheit & Offenlegung",
-      "security-title": "Sicherheitsproblem melden (Responsible Disclosure)",
+      "security-title": "Sicherheitslücke melden (verantwortungsvolle Offenlegung)",
       "contact-us": "Kontakt",
       "contact-us-title": "Partnerschaften, Geschäftsentwicklung, Medien oder allgemeine Anfragen",
       "careers": "Karriere",
@@ -64,12 +64,12 @@
       "discord": "Discord",
       "discord-title": "Tritt dem Push Chain Discord bei",
       "reddit": "Reddit",
-      "reddit-title": "Trete dem Push Chain Subreddit bei",
+      "reddit-title": "Tritt dem Push Chain Subreddit bei",
       "telegram": "Telegram",
       "telegram-title": "Tritt dem Push Chain Telegram bei"
     },
     "social-section": {
-      "section-aria-label": "Social-Media-Links und rechtliche Informationen",
+      "section-aria-label": "Links zu sozialen Medien und rechtlichen Informationen",
       "twitter-icon-title": "Push Chain auf X (Twitter)",
       "twitter-icon-aria-label": "Push Chain auf X (Twitter)",
       "github-icon-title": "Push Chain auf GitHub",

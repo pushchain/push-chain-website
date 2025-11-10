@@ -350,13 +350,13 @@ function _createMdxContent(props) {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "How Normal Apps Work",
         src: (__webpack_require__(399209)/* ["default"] */ .A) + "",
-        width: "1500",
-        height: "1200"
+        width: "1600",
+        height: "1275"
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "How Universal Apps Work",
         src: (__webpack_require__(290175)/* ["default"] */ .A) + "",
-        width: "1500",
-        height: "1200"
+        width: "1604",
+        height: "1272"
       })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Push Chain takes a unique approach to solving the problem of fragmentation across all chains. Instead of creating interop protocol which comes with complexities for both users and developers, it takes a novel approach by building a true universal blockchain that can be natively used by any user from any chain."
@@ -423,8 +423,8 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Push Chain Architecture",
         src: (__webpack_require__(841636)/* ["default"] */ .A) + "",
-        width: "1602",
-        height: "1580"
+        width: "1600",
+        height: "900"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Push Chain is a Proof-of-Stake Layer 1 designed to eliminate fragmentation across every blockchain. Under the hood, it combines several key innovations:"
@@ -676,8 +676,8 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Push Chain Universal App",
         src: (__webpack_require__(72895)/* ["default"] */ .A) + "",
-        width: "1600",
-        height: "1213"
+        width: "1500",
+        height: "1200"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "A traditional blockchain only knows its own ledger and wallet standard. Push Chain extends that model in four key ways:"
@@ -1071,7 +1071,7 @@ function MDXContent(props = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-ccfd211be682c930e5de06491c42356e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcuniversalapp-0150c28d0cfa52814bada47073ae6bb0.webp");
 
 /***/ }),
 
@@ -1081,7 +1081,7 @@ function MDXContent(props = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-b76c39b765cd3e847da9764dab125c9f.webp");
 
 /***/ }),
 
@@ -1101,7 +1101,7 @@ function MDXContent(props = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-d49c59d7ee8d2910fd4d28ef1cdc006b.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/normalapps-032defa439cf5b671069d8ef653e3c44.webp");
 
 /***/ }),
 
@@ -1131,7 +1131,7 @@ function MDXContent(props = {}) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-d33d0ec5feb42f5fea2e83d71ba4f2f1.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pcoverview-dd80475621dbe74e137d45bcfbfa695e.webp");
 
 /***/ })
 

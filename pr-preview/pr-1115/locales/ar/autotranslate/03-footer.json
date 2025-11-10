@@ -4,17 +4,17 @@
       "title": "ابقَ على اطلاع بـ Push Chain",
       "title-secondary": "أخبار وتحديثات!",
       "title-aria-label": "قسم الاشتراك في النشرة الإخبارية",
-      "section-aria-label": "الاشتراك في نشرة \"Push Chain\" الإخبارية"
+      "section-aria-label": "الاشتراك في نشرة أخبار بلوكشين"
     },
     "main-section": {
-      "section-aria-label": "روابط وتصفح أسفل الصفحة",
+      "section-aria-label": "روابط وتصفح قسم التذييل",
       "logo-link-title": "الصفحة الرئيسية لـ Push Chain",
       "logo-link-aria-label": "الصفحة الرئيسية لـ Push Chain",
       "logo-alt": "شعار Push Chain"
     },
     "columns": {
       "resources": {
-        "title": "مصادر",
+        "title": "المصادر",
         "title-aria-label": "تصفح الموارد"
       },
       "developers": {
@@ -27,7 +27,7 @@
       },
       "help": {
         "title": "مساعدة",
-        "title-aria-label": "ملاحة المساعدة"
+        "title-aria-label": "مساعدة في التنقل"
       }
     },
     "links": {
@@ -41,7 +41,7 @@
       "knowledge-base-title": "Push Chain Knowledge Base",
       "blog": "المدونة",
       "blog-title": "مدونة Push Chain",
-      "litepaper": "ورقة بيضاء",
+      "litepaper": "الورقة البيضاء",
       "litepaper-title": "ورقة Push Chain التقنية (PDF)",
       "brand-kit": "مجموعة العلامة التجارية",
       "brand-kit-title": "أصول وإرشادات العلامة التجارية لـ Push Chain",
@@ -54,7 +54,7 @@
       "support": "الدعم",
       "support-title": "مركز المساعدة",
       "security": "الأمان والإفصاح",
-      "security-title": "الإبلاغ عن ثغرة أمنية (الكشف المسؤول)",
+      "security-title": "الإبلاغ عن ثغرة أمنية (الإفصاح المسؤول)",
       "contact-us": "تواصل معنا",
       "contact-us-title": "شراكات، تطوير الأعمال، وسائل الإعلام، أو استفسارات عامة",
       "careers": "وظائف",
@@ -64,17 +64,17 @@
       "discord": "Discord",
       "discord-title": "انضم إلى مجتمع Push Chain على ديسكورد",
       "reddit": "Reddit",
-      "reddit-title": "انضم إلى مجتمع Push Chain على Reddit",
+      "reddit-title": "انضم إلى منتدى Push Chain على Reddit",
       "telegram": "تيليجرام",
-      "telegram-title": "انضم إلى Push Chain Telegram"
+      "telegram-title": "انضم إلى مجموعة Push Chain على Telegram"
     },
     "social-section": {
       "section-aria-label": "روابط وسائل التواصل الاجتماعي والمعلومات القانونية",
-      "twitter-icon-title": "Push Chain على X (تويتر)",
+      "twitter-icon-title": "بلوشكين على X (تويتر)",
       "twitter-icon-aria-label": "Push Chain على X (تويتر)",
       "github-icon-title": "Push Chain على GitHub",
       "github-icon-aria-label": "Push Chain على GitHub",
-      "discord-icon-title": "بلوشكين على ديسكورد",
+      "discord-icon-title": "Push Chain على ديسكورد",
       "discord-icon-aria-label": "Push Chain على Discord"
     },
     "legal": {
@@ -88,8 +88,8 @@
       "cookie-preferences-title": "إدارة إعدادات ملفات تعريف الارتباط"
     },
     "footer-image": {
-      "alt": "صورة توضيحية لـ Push Chain في تذييل الصفحة",
-      "title": "Push Chain - بلوكشين يونيفرسال"
+      "alt": "صورة توضيحية لتذييل Push Chain",
+      "title": "Push Chain - بلوكشين عالمي"
     }
   }
 }

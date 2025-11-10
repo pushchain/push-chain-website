@@ -1,18 +1,18 @@
 {
   "components": {
     "cookie-banner": {
-      "message": "私たちはクッキーを使用して、お客様の体験をパーソナライズしています。詳細については、",
+      "message": "よりパーソナライズされた体験のためにクッキーを使用しています。詳細については、",
       "privacy-policy-link": "プライバシーポリシー",
       "privacy-policy-link-title": "Push Chain プライバシーポリシーを読む",
       "privacy-policy-link-aria-label": "新しいタブでプライバシーポリシーを開く",
       "accept-button": "同意する",
-      "accept-button-title": "体験をパーソナライズするためにCookieに同意する",
-      "accept-button-aria-label": "クッキーを受け入れてバナーを閉じる",
+      "accept-button-title": "体験をパーソナライズするためにクッキーを受け入れる",
+      "accept-button-aria-label": "クッキーに同意してバナーを閉じる",
       "reject-button": "オプトアウト",
-      "reject-button-title": "Cookie を拒否してバナーを閉じる",
+      "reject-button-title": "クッキーの使用を拒否してバナーを閉じる",
       "reject-button-aria-label": "クッキーを拒否してバナーを閉じる",
-      "banner-aria-label": "Cookie consent banner",
-      "banner-role": "クッキーの好みの通知"
+      "banner-aria-label": "クッキー同意バナー",
+      "banner-role": "Cookie preferences notification"
     }
   }
 }

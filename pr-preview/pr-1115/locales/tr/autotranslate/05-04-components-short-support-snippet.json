@@ -1,51 +1,51 @@
 {
   "components": {
     "short-support-snippet": {
-      "section-aria-label": "Push Chain Destek Soruları - Evrensel 블록체인",
+      "section-aria-label": "Push Chain - Evrensel Blockchain Hakkındaki Destek Soruları",
       "title": "Destek\nYardım Masası",
       "title-aria-label": "Push Chain hakkında sık sorulan sorular ve cevaplar",
-      "discord-link-text": "Bize Discord'da sorun",
+      "discord-link-text": "Discord'da bize sorun",
       "discord-link-title": "Push Chain Discord topluluğuna katılın, destek ve sorularınız için",
       "discord-link-aria-label": "Yeni sekmede Discord topluluğunu aç",
       "explore-more-text": "Daha Fazla SSS'ye Göz At",
-      "explore-more-title": "Push Chain'ın kapsamlı SSS belgelerine ve geliştirici kılavuzlarına göz atın",
-      "explore-more-aria-label": "Push Chain SSS sayfasına git",
+      "explore-more-title": "Push Chain'i kapsamlı bir şekilde incelemek için SSS belgelerine ve geliştirici kılavuzlarına göz atın",
+      "explore-more-aria-label": "Tam Push Chain SSS sayfasına git",
       "accordion-aria-label": "Push Chain destek soruları listesi",
       "answer-aria-label": "Sorunun cevabı - ",
       "qnas": {
         "qna1": {
           "question": "Cüzdanımı bağlayamıyorum. Ne denemeliyim?",
-          "answer": "<1><2>Hızlı Kontroller:</2> sayfayı yenile, cüzdanını aç ve push.org için agresif reklam/komut engelleyicileri devre dışı bırak.</1><1><2>Ağ geçişine gerek yok:</2> ana zincirinde kal; Push arka planda yönlendirmeyi halleder.</1><1><2>Site izinlerini sıfırla:</2> cüzdanında, sitenin bağlantısını kaldır ve yeniden bağlan.</1><1>Hala takıldın mı? <3>Discord</3>'da sor veya bir <4>Destek bileti</4> aç.</1>",
+          "answer": "<1><2>Hızlı Kontroller:</2> sayfayı yenile, cüzdanını aç ve push.org için agresif reklam/komut engelleyicileri devre dışı bırak.</1><1><2>Ağ geçişine gerek yok:</2> ana zincirinde kal; Push arka planda yönlendirmeyi halleder.</1><1><2>Site izinlerini sıfırla:</2> cüzdanında, sitenin bağlantısını kaldır ve yeniden bağlan.</1><1>Hâlâ takıldın mı? <3>Discord</3>'da sor veya bir <4>Destek bileti</4> aç.</1>",
           "discord-url-title": "Push Chain Discord'a katılarak gerçek zamanlı yardım alın.",
           "support-url-title": "Destek talebi açın."
         },
         "qna2": {
           "question": "İşlemim bekliyor veya başarısız oldu — şimdi ne yapmalıyım?",
-          "answer": "<1><2>Durumu kontrol edin:</2> cüzdanınızdaki hash'i kullanarak <3>Push Scan</3>'de işleminizi bulun.</1><1><2>Bekliyor:</2> genellikle kısa sürede onaylanır; tekrar tekrar göndermekten kaçının.</1><1><2>Başarısız:</2> para çekilmedi. Hatayı inceleyin ve tekrar deneyin.</1><1>Devam eden olaylar <4>Status</4>'da yayınlanır.</1>",
-          "scan-url-title": "Push Scan'ı aç (explorer).",
+          "answer": "<1><2>Durumu kontrol edin:</2> cüzdanınızdan aldığınız hash'i kullanarak <3>Push Scan</3>'de işlem durumuna bakın.</1><1><2>Beklemede:</2> genellikle kısa sürede onaylanır; tekrar tekrar göndermekten kaçının.</1><1><2>Başarısız:</2> herhangi bir fon alınmaz. Hatayı gözden geçirin ve tekrar deneyin.</1><1>Devam eden olaylar <4>Status</4>'ta yayınlanmaktadır.</1>",
+          "scan-url-title": "Push Scan'ı Aç (gezgin).",
           "status-url-title": "Ağ durumunu ve olayları görüntüleyin."
         },
         "qna3": {
           "question": "Donut testnet <token>’larını nasıl alabilirim?",
-          "answer": "<1>Test <token>larını talep etmek için <3>Faucet</3>'i kullanın.</1><1><2>Notlar:</2> hız sınırları uygulanabilir; bazı faucet'ler basit bir doğrulama gerektirebilir. Faucet başarısız olursa, <4>Discord</4>'da bize bildirin.</1>",
+          "answer": "<1>Test <token>’ları talep etmek için <3>Musluk</3>’u kullanın.</1><1><2>Notlar:</2> hız sınırları uygulanabilir; bazı musluklar basit bir doğrulama gerektirebilir. Musluk başarısız olursa, bize <4>Discord</4>’da ping atın.</1>",
           "faucet-url-title": "Push Chain musluğunu açın.",
           "discord-url-title": "Push Chain Discord'a katılın."
         },
         "qna4": {
           "question": "Bir hatayı veya güvenlik açığını nasıl bildirebilirim?",
-          "answer": "<1><2>Uygulama hataları:</2> bir <3>Destek bileti</3> açın veya yeniden üretme adımlarıyla birlikte <4>Discord</4>’da yayınlayın.</1><1><2>Güvenlik sorunları:</2> <5>security@push.org</5> adresine e-posta gönderin. Lütfen düzeltmeyi onaylayana kadar kamuoyuna açıklamamaktan kaçının.</1>",
-          "support-url-title": "Destek talebi açın.",
+          "answer": "<1><2>Uygulama hataları:</2> bir <3>Destek bileti</3> oluşturun veya yeniden üretme adımlarıyla <4>Discord</4>’da paylaşın.</1><1><2>Güvenlik sorunları:</2> <5>security@push.org</5> adresine e-posta gönderin. Lütfen bir düzeltmeyi onaylayana kadar herkese açık açıklamadan kaçının.</1>",
+          "support-url-title": "Destek bileti açın.",
           "discord-url-title": "Discord'a katılın."
         },
         "qna5": {
           "question": "Dokümanlar ve hızlı başlangıç kılavuzları nerede?",
-          "answer": "<1>Öncelikle hızlı başlangıçlar ve API'ler için <3>Dokümanlar</3> ile başlayın, kavramlar, derinlemesine incelemeler ve SSS için <4>Bilgi Tabanı</4>'na göz atın.</1>",
-          "docs-url-title": "Geliştirici belgelerini aç.",
-          "kb-url-title": "Bilgi Tabanını Aç."
+          "answer": "<1>Öncelikle <3>Dokümanlar</3> bölümünden hızlı başlangıçlar ve API'ler hakkında bilgi alabilir, <4>Bilgi Bankası</4> bölümünden ise kavramlar, derinlemesine incelemeler ve sık sorulan sorular hakkında bilgi edinebilirsiniz.</1>",
+          "docs-url-title": "Geliştirici dokümantasyonunu aç.",
+          "kb-url-title": "Bilgi Tabanını açın."
         },
         "qna6": {
           "question": "Yeni bir zincir, özellik veya entegrasyon için destek isteyebilir miyim?",
-          "answer": "<1>Evet. Hangi zinciri/araç setini istediğinizi <3>İletişim</3> yoluyla bize bildirin veya <4>GitHub</4>'da bir sorun açın. Kapsamı sürekli olarak genişletiyoruz.</1>",
+          "answer": "<1>Evet. Hangi zinciri/araçları istediğinizi <3>İletişim</3> yoluyla bize bildirin veya <4>GitHub</4>'da bir sorun açın. Sürekli olarak kapsamımızı genişletiyoruz.</1>",
           "contact-url-title": "Push Chain ekibini iletişime geçin.",
           "github-url-title": "GitHub organizasyonunu aç."
         }
