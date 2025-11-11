@@ -40,8 +40,8 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-welcome-to-donut---push-chains-first-public-testnet">🍩 Welcome to Donut - Push Chain’s First Public Testnet<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/introducing-push-chains-donut-testnet/#-welcome-to-donut---push-chains-first-public-testnet" class="hash-link" aria-label="Direct link to 🍩 Welcome to Donut - Push Chain’s First Public Testnet" title="Direct link to 🍩 Welcome to Donut - Push Chain’s First Public Testnet" translate="no">​</a></h2>
 <p>The <strong>Donut Testnet</strong> is the first public environment where developers, users, and node operators can explore Push Chain’s universality firsthand.</p>
 <p>Here’s how we got here, and what comes next!</p>
-<p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-1-d2c1fe305f780683d410bf13348df719.webp" width="719" height="561" class="img_ev3q"></p>
-<p>The roadmap outlines Push Chain’s journey from universal core features to full cross-chain execution and mainnet readiness.</p>
+<p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-1-282b65691ffe4d8659015b6e506c0a34.webp" width="1200" height="1200" class="img_ev3q"></p>
+<div class="SharedStyling__ImageText-sc-o9a0o0-31 kwNGki">The roadmap outlines Push Chain’s journey from universal core features to full cross-chain execution and mainnet readiness.</div>
 <p>Donut brings the full Push ecosystem online with:</p>
 <ul>
 <li class="">🌳 <strong>Ecosystem Apps:</strong> Explore live Universal Apps on the <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">Ecosystem Page</a>.</li>
@@ -95,7 +95,7 @@ We are a developer-first chain. Want to take your app to the next level? Have pe
 <p>Be the change, the catalyst that changes web3. Let’s build Universal Apps. 💪</p>
 <p><strong>Note:</strong> If you have already built something out, reach out to us at <a href="mailto:support@push.org" target="_blank" rel="noopener noreferrer" class="">support@push.org</a> to get included in the <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">ecosystem page</a>.</p>
 <p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-2-ba231fb25c449c1f5a5c611e8c16291b.webp" width="1286" height="1480" class="img_ev3q"></p>
-<p><strong>Push Chain Donut Testnet — Live Now 🍩</strong>
+<p><strong>Push Chain Donut Testnet — Live Now 🍩</strong> <br>
 Build universal. Deploy once. Reach everywhere.</p>]]></content:encoded>
             <category>Donut Testnet</category>
             <category>Early Access</category>
@@ -596,156 +596,133 @@ Could be as simple as your project ideas, daily/ weekly progress, sneak peaks or
             <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Apps Possible Only with Shared State - Vol.2]]></description>
             <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-bb4caac53f6e1e98f43d677734ba8f43.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Welcome to the 2nd Volume of - Apps that are only possible with Push Chain’s shared state architecture!</p>
-<p>In the <a href="https://push.org/blog/apps-only-possible-with-shared-state-v1/" target="_blank" rel="noopener noreferrer" class="">previous edition</a>, we covered use cases spanning Defi, cross chain yields, universal airdrops and NFTs that can only be possible using capabilities that chains like Push Chain provide.</p>
-<p>🚨SPOILER ALERT - You might be able to see some of them in Testnet V1!Stay tuned!</p>
-<p>In this iteration, we will amp up the utility scale and explore few of the most popular areas - loved by both - devs &amp; users.</p>
-<p>Before we begin, if you’re new to the concept of Shared Sates and Push Chain, here’s a quick recap:
-Feel free to skip down to the use cases section if you’re already aware of these concepts.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain---super-quick-recap">What is Push Chain? - Super Quick Recap:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-is-push-chain---super-quick-recap" class="hash-link" aria-label="Direct link to What is Push Chain? - Super Quick Recap:" title="Direct link to What is Push Chain? - Super Quick Recap:" translate="no">​</a></h2>
-<p>Push Chain is an all-purpose universal chain that unites every existing and forthcoming chain together (under one roof).</p>
-<b>It is a shared-state L1 blockchain designed to function as a universal app layer for users across any chain, any wallet and any app.</b>
-<p>Combining this with the innovation of cross-chain fees and wallet abstraction, what you get is a blockchain able to read any other chain and… is accessible by users from any chain.</p>
-<p><img decoding="async" loading="lazy" alt="First Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-1-0c3165163647f9ea3aac0cc4e39afa31.webp" width="1394" height="1116" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-a-shared-state-blockchain">What is a 'shared state' blockchain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-is-a-shared-state-blockchain" class="hash-link" aria-label="Direct link to What is a 'shared state' blockchain?" title="Direct link to What is a 'shared state' blockchain?" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="Second Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-2-e636b0c2d2e38ef580d5a4ddc34b3fc6.webp" width="1178" height="526" class="img_ev3q"></p>
-<p>At its core, a blockchain maintains a database tracking the state of all wallets and smart contracts (token balances, data, code, etc.). But these states are siloed within their respective chains, even <i>within the same ecosystem.</i></p>
-<p>For example, a wallet's ETH balance on Ethereum differs from its ETH balance on Base because each of these chains maintains its own state.</p>
-<p>For building universal apps we need to:</p>
+<p>Welcome to <strong>Volume 2</strong> of <em>Apps Possible Only with Shared State</em>. A deeper dive into what becomes possible when every blockchain speaks the same language.</p>
+<p>In <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/">Volume 1</a>, we explored use cases across DeFi, cross-chain yields, universal airdrops, and NFTs that truly live across chains.</p>
+<p>🚨 <strong>Spoiler:</strong> Some of those concepts are already live on <strong><a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/ecosystem/">Donut Testnet V1</a></strong>. Stay tuned for what’s next.</p>
+<p>This volume amps up the scale — covering <strong>Gaming, DAOs, AI Agents, Safes, and Prediction Markets</strong>. The next frontier for both developers and users alike.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain---super-quick-recap">What is Push Chain? - Super Quick Recap<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-is-push-chain---super-quick-recap" class="hash-link" aria-label="Direct link to What is Push Chain? - Super Quick Recap" title="Direct link to What is Push Chain? - Super Quick Recap" translate="no">​</a></h2>
+<p>Push Chain is a <strong>shared-state universal blockchain</strong> designed to eliminate fragmentation across all chains (EVM + non-EVM).</p>
+<p><strong>Developers deploy once</strong> and instantly become compatible with every chain.<br>
+<strong>Users interact</strong> with the same app no matter the chain they come from, using any token or wallet.</p>
+<p>The result: a <strong>shared-state world</strong> where apps, data, and users exist seamlessly across ecosystems.</p>
+<p><img decoding="async" loading="lazy" alt="push chain vein diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image1-0c3165163647f9ea3aac0cc4e39afa31.webp" width="1394" height="1116" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="apps-only-possible-with-shared-state">Apps Only Possible with Shared State<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#apps-only-possible-with-shared-state" class="hash-link" aria-label="Direct link to Apps Only Possible with Shared State" title="Direct link to Apps Only Possible with Shared State" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="First Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image5-48b511f626359221448f3318697630f8.webp" width="1474" height="626" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-prediction-markets">📈 Universal Prediction Markets<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#-universal-prediction-markets" class="hash-link" aria-label="Direct link to 📈 Universal Prediction Markets" title="Direct link to 📈 Universal Prediction Markets" translate="no">​</a></h2>
+<p>Prediction markets align incentives and gather collective intelligence. But today, they’re stuck on isolated chains with limited liquidity and poor UX.</p>
+<p><strong>Push Chain turns them into universally embeddable modules</strong> that plug into any cross-chain app, game, or community, <strong>usable from any chain, in any token</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<p>Shared-state connects every participant and every token into a single predictive playground.</p>
+<p><strong>App-Based Prediction Widgets</strong></p>
 <ul>
-<li class=""><b>Read</b> states from other chains (e.g., balances, smart contract data).</li>
-<li class=""><b>Write</b> to all chains, and</li>
-<li class=""><b>Support wallets</b> across all networks.</li>
+<li class="">Developers can attach mini-markets to any cross-chain app or event.</li>
+<li class="">Viewers bet on game outcomes or specific moves in real time.</li>
 </ul>
-<p>The first of these innovations -- i.e. the ability of developers on Push Chain <i>to read and utilise the state of other chains via smart contracts</i> -- is what we mean by a <b>shared-state blockchain.</b></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="apps-that-are-only-possible-with-shared-states">Apps that are only possible with Shared States:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#apps-that-are-only-possible-with-shared-states" class="hash-link" aria-label="Direct link to Apps that are only possible with Shared States:" title="Direct link to Apps that are only possible with Shared States:" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-competitive-cross-chain-gaming">1) Competitive Cross Chain Gaming<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#1-competitive-cross-chain-gaming" class="hash-link" aria-label="Direct link to 1) Competitive Cross Chain Gaming" title="Direct link to 1) Competitive Cross Chain Gaming" translate="no">​</a></h3>
-<p><b>Shared-state makes ‘chain wars’ real!</b>
-It allows players from any blockchain ecosystem to come together and play their favourite games with (or against) each other by leveraging Push Chain as a shared settlement layer.</p>
-<p>Think ‘<a href="https://chess.push.org/" target="_blank" rel="noopener noreferrer" class="">Universal Chess</a>’ tournaments between Ethereum and Solana tribes, with a cross-chain betting widget for viewers and game NFTs for players. The perfect degen chess experience!</p>
-<p>But it doesn’t stop there. Think Poker, Blackjack, Monopoly, RPGs and more, available to and accessible by users of all chains!</p>
-<p>By removing the biggest barriers to on-chain game adoption, i.e. UX and asset fragmentation, <b>Push Chain allows gamers to bring their chain-specific identities to chain-neutral playgrounds.</b></p>
-<p><img decoding="async" loading="lazy" alt="Third Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-3-13516c7df773f42da08f7d685b56a96d.webp" width="1920" height="800" class="img_ev3q"></p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables">🌌What this enables:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables" class="hash-link" aria-label="Direct link to 🌌What this enables:" title="Direct link to 🌌What this enables:" translate="no">​</a></h4>
+<p><strong>Event-Driven Derivatives</strong></p>
 <ul>
-<li class="">Game developers can design experiences for the entire web3 userbase.</li>
-<li class="">Chain agnostic user onboarding - users can join from any chain they already use.</li>
-<li class=""><b>Unified cross-chain identities</b>: Users can pause/save a game on one chain, and continue from the same checkpoint on another chain.
-e.g., Player 2 moves to Arbitrum but keeps their character's skills and assets intact.</li>
-<li class="">Multiplayer games can allow users to join from any chain, or switch in the middle without losing access to their points and/or in-game assets.</li>
+<li class="">Auto-spawn markets around live events (“Will $TRUMP rise during his golf match?”) that resolve trustlessly after completion.</li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state">🤔Why it needs shared state:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state" class="hash-link" aria-label="Direct link to 🤔Why it needs shared state:" title="Direct link to 🤔Why it needs shared state:" translate="no">​</a></h4>
+<p><strong>Community Engagement</strong></p>
 <ul>
-<li class="">Chain-neutral playgrounds require seamless state synchronizations, player state to be unified in one trusted environment - in order to track individual as well as relational game data (points, damage, skills, assets etc.).</li>
-<li class="">Without shared-state, cross-chain games would need <b>custom bridges</b> and complex game synchronization measures per game, which would be expensive and damaging for the UX.</li>
+<li class="">Local markets inside apps boost participation and organic stickiness.</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-multichain-daos">2) Multichain DAOs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#2-multichain-daos" class="hash-link" aria-label="Direct link to 2) Multichain DAOs" title="Direct link to 2) Multichain DAOs" translate="no">​</a></h3>
-<p>Protocol tokens are increasingly becoming available cross-chain. For example, Uniswap’s UNI exists on Ethereum, Polygon and Base among others. <b>With shared-state, apps can aggregate a member’s voting power across chains by reading and bundling his tokens.</b></p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-this-enables">🌌 What this enables:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#-what-this-enables" class="hash-link" aria-label="Direct link to 🌌 What this enables:" title="Direct link to 🌌 What this enables:" translate="no">​</a></h4>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
 <ul>
-<li class="">DAOs can launch tokens <b>across multiple chains</b> without fracturing governance.</li>
-<li class="">The community can participate in decentralized decision-making through <b>cross-chain coordination</b> (e.g. delegated votes, comments on proposals, commitment pools, temperature checks etc.)</li>
+<li class="">Outcome resolution requires trustless cross-chain settlement proofs.</li>
+<li class="">Shared-state provides the single source of truth for all prediction pools.</li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-1">🤔Why it needs shared-state:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-1" class="hash-link" aria-label="Direct link to 🤔Why it needs shared-state:" title="Direct link to 🤔Why it needs shared-state:" translate="no">​</a></h4>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-competitive-cross-chain-gaming">🎮 Competitive Cross-Chain Gaming<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#-competitive-cross-chain-gaming" class="hash-link" aria-label="Direct link to 🎮 Competitive Cross-Chain Gaming" title="Direct link to 🎮 Competitive Cross-Chain Gaming" translate="no">​</a></h2>
+<p><strong>Shared-state makes “chain wars” real.</strong><br>
+<!-- -->Players from any blockchain ecosystem can come together to play, <strong>or bet against</strong> each other through Push Chain’s shared settlement layer.</p>
+<p>Imagine <strong>Universal Chess</strong> tournaments between Ethereum and Solana communities, with cross-chain wagers for spectators and NFTs for players.</p>
+<p>Now extend that to Poker, Blackjack, RPGs, or shooters. All accessible to every chain’s user base.</p>
+<p>By removing UX friction and asset fragmentation, <strong>Push Chain lets gamers bring their chain-specific identities into chain-neutral playgrounds.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Third Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image3-13516c7df773f42da08f7d685b56a96d.webp" width="1920" height="800" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-1">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-1" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
 <ul>
-<li class="">‘Voting power’ is a combined function of a protocol’s real and synthetic assets held across chains.</li>
+<li class="">Game developers can build once and reach the entire Web3 player base.</li>
+<li class="">Chain-agnostic onboarding: users join from any wallet, on any chain.</li>
+<li class="">True multiplayer universality: players from different chains share the same game state.</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-universal-ai-agents">3) Universal AI Agents:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#3-universal-ai-agents" class="hash-link" aria-label="Direct link to 3) Universal AI Agents:" title="Direct link to 3) Universal AI Agents:" translate="no">​</a></h3>
-<p>Shared state capabilities of Push Chain act as the missing coordination layer for enabling universal AI agents to operate across multiple independent chains autonomously, reliably, and with a unified memory.</p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-1">🌌What this enables:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-1" class="hash-link" aria-label="Direct link to 🌌What this enables:" title="Direct link to 🌌What this enables:" translate="no">​</a></h4>
-<p>Build <b>chain-agnostic AI agents</b> that can:</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-1">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-1" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
 <ul>
-<li class="">Read user states, assets, activities, and preferences across all chains.</li>
-<li class="">Act on behalf of users without needing users to bridge, switch wallets, or manually interact with dApps.</li>
-<li class="">Maintains a <b>persistent universal context</b> across chains, apps, and experiences.</li>
+<li class="">Chain-neutral playgrounds require synchronized player states in a trusted environment.</li>
+<li class="">Without shared-state, every game would need custom bridges and sync contracts which are expensive, risky, and UX-breaking.</li>
 </ul>
-<b>Ex: Personal Finance Assistant Agent:</b>
-<p><img decoding="async" loading="lazy" alt="Fourth Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-4-e8a243b470e36afdfc10986d15a7ffef.webp" width="1600" height="1551" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-universal-safes-multi-chain-vaults">🛡️ Universal Safes (Multi-Chain Vaults)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#%EF%B8%8F-universal-safes-multi-chain-vaults" class="hash-link" aria-label="Direct link to 🛡️ Universal Safes (Multi-Chain Vaults)" title="Direct link to 🛡️ Universal Safes (Multi-Chain Vaults)" translate="no">​</a></h2>
+<p>Managing assets across chains is a logistical nightmare. You go through multiple wallets, manual bridges, and fragmented balances.</p>
+<p><strong>Shared-state enables safes with multi-chain signers</strong> create chain-agnostic vaults that can pool and use assets across all chains.</p>
+<p>Push Chain turns fragmented treasuries into a single, interoperable system for DAOs, funds, or families.</p>
+<p><img decoding="async" loading="lazy" alt="Fifth Image" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image6-3a46fe6861eb2726fc42ff22d18f4caa.webp" width="1600" height="900" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-2">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-2" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unified-asset-management">Unified Asset Management<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#unified-asset-management" class="hash-link" aria-label="Direct link to Unified Asset Management" title="Direct link to Unified Asset Management" translate="no">​</a></h4>
 <ul>
-<li class="">Reads the user's balances across Ethereum, Arbitrum, Optimism, and Solana.</li>
-<li class="">Notices idle assets on Base and recommends moving them into a higher-yield protocol on Polygon.</li>
-<li class="">Automatically constructs and <b>executes a cross-chain investment action</b> via Push Chain's universal validators.</li>
+<li class="">Deposit assets from any chain into a single safe and view the total portfolio in real time.</li>
+<li class="">DAOs or funds manage cross-chain treasuries without bridging or chain-specific multisigs.</li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-2">🤔Why it needs shared-state:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-2" class="hash-link" aria-label="Direct link to 🤔Why it needs shared-state:" title="Direct link to 🤔Why it needs shared-state:" translate="no">​</a></h4>
+<p><strong>Conditional Cross-Chain Spending</strong></p>
 <ul>
-<li class="">Unified State Access: AI agents need real-time visibility into user balances, transactions, and positions <b>across all chains.</b></li>
+<li class="">Define rules like: “Allow withdrawals only if 3/5 signers approve and under 10% of TVA.”</li>
+<li class="">Automate rebalancing (“If Base assets drop 20%, sell Solana to restore ratio”).</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-universal-multi-chain-safes">4) Universal (Multi-chain) Safes<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#4-universal-multi-chain-safes" class="hash-link" aria-label="Direct link to 4) Universal (Multi-chain) Safes" title="Direct link to 4) Universal (Multi-chain) Safes" translate="no">​</a></h3>
-<p>Today, managing assets across multiple chains is a logistical nightmare.</p>
-<p>Users must juggle separate wallets, track balances individually, and manually bridge funds — a process that’s both error-prone and inefficient. While ‘safes’ are a reliable way for groups to pool and manage assets (e.g. for DAOs, investment clubs, or even families), they face additional challenges due to multisig barriers.</p>
-<p>Shared-state solves this by enabling <b>safes with multi-chain signers</b>, i.e. chain-agnostic vaults that can natively pool, manage and utilise assets across all chains.</p>
-<p>This turns the chaos of fragmented assets into a streamlined, interoperable system — for individuals, DAOs, and institutions. With shared-state, Push Chain makes cross-chain asset-management as simple as using a single shared wallet.</p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-it-enables">🌌 What it enables:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#-what-it-enables" class="hash-link" aria-label="Direct link to 🌌 What it enables:" title="Direct link to 🌌 What it enables:" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unified-asset-management">Unified Asset Management<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#unified-asset-management" class="hash-link" aria-label="Direct link to Unified Asset Management" title="Direct link to Unified Asset Management" translate="no">​</a></h5>
+<p><strong>Shared Ownership &amp; Recovery</strong></p>
 <ul>
-<li class="">Users can deposit assets from any chain (e.g., ETH on Ethereum, SOL on Solana, GNO on Gnosis) into a single safe, with real-time visibility of their total portfolio.</li>
-<li class="">Groups (DAOs, hedge funds, guilds) can collectively manage cross-chain treasuries without requiring manual bridging or chain-specific multisigs.</li>
+<li class="">Hold ETH on Ethereum, stSOL on Solana, USDC on Base — same safe, same rules.</li>
+<li class="">Cross-chain inheritance and social recovery become native features.</li>
 </ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conditional-cross-chain-spending">Conditional Cross-Chain Spending<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#conditional-cross-chain-spending" class="hash-link" aria-label="Direct link to Conditional Cross-Chain Spending" title="Direct link to Conditional Cross-Chain Spending" translate="no">​</a></h5>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-2">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-2" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
 <ul>
-<li class="">Define rules like: "Allow withdrawals only if 3/5 signers approve, and only up to 10% of the safe's TVA (Total Value Across chains)."</li>
-<li class="">Automate cross-chain rebalancing (e.g., "If $CLANKER on Base drops below 20% of the safe's TVA, sell $TRUMP on Solana to equalize").</li>
+<li class="">Spending rules need atomic cross-chain verification.</li>
+<li class="">Recovery logic demands multi-chain activity checks before triggering fail-safes.</li>
 </ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="shared-ownership-without-bridging">Shared Ownership Without Bridging<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#shared-ownership-without-bridging" class="hash-link" aria-label="Direct link to Shared Ownership Without Bridging" title="Direct link to Shared Ownership Without Bridging" translate="no">​</a></h5>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-ai-agents">🤖 Universal AI Agents<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#-universal-ai-agents" class="hash-link" aria-label="Direct link to 🤖 Universal AI Agents" title="Direct link to 🤖 Universal AI Agents" translate="no">​</a></h2>
+<p>AI agents are the next major wave, but they’re currently trapped inside single ecosystems.</p>
+<p>Push Chain’s shared-state gives them the <strong>coordination layer</strong> to operate across all chains autonomously, with a unified memory.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-3">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-3" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<p>Build <strong>chain-agnostic AI agents</strong> that:</p>
 <ul>
-<li class="">A DAO can hold ETH on Ethereum, stSOL on Solana, and USDC on Base — all in the same safe, governed by the same rules.</li>
-<li class="">Families or investment clubs can pool assets across chains while maintaining granular permissions (e.g., "Kids can only spend from the Optimism portion").</li>
+<li class="">Reads users’ cross-chain history and collates data from all their interactions across chains.</li>
+<li class="">Act on behalf of users with no bridges or wallet switching.</li>
+<li class="">Able to leverage a universal x402 payment interface when needed.</li>
+<li class="">Maintain a <strong>persistent universal context</strong> across apps and networks.</li>
 </ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cross-chain-inheritance--recovery">Cross-Chain Inheritance &amp; Recovery<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#cross-chain-inheritance--recovery" class="hash-link" aria-label="Direct link to Cross-Chain Inheritance &amp; Recovery" title="Direct link to Cross-Chain Inheritance &amp; Recovery" translate="no">​</a></h5>
+<p><strong>Example — Personal Finance Assistant Agent:</strong><br>
+<img decoding="async" loading="lazy" alt="Fourth Image" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image4-e8a243b470e36afdfc10986d15a7ffef.webp" width="1600" height="1551" class="img_ev3q"></p>
 <ul>
-<li class="">Set up programmable inheritance (e.g., "If inactive for 12 months, transfer all assets — regardless of chain — to this backup wallet").</li>
-<li class="">Social recovery mechanisms can pull verification from multiple chains (e.g., "Recover safe if 5/7 friends from Ethereum, Solana, and Polygon sign").</li>
+<li class="">Reads the user’s balances across Ethereum, Arbitrum, Optimism, and Solana (off chain).</li>
+<li class="">Spots idle assets on Base and reallocates them to Polygon for higher yield.</li>
+<li class="">Executes cross-chain actions autonomously via Push Chain’s universal validators.</li>
 </ul>
-<p><img decoding="async" loading="lazy" alt="Fifth Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-5-48b511f626359221448f3318697630f8.webp" width="1474" height="626" class="img_ev3q"></p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-3">Why it needs shared-state:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-3" class="hash-link" aria-label="Direct link to Why it needs shared-state:" title="Direct link to Why it needs shared-state:" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="real-time-portfolio-tracking">Real-Time Portfolio Tracking<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#real-time-portfolio-tracking" class="hash-link" aria-label="Direct link to Real-Time Portfolio Tracking" title="Direct link to Real-Time Portfolio Tracking" translate="no">​</a></h5>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-3">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-3" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
 <ul>
-<li class="">A safe’s TVA (Total Value Across chains) can only be calculated if the contract can read balances from all connected chains.</li>
-<li class="">Without shared-state, we’d need to manually bridge assets to a single chain—defeating the purpose of a true ‘multi-chain’ safe.</li>
+<li class="">AI agents need real-time visibility into user activity across all chains to act safely and intelligently.</li>
 </ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cross-chain-transaction-execution">Cross-Chain Transaction Execution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#cross-chain-transaction-execution" class="hash-link" aria-label="Direct link to Cross-Chain Transaction Execution" title="Direct link to Cross-Chain Transaction Execution" translate="no">​</a></h5>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-multichain-daos">🏛️ Multichain DAOs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#%EF%B8%8F-multichain-daos" class="hash-link" aria-label="Direct link to 🏛️ Multichain DAOs" title="Direct link to 🏛️ Multichain DAOs" translate="no">​</a></h2>
+<p>DAO governance today is fragmented. The same token exists on multiple chains but voting power doesn’t unify.</p>
+<p>With shared-state, <strong>Push Chain aggregates a member’s voting weight across all chains</strong> by reading and bundling token holdings into one coherent state.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-4">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-4" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
 <ul>
-<li class="">Spending from a multi-chain safe requires verifying ownership and permissions across chains (e.g., "Does this wallet have approval on Ethereum to trigger a withdrawal on Solana?").</li>
-<li class="">Shared-state enables this via atomic cross-chain actions (e.g., selling ETH on Arbitrum to buy SOL on Solana in one transaction).</li>
+<li class="">DAOs can launch tokens <strong>on multiple chains</strong> without fracturing governance.</li>
+<li class="">Unified voting and proposal systems. cross-chain delegation, comments, and commitment pools.</li>
+<li class="">True community coordination across ecosystems.</li>
 </ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="dynamic-rule-enforcement">Dynamic Rule Enforcement<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#dynamic-rule-enforcement" class="hash-link" aria-label="Direct link to Dynamic Rule Enforcement" title="Direct link to Dynamic Rule Enforcement" translate="no">​</a></h5>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-4">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-4" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
 <ul>
-<li class="">Conditions like "Only spend if the safe’s total stablecoin holdings exceed $1M" require aggregating balances from multiple chains.</li>
-<li class="">Recovery mechanisms need to verify on-chain activity (e.g., "Check last transaction timestamps on all chains before triggering inheritance").</li>
+<li class="">Voting power depends on real + synthetic assets across chains.</li>
+<li class="">Shared-state lets governance contracts read all balances in real time, without bridges or manual syncs.</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-embeddable-prediction-markets">5) Embeddable Prediction Markets<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#5-embeddable-prediction-markets" class="hash-link" aria-label="Direct link to 5) Embeddable Prediction Markets" title="Direct link to 5) Embeddable Prediction Markets" translate="no">​</a></h3>
-<p>Prediction markets are great tools for building alignment, coordination and conviction within groups. They can unlock a bunch of utility when combined with other on-chain activities such as DeFi, voting, gaming and content creation.</p>
-<p>Today, however, they operate as isolated betting shops which are limited to specific chains, acceptable tokens and capacity to verify events (off or on-chain).</p>
-<b>Shared-state changes all of this.</b>
-<p>Push Chain enables <b>universally embeddable prediction markets</b> that can be attached to any cross-chain app, game, or event and can be used by users from any chain and any token.</p>
-<p>Seamless routing liquidity across chains, without bridging.</p>
-<p>Thus, turning fragmented cross-chain activities into a unified playground for probabilistic thinking.</p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-2">🌌What this enables:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-2" class="hash-link" aria-label="Direct link to 🌌What this enables:" title="Direct link to 🌌What this enables:" translate="no">​</a></h4>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="app-based-prediction-widgets-developers-can-create-internal-markets-that-can-be-attached-to-any-cross-chain-app-game-or-events">App-based prediction widgets: developers can create internal markets that can be attached to any cross-chain app, game, or events:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#app-based-prediction-widgets-developers-can-create-internal-markets-that-can-be-attached-to-any-cross-chain-app-game-or-events" class="hash-link" aria-label="Direct link to App-based prediction widgets: developers can create internal markets that can be attached to any cross-chain app, game, or events:" title="Direct link to App-based prediction widgets: developers can create internal markets that can be attached to any cross-chain app, game, or events:" translate="no">​</a></h5>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game-">End Game 🌍<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#end-game-" class="hash-link" aria-label="Direct link to End Game 🌍" title="Direct link to End Game 🌍" translate="no">​</a></h2>
+<p>Push Chain’s shared-state architecture delivers <strong>the universal blockchain trifecta</strong>. Unifying users, developers, and data in one layer.</p>
+<p>For <strong>users</strong>, it means seamless cross-chain interaction. No bridges. No fragmentation. Full control.<br>
+<!-- -->For <strong>developers</strong>, it means one deployment that speaks to every chain in existence.</p>
+<p><strong>Seriously — why build for one chain, when you can build for them all?</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
 <ul>
-<li class="">e.g.: during a board/card game on one chain, a widget allows viewers from any chain to create ‘internal bets’:
-a. on the outcome of the game,
-b. on specific moves/cards,</li>
-</ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="event-driven-derivatives-time-sensitive-markets-that-spin-up-whenever-certain-conditions-are-met">Event-driven derivatives: time-sensitive markets that spin up whenever certain conditions are met:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#event-driven-derivatives-time-sensitive-markets-that-spin-up-whenever-certain-conditions-are-met" class="hash-link" aria-label="Direct link to Event-driven derivatives: time-sensitive markets that spin up whenever certain conditions are met:" title="Direct link to Event-driven derivatives: time-sensitive markets that spin up whenever certain conditions are met:" translate="no">​</a></h5>
-<ul>
-<li class="">e.g. for the duration of Trump’s golf game, will the price of $Trump rise or fall? (Such a market can be programmed to spin up automatically on credible news of Trump playing golf, and disappear when the game ends).</li>
-</ul>
-<h5 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="deeper-community-engagement-local-prediction-markets-embedded-in-apps--high-engagement-attraction">Deeper community engagement: Local prediction markets embedded in apps = high engagement attraction.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#deeper-community-engagement-local-prediction-markets-embedded-in-apps--high-engagement-attraction" class="hash-link" aria-label="Direct link to Deeper community engagement: Local prediction markets embedded in apps = high engagement attraction." title="Direct link to Deeper community engagement: Local prediction markets embedded in apps = high engagement attraction." translate="no">​</a></h5>
-<p><img decoding="async" loading="lazy" alt="Sixth Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image-6-7e85564cf58113d1d5892ba66b6af2f9.webp" width="1600" height="900" class="img_ev3q"></p>
-<b>🤔Why it needs shared-state:</b>
-<ul>
-<li class="">Markets must read real-time data from multiple chains (DEX volumes, social data, oracles).</li>
-<li class=""><b>Cross-chain settlement proofs</b> are required to resolve outcomes trustlessly.</li>
-<li class="">Dynamic odds calculation requires unified liquidity across all prediction pools.</li>
-</ul>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game">End Game<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/#end-game" class="hash-link" aria-label="Direct link to End Game" title="Direct link to End Game" translate="no">​</a></h2>
-<p>Push Chain’s shared-state architecture finally delivers <b>the universal blockchain trifecta</b> — unifying user needs, developer needs, and cross-chain data unification – all in a single layer.</p>
-<p>For users, it leads to seamless cross-chain interactions: no more juggling bridges, fragmented balances or chain-locked assets. Your entire on-chain identity — DeFi positions, NFTs, agentic memories, game assets etc. — becomes portable and composable across all networks.</p>
-<p>For developers, shared-state unlocks an entirely new paradigm: read and unify fragmented assets without worrying about latency, cost, security or interoperability.</p>
-<b><p>Seriously.. <br>
-Why build for one chain <br>
-When you could build for them all? <br></p></b>]]></content:encoded>
+<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> for updates</li>
+<li class="">Explore <a href="https://push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
+<li class="">Visit the <a href="https://push.org/knowledge/" target="_blank" rel="noopener noreferrer" class="">Knowledge Base</a></li>
+<li class="">Check out <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">Universal Apps live on Push</a></li>
+</ul>]]></content:encoded>
             <category>Push Chain</category>
             <category>Shared App Experience</category>
             <category>Universal Apps</category>
@@ -758,218 +735,162 @@ When you could build for them all? <br></p></b>]]></content:encoded>
             <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[Apps Possible Only with Shared State - Vol.1]]></description>
             <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Apps Possible Only with Shared State - Vol.1" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-d9ca0c0401c3312a24a50a3b443c063f.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Crypto has come a long way.
-And so has the extent of innovations that continue to make this space more adaptive, smooooth and fun!</p>
-<p>Here are 5 super innovative use cases the industry could immensely benefit from using Shared State chains like Push Chain.</p>
-<p>These use cases cover various bases, including but not limited to Defi, Degen Defi(iykyk), Art, Airdrops, DAOs and even Gaming.</p>
+<p>Crypto has evolved... <strong>fast</strong>. But even after a decade, apps and users still live inside isolated chain silos.</p>
+<p><strong>Push Chain’s shared-state architecture changes that, forever!</strong></p>
+<p>Here are <strong>5 breakthrough use cases</strong> that become possible only <strong>with shared-state blockchains</strong> like Push Chain.</p>
+<p>These use cases cover various bases, including but not limited to Defi, Degen Defi(iykyk), Airdrops, NFTs and Gaming that actually live across chains.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is an all-purpose universal chain that unites every existing and forthcoming chain together (under one roof).</p>
-<p><strong>It is a shared-state L1 blockchain designed to function as a universal app layer for users across any chain, any wallet and any app.</strong></p>
-<p>Combining this with the innovation of cross-chain fees and wallet abstraction, what you get is a <strong>blockchain able to read any other chain and… is accessible by users from any chain.</strong></p>
-<p><img decoding="async" loading="lazy" alt="push chain vein diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image1-cd596484c7f06eaa8ef9c27a95f8b8ec.webp" width="1394" height="1156" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-a-shared-state-blockchain">What is a 'shared state' blockchain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#what-is-a-shared-state-blockchain" class="hash-link" aria-label="Direct link to What is a 'shared state' blockchain?" title="Direct link to What is a 'shared state' blockchain?" translate="no">​</a></h2>
-<p><img decoding="async" loading="lazy" alt="shared state overview" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image2-ab926e71982b6721fcec2bc71f744803.webp" width="1601" height="900" class="img_ev3q"></p>
-<p>At its core, a blockchain maintains a database tracking the state of all wallets and smart contracts (token balances, data, code, etc.). But these states are siloed within their respective chains, even within the same ecosystem.</p>
-<p>For example, a wallet's ETH balance on Ethereum differs from its ETH balance on Base because each of these chains maintains its own state.</p>
-<p>For building universal apps we need to:</p>
-<ul>
-<li class=""><strong>Read</strong> states from other chains (e.g., balances, smart contract data).</li>
-<li class=""><strong>Write</strong> to all chains, and</li>
-<li class=""><strong>Support</strong> <strong>wallets</strong> across all networks.</li>
-</ul>
-<p>The first of these innovations -- i.e. the ability of developers on Push Chain <em>to read and utilise the state of other chains</em> via smart contracts -- is what we mean by a <strong>shared-state blockchain</strong>.</p>
+<p>Push Chain is a shared-state universal blockchain designed to eliminate fragmentation across all chains (EVM + non-EVM).</p>
+<p><strong>Developers deploy once</strong> and instantly become compatible with every chain.
+<strong>Users interact</strong> with the same app no matter the chain they come from, using any token or wallet.</p>
+<p>This results in a <strong>shared-state world</strong> where apps, data, and users exist seamlessly across ecosystems.</p>
+<p><img decoding="async" loading="lazy" alt="push chain vein diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image1-0c3165163647f9ea3aac0cc4e39afa31.webp" width="1394" height="1116" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-kind-of-apps-does-this-enable">What kind of apps does this enable?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#what-kind-of-apps-does-this-enable" class="hash-link" aria-label="Direct link to What kind of apps does this enable?" title="Direct link to What kind of apps does this enable?" translate="no">​</a></h2>
 <p><img decoding="async" loading="lazy" alt="movie reference 1" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image3-e803bbd60903fd746ece4e376b4d6a98.webp" width="1920" height="800" class="img_ev3q"></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-universal-defi--payments">1. Universal DeFi &amp; Payments<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#1-universal-defi--payments" class="hash-link" aria-label="Direct link to 1. Universal DeFi &amp; Payments" title="Direct link to 1. Universal DeFi &amp; Payments" translate="no">​</a></h3>
+<p>Universal chain resolves a ton of issues that exist today in the crypto space and opens up exciting new possibilities.</p>
+<ul>
+<li class="">It enables apps to be available to users of any chain effortlessly, massively helping your app get to user base and community of every chain at once.</li>
+<li class="">It allows <strong>users</strong> to interact with your app using any token and wallet of their choice, uplifting the user experience.</li>
+<li class="">It allows <strong>developers</strong> to deploy once and dramatically reduce the complexities, engineering delays and cost of deploying on multiple chains.</li>
+<li class="">It opens up new paradigms for apps where users of chains come together and engage, or compete with each other.</li>
+</ul>
+<p>Let's look at some examples of how this can be used.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-defi">💧 Universal DeFi<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#-universal-defi" class="hash-link" aria-label="Direct link to 💧 Universal DeFi" title="Direct link to 💧 Universal DeFi" translate="no">​</a></h2>
 <p>DeFi today is fractured by:</p>
 <ol>
 <li class="">chain-bound liquidity,</li>
 <li class="">cumbersome bridging,</li>
-<li class="">and inconsistent pricing.</li>
+<li class="">and fragmented pools split across chains.</li>
 </ol>
-<p>Our shared-state model tackles these problems by <strong>unifying access to assets and data across all networks.</strong></p>
-<p><strong>For example:</strong></p>
-<p>Using cross-chain price oracles, our apps can aggregate real-time ETH/USD rates from Ethereum, Solana and Base, creating a more robust and manipulation-resistant feed. This ensures fair and accurate pricing data for both DeFi and payments.</p>
-<p>Similarly, shared-state enables <strong>universal payment executors</strong> that can combine a payee’s balances from different chains, and calculate optimum routes for fulfilling merchant requests irrespective of the chain they’re on.</p>
+<p>This causes a lot of issues even if you are not a DeFi degen.</p>
+<ul>
+<li class="">📉 Yields tank in shallow pools (your $ earning 2% vs. 5% in an ocean)</li>
+<li class="">💸 Swaps cost extra (slippage + fees = 1–3% gone)</li>
+<li class="">⛔ Capital's stuck (bridge waits = hours of opportunity lost)</li>
+</ul>
+<p>The best way to imagine this is by understanding how liquidity is currently fragmented.</p>
+<p>Currently the same USDT on Solana and Ethereum are seen as two different assets which means that they have their own liquidity pools. Now think about the 50+ chains out there, each running their own liquidity pools for the same asset. This is a total mess.</p>
+<p><strong>Push Chain solves this</strong> by <strong>unifying access to assets and data across all chains</strong> and using the unified liquidity to ensure:</p>
+<p><img decoding="async" loading="lazy" alt="Liquidity so fragmented that it can&amp;#39;t walk straight" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image4-0c5cada5b3e837d0c34d986d7dd6ee71.webp" width="1600" height="900" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-lending-protocol">Universal Lending Protocol<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-lending-protocol" class="hash-link" aria-label="Direct link to Universal Lending Protocol" title="Direct link to Universal Lending Protocol" translate="no">​</a></h3>
+<p>Having a universal lending protocol means a singular universal liquidity pool that can be accessed by any chain is the future of DeFi.</p>
+<p>→ One massive liquidity pool (not dozens of tiny ones)<br>
+→ Any chain, any trusted stablecoin forming unified seamless experience<br>
+→ And Universal DeFi that is accessible by any users of any chain 😱<br></p>
+<p>Did we just unlock DeFi 3.0?</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-payments">💸 Universal Payments<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#-universal-payments" class="hash-link" aria-label="Direct link to 💸 Universal Payments" title="Direct link to 💸 Universal Payments" translate="no">​</a></h2>
 <p>In the traditional web3 world, if a payee (like a merchant) wants to receive a payment, they usually specify:</p>
 <ul>
 <li class="">A chain (e.g. “Send to Ethereum”),</li>
 <li class="">A token (e.g. “Send USDC”), and</li>
 <li class="">An address (e.g. their ETH address).</li>
 </ul>
-<p><strong>This limits:</strong></p>
+<p>But this is terrible for users and merchants as this limits:</p>
 <ol>
-<li class="">Which chain the payer can use.</li>
-<li class="">What token they must use.</li>
-<li class="">Operational comfort that forces bridging or manual swaps.</li>
+<li class="">Which chain the payer can use</li>
+<li class="">What token they must use</li>
+<li class="">Operational comfort that forces bridging or manual swaps</li>
 </ol>
-<p><strong>What this enables</strong></p>
+<p>This is the opposite of making payments seamless for the end-user so that service providers can focus on their core value proposition.</p>
+<p><strong>Push Chain solves this</strong> by enabling <strong>universal fee and wallet abstraction</strong> giving the user the comfort of paying from any chain and in any token.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stripe-like-cross-chain-payments">Stripe-like Cross-Chain Payments<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#stripe-like-cross-chain-payments" class="hash-link" aria-label="Direct link to Stripe-like Cross-Chain Payments" title="Direct link to Stripe-like Cross-Chain Payments" translate="no">​</a></h3>
+<p>A universal payment system that gives user the flexibility to pay from any chain is now possible with Push eliminating the need for bridging or manual swaps.</p>
+<p>We can even expand this further through a universal smart contract on Push Chain that can take payment from any token and use an AMM to convert it to the desired token.</p>
+<p>This results in fluid payments where users can pay from any chain and any token.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-tipping">Universal Tipping<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-tipping" class="hash-link" aria-label="Direct link to Universal Tipping" title="Direct link to Universal Tipping" translate="no">​</a></h3>
+<p>A universal tipping service can also be made possible using the same concepts. This competes with the likes of payment providers of web2 where in the service providers adapts to the user needs and not the other way around.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-any-stablecoin-yields">🌾 Any Stablecoin Yields<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#-any-stablecoin-yields" class="hash-link" aria-label="Direct link to 🌾 Any Stablecoin Yields" title="Direct link to 🌾 Any Stablecoin Yields" translate="no">​</a></h2>
+<p>With current chains, a user is limited to specific blockchain ecosystem to take advantage of the yield offerings. Most of the time, the yields are not attracting enough or the APYs keep on shifting from one chain to another.</p>
+<p>This handicaps the users as they either need to:</p>
+<ol>
+<li class="">Lose self custody of the funds and trust centralized parties to earn best yields (which rarely ends well)</li>
+<li class="">Learn bridging, multiple chain standards (incase hopping to non-EVMs) and other complex topics to earn best yields</li>
+<li class="">Be stuck with sub-standard payloads</li>
+</ol>
+<p><strong>Push Chain solves this</strong> with the ability to <strong>move funds from any chain</strong> to Push and even move them out to any other chain and deposit in a contract. All done with a <strong>single transaction</strong>.</p>
+<p>This allows the user to execute the most profitable staking transactions across any network without worrying about native reconversions or swaps.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-yield-aggregators">Universal Yield Aggregators<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-yield-aggregators" class="hash-link" aria-label="Direct link to Universal Yield Aggregators" title="Direct link to Universal Yield Aggregators" translate="no">​</a></h3>
+<p>A universal smart contract that is able to get funds from users of any chain and logic to determine and move funds from one chain to other would result in the most optimal yield bearing products.</p>
+<p>One that is both secure and earning the highest APYs as</p>
 <ul>
-<li class="">
-<p><strong>Stripe-like cross-chain payments:</strong></p>
-<ul>
-<li class="">e.g. payee’s wallet can read real-time asset values from multiple sources and pool them for atomic settlement.</li>
-</ul>
-<p><img decoding="async" loading="lazy" alt="cross chain payments overview" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image4-d21e9d955f4096dae55bd1415d69cd9d.webp" width="1601" height="1551" class="img_ev3q"></p>
-</li>
-<li class="">
-<p>Seamless cross-chain trades with novel features like:</p>
-<ul>
-<li class=""><strong>Collateral management</strong>
-<ul>
-<li class="">e.g. a user opens a leveraged position on Solana using ETH as collateral, but he also has some ETH on other chains like Arbitrum and BNB.</li>
-<li class="">A shared-state app can read its balances and combine them to create a <strong>unified collateral</strong> <strong>pool,</strong> which can be used across all chains without bridging.</li>
-</ul>
-</li>
-<li class=""><strong>Liquidation protection</strong>
-<ul>
-<li class="">e.g. if the ETH price drops by a higher percentage on Solana compared to other chains, a <strong>shared-state liquidation protector</strong> can:<!-- -->
-<ul>
-<li class="">Unlock balances on Arbitrum and BNB to balance the trade, and/or</li>
-<li class="">Consult other sources (DEXes, oracles etc.) to calculate the average drop and forestall a liquidation event.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>Why it needs shared-state</strong></p>
-<ul>
-<li class="">Payment routing requires real-time asset and price checks across chains.</li>
-<li class="">Finding and executing an optimal payment route across payers' wallets from different chains requires reading all the states.</li>
-<li class="">Collateral managers and liquidation protectors cannot link different balances to the same user without fetching the state.</li>
-<li class="">Price oracles need to aggregate and verify data from multiple sources.</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-yield-aggregators">2. Yield Aggregators<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#2-yield-aggregators" class="hash-link" aria-label="Direct link to 2. Yield Aggregators" title="Direct link to 2. Yield Aggregators" translate="no">​</a></h3>
-<p>Shared-state apps built on Push Chain can also function as <strong>universal yield aggregators</strong>. They can collect and show APYs from various chains, allowing the user to execute the most profitable staking transactions across any network without worrying about native reconversions or swaps.</p>
-<p><strong>What this enables</strong></p>
-<ul>
-<li class="">Users are no longer tied to a particular blockchain or ecosystem to earn yields on their stablecoins or assets (whether native or foreign). True unchained universal yields.</li>
+<li class="">Users are no longer tied to a particular blockchain or ecosystem to earn yields on their stablecoins or assets (whether native or foreign).</li>
 <li class="">Their <strong>aggregated yield routing</strong> enables optimal capital allocation across protocols, minimizing fragmentation and maximizing APY</li>
-<li class=""><strong>Universal Liquid Staking Tokens</strong> (ULSTs) can be created by combining and/or hybridizing existing ones (e.g. stETH, rETH, mSOL).</li>
+<li class=""><strong>Universal Liquid Staking Tokens</strong> (ULSTs) can be created by combining and/or hybridizing existing ones (e.g. stETH, rETH, mSOL)</li>
 </ul>
 <p><img decoding="async" loading="lazy" alt="movie reference 2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image5-eb151320a4fc4f3597278ba6ffdf0f55.webp" width="1920" height="800" class="img_ev3q"></p>
-<p><strong>Why it needs shared-state</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-token-swaps">💫 Universal Token Swaps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#-universal-token-swaps" class="hash-link" aria-label="Direct link to 💫 Universal Token Swaps" title="Direct link to 💫 Universal Token Swaps" translate="no">​</a></h2>
+<p>Currently, ‘trading pairs’ on DEXes are limited to recognized tokens, which leads to several limitations:</p>
 <ul>
-<li class="">Yields are a dynamic function of various on-chain data points (e.g. total staked supply, network inflation rules, validator slashing and reward metrics, gas fees and MEV protections). Their aggregation is impossible without accurate and verifiable cross-chain read capabilities.</li>
-<li class="">Combined capital and ULSTs require proof of ownership of underlying assets.</li>
+<li class="">They only allow swaps for tokens available on their chain</li>
+<li class="">It forces users to move from chains if they want a token of a particular project ($XYZ on ABC chain)</li>
+<li class="">The problem further amplifies if the user has different wallet (ie: Ethereum users wanting to but $TRUMP)</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-customizable-universal-exchanges">3. Customizable Universal Exchanges<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#3-customizable-universal-exchanges" class="hash-link" aria-label="Direct link to 3. Customizable Universal Exchanges" title="Direct link to 3. Customizable Universal Exchanges" translate="no">​</a></h3>
-<p>A customizable universal exchange is one where you can trade any asset (fungible or non-fungible) against any other asset on any chain, with no need for both assets to exist in the same chain.</p>
-<p>Currently, ‘trading pairs’ on exchanges are limited to recognized tokens, which have two limitations:</p>
+<p>This leads the users to resort to central exchanges losing control of their assets as a trade-off to trade tokens they want on any chain but that comes up:</p>
+<ol>
+<li class="">Losing custody of your funds</li>
+<li class="">You only trade what exchanges deem to be <strong>token worthy</strong></li>
+<li class="">The trade is mapped 1:1 and with whitelisted pairs, <strong>no programmable fluidity</strong></li>
+</ol>
 <ul>
-<li class="">It adds a permissioning layer (good from a security perspective, but limits censorship resistance);</li>
-<li class="">In an age where everything is being ‘tokenized’, it is necessary to create permissionless exchanges for customizable trading pairs.</li>
+<li class="">For example: you can only trade $ALPHA token with $USDT, not with $UNI or any valuable NFTs or a combination of both</li>
 </ul>
-<p><strong>What this enables</strong></p>
-<ul>
-<li class="">With shared-state, apps can let users create their own custom exchange options, like an <strong>e-bay for on-chain assets:</strong>
+<p><strong>Push Chain solves this</strong> as it enables the user's <strong>wallet to be cross chain compatible</strong> and allows <strong>any chain / any token transaction</strong>. This means that the user, from the comfort of their source chain, natively controls and swaps tokens available across crypto.</p>
+<p>A decentralized experience that finally rivals centralized experience. All the while ensuring that you are always in control.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-swaps-decexs">Universal Swaps (DECEXs?)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-swaps-decexs" class="hash-link" aria-label="Direct link to Universal Swaps (DECEXs?)" title="Direct link to Universal Swaps (DECEXs?)" translate="no">​</a></h3>
+<p>Just by deploying a simple fork of an AMM, or innovating your own fun (that's always fun) on Push Chain instantly gives you access to <strong>users of every chain</strong> and <strong>assets of every chain</strong>.</p>
+<p>With few steps to combine the liquidity moved. This unlocks a decentralized experience that rivals and will become the future for crypto trading.</p>
+<p>Think Uniswap, Jupiter, or 1inch, but natively cross-chain and fully decentralized.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="barter-swaps">Barter Swaps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#barter-swaps" class="hash-link" aria-label="Direct link to Barter Swaps" title="Direct link to Barter Swaps" translate="no">​</a></h3>
+<p>Since swaps are now universal and can be done from any chain. You can further extend this programmability by having swaps that behave like a barter. For instance:</p>
 <ul>
 <li class="">e.g. “willing to sell pudgy penguin NFT#44 for 100,000 $SHIB”.</li>
-<li class="">Buyers and sellers can be connected through <strong>intent matching games like a cross-chain asset barter system</strong>:<!-- -->
-<ul>
+<li class="">Buyers and sellers can be connected through <strong>cross-chain asset barter system</strong>:</li>
 <li class="">e.g. someone ‘willing to sell all his coins on Solana for two popular NFTs on Ethereum’ may be notified of the above trade</li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
 <p><img decoding="async" loading="lazy" alt="movie reference 3" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image6-cbf835e3a198ac004707a94343786dcc.webp" width="1920" height="800" class="img_ev3q"></p>
-<p><strong>Why it needs shared-state</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-digital-primitives">🌀 Universal Digital Primitives<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#-universal-digital-primitives" class="hash-link" aria-label="Direct link to 🌀 Universal Digital Primitives" title="Direct link to 🌀 Universal Digital Primitives" translate="no">​</a></h2>
+<p>Several digital primitives are out of reach for other ecosystems due to the inherent limitations of being deployed on isolated blockchains.</p>
+<p>This limits outreach as protocols are forced to only market their product to that blockchain. The chain's community subset can only ever be your outreach and marketing support.</p>
+<p>For instance, Airdrops are localized to a specific chain(Solana, Ethereum, Arbitrum etc). The eligibility checks usually work only within the chain of the drop.</p>
+<p>This can also be extended to Art, NFTs, Ticketing which can benefit immensely with wider reach but are left to market the chain in order to gain their share, resulting in a parasitic relation.</p>
+<p><strong>Push Chain solves this</strong> via the ability of <strong>inheriting every user of every chain natively</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-airdrop">Universal Airdrop<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-airdrop" class="hash-link" aria-label="Direct link to Universal Airdrop" title="Direct link to Universal Airdrop" translate="no">​</a></h3>
+<p>You can reward users across chains without increasing the friction for those users using merkle proofs and mapping different wallet addresses (EVM or non-EVM) to deterministic universal executor accounts (UEA).</p>
+<p>This results in users of any chain able to claim airdrop from their source chain wallet dramatically increasing your outreach to now all of crypto.</p>
+<p><strong>Cross-Chain Game Drop Example:</strong></p>
+<p>A project launches a new gaming token with the following eligibility conditions:</p>
 <ul>
-<li class="">Accurate intent matching can occur only when the app has a holistic view of all the assets held by both parties.</li>
-<li class="">Push Chain’s shared state module allows-<!-- -->
-<ul>
-<li class="">Read wallet balances, token IDs, traits, or metadata across chains.</li>
-<li class="">Validate offers without bridging or duplicating contracts on other chains.</li>
-<li class="">Coordinate solver execution for complex multi-chain settlement.</li>
-</ul>
-</li>
-</ul>
-<p><em>Want to experience Universal DEXs?</em></p>
-<p>*Stay tuned for <strong>Push Chain Testnet V1*</strong></p>
-<p><em>Coming very soon…</em></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-universal-airdrops">4 Universal Airdrops<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#4-universal-airdrops" class="hash-link" aria-label="Direct link to 4 Universal Airdrops" title="Direct link to 4 Universal Airdrops" translate="no">​</a></h3>
-<p>Traditionally, Airdrops are localized to a specific chain(Solana, Ethereum, Arbitrum etc). The eligibility checks usually work only within the chain of the drop.</p>
-<p>Shared-state chains like Push Chain allow us to query on-chain data from different chains, enabling the flexibility for crafting complex eligibility conditions spanning ecosystems, in a very convenient and unified manner.</p>
-<p><strong><em>For example:</em></strong></p>
-<p><strong>Cross-Chain Game Drop:</strong></p>
-<p>A project launches a new gaming token.</p>
-<p>Eligibility conditions:</p>
-<ul>
-<li class="">Played at least A,B,C games on Sonic SVM,</li>
+<li class="">Played at least A,B,C games on Solana,</li>
 <li class="">Bought a <a href="https://pudgypenguins.com/" target="_blank" rel="noopener noreferrer" class="">Pudgy Penguin</a> or Lil Pudgy NFT on Ethereum,</li>
-<li class="">Used Phantom Wallet,</li>
+<li class="">Holds $100 or more value across Solana, Ethereum, Base or BNB,</li>
 <li class="">Participated in a Gitcoin grant on Ethereum.</li>
 </ul>
-<p><img decoding="async" loading="lazy" alt="cross chain airdrop overivew" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image7-7b0f8225f78c195470f82c46c6a7c411.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>A <strong>universal drop,</strong> in this case, can:</p>
+<p><img decoding="async" loading="lazy" alt="cross chain airdrop overivew" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image7-9a8976aeaa52eb22cff777aaec81e9a2.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>A <strong>universal drop</strong>, in this case, can:</p>
 <ul>
-<li class="">Verify these diverse activities via shared-state reads.</li>
-<li class="">Allow claiming the gaming token on Polygon, Solana, or Ethereum - whichever the user prefers.</li>
+<li class="">Verify these diverse activities and wallet to form a merkle proof to user's universal executor account</li>
+<li class="">Universal Executor Account (UEA) are representation of source chain wallet address of the user on Push Chain and are always controlled by the respective source chain wallet</li>
+<li class="">Allow claiming the gaming token on Polygon, Solana, or Ethereum - whichever the user prefers</li>
 </ul>
-<p><strong>What this enables</strong></p>
-<ul>
-<li class="">Custom cross-chain algorithms for drop eligibility:<!-- -->
-<ul>
-<li class="">e.g. filter wallets that have played a game on Arbitrum, participated in Gitcoin Grants via Celo, minted 2 NFTs on Solana and 3 content coins on Zora, over the last year.</li>
-</ul>
-</li>
-<li class="">Launching a DeFi app? Design an airdrop for DeFi users across all chains to attract them to your platform.</li>
-<li class="">Eligibility verifications and claims from any chain to any chain.</li>
-</ul>
-<p><strong>Why it needs shared-state</strong></p>
-<ul>
-<li class="">Eligibility verification requires <strong>live access</strong> to wallet activity across multiple chains.</li>
-<li class="">Without shared-state, projects must deploy separate scripts/contracts/oracles per chain, leading to fragmentation, delays, and higher infra costs.</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-universal-nfts">5 Universal NFTs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#5-universal-nfts" class="hash-link" aria-label="Direct link to 5 Universal NFTs" title="Direct link to 5 Universal NFTs" translate="no">​</a></h3>
-<p>Today’s NFTs are trapped in single-chain ecosystems with rigid formats. (An NFT on Ethereum can’t natively interact with Solana or Aptos.).</p>
-<p>It is virtually unheard of to have an NFT on one chain with its tokens on another (although projects such as Pudgy Penguins are pioneering this approach).</p>
-<p>Moreover, at present, an NFT can neither be launched on different chains at once, nor can its attributes be natively read from them.</p>
-<p>Push Chain redefines NFTs as <strong>dynamic,chain-agnostic digital primitives</strong> - assets whose ownership, metadata, and modes of expression can <strong>live and evolve across multiple chains</strong> simultaneously.</p>
-<p><strong>What this enables</strong></p>
-<p>This not only makes them <em>universal</em> (i.e.&nbsp; capable of existing natively on all chains) but also gives them additional cross-chain features such as:</p>
-<ul>
-<li class=""><strong>*Conditionality</strong>:* the ownership of an asset (or attribute) can be made conditional on custom cross-chain logics, for example:<!-- -->
-<ul>
-<li class="">“Dynamically transfer the ownership of this NFT to a wallet on Solana that has the highest degen points on Base.”</li>
-<li class="">“If the price of this token reaches 1$ on Cosmos, fractionalize it into 100 pieces and distribute them to wallets with the highest 24 hr trading volume on Aptos.”</li>
-</ul>
-</li>
-<li class=""><strong><em>Multimodality</em></strong>: the same NFT can exist as a 2D image on Ethereum, a video on Base, a song on Solana, a narrative on Scroll and a 3D model on Arbitrum.</li>
-<li class=""><strong><em>Organicity</em></strong>: it can evolve across formats, for example:<!-- -->
-<ul>
-<li class="">A digital artwork could start as a static image which could give rise to a community-owned narrative;</li>
-<li class="">As this narrative grows, the root image can give rise to distinct animation layers, each with its own set of owners.</li>
-</ul>
-</li>
-<li class=""><strong><em>Portability</em></strong>: Ownership of an NFT can act as portable proof across chains.</li>
-</ul>
-<p><strong>Why it needs shared-state</strong></p>
-<ul>
-<li class="">In order for an NFT to be truly “non-fungible” across chains, the same user (or contract) must be able to provide reliable proofs of ownership from any chain to any chain.</li>
-<li class="">Reading and writing of NFT metadata across chains.</li>
-<li class="">Elimination of artificial "chain walls" that restrict creative evolution.</li>
-</ul>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game">End Game<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#end-game" class="hash-link" aria-label="Direct link to End Game" title="Direct link to End Game" translate="no">​</a></h2>
-<p>Push Chain’s shared-state architecture finally delivers <strong>the universal blockchain trifecta</strong> - unifying user needs, developer needs, and cross-chain data unification - all in a single layer.</p>
-<p>For users, it leads to seamless cross-chain interactions: no more juggling bridges, fragmented balances or chain-locked assets. Your entire on-chain identity - DeFi positions, NFTs, agentic memories, game assets etc. becomes portable and composable across all networks.</p>
-<p>For developers, shared-state unlocks an entirely new paradigm: universal apps that can natively read and write across all chains as if they were one.</p>
-<p><strong><em>Seriously..</em></strong></p>
-<p><strong><em>Why build for one chain anymore</em></strong></p>
-<p><strong><em>When you could build for them all?</em></strong></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-nfts">Universal NFTs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#universal-nfts" class="hash-link" aria-label="Direct link to Universal NFTs" title="Direct link to Universal NFTs" translate="no">​</a></h3>
+<p>Your NFT inventory, on-chain reputation, game items, and collectibles can now merge into a single, shared identity that lives across all ecosystems.</p>
+<p>No more isolated wallets.
+No more duplicated assets.
+Just one <em>creative life</em>, everywhere.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game-the-universal-layer-">End Game: The Universal Layer 🌍<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#end-game-the-universal-layer-" class="hash-link" aria-label="Direct link to End Game: The Universal Layer 🌍" title="Direct link to End Game: The Universal Layer 🌍" translate="no">​</a></h2>
+<p>Push Chain’s shared-state model fuses users, developers, and data into a single, connected web.</p>
+<p>For <strong>users</strong>, it means frictionless, cross-chain interaction. No bridges. No fragmentation. Full control.
+For <strong>developers</strong>, it means one deployment that speaks to all chains.</p>
+<p><strong>Seriously, why build for one chain when you can build for them all?</strong></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="its-not-over-yet">It's not over yet!<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#its-not-over-yet" class="hash-link" aria-label="Direct link to It's not over yet!" title="Direct link to It's not over yet!" translate="no">​</a></h2>
-<p>We have just scratched the surface.</p>
-<p>Vol. 2 of this article&nbsp;will be even more mind-bending, covering use cases across AI agents, DAOs, Gaming and much more!</p>
+<p>We have just scratched the surface. <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/">Vol. 2 of this article</a>&nbsp;covers more use cases across AI agents, DAOs, Gaming and much more!</p>
 <p>Stay Tuned!</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
 <ul>
-<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> to get the latest updates about Push Chain</li>
-<li class="">Want to build on Push Chain? Explore the docs and example snippets here → <a href="https://push.org/docs/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
-<li class="">Visit the <a href="https://push.org/chain?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain</a> Litepaper to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a> is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
+<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> for Updates</li>
+<li class="">Explore <a href="https://push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
+<li class="">Visit <a href="https://push.org/knowledge/" target="_blank" rel="noopener noreferrer" class="">Knowledge Base</a></li>
+<li class="">Check out <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">Universal Apps that are live on Push</a></li>
 </ul>]]></content:encoded>
             <category>Push Chain</category>
             <category>Shared App Experience</category>
@@ -1273,650 +1194,6 @@ And so has the extent of innovations that continue to make this space more adapt
 </ol>]]></content:encoded>
             <category>Push Chain</category>
             <category>Tokenomics</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Gaia Network]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/</guid>
-            <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Scroll]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Gaia " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-d31b952d6a33150947e671684a2ee368.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>It’s time to make on-chain AI Agents go Universal!
-Push Chain is joining forces with Gaia Network to make chain abstracted AI Agents accessible to anyone via any chain, any wallet.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-gaia">What is Gaia?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#what-is-gaia" class="hash-link" aria-label="Direct link to What is Gaia?" title="Direct link to What is Gaia?" translate="no">​</a></h2>
-<p><a href="https://www.gaianet.ai/" target="_blank" rel="noopener noreferrer" class="">Gaia</a> is an autonomous agents marketplace that enables anyone to build, deploy and utilize AI agents with unique expertise, &amp; personalized capabilities.</p>
-<p>As a decentralized computing network, Gaia powers its nodes with every essential component - required to seamlessly configure and operate AI agents.</p>
-<p>Gaia node includes - a powerful cross-platform runtime, fine-tuned LLM, vectorDB and embedding models, prompt manager and much more.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps, powered by Chain Abstraction. Push is a Proof of Stake (PoS) chain that allows developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><strong>Push Chain's Superpowers Include:</strong></p>
-<ul>
-<li class="">
-<p>Consumer tx (unordered) and Traditional tx (ordered)</p>
-</li>
-<li class="">
-<p>Any Chain Tx (Solana, Eth, EVM, or non-EVM)</p>
-</li>
-<li class="">
-<p>Sub-second finality** &nbsp;</p>
-</li>
-<li class="">
-<p>True Scale and Universal Smart Contracts</p>
-</li>
-<li class="">
-<p>Wallet and Fee Abstraction</p>
-</li>
-</ul>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-does-this-mean-for-gaia-and-push-chain-users">👥 What does this mean for Gaia and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#-what-does-this-mean-for-gaia-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥 What does this mean for Gaia and Push Chain Users?" title="Direct link to 👥 What does this mean for Gaia and Push Chain Users?" translate="no">​</a></h2>
-<p><strong>Interact with Universally operable AI Agents</strong></p>
-<p>With Push’s Universal capabilities - users operating AI agents built on Gaia can conveniently perform autonomous tasks across any chain!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-what-does-this-mean-for-builders">👷‍♂️ What does this mean for Builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#%EF%B8%8F-what-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️ What does this mean for Builders?" title="Direct link to 👷‍♂️ What does this mean for Builders?" translate="no">​</a></h2>
-<p><strong>Develop Universally Operable AI Agents</strong></p>
-<p>With Gaia and Push, Builders can create borderless ai agents - that can perform financial, mixed financial and consumer read/write operations across any chain in an autonomous manner.</p>
-<p><strong>Build Agents with Universal Identities</strong></p>
-<p>Leveraging PushID ( A unified user identity by Push Chain that spans across every user wallet, both EVM and non-EVM). Instances of Gaia agents can carry a unified identity that aggregates their activity across all chains - simplifying agent tracking, history collection and analysis.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="usecase-unlock">🔓Usecase unlock<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#usecase-unlock" class="hash-link" aria-label="Direct link to 🔓Usecase unlock" title="Direct link to 🔓Usecase unlock" translate="no">​</a></h2>
-<p><strong>Cross Chain AI agents with autonomous intelligence</strong></p>
-<p>Having the ability to execute actions between any chains, irrespective of their virtual machine design, with the power of Push Chain’s Universal Smart Contracts and Shared State ledger.</p>
-<p><strong>Unified Data Layers for AI Agents</strong></p>
-<p>Data Layers like <a href="https://www.0xscope.com/" target="_blank" rel="noopener noreferrer" class="">Oxscope</a> can utilize Push Chain’s shared state settlement layer to read transactions across chains in a unified manner.</p>
-<p><strong>Chain Agnostic Autonomous Actions</strong></p>
-<p>Autonomous agents like <a href="https://github.com/elizaOS/eliza" target="_blank" rel="noopener noreferrer" class="">Eliza</a> can extend its support for Push Chain, opening opportunities for chain-abstracted interoperable communications and actions.</p>
-<p>Example: rebalance a user's DeFi positions on Ethereum, list NFTs on Polygon, and communicate status updates to the user via a messaging app on another chain, all through one unified settlement layer</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-gaia/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow&nbsp;<a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a>&nbsp;to get the latest updates about Push Chain</li>
-<li class="">Want to build on Push Chain? Explore the docs and example snippets here →&nbsp;<a href="https://push.org/docs/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class=""><a href="https://scan.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Scroll]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/</guid>
-            <pubDate>Fri, 14 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Scroll]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Scroll " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-ae915e5c8248f7f3b3f04e5d1b1b50c2.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Scroll is coming to Push Chain!</p>
-<p>It’s time to make EVM’s Open Economy Universally Accessible to anyone from anywhere, be it evm or non-evm.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-scroll">What is Scroll?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#what-is-scroll" class="hash-link" aria-label="Direct link to What is Scroll?" title="Direct link to What is Scroll?" translate="no">​</a></h2>
-<p><a href="https://scroll.io/" target="_blank" rel="noopener noreferrer" class="">Scroll</a> is an EVM compatible - Layer 2 Scaling Solution. At a finer level, Scroll is a zkEvm Rollup - that executes and publishes transactions to Ethereum in bundles, which then can be proved with minimum compute requirements while preserving transaction privacy using Zero Knowledge technology.</p>
-<p>Scroll is a byte-code equivalent zkevm that closely emulates EVM, enabling almost identical development and user experiences to Ethereum.</p>
-<p>Developing on Scroll is super easy for Ethereum Devs :</p>
-<ul>
-<li class="">Solidity, Vyper, and Huff work out of the box</li>
-<li class="">No re-auditing necessary</li>
-<li class="">Most existing tooling is inherited</li>
-</ul>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps, powered by <strong>Chain Abstraction</strong>. It is a Proof of Stake (PoS) chain that allows developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><strong>Push Chain's Superpowers Include:</strong></p>
-<ul>
-<li class="">
-<p>Consumer tx (unordered) and Traditional tx (ordered)</p>
-</li>
-<li class="">
-<p>Any Chain Tx (Solana, Eth, EVM, or non-EVM)</p>
-</li>
-<li class="">
-<p>Sub-second finality** &nbsp;</p>
-</li>
-<li class="">
-<p>True Scale and Universal Smart Contracts</p>
-</li>
-<li class="">
-<p>Wallet and Fee Abstraction</p>
-</li>
-</ul>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-scroll-and-push-chain-users"><strong>👥&nbsp;What does this mean for Scroll and Push Chain Users?</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#what-does-this-mean-for-scroll-and-push-chain-users" class="hash-link" aria-label="Direct link to what-does-this-mean-for-scroll-and-push-chain-users" title="Direct link to what-does-this-mean-for-scroll-and-push-chain-users" translate="no">​</a></h2>
-<p><strong>Explore non-evm without leaving Scroll</strong></p>
-<p>Scroll users can interact with DApps across Solana, Aptos, Bitcoin L2s or any other non evms via Push’s Shared Settlement Layer. All, without manually bridging funds, installing and learning complex wallet systems and ever-leaving Scroll’s Ecosystem Comfort.</p>
-<p><strong>Universal  Identity</strong></p>
-<p>Exploring an open and universal web3 economy requires a universal passport.</p>
-<p>This is where Push ID makes a difference- Provides a universal identity system that seamlessly connects all their wallets (EVM and non-EVM) into one profile.
-Enabling users to track their web3 activity, across Scroll, Ethereum, Solana or any other chain in a unified manner.</p>
-<p>The opportunities with Push ID are endless:
-Think about gated applications - where you’re universal passport gives you access based on your web3 repetition. Or  instances where an app requires you to KYC to prove cross-chain asset ownership.</p>
-<p>Additionally, with this partnership - Developers get an opportunity to lean on Scroll’s decentralized prover network and work on fascinating new areas such as post-danksharding blob markets, hardware-friendly ZK algorithms and new ZK primitives. With Push Chain - Devs will be able to take these innovations one notch higher by unlocking the states of other layer 1s and layer 2s, in order to build truly scalable consumer-friendly apps.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build Apps that enable Txns from Any Chain</strong></p>
-<p>Push Chain supports transactions from any wallet, regardless of the originating chain—be it Ethereum, Solana, or any other L1s, L2s or L3s.</p>
-<p>Use <a href="https://push.org/docs" target="_blank" rel="noopener noreferrer" class="">Push Chain’s Universal SDK</a> to bring these apps to life - opening doors to craft chain abstracted experiences.</p>
-<p><strong>Build hyper-scalable consumer apps</strong></p>
-<p>Using Scroll’s inherent scalability strength and Push Chain’s <strong>Sharded Storage and Parallel txn processing</strong> - Devs can build <em>hyperscalable consumer apps</em>  that can be executed with sub-second finality using Push’s  borderless &amp; stateless consumer txns.</p>
-<p><em>This is the era of Consumer DApps thriving with millions of users!</em></p>
-<p>Additionally, with this partnership - Developers get an opportunity to lean on Scroll’s decentralized prover network and work on fascinating new areas such as post-danksharding blob markets, hardware-friendly ZK algorithms and new ZK primitives. With Push Chain - Devs will be able to take these innovations one notch higher by unlocking the states of other layer 1s and layer 2s, in order to build truly scalable consumer-friendly apps.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-case-unlock">🔓&nbsp;Use case unlock<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#use-case-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;Use case unlock" title="Direct link to 🔓&nbsp;Use case unlock" translate="no">​</a></h2>
-<p><strong>Universally playable games:</strong>
-MMORPG games like <a href="https://www.omnikingdoms.io/" target="_blank" rel="noopener noreferrer" class="">Omnikingdoms</a> can support users from any non-evm chain supporting in game purchases, state transitions and much more.</p>
-<p>Even Multiplayer games like roulette, casinos and RPG games on Scroll can utilize Push Chain to bring users across different chains to compete together in a unified manner.</p>
-<p><strong>Universal NFTs:</strong></p>
-<p><em>Shared state + universal smart contracts = true multi-chain magic!</em></p>
-<p>Imagine launching Univeral NFT collections using launchpads like <a href="https://omnihub.xyz/" target="_blank" rel="noopener noreferrer" class="">Omnihub</a> and <a href="https://nfts2me.com/" target="_blank" rel="noopener noreferrer" class="">NFTs2Me</a> seamlessly across different L1s which can be traded and transfered across any chain!</p>
-<p><strong>Universal Privacy:</strong></p>
-<p>ZK tech has solved one of the biggest problems plaguing today’s internet, i.e. the trade-off between privacy and transparency. We are fast moving towards a world where every bit of valuable user-data will be ZK proved. With the Push x Scroll partnership, this important primitive will become truly universal and can be integrated with cross-chain applications as well as liquidity.</p>
-<p><strong>Chain Agnostic AI Agents:</strong></p>
-<p>Push Chain’s universal shared state and Scroll’s open economy  pave the way for a new generation of chain-agnostic AI agents. These agents can perform autonomous operations in a borderless manner - unlocking a wide variety of financial, mixed financial, and non-financial use cases.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-scroll/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow&nbsp;<a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a>&nbsp;to get the latest updates about Push Chain</li>
-<li class="">Want to build on Push Chain? Explore the docs and example snippets here →&nbsp;<a href="https://push.org/docs/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class=""><a href="https://scan.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Diamante]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/</guid>
-            <pubDate>Wed, 12 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Diamante]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Diamante " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-a533331d47429aff6d2fe07d651c8709.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain 🤝 Diamante</p>
-<p>Push is proud to partner with Diamante - A high-speed, quantum-attack-resistant L1 to forge a unified shared app experience for both, retail and institutional users!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-diamante"><strong>What is Diamante?</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#what-is-diamante" class="hash-link" aria-label="Direct link to what-is-diamante" title="Direct link to what-is-diamante" translate="no">​</a></h2>
-<p><a href="https://www.diamante.io/" target="_blank" rel="noopener noreferrer" class="">Diamante</a> is a hybrid Layer1 blockchain that connects institutional and retail applications under one ecosystem with blazing-fast execution, quantum-proof security, and super smooth UX.</p>
-<p>With extra emphasis on its chain’s security - Diamante employs quantum-resistant algorithms to fortify its network against quantum threats!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps, powered by <strong>Chain Abstraction</strong>. It is a Proof of Stake (PoS) chain that allows developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-diamante-to-push-chain">Bringing Diamante to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#bringing-diamante-to-push-chain" class="hash-link" aria-label="Direct link to Bringing Diamante to Push Chain" title="Direct link to Bringing Diamante to Push Chain" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-diamante-and-push-chain-users">👥&nbsp;What does this mean for Diamante and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#what-does-this-mean-for-diamante-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥&nbsp;What does this mean for Diamante and Push Chain Users?" title="Direct link to 👥&nbsp;What does this mean for Diamante and Push Chain Users?" translate="no">​</a></h2>
-<p><strong>Universally accessible on-chain institutions</strong></p>
-<p>Institutions thriving on Diamante can unlock a chain-less business experience that helps them to transact, and operate with its customers/clients in a chain-abstracted manner.</p>
-<p>Thus, removing the need for any complex compliance measures for cross-chain transactions. All without leaving the ecosystem comfort offered by the Diamante chain.</p>
-<p><strong>Unified web3 experiences</strong></p>
-<p>As a universal settlement layer - Push Chain users belong to multiple L1, L2s and L3s - be it EVM or non-EVMs like Aptos and Solana.</p>
-<p>With Push Chain - users from these wide varieties of chains can explore the rich Diamante Ecosystem and send transactions to any Diamante Apps without navigating multiple networks or managing multiple wallets - with zero or minimal learning curve!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build super abstracted - shared settlement institutional and consumer DApps</strong></p>
-<p>With shared settlement capabilities of Push Chain and Diamante - devs can build apps with powerful chain, fee and wallet abstraction capabilities - allowing transactions from any chain with near-instant finality.</p>
-<p><strong>Build universally compliant consumer and mixed financial apps</strong></p>
-<p>Push Chain introduces a new transaction type: <strong>‘consumer transactions’</strong>, where transaction ordering is not essential.</p>
-<p>Why consumer tx?</p>
-<p>Two major challenges hinder the scalability of consumer web3 apps:</p>
-<ul>
-<li class=""><strong>Chain Fragmentation-</strong> User bases are over-diversified across hundreds of chains, impeding user growth, UX and retention.</li>
-<li class=""><strong>Scalability constraints-</strong> Most chains process transactions in a strictly ordered manner, which imposes unnecessary constraints on apps that don’t rely on transaction ordering.</li>
-</ul>
-<p>This is where Push Chain’s Consumer Tx feature enables non-financial and consumer applications to operate with lightning-fast speed and hyper-scalability. Push Chain enables these apps to manage millions of users seamlessly across any chain environment.</p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a>.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-case-unlock"><strong>🔓&nbsp;Use case unlock:</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#use-case-unlock" class="hash-link" aria-label="Direct link to use-case-unlock" title="Direct link to use-case-unlock" translate="no">​</a></h2>
-<p><strong>Unified Compliance Solutions-</strong> Crypto KYC Services like <a href="https://www.notion.so/17c188aea7f480fca231d69da721208d?pvs=21" target="_blank" rel="noopener noreferrer" class="">HyperSign</a> can unlock wider distribution by providing their Crypto KYC services across any app belonging form any chain (evm or non-evm) by using Push’s Shared Settlement and Consumer Txn support.</p>
-<p><strong>Universal GameFi-</strong> - Game Studios and Launchpads like <a href="https://www.notion.so/17c188aea7f480fca231d69da721208d?pvs=21" target="_blank" rel="noopener noreferrer" class="">Mon Protocol</a> and <a href="https://isotopic.io/" target="_blank" rel="noopener noreferrer" class="">Isotopic</a> can leverage Push Chain to build <strong>Universally Playable On-chain Games (UPOGs)</strong>, supporting users from any chain with the power of Universal Smart Contracts and Any chain Consumer Transactions - providing sub-second finality and any chain compatibility.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3">🌌&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to 🌌&nbsp;What does this mean for Web3?" title="Direct link to 🌌&nbsp;What does this mean for Web3?" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-diamante/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow &nbsp;<a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> to get the latest updates about Push Chain</li>
-<li class="">Want to build on Push Chain? Explore the docs and example snippets here → <a href="https://push.org/docs/chain/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class=""><a href="https://scan.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/?utm_source=pushblog&amp;utm_medium=referral&amp;utm_campaign=pcgov" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Is Push Chain Another L1?]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/</guid>
-            <pubDate>Tue, 11 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Learn why Push Chain is built different]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Is Push Chain Another L1?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-caf5d30f320da5237c313ea8200ef3f7.webp" width="1600" height="900" class="img_ev3q"></p>
-<!-- -->
-<p>Another L1?.... Ahh, sh*t, here we go again.</p>
-<p>"<em>Aren't there too many blockchains already? Adding more only makes it harder for apps and protocols to work across them.</em>"</p>
-<p>This is one of the most common questions we get asked during conferences.</p>
-<p>If that's what you're thinking, you're not wrong - Yes, Push Chain is another L1 - except it's <strong>NOT JUST</strong> <em>'another L1'</em> !!</p>
-<p>Let's find out how..</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="dont-we-have-enough-l1s-l2s-already">Don't we have enough L1s, L2s already?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#dont-we-have-enough-l1s-l2s-already" class="hash-link" aria-label="Direct link to Don't we have enough L1s, L2s already?" title="Direct link to Don't we have enough L1s, L2s already?" translate="no">​</a></h2>
-<p>Yes, crypto has tens of layer 1s, hundreds of layer 2s, and - who knows - maybe thousands of layer 3s in the near future!
-But what it didn't have was a means to unify all of these amazing chains together - and that's exactly what Push chain does.</p>
-<p><strong>Push is not just another silo</strong> - it's a universal chain that unites every existing and forthcoming chain together (under one roof). It is a shared-state L1 blockchain designed to function as a universal settlement layer for users across any chain, wallet, and app.</p>
-<p>Combining this with its innovation of shared state, universal smart contracts, generalized programmable solver, and complete user abstraction, what you get is a blockchain able to read any other chain and… is accessible by users from any chain.</p>
-<p><strong>Push Chain's vision is not to compete and replace any blockchain, but unite every chain together to maximize UX, freedom of movement, and revenue scaling opportunities for apps.</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="is-push-chain-just-about-cross-chain-apps-arent-there-already-many-cross-chain-protocols">Is Push Chain just about cross-chain apps? Aren't there already many cross-chain protocols?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#is-push-chain-just-about-cross-chain-apps-arent-there-already-many-cross-chain-protocols" class="hash-link" aria-label="Direct link to Is Push Chain just about cross-chain apps? Aren't there already many cross-chain protocols?" title="Direct link to Is Push Chain just about cross-chain apps? Aren't there already many cross-chain protocols?" translate="no">​</a></h2>
-<p>No – cross-chain apps still require deployment of separate contracts on separate supported chains. Such apps typically rely on bridges and manual relayers to move tokens and messages between chains, leading to separate liquidity formation and additional development overhead.</p>
-<p>Push Chain introduces Universal Apps that can:</p>
-<ul>
-<li class="">
-<p><strong>Be accessed by users of any chain</strong>– Devs can write and deploy a single contract on Push Chain that interacts with multiple blockchains without deploying separate contracts on each chain.</p>
-<p>This is the magic of the <strong>Shared Execution Layer.</strong></p>
-</li>
-<li class="">
-<p><strong>Read and sync live states from multiple chains</strong>, including token balances, contract data, and user activity.</p>
-</li>
-</ul>
-<p><strong>Cross-chain apps move assets. Universal apps built on Push Chain move logic and context along with assets</strong>. Thus, opening the doors to a wide variety of use cases that once were deemed impossible - discover these cool use cases here - <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v1/">Vol. 1</a> and <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/apps-only-possible-with-shared-state-v2/">Vol. 2</a>.</p>
-<p><img decoding="async" loading="lazy" alt="Simple app vs cross-chain app" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image1-1-d49c59d7ee8d2910fd4d28ef1cdc006b.webp" width="1500" height="1200" class="img_ev3q">
-<img decoding="async" loading="lazy" alt="Universal app" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image1-2-2c09ffd278cc9e3eea7817d02f844f27.webp" width="1500" height="1200" class="img_ev3q"></p>
-<p><em>Want to build a universal app? Or make your existing Dapp universal?</em>
-<em>Check out <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/docs/">Push Chain Docs</a>.</em></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="is-push-chain-evm-compatible-svm-compatible-or-move-compatible">Is Push Chain EVM compatible? SVM compatible? Or Move compatible?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#is-push-chain-evm-compatible-svm-compatible-or-move-compatible" class="hash-link" aria-label="Direct link to Is Push Chain EVM compatible? SVM compatible? Or Move compatible?" title="Direct link to Is Push Chain EVM compatible? SVM compatible? Or Move compatible?" translate="no">​</a></h2>
-<p>Push Chain is 100% EVM compatible &amp; at the same time, it's also <strong>universally compatible.</strong></p>
-<p>Meaning:</p>
-<ul>
-<li class="">
-<p>Everything that EVM chains support -&gt; Push Chain supports.<br>
-Therefore, EVM devs don't have to endure any new learning curve. At the same time, on deploying your evm contracts on Push Chain, your EVM dapps become automatically compatible to users from any other EVM ecosystems like Solana or BSC.</p>
-</li>
-<li class="">
-<p>Everything deployed on Push Chain is automatically compatible with EVM, or non-EVM chains.
-This means, that any deployed apps on Push Chain is universally compatible and can be accessed by users from any other chain.</p>
-</li>
-</ul>
-<p>Devs can either:</p>
-<ol>
-<li class="">
-<p><strong>Deploy their existing app to Push Chain</strong> (within minutes) and accept user traffic from any other chain.</p>
-</li>
-<li class="">
-<p><strong>Build native apps</strong> on Push Chain that are universally accessible by users from every chain and VM.</p>
-</li>
-</ol>
-<p><em>An Ethereum user and a Solana user can compete, collaborate, or transact within the same app because</em> → <em>this is a truly universal Layer 1.</em></p>
-<p><img decoding="async" loading="lazy" alt="EVM and non-EVM compatible" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image2-c9c7454c52a4f2e4e146fa5b5a591dfd.webp" width="1599" height="897" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-is-push-chain-different-from-existing-interoperability-solutions">How is Push Chain different from existing interoperability solutions?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#how-is-push-chain-different-from-existing-interoperability-solutions" class="hash-link" aria-label="Direct link to How is Push Chain different from existing interoperability solutions?" title="Direct link to How is Push Chain different from existing interoperability solutions?" translate="no">​</a></h2>
-<p>Majority of cross-chain apps today rely on interoperability solutions that provide bridges and arbitrary message passing</p>
-<ul>
-<li class="">
-<p>Bridges move tokens across chains → Effective yet slow, costly, and filled with multiple friction points.</p>
-</li>
-<li class="">
-<p>Message protocols (like Axelar, LayerZero) pass arbitrary messages → useful, but they don't give apps a coherent view of user state across chains.</p>
-</li>
-</ul>
-<p>Push Chain utilizes a different approach with the help of:</p>
-<p><strong>1. Universal Smart Contracts</strong> <br>
-Devs deploy one contract that is instantly compatible across all chains. It is 100% EVM compatible and required <strong>zero on-chain code changes</strong>.</p>
-<p><strong>2. Universal Fee &amp; Wallet Abstraction</strong><br>
-Universal fee abstraction ensures that user can pay fees in any chain's native token. While wallet abstraction ensures that users can interact with apps using their existing wallets.</p>
-<p><strong>3. Shared State</strong><br>
-An innovation by Push Chain where apps are shared between chains.</p>
-<p>This means, that any app deployed on Push Chain is automatically accessible by users from any other chain.</p>
-<p><strong>4. Universal Validators</strong><br>
-Provides paths to execute any multichain action - enabling apps to act across chains without forcing users to bridge or switch networks.</p>
-<p>This is what we call the <strong>Fullstack universal interop</strong> → Universal Smart Contracts + Universal Fee &amp; Wallet Abstraction + Shared State + Universal Validators.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-build-on-push-chain">Why build on Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#why-build-on-push-chain" class="hash-link" aria-label="Direct link to Why build on Push Chain?" title="Direct link to Why build on Push Chain?" translate="no">​</a></h2>
-<p><em>If you're building on one chain, deploying on Push Chain helps you reach users across all blockchains – without rewriting your app, switching wallets, or begging users to bridge.</em></p>
-<p>Building on Push Chain automatically means you…</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-expand-user-base--drive-app-sustainability">1. Expand user base &amp; Drive app sustainability<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#1-expand-user-base--drive-app-sustainability" class="hash-link" aria-label="Direct link to 1. Expand user base &amp; Drive app sustainability" title="Direct link to 1. Expand user base &amp; Drive app sustainability" translate="no">​</a></h3>
-<p>By enabling apps that can host users from any chain, and not just the chain on which the app is primarily based on. <strong>Guaranteeing higher user traction -&gt; higher revenue generation -&gt; and wider distribution</strong></p>
-<p>And that too with super limited development overhead!</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-no-extra-smart-contract-audits-required">2. No extra smart contract audits required<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#2-no-extra-smart-contract-audits-required" class="hash-link" aria-label="Direct link to 2. No extra smart contract audits required" title="Direct link to 2. No extra smart contract audits required" translate="no">​</a></h3>
-<p>Since Push Chain is fully EVM-compatible, you don't need to rewrite or modify your existing contracts.</p>
-<p>This also means you can deploy them without needing an additional audit – saving time and effort. Just plug in your audited EVM contracts, integrate the Push Chain UI wrapper, and you're good to go!</p>
-<p>Cherry on the top -&gt; Your App now automatically gains access to Solana, BNB and other EVM users</p>
-<p><em>Push Chain will soon, also support all other L1 chains (be it Move-based or any other VM)</em></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-its-alright-if-users-dont-have-a-wallet">3. It's Alright if users don't have a wallet\<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#3-its-alright-if-users-dont-have-a-wallet" class="hash-link" aria-label="Direct link to 3. It's Alright if users don't have a wallet\" title="Direct link to 3. It's Alright if users don't have a wallet\" translate="no">​</a></h3>
-<p>Web2 native users or users with no active wallets can always interact with apps deployed on Push Chain - because of its inbuilt wallet abstraction support.</p>
-<p>Any user can :
--&gt; Login using their web2 socials (email, google account) OR
--&gt; Existing wallets (Phantom, Metamask, Rabbi etc)</p>
-<p><strong>Note</strong>: As we unlock support to more Layer 1s - you'll only be required to upgrade the package of the wallet abstraction frontend component. No more complex chain integration nightmares ;)</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-its-alright-if-users-dont-have-native-chain-tokens-for-gas">4. It's alright if users don't have native chain tokens for gas**<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#4-its-alright-if-users-dont-have-native-chain-tokens-for-gas" class="hash-link" aria-label="Direct link to 4. It's alright if users don't have native chain tokens for gas**" title="Direct link to 4. It's alright if users don't have native chain tokens for gas**" translate="no">​</a></h3>
-<p>With the support of Fee Abstraction -</p>
-<ul>
-<li class="">You can use any token that you have - to fund the fees. Similar with Ethereum and other chains.</li>
-<li class="">Push eliminates the need for bridging for fees, manual management of funds on multiple chains and introduction of unnecessary learning for the average user.</li>
-</ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-unfragment-user-experience-liquidity-and-user-retention">5. Unfragment User Experience, liquidity, and user retention<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#5-unfragment-user-experience-liquidity-and-user-retention" class="hash-link" aria-label="Direct link to 5. Unfragment User Experience, liquidity, and user retention" title="Direct link to 5. Unfragment User Experience, liquidity, and user retention" translate="no">​</a></h3>
-<p>Rise of Layer 2s and chains solved a lot of pressing challenges but also led us to a series of cascading shortfalls, leading to deterioration in user as well as developer experience.</p>
-<p>Building on Push Chain solves these challenges to a greater extent with fast and reliable movement of data and assets between chains (for both apps and users).</p>
-<p>The user can remain on the chain where they are and either utilise fee abstraction or universal wallet (most of the time both) to interact with other chain.</p>
-<p><img decoding="async" loading="lazy" alt="Woes about state fragmentation" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/image3-e7b74b7eceeb0432997885ec1d9a7336.webp" width="1500" height="1200" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conclusion">Conclusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/another-l1/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
-<p>Finally, this concludes our trip – from perceiving Push Chain as just another L1, to recognizing it as the Universal Layer 1.</p>
-<p>The points covered in this article answer some of the most common questions we get asked, <strong>TLDR;</strong></p>
-<p>We're enabling Apps that are capable of:</p>
-<ul>
-<li class="">Unifying liquidity</li>
-<li class="">Unifying cross-chain user bases</li>
-<li class="">And most importantly – unifying our shared love for this space!</li>
-</ul>
-<p>If you want to make your app truly flexible and accessible from every chain - join our <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Discord</a> today! Or dive straight into the <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/docs/">Developer Docs</a> to get started.</p>
-<p>&amp; finally…</p>
-<p><em>Yeahhh it's Push Chain… here we go!</em></p>
-<div style="width:100%;height:360px"></div>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Insights</category>
-            <category>Vision</category>
-            <category>Shared State Blockchain</category>
-            <category>Universal Execution Layer</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Fuse]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/</guid>
-            <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Fuse]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Fuse " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-4680ab3024c801303cc094dab04034f9.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Wondering how businesses can unlock Universal On-chain experiences?</p>
-<p>Look no further!
-Push Chain is joining forces with the Fuse Network to transform the way enterprises and users transact, operate, and flourish in the ever-expanding web3 economy.</p>
-<p>Learn what this announcement means for Fuse and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-fuse-network">What is Fuse Network?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#what-is-fuse-network" class="hash-link" aria-label="Direct link to What is Fuse Network?" title="Direct link to What is Fuse Network?" translate="no">​</a></h2>
-<p><a href="https://www.fuse.io/" target="_blank" rel="noopener noreferrer" class="">Fuse</a> is an Ethereum compatible public blockchain built for businesses and developers to access  web3 tech and secure, verifiable global payments.</p>
-<p>Focusing on UX, ease of operation, accessibility and scalability, Fuse is built to onboard all types of enterprise users, from Web2 companies that want to integrate blockchain functionality into their apps, to Web3-native projects.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-fuse-to-push-chain">Bringing Fuse to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#bringing-fuse-to-push-chain" class="hash-link" aria-label="Direct link to Bringing Fuse to Push Chain" title="Direct link to Bringing Fuse to Push Chain" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-fuse-and-push-chain-users">👥&nbsp;What does this mean for Fuse and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#what-does-this-mean-for-fuse-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥&nbsp;What does this mean for Fuse and Push Chain Users?" title="Direct link to 👥&nbsp;What does this mean for Fuse and Push Chain Users?" translate="no">​</a></h2>
-<p><strong>Borderless On-chain Business Txns</strong></p>
-<p>Enabling on-chain transactions, whether monetary or non-monetary - between businesses from entirely different blockchain ecosystems is a complex process, burdened by communication overhead, intricate bridging, and settlement challenges.</p>
-<p>Push Chain abstracts this burden away by unifying the settlements of any EVM and non-evm chains - providing Fuse users a super smooth and quick any-chain transaction experience without leaving the Fuse ethos.</p>
-<p><strong>Unified Invoicing and Accounting</strong></p>
-<p>Enterprise apps on Fuse Chain can leverage Push Chain’s universal identity solution, Push ID, to track and monitor spending and invoicing across addresses in a unified manner by linking them to Push ID.</p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a>.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build Universally Abstracted Enterprise Apps</strong></p>
-<p>With shared settlement capabilities of Push Chain  - devs can build enterprise apps with powerful chain, fee and wallet abstraction capabilities - allowing transactions from any chain with near instant finality.</p>
-<p><strong>Attract Universal Users</strong></p>
-<p>Fuse apps deployed on Push Chain can seamlessly open their doors to users from other EVM, and non-EVM chains and foster true shared experiences with Push Chain’s key innovations like - Shared State and Universal Smart Contracts.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="usecase-unlock">🔓&nbsp;Usecase unlock<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#usecase-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;Usecase unlock" title="Direct link to 🔓&nbsp;Usecase unlock" translate="no">​</a></h2>
-<p><strong>Universal Growth Tools</strong></p>
-<p>Tools like <a href="https://midle.io/" target="_blank" rel="noopener noreferrer" class="">Midle</a> can leverage Push Chain to create comprehensive growth campaigns combining both on-chain and off-chain tasks, verifiable and accessible from any blockchain. Users can participate using their preferred wallets, complete tasks on any chain, and receive instant rewards on their chosen network.</p>
-<p><strong>Universal B2B / B2C Threat Monitoring Services</strong></p>
-<p>Security monitoring solutions like <a href="https://www.ironblocks.com/" target="_blank" rel="noopener noreferrer" class="">Ironblocks</a> and utilize Push Chain for powering a universal security monitoring system that protects assets and transactions across all blockchain ecosystems simultaneously. For instance, if a security threat is detected for a cross-chain wallet on one chain, the system could instantly broadcast alerts and implement protective measures across all connected chains creating a unified security perimeter where threats are identified, tracked, and mitigated instantly.</p>
-<p><strong>Universal AI Trading Agents</strong></p>
-<p>AI agents can analyse and execute trades across both Fuse and other chains unifying liquidity for optimal arbitrage, yield and trading strategies.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3">🌌&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to 🌌&nbsp;What does this mean for Web3?" title="Direct link to 🌌&nbsp;What does this mean for Web3?" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-fuse/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow&nbsp;<a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a>&nbsp;to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join&nbsp;<a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Stacks]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/</guid>
-            <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Stacks]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Morph " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-dd7201ab073d0b16ab3d2a1ba4cd0815.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain is building with Stacks to unlock accessibility to Bitcoin apps from any chain, any app, and any wallet.</p>
-<p>Learn what this announcement means for Stacks and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-stacks">What is Stacks?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#what-is-stacks" class="hash-link" aria-label="Direct link to What is Stacks?" title="Direct link to What is Stacks?" translate="no">​</a></h2>
-<p>Built on top of Bitcoin, Stacks is a Layer 2 blockchain that brings general-purpose programmability to Bitcoin, enabling developers to create censorship-resistant apps while leveraging Bitcoin as a foundational settlement layer.</p>
-<p>With its native language - ‘Clarity’ Stacks brings smart contracts to Bitcoin without altering its core, ensuring txns remain as secure &amp; irreversible as on BTC.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-stacks-to-push-chain">Bringing Stacks to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#bringing-stacks-to-push-chain" class="hash-link" aria-label="Direct link to Bringing Stacks to Push Chain" title="Direct link to Bringing Stacks to Push Chain" translate="no">​</a></h2>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-does-this-mean-for-stacks-and-push-chain-users">👥 What does this mean for Stacks and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#-what-does-this-mean-for-stacks-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥 What does this mean for Stacks and Push Chain Users?" title="Direct link to 👥 What does this mean for Stacks and Push Chain Users?" translate="no">​</a></h3>
-<p><strong>Explore EVM and Non-EVM ecosystems without leaving Bitcoin</strong></p>
-<p>With Push Chain, Stacks native users can explore and access applications across any blockchain ecosystem without learning new complex wallet systems, all while maintaining their Bitcoin-native experience on Stacks.</p>
-<p><strong>Tap into the Trillion Dollar Bitcoin economy</strong></p>
-<p>Push Chain's integration with Stacks opens up Bitcoin's massive liquidity and market presence for users from any blockchain ecosystem. Users can now participate in Bitcoin-native applications, access BTC-denominated assets, and engage with Stacks' growing ecosystem via their preferred blockchain and wallet.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h3>
-<p><strong>Build Universal Bitcoin native Apps</strong></p>
-<p>Apps deployed on Stacks and Push Chain can accept transactions from users belonging from any wallet belonging to any chain!</p>
-<p><strong>Build&nbsp;<em>Superfast</em>&nbsp;Unified Apps</strong></p>
-<p>Push Chain’s flexible architecture and its ability to allow transactions from any chain with sub-zero finality opens up a plethora of possibilities to build - Consumer, Financial, and Mixed Financial Applications.</p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a>.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="usecase-unlock">🔓&nbsp;Usecase Unlock:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#usecase-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;Usecase Unlock:" title="Direct link to 🔓&nbsp;Usecase Unlock:" translate="no">​</a></h3>
-<p><strong>Universal NFT Marketplaces</strong></p>
-<p>NFT Marketplaces like <a href="https://gamma.io/" target="_blank" rel="noopener noreferrer" class="">Gamma</a> can open their gates for EVM and other Non-EVM NFT patrons enabling instant access, trade, and settlement!</p>
-<p><strong>Borderless On-chain gaming</strong></p>
-<p>Access Stacks’s rich gaming ecosystem including <a href="https://forceprime.io/" target="_blank" rel="noopener noreferrer" class="">ForcePrime</a> and <a href="https://www.skullco.in/" target="_blank" rel="noopener noreferrer" class="">Skullco</a> via any EVM/Non-EVM chains - using Push’s Shared Settlement and Consumer Txns!</p>
-<p><strong>Shared State DEX:</strong></p>
-<p>DEXs like&nbsp;<a href="https://app.alexlab.co/" target="_blank" rel="noopener noreferrer" class="">ALEX</a> can leverage Push Chain to provide access to Stacks and Bitcoin’s liquidity from users from any chain via their preferred wallets.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3">🌌&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to 🌌&nbsp;What does this mean for Web3?" title="Direct link to 🌌&nbsp;What does this mean for Web3?" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-stacks/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow&nbsp;<a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a>&nbsp;to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>*&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join&nbsp;<a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Morph]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/</guid>
-            <pubDate>Tue, 28 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain Joins Forces With Morph]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join Forces With Morph " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-f6e9972a4aa2afaae41757b6f216df94.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain is about to facelift the consumer app experience by teaming up with Morph L2!</p>
-<p>Learn what this announcement means for Morph and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-morph">What is Morph?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#what-is-morph" class="hash-link" aria-label="Direct link to What is Morph?" title="Direct link to What is Morph?" translate="no">​</a></h2>
-<p><a href="https://www.morphl2.io/" target="_blank" rel="noopener noreferrer" class="">Morph</a> is a consumer app focused Ethereum Layer 2 solution that combines the best of Optimistic and ZK Rollups to provide a secure and super fast consumer experience.</p>
-<p>With over 5M txns to date, Morph is rallying towards becoming the global consumer layer for empowering everyday on-chain usage for every internet user.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push">What is Push?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#what-is-push" class="hash-link" aria-label="Direct link to What is Push?" title="Direct link to What is Push?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain
-built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/chain/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-morph-to-push-chain">Bringing Morph to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#bringing-morph-to-push-chain" class="hash-link" aria-label="Direct link to Bringing Morph to Push Chain" title="Direct link to Bringing Morph to Push Chain" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-morph-and-push-chain-users">👥&nbsp;What does this mean for Morph and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#what-does-this-mean-for-morph-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥&nbsp;What does this mean for Morph and Push Chain Users?" title="Direct link to 👥&nbsp;What does this mean for Morph and Push Chain Users?" translate="no">​</a></h2>
-<p><strong>Borderless consumer App experience</strong></p>
-<p>Morph users can expand their on-chain usage beyond EVMs into Solana and other nonEVMs without ever leaving Morph’s ecosystem and UX comfort.</p>
-<p><strong>Bring web2 normies to consumer crypto</strong></p>
-<p>With Push Chain’s wallet and fee abstraction - everyday internet users (web2 users) can easily experience Morph’s consumer crypto ecosystem with minimal UX overhead - simply by using their social accounts like Google, Apple, Github, X and Discord.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build hyper scalable universal consumer apps</strong></p>
-<p>Push Chain empowers developers to build truly universal applications that work seamlessly across all blockchains.</p>
-<p>Push unlocks hyper-scalability for consumer and mixed consumer apps that have potential of handling millions of daily users with its innovative '<strong>Consumer Transactions</strong>' feature, enabling stateless and unordered processing of non-value transfers like social interactions, content sharing, and game actions.</p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a>.</p>
-<p><strong>Read from any chain using shared settlement</strong></p>
-<p>Push Chain's shared settlement layer provides a powerful foundation for apps on Morph to unlock shaped universal experiences with its ability to read state across any blockchain through its shared settlement layer. This means developers can focus on building engaging user experiences instead of managing complex cross-chain interactions.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="usecase-unlock">🔓&nbsp;Usecase Unlock:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#usecase-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;Usecase Unlock:" title="Direct link to 🔓&nbsp;Usecase Unlock:" translate="no">​</a></h2>
-<p><strong>Universal ZK AI agents</strong></p>
-<p>Privacy centric agentic networks like <a href="https://zypher.network/" target="_blank" rel="noopener noreferrer" class="">Zypher</a> can leverage Push Chain to expand its AI agents reach to any blockchain. Ensuring a Universal, secure and verifiable execution without exposing sensitive data.</p>
-<p><strong>Universal Predication Markets</strong></p>
-<p>Prediction markets like <a href="https://soccersm.ai/ai-predictions" target="_blank" rel="noopener noreferrer" class="">Soccersm</a> can not only house users from Morph but also from any other chains to collectively speculate on real-life events. Markets can aggregate liquidity from all chains simultaneously bringing more user traction and better yield opportunities.</p>
-<p><strong>Universally Accessible token launchpads</strong> - Like <a href="https://muffun.fun/board" target="_blank" rel="noopener noreferrer" class="">Muffun</a> on Morph, can utilize the Push Chain and Push Wallet to enable users from any chain (EVM or non EVM) to effortlessly launch tokens on Morph without leaving their existing wallet systems or manually bridge funds.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-morph/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a> for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With zkPass]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/</guid>
-            <pubDate>Thu, 23 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain joins forces with zkPass!]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain joins forces with zkPass " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-42169ec97c46675f0e1596ef3ae3cfa9.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push chain is pumped to join forces with zkPass to transform user privacy in the new internet world.</p>
-<p>Discover how this collaboration empowers developers and users, unlocks groundbreaking use cases, and drives the web3 ecosystem forward.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-zkpass">What is zkPass?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#what-is-zkpass" class="hash-link" aria-label="Direct link to What is zkPass?" title="Direct link to What is zkPass?" translate="no">​</a></h2>
-<p><a href="https://zkpass.org/" target="_blank" rel="noopener noreferrer" class="">zkPass</a> is a privacy-first zkTLS oracle protocol that enables private internet data to be verifiable on-chain without revealing the actual information, using zero-knowledge proofs and innovative TLS architecture to ensure data verifiability, privacy and composability.</p>
-<p>With over 4 million ZK Proofs generated, zkPass provides tools and applications for secure, verifiable data sharing with privacy and integrity assurances from any HTTPS website without requiring OAuth APIs.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain
-built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-how-does-this-benefit-zkpass-and-push-chain-users">👥 How does this benefit zkPass and Push Chain users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#-how-does-this-benefit-zkpass-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥 How does this benefit zkPass and Push Chain users?" title="Direct link to 👥 How does this benefit zkPass and Push Chain users?" translate="no">​</a></h2>
-<p><strong>Verify your private data on any app and any chain.</strong></p>
-<p>Push Chain extends zkPass’s proving capabilities by enabling verification support for any EVM as well as non-EVM chains like Solana, Aptos etc.</p>
-<p><strong>Universal private identity</strong></p>
-<p>Users can now create a truly private and unified blockchain presence through Push ID - a universal identity system that seamlessly connects all their wallets (EVM and non-EVM) into one profile.</p>
-<p>This unified identity gains enhanced privacy through zkPass, enabling <strong>users to prove wallet ownership, assets or any other private information across any blockchain</strong> without revealing their actual wallet details and enabling selective disclosure of wallets while linking to any application. <strong>One private KYC that can be instantly validated on all apps and all chains.</strong></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️how-does-it-benefit-builders">👷‍♂️How does it benefit builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#%EF%B8%8Fhow-does-it-benefit-builders" class="hash-link" aria-label="Direct link to 👷‍♂️How does it benefit builders?" title="Direct link to 👷‍♂️How does it benefit builders?" translate="no">​</a></h2>
-<p><strong>Build Universally accessible privacy-centric DApps</strong>
-Push Chain enables developers to build applications that work across any blockchain, while zkPass adds powerful privacy-preservation capabilities to this universal reach. Developers can use the <a href="https://github.com/pushchain/push-chain-sdk" target="_blank" rel="noopener noreferrer" class="">Push Chain</a> and <a href="https://zkpass.gitbook.io/zkpass/developer-guides/extension-js-sdk" target="_blank" rel="noopener noreferrer" class="">Transgate</a> SDKs to create apps that verify user credentials, assets, or achievements across chains without managing complex privacy infrastructure or dealing with multiple chain-specific identity systems.</p>
-<p><strong>Build privately - verifiable DeFi Protocols</strong></p>
-<p>Build more sophisticated DeFi applications that can access verified user credentials while respecting privacy.</p>
-<p>Through Push Chain's shared state and zkPass's verification system, protocols can validate credit scores, collateral, and transaction history across chains without exposing sensitive user data enabling better risk assessment and more efficient capital allocation while maintaining user privacy.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-usecases-does-the-collab-unlock">🔓&nbsp;What usecases does the collab unlock?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#what-usecases-does-the-collab-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;What usecases does the collab unlock?" title="Direct link to 🔓&nbsp;What usecases does the collab unlock?" translate="no">​</a></h2>
-<p>In addition to the unified KYC and universal privacy-focused DeFi applications discussed above, the collaboration between Push Chain and zkPass unlocks the following use cases:</p>
-<p><strong>Universal Private RWA Hub</strong>
-RWA marketplaces like <a href="https://canza.io/" target="_blank" rel="noopener noreferrer" class="">Kanza Finance</a> can leverage Push Chain and zkPass to enable instant cross-chain RWA operations with built-in compliance verification, all while keeping sensitive user data private and secure.</p>
-<p><strong>Unified AI marketplaces</strong></p>
-<p>AI &amp; Privacy centric chains like <a href="https://www.polyhedra.network/" target="_blank" rel="noopener noreferrer" class="">Polyhedra EXP</a> can host AI data marketplaces for using zkPass, users can privately contribute data to AI models while: Proving data authenticity without exposure and receiving rewards tied to any chain.</p>
-<p>Users can optimise their on-chain data collection process by using Push Chain’s unified shared settlement layer.</p>
-<p><strong>Universal launchpads.</strong></p>
-<p>Cross chain launchpads like <a href="https://www.poolz.finance/" target="_blank" rel="noopener noreferrer" class="">Pools Finance</a> can leverage Push Chain and zkPass to power - universal DApp launchpads where Developers can utilize Push Chain’s Universal Shared State and Parallel txn processing to deploy dApps once and instantly reach users across all or any specified networks while maintaining privacy preservation, credential verification and compliance through zkPass.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3"><strong>🌌</strong>&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to what-does-this-mean-for-web3" title="Direct link to what-does-this-mean-for-web3" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zkpass/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain</a> on X to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>&nbsp;for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With Plume]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/</guid>
-            <pubDate>Thu, 16 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain joins forces with Plume!]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain joins forces with Plume " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-d873c6e90e72ee4b73c050003577a4a4.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain is set to revolutionize RWAfi by joining forces with Plume!</p>
-<p>Learn what this announcement means for Plume and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-plume">What is Plume?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#what-is-plume" class="hash-link" aria-label="Direct link to What is Plume?" title="Direct link to What is Plume?" translate="no">​</a></h2>
-<p><a href="https://plumenetwork.xyz/" target="_blank" rel="noopener noreferrer" class="">Plume</a> is a purpose-built layer 1 blockchain for tokenized Real World Assets (RWAs).</p>
-<p>With an ecosystem of over 180 apps and over 3.75 Million users in its early testnet Plume brings RWAs into the on-chain digital economy.</p>
-<p>With built-in AML compliance and a modular full stack architecture, Plume provides a super flexible platform for trading, financing, collateralizng RWAs for enhanced yield and market-making opportunities!</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain
-built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-plume-to-push-chain">Bringing Plume to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#bringing-plume-to-push-chain" class="hash-link" aria-label="Direct link to Bringing Plume to Push Chain" title="Direct link to Bringing Plume to Push Chain" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-does-this-mean-for-plume-and-push-chain-users">👥 What does this mean for Plume and Push Chain users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#-what-does-this-mean-for-plume-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥 What does this mean for Plume and Push Chain users?" title="Direct link to 👥 What does this mean for Plume and Push Chain users?" translate="no">​</a></h2>
-<p><strong>Borderless access for maximising yield opportunities</strong></p>
-<p>Plume native users can access RWAfi instruments on any other EVM and non-EVM chains without leaving the operational comfort offered by Plume.</p>
-<p>Via Push Chain’s shared settlement layer - Plume ecosystem users can easily lend, borrow and sell RWAs listed on Plume to any user belonging to any chain.
-For instance - A Plume native user can trade their tokenized assets with a Solana native user.</p>
-<p><strong>Easily onboard web2 normies</strong></p>
-<p>With Push Chain’s wallet and fee abstraction - everyday internet users (web2 users) can be onboarded to the Plume ecosystem with minimal UX overhead - simply by using their social accounts like Google, Apple, Github, X and Discord.</p>
-<p><strong>Unified Experience</strong></p>
-<p>As a universal settlement layer - Push Chain users belong to multiple L1, L2s and L3s - be it EVM or nonEVMs like Aptos and Solana.</p>
-<p>With Push Chain - users from these wide varieties of chains can explore the rich Plume Ecosystem and send transactions to any Plume Apps without navigating multiple networks or managing multiple wallets - with zero or minimal learning curve.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-what-does-this-mean-for-builders">👷‍♂️ What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#%EF%B8%8F-what-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️ What does this mean for builders?" title="Direct link to 👷‍♂️ What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build universal RWAfi apps</strong></p>
-<p>RWA-compliant apps deployed on Push Chain and Plume can be accessed and used by users belonging to any chain, eliminating chain fragmentation and complex bridging overhead while opening doors to users across all ecosystems.</p>
-<p><strong>Build super scalable and super fast apps</strong></p>
-<p>In addition to Push Chain’s transact from any chain capabilities - Push Chain provides super fast settlement with sub-second finality and theoretically, can be scaled infinitely due to its true scaling engine - that increases the write throughput (or TPS) linearly as the number of nodes grow - achieving <strong>True scale.</strong></p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a>.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-usecase-unlock">🔓 Usecase Unlock:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#-usecase-unlock" class="hash-link" aria-label="Direct link to 🔓 Usecase Unlock:" title="Direct link to 🔓 Usecase Unlock:" translate="no">​</a></h2>
-<p><strong>Unified RWA Vaults</strong></p>
-<p>With Push Chain, RWA Staking aggregators like <a href="https://nest.credit/" target="_blank" rel="noopener noreferrer" class="">Nest</a> can provide aggregated yield vaults across all blockchain ecosystems. With chain abstraction and Universal Smart Contracts, non-native Plume users can stake in preferred stable coins which can then be settled for platform-specific stables.</p>
-<p><strong>Universal Prediction Markets</strong></p>
-<p>Markets like <a href="https://cultured.finance/" target="_blank" rel="noopener noreferrer" class="">Cultured</a> can leverage Push Chain to create unified betting markets accessible from any chain, enable cross-chain market making and liquidity, and attract more users while offering better yield opportunities.</p>
-<p><strong>Unified data source</strong></p>
-<p><a href="https://docs.plumenetwork.xyz/plume/nexus-data-highway/overview" target="_blank" rel="noopener noreferrer" class="">Nexus</a> (Plume's data highway) can leverage Push Chain to distribute RWA data across all chains, enable universal price discovery and power cross-chain prediction markets</p>
-<p><strong>Shared Lending RWAs</strong></p>
-<p>RWA Apps on Plume like <a href="https://osprey.market/" target="_blank" rel="noopener noreferrer" class="">Osprey</a> and <a href="https://metastreet.xyz/" target="_blank" rel="noopener noreferrer" class="">MetaStreet</a> can leverage Push Chain to provide a unified shared state borrow/lending management encompassing all chains - enabling users from any chain to lend and borrow tokenized assets with ease.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3"><strong>🌌</strong>&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to what-does-this-mean-for-web3" title="Direct link to what-does-this-mean-for-web3" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<p><em>Get ready! RWAfi is set to be accessible to any user from any app on any chain with Push Chain and Plume.</em></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-plume/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain</a> on X to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a>for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain Joins Forces With zkLink]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/</guid>
-            <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain joins forces with zkLink!]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover image of Push Chain Join forces with zkLink " src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/assets/images/cover-image-fad572bb546afbd9c6a10fa4faf15b68.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain is pumped to join forces with zkLink!</p>
-<p>A significant step for propelling our mission of enabling any user from any app to interact with any chain!</p>
-<p>Learn what this announcement means for zkLink and Push Chain users, the use cases it unlocks, and how the collaboration benefits the greater Web3 ecosystem.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-zklink">What is zkLink?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#what-is-zklink" class="hash-link" aria-label="Direct link to What is zkLink?" title="Direct link to What is zkLink?" translate="no">​</a></h2>
-<p><a href="https://zk.link/" target="_blank" rel="noopener noreferrer" class="">zkLink</a> is the world’s first ZK-powered Layer 3 solution that aggregates all EVM-compatible networks.</p>
-<p>zkLink includes two prudent networks:</p>
-<p><strong><a href="https://zklink.io/" target="_blank" rel="noopener noreferrer" class="">zkLink Nova</a></strong>: A general-purpose Layer 3 rollup designed to resolve liquidity fragmentation across Ethereum Layer 2s by providing a shared aggregated settlement layer.</p>
-<p>To date, zkLink Nova boasts over 26 Million Transactions with 1.3 million Unique Addresses, Aggregating over 17 networks!</p>
-<p><strong><a href="https://zk.link/X" target="_blank" rel="noopener noreferrer" class="">zkLink X</a></strong>: A highly customizable and secure application-specific rollup, optimized for trading-focused applications.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
-<p>Push Chain is a shared state blockchain for universal apps. It is a Proof of Stake (PoS) chain
-built to allow developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
-<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="bringing-zklink-to-push-chain">Bringing zkLink to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#bringing-zklink-to-push-chain" class="hash-link" aria-label="Direct link to Bringing zkLink to Push Chain" title="Direct link to Bringing zkLink to Push Chain" translate="no">​</a></h2>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-zklink-and-push-chain-users">👥&nbsp;What does this mean for zkLink and Push Chain Users?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#what-does-this-mean-for-zklink-and-push-chain-users" class="hash-link" aria-label="Direct link to 👥&nbsp;What does this mean for zkLink and Push Chain Users?" title="Direct link to 👥&nbsp;What does this mean for zkLink and Push Chain Users?" translate="no">​</a></h2>
-<p><strong>Interact with any non-evm app, without leaving zkLink</strong></p>
-<p>Push Chain extends the aggregation capabilities of zkLink enabling zkLink users to easily interact with and explore non-evm ecosystems like Solana, Aptos and Cosmos - all without leaving the operational comfort offered by zkLink.</p>
-<p>No need to create new wallets, learn and follow complex bridging steps- simply utilize Push Chain to seamlessly interplay between zkLink and the non-evm ecosystem</p>
-<p><strong>Unified Experience</strong></p>
-<p>Since zkLink aggregates Ethereum networks and serves as a unified point of access, users from non-evm space can easily leverage Push Chain to explore and interact with EVM space- abstracting away all the manual complexities traditionally faced by non-EVM users when transacting on EVM chains.</p>
-<p>All of the above with the advantage of - instant finality, security and superfast execution.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️what-does-this-mean-for-builders">👷‍♂️&nbsp;What does this mean for builders?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#%EF%B8%8Fwhat-does-this-mean-for-builders" class="hash-link" aria-label="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" title="Direct link to 👷‍♂️&nbsp;What does this mean for builders?" translate="no">​</a></h2>
-<p><strong>Build super abstracted - shared settlement apps</strong></p>
-<p>With shared settlement capabilities of Push Chain and zkLink - devs can build apps with powerful chain, fee and wallet abstraction capabilities - allowing transactions from any chain with near-instant finality.</p>
-<p><strong>Build universally compliant consumer and mixed financial apps</strong></p>
-<p>Push Chain introduces a new transaction type: <strong>‘consumer transactions’</strong>, where transaction ordering is not essential.</p>
-<p>Why consumer tx?</p>
-<p>Two major challenges hinder the scalability of consumer web3 apps:</p>
-<ul>
-<li class=""><strong>Chain Fragmentation:</strong> User bases are over-diversified across hundreds of chains, impeding user growth, UX and retention.</li>
-<li class=""><strong>Scalability constraints</strong> Most chains process transactions in a strictly ordered manner, which imposes unnecessary constraints on apps that don’t rely on transaction ordering.</li>
-</ul>
-<p>This is where Push Chain’s Consumer Tx feature enables non-financial and consumer applications to operate with lightning-fast speed and hyper-scalability. Push Chain enables these apps to manage millions of users seamlessly across any chain environment.</p>
-<p><a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Learn more about Push Chain’s Innovations here</a></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="use-case-unlock">🔓&nbsp;Use case unlock:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#use-case-unlock" class="hash-link" aria-label="Direct link to 🔓&nbsp;Use case unlock:" title="Direct link to 🔓&nbsp;Use case unlock:" translate="no">​</a></h2>
-<p><strong>Chain Agnostic AI Agents</strong> - Push Chain’s universal shared state and ZKLink’s <a href="https://blog.zk.link/zklink-research-roadmap-ai-agents-in-application-abstraction-fff297ef4577" target="_blank" rel="noopener noreferrer" class="">application abstraction</a> pave the way for a new generation of chain-agnostic AI agents. These agents can perform autonomous operations in a borderless manner - unlocking a wide variety of financial, mixed financial, and non-financial use cases.</p>
-<p><strong>Universal Domains</strong> - Applications like <a href="https://zns.bio/" target="_blank" rel="noopener noreferrer" class="">ZNS Connect</a> can utilize Push IDs- ( A unified user identity by Push Chain that spans every user wallet, both EVM and non-EVM) to expand their domain capabilities with unified analytics, user footprint tracking and universal resolution.</p>
-<p><strong>Unified Liquidity Markets</strong> - EVM-bound liquidity markets like <a href="https://lido.fi/" target="_blank" rel="noopener noreferrer" class="">Lido</a>, <a href="https://curve.fi/#/ethereum/swap" target="_blank" rel="noopener noreferrer" class="">Curve</a>, and <a href="https://native.org/app/credit-pool/" target="_blank" rel="noopener noreferrer" class="">Native</a> can utilize fee and chain abstraction features of Push Chain to seamlessly allow non-evm Liquidity Providers to effortlessly participate in market-making opportunities within a few clicks with no extra UX overhead.</p>
-<p><strong>Universal Prediction Markets</strong> - Where users from zkLink and other chains can collectively speculate on real-life events. Markets can aggregate liquidity from all chains simultaneously bringing more user traction and better yield opportunities.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-mean-for-web3"><strong>🌌</strong>&nbsp;What does this mean for Web3?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#what-does-this-mean-for-web3" class="hash-link" aria-label="Direct link to what-does-this-mean-for-web3" title="Direct link to what-does-this-mean-for-web3" translate="no">​</a></h2>
-<p><strong>Unifying experiences by bringing users together.</strong></p>
-<p>Push Chain isn’t here to replace networks or compete with any; instead, it aims to eliminate the fragmented state of Web3 by unifying settlement across all chains under one universal shared state, unlocking a seamless, interconnected Web3 experience.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1127/blog/push-chain-joins-forces-with-zklink/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
-<ol>
-<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain</a> on X to get the latest updates about Push Chain</li>
-<li class="">Check out the&nbsp;<a href="https://whitepaper.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Whitepaper</a> for a detailed overview of the vision and the underlying technicalities.</li>
-<li class="">Visit the&nbsp;<a href="https://push.org/chain" target="_blank" rel="noopener noreferrer" class="">Push Chain Website</a>&nbsp;to find a one-pager explanation of the vision.</li>
-<li class=""><a href="https://scan.push.org/?" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet</a>&nbsp;is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well.</li>
-<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Chain Simulate Tx</a>&nbsp;already provides a way for everyone to send tx from any chain using wallet abstraction.</li>
-<li class="">For more questions join <a href="https://discord.com/invite/pushchain" target="_blank" rel="noopener noreferrer" class="">Push Discord</a>. Our team would be glad to help you!</li>
-</ol>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
         </item>
     </channel>
 </rss>
