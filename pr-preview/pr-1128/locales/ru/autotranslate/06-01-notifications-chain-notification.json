@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Проект G.U.D. Deployathon запущен! Развертывайте <app>ы, выигрывайте $5000",
+      "button-text": "Перейти в Universal и развернуть",
+      "button-title": "Project G.U.D deployathon запущен!",
+      "button-aria-label": "Проект G.U.D deployathon запущен! Вы можете ознакомиться с ним здесь",
+      "image-alt": "Push Chain Testnet Donut - Универсальный блокчейн",
+      "close-button-title": "Закрыть уведомление testnet",
+      "close-button-aria-label": "Скрыть уведомление Push Chain testnet",
+      "container-aria-label": "Push Chain testnet уведомление"
+    }
+  }
+}
