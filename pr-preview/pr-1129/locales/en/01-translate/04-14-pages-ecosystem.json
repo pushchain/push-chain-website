@@ -1,0 +1,18 @@
+{
+  "pages": {
+    "ecosystem": {
+      "seo": {
+        "title": "Push Chain Ecosystem",
+        "description": "Explore universal apps built on Push Chain. Deploy once, reach users across all chains with seamless cross-chain functionality.",
+        "og-title": "Push Chain Ecosystem - Universal Apps for Every Chain",
+        "og-description": "Discover apps that work natively across Ethereum, Solana, and all chains. No bridges, no gas juggling, just seamless Web3.",
+        "twitter-title": "Push Chain Ecosystem - Universal Apps",
+        "twitter-description": "Build once, reach everywhere. Explore apps that work across all chains with Push Chain's universal architecture."
+      },
+      "hero-section": {
+        "title": "Testnet Apps",
+        "description": "Explore the ecosystem of universal apps that feel like magic to use. Discover apps, partners, and projects being built on Push Chain Testnet"
+      }
+    }
+  }
+}
