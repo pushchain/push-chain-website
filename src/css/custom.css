@@ -777,20 +777,39 @@ html {
     padding-bottom: env(safe-area-inset-bottom);
 }
 
+body {
+  height: 100%;
+}
+
 body.homepage-body {
   box-sizing: border-box !important;
   margin: 0;
-  min-height: 100svh !important;
-  min-height: 100dvh !important;
+  height: 100% !important;
   background: #000000 !important;
   padding-bottom: env(safe-area-inset-bottom) !important;
 }
 
 /* Ensure homepage uses black background under translucent bars and fills viewport */
 body.homepage-body,
+.homepage-body,
 body.homepage-body #__docusaurus,
-body.homepage-body .main-wrapper {
+.homepage-body #__docusaurus,
+body.homepage-body .main-wrapper,
+.homepage-body .main-wrapper {
   background: #000000 !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure homepage root content expands to fill available space */
+body.homepage-body #__docusaurus > div,
+.homepage-body #__docusaurus > div,
+body.homepage-body > div,
+.homepage-body > div {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
 /* Guard against any component adding white bg on homepage */

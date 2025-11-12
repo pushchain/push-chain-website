@@ -17,7 +17,6 @@ import AccountContext from '../context/accountContext';
 import { useChainNotification } from '../hooks/useChainNotification';
 import { Notification } from '../hooks/useRewardsNotification';
 import { useSiteBaseUrl } from '../hooks/useSiteBaseUrl';
-import { useHomepageStyles } from '../hooks/useHomeBodyStyles';
 
 // Initialize Internalization
 i18nInitialize();
@@ -52,7 +51,6 @@ export default function Root({ children }) {
   const location = useLocation();
   const baseURL = useSiteBaseUrl();
   useChainNotification();
-  useHomepageStyles();
   const { showAlertBar } = useContext(AccountContext);
   const isPreview = /^\/push-chain-website\/pr-preview\/pr-\d+\/?$/.test(
     location.pathname
@@ -134,7 +132,7 @@ export default function Root({ children }) {
           )}
 
           <PageContainer
-            className={returnAdditionalClasses(superimposedConditions)}
+            className={`${returnAdditionalClasses(superimposedConditions)} ${isHome ? 'homepage-body' : ''}`}
           >
             <ServerStyle from={children} />
 
@@ -161,16 +159,19 @@ export default function Root({ children }) {
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100svh;
-  min-height: 100dvh;
+  min-height: 100%;
   position: relative;
 `;
 
 // The main content should take up all remaining space
 const Content = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   ${({ isHome }) =>
     isHome &&
     `background: linear-gradient(90deg, #3524ed 0%,var(--ifm-color-custom-pink) 50%, #3524ed 100%);
+     min-height: 100%;
     `}
 `;
