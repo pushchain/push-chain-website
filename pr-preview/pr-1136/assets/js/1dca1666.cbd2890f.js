@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[54322],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[17685],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -2480,6 +2480,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/zeroswap@3x-a369d16d1d30573e01a4f2331f51fb2d.webp");
+
+/***/ }),
+
+/***/ 129710:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ testnet)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBTestnetList.ts
+const KBTestnetList={title:'pages.knowledge.testnet.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate'},{type:'text',valueKey:"pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads",hidden:true}]},{type:'list',title:'Developers',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Ecosystem Apps',url:'http://push.org/ecosystem',target:'_blank'},{slug:'documentation',image:'/static/assets/website/chain/knowledge/developer-faucet',imageSrcSet:false,title:'Documentation',url:'https://push.org/docs',target:'_blank'},{slug:'push-explorer',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Explorer',url:'https://donut.push.network',target:'_blank'},{slug:'apply-glassroots',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Apply for Grassroots Program',url:'https://zv9atndluia.typeform.com/to/ItQ7i2sO](https://zv9atndluia.typeform.com/to/ItQ7i2sO',target:'_blank'}]},{type:'list',title:'Validators',topGap:true,bottomGap:true,variant:'row',items:[{slug:'push-validator',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Validator',url:'https://push.org/docs/chain/node-and-system-tools/running-push-validator/](https://push.org/docs/chain/node-and-system-tools/running-push-validator/',target:'_blank'}]},{type:'list',title:'Users',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Ecosystem Apps',url:'http://push.org/ecosystem',target:'_blank'},{slug:'lets-push-yaps',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:"Let's Push Yaps",url:'http://push.org/lfpush',target:'_blank'}]},{type:'list',title:'Incident Reports',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Service Outage - Donut Testnet - 11 Nov 7 PM UTC - 12 Nov 7 AM UTC',url:'http://push.org/ecosystem',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/testnetComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const TestnetComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTestnetList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const testnetComp = (TestnetComp);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+;// ./src/pages/knowledge/testnet.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function TestnetPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.testnet.seo.title'),description:t('pages.knowledge.testnet.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/testnet"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.testnet.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.testnet.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.testnet.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.testnet.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"TestnetPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(testnetComp,{})})]});}/* harmony default export */ const testnet = (TestnetPage);
 
 /***/ }),
 
@@ -15745,7 +15803,7 @@ rows.push(items.slice(index,index+3));index+=3;}else{// Default case: Create a r
 const rowSize=remainingItems>=3?3:2;rows.push(items.slice(index,index+rowSize));index+=rowSize;}}return rows;};// Helper Component
 // Main
 const ExploreCollection=_ref=>{let{items,title,variant='tile'}=_ref;// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const gridRows=createGridRows(items);return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[title&&/*#__PURE__*/(0,jsx_runtime.jsx)(TitleItemV,{variant:variant,children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H3,{fontSize:"2.3rem",fontWeight:"600",lineHeight:isMobile?'100%':'150%',letterSpacing:"-0.8px",textAlign:variant==='row'?'left':'center',alignSelf:variant==='row'?'flex-start':'center',color:"var(--ifm-color-white)",children:t(title)})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(GridWrapper,{children:[variant==='tile'&&(gridRows===null||gridRows===void 0?void 0:gridRows.map((row,rowIndex)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ChainKnowledgeGrid,{itemsInRow:row.length,children:row.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ExploreCollection_ExploreCard,{item:item,index:index,variant:"tile"}))},rowIndex))),variant==='row'&&/*#__PURE__*/(0,jsx_runtime.jsx)(ChainKnowledgeRow,{children:items===null||items===void 0?void 0:items.map((row,rowIndex)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ExploreCollection_ExploreCard,{item:row,index:rowIndex,variant:"row"}))})]})]});};/* harmony default export */ const ExploreCollection_ExploreCollection = (ExploreCollection);const GridWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__GridWrapper",componentId:"sc-ahzgk3-0"})(["display:flex;flex-direction:column;gap:24px;margin:48px 0 0 0;"]);const TitleItemV=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"ExploreCollection__TitleItemV",componentId:"sc-ahzgk3-1"})(["align-items:",";justify-content:",";@media ","{align-items:",";}"],_ref2=>{let{variant}=_ref2;return variant==='row'?'flex-start':'flex-start';},_ref3=>{let{variant}=_ref3;return variant==='row'?'flex-start':'center';},globals/* device */.jO.tablet,_ref4=>{let{variant}=_ref4;return variant==='row'?'flex-start':'center';});const ChainKnowledgeGrid=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__ChainKnowledgeGrid",componentId:"sc-ahzgk3-2"})(["display:grid;grid-template-columns:",";gap:24px;width:100%;justify-content:center;@media ","{grid-template-columns:repeat(2,1fr);& > *:nth-child(3){grid-column:1 / -1;}}@media ","{grid-template-columns:1fr;}"],_ref5=>{let{itemsInRow}=_ref5;return itemsInRow===3?'repeat(3, 1fr)':'repeat(2, 1fr)';},globals/* device */.jO.laptop,globals/* device */.jO.mobileL);const ChainKnowledgeRow=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__ChainKnowledgeRow",componentId:"sc-ahzgk3-3"})(["display:flex;flex-direction:column;gap:16px;width:100%;justify-content:center;"]);
+const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const gridRows=createGridRows(items);return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[title&&/*#__PURE__*/(0,jsx_runtime.jsx)(TitleItemV,{variant:variant,children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H3,{id:t(title).toLowerCase().replace(/\s+/g,'-'),fontSize:"2.3rem",fontWeight:"600",lineHeight:isMobile?'100%':'150%',letterSpacing:"-0.8px",textAlign:variant==='row'?'left':'center',alignSelf:variant==='row'?'flex-start':'center',color:"var(--ifm-color-white)",children:t(title)})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(GridWrapper,{children:[variant==='tile'&&(gridRows===null||gridRows===void 0?void 0:gridRows.map((row,rowIndex)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ChainKnowledgeGrid,{itemsInRow:row.length,children:row.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ExploreCollection_ExploreCard,{item:item,index:index,variant:"tile"}))},rowIndex))),variant==='row'&&/*#__PURE__*/(0,jsx_runtime.jsx)(ChainKnowledgeRow,{children:items===null||items===void 0?void 0:items.map((row,rowIndex)=>/*#__PURE__*/(0,jsx_runtime.jsx)(ExploreCollection_ExploreCard,{item:row,index:rowIndex,variant:"row"}))})]})]});};/* harmony default export */ const ExploreCollection_ExploreCollection = (ExploreCollection);const GridWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__GridWrapper",componentId:"sc-ahzgk3-0"})(["display:flex;flex-direction:column;gap:24px;margin:48px 0 0 0;"]);const TitleItemV=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"ExploreCollection__TitleItemV",componentId:"sc-ahzgk3-1"})(["align-items:",";justify-content:",";@media ","{align-items:",";}"],_ref2=>{let{variant}=_ref2;return variant==='row'?'flex-start':'flex-start';},_ref3=>{let{variant}=_ref3;return variant==='row'?'flex-start':'center';},globals/* device */.jO.tablet,_ref4=>{let{variant}=_ref4;return variant==='row'?'flex-start':'center';});const ChainKnowledgeGrid=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__ChainKnowledgeGrid",componentId:"sc-ahzgk3-2"})(["display:grid;grid-template-columns:",";gap:24px;width:100%;justify-content:center;@media ","{grid-template-columns:repeat(2,1fr);& > *:nth-child(3){grid-column:1 / -1;}}@media ","{grid-template-columns:1fr;}"],_ref5=>{let{itemsInRow}=_ref5;return itemsInRow===3?'repeat(3, 1fr)':'repeat(2, 1fr)';},globals/* device */.jO.laptop,globals/* device */.jO.mobileL);const ChainKnowledgeRow=styled_components_browser_esm["default"].div.withConfig({displayName:"ExploreCollection__ChainKnowledgeRow",componentId:"sc-ahzgk3-3"})(["display:flex;flex-direction:column;gap:16px;width:100%;justify-content:center;"]);
 // EXTERNAL MODULE: ./src/components/reusables/spinners/SpinnerUnit.tsx + 5 modules
 var SpinnerUnit = __webpack_require__(495466);
 ;// ./src/components/ContentBlocks/ContentBlocks.tsx
@@ -20201,64 +20259,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRpoEAABXRUJQVlA4TI4EAAAvPkASEFfCNpIkJ/P6Fx+LmIiRDDV4WsbAtpEkRX2MP5u/9Snu28gYkiRBOQRb5/84tUPYIxiDbCMV4f0lf0/wBJM01XYMAB4EAoHAgf950OPx7xb2MGDCFCPHv2OPGIgBAimwrhxQFpaRqtG2yA4Y0vF6w8qKgSMAQ4phSZEiRRYp9f3p/er9Gq7f8a+f7/1qzhcoCgBYpXEISJ/WASqwKVuoCWWRecc6Ywgwz0ct8v9fBOEVfiCi/xAkSXLiVM8Giz0ZSiN4gtI7y7lpTKevz8/T6cyw5orMLI1XXXX9IIyiH3EcRSREPpg8ziwpWK+aG/ygCe/MYU989dFYDDz/TUVbyvsniUP30RxwvO42twzagDSjH4tHd5twKaFhr8lvv1czaTl4+qJrq44Yl5qtOmsf2pbLDvPe2ob6L5cf5r+1zMcYnCfNqveOU55Z8xbysULVZbUNsNHgZKoo05CPR1ItJocR4chaOnxMdi8WGpX/HsxgVKhuoJEx1+Ou6BZIxiSs2I3JumLM1Z+rihEXbH2qcdho+7+zSQVYj1QRtFPNAqNVBNMKE4g1zrDrFSGO7IsxhEvbtnO9AQCh1I0752LXOT9XyJ/Qd5zaAnfdAEDyJNkhnNtiUqAbHmgP+hy4gRKnnjW4OrrlENAVn9Ce9h52gYMvpd2S1K1V3XudtcIrH5EdpYxxzhPGaByFvgOLU2m3B/7zXoEOThfQtrPj9YYxhACAFYS4uJ2y0u5M8TcDugUAjbuRkwLxsKjxOXXkk+IP/hOKtyvhzJNNDrecOWlD1YgnpPUQCVvvHuVsfRFUFat941DK65/bpBpfdgsgYJzHnhTyop7xz79OHaquP4V/1oaSX6FfzxICM7vi/werSzQWBwDcjmmfH1V2LlYeocLfGOdbvPsK3exjKo2Qu8L36/l0zPP8eDpdizt0fRIzwdVojbPm/a4bbpepSUNouo9IGCCEgjCM4j3r5+oJ6OYagY4EA1xPKPHgV6s00NctEIPurIMdPXQde4gJcvBXbrfmGgYV0bYTmB1vGAJPOCwMA+Q5q01xyTtl/eVRUOEkHz1VTYUrnE7HPC373Twui6BuAUD4xxim/3IPzBGaI6B8K53y5jH+/iWq6jAee3LJ4UfCyb21ObKwreSIzsmmrBAbhLPnnCFJ5Hd3m/AE4bK1OYJIMHU45Rl7tat0/W0Lpi9Bu+os9ivSvvvyK3YJ5YLoudgcXxStTTTKRdc9iK/HvO3UNDueiw1AhIquOk1jsKlMO0xtNO59FCAPAFhnBVwvIPEhabpapM1vR1OUpdqhWUjb+3+d1lbHdmjV6moxVZRq0RUH7fp1RxYTb3VrdzXXhMfASXdzvAndMYr3tM4+3hGhN16yrtsOmo1HsD6qZvnlWtxxnXtxu/TqjeWm2taoMVRN69FS8sngtOO5WzZn1VQ6MtNkNsd8oy96PPg/STM9x5rw+mPAxB7o6sRQemdhaDWDtvzxaCnDMn+ZAHzNsx698VRA9dlYSnnhY77oKtjg4nYVUhQbqE6eZ5JfGs0tYzYVYhjzhdI3Cg==");
-
-/***/ }),
-
-/***/ 961887:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ faq)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBFaqList.js
-const KBFaqList={title:'pages.knowledge.faq.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-does-push-chain-work'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-unique-for-users'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-innovations'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.technical-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-an-l2'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-compatibility'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.evm-non-evm-compatible'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.why-not-ethereum-or-solana'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.shared-state-meaning'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-achieve-shared-state'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.transaction-fees'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.true-universal-chain'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.competitors-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-other-universal'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-layerzero'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-axelar'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-chainlink-ccip'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-particle-network'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-agglayer'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-cosmos'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-polkadot'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.new-token'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.early-adopter-incentives'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developer-user-benefits'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-build'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.dao-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.governance-changes'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.doubts-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.push-services-future'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.project-distraction'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.core-focus-shift'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.partnerships-effect'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.support-section'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.need-help'},{type:'text',valueKey:'pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-contribute'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/faqComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const FAQComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.faq.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBFaqList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const faqComp = (FAQComp);
-// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
-var SchemaMarkup = __webpack_require__(172619);
-;// ./src/pages/knowledge/faq.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function FAQPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.faq.seo.title'),description:t('pages.knowledge.faq.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/faq"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.faq.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.faq.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.faq.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.faq.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(faqComp,{})})]});}/* harmony default export */ const faq = (FAQPage);
 
 /***/ }),
 

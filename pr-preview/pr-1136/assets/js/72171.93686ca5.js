@@ -192938,10 +192938,12 @@ const core_1 = __webpack_require__(861282);
 const usePushWallet_1 = __webpack_require__(628667);
 const react_1 = __webpack_require__(296540);
 const txnAuthGuard_1 = __webpack_require__(555563);
+const react_2 = __webpack_require__(296540);
 const usePushChainClient = (uid) => {
     const { universalAccount, handleSignMessage, handleSignAndSendTransaction, handleSignTypedData, handleExternalWalletConnection, requestPushWalletConnection, config, setProgress, isReadOnly, setIsReadOnly } = (0, usePushWallet_1.usePushWalletContext)(uid);
     const [pushChain, setPushChain] = (0, react_1.useState)(null);
     const [error, setError] = (0, react_1.useState)(null);
+    const timeoutRef = (0, react_2.useRef)(null);
     // initialise Push Chain instance here and export that
     (0, react_1.useEffect)(() => {
         const initializePushChain = () => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
@@ -192966,10 +192968,14 @@ const usePushChainClient = (uid) => {
                 const intializeProps = {
                     network: config.network,
                     progressHook: (progress) => tslib_1.__awaiter(void 0, void 0, void 0, function* () {
+                        if (timeoutRef.current) {
+                            clearTimeout(timeoutRef.current);
+                            timeoutRef.current = null;
+                        }
                         setProgress(progress);
                         if (progress.level === 'SUCCESS' ||
                             progress.level === 'ERROR') {
-                            setTimeout(() => setProgress(null), 5000);
+                            timeoutRef.current = setTimeout(() => setProgress(null), 5000);
                         }
                     }),
                     rpcUrls: (_a = config.chainConfig) === null || _a === void 0 ? void 0 : _a.rpcUrls,
