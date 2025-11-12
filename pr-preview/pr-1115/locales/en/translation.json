@@ -27,6 +27,11 @@
         "text": "Faucet",
         "subtext": "Get testnet tokens",
         "title": "Get free testnet tokens for Push Chain development"
+      },
+      "link3": {
+        "text": "Ecosystem",
+        "subtext": "See apps built on Push Chain",
+        "title": "See apps built on Push Chain"
       }
     },
     "developers": {
@@ -41,6 +46,11 @@
         "text": "Quick Start",
         "subtext": "Setup dev environment in seconds",
         "title": "Quick start guide - Set up Push Chain development environment instantly"
+      },
+      "link6": {
+        "text": "Ecosystem",
+        "subtext": "See apps built on Push Chain",
+        "title": "See apps built on Push Chain"
       },
       "link3": {
         "text": "Tutorials",
@@ -61,6 +71,11 @@
     "community": {
       "title": "Community",
       "aria-label": "Community Section",
+      "link7": {
+        "text": "Ecosystem",
+        "subtext": "Explore apps built on Push Chain",
+        "title": "Explore apps built on Push Chain"
+      },
       "link1": {
         "text": "Knowledge Base",
         "subtext": "Find deep dives on features",
@@ -250,7 +265,7 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Home - Push Chain | The Universal Blockchain for Apps",
+        "title": "Home — Push Chain | The Universal Blockchain for Apps",
         "description": "Shared-state blockchain for universal apps. Deploy once; reach users on any chain. Use any wallet. Pay with any token.",
         "og-title": "Push Chain - Universal L1 for Apps",
         "og-description": "One deploy for EVM and non-EVM users. Use any wallet and pay with any token — no network switching.",
@@ -557,6 +572,16 @@
                   "title": "FAQs",
                   "subtitle": "The place to find answers to all the popular questions the community has asked",
                   "ctatitle": "Read More"
+                },
+                "testnet": {
+                  "title": "Donut Testnet",
+                  "subtitle": "The place to find answers to all the popular questions the community has asked",
+                  "ctatitle": "Read More"
+                },
+                "validators": {
+                  "title": "Validators",
+                  "subtitle": "",
+                  "ctatitle": "Read More"
                 }
               }
             }
@@ -822,6 +847,80 @@
             }
           }
         }
+      },
+      "testnet": {
+        "seo": {
+          "title": "Donut Testnet 🍩",
+          "description": "Quick answers about wallets, fees, supported chains, and getting started.",
+          "og-title": "Push Chain FAQ - All Questions",
+          "og-description": "Find fast answers with links to guides, testnet, and support.",
+          "twitter-title": "FAQ - Start here",
+          "twitter-description": "Quick answers to Push Chain questions."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Donut Testnet 🍩",
+            "sections": {
+              "intro": "After years of fragmentation, the time has come to unite all chains.\n\nToday, we're thrilled to launch **Donut 🍩,** the **Push Chain Public Testnet**.\n\nPush is the **first true universal Layer 1** connecting every blockchain, wallet, app, and user through shared-state.\n\nFor the first time ever, developers, validators and users can experience what *true interoperability* feels like. **Instant, native,** and **free**.",
+              "why-push-exists": "## 💫 Why Push Chain Exists\n\nToday's Web3 ecosystem is heavily fragmented and overly complex.\n\nDevelopers must redeploy smart contracts across multiple chains, users have to bridge tokens or switch wallets, and teams spend months auditing and maintaining chain-specific codebases.\n\nEach new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.\n\n**Push Chain eliminates these barriers.**\n\nIt reimagines a shared-state, universal blockchain **built to make interoperability a fundamental primitive of the chain**, not an afterthought added through external protocols.\n\nThis enables native applications, wallets, and users from any chain to interact seamlessly without bridges or additional integration layers.\n\nAn app developer should only build their app and its features. We enable this! Deploy once and you are able to reach every user on any chain.\n — **Harsh Rajat, Founder of Push Chain**, in his talk [**Building Apps of the Future**](https://youtu.be/J5DYeiNzGjM?si=RBimzjapmnHiscLd)",
+              "how-reimagines-interoperability": "## ⚙️ How Push Chain Reimagines Interoperability\n\nMost interoperability solutions today rely on messaging layers or bridges, forcing developers to manage multiple contracts, audits, and integrations across every chain.\n\n**Push Chain redefines this model entirely.** With Push, you:\n\n* **Deploy once, reach everywhere.** Your app instantly becomes available across chains, EVM or non-EVM.\n* **Eliminate redundant contracts and bridges.** Interoperability is native to the chain, letting you focus purely on your app.\n* **Fully EVM-compatible.** Use the same tools, frameworks, and audits you already have. Deploy as is and go multi-chain immediately.\n* **Universally native app.** Users can transact from any chain or wallet. No bridging, no gas tokens, no changing networks, no swapping, no setup.",
+              "welcome-donut": "## 🍩 Welcome to Donut - Push Chain's First Public Testnet\n\nThe **Donut Testnet** is the first public environment where developers, users, and node operators can explore Push Chain's universality firsthand.\n\nHere's how we got here, and what comes next!\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)\n\nThe roadmap outlines Push Chain's journey from universal core features to full cross-chain execution and mainnet readiness.\n\nDonut brings the full Push ecosystem online with:\n\n* 🌳 **Ecosystem Apps:** Explore live Universal Apps on the [Ecosystem Page](https://push.org/ecosystem).\n* **📖 Developer Docs:** Start building Universal Apps at [push.org/docs](https://push.org/docs).\n* **🧠 Knowledge Base:** Learn the architecture and design at [push.org/knowledge](https://push.org/knowledge).\n* **🪩 Popular Apps to Try:**\n  * [Ballsy](https://ballsy.push.org/) — experience the same app logic working seamlessly across chains.\n  * [Simulate](https://simulate.push.org/) — test and visualize cross-chain interactions.\n* **💧 Faucet:** Get testnet tokens at [faucet.push.org](https://faucet.push.org).\n* **🔍 Donut Scan:** Track transactions and network data at [donut.push.network](https://donut.push.network/).",
+              "how-to-participate": "## 🧭 How do I Participate in the Network?\n\n### 👩‍💻 Developers\n\nPush Chain gives developers the power to **build once and deploy everywhere.**\n\nEvery **app runs natively** across all chains without extra integrations or separate deployments.\n\nThe chain currently supports **Ethereum, Solana, Base, Arbitrum, and BNB Chain** on testnet, with more chains coming soon.\n\nStart building your first Universal App:\n\n* Explore the [Documentation](https://push.org/docs)\n  Interact with live codeboxes, examples right from the docs.\n* Play around with [Ballsy App](https://ballsy.push.org)\n  Experience a Universal App in action. No wallet, gas juggling or setup required.\n* Apply for 🌱[Grassroot Program](https://zv9atndluia.typeform.com/to/ItQ7i2sO)\n  We are a developer-first chain. Want to take your app to the next level? Have persistence and passion? Apply to be included in our Grassroot Program and scale your app to reach every user.\n\n### 🌎Users\n\nExperience a Web3 that just works: No switching chains, bridging tokens, or learning required.\n\nUse your existing wallet to access any app on Push Chain and pay directly in your native token.\n\n* Try Universal Apps on our 🌳[Ecosystem Page](https://push.org/ecosystem)\n* Check activity of Donut Testnet on [Push Explorer](https://donut.push.network)\n\n### 🧑‍🚀 Node Operators\n\nPush Chain's network is powered by a decentralized set of validators.\n\nTo run a validator, execute the following command on Mac or Ubuntu:\n\n`curl -fsSL https://get.push.network/node/install.sh | bash`\n\nTo understand the different configs and what everything means, check out [Running Push Validator](https://push.org/docs/chain/node-and-system-tools/running-push-validator/).\n\nWhy run a testnet validator?\n\nRunning a testnet validator helps strengthen the network and shape its mainnet readiness. It may also include perks and benefits that will come with Season 3 of [Push Points Program](https://portal.push.org).\n\nTag [@pushchain](https://x.com/PushChain) and share your experience with us on X.",
+              "whats-next": "## 🔮 What's Next\n\n**Donut is a major step toward mainnet.**\n\nIt focuses on ushering in the universal era of Web3, the future of connected crypto apps, while also testing network performance and developer tooling.\n\nWe are already seeing signs of [community and ecosystem love](https://push.org/lfpush) and in the coming months, we will be onboarding more ecosystem apps, developer tools, tutorials along with expanding our validators participation.\n\nEach of these steps will bring us closer to the **Push Chain Mainnet**.\n\nKeep an eye out 👀 for Season 3 of our Push Points Program, which will give perks and benefits to participants of testnet. The exact rewards will be announced closer to our mainnet but there is something for everyone there.",
+              "start-building": "## 🧙Start Building\n\nBe the change, the catalyst that changes web3. Let's build Universal Apps. 💪\n\n**Note:** If you have already built something out, reach out to us at [support@push.org](mailto:support@push.org) to get included in the [ecosystem page](https://push.org/ecosystem).\n\n![Push Chain Donut Testnet](/assets/website/chain/knowledge/testnet/image-2.webp)\n\n**Push Chain Donut Testnet — Live Now 🍩** \n<br />Build universal. Deploy once. Reach everywhere."
+            }
+          },
+          "quick-links": {
+            "title": "Quick Links",
+            "items": {
+              "ecosystem-apps": {
+                "title": "Ecosystem Apps"
+              },
+              "documentation": {
+                "title": "Documentation"
+              },
+              "knowledge-base": {
+                "title": "Knowledge Base"
+              },
+              "lets-push-yaps": {
+                "title": "Let's Push Yaps"
+              },
+              "push-explorer": {
+                "title": "Push Explorer"
+              },
+              "push-faucet": {
+                "title": "Push Faucet"
+              },
+              "push-validator": {
+                "title": "Push Validator"
+              },
+              "grassroots-program": {
+                "title": "Apply for Grassroots Program"
+              }
+            }
+          }
+        }
+      },
+      "validators": {
+        "seo": {
+          "title": "Validators —",
+          "description": "Quick answers about wallets, fees, supported chains, and getting started.",
+          "og-title": "Push Chain FAQ - All Questions",
+          "og-description": "Find fast answers with links to guides, testnet, and support.",
+          "twitter-title": "FAQ - Start here",
+          "twitter-description": "Quick answers to Push Chain questions."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Validators"
+          }
+        }
       }
     },
     "docs": {
@@ -1005,6 +1104,20 @@
         "og-description": "Early access for developers: claim a Closed Beta Pass, try Push Chain (Donut), and earn rewards while building universal apps.",
         "twitter-title": "Shhh… Donut Testnet — Closed Beta",
         "twitter-description": "Invite-only access for builders. Claim your pass, try Push Chain (Donut), and earn rewards. 🍩"
+      }
+    },
+    "ecosystem": {
+      "seo": {
+        "title": "Push Chain Ecosystem — Universal Apps & Partners",
+        "description": "Explore the ecosystem of universal apps, partners, and projects built on Push Chain. Build once, reach users across all chains with shared-state interoperability.",
+        "og-title": "Push Chain Ecosystem - Explore Universal Apps & Partners",
+        "og-description": "Explore the ecosystem of universal apps and projects live on Push Chain. Experience real cross-chain usability. No bridges or swaps.",
+        "twitter-title": "Explore Push Chain Ecosystem - Universal Apps & Partners",
+        "twitter-description": "Discover universal apps and partners on Push Chain. Build once, reach users across Ethereum, Solana, Base, and beyond."
+      },
+      "hero-section": {
+        "title": "Explore the Universal Ecosystem",
+        "description": "Discover apps, partners, and early adopters building the next era of universal experiences on Push Chain’s Donut Testnet."
       }
     }
   },
@@ -1380,9 +1493,9 @@
       "container-aria-label": "Push Chain rewards notification"
     },
     "info-bar": {
-      "title": "Launch on Push Testnet Now — Unlock Rewards for Builders and Early Users.",
-      "learn-more-text": "Learn More",
-      "learn-more-title": "Learn more about this announcement",
+      "title": "Push Chain Testnet ‘Donut’ Now Live!",
+      "learn-more-text": "Explore Universal Apps",
+      "learn-more-title": "Explore Universal Apps",
       "dismiss-button-title": "Dismiss announcement",
       "dismiss-button-aria-label": "Close announcement bar",
       "container-aria-label": "Site announcement",
