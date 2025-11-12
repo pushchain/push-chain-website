@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[42372],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -921,62 +921,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-826dad22941d3f43c5701934c795e9f1.webp");
-
-/***/ }),
-
-/***/ 57220:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ deepdives)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBDeepDivesList.js
-const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'what-are-universal-executor-accounts',image:'/static/assets/website/chain/knowledge/what-are-executor-accounts',imageSrcSet:false,title:'What are Universal Executor Accounts (UEAs) and How do they work?',url:'/blog/what-are-universal-executor-accounts',target:'_blank'},{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/deepdivesComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const DeepDivesComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
-;// ./src/pages/knowledge/deepdives.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function DeepDivesPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
 
 /***/ }),
 
@@ -1939,17 +1883,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 95518:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
-
-/***/ }),
-
 /***/ 96070:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2523,6 +2456,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-32503ac5cb1afb2fc7c7c4f63c81d76b.webp");
+
+/***/ }),
+
+/***/ 125275:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ incident_12_nov_2025)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBReportIncidentList.ts
+const KBReportIncidentList={title:'Incident Nov 12, 2025',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.report.explainer-section.blocks.sections.report-overview.items.intro'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/reportsIncidentsComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const ReportIncidentsComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'},{text:t('pages.knowledge.report.explainer-section.breadcrumbs.donut-testnet'),link:'/knowledge/testnet'},{text:t('pages.knowledge.report.explainer-section.breadcrumbs.report'),link:'/knowledge/testnet/report'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBReportIncidentList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const reportsIncidentsComp = (ReportIncidentsComp);
+;// ./src/pages/knowledge/testnet/report/incident-12-nov-2025.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function ReportPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.report.seo.title'),description:t('pages.knowledge.report.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/testnet/report"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.report.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.report.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.report.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.report.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"ReportsPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(reportsIncidentsComp,{})})]});}/* harmony default export */ const incident_12_nov_2025 = (ReportPage);
 
 /***/ }),
 
@@ -14937,6 +14928,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 697991:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbfaqpreview-979f2c1007ddcbc0325c9dbc855a2f4b.png");
+
+/***/ }),
+
 /***/ 698265:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15698,11 +15700,11 @@ const translatedValue=t(item.valueKey,'');return Object.assign({},item,{value:tr
 });}return item;});},[block===null||block===void 0?void 0:block.value,t]);const texts=processedBlockValue.filter(v=>v.type==='text'&&!v.hidden)||[];const rawMarkdown=texts===null||texts===void 0?void 0:texts.map(t=>t.value).join('\n\n');// Memoize the processed markdown to prevent unnecessary re-processing
 const processedMarkdown=react.useMemo(()=>{return resolveImageUrls(processAdmonitions(cleanMarkdown(rawMarkdown)));},[rawMarkdown]);const toc=react.useMemo(()=>extractTOC(processedBlockValue||[]),[processedBlockValue]);// Create hidden section placeholders
 const hiddenSections=react.useMemo(()=>{const sections=[];processedBlockValue===null||processedBlockValue===void 0||processedBlockValue.forEach(v=>{if(v.type==='text'&&v.hidden){// Extract heading from hidden content (h2 and h3 only)
-const h2Match=v.value.match(/^##\s+(.+)$/m);const h3Match=v.value.match(/^###\s+(.+)$/m);if(h2Match){const headingText=h2Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:2});}else if(h3Match){const headingText=h3Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:3});}}});return sections;},[processedBlockValue]);return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{ref:contentRef,flexDirection:isTablet?'column':'row',gap:isTablet?'32px':'64px',alignItems:"flex-start",margin:"32px 0 32px 0",style:{position:'relative',overflow:'visible'},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{maxWidth:isTablet?'100%':'300px',minWidth:isTablet?'100%':'300px',alignItems:"flex-start",alignSelf:"flex-start",flexShrink:0,margin:!isMobile?'12px 0 0 0':'',children:[isTablet&&(toc===null||toc===void 0?void 0:toc.length)>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(MobileTOCWrapper,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.UL,{children:[(showFullMobileTOC?toc:toc.slice(0,2)).map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,title:""+t('components.explainer.prepend','')+item.text+t('components.explainer.append',''),children:item.text})},index);}),toc.length>2&&/*#__PURE__*/(0,jsx_runtime.jsx)(ToggleIcon,{onClick:()=>setShowFullMobileTOC(!showFullMobileTOC),children:showFullMobileTOC?/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronUp,{}):/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronDown,{})})]})}),!isTablet&&toc.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(DesktopTOC,{ref:tocRef,background:"var(--ifm-color-neutral-1100)",padding:"32px",borderRadius:"32px",alignItems:"flex-start",margin:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.UL,{children:toc===null||toc===void 0?void 0:toc.map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));const isActive=activeHeadingId===item.id||index===0&&activeHeadingId===''&&!isAtEnd;return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,isActive:isActive,onClick:handleTOCItemClick,title:""+t('components.explainer.prepend','Navigate to ')+item.text+t('components.explainer.append',' section'),children:item.text})},index);})})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{flex:1,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(TextItem,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(lib/* Markdown */.oz,{remarkPlugins:[remark_gfm_lib/* default */.A],rehypePlugins:[rehype_slug_lib/* default */.A,rehype_raw_lib/* default */.A],components:Object.assign({a:_ref2=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref2,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)("a",Object.assign({},props,{target:"_blank",rel:"noopener",children:props.children}));}},Object.fromEntries(['h2','h3'].map(tag=>[tag,_ref3=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref3,_excluded2);const id=generateIdFromHeadingText(props.children);return/*#__PURE__*/react.createElement(tag,{id,className:tag+"-text"},props.children);}])),{p:_ref4=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref4,_excluded3);// For now, let's hide all paragraphs in hidden sections
+const h2Match=v.value.match(/^##\s+(.+)$/m);const h3Match=v.value.match(/^###\s+(.+)$/m);if(h2Match){const headingText=h2Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:2});}else if(h3Match){const headingText=h3Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:3});}}});return sections;},[processedBlockValue]);return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{ref:contentRef,flexDirection:isTablet?'column':'row',gap:isTablet?'32px':'64px',alignItems:"flex-start",margin:"32px 0 32px 0",style:{position:'relative',overflow:'visible'},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{maxWidth:isTablet?'100%':'300px',minWidth:isTablet?'100%':'300px',alignItems:"flex-start",alignSelf:"flex-start",flexShrink:0,margin:!isMobile?'12px 0 0 0':'',children:[isTablet&&(toc===null||toc===void 0?void 0:toc.length)>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(MobileTOCWrapper,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.UL,{children:[(showFullMobileTOC?toc:toc.slice(0,2)).map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,title:""+t('components.explainer.prepend','')+item.text+t('components.explainer.append',''),children:item.text})},index);}),toc.length>2&&/*#__PURE__*/(0,jsx_runtime.jsx)(ToggleIcon,{onClick:()=>setShowFullMobileTOC(!showFullMobileTOC),children:showFullMobileTOC?/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronUp,{}):/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronDown,{})})]})}),!isTablet&&toc.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(DesktopTOC,{ref:tocRef,background:"var(--ifm-color-neutral-1100)",padding:"32px",borderRadius:"32px",alignItems:"flex-start",margin:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.UL,{children:toc===null||toc===void 0?void 0:toc.map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));const isActive=activeHeadingId===item.id||index===0&&activeHeadingId===''&&!isAtEnd;return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,isActive:isActive,onClick:handleTOCItemClick,title:""+t('components.explainer.prepend','Navigate to ')+item.text+t('components.explainer.append',' section'),children:item.text})},index);})})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{width:'100%',flex:1,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(TextItem,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(lib/* Markdown */.oz,{remarkPlugins:[remark_gfm_lib/* default */.A],rehypePlugins:[rehype_slug_lib/* default */.A,rehype_raw_lib/* default */.A],components:Object.assign({a:_ref2=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref2,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)("a",Object.assign({},props,{target:"_blank",rel:"noopener",children:props.children}));}},Object.fromEntries(['h2','h3'].map(tag=>[tag,_ref3=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref3,_excluded2);const id=generateIdFromHeadingText(props.children);return/*#__PURE__*/react.createElement(tag,{id,className:tag+"-text"},props.children);}])),{p:_ref4=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref4,_excluded3);// For now, let's hide all paragraphs in hidden sections
 // This is a simplified approach - we'll hide paragraphs that come after hidden headings
 const isHidden=false;// We'll implement this logic later if needed
 return/*#__PURE__*/react.createElement('p',{style:isHidden?{display:'none'}:{}},props.children);},// Custom component for admonitions
-div:_ref5=>{let{className}=_ref5,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref5,_excluded4);if(className&&className.includes('admonition')){return/*#__PURE__*/react.createElement('div',Object.assign({className},props));}return/*#__PURE__*/react.createElement('div',props);}}),children:processedMarkdown}),hiddenSections.map((section,index)=>{const HeadingTag=section.level===2?'h2':'h3';return/*#__PURE__*/react.createElement(HeadingTag,{key:"hidden-"+section.id+"-"+index,id:section.id,style:{height:'1px',margin:'0',padding:'0',visibility:'hidden'}});})]})})]},blockIndex);};/* harmony default export */ const Explainer = (ChainKnowledgeBaseIndexList);const TextItem=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__TextItem",componentId:"sc-14em2q2-0"})(["width:inherit;color:var(--ifm-color-white);&:not(:first-of-type){margin:12px 0 0 auto;}*{font-size:1.25rem;}h1{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:3rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h2{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2.5rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h3{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h4{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.5rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h5{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0;}blockquote{border:2px solid var(--ifm-color-white);border-left:6px solid var(--ifm-color-custom-pink);background-color:#ffffff55;color:var(--ifm-color-black);border-radius:12px;padding:15px;box-sizing:border-box;margin:24px 0;}ol li{list-style-type:decimal;}ul li{list-style-type:disc;}p{line-height:170%;}ul,ol,p{margin:24px 0;}p img,img{border-radius:32px;margin:16px 0;}.admonition{border-radius:12px;padding:16px 20px;margin:24px 0;border:none;border-left:5px solid;background-color:#ffffff55;}.admonition-info{border-left-color:var(--ifm-color-admonition-info-border);background:var(--ifm-color-admonition-info-bg);color:var(--ifm-color-white);}.admonition-warning{background-color:var(--ifm-color-admonition-warning-bg);border-left-color:var(--ifm-color-admonition-warning-border);color:var(--ifm-color-black);}.admonition-caution{border-left-color:var(--ifm-color-admonition-caution-border);}.admonition-tip{border-left-color:var(--ifm-color-admonition-tip-border);}.admonition-note{border-left-color:var(--ifm-color-admonition-note-border);}.admonition-title{font-weight:700;font-size:0.875rem;text-transform:uppercase;margin-bottom:8px;}.admonition-content{margin:0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p{margin:0 0 12px 0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content a{font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p:last-child{margin-bottom:0;}.admonition p:empty{display:none;}@media ","{max-width:100%;}"],globals/* device */.jO.tablet);const ListItem=styled_components_browser_esm["default"].a.withConfig({displayName:"Explainer__ListItem",componentId:"sc-14em2q2-1"})(["display:block;color:",";font-family:DM Sans;font-size:",";margin-left:",";font-style:normal;font-weight:",";line-height:120%;letter-spacing:-0.4px;transition:color 0.2s ease,font-weight 0.2s ease;&:hover{color:var(--ifm-color-toc-scrollbar);}"],_ref6=>{let{isActive}=_ref6;return isActive?'var(--ifm-color-toc-scrollbar)':'var(--ifm-color-toc-inactive)';},_ref7=>{let{level}=_ref7;return level===1?'1.25em':level===2?'1.125em':'1em';},_ref8=>{let{level,highestLevel}=_ref8;return level===highestLevel?'0':(level-highestLevel)*15+"px";},_ref9=>{let{isActive}=_ref9;return isActive?'600':'500';});const MobileTOCWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__MobileTOCWrapper",componentId:"sc-14em2q2-2"})(["margin-top:16px;padding:20px;border-radius:24px;background:var(--ifm-color-neutral-1100);width:100%;box-shadow:0px 2px 4px rgba(0,0,0,0.05);ul{padding:0;margin:0;list-style-type:none;}"]);const DesktopTOC=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"Explainer__DesktopTOC",componentId:"sc-14em2q2-3"})(["align-self:flex-start;position:relative;min-width:300px;width:300px;justify-content:flex-start;max-height:90vh;overflow-y:auto;overflow-x:hidden;&::-webkit-scrollbar{width:2px;}&::-webkit-scrollbar-track{background:transparent;}&::-webkit-scrollbar-thumb{background:var(--ifm-color-toc-scrollbar);border-radius:1px;}&::-webkit-scrollbar-thumb:hover{background:var(--ifm-color-toc-scrollbar-hover);}scrollbar-width:thin;scrollbar-color:var(--ifm-color-toc-scrollbar) transparent;box-sizing:border-box;width:calc(300px - 2px);ul{padding:0;margin:0;list-style-type:none;display:flex;flex-direction:column;gap:32px;width:100%;}li{margin:0 !important;}"]);const ToggleIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__ToggleIcon",componentId:"sc-14em2q2-4"})(["font-size:1.5em;text-align:center;margin-top:12px;cursor:pointer;color:var(--ifm-color-toc-inactive);font-weight:bold;"]);
+div:_ref5=>{let{className}=_ref5,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref5,_excluded4);if(className&&className.includes('admonition')){return/*#__PURE__*/react.createElement('div',Object.assign({className},props));}return/*#__PURE__*/react.createElement('div',props);}}),children:processedMarkdown}),hiddenSections.map((section,index)=>{const HeadingTag=section.level===2?'h2':'h3';return/*#__PURE__*/react.createElement(HeadingTag,{key:"hidden-"+section.id+"-"+index,id:section.id,style:{height:'1px',margin:'0',padding:'0',visibility:'hidden'}});})]})})]},blockIndex);};/* harmony default export */ const Explainer = (ChainKnowledgeBaseIndexList);const TextItem=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__TextItem",componentId:"sc-14em2q2-0"})(["width:inherit;color:var(--ifm-color-white);&:not(:first-of-type){margin:12px 0 0 auto;}*{font-size:1.25rem;}h1{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:3rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h2{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2.5rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h3{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h4{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.5rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h5{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0;}blockquote{border:2px solid var(--ifm-color-white);border-left:6px solid var(--ifm-color-custom-pink);background-color:#ffffff55;color:var(--ifm-color-black);border-radius:12px;padding:15px;box-sizing:border-box;margin:24px 0;}ol li{list-style-type:decimal;}ul li{list-style-type:disc;}p{line-height:170%;}ul,ol,p{margin:24px 0;}p img,img{border-radius:32px;margin:16px 0;}iframe[src*='youtube.com'],iframe[src*='youtu.be'],iframe[src*='vimeo.com']{width:100%;aspect-ratio:16 / 9;border-radius:8px;}.admonition{border-radius:12px;padding:16px 20px;margin:24px 0;border:none;border-left:5px solid;background-color:#ffffff55;}.admonition-info{border-left-color:var(--ifm-color-admonition-info-border);background:var(--ifm-color-admonition-info-bg);color:var(--ifm-color-white);}.admonition-warning{background-color:var(--ifm-color-admonition-warning-bg);border-left-color:var(--ifm-color-admonition-warning-border);color:var(--ifm-color-black);}.admonition-caution{border-left-color:var(--ifm-color-admonition-caution-border);}.admonition-tip{border-left-color:var(--ifm-color-admonition-tip-border);}.admonition-note{border-left-color:var(--ifm-color-admonition-note-border);}.admonition-title{font-weight:700;font-size:0.875rem;text-transform:uppercase;margin-bottom:8px;}.admonition-content{margin:0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p{margin:0 0 12px 0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content a{font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p:last-child{margin-bottom:0;}.admonition p:empty{display:none;}@media ","{max-width:100%;}"],globals/* device */.jO.tablet);const ListItem=styled_components_browser_esm["default"].a.withConfig({displayName:"Explainer__ListItem",componentId:"sc-14em2q2-1"})(["display:block;color:",";font-family:DM Sans;font-size:",";margin-left:",";font-style:normal;font-weight:",";line-height:120%;letter-spacing:-0.4px;transition:color 0.2s ease,font-weight 0.2s ease;&:hover{color:var(--ifm-color-toc-scrollbar);}"],_ref6=>{let{isActive}=_ref6;return isActive?'var(--ifm-color-toc-scrollbar)':'var(--ifm-color-toc-inactive)';},_ref7=>{let{level}=_ref7;return level===1?'1.25em':level===2?'1.125em':'1em';},_ref8=>{let{level,highestLevel}=_ref8;return level===highestLevel?'0':(level-highestLevel)*15+"px";},_ref9=>{let{isActive}=_ref9;return isActive?'600':'500';});const MobileTOCWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__MobileTOCWrapper",componentId:"sc-14em2q2-2"})(["margin-top:16px;padding:20px;border-radius:24px;background:var(--ifm-color-neutral-1100);width:100%;box-shadow:0px 2px 4px rgba(0,0,0,0.05);ul{padding:0;margin:0;list-style-type:none;}"]);const DesktopTOC=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"Explainer__DesktopTOC",componentId:"sc-14em2q2-3"})(["align-self:flex-start;position:relative;min-width:300px;width:300px;justify-content:flex-start;max-height:90vh;overflow-y:auto;overflow-x:hidden;&::-webkit-scrollbar{width:2px;}&::-webkit-scrollbar-track{background:transparent;}&::-webkit-scrollbar-thumb{background:var(--ifm-color-toc-scrollbar);border-radius:1px;}&::-webkit-scrollbar-thumb:hover{background:var(--ifm-color-toc-scrollbar-hover);}scrollbar-width:thin;scrollbar-color:var(--ifm-color-toc-scrollbar) transparent;box-sizing:border-box;width:calc(300px - 2px);ul{padding:0;margin:0;list-style-type:none;display:flex;flex-direction:column;gap:32px;width:100%;}li{margin:0 !important;}"]);const ToggleIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__ToggleIcon",componentId:"sc-14em2q2-4"})(["font-size:1.5em;text-align:center;margin-top:12px;cursor:pointer;color:var(--ifm-color-toc-inactive);font-weight:bold;"]);
 // EXTERNAL MODULE: ./node_modules/react-icons/tb/index.esm.js
 var tb_index_esm = __webpack_require__(710819);
 ;// ./src/components/ExploreCollection/ItemStylizing/ItemStylizingSparkle.tsx

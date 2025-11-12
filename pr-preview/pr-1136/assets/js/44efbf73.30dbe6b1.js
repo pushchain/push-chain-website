@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76074],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[5500],{
 
 /***/ 75:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -9968,6 +9968,64 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 507033:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ testnet)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBTestnetList.ts
+const KBTestnetList={title:'pages.knowledge.testnet.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate'},{type:'text',valueKey:"pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads",hidden:true}]},{type:'list',title:'Developers',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Ecosystem Apps',url:'http://push.org/ecosystem',target:'_blank'},{slug:'documentation',image:'/static/assets/website/chain/knowledge/developer-faucet',imageSrcSet:false,title:'Documentation',url:'https://push.org/docs',target:'_blank'},{slug:'push-explorer',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Explorer',url:'https://donut.push.network',target:'_blank'},{slug:'apply-glassroots',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Apply for Grassroots Program',url:'https://zv9atndluia.typeform.com/to/ItQ7i2sO](https://zv9atndluia.typeform.com/to/ItQ7i2sO',target:'_blank'}]},{type:'list',title:'Validators',topGap:true,bottomGap:true,variant:'row',items:[{slug:'push-validator',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Validator',url:'https://push.org/docs/chain/node-and-system-tools/running-push-validator/](https://push.org/docs/chain/node-and-system-tools/running-push-validator/',target:'_blank'}]},{type:'list',title:'Users',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Ecosystem Apps',url:'http://push.org/ecosystem',target:'_blank'},{slug:'lets-push-yaps',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:"Let's Push Yaps",url:'http://push.org/lfpush',target:'_blank'}]},{type:'list',title:'Incident Reports',topGap:true,bottomGap:true,variant:'row',items:[{slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Service Outage - Donut Testnet - 11 Nov 7 PM UTC - 12 Nov 7 AM UTC',url:'/knowledge/testnet/report/incident-12-nov-2025',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/testnetComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const TestnetComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTestnetList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const testnetComp = (TestnetComp);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+;// ./src/pages/knowledge/testnet/index.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function TestnetPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.testnet.seo.title'),description:t('pages.knowledge.testnet.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/testnet"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.testnet.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.testnet.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.testnet.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.testnet.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(697991)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"TestnetPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(testnetComp,{})})]});}/* harmony default export */ const testnet = (TestnetPage);
+
+/***/ }),
+
 /***/ 507048:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -14870,6 +14928,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ 697991:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbfaqpreview-979f2c1007ddcbc0325c9dbc855a2f4b.png");
+
+/***/ }),
+
 /***/ 698265:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -15191,62 +15260,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-9fad828d8323cbb920c74dd535603336.webp");
-
-/***/ }),
-
-/***/ 721593:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ push101)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBPush101List.js
-const KBPush101List={title:'pages.knowledge.push101.explainer-section.blocks.title',content:[{topGap:false,bottomGap:false,type:'indexlist',value:[{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.why-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.what-is-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.innovations-of-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.curated-reads",hidden:true}]},{type:'list',title:'pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.title',variant:'row',topGap:true,bottomGap:true,items:[{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.apps-of-the-future",slug:'apps-of-the-future-building-without-the-chaos',image:'/static/assets/website/chain/knowledge/apps-of-the-future-building-without-the-chaos',imageSrcSet:false,url:'/blog/apps-of-the-future-building-without-the-chaos',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain",slug:'why-push-chain',image:'/static/assets/website/chain/knowledge/why-push-chain',imageSrcSet:false,url:'/blog/why-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.innovations-by-push-chain",slug:'innovations-by-push-chain',image:'/static/assets/website/chain/knowledge/innovations-by-push-chain',imageSrcSet:false,url:'/blog/innovations-by-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1",slug:'another-l1',image:'/static/assets/website/chain/knowledge/another-l1',imageSrcSet:false,url:'/blog/another-l1',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.evolution-of-push",slug:'evolution-of-push',image:'/static/assets/website/chain/knowledge/evolution-of-push',imageSrcSet:false,url:'/blog/evolution-of-push',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.consumer-apps-that-can-be-built-on-push-chain",slug:'consumer-apps-that-can-be-built-on-push-chain',image:'/static/assets/website/chain/knowledge/consumer-apps',imageSrcSet:false,url:'/blog/consumer-apps-that-can-be-built-on-push-chain/',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain",slug:'faq-push-chain',image:'/static/assets/website/chain/knowledge/frequently-asked-questions-cover',imageSrcSet:false,url:'/blog/faq-push-chain/',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/push101Comp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const Push101Comp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.push101.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBPush101List,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const push101Comp = (Push101Comp);
-;// ./src/pages/knowledge/push101.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function PushBasicsPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.push101.seo.title'),description:t('pages.knowledge.push101.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/push101"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.push101.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.push101.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.push101.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.push101.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(push101Comp,{})})]});}/* harmony default export */ const push101 = (PushBasicsPage);
 
 /***/ }),
 
@@ -15687,11 +15700,11 @@ const translatedValue=t(item.valueKey,'');return Object.assign({},item,{value:tr
 });}return item;});},[block===null||block===void 0?void 0:block.value,t]);const texts=processedBlockValue.filter(v=>v.type==='text'&&!v.hidden)||[];const rawMarkdown=texts===null||texts===void 0?void 0:texts.map(t=>t.value).join('\n\n');// Memoize the processed markdown to prevent unnecessary re-processing
 const processedMarkdown=react.useMemo(()=>{return resolveImageUrls(processAdmonitions(cleanMarkdown(rawMarkdown)));},[rawMarkdown]);const toc=react.useMemo(()=>extractTOC(processedBlockValue||[]),[processedBlockValue]);// Create hidden section placeholders
 const hiddenSections=react.useMemo(()=>{const sections=[];processedBlockValue===null||processedBlockValue===void 0||processedBlockValue.forEach(v=>{if(v.type==='text'&&v.hidden){// Extract heading from hidden content (h2 and h3 only)
-const h2Match=v.value.match(/^##\s+(.+)$/m);const h3Match=v.value.match(/^###\s+(.+)$/m);if(h2Match){const headingText=h2Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:2});}else if(h3Match){const headingText=h3Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:3});}}});return sections;},[processedBlockValue]);return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{ref:contentRef,flexDirection:isTablet?'column':'row',gap:isTablet?'32px':'64px',alignItems:"flex-start",margin:"32px 0 32px 0",style:{position:'relative',overflow:'visible'},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{maxWidth:isTablet?'100%':'300px',minWidth:isTablet?'100%':'300px',alignItems:"flex-start",alignSelf:"flex-start",flexShrink:0,margin:!isMobile?'12px 0 0 0':'',children:[isTablet&&(toc===null||toc===void 0?void 0:toc.length)>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(MobileTOCWrapper,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.UL,{children:[(showFullMobileTOC?toc:toc.slice(0,2)).map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,title:""+t('components.explainer.prepend','')+item.text+t('components.explainer.append',''),children:item.text})},index);}),toc.length>2&&/*#__PURE__*/(0,jsx_runtime.jsx)(ToggleIcon,{onClick:()=>setShowFullMobileTOC(!showFullMobileTOC),children:showFullMobileTOC?/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronUp,{}):/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronDown,{})})]})}),!isTablet&&toc.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(DesktopTOC,{ref:tocRef,background:"var(--ifm-color-neutral-1100)",padding:"32px",borderRadius:"32px",alignItems:"flex-start",margin:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.UL,{children:toc===null||toc===void 0?void 0:toc.map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));const isActive=activeHeadingId===item.id||index===0&&activeHeadingId===''&&!isAtEnd;return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,isActive:isActive,onClick:handleTOCItemClick,title:""+t('components.explainer.prepend','Navigate to ')+item.text+t('components.explainer.append',' section'),children:item.text})},index);})})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{flex:1,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(TextItem,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(lib/* Markdown */.oz,{remarkPlugins:[remark_gfm_lib/* default */.A],rehypePlugins:[rehype_slug_lib/* default */.A,rehype_raw_lib/* default */.A],components:Object.assign({a:_ref2=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref2,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)("a",Object.assign({},props,{target:"_blank",rel:"noopener",children:props.children}));}},Object.fromEntries(['h2','h3'].map(tag=>[tag,_ref3=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref3,_excluded2);const id=generateIdFromHeadingText(props.children);return/*#__PURE__*/react.createElement(tag,{id,className:tag+"-text"},props.children);}])),{p:_ref4=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref4,_excluded3);// For now, let's hide all paragraphs in hidden sections
+const h2Match=v.value.match(/^##\s+(.+)$/m);const h3Match=v.value.match(/^###\s+(.+)$/m);if(h2Match){const headingText=h2Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:2});}else if(h3Match){const headingText=h3Match[1];const headingId=generateIdFromHeadingText(headingText);sections.push({id:headingId,text:headingText,level:3});}}});return sections;},[processedBlockValue]);return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{ref:contentRef,flexDirection:isTablet?'column':'row',gap:isTablet?'32px':'64px',alignItems:"flex-start",margin:"32px 0 32px 0",style:{position:'relative',overflow:'visible'},children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{maxWidth:isTablet?'100%':'300px',minWidth:isTablet?'100%':'300px',alignItems:"flex-start",alignSelf:"flex-start",flexShrink:0,margin:!isMobile?'12px 0 0 0':'',children:[isTablet&&(toc===null||toc===void 0?void 0:toc.length)>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(MobileTOCWrapper,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.UL,{children:[(showFullMobileTOC?toc:toc.slice(0,2)).map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,title:""+t('components.explainer.prepend','')+item.text+t('components.explainer.append',''),children:item.text})},index);}),toc.length>2&&/*#__PURE__*/(0,jsx_runtime.jsx)(ToggleIcon,{onClick:()=>setShowFullMobileTOC(!showFullMobileTOC),children:showFullMobileTOC?/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronUp,{}):/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsChevronDown,{})})]})}),!isTablet&&toc.length>0&&/*#__PURE__*/(0,jsx_runtime.jsx)(DesktopTOC,{ref:tocRef,background:"var(--ifm-color-neutral-1100)",padding:"32px",borderRadius:"32px",alignItems:"flex-start",margin:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.UL,{children:toc===null||toc===void 0?void 0:toc.map((item,index)=>{const highestLevel=Math.min(...toc.map(t=>t.level));const isActive=activeHeadingId===item.id||index===0&&activeHeadingId===''&&!isAtEnd;return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.LI,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ListItem,{href:"#"+item.id,level:item.level,highestLevel:highestLevel,isActive:isActive,onClick:handleTOCItemClick,title:""+t('components.explainer.prepend','Navigate to ')+item.text+t('components.explainer.append',' section'),children:item.text})},index);})})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{width:'100%',flex:1,children:/*#__PURE__*/(0,jsx_runtime.jsxs)(TextItem,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(lib/* Markdown */.oz,{remarkPlugins:[remark_gfm_lib/* default */.A],rehypePlugins:[rehype_slug_lib/* default */.A,rehype_raw_lib/* default */.A],components:Object.assign({a:_ref2=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref2,_excluded);return/*#__PURE__*/(0,jsx_runtime.jsx)("a",Object.assign({},props,{target:"_blank",rel:"noopener",children:props.children}));}},Object.fromEntries(['h2','h3'].map(tag=>[tag,_ref3=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref3,_excluded2);const id=generateIdFromHeadingText(props.children);return/*#__PURE__*/react.createElement(tag,{id,className:tag+"-text"},props.children);}])),{p:_ref4=>{let props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref4,_excluded3);// For now, let's hide all paragraphs in hidden sections
 // This is a simplified approach - we'll hide paragraphs that come after hidden headings
 const isHidden=false;// We'll implement this logic later if needed
 return/*#__PURE__*/react.createElement('p',{style:isHidden?{display:'none'}:{}},props.children);},// Custom component for admonitions
-div:_ref5=>{let{className}=_ref5,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref5,_excluded4);if(className&&className.includes('admonition')){return/*#__PURE__*/react.createElement('div',Object.assign({className},props));}return/*#__PURE__*/react.createElement('div',props);}}),children:processedMarkdown}),hiddenSections.map((section,index)=>{const HeadingTag=section.level===2?'h2':'h3';return/*#__PURE__*/react.createElement(HeadingTag,{key:"hidden-"+section.id+"-"+index,id:section.id,style:{height:'1px',margin:'0',padding:'0',visibility:'hidden'}});})]})})]},blockIndex);};/* harmony default export */ const Explainer = (ChainKnowledgeBaseIndexList);const TextItem=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__TextItem",componentId:"sc-14em2q2-0"})(["width:inherit;color:var(--ifm-color-white);&:not(:first-of-type){margin:12px 0 0 auto;}*{font-size:1.25rem;}h1{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:3rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h2{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2.5rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h3{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h4{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.5rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h5{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0;}blockquote{border:2px solid var(--ifm-color-white);border-left:6px solid var(--ifm-color-custom-pink);background-color:#ffffff55;color:var(--ifm-color-black);border-radius:12px;padding:15px;box-sizing:border-box;margin:24px 0;}ol li{list-style-type:decimal;}ul li{list-style-type:disc;}p{line-height:170%;}ul,ol,p{margin:24px 0;}p img,img{border-radius:32px;margin:16px 0;}.admonition{border-radius:12px;padding:16px 20px;margin:24px 0;border:none;border-left:5px solid;background-color:#ffffff55;}.admonition-info{border-left-color:var(--ifm-color-admonition-info-border);background:var(--ifm-color-admonition-info-bg);color:var(--ifm-color-white);}.admonition-warning{background-color:var(--ifm-color-admonition-warning-bg);border-left-color:var(--ifm-color-admonition-warning-border);color:var(--ifm-color-black);}.admonition-caution{border-left-color:var(--ifm-color-admonition-caution-border);}.admonition-tip{border-left-color:var(--ifm-color-admonition-tip-border);}.admonition-note{border-left-color:var(--ifm-color-admonition-note-border);}.admonition-title{font-weight:700;font-size:0.875rem;text-transform:uppercase;margin-bottom:8px;}.admonition-content{margin:0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p{margin:0 0 12px 0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content a{font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p:last-child{margin-bottom:0;}.admonition p:empty{display:none;}@media ","{max-width:100%;}"],globals/* device */.jO.tablet);const ListItem=styled_components_browser_esm["default"].a.withConfig({displayName:"Explainer__ListItem",componentId:"sc-14em2q2-1"})(["display:block;color:",";font-family:DM Sans;font-size:",";margin-left:",";font-style:normal;font-weight:",";line-height:120%;letter-spacing:-0.4px;transition:color 0.2s ease,font-weight 0.2s ease;&:hover{color:var(--ifm-color-toc-scrollbar);}"],_ref6=>{let{isActive}=_ref6;return isActive?'var(--ifm-color-toc-scrollbar)':'var(--ifm-color-toc-inactive)';},_ref7=>{let{level}=_ref7;return level===1?'1.25em':level===2?'1.125em':'1em';},_ref8=>{let{level,highestLevel}=_ref8;return level===highestLevel?'0':(level-highestLevel)*15+"px";},_ref9=>{let{isActive}=_ref9;return isActive?'600':'500';});const MobileTOCWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__MobileTOCWrapper",componentId:"sc-14em2q2-2"})(["margin-top:16px;padding:20px;border-radius:24px;background:var(--ifm-color-neutral-1100);width:100%;box-shadow:0px 2px 4px rgba(0,0,0,0.05);ul{padding:0;margin:0;list-style-type:none;}"]);const DesktopTOC=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"Explainer__DesktopTOC",componentId:"sc-14em2q2-3"})(["align-self:flex-start;position:relative;min-width:300px;width:300px;justify-content:flex-start;max-height:90vh;overflow-y:auto;overflow-x:hidden;&::-webkit-scrollbar{width:2px;}&::-webkit-scrollbar-track{background:transparent;}&::-webkit-scrollbar-thumb{background:var(--ifm-color-toc-scrollbar);border-radius:1px;}&::-webkit-scrollbar-thumb:hover{background:var(--ifm-color-toc-scrollbar-hover);}scrollbar-width:thin;scrollbar-color:var(--ifm-color-toc-scrollbar) transparent;box-sizing:border-box;width:calc(300px - 2px);ul{padding:0;margin:0;list-style-type:none;display:flex;flex-direction:column;gap:32px;width:100%;}li{margin:0 !important;}"]);const ToggleIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__ToggleIcon",componentId:"sc-14em2q2-4"})(["font-size:1.5em;text-align:center;margin-top:12px;cursor:pointer;color:var(--ifm-color-toc-inactive);font-weight:bold;"]);
+div:_ref5=>{let{className}=_ref5,props=(0,objectWithoutPropertiesLoose/* default */.A)(_ref5,_excluded4);if(className&&className.includes('admonition')){return/*#__PURE__*/react.createElement('div',Object.assign({className},props));}return/*#__PURE__*/react.createElement('div',props);}}),children:processedMarkdown}),hiddenSections.map((section,index)=>{const HeadingTag=section.level===2?'h2':'h3';return/*#__PURE__*/react.createElement(HeadingTag,{key:"hidden-"+section.id+"-"+index,id:section.id,style:{height:'1px',margin:'0',padding:'0',visibility:'hidden'}});})]})})]},blockIndex);};/* harmony default export */ const Explainer = (ChainKnowledgeBaseIndexList);const TextItem=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__TextItem",componentId:"sc-14em2q2-0"})(["width:inherit;color:var(--ifm-color-white);&:not(:first-of-type){margin:12px 0 0 auto;}*{font-size:1.25rem;}h1{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:3rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h2{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2.5rem;font-style:normal;font-weight:500;line-height:120%;letter-spacing:-0.8px;margin:64px 0 24px 0;}h3{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:2rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h4{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.5rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h5{color:var(--ifm-color-white);font-family:DM Sans,sans-serif;font-size:1.25rem;font-style:normal;font-weight:500;line-height:140%;letter-spacing:-0.64px;margin:0 0 16px 0;}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0;}blockquote{border:2px solid var(--ifm-color-white);border-left:6px solid var(--ifm-color-custom-pink);background-color:#ffffff55;color:var(--ifm-color-black);border-radius:12px;padding:15px;box-sizing:border-box;margin:24px 0;}ol li{list-style-type:decimal;}ul li{list-style-type:disc;}p{line-height:170%;}ul,ol,p{margin:24px 0;}p img,img{border-radius:32px;margin:16px 0;}iframe[src*='youtube.com'],iframe[src*='youtu.be'],iframe[src*='vimeo.com']{width:100%;aspect-ratio:16 / 9;border-radius:8px;}.admonition{border-radius:12px;padding:16px 20px;margin:24px 0;border:none;border-left:5px solid;background-color:#ffffff55;}.admonition-info{border-left-color:var(--ifm-color-admonition-info-border);background:var(--ifm-color-admonition-info-bg);color:var(--ifm-color-white);}.admonition-warning{background-color:var(--ifm-color-admonition-warning-bg);border-left-color:var(--ifm-color-admonition-warning-border);color:var(--ifm-color-black);}.admonition-caution{border-left-color:var(--ifm-color-admonition-caution-border);}.admonition-tip{border-left-color:var(--ifm-color-admonition-tip-border);}.admonition-note{border-left-color:var(--ifm-color-admonition-note-border);}.admonition-title{font-weight:700;font-size:0.875rem;text-transform:uppercase;margin-bottom:8px;}.admonition-content{margin:0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p{margin:0 0 12px 0;font-size:1rem;font-weight:400;line-height:165%;}.admonition-content a{font-size:1rem;font-weight:400;line-height:165%;}.admonition-content p:last-child{margin-bottom:0;}.admonition p:empty{display:none;}@media ","{max-width:100%;}"],globals/* device */.jO.tablet);const ListItem=styled_components_browser_esm["default"].a.withConfig({displayName:"Explainer__ListItem",componentId:"sc-14em2q2-1"})(["display:block;color:",";font-family:DM Sans;font-size:",";margin-left:",";font-style:normal;font-weight:",";line-height:120%;letter-spacing:-0.4px;transition:color 0.2s ease,font-weight 0.2s ease;&:hover{color:var(--ifm-color-toc-scrollbar);}"],_ref6=>{let{isActive}=_ref6;return isActive?'var(--ifm-color-toc-scrollbar)':'var(--ifm-color-toc-inactive)';},_ref7=>{let{level}=_ref7;return level===1?'1.25em':level===2?'1.125em':'1em';},_ref8=>{let{level,highestLevel}=_ref8;return level===highestLevel?'0':(level-highestLevel)*15+"px";},_ref9=>{let{isActive}=_ref9;return isActive?'600':'500';});const MobileTOCWrapper=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__MobileTOCWrapper",componentId:"sc-14em2q2-2"})(["margin-top:16px;padding:20px;border-radius:24px;background:var(--ifm-color-neutral-1100);width:100%;box-shadow:0px 2px 4px rgba(0,0,0,0.05);ul{padding:0;margin:0;list-style-type:none;}"]);const DesktopTOC=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"Explainer__DesktopTOC",componentId:"sc-14em2q2-3"})(["align-self:flex-start;position:relative;min-width:300px;width:300px;justify-content:flex-start;max-height:90vh;overflow-y:auto;overflow-x:hidden;&::-webkit-scrollbar{width:2px;}&::-webkit-scrollbar-track{background:transparent;}&::-webkit-scrollbar-thumb{background:var(--ifm-color-toc-scrollbar);border-radius:1px;}&::-webkit-scrollbar-thumb:hover{background:var(--ifm-color-toc-scrollbar-hover);}scrollbar-width:thin;scrollbar-color:var(--ifm-color-toc-scrollbar) transparent;box-sizing:border-box;width:calc(300px - 2px);ul{padding:0;margin:0;list-style-type:none;display:flex;flex-direction:column;gap:32px;width:100%;}li{margin:0 !important;}"]);const ToggleIcon=styled_components_browser_esm["default"].div.withConfig({displayName:"Explainer__ToggleIcon",componentId:"sc-14em2q2-4"})(["font-size:1.5em;text-align:center;margin-top:12px;cursor:pointer;color:var(--ifm-color-toc-inactive);font-weight:bold;"]);
 // EXTERNAL MODULE: ./node_modules/react-icons/tb/index.esm.js
 var tb_index_esm = __webpack_require__(710819);
 ;// ./src/components/ExploreCollection/ItemStylizing/ItemStylizingSparkle.tsx
@@ -20678,17 +20691,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-1610fcb762ae65c4cbe377b08bb20d4c.webp");
-
-/***/ }),
-
-/***/ 987744:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbbasicspreview-60fe7c3729c82078fe665ae2f556d86f.png");
 
 /***/ }),
 

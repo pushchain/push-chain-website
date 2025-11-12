@@ -866,7 +866,7 @@
             "sections": {
               "donut-overview": {
                 "items": {
-                  "intro": "We spent a decade building chain silos. Now it's time to break them down. ",
+                  "intro": "We spent a decade building chain silos. Now it's time to break them down.\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
                   "welcome-donut": "## Donut Testnet 🍩\n\nDonut is Push Chain’s public testnet for Universal Apps that work across chains. It is a major mileston in bringing universal apps to the masses.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
                   "what-is-push-chain": "## What is Push Chain?\n\nPush Chain is a shared-state, universal blockchain where **interoperability is a core chain primitive**, not an afterthought added through external protocols. **Deploy once**, and your app runs natively across connected chains.\n\n**Donut is where we battle-test that.**",
                   "quick-links": "## Quick Links\n\n🧠 [Knowledge Base](/knowledge) — Learn the architecture and design.\n\n🌳 [Ecosystem Apps](/ecosystem) — Explore Universal Apps deployed on Push Chain.\n\n**🪩 Popular Apps to Try**\n\n[Ballsy](https://ballsy.push.org/) — experience the same app logic working seamlessly across chains.\n\n[Simulate](https://simulate.push.org/) — test and visualize cross-chain interactions.\n\n📖 [Developer Docs](/docs) — Dive into documentation of Push Chain.\n\n💧 [Faucet](https://faucet.push.org) — Get testnet tokens.\n\n🔍 [Push Scan](https://donut.push.network/) — Track transactions and network data.",
@@ -904,6 +904,33 @@
                   "grassroots-program": {
                     "title": "Apply for Grassroots Program"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "report": {
+        "seo": {
+          "title": "Incident Reports",
+          "description": "Real-time incident reports and network status updates for Push Chain. Stay informed about outages, maintenance, and resolved issues.",
+          "og-title": "Push Chain Incident Reports - Network Status",
+          "og-description": "Track Push Chain network incidents, maintenance windows, and service updates. Get real-time status information.",
+          "twitter-title": "Push Chain Incident Reports",
+          "twitter-description": "Live updates on Push Chain network status, incidents, and maintenance."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base",
+            "donut-testnet": "Donut Testnet",
+            "report": "Incident Reports"
+          },
+          "blocks": {
+            "title": "Incident Reports",
+            "sections": {
+              "reports-overview": {
+                "items": {
+                  "intro": "content"
                 }
               }
             }
