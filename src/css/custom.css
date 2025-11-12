@@ -781,47 +781,21 @@ body {
   height: 100%;
 }
 
-body.homepage-body {
-  box-sizing: border-box !important;
-  margin: 0;
-  height: 100% !important;
-  background: #000000 !important;
-  padding-bottom: env(safe-area-inset-bottom) !important;
-}
-
 /* Ensure homepage uses black background under translucent bars and fills viewport */
-body.homepage-body,
-.homepage-body,
-body.homepage-body #__docusaurus,
-.homepage-body #__docusaurus,
-body.homepage-body .main-wrapper,
-.homepage-body .main-wrapper {
+body .homepage-body {
   background: #000000 !important;
   height: 100% !important;
   display: flex !important;
   flex-direction: column !important;
+  margin: 0;
+
 }
 
-/* Ensure homepage root content expands to fill available space */
-body.homepage-body #__docusaurus > div,
-.homepage-body #__docusaurus > div,
-body.homepage-body > div,
-.homepage-body > div {
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-}
-
-/* Guard against any component adding white bg on homepage */
-body.homepage-body .navbar--fixed-top,
-body.homepage-body .navbar__inner {
-  background-color: transparent !important;
-}
 
 /* update docs/blogs dark mode color */
 html[data-theme='dark'],
 /*html[data-theme='dark'] body,*/
-html[data-theme='dark'] #__docusaurus,
+/*html[data-theme='dark'] #__docusaurus,*/
 html[data-theme='dark'] .main-wrapper,
 html[data-theme='dark'] .theme-doc-markdown,
 html[data-theme='dark'] .theme-doc-page,
