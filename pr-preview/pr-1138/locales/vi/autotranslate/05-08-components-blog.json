@@ -1,0 +1,32 @@
+{
+  "components": {
+    "blog": {
+      "more-posts": {
+        "title": "Thêm bài viết từ Push Chain",
+        "follow-button": "Theo dõi",
+        "read-more": "Đọc thêm"
+      },
+      "list": {
+        "recent-updates": "Cập nhật mới nhất",
+        "page-title": "Trang {{page}}"
+      },
+      "paginator": {
+        "nav-aria-label": "Điều hướng trang danh sách blog",
+        "newer-entries": "Các bài viết mới hơn",
+        "older-entries": "Các bài viết cũ hơn"
+      },
+      "footer-item": {
+        "share-title": "Hãy cùng tham gia thảo luận bằng cách chia sẻ bài viết này",
+        "share-button": "Chia sẻ",
+        "share-modal-title": "Chia sẻ",
+        "copy-link": "Sao chép liên kết",
+        "about-title": "Về Push Chain",
+        "about-description": "Push Chain là blockchain đa năng đầu tiên được thiết kế để loại bỏ sự phân mảnh giữa các chain. Nó cho phép các nhà phát triển triển khai một lần và có thể sử dụng ngay lập tức cho người dùng trên bất kỳ chain nào, dù là EVM hay Non-EVM (bao gồm Ethereum, Solana, Bitcoin, v.v.). Nó là chain Proof of Stake (PoS) tương thích 100% với EVM, cho phép người dùng tương tác với các ứng dụng được triển khai trên Push Chain từ bất kỳ chain nào, như họ tương tác trên chain của chính họ.",
+        "social-twitter": "Twitter",
+        "social-discord": "Discord",
+        "social-youtube": "YouTube",
+        "social-linkedin": "LinkedIn"
+      }
+    }
+  }
+}
