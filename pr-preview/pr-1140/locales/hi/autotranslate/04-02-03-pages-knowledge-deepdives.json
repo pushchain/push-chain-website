@@ -1,0 +1,43 @@
+{
+  "pages": {
+    "knowledge": {
+      "deepdives": {
+        "seo": {
+          "title": "डीप डाइव्स — कॉन्सेप्ट्स और आर्किटेक्चर",
+          "description": "शेयर्ड स्टेट, फ़ी एब्स्ट्रैक्शन, USV/UEA, और यूनिवर्सल एग्जीक्यूशन लेयर पर आसानी से समझ आने वाले स्पष्टीकरण।",
+          "og-title": "डीप डाइव्ज़ - कॉन्सेप्ट्स और आर्किटेक्चर",
+          "og-description": "Push Chain मॉड्यूल, डिज़ाइन निर्णयों और प्रदर्शन पर गहन लेख।",
+          "twitter-title": "डीप डाइव्ज़ - अंदर की बातें",
+          "twitter-description": "Push Chain कैसे काम करता है, इस पर स्पष्टीकरण।"
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "नॉलेज बेस"
+          },
+          "blocks": {
+            "title": "डीप डाइव्ज़",
+            "sections": {
+              "architecture-deep-dives": {
+                "items": {
+                  "intro": "## आर्किटेक्चर डीप डाइव्स\n\nPush Chain के आर्किटेक्चर की जटिलताओं और यह कैसे काम करता है, के बारे में जानें - एक मॉड्यूल एक समय में।",
+                  "curated-reads": "## चुने हुए लेख 👇"
+                }
+              },
+              "learn-push-chain": {
+                "title": "Push Chain कैसे काम करता है, जानें!",
+                "items": {
+                  "interop-spectrum": {
+                    "title": "इंटरऑप एक स्पेक्ट्रम के रूप में"
+                  },
+                  "understand-proof-of-stake-part-1": {
+                    "title": "प्रूफ ऑफ स्टेक (POS) को समझना - भाग 1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

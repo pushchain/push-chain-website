@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Project G.U.D deployathon is LIVE! Deploy apps, win $5000",
+      "button-text": "Go Universal & Deploy",
+      "button-title": "Project G.U.D deployathon is LIVE",
+      "button-aria-label": "Project G.U.D deployathon is LIVE. You can check it out here",
+      "image-alt": "Push Chain Testnet Donut - Universal Blockchain",
+      "close-button-title": "Close testnet notification",
+      "close-button-aria-label": "Dismiss Push Chain testnet notification",
+      "container-aria-label": "Push Chain testnet notification"
+    }
+  }
+}
