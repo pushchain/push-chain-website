@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-14T20:31:20.684Z",
+  "lastUpdated": "2025-11-14T20:48:48.081Z",
   "keys": {
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "value": "### Push Chain üzerinde neler inşa edilebilir?\n\nPush Chain, kusursuz birlikte çalışabilirlik getirir ve tüm L1'leri, L2'leri ve L3'leri birleştirerek inovasyon ve birlikte çalışabilirlik oyun alanı olmaya hazırlanır. Mevcut web3 kullanım durumlarını inşa edebilirsiniz:\n\n![Push Chain'in temel kullanım durumları](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nYa da web3'ü daha iyi hale getirebilir ve yenilikler yaratabilirsiniz:\n\n![Push Chain'in tüketici kullanım durumları](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nYa da popüler uygulama örneklerini görebilir ve ilham alabilirsiniz:\n\n![Push Chain'deki popüler uygulama örnekleri](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
@@ -257,9 +257,9 @@
       "lastUpdated": "2025-11-14T19:27:06.360Z"
     },
     "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro": {
-      "value": "**We spent a decade building chain silos. Now it's time to break them down.**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "value": "**On decade yiyen şemaları inşa ettik. Şimdi onları kırıp bırakın.**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Kamu Test Ağı Canlı\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
       "englishChecksum": "b22838133be616d6cefb8d88cf1783c3",
-      "lastUpdated": "2025-11-14T20:31:20.684Z"
+      "lastUpdated": "2025-11-14T20:48:48.081Z"
     },
     "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut": {
       "value": "## Donut Testnet 🍩\n\nDonut, Push Chain’in Universal Uygulamalar için halka açık testnetidir ve zincirler arasında çalışan uygulamalardır. Bu, evrensel uygulamaları kitlelere ulaştırmada önemli bir kilometre taşıdır.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
