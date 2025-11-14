@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-14T20:16:09.813Z",
+  "lastUpdated": "2025-11-14T20:30:20.149Z",
   "keys": {
     "global.site-name": {
       "value": "بلوشكين — Universal L1 for Apps",
@@ -1659,6 +1659,16 @@
       "value": "<1><2>أعطال التطبيق:</2> إملاء <3>تذاكر الدعم</3> أو مشاركة في <4>ديسكورد</4> مع الخطوات للتكرار.</1><1><2>مشاكل الأمان:</2> إرسال بريد إلكتروني إلى <5>security@push.org</5>. يرجى تجنب الإفصاح العام حتى يتم تاكيد الحسم.</1>",
       "englishChecksum": "e3864f1b6ec8ea7832ffe6c8aeb8af09",
       "lastUpdated": "2025-11-14T20:16:09.813Z"
+    },
+    "pages.knowledge.testnet.seo.description": {
+      "value": "دونوت هو شبكة اختبار بيئة عامة لبيشين. اكتشف كيفية التوصّل إليها، بناء تطبيقات عالمية، استخدام الصمام، وإنشاء معالج.",
+      "englishChecksum": "e2161002d0e2ec61a020f0d3384bf236",
+      "lastUpdated": "2025-11-14T20:30:20.149Z"
+    },
+    "pages.knowledge.deepdives.seo.twitter-description": {
+      "value": "شرح كيفية عمل Push Chain.",
+      "englishChecksum": "f1c4328ab68714a0fc2e2f591d9dc9ac",
+      "lastUpdated": "2025-11-14T20:30:17.823Z"
     }
   }
 }
