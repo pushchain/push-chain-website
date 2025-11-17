@@ -1,0 +1,63 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Yazarlar — Nasıl Yapılır & Eğitimler",
+          "description": "Push Chain özelliklerini kullanmak için adım adım kılavuzlar, kalıplar ve örnekler.",
+          "og-title": "Builders - Nasıl Yapılırlar & Eğitimler",
+          "og-description": "Push Chain ile yapılandırma için rehberli öğreticiler, en iyi uygulamalar ve örnekler.",
+          "twitter-title": "Builders - Nasıl Yapılır & Öğreticiler",
+          "twitter-description": "Push Chain üzerinde yayın yapmak için adım adım kılavuzlar."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Bilgi Tabanı"
+          },
+          "blocks": {
+            "title": "Push Chain üzerinde geliştirme",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nPush Chain üzerinde inşa etmeye hazır mısınız? İlham vermeniz ve başlamanız için bazı kaynaklar burada.",
+                  "curated-reads": "## Özenle Seçilmiş Okumalar 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Haydi Evrensel Uygulamalar Yapalım 💪",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "Geleceğin Uygulamaları — Kaos olmadan inşa etmek"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Tüketici Uygulamaları 🫶 Push Chain?"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Paylaşımlı Durumla Mümkün Olan Uygulamalar - Cilt 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Paylaşımlı Durum ile Mümkün Olan Uygulamalar - Vol.2"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Geliştirici Kaynakları",
+                "items": {
+                  "developer-docs": {
+                    "title": "Geliştirici Dokümantasyonunu Keşfet"
+                  },
+                  "faucet": {
+                    "title": "Testnet టోకన్'ları Alın"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
