@@ -1,0 +1,22 @@
+name: Cleanup PR previews
+on:
+  pull_request:
+    types: [closed]  # Triggers on close OR merge
+    branches: [main]
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove preview directory
+        run: |
+          rm -rf pr-preview/pr-${{ github.event.pull_request.number }}
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Remove preview for PR #${{ github.event.pull_request.number }}" || echo "Nothing to remove"
+          git push
