@@ -1,13 +1,29 @@
 name: Cleanup PR previews
 on:
   pull_request:
-    types: [closed]  # Triggers on close OR merge
+    types: [closed]
     branches: [main]
 
 jobs:
   cleanup:
     runs-on: ubuntu-latest
     steps:
+      - name: Cancel deploy workflow for this PR
+        run: |
+          runs=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/deploy-preview.yml/runs?status=in_progress&per_page=100")
+
+          run_ids=$(echo "$runs" | jq -r '.workflow_runs[] | select(.pull_requests[]?.number == ${{ github.event.pull_request.number }}) | .id')
+
+          for run_id in $run_ids; do
+            echo "Cancelling run $run_id"
+            curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+              "https://api.github.com/repos/${{ github.repository }}/actions/runs/$run_id/cancel"
+          done
+
+      - name: Wait for cancellation
+        run: sleep 10
+
       - uses: actions/checkout@v4
         with:
           ref: gh-pages
