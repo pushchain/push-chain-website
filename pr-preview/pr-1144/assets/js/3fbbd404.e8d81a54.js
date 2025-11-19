@@ -1,10 +1,13 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[7337],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76276],{
 
-/***/ 26303:
-/***/ ((module) => {
+/***/ 22722:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1144/blog/faq-push-chain","source":"@site/blog/2024-12-09-faq-push-chain/index.md","title":"Push Chain’s Frequently Asked Questions","description":"Push Chain’s Frequently Asked Questions","date":"2024-12-09T00:00:00.000Z","tags":[{"inline":true,"label":"Push Chain","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/push-chain"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/shared-app-experience"},{"inline":true,"label":"Community & Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/community-ecosystem"},{"inline":true,"label":"Tokenomics","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/tokenomics"}],"readingTime":10.54,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1144/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1144/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"faq-push-chain","title":"Push Chain’s Frequently Asked Questions","authors":["push"],"image":"./cover-image.webp","description":"Push Chain’s Frequently Asked Questions","text":"The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.","tags":["Push Chain","Shared App Experience","Community & Ecosystem","Tokenomics"],"twitterId":"1869789799810277800"},"unlisted":false,"prevItem":{"title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","permalink":"/push-chain-website/pr-preview/pr-1144/blog/consumer-apps-that-can-be-built-on-push-chain"},"nextItem":{"title":"👋 Randomized Parallel Validators of Push Chain","permalink":"/push-chain-website/pr-preview/pr-1144/blog/randomized-node-selection-push-chain"}}');
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-5cd699e8baeab8015a6f9597167571ea.webp");
 
 /***/ }),
 
@@ -103,27 +106,7 @@ function MDXProvider(properties) {
 
 /***/ }),
 
-/***/ 351002:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-797a5885125fd8ebd02ab0d48975b059.webp");
-
-/***/ }),
-
-/***/ 419635:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-797a5885125fd8ebd02ab0d48975b059.webp");
-
-/***/ }),
-
-/***/ 454587:
+/***/ 127476:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -132,35 +115,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_faq_push_chain_index_md_569_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_consumer_apps_that_can_be_built_on_push_chain_index_md_b93_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_faq_push_chain_index_md_569_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(26303);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_consumer_apps_that_can_be_built_on_push_chain_index_md_b93_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(937596);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 
 
 const frontMatter = {
-	slug: 'faq-push-chain',
-	title: 'Push Chain’s Frequently Asked Questions',
+	slug: 'consumer-apps-that-can-be-built-on-push-chain',
+	title: 'Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain',
 	authors: [
 		'push'
 	],
 	image: './cover-image.webp',
-	description: 'Push Chain’s Frequently Asked Questions',
-	text: 'The place to find answers to all the popular questions the community has asked about Push Chain. Crowdsourced from Push Fam ❤️ and curated by the Push team 💪.',
+	description: 'Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain',
+	text: 'Web 3 is growing at lightning speed! Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!! While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal',
 	tags: [
 		'Push Chain',
+		'Universal Apps',
 		'Shared App Experience',
-		'Community & Ecosystem',
-		'Tokenomics'
+		'Consumer Crypto',
+		'Community & Ecosystem'
 	],
-	twitterId: '1869789799810277800'
+	twitterId: '1881607795570860403'
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(419635)/* ["default"] */ .A),
+"image": (__webpack_require__(22722)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -176,8 +160,8 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover Image of Push Chain’s Frequently Asked Questions",
-      src: (__webpack_require__(351002)/* ["default"] */ .A) + "",
+      alt: "Cover Image of Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain",
+      src: (__webpack_require__(929021)/* ["default"] */ .A) + "",
       width: "1600",
       height: "900"
     })
@@ -197,6 +181,23 @@ function MDXContent(props = {}) {
 }
 
 
+
+/***/ }),
+
+/***/ 929021:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-5cd699e8baeab8015a6f9597167571ea.webp");
+
+/***/ }),
+
+/***/ 937596:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1144/blog/consumer-apps-that-can-be-built-on-push-chain","source":"@site/blog/2024-12-09-consumer-apps-that-can-be-built-on-push-chain/index.md","title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","description":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","date":"2024-12-09T00:00:00.000Z","tags":[{"inline":true,"label":"Push Chain","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/push-chain"},{"inline":true,"label":"Universal Apps","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/universal-apps"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/shared-app-experience"},{"inline":true,"label":"Consumer Crypto","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/consumer-crypto"},{"inline":true,"label":"Community & Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1144/blog/tags/community-ecosystem"}],"readingTime":4.54,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1144/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1144/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"consumer-apps-that-can-be-built-on-push-chain","title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","authors":["push"],"image":"./cover-image.webp","description":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","text":"Web 3 is growing at lightning speed! Hundreds of L1s, Thousands of L2s and soon Tens of thousands of L3s!! While striving to make systems more scalable, decentralized and secure, we risk overlooking a crucial goal","tags":["Push Chain","Universal Apps","Shared App Experience","Consumer Crypto","Community & Ecosystem"],"twitterId":"1881607795570860403"},"unlisted":false,"prevItem":{"title":"Evolution of Push","permalink":"/push-chain-website/pr-preview/pr-1144/blog/evolution-of-push"},"nextItem":{"title":"👋 Randomized Parallel Validators of Push Chain","permalink":"/push-chain-website/pr-preview/pr-1144/blog/randomized-node-selection-push-chain"}}');
 
 /***/ })
 
