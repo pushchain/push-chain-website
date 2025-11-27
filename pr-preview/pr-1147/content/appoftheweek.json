@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "name": "Last One",
+  "description": "Last one to bid before timer runs out takes the pot",
+  "icon": "/assets/ecosystem/last-one-icon.png",
+  "bgImage": "/assets/ecosystem/last-one-bg.png",
+  "bgGradientColor": "#E5B92A",
+  "tags": [
+    "Gaming"
+  ],
+  "href": "https://www.lastone.fun/",
+  "titleColor": "black",
+  "descriptionColor": "black",
+  "tagsColor": "black",
+  "appoftheweek": true,
+  "spotlighttext": "Last bid wins it all!"
+}
