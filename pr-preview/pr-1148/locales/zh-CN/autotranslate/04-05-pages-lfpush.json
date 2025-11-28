@@ -1,0 +1,32 @@
+{
+  "pages": {
+    "lfpush": {
+      "seo": {
+        "title": "让推送 — 社区倡议",
+        "description": "Push社区活动、帖子等。",
+        "og-title": "让推 - Push Chain社区发起",
+        "og-description": "社区驱动的倡议和 Push Chain 的股份。",
+        "twitter-title": "Let's Push | 社区倡议",
+        "twitter-description": "查看 Push Chain 的 Push 社区倡议。"
+      },
+      "hero-section": {
+        "title": "让我们一起推进",
+        "description": "LF Push 构建者社区——庆祝您的成就和您帮助的人。分享您的成功，标记 <hashtag>#LFPush</hashtag> 或 <mention>@PushChain</mention>，我们将为您扩大影响力。"
+      },
+      "tweets-section": {
+        "actions": {
+          "share-win": "分享您的胜利",
+          "join-community": "加入社区",
+          "learn-more": "了解更多"
+        },
+        "meta": {
+          "tweet-alt": "来自 Push Chain 社区成员的推文",
+          "loading-alt": "正在加载更多社区推文"
+        },
+        "tweets-counter": "{{count}} 条推文，还在持续增加！",
+        "loading": "正在加载更多推文...",
+        "end-message": "您已经到达终点！🎉"
+      }
+    }
+  }
+}
