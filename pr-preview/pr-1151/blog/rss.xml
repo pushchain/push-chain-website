@@ -1,0 +1,1275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Push Chain — Universal Blockchain for Apps Blog</title>
+        <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/</link>
+        <description>Push Chain — Universal Blockchain for Apps Blog</description>
+        <lastBuildDate>Fri, 05 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[What is Universal Fee Abstraction?]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/</guid>
+            <pubDate>Fri, 05 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[What is Universal Fee Abstraction?]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="What is Universal Fee Abstraction?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-eeeffa69e33a7ce67750cb9292f60d59.webp" width="1600" height="900" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-universal-fee-abstraction">What is Universal Fee Abstraction?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#what-is-universal-fee-abstraction" class="hash-link" aria-label="Direct link to What is Universal Fee Abstraction?" title="Direct link to What is Universal Fee Abstraction?" translate="no">​</a></h2>
+<p>Universal Fee Abstraction is a magical mechanism that lets users pay for network fees on any chain, in any token they already hold, while using Universal Apps on Push Chain.</p>
+<p>One signature. One flow. Zero Friction.</p>
+<p>Let’s break it down.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-fee-abstraction-exists">Why Fee Abstraction Exists<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#why-fee-abstraction-exists" class="hash-link" aria-label="Direct link to Why Fee Abstraction Exists" title="Direct link to Why Fee Abstraction Exists" translate="no">​</a></h2>
+<p>For years, blockchains enforced a rigid rule:
+<strong>Pay gas in the chain’s native token.</strong></p>
+<p>ETH on Ethereum
+SOL on Solana
+POL on Polygon
+BTC on Bitcoin</p>
+<p>This made sense when chains were isolated islands.</p>
+<p>But as we progress towards a chain-agnostic world, following such legacy rules has proven to be one of the biggest hurdles to our mainstream adoption.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-user-pain">The User Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-user-pain" class="hash-link" aria-label="Direct link to The User Pain" title="Direct link to The User Pain" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cold-start-problem-i-need-gas-to-get-gas">Cold Start Problem: "I need gas to get gas"<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#cold-start-problem-i-need-gas-to-get-gas" class="hash-link" aria-label="Direct link to Cold Start Problem: &quot;I need gas to get gas&quot;" title="Direct link to Cold Start Problem: &quot;I need gas to get gas&quot;" translate="no">​</a></h4>
+<p>You hold ETH and 1000 USDC on Ethereum.
+A new DeFi app you want is on Arbitrum.</p>
+<p>You connect your wallet… but can’t do anything.
+Even though you have tokens, you don’t have <em>the right</em> token on the right chain.</p>
+<p>Tokens don’t work seamlessly inter-chain. So you figure it out 🤷.</p>
+<p>And that meant, your only option before Push Chain was:
+1. Bridge ETH
+2. Wait, do additional conversion, or wallet creation, or both
+3. Finally, use the app</p>
+<p>Swap Arbitrum for Polygon, Solana, Base, Whatever. Same friction, new native token.</p>
+<p><strong>Every new chain = new gas token = new friction.</strong></p>
+<p>Even Industry greats like Austin Griffith call this torture out [ LINK TWEET - <a href="https://x.com/austingriffith/status/1985438645130838068" target="_blank" rel="noopener noreferrer" class="">https://x.com/austingriffith/status/1985438645130838068</a>]</p>
+<p><img decoding="async" loading="lazy" alt="What is Universal Fee Abstraction?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-ef261e3d76b5aae321b967d2871e1454.webp" width="1194" height="484" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-gas-portfolio-issue">The Gas Portfolio Issue<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-gas-portfolio-issue" class="hash-link" aria-label="Direct link to The Gas Portfolio Issue" title="Direct link to The Gas Portfolio Issue" translate="no">​</a></h4>
+<p>Everyone in crypto is unknowingly maintaining a “gas portfolio”:</p>
+<ul>
+<li class="">Track native balances across chains</li>
+<li class="">Keep all of them topped up</li>
+<li class="">Constantly bridge value for fees</li>
+</ul>
+<p>The overhead is ridiculous. The prep time often exceeds the actual transaction time.</p>
+<p>Users shouldn’t be managing chain infrastructure.</p>
+<p>They should be using apps.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-developers-dilemma">The Developers Dilemma<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-developers-dilemma" class="hash-link" aria-label="Direct link to The Developers Dilemma" title="Direct link to The Developers Dilemma" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="fragmented-userbases">Fragmented userbases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#fragmented-userbases" class="hash-link" aria-label="Direct link to Fragmented userbases" title="Direct link to Fragmented userbases" translate="no">​</a></h4>
+<p>- Deploy on Ethereum → serve Ethereum users
+- Deploy on Solana → serve Solana users
+- Deploy on Arbitrum → serve Arbitrum users</p>
+<p>This fragments your user base. Every chain becomes a silo, each deployment forces:</p>
+<ul>
+<li class="">Separate Infrastructure</li>
+<li class="">New Liquidity</li>
+<li class="">New Gas Token</li>
+<li class="">Fragmented Community</li>
+</ul>
+<p><strong>Universal Fee Abstraction fixes this.</strong></p>
+<p><strong>Deploy once, onboard users from everywhere.</strong></p>
+<p>It’s time you focus on the product, No extra infra. No cross-chain fee logic. Just chain-native interop Magic.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-universal-fee-abstraction-work">How does Universal Fee Abstraction work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#how-does-universal-fee-abstraction-work" class="hash-link" aria-label="Direct link to How does Universal Fee Abstraction work?" title="Direct link to How does Universal Fee Abstraction work?" translate="no">​</a></h2>
+<p>The system works in three coordinated steps:</p>
+<ol>
+<li class="">Gas Estimation &amp; Conversion (SDK handles)</li>
+<li class="">Fee Locking on Source Chain (Universal Gateway contract handles)</li>
+<li class="">Conversion, Credit and Attribution (Validator handles)</li>
+</ol>
+<p>From a user's perspective, <strong>all of this happens automatically when you sign a single transaction</strong>. No bridges, no manual conversions, no multi-step flows.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="gas-estimation--conversion">Gas estimation &amp; Conversion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#gas-estimation--conversion" class="hash-link" aria-label="Direct link to Gas estimation &amp; Conversion" title="Direct link to Gas estimation &amp; Conversion" translate="no">​</a></h3>
+<p>When you prepare a transaction on Push Chain (say, from your Solana wallet), the Push Chain SDK does the following:</p>
+<ol>
+<li class=""><strong>Estimates gas cost in Push Chain's native token ($PC)</strong></li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">   Example: Transaction needs 1 PC (est. $0.3)</span><br></span></code></pre></div></div>
+<ol start="2">
+<li class=""><strong>Converts that cost to your origin chain's native token</strong></li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">   SDK: "1 PC = $0.3 = 0.0003 SOL"</span><br></span></code></pre></div></div>
+<ol start="3">
+<li class=""><strong>Adds the gas cost to your transaction payload</strong></li>
+</ol>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Your transaction now includes:</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">- What you want to do (e.g., swap tokens)</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">   - How much it costs (0.0003 SOL)</span><br></span></code></pre></div></div>
+<p><strong>The key insight:</strong> The SDK speaks both languages, your origin chain's token (SOL, ETH,POL) and Push Chain's native token (PC). You pay in what you have; Push Chain receives what it needs.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="fee-locking-on-source-chain-securing-your-payment">Fee Locking on Source Chain (Securing Your Payment)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#fee-locking-on-source-chain-securing-your-payment" class="hash-link" aria-label="Direct link to Fee Locking on Source Chain (Securing Your Payment)" title="Direct link to Fee Locking on Source Chain (Securing Your Payment)" translate="no">​</a></h3>
+<p>Now that the SDK knows how much you need to pay, it locks those funds on your origin chain using a smart contract called the <strong>Universal Gateway</strong>.</p>
+<p><strong>What is the Universal Gateway?</strong></p>
+<p>The Universal Gateway is a smart contract deployed on each origin chain (Ethereum, Solana, Base, etc.) that:</p>
+<ul>
+<li class="">Receives and locks your native tokens (ETH, SOL, etc.)</li>
+<li class="">Receives and locks other network tokens (USDC, USDT,ARB,etc)</li>
+<li class="">Emits an event that the Push Chain’s Universal validators can verify</li>
+<li class="">Holds your tokens securely until the transaction completes</li>
+</ul>
+<p><strong>Here's what happens:</strong></p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">You: Sign transaction on Solana</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">SDK: Deposits 0.0003 SOL into Universal Gateway on Solana</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Universal Gateway: Locks SOL, emits "FeeLocked" event</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Universal Validators: "We see 0.0003 SOL locked for transaction X"</span><br></span></code></pre></div></div>
+<p><strong>Important:</strong> The deposit into the Universal Gateway and your intended transaction (e.g., swapping tokens on Push Chain) are <strong>wrapped in a single universal transaction</strong>.</p>
+<p>You sign once. Both things happen <strong>atomically</strong>.</p>
+<p>If your swap fails on Push Chain, the fee lock is never processed, and you don't lose funds.</p>
+<p>Now it's time for the special listener entities called <strong>Universal Validators</strong> to verify the locked tokens and mint an equivalent amount of synthetic representations of these locked
+native tokens.</p>
+<p>Let's understand more about this process.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="c-conversion-credit-and-attribution">C) Conversion, Credit and Attribution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#c-conversion-credit-and-attribution" class="hash-link" aria-label="Direct link to C) Conversion, Credit and Attribution" title="Direct link to C) Conversion, Credit and Attribution" translate="no">​</a></h3>
+<p>Your SOL is now locked on Solana. But Push Chain's validators need $PC to execute your transaction and pay for gas. This is where the magic of automated conversion happens.</p>
+<p><strong>Part A: Synthetic Token Minting</strong></p>
+<p>When universal validators verify your locked SOL, they communicate with validators (that handle Push Chain’s validation) and mint a synthetic representation called <strong>pSOL</strong> (p = "pegged").</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Locked on Solana:0.0003 SOL</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Minted on Push Chain: 0.0003 pSOL</span><br></span></code></pre></div></div>
+<p><strong>Why synthetic tokens?</strong></p>
+<p>Think of pSOL as a "receipt" that proves you locked real SOL on Solana. It's a 1:1 representation:</p>
+<ul>
+<li class="">1 SOL locked → 1 pSOL minted</li>
+<li class="">1 ETH locked → 1 pETH minted</li>
+<li class="">1 POL locked → 1 pPOL minted</li>
+</ul>
+<p>This works for <strong>any token</strong> from <strong>any chain</strong>.</p>
+<p><strong>Part B: Swap pSOL for $PC</strong></p>
+<p>Now validators swap your pSOL for Push Chain's native token ($PC) using liquidity pools (AMMs):</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Push Chain Validators:</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Swap 0.0003 pSOL → 1 PC (via pSOL/PC AMM pool)</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Credit 1 PC to your UEA (Universal Executor Account)</span><br></span></code></pre></div></div>
+<p>Your Universal Executor Account (UEA) now has the $PC balance needed to execute your transaction and pay for gas.</p>
+<p><strong>UEA executes your tx with the now filled Gas.</strong></p>
+<p><strong>What are UEAs?</strong> Universal Executor Accounts (UEAs) are magical entities that let users from any blockchain pay and transact on Universal Apps on Push Chain. Know more about them here: <a href="https://push.org/blog/what-are-universal-executor-accounts/" target="_blank" rel="noopener noreferrer" class="">What are UEAs?</a></p>
+<p><strong>Part C: Transaction Execution</strong></p>
+<p>With $PC in your UEA, your transaction executes:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">UEA: Execute swap on Push Chain</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Gas deducted from UEA balance</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Transaction complete ✅</span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="gas-preloading-optimization">Gas Preloading Optimization<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#gas-preloading-optimization" class="hash-link" aria-label="Direct link to Gas Preloading Optimization" title="Direct link to Gas Preloading Optimization" translate="no">​</a></h2>
+<p>Without optimization, every transaction would repeat the full 5-step flow. So Push Chain preloads your gas tank on your first interaction.</p>
+<p>If your transaction needs $0.01 or $0.10 PC, the SDK will still lock around $1 of the origin token.</p>
+<p>→ You spend $0.10.</p>
+<p>→ $0.90 PC remains in your UEA.</p>
+<p>Your next transactions are instant until that balance runs low.</p>
+<p>This is one of the biggest smoothness upgrades.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="can-i-pay-gas-in-any-token-on-any-chain-yes">Can I Pay Gas in Any Token, on any Chain? Yes<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#can-i-pay-gas-in-any-token-on-any-chain-yes" class="hash-link" aria-label="Direct link to Can I Pay Gas in Any Token, on any Chain? Yes" title="Direct link to Can I Pay Gas in Any Token, on any Chain? Yes" translate="no">​</a></h2>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="if-you-pay-with-native-tokens-eth-sol"><strong>If you pay with native tokens (ETH, SOL):</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#if-you-pay-with-native-tokens-eth-sol" class="hash-link" aria-label="Direct link to if-you-pay-with-native-tokens-eth-sol" title="Direct link to if-you-pay-with-native-tokens-eth-sol" translate="no">​</a></h4>
+<p>Lock → Verify → Convert → Execute</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="if-you-pay-with-any-other-token-usdc-arb-link"><strong>If you pay with any other token (USDC, ARB, LINK):</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#if-you-pay-with-any-other-token-usdc-arb-link" class="hash-link" aria-label="Direct link to if-you-pay-with-any-other-token-usdc-arb-link" title="Direct link to if-you-pay-with-any-other-token-usdc-arb-link" translate="no">​</a></h4>
+<p>Gateway auto-swaps token → native token → lock → convert → execute</p>
+<p>You never need to open a DEX or bridge.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conclusion">Conclusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>Universal Fee Abstraction removes the single biggest blocker in multi-chain UX.</p>
+<p><strong>For users:</strong>
+Pay gas in any token from any chain with one signature. No gas hunting. No bridges.</p>
+<p><strong>For developers:</strong>
+Deploy once. Reach everyone. No cross-chain fee infra. No fragmentation.</p>
+<p>This is what makes Universal Apps possible.</p>
+<p>Explore them here: <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">https://push.org/ecosystem</a></p>]]></content:encoded>
+            <category>Donut Testnet</category>
+            <category>Universal Apps</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+        </item>
+        <item>
+            <title><![CDATA[A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/</guid>
+            <pubDate>Mon, 10 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-386b045cff83284e2d18bfe40b62f55d.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>After years of fragmentation, the time has come to unite all chains.</p>
+<p>Today, we’re thrilled to launch <strong>Donut 🍩,</strong> the <strong>Push Chain Public Testnet</strong>.</p>
+<p>Push is the <strong>first true universal Layer 1</strong> connecting every blockchain, wallet, app, and user through shared-state.</p>
+<p>For the first time ever, developers, validators and users can experience what <em>true interoperability</em> feels like. <strong>Instant, native,</strong> and <strong>free</strong>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-why-push-chain-exists">💫 Why Push Chain Exists<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-why-push-chain-exists" class="hash-link" aria-label="Direct link to 💫 Why Push Chain Exists" title="Direct link to 💫 Why Push Chain Exists" translate="no">​</a></h2>
+<p>Today’s Web3 ecosystem is heavily fragmented and overly complex.</p>
+<p>Developers must redeploy smart contracts across multiple chains, users have to bridge tokens or switch wallets, and teams spend months auditing and maintaining chain-specific codebases.</p>
+<p>Each new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.</p>
+<p><strong><em>Push Chain eliminates these barriers</em></strong></p>
+<p>It reimagines a shared-state, universal blockchain <strong>built to make interoperability a fundamental primitive of the chain</strong>, not an afterthought added through external protocols.</p>
+<p>This enables native applications, wallets, and users from any chain to interact seamlessly without bridges or additional integration layers.</p>
+<blockquote>
+<p>“An app developer should only build their app and its features. We enable this! Deploy once and you are able to reach every user on any chain.”
+— <strong>Harsh Rajat, Founder of Push Chain</strong>, in his talk <a href="https://youtu.be/J5DYeiNzGjM?si=RBimzjapmnHiscLd" target="_blank" rel="noopener noreferrer" class=""><strong>Building Apps of the Future</strong></a></p>
+</blockquote>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-how-push-chain-reimagines-interoperability">⚙️ How Push Chain Reimagines Interoperability<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#%EF%B8%8F-how-push-chain-reimagines-interoperability" class="hash-link" aria-label="Direct link to ⚙️ How Push Chain Reimagines Interoperability" title="Direct link to ⚙️ How Push Chain Reimagines Interoperability" translate="no">​</a></h2>
+<p>Most interoperability solutions today rely on messaging layers or bridges, forcing developers to manage multiple contracts, audits, and integrations across every chain.</p>
+<p><strong>Push Chain redefines this model entirely.</strong> With Push, you:</p>
+<ul>
+<li class=""><strong>Deploy once, reach everywhere.</strong> Your app instantly becomes available across chains, EVM or non-EVM.</li>
+<li class=""><strong>Eliminate redundant contracts and bridges.</strong> Interoperability is native to the chain, letting you focus purely on your app.</li>
+<li class=""><strong>Fully EVM-compatible.</strong> Use the same tools, frameworks, and audits you already have. Deploy as is and go multi-chain immediately.</li>
+<li class=""><strong>Universally native app.</strong> Users can transact from any chain or wallet. No bridging, no gas tokens, no changing networks, no swapping, no setup.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-welcome-to-donut---push-chains-first-public-testnet">🍩 Welcome to Donut - Push Chain’s First Public Testnet<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-welcome-to-donut---push-chains-first-public-testnet" class="hash-link" aria-label="Direct link to 🍩 Welcome to Donut - Push Chain’s First Public Testnet" title="Direct link to 🍩 Welcome to Donut - Push Chain’s First Public Testnet" translate="no">​</a></h2>
+<p>The <strong>Donut Testnet</strong> is the first public environment where developers, users, and node operators can explore Push Chain’s universality firsthand.</p>
+<p>Here’s how we got here, and what comes next!</p>
+<p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-4ae45e573506eee681a0fda7741e81cc.webp" width="1600" height="1599" class="img_ev3q"></p>
+<p>The roadmap outlines Push Chain’s journey from universal core features to full cross-chain execution and mainnet readiness.</p>
+<p>Donut brings the full Push ecosystem online with:</p>
+<ul>
+<li class="">🌳 <strong>Ecosystem Apps:</strong> Explore live Universal Apps on the <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">Ecosystem Page</a>.</li>
+<li class=""><strong>📖 Developer Docs:</strong> Start building Universal Apps from <a href="https://push.org/docs" target="_blank" rel="noopener noreferrer" class="">Developer Docs</a>.</li>
+<li class=""><strong>🧠 Knowledge Base:</strong> Learn the architecture and design from <a href="https://push.org/knowledge" target="_blank" rel="noopener noreferrer" class="">Knowledge Base</a>.</li>
+<li class=""><strong>🪩 Popular Apps to Try:</strong>
+<ul>
+<li class=""><a href="https://ballsy.push.org/" target="_blank" rel="noopener noreferrer" class="">Ballsy</a> — experience the same app logic working seamlessly across chains.</li>
+<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Simulate</a> — test and visualize cross-chain interactions.</li>
+</ul>
+</li>
+<li class=""><strong>💧 Faucet:</strong> Get testnet tokens from <a href="https://faucet.push.org/" target="_blank" rel="noopener noreferrer" class="">Testnet Faucet</a>.</li>
+<li class=""><strong>🔍 Donut Scan:</strong> Track transactions and network data from <a href="https://donut.push.network/" target="_blank" rel="noopener noreferrer" class="">Push Scan</a>.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-how-do-i-participate-in-the-network">🧭 How do I Participate in the Network?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-how-do-i-participate-in-the-network" class="hash-link" aria-label="Direct link to 🧭 How do I Participate in the Network?" title="Direct link to 🧭 How do I Participate in the Network?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-developers">👩‍💻 Developers<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-developers" class="hash-link" aria-label="Direct link to 👩‍💻 Developers" title="Direct link to 👩‍💻 Developers" translate="no">​</a></h3>
+<p>Push Chain gives developers the power to <strong>build once and deploy everywhere.</strong></p>
+<p>Every <strong>app runs natively</strong> across all chains without extra integrations or separate deployments.</p>
+<p>The chain currently supports <strong>Ethereum, Solana, Base, Arbitrum, and BNB Chain</strong> on testnet, with more chains coming soon.</p>
+<p>Start building your first Universal App:</p>
+<ul>
+<li class="">
+<p><strong>Explore</strong> the <a href="https://push.org/docs" target="_blank" rel="noopener noreferrer" class="">Documentation</a><br>
+Interact with live codeboxes, examples right from the docs.</p>
+</li>
+<li class="">
+<p><strong>Play</strong> around with <a href="https://ballsy.push.org/" target="_blank" rel="noopener noreferrer" class="">Ballsy App</a><br>
+Experience a Universal App in action. No wallet, gas juggling or setup required.</p>
+</li>
+<li class="">
+<p><strong>Apply</strong> for 🌱 <a href="https://zv9atndluia.typeform.com/to/ItQ7i2sO" target="_blank" rel="noopener noreferrer" class="">Grassroot Program</a><br>
+We are a developer-first chain. Want to take your app to the next level? Have persistence and passion? Apply to be included in our Grassroot Program and scale your app to reach every user..</p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-users">🌎 Users<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-users" class="hash-link" aria-label="Direct link to 🌎 Users" title="Direct link to 🌎 Users" translate="no">​</a></h3>
+<p>Experience a Web3 that just works: No switching chains, bridging tokens, or learning required.</p>
+<p>Use your existing wallet to access any app on Push Chain and pay directly in your native token.</p>
+<ul>
+<li class="">
+<p>Try Universal Apps on our 🌳 <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">Ecosystem Page</a></p>
+</li>
+<li class="">
+<p>Check activity of Donut Testnet on <a href="https://donut.push.network/" target="_blank" rel="noopener noreferrer" class="">Push Explorer</a></p>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-node-operators">🧑‍🚀 Node Operators<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-node-operators" class="hash-link" aria-label="Direct link to 🧑‍🚀 Node Operators" title="Direct link to 🧑‍🚀 Node Operators" translate="no">​</a></h3>
+<p>Push Chain’s network is powered by a decentralized set of validators. To run a validator, execute the following command on Mac or Ubuntu:</p>
+<p><code>curl -fsSL https://get.push.network/node/install.sh | bash</code></p>
+<p>To understand the different configs and what everything means, check out <a href="https://push.org/docs/chain/node-and-system-tools/running-push-validator/" target="_blank" rel="noopener noreferrer" class="">Push Validator</a>.</p>
+<p><strong>Why run a testnet validator?</strong></p>
+<p>Running a testnet validator helps strengthen the network and shape its mainnet readiness. It may also include perks and benefits that will come with Season 3 of <a href="https://portal.push.org/" target="_blank" rel="noopener noreferrer" class="">Push Points Program</a>.</p>
+<p>Tag <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@pushchain</a> and share your experience with us on X.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-whats-next">🔮 What’s Next<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-whats-next" class="hash-link" aria-label="Direct link to 🔮 What’s Next" title="Direct link to 🔮 What’s Next" translate="no">​</a></h2>
+<p><strong>Donut is a major step toward mainnet.</strong></p>
+<p>It focuses on ushering in the universal era of Web3, the future of connected crypto apps, while also testing network performance and developer tooling.</p>
+<p>We are already seeing signs of <a href="https://push.org/lfpush" target="_blank" rel="noopener noreferrer" class="">community and ecosystem love</a> and in the coming weeks, we will be onboarding more ecosystem apps, developer tools, tutorials along with expanding our validators participation.</p>
+<p>Each of these steps will bring us closer to the <strong>Push Chain Mainnet</strong>.</p>
+<p><strong>PS:</strong> Keep an eye out 👀 for Season 3 of our Push Points Program, which will give perks and benefits to participants of testnet. The exact rewards will be announced closer to our mainnet but there is something for everyone there.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-quick-links">🔗 Quick Links<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-quick-links" class="hash-link" aria-label="Direct link to 🔗 Quick Links" title="Direct link to 🔗 Quick Links" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>Ecosystem Apps:</strong> <a href="http://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">push.org/ecosystem</a></li>
+<li class=""><strong>Documentation:</strong> <a href="https://push.org/docs" target="_blank" rel="noopener noreferrer" class="">push.org/docs</a></li>
+<li class=""><strong>Knowledge Base:</strong> <a href="http://push.org/knowledge" target="_blank" rel="noopener noreferrer" class="">push.org/knowledge</a></li>
+<li class=""><strong>Let’s Push Yaps:</strong> <a href="http://push.org/lfpush" target="_blank" rel="noopener noreferrer" class="">push.org/lfpush</a></li>
+<li class=""><strong>Push Explorer:</strong> <a href="https://donut.push.network/" target="_blank" rel="noopener noreferrer" class="">donut.push.network</a></li>
+<li class=""><strong>Push Faucet:</strong> <a href="https://faucet.push.org/" target="_blank" rel="noopener noreferrer" class="">faucet.push.org</a></li>
+<li class=""><strong>Push Validator:</strong> <a href="https://push.org/docs/chain/node-and-system-tools/running-push-validator/" target="_blank" rel="noopener noreferrer" class="">push.org/docs/chain/node-and-system-tools/running-push-validator</a></li>
+<li class=""><strong>Apply for Grassroots Program:</strong> <a href="https://zv9atndluia.typeform.com/to/ItQ7i2sO" target="_blank" rel="noopener noreferrer" class="">zv9atndluia.typeform.com/to/ItQ7i2sO</a></li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-start-building">🧙 Start Building<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chains-donut-testnet/#-start-building" class="hash-link" aria-label="Direct link to 🧙 Start Building" title="Direct link to 🧙 Start Building" translate="no">​</a></h2>
+<p>Be the change, the catalyst that changes web3. Let’s build Universal Apps. 💪</p>
+<p><strong>Note:</strong> If you have already built something out, reach out to us at <a href="mailto:support@push.org" target="_blank" rel="noopener noreferrer" class="">support@push.org</a> to get included in the <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">ecosystem page</a>.</p>
+<p><img decoding="async" loading="lazy" alt="A Universal Era Begins. Introducing Push Chain’s Donut Testnet 🍩" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-2-ff8f0389551a115c58316f6ce8ba2ab4.webp" width="1600" height="1809" class="img_ev3q"></p>
+<p><strong>Push Chain Donut Testnet — Live Now 🍩</strong>
+Build universal. Deploy once. Reach everywhere.</p>]]></content:encoded>
+            <category>Donut Testnet</category>
+            <category>Universal Apps</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+        </item>
+        <item>
+            <title><![CDATA[What are Universal Executor Accounts (UEAs) and How do they work?]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/</guid>
+            <pubDate>Thu, 06 Nov 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[What are Universal Executor Accounts (UEAs) and How do they work?]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="What are Universal Executor Accounts (UEAs) and How do they work?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-7eba1b2428ea568bfbf23c82c42d8a3f.webp" width="1600" height="900" class="img_ev3q"></p>
+<p><b>Universal Executor Accounts (UEAs)</b> are magical entities that let users from any blockchain pay and transact on Universal Apps on Push Chain.</p>
+<p>With UEAs, you can use your <b>source-chain wallet</b> (e.g., Solana, Ethereum, Base, BSC) to interact directly with apps on Push Chain — paying in your native token or any other approved asset.</p>
+<p>💡 <i>No bridging. No swapping. No new wallet setup. Just one click.</i></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-do-we-need-ueas">Why do we need UEAs?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#why-do-we-need-ueas" class="hash-link" aria-label="Direct link to Why do we need UEAs?" title="Direct link to Why do we need UEAs?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-everyday-user-pain">The Everyday User Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#the-everyday-user-pain" class="hash-link" aria-label="Direct link to The Everyday User Pain" title="Direct link to The Everyday User Pain" translate="no">​</a></h3>
+<p>Let’s consider a scenario that thousands of crypto users face every day.</p>
+<p>Suppose Tim, a Solana user, wants to use a DEX on Ethereum. To do this, he must:
+to:</p>
+<ol>
+<li class=""><b>Bridge or wrap his assets</b> to Ethereum - just to use an app that lives on another chain.</li>
+<li class=""><b>Swap tokens</b> to get the native gas asset (ETH)</li>
+<li class=""><b>Set up a new wallet</b> compatible with EVM (like MetaMask) or switch between networks within the same multichain wallet.</li>
+<li class=""><b>Fund it again</b> with gas fees</li>
+</ol>
+<p>Only then can he make a simple trade. The prep time often exceeds the transaction time. 😩</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-developer-pain">The Developer Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#the-developer-pain" class="hash-link" aria-label="Direct link to The Developer Pain" title="Direct link to The Developer Pain" translate="no">​</a></h3>
+<p>Meanwhile, developers face their own headaches:</p>
+<ul>
+<li class="">
+<p><b>Fragmented identity logic</b>:  Build separate wallet and signature handling for every chain (EVM, Solana, etc.).</p>
+</li>
+<li class="">
+<p><b>Manual cross‑chain routing</b>: Forced to integrate bridges, relayers, or off‑chain services to move assets and data.</p>
+</li>
+<li class="">
+<p><b>Inconsistent verification rules</b>: each chain uses a different cryptographic scheme (ECDSA vs Ed25519), making cross‑chain validation painful.</p>
+</li>
+<li class="">
+<p><b>Fee‑routing complexity</b>:  need to manage gas logic for each supported network, often involving swap layers or middleware.</p>
+</li>
+<li class="">
+<p><b>Extra deployment overheads</b>;  app smart contracts must be redeployed per chain; no unified execution or shared state.</p>
+</li>
+</ul>
+<p>Instead of focusing on building their apps and their cool features. The devs are now stuck in an endless infrastructure + devops loop.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="enter-ueas--the-universal-solution-">Enter UEAs — the Universal Solution ✨<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#enter-ueas--the-universal-solution-" class="hash-link" aria-label="Direct link to Enter UEAs — the Universal Solution ✨" title="Direct link to Enter UEAs — the Universal Solution ✨" translate="no">​</a></h3>
+<p><strong>Now imagine Tim using a Universal App built on Push Chain:</strong></p>
+<ol>
+<li class="">
+<p>Clicks "BUY $1000 worth of Memecoin”</p>
+</li>
+<li class="">
+<p>Wallet shows: "Pay 5 SOL" (gas included)</p>
+</li>
+<li class="">
+<p>Signs once</p>
+</li>
+<li class="">
+<p>Transaction executes on Push Chain</p>
+</li>
+<li class="">
+<p>Token appears in his existing multichain wallet.</p>
+</li>
+</ol>
+<p>That’s it.
+No need for bridging, no new wallets, 1-click process.</p>
+<blockquote>
+<b>But how is it even possible to make Solana and EVM, two totally incompatible systems to coordinate with each other?</b>
+</blockquote>
+<blockquote>
+<b>The reason behind this magic lies with the Universal Executor Accounts</b>
+</blockquote>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="so-what-exactly-is-a-uea">So, What Exactly is a UEA?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#so-what-exactly-is-a-uea" class="hash-link" aria-label="Direct link to So, What Exactly is a UEA?" title="Direct link to So, What Exactly is a UEA?" translate="no">​</a></h2>
+<p>At a high level:</p>
+<blockquote>
+<p>A Universal Executor Account (UEA) is a smart account that lives on Push Chain, but can be controlled from any origin chain — Ethereum, Solana, Base, Polygon, and beyond.</p>
+</blockquote>
+<p>Think of it as your <b>personal on-chain butler</b>:</p>
+<ul>
+<li class="">
+<p>Executes your transactions on Push Chain</p>
+</li>
+<li class="">
+<p>Holds balances and state</p>
+</li>
+<li class="">
+<p>Verifies cross-chain signatures</p>
+</li>
+<li class="">
+<p>Ensures your source wallet remains in control</p>
+</li>
+<li class="">
+<p>Handles fee abstraction (no native token needed)</p>
+</li>
+</ul>
+<p>UEAs make your wallet <i>universal</i>. Any wallet is now able to act anywhere, anytime.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-to-create-a-uea">How to create a UEA?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#how-to-create-a-uea" class="hash-link" aria-label="Direct link to How to create a UEA?" title="Direct link to How to create a UEA?" translate="no">​</a></h2>
+<p>You don’t create them manually. UEAs are <b>auto-deployed behind the scenes</b> when you first interact with Push Chain from any supported chain.
+The process:</p>
+<ol>
+<li class="">
+<p>You sign a transaction from your origin wallet (say, Solana).</p>
+</li>
+<li class="">
+<p>Push Chain deterministically generates your UEA address.</p>
+</li>
+<li class="">
+<p>A mapping is forever linked between your <b>origin address</b> and your <b>UEA</b>.</p>
+</li>
+</ol>
+<p>From that point onward, your wallet = your UEA identity on Push Chain.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-uea-work-behind-the-scenes">How does UEA work behind the scenes?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#how-does-uea-work-behind-the-scenes" class="hash-link" aria-label="Direct link to How does UEA work behind the scenes?" title="Direct link to How does UEA work behind the scenes?" translate="no">​</a></h2>
+<p><strong>The entire process is divided into 3 phases.</strong></p>
+<ol>
+<li class=""><b>Routing</b> - Handles the steps involved in teleporting txns from ext. Chains to Push Chain</li>
+<li class=""><b>Verification</b> - Forming a Consensus on the validity of txn and ensuring whether the txn is indeed initiated by the user's private key.</li>
+<li class=""><b>Execution</b> - Finally, executing the transaction and settling it on Push Chain.</li>
+</ol>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-architecture">The Architecture<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#the-architecture" class="hash-link" aria-label="Direct link to The Architecture" title="Direct link to The Architecture" translate="no">​</a></h3>
+<p>Within these three above-described stages, 4 key innovative modules play a crucial role in abstracting the entire interop away from the app and the user</p>
+<table><thead><tr><th>Component</th><th>Role</th><th>Description</th></tr></thead><tbody><tr><td><strong>Universal Gateway</strong></td><td>Routing</td><td>These smart contracts are deployed on every supported chain. Their objective is to handle inbound and outbound routing between origin chains and the Push Chain. Locks user fees and relays payloads.</td></tr><tr><td><strong>Universal Validators</strong></td><td>Verification / Security</td><td>Special entities that keep a close eye on the inflows/outflows happening at the Universal gateways and form a consensus on the validity of cross-chain transactions before relaying to Push Chain.<br><br><strong>Note:</strong> Universal Validators != Validators. Want a quick detour to unravel Universal Validators? <a href="" class="">Find out here</a></td></tr><tr><td><strong>Universal Verification Layer (UVL)</strong></td><td>Signature Verification</td><td>Security mechanism that verifies signatures from multiple chain types (EVM, Solana, etc.) via pluggable verifiers.</td></tr><tr><td><strong>Universal Executor Account (UEA)</strong></td><td>Execution</td><td>Executes encoded transactions and manages account state on Push Chain.</td></tr></tbody></table>
+<p><img decoding="async" loading="lazy" alt="First Image of What are Universal Executor Accounts (UEAs) and How do they work?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-30fd7c2b2d3985396d65580e3a2689c3.webp" width="1790" height="888" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-it-work">How does it work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#how-does-it-work" class="hash-link" aria-label="Direct link to How does it work?" title="Direct link to How does it work?" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1️⃣-routing">1️⃣ Routing:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#1%EF%B8%8F%E2%83%A3-routing" class="hash-link" aria-label="Direct link to 1️⃣ Routing:" title="Direct link to 1️⃣ Routing:" translate="no">​</a></h4>
+<p>The routing phase involves a series of steps that dictate how transactions originated by users from external chains flow towards the Push Chain for execution.</p>
+<p>The steps include:</p>
+<ul>
+<li class="">
+<p><b>Gas Estimation</b>: Based on the current value of users' native token, the SDK calculates the required amount of PC to pay the gas</p>
+</li>
+<li class="">
+<p><b>Transaction Signing</b>: Converts the gas, tallies the total txn cost, prepares and initiates the transaction payload, which is then signed by the user’s wallet cryptographically</p>
+</li>
+<li class="">
+<p><b>Locking of Fees</b>: This fee payment (in the user's native funds) is locked into the Universal Gateway Contract. These are contracts on external chains that facilitate fee and asset locking and unlocking.</p>
+</li>
+<li class="">
+<p><b>Proof Verification</b>: Gateway events are verified by consensus through Universal Validators (UVs), who then pass this to Push Chain’s Validators.</p>
+</li>
+<li class="">
+<p><b>User Creation</b>: Based on the new or returning user, Push validators create new UEA accounts or deposit to existing UEAs.</p>
+</li>
+</ul>
+<p><b>Side note</b>: Since the UEA is deterministically generated, the validators can derive addresses from a Solana or Ethereum address automatically to check if they are new or returning users.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2️⃣-verification">2️⃣ Verification<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#2%EF%B8%8F%E2%83%A3-verification" class="hash-link" aria-label="Direct link to 2️⃣ Verification" title="Direct link to 2️�⃣ Verification" translate="no">​</a></h4>
+<p>Verification ensures the transaction request from the external chain is signed by the rightful owner and validated through cryptographic checks.</p>
+<p>Verification of the txs is never offloaded to any third party. Each tx that lands in the UEAs smart account must always be accompanied with the signature from the native chain.</p>
+<p>The UAE, upon receiving a transaction request, sends the signature to a custom module in Push Chain that is called <b>Universal Verification Layer (UVL)</b>.</p>
+<p>Its job is to verify whether the <b>controller of the UEA</b> is the same wallet that signed the transaction on the source chain.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3️⃣-execution-smart-account-execution">3️⃣ Execution (Smart Account Execution)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#3%EF%B8%8F%E2%83%A3-execution-smart-account-execution" class="hash-link" aria-label="Direct link to 3️⃣ Execution (Smart Account Execution)" title="Direct link to 3️⃣ Execution (Smart Account Execution)" translate="no">​</a></h4>
+<p>Once the signature is verified:</p>
+<ul>
+<li class="">UEA <b>executes the transaction</b> using the instructions signed by the external wallet.</li>
+<li class="">The execution is seamless and respects the rules/UX of the originating chain.</li>
+</ul>
+<p>Of course, all this happens <b>under the hood</b>. From the user’s perspective:</p>
+<ul>
+<li class="">They simply interact using their <b>native wallet</b>.</li>
+<li class=""><b>Pay gas in their native token</b>.</li>
+<li class=""><b>Execute cross-chain logic in a single flow</b>.</li>
+</ul>
+<p>And validate if the <b>user's private key did actually sign this transaction</b>?
+On successful verification, → <b>signal is sent to the UEA to execute the transaction</b>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="transaction-routing-optimizations">Transaction Routing Optimizations<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#transaction-routing-optimizations" class="hash-link" aria-label="Direct link to Transaction Routing Optimizations" title="Direct link to Transaction Routing Optimizations" translate="no">​</a></h2>
+<p>Not all cross-chain transactions require full routing through the Universal Gateway. The SDK dynamically detects whether the user’s UEA already holds sufficient fees for execution.</p>
+<p>If fees exist on the UEA:</p>
+<ul>
+<li class="">The transaction bypasses both the Gateway and Validators.</li>
+<li class="">It’s sent directly to the UEA for immediate execution.</li>
+<li class="">This removes source-chain confirmation latency, giving users a near-instant experience after their first funded transaction.</li>
+</ul>
+<p>Subsequent transactions feel instant because the UEA can self-fund execution once fees are already available.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-a-uea-preserve-a-users-identity-universally">How does a UEA preserve a user’s identity universally?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#how-does-a-uea-preserve-a-users-identity-universally" class="hash-link" aria-label="Direct link to How does a UEA preserve a user’s identity universally?" title="Direct link to How does a UEA preserve a user’s identity universally?" translate="no">​</a></h2>
+<p>The answer lies in the 1:1 deterministic mapping between the user’s source chain wallet address and its UEAs that exist on various chains.</p>
+<p>No.</p>
+<p>A new UEA is only created when a new user wallet transacts on Push Chain.</p>
+<p>As said above each UEA is deterministically linked to the user’s origin wallet address.</p>
+<p>This linkage is achieved by using the origin wallet as the <b>seed for UEA address generation</b>.
+Users origin address -&gt; UEA Generator Function (User’s origin address) -&gt; UEA Address</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="tldr">TL;DR<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-are-universal-executor-accounts/#tldr" class="hash-link" aria-label="Direct link to TL;DR" title="Direct link to TL;DR" translate="no">​</a></h2>
+<p>At last, for Users, UEAs help eliminate:</p>
+<table><thead><tr><th>UEAs Eliminate</th><th>UEAs Enable</th></tr></thead><tbody><tr><td>Bridging tokens across chains just to use one dApp</td><td>Direct access to any Universal App from their source chain wallet</td></tr><tr><td>Installing or learning new wallets</td><td>Keep using existing wallets (Phantom, Solflare, MetaMask, etc.) with no changes</td></tr><tr><td>Trust unknown relayers &amp; give them custody to your funds</td><td>Chain-native routing with full control and attribution retained</td></tr><tr><td>Being forced to pay gas in Push Chain native token</td><td>Pay gas in any approved token from their own chain, even stablecoins!</td></tr></tbody></table>
+<p>And for developers:</p>
+<table><thead><tr><th>UEAs Eliminate</th><th>UEAs Enable</th></tr></thead><tbody><tr><td>The need to integrate third-party interoperability or messaging protocols</td><td>Interoperability embedded inside the chain</td></tr><tr><td>Writing or maintaining custom relayers</td><td>Automatic execution routing via chain-native UEAs</td></tr><tr><td>Managing complex gas logic for every supported network</td><td>Native Fee abstraction to pay for gas in any preferred token. Learn more about the magic of Fee Abstraction here</td></tr><tr><td>Devoting engineering time to infra management</td><td>Focus purely on app features &amp; experience</td></tr></tbody></table>]]></content:encoded>
+            <category>Donut Testnet</category>
+            <category>Universal Apps</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+        </item>
+        <item>
+            <title><![CDATA[Apps of the Future - Building without the Chaos]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/</guid>
+            <pubDate>Mon, 20 Oct 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apps of the Future - Building without the Chaos]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-d0c078bfcd337b03238b0581a595afea.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Crypto has matured. The next generation of apps need to compete and build with finesse.</p>
+<p>It’s no longer acceptable to have an app that only works if the user is a web3 expert. Yet time and again, we see the same pattern repeat:</p>
+<p>We start by building apps around great features but soon… those features become secondary to survival.</p>
+<p>Instead of focusing on what made them popular, apps end up wrestling with infrastructure, juggling bridge protocols, and rewriting logic for every new chain.</p>
+<p>The dream of “expanding” turns into the nightmare of maintenance.</p>
+<ul>
+<li class="">
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="every-app-starts-with-a-vision-every-interop-patch-starts-with-regret">Every app starts with a vision. Every interop patch starts with regret.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#every-app-starts-with-a-vision-every-interop-patch-starts-with-regret" class="hash-link" aria-label="Direct link to Every app starts with a vision. Every interop patch starts with regret." title="Direct link to Every app starts with a vision. Every interop patch starts with regret." translate="no">​</a></h4>
+</li>
+<li class="">
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="apps-died-not-because-users-left--but-because-infra-took-over">Apps died not because users left → but because infra took over.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#apps-died-not-because-users-left--but-because-infra-took-over" class="hash-link" aria-label="Direct link to Apps died not because users left → but because infra took over." title="Direct link to Apps died not because users left → but because infra took over." translate="no">​</a></h4>
+</li>
+</ul>
+<p>We’ve seen this play out a thousand times. So we asked ourselves, what if interop wasn’t something apps had to build…
+but something the chain itself handled? That’s how <b>Push Chain</b> reimagines interoperability… but something the chain itself handled?</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="we-stopped-solving-interop-above-the-chain">We stopped solving interop <i>above</i> the chain.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#we-stopped-solving-interop-above-the-chain" class="hash-link" aria-label="Direct link to we-stopped-solving-interop-above-the-chain" title="Direct link to we-stopped-solving-interop-above-the-chain" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="instead-we-solved-it-inside-the-chain">Instead we solved it <i>inside</i> the chain.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#instead-we-solved-it-inside-the-chain" class="hash-link" aria-label="Direct link to instead-we-solved-it-inside-the-chain" title="Direct link to instead-we-solved-it-inside-the-chain" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="because-the-future-of-apps-isnt-about-managing-chaos--its-about-removing-it">Because the future of apps isn’t about managing chaos — it’s about removing it.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#because-the-future-of-apps-isnt-about-managing-chaos--its-about-removing-it" class="hash-link" aria-label="Direct link to Because the future of apps isn’t about managing chaos — it’s about removing it." title="Direct link to Because the future of apps isn’t about managing chaos — it’s about removing it." translate="no">​</a></h4>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-hidden-cost-of-just-make-it-work">The Hidden Cost of “Just Make It Work”<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#the-hidden-cost-of-just-make-it-work" class="hash-link" aria-label="Direct link to The Hidden Cost of “Just Make It Work”" title="Direct link to The Hidden Cost of “Just Make It Work”" translate="no">​</a></h2>
+<ul>
+<li class="">Expanding beyond one chain should feel like growth, not grief.</li>
+</ul>
+<p>But in web3 today, <b>the moment you go cross-chain, you trade innovation for exhaustion.</b></p>
+<p>Each decision; to bridge, to redeploy, to patch adds friction that compounds across teams, audits, and user experiences.</p>
+<ul>
+<li class="">
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="thats-where-the-hidden-cost-begins-the-moment-when-just-make-it-work-becomes-your-full-time-job">That’s where the hidden cost begins. The moment when “just make it work” becomes your full-time job.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#thats-where-the-hidden-cost-begins-the-moment-when-just-make-it-work-becomes-your-full-time-job" class="hash-link" aria-label="Direct link to That’s where the hidden cost begins. The moment when “just make it work” becomes your full-time job." title="Direct link to That’s where the hidden cost begins. The moment when ��“just make it work” becomes your full-time job." translate="no">​</a></h4>
+</li>
+</ul>
+<p>By the time the app does work across chains, it’s no longer fun to build… or delightful to use.</p>
+<p>This isn’t a problem of bad code. It’s a problem of <b>architecture.</b></p>
+<p>Interop today forces developers to rebuild their app again and again for every chain, wallet, and fee system, turning builders into network engineers instead of creators.</p>
+<p>Let’s look at the hacker’s current reality, and what needs to change so no one goes through these nightmares again.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1️⃣-infrastructure-eats-creativity">1️⃣ Infrastructure Eats Creativity<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#1%EF%B8%8F%E2%83%A3-infrastructure-eats-creativity" class="hash-link" aria-label="Direct link to 1️⃣ Infrastructure Eats Creativity" title="Direct link to 1️⃣ Infrastructure Eats Creativity" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-1eae3ca64362065bbc56479a2be82110.webp" width="1999" height="1094" class="img_ev3q"></p>
+<p>Every developer dreams of focusing on features. Yet, most spend 70% of their time patching infra across chains.</p>
+<p>With the current broken reality of web3, <b>every chain you add doubles your overhead.</b></p>
+<ul>
+<li class="">Infra eats your week before you ship a feature.</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="multiple-interop-protocols">Multiple Interop Protocols<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#multiple-interop-protocols" class="hash-link" aria-label="Direct link to Multiple Interop Protocols" title="Direct link to Multiple Interop Protocols" translate="no">​</a></h4>
+<p>Interop protocols of today support either X chain or Y chain forcing you to manage multiple interop solutions to create the feature that you have in mind for your user.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="endless-custom-state-sync-logic">Endless custom state-sync logic<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#endless-custom-state-sync-logic" class="hash-link" aria-label="Direct link to Endless custom state-sync logic" title="Direct link to Endless custom state-sync logic" translate="no">​</a></h4>
+<p>Your app is forced to adapt to custom state to manage the states of these interops and the fragmented smart contracts that have been deployed.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="constant-patching-across-chains">Constant patching across chains<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#constant-patching-across-chains" class="hash-link" aria-label="Direct link to Constant patching across chains" title="Direct link to Constant patching across chains" translate="no">​</a></h4>
+<p>Even if you make it work, you are forced to constantly patch or “hack” UX for your users. One interop solution in this current reality is difficult to handle, leave alone multiple ones.</p>
+<p>The end result is a bloated app that has a band-aid slapped to make it work and that band-aid requires constant attention.</p>
+<ul>
+<li class="">Every time a dev fixes a bridge, a feature dies.</li>
+</ul>
+<p>Building your app was your passion and it should be fun. In the end, you wonder how you started as an app company but are more of a devops company.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2️⃣-fragmented-contracts--fragmented-apps">2️⃣ Fragmented Contracts = Fragmented Apps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#2%EF%B8%8F%E2%83%A3-fragmented-contracts--fragmented-apps" class="hash-link" aria-label="Direct link to 2️⃣ Fragmented Contracts = Fragmented Apps" title="Direct link to 2️⃣ Fragmented Contracts = Fragmented Apps" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-2-e017cc826fa43e6dd9bda06591285dcc.webp" width="1999" height="1083" class="img_ev3q"></p>
+<p>Today's smart contracts are inherently chain-specific. When you deploy on 5 chains today, you don’t have one app.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="you-have-5-isolated-instances-that-share-a-logo-and-a-dream">You have 5 isolated instances that share a logo and a dream.<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#you-have-5-isolated-instances-that-share-a-logo-and-a-dream" class="hash-link" aria-label="Direct link to You have 5 isolated instances that share a logo and a dream." title="Direct link to You have 5 isolated instances that share a logo and a dream." translate="no">​</a></h4>
+<p>Every fix, every feature is now multiplied. This is not scaling, it’s cloning chaos and multiplying maintenance.</p>
+<p>When did “deploy everywhere” start meaning “maintain forever”?</p>
+<p>And the problem doesn’t even stop here…</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3️⃣-multi-vm--exponential-complexity-delays--audit-costs-">3️⃣ Multi-VM = exponential complexity, delays &amp; audit costs 🚧<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#3%EF%B8%8F%E2%83%A3-multi-vm--exponential-complexity-delays--audit-costs-" class="hash-link" aria-label="Direct link to 3️⃣ Multi-VM = exponential complexity, delays &amp; audit costs 🚧" title="Direct link to 3️⃣ Multi-VM = exponential complexity, delays &amp; audit costs 🚧" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-3-e422c55225c26c63457442e5d1c543bb.webp" width="1999" height="1094" class="img_ev3q"></p>
+<p>Supporting both EVM and non-EVM chains (like Solana or Sui) usually means rewriting everything in new languages: Rust, Go, Move, etc.</p>
+<p>The result? You are now killing your momentum as you struggle with:</p>
+<ul>
+<li class="">Hiring new engineers to create the same features</li>
+<li class="">Bloating your team for no additional use cases</li>
+<li class="">Introducing delays and slowing momentum as your engineers rewrite the same contracts</li>
+<li class="">Adding auditing bills that will climb faster than TVL charts</li>
+</ul>
+<p>But, let’s say you are brave enough to do it once.</p>
+<p>And then? be prepared to do it all over again once you want to add a new feature.</p>
+<ul>
+<li class="">Every new VM you add isn’t just new code. it's a new risk, new audits, new delays.</li>
+</ul>
+<p>And the worst part? None of this adds new value… just new overhead.</p>
+<p>While we struggle with these horrors, your users are not getting the best treatment as well cause you have introduced for them.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4️⃣-the-gas-fee-dilemma">4️⃣ The Gas Fee Dilemma<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#4%EF%B8%8F%E2%83%A3-the-gas-fee-dilemma" class="hash-link" aria-label="Direct link to 4️⃣ The Gas Fee Dilemma" title="Direct link to 4️⃣ The Gas Fee Dilemma" translate="no">​</a></h3>
+<p>“Buy X token on Y chain to use Z app.” - The last famous word from an ex-user of web3.</p>
+<p>Think about this, is this onboarding.. No, that’s homework.</p>
+<p>Users need ETH for Ethereum, SOL for Solana, POL for Polygon and countless other things… just to use one cross-chain app they like.</p>
+<p>Does it make sense 🤷‍♂️</p>
+<p>Is this onboarding? Or is this friction on day one?</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5️⃣-the-ux-nobody-talks-about-">5️⃣ The UX Nobody Talks About 😩<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#5%EF%B8%8F%E2%83%A3-the-ux-nobody-talks-about-" class="hash-link" aria-label="Direct link to 5️⃣ The UX Nobody Talks About 😩" title="Direct link to 5️⃣ The UX Nobody Talks About 😩" translate="no">​</a></h3>
+<p>Even the best apps fall apart when users face:</p>
+<ul>
+<li class="">Do multiple transactions just to use a feature or an action</li>
+<li class="">New wallets or learn</li>
+<li class="">Different wallet standards (EVM vs Solana addresses 🤯)</li>
+<li class="">Bridges or protocols that they have to understand</li>
+</ul>
+<p>Ask yourself, are they users at this point, or have we converted them to testers?</p>
+<p>These issues are the reason apps of web3 don’t attract users like web2.</p>
+<p>No one wants to learn just to try a feature.</p>
+<p>It should just work.</p>
+<ul>
+<li class="">The future belongs to apps that feel like magic — not manuals.</li>
+</ul>
+<p>This is not a story that you are going through. While building one of the first consumer apps of crypto, we went through these pain points and the reason we created Push Chain – The universal blockchain where developers focus on apps and users use the features.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-future-for-apps---universal-blockchain-that-natively-supports-every-chain">The Future for Apps - Universal Blockchain that natively supports every chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#the-future-for-apps---universal-blockchain-that-natively-supports-every-chain" class="hash-link" aria-label="Direct link to The Future for Apps - Universal Blockchain that natively supports every chain" title="Direct link to The Future for Apps - Universal Blockchain that natively supports every chain" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-4-15b4287b7717361e2401266121517343.webp" width="1999" height="1085" class="img_ev3q"></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-lets-return-to-fundamentals">🧠 Let’s return to Fundamentals<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#-lets-return-to-fundamentals" class="hash-link" aria-label="Direct link to 🧠 Let’s return to Fundamentals" title="Direct link to 🧠 Let’s return to Fundamentals" translate="no">​</a></h4>
+<p>We reimagined interop so that devs are able to focus their energy on what matters most, which is the app and the features of the app that got them popular.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-smart-contracts-">Universal Smart Contracts 🌌<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#universal-smart-contracts-" class="hash-link" aria-label="Direct link to Universal Smart Contracts 🌌" title="Direct link to Universal Smart Contracts 🌌" translate="no">​</a></h4>
+<p>We created universal smart contracts that ensure the developer only writes one smart contract that once deployed is instantly compatible with every chain (even different L1s).</p>
+<p>This is our best innovation yet and for developers it simply means:
+– Write once in solidity and deploy
+– Your app is instantly accessible to users + wallets on every chain
+– No redeployments
+– No reaudits
+– No duplicated logic</p>
+<p>All with <b>zero on-chain code changes.</b></p>
+<p>One deployment. Global presence. 🌐</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="same-tooling--push-unified-sdk-️">Same Tooling + Push Unified SDK ⚙️<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#same-tooling--push-unified-sdk-%EF%B8%8F" class="hash-link" aria-label="Direct link to Same Tooling + Push Unified SDK ⚙️" title="Direct link to Same Tooling + Push Unified SDK ⚙️" translate="no">​</a></h4>
+<p>You never have to re-work the app. You simply deploy your EVM app on Push Chain and it’s good to go.</p>
+<p>– Ethers, Viem or any of your favorite EVM tooling simply works
+– The only thing you replace is the <b>sendTransaction</b> with universal transaction
+– Here’s a snippet of the code that you use to now send a transaction from any chain</p>
+<p><img decoding="async" loading="lazy" alt="Apps of the Future - Building without the Chaos" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-5-29275cf4e3754ec31e17167f92c9439c.webp" width="1814" height="436" class="img_ev3q"></p>
+<blockquote>
+<p>Deploy once. Reach every chain. That’s the Push way.</p>
+</blockquote>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-fee-abstraction-️">Universal Fee Abstraction ⚡️<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#universal-fee-abstraction-%EF%B8%8F" class="hash-link" aria-label="Direct link to Universal Fee Abstraction ⚡️" title="Direct link to Universal Fee Abstraction ⚡️" translate="no">​</a></h4>
+<p>Developers don’t need to handle gas or wallet abstraction.</p>
+<p>For gas, the user can:
+– Pay in native token of their choice
+– Use any other token to fund their transaction
+– All of this, without leaving the chain they are on 🎸</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="users-are-finally-treated-as-consumers-">Users are finally treated as Consumers 🧑‍🤝‍🧑<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#users-are-finally-treated-as-consumers-" class="hash-link" aria-label="Direct link to Users are finally treated as Consumers 🧑‍🤝‍🧑" title="Direct link to Users are finally treated as Consumers 🧑‍🤝‍🧑" translate="no">​</a></h4>
+<p>At Push, users are treated like consumers. They stay in full control.
+– Users keep their existing wallets. MetaMask, Phantom, Rabby etc., anything they already use
+– New to web3? Sign in with socials
+– Every transaction takes one click, no matter where or from what chain it starts
+– Zero learning curve, the source-chain wallet controls the interaction
+– Every app feels native to the user, regardless of the chain they come from</p>
+<p>Push abstracts the chaos, so builders can rediscover creativity… and users rediscover joy.</p>
+<p>TL;DR 🦦</p>
+<table><thead><tr><th>Developers Get</th><th>Users Get</th></tr></thead><tbody><tr><td>✅ Single Deployment</td><td>✅ Any wallet</td></tr><tr><td>✅ Universal Smart Contracts</td><td>✅ Any token</td></tr><tr><td>✅ Universal Fee &amp; Wallet Abstraction</td><td>✅ One-click transactions</td></tr><tr><td>✅ Single Unified SDK &lt; 5 line of code to cook</td><td>✅App that always feels native to them no matter the chain</td></tr></tbody></table>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="interop-that-is-invisible--push-">Interop that is invisible = Push. ✨<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#interop-that-is-invisible--push-" class="hash-link" aria-label="Direct link to Interop that is invisible = Push. ✨" title="Direct link to Interop that is invisible = Push. ✨" translate="no">​</a></h4>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conclusion">Conclusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-of-the-future-building-without-the-chaos/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>Cross-chain shouldn’t mean cross-chaos.</p>
+<p>Push Chain makes interoperability invisible. So apps, wallets, and users can finally move like one network.</p>
+<p>We believe the future of web3 isn’t about where your app lives.</p>
+<p>It’s about how freely it can flow.
+Welcome to the <b>Apps of the Future.</b></p>
+<p>Let’s build Universal Apps 💪.</p>
+<ul>
+<li class="">The apps of the future won’t call themselves cross-chain.</li>
+<li class="">They’ll just call themselves apps.</li>
+</ul>]]></content:encoded>
+            <category>Deployathon</category>
+            <category>Donut Testnet</category>
+            <category>Universal Apps</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+        </item>
+        <item>
+            <title><![CDATA[Announcing Project G.U.D — Go Universal & Deploy on Push Chain, Win $5,000]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/</guid>
+            <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Announcing Project G.U.D — Go Universal & Deploy on Push Chain, Win $5,000]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Announcing Project G.U.D — Go Universal &amp;amp; Deploy on Push Chain, Win $5,000" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-7533b37f21ebcd1fd34ee7c6659a4135.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>We’re excited to announce <strong>Project G.U.D</strong>, a 3-week-long <strong>Deploython</strong> where developers can port their EVM apps to Push Chain’s <strong>Testnet Donut</strong>, make them Universal, and compete for <strong>$5,000 in prizes</strong>!</p>
+<p>👉 We just upgraded our developer chat - <a href="https://t.me/+HBr_tyPvACFhM2Vl" target="_blank" rel="noopener noreferrer" class="">join here</a> to learn more.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-is-push-chain">🌐 What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-what-is-push-chain" class="hash-link" aria-label="Direct link to 🌐 What is Push Chain?" title="Direct link to 🌐 What is Push Chain?" translate="no">​</a></h2>
+<p><a href="https://push.org/?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class="">Push Chain</a> is a <strong>shared-state Layer 1 blockchain</strong> built to eliminate fragmentation across all chains.</p>
+<p>With Push, you can build <strong>Universal Apps</strong> that support transactions from any chain (Ethereum, Solana, EVM or non-EVM) without forcing users to juggle wallets, tokens, or gas mechanics.</p>
+<p>In short: <strong>Deploy once, go cross-chain &amp;&nbsp;10X your user base.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Announcing Project G.U.D — Go Universal &amp;amp; Deploy on Push Chain, Win $5,000" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-cb00049ff5340667cf315f749fe9c619.webp" width="1500" height="1200" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-why-should-you-care">💡 Why Should You Care?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-why-should-you-care" class="hash-link" aria-label="Direct link to 💡 Why Should You Care?" title="Direct link to 💡 Why Should You Care?" translate="no">​</a></h2>
+<p>Devs deserve better for their apps - <strong>more users, more revenue, more distribution.</strong></p>
+<p>Here’s why building on Push Chain gives you a real edge:</p>
+<ul>
+<li class=""><strong>Expand Your User base Instantly</strong>: Deploy once, reach users across EVM + non-EVM chains (yes, even Solana).</li>
+<li class=""><strong>Avoid Audit Friction</strong>: Since you do not modify your solidity code, there is no need for a full re-audit.</li>
+<li class=""><strong>Simplified Fees</strong>: Automatically routes gas fees under the hood. Users do not need to hold $PC tokens or switch chains to complete transactions.</li>
+<li class=""><strong>Consistent DevEx</strong>: One <strong>Push SDK</strong>, one set of JSON-RPC endpoints, and a unified API to build and deploy. Supports Viem, ethers, and our own Push Chain client.</li>
+<li class=""><strong>Future-Proof Builds</strong>: With chain-native interop, your builds are future-proof as additional chains support are just a package update instead of the current broken interop protocol route.</li>
+</ul>
+<p>👉 <em>Note: Push Chain SDK is only accessible to contest participants.</em> <a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class="">Register</a> to unlock SDK + docs.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-rewards--incentives">🏆 Rewards &amp; Incentives<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-rewards--incentives" class="hash-link" aria-label="Direct link to 🏆 Rewards &amp; Incentives" title="Direct link to 🏆 Rewards &amp; Incentives" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-4000-reward-pool--1000-additional-through-community-voting-stables">💰 $4000 Reward Pool + $1000 Additional through community voting (Stables)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-4000-reward-pool--1000-additional-through-community-voting-stables" class="hash-link" aria-label="Direct link to 💰 $4000 Reward Pool + $1000 Additional through community voting (Stables)" title="Direct link to 💰 $4000 Reward Pool + $1000 Additional through community voting (Stables)" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-jury-rewards">😎 Jury Rewards:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-jury-rewards" class="hash-link" aria-label="Direct link to 😎 Jury Rewards:" title="Direct link to 😎 Jury Rewards:" translate="no">​</a></h3>
+<table><thead><tr><th>Rank</th><th>Prize (USD)</th></tr></thead><tbody><tr><td>🥇 First Place</td><td>$2000</td></tr><tr><td>🥈 Second Place</td><td>$1000</td></tr><tr><td>🥉 Third Place</td><td>$600</td></tr><tr><td>⛳️ Fourth Place</td><td>$400</td></tr></tbody></table>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-community-voting-rewards">🗳 Community Voting Rewards:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-community-voting-rewards" class="hash-link" aria-label="Direct link to 🗳 Community Voting Rewards:" title="Direct link to 🗳 Community Voting Rewards:" translate="no">​</a></h3>
+<p>Once the public testnet is live, users will crown their favorites. Top community picks win:</p>
+<p>(<em>Voting will be sybil-resistant for fair outcomes.</em>)</p>
+<table><thead><tr><th>Rank</th><th>Prize (USD)</th></tr></thead><tbody><tr><td>🥇 First Place</td><td>$500</td></tr><tr><td>🥈 Second Place</td><td>$300</td></tr><tr><td>🥉 Third Place</td><td>$200</td></tr></tbody></table>
+<p><strong>Evaluation Criteria:</strong></p>
+<ul>
+<li class="">Functionality</li>
+<li class="">Composability</li>
+<li class="">Ease of use</li>
+<li class="">Innovation</li>
+<li class="">Design and Vibes</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-additional-perks">✨ Additional Perks<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-additional-perks" class="hash-link" aria-label="Direct link to ✨ Additional Perks" title="Direct link to ✨ Additional Perks" translate="no">​</a></h3>
+<p>Apps that show long-term conviction - benefit from more support and recognition:</p>
+<ul>
+<li class="">Winning apps will be featured on the <strong>Push Testnet Portal (Incentivized Season 3)</strong>.</li>
+<li class=""><strong>Onchain</strong> perks (Secret passes, Badges) and <strong>Offchain</strong> perks (Meet the founders, 1-1 Mentorship)</li>
+<li class="">Winners gain a chance to <strong>access Push Chains VC and partner network</strong>.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-who-should-apply-what-can-you-build">👩‍💻 Who Should Apply? What Can You Build?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-who-should-apply-what-can-you-build" class="hash-link" aria-label="Direct link to 👩‍💻 Who Should Apply? What Can You Build?" title="Direct link to 👩‍💻 Who Should Apply? What Can You Build?" translate="no">​</a></h2>
+<p>This contest is open to <strong>all developers</strong>, whether you’re shipping production-grade EVM apps, experimenting with new universal use case, or just curious about universal apps.</p>
+<ul>
+<li class="">Hack solo or form a team.</li>
+<li class="">Deploy an existing EVM app or build from scratch.</li>
+</ul>
+<p>A universal app doesn't have to start from scratch. Your submissions can be:</p>
+<table><thead><tr><th>Deploy Your Existing EVM App</th><th>Build a New Universal App</th></tr></thead><tbody><tr><td>No contract rewrites - deploy &amp; instantly reach all chains.</td><td>Start fresh and explore bold new ideas that could scale into profitable startups.</td></tr></tbody></table>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-how-to-participate">📋 How to Participate<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-how-to-participate" class="hash-link" aria-label="Direct link to 📋 How to Participate" title="Direct link to 📋 How to Participate" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="Announcing Project G.U.D — Go Universal &amp;amp; Deploy on Push Chain, Win $5,000" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-2-bec321179ca5d6b76cdd25bb8ff0cd38.webp" width="3204" height="1720" class="img_ev3q"></p>
+<ol>
+<li class=""><a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class=""><strong>Register on Dorahacks</strong></a>. Fill-in basic details and share your build ideas.</li>
+<li class=""><strong>Join the <a href="https://t.me/+HBr_tyPvACFhM2Vl" target="_blank" rel="noopener noreferrer" class="">Donut Early Access TG Chat</a></strong> for support + mentoring.</li>
+<li class=""><strong>Find Teammates</strong> or hack solo via <a href="https://x.com/i/communities/1957696067207651630" target="_blank" rel="noopener noreferrer" class="">Push X Community</a></li>
+<li class=""><strong>Build Build Build!</strong> 🚀</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-3-tips-for-a-strong-submission">🔑 3 Tips for a Strong Submission<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-3-tips-for-a-strong-submission" class="hash-link" aria-label="Direct link to 🔑 3 Tips for a Strong Submission" title="Direct link to 🔑 3 Tips for a Strong Submission" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>Build in Public</strong>: Share your progress publicly — the more the community sees, the better your chances of winning votes.. <br>
+a. <em><strong>What can you share in public?</strong></em>
+Could be as simple as your project ideas, daily/ weekly progress, sneak peaks or early glimpses.</li>
+<li class=""><strong>Submit Complete Projects</strong>: Include repo + demo links. Incomplete apps get downgraded. Read the <a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class=""><strong>submission guidelines</strong></a></li>
+<li class=""><strong>Don’t Wait to Register</strong>: We&nbsp;highly <strong>encourage builders to apply early</strong>. Early registrations give you more time to connect with mentors, judges, and the community.</li>
+</ol>
+<p><a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class="">Register as a hacker</a> with your basic details and not wait until you’re project is prepared. Open Registrations are limited.</p>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-resources--support">📚 Resources &amp; Support<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-resources--support" class="hash-link" aria-label="Direct link to 📚 Resources &amp; Support" title="Direct link to 📚 Resources &amp; Support" translate="no">​</a></h2>
+<p>We’ve got you covered with everything you need to build, deploy and shine during Project G.U.D:</p>
+<ul>
+<li class=""><strong>Mentorship &amp; Guidance</strong> → <a href="https://t.me/+HBr_tyPvACFhM2Vl" target="_blank" rel="noopener noreferrer" class="">Join Closed Beta TG Chat</a></li>
+<li class=""><strong>Community Support</strong> → <a href="https://x.com/i/communities/1957696067207651630" target="_blank" rel="noopener noreferrer" class="">Push X Community</a></li>
+</ul>
+<p>👉 Register early to unlock all resources and maximize your build time!</p>
+<hr>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-timeline--closing">⏰ Timeline &amp; Closing<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/announcing-project-gud-go-universal-and-deploy/#-timeline--closing" class="hash-link" aria-label="Direct link to ⏰ Timeline &amp; Closing" title="Direct link to ⏰ Timeline &amp; Closing" translate="no">​</a></h2>
+<p>👉&nbsp;Project G.U.D runs for <strong>3 weeks</strong> and ends on <strong>Oct 13</strong></p>
+<p>👉 Time to <strong>Go Universal &amp; Deploy</strong>: <a href="https://dorahacks.io/hackathon/pushchain-gud?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=project_gud" target="_blank" rel="noopener noreferrer" class=""><strong>Register Now</strong></a></p>
+<p><strong>May the best build win!</strong></p>]]></content:encoded>
+            <category>Deployathon</category>
+            <category>Donut Testnet</category>
+            <category>Universal Apps</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+        </item>
+        <item>
+            <title><![CDATA[Donut Testnet Closed Beta is Now Live!]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/</guid>
+            <pubDate>Tue, 10 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Donut Testnet Closed Beta is Now Live!]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Donut Testnet Closed Beta is Now Live" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-7ae9cee9e86ffc29d440eeceebcd417e.webp" width="1600" height="900" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="donut-testnet-closed-beta-is-now-live">Donut Testnet Closed Beta is Now Live!<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#donut-testnet-closed-beta-is-now-live" class="hash-link" aria-label="Direct link to Donut Testnet Closed Beta is Now Live!" title="Direct link to Donut Testnet Closed Beta is Now Live!" translate="no">​</a></h2>
+<p><strong>We've been building the foundation for a new era of universal apps.</strong> Now, we're opening the gates. Push Chain's <strong>Closed Beta Pass</strong> is here.</p>
+<p>This is your chance to be the first to preview our Testnet, Donut. Selected developers will get hands-on with our SDK, UIKit, tooling, docs to be the first to deploy their app on Push Chain.</p>
+<p>This guide will walk you through how to join and start building on <strong>Donut</strong>.</p>
+<p><strong>👉 <a href="https://t.me/+dHOCilvxNR9jZjM9" target="_blank" rel="noopener noreferrer" class="">Join the Closed Beta</a></strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-what-early-access-unlocks">👀 What Early Access Unlocks?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#-what-early-access-unlocks" class="hash-link" aria-label="Direct link to 👀 What Early Access Unlocks?" title="Direct link to 👀 What Early Access Unlocks?" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-powerful-sdk-uikit-tooling-and-easy-to-follow-docs">🔧 <strong>Powerful SDK, UIKit, Tooling and easy to follow Docs</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#-powerful-sdk-uikit-tooling-and-easy-to-follow-docs" class="hash-link" aria-label="Direct link to -powerful-sdk-uikit-tooling-and-easy-to-follow-docs" title="Direct link to -powerful-sdk-uikit-tooling-and-easy-to-follow-docs" translate="no">​</a></h3>
+<p>Start exploring and building with our <a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1067/docs/chain/?utm_source=blog&amp;utm_medium=content&amp;utm_campaign=devdocs" target="_blank" rel="noopener noreferrer" class=""><strong>comprehensive documentation</strong></a>.</p>
+<p>Use the SDK, 10x your user base, unlock cross-chain liquidity with 100% EVM compatibility. Deploy your app with minimal code changes in minutes.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-rewards-for-early-testers">💸 <strong>Rewards for Early Testers</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#-rewards-for-early-testers" class="hash-link" aria-label="Direct link to -rewards-for-early-testers" title="Direct link to -rewards-for-early-testers" translate="no">​</a></h3>
+<p>Up to $500 rewards &amp; exclusive unlocks for testing, deploying, and providing quality feedback. Deploying an app on Push Chain Testnet qualifies for extra points (Developer Exclusive Airdrop).</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-private-builder-group">💬 <strong>Private Builder Group</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#-private-builder-group" class="hash-link" aria-label="Direct link to -private-builder-group" title="Direct link to -private-builder-group" translate="no">​</a></h3>
+<p>Direct line to Push Chain Core devs &amp; other cracked devs participating in the closed beta.</p>
+<p>Network, team up and learn from the best! Also, unlock special Invites to community meets and private previews.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-why-donut">🍩 Why Donut?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#-why-donut" class="hash-link" aria-label="Direct link to 🍩 Why Donut?" title="Direct link to 🍩 Why Donut?" translate="no">​</a></h2>
+<p>The first Layer 1 built for Universal Apps. Build &amp; Deploy once, onboard users from any chain.</p>
+<p><strong>✅ Deploy once, go cross-chain &amp; 10x your user base.</strong></p>
+<p><strong>✅ Skip bridges. Deploy Universal Smart Contracts with Wallet/Fee Abstraction, Any Chain TX &amp; 100% EVM compatibility.</strong></p>
+<p><strong>✅ Create unique app experiences, by having users of different chains transact with the same app.</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-claim-your-donut-testnet-pass-here"><a href="https://t.me/+dHOCilvxNR9jZjM9" target="_blank" rel="noopener noreferrer" class="">🎟️ Claim your Donut Testnet Pass HERE</a><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/donut-testnet-closed-beta-is-now-live/#%EF%B8%8F-claim-your-donut-testnet-pass-here" class="hash-link" aria-label="Direct link to ️-claim-your-donut-testnet-pass-here" title="Direct link to ️-claim-your-donut-testnet-pass-here" translate="no">​</a></h2>
+<p>PS: <em>(Spots are limited, Early access closes soon)</em></p>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Donut</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+            <category>Universal Smart Contracts</category>
+            <category>Testnet</category>
+        </item>
+        <item>
+            <title><![CDATA[Apps Possible Only with Shared State - Vol.2]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/</guid>
+            <pubDate>Wed, 14 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apps Possible Only with Shared State - Vol.2]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-bb4caac53f6e1e98f43d677734ba8f43.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Welcome to <strong>Volume 2</strong> of <em>Apps Possible Only with Shared State</em>. A deeper dive into what becomes possible when every blockchain speaks the same language.</p>
+<p>In <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/">Volume 1</a>, we explored use cases across DeFi, cross-chain yields, universal airdrops, and NFTs that truly live across chains.</p>
+<p>🚨 <strong>Spoiler:</strong> Some of those concepts are already live on <strong><a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/ecosystem/">Donut Testnet V1</a></strong>. Stay tuned for what’s next.</p>
+<p>This volume amps up the scale — covering <strong>Gaming, DAOs, AI Agents, Safes, and Prediction Markets</strong>. The next frontier for both developers and users alike.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain---super-quick-recap">What is Push Chain? - Super Quick Recap<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-is-push-chain---super-quick-recap" class="hash-link" aria-label="Direct link to What is Push Chain? - Super Quick Recap" title="Direct link to What is Push Chain? - Super Quick Recap" translate="no">​</a></h2>
+<p>Push Chain is a <strong>shared-state universal blockchain</strong> designed to eliminate fragmentation across all chains (EVM + non-EVM).</p>
+<p><strong>Developers deploy once</strong> and instantly become compatible with every chain.<br>
+<strong>Users interact</strong> with the same app no matter the chain they come from, using any token or wallet.</p>
+<p>The result: a <strong>shared-state world</strong> where apps, data, and users exist seamlessly across ecosystems.</p>
+<p><img decoding="async" loading="lazy" alt="push chain vein diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image1-0c3165163647f9ea3aac0cc4e39afa31.webp" width="1394" height="1116" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="apps-only-possible-with-shared-state">Apps Only Possible with Shared State<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#apps-only-possible-with-shared-state" class="hash-link" aria-label="Direct link to Apps Only Possible with Shared State" title="Direct link to Apps Only Possible with Shared State" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="First Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image5-48b511f626359221448f3318697630f8.webp" width="1474" height="626" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-prediction-markets">📈 Universal Prediction Markets<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#-universal-prediction-markets" class="hash-link" aria-label="Direct link to 📈 Universal Prediction Markets" title="Direct link to 📈 Universal Prediction Markets" translate="no">​</a></h2>
+<p>Prediction markets align incentives and gather collective intelligence. But today, they’re stuck on isolated chains with limited liquidity and poor UX.</p>
+<p><strong>Push Chain turns them into universally embeddable modules</strong> that plug into any cross-chain app, game, or community, <strong>usable from any chain, in any token</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-this-enables" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<p>Shared-state connects every participant and every token into a single predictive playground.</p>
+<p><strong>App-Based Prediction Widgets</strong></p>
+<ul>
+<li class="">Developers can attach mini-markets to any cross-chain app or event.</li>
+<li class="">Viewers bet on game outcomes or specific moves in real time.</li>
+</ul>
+<p><strong>Event-Driven Derivatives</strong></p>
+<ul>
+<li class="">Auto-spawn markets around live events (“Will $TRUMP rise during his golf match?”) that resolve trustlessly after completion.</li>
+</ul>
+<p><strong>Community Engagement</strong></p>
+<ul>
+<li class="">Local markets inside apps boost participation and organic stickiness.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
+<ul>
+<li class="">Outcome resolution requires trustless cross-chain settlement proofs.</li>
+<li class="">Shared-state provides the single source of truth for all prediction pools.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-competitive-cross-chain-gaming">🎮 Competitive Cross-Chain Gaming<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#-competitive-cross-chain-gaming" class="hash-link" aria-label="Direct link to 🎮 Competitive Cross-Chain Gaming" title="Direct link to 🎮 Competitive Cross-Chain Gaming" translate="no">​</a></h2>
+<p><strong>Shared-state makes “chain wars” real.</strong><br>
+<!-- -->Players from any blockchain ecosystem can come together to play, <strong>or bet against</strong> each other through Push Chain’s shared settlement layer.</p>
+<p>Imagine <strong>Universal Chess</strong> tournaments between Ethereum and Solana communities, with cross-chain wagers for spectators and NFTs for players.</p>
+<p>Now extend that to Poker, Blackjack, RPGs, or shooters. All accessible to every chain’s user base.</p>
+<p>By removing UX friction and asset fragmentation, <strong>Push Chain lets gamers bring their chain-specific identities into chain-neutral playgrounds.</strong></p>
+<p><img decoding="async" loading="lazy" alt="Third Image of Apps Possible Only with Shared State - Vol.2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image3-13516c7df773f42da08f7d685b56a96d.webp" width="1920" height="800" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-1">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-1" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<ul>
+<li class="">Game developers can build once and reach the entire Web3 player base.</li>
+<li class="">Chain-agnostic onboarding: users join from any wallet, on any chain.</li>
+<li class="">True multiplayer universality: players from different chains share the same game state.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-1">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-1" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
+<ul>
+<li class="">Chain-neutral playgrounds require synchronized player states in a trusted environment.</li>
+<li class="">Without shared-state, every game would need custom bridges and sync contracts which are expensive, risky, and UX-breaking.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-universal-safes-multi-chain-vaults">🛡️ Universal Safes (Multi-Chain Vaults)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#%EF%B8%8F-universal-safes-multi-chain-vaults" class="hash-link" aria-label="Direct link to 🛡️ Universal Safes (Multi-Chain Vaults)" title="Direct link to 🛡️ Universal Safes (Multi-Chain Vaults)" translate="no">​</a></h2>
+<p>Managing assets across chains is a logistical nightmare. You go through multiple wallets, manual bridges, and fragmented balances.</p>
+<p><strong>Shared-state enables safes with multi-chain signers</strong> create chain-agnostic vaults that can pool and use assets across all chains.</p>
+<p>Push Chain turns fragmented treasuries into a single, interoperable system for DAOs, funds, or families.</p>
+<p><img decoding="async" loading="lazy" alt="Fifth Image" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image6-3a46fe6861eb2726fc42ff22d18f4caa.webp" width="1600" height="900" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-2">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-2" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unified-asset-management">Unified Asset Management<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#unified-asset-management" class="hash-link" aria-label="Direct link to Unified Asset Management" title="Direct link to Unified Asset Management" translate="no">​</a></h4>
+<ul>
+<li class="">Deposit assets from any chain into a single safe and view the total portfolio in real time.</li>
+<li class="">DAOs or funds manage cross-chain treasuries without bridging or chain-specific multisigs.</li>
+</ul>
+<p><strong>Conditional Cross-Chain Spending</strong></p>
+<ul>
+<li class="">Define rules like: “Allow withdrawals only if 3/5 signers approve and under 10% of TVA.”</li>
+<li class="">Automate rebalancing (“If Base assets drop 20%, sell Solana to restore ratio”).</li>
+</ul>
+<p><strong>Shared Ownership &amp; Recovery</strong></p>
+<ul>
+<li class="">Hold ETH on Ethereum, stSOL on Solana, USDC on Base — same safe, same rules.</li>
+<li class="">Cross-chain inheritance and social recovery become native features.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-2">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-2" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
+<ul>
+<li class="">Spending rules need atomic cross-chain verification.</li>
+<li class="">Recovery logic demands multi-chain activity checks before triggering fail-safes.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-ai-agents">🤖 Universal AI Agents<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#-universal-ai-agents" class="hash-link" aria-label="Direct link to 🤖 Universal AI Agents" title="Direct link to 🤖 Universal AI Agents" translate="no">​</a></h2>
+<p>AI agents are the next major wave, but they’re currently trapped inside single ecosystems.</p>
+<p>Push Chain’s shared-state gives them the <strong>coordination layer</strong> to operate across all chains autonomously, with a unified memory.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-3">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-3" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<p>Build <strong>chain-agnostic AI agents</strong> that:</p>
+<ul>
+<li class="">Reads users’ cross-chain history and collates data from all their interactions across chains.</li>
+<li class="">Act on behalf of users with no bridges or wallet switching.</li>
+<li class="">Able to leverage a universal x402 payment interface when needed.</li>
+<li class="">Maintain a <strong>persistent universal context</strong> across apps and networks.</li>
+</ul>
+<p><strong>Example — Personal Finance Assistant Agent:</strong><br>
+<img decoding="async" loading="lazy" alt="Fourth Image" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image4-e8a243b470e36afdfc10986d15a7ffef.webp" width="1600" height="1551" class="img_ev3q"></p>
+<ul>
+<li class="">Reads the user’s balances across Ethereum, Arbitrum, Optimism, and Solana (off chain).</li>
+<li class="">Spots idle assets on Base and reallocates them to Polygon for higher yield.</li>
+<li class="">Executes cross-chain actions autonomously via Push Chain’s universal validators.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-3">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-3" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
+<ul>
+<li class="">AI agents need real-time visibility into user activity across all chains to act safely and intelligently.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="️-multichain-daos">🏛️ Multichain DAOs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#%EF%B8%8F-multichain-daos" class="hash-link" aria-label="Direct link to 🏛️ Multichain DAOs" title="Direct link to 🏛️ Multichain DAOs" translate="no">​</a></h2>
+<p>DAO governance today is fragmented. The same token exists on multiple chains but voting power doesn’t unify.</p>
+<p>With shared-state, <strong>Push Chain aggregates a member’s voting weight across all chains</strong> by reading and bundling token holdings into one coherent state.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-this-enables-4">What this enables<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#what-this-enables-4" class="hash-link" aria-label="Direct link to What this enables" title="Direct link to What this enables" translate="no">​</a></h3>
+<ul>
+<li class="">DAOs can launch tokens <strong>on multiple chains</strong> without fracturing governance.</li>
+<li class="">Unified voting and proposal systems. cross-chain delegation, comments, and commitment pools.</li>
+<li class="">True community coordination across ecosystems.</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-it-needs-shared-state-4">Why it needs shared-state<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#why-it-needs-shared-state-4" class="hash-link" aria-label="Direct link to Why it needs shared-state" title="Direct link to Why it needs shared-state" translate="no">​</a></h3>
+<ul>
+<li class="">Voting power depends on real + synthetic assets across chains.</li>
+<li class="">Shared-state lets governance contracts read all balances in real time, without bridges or manual syncs.</li>
+</ul>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game-">End Game 🌍<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#end-game-" class="hash-link" aria-label="Direct link to End Game 🌍" title="Direct link to End Game 🌍" translate="no">​</a></h2>
+<p>Push Chain’s shared-state architecture delivers <strong>the universal blockchain trifecta</strong>. Unifying users, developers, and data in one layer.</p>
+<p>For <strong>users</strong>, it means seamless cross-chain interaction. No bridges. No fragmentation. Full control.<br>
+<!-- -->For <strong>developers</strong>, it means one deployment that speaks to every chain in existence.</p>
+<p><strong>Seriously — why build for one chain, when you can build for them all?</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
+<ul>
+<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> for updates</li>
+<li class="">Explore <a href="https://push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
+<li class="">Visit the <a href="https://push.org/knowledge/" target="_blank" rel="noopener noreferrer" class="">Knowledge Base</a></li>
+<li class="">Check out <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">Universal Apps live on Push</a></li>
+</ul>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Shared App Experience</category>
+            <category>Universal Apps</category>
+            <category>Consumer Crypto</category>
+        </item>
+        <item>
+            <title><![CDATA[Apps Possible Only with Shared State - Vol.1]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/</guid>
+            <pubDate>Tue, 06 May 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Apps Possible Only with Shared State - Vol.1]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Apps Possible Only with Shared State - Vol.1" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-d9ca0c0401c3312a24a50a3b443c063f.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Crypto has evolved... <strong>fast</strong>. But even after a decade, apps and users still live inside isolated chain silos.</p>
+<p><strong>Push Chain’s shared-state architecture changes that, forever!</strong></p>
+<p>Here are <strong>5 breakthrough use cases</strong> that become possible only <strong>with shared-state blockchains</strong> like Push Chain.</p>
+<p>These use cases cover various bases, including but not limited to Defi, Degen Defi(iykyk), Airdrops, NFTs and Gaming that actually live across chains.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-push-chain">What is Push Chain?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#what-is-push-chain" class="hash-link" aria-label="Direct link to What is Push Chain?" title="Direct link to What is Push Chain?" translate="no">​</a></h2>
+<p>Push Chain is a shared-state universal blockchain designed to eliminate fragmentation across all chains (EVM + non-EVM).</p>
+<p><strong>Developers deploy once</strong> and instantly become compatible with every chain.
+<strong>Users interact</strong> with the same app no matter the chain they come from, using any token or wallet.</p>
+<p>This results in a <strong>shared-state world</strong> where apps, data, and users exist seamlessly across ecosystems.</p>
+<p><img decoding="async" loading="lazy" alt="push chain vein diagram" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image1-0c3165163647f9ea3aac0cc4e39afa31.webp" width="1394" height="1116" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-kind-of-apps-does-this-enable">What kind of apps does this enable?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#what-kind-of-apps-does-this-enable" class="hash-link" aria-label="Direct link to What kind of apps does this enable?" title="Direct link to What kind of apps does this enable?" translate="no">​</a></h2>
+<p><img decoding="async" loading="lazy" alt="movie reference 1" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image3-e803bbd60903fd746ece4e376b4d6a98.webp" width="1920" height="800" class="img_ev3q"></p>
+<p>Universal chain resolves a ton of issues that exist today in the crypto space and opens up exciting new possibilities.</p>
+<ul>
+<li class="">It enables apps to be available to users of any chain effortlessly, massively helping your app get to user base and community of every chain at once.</li>
+<li class="">It allows <strong>users</strong> to interact with your app using any token and wallet of their choice, uplifting the user experience.</li>
+<li class="">It allows <strong>developers</strong> to deploy once and dramatically reduce the complexities, engineering delays and cost of deploying on multiple chains.</li>
+<li class="">It opens up new paradigms for apps where users of chains come together and engage, or compete with each other.</li>
+</ul>
+<p>Let's look at some examples of how this can be used.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-defi">💧 Universal DeFi<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#-universal-defi" class="hash-link" aria-label="Direct link to 💧 Universal DeFi" title="Direct link to 💧 Universal DeFi" translate="no">​</a></h2>
+<p>DeFi today is fractured by:</p>
+<ol>
+<li class="">chain-bound liquidity,</li>
+<li class="">cumbersome bridging,</li>
+<li class="">and fragmented pools split across chains.</li>
+</ol>
+<p>This causes a lot of issues even if you are not a DeFi degen.</p>
+<ul>
+<li class="">📉 Yields tank in shallow pools (your $ earning 2% vs. 5% in an ocean)</li>
+<li class="">💸 Swaps cost extra (slippage + fees = 1–3% gone)</li>
+<li class="">⛔ Capital's stuck (bridge waits = hours of opportunity lost)</li>
+</ul>
+<p>The best way to imagine this is by understanding how liquidity is currently fragmented.</p>
+<p>Currently the same USDT on Solana and Ethereum are seen as two different assets which means that they have their own liquidity pools. Now think about the 50+ chains out there, each running their own liquidity pools for the same asset. This is a total mess.</p>
+<p><strong>Push Chain solves this</strong> by <strong>unifying access to assets and data across all chains</strong> and using the unified liquidity to ensure:</p>
+<p><img decoding="async" loading="lazy" alt="Liquidity so fragmented that it can&amp;#39;t walk straight" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image4-0c5cada5b3e837d0c34d986d7dd6ee71.webp" width="1600" height="900" class="img_ev3q"></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-lending-protocol">Universal Lending Protocol<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-lending-protocol" class="hash-link" aria-label="Direct link to Universal Lending Protocol" title="Direct link to Universal Lending Protocol" translate="no">​</a></h3>
+<p>Having a universal lending protocol means a singular universal liquidity pool that can be accessed by any chain is the future of DeFi.</p>
+<p>→ One massive liquidity pool (not dozens of tiny ones)<br>
+→ Any chain, any trusted stablecoin forming unified seamless experience<br>
+→ And Universal DeFi that is accessible by any users of any chain 😱<br></p>
+<p>Did we just unlock DeFi 3.0?</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-payments">💸 Universal Payments<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#-universal-payments" class="hash-link" aria-label="Direct link to 💸 Universal Payments" title="Direct link to 💸 Universal Payments" translate="no">​</a></h2>
+<p>In the traditional web3 world, if a payee (like a merchant) wants to receive a payment, they usually specify:</p>
+<ul>
+<li class="">A chain (e.g. “Send to Ethereum”),</li>
+<li class="">A token (e.g. “Send USDC”), and</li>
+<li class="">An address (e.g. their ETH address).</li>
+</ul>
+<p>But this is terrible for users and merchants as this limits:</p>
+<ol>
+<li class="">Which chain the payer can use</li>
+<li class="">What token they must use</li>
+<li class="">Operational comfort that forces bridging or manual swaps</li>
+</ol>
+<p>This is the opposite of making payments seamless for the end-user so that service providers can focus on their core value proposition.</p>
+<p><strong>Push Chain solves this</strong> by enabling <strong>universal fee and wallet abstraction</strong> giving the user the comfort of paying from any chain and in any token.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="stripe-like-cross-chain-payments">Stripe-like Cross-Chain Payments<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#stripe-like-cross-chain-payments" class="hash-link" aria-label="Direct link to Stripe-like Cross-Chain Payments" title="Direct link to Stripe-like Cross-Chain Payments" translate="no">​</a></h3>
+<p>A universal payment system that gives user the flexibility to pay from any chain is now possible with Push eliminating the need for bridging or manual swaps.</p>
+<p>We can even expand this further through a universal smart contract on Push Chain that can take payment from any token and use an AMM to convert it to the desired token.</p>
+<p>This results in fluid payments where users can pay from any chain and any token.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-tipping">Universal Tipping<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-tipping" class="hash-link" aria-label="Direct link to Universal Tipping" title="Direct link to Universal Tipping" translate="no">​</a></h3>
+<p>A universal tipping service can also be made possible using the same concepts. This competes with the likes of payment providers of web2 where in the service providers adapts to the user needs and not the other way around.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-any-stablecoin-yields">🌾 Any Stablecoin Yields<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#-any-stablecoin-yields" class="hash-link" aria-label="Direct link to 🌾 Any Stablecoin Yields" title="Direct link to 🌾 Any Stablecoin Yields" translate="no">​</a></h2>
+<p>With current chains, a user is limited to specific blockchain ecosystem to take advantage of the yield offerings. Most of the time, the yields are not attracting enough or the APYs keep on shifting from one chain to another.</p>
+<p>This handicaps the users as they either need to:</p>
+<ol>
+<li class="">Lose self custody of the funds and trust centralized parties to earn best yields (which rarely ends well)</li>
+<li class="">Learn bridging, multiple chain standards (incase hopping to non-EVMs) and other complex topics to earn best yields</li>
+<li class="">Be stuck with sub-standard payloads</li>
+</ol>
+<p><strong>Push Chain solves this</strong> with the ability to <strong>move funds from any chain</strong> to Push and even move them out to any other chain and deposit in a contract. All done with a <strong>single transaction</strong>.</p>
+<p>This allows the user to execute the most profitable staking transactions across any network without worrying about native reconversions or swaps.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-yield-aggregators">Universal Yield Aggregators<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-yield-aggregators" class="hash-link" aria-label="Direct link to Universal Yield Aggregators" title="Direct link to Universal Yield Aggregators" translate="no">​</a></h3>
+<p>A universal smart contract that is able to get funds from users of any chain and logic to determine and move funds from one chain to other would result in the most optimal yield bearing products.</p>
+<p>One that is both secure and earning the highest APYs as</p>
+<ul>
+<li class="">Users are no longer tied to a particular blockchain or ecosystem to earn yields on their stablecoins or assets (whether native or foreign).</li>
+<li class="">Their <strong>aggregated yield routing</strong> enables optimal capital allocation across protocols, minimizing fragmentation and maximizing APY</li>
+<li class=""><strong>Universal Liquid Staking Tokens</strong> (ULSTs) can be created by combining and/or hybridizing existing ones (e.g. stETH, rETH, mSOL)</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="movie reference 2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image5-eb151320a4fc4f3597278ba6ffdf0f55.webp" width="1920" height="800" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-token-swaps">💫 Universal Token Swaps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#-universal-token-swaps" class="hash-link" aria-label="Direct link to 💫 Universal Token Swaps" title="Direct link to 💫 Universal Token Swaps" translate="no">​</a></h2>
+<p>Currently, ‘trading pairs’ on DEXes are limited to recognized tokens, which leads to several limitations:</p>
+<ul>
+<li class="">They only allow swaps for tokens available on their chain</li>
+<li class="">It forces users to move from chains if they want a token of a particular project ($XYZ on ABC chain)</li>
+<li class="">The problem further amplifies if the user has different wallet (ie: Ethereum users wanting to but $TRUMP)</li>
+</ul>
+<p>This leads the users to resort to central exchanges losing control of their assets as a trade-off to trade tokens they want on any chain but that comes up:</p>
+<ol>
+<li class="">Losing custody of your funds</li>
+<li class="">You only trade what exchanges deem to be <strong>token worthy</strong></li>
+<li class="">The trade is mapped 1:1 and with whitelisted pairs, <strong>no programmable fluidity</strong></li>
+</ol>
+<ul>
+<li class="">For example: you can only trade $ALPHA token with $USDT, not with $UNI or any valuable NFTs or a combination of both</li>
+</ul>
+<p><strong>Push Chain solves this</strong> as it enables the user's <strong>wallet to be cross chain compatible</strong> and allows <strong>any chain / any token transaction</strong>. This means that the user, from the comfort of their source chain, natively controls and swaps tokens available across crypto.</p>
+<p>A decentralized experience that finally rivals centralized experience. All the while ensuring that you are always in control.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-swaps-decexs">Universal Swaps (DECEXs?)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-swaps-decexs" class="hash-link" aria-label="Direct link to Universal Swaps (DECEXs?)" title="Direct link to Universal Swaps (DECEXs?)" translate="no">​</a></h3>
+<p>Just by deploying a simple fork of an AMM, or innovating your own fun (that's always fun) on Push Chain instantly gives you access to <strong>users of every chain</strong> and <strong>assets of every chain</strong>.</p>
+<p>With few steps to combine the liquidity moved. This unlocks a decentralized experience that rivals and will become the future for crypto trading.</p>
+<p>Think Uniswap, Jupiter, or 1inch, but natively cross-chain and fully decentralized.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="barter-swaps">Barter Swaps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#barter-swaps" class="hash-link" aria-label="Direct link to Barter Swaps" title="Direct link to Barter Swaps" translate="no">​</a></h3>
+<p>Since swaps are now universal and can be done from any chain. You can further extend this programmability by having swaps that behave like a barter. For instance:</p>
+<ul>
+<li class="">e.g. “willing to sell pudgy penguin NFT#44 for 100,000 $SHIB”.</li>
+<li class="">Buyers and sellers can be connected through <strong>cross-chain asset barter system</strong>:</li>
+<li class="">e.g. someone ‘willing to sell all his coins on Solana for two popular NFTs on Ethereum’ may be notified of the above trade</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="movie reference 3" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image6-cbf835e3a198ac004707a94343786dcc.webp" width="1920" height="800" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="-universal-digital-primitives">🌀 Universal Digital Primitives<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#-universal-digital-primitives" class="hash-link" aria-label="Direct link to 🌀 Universal Digital Primitives" title="Direct link to 🌀 Universal Digital Primitives" translate="no">​</a></h2>
+<p>Several digital primitives are out of reach for other ecosystems due to the inherent limitations of being deployed on isolated blockchains.</p>
+<p>This limits outreach as protocols are forced to only market their product to that blockchain. The chain's community subset can only ever be your outreach and marketing support.</p>
+<p>For instance, Airdrops are localized to a specific chain(Solana, Ethereum, Arbitrum etc). The eligibility checks usually work only within the chain of the drop.</p>
+<p>This can also be extended to Art, NFTs, Ticketing which can benefit immensely with wider reach but are left to market the chain in order to gain their share, resulting in a parasitic relation.</p>
+<p><strong>Push Chain solves this</strong> via the ability of <strong>inheriting every user of every chain natively</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-airdrop">Universal Airdrop<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-airdrop" class="hash-link" aria-label="Direct link to Universal Airdrop" title="Direct link to Universal Airdrop" translate="no">​</a></h3>
+<p>You can reward users across chains without increasing the friction for those users using merkle proofs and mapping different wallet addresses (EVM or non-EVM) to deterministic universal executor accounts (UEA).</p>
+<p>This results in users of any chain able to claim airdrop from their source chain wallet dramatically increasing your outreach to now all of crypto.</p>
+<p><strong>Cross-Chain Game Drop Example:</strong></p>
+<p>A project launches a new gaming token with the following eligibility conditions:</p>
+<ul>
+<li class="">Played at least A,B,C games on Solana,</li>
+<li class="">Bought a <a href="https://pudgypenguins.com/" target="_blank" rel="noopener noreferrer" class="">Pudgy Penguin</a> or Lil Pudgy NFT on Ethereum,</li>
+<li class="">Holds $100 or more value across Solana, Ethereum, Base or BNB,</li>
+<li class="">Participated in a Gitcoin grant on Ethereum.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="cross chain airdrop overivew" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image7-9a8976aeaa52eb22cff777aaec81e9a2.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>A <strong>universal drop</strong>, in this case, can:</p>
+<ul>
+<li class="">Verify these diverse activities and wallet to form a merkle proof to user's universal executor account</li>
+<li class="">Universal Executor Account (UEA) are representation of source chain wallet address of the user on Push Chain and are always controlled by the respective source chain wallet</li>
+<li class="">Allow claiming the gaming token on Polygon, Solana, or Ethereum - whichever the user prefers</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-nfts">Universal NFTs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#universal-nfts" class="hash-link" aria-label="Direct link to Universal NFTs" title="Direct link to Universal NFTs" translate="no">​</a></h3>
+<p>Your NFT inventory, on-chain reputation, game items, and collectibles can now merge into a single, shared identity that lives across all ecosystems.</p>
+<p>No more isolated wallets.
+No more duplicated assets.
+Just one <em>creative life</em>, everywhere.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="end-game-the-universal-layer-">End Game: The Universal Layer 🌍<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#end-game-the-universal-layer-" class="hash-link" aria-label="Direct link to End Game: The Universal Layer 🌍" title="Direct link to End Game: The Universal Layer 🌍" translate="no">​</a></h2>
+<p>Push Chain’s shared-state model fuses users, developers, and data into a single, connected web.</p>
+<p>For <strong>users</strong>, it means frictionless, cross-chain interaction. No bridges. No fragmentation. Full control.
+For <strong>developers</strong>, it means one deployment that speaks to all chains.</p>
+<p><strong>Seriously, why build for one chain when you can build for them all?</strong></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="its-not-over-yet">It's not over yet!<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#its-not-over-yet" class="hash-link" aria-label="Direct link to It's not over yet!" title="Direct link to It's not over yet!" translate="no">​</a></h2>
+<p>We have just scratched the surface. <a class="" href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v2/">Vol. 2 of this article</a>&nbsp;covers more use cases across AI agents, DAOs, Gaming and much more!</p>
+<p>Stay Tuned!</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="next-steps">Next Steps<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/apps-only-possible-with-shared-state-v1/#next-steps" class="hash-link" aria-label="Direct link to Next Steps" title="Direct link to Next Steps" translate="no">​</a></h2>
+<ul>
+<li class="">Follow <a href="https://x.com/PushChain" target="_blank" rel="noopener noreferrer" class="">@PushChain on X</a> for Updates</li>
+<li class="">Explore <a href="https://push.org/docs/" target="_blank" rel="noopener noreferrer" class="">Push Chain Docs</a></li>
+<li class="">Visit <a href="https://push.org/knowledge/" target="_blank" rel="noopener noreferrer" class="">Knowledge Base</a></li>
+<li class="">Check out <a href="https://push.org/ecosystem/" target="_blank" rel="noopener noreferrer" class="">Universal Apps that are live on Push</a></li>
+</ul>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Shared App Experience</category>
+            <category>Universal Apps</category>
+            <category>Consumer Crypto</category>
+        </item>
+        <item>
+            <title><![CDATA[Interop as a Spectrum]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/</guid>
+            <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[How Web3 Interop Started and Where its Going]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Interop as a Spectrum" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-bf63c0b3b12aa7c745c2f391a227d6fb.webp" width="1600" height="900" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="intro">Intro<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#intro" class="hash-link" aria-label="Direct link to Intro" title="Direct link to Intro" translate="no">​</a></h2>
+<p>Web3 Interoperability (interop) is often seen as an imaginary creature, a unicorn that will never become real. This is because it's like a path on which the perfect destination is difficult to find, and there are tons of design choices, learning curves as well as UX compromises along the way.</p>
+<p>Attempts to 'solve' interop within these constraints has led to a variety of solutions.</p>
+<p>In this article, we provide a general overview of these approaches and show how they are all interconnected. We also highlight how the meaning of interop has shifted as the web3 industry has matured and expanded, and outline a possible endgame.</p>
+<p>Before we get to that, i.e. full stack interoperability, we will discuss how interop started and, more importantly, why it should be viewed as a spectrum rather than a binary ‘0’ or ‘1‘. In reality, interop and the desire to defragment has been with us from the moment Bitcoin on/off-ramp came to existence!</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-interop-spectrum">The Interop Spectrum<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#the-interop-spectrum" class="hash-link" aria-label="Direct link to The Interop Spectrum" title="Direct link to The Interop Spectrum" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="1-the-first-interop---centralized-exchanges">1. The First Interop - Centralized Exchanges<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#1-the-first-interop---centralized-exchanges" class="hash-link" aria-label="Direct link to 1. The First Interop - Centralized Exchanges" title="Direct link to 1. The First Interop - Centralized Exchanges" translate="no">​</a></h3>
+<p>The desire for an interoperable and defragmented web3 has been with us ever since the first Bitcoin on/off-ramp took off. No sooner did it come into existence than our desire to make it tradable with traditional finance (TradFi) arose. This need was further deepened with the rise of other layer 1s such as Ethereum, Ripple, Cardano etc.</p>
+<p>The user's need was clear: a unified interface which allowed the trading of different crypto assets directly and instantly. Centralised exchanges (CEXs) arose to fulfil this need. They abstracted away the complexity of different chains from the frontend at the cost of introducing trust assumptions and centralisation at the backend.</p>
+<p>This era saw the origin of many CEXs, some of which have since disappeared (such as Mt. Gox), and others that have become household crypto names (such as Coinbase and Binance). While this worked for the users who wanted convenience, it also exposed issues with centralizing decentralized assets, giving us the next problem we had to tackle.</p>
+<p>The Progressive Problem - CEXs, with their centralized custody, opened up new issues for crypto and web3. Most of them arose from the very nature of custodial design which included exchanges getting hacked, users getting locked out or losing time before getting their funds and of course, the rare but not uncommon issue of exchange founders vanishing with keys that custodied the user funds.</p>
+<p>This led us, the web3 collective, to work towards solving these issues which resulted in the <strong>next iterative innovation</strong> in chasing interop. A solution known as <strong>atomic swaps</strong> - a method by which two chains could perform a trustless exchange.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="2-atomic-swaps---hashlock-time-contracts-between-compatible-chains">2. Atomic Swaps - Hashlock time contracts between compatible chains<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#2-atomic-swaps---hashlock-time-contracts-between-compatible-chains" class="hash-link" aria-label="Direct link to 2. Atomic Swaps - Hashlock time contracts between compatible chains" title="Direct link to 2. Atomic Swaps - Hashlock time contracts between compatible chains" translate="no">​</a></h3>
+<p>Atomic swaps were so named because they turned a 'swap' into a self-contained unit of operations on smart contracts which would succeed or fail as a bundle. This was done to prevent situations in which one side fulfils its side of the bargain but the other does not. We will later see how this idea of 'atomicity' survives to this day in solver networks.</p>
+<p>Proposed on a Bitcoin forum in 2013 as 'hash-time locked contracts' (HTLCs), the first iteration of atomic swaps involved two smart contracts (one each on the source and destination chains) operating together to form a digital escrow with a shared secret.</p>
+<p>What makes them historically significant is that they were the first peer-to-peer chain-agnostic interop solution. Initially, they unified the interop design space by showing that trustless cross-chain swaps were possible between all ecosystems. Over time, however, they resulted in a new round of competition between 'HTLC compatible' chains.</p>
+<p><strong>The Progressive Problem</strong> - Despite being peer-to-peer, HTLCs were unable to 'solve' the interop problem due to two important limitations: (a) They involved multiple transactions leading to scalability challenges. (b) Different blockchains had their own standards which were not compatible.</p>
+<p>These bottlenecks led to the <strong>next iterative innovations</strong>: in the form of <strong>decentralised exchanges</strong> (DEXs) and <strong>multi-chain wallets</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="3-local-interop-and-non-custodial-solutions">3. Local Interop and non-custodial solutions<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#3-local-interop-and-non-custodial-solutions" class="hash-link" aria-label="Direct link to 3. Local Interop and non-custodial solutions" title="Direct link to 3. Local Interop and non-custodial solutions" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="31-local-interop-via-dexs">3.1 Local Interop via DEXs<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#31-local-interop-via-dexs" class="hash-link" aria-label="Direct link to 3.1 Local Interop via DEXs" title="Direct link to 3.1 Local Interop via DEXs" translate="no">​</a></h4>
+<p>This breakthrough was led by Uniswap, which later pioneered not only decentralized finance (DeFi) but also kicked off the era of web3 apps. Its key innovation was to replace centralised orderbooks with automated market making algorithms (AMMs) and decentralised liquidity pools. This solved a lot of problems for advanced web3 users as they could conduct asset swaps directly from their wallets (yes if you used Metamask back then, you were an advanced user!).</p>
+<p>Technically speaking, such systems suffered from two fundamental limitations: (a) They required knowledge of how particular blockchains work (for instance, ERC-20 token function calls of Approve and Transfer was not something an average joe understood). (b) They were limited to their own chains.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="32-multi-chain-wallets">3.2 Multi-Chain Wallets<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#32-multi-chain-wallets" class="hash-link" aria-label="Direct link to 3.2 Multi-Chain Wallets" title="Direct link to 3.2 Multi-Chain Wallets" translate="no">​</a></h4>
+<p>Around the same time, crypto wallets emerged that offered the convenience of self-custody, i.e., the ability to store tokens outside the ambit of exchanges. Although bulk of the trading still took place on CEXs, the user now had the option of using non-custodial wallets which could be standalone (e.g. Metamask, Electron) or multi-chain (e.g. Exodus, Trust).</p>
+<p><strong>The Progressive Problem</strong> - Even with DEXs and multi-chain wallets, problems with swapping between different chains remained. At the same time, EVMs were going through countless innovations and purpose built L2 chains started propping up.</p>
+<p>This led to the <strong>next iterative innovation</strong>, i.e. <strong>Bridging</strong>, which usually followed a ‘Lock and Mint’ solution. A standard on Cosmos also became popular in this time known as IBC(Inter-Blockchain Communication Protocol).</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="4-bridging-to-solve-interop-between-chains">4. Bridging to solve Interop between chains<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#4-bridging-to-solve-interop-between-chains" class="hash-link" aria-label="Direct link to 4. Bridging to solve Interop between chains" title="Direct link to 4. Bridging to solve Interop between chains" translate="no">​</a></h3>
+<p>Bridging was an excellent solution, albeit not without its own set of issues. It aimed to tackle moving funds between chains by first locking them on a smart contract and then using a set of validators, attesting and releasing the funds on other chains.</p>
+<p>As is the nature of permissionless technologies, countless innovations emerged in parallel. We will consider the two main ones. First, trusted or semi-trusted bridging, which was how BTC was locked to mint WBTC, with minting being handled by a trusted set of custodians (WBTC DAO).</p>
+<p>Second, which became the successor and was largely adopted in the industry was trustless bridging, involving a set of nodes attesting to the asset movement between chains. Some of the popular bridging solutions that we got were:</p>
+<ul>
+<li class=""><strong>Wormhole</strong>, where you locked your token on one chain and released it on another chain, the caveat being that as a developer, you had to tweak your smart contracts and bridging was usually slow. But this also meant locking all funds on one smart contract on a chain which opened a couple of attack vectors such as smart contract vulnerabilities or oracle manipulations, etc.</li>
+<li class=""><strong>IBC</strong>, which required running light clients on both the chains, which handled proof verification before moving funds; though this was limited mainly to Cosmos or required oracles with light node smart contracts on non-Cosmos chains to function leading to adaptation limited to only the Cosmos ecosystem.</li>
+<li class=""><strong>ZK Proofs</strong> and <strong>Optimistic Proofs</strong> that ensured Ethereum L1 to L2s transfer which were quite fast but at times expensive to compute or required several days of challenge period to escape (revert) back to L1.</li>
+</ul>
+<p><strong>The Progressive Problem</strong> - Bridging solved the trustlessness problem to an extent but largely was slow, forcing users to wait between movements or were fragmented or limited to a few eco-systems of chains.</p>
+<p>This led to the <strong>next iterative innovation</strong>, which is known as the intent-solver system. In which an off-chain operator takes the risk (in exchange for a fee) for offering convenience and speed for moving funds across chains.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="5-intent-solvers-networks---bridging-on-steroids">5. Intent Solvers Networks - Bridging on Steroids<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#5-intent-solvers-networks---bridging-on-steroids" class="hash-link" aria-label="Direct link to 5. Intent Solvers Networks - Bridging on Steroids" title="Direct link to 5. Intent Solvers Networks - Bridging on Steroids" translate="no">​</a></h3>
+<p>With intent solver networks, we have entered the current era of interop solutions. They are arguably the biggest improvement we have seen since the days of CEXs.</p>
+<p>The way they work is quite novel: instead of bridging (that requires trusted validators or decentralized validators to slowly attest and then move funds) they flip the attestation and risk away from the smart contract (used to lock and mint in bridges) and gives it to off-chain specialized actors that almost instantly fill the user’s intent(bridging, trading of assets, etc) using their own liquidity.</p>
+<p>This feature works in the following way: :</p>
+<ul>
+<li class="">The user provides their intent such as “swap minimum ETH for USDT on Base” or “Swap SOL for minimum USDT on Ethereum”.</li>
+<li class="">Along with this, the user either deposits assets, plus a small fee for solvers on a smart contract on the source chain or approves the assets to be used off-chain (mostly after they have already called approve on that app-specific smart contract).</li>
+<li class="">These instructions are then taken to a solver network, which, in the simplest terms are made of single off-chain actors that at least have the desired asset liquidity on the destination chain.</li>
+<li class="">The network then does an auction of sorts, which can be based on speed or cost. One popular auction mechanism done over is reverse Dutch auction, where the fee starts from the maximum point that will be paid and these off-chain solvers each bid a fee to win the auction. In the end, the lowest fee solver wins the bid and is tasked with fulfilling the intent.</li>
+<li class="">All of this takes less than a few seconds to be completed, after which the solver fulfils the obligation using its own liquidity on the destination chain, ensuring that the user gets their funds lightning fast.</li>
+<li class="">Later on, the solver submits the proof on the source smart contract, which mostly uses oracles to verify that the solver has done their job and then subsequently releases the funds to them.</li>
+</ul>
+<p>This approach improves speed (typically happens within a few seconds), eliminates the attack vector of a single bloated smart contract worth millions of dollars, and is also scalable. But it does not (yet) mean that we have a magic bullet for web3 interop.</p>
+<p><strong>The Progressive Problem</strong> - The main problem with such networks is that they require a high degree of specialisation with unclear incentives for participation (e.g. solvers would much rather become liquidity providers and earn more). They may also be app-controlled which can lead to vendor lock-in, or highly function-specific which can result in avoidable coordination costs.</p>
+<p>Furthermore, they need a reliable infrastructure on the app side (such as an oracle network) in order to determine the best trade routes. Even the simplest intents require precise and up to date knowledge of prices, a problem which is compounded as more chains get involved. And finally, there's the problem of liquidity pool coordination and rebalancing, which creates additional risk and complexity.</p>
+<p>These problems have led us to design a new approach or the <strong>next iterative innovation</strong> keeping with the spirits of this article. We are terming them as '<strong>generalised programmable solvers'</strong> that can optimise, eliminate added infra and execute any custom routes which might be required by any developers of any app.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="6-generalized-programmable-solvers---solvers-that-are-smarter-co-ordinated-and-generalized">6. Generalized Programmable Solvers - Solvers that are smarter, co-ordinated and generalized<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#6-generalized-programmable-solvers---solvers-that-are-smarter-co-ordinated-and-generalized" class="hash-link" aria-label="Direct link to 6. Generalized Programmable Solvers - Solvers that are smarter, co-ordinated and generalized" title="Direct link to 6. Generalized Programmable Solvers - Solvers that are smarter, co-ordinated and generalized" translate="no">​</a></h3>
+<p><strong>Programmable solvers</strong> is a term that we have coined at Push Chain to distinguish the next step in innovation that the solvers require to work at scale.</p>
+<p>At its simplest, it means that developers will have state access to other blockchains, i.e. the ability to read, fetch and utilise the state of other chains. This will allow them to create custom pathways for fulfilling intents, all from a single universal EVM smart contract deployed on Push Chain.</p>
+<p><img decoding="async" loading="lazy" alt="Universal Smart Contract Example (Pseudocode)" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-2-b2d98b955f86d833d7c1872a9cd5f944.webp" width="2048" height="1103" class="img_ev3q"></p>
+<p>This approach solves a lot of issues that hamper the adoption of solvers in web3. In particular:</p>
+<ul>
+<li class=""><strong>Eliminates the need for having an external oracle or underlying infrastructure</strong>: Shared state within Push Chain enables developers to logically code what their solvers need to do given different circumstances.</li>
+</ul>
+<p>For example, if someone wants to swap $TRUMP from Solana and they have USDT on BNB, they will be able to read the BNB-USDT value from PancakeSwap, the SOL-USDT value from Raydium, and thus calculate the $TRUMP-USDT value from Raydium; all from a single smart contract deployed on Push Chain!</p>
+<p>Once you have these values, just provide basic(atomic) solver instructions from your smart contract (still on Push Chain) and then let the solver network do its magic.</p>
+<ul>
+<li class=""><strong>Enables anyone to be a solver / solves LP co-ordination:</strong> Once the solver network has a basic path, anyone can simply choose to run a basic solver software instead of creating a specialized one as the basic path is already provided. Though this doesn’t stop specialized solvers as they can then optimize the pathway by creating their own custom logic. The Solver network is now for everyone, instead of a few specialized actors.</li>
+<li class=""><strong>Allows specialized solvers pooling</strong>: Since the path can consist of different atomic steps – in the above example: swapping, bridging, protocol interaction – each one of these can be provided to action-specific specialized solvers, further solving the co-ordination issue.</li>
+<li class=""><strong>Enables any app to use solver network and be fully interoperable</strong>: Since all the functionalities are driven by a single universal smart contract deployed by the developer on Push Chain, the interop solution is now developer friendly, no matter what apps they are creating. Furthermore, it can be deployed in hours if not minutes!</li>
+</ul>
+<p><strong>The Progressive Problem</strong> - The only problem this solution doesn’t address is the burden it places on the user to come to Push Chain to leverage the solution.</p>
+<p>Which, of course, brings us to the <strong>next and final iterative solution - Full Stack Interop</strong>.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="7-full-stack-interop---push-chain-universal-l1">7. Full Stack Interop - Push Chain (Universal L1)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#7-full-stack-interop---push-chain-universal-l1" class="hash-link" aria-label="Direct link to 7. Full Stack Interop - Push Chain (Universal L1)" title="Direct link to 7. Full Stack Interop - Push Chain (Universal L1)" translate="no">​</a></h3>
+<p><img decoding="async" loading="lazy" alt="Image" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-3-529f03e9670a503e9e1213d68415f3e0.webp" width="1500" height="1200" class="img_ev3q"></p>
+<p>Push Chain which is a universal L1 chain offers full stack interop to enable a synergetic, unified web3, where <strong>any apps</strong> of <strong>Push Chain</strong> become accessible by <strong>any user or wallet</strong> of any chain.</p>
+<p>To facilitate seamless functionality for <strong>developers</strong>. It enables <strong>universal smart contracts</strong> to allow singulare instance of the app to be accessible by users of any chain. It also enables <strong>universal validators</strong> to allow writing txs on any other chains. While <strong>state access</strong> and <strong>programmable solvers</strong> in the later phase of roadmap ensures added functionality and ease of use.</p>
+<p>These features ensures the the most seamless Developer Experience (DevEX) crypto has ever seen.</p>
+<p>For <strong>users</strong>, a seamless, zero-learning and hassle-free experience is acheive by employing <strong>Cross-chain fee</strong> &amp; <strong>Wallet Abstraction</strong>.</p>
+<p><strong>Cross-chain fee abstraction</strong> enables the user, no matter which chain they are on, to fund the gas for their transaction on Push Chain using native token of the chain they are currently on, eliminating the hassle for the user to bridge gas and allowing them to use the app from any chain.</p>
+<p><strong>Wallet abstraction</strong> provides a flexible, embeddable wallet experience, tailored to individual user journeys while preserving decentralization. This type of abstraction offers a simpler UX to both existing and new web3 users.</p>
+<ul>
+<li class=""><strong>Existing Web3 Users:</strong> Already using Ethereum, Solana, or another chain? The Push Chain wallet lets you continue using your existing setup -—no extra hoops. Combined with fee abstraction, transactions stay native to the source blockchain, making cross-chain use effortless.</li>
+<li class=""><strong>New Web3 Users (Web2 Normies):</strong> Not web3-savvy? No problem. Just log in with an email or social account. Under the hood, the wallet uses sharding and passkeys to stay non-custodial, but feels as simple and intuitive as web2.</li>
+</ul>
+<p>By enabling seamless transactions from any chain, abstracting away gas and wallet complexities, and fostering interoperability across L1s, L2s, and L3s, Push Chain ensures a frictionless web3 experience for users and developers alike.</p>
+<p>This results in a terraformed world of universal (fully interoperable) applications for web3. In this paradigm, instead of being a user of "Uniswap on Ethereum," "Uniswap on Polygon," or "Uniswap on Arbitrum," a person simply becomes a <strong>user of Uniswap</strong>.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conclusion">Conclusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/interop-spectrum/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
+<p>Interop is the end goal for ensuring that crypto apps arrive to mainstream users, no matter where they are from, or even if they get onboarded from web2.</p>
+<p>Seeing interop as a spectrum helps us realize that it’s a problem that we have iteratively solved. Just like how web1 evolved to web2 and then to web3 to fix the problems of its predecessor.</p>
+<p>Solving this is within our reach and thus the dream of enabling true interoperability from any app of any chain to any user of any chain.</p>
+<p>Let’s build this future together, let’s build a better, more functional web3… and let’s build Universal / Fully Interoperable Apps!</p>
+<p>It’s about time anyway 💪</p>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Interop</category>
+            <category>Intent Solvers</category>
+            <category>Bridges</category>
+            <category>Deep dives</category>
+        </item>
+        <item>
+            <title><![CDATA[Introducing Push Chain Devnet Drop Points Program S2]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/</guid>
+            <pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Introducing Push Chain Devnet Drop Points Program S2]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Cover Image of Introducing the Push Points Program S2" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/cover-image-6bee716eb972684ee7b85ad5fea1bb0c.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>The announcement you’ve been eagerly waiting for is here!</p>
+<p>Say Hello to <a href="https://portal.push.org/rewards" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet Drop Points Program S2!</a></p>
+<p>The Devnet Drop Points Program leads to one of many upcoming Gratitude Drops scheduled to give back to our amazing Push Chain community as we collectively turbo charge our way towards the Push Chain Mainnet 🚀</p>
+<p><em><strong>How do I participate in Devnet Drop Points Program?</strong></em></p>
+<p><em><strong>Who is this drop eligible for?</strong></em></p>
+<p><em><strong>Does the Devnet Drop Points Program benefit Points Program S1 participants?</strong></em></p>
+<p><em><strong>How awesome is Push Chain?</strong></em></p>
+<p>This guide entails all the required details for you to kick start your Universal Appverse journey with Push!</p>
+<p><em>Don’t skip the extra perks section at the end!</em></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-the-push-chain-devnet-drop-points-program">What is the Push Chain Devnet Drop Points Program?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#what-is-the-push-chain-devnet-drop-points-program" class="hash-link" aria-label="Direct link to What is the Push Chain Devnet Drop Points Program?" title="Direct link to What is the Push Chain Devnet Drop Points Program?" translate="no">​</a></h2>
+<p>The <a href="https://portal.push.org/rewards?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=push_rewards" target="_blank" rel="noopener noreferrer" class="">Push Chain Devnet Drop Points Program</a> - is an Incentivized Devnet Program tied together with Push Points Program S2 - enabling users to earn Push Points in exchange for Airdrops for exploring the Early Ecosystem apps of Push Devnet.</p>
+<p>Points Earned will unlock your eligibility for the Push Chain Token Airdrop, post Push Chain Mainnet.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-do-i-get-started-and-what-are-the-rules">How do I get started and what are the rules?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#how-do-i-get-started-and-what-are-the-rules" class="hash-link" aria-label="Direct link to How do I get started and what are the rules?" title="Direct link to How do I get started and what are the rules?" translate="no">​</a></h2>
+<p>Quite Straightforward..</p>
+<ol>
+<li class="">
+<p><strong>Join the program at <a href="https://portal.push.org/rewards?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=push_rewards" target="_blank" rel="noopener noreferrer" class="">https://portal.push.org/rewards</a></strong></p>
+</li>
+<li class="">
+<p><strong>Connect using Push Wallet</strong></p>
+</li>
+</ol>
+<p><em>Push Wallet is an in-browser wallet, which opens in a new tab.Thus, no downloads required.</em>
+<em>You can connect using your existing Solana, EVM wallets to it - OR - Simply Login via Google &amp; Email.</em></p>
+<ol start="3">
+<li class="">
+<p><strong>Validate your socials (X &amp; Discord)</strong> <em>(we hate bots🤖, we love fair play🤝)</em></p>
+</li>
+<li class="">
+<p><strong>Tweet about Push Chain</strong></p>
+</li>
+<li class="">
+<p><strong>You’re all set!</strong></p>
+</li>
+</ol>
+<p>Now…..</p>
+<p><strong>Dive into the realm of Push’s Universal Apps like</strong>:</p>
+<ol>
+<li class=""><a href="https://email.push.org/" target="_blank" rel="noopener noreferrer" class="">Any Chain Mail</a> - Your wallet address = your email id.</li>
+<li class=""><a href="https://simulate.push.org/" target="_blank" rel="noopener noreferrer" class="">Transaction Simulator</a> - Send superfast txns on Push Chain - from any chain!</li>
+<li class=""><a href="https://rumors.push.org/" target="_blank" rel="noopener noreferrer" class="">Rumors</a>  - Share Secrets, No sign up, no personal data, vote on spicy rumors.
+&amp; 4. SURPRISE APP (revealing soon!)</li>
+</ol>
+<p>Use these apps, perform actions (gasless + no money involved) and earn XP and Multipliers the more you level.</p>
+<p><strong>There are 50 levels per app. The more you use an app, the more levels you climb, the more XP and Multipliers you earn and thus - higher you rank in the Leaderboard.</strong></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="whats-special-about-push-chain-devnet-universal-apps">What’s special about Push Chain Devnet Universal Apps?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#whats-special-about-push-chain-devnet-universal-apps" class="hash-link" aria-label="Direct link to What’s special about Push Chain Devnet Universal Apps?" title="Direct link to What’s special about Push Chain Devnet Universal Apps?" translate="no">​</a></h3>
+<p>These apps are Universal in nature.</p>
+<p>Meaning…</p>
+<p>These apps have the ability to support users from any wallet, belonging to any chain - with ZERO Friction!!</p>
+<p>For instance - With <a href="https://email.push.org/" target="_blank" rel="noopener noreferrer" class="">Anychain Email</a> - a Solana user can instantly send mails to an Ethereum user - instantly, with 0 gas fees!!</p>
+<p>All thanks to Push Chain’s Chain Abstraction and Full Stack Interoperability!</p>
+<p><em><strong>For nerds - here’s a detailed read: <a href="https://push.org/blog/innovations-by-push-chain/" target="_blank" rel="noopener noreferrer" class="">Innovations By Push Chain</a></strong></em></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="who-does-the-devnet-drop-points-program-benefit">Who Does the Devnet Drop Points Program Benefit?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#who-does-the-devnet-drop-points-program-benefit" class="hash-link" aria-label="Direct link to Who Does the Devnet Drop Points Program Benefit?" title="Direct link to Who Does the Devnet Drop Points Program Benefit?" translate="no">​</a></h2>
+<p>Short Answer - Everyone!</p>
+<p>Which also includes:</p>
+<p>1️⃣ S2 Program Participants (of course!)</p>
+<p>2️⃣&nbsp;S1 Program Graduates (Push protocol users)</p>
+<p>3️⃣&nbsp;And EVERYONE who’s truly part of Push Chain’s Vision and its journey to Mainnet!</p>
+<p>….</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="note-for-s1-participants"><strong>💡NOTE For S1 Participants:</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#note-for-s1-participants" class="hash-link" aria-label="Direct link to note-for-s1-participants" title="Direct link to note-for-s1-participants" translate="no">​</a></h3>
+<p>Claim an exclusive headstart boost <strong>20k points + 4x Multiplier</strong> just by logging in with the same socials &amp; wallet used in S1.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="extra-perks">Extra Perks:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#extra-perks" class="hash-link" aria-label="Direct link to Extra Perks:" title="Direct link to Extra Perks:" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p><strong>⚡️ Multipliers:</strong></p>
+<p>Multipliers allow users to boost their Points by performing special activities. For e.g. if you have 100 points, after earning a 2x Multiplier, you will now have 200 Points. Multipliers also apply to any points earned after activating the Multiplier making it a permanent feature.</p>
+<p>The best part,</p>
+<p><strong>Multipliers are additive</strong>. A 2X + 2X Multiplier will make the account multiplier 4X. Collect more multipliers to earn mega rewards.</p>
+</li>
+<li class="">
+<p><strong>✅ Daily Reward CheckIns:</strong></p>
+<p>Users can also check-in daily on <a href="https://portal.push.org/rewards?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=push_rewards" target="_blank" rel="noopener noreferrer" class="">Points Portal</a> to claim points. Check-in for 7 days to earn bonus points.</p>
+<p>→ Check in daily at <a href="https://portal.push.org/rewards?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=push_rewards" target="_blank" rel="noopener noreferrer" class="">portal.push.org</a> to earn <strong>bonus 5,500 Points!</strong></p>
+<p>→ Use Devnet Apps Daily to earn an additional <strong>1000 XPs boost.</strong></p>
+</li>
+<li class="">
+<p><strong>🤝 Referrals:</strong></p>
+<p>Onboard your loved ones to the S2 program &amp; earn <strong>+20%</strong> of any Points your invites earn and <strong>+5%</strong> of any Points your invitee’s invites earn.</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-is-push-chain-awesome">Why is Push Chain Awesome?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/introducing-push-chain-devnet-drop-points-program-s2/#why-is-push-chain-awesome" class="hash-link" aria-label="Direct link to Why is Push Chain Awesome?" title="Direct link to Why is Push Chain Awesome?" translate="no">​</a></h2>
+<p>Push Chain is a shared state blockchain for universal apps, powered by&nbsp;<strong>Chain Abstraction</strong>. It is a Proof of Stake (PoS) chain that allows developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user.</p>
+<p><strong>Push Chain's Superpowers Include:</strong></p>
+<ul>
+<li class="">Complete Wallet and Fee Abstraction</li>
+<li class="">Support for Any Chain Tx (Solana, Eth, EVM, or non-EVM)</li>
+<li class="">True Scale and Universal Smart Contracts</li>
+<li class="">Consumer tx (unordered) and Traditional tx (ordered)</li>
+<li class="">Sub-second finality</li>
+</ul>
+<p><a href="https://push.org/" target="_blank" rel="noopener noreferrer" class="">Explore more about Push Chain here</a></p>
+<p><strong>⚡️READY, SET, EARN!</strong></p>
+<p><strong><a href="https://portal.push.org/rewards?utm_source=blog&amp;utm_medium=referral&amp;utm_campaign=push_rewards" target="_blank" rel="noopener noreferrer" class="">https://portal.push.org/rewards</a></strong></p>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Push Points</category>
+            <category>Rewards</category>
+            <category>Announcements</category>
+        </item>
+    </channel>
+</rss>
