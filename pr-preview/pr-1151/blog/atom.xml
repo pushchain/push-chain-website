@@ -17,46 +17,52 @@
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-universal-fee-abstraction">What is Universal Fee Abstraction?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#what-is-universal-fee-abstraction" class="hash-link" aria-label="Direct link to What is Universal Fee Abstraction?" title="Direct link to What is Universal Fee Abstraction?" translate="no">​</a></h2>
 <p>Universal Fee Abstraction is a magical mechanism that lets users pay for network fees on any chain, in any token they already hold, while using Universal Apps on Push Chain.</p>
 <p>One signature. One flow. Zero Friction.</p>
-<p>Let’s break it down.</p>
+<p>Let's break it down.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="why-fee-abstraction-exists">Why Fee Abstraction Exists<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#why-fee-abstraction-exists" class="hash-link" aria-label="Direct link to Why Fee Abstraction Exists" title="Direct link to Why Fee Abstraction Exists" translate="no">​</a></h2>
-<p>For years, blockchains enforced a rigid rule:
-<strong>Pay gas in the chain’s native token.</strong></p>
-<p>ETH on Ethereum
-SOL on Solana
-POL on Polygon
-BTC on Bitcoin</p>
+<p>For years, blockchains enforced a rigid rule:</p>
+<p><strong>Pay gas in the chain's native token.</strong></p>
+<ul>
+<li class="">ETH on Ethereum</li>
+<li class="">SOL on Solana</li>
+<li class="">POL on Polygon</li>
+<li class="">BTC on Bitcoin</li>
+</ul>
 <p>This made sense when chains were isolated islands.</p>
 <p>But as we progress towards a chain-agnostic world, following such legacy rules has proven to be one of the biggest hurdles to our mainstream adoption.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-user-pain">The User Pain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-user-pain" class="hash-link" aria-label="Direct link to The User Pain" title="Direct link to The User Pain" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="cold-start-problem-i-need-gas-to-get-gas">Cold Start Problem: "I need gas to get gas"<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#cold-start-problem-i-need-gas-to-get-gas" class="hash-link" aria-label="Direct link to Cold Start Problem: &quot;I need gas to get gas&quot;" title="Direct link to Cold Start Problem: &quot;I need gas to get gas&quot;" translate="no">​</a></h4>
-<p>You hold ETH and 1000 USDC on Ethereum.
-A new DeFi app you want is on Arbitrum.</p>
-<p>You connect your wallet… but can’t do anything.
-Even though you have tokens, you don’t have <em>the right</em> token on the right chain.</p>
-<p>Tokens don’t work seamlessly inter-chain. So you figure it out 🤷.</p>
-<p>And that meant, your only option before Push Chain was:
-1. Bridge ETH
-2. Wait, do additional conversion, or wallet creation, or both
-3. Finally, use the app</p>
+<p>You hold ETH and 1000 USDC on Ethereum.</p>
+<p>A new DeFi app you want is on Arbitrum.</p>
+<p>You connect your wallet… but can't do anything.</p>
+<p>Even though you have tokens, you don't have <em>the right</em> token on the right chain.</p>
+<p>Tokens don't work seamlessly inter-chain. So you figure it out 🤷.</p>
+<p>And that meant, your only option before Push Chain was:</p>
+<ol>
+<li class="">Bridge ETH</li>
+<li class="">Wait, do additional conversion, or wallet creation, or both</li>
+<li class="">Finally, use the app</li>
+</ol>
 <p>Swap Arbitrum for Polygon, Solana, Base, Whatever. Same friction, new native token.</p>
 <p><strong>Every new chain = new gas token = new friction.</strong></p>
 <p>Even Industry greats like Austin Griffith call this torture out <a href="https://x.com/austingriffith/status/1985438645130838068" target="_blank" rel="noopener noreferrer" class="">TWEET</a></p>
 <p><img decoding="async" loading="lazy" alt="What is Universal Fee Abstraction?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/assets/images/image-1-ef261e3d76b5aae321b967d2871e1454.webp" width="1194" height="484" class="img_ev3q"></p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-gas-portfolio-issue">The Gas Portfolio Issue<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-gas-portfolio-issue" class="hash-link" aria-label="Direct link to The Gas Portfolio Issue" title="Direct link to The Gas Portfolio Issue" translate="no">​</a></h4>
-<p>Everyone in crypto is unknowingly maintaining a “gas portfolio”:</p>
+<p>Everyone in crypto is unknowingly maintaining a "gas portfolio":</p>
 <ul>
 <li class="">Track native balances across chains</li>
 <li class="">Keep all of them topped up</li>
 <li class="">Constantly bridge value for fees</li>
 </ul>
 <p>The overhead is ridiculous. The prep time often exceeds the actual transaction time.</p>
-<p>Users shouldn’t be managing chain infrastructure.</p>
+<p>Users shouldn't be managing chain infrastructure.</p>
 <p>They should be using apps.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="the-developers-dilemma">The Developers Dilemma<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#the-developers-dilemma" class="hash-link" aria-label="Direct link to The Developers Dilemma" title="Direct link to The Developers Dilemma" translate="no">​</a></h3>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="fragmented-userbases">Fragmented userbases<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#fragmented-userbases" class="hash-link" aria-label="Direct link to Fragmented userbases" title="Direct link to Fragmented userbases" translate="no">​</a></h4>
-<p>- Deploy on Ethereum → serve Ethereum users
-- Deploy on Solana → serve Solana users
-- Deploy on Arbitrum → serve Arbitrum users</p>
+<ul>
+<li class="">Deploy on Ethereum → serve Ethereum users</li>
+<li class="">Deploy on Solana → serve Solana users</li>
+<li class="">Deploy on Arbitrum → serve Arbitrum users</li>
+</ul>
 <p>This fragments your user base. Every chain becomes a silo, each deployment forces:</p>
 <ul>
 <li class="">Separate Infrastructure</li>
@@ -66,7 +72,7 @@ Even though you have tokens, you don’t have <em>the right</em> token on the ri
 </ul>
 <p><strong>Universal Fee Abstraction fixes this.</strong></p>
 <p><strong>Deploy once, onboard users from everywhere.</strong></p>
-<p>It’s time you focus on the product, No extra infra. No cross-chain fee logic. Just chain-native interop Magic.</p>
+<p>It's time you focus on the product, No extra infra. No cross-chain fee logic. Just chain-native interop Magic.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="how-does-universal-fee-abstraction-work">How does Universal Fee Abstraction work?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#how-does-universal-fee-abstraction-work" class="hash-link" aria-label="Direct link to How does Universal Fee Abstraction work?" title="Direct link to How does Universal Fee Abstraction work?" translate="no">​</a></h2>
 <p>The system works in three coordinated steps:</p>
 <ol>
@@ -80,24 +86,24 @@ Even though you have tokens, you don’t have <em>the right</em> token on the ri
 <ol>
 <li class=""><strong>Estimates gas cost in Push Chain's native token ($PC)</strong></li>
 </ol>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">   Example: Transaction needs 1 PC (est. $0.3)</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Example: Transaction needs 1 PC (est. $0.3)</span><br></span></code></pre></div></div>
 <ol start="2">
 <li class=""><strong>Converts that cost to your origin chain's native token</strong></li>
 </ol>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">   SDK: "1 PC = $0.3 = 0.0003 SOL"</span><br></span></code></pre></div></div>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">SDK: "1 PC = $0.3 = 0.0003 SOL"</span><br></span></code></pre></div></div>
 <ol start="3">
 <li class=""><strong>Adds the gas cost to your transaction payload</strong></li>
 </ol>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Your transaction now includes:</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">- What you want to do (e.g., swap tokens)</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">   - How much it costs (0.0003 SOL)</span><br></span></code></pre></div></div>
-<p><strong>The key insight:</strong> The SDK speaks both languages, your origin chain's token (SOL, ETH,POL) and Push Chain's native token (PC). You pay in what you have; Push Chain receives what it needs.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Your transaction now includes:</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">- What you want to do (e.g., swap tokens)</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">- How much it costs (0.0003 SOL)</span><br></span></code></pre></div></div>
+<p><strong>The key insight:</strong> The SDK speaks both languages, your origin chain's token (SOL, ETH, POL) and Push Chain's native token (PC). You pay in what you have; Push Chain receives what it needs.</p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="fee-locking-on-source-chain-securing-your-payment">Fee Locking on Source Chain (Securing Your Payment)<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#fee-locking-on-source-chain-securing-your-payment" class="hash-link" aria-label="Direct link to Fee Locking on Source Chain (Securing Your Payment)" title="Direct link to Fee Locking on Source Chain (Securing Your Payment)" translate="no">​</a></h3>
 <p>Now that the SDK knows how much you need to pay, it locks those funds on your origin chain using a smart contract called the <strong>Universal Gateway</strong>.</p>
 <p><strong>What is the Universal Gateway?</strong></p>
 <p>The Universal Gateway is a smart contract deployed on each origin chain (Ethereum, Solana, Base, etc.) that:</p>
 <ul>
 <li class="">Receives and locks your native tokens (ETH, SOL, etc.)</li>
-<li class="">Receives and locks other network tokens (USDC, USDT,ARB,etc)</li>
-<li class="">Emits an event that the Push Chain’s Universal validators can verify</li>
+<li class="">Receives and locks other network tokens (USDC, USDT, ARB, etc)</li>
+<li class="">Emits an event that the Push Chain's Universal validators can verify</li>
 <li class="">Holds your tokens securely until the transaction completes</li>
 </ul>
 <p><strong>Here's what happens:</strong></p>
@@ -105,14 +111,13 @@ Even though you have tokens, you don’t have <em>the right</em> token on the ri
 <p><strong>Important:</strong> The deposit into the Universal Gateway and your intended transaction (e.g., swapping tokens on Push Chain) are <strong>wrapped in a single universal transaction</strong>.</p>
 <p>You sign once. Both things happen <strong>atomically</strong>.</p>
 <p>If your swap fails on Push Chain, the fee lock is never processed, and you don't lose funds.</p>
-<p>Now it's time for the special listener entities called <strong>Universal Validators</strong> to verify the locked tokens and mint an equivalent amount of synthetic representations of these locked
-native tokens.</p>
+<p>Now it's time for the special listener entities called <strong>Universal Validators</strong> to verify the locked tokens and mint an equivalent amount of synthetic representations of these locked native tokens.</p>
 <p>Let's understand more about this process.</p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="c-conversion-credit-and-attribution">C) Conversion, Credit and Attribution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#c-conversion-credit-and-attribution" class="hash-link" aria-label="Direct link to C) Conversion, Credit and Attribution" title="Direct link to C) Conversion, Credit and Attribution" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conversion-credit-and-attribution">Conversion, Credit and Attribution<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#conversion-credit-and-attribution" class="hash-link" aria-label="Direct link to Conversion, Credit and Attribution" title="Direct link to Conversion, Credit and Attribution" translate="no">​</a></h3>
 <p>Your SOL is now locked on Solana. But Push Chain's validators need $PC to execute your transaction and pay for gas. This is where the magic of automated conversion happens.</p>
 <p><strong>Part A: Synthetic Token Minting</strong></p>
-<p>When universal validators verify your locked SOL, they communicate with validators (that handle Push Chain’s validation) and mint a synthetic representation called <strong>pSOL</strong> (p = "pegged").</p>
-<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Locked on Solana:0.0003 SOL</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Minted on Push Chain: 0.0003 pSOL</span><br></span></code></pre></div></div>
+<p>When universal validators verify your locked SOL, they communicate with validators (that handle Push Chain's validation) and mint a synthetic representation called <strong>pSOL</strong> (p = "pegged").</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#2B2B30;--prism-background-color:#ffffff"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#2B2B30;background-color:#ffffff"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#2B2B30"><span class="token plain">Locked on Solana: 0.0003 SOL</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">  ↓</span><br></span><span class="token-line" style="color:#2B2B30"><span class="token plain">Minted on Push Chain: 0.0003 pSOL</span><br></span></code></pre></div></div>
 <p><strong>Why synthetic tokens?</strong></p>
 <p>Think of pSOL as a "receipt" that proves you locked real SOL on Solana. It's a 1:1 representation:</p>
 <ul>
@@ -138,17 +143,17 @@ native tokens.</p>
 <p>Your next transactions are instant until that balance runs low.</p>
 <p>This is one of the biggest smoothness upgrades.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="can-i-pay-gas-in-any-token-on-any-chain-yes">Can I Pay Gas in Any Token, on any Chain? Yes<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#can-i-pay-gas-in-any-token-on-any-chain-yes" class="hash-link" aria-label="Direct link to Can I Pay Gas in Any Token, on any Chain? Yes" title="Direct link to Can I Pay Gas in Any Token, on any Chain? Yes" translate="no">​</a></h2>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="if-you-pay-with-native-tokens-eth-sol"><strong>If you pay with native tokens (ETH, SOL):</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#if-you-pay-with-native-tokens-eth-sol" class="hash-link" aria-label="Direct link to if-you-pay-with-native-tokens-eth-sol" title="Direct link to if-you-pay-with-native-tokens-eth-sol" translate="no">​</a></h4>
+<p><strong>If you pay with native tokens (ETH, SOL):</strong></p>
 <p>Lock → Verify → Convert → Execute</p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="if-you-pay-with-any-other-token-usdc-arb-link"><strong>If you pay with any other token (USDC, ARB, LINK):</strong><a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#if-you-pay-with-any-other-token-usdc-arb-link" class="hash-link" aria-label="Direct link to if-you-pay-with-any-other-token-usdc-arb-link" title="Direct link to if-you-pay-with-any-other-token-usdc-arb-link" translate="no">​</a></h4>
+<p><strong>If you pay with any other token (USDC, ARB, LINK):</strong></p>
 <p>Gateway auto-swaps token → native token → lock → convert → execute</p>
 <p>You never need to open a DEX or bridge.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="conclusion">Conclusion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1151/blog/what-is-universal-abstraction/#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion" translate="no">​</a></h2>
 <p>Universal Fee Abstraction removes the single biggest blocker in multi-chain UX.</p>
-<p><strong>For users:</strong>
-Pay gas in any token from any chain with one signature. No gas hunting. No bridges.</p>
-<p><strong>For developers:</strong>
-Deploy once. Reach everyone. No cross-chain fee infra. No fragmentation.</p>
+<p><strong>For users:</strong></p>
+<p>Pay gas in any token from any chain with one signature. No gas hunting. No bridges.</p>
+<p><strong>For developers:</strong></p>
+<p>Deploy once. Reach everyone. No cross-chain fee infra. No fragmentation.</p>
 <p>This is what makes Universal Apps possible.</p>
 <p>Explore them here: <a href="https://push.org/ecosystem" target="_blank" rel="noopener noreferrer" class="">https://push.org/ecosystem</a></p>]]></content>
         <author>

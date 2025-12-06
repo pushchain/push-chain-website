@@ -207,8 +207,8 @@ const toc = [{
   "id": "fee-locking-on-source-chain-securing-your-payment",
   "level": 3
 }, {
-  "value": "C) Conversion, Credit and Attribution",
-  "id": "c-conversion-credit-and-attribution",
+  "value": "Conversion, Credit and Attribution",
+  "id": "conversion-credit-and-attribution",
   "level": 3
 }, {
   "value": "Gas Preloading Optimization",
@@ -218,14 +218,6 @@ const toc = [{
   "value": "Can I Pay Gas in Any Token, on any Chain? Yes",
   "id": "can-i-pay-gas-in-any-token-on-any-chain-yes",
   "level": 2
-}, {
-  "value": "<strong>If you pay with native tokens (ETH, SOL):</strong>",
-  "id": "if-you-pay-with-native-tokens-eth-sol",
-  "level": 4
-}, {
-  "value": "<strong>If you pay with any other token (USDC, ARB, LINK):</strong>",
-  "id": "if-you-pay-with-any-other-token-usdc-arb-link",
-  "level": 4
 }, {
   "value": "Conclusion",
   "id": "conclusion",
@@ -265,16 +257,26 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "One signature. One flow. Zero Friction."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "Let’s break it down."
+      children: "Let's break it down."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "why-fee-abstraction-exists",
       children: "Why Fee Abstraction Exists"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: ["For years, blockchains enforced a rigid rule:\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
-        children: "Pay gas in the chain’s native token."
-      })]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "ETH on Ethereum\nSOL on Solana\nPOL on Polygon\nBTC on Bitcoin"
+      children: "For years, blockchains enforced a rigid rule:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Pay gas in the chain's native token."
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "ETH on Ethereum"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "SOL on Solana"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "POL on Polygon"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "BTC on Bitcoin"
+      }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "This made sense when chains were isolated islands."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -286,15 +288,27 @@ function _createMdxContent(props) {
       id: "cold-start-problem-i-need-gas-to-get-gas",
       children: "Cold Start Problem: \"I need gas to get gas\""
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "You hold ETH and 1000 USDC on Ethereum.\nA new DeFi app you want is on Arbitrum."
+      children: "You hold ETH and 1000 USDC on Ethereum."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "A new DeFi app you want is on Arbitrum."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "You connect your wallet… but can't do anything."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: ["You connect your wallet… but can’t do anything.\nEven though you have tokens, you don’t have ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.em, {
+      children: ["Even though you have tokens, you don't have ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.em, {
         children: "the right"
       }), " token on the right chain."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "Tokens don’t work seamlessly inter-chain. So you figure it out 🤷."
+      children: "Tokens don't work seamlessly inter-chain. So you figure it out 🤷."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "And that meant, your only option before Push Chain was:\n1. Bridge ETH\n2. Wait, do additional conversion, or wallet creation, or both\n3. Finally, use the app"
+      children: "And that meant, your only option before Push Chain was:"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Bridge ETH"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Wait, do additional conversion, or wallet creation, or both"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Finally, use the app"
+      }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Swap Arbitrum for Polygon, Solana, Base, Whatever. Same friction, new native token."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -317,7 +331,7 @@ function _createMdxContent(props) {
       id: "the-gas-portfolio-issue",
       children: "The Gas Portfolio Issue"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "Everyone in crypto is unknowingly maintaining a “gas portfolio”:"
+      children: "Everyone in crypto is unknowingly maintaining a \"gas portfolio\":"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
         children: "Track native balances across chains"
@@ -329,7 +343,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "The overhead is ridiculous. The prep time often exceeds the actual transaction time."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "Users shouldn’t be managing chain infrastructure."
+      children: "Users shouldn't be managing chain infrastructure."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "They should be using apps."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
@@ -338,8 +352,14 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h4, {
       id: "fragmented-userbases",
       children: "Fragmented userbases"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "- Deploy on Ethereum → serve Ethereum users\n- Deploy on Solana → serve Solana users\n- Deploy on Arbitrum → serve Arbitrum users"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Deploy on Ethereum → serve Ethereum users"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Deploy on Solana → serve Solana users"
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
+        children: "Deploy on Arbitrum → serve Arbitrum users"
+      }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "This fragments your user base. Every chain becomes a silo, each deployment forces:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
@@ -361,7 +381,7 @@ function _createMdxContent(props) {
         children: "Deploy once, onboard users from everywhere."
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "It’s time you focus on the product, No extra infra. No cross-chain fee logic. Just chain-native interop Magic."
+      children: "It's time you focus on the product, No extra infra. No cross-chain fee logic. Just chain-native interop Magic."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "how-does-universal-fee-abstraction-work",
       children: "How does Universal Fee Abstraction work?"
@@ -392,7 +412,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.code, {
-        children: "   Example: Transaction needs 1 PC (est. $0.3)\n"
+        children: "Example: Transaction needs 1 PC (est. $0.3)\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
       start: "2",
@@ -403,7 +423,7 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.code, {
-        children: "   SDK: \"1 PC = $0.3 = 0.0003 SOL\"\n"
+        children: "SDK: \"1 PC = $0.3 = 0.0003 SOL\"\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
       start: "3",
@@ -414,12 +434,12 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.code, {
-        children: "Your transaction now includes:\n\n- What you want to do (e.g., swap tokens)\n   - How much it costs (0.0003 SOL)\n"
+        children: "Your transaction now includes:\n\n- What you want to do (e.g., swap tokens)\n- How much it costs (0.0003 SOL)\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "The key insight:"
-      }), " The SDK speaks both languages, your origin chain's token (SOL, ETH,POL) and Push Chain's native token (PC). You pay in what you have; Push Chain receives what it needs."]
+      }), " The SDK speaks both languages, your origin chain's token (SOL, ETH, POL) and Push Chain's native token (PC). You pay in what you have; Push Chain receives what it needs."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
       id: "fee-locking-on-source-chain-securing-your-payment",
       children: "Fee Locking on Source Chain (Securing Your Payment)"
@@ -437,9 +457,9 @@ function _createMdxContent(props) {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
         children: "Receives and locks your native tokens (ETH, SOL, etc.)"
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
-        children: "Receives and locks other network tokens (USDC, USDT,ARB,etc)"
+        children: "Receives and locks other network tokens (USDC, USDT, ARB, etc)"
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
-        children: "Emits an event that the Push Chain’s Universal validators can verify"
+        children: "Emits an event that the Push Chain's Universal validators can verify"
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
         children: "Holds your tokens securely until the transaction completes"
       }), "\n"]
@@ -466,12 +486,12 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
       children: ["Now it's time for the special listener entities called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "Universal Validators"
-      }), " to verify the locked tokens and mint an equivalent amount of synthetic representations of these locked\nnative tokens."]
+      }), " to verify the locked tokens and mint an equivalent amount of synthetic representations of these locked native tokens."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Let's understand more about this process."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
-      id: "c-conversion-credit-and-attribution",
-      children: "C) Conversion, Credit and Attribution"
+      id: "conversion-credit-and-attribution",
+      children: "Conversion, Credit and Attribution"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Your SOL is now locked on Solana. But Push Chain's validators need $PC to execute your transaction and pay for gas. This is where the magic of automated conversion happens."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -479,12 +499,12 @@ function _createMdxContent(props) {
         children: "Part A: Synthetic Token Minting"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: ["When universal validators verify your locked SOL, they communicate with validators (that handle Push Chain’s validation) and mint a synthetic representation called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+      children: ["When universal validators verify your locked SOL, they communicate with validators (that handle Push Chain's validation) and mint a synthetic representation called ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "pSOL"
       }), " (p = \"pegged\")."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.pre, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.code, {
-        children: "Locked on Solana:0.0003 SOL\n  ↓\nMinted on Push Chain: 0.0003 pSOL\n"
+        children: "Locked on Solana: 0.0003 SOL\n  ↓\nMinted on Push Chain: 0.0003 pSOL\n"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
@@ -557,15 +577,13 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "can-i-pay-gas-in-any-token-on-any-chain-yes",
       children: "Can I Pay Gas in Any Token, on any Chain? Yes"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h4, {
-      id: "if-you-pay-with-native-tokens-eth-sol",
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "If you pay with native tokens (ETH, SOL):"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Lock → Verify → Convert → Execute"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h4, {
-      id: "if-you-pay-with-any-other-token-usdc-arb-link",
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "If you pay with any other token (USDC, ARB, LINK):"
       })
@@ -578,14 +596,18 @@ function _createMdxContent(props) {
       children: "Conclusion"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Universal Fee Abstraction removes the single biggest blocker in multi-chain UX."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "For users:"
-      }), "\nPay gas in any token from any chain with one signature. No gas hunting. No bridges."]
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
-      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Pay gas in any token from any chain with one signature. No gas hunting. No bridges."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "For developers:"
-      }), "\nDeploy once. Reach everyone. No cross-chain fee infra. No fragmentation."]
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Deploy once. Reach everyone. No cross-chain fee infra. No fragmentation."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "This is what makes Universal Apps possible."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {

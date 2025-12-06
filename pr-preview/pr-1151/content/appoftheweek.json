@@ -1,18 +1,16 @@
 {
-  "id": 1,
-  "name": "Last One",
-  "description": "Last one to bid before timer runs out takes the pot",
-  "icon": "/assets/ecosystem/last-one-icon.png",
-  "bgImage": "/assets/ecosystem/last-one-bg.png",
-  "bgGradientColor": "#E5B92A",
+  "id": 3,
+  "name": "Hodl.fun",
+  "description": "Create & launch ERC-20 tokens",
+  "icon": "/assets/ecosystem/hodl-fun-icon.png",
+  "bgImage": "/assets/ecosystem/hodl-fun-bg.png",
+  "bgGradientColor": "rgba(0, 0, 0, 0.80)",
   "tags": [
-    "Gaming"
+    "DeFi"
   ],
-  "href": "https://www.lastone.fun/",
-  "titleColor": "black",
-  "descriptionColor": "black",
-  "twitterId": "1993681001076478131",
-  "tagsColor": "black",
+  "twitterId": "1989664475784663041",
+  "href": "https://www.thehodl.fun/",
+  "titleColor": "white",
   "appoftheweek": true,
-  "spotlighttext": "Last bid wins it all!"
+  "spotlighttext": "Making token launches universal!"
 }
