@@ -1,0 +1,1754 @@
+{
+  "lastUpdated": "2025-11-14T20:29:19.230Z",
+  "keys": {
+    "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
+      "value": "### 可以在 Push Chain 上构建什么？\n\nPush Chain 带来无缝的互操作性，并统一了所有 L1、L2 和 L3，因此有望成为创新和互操作的游乐场。您可以在 Push Chain 上构建现有的 web3 用例，例如：\n\n![Push Chain 的主要用例](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\n或者，您可以改进 web3 并创建创新：\n\n![Push Chain 的消费者用例](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\n或者，您可以查看一些流行的 app 示例，以获取灵感：\n\n![Push Chain 上的流行 app 示例](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
+      "englishChecksum": "a53d3f78e3dc0a5c4e18ed22febbeb9f",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.validators.seo.title": {
+      "value": "验证者 —",
+      "englishChecksum": "a0fa1a0122c6854e71a26aadd8451e4d",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.validators.seo.twitter-title": {
+      "value": "常见问题解答 - 从这里开始",
+      "englishChecksum": "3f9084c4a138ee6c97ccff8f9dd48ef9",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.validators.seo.twitter-description": {
+      "value": "快速解答关于区块链的问题。",
+      "englishChecksum": "e7f24c18b1cd82250d93b1f98b9cdd0b",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.validators.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.validators.explainer-section.blocks.title": {
+      "value": "验证者",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.title": {
+      "value": "知识库 — 指南、常见问题解答和操作方法",
+      "englishChecksum": "11ca32d20dd7dda0c862404dc406d5c3",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.description": {
+      "value": "从这里开始，了解概念、常见问题解答、操作方法和生态系统资源。使用 Push Chain 的清晰、非技术指南。",
+      "englishChecksum": "b1adb99e30a753bea5840af2e8409758",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.og-title": {
+      "value": "Push Chain 知识库 - 指南和常见问题",
+      "englishChecksum": "6081aa0851417128a036d9cd10b0a511",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.og-description": {
+      "value": "关于Push Chain的概念、循序渐进的操作指南以及常见问题的解答。",
+      "englishChecksum": "67634481d8ba9a90c212c518d7c9ecd6",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.twitter-title": {
+      "value": "知识库 - 指南与常见问题",
+      "englishChecksum": "f57f26059180d8d6754b8f1de1b6a619",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.seo.twitter-description": {
+      "value": "快速指南、常见问题解答和 Push Chain 的操作指南（无开发术语）。",
+      "englishChecksum": "92d7202d6e31c52380bf8a43c966cc54",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.title": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.description.highlighted": {
+      "value": "Push Chain 是一个真正的通用区块链，旨在消除所有链之间的碎片化。",
+      "englishChecksum": "9525981fc5a9c13c185a29fb06480498",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.description.developers": {
+      "value": "开发者",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.description.developers-text": {
+      "value": "只需部署一次，即可立即与所有支持的 EVM 和 non-EVM 链兼容。",
+      "englishChecksum": "71b2e36e55906af8b1caf76808ea3171",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.description.users": {
+      "value": "用户",
+      "englishChecksum": "a6d756f02d69a011f1a76f5dbc8f3ac6",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.description.users-text": {
+      "value": "无论用户来自哪个链，都可以使用相同的app。",
+      "englishChecksum": "ea44ddb598243803d9758a771b794c28",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.long": {
+      "value": "获取关于 Push Chain 测试网的通知",
+      "englishChecksum": "58629935b0ccf30f1d870903f8339e0f",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.short": {
+      "value": "Push Chain Testnet",
+      "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "第一时间了解Push Chain testnet上线消息。加入我们的邮件列表，获取独家更新。",
+      "englishChecksum": "d304be40858d656900a782db6475f3f8",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.footer.description": {
+      "value": "使用 Push Chain 为您的 app 在任何区块链上打造无缝、用户友好的体验。",
+      "englishChecksum": "ab374d1cf0f5e6677282aa1a97a13102",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.hero-section.footer.cta.text": {
+      "value": "获取通知",
+      "englishChecksum": "5ca0d06b42af8acf0dae4dc6560e3bb0",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.title": {
+      "value": "资源",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.title": {
+      "value": "Push Chain 基础",
+      "englishChecksum": "4512d45c12d36968dd4b4735b0ea10f9",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.subtitle": {
+      "value": "了解 Push Chain 的基础知识，它的创新以及为什么需要它",
+      "englishChecksum": "1dea6951f02f77b71408f07e0355bed9",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.ctatitle": {
+      "value": "探索更多",
+      "englishChecksum": "0f827b5960bd300c5033bd1f7be75f09",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.title": {
+      "value": "在 Push Chain 上构建",
+      "englishChecksum": "98bebb4eb06e9298f123c1b72e10aae7",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "深入了解如何构建通用应用，它能释放哪些潜力以及如何上手！",
+      "englishChecksum": "e71d8755ade4356953c42893d5e8c6e3",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "开发者集结",
+      "englishChecksum": "cbe0e413f4f3228832b9ce7de92f0866",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.title": {
+      "value": "技术深度解析",
+      "englishChecksum": "7d767f9ff38d5cabab17de202bcd1428",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.subtitle": {
+      "value": "想了解Push复杂的运作机制吗？还是只是一个好奇的人？无论如何，欢迎来了解！",
+      "englishChecksum": "20b765a3d60d8082c234a80d88114347",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.ctatitle": {
+      "value": "看看它的运作",
+      "englishChecksum": "25c869c02797c1388cad7ad3917bfaa6",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.title": {
+      "value": "开发者文档",
+      "englishChecksum": "b3727892fde9b92568ad8356d63b1b24",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.subtitle": {
+      "value": "咱们直接进入正题！我是一个通用链…而且您是一位开发者，让我们正式开始吧！",
+      "englishChecksum": "d8938cbb8e3bef9cf4b3ad6ae0ea1b75",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.ctatitle": {
+      "value": "立即构建",
+      "englishChecksum": "49cf0c392f12d991b816116d55c1d27c",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.title": {
+      "value": "探索代币经济学",
+      "englishChecksum": "791cad865338cf9c166e2632f538e998",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.subtitle": {
+      "value": "了解我们的代币经济学如何激励并确保可持续发展的网络，使其经久耐用",
+      "englishChecksum": "4450f23b63d4ebaf90815a7d1250097f",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.ctatitle": {
+      "value": "了解代币设计",
+      "englishChecksum": "13143b07ad042d24a740accb12968e3e",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.title": {
+      "value": "常见问题解答",
+      "englishChecksum": "cde30a33b5e117f7a03e76d3272a4ef0",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.subtitle": {
+      "value": "这里可以找到社区成员最常问问题的答案",
+      "englishChecksum": "8fd81508233b12be1e01dcceb358b92f",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.ctatitle": {
+      "value": "了解更多",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.title": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.443Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.subtitle": {
+      "value": "Donut 是 Push Chain 的公共 测试网，用于在不同链（EVM 或非 EVM）上运行的 Universal App",
+      "englishChecksum": "cea290281e5ab3d719be6b9e727a5dd4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.ctatitle": {
+      "value": "Read More",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.title": {
+      "value": "验证者",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.subtitle": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.ctatitle": {
+      "value": "了解更多",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.title": {
+      "value": "Donut Testnet 🍩 – Push Chain 的通用测试网",
+      "englishChecksum": "25838a2da1aeb4b62428f31073685f2f",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.description": {
+      "value": "Donut 是 Push Chain 的公共测试网。 了解如何连接、构建 Universal 应用、使用水龙头、以及运行 validator。",
+      "englishChecksum": "e2161002d0e2ec61a020f0d3384bf236",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.og-title": {
+      "value": "Donut Testnet 🍩 - Push Chain's Universal 测试网",
+      "englishChecksum": "ede25f547948fbfee8dd9129c9a476dd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.og-description": {
+      "value": "探索 Donut，Push Chain 的第一个公共测试网。一次构建，随处部署，并试用 Universal 应用。",
+      "englishChecksum": "481cc1a484f6792be05e2ca4972f458d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-title": {
+      "value": "Donut Testnet 🍩 - 从这里开始",
+      "englishChecksum": "750999beb24a613387a2a4a2baaa9e5e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-description": {
+      "value": "关于 Donut Testnet 的快速解答：支持的链、Universal Apps、水龙头以及validator设置。",
+      "englishChecksum": "582877743c8998a2e1a4404f78d534fe",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.title": {
+      "value": "Donut Testnet 🍩",
+      "englishChecksum": "b58ca2b0090cbd2dc059aebc2a9d4339",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro": {
+      "value": "**我们花费了十年时间构建链孤岛。现在是打破它们的时候了。**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "englishChecksum": "b22838133be616d6cefb8d88cf1783c3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut": {
+      "value": "## Donut Testnet 🍩\n\nDonut 是 Push Chain 的公共测试网络，用于跨链的 Universal 应用程序。这是将 universal app 带给大众的一个重要里程碑。\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+      "englishChecksum": "051f018dc6859cb49ff9b2bd7209901d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain": {
+      "value": "## Push Chain 是什么？\n\nPush Chain 是一个共享状态、通用的区块链，其中 **互操作性是核心链原语**，而不是通过外部协议事后添加。**部署一次**，您的 app 就能在连接的链上原生运行。\n\n**Donut 是我们进行压力测试的地方**。",
+      "englishChecksum": "2e921cba1ba65c8e9f016447d1c14dc7",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links": {
+      "value": "## 快速链接\n\n🧠 [知识库](/knowledge) — 了解架构和设计。\n\n🌳 [生态应用](/ecosystem) — 探索部署在 Push Chain 上的通用应用。\n\n**🪩 热门应用体验**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) — 体验在不同链上无缝工作的相同应用逻辑。\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) — 测试和可视化跨链交互。\n\n📖 [开发者文档](/docs) — 深入了解 Push Chain 的文档。\n\n💧 [水龙头](https://faucet.push.org) — 获取 testnet 代币。\n\n🔍 [Push Scan](https://donut.push.network/) — 跟踪交易和网络数据。",
+      "englishChecksum": "8f49fb22c6f4c4d8ffcc857107231234",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
+      "value": "## 为什么 Push Chain 存在\n\n如今的 Web3 生态系统高度分散且过于复杂。\n\n开发者需要在多个链上重新部署智能合约，用户不得不手动桥接代币或切换钱包，团队花费数月时间维护特定于链的代码库和审计。\n\n每条新链都会增加开销、复杂性、成本和摩擦，这严重减缓了创新和采用。\n\n**Push Chain 消除这一点。**",
+      "englishChecksum": "5eb212948d6bfddcc7697242f003a185",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability": {
+      "value": "## 链原生互操作性\n\n如今大多数互操作性依赖于外部消息传递层或桥接技术。您需要管理多个合约、审计和集成，跨越每一条链。\n\n**Push Chain 颠覆了这种模式。** 使用 Push，您可以：\n\n* **部署一次，触达所有链。** 您的应用立即在所有链上可用，无论 EVM 或非 EVM。\n* **摆脱冗余合约和桥接。** 互操作性是链原生的，因此您可以专注于您的应用，而不是基础设施。\n* **保持完全 EVM 兼容性。** 使用您已有的工具、框架和审计。\n* **为来自任何链或钱包的用户提供服务。** 用户可以使用现有钱包从其主链进行交易。无需手动桥接，无需 gas 代币，无需网络切换，无需兑换，无需设置。",
+      "englishChecksum": "099d648da110855e8baf9ec7670b0ab0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate": {
+      "value": "## 如何参与网络？\n\n### 开发者\n\nPush Chain 赋予开发者**一次构建，随处部署**的能力。\n\n每个 **app 原生运行**于所有链上，无需额外集成或单独部署。\n\n目前该链支持测试网上的 **Ethereum, Solana, Base, Arbitrum 和 BNB Chain**，未来将支持更多链。\n\n👉 [探索开发者资源](#for-developers)\n\n### 用户\n\n体验一个即刻可用的 Web3：无需切换链、桥接代币或学习。\n\n使用您现有的钱包访问 Push Chain 上的任何 app，并直接使用您的原生代币支付。\n\n👉 [探索用户资源](#for-users)\n\n### Validators\n\nPush Chain 网络由一个去中心化的 validator 集合提供支持。\n\n**为什么运行测试网 validator？**\n\n运行测试网 validator 有助于加强网络并塑造其 mainnet 准备情况。它还可能包括 Season 3 的 [Push Points Program](https://portal.push.org) 的特权和福利。\n\n在 X 上标记 [@pushchain](https://x.com/PushChain) 并与我们分享您的体验。\n\n👉 [探索 validator 资源](#for-validators)",
+      "englishChecksum": "79f9bb75f9cac27f83705a1022e15280",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads": {
+      "value": "## 精选阅读 👇",
+      "englishChecksum": "c9fefca8484fa54c4cc35f978ba442b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.title": {
+      "value": "开发者专区",
+      "englishChecksum": "a78ce034bc770017aa437365c2914fbf",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.ecosystem-apps.title": {
+      "value": "生态系统应用",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.documentation.title": {
+      "value": "文档",
+      "englishChecksum": "9d86720f060a65a51857cdf8c4c7119d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-explorer.title": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-faucet.title": {
+      "value": "Push Faucet",
+      "englishChecksum": "5877629e592725d72bc82b62dc2bcc3b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.grassroots-program.title": {
+      "value": "申请草根计划",
+      "englishChecksum": "ff3278f906b1bda824da980fe244ffd8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.title": {
+      "value": "用户指南",
+      "englishChecksum": "d28521735dec8283e86c109902717bbb",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.ecosystem-apps.title": {
+      "value": "生态应用",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.knowledge-base.title": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.lets-push-yaps.title": {
+      "value": "让我们推送 Yaps",
+      "englishChecksum": "afe8f78f7532d791bc7524afe1b77c84",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.title": {
+      "value": "为验证者准备",
+      "englishChecksum": "ee0336c666c1f8c6098e95d4bfb26a4b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
+      "value": "Push Validator",
+      "englishChecksum": "8b31b9b9aa97d92b4d044ae139d4ff47",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.title": {
+      "value": "事件报告",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.description": {
+      "value": "Push Chain 的实时事件报告和网络状态更新。及时了解中断、维护和已解决的问题。",
+      "englishChecksum": "79dcfac5268064e8b57342b415ef92ee",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.og-title": {
+      "value": "Push Chain 事件报告 - 网络状态",
+      "englishChecksum": "4d7d658a59feaab09d75675c1452e779",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.og-description": {
+      "value": "跟踪 Push Chain 网络事件、维护窗口和服务更新。获取实时状态信息。",
+      "englishChecksum": "489d40e83781acad7ab86c3ebff89565",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.twitter-title": {
+      "value": "Push Chain 事件报告",
+      "englishChecksum": "f0f20d8b7ac140244bee728ad40551f2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.seo.twitter-description": {
+      "value": "Push Chain 网络状态、事件和维护的实时更新。",
+      "englishChecksum": "0e97fd38f27262727851bc7583882da3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.donut-testnet": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.report": {
+      "value": "事故报告",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.title": {
+      "value": "事件报告",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.sections.reports-overview.items.intro": {
+      "value": "内容",
+      "englishChecksum": "aa8c8783eb334c165bf4f2ddc284d7ff",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.title": {
+      "value": "首页 — Push Chain | 适用于应用的通用区块链",
+      "englishChecksum": "948506e7144431eba32cc84b4a86e0fe",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.description": {
+      "value": "适用于通用应用共享状态的区块链。一次部署，触达任何链上的用户。使用任何钱包。用任何代币支付。",
+      "englishChecksum": "5559448d35e5fc8f2c5d96d1d1cfb6af",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.og-title": {
+      "value": "Push Chain - 通用 L1 平台",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.og-description": {
+      "value": "一次部署，适用于 EVM 和非 EVM 用户。使用任何钱包，并用任何代币支付——无需切换网络。",
+      "englishChecksum": "c3b3e259e681d1772190c4a2f8540c4c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.twitter-title": {
+      "value": "一次部署，触达所有链。",
+      "englishChecksum": "6712df7cb0cb98805b3fa1a118d2bcc9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.seo.twitter-description": {
+      "value": "从任何链进行交易。使用任何钱包。用任何代币支付。无需切换网络。",
+      "englishChecksum": "e20fe711d93dcdad589921977ffc785b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.title": {
+      "value": "任何链、任何应用、所有用户。\n一个 Push Chain。",
+      "englishChecksum": "a082fba5c4be3c74b3ac7428c000d934",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.description": {
+      "value": "第一个为通用应用构建的 Layer 1。\n一次构建 & 部署，从任何链上获取用户。",
+      "englishChecksum": "5a20cac3d05e72e32bb859b343f9cb8e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.primary-button": {
+      "value": "开始构建",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.primary-button-title": {
+      "value": "立即开启您的 Push Chain 构建之旅！",
+      "englishChecksum": "14611f46ad408dc44d62a33c2c406854",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.secondary-button": {
+      "value": "探索知识库",
+      "englishChecksum": "bc99d29cdb063d0d07d5356c43b366c3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.secondary-button-title": {
+      "value": "了解并探索 Push Chain",
+      "englishChecksum": "c69e7d883bb35ef715c7f496f1d51865",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.section-aria-label": {
+      "value": "Push Chain 英雄区 - 通用 Layer 1 区块链介绍",
+      "englishChecksum": "57b747f815f7cb72d1d3ae9838d75e69",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.primary-button-aria-label": {
+      "value": "开始在 Push Chain 上构建 universal 应用 - 前往开发者文档",
+      "englishChecksum": "6e0f565400994d68dec83507e25398bf",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.secondary-button-aria-label": {
+      "value": "了解 Push Chain 的功能和概念，请访问知识库",
+      "englishChecksum": "93d415c9d176d2609a99fea3911f206a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.hero-background-alt": {
+      "value": "区块链 hero background animation showing universal 链 connectivity",
+      "englishChecksum": "bd0a611472046c804d587074f3912a14",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.hero-background-title": {
+      "value": "Push Chain - 通用 Layer 1，用于跨链应用",
+      "englishChecksum": "a0b9e94eddb59dc9ceff3c9fc6944fc2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.schema-headline": {
+      "value": "Push Chain - 通用 L1 应用平台",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.hero-section.schema-description": {
+      "value": "在 Push Chain 上部署一次，通过 universal apps 触达任何区块链上的用户",
+      "englishChecksum": "ab11675113d50ac33cc47fa82376852d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.titleFirst": {
+      "value": "一个真正的",
+      "englishChecksum": "29dc86361d1526a5cba07382fb090abf",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.titleSecondGraditent": {
+      "value": "通用",
+      "englishChecksum": "af38ccf0394770bddedbe5b6ab970142",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.titleThird": {
+      "value": "链",
+      "englishChecksum": "c00c84ec6e2cf543f7cf70c5a83ca911",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.bottomTextFirst": {
+      "value": "只需部署一次,",
+      "englishChecksum": "c7613088f0a23bd75f3e661d644b2b7a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.bottomTextSecond": {
+      "value": "触达所有地方",
+      "englishChecksum": "9531d5eff4b3705adb7fe475ef138a0e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.bottomLinkText": {
+      "value": "开始体验",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.bottomLinkTitle": {
+      "value": "前往文档中心",
+      "englishChecksum": "4078faa58057f47c15cedd4bbbde53ab",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.section-aria-label": {
+      "value": "什么是 Push Chain - 通用区块链解释",
+      "englishChecksum": "10243b8d1cc968fe82c7691336d8a347",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.animation-alt": {
+      "value": "动画演示 Push Chain 在多个区块链上部署通用应用",
+      "englishChecksum": "ca41b26a225f9a8f71d337a149bb6e64",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.animation-title": {
+      "value": "Push Chain 通用部署可视化 - 一次部署，触达所有链",
+      "englishChecksum": "48fc9beed0f61a9a012c9ae54f926fc3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.whatis-section.bottom-link-aria-label": {
+      "value": "前往 Push Chain 文档开始构建 universal 应用",
+      "englishChecksum": "645322d71eec5353ebbb15336db72d4c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.section-aria-label": {
+      "value": "Push Chain 的创新和功能",
+      "englishChecksum": "ad568c1cd43eba621f72921181b2f93c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.header.main-text": {
+      "value": "基于创新技术，消除碎片化！",
+      "englishChecksum": "cd9d6aae1358ded4b2e0e180185259ca",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.header.other-text": {
+      "value": "Push 是您唯一需要的 Universal Layer 1!",
+      "englishChecksum": "6c02fb7d9668226e2da2c7363d9fc586",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box1.texttitle": {
+      "value": "任何链上的交易",
+      "englishChecksum": "07d1d093e9c229dbf0ff39aed8a0ba94",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box1.bodytext": {
+      "value": "Push Chain 支持来自任何区块链的交易。用户可以使用任何代币支付 gas 费用——无需跨链桥接。",
+      "englishChecksum": "b6fa6ff506ebb0f1afc085a4fd7a5208",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box1.imagealt": {
+      "value": "Illustration showing different 区块链 logos falling in a pin ball machine.",
+      "englishChecksum": "d06d7e5677e08fa5e8d861349e1b5634",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box1.imagetitle": {
+      "value": "支持来自任何区块链的交易。",
+      "englishChecksum": "d6143294e5b9f12d4905ceba2fd3c37b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box2.texttitle": {
+      "value": "钱包抽象",
+      "englishChecksum": "e9e305a61a3415b84869df9e3fe42867",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box2.bodytext": {
+      "value": "让来自任何链的任何钱包连接、交互和交易。 通过使用社交登录或电子邮件打破 web3 障碍。 用户可以在 Push Chain 上做决定。",
+      "englishChecksum": "4c6e361bb0cef914b5b472f522348306",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box2.imagealt": {
+      "value": "插图显示 MetaMask 钱包、Phantom 钱包等从一个带有 Push Chain 标志的大钱包中出现。",
+      "englishChecksum": "4d2e75fdd3a7a71ecf71cae1dacfba60",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box2.imagetitle": {
+      "value": "支持任何现有的钱包，如 MetaMask, Phantom 等，以及社交登录",
+      "englishChecksum": "5541c2c4c62ec60cf8f49f22f4d66a17",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box3.texttitle": {
+      "value": "100% EVM\nCompatible",
+      "englishChecksum": "72d668e3c6368431b6ba4a780d747af8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box3.bodytext": {
+      "value": "无需任何链上代码即可部署。在几分钟内将您的原生 app 转化为 universal app。",
+      "englishChecksum": "30b3dad5087384bdfc93e21c08c4cf33",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box3.imagealt": {
+      "value": "插图显示以太坊虚拟机logo旋转并说100% EVM 兼容性。",
+      "englishChecksum": "022c84abe3d44a7667ce95ca4cc2af8b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box3.imagetitle": {
+      "value": "无需任何链上代码更改，100% EVM 兼容。",
+      "englishChecksum": "bb9602dffa37cdef5ade076ad1f5d859",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box4.texttitle": {
+      "value": "通用的 智能合约",
+      "englishChecksum": "cce50f0ba020e290156858a39cd05711",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box4.bodytext": {
+      "value": "一次构建，跨链运行多步骤体验，只需一份面向未来的合约。",
+      "englishChecksum": "20f163b0f61c79fb177c0d3541a721a1",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box4.imagealt": {
+      "value": "插图显示以太坊虚拟机标志和一个围绕它旋转的弧线，上面写着“100% EVM 兼容”",
+      "englishChecksum": "ed71e9d6a4b2df4b42c01ef11ebd8442",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box4.imagetitle": {
+      "value": "一次部署，立即兼容所有支持的链（EVM 或 non-EVM）。",
+      "englishChecksum": "93af050cd9e312c22b226f0d71f226c0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box5.texttitle": {
+      "value": "通用费用\nabstraction",
+      "englishChecksum": "38f7bb501cdef86b887546d430af0b80",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box5.bodytext": {
+      "value": "让用户在任何链上用任何代币支付gas费用，无需跨链。",
+      "englishChecksum": "2f272d36e811700fa44250a9f8e85e29",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box5.imagealt": {
+      "value": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
+      "englishChecksum": "f26916dd4dbaba5513ae6257bf448c72",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box5.imagetitle": {
+      "value": "支持任何链上任何代币的交易。",
+      "englishChecksum": "2bf111c83844692092b9b8c08eb18154",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box6.texttitle": {
+      "value": "通用执行层",
+      "englishChecksum": "bdc51b77691458ae35fc566a6d4ac135",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box6.bodytext": {
+      "value": "构建原子化、可组合的 Web3 应用。通过让不同链上的多个用户与同一应用进行交易，创造前所未有的应用体验。",
+      "englishChecksum": "87d057c40c0bd92a9d4e3dfc2ce79644",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box6.imagealt": {
+      "value": "插图展示了不同的俄罗斯方块进入虫洞，并从另一端出现 Push Chain 标志。",
+      "englishChecksum": "b0163005d97f99c86ce66624bca2ec8a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box6.imagetitle": {
+      "value": "来自任何链的交易在 Push Chain 上完成，使用户能够原生使用相同的app，即通用执行层。",
+      "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "状态访问",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "在您的智能合约中访问其他链的账户和状态数据。",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.tagText": {
+      "value": "即将推出",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "从链上读取",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "图示展示Push Chain以区块风格动画增长。",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(Roadmap) 共享状态允许您的智能合约访问来自其他链的账户和状态数据。",
+      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "通用\n验证者",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "使用您的智能合约触发、验证和完成任何链上的交易。",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.tagText": {
+      "value": "即将推出",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "写入区块链",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "展示不同颜色积木合并和变化的图示。",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.box8.imagetitle": {
+      "value": "(路线图) 通用验证者允许用户使用您的智能合约触发、验证和完成任何链上的交易。",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.footer.title": {
+      "value": "通过变得 universal 来扩大您的 app 的用户群",
+      "englishChecksum": "ca62b71dc8b27bf5eefdff1ffdae1449",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.footer.secondary": {
+      "value": "无需任何努力！",
+      "englishChecksum": "969754b55ad17557a1b7c104ed70b2e4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.footer.ctatext": {
+      "value": "开始构建",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.chain-features-section.footer.ctatitle": {
+      "value": "一次部署，十倍用户群体。访问开发者文档。",
+      "englishChecksum": "8233b96e3719e17e447894b7b4f1ef53",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.section-aria-label": {
+      "value": "Push Chain 生态系统合作伙伴和集成",
+      "englishChecksum": "d919d3fa9fbe0d4f2b3c2fc87319f1f5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.title": {
+      "value": "Powered by Push Chain",
+      "englishChecksum": "ffe52515f8b0ddf2bf7d5f21ce2d9ec7",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.subtitle": {
+      "value": "探索在 Push Chain 上部署即可轻松扩大用户群体的应用。",
+      "englishChecksum": "f6a96a2e05813cd5c878fbad4cde90d8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.ctatitle": {
+      "value": "查看 Push Chain 上的合作伙伴、应用和基础设施",
+      "englishChecksum": "7f2dba55b2b29f81fba57d2ab2b3928a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.ctatext": {
+      "value": "探索生态系统",
+      "englishChecksum": "0800c001853854c3fe569fb0c9315495",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.partners-grid-aria-label": {
+      "value": "Web3 项目使用 Push Chain 的合作伙伴徽标网格",
+      "englishChecksum": "57d2ba44c5262f8595a7b11f2e728751",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.partner-logo-title-prefix": {
+      "value": "合作伙伴标志 - ",
+      "englishChecksum": "9a6a6324235ba2abb0fc7efe1208935e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.partner-logo-alt-prefix": {
+      "value": "Logo of ",
+      "englishChecksum": "3f008442b87302c61e429f26dea2aadf",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.partners-section.mobile-view-aria-label": {
+      "value": "Push Chain 生态合作伙伴的移动视图",
+      "englishChecksum": "7195ac8e4168a535813f2f743a771c41",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.section-aria-label": {
+      "value": "Push Chain 性能统计和指标",
+      "englishChecksum": "081402c46051493f0ad29d4fbe475ed0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.title": {
+      "value": "达成",
+      "englishChecksum": "19b9898fb46510573e9eecd5ca2c4e27",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.titleGradient": {
+      "value": "即时",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.titleThird": {
+      "value": "互操作性",
+      "englishChecksum": "7eea83832c429d210721b6f786e1125e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.description": {
+      "value": "为性能优化。\n高 TPS，超低 gas 费用，亚秒级\nfinality，实现实时应用执行。",
+      "englishChecksum": "6a30ccd29c10a929c623aacb10b3415a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.animation-alt": {
+      "value": "交互式动画，展示 Push Chain 在多个区块链上的即时互操作性",
+      "englishChecksum": "ba5ad2d95c246b132336924324bad1b7",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.animation-title": {
+      "value": "Push Chain 瞬时互操作性可视化",
+      "englishChecksum": "79976e97d2ef0635f526070dc39c1c27",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat1.title": {
+      "value": "支持的区块链",
+      "englishChecksum": "9fa4fdfa65802111310afe0c589b22d1",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagealt": {
+      "value": "展示支持的链的插图",
+      "englishChecksum": "9b96b239ea068a5ed539af6f3694239c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagetitle": {
+      "value": "支持以太坊、Solana、BNB Chain等所有支持的链列表",
+      "englishChecksum": "2270db058472d6f238f0e29b86f25023",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat2.title": {
+      "value": "TPS",
+      "englishChecksum": "9da9418a92881b96aeb4fcc43e237466",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat2.description": {
+      "value": "4.2k",
+      "englishChecksum": "be0715a552eeea3e5678df63651d0872",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat3.title": {
+      "value": "原生最终确定性",
+      "englishChecksum": "eb159fdea10f78862e4e79fe886dc036",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat3.description": {
+      "value": "即时",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat4.title": {
+      "value": "原生区块时间",
+      "englishChecksum": "813e6eba2d2e1c473f660986d32c8e4e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.stats-section.stats.stat4.description": {
+      "value": "1秒",
+      "englishChecksum": "b7ca79525ea99e356ff1dd38525b5342",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.subtitle": {
+      "value": "新闻、开发日志和想法",
+      "englishChecksum": "126fa2aacb84a9d81e494a89ffdb0bef",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.subtitle-aria-label": {
+      "value": "博客分类信息",
+      "englishChecksum": "ac7ce58d26a8699ca5e8f7a113fda93e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.title": {
+      "value": "您在 Push Chain 的脉搏",
+      "englishChecksum": "b1cb7ed612449065a646c3f8b61a0a74",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.title-aria-label": {
+      "value": "最新的 Push Chain 博客文章和更新",
+      "englishChecksum": "bd53aa8f5f7d9b86d251086f29478a81",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.explore-link-text": {
+      "value": "探索更多文章",
+      "englishChecksum": "82dc7eaf7824b2b5b39002b219040ec0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.explore-link-title": {
+      "value": "访问 Push Chain 博客阅读所有文章和更新",
+      "englishChecksum": "5ac48570f00c6fa9a1c935ec768450dd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.explore-link-aria-label": {
+      "value": "导航到 Push Chain 博客页面",
+      "englishChecksum": "675a90090b1f1a950148fdc36404c5da",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.section-aria-label": {
+      "value": "Push Chain 博客文章和新闻板块",
+      "englishChecksum": "d636d3da4fbd3dad2b973001969a1c00",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.blog-posts-list-aria-label": {
+      "value": "最新的 Push Chain 博客文章",
+      "englishChecksum": "02e0773441142451f08f78bf6a694069",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.blog-post-aria-label": {
+      "value": "阅读关于 {title} 的博客文章",
+      "englishChecksum": "b5898d0adeb3062efd7661ccde948386",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.blog-post-title-prefix": {
+      "value": "阅读博客文章 - ",
+      "englishChecksum": "8df77812b9a3532a64f60ea1b47fbe67",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.loading-text": {
+      "value": "正在加载最新的博客文章...",
+      "englishChecksum": "9a8a4eaa02425d1a19d84bba815ac409",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.error-text": {
+      "value": "暂时无法加载博客文章",
+      "englishChecksum": "2d6dabe9453626828f62a3d80eb14184",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.blog-section.no-posts-text": {
+      "value": "暂无博客文章",
+      "englishChecksum": "69d5484bbae99b9c3545a41778492336",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.trustedby-section.title": {
+      "value": "由 web3 先驱信赖的团队打造",
+      "englishChecksum": "dc937f19942643ce4264edddf30c412a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.trustedby-section.section-aria-label": {
+      "value": "Push Chain 受信任的部分",
+      "englishChecksum": "18be016c87bb93e30ca4e5e49d740805",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.trustedby-section.trusted-by-alt": {
+      "value": "投资者 - ",
+      "englishChecksum": "3c0c7cd619384b307c73cf5935c25e67",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.aria-label": {
+      "value": "精选展示",
+      "englishChecksum": "4ab283a6324bc57b350db0d8acb0d32c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.tag": {
+      "value": "FEATURED ON",
+      "englishChecksum": "ff2ce72b0d556e75df6896ffafa92e05",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.title": {
+      "value": "Push Chain 在聚光灯下",
+      "englishChecksum": "7680658233a0ee4d168959f3c83ebb6a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.subtitle": {
+      "value": "别光听我们的。看看媒体怎么说真正的 universal chain。",
+      "englishChecksum": "9394eb0bdbdb615a0964682774c13c94",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles-image-alt": {
+      "value": "来自的媒体报道",
+      "englishChecksum": "6cac47727dfb2d9d87a1f7ceb537b3f1",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles-text": {
+      "value": "阅读完整报道",
+      "englishChecksum": "ddee3a14f42eb7c40cb57997f3ca944c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles-title-1": {
+      "value": "阅读 ",
+      "englishChecksum": "3931423122a4af3ae3811096a2819685",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles-title-2": {
+      "value": "'s 对区块链的全面思考",
+      "englishChecksum": "19442a03071cf8be9a9509a81e44d264",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.binance-chain.text": {
+      "value": "我们很高兴地宣布，Push Protocol，一个领先的 Web3 去中心化通信协议，现已在 BNB 链上线。",
+      "englishChecksum": "c4530c92cf72e058e797dacf1793b260",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.coindesk.text": {
+      "value": "协议村：Unstoppable 与 Push 协议合作，提供代币门控群聊",
+      "englishChecksum": "ad068a87c6c2d7412cdc7aa5fe1f3eff",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.defiant.text": {
+      "value": "Unstoppable Domains 发布代币门控群聊。 与 Push 协议的合作旨在对抗虚假信息和诈骗。",
+      "englishChecksum": "b406714c0a067c24635e3957190f0af8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.balaji.text": {
+      "value": "用户控制的通知。两家公司控制着数十亿智能手机的推送通知：Apple 和 Google。",
+      "englishChecksum": "0f1c48f6883e33bacfb8c0f548e8ecb3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.defiprime.text": {
+      "value": "Harsh Rajat 谈论银行业未来、EPNS 协议激励以及去中心化推送通知的商业模式。",
+      "englishChecksum": "0cb5feb1635aa0686853746fe8700bb9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.ethfoundation.text": {
+      "value": "自从 HackMoney 之后，Richa 和 Harsh 将难以置信的精力投入到构建 EPNS，他们称之为“web3 中缺失的一块”。",
+      "englishChecksum": "5305100d89dba00f198a84e007c8eb26",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.beincrypto.text": {
+      "value": "Web3 通信网络的工作原理：技术深度解析",
+      "englishChecksum": "e10824f783c2e0de2b2d7e643bd2634d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.the-block.text": {
+      "value": "Web3 通知协议 Push 将推出其自己的 Layer 1 链",
+      "englishChecksum": "b5c5b9f95dde1fb47a5b8046a1f2b5e8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.business-insider.text": {
+      "value": "Push 发布 Push Chain：通用区块链应用未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.chainwire.text": {
+      "value": "Push 推出了 Push Chain：下一代通用的区块链应用。",
+      "englishChecksum": "8670f532335ce3e8a26a24b30f44a48d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.benzinga.text": {
+      "value": "Push 发布 Push Chain：通用区块链应用未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.crypto-briefing.text": {
+      "value": "Push 发布 Push Chain：通用区块链应用未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.cryptoslate.text": {
+      "value": "Push Protocol launches Push Chain to unify 区块链 communication and transactions",
+      "englishChecksum": "4fc312bfba55cf6b838949c2ee8e0cfa",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.messari.text": {
+      "value": "EPNS 允许用户接收去中心化通知，并获得激励和被动收入。",
+      "englishChecksum": "76aedec3b96cef39cc9355c8a9c1118b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-1.text": {
+      "value": "Harsh Rajat，Push Protocol 协议的创始人兼项目负责人，在 Hashing It Out 的最新一集中解释了 Web3 聊天应用开发的激增。",
+      "englishChecksum": "a530ac82085f87db632129ac224faf3c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-2.text": {
+      "value": "Unstoppable Domains 推出用户名持有者徽章门禁群聊功能。",
+      "englishChecksum": "6032ddd8c813a13646927c3eae35adb5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.aria-label": {
+      "value": "构建通用应用板块",
+      "englishChecksum": "c5b019935b5b8874364eebc8986a6ac0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.section-title": {
+      "value": "构建普适应用。",
+      "englishChecksum": "0e774a7dc1ee53c01ff2296e74c209c4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.section-subtitle": {
+      "value": "打破壁垒，一次构建，在所有区块链上扩展。",
+      "englishChecksum": "a9d2b747741fd12af5883cd4446f4772",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.docs-link.text": {
+      "value": "探索 Push Chain 文档",
+      "englishChecksum": "a12d0c27ed45dee80ba7ed3d7d20f96c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.docs-link.title": {
+      "value": "探索 Push Chain 文档和开发者资源",
+      "englishChecksum": "07584070f7e8b119827d75c362d05e59",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.docs-link.aria-label": {
+      "value": "在新标签页中打开 Push Chain 文档",
+      "englishChecksum": "ecb929436d5877c5e4ce93073a2f0310",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.cta-link.text": {
+      "value": "LFG Push Chain",
+      "englishChecksum": "be953076a98731e9aec67b31a9f0df3a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.cta-link.title": {
+      "value": "立即开始使用Push Chain - 通用的区块链平台",
+      "englishChecksum": "7bcc4330a5ebbf09e486a06944c2d5bd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.home.ending-section.cta-link.aria-label": {
+      "value": "开始使用 Push Chain 开发",
+      "englishChecksum": "acedeec3d726f902233dda0b5cb1c1b4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.title": {
+      "value": "Push Chain 生态系统 — 通用应用和合作伙伴",
+      "englishChecksum": "32db66944f11630338b6b28e3ce805cd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.description": {
+      "value": "探索 Push Chain 的生态系统，包括通用 app、合作伙伴和项目。通过共享状态的互操作性，一次构建，覆盖所有链上的用户。",
+      "englishChecksum": "41ab93f9796103eb14ec3a145afd8bf4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.og-title": {
+      "value": "区块链生态系统 - 探索通用应用与合作伙伴",
+      "englishChecksum": "d967afcb31a9f4b223a73f3438806437",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.og-description": {
+      "value": "探索 Push Chain 上的 universal 应用和项目的生态系统。体验真正的跨链可用性。无需桥接或交换。",
+      "englishChecksum": "334d8a8abb5cbc356c4a89b34a1c9703",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.twitter-title": {
+      "value": "探索 Push Chain 生态系统 - 通用应用与合作伙伴",
+      "englishChecksum": "e403bd7ee033adade46e953f4bba985d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.seo.twitter-description": {
+      "value": "在 Push Chain 上发现 universal 应用和合作伙伴。一次构建，覆盖以太坊、Solana、Base 等多个平台。",
+      "englishChecksum": "29789f4a9c44a6a48b42e082c1629049",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.hero-section.title": {
+      "value": "探索普世生态系统",
+      "englishChecksum": "fe68c572bef7a7bcecc2316924ceb555",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.ecosystem.hero-section.description": {
+      "value": "探索在 Push Chain 的 Donut 测试网上构建下一代 universal 体验的 app、合作伙伴和早期采用者。",
+      "englishChecksum": "70f52e04c9429af0acf89f79a06f1df1",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain 测试网 ‘Donut’ 现已上线！",
+      "englishChecksum": "0681d4c70dc98e29a4827b403cef19c5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.learn-more-text": {
+      "value": "探索 Universal 应用",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "探索通用应用",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.dismiss-button-title": {
+      "value": "关闭通知",
+      "englishChecksum": "cd8059d4a0d2dfe57e5c3460f468f71a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.dismiss-button-aria-label": {
+      "value": "关闭公告栏",
+      "englishChecksum": "412ee7c423ec52309e48e8f5f3bcc1b9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.container-aria-label": {
+      "value": "站点公告",
+      "englishChecksum": "0d6c179aa38c57ebb412d8f668eec2fc",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "notifications.info-bar.star-icon-alt": {
+      "value": "公告星标图标",
+      "englishChecksum": "5c9daef6a28ede1a8faeb3ba3335629b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.meta.logo-aria-label": {
+      "value": "Push Chain - 导航到首页",
+      "englishChecksum": "63893ae4c4e6e1ba5d7decf18dbf33bd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.meta.language-icon-alt": {
+      "value": "选择语言的图标",
+      "englishChecksum": "ae19220a4e348cf0b4bc2fa889fa336d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.meta.hamburger-menu-alt": {
+      "value": "打开导航菜单",
+      "englishChecksum": "0d9b5d8f08a3bac6b985456015616779",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.meta.testnet-badge-alt": {
+      "value": "Push Chain 测试网 Donut - 查看测试网状态",
+      "englishChecksum": "ea6cea5b9c6ee6b58bd86c276f700d01",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.logo.imagealt": {
+      "value": "Push Chain Logo 的图片",
+      "englishChecksum": "8585049215d30970a86f7de48e6e7533",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.logo.imagetitle": {
+      "value": "Push Chain Logo",
+      "englishChecksum": "d51524e28b04df62f28eb9db86eed476",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.logo.ctatitle": {
+      "value": "跳转到 Push Chain 首页",
+      "englishChecksum": "7f510f0324630fba8afdd9ba2af8e1a9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.title": {
+      "value": "测试网",
+      "englishChecksum": "620d7ace673e1ed914fd263c26d67a0f",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.aria-label": {
+      "value": "测试网部分",
+      "englishChecksum": "7fedd86e4c329774f062b2cda3954184",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link1.text": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link1.subtext": {
+      "value": "区块链的 Push Chain 浏览器",
+      "englishChecksum": "5a08122abf556f4a05f27f09b24c959b",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link1.title": {
+      "value": "探索 Push Chain 测试网的交易和区块，尽在 Push Scan",
+      "englishChecksum": "564e23768d6c6cc5c41112c51813893c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link2.text": {
+      "value": "领取水龙头",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link2.subtext": {
+      "value": "获取测试网代币",
+      "englishChecksum": "a8a3784c29d4eea8fa812cbf02953422",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link2.title": {
+      "value": "获取 Push Chain 开发的免费测试网代币",
+      "englishChecksum": "6a34a93d935cf2460955d1eef57d8a9e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link3.text": {
+      "value": "生态系统",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link3.subtext": {
+      "value": "查看在 Push Chain 上构建的app",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.testnet.link3.title": {
+      "value": "查看构建在区块链上的应用",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.title": {
+      "value": "开发者",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.aria-label": {
+      "value": "开发者专区",
+      "englishChecksum": "1a4bcf84369651268c763c567a2241e8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link1.text": {
+      "value": "开始使用",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link1.subtext": {
+      "value": "Push Chain 构建入门",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link1.title": {
+      "value": "开始在 Push Chain 上构建通用 app - 开发者文档",
+      "englishChecksum": "9cd7373a2c0cfee16a4f74e1fcba4c3f",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link2.text": {
+      "value": "快速上手",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link2.subtext": {
+      "value": "几秒钟设置开发环境",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link2.title": {
+      "value": "快速入门指南 - 立即设置 Push Chain 开发环境",
+      "englishChecksum": "ba04f436d4b03c75dd4602898ef0e89d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link6.text": {
+      "value": "生态系统",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link6.subtext": {
+      "value": "查看构建在区块链上的应用",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link6.title": {
+      "value": "查看基于区块链的app",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link3.text": {
+      "value": "教程",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link3.subtext": {
+      "value": "使用 Push 构建的分步指南",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link3.title": {
+      "value": "通过实践教程学习 - 在 Push Chain 上构建您的第一个 universal app",
+      "englishChecksum": "18f63276aa1ba0784e1949caab2d46b3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link4.subtext": {
+      "value": "查看核心代码和开源工具",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link4.title": {
+      "value": "在 GitHub 上探索 Push Chain 源代码和开发工具",
+      "englishChecksum": "db0c0b6be4baad84000fc2ccd6d5acc5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link5.text": {
+      "value": "开发者 Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link5.subtext": {
+      "value": "加入开发者社区",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.developers.link5.title": {
+      "value": "加入 Push Chain 开发者社区的 Discord，获取支持和协作",
+      "englishChecksum": "c8282e7543830164856b5e85823cafa4",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.title": {
+      "value": "社区",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.aria-label": {
+      "value": "社区版块",
+      "englishChecksum": "4dc0bb44ddc968a192d6f93490962fe2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link7.text": {
+      "value": "生态系统",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link7.subtext": {
+      "value": "探索基于 Push Chain 的应用",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link7.title": {
+      "value": "探索基于 Push Chain 构建的 app",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link1.text": {
+      "value": "知识库",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link1.subtext": {
+      "value": "深入了解功能细节",
+      "englishChecksum": "281dcdaecfa7c9cdd4841358e6ee8b30",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link1.title": {
+      "value": "探索全面的 Push Chain 文档和功能指南",
+      "englishChecksum": "df25b52080d036855b84fab2901477c3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link2.text": {
+      "value": "LFPush",
+      "englishChecksum": "6b8079d546c919f440c7a6bc201b3d85",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link2.subtext": {
+      "value": "精选的 Push 社区推文 #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link2.title": {
+      "value": "Push 社区精选推文 #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link3.text": {
+      "value": "代币经济学",
+      "englishChecksum": "ace5383af81a2e8353e180ac3f5bbc90",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link3.subtext": {
+      "value": "原生代币，驱动 Push Chain 上的一切",
+      "englishChecksum": "9dfbae7f9f30c6d90ca09e6f0fb06b09",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link3.title": {
+      "value": "了解 Push Chain 代币经济学和 $PC 代币效用",
+      "englishChecksum": "180ece5292c4ac47d3bd251621cb0e3e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link4.text": {
+      "value": "X/Twitter",
+      "englishChecksum": "f64b3315deacb9e466d156cd803dcf6a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link4.subtext": {
+      "value": "关注更新和生态系统新闻",
+      "englishChecksum": "142c42fbbeeffa1fae846c61ac974891",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link4.title": {
+      "value": "关注 Push Chain 在 X (Twitter) 上的最新动态和公告",
+      "englishChecksum": "da4cff94f96670c68a4c6b2c5ff9d4c7",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link5.text": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link5.subtext": {
+      "value": "和社区聊天、建设和互动",
+      "englishChecksum": "1605521dea8b82f11e50b5477f70d2f5",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link5.title": {
+      "value": "加入 Push Chain 社区的 Discord 频道参与讨论和获取支持",
+      "englishChecksum": "b59dae260a62f983fbef58ba012d66e8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link6.text": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link6.subtext": {
+      "value": "加入讨论，随时了解最新动态",
+      "englishChecksum": "e334cdf22cefb6f9761fd9e028dddbb2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.community.link6.title": {
+      "value": "加入Push Chain社区的Telegram，获取实时更新",
+      "englishChecksum": "be97c8c44524c9c013f0a98d5949e028",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.title": {
+      "value": "资源",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.aria-label": {
+      "value": "资源区",
+      "englishChecksum": "d390e430d425ff71c19316a82a35310d",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link1.text": {
+      "value": "博客",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link1.subtext": {
+      "value": "更新、深入分析和开发者故事",
+      "englishChecksum": "894fe0ed69b622b01b96028aed574353",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link1.title": {
+      "value": "阅读区块链博客，了解最新动态、技术深度分析和开发者故事",
+      "englishChecksum": "aacf7687ca27f0ea51ea54aced94cdd6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link2.text": {
+      "value": "轻白皮书",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link2.subtext": {
+      "value": "愿景与技术，一见即懂",
+      "englishChecksum": "60bf9f10efd131462bdccb11b76ac9f9",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link2.title": {
+      "value": "阅读 Push Chain Litepaper - 简化的愿景和技术概述",
+      "englishChecksum": "2bffe0ddae486f2f7b2f1ee44b1bc17a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link3.text": {
+      "value": "常见问题",
+      "englishChecksum": "e2c071f0eb807b08c405cf69047e3fe7",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link3.subtext": {
+      "value": "快速解答常见问题",
+      "englishChecksum": "f7d51e9d7bd3370e2929d15c3d678fd3",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.resources.link3.title": {
+      "value": "浏览关于区块链的常见问题",
+      "englishChecksum": "c7b5ca35693342e84b6a2bab24c375db",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.language.title": {
+      "value": "语言",
+      "englishChecksum": "9a5e47e5d049ebe6b58467336720ac15",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.language.aria-label": {
+      "value": "语言选择下拉菜单",
+      "englishChecksum": "907a650b1ffbe812cefc4dda4daaf306",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.app-button.text": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.app-button.title": {
+      "value": "访问 Push Portal - 作为开发者、用户或验证者赚取积分",
+      "englishChecksum": "858c2bb21efab2e7d676220e9a8299df",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.title": {
+      "value": "探索",
+      "englishChecksum": "38d96b84538f99b5e4b6924ba5b95618",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.aria-label": {
+      "value": "探索板块",
+      "englishChecksum": "f31ed6ab73b37416ada9df7c8722ad50",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link1.text": {
+      "value": "开始体验",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link1.subtext": {
+      "value": "简介：在 Push Chain 上构建",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link1.title": {
+      "value": "开始构建",
+      "englishChecksum": "fd750b6a81c364f6757a0675ad962472",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link2.text": {
+      "value": "快速上手",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link2.subtext": {
+      "value": "几秒钟设置开发环境",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link2.title": {
+      "value": "快速上手",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link3.text": {
+      "value": "教程",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link3.subtext": {
+      "value": "逐步指南，教您如何使用 Push 构建",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link3.title": {
+      "value": "通过教程学习",
+      "englishChecksum": "c3d5ba0195fe8331c744bb7ab7e8b4b0",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link4.subtext": {
+      "value": "查看核心代码和开源工具",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link4.title": {
+      "value": "探索 Push Chain",
+      "englishChecksum": "248c3d5339f141cf6b757e0599fb45eb",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link5.text": {
+      "value": "开发者 Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link5.subtext": {
+      "value": "与开发者社区连接",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link5.title": {
+      "value": "加入 Discord",
+      "englishChecksum": "c3e83e46051a8285bdecea1338300499",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link6.text": {
+      "value": "探索示例",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link6.subtext": {
+      "value": "探索示例",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "header.explore.link6.title": {
+      "value": "探索示例",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.444Z"
+    },
+    "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build": {
+      "value": "### 什么样的应用可以在Push Chain上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n通过Push Chain的共享状态和跨链架构，可能性无穷无尽。以下是一些旗舰示例：\n\n- **通用DEX**  \n  一次交易UI适用于每个流动性池–跨所有链的抽象路由，具有CEX的速度和体验。\n\n- **通用DeFi**  \n  浏览器中的全球银行：跨生态系统的贷款、借贷和收益聚合器，无需手动桥接。\n\n- **通用AI代理**  \n  自治代理，在任何链上支付和获取任何代币–适用于订阅服务、数据机器人等。\n\n- **通用DAO**  \n  跨链治理：-token持有者投票和执行提案，不论其来源链。\n\n- **通用游戏**  \n  多玩家比赛和跨链游戏经济，统一玩家和资产来自以太坊、索拉纳、多边形等。\n\n- **通用市场**  \n  买卖和交易NFT和代币的集成市场，适用于所有链。\n\n- **通用名称服务**  \n  人类可读名称，解析到多个区块链的钱包。\n\n在Push Chain上可以构建的应用和创新无穷无尽！查看一些[更多用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)以开始。开发者也可以查阅[文档中心](/docs/)开始操作。\n\n---",
+      "englishChecksum": "799908a6e48c469eb2b317beed9dd088",
+      "lastUpdated": "2025-11-14T20:29:12.948Z"
+    },
+    "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section": {
+      "value": "## 开发者、用户和节点运营商",
+      "englishChecksum": "3e32786584a34093ac405ea1c254e3ab",
+      "lastUpdated": "2025-11-14T20:29:15.470Z"
+    },
+    "pages.privacymobile.seo.description": {
+      "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
+      "lastUpdated": "2025-11-14T20:29:17.366Z"
+    },
+    "components.short-faq-snippet.qnas.qna3.question": {
+      "value": "我需要不同的钱包或手续费代币吗？",
+      "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
+      "lastUpdated": "2025-11-14T20:29:19.230Z"
+    }
+  }
+}
