@@ -1,0 +1,12 @@
+{
+  "components": {
+    "breadcrumbs": {
+      "navigation-aria-label": "Навигация по хлебным крошкам",
+      "home-text": "Главная",
+      "navigate-to-aria-label": "Перейти на страницу {{page}}",
+      "go-to-title": "Перейти на страницу {{page}}",
+      "current-page-aria-label": "Текущая страница: {{page}}",
+      "separator-aria-label": "Разделитель хлебных крошек"
+    }
+  }
+}

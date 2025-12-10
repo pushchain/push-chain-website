@@ -1,0 +1,64 @@
+{
+  "components": {
+    "short-contact-us-snippet": {
+      "section-aria-label": "Contact the Push Chain Team",
+      "title": "Popular\nQuestions",
+      "title-aria-label": "Common contact questions for Push Chain",
+      "discord-link-text": "Join Discord",
+      "discord-link-title": "Chat with the Push Chain community on Discord",
+      "discord-link-aria-label": "Open Discord in a new tab",
+      "explore-more-text": "Explore Programs",
+      "explore-more-title": "See grants, BRB, and ecosystem programs",
+      "explore-more-aria-label": "Navigate to Push Chain programs",
+      "accordion-aria-label": "Contact questions list",
+      "answer-aria-label": "Answer to the question - ",
+      "qnas": {
+        "qna1": {
+          "question": "Which category should I choose?",
+          "answer": "<1><2>Partnerships & Integrations</2>: wallets, infra, exchanges, protocol collabs → <3>Contact Partnerships</3>.</1><1><2>Grants & Programs</2>: BRB, Bootcamp, funding → <4>Contact Grants</4>.</1><1><2>Media & Speaking</2>: interviews, statements, talks → <5>Media & Events</5>.</1><1><2>Validators</2>: node operator interest, RPC providers → <6>Validators</6>.</1><1><2>Legal</2>: trademarks, data requests, agreements → <7>Legal</7>.</1><1>Need technical help or status? Use <8>Support</8> instead.</1>",
+          "contact-partnerships-title": "Open Partnerships contact",
+          "contact-grants-title": "Open Grants contact",
+          "contact-media-title": "Open Media & Speaking contact",
+          "contact-validators-title": "Open Validators contact",
+          "contact-legal-title": "Open Legal & Compliance contact",
+          "support-title": "Go to the Support Center"
+        },
+        "qna2": {
+          "question": "How fast do you respond?",
+          "answer": "<1>We aim to acknowledge most inquiries within <2>1–2 business days</2>. Time-sensitive requests (e.g., media deadlines, security) are prioritized.</1><1>For urgent issues, include <2>deadline, timezone</2>, and a <2>best contact</2>.</1>"
+        },
+        "qna3": {
+          "question": "What details help for partnerships?",
+          "answer": "<1>Share your <2>company name</2>, <2>website</2>, and <2>what you want to build together</2>.</1><1>Helpful extras: audience size, regions, timelines, and any technical scope or SDKs you plan to use.</1><1>Start here → <3>Partnerships</3>.</1>",
+          "contact-partnerships-title": "Open Partnerships contact"
+        },
+        "qna4": {
+          "question": "How do grants work?",
+          "answer": "<1>Tell us your <2>project name</2>, <2>repo/website</2>, stage (<2>idea, prototype, MVP, live</2>), and a brief plan.</1><1>Grant applications are always processed in first-come-first-serve basis. Start here → <3>Grants</3>.</1>",
+          "contact-grants-title": "Open Grants contact"
+        },
+        "qna5": {
+          "question": "Media & speaking requests",
+          "answer": "<1>Include your outlet, topic, <2>deadline</2>, and questions. For talks/workshops, add event date, format, and audience.</1><1>Reach us via <3>Media & Speaking</3>. We can share logos, founder bios, and boilerplate.</1>",
+          "contact-media-title": "Open Media & Speaking contact"
+        },
+        "qna6": {
+          "question": "How do I report a security issue?",
+          "answer": "<1>Email <3><2>security@push.org</2></3> with steps to reproduce and impact. Please avoid public disclosure until we confirm a fix.</1>",
+          "security-policy-title": "Read Security & Disclosure"
+        },
+        "qna7": {
+          "question": "I want to run a validator / provide infra",
+          "answer": "<1>Share your infra profile (experience, regions), expected uptime/SLAs, and any preferred terms. Start here → <3>Validators</3>.</1>",
+          "contact-validators-title": "Open Validators contact"
+        },
+        "qna8": {
+          "question": "Careers & hiring",
+          "answer": "<1>If roles are open, they’ll be posted on our channels. You can still share your profile and interests via <3>Contacting us</3> or follow <4>@PushChain</4> for updates.</1>",
+          "contact-careers-title": "Open Careers contact",
+          "twitter-title": "Follow @PushChain on X"
+        }
+      }
+    }
+  }
+}
