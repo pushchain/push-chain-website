@@ -36,7 +36,7 @@
 <li class="">Initialize the <a href="https://push.org/docs/chain/build/initialize-push-chain-client/#initialize-push-chain-client" target="_blank" rel="noopener noreferrer" class="">Push Chain Client</a> in your project.</li>
 <li class="">Add the Donut Testnet RPC endpoint from RouteMesh and include your API key in the config.</li>
 </ol>
-<p><img decoding="async" loading="lazy" alt="Push Chain x RouteMesh: Unified, Reliable Access to the Donut Testnet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1153/assets/images/image-1-20d48840badbe667998603775d1d696e.webp" width="854" height="667" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="Push Chain x RouteMesh: Unified, Reliable Access to the Donut Testnet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1153/assets/images/image-1-ab5391f4d94b1b26eb4bba9f09e59418.webp" width="814" height="884" class="img_ev3q"></p>
 <ol start="3">
 <li class="">Start making standard EVM JSON-RPC calls through the client deploy, read, write, or test contracts normally.</li>
 </ol>

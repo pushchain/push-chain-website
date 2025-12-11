@@ -112,7 +112,7 @@ function MDXProvider(properties) {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-20d48840badbe667998603775d1d696e.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-ab5391f4d94b1b26eb4bba9f09e59418.webp");
 
 /***/ }),
 
@@ -281,8 +281,8 @@ function _createMdxContent(props) {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "Push Chain x RouteMesh: Unified, Reliable Access to the Donut Testnet",
         src: (__webpack_require__(744135)/* ["default"] */ .A) + "",
-        width: "854",
-        height: "667"
+        width: "814",
+        height: "884"
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
       start: "3",
