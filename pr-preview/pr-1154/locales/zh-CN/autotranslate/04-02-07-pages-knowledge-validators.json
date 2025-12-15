@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "knowledge": {
+      "validators": {
+        "seo": {
+          "description": "快速获取钱包、费用、支持的链和入门指南等信息。",
+          "og-title": "Push Chain FAQ - 所有问题",
+          "og-description": "快速查找答案，链接到指南、测试网和支持。"
+        }
+      }
+    }
+  }
+}

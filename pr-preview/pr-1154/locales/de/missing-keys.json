@@ -1,0 +1,2635 @@
+{
+  "lastUpdated": "2025-11-14T20:16:57.122Z",
+  "keys": {
+    "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
+      "value": "### Was kann auf Push Chain gebaut werden?\n\nPush Chain bietet nahtlose Interoperabilität und vereint alle L1s, L2s und L3s und ist somit der Spielplatz für Innovation und Interoperabilität. Sie können bestehende Web3-Anwendungsfälle wie z.B.:\n\n![Hauptanwendungsfälle von Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nOder Sie können das Web3 verbessern und Innovationen schaffen:\n\n![Verbraucheranwendungsfälle von Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nOder Sie können sich an populären App-Beispielen orientieren, um Inspiration zu erhalten:\n\n![Populäre App-Beispiele auf Push Chain](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
+      "englishChecksum": "a53d3f78e3dc0a5c4e18ed22febbeb9f",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
+      "value": "Push Validator",
+      "englishChecksum": "8b31b9b9aa97d92b4d044ae139d4ff47",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro": {
+      "value": "**Wir haben ein Jahrzehnt damit verbracht, Kettensilos zu bauen. Jetzt ist es Zeit, sie aufzubrechen.**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "englishChecksum": "b22838133be616d6cefb8d88cf1783c3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut": {
+      "value": "## Donut Testnet 🍩\n\nDonut ist das öffentliche Testnet von Push Chain für Universal Apps, die über verschiedene Chains hinweg funktionieren. Es ist ein wichtiger Meilenstein, um Universal Apps für die breite Masse zugänglich zu machen.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+      "englishChecksum": "051f018dc6859cb49ff9b2bd7209901d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain": {
+      "value": "## Was ist Push Chain?\n\nPush Chain ist eine shared-state, universelle Blockchain, bei der **Interoperabilität ein Kernmerkmal der Kette** ist, nicht eine nachträglich hinzugefügte Funktion durch externe Protokolle. **Einmal bereitstellen**, und Ihre App läuft nativ auf verbundenen Ketten.\n\n**Donut ist der Ort, an dem wir das testen.**",
+      "englishChecksum": "2e921cba1ba65c8e9f016447d1c14dc7",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links": {
+      "value": "## Schnellzugriffe\n\n🧠 [Wissensdatenbank](/knowledge) – Erfahren Sie mehr über die Architektur und das Design.\n\n🌳 [Ökosystem-Apps](/ecosystem) – Entdecken Sie Universal Apps, die auf Push Chain bereitgestellt werden.\n\n**🪩 Beliebte Apps zum Ausprobieren**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) – Erleben Sie dieselbe App-Logik, die nahtlos über verschiedene Chains hinweg funktioniert.\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) – Testen und visualisieren Sie Cross-Chain-Interaktionen.\n\n📖 [Entwickler-Dokumentation](/docs) – Tauchen Sie ein in die Dokumentation von Push Chain.\n\n💧 [Faucet](https://faucet.push.org/) – Holen Sie sich Testnet-Token.\n\n🔍 [Push Scan](https://donut.push.network/) – Verfolgen Sie Transaktionen und Netzwerkdaten.",
+      "englishChecksum": "8f49fb22c6f4c4d8ffcc857107231234",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
+      "value": "## Warum Push Chain existiert\n\nDas heutige Web3-Ökosystem ist stark fragmentiert und übermäßig komplex.\n\nEntwickler stellen Smart Contracts auf mehreren Chains neu bereit, Benutzer müssen manuell Token brücken oder Wallets wechseln, und Teams verbringen Monate mit der Wartung chainspezifischer Codebasen und Audits.\n\nJede neue Chain verursacht Overhead, Komplexität, Kosten und Reibung, was Innovation und Adoption massiv verlangsamt.\n\n**Push Chain eliminiert dies.**",
+      "englishChecksum": "5eb212948d6bfddcc7697242f003a185",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability": {
+      "value": "## Ketten-native Interoperabilität\n\nDie meisten Interoperabilitätslösungen heute basieren auf externen Messaging-Layern oder Bridges. Du verwaltest mehrere Verträge, Audits und Integrationen über jede Kette hinweg.\n\n**Push Chain dreht dieses Modell um.** Mit Push:\n\n* **Einmal deployen, überall erreichbar.** Deine App wird sofort auf allen Ketten, EVM oder non-EVM, verfügbar.\n* **Redundante Verträge und Bridges fallen weg.** Interoperabilität ist nativ in die Kette integriert, sodass du dich auf deine App und nicht auf die Infrastruktur konzentrierst.\n* **Bleibe vollständig EVM-kompatibel.** Nutze die gleichen Tools, Frameworks und Audits, die du bereits hast.\n* **Bedienen Sie Benutzer von jeder Kette oder Wallet aus.** Benutzer transaktieren von ihrer Home Chain aus mit vorhandener Wallet. Kein manuelles Bridging, keine Gas-Token, kein Netzwerk-Switching, kein Swapping, keine Einrichtung.",
+      "englishChecksum": "099d648da110855e8baf9ec7670b0ab0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate": {
+      "value": "## Wie kann ich am Netzwerk teilnehmen?\n\n### Entwickler\n\nPush Chain gibt Entwicklern die Möglichkeit, **einmal zu bauen und überall einzusetzen.**\n\nJede **app läuft nativ** über alle Chains, ohne zusätzliche Integrationen oder separate Deployments.\n\nDie Chain unterstützt derzeit **Ethereum, Solana, Base, Arbitrum und BNB Chain** im testnet, mit weiteren Chains in Kürze.\n\n👉 [Entdecke Entwickler-Ressourcen](#for-developers)\n\n### Nutzer\n\nErlebe ein Web3, das einfach funktioniert: Keine Chains wechseln, Tokens brücken oder lernen erforderlich.\n\nNutze deine bestehende Wallet, um auf jede app auf Push Chain zuzugreifen und direkt in deinem nativen Token zu bezahlen.\n\n👉 [Entdecke Nutzer-Ressourcen](#for-users)\n\n### Validators\n\nDas Netzwerk von Push Chain wird durch ein dezentrales Set von Validators betrieben.\n\n**Warum einen testnet Validator betreiben?**\n\nDas Betreiben eines testnet Validators hilft, das Netzwerk zu stärken und seine mainnet-Bereitschaft zu formen. Es kann auch Vorteile und Perks beinhalten, die mit Season 3 des [Push Points Program](https://portal.push.org) einhergehen.\n\nTag [@pushchain](https://x.com/PushChain) und teile deine Erfahrung mit uns auf X.\n\n👉 [Entdecke Validator-Ressourcen](#for-validators)",
+      "englishChecksum": "79f9bb75f9cac27f83705a1022e15280",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads": {
+      "value": "## Ausgewählte Lektüren 👇",
+      "englishChecksum": "c9fefca8484fa54c4cc35f978ba442b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.title": {
+      "value": "Für Entwickler",
+      "englishChecksum": "a78ce034bc770017aa437365c2914fbf",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.ecosystem-apps.title": {
+      "value": "Ecosystem Apps",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.documentation.title": {
+      "value": "Dokumentation",
+      "englishChecksum": "9d86720f060a65a51857cdf8c4c7119d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-explorer.title": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-faucet.title": {
+      "value": "Push Faucet",
+      "englishChecksum": "5877629e592725d72bc82b62dc2bcc3b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.grassroots-program.title": {
+      "value": "Apply for Grassroots Program",
+      "englishChecksum": "ff3278f906b1bda824da980fe244ffd8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.title": {
+      "value": "Für Nutzer",
+      "englishChecksum": "d28521735dec8283e86c109902717bbb",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.ecosystem-apps.title": {
+      "value": "Ecosystem Apps",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.knowledge-base.title": {
+      "value": "Wissensbasis",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.lets-push-yaps.title": {
+      "value": "Lass uns Yaps pushen",
+      "englishChecksum": "afe8f78f7532d791bc7524afe1b77c84",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.title": {
+      "value": "Donut Testnet 🍩",
+      "englishChecksum": "b58ca2b0090cbd2dc059aebc2a9d4339",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.title": {
+      "value": "Donut Testnet 🍩 – Push Chain's Universal testnet",
+      "englishChecksum": "25838a2da1aeb4b62428f31073685f2f",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.description": {
+      "value": "Donut ist das öffentliche Testnet von Push Chain. Erfahren Sie, wie Sie sich verbinden, Universal Apps erstellen, den Faucet nutzen und einen Validator betreiben können.",
+      "englishChecksum": "e2161002d0e2ec61a020f0d3384bf236",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.og-title": {
+      "value": "Donut Testnet 🍩 - Push Chain's Universal Testnet",
+      "englishChecksum": "ede25f547948fbfee8dd9129c9a476dd",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.og-description": {
+      "value": "Entdecke Donut, das erste öffentliche testnet von Push Chain. Einmal entwickeln, überall einsetzen und Universal Apps live testen.",
+      "englishChecksum": "481cc1a484f6792be05e2ca4972f458d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-title": {
+      "value": "Donut Testnet 🍩 - Hier geht's los",
+      "englishChecksum": "750999beb24a613387a2a4a2baaa9e5e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-description": {
+      "value": "Schnelle Antworten zu Donut Testnet: unterstützte Chains, Universal Apps, Faucet und Validator Setup.",
+      "englishChecksum": "582877743c8998a2e1a4404f78d534fe",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.title": {
+      "value": "Wissensdatenbank — Anleitungen, FAQs & Anleitungen",
+      "englishChecksum": "11ca32d20dd7dda0c862404dc406d5c3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.description": {
+      "value": "Hier findest du Grundlagen, FAQs, Anleitungen und Ressourcen für das Push Chain-Ökosystem. Verständliche, nicht-technische Anleitungen zur Nutzung von Push Chain.",
+      "englishChecksum": "b1adb99e30a753bea5840af2e8409758",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.og-title": {
+      "value": "Push Chain Knowledge Base - Anleitungen & FAQs",
+      "englishChecksum": "6081aa0851417128a036d9cd10b0a511",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.og-description": {
+      "value": "Konzepte, Schritt-für-Schritt-Anleitungen und Antworten auf häufige Fragen zu Push Chain.",
+      "englishChecksum": "67634481d8ba9a90c212c518d7c9ecd6",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.twitter-title": {
+      "value": "Wissensdatenbank - Anleitungen & FAQs",
+      "englishChecksum": "f57f26059180d8d6754b8f1de1b6a619",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.seo.twitter-description": {
+      "value": "Schnelle Anleitungen, FAQs und Anleitungen für Push Chain (keine Fachsprache).",
+      "englishChecksum": "92d7202d6e31c52380bf8a43c966cc54",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.title": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.description.highlighted": {
+      "value": "Push Chain ist eine echte universelle Blockchain, die darauf ausgelegt ist, Fragmentierung über alle Chains hinweg zu eliminieren.",
+      "englishChecksum": "9525981fc5a9c13c185a29fb06480498",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.description.developers": {
+      "value": "Entwickler",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.description.developers-text": {
+      "value": "Einmal bereitstellen und sofort mit allen unterstützten EVM- und non-EVM-Chains kompatibel sein.",
+      "englishChecksum": "71b2e36e55906af8b1caf76808ea3171",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.description.users": {
+      "value": "Nutzer",
+      "englishChecksum": "a6d756f02d69a011f1a76f5dbc8f3ac6",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.description.users-text": {
+      "value": "nutze die gleiche App, egal von welcher Chain sie kommen.",
+      "englishChecksum": "ea44ddb598243803d9758a771b794c28",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.long": {
+      "value": "Bleiben Sie über das Push Chain testnet informiert",
+      "englishChecksum": "58629935b0ccf30f1d870903f8339e0f",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.short": {
+      "value": "Push Chain Testnet",
+      "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Seien Sie der Erste, wenn das Push Chain Testnet live geht. Melden Sie sich für unseren Newsletter an, um exklusive Updates zu erhalten.",
+      "englishChecksum": "d304be40858d656900a782db6475f3f8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.footer.description": {
+      "value": "Gestalte nahtlose, benutzerfreundliche Erlebnisse für deine app auf jeder Blockchain mit Push Chain.",
+      "englishChecksum": "ab374d1cf0f5e6677282aa1a97a13102",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.hero-section.footer.cta.text": {
+      "value": "Benachrichtigen lassen",
+      "englishChecksum": "5ca0d06b42af8acf0dae4dc6560e3bb0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.title": {
+      "value": "Ressourcen",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.title": {
+      "value": "Push Chain Grundlagen",
+      "englishChecksum": "4512d45c12d36968dd4b4735b0ea10f9",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.subtitle": {
+      "value": "Lerne die Grundlagen von Push Chain, seine Innovationen und warum es benötigt wird",
+      "englishChecksum": "1dea6951f02f77b71408f07e0355bed9",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "0f827b5960bd300c5033bd1f7be75f09",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.title": {
+      "value": "Build on Push Chain",
+      "englishChecksum": "98bebb4eb06e9298f123c1b72e10aae7",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Tauche ein in die Entwicklung von universalen Apps, was sie ermöglichen und wie du anfängst!",
+      "englishChecksum": "e71d8755ade4356953c42893d5e8c6e3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Bauen Sie mit uns",
+      "englishChecksum": "cbe0e413f4f3228832b9ce7de92f0866",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.title": {
+      "value": "Technische Deep Dives",
+      "englishChecksum": "7d767f9ff38d5cabab17de202bcd1428",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.subtitle": {
+      "value": "Möchtest du die detaillierte Funktionsweise von Push kennenlernen? Oder bist du einfach neugierig? In jedem Fall, hallo!",
+      "englishChecksum": "20b765a3d60d8082c234a80d88114347",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.ctatitle": {
+      "value": "Sieh, wie es tickt",
+      "englishChecksum": "25c869c02797c1388cad7ad3917bfaa6",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.title": {
+      "value": "Entwicklerdokumentation",
+      "englishChecksum": "b3727892fde9b92568ad8356d63b1b24",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.subtitle": {
+      "value": "Lass uns gleich zur Sache kommen! Ich bin eine universal chain... und du bist ein Entwickler, lass es offiziell werden!",
+      "englishChecksum": "d8938cbb8e3bef9cf4b3ad6ae0ea1b75",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.ctatitle": {
+      "value": "Jetzt entwickeln",
+      "englishChecksum": "49cf0c392f12d991b816116d55c1d27c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.title": {
+      "value": "Tokenomics erkunden",
+      "englishChecksum": "791cad865338cf9c166e2632f538e998",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.subtitle": {
+      "value": "Erfahren Sie mehr darüber, wie unsere Tokenomics Anreize schafft und ein nachhaltiges Netzwerk gewährleistet, das von Dauer ist",
+      "englishChecksum": "4450f23b63d4ebaf90815a7d1250097f",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.ctatitle": {
+      "value": "Token Design lernen",
+      "englishChecksum": "13143b07ad042d24a740accb12968e3e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.title": {
+      "value": "FAQs",
+      "englishChecksum": "cde30a33b5e117f7a03e76d3272a4ef0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.subtitle": {
+      "value": "Hier finden Sie Antworten auf alle häufig gestellten Fragen der Community",
+      "englishChecksum": "8fd81508233b12be1e01dcceb358b92f",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.title": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.subtitle": {
+      "value": "Donut ist das öffentliche Testnet von Push Chain für Universal Apps, die über verschiedene Chains (EVM oder non-EVM) hinweg laufen",
+      "englishChecksum": "cea290281e5ab3d719be6b9e727a5dd4",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.title": {
+      "value": "Validators",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.subtitle": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.title": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.description": {
+      "value": "Echtzeit-Störungsberichte und Netzwerkstatus-Updates für Push Chain. Bleiben Sie über Ausfälle, Wartungsarbeiten und gelöste Probleme informiert.",
+      "englishChecksum": "79dcfac5268064e8b57342b415ef92ee",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.og-title": {
+      "value": "Push Chain Incident Reports - Netzwerkstatus",
+      "englishChecksum": "4d7d658a59feaab09d75675c1452e779",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.og-description": {
+      "value": "Verfolge Netzwerkvorfälle, Wartungsfenster und Service-Updates von Push Chain. Erhalte Echtzeit-Statusinformationen.",
+      "englishChecksum": "489d40e83781acad7ab86c3ebff89565",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.twitter-title": {
+      "value": "Push Chain Incident Reports",
+      "englishChecksum": "f0f20d8b7ac140244bee728ad40551f2",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.seo.twitter-description": {
+      "value": "Live-Updates zum Netzwerkstatus von Push Chain, Vorfällen und Wartungsarbeiten.",
+      "englishChecksum": "0e97fd38f27262727851bc7583882da3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.donut-testnet": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.report": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.title": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.sections.reports-overview.items.intro": {
+      "value": "Inhalt",
+      "englishChecksum": "aa8c8783eb334c165bf4f2ddc284d7ff",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.title": {
+      "value": "Validators —",
+      "englishChecksum": "a0fa1a0122c6854e71a26aadd8451e4d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.description": {
+      "value": "Schnelle Antworten zu Wallets, Gebühren, unterstützten Chains und dem Start.",
+      "englishChecksum": "d0c94cda448f4fd9866220bddbf78d62",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.og-title": {
+      "value": "Push Chain FAQ - Alle Fragen",
+      "englishChecksum": "3babe30591ae7ad21c6ddeef513721ce",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.og-description": {
+      "value": "Schnelle Antworten finden mit Links zu Anleitungen, testnet und Support.",
+      "englishChecksum": "40b0bd9c7673f4a3fba46c24b5889434",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.twitter-title": {
+      "value": "FAQ – Hier starten",
+      "englishChecksum": "3f9084c4a138ee6c97ccff8f9dd48ef9",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.seo.twitter-description": {
+      "value": "Schnelle Antworten auf Fragen zu Push Chain.",
+      "englishChecksum": "e7f24c18b1cd82250d93b1f98b9cdd0b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.knowledge.validators.explainer-section.blocks.title": {
+      "value": "Validators",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.title": {
+      "value": "Home — Push Chain | Die universelle Blockchain für Apps",
+      "englishChecksum": "948506e7144431eba32cc84b4a86e0fe",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.description": {
+      "value": "Shared-state Blockchain für universelle Apps. Einmal bereitstellen, Nutzer auf jeder Chain erreichen. Jede Wallet nutzen. Mit jedem Token bezahlen.",
+      "englishChecksum": "5559448d35e5fc8f2c5d96d1d1cfb6af",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.og-title": {
+      "value": "Push Chain - Universelle L1 für Anwendungen",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.og-description": {
+      "value": "Ein einziger Deploy für EVM- und Non-EVM-Nutzer. Verwenden Sie jede Wallet und zahlen Sie mit jedem Token – kein Netzwerkwechsel.",
+      "englishChecksum": "c3b3e259e681d1772190c4a2f8540c4c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.twitter-title": {
+      "value": "Einmal bereitstellen. Jede Chain erreichen.",
+      "englishChecksum": "6712df7cb0cb98805b3fa1a118d2bcc9",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.seo.twitter-description": {
+      "value": "Transaktionen von jeder Chain durchführen. Jede Wallet nutzen. Mit jedem Token bezahlen. Kein Netzwechsel.",
+      "englishChecksum": "e20fe711d93dcdad589921977ffc785b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.title": {
+      "value": "Jede Chain, Jede App, Alle Nutzer.\nEine Push Chain.",
+      "englishChecksum": "a082fba5c4be3c74b3ac7428c000d934",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.description": {
+      "value": "Die erste Layer 1, die für Universal Apps entwickelt wurde. \nEinmal bauen & bereitstellen, Nutzer von jeder Chain an Bord holen.",
+      "englishChecksum": "5a20cac3d05e72e32bb859b343f9cb8e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.primary-button": {
+      "value": "Mit dem Aufbau beginnen",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.primary-button-title": {
+      "value": "Starte deine Reise als Entwickler mit Push Chain!",
+      "englishChecksum": "14611f46ad408dc44d62a33c2c406854",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.secondary-button": {
+      "value": "Wissensdatenbank erkunden",
+      "englishChecksum": "bc99d29cdb063d0d07d5356c43b366c3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.secondary-button-title": {
+      "value": "Push Chain entdecken und mehr erfahren",
+      "englishChecksum": "c69e7d883bb35ef715c7f496f1d51865",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.section-aria-label": {
+      "value": "Push Chain hero section - Einführung in die universelle Layer 1 Blockchain",
+      "englishChecksum": "57b747f815f7cb72d1d3ae9838d75e69",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.primary-button-aria-label": {
+      "value": "Starte mit dem Aufbau universeller Apps auf Push Chain - Gehe zur Entwicklerdokumentation",
+      "englishChecksum": "6e0f565400994d68dec83507e25398bf",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.secondary-button-aria-label": {
+      "value": "Erfahren Sie mehr über die Funktionen und Konzepte von Push Chain in der Wissensdatenbank",
+      "englishChecksum": "93d415c9d176d2609a99fea3911f206a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.hero-background-alt": {
+      "value": "Push Chain Hintergrundanimation, die universelle Blockchain-Konnektivität zeigt",
+      "englishChecksum": "bd0a611472046c804d587074f3912a14",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.hero-background-title": {
+      "value": "Push Chain - universelle Layer 1 für cross-chain Anwendungen",
+      "englishChecksum": "a0b9e94eddb59dc9ceff3c9fc6944fc2",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.schema-headline": {
+      "value": "Push Chain - Universelle L1 für Apps",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.hero-section.schema-description": {
+      "value": "Einmal auf Push Chain bereitstellen und Nutzer auf jeder Blockchain mit universellen Apps erreichen",
+      "englishChecksum": "ab11675113d50ac33cc47fa82376852d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.titleFirst": {
+      "value": "Eine echte",
+      "englishChecksum": "29dc86361d1526a5cba07382fb090abf",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.titleSecondGraditent": {
+      "value": "Universal",
+      "englishChecksum": "af38ccf0394770bddedbe5b6ab970142",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.titleThird": {
+      "value": "Blockchain",
+      "englishChecksum": "c00c84ec6e2cf543f7cf70c5a83ca911",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.bottomTextFirst": {
+      "value": "Einmal deployen,",
+      "englishChecksum": "c7613088f0a23bd75f3e661d644b2b7a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.bottomTextSecond": {
+      "value": "Überall erreichbar",
+      "englishChecksum": "9531d5eff4b3705adb7fe475ef138a0e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.bottomLinkText": {
+      "value": "Loslegen",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.bottomLinkTitle": {
+      "value": "Zum Dokumentations-Hub",
+      "englishChecksum": "4078faa58057f47c15cedd4bbbde53ab",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.section-aria-label": {
+      "value": "Was ist Push Chain – Universelle Blockchain-Erklärung",
+      "englishChecksum": "10243b8d1cc968fe82c7691336d8a347",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.animation-alt": {
+      "value": "Animation demonstrating Push Chain's universal app deployment across multiple blockchains",
+      "englishChecksum": "ca41b26a225f9a8f71d337a149bb6e64",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.animation-title": {
+      "value": "Push Chain universelle Deployment-Visualisierung – einmal deployen, jede Chain erreichen",
+      "englishChecksum": "48fc9beed0f61a9a012c9ae54f926fc3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.whatis-section.bottom-link-aria-label": {
+      "value": "Navigiere zur Push Chain Dokumentation, um mit dem Aufbau universeller Apps zu beginnen",
+      "englishChecksum": "645322d71eec5353ebbb15336db72d4c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.section-aria-label": {
+      "value": "Push Chain Innovation und Funktionen",
+      "englishChecksum": "ad568c1cd43eba621f72921181b2f93c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.header.main-text": {
+      "value": "Auf Basis von Innovationen entwickelt, um Fragmentierung zu beseitigen!",
+      "englishChecksum": "cd9d6aae1358ded4b2e0e180185259ca",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.header.other-text": {
+      "value": "Push ist die einzige Universal Layer 1, die du jemals brauchen wirst!",
+      "englishChecksum": "6c02fb7d9668226e2da2c7363d9fc586",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box1.texttitle": {
+      "value": "Transaktionen für jede Blockchain",
+      "englishChecksum": "07d1d093e9c229dbf0ff39aed8a0ba94",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box1.bodytext": {
+      "value": "Push Chain unterstützt Transaktionen von jeder Blockchain. Benutzer können Gas mit jedem Token bezahlen — Kein Bridging erforderlich.",
+      "englishChecksum": "b6fa6ff506ebb0f1afc085a4fd7a5208",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box1.imagealt": {
+      "value": "Illustration showing different Blockchain logos falling in a pin ball machine.",
+      "englishChecksum": "d06d7e5677e08fa5e8d861349e1b5634",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box1.imagetitle": {
+      "value": "Unterstützt Transaktionen von jeder Blockchain.",
+      "englishChecksum": "d6143294e5b9f12d4905ceba2fd3c37b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box2.texttitle": {
+      "value": "Wallet Abstraction",
+      "englishChecksum": "e9e305a61a3415b84869df9e3fe42867",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box2.bodytext": {
+      "value": "Lassen Sie jede wallet von jeder blockchain verbinden, interagieren und transaktieren. Brechen Sie Web3-Barrieren, indem Sie sich mit Social Login oder E-Mail anmelden. Nutzer können auf Push Chain entscheiden.",
+      "englishChecksum": "4c6e361bb0cef914b5b472f522348306",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box2.imagealt": {
+      "value": "Illustration showing MetaMask Wallet, Phantom Wallet, etc coming out of a big wallet with Push Chain logo on it.",
+      "englishChecksum": "4d2e75fdd3a7a71ecf71cae1dacfba60",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box2.imagetitle": {
+      "value": "Unterstützt beliebige bestehende Wallets wie MetaMask, Phantom usw. sowie Social Login",
+      "englishChecksum": "5541c2c4c62ec60cf8f49f22f4d66a17",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box3.texttitle": {
+      "value": "100% EVM\nKompatibel",
+      "englishChecksum": "72d668e3c6368431b6ba4a780d747af8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box3.bodytext": {
+      "value": "Bereite Deployment ohne Code in der Blockchain vor. Verwandle deine native app in eine universelle app in wenigen Minuten.",
+      "englishChecksum": "30b3dad5087384bdfc93e21c08c4cf33",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box3.imagealt": {
+      "value": "Illustration showing Ethereum Virtual Machine Logo drehend und sagend 100% EVM Kompatibilität.",
+      "englishChecksum": "022c84abe3d44a7667ce95ca4cc2af8b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box3.imagetitle": {
+      "value": "Keine Änderungen am On-Chain-Code erforderlich, 100% EVM-kompatibel.",
+      "englishChecksum": "bb9602dffa37cdef5ade076ad1f5d859",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box4.texttitle": {
+      "value": "Universelle Smart Contracts",
+      "englishChecksum": "cce50f0ba020e290156858a39cd05711",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box4.bodytext": {
+      "value": "Einmal entwickeln, cross chain, mehrstufige Erlebnisse ermöglichen mit einem einzigen, zukunftssicheren Contract.",
+      "englishChecksum": "20f163b0f61c79fb177c0d3541a721a1",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box4.imagealt": {
+      "value": "Illustration showing Ethereum Virtual Maching logo and a an arc revolving around it saying '100% EVM Compatible'",
+      "englishChecksum": "ed71e9d6a4b2df4b42c01ef11ebd8442",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box4.imagetitle": {
+      "value": "Einmal bereitstellen, sofort kompatibel mit allen unterstützten Chains (EVM oder non-EVM).",
+      "englishChecksum": "93af050cd9e312c22b226f0d71f226c0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box5.texttitle": {
+      "value": "Universelle Gebühren\nAbstraktion",
+      "englishChecksum": "38f7bb501cdef86b887546d430af0b80",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box5.bodytext": {
+      "value": "Ermöglichen Sie Nutzern, Gas mit jedem Token auf jeder Chain zu bezahlen, ohne Bridging.",
+      "englishChecksum": "2f272d36e811700fa44250a9f8e85e29",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box5.imagealt": {
+      "value": "Illustration showing different logos of Bitcoin, Ethereum, Solana rotating around Push Chain",
+      "englishChecksum": "f26916dd4dbaba5513ae6257bf448c72",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box5.imagetitle": {
+      "value": "Unterstützt jeden Token jeder Blockchain für Transaktionen.",
+      "englishChecksum": "2bf111c83844692092b9b8c08eb18154",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box6.texttitle": {
+      "value": "Universal Execution Layer",
+      "englishChecksum": "bdc51b77691458ae35fc566a6d4ac135",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box6.bodytext": {
+      "value": "Erstellen Sie atomare, zusammensetzbare Apps über Web3 hinweg. Schaffen Sie noch nie dagewesene App-Erlebnisse, indem Sie mehrere Benutzer verschiedener Chains mit derselben App transaktieren lassen.",
+      "englishChecksum": "87d057c40c0bd92a9d4e3dfc2ce79644",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box6.imagealt": {
+      "value": "Abbildung verschiedener Tetris-Blöcke, die in ein Wurmloch eintreten und das Push Chain-Logo aus dem anderen Ende hervorkommen.",
+      "englishChecksum": "b0163005d97f99c86ce66624bca2ec8a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box6.imagetitle": {
+      "value": "Transaktionen von jeder Chain finalisieren auf Push Chain, wodurch Nutzer jeder Chain nativ die gleiche app nutzen können, auch Universal Execution Layer.",
+      "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "Zugriff auf den shared state",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "Greife auf Kontodaten und Zustandsdaten anderer Chains in deinem smart contract zu.",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.tagText": {
+      "value": "DEMNÄCHST VERFÜGBAR",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "AUS KETTEN LESEN",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "Illustration showing Push Chain growing in blocks style animation.",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(Roadmap) Shared-State ermöglicht den Zugriff auf Konto- und Zustandsdaten von anderen Chains in Ihrem smart contract.",
+      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Universal\nValidators",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "Lösen Sie Transaktionen auf jeder Blockchain aus, validieren Sie sie und schließen Sie sie mit Ihrem smart contract ab.",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.tagText": {
+      "value": "DEMNÄCHST VERFÜGBAR",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "SCHREIBEN SIE IN DIE blockchains",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Illustration showing tetris blocks in different colors merging and changing.",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.box8.imagetitle": {
+      "value": "(Roadmap) Universal Validators ermöglichen es Benutzern, Transaktionen über jede Chain mithilfe Ihres Smart Contracts auszulösen, zu validieren und abzuschließen.",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.footer.title": {
+      "value": "erweitern Sie Ihren App-Nutzerstamm, indem Sie universal werden",
+      "englishChecksum": "ca62b71dc8b27bf5eefdff1ffdae1449",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.footer.secondary": {
+      "value": "mit null Aufwand!",
+      "englishChecksum": "969754b55ad17557a1b7c104ed70b2e4",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.footer.ctatext": {
+      "value": "Jetzt loslegen",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.chain-features-section.footer.ctatitle": {
+      "value": "Einmal bereitstellen, 10x deine Nutzerbasis. Besuche die Entwicklerdokumentation.",
+      "englishChecksum": "8233b96e3719e17e447894b7b4f1ef53",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.section-aria-label": {
+      "value": "Partner und Integrationen des Push Chain Ökosystems",
+      "englishChecksum": "d919d3fa9fbe0d4f2b3c2fc87319f1f5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.title": {
+      "value": "Powered by Push Chain",
+      "englishChecksum": "ffe52515f8b0ddf2bf7d5f21ce2d9ec7",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.subtitle": {
+      "value": "Entdecke Apps, die ihre Nutzerbasis einfach durch den Einsatz von Push Chain vervielfacht haben.",
+      "englishChecksum": "f6a96a2e05813cd5c878fbad4cde90d8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.ctatitle": {
+      "value": "Entdecke Partner, Apps und Infrastruktur, die auf Push Chain bereitgestellt werden",
+      "englishChecksum": "7f2dba55b2b29f81fba57d2ab2b3928a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.ctatext": {
+      "value": "Erkunde das Ökosystem",
+      "englishChecksum": "0800c001853854c3fe569fb0c9315495",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.partners-grid-aria-label": {
+      "value": "Raster von Partnerlogos, die Web3-Projekte zeigen, die Push Chain nutzen",
+      "englishChecksum": "57d2ba44c5262f8595a7b11f2e728751",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.partner-logo-title-prefix": {
+      "value": "Partner-Logo - ",
+      "englishChecksum": "9a6a6324235ba2abb0fc7efe1208935e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.partner-logo-alt-prefix": {
+      "value": "Logo von ",
+      "englishChecksum": "3f008442b87302c61e429f26dea2aadf",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.partners-section.mobile-view-aria-label": {
+      "value": "Mobile Ansicht der Push Chain Ökosystem-Partner",
+      "englishChecksum": "7195ac8e4168a535813f2f743a771c41",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.section-aria-label": {
+      "value": "Push Chain Leistungsstatistiken und Metriken",
+      "englishChecksum": "081402c46051493f0ad29d4fbe475ed0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.title": {
+      "value": "Erreiche",
+      "englishChecksum": "19b9898fb46510573e9eecd5ca2c4e27",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.titleGradient": {
+      "value": "Sofort",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.titleThird": {
+      "value": "Interoperabilität",
+      "englishChecksum": "7eea83832c429d210721b6f786e1125e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.description": {
+      "value": "Optimiert für Performance.\nHohe TPS, ultra-niedrige Gasgebühren und sub-sekündliche\nFinalität für die Ausführung von Anwendungen in Echtzeit.",
+      "englishChecksum": "6a30ccd29c10a929c623aacb10b3415a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.animation-alt": {
+      "value": "Interaktive Animation, die die sofortige Interoperabilität von Push Chain über mehrere Blockchains hinweg zeigt",
+      "englishChecksum": "ba5ad2d95c246b132336924324bad1b7",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.animation-title": {
+      "value": "Push Chain Sofortige Interoperabilität – Visualisierung",
+      "englishChecksum": "79976e97d2ef0635f526070dc39c1c27",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat1.title": {
+      "value": "Unterstützte Chains",
+      "englishChecksum": "9fa4fdfa65802111310afe0c589b22d1",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagealt": {
+      "value": "Illustration showing supported chains",
+      "englishChecksum": "9b96b239ea068a5ed539af6f3694239c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagetitle": {
+      "value": "Liste aller unterstützten Ketten wie Ethereum, Solana, BNB Chain usw.",
+      "englishChecksum": "2270db058472d6f238f0e29b86f25023",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat2.title": {
+      "value": "TPS",
+      "englishChecksum": "9da9418a92881b96aeb4fcc43e237466",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat2.description": {
+      "value": "4.2k",
+      "englishChecksum": "be0715a552eeea3e5678df63651d0872",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat3.title": {
+      "value": "NATIVE FINALITY",
+      "englishChecksum": "eb159fdea10f78862e4e79fe886dc036",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat3.description": {
+      "value": "Sofort",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat4.title": {
+      "value": "NATIVE BLOCK TIME",
+      "englishChecksum": "813e6eba2d2e1c473f660986d32c8e4e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.stats-section.stats.stat4.description": {
+      "value": "1s",
+      "englishChecksum": "b7ca79525ea99e356ff1dd38525b5342",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.subtitle": {
+      "value": "NEWS, DEVLOGS & IDEAS",
+      "englishChecksum": "126fa2aacb84a9d81e494a89ffdb0bef",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.subtitle-aria-label": {
+      "value": "Blog-Kategorie-Informationen",
+      "englishChecksum": "ac7ce58d26a8699ca5e8f7a113fda93e",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.title": {
+      "value": "Ihr Puls von Push Chain",
+      "englishChecksum": "b1cb7ed612449065a646c3f8b61a0a74",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.title-aria-label": {
+      "value": "Neueste Blog-Posts und Updates von Push Chain",
+      "englishChecksum": "bd53aa8f5f7d9b86d251086f29478a81",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.explore-link-text": {
+      "value": "Weitere Artikel entdecken",
+      "englishChecksum": "82dc7eaf7824b2b5b39002b219040ec0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.explore-link-title": {
+      "value": "Besuchen Sie den Push Chain Blog, um alle Artikel und Updates zu lesen",
+      "englishChecksum": "5ac48570f00c6fa9a1c935ec768450dd",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.explore-link-aria-label": {
+      "value": "Zur Push Chain Blog-Seite navigieren",
+      "englishChecksum": "675a90090b1f1a950148fdc36404c5da",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.section-aria-label": {
+      "value": "Push Chain Blogbeiträge und Nachrichten-Bereich",
+      "englishChecksum": "d636d3da4fbd3dad2b973001969a1c00",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.blog-posts-list-aria-label": {
+      "value": "Aktuelle Blogbeiträge von Push Chain",
+      "englishChecksum": "02e0773441142451f08f78bf6a694069",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.blog-post-aria-label": {
+      "value": "Lese den Blog-Post über {title}",
+      "englishChecksum": "b5898d0adeb3062efd7661ccde948386",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.blog-post-title-prefix": {
+      "value": "Lies den Blogbeitrag - ",
+      "englishChecksum": "8df77812b9a3532a64f60ea1b47fbe67",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.loading-text": {
+      "value": "Lade die neuesten Blogbeiträge...",
+      "englishChecksum": "9a8a4eaa02425d1a19d84bba815ac409",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.error-text": {
+      "value": "Blogbeiträge konnten im Moment nicht geladen werden.",
+      "englishChecksum": "2d6dabe9453626828f62a3d80eb14184",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.blog-section.no-posts-text": {
+      "value": "Keine Blogbeiträge verfügbar",
+      "englishChecksum": "69d5484bbae99b9c3545a41778492336",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.trustedby-section.title": {
+      "value": "Von dem Team gebaut, dem Pioniere von Web3 vertrauen",
+      "englishChecksum": "dc937f19942643ce4264edddf30c412a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.trustedby-section.section-aria-label": {
+      "value": "Push Chain trusted by section",
+      "englishChecksum": "18be016c87bb93e30ca4e5e49d740805",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.trustedby-section.trusted-by-alt": {
+      "value": "Investor - ",
+      "englishChecksum": "3c0c7cd619384b307c73cf5935c25e67",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.aria-label": {
+      "value": "Bereich mit Auszeichnungen",
+      "englishChecksum": "4ab283a6324bc57b350db0d8acb0d32c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.tag": {
+      "value": "FEATURED ON",
+      "englishChecksum": "ff2ce72b0d556e75df6896ffafa92e05",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.title": {
+      "value": "Push Chain im Rampenlicht",
+      "englishChecksum": "7680658233a0ee4d168959f3c83ebb6a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.subtitle": {
+      "value": "Lass dich nicht nur von uns überzeugen. Sieh, was die Medien über die echte universal Chain sagen.",
+      "englishChecksum": "9394eb0bdbdb615a0964682774c13c94",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles-image-alt": {
+      "value": "Medienberichterstattung von ",
+      "englishChecksum": "6cac47727dfb2d9d87a1f7ceb537b3f1",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles-text": {
+      "value": "Vollständige Berichterstattung lesen",
+      "englishChecksum": "ddee3a14f42eb7c40cb57997f3ca944c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles-title-1": {
+      "value": "Lies ",
+      "englishChecksum": "3931423122a4af3ae3811096a2819685",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles-title-2": {
+      "value": "'s Gedanken zu Push Chain im Detail",
+      "englishChecksum": "19442a03071cf8be9a9509a81e44d264",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.binance-chain.text": {
+      "value": "Wir freuen uns sehr bekannt zu geben, dass Push Protocol, ein führendes dezentrales Kommunikationsprotokoll für Web3, jetzt auf BNB Chain gestartet ist.",
+      "englishChecksum": "c4530c92cf72e058e797dacf1793b260",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.coindesk.text": {
+      "value": "Protocol Village: Unstoppable Works With Push Protocol to Deliver Token-Gated Group Chats",
+      "englishChecksum": "ad068a87c6c2d7412cdc7aa5fe1f3eff",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.defiant.text": {
+      "value": "Unstoppable Domains startet Token-gesteuerte Gruppenchats. Die Zusammenarbeit mit Push Protocol zielt darauf ab, Desinformation und Betrug zu verhindern.",
+      "englishChecksum": "b406714c0a067c24635e3957190f0af8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.balaji.text": {
+      "value": "Benutzergesteuerte Benachrichtigungen. Zwei Unternehmen kontrollieren Push-Benachrichtigungen an Milliarden von Smartphones: Apple und Google.",
+      "englishChecksum": "0f1c48f6883e33bacfb8c0f548e8ecb3",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.defiprime.text": {
+      "value": "Harsh Rajat spricht über die Zukunft des Bankwesens, Anreize für das EPNS protocol und wo es ein Geschäftsmodell für dezentralisierte Push-Benachrichtigungen gibt.",
+      "englishChecksum": "0cb5feb1635aa0686853746fe8700bb9",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.ethfoundation.text": {
+      "value": "Seit HackMoney haben Richa und Harsh unglaubliche Energie in den Aufbau von EPNS gesteckt, das sie als \"ein fehlendes Teil von web3\" bezeichnen.",
+      "englishChecksum": "5305100d89dba00f198a84e007c8eb26",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.beincrypto.text": {
+      "value": "Wie Web3 Kommunikationsnetzwerke funktionieren: Eine technische Tiefenanalyse",
+      "englishChecksum": "e10824f783c2e0de2b2d7e643bd2634d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.the-block.text": {
+      "value": "Web3 Benachrichtigungsprotokoll Push startet seine eigene Layer 1 Chain",
+      "englishChecksum": "b5c5b9f95dde1fb47a5b8046a1f2b5e8",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.business-insider.text": {
+      "value": "Push enthüllt Push Chain: Die Zukunft von universellen Blockchain Anwendungen",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.chainwire.text": {
+      "value": "Push stellt Push Chain vor: Die Zukunft universeller Blockchain-Anwendungen.",
+      "englishChecksum": "8670f532335ce3e8a26a24b30f44a48d",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.benzinga.text": {
+      "value": "Push enthüllt Push Chain: Die Zukunft von universellen Blockchain Anwendungen",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.crypto-briefing.text": {
+      "value": "Push enthüllt Push Chain: Die Zukunft von Universal Blockchain Anwendungen",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.cryptoslate.text": {
+      "value": "Push Protocol startet Push Chain, um die Blockchain-Kommunikation und Transaktionen zu vereinheitlichen",
+      "englishChecksum": "4fc312bfba55cf6b838949c2ee8e0cfa",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.messari.text": {
+      "value": "EPNS ermöglicht Anreize und passives Einkommen für Nutzer, die die dezentralen Benachrichtigungen erhalten.",
+      "englishChecksum": "76aedec3b96cef39cc9355c8a9c1118b",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-1.text": {
+      "value": "Harsh Rajat, Gründer und Projektleiter von Push Protocol, erklärt den Anstieg in der Entwicklung von Web3 Chat-Anwendungen in der neuesten Episode von Hashing It Out.",
+      "englishChecksum": "a530ac82085f87db632129ac224faf3c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-2.text": {
+      "value": "Unstoppable Domains startet eine badge-basierte Gruppenchat-Funktion für Username-Inhaber.",
+      "englishChecksum": "6032ddd8c813a13646927c3eae35adb5",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.aria-label": {
+      "value": "Bereich zum Erstellen universeller Apps",
+      "englishChecksum": "c5b019935b5b8874364eebc8986a6ac0",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.section-title": {
+      "value": "Baue universelle Apps.",
+      "englishChecksum": "0e774a7dc1ee53c01ff2296e74c209c4",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.section-subtitle": {
+      "value": "Durchbrich die Silos. Einmal bauen, auf jeder Blockchain skalieren.",
+      "englishChecksum": "a9d2b747741fd12af5883cd4446f4772",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.docs-link.text": {
+      "value": "Push Chain Docs erkunden",
+      "englishChecksum": "a12d0c27ed45dee80ba7ed3d7d20f96c",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.docs-link.title": {
+      "value": "Entdecke die Push Chain Dokumentation und Entwicklerressourcen",
+      "englishChecksum": "07584070f7e8b119827d75c362d05e59",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.docs-link.aria-label": {
+      "value": "Push Chain Dokumentation in neuem Tab öffnen",
+      "englishChecksum": "ecb929436d5877c5e4ce93073a2f0310",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.cta-link.text": {
+      "value": "LFG Push Chain",
+      "englishChecksum": "be953076a98731e9aec67b31a9f0df3a",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.cta-link.title": {
+      "value": "Starte mit Push Chain – der universellen Blockchain-Plattform",
+      "englishChecksum": "7bcc4330a5ebbf09e486a06944c2d5bd",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.home.ending-section.cta-link.aria-label": {
+      "value": "Starte mit der Push Chain Entwicklung",
+      "englishChecksum": "acedeec3d726f902233dda0b5cb1c1b4",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.ecosystem.seo.title": {
+      "value": "Push Chain Ecosystem — Universal Apps & Partners",
+      "englishChecksum": "32db66944f11630338b6b28e3ce805cd",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.ecosystem.seo.description": {
+      "value": "Entdecke das Ökosystem von universal Apps, Partnern und Projekten, die auf Push Chain aufgebaut sind. Einmal entwickeln, Nutzer auf allen Chains mit shared-state Interoperabilität erreichen.",
+      "englishChecksum": "41ab93f9796103eb14ec3a145afd8bf4",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.ecosystem.seo.og-title": {
+      "value": "Push Chain Ecosystem - Entdecken Sie universelle Apps & Partner",
+      "englishChecksum": "d967afcb31a9f4b223a73f3438806437",
+      "lastUpdated": "2025-11-14T19:27:06.052Z"
+    },
+    "pages.ecosystem.seo.og-description": {
+      "value": "Entdecke das Ökosystem von universal Apps und Projekten, die auf Push Chain live sind. Erlebe echte cross-chain Nutzbarkeit. Keine Bridges oder Swaps.",
+      "englishChecksum": "334d8a8abb5cbc356c4a89b34a1c9703",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "pages.ecosystem.seo.twitter-title": {
+      "value": "Entdecken Sie das Push Chain Ökosystem - Universelle Apps & Partner",
+      "englishChecksum": "e403bd7ee033adade46e953f4bba985d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "pages.ecosystem.seo.twitter-description": {
+      "value": "Entdecke universelle Apps und Partner auf Push Chain. Einmal entwickeln, Nutzer auf Ethereum, Solana, Base und darüber hinaus erreichen.",
+      "englishChecksum": "29789f4a9c44a6a48b42e082c1629049",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "pages.ecosystem.hero-section.title": {
+      "value": "Entdecke das Universal Ecosystem",
+      "englishChecksum": "fe68c572bef7a7bcecc2316924ceb555",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "pages.ecosystem.hero-section.description": {
+      "value": "Entdecken Sie Apps, Partner und Early Adopters, die die nächste Ära universeller Erfahrungen auf Push Chains Donut Testnet aufbauen.",
+      "englishChecksum": "70f52e04c9429af0acf89f79a06f1df1",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna1.discord-url-title": {
+      "value": "Trete dem Push Chain Discord bei, um Hilfe in Echtzeit zu erhalten.",
+      "englishChecksum": "d12ebe9b572e3c4b3482d914b2cf9e40",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna1.support-url-title": {
+      "value": "Ein Support-Ticket öffnen.",
+      "englishChecksum": "d8d283e66ccab09b39a0fa09100beb9a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna2.question": {
+      "value": "Meine Transaktion ist ausstehend oder fehlgeschlagen – was nun?",
+      "englishChecksum": "f408e98aa133345ca0c19f47aa3d2e80",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna2.answer": {
+      "value": "<1><2>Status prüfen:</2> suchen Sie Ihre tx auf <3>Push Scan</3> mit dem Hash aus Ihrer Wallet.</1><1><2>Ausstehend:</2> es bestätigt normalerweise kurz; vermeiden Sie wiederholtes erneutes Senden.</1><1><2>Fehlgeschlagen:</2> es werden keine Gelder abgezogen. Überprüfen Sie den Fehler und versuchen Sie es erneut.</1><1>Laufende Vorfälle werden auf <4>Status</4> veröffentlicht.</1>",
+      "englishChecksum": "0a501fc0a7cb28c521c0a2ed3c343205",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna2.scan-url-title": {
+      "value": "Push Scan öffnen (Explorer).",
+      "englishChecksum": "e3f117ff5b7c76846fae7eea50e2da91",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna2.status-url-title": {
+      "value": "Netzwerkstatus und Vorfälle anzeigen.",
+      "englishChecksum": "e6be186c78873c7819a49fd60ed6763e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna3.question": {
+      "value": "Wie erhalte ich testnet Tokens (Donut)?",
+      "englishChecksum": "bec0083e54c2e78706bd43f65e5207ae",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna3.answer": {
+      "value": "<1>Verwenden Sie den <3>Faucet</3>, um Test-Token anzufordern.</1><1><2>Hinweise:</2> Geschwindigkeitsbegrenzungen können gelten; einige Faucets erfordern eine einfache Verifizierung. Wenn der Faucet fehlschlägt, kontaktieren Sie uns bitte auf <4>Discord</4>.</1>",
+      "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna3.faucet-url-title": {
+      "value": "Öffne den Push Chain Faucet.",
+      "englishChecksum": "90ac081e58ed5d272fd2c69547e38a31",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna3.discord-url-title": {
+      "value": "Tritt dem Push Chain Discord bei.",
+      "englishChecksum": "f8a145f6a26c1037bc6d51a27d093445",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna4.question": {
+      "value": "Wie melde ich einen Fehler oder eine Sicherheitslücke?",
+      "englishChecksum": "b42e7e243e9f0be7633b6be3d881a61c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna4.answer": {
+      "value": "<1><2>App-Fehler:</2> reiche ein <3>Support-Ticket</3> ein oder poste in <4>Discord</4> mit Schritten zur Reproduktion.</1><1><2>Sicherheitsprobleme:</2> sende eine E-Mail an <5>security@push.org</5>. Vermeide bitte öffentliche Veröffentlichungen, bis wir eine Lösung bestätigen.</1>",
+      "englishChecksum": "e3864f1b6ec8ea7832ffe6c8aeb8af09",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna4.support-url-title": {
+      "value": "Eröffne ein Support-Ticket.",
+      "englishChecksum": "d8d283e66ccab09b39a0fa09100beb9a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna4.discord-url-title": {
+      "value": "Tritt dem Discord bei.",
+      "englishChecksum": "d284e2515bbc0985ca9df5bbccfe1dd7",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna5.question": {
+      "value": "Wo finde ich die Dokumentation und Schnellstarts?",
+      "englishChecksum": "bee1ae21bb564303549902bc09f56cad",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna5.answer": {
+      "value": "<1>Beginne mit <3>Docs</3> für Schnellstarts und APIs, und der <4>Knowledge Base</4> für Konzepte, tiefgreifende Erklärungen und FAQs.</1>",
+      "englishChecksum": "d904ffbc246c956c880c4d2341ac670d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna5.docs-url-title": {
+      "value": "Öffne die Entwicklerdokumentation.",
+      "englishChecksum": "71f697636c85c05e14305979732770e2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna5.kb-url-title": {
+      "value": "Wissensdatenbank öffnen.",
+      "englishChecksum": "3534cc13bcd8f5e5a84f261bcba2a91a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna6.question": {
+      "value": "Kann ich Support für eine neue Blockchain, Funktion oder Integration anfordern?",
+      "englishChecksum": "0001b7641313463a1efefaac585fcaab",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna6.answer": {
+      "value": "<1>Ja. Teile uns mit, welche Chain/Tooling du benötigst, über <3>Kontakt</3> oder eröffne ein Issue auf <4>GitHub</4>. Wir erweitern die Abdeckung kontinuierlich.</1>",
+      "englishChecksum": "42e6998b370e6bfd4b25805ae34de804",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna6.contact-url-title": {
+      "value": "Kontaktieren Sie das Push Chain Team.",
+      "englishChecksum": "3375dde4835fdf8243f829b62f973519",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-support-snippet.qnas.qna6.github-url-title": {
+      "value": "Öffne die GitHub Organisation.",
+      "englishChecksum": "808340498ef2d74037e0d5b6a5845220",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna8.question": {
+      "value": "Karriere & Einstellung",
+      "englishChecksum": "e1bff768af9418850fe78cd61e85b868",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna8.answer": {
+      "value": "<1>Wenn offene Stellen verfügbar sind, werden diese auf unseren Kanälen veröffentlicht. Sie können Ihr Profil und Ihre Interessen trotzdem über <3>Kontaktieren Sie uns</3> teilen oder <4>@PushChain</4> für Updates folgen.</1>",
+      "englishChecksum": "077daa20a4c6bb3eb321f33e1be658b8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna8.contact-careers-title": {
+      "value": "Kontakt zu offenen Karrierepositionen",
+      "englishChecksum": "2af6de72d9ffc41453207f2a6ab74c5b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.question": {
+      "value": "Welche Kategorie sollte ich wählen?",
+      "englishChecksum": "33e853e05e70c2f053864f12cb541cea",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.answer": {
+      "value": "<1><2>Partnerschaften & Integrationen</2>: Wallets, Infra, Exchanges, Protocol-Kooperationen → <3>Kontaktiere Partnerschaften</3>.</1><1><2>Förderprogramme</2>: BRB, Bootcamp, Finanzierung → <4>Kontaktiere Förderprogramme</4>.</1><1><2>Medien & Vorträge</2>: Interviews, Erklärungen, Vorträge → <5>Medien & Events</5>.</1><1><2>Validatoren</2>: Interesse als Node-Betreiber, RPC-Anbieter → <6>Validatoren</6>.</1><1><2>Rechtliches</2>: Markenrechte, Datenanfragen, Vereinbarungen → <7>Rechtliches</7>.</1><1>Technischen Support oder Status-Updates benötigst du? Nutze <8>Support</8> stattdessen.</1>",
+      "englishChecksum": "fdb9d0fd12603928e2ea81d57fda8775",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.contact-partnerships-title": {
+      "value": "Kontakt für offene Partnerschaften",
+      "englishChecksum": "9f1adc87aab1683f37d3a7d517713199",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.contact-grants-title": {
+      "value": "Kontakt für Open Grants",
+      "englishChecksum": "7a6dbb803502309701d1eb8d2f795e65",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.contact-media-title": {
+      "value": "Kontakt für Medien & Vorträge",
+      "englishChecksum": "c99eb4aa5be20feafbd5287d80909e90",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.contact-validators-title": {
+      "value": "Kontakt zu Open Validators aufnehmen",
+      "englishChecksum": "3a5c50e818a476d412e1cc2ef38a0ad9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.contact-legal-title": {
+      "value": "Kontakt für rechtliche Fragen & Compliance öffnen",
+      "englishChecksum": "58a605d7fb7d2bf7c3522f27e1e75901",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna1.support-title": {
+      "value": "Gehen Sie zum Support Center",
+      "englishChecksum": "456795a56b4a97c95393ec1b2fadc513",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna2.question": {
+      "value": "Wie schnell antworten Sie?",
+      "englishChecksum": "2180d46fecb20b34fa072ab25b86a74a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna2.answer": {
+      "value": "<1>Wir bemühen uns, die meisten Anfragen innerhalb von <2>1–2 Werktagen</2> zu beantworten. Zeitkritische Anfragen (z. B. Medienfristen, Sicherheit) werden priorisiert.</1><1>Bei dringenden Problemen geben Sie bitte <2>Frist, Zeitzone</2> und einen <2>bester Kontakt</2> an.</1>",
+      "englishChecksum": "208352fa83fb79445442dbf5bd750544",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna3.question": {
+      "value": "Welche Details sind für Partnerschaften hilfreich?",
+      "englishChecksum": "ba71bb4e6a4b5f6eedf0f3bcab1303e5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna3.answer": {
+      "value": "<1>Teilen Sie uns Ihren <2>Firmennamen</2>, Ihre <2>Website</2> und <2>was Sie gemeinsam aufbauen möchten</2>.</1><1>Hilfreiche Zusatzinformationen: Zielgruppengröße, Regionen, Zeitpläne und jeglicher technischer Umfang oder SDKs, die Sie verwenden möchten.</1><1>Hier geht es los → <3>Partnerschaften</3>.</1>",
+      "englishChecksum": "062750f8ba4d23c275d966ef700b00fd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna3.contact-partnerships-title": {
+      "value": "Kontakt für Open Partnerships",
+      "englishChecksum": "9f1adc87aab1683f37d3a7d517713199",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna4.question": {
+      "value": "Wie funktionieren Grants?",
+      "englishChecksum": "35ff18eca0e185c8f813c3ca1e143e76",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna4.answer": {
+      "value": "<1>Erzähl uns von deinem <2>Projektnamen</2>, <2>Repo/Website</2>, dem aktuellen Stand (<2>Idee, Prototyp, MVP, live</2>) und einem kurzen Plan.</1><1>Anträge werden immer nach dem Prinzip \"wer zuerst kommt, mahlt zuerst\" bearbeitet. Hier geht es los → <3>Grants</3>.</1>",
+      "englishChecksum": "bd87b509a29f3b02801d5af11e093ba6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna4.contact-grants-title": {
+      "value": "Kontakt für Open Grants",
+      "englishChecksum": "7a6dbb803502309701d1eb8d2f795e65",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna5.question": {
+      "value": "Anfragen bezüglich Medien & Vorträgen",
+      "englishChecksum": "6ed0158dcecb60a4e6a61987119837f1",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna5.answer": {
+      "value": "<1>Bitte gib deine Anlaufstelle, das Thema und <2>den Abgabetermin</2> sowie deine Fragen an. Für Vorträge/Workshops füge bitte das Datum, das Format und das Publikum hinzu.</1><1>Du erreichst uns über <3>Medien & Vorträge</3>. Wir können Logos, Lebensläufe der Gründer und Standardtexte bereitstellen.</1>",
+      "englishChecksum": "0314a1c3cf39c46b0769b13345bc8948",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna5.contact-media-title": {
+      "value": "Kontakt für Medien & Vorträge",
+      "englishChecksum": "c99eb4aa5be20feafbd5287d80909e90",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna6.question": {
+      "value": "Wie melde ich ein Sicherheitsproblem?",
+      "englishChecksum": "2ceea01625f9195fd1025b732bdb647f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna6.answer": {
+      "value": "<1>E-Mail <3><2>security@push.org</2></3> mit Schritten zur Reproduktion und Auswirkung. Bitte vermeiden Sie öffentliche Bekanntmachung, bis wir eine Lösung bestätigen.</1>",
+      "englishChecksum": "4c2a0470e14031382939278f22be3d32",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.qnas.qna6.security-policy-title": {
+      "value": "Lesen Sie die Sicherheits- & Offenlegungsrichtlinien",
+      "englishChecksum": "04477922173eaf22af77f9cdcb28a6ee",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.section-aria-label": {
+      "value": "Kontaktieren Sie das Push Chain Team",
+      "englishChecksum": "82edd58495d2586de19488a88f694c2f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.title": {
+      "value": "Beliebte\nFragen",
+      "englishChecksum": "1d439640536d7cda926c3eac2d5345cc",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.title-aria-label": {
+      "value": "Häufig gestellte Fragen zum Kontakt für Push Chain",
+      "englishChecksum": "a812aaff7aa054ec255bca4c3fec3f12",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.discord-link-text": {
+      "value": "Discord beitreten",
+      "englishChecksum": "c3e83e46051a8285bdecea1338300499",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.discord-link-title": {
+      "value": "Chatte mit der Push Chain Community auf Discord",
+      "englishChecksum": "9de549213c3030c84b3d446e2e0aef29",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.discord-link-aria-label": {
+      "value": "Discord in einem neuen Tab öffnen",
+      "englishChecksum": "9a2a35afba1ba2f1cc25ee768fc13b10",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.explore-more-text": {
+      "value": "Weitere Programme entdecken",
+      "englishChecksum": "3553b8436dc44816d93aa9769ac3773d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.explore-more-title": {
+      "value": "Entdecke Stipendien, BRB und Ökosystem-Programme",
+      "englishChecksum": "424b59f714edf139a05704842fda4e8f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.explore-more-aria-label": {
+      "value": "Zu den Push Chain Programmen navigieren",
+      "englishChecksum": "9e30639489371e2d9f4a9d0255a66e6a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.accordion-aria-label": {
+      "value": "Liste der Kontaktfragen",
+      "englishChecksum": "43bdf098c88769f472c4d383fe88e974",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.short-contact-us-snippet.answer-aria-label": {
+      "value": "Antwort auf die Frage - ",
+      "englishChecksum": "84c913b7410cbc873ad0018ac37fb40e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.buttons.next": {
+      "value": "Weiter",
+      "englishChecksum": "c0f44ba56073da5bdcd5af880cc4505e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.category.title": {
+      "value": "Wobei können wir Ihnen helfen?",
+      "englishChecksum": "69e02ecd4025f117dd35a1c4faf59cef",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.category.subtitle": {
+      "value": "Wähle die Kategorie, die deine Anfrage am besten beschreibt",
+      "englishChecksum": "ca6f52d27ab4880ad22795d1b58b2a07",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.title": {
+      "value": "Lass uns dich kennenlernen",
+      "englishChecksum": "c82a9b93626fe85edb713f6eff1237ce",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.subtitle": {
+      "value": "Wir werden diese Informationen nutzen, um uns bei Ihnen zu melden",
+      "englishChecksum": "a4ad0112c89603acb8fc3182f3be5721",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.name-label": {
+      "value": "Dein Name",
+      "englishChecksum": "d6757e01eca090c0e253e0cb9741352f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.name-placeholder": {
+      "value": "Bitte geben Sie Ihren vollständigen Namen ein",
+      "englishChecksum": "04a97bd7847f7c4a16656c9330c6a20c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.name-aftergreet": {
+      "value": "Schön, dich kennenzulernen, ",
+      "englishChecksum": "449c482d1c32c925e71a1701baa168e8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.email-label": {
+      "value": "E-Mail-Adresse",
+      "englishChecksum": "ba7350498760bbe39794cd6ec8fc8925",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.contact.email-placeholder": {
+      "value": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+      "englishChecksum": "c0ae895247f57f79d19ee9e798f25610",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.title": {
+      "value": "Erzähl uns mehr",
+      "englishChecksum": "09c2a3596e6729c4f4a6ec20de15526e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.subtitle": {
+      "value": "Bitte geben Sie Details zu Ihrer Anfrage an",
+      "englishChecksum": "fd9e1e094e9c8a6f9c885aa367c35ee4",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.subject-label": {
+      "value": "Betreff",
+      "englishChecksum": "2d02e0d22eb62b59e8dde6c02653616b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.subject-placeholder": {
+      "value": "Kurze Zusammenfassung deines Problems",
+      "englishChecksum": "9c8b0b343404c1670857ad62e7c1bd4b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.message-label": {
+      "value": "Nachricht",
+      "englishChecksum": "990db24ccf938fca7c8af11cdd6dcbcd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.details.message-placeholder": {
+      "value": "Beschreibe dein Problem im Detail. Füge alle Fehlermeldungen, Schritte zur Reproduktion oder relevante Informationen hinzu.",
+      "englishChecksum": "b3022817f8bb16e09719ba8442687713",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.submit.title": {
+      "value": "Überprüfen und Absenden",
+      "englishChecksum": "398096a1a294f9a6b5ac96c1fe9fcb4f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.submit.subtitle": {
+      "value": "Bitte überprüfe deine Angaben, bevor du sie abschickst",
+      "englishChecksum": "18c32f9f5499e036095eda271abba17e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.steps.submit.placeholder": {
+      "value": "Erzähl uns mehr darüber, wobei du Hilfe benötigst...",
+      "englishChecksum": "ec4c4d0bf6a3369a632f3b763c4ff03b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.name-required": {
+      "value": "Name wird benötigt",
+      "englishChecksum": "96eb2d4b40352ecde73f7ff042d262ca",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.name-min-length": {
+      "value": "Der Name muss mindestens 2 Zeichen lang sein",
+      "englishChecksum": "ffa66c58e0554d59af7ab857da2dc705",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.email-required": {
+      "value": "E-Mail-Adresse ist erforderlich",
+      "englishChecksum": "c1630f1ae479e6852dba3ffb79644a1d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.email-invalid": {
+      "value": "Bitte gib eine gültige E-Mail-Adresse ein",
+      "englishChecksum": "0e046e540d94a1ec13d8012401f81a05",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.subject-required": {
+      "value": "Betreff ist erforderlich",
+      "englishChecksum": "5eaacb56f099d60bbb8320ac0c79f388",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.message-required": {
+      "value": "Nachricht ist erforderlich",
+      "englishChecksum": "2f511e22f96bc95b20b9ac8124e0f1d2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.category-required": {
+      "value": "Bitte wähle eine Kategorie aus",
+      "englishChecksum": "3597994dfe43d1aa9455aa3453d821ce",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.validation.default": {
+      "value": "Dieses Feld ist erforderlich",
+      "englishChecksum": "ed7ebdc9da59ca13b8504775dc202e3a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.success.title": {
+      "value": "Ticket erfolgreich übermittelt!",
+      "englishChecksum": "2f1e112aa4c7cf4b93deb8c6b8442726",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.success.message": {
+      "value": "Vielen Dank, dass Sie uns kontaktiert haben. Wir haben Ihr Support-Ticket erhalten und werden uns so schnell wie möglich bei Ihnen melden.",
+      "englishChecksum": "6928220c3a6e2a8a5d02c9aef9ae9ff8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.success.button": {
+      "value": "Ein weiteres Ticket einreichen",
+      "englishChecksum": "0c8ca982e8a5524c3a16a0cefd9e14c4",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.error.title": {
+      "value": "Einsendung fehlgeschlagen",
+      "englishChecksum": "720e65135ca2fb6888ab449b423fb71c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.error.message": {
+      "value": "Beim Absenden Ihrer Anfrage ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+      "englishChecksum": "039ea16a31a46b834c9cde6b8859dbb5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.form.error.button": {
+      "value": "Erneut versuchen",
+      "englishChecksum": "ea6099e7d78f055c00e117585c2ea4d8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.collapsed-text-for-contact": {
+      "value": "Kontakt zum Team",
+      "englishChecksum": "f916cc3e7005582298374eddf43b0461",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.expanded-title-for-contact": {
+      "value": "Hallo! 👋",
+      "englishChecksum": "34353db5d21b573f09ef381e2345f22c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.technical.label": {
+      "value": "🔧 Technischer Support",
+      "englishChecksum": "fbab0d239eaae001f8ac278bc993fd8a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.technical.description": {
+      "value": "Fehlerberichte, SDK/API, smart contracts, Integrationshilfe",
+      "englishChecksum": "952a0533dce9bf557f94342840ee4720",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.network.label": {
+      "value": "🌐 Netzwerk & testnet",
+      "englishChecksum": "feeeee8e23f83f847bef087913b4cf5f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.network.description": {
+      "value": "Explorer/Push Scan, RPC, Faucet, Donut testnet Probleme",
+      "englishChecksum": "1fddc2c200021d6d84ce0db2621d860c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.wallet.label": {
+      "value": "👛 Universelle Wallet",
+      "englishChecksum": "f0cc5f3c5ec17ae5ad0951d03f5f3cda",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.wallet.description": {
+      "value": "Push Wallet, universelle Kettenverbindung oder andere Probleme mit der Wallet",
+      "englishChecksum": "a1c77db08263a847bf64e6fdc0881747",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.identity.label": {
+      "value": "🪪 Konten & Identität",
+      "englishChecksum": "afc2575c1c07f2c1cc8622cbf1b60fdd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.identity.description": {
+      "value": "UEA/UOA, Signaturen, Fragen zur Zuordnung",
+      "englishChecksum": "b3c3a0d295524945c829b590d16abb06",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.security.label": {
+      "value": "🛡️ Sicherheit",
+      "englishChecksum": "315ed45b6122fd65ef00929f5cce65a2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.security.description": {
+      "value": "Sicherheitslücken-Berichte, verantwortungsvolle Offenlegung (security@push.org)",
+      "englishChecksum": "3f1cea031e656f6b88520cb9b6009ca3",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.general.label": {
+      "value": "💬 Allgemeine Anfrage",
+      "englishChecksum": "6ced5164af76e0d0501a254e08ca7d48",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.general.description": {
+      "value": "Fragen, Feedback, andere Themen",
+      "englishChecksum": "48227077a4f3ca8215c3b49e3c334409",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.partnerships.label": {
+      "value": "🤝 Partnerschaften & Integrationen",
+      "englishChecksum": "bfa61a9a15d149cd14450d9f424c349a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.partnerships.description": {
+      "value": "BD, Ökosystem-Integrationen (Wallets, Infrastruktur, Börsen, Protokolle)",
+      "englishChecksum": "9b1482992e5c1d082aeade5319ccb995",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.grants.label": {
+      "value": "💰 Grants & Ökosystem-Programme",
+      "englishChecksum": "3dc3f13daac2d92e259c4764e9e1f472",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.grants.description": {
+      "value": "BRB, Bootcamp, Zuschüsse, Finanzierungsanfragen",
+      "englishChecksum": "ab35471063cd6eb5ccf216a459522993",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.media.label": {
+      "value": "📰 Media & Presse",
+      "englishChecksum": "2d2ff8dee827e83c36a11ec23a0dc997",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.media.description": {
+      "value": "Interviews, Erklärungen, Materialien, Faktenprüfungen",
+      "englishChecksum": "d7666159f14dd03c5c49537b57670999",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.events.label": {
+      "value": "🎤 Speaking & Events",
+      "englishChecksum": "11f4d3767efd4d780ed616a4a598b88f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.events.description": {
+      "value": "Vorträge, Workshops, Hackathons, Sponsoring",
+      "englishChecksum": "5bb1d8b1fd21f111cce2faf5aeb4c344",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.careers.label": {
+      "value": "👩‍💻 Karriere",
+      "englishChecksum": "a29cbfb405a2b47cac8d5ce22823a0ae",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.careers.description": {
+      "value": "Offene Stellen, Praktika, Auftragsmöglichkeiten",
+      "englishChecksum": "8d1fd6e3fc076da62869ecdde525187d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.validators.label": {
+      "value": "🧡 Validator / Node Operators",
+      "englishChecksum": "9c2da4a2cfd348fca3b00f637a531180",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.validators.description": {
+      "value": "Interesse von Betreibern, RPC-Anbietern, Infrastruktur-Partnern",
+      "englishChecksum": "61f29c0b44939dd0bd6e4091effae178",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.legal.label": {
+      "value": "⚖️ Legal & Compliance",
+      "englishChecksum": "e510ad917c81d624c37b3a1757ca380c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.typeform-support.categories.legal.description": {
+      "value": "Markenrechte, Datenanfragen, Vereinbarungen",
+      "englishChecksum": "101eb780ca04d14bc1cd299d4447fd8e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.navigation-aria-label": {
+      "value": "Breadcrumb-Navigation",
+      "englishChecksum": "cdb3b9776c2647a6e81a049b20e3dd51",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.home-text": {
+      "value": "Startseite",
+      "englishChecksum": "4f113e6636baf9e2e6ab5f9a2d3031d2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.navigate-to-aria-label": {
+      "value": "Zu {{page}} navigieren",
+      "englishChecksum": "793fb4605c34dec7d79088460d48a56f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.go-to-title": {
+      "value": "Zur {{page}}-Seite gehen",
+      "englishChecksum": "7a5f7355369a5985068c4a459332d2ea",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.current-page-aria-label": {
+      "value": "Aktuelle Seite: {{page}}",
+      "englishChecksum": "e9dfff0a88ea373f10a6a0a8beaae7bf",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.breadcrumbs.separator-aria-label": {
+      "value": "Breadcrumb separator",
+      "englishChecksum": "a0f7735a7e5e10d4c3846451d452687f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explainer.prepend": {
+      "value": "Springe zu ",
+      "englishChecksum": "561522ea1c2cf9c4cb3bba51501a7046",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explainer.append": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explore-collection.explore-card.image-prepend": {
+      "value": "Cover für ",
+      "englishChecksum": "d4e51b109aa0ee1c33829885dfb23d92",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explore-collection.explore-card.image-append": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explore-collection.explore-card.link-prepend": {
+      "value": "Explore ",
+      "englishChecksum": "190acb1b7f4654d5d01176e2715b8230",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explore-collection.explore-card.link-append": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.explore-collection.explore-card.cta-title": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.more-posts.title": {
+      "value": "Mehr von Push Chain",
+      "englishChecksum": "692049673b5cf4a4bb4cf07fcf936fc4",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.more-posts.follow-button": {
+      "value": "Folgen",
+      "englishChecksum": "2fe47cae19519a3562b108e94e4f5c12",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.more-posts.read-more": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.list.recent-updates": {
+      "value": "Neueste Updates",
+      "englishChecksum": "f695c83ca9b53f832abc63176d636139",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.list.page-title": {
+      "value": "Seite {{page}}",
+      "englishChecksum": "e5ab5388fdb433130458fb7e9d74b4a2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.paginator.nav-aria-label": {
+      "value": "Navigation zur Blog-Listenseite",
+      "englishChecksum": "8342ae25d3c8a491e45840ad1693880f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.paginator.newer-entries": {
+      "value": "Neuere Einträge",
+      "englishChecksum": "c4046f18eb4988bf13b9eba78fdda702",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.paginator.older-entries": {
+      "value": "Ältere Einträge",
+      "englishChecksum": "a8b6857dca6cbfd17b35f7bc7d75b154",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.share-title": {
+      "value": "Werde Teil der Diskussion und teile diesen Artikel",
+      "englishChecksum": "4e3b02069b627a2e5083d3e5af8c7ded",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.share-button": {
+      "value": "Teilen",
+      "englishChecksum": "d6f754ae95158abf97ac1455ec03dd1c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.share-modal-title": {
+      "value": "Teilen",
+      "englishChecksum": "d6f754ae95158abf97ac1455ec03dd1c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.copy-link": {
+      "value": "Link kopieren",
+      "englishChecksum": "c37cab31be2e428e02608826ce5f3c4d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.about-title": {
+      "value": "Über Push Chain",
+      "englishChecksum": "56a560352a1a64e27ff8e376b9df8040",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.about-description": {
+      "value": "Push Chain ist die erste echte universelle Blockchain, die Fragmentierung über alle Chains hinweg beseitigt. Sie ermöglicht Entwicklern, einmalig zu deployen und sofort für Nutzer auf jeder Chain verfügbar zu sein, egal ob EVM oder Non-EVM (einschließlich Ethereum, Solana, Bitcoin und andere). Sie ist eine 100% EVM-kompatible Proof of Stake (PoS) Chain, die es Nutzern ermöglicht, mit den auf Push Chain deployten Apps von jeder Chain aus zu interagieren, so wie sie es nativ auf ihrer eigenen Chain tun würden.",
+      "englishChecksum": "5a9bdce5b5220e99b2cd9d0d3ed530a7",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.social-twitter": {
+      "value": "Twitter",
+      "englishChecksum": "ed2643585105e084dad17fbf7a73f35b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.social-discord": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.social-youtube": {
+      "value": "YouTube",
+      "englishChecksum": "9dfa8705879b6d276a5c2024e4cdbcab",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "components.blog.footer-item.social-linkedin": {
+      "value": "Linkedin",
+      "englishChecksum": "f5cf4ee73b3b81298d6f8949271c2c23",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.rewards-notification.title": {
+      "value": "Donut Testnet Closed Beta ist live!",
+      "englishChecksum": "a53ca5b1d208295d71a04e774247be39",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.rewards-notification.description": {
+      "value": "Erhalten Sie einen exklusiven Blick auf Testnet, Donut, erstellen Sie universelle apps und gewinnen Sie Preise!",
+      "englishChecksum": "4a4561fbdd8c6761d8759b0b0ec592ee",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.rewards-notification.image-alt": {
+      "value": "Push Chain Testnet Belohnungen - Erstelle universelle Apps",
+      "englishChecksum": "7e5ffae122997a63a81105184b921cb1",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.rewards-notification.close-button-title": {
+      "value": "Belohnungsbenachrichtigung schließen",
+      "englishChecksum": "c7e1a194c6461bcf120387027c56b77f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.rewards-notification.close-button-aria-label": {
+      "value": "Push Chain Belohnungsbenachrichtigung verwerfen",
+      "englishChecksum": "d1b38e918d33ff3507c307bf82293790",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.title": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Projekt G.U.D. Deployathon ist LIVE! Deploye Apps, gewinne $5000",
+      "englishChecksum": "85d2dccbfcb4fb47e4b41cda5647a895",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Gehe zu Universal & Deploy",
+      "englishChecksum": "82e3cba5136160805edc5aa2d07c3ef9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Project G.U.D deployathon ist LIVE",
+      "englishChecksum": "650ed2b03f41272ff63abd29d428c180",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "Project G.U.D deployathon ist LIVE. Du kannst es dir hier ansehen",
+      "englishChecksum": "0dd2ea4ac7f77e164ec554e5b5e914ae",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "Push Chain Testnet Donut - Universal Blockchain",
+      "englishChecksum": "36296d1d62073925976682f0c22235cc",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.close-button-title": {
+      "value": "Testnet-Benachrichtigung schließen",
+      "englishChecksum": "b00c4c621e10fb69a9a804c17dddf363",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.close-button-aria-label": {
+      "value": "Push Chain Testnet-Benachrichtigung schließen",
+      "englishChecksum": "65c5b2f7da4921ffc01e55264c0a78a6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.chain-notification.container-aria-label": {
+      "value": "Push Chain testnet Benachrichtigung",
+      "englishChecksum": "6ea89b16a22db1f97495cf2dc5d4d1ff",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain Testnet ‘Donut’ ist jetzt live!",
+      "englishChecksum": "0681d4c70dc98e29a4827b403cef19c5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.learn-more-text": {
+      "value": "Universal Apps erkunden",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "Universal Apps entdecken",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.dismiss-button-title": {
+      "value": "Ankündigung schließen",
+      "englishChecksum": "cd8059d4a0d2dfe57e5c3460f468f71a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.dismiss-button-aria-label": {
+      "value": "Ankündigungsleiste schließen",
+      "englishChecksum": "412ee7c423ec52309e48e8f5f3bcc1b9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.container-aria-label": {
+      "value": "Website-Ankündigung",
+      "englishChecksum": "0d6c179aa38c57ebb412d8f668eec2fc",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.info-bar.star-icon-alt": {
+      "value": "Ankündigungs-Stern-Symbol",
+      "englishChecksum": "5c9daef6a28ede1a8faeb3ba3335629b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.message": {
+      "value": "Push Metamask Snap ist jetzt live,",
+      "englishChecksum": "87f374d21146e6f547adf53207877fd9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.know-more-text": {
+      "value": "Los geht's!",
+      "englishChecksum": "795a06de1ab31ad3910fbf6d1979f087",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.know-more-title": {
+      "value": "Starte mit Push Metamask Snap",
+      "englishChecksum": "34f7a308c899ea1db4fa9428ee0924d7",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.close-button-title": {
+      "value": "Hinweis schließen",
+      "englishChecksum": "e9ae0c8626c231d2461aa60b0ce6c6ab",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.close-button-aria-label": {
+      "value": "Push Metamask Snap Warnung schließen",
+      "englishChecksum": "39f94fad60c66eea0480c85966283f08",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "notifications.alert.container-aria-label": {
+      "value": "Push Metamask Snap announcement",
+      "englishChecksum": "c9b0fb5c837df05308c31f13fe5d64ed",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.meta.logo-aria-label": {
+      "value": "Push Chain - Zur Startseite navigieren",
+      "englishChecksum": "63893ae4c4e6e1ba5d7decf18dbf33bd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.meta.language-icon-alt": {
+      "value": "Symbol für die Sprachauswahl",
+      "englishChecksum": "ae19220a4e348cf0b4bc2fa889fa336d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.meta.hamburger-menu-alt": {
+      "value": "Navigationsmenü öffnen",
+      "englishChecksum": "0d9b5d8f08a3bac6b985456015616779",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.meta.testnet-badge-alt": {
+      "value": "Push Chain Testnet Donut - Testnet-Status anzeigen",
+      "englishChecksum": "ea6cea5b9c6ee6b58bd86c276f700d01",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.logo.imagealt": {
+      "value": "Bild des Push Chain Logos",
+      "englishChecksum": "8585049215d30970a86f7de48e6e7533",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.logo.imagetitle": {
+      "value": "Push Chain Logo",
+      "englishChecksum": "d51524e28b04df62f28eb9db86eed476",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.logo.ctatitle": {
+      "value": "Zur Push Chain Homepage navigieren",
+      "englishChecksum": "7f510f0324630fba8afdd9ba2af8e1a9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.title": {
+      "value": "Testnet",
+      "englishChecksum": "620d7ace673e1ed914fd263c26d67a0f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.aria-label": {
+      "value": "Testnet Bereich",
+      "englishChecksum": "7fedd86e4c329774f062b2cda3954184",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link1.text": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link1.subtext": {
+      "value": "Block explorer für Push Chain",
+      "englishChecksum": "5a08122abf556f4a05f27f09b24c959b",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link1.title": {
+      "value": "Erkunde Push Chain Testnet Transaktionen und Blöcke auf Push Scan",
+      "englishChecksum": "564e23768d6c6cc5c41112c51813893c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link2.text": {
+      "value": "Faucet",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link2.subtext": {
+      "value": "Testnet-Token erhalten",
+      "englishChecksum": "a8a3784c29d4eea8fa812cbf02953422",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link2.title": {
+      "value": "Hol dir kostenlose Testnet-Token für die Push Chain-Entwicklung",
+      "englishChecksum": "6a34a93d935cf2460955d1eef57d8a9e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link3.text": {
+      "value": "Ökosystem",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link3.subtext": {
+      "value": "Sieh dir Apps an, die auf Push Chain gebaut wurden",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.testnet.link3.title": {
+      "value": "Sieh dir Apps an, die auf Push Chain gebaut wurden",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.title": {
+      "value": "Entwickler",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.aria-label": {
+      "value": "Bereich für Entwickler",
+      "englishChecksum": "1a4bcf84369651268c763c567a2241e8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link1.text": {
+      "value": "Loslegen",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link1.subtext": {
+      "value": "Einführung in die Entwicklung auf Push Chain",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link1.title": {
+      "value": "Start building universal apps on Push Chain - Developer documentation",
+      "englishChecksum": "9cd7373a2c0cfee16a4f74e1fcba4c3f",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link2.text": {
+      "value": "Schnellstart",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link2.subtext": {
+      "value": "Richte eine Entwicklungsumgebung in Sekundenschnelle ein",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link2.title": {
+      "value": "Schnellstartanleitung – Richten Sie die Push Chain Entwicklungsumgebung sofort ein",
+      "englishChecksum": "ba04f436d4b03c75dd4602898ef0e89d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link6.text": {
+      "value": "Ökosystem",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link6.subtext": {
+      "value": "Apps auf Push Chain entdecken",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link6.title": {
+      "value": "Sieh dir Apps an, die auf Push Chain gebaut wurden",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link3.text": {
+      "value": "Tutorials",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link3.subtext": {
+      "value": "Schritt-für-Schritt-Anleitungen zum Entwickeln mit Push",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link3.title": {
+      "value": "Lerne mit praktischen Tutorials – Baue deine erste universelle App auf Push Chain",
+      "englishChecksum": "18f63276aa1ba0784e1949caab2d46b3",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link4.subtext": {
+      "value": "Sieh dir den Kerncode und Open-Source-Tools an",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link4.title": {
+      "value": "Entdecke den Quellcode und die Entwicklungstools von Push Chain auf GitHub",
+      "englishChecksum": "db0c0b6be4baad84000fc2ccd6d5acc5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link5.text": {
+      "value": "Entwickler Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link5.subtext": {
+      "value": "Verbinde dich mit der Entwickler-Community",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.developers.link5.title": {
+      "value": "Trete der Push Chain Entwickler-Community auf Discord für Unterstützung und Zusammenarbeit bei.",
+      "englishChecksum": "c8282e7543830164856b5e85823cafa4",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.title": {
+      "value": "Community",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.aria-label": {
+      "value": "Community Bereich",
+      "englishChecksum": "4dc0bb44ddc968a192d6f93490962fe2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link7.text": {
+      "value": "Ökosystem",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link7.subtext": {
+      "value": "Entdecke Apps, die auf Push Chain aufgebaut sind",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link7.title": {
+      "value": "Entdecke Apps, die auf Push Chain aufgebaut sind",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link1.text": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link1.subtext": {
+      "value": "Entdecke detaillierte Einblicke in die Funktionen",
+      "englishChecksum": "281dcdaecfa7c9cdd4841358e6ee8b30",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link1.title": {
+      "value": "Entdecken Sie die umfassende Dokumentation und Feature-Anleitungen von Push Chain",
+      "englishChecksum": "df25b52080d036855b84fab2901477c3",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link2.text": {
+      "value": "LFPush",
+      "englishChecksum": "6b8079d546c919f440c7a6bc201b3d85",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link2.subtext": {
+      "value": "Ausgewählte Tweets von der Push Community #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link2.title": {
+      "value": "Ausgewählte Tweets von der Push Community #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link3.text": {
+      "value": "Tokenomics",
+      "englishChecksum": "ace5383af81a2e8353e180ac3f5bbc90",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link3.subtext": {
+      "value": "Nativer Token, der alles auf Push Chain antreibt",
+      "englishChecksum": "9dfbae7f9f30c6d90ca09e6f0fb06b09",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link3.title": {
+      "value": "Erfahren Sie mehr über die Push Chain Tokenomics und den Nutzen des $PC Tokens",
+      "englishChecksum": "180ece5292c4ac47d3bd251621cb0e3e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link4.text": {
+      "value": "X/Twitter",
+      "englishChecksum": "f64b3315deacb9e466d156cd803dcf6a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link4.subtext": {
+      "value": "Verfolge Updates und Neuigkeiten aus dem Ökosystem",
+      "englishChecksum": "142c42fbbeeffa1fae846c61ac974891",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link4.title": {
+      "value": "Folgen Sie Push Chain auf X (Twitter) für die neuesten Updates und Ankündigungen",
+      "englishChecksum": "da4cff94f96670c68a4c6b2c5ff9d4c7",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link5.text": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link5.subtext": {
+      "value": "Tausche dich mit der Community aus, entwickle gemeinsam und genieße die Atmosphäre",
+      "englishChecksum": "1605521dea8b82f11e50b5477f70d2f5",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link5.title": {
+      "value": "Trete der Push Chain Community auf Discord für Diskussionen und Support bei.",
+      "englishChecksum": "b59dae260a62f983fbef58ba012d66e8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link6.text": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link6.subtext": {
+      "value": "Werde Teil der Community und bleibe auf dem Laufenden",
+      "englishChecksum": "e334cdf22cefb6f9761fd9e028dddbb2",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.community.link6.title": {
+      "value": "Verbinde dich mit der Push Chain Community auf Telegram für aktuelle Updates",
+      "englishChecksum": "be97c8c44524c9c013f0a98d5949e028",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.title": {
+      "value": "Ressourcen",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.aria-label": {
+      "value": "Ressourcen",
+      "englishChecksum": "d390e430d425ff71c19316a82a35310d",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link1.text": {
+      "value": "Blog",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link1.subtext": {
+      "value": "Updates, tiefe Einblicke und Entwicklergeschichten",
+      "englishChecksum": "894fe0ed69b622b01b96028aed574353",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link1.title": {
+      "value": "Lies den Push Chain Blog für die neuesten Updates, technischen Einblicke und Entwicklergeschichten",
+      "englishChecksum": "aacf7687ca27f0ea51ea54aced94cdd6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link2.text": {
+      "value": "Litepaper",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link2.subtext": {
+      "value": "Die Vision und die Technologie, vereinfacht",
+      "englishChecksum": "60bf9f10efd131462bdccb11b76ac9f9",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link2.title": {
+      "value": "Lies den Push Chain Litepaper – vereinfachte Vision und technischer Überblick",
+      "englishChecksum": "2bffe0ddae486f2f7b2f1ee44b1bc17a",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link3.text": {
+      "value": "FAQ",
+      "englishChecksum": "e2c071f0eb807b08c405cf69047e3fe7",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link3.subtext": {
+      "value": "Schnelle Antworten auf häufig gestellte Fragen",
+      "englishChecksum": "f7d51e9d7bd3370e2929d15c3d678fd3",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.resources.link3.title": {
+      "value": "Durchstöbern Sie häufig gestellte Fragen zu Push Chain",
+      "englishChecksum": "c7b5ca35693342e84b6a2bab24c375db",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.language.title": {
+      "value": "Sprache",
+      "englishChecksum": "9a5e47e5d049ebe6b58467336720ac15",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.language.aria-label": {
+      "value": "Sprachauswahl Dropdown",
+      "englishChecksum": "907a650b1ffbe812cefc4dda4daaf306",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.app-button.text": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.app-button.title": {
+      "value": "Zugang zu Push Portal - Verdiene Punkte als Entwickler, Nutzer oder Validator",
+      "englishChecksum": "858c2bb21efab2e7d676220e9a8299df",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.title": {
+      "value": "Entdecken",
+      "englishChecksum": "38d96b84538f99b5e4b6924ba5b95618",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.aria-label": {
+      "value": "Bereich erkunden",
+      "englishChecksum": "f31ed6ab73b37416ada9df7c8722ad50",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.link1.text": {
+      "value": "Loslegen",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.link1.subtext": {
+      "value": "Einführung ins Entwickeln auf Push Chain",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.link1.title": {
+      "value": "Fang mit dem Aufbau an",
+      "englishChecksum": "fd750b6a81c364f6757a0675ad962472",
+      "lastUpdated": "2025-11-14T19:27:06.053Z"
+    },
+    "header.explore.link2.text": {
+      "value": "Schnellstart",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link2.subtext": {
+      "value": "Richten Sie Ihre Entwicklungsumgebung in Sekundenschnelle ein",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link2.title": {
+      "value": "Schnellstart",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link3.text": {
+      "value": "Tutorials",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link3.subtext": {
+      "value": "Schritt-für-Schritt-Anleitungen, um mit Push zu entwickeln",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link3.title": {
+      "value": "Lerne mit Tutorials",
+      "englishChecksum": "c3d5ba0195fe8331c744bb7ab7e8b4b0",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link4.subtext": {
+      "value": "Kerncode und Open-Source-Tools ansehen",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link4.title": {
+      "value": "Push Chain erkunden",
+      "englishChecksum": "248c3d5339f141cf6b757e0599fb45eb",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link5.text": {
+      "value": "Entwickler Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link5.subtext": {
+      "value": "Verbinde dich mit der Entwickler-Community",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link5.title": {
+      "value": "Discord beitreten",
+      "englishChecksum": "c3e83e46051a8285bdecea1338300499",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link6.text": {
+      "value": "Beispiele erkunden",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link6.subtext": {
+      "value": "Beispiele erkunden",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "header.explore.link6.title": {
+      "value": "Beispiele erkunden",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.054Z"
+    },
+    "pages.lfpush.seo.twitter-title": {
+      "value": "Lassen wir Pushen | Gemeinschaftsinitiative",
+      "englishChecksum": "a74bc769352dc913ac90019b078b3fe7",
+      "lastUpdated": "2025-11-14T20:16:14.320Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title": {
+      "value": "Lassen Sie uns universelle Apps aufbauen 💪",
+      "englishChecksum": "663a142eb5f03be5205014b31403abb6",
+      "lastUpdated": "2025-11-14T20:16:16.596Z"
+    },
+    "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-distribution": {
+      "value": "# Tokenverteilung Details\n\nDie totale Versorgung von Push Chain-Tokens wird auf **10 Milliarden** vorgeschlagen, verteilt wie folgt:\n\n![Push Chain Tokenomics](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Push Chain Tokenomics Vesting Details](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. Airdrop-Verteilungen beginnen bei TGE, finden jedoch im Laufe mehrerer Saisons statt.\n2. Core Contributors haben eine Verzögerung von 12 Monaten und anschließend 24-monatige Verringerung.\n3. Push Labs Treasury hat eine 36-monatige Verringerung.\n4. Investoren haben eine lineare 24-monatige Verringerung.\n5. Community und Ecosystem Reserves hat bei TGE eine Freigabe von 13,5%, gefolgt von einer 36-monatigen Verringerung.\n\n<br />",
+      "englishChecksum": "712dd1d7d10eab809b9b943484336904",
+      "lastUpdated": "2025-11-14T20:16:25.478Z"
+    },
+    "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
+      "value": "### Wie unterscheidet sich das von Brücken oder Messaging-Layers?\n\n**Kurze Antwort**: Push ist, wo deine App läuft. Brücken/Messaging bewegen einfach nur Token oder Nachrichten zwischen Ketten und machen alles für Nutzer und Entwickler komplizierter.\n\n- **Einheitlicher Heimatort vs viele Kopien**  \n\tBei Brücken/Messaging führst du pro Kette aus und synchronisierst via Nachrichten. Auf Push führst du einmal aus; jeder trifft auf den gleichen Vertrag und gemeinsamen Zustand.\n\n- **Keine gehüllten Assets oder verpflichtende Überführung**  \n\tNutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir kümmern uns unter der Haube um Routing und Gebührsumwandlung.\n\n- **Vereinheitlichte Identität und Verifizierung**  \n\tWir akzeptieren Signaturen von jeder Wallet/Kette und führen sie demselben Nutzer auf Push zu — nicht verwahrend.\n\n- **Weniger bewegliche Teile**  \n\tKein Cross-Chain-Genehmigungstanz, keine Gas-Token-Jagd, keine Klebstoffverträge zum Synchronisieren.\n\n- **Brücken bringen Komplexität mit. Kettennative Interoperabilität löst sie**  \n\tBrücken erfordern komplexe Ingenieurarbeit, Zeit, Kosten für Überprüfung und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach so, wie deine App nativ davon profitiert.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt — sogar wenn Nutzer das nicht tun.\n\n---",
+      "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
+      "lastUpdated": "2025-11-14T20:16:39.140Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "Baue und führe Apps auf der universellen Ausführungsschicht mit klaren Anleitungen und Beispielen aus.",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2025-11-14T20:16:40.887Z"
+    },
+    "pages.tos.seo.og-description": {
+      "value": "Rechtliche Bestimmungen zur Nutzung unserer Websites, Apps und Entwicklerwerkzeuge.",
+      "englishChecksum": "9d071120c8c1e14b03af607cb3059de4",
+      "lastUpdated": "2025-11-14T20:16:42.589Z"
+    },
+    "components.short-faq-snippet.qnas.qna4.answer": {
+      "value": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Brücken/Nachrichtenübertragung bewegen nur Token oder Nachrichten zwischen Ketten und komplizieren alles für den Benutzer und Entwickler.</1><1><2>Einheitliche Heimat vs viele Klone.</2> Bei Brücken/Nachrichtenübertragung werden sie pro Kette bereitgestellt und über Nachrichten synchronisiert. Auf Push werden sie einmal bereitgestellt; jeder trifft auf denselben Vertrag und geteilten Zustand.</1><1><2>Keine eingekapselten Assets oder verpflichtende Überführungen.</2> Benutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir kümmern uns unter der Haube um die Routing- und Gebührsumwandlung.</1><1><2>Einheitliche Identität und Verifikation.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette und attribuieren sie demselben Benutzer auf Push - nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Ketten-Zustimmungs-Tanz, kein Gas-Token-Jagen, keine Klebstoffverträge zur Synchronisierung.</1><1><2>Brücken führen Komplexität ein. Kettennatives Interop löst es.</2> Brücken erfordern komplexen Ingenieuraufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interop funktioniert einfach, da deine App sie nativ erbt.</1><1>Ergebnis: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt - selbst wenn Benutzer es nicht tun.</1>",
+      "englishChecksum": "db02bf29481e064dd0861942251e253c",
+      "lastUpdated": "2025-11-14T20:16:55.011Z"
+    },
+    "components.short-support-snippet.qnas.qna1.question": {
+      "value": "Ich kann meinen Geldbeutel nicht verbinden. Was sollte ich versuchen?",
+      "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
+      "lastUpdated": "2025-11-14T20:16:57.122Z"
+    }
+  }
+}
