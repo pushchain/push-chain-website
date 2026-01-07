@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[14883],{
+
+/***/ 578480:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"metadata":{"permalink":"/push-chain-website/pr-preview/pr-1157/blog/page/27","page":27,"postsPerPage":10,"totalPages":44,"totalCount":432,"previousPage":"/push-chain-website/pr-preview/pr-1157/blog/page/26","nextPage":"/push-chain-website/pr-preview/pr-1157/blog/page/28","blogDescription":"Blog","blogTitle":"Blog"}}');
+
+/***/ })
+
+}]);
