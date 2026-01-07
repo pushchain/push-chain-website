@@ -1790,7 +1790,7 @@ function _createMdxContent(props) {
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
-        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Signer. \n// If not done, then check out Create Universal Signer.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalSigner, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Signer.\n// If not done, then check out Create Universal Signer.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalSigner, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(PushAPIReference/* default */.A, {
       children: (0,jsx_runtime.jsxs)(_components.table, {
@@ -2112,7 +2112,7 @@ await main().catch(console.error)
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
-        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account. \n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalAccount, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account.\n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient = await PushChain.initialize(universalAccount, {\n  network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,\n});\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
       summary: "Live Playground: Initialize Read-only Push Chain Client",
@@ -2208,7 +2208,7 @@ await main().catch(console.error);
     }), "\n", (0,jsx_runtime.jsx)(_components.pre, {
       children: (0,jsx_runtime.jsx)(_components.code, {
         className: "language-typescript",
-        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account. \n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient2 = await pushChainClient1.reinitialize(newSignerOrAccount, {\n  // pass new parameters if needed\n});\n"
+        children: "// Import @pushchain/core and ethers\n// Ensure you have created Universal Account.\n// If not done, then check out Create Universal Account under Utility Functions.\n\n// Initialize Push Chain Client\nconst pushChainClient2 = await pushChainClient1.reinitialize(newSignerOrAccount, {\n  // pass new parameters if needed\n});\n"
       })
     }), "\n", (0,jsx_runtime.jsx)(Details/* default */.A, {
       summary: "Live Playground: Reinitialize Push Chain Client",
@@ -2242,7 +2242,7 @@ async function main() {
 
     // Reinitialize with SAME signer, change only ONE option (blockExplorers)
     const client2 = await client1.reinitialize(signer, {
-      blockExplorers: { 
+      blockExplorers: {
         [PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT]: ['https://custom-explorer.push.network'] },
       }
     );
