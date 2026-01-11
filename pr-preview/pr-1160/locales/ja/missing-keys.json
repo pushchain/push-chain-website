@@ -1,0 +1,1845 @@
+{
+  "lastUpdated": "2025-11-14T20:21:19.516Z",
+  "keys": {
+    "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
+      "value": "### Push Chainで何が構築できますか？\n\nPush Chainはシームレスな相互運用性をもたらし、すべてのL1、L2、& L3を統合するため、イノベーションと相互運用性のための遊び場となるでしょう。既存のWeb3ユースケースを構築できます。\n\n![Push Chainの主要なユースケース](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nまたは、Web3を改善し、革新的なものを生み出すことができます。\n\n![Push Chainの消費者向けユースケース](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nまたは、人気のあるappの例を見て、インスピレーションを得ることができます。\n\n![Push Chainの人気のあるappの例](/assets/website/chain/knowledge/tokenomics/popularappexamples.webp)",
+      "englishChecksum": "a53d3f78e3dc0a5c4e18ed22febbeb9f",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.title": {
+      "value": "ナレッジベース — ガイド、FAQ & チュートリアル",
+      "englishChecksum": "11ca32d20dd7dda0c862404dc406d5c3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.description": {
+      "value": "Push Chain のコンセプト、FAQ、使い方、エコシステムリソースの出発点です。Push Chain の使用方法をわかりやすく、専門用語を使わないガイドでご紹介します。",
+      "englishChecksum": "b1adb99e30a753bea5840af2e8409758",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.og-title": {
+      "value": "Push Chain Knowledge Base - ガイド & FAQ",
+      "englishChecksum": "6081aa0851417128a036d9cd10b0a511",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.og-description": {
+      "value": "Push Chain に関する概念、段階的な方法、および一般的な質問への回答。",
+      "englishChecksum": "67634481d8ba9a90c212c518d7c9ecd6",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.twitter-title": {
+      "value": "ナレッジベース - ガイド & FAQ",
+      "englishChecksum": "f57f26059180d8d6754b8f1de1b6a619",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.seo.twitter-description": {
+      "value": "Push Chainに関するクイックガイド、FAQ、ハウツー。専門用語なしで分かりやすく解説します。",
+      "englishChecksum": "92d7202d6e31c52380bf8a43c966cc54",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.title": {
+      "value": "ナレッジベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.description.highlighted": {
+      "value": "Push Chain は、すべてのチェーン間の断片化を排除するように設計された真のユニバーサル ブロックチェーンです。",
+      "englishChecksum": "9525981fc5a9c13c185a29fb06480498",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.description.developers": {
+      "value": "開発者",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.description.developers-text": {
+      "value": "一度デプロイすれば、すべてのサポートされているEVMおよび非EVMチェーンと瞬時に互換性を持ちます。",
+      "englishChecksum": "71b2e36e55906af8b1caf76808ea3171",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.description.users": {
+      "value": "ユーザー",
+      "englishChecksum": "a6d756f02d69a011f1a76f5dbc8f3ac6",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.description.users-text": {
+      "value": "どのチェーンから来ても、同じappを使えます。",
+      "englishChecksum": "ea44ddb598243803d9758a771b794c28",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.long": {
+      "value": "Push Chain testnet の最新情報を受け取る",
+      "englishChecksum": "58629935b0ccf30f1d870903f8339e0f",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.short": {
+      "value": "Push Chain Testnet",
+      "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Push Chain testnet の公開情報をいち早くお届けします。メールニュースレターにご登録いただき、限定アップデートを入手してください。",
+      "englishChecksum": "d304be40858d656900a782db6475f3f8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.footer.description": {
+      "value": "Push Chain で、どのブロックチェーンでも使いやすくシームレスなアプリ体験を構築しましょう。",
+      "englishChecksum": "ab374d1cf0f5e6677282aa1a97a13102",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.hero-section.footer.cta.text": {
+      "value": "通知を受け取る",
+      "englishChecksum": "5ca0d06b42af8acf0dae4dc6560e3bb0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.title": {
+      "value": "リソース",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.title": {
+      "value": "Push Chain の基本",
+      "englishChecksum": "4512d45c12d36968dd4b4735b0ea10f9",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.subtitle": {
+      "value": "Push Chain の基本、革新性、そして必要な理由について学びましょう",
+      "englishChecksum": "1dea6951f02f77b71408f07e0355bed9",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.ctatitle": {
+      "value": "もっと詳しく",
+      "englishChecksum": "0f827b5960bd300c5033bd1f7be75f09",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.title": {
+      "value": "Push Chain で構築",
+      "englishChecksum": "98bebb4eb06e9298f123c1b72e10aae7",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "ユニバーサル app をどのように構築するか、それが何を可能にするか、そしてどのように始めるかについて深く掘り下げましょう！",
+      "englishChecksum": "e71d8755ade4356953c42893d5e8c6e3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Builders Assemble",
+      "englishChecksum": "cbe0e413f4f3228832b9ce7de92f0866",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.title": {
+      "value": "技術解説",
+      "englishChecksum": "7d767f9ff38d5cabab17de202bcd1428",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.subtitle": {
+      "value": "Push の仕組みを詳しく知りたいですか？それとも単なる好奇心旺盛な方ですか？どちらにしても、こんにちは！",
+      "englishChecksum": "20b765a3d60d8082c234a80d88114347",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.ctatitle": {
+      "value": "仕組みを見る",
+      "englishChecksum": "25c869c02797c1388cad7ad3917bfaa6",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.title": {
+      "value": "開発者向けドキュメント",
+      "englishChecksum": "b3727892fde9b92568ad8356d63b1b24",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.subtitle": {
+      "value": "早速本題に入りましょう！私はユニバーサルチェーンです…そしてあなたは開発者、正式にいきましょう！",
+      "englishChecksum": "d8938cbb8e3bef9cf4b3ad6ae0ea1b75",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.ctatitle": {
+      "value": "今すぐ構築",
+      "englishChecksum": "49cf0c392f12d991b816116d55c1d27c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.title": {
+      "value": "トークノミクスを探索",
+      "englishChecksum": "791cad865338cf9c166e2632f538e998",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.subtitle": {
+      "value": "私たちのトークノミクスの仕組みと、持続可能なネットワークを構築するためのインセンティブについて学びましょう",
+      "englishChecksum": "4450f23b63d4ebaf90815a7d1250097f",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.ctatitle": {
+      "value": "トークン設計について学ぶ",
+      "englishChecksum": "13143b07ad042d24a740accb12968e3e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.title": {
+      "value": "よくある質問",
+      "englishChecksum": "cde30a33b5e117f7a03e76d3272a4ef0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.subtitle": {
+      "value": "コミュニティからのよくある質問への回答が見つかる場所",
+      "englishChecksum": "8fd81508233b12be1e01dcceb358b92f",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.ctatitle": {
+      "value": "もっと詳しく",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.title": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.subtitle": {
+      "value": "Donut is Push Chain’s public testnet for Universal Apps that run across chains (EVM or non-EVM)",
+      "englishChecksum": "cea290281e5ab3d719be6b9e727a5dd4",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.ctatitle": {
+      "value": "詳細はこちら",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.title": {
+      "value": "バリデーター",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.subtitle": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.ctatitle": {
+      "value": "もっと詳しく",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.title": {
+      "value": "Donut Testnet 🍩 – Push Chain's Universal テストネット",
+      "englishChecksum": "25838a2da1aeb4b62428f31073685f2f",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.description": {
+      "value": "DonutはPush Chainのパブリックテストネットです。接続方法、Universal Appsの構築方法、Faucetの使い方、バリデーターの実行方法を学んでください。",
+      "englishChecksum": "e2161002d0e2ec61a020f0d3384bf236",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.og-title": {
+      "value": "Donut Testnet 🍩 - Push Chain's ユニバーサルテストネット",
+      "englishChecksum": "ede25f547948fbfee8dd9129c9a476dd",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.og-description": {
+      "value": "Donut を探索してください。Push Chain の最初の公開テストネットです。一度構築すれば、どこにでもデプロイできます。Universal アプリをライブで試すことができます。",
+      "englishChecksum": "481cc1a484f6792be05e2ca4972f458d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-title": {
+      "value": "Donut Testnet 🍩 - ここから始めましょう",
+      "englishChecksum": "750999beb24a613387a2a4a2baaa9e5e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-description": {
+      "value": "Donut Testnetに関する簡単な質問: サポートされているチェーン、Universal Apps、Faucet、およびvalidatorセットのセットアップ。",
+      "englishChecksum": "582877743c8998a2e1a4404f78d534fe",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知識ベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.title": {
+      "value": "Donut Testnet 🍩",
+      "englishChecksum": "b58ca2b0090cbd2dc059aebc2a9d4339",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro": {
+      "value": "**私たちは10年間チェーンのサイロを構築してきました。そして今、それらを破壊する時です。**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "englishChecksum": "b22838133be616d6cefb8d88cf1783c3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut": {
+      "value": "## Donut Testnet 🍩\n\nDonut は Push Chain のユニバーサル アプリを動作させるパブリック テストネットであり、クロスチェーンに対応しています。 これは、ユニバーサル アプリを大衆に普及させる上で重要なマイルストーンです。\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+      "englishChecksum": "051f018dc6859cb49ff9b2bd7209901d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain": {
+      "value": "## Push Chainとは？\n\nPush Chainは、**相互運用性がチェーンの基本的な要素**であり、外部のプロトコルを通して後から追加されるものではない、共有ステートを持つユニバーサルブロックチェーンです。 **一度デプロイするだけで、接続されたチェーン全体でアプリがネイティブに実行されます。**\n\n**Donutは、そこでテストを行う場所です。**",
+      "englishChecksum": "2e921cba1ba65c8e9f016447d1c14dc7",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links": {
+      "value": "## 快速リンク\n\n🧠 [ナレッジベース](/knowledge) — アーキテクチャとデザインを学びましょう。\n\n🌳 [エコシステムアプリ](/ecosystem) — Push Chainにデプロイされたユニバーサルアプリを探索しましょう。\n\n**🪩 人気のあるアプリを試す**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) — 異なるチェーン間でシームレスに動作する同じアプリロジックを体験してください。\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) — クロスチェーンインタラクションをテストおよび視覚化します。\n\n📖 [開発者向けドキュメント](/docs) — Push Chainのドキュメントを詳しく見てみましょう。\n\n💧 [Faucet](https://faucet.push.org) — testnet トークンを入手します。\n\n🔍 [Push Scan](https://donut.push.network/) — トランザクションとネットワークデータを追跡します。",
+      "englishChecksum": "8f49fb22c6f4c4d8ffcc857107231234",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
+      "value": "## Why Push Chain Exists\n\n今日の Web3 エコシステムは、断片化が進んでおり、非常に複雑です。\n\n開発者はスマートコントラクトを複数のチェーンに再デプロイし、ユーザーはトークンをブリッジするかウォレットを切り替える必要があり、チームはチェーン固有のコードベースと監査のメンテナンスに数か月を費やします。\n\n新しいチェーンが追加されるたびに、オーバーヘッド、複雑さ、コスト、摩擦が増加し、イノベーションと採用が大幅に遅くなります。\n\n**Push Chain はこれを解消します。**",
+      "englishChecksum": "5eb212948d6bfddcc7697242f003a185",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability": {
+      "value": "## チェーンネイティブな相互運用性\n\n今日の相互運用性の多くは、外部メッセージングレイヤーやブリッジに依存しています。あなたは複数のコントラクト、監査、そしてすべてのチェーンにわたる統合を管理する必要があります。\n\n**Push Chain はそのモデルを覆します。** Push を使用すると、次のことができます。\n\n* **一度デプロイすれば、どこにでもリーチできます。** あなたのアプリは即座に、EVMまたはnon-EVMのチェーン全体で利用可能になります。\n* **冗長なコントラクトとブリッジを削減できます。** 相互運用性はチェーンネイティブであるため、インフラではなくアプリに集中できます。\n* **完全にEVM互換性を維持できます。** すでに持っているツール、フレームワーク、監査をそのまま使用できます。\n* **あらゆるチェーンまたはウォレットからユーザーにサービスを提供できます。** ユーザーは既存のウォレットを使用してホームチェーンからトランザクションを実行します。手動ブリッジング、ガス トークン、ネットワーク スイッチング、スワップ、セットアップは不要です。",
+      "englishChecksum": "099d648da110855e8baf9ec7670b0ab0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate": {
+      "value": "## ネットワークへの参加方法\n\n### 開発者\n\nPush Chainは開発者に**一度構築してどこでもデプロイ**する力を与えます。\n\nすべての**appはすべてのチェーンでネイティブに実行**され、追加の統合や別々のデプロイメントは必要ありません。\n\nチェーンは現在、testnetで**Ethereum, Solana, Base, Arbitrum, BNB Chain**をサポートしており、今後さらに多くのチェーンが追加される予定です。\n\n👉 [開発者向けリソースを探索](#for-developers)\n\n### ユーザー\n\nただ動くWeb3を体験してください：チェーンの切り替え、トークンのブリッジング、学習は必要ありません。\n\n既存のウォレットを使用して、Push Chain上の任意のappにアクセスし、ネイティブトークンで直接支払います。\n\n👉 [ユーザー向けリソースを探索](#for-users)\n\n### バリデーター\n\nPush Chainのネットワークは、分散型のバリデーターセットによって駆動されます。\n\n**なぜtestnetバリデーターを実行するのか？**\n\ntestnetバリデーターを実行すると、ネットワークを強化し、mainnetの準備を整えることができます。また、[Push Points Program](https://portal.push.org)のSeason 3の特典やメリットも含まれる場合があります。\n\n[@pushchain](https://x.com/PushChain)をタグ付けして、Xであなたの経験を私たちと共有してください。\n\n👉 [バリデーター向けリソースを探索](#for-validators)",
+      "englishChecksum": "79f9bb75f9cac27f83705a1022e15280",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads": {
+      "value": "## 厳選された読み物 👇",
+      "englishChecksum": "c9fefca8484fa54c4cc35f978ba442b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.title": {
+      "value": "開発者向け",
+      "englishChecksum": "a78ce034bc770017aa437365c2914fbf",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.ecosystem-apps.title": {
+      "value": "Ecosystem Apps",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.documentation.title": {
+      "value": "ドキュメント",
+      "englishChecksum": "9d86720f060a65a51857cdf8c4c7119d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-explorer.title": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-faucet.title": {
+      "value": "Push Faucet",
+      "englishChecksum": "5877629e592725d72bc82b62dc2bcc3b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.grassroots-program.title": {
+      "value": "Grassroots Program に応募する",
+      "englishChecksum": "ff3278f906b1bda824da980fe244ffd8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.title": {
+      "value": "ユーザー向け",
+      "englishChecksum": "d28521735dec8283e86c109902717bbb",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.ecosystem-apps.title": {
+      "value": "Ecosystem Apps",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.knowledge-base.title": {
+      "value": "知識ベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.lets-push-yaps.title": {
+      "value": "Yaps をプッシュしてみよう",
+      "englishChecksum": "afe8f78f7532d791bc7524afe1b77c84",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.title": {
+      "value": "バリデーター向け",
+      "englishChecksum": "ee0336c666c1f8c6098e95d4bfb26a4b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
+      "value": "Push Validator",
+      "englishChecksum": "8b31b9b9aa97d92b4d044ae139d4ff47",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.title": {
+      "value": "インシデントレポート",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.description": {
+      "value": "Push Chain のリアルタイムなインシデントレポートとネットワークステータスアップデート。停止、メンテナンス、解決済み問題に関する最新情報を入手しましょう。",
+      "englishChecksum": "79dcfac5268064e8b57342b415ef92ee",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.og-title": {
+      "value": "Push Chain インシデントレポート - ネットワーク状況",
+      "englishChecksum": "4d7d658a59feaab09d75675c1452e779",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.og-description": {
+      "value": "Push Chain ネットワークのインシデント、メンテナンス期間、およびサービスアップデートを追跡します。リアルタイムのステータス情報を取得できます。",
+      "englishChecksum": "489d40e83781acad7ab86c3ebff89565",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.twitter-title": {
+      "value": "Push Chain インシデントレポート",
+      "englishChecksum": "f0f20d8b7ac140244bee728ad40551f2",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.seo.twitter-description": {
+      "value": "Push Chainネットワークの最新情報、インシデント、およびメンテナンス状況をお知らせします。",
+      "englishChecksum": "0e97fd38f27262727851bc7583882da3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "ナレッジベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.donut-testnet": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.report": {
+      "value": "インシデントレポート",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.title": {
+      "value": "インシデントレポート",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.sections.reports-overview.items.intro": {
+      "value": "content",
+      "englishChecksum": "aa8c8783eb334c165bf4f2ddc284d7ff",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.title": {
+      "value": "Validators —",
+      "englishChecksum": "a0fa1a0122c6854e71a26aadd8451e4d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.description": {
+      "value": "ウォレット、手数料、対応チェーン、および始め方に関する簡単な回答。",
+      "englishChecksum": "d0c94cda448f4fd9866220bddbf78d62",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.og-title": {
+      "value": "Push Chain FAQ - 全ての質問",
+      "englishChecksum": "3babe30591ae7ad21c6ddeef513721ce",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.og-description": {
+      "value": "ガイド、テストネット、サポートへのリンクで、すばやく回答を見つけましょう。",
+      "englishChecksum": "40b0bd9c7673f4a3fba46c24b5889434",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.twitter-title": {
+      "value": "FAQ - スタートガイド",
+      "englishChecksum": "3f9084c4a138ee6c97ccff8f9dd48ef9",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.seo.twitter-description": {
+      "value": "Push Chain に関する質問への簡単な回答。",
+      "englishChecksum": "e7f24c18b1cd82250d93b1f98b9cdd0b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知識ベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.knowledge.validators.explainer-section.blocks.title": {
+      "value": "バリデーター",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.title": {
+      "value": "ホーム — Push Chain | アプリのためのユニバーサル ブロックチェーン",
+      "englishChecksum": "948506e7144431eba32cc84b4a86e0fe",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.description": {
+      "value": "シェヤード-ステート ブロックチェーンでユニバーサル app を実現。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どのウォレットでも利用可能。どのトークンでも支払い可能。",
+      "englishChecksum": "5559448d35e5fc8f2c5d96d1d1cfb6af",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.og-title": {
+      "value": "Push Chain - ユーニバーサル L1 for アプリ",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.og-description": {
+      "value": "EVMとnon-EVMユーザーのためのワンデプロイ。どのウォレットでも使い、どのトークンでも支払いが可能—ネットワークの切り替えは不要です。",
+      "englishChecksum": "c3b3e259e681d1772190c4a2f8540c4c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.twitter-title": {
+      "value": "一度デプロイすれば、どのチェーンにもリーチできます。",
+      "englishChecksum": "6712df7cb0cb98805b3fa1a118d2bcc9",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.seo.twitter-description": {
+      "value": "どのチェーンからでも取引。どのウォレットでも利用可能。どのトークンでも支払い。ネットワーク切り替えは不要です。",
+      "englishChecksum": "e20fe711d93dcdad589921977ffc785b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.title": {
+      "value": "どのチェーンでも、どのアプリでも、すべての人に。\nワン プッシュチェーン。",
+      "englishChecksum": "a082fba5c4be3c74b3ac7428c000d934",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.description": {
+      "value": "ユニバーサルアプリのために構築された最初のLayer 1です。\n一度ビルドしてデプロイすれば、どのチェーンからでもユーザーをオンボードできます。",
+      "englishChecksum": "5a20cac3d05e72e32bb859b343f9cb8e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.primary-button": {
+      "value": "開発を始める",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.primary-button-title": {
+      "value": "Push Chain であなたの開発者としての旅を始めましょう！",
+      "englishChecksum": "14611f46ad408dc44d62a33c2c406854",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.secondary-button": {
+      "value": "ナレッジベースを探索",
+      "englishChecksum": "bc99d29cdb063d0d07d5356c43b366c3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.secondary-button-title": {
+      "value": "Push Chainについて学び、探求する",
+      "englishChecksum": "c69e7d883bb35ef715c7f496f1d51865",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.section-aria-label": {
+      "value": "Push Chain のヒーローセクション - ユニバーサル Layer 1 ブロックチェーンの紹介",
+      "englishChecksum": "57b747f815f7cb72d1d3ae9838d75e69",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.primary-button-aria-label": {
+      "value": "Push Chainでユニバーサルアプリの開発を始める - 開発者ドキュメントへ",
+      "englishChecksum": "6e0f565400994d68dec83507e25398bf",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.secondary-button-aria-label": {
+      "value": "Push Chain の機能と概念について、知識ベースで学ぶ",
+      "englishChecksum": "93d415c9d176d2609a99fea3911f206a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.hero-background-alt": {
+      "value": "Push Chain の背景アニメーション。ユニバーサル ブロックチェーン接続を示す",
+      "englishChecksum": "bd0a611472046c804d587074f3912a14",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.hero-background-title": {
+      "value": "Push Chain - ユーニバーサル レイヤー1、クロスチェーン アプリケーション向け",
+      "englishChecksum": "a0b9e94eddb59dc9ceff3c9fc6944fc2",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.schema-headline": {
+      "value": "Push Chain - ユニバーサル L1 for Apps",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.hero-section.schema-description": {
+      "value": "Push Chainに一度デプロイするだけで、ユニバーサルアプリを通じてどのブロックチェーン上のユーザーにもリーチできます",
+      "englishChecksum": "ab11675113d50ac33cc47fa82376852d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.titleFirst": {
+      "value": "真の",
+      "englishChecksum": "29dc86361d1526a5cba07382fb090abf",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.titleSecondGraditent": {
+      "value": "ユニバーサル",
+      "englishChecksum": "af38ccf0394770bddedbe5b6ab970142",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.titleThird": {
+      "value": "チェーン",
+      "englishChecksum": "c00c84ec6e2cf543f7cf70c5a83ca911",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.bottomTextFirst": {
+      "value": "一度デプロイすれば,",
+      "englishChecksum": "c7613088f0a23bd75f3e661d644b2b7a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.bottomTextSecond": {
+      "value": "どこへでも届ける",
+      "englishChecksum": "9531d5eff4b3705adb7fe475ef138a0e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.bottomLinkText": {
+      "value": "はじめる",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.bottomLinkTitle": {
+      "value": "ドキュメントハブへ",
+      "englishChecksum": "4078faa58057f47c15cedd4bbbde53ab",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.section-aria-label": {
+      "value": "Push Chainとは - ユニバーサル ブロックチェーンの説明",
+      "englishChecksum": "10243b8d1cc968fe82c7691336d8a347",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.animation-alt": {
+      "value": "プッシュチェーンのユニバーサル app デプロイメントが複数のブロックチェーンでどのように機能するかを示すアニメーション",
+      "englishChecksum": "ca41b26a225f9a8f71d337a149bb6e64",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.animation-title": {
+      "value": "Push Chain universal デプロイメントの可視化 - 一度デプロイするだけで、どのチェーンにもリーチ",
+      "englishChecksum": "48fc9beed0f61a9a012c9ae54f926fc3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.whatis-section.bottom-link-aria-label": {
+      "value": "Push Chain のドキュメントに移動して、ユニバーサル アプリの開発を開始する",
+      "englishChecksum": "645322d71eec5353ebbb15336db72d4c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.section-aria-label": {
+      "value": "Push Chain の革新的な機能セクション",
+      "englishChecksum": "ad568c1cd43eba621f72921181b2f93c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.header.main-text": {
+      "value": "分断をなくすための革新的な技術で構築！",
+      "englishChecksum": "cd9d6aae1358ded4b2e0e180185259ca",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.header.other-text": {
+      "value": "Push は、あなたが必要とする唯一のユニバーサル レイヤー 1 です！",
+      "englishChecksum": "6c02fb7d9668226e2da2c7363d9fc586",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box1.texttitle": {
+      "value": "あらゆるチェーンでのトランザクション",
+      "englishChecksum": "07d1d093e9c229dbf0ff39aed8a0ba94",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box1.bodytext": {
+      "value": "Push Chainは、あらゆるブロックチェーンからのトランザクションをサポートします。ユーザーは、ブリッジなしで、任意のトークンでガスを支払うことができます。",
+      "englishChecksum": "b6fa6ff506ebb0f1afc085a4fd7a5208",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box1.imagealt": {
+      "value": "ブロックチェーンのロゴがピンボールマシンに落ちている様子を示すイラスト。",
+      "englishChecksum": "d06d7e5677e08fa5e8d861349e1b5634",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box1.imagetitle": {
+      "value": "あらゆるブロックチェーンからのトランザクションをサポートします。",
+      "englishChecksum": "d6143294e5b9f12d4905ceba2fd3c37b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box2.texttitle": {
+      "value": "ウォレット抽象化",
+      "englishChecksum": "e9e305a61a3415b84869df9e3fe42867",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box2.bodytext": {
+      "value": "どんなウォレットでもどんなチェーンでも接続、インタラクション、トランザクションができます。ソーシャルログインやメールを使ってweb3の障壁を打ち破りましょう。ユーザーはPush Chainで自由に決めることができます。",
+      "englishChecksum": "4c6e361bb0cef914b5b472f522348306",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box2.imagealt": {
+      "value": "イラスト: MetaMaskウォレット、Phantom WalletなどがPush Chainロゴのついた大きなウォレットから出てくる様子。",
+      "englishChecksum": "4d2e75fdd3a7a71ecf71cae1dacfba60",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box2.imagetitle": {
+      "value": "MetaMaskやPhantomなどの既存のウォレットに加え、ソーシャルログインにも対応",
+      "englishChecksum": "5541c2c4c62ec60cf8f49f22f4d66a17",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box3.texttitle": {
+      "value": "100% EVM\n互換性",
+      "englishChecksum": "72d668e3c6368431b6ba4a780d747af8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box3.bodytext": {
+      "value": "ゼロのオンチェーンコードでデプロイ。数分でネイティブappをユニバーサルappに変えましょう。",
+      "englishChecksum": "30b3dad5087384bdfc93e21c08c4cf33",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box3.imagealt": {
+      "value": "イーサリアムバーチャルマシンロゴが回転し、「100% EVM 互換性」と表示するイラスト。",
+      "englishChecksum": "022c84abe3d44a7667ce95ca4cc2af8b",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box3.imagetitle": {
+      "value": "オンチェーンのコード変更は一切不要、100% EVM 互換。",
+      "englishChecksum": "bb9602dffa37cdef5ade076ad1f5d859",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box4.texttitle": {
+      "value": "ユニバーサル スマートコントラクト",
+      "englishChecksum": "cce50f0ba020e290156858a39cd05711",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box4.bodytext": {
+      "value": "一度構築すれば、シングルで将来性のあるコントラクトで、クロスチェーン、マルチステップのエクスペリエンスを実行できます。",
+      "englishChecksum": "20f163b0f61c79fb177c0d3541a721a1",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box4.imagealt": {
+      "value": "Ethereum Virtual Machingロゴと、その周りを「100% EVM互換」と示す弧が回るイラスト",
+      "englishChecksum": "ed71e9d6a4b2df4b42c01ef11ebd8442",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box4.imagetitle": {
+      "value": "一度デプロイすれば、すべての対応チェーン (EVM または non-EVM) と瞬時に互換性を持つことができます。",
+      "englishChecksum": "93af050cd9e312c22b226f0d71f226c0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box5.texttitle": {
+      "value": "ユニバーサル fee abstraction",
+      "englishChecksum": "38f7bb501cdef86b887546d430af0b80",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box5.bodytext": {
+      "value": "ユーザーは、ブリッジングなしで、どのチェーンのどのトークンでもガスを支払えるようにしましょう。",
+      "englishChecksum": "2f272d36e811700fa44250a9f8e85e29",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box5.imagealt": {
+      "value": "ビットコイン、イーサリアム、ソラナなどの異なるロゴがPush Chainの周りを回転しているイラスト",
+      "englishChecksum": "f26916dd4dbaba5513ae6257bf448c72",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box5.imagetitle": {
+      "value": "あらゆるチェーンのあらゆるトークンをトランザクションでサポートします。",
+      "englishChecksum": "2bf111c83844692092b9b8c08eb18154",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box6.texttitle": {
+      "value": "ユニバーサル エクスキューション レイヤー",
+      "englishChecksum": "bdc51b77691458ae35fc566a6d4ac135",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box6.bodytext": {
+      "value": "Web3 にまたがるアトミックで合成可能なアプリを構築しましょう。異なるチェーンの複数のユーザーが同じアプリでトランザクションを行えるようにすることで、これまでになかったアプリ体験を生み出すことができます。",
+      "englishChecksum": "87d057c40c0bd92a9d4e3dfc2ce79644",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box6.imagealt": {
+      "value": "さまざまなテトリスブロックがワームホールに入って、_push-chain_ロゴが別の端から現れているイラスト。",
+      "englishChecksum": "b0163005d97f99c86ce66624bca2ec8a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box6.imagetitle": {
+      "value": "Push Chainでファイナライズされたトランザクションは、どのチェーンからでも実行でき、あらゆるチェーンのユーザーが同じapp（つまり、Universal Execution Layer）をネイティブに利用できるようになります。",
+      "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "状態アクセス",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "スマートコントラクトから他のチェーンの口座と状態データにアクセスできます。",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.tagText": {
+      "value": "COMING SOON",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "チェーンから読み取り",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "ブロックチェーンがブロックスタイルアニメーションで成長している様子を示すイラスト。",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(ロードマップ) シェアードステートは、スマートコントラクト内で他のチェーンの口座データとステートデータにアクセスできます。",
+      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "ユニバーサル\nバリデーター",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "スマートコントラクトを使って、あらゆるチェーンでトランザクションをトリガー、検証、完了させましょう。",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.tagText": {
+      "value": "COMING SOON",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "チェーンに書き込む",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "異なる色のテトリスブロックが結合して変化するイラスト。",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.box8.imagetitle": {
+      "value": "(ロードマップ) ユニバーサルバリデーターは、ユーザーがスマートコントラクトを使用して、任意のチェーンでトランザクションをトリガー、検証、および完了できるようにします。",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.footer.title": {
+      "value": "ユニバーサル化することで、あなたのアプリのユーザーベースを拡大しましょう",
+      "englishChecksum": "ca62b71dc8b27bf5eefdff1ffdae1449",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.footer.secondary": {
+      "value": "手間なく!",
+      "englishChecksum": "969754b55ad17557a1b7c104ed70b2e4",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.footer.ctatext": {
+      "value": "構築を開始",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.chain-features-section.footer.ctatitle": {
+      "value": "一度デプロイすれば、ユーザーベースを10倍に。開発者ドキュメントをご覧ください。",
+      "englishChecksum": "8233b96e3719e17e447894b7b4f1ef53",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.section-aria-label": {
+      "value": "Push Chain エコシステムパートナーと連携",
+      "englishChecksum": "d919d3fa9fbe0d4f2b3c2fc87319f1f5",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.title": {
+      "value": "Powered by Push Chain",
+      "englishChecksum": "ffe52515f8b0ddf2bf7d5f21ce2d9ec7",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.subtitle": {
+      "value": "プッシュチェーンにデプロイするだけでユーザーベースを増やしたappをチェック。",
+      "englishChecksum": "f6a96a2e05813cd5c878fbad4cde90d8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.ctatitle": {
+      "value": "Push Chain でデプロイされたパートナー、アプリ、インフラをチェックしましょう",
+      "englishChecksum": "7f2dba55b2b29f81fba57d2ab2b3928a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.ctatext": {
+      "value": "エコシステムを探索",
+      "englishChecksum": "0800c001853854c3fe569fb0c9315495",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.partners-grid-aria-label": {
+      "value": "Web3 プロジェクトが Push Chain を使用しているパートナーのロゴのグリッド",
+      "englishChecksum": "57d2ba44c5262f8595a7b11f2e728751",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.partner-logo-title-prefix": {
+      "value": "パートナーロゴ - ",
+      "englishChecksum": "9a6a6324235ba2abb0fc7efe1208935e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.partner-logo-alt-prefix": {
+      "value": "Logo of ",
+      "englishChecksum": "3f008442b87302c61e429f26dea2aadf",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.partners-section.mobile-view-aria-label": {
+      "value": "Push Chain エコシステムパートナーのモバイルビュー",
+      "englishChecksum": "7195ac8e4168a535813f2f743a771c41",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.section-aria-label": {
+      "value": "Push Chain のパフォーマンス統計と指標",
+      "englishChecksum": "081402c46051493f0ad29d4fbe475ed0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.title": {
+      "value": "達成する",
+      "englishChecksum": "19b9898fb46510573e9eecd5ca2c4e27",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.titleGradient": {
+      "value": "即時",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.titleThird": {
+      "value": "インターオペラビリティ",
+      "englishChecksum": "7eea83832c429d210721b6f786e1125e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.description": {
+      "value": "パフォーマンスに最適化。\n高いTPS、非常に低いガス代、そしてリアルタイムアプリ実行のためのサブセカンドの\nファイナリティを実現。",
+      "englishChecksum": "6a30ccd29c10a929c623aacb10b3415a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.animation-alt": {
+      "value": "インタラクティブなアニメーションで、Push Chain の複数のブロックチェーンにわたる即時相互運用性を示します",
+      "englishChecksum": "ba5ad2d95c246b132336924324bad1b7",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.animation-title": {
+      "value": "Push Chain の瞬時相互運用性の可視化",
+      "englishChecksum": "79976e97d2ef0635f526070dc39c1c27",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat1.title": {
+      "value": "サポートされているチェーン",
+      "englishChecksum": "9fa4fdfa65802111310afe0c589b22d1",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagealt": {
+      "value": "サポートされているチェーンを示すイラスト",
+      "englishChecksum": "9b96b239ea068a5ed539af6f3694239c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagetitle": {
+      "value": "イーサリアム、ソラナ、BNBチェーンなどのサポートされているチェーンのリスト",
+      "englishChecksum": "2270db058472d6f238f0e29b86f25023",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat2.title": {
+      "value": "TPS",
+      "englishChecksum": "9da9418a92881b96aeb4fcc43e237466",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat2.description": {
+      "value": "4.2k",
+      "englishChecksum": "be0715a552eeea3e5678df63651d0872",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat3.title": {
+      "value": "ネイティブ ファイナリティ",
+      "englishChecksum": "eb159fdea10f78862e4e79fe886dc036",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat3.description": {
+      "value": "即時",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat4.title": {
+      "value": "ネイティブ ブロックタイム",
+      "englishChecksum": "813e6eba2d2e1c473f660986d32c8e4e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.stats-section.stats.stat4.description": {
+      "value": "1s",
+      "englishChecksum": "b7ca79525ea99e356ff1dd38525b5342",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.subtitle": {
+      "value": "ニュース、開発ブログ＆アイデア",
+      "englishChecksum": "126fa2aacb84a9d81e494a89ffdb0bef",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.subtitle-aria-label": {
+      "value": "ブログカテゴリ情報",
+      "englishChecksum": "ac7ce58d26a8699ca5e8f7a113fda93e",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.title": {
+      "value": "Push Chain の最新情報",
+      "englishChecksum": "b1cb7ed612449065a646c3f8b61a0a74",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.title-aria-label": {
+      "value": "最新のPush Chainブログ記事とアップデート",
+      "englishChecksum": "bd53aa8f5f7d9b86d251086f29478a81",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.explore-link-text": {
+      "value": "もっと詳しく記事を見る",
+      "englishChecksum": "82dc7eaf7824b2b5b39002b219040ec0",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.explore-link-title": {
+      "value": "Push Chain ブログで記事や最新情報をチェック",
+      "englishChecksum": "5ac48570f00c6fa9a1c935ec768450dd",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.explore-link-aria-label": {
+      "value": "Push Chain ブログページへ移動",
+      "englishChecksum": "675a90090b1f1a950148fdc36404c5da",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.section-aria-label": {
+      "value": "Push Chain のブログ記事とニュースセクション",
+      "englishChecksum": "d636d3da4fbd3dad2b973001969a1c00",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.blog-posts-list-aria-label": {
+      "value": "Recent Push Chain blog posts",
+      "englishChecksum": "02e0773441142451f08f78bf6a694069",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.blog-post-aria-label": {
+      "value": "ブログ記事「{title}」を読む",
+      "englishChecksum": "b5898d0adeb3062efd7661ccde948386",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.blog-post-title-prefix": {
+      "value": "ブログ記事を読む - ",
+      "englishChecksum": "8df77812b9a3532a64f60ea1b47fbe67",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.loading-text": {
+      "value": "最新のブログ記事を読み込み中...",
+      "englishChecksum": "9a8a4eaa02425d1a19d84bba815ac409",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.error-text": {
+      "value": "ブログ投稿の読み込みに失敗しました",
+      "englishChecksum": "2d6dabe9453626828f62a3d80eb14184",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.blog-section.no-posts-text": {
+      "value": "ブログ記事はありません",
+      "englishChecksum": "69d5484bbae99b9c3545a41778492336",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.trustedby-section.title": {
+      "value": "Web3の先駆者たちが信頼するチームによって構築されました",
+      "englishChecksum": "dc937f19942643ce4264edddf30c412a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.trustedby-section.section-aria-label": {
+      "value": "Push Chain trusted by section",
+      "englishChecksum": "18be016c87bb93e30ca4e5e49d740805",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.trustedby-section.trusted-by-alt": {
+      "value": "投資家 - ",
+      "englishChecksum": "3c0c7cd619384b307c73cf5935c25e67",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.aria-label": {
+      "value": "Featured On セクション",
+      "englishChecksum": "4ab283a6324bc57b350db0d8acb0d32c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.tag": {
+      "value": "FEATURED ON",
+      "englishChecksum": "ff2ce72b0d556e75df6896ffafa92e05",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.title": {
+      "value": "ブロックチェーンが注目です",
+      "englishChecksum": "7680658233a0ee4d168959f3c83ebb6a",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.subtitle": {
+      "value": "私たちの言葉を鵜呑みにしないでください。メディアが真のユニバーサルチェーンについて語っていることをご覧ください。",
+      "englishChecksum": "9394eb0bdbdb615a0964682774c13c94",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles-image-alt": {
+      "value": "メディアでの報道 ",
+      "englishChecksum": "6cac47727dfb2d9d87a1f7ceb537b3f1",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles-text": {
+      "value": "詳細をすべて読む",
+      "englishChecksum": "ddee3a14f42eb7c40cb57997f3ca944c",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles-title-1": {
+      "value": "「",
+      "englishChecksum": "3931423122a4af3ae3811096a2819685",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles-title-2": {
+      "value": "'s thoughts on Push Chain in full detail",
+      "englishChecksum": "19442a03071cf8be9a9509a81e44d264",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.binance-chain.text": {
+      "value": "Web3の主要な分散型コミュニケーションプロトコルであるPush Protocolが、BNB Chainでついにローンチされたことを発表できて大変嬉しく思います。",
+      "englishChecksum": "c4530c92cf72e058e797dacf1793b260",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.coindesk.text": {
+      "value": "プロトコルビレッジ：UnstoppableがPush Protocolと提携し、トークンゲートされたグループチャットを提供",
+      "englishChecksum": "ad068a87c6c2d7412cdc7aa5fe1f3eff",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.defiant.text": {
+      "value": "Unstoppable Domains Launches トークン ゲート付きグループチャット。Push Protocol との連携により、誤情報や詐欺から保護することを目指します。",
+      "englishChecksum": "b406714c0a067c24635e3957190f0af8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.balaji.text": {
+      "value": "ユーザーが管理する通知。数十億のスマートフォンへのプッシュ通知は、AppleとGoogleの2社によって管理されています。",
+      "englishChecksum": "0f1c48f6883e33bacfb8c0f548e8ecb3",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.defiprime.text": {
+      "value": "Harsh Rajat は、銀行の未来、EPNS プロトコルのインセンティブ、分散型プッシュ通知のビジネスモデルについて語っています。",
+      "englishChecksum": "0cb5feb1635aa0686853746fe8700bb9",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.ethfoundation.text": {
+      "value": "HackMoney以降、RichaとHarshはEPNSを「web3の欠けているピース」と呼ぶものへと信じられないほどのエネルギーを注ぎ込みました。",
+      "englishChecksum": "5305100d89dba00f198a84e007c8eb26",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.beincrypto.text": {
+      "value": "Web3 コミュニケーションネットワークの仕組み：技術的な深掘り",
+      "englishChecksum": "e10824f783c2e0de2b2d7e643bd2634d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.the-block.text": {
+      "value": "Web3 通知プロトコル Push が独自のレイヤー 1 チェーンを立ち上げ",
+      "englishChecksum": "b5c5b9f95dde1fb47a5b8046a1f2b5e8",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.business-insider.text": {
+      "value": "Push が Push Chain を発表: ユニバーサル ブロックチェーン アプリケーションの未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.chainwire.text": {
+      "value": "Push、Push Chainを発表：ユニバーサル ブロックチェーン アプリケーションの未来。",
+      "englishChecksum": "8670f532335ce3e8a26a24b30f44a48d",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.benzinga.text": {
+      "value": "Push が Push Chain を発表: ユニバーサル ブロックチェーン アプリケーションの未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.176Z"
+    },
+    "pages.home.featured-section.articles.crypto-briefing.text": {
+      "value": "Push、Push Chainを発表：ユニバーサルブロックチェーンアプリの未来",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.featured-section.articles.cryptoslate.text": {
+      "value": "Push Protocol は、ブロックチェーンのコミュニケーションとトランザクションを統合する Push Chain を開始しました",
+      "englishChecksum": "4fc312bfba55cf6b838949c2ee8e0cfa",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.featured-section.articles.messari.text": {
+      "value": "EPNS は、分散型通知を受信するユーザーにインセンティブと受動的な収益を提供します。",
+      "englishChecksum": "76aedec3b96cef39cc9355c8a9c1118b",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-1.text": {
+      "value": "Harsh Rajat, founder and project lead of Push Protocol, explains the surge in the development of Web3 チャット app applications on the latest episode of Hashing It Out.",
+      "englishChecksum": "a530ac82085f87db632129ac224faf3c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-2.text": {
+      "value": "Unstoppable Domainsは、ユーザー名ホルダー向けのバッジ認証グループチャット機能を起動しました。",
+      "englishChecksum": "6032ddd8c813a13646927c3eae35adb5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.aria-label": {
+      "value": "ユニバーサルアプリ構築セクション",
+      "englishChecksum": "c5b019935b5b8874364eebc8986a6ac0",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.section-title": {
+      "value": "ユニバーサル アプリを構築しましょう。",
+      "englishChecksum": "0e774a7dc1ee53c01ff2296e74c209c4",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.section-subtitle": {
+      "value": "サイロを打ち破り、一度構築すれば、あらゆるブロックチェーンでスケールできます。",
+      "englishChecksum": "a9d2b747741fd12af5883cd4446f4772",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.docs-link.text": {
+      "value": "Push Chain ドキュメントを探索",
+      "englishChecksum": "a12d0c27ed45dee80ba7ed3d7d20f96c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.docs-link.title": {
+      "value": "Push Chain のドキュメントと開発者向けリソースを探索する",
+      "englishChecksum": "07584070f7e8b119827d75c362d05e59",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.docs-link.aria-label": {
+      "value": "新しいタブで Push Chain のドキュメントを開く",
+      "englishChecksum": "ecb929436d5877c5e4ce93073a2f0310",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.cta-link.text": {
+      "value": "LFG Push Chain",
+      "englishChecksum": "be953076a98731e9aec67b31a9f0df3a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.cta-link.title": {
+      "value": "Push Chain で始めましょう - 汎用ブロックチェーンプラットフォーム",
+      "englishChecksum": "7bcc4330a5ebbf09e486a06944c2d5bd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.home.ending-section.cta-link.aria-label": {
+      "value": "Push Chain 開発を始める",
+      "englishChecksum": "acedeec3d726f902233dda0b5cb1c1b4",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.title": {
+      "value": "Push Chain エコシステム — ユニバーサル アプリ & パートナー",
+      "englishChecksum": "32db66944f11630338b6b28e3ce805cd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.description": {
+      "value": "Push Chain上に構築されたユニバーサルapp、パートナー、プロジェクトのエコシステムを探索しましょう。共有ステートの相互運用性により、一度構築すればすべてのチェーンのユーザーにリーチできます。",
+      "englishChecksum": "41ab93f9796103eb14ec3a145afd8bf4",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.og-title": {
+      "value": "Push Chain エコシステム - ユニバーサル アプリ & パートナーを探索",
+      "englishChecksum": "d967afcb31a9f4b223a73f3438806437",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.og-description": {
+      "value": "プッシュチェーンでライブしているユニバーサルアプリとプロジェクトのエコシステムを探求してください。真のクロスチェーンでの使いやすさを体験してください。ブリッジやスワップは不要です。",
+      "englishChecksum": "334d8a8abb5cbc356c4a89b34a1c9703",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.twitter-title": {
+      "value": "Push Chain エコシステムを探索 - ユニバーサル アプリとパートナー",
+      "englishChecksum": "e403bd7ee033adade46e953f4bba985d",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.seo.twitter-description": {
+      "value": "Push Chainのエコシステムでユニバーサルアプリとパートナーを見つけましょう。一度構築すれば、Ethereum、Solana、Baseなど様々なネットワークでユーザーにリーチできます。",
+      "englishChecksum": "29789f4a9c44a6a48b42e082c1629049",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.hero-section.title": {
+      "value": "ユニバーサル エコシステムを探求",
+      "englishChecksum": "fe68c572bef7a7bcecc2316924ceb555",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.ecosystem.hero-section.description": {
+      "value": "Push Chain’s Donut Testnetで、次世代のユニバーサルな体験を構築しているアプリ、パートナー、初期導入者を発見しましょう。",
+      "englishChecksum": "70f52e04c9429af0acf89f79a06f1df1",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain テストネット ‘Donut’ がついに公開！",
+      "englishChecksum": "0681d4c70dc98e29a4827b403cef19c5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.learn-more-text": {
+      "value": "ユニバーサルアプリを探検する",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "ユニバーサルアプリを探索",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.dismiss-button-title": {
+      "value": "アナウンスを閉じる",
+      "englishChecksum": "cd8059d4a0d2dfe57e5c3460f468f71a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.dismiss-button-aria-label": {
+      "value": "お知らせバーを閉じる",
+      "englishChecksum": "412ee7c423ec52309e48e8f5f3bcc1b9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.container-aria-label": {
+      "value": "サイトのお知らせ",
+      "englishChecksum": "0d6c179aa38c57ebb412d8f668eec2fc",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "notifications.info-bar.star-icon-alt": {
+      "value": "お知らせスターアイコン",
+      "englishChecksum": "5c9daef6a28ede1a8faeb3ba3335629b",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.meta.logo-aria-label": {
+      "value": "Push Chain - ホームページへ移動",
+      "englishChecksum": "63893ae4c4e6e1ba5d7decf18dbf33bd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.meta.language-icon-alt": {
+      "value": "言語選択アイコン",
+      "englishChecksum": "ae19220a4e348cf0b4bc2fa889fa336d",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.meta.hamburger-menu-alt": {
+      "value": "ナビゲーションメニューを開く",
+      "englishChecksum": "0d9b5d8f08a3bac6b985456015616779",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.meta.testnet-badge-alt": {
+      "value": "Push Chain テストネット ドーナツ - テストネットのステータスを表示",
+      "englishChecksum": "ea6cea5b9c6ee6b58bd86c276f700d01",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.logo.imagealt": {
+      "value": "Push Chain ロゴの画像",
+      "englishChecksum": "8585049215d30970a86f7de48e6e7533",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.logo.imagetitle": {
+      "value": "Push Chain ロゴ",
+      "englishChecksum": "d51524e28b04df62f28eb9db86eed476",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.logo.ctatitle": {
+      "value": "Push Chainホームページに移動",
+      "englishChecksum": "7f510f0324630fba8afdd9ba2af8e1a9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.title": {
+      "value": "テストネット",
+      "englishChecksum": "620d7ace673e1ed914fd263c26d67a0f",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.aria-label": {
+      "value": "テストネットセクション",
+      "englishChecksum": "7fedd86e4c329774f062b2cda3954184",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link1.text": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link1.subtext": {
+      "value": "ブロックチェーンのブロックエクスプローラー",
+      "englishChecksum": "5a08122abf556f4a05f27f09b24c959b",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link1.title": {
+      "value": "Push ScanでPush Chain テストネットのトランザクションとブロックを探索",
+      "englishChecksum": "564e23768d6c6cc5c41112c51813893c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link2.text": {
+      "value": "Faucet",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link2.subtext": {
+      "value": "テストネット トークンを入手する",
+      "englishChecksum": "a8a3784c29d4eea8fa812cbf02953422",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link2.title": {
+      "value": "Push Chain 開発用の無料テストネット トークンを入手しましょう",
+      "englishChecksum": "6a34a93d935cf2460955d1eef57d8a9e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link3.text": {
+      "value": "エコシステム",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link3.subtext": {
+      "value": "Push Chain 上のアプリを見る",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.testnet.link3.title": {
+      "value": "Push Chain 上に構築されたアプリを見る",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.title": {
+      "value": "開発者",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.aria-label": {
+      "value": "開発者セクション",
+      "englishChecksum": "1a4bcf84369651268c763c567a2241e8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link1.text": {
+      "value": "始める",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link1.subtext": {
+      "value": "Push Chain での構築入門",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link1.title": {
+      "value": "Push Chainでユニバーサルアプリの開発を開始 - 開発者向けドキュメント",
+      "englishChecksum": "9cd7373a2c0cfee16a4f74e1fcba4c3f",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link2.text": {
+      "value": "クイックスタート",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link2.subtext": {
+      "value": "数秒で開発環境をセットアップ",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link2.title": {
+      "value": "クイックスタートガイド - Push Chain 開発環境をすぐにセットアップ",
+      "englishChecksum": "ba04f436d4b03c75dd4602898ef0e89d",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link6.text": {
+      "value": "エコシステム",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link6.subtext": {
+      "value": "Push Chain上に構築されたアプリを見る",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link6.title": {
+      "value": "Push Chain 上に構築されたアプリを見る",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link3.text": {
+      "value": "チュートリアル",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link3.subtext": {
+      "value": "Pushを使った構築方法のステップバイステップガイド",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link3.title": {
+      "value": "実践的なチュートリアルで学ぶ - Push Chain で最初のユニバーサルアプリを構築",
+      "englishChecksum": "18f63276aa1ba0784e1949caab2d46b3",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link4.subtext": {
+      "value": "コアコードとオープンソースツールを見る",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link4.title": {
+      "value": "GitHubでPush Chainのソースコードと開発ツールを探索",
+      "englishChecksum": "db0c0b6be4baad84000fc2ccd6d5acc5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link5.text": {
+      "value": "開発者 Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link5.subtext": {
+      "value": "開発者コミュニティと連携",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.developers.link5.title": {
+      "value": "Push Chain の開発者コミュニティにDiscordで参加して、サポートや連携を行いましょう",
+      "englishChecksum": "c8282e7543830164856b5e85823cafa4",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.title": {
+      "value": "コミュニティ",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.aria-label": {
+      "value": "コミュニティセクション",
+      "englishChecksum": "4dc0bb44ddc968a192d6f93490962fe2",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link7.text": {
+      "value": "エコシステム",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link7.subtext": {
+      "value": "Push Chain上に構築されたアプリを探索する",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link7.title": {
+      "value": "Push Chain上に構築されたアプリを探索",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link1.text": {
+      "value": "ナレッジベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link1.subtext": {
+      "value": "機能の詳細情報を探す",
+      "englishChecksum": "281dcdaecfa7c9cdd4841358e6ee8b30",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link1.title": {
+      "value": "Push Chainの包括的なドキュメントと機能ガイドを探索する",
+      "englishChecksum": "df25b52080d036855b84fab2901477c3",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link2.text": {
+      "value": "LFPush",
+      "englishChecksum": "6b8079d546c919f440c7a6bc201b3d85",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link2.subtext": {
+      "value": "Pushコミュニティの注目ツイート #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link2.title": {
+      "value": "Pushコミュニティによる注目ツイート #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link3.text": {
+      "value": "トークノミクス",
+      "englishChecksum": "ace5383af81a2e8353e180ac3f5bbc90",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link3.subtext": {
+      "value": "ネイティブトークンでPush Chainのすべてを動かします",
+      "englishChecksum": "9dfbae7f9f30c6d90ca09e6f0fb06b09",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link3.title": {
+      "value": "Push Chain トークノミクスと$PCトークンのユーティリティについて学ぶ",
+      "englishChecksum": "180ece5292c4ac47d3bd251621cb0e3e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link4.text": {
+      "value": "X/Twitter",
+      "englishChecksum": "f64b3315deacb9e466d156cd803dcf6a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link4.subtext": {
+      "value": "最新情報とエコシステムニュースをチェック",
+      "englishChecksum": "142c42fbbeeffa1fae846c61ac974891",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link4.title": {
+      "value": "最新情報やアナウンスについては、X (Twitter) で Push Chain をフォローしてください",
+      "englishChecksum": "da4cff94f96670c68a4c6b2c5ff9d4c7",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link5.text": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link5.subtext": {
+      "value": "コミュニティとチャットして、一緒に構築し、盛り上がりましょう",
+      "englishChecksum": "1605521dea8b82f11e50b5477f70d2f5",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link5.title": {
+      "value": "Push ChainコミュニティのDiscordに参加して、議論やサポートにご参加ください",
+      "englishChecksum": "b59dae260a62f983fbef58ba012d66e8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link6.text": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link6.subtext": {
+      "value": "コミュニティに参加して最新情報をチェック！",
+      "englishChecksum": "e334cdf22cefb6f9761fd9e028dddbb2",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.community.link6.title": {
+      "value": "Push Chain コミュニティのTelegramでリアルタイムのアップデートを受け取ってください",
+      "englishChecksum": "be97c8c44524c9c013f0a98d5949e028",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.title": {
+      "value": "リソース",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.aria-label": {
+      "value": "リソース セクション",
+      "englishChecksum": "d390e430d425ff71c19316a82a35310d",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link1.text": {
+      "value": "ブログ",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link1.subtext": {
+      "value": "最新情報、詳細解説、開発ストーリー",
+      "englishChecksum": "894fe0ed69b622b01b96028aed574353",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link1.title": {
+      "value": "Push Chainブログで最新情報、技術解説、開発者ストーリーをチェック",
+      "englishChecksum": "aacf7687ca27f0ea51ea54aced94cdd6",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link2.text": {
+      "value": "ライトペーパー",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link2.subtext": {
+      "value": "ビジョンと技術をシンプルに",
+      "englishChecksum": "60bf9f10efd131462bdccb11b76ac9f9",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link2.title": {
+      "value": "Push Chain ライトペーパーを読む - シンプルなビジョンと技術概要",
+      "englishChecksum": "2bffe0ddae486f2f7b2f1ee44b1bc17a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link3.text": {
+      "value": "FAQ",
+      "englishChecksum": "e2c071f0eb807b08c405cf69047e3fe7",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link3.subtext": {
+      "value": "よくある質問への簡単な回答",
+      "englishChecksum": "f7d51e9d7bd3370e2929d15c3d678fd3",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.resources.link3.title": {
+      "value": "Push Chain に関するよくある質問をご覧ください",
+      "englishChecksum": "c7b5ca35693342e84b6a2bab24c375db",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.language.title": {
+      "value": "言語",
+      "englishChecksum": "9a5e47e5d049ebe6b58467336720ac15",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.language.aria-label": {
+      "value": "言語選択ドロップダウン",
+      "englishChecksum": "907a650b1ffbe812cefc4dda4daaf306",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.app-button.text": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.app-button.title": {
+      "value": "Push Portal にアクセス - 開発者、ユーザー、またはバリデーターとしてポイントを獲得",
+      "englishChecksum": "858c2bb21efab2e7d676220e9a8299df",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.title": {
+      "value": "探検",
+      "englishChecksum": "38d96b84538f99b5e4b6924ba5b95618",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.aria-label": {
+      "value": "セクションを探索",
+      "englishChecksum": "f31ed6ab73b37416ada9df7c8722ad50",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link1.text": {
+      "value": "始める",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link1.subtext": {
+      "value": "Push Chain での構築入門",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link1.title": {
+      "value": "さあ、開発を始めましょう",
+      "englishChecksum": "fd750b6a81c364f6757a0675ad962472",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link2.text": {
+      "value": "クイックスタート",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link2.subtext": {
+      "value": "数秒で開発環境をセットアップ",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link2.title": {
+      "value": "クイックスタート",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link3.text": {
+      "value": "チュートリアル",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link3.subtext": {
+      "value": "Pushで構築するためのステップバイステップガイド",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link3.title": {
+      "value": "チュートリアルで学ぶ",
+      "englishChecksum": "c3d5ba0195fe8331c744bb7ab7e8b4b0",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link4.subtext": {
+      "value": "コアコードとオープンソースツールを見る",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link4.title": {
+      "value": "Push Chain を探索",
+      "englishChecksum": "248c3d5339f141cf6b757e0599fb45eb",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link5.text": {
+      "value": "開発者 Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link5.subtext": {
+      "value": "開発コミュニティとつながる",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link5.title": {
+      "value": "Discordに参加",
+      "englishChecksum": "c3e83e46051a8285bdecea1338300499",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link6.text": {
+      "value": "事例を探索",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link6.subtext": {
+      "value": "例を見る",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "header.explore.link6.title": {
+      "value": "例を見る",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.177Z"
+    },
+    "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain.title": {
+      "value": "ブロックチェーンでWeb3の欠ける層をWhy Push Chainは",
+      "englishChecksum": "dda742e7ba033aecc1da77822f4efb8f",
+      "lastUpdated": "2025-11-14T20:19:42.328Z"
+    },
+    "global.site-description": {
+      "value": "あらゆるチェーンでユーザーにアクセス可能な共同状態のL1。 onceデプロイして、任意のチェーンでユーザーに届けます。任意のウォレットを使用し、任意のトークンで支払います。ネットワーク切り替えなし。",
+      "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
+      "lastUpdated": "2025-11-14T20:19:36.742Z"
+    },
+    "pages.knowledge.push101.seo.description": {
+      "value": "入門者向けのプッシュチェーンとユニバーサルアプリの紹介—这是什么，它是如何运作的，以及如何开始。",
+      "englishChecksum": "0d309817c6171c9b903b25e7cbb58136",
+      "lastUpdated": "2025-11-14T20:19:39.110Z"
+    },
+    "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1.subtitle": {
+      "value": "プッシュチェーンは、別の孤立したエコシステムを作ることではなく、誰もが利用できる相互運用性の問題を解決するためです。",
+      "englishChecksum": "2a52413de055cfebf0245ffa537b8369",
+      "lastUpdated": "2025-11-14T20:19:46.085Z"
+    },
+    "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain.subtitle": {
+      "value": "推しチェーンやユニバーサルアプリに関する質問は、ここに最新の解答をご確認ください。",
+      "englishChecksum": "4d9917b7eb8ec31c7d601eb921a8f4ca",
+      "lastUpdated": "2025-11-14T20:19:49.597Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.consumer-apps-that-can-be-built-on-push-chain.title": {
+      "value": " Push Chain 上で作成可能な消費者アプリ 🫶",
+      "englishChecksum": "738506f213b04e262e83975af50a8f25",
+      "lastUpdated": "2025-11-14T20:19:52.868Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.developer-resources.items.faucet.title": {
+      "value": "テストネット トークンを取得する",
+      "englishChecksum": "95902b8cafe52e3b481994af662545e7",
+      "lastUpdated": "2025-11-14T20:19:55.578Z"
+    },
+    "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
+      "value": "### Pushとブリッジやメッセージング層とはどう違いますか？\n\n**短い答え**：Pushはアプリが実行される場所です。ブリッジ/メッセージングは単にトークンやメッセージをチェイン間で移動するだけで、ユーザーと開発者に多くの問題を追加します。\n\n- **一つのホームではなく多数の複製**  \n\tブリッジ/メッセージングでは各チェインごとにデプロイし、メッセージによる同期を行います。Pushでは一度デプロイし、全員が同じコントラクトと共有状態をタップします。\n\n- **ラップされた資産や強制的なブリッジ無し**  \n\tユーザーは自らのホームチェインに残り、所有するもので支払います; nosotros manejamos la ruta y la conversión de tarifas bajo el capó.\n\n- **統一されたアイデンティティ＆検証**  \n\t私たちはどのウォレット/チェインからでも署名を受け入れ、それをPush上で同じユーザーに割り当てます - 不便の無いものです。\n\n- **少ない移動部品**  \n\tブリッジ間の承認ダンスやガス-トークン探し、同期を保つためのグルーバ Kontraktsを必要としません。\n\n- **ブリッジが複雑さを追加します。チェインネイティブな相互運用はそれを解決します**  \n\tブリッジは複雑なエンジニアリング努力、時間、オーディットコスト、そして追加のインフラストラクチャが必要です。チェインネイティブな相互運用は単にアプリがネイティヴに遺産を避けます。\n\n**結果**：より簡単なアプリ、真実の一つの源、ユーザーが実際には違うときでも統一されたUXがあります。\n\n---",
+      "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
+      "lastUpdated": "2025-11-14T20:20:13.688Z"
+    },
+    "pages.docs.header.description": {
+      "value": "しーっ… テストネット ドーナツの先取り版をご覧になりたいですか？ #pushchainsecret で声をかけてください。 then you will get access to a test build.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2025-11-14T20:21:19.516Z"
+    },
+    "pages.litepaper.seo.description": {
+      "value": "プッシュチェーンのビジョン、アーキテクチャ、経済を巡る一般的なアプリ用の簡潔な紹介。",
+      "englishChecksum": "2768e2658592fe376add9699d9d49ef6",
+      "lastUpdated": "2025-11-14T20:20:21.229Z"
+    },
+    "pages.privacymobile.seo.description": {
+      "value": "プッシュチェーン モバイルアプリでデータを収集、使用し、保護する方法と選択肢の説明。",
+      "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
+      "lastUpdated": "2025-11-14T20:20:23.316Z"
+    },
+    "pages.privacymobile.hero-section.description": {
+      "value": "プッシュチェーン モバイルアプリでデータを収集、使用し、保護する方法、および選択肢。",
+      "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
+      "lastUpdated": "2025-11-14T20:20:25.338Z"
+    },
+    "pages.donutsecret.seo.description": {
+      "value": "建造者向け、招待制のクローズドベータ。Push Chainテストネットにアクセスするためのドンツパスを取得し、ユニバーサルアプリを送信して、早期報酬を解放します。",
+      "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
+      "lastUpdated": "2025-11-14T20:20:30.891Z"
+    },
+    "pages.donutsecret.seo.og-description": {
+      "value": "デベロッパー向けの早期アクセス： Closed Beta Pass を取得し、Push Chain（ドーナツ）を試してください。お得意先の建設中に報酬を得られます。",
+      "englishChecksum": "82bceccf67ffed51d02e1c40234de275",
+      "lastUpdated": "2025-11-14T20:20:33.511Z"
+    },
+    "components.short-faq-snippet.qnas.qna4.question": {
+      "value": "この方法はブリッジやメッセージング層とはどう違うのですか？",
+      "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
+      "lastUpdated": "2025-11-14T20:20:35.542Z"
+    },
+    "components.short-faq-snippet.qnas.qna4.answer": {
+      "value": "<1><2>短い回答</2>: Pushはあなたのアプリが動作する場所です。ブリッジ/メッセージングは単にトークンやメッセージをチェーン間で移動するだけで、ユーザーと開発者にとってすべてを複雑にします。</1><1><2>一つのホーム基盤 vs 複数のクローン.</2> ブリッジ/メッセージングでは各チェインごとにデプロイし、メッセージによる同期を行います。Pushで一度デプロイするだけで、誰でも同じコントラクトと共有状態をHitします。</1><1><2>ラップされた資産や強制的なブリッジなし.</2>ユーザーは自分のホームチェインに残り、既に持っているもので払います; 我々がルーティングと手数料コンバージョンを背後で処理します。</1><1><2>統一されたIDENTITY&Verification.</2>我們接受來自任何錢包/鏈的簽名，並將其屬性歸屬於Push上的同一用戶-非保管式。</1><1><2>部品が少ない.</2>クロスチェーンの承認ダンスやガス・トークンの探し回り、同期を維持するためのグルコントラクトなし。</1><1><2>ブリッジは複雑さを導入します。チェーンネイティブの相互運用性はそれを解決します.</2>ブリッジは komplex engineering努力、時間、審査コスト、追加インフラストラクチャが必要です。Chain-native interop simply works as your app natively inherits it.</1><1>結果:簡単なアプリ、真実の一つのソース、ユーザー間で同じ感覚のUX - mesmo que users não são.</1>",
+      "englishChecksum": "db02bf29481e064dd0861942251e253c",
+      "lastUpdated": "2025-11-14T20:21:16.955Z"
+    },
+    "components.short-support-snippet.qnas.qna3.answer": {
+      "value": "<1>使用<3>ファウセット</3>を使ってテストトークンをリクエストしてください。</1><1><2>ノート:</2>レート制限がかかる場合があります;一部のファウセットでは簡単な検証が必要です。ファウセットが失敗した場合は<4>ディスカード</4>で連絡してください。</1>",
+      "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
+      "lastUpdated": "2025-11-14T20:20:57.672Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "G.U.Dプロジェクトのデプロイアソンはライブです！アプリをデプロイして、$5000を獲得します",
+      "englishChecksum": "85d2dccbfcb4fb47e4b41cda5647a895",
+      "lastUpdated": "2025-11-14T20:20:59.446Z"
+    },
+    "notifications.rewards-notification.image-alt": {
+      "value": "プッシュチェーン・テストネット報酬 - ユニバーサルアプリを構築する",
+      "englishChecksum": "7e5ffae122997a63a81105184b921cb1",
+      "lastUpdated": "2025-11-14T20:21:01.080Z"
+    }
+  }
+}
