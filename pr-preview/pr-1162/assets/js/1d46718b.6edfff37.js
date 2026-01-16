@@ -1,15 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[75554],{
-
-/***/ 13389
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
-
-/***/ },
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[29912],{
 
 /***/ 28453
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
@@ -106,7 +96,17 @@ function MDXProvider(properties) {
 
 /***/ },
 
-/***/ 93248
+/***/ 166555
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
+
+/***/ },
+
+/***/ 369662
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -115,10 +115,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_14_case_study_hodl_fun_index_md_cb1_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_16_case_study_hodl_fun_index_md_9bb_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_14_case_study_hodl_fun_index_md_cb1_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(196890);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_16_case_study_hodl_fun_index_md_9bb_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(433091);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 
@@ -145,7 +145,7 @@ const frontMatter = {
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(253518)/* ["default"] */ .A),
+"image": (__webpack_require__(459844)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -162,7 +162,7 @@ function _createMdxContent(props) {
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
       alt: "How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study",
-      src: (__webpack_require__(13389)/* ["default"] */ .A) + "",
+      src: (__webpack_require__(166555)/* ["default"] */ .A) + "",
       width: "1600",
       height: "900"
     })
@@ -185,14 +185,14 @@ function MDXContent(props = {}) {
 
 /***/ },
 
-/***/ 196890
+/***/ 433091
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/case-study-hodl-fun","source":"@site/blog/2026-01-14-case-study-hodl-fun/index.md","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","date":"2026-01-14T00:00:00.000Z","tags":[{"inline":true,"label":"Donut Testnet","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/donut-testnet"},{"inline":true,"label":"Universal Apps","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-apps"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-app-experience"},{"inline":true,"label":"Shared State Blockchain","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-state-blockchain"},{"inline":true,"label":"Universal Smart Contracts","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-smart-contracts"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/ecosystem"},{"inline":true,"label":"Case Study","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/case-study"}],"readingTime":1.29,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1162/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"case-study-hodl-fun","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","authors":["push"],"image":"./cover-image.webp","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","text":"A Universal Transaction lets any wallet from any blockchain execute transactions directly on Push Chain","tags":["Donut Testnet","Universal Apps","Shared App Experience","Shared State Blockchain","Universal Smart Contracts","Ecosystem","Case Study"]},"unlisted":false,"nextItem":{"title":"How Universal Transaction Works","permalink":"/push-chain-website/pr-preview/pr-1162/blog/how-universal-transaction-works"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/case-study-hodl-fun","source":"@site/blog/2026-01-16-case-study-hodl-fun/index.md","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","date":"2026-01-16T00:00:00.000Z","tags":[{"inline":true,"label":"Donut Testnet","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/donut-testnet"},{"inline":true,"label":"Universal Apps","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-apps"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-app-experience"},{"inline":true,"label":"Shared State Blockchain","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-state-blockchain"},{"inline":true,"label":"Universal Smart Contracts","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-smart-contracts"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/ecosystem"},{"inline":true,"label":"Case Study","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/case-study"}],"readingTime":1.35,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1162/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"case-study-hodl-fun","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","authors":["push"],"image":"./cover-image.webp","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","text":"A Universal Transaction lets any wallet from any blockchain execute transactions directly on Push Chain","tags":["Donut Testnet","Universal Apps","Shared App Experience","Shared State Blockchain","Universal Smart Contracts","Ecosystem","Case Study"]},"unlisted":false,"nextItem":{"title":"How Universal Transaction Works","permalink":"/push-chain-website/pr-preview/pr-1162/blog/how-universal-transaction-works"}}');
 
 /***/ },
 
-/***/ 253518
+/***/ 459844
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {

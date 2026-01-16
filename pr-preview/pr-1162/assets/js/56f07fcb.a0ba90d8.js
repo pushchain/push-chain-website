@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[5500],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[90024],{
 
 /***/ 75
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -489,6 +489,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/pune@3x-8afdca358191f5128dd3e84660a76810.webp");
+
+/***/ },
+
+/***/ 31730
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ tokenomics)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBTokenomicsList.js
+const KBTokenomicsList={title:'pages.knowledge.tokenomics.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.overview'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.vision'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.innovation'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.fit'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-utility'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.deflationary-design'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.migration-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.airdrop-details'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.token-distribution'},{type:'text',valueKey:'pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.get-involved'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/tokenomicsComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const TokenomicsComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.tokenomics.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTokenomicsList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const tokenomicsComp = (TokenomicsComp);
+;// ./src/pages/knowledge/tokenomics.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function TokenomicsPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.tokenomics.seo.title'),description:t('pages.knowledge.tokenomics.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/tokenomics"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.tokenomics.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.tokenomics.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.tokenomics.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.tokenomics.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(121205)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(tokenomicsComp,{})})]});}/* harmony default export */ const tokenomics = (TokenomicsPage);
 
 /***/ },
 
@@ -2388,6 +2444,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 121205
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbtokenomicspreview-8eeafd37aa2f145eb670a6f807c450e6.png");
+
+/***/ },
+
 /***/ 121223
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -3873,6 +3940,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-4c03e7ab6942589dfc80380d49e12388.webp");
+
+/***/ },
+
+/***/ 202086
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-472009b5eeb56deeb95cdf8b85d5095f.webp");
 
 /***/ },
 
@@ -7128,6 +7207,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 399374
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
+
+/***/ },
+
 /***/ 399830
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -10017,82 +10108,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ 507033
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ testnet)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBTestnetList.ts
-const KBTestnetList={title:'pages.knowledge.testnet.explainer-section.blocks.title',content:[{type:'indexlist',value:[{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability'},{type:'text',valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate'},{type:'text',valueKey:"pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads",hidden:true}]},{type:'list',title:'pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.title',topGap:true,bottomGap:true,variant:'row',items:[{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.documentation',slug:'documentation',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,url:'https://push.org/docs',target:'_blank'},{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-explorer',slug:'push-explorer',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Explorer',url:'https://donut.push.network',target:'_blank'},{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-faucet',slug:'apply-glassroots',image:'/static/assets/website/chain/knowledge/grassroots',imageSrcSet:false,url:'https://zv9atndluia.typeform.com/to/ItQ7i2sO](https://zv9atndluia.typeform.com/to/ItQ7i2sO',target:'_blank'},{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.grassroots-program',slug:'apply-glassroots',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,url:'https://zv9atndluia.typeform.com/to/ItQ7i2sO](https://zv9atndluia.typeform.com/to/ItQ7i2sO',target:'_blank'}]},{type:'list',title:'For Users',topGap:true,bottomGap:true,variant:'row',items:[{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.ecosystem-apps',slug:'ecosystem-apps',image:'/static/assets/website/chain/knowledge/ecosystem',imageSrcSet:false,url:'http://push.org/ecosystem',target:'_blank'},{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.knowledge-base',slug:'knowledge-base',image:'/static/assets/website/chain/knowledge/knowledgebase',imageSrcSet:false,url:'https://push.org/knowledge',target:'_blank'},{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.lets-push-yaps',slug:'lets-push-yaps',image:'/static/assets/website/chain/knowledge/lfpush',imageSrcSet:false,title:"Let's Push Yaps",url:'https://push.org/lfpush',target:'_blank'}]},{type:'list',title:'For Validators',topGap:true,bottomGap:true,variant:'row',items:[{valueKey:'pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator',slug:'push-validator',image:'/static/assets/website/chain/knowledge/knowledgebase',imageSrcSet:false,title:'Push Validator',url:'https://push.org/docs/chain/node-and-system-tools/running-push-validator/',target:'_blank'}]}// {
-//   type: 'list',
-//   title: 'Incident Reports',
-//   topGap: true,
-//   bottomGap: true,
-//   variant: 'row',
-//   items: [
-//     {
-//       slug: 'ecosystem-apps',
-//       image: '/static/assets/website/chain/knowledge/developer-docs',
-//       imageSrcSet: false,
-//       title:
-//         'Service Outage - Donut Testnet - Date',
-//       url: '/knowledge/testnet/report/incident-12-nov-2025',
-//       target: '_blank',
-//     },
-//   ],
-// },
-]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/testnetComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const TestnetComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBTestnetList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const testnetComp = (TestnetComp);
-// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
-var SchemaMarkup = __webpack_require__(172619);
-;// ./src/pages/knowledge/testnet/index.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function TestnetPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.testnet.seo.title'),description:t('pages.knowledge.testnet.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/testnet"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.testnet.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.testnet.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(558335)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.testnet.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.testnet.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(558335)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"TestnetPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(testnetComp,{})})]});}/* harmony default export */ const testnet = (TestnetPage);
-
-/***/ },
-
 /***/ 507048
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -10990,17 +11005,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image12-4435c0ac653de198ac1a91cee23151b7.webp");
-
-/***/ },
-
-/***/ 558335
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdonut-0f8b0a71270b902a3feffecd3727e170.png");
 
 /***/ },
 
@@ -12557,7 +12561,8 @@ var map = {
 	"./blog/2025-12-11-push-chain-x-routemesh/cover-image.webp": 234616,
 	"./blog/2025-12-11-push-chain-x-routemesh/image-1.webp": 336584,
 	"./blog/2026-01-07-how-universal-transaction-works/cover-image.webp": 10602,
-	"./blog/2026-01-14-case-study-hodl-fun/cover-image.webp": 876612,
+	"./blog/2026-01-16-case-study-hodl-fun/cover-image.webp": 399374,
+	"./blog/2026-01-16-case-study-hodl-fun/image-1.webp": 202086,
 	"./static/assets/docs/chain/build/chain_comparision_dark.webp": 948121,
 	"./static/assets/docs/chain/build/chain_comparision_light.webp": 269559,
 	"./static/assets/docs/chain/build/unichain_dark.webp": 515468,
@@ -18864,18 +18869,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,UklGRhgEAABXRUJQVlA4WAoAAAAQAAAAXwAAXwAAQUxQSC0BAAABgFXbdtVqS4iDe6REAhLioHFAHBAH4IA6QEIkHAlHwumTBtj/NyImAN0lTWtTP6W2tQyCc8dJ/fQ6x9OE0fyimuQMYTS/sE1y2M384pqOkc0JqhxwM6doudvkNMdOsxOduzSn2jrMTnb+aXS60w83J5x3iTEy2aNOeduRnHT+IsrKwqfJaZcPYrwsvCUnXt6UmQGITj0CM7cKKDeFOPm/gV0q7OrK7t7YNWWn/u9XZaeNXVvZ3Su7ktgNwk6g3BSo3GYgcosAjJkCQGGW3oLxMnlD4VXxMRgrlU/IrBK+b5wUO8UYmexBZpSxv/Ip+HVhs+D3xqWh58JkQd/Co6J3Ng6W0V+UwSY4NOnVLONoqXYlKwEnlKRXsRJw1rjo+bRGnFuGsjY9h7a1JkF3AFZQOCDEAgAAkA8AnQEqYABgAD6RRJxLJaOioaZSSWCwEglAGluDRZ9sUOLYA9Tm2e8wHm1+lroSfUW9ADpSf8HgAHVVxfDQK2+WppX2cN4gRKTqJ59CYqG07LktmyZqvSkfXKMoiSgyvz42QY7rKIbQVu/cipTChCeb0j4JKuo67s8KprfvbqZRK0Fu2AD+8Gl//4Tf/+EYv//B36KtlVdfSCDgk08YnnEDDBIdWyfuzG/6sYf8Aj596rP60/ksqAAB3dTwx4T6trzR9mpGolXsR+scBQ9Z25iYyPJWnb5wlyOPgZ29/byEQTV6THqv7uPwsNNMNrPbrb83l7YyuNQdGU8xoPSostXJIzrHx9UHJahtPIs5voalBpgm21q6xg5IPmCLmad4sQmzClttxDzPzENxI48ta7jq59TAmB17+A+hlPSqP9i4mlO0+5avgRtivyWOBqCeGNkbxL5ixIlfmAoor8+3h43tHi1U1SPevswEqUFvvAoxn4Vd1zPORILrn/H7kR62oVXvxVjMs+pw5/cmOMVrTvXROMRpOgVPVOcLSkRr9eZny2lZIT77XST3SfCuHMHUgH/sHAZxgXsPowga0Tass6/0dkxJug7r5Gr1Dt5jz+x+br3n+GAJS63NyOkxy47twI4TgSFVZp+DX7SB4Unpe+kkccZ9ASqoaRiTAYGNH5Sjv2OrrtMRzhhR/FsWyScmJauSER2NcdwB5mY94Ohky4zcnR70QkOprOUn8oz/O7IkLz/tvg5SxIi/vds7W44NNvD1w6xar7m/JCjzw/O0cwf7R7MNTPGqyUmF6kyJ2CX0I+eZJ6t1nIvru7J8O5WGFer4dgoOXV/7EPXpFv4qSyjUI0Mt+q1D8gh+LoBpMryNN9CGIDkvb89eO9fAB5gXijZ/AQ9o+cvwiz4byr/BaFpFURzQ//4FA55d9/7TjfAxCAAA");
-
-/***/ },
-
-/***/ 876612
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
 
 /***/ },
 

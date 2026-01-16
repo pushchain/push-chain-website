@@ -1,15 +1,5 @@
 "use strict";
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[19958],{
-
-/***/ 13389
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
-
-/***/ },
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[52543],{
 
 /***/ 28453
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
@@ -106,24 +96,7 @@ function MDXProvider(properties) {
 
 /***/ },
 
-/***/ 196890
-(module) {
-
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/case-study-hodl-fun","source":"@site/blog/2026-01-14-case-study-hodl-fun/index.md","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","date":"2026-01-14T00:00:00.000Z","tags":[{"inline":true,"label":"Donut Testnet","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/donut-testnet"},{"inline":true,"label":"Universal Apps","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-apps"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-app-experience"},{"inline":true,"label":"Shared State Blockchain","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-state-blockchain"},{"inline":true,"label":"Universal Smart Contracts","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-smart-contracts"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/ecosystem"},{"inline":true,"label":"Case Study","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/case-study"}],"readingTime":1.29,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1162/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"case-study-hodl-fun","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","authors":["push"],"image":"./cover-image.webp","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","text":"A Universal Transaction lets any wallet from any blockchain execute transactions directly on Push Chain","tags":["Donut Testnet","Universal Apps","Shared App Experience","Shared State Blockchain","Universal Smart Contracts","Ecosystem","Case Study"]},"unlisted":false,"nextItem":{"title":"How Universal Transaction Works","permalink":"/push-chain-website/pr-preview/pr-1162/blog/how-universal-transaction-works"}}');
-
-/***/ },
-
-/***/ 253518
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
-
-/***/ },
-
-/***/ 802788
+/***/ 89450
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -132,10 +105,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_14_case_study_hodl_fun_index_md_cb1_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_16_case_study_hodl_fun_index_md_9bb_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_14_case_study_hodl_fun_index_md_cb1_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(196890);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2026_01_16_case_study_hodl_fun_index_md_9bb_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(433091);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
 
@@ -162,7 +135,7 @@ const frontMatter = {
 const contentTitle = 'What problem does Hodl solve?';
 
 const assets = {
-"image": (__webpack_require__(253518)/* ["default"] */ .A),
+"image": (__webpack_require__(459844)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
 
@@ -186,7 +159,7 @@ function _createMdxContent(props) {
     children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
         alt: "How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study",
-        src: (__webpack_require__(13389)/* ["default"] */ .A) + "",
+        src: (__webpack_require__(166555)/* ["default"] */ .A) + "",
         width: "1600",
         height: "900"
       })
@@ -194,7 +167,7 @@ function _createMdxContent(props) {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
         href: "https://www.thehodl.fun/",
         children: "Hodl.fun"
-      }), ", a universal token launchpad that launched 400K+ tokens across 80+ countries using Push Chain's universal blockchain.\nFrom hackathon idea to $1M volume in 60 days. Here’s how Hodl continues to crush the game"]
+      }), ", a universal token launchpad that launched 400K+ tokens across 80+ countries using Push Chain's universal blockchain.\nFrom hackathon idea to $1M volume in 60 days. Here’s how Hodl continues to crush the game."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Pump Fun, one of the most popular token launchpads in crypto, generates 100s of millions of volume everyday."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -225,7 +198,12 @@ function _createMdxContent(props) {
         children: "Trade tokens from any chain"
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "![][image1]"
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+        alt: "How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study",
+        src: (__webpack_require__(976975)/* ["default"] */ .A) + "",
+        width: "1999",
+        height: "1235"
+      })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
       children: ["The mission is simple:\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.em, {
         children: "“Every creator should be able to launch a token as easily as they post on social media. And every crypto user should be able to buy it, regardless of their wallet.\""
@@ -282,8 +260,16 @@ function _createMdxContent(props) {
       children: "What’s next with Hodl?"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Hodl Fun v2 is launching soon. Here’s what makes it extra special:"
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "> Real AMM-based pricing for smooth price discovery\n> Creator fees enabled, token launchers earn from trading activity\n> Automatic Uniswap listing on token graduation\n> More immersive, polished UI for a better trading experience"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Real AMM-based pricing for smooth price discovery ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Creator fees enabled, token launchers earn from trading activity ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Automatic Uniswap listing on token graduation ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["More immersive, polished UI for a better trading experience ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {})]
+      }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "We’re in the era of universal apps.\nAny wallet. Any User. Any chain"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
@@ -311,6 +297,43 @@ function MDXContent(props = {}) {
 }
 
 
+
+/***/ },
+
+/***/ 166555
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
+
+/***/ },
+
+/***/ 433091
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/case-study-hodl-fun","source":"@site/blog/2026-01-16-case-study-hodl-fun/index.md","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","date":"2026-01-16T00:00:00.000Z","tags":[{"inline":true,"label":"Donut Testnet","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/donut-testnet"},{"inline":true,"label":"Universal Apps","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-apps"},{"inline":true,"label":"Shared App Experience","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-app-experience"},{"inline":true,"label":"Shared State Blockchain","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/shared-state-blockchain"},{"inline":true,"label":"Universal Smart Contracts","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/universal-smart-contracts"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/ecosystem"},{"inline":true,"label":"Case Study","permalink":"/push-chain-website/pr-preview/pr-1162/blog/tags/case-study"}],"readingTime":1.35,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1162/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1162/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"case-study-hodl-fun","title":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","authors":["push"],"image":"./cover-image.webp","description":"How Hodl Fun Hit ~$1,000,000 Volume as a Universal Token Launchpad - Case Study","text":"A Universal Transaction lets any wallet from any blockchain execute transactions directly on Push Chain","tags":["Donut Testnet","Universal Apps","Shared App Experience","Shared State Blockchain","Universal Smart Contracts","Ecosystem","Case Study"]},"unlisted":false,"nextItem":{"title":"How Universal Transaction Works","permalink":"/push-chain-website/pr-preview/pr-1162/blog/how-universal-transaction-works"}}');
+
+/***/ },
+
+/***/ 459844
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
+
+/***/ },
+
+/***/ 976975
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-472009b5eeb56deeb95cdf8b85d5095f.webp");
 
 /***/ }
 

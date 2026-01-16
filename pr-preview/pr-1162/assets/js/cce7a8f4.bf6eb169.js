@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[21652],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[1700],{
 
 /***/ 75
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -900,6 +900,59 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 55505
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ QnA_QnA)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 3 modules
+var styled_components_browser_esm = __webpack_require__(505873);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./node_modules/react-icons/bs/index.esm.js
+var index_esm = __webpack_require__(796710);
+// EXTERNAL MODULE: ./node_modules/react-icons/ai/index.esm.js
+var ai_index_esm = __webpack_require__(154263);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
+var useMediaQuery = __webpack_require__(452005);
+// EXTERNAL MODULE: ./src/hooks/useSiteBaseUrl.tsx
+var useSiteBaseUrl = __webpack_require__(811494);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/components/Accordion/index.tsx
+/* eslint-disable @docusaurus/no-html-links */// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// External Components
+// Internal Components
+// Internal Configs
+const Accordion=_ref=>{let{items,firstOpen,fontWeight,fontSize}=_ref;const[activeIndex,setActiveIndex]=(0,react.useState)(firstOpen===false?null:0);const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const toggleAccordion=index=>{setActiveIndex(activeIndex===index?null:index);};const baseUrl=(0,useSiteBaseUrl/* useSiteBaseUrl */.p)()||'';return/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:items.map((item,index)=>/*#__PURE__*/(0,jsx_runtime.jsxs)(AccordionSection,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(AccordionParent,{onClick:()=>toggleAccordion(index),children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H3,{color:'var(--ifm-color-white)',fontSize:fontSize?fontSize:isMobile?'20px':'1.5rem',fontFamily:'DM Sans, sans-serif',fontWeight:fontWeight||'600',lineHeight:"140%",children:item.title||item.question}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{children:activeIndex===index?/*#__PURE__*/(0,jsx_runtime.jsx)(ai_index_esm/* AiOutlineMinus */.NIP,{color:'var(--ifm-color-white)',size:22}):/*#__PURE__*/(0,jsx_runtime.jsx)(ai_index_esm/* AiOutlinePlus */.tNe,{color:'var(--ifm-color-white)',size:22})})]}),activeIndex===index&&item.content!==undefined&&/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling.H3,{color:'var(--ifm-color-white)',fontSize:isMobile?'16px':'19px',fontFamily:'DM Sans, sans-serif',fontWeight:"400",padding:"0 0 24px 0",children:[item.content,item.link&&/*#__PURE__*/(0,jsx_runtime.jsxs)("a",{color:"var(--ifm-color-white)",fontFamily:'DM Sans, sans-serif',fontSize:"16px",fontWeight:"300",letterSpacing:"normal",target:"_blank",href:item.link,children:[' ',"- Link"]})]})}),activeIndex===index&&item.renderAnswer!==undefined&&item.renderAnswer(baseUrl)]},index))});};const AccordionSection=styled_components_browser_esm["default"].div.withConfig({displayName:"Accordion__AccordionSection",componentId:"sc-fx4kxq-0"})(["border-bottom:1px solid var(--ifm-color-gray-200);h3{white-space:pre-wrap;}"]);const AccordionParent=styled_components_browser_esm["default"].div.withConfig({displayName:"Accordion__AccordionParent",componentId:"sc-fx4kxq-1"})(["padding:24px 0;display:flex;flex-direction:row;flex:1;justify-content:space-between;align-items:center;cursor:pointer;gap:24px;"]);/* harmony default export */ const components_Accordion = (Accordion);
+// EXTERNAL MODULE: ./src/config/ShortFAQsList.tsx
+var ShortFAQsList = __webpack_require__(889013);
+;// ./src/components/QnA/QnA.tsx
+// React + Web3 Essentials
+// External Components
+// Import Assets
+// Internal Components
+// Internal Configs
+const QnA=_ref=>{let{titleKey='components.short-faq-snippet.title',titleAriaLabelKey='components.short-faq-snippet.title-aria-label',discordLinkTitleKey='components.short-faq-snippet.discord-link-title',discordLinkAriaLabelKey='components.short-faq-snippet.discord-link-aria-label',discordLinkTextKey='components.short-faq-snippet.discord-link-text',accordionAriaLabelKey='components.short-faq-snippet.accordion-aria-label',exploreMoreTitleKey='components.short-faq-snippet.explore-more-title',exploreMoreAriaLabelKey='components.short-faq-snippet.explore-more-aria-label',exploreMoreTextKey='components.short-faq-snippet.explore-more-text',discordUrl='https://discord.com/invite/pushchain',exploreMoreUrl='/knowledge/faq',faqsList,getQnAsFunction=ShortFAQsList/* getShortFAQsList */._}=_ref;// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const isLaptop=(0,useMediaQuery/* default */.A)(globals/* device */.jO.laptop);const finalFaqsList=faqsList||getQnAsFunction();return/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemH */.Oj,{flexDirection:isLaptop&&'column',alignItems:"flex-start",justifyContent:"space-between",gap:isLaptop?'24px':'120px',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{flexDirection:isLaptop?'row':'column',alignItems:"flex-start",justifyContent:isLaptop?'space-between':'flex-start',flex:"0 0 auto",gap:"24px",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H2,{color:"var(--ifm-color-white)",fontSize:isMobile?'2.5rem':'3rem',fontFamily:"DM Sans, sans-serif",fontWeight:"600",lineHeight:"120%",whiteSpace:"break-spaces",role:"heading","aria-level":"2","aria-label":t(titleAriaLabelKey),children:t(titleKey)}),/*#__PURE__*/(0,jsx_runtime.jsxs)(QnAPrimaryLink,{href:discordUrl,target:"_blank",title:t(discordLinkTitleKey),"aria-label":t(discordLinkAriaLabelKey),rel:"noopener",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsDiscord,{size:28,"aria-hidden":"true"}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:t(discordLinkTextKey)}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsArrowRight,{size:24,className:"anchorSvgLink","aria-hidden":"true"})]})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(SharedStyling/* ItemV */.y8,{alignItems:"flex-start",justifyContent:"flex-start",flex:"1",margin:isLaptop?'48px 0 0 0':'-20px 0 0 0',children:[/*#__PURE__*/(0,jsx_runtime.jsx)(AccordionGrid,{role:"region","aria-label":t(accordionAriaLabelKey),children:/*#__PURE__*/(0,jsx_runtime.jsx)(components_Accordion,{items:finalFaqsList})}),/*#__PURE__*/(0,jsx_runtime.jsxs)(QnAMoreInfoLink,{href:(0,useBaseUrl/* default */.Ay)(exploreMoreUrl),title:t(exploreMoreTitleKey),"aria-label":t(exploreMoreAriaLabelKey),target:"_self",className:"button",margin:isMobile?'24px auto 0px 0px':'24px 0px 0px auto',hoverBackground:"transparent",hover:"transparent",background:"transparent",filter:"none",color:"var(--ifm-color-pink-400)",borderRadius:"0",padding:"0px 0px",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SpanLink,{children:t(exploreMoreTextKey)}),/*#__PURE__*/(0,jsx_runtime.jsx)(index_esm.BsArrowRight,{className:"anchorSVGlink","aria-hidden":"true"})]})]})]});};// Styled Components
+const QnAPrimaryLink=(0,styled_components_browser_esm["default"])(SharedStyling.A).withConfig({displayName:"QnA__QnAPrimaryLink",componentId:"sc-5ntub1-0"})(["display:flex;align-items:center;gap:12px;padding:12px 16px;text-decoration:none;transition:all 0.2s ease;font-size:16px;background:var(--ifm-color-qna-discord);color:var(--ifm-color-white);font-family:'DM Sans',sans-serif;border:1px solid rgba(255,255,255,0.3);border-radius:12px;&:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(88,101,242,0.3);}p{margin:0;font-weight:500;color:inherit;}"]);const AccordionGrid=styled_components_browser_esm["default"].div.withConfig({displayName:"QnA__AccordionGrid",componentId:"sc-5ntub1-1"})(["width:100%;display:flex;flex-direction:column;gap:16px;"]);const SpanLink=(0,styled_components_browser_esm["default"])(SharedStyling/* Span */.L9).withConfig({displayName:"QnA__SpanLink",componentId:"sc-5ntub1-2"})(["position:relative;text-decoration:none;font-size:1.125rem;font-weight:600;letter-spacing:-0.36px;line-height:142%;&:after{content:'';position:absolute;width:100%;transform:scaleX(0);height:2px;bottom:0;left:0;background-color:var(--ifm-color-pink-400);transform-origin:bottom right;transition:transform 0.25s ease-out;}&:hover:after{transform:scaleX(1);transform-origin:bottom left;}"]);const QnAMoreInfoLink=(0,styled_components_browser_esm["default"])(SharedStyling.A).withConfig({displayName:"QnA__QnAMoreInfoLink",componentId:"sc-5ntub1-3"})(["overflow:inherit;.anchorSVGlink{color:var(--ifm-color-pink-400);top:3px;margin-left:8px;}&:hover{.anchorSVGlink{color:var(--ifm-color-pink-400);}}"]);/* harmony default export */ const QnA_QnA = (QnA);
+
+/***/ },
+
 /***/ 55647
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -945,62 +998,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-826dad22941d3f43c5701934c795e9f1.webp");
-
-/***/ },
-
-/***/ 57220
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ deepdives)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBDeepDivesList.js
-const KBDeepDivesList={title:'pages.knowledge.deepdives.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.intro'},{type:'text',valueKey:'pages.knowledge.deepdives.explainer-section.blocks.sections.architecture-deep-dives.items.curated-reads',hidden:true}]},{title:'Learn what makes Push Chain tick!',type:'list',topGap:true,bottomGap:true,variant:'row',items:[{slug:'what-is-universal-fee-abstraction',image:'/static/assets/website/chain/knowledge/what-is-fee-abstraction',imageSrcSet:false,title:'What is Universal Fee Abstraction and How do they work?',url:'/blog/what-is-universal-abstraction',target:'_blank'},{slug:'what-are-universal-executor-accounts',image:'/static/assets/website/chain/knowledge/what-are-executor-accounts',imageSrcSet:false,title:'What are Universal Executor Accounts (UEAs) and How do they work?',url:'/blog/what-are-universal-executor-accounts',target:'_blank'},{slug:'how-universal-transaction-works',image:'/static/assets/website/chain/knowledge/how-universal-transaction-works',imageSrcSet:false,title:'How Universal Transaction Works',url:'/blog/how-universal-transaction-works',target:'_blank'},{slug:'interop-spectrum',image:'/static/assets/website/chain/knowledge/interop-spectrum',imageSrcSet:false,title:'Interop as a Spectrum',url:'/blog/interop-spectrum',target:'_blank'},{slug:'understand-proof-of-stake-part-1',image:'/static/assets/website/chain/knowledge/understand-proof-of-stake',imageSrcSet:false,title:'Understanding Proof of Stake (POS) - Part 1',url:'/blog/understand-proof-of-stake',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/deepdivesComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const DeepDivesComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.deepdives.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBDeepDivesList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const deepdivesComp = (DeepDivesComp);
-;// ./src/pages/knowledge/deepdives.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function DeepDivesPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.deepdives.seo.title'),description:t('pages.knowledge.deepdives.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/deepdives"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.deepdives.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.deepdives.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.deepdives.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.deepdives.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(95518)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(deepdivesComp,{})})]});}/* harmony default export */ const deepdives = (DeepDivesPage);
 
 /***/ },
 
@@ -1949,17 +1946,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/universalapps-2c09ffd278cc9e3eea7817d02f844f27.webp");
-
-/***/ },
-
-/***/ 95518
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbdeepdivespreview-e4ac4501d9f3cf693c07ac84a99cfe76.png");
 
 /***/ },
 
@@ -3940,6 +3926,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-4c03e7ab6942589dfc80380d49e12388.webp");
+
+/***/ },
+
+/***/ 202086
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-472009b5eeb56deeb95cdf8b85d5095f.webp");
 
 /***/ },
 
@@ -6991,6 +6989,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 385186
+(module, __unused_webpack_exports, __webpack_require__) {
+
+var map = {
+	"./any-chain@2x.webp": 728013,
+	"./cheap-storage@2x.webp": 540226,
+	"./explore-knowledgebase@2x.webp": 651722,
+	"./infinitely-scalable@2x.webp": 175816,
+	"./instant-finality@2x.webp": 66653,
+	"./knowledge-frame@2x.webp": 878259,
+	"./one-chain@2x.webp": 813355,
+	"./seamless-instant@2x.webp": 212464,
+	"./second-hero-image@2x.webp": 946074,
+	"./supported-chains@2x.webp": 851148
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 385186;
+
+/***/ },
+
 /***/ 385962
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -7192,6 +7228,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("data:image/webp;base64,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");
+
+/***/ },
+
+/***/ 399374
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
 
 /***/ },
 
@@ -7807,6 +7855,44 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 435789
+(module, __unused_webpack_exports, __webpack_require__) {
+
+var map = {
+	"./any-chain@3x.webp": 670768,
+	"./cheap-storage@3x.webp": 109767,
+	"./explore-knowledgebase@3x.webp": 585167,
+	"./infinitely-scalable@3x.webp": 955557,
+	"./instant-finality@3x.webp": 774976,
+	"./knowledge-frame@3x.webp": 866110,
+	"./one-chain@3x.webp": 498198,
+	"./seamless-instant@3x.webp": 49805,
+	"./second-hero-image@3x.webp": 856671,
+	"./supported-chains@3x.webp": 317721
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 435789;
+
+/***/ },
+
 /***/ 435939
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -8131,6 +8217,118 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 451355
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ knowledge)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/components/SEO/SchemaMarkup.tsx
+var SchemaMarkup = __webpack_require__(172619);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./node_modules/styled-components/dist/styled-components.browser.esm.js + 3 modules
+var styled_components_browser_esm = __webpack_require__(505873);
+// EXTERNAL MODULE: ./src/components/ImageHolder.tsx
+var ImageHolder = __webpack_require__(728339);
+// EXTERNAL MODULE: ./src/components/MailingSignup/MailingSignup.tsx + 3 modules
+var MailingSignup = __webpack_require__(441804);
+// EXTERNAL MODULE: ./src/config/globals.js
+var globals = __webpack_require__(61530);
+// EXTERNAL MODULE: ./src/hooks/useMediaQuery.ts
+var useMediaQuery = __webpack_require__(452005);
+// EXTERNAL MODULE: ./src/components/QnA/QnA.tsx + 1 modules
+var QnA = __webpack_require__(55505);
+// EXTERNAL MODULE: ./src/config/ShortFAQsList.tsx
+var ShortFAQsList = __webpack_require__(889013);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBRootResourcesList.ts
+/* eslint-disable no-irregular-whitespace */// Knowledge Base Content Configuration:
+// - Add a new object with the following fields:
+//   - `id`: identifier for the knowledge base item.
+//   - `image`, `subtitle`: Metadata for the item.
+//   - `title` & `content`: Each object has a title & content, which is in the /content folder. Add the title in the object in this directory and  // Use HTML or Markdown to create the article (similar to the blog section).
+//   - `url`: For external links, provide the full URL instead of using `content`.
+const KBRootResourcesList={content:[{type:'list',title:'pages.knowledge.explainer-section.blocks.sections.resources.title',variant:'tile',items:[{id:'push101',url:'push101',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.push101',target:'_self',image:'/static/assets/website/docshub/WhitePushLogo',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BG.png`).default,
+bgColor:'#dd6fff',bgStylizing:{type:'sparkle',density:40,size:10,minOpacity:0.25,maxOpacity:0.55},customWidth:'70px'},{id:'builders',url:'builders',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.builders',target:'_self',image:'/static/assets/website/docshub/BuildOnPushIcon',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+bgColor:'#101010',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'113px'},{id:'deepdives',url:'deepdives',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives',target:'_self',image:'/static/assets/website/docshub/TechnicalDeepDivesIcon',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'103px'},{id:'devdocs',url:'/docs',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs',target:'_self',image:'/static/assets/website/docshub/DeveloperDocsIcon',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlueBG.png`).default,
+bgColor:'var(--ifm-color-kb-blue)',bgStylizing:{type:'lines',gridSize:30,color:'white',opacity:0.2},customWidth:'90px'},{id:'tokenomics',url:'tokenomics',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics',target:'_self',image:'/static/assets/website/docshub/TokenomicsIcon',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10}},{id:'faq',url:'faq',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.faq',target:'_self',image:'/static/assets/website/docshub/FAQIcons',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'70px'},{id:'testnet',url:'testnet',valueKey:'pages.knowledge.explainer-section.blocks.sections.resources.items.testnet',target:'_self',image:'/static/assets/website/docshub/TestnetDonutIcon',imageSrcSet:true,// bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+bgColor:'var(--ifm-color-kb-dark)',bgStylizing:{type:'sparkle',density:40,size:10},customWidth:'70px'}// {
+//   id: 'validators',
+//   url: 'validators',
+//   valueKey:
+//     'pages.knowledge.explainer-section.blocks.sections.resources.items.validators',
+//   target: '_self',
+//   image: '/static/assets/website/docshub/FAQIcons',
+//   imageSrcSet: true,
+//   // bgImage: require(`@site/static/assets/website/docshub/BlackBG.png`).default,
+//   bgColor: 'var(--ifm-color-kb-dark)',
+//   bgStylizing: {
+//     type: 'sparkle',
+//     density: 40,
+//     size: 10,
+//   },
+//   customWidth: '70px',
+// },
+]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/knowledgeComp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Components
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const KnowledgeComp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const isMobile=(0,useMediaQuery/* default */.A)(globals/* device */.jO.mobileL);const[showEmailSignup,setShowEmailSignup]=(0,react.useState)(false);const heroConfig={title:t('pages.knowledge.hero-section.title'),description:()=>/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SpanHighlighted,{children:t('pages.knowledge.hero-section.description.highlighted')}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:t('pages.knowledge.hero-section.description.developers')}),' ',t('pages.knowledge.hero-section.description.developers-text'),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("br",{}),/*#__PURE__*/(0,jsx_runtime.jsx)("b",{children:t('pages.knowledge.hero-section.description.users')}),' ',t('pages.knowledge.hero-section.description.users-text')]}),video:{src:'https://www.youtube.com/embed/-cojsUIHcLE?rel=0',title:'Push Chain Public Testnet is Live'},// image: `knowledge-frame`,
+footer:{description:t('pages.knowledge.hero-section.footer.description'),cta:{text:t('pages.knowledge.hero-section.footer.cta.text'),action:'showEmailSignup'}}};const handleCTAClick=()=>{if(heroConfig.footer.cta.action==='openModal'){open();}else if(heroConfig.footer.cta.action==='showEmailSignup'){setShowEmailSignup(!showEmailSignup);}};return/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsxs)(KnowledgeBaseHero,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(HeroTextContent,{justifyContent:"flex-start",alignItems:"flex-start",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling.H1,{children:heroConfig.title}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{children:heroConfig===null||heroConfig===void 0?void 0:heroConfig.description()})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(HeroMediaCard,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaDisplayContainer,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(EmailSignupSection,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(EmailSignupContent,{children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(EmailSignupTitle,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{className:"long",children:t('pages.knowledge.hero-section.email-signup.title.long')}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{className:"short",children:t('pages.knowledge.hero-section.email-signup.title.short')})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(EmailSignupDescription,{children:t('pages.knowledge.hero-section.email-signup.description')}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* ItemV */.y8,{flex:"0",children:/*#__PURE__*/(0,jsx_runtime.jsx)(MailingSignup/* MailingSignup */.c,{showButton:true,background:'var(--ifm-color-knowledge-bg)',borderColor:'var(--ifm-color-knowledge-border)',textColor:'var(--ifm-color-white)',placeholderColor:'var(--ifm-color-knowledge-placeholder)',buttonBg:'var(--ifm-color-custom-pink)',buttonBorder:'1px solid var(--ifm-color-knowledge-button-border)',arrowColor:'var(--ifm-color-white)',loaderColor:'var(--ifm-color-white)',blendMode:"lighten",boxShadow:"2.788px 2.598px 12px rgba(255, 255, 255, 0.15) inset, 1.858px 1.732px 6px rgba(255, 255, 255, 0.15) inset",backdrop:"blur(10px)"})})]})}),/*#__PURE__*/(0,jsx_runtime.jsx)(HeroMediaCardInner,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaDisplay,{showEmailSignup:showEmailSignup,type:heroConfig!==null&&heroConfig!==void 0&&heroConfig.image?'image':'video',borderRadius:"32px",children:[(heroConfig===null||heroConfig===void 0?void 0:heroConfig.video)&&/*#__PURE__*/(0,jsx_runtime.jsx)("iframe",{width:isMobile?'100%':'560px',height:isMobile?'100%':'325px',src:heroConfig.video.src,title:heroConfig.video.title,allow:"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",referrerPolicy:"strict-origin-when-cross-origin",allowFullScreen:true}),(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)&&/*#__PURE__*/(0,jsx_runtime.jsx)(ImageHolder/* default */.A,{src:__webpack_require__(459506)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+".webp").default,srcSet:__webpack_require__(385186)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+"@2x.webp").default+" 2x, "+__webpack_require__(435789)("./"+(heroConfig===null||heroConfig===void 0?void 0:heroConfig.image)+"@3x.webp").default+" 3x",alt:'alt',title:'title'})]})})]}),/*#__PURE__*/(0,jsx_runtime.jsxs)(MediaFooter,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Span */.L9,{fontSize:isMobile?'0.875rem':'0.938rem',fontWeight:"400",lineHeight:isMobile?'100%':'132%',letterSpacing:"-0.64px",color:"var(--ifm-color-neutral-300)",flex:"1",children:heroConfig.footer.description}),/*#__PURE__*/(0,jsx_runtime.jsx)(CTAPrimaryA,{onClick:handleCTAClick,children:showEmailSignup?'Hide Email Signup':heroConfig.footer.cta.text})]})]})]})})}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{id:"resources",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBRootResourcesList})})}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{id:"faq",children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(QnA/* default */.A,{titleKey:"components.short-faq-snippet.title",titleAriaLabelKey:"components.short-faq-snippet.title-aria-label",discordLinkTitleKey:"components.short-faq-snippet.discord-link-title",discordLinkAriaLabelKey:"components.short-faq-snippet.discord-link-aria-label",discordLinkTextKey:"components.short-faq-snippet.discord-link-text",accordionAriaLabelKey:"components.short-faq-snippet.accordion-aria-label",exploreMoreTitleKey:"components.short-faq-snippet.explore-more-title",exploreMoreAriaLabelKey:"components.short-faq-snippet.explore-more-aria-label",exploreMoreTextKey:"components.short-faq-snippet.explore-more-text",discordUrl:"https://discord.com/invite/pushchain",exploreMoreUrl:"/knowledge/faq",getQnAsFunction:ShortFAQsList/* getShortFAQsList */._})})})]});};/* harmony default export */ const knowledgeComp = (KnowledgeComp);// Knowledge Base Hero Section - Main container for the header content
+const KnowledgeBaseHero=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemH */.Oj).withConfig({displayName:"knowledgeComp__KnowledgeBaseHero",componentId:"sc-bgrzc4-0"})(["display:flex;align-items:center;gap:128px;justify-content:space-between;flex:1;@media ","{gap:80px;}@media ","{gap:48px;flex-direction:column;justify-content:flex-start;align-items:flex-start;}@media ","{flex-direction:column;gap:32px;justify-content:flex-start;align-items:center;}"],globals/* device */.jO.laptop,globals/* device */.jO.tablet,globals/* device */.jO.mobileL);// Hero Text Content - Container for title and description
+const HeroTextContent=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemV */.y8).withConfig({displayName:"knowledgeComp__HeroTextContent",componentId:"sc-bgrzc4-1"})(["justify-content:flex-start;align-items:flex-start;"]);// Media Display - Container for image/video content
+const MediaDisplay=(0,styled_components_browser_esm["default"])(SharedStyling/* ItemH */.Oj).withConfig({displayName:"knowledgeComp__MediaDisplay",componentId:"sc-bgrzc4-2"})(["aspect-ratio:16/9;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);transform:",";background:",";z-index:2;"],props=>props.showEmailSignup?'translateY(-90%)':'translateY(0)',props=>props.type==='image'?'var(--ifm-color-knowledge-media-pink)':'var(--ifm-color-card-dark)');// Hero Media Card - Card container for media and footer
+const HeroMediaCard=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__HeroMediaCard",componentId:"sc-bgrzc4-3"})(["padding:16px;background:var(--ifm-color-neutral-1100);display:flex;border-radius:40px;flex-direction:column;justify-content:flex-start;align-self:flex-start;min-width:350px;flex:1;iframe{border-radius:24px;}@media ","{min-width:300px;flex-grow:1;align-self:center;padding:16px;}@media ","{min-width:100%;}"],globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const HeroMediaCardInner=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__HeroMediaCardInner",componentId:"sc-bgrzc4-4"})(["overflow:hidden;border-radius:32px;position:relative;"]);// Media Footer - Footer section with description and CTA
+const MediaFooter=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__MediaFooter",componentId:"sc-bgrzc4-5"})(["display:grid;margin:16px 0 0 0;grid-template-columns:1fr auto;align-items:center;gap:16px;@media ","{display:flex;flex-direction:column;button{width:100%;}}"],globals/* device */.jO.laptopM);// CTA Button - Call-to-action button styling
+const CTAPrimaryA=(0,styled_components_browser_esm["default"])(SharedStyling/* PrimaryA */.OW).withConfig({displayName:"knowledgeComp__CTAPrimaryA",componentId:"sc-bgrzc4-6"})(["text-align:center;width:100%;cursor:pointer;line-height:180.513%;"]);// Media Display Container - Container for layered content
+const MediaDisplayContainer=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__MediaDisplayContainer",componentId:"sc-bgrzc4-7"})(["position:relative;overflow:visible;"]);// Email Signup Section - Container for email signup form (positioned behind)
+const EmailSignupSection=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__EmailSignupSection",componentId:"sc-bgrzc4-8"})(["position:absolute;top:0;left:0;right:0;bottom:0;z-index:1;background:var(--ifm-color-primary-unified-text-inverse);border-radius:32px;padding:32px 24px;display:flex;align-items:center;justify-content:center;opacity:1;@media ","{padding:20px;}@media ","{padding:24px;}@media ","{padding:24px 16px;}"],globals/* device */.jO.laptopM,globals/* device */.jO.mobileL,globals/* device */.jO.mobile);// Email Signup Content - Inner content wrapper
+const EmailSignupContent=styled_components_browser_esm["default"].div.withConfig({displayName:"knowledgeComp__EmailSignupContent",componentId:"sc-bgrzc4-9"})(["display:flex;flex-direction:column;gap:20px;align-items:center;text-align:center;justify-content:center;width:100%;height:100%;"]);// Email Signup Title - Title for email signup
+const EmailSignupTitle=styled_components_browser_esm["default"].h3.withConfig({displayName:"knowledgeComp__EmailSignupTitle",componentId:"sc-bgrzc4-10"})(["font-size:24px;font-weight:700;color:var(--ifm-color-white);margin:0;line-height:1.2;& Span{font-size:24px;text-align:center;}& Span.long{display:block;}& Span.short{display:none;}@media ","{& Span.long{display:none;}& Span.short{display:block;}}@media ","{}@media ","{display:none;}"],globals/* device */.jO.desktop,globals/* device */.jO.tablet,globals/* device */.jO.mobileM);// Email Signup Description - Description text
+const EmailSignupDescription=styled_components_browser_esm["default"].p.withConfig({displayName:"knowledgeComp__EmailSignupDescription",componentId:"sc-bgrzc4-11"})(["font-family:'DM Sans',sans-serif;font-size:16px;font-weight:400;color:var(--ifm-color-neutral-400);margin:0;line-height:1.5;max-width:400px;@media ","{display:none;}@media ","{display:block;font-size:14px;}@media ","{display:none;}"],globals/* device */.jO.laptopM,globals/* device */.jO.tablet,globals/* device */.jO.mobileL);const SpanHighlighted=styled_components_browser_esm["default"].span.withConfig({displayName:"knowledgeComp__SpanHighlighted",componentId:"sc-bgrzc4-12"})(["color:color-mix( in srgb,var(--ifm-color-primary-unified) 25%,var(--ifm-color-primary-unified-inverse) 75% );b{color:color-mix( in srgb,var(--ifm-color-primary-unified) 25%,var(--ifm-color-primary-unified-inverse) 75% );}"]);
+;// ./src/pages/knowledge.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Main
+function KnowledgeBasePage(){const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.seo.title'),description:t('pages.knowledge.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(500517)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(500517)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SchemaMarkup/* default */.A,{type:"FAQPage"}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(knowledgeComp,{})})]});}/* harmony default export */ const knowledge = (KnowledgeBasePage);
+
+/***/ },
+
 /***/ 452353
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -8248,6 +8446,116 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/popularapps-d28e170524758eb6301b38888aa3e588.webp");
+
+/***/ },
+
+/***/ 459506
+(module, __unused_webpack_exports, __webpack_require__) {
+
+var map = {
+	"./StatsSectionBG.webp": 412636,
+	"./any-chain.webp": 920005,
+	"./any-chain@2x.webp": 728013,
+	"./any-chain@3x.webp": 670768,
+	"./cheap-storage.webp": 961556,
+	"./cheap-storage@2x.webp": 540226,
+	"./cheap-storage@3x.webp": 109767,
+	"./explore-knowledgebase.webp": 410012,
+	"./explore-knowledgebase@2x.webp": 651722,
+	"./explore-knowledgebase@3x.webp": 585167,
+	"./infinitely-scalable.webp": 517658,
+	"./infinitely-scalable@2x.webp": 175816,
+	"./infinitely-scalable@3x.webp": 955557,
+	"./instant-finality.webp": 146037,
+	"./instant-finality@2x.webp": 66653,
+	"./instant-finality@3x.webp": 774976,
+	"./knowledge-frame.webp": 42627,
+	"./knowledge-frame@2x.webp": 878259,
+	"./knowledge-frame@3x.webp": 866110,
+	"./knowledge/Easter-Egg-5.webp": 360692,
+	"./knowledge/another-l1.webp": 649585,
+	"./knowledge/apps-of-the-future-building-without-the-chaos.webp": 559057,
+	"./knowledge/apps-only-possible-with-shared-state-v1.webp": 535862,
+	"./knowledge/apps-only-possible-with-shared-state-v2.webp": 96535,
+	"./knowledge/benchmarking-push-chain-nodes.webp": 813788,
+	"./knowledge/consumer-apps.webp": 282843,
+	"./knowledge/developer-docs.webp": 785714,
+	"./knowledge/developer-explorer.webp": 895514,
+	"./knowledge/developer-faucet.webp": 357653,
+	"./knowledge/ecosystem.webp": 870036,
+	"./knowledge/evolution-of-push-chain.webp": 512300,
+	"./knowledge/evolution-of-push.webp": 252296,
+	"./knowledge/faq/appusecases.webp": 803884,
+	"./knowledge/faq/devanduserbenefits.webp": 950814,
+	"./knowledge/faq/normalapps.webp": 716678,
+	"./knowledge/faq/pcisolatedenv.webp": 169646,
+	"./knowledge/faq/pcoverview.webp": 483587,
+	"./knowledge/faq/pcuniversalapp.webp": 340960,
+	"./knowledge/faq/pcwalletabstraction.webp": 699599,
+	"./knowledge/faq/universalapps.webp": 859214,
+	"./knowledge/frequently-asked-questions-cover.webp": 158482,
+	"./knowledge/frequently-asked-questions.webp": 201272,
+	"./knowledge/grassroots.webp": 813616,
+	"./knowledge/how-universal-transaction-works.webp": 189404,
+	"./knowledge/incident-reports.webp": 248824,
+	"./knowledge/innovations-by-push-chain.webp": 428117,
+	"./knowledge/interop-spectrum.webp": 75,
+	"./knowledge/knowledge_101.webp": 74775,
+	"./knowledge/knowledge_builders.webp": 57349,
+	"./knowledge/knowledge_deepdives.webp": 869790,
+	"./knowledge/knowledge_devdocs.webp": 981851,
+	"./knowledge/knowledge_tokenomics.webp": 57403,
+	"./knowledge/knowledgebase.webp": 877753,
+	"./knowledge/lfpush.webp": 550798,
+	"./knowledge/push-chain-partners.webp": 996204,
+	"./knowledge/randomized-parallel.webp": 464487,
+	"./knowledge/report.webp": 878210,
+	"./knowledge/simulate.webp": 626914,
+	"./knowledge/testnet/image-1.webp": 351031,
+	"./knowledge/testnet/image-2.webp": 741782,
+	"./knowledge/tokenomics/consumerusecases.webp": 572371,
+	"./knowledge/tokenomics/cover-image.webp": 792530,
+	"./knowledge/tokenomics/popularapps.webp": 457684,
+	"./knowledge/tokenomics/usecasesmain.webp": 501030,
+	"./knowledge/tokenomics/vestingdetailspc.webp": 974706,
+	"./knowledge/tokenomics/vestingpc.webp": 573930,
+	"./knowledge/understand-proof-of-stake.webp": 227602,
+	"./knowledge/what-are-executor-accounts.webp": 507048,
+	"./knowledge/what-is-fee-abstraction.webp": 516757,
+	"./knowledge/why-push-chain.webp": 786977,
+	"./one-chain.webp": 709595,
+	"./one-chain@2x.webp": 813355,
+	"./one-chain@3x.webp": 498198,
+	"./seamless-instant.webp": 124258,
+	"./seamless-instant@2x.webp": 212464,
+	"./seamless-instant@3x.webp": 49805,
+	"./second-hero-image.webp": 426252,
+	"./second-hero-image@2x.webp": 946074,
+	"./second-hero-image@3x.webp": 856671,
+	"./supported-chains.webp": 702806,
+	"./supported-chains@2x.webp": 851148,
+	"./supported-chains@3x.webp": 317721
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 459506;
 
 /***/ },
 
@@ -9961,6 +10269,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-2-a0a9cede609100a378e717f4d3e556d5.webp");
+
+/***/ },
+
+/***/ 500517
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/knowledgebasepreview-c48a978387c103d92a4a4823e284448e.png");
 
 /***/ },
 
@@ -12537,7 +12856,8 @@ var map = {
 	"./blog/2025-12-11-push-chain-x-routemesh/cover-image.webp": 234616,
 	"./blog/2025-12-11-push-chain-x-routemesh/image-1.webp": 336584,
 	"./blog/2026-01-07-how-universal-transaction-works/cover-image.webp": 10602,
-	"./blog/2026-01-14-case-study-hodl-fun/cover-image.webp": 876612,
+	"./blog/2026-01-16-case-study-hodl-fun/cover-image.webp": 399374,
+	"./blog/2026-01-16-case-study-hodl-fun/image-1.webp": 202086,
 	"./static/assets/docs/chain/build/chain_comparision_dark.webp": 948121,
 	"./static/assets/docs/chain/build/chain_comparision_light.webp": 269559,
 	"./static/assets/docs/chain/build/unichain_dark.webp": 515468,
@@ -15500,6 +15820,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/any-chain@2x-5fa04f8610064bbfe520d22ede075304.webp");
+
+/***/ },
+
+/***/ 728339
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _home_runner_work_push_chain_website_push_chain_website_node_modules_babel_runtime_helpers_esm_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(198587);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(296540);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(474848);
+const _excluded=["srcWebp","fallback","src","srcSet","alt"];// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable */// React + Web3 Essentials
+function getPublicImagePath(relativePath){return relativePath;}function getSrcSet(srcSet){return srcSet.split(',').map(srcSetItem=>srcSetItem.trim()).map(srcSetItem=>getPublicImagePath(srcSetItem)).join(', ');}function ImageHolder(props){const _ref=props||{},{srcWebp,fallback,src,srcSet,alt}=_ref,restProps=(0,_home_runner_work_push_chain_website_push_chain_website_node_modules_babel_runtime_helpers_esm_objectWithoutPropertiesLoose_js__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A)(_ref,_excluded);return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("picture",{children:[/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("source",{srcSet:srcWebp,type:"image/webp"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("source",{srcSet:fallback,type:"image/jpeg"}),/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img",Object.assign({src:getPublicImagePath(src),srcSet:getSrcSet(srcSet),alt:alt},restProps))]});}/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.memo(ImageHolder));
 
 /***/ },
 
@@ -18847,18 +19184,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ 876612
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
-
-/***/ },
-
 /***/ 876629
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -19144,6 +19469,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-540f19492dc25e81915fdcb9c4ef4d00.webp");
+
+/***/ },
+
+/***/ 889013
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   _: () => (/* binding */ getShortFAQsList)
+/* harmony export */ });
+/* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(328774);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(777255);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(505873);
+/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
+/* harmony import */ var _site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(61530);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(474848);
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// External Components
+// Internal Components
+// Internal Configs
+// Function to generate FAQ list with translations
+const getShortFAQsList=()=>{const{t}=(0,react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .useTranslation */ .Bd)();return[{question:t('components.short-faq-snippet.qnas.qna1.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna1.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna1.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna2.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna2.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna2.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna3.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna3.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna3.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna4.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna4.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna4.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{})}})})},{question:t('components.short-faq-snippet.qnas.qna5.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna5.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna5.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{}),3:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"#useful-stats",title:t('components.short-faq-snippet.qnas.qna5.answer.supported-urls-title')}),4:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"/contact",title:t('components.short-faq-snippet.qnas.qna5.answer.contact-url-title'),target:"_self"})}})})},{question:t('components.short-faq-snippet.qnas.qna6.question'),section:'General',renderAnswer:()=>/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Answer,{role:"region","aria-label":""+t('components.short-faq-snippet.answer-aria-label')+t('components.short-faq-snippet.qnas.qna6.question'),children:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_i18next__WEBPACK_IMPORTED_MODULE_1__/* .Trans */ .x6,{i18nKey:"components.short-faq-snippet.qnas.qna6.answer",components:{1:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,{role:"text"}),2:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("strong",{}),3:/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_0__/* ["default"] */ .A,{href:"https://donut.push.network",title:t('components.short-faq-snippet.qnas.qna6.answer.donut-testnet-title')})}})})}];};// Note: ShortqnasList is now dynamically generated via getShortqnasList()
+// and should be called within React components to access translation context
+const Answer=(0,styled_components__WEBPACK_IMPORTED_MODULE_2__["default"])(_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .ItemH */ .Oj).withConfig({displayName:"ShortFAQsList__Answer",componentId:"sc-ubty7n-0"})(["align-items:stretch;align-self:stretch;justify-content:flex-start;margin:0px;padding:0 0 24px 0;& ","{color:var(--ifm-color-neutral-300);font-size:1.25rem;font-style:normal;font-weight:400;line-height:150%;width:100%;@media ","{font-size:16px;}}& Span:not(:first-child){margin-top:24px;}& a{text-decoration:none;&:hover{text-decoration:underline;}}& b{color:var(--ifm-color-white);font-weight:600;}"],_site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__/* .Span */ .L9,_site_src_config_globals__WEBPACK_IMPORTED_MODULE_4__/* .device */ .jO.mobileL);
 
 /***/ },
 

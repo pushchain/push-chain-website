@@ -1,4 +1,4 @@
-(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[56436],{
+(self["webpackChunkpush_chain_website"] = self["webpackChunkpush_chain_website"] || []).push([[76074],{
 
 /***/ 75
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
@@ -3876,6 +3876,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 202086
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-472009b5eeb56deeb95cdf8b85d5095f.webp");
+
+/***/ },
+
 /***/ 202253
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -7128,6 +7140,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
+/***/ 399374
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
+
+/***/ },
+
 /***/ 399830
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -10041,62 +10065,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ 507219
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ builders)
-});
-
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
-var Head = __webpack_require__(705260);
-// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(486025);
-// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
-var Layout = __webpack_require__(428176);
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(296540);
-// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
-var es = __webpack_require__(777255);
-// EXTERNAL MODULE: ./src/css/SharedStyling.js
-var SharedStyling = __webpack_require__(113490);
-// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
-var ContentBlocks = __webpack_require__(733771);
-;// ./src/config/KBBuildersList.js
-const KBBuildersList={title:'pages.knowledge.builders.explainer-section.blocks.title',content:[{type:'indexlist',topGap:false,bottomGap:false,value:[{type:'text',valueKey:'pages.knowledge.builders.explainer-section.blocks.sections.builders-intro.items.intro'},{type:'text',valueKey:'pages.knowledge.builders.explainer-section.blocks.sections.builders-intro.items.curated-reads',hidden:true}]},{type:'list',title:'pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title',topGap:true,bottomGap:true,variant:'row',items:[{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.apps-of-the-future",slug:'apps-of-the-future-building-without-the-chaos',image:'/static/assets/website/chain/knowledge/apps-of-the-future-building-without-the-chaos',imageSrcSet:false,url:'/blog/apps-of-the-future-building-without-the-chaos',target:'_blank'},{slug:'consumer-apps-that-can-be-built-on-push-chain',image:'/static/assets/website/chain/knowledge/consumer-apps',imageSrcSet:false,title:'Consumer Apps 🫶🏽 Push Chain?',url:'/blog/consumer-apps-that-can-be-built-on-push-chain/',target:'_blank'},{slug:'apps-only-possible-with-shared-state-v1',image:'/static/assets/website/chain/knowledge/apps-only-possible-with-shared-state-v1',imageSrcSet:false,title:'Apps Possible Only with Shared State - Vol.1',url:'/blog/apps-only-possible-with-shared-state-v1',target:'_blank'},{slug:'apps-only-possible-with-shared-state-v2',image:'/static/assets/website/chain/knowledge/apps-only-possible-with-shared-state-v2',imageSrcSet:false,title:'Apps Possible Only with Shared State - Vol.2',url:'/blog/apps-only-possible-with-shared-state-v2',target:'_blank'}]},{type:'list',title:'pages.knowledge.builders.explainer-section.blocks.sections.developer-resources.title',topGap:true,bottomGap:true,variant:'row',items:[{slug:'developer-docs',image:'/static/assets/website/chain/knowledge/developer-docs',imageSrcSet:false,title:'Explore Developer Documentation',url:'/docs/',target:'_blank'},{slug:'faucet',image:'/static/assets/website/chain/knowledge/developer-faucet',imageSrcSet:false,title:'Get Testnet Tokens',url:'https://faucet.push.org',target:'_blank'},{slug:'testnet-explorer',image:'/static/assets/website/chain/knowledge/developer-explorer',imageSrcSet:false,title:'Push Testnet Explorer',url:'https://donut.push.network',target:'_blank'}]}]};
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(474848);
-;// ./src/pages-composition/buildersComp.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Interfaces and Props
-// Helper Functions
-// Helper Component
-// Main
-const BuildersComp=()=>{// Localization
-const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.builders.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBBuildersList,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const buildersComp = (BuildersComp);
-;// ./src/pages/knowledge/builders.tsx
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
-// React + Web3 Essentials
-// External Components
-// Internal Component
-// Internal Configs
-// Main
-function BuildersPage(){// Internationalization
-const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.builders.seo.title'),description:t('pages.knowledge.builders.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/builders"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.builders.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.builders.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(668243)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.builders.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.builders.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(668243)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(buildersComp,{})})]});}/* harmony default export */ const builders = (BuildersPage);
-
-/***/ },
-
 /***/ 507784
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -12526,7 +12494,8 @@ var map = {
 	"./blog/2025-12-11-push-chain-x-routemesh/cover-image.webp": 234616,
 	"./blog/2025-12-11-push-chain-x-routemesh/image-1.webp": 336584,
 	"./blog/2026-01-07-how-universal-transaction-works/cover-image.webp": 10602,
-	"./blog/2026-01-14-case-study-hodl-fun/cover-image.webp": 876612,
+	"./blog/2026-01-16-case-study-hodl-fun/cover-image.webp": 399374,
+	"./blog/2026-01-16-case-study-hodl-fun/image-1.webp": 202086,
 	"./static/assets/docs/chain/build/chain_comparision_dark.webp": 948121,
 	"./static/assets/docs/chain/build/chain_comparision_light.webp": 269559,
 	"./static/assets/docs/chain/build/unichain_dark.webp": 515468,
@@ -14400,17 +14369,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ 668243
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbbuilderspreview-5422dbb38c21d07354613f39c918b673.png");
-
-/***/ },
-
 /***/ 669984
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -15392,6 +15350,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-9fad828d8323cbb920c74dd535603336.webp");
+
+/***/ },
+
+/***/ 721593
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ push101)
+});
+
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Head.js
+var Head = __webpack_require__(705260);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
+var useBaseUrl = __webpack_require__(486025);
+// EXTERNAL MODULE: ./src/theme/Layout/index.js + 70 modules
+var Layout = __webpack_require__(428176);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(296540);
+// EXTERNAL MODULE: ./node_modules/react-i18next/dist/es/index.js + 15 modules
+var es = __webpack_require__(777255);
+// EXTERNAL MODULE: ./src/css/SharedStyling.js
+var SharedStyling = __webpack_require__(113490);
+// EXTERNAL MODULE: ./src/components/ContentBlocks/ContentBlocks.tsx + 8 modules
+var ContentBlocks = __webpack_require__(733771);
+;// ./src/config/KBPush101List.js
+const KBPush101List={title:'pages.knowledge.push101.explainer-section.blocks.title',content:[{topGap:false,bottomGap:false,type:'indexlist',value:[{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.why-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.what-is-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.innovations-of-push-chain"},{type:'text',valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.push-chain-basics.items.curated-reads",hidden:true}]},{type:'list',title:'pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.title',variant:'row',topGap:true,bottomGap:true,items:[{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.apps-of-the-future",slug:'apps-of-the-future-building-without-the-chaos',image:'/static/assets/website/chain/knowledge/apps-of-the-future-building-without-the-chaos',imageSrcSet:false,url:'/blog/apps-of-the-future-building-without-the-chaos',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain",slug:'why-push-chain',image:'/static/assets/website/chain/knowledge/why-push-chain',imageSrcSet:false,url:'/blog/why-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.innovations-by-push-chain",slug:'innovations-by-push-chain',image:'/static/assets/website/chain/knowledge/innovations-by-push-chain',imageSrcSet:false,url:'/blog/innovations-by-push-chain',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1",slug:'another-l1',image:'/static/assets/website/chain/knowledge/another-l1',imageSrcSet:false,url:'/blog/another-l1',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.evolution-of-push",slug:'evolution-of-push',image:'/static/assets/website/chain/knowledge/evolution-of-push',imageSrcSet:false,url:'/blog/evolution-of-push',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.consumer-apps-that-can-be-built-on-push-chain",slug:'consumer-apps-that-can-be-built-on-push-chain',image:'/static/assets/website/chain/knowledge/consumer-apps',imageSrcSet:false,url:'/blog/consumer-apps-that-can-be-built-on-push-chain/',target:'_blank'},{valueKey:"pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain",slug:'faq-push-chain',image:'/static/assets/website/chain/knowledge/frequently-asked-questions-cover',imageSrcSet:false,url:'/blog/faq-push-chain/',target:'_blank'}]}]};
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(474848);
+;// ./src/pages-composition/push101Comp.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Interfaces and Props
+// Helper Functions
+// Helper Component
+// Main
+const Push101Comp=()=>{// Localization
+const{t}=(0,es/* useTranslation */.Bd)();const breadcrumbs=[{text:t('pages.knowledge.push101.explainer-section.breadcrumbs.knowledge-base'),link:'/knowledge'}];return/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Section */.wn,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* Content */.UC,{className:"skeletonsmall",children:/*#__PURE__*/(0,jsx_runtime.jsx)(ContentBlocks/* default */.A,{item:KBPush101List,breadcrumbs:breadcrumbs})})});};/* harmony default export */ const push101Comp = (Push101Comp);
+;// ./src/pages/knowledge/push101.tsx
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+// React + Web3 Essentials
+// External Components
+// Internal Component
+// Internal Configs
+// Main
+function PushBasicsPage(){// Internationalization
+const{t}=(0,es/* useTranslation */.Bd)();return/*#__PURE__*/(0,jsx_runtime.jsxs)(Layout/* default */.A,{title:t('pages.knowledge.push101.seo.title'),description:t('pages.knowledge.push101.seo.description'),showNavbar:'website',children:[/*#__PURE__*/(0,jsx_runtime.jsxs)(Head/* default */.A,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:url",content:"https://push.org/knowledge/push101"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:type",content:"website"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:title",content:t('pages.knowledge.push101.seo.og-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:description",content:t('pages.knowledge.push101.seo.og-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{property:"og:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:site",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:creator",content:"@PushChain"}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:title",content:t('pages.knowledge.push101.seo.twitter-title')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:description",content:t('pages.knowledge.push101.seo.twitter-description')}),/*#__PURE__*/(0,jsx_runtime.jsx)("meta",{name:"twitter:image",content:(0,useBaseUrl/* default */.Ay)((__webpack_require__(987744)/* ["default"] */ .A),{absolute:true})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)(SharedStyling/* DefaultDarkTheme */.Jr,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(push101Comp,{})})]});}/* harmony default export */ const push101 = (PushBasicsPage);
 
 /***/ },
 
@@ -18847,18 +18861,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ },
 
-/***/ 876612
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-dab8bc80d514c3ff8d4af196b4eefe17.webp");
-
-/***/ },
-
 /***/ 876629
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
@@ -20848,6 +20850,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-1610fcb762ae65c4cbe377b08bb20d4c.webp");
+
+/***/ },
+
+/***/ 987744
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/kbbasicspreview-60fe7c3729c82078fe665ae2f556d86f.png");
 
 /***/ },
 
