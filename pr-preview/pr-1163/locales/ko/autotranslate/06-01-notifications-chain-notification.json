@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "프로젝트 G.U.D 데플로이애톤이 시작되었습니다! 앱을 배포하고 $5000를 받으세요.",
-      "button-text": "Universal로 이동 & 배포",
-      "button-title": "Project G.U.D deployathon이 시작되었습니다",
-      "button-aria-label": "Project G.U.D deployathon이 시작되었습니다. 여기서 확인해 보세요",
-      "image-alt": "Push Chain Testnet Donut - 유니버설 블록체인",
-      "close-button-title": "테스트넷 알림 닫기",
-      "close-button-aria-label": "Push Chain 테스트넷 알림 닫기",
-      "container-aria-label": "Push Chain testnet 알림"
+      "description": "포인트, 멀티플라이어, 영구 보상을 가장 먼저 획득하세요.",
+      "button-text": "지금 신청",
+      "button-title": "지금 사전 출시 액세스 받기",
+      "button-aria-label": "지금 사전 출시 액세스 받기. 여기서 확인할 수 있습니다",
+      "image-alt": "Push Chain 사전 출시 액세스",
+      "close-button-title": "토스트 알림 닫기",
+      "close-button-aria-label": "Push Chain 토스트 알림 닫기",
+      "container-aria-label": "Push Chain 토스트 알림"
     }
   }
 }

@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "시즌 3 사전 출시 액세스 자격을 신청하세요. S1 & S2 참가자에게 공개.",
+      "learn-more-text": "지금 신청",
+      "learn-more-title": "지금 신청",
+      "dismiss-button-title": "공지 닫기",
+      "dismiss-button-aria-label": "공지 바 닫기",
+      "container-aria-label": "사이트 공지",
+      "star-icon-alt": "공지 별 아이콘"
+    }
+  }
+}

@@ -1,1 +1,71 @@
-{}
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Développeurs — Guides et Tutoriels",
+          "description": "Guides étape par étape, modèles et exemples pour utiliser les fonctionnalités de Push Chain.",
+          "og-title": "Développeurs - Guides et Tutoriels",
+          "og-description": "Tutoriels guidés, meilleures pratiques et exemples pour construire avec Push Chain.",
+          "twitter-title": "Développeurs - Guides et Tutoriels",
+          "twitter-description": "Guides étape par étape pour déployer sur Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Base de Connaissances"
+          },
+          "blocks": {
+            "title": "Construisez sur Push Chain",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Développeurs\n\nPrêt à construire sur Push Chain? Voici quelques ressources pour vous inspirer et commencer.",
+                  "curated-reads": "## Lectures Sélectionnées 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Construisons des Apps Universelles 💪",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "Apps du Futur — Construire sans chaos"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Apps Grand Public 🫶 Push Chain?"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Possibles Uniquement avec État Partagé - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Possibles Uniquement avec État Partagé - Vol.2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "Études de Cas",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Ressources Développeurs",
+                "items": {
+                  "developer-docs": {
+                    "title": "Explorer la Documentation Développeur"
+                  },
+                  "faucet": {
+                    "title": "Obtenir des Tokens Testnet"
+                  },
+                  "testnet-explorer": {
+                    "title": "Explorateur Push Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "シーズン3プレローンチアクセス資格に申請してください。S1・S2参加者に公開中。",
+      "learn-more-text": "今すぐ申請",
+      "learn-more-title": "今すぐ申請",
+      "dismiss-button-title": "お知らせを閉じる",
+      "dismiss-button-aria-label": "お知らせバーを閉じる",
+      "container-aria-label": "サイトのお知らせ",
+      "star-icon-alt": "お知らせスターアイコン"
+    }
+  }
+}

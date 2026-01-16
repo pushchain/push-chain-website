@@ -3,54 +3,62 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Builders — チュートリアルと方法",
-          "description": "Push Chain の機能を活用するためのステップバイステップガイド、パターン、および例。",
-          "og-title": "Builders - チュートリアル & ノウハウ",
-          "og-description": "Push Chain を使って構築するためのガイド付きチュートリアル、ベストプラクティス、および例。",
-          "twitter-title": "Builders - ハウツー & チュートリアル",
-          "twitter-description": "Push Chain でのリリースに向けた段階的なガイド。"
+          "title": "ビルダー — ガイド＆チュートリアル",
+          "description": "Push Chain機能を使用するためのステップバイステップガイド、パターン、例。",
+          "og-title": "ビルダー - ガイド＆チュートリアル",
+          "og-description": "Push Chainで構築するためのガイド付きチュートリアル、ベストプラクティス、例。",
+          "twitter-title": "ビルダー - ガイド＆チュートリアル",
+          "twitter-description": "Push Chainでデプロイするためのステップバイステップガイド。"
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge-base": "知識ベース"
+            "knowledge-base": "ナレッジベース"
           },
           "blocks": {
-            "title": "Push Chain で構築",
+            "title": "Push Chainで構築する",
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nPush Chainで構築する準備はできましたか？インスピレーションを得て、すぐに始められるためのリソースをいくつかご紹介します。",
-                  "curated-reads": "## 厳選された記事 👇"
+                  "intro": "## ビルダー\n\nPush Chainで構築する準備はできましたか？インスピレーションを得て始めるためのリソースをご紹介します。",
+                  "curated-reads": "## おすすめの記事 👇"
                 }
               },
               "universal-apps": {
-                "title": "ユニバーサル アプリを一緒に作りましょう 💪",
+                "title": "ユニバーサルアプリを構築しよう 💪",
                 "items": {
                   "apps-of-the-future": {
-                    "title": "未来のアプリ — 混乱なく構築"
+                    "title": "未来のアプリ — 混乱なく構築する"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "コンシューマー <1>アプリ🫶 Push Chain?"
+                    "title": "コンシューマーアプリ 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "共有ステートでのみ可能なアプリ - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Shared State でのみ可能なアプリ - Vol.2"
+                    "title": "共有ステートでのみ可能なアプリ - Vol.2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "ケーススタディ",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
               "developer-resources": {
-                "title": "開発者向けリソース",
+                "title": "開発者リソース",
                 "items": {
                   "developer-docs": {
-                    "title": "開発者向けドキュメントを調べる"
+                    "title": "開発者ドキュメントを見る"
                   },
                   "faucet": {
-                    "title": "テストネット <token> を入手する"
+                    "title": "テストネットトークンを取得"
                   },
                   "testnet-explorer": {
-                    "title": "Donut Testnet Explorer"
+                    "title": "Push テストネットエクスプローラー"
                   }
                 }
               }

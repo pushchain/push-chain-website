@@ -2,19 +2,49 @@
   "pages": {
     "knowledge": {
       "builders": {
+        "seo": {
+          "title": "बिल्डर्स — गाइड और ट्यूटोरियल",
+          "description": "Push Chain सुविधाओं का उपयोग करने के लिए चरण-दर-चरण गाइड, पैटर्न और उदाहरण।",
+          "og-title": "बिल्डर्स - गाइड और ट्यूटोरियल",
+          "og-description": "Push Chain के साथ निर्माण के लिए गाइडेड ट्यूटोरियल, सर्वोत्तम अभ्यास और उदाहरण।",
+          "twitter-title": "बिल्डर्स - गाइड और ट्यूटोरियल",
+          "twitter-description": "Push Chain पर शिप करने के लिए चरण-दर-चरण गाइड।"
+        },
         "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "ज्ञान आधार"
+          },
           "blocks": {
+            "title": "Push Chain पर बनाएं",
             "sections": {
-              "universal-apps": {
+              "builders-intro": {
                 "items": {
+                  "intro": "## बिल्डर्स\n\nPush Chain पर बनाने के लिए तैयार हैं? यहां आपको प्रेरित करने और शुरू करने के लिए कुछ संसाधन हैं।",
+                  "curated-reads": "## क्यूरेटेड रीड्स 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "चलिए यूनिवर्सल ऐप्स बनाते हैं 💪",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "भविष्य के ऐप्स — बिना अराजकता के निर्माण"
+                  },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Consumer Apps 🫶 ब्लॉकचेन?"
+                    "title": "कंज्यूमर ऐप्स 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्स - वॉल्यूम 1"
+                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्स - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "शेयर्ड स्टेट के साथ ही संभव होने वाले ऐप्स - खंड 2"
+                    "title": "शेयर्ड स्टेट के साथ ही संभव ऐप्स - Vol.2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "केस स्टडीज",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -22,13 +52,13 @@
                 "title": "डेवलपर संसाधन",
                 "items": {
                   "developer-docs": {
-                    "title": "डेवलपर डॉक्यूमेंटेशन देखें"
+                    "title": "डेवलपर डॉक्यूमेंटेशन एक्सप्लोर करें"
                   },
                   "faucet": {
                     "title": "टेस्टनेट टोकन प्राप्त करें"
                   },
                   "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
+                    "title": "Push टेस्टनेट एक्सप्लोरर"
                   }
                 }
               }

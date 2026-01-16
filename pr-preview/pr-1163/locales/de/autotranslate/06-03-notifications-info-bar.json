@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Bewirb dich für die Season 3 Pre-Launch-Zugangsberechtigung. Offen für S1 & S2 Teilnehmer.",
+      "learn-more-text": "Jetzt bewerben",
+      "learn-more-title": "Jetzt bewerben",
+      "dismiss-button-title": "Ankündigung schließen",
+      "dismiss-button-aria-label": "Ankündigungsleiste schließen",
+      "container-aria-label": "Website-Ankündigung",
+      "star-icon-alt": "Ankündigungs-Stern-Symbol"
+    }
+  }
+}

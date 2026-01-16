@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Deployathon Proyek G.U.D SEKARANG BERLANGSUNG! Deploy aplikasi, menangkan $5000",
-      "button-text": "Buka Universal & Deploy",
-      "button-title": "Project G.U.D deployathon SEDANG BERLANGSUNG",
-      "button-aria-label": "Deployathon Project G.U.D. sedang berlangsung. Anda bisa cek di sini",
-      "image-alt": "Push Chain Testnet Donut - Universal 블록체인",
-      "close-button-title": "Tutup notifikasi testnet",
-      "close-button-aria-label": "Tutup notifikasi Push Chain testnet",
-      "container-aria-label": "Notifikasi testnet Push Chain"
+      "description": "Jadilah yang pertama mendapatkan poin, pengganda, dan hadiah abadi.",
+      "button-text": "Daftar Sekarang",
+      "button-title": "Dapatkan Akses Pra-Peluncuran SEKARANG",
+      "button-aria-label": "Dapatkan Akses Pra-Peluncuran SEKARANG. Anda dapat memeriksanya di sini",
+      "image-alt": "Akses Pra-Peluncuran Push Chain",
+      "close-button-title": "Tutup notifikasi toast",
+      "close-button-aria-label": "Tutup notifikasi toast Push Chain",
+      "container-aria-label": "Notifikasi toast Push Chain"
     }
   }
 }

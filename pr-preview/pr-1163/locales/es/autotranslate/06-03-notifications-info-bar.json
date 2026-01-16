@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Aplica para la elegibilidad de acceso previo al lanzamiento de la Temporada 3. Abierto para participantes de S1 y S2.",
+      "learn-more-text": "Aplicar ahora",
+      "learn-more-title": "Aplicar ahora",
+      "dismiss-button-title": "Descartar anuncio",
+      "dismiss-button-aria-label": "Cerrar barra de anuncios",
+      "container-aria-label": "Anuncio del sitio",
+      "star-icon-alt": "Icono de estrella de anuncio"
+    }
+  }
+}

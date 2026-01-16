@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Proje G.U.D deployathon başladı! Uygulamaları dağıtın, $5000 kazanın",
-      "button-text": "Evrensele Geçin ve Dağıtın",
-      "button-title": "Project G.U.D deployathon CANLI!",
-      "button-aria-label": "Project G.U.D deployathon canlı! Buradan göz atabilirsiniz",
-      "image-alt": "Push Chain Testnet Donut - युनिव्हर्सल ब्लॉकचेन",
-      "close-button-title": "Testnet bildirimini kapat",
-      "close-button-aria-label": "Push Chain testnet bildirimini kapat",
-      "container-aria-label": "Push Chain testnet bildirimi"
+      "description": "Puan, çarpan ve kalıcı ödüller kazanan ilk kişi olun.",
+      "button-text": "Şimdi Başvur",
+      "button-title": "Ön Lansman Erişimini ŞİMDİ Alın",
+      "button-aria-label": "Ön Lansman Erişimini ŞİMDİ Alın. Buradan kontrol edebilirsiniz",
+      "image-alt": "Push Chain Ön Lansman Erişimi",
+      "close-button-title": "Toast bildirimini kapat",
+      "close-button-aria-label": "Push Chain toast bildirimini kapat",
+      "container-aria-label": "Push Chain toast bildirimi"
     }
   }
 }

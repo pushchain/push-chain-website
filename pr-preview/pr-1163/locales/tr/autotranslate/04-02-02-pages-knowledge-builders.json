@@ -3,40 +3,48 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Yazarlar — Nasıl Yapılır & Eğitimler",
+          "title": "Geliştiriciler — Kılavuzlar ve Eğitimler",
           "description": "Push Chain özelliklerini kullanmak için adım adım kılavuzlar, kalıplar ve örnekler.",
-          "og-title": "Builders - Nasıl Yapılırlar & Eğitimler",
-          "og-description": "Push Chain ile yapılandırma için rehberli öğreticiler, en iyi uygulamalar ve örnekler.",
-          "twitter-title": "Builders - Nasıl Yapılır & Öğreticiler",
-          "twitter-description": "Push Chain üzerinde yayın yapmak için adım adım kılavuzlar."
+          "og-title": "Geliştiriciler - Kılavuzlar ve Eğitimler",
+          "og-description": "Push Chain ile geliştirme için rehberli eğitimler, en iyi uygulamalar ve örnekler.",
+          "twitter-title": "Geliştiriciler - Kılavuzlar ve Eğitimler",
+          "twitter-description": "Push Chain'de dağıtım için adım adım kılavuzlar."
         },
         "explainer-section": {
           "breadcrumbs": {
             "knowledge-base": "Bilgi Tabanı"
           },
           "blocks": {
-            "title": "Push Chain üzerinde geliştirme",
+            "title": "Push Chain Üzerinde Geliştirin",
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nPush Chain üzerinde inşa etmeye hazır mısınız? İlham vermeniz ve başlamanız için bazı kaynaklar burada.",
-                  "curated-reads": "## Özenle Seçilmiş Okumalar 👇"
+                  "intro": "## Geliştiriciler\n\nPush Chain üzerinde geliştirmeye hazır mısınız? İşte size ilham verecek ve başlamanızı sağlayacak bazı kaynaklar.",
+                  "curated-reads": "## Seçilmiş Okumalar 👇"
                 }
               },
               "universal-apps": {
-                "title": "Haydi Evrensel Uygulamalar Yapalım 💪",
+                "title": "Evrensel Uygulamalar Geliştirelim 💪",
                 "items": {
                   "apps-of-the-future": {
-                    "title": "Geleceğin Uygulamaları — Kaos olmadan inşa etmek"
+                    "title": "Geleceğin Uygulamaları — Kaos olmadan geliştirme"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
                     "title": "Tüketici Uygulamaları 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "Paylaşımlı Durumla Mümkün Olan Uygulamalar - Cilt 1"
+                    "title": "Sadece Paylaşılan Durum ile Mümkün Uygulamalar - Cilt 1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Paylaşımlı Durum ile Mümkün Olan Uygulamalar - Vol.2"
+                    "title": "Sadece Paylaşılan Durum ile Mümkün Uygulamalar - Cilt 2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "Vaka Çalışmaları",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -44,13 +52,13 @@
                 "title": "Geliştirici Kaynakları",
                 "items": {
                   "developer-docs": {
-                    "title": "Geliştirici Dokümantasyonunu Keşfet"
+                    "title": "Geliştirici Belgelerini Keşfet"
                   },
                   "faucet": {
-                    "title": "Testnet టోకన్'ları Alın"
+                    "title": "Testnet Token Al"
                   },
                   "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
+                    "title": "Push Testnet Gezgini"
                   }
                 }
               }

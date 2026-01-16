@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Daftar untuk Kelayakan Akses Pra-Peluncuran Season 3. Terbuka untuk peserta S1 & S2.",
+      "learn-more-text": "Daftar Sekarang",
+      "learn-more-title": "Daftar Sekarang",
+      "dismiss-button-title": "Tutup pengumuman",
+      "dismiss-button-aria-label": "Tutup bilah pengumuman",
+      "container-aria-label": "Pengumuman situs",
+      "star-icon-alt": "Ikon bintang pengumuman"
+    }
+  }
+}

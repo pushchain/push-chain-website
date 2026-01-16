@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "G.U.D 项目部署马拉松现已启动！部署app，赢取$5000",
-      "button-text": "前往Universal并部署",
-      "button-title": "Project G.U.D. 部署大赛已启动",
-      "button-aria-label": "Project G.U.D. 部署马拉松已上线。您可以在这里查看: ",
-      "image-alt": "Push Chain 测试网 Donut - 通用区块链",
-      "close-button-title": "关闭测试网通知",
-      "close-button-aria-label": "关闭 Push Chain testnet 通知",
-      "container-aria-label": "Push Chain testnet 通知"
+      "description": "成为第一个获得积分、倍数和永久奖励的人。",
+      "button-text": "立即申请",
+      "button-title": "立即获取预发布访问权限",
+      "button-aria-label": "立即获取预发布访问权限。您可以在这里查看",
+      "image-alt": "Push Chain 预发布访问权限",
+      "close-button-title": "关闭提示通知",
+      "close-button-aria-label": "关闭 Push Chain 提示通知",
+      "container-aria-label": "Push Chain 提示通知"
     }
   }
 }

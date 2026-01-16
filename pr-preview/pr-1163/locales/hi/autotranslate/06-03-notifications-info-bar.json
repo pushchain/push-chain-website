@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "सीज़न 3 प्री-लॉन्च एक्सेस पात्रता के लिए आवेदन करें। S1 और S2 प्रतिभागियों के लिए खुला।",
+      "learn-more-text": "अभी आवेदन करें",
+      "learn-more-title": "अभी आवेदन करें",
+      "dismiss-button-title": "घोषणा को खारिज करें",
+      "dismiss-button-aria-label": "घोषणा बार बंद करें",
+      "container-aria-label": "साइट घोषणा",
+      "star-icon-alt": "घोषणा स्टार आइकन"
+    }
+  }
+}

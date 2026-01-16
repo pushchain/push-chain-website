@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "هاكاثون مشروع G.U.D. مُباشر! انشر تطبيقاتك، واربح 5000 دولار",
-      "button-text": "انتقل إلى Universal وانشر",
-      "button-title": "Project G.U.D deployathon is LIVE",
-      "button-aria-label": "هاثون نشر مشروع G.U.D. مباشر! يمكنك التحقق منه هنا",
-      "image-alt": "Push Chain Testnet Donut - بلوكشين يونيفرسال",
-      "close-button-title": "إغلاق إشعار testnet",
-      "close-button-aria-label": "إغلاق إشعار اختبار شبكة Push Chain",
-      "container-aria-label": "إشعار اختبار شبكة بلوكشين"
+      "description": "كن أول من يحصل على النقاط والمضاعفات والمكافآت الدائمة.",
+      "button-text": "قدم الآن",
+      "button-title": "احصل على وصول ما قبل الإطلاق الآن",
+      "button-aria-label": "احصل على وصول ما قبل الإطلاق الآن. يمكنك التحقق من ذلك هنا",
+      "image-alt": "وصول ما قبل إطلاق Push Chain",
+      "close-button-title": "إغلاق الإشعار المنبثق",
+      "close-button-aria-label": "إغلاق إشعار Push Chain المنبثق",
+      "container-aria-label": "إشعار Push Chain المنبثق"
     }
   }
 }

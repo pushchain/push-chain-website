@@ -3,40 +3,48 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "빌더 — 사용법 및 튜토리얼",
-          "description": "Push Chain 기능을 사용하는 단계별 가이드, 패턴 및 예시입니다.",
-          "og-title": "Builders - 방법 & 튜토리얼",
-          "og-description": "Push Chain을 활용한 빌드에 대한 단계별 가이드, 모범 사례 및 예제입니다.",
-          "twitter-title": "Builders - 사용법 & 튜토리얼",
-          "twitter-description": "Push Chain에서 시작하는 단계별 가이드."
+          "title": "빌더 — 가이드 & 튜토리얼",
+          "description": "Push Chain 기능을 사용하기 위한 단계별 가이드, 패턴 및 예제.",
+          "og-title": "빌더 - 가이드 & 튜토리얼",
+          "og-description": "Push Chain으로 구축하기 위한 가이드 튜토리얼, 모범 사례 및 예제.",
+          "twitter-title": "빌더 - 가이드 & 튜토리얼",
+          "twitter-description": "Push Chain에 배포하기 위한 단계별 가이드."
         },
         "explainer-section": {
           "breadcrumbs": {
-            "knowledge-base": "지식 기반"
+            "knowledge-base": "지식 베이스"
           },
           "blocks": {
             "title": "Push Chain에서 구축하기",
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nPush Chain에서 빌드를 시작할 준비가 되셨나요? 영감을 얻고 시작하는 데 도움이 되는 몇 가지 자료를 소개합니다.",
-                  "curated-reads": "## 엄선된 자료 👇"
+                  "intro": "## 빌더\n\nPush Chain에서 구축할 준비가 되셨나요? 영감을 얻고 시작하기 위한 리소스를 소개합니다.",
+                  "curated-reads": "## 추천 읽을거리 👇"
                 }
               },
               "universal-apps": {
-                "title": "유니버설 앱을 만들어봐요 💪",
+                "title": "유니버설 앱을 구축하자 💪",
                 "items": {
                   "apps-of-the-future": {
                     "title": "미래의 앱 — 혼란 없이 구축하기"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "소비자 앱이 Push Chain에서 실행될 수 있나요?"
+                    "title": "컨슈머 앱 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "공유 상태에서만 가능한 앱 - Vol.1"
+                    "title": "공유 상태로만 가능한 앱 - Vol.1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
                     "title": "공유 상태로만 가능한 앱 - Vol.2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "사례 연구",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -44,13 +52,13 @@
                 "title": "개발자 리소스",
                 "items": {
                   "developer-docs": {
-                    "title": "개발자 문서 살펴보기"
+                    "title": "개발자 문서 탐색"
                   },
                   "faucet": {
                     "title": "테스트넷 토큰 받기"
                   },
                   "testnet-explorer": {
-                    "title": "Push 테스트넷 탐색기"
+                    "title": "Push 테스트넷 익스플로러"
                   }
                 }
               }

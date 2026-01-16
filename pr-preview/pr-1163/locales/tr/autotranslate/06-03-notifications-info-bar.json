@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Sezon 3 Ön Lansman Erişim Uygunluğu için başvurun. S1 ve S2 katılımcılarına açık.",
+      "learn-more-text": "Şimdi Başvur",
+      "learn-more-title": "Şimdi Başvur",
+      "dismiss-button-title": "Duyuruyu kapat",
+      "dismiss-button-aria-label": "Duyuru çubuğunu kapat",
+      "container-aria-label": "Site duyurusu",
+      "star-icon-alt": "Duyuru yıldız simgesi"
+    }
+  }
+}

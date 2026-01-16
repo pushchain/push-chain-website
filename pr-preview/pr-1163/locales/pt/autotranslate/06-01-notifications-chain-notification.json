@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "O deployathon do Projeto G.U.D está AO VIVO! Implemente apps, ganhe $5000",
-      "button-text": "Vá para o Universal & Implante",
-      "button-title": "Projeto G.U.D deployathon está AO VIVO",
-      "button-aria-label": "Projeto G.U.D deployathon está AO VIVO. Você pode conferir aqui",
-      "image-alt": "Push Chain Testnet Donut - Universal ब्लॉकचेन",
-      "close-button-title": "Fechar notificação da testnet",
-      "close-button-aria-label": "Dismiss Push Chain testnet notification",
-      "container-aria-label": "Notificação do Push Chain testnet"
+      "description": "Seja o primeiro a ganhar pontos, multiplicadores e recompensas perpétuas.",
+      "button-text": "Aplicar Agora",
+      "button-title": "Obtenha Acesso Pré-Lançamento AGORA",
+      "button-aria-label": "Obtenha Acesso Pré-Lançamento AGORA. Você pode conferir aqui",
+      "image-alt": "Acesso Pré-Lançamento Push Chain",
+      "close-button-title": "Fechar notificação toast",
+      "close-button-aria-label": "Dispensar notificação toast da Push Chain",
+      "container-aria-label": "Notificação toast da Push Chain"
     }
   }
 }

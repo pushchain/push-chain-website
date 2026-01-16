@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Подайте заявку на право доступа к предзапуску Сезона 3. Открыто для участников S1 и S2.",
+      "learn-more-text": "Подать заявку",
+      "learn-more-title": "Подать заявку",
+      "dismiss-button-title": "Закрыть объявление",
+      "dismiss-button-aria-label": "Закрыть панель объявлений",
+      "container-aria-label": "Объявление сайта",
+      "star-icon-alt": "Иконка звезды объявления"
+    }
+  }
+}

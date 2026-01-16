@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Đăng ký để đủ điều kiện truy cập trước ra mắt Mùa 3. Mở cho người tham gia S1 & S2.",
+      "learn-more-text": "Đăng ký ngay",
+      "learn-more-title": "Đăng ký ngay",
+      "dismiss-button-title": "Bỏ qua thông báo",
+      "dismiss-button-aria-label": "Đóng thanh thông báo",
+      "container-aria-label": "Thông báo trang web",
+      "star-icon-alt": "Biểu tượng ngôi sao thông báo"
+    }
+  }
+}

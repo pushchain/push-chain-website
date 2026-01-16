@@ -1,1 +1,15 @@
-{}
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Sé el primero en obtener puntos, multiplicadores y recompensas perpetuas.",
+      "button-text": "Aplicar ahora",
+      "button-title": "Obtén acceso previo al lanzamiento AHORA",
+      "button-aria-label": "Obtén acceso previo al lanzamiento AHORA. Puedes verlo aquí",
+      "image-alt": "Acceso previo al lanzamiento de Push Chain",
+      "close-button-title": "Cerrar notificación emergente",
+      "close-button-aria-label": "Descartar notificación emergente de Push Chain",
+      "container-aria-label": "Notificación emergente de Push Chain"
+    }
+  }
+}

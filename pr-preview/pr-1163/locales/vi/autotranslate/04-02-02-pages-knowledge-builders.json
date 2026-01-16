@@ -3,11 +3,11 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Người xây dựng — Hướng dẫn & Bài tập",
-          "description": "Hướng dẫn từng bước, các mẫu và ví dụ để sử dụng các tính năng của Push Chain.",
-          "og-title": "Builders - Hướng dẫn & Bài hướng dẫn",
-          "og-description": "Hướng dẫn từng bước, các phương pháp tốt nhất và ví dụ về cách xây dựng với Push Chain.",
-          "twitter-title": "Người xây dựng - Hướng dẫn & Bài hướng dẫn",
+          "title": "Nhà phát triển — Hướng dẫn & Bài học",
+          "description": "Hướng dẫn từng bước, mẫu và ví dụ để sử dụng các tính năng của Push Chain.",
+          "og-title": "Nhà phát triển - Hướng dẫn & Bài học",
+          "og-description": "Bài học có hướng dẫn, thực hành tốt nhất và ví dụ để xây dựng với Push Chain.",
+          "twitter-title": "Nhà phát triển - Hướng dẫn & Bài học",
           "twitter-description": "Hướng dẫn từng bước để triển khai trên Push Chain."
         },
         "explainer-section": {
@@ -19,35 +19,43 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nSẵn sàng xây dựng trên Push Chain? Dưới đây là một số tài nguyên để bạn có thêm cảm hứng và bắt đầu.",
-                  "curated-reads": "## Các bài viết được tuyển chọn 👇"
+                  "intro": "## Nhà phát triển\n\nSẵn sàng xây dựng trên Push Chain? Đây là một số tài nguyên để truyền cảm hứng và bắt đầu.",
+                  "curated-reads": "## Bài đọc được tuyển chọn 👇"
                 }
               },
               "universal-apps": {
-                "title": "Hãy cùng xây dựng các ứng dụng đa năng 💪",
+                "title": "Hãy xây dựng ứng dụng Universal 💪",
                 "items": {
                   "apps-of-the-future": {
-                    "title": "Các ứng dụng của tương lai — Xây dựng mà không gặp khó khăn"
+                    "title": "Ứng dụng của tương lai — Xây dựng không hỗn loạn"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Ứng dụng tiêu dùng 🫶 Blockchain Push Chain?"
+                    "title": "Ứng dụng tiêu dùng 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "Các ứng dụng khả thi chỉ với trạng thái chung - Tập 1"
+                    "title": "Ứng dụng chỉ có thể với Shared State - Tập 1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Các ứng dụng khả thi chỉ với trạng thái chia sẻ - Tập 2"
+                    "title": "Ứng dụng chỉ có thể với Shared State - Tập 2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "Nghiên cứu điển hình",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
               "developer-resources": {
-                "title": "Tài nguyên dành cho nhà phát triển",
+                "title": "Tài nguyên nhà phát triển",
                 "items": {
                   "developer-docs": {
-                    "title": "Khám phá Tài liệu dành cho Nhà phát triển"
+                    "title": "Khám phá tài liệu nhà phát triển"
                   },
                   "faucet": {
-                    "title": "Nhận token testnet"
+                    "title": "Nhận Token Testnet"
                   },
                   "testnet-explorer": {
                     "title": "Push Testnet Explorer"

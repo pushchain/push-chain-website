@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "قدم للحصول على أهلية الوصول المبكر للموسم الثالث. مفتوح للمشاركين في الموسم الأول والثاني.",
+      "learn-more-text": "قدم الآن",
+      "learn-more-title": "قدم الآن",
+      "dismiss-button-title": "إغلاق الإعلان",
+      "dismiss-button-aria-label": "إغلاق شريط الإعلانات",
+      "container-aria-label": "إعلان الموقع",
+      "star-icon-alt": "أيقونة نجمة الإعلان"
+    }
+  }
+}

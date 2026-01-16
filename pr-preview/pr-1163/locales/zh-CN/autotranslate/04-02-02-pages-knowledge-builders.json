@@ -3,12 +3,12 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "开发者 — 使用指南和教程",
+          "title": "开发者 — 指南和教程",
           "description": "使用 Push Chain 功能的分步指南、模式和示例。",
-          "og-title": "开发者 - 使用指南 & 教程",
-          "og-description": "关于使用Push Chain的教程、最佳实践和示例。",
-          "twitter-title": "创作者 - 操作指南和教程",
-          "twitter-description": "关于如何在 Push Chain 上发布的逐步指南。"
+          "og-title": "开发者 - 指南和教程",
+          "og-description": "使用 Push Chain 构建的引导教程、最佳实践和示例。",
+          "twitter-title": "开发者 - 指南和教程",
+          "twitter-description": "在 Push Chain 上部署的分步指南。"
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,24 +19,32 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\n准备好在Push Chain上构建了吗？这里有一些资源可以帮助您获得灵感并开始构建。",
-                  "curated-reads": "## 精选文章 👇"
+                  "intro": "## 开发者\n\n准备好在 Push Chain 上构建了吗？这里有一些资源可以为您提供灵感并帮助您开始。",
+                  "curated-reads": "## 精选阅读 👇"
                 }
               },
               "universal-apps": {
                 "title": "让我们构建通用应用 💪",
                 "items": {
                   "apps-of-the-future": {
-                    "title": "未来的应用 — 无需混乱地构建"
+                    "title": "未来的应用 — 无混乱构建"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "面向消费者的应用能在 Push Chain 上构建吗？"
+                    "title": "消费者应用 🫶 Push Chain？"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "只有在共享状态下才能实现的app - Vol.1"
+                    "title": "仅通过共享状态才可能实现的应用 - 第1卷"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "只有在共享状态下才能实现的app - Vol.2"
+                    "title": "仅通过共享状态才可能实现的应用 - 第2卷"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "案例研究",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -44,7 +52,7 @@
                 "title": "开发者资源",
                 "items": {
                   "developer-docs": {
-                    "title": "探索开发者文档"
+                    "title": "浏览开发者文档"
                   },
                   "faucet": {
                     "title": "获取测试网代币"

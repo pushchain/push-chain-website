@@ -3,12 +3,12 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "Разработчики — Инструкции и Уроки",
-          "description": "Пошаговые инструкции, шаблоны и примеры использования функций Push Chain.",
-          "og-title": "Builders - Инструкции и руководства",
-          "og-description": "Пошаговые инструкции, лучшие практики и примеры для разработки с Push Chain.",
-          "twitter-title": "Builders - Инструкции и уроки",
-          "twitter-description": "Пошаговые инструкции для запуска на Push Chain."
+          "title": "Разработчики — Руководства и Туториалы",
+          "description": "Пошаговые руководства, паттерны и примеры использования функций Push Chain.",
+          "og-title": "Разработчики - Руководства и Туториалы",
+          "og-description": "Обучающие туториалы, лучшие практики и примеры для разработки на Push Chain.",
+          "twitter-title": "Разработчики - Руководства и Туториалы",
+          "twitter-description": "Пошаговые руководства для деплоя на Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -19,24 +19,32 @@
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nГотовы строить на Push Chain? Вот несколько ресурсов, чтобы вдохновиться и начать.",
-                  "curated-reads": "## Отобранные материалы 👇"
+                  "intro": "## Разработчики\n\nГотовы создавать на Push Chain? Вот несколько ресурсов для вдохновения и начала работы.",
+                  "curated-reads": "## Рекомендуемые материалы 👇"
                 }
               },
               "universal-apps": {
-                "title": "Давайте строить универсальные приложения 💪",
+                "title": "Давайте создавать универсальные приложения 💪",
                 "items": {
                   "apps-of-the-future": {
                     "title": "Приложения будущего — Создание без хаоса"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "Потребительские приложения 🫶 Blockchain?"
+                    "title": "Потребительские приложения 🫶 Push Chain?"
                   },
                   "apps-only-possible-with-shared-state-v1": {
-                    "title": "Приложения, возможные только с shared-state - Vol.1"
+                    "title": "Приложения, возможные только с общим состоянием - Том 1"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Приложения, возможные только с Shared State - Vol.2"
+                    "title": "Приложения, возможные только с общим состоянием - Том 2"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "Кейсы",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -44,13 +52,13 @@
                 "title": "Ресурсы для разработчиков",
                 "items": {
                   "developer-docs": {
-                    "title": "Изучите документацию для разработчиков"
+                    "title": "Изучить документацию для разработчиков"
                   },
                   "faucet": {
-                    "title": "Получите тестовые токены"
+                    "title": "Получить токены тестовой сети"
                   },
                   "testnet-explorer": {
-                    "title": "Push Testnet Explorer"
+                    "title": "Обозреватель Push Testnet"
                   }
                 }
               }

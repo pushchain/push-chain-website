@@ -1,1 +1,15 @@
-{}
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Sei der Erste, der Punkte, Multiplikatoren und dauerhafte Belohnungen erhält.",
+      "button-text": "Jetzt bewerben",
+      "button-title": "Jetzt Pre-Launch-Zugang sichern",
+      "button-aria-label": "Jetzt Pre-Launch-Zugang sichern. Hier kannst du es dir ansehen",
+      "image-alt": "Push Chain Pre-Launch-Zugang",
+      "close-button-title": "Toast-Benachrichtigung schließen",
+      "close-button-aria-label": "Push Chain Toast-Benachrichtigung schließen",
+      "container-aria-label": "Push Chain Toast-Benachrichtigung"
+    }
+  }
+}

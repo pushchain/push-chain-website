@@ -2,14 +2,14 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "プロジェクト G.U.D デプロイアソンが開始されました！<1>app</1>をデプロイして、$5000を獲得しましょう！",
-      "button-text": "ユニバーサルに移行してデプロイ",
-      "button-title": "Project G.U.D deployathon が開始されました",
-      "button-aria-label": "Project G.U.D deployathon が開始されました。こちらで詳細をご確認いただけます: ",
-      "image-alt": "Push Chain Testnet Donut - ユニバーサル ブロックチェーン",
-      "close-button-title": "テストネット通知を閉じる",
-      "close-button-aria-label": "Push Chain テストネットの通知を閉じる",
-      "container-aria-label": "Push Chain testnet の通知"
+      "description": "ポイント、マルチプライヤー、永続的な報酬を最初に獲得しましょう。",
+      "button-text": "今すぐ申請",
+      "button-title": "今すぐプレローンチアクセスを取得",
+      "button-aria-label": "今すぐプレローンチアクセスを取得。こちらで確認できます",
+      "image-alt": "Push Chain プレローンチアクセス",
+      "close-button-title": "トースト通知を閉じる",
+      "close-button-aria-label": "Push Chain トースト通知を閉じる",
+      "container-aria-label": "Push Chain トースト通知"
     }
   }
 }

@@ -3,10 +3,10 @@
     "knowledge": {
       "builders": {
         "seo": {
-          "title": "المنشئون — دروس و تعليمات",
+          "title": "المنشئون — دروس وتعليمات",
           "description": "دليل تفصيلي وخطوات وأمثلة لاستخدام مميزات Push Chain.",
           "og-title": "المنشئون - تعليمات ودروس",
-          "og-description": "دروس تعليمية إرشادية وأفضل الممارسات والأمثلة لبناء تطبيقات باستخدام Push Chain.",
+          "og-description": "دروس تعليمية إرشادية وأفضل الممارسات والأمثلة للبناء باستخدام Push Chain.",
           "twitter-title": "المنشئون - كيفية ودروس تعليمية",
           "twitter-description": "إرشادات خطوة بخطوة للإطلاق على Push Chain."
         },
@@ -15,11 +15,11 @@
             "knowledge-base": "قاعدة المعرفة"
           },
           "blocks": {
-            "title": "Build on Push Chain",
+            "title": "ابنِ على Push Chain",
             "sections": {
               "builders-intro": {
                 "items": {
-                  "intro": "## Builders\n\nجاهز للبناء على بلوكشين Push Chain؟ إليك بعض الموارد لإلهامك والبدء.",
+                  "intro": "## المنشئون\n\nجاهز للبناء على Push Chain؟ إليك بعض الموارد لإلهامك والبدء.",
                   "curated-reads": "## قراءات منتقاة 👇"
                 }
               },
@@ -30,13 +30,21 @@
                     "title": "تطبيقات المستقبل — البناء بدون فوضى"
                   },
                   "consumer-apps-that-can-be-built-on-push-chain": {
-                    "title": "تطبيقات المستهلك تحب بلوكشين Push Chain؟"
+                    "title": "تطبيقات المستهلك 🫶 Push Chain؟"
                   },
                   "apps-only-possible-with-shared-state-v1": {
                     "title": "تطبيقات ممكنة فقط مع الحالة المشتركة - المجلد الأول"
                   },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "تطبيقات ممكنة فقط مع الحالة المشتركة - المجلد 2"
+                    "title": "تطبيقات ممكنة فقط مع الحالة المشتركة - المجلد الثاني"
+                  }
+                }
+              },
+              "case-studies": {
+                "title": "دراسات الحالة",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
                   }
                 }
               },
@@ -50,7 +58,7 @@
                     "title": "احصل على توكنات الشبكة الاختبارية"
                   },
                   "testnet-explorer": {
-                    "title": "Donut Testnet Explorer"
+                    "title": "مستكشف شبكة Push الاختبارية"
                   }
                 }
               }

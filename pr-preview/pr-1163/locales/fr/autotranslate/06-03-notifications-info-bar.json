@@ -1,1 +1,13 @@
-{}
+{
+  "notifications": {
+    "info-bar": {
+      "title": "Postulez pour l'éligibilité à l'accès pré-lancement de la Saison 3. Ouvert aux participants S1 et S2.",
+      "learn-more-text": "Postuler maintenant",
+      "learn-more-title": "Postuler maintenant",
+      "dismiss-button-title": "Fermer l'annonce",
+      "dismiss-button-aria-label": "Fermer la barre d'annonces",
+      "container-aria-label": "Annonce du site",
+      "star-icon-alt": "Icône étoile d'annonce"
+    }
+  }
+}
