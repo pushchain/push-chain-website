@@ -1,0 +1,33 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Incident Reports",
+          "description": "Real-time incident reports and network status updates for Push Chain. Stay informed about outages, maintenance, and resolved issues.",
+          "og-title": "Push Chain Incident Reports - Network Status",
+          "og-description": "Track Push Chain network incidents, maintenance windows, and service updates. Get real-time status information.",
+          "twitter-title": "Push Chain Incident Reports",
+          "twitter-description": "Live updates on Push Chain network status, incidents, and maintenance."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base",
+            "donut-testnet": "Donut Testnet",
+            "report": "Incident Reports"
+          },
+          "blocks": {
+            "title": "Incident Reports",
+            "sections": {
+                "reports-overview": {
+                  "items": {
+                    "intro": "content"
+                  }
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}
