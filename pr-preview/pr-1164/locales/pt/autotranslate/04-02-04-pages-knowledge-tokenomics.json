@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "knowledge": {
+      "tokenomics": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "tokenomics-overview": {
+                "items": {
+                  "use-cases": "### O que pode ser construído na Push Chain?\n\nA Push Chain traz interoperabilidade sem empecilhos e une todos os L1s, L2s e L3s, estando posicionada para se tornar o playground da inovação e interoperação. É possível construir casos de uso existentes do web3, como:\n\n![Principais casos de uso da Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nOu aperfeiçoar o web3 e criar inovações:\n\n![Casos de uso para consumidores da Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nOu ver alguns exemplos populares de aplicativos e se inspirar:\n\n![Exemplos populares de aplicativos na Push Chain](/assets/website/chain/knowledge/tokenomics/popularapps.webp)"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

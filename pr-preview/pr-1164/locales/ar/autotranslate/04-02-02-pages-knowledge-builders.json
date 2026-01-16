@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "case-studies": {
+                "title": "دراسات حالة",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
