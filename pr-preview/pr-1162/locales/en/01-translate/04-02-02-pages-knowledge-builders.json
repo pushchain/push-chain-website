@@ -1,0 +1,64 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "seo": {
+          "title": "Builders — How-tos & Tutorials",
+          "description": "Step-by-step guides, patterns, and examples to use Push Chain features.",
+          "og-title": "Builders - How-tos & Tutorials",
+          "og-description": "Guided tutorials, best practices, and examples for building with Push Chain.",
+          "twitter-title": "Builders - How-tos & Tutorials",
+          "twitter-description": "Step-by-step guides to ship on Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Build on Push Chain",
+            "sections": {
+              "builders-intro": {
+                "items": {
+                  "intro": "## Builders\n\nReady to build on Push Chain? Here are some resources to get you inspired and started.",
+
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "universal-apps": {
+                "title": "Let's Build Universal Apps 💪",
+                "items": {
+                  "apps-of-the-future": {
+                    "title": "Apps of the Future — Building without the chaos"
+                  },
+                  "consumer-apps-that-can-be-built-on-push-chain": {
+                    "title": "Consumer Apps 🫶 Push Chain?"
+                  },
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Possible Only with Shared State - Vol.1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Possible Only with Shared State - Vol.2"
+                  }
+                }
+              },
+              "developer-resources": {
+                "title": "Developer Resources",
+                "items": {
+                  "developer-docs": {
+                    "title": "Explore Developer Documentation"
+                  },
+                  "faucet": {
+                    "title": "Get Testnet Tokens"
+                  },
+                  "testnet-explorer": {
+                    "title": "Push Testnet Explorer"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
