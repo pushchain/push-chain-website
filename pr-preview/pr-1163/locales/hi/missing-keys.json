@@ -1,0 +1,1839 @@
+{
+  "lastUpdated": "2025-11-14T20:18:32.213Z",
+  "keys": {
+    "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-of-the-future.title": {
+      "value": "भविष्य के ऐप्स — बिना किसी अराजकता के निर्माण",
+      "englishChecksum": "772530adf8f920b213c3b97a7a55d4f6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title": {
+      "value": "चलो युनिवर्सल ऐप्स बनाते हैं 💪",
+      "englishChecksum": "663a142eb5f03be5205014b31403abb6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.builders-intro.items.intro": {
+      "value": "## Builders\n\nक्या आप Push Chain पर बनाने के लिए तैयार हैं? यहाँ कुछ संसाधन दिए गए हैं जिनसे आपको प्रेरणा मिलेगी और शुरुआत करने में मदद मिलेगी।",
+      "englishChecksum": "aff04d43e1a5f0db24b177f9e367f571",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.sections.builders-intro.items.curated-reads": {
+      "value": "## चयनित लेख 👇",
+      "englishChecksum": "c9fefca8484fa54c4cc35f978ba442b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.explainer-section.blocks.title": {
+      "value": "Push Chain पर बनाएं",
+      "englishChecksum": "98bebb4eb06e9298f123c1b72e10aae7",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.title": {
+      "value": "Builders — कैसे करें & ट्यूटोरियल",
+      "englishChecksum": "128091e84d5464bdffbd18d72ddc1951",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.description": {
+      "value": "Push Chain सुविधाओं का उपयोग करने के लिए चरण-दर-चरण गाइड, पैटर्न और उदाहरण।",
+      "englishChecksum": "3ac07e53e4d736963a0f69357d2ea464",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.og-title": {
+      "value": "Builders - कैसे करें और ट्यूटोरियल",
+      "englishChecksum": "b43c6206194e5ce2b296b2f5ae67f6d0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.og-description": {
+      "value": "Push Chain के साथ बनाने के लिए निर्देशित ट्यूटोरियल, सर्वोत्तम अभ्यास और उदाहरण।",
+      "englishChecksum": "3d867ffca792ed0a3f1911a02a46cc2d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.twitter-title": {
+      "value": "Builders - कैसे करें और ट्यूटोरियल",
+      "englishChecksum": "b43c6206194e5ce2b296b2f5ae67f6d0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.builders.seo.twitter-description": {
+      "value": "Push Chain पर शिप करने के लिए चरण-दर-चरण गाइड।",
+      "englishChecksum": "723c5664b166980a7aee2c74a23ccd13",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.title": {
+      "value": "नॉलेज बेस — गाइड, अक्सर पूछे जाने वाले प्रश्न और कैसे करें",
+      "englishChecksum": "11ca32d20dd7dda0c862404dc406d5c3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.description": {
+      "value": "Push Chain का उपयोग करने के लिए अवधारणाओं, अक्सर पूछे जाने वाले प्रश्नों, कैसे करें और पारिस्थितिकी तंत्र संसाधनों के लिए यहां से शुरुआत करें। Push Chain का उपयोग करने के लिए स्पष्ट, गैर-तकनीकी गाइड।",
+      "englishChecksum": "b1adb99e30a753bea5840af2e8409758",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.og-title": {
+      "value": "Push Chain नॉलेज बेस - गाइड और अक्सर पूछे जाने वाले प्रश्न",
+      "englishChecksum": "6081aa0851417128a036d9cd10b0a511",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.og-description": {
+      "value": "Push Chain के बारे में अवधारणाएं, चरण-दर-चरण कैसे करें और सामान्य प्रश्नों के उत्तर।",
+      "englishChecksum": "67634481d8ba9a90c212c518d7c9ecd6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.twitter-title": {
+      "value": "नॉलेज बेस - गाइड और अक्सर पूछे जाने वाले प्रश्न",
+      "englishChecksum": "f57f26059180d8d6754b8f1de1b6a619",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.seo.twitter-description": {
+      "value": "Push Chain के लिए त्वरित गाइड, अक्सर पूछे जाने वाले प्रश्न और कैसे करें (कोई तकनीकी भाषा नहीं)।",
+      "englishChecksum": "92d7202d6e31c52380bf8a43c966cc54",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.title": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.description.highlighted": {
+      "value": "Push Chain एक सच्चा universal blockchain है जिसे सभी chains में fragmentation को खत्म करने के लिए डिज़ाइन किया गया है।",
+      "englishChecksum": "9525981fc5a9c13c185a29fb06480498",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.description.developers": {
+      "value": "डेवलपर्स",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.description.developers-text": {
+      "value": "एक बार डिप्लॉय करें और तुरंत सभी समर्थित EVM और गैर-EVM चेन्स के साथ संगत बनें।",
+      "englishChecksum": "71b2e36e55906af8b1caf76808ea3171",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.description.users": {
+      "value": "उपयोगकर्ता",
+      "englishChecksum": "a6d756f02d69a011f1a76f5dbc8f3ac6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.description.users-text": {
+      "value": "कोई भी चेन से आएं, वही ऐप इस्तेमाल करें।",
+      "englishChecksum": "ea44ddb598243803d9758a771b794c28",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.long": {
+      "value": "Push Chain टेस्टनेट के बारे में सूचनाएं प्राप्त करें",
+      "englishChecksum": "58629935b0ccf30f1d870903f8339e0f",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.email-signup.title.short": {
+      "value": "Push Chain Testnet",
+      "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Push Chain testnet लाइव होने पर सबसे पहले जानने वाले बनें। एक्सक्लूसिव अपडेट के लिए हमारी मेलिंग लिस्ट में शामिल हों।",
+      "englishChecksum": "d304be40858d656900a782db6475f3f8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.footer.description": {
+      "value": "Push Chain के साथ किसी भी ब्लॉकचेन पर अपने ऐप के लिए सहज और उपयोगकर्ता के अनुकूल अनुभव बनाएं।",
+      "englishChecksum": "ab374d1cf0f5e6677282aa1a97a13102",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.hero-section.footer.cta.text": {
+      "value": "सूचित करें",
+      "englishChecksum": "5ca0d06b42af8acf0dae4dc6560e3bb0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.title": {
+      "value": "संसाधन",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.title": {
+      "value": "Push Chain Basics",
+      "englishChecksum": "4512d45c12d36968dd4b4735b0ea10f9",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.subtitle": {
+      "value": "Push Chain के बेसिक्स के बारे में जानें, इसके इनोवेशन और यह क्यों ज़रूरी है",
+      "englishChecksum": "1dea6951f02f77b71408f07e0355bed9",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.push101.ctatitle": {
+      "value": "और जानें",
+      "englishChecksum": "0f827b5960bd300c5033bd1f7be75f09",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.title": {
+      "value": "Push Chain पर बनाएं",
+      "englishChecksum": "98bebb4eb06e9298f123c1b72e10aae7",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "यूनिवर्सल ऐप्स कैसे बनाएं, इसके बारे में जानें, यह क्या अनलॉक करता है और शुरुआत कैसे करें!",
+      "englishChecksum": "e71d8755ade4356953c42893d5e8c6e3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Builders Assemble",
+      "englishChecksum": "cbe0e413f4f3228832b9ce7de92f0866",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.title": {
+      "value": "टेक्निकल डीप डाइव्स",
+      "englishChecksum": "7d767f9ff38d5cabab17de202bcd1428",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.subtitle": {
+      "value": "क्या आप Push के जटिल कामकाज के बारे में जानना चाहते हैं? या सिर्फ एक उत्सुक व्यक्ति हैं? कोई बात नहीं, नमस्ते कहिए!",
+      "englishChecksum": "20b765a3d60d8082c234a80d88114347",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.deepdives.ctatitle": {
+      "value": "यह कैसे काम करता है देखें",
+      "englishChecksum": "25c869c02797c1388cad7ad3917bfaa6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.title": {
+      "value": "डेवलपर डॉक्स",
+      "englishChecksum": "b3727892fde9b92568ad8356d63b1b24",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.subtitle": {
+      "value": "चलो सीधे मुद्दे पर आते हैं! मैं एक यूनिवर्सल चेन हूं… और आप एक डेवलपर हैं, चलो इसे आधिकारिक बनाते हैं!",
+      "englishChecksum": "d8938cbb8e3bef9cf4b3ad6ae0ea1b75",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.devdocs.ctatitle": {
+      "value": "अभी बनाएं",
+      "englishChecksum": "49cf0c392f12d991b816116d55c1d27c",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.title": {
+      "value": "टोकनॉमिक्स एक्सप्लोर करें",
+      "englishChecksum": "791cad865338cf9c166e2632f538e998",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.subtitle": {
+      "value": "हमारे टोकनomics कैसे नेटवर्क को प्रोत्साहन देता है और एक स्थायी नेटवर्क सुनिश्चित करता है जो लंबे समय तक चलने के लिए बनाया गया है, इसके बारे में जानें",
+      "englishChecksum": "4450f23b63d4ebaf90815a7d1250097f",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.tokenomics.ctatitle": {
+      "value": "टोकन डिज़ाइन के बारे में जानें",
+      "englishChecksum": "13143b07ad042d24a740accb12968e3e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.title": {
+      "value": "अक्सर पूछे जाने वाले प्रश्न",
+      "englishChecksum": "cde30a33b5e117f7a03e76d3272a4ef0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.subtitle": {
+      "value": "समुदाय द्वारा पूछे गए सभी लोकप्रिय प्रश्नों के उत्तर खोजने का स्थान",
+      "englishChecksum": "8fd81508233b12be1e01dcceb358b92f",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.faq.ctatitle": {
+      "value": "और पढ़ें",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.title": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.subtitle": {
+      "value": "Donut is Push Chain’s public testnet for Universal Apps that run across chains (EVM or non-EVM)",
+      "englishChecksum": "cea290281e5ab3d719be6b9e727a5dd4",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.testnet.ctatitle": {
+      "value": "और पढ़ें",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.title": {
+      "value": "वेलिडेटर्स",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.subtitle": {
+      "value": "",
+      "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.ctatitle": {
+      "value": "और पढ़ें",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.title": {
+      "value": "Donut Testnet 🍩 – Push Chain's यूनिवर्सल टेस्टनेट",
+      "englishChecksum": "25838a2da1aeb4b62428f31073685f2f",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.description": {
+      "value": "डोनट पुश ചെയिन की जनरल टेस्टनेट है। अपने युनिवर्सल एप्स को कनेक्ट करे, उन्हें चलाए, फैउसेट का उपयोग करे और वैलीडेटर बनाए जाने के तरीके सीखे।",
+      "englishChecksum": "e2161002d0e2ec61a020f0d3384bf236",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.og-title": {
+      "value": "Donut टेस्टनेट 🍩 - Push Chain का यूनिवर्सल टेस्टनेट",
+      "englishChecksum": "ede25f547948fbfee8dd9129c9a476dd",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.og-description": {
+      "value": "Donut का अन्वेषण करें, Push Chain का पहला सार्वजनिक testnet। एक बार बनाएं, हर जगह deploy करें, और Universal Apps को लाइव आज़माएं।",
+      "englishChecksum": "481cc1a484f6792be05e2ca4972f458d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-title": {
+      "value": "Donut Testnet 🍩 - यहाँ से शुरुआत करें",
+      "englishChecksum": "750999beb24a613387a2a4a2baaa9e5e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.seo.twitter-description": {
+      "value": "Donut Testnet के बारे में त्वरित जवाब: समर्थित चेन, यूनिवर्सल ऐप्स, फ़ॉसेट, और वैलिडेटर सेटअप।",
+      "englishChecksum": "582877743c8998a2e1a4404f78d534fe",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.title": {
+      "value": "Donut Testnet 🍩",
+      "englishChecksum": "b58ca2b0090cbd2dc059aebc2a9d4339",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.intro": {
+      "value": "**हमने एक दशक चेन साइलो का निर्माण करने में बिताया। अब उन्हें तोड़ने का समय है।**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+      "englishChecksum": "b22838133be616d6cefb8d88cf1783c3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.welcome-donut": {
+      "value": "## Donut Testnet 🍩\n\nDonut is Push Chain’s public testnet for Universal Apps that work across chains. It is a major milestone in bringing universal apps to the masses.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+      "englishChecksum": "051f018dc6859cb49ff9b2bd7209901d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.what-is-push-chain": {
+      "value": "## Push Chain क्या है?\n\nPush Chain एक शेयरड-स्टेट, यूनिवर्सल ब्लॉकचेन है जहाँ **इंटरऑपरेबिलिटी एक कोर चेन प्रिमिटिव है**, कोई बाद में जोड़ा गया बाहरी प्रोटोकॉल नहीं। **एक बार डिप्लॉय करें**, और आपका ऐप कनेक्टेड चेन पर नेटिव रूप से चलता है।\n\n**Donut वह जगह है जहाँ हम इसकी बैटल-टेस्ट करते हैं।**",
+      "englishChecksum": "2e921cba1ba65c8e9f016447d1c14dc7",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.quick-links": {
+      "value": "## Quick Links\n\n🧠 [Knowledge Base](/knowledge) — आर्किटेक्चर और डिज़ाइन के बारे में जानें।\n\n🌳 [Ecosystem Apps](/ecosystem) — Push Chain पर डिप्लॉय किए गए Universal Apps एक्सप्लोर करें।\n\n**🪩 Popular Apps to Try**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) — एक ही app logic को अलग-अलग chains पर सहज रूप से काम करते हुए अनुभव करें।\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) — cross-chain interactions को टेस्ट और विज़ुअलाइज़ करें।\n\n📖 [Developer Docs](/docs) — Push Chain के दस्तावेज़ में गहराई से जाएं।\n\n💧 [Faucet](https://faucet.push.org/) — testnet टोकन प्राप्त करें।\n\n🔍 [Push Scan](https://donut.push.network/) — transactions और नेटवर्क डेटा को ट्रैक करें।",
+      "englishChecksum": "8f49fb22c6f4c4d8ffcc857107231234",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
+      "value": "## Why Push Chain Exists\n\nToday's Web3 ecosystem is heavily fragmented and overly complex.\n\nDevelopers redeploy स्मार्ट कॉन्ट्रैक्ट across multiple chains, users have to manually ब्रिज टोकन or switch वॉलेट, and teams spend months maintaining chain-specific codebases and audits.\n\nEach new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.\n\n**Push Chain eliminates this.**",
+      "englishChecksum": "5eb212948d6bfddcc7697242f003a185",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-reimagines-interoperability": {
+      "value": "## चेन-नेटिव इंटरॉप\n\nआजकल ज़्यादातर इंटरऑपरेबिलिटी बाहरी मैसेजिंग लेयर्स या ब्रिज पर निर्भर करती है। आपको हर चेन पर कई कॉन्ट्रैक्ट, ऑडिट और इंटीग्रेशन का मैनेजमेंट करना पड़ता है।\n\n**Push Chain इस मॉडल को बदल देता है।** Push के साथ, आप:\n\n* **एक बार डिप्लॉय करें, हर जगह पहुंचें।** आपका ऐप तुरंत हर चेन पर उपलब्ध हो जाता है, ईवीएम या नॉन-ईवीएम।\n* **रेडंडेंट कॉन्ट्रैक्ट और ब्रिज को ड्रॉप करें।** इंटरऑपरेबिलिटी चेन के लिए नेटिव है, इसलिए आप इंफ्रास्ट्रक्चर पर नहीं, अपने ऐप पर ध्यान केंद्रित करते हैं।\n* **पूरी तरह से ईवीएम-कम्पेटिबल रहें।** आप वही टूलिंग, फ्रेमवर्क और ऑडिट इस्तेमाल करें जो आपके पास पहले से हैं।\n* **किसी भी चेन या वॉलेट से यूजर्स को सर्व करें।** यूजर्स मौजूदा वॉलेट का इस्तेमाल करके अपने होम चेन से ट्रांजैक्ट करते हैं। कोई मैन्युअल ब्रिजिंग नहीं, कोई गैस टोकन नहीं, कोई नेटवर्क स्विचिंग नहीं, कोई स्वैपिंग नहीं, कोई सेटअप नहीं।",
+      "englishChecksum": "099d648da110855e8baf9ec7670b0ab0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.how-to-participate": {
+      "value": "## नेटवर्क में मैं कैसे भाग ले सकता हूँ?\n\n### डेवलपर्स\n\nPush Chain डेवलपर्स को **एक बार बनाएँ और हर जगह डिप्लॉय करें** की शक्ति देता है।\n\nहर **ऐप सभी चेन्स पर नेटिव रूप से चलता है** बिना किसी एक्स्ट्रा इंटीग्रेशन या अलग डिप्लॉयमेंट्स के।\n\nचेन वर्तमान में टेस्टनेट पर **Ethereum, Solana, Base, Arbitrum, और BNB Chain** का सपोर्ट करता है, जिसमें जल्द ही और चेन्स आने वाले हैं।\n\n👉 [डेवलपर रिसोर्सेज एक्सप्लोर करें](#for-developers)\n\n### यूजर्स\n\nएक Web3 का अनुभव करें जो बस काम करता है: कोई चेन्स स्विच करने की जरूरत नहीं है, टोकन ब्रिज करने की जरूरत नहीं है, या कुछ सीखने की जरूरत नहीं है।\n\nPush Chain पर किसी भी ऐप तक पहुंचने के लिए अपने मौजूदा वॉलेट का उपयोग करें और सीधे अपने नेटिव टोकन में भुगतान करें।\n\n👉 [यूजर रिसोर्सेज एक्सप्लोर करें](#for-users)\n\n### Validators\n\nPush Chain का नेटवर्क डिकेंट्रलाइज्ड Validators के एक सेट द्वारा संचालित है।\n\n**टेस्टनेट Validator क्यों चलाएँ?**\n\nटेस्टनेट Validator चलाने से नेटवर्क को मजबूत करने और इसकी mainnet रेडीनेस को आकार देने में मदद मिलती है। इसमें [Push Points Program](https://portal.push.org) के सीजन 3 के साथ आने वाले परक्स और बेनिफिट्स भी शामिल हो सकते हैं।\n\n[@pushchain](https://x.com/PushChain) को टैग करें और हमारे साथ अपना अनुभव X पर शेयर करें।\n\n👉 [Validator रिसोर्सेज एक्सप्लोर करें](#for-validators)",
+      "englishChecksum": "79f9bb75f9cac27f83705a1022e15280",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.curated-reads": {
+      "value": "## Curated Reads 👇",
+      "englishChecksum": "c9fefca8484fa54c4cc35f978ba442b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.title": {
+      "value": "डेवलपर्स के लिए",
+      "englishChecksum": "a78ce034bc770017aa437365c2914fbf",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.ecosystem-apps.title": {
+      "value": "इकोसिस्टम ऐप्स",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.documentation.title": {
+      "value": "डॉक्यूमेंटेशन",
+      "englishChecksum": "9d86720f060a65a51857cdf8c4c7119d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-explorer.title": {
+      "value": "पुश स्कैन",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.push-faucet.title": {
+      "value": "Push Faucet",
+      "englishChecksum": "5877629e592725d72bc82b62dc2bcc3b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-developers.items.grassroots-program.title": {
+      "value": "Apply for Grassroots Program",
+      "englishChecksum": "ff3278f906b1bda824da980fe244ffd8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.title": {
+      "value": "उपयोगकर्ताओं के लिए",
+      "englishChecksum": "d28521735dec8283e86c109902717bbb",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.ecosystem-apps.title": {
+      "value": "इकोसिस्टम ऐप्स",
+      "englishChecksum": "dc823856ce2323ac975d320463d0176e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.knowledge-base.title": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-users.items.lets-push-yaps.title": {
+      "value": "चलो Yaps पुश करते हैं",
+      "englishChecksum": "afe8f78f7532d791bc7524afe1b77c84",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.title": {
+      "value": "Validators के लिए",
+      "englishChecksum": "ee0336c666c1f8c6098e95d4bfb26a4b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
+      "value": "Push Validator",
+      "englishChecksum": "8b31b9b9aa97d92b4d044ae139d4ff47",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.title": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.description": {
+      "value": "पुश चेन के लिए रियल-टाइम घटना रिपोर्ट और नेटवर्क स्थिति अपडेट। आउटेज, रखरखाव और हल किए गए मुद्दों के बारे में सूचित रहें।",
+      "englishChecksum": "79dcfac5268064e8b57342b415ef92ee",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.og-title": {
+      "value": "Push Chain Incident Reports - नेटवर्क स्टेटस",
+      "englishChecksum": "4d7d658a59feaab09d75675c1452e779",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.og-description": {
+      "value": "Push Chain नेटवर्क की घटनाओं, रखरखाव अवधि और सेवा अपडेट को ट्रैक करें। वास्तविक समय की स्थिति की जानकारी प्राप्त करें।",
+      "englishChecksum": "489d40e83781acad7ab86c3ebff89565",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.twitter-title": {
+      "value": "Push Chain घटना रिपोर्ट",
+      "englishChecksum": "f0f20d8b7ac140244bee728ad40551f2",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.seo.twitter-description": {
+      "value": "Push Chain नेटवर्क की स्थिति, घटनाओं और रखरखाव पर लाइव अपडेट।",
+      "englishChecksum": "0e97fd38f27262727851bc7583882da3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.donut-testnet": {
+      "value": "Donut Testnet",
+      "englishChecksum": "9409079fa25c142f9373653a87ce2464",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.explainer-section.breadcrumbs.report": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.title": {
+      "value": "Incident Reports",
+      "englishChecksum": "7606ee90577cd767c75c606f58800e41",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.report.explainer-section.blocks.sections.reports-overview.items.intro": {
+      "value": "content",
+      "englishChecksum": "aa8c8783eb334c165bf4f2ddc284d7ff",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.title": {
+      "value": "Validators —",
+      "englishChecksum": "a0fa1a0122c6854e71a26aadd8451e4d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.description": {
+      "value": "वॉलेट, फीस, सपोर्टेड चेन्स और शुरुआत करने के बारे में त्वरित जवाब।",
+      "englishChecksum": "d0c94cda448f4fd9866220bddbf78d62",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.og-title": {
+      "value": "Push Chain FAQ - सभी प्रश्न",
+      "englishChecksum": "3babe30591ae7ad21c6ddeef513721ce",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.og-description": {
+      "value": "तेज़ जवाब ढूंढें, जिसमें गाइड, टेस्टनेट और समर्थन के लिंक हों।",
+      "englishChecksum": "40b0bd9c7673f4a3fba46c24b5889434",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.twitter-title": {
+      "value": "FAQ - यहाँ से शुरू करें",
+      "englishChecksum": "3f9084c4a138ee6c97ccff8f9dd48ef9",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.seo.twitter-description": {
+      "value": "Push Chain से जुड़े सवालों के जल्दी जवाब।",
+      "englishChecksum": "e7f24c18b1cd82250d93b1f98b9cdd0b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.knowledge.validators.explainer-section.blocks.title": {
+      "value": "Validators",
+      "englishChecksum": "328aee7f0f37ab02c17f7d96b6c526a8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.title": {
+      "value": "Home — Push Chain | ऐप्स के लिए यूनिवर्सल ब्लॉकचेन",
+      "englishChecksum": "948506e7144431eba32cc84b4a86e0fe",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.description": {
+      "value": "शेयर्ड-स्टेट ब्लॉकचेन फॉर युनिवर्सल एप्‍स। एक बार डिप्लॉय करें; किसी भी चेन पर यूज़र्स तक पहुँचें। कोई भी वॉलेट यूज़ करें। कोई भी टोकन से पे करें।",
+      "englishChecksum": "5559448d35e5fc8f2c5d96d1d1cfb6af",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.og-title": {
+      "value": "Push Chain - सार्वभौमिक L1 ऐप्स के लिए",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.og-description": {
+      "value": "EVM और non-EVM यूज़र्स के लिए वन डिप्लॉय। कोई भी वॉलेट इस्तेमाल करें और कोई भी टोकन से पे करें — नेटवर्क स्विचिंग की ज़रूरत नहीं।",
+      "englishChecksum": "c3b3e259e681d1772190c4a2f8540c4c",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.twitter-title": {
+      "value": "एक बार डिप्लॉय करें. किसी भी चेन तक पहुंचें.",
+      "englishChecksum": "6712df7cb0cb98805b3fa1a118d2bcc9",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.seo.twitter-description": {
+      "value": "किसी भी चेन से लेनदेन करें। कोई भी वॉलेट इस्तेमाल करें। किसी भी टोकन से भुगतान करें। नेटवर्क बदलने की ज़रूरत नहीं।",
+      "englishChecksum": "e20fe711d93dcdad589921977ffc785b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.title": {
+      "value": "कोई भी चेन, कोई भी ऐप, सभी यूज़र्स।\nएक पुश चेन।",
+      "englishChecksum": "a082fba5c4be3c74b3ac7428c000d934",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.description": {
+      "value": "पहला Layer 1 जो Universal ऐप के लिए बनाया गया है। \nएक बार बनाएँ और डिप्लॉय करें, किसी भी चेन से उपयोगकर्ताओं को ऑनबोर्ड करें।",
+      "englishChecksum": "5a20cac3d05e72e32bb859b343f9cb8e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.primary-button": {
+      "value": "बिल्डिंग शुरू करें",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.primary-button-title": {
+      "value": "Push Chain के साथ अपनी बिल्डर की यात्रा शुरू करें!",
+      "englishChecksum": "14611f46ad408dc44d62a33c2c406854",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.secondary-button": {
+      "value": "नॉलेज बेस एक्सप्लोर करें",
+      "englishChecksum": "bc99d29cdb063d0d07d5356c43b366c3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.secondary-button-title": {
+      "value": "Push Chain के बारे में जानें और देखें",
+      "englishChecksum": "c69e7d883bb35ef715c7f496f1d51865",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.section-aria-label": {
+      "value": "Push Chain हीरो सेक्शन - यूनिवर्सल लेयर 1 ब्लॉकचेन का परिचय",
+      "englishChecksum": "57b747f815f7cb72d1d3ae9838d75e69",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.primary-button-aria-label": {
+      "value": "Push Chain पर यूनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़ पर जाएं",
+      "englishChecksum": "6e0f565400994d68dec83507e25398bf",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.secondary-button-aria-label": {
+      "value": "पुश चेन विशेषताओं और अवधारणाओं के बारे में नॉलेज बेस में जानें",
+      "englishChecksum": "93d415c9d176d2609a99fea3911f206a",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.hero-background-alt": {
+      "value": "Push Chain हीरो बैकग्राउंड एनिमेशन जो यूनिवर्सल ब्लॉकचेन कनेक्टिविटी दिखाता है",
+      "englishChecksum": "bd0a611472046c804d587074f3912a14",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.hero-background-title": {
+      "value": "Push Chain - यूनिवर्सल लेयर 1 क्रॉस-चेन एप्लिकेशन्स के लिए",
+      "englishChecksum": "a0b9e94eddb59dc9ceff3c9fc6944fc2",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.schema-headline": {
+      "value": "Push Chain - युनिवर्सल L1 फॉर ऐप्स",
+      "englishChecksum": "20ffdc0b06f7d35c2162adfb8d0c162b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.hero-section.schema-description": {
+      "value": "एक बार Push Chain पर डिप्लॉय करें और universal apps के साथ किसी भी blockchain पर यूजर्स तक पहुंचें",
+      "englishChecksum": "ab11675113d50ac33cc47fa82376852d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.titleFirst": {
+      "value": "एक सच्चा",
+      "englishChecksum": "29dc86361d1526a5cba07382fb090abf",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.titleSecondGraditent": {
+      "value": "यूनिवर्सल",
+      "englishChecksum": "af38ccf0394770bddedbe5b6ab970142",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.titleThird": {
+      "value": "चेन",
+      "englishChecksum": "c00c84ec6e2cf543f7cf70c5a83ca911",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.bottomTextFirst": {
+      "value": "एक बार डिप्लॉय करें,",
+      "englishChecksum": "c7613088f0a23bd75f3e661d644b2b7a",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.bottomTextSecond": {
+      "value": "हर जगह पहुंचें",
+      "englishChecksum": "9531d5eff4b3705adb7fe475ef138a0e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.bottomLinkText": {
+      "value": "शुरू करें",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.bottomLinkTitle": {
+      "value": "दस्तावेज़ हब पर जाएं",
+      "englishChecksum": "4078faa58057f47c15cedd4bbbde53ab",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.section-aria-label": {
+      "value": "Push Chain क्या है - यूनिवर्सल ब्लॉकचेन की व्याख्या",
+      "englishChecksum": "10243b8d1cc968fe82c7691336d8a347",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.animation-alt": {
+      "value": "Push Chain के universal app deployment को कई blockchains पर दिखाने वाला एनीमेशन",
+      "englishChecksum": "ca41b26a225f9a8f71d337a149bb6e64",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.animation-title": {
+      "value": "Push Chain युनिवर्सल डिप्लॉयमेंट विज़ुअलाइज़ेशन - एक बार डिप्लॉय करें, किसी भी चेन तक पहुँचें",
+      "englishChecksum": "48fc9beed0f61a9a012c9ae54f926fc3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.whatis-section.bottom-link-aria-label": {
+      "value": "पुश चेन डॉक्यूमेंटेशन पर नेविगेट करें और यूनिवर्सल ऐप्स बनाना शुरू करें",
+      "englishChecksum": "645322d71eec5353ebbb15336db72d4c",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.section-aria-label": {
+      "value": "Push Chain नवाचार और सुविधाओं का अनुभाग",
+      "englishChecksum": "ad568c1cd43eba621f72921181b2f93c",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.header.main-text": {
+      "value": "विखंडन को खत्म करने के लिए नवाचारों पर निर्मित!",
+      "englishChecksum": "cd9d6aae1358ded4b2e0e180185259ca",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.header.other-text": {
+      "value": "Push ही एकमात्र Universal Layer 1 है जिसकी आपको कभी आवश्यकता होगी!",
+      "englishChecksum": "6c02fb7d9668226e2da2c7363d9fc586",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box1.texttitle": {
+      "value": "किसी भी चेन पर लेनदेन",
+      "englishChecksum": "07d1d093e9c229dbf0ff39aed8a0ba94",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box1.bodytext": {
+      "value": "Push Chain किसी भी ब्लॉकचेन से आने वाले ट्रांजेक्शन को सपोर्ट करता है। यूज़र्स किसी भी टोकन में गैस का भुगतान कर सकते हैं - ब्रिजिंग की कोई आवश्यकता नहीं।",
+      "englishChecksum": "b6fa6ff506ebb0f1afc085a4fd7a5208",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box1.imagealt": {
+      "value": "ब्लॉकचेन के विभिन्न लोगो का चित्रण जो एक पिनबॉल मशीन में गिर रहे हैं।",
+      "englishChecksum": "d06d7e5677e08fa5e8d861349e1b5634",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box1.imagetitle": {
+      "value": "किसी भी ब्लॉकचेन से लेनदेन का समर्थन करता है।",
+      "englishChecksum": "d6143294e5b9f12d4905ceba2fd3c37b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box2.texttitle": {
+      "value": "वॉलेट एब्स्ट्रैक्शन",
+      "englishChecksum": "e9e305a61a3415b84869df9e3fe42867",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box2.bodytext": {
+      "value": "किसी भी चेन से किसी भी वॉलेट को कनेक्ट, इंटरेक्ट और ट्रांजैक्ट करने दें। सोशल लॉगिन या ईमेल का उपयोग करके वेब3 बाधाओं को तोड़ें। उपयोगकर्ता पुश चेन पर निर्णय लेने के लिए पाते हैं।",
+      "englishChecksum": "4c6e361bb0cef914b5b472f522348306",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box2.imagealt": {
+      "value": "Illustration showing MetaMask वॉलेट, Phantom Wallet, आदि एक बड़े वॉलेट से बाहर निकल रहे हैं जिसमें Push Chain लोगो लगा है।",
+      "englishChecksum": "4d2e75fdd3a7a71ecf71cae1dacfba60",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box2.imagetitle": {
+      "value": "Metamask, Phantom जैसे मौजूदा वॉलेट और सोशल लॉगिन का समर्थन करता है",
+      "englishChecksum": "5541c2c4c62ec60cf8f49f22f4d66a17",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box3.texttitle": {
+      "value": "100% EVM\nसंगत",
+      "englishChecksum": "72d668e3c6368431b6ba4a780d747af8",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box3.bodytext": {
+      "value": "बिना किसी ऑन-चेन कोड के डिप्लॉय करें। मिनटों में अपने नेटिव ऐप को युनिवर्सल ऐप में बदलें।",
+      "englishChecksum": "30b3dad5087384bdfc93e21c08c4cf33",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box3.imagealt": {
+      "value": "Ethereum वर्चुअल मशीन लोगो घूम रहा है और 100% EVM कम्पैटिबिलिटी कह रहा है का चित्रण।",
+      "englishChecksum": "022c84abe3d44a7667ce95ca4cc2af8b",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box3.imagetitle": {
+      "value": "ऑन-चेन कोड में शून्य बदलाव आवश्यक, 100% EVM संगत।",
+      "englishChecksum": "bb9602dffa37cdef5ade076ad1f5d859",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box4.texttitle": {
+      "value": "यूनिवर्सल स्मार्ट कॉन्ट्रैक्ट्स",
+      "englishChecksum": "cce50f0ba020e290156858a39cd05711",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box4.bodytext": {
+      "value": "एक बार बनाएं, क्रॉस चेन, मल्टी स्टेप अनुभव चलाएं एक सिंगल, भविष्य-प्रूफ कॉन्ट्रैक्ट के साथ।",
+      "englishChecksum": "20f163b0f61c79fb177c0d3541a721a1",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box4.imagealt": {
+      "value": "Illustration showing Ethereum Virtual Maching logo and a an arc revolving around it saying '100% EVM Compatible'",
+      "englishChecksum": "ed71e9d6a4b2df4b42c01ef11ebd8442",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box4.imagetitle": {
+      "value": "एक बार डिप्लॉय करें, और तुरंत सभी सपोर्टेड चेन्स (EVM या नॉन-EVM) के साथ कम्पैटिबल हो जाएं।",
+      "englishChecksum": "93af050cd9e312c22b226f0d71f226c0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box5.texttitle": {
+      "value": "यूनिवर्सल फी\nएब्स्ट्रैक्शन",
+      "englishChecksum": "38f7bb501cdef86b887546d430af0b80",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box5.bodytext": {
+      "value": "उपयोगकर्ताओं को किसी भी चेन पर किसी भी टोकन में गैस का भुगतान करने दें, बिना ब्रिजिंग के।",
+      "englishChecksum": "2f272d36e811700fa44250a9f8e85e29",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box5.imagealt": {
+      "value": "चित्र विभिन्न Bitcoin, Ethereum, Solana लोगो को Push Chain के चारों ओर घूमते हुए दिखा रहा है",
+      "englishChecksum": "f26916dd4dbaba5513ae6257bf448c72",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box5.imagetitle": {
+      "value": "किसी भी चेन के किसी भी टोकन को लेनदेन के लिए सपोर्ट करता है।",
+      "englishChecksum": "2bf111c83844692092b9b8c08eb18154",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box6.texttitle": {
+      "value": "यूनिवर्सल एग्जीक्यूशन लेयर",
+      "englishChecksum": "bdc51b77691458ae35fc566a6d4ac135",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box6.bodytext": {
+      "value": "वेब3 में एटॉमिक, कंपोजेबल ऐप्स बनाएं। अलग-अलग चेन्स के कई यूज़र्स एक ही ऐप के साथ ट्रांसेक्ट करके पहले कभी नहीं देखे गए ऐप एक्सपीरियंस बनाएं।",
+      "englishChecksum": "87d057c40c0bd92a9d4e3dfc2ce79644",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box6.imagealt": {
+      "value": "दरियाई जडियाँ, पुश चेन लोगो से निकलती हुई दिखाती हुई",
+      "englishChecksum": "b0163005d97f99c86ce66624bca2ec8a",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box6.imagetitle": {
+      "value": "Push Chain पर किसी भी चेन से होने वाले transaction finalize होते हैं, जिससे किसी भी चेन के उपयोगकर्ता यूनिवर्सल एक्ज़ीक्यूशन लेयर के रूप में एक ही app का इस्तेमाल कर सकते हैं।",
+      "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "स्टेट एक्सेस",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "अपने स्मार्ट कॉन्ट्रैक्ट से अन्य चेन्स से अकाउंट और स्टेट डेटा एक्सेस करें।",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.tagText": {
+      "value": "जल्द आ रहा है",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "चेन से पढ़ें",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "Push Chain को ब्लॉक्स स्टाइल एनीमेशन में बढ़ते हुए दर्शाने वाला चित्रण।",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(रोडमैप) शेयर्ड स्टेट आपको अपने स्मार्ट कॉन्ट्रैक्ट में दूसरे चेन्स से अकाउंट और स्टेट डेटा एक्सेस करने की अनुमति देता है।",
+      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "यूनिवर्सल\nवैलिडएटर्स",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "किसी भी चेन पर अपने स्मार्ट कॉन्ट्रैक्ट का उपयोग करके लेनदेन को ट्रिगर करें, मान्य करें और पूरा करें।",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.tagText": {
+      "value": "जल्द आ रहा है",
+      "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "चेन्स पर लिखें",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Illustration showing tetris blocks in different colors merging and changing.",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.box8.imagetitle": {
+      "value": "(रोडमैप) युनिवर्सल वैलिडेटर्स उपयोगकर्ताओं को अपने स्मार्ट कॉन्ट्रैक्ट का उपयोग करके किसी भी चेन पर लेनदेन को ट्रिगर, वैलिडेट और पूरा करने की अनुमति देते हैं।",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.footer.title": {
+      "value": "अपने ऐप के उपयोगकर्ता आधार को युनिवर्सल बनाकर बढ़ाएँ",
+      "englishChecksum": "ca62b71dc8b27bf5eefdff1ffdae1449",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.footer.secondary": {
+      "value": "बिना किसी प्रयास के!",
+      "englishChecksum": "969754b55ad17557a1b7c104ed70b2e4",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.footer.ctatext": {
+      "value": "शुरू करना शुरू करें",
+      "englishChecksum": "9f8707863148175d84d846e7deafecd0",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.chain-features-section.footer.ctatitle": {
+      "value": "एक बार डिप्लॉय करें, अपने उपयोगकर्ता आधार को 10 गुना बढ़ाएं। डेवलपर डॉक्स पर जाएं।",
+      "englishChecksum": "8233b96e3719e17e447894b7b4f1ef53",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.partners-section.section-aria-label": {
+      "value": "Push Chain इकोसिस्टम पार्टनर और इंटीग्रेशन",
+      "englishChecksum": "d919d3fa9fbe0d4f2b3c2fc87319f1f5",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.partners-section.title": {
+      "value": "Powered by Push Chain",
+      "englishChecksum": "ffe52515f8b0ddf2bf7d5f21ce2d9ec7",
+      "lastUpdated": "2025-11-14T19:27:06.116Z"
+    },
+    "pages.home.partners-section.subtitle": {
+      "value": "पुश चेन पर डिप्लॉय करके अपने यूजर बेस को कई गुना बढ़ाने वाले ऐप्स देखें।",
+      "englishChecksum": "f6a96a2e05813cd5c878fbad4cde90d8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.ctatitle": {
+      "value": "Push Chain पर पार्टनर, app और इंफ्रा को चेक करें",
+      "englishChecksum": "7f2dba55b2b29f81fba57d2ab2b3928a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.ctatext": {
+      "value": "इकोसिस्टम एक्सप्लोर करें",
+      "englishChecksum": "0800c001853854c3fe569fb0c9315495",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.partners-grid-aria-label": {
+      "value": "Web3 प्रोजेक्ट्स के पार्टनर लोगो का ग्रिड जो पुश चेन का इस्तेमाल कर रहे हैं",
+      "englishChecksum": "57d2ba44c5262f8595a7b11f2e728751",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.partner-logo-title-prefix": {
+      "value": "Partner logo - ",
+      "englishChecksum": "9a6a6324235ba2abb0fc7efe1208935e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.partner-logo-alt-prefix": {
+      "value": "Logo of ",
+      "englishChecksum": "3f008442b87302c61e429f26dea2aadf",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.partners-section.mobile-view-aria-label": {
+      "value": "Push Chain इकोसिस्टम पार्टनर्स का मोबाइल दृश्य",
+      "englishChecksum": "7195ac8e4168a535813f2f743a771c41",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.section-aria-label": {
+      "value": "Push Chain प्रदर्शन आँकड़े और मेट्रिक्स",
+      "englishChecksum": "081402c46051493f0ad29d4fbe475ed0",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.title": {
+      "value": "प्राप्त करें",
+      "englishChecksum": "19b9898fb46510573e9eecd5ca2c4e27",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.titleGradient": {
+      "value": "तत्काल",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.titleThird": {
+      "value": "इंटरऑपरेबिलिटी",
+      "englishChecksum": "7eea83832c429d210721b6f786e1125e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.description": {
+      "value": "बेहतर प्रदर्शन के लिए अनुकूलित।\nउच्च टीपीएस, अल्ट्रा-लो गैस, और रियल-टाइम ऐप निष्पादन के लिए सब-सेकंड फ़ाइनैलिटी।",
+      "englishChecksum": "6a30ccd29c10a929c623aacb10b3415a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.animation-alt": {
+      "value": "इंटरैक्टिव एनीमेशन जो Push Chain की कई ब्लॉकचेन पर इंस्टेंट इंटरऑपरेबिलिटी दिखाता है",
+      "englishChecksum": "ba5ad2d95c246b132336924324bad1b7",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.animation-title": {
+      "value": "Push Chain तत्काल इंटरऑपरेबिलिटी विज़ुअलाइज़ेशन",
+      "englishChecksum": "79976e97d2ef0635f526070dc39c1c27",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat1.title": {
+      "value": "समर्थित चेन्स",
+      "englishChecksum": "9fa4fdfa65802111310afe0c589b22d1",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagealt": {
+      "value": "समर्थित चेन्स दिखाने वाला चित्रण",
+      "englishChecksum": "9b96b239ea068a5ed539af6f3694239c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat1.imagetitle": {
+      "value": "Ethereum, Solana, BNB Chain, आदि जैसे सभी समर्थित ब्लॉकचेन की सूची",
+      "englishChecksum": "2270db058472d6f238f0e29b86f25023",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat2.title": {
+      "value": "TPS",
+      "englishChecksum": "9da9418a92881b96aeb4fcc43e237466",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat2.description": {
+      "value": "4.2k",
+      "englishChecksum": "be0715a552eeea3e5678df63651d0872",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat3.title": {
+      "value": "नेटिव फाइनलटी",
+      "englishChecksum": "eb159fdea10f78862e4e79fe886dc036",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat3.description": {
+      "value": "तत्काल",
+      "englishChecksum": "4c5b82c2fc278548f19b330c5056e0a8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat4.title": {
+      "value": "नेटिव ब्लॉक टाइम",
+      "englishChecksum": "813e6eba2d2e1c473f660986d32c8e4e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.stats-section.stats.stat4.description": {
+      "value": "1s",
+      "englishChecksum": "b7ca79525ea99e356ff1dd38525b5342",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.subtitle": {
+      "value": "खबरें, डेवलपमेंट लॉग और विचार",
+      "englishChecksum": "126fa2aacb84a9d81e494a89ffdb0bef",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.subtitle-aria-label": {
+      "value": "ब्लॉग श्रेणी की जानकारी",
+      "englishChecksum": "ac7ce58d26a8699ca5e8f7a113fda93e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.title": {
+      "value": "पुश चेन का आपका नाड़ी",
+      "englishChecksum": "b1cb7ed612449065a646c3f8b61a0a74",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.title-aria-label": {
+      "value": "नवीनतम Push Chain ब्लॉग पोस्ट और अपडेट",
+      "englishChecksum": "bd53aa8f5f7d9b86d251086f29478a81",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.explore-link-text": {
+      "value": "और लेख देखें",
+      "englishChecksum": "82dc7eaf7824b2b5b39002b219040ec0",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.explore-link-title": {
+      "value": "Push Chain ब्लॉग पर सभी लेख और अपडेट पढ़ने के लिए जाएं",
+      "englishChecksum": "5ac48570f00c6fa9a1c935ec768450dd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.explore-link-aria-label": {
+      "value": "पुश चेन ब्लॉग पेज पर नेविगेट करें",
+      "englishChecksum": "675a90090b1f1a950148fdc36404c5da",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.section-aria-label": {
+      "value": "Push Chain ब्लॉग पोस्ट और समाचार अनुभाग",
+      "englishChecksum": "d636d3da4fbd3dad2b973001969a1c00",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.blog-posts-list-aria-label": {
+      "value": "हाल के Push Chain ब्लॉग पोस्ट",
+      "englishChecksum": "02e0773441142451f08f78bf6a694069",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.blog-post-aria-label": {
+      "value": "{title} के बारे में ब्लॉग पोस्ट पढ़ें",
+      "englishChecksum": "b5898d0adeb3062efd7661ccde948386",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.blog-post-title-prefix": {
+      "value": "ब्लॉग पोस्ट पढ़ें - ",
+      "englishChecksum": "8df77812b9a3532a64f60ea1b47fbe67",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.loading-text": {
+      "value": "नवीनतम ब्लॉग पोस्ट लोड हो रहे हैं...",
+      "englishChecksum": "9a8a4eaa02425d1a19d84bba815ac409",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.error-text": {
+      "value": "अभी ब्लॉग पोस्ट लोड करने में असमर्थ",
+      "englishChecksum": "2d6dabe9453626828f62a3d80eb14184",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.blog-section.no-posts-text": {
+      "value": "कोई ब्लॉग पोस्ट उपलब्ध नहीं है",
+      "englishChecksum": "69d5484bbae99b9c3545a41778492336",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.trustedby-section.title": {
+      "value": "वेब3 के पायनियरों द्वारा विश्वसनीय टीम द्वारा निर्मित",
+      "englishChecksum": "dc937f19942643ce4264edddf30c412a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.trustedby-section.section-aria-label": {
+      "value": "Push Chain द्वारा विश्वसनीय अनुभाग",
+      "englishChecksum": "18be016c87bb93e30ca4e5e49d740805",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.trustedby-section.trusted-by-alt": {
+      "value": "निवेशक - ",
+      "englishChecksum": "3c0c7cd619384b307c73cf5935c25e67",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.aria-label": {
+      "value": "फ़ीचर्ड ऑन सेक्शन",
+      "englishChecksum": "4ab283a6324bc57b350db0d8acb0d32c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.tag": {
+      "value": "FEATURED ON",
+      "englishChecksum": "ff2ce72b0d556e75df6896ffafa92e05",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.title": {
+      "value": "पीश चेन में स्पॉटलाइट",
+      "englishChecksum": "7680658233a0ee4d168959f3c83ebb6a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.subtitle": {
+      "value": "हमारे शब्द पर भरोसा न करें। वास्तविक शून्य चेन के बारे में मीडिया क्या कह रहा है, देखें।",
+      "englishChecksum": "9394eb0bdbdb615a0964682774c13c94",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles-image-alt": {
+      "value": "मीडिया कवरेज फ्रॉम ",
+      "englishChecksum": "6cac47727dfb2d9d87a1f7ceb537b3f1",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles-text": {
+      "value": "पूरा कवरेज पढ़ें",
+      "englishChecksum": "ddee3a14f42eb7c40cb57997f3ca944c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles-title-1": {
+      "value": "पढ़ें ",
+      "englishChecksum": "3931423122a4af3ae3811096a2819685",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles-title-2": {
+      "value": "'s thoughts on Push Chain in full detail",
+      "englishChecksum": "19442a03071cf8be9a9509a81e44d264",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.binance-chain.text": {
+      "value": "हमें यह घोषणा करते हुए बहुत खुशी हो रही है कि Push Protocol, Web3 के लिए एक अग्रणी विकेंद्रीकृत संचार प्रोटोकॉल, अब BNB Chain पर लॉन्च हो गया है।",
+      "englishChecksum": "c4530c92cf72e058e797dacf1793b260",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.coindesk.text": {
+      "value": "प्रोटोकॉल विलेज: अनस्टॉपेबल वर्क्स विथ पुश प्रोटोकॉल टू डिलीवर टोकन-गेटेड ग्रुप चैट्स",
+      "englishChecksum": "ad068a87c6c2d7412cdc7aa5fe1f3eff",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.defiant.text": {
+      "value": "Unstoppable Domains Launches टोकन Gated Group Chats. Collaboration with पुश प्रोटोकॉल aims to fend off misinformation and scams.",
+      "englishChecksum": "b406714c0a067c24635e3957190f0af8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.balaji.text": {
+      "value": "उपयोगकर्ता-नियंत्रित सूचनाएं। दो कंपनियां अरबों स्मार्टफोन पर पुश नोटिफिकेशन को नियंत्रित करती हैं: Apple और Google।",
+      "englishChecksum": "0f1c48f6883e33bacfb8c0f548e8ecb3",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.defiprime.text": {
+      "value": "Harsh Rajat बात करते हैं बैंकिंग के भविष्य के बारे में, EPNS प्रोटोकॉल प्रोत्साहन और विकेंद्रीकृत पुश नोटिफिकेशन के लिए एक व्यवसाय मॉडल कहां है।",
+      "englishChecksum": "0cb5feb1635aa0686853746fe8700bb9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.ethfoundation.text": {
+      "value": "HackMoney के बाद से, ऋचा और हर्ष ने EPNS को \"वेब3 का एक लापता हिस्सा\" कहते हुए इसे बनाने की अविश्वसनीय ऊर्जा दी है।",
+      "englishChecksum": "5305100d89dba00f198a84e007c8eb26",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.beincrypto.text": {
+      "value": "वेब3 कम्युनिकेशन नेटवर्क कैसे काम करते हैं: एक तकनीकी गहराई से विश्लेषण",
+      "englishChecksum": "e10824f783c2e0de2b2d7e643bd2634d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.the-block.text": {
+      "value": "Web3 नोटिफिकेशन प्रोटोकॉल Push अपना खुद का Layer 1 चेन लॉन्च करने वाला है",
+      "englishChecksum": "b5c5b9f95dde1fb47a5b8046a1f2b5e8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.business-insider.text": {
+      "value": "Push Unveils Push Chain: The Future of Universal ब्लॉकचेन Applications",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.chainwire.text": {
+      "value": "Push पेश करता है Push Chain: भविष्य के यूनिवर्सल ब्लॉकचेन एप्लीकेशन।",
+      "englishChecksum": "8670f532335ce3e8a26a24b30f44a48d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.benzinga.text": {
+      "value": "Push Unveils Push Chain: The Future of युनिवर्सल ब्लॉकचेन एप्लिकेशन्स",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.crypto-briefing.text": {
+      "value": "Push Unveils Push Chain: The Future of Universal ब्लॉकचेन Applications",
+      "englishChecksum": "f87f6ac1969f948c19335c51730f2f95",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.cryptoslate.text": {
+      "value": "Push Protocol लॉन्च करता है Push Chain जो ब्लॉकचेन संचार और लेनदेन को एकीकृत करता है",
+      "englishChecksum": "4fc312bfba55cf6b838949c2ee8e0cfa",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.messari.text": {
+      "value": "EPNS उपयोगकर्ताओं को डिसेंट्रलाइज्ड नोटिफ़िकेशन प्राप्त करने के लिए प्रोत्साहन और निष्क्रिय कमाई को सक्षम बनाता है।",
+      "englishChecksum": "76aedec3b96cef39cc9355c8a9c1118b",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-1.text": {
+      "value": "Harsh Rajat, founder और Push Protocol के प्रोजेक्ट लीड, Web3 चैट ऐप्लिकेशंस के विकास में वृद्धि की व्याख्या करते हैं Hashing It Out के नवीनतम एपिसोड में।",
+      "englishChecksum": "a530ac82085f87db632129ac224faf3c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.featured-section.articles.coin-telegraph-2.text": {
+      "value": "Unstoppable Domains username धारकों के लिए बैज-गेटेड ग्रुप चैट सुविधा लॉन्च करता है।",
+      "englishChecksum": "6032ddd8c813a13646927c3eae35adb5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.aria-label": {
+      "value": "यूनिवर्सल एप्‍स बनाने का खंड",
+      "englishChecksum": "c5b019935b5b8874364eebc8986a6ac0",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.section-title": {
+      "value": "यूनिवर्सल ऐप्स बनाएं।",
+      "englishChecksum": "0e774a7dc1ee53c01ff2296e74c209c4",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.section-subtitle": {
+      "value": "सilos को तोड़ें। एक बार बनाएं, हर ब्लॉकचेन पर स्केल करें।",
+      "englishChecksum": "a9d2b747741fd12af5883cd4446f4772",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.docs-link.text": {
+      "value": "Push Chain Docs देखें",
+      "englishChecksum": "a12d0c27ed45dee80ba7ed3d7d20f96c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.docs-link.title": {
+      "value": "ब्लॉकचेन दस्तावेज़ीकरण और डेवलपर संसाधनों का अन्वेषण करें",
+      "englishChecksum": "07584070f7e8b119827d75c362d05e59",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.docs-link.aria-label": {
+      "value": "Push Chain दस्तावेज़ नई टैब में खोलें",
+      "englishChecksum": "ecb929436d5877c5e4ce93073a2f0310",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.cta-link.text": {
+      "value": "LFG Push Chain",
+      "englishChecksum": "be953076a98731e9aec67b31a9f0df3a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.cta-link.title": {
+      "value": "Push Chain से शुरुआत करें - सार्वभौमिक ब्लॉकचेन प्लेटफॉर्म",
+      "englishChecksum": "7bcc4330a5ebbf09e486a06944c2d5bd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.home.ending-section.cta-link.aria-label": {
+      "value": "Push Chain डेवलपमेंट शुरू करें",
+      "englishChecksum": "acedeec3d726f902233dda0b5cb1c1b4",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.title": {
+      "value": "Push Chain इकोसिस्टम — यूनिवर्सल ऐप्स और पार्टनर",
+      "englishChecksum": "32db66944f11630338b6b28e3ce805cd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.description": {
+      "value": "Push Chain पर बने युनिवर्सल apps, पार्टनर्स और प्रोजेक्ट्स के इकोसिस्टम को एक्सप्लोर करें। शेयर-स्टेट इंटरऑपरेबिलिटी के साथ सभी चेन्स पर यूजर्स तक पहुँचें।",
+      "englishChecksum": "41ab93f9796103eb14ec3a145afd8bf4",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.og-title": {
+      "value": "Push Chain इकोसिस्टम - यूनिवर्सल ऐप्स और पार्टनर एक्सप्लोर करें",
+      "englishChecksum": "d967afcb31a9f4b223a73f3438806437",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.og-description": {
+      "value": "Push Chain पर लाइव सार्वभौमिक ऐप्स और परियोजनाओं के पारिस्थितिकी तंत्र का अन्वेषण करें। वास्तविक क्रॉस-चेन उपयोगिता का अनुभव करें। कोई पुल या स्वैप नहीं।",
+      "englishChecksum": "334d8a8abb5cbc356c4a89b34a1c9703",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.twitter-title": {
+      "value": "Push Chain इकोसिस्टम एक्सप्लोर करें - युनिवर्सल एप्स और पार्टनर्स",
+      "englishChecksum": "e403bd7ee033adade46e953f4bba985d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.seo.twitter-description": {
+      "value": "Push Chain पर universal apps और पार्टनर को खोजें। एक बार बनाएं, Ethereum, Solana, Base और उससे आगे के उपयोगकर्ताओं तक पहुंचें।",
+      "englishChecksum": "29789f4a9c44a6a48b42e082c1629049",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.hero-section.title": {
+      "value": "यूनिवर्सल इकोसिस्टम को एक्सप्लोर करें",
+      "englishChecksum": "fe68c572bef7a7bcecc2316924ceb555",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "pages.ecosystem.hero-section.description": {
+      "value": "Push Chain के Donut Testnet पर universal अनुभवों के अगले युग का निर्माण करने वाले apps, partners, और early adopters को discover करें।",
+      "englishChecksum": "70f52e04c9429af0acf89f79a06f1df1",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain Testnet ‘Donut’ अब लाइव है!",
+      "englishChecksum": "0681d4c70dc98e29a4827b403cef19c5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.learn-more-text": {
+      "value": "यूनिवर्सल ऐप्स एक्सप्लोर करें",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "यूनिवर्सल ऐप्स एक्सप्लोर करें",
+      "englishChecksum": "7ebfeae7a4f4719fcb0bc1ed8ba22c75",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.dismiss-button-title": {
+      "value": "घोषणा खारिज करें",
+      "englishChecksum": "cd8059d4a0d2dfe57e5c3460f468f71a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.dismiss-button-aria-label": {
+      "value": "घोषणा बार बंद करें",
+      "englishChecksum": "412ee7c423ec52309e48e8f5f3bcc1b9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.container-aria-label": {
+      "value": "साइट घोषणा",
+      "englishChecksum": "0d6c179aa38c57ebb412d8f668eec2fc",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "notifications.info-bar.star-icon-alt": {
+      "value": "घोषणा स्टार आइकन",
+      "englishChecksum": "5c9daef6a28ede1a8faeb3ba3335629b",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.meta.logo-aria-label": {
+      "value": "Push Chain - होमपेज पर नेविगेट करें",
+      "englishChecksum": "63893ae4c4e6e1ba5d7decf18dbf33bd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.meta.language-icon-alt": {
+      "value": "भाषा चयन आइकन",
+      "englishChecksum": "ae19220a4e348cf0b4bc2fa889fa336d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.meta.hamburger-menu-alt": {
+      "value": "नेविगेशन मेनू खोलें",
+      "englishChecksum": "0d9b5d8f08a3bac6b985456015616779",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.meta.testnet-badge-alt": {
+      "value": "Push Chain टेस्टनेट डोनट - टेस्टनेट की स्थिति देखें",
+      "englishChecksum": "ea6cea5b9c6ee6b58bd86c276f700d01",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.logo.imagealt": {
+      "value": "Push Chain लोगो की छवि",
+      "englishChecksum": "8585049215d30970a86f7de48e6e7533",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.logo.imagetitle": {
+      "value": "Push Chain Logo",
+      "englishChecksum": "d51524e28b04df62f28eb9db86eed476",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.logo.ctatitle": {
+      "value": "Push Chain होमपेज पर नेविगेट करें",
+      "englishChecksum": "7f510f0324630fba8afdd9ba2af8e1a9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.title": {
+      "value": "टेस्टनेट",
+      "englishChecksum": "620d7ace673e1ed914fd263c26d67a0f",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.aria-label": {
+      "value": "टेस्टनेट सेक्शन",
+      "englishChecksum": "7fedd86e4c329774f062b2cda3954184",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link1.text": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link1.subtext": {
+      "value": "ब्लॉकचेन के लिए ब्लॉक एक्सप्लोरर",
+      "englishChecksum": "5a08122abf556f4a05f27f09b24c959b",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link1.title": {
+      "value": "पुश स्कैन पर पुश चेन टेस्टनेट लेनदेन और ब्लॉक देखें",
+      "englishChecksum": "564e23768d6c6cc5c41112c51813893c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link2.text": {
+      "value": "फ़ॉसेट",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link2.subtext": {
+      "value": "टेस्टनेट टोकन प्राप्त करें",
+      "englishChecksum": "a8a3784c29d4eea8fa812cbf02953422",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link2.title": {
+      "value": "Push Chain डेवलपमेंट के लिए मुफ्त टेस्टनेट टोकन प्राप्त करें",
+      "englishChecksum": "6a34a93d935cf2460955d1eef57d8a9e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link3.text": {
+      "value": "इकोसिस्टम",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link3.subtext": {
+      "value": "Push Chain पर बने apps देखें",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.testnet.link3.title": {
+      "value": "Push Chain पर बने ऐप्स देखें",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.title": {
+      "value": "डेवलपर्स",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.aria-label": {
+      "value": "डेवलपर्स सेक्शन",
+      "englishChecksum": "1a4bcf84369651268c763c567a2241e8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link1.text": {
+      "value": "शुरू करें",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link1.subtext": {
+      "value": "Push Chain पर निर्माण का परिचय",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link1.title": {
+      "value": "Push Chain पर युनिवर्सल ऐप्स बनाना शुरू करें - डेवलपर दस्तावेज़",
+      "englishChecksum": "9cd7373a2c0cfee16a4f74e1fcba4c3f",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link2.text": {
+      "value": "शुरू करने के लिए",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link2.subtext": {
+      "value": "सेकंड में डेवलपर एनवायरनमेंट सेट करें",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link2.title": {
+      "value": "शुरू करने के लिए त्वरित गाइड - तुरंत पुश चेन डेवलपमेंट वातावरण सेट करें",
+      "englishChecksum": "ba04f436d4b03c75dd4602898ef0e89d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link6.text": {
+      "value": "इकोसिस्टम",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link6.subtext": {
+      "value": "Push Chain पर बने ऐप्स देखें",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link6.title": {
+      "value": "Push Chain पर बने ऐप्स देखें",
+      "englishChecksum": "e80930d91d0edb0c03dc7a15f30b16a9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link3.text": {
+      "value": "ट्यूटोरियल",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link3.subtext": {
+      "value": "Push के साथ बनाने के लिए चरण-दर-चरण गाइड",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link3.title": {
+      "value": "Push Chain पर हाथों से किए जाने वाले ट्यूटोरियल के साथ सीखें - पहला universal app बनाएं",
+      "englishChecksum": "18f63276aa1ba0784e1949caab2d46b3",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link4.subtext": {
+      "value": "कोर कोड और ओपन-सोर्स टूल देखें",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link4.title": {
+      "value": "Push Chain पर सोर्स कोड और डेवलपमेंट टूल GitHub पर एक्सप्लोर करें",
+      "englishChecksum": "db0c0b6be4baad84000fc2ccd6d5acc5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link5.text": {
+      "value": "डेवलपर Discord",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link5.subtext": {
+      "value": "डेवलपर कम्युनिटी से जुड़ें",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.developers.link5.title": {
+      "value": "Push Chain डेवलपर समुदाय में समर्थन और सहयोग के लिए Discord में शामिल हों",
+      "englishChecksum": "c8282e7543830164856b5e85823cafa4",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.title": {
+      "value": "समुदाय",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.aria-label": {
+      "value": "समुदाय अनुभाग",
+      "englishChecksum": "4dc0bb44ddc968a192d6f93490962fe2",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link7.text": {
+      "value": "इकोसिस्टम",
+      "englishChecksum": "2f55ef6ba1fa0776ae4caafca728866e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link7.subtext": {
+      "value": "Push Chain पर बने apps को explore करें",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link7.title": {
+      "value": "Push Chain पर बने ऐप्स एक्सप्लोर करें",
+      "englishChecksum": "5811469059ac991ae9cb0ccebc196c0a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link1.text": {
+      "value": "नॉलेज बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link1.subtext": {
+      "value": "फीचर्स पर गहरी जानकारी पाएं",
+      "englishChecksum": "281dcdaecfa7c9cdd4841358e6ee8b30",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link1.title": {
+      "value": "Push Chain की विस्तृत दस्तावेज़ और सुविधा गाइड देखें",
+      "englishChecksum": "df25b52080d036855b84fab2901477c3",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link2.text": {
+      "value": "LFPush",
+      "englishChecksum": "6b8079d546c919f440c7a6bc201b3d85",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link2.subtext": {
+      "value": "Push समुदाय के खास ट्वीट #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link2.title": {
+      "value": "Push समुदाय के प्रसिद्ध ट्वीट #LFPush",
+      "englishChecksum": "c1d74b430ecf8172a6d7b5f691660b44",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link3.text": {
+      "value": "टोकनॉमिक्स",
+      "englishChecksum": "ace5383af81a2e8353e180ac3f5bbc90",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link3.subtext": {
+      "value": "नेटिव टोकन जो पुश चेन पर सब कुछ चलाता है",
+      "englishChecksum": "9dfbae7f9f30c6d90ca09e6f0fb06b09",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link3.title": {
+      "value": "Push Chain टोकनomics और $PC टोकन उपयोगिता के बारे में जानें",
+      "englishChecksum": "180ece5292c4ac47d3bd251621cb0e3e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link4.text": {
+      "value": "X/Twitter",
+      "englishChecksum": "f64b3315deacb9e466d156cd803dcf6a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link4.subtext": {
+      "value": "अपडेट और इकोसिस्टम की खबरें फॉलो करें",
+      "englishChecksum": "142c42fbbeeffa1fae846c61ac974891",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link4.title": {
+      "value": "नवीनतम अपडेट और घोषणाओं के लिए X (Twitter) पर Push Chain को फॉलो करें",
+      "englishChecksum": "da4cff94f96670c68a4c6b2c5ff9d4c7",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link5.text": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link5.subtext": {
+      "value": "समुदाय के साथ चैट करें, बनाएं और वाइब करें",
+      "englishChecksum": "1605521dea8b82f11e50b5477f70d2f5",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link5.title": {
+      "value": "Push Chain समुदाय में चर्चाओं और सहायता के लिए Discord पर शामिल हों",
+      "englishChecksum": "b59dae260a62f983fbef58ba012d66e8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link6.text": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link6.subtext": {
+      "value": "समुदाय में शामिल हों और अपडेट रहें",
+      "englishChecksum": "e334cdf22cefb6f9761fd9e028dddbb2",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.community.link6.title": {
+      "value": "Push Chain समुदाय से Telegram पर रीयल-टाइम अपडेट के लिए जुड़ें",
+      "englishChecksum": "be97c8c44524c9c013f0a98d5949e028",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.title": {
+      "value": "संसाधन",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.aria-label": {
+      "value": "संसाधन अनुभाग",
+      "englishChecksum": "d390e430d425ff71c19316a82a35310d",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link1.text": {
+      "value": "ब्लॉग",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link1.subtext": {
+      "value": "अपडेट, गहन विश्लेषण और डेवलपर कहानियां",
+      "englishChecksum": "894fe0ed69b622b01b96028aed574353",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link1.title": {
+      "value": "Push Chain ब्लॉग के नवीनतम अपडेट, तकनीकी गहराई और डेवलपर कहानियों को पढ़ने के लिए",
+      "englishChecksum": "aacf7687ca27f0ea51ea54aced94cdd6",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link2.text": {
+      "value": "लाइटपेपर",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link2.subtext": {
+      "value": "दृष्टि और तकनीक, सरल रूप में",
+      "englishChecksum": "60bf9f10efd131462bdccb11b76ac9f9",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link2.title": {
+      "value": "Push Chain Litepaper पढ़ें - सरल दृष्टि और तकनीकी अवलोकन",
+      "englishChecksum": "2bffe0ddae486f2f7b2f1ee44b1bc17a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link3.text": {
+      "value": "अक्सर पूछे जाने वाले प्रश्न",
+      "englishChecksum": "e2c071f0eb807b08c405cf69047e3fe7",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link3.subtext": {
+      "value": "सामान्य प्रश्नों के त्वरित उत्तर",
+      "englishChecksum": "f7d51e9d7bd3370e2929d15c3d678fd3",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.resources.link3.title": {
+      "value": "Push Chain के बारे में अक्सर पूछे जाने वाले प्रश्न देखें",
+      "englishChecksum": "c7b5ca35693342e84b6a2bab24c375db",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.language.title": {
+      "value": "भाषा",
+      "englishChecksum": "9a5e47e5d049ebe6b58467336720ac15",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.language.aria-label": {
+      "value": "भाषा चयन ड्रॉपडाउन",
+      "englishChecksum": "907a650b1ffbe812cefc4dda4daaf306",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.app-button.text": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.app-button.title": {
+      "value": "Push Portal एक्सेस करें - डेवलपर, उपयोगकर्ता या वैलिडेटर के रूप में पॉइंट कमाएं",
+      "englishChecksum": "858c2bb21efab2e7d676220e9a8299df",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.title": {
+      "value": "एक्सप्लोर करें",
+      "englishChecksum": "38d96b84538f99b5e4b6924ba5b95618",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.aria-label": {
+      "value": "एक्सप्लोर सेक्शन",
+      "englishChecksum": "f31ed6ab73b37416ada9df7c8722ad50",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link1.text": {
+      "value": "शुरू करें",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link1.subtext": {
+      "value": "Push Chain पर निर्माण का परिचय",
+      "englishChecksum": "56a686eabec05c13926a11a26a4bb28e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link1.title": {
+      "value": "अभी बनाना शुरू करें",
+      "englishChecksum": "fd750b6a81c364f6757a0675ad962472",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link2.text": {
+      "value": "शुरुआत कैसे करें",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link2.subtext": {
+      "value": "कुछ ही सेकंड में देव एनवायरमेंट सेटअप करें",
+      "englishChecksum": "9d35856dd24e1ba6461e8b768049d9c8",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link2.title": {
+      "value": "शुरुआत कैसे करें",
+      "englishChecksum": "c3f46c32b19348ade7ff76152e21031c",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link3.text": {
+      "value": "ट्यूटोरियल",
+      "englishChecksum": "fd07b0053ecdea069bc41f172131ccbd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link3.subtext": {
+      "value": "Push के साथ बनाने के लिए चरण-दर-चरण गाइड",
+      "englishChecksum": "e6f6990eb9d5650084818e746d30b385",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link3.title": {
+      "value": "ट्यूटोरियल से सीखें",
+      "englishChecksum": "c3d5ba0195fe8331c744bb7ab7e8b4b0",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link4.text": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link4.subtext": {
+      "value": "कोर कोड और ओपन-सोर्स टूल देखें",
+      "englishChecksum": "41f86244378aea9c2effb18bdb7f9b4e",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link4.title": {
+      "value": "Push Chain एक्सप्लोर करें",
+      "englishChecksum": "248c3d5339f141cf6b757e0599fb45eb",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link5.text": {
+      "value": "डेवलपर डिस्कॉर्ड",
+      "englishChecksum": "0f806ae07a4d844db9221d9c0638b60a",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link5.subtext": {
+      "value": "डेवलपर समुदाय से जुड़ें",
+      "englishChecksum": "654ab6b704ce49f3e5b34b7167f497e2",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link5.title": {
+      "value": "Discord से जुड़ें",
+      "englishChecksum": "c3e83e46051a8285bdecea1338300499",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link6.text": {
+      "value": "उदाहरण देखें",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link6.subtext": {
+      "value": "उदाहरण देखें",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "header.explore.link6.title": {
+      "value": "उदाहरण देखें",
+      "englishChecksum": "1f0f46087a1613cf870a171373a73871",
+      "lastUpdated": "2025-11-14T19:27:06.117Z"
+    },
+    "components.short-contact-us-snippet.answer-aria-label": {
+      "englishChecksum": "84c913b7410cbc873ad0018ac37fb40e",
+      "lastUpdated": "2025-11-14T20:18:03.624Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "बिल्ड करें और रन करें एप्लिकेशन यूनिवर्सल एक्जीक्यूशन लेयर पर स्पष्ट गाइड्स एंड எग्जैम्पलस के साथ।",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2025-11-14T20:18:25.418Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "टेस्टनेट डॉक्स लॉन्च में {count} सेकंड बाकी हैं",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2025-11-14T20:18:07.552Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "पीश चेन एकीकृत औज़ार के एक समान उपकरण को प्रदान करता है ताकिatsächlich विश्वसियों के लिए ऐप्स बनाए जा सकें।",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2025-11-14T20:18:10.761Z"
+    },
+    "pages.privacymobile.seo.twitter-description": {
+      "value": "योर डेटा एंड चॉइसेज इन पुश मोबाइल ऐप्स",
+      "englishChecksum": "eaa1cdd6da251c8602628f9804934510",
+      "lastUpdated": "2025-11-14T20:18:14.409Z"
+    },
+    "components.cookie-banner.message": {
+      "value": "हम कोकीज़ का उपयोग अपनी अनुभव को व्यक्तिगत बनाने के लिए करते हैं। हमारे बारे में अधिक जानें हमारे",
+      "englishChecksum": "371ae79da8a6e6e86e8fb94a8731eadb",
+      "lastUpdated": "2025-11-14T20:18:16.154Z"
+    },
+    "components.blog.footer-item.about-description": {
+      "value": "Push Chain है प्रथम सत्य एकल-उमगी वरीयता ब्लॉकचेन जिसका उद्देश्य सभी शृंखलाओं के बीच फरकनुमा करना खत्म करना है। यह विकासकर्ताओं को डिप्लॉय करना सक्षम करता है, एक बार, और उपयोगकर्ता किसी भी शृंखला पर उपलब्ध हो जाते हैं, चाहे EVM या Non-EVM (उदाहरणार्थ एथेरियम, सोलाना, बिटकोइन सहित)। यह 100% EVM संगत, प्रूफ ऑफ स्टेक (PoS) श्रृंखला है जो उपयोगकर्ताओं को Push Chain पर डिप्लॉय किये गये ऐप्स से किसी भी शृंखला पर उसी तरह इंटरेक्ट करना सक्षम करती है जैसे अपने आपकी शृंखला पर होती है।",
+      "englishChecksum": "5a9bdce5b5220e99b2cd9d0d3ed530a7",
+      "lastUpdated": "2025-11-14T20:18:32.213Z"
+    }
+  }
+}
