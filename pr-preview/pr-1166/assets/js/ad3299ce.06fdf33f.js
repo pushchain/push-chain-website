@@ -224,7 +224,7 @@ function _createMdxContent(props) {
           style: {
             color: "var(--ifm-color-primary)"
           },
-          children: "20M PC"
+          children: "20,000,000 PC"
         }), " token bounty by delivering pure signal."]
       })
     }), "\n", (0,jsx_runtime.jsx)(_components.admonition, {
