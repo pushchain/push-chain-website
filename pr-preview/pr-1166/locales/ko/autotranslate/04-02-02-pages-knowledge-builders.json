@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "case-studies": {
+                "title": "사례 연구",
+                "items": {
+                  "hodl-fun": {
+                    "title": "Hodl.fun"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

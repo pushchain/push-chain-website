@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "Seja o primeiro a ganhar pontos, multiplicadores e recompensas perpétuas.",
+      "button-text": "Aplicar Agora",
+      "button-title": "Garanta seu acesso antecipado AGORA",
+      "button-aria-label": "Obtenha acesso pré-lançamento AGORA. Você pode conferir aqui",
+      "image-alt": "Acesso antecipado ao Push Chain",
+      "close-button-title": "Fechar notificação",
+      "close-button-aria-label": "Dismiss Push Chain toast notification",
+      "container-aria-label": "Notificação toast do Push Chain"
+    }
+  }
+}
