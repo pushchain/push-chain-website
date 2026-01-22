@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "Be the first to score points, multipliers, and perpetual rewards.",
+      "button-text": "Apply Now",
+      "button-title": "Get Pre-launch Access NOW",
+      "button-aria-label": "Get Pre-launch Access NOW. You can check it out here",
+      "image-alt": "Push Chain Pre-Launch Access",
+      "close-button-title": "Close toast notification",
+      "close-button-aria-label": "Dismiss Push Chain toast notification",
+      "container-aria-label": "Push Chain toast notification"
+    }
+  }
+}

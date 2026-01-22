@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - Blood Pact for Creators",
+      "title": "Disciple\nGuidelines",
+      "title-aria-label": "Guidelines and requirements for Push Cult Disciples",
+      "discord-link-text": "Join the Cult on Discord",
+      "discord-link-title": "Join Push Chain Discord #push-cult channel",
+      "discord-link-aria-label": "Open Discord community in new tab",
+      "explore-more-text": "See Complete Pact",
+      "explore-more-title": "Read the complete Push Cult manifesto and program details",
+      "explore-more-aria-label": "Navigate to complete Push Cult blog post",
+      "accordion-aria-label": "Push Cult guidelines and requirements",
+      "answer-aria-label": "Answer to the question - ",
+      "qnas": {
+        "qna1": {
+          "question": "What is Push Cult?",
+          "answer": "<1>Push Cult is a curated, invite-only program for <2>50 elite creators</2> who deliver pure signal, not spam.</1><1>We reward visionaries who guide their flock with truth, through threads, videos, or articles that genuinely connect with audiences.</1><1>Selected Disciples split a <2>20,000,000 PC bounty</2> based on measurable impact.</1>",
+          "discord-url-title": "Join the Push Chain Discord.",
+          "support-url-title": "Learn more about the program."
+        },
+        "qna2": {
+          "question": "Who should apply?",
+          "answer": "<1><2>Creators who:</2> already produce guides, threads, or explainers with an engaged audience (not necessarily huge).</1><1><2>Care about:</2> shipping clarity over hype, building legacy over quick flips.</1><1><2>Want to be early:</2> evangelize Push Chain's Universal Execution era and onboard believers to Season 3.</1><1>If you seek a quick flip, walk away. If you seek to build a legacy, <3>step forward</3>.</1>",
+          "scan-url-title": "Apply to join Push Cult",
+          "support-url-title": "Read the complete manifesto."
+        },
+        "qna3": {
+          "question": "How are Disciples selected and evaluated?",
+          "answer": "<1>We cap at <2>50 Disciples</2> to ensure focus. Participation is renewed weekly based on your <2>Devotion Score</2>.</1><1><2>Devotion Score</2> combines: Signal (reach), Gathering (new believers onboarded), Faith (retention), and Craft (manual review).</1><1>If you fall below threshold, you rotate out. Great creators compete on quality, not volume.</1>",
+          "faucet-url-title": "Learn about evaluation criteria.",
+          "discord-url-title": "Ask questions on Discord."
+        },
+        "qna4": {
+          "question": "What do Disciples actually do?",
+          "answer": "<1>Create content in <2>your format</2>. It can be threads, videos, articles or whatever suits your vibe. Your mandate: explain Push Chain concepts, guide the Flock through Testnet, onboard believers to Season 3.</1><1>We provide: weekly missions, themes, and alpha before the public sees it. You shape the narrative.</1><1>Spam burns to ash. Only the truth survives.</1>",
+          "support-url-title": "See content examples.",
+          "discord-url-title": "Join the Discord."
+        },
+        "qna5": {
+          "question": "What are the rewards?",
+          "answer": "<1><2>Top performers receive:</2> Guaranteed allocation from the 20M PC pool, plus an Ultra Rare Shiny Pass (mainnet NFT).</1><1><2>Shiny Pass grants:</2> revenue share from chain fees, validator rewards participation, staking multipliers, and VIP ecosystem perks.</1><1>Rank dictates the harvest. There are no participation trophies.</1>",
+          "docs-url-title": "Learn about rewards.",
+          "kb-url-title": "Read the tokenomics."
+        },
+        "qna6": {
+          "question": "How do I join?",
+          "answer": "<1>The gates are open, prove your devotion, <3>apply now</3>.</1><1>Registration gives you access to program details, evaluation mechanics, and initial onboarding steps.</1><1>From there, <2>performance determines everything</2>.</1>",
+          "contact-url-title": "Apply to Push Cult",
+          "github-url-title": "Read the complete pact."
+        }
+      }
+    }
+  }
+}
