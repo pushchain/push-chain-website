@@ -24,8 +24,8 @@ var ThemeClassNames = __webpack_require__(117559);
 var docsUtils = __webpack_require__(326972);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/plugin-content-docs/lib/client/docsSidebar.js
 var docsSidebar = __webpack_require__(860609);
-// EXTERNAL MODULE: ./src/segments/Footer.tsx + 3 modules
-var Footer = __webpack_require__(941398);
+// EXTERNAL MODULE: ./src/segments/Footer.tsx + 2 modules
+var Footer = __webpack_require__(738668);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Translate.js + 1 modules
 var Translate = __webpack_require__(721312);
 // EXTERNAL MODULE: ./node_modules/@docusaurus/theme-common/lib/utils/scrollUtils.js
@@ -283,7 +283,7 @@ return/*#__PURE__*/(0,jsx_runtime.jsx)(Content/* default */.A,{});}const{docElem
 /* harmony import */ var _docusaurus_Translate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(721312);
 /* harmony import */ var _theme_Heading__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(751107);
 /* harmony import */ var _site_src_hooks_useSiteBaseUrl__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(811494);
-/* harmony import */ var _site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(941398);
+/* harmony import */ var _site_src_segments_Footer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(738668);
 /* harmony import */ var _site_static_assets_website_chain_ChainLogoDark_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(360622);
 /* harmony import */ var _css_SharedStyling__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(113490);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(474848);

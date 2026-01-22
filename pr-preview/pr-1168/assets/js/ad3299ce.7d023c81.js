@@ -377,7 +377,7 @@ function _createMdxContent(props) {
           children: "Guaranteed Allocation"
         }), " from the 20M Pool."]
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
-        children: ["Ultra Rare Shiny Pass, a mainnet NFT that grants:", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
+        children: ["Ultra Rare Shiny Pass, a mainnet pass that grants:", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
           children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
             children: "Revenue share from chain fees"
           }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
