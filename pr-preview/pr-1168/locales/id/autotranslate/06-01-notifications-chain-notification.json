@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "Jadilah yang pertama mendapatkan poin, pengganda, dan hadiah abadi.",
+      "button-text": "Ajukan Sekarang",
+      "button-title": "Dapatkan Akses Pra-Peluncuran SEKARANG",
+      "button-aria-label": "Dapatkan Akses Pra-Peluncuran SEKARANG. Anda dapat memeriksanya di sini",
+      "image-alt": "Akses Pra-Peluncuran Push Chain",
+      "close-button-title": "Tutup notifikasi",
+      "close-button-aria-label": "Tutup notifikasi toast Push Chain",
+      "container-aria-label": "Notifikasi toast Push Chain"
+    }
+  }
+}
