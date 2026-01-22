@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "포인트, 멀티플라이어, 그리고 영구적인 보상을 가장 먼저 획득하세요.",
+      "button-text": "지금 신청",
+      "button-title": "지금 바로 사전 출시 액세스 받기",
+      "button-aria-label": "지금 바로 사전 출시 액세스를 받으세요. 여기서 확인해 보세요",
+      "image-alt": "Push Chain 사전 출시 액세스",
+      "close-button-title": "토스트 알림 닫기",
+      "close-button-aria-label": "Push Chain 토스트 알림 닫기",
+      "container-aria-label": "Push Chain 토스트 알림"
+    }
+  }
+}

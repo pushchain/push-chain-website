@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "ポイント、マルチプライヤー、継続的な報酬を最初に獲得しましょう。",
+      "button-text": "今すぐ申し込む",
+      "button-title": "今すぐ事前アクセスを取得",
+      "button-aria-label": "今すぐ事前アクセスを取得. こちらでチェックできます",
+      "image-alt": "Push Chain 事前ローンチアクセス",
+      "close-button-title": "トースト通知を閉じる",
+      "close-button-aria-label": "Push Chain トースト通知を閉じる",
+      "container-aria-label": "Push Chain トースト通知"
+    }
+  }
+}

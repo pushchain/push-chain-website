@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "كن أول من يحصل على نقاط، ومضاعفات، ومكافآت دائمة.",
+      "button-text": "طبّق الآن",
+      "button-title": "احصل على وصول ما قبل الإطلاق الآن",
+      "button-aria-label": "احصل على وصول مبكر الآن. يمكنك التحقق منه هنا",
+      "image-alt": "وصول مبكر إلى Push Chain",
+      "close-button-title": "إغلاق الإشعار",
+      "close-button-aria-label": "إغلاق إشعار توست Push Chain",
+      "container-aria-label": "Push Chain toast notification"
+    }
+  }
+}
