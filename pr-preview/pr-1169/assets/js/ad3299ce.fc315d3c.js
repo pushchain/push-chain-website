@@ -285,7 +285,7 @@ function _createMdxContent(props) {
       id: "why-the-cult-exists",
       children: "Why the Cult Exists"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
-      children: "We are proving that 50 Disciples can outshine an army of mercenaries. We do not pay for empty reach. We reward the Truth, you are fit if you can deliver:"
+      children: "We are proving that 50 Disciples can outshine an army of mercenaries. We do not pay for empty reach. We reward the Truth, You're a fit, if you can deliver::"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
         children: "Real usage."

@@ -1663,11 +1663,11 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Be the first to score points, multipliers, and perpetual rewards.",
+      "description": "50 top creators get a bounty of 20M tokens. Gather your flock. Join Push Cult!",
       "button-text": "Apply Now",
-      "button-title": "Get Pre-launch Access NOW",
-      "button-aria-label": "Get Pre-launch Access NOW. You can check it out here",
-      "image-alt": "Push Chain Pre-Launch Access",
+      "button-title": "Join Push Cult!",
+      "button-aria-label": "Join Push Cult!. You can check it out here",
+      "image-alt": "Join Push Cult!",
       "close-button-title": "Close toast notification",
       "close-button-aria-label": "Dismiss Push Chain toast notification",
       "container-aria-label": "Push Chain toast notification"
@@ -1681,7 +1681,7 @@
       "container-aria-label": "Push Chain rewards notification"
     },
     "info-bar": {
-      "title": "Apply for Season 3 Pre-Launch Access Eligibility. Open for S1 & S2 participants.",
+      "title": "Gather your flock for a curated incentivised creator program. Join Push Cult!",
       "learn-more-text": "Apply Now",
       "learn-more-title": "Apply Now",
       "dismiss-button-title": "Dismiss announcement",
