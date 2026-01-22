@@ -1,0 +1,14 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "Hãy là người đầu tiên kiếm điểm, nhân đôi điểm thưởng và phần thưởng vĩnh viễn.",
+      "button-text": "Ứng dụng ngay",
+      "button-title": "Nhận quyền truy cập sớm NGAY",
+      "button-aria-label": "Nhận quyền truy cập sớm NGAY BÂY GIỜ. Bạn có thể xem thêm tại đây",
+      "image-alt": "Truy cập sớm Push Chain",
+      "close-button-title": "Đóng thông báo",
+      "close-button-aria-label": "Đóng thông báo Push Chain",
+      "container-aria-label": "Thông báo toast của Push Chain"
+    }
+  }
+}
