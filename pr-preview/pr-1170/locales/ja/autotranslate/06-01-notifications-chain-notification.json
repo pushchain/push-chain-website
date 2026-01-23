@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "トップ50のクリエイターが2000万トークンの報酬を獲得。仲間を集めよう。Push Cultに参加しよう！",
+      "button-text": "今すぐ応募",
+      "button-title": "Push Cultに参加！",
+      "button-aria-label": "Push Cultに参加！こちらからご確認いただけます",
+      "image-alt": "Push Cultに参加！",
+      "close-button-title": "通知を閉じる",
+      "close-button-aria-label": "Push Chain通知を閉じる",
+      "container-aria-label": "Push Chain通知"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "title": "",
+      "description": "أفضل 50 منشئ محتوى سيحصلون على مكافأة قدرها 20 مليون توكن. اجمع أتباعك. انضم إلى Push Cult!",
+      "button-text": "قدّم الآن",
+      "button-title": "انضم إلى Push Cult!",
+      "button-aria-label": "انضم إلى Push Cult!. يمكنك الاطلاع عليه هنا",
+      "image-alt": "انضم إلى Push Cult!",
+      "close-button-title": "إغلاق الإشعار",
+      "close-button-aria-label": "إغلاق إشعار Push Chain",
+      "container-aria-label": "إشعار Push Chain"
+    }
+  }
+}

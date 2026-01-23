@@ -1,0 +1,46 @@
+{
+  "components": {
+    "short-faq-snippet": {
+      "section-aria-label": "Foire aux questions fréquemment posées sur Push Chain - Blockchain Universel",
+      "title": "Foire aux questions\nfréquemment\nposées",
+      "title-aria-label": "Questions fréquemment posées sur Push Chain",
+      "discord-link-text": "Posez votre question sur Discord",
+      "discord-link-title": "Rejoignez la communauté Push Chain sur Discord pour obtenir de l'aide et poser vos questions",
+      "discord-link-aria-label": "Ouvrir la communauté Discord dans un nouvel onglet",
+      "explore-more-text": "En savoir plus sur les FAQ",
+      "explore-more-title": "Consultez la documentation complète de la FAQ de Push Chain et les guides pour développeurs",
+      "explore-more-aria-label": "Accéder à la page complète des FAQ de Push Chain",
+      "accordion-aria-label": "Liste des questions fréquemment posées sur Push Chain",
+      "answer-aria-label": "Réponse à la question - ",
+      "qnas": {
+        "qna1": {
+          "question": "Qu'est-ce que Push Chain ?",
+          "answer": "<1>Push Chain est une blockchain à état partagé qui <2>élimine la fragmentation et rend les applications universelles</2>.</1><1>Déployez une seule fois sur Push. Les utilisateurs de n'importe quelle chaîne — EVM ou non-EVM — utilisent votre application avec leurs portefeuilles et tokens existants ; les frais sont gérés en arrière-plan.</1>"
+        },
+        "qna2": {
+          "question": "Comment ça marche ? (Expliqué simplement)",
+          "answer": "<1>Utilisez le wallet que vous avez déjà — Push gère les aspects cross-chain en arrière-plan.</1><1>1. <2>Commencez où vous voulez.</2> Utilisez n'importe quel wallet sur n'importe quelle chaîne — pas besoin de changer de réseau.</1><1>2. <2>Signez une seule fois.</2> Payez avec un token que vous possédez déjà ; nous mettons de côté les frais sur votre chaîne d'origine.</1><1>3. <2>Nous assurons le routage.</2> Un compte lié sur Push (toujours le vôtre) transfère votre appel à l'app — non-custodial.</1><1>4. <2>Vous restez vous-même.</2> Nous associons votre wallet d'origine à votre compte lié pour que les actions soient correctement vérifiées et attribuées à vous sur Push.</1><1>5. <2>C'est rapide.</2> L'app s'exécute sur Push ; les frais sont gérés en coulisses. Pas de bridges, pas de nouveau wallet.</1><1>C'est ainsi que les utilisateurs sur n'importe quelle chaîne peuvent utiliser la même app déployée sur Push Chain — rendant les apps véritablement universelles.</1>"
+        },
+        "qna3": {
+          "question": "Ai-je besoin d'un portefeuille différent ou d'un Token de gas différent ?",
+          "answer": "<1><2>Non.</2></1><1><2>Gardez votre ウォレット.</2> Utilisez le ウォレット que vous utilisez déjà – pas besoin de nouveau ウォレット ni de compte.</1><1><2>Payez avec ce que vous avez.</2> Les frais peuvent être payés avec les tokens que vous possédez déjà sur votre chaîne d'origine ; nous gérons la conversion en arrière-plan.</1><1><2>Pas de changement de réseau.</2> Restez sur votre chaîne d'origine – pas besoin de bridge juste pour obtenir un token de gas.</1><1><2>Non custodial.</2> Vous signez chaque action ; Push ne détient jamais vos clés.</1><1><2>Sous le capot.</2> Le réseau règle automatiquement les frais en $PC – vous n'avez pas besoin de le gérer.</1>"
+        },
+        "qna4": {
+          "question": "En quoi cela diffère-t-il des bridges ou des couches de messagerie ?",
+          "answer": "<1><2>Réponse courte :</2> Push est l'endroit où votre app s'exécute. Les bridges/messageries ne font que déplacer des Tokens ou des messages entre les chaînes, ce qui complique tout pour les utilisateurs et les développeurs.</1><1><2>Un seul point d'entrée vs de nombreux clones.</2> Avec les bridges/messageries, vous déployez par chaîne et synchronisez via des messages. Sur Push, vous déployez une seule fois ; tout le monde utilise le même contrat et le même état partagé.</1><1><2>Pas d'actifs enveloppés ou de bridging obligatoire.</2> Les utilisateurs restent sur leur chaîne d'origine et paient avec ce qu'ils possèdent déjà ; nous gérons le routage et la conversion des frais en arrière-plan.</1><1><2>Identité et vérification unifiées.</2> Nous acceptons les signatures de n'importe quel wallet/chaîne et les attribuons au même utilisateur sur Push — non-custodial.</1><1><2>Moins de pièces mobiles.</2> Pas de danse d'approbation cross-chain, pas de chasse aux gas-tokens, pas de contrats de collage à synchroniser.</1><1><2>Les bridges introduisent de la complexité. L'interopérabilité native à la chaîne la résout.</2> Les bridges nécessitent un effort d'ingénierie complexe, du temps, un coût d'audit et des infrastructures supplémentaires. L'interopérabilité native à la chaîne fonctionne simplement car votre app hérite nativement de celle-ci.</1><1>Résultat : des apps plus simples, une seule source de vérité et une UX qui donne l'impression d'une seule chaîne — même lorsque les utilisateurs ne le sont pas.</1>"
+        },
+        "qna5": {
+          "question": "Est-ce que c'est uniquement compatible avec l'EVM ? Quelles chaînes sont prises en charge ?",
+          "answer": "<1><2>Non, Push prend en charge les chaînes EVM et non-EVM.</2> Bien qu'elle soit EVM-first pour le déploiement, les utilisateurs de n'importe quelle chaîne (y compris les chaînes non-EVM) peuvent utiliser votre app comme s'ils l'utilisaient nativement.</1>\n<1><2>Déployez une fois. Interop partout.</2> Écrivez et déployez des contrats EVM standard sur Push (Solidity/Vyper). Les outils restent les mêmes.</1>\n<1><2>Utilisateurs de n'importe quelle chaîne.</2> Ethereum et les principaux L2 EVM fonctionnent nativement. Les utilisateurs non-EVM (par exemple, Solana) signent avec leurs portefeuilles natifs ; nous vérifions et acheminons en arrière-plan — pas de changement de réseau.</1>\n<1><2>Pris en charge aujourd'hui.</2> Consultez la liste en direct des chaînes prises en charge → <3>Chaînes prises en charge</3>.</1><1><2>Extension de la couverture.</2> Nous ajoutons constamment plus de chaînes. Si vous souhaitez demander une chaîne, veuillez <4>nous contacter</4>.</1>",
+          "supported-urls-title": "Liste de toutes les chaînes supportées par Push Chain.",
+          "contact-url-title": "Contactez-nous pour ajouter de nouvelles chaînes."
+        },
+        "qna6": {
+          "question": "Quelle est sa vitesse et quels sont les frais ?",
+          "answer": "<1><2>Vitesse.</2> Conçu pour des confirmations d'environ 1 seconde sur Push Chain avec une finalité déterminée et une réponse rapide de l'interface utilisateur. Pour les transactions universelles, cela dépend de la chaîne, mais la plupart des blockchains modernes devraient prendre environ 2 à 3 secondes de confirmation ou moins. Consultez les statistiques en direct sur <3>🍩 Donut Testnet</3>.</1><1><2>Modèle de frais.</2> Vous voyez les frais dans le Token que vous choisissez de payer ; le réseau se règle en $PC en arrière-plan.</1><1><2>Coûts typiques.</2> Les frais typiques sont inférieurs à <2>$0.001</2> par transaction. Cependant, cela varie en fonction de la complexité du contrat, du prix du Token et de la charge du réseau. Vous obtenez un devis exact avant de signer.</1>",
+          "donut-testnet-title": "Découvrez les statistiques de Push Chain Donut Testnet."
+        }
+      }
+    }
+  }
+}

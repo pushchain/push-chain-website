@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Push 컬트에 참여하여 맹세를 하세요",
+      "expanded-title": "맹세",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "이메일 주소가 어떻게 되나요? 📧",
+            "subtitle": "연락처를 위해 필요합니다",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "X (Twitter) 계정 이름은 무엇인가요?",
+            "subtitle": "저희는 콘텐츠와 참여도를 확인하고 싶습니다",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "Telegram ID는 무엇인가요?",
+            "subtitle": "저희는 제자들과 직접 소통하기 위해 Telegram을 사용합니다",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "가장 좋은 콘텐츠를 공유하세요",
+            "subtitle": "가장 훌륭한 작업물을 보여주는 스레드, 비디오 또는 기사 링크를 연결해주세요.",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "여러분의 비전을 공유해주세요",
+            "subtitle": "콘텐츠, 타겟 청중, 그리고 참여하고 싶은 이유를 알려주세요.",
+            "placeholder": "Push Cult에 참여하고 싶은 콘텐츠, 대상, 이유 등을 알려주세요..."
+          }
+        },
+        "buttons": {
+          "next": "다음",
+          "previous": "이전",
+          "submit": "지원 신청",
+          "submitting": "제출 중..."
+        },
+        "validation": {
+          "email-required": "이메일 주소를 입력해주세요.",
+          "email-invalid": "유효한 이메일 주소를 입력해주세요.",
+          "x-username-required": "X 사용자 이름이 필요합니다.",
+          "telegram-id-required": "Telegram ID는 필수 입력 항목입니다.",
+          "best-content-required": "최고의 콘텐츠 링크가 필요합니다.",
+          "best-content-invalid": "유효한 URL을 입력해주세요.",
+          "message-required": "메시지를 입력해주세요",
+          "default": "이 필드를 입력해주세요"
+        },
+        "success": {
+          "title": "신청이 제출되었습니다!",
+          "message-before-link": "참여하세요",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "그리고 계속해서",
+          "channel-name": "#push-cult",
+          "message-end": "다음 단계를 위한 채널입니다.",
+          "button": "다른 신청서 제출"
+        },
+        "progress": {
+          "step-counter": "{{current}} / {{total}}"
+        }
+      }
+    }
+  }
+}

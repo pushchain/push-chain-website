@@ -1,0 +1,87 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "seo": {
+          "title": "Donut Testnet 🍩 – Push Chain's Universal Testnet",
+          "description": "Donut is Push Chain’s public testnet. Learn how to connect, build Universal Apps, use the faucet, and run a validator.",
+          "og-title": "Donut Testnet 🍩 - Push Chain's Universal Testnet",
+          "og-description": "Explore Donut, Push Chain’s first public testnet. Build once, deploy everywhere, and try Universal Apps live.",
+          "twitter-title": "Donut Testnet 🍩 - Start here",
+          "twitter-description": "Quick answers about Donut Testnet: supported chains, Universal Apps, faucet, and validator setup."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Donut Testnet 🍩",
+            "sections": {
+              "donut-overview": {
+                "items": {
+                  "intro": "**We spent a decade building chain silos. Now it's time to break them down.**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+
+                  "welcome-donut": "## Donut Testnet 🍩\n\nDonut is Push Chain’s public testnet for Universal Apps that work across chains. It is a major milestone in bringing universal apps to the masses.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+
+                  "what-is-push-chain": "## What is Push Chain?\n\nPush Chain is a shared-state, universal blockchain where **interoperability is a core chain primitive**, not an afterthought added through external protocols. **Deploy once**, and your app runs natively across connected chains.\n\n**Donut is where we battle-test that.**",
+
+                  "quick-links": "## Quick Links\n\n🧠 [Knowledge Base](/knowledge) — Learn the architecture and design.\n\n🌳 [Ecosystem Apps](/ecosystem) — Explore Universal Apps deployed on Push Chain.\n\n**🪩 Popular Apps to Try**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) — Experience the same app logic working seamlessly across chains.\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) — Test and visualize cross-chain interactions.\n\n📖 [Developer Docs](/docs) — Dive into documentation of Push Chain.\n\n💧 [Faucet](https://faucet.push.org) — Get testnet tokens.\n\n🔍 [Push Scan](https://donut.push.network/) — Track transactions and network data.",
+
+                  "why-push-exists": "## Why Push Chain Exists\n\nToday's Web3 ecosystem is heavily fragmented and overly complex.\n\nDevelopers redeploy smart contracts across multiple chains, users have to manually bridge tokens or switch wallets, and teams spend months maintaining chain-specific codebases and audits.\n\nEach new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.\n\n**Push Chain eliminates this.**",
+
+                  "how-reimagines-interoperability": "## Chain-native Interop\n\nMost interoperability today relies on external messaging layers or bridges. You manage multiple contracts, audits, and integrations across every chain.\n\n**Push Chain flips that model.** With Push, you:\n\n* **Deploy once, reach everywhere.** Your app instantly becomes available across chains, EVM or non-EVM.\n* **Drop redundant contracts and bridges.** Interoperability is native to the chain, so you focus on your app, not infrastructure.\n* **Stay fully EVM-compatible.** Use the same tooling, frameworks, and audits you already have.\n* **Serve users from any chain or wallet.** Users transact from their home chain using existing wallet. No manual bridging, no gas tokens, no network switching, no swapping, no setup.",
+
+                  "how-to-participate": "## How do I Participate in the Network?\n\n### Developers\n\nPush Chain gives developers the power to **build once and deploy everywhere.**\n\nEvery **app runs natively** across all chains without extra integrations or separate deployments.\n\nThe chain currently supports **Ethereum, Solana, Base, Arbitrum, and BNB Chain** on testnet, with more chains coming soon.\n\n👉 [Explore Developer Resources](#for-developers)\n\n### Users\n\nExperience a Web3 that just works: No switching chains, bridging tokens, or learning required.\n\nUse your existing wallet to access any app on Push Chain and pay directly in your native token.\n\n👉 [Explore User Resources](#for-users)\n\n### Validators\n\nPush Chain's network is powered by a decentralized set of validators.\n\n**Why run a testnet validator?**\n\nRunning a testnet validator helps strengthen the network and shape its mainnet readiness. It may also include perks and benefits that will come with Season 3 of [Push Points Program](https://portal.push.org).\n\nTag [@pushchain](https://x.com/PushChain) and share your experience with us on X.\n\n👉 [Explore Validator Resources](#for-validators)",
+
+                  "curated-reads": "## Curated Reads 👇"
+                }
+              },
+              "for-developers": {
+                "title": "For Developers",
+                "items": {
+                  "ecosystem-apps": {
+                    "title": "Ecosystem Apps"
+                  },
+                  "documentation": {
+                    "title": "Documentation"
+                  },
+                  "push-explorer": {
+                    "title": "Push Scan"
+                  },
+                  "push-faucet": {
+                    "title": "Push Faucet"
+                  },
+                  "grassroots-program": {
+                    "title": "Apply for Grassroots Program"
+                  }
+                }
+              },
+              "for-users": {
+                "title": "For Users",
+                "items": {
+                  "ecosystem-apps": {
+                    "title": "Ecosystem Apps"
+                  },
+                  "knowledge-base": {
+                    "title": "Knowledge Base"
+                  },
+                  "lets-push-yaps": {
+                    "title": "Let's Push Yaps"
+                  }
+                }
+              },
+              "for-validators": {
+                "title": "For Validators",
+                "items": {
+                  "push-validator": {
+                    "title": "Push Validator"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
