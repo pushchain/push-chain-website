@@ -5606,6 +5606,29 @@ article .markdown>ol>li>code {
   transform: rotate(180deg);
 }
 
+
+#ecosystem-list [class*="Grid"] {
+  display: grid;
+  grid-gap: max(16px, min(2.5vw, 24px));
+  gap: max(16px, min(2.5vw, 24px));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+#ecosystem-list [class*="Grid"] > a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: var(--ifm-color-white);
+  border: 1px solid rgba(171, 70, 248, 0.4);
+  height: 426px;
+  background: var(--ifm-color-neutral-1100);
+}
+
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
