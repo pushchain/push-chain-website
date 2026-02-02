@@ -1,0 +1,19 @@
+{
+  "pages": {
+    "knowledge": {
+      "faq": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "faq-overview": {
+                "items": {
+                  "what-is-push-chain": "### ¿Qué es Push Chain?\n\nPush Chain es una blockchain de Capa 1 de estado compartido, creada para eliminar la fragmentación entre todas las cadenas.\n\nAl permitir **transacciones fluidas desde cualquier cadena** (Ethereum, Solana, EVM o no EVM), permite a cualquier usuario interactuar con aplicaciones web3 sin tener que manejar múltiples wallets, Tokens o mecánicas de gas.\n\nEn resumen, Push Chain une L1s 🤝 L2s 🤝 L3s bajo una capa cohesiva.\n\n---"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

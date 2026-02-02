@@ -1,0 +1,13 @@
+{
+  "components": {
+    "typeform-support": {
+      "form": {
+        "steps": {
+          "contact": {
+            "email-placeholder": "Ingrese su dirección de correo electrónico"
+          }
+        }
+      }
+    }
+  }
+}

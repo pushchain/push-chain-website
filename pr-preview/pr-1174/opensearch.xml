@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Push Chain — Universal Blockchain for Apps</ShortName>
+  <Description>Search Push Chain — Universal Blockchain for Apps</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://pushchain.github.io/push-chain-website/pr-preview/pr-1174/assets/website/favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://pushchain.github.io/push-chain-website/pr-preview/pr-1174/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://pushchain.github.io/push-chain-website/pr-preview/pr-1174/opensearch.xml" />
+  <moz:SearchForm>https://pushchain.github.io/push-chain-website/pr-preview/pr-1174/</moz:SearchForm>
+</OpenSearchDescription>
