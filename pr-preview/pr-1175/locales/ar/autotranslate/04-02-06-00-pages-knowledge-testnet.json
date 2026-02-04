@@ -1,0 +1,34 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "seo": {
+          "title": "Donut Testnet 🍩 – Push Chain's Universal Testnet",
+          "description": "Donut is Push Chain’s public <testnet>. Learn how to connect, build Universal <app>s, use the faucet, and run a <validator>.",
+          "og-title": "Donut Testnet 🍩 - Push Chain's Universal testnet",
+          "og-description": "استكشف Donut، أول شبكة اختبار عامة لـ Push Chain. ابنِ مرة واحدة، وانشر في كل مكان، وجرّب التطبيقات الشاملة مباشرةً.",
+          "twitter-title": "Donut Testnet 🍩 - ابدأ من هنا",
+          "twitter-description": "إجابات سريعة حول Donut Testnet: السلاسل المدعومة، الـ Universal Apps، الصنبور، وإعداد الـ validator."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "قاعدة المعرفة"
+          },
+          "blocks": {
+            "title": "Donut Testnet 🍩",
+            "sections": {
+              "donut-overview": {
+                "items": {
+                  "intro": "**لقد أمضينا عقدًا من الزمان في بناء جدران بين سلاسل الكتل. حان الوقت الآن لهدمها.**\n\n<iframe src=\"https://www.youtube.com/embed/-cojsUIHcLE?rel=0\" title=\"Push Chain Public Testnet is Live\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
+                  "welcome-donut": "## Donut Testnet 🍩\n\nDonut هي شبكة اختبار عامة لـ Push Chain لتطبيقات عالمية تعمل عبر السلاسل. وهي علامة فارقة رئيسية في تقديم التطبيقات العالمية للجمهور.\n\n![Push Chain Roadmap](/assets/website/chain/knowledge/testnet/image-1.webp)",
+                  "what-is-push-chain": "## ما هي Push Chain؟\n\nPush Chain هي بلوكشين عالمية ذات حالة مشتركة، حيث **التشغيل البيني هو مبدأ أساسي في السلسلة**، وليس إضافة متأخرة من خلال بروتوكولات خارجية. **انشر مرة واحدة**، وسيعمل تطبيقك أصلاً عبر السلاسل المتصلة.\n\n**Donut هي المكان الذي نختبر فيه ذلك.**",
+                  "quick-links": "## روابط سريعة\n\n🧠 [قاعدة المعرفة](/knowledge) — تعرّف على البنية والتصميم.\n\n🌳 [تطبيقات النظام البيئي](/ecosystem) — استكشف تطبيقات Universal المنشورة على Push Chain.\n\n**🪩 تطبيقات شائعة لتجربتها**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Ballsy](https://ballsy.push.org/) — اختبر نفس منطق التطبيق يعمل بسلاسة عبر السلاسل.\n\n&nbsp;&nbsp;&nbsp;&nbsp;[Simulate](https://simulate.push.org/) — اختبر وتصور التفاعلات عبر السلاسل.\n\n📖 [وثائق المطور](/docs) — تعمق في وثائق Push Chain.\n\n💧 [صنبور](/faucet) — احصل على توكنات الشبكة الاختبارية.\n\n🔍 [Push Scan](https://donut.push.network/) — تتبع المعاملات وبيانات الشبكة."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
