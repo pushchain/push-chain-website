@@ -4,10 +4,46 @@
         <title>Push Chain — Universal Blockchain for Apps Blog</title>
         <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/</link>
         <description>Push Chain — Universal Blockchain for Apps Blog</description>
-        <lastBuildDate>Wed, 28 Jan 2026 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 04 Feb 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet]]></title>
+            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/</link>
+            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/</guid>
+            <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet]]></description>
+            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/assets/images/cover-image-e70decc24260851329f2377ee5d560c6.webp" width="1600" height="900" class="img_ev3q"></p>
+<p>Push Chain now supports <a href="https://www.zerion.io/" target="_blank" rel="noopener noreferrer" class="">Zerion</a> Wallet as a core login option for all universal apps. Users can authenticate through Zerion and interact with apps without manual network switching, fragmented balances, or chain-specific behavior, all powered entirely by Shared-State primitive.</p>
+<p>This integration supports a shared goal: making universal apps simpler to use, easier to access, and consistent across environments.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-zerion">What is Zerion?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#what-is-zerion" class="hash-link" aria-label="Direct link to What is Zerion?" title="Direct link to What is Zerion?" translate="no">​</a></h2>
+<p>Zerion is a multichain wallet and portfolio tool that lets users track assets and transactions across 50+ networks from one interface. It supports a large set of networks and consolidates activity in one place.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-integration-unlock">What does this integration unlock?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#what-does-this-integration-unlock" class="hash-link" aria-label="Direct link to What does this integration unlock?" title="Direct link to What does this integration unlock?" translate="no">​</a></h2>
+<p>Zerion already gives users a unified view of their onchain activity across multiple networks.</p>
+<p>Push Chain extends that unification into the app layer, ensuring users interact with universal apps the same way, no matter which chain they touch.</p>
+<p>Together, we remove major friction points in the multichain journey, Zerion streamlines wallet management and provides users with a unified view of assets across chains, while Push Chain ensures consistent, predictable universal app behavior across chains through shared state.</p>
+<p><img decoding="async" loading="lazy" alt="Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/assets/images/image-1-9a0c5888533c1b8c843745b2d75fb7ac.gif" width="1080" height="1080" class="img_ev3q"></p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unlock-for-users">Unlock for Users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unlock-for-users" class="hash-link" aria-label="Direct link to Unlock for Users:" title="Direct link to Unlock for Users:" translate="no">​</a></h2>
+<p><strong>• One login that works everywhere:</strong> A single Zerion connection unlocks universal apps with consistent behavior across all supported chains. Currently, supported chains mention ETH, Base, Arbitrum,BNB with support for more chains coming soon.</p>
+<p><strong>• Zero-Friction Interoperability</strong>: No network switching, ever. Users interact with one continuous surface while Push Chain resolves the complexity in the background.</p>
+<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unlock-for-builders">Unlock for Builders:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unlock-for-builders" class="hash-link" aria-label="Direct link to Unlock for Builders:" title="Direct link to Unlock for Builders:" translate="no">​</a></h2>
+<p><strong>•</strong> <strong>Out-of-the-box integration:</strong> The latest Push UI Kit includes Zerion by default <a href="https://push.org/docs/chain/ui-kit/" target="_blank" rel="noopener noreferrer" class="">https://push.org/docs/chain/ui-kit/</a></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unifying-the-multichain-experience-with-zerion">Unifying the Multichain Experience with Zerion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unifying-the-multichain-experience-with-zerion" class="hash-link" aria-label="Direct link to Unifying the Multichain Experience with Zerion" title="Direct link to Unifying the Multichain Experience with Zerion" translate="no">​</a></h3>
+<p>Push Chain abstracts away network complexity to deliver a standardized user experience. By integrating Zerion Wallet as a core authentication method, we are eliminating chain fragmentation for users. Whether connecting via Mobile, Browser, EOA, or Smart Account, users now get a seamless, consumer-grade experience, while developers gain a stable, chain-agnostic infrastructure.</p>
+<p>Explore Zerion support right away:</p>
+<ul>
+<li class="">Zerion in Push Chain’s UI Kit: <a href="https://push.org/docs/chain/ui-kit/" target="_blank" rel="noopener noreferrer" class="">https://push.org/docs/chain/ui-kit/</a></li>
+<li class="">Try Ballsy (a universal app) via Zerion: <a href="https://ballsy.push.org/" target="_blank" rel="noopener noreferrer" class="">https://ballsy.push.org/</a></li>
+<li class="">You can also check it out on <a href="http://wallet.push.org/" target="_blank" rel="noopener noreferrer" class="">http://wallet.push.org</a></li>
+</ul>]]></content:encoded>
+            <category>Push Chain</category>
+            <category>Partnerships</category>
+            <category>Wallet</category>
+            <category>Universal App</category>
+            <category>Shared App Experience</category>
+            <category>Shared State Blockchain</category>
+        </item>
         <item>
             <title><![CDATA[Push Chain × Silence Labs: Building the Distributed Signing Mechanism]]></title>
             <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-silence-labs/</link>
@@ -140,42 +176,6 @@ Resharing/rotation ensures the threshold adapts safely.</p>
             <category>Push Chain</category>
             <category>Partnerships</category>
             <category>Validators</category>
-            <category>Universal App</category>
-            <category>Shared App Experience</category>
-            <category>Shared State Blockchain</category>
-        </item>
-        <item>
-            <title><![CDATA[Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet]]></title>
-            <link>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/</link>
-            <guid>https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/</guid>
-            <pubDate>Wed, 28 Jan 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet]]></description>
-            <content:encoded><![CDATA[<p><img decoding="async" loading="lazy" alt="Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/assets/images/cover-image-e70decc24260851329f2377ee5d560c6.webp" width="1600" height="900" class="img_ev3q"></p>
-<p>Push Chain now supports <a href="https://www.zerion.io/" target="_blank" rel="noopener noreferrer" class="">Zerion</a> Wallet as a core login option for all universal apps. Users can authenticate through Zerion and interact with apps without manual network switching, fragmented balances, or chain-specific behavior, all powered entirely by Shared-State primitive.</p>
-<p>This integration supports a shared goal: making universal apps simpler to use, easier to access, and consistent across environments.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-is-zerion">What is Zerion?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#what-is-zerion" class="hash-link" aria-label="Direct link to What is Zerion?" title="Direct link to What is Zerion?" translate="no">​</a></h2>
-<p>Zerion is a multichain wallet and portfolio tool that lets users track assets and transactions across 50+ networks from one interface. It supports a large set of networks and consolidates activity in one place.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-does-this-integration-unlock">What does this integration unlock?<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#what-does-this-integration-unlock" class="hash-link" aria-label="Direct link to What does this integration unlock?" title="Direct link to What does this integration unlock?" translate="no">​</a></h2>
-<p>Zerion already gives users a unified view of their onchain activity across multiple networks.</p>
-<p>Push Chain extends that unification into the app layer, ensuring users interact with universal apps the same way, no matter which chain they touch.</p>
-<p>Together, we remove major friction points in the multichain journey, Zerion streamlines wallet management and provides users with a unified view of assets across chains, while Push Chain ensures consistent, predictable universal app behavior across chains through shared state.</p>
-<p><img decoding="async" loading="lazy" alt="Push Chain × Zerion: Universal App Login Now Supports Zerion Wallet" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/assets/images/image-1-e6241c2d2d2576543ed74da592c94578.gif" width="1080" height="1080" class="img_ev3q"></p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unlock-for-users">Unlock for Users:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unlock-for-users" class="hash-link" aria-label="Direct link to Unlock for Users:" title="Direct link to Unlock for Users:" translate="no">​</a></h2>
-<p><strong>• One login that works everywhere:</strong> A single Zerion connection unlocks universal apps with consistent behavior across all supported chains. Currently, supported chains mention ETH, Base, Arbitrum,BNB with support for more chains coming soon.</p>
-<p><strong>• Zero-Friction Interoperability</strong>: No network switching, ever. Users interact with one continuous surface while Push Chain resolves the complexity in the background.</p>
-<h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unlock-for-builders">Unlock for Builders:<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unlock-for-builders" class="hash-link" aria-label="Direct link to Unlock for Builders:" title="Direct link to Unlock for Builders:" translate="no">​</a></h2>
-<p><strong>•</strong> <strong>Out-of-the-box integration:</strong> The latest Push UI Kit includes Zerion by default <a href="https://push.org/docs/chain/ui-kit/" target="_blank" rel="noopener noreferrer" class="">https://push.org/docs/chain/ui-kit/</a></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="unifying-the-multichain-experience-with-zerion">Unifying the Multichain Experience with Zerion<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1175/blog/push-chain-zerion/#unifying-the-multichain-experience-with-zerion" class="hash-link" aria-label="Direct link to Unifying the Multichain Experience with Zerion" title="Direct link to Unifying the Multichain Experience with Zerion" translate="no">​</a></h3>
-<p>Push Chain abstracts away network complexity to deliver a standardized user experience. By integrating Zerion Wallet as a core authentication method, we are eliminating chain fragmentation for users. Whether connecting via Mobile, Browser, EOA, or Smart Account, users now get a seamless, consumer-grade experience, while developers gain a stable, chain-agnostic infrastructure.</p>
-<p>Explore Zerion support right away:</p>
-<ul>
-<li class="">Zerion in Push Chain’s UI Kit: <a href="https://push.org/docs/chain/ui-kit/" target="_blank" rel="noopener noreferrer" class="">https://push.org/docs/chain/ui-kit/</a></li>
-<li class="">Try Ballsy (a universal app) via Zerion: <a href="https://ballsy.push.org/" target="_blank" rel="noopener noreferrer" class="">https://ballsy.push.org/</a></li>
-<li class="">You can also check it out on <a href="http://wallet.push.org/" target="_blank" rel="noopener noreferrer" class="">http://wallet.push.org</a></li>
-</ul>]]></content:encoded>
-            <category>Push Chain</category>
-            <category>Partnerships</category>
-            <category>Wallet</category>
             <category>Universal App</category>
             <category>Shared App Experience</category>
             <category>Shared State Blockchain</category>
