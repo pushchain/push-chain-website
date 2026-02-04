@@ -226,7 +226,7 @@ function _createMdxContent(props) {
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "• One login that works everywhere:"
-      }), " A single Zerion connection unlocks universal apps with consistent behavior across all supported chains. Currently, supported chains mention ETH, Base, Arbitrum,BNB with support for more chains coming soon."]
+      }), " A single Zerion connection unlocks universal apps with consistent behavior across all supported chains. Currently, supported chains mention ETH, Base, Arbitrum, and BNB, with support for more chains coming soon."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
       children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
         children: "• Zero-Friction Interoperability"
@@ -300,7 +300,7 @@ module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-p
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-9a0c5888533c1b8c843745b2d75fb7ac.gif");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image-1-239f1827ad68c64e767a083c2c0166a3.gif");
 
 /***/ },
 
