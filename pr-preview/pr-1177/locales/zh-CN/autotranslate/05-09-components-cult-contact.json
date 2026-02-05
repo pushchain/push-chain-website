@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 加入 Push Cult - 宣誓",
+      "expanded-title": "誓约",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "请输入您的邮箱地址？📧",
+            "subtitle": "我们需要这个来联系您",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "您的 X (Twitter) 用户名是什么？",
+            "subtitle": "我们想看看您的内容和互动",
+            "placeholder": "@您的用户名"
+          },
+          "telegram-id": {
+            "title": "您的 Telegram ID 是什么？",
+            "subtitle": "我们使用Telegram与信徒进行直接沟通",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "分享您最优质的内容",
+            "subtitle": "链接到你最好的帖子、视频或文章，以展示你的作品",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "分享你的愿景",
+            "subtitle": "请告诉我们您的内容、受众以及您希望加入的原因",
+            "placeholder": "请告诉我们您的内容、受众以及您想加入Push Cult的原因..."
+          }
+        },
+        "buttons": {
+          "next": "下一步",
+          "previous": "上一步",
+          "submit": "提交申请",
+          "submitting": "提交中..."
+        },
+        "validation": {
+          "email-required": "邮箱必填",
+          "email-invalid": "请输入有效的电子邮件地址",
+          "x-username-required": "需要 X 用户名",
+          "telegram-id-required": "需要 Telegram ID",
+          "best-content-required": "需要提供最佳内容链接",
+          "best-content-invalid": "请输入有效的URL",
+          "message-required": "消息不能为空",
+          "default": "此字段必填"
+        },
+        "success": {
+          "title": "申请提交成功！",
+          "message-before-link": "加入",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "并请关注",
+          "channel-name": "#push-cult",
+          "message-end": "用于后续步骤的渠道。",
+          "button": "提交另一份申请"
+        },
+        "progress": {
+          "step-counter": "{{current}} / {{total}}"
+        }
+      }
+    }
+  }
+}
