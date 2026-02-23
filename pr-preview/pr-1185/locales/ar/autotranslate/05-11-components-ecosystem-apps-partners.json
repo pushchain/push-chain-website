@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "قريباً",
+      "app-spotlight": "تطبيقات مميزة",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "حوسبة آمنة تحافظ على الخصوصية و MPC-TSS."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "حساب متعدد الأطراف وخصوصية الحفاظ على الحوسبة."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "تقديم توكنات من اختيارك من أي سلسلة بلوكشين"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "الطبقة التحتية الموحدة للتجارة الذكية."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "زوّد أصولاً، واستعرض عليها، واكسب عوائد مُحسّنة"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "إنشاء وإطلاق <token> ERC-20"
+        },
+        "eon-ai-butler": {
+          "name": "EON: مساعد الذكاء الاصطناعي",
+          "description": "أرسل وتبادل وأدر الأصول عبر الشبكات المدعومة"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "اعرض قدراتك المتميزة في عالم الـ <transliterate>degen</transliterate> لكسب المكافآت."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "لعبة عالمية تشبه لعبة مصاصي الدماء"
+        },
+        "last-one": {
+          "name": "الأخير",
+          "description": "آخر من يزايد قبل انتهاء المؤقت يأخذ الجائزة"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "هويتك عبر كل سلسلة بلوكشين"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "تحقيق الدخل من واجهة برمجة التطبيقات للدفع لكل مكالمة للبنية التحتية الذكية"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "محرك نمو شامل يكافئ الجودة بدلاً من النقرات"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "معارك موسيقية لا تُنسى"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "يونيفرسال، عادل وشفاف، راهن للفوز"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "لعبة تعتمد على المهارات على الـ بلوكشين",
+          "spotlight-text": "قطع. تفادَ. سجّل."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "أرسل تبرعات على أي بلوكشين باستخدام أي محفظة"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "مقايضة توكن سلسة عبر السلاسل المختلفة بدون جسور"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "دوائر توفير عبر السلاسل"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "تواصل مع الطلاب على إيثيريوم وسولانا وBase وأكثر من 15 بلوكشين"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "تنافس للفوز من خلال تسجيل الدخول باستخدام السلسلة المفضلة لديك"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "وراثة العملات المشفرة تلقائيًا"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "عملة مستقرة ثابتة بقيمة 1:1 تجمع سيولة الدولار الأمريكي من جميع السلاسل"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "أرسل العملات المشفرة إلى النطاقات، وليس الهاش."
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "قريبًا"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "العب الشطرنج، راهن، يونيفيرسال"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "أنشئ واشترِ وبع <token> القابلة للتحصيل"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "منصة تداول لا مركزية مبنية على شبكة بلوكشين Pushchain التجريبية"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "نطاقات متعددة السلاسل، GM + أدوات النشر"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "اقتصاد لامركزي يملكه اللاعبون"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "امزج وطابق الشخصيات الأساسية والسمات من العديد من المبدعين"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "مركز Web3 متعدد السلاسل: أسماء نطاقات، <NFT>s، منصة إطلاق."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "أطعم و العب و طوّر حيوانك الأليف الافتراضي من خلال النشاط على <blockchain>."
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "قم ببناء هويتك واكسب مكافآت عبر أكثر من 70 <blockchain>."
+        },
+        "push-name-service": {
+          "name": "خدمة أسماء Push",
+          "description": "احصل على نطاق .push الخاص بك"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "انشر مجموعة الـNFT الخاصة بك مجانًا على أي بلوكشين"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "ريلاير متعدد السلاسل فائق السرعة"
+        }
+      }
+    }
+  }
+}
