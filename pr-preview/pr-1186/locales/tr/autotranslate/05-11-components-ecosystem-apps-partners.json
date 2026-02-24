@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "Çok Yakında",
+      "app-spotlight": "UYGULAMA VURGUSU",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS ve Gizlilik Koruyucu Hesaplama."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS ve Gizlilik Koruyucu Hesaplama."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "Herhangi bir zincirden istediğiniz <token>’ları sunuyoruz"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "Ajan tabanlı ticaret için birleşik altyapı katmanı."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "Varlıklarınızı temin edin, onlara karşı borç alın ve optimize edilmiş getiriler kazanın"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "ERC-20 <token> oluşturun ve başlatın"
+        },
+        "eon-ai-butler": {
+          "name": "EON: Yapay Zeka Asistanı",
+          "description": "Desteklenen ağlarda varlıkları gönderin, takas edin ve yönetin"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "Beceri yeteneklerinizi sergileyerek ödüller kazanın."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "Evrensel vampire survivors benzeri oyun"
+        },
+        "last-one": {
+          "name": "Son Bir Tane",
+          "description": "Son teklifi veren, süre dolmadan ödülü kapar"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "Her Zincirde Kimliğiniz"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "Ajan odaklı altyapı için çağrı başına ödeme API para kazanma"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "Evrensel büyüme motoru, tıklamalardan ziyade kaliteyi ödüllendiriyor"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "Unutulmaz müzik savaşları"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "Evrensel, adil ve şeffaf bahislerle kazan"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "Zincir üzerinde beceri tabanlı oyun",
+          "spotlight-text": "Kes. Kaçın. Puanlayın."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "Herhangi bir <wallet> kullanarak, herhangi bir <blockchain> üzerinde bahşiş verebilirsiniz"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "Köprüler olmadan sorunsuz <transliterate>cross-chain</transliterate> <transliterate>token</transliterate> takasları"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "Çapraz zincirli tasarruf çevreleri"
+        },
+        "push-campus": {
+          "name": "Push Kampüs",
+          "description": "Ethereum, Solana, Base ve 15+ blokchain üzerindeki öğrencilere ulaşın"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "En sevdiğiniz <blockchain> ile giriş yaparak şan savaşına katılın"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "Otomatik kripto mirası"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "1:1 sabitleştirilmiş istikrarlı para birimi, tüm zincirlerden gelen USD likiditesini birleştiriyor"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "Kripto Parayı Hash'ler Yerine Alan Adlarına Gönder"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "Çok Yakında"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "Satranç oynayın, bahis yapın, evrensel"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "ब्लॉकचेन koleksiyon ürünleri oluşturun, satın alın ve satın"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "Pushchain testnet üzerinde inşa edilmiş DEX"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "Çoklu zincirli alan adları, GM + Dağıtım araçları"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "Merkeziyetsiz, oyuncuya ait bir ekonomi"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "Farklı yaratıcılardan temel karakterleri ve özellikleri karıştırın ve eşleştirin"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 çoklu zincirli merkez: Alan Adları, NFT'ler, başlatma platformu."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "Zincir üzeri etkinlikler aracılığıyla sanal evcil hayvanınızı besleyin, oynayın ve büyütün"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "Kimliğinizi oluşturun ve 70'ten fazla zincirde ödüller kazanın."
+        },
+        "push-name-service": {
+          "name": "Push İsim Hizmeti",
+          "description": "Kendi .push alan adınıza sahip olun"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "Herhangi bir zincirde NFT koleksiyonunuzu ücretsiz olarak yayınlayın"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "Çılgın Hızlı Çok Zincirli Relay"
+        }
+      }
+    }
+  }
+}

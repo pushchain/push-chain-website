@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "Sắp ra mắt",
+      "app-spotlight": "Ưu đãi ứng dụng nổi bật",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS & Tính toán bảo mật quyền riêng tư."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS & Điện toán bảo vệ quyền riêng tư."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "Cung cấp <token> theo lựa chọn của bạn từ bất kỳ <blockchain> nào"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "Lớp cơ sở hạ tầng thống nhất cho thương mại dựa trên tác nhân."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "Cung cấp tài sản, vay bằng tài sản đó và kiếm lợi nhuận tối ưu"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "Tạo & khởi chạy <token> ERC-20"
+        },
+        "eon-ai-butler": {
+          "name": "EON: Trợ lý AI",
+          "description": "Gửi, trao đổi và quản lý tài sản trên các mạng được hỗ trợ"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "Thể hiện khả năng 'degen' của bạn để kiếm phần thưởng."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "Trò chơi kiểu vampire survivors đa năng"
+        },
+        "last-one": {
+          "name": "Last One",
+          "description": "Người cuối cùng đấu giá trước khi hết giờ sẽ nhận toàn bộ phần thưởng"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "Danh tính của bạn trên mọi <blockchain>"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "Kiếm tiền từ API theo số lượt gọi cho cơ sở hạ tầng tự động"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "Công cụ tăng trưởng đa năng, khen thưởng chất lượng hơn là số lượt nhấp"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "Những trận đấu âm nhạc khó quên"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "Ứng dụng đa năng, công bằng và minh bạch để đặt cược và chiến thắng"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "Trò chơi dựa trên kỹ năng trên chuỗi khối",
+          "spotlight-text": "Cắt. Né tránh. Ghi điểm."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "Tip trên bất kỳ blockchain nào bằng bất kỳ ví nào"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "Trao đổi <token> dễ dàng giữa các chuỗi khác nhau mà không cần cầu nối"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "Vòng tiết kiệm liên chuỗi"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "Tiếp cận sinh viên trên Ethereum, Solana, Base và hơn 15 <blockchain> khác"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "Chiến đấu để giành vinh quang bằng cách đăng nhập bằng chuỗi yêu thích của bạn"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "Kế thừa tiền điện tử tự động"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "Stablecoin neo bằng 1:1, kết hợp thanh khoản USD từ tất cả các <blockchain>."
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "Gửi tiền điện tử đến tên miền, không phải hash"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "Sắp ra mắt"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "Chơi cờ vua, đặt cược, universal"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "Tạo, mua và bán các vật phẩm sưu tầm blockchain"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "Sàn giao dịch phi tập trung (DEX) được xây dựng trên <keep> testnet"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "Tên miền đa chuỗi, GM + Công cụ triển khai"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "Một nền kinh tế phi tập trung, thuộc sở hữu của người chơi"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "Kết hợp và phối hợp các nhân vật cơ bản và đặc điểm từ nhiều người sáng tạo khác nhau"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Hub đa chuỗi Web3: Tên miền, NFT, bệ phóng."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "Nuôi, chơi và phát triển thú cưng ảo của bạn thông qua các hoạt động trên chuỗi khối"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "Xây dựng danh tính của bạn và kiếm phần thưởng trên 70+ <blockchain>."
+        },
+        "push-name-service": {
+          "name": "Dịch vụ tên Push",
+          "description": "Sở hữu tên miền .push của riêng bạn"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "Triển khai bộ sưu tập NFT của bạn miễn phí trên bất kỳ <blockchain> nào"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "Relayer đa chuỗi siêu tốc"
+        }
+      }
+    }
+  }
+}
