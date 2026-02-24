@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "即将推出",
+      "app-spotlight": "应用亮点",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS 与保护隐私的计算。"
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS & 隐私保护计算."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "拉面Swap",
+          "description": "从任何链提供您选择的代币"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "为代理商务提供统一的基础设施<layer>。"
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "提供资产，以这些资产为抵押借贷，并赚取优化收益"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "创建并启动 ERC-20 代币"
+        },
+        "eon-ai-butler": {
+          "name": "EON：AI 助理",
+          "description": "发送、交换和管理跨支持网络的资产"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "展示你的链上玩法的超能力，赢取奖励。"
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "类似于区块链游戏的通用吸血鬼生存游戏"
+        },
+        "last-one": {
+          "name": "Last One",
+          "description": "最后一位在计时器结束前出价的人将获得奖池"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "您在每个链上的身份"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "为代理基础设施提供按调用付费的 API 收益"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "通用的增长引擎，以质量而非点击量作为奖励"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "永生难忘的音乐对战"
+        },
+        "apt-casino": {
+          "name": "APT 赌场",
+          "description": "普适的、公平的、透明的赢取奖励"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "链上技能游戏",
+          "spotlight-text": "切割. 躲避. 得分."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "使用任何钱包，在任何链上打赏"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "无需桥接的无缝跨链代币交换"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "跨链储蓄圈"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "通过以太坊、Solana、Base 以及 15+ 条区块链触达学生用户"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "使用您最喜欢的区块链登录，争夺荣耀"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "自动化加密资产继承"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "结合所有链上流动性的1:1锚定的稳定币"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "向域名而非哈希发送加密货币"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "敬请期待"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "玩国际象棋，下注，universe"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "创建、购买和销售区块链收藏品"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "基于 Pushchain <testnet> 上的 DEX"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "多链域名，GM + 部署工具"
+        },
+        "star-run": {
+          "name": "星跑",
+          "description": "一个去中心化的、玩家拥有的经济体系"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "组合并搭配来自不同创作者的基本角色和特征"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 多链中心：域名、NFT、启动平台。"
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "通过链上活动喂养、玩耍和培养你的虚拟宠物"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "构建您的身份，并在70+个区块链上赚取奖励。"
+        },
+        "push-name-service": {
+          "name": "Push 名称服务",
+          "description": "获取您自己的 .push 域名"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "在任何链上免费部署您的NFT系列"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "闪电般快速的多链中继"
+        }
+      }
+    }
+  }
+}
