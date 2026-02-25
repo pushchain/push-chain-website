@@ -1,0 +1,24 @@
+{
+  "pages": {
+    "knowledge": {
+      "builders": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "universal-apps": {
+                "items": {
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Apps Möglich Nur mit Shared State - Vol. 1"
+                  },
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Möglich Nur mit Shared State - Vol. 2"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

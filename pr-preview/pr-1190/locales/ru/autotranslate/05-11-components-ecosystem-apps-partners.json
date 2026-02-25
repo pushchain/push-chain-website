@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "Скоро",
+      "app-spotlight": "ПОДБОРКА ПРИЛОЖЕНИЙ",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS и вычисления, сохраняющие конфиденциальность."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS и вычисления с сохранением конфиденциальности."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "Предоставляем токены по вашему выбору из любой сети"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "Унифицированный инфраструктурный <layer> для агентской коммерции."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "Предоставляйте активы, берите взаймы под них и получайте оптимизированную доходность"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "Создавайте и запускайте ERC-20 токены"
+        },
+        "eon-ai-butler": {
+          "name": "EON: AI Бот-помощник",
+          "description": "Отправляйте, обменивайте и управляйте активами в поддерживаемых сетях"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "Продемонстрируйте свои способности в сфере децентрализованных приложений и заработайте награды."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "Универсальная игра в стиле vampire survivors"
+        },
+        "last-one": {
+          "name": "Последний",
+          "description": "Последний, кто сделал ставку до истечения времени, забирает банк"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "Ваша идентификация во всех блокчейнах"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "Монетизация API за оплату по требованию для агентной инфраструктуры"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "Универсальный движок роста, вознаграждающий за качество, а не за клики"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "Музыкальные битвы, которые вы никогда не забудете"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "Универсальное, честное и прозрачное пари для победы"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "Ончейн игра, основанная на навыках",
+          "spotlight-text": "Режь. Уклоняйся. Забивай."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "Поддержите кого угодно в любой сети, используя любой <wallet>"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "Бесшодный обмен <token> между разными блокчейнами без мостов"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "Кросс-чейн сберегательные круги"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "Охватите студентов на Ethereum, Solana, Base и более 15 блокчейнах"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "Сражайтесь за славу, войдя в систему с помощью вашего любимого блокчейна"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "Автоматическое крипто-наследование"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "Стейблкоин с привязкой 1:1, объединяющий ликвидность USD из всех блокчейнов"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "Отправляйте Криптовалюту на Домены, а не Хэши"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "Скоро"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "Играйте в шахматы, делайте ставки, юниверсал"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "Создавайте, покупайте и продавайте блокчейн-коллекционные предметы"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "DEX, построенный на <keep> testnet"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "Мультичейн-домены, GM + Инструменты развертывания"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "Децентрализованная, экономика, принадлежащая игрокам"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "Смешивайте и сочетайте базовых персонажей и черты от разных авторов"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 мультичейн-хаб: Доменные имена, NFT, площадка для запуска проектов."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "Кормите, играйте и развивайте своего виртуального питомца, участвуя в активности в блокчейне"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "Создавайте свою идентичность и получайте вознаграждения в 70+ блокчейнах."
+        },
+        "push-name-service": {
+          "name": "Push Name Service",
+          "description": "Получите свой собственный домен .push"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "Разверните свою коллекцию NFT бесплатно на любом блокчейне"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "Супербыстрый мультиичечный <relayer>"
+        }
+      }
+    }
+  }
+}
