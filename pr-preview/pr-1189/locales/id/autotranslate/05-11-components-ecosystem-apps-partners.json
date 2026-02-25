@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "Segera Hadir",
+      "app-spotlight": "APLIKASI TERPILIH",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS & Komputasi yang Menjaga Privasi."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS & Komputasi yang Menjaga Privasi."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "Menyediakan token pilihan Anda dari rantai mana pun"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "Lapisan infrastruktur terpadu untuk perdagangan berbasis agen."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "Sediakan aset, pinjam terhadapnya, dan dapatkan imbal hasil yang optimal"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "Buat & luncurkan token ERC-20"
+        },
+        "eon-ai-butler": {
+          "name": "EON: AI Butler",
+          "description": "Kirim, tukar, dan kelola aset di berbagai jaringan yang didukung"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "Pamerkan kemampuan degen-mu untuk mendapatkan hadiah."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "Game mirip *vampire survivors* yang bersifat universal"
+        },
+        "last-one": {
+          "name": "Last One",
+          "description": "Orang terakhir yang menawar sebelum waktu habis akan mendapatkan hadiahnya"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "Identitas Anda di Setiap <blockchain>"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "Monetisasi API bayar per panggilan untuk infrastruktur agen"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "Mesin pertumbuhan universal yang memberikan penghargaan atas kualitas, bukan hanya klik"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "Pertempuran musik yang tak terlupakan"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "ユニバーサル、公正、透明な賭けで勝利"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "Game berbasis keterampilan di <blockchain>",
+          "spotlight-text": "Potong. Hindari. Cetak skor."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "Kirim tip di blockchain mana pun menggunakan wallet apa pun"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "Tukar <token> lintas rantai tanpa jembatan yang mulus"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "Lingkaran tabungan lintas rantai"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "Jangkau mahasiswa di Ethereum, Solana, Base, dan 15+ blockchain"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "Bertarung untuk kejayaan dengan masuk menggunakan rantai favorit Anda"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "Warisan kripto otomatis"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "Stablecoin dengan nilai 1:1 yang dipatok, menggabungkan likuiditas USD dari semua <blockchain>"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "Kirim Crypto ke Domain, Bukan Hash"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "Segera Hadir"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "Mainkan catur, bertaruh, universal"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "Buat, beli, dan jual koleksi blokchain"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "DEX dibangun di atas <1>Pushchain</1> <1>testnet</1>"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "Domain multi-rantai, GM + Alat Deploy"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "Ekonomi yang terdesentralisasi dan dimiliki pemain"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "Campur dan padukan karakter dasar dan sifat dari berbagai kreator"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Hub multi-rantai Web3: Nama Domain, NFT, platform peluncuran."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "Beri makan, bermain, dan kembangkan hewan peliharaan virtual Anda melalui aktivitas on-chain"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "Bangun identitas Anda dan dapatkan hadiah di lebih dari 70 <blockchain>."
+        },
+        "push-name-service": {
+          "name": "Push Name Service",
+          "description": "Dapatkan domain .push milik Anda sendiri"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "Sebarkan koleksi NFT Anda secara gratis di rantai mana pun"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "Relayer Multichain yang Sangat Cepat"
+        }
+      }
+    }
+  }
+}

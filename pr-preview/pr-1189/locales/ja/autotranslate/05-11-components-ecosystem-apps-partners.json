@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "近日公開",
+      "app-spotlight": "注目のアプリ",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS & プライバシー保護コンピューティング。"
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSSとプライバシー保護コンピューティング。"
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "どのチェーンからでもお好みのトークンをご提供"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "エージェントコマースのための統合インフラレイヤーです。"
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "資産を供給して、それらを担保に借入を行い、最適化された利回りを得ましょう"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "ERC-20 トークンを作成 & 起動"
+        },
+        "eon-ai-butler": {
+          "name": "EON: AIバトラー",
+          "description": "サポートされているネットワーク間で、送信、交換、および資産を管理"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "あなたのDegenの力を披露して報酬を獲得しましょう。"
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "ユニバーサルなヴァンパイアサバイバーズのようなゲーム"
+        },
+        "last-one": {
+          "name": "ラストワン",
+          "description": "タイマーが切れる前に最後の入札者がポットを獲得します"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "どのチェーンでもあなたのアイデンティティ"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "エージェントインフラストラクチャのための従量課金API収益化"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "ユニバーサルな成長エンジン。クリック数ではなく質を重視した報酬システム"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "忘れられない音楽バトル"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "ユニバーサルで、公正かつ透明性の高い賭けで勝利を掴みましょう"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "チェーン上のスキルベースのゲーム",
+          "spotlight-text": "スライス. 回避. スコア。"
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "どのチェーンでもどのウォレットでも簡単にチップを贈れる"
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "ブリッジなしでシームレスなクロスチェーン トークン スワップ"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "クロスチェーンの貯蓄サークル"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "Ethereum、Solana、Base、その他15以上の<blockchain>で学生にリーチ"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "お気に入りのチェーンでログインして、栄光をかけて戦おう！"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "暗号資産の自動相続"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "全チェーンのUSD流動性を組み合わせた、1:1でペッグされたステーブルコイン"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "ドメインに、ハッシュではなく暗号資産を送金"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "近日公開予定"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "チェスをプレイして、賭けて、ユニバーサル"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "ブロックチェーンの収集品を作成、購入、販売"
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "Pushchain <1>testnet</1>上に構築されたDEX"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "マルチチェーンドメイン、GM + デプロイツール"
+        },
+        "star-run": {
+          "name": "スターラン",
+          "description": "プレイヤーが所有する分散型経済"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "複数のクリエイターの基本キャラクターと特徴を組み合わせて楽しむ"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 マルチチェーンハブ：ドメイン名、NFT、ローンチパッド。"
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "チェーン上の活動を通じて、あなたのバーチャルペットを育てて遊びましょう。"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "70以上のチェーンであなたのアイデンティティを構築し、報酬を獲得しましょう。"
+        },
+        "push-name-service": {
+          "name": "Push Name Service",
+          "description": ".pushドメインを取得しよう"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "どのチェーンでもNFTコレクションを無料でデプロイ"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "超高速マルチチェーン <transliterate>リレイヤー</transliterate>"
+        }
+      }
+    }
+  }
+}

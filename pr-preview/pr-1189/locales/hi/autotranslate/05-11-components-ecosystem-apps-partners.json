@@ -1,0 +1,35 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "apps": {
+        "forge-realm": {
+          "description": "कई रचनाकारों से आधार पात्रों और विशेषताओं को मिलाएं और मैच करें"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 मल्टी-चेन हब: डोमेन नाम, एनएफटी, लॉन्चपैड।"
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "अपनी ऑन-चेन गतिविधि के माध्यम से अपने वर्चुअल पालतू जानवर को खिलाएं, खेलें और बढ़ाएं"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "अपनी पहचान बनाएं और 70+ ब्लॉकचेन पर पुरस्कार अर्जित करें।"
+        },
+        "push-name-service": {
+          "name": "पुश नेम सर्विस",
+          "description": "अपना खुद का .push डोमेन प्राप्त करें"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "किसी भी चेन पर मुफ्त में अपना NFT कलेक्शन डिप्लॉय करें"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "बहुत तेज़ मल्टीचेन रिलेयर"
+        }
+      }
+    }
+  }
+}
