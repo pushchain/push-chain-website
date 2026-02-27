@@ -75,7 +75,7 @@ function _createMdxContent(props) {
       }), "."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-        alt: "Universal Wrapper overvie",
+        alt: "Universal Wrapper overview",
         src: (__webpack_require__(828605)/* ["default"] */ .A) + "",
         width: "1200",
         height: "596"
@@ -105,7 +105,7 @@ function _createMdxContent(props) {
       })
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-        alt: "npm install command ",
+        alt: "npm install command",
         src: (__webpack_require__(50704)/* ["default"] */ .A) + "",
         width: "828",
         height: "358"

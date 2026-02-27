@@ -108,7 +108,7 @@ function _createMdxContent(props) {
       }), " it into a Universal Signer and makes it speak \"universal\" under the hood."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-        alt: " Universal Signer architecture diagram",
+        alt: "Universal Signer architecture diagram",
         src: (__webpack_require__(99760)/* ["default"] */ .A) + "",
         width: "1200",
         height: "830"
