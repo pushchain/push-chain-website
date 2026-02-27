@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Fira+Code:wght@300..700&amp;display=swap&quot; rel=&quot;stylesheet">
 <script>!function(t,h,e,j,s,n){t.hj=t.hj||function(){(t.hj.q=t.hj.q||[]).push(arguments)},t._hjSettings={hjid:6483480,hjsv:6},s=h.getElementsByTagName("head")[0],(n=h.createElement("script")).async=1,n.src="https://static.hotjar.com/c/hotjar-"+t._hjSettings.hjid+".js?sv="+t._hjSettings.hjsv,s.appendChild(n)}(window,document)</script>
 <script>!function(n){if("/"===n.search[1]){var a=n.search.slice(1).split("&").map(function(n){return n.replace(/~and~/g,"&")}).join("?");window.history.replaceState(null,null,n.pathname.slice(0,-1)+a+n.hash)}}(window.location)</script><link rel="stylesheet" href="/push-chain-website/pr-preview/pr-1192/assets/css/styles.4351716c.css">
-<script src="/push-chain-website/pr-preview/pr-1192/assets/js/runtime~main.f874e15e.js" defer="defer"></script>
+<script src="/push-chain-website/pr-preview/pr-1192/assets/js/runtime~main.80eafff3.js" defer="defer"></script>
 <script src="/push-chain-website/pr-preview/pr-1192/assets/js/main.a133ab28.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -578,7 +578,7 @@ What it actually has to do:</p>
 <li class="">Handle partial completion (step 1 succeeds, step 2 fails). The worst outcome for automation</li>
 </ul>
 <p>Not only are these steps time-consuming, but they also introduce multiple points of failure:</p>
-<!-- -->
+<p><img decoding="async" loading="lazy" alt="Regular cross-chain agent failure diagram." src="/push-chain-website/pr-preview/pr-1192/assets/images/image1-3855f114f80c06ac5d03bfecd07069b9.webp" width="1200" height="675" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="a-shared-state-agent-also-possible-today">A shared-state agent (also possible today)<a href="#a-shared-state-agent-also-possible-today" class="hash-link" aria-label="Direct link to A shared-state agent (also possible today)" title="Direct link to A shared-state agent (also possible today)" translate="no">​</a></h2>
 <p><em>&#x27;Shared state&#x27; is a unique feature of Push Chain through which its smart contracts have the ability to read state from any supported chain and perform an action based on that.</em></p>
 <p>Here the goal is the same. But the environment is different:</p>
@@ -587,12 +587,12 @@ What it actually has to do:</p>
 <li class="">It executes as one outcome-driven plan</li>
 <li class="">Fewer moving parts → fewer failure modes</li>
 </ul>
-<!-- -->
+<p><img decoding="async" loading="lazy" alt="Shared-state agent simplified flow." src="/push-chain-website/pr-preview/pr-1192/assets/images/image2-563304cb6aa2554c70d45bb3bd208188.webp" width="1200" height="675" class="img_ev3q"></p>
 <p>If you&#x27;re building &quot;agent-ready&quot; apps on Push Chain, you can assume a world where the agent doesn&#x27;t need to be a bridge operator or a chain router.</p>
 <h2 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="universal-transactions">Universal Transactions<a href="#universal-transactions" class="hash-link" aria-label="Direct link to Universal Transactions" title="Direct link to Universal Transactions" translate="no">​</a></h2>
 <p>One of the mechanics that makes this possible on Push Chain is the <strong>Universal Transaction</strong> — a primitive that lets you bundle multi-chain intent/logic into a single atomic executable action.</p>
 <p>With universal txns, the agent can express a plan (approve → swap → deposit, etc.) and execute atomically with no partial failure.</p>
-<!-- -->
+<p><img decoding="async" loading="lazy" alt="Universal Transaction multicall code example" src="/push-chain-website/pr-preview/pr-1192/assets/images/image3-283e70b7bf175d8e3bb932bbd5b9ebfb.webp" width="1508" height="1744" class="img_ev3q"></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="what-happens-here">What happens here:<a href="#what-happens-here" class="hash-link" aria-label="Direct link to What happens here:" title="Direct link to What happens here:" translate="no">​</a></h3>
 <ul>
 <li class="">

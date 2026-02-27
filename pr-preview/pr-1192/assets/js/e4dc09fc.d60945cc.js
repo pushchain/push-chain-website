@@ -38,9 +38,6 @@ const assets = {
 "authorsImageUrls": [undefined],
 };
 
-/*image 1 - Regular cross-chain agent failure diagram*/
-/*image 2 - Shared-state agent simplified flow*/
-/*image 3 - Universal Transaction multicall code example*/
 
 
 const toc = [{
@@ -113,7 +110,14 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Not only are these steps time-consuming, but they also introduce multiple points of failure:"
-    }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+        alt: "Regular cross-chain agent failure diagram.",
+        src: (__webpack_require__(84064)/* ["default"] */ .A) + "",
+        width: "1200",
+        height: "675"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "a-shared-state-agent-also-possible-today",
       children: "A shared-state agent (also possible today)"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
@@ -130,7 +134,14 @@ function _createMdxContent(props) {
       }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
         children: "Fewer moving parts → fewer failure modes"
       }), "\n"]
-    }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+        alt: "Shared-state agent simplified flow.",
+        src: (__webpack_require__(827149)/* ["default"] */ .A) + "",
+        width: "1200",
+        height: "675"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "If you're building \"agent-ready\" apps on Push Chain, you can assume a world where the agent doesn't need to be a bridge operator or a chain router."
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
       id: "universal-transactions",
@@ -141,7 +152,14 @@ function _createMdxContent(props) {
       }), " — a primitive that lets you bundle multi-chain intent/logic into a single atomic executable action."]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "With universal txns, the agent can express a plan (approve → swap → deposit, etc.) and execute atomically with no partial failure."
-    }), "\n", "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+        alt: "Universal Transaction multicall code example",
+        src: (__webpack_require__(364130)/* ["default"] */ .A) + "",
+        width: "1508",
+        height: "1744"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
       id: "what-happens-here",
       children: "What happens here:"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
@@ -236,6 +254,36 @@ function MDXContent(props = {}) {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-c64e309287c69c56b4b0e5af0c6670d1.webp");
+
+/***/ },
+
+/***/ 84064
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image1-3855f114f80c06ac5d03bfecd07069b9.webp");
+
+/***/ },
+
+/***/ 827149
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image2-563304cb6aa2554c70d45bb3bd208188.webp");
+
+/***/ },
+
+/***/ 364130
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/image3-283e70b7bf175d8e3bb932bbd5b9ebfb.webp");
 
 /***/ },
 
