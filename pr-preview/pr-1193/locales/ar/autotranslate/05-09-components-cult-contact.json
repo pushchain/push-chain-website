@@ -1,0 +1,48 @@
+{
+  "components": {
+    "cult-contact": {
+      "form": {
+        "steps": {
+          "best-content": {
+            "title": "شارك أفضل محتواك",
+            "subtitle": "اربط إلى أفضل منشور لك، أو فيديو، أو مقال يعرض عملك",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "شاركنا رؤيتك",
+            "subtitle": "أخبرنا عن محتواك وجمهورك ولماذا ترغب في الانضمام",
+            "placeholder": "أخبرنا عن محتواك وجمهورك ولماذا تريد الانضمام إلى Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "التالي",
+          "previous": "سابق",
+          "submit": "إرسال الطلب",
+          "submitting": "جاري الإرسال..."
+        },
+        "validation": {
+          "email-required": "البريد الإلكتروني مطلوب",
+          "email-invalid": "الرجاء إدخال عنوان بريد إلكتروني صحيح",
+          "x-username-required": "اسم المستخدم على X مطلوب",
+          "telegram-id-required": "معرّف Telegram مطلوب",
+          "best-content-required": "رابط أفضل محتوى مطلوب",
+          "best-content-invalid": "الرجاء إدخال عنوان URL صالح",
+          "message-required": "الرسالة مطلوبة",
+          "default": "هذا الحقل مطلوب"
+        },
+        "success": {
+          "title": "تم إرسال الطلب بنجاح!",
+          "message-before-link": "انضم إلى",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "وتابعوا",
+          "channel-name": "#push-cult",
+          "message-end": "قناة للخطوات التالية.",
+          "button": "إرسال طلب آخر"
+        },
+        "progress": {
+          "step-counter": "{{current}} من {{total}}"
+        }
+      }
+    }
+  }
+}
