@@ -1,0 +1,161 @@
+{
+  "components": {
+    "ecosystem-apps-partners": {
+      "coming-soon": "Bientôt disponible",
+      "app-spotlight": "APPLICATIONS PHARE DE L'ÉCOSYSTÈME",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS et calcul préservant la confidentialité."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS et calcul préservant la confidentialité."
+        }
+      },
+      "apps": {
+        "ramen-swap": {
+          "name": "Ramen Swap",
+          "description": "Servir des <token> de votre choix depuis n'importe quelle chaîne"
+        },
+        "halo": {
+          "name": "HALO",
+          "description": "La couche d'infrastructure unifiée pour le commerce agentiel."
+        },
+        "cetra": {
+          "name": "Cetra",
+          "description": "Fournissez des actifs, empruntez contre eux et gagnez des rendements optimisés"
+        },
+        "hodl-fun": {
+          "name": "Hodl.fun",
+          "description": "Créer et lancer des jetons ERC-20"
+        },
+        "eon-ai-butler": {
+          "name": "EON : Assistant personnel basé sur l'IA",
+          "description": "Envoyer, échanger et gérer vos actifs sur les réseaux pris en charge"
+        },
+        "push-bet": {
+          "name": "Push Bet",
+          "description": "Mettez vos talents de 'degen' en avant pour gagner des récompenses."
+        },
+        "onchain-vampire-survivors": {
+          "name": "OnchainVampireSurvivors",
+          "description": "Jeu universel de type vampire survivors"
+        },
+        "last-one": {
+          "name": "Last One",
+          "description": "Le dernier enchérisseur avant la fin du temps limite remporte le pot"
+        },
+        "pns": {
+          "name": "PNS",
+          "description": "Votre identité sur chaque chaîne"
+        },
+        "push-x402": {
+          "name": "Push x402",
+          "description": "Monétisation API par appel pour une infrastructure agentique"
+        },
+        "bountive": {
+          "name": "Bountive",
+          "description": "Moteur de croissance universel récompensant la qualité plutôt que les clics"
+        },
+        "beat-brawls": {
+          "name": "BeatBrawls",
+          "description": "Des batailles musicales inoubliables"
+        },
+        "apt-casino": {
+          "name": "APT Casino",
+          "description": "Universel, équitable et transparent pour gagner"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "description": "Jeu basé sur les compétences sur la blockchain",
+          "spotlight-text": "Tranche. Esquive. Marque."
+        },
+        "tip-up": {
+          "name": "TipUp",
+          "description": "Envoyez des pourboires sur n'importe quelle chaîne en utilisant n'importe quel <wallet>."
+        },
+        "push-swap": {
+          "name": "Push Swap",
+          "description": "Échanges de <token> fluides inter-chaînes sans ponts"
+        },
+        "chain-circle": {
+          "name": "ChainCircle",
+          "description": "Cercles d'épargne inter-chaînes"
+        },
+        "push-campus": {
+          "name": "Push Campus",
+          "description": "Atteignez les étudiants sur Ethereum, Solana, Base et plus de 15 chaînes"
+        },
+        "ballsy": {
+          "name": "Ballsy",
+          "description": "Combattez pour la gloire en vous connectant avec votre chaîne préférée"
+        },
+        "athera": {
+          "name": "Athera",
+          "description": "Héritage crypto automatisé"
+        },
+        "pusd": {
+          "name": "PUSD",
+          "description": "Stablecoin indexé à 1:1 combinant la liquidité USD de toutes les chaînes"
+        },
+        "freename": {
+          "name": "Freename",
+          "description": "Envoyez des cryptos à des noms de domaine, pas à des hashs"
+        },
+        "hang4-fun": {
+          "name": "Hang4.fun",
+          "description": "Prochainement"
+        },
+        "degen-chess": {
+          "name": "Degen Chess",
+          "description": "Jouez aux échecs, pariez, universel"
+        },
+        "omnihub": {
+          "name": "Omnihub",
+          "description": "Créez, achetez et vendez des collectes <token>."
+        },
+        "push-dex": {
+          "name": "PushDex",
+          "description": "DEX construit sur le testnet Pushchain"
+        },
+        "zns": {
+          "name": "ZNS",
+          "description": "Domaines multi-chaînes, GM + outils de déploiement"
+        },
+        "star-run": {
+          "name": "Star Run",
+          "description": "Une économie décentralisée, détenue par les joueurs"
+        },
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "Combinez des personnages de base et des traits de différents créateurs"
+        },
+        "conft-codomain": {
+          "name": "CoNFT/CoDomain",
+          "description": "Hub Web3 multi-chaîne : Noms de domaine, <NFT>, plate-forme de lancement."
+        },
+        "copet": {
+          "name": "Copet",
+          "description": "Nourrissez, jouez et faites grandir votre animal virtuel grâce à des activités on-chain"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "Construisez votre identité et gagnez des récompenses sur plus de 70 chaînes."
+        },
+        "push-name-service": {
+          "name": "Push Name Service",
+          "description": "Obtenez votre propre nom de domaine .push"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me",
+          "description": "Déployez votre collection de NFT gratuitement sur n'importe quelle Blockchain"
+        },
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "Relayer multichaîne ultra-rapide"
+        }
+      }
+    }
+  }
+}

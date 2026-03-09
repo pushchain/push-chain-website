@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Junte-se à Push Cult - Faça o Juramento",
+      "expanded-title": "O Juramento",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "Qual o seu endereço de e-mail? 📧",
+            "subtitle": "Precisamos disso para entrar em contato com você",
+            "placeholder": "seu.email@example.com"
+          },
+          "x-username": {
+            "title": "Qual o seu nome de usuário no X (Twitter)?",
+            "subtitle": "Queremos ver seu conteúdo e engajamento",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "Qual é o seu ID do Telegram?",
+            "subtitle": "Usamos o Telegram para comunicação direta com Discípulos",
+            "placeholder": "@seuidtelegramid"
+          },
+          "best-content": {
+            "title": "Compartilhe seu melhor conteúdo",
+            "subtitle": "Compartilhe o link do seu melhor post, vídeo ou artigo que mostre seu trabalho",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Compartilhe sua visão",
+            "subtitle": "Conte-nos sobre seu conteúdo, público e por que você quer participar",
+            "placeholder": "Conte-nos sobre seu conteúdo, público e por que você quer se juntar ao Push Cult..."
+          }
+        },
+        "buttons": {
+          "next": "Próximo",
+          "previous": "Anterior",
+          "submit": "Enviar Candidatura",
+          "submitting": "Enviando..."
+        },
+        "validation": {
+          "email-required": "O email é obrigatório",
+          "email-invalid": "Por favor, insira um endereço de e-mail válido",
+          "x-username-required": "Nome de usuário do X é obrigatório",
+          "telegram-id-required": "O ID do Telegram é obrigatório",
+          "best-content-required": "É necessário um link para o melhor conteúdo",
+          "best-content-invalid": "Por favor, insira uma URL válida",
+          "message-required": "A mensagem é obrigatória",
+          "default": "Este campo é obrigatório"
+        },
+        "success": {
+          "title": "Pedido Enviado!",
+          "message-before-link": "Junte-se",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "e fique de olho no",
+          "channel-name": "#push-cult",
+          "message-end": "canal para os próximos passos.",
+          "button": "Enviar outra inscrição"
+        },
+        "progress": {
+          "step-counter": "{{current}} de {{total}}"
+        }
+      }
+    }
+  }
+}
