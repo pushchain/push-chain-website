@@ -4,7 +4,7 @@
 /***/ 89828
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"blogTitle":"Blog","blogDescription":"Blog","totalPosts":50,"totalRecentPosts":4,"twitterId":"1881607795570860403"}');
+module.exports = /*#__PURE__*/JSON.parse('{"blogTitle":"Blog","blogDescription":"Blog","totalPosts":50,"totalRecentPosts":4,"twitterId":"1869789799810277800"}');
 
 /***/ }
 

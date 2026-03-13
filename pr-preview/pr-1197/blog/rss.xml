@@ -158,7 +158,7 @@ Agent: "Pay $3 for coffee" → Handles token/chain automagically.</p>
 <p>Push Chain is designed so that asset movement doesn’t create multiple incompatible wrapped versions of the same asset.</p>
 <p>This makes it easier for liquidity to converge on one execution environment, instead of splitting across bridge-specific representations</p>
 <p><img decoding="async" loading="lazy" alt="First Image of What is the liquidity wedge trap? How to avoid it?" src="https://pushchain.github.io/push-chain-website/pr-preview/pr-1197/assets/images/image1-c5c63f6d903a1ab8068130e30bbb5631.webp" width="1200" height="1200" class="img_ev3q"></p>
-<p>When assets move to Push Chain</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="when-assets-move-to-push-chain">When assets move to Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1197/blog/what-is-the-liquidity-wedge-trap/#when-assets-move-to-push-chain" class="hash-link" aria-label="Direct link to When assets move to Push Chain" title="Direct link to When assets move to Push Chain" translate="no">​</a></h3>
 <ul>
 <li class="">The original asset is locked on the source chain</li>
 <li class="">Push mints a strict <strong>1:1 representation</strong></li>
@@ -166,7 +166,7 @@ Agent: "Pay $3 for coffee" → Handles token/chain automagically.</p>
 </ul>
 <p>Value stays conserved, and the asset doesn’t splinter into multiple bridge-specific versions.</p>
 <hr>
-<p>When assets move from Push Chain</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="when-assets-move-from-push-chain">When assets move from Push Chain<a href="https://pushchain.github.io/push-chain-website/pr-preview/pr-1197/blog/what-is-the-liquidity-wedge-trap/#when-assets-move-from-push-chain" class="hash-link" aria-label="Direct link to When assets move from Push Chain" title="Direct link to When assets move from Push Chain" translate="no">​</a></h3>
 <ul>
 <li class="">The representation is burned</li>
 <li class="">Release is triggered only for the exact burned amount</li>

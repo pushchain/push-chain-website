@@ -1,7 +1,7 @@
 "use strict";
-(globalThis["webpackChunkpush_chain_website"] = globalThis["webpackChunkpush_chain_website"] || []).push([[6276],{
+(globalThis["webpackChunkpush_chain_website"] = globalThis["webpackChunkpush_chain_website"] || []).push([[1566],{
 
-/***/ 127476
+/***/ 293454
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -10,37 +10,37 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   contentTitle: () => (/* binding */ contentTitle),
 /* harmony export */   "default": () => (/* binding */ MDXContent),
 /* harmony export */   frontMatter: () => (/* binding */ frontMatter),
-/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_consumer_apps_that_can_be_built_on_push_chain_index_md_b93_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_16_evolution_of_push_index_md_012_json__WEBPACK_IMPORTED_MODULE_0__),
 /* harmony export */   toc: () => (/* binding */ toc)
 /* harmony export */ });
-/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_09_consumer_apps_that_can_be_built_on_push_chain_index_md_b93_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(937596);
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2024_12_16_evolution_of_push_index_md_012_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(580795);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
+/* harmony import */ var _site_src_css_SharedStyling__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(113490);
 
 
 const frontMatter = {
-	slug: 'consumer-apps-that-can-be-built-on-push-chain',
-	title: 'Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain',
+	slug: 'evolution-of-push',
+	title: 'Evolution of Push',
 	authors: [
-		'push'
+		'richa'
 	],
 	image: './cover-image.webp',
-	description: 'Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain',
-	text: 'Discover how Push Chain enables developers to build consumer apps that work across all blockchains. From AI agents to social platforms, explore real-world use cases that are only possible with universal shared state.',
+	description: 'Evolution of Push',
+	text: 'One of the defining aspects of decentralized networks is their lack of a central authority to govern how they operate. Instead, these networks rely on a set of rules and systems to securely communicate and reach consensus on the overall state of the network.',
 	tags: [
 		'Product',
-		'Key Features',
-		'Ecosystem',
-		'Push 101'
+		'Ecosystem'
 	],
-	twitterId: '1881607795570860403'
+	twitterId: '1869019914750898216'
 };
 const contentTitle = undefined;
 
 const assets = {
-"image": (__webpack_require__(22722)/* ["default"] */ .A),
+"image": (__webpack_require__(36580)/* ["default"] */ .A),
 "authorsImageUrls": [undefined],
 };
+
 
 
 
@@ -54,8 +54,8 @@ function _createMdxContent(props) {
   };
   return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
     children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
-      alt: "Cover Image of Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain",
-      src: (__webpack_require__(929021)/* ["default"] */ .A) + "",
+      alt: "Cover Image of Evolution of Push",
+      src: (__webpack_require__(505767)/* ["default"] */ .A) + "",
       width: "1600",
       height: "900"
     })
@@ -78,23 +78,23 @@ function MDXContent(props = {}) {
 
 /***/ },
 
-/***/ 22722
+/***/ 36580
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-5cd699e8baeab8015a6f9597167571ea.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-9ad56615d58891ae8bf37e7eb4792898.webp");
 
 /***/ },
 
-/***/ 929021
+/***/ 505767
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-5cd699e8baeab8015a6f9597167571ea.webp");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-9ad56615d58891ae8bf37e7eb4792898.webp");
 
 /***/ },
 
@@ -193,10 +193,10 @@ function MDXProvider(properties) {
 
 /***/ },
 
-/***/ 937596
+/***/ 580795
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1197/blog/consumer-apps-that-can-be-built-on-push-chain","source":"@site/blog/2024-12-09-consumer-apps-that-can-be-built-on-push-chain/index.md","title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","description":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","date":"2024-12-09T00:00:00.000Z","tags":[{"inline":true,"label":"Product","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/product"},{"inline":true,"label":"Key Features","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/key-features"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/ecosystem"},{"inline":true,"label":"Push 101","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/push-101"}],"readingTime":4.54,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1197/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1197/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"consumer-apps-that-can-be-built-on-push-chain","title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","authors":["push"],"image":"./cover-image.webp","description":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","text":"Discover how Push Chain enables developers to build consumer apps that work across all blockchains. From AI agents to social platforms, explore real-world use cases that are only possible with universal shared state.","tags":["Product","Key Features","Ecosystem","Push 101"],"twitterId":"1881607795570860403"},"unlisted":false,"prevItem":{"title":"Push Chain’s Frequently Asked Questions","permalink":"/push-chain-website/pr-preview/pr-1197/blog/faq-push-chain"},"nextItem":{"title":"Understand Proof of Stake (POS) - Part 1","permalink":"/push-chain-website/pr-preview/pr-1197/blog/understand-proof-of-stake"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1197/blog/evolution-of-push","source":"@site/blog/2024-12-16-evolution-of-push/index.md","title":"Evolution of Push","description":"Evolution of Push","date":"2024-12-16T00:00:00.000Z","tags":[{"inline":true,"label":"Product","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/product"},{"inline":true,"label":"Ecosystem","permalink":"/push-chain-website/pr-preview/pr-1197/blog/tags/ecosystem"}],"readingTime":7.97,"hasTruncateMarker":true,"authors":[{"name":"Richa Joshi","url":"https://twitter.com/Riijo","page":{"permalink":"/push-chain-website/pr-preview/pr-1197/blog/authors/richa"},"imageURL":"/push-chain-website/pr-preview/pr-1197/assets/blog/authors/authorricha.png","key":"richa"}],"frontMatter":{"slug":"evolution-of-push","title":"Evolution of Push","authors":["richa"],"image":"./cover-image.webp","description":"Evolution of Push","text":"One of the defining aspects of decentralized networks is their lack of a central authority to govern how they operate. Instead, these networks rely on a set of rules and systems to securely communicate and reach consensus on the overall state of the network.","tags":["Product","Ecosystem"],"twitterId":"1869019914750898216"},"unlisted":false,"prevItem":{"title":"Innovations by Push Chain","permalink":"/push-chain-website/pr-preview/pr-1197/blog/innovations-by-push-chain"},"nextItem":{"title":"Consumer Apps 🫶 Push Chain - Innovations that can be built on Push Chain","permalink":"/push-chain-website/pr-preview/pr-1197/blog/consumer-apps-that-can-be-built-on-push-chain"}}');
 
 /***/ }
 

@@ -49,12 +49,21 @@ const toc = [{
   "value": "How does Push Chain solves the liquidity wedge?",
   "id": "how-does-push-chain-solves-the-liquidity-wedge",
   "level": 2
+}, {
+  "value": "When assets move to Push Chain",
+  "id": "when-assets-move-to-push-chain",
+  "level": 3
+}, {
+  "value": "When assets move from Push Chain",
+  "id": "when-assets-move-from-push-chain",
+  "level": 3
 }];
 function _createMdxContent(props) {
   const _components = {
     a: "a",
     em: "em",
     h2: "h2",
+    h3: "h3",
     hr: "hr",
     img: "img",
     li: "li",
@@ -165,7 +174,8 @@ function _createMdxContent(props) {
         width: "1200",
         height: "1200"
       })
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
+      id: "when-assets-move-to-push-chain",
       children: "When assets move to Push Chain"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
@@ -179,7 +189,8 @@ function _createMdxContent(props) {
       }), "\n"]
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
       children: "Value stays conserved, and the asset doesn’t splinter into multiple bridge-specific versions."
-    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.hr, {}), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h3, {
+      id: "when-assets-move-from-push-chain",
       children: "When assets move from Push Chain"
     }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
       children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.li, {
