@@ -1,0 +1,66 @@
+{
+  "pages": {
+    "knowledge": {
+      "report": {
+        "seo": {
+          "title": "Pembaruan Jaringan",
+          "description": "Pembaruan status jaringan real-time untuk Push Chain. Tetap dapat informasi terkini tentang gangguan, pemeliharaan, dan masalah yang teratasi.",
+          "og-title": "Pembaruan Jaringan Push Chain - Status Jaringan",
+          "og-description": "Lacak pembaruan jaringan Push Chain, jendela pemeliharaan, dan pembaruan layanan. Dapatkan informasi status secara real-time.",
+          "twitter-title": "Update Jaringan Push Chain",
+          "twitter-description": "Pembaruan langsung tentang status dan pemeliharaan jaringan Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Basis Pengetahuan",
+            "donut-testnet": "Donut Testnet",
+            "report": "Pembaruan Jaringan"
+          },
+          "blocks": {
+            "title": "Pembaruan Jaringan",
+            "sections": {
+              "updates-overview": {
+                "items": {
+                  "intro": "konten"
+                }
+              },
+              "chain-upgrade-token-rebalance-25-feb-2026": {
+                "title": "Upgrade rantai - Penyeimbangan ulang Token - 10 Miliar Token PC",
+                "items": {
+                  "status-heading": "## Status",
+                  "status-timeline": "25 Februari 2026 - Dimulai<br />25 Februari 2026 - ✅ Selesai",
+                  "overview-heading": "## Ikhtisar",
+                  "overview-text": "Push Chain menjalankan proposal rebalancing <token> untuk mengurangi total pasokan <token> $PC dari 75T+ <token> menjadi sekitar 10 miliar <token>. Peningkatan ini mengatasi hutang teknis dari awal mula testnet dan mempersiapkan chain untuk lingkungan seperti mainnet.",
+                  "why-heading": "### Mengapa ini dilakukan?",
+                  "why-text": "Di awal kemunculan Push Chain testnet, belum ada proses bakar dan penciptaan token PC. Hal ini mengakibatkan perhitungan harga yang sangat rendah untuk transaksi universal dan memungkinkan segelintir pemegang token untuk mengakumulasi pasokan token yang sangat besar (mencapai triliunan). Ini menciptakan ekonomi token yang tidak seimbang yang perlu diperbaiki sebelum peluncuran mainnet.",
+                  "why-necessary": "Penyeimbangan ulang diperlukan karena:",
+                  "reason-mainnet": "- Bersiap untuk lingkungan yang mirip dengan mainnet",
+                  "reason-season3": "- Mengaktifkan distribusi hadiah Musim 3",
+                  "reason-tech-debt": "- Menghilangkan utang teknis lama dari testnet awal",
+                  "reason-token-economy": "- Membangun ekonomi <token> yang adil dan berkelanjutan",
+                  "what-changed-heading": "### Apa yang berubah?",
+                  "what-changed-text": "Proposal ini memengaruhi 1.950 dompet teratas dari total 1,178 juta alamat. Dompet yang memegang 1.100 $PC token atau lebih (termasuk yang memiliki triliunan) diimbangi ulang untuk memegang antara 1.100-2.000 $PC token.",
+                  "key-changes-heading": "**Perubahan Utama:**",
+                  "change-supply": "- Total supply dikurangi dari 75T+ menjadi ~10B PC <token>",
+                  "change-wallets": "- 1.950 dompet teratas direimbalance ke rentang 1.100-2.000 PC token",
+                  "change-percentage": "- Hanya memengaruhi 0,17% dari total alamat (1.950 dari 1,178 Juta)",
+                  "change-unaffected": "- 99.83% pengguna tidak terpengaruh",
+                  "why-not-informed-heading": "### Mengapa pengguna tidak diberi tahu sebelumnya?",
+                  "why-not-informed-text": "Pengguna tidak diberitahu sebelumnya untuk mencegah pelaku jahat mendistribusikan ulang <token> ke <wallet> lain sebelum penyeimbangan ulang. Tindakan keamanan ini memastikan integritas proses penyeimbangan ulang dan mencegah manipulasi sistem.",
+                  "validator-period": "Periode proposal validator di testnet saat ini diatur menjadi 5 menit untuk membantu menghilangkan kasus ekstrem seperti ini sebelum kepemilikan validator terdesentralisasi penuh diterapkan.",
+                  "why-52t-heading": "### Mengapa saya masih melihat suplai 52T?",
+                  "why-52t-text": "Penyeimbangan ulang adalah pendekatan dua fase. <token> saat ini dikumpulkan ke <wallet> yang dikendalikan tim dan akan segera dibakar.",
+                  "how-affect-heading": "### Bagaimana ini memengaruhi saya?",
+                  "affect-majority": "**Untuk 99,83% pengguna:** Perubahan ini tidak memengaruhi Anda. Saldo <wallet> Anda tetap tidak berubah.",
+                  "affect-top-wallets": "**Untuk dompet yang terpengaruh (top 1.950):** Jika dompet Anda memegang 1.100+ PC <token> (atau triliunan), saldo Anda telah disesuaikan ke rentang 1.100-2.000 PC <token>.",
+                  "need-help-heading": "**Butuh Bantuan?**",
+                  "need-help-text": "Jika Anda merasa terdampak oleh rebalancing ini dan memiliki pertanyaan atau kekhawatiran, silakan hubungi tim Push Chain di Discord untuk mendapatkan bantuan."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
