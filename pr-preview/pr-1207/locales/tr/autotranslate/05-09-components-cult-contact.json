@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Push Kültüne Katıl - Yemin Et",
+      "expanded-title": "Yemin",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "E-posta adresiniz nedir? 📧",
+            "subtitle": "Sizinle iletişime geçmek için buna ihtiyacımız var",
+            "placeholder": "e-postanız@örnek.com"
+          },
+          "x-username": {
+            "title": "X (Twitter) kullanıcı adınız nedir?",
+            "subtitle": "İçeriğini ve etkileşimini görmek istiyoruz",
+            "placeholder": "@kullanıcıadınız"
+          },
+          "telegram-id": {
+            "title": "Telegram ID'niz nedir?",
+            "subtitle": "Öğrencilerle doğrudan iletişim için Telegram kullanıyoruz",
+            "placeholder": "@telegramkullanıcıadınız"
+          },
+          "best-content": {
+            "title": "En iyi içeriğini paylaş",
+            "subtitle": "En iyi işinizi sergileyen en iyi gönderinize, videonuza veya makalenize bağlantı ekleyin",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "Vizyonunuzu paylaşın",
+            "subtitle": "Bize içeriğiniz, hedef kitleniz ve neden katılmak istediğinizi anlatın",
+            "placeholder": "Bize içeriğiniz, hedef kitleniz ve Neden Push Cult'a katılmak istediğinizi anlatın..."
+          }
+        },
+        "buttons": {
+          "next": "İleri",
+          "previous": "Önceki",
+          "submit": "Başvuruyu Gönder",
+          "submitting": "Gönderiliyor..."
+        },
+        "validation": {
+          "email-required": "Email adresi zorunlu.",
+          "email-invalid": "Lütfen geçerli bir e-posta adresi girin",
+          "x-username-required": "X kullanıcı adı gerekli",
+          "telegram-id-required": "Telegram ID gerekli",
+          "best-content-required": "En iyi içerik bağlantısı gerekli",
+          "best-content-invalid": "Lütfen geçerli bir URL girin",
+          "message-required": "Mesaj zorunlu.",
+          "default": "Bu alanın doldurulması zorunludur"
+        },
+        "success": {
+          "title": "Başvurunuz Gönderildi!",
+          "message-before-link": "Katıl",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "ve",
+          "channel-name": "#push-cult",
+          "message-end": "sonraki adımlar için kanal.",
+          "button": "Başka Bir Başvuru Gönder"
+        },
+        "progress": {
+          "step-counter": "{{current}} / {{total}}"
+        }
+      }
+    }
+  }
+}
