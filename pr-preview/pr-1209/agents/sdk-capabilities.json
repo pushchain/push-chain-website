@@ -22,8 +22,8 @@
       "methods": [
         {
           "name": "PUSH_NETWORK",
-          "signature": "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET | MAINNET",
-          "description": "Network constants for testnet and mainnet",
+          "signature": "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET | TESTNET_DONUT | MAINNET | LOCALNET",
+          "description": "Network constants: TESTNET (latest testnet), TESTNET_DONUT (Donut testnet), MAINNET, LOCALNET",
           "returns": "string",
           "safe_for_autonomous_execution": true
         },
@@ -87,18 +87,100 @@
           "description": "Converts address to UniversalAccount with chain context",
           "returns": "UniversalAccount",
           "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "convertExecutorToOrigin",
+          "signature": "PushChain.utils.account.convertExecutorToOrigin(executorAddress: string, options?: { chain?: CHAIN }): Promise<UniversalAccount>",
+          "description": "Reverse-maps a UEA (Push Chain execution account) to its origin wallet. Pass options.chain to treat as CEA from a specific chain.",
+          "returns": "Promise<UniversalAccount>",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "convertOriginToExecutor",
+          "signature": "PushChain.utils.account.convertOriginToExecutor(account: UniversalAccount, options?: { onlyCompute?: boolean }): Promise<{ address: string, isDeployed: boolean }>",
+          "description": "Maps an origin UniversalAccount to its executor account (UEA) address on Push Chain. Use onlyCompute:true to get address without deployment check.",
+          "returns": "Promise<{ address: string, isDeployed: boolean }>",
+          "safe_for_autonomous_execution": true
         }
       ]
     },
     {
       "namespace": "PushChain.utils.helpers",
-      "description": "Common utility functions for data formatting",
+      "description": "Common utility functions for data formatting and encoding",
       "methods": [
         {
           "name": "parseUnits",
-          "signature": "PushChain.utils.helpers.parseUnits(value: string, decimals: number): BigInt",
-          "description": "Parses decimal string to smallest unit BigInt",
-          "returns": "BigInt",
+          "signature": "PushChain.utils.helpers.parseUnits(value: string, decimals: number | { decimals: number }): bigint",
+          "description": "Parses decimal string to smallest unit bigint. Accepts decimals as a number (e.g., 18) or object (e.g., { decimals: 18 })",
+          "returns": "bigint",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "formatUnits",
+          "signature": "PushChain.utils.helpers.formatUnits(value: string | bigint, decimals: number | { decimals: number, precision?: number }): string",
+          "description": "Converts smallest unit value back to human-readable string. Inverse of parseUnits.",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "encodeTxData",
+          "signature": "PushChain.utils.helpers.encodeTxData({ abi: AbiFragment[], functionName: string, args?: any[] }): string",
+          "description": "ABI-encodes a contract function call into hex calldata",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.chains",
+      "description": "Chain metadata utilities for querying supported chains and identifiers",
+      "methods": [
+        {
+          "name": "getSupportedChains",
+          "signature": "PushChain.utils.chains.getSupportedChains(network: PUSH_NETWORK): CHAIN[]",
+          "description": "Returns array of CAIP-2 chain identifiers supported on the given network",
+          "returns": "CHAIN[]",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getChainName",
+          "signature": "PushChain.utils.chains.getChainName(chainNamespace: string): string",
+          "description": "Returns human-readable chain name from a CAIP-2 chain identifier",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getChainNamespace",
+          "signature": "PushChain.utils.chains.getChainNamespace(chain: CHAIN): string",
+          "description": "Returns the namespace portion of a CAIP-2 chain identifier (e.g., 'eip155' or 'solana')",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.tokens",
+      "description": "Token utilities for querying moveable and payable tokens per chain",
+      "methods": [
+        {
+          "name": "getMoveableTokens",
+          "signature": "PushChain.utils.tokens.getMoveableTokens(chain: CHAIN): { tokens: MoveableToken[] }",
+          "description": "Returns list of tokens that can be moved cross-chain via tx.funds for a given origin chain",
+          "returns": "{ tokens: MoveableToken[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getPayableTokens",
+          "signature": "PushChain.utils.tokens.getPayableTokens(chain: CHAIN): { tokens: PayableToken[] }",
+          "description": "Returns list of tokens accepted for gas fee payment via tx.payGasWith for a given origin chain",
+          "returns": "{ tokens: PayableToken[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getPRC20Address",
+          "signature": "PushChain.utils.tokens.getPRC20Address(token: MoveableToken | { chain: CHAIN, address: string }): string",
+          "description": "Returns the PRC20 token address on Push Chain corresponding to a moveable token",
+          "returns": "string",
           "safe_for_autonomous_execution": true
         }
       ]
@@ -196,9 +278,9 @@
       "description": "Internal orchestration layer (typically not called directly)",
       "methods": [
         {
-          "name": "status": "internal",
+          "name": "orchestrator",
           "signature": "pushChainClient.orchestrator",
-          "description": "Handles RPC resolution, UEA management, and gas orchestration internally",
+          "description": "Handles RPC resolution, UEA management, and gas orchestration internally (internal use)",
           "returns": "Orchestrator",
           "safe_for_autonomous_execution": true
         }

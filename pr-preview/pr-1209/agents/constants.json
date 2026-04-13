@@ -1,61 +1,103 @@
 {
-  "version": "1.0.0",
-  "generated": "2025-01-01T00:00:00.000Z",
-  "description": "All PushChain.CONSTANTS.* values as a structured reference",
+  "version": "1.1.0",
+  "generated": "2026-04-14T00:00:00.000Z",
+  "description": "All PushChain.CONSTANTS.* values as a structured reference. Source: https://push.org/docs/chain/build/constants/",
   "PUSH_NETWORK": {
-    "TESTNET": "TESTNET_DONUT",
-    "MAINNET": {
-      "value": "MAINNET",
-      "status": "announced"
-    }
+    "TESTNET": "TESTNET",
+    "TESTNET_DONUT": "TESTNET_DONUT",
+    "MAINNET": "MAINNET",
+    "LOCALNET": "LOCALNET"
   },
   "CHAIN": {
+    "PUSH_TESTNET": "eip155:42101",
     "PUSH_TESTNET_DONUT": "eip155:42101",
+    "PUSH_LOCALNET": "eip155:9001",
+    "ETHEREUM_MAINNET": "eip155:1",
     "ETHEREUM_SEPOLIA": "eip155:11155111",
-    "SOLANA_DEVNET": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
-    "ETHEREUM_MAINNET": {
-      "value": "eip155:1",
-      "status": "inferred"
-    },
-    "BNB_CHAIN": {
-      "value": "eip155:56",
-      "status": "inferred"
-    },
-    "POLYGON": {
-      "value": "eip155:137",
-      "status": "inferred"
-    },
-    "ARBITRUM": {
-      "value": "eip155:42161",
-      "status": "inferred"
-    },
-    "OPTIMISM": {
-      "value": "eip155:10",
-      "status": "inferred"
-    },
-    "BASE": {
-      "value": "eip155:8453",
-      "status": "inferred"
-    }
+    "ARBITRUM_SEPOLIA": "eip155:421614",
+    "BASE_SEPOLIA": "eip155:84532",
+    "BNB_TESTNET": "eip155:97",
+    "SOLANA_MAINNET": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+    "SOLANA_TESTNET": "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z",
+    "SOLANA_DEVNET": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
   },
   "LIBRARY": {
-    "ETHERS_V5": "ETHERS_V5",
-    "ETHERS_V6": "ETHERS_V6",
-    "VIEM": "VIEM",
-    "SOLANA_WEB3JS": "SOLANA_WEB3JS"
+    "ETHEREUM_ETHERSV6": "ethers-v6",
+    "ETHEREUM_VIEM": "viem",
+    "SOLANA_WEB3JS": "solana-web3js"
   },
   "MOVEABLE": {
     "TOKEN": {
-      "description": "Supported tokens for cross-chain asset movement via tx.funds",
-      "status": "undocumented",
-      "values": {}
+      "_note": "Tokens available for cross-chain asset movement via tx.funds. See full list at https://push.org/docs/chain/build/constants/",
+      "ETHEREUM_SEPOLIA": {
+        "ETH": "Native ETH",
+        "USDT": "Tether USD",
+        "USDC": "USD Coin",
+        "WETH": "Wrapped ETH",
+        "stETH": "Staked ETH (Lido)"
+      },
+      "ARBITRUM_SEPOLIA": {
+        "ETH": "Native ETH",
+        "USDT": "Tether USD",
+        "USDC": "USD Coin",
+        "WETH": "Wrapped ETH"
+      },
+      "BASE_SEPOLIA": {
+        "ETH": "Native ETH",
+        "USDT": "Tether USD",
+        "USDC": "USD Coin",
+        "WETH": "Wrapped ETH"
+      },
+      "BNB_TESTNET": {
+        "ETH": "Native ETH",
+        "USDT": "Tether USD"
+      },
+      "SOLANA_DEVNET": {
+        "SOL": "Native SOL",
+        "USDT": "Tether USD",
+        "USDC": "USD Coin"
+      },
+      "PUSH_TESTNET_DONUT": {
+        "pEth": "Push-wrapped ETH from Ethereum",
+        "pEthArb": "Push-wrapped ETH from Arbitrum",
+        "pEthBase": "Push-wrapped ETH from Base",
+        "pEthBnb": "Push-wrapped ETH from BNB Chain",
+        "pSol": "Push-wrapped SOL from Solana",
+        "USDT.eth": "Push-wrapped USDT from Ethereum",
+        "USDT.arb": "Push-wrapped USDT from Arbitrum",
+        "USDT.base": "Push-wrapped USDT from Base",
+        "USDT.bnb": "Push-wrapped USDT from BNB Chain",
+        "USDT.sol": "Push-wrapped USDT from Solana",
+        "USDC.eth": "Push-wrapped USDC from Ethereum",
+        "USDC.arb": "Push-wrapped USDC from Arbitrum",
+        "USDC.base": "Push-wrapped USDC from Base",
+        "USDC.bnb": "Push-wrapped USDC from BNB Chain",
+        "USDC.sol": "Push-wrapped USDC from Solana"
+      }
     }
   },
-  "CONNECTION": {
-    "STATUS": {
-      "CONNECTED": "CONNECTED",
-      "DISCONNECTED": "DISCONNECTED",
-      "status": "inferred"
+  "PAYABLE": {
+    "TOKEN": {
+      "_note": "Tokens accepted for gas fee payment via tx.payGasWith. See full list at https://push.org/docs/chain/build/constants/",
+      "ETHEREUM_SEPOLIA": ["ETH", "USDT", "USDC", "WETH", "stETH"],
+      "ARBITRUM_SEPOLIA": ["ETH", "USDT", "USDC"],
+      "BASE_SEPOLIA": ["ETH", "USDT", "USDC"],
+      "BNB_TESTNET": ["BNB", "USDT"],
+      "SOLANA_DEVNET": ["SOL", "USDT", "USDC"]
+    }
+  },
+  "UI_KIT": {
+    "_note": "UI Kit-specific constants from @pushchain/ui-kit (PushUI.CONSTANTS)",
+    "THEME": {
+      "LIGHT": "LIGHT",
+      "DARK": "DARK"
+    },
+    "CONNECTION": {
+      "STATUS": {
+        "CONNECTED": "CONNECTED",
+        "CONNECTING": "CONNECTING",
+        "DISCONNECTED": "DISCONNECTED"
+      }
     }
   }
 }

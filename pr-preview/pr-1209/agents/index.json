@@ -119,6 +119,51 @@
       "type": "workflow"
     },
     {
+      "path": "agents/workflows/create-universal-signer.md",
+      "purpose": "Workflow for wrapping EVM or non-EVM signers into a UniversalSigner",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/configure-dev-environment.md",
+      "purpose": "Workflow for installing Push Chain SDK packages and configuring tooling",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/initialize-evm-client.md",
+      "purpose": "Workflow for setting up Ethers.js or Viem client for direct RPC interactions",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/read-blockchain-state.md",
+      "purpose": "Workflow for querying on-chain data from Push Chain using EVM clients",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-universal-wallet-provider.md",
+      "purpose": "Workflow for configuring PushUniversalWalletProvider with custom options",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-utility-functions.md",
+      "purpose": "Workflow for using SDK utilities for account conversion, unit parsing, and address formatting",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/constants-reference.md",
+      "purpose": "Reference for all SDK constants including chain IDs, networks, libraries, and token enums",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-contract-helpers.md",
+      "purpose": "Workflow for interacting with UEAFactory and other deployed helper contracts",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/contract-initiated-multichain-execution.md",
+      "purpose": "Workflow for triggering cross-chain execution from a Push Chain smart contract",
+      "type": "workflow"
+    },
+    {
       "path": "agents/schemas/index.json",
       "purpose": "Index of all JSON schema files with brief descriptions",
       "type": "schema"
@@ -229,9 +274,7 @@
     },
     {
       "source": "Full Documentation Dump",
-      "urls": [
-        "https://push.org/llms-full.txt"
-      ],
+      "urls": ["https://push.org/llms-full.txt"],
       "authority": 1,
       "notes": "Complete text of all documentation pages, use for deep context or when specific page content is needed"
     },
@@ -246,17 +289,13 @@
     },
     {
       "source": "Push Blog",
-      "urls": [
-        "https://push.org/blog/"
-      ],
+      "urls": ["https://push.org/blog/"],
       "authority": 3,
       "notes": "Conceptual explanations and announcements, not API reference"
     },
     {
       "source": "GitHub Repository",
-      "urls": [
-        "https://github.com/push-protocol/push-chain-sdk"
-      ],
+      "urls": ["https://github.com/push-protocol/push-chain-sdk"],
       "authority": 2,
       "notes": "Source code and inline comments, status: inferred"
     }

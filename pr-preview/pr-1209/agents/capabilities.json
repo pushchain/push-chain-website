@@ -7,15 +7,49 @@
     "operation": "write",
     "prerequisites": ["universal_signer_created", "network_selected"],
     "inputs": [
-      {"name": "signer", "type": "UniversalSigner | UniversalAccount", "required": true, "description": "Universal signer for full capabilities or account for read-only mode"},
-      {"name": "options.network", "type": "PushChain.CONSTANTS.PUSH_NETWORK", "required": true, "description": "Push Chain network to connect to"},
-      {"name": "options.rpcUrls", "type": "Partial<Record<CHAIN, string[]>>", "required": false, "description": "Custom RPC URLs by chain ID"},
-      {"name": "options.blockExplorers", "type": "Partial<Record<CHAIN, string[]>>", "required": false, "description": "Custom block explorer URLs by chain ID"},
-      {"name": "options.printTraces", "type": "boolean", "required": false, "description": "Enable debug trace logging"},
-      {"name": "options.progressHook", "type": "(progress: ProgressEvent) => void", "required": false, "description": "Callback for progress events"}
+      {
+        "name": "signer",
+        "type": "UniversalSigner | UniversalAccount",
+        "required": true,
+        "description": "Universal signer for full capabilities or account for read-only mode"
+      },
+      {
+        "name": "options.network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": true,
+        "description": "Push Chain network to connect to"
+      },
+      {
+        "name": "options.rpcUrls",
+        "type": "Partial<Record<CHAIN, string[]>>",
+        "required": false,
+        "description": "Custom RPC URLs by chain ID"
+      },
+      {
+        "name": "options.blockExplorers",
+        "type": "Partial<Record<CHAIN, string[]>>",
+        "required": false,
+        "description": "Custom block explorer URLs by chain ID"
+      },
+      {
+        "name": "options.printTraces",
+        "type": "boolean",
+        "required": false,
+        "description": "Enable debug trace logging"
+      },
+      {
+        "name": "options.progressHook",
+        "type": "(progress: ProgressEvent) => void",
+        "required": false,
+        "description": "Callback for progress events"
+      }
     ],
     "outputs": [
-      {"name": "pushChainClient", "type": "PushChainClient", "description": "Initialized client with universal, orchestrator, and explorer namespaces"}
+      {
+        "name": "pushChainClient",
+        "type": "PushChainClient",
+        "description": "Initialized client with universal, orchestrator, and explorer namespaces"
+      }
     ],
     "sdk_method": "PushChain.initialize(signer, {options})",
     "auth_required": false,
@@ -32,10 +66,19 @@
     "operation": "write",
     "prerequisites": ["signer_library_available"],
     "inputs": [
-      {"name": "signer", "type": "viem.WalletClient | ethers.Wallet | UniversalSignerSkeleton", "required": true, "description": "Source signer to convert"}
+      {
+        "name": "signer",
+        "type": "viem.WalletClient | ethers.Wallet | UniversalSignerSkeleton",
+        "required": true,
+        "description": "Source signer to convert"
+      }
     ],
     "outputs": [
-      {"name": "universalSigner", "type": "UniversalSigner", "description": "Chain-agnostic signer with signMessage, signAndSendTransaction, signTypedData"}
+      {
+        "name": "universalSigner",
+        "type": "UniversalSigner",
+        "description": "Chain-agnostic signer with signMessage, signAndSendTransaction, signTypedData"
+      }
     ],
     "sdk_method": "PushChain.utils.signer.toUniversal(signer)",
     "auth_required": false,
@@ -52,12 +95,31 @@
     "operation": "write",
     "prerequisites": ["keypair_available", "chain_and_library_specified"],
     "inputs": [
-      {"name": "keypair", "type": "Keypair", "required": true, "description": "Solana keypair or similar"},
-      {"name": "options.chain", "type": "PushChain.CONSTANTS.CHAIN", "required": true, "description": "Target chain constant"},
-      {"name": "options.library", "type": "PushChain.CONSTANTS.LIBRARY", "required": true, "description": "Library constant (e.g., SOLANA_WEB3JS)"}
+      {
+        "name": "keypair",
+        "type": "Keypair",
+        "required": true,
+        "description": "Solana keypair or similar"
+      },
+      {
+        "name": "options.chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": true,
+        "description": "Target chain constant"
+      },
+      {
+        "name": "options.library",
+        "type": "PushChain.CONSTANTS.LIBRARY",
+        "required": true,
+        "description": "Library constant (e.g., SOLANA_WEB3JS)"
+      }
     ],
     "outputs": [
-      {"name": "universalSigner", "type": "UniversalSigner", "description": "Chain-agnostic signer from keypair"}
+      {
+        "name": "universalSigner",
+        "type": "UniversalSigner",
+        "description": "Chain-agnostic signer from keypair"
+      }
     ],
     "sdk_method": "PushChain.utils.signer.toUniversalFromKeypair(keypair, {chain, library})",
     "auth_required": false,
@@ -74,15 +136,49 @@
     "operation": "write",
     "prerequisites": ["push_chain_client_initialized"],
     "inputs": [
-      {"name": "tx.to", "type": "string | { address: string; chain: CHAIN }", "required": true, "description": "Target address or external chain target"},
-      {"name": "tx.from", "type": "{ chain: CHAIN }", "required": false, "description": "Use CEA as origin from specified chain"},
-      {"name": "tx.value", "type": "BigInt", "required": false, "description": "Native value in smallest unit (uPC for Push Chain)"},
-      {"name": "tx.data", "type": "string | Array<{to, data, value}>", "required": false, "description": "ABI-encoded calldata or multicall array"},
-      {"name": "tx.funds", "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }", "required": false, "description": "Assets to move atomically with execution"},
-      {"name": "tx.progressHook", "type": "(progress: ProgressHookType) => void", "required": false, "description": "Callback for transaction lifecycle events"}
+      {
+        "name": "tx.to",
+        "type": "string | { address: string; chain: CHAIN }",
+        "required": true,
+        "description": "Target address or external chain target"
+      },
+      {
+        "name": "tx.from",
+        "type": "{ chain: CHAIN }",
+        "required": false,
+        "description": "Use CEA as origin from specified chain"
+      },
+      {
+        "name": "tx.value",
+        "type": "BigInt",
+        "required": false,
+        "description": "Native value in smallest unit (uPC for Push Chain)"
+      },
+      {
+        "name": "tx.data",
+        "type": "string | Array<{to, data, value}>",
+        "required": false,
+        "description": "ABI-encoded calldata or multicall array"
+      },
+      {
+        "name": "tx.funds",
+        "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }",
+        "required": false,
+        "description": "Assets to move atomically with execution"
+      },
+      {
+        "name": "tx.progressHook",
+        "type": "(progress: ProgressHookType) => void",
+        "required": false,
+        "description": "Callback for transaction lifecycle events"
+      }
     ],
     "outputs": [
-      {"name": "txResponse", "type": "TransactionResponse", "description": "Transaction hash and execution receipt"}
+      {
+        "name": "txResponse",
+        "type": "TransactionResponse",
+        "description": "Transaction hash and execution receipt"
+      }
     ],
     "sdk_method": "pushChainClient.universal.sendTransaction({tx})",
     "auth_required": true,
@@ -99,13 +195,37 @@
     "operation": "write",
     "prerequisites": ["push_chain_client_initialized"],
     "inputs": [
-      {"name": "tx.to", "type": "{ address: string; chain: CHAIN }", "required": true, "description": "External chain target with address and chain constant"},
-      {"name": "tx.data", "type": "string", "required": false, "description": "ABI-encoded calldata"},
-      {"name": "tx.value", "type": "BigInt", "required": false, "description": "Native value for external chain"},
-      {"name": "tx.progressHook", "type": "(progress: ProgressHookType) => void", "required": false, "description": "Progress callback"}
+      {
+        "name": "tx.to",
+        "type": "{ address: string; chain: CHAIN }",
+        "required": true,
+        "description": "External chain target with address and chain constant"
+      },
+      {
+        "name": "tx.data",
+        "type": "string",
+        "required": false,
+        "description": "ABI-encoded calldata"
+      },
+      {
+        "name": "tx.value",
+        "type": "BigInt",
+        "required": false,
+        "description": "Native value for external chain"
+      },
+      {
+        "name": "tx.progressHook",
+        "type": "(progress: ProgressHookType) => void",
+        "required": false,
+        "description": "Progress callback"
+      }
     ],
     "outputs": [
-      {"name": "txResponse", "type": "TransactionResponse", "description": "Transaction response with external chain execution details"}
+      {
+        "name": "txResponse",
+        "type": "TransactionResponse",
+        "description": "Transaction response with external chain execution details"
+      }
     ],
     "sdk_method": "pushChainClient.universal.sendTransaction({tx})",
     "auth_required": true,
@@ -117,19 +237,44 @@
   {
     "id": "contract_initiated_multichain",
     "name": "Contract-Initiated Multichain Execution",
-    "description": "Smart contracts on Push Chain initiate execution on external chains via CEA system.",
+    "description": "Smart contracts on Push Chain initiate execution on external chains via CEA system using IUniversalGatewayPC.",
     "actor": ["developer"],
     "operation": "write",
     "prerequisites": ["smart_contract_deployed", "cea_system_configured"],
     "inputs": [
-      {"name": "contract", "type": "address", "required": true, "description": "Push Chain contract address"},
-      {"name": "targetChain", "type": "CHAIN", "required": true, "description": "External chain for execution"},
-      {"name": "calldata", "type": "bytes", "required": true, "description": "Encoded function call"}
+      {
+        "name": "req.recipient",
+        "type": "bytes",
+        "required": true,
+        "description": "CEA or target address on the external chain (bytes-encoded)"
+      },
+      {
+        "name": "req.payload",
+        "type": "bytes",
+        "required": true,
+        "description": "ABI-encoded calldata to execute on the external chain"
+      },
+      {
+        "name": "req.token",
+        "type": "address",
+        "required": false,
+        "description": "PRC20 token to bridge (address(0) for none)"
+      },
+      {
+        "name": "req.amount",
+        "type": "uint256",
+        "required": false,
+        "description": "Amount of PRC20 to bridge"
+      }
     ],
     "outputs": [
-      {"name": "execution", "type": "MultiChainExecutionResult", "description": "Cross-chain execution result"}
+      {
+        "name": "execution",
+        "type": "void",
+        "description": "Emits cross-chain event; response arrives via executeUniversalTx() inbound callback"
+      }
     ],
-    "sdk_method": null,
+    "sdk_method": "Solidity: IUniversalGatewayPC(0x...C1).sendUniversalTxOutbound(req) / executeUniversalTx(sourceChain, cea, payload, amount, prc20, txId)",
     "auth_required": true,
     "safe_for_autonomous_execution": false,
     "mcp_candidate": false,
@@ -144,11 +289,24 @@
     "operation": "tracking",
     "prerequisites": ["transaction_submitted"],
     "inputs": [
-      {"name": "txHash", "type": "string", "required": true, "description": "Transaction hash to track"}
+      {
+        "name": "txHash",
+        "type": "string",
+        "required": true,
+        "description": "Transaction hash to track"
+      }
     ],
     "outputs": [
-      {"name": "explorerUrl", "type": "string", "description": "Block explorer URL for the transaction"},
-      {"name": "status", "type": "TransactionStatus", "description": "Current transaction status"}
+      {
+        "name": "explorerUrl",
+        "type": "string",
+        "description": "Block explorer URL for the transaction"
+      },
+      {
+        "name": "status",
+        "type": "TransactionStatus",
+        "description": "Current transaction status"
+      }
     ],
     "sdk_method": "pushChainClient.explorer.getTransactionUrl(txHash)",
     "auth_required": false,
@@ -165,10 +323,19 @@
     "operation": "write",
     "prerequisites": ["push_chain_client_initialized"],
     "inputs": [
-      {"name": "message", "type": "Uint8Array", "required": true, "description": "Message bytes to sign"}
+      {
+        "name": "message",
+        "type": "Uint8Array",
+        "required": true,
+        "description": "Message bytes to sign"
+      }
     ],
     "outputs": [
-      {"name": "signature", "type": "Uint8Array", "description": "Cryptographic signature"}
+      {
+        "name": "signature",
+        "type": "Uint8Array",
+        "description": "Cryptographic signature"
+      }
     ],
     "sdk_method": "pushChainClient.universal.signMessage(message)",
     "auth_required": true,
@@ -180,19 +347,38 @@
   {
     "id": "read_blockchain_state",
     "name": "Read Blockchain State",
-    "description": "Reads on-chain state from Push Chain using standard EVM RPC methods.",
+    "description": "Reads on-chain state from Push Chain using Ethers.js JsonRpcProvider or Viem PublicClient connected to the Push Chain EVM RPC endpoint.",
     "actor": ["developer", "agent", "backend", "browser_agent"],
     "operation": "read",
-    "prerequisites": ["rpc_connection_available"],
+    "prerequisites": ["rpc_url_available"],
     "inputs": [
-      {"name": "rpcUrl", "type": "string", "required": true, "description": "RPC endpoint URL"},
-      {"name": "method", "type": "string", "required": true, "description": "RPC method name"},
-      {"name": "params", "type": "array", "required": false, "description": "Method parameters"}
+      {
+        "name": "rpcUrl",
+        "type": "string",
+        "required": true,
+        "description": "Push Chain RPC URL (e.g., https://evm.donut.rpc.push.org/)"
+      },
+      {
+        "name": "query",
+        "type": "string | { hash: string } | { address: string }",
+        "required": true,
+        "description": "Transaction hash, address, or block tag to query"
+      },
+      {
+        "name": "clientLibrary",
+        "type": "'ethers' | 'viem'",
+        "required": false,
+        "description": "EVM client library to use (default: ethers)"
+      }
     ],
     "outputs": [
-      {"name": "result", "type": "any", "description": "RPC response data"}
+      {
+        "name": "result",
+        "type": "TransactionResponse | Block | bigint | any",
+        "description": "On-chain data: transaction, block, balance, or contract call result"
+      }
     ],
-    "sdk_method": null,
+    "sdk_method": "new ethers.JsonRpcProvider(rpcUrl) | createPublicClient({ transport: http(rpcUrl) })",
     "auth_required": false,
     "safe_for_autonomous_execution": true,
     "mcp_candidate": true,
@@ -207,11 +393,24 @@
     "operation": "write",
     "prerequisites": ["react_app", "ui_kit_installed"],
     "inputs": [
-      {"name": "walletConfig.network", "type": "PushUI.CONSTANTS.PUSH_NETWORK", "required": true, "description": "Target network"}
+      {
+        "name": "walletConfig.network",
+        "type": "PushUI.CONSTANTS.PUSH_NETWORK",
+        "required": true,
+        "description": "Target network"
+      }
     ],
     "outputs": [
-      {"name": "connectionStatus", "type": "CONNECTION.STATUS", "description": "Current connection state"},
-      {"name": "pushChainClient", "type": "PushChainClient", "description": "Initialized client after connection"}
+      {
+        "name": "connectionStatus",
+        "type": "CONNECTION.STATUS",
+        "description": "Current connection state"
+      },
+      {
+        "name": "pushChainClient",
+        "type": "PushChainClient",
+        "description": "Initialized client after connection"
+      }
     ],
     "sdk_method": "PushUniversalWalletProvider + PushUniversalAccountButton",
     "auth_required": false,
@@ -228,10 +427,19 @@
     "operation": "read",
     "prerequisites": ["react_app", "ui_kit_installed"],
     "inputs": [
-      {"name": "walletConfig", "type": "WalletConfig", "required": true, "description": "Network and optional config"}
+      {
+        "name": "walletConfig",
+        "type": "WalletConfig",
+        "required": true,
+        "description": "Network and optional config"
+      }
     ],
     "outputs": [
-      {"name": "context", "type": "PushWalletContext", "description": "Wallet state and client access"}
+      {
+        "name": "context",
+        "type": "PushWalletContext",
+        "description": "Wallet state and client access"
+      }
     ],
     "sdk_method": "PushUniversalWalletProvider",
     "auth_required": false,
@@ -248,12 +456,21 @@
     "operation": "read",
     "prerequisites": ["rpc_url_available"],
     "inputs": [
-      {"name": "rpcUrl", "type": "string", "required": true, "description": "Push Chain RPC URL (e.g., https://evm.donut.rpc.push.org/)"}
+      {
+        "name": "rpcUrl",
+        "type": "string",
+        "required": true,
+        "description": "Push Chain RPC URL (e.g., https://evm.donut.rpc.push.org/)"
+      }
     ],
     "outputs": [
-      {"name": "provider", "type": "ethers.JsonRpcProvider | viem.PublicClient", "description": "EVM-compatible provider"}
+      {
+        "name": "provider",
+        "type": "ethers.JsonRpcProvider | viem.PublicClient",
+        "description": "EVM-compatible provider for read-only on-chain queries"
+      }
     ],
-    "sdk_method": null,
+    "sdk_method": "new ethers.JsonRpcProvider(rpcUrl) | createPublicClient({ chain: pushTestnetDonut, transport: http(rpcUrl) })",
     "auth_required": false,
     "safe_for_autonomous_execution": true,
     "mcp_candidate": true,
@@ -269,7 +486,11 @@
     "prerequisites": ["sdk_imported"],
     "inputs": [],
     "outputs": [
-      {"name": "constants", "type": "PushChainConstants", "description": "All constant values"}
+      {
+        "name": "constants",
+        "type": "PushChainConstants",
+        "description": "All constant values"
+      }
     ],
     "sdk_method": "PushChain.CONSTANTS",
     "auth_required": false,
@@ -287,7 +508,11 @@
     "prerequisites": ["sdk_imported"],
     "inputs": [],
     "outputs": [
-      {"name": "utils", "type": "PushChainUtils", "description": "Utility namespace with signer, account, helpers"}
+      {
+        "name": "utils",
+        "type": "PushChainUtils",
+        "description": "Utility namespace with signer, account, helpers"
+      }
     ],
     "sdk_method": "PushChain.utils",
     "auth_required": false,
@@ -302,12 +527,28 @@
     "description": "Access deployed helper contracts for origin chain detection and user categorization.",
     "actor": ["developer"],
     "operation": "read",
-    "prerequisites": ["smart_contract_environment"],
-    "inputs": [],
-    "outputs": [
-      {"name": "helpers", "type": "ContractHelpers", "description": "Helper contract addresses and ABIs"}
+    "prerequisites": ["evm_client_initialized"],
+    "inputs": [
+      {
+        "name": "address",
+        "type": "address",
+        "required": true,
+        "description": "Push Chain address to query (UEA or native EOA)"
+      }
     ],
-    "sdk_method": null,
+    "outputs": [
+      {
+        "name": "account",
+        "type": "UniversalAccountId",
+        "description": "{ chainNamespace, chainId, owner } of the origin wallet"
+      },
+      {
+        "name": "isUEA",
+        "type": "boolean",
+        "description": "True if address is a cross-chain Universal Executor Account"
+      }
+    ],
+    "sdk_method": "Solidity: IUEAFactory(0x...eA).getOriginForUEA(addr) | getUEAForOrigin(UniversalAccountId) / Off-chain: ethers.Contract(FACTORY, ABI, provider).getOriginForUEA(address)",
     "auth_required": false,
     "safe_for_autonomous_execution": true,
     "mcp_candidate": false,
@@ -322,14 +563,39 @@
     "operation": "read",
     "prerequisites": ["push_chain_client_initialized"],
     "inputs": [
-      {"name": "options.forceRefresh", "type": "boolean", "required": false, "description": "Re-fetch status from chain"}
+      {
+        "name": "options.forceRefresh",
+        "type": "boolean",
+        "required": false,
+        "description": "Re-fetch status from chain"
+      }
     ],
     "outputs": [
-      {"name": "status.mode", "type": "string", "description": "read-only or signer mode"},
-      {"name": "status.uea.loaded", "type": "boolean", "description": "Whether status has been fetched"},
-      {"name": "status.uea.deployed", "type": "boolean", "description": "Whether UEA is deployed"},
-      {"name": "status.uea.version", "type": "string", "description": "Current UEA version"},
-      {"name": "status.uea.requiresUpgrade", "type": "boolean", "description": "Whether upgrade is needed"}
+      {
+        "name": "status.mode",
+        "type": "string",
+        "description": "read-only or signer mode"
+      },
+      {
+        "name": "status.uea.loaded",
+        "type": "boolean",
+        "description": "Whether status has been fetched"
+      },
+      {
+        "name": "status.uea.deployed",
+        "type": "boolean",
+        "description": "Whether UEA is deployed"
+      },
+      {
+        "name": "status.uea.version",
+        "type": "string",
+        "description": "Current UEA version"
+      },
+      {
+        "name": "status.uea.requiresUpgrade",
+        "type": "boolean",
+        "description": "Whether upgrade is needed"
+      }
     ],
     "sdk_method": "pushChainClient.getAccountStatus({options})",
     "auth_required": false,
@@ -346,10 +612,19 @@
     "operation": "write",
     "prerequisites": ["push_chain_client_initialized", "uea_requires_upgrade"],
     "inputs": [
-      {"name": "options.progressHook", "type": "(event: ProgressEvent) => void", "required": false, "description": "Callback for upgrade progress"}
+      {
+        "name": "options.progressHook",
+        "type": "(event: ProgressEvent) => void",
+        "required": false,
+        "description": "Callback for upgrade progress"
+      }
     ],
     "outputs": [
-      {"name": "result", "type": "void", "description": "Upgrade completes or throws on failure"}
+      {
+        "name": "result",
+        "type": "void",
+        "description": "Upgrade completes or throws on failure"
+      }
     ],
     "sdk_method": "pushChainClient.upgradeAccount({options})",
     "auth_required": true,
@@ -366,11 +641,25 @@
     "operation": "write",
     "prerequisites": ["push_chain_client_initialized"],
     "inputs": [
-      {"name": "signerOrAccount", "type": "UniversalSigner | UniversalAccount", "required": true, "description": "New signer or account"},
-      {"name": "options", "type": "InitializeOptions", "required": false, "description": "Updated configuration options"}
+      {
+        "name": "signerOrAccount",
+        "type": "UniversalSigner | UniversalAccount",
+        "required": true,
+        "description": "New signer or account"
+      },
+      {
+        "name": "options",
+        "type": "InitializeOptions",
+        "required": false,
+        "description": "Updated configuration options"
+      }
     ],
     "outputs": [
-      {"name": "pushChainClient", "type": "PushChainClient", "description": "New client instance"}
+      {
+        "name": "pushChainClient",
+        "type": "PushChainClient",
+        "description": "New client instance"
+      }
     ],
     "sdk_method": "pushChainClient.reinitialize(signerOrAccount, {options})",
     "auth_required": false,
@@ -387,13 +676,37 @@
     "operation": "write",
     "prerequisites": ["custom_signing_logic"],
     "inputs": [
-      {"name": "account", "type": "UniversalAccount", "required": true, "description": "Account with address and chain"},
-      {"name": "options.signAndSendTransaction", "type": "(unsignedTx: Uint8Array) => Promise<Uint8Array>", "required": true, "description": "Custom tx signing"},
-      {"name": "options.signMessage", "type": "(data: Uint8Array) => Promise<Uint8Array>", "required": true, "description": "Custom message signing"},
-      {"name": "options.signTypedData", "type": "(params) => Promise<Uint8Array>", "required": true, "description": "Custom typed data signing"}
+      {
+        "name": "account",
+        "type": "UniversalAccount",
+        "required": true,
+        "description": "Account with address and chain"
+      },
+      {
+        "name": "options.signAndSendTransaction",
+        "type": "(unsignedTx: Uint8Array) => Promise<Uint8Array>",
+        "required": true,
+        "description": "Custom tx signing"
+      },
+      {
+        "name": "options.signMessage",
+        "type": "(data: Uint8Array) => Promise<Uint8Array>",
+        "required": true,
+        "description": "Custom message signing"
+      },
+      {
+        "name": "options.signTypedData",
+        "type": "(params) => Promise<Uint8Array>",
+        "required": true,
+        "description": "Custom typed data signing"
+      }
     ],
     "outputs": [
-      {"name": "skeleton", "type": "UniversalSignerSkeleton", "description": "Skeleton to pass to toUniversal()"}
+      {
+        "name": "skeleton",
+        "type": "UniversalSignerSkeleton",
+        "description": "Skeleton to pass to toUniversal()"
+      }
     ],
     "sdk_method": "PushChain.utils.signer.construct(account, {options})",
     "auth_required": false,
@@ -411,7 +724,11 @@
     "prerequisites": ["inside_push_wallet_provider"],
     "inputs": [],
     "outputs": [
-      {"name": "connectionStatus", "type": "CONNECTION.STATUS", "description": "Current connection state"}
+      {
+        "name": "connectionStatus",
+        "type": "CONNECTION.STATUS",
+        "description": "Current connection state"
+      }
     ],
     "sdk_method": "usePushWalletContext()",
     "auth_required": false,
@@ -429,7 +746,11 @@
     "prerequisites": ["inside_push_wallet_provider", "wallet_connected"],
     "inputs": [],
     "outputs": [
-      {"name": "pushChainClient", "type": "PushChainClient", "description": "Initialized client instance"}
+      {
+        "name": "pushChainClient",
+        "type": "PushChainClient",
+        "description": "Initialized client instance"
+      }
     ],
     "sdk_method": "usePushChainClient()",
     "auth_required": false,
