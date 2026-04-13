@@ -1,0 +1,459 @@
+[
+  {
+    "tool_name": "get_supported_chains",
+    "purpose": "Returns the list of chains supported by Push Chain for universal transactions.",
+    "inputs": [
+      {
+        "name": "network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": false,
+        "description": "The Push Chain network (TESTNET or MAINNET). Defaults to TESTNET if not specified."
+      }
+    ],
+    "return_type": "Array of supported chain identifiers in CAIP-10 format (e.g., 'eip155:11155111', 'solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1')",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": "PushChain.CONSTANTS.CHAIN.*",
+    "corresponding_workflow": null,
+    "notes": "Chain list is derived from SDK constants. No RPC call required."
+  },
+  {
+    "tool_name": "initialize_push_client",
+    "purpose": "Initializes a PushChainClient from a UniversalSigner or UniversalAccount for read/write or read-only operations.",
+    "inputs": [
+      {
+        "name": "signer_or_account",
+        "type": "UniversalSigner | UniversalAccount",
+        "required": true,
+        "description": "A UniversalSigner for full capabilities or UniversalAccount for read-only mode."
+      },
+      {
+        "name": "network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": true,
+        "description": "Push Chain network to connect to (TESTNET or MAINNET)."
+      },
+      {
+        "name": "rpc_urls",
+        "type": "Record<CHAIN, string[]>",
+        "required": false,
+        "description": "Custom RPC URLs mapped by chain IDs. Uses defaults if not provided."
+      },
+      {
+        "name": "block_explorers",
+        "type": "Record<CHAIN, string[]>",
+        "required": false,
+        "description": "Custom block explorer URLs mapped by chain IDs."
+      },
+      {
+        "name": "print_traces",
+        "type": "boolean",
+        "required": false,
+        "description": "When true, logs internal trace information for debugging."
+      }
+    ],
+    "return_type": "PushChainClient object with .universal, .orchestrator, .explorer namespaces",
+    "idempotent": true,
+    "read_only": false,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": "PushChain.initialize(signer, {options})",
+    "corresponding_workflow": "WF-INIT-001",
+    "notes": "This is the entry point for all Push Chain operations. Must be called before any transaction or signing."
+  },
+  {
+    "tool_name": "estimate_fee",
+    "purpose": "Estimates the gas cost for a universal transaction before execution.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient instance."
+      },
+      {
+        "name": "to",
+        "type": "string | { address: string; chain: CHAIN }",
+        "required": true,
+        "description": "Target address or address+chain object for external chain execution."
+      },
+      {
+        "name": "value",
+        "type": "BigInt",
+        "required": false,
+        "description": "Native value to send in smallest unit (uPC for Push Chain)."
+      },
+      {
+        "name": "data",
+        "type": "string | Array<MulticallPayload>",
+        "required": false,
+        "description": "ABI-encoded calldata or multicall array."
+      },
+      {
+        "name": "funds",
+        "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }",
+        "required": false,
+        "description": "Assets to move as part of the transaction."
+      }
+    ],
+    "return_type": "Estimated gas cost object with breakdown by chain",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "candidate",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": null,
+    "notes": "status: undocumented. Fee estimation appears to happen internally during sendTransaction (progress event SEND-TX-02-01/02), but no standalone public method is documented. This is inferred from transaction lifecycle."
+  },
+  {
+    "tool_name": "build_universal_transaction",
+    "purpose": "Constructs a universal transaction payload without executing it.",
+    "inputs": [
+      {
+        "name": "to",
+        "type": "string | { address: string; chain: CHAIN }",
+        "required": true,
+        "description": "Target address (Push Chain) or address+chain object (external chain)."
+      },
+      {
+        "name": "from",
+        "type": "{ chain: CHAIN }",
+        "required": false,
+        "description": "When set, uses CEA on that chain as execution origin (Route 3)."
+      },
+      {
+        "name": "value",
+        "type": "BigInt",
+        "required": false,
+        "description": "Native value in smallest unit."
+      },
+      {
+        "name": "data",
+        "type": "string | Array<MulticallPayload>",
+        "required": false,
+        "description": "Encoded calldata or multicall batch."
+      },
+      {
+        "name": "funds",
+        "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }",
+        "required": false,
+        "description": "Assets to move atomically with execution."
+      }
+    ],
+    "return_type": "UniversalTransaction object ready for sendTransaction",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "candidate",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": "WF-TX-001",
+    "notes": "status: inferred. The SDK accepts tx objects directly in sendTransaction. No separate build method is documented, but the tx structure is well-defined."
+  },
+  {
+    "tool_name": "send_universal_transaction",
+    "purpose": "Executes a universal transaction on Push Chain or supported external chains.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient with signing capabilities."
+      },
+      {
+        "name": "to",
+        "type": "string | { address: string; chain: CHAIN }",
+        "required": true,
+        "description": "Plain address for Push Chain (Route 1), or {address, chain} for external chain (Route 2)."
+      },
+      {
+        "name": "from",
+        "type": "{ chain: CHAIN }",
+        "required": false,
+        "description": "Forces CEA on specified chain as origin (Route 3)."
+      },
+      {
+        "name": "value",
+        "type": "BigInt",
+        "required": false,
+        "description": "Native value to send in smallest unit."
+      },
+      {
+        "name": "data",
+        "type": "string | Array<MulticallPayload>",
+        "required": false,
+        "description": "ABI-encoded calldata or multicall array."
+      },
+      {
+        "name": "funds",
+        "type": "{ amount: BigInt; token?: MOVEABLE.TOKEN }",
+        "required": false,
+        "description": "Assets to move atomically."
+      },
+      {
+        "name": "progress_hook",
+        "type": "(progress: ProgressHookType) => void",
+        "required": false,
+        "description": "Callback for transaction lifecycle updates."
+      }
+    ],
+    "return_type": "Transaction response with hash, receipt, and execution status",
+    "idempotent": false,
+    "read_only": false,
+    "state_changing": true,
+    "safety_risks": [
+      "Transfers value from user account",
+      "May move assets across chains",
+      "Executes contract calls that could have irreversible effects"
+    ],
+    "user_confirmation_required": true,
+    "availability": "ready",
+    "corresponding_sdk_method": "pushChainClient.universal.sendTransaction({tx})",
+    "corresponding_workflow": "WF-TX-001",
+    "notes": "Core transaction method. Routes determined automatically by to/from fields. Requires user signature."
+  },
+  {
+    "tool_name": "track_universal_transaction",
+    "purpose": "Monitors the status and execution progress of a universal transaction.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient instance."
+      },
+      {
+        "name": "tx_hash",
+        "type": "string",
+        "required": true,
+        "description": "The transaction hash to track."
+      }
+    ],
+    "return_type": "Transaction status object with confirmation count, execution result, and cross-chain sync state",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": "WF-TX-002",
+    "notes": "Documented at /docs/chain/build/track-universal-transaction/. Specific SDK method signature not fully detailed in provided context."
+  },
+  {
+    "tool_name": "sign_universal_message",
+    "purpose": "Signs an arbitrary message using the universal signer.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient with signing capabilities."
+      },
+      {
+        "name": "message",
+        "type": "Uint8Array | string",
+        "required": true,
+        "description": "The message to sign."
+      }
+    ],
+    "return_type": "Signature as Uint8Array",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [
+      "Signatures can authorize actions if misused",
+      "Phishing risk if message content not validated"
+    ],
+    "user_confirmation_required": true,
+    "availability": "ready",
+    "corresponding_sdk_method": "pushChainClient.universal.signMessage(message)",
+    "corresponding_workflow": null,
+    "notes": "Documented at /docs/chain/build/sign-universal-message/."
+  },
+  {
+    "tool_name": "get_chain_config",
+    "purpose": "Retrieves chain configuration including RPC URLs, chain IDs, and network parameters.",
+    "inputs": [
+      {
+        "name": "chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": true,
+        "description": "The chain identifier to get configuration for."
+      },
+      {
+        "name": "network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": false,
+        "description": "Network context (TESTNET or MAINNET)."
+      }
+    ],
+    "return_type": "Chain configuration object with RPC URLs, chain ID, native token info",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": null,
+    "notes": "Documented at /docs/chain/setup/chain-config/. Configuration is primarily static from SDK constants."
+  },
+  {
+    "tool_name": "get_contract_addresses",
+    "purpose": "Returns deployed contract addresses for Push Chain infrastructure (UG, UEAFactory, etc.).",
+    "inputs": [
+      {
+        "name": "network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": true,
+        "description": "The Push Chain network to get addresses for."
+      },
+      {
+        "name": "chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": false,
+        "description": "Optional chain filter for chain-specific gateway contracts."
+      }
+    ],
+    "return_type": "Object containing contract addresses keyed by contract name",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": null,
+    "notes": "Documented at /docs/chain/setup/smart-contract-address-book/."
+  },
+  {
+    "tool_name": "read_contract_state",
+    "purpose": "Reads state from a contract on Push Chain or supported external chains.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient instance (read-only sufficient)."
+      },
+      {
+        "name": "contract_address",
+        "type": "string",
+        "required": true,
+        "description": "The contract address to read from."
+      },
+      {
+        "name": "abi",
+        "type": "Array",
+        "required": true,
+        "description": "Contract ABI for decoding."
+      },
+      {
+        "name": "function_name",
+        "type": "string",
+        "required": true,
+        "description": "The view/pure function to call."
+      },
+      {
+        "name": "args",
+        "type": "Array<any>",
+        "required": false,
+        "description": "Arguments to pass to the function."
+      },
+      {
+        "name": "chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": false,
+        "description": "Target chain. Defaults to Push Chain if not specified."
+      }
+    ],
+    "return_type": "Decoded return value from the contract call",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": null,
+    "corresponding_workflow": null,
+    "notes": "Documented at /docs/chain/build/reading-blockchain-state/. Uses standard EVM call under the hood."
+  },
+  {
+    "tool_name": "derive_uea_address",
+    "purpose": "Computes the deterministic Universal Executor Account address from a Universal Origin Account.",
+    "inputs": [
+      {
+        "name": "uoa_address",
+        "type": "string",
+        "required": true,
+        "description": "The origin account address (e.g., Ethereum address, Solana pubkey)."
+      },
+      {
+        "name": "uoa_chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": true,
+        "description": "The chain of the origin account."
+      },
+      {
+        "name": "network",
+        "type": "PushChain.CONSTANTS.PUSH_NETWORK",
+        "required": false,
+        "description": "Push Chain network context."
+      }
+    ],
+    "return_type": "UEA address on Push Chain",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": "pushChainClient.universal.account (getter)",
+    "corresponding_workflow": null,
+    "notes": "status: inferred. UEA derivation is deterministic and happens during client initialization. The getter is documented but standalone derivation function may not be public."
+  },
+  {
+    "tool_name": "get_explorer_url",
+    "purpose": "Generates a block explorer URL for a transaction hash.",
+    "inputs": [
+      {
+        "name": "push_chain_client",
+        "type": "PushChainClient",
+        "required": true,
+        "description": "An initialized PushChainClient instance."
+      },
+      {
+        "name": "tx_hash",
+        "type": "string",
+        "required": true,
+        "description": "The transaction hash."
+      },
+      {
+        "name": "chain",
+        "type": "PushChain.CONSTANTS.CHAIN",
+        "required": false,
+        "description": "Target chain. Defaults to Push Chain."
+      }
+    ],
+    "return_type": "Full URL string to the transaction on block explorer",
+    "idempotent": true,
+    "read_only": true,
+    "state_changing": false,
+    "safety_risks": [],
+    "user_confirmation_required": false,
+    "availability": "ready",
+    "corresponding_sdk_method": "pushChainClient.explorer.getTransactionUrl(txHash)",
+    "corresponding_workflow": null,
+    "notes": "Documented in Initialize Push Chain Client section. Also has listUrls() method."
+  }
+]

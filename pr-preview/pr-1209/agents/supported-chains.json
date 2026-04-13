@@ -1,0 +1,105 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-01-01T00:00:00.000Z",
+  "description": "Supported chains for Push Chain universal transactions",
+  "testnet": [
+    {
+      "name": "Push Chain Testnet (Donut)",
+      "namespace": "eip155:42101",
+      "constant": "PUSH_TESTNET_DONUT",
+      "type": "push_native",
+      "fee_token": "PC",
+      "notes": "Native Push Chain testnet. RPC: https://evm.donut.rpc.push.org/"
+    },
+    {
+      "name": "Ethereum Sepolia",
+      "namespace": "eip155:11155111",
+      "constant": "ETHEREUM_SEPOLIA",
+      "type": "evm",
+      "fee_token": "ETH",
+      "notes": "Primary EVM testnet for Push Chain integration"
+    },
+    {
+      "name": "Solana Devnet",
+      "namespace": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+      "constant": "SOLANA_DEVNET",
+      "type": "non_evm",
+      "fee_token": "SOL",
+      "notes": "Solana devnet support via SOLANA_WEB3JS library"
+    }
+  ],
+  "mainnet": [
+    {
+      "name": "Push Chain Mainnet",
+      "namespace": "eip155:TBD",
+      "constant": "PUSH_MAINNET",
+      "type": "push_native",
+      "fee_token": "PC",
+      "status": "announced",
+      "notes": "Mainnet not yet live"
+    },
+    {
+      "name": "Ethereum Mainnet",
+      "namespace": "eip155:1",
+      "constant": "ETHEREUM_MAINNET",
+      "type": "evm",
+      "fee_token": "ETH",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "BNB Chain",
+      "namespace": "eip155:56",
+      "constant": "BNB_CHAIN",
+      "type": "evm",
+      "fee_token": "BNB",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "Polygon",
+      "namespace": "eip155:137",
+      "constant": "POLYGON",
+      "type": "evm",
+      "fee_token": "MATIC",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "Arbitrum",
+      "namespace": "eip155:42161",
+      "constant": "ARBITRUM",
+      "type": "evm",
+      "fee_token": "ETH",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "Optimism",
+      "namespace": "eip155:10",
+      "constant": "OPTIMISM",
+      "type": "evm",
+      "fee_token": "ETH",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "Base",
+      "namespace": "eip155:8453",
+      "constant": "BASE",
+      "type": "evm",
+      "fee_token": "ETH",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    },
+    {
+      "name": "Solana Mainnet",
+      "namespace": "solana:mainnet",
+      "constant": "SOLANA_MAINNET",
+      "type": "non_evm",
+      "fee_token": "SOL",
+      "status": "announced",
+      "notes": "Planned for mainnet launch"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "entries": [
+    {
+      "date": "2026-04-12T23:24:07.649Z",
+      "version": "1.0.0",
+      "changes": [
+        "Initial /agents/ layer generated",
+        "Created mcp-candidates.json with 12 MCP tool candidates",
+        "Created changelog.json for tracking file mutations",
+        "Created source-freshness.json for dependency tracking"
+      ],
+      "files_affected": [
+        "agents/mcp-candidates.json",
+        "agents/changelog.json",
+        "agents/source-freshness.json"
+      ],
+      "trigger": "build.agents.mjs initial run"
+    }
+  ]
+}

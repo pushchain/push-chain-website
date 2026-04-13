@@ -1,0 +1,139 @@
+{
+  "version": "1.0.0",
+  "last_generated": "2026-04-12T23:24:07.649Z",
+  "dependencies": [
+    {
+      "agent_file": "agents/supported-chains.json",
+      "source_sections": [
+        "docs/chain/important-concepts",
+        "docs/chain/setup/chain-config"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when supported chains list changes or new chain support announced"
+    },
+    {
+      "agent_file": "agents/glossary.json",
+      "source_sections": [
+        "docs/chain/important-concepts",
+        "docs/chain/deep-dives/how-uea-works"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when core terminology or account model changes"
+    },
+    {
+      "agent_file": "agents/sdk-methods.json",
+      "source_sections": [
+        "docs/chain/build/create-universal-signer",
+        "docs/chain/build/initialize-push-chain-client",
+        "docs/chain/build/send-universal-transaction",
+        "docs/chain/build/track-universal-transaction",
+        "docs/chain/build/sign-universal-message",
+        "docs/chain/build/utility-functions",
+        "docs/chain/build/reading-blockchain-state",
+        "docs/chain/build/contract-helpers"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when SDK API changes, new methods added, or signatures updated"
+    },
+    {
+      "agent_file": "agents/workflows.json",
+      "source_sections": [
+        "docs/chain/build/understanding-universal-transactions",
+        "docs/chain/build/send-universal-transaction",
+        "docs/chain/build/universal-transaction-scenarios",
+        "docs/chain/build/send-multichain-transactions",
+        "docs/chain/tutorials"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when transaction flows, routing logic, or multi-step processes change"
+    },
+    {
+      "agent_file": "agents/error-codes.json",
+      "source_sections": [
+        "docs/chain/build/send-universal-transaction",
+        "docs/chain/build/advanced/upgrade-account"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": true,
+      "refresh_trigger": "when progress hook events or error handling documentation changes"
+    },
+    {
+      "agent_file": "agents/contract-addresses.json",
+      "source_sections": [
+        "docs/chain/setup/smart-contract-address-book"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when new contracts deployed or addresses updated"
+    },
+    {
+      "agent_file": "agents/mcp-candidates.json",
+      "source_sections": [
+        "docs/chain/build",
+        "docs/chain/setup",
+        "docs/chain/important-concepts"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when SDK methods added/removed, new capabilities documented, or API surface changes"
+    },
+    {
+      "agent_file": "agents/ui-kit-components.json",
+      "source_sections": [
+        "docs/chain/ui-kit",
+        "docs/chain/ui-kit/customizations",
+        "docs/chain/ui-kit/examples"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when UI Kit components, hooks, or theming options change"
+    },
+    {
+      "agent_file": "agents/tutorials-index.json",
+      "source_sections": [
+        "docs/chain/tutorials",
+        "docs/chain/tutorials/basics",
+        "docs/chain/tutorials/power-features",
+        "docs/chain/tutorials/token-systems"
+      ],
+      "change_frequency": "high",
+      "cache_safe": false,
+      "refresh_trigger": "when new tutorials added or existing tutorials updated"
+    },
+    {
+      "agent_file": "agents/rpc-methods.json",
+      "source_sections": [
+        "docs/chain/node-and-system-tools/json-rpc-functions"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when JSON-RPC methods added or modified"
+    },
+    {
+      "agent_file": "agents/network-config.json",
+      "source_sections": [
+        "docs/chain/setup/chain-config",
+        "docs/chain/setup/tooling/faucet",
+        "docs/chain/setup/tooling/block-explorer"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when network endpoints, faucet URLs, or explorer URLs change"
+    },
+    {
+      "agent_file": "agents/account-types.json",
+      "source_sections": [
+        "docs/chain/important-concepts",
+        "docs/chain/deep-dives/how-uea-works",
+        "docs/chain/build/understanding-universal-transactions"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when UOA/UEA/CEA model or derivation logic changes"
+    }
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-04-13T00:00:00.000Z",
+  "base_url": "https://push.org",
+  "description": "Maps every major task and capability to its authoritative documentation source. Use this as the entry point for RAG and retrieval systems.",
+  "entries": [
+    {
+      "task": "Initialize Push Chain SDK client",
+      "capability_id": "initialize_client",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/quickstart-push-chain/", "type": "docs", "confidence": "high", "normative": true },
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/initialize-client.md", "agents/examples/initialize-client-ethers.md", "agents/examples/initialize-client-solana.md"],
+      "prefer_over": ["npm README"],
+      "notes": "Always start here. Returns PushChainClient with .universal, .orchestrator, .explorer namespaces."
+    },
+    {
+      "task": "Convert EVM signer (ethers/viem) to UniversalSigner",
+      "capability_id": "create_universal_signer",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/initialize-client.md", "agents/examples/initialize-client-ethers.md", "agents/sdk-capabilities.json"],
+      "prefer_over": [],
+      "notes": "PushChain.utils.signer.toUniversal(signer). Works with ethers v5, v6, and viem WalletClient."
+    },
+    {
+      "task": "Convert Solana keypair to UniversalSigner",
+      "capability_id": "create_universal_signer_from_keypair",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/examples/initialize-client-solana.md", "agents/sdk-capabilities.json"],
+      "prefer_over": [],
+      "notes": "PushChain.utils.signer.toUniversalFromKeypair(keypair, { chain, library }). Must specify SOLANA_WEB3JS library."
+    },
+    {
+      "task": "Send a transaction on Push Chain (Route 1)",
+      "capability_id": "send_universal_transaction",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/send-universal-transaction.md", "agents/examples/send-transaction-push-chain.md", "agents/schemas/universal-transaction-request.json"],
+      "prefer_over": [],
+      "notes": "Route 1: tx.to is a plain string address. Executes on Push Chain via UEA."
+    },
+    {
+      "task": "Send a transaction to an external chain (Route 2)",
+      "capability_id": "send_multichain_transaction",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/send-multichain-transaction.md", "agents/examples/send-transaction-external-chain.md"],
+      "prefer_over": [],
+      "notes": "Route 2: tx.to is { address, chain }. Executes on external chain via CEA. Route 3: tx.to is plain + tx.from.chain set."
+    },
+    {
+      "task": "Smart contract initiates cross-chain execution",
+      "capability_id": "contract_initiated_multichain",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/capabilities.json", "agents/workflows/send-multichain-transaction.md"],
+      "prefer_over": [],
+      "notes": "Push Chain smart contracts can trigger CEA execution on external chains. Route 3 pattern."
+    },
+    {
+      "task": "Track transaction status and confirmations",
+      "capability_id": "track_transaction",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/track-universal-transaction/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/track-transaction.md", "agents/examples/track-transaction.md"],
+      "prefer_over": [],
+      "notes": "Use tx.wait() for synchronous wait, progressHook for real-time events, trackTransaction() for polling by hash."
+    },
+    {
+      "task": "Sign a message universally",
+      "capability_id": "sign_universal_message",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/sign-universal-message/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/sign-universal-message.md", "agents/examples/sign-message.md"],
+      "prefer_over": [],
+      "notes": "pushChainClient.universal.signMessage(data). Signs from any chain wallet."
+    },
+    {
+      "task": "Read blockchain state without signing",
+      "capability_id": "read_blockchain_state",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/sdk-capabilities.json", "agents/capabilities.json"],
+      "prefer_over": [],
+      "notes": "Initialize with UniversalAccount (not signer) for read-only mode. Uses pushChainClient.explorer namespace."
+    },
+    {
+      "task": "Connect wallet in a React application",
+      "capability_id": "connect_wallet_ui",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/connect-wallet-ui-kit/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/connect-wallet-ui-kit.md", "agents/examples/wallet-provider-react.md"],
+      "prefer_over": [],
+      "notes": "Use PushUniversalAccountButton and PushUniversalWalletProvider from @pushchain/ui-kit."
+    },
+    {
+      "task": "Set up wallet provider context in React",
+      "capability_id": "use_wallet_provider",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/connect-wallet-ui-kit/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/connect-wallet-ui-kit.md", "agents/examples/wallet-provider-react.md"],
+      "prefer_over": [],
+      "notes": "PushUniversalWalletProvider wraps the app. usePushChainClient() hook returns initialized client."
+    },
+    {
+      "task": "Initialize EVM client for Push Chain",
+      "capability_id": "initialize_evm_client",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/sdk-capabilities.json", "agents/supported-chains.json"],
+      "prefer_over": [],
+      "notes": "Create ethers or viem client connected to Push Chain RPC. Use for direct contract reads or custom interactions."
+    },
+    {
+      "task": "Look up PushChain.CONSTANTS values",
+      "capability_id": "get_constants",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true },
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "medium", "normative": false }
+      ],
+      "agent_files": ["agents/constants.json", "agents/supported-chains.json"],
+      "prefer_over": [],
+      "notes": "agents/constants.json is the canonical lookup for all CHAIN, PUSH_NETWORK, LIBRARY, and MOVEABLE.TOKEN values."
+    },
+    {
+      "task": "Use utility functions (parse units, format units, account helpers)",
+      "capability_id": "use_utility_functions",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/utility-functions/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/sdk-capabilities.json", "agents/examples/index.json"],
+      "prefer_over": [],
+      "notes": "PushChain.utils.helpers.* and PushChain.utils.account.*. See agents/examples/index.json for 20+ utility examples."
+    },
+    {
+      "task": "Use contract helper utilities",
+      "capability_id": "use_contract_helpers",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/contract-helpers/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/sdk-capabilities.json"],
+      "prefer_over": [],
+      "notes": "Deployed helper contracts for origin chain detection and user categorization. status: inferred from docs."
+    },
+    {
+      "task": "Check UEA deployment status and upgrade requirements",
+      "capability_id": "get_account_status",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/capabilities.json", "agents/errors.json"],
+      "prefer_over": [],
+      "notes": "Check before sending if UEA may need upgrade. Returns { uea: { deployed, requiresUpgrade, version } }."
+    },
+    {
+      "task": "Upgrade Universal Executor Account",
+      "capability_id": "upgrade_account",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/capabilities.json", "agents/recovery-playbook.md"],
+      "prefer_over": [],
+      "notes": "Gasless operation. Call pushChainClient.upgradeAccount() when getAccountStatus shows requiresUpgrade: true."
+    },
+    {
+      "task": "Reinitialize client with different signer",
+      "capability_id": "reinitialize_client",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "low", "normative": false, "status": "inferred" }
+      ],
+      "agent_files": ["agents/workflows/initialize-client.md"],
+      "prefer_over": [],
+      "notes": "Used when wallet switches or session resets. status: inferred."
+    },
+    {
+      "task": "Build a custom signer for unsupported wallets",
+      "capability_id": "construct_custom_signer",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/initialize-client/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/schemas/universal-signer.json", "agents/workflows/initialize-client.md"],
+      "prefer_over": [],
+      "notes": "PushChain.utils.signer.construct(account, { signMessage, signTransaction, signTypedData }) then toUniversal()."
+    },
+    {
+      "task": "Access wallet context in React hooks",
+      "capability_id": "use_push_wallet_context",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/connect-wallet-ui-kit/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/connect-wallet-ui-kit.md", "agents/examples/wallet-provider-react.md"],
+      "prefer_over": [],
+      "notes": "usePushWalletContext() hook from @pushchain/ui-kit."
+    },
+    {
+      "task": "Access initialized PushChainClient via React hook",
+      "capability_id": "use_push_chain_client_hook",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/connect-wallet-ui-kit/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/workflows/connect-wallet-ui-kit.md", "agents/examples/wallet-provider-react.md"],
+      "prefer_over": [],
+      "notes": "usePushChainClient() hook returns the initialized pushChainClient instance from PushUniversalWalletProvider."
+    },
+    {
+      "task": "Understand UEA (Universal Executor Account)",
+      "capability_id": null,
+      "concept": "UEA",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true },
+        { "url": "https://push.org/docs/chain/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/README.md", "agents/capabilities.json"],
+      "prefer_over": ["blog posts"],
+      "notes": "Smart contract account on Push Chain derived deterministically from UOA. Lazy-deployed on first transaction."
+    },
+    {
+      "task": "Understand UOA (Universal Origin Account)",
+      "capability_id": null,
+      "concept": "UOA",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/README.md"],
+      "prefer_over": ["blog posts"],
+      "notes": "The user's source chain wallet (Ethereum EOA, Solana pubkey). The controller that authorizes execution."
+    },
+    {
+      "task": "Understand CEA (Chain Executor Account)",
+      "capability_id": null,
+      "concept": "CEA",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/README.md", "agents/workflows/send-multichain-transaction.md"],
+      "prefer_over": ["blog posts"],
+      "notes": "Executor account on external chains representing UEA. Used in Route 2 and Route 3."
+    },
+    {
+      "task": "Understand fee abstraction",
+      "capability_id": null,
+      "concept": "fee_abstraction",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true },
+        { "url": "https://push.org/docs/chain/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/README.md", "agents/feature-matrix.json"],
+      "prefer_over": ["blog posts"],
+      "notes": "Users pay gas in native tokens (ETH, SOL). No PC token acquisition required. SEND-TX-05-* progress events handle funding."
+    },
+    {
+      "task": "Understand wallet abstraction",
+      "capability_id": null,
+      "concept": "wallet_abstraction",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/README.md", "agents/workflows/initialize-client.md"],
+      "prefer_over": ["blog posts"],
+      "notes": "Any supported wallet becomes a UniversalSigner. SDK derives UEA deterministically."
+    },
+    {
+      "task": "Find supported chains and CAIP-2 identifiers",
+      "capability_id": null,
+      "concept": "chain_namespaces",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/important-concepts/", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/supported-chains.json", "agents/constants.json"],
+      "prefer_over": [],
+      "notes": "CAIP-2 format: eip155:<chainId> for EVM, solana:<network> for Solana. Use PushChain.CONSTANTS.CHAIN.* for SDK values."
+    },
+    {
+      "task": "Handle SDK errors and recover from failures",
+      "capability_id": null,
+      "concept": "error_handling",
+      "authoritative_sources": [
+        { "url": "https://push.org/docs/chain/build/send-universal-transaction/", "type": "docs", "confidence": "medium", "normative": true }
+      ],
+      "agent_files": ["agents/errors.json", "agents/recovery-playbook.md", "agents/decision-tree.json"],
+      "prefer_over": [],
+      "notes": "Error codes follow SEND-TX-{stage}-{code} pattern. See agents/errors.json for full catalog."
+    },
+    {
+      "task": "Full documentation context for RAG",
+      "capability_id": null,
+      "concept": "full_context",
+      "authoritative_sources": [
+        { "url": "https://push.org/llms-full.txt", "type": "docs", "confidence": "high", "normative": true },
+        { "url": "https://push.org/llms.txt", "type": "docs", "confidence": "high", "normative": true }
+      ],
+      "agent_files": ["agents/index.json"],
+      "prefer_over": [],
+      "notes": "llms-full.txt contains complete documentation dump. llms.txt contains high-level summary with file references."
+    }
+  ]
+}

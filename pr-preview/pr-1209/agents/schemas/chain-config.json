@@ -1,0 +1,108 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/chain-config.json",
+  "title": "ChainConfig",
+  "description": "Configuration entry for a supported blockchain. Used for RPC URLs, block explorers, and chain metadata.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Human-readable chain name",
+      "examples": ["Ethereum Sepolia", "Push Chain Testnet", "Solana Devnet"]
+    },
+    "chainId": {
+      "type": "string",
+      "description": "CAIP-10 chain identifier",
+      "pattern": "^[a-z0-9]+:[a-zA-Z0-9]+$",
+      "examples": ["eip155:11155111", "eip155:42101", "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"]
+    },
+    "namespace": {
+      "type": "string",
+      "description": "CAIP-2 namespace (e.g., 'eip155' for EVM chains, 'solana' for Solana)",
+      "enum": ["eip155", "solana"],
+      "status": "inferred"
+    },
+    "rpcUrls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "Array of RPC endpoint URLs for the chain",
+      "examples": [
+        ["https://evm.donut.rpc.push.org/"],
+        ["https://gateway.tenderly.co/public/sepolia"]
+      ]
+    },
+    "blockExplorer": {
+      "type": "object",
+      "description": "Block explorer configuration",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Explorer name",
+          "examples": ["Push Explorer", "Etherscan"]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Base URL for the block explorer",
+          "examples": ["https://donut.push.network", "https://sepolia.etherscan.io"]
+        }
+      },
+      "required": ["url"],
+      "status": "inferred"
+    },
+    "nativeCurrency": {
+      "type": "object",
+      "description": "Native currency of the chain",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Currency name",
+          "examples": ["Push Coin", "Sepolia Ether", "SOL"]
+        },
+        "symbol": {
+          "type": "string",
+          "description": "Currency symbol",
+          "examples": ["PC", "ETH", "SOL"]
+        },
+        "decimals": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 18,
+          "description": "Number of decimal places",
+          "examples": [18, 9]
+        }
+      },
+      "required": ["name", "symbol", "decimals"],
+      "status": "inferred"
+    },
+    "testnet": {
+      "type": "boolean",
+      "description": "Whether this is a testnet chain",
+      "status": "inferred"
+    }
+  },
+  "required": ["name", "chainId", "rpcUrls"],
+  "additionalProperties": true,
+  "status": "inferred",
+  "notes": "Chain configuration structure is inferred from SDK initialization options and standard EVM chain config patterns. The SDK accepts custom rpcUrls and blockExplorers as Partial<Record<CHAIN, string[]>>.",
+  "knownChains": {
+    "PUSH_TESTNET_DONUT": {
+      "chainId": "eip155:42101",
+      "rpcUrl": "https://evm.donut.rpc.push.org/",
+      "blockExplorer": "https://donut.push.network",
+      "status": "documented"
+    },
+    "ETHEREUM_SEPOLIA": {
+      "chainId": "eip155:11155111",
+      "rpcUrl": "https://gateway.tenderly.co/public/sepolia",
+      "status": "documented"
+    },
+    "SOLANA_DEVNET": {
+      "chainId": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+      "status": "documented"
+    }
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2025-01-09T00:00:00Z",
+  "description": "Canonical workflow manifest for Push Chain agent layer",
+  "workflows": [
+    {
+      "id": "initialize-client",
+      "name": "Initialize Push Chain Client",
+      "file": "agents/workflows/initialize-client.md",
+      "purpose": "Create a PushChainClient instance from a UniversalSigner to enable on-chain interactions.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [
+        "create-universal-signer"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "create_universal_signer",
+        "initialize_push_chain_client",
+        "validate_network_config"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "create-universal-signer",
+      "name": "Create Universal Signer",
+      "file": "agents/workflows/create-universal-signer.md",
+      "purpose": "Wrap an EVM or non-EVM signer into a UniversalSigner for chain-agnostic transaction signing.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [
+        "configure-dev-environment"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "detect_signer_type",
+        "convert_ethers_to_universal",
+        "convert_viem_to_universal",
+        "convert_solana_keypair_to_universal"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "send-universal-transaction",
+      "name": "Send Universal Transaction",
+      "file": "agents/workflows/send-universal-transaction.md",
+      "purpose": "Execute a transaction on Push Chain from any origin chain via a single SDK call.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [
+        "initialize-client"
+      ],
+      "deterministic": false,
+      "safe_for_autonomous_execution": false,
+      "mcp_mapping_candidates": [
+        "determine_transaction_route",
+        "estimate_gas",
+        "resolve_uea",
+        "request_user_signature",
+        "broadcast_transaction",
+        "await_confirmation"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "send-multichain-transaction",
+      "name": "Send Multichain Transaction",
+      "file": "agents/workflows/send-multichain-transaction.md",
+      "purpose": "Execute a transaction on an external chain via CEA using Push Chain as the coordination layer.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [
+        "initialize-client"
+      ],
+      "deterministic": false,
+      "safe_for_autonomous_execution": false,
+      "mcp_mapping_candidates": [
+        "resolve_cea_address",
+        "construct_external_chain_payload",
+        "coordinate_cross_chain_execution",
+        "track_external_chain_confirmation"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "contract-initiated-multichain-execution",
+      "name": "Contract-Initiated Multichain Execution",
+      "file": "agents/workflows/contract-initiated-multichain-execution.md",
+      "purpose": "Trigger cross-chain execution from a smart contract on Push Chain to external chains.",
+      "actor": "smart_contract",
+      "operation": "write",
+      "prerequisites": [
+        "initialize-client"
+      ],
+      "deterministic": false,
+      "safe_for_autonomous_execution": false,
+      "mcp_mapping_candidates": [
+        "encode_contract_call",
+        "emit_cross_chain_event",
+        "relay_to_external_chain"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "track-transaction",
+      "name": "Track Universal Transaction",
+      "file": "agents/workflows/track-transaction.md",
+      "purpose": "Monitor the lifecycle and confirmation status of a submitted universal transaction.",
+      "actor": "developer",
+      "operation": "tracking",
+      "prerequisites": [
+        "send-universal-transaction"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "get_transaction_status",
+        "poll_confirmation_count",
+        "resolve_explorer_url"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "sign-universal-message",
+      "name": "Sign Universal Message",
+      "file": "agents/workflows/sign-universal-message.md",
+      "purpose": "Sign an arbitrary message using the UniversalSigner for off-chain verification.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [
+        "initialize-client"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": false,
+      "mcp_mapping_candidates": [
+        "encode_message",
+        "request_message_signature",
+        "return_signature_bytes"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "read-blockchain-state",
+      "name": "Read Blockchain State",
+      "file": "agents/workflows/read-blockchain-state.md",
+      "purpose": "Query on-chain state from Push Chain or external chains using EVM clients.",
+      "actor": "developer",
+      "operation": "read",
+      "prerequisites": [
+        "initialize-evm-client"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "create_public_client",
+        "call_contract_view",
+        "fetch_transaction_receipt",
+        "get_block_number"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "connect-wallet-ui-kit",
+      "name": "Connect Wallet via UI Kit",
+      "file": "agents/workflows/connect-wallet-ui-kit.md",
+      "purpose": "Use PushUniversalWalletProvider to enable wallet connection in React apps.",
+      "actor": "frontend_developer",
+      "operation": "write",
+      "prerequisites": [
+        "configure-dev-environment"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "wrap_app_with_provider",
+        "render_account_button",
+        "handle_connection_state"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "use-universal-wallet-provider",
+      "name": "Use Universal Wallet Provider",
+      "file": "agents/workflows/use-universal-wallet-provider.md",
+      "purpose": "Configure PushUniversalWalletProvider with custom options and theme overrides.",
+      "actor": "frontend_developer",
+      "operation": "write",
+      "prerequisites": [
+        "connect-wallet-ui-kit"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "configure_wallet_options",
+        "apply_theme_overrides",
+        "access_wallet_context"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "initialize-evm-client",
+      "name": "Initialize EVM Client",
+      "file": "agents/workflows/initialize-evm-client.md",
+      "purpose": "Set up an Ethers.js or Viem client for direct RPC interactions with Push Chain.",
+      "actor": "developer",
+      "operation": "read",
+      "prerequisites": [
+        "configure-dev-environment"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "create_ethers_provider",
+        "create_viem_public_client",
+        "fetch_chain_id"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "use-contract-helpers",
+      "name": "Use Contract Helpers",
+      "file": "agents/workflows/use-contract-helpers.md",
+      "purpose": "Interact with deployed helper contracts to detect user origin chain and other metadata.",
+      "actor": "developer",
+      "operation": "read",
+      "prerequisites": [
+        "initialize-evm-client"
+      ],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "resolve_helper_contract_address",
+        "call_origin_detection_function",
+        "parse_helper_response"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "use-utility-functions",
+      "name": "Use Utility Functions",
+      "file": "agents/workflows/use-utility-functions.md",
+      "purpose": "Leverage SDK utilities for account conversion, unit parsing, and address formatting.",
+      "actor": "developer",
+      "operation": "read",
+      "prerequisites": [],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "convert_address_to_universal_account",
+        "parse_units",
+        "format_units",
+        "validate_caip10_format"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "constants-reference",
+      "name": "Constants Reference",
+      "file": "agents/workflows/constants-reference.md",
+      "purpose": "Reference all SDK constants including chain identifiers, networks, and token enums.",
+      "actor": "developer",
+      "operation": "read",
+      "prerequisites": [],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "list_supported_chains",
+        "get_chain_constant",
+        "get_network_constant"
+      ],
+      "status": "documented"
+    },
+    {
+      "id": "configure-dev-environment",
+      "name": "Configure Development Environment",
+      "file": "agents/workflows/configure-dev-environment.md",
+      "purpose": "Install SDK packages and configure tooling for Push Chain development.",
+      "actor": "developer",
+      "operation": "write",
+      "prerequisites": [],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "install_core_package",
+        "install_ui_kit_package",
+        "configure_hardhat",
+        "configure_foundry",
+        "configure_remix"
+      ],
+      "status": "documented"
+    }
+  ],
+  "metadata": {
+    "total_workflows": 15,
+    "operation_breakdown": {
+      "read": 5,
+      "write": 8,
+      "tracking": 1,
+      "simulation": 0
+    },
+    "actor_breakdown": {
+      "developer": 12,
+      "frontend_developer": 2,
+      "smart_contract": 1
+    },
+    "autonomous_safe_count": 11,
+    "deterministic_count": 12
+  }
+}

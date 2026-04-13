@@ -1,0 +1,86 @@
+# Push Chain
+
+Push Chain is a universal, shared-state Layer 1 for apps.
+
+Developers deploy once on Push Chain and reach users from EVM and non-EVM chains using their existing wallets. Users can interact from their home chain and pay fees using supported tokens without manual bridging or network switching.
+
+## Who this is for
+
+- Developers building universal apps
+- AI agents that need accurate product and integration context
+- Users looking to understand Push Chain concepts, wallets, fees, and supported flows
+
+## Start Here
+
+- Docs: https://push.org/docs/chain/
+- Quickstart: https://push.org/docs/chain/quickstart/
+- Important Concepts: https://push.org/docs/chain/important-concepts/
+- Knowledge Base: https://push.org/knowledge/
+- FAQ: https://push.org/knowledge/faq/
+- Donut Testnet: https://push.org/knowledge/testnet/
+- Blog: https://push.org/blog/
+
+## For AI Agents
+
+Prefer these structured resources before browsing the full docs tree:
+
+- Agent Index: https://push.org/agents/index.json
+- Capabilities: https://push.org/agents/capabilities.json
+- Supported Chains: https://push.org/agents/supported-chains.json
+- SDK Capabilities: https://push.org/agents/sdk-capabilities.json
+- Decision Router: https://push.org/agents/task-router.md
+- MCP Candidates: https://push.org/agents/mcp-candidates.json
+- Canonical Workflows: https://push.org/agents/workflows/
+
+## Canonical Workflows
+
+- [Initialize Push Chain Client](https://push.org/agents/workflows/initialize-client.md): Create a PushChainClient instance from a UniversalSigner to enable on-chain interactions.
+- [Create Universal Signer](https://push.org/agents/workflows/create-universal-signer.md): Wrap an EVM or non-EVM signer into a UniversalSigner for chain-agnostic transaction signing.
+- [Send Universal Transaction](https://push.org/agents/workflows/send-universal-transaction.md): Execute a transaction on Push Chain from any origin chain via a single SDK call.
+- [Send Multichain Transaction](https://push.org/agents/workflows/send-multichain-transaction.md): Execute a transaction on an external chain via CEA using Push Chain as the coordination layer.
+- [Contract-Initiated Multichain Execution](https://push.org/agents/workflows/contract-initiated-multichain-execution.md): Trigger cross-chain execution from a smart contract on Push Chain to external chains.
+- [Track Universal Transaction](https://push.org/agents/workflows/track-transaction.md): Monitor the lifecycle and confirmation status of a submitted universal transaction.
+- [Sign Universal Message](https://push.org/agents/workflows/sign-universal-message.md): Sign an arbitrary message using the UniversalSigner for off-chain verification.
+- [Read Blockchain State](https://push.org/agents/workflows/read-blockchain-state.md): Query on-chain state from Push Chain or external chains using EVM clients.
+- [Connect Wallet via UI Kit](https://push.org/agents/workflows/connect-wallet-ui-kit.md): Use PushUniversalWalletProvider to enable wallet connection in React apps.
+- [Use Universal Wallet Provider](https://push.org/agents/workflows/use-universal-wallet-provider.md): Configure PushUniversalWalletProvider with custom options and theme overrides.
+- [Initialize EVM Client](https://push.org/agents/workflows/initialize-evm-client.md): Set up an Ethers.js or Viem client for direct RPC interactions with Push Chain.
+- [Use Contract Helpers](https://push.org/agents/workflows/use-contract-helpers.md): Interact with deployed helper contracts to detect user origin chain and other metadata.
+- [Use Utility Functions](https://push.org/agents/workflows/use-utility-functions.md): Leverage SDK utilities for account conversion, unit parsing, and address formatting.
+- [Constants Reference](https://push.org/agents/workflows/constants-reference.md): Reference all SDK constants including chain identifiers, networks, and token enums.
+- [Configure Development Environment](https://push.org/agents/workflows/configure-dev-environment.md): Install SDK packages and configure tooling for Push Chain development.
+
+## Blog — Latest 20 Posts
+
+- [Enable social login for your app in 4 steps](https://push.org/blog/enable-social-logins-for-your-app/): “Most apps lose on users before they’ve ever interacted with the product."
+- [Season 3 Early Access is Live!](https://push.org/blog/season-3-early-access-is-live/): “Early Access for the FINAL season of Push Points Program before mainnet is live!"
+- [The Sexiest Architecture for Cross Chain DeFi Apps](https://push.org/blog/architecture-for-cross-chain-defi-apps/): “If you’re building any cross-chain defi apps or want to upgrade your current app to cross-chain. This article’s for you."
+- [Rethinking Wallet Security Beyond Bridges](https://push.org/blog/rethinking-wallet-security/): “Most people think wallet security is about private keys. Yet, most exploits happen when assets move between chains."
+- [How Push Chain Centralizes Rules Without Centralizing Risk](https://push.org/blog/how-push-chain-centralizes-rules-without-centralizing-risk/): “Push Chain unifies what counts as a valid action, how state progresses, and what the final outcome is without unifying where actions originate."
+- [Why execution doesn’t decide global state on Push Chain](https://push.org/blog/why-execution-doesn't-decide-global-state/): “Shared State” sounds risky, and that instinct is correct. If execution happens across chains, what stops?"
+- [How is pUSD (Universal Stablecoin) minted](https://push.org/blog/how-is-pusd-minted/): A universal stablecoin is a dollar you can use on one chain while the actual asset stays on another. Here's how it's minted
+- [How Push Rethinks Stablecoins](https://push.org/blog/how-push-rethinks-stablecoins/): Stablecoins removed volatility, fixing crypto’s biggest usability blocker.
+- [Same USDC. Different Liquidity](https://push.org/blog/same-usdc-different-liquidity/): You hold USDC. So does our intern.But yours is on Solana. Intern on Ethereum.
+- [What is the liquidity wedge trap? How to avoid it?](https://push.org/blog/what-is-the-liquidity-wedge-trap/): You can hold the same asset across multiple chains and still get different prices, different slippage, and different borrowing costs.Ever thought what the reason is?
+- [How to Make Your App Accept ANY Token from ANY Chain?](https://push.org/blog/accept-any-token-from-any-chain/): Build universal payment flows that accept any token from any chain using Push Chain Universal Payments
+- [Understanding Push Chain’s Validator Stack](https://push.org/blog/understanding-push-chain-validator-stack/): Universal apps look “easy” on the surface: connect any wallet, pay with any token, one click and done. Behind that, something very unsexy makes all of this work: validators.
+- [How to Pay Gas Fees With Any Token From Any Chain?](https://push.org/blog/pay-gas-fees-with-any-token-from-any-chain/): Universal Transactions now support paying gas fees with ANY token on your native chain — one atomic call for funds, logic, and gas.
+- [Identity Crisis of a Crypto User in a Cross-Chain World](https://push.org/blog/identity-crisis-of-crypto-user/): Unspoken truth about what happens with your identity when you perform any cross-chain actions.
+- [Push Chain × human.tech: Enabling Social Login–Native, Self-Custodial Wallets](https://push.org/blog/push-chain-human-tech/): Push Chain × human.tech: Enabling Social Login–Native, Self-Custodial Wallets
+- [Crypto AI Agents Won't Scale. Here's Why.](https://push.org/blog/crypto-ai-agents-wont-scale/): Today's cross-chain agents are brittle — multi-step execution, multiple gas tokens, and partial failures. Shared state on Push Chain changes the equation entirely.
+- [What is a Universal DEX?](https://push.org/blog/what-is-a-universal-dex/): Most multichain swaps hide a multi-step flow. On Push Chain, a Universal DEX collapses swap, bridge, and LP into a single multicall executed against shared state.
+- [What is a Universal AMM? How do Universal Txns Power It?](https://push.org/blog/what-is-a-universal-amm/): Universal AMMs on Push Chain collapse multi-step cross-chain DeFi flows — swap, bridge, LP, and stake — into a single wallet signature via Universal Transactions and multicall.
+- [5 Ways to Make Your App Popular with Shared-State](https://push.org/blog/5-ways-to-make-your-app-popular/): Users do not quit because your app is bad — they quit because the chain experience gets in the way. Here are 5 ways Shared-State removes that friction and makes your app grow.
+- [How Universal Fee Abstraction Works](https://push.org/blog/how-universal-abstraction-works/): How Universal Fee Abstraction Works
+
+## Full Context
+
+The full text of documentation pages is available at:
+
+- https://push.org/llms-full.txt
+
+Use this for long-context retrieval and deep reference. Prefer canonical workflows and structured agent resources for execution-oriented tasks.
+
+## Notes
+
+Push Chain is EVM-compatible for deployment and designed for universal access across supported chains and wallets. For live execution capabilities, use Push APIs or an MCP server if available.

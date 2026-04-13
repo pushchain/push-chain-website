@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-01-01T00:00:00.000Z",
+  "description": "All PushChain.CONSTANTS.* values as a structured reference",
+  "PUSH_NETWORK": {
+    "TESTNET": "TESTNET_DONUT",
+    "MAINNET": {
+      "value": "MAINNET",
+      "status": "announced"
+    }
+  },
+  "CHAIN": {
+    "PUSH_TESTNET_DONUT": "eip155:42101",
+    "ETHEREUM_SEPOLIA": "eip155:11155111",
+    "SOLANA_DEVNET": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+    "ETHEREUM_MAINNET": {
+      "value": "eip155:1",
+      "status": "inferred"
+    },
+    "BNB_CHAIN": {
+      "value": "eip155:56",
+      "status": "inferred"
+    },
+    "POLYGON": {
+      "value": "eip155:137",
+      "status": "inferred"
+    },
+    "ARBITRUM": {
+      "value": "eip155:42161",
+      "status": "inferred"
+    },
+    "OPTIMISM": {
+      "value": "eip155:10",
+      "status": "inferred"
+    },
+    "BASE": {
+      "value": "eip155:8453",
+      "status": "inferred"
+    }
+  },
+  "LIBRARY": {
+    "ETHERS_V5": "ETHERS_V5",
+    "ETHERS_V6": "ETHERS_V6",
+    "VIEM": "VIEM",
+    "SOLANA_WEB3JS": "SOLANA_WEB3JS"
+  },
+  "MOVEABLE": {
+    "TOKEN": {
+      "description": "Supported tokens for cross-chain asset movement via tx.funds",
+      "status": "undocumented",
+      "values": {}
+    }
+  },
+  "CONNECTION": {
+    "STATUS": {
+      "CONNECTED": "CONNECTED",
+      "DISCONNECTED": "DISCONNECTED",
+      "status": "inferred"
+    }
+  }
+}
