@@ -89,6 +89,13 @@
           "safe_for_autonomous_execution": true
         },
         {
+          "name": "deriveExecutorAccount",
+          "signature": "PushChain.utils.account.deriveExecutorAccount(uoa: UniversalAccount, options: { chain: CHAIN; skipNetworkCheck?: boolean }): Promise<{ address: string }>",
+          "description": "Derives the Chain Executor Account (CEA) address for a given UOA on a specific external chain. Use skipNetworkCheck:true for chains not yet live. Required before sending svmExecute Solana transactions.",
+          "returns": "Promise<{ address: string }>",
+          "safe_for_autonomous_execution": true
+        },
+        {
           "name": "convertExecutorToOrigin",
           "signature": "PushChain.utils.account.convertExecutorToOrigin(executorAddress: string, options?: { chain?: CHAIN }): Promise<UniversalAccount>",
           "description": "Reverse-maps a UEA (Push Chain execution account) to its origin wallet. Pass options.chain to treat as CEA from a specific chain.",
@@ -232,9 +239,23 @@
         },
         {
           "name": "sendTransaction",
-          "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook? }): Promise<TransactionResponse>",
-          "description": "Sends universal transaction with automatic route detection",
-          "returns": "TransactionResponse",
+          "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook?, svmExecute?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<UniversalTxResponse>",
+          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry; svmExecute for Solana targets",
+          "returns": "UniversalTxResponse",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "prepareTransaction",
+          "signature": "pushChainClient.universal.prepareTransaction(tx: { to, from?, value?, data?, funds?, svmExecute?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<PreparedUniversalTx>",
+          "description": "Prepares a transaction without executing it. Returns PreparedUniversalTx with route, estimatedGas, nonce, deadline, payload. Pass result to executeTransactions for multi-hop cascades.",
+          "returns": "PreparedUniversalTx",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "executeTransactions",
+          "signature": "pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>",
+          "description": "Executes ordered array of prepared transactions as a single-signature multi-hop cascade. Returns CascadedTxResponse with initialTxHash, hops[], hopCount, wait(opts?), waitForAll(opts?).",
+          "returns": "CascadedTxResponse",
           "safe_for_autonomous_execution": false
         },
         {

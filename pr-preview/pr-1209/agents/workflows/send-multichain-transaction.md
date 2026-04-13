@@ -2,7 +2,10 @@
 
 ## Purpose
 
-Execute a transaction on an external chain (Ethereum, Solana, etc.) from any origin wallet, routed through Push Chain's coordination layer using the Chain Executor Account (CEA).
+Two patterns for cross-chain execution via Push Chain:
+
+1. **Single cross-chain call** — `sendTransaction` with `to: { address, chain }` (Route 2) or CEA origin (Route 3).
+2. **Multi-hop cascade** — `prepareTransaction` + `executeTransactions` for composing multiple ordered steps across chains into a single user signature.
 
 ## When to Use
 
@@ -21,16 +24,29 @@ Execute a transaction on an external chain (Ethereum, Solana, etc.) from any ori
 | Target chain supported | Chain must be in `PushChain.CONSTANTS.CHAIN.*` |
 | CEA funded | For external execution, CEA on target chain may need native tokens |
 
-## Inputs
+## Inputs — `sendTransaction` / `prepareTransaction`
+
+### Standard Arguments
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| `tx.to` | `{ address: string; chain: CHAIN }` | Yes (Route 2) | Target address and chain for external execution |
-| `tx.from` | `{ chain: CHAIN }` | Yes (Route 3) | Forces CEA on specified chain as execution origin |
+| `tx.to` | `string` \| `{ address: string; chain: CHAIN }` | Yes | Object form triggers external chain execution (Route 2) |
+| `tx.from` | `{ chain: CHAIN }` | No | Forces CEA on that chain as execution origin (Route 3) |
 | `tx.value` | `BigInt` | No | Native value in target chain's smallest unit |
-| `tx.data` | `string` | No | ABI-encoded calldata for contract call |
-| `tx.funds` | `{ amount: BigInt; token?: MOVEABLE.TOKEN }` | No | Assets to move as part of the transaction |
+| `tx.data` | `string` \| `Array<{to, value, data}>` | No | ABI-encoded calldata or multicall array |
+| `tx.funds` | `{ amount: BigInt; token: PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN> }` | No | Move cross-chain asset atomically |
 | `tx.progressHook` | `(progress: ProgressHookType) => void` | No | Callback for progress updates |
+| `tx.svmExecute` | `{ targetProgram: string; accounts: { pubkey: string; isWritable: boolean }[]; ixData: Uint8Array }` | No | **Solana only.** Borsh-encoded instruction for SVM program execution via CEA |
+
+### Advanced Arguments
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `tx.gasLimit` | `BigInt` | SDK estimated | Override gas limit |
+| `tx.maxFeePerGas` | `BigInt` | SDK estimated | Override max fee per gas |
+| `tx.maxPriorityFeePerGas` | `BigInt` | SDK estimated | Override priority fee |
+| `tx.payGasWith` | `{ token: PushChain.CONSTANTS.PAYABLE.TOKEN.<CHAIN>.<TOKEN>; slippageBps?: number; minAmountOut?: bigint }` | — | Pay fees in supported token |
+| `tx.deadline` | `BigInt` | — | Execution deadline |
 
 ## Steps
 
@@ -111,32 +127,130 @@ Use this when you need Push Chain execution to reflect an external chain identit
 ### Common External Chain Constants
 
 ```typescript
-// Testnets
 PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA   // eip155:11155111
-PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET      // solana:devnet
-
-// Check documentation for full list of supported chains
+PushChain.CONSTANTS.CHAIN.ARBITRUM_SEPOLIA   // eip155:421614
+PushChain.CONSTANTS.CHAIN.BASE_SEPOLIA       // eip155:84532
+PushChain.CONSTANTS.CHAIN.BNB_TESTNET        // eip155:97
+PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET      // solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1
 ```
+
+### Route 2: Solana Target (svmExecute)
+
+For Solana chain targets, use `svmExecute` instead of `data`. Encode instruction data using Borsh.
+
+```typescript
+const solanaCEA = await PushChain.utils.account.deriveExecutorAccount(
+  PushChain.utils.account.toUniversal(wallet.address, { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }),
+  { chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET, skipNetworkCheck: true }
+);
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: { address: SOL_PROGRAM_ADDRESS, chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET },
+  svmExecute: {
+    targetProgram: SOL_PROGRAM_ADDRESS,
+    accounts: [
+      { pubkey: SOL_COUNTER_PDA, isWritable: true },
+      { pubkey: solanaCEA.address, isWritable: true },
+    ],
+    ixData: new Uint8Array([/* Borsh-encoded instruction */]),
+  },
+});
+```
+
+## Multi-Hop Cascades: prepareTransaction + executeTransactions
+
+Compose multiple ordered steps across chains into a single user signature.
+
+### Step 1: Prepare Each Transaction
+
+**`pushChainClient.universal.prepareTransaction({tx}): Promise<PreparedUniversalTx>`**
+
+Accepts the same arguments as `sendTransaction`. Returns an intermediate `PreparedUniversalTx` object.
+
+```typescript
+const hop0 = await pushChainClient.universal.prepareTransaction({
+  to: '0xContractOnPushChain',
+  value: 0n,
+  data: PushChain.utils.helpers.encodeTxData({ abi: MyABI, functionName: 'increment' }),
+});
+
+const hop1 = await pushChainClient.universal.prepareTransaction({
+  to: { address: '0xContractOnBNB', chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
+  value: 0n,
+  data: PushChain.utils.helpers.encodeTxData({ abi: MyABI, functionName: 'increment' }),
+});
+```
+
+`PreparedUniversalTx` shape:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `route` | `'UOA_TO_PUSH'` \| `'UOA_TO_CEA'` \| `'CEA_TO_PUSH'` \| `'CEA_TO_CEA'` | Detected routing mode |
+| `estimatedGas` | `bigint` | Estimated gas units |
+| `nonce` | `bigint` | Nonce for submission |
+| `deadline` | `bigint` | Signature expiry deadline |
+| `payload` | `string` | Encoded payload ready for submission |
+
+### Step 2: Execute All Hops
+
+**`pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>`**
+
+```typescript
+const cascade = await pushChainClient.universal.executeTransactions([hop0, hop1]);
+console.log('Initial Push Chain tx:', cascade.initialTxHash);
+console.log('Hop count:', cascade.hopCount);
+
+// Wait for all hops to complete
+const result = await cascade.wait({
+  progressHook: (e) => console.log(`[Hop ${e.hopIndex}] ${e.status} on ${e.chain}`),
+  pollingIntervalMs: 5000, // default
+  timeout: 600000,         // 10 min default
+});
+console.log('All complete:', result.success);
+```
+
+`CascadedTxResponse` shape:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `initialTxHash` | `string` | Hash of the user-signed Push Chain transaction |
+| `initialTxResponse` | `UniversalTxResponse` | Full response for initial Push Chain tx |
+| `hops` | `CascadeHopInfo[]` | All hops with routing and status |
+| `hopCount` | `number` | Total hop count |
+| `wait(opts?)` | `Promise<CascadeCompletionResult>` | Waits for all hops to complete |
+| `waitForAll(opts?)` | `Promise<CascadeCompletionResult>` | Alias for `wait` |
+
+`CascadeHopInfo` per hop:
+
+| Property | Type | Description |
+|----------|------|-------------|
+| `hopIndex` | `number` | Position (0-indexed) |
+| `route` | `string` | Routing mode for this hop |
+| `executionChain` | `CHAIN` | Chain where this hop executes |
+| `status` | `'pending'` \| `'submitted'` \| `'confirmed'` \| `'failed'` | Current status |
+| `txHash` | `string` | Resolved transaction hash |
+| `outboundDetails` | `object` | External chain details (hash, explorer URL, recipient, amount) |
 
 ## Expected Output
 
-```typescript
-// TransactionResponse object
-{
-  hash: '0xPushChainCoordinationTxHash...',
-  wait: [Function], // Waits for Push Chain confirmation
-  // External chain execution details included in receipt
-}
-```
+See `send-universal-transaction.md` for the full `TxResponse` and `UniversalTxReceipt` shapes — they apply to Route 2/3 `sendTransaction` calls identically.
+
+For `executeTransactions`, see `CascadedTxResponse` table above.
 
 ### Progress Hook Events (Route 2 specific)
 
-| ID | Title | Description |
-|----|-------|-------------|
-| `SEND-TX-01` | Origin Chain Detected | Identifies user's wallet chain |
-| `SEND-TX-03-01` | Resolving UEA | Sets up Push Chain executor |
-| `SEND-TX-07` | Broadcasting to Push Chain | Submits coordination transaction |
-| `SEND-TX-99-01` | Push Chain Tx Success | Coordination complete |
+| ID | Title | Level |
+|----|-------|-------|
+| `SEND-TX-01` | Origin Chain Detected | INFO |
+| `SEND-TX-03-01` | Resolving UEA | INFO |
+| `SEND-TX-03-02` | UEA Resolved | SUCCESS |
+| `SEND-TX-04-02` | Awaiting Signature | INFO |
+| `SEND-TX-04-03` | Verification Success | SUCCESS |
+| `SEND-TX-05-01` | Gas Funding In Progress | INFO |
+| `SEND-TX-05-02` | Gas Funding Confirmed | SUCCESS |
+| `SEND-TX-07` | Broadcasting to Push Chain | INFO |
+| `SEND-TX-99-01` | Push Chain Tx Success | SUCCESS |
+| `SEND-TX-99-02` | Push Chain Tx Failed | ERROR |
 
 ## Common Failures
 
@@ -152,16 +266,20 @@ PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET      // solana:devnet
 
 - **Route 2 triggers automatically**: When `to` is `{ address, chain }`, SDK routes through CEA on that chain.
 - **Route 3 is rare**: Only needed when Push Chain execution must show external chain identity as origin.
-- **CEA is chain-specific**: Each external chain has its own CEA derived from your UEA.
+- **CEA is chain-specific**: Each external chain has its own CEA derived from your UEA. Use `PushChain.utils.account.deriveExecutorAccount(uoa, { chain })` to get CEA address.
 - **Gas on external chains**: External execution may require native tokens on the target chain.
-- **Push Chain is coordination layer**: The transaction hash returned is the Push Chain coordination tx; external execution follows.
+- **Push Chain is coordination layer**: The `txHash` returned is the Push Chain coordination tx; external execution follows asynchronously.
 - **Cross-chain latency**: External chain finality affects total confirmation time.
-- **Solana requires different encoding**: For Solana targets, calldata format differs from EVM chains.
+- **Solana uses svmExecute**: For Solana targets use the `svmExecute` field with Borsh-encoded `ixData`; `tx.data` is EVM-only.
+- **No atomicity in cascades**: If a downstream hop fails, earlier hops are already on-chain. Design contracts to handle partial execution.
+- **Single signature for cascades**: `executeTransactions` submits one transaction to Push Chain; the SDK coordinates all downstream hops.
 
 ## MCP Mapping Candidates
 
 - `send_external_chain_call` — Execute contract call on external chain via CEA
 - `send_cea_origin_transaction` — Execute on Push Chain with external origin identity
-- `get_cea_address` — Derive CEA address for specific external chain
+- `prepare_transaction` — Prepare a single transaction hop without executing
+- `execute_cascade` — Execute ordered array of prepared transactions as multi-hop cascade
+- `get_cea_address` — Derive CEA address for specific external chain via `deriveExecutorAccount`
 - `check_cea_balance` — Verify CEA has sufficient funds on target chain
 - `list_supported_chains` — Return all supported external chain constants

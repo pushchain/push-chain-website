@@ -22,13 +22,26 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 
 ## Inputs
 
+### Standard Arguments
+
 | Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `tx.to` | `string` | Yes | Target address on Push Chain (hex-encoded) |
-| `tx.value` | `BigInt` | No | Native value in uPC (smallest unit, like wei). Default: `0n` |
-| `tx.data` | `string` \| `Array<{to, data, value}>` | No | ABI-encoded calldata or multicall array |
-| `tx.funds` | `{ amount: BigInt; token?: MOVEABLE.TOKEN }` | No | Assets to move into Push Chain atomically |
+|-----------|------|----------|--------------|
+| `tx.to` | `string` \| `{ address: string; chain: CHAIN }` | Yes | Plain address → Push Chain (Route 1). Object → external chain (Route 2) |
+| `tx.from` | `{ chain: CHAIN }` | No | Forces CEA of that chain as execution origin (Route 3) |
+| `tx.value` | `BigInt` | No | Native value in smallest unit (uPC on Push Chain, wei on EVM external chains). Default: `0n` |
+| `tx.data` | `string` \| `Array<{to: string; value: bigint; data: string}>` | No | ABI-encoded calldata (string) or multicall array. **For multicall `tx.to` must be `0x0000000000000000000000000000000000000000`** |
+| `tx.funds` | `{ amount: BigInt; token: PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN> }` | No | Move cross-chain asset atomically (external origin chains only) |
 | `tx.progressHook` | `(progress: ProgressHookType) => void` | No | Callback for real-time progress updates |
+
+### Advanced Arguments
+
+| Parameter | Type | Default | Description |
+|-----------|------|---------|-------------|
+| `tx.gasLimit` | `BigInt` | SDK estimated | Override transaction gas limit |
+| `tx.maxFeePerGas` | `BigInt` | SDK estimated | Override max fee per gas (EIP-1559) |
+| `tx.maxPriorityFeePerGas` | `BigInt` | SDK estimated | Override priority fee (EIP-1559) |
+| `tx.payGasWith` | `{ token: PushChain.CONSTANTS.PAYABLE.TOKEN.<CHAIN>.<TOKEN>; slippageBps?: number; minAmountOut?: bigint \| string }` | — | Pay universal transaction fees with a supported token instead of native. `slippageBps` e.g. `100` = 1% |
+| `tx.deadline` | `BigInt` | — | Optional execution deadline timestamp |
 
 ## Steps
 
@@ -120,36 +133,124 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
    ];
    ```
 
-2. **Send as batched transaction**
+2. **Send as batched transaction** — `to` **must be zero address** for multicall
    ```typescript
    const txResponse = await pushChainClient.universal.sendTransaction({
-     to: '0xMulticallTarget', // often same as UEA or specific multicall contract
+     to: '0x0000000000000000000000000000000000000000', // REQUIRED for multicall
      data: calls,
    });
    ```
 
+> **Warning:** The SDK will `console.warn` if any other address is used for multicall. This restriction will become mandatory in a future release. Multicall is only supported from external origin chains.
+
 ### With Asset Movement (tx.funds)
 
-1. **Specify funds to move**
+Move a supported asset from origin chain to Push Chain atomically with your call. Only supported from external origin chains (not from a native Push Chain account).
+
+1. **Specify funds to move (chain-scoped token accessor)**
    ```typescript
    const txResponse = await pushChainClient.universal.sendTransaction({
      to: '0xContractOnPushChain',
      data: calldata,
      funds: {
-       amount: BigInt('1000000000000000000'), // 1 token
-       token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETH, // if applicable
+       amount: PushChain.utils.helpers.parseUnits('1', 6), // 1 USDT (6 decimals)
+       token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT,
      },
    });
    ```
 
+### With Gas Paid in Token (tx.payGasWith)
+
+Pay universal transaction fees with a supported token instead of native PC.
+
+1. **Pay fees with USDT from Ethereum Sepolia**
+   ```typescript
+   const txResponse = await pushChainClient.universal.sendTransaction({
+     to: recipientAddress,
+     value: valueInUPC,
+     payGasWith: {
+       token: PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT,
+       slippageBps: 100, // 1% slippage tolerance for on-chain swap
+     },
+   });
+   ```
+
+### Using encodeTxData Utility
+
+Use `PushChain.utils.helpers.encodeTxData` to ABI-encode contract calls without importing ethers/viem directly:
+
+```typescript
+const data = PushChain.utils.helpers.encodeTxData({
+  abi: ['function transfer(address to, uint256 amount) returns (bool)'],
+  functionName: 'transfer',
+  args: ['0xRecipientAddress', PushChain.utils.helpers.parseUnits('10', 18)],
+});
+
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: '0xTokenContractAddress',
+  value: 0n,
+  data,
+});
+```
+
+### With Advanced Gas Overrides
+
+```typescript
+const txResponse = await pushChainClient.universal.sendTransaction({
+  to: recipientAddress,
+  value: valueInUPC,
+  gasLimit: BigInt('100000'),
+  maxFeePerGas: BigInt('2000000000'),
+  maxPriorityFeePerGas: BigInt('200000000'),
+  deadline: BigInt(Math.floor(Date.now() / 1000) + 3600), // 1 hour
+});
+```
+
 ## Expected Output
 
 ```typescript
-// TransactionResponse object
+// TransactionResponse object (full shape)
 {
-  hash: '0x04ee80f072ab06ec88092701e7ba223451d0a1376e26755085271bc6de45a6a1',
-  wait: [Function], // Returns Promise<TransactionReceipt>
-  // Additional fields may include execution metadata
+  hash: '0xe2302bd21ab0902f37cb605d491ce5f95ee35ce4083405dddf3657d782acae35',
+  origin: 'eip155:42101:0xFd6C2fE69bE13d8bE379CCB6c9306e74193EC1A9', // CAIP-10 origin
+  blockNumber: 0n,
+  blockHash: '',
+  transactionIndex: 0,
+  chainId: '42101',
+  from: '0xFd6C...', // UEA address
+  to: '0x35B8...',
+  nonce: 341,
+  data: '0x',
+  value: 1000n,
+  gasLimit: 21000n,
+  gasPrice: 1325000000n,
+  maxFeePerGas: 1325000000n,
+  maxPriorityFeePerGas: 125000000n,
+  accessList: [],
+  type: '2',
+  typeVerbose: 'eip1559',
+  signature: { r: '0x...', s: '0x...', v: 1, yParity: 1 },
+  raw: { from: '0x...', to: '0x...', nonce: 341, data: '0x', value: 1000n },
+  wait: [Function], // wait(confirmations?: number): Promise<UniversalTxReceipt>
+}
+```
+
+```typescript
+// UniversalTxReceipt from txResponse.wait(1)
+{
+  hash: '0xb52706...',
+  blockNumber: 3413247n,
+  blockHash: '0x5a7b6e...',
+  transactionIndex: 0,
+  from: '0xFd6C...', // UEA
+  to: '0x35B8...',
+  contractAddress: null,
+  gasPrice: 1325000000n,
+  gasUsed: 21000n,
+  cumulativeGasUsed: 21000n,
+  logs: [],
+  status: 1, // 1 = success, 0 = failure
+  raw: { from, to, nonce, data, value },
 }
 ```
 
@@ -162,10 +263,23 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 | `SEND-TX-02-02` | Gas Estimated | SUCCESS |
 | `SEND-TX-03-01` | Resolving UEA | INFO |
 | `SEND-TX-03-02` | UEA Resolved | SUCCESS |
+| `SEND-TX-04-01` | Awaiting Transaction | INFO |
 | `SEND-TX-04-02` | Awaiting Signature | INFO |
 | `SEND-TX-04-03` | Verification Success | SUCCESS |
+| `SEND-TX-04-04` | Verification Declined | ERROR |
+| `SEND-TX-05-01` | Gas Funding In Progress | INFO |
+| `SEND-TX-05-02` | Gas Funding Confirmed | SUCCESS |
+| `SEND-TX-06-01` | Preparing Funds Transfer | INFO |
+| `SEND-TX-06-02` | Funds Lock Submitted | INFO |
+| `SEND-TX-06-03` | Awaiting Confirmations | INFO |
+| `SEND-TX-06-03-01` | Confirmation #N Received | INFO |
+| `SEND-TX-06-03-02` | Confirmation #N Received | SUCCESS |
+| `SEND-TX-06-04` | Funds Confirmed | SUCCESS |
+| `SEND-TX-06-05` | Syncing State with Push Chain | SUCCESS |
+| `SEND-TX-06-06` | Funds Credited on Push Chain | SUCCESS |
 | `SEND-TX-07` | Broadcasting to Push Chain | INFO |
 | `SEND-TX-99-01` | Push Chain Tx Success | SUCCESS |
+| `SEND-TX-99-02` | Push Chain Tx Failed | ERROR |
 
 ## Common Failures
 
