@@ -1,105 +1,156 @@
 {
-  "version": "1.0.0",
-  "generated": "2025-01-01T00:00:00.000Z",
-  "description": "Supported chains for Push Chain universal transactions",
+  "version": "1.1.0",
+  "description": "Supported chains for Push Chain universal transactions. Use PushChain.CONSTANTS.CHAIN.<KEY> for all identifiers.",
+  "note": "Mainnet has not launched. All active chain support is on testnet only.",
   "testnet": [
     {
       "name": "Push Chain Testnet (Donut)",
-      "namespace": "eip155:42101",
-      "constant": "PUSH_TESTNET_DONUT",
+      "caip2": "eip155:42101",
+      "constant": "PushChain.CONSTANTS.CHAIN.PUSH_TESTNET_DONUT",
       "type": "push_native",
       "fee_token": "PC",
-      "notes": "Native Push Chain testnet. RPC: https://evm.donut.rpc.push.org/"
+      "chain_id": 42101,
+      "rpc_url": "https://evm.donut.rpc.push.org/",
+      "block_explorer": "https://donut.push.network",
+      "notes": "Also accessible via CHAIN.PUSH_TESTNET (alias pointing to latest testnet). EVM-compatible — use chainId 42101 in Hardhat/Foundry/Remix."
+    },
+    {
+      "name": "Push Chain Localnet",
+      "caip2": "eip155:9001",
+      "constant": "PushChain.CONSTANTS.CHAIN.PUSH_LOCALNET",
+      "type": "push_native",
+      "fee_token": "PC",
+      "chain_id": 9001,
+      "rpc_url": "http://localhost:8545",
+      "notes": "Local development environment only"
     },
     {
       "name": "Ethereum Sepolia",
-      "namespace": "eip155:11155111",
-      "constant": "ETHEREUM_SEPOLIA",
+      "caip2": "eip155:11155111",
+      "constant": "PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA",
       "type": "evm",
       "fee_token": "ETH",
-      "notes": "Primary EVM testnet for Push Chain integration"
+      "chain_id": 11155111,
+      "block_explorer": "https://sepolia.etherscan.io",
+      "moveable_tokens": ["ETH", "USDT", "USDC", "WETH", "stETH"],
+      "payable_tokens": ["ETH", "USDT", "USDC", "WETH", "stETH"]
+    },
+    {
+      "name": "Arbitrum Sepolia",
+      "caip2": "eip155:421614",
+      "constant": "PushChain.CONSTANTS.CHAIN.ARBITRUM_SEPOLIA",
+      "type": "evm",
+      "fee_token": "ETH",
+      "chain_id": 421614,
+      "block_explorer": "https://sepolia.arbiscan.io",
+      "moveable_tokens": ["ETH", "USDT", "USDC", "WETH"],
+      "payable_tokens": ["ETH", "USDT", "USDC"]
+    },
+    {
+      "name": "Base Sepolia",
+      "caip2": "eip155:84532",
+      "constant": "PushChain.CONSTANTS.CHAIN.BASE_SEPOLIA",
+      "type": "evm",
+      "fee_token": "ETH",
+      "chain_id": 84532,
+      "block_explorer": "https://sepolia.basescan.org",
+      "moveable_tokens": ["ETH", "USDT", "USDC", "WETH"],
+      "payable_tokens": ["ETH", "USDT", "USDC"]
+    },
+    {
+      "name": "BNB Testnet",
+      "caip2": "eip155:97",
+      "constant": "PushChain.CONSTANTS.CHAIN.BNB_TESTNET",
+      "type": "evm",
+      "fee_token": "BNB",
+      "chain_id": 97,
+      "block_explorer": "https://testnet.bscscan.com",
+      "moveable_tokens": ["ETH", "USDT"],
+      "payable_tokens": ["BNB", "USDT"]
     },
     {
       "name": "Solana Devnet",
-      "namespace": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
-      "constant": "SOLANA_DEVNET",
-      "type": "non_evm",
+      "caip2": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+      "constant": "PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET",
+      "type": "svm",
       "fee_token": "SOL",
-      "notes": "Solana devnet support via SOLANA_WEB3JS library"
-    }
-  ],
-  "mainnet": [
+      "moveable_tokens": ["SOL", "USDT", "USDC"],
+      "payable_tokens": ["SOL", "USDT", "USDC"],
+      "notes": "Use LIBRARY.SOLANA_WEB3JS for keypair signers. Use tx.svmExecute for program calls (not tx.data)."
+    },
     {
-      "name": "Push Chain Mainnet",
-      "namespace": "eip155:TBD",
-      "constant": "PUSH_MAINNET",
-      "type": "push_native",
-      "fee_token": "PC",
-      "status": "announced",
-      "notes": "Mainnet not yet live"
+      "name": "Solana Testnet",
+      "caip2": "solana:4uhcVJyU9pJkvQyS88uRDiswHXSCkY3z",
+      "constant": "PushChain.CONSTANTS.CHAIN.SOLANA_TESTNET",
+      "type": "svm",
+      "fee_token": "SOL",
+      "notes": "Solana testnet cluster"
+    },
+    {
+      "name": "Solana Mainnet-Beta",
+      "caip2": "solana:5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+      "constant": "PushChain.CONSTANTS.CHAIN.SOLANA_MAINNET",
+      "type": "svm",
+      "fee_token": "SOL",
+      "notes": "Solana mainnet-beta cluster. CHAIN constant exists in SDK; check live support status."
     },
     {
       "name": "Ethereum Mainnet",
-      "namespace": "eip155:1",
-      "constant": "ETHEREUM_MAINNET",
+      "caip2": "eip155:1",
+      "constant": "PushChain.CONSTANTS.CHAIN.ETHEREUM_MAINNET",
       "type": "evm",
       "fee_token": "ETH",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "BNB Chain",
-      "namespace": "eip155:56",
-      "constant": "BNB_CHAIN",
-      "type": "evm",
-      "fee_token": "BNB",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "Polygon",
-      "namespace": "eip155:137",
-      "constant": "POLYGON",
-      "type": "evm",
-      "fee_token": "MATIC",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "Arbitrum",
-      "namespace": "eip155:42161",
-      "constant": "ARBITRUM",
-      "type": "evm",
-      "fee_token": "ETH",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "Optimism",
-      "namespace": "eip155:10",
-      "constant": "OPTIMISM",
-      "type": "evm",
-      "fee_token": "ETH",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "Base",
-      "namespace": "eip155:8453",
-      "constant": "BASE",
-      "type": "evm",
-      "fee_token": "ETH",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
-    },
-    {
-      "name": "Solana Mainnet",
-      "namespace": "solana:mainnet",
-      "constant": "SOLANA_MAINNET",
-      "type": "non_evm",
-      "fee_token": "SOL",
-      "status": "announced",
-      "notes": "Planned for mainnet launch"
+      "chain_id": 1,
+      "notes": "CHAIN constant exists in SDK for CEA derivation and read use; Push Chain mainnet not yet launched."
     }
-  ]
+  ],
+  "mainnet": {
+    "status": "not_launched",
+    "notes": "Push Chain mainnet has not launched. Do not reference mainnet chain IDs or claim mainnet support."
+  },
+  "native_contracts": {
+    "network": "TESTNET_DONUT",
+    "push_chain": {
+      "uea_factory": {
+        "address": "0x00000000000000000000000000000000000000eA",
+        "name": "Universal Executor Account Factory",
+        "purpose": "Factory contract to create and manage Universal Executor Accounts (UEAs) on Push Chain. Use getUEAForOrigin() and getOriginForUEA()."
+      },
+      "universal_verification_precompile": {
+        "address": "0x00000000000000000000000000000000000000ca",
+        "name": "Universal Verification Precompile",
+        "purpose": "Precompile that verifies source-chain wallet signatures (UOA verification)."
+      }
+    },
+    "universal_gateway": {
+      "purpose": "Entry point contracts on external chains for submitting outbound cross-chain transactions to Push Chain.",
+      "contracts": [
+        {
+          "chain": "Ethereum Sepolia",
+          "caip2": "eip155:11155111",
+          "address": "0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A"
+        },
+        {
+          "chain": "Arbitrum Sepolia",
+          "caip2": "eip155:421614",
+          "address": "0x2cd870e0166Ba458dEC615168Fd659AacD795f34"
+        },
+        {
+          "chain": "Base Sepolia",
+          "caip2": "eip155:84532",
+          "address": "0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16"
+        },
+        {
+          "chain": "BNB Testnet",
+          "caip2": "eip155:97",
+          "address": "0x44aFFC61983F4348DdddB886349eb992C061EaC0"
+        },
+        {
+          "chain": "Solana Devnet",
+          "caip2": "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1",
+          "address": "CFVSincHYbETh2k7w6u1ENEkjbSLtveRCEBupKidw2VS"
+        }
+      ]
+    }
+  }
 }

@@ -1,80 +1,110 @@
 {
-  "version": "1.0.0",
-  "last_generated": "2026-04-12T23:24:07.649Z",
+  "version": "1.1.0",
+  "last_generated": "2026-04-14T00:00:00.000Z",
+  "note": "All agent_file paths must correspond to files that actually exist under static/agents/.",
   "dependencies": [
     {
       "agent_file": "agents/supported-chains.json",
       "source_sections": [
         "docs/chain/important-concepts",
-        "docs/chain/setup/chain-config"
+        "docs/chain/03-build/03-Important-Concepts.mdx"
       ],
       "change_frequency": "low",
       "cache_safe": true,
       "refresh_trigger": "when supported chains list changes or new chain support announced"
     },
     {
-      "agent_file": "agents/glossary.json",
+      "agent_file": "agents/sdk-capabilities.json",
+      "source_sections": [
+        "docs/chain/03-build/01-Create-Universal-Signer.mdx",
+        "docs/chain/03-build/02-Initialize-Client.mdx",
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/08-Send-Multichain-Transactions.mdx",
+        "docs/chain/03-build/07-Track-Universal-Transaction.mdx",
+        "docs/chain/03-build/09-Sign-Universal-Message.mdx",
+        "docs/chain/03-build/10-Utility-Functions.mdx",
+        "docs/chain/03-build/11-Reading-Blockchain-State.mdx",
+        "docs/chain/03-build/12-Contract-Helpers.mdx"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when SDK API changes, new methods added, or signatures updated (especially sendTransaction, prepareTransaction, executeTransactions, deriveExecutorAccount)"
+    },
+    {
+      "agent_file": "agents/capabilities.json",
+      "source_sections": [
+        "docs/chain/03-build",
+        "docs/chain/important-concepts"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when new SDK capabilities added or existing capability inputs/outputs change"
+    },
+    {
+      "agent_file": "agents/constants.json",
+      "source_sections": [
+        "docs/chain/03-build/03-Important-Concepts.mdx",
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when new chain constants, token constants, or network constants are added to PushChain.CONSTANTS"
+    },
+    {
+      "agent_file": "agents/feature-matrix.json",
       "source_sections": [
         "docs/chain/important-concepts",
-        "docs/chain/deep-dives/how-uea-works"
+        "docs/chain/03-build"
       ],
       "change_frequency": "low",
       "cache_safe": true,
-      "refresh_trigger": "when core terminology or account model changes"
+      "refresh_trigger": "when feature availability changes across actor types"
     },
     {
-      "agent_file": "agents/sdk-methods.json",
+      "agent_file": "agents/errors.json",
       "source_sections": [
-        "docs/chain/build/create-universal-signer",
-        "docs/chain/build/initialize-push-chain-client",
-        "docs/chain/build/send-universal-transaction",
-        "docs/chain/build/track-universal-transaction",
-        "docs/chain/build/sign-universal-message",
-        "docs/chain/build/utility-functions",
-        "docs/chain/build/reading-blockchain-state",
-        "docs/chain/build/contract-helpers"
-      ],
-      "change_frequency": "medium",
-      "cache_safe": false,
-      "refresh_trigger": "when SDK API changes, new methods added, or signatures updated"
-    },
-    {
-      "agent_file": "agents/workflows.json",
-      "source_sections": [
-        "docs/chain/build/understanding-universal-transactions",
-        "docs/chain/build/send-universal-transaction",
-        "docs/chain/build/universal-transaction-scenarios",
-        "docs/chain/build/send-multichain-transactions",
-        "docs/chain/tutorials"
-      ],
-      "change_frequency": "medium",
-      "cache_safe": false,
-      "refresh_trigger": "when transaction flows, routing logic, or multi-step processes change"
-    },
-    {
-      "agent_file": "agents/error-codes.json",
-      "source_sections": [
-        "docs/chain/build/send-universal-transaction",
-        "docs/chain/build/advanced/upgrade-account"
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/07-Track-Universal-Transaction.mdx"
       ],
       "change_frequency": "medium",
       "cache_safe": true,
-      "refresh_trigger": "when progress hook events or error handling documentation changes"
+      "refresh_trigger": "when progress hook events, error codes, or error handling documentation changes"
     },
     {
-      "agent_file": "agents/contract-addresses.json",
+      "agent_file": "agents/recovery-playbook.md",
       "source_sections": [
-        "docs/chain/setup/smart-contract-address-book"
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/07-Track-Universal-Transaction.mdx"
       ],
       "change_frequency": "low",
       "cache_safe": true,
-      "refresh_trigger": "when new contracts deployed or addresses updated"
+      "refresh_trigger": "when error recovery flows or SDK failure modes are updated"
+    },
+    {
+      "agent_file": "agents/decision-tree.json",
+      "source_sections": [
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/08-Send-Multichain-Transactions.mdx",
+        "docs/chain/important-concepts"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when routing logic, new transaction patterns (cascade), or signer types change"
+    },
+    {
+      "agent_file": "agents/task-router.md",
+      "source_sections": [
+        "docs/chain/03-build",
+        "docs/chain/important-concepts"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when recommended integration patterns or routing guidance changes"
     },
     {
       "agent_file": "agents/mcp-candidates.json",
       "source_sections": [
-        "docs/chain/build",
-        "docs/chain/setup",
+        "docs/chain/03-build",
         "docs/chain/important-concepts"
       ],
       "change_frequency": "medium",
@@ -82,58 +112,87 @@
       "refresh_trigger": "when SDK methods added/removed, new capabilities documented, or API surface changes"
     },
     {
-      "agent_file": "agents/ui-kit-components.json",
+      "agent_file": "agents/workflows/send-universal-transaction.md",
       "source_sections": [
-        "docs/chain/ui-kit",
-        "docs/chain/ui-kit/customizations",
-        "docs/chain/ui-kit/examples"
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx"
       ],
       "change_frequency": "medium",
       "cache_safe": false,
-      "refresh_trigger": "when UI Kit components, hooks, or theming options change"
+      "refresh_trigger": "when sendTransaction args, advanced args, progress events, or TxResponse shape changes"
     },
     {
-      "agent_file": "agents/tutorials-index.json",
+      "agent_file": "agents/workflows/send-multichain-transaction.md",
       "source_sections": [
-        "docs/chain/tutorials",
-        "docs/chain/tutorials/basics",
-        "docs/chain/tutorials/power-features",
-        "docs/chain/tutorials/token-systems"
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/08-Send-Multichain-Transactions.mdx"
       ],
-      "change_frequency": "high",
+      "change_frequency": "medium",
       "cache_safe": false,
-      "refresh_trigger": "when new tutorials added or existing tutorials updated"
+      "refresh_trigger": "when prepareTransaction, executeTransactions, svmExecute, or CEA routing logic changes"
     },
     {
-      "agent_file": "agents/rpc-methods.json",
+      "agent_file": "agents/workflows/constants-reference.md",
+      "source_sections": ["docs/chain/03-build/03-Important-Concepts.mdx"],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when new chain constants, token constants, or LIBRARY values are added"
+    },
+    {
+      "agent_file": "agents/index.json",
+      "source_sections": ["docs/chain/04-For-AI-Agents.mdx"],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when new agent-facing resources are added or the agents/ directory structure changes"
+    },
+    {
+      "agent_file": "agents/retrieval-map.json",
       "source_sections": [
-        "docs/chain/node-and-system-tools/json-rpc-functions"
+        "docs/chain/03-build",
+        "docs/chain/important-concepts"
       ],
       "change_frequency": "low",
       "cache_safe": true,
-      "refresh_trigger": "when JSON-RPC methods added or modified"
+      "refresh_trigger": "when new capabilities are added or doc URLs change"
     },
     {
-      "agent_file": "agents/network-config.json",
+      "agent_file": "agents/schemas/universal-transaction-request.json",
       "source_sections": [
-        "docs/chain/setup/chain-config",
-        "docs/chain/setup/tooling/faucet",
-        "docs/chain/setup/tooling/block-explorer"
+        "docs/chain/03-build/06-Send-Universal-Transaction.mdx",
+        "docs/chain/03-build/08-Send-Multichain-Transactions.mdx"
+      ],
+      "change_frequency": "medium",
+      "cache_safe": false,
+      "refresh_trigger": "when sendTransaction or prepareTransaction argument list changes"
+    },
+    {
+      "agent_file": "agents/schemas/chain-config.json",
+      "source_sections": [
+        "docs/chain/02-setup/01-Chain-Configuration.mdx",
+        "src/components/Static/PushChainSpecs.tsx"
       ],
       "change_frequency": "low",
       "cache_safe": true,
-      "refresh_trigger": "when network endpoints, faucet URLs, or explorer URLs change"
+      "refresh_trigger": "when RPC URLs, block explorers, contract addresses, or native currency config changes"
     },
     {
-      "agent_file": "agents/account-types.json",
+      "agent_file": "agents/workflows/configure-dev-environment.md",
       "source_sections": [
-        "docs/chain/important-concepts",
-        "docs/chain/deep-dives/how-uea-works",
-        "docs/chain/build/understanding-universal-transactions"
+        "docs/chain/02-setup/01-Chain-Configuration.mdx",
+        "docs/chain/03-build/02-Initialize-Client.mdx"
       ],
       "change_frequency": "low",
       "cache_safe": true,
-      "refresh_trigger": "when UOA/UEA/CEA model or derivation logic changes"
+      "refresh_trigger": "when RPC URL, chain ID, SDK package names, or tooling config changes"
+    },
+    {
+      "agent_file": "agents/workflows/use-contract-helpers.md",
+      "source_sections": [
+        "docs/chain/02-setup/01-Chain-Configuration.mdx",
+        "docs/chain/03-build/12-Contract-Helpers.mdx"
+      ],
+      "change_frequency": "low",
+      "cache_safe": true,
+      "refresh_trigger": "when UEA Factory address, precompile address, or contract helper interfaces change"
     }
   ]
 }
