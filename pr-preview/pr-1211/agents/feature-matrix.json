@@ -1,0 +1,164 @@
+{
+  "version": "1.0.0",
+  "generated": "2025-01-01T00:00:00.000Z",
+  "description": "Feature availability matrix by actor type",
+  "legend": {
+    "true": "Fully supported for this actor type",
+    "false": "Not applicable or not supported",
+    "partial": "Limited support or requires additional configuration"
+  },
+  "features": [
+    {
+      "feature": "universal_transactions",
+      "description": "Send cross-chain transactions via unified interface",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "fee_abstraction",
+      "description": "Pay gas in native tokens (ETH, SOL) without PC token",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "wallet_abstraction",
+      "description": "Use any EVM or non-EVM wallet without chain switching",
+      "developer": true,
+      "end_user": true,
+      "agent": "partial",
+      "backend": "partial"
+    },
+    {
+      "feature": "multichain_execution",
+      "description": "Execute on external chains via CEA (Route 2)",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "contract_initiated_execution",
+      "description": "Smart contracts initiate cross-chain execution",
+      "developer": true,
+      "end_user": false,
+      "agent": false,
+      "backend": "partial"
+    },
+    {
+      "feature": "evm_compatibility",
+      "description": "Deploy and interact with standard EVM contracts",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "solana_support",
+      "description": "Sign and originate from Solana wallets",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "track_transaction",
+      "description": "Monitor transaction status with progress hooks and explorer URLs",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "sign_message",
+      "description": "Sign arbitrary messages for verification",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "read_state",
+      "description": "Read blockchain state via RPC without signing",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "ui_kit",
+      "description": "Pre-built React components for wallet connection",
+      "developer": true,
+      "end_user": true,
+      "agent": false,
+      "backend": false
+    },
+    {
+      "feature": "mcp_tools",
+      "description": "Capabilities suitable for MCP tool exposure",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "read_only_mode",
+      "description": "Initialize client without signer for read operations",
+      "developer": true,
+      "end_user": false,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "batch_transactions",
+      "description": "Execute multiple calls in single transaction (multicall)",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "asset_movement",
+      "description": "Move assets atomically with transaction execution via tx.funds",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "uea_auto_deployment",
+      "description": "UEA deployed automatically on first use",
+      "developer": true,
+      "end_user": true,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "progress_hooks",
+      "description": "Subscribe to transaction lifecycle events",
+      "developer": true,
+      "end_user": "partial",
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "custom_rpc_urls",
+      "description": "Override default RPC endpoints per chain",
+      "developer": true,
+      "end_user": false,
+      "agent": true,
+      "backend": true
+    },
+    {
+      "feature": "email_login",
+      "description": "Non-crypto native users can login via email (Push Wallet)",
+      "developer": true,
+      "end_user": true,
+      "agent": false,
+      "backend": false
+    }
+  ]
+}

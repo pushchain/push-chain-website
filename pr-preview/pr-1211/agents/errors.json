@@ -1,0 +1,255 @@
+[
+  {
+    "id": "missing_universal_signer",
+    "name": "Missing Universal Signer",
+    "description": "PushChain.initialize() was called without a valid UniversalSigner or UniversalAccount",
+    "likely_cause": "Developer passed undefined, null, or an incompatible signer object to PushChain.initialize(). The signer was not created using PushChain.utils.signer.toUniversal() or toUniversalFromKeypair().",
+    "detection_signal": "TypeError or validation error thrown by PushChain.initialize() indicating missing or invalid signer parameter. Error message typically contains 'signer' or 'account' reference.",
+    "user_visible_symptom": "Application fails to initialize. User sees generic error or blank state. No wallet connection prompt appears.",
+    "machine_recovery": [
+      "Check if signer parameter is defined before calling initialize()",
+      "Verify signer was created via PushChain.utils.signer.toUniversal() for EVM signers",
+      "Verify signer was created via PushChain.utils.signer.toUniversalFromKeypair() for Solana keypairs",
+      "If using UI Kit, ensure PushUniversalWalletProvider is properly wrapping the component tree"
+    ],
+    "escalation": "If signer creation succeeds but initialize() still fails, escalate to developer with full error stack trace and signer type used.",
+    "confidence": "documented"
+  },
+  {
+    "id": "invalid_network",
+    "name": "Invalid Network Constant",
+    "description": "An invalid or unrecognized PUSH_NETWORK constant was passed to initialize()",
+    "likely_cause": "Developer passed a string literal instead of PushChain.CONSTANTS.PUSH_NETWORK.TESTNET or used an outdated/misspelled network constant.",
+    "detection_signal": "Error thrown during initialize() referencing invalid network. Check if options.network matches one of PushChain.CONSTANTS.PUSH_NETWORK values.",
+    "user_visible_symptom": "Application fails to connect to Push Chain. May show network error or initialization failure message.",
+    "machine_recovery": [
+      "Replace network string with PushChain.CONSTANTS.PUSH_NETWORK.TESTNET (for testnet)",
+      "Verify SDK version supports the target network",
+      "Check for typos in network constant access path"
+    ],
+    "escalation": "If using correct constant from current SDK version and still failing, report as potential SDK bug with SDK version and exact constant used.",
+    "confidence": "documented"
+  },
+  {
+    "id": "unsupported_chain",
+    "name": "Unsupported Origin Chain",
+    "description": "The signer's origin chain is not in Push Chain's supported chain list",
+    "likely_cause": "Universal signer was created from a wallet connected to an unsupported network (e.g., a custom L2 not yet integrated with Push Chain).",
+    "detection_signal": "Error during initialize() or sendTransaction() indicating chain ID or CAIP-10 chain identifier is not recognized. Check signer.account.chain against PushChain.CONSTANTS.CHAIN values.",
+    "user_visible_symptom": "Wallet appears connected but transactions fail. Error message may mention unsupported chain or network.",
+    "machine_recovery": [
+      "List supported chains via Object.values(PushChain.CONSTANTS.CHAIN)",
+      "Prompt user to switch wallet to a supported network (Ethereum Sepolia, Solana Devnet, etc.)",
+      "If programmatic, reconnect signer with provider pointing to supported RPC"
+    ],
+    "escalation": "If user's required chain is not supported, escalate as feature request with chain ID and use case.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "signature_mismatch",
+    "name": "Signature Format Mismatch",
+    "description": "The signer's signature output does not match expected format for the chain type",
+    "likely_cause": "Custom signer implementation returns signature in wrong format. EVM expects hex string or Uint8Array, Solana expects Uint8Array. signMessage/signTypedData return type incorrect.",
+    "detection_signal": "Signature verification fails during transaction submission. Error may reference signature length, encoding, or verification failure.",
+    "user_visible_symptom": "Transaction submission fails after user signs. Error appears after wallet signature prompt completes.",
+    "machine_recovery": [
+      "Verify custom signer functions return Uint8Array as documented",
+      "For EVM signers, ensure signature is 65 bytes (r + s + v)",
+      "For Solana signers, ensure signature is 64 bytes",
+      "Use PushChain.utils.signer.toUniversal() instead of custom implementation if possible"
+    ],
+    "escalation": "If using standard toUniversal() conversion and signature still fails, escalate with wallet type, library version, and raw signature output.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "insufficient_fee_balance",
+    "name": "Insufficient Fee Balance",
+    "description": "The user's origin wallet does not have enough native tokens to cover gas fees",
+    "likely_cause": "User's wallet on origin chain (ETH on Sepolia, SOL on Devnet) has insufficient balance for gas funding. Universal fee abstraction still requires native token payment on source chain.",
+    "detection_signal": "Progress hook emits SEND-TX-05-01 followed by error. Error message references insufficient funds, balance, or gas.",
+    "user_visible_symptom": "Transaction fails during gas funding step. User may see 'insufficient funds' or 'not enough ETH/SOL for gas' message.",
+    "machine_recovery": [
+      "Query origin chain balance before initiating transaction",
+      "Display estimated gas cost to user before transaction",
+      "Direct user to faucet if on testnet (https://push.org/docs/chain/setup/tooling/faucet/)",
+      "Suggest user add funds to origin wallet"
+    ],
+    "escalation": "No escalation needed. User action required to fund wallet.",
+    "confidence": "documented"
+  },
+  {
+    "id": "invalid_tx_hash",
+    "name": "Invalid Transaction Hash Format",
+    "description": "Transaction hash provided to tracking function has invalid format",
+    "likely_cause": "Hash is not a valid hex string, wrong length, or missing 0x prefix. May be passing Push Chain tx hash format to EVM tracker or vice versa.",
+    "detection_signal": "Validation error thrown immediately when calling track/status function. Error references hash format or length.",
+    "user_visible_symptom": "Transaction status lookup fails. User cannot view transaction details or confirmation status.",
+    "machine_recovery": [
+      "Validate hash is 66 characters for EVM (0x + 64 hex chars)",
+      "Ensure hash has 0x prefix for EVM chains",
+      "Use hash exactly as returned from sendTransaction() response",
+      "Do not truncate or modify hash string"
+    ],
+    "escalation": "If hash returned from sendTransaction() itself causes this error, escalate as SDK bug.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "tx_timeout",
+    "name": "Transaction Tracking Timeout",
+    "description": "Transaction confirmation monitoring exceeded timeout threshold",
+    "likely_cause": "Network congestion, transaction stuck in mempool, or transaction dropped. May also indicate RPC endpoint issues preventing status updates.",
+    "detection_signal": "Tracking promise rejects with timeout error. Progress hook stops emitting confirmation events.",
+    "user_visible_symptom": "Transaction shows as pending indefinitely. User does not see success or failure confirmation.",
+    "machine_recovery": [
+      "Retry tracking with fresh RPC connection",
+      "Check transaction on block explorer directly using pushChainClient.explorer.getTransactionUrl()",
+      "If transaction not found on explorer after timeout, consider it dropped",
+      "Allow user to retry original transaction"
+    ],
+    "escalation": "If timeouts are frequent and explorer shows transactions succeeding, escalate as RPC reliability issue.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "tx_reverted",
+    "name": "Transaction Execution Reverted",
+    "description": "Transaction was mined but execution reverted at contract level",
+    "likely_cause": "Smart contract require() or revert() triggered. Common causes: insufficient token balance, failed validation, access control, or reentrancy guard.",
+    "detection_signal": "Progress hook emits SEND-TX-99-02 with error details. Transaction receipt shows status 0 or reverted flag.",
+    "user_visible_symptom": "Transaction fails after confirmation. Gas is consumed but intended action did not complete.",
+    "machine_recovery": [
+      "Parse revert reason from error message if available",
+      "Check contract input parameters match expected types and ranges",
+      "Verify user has sufficient token approvals for ERC20 operations",
+      "Simulate transaction before submission using eth_call or equivalent"
+    ],
+    "escalation": "If revert reason is unclear or contract behaves unexpectedly, escalate with transaction hash and contract address for debugging.",
+    "confidence": "documented"
+  },
+  {
+    "id": "rpc_unreachable",
+    "name": "RPC Endpoint Unreachable",
+    "description": "Cannot establish connection to RPC endpoint for Push Chain or origin chain",
+    "likely_cause": "Network connectivity issues, RPC endpoint down, rate limiting, or firewall blocking. Custom RPC URL may be misconfigured.",
+    "detection_signal": "Network error or timeout during any RPC call. Error references connection refused, timeout, or fetch failure.",
+    "user_visible_symptom": "Application shows connection error. All blockchain operations fail. May appear as blank state or loading indefinitely.",
+    "machine_recovery": [
+      "Retry with exponential backoff (3 attempts, 1s/2s/4s delays)",
+      "If custom rpcUrls provided, fall back to default endpoints",
+      "For Push Chain testnet, verify https://evm.donut.rpc.push.org/ is accessible",
+      "Check if user is behind corporate firewall or VPN blocking WebSocket/HTTP"
+    ],
+    "escalation": "If default Push Chain RPC is consistently unreachable from multiple locations, escalate as infrastructure issue.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "uea_not_deployed",
+    "name": "UEA Not Yet Deployed",
+    "description": "Universal Executor Account does not exist on Push Chain for this Universal Origin Account",
+    "likely_cause": "This is the user's first transaction on Push Chain. UEA deployment is lazy and happens automatically on first use. Not an error condition.",
+    "detection_signal": "getAccountStatus() returns uea.deployed === false. Progress hook shows SEND-TX-03-01 followed by deployment steps.",
+    "user_visible_symptom": "First transaction may take slightly longer. No visible error - this is expected behavior.",
+    "machine_recovery": [
+      "No action required - SDK handles UEA deployment automatically",
+      "If checking status proactively, inform user that first transaction will deploy their account",
+      "Ensure user has sufficient origin chain balance for deployment gas"
+    ],
+    "escalation": "If automatic deployment fails repeatedly, escalate with origin account address and error details.",
+    "confidence": "documented"
+  },
+  {
+    "id": "chain_not_supported_for_cea",
+    "name": "Chain Not Supported for CEA Execution",
+    "description": "Attempted Route 2 or Route 3 transaction to/from a chain that does not support CEA deployment",
+    "likely_cause": "Developer specified tx.to.chain or tx.from.chain with a chain identifier that Push Chain does not yet support for external execution.",
+    "detection_signal": "Error during sendTransaction() referencing unsupported chain for CEA or external execution. Check chain against supported CEA chains.",
+    "user_visible_symptom": "Cross-chain transaction fails before submission. Error indicates target chain is not supported.",
+    "machine_recovery": [
+      "Verify target chain is in supported list for external execution",
+      "For Route 1 (Push Chain only), remove chain specification from tx.to",
+      "Check documentation for current list of CEA-supported chains",
+      "Consider alternative approach using Route 1 with on-chain bridging"
+    ],
+    "escalation": "If specific chain support is needed, submit feature request with chain ID and use case.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "wallet_connection_rejected",
+    "name": "Wallet Connection Rejected",
+    "description": "User rejected the wallet connection request in their wallet UI",
+    "likely_cause": "User clicked 'Reject' or 'Cancel' in wallet popup (MetaMask, Phantom, etc.). May also occur if popup was blocked or closed accidentally.",
+    "detection_signal": "Wallet adapter throws rejection error. Error code 4001 (EIP-1193) for EVM wallets. Progress hook emits SEND-TX-04-04.",
+    "user_visible_symptom": "Wallet popup disappears. Application shows connection failed or returns to disconnected state.",
+    "machine_recovery": [
+      "Detect rejection error code and display user-friendly message",
+      "Provide 'Try Again' button to re-initiate connection",
+      "Check for popup blocker if connection never appears",
+      "Do not auto-retry - user explicitly declined"
+    ],
+    "escalation": "No escalation needed. User action required to approve connection.",
+    "confidence": "documented"
+  },
+  {
+    "id": "invalid_to_address",
+    "name": "Invalid Recipient Address",
+    "description": "The tx.to address is malformed or invalid for the target chain",
+    "likely_cause": "Address has wrong length, invalid characters, missing 0x prefix (EVM), or invalid base58 encoding (Solana). May also be passing Solana address to EVM target or vice versa.",
+    "detection_signal": "Validation error during sendTransaction() before any network call. Error references address format or validation.",
+    "user_visible_symptom": "Transaction fails immediately with address validation error before any wallet prompts.",
+    "machine_recovery": [
+      "Validate EVM addresses: 42 chars, 0x prefix, valid hex",
+      "Validate Solana addresses: 32-44 chars, valid base58",
+      "Use ethers.isAddress() or equivalent validation before submission",
+      "For contract addresses, verify deployment on target chain"
+    ],
+    "escalation": "No escalation needed. Developer/input validation issue.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "uea_upgrade_required",
+    "name": "UEA Upgrade Required",
+    "description": "Universal Executor Account implementation is outdated and must be upgraded before sending transactions",
+    "likely_cause": "Push Chain protocol upgrade introduced new UEA version. User's existing UEA was deployed with older implementation.",
+    "detection_signal": "getAccountStatus() returns uea.requiresUpgrade === true. sendTransaction() may fail with version mismatch error.",
+    "user_visible_symptom": "Transactions fail with account version error. User may see prompt to upgrade account.",
+    "machine_recovery": [
+      "Check getAccountStatus() before transaction submission",
+      "If uea.requiresUpgrade === true, call pushChainClient.upgradeAccount()",
+      "upgradeAccount() is gasless and signature-based",
+      "After upgrade, retry original transaction"
+    ],
+    "escalation": "If upgradeAccount() fails repeatedly, escalate with account address and error details.",
+    "confidence": "documented"
+  },
+  {
+    "id": "funds_transfer_failed",
+    "name": "Asset Movement Failed",
+    "description": "The tx.funds asset transfer step failed during universal transaction",
+    "likely_cause": "Insufficient token balance, token not approved, or bridge/lock contract issue. Origin chain may have rejected the lock transaction.",
+    "detection_signal": "Progress hook emits SEND-TX-06-* events followed by error. Error references fund transfer, lock, or bridge failure.",
+    "user_visible_symptom": "Transaction fails during asset movement phase. User may see error about insufficient balance or transfer failure.",
+    "machine_recovery": [
+      "Verify user has sufficient balance of specified token on origin chain",
+      "Check token approval if moving ERC20/SPL tokens",
+      "Retry transaction if error was transient network issue",
+      "Verify token is in supported MOVEABLE.TOKEN list"
+    ],
+    "escalation": "If balance is sufficient and approvals are in place, escalate with token type, amount, and full error message.",
+    "confidence": "inferred"
+  },
+  {
+    "id": "multicall_partial_failure",
+    "name": "Multicall Batch Partial Failure",
+    "description": "One or more operations in a batched multicall transaction failed",
+    "likely_cause": "Batch contains independent operations where one failed (e.g., one of multiple token transfers had insufficient balance). Depending on batch configuration, may revert all or continue.",
+    "detection_signal": "Transaction receipt shows partial execution. Multicall contract events indicate which sub-calls succeeded/failed.",
+    "user_visible_symptom": "Some operations in batch completed, others did not. User sees inconsistent state.",
+    "machine_recovery": [
+      "Parse multicall result to identify which operations failed",
+      "Provide user with clear breakdown of success/failure per operation",
+      "Allow retry of only failed operations",
+      "Consider using atomic batching to revert all on any failure"
+    ],
+    "escalation": "If multicall behavior is inconsistent with documentation, escalate with batch payload and results.",
+    "confidence": "inferred"
+  }
+]

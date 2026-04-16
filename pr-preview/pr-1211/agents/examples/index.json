@@ -1,0 +1,783 @@
+[
+  {
+    "id": "initialize-client-ethers",
+    "name": "Initialize Push Chain Client with Ethers.js",
+    "file": "initialize-client-ethers.md",
+    "description": "Minimal ethers v6 example initializing PushChain with Ethereum Sepolia wallet",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [
+      "eip155:11155111"
+    ],
+    "prerequisite_examples": []
+  },
+  {
+    "id": "initialize-client-solana",
+    "name": "Initialize Push Chain Client with Solana Web3.js",
+    "file": "initialize-client-solana.md",
+    "description": "Minimal Solana Web3.js example initializing PushChain with Solana Devnet keypair",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversalFromKeypair",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [
+      "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+    ],
+    "prerequisite_examples": []
+  },
+  {
+    "id": "send-transaction-push-chain",
+    "name": "Send Transaction on Push Chain",
+    "file": "send-transaction-push-chain.md",
+    "description": "Minimal example sending native value on Push Chain (Route 1)",
+    "sdk_methods_used": [
+      "pushChainClient.universal.sendTransaction"
+    ],
+    "chains_involved": [
+      "eip155:42101"
+    ],
+    "prerequisite_examples": [
+      "initialize-client-ethers"
+    ]
+  },
+  {
+    "id": "send-transaction-external-chain",
+    "name": "Send Transaction to External Chain",
+    "file": "send-transaction-external-chain.md",
+    "description": "Minimal example sending transaction to external chain (Route 2) using {address, chain} target",
+    "sdk_methods_used": [
+      "pushChainClient.universal.sendTransaction"
+    ],
+    "chains_involved": [
+      "eip155:11155111",
+      "eip155:42101"
+    ],
+    "prerequisite_examples": [
+      "initialize-client-ethers"
+    ]
+  },
+  {
+    "id": "track-transaction",
+    "name": "Track Universal Transaction",
+    "file": "track-transaction.md",
+    "description": "Minimal example using trackTransaction with waitForCompletion and progressHook",
+    "sdk_methods_used": [
+      "pushChainClient.orchestrator.trackTransaction"
+    ],
+    "chains_involved": [
+      "eip155:42101"
+    ],
+    "prerequisite_examples": [
+      "send-transaction-push-chain"
+    ],
+    "status": "inferred"
+  },
+  {
+    "id": "wallet-provider-react",
+    "name": "React Wallet Provider Integration",
+    "file": "wallet-provider-react.md",
+    "description": "Minimal React example using PushUniversalWalletProvider + PushUniversalAccountButton + usePushChainClient",
+    "sdk_methods_used": [
+      "PushUniversalWalletProvider",
+      "PushUniversalAccountButton",
+      "usePushChainClient"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": []
+  },
+  {
+    "id": "sign-message",
+    "name": "Sign Universal Message",
+    "file": "sign-message.md",
+    "description": "Minimal example using pushChainClient.universal.signMessage",
+    "sdk_methods_used": [
+      "pushChainClient.universal.signMessage"
+    ],
+    "chains_involved": [
+      "eip155:42101"
+    ],
+    "prerequisite_examples": [
+      "initialize-client-ethers"
+    ]
+  },
+  {
+    "id": "tutorial-simple-counter",
+    "name": "Tutorial: Simple Counter",
+    "file": "tutorial-simple-counter.md",
+    "description": "Deploy and interact with a simple counter contract on Push Chain from any wallet.",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/basics/tutorial-simple-counter/"
+  },
+  {
+    "id": "tutorial-universal-counter",
+    "name": "Tutorial: Universal Counter — Per-Chain Tracking",
+    "file": "tutorial-universal-counter.md",
+    "description": "Build a counter that tracks per-chain increments using UEAFactory and UniversalAccountId.",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/basics/tutorial-universal-counter/"
+  },
+  {
+    "id": "tutorial-mint-erc20",
+    "name": "Tutorial: Mint ERC-20 Tokens from Any Chain",
+    "file": "tutorial-mint-erc20.md",
+    "description": "Deploy an ERC-20 on Push Chain and mint tokens from Ethereum, Solana, or any supported chain.",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/basics/tutorial-mint-erc20/"
+  },
+  {
+    "id": "tutorial-batch-transactions",
+    "name": "Tutorial: Batch Transactions",
+    "file": "tutorial-batch-transactions.md",
+    "description": "Execute multiple contract calls atomically in a single universal transaction.",
+    "sdk_methods_used": [
+      "pushChainClient.universal.sendTransaction",
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/power-features/tutorial-batch-transactions/"
+  },
+  {
+    "id": "tutorial-derive-uea",
+    "name": "Tutorial: Derive Universal Executor Account (UEA)",
+    "file": "tutorial-derive-uea.md",
+    "description": "Programmatically derive the UEA address for any wallet without deploying it first.",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toUniversal"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/power-features/tutorial-derive-uea/"
+  },
+  {
+    "id": "tutorial-universal-airdrop",
+    "name": "Tutorial: Universal Airdrop",
+    "file": "tutorial-universal-airdrop.md",
+    "description": "Airdrop tokens to users across multiple chains in a single transaction using Push Chain.",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toUniversal",
+      "pushChainClient.universal.sendTransaction"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "type": "tutorial",
+    "source_url": "https://push.org/docs/chain/tutorials/token-systems/tutorial-universal-airdrop/"
+  },
+  {
+    "id": "convert-viem-to-universal-signer",
+    "name": "Create Universal Signer",
+    "file": "convert-viem-to-universal-signer.md",
+    "description": "Code example: Create Universal Signer — https://push.org/docs/chain/build/create-universal-signer/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/create-universal-signer/"
+  },
+  {
+    "id": "convert-solana-keypair-to-universal-signer",
+    "name": "Create Universal Signer",
+    "file": "convert-solana-keypair-to-universal-signer.md",
+    "description": "Code example: Create Universal Signer — https://push.org/docs/chain/build/create-universal-signer/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.toUniversalFromKeypair"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/create-universal-signer/"
+  },
+  {
+    "id": "initialize-client-viem",
+    "name": "Initialize Push Chain Client",
+    "file": "initialize-client-viem.md",
+    "description": "Code example: Initialize Push Chain Client — https://push.org/docs/chain/build/initialize-push-chain-client/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-push-chain-client/"
+  },
+  {
+    "id": "initialize-client-custom-signer",
+    "name": "Read-only Mode",
+    "file": "initialize-client-custom-signer.md",
+    "description": "Code example: Read-only Mode — https://push.org/docs/chain/build/initialize-push-chain-client/",
+    "sdk_methods_used": [
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-push-chain-client/"
+  },
+  {
+    "id": "reinitialize-client",
+    "name": "Reinitialize Client",
+    "file": "reinitialize-client.md",
+    "description": "Code example: Reinitialize Client — https://push.org/docs/chain/build/initialize-push-chain-client/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-push-chain-client/"
+  },
+  {
+    "id": "get-account-status",
+    "name": "Get Account Status",
+    "file": "get-account-status.md",
+    "description": "Code example: Get Account Status — https://push.org/docs/chain/build/initialize-push-chain-client/",
+    "sdk_methods_used": [
+      "PushChain.initialize",
+      "pushChainClient.getAccountStatus"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-push-chain-client/"
+  },
+  {
+    "id": "initialize-evm-client-ethers",
+    "name": "Initialize EVM Client",
+    "file": "initialize-evm-client-ethers.md",
+    "description": "Code example: Initialize EVM Client — https://push.org/docs/chain/build/initialize-evm-client/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-evm-client/"
+  },
+  {
+    "id": "initialize-evm-client-viem",
+    "name": "Initialize EVM Client",
+    "file": "initialize-evm-client-viem.md",
+    "description": "Code example: Initialize EVM Client — https://push.org/docs/chain/build/initialize-evm-client/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-evm-client/"
+  },
+  {
+    "id": "initialize-evm-client-readonly",
+    "name": "Initialize EVM Client",
+    "file": "initialize-evm-client-readonly.md",
+    "description": "Code example: Initialize EVM Client — https://push.org/docs/chain/build/initialize-evm-client/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-evm-client/"
+  },
+  {
+    "id": "initialize-evm-client-viem-fetch-tx",
+    "name": "Initialize EVM Client",
+    "file": "initialize-evm-client-viem-fetch-tx.md",
+    "description": "Code example: Initialize EVM Client — https://push.org/docs/chain/build/initialize-evm-client/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/initialize-evm-client/"
+  },
+  {
+    "id": "send-transaction-ethers-basic",
+    "name": "Live Playground",
+    "file": "send-transaction-ethers-basic.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/send-universal-transaction/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-universal-transaction/"
+  },
+  {
+    "id": "send-transaction-ethers-with-prompt",
+    "name": "Live Playground",
+    "file": "send-transaction-ethers-with-prompt.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/send-universal-transaction/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.universal.sendTransaction",
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-universal-transaction/"
+  },
+  {
+    "id": "send-transaction-viem-basic",
+    "name": "Live Playground",
+    "file": "send-transaction-viem-basic.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/send-universal-transaction/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.universal.sendTransaction",
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-universal-transaction/"
+  },
+  {
+    "id": "send-transaction-solana-basic",
+    "name": "Live Playground",
+    "file": "send-transaction-solana-basic.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/send-universal-transaction/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.toUniversalFromKeypair",
+      "PushChain.initialize",
+      "pushChainClient.universal.sendTransaction",
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-universal-transaction/"
+  },
+  {
+    "id": "prepare-transaction",
+    "name": "Prepare Transaction",
+    "file": "prepare-transaction.md",
+    "description": "Code example: Prepare Transaction — https://push.org/docs/chain/build/send-multichain-transactions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+  },
+  {
+    "id": "execute-transactions-counter",
+    "name": "Execute Transactions",
+    "file": "execute-transactions-counter.md",
+    "description": "Code example: Execute Transactions — https://push.org/docs/chain/build/send-multichain-transactions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "PushChain.utils.account.toUniversal",
+      "PushChain.utils.account.deriveExecutorAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+  },
+  {
+    "id": "execute-transactions",
+    "name": "Cross-Chain AMM Swap: ETH → pSOL via Push Chain AMM",
+    "file": "execute-transactions.md",
+    "description": "Code example: Cross-Chain AMM Swap: ETH → pSOL via Push Chain AMM — https://push.org/docs/chain/build/send-multichain-transactions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "PushChain.utils.helpers.parseUnits",
+      "PushChain.utils.account.toUniversal",
+      "PushChain.utils.account.deriveExecutorAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+  },
+  {
+    "id": "execute-transactions-fund-and-call",
+    "name": "Fund BNB CEA then Increment Counter on BNB Testnet",
+    "file": "execute-transactions-fund-and-call.md",
+    "description": "Code example: Fund BNB CEA then Increment Counter on BNB Testnet — https://push.org/docs/chain/build/send-multichain-transactions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+  },
+  {
+    "id": "execute-transactions-batch",
+    "name": "Batch Contract Calls: Push Chain + BNB + Solana in One Signature",
+    "file": "execute-transactions-batch.md",
+    "description": "Code example: Batch Contract Calls: Push Chain + BNB + Solana in One Signature — https://push.org/docs/chain/build/send-multichain-transactions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "PushChain.utils.account.toUniversal",
+      "PushChain.utils.account.deriveExecutorAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+  },
+  {
+    "id": "track-transaction-uea-to-cea",
+    "name": "Live Playground",
+    "file": "track-transaction-uea-to-cea.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/track-universal-transaction/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.universal.trackTransaction"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/track-universal-transaction/"
+  },
+  {
+    "id": "sign-universal-message",
+    "name": "Sign Universal Message",
+    "file": "sign-universal-message.md",
+    "description": "Code example: Sign Universal Message — https://push.org/docs/chain/build/sign-universal-message/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.universal.signMessage"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/sign-universal-message/"
+  },
+  {
+    "id": "sign-universal-typed-data",
+    "name": "Sign Typed Data",
+    "file": "sign-universal-typed-data.md",
+    "description": "Code example: Sign Typed Data — https://push.org/docs/chain/build/sign-universal-message/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.universal.signTypedData"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/sign-universal-message/"
+  },
+  {
+    "id": "utility-parse-units",
+    "name": "Parse Units",
+    "file": "utility-parse-units.md",
+    "description": "Code example: Parse Units — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.helpers.parseUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-format-units",
+    "name": "Format Units",
+    "file": "utility-format-units.md",
+    "description": "Code example: Format Units — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.helpers.formatUnits"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-encode-tx-data",
+    "name": "Encode Transaction Data",
+    "file": "utility-encode-tx-data.md",
+    "description": "Code example: Encode Transaction Data — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-chain-namespace",
+    "name": "Get Chain Namespace from Chain Name",
+    "file": "utility-get-chain-namespace.md",
+    "description": "Code example: Get Chain Namespace from Chain Name — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-chain-name",
+    "name": "Get Chain Name from Chain Namespace",
+    "file": "utility-get-chain-name.md",
+    "description": "Code example: Get Chain Name from Chain Namespace — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-supported-chains-by-name",
+    "name": "Get Supported Chains By Name",
+    "file": "utility-get-supported-chains-by-name.md",
+    "description": "Code example: Get Supported Chains By Name — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-supported-chains",
+    "name": "Get Supported Chains",
+    "file": "utility-get-supported-chains.md",
+    "description": "Code example: Get Supported Chains — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-account-to-universal",
+    "name": "Convert to Universal Account",
+    "file": "utility-account-to-universal.md",
+    "description": "Code example: Convert to Universal Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toUniversal"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-account-to-chain-agnostic",
+    "name": "Convert to Chain-Agnostic Address",
+    "file": "utility-account-to-chain-agnostic.md",
+    "description": "Code example: Convert to Chain-Agnostic Address — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toChainAgnostic"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-account-from-chain-agnostic",
+    "name": "Convert from Chain-Agnostic to Universal Account",
+    "file": "utility-account-from-chain-agnostic.md",
+    "description": "Code example: Convert from Chain-Agnostic to Universal Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-derive-executor-account",
+    "name": "Derive Executor Account",
+    "file": "utility-derive-executor-account.md",
+    "description": "Code example: Derive Executor Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toUniversal",
+      "PushChain.utils.account.deriveExecutorAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-resolve-controller-account",
+    "name": "Resolve Controller Account",
+    "file": "utility-resolve-controller-account.md",
+    "description": "Code example: Resolve Controller Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.account.resolveControllerAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-signer-from-keypair-ethers",
+    "name": "Create Universal Signer from Keypair",
+    "file": "utility-signer-from-keypair-ethers.md",
+    "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.toUniversalFromKeypair"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-signer-from-keypair-viem",
+    "name": "Create Universal Signer from Keypair",
+    "file": "utility-signer-from-keypair-viem.md",
+    "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.toUniversalFromKeypair"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-signer-from-keypair-solana",
+    "name": "Create Universal Signer from Keypair",
+    "file": "utility-signer-from-keypair-solana.md",
+    "description": "Code example: Create Universal Signer from Keypair — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.toUniversalFromKeypair"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-moveable-tokens",
+    "name": "Get Moveable Tokens",
+    "file": "utility-get-moveable-tokens.md",
+    "description": "Code example: Get Moveable Tokens — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-payable-tokens",
+    "name": "Get Payable Tokens",
+    "file": "utility-get-payable-tokens.md",
+    "description": "Code example: Get Payable Tokens — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-get-prc20-address",
+    "name": "Get PRC20 Address",
+    "file": "utility-get-prc20-address.md",
+    "description": "Code example: Get PRC20 Address — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-slippage-to-min-amount",
+    "name": "Calculate Minimum Amount from Slippage",
+    "file": "utility-slippage-to-min-amount.md",
+    "description": "Code example: Calculate Minimum Amount from Slippage — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-explorer-get-transaction-url",
+    "name": "Get Transaction URL",
+    "file": "utility-explorer-get-transaction-url.md",
+    "description": "Code example: Get Transaction URL — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.explorer.getTransactionUrl"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-explorer-list-urls",
+    "name": "List Explorer URLs",
+    "file": "utility-explorer-list-urls.md",
+    "description": "Code example: List Explorer URLs — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.explorer.listUrls"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-explorer-list-all-urls",
+    "name": "List All Explorer URLs",
+    "file": "utility-explorer-list-all-urls.md",
+    "description": "Code example: List All Explorer URLs — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-convert-origin-to-executor",
+    "name": "Convert Origin to Executor Account",
+    "file": "utility-convert-origin-to-executor.md",
+    "description": "Code example: Convert Origin to Executor Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [
+      "PushChain.utils.account.toUniversal"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-convert-executor-to-origin",
+    "name": "Convert Origin to Executor Account",
+    "file": "utility-convert-executor-to-origin.md",
+    "description": "Code example: Convert Origin to Executor Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "utility-convert-executor-to-origin-account",
+    "name": "Convert Executor Address to Origin Account",
+    "file": "utility-convert-executor-to-origin-account.md",
+    "description": "Code example: Convert Executor Address to Origin Account — https://push.org/docs/chain/build/utility-functions/",
+    "sdk_methods_used": [],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/utility-functions/"
+  },
+  {
+    "id": "advanced-custom-universal-signer",
+    "name": "Custom Universal Signer",
+    "file": "advanced-custom-universal-signer.md",
+    "description": "Code example: Custom Universal Signer — https://push.org/docs/chain/build/advanced/custom-universal-signer/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.utils.signer.construct",
+      "PushChain.utils.account.toUniversal"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/advanced/custom-universal-signer/"
+  },
+  {
+    "id": "upgrade-account-uea",
+    "name": "Live Playground",
+    "file": "upgrade-account-uea.md",
+    "description": "Code example: Live Playground — https://push.org/docs/chain/build/advanced/upgrade-account/",
+    "sdk_methods_used": [
+      "PushChain.utils.signer.toUniversal",
+      "PushChain.initialize",
+      "pushChainClient.getAccountStatus",
+      "pushChainClient.upgradeAccount"
+    ],
+    "chains_involved": [],
+    "prerequisite_examples": [],
+    "source_url": "https://push.org/docs/chain/build/advanced/upgrade-account/"
+  }
+]

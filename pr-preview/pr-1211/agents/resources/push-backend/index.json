@@ -1,0 +1,31 @@
+{
+  "description": "Node.js resources for universal transactions via @pushchain/core. Copy the files you need, set env vars, and run with tsx.",
+  "skill": "https://push.org/agents/skills/push-backend.md",
+  "setup": "npm install && PRIVATE_KEY=0x... npx tsx client-ethers.ts",
+  "envVars": {
+    "PRIVATE_KEY": "EVM wallet private key (0x-prefixed hex) — for ethers.js and viem scripts",
+    "SOLANA_KEY": "Solana keypair as JSON number array — for client-solana.ts"
+  },
+  "files": [
+    {
+      "file": "package.json",
+      "purpose": "Project dependencies — @pushchain/core, ethers, viem, @solana/web3.js, tsx",
+      "url": "https://push.org/agents/resources/push-backend/package.json"
+    },
+    {
+      "file": "client-ethers.ts",
+      "purpose": "Full working Node.js script — ethers.js signer, Route 1 (Push Chain) and Route 2 (external chain) sends",
+      "url": "https://push.org/agents/resources/push-backend/client-ethers.ts"
+    },
+    {
+      "file": "client-viem.ts",
+      "purpose": "Full working Node.js script — viem signer, Route 1 and Route 2 sends",
+      "url": "https://push.org/agents/resources/push-backend/client-viem.ts"
+    },
+    {
+      "file": "client-solana.ts",
+      "purpose": "Full working Node.js script — Solana Keypair signer, Push Chain target and Solana program target (svmExecute)",
+      "url": "https://push.org/agents/resources/push-backend/client-solana.ts"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+"use strict";
+(globalThis["webpackChunkpush_chain_website"] = globalThis["webpackChunkpush_chain_website"] || []).push([[24248],{
+
+/***/ 720046
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2025_05_06_apps_only_possible_with_shared_state_vol_1_index_md_766_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2025_05_06_apps_only_possible_with_shared_state_vol_1_index_md_766_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7969);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
+
+
+const frontMatter = {
+	slug: 'apps-only-possible-with-shared-state-v1',
+	title: 'Apps Possible Only with Shared State - Vol.1',
+	authors: [
+		'push'
+	],
+	image: './cover-image.webp',
+	description: 'Apps Possible Only with Shared State - Vol.1',
+	text: 'Five game-changing use cases that only work with shared-state architecture. From cross-chain DeFi to universal NFTs, discover what becomes possible when all chains share the same state.',
+	tags: [
+		'Product',
+		'Key Features',
+		'Push 101'
+	],
+	twitterId: '1919758550777356776'
+};
+const contentTitle = undefined;
+
+const assets = {
+"image": (__webpack_require__(429017)/* ["default"] */ .A),
+"authorsImageUrls": [undefined],
+};
+
+
+
+const toc = [];
+function _createMdxContent(props) {
+  const _components = {
+    img: "img",
+    p: "p",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+      alt: "Cover Image of Apps Possible Only with Shared State - Vol.1",
+      src: (__webpack_require__(583342)/* ["default"] */ .A) + "",
+      width: "1600",
+      height: "900"
+    })
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ },
+
+/***/ 429017
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-d9ca0c0401c3312a24a50a3b443c063f.webp");
+
+/***/ },
+
+/***/ 583342
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-d9ca0c0401c3312a24a50a3b443c063f.webp");
+
+/***/ },
+
+/***/ 7969
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1211/blog/apps-only-possible-with-shared-state-v1","source":"@site/blog/2025-05-06-apps-only-possible-with-shared-state-vol1/index.md","title":"Apps Possible Only with Shared State - Vol.1","description":"Apps Possible Only with Shared State - Vol.1","date":"2025-05-06T00:00:00.000Z","tags":[{"inline":true,"label":"Product","permalink":"/push-chain-website/pr-preview/pr-1211/blog/tags/product"},{"inline":true,"label":"Key Features","permalink":"/push-chain-website/pr-preview/pr-1211/blog/tags/key-features"},{"inline":true,"label":"Push 101","permalink":"/push-chain-website/pr-preview/pr-1211/blog/tags/push-101"}],"readingTime":6.16,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1211/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1211/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"apps-only-possible-with-shared-state-v1","title":"Apps Possible Only with Shared State - Vol.1","authors":["push"],"image":"./cover-image.webp","description":"Apps Possible Only with Shared State - Vol.1","text":"Five game-changing use cases that only work with shared-state architecture. From cross-chain DeFi to universal NFTs, discover what becomes possible when all chains share the same state.","tags":["Product","Key Features","Push 101"],"twitterId":"1919758550777356776"},"unlisted":false,"prevItem":{"title":"Apps Possible Only with Shared State - Vol.2","permalink":"/push-chain-website/pr-preview/pr-1211/blog/apps-only-possible-with-shared-state-v2"},"nextItem":{"title":"Interop as a Spectrum","permalink":"/push-chain-website/pr-preview/pr-1211/blog/interop-spectrum"}}');
+
+/***/ }
+
+}]);

@@ -1,0 +1,23 @@
+{
+  "description": "React app resources for universal transactions via @pushchain/ui-kit. Copy all files into your React project root (or a new directory) and run npm install.",
+  "skill": "https://push.org/agents/skills/push-frontend.md",
+  "quickstart": "npx create-universal-dapp",
+  "setup": "npm install && npm run dev",
+  "files": [
+    {
+      "file": "package.json",
+      "purpose": "Project dependencies — @pushchain/ui-kit, React 18, Vite, TypeScript",
+      "url": "https://push.org/agents/resources/push-frontend/package.json"
+    },
+    {
+      "file": "app-wrapper.tsx",
+      "purpose": "Root app wrapper — PushUniversalWalletProvider + PushUniversalAccountButton setup",
+      "url": "https://push.org/agents/resources/push-frontend/app-wrapper.tsx"
+    },
+    {
+      "file": "send-universal-tx.tsx",
+      "purpose": "Complete React component — usePushChainClient hook, send universal tx, status handling",
+      "url": "https://push.org/agents/resources/push-frontend/send-universal-tx.tsx"
+    }
+  ]
+}

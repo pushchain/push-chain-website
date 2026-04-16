@@ -1,0 +1,237 @@
+{
+  "version": "1.0.0",
+  "description": "Decision trees for Push Chain agent routing and action selection",
+  "trees": [
+    {
+      "id": "choose_transaction_route",
+      "question": "Where should this transaction execute?",
+      "branches": [
+        {
+          "condition": "tx.to is a plain address string (e.g., '0x...')",
+          "action": "Use Route 1: Execute on Push Chain via UEA",
+          "details": {
+            "execution_target": "Push Chain",
+            "executor": "UEA (Universal Executor Account)",
+            "sdk_call": "pushChainClient.universal.sendTransaction({ to: '0x...', data, value })"
+          },
+          "next": null
+        },
+        {
+          "condition": "tx.to is an object with { address, chain } where chain is an external chain",
+          "action": "Use Route 2: Execute on external chain via CEA",
+          "details": {
+            "execution_target": "External chain (e.g., Ethereum Sepolia, BNB Chain)",
+            "executor": "CEA (Chain Executor Account)",
+            "sdk_call": "pushChainClient.universal.sendTransaction({ to: { address: '0x...', chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, data })"
+          },
+          "next": null
+        },
+        {
+          "condition": "tx.to is a plain address AND tx.from.chain is set to an external chain",
+          "action": "Use Route 3: Execute on Push Chain with CEA as origin",
+          "details": {
+            "execution_target": "Push Chain",
+            "origin": "CEA on specified external chain",
+            "use_case": "When execution on Push Chain must reflect an external chain identity",
+            "sdk_call": "pushChainClient.universal.sendTransaction({ from: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, to: '0x...', data })"
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "choose_signer_type",
+      "question": "What signer library is the user or developer using?",
+      "branches": [
+        {
+          "condition": "User has an ethers.js Wallet or Signer (v5 or v6)",
+          "action": "Use PushChain.utils.signer.toUniversal(ethersSigner)",
+          "details": {
+            "import": "import { ethers } from 'ethers';",
+            "provider_note": "RPC URL determines chain: Sepolia RPC → Ethereum Sepolia account"
+          },
+          "next": null
+        },
+        {
+          "condition": "User has a viem WalletClient",
+          "action": "Use PushChain.utils.signer.toUniversal(viemWalletClient)",
+          "details": {
+            "import": "import { createWalletClient, http } from 'viem';",
+            "provider_note": "RPC URL determines chain"
+          },
+          "next": null
+        },
+        {
+          "condition": "User has a Solana Keypair (@solana/web3.js)",
+          "action": "Use PushChain.utils.signer.toUniversalFromKeypair(keypair, { chain, library })",
+          "details": {
+            "import": "import { Keypair } from '@solana/web3.js';",
+            "chain_param": "PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET",
+            "library_param": "PushChain.CONSTANTS.LIBRARY.SOLANA_WEB3JS"
+          },
+          "next": null
+        },
+        {
+          "condition": "User needs a custom signer implementation (no supported library)",
+          "action": "Construct a UniversalSignerSkeleton and pass to toUniversal",
+          "details": {
+            "method": "PushChain.utils.signer.construct(account, { signMessage, signTransaction, signTypedData })",
+            "then": "PushChain.utils.signer.toUniversal(skeleton)"
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "choose_integration_path",
+      "question": "What type of application is being built?",
+      "branches": [
+        {
+          "condition": "Building a React frontend with wallet connection UI",
+          "action": "Use @pushchain/ui-kit with PushUniversalWalletProvider",
+          "details": {
+            "package": "@pushchain/ui-kit",
+            "components": ["PushUniversalWalletProvider", "PushUniversalAccountButton"],
+            "hooks": ["usePushWalletContext", "usePushChainClient", "usePushChain"],
+            "benefit": "Abstracts wallet connection, signer creation, and client initialization"
+          },
+          "next": null
+        },
+        {
+          "condition": "Building a backend service, bot, or script",
+          "action": "Use @pushchain/core directly",
+          "details": {
+            "package": "@pushchain/core",
+            "flow": "Create signer → PushChain.initialize() → pushChainClient.universal.sendTransaction()"
+          },
+          "next": null
+        },
+        {
+          "condition": "Building a React frontend but need full control over wallet logic",
+          "action": "Use @pushchain/core with custom wallet integration",
+          "details": {
+            "package": "@pushchain/core",
+            "note": "You manage wallet connection yourself, then create UniversalSigner and initialize client"
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "handle_transaction_failure",
+      "question": "What type of failure occurred?",
+      "branches": [
+        {
+          "condition": "User rejected signature (progress event SEND-TX-04-04)",
+          "action": "Display user-friendly message and allow retry",
+          "details": {
+            "message": "Transaction was declined by user",
+            "recovery": "Prompt user to try again"
+          },
+          "next": null
+        },
+        {
+          "condition": "Gas estimation failed",
+          "action": "Check account balance and contract validity",
+          "details": {
+            "checks": ["Verify target contract exists", "Check if user has sufficient funds", "Verify calldata is valid"]
+          },
+          "next": null
+        },
+        {
+          "condition": "Transaction reverted on-chain (progress event SEND-TX-99-02)",
+          "action": "Inspect revert reason and fix contract call",
+          "details": {
+            "debug": "Check progressHook message for revert reason",
+            "common_causes": ["Insufficient funds in UEA", "Contract logic rejection", "Invalid function parameters"]
+          },
+          "next": null
+        },
+        {
+          "condition": "UEA requires upgrade (getAccountStatus shows requiresUpgrade: true)",
+          "action": "Call pushChainClient.upgradeAccount() before retrying",
+          "details": {
+            "method": "await pushChainClient.upgradeAccount({ progressHook })",
+            "note": "Gasless operation, handled automatically by SDK"
+          },
+          "next": null
+        },
+        {
+          "condition": "Network or RPC error",
+          "action": "Retry with exponential backoff or use custom RPC",
+          "details": {
+            "custom_rpc": "Pass rpcUrls option to PushChain.initialize()"
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "choose_tracking_method",
+      "question": "How should transaction confirmation be tracked?",
+      "branches": [
+        {
+          "condition": "Need simple confirmation wait after sendTransaction",
+          "action": "Use tx.wait() on the returned transaction response",
+          "details": {
+            "method": "const receipt = await txResponse.wait();",
+            "returns": "Transaction receipt with status, logs, gas used",
+            "best_for": "Simple sequential flows where you wait for confirmation before proceeding"
+          },
+          "next": null
+        },
+        {
+          "condition": "Need to track a transaction by hash (e.g., resuming tracking, monitoring)",
+          "action": "Use pushChainClient.universal.trackTransaction(txHash)",
+          "details": {
+            "method": "const receipt = await pushChainClient.universal.trackTransaction(txHash);",
+            "best_for": "Tracking transactions you didn't send, resuming after page reload"
+          },
+          "next": null
+        },
+        {
+          "condition": "Building UI with real-time progress updates",
+          "action": "Use progressHook callback in sendTransaction",
+          "details": {
+            "method": "sendTransaction({ ..., progressHook: (progress) => updateUI(progress) })",
+            "events": "SEND-TX-01 through SEND-TX-99-xx events provide granular status"
+          },
+          "next": null
+        }
+      ]
+    },
+    {
+      "id": "fee_payment_decision",
+      "question": "How will gas fees be paid?",
+      "branches": [
+        {
+          "condition": "User has native tokens on their origin chain (ETH on Ethereum, SOL on Solana)",
+          "action": "SDK handles fee abstraction automatically",
+          "details": {
+            "how_it_works": "User pays in native token on origin chain; SDK converts and funds UEA",
+            "no_pc_required": "Users do not need to hold PC tokens for gas"
+          },
+          "next": null
+        },
+        {
+          "condition": "User is on Push Chain natively",
+          "action": "User pays gas directly in PC (smallest unit: uPC)",
+          "details": {
+            "unit": "uPC (like wei in ETH)",
+            "conversion": "PushChain.utils.helpers.parseUnits('1', 18) = 1 PC"
+          },
+          "next": null
+        },
+        {
+          "condition": "User wants to move funds as part of transaction",
+          "action": "Use tx.funds parameter to atomically move assets",
+          "details": {
+            "param": "tx.funds: { amount: BigInt, token?: PushChain.CONSTANTS.MOVEABLE.TOKEN }",
+            "behavior": "Asset movement and execution happen atomically"
+          },
+          "next": null
+        }
+      ]
+    }
+  ]
+}

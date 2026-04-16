@@ -1,0 +1,36 @@
+{
+  "description": "Solidity interface files and a minimal complete multichain contract for Push Chain. Import the interfaces you need or use MyMultichainApp.sol as a starting point.",
+  "skill": "https://push.org/agents/skills/push-contracts.md",
+  "network": "Push Chain Donut Testnet",
+  "setup": "Copy .sol files into your contracts/ directory. For Foundry: forge install pushchain/push-chain-core-contracts",
+  "files": [
+    {
+      "file": "IUEAFactory.sol",
+      "purpose": "Interface for the UEA Factory precompile — getOriginForUEA, getUEAForOrigin, UniversalAccountId struct",
+      "address": "0x00000000000000000000000000000000000000eA",
+      "url": "https://push.org/agents/resources/push-contracts/IUEAFactory.sol"
+    },
+    {
+      "file": "IUniversalGatewayPC.sol",
+      "purpose": "Interface + struct for the UGPC precompile — sendUniversalTxOutbound, UniversalOutboundTxRequest",
+      "address": "0x00000000000000000000000000000000000000C1",
+      "url": "https://push.org/agents/resources/push-contracts/IUniversalGatewayPC.sol"
+    },
+    {
+      "file": "IUniversalCore.sol",
+      "purpose": "Interface for UniversalCore — fee estimates, gas price reads, chain height reads",
+      "address": "see https://push.org/docs/chain/setup/smart-contract-address-book/",
+      "url": "https://push.org/agents/resources/push-contracts/IUniversalCore.sol"
+    },
+    {
+      "file": "MyMultichainApp.sol",
+      "purpose": "Minimal complete contract — UGPC dispatch + inbound executeUniversalTx callback with replay protection",
+      "url": "https://push.org/agents/resources/push-contracts/MyMultichainApp.sol"
+    },
+    {
+      "file": "foundry.toml",
+      "purpose": "Foundry project config — RPC endpoints for Push Chain Donut Testnet, remappings",
+      "url": "https://push.org/agents/resources/push-contracts/foundry.toml"
+    }
+  ]
+}
