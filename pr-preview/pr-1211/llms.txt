@@ -42,20 +42,19 @@
 - [Chain Configuration](https://push.org/docs/chain/setup/chain-config/): RPC URLs, chain IDs, block explorers, and contract addresses.
 - [For AI Agents & LLMs](https://push.org/docs/chain/for-ai-agents/): Code editor setup, context files, and the full agent layer explained.
 
-## Add to Your AI Editor
-
-- Cursor: Settings → Features → Docs → Add new doc → https://push.org/llms.txt
-- Windsurf: Add to Cascade window → @docs:https://push.org/llms.txt
-- Claude Code: Add to CLAUDE.md or prompt → https://push.org/llms.txt
-- Full context (large context window): https://push.org/llms-full.txt
-
 ## Agent Layer
 
 Prefer these structured resources over the full docs tree for execution tasks:
 
 - [Agent Index](https://push.org/agents/index.json): Discovery map listing every agent file, its purpose, and the recommended traversal order.
-- [Skills](https://push.org/agents/skills/index.json): Copyable, self-contained skill files — [push-frontend](https://push.org/agents/skills/push-frontend/SKILL.md), [push-backend](https://push.org/agents/skills/push-backend/SKILL.md), [push-contracts](https://push.org/agents/skills/push-contracts/SKILL.md). Load the one matching your context before exploring workflows.
-- [Resources](https://push.org/agents/resources/index.json): Downloadable, runnable code files organized by skill — [push-frontend](https://push.org/agents/resources/push-frontend/index.json), [push-backend](https://push.org/agents/resources/push-backend/index.json), [push-contracts](https://push.org/agents/resources/push-contracts/index.json). push-frontend (package.json, app-wrapper.tsx, send-universal-tx.tsx); push-backend (package.json, client-ethers.ts, client-viem.ts, client-solana.ts); push-contracts (IUEAFactory.sol, IUniversalGatewayPC.sol, IUniversalCore.sol, MyMultichainApp.sol, foundry.toml).
+- **Skills** ([index](https://push.org/agents/skills/index.json)): Copyable, self-contained skill files. Load the one matching your context before generating code.
+  - [push-frontend](https://push.org/agents/skills/push-frontend/SKILL.md)
+  - [push-backend](https://push.org/agents/skills/push-backend/SKILL.md)
+  - [push-contracts](https://push.org/agents/skills/push-contracts/SKILL.md)
+- [Resources](https://push.org/agents/resources/index.json): Downloadable, runnable code files organized by skill.
+  - [push-frontend](https://push.org/agents/resources/push-frontend/index.json): `package.json`, `app-wrapper.tsx`, `send-universal-tx.tsx`
+  - [push-backend](https://push.org/agents/resources/push-backend/index.json): `package.json`, `client-ethers.ts`, `client-viem.ts`, `client-solana.ts`
+  - [push-contracts](https://push.org/agents/resources/push-contracts/index.json): `IUEAFactory.sol`, `IUniversalGatewayPC.sol`, `IUniversalCore.sol`, `MyMultichainApp.sol`, `foundry.toml`
 - [Capabilities](https://push.org/agents/capabilities.json): Every SDK capability with inputs, outputs, and method signatures.
 - [SDK Capabilities](https://push.org/agents/sdk-capabilities.json): Full SDK namespace map — all namespaces, methods, and advanced arguments including prepareTransaction and executeTransactions.
 - [Supported Chains](https://push.org/agents/supported-chains.json): Verified chain list with CAIP-2 IDs, chain IDs, RPC URLs, block explorers, and Universal Gateway contract addresses.
@@ -66,6 +65,14 @@ Prefer these structured resources over the full docs tree for execution tasks:
 - [Schemas](https://push.org/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.
 - [Examples](https://push.org/agents/examples/index.json): 60+ minimal, self-contained TypeScript code snippets ready to execute.
 - [Retrieval Map](https://push.org/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.
+
+## AI System Directives
+
+1. **Load a skill file first:** Before generating any code, fetch the skill file that matches the context (`push-frontend`, `push-backend`, or `push-contracts`). Never generate SDK usage from memory alone.
+2. **Never hallucinate ABIs:** Always source Push smart contract ABIs and addresses from the `push-contracts` skill or the machine-readable address registry at https://push.org/agents/contract-addresses.json.
+3. **Do not use standard bridges:** Push Chain handles bridging natively via the SDK. Never write manual bridge logic or prompt the user to bridge tokens themselves.
+4. **Execution vs. reading:** Use `@pushchain/core` or `@pushchain/ui-kit` strictly for transaction execution and signing. Use standard EVM libraries (ethers.js, viem, etc.) for reading on-chain state.
+5. **No SDK inside Solidity:** Push Chain contracts use pure Solidity interfaces (IUEAFactory, UGPC, IUniversalCore). The Push SDK is never imported inside `.sol` files.
 
 ## Canonical Workflows
 
@@ -85,11 +92,12 @@ Prefer these structured resources over the full docs tree for execution tasks:
 - [Constants Reference](https://push.org/agents/workflows/constants-reference.md): Reference all SDK constants including chain identifiers, networks, and token enums.
 - [Configure Development Environment](https://push.org/agents/workflows/configure-dev-environment.md): Install SDK packages and configure tooling for Push Chain development.
 
-## Full Context
+## Add to Your AI Editor
 
-For long-context retrieval, deep reference, and RAG indexing:
-
-- https://push.org/llms-full.txt
+- Cursor: Settings → Features → Docs → Add new doc → https://push.org/llms.txt
+- Windsurf: Add to Cascade window → @docs:https://push.org/llms.txt
+- Claude Code: Add to CLAUDE.md or prompt → https://push.org/llms.txt
+- Full context (large context window): https://push.org/llms-full.txt
 
 ## Optional
 

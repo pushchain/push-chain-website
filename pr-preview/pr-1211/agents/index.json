@@ -30,7 +30,12 @@
     },
     {
       "path": "agents/supported-chains.json",
-      "purpose": "List of supported chains with chain IDs, CAIP-10 identifiers, and network status",
+      "purpose": "List of supported chains with chain IDs, CAIP-10 identifiers, RPC URLs, block explorers, and Universal Gateway contract addresses per chain",
+      "type": "capability"
+    },
+    {
+      "path": "agents/contract-addresses.json",
+      "purpose": "Authoritative registry of all Push Chain smart contract addresses — Push Chain native contracts (UEAFactory, UGPC, UniversalExecutorModule) and Universal Gateway addresses on each external chain. Use this as ground truth; never hallucinate addresses.",
       "type": "capability"
     },
     {
