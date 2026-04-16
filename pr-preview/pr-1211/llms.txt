@@ -92,12 +92,17 @@ Prefer these structured resources over the full docs tree for execution tasks:
 - [Constants Reference](https://push.org/agents/workflows/constants-reference.md): Reference all SDK constants including chain identifiers, networks, and token enums.
 - [Configure Development Environment](https://push.org/agents/workflows/configure-dev-environment.md): Install SDK packages and configure tooling for Push Chain development.
 
+## Full Context
+
+For long-context retrieval, deep reference, and RAG indexing:
+
+- https://push.org/llms-full.txt
+
 ## Add to Your AI Editor
 
 - Cursor: Settings → Features → Docs → Add new doc → https://push.org/llms.txt
 - Windsurf: Add to Cascade window → @docs:https://push.org/llms.txt
 - Claude Code: Add to CLAUDE.md or prompt → https://push.org/llms.txt
-- Full context (large context window): https://push.org/llms-full.txt
 
 ## Optional
 
