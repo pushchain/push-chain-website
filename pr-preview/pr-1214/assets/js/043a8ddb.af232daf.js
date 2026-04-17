@@ -1,0 +1,275 @@
+"use strict";
+(globalThis["webpackChunkpush_chain_website"] = globalThis["webpackChunkpush_chain_website"] || []).push([[61069],{
+
+/***/ 347549
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   assets: () => (/* binding */ assets),
+/* harmony export */   contentTitle: () => (/* binding */ contentTitle),
+/* harmony export */   "default": () => (/* binding */ MDXContent),
+/* harmony export */   frontMatter: () => (/* binding */ frontMatter),
+/* harmony export */   metadata: () => (/* reexport default export from named module */ _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2025_03_06_gaia_joins_forces_with_push_chain_index_md_043_json__WEBPACK_IMPORTED_MODULE_0__),
+/* harmony export */   toc: () => (/* binding */ toc)
+/* harmony export */ });
+/* harmony import */ var _site_docusaurus_docusaurus_plugin_content_blog_blog_site_blog_2025_03_06_gaia_joins_forces_with_push_chain_index_md_043_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14008);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(474848);
+/* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(28453);
+
+
+const frontMatter = {
+	slug: 'push-chain-joins-forces-with-gaia',
+	title: 'Push Chain Joins Forces With Gaia Network',
+	authors: [
+		'push'
+	],
+	image: './cover-image.webp',
+	description: 'Push Chain Joins Forces With Scroll',
+	text: 'AI agents go universal. Gaia Network\'s autonomous intelligence integrates with Push Chain, enabling AI agents to operate seamlessly across all blockchains without chain-specific deployments.',
+	tags: [
+		'Partnerships'
+	],
+	twitterId: '1897664911133839538'
+};
+const contentTitle = undefined;
+
+const assets = {
+"image": (__webpack_require__(736103)/* ["default"] */ .A),
+"authorsImageUrls": [undefined],
+};
+
+
+
+const toc = [{
+  "value": "What is Gaia?",
+  "id": "what-is-gaia",
+  "level": 2
+}, {
+  "value": "What is Push Chain?",
+  "id": "what-is-push-chain",
+  "level": 2
+}, {
+  "value": "👥 What does this mean for Gaia and Push Chain Users?",
+  "id": "-what-does-this-mean-for-gaia-and-push-chain-users",
+  "level": 2
+}, {
+  "value": "👷‍♂️ What does this mean for Builders?",
+  "id": "️-what-does-this-mean-for-builders",
+  "level": 2
+}, {
+  "value": "🔓Usecase unlock",
+  "id": "usecase-unlock",
+  "level": 2
+}, {
+  "value": "Next Steps",
+  "id": "next-steps",
+  "level": 2
+}];
+function _createMdxContent(props) {
+  const _components = {
+    a: "a",
+    h2: "h2",
+    img: "img",
+    li: "li",
+    ol: "ol",
+    p: "p",
+    strong: "strong",
+    ul: "ul",
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
+    children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.img, {
+        alt: "Cover image of Push Chain Join Forces With Gaia ",
+        src: (__webpack_require__(963708)/* ["default"] */ .A) + "",
+        width: "1600",
+        height: "900"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "It’s time to make on-chain AI Agents go Universal!\nPush Chain is joining forces with Gaia Network to make chain abstracted AI Agents accessible to anyone via any chain, any wallet."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "what-is-gaia",
+      children: "What is Gaia?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
+      children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        href: "https://www.gaianet.ai/",
+        children: "Gaia"
+      }), " is an autonomous agents marketplace that enables anyone to build, deploy and utilize AI agents with unique expertise, & personalized capabilities."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "As a decentralized computing network, Gaia powers its nodes with every essential component - required to seamlessly configure and operate AI agents."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Gaia node includes - a powerful cross-platform runtime, fine-tuned LLM, vectorDB and embedding models, prompt manager and much more."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "what-is-push-chain",
+      children: "What is Push Chain?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Push Chain is a shared state blockchain for universal apps, powered by Chain Abstraction. Push is a Proof of Stake (PoS) chain that allows developers to create universal apps and act as a shared settlement layer for multiple L1s, L2s, and L3s enabling transactions from any chain - any app and any user."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Push Chain's Superpowers Include:"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ul, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+          children: "Consumer tx (unordered) and Traditional tx (ordered)"
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+          children: "Any Chain Tx (Solana, Eth, EVM, or non-EVM)"
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+          children: "Sub-second finality**  "
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+          children: "True Scale and Universal Smart Contracts"
+        }), "\n"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+          children: "Wallet and Fee Abstraction"
+        }), "\n"]
+      }), "\n"]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        href: "https://push.org",
+        children: "Explore more about Push Chain here"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "-what-does-this-mean-for-gaia-and-push-chain-users",
+      children: "👥 What does this mean for Gaia and Push Chain Users?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Interact with Universally operable AI Agents"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "With Push’s Universal capabilities - users operating AI agents built on Gaia can conveniently perform autonomous tasks across any chain!"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "️-what-does-this-mean-for-builders",
+      children: "👷‍♂️ What does this mean for Builders?"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Develop Universally Operable AI Agents"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "With Gaia and Push, Builders can create borderless ai agents - that can perform financial, mixed financial and consumer read/write operations across any chain in an autonomous manner."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Build Agents with Universal Identities"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Leveraging PushID ( A unified user identity by Push Chain that spans across every user wallet, both EVM and non-EVM). Instances of Gaia agents can carry a unified identity that aggregates their activity across all chains - simplifying agent tracking, history collection and analysis."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "usecase-unlock",
+      children: "🔓Usecase unlock"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Cross Chain AI agents with autonomous intelligence"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Having the ability to execute actions between any chains, irrespective of their virtual machine design, with the power of Push Chain’s Universal Smart Contracts and Shared State ledger."
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Unified Data Layers for AI Agents"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
+      children: ["Data Layers like ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        href: "https://www.0xscope.com/",
+        children: "Oxscope"
+      }), " can utilize Push Chain’s shared state settlement layer to read transactions across chains in a unified manner."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.strong, {
+        children: "Chain Agnostic Autonomous Actions"
+      })
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.p, {
+      children: ["Autonomous agents like ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+        href: "https://github.com/elizaOS/eliza",
+        children: "Eliza"
+      }), " can extend its support for Push Chain, opening opportunities for chain-abstracted interoperable communications and actions."]
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.p, {
+      children: "Example: rebalance a user's DeFi positions on Ethereum, list NFTs on Polygon, and communicate status updates to the user via a messaging app on another chain, all through one unified settlement layer"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.h2, {
+      id: "next-steps",
+      children: "Next Steps"
+    }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.ol, {
+      children: ["\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Follow ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://x.com/PushChain",
+          children: "@PushChain on X"
+        }), " to get the latest updates about Push Chain"]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Want to build on Push Chain? Explore the docs and example snippets here → ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://push.org/docs/chain/",
+          children: "Push Chain Docs"
+        })]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Visit the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://push.org/chain?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov",
+          children: "Push Chain Website"
+        }), " to find a one-pager explanation of the vision."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: ["Check out the ", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://whitepaper.push.org/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov",
+          children: "Push Chain Whitepaper"
+        }), " for a detailed overview of the vision and the underlying technicalities."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://scan.push.org/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov",
+          children: "Push Chain Devnet"
+        }), " is running live on Proof-of-Stake network validators, storage and archival nodes. The network already supports consumer transactions as well."]
+      }), "\n", (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_components.li, {
+        children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_components.a, {
+          href: "https://simulate.push.org/?utm_source=pushblog&utm_medium=referral&utm_campaign=pcgov",
+          children: "Push Chain Simulate Tx"
+        }), " already provides a way for everyone to send tx from any chain using wallet abstraction."]
+      }), "\n"]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = {
+    ...(0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__/* .useMDXComponents */ .R)(),
+    ...props.components
+  };
+  return MDXLayout ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(MDXLayout, {
+    ...props,
+    children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+
+
+/***/ },
+
+/***/ 736103
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-d31b952d6a33150947e671684a2ee368.webp");
+
+/***/ },
+
+/***/ 963708
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   A: () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "assets/images/cover-image-d31b952d6a33150947e671684a2ee368.webp");
+
+/***/ },
+
+/***/ 14008
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"permalink":"/push-chain-website/pr-preview/pr-1214/blog/push-chain-joins-forces-with-gaia","source":"@site/blog/2025-03-06-gaia-joins-forces-with-push-chain/index.md","title":"Push Chain Joins Forces With Gaia Network","description":"Push Chain Joins Forces With Scroll","date":"2025-03-06T00:00:00.000Z","tags":[{"inline":true,"label":"Partnerships","permalink":"/push-chain-website/pr-preview/pr-1214/blog/tags/partnerships"}],"readingTime":2.02,"hasTruncateMarker":true,"authors":[{"name":"Push Chain","url":"https://x.com/PushChain","page":{"permalink":"/push-chain-website/pr-preview/pr-1214/blog/authors/push"},"imageURL":"/push-chain-website/pr-preview/pr-1214/assets/blog/authors/authorpush.png","key":"push"}],"frontMatter":{"slug":"push-chain-joins-forces-with-gaia","title":"Push Chain Joins Forces With Gaia Network","authors":["push"],"image":"./cover-image.webp","description":"Push Chain Joins Forces With Scroll","text":"AI agents go universal. Gaia Network\'s autonomous intelligence integrates with Push Chain, enabling AI agents to operate seamlessly across all blockchains without chain-specific deployments.","tags":["Partnerships"],"twitterId":"1897664911133839538"},"unlisted":false,"prevItem":{"title":"Introducing Push Chain Tokenomics","permalink":"/push-chain-website/pr-preview/pr-1214/blog/push-chain-tokenomics"},"nextItem":{"title":"Push Chain Joins Forces With Scroll","permalink":"/push-chain-website/pr-preview/pr-1214/blog/push-chain-joins-forces-with-scroll"}}');
+
+/***/ }
+
+}]);

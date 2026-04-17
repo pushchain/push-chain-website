@@ -1,0 +1,12 @@
+{
+  "notifications": {
+    "alert": {
+      "message": "Push Metamask Snap is now live,",
+      "know-more-text": "Get started!",
+      "know-more-title": "Get started with Push Metamask Snap",
+      "close-button-title": "Close alert",
+      "close-button-aria-label": "Dismiss Push Metamask Snap alert",
+      "container-aria-label": "Push Metamask Snap announcement"
+    }
+  }
+}

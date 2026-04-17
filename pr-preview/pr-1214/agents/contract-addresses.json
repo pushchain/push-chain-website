@@ -1,0 +1,331 @@
+{
+  "version": "1.1.0",
+  "description": "Authoritative contract address registry for Push Chain. Use this file as the ground-truth source for all smart contract addresses. Do not hallucinate or infer addresses — always fetch from this file.",
+  "note": "Mainnet has not launched. All addresses are on testnet only. Addresses may change with redeploys — check the changelog or explorer before using in production.",
+  "docs": "https://push.org/docs/chain/setup/smart-contract-address-book/",
+  "explorer": "https://donut.push.network",
+
+  "push_chain": {
+    "network": "Push Chain Donut Testnet",
+    "chain_id": 42101,
+    "rpc_url": "https://evm.donut.rpc.push.org/",
+
+    "core_contracts": {
+      "UniversalCore": {
+        "proxy": "0x00000000000000000000000000000000000000C0",
+        "implementation": "0xF1000000000000000000000000000000000000c0",
+        "proxy_admin": "0xF2000000000000000000000000000000000000c0",
+        "purpose": "Mints PRC-20 tokens and manages cross-chain native token pricing. Use IUniversalCore to read chainHeight, gasPrice, and observedAt for any external chain."
+      },
+      "UniversalGatewayPC": {
+        "proxy": "0x00000000000000000000000000000000000000C1",
+        "alias": "UGPC",
+        "implementation": "0xF1000000000000000000000000000000000000C2",
+        "proxy_admin": "0xF2000000000000000000000000000000000000C3",
+        "purpose": "Push-side gateway for dispatching outbound cross-chain transactions from a Push Chain contract to external chains. Use inside Solidity via IUniversalGatewayPC."
+      },
+      "UniversalExecutorModule": {
+        "address": "0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7",
+        "alias": "EXECUTOR_MOD",
+        "purpose": "Delivers inbound callbacks to your Push Chain contract. The ONLY valid caller of executeUniversalTx(). Always validate msg.sender == EXECUTOR_MOD in your callback."
+      },
+      "VaultPC": {
+        "proxy": "0x00000000000000000000000000000000000000B0",
+        "implementation": "0xF1000000000000000000000000000000000000B0",
+        "proxy_admin": "0xF2000000000000000000000000000000000000B0",
+        "purpose": "Reserved vault contract for custody of chain assets."
+      },
+      "UEAFactory": {
+        "proxy": "0x00000000000000000000000000000000000000eA",
+        "implementation": "0xF1000000000000000000000000000000000000eA",
+        "proxy_admin": "0xF2000000000000000000000000000000000000eA",
+        "purpose": "Deploys and manages Universal Executor Accounts (UEAs). Use getOriginForUEA() to identify cross-chain callers, getUEAForOrigin() to derive UEA address from a UOA."
+      },
+      "UEA_EVM_Implementation": {
+        "address": "0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF",
+        "purpose": "Logic contract for EVM-compatible UEAs."
+      },
+      "UEA_SVM_Implementation": {
+        "address": "0x3cab28b2d179258ce3246385977aae4b4A4b40C9",
+        "purpose": "Logic contract for SVM (Solana)-compatible UEAs."
+      },
+      "UProxyAdmin": {
+        "proxy": "0x00000000000000000000000000000000000000aA",
+        "implementation": "0xF1000000000000000000000000000000000000aA",
+        "proxy_admin": "0xF2000000000000000000000000000000000000aA",
+        "purpose": "User-facing proxy admin for universal contracts."
+      }
+    },
+
+    "evm_default_precompiles": {
+      "note": "Standard precompiles available on all Cosmos EVM chains, including Push Chain.",
+      "p256": "0x0000000000000000000000000000000000000100",
+      "bech32": "0x0000000000000000000000000000000000000400",
+      "staking": "0x0000000000000000000000000000000000000800",
+      "distribution": "0x0000000000000000000000000000000000000801",
+      "ics20": "0x0000000000000000000000000000000000000802",
+      "vesting": "0x0000000000000000000000000000000000000803",
+      "bank": "0x0000000000000000000000000000000000000804",
+      "gov": "0x0000000000000000000000000000000000000805",
+      "slashing": "0x0000000000000000000000000000000000000806",
+      "evidence": "0x0000000000000000000000000000000000000807"
+    },
+
+    "push_chain_precompiles": {
+      "note": "Custom precompiles deployed on Push Chain for universal transaction verification.",
+      "USigVerifierPrecompile": {
+        "address": "0xEC00000000000000000000000000000000000001",
+        "purpose": "Verifies Solana signatures for universal execution."
+      }
+    },
+
+    "prc20_tokens": {
+      "note": "Push-native representations of tokens bridged from external chains. Each PRC-20 is minted on Push Chain when its source token is deposited via the respective chain's gateway.",
+      "from_ethereum_sepolia": {
+        "pETH": "0x2971824Db68229D087931155C2b8bB820B275809",
+        "WETH_eth": "0x0d0dF7E8807430A81104EA84d926139816eC7586",
+        "USDT_eth": "0xCA0C5E6F002A389E1580F0DB7cd06e4549B5F9d3",
+        "stETH_eth": "0xaf89E805949c628ebde3262e91dc4ab9eA12668E",
+        "USDC_eth": "0x387b9C8Db60E74999aAAC5A2b7825b400F12d68E"
+      },
+      "from_solana_devnet": {
+        "pSOL": "0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed",
+        "USDC_sol": "0x04B8F634ABC7C879763F623e0f0550a4b5c4426F",
+        "USDT_sol": "0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34",
+        "DAI_sol": "0x5861f56A556c990358cc9cccd8B5baa3767982A8"
+      },
+      "from_base_sepolia": {
+        "pETH_base": "0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21",
+        "USDT_base": "0x2C455189D2af6643B924A981a9080CcC63d5a567",
+        "USDC_base": "0x84B62e44F667F692F7739Ca6040cD17DA02068A8"
+      },
+      "from_arbitrum_sepolia": {
+        "pETH_arb": "0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e",
+        "USDC_arb": "0xa261A10e94aE4bA88EE8c5845CbE7266bD679DD6",
+        "USDT_arb": "0x76Ad08339dF606BeEDe06f90e3FaF82c5b2fb2E9"
+      },
+      "from_bnb_testnet": {
+        "USDT_bnb": "0x2f98B4235FD2BA0173a2B056D722879360B12E7b",
+        "pBNB": "0x7a9082dA308f3fa005beA7dB0d203b3b86664E36"
+      }
+    },
+
+    "amm": {
+      "note": "Uniswap V3-compatible AMM deployed on Push Chain for on-chain token swaps and liquidity management.",
+      "Factory": "0x81b8Bca02580C7d6b636051FDb7baAC436bFb454",
+      "WPC": "0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9",
+      "SwapRouter": "0x5D548bB9E305AAe0d6dc6e6fdc3ab419f6aC0037",
+      "PositionManager": "0xf9b3ac66aed14A2C7D9AA7696841aB6B27a6231e",
+      "QuoterV2": "0x83316275f7C2F79BC4E26f089333e88E89093037",
+      "TickLens": "0xb64113Fc16055AfE606f25658812EE245Aa41dDC",
+      "Multicall": "0xa8c00017955c8654bfFbb6d5179c99f5aB8B7849",
+      "pools": {
+        "pSOL_WPC": "0x0E5914e3A7e2e6d18330Dd33fA387Ce33Da48b54",
+        "pETH_WPC": "0x012d5C099f8AE00009f40824317a18c3A342f622",
+        "USDT_WPC": "0x2d46b2b92266f34345934F17039768cd631aB026",
+        "USDC_eth_WPC": "0x69B21660F49f2B8F60B0177Abc751a08EBEa0Ae3",
+        "USDT_base_WPC": "0x1cE819E742b44f922D2F05fdFFd17b4997f4CD15",
+        "pETH_base_WPC": "0xF926707689ad2fE9A81e666E5B888b2f3AD33980",
+        "pETH_arb_WPC": "0x1354c9A72F447f60F4811FC34b8C2e084FE338A3",
+        "USDT_arb_WPC": "0xF95B20Cf3f2dE495747EB3d33611D0FFEA29F448",
+        "USDT_bnb_WPC": "0x435875db8a76cCAA9cbf73690C6Dc1913BBC9168",
+        "pBNB_WPC": "0x826edC20c926653f4ddC01b8d4C7Df31a403e7d6",
+        "USDC_arb_WPC": "0xF3578f9dEE1591a45366801CedF91B4935997964",
+        "USDC_base_WPC": "0x96Ef417eA20114D86C2a60864a63A69344234930"
+      }
+    }
+  },
+
+  "external_chains": {
+    "note": "Universal Gateway (UG) contracts on external chains. These are the entry points for users, scripts, and contracts sending transactions INTO Push Chain. The SDK uses these addresses automatically — you only need them for direct Solidity or ethers.js calls.",
+    "interface": "IUniversalGatewayPC — same ABI as UGPC on Push Chain",
+
+    "ethereum_sepolia": {
+      "name": "Ethereum Sepolia",
+      "chain_id": 11155111,
+      "constant": "CONSTANTS.CHAIN.ETHEREUM_SEPOLIA",
+      "explorer": "https://sepolia.etherscan.io",
+      "universal_gateway": {
+        "proxy": "0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A",
+        "implementation": "0xA787f0Cb585456b4B1b23E17D8E1f986d9585Cd7",
+        "proxy_admin": "0x756C0bEa91F5692384AEe147C10409BB062Bf39b"
+      },
+      "cea": {
+        "CEAFactory_proxy": "0x8ED594A83301FEc545fC6c19fc12cF7111777029",
+        "CEAFactory_impl": "0xe5B51807f2252A5Ea9B591fE02285954446c8cAD",
+        "CEA_logic": "0x1939376ce03998F638b8760c7a13C9A379A053C0",
+        "CEAMigration": "0x97BCEba9c6f13B0E12Fde0E4D2697F74A79899de"
+      },
+      "vault": {
+        "proxy": "0xD019Eb12D0d6eF8D299661f22B4B7d262eD4b965",
+        "implementation": "0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C",
+        "proxy_admin": "0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3"
+      },
+      "supported_tokens": {
+        "native_ETH": {
+          "source": "0x0000000000000000000000000000000000000000",
+          "prc20_on_push": "0x2971824Db68229D087931155C2b8bB820B275809"
+        },
+        "USDC": {
+          "source": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+          "prc20_on_push": "0x387b9C8Db60E74999aAAC5A2b7825b400F12d68E"
+        },
+        "USDT": {
+          "source": "0x7169D38820dfd117C3FA1f22a697dBA58d90BA06",
+          "prc20_on_push": "0xCA0C5E6F002A389E1580F0DB7cd06e4549B5F9d3"
+        },
+        "WETH": {
+          "source": "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14",
+          "prc20_on_push": "0x0d0dF7E8807430A81104EA84d926139816eC7586"
+        },
+        "stETH": {
+          "source": "0x3e3FE7dBc6B4C189E7128855dD526361c49b40Af",
+          "prc20_on_push": "0xaf89E805949c628ebde3262e91dc4ab9eA12668E"
+        }
+      }
+    },
+
+    "arbitrum_sepolia": {
+      "name": "Arbitrum Sepolia",
+      "chain_id": 421614,
+      "constant": "CONSTANTS.CHAIN.ARBITRUM_SEPOLIA",
+      "explorer": "https://sepolia.arbiscan.io",
+      "universal_gateway": {
+        "proxy": "0x2cd870e0166Ba458dEC615168Fd659AacD795f34",
+        "implementation": "0xa81a398289D04503Aab64C4276CdB99Ff1594801",
+        "proxy_admin": "0xF838473Ddc2228267023A319c7305564391313f7"
+      },
+      "cea": {
+        "CEAFactory_proxy": "0x88DC189275078Cf509E4Cc773F089c8ad07b7EA2",
+        "CEAFactory_impl": "0xd8335e762E42b7f9610293707d6d8A6b97578bFb",
+        "CEA_logic": "0x2c933Ff6FBcD479055F344691bc628F51DcE871A",
+        "CEAMigration": "0x81f33160020AaDF47000E85915d332943b69F9f9"
+      },
+      "vault": {
+        "proxy": "0x233B1B1B378eb0Aa723097634025A47C4b73A8F7",
+        "implementation": "0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef",
+        "proxy_admin": "0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2"
+      },
+      "supported_tokens": {
+        "native_ETH": {
+          "source": "0x0000000000000000000000000000000000000000",
+          "prc20_on_push": "0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e"
+        },
+        "USDC": {
+          "source": "0x75faf114eafb1BDbe2F0316DF893fd58CE46AA4d",
+          "prc20_on_push": "0xa261A10e94aE4bA88EE8c5845CbE7266bD679DD6"
+        },
+        "USDT": {
+          "source": "0x1419d7C74D234fA6B73E06A2ce7822C1d37922f0",
+          "prc20_on_push": "0x76Ad08339dF606BeEDe06f90e3FaF82c5b2fb2E9"
+        }
+      }
+    },
+
+    "base_sepolia": {
+      "name": "Base Sepolia",
+      "chain_id": 84532,
+      "constant": "CONSTANTS.CHAIN.BASE_SEPOLIA",
+      "explorer": "https://sepolia.basescan.org",
+      "universal_gateway": {
+        "proxy": "0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16",
+        "implementation": "0xd1d25E4fb2E80446d92dF338608D9aFcCC4cD571f",
+        "proxy_admin": "0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3"
+      },
+      "cea": {
+        "CEAFactory_proxy": "0x0A75ca7736b488Eb41675ADc3b3156BACF659F55",
+        "CEAFactory_impl": "0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5",
+        "CEA_logic": "0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8",
+        "CEAMigration": "0x95c453fDFf55Afc5754c1fA95Ad6607273D71B20"
+      },
+      "vault": {
+        "proxy": "0xb4Ba4D5542D1dD48BD3589543660B265B41f16CB",
+        "implementation": "0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b",
+        "proxy_admin": "0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d"
+      },
+      "supported_tokens": {
+        "native_ETH": {
+          "source": "0x0000000000000000000000000000000000000000",
+          "prc20_on_push": "0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21"
+        },
+        "USDC": {
+          "source": "0x036CbD53842c5426634e7929541eC2318f3dCF7e",
+          "prc20_on_push": "0x84B62e44F667F692F7739Ca6040cD17DA02068A8"
+        },
+        "USDT": {
+          "source": "0x9FF5a186f53F6E6964B00320Da1D2024DE11E0cB",
+          "prc20_on_push": "0x2C455189D2af6643B924A981a9080CcC63d5a567"
+        }
+      }
+    },
+
+    "bnb_testnet": {
+      "name": "BNB Testnet",
+      "chain_id": 97,
+      "constant": "CONSTANTS.CHAIN.BNB_TESTNET",
+      "explorer": "https://testnet.bscscan.com",
+      "universal_gateway": {
+        "proxy": "0x44aFFC61983F4348DdddB886349eb992C061EaC0",
+        "implementation": "0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E",
+        "proxy_admin": "0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C"
+      },
+      "cea": {
+        "CEAFactory_proxy": "0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719",
+        "CEAFactory_impl": "0xC0D35725Dd054B09931740DC231cDea89B0FEd3b",
+        "CEA_logic": "0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd",
+        "CEAMigration": "0x2a06BF2A9C19dacbb38852f846B42e278e82e855"
+      },
+      "vault": {
+        "proxy": "0xE52AC4f8DD3e0263bDF748F3390cdFA1f02be881",
+        "implementation": "0xc1CD9c126e1F38Ffe016d448FaF563e825eb60CA",
+        "proxy_admin": "0xc34eF3cA76d1C18c35AbF5C3664d183B57382AbC"
+      },
+      "supported_tokens": {
+        "native_BNB": {
+          "source": "0x0000000000000000000000000000000000000000",
+          "prc20_on_push": "0x7a9082dA308f3fa005beA7dB0d203b3b86664E36"
+        },
+        "USDT": {
+          "source": "0xBC14F348BC9667be46b35Edc9B68653d86013DC5",
+          "prc20_on_push": "0x2f98B4235FD2BA0173a2B056D722879360B12E7b"
+        },
+        "USDC": {
+          "source": "0x64544969ed7EBf5f083679233325356EbE738930",
+          "prc20_on_push": null
+        },
+        "DAI": {
+          "source": "0xEC5dCb5Dbf4B114C9d0F65BcCAb49EC54F6A0867",
+          "prc20_on_push": null
+        }
+      }
+    },
+
+    "solana_devnet": {
+      "name": "Solana Devnet",
+      "type": "svm",
+      "constant": "CONSTANTS.CHAIN.SOLANA_DEVNET",
+      "explorer": "https://explorer.solana.com/?cluster=devnet",
+      "universal_gateway": "CFVSincHYbETh2k7w6u1ENEkjbSLtveRCEBupKidw2VS",
+      "supported_tokens": {
+        "native_SOL": {
+          "source": null,
+          "prc20_on_push": "0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed"
+        },
+        "USDC": {
+          "source": "4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU",
+          "prc20_on_push": "0x04B8F634ABC7C879763F623e0f0550a4b5c4426F"
+        },
+        "USDT": {
+          "source": "EiXDnrAg9ea2Q6vEPV7E5TpTU1vh41jcuZqKjU5Dc4ZF",
+          "prc20_on_push": "0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34",
+          "note": "unofficial"
+        },
+        "DAI": {
+          "source": "G2ZLaRhpohW23KTEX3fBjZXtNTFFwemqCaWWnWVTj4TB",
+          "prc20_on_push": "0x5861f56A556c990358cc9cccd8B5baa3767982A8",
+          "note": "unofficial"
+        }
+      }
+    }
+  }
+}
