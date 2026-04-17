@@ -1,0 +1,42 @@
+{
+  "description": "Domain-scoped skill files mapping high-level developer intents to required packages, entry points, workflows, and examples. Load the skill file for your context before exploring workflows or examples.",
+  "skills": [
+    {
+      "id": "push-frontend",
+      "file": "agents/skills/push-frontend/SKILL.md",
+      "url": "https://push.org/agents/skills/push-frontend/SKILL.md",
+      "intent": "Enable universal transactions in a React frontend app",
+      "package": "@pushchain/ui-kit",
+      "entry": "usePushChainClient()",
+      "quickstart": "npx create-universal-dapp",
+      "references": ["agents/skills/push-frontend/references/ui-components.md"],
+      "resources": "agents/resources/push-frontend/index.json"
+    },
+    {
+      "id": "push-backend",
+      "file": "agents/skills/push-backend/SKILL.md",
+      "url": "https://push.org/agents/skills/push-backend/SKILL.md",
+      "intent": "Execute universal transactions from Node.js, scripts, bots, or automation",
+      "package": "@pushchain/core",
+      "entry": "PushChain.initialize(signer)",
+      "resources": "agents/resources/push-backend/index.json",
+      "references": [
+        "agents/skills/push-backend/references/signer-options.md",
+        "agents/skills/push-backend/references/send-universal-transaction.md"
+      ]
+    },
+    {
+      "id": "push-contracts",
+      "file": "agents/skills/push-contracts/SKILL.md",
+      "url": "https://push.org/agents/skills/push-contracts/SKILL.md",
+      "intent": "Write Solidity contracts on Push Chain: identify cross-chain callers via UEAFactory, dispatch outbound txs via UGPC, receive inbound callbacks, read gas prices via UniversalCore",
+      "package": "none (pure Solidity — no SDK required inside contracts)",
+      "entry": "IUniversalGatewayPC(UGPC).sendUniversalTxOutbound(...)",
+      "references": [
+        "agents/skills/push-contracts/references/contract-interfaces.md"
+      ],
+      "scripts": ["agents/skills/push-contracts/scripts/deploy.sh"],
+      "resources": "agents/resources/push-contracts/index.json"
+    }
+  ]
+}
