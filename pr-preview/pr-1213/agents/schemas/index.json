@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Push Chain Schema Index",
+  "description": "Index of all JSON Schema definitions for Push Chain data structures",
+  "version": "1.0.0",
+  "schemas": [
+    {
+      "name": "UniversalTransactionRequest",
+      "file": "universal-transaction-request.json",
+      "description": "Schema for the transaction object passed to pushChainClient.universal.sendTransaction()",
+      "authority": "documented"
+    },
+    {
+      "name": "UniversalTransactionResponse",
+      "file": "universal-transaction-response.json",
+      "description": "Schema for the TxResponse object returned by sendTransaction()",
+      "authority": "inferred"
+    },
+    {
+      "name": "TransactionReceipt",
+      "file": "transaction-receipt.json",
+      "description": "Schema for receipt from tx.wait() or trackTransaction result",
+      "authority": "inferred"
+    },
+    {
+      "name": "UniversalAccount",
+      "file": "universal-account.json",
+      "description": "Schema for UniversalAccount object containing address and chain",
+      "authority": "documented"
+    },
+    {
+      "name": "UniversalSigner",
+      "file": "universal-signer.json",
+      "description": "Schema for UniversalSigner extending UniversalAccount with signing capabilities",
+      "authority": "documented"
+    },
+    {
+      "name": "ChainConfig",
+      "file": "chain-config.json",
+      "description": "Schema for chain configuration entry",
+      "authority": "inferred"
+    },
+    {
+      "name": "ErrorObject",
+      "file": "error-object.json",
+      "description": "Schema for SDK error objects",
+      "authority": "inferred"
+    }
+  ]
+}
