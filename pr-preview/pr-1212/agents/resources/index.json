@@ -1,0 +1,40 @@
+{
+  "description": "Downloadable, runnable code resources organized by developer skill. Each subdirectory is self-contained and can be copied directly into a project. Resources are the execution counterpart to the skill .md files.",
+  "resources": [
+    {
+      "id": "push-frontend",
+      "directory": "agents/resources/push-frontend/",
+      "index": "agents/resources/push-frontend/index.json",
+      "skill": "agents/skills/push-frontend/SKILL.md",
+      "description": "React app starter with @pushchain/ui-kit — wallet connection, send universal tx, cascade pattern",
+      "files": ["package.json", "app-wrapper.tsx", "send-universal-tx.tsx"]
+    },
+    {
+      "id": "push-backend",
+      "directory": "agents/resources/push-backend/",
+      "index": "agents/resources/push-backend/index.json",
+      "skill": "agents/skills/push-backend/SKILL.md",
+      "description": "Node.js scripts for @pushchain/core — ethers.js, viem, and Solana signer setups with send examples",
+      "files": [
+        "package.json",
+        "client-ethers.ts",
+        "client-viem.ts",
+        "client-solana.ts"
+      ]
+    },
+    {
+      "id": "push-contracts",
+      "directory": "agents/resources/push-contracts/",
+      "index": "agents/resources/push-contracts/index.json",
+      "skill": "agents/skills/push-contracts/SKILL.md",
+      "description": "Solidity interfaces and a minimal complete multichain contract for Push Chain native contracts",
+      "files": [
+        "IUEAFactory.sol",
+        "IUniversalGatewayPC.sol",
+        "IUniversalCore.sol",
+        "MyMultichainApp.sol",
+        "foundry.toml"
+      ]
+    }
+  ]
+}
