@@ -175,7 +175,7 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 // (Inside an async function or top-level-await context)
 // Send a universal transaction (from any chain to Push Chain)
 const txHash = await pushChainClient.universal.sendTransaction({
-  to: '0xD0DE00000447492307108Bdc7Ff6BaB33Ff37Dacc479', // To address on Push Chain
+  to: '0xa54E96d3fB93BD9f6cCEf87c2170aEdB1D47E1cF', // To address on Push Chain
   value: BigInt(1), // $PC Value to send
 });
 
