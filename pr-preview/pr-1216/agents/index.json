@@ -1,0 +1,381 @@
+{
+  "description": "Push Chain agent-layer root index. Curated discovery entry points for agents and retrieval systems — see sub-index files (workflows/index.json, examples/index.json, resources/index.json, schemas/index.json, skills/index.json) for complete per-category listings. Push Chain is a universal L1 blockchain enabling apps to deploy once and execute across all supported chains.",
+  "schema_version": "1.0.0",
+  "version": "1.1.0",
+  "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
+  "current_sdk_version": "5.1.7",
+  "sdk_version": { "@pushchain/core": "5.1.7", "@pushchain/ui-kit": "5.2.3" },
+  "generated": "2026-04-21T00:00:00.000Z",
+  "sub_indexes": [
+    {
+      "category": "examples",
+      "path": "agents/examples/index.json",
+      "count": 60
+    },
+    {
+      "category": "workflows",
+      "path": "agents/workflows/index.json",
+      "count": 17
+    },
+    {
+      "category": "resources",
+      "path": "agents/resources/index.json",
+      "count": 3
+    },
+    { "category": "schemas", "path": "agents/schemas/index.json", "count": 7 },
+    { "category": "skills", "path": "agents/skills/index.json", "count": 3 }
+  ],
+  "start_here": {
+    "developer": "agents/workflows/send-universal-transaction.md",
+    "agent": "agents/capabilities.json",
+    "retrieval_system": "agents/retrieval-map.json"
+  },
+  "files": [
+    {
+      "path": "agents/index.json",
+      "purpose": "Machine-readable index of all files in /agents/, entry point for discovery",
+      "type": "discovery"
+    },
+    {
+      "path": "agents/README.md",
+      "purpose": "Agent-oriented orientation guide explaining how to navigate /agents/ for different tasks",
+      "type": "discovery"
+    },
+    {
+      "path": "agents/capabilities.json",
+      "purpose": "Structured list of what Push Chain SDK can do, mapped to relevant workflows and examples",
+      "type": "capability"
+    },
+    {
+      "path": "agents/sdk-capabilities.json",
+      "purpose": "SDK method signatures and parameters for @pushchain/core and @pushchain/ui-kit",
+      "type": "capability"
+    },
+    {
+      "path": "agents/supported-chains.json",
+      "purpose": "List of supported chains with chain IDs, CAIP-10 identifiers, RPC URLs, block explorers, and Universal Gateway contract addresses per chain",
+      "type": "capability"
+    },
+    {
+      "path": "agents/contract-addresses.json",
+      "purpose": "Authoritative registry of all Push Chain smart contract addresses — Push Chain native contracts (UEAFactory, UGPC, UniversalExecutorModule) and Universal Gateway addresses on each external chain. Use this as ground truth; never hallucinate addresses.",
+      "type": "capability"
+    },
+    {
+      "path": "agents/feature-matrix.json",
+      "purpose": "Feature availability matrix across chains, networks, and SDK versions",
+      "type": "capability"
+    },
+    {
+      "path": "agents/constants.json",
+      "purpose": "All PushChain.CONSTANTS values with descriptions and usage context",
+      "type": "capability"
+    },
+    {
+      "path": "agents/decision-tree.json",
+      "purpose": "Structured decision tree for selecting the correct workflow based on task requirements",
+      "type": "decision"
+    },
+    {
+      "path": "agents/task-router.md",
+      "purpose": "Human-readable guide for routing user intents to the correct workflow or example",
+      "type": "decision"
+    },
+    {
+      "path": "agents/errors.json",
+      "purpose": "Catalog of SDK error codes, meanings, and recommended recovery actions",
+      "type": "error"
+    },
+    {
+      "path": "agents/recovery-playbook.md",
+      "purpose": "Step-by-step recovery procedures for common failure scenarios",
+      "type": "error"
+    },
+    {
+      "path": "agents/mcp-candidates.json",
+      "purpose": "MCP tool definitions for Push Chain operations, ready for Model Context Protocol integration",
+      "type": "mcp"
+    },
+    {
+      "path": "agents/source-freshness.json",
+      "purpose": "Mapping of documentation sources to their last-verified dates and authority levels",
+      "type": "governance"
+    },
+    {
+      "path": "agents/changelog.json",
+      "purpose": "Version history of /agents/ layer changes and SDK updates",
+      "type": "governance"
+    },
+    {
+      "path": "agents/retrieval-map.json",
+      "purpose": "Semantic mapping of concepts to file paths for RAG and retrieval systems",
+      "type": "retrieval"
+    },
+    {
+      "path": "agents/workflows/index.json",
+      "purpose": "Index of all workflow files with summaries and prerequisite chains",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/initialize-client.md",
+      "purpose": "Workflow for initializing PushChainClient from any supported wallet type",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/send-universal-transaction.md",
+      "purpose": "Primary workflow for sending transactions to Push Chain (Route 1)",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/send-multichain-transaction.md",
+      "purpose": "Workflow for sending transactions to external chains via CEA (Route 2 and Route 3)",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/track-transaction.md",
+      "purpose": "Workflow for tracking transaction status and handling confirmations",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/connect-wallet-ui-kit.md",
+      "purpose": "Workflow for integrating wallet connection UI using @pushchain/ui-kit",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/sign-universal-message.md",
+      "purpose": "Workflow for signing messages with a UniversalSigner",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/create-universal-signer.md",
+      "purpose": "Workflow for wrapping EVM or non-EVM signers into a UniversalSigner",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/configure-dev-environment.md",
+      "purpose": "Workflow for installing Push Chain SDK packages and configuring tooling",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/initialize-evm-client.md",
+      "purpose": "Workflow for setting up Ethers.js or Viem client for direct RPC interactions",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/read-blockchain-state.md",
+      "purpose": "Workflow for querying on-chain data from Push Chain using EVM clients",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-universal-wallet-provider.md",
+      "purpose": "Workflow for configuring PushUniversalWalletProvider with custom options",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-utility-functions.md",
+      "purpose": "Workflow for using SDK utilities for account conversion, unit parsing, and address formatting",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/constants-reference.md",
+      "purpose": "Reference for all SDK constants including chain IDs, networks, libraries, and token enums",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/use-contract-helpers.md",
+      "purpose": "Workflow for interacting with UEAFactory and other deployed helper contracts",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/contract-initiated-multichain-execution.md",
+      "purpose": "Workflow for triggering cross-chain execution from a Push Chain smart contract",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/deploy-push-chain-contract.md",
+      "purpose": "Workflow for compiling and deploying Solidity contracts to Push Chain Donut Testnet using Foundry or Hardhat",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/workflows/theme-variables.md",
+      "purpose": "Complete list of all CSS theme variables for @pushchain/ui-kit — global overrides (typography, spacing, border), color tokens with light and dark defaults, and usage patterns for app-level and button-level customization",
+      "type": "workflow"
+    },
+    {
+      "path": "agents/skills/index.json",
+      "purpose": "Index of domain-scoped skill files — maps developer intents to packages, entry points, workflows, and examples",
+      "type": "skill"
+    },
+    {
+      "path": "agents/skills/push-frontend/SKILL.md",
+      "purpose": "Copyable skill: enable universal transactions in React apps via @pushchain/ui-kit and usePushChainClient()",
+      "type": "skill"
+    },
+    {
+      "path": "agents/skills/push-backend/SKILL.md",
+      "purpose": "Copyable skill: execute universal transactions from Node.js, scripts, bots, and automation via @pushchain/core",
+      "type": "skill"
+    },
+    {
+      "path": "agents/skills/push-contracts/SKILL.md",
+      "purpose": "Copyable skill: Solidity contracts on Push Chain — IUEAFactory, UGPC dispatch, inbound callback, UniversalCore fee reads",
+      "type": "skill"
+    },
+    {
+      "path": "agents/resources/index.json",
+      "purpose": "Discovery map for all downloadable resource files — organized by skill context (push-frontend, push-backend, push-contracts)",
+      "type": "resource"
+    },
+    {
+      "path": "agents/resources/push-frontend/index.json",
+      "purpose": "Resource index for React/frontend skill — package.json, app-wrapper.tsx, send-universal-tx.tsx",
+      "type": "resource"
+    },
+    {
+      "path": "agents/resources/push-backend/index.json",
+      "purpose": "Resource index for Node.js/backend skill — package.json, client-ethers.ts, client-viem.ts, client-solana.ts",
+      "type": "resource"
+    },
+    {
+      "path": "agents/resources/push-contracts/index.json",
+      "purpose": "Resource index for Solidity/contracts skill — IUEAFactory.sol, IUniversalGatewayPC.sol, IUniversalCore.sol, MyMultichainApp.sol, foundry.toml",
+      "type": "resource"
+    },
+    {
+      "path": "agents/schemas/index.json",
+      "purpose": "Index of all JSON schema files with brief descriptions",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/universal-account.json",
+      "purpose": "JSON schema for UniversalAccount object (address + chain in CAIP-10 format)",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/universal-signer.json",
+      "purpose": "JSON schema for UniversalSigner object with signing method signatures",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/universal-transaction-request.json",
+      "purpose": "JSON schema for transaction request object passed to sendTransaction",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/universal-transaction-response.json",
+      "purpose": "JSON schema for transaction response returned from sendTransaction",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/transaction-receipt.json",
+      "purpose": "JSON schema for transaction receipt after confirmation",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/chain-config.json",
+      "purpose": "JSON schema for chain configuration objects",
+      "type": "schema"
+    },
+    {
+      "path": "agents/schemas/error-object.json",
+      "purpose": "JSON schema for SDK error objects",
+      "type": "schema"
+    },
+    {
+      "path": "agents/examples/index.json",
+      "purpose": "Full index of all 60+ code examples with tags, prerequisites, and difficulty levels",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/initialize-client-ethers.md",
+      "purpose": "Example: Initialize PushChainClient using ethers.js signer",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/initialize-client-solana.md",
+      "purpose": "Example: Initialize PushChainClient using Solana Keypair",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/send-transaction-push-chain.md",
+      "purpose": "Example: Send a value transfer to Push Chain (Route 1)",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/send-transaction-external-chain.md",
+      "purpose": "Example: Send a transaction to an external chain via CEA (Route 2)",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/track-transaction.md",
+      "purpose": "Example: Track transaction status with progress hooks",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/wallet-provider-react.md",
+      "purpose": "Example: Set up PushUniversalWalletProvider in a React app",
+      "type": "example"
+    },
+    {
+      "path": "agents/examples/sign-message.md",
+      "purpose": "Example: Sign a message using UniversalSigner",
+      "type": "example"
+    }
+  ],
+  "canonical_workflows": [
+    {
+      "name": "Initialize and Send First Transaction",
+      "path": "agents/workflows/send-universal-transaction.md",
+      "description": "Create UniversalSigner, initialize PushChainClient, send a transaction to Push Chain. Start here for most integrations."
+    },
+    {
+      "name": "Send Transaction to External Chain (Route 2)",
+      "path": "agents/workflows/send-multichain-transaction.md",
+      "description": "Execute on Ethereum, Solana, or other supported chains via Chain Executor Account. User signs once; SDK handles routing."
+    },
+    {
+      "name": "Initialize Client from Any Wallet",
+      "path": "agents/workflows/initialize-client.md",
+      "description": "Convert ethers, viem, or Solana signers to UniversalSigner and initialize the SDK client."
+    }
+  ],
+  "authority_ranking": [
+    {
+      "source": "Official Documentation",
+      "urls": [
+        "https://push.org/docs/chain/",
+        "https://push.org/docs/chain/build/",
+        "https://push.org/docs/chain/quickstart/"
+      ],
+      "authority": 1,
+      "notes": "Primary source of truth for SDK usage, method signatures, and transaction flows"
+    },
+    {
+      "source": "Full Documentation Dump",
+      "urls": ["https://push.org/llms-full.txt"],
+      "authority": 1,
+      "notes": "Complete text of all documentation pages, use for deep context or when specific page content is needed"
+    },
+    {
+      "source": "NPM Package READMEs",
+      "urls": [
+        "https://npmjs.com/package/@pushchain/core",
+        "https://npmjs.com/package/@pushchain/ui-kit"
+      ],
+      "authority": 2,
+      "notes": "Installation instructions and quick examples, may lag behind docs"
+    },
+    {
+      "source": "Push Blog",
+      "urls": ["https://push.org/blog/"],
+      "authority": 3,
+      "notes": "Conceptual explanations and announcements, not API reference"
+    },
+    {
+      "source": "GitHub Repository",
+      "urls": ["https://github.com/push-protocol/push-chain-sdk"],
+      "authority": 2,
+      "notes": "Source code and inline comments, status: inferred"
+    }
+  ]
+}
