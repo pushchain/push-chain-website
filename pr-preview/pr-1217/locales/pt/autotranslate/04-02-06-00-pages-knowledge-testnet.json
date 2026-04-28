@@ -1,0 +1,22 @@
+{
+  "pages": {
+    "knowledge": {
+      "testnet": {
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "network-updates": {
+                "title": "Atualizações da Rede",
+                "items": {
+                  "chain-upgrade-token-rebalance": {
+                    "title": "Atualização da Blockchain - Rebalanceamento de Token - Donut Testnet"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

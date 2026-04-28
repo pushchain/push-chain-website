@@ -1,0 +1,469 @@
+{
+  "schema_version": "1.0.0",
+  "version": "1.0.0",
+  "current_sdk_version": "5.1.12",
+  "generated": "2026-04-20T00:00:00.000Z",
+  "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
+  "namespaces": [
+    {
+      "namespace": "PushChain",
+      "description": "Root SDK namespace for initialization and constants",
+      "methods": [
+        {
+          "name": "initialize",
+          "signature": "PushChain.initialize(signer: UniversalSigner | UniversalAccount, options: { network: PUSH_NETWORK, rpcUrls?, blockExplorers?, printTraces?, progressHook? }): Promise<PushChainClient>",
+          "description": "Initializes SDK client with universal signer or read-only account",
+          "returns": "PushChainClient",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.CONSTANTS",
+      "description": "All constant values for networks, chains, libraries, and tokens",
+      "methods": [
+        {
+          "name": "PUSH_NETWORK",
+          "signature": "PushChain.CONSTANTS.PUSH_NETWORK.TESTNET | TESTNET_DONUT | MAINNET | LOCALNET",
+          "description": "Network constants: TESTNET (latest testnet), TESTNET_DONUT (Donut testnet), MAINNET, LOCALNET",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "CHAIN",
+          "signature": "PushChain.CONSTANTS.CHAIN.<CHAIN_NAME>",
+          "description": "Chain identifiers in CAIP-2 format",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "LIBRARY",
+          "signature": "PushChain.CONSTANTS.LIBRARY.<LIBRARY_NAME>",
+          "description": "Supported signer library constants",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "MOVEABLE.TOKEN",
+          "signature": "PushChain.CONSTANTS.MOVEABLE.TOKEN.<TOKEN_NAME>",
+          "description": "Supported tokens for cross-chain asset movement",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "PAYABLE.TOKEN",
+          "signature": "PushChain.CONSTANTS.PAYABLE.TOKEN.<TOKEN_NAME>",
+          "description": "Supported tokens for paying gas fees via tx.payGasWith",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.signer",
+      "description": "Universal signer creation and conversion utilities",
+      "methods": [
+        {
+          "name": "toUniversal",
+          "signature": "PushChain.utils.signer.toUniversal(signer: viem.WalletClient | ethers.Wallet | UniversalSignerSkeleton): Promise<UniversalSigner>",
+          "description": "Converts EVM signer or skeleton to universal signer",
+          "returns": "UniversalSigner",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "toUniversalFromKeypair",
+          "signature": "PushChain.utils.signer.toUniversalFromKeypair(keypair: Keypair, options: { chain: CHAIN, library: LIBRARY }): Promise<UniversalSigner>",
+          "description": "Converts non-EVM keypair (e.g., Solana) to universal signer",
+          "returns": "UniversalSigner",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "construct",
+          "signature": "PushChain.utils.signer.construct(account: UniversalAccount, options: { signAndSendTransaction, signMessage, signTypedData }): UniversalSignerSkeleton",
+          "description": "Constructs custom signer skeleton with manual signing implementations",
+          "returns": "UniversalSignerSkeleton",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.account",
+      "description": "Account conversion and derivation utilities",
+      "methods": [
+        {
+          "name": "toUniversal",
+          "signature": "PushChain.utils.account.toUniversal(address: string, options: { chain: CHAIN }): UniversalAccount",
+          "description": "Converts address to UniversalAccount with chain context",
+          "returns": "UniversalAccount",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "toChainAgnostic",
+          "signature": "PushChain.utils.account.toChainAgnostic(address: string, options: { chain: CHAIN }): string",
+          "description": "Produces a fully-qualified CAIP-10 chain-agnostic address string, e.g. 'eip155:11155111:0xAbc...'",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "fromChainAgnostic",
+          "signature": "PushChain.utils.account.fromChainAgnostic(caip: string): UniversalAccount",
+          "description": "Parses a CAIP-10 chain-agnostic address string back into a UniversalAccount",
+          "returns": "UniversalAccount",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "deriveExecutorAccount",
+          "signature": "PushChain.utils.account.deriveExecutorAccount(uoa: UniversalAccount, options: { chain: CHAIN; skipNetworkCheck?: boolean }): Promise<{ address: string }>",
+          "description": "Derives the Chain Executor Account (CEA) address for a given UOA on a specific external chain. Use skipNetworkCheck:true for chains not yet live.",
+          "returns": "Promise<{ address: string }>",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "resolveControllerAccount",
+          "signature": "PushChain.utils.account.resolveControllerAccount(account: string, options?: { chain?: CHAIN; skipNetworkCheck?: boolean }): Promise<{ accounts: Array<{ chain, chainName, address, type, exists, role? }> }>",
+          "description": "Recursively resolves the controller identity chain behind any executor address. UEA → UOA; CEA → Push account → UOA. type: 'uea' | 'uoa' | 'cea'. role: 'controller' marks the root controlling account. Pass options.chain for CEA resolution. Complement of deriveExecutorAccount (forward: UOA→executor; this: executor→UOA).",
+          "returns": "Promise<{ accounts: Array<{ chain, chainName, address, type, exists, role? }> }>",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "convertExecutorToOrigin",
+          "signature": "PushChain.utils.account.convertExecutorToOrigin(executorAddress: string, options?: { chain?: CHAIN }): Promise<UniversalAccount>",
+          "description": "Reverse-maps a UEA (Push Chain execution account) to its origin wallet. Pass options.chain to treat as CEA from a specific chain.",
+          "returns": "Promise<UniversalAccount>",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "convertOriginToExecutor",
+          "signature": "PushChain.utils.account.convertOriginToExecutor(account: UniversalAccount, options?: { onlyCompute?: boolean }): Promise<{ address: string, isDeployed: boolean }>",
+          "description": "Maps an origin UniversalAccount to its executor account (UEA) address on Push Chain. Use onlyCompute:true to get address without deployment check.",
+          "returns": "Promise<{ address: string, isDeployed: boolean }>",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.helpers",
+      "description": "Common utility functions for data formatting and encoding",
+      "methods": [
+        {
+          "name": "parseUnits",
+          "signature": "PushChain.utils.helpers.parseUnits(value: string, decimals: number | { decimals: number }): bigint",
+          "description": "Parses decimal string to smallest unit bigint. Accepts decimals as a number (e.g., 18) or object (e.g., { decimals: 18 })",
+          "returns": "bigint",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "formatUnits",
+          "signature": "PushChain.utils.helpers.formatUnits(value: string | bigint, decimals: number | { decimals: number, precision?: number }): string",
+          "description": "Converts smallest unit value back to human-readable string. Inverse of parseUnits.",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "encodeTxData",
+          "signature": "PushChain.utils.helpers.encodeTxData({ abi: AbiFragment[], functionName: string, args?: any[] }): string",
+          "description": "ABI-encodes a contract function call into hex calldata",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.chains",
+      "description": "Chain metadata utilities for querying supported chains and identifiers",
+      "methods": [
+        {
+          "name": "getSupportedChains",
+          "signature": "PushChain.utils.chains.getSupportedChains(network: PUSH_NETWORK): { chains: CHAIN[] }",
+          "description": "Returns array of CAIP-2 chain identifiers supported on the given network",
+          "returns": "{ chains: CHAIN[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getSupportedChainsByName",
+          "signature": "PushChain.utils.chains.getSupportedChainsByName(network: PUSH_NETWORK): { chains: string[] }",
+          "description": "Returns human-readable chain name strings supported on the given network, e.g. ['PUSH_TESTNET_DONUT', 'ETHEREUM_SEPOLIA']",
+          "returns": "{ chains: string[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getChainName",
+          "signature": "PushChain.utils.chains.getChainName(chainNamespace: string): string",
+          "description": "Returns human-readable chain name from a CAIP-2 chain identifier",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getChainNamespace",
+          "signature": "PushChain.utils.chains.getChainNamespace(chain: CHAIN): string",
+          "description": "Returns the namespace portion of a CAIP-2 chain identifier (e.g., 'eip155' or 'solana')",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.tokens",
+      "description": "Token utilities for querying moveable and payable tokens per chain",
+      "methods": [
+        {
+          "name": "getMoveableTokens",
+          "signature": "PushChain.utils.tokens.getMoveableTokens(chain: CHAIN): { tokens: MoveableToken[] }",
+          "description": "Returns list of tokens that can be moved cross-chain via tx.funds for a given origin chain",
+          "returns": "{ tokens: MoveableToken[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getPayableTokens",
+          "signature": "PushChain.utils.tokens.getPayableTokens(chain: CHAIN): { tokens: PayableToken[] }",
+          "description": "Returns list of tokens accepted for gas fee payment via tx.payGasWith for a given origin chain",
+          "returns": "{ tokens: PayableToken[] }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getPRC20Address",
+          "signature": "PushChain.utils.tokens.getPRC20Address(token: MoveableToken | { chain: CHAIN, address: string }, options?: { network?: PUSH_NETWORK }): { address: `0x${string}`; chain: CHAIN; symbol: string; decimals: number; network: PUSH_NETWORK }",
+          "description": "Returns the full PRC20 token descriptor on Push Chain corresponding to a moveable token (address, chain, symbol, decimals, network)",
+          "returns": "{ address: `0x${string}`; chain: CHAIN; symbol: string; decimals: number; network: PUSH_NETWORK }",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "PushChain.utils.conversion",
+      "description": "Conversion utilities for slippage and amount calculations",
+      "methods": [
+        {
+          "name": "slippageToMinAmount",
+          "signature": "PushChain.utils.conversion.slippageToMinAmount(amount: string, options: { slippageBps: number }): string",
+          "description": "Calculates minimum acceptable output amount after applying slippage. slippageBps: 100 = 1%, 50 = 0.5%. Use result as tx.payGasWith.minAmountOut.",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "pushChainClient",
+      "description": "Initialized client instance methods",
+      "methods": [
+        {
+          "name": "getAccountStatus",
+          "signature": "pushChainClient.getAccountStatus(options?: { forceRefresh?: boolean }): Promise<AccountStatus>",
+          "description": "Returns UEA deployment status, version, and upgrade requirements",
+          "returns": "AccountStatus",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "upgradeAccount",
+          "signature": "pushChainClient.upgradeAccount(options?: { progressHook?: (event) => void }): Promise<void>",
+          "description": "Upgrades UEA to latest required version (gasless signature operation)",
+          "returns": "void",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "reinitialize",
+          "signature": "pushChainClient.reinitialize(signerOrAccount: UniversalSigner | UniversalAccount, options?: InitializeOptions): Promise<PushChainClient>",
+          "description": "Creates new client with different signer/account or updated config",
+          "returns": "PushChainClient",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "pushChainClient.universal",
+      "description": "Universal transaction and signing operations",
+      "methods": [
+        {
+          "name": "origin",
+          "signature": "pushChainClient.universal.origin: UniversalAccount",
+          "description": "Getter for origin account (source chain wallet identity)",
+          "returns": "UniversalAccount",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "account",
+          "signature": "pushChainClient.universal.account: UniversalAccount",
+          "description": "Getter for execution account (UEA on Push Chain)",
+          "returns": "UniversalAccount",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "sendTransaction",
+          "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<UniversalTxResponse>",
+          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry. Solana targets use encodeTxData({ idl, functionName, args }) passed as tx.data — there is no svmExecute field.",
+          "returns": "UniversalTxResponse",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "prepareTransaction",
+          "signature": "pushChainClient.universal.prepareTransaction(tx: { to, from?, value?, data?, funds?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<PreparedUniversalTx>",
+          "description": "Prepares a transaction without executing it. Returns PreparedUniversalTx with route, estimatedGas, nonce, deadline, payload. Pass result to executeTransactions for multi-hop cascades.",
+          "returns": "PreparedUniversalTx",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "executeTransactions",
+          "signature": "pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>",
+          "description": "Executes ordered array of prepared transactions as a single-signature multi-hop cascade. Returns CascadedTxResponse with initialTxHash, hops[], hopCount, wait(opts?), waitForAll(opts?).",
+          "returns": "CascadedTxResponse",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "trackTransaction",
+          "signature": "pushChainClient.universal.trackTransaction(txHash: string, options?: { chain?: CHAIN, progressHook?: (event: ProgressEvent) => void, waitForCompletion?: boolean, advanced?: { pollingIntervalMs?: number, timeout?: number, rpcUrls?: Partial<Record<CHAIN, string[]>> } }): Promise<UniversalTxResponse>",
+          "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — pass any stored hash. Defaults chain to PUSH_TESTNET_DONUT. Set waitForCompletion:false for a snapshot status check without waiting.",
+          "arguments": [
+            {
+              "name": "txHash",
+              "type": "string",
+              "required": true,
+              "description": "Transaction hash on the origin chain"
+            },
+            {
+              "name": "options.chain",
+              "type": "CHAIN",
+              "required": false,
+              "description": "Origin chain — defaults to PUSH_TESTNET_DONUT"
+            },
+            {
+              "name": "options.progressHook",
+              "type": "(event: ProgressEvent) => void",
+              "required": false,
+              "description": "Callback invoked at each tracking step"
+            },
+            {
+              "name": "options.waitForCompletion",
+              "type": "boolean",
+              "required": false,
+              "description": "true = poll until confirmed (default), false = return current status snapshot"
+            },
+            {
+              "name": "options.advanced.pollingIntervalMs",
+              "type": "number",
+              "required": false,
+              "description": "Poll interval in ms (default 2000, min 500)"
+            },
+            {
+              "name": "options.advanced.timeout",
+              "type": "number",
+              "required": false,
+              "description": "Max wait in ms before timeout (default 60000)"
+            },
+            {
+              "name": "options.advanced.rpcUrls",
+              "type": "Partial<Record<CHAIN, string[]>>",
+              "required": false,
+              "description": "Custom RPC URLs for status queries"
+            }
+          ],
+          "returns": "UniversalTxResponse",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "signMessage",
+          "signature": "pushChainClient.universal.signMessage(message: string | Uint8Array): Promise<Uint8Array>",
+          "description": "Signs arbitrary message bytes",
+          "returns": "Uint8Array",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "signTypedData",
+          "signature": "pushChainClient.universal.signTypedData(typedDataArgs: TypedDataArgs): Promise<Uint8Array>",
+          "description": "Signs EIP-712 typed data",
+          "returns": "Uint8Array",
+          "safe_for_autonomous_execution": false
+        }
+      ]
+    },
+    {
+      "namespace": "pushChainClient.explorer",
+      "description": "Block explorer URL utilities",
+      "methods": [
+        {
+          "name": "getTransactionUrl",
+          "signature": "pushChainClient.explorer.getTransactionUrl(txHash: string): string",
+          "description": "Returns block explorer URL for a transaction hash",
+          "returns": "string",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "listUrls",
+          "signature": "pushChainClient.explorer.listUrls(): Record<string, string[]>",
+          "description": "Lists all configured block explorer URLs by chain",
+          "returns": "Record<string, string[]>",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "pushChainClient.funds",
+      "description": "Conversion quote utilities for cross-chain token swaps",
+      "methods": [
+        {
+          "name": "getConversionQuote",
+          "signature": "pushChainClient.funds.getConversionQuote(amountIn: bigint, options: { from: PayableToken, to: MoveableToken }): Promise<ConversionQuote>",
+          "description": "Returns a conversion quote for swapping one token to another. from = payable token (what you pay with), to = moveable token (what you move). Returns amountIn, amountOut, rate, route, timestamp.",
+          "returns": "Promise<{ amountIn: string, amountOut: string, rate: number, route?: string[], timestamp: number }>",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
+      "namespace": "pushChainClient.orchestrator",
+      "description": "Internal orchestration layer (typically not called directly)",
+      "methods": [
+        {
+          "name": "orchestrator",
+          "signature": "pushChainClient.orchestrator",
+          "description": "Handles RPC resolution, UEA management, and gas orchestration internally (internal use)",
+          "returns": "Orchestrator",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    }
+  ],
+  "ui_kit_exports": [
+    {
+      "namespace": "@pushchain/ui-kit",
+      "description": "React components and hooks for wallet integration. Bundles @pushchain/core — no separate install needed. Use usePushChainClient() to access PushChainClient and call sendTransaction, signMessage, prepareTransaction, executeTransactions directly from React.",
+      "exports": [
+        {
+          "name": "PushUniversalWalletProvider",
+          "type": "component",
+          "description": "React context provider for wallet state management",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "PushUniversalAccountButton",
+          "type": "component",
+          "description": "Pre-built connect/disconnect wallet button",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "usePushWalletContext",
+          "type": "hook",
+          "description": "Access wallet connection status and actions",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "usePushChainClient",
+          "type": "hook",
+          "description": "Returns the initialized PushChainClient (from @pushchain/core) after wallet connection. Exposes all core transaction methods: sendTransaction, signMessage, prepareTransaction, executeTransactions. This is the primary way to execute universal transactions in a React app.",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "usePushChain",
+          "type": "hook",
+          "description": "Combined hook for Push Chain state and actions",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "PushUI.CONSTANTS",
+          "type": "object",
+          "description": "UI Kit constants including PUSH_NETWORK and CONNECTION.STATUS",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    }
+  ]
+}
