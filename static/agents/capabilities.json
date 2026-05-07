@@ -159,7 +159,7 @@
     {
       "id": "send_universal_transaction",
       "name": "Send Universal Transaction",
-      "description": "Executes transfers, contract calls, or batched transactions on Push Chain or external chains via a unified interface.",
+      "description": "Executes transfers, contract calls, or batched transactions on Push Chain or external chains via a unified interface. Pre-flight balance check (since 5.1.17) throws InsufficientUEABalanceError synchronously before broadcast when the UEA cannot cover the buffered gas-swap quote or required PRC-20 burn token — no fees are spent on the failure. Chain-level reverts surface as PushChainExecutionError with a structured `decodedError` field for known custom-error selectors.",
       "actor": ["developer", "end_user", "agent", "backend", "browser_agent"],
       "operation": "write",
       "prerequisites": ["push_chain_client_initialized"],
@@ -236,6 +236,21 @@
           "name": "txResponse",
           "type": "TransactionResponse",
           "description": "Transaction hash and execution receipt"
+        }
+      ],
+      "throws": [
+        {
+          "type": "InsufficientUEABalanceError",
+          "extends": "PushChainExecutionError",
+          "thrown": "synchronously, pre-flight (no cosmos tx submitted)",
+          "fields": "{ reason: 'NATIVE' | 'PRC20', pathTag: 'R2_EVM' | 'R2_SVM' | 'R3_EVM' | 'R3_SVM' | 'CASCADE', ueaAddress, required, available, shortfall, burnToken?, segmentIndex? }",
+          "recovery": "See recovery-playbook.md → insufficient_uea_balance — fund the UEA with `shortfall` then retry."
+        },
+        {
+          "type": "PushChainExecutionError",
+          "thrown": "asynchronously, post-broadcast (chain revert)",
+          "fields": "{ message, decodedError?: { kind: 'custom' | 'string' | 'unknown', selector?, name?, hint? } }",
+          "recovery": "Inspect `decodedError.name` for known selectors (ExecutionFailed, InsufficientBalance, ExpiredDeadline, GasLimitBelowBase). Unknown selectors keep the raw revert in `message`."
         }
       ],
       "sdk_method": "pushChainClient.universal.sendTransaction({tx})",

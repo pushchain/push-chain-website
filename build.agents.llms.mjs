@@ -24,7 +24,7 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '5.1.4',
+  core: '5.1.17',
   uiKit: '5.2.2',
 };
 const AGENT_LAYER_VERSION = '1.0.1';

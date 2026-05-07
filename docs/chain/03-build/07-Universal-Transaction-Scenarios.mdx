@@ -656,7 +656,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
 
       console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.002 pETH (burned to release ETH on Sepolia)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.001 pETH (burned to release ETH on Sepolia)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const TARGET = '0x1234567890123456789012345678901234567890';
 
@@ -720,7 +720,7 @@ End-to-end playground examples for each universal transaction route. For API ref
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
       console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.02 pUSDT(BNB) (burned to release USDT on BNB)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.011 pUSDT(BNB) (burned to release USDT on BNB)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const TARGET = '0x1234567890123456789012345678901234567890';
 
@@ -792,7 +792,7 @@ End-to-end playground examples for each universal transaction route. For API ref
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
       console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.02 pUSDT(BNB) (burned to release USDT on BNB with payload)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.011 pUSDT(BNB) (burned to release USDT on BNB with payload)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1038,7 +1038,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
       console.log('CEA on BNB Testnet:', ceaAddress);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.01 BNB (CEA gas + ~$1 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1113,7 +1113,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
       console.log('CEA on BNB Testnet:', ceaAddress);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + account.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit; 0.00005 BNB is bridged to Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + account.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.01 BNB (CEA gas + ~$1 fee-lock deposit; 0.00005 BNB is bridged to Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
 
       try {
         // Route 3: bridge native BNB from CEA on BNB_TESTNET back to Push Chain
@@ -1177,7 +1177,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
       console.log('CEA on BNB Testnet:', ceaAddress);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (gas + ~$10 fee-lock deposit) + 0.02 USDT (the asset being bridged)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.01 BNB (gas + ~$1 fee-lock deposit) + 0.011 USDT (the asset being bridged)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
 
@@ -1252,7 +1252,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       console.log('CEA on BNB Testnet:', ceaAddress);
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (gas + ~$10 fee-lock deposit) + 0.02 USDT (bridged + payload on Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.01 BNB (gas + ~$1 fee-lock deposit) + 0.011 USDT (bridged + payload on Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1329,7 +1329,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
       console.log('CEA on BNB Testnet:', ceaAddress);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.01 BNB (CEA gas + ~$1 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
 
       const incrementData = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1410,7 +1410,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
       console.log('CEA on Solana Devnet:', solanaCEA.address);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + solanaCEA.address + ' on Solana Devnet — at least 0.02 SOL (CEA gas)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | Solana https://faucet.solana.com');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + solanaCEA.address + ' on Solana Devnet — at least 0.005 SOL (CEA gas)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | Solana https://faucet.solana.com');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,

@@ -69,6 +69,22 @@
       "confidence": "inferred"
     },
     {
+      "id": "insufficient_uea_balance",
+      "name": "Insufficient UEA Balance",
+      "description": "Pre-flight balance check threw InsufficientUEABalanceError before broadcasting. The UEA on Push Chain cannot cover the buffered gas-swap quote (NATIVE) or required PRC-20 burn token (PRC20). No cosmos transaction was submitted; no fees were spent.",
+      "likely_cause": "UEA underfunded for the chosen route. R2 EVM needs ~$10 worth of PC plus the ERC-20 PRC-20 if funds.amount > 0; R2 SVM native needs ~5 PC; R2 SVM SPL needs ~5 PC + ~$0.50 ATA-rent (first transfer to that mint) plus the SPL's PRC-20 mirror; R3 mirrors R2.",
+      "detection_signal": "Synchronous throw of InsufficientUEABalanceError (extends PushChainExecutionError) from sendTransaction / executeTransactions. Progress hook emits SEND-TX-203-04 (R2), SEND-TX-303-05 (R3), or SEND-TX-003-04 (cascade) with `sufficient: false` immediately before the throw.",
+      "user_visible_symptom": "sendTransaction rejects synchronously. Error.message reads 'Shortfall <n> PC on <pathTag>. Bridge >=<n> PC to UEA <ueaAddress> before retrying.'",
+      "machine_recovery": [
+        "Read structured fields directly off the error: { reason, pathTag, ueaAddress, required, available, shortfall, burnToken, segmentIndex } — do not parse err.message",
+        "Surface a fund-UEA prompt: bridge >= shortfall PC (or burnToken units) to ueaAddress on Push Chain, plus a small buffer (~10%)",
+        "Re-call sendTransaction(params) unchanged after funding tx confirms — SDK re-runs pre-flight",
+        "For advanced opt-out only: pass options.allowUnderfundedSwap: true on params; the on-chain Uniswap swap may revert with Error('STF') — catch as PushChainExecutionError"
+      ],
+      "escalation": "If pre-flight repeatedly throws after a confirmed top-up that appears in the UEA balance, escalate with { pathTag, ueaAddress, required, available, shortfall, burnToken } plus the funding tx hash — usually indicates a price-feed issue on the gas estimator, not a balance issue.",
+      "confidence": "documented"
+    },
+    {
       "id": "insufficient_fee_balance",
       "name": "Insufficient Fee Balance",
       "description": "The user's origin wallet does not have enough native tokens to cover gas fees",

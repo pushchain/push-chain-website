@@ -25,6 +25,55 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 - Route 1 (UOA → Push) now applies Case A/B/C USD-bucket sizing to the
 - Gas abstraction scope narrowed to R1 (fee-lock USD caps) and R3 (outbound
 
+### 5.1.17 (2026-05-07)
+
+#### Features
+
+- **Pre-flight balance check** on all six outbound paths (R2 EVM, R2 SVM, R3
+  EVM, R3 SVM, cascade EVM, cascade SVM). The SDK now verifies the UEA can
+  cover the buffered gas-swap quote (and any required PRC-20 burn token)
+  before broadcasting. Throws `InsufficientUEABalanceError` synchronously
+  when short — no cosmos transaction submitted, no fees burned. Eliminates
+  Uniswap V3 `Error("STF")` reverts that previously reached chain via
+  silent clamp-and-submit.
+- **Custom-error decoder** populates a structured `decodedError` field on
+  `PushChainExecutionError`. The SDK augments the revert message with a
+  `[Name: Likely cause: …]` hint when it can match a known selector
+  (`0xacfdb444 ExecutionFailed`, `0xf4d678b8 InsufficientBalance`,
+  `0x179a867c ExpiredDeadline`, `0x66f9d09e GasLimitBelowBase`). The same
+  payload appears on the terminal failure progress hooks
+  (`SEND-TX-199-02 / 299-02 / 399-02 / 999-02`).
+- **Route-scoped pre-flight progress hooks**: `SEND-TX-203-03/04/05` (R2
+  single-route), `SEND-TX-303-04/05/06` (R3 single-route), and
+  `SEND-TX-003-03/04/05` (cascade). Each bucket carries the same payload
+  (`{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken,
+  segmentIndex }`) so consumers can treat them uniformly.
+- **R3 SVM upward cap**: `nativeValueForGas = max(200 PC, 5 × estimated)`,
+  matching the existing single-route R3 SVM ceiling. Cascade SVM segments
+  apply the same cap at compose time.
+- **Conditional CEA-ATA rent bump on SVM SPL outbounds**: when the
+  destination CEA's Associated Token Account does not yet exist on Solana,
+  the SDK adds `~2.15M lamports` to `effectiveGasLimit` to cover ATA-create
+  rent + compute buffer. Skipped when the ATA is already deployed.
+- `formatPC` helper renders pre-flight messages in decimal `PC`
+  (e.g. `956.7834 PC`) instead of raw `wei UPC`.
+- Per-call opt-out `options.allowUnderfundedSwap: true` falls back to the
+  legacy clamp-and-refund branch (logs the shortfall but proceeds).
+
+#### Fixes
+
+- Cascade hook stream is now self-consistent: every cascade-scoped hook
+  lives in the `0xx / 9xx` bucket. Cascade pre-flight no longer leaks
+  `203-xx` IDs into a multichain stream.
+- Cascade pre-flight failure now fires `999-02` as the terminal hook (was
+  silently absent on shortfall).
+- R3 SVM: `burnAmount` was set to `1 wei` as a workaround for a now-fixed
+  gateway behaviour; the SDK now sets `burnAmount = 0` for R3 SVM payload-
+  only outbounds.
+- R3 EVM silent-clamp removed in favour of pre-flight throw.
+- `tx-transformer` replay reconstructs the new `203-03 / 303-04` events so
+  parity tests stay green.
+
 ### 5.1.0 (2026-03-28)
 
 #### Other Changes

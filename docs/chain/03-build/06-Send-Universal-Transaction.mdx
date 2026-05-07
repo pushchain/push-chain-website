@@ -119,6 +119,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-202-02` | `<chain>` Chain Gas Estimated | Push gas: `<n>` UPC + UGPC relay: `<n>` UPC = `<total>` UPC | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
 | `SEND-TX-203-01` | Resolving `<chain>` Execution Account | Resolving UEA on Push Chain and CEA on `<chain>` | INFO | `{ stage: 'resolving-cea', chain }` |
 | `SEND-TX-203-02` | `<chain>` Execution Account Ready | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: `<true/false>` | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-203-03` | Pre-flight Balance Check | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (`<pathTag>`) | INFO when sufficient / ERROR when insufficient | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-203-04` | Insufficient UEA Balance | Shortfall `<n>` PC on `<pathTag>`. Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | ERROR | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-203-05` | SVM Native-Value Warn Threshold | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC for `<gasToken>` (`<pathTag>`). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |
 | `SEND-TX-204-01` | Awaiting Signature | Awaiting user signature for universal payload | INFO | `{ stage: 'awaiting-signature' }` |
 | `SEND-TX-204-02` | Signature Received | Universal payload signed — preparing broadcast | SUCCESS | `{ stage: 'signed' }` |
 | `SEND-TX-204-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
@@ -146,6 +149,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-302-04` | Prepaid Deposit Estimated | Prepaid deposit estimated | SUCCESS | `{ totalPCDeposit, totalDepositUSD }` |
 | `SEND-TX-303-01` | Resolving Execution Accounts on Chains | Resolving UEA on Push Chain and CEA on `<chain>` | INFO | `{ stage: 'resolving-cea-uea', chain }` |
 | `SEND-TX-303-02` | Execution Accounts Resolved | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: true | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-303-04` | Pre-flight Balance Check | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (`<pathTag>`) | INFO when sufficient / ERROR when insufficient | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-303-05` | Insufficient UEA Balance | Shortfall `<n>` PC on `<pathTag>`. Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | ERROR | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-303-06` | SVM Native-Value Warn Threshold | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC for `<gasToken>` (`<pathTag>`). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |
 | `SEND-TX-304-01` | Awaiting Signature | Awaiting user signature for universal payload | INFO | `{ stage: 'awaiting-signature' }` |
 | `SEND-TX-304-02` | Signature Received | Universal payload signed — preparing broadcast | SUCCESS | `{ stage: 'signed' }` |
 | `SEND-TX-304-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
@@ -167,6 +173,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-001` | Multichain Transactions Initiated | `<hopCount>`-hop transaction — `<chains>` | INFO | `{ hopCount, chains }` |
 | `SEND-TX-002-01` | Starting Intermediate Transaction #`<n>`/`<total>` | Starting tx `<n>` of `<total>`: `<fromChain>` → `<toChain>` | INFO | `{ n, total, fromChain, toChain }` |
 | `SEND-TX-002-99-99` | Intermediate Transaction #`<n>`/`<total>` Complete | Tx `<n>` of `<total>` confirmed — proceeding to tx `<n+1>` | INFO | `{ n, total }` |
+| `SEND-TX-003-03` | Pre-flight Balance Check (cascade) | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (CASCADE) | INFO when sufficient / ERROR when insufficient | `{ required, available, sufficient, ueaAddress, pathTag: 'CASCADE', kind, burnToken, segmentIndex }` |
+| `SEND-TX-003-04` | Insufficient UEA Balance (cascade) | Shortfall `<n>` PC on CASCADE (segment `<segmentIndex>`). Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | ERROR | `{ required, available, shortfall, ueaAddress, pathTag: 'CASCADE', kind, burnToken, segmentIndex }` |
+| `SEND-TX-003-05` | SVM Native-Value Warn Threshold (cascade) | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC (CASCADE) | INFO | `{ quoted, threshold, gasToken, pathTag: 'CASCADE' }` |
 | `SEND-TX-999-01` | All Multichain Transactions Successful | `<hopCount>`-hop transaction confirmed across all chains | SUCCESS | `{ hopCount }` |
 | `SEND-TX-999-02` | Multichain Transactions Failed | Cascade failed at hop `<failedAt>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
 | `SEND-TX-999-03` | Multichain Transactions Timeout | Cascade timed out at hop `<failedAt>` of `<total>` | ERROR | `{ failedAt, total, error: 'cascade timeout' }` |
@@ -832,6 +841,93 @@ import \* as readline from 'node:readline/promises';
   </TabItem>
 
 </Tabs>
+
+## Error Handling
+
+Push Chain SDK throws two error classes that wrap routing failures:
+
+### `PushChainExecutionError`
+
+Base class for any failure surfaced from `sendTransaction` / `executeTransactions`. The
+SDK augments the original revert message with a decoded hint when it can match a known
+custom-error selector and exposes the structured form on `error.decodedError`.
+
+```ts
+import { PushChainExecutionError } from '@pushchain/core';
+
+try {
+  await pushChainClient.universal.sendTransaction(params);
+} catch (err) {
+  if (err instanceof PushChainExecutionError) {
+    // err.message includes "[Name: Likely cause: ...]" hint when the SDK
+    // could decode the chain revert.
+    console.error(err.message);
+
+    // err.decodedError is the structured decoded payload:
+    //   { kind: 'custom', selector: '0xacfdb444', name: 'ExecutionFailed', hint: '...' }
+    //   { kind: 'string', message: 'STF' }
+    //   { kind: 'unknown' }
+    console.error(err.decodedError);
+  }
+}
+```
+
+**Known custom-error selectors** decoded by the SDK:
+
+| Selector | Name | Likely cause |
+| -------- | ---- | ------------ |
+| `0xacfdb444` | `ExecutionFailed` | Sub-call reverted (target contract or internal gas-swap precompile) |
+| `0xf4d678b8` | `InsufficientBalance` | UEA does not hold enough of the burn token for the outbound transferFrom |
+| `0x179a867c` | `ExpiredDeadline` | Cosmos tx deadline elapsed before the gateway processed the multicall |
+| `0x66f9d09e` | `GasLimitBelowBase` | Provided `gasLimit` below the chain-namespace base limit (raise `params.gasLimit`) |
+
+Unknown selectors return `{ kind: 'unknown' }` — the raw revert is still in `err.message`.
+
+The terminal failure progress hooks (`SEND-TX-199-02`, `SEND-TX-299-02`,
+`SEND-TX-399-02`, `SEND-TX-999-02`) carry the same `decodedError` field on their
+event response when a chain revert is decoded.
+
+### `InsufficientUEABalanceError extends PushChainExecutionError`
+
+Thrown by the SDK's pre-flight balance check **before any cosmos tx is broadcast**.
+The pre-flight runs from all six outbound paths (R2 EVM/SVM, R3 EVM/SVM, cascade
+EVM/SVM segments), checks that the UEA can cover the buffered gas-swap quote plus
+any required PRC-20 burn token, and either lets the call proceed or throws this
+error. No fees are spent when this fires.
+
+```ts
+import { InsufficientUEABalanceError } from '@pushchain/core';
+
+try {
+  await pushChainClient.universal.sendTransaction(params);
+} catch (err) {
+  if (err instanceof InsufficientUEABalanceError) {
+    console.error({
+      reason: err.reason,         // 'NATIVE' or 'PRC20'
+      pathTag: err.pathTag,       // 'R2_EVM' | 'R2_SVM' | 'R3_EVM' | 'R3_SVM' | 'CASCADE'
+      ueaAddress: err.ueaAddress,
+      required: err.required,     // bigint (wei UPC for NATIVE, units for PRC20)
+      available: err.available,   // bigint
+      shortfall: err.shortfall,   // bigint
+      burnToken: err.burnToken,   // 0x… address (only set when reason='PRC20')
+      segmentIndex: err.segmentIndex, // number, only set on cascade
+    });
+    // → bridge `shortfall` more PC (or burnToken) to err.ueaAddress and retry.
+  }
+}
+```
+
+The pre-flight emission stream is:
+
+- `SEND-TX-203-03` (R2) / `SEND-TX-303-04` (R3) / `SEND-TX-003-03` (cascade) — INFO when
+  sufficient, ERROR with `sufficient: false` when shortfall.
+- `SEND-TX-203-04` (R2) / `SEND-TX-303-05` (R3) / `SEND-TX-003-04` (cascade) — ERROR
+  terminal precursor before the throw.
+
+If your application wants to **opt out** of pre-flight (legacy clamp-and-refund
+behavior), pass `options: { allowUnderfundedSwap: true }` on the params; the SDK
+will log the shortfall but proceed with a clamped value. The on-chain swap may
+revert with `Error("STF")` from Uniswap V3 — handle as a `PushChainExecutionError`.
 
 ## Next Steps
 

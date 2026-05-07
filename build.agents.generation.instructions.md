@@ -43,14 +43,14 @@ SDK versions are pinned in **two places** — both must be updated together:
 1. `build.agents.llms.mjs` constants (top of file):
 
    ```js
-   const SDK_VERSIONS = { core: '5.1.4', uiKit: '5.2.2' };
+   const SDK_VERSIONS = { core: '5.1.17', uiKit: '5.2.2' };
    const AGENT_LAYER_VERSION = '1.0.0';
    const AGENT_LAYER_DATE = '2026-04-17';
    ```
 
 2. `static/agents/index.json` field:
    ```json
-   "sdk_version": { "@pushchain/core": "5.1.4", "@pushchain/ui-kit": "5.2.2" }
+   "sdk_version": { "@pushchain/core": "5.1.17", "@pushchain/ui-kit": "5.2.2" }
    ```
 
 When bumping SDK versions also update the versioning callout line in `static/llms.txt`:

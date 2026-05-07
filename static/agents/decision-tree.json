@@ -170,6 +170,34 @@
           "next": null
         },
         {
+          "condition": "InsufficientUEABalanceError thrown synchronously by sendTransaction (pre-flight; progress event SEND-TX-203-04 / SEND-TX-303-05 / SEND-TX-003-04 depending on bucket)",
+          "action": "Fund the UEA with `shortfall` and retry — no cosmos tx was submitted, no fees spent",
+          "capability_ids": ["send_universal_transaction"],
+          "mapping_note": "Recoverable error class shipped in SDK 5.1.17. Read structured fields off the error directly — do not parse `err.message`. Surface a fund-UEA prompt; once the funding tx confirms, re-call sendTransaction(params) unchanged.",
+          "details": {
+            "error_class": "InsufficientUEABalanceError extends PushChainExecutionError",
+            "structured_fields": {
+              "reason": "'NATIVE' | 'PRC20'",
+              "pathTag": "'R2_EVM' | 'R2_SVM' | 'R3_EVM' | 'R3_SVM' | 'CASCADE'",
+              "ueaAddress": "0x… (top-up destination on Push Chain)",
+              "required": "bigint (wei UPC for NATIVE, units for PRC20)",
+              "available": "bigint",
+              "shortfall": "bigint",
+              "burnToken": "0x… (only set when reason='PRC20')",
+              "segmentIndex": "number (only set on cascade)"
+            },
+            "recovery": "1) Read structured fields. 2) Bridge >= shortfall PC (or burnToken units) to ueaAddress on Push Chain. 3) Re-call sendTransaction(params) unchanged.",
+            "opt_out": "Pass options.allowUnderfundedSwap: true on params to fall back to legacy clamp-and-refund (Uniswap may revert with Error(\"STF\")).",
+            "approx_funding": {
+              "R2_EVM": "~$10 worth of PC + ERC-20 PRC-20 if funds.amount > 0",
+              "R2_SVM_native": "~5 PC",
+              "R2_SVM_SPL": "~5 PC + ~$0.50 ATA-rent gas if first SPL transfer to that mint + PRC-20 mirror",
+              "R3": "same shape as R2"
+            }
+          },
+          "next": null
+        },
+        {
           "condition": "Transaction reverted on-chain (progress event SEND-TX-199-02 / 299-02 / 399-02 depending on route)",
           "action": "Inspect revert reason and fix contract call",
           "capability_ids": [],

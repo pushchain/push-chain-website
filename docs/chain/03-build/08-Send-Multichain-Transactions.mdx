@@ -420,7 +420,7 @@ Pull ETH from an Ethereum Sepolia CEA into Push Chain, swap pETH → pSOL on the
       const [sepoliaCEA] = await ceaFactorySepolia.getCEAForPushAccount(client.universal.account);
       console.log('📍 Sepolia CEA (Hop 0 source):', sepoliaCEA);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 5 PC + 0.002 pETH\\n  • CEA ' + sepoliaCEA + ' on Sepolia — at least 0.005 ETH (Hop 0 pulls 0.001 ETH from here)\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 5 PC + 0.001 pETH\\n  • CEA ' + sepoliaCEA + ' on Sepolia — at least 0.005 ETH (Hop 0 pulls 0.001 ETH from here)\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       // ── Hop 0: CEA_TO_PUSH ─────────────────────────────────────────────────
       // Pull 0.001 ETH from the Ethereum Sepolia CEA into Push Chain.

@@ -361,6 +361,75 @@ CEA operation failed?
 
 ---
 
+### insufficient_uea_balance
+
+The SDK's pre-flight balance check threw `InsufficientUEABalanceError` before any cosmos transaction was submitted. The user's UEA on Push Chain cannot cover the buffered gas-swap quote (NATIVE) or the required PRC-20 burn token (PRC20). No fees are spent when this error fires — the failure is structured and recoverable by funding the UEA.
+
+**Detection**
+```typescript
+import { InsufficientUEABalanceError } from '@pushchain/core';
+
+try {
+  await pushChainClient.universal.sendTransaction(params);
+} catch (err) {
+  if (err instanceof InsufficientUEABalanceError) {
+    // Structured fields ready to drive recovery UI
+    const { reason, pathTag, ueaAddress, required, available, shortfall, burnToken, segmentIndex } = err;
+  }
+}
+```
+
+**Recovery**
+
+1. Read the structured fields directly off the error — do **not** parse `err.message`:
+   - `reason: 'NATIVE' | 'PRC20'`
+   - `pathTag: 'R2_EVM' | 'R2_SVM' | 'R3_EVM' | 'R3_SVM' | 'CASCADE'`
+   - `ueaAddress: 0x…` — destination for the top-up
+   - `required, available, shortfall: bigint` (wei UPC for NATIVE, units for PRC20)
+   - `burnToken: 0x…` — only set when `reason === 'PRC20'`
+   - `segmentIndex: number` — only set on cascade
+2. Surface a fund-UEA prompt using `shortfall` plus a small buffer (e.g. 10%):
+   - For `reason === 'NATIVE'`: bridge >= `shortfall` PC to `ueaAddress` from any supported origin chain.
+   - For `reason === 'PRC20'`: bridge or transfer the `burnToken` PRC-20 to `ueaAddress` on Push Chain.
+3. Re-call `sendTransaction(params)` after the funding tx confirms. The SDK re-runs the pre-flight check; no need to change the params.
+4. Approximate funding requirements for first-time setup (live-measured on Donut):
+   - R2 EVM: ~$10 worth of PC at the UEA + ERC-20 PRC-20 if `funds.amount > 0`
+   - R2 SVM native: ~5 PC
+   - R2 SVM SPL: ~5 PC + ~$0.50 ATA-rent gas if first SPL transfer to that mint + PRC-20 mirror of the SPL token
+   - R3: same shape as R2
+
+```typescript
+import { PushChain, InsufficientUEABalanceError } from '@pushchain/core';
+
+async function sendWithRetry(
+  pushChainClient: any,
+  params: any
+): Promise<any> {
+  try {
+    return await pushChainClient.universal.sendTransaction(params);
+  } catch (err) {
+    if (err instanceof InsufficientUEABalanceError) {
+      // Drive the fund-UEA UI; do not autonomously bridge — surface the
+      // structured fields and let the user/caller resolve.
+      throw new Error(
+        `insufficient_uea_balance: bridge ${err.shortfall} ` +
+        `${err.reason === 'PRC20' ? `units of ${err.burnToken}` : 'wei UPC'} ` +
+        `to UEA ${err.ueaAddress} on Push Chain (${err.pathTag}), then retry.`
+      );
+    }
+    throw err;
+  }
+}
+```
+
+**Opt-out (advanced)**: pass `options: { allowUnderfundedSwap: true }` on the params to fall back to the legacy clamp-and-refund branch. The on-chain Uniswap V3 swap may revert with `Error("STF")` — handle as `PushChainExecutionError` (not `InsufficientUEABalanceError`).
+
+**Escalation**: If pre-flight repeatedly throws after a confirmed top-up that appears in the user's UEA balance, escalate with `{ pathTag, ueaAddress, required, available, shortfall, burnToken }` plus the funding tx hash. A persistent shortfall after funding usually indicates a price-feed issue on the gas estimator, not a balance issue.
+
+*References: [errors.json](https://push.org/agents/errors.json) · `06-Send-Universal-Transaction.mdx` § Error Handling · `05-Understanding-Universal-Transactions.mdx` § Pre-flight Balance Requirements*
+
+---
+
 ### unsupported_chain ⚠ inferred
 
 The signer's origin chain is not in Push Chain's supported list. Triggered at `initialize()` or `sendTransaction()` when the wallet is connected to a chain Push Chain does not yet bridge.

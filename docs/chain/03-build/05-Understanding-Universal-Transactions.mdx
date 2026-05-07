@@ -219,6 +219,43 @@ Asset Movement (step 6) only runs when `tx.funds` is set. For plain Push Chain t
 
 Each step emits a `SEND-TX-*` progress event. You can subscribe via `progressHook` at the client level or per-call to show live status in your UI.
 
+### Pre-flight Balance Requirements
+
+Before broadcasting any outbound transaction (Routes 2, 3, and cascade segments),
+the SDK runs a pre-flight balance check on the user's UEA. The check verifies
+the UEA can cover the buffered gas-swap quote plus any required PRC-20 burn
+token. If short, the SDK throws `InsufficientUEABalanceError` **before any
+cosmos transaction is broadcast** — no fees are spent.
+
+Approximate funding required at the UEA on Push Chain (live-measured on Donut
+testnet):
+
+| Path | Native PC needed | Burn token required? |
+|------|------------------|----------------------|
+| **Route 2 EVM** (UEA → external EVM CEA) | ~$10 worth of PC at the UEA | PRC-20 of the destination ERC-20 if `funds.amount > 0` |
+| **Route 2 SVM** (native SOL withdraw / CPI) | **~5 PC** | None |
+| **Route 2 SVM** (SPL withdraw, fresh CEA ATA) | ~5 PC + `~$0.50` extra ATA-rent gas if first SPL transfer to that mint | PRC-20 mirror of the SPL token (e.g. `pUSDT.sol`) |
+| **Route 3 EVM** (CEA → Push) | ~$10 worth of PC at the UEA | None |
+| **Route 3 SVM** (CEA → Push) | ~5 PC | None |
+| **Cascade** | sum of per-segment requirements; check fires per-segment | per-segment |
+
+A few notes:
+
+- **Pre-flight messages show decimal `PC`**, not raw `wei UPC`. Example log:
+  `UEA balance: 956.7834 PC; required: 1052.1618 PC; INSUFFICIENT (R2_SVM)`.
+- Pre-flight emits `SEND-TX-203-03` (R2 single-route), `SEND-TX-303-04` (R3
+  single-route), or `SEND-TX-003-03` (cascade) as INFO when sufficient and
+  ERROR when short — followed by the matching `-04` / `-05` / `-04` failure
+  precursor before the throw. See the progress-hook tables in
+  [Send Universal Transaction → Hooks](/docs/chain/build/send-universal-transaction)
+  for full payload shapes.
+- The throw is `InsufficientUEABalanceError` — see the **Error Handling**
+  section in *Send Universal Transaction* for the structured fields and
+  recovery flow.
+- To opt out (legacy clamp-and-refund behavior; on-chain swap may revert with
+  `Error("STF")`), pass `options: { allowUnderfundedSwap: true }` on the
+  params.
+
 ## Why Universal Transactions Matter
 
 Universal transactions fundamentally change how apps are built and used across chains.
