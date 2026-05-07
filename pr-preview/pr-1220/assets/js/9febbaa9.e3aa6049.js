@@ -1,0 +1,11 @@
+"use strict";
+(globalThis["webpackChunkpush_chain_website"] = globalThis["webpackChunkpush_chain_website"] || []).push([[65858],{
+
+/***/ 313149
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"blogTitle":"Blog","blogDescription":"Blog","totalPosts":60,"totalRecentPosts":4,"twitterId":"2052399062838923372"}');
+
+/***/ }
+
+}]);
