@@ -1,0 +1,55 @@
+{
+  "components": {
+    "short-cult-snippet": {
+      "section-aria-label": "Push Cult - 크리에이터를 위한 혈맹",
+      "title": "제자\n가이드라인",
+      "title-aria-label": "Push Cult 제자들을 위한 가이드라인 및 요구 사항",
+      "discord-link-text": "Discord에서 Cult 커뮤니티에 참여하세요",
+      "discord-link-title": "Push Chain Discord #push-cult 채널에 참여하세요",
+      "discord-link-aria-label": "새 탭에서 Discord 커뮤니티 열기",
+      "explore-more-text": "전체 Pact 보기",
+      "explore-more-title": "Push 컬트 매니페스토 및 프로그램 세부 사항을 모두 읽어보세요",
+      "explore-more-aria-label": "전체 Push Cult 블로그 게시물로 이동",
+      "accordion-aria-label": "Push Cult 가이드라인 및 요구 사항",
+      "answer-aria-label": "질문에 대한 답변 - ",
+      "qnas": {
+        "qna1": {
+          "question": "Push Cult는 무엇인가요?",
+          "answer": "<1>Push Cult는 스팸이 아닌 순수한 신호를 전달하는 <2>50명의 엘리트 크리에이터</2>만을 위한 엄선된 초대 전용 프로그램입니다.</1><1>진정으로 청중과 연결되는 스레드, 비디오 또는 기사를 통해 진실로 무리를 이끄는 비전을 가진 사람들에게 보상을 제공합니다.</1><1>상위 50명의 제자들은 측정 가능한 영향력을 기반으로 <2>20,000,000 PC 상당의 보상</2>을 분배합니다.</1>",
+          "discord-url-title": "Push Chain Discord에 참여하세요.",
+          "support-url-title": "프로그램에 대해 자세히 알아보세요."
+        },
+        "qna2": {
+          "question": "누가 지원해야 할까요?",
+          "answer": "<1><2>다음과 같은 크리에이터:</2> 이미 가이드, 스레드 또는 설명글을 제작하며 참여도가 높은 청중(반드시 거대할 필요는 없음)을 확보한 분.</1><1><2>다음과 같은 가치를 중요하게 생각하는 분:</2> 과장된 홍보보다 명확한 정보 전달, 단기적인 이익보다 장기적인 유산을 구축하는 분.</1><1><2>다음과 같이 행동하고자 하는 분:</2> Push Chain의 Universal Execution 시대에 일찍 참여하여 Season 3에 신념을 가진 사용자를 온보딩하는 분.</1><1>빠른 이익을 추구한다면 여기서 멈추세요. 유산을 구축하고자 한다면 <3>한 걸음 더 나아가세요</3>.</1>",
+          "scan-url-title": "Push Cult 가입 신청하기",
+          "support-url-title": "완전한 선언문을 읽어보세요."
+        },
+        "qna3": {
+          "question": "수습생은 어떻게 선발되고 평가되나요?",
+          "answer": "<1>저희는 집중도를 높이기 위해 <2>50명의 제자</2>로 인원을 제한합니다. 참여는 매주 <2>헌신 점수</2>를 기반으로 갱신됩니다.</1><1><2>헌신 점수</2>는 다음과 같이 구성됩니다: 시그널(도달 범위), 모으기(신규 신도 확보), 믿음(유지율), 그리고 장인 정신(수동 검토).</1><1>기준 미달 시 교체됩니다. 뛰어난 크리에이터는 양보다 질에서 경쟁합니다.</1>",
+          "faucet-url-title": "평가 기준에 대해 알아보세요.",
+          "discord-url-title": "Discord에서 질문하세요."
+        },
+        "qna4": {
+          "question": "수제자들이 실제로 무엇을 하나요?",
+          "answer": "<1>원하는 형식으로 콘텐츠를 제작하세요. 스레드, 비디오, 기사 등 원하는 대로 괜찮습니다. 임무는 Push Chain 개념을 설명하고, Donut Testnet을 통해 Flock을 안내하고, 시즌 3 신봉자를 온보딩하는 것입니다.</1><1>저희는 매주 미션, 테마, 그리고 대중이 보기 전에 획득한 정보를 제공합니다. 여러분이 이야기를 만들어갑니다.</1><1>스팸은 재가 됩니다. 진실만이 살아남습니다.</1>",
+          "support-url-title": "콘텐츠 예시 보기.",
+          "discord-url-title": "Discord에 참여하세요."
+        },
+        "qna5": {
+          "question": "보상은 무엇인가요?",
+          "answer": "<1><2>상위 성과자에게는:</2> 2000만 $PC 풀에 대한 보장 할당과 함께 mainnet에서 Ultra Rare Shiny Pass가 제공됩니다.</1><1><2>Shiny Pass는:</2> 체인 수수료 수익 공유, validator 보상 참여, staking 배수 증가 및 VIP 생태계 혜택을 제공합니다.</1><1>순위가 수확량을 결정합니다. 참여 트로피는 없습니다.</1>",
+          "docs-url-title": "보상에 대해 알아보세요.",
+          "kb-url-title": "토큰omics 읽어보기."
+        },
+        "qna6": {
+          "question": "어떻게 참여할 수 있나요?",
+          "answer": "<1>문이 열렸습니다. 당신의 헌신을 증명하세요, <3>지금 지원하세요</3>.</1><1>등록하면 프로그램 세부 정보, 평가 방식, 초기 온보딩 단계에 액세스할 수 있습니다.</1><1>거기서부터는 <2>성과가 모든 것을 결정합니다</2>.</1>",
+          "contact-url-title": "Push Cult 지원하기",
+          "github-url-title": "pact 전체 내용 읽어보기"
+        }
+      }
+    }
+  }
+}

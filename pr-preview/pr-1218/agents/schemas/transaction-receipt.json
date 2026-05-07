@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/transaction-receipt.json",
+  "title": "TransactionReceipt",
+  "description": "Receipt object from tx.wait() or trackTransaction result. Follows standard EVM receipt structure.",
+  "type": "object",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Transaction hash"
+    },
+    "blockNumber": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Block number in which the transaction was included"
+    },
+    "blockHash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Hash of the block containing this transaction - inferred from EVM standard",
+      "status": "inferred"
+    },
+    "status": {
+      "type": "integer",
+      "enum": [0, 1],
+      "description": "Transaction status: 1 for success, 0 for failure"
+    },
+    "gasUsed": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Amount of gas used by this transaction as BigInt string"
+    },
+    "effectiveGasPrice": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Effective gas price paid as BigInt string - inferred from EVM standard",
+      "status": "inferred"
+    },
+    "from": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{40}$",
+      "description": "Address of the transaction sender (UEA on Push Chain)",
+      "status": "inferred"
+    },
+    "to": {
+      "type": ["string", "null"],
+      "pattern": "^0x[a-fA-F0-9]{40}$",
+      "description": "Address of the transaction recipient. Null for contract creation.",
+      "status": "inferred"
+    },
+    "contractAddress": {
+      "type": ["string", "null"],
+      "pattern": "^0x[a-fA-F0-9]{40}$",
+      "description": "Address of created contract if this was a contract creation transaction",
+      "status": "inferred"
+    },
+    "logs": {
+      "type": "array",
+      "description": "Array of log entries emitted during transaction execution",
+      "items": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{40}$",
+            "description": "Address of the contract that emitted the log"
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^0x[a-fA-F0-9]{64}$"
+            },
+            "description": "Indexed log topics"
+          },
+          "data": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]*$",
+            "description": "Non-indexed log data"
+          },
+          "logIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Index of this log within the block"
+          },
+          "transactionIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Index of the transaction within the block"
+          },
+          "blockNumber": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Block number containing this log"
+          },
+          "blockHash": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{64}$",
+            "description": "Hash of the block containing this log"
+          },
+          "transactionHash": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{64}$",
+            "description": "Hash of the transaction that emitted this log"
+          }
+        },
+        "required": ["address", "topics", "data"],
+        "additionalProperties": true
+      }
+    },
+    "transactionIndex": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Index of the transaction within its block - inferred from EVM standard",
+      "status": "inferred"
+    },
+    "cumulativeGasUsed": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "Total gas used in the block up to and including this transaction - inferred from EVM standard",
+      "status": "inferred"
+    }
+  },
+  "required": ["hash", "blockNumber", "status", "gasUsed", "logs"],
+  "additionalProperties": true,
+  "status": "inferred",
+  "notes": "Receipt structure is inferred from standard EVM transaction receipts. Push Chain is 100% EVM-compatible so standard receipt fields are expected."
+}
