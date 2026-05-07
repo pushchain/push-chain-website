@@ -9,7 +9,7 @@ resources: 'https://push.org/agents/resources/push-frontend/index.json'
 references:
   - references/ui-components.md
 ---
-
+{% raw %}
 # Skill: Universal Transactions — Frontend (React)
 
 **Intent**: Enable users to connect their wallet and execute universal transactions from a React app.
@@ -79,7 +79,6 @@ Provider customization (theme, network, wallet options): https://push.org/agents
 
 A state-aware button that handles the full connection flow — not connected → authentication → connected account display. Must be rendered inside `PushUniversalWalletProvider`.
 
-{% raw %}
 ```tsx
 <PushUniversalAccountButton
   connectButtonText='Connect Wallet'
@@ -88,7 +87,6 @@ A state-aware button that handles the full connection flow — not connected →
   themeOverrides={{ '--pwauth-btn-connect-bg-color': '#3459F0' }}
 />
 ```
-{% endraw %}
 
 ### Props
 
@@ -111,7 +109,6 @@ Override CSS variables to match your brand. Pass `themeOverrides` to `PushUniver
 
 ### Global override (both themes)
 
-{% raw %}
 ```tsx
 <PushUniversalWalletProvider
   config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
@@ -122,11 +119,9 @@ Override CSS variables to match your brand. Pass `themeOverrides` to `PushUniver
   }}
 >
 ```
-{% endraw %}
 
 ### Light / dark specific overrides + themeMode
 
-{% raw %}
 ```tsx
 <PushUniversalWalletProvider
   config={{ network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET }}
@@ -141,7 +136,6 @@ Override CSS variables to match your brand. Pass `themeOverrides` to `PushUniver
   }}
 >
 ```
-{% endraw %}
 
 > Top-level properties apply to both themes; `light` and `dark` sub-objects override those values when the corresponding theme is active.
 
@@ -149,7 +143,6 @@ Override CSS variables to match your brand. Pass `themeOverrides` to `PushUniver
 
 Variables starting with `--pwauth-` can be overridden per button instance:
 
-{% raw %}
 ```tsx
 <PushUniversalAccountButton
   themeOverrides={{
@@ -159,7 +152,6 @@ Variables starting with `--pwauth-` can be overridden per button instance:
   }}
 />
 ```
-{% endraw %}
 
 ### Key CSS variables
 
@@ -444,3 +436,4 @@ Copy these files into your project — self-contained and ready to run:
 - [Sign universal message](https://push.org/agents/workflows/sign-universal-message.md)
 - [Wallet provider React example](https://push.org/agents/examples/wallet-provider-react.md)
 - [Execute transaction examples](https://push.org/agents/examples/execute-transactions.md)
+{% endraw %}
