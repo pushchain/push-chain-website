@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://push.org/schemas/universal-transaction-response.json",
+  "title": "UniversalTransactionResponse",
+  "description": "Response object returned by pushChainClient.universal.sendTransaction(). Contains transaction hash and methods to await confirmation.",
+  "type": "object",
+  "properties": {
+    "hash": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{64}$",
+      "description": "Transaction hash on Push Chain"
+    },
+    "wait": {
+      "description": "Method to await transaction confirmation. Returns a TransactionReceipt. Type: () => Promise<TransactionReceipt>",
+      "status": "inferred"
+    }
+  },
+  "required": ["hash"],
+  "additionalProperties": true,
+  "status": "inferred",
+  "notes": "The exact shape of TxResponse is not fully documented. The hash field and wait() method are inferred from standard EVM transaction response patterns and SDK usage examples."
+}
