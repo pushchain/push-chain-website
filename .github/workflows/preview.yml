@@ -56,11 +56,31 @@ jobs:
           yarn install
           yarn build:pr:preview
 
+      - name: Ensure .nojekyll in build root
+        if: github.event.action != 'closed'
+        run: touch ./build/.nojekyll
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1.4.7
         with:
           source-dir: ./build/
           umbrella-dir: pr-preview
+          deploy-repository: ${{ github.repository }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare .nojekyll for gh-pages root
+        if: github.event.action != 'closed'
+        run: mkdir -p /tmp/nojekyll && touch /tmp/nojekyll/.nojekyll
+
+      - name: Ensure .nojekyll at gh-pages root
+        if: github.event.action != 'closed'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: /tmp/nojekyll
+          target-folder: .
+          clean: false
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: rossjrw/pr-preview-action@v1.4.7
         if: github.event.action == 'closed' || github.event.pull_request.merged

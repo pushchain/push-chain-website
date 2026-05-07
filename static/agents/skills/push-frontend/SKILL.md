@@ -9,7 +9,6 @@ resources: 'https://push.org/agents/resources/push-frontend/index.json'
 references:
   - references/ui-components.md
 ---
-{% raw %}
 # Skill: Universal Transactions — Frontend (React)
 
 **Intent**: Enable users to connect their wallet and execute universal transactions from a React app.
@@ -436,4 +435,3 @@ Copy these files into your project — self-contained and ready to run:
 - [Sign universal message](https://push.org/agents/workflows/sign-universal-message.md)
 - [Wallet provider React example](https://push.org/agents/examples/wallet-provider-react.md)
 - [Execute transaction examples](https://push.org/agents/examples/execute-transactions.md)
-{% endraw %}
