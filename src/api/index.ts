@@ -203,7 +203,6 @@ export const subscribeToSpace = async (formData) => {
     return res;
   } catch (e) {
     // console.log('Error occured in subscribers', e);
-    // console.log(e?.response.data?.error.info);
     return e;
   }
 };
