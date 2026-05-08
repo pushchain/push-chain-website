@@ -78,13 +78,13 @@ Push Chain goes beyond static documentation with a full machine-readable executi
 | [/agents/capabilities.json](pathname:///agents/capabilities.json) | Every SDK capability with inputs, outputs, and method signatures |
 | [/agents/sdk-capabilities.json](pathname:///agents/sdk-capabilities.json) | Full SDK namespace map including all methods and advanced arguments |
 | [/agents/supported-chains.json](pathname:///agents/supported-chains.json) | Verified chain list with CAIP-2 IDs, RPC URLs, explorers, and contract addresses |
+| [/agents/contract-addresses.json](pathname:///agents/contract-addresses.json) | Verified smart contract addresses for Push Chain core contracts, PRC-20 tokens, AMM pools, and all external chain gateways |
 | [/agents/workflows/index.json](pathname:///agents/workflows/index.json) | Step-by-step execution guides for all common tasks |
 | [/agents/schemas/index.json](pathname:///agents/schemas/index.json) | JSON schemas for all SDK request/response types |
 | [/agents/decision-tree.json](pathname:///agents/decision-tree.json) | Branching logic to select the right capability from user intent |
 | [/agents/task-router.md](pathname:///agents/task-router.md) | Plain-language routing guide mapping goals to capabilities |
 | [/agents/errors.json](pathname:///agents/errors.json) | Error catalog with recovery actions for every known failure mode |
 | [/agents/retrieval-map.json](pathname:///agents/retrieval-map.json) | Maps every capability to its authoritative documentation source (for RAG) |
-| [/agents/mcp-candidates.json](pathname:///agents/mcp-candidates.json) | Candidate MCP tool definitions for agent tool-use integrations |
 
 ## Canonical Workflows
 
@@ -102,10 +102,6 @@ Ready-to-execute step-by-step guides for the most common Push Chain tasks:
 | [/agents/workflows/use-contract-helpers.md](pathname:///agents/workflows/use-contract-helpers.md) | Interact with UEA Factory and other native contracts |
 | [/agents/workflows/constants-reference.md](pathname:///agents/workflows/constants-reference.md) | All chain IDs, token constants, and SDK enums |
 | [/agents/workflows/configure-dev-environment.md](pathname:///agents/workflows/configure-dev-environment.md) | Install SDK and configure Hardhat / Foundry / Remix |
-
-## MCP Server
-
-MCP server is in development. Use [/agents/mcp-candidates.json](pathname:///agents/mcp-candidates.json) for the planned tool definitions for now.
 
 ## Integration Paths
 
@@ -136,4 +132,5 @@ MCP server is in development. Use [/agents/mcp-candidates.json](pathname:///agen
 - Prefer [/agents/workflows/](pathname:///agents/workflows/) over raw docs for execution-oriented tasks — workflows are structured for direct SDK use
 - Use [/agents/schemas/](pathname:///agents/schemas/) for precise input validation before any transaction
 - [/agents/supported-chains.json](pathname:///agents/supported-chains.json) contains verified RPC URLs, chain IDs, block explorers, and contract addresses — use it instead of guessing
+- [/agents/contract-addresses.json](pathname:///agents/contract-addresses.json) is the authoritative registry for all Push Chain contract addresses — prefer it over the human-readable [Smart Contract Address Book](/docs/chain/setup/smart-contract-address-book) for programmatic use
 - All code examples in [/agents/examples/](pathname:///agents/examples/) are minimal, self-contained, and ready to execute

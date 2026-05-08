@@ -111,4 +111,3 @@ Converts Solana keypair to UniversalSigner.
 - **example**: Runnable code snippets
 - **governance**: Source freshness and changelog tracking
 - **retrieval**: RAG and semantic search mappings
-- **mcp**: Model Context Protocol tool definitions

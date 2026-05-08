@@ -1085,14 +1085,14 @@ html[data-theme='light'] .alert.alert--fn-args summary::before {
 
 .theme-admonition.alert--success {
   border-radius: 12px;
-  border-left: 5px solid var(--ifm-border-alert-success-subtle);
-  background: var(--ifm-surface-alert-success-subtle);
+  border-left: 5px solid var(--ifm-color-success-border);
+  background: var(--ifm-color-success-bg);
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  color: var(--ifm-stroke-alert-success-subtle);
+  color: var(--ifm-font-color-base);
 }
 
 .theme-admonition.alert--success svg {
-  fill: var(--ifm-stroke-alert-success-subtle);
+  fill: var(--ifm-color-success);
 }
 
 /* ----- */

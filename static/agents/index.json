@@ -92,11 +92,6 @@
       "type": "error"
     },
     {
-      "path": "agents/mcp-candidates.json",
-      "purpose": "MCP tool definitions for Push Chain operations, ready for Model Context Protocol integration",
-      "type": "mcp"
-    },
-    {
       "path": "agents/source-freshness.json",
       "purpose": "Mapping of documentation sources to their last-verified dates and authority levels",
       "type": "governance"

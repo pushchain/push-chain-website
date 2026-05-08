@@ -835,6 +835,29 @@ Reverse-maps any executor account (UEA or CEA) back to its origin controlling wa
 
 ---
 
+### `convertExecutorToOriginAccount(executorAddress, options?)` → `Promise<UniversalAccount>`
+
+Reverse-maps any executor address (UEA or CEA) back to its origin `UniversalAccount`. Complement of `convertOriginToExecutor`.
+
+| Argument          | Type                 | Description                                                            |
+| ----------------- | -------------------- | ---------------------------------------------------------------------- |
+| `executorAddress` | `string`             | UEA or CEA address                                                     |
+| `options.chain`   | `CHAIN` _(optional)_ | Required when resolving a CEA — specifies which external chain it's on |
+
+**Returns**: `Promise<UniversalAccount>` — `{ chain, address }`
+
+```ts
+const origin =
+  await PushChain.utils.account.convertExecutorToOriginAccount('0xUEAAddress');
+// For CEA: pass options.chain
+const ceaOrigin = await PushChain.utils.account.convertExecutorToOriginAccount(
+  '0xCEAAddress',
+  { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }
+);
+```
+
+---
+
 ### `slippageToMinAmount(amount, { slippageBps })` → `string`
 
 Calculates the minimum acceptable output amount given a slippage tolerance. Used when constructing `tx.payGasWith.minAmountOut` or validating swap quotes.
@@ -847,6 +870,56 @@ Calculates the minimum acceptable output amount given a slippage tolerance. Used
 **Returns**: `string` — minimum out amount in smallest units, e.g. `'99000000'`
 
 Full reference: https://push.org/agents/workflows/use-utility-functions.md
+
+---
+
+## Explorer Utilities
+
+Available on any initialized client instance as `pushChainClient.explorer.*`. Works in both read-only and signing modes.
+
+### `explorer.getTransactionUrl(txHash, options?)` → `string`
+
+Returns a block explorer URL for any transaction hash.
+
+| Argument        | Type                 | Description                                                                    |
+| --------------- | -------------------- | ------------------------------------------------------------------------------ |
+| `txHash`        | `string`             | Transaction hash                                                               |
+| `options.chain` | `CHAIN` _(optional)_ | Specific chain explorer to use. Defaults to Push Chain (`PUSH_TESTNET_DONUT`). |
+
+**Returns**: `string` — a full explorer URL, e.g. `'https://donut.push.network/tx/0x...'`
+
+```ts
+// Push Chain explorer URL (default)
+const url = pushChainClient.explorer.getTransactionUrl(txHash);
+
+// External chain explorer URL
+const sepoliaUrl = pushChainClient.explorer.getTransactionUrl(txHash, {
+  chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+});
+```
+
+### `explorer.listUrls(options?)` → `{ explorers }`
+
+Lists block explorer URLs for one chain.
+
+| Argument        | Type                 | Description                                                     |
+| --------------- | -------------------- | --------------------------------------------------------------- |
+| `options.chain` | `CHAIN` _(optional)_ | Chain to list explorers for. Defaults to client's origin chain. |
+
+**Returns**: `{ explorers: Array<{ chain: string; chainName: string; urls: string[] }> }`
+
+### `explorer.listAllUrls()` → `{ explorers }`
+
+Lists block explorer URLs for **all** supported chains at once.
+
+**Returns**: `{ explorers: Array<{ chain: string; chainName: string; urls: string[] }> }`
+
+```ts
+const { explorers } = pushChainClient.explorer.listAllUrls();
+for (const { chainName, urls } of explorers) {
+  console.log(chainName, urls[0]);
+}
+```
 
 ---
 

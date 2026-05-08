@@ -60,6 +60,26 @@
       ]
     },
     {
+      "namespace": "PushChain.utils.svm",
+      "description": "Solana (SVM) escape-hatch utilities for manual Anchor IDL registration. Only needed when building tx.data manually with raw Anchor discriminator + Borsh bytes — normal callers use encodeTxData({ idl, ... }) which auto-registers.",
+      "methods": [
+        {
+          "name": "registerIdl",
+          "signature": "PushChain.utils.svm.registerIdl(programId: string, idl: Idl): void",
+          "description": "Manually registers an Anchor IDL for a given Solana program ID. Required only when constructing raw SVM tx data without encodeTxData.",
+          "returns": "void",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "getRegisteredIdls",
+          "signature": "PushChain.utils.svm.getRegisteredIdls(): Record<string, Idl>",
+          "description": "Returns all currently registered Anchor IDLs keyed by program ID.",
+          "returns": "Record<string, Idl>",
+          "safe_for_autonomous_execution": true
+        }
+      ]
+    },
+    {
       "namespace": "PushChain.utils.signer",
       "description": "Universal signer creation and conversion utilities",
       "methods": [
@@ -126,8 +146,8 @@
           "safe_for_autonomous_execution": true
         },
         {
-          "name": "convertExecutorToOrigin",
-          "signature": "PushChain.utils.account.convertExecutorToOrigin(executorAddress: string, options?: { chain?: CHAIN }): Promise<UniversalAccount>",
+          "name": "convertExecutorToOriginAccount",
+          "signature": "PushChain.utils.account.convertExecutorToOriginAccount(executorAddress: string, options?: { chain?: CHAIN }): Promise<UniversalAccount>",
           "description": "Reverse-maps a UEA (Push Chain execution account) to its origin wallet. Pass options.chain to treat as CEA from a specific chain.",
           "returns": "Promise<UniversalAccount>",
           "safe_for_autonomous_execution": true
@@ -381,16 +401,23 @@
       "methods": [
         {
           "name": "getTransactionUrl",
-          "signature": "pushChainClient.explorer.getTransactionUrl(txHash: string): string",
-          "description": "Returns block explorer URL for a transaction hash",
+          "signature": "pushChainClient.explorer.getTransactionUrl(txHash: string, options?: { chain?: CHAIN }): string",
+          "description": "Returns a block explorer URL for the given transaction hash. Defaults to the Push Chain explorer; pass options.chain to get the URL on a specific external chain instead.",
           "returns": "string",
           "safe_for_autonomous_execution": true
         },
         {
           "name": "listUrls",
-          "signature": "pushChainClient.explorer.listUrls(): Record<string, string[]>",
-          "description": "Lists all configured block explorer URLs by chain",
-          "returns": "Record<string, string[]>",
+          "signature": "pushChainClient.explorer.listUrls(options?: { chain?: CHAIN }): { explorers: Array<{ chain: string; chainName: string; urls: string[] }> }",
+          "description": "Lists configured block explorer URLs. Defaults to client's origin chain; pass options.chain to list explorers for a specific chain.",
+          "returns": "{ explorers: Array<{ chain: string; chainName: string; urls: string[] }> }",
+          "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "listAllUrls",
+          "signature": "pushChainClient.explorer.listAllUrls(): { explorers: Array<{ chain: string; chainName: string; urls: string[] }> }",
+          "description": "Lists block explorer URLs for ALL supported chains at once. Useful for building explorer link pickers or cross-chain dashboards.",
+          "returns": "{ explorers: Array<{ chain: string; chainName: string; urls: string[] }> }",
           "safe_for_autonomous_execution": true
         }
       ]

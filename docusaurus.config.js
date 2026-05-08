@@ -80,6 +80,9 @@ const config = {
         id: 'blog',
         path: getBlogPath(),
         routeBasePath: 'blog',
+        admonitions: {
+          keywords: ['success'],
+        },
         blogSidebarTitle: 'All posts',
         blogSidebarCount: 'ALL',
         showReadingTime: true,
@@ -148,6 +151,9 @@ const config = {
           path: 'docs',
           routeBasePath: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
+          admonitions: {
+            keywords: ['success'],
+          },
           sidebarCollapsed: false,
           // Please change this to your repo.
           // Remove this to remove the 'edit this page' links.
