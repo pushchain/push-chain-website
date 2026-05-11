@@ -613,7 +613,7 @@
         "agents/skills/push-frontend/SKILL.md"
       ],
       "prefer_over": [],
-      "notes": "prepareTransaction() each hop individually, then executeTransactions([...prepared]) for atomic single-signature submission. All per-hop args (to, data, value, funds, gasLimit, payGasWith, deadline, from, progressHook) are supported per hop. Use when multiple chains must be visited in one user gesture."
+      "notes": "prepareTransaction() each hop individually, then executeTransactions([...prepared], { progressHook? }) for atomic single-signature submission. Per-hop args (to, data, value, funds, gasLimit, payGasWith, deadline, from) are set during prepareTransaction. Use executeTransactions options.progressHook for unified ProgressEvent updates, and cascade.wait({ progressHook }) for per-hop wait updates."
     },
     {
       "task": "Sign EIP-712 typed structured data (Permit2, Seaport, Uniswap v3/v4, gasless approvals)",

@@ -62,7 +62,9 @@ async function main() {
     },
     data: '0x',
   });
-  const cascadeResult = await client.universal.executeTransactions([prepared]);
+  const cascadeResult = await client.universal.executeTransactions([prepared], {
+    progressHook: (p) => console.log(`  ${p.id}: ${p.message}`),
+  });
   await cascadeResult.waitForAll();
   console.log('  All hops confirmed');
 }

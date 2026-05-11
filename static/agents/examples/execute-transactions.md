@@ -124,7 +124,9 @@ async function main() {
   console.log('✅ hop2 prepared - route:', hop2.route);
 
   // ── Execute all 3 hops as one user-signed transaction ──────────────────
-  const cascade = await client.universal.executeTransactions([hop0, hop1, hop2]);
+  const cascade = await client.universal.executeTransactions([hop0, hop1, hop2], {
+    progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+  });
   console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
   console.log('Hop Count:', cascade.hopCount);
 

@@ -929,7 +929,7 @@
     {
       "id": "execute_transaction_cascade",
       "name": "Execute Transaction Cascade (Multi-Hop)",
-      "description": "Prepares multiple universal transactions then executes them atomically as a single-signature multi-hop cascade. Use prepareTransaction() for each hop, then executeTransactions([...]) for submission. Required for any multi-chain sequence that must be signed once — this is the canonical cascade pattern in both backend and frontend skill files.",
+      "description": "Prepares multiple universal transactions then executes them atomically as a single-signature multi-hop cascade. Use prepareTransaction() for each hop, then executeTransactions([...], { progressHook? }) for submission. Required for any multi-chain sequence that must be signed once — this is the canonical cascade pattern in both backend and frontend skill files.",
       "actor": ["developer", "agent", "backend", "browser_agent"],
       "operation": "write",
       "prerequisites": ["push_chain_client_initialized"],
@@ -953,10 +953,10 @@
           "description": "Assets to move atomically with each hop"
         },
         {
-          "name": "txs[].progressHook",
-          "type": "(progress: ProgressHookType) => void",
+          "name": "options.progressHook",
+          "type": "(event: ProgressEvent) => void",
           "required": false,
-          "description": "Per-hop progress callback"
+          "description": "Per-call unified SDK progress callback for executeTransactions pre-flight, broadcast, and cascade tracking"
         },
         {
           "name": "txs[].from",
@@ -1008,7 +1008,7 @@
           "description": "{ initialTxHash, hops[], hopCount, wait(opts?), waitForAll(opts?) }"
         }
       ],
-      "sdk_method": "pushChainClient.universal.prepareTransaction(tx) → PreparedUniversalTx; pushChainClient.universal.executeTransactions([...txs]) → CascadedTxResponse",
+      "sdk_method": "pushChainClient.universal.prepareTransaction(tx) → PreparedUniversalTx; pushChainClient.universal.executeTransactions([...txs], { progressHook? }) → CascadedTxResponse",
       "invocation_type": "sdk",
       "auth_required": true,
       "safe_for_autonomous_execution": false,

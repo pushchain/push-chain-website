@@ -1,6 +1,6 @@
 # ProgressHook Events Reference
 
-Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions`. Pass a callback to `tx.progressHook` to receive these events.
+Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions`. For `sendTransaction`, pass the callback in the transaction params. For `executeTransactions`, pass it as the second argument: `executeTransactions(txs, { progressHook })`.
 
 ## Event Object Shape
 
@@ -115,6 +115,13 @@ Complete list of `progressHook` event IDs emitted by `sendTransaction` and `exec
 ---
 
 ## Multichain Cascade (`executeTransactions`)
+
+```ts
+const cascade = await client.universal.executeTransactions([hop0, hop1], {
+  progressHook: (event) => console.log(`${event.id}: ${event.message}`),
+});
+await cascade.wait();
+```
 
 | ID | Title | Level | Response |
 | -- | ----- | ----- | -------- |

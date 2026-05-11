@@ -249,10 +249,10 @@ await pushChainClient.universal.sendTransaction({
 | Aspect | Details |
 |--------|---------|
 | **Problem** | Chain A → Chain B → Chain C in one user gesture, with one signature |
-| **Recommended Approach** | `prepareTransaction()` each hop, then `executeTransactions([...])` |
-| **SDK Methods** | `pushChainClient.universal.prepareTransaction(tx)` + `pushChainClient.universal.executeTransactions(prepared[])` |
+| **Recommended Approach** | `prepareTransaction()` each hop, then `executeTransactions([...], { progressHook? })` |
+| **SDK Methods** | `pushChainClient.universal.prepareTransaction(tx)` + `pushChainClient.universal.executeTransactions(prepared[], { progressHook? })` |
 | **Returns** | `CascadedTxResponse` with `.wait()` per hop and `.waitForAll()` for full settlement |
-| **Caveats** | - Each `PreparedUniversalTx` is signed when you call `executeTransactions`, not at prepare time<br>- Every per-hop arg (`value`, `funds`, `gasLimit`, `payGasWith`, `deadline`) is supported per hop<br>- Use `progressHook` per hop for granular UI updates across the cascade |
+| **Caveats** | - Each `PreparedUniversalTx` is signed when you call `executeTransactions`, not at prepare time<br>- Every per-hop arg (`value`, `funds`, `gasLimit`, `payGasWith`, `deadline`) is set when preparing that hop<br>- Pass `options.progressHook` to `executeTransactions` for the unified SDK progress stream; use `cascade.wait({ progressHook })` for per-hop wait updates |
 
 **Example:**
 ```typescript
@@ -266,7 +266,9 @@ const hop2 = await pushChainClient.universal.prepareTransaction({
   data: encodeCalldata2(),
 });
 
-const result = await pushChainClient.universal.executeTransactions([hop1, hop2]);
+const result = await pushChainClient.universal.executeTransactions([hop1, hop2], {
+  progressHook: (p) => console.log(`${p.id}: ${p.message}`),
+});
 await result.waitForAll();
 ```
 
@@ -379,7 +381,7 @@ const { accounts: bnbAccounts } = await PushChain.utils.account.resolveControlle
 | Call contract on external chain | `sendTransaction({ to: { address, chain }, data })` | Route 2 |
 | Execute with external identity | `sendTransaction({ from: { chain }, to: address })` | Route 3 |
 | Move assets cross-chain | `sendTransaction({ funds: { amount, token } })` | Route 1/2 |
-| Multi-hop cascade (single signature) | `prepareTransaction()` × N → `executeTransactions([...])` | Multi |
+| Multi-hop cascade (single signature) | `prepareTransaction()` × N → `executeTransactions([...], { progressHook? })` | Multi |
 | Sign arbitrary message | `signMessage(Uint8Array)` | N/A |
 | Sign EIP-712 typed data | `signTypedData({ domain, types, value })` | N/A |
 | Derive UEA / CEA address off-chain | `deriveExecutorAccount(uoa, { chain })` | N/A |

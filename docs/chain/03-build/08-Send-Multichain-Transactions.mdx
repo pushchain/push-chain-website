@@ -156,9 +156,11 @@ const preparedTx = await pushChainClient.universal.prepareTransaction({
 
 ## Execute Transactions
 
-**_`pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>`_**
+**_`pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[], options?: { progressHook?: (event: ProgressEvent) => void }): Promise<CascadedTxResponse>`_**
 
 Executes an ordered array of prepared transactions as a multichain flow. This is submitted and handled as a **single transaction**. You sign once, and the SDK coordinates execution across Push Chain and supported external chains automatically.
+
+Pass `options.progressHook` to receive the unified SDK `ProgressEvent` stream for this cascade, including pre-flight checks, broadcast, and cascade tracking events. This is additive with the client-level `progressHook` passed to `PushChain.initialize`.
 
 Each prepared transaction becomes one ordered step in the multichain flow.
 
@@ -166,7 +168,12 @@ Each prepared transaction becomes one ordered step in the multichain flow.
 const step1 = await pushChainClient.universal.prepareTransaction({...}); // Push Chain
 const step2 = await pushChainClient.universal.prepareTransaction({...}); // BNB
 
-const result = await pushChainClient.universal.executeTransactions([step1, step2]);
+const result = await pushChainClient.universal.executeTransactions(
+  [step1, step2],
+  {
+    progressHook: (event) => console.log(event.id, event.message),
+  }
+);
 ```
 
 <PushAPIReference>
@@ -174,6 +181,7 @@ const result = await pushChainClient.universal.executeTransactions([step1, step2
 | **Arguments** | **Type** | **Description** |
 | ------------- | -------- | --------------- |
 | `txs` | `PreparedUniversalTx[]` | Ordered array of prepared transactions from `prepareTransaction`. |
+| `options.progressHook` | `(event: ProgressEvent) => void` | Optional per-call callback for unified SDK progress events. Receives the same event shape as `sendTransaction` progress hooks. |
 
 </PushAPIReference>
 
@@ -216,6 +224,7 @@ const result = await pushChainClient.universal.executeTransactions([step1, step2
 | `pollingIntervalMs` | `number` | `5000` | Polling interval in milliseconds. |
 | `timeout` | `number` | `600000` | Total timeout in milliseconds (10 min). |
 | `progressHook` | `(event: CascadeProgressEvent) => void` | - | Progress callback per hop. Reports `hopIndex`, `route`, `chain`, `status`, `txHash`, `elapsed`. |
+| `eventHook` | `(event: ProgressEvent) => void` | `options.progressHook` from `executeTransactions` | Unified SDK progress callback during cascade tracking. |
 
 </Details>
 
@@ -320,7 +329,9 @@ const result = await pushChainClient.universal.executeTransactions([step1, step2
       console.log('✅ hop2 prepared - route:', hop2.route);
 
       // Execute all 3 hops as one user-signed Push Chain transaction
-      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2]);
+      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2], {
+        progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+      });
       console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
       console.log('📦 hopCount:', cascade.hopCount);
 
@@ -478,7 +489,9 @@ Pull ETH from an Ethereum Sepolia CEA into Push Chain, swap pETH → pSOL on the
       console.log('✅ hop2 prepared - route:', hop2.route);
 
       // ── Execute all 3 hops as one user-signed transaction ──────────────────
-      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2]);
+      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2], {
+        progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+      });
       console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
       console.log('Hop Count:', cascade.hopCount);
 
@@ -568,7 +581,9 @@ Increment a counter on Push Chain, then use the CEA on BNB Testnet to increment 
       });
       console.log('✅ hop1 prepared - route:', hop1.route);
 
-      const cascade = await client.universal.executeTransactions([hop0, hop1]);
+      const cascade = await client.universal.executeTransactions([hop0, hop1], {
+        progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+      });
       console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
       console.log('📦 hopCount:', cascade.hopCount);
 
@@ -701,7 +716,9 @@ Increment counters on Push Chain and BNB Testnet, then trigger a call on Solana 
       });
       console.log('✅ hop2 prepared - route:', hop2.route);
 
-      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2]);
+      const cascade = await client.universal.executeTransactions([hop0, hop1, hop2], {
+        progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+      });
       console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
       console.log('📦 hopCount:', cascade.hopCount);
 
@@ -729,7 +746,7 @@ Increment counters on Push Chain and BNB Testnet, then trigger a call on Solana 
 - **Single signature**: `executeTransactions` submits one transaction to Push Chain. You sign once, and the SDK coordinates the full multichain execution automatically.
 - **No atomicity guarantee**: If a downstream hop fails, earlier hops are already on-chain. Design contracts to handle partial execution.
 - **Gas per hop**: Each hop has its own estimated gas. Ensure gas is properly funded.
-- **Tracking**: Use `cascade.wait({ progressHook })` to receive live status updates per hop as they propagate across chains.
+- **Tracking**: Pass `{ progressHook }` as the second `executeTransactions` argument for the unified SDK `ProgressEvent` stream. Use `cascade.wait({ progressHook })` when you need the lower-level per-hop `CascadeProgressEvent` shape.
 
 
 ## Next Steps

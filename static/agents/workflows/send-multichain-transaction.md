@@ -191,10 +191,15 @@ const hop1 = await pushChainClient.universal.prepareTransaction({
 
 ### Step 2: Execute All Hops
 
-**`pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>`**
+**`pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[], options?: { progressHook?: (event: ProgressEvent) => void }): Promise<CascadedTxResponse>`**
 
 ```typescript
-const cascade = await pushChainClient.universal.executeTransactions([hop0, hop1]);
+const cascade = await pushChainClient.universal.executeTransactions(
+  [hop0, hop1],
+  {
+    progressHook: (p) => console.log(`${p.id}: ${p.message}`),
+  }
+);
 console.log('Initial Push Chain tx:', cascade.initialTxHash);
 console.log('Hop count:', cascade.hopCount);
 
@@ -206,6 +211,8 @@ const result = await cascade.wait({
 });
 console.log('All complete:', result.success);
 ```
+
+`options.progressHook` receives unified SDK `ProgressEvent` objects for the cascade pre-flight, broadcast, and tracking phases. It is additive with the client-level `progressHook` passed to `PushChain.initialize`.
 
 `CascadedTxResponse` shape:
 

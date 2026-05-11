@@ -122,7 +122,9 @@ const hop2 = await client.universal.prepareTransaction({
 });
 
 // Submit in order — single signature, sequential cross-chain execution
-const result = await client.universal.executeTransactions([hop1, hop2]);
+const result = await client.universal.executeTransactions([hop1, hop2], {
+  progressHook: (p) => console.log(`${p.id}: ${p.message}`),
+});
 await result.waitForAll(); // resolves when all hops confirm
 ```
 

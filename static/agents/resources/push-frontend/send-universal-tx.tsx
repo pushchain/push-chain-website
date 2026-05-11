@@ -16,12 +16,14 @@ export function SendUniversalTx() {
   const { pushChainClient, isInitialized } = usePushChainClient();
   const [txHash, setTxHash] = useState<string | null>(null); // eslint-disable-line
   const [status, setStatus] = useState<Status>('idle');
+  const [progressMessage, setProgressMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   // ── Route 1: Push Chain target ───────────────────────────────────────────
   const sendToPushChain = async () => {
     if (!pushChainClient) return; // always guard — null before wallet connects
     setStatus('pending');
+    setProgressMessage(null);
     setError(null);
     try {
       const tx = await pushChainClient.universal.sendTransaction({
@@ -42,6 +44,7 @@ export function SendUniversalTx() {
   const sendToExternalChain = async () => {
     if (!pushChainClient) return;
     setStatus('pending');
+    setProgressMessage(null);
     setError(null);
     try {
       const tx = await pushChainClient.universal.sendTransaction({
@@ -69,6 +72,7 @@ export function SendUniversalTx() {
   const cascade = async () => {
     if (!pushChainClient) return;
     setStatus('pending');
+    setProgressMessage(null);
     setError(null);
     try {
       const prepared = await pushChainClient.universal.prepareTransaction({
@@ -78,9 +82,12 @@ export function SendUniversalTx() {
         },
         data: '0x',
       });
-      const result = await pushChainClient.universal.executeTransactions([
-        prepared,
-      ]);
+      const result = await pushChainClient.universal.executeTransactions(
+        [prepared],
+        {
+          progressHook: (progress) => setProgressMessage(progress.message),
+        }
+      );
       await result.waitForAll();
       setStatus('confirmed');
     } catch (err) {
@@ -109,6 +116,7 @@ export function SendUniversalTx() {
       </button>
 
       {status === 'pending' && <p>Sending…</p>}
+      {progressMessage && <p>{progressMessage}</p>}
       {txHash && <p>Tx hash: {txHash}</p>}
       {status === 'confirmed' && <p>✓ Confirmed</p>}
       {status === 'error' && <p>Error: {error}</p>}

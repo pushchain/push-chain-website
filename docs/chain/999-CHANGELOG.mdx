@@ -20,6 +20,12 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ### 5.2.0 (unreleased)
 
+#### Fixes
+
+- `executeTransactions(txs, { progressHook })` now forwards the per-call
+  progress hook through cascade pre-flight, broadcast, and tracking. It is
+  additive with the `progressHook` configured at `PushChain.initialize`.
+
 #### Other Changes
 
 - Route 1 (UOA → Push) now applies Case A/B/C USD-bucket sizing to the
@@ -494,6 +500,5 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 #### Other Changes
 
 - refactor: add changelog
-
 
 

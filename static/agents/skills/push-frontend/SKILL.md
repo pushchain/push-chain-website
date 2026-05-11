@@ -383,12 +383,13 @@ const hopB = await pushChainClient.universal.prepareTransaction({
   to: { address: '0xContractB', chain: PushChain.CONSTANTS.CHAIN.POLYGON_AMOY },
   data: callBData,
 });
-const result = await pushChainClient.universal.executeTransactions(
+const cascade = await pushChainClient.universal.executeTransactions(
   [hopA, hopB],
   {
     progressHook: (progress) => setStatus(progress.message), // progress: { id, title, message, level, response, timestamp }
   }
 );
+const result = await cascade.wait();
 if (!result.success) throw new Error('Cascade failed');
 // progressHook event IDs (SEND-TX-001, SEND-TX-999-01, etc.): https://push.org/agents/workflows/progress-hook-events.md
 ```

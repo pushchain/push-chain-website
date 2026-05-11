@@ -333,9 +333,9 @@
           "details": {
             "step_1": "const hop1 = await pushChainClient.universal.prepareTransaction({ to: '0x...', data })",
             "step_2": "const hop2 = await pushChainClient.universal.prepareTransaction({ to: { address: '0x...', chain: CHAIN.ETHEREUM_SEPOLIA }, data })",
-            "step_3": "const result = await pushChainClient.universal.executeTransactions([hop1, hop2])",
+            "step_3": "const result = await pushChainClient.universal.executeTransactions([hop1, hop2], { progressHook })",
             "returns": "CascadedTxResponse with .wait() and .waitForAll() per hop",
-            "note": "Each hop supports the same args as sendTransaction (to, data, value, funds, gasLimit, payGasWith, deadline, from, progressHook)"
+            "note": "Each hop supports the same args as sendTransaction (to, data, value, funds, gasLimit, payGasWith, deadline, from). Pass progressHook as executeTransactions options for unified ProgressEvent updates, or cascade.wait({ progressHook }) for per-hop wait updates."
           },
           "next": null
         }

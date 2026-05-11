@@ -517,12 +517,14 @@ const hop1 = await client.universal.prepareTransaction({
 
 ### `executeTransactions`
 
-`client.universal.executeTransactions(txs)` → `Promise<CascadedTxResponse>`
+`client.universal.executeTransactions(txs, options?)` → `Promise<CascadedTxResponse>`
 
 Submits all prepared hops as a single Push Chain transaction. The SDK coordinates downstream execution across chains.
 
 ```ts
-const cascade = await client.universal.executeTransactions([hop0, hop1]);
+const cascade = await client.universal.executeTransactions([hop0, hop1], {
+  progressHook: (p) => console.log(`${p.id}: ${p.message}`),
+});
 console.log('Push Chain tx:', cascade.initialTxHash);
 console.log('Hops:', cascade.hopCount);
 
@@ -535,6 +537,8 @@ const result = await cascade.wait({
 });
 console.log('All complete:', result.success);
 ```
+
+`options.progressHook` receives unified SDK `ProgressEvent` objects during cascade pre-flight, broadcast, and tracking. It is additive with the client-level `progressHook` passed to `PushChain.initialize`.
 
 **`CascadedTxResponse` shape:**
 

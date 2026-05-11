@@ -69,7 +69,9 @@ async function main() {
   });
   console.log('✅ hop1 prepared - route:', hop1.route);
 
-  const cascade = await client.universal.executeTransactions([hop0, hop1]);
+  const cascade = await client.universal.executeTransactions([hop0, hop1], {
+    progressHook: (p) => console.log('  ' + p.id + ': ' + p.message),
+  });
   console.log('🚀 Cascade submitted - initialTxHash:', cascade.initialTxHash);
   console.log('📦 hopCount:', cascade.hopCount);
 

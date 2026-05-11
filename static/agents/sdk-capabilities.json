@@ -323,8 +323,22 @@
         },
         {
           "name": "executeTransactions",
-          "signature": "pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[]): Promise<CascadedTxResponse>",
-          "description": "Executes ordered array of prepared transactions as a single-signature multi-hop cascade. Returns CascadedTxResponse with initialTxHash, hops[], hopCount, wait(opts?), waitForAll(opts?).",
+          "signature": "pushChainClient.universal.executeTransactions(txs: PreparedUniversalTx[], options?: { progressHook?: (event: ProgressEvent) => void }): Promise<CascadedTxResponse>",
+          "description": "Executes ordered array of prepared transactions as a single-signature multi-hop cascade. Optional options.progressHook receives unified ProgressEvent updates during pre-flight, broadcast, and cascade tracking; it is additive with the PushChain.initialize progressHook. Returns CascadedTxResponse with initialTxHash, hops[], hopCount, wait(opts?), waitForAll(opts?).",
+          "arguments": [
+            {
+              "name": "txs",
+              "type": "PreparedUniversalTx[]",
+              "required": true,
+              "description": "Ordered prepared transactions from prepareTransaction"
+            },
+            {
+              "name": "options.progressHook",
+              "type": "(event: ProgressEvent) => void",
+              "required": false,
+              "description": "Per-call unified SDK progress callback"
+            }
+          ],
           "returns": "CascadedTxResponse",
           "safe_for_autonomous_execution": false
         },
