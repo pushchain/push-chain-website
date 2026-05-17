@@ -1,0 +1,65 @@
+{
+  "components": {
+    "cult-contact": {
+      "collapsed-text": "🩸 Push Cult に参加して誓いを立てましょう",
+      "expanded-title": "誓約",
+      "form": {
+        "steps": {
+          "email": {
+            "title": "メールアドレスは何ですか？ 📧",
+            "subtitle": "ご連絡のために必要です",
+            "placeholder": "your.email@example.com"
+          },
+          "x-username": {
+            "title": "X (Twitter) のユーザー名は何ですか？",
+            "subtitle": "コンテンツとエンゲージメントを確認したいと考えています",
+            "placeholder": "@yourhandle"
+          },
+          "telegram-id": {
+            "title": "Telegram IDは何ですか？",
+            "subtitle": "私たちはTelegramを弟子たちとの直接のコミュニケーションに使用します",
+            "placeholder": "@yourtelegramid"
+          },
+          "best-content": {
+            "title": "最高のコンテンツを共有してください",
+            "subtitle": "あなたの作品を最もよく示しているスレッド、ビデオ、または記事へのリンク",
+            "placeholder": "https://x.com/yourhandle/status/..."
+          },
+          "message": {
+            "title": "あなたのビジョンを共有してください",
+            "subtitle": "コンテンツ、ターゲット層、そして参加したい理由について教えてください",
+            "placeholder": "あなたのコンテンツ、ターゲットオーディエンス、そしてPush Cultに参加したい理由を教えてください…"
+          }
+        },
+        "buttons": {
+          "next": "次へ",
+          "previous": "前へ",
+          "submit": "アプリケーションを送信",
+          "submitting": "送信中..."
+        },
+        "validation": {
+          "email-required": "メールアドレスが必須です",
+          "email-invalid": "有効なメールアドレスを入力してください",
+          "x-username-required": "X ユーザー名が必要です",
+          "telegram-id-required": "Telegram ID が必須です",
+          "best-content-required": "最高のコンテンツのリンクが必要です",
+          "best-content-invalid": "有効なURLを入力してください",
+          "message-required": "メッセージは必須です",
+          "default": "この項目は必須です"
+        },
+        "success": {
+          "title": "アプリケーション送信完了！",
+          "message-before-link": "参加",
+          "discord-link-text": "Push Chain Discord",
+          "message-after-link": "そして、今後の展開に注目してください",
+          "channel-name": "#push-cult",
+          "message-end": "次のステップのためのチャンネルです。",
+          "button": "もう一度応募する"
+        },
+        "progress": {
+          "step-counter": "{{current}} / {{total}}"
+        }
+      }
+    }
+  }
+}

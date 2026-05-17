@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "version": "1.0.0",
+  "current_sdk_version": "6.0.3",
+  "generated": "2026-05-17T00:00:00.000Z",
+  "description": "Machine-readable definition of Push Chain's three universal transaction routes. Consumed by build.agents.llms.mjs to generate the route bullets in llms.txt. Other agent surfaces (README.md, task-router.md, decision-tree.json, workflows, skills) carry the same route concepts in prose form intended for human / LLM reading.",
+  "routes": [
+    {
+      "id": "ROUTE_1",
+      "name": "Route 1",
+      "internal_name": "UOA_TO_PUSH",
+      "input_shape": "tx.to is a plain address string (e.g. '0x...')",
+      "execution_target": "Push Chain",
+      "executor": "UEA (Universal Executor Account) when origin is external; the wallet itself when origin is native Push",
+      "origin_types": [
+        "Wallet on an external chain (Ethereum, Sepolia, Arbitrum, Base, BNB, Solana, etc.)",
+        "Native Push Chain wallet"
+      ],
+      "origin_note": "When origin is external, the SDK fee-locks source-chain native, mints PC into the UEA, and the UEA executes the call. When origin is a native Push Chain wallet, the SDK signs and submits the tx directly with no UEA hop.",
+      "use_cases": [
+        "Calling a Push Chain contract from any chain",
+        "Funding your Push Account",
+        "Bridging assets onto Push Chain via tx.funds"
+      ],
+      "sdk_call": "pushChainClient.universal.sendTransaction({ to: '0x...', data, value })",
+      "llms_summary": "Target is Push Chain (`tx.to` = plain address). External-chain user: UOA → UEA → Push Chain contract. Native Push Chain account: wallet → Push Chain contract directly (no UEA hop). *(e.g. Ethereum user calls a Push Chain NFT contract signing once on Ethereum; or a Push Chain wallet calls the same contract directly.)*"
+    },
+    {
+      "id": "ROUTE_2",
+      "name": "Route 2",
+      "internal_name": "UOA_TO_CEA",
+      "input_shape": "tx.to is an object with { address, chain } where chain is an external chain",
+      "execution_target": "Target external chain (e.g. Ethereum Sepolia, BNB Chain, Solana Devnet)",
+      "executor": "CEA (Chain Executor Account) on the target external chain",
+      "origin_types": [
+        "Wallet on an external chain (EVM or SVM)",
+        "Push Account: UEA, native Push Chain wallet, or smart contract on Push Chain"
+      ],
+      "origin_note": "The signer can be any of the listed account shapes. The route always lands on the target external chain via that signer's CEA. msg.sender on the target chain is the CEA address.",
+      "use_cases": [
+        "Calling external-chain contracts from a single Push Account",
+        "Cross-chain asset transfers via tx.funds",
+        "Atomic move-and-call workflows (funds + payload in one signature)"
+      ],
+      "sdk_call": "pushChainClient.universal.sendTransaction({ to: { address: '0x...', chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, data })",
+      "llms_summary": "Target is an external chain (`tx.to = { address, chain }`). External-chain user: UOA → UEA → CEA → external chain. Native Push Chain account: wallet → CEA → external chain. *(e.g. Solana user pays in SOL to mint an NFT on Base; or a Push Chain wallet triggers the same Base contract via CEA.)*"
+    },
+    {
+      "id": "ROUTE_3",
+      "name": "Route 3",
+      "internal_name": "CEA_TO_PUSH",
+      "input_shape": "tx.to is a plain address AND tx.from.chain is set to an external chain",
+      "execution_target": "Push Chain",
+      "executor": "UEA on Push Chain, invoked by the inbound from the CEA on tx.from.chain",
+      "origin_types": [
+        "Push Account: UEA, native Push Chain wallet, or smart contract on Push Chain (acting through its CEA on the named external chain)"
+      ],
+      "origin_note": "The Push Account authorizes the call; its CEA on the external chain emits the outbound tx that is relayed back inbound to Push Chain for execution. msg.sender on Push Chain is the CEA, not the UEA.",
+      "use_cases": [
+        "Rebalancing assets at the universal account level",
+        "Settling external-chain holdings back to Push Chain",
+        "DeFi strategies where Push Chain state must reflect external-chain identity"
+      ],
+      "sdk_call": "pushChainClient.universal.sendTransaction({ from: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, to: '0x...', data })",
+      "llms_summary": "CEA-originated inbound to Push Chain (`tx.from.chain` set). Every account that acts on external chains gets a deterministic CEA deployed there — one per account, per chain — to preserve identity and prevent funds from mixing across accounts. Route 3 invokes that CEA on the specified external chain; the CEA then makes the inbound call to Push Chain, so `msg.sender` on Push Chain = the CEA address (not the UEA). *(e.g. a Push Chain contract that tracks per-chain identity uses Route 3 so each user's Ethereum CEA and Solana CEA are distinct `msg.sender` values.)*",
+      "funding_patterns": [
+        {
+          "name": "plain-call",
+          "shape": "from: { chain } + to: plain address (no funds, no value)",
+          "fund_required": "Source-chain UOA only (e.g. ~0.01 Sepolia ETH)",
+          "why": "SDK fee-locks source-chain native, mints PC into the UEA, then UEA → UGPC swaps PC into the destination-chain native to cover CEA gas + first-time CEA deployment. CEA does not need a manual top-up."
+        },
+        {
+          "name": "bridge-native-back",
+          "shape": "from: { chain } + value: <native> + to: client.universal.account",
+          "fund_required": "UOA on source chain AND the native asset on the CEA on the named external chain (amount = value)",
+          "why": "The native asset being swept back has to physically sit on the CEA before the call. CEA gas still comes from the source-chain fee-lock."
+        },
+        {
+          "name": "bridge-funds-back",
+          "shape": "from: { chain } + funds: { amount, token: MOVEABLE.<chain>.<TOKEN> } + to: client.universal.account",
+          "fund_required": "UOA on source chain AND the SDK-registered PRC-20 source token on the CEA on the named external chain (amount = funds.amount)",
+          "why": "ERC-20 variant of the above. Mint the SDK-registered token at PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN>.address (e.g. 0xE935d9c9C24D02E61186c640cc01d713C876d40F for USDT on BNB Testnet) and transfer to the printed CEA address."
+        },
+        {
+          "name": "funds-with-payload",
+          "shape": "from: { chain } + funds: { amount, token } + data + to: contract on Push Chain",
+          "fund_required": "Same as bridge-funds-back",
+          "why": "The payload runs on Push Chain via the UEA after the bridge settles."
+        }
+      ],
+      "anti_pattern": "Do not tell devs to send '0.02 BNB to the CEA for gas + fee-lock deposit' for a plain Route 3 call. The CEA gas is automatic; only ask for the CEA-side asset when an asset is actually being bridged back. Even then, ask for the burn amount itself (e.g. 0.001 BNB, 0.01 USDT), not a 10x buffer."
+    }
+  ],
+  "shared": {
+    "cea_derivation": {
+      "preferred": "PushChain.utils.account.deriveExecutorAccount(uoa, { chain, skipNetworkCheck: true })",
+      "anti_pattern": "Hand-rolling CEAFactory.getCEAForPushAccount(...) calls when the SDK helper is available."
+    }
+  }
+}

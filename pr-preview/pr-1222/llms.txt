@@ -1,0 +1,214 @@
+# Push Chain
+
+> Push Chain is a universal, shared-state Layer 1 blockchain. Developers deploy once on Push Chain and reach users from any EVM or non-EVM chain. Users transact from their home chain using any supported token — no bridging, no network switching.
+
+> **Agent layer:** v1.0.16 | Last updated: 2026-05-17 | SDK: `@pushchain/core@6.0.3` · `@pushchain/ui-kit@6.0.2` | Network: Donut Testnet (Mainnet not yet launched)
+
+## Who This Is For
+
+- Developers building universal dApps with the Push Chain SDK
+- AI coding assistants and agents executing SDK tasks via Cursor, Windsurf, or Claude Code
+- RAG pipelines and retrieval systems indexing Push Chain documentation
+
+## Key Concepts
+
+- **Universal Origin Account (UOA)**: The user's native wallet on their home chain (e.g. MetaMask on Ethereum, Phantom on Solana).
+- **Universal Executor Account (UEA)**: A deterministic smart account on Push Chain derived from the UOA. Executes transactions on behalf of the user.
+- **Chain Executor Account (CEA)**: A deterministic smart account on an external chain (e.g. Ethereum Sepolia) derived from the UEA. Enables Push Chain to execute transactions on external chains.
+- **Universal Transaction**: A single SDK call that routes funds and execution from any origin chain to Push Chain or an external target.
+- **Route 1** — Target is Push Chain (`tx.to` = plain address). External-chain user: UOA → UEA → Push Chain contract. Native Push Chain account: wallet → Push Chain contract directly (no UEA hop). *(e.g. Ethereum user calls a Push Chain NFT contract signing once on Ethereum; or a Push Chain wallet calls the same contract directly.)*
+- **Route 2** — Target is an external chain (`tx.to = { address, chain }`). External-chain user: UOA → UEA → CEA → external chain. Native Push Chain account: wallet → CEA → external chain. *(e.g. Solana user pays in SOL to mint an NFT on Base; or a Push Chain wallet triggers the same Base contract via CEA.)*
+- **Route 3** — CEA-originated inbound to Push Chain (`tx.from.chain` set). Every account that acts on external chains gets a deterministic CEA deployed there — one per account, per chain — to preserve identity and prevent funds from mixing across accounts. Route 3 invokes that CEA on the specified external chain; the CEA then makes the inbound call to Push Chain, so `msg.sender` on Push Chain = the CEA address (not the UEA). *(e.g. a Push Chain contract that tracks per-chain identity uses Route 3 so each user's Ethereum CEA and Solana CEA are distinct `msg.sender` values.)*
+
+## Packages
+
+- `@pushchain/ui-kit` — **Frontend (React apps)**: Required to enable universal transactions in the browser. Bundles `@pushchain/core` — no separate install needed. Provides the `usePushChainClient()` hook for `sendTransaction`, `signMessage`, `prepareTransaction`, and `executeTransactions` in React. [npm](https://npmjs.com/package/@pushchain/ui-kit)
+  - [Integration guide](https://push.org/agents/workflows/connect-wallet-ui-kit.md): Set up PushUniversalWalletProvider in a React app.
+  - [Customization](https://push.org/agents/workflows/use-universal-wallet-provider.md): Theme overrides and advanced provider options.
+- `@pushchain/core` — **Backend / Node.js**: Required to enable universal transactions in scripts, bots, automation, and server-side code. No other library (ethers.js, viem, wagmi) can replace `sendTransaction`, `signMessage`, `prepareTransaction`, or `executeTransactions`. [npm](https://npmjs.com/package/@pushchain/core)
+- `npx create-universal-dapp` — Scaffolding CLI that bootstraps a universal dApp with `@pushchain/ui-kit` pre-integrated and ready to use.
+
+> Reading blockchain state from Push Chain can be done with any EVM-compatible library (ethers.js, viem, etc.) via the Push Chain RPC URL. Only transaction execution and signing require the Push Chain SDK.
+
+## Network
+
+> **Donut** is the codename for the first public Push Chain testnet. Mainnet is not yet launched — do not apply these values to a production environment.
+
+| Field | Value |
+|---|---|
+| **Name** | Push Chain Donut Testnet |
+| **Chain ID** | 42101 |
+| **RPC URL** | https://evm.donut.rpc.push.org/ |
+| **WebSocket** | wss://evm.donut.rpc.push.org |
+| **Block Explorer** | https://donut.push.network |
+| **Faucet** | https://faucet.push.org — 1 PC / 6 h per address |
+| **Mainnet** | Not yet launched |
+
+> **Public RPC:** No API key required. Fair-use rate limits apply — use a dedicated RPC endpoint for production workloads.
+
+> **Faucet:** 1 PC token per address per 6 hours. CAPTCHA-gated — not scriptable. Do not write agent loops that call the faucet automatically.
+
+## Start Here
+
+> **Agents:** this section links human-oriented documentation. For execution tasks, prefer the **Agent Layer** section below.
+
+- [Docs](https://push.org/docs/chain/): Full Push Chain documentation index.
+- [Quickstart](https://push.org/docs/chain/quickstart/): Run your first universal transaction in under 5 minutes.
+- [Important Concepts](https://push.org/docs/chain/important-concepts/): UOA, UEA, CEA, universal transactions, and routing explained.
+- [Chain Configuration](https://push.org/docs/chain/setup/chain-config/): RPC URLs, chain IDs, block explorers, and contract addresses.
+- [For AI Agents & LLMs](https://push.org/docs/chain/for-ai-agents/): Code editor setup, context files, and the full agent layer explained.
+
+## Agent Layer
+
+Prefer these structured resources over the full docs tree for execution tasks.
+
+### Core (always load)
+
+Load these on every agent session regardless of context budget:
+
+- [Agent Index](https://push.org/agents/index.json): Discovery map listing every agent file, its purpose, and the recommended traversal order.
+- **Skills** ([index](https://push.org/agents/skills/index.json)): Copyable, self-contained skill files. **Load the one matching your context before generating any code.**
+  - [push-frontend](https://push.org/agents/skills/push-frontend/SKILL.md)
+  - [push-backend](https://push.org/agents/skills/push-backend/SKILL.md)
+  - [push-contracts](https://push.org/agents/skills/push-contracts/SKILL.md)
+  - [push-pusd](https://pusd.push.org/agents/skill/push-pusd/SKILL.md) - PUSD / PUSD+ stablecoin integration (mint, redeem, NAV quotes, cross-chain deposits). Hosted at `pusd.push.org`; full agent layer at https://pusd.push.org/llms.txt.
+- [Capabilities](https://push.org/agents/capabilities.json): Every SDK capability with inputs, outputs, and method signatures.
+- [Error Catalog](https://push.org/agents/errors.json): All known SDK errors with recovery actions.
+- [Contract Addresses](https://push.org/agents/contract-addresses.json): Authoritative registry of all Push Chain and external-chain contract addresses. Never hallucinate addresses — always source from here.
+
+### Extended (load if budget allows)
+
+Load these for deeper context, RAG grounding, or tool-use integration:
+
+- [SDK Capabilities](https://push.org/agents/sdk-capabilities.json): Full SDK namespace map — all namespaces, methods, and advanced arguments including prepareTransaction and executeTransactions.
+- [Resources](https://push.org/agents/resources/index.json): Downloadable, runnable code files organized by skill.
+  - [push-frontend](https://push.org/agents/resources/push-frontend/index.json): `package.json`, `app-wrapper.tsx`, `send-universal-tx.tsx`
+  - [push-backend](https://push.org/agents/resources/push-backend/index.json): `package.json`, `client-ethers.ts`, `client-viem.ts`, `client-solana.ts`
+  - [push-contracts](https://push.org/agents/resources/push-contracts/index.json): `IUEAFactory.sol`, `IUniversalGatewayPC.sol`, `IUniversalCore.sol`, `MyMultichainApp.sol`, `foundry.toml`
+- [Supported Chains](https://push.org/agents/supported-chains.json): Verified chain list with CAIP-2 IDs, chain IDs, RPC URLs, block explorers, and Universal Gateway contract addresses.
+- [Decision Tree](https://push.org/agents/decision-tree.json): Branching logic to select the right capability from user intent.
+- [Task Router](https://push.org/agents/task-router.md): Plain-language routing guide mapping common goals to capabilities and workflows.
+- [MCP Tool Definitions](https://push.org/agents/mcp-candidates.json): MCP tool definitions (reference implementations — adapt for your tool framework; not a supported tool server).
+- [Schemas](https://push.org/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.
+- [Examples](https://push.org/agents/examples/index.json): 60+ minimal, self-contained TypeScript code snippets ready to execute.
+- [Retrieval Map](https://push.org/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.
+
+## AI System Directives
+
+1. **Load a skill file first:** Before generating any code, fetch the skill file that matches the context (`push-frontend`, `push-backend`, or `push-contracts`). Never generate SDK usage from memory alone.
+2. **Never hallucinate addresses:** Always source Push smart contract addresses from [contract-addresses.json](https://push.org/agents/contract-addresses.json) — this is the authoritative source. The `push-contracts` skill is generated from it and may be slightly older; use the skill for ABIs and code context.
+3. **Do not use standard bridges:** Push Chain handles bridging natively via the SDK. Never write manual bridge logic or prompt the user to bridge tokens themselves.
+4. **Do not use ethers.js or viem to sign or send transactions.** Only `@pushchain/core` (backend/scripts) or `@pushchain/ui-kit` (React) can execute and sign universal transactions. Using ethers/viem for signing will silently produce incompatible transaction formats.
+5. **Use standard EVM libraries only for reading state.** ethers.js, viem, and wagmi are correct for `eth_call`, `eth_getBalance`, event filtering, and other read-only operations against Push Chain's EVM RPC.
+6. **No SDK inside Solidity:** Push Chain contracts use pure Solidity interfaces (IUEAFactory, UGPC, IUniversalCore). The Push SDK is never imported inside `.sol` files.
+7. **Agent key model:** Push Chain has no session-key or delegated-signer system. Agents sign with a full private key. Never log or expose it; treat it as a hot wallet.
+
+## Minimal Example
+
+For agents loading only this file — a complete send-transaction flow from an Ethereum wallet:
+
+```typescript
+// Route 1: any origin chain → UEA (if external chain) → Push Chain contract
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+
+// 1. Wrap any EVM signer into a UniversalSigner
+const provider = new ethers.JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
+// Push Chain native provider: 'https://evm.donut.rpc.push.org/'
+// For Solana origin: construct a Solana signer and wrap via
+//   PushChain.utils.signer.toUniversal(solanaSigner)
+// (See push-backend skill for the full Solana flow.)
+const wallet   = new ethers.Wallet(process.env.PRIVATE_KEY!, provider); // Load from env; never hardcode, never log
+const signer   = await PushChain.utils.signer.toUniversal(wallet);
+
+// 2. Initialize the client (routes through UG → Push Chain automatically)
+const client = await PushChain.initialize(signer);
+
+// 3. Send a transaction to a Push Chain contract
+const tx      = await client.universal.sendTransaction({ to: '0xYourContract', data: '0x' });
+const receipt = await tx.wait();
+console.log('tx hash:', receipt.hash);
+```
+
+> Load `push-backend` or `push-frontend` skill for a production-ready version with error handling and progress hooks.
+
+## Common Mistakes
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| `receipt.hash` is undefined / `tx` has no `.hash` | `sendTransaction` returns a `TxResponse`, not a receipt | Call `await tx.wait()` to get the receipt |
+| Tx executes on Push Chain instead of the intended external chain | `to` is a plain address string — treated as Route 1 | Use `to: { address: '0x...', chain: CHAIN.ETHEREUM_SEPOLIA }` for Route 2 |
+| `msg.sender` in your contract is an unexpected address | `msg.sender` is the user’s UEA, not their origin wallet | Call `IUEAFactory(UEA_FACTORY_ADDR).getOriginForUEA(msg.sender)` to recover `(chainNamespace, chainId, walletAddress)` |
+| `sendTransaction` throws / produces a malformed tx | ethers or viem `wallet.sendTransaction()` used instead of the SDK | Replace with `client.universal.sendTransaction()` — only the Push SDK can produce a valid universal tx |
+| `PushChain.initialize()` throws or rejects the signer | Raw ethers/viem signer passed without wrapping | Wrap first: `await PushChain.utils.signer.toUniversal(wallet)` |
+| RPC returns chain ID mismatch / nonce errors | Wallet configured for a different network; Donut Testnet is chain ID 42101 | Set both wallet and provider to chain ID `42101` with RPC `https://evm.donut.rpc.push.org/` |
+| Tx fails with "insufficient funds" even though origin wallet has balance | UEA on Push Chain has no PC token balance — gas abstraction requires a funded UEA | Fund the UEA address on Push Chain via https://faucet.push.org or transfer PC tokens to it |
+
+## Canonical Workflows
+
+### Core execution
+
+- [Initialize Push Chain Client](https://push.org/agents/workflows/initialize-client.md): Create a PushChainClient instance from a UniversalSigner to enable on-chain interactions.
+- [Create Universal Signer](https://push.org/agents/workflows/create-universal-signer.md): Wrap an EVM or non-EVM signer into a UniversalSigner for chain-agnostic transaction signing.
+- [Send Universal Transaction](https://push.org/agents/workflows/send-universal-transaction.md): Execute a transaction on Push Chain from any origin chain via a single SDK call.
+- [Send Multichain Transaction](https://push.org/agents/workflows/send-multichain-transaction.md): Execute a transaction on an external chain via CEA using Push Chain as the coordination layer.
+- [Track Universal Transaction](https://push.org/agents/workflows/track-transaction.md): Track or resume monitoring a universal transaction by hash — works independently of sendTransaction, across chains and sessions.
+
+### Reading & utilities
+
+- [Read Blockchain State](https://push.org/agents/workflows/read-blockchain-state.md): Query Push Chain on-chain data using standard ethers/viem — no SDK needed. Push Chain is 100% EVM-compatible (Chain ID 42101, RPC https://evm.donut.rpc.push.org/).
+- [Initialize EVM Client](https://push.org/agents/workflows/initialize-evm-client.md): Set up an Ethers.js or Viem client for direct RPC interactions with Push Chain.
+- [Use Contract Helpers (IUEAFactory)](https://push.org/agents/workflows/use-contract-helpers.md): Query IUEAFactory (0x00000000000000000000000000000000000000eA) to identify cross-chain callers (getOriginForUEA) or derive a deterministic UEA address for any external wallet (getUEAForOrigin). Works on-chain (Solidity) and off-chain (ethers.js).
+- [Use Utility Functions](https://push.org/agents/workflows/use-utility-functions.md): Leverage SDK utilities for account conversion, unit parsing, and address formatting.
+- [Constants Reference](https://push.org/agents/workflows/constants-reference.md): Reference all SDK constants including chain identifiers, networks, and token enums.
+- [ProgressHook Events Reference](https://push.org/agents/workflows/progress-hook-events.md): Complete reference of all progressHook event IDs emitted by sendTransaction and executeTransactions, including event shape, per-route tables (Route 1/2/3, multichain), and response payloads.
+
+### Frontend (UI Kit)
+
+- [Connect Wallet via UI Kit](https://push.org/agents/workflows/connect-wallet-ui-kit.md): Use PushUniversalWalletProvider to enable wallet connection in React apps.
+- [Use Universal Wallet Provider](https://push.org/agents/workflows/use-universal-wallet-provider.md): Configure PushUniversalWalletProvider with custom options and theme overrides.
+
+### Contracts
+
+- [Contract-Initiated Multichain Execution](https://push.org/agents/workflows/contract-initiated-multichain-execution.md): Write and deploy a Solidity contract on Push Chain that dispatches outbound cross-chain calls via UGPC and optionally receives inbound callbacks via executeUniversalTx(). No SDK required — pure on-chain.
+- [Sign Universal Message](https://push.org/agents/workflows/sign-universal-message.md): Sign an arbitrary message using the UniversalSigner for off-chain verification.
+- [Deploy Smart Contract to Push Chain](https://push.org/agents/workflows/deploy-push-chain-contract.md): Compile and deploy a Solidity contract to Push Chain Donut Testnet using Foundry or Hardhat. Push Chain is 100% EVM-compatible (Chain ID 42101, RPC https://evm.donut.rpc.push.org/).
+
+### Setup
+
+- [Configure Development Environment](https://push.org/agents/workflows/configure-dev-environment.md): Install SDK packages and configure tooling for Push Chain development.
+
+## Full Context
+
+Full text of all canonical documentation pages, stripped of MDX/JSX markup. Suitable for single-fetch RAG ingestion or deep reference.
+
+- https://push.org/llms-full.txt
+
+## Add to Your AI Editor
+
+- Cursor: Settings → Features → Docs → Add new doc → https://push.org/llms.txt
+- Windsurf: Add to Cascade window → @docs:https://push.org/llms.txt
+- Claude Code: Add to CLAUDE.md or prompt → https://push.org/llms.txt
+- Claude.ai Projects: Project Knowledge → Add content → paste https://push.org/llms.txt
+
+## Changelog
+
+> Machine-readable version: [changelog.json](https://push.org/agents/changelog.json)
+
+- **2026-05-17 v1.0.16** — Source-chain stablecoin re-deployment. New USDT contracts on Sepolia / Arbitrum Sepolia / Base Sepolia / BNB Testnet plus a new USDC on BNB Testnet. Gateway re-wired to the new sources; Push-side PRC-20 wrappers unchanged. Address tables in [Smart Contract Address Book](/docs/chain/setup/smart-contract-address-book) and [contract-addresses.json](https://push.org/agents/contract-addresses.json) refreshed; `pusd-mint-from-external-chain` and related push-chain-examples updated to mint at the new USDT contract on Sepolia.
+- **2026-05-16 v1.0.13** — SDK v6.0.1 bump. New canonical accessor `PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bsc` for Push-wrapped USDC from BNB Chain. Legacy `USDC.bnb` accessor still resolves to the same token but is marked `@deprecated`. Rename is USDC-only — `USDT.bnb` and `pBnb` are unchanged. All address tables and constants references updated.
+- **2026-05-15 v1.0.12** — SDK v6 bump. `UniversalOutboundTxRequest` struct gained `gasPrice` and `maxPCForGas` fields (8 fields total; `recipient` retained). Refreshed CEAFactory addresses on Sepolia / Arbitrum / Base / BNB testnets plus USDT PRC-20 addresses across all chains. Tutorial `universal-cross-chain-counters` redeployed against v6 layout (Push Donut orchestrator + Sepolia / BNB destination counters).
+- **2026-04-17 v1.0.0** — Pinned SDK versions (originally `@pushchain/core@5.1.4`, `@pushchain/ui-kit@5.2.2`). Corrected Route 1/2 for native Push Chain accounts. Added Route 3 CEA-identity semantics. Added Core / Extended agent layer tiers. Directives expanded to 7 (split ethers/viem rule; added agent hot-key model). Added `## Minimal Example`. Grouped canonical workflows by category. `contract-addresses.json` designated as authoritative address source.
+
+## Background Reading
+
+> Non-canonical — do not cite as API reference. For conceptual background only.
+
+### Blog — Recent Posts
+
+- [Introducing Chain Executor Accounts (CEAs)](https://push.org/blog/introducing-chain-executor-account/)
+- [WTF Happened to Chain Abstraction?](https://push.org/blog/wtf-happened-to-chain-abstraction/)
+- [Enable social login for your app in 4 steps](https://push.org/blog/enable-social-logins-for-your-app/)
+- [Season 3 Early Access is Live!](https://push.org/blog/season-3-early-access-is-live/)
+- [The Sexiest Architecture for Cross Chain DeFi Apps](https://push.org/blog/architecture-for-cross-chain-defi-apps/)
+- [Blog index](https://push.org/blog/)
