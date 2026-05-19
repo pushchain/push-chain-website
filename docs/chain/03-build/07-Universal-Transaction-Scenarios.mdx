@@ -25,6 +25,8 @@ End-to-end playground examples for each universal transaction route. For API ref
 
 ## Route 1 → Execute on Push Chain
 
+> **Route 1** originates from a wallet on an external chain or a native Push Chain wallet → routes through the UEA associated with your Push Account (when the origin is external) → executes the transaction on Push Chain. See [How Universal Routing Works](/docs/chain/build/send-universal-transaction/#how-routing-works) to learn more. Useful for funding your Push Account, bridging assets onto Push Chain, calling Push-side contracts from any source, etc.
+
 <Details summary="Interact with Smart Contract" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
@@ -37,9 +39,11 @@ End-to-end playground examples for each universal transaction route. For API ref
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
 
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-    // Counter contract deployed on Push Chain Testnet (Donut)
+    // Counter contract deployed on Push Chain Donut Testnet.
     // https://donut.push.network/address/0x5FbDB2315678afecb367f032d93F642f64180aa3?tab=contract
     const COUNTER_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
     const COUNTER_ABI = [
@@ -48,21 +52,22 @@ End-to-end playground examples for each universal transaction route. For API ref
     ];
 
     async function main() {
-      // This example uses Push Chain as the origin.
-      // The same Route 1 pattern also works from other supported origin chains.
-      // Just swap the RPC and signer; sendTransaction stays the same.
+      // Sign from a fresh Sepolia UOA. The SDK fee-locks just enough Sepolia
+      // ETH to mint PC into your UEA on Push Chain, so you only fund ONE
+      // account (the Sepolia UOA below). No separate UEA top-up required.
       const wallet = ethers.Wallet.createRandom();
-      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('🔑 Account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
+        // Inline progressHook prints every lifecycle event for this tx
+        // (gas estimate, UEA resolution, fee-lock, broadcast, finalization).
       });
 
-      await rl.question(':::prompt:::Send at least 1 PC to: ' + wallet.address + ' on Push Chain Testnet (Donut), then press Enter.');
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -73,12 +78,13 @@ End-to-end playground examples for each universal transaction route. For API ref
         const tx = await client.universal.sendTransaction({
           to: COUNTER_ADDRESS,
           data,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('✅ TX Hash:', tx.hash);
+        console.log('✅ Push Chain tx hash:', tx.hash);
         await tx.wait();
-        const pushProvider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+        const pushProvider = new ethers.JsonRpcProvider(RPC_PUSH);
         const counter = new ethers.Contract(COUNTER_ADDRESS, COUNTER_ABI, pushProvider);
-        console.log('📊 Counter value:', (await counter.countPC()).toString());
+        console.log('📊 Counter value (Push Chain):', (await counter.countPC()).toString());
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
       }
@@ -91,21 +97,20 @@ End-to-end playground examples for each universal transaction route. For API ref
 
 </Details>
 
-<Details summary="Move Funds to Push Chain" className="alert alert--live-play">
+<Details summary="Move Native ETH to Push Chain (lands as pETH)" className="alert alert--live-play">
 
-<Tabs className="liveplaytab" groupId="send-universal-funds-examples">
+Bridge native Sepolia ETH into your UEA on Push Chain. It arrives as `pETH` (the Push Chain wrapper for ETH from Ethereum). Only the source-chain UOA needs funding.
 
-<TabItem value='funds_native_only' label='Move Funds (Native)'>
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
-  {`
+{`
 
-  // customPropHighlightRegexStart=universal\.sendTransaction
-  // customPropHighlightRegexEnd=\\);
-  // customPropGTagEvent=send_transaction_move_funds_native_ethers
-  import { PushChain } from '@pushchain/core';
-  import { ethers } from 'ethers';
-  import * as readline from 'node:readline/promises';
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_move_funds_native_ethers
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import * as readline from 'node:readline/promises';
 
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
@@ -114,48 +119,58 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('🔑 Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      const client = await PushChain.initialize(universalSigner, { network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET, progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id) });
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain (destination):', client.universal.account);
 
-      // Require user to fund gas in ETH
-      await rl.question(':::prompt:::Send at least 0.005 ETH (for gas) to: ' + wallet.address + ' on Sepolia, then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      // Fund ONLY the Sepolia UOA. SDK fee-locks enough ETH on Sepolia to
+      // mint PC into your UEA AND to cover bridging the funds amount below.
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       try {
+        // Move 0.001 ETH from the Sepolia UOA into the UEA on Push Chain.
+        // Token can be omitted for native — same as { amount: BigInt(...) }.
         const res = await client.universal.sendTransaction({
           to: client.universal.account,
           funds: {
-            amount: BigInt(1),
-            token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.ETH // for native, can omit token, ie: same as { amount: BigInt(1) }
+            amount: PushChain.utils.helpers.parseUnits('0.001', 18),
+            token: PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.ETH,
           },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('✅ Sent. Tx:', JSON.stringify(res));
+        console.log('✅ Push Chain tx hash:', res.hash);
+        await res.wait();
+        console.log('🪙 pETH credited to UEA on Push Chain');
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
-        console.log('Note: Ensure adequate Sepolia ETH for gas.');
       }
     }
 
     await main().catch(console.error);
-  `}
+`}
 
-  </NodeJSVirtualIDE>
+</NodeJSVirtualIDE>
 
-  </TabItem>
+</Details>
 
-  <TabItem value='funds_erc20_only' label='Move Funds (ERC-20)'>
+<Details summary="Move ERC-20 (USDT) to Push Chain (lands as USDT.eth)" className="alert alert--live-play">
 
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+Bridge USDT from Sepolia into your UEA on Push Chain. It arrives as `USDT.eth` (the Push-side PRC-20 mirror; only native assets use the `p` prefix, ERC-20s keep their symbol plus a chain suffix like `.eth`, `.bsc`, `.sol`).
 
-  {`
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
-  // customPropHighlightRegexStart=universal\.sendTransaction
-  // customPropHighlightRegexEnd=\\);
-  // customPropGTagEvent=send_transaction_funds_erc20
-  import { PushChain } from '@pushchain/core';
-  import { ethers } from 'ethers';
-  import * as readline from 'node:readline/promises';
+{`
+
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_funds_erc20
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import * as readline from 'node:readline/promises';
 
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
@@ -164,19 +179,18 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('🔑 Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      const client = await PushChain.initialize(universalSigner,
-        {
-          network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-          progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
-        }
-      );
+      const client = await PushChain.initialize(universalSigner, {
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
+      });
+      console.log('📍 UEA on Push Chain (destination):', client.universal.account);
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT;
-      // Require user to fund gas and USDT
-      await rl.question(':::prompt:::Send the following to ' + wallet.address + ' on Sepolia, then press Enter:\\\\n  • at least 0.005 ETH (gas)\\\\n  • at least 0.02 USDT (ERC-20)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT: https://sepolia.etherscan.io/address/' + usdt.address + '#writeContract#F6');
+      // Fund the SAME Sepolia UOA with both ETH (gas) and a USDT balance.
+      // Both go to one address — no separate UEA top-up needed.
+      await rl.question(':::prompt:::Send the following to ' + wallet.address + ' on Sepolia, then press Enter:\\\\n  • at least 0.005 ETH (Sepolia signing gas)\\\\n  • at least 0.01 USDT (bridged amount)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT: https://sepolia.etherscan.io/address/' + usdt.address + '#writeContract#F6');
 
       const oneCents = PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals });
 
@@ -184,94 +198,93 @@ End-to-end playground examples for each universal transaction route. For API ref
         const res = await client.universal.sendTransaction({
           to: client.universal.account,
           funds: { amount: oneCents, token: usdt },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-
-        console.log('✅ Sent. Tx:', JSON.stringify(res));
+        console.log('✅ Push Chain tx hash:', res.hash);
+        await res.wait();
+        console.log('🪙 USDT.eth credited to UEA on Push Chain');
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
-        console.log('Note: Ensure Sepolia ETH for gas and USDT balance.');
       }
     }
 
     await main().catch(console.error);
-  `}
+`}
 
-  </NodeJSVirtualIDE>
+</NodeJSVirtualIDE>
 
-  </TabItem>
+</Details>
 
-  <TabItem value='funds_payload' label='Move Funds with Payload'>
+<Details summary="Move ERC-20 (USDT) + Call Contract in One Tx" className="alert alert--live-play">
 
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
+Bridge USDT into Push Chain AND atomically call a contract in the same transaction. The funds land on the UEA, then the UEA executes your payload — all from one user signature.
 
-  {`
+<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
-  // customPropHighlightRegexStart=universal\.sendTransaction
-  // customPropHighlightRegexEnd=\\);
-  // customPropGTagEvent=send_transaction_funds_payload
-  import { PushChain } from '@pushchain/core';
-  import { ethers } from 'ethers';
-  import * as readline from 'node:readline/promises';
+{`
 
-    // RPC
+// customPropHighlightRegexStart=universal\.sendTransaction
+// customPropHighlightRegexEnd=\\);
+// customPropGTagEvent=send_transaction_funds_payload
+import { PushChain } from '@pushchain/core';
+import { ethers } from 'ethers';
+import * as readline from 'node:readline/promises';
+
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-
-    // Enable User Input
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+
+    // A tiny counter on Push Chain; increment() is unrestricted.
+    const COUNTER_ADDRESS = '0x9F95857e43d25Bb9DaFc6376055eFf63bC0887C1';
+    const COUNTER_ABI = [
+      { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
+    ];
 
     async function main() {
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('🔑 Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
-      // Convert to Universal signer and initialize SDK
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (progress) => console.log('TX Progress:', progress.title || progress.id),
       });
 
-      // Prepare payload call
-      const UCABI = [
-        { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
-      ];
-      const COUNTER_ADDRESS = '0x9F95857e43d25Bb9DaFc6376055eFf63bC0887C1'; // simple counter to increment
-      const data = PushChain.utils.helpers.encodeTxData({ abi: UCABI, functionName: 'increment' });
-
-      // prepare ERC-20 funds
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT;
       const oneCents = PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals });
 
-      // Require user to fund gas in ETH and supply USDT to move to USDT to Push Chain
-      await rl.question(':::prompt:::Send the following to ' + wallet.address + ' on Sepolia, then press Enter:\\\\n  • at least 0.005 ETH (gas)\\\\n  • at least 0.02 USDT (ERC-20)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT: https://sepolia.etherscan.io/address/' + usdt.address + '#writeContract#F6');
+      await rl.question(':::prompt:::Send the following to ' + wallet.address + ' on Sepolia, then press Enter:\\\\n  • at least 0.005 ETH (Sepolia signing gas)\\\\n  • at least 0.01 USDT (bridged amount)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT: https://sepolia.etherscan.io/address/' + usdt.address + '#writeContract#F6');
+
+      const data = PushChain.utils.helpers.encodeTxData({
+        abi: COUNTER_ABI,
+        functionName: 'increment',
+      });
 
       try {
         const res = await client.universal.sendTransaction({
           to: COUNTER_ADDRESS,
-          value: BigInt(0),
           data,
           funds: { amount: oneCents, token: usdt },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('✅ Sent. Tx:', JSON.stringify(res));
+        console.log('✅ Push Chain tx hash:', res.hash);
+        await res.wait();
+        console.log('🪙 USDT.eth credited + counter incremented atomically');
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
-        console.log('Note: Ensure adequate Sepolia ETH for gas and USDT balance.');
       }
     }
 
     await main().catch(console.error);
-  `}
+`}
 
-  </NodeJSVirtualIDE>
-
-  </TabItem>
-
-</Tabs>
+</NodeJSVirtualIDE>
 
 </Details>
 
 <Details summary="Batch Transactions (Multicall)" className="alert alert--live-play">
+
+Run two `increment()` calls on the same Push Chain contract atomically, from a single Sepolia signature. The inline `progressHook` lets you watch the full lifecycle (gas estimate -> UEA resolution -> fee-lock -> broadcast -> confirmation) without a separate tracking example.
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/multicall-universal-transaction"}}>
 
@@ -281,58 +294,37 @@ End-to-end playground examples for each universal transaction route. For API ref
     // customPropHighlightRegexEnd=\\);
     // customPropGTagEvent=send_transaction_full_example
     // Full Documentation: https://push.org/docs/chain/build/send-universal-transaction
-
-    // Import Push Chain Core
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
-
-    // Readline for input
     import * as readline from 'node:readline/promises';
 
-    // Enable User Input
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout,
-    });
+    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
+    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-    // Counter ABI on Push Chain
     const CounterABI = [
       { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
       { inputs: [], name: 'countPC', outputs: [{ internalType: 'uint256', name: '', type: 'uint256' }], stateMutability: 'view', type: 'function' },
     ];
-
-    // Counter contract address used in examples/tests
     const COUNTER_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
 
-    // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
-      console.log('🌟 Multicall Example - Sepolia Origin → Push Chain Target');
+      console.log('🌟 Multicall — Sepolia origin → Push Chain target');
 
-      // 1) Create a fresh Sepolia account
-      const RPC_URL = 'https://ethereum-sepolia-rpc.publicnode.com';
+      // Sign from a fresh Sepolia UOA. SDK fee-locks Sepolia ETH to mint PC
+      // into the UEA — no separate UEA top-up needed.
       const wallet = ethers.Wallet.createRandom();
-      const provider = new ethers.JsonRpcProvider(RPC_URL);
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('🔑 Got account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
-      // Convert to Universal Signer and initialize Push Chain Client
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
-      console.log('🚀 Push Chain client initialized');
 
-      // 3) Prompt to fund the Sepolia account before sending (required to originate the universal tx)
-      console.log('3. Fund the Sepolia account to cover the origin transaction');
-      await rl.question(
-        ':::prompt:::Send at least 0.005 ETH (for gas) to ' + wallet.address + ' on Ethereum Sepolia, then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia'
-      );
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
-      // 4) Build and send a Multicall universal transaction
-      // We will perform two consecutive "increment" calls on the Counter contract.
-      console.log('4. Build and Send Multicall Universal Transaction');
-
-      // Encode the function call data for Counter.increment()
       const incrementData = PushChain.utils.helpers.encodeTxData({
         abi: CounterABI,
         functionName: 'increment',
@@ -345,213 +337,40 @@ End-to-end playground examples for each universal transaction route. For API ref
       ];
 
       try {
-        // Read counter BEFORE via ethers
-        const pushProvider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
+        const pushProvider = new ethers.JsonRpcProvider(RPC_PUSH);
         const counterContract = new ethers.Contract(COUNTER_ADDRESS, CounterABI, pushProvider);
         const before = await counterContract.countPC();
 
+        // For multicall, tx.to MUST be address(0) and tx.data is an array
+        // of (to, value, data) tuples.
         const txResponse = await pushChainClient.universal.sendTransaction({
-          to: pushChainClient.universal.account,
-          value: BigInt(0),
+          to: '0x0000000000000000000000000000000000000000',
           data: calls,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '') + (p.timestamp ? ' @ ' + p.timestamp : '')),
         });
 
-        console.log('📤 Transaction hash:', txResponse.hash);
+        console.log('📤 Push Chain tx hash:', txResponse.hash);
         await txResponse.wait();
-
-        // Read counter AFTER
         const after = await counterContract.countPC();
 
-        console.log('🎉 Congrats! You just sent a universal multicall transaction!');
-        console.log('1️⃣  You sent a Sepolia-origin transaction to the Universal Gateway');
-        console.log('2️⃣  Push Chain Validators handled settlement and executed the calls on Push Chain');
-        console.log('3️⃣  Two increments were executed on the Counter contract, atomically');
+        console.log('🎉 Multicall complete — two increments executed atomically');
         console.log('📊 Counter on Push Chain → before: ' + before.toString() + ' | after: ' + after.toString());
       } catch (error) {
         console.error('❌ Error:', error.message);
-        console.log('💡 Note: This example requires Sepolia testnet funds to execute');
       }
     }
 
-    // Run main
     await main().catch(console.error);
-
 `}
 
 </NodeJSVirtualIDE>
 
 </Details>
 
-<Details summary="Track Transaction Progress Lifecycle" className="alert alert--live-play">
-
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
-
-{`
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
-    import * as readline from 'node:readline/promises';
-
-    // ——— CONFIG ———
-    // RPC URL OF DIFFERENT CHAINS
-    const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-
-    // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101';
-
-    // Enable User Input
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout
-    });
-
-    // ⭐️ MAIN FUNCTION ⭐️
-    async function main() {
-      console.log('🚀 Initializing Universal Transaction Example');
-
-      // Choose chain from which to send transaction
-      const chainMeta = await returnUserChainSelection();
-
-      // 1) Create a wallet (in production, you'd use your own wallet)
-      const wallet = ethers.Wallet.createRandom();
-      console.log('📝 Created wallet:', wallet.address);
-
-      // 2) Set up provider and connect wallet
-      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
-      const signer = wallet.connect(provider);
-
-      // 3) Convert to Universal Signer
-      console.log('🔄 Converting to Universal Signer...');
-      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-
-      // 4) Initialize Push Chain Client
-      console.log('🔗 Initializing Push Chain Client...');
-      const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: async (progress) => {
-          console.log('TX Progress: ', progress.title, ' | Time:', progress.timestamp);
-        }
-      });
-
-      // 5) Prepare transaction parameters
-      const txParams = {
-        to: RECIPIENT,
-        value: PushChain.utils.helpers.parseUnits(".001", 18) // 0.001 PC in uPC (wei)
-      };
-
-      // wait for user to send funds first
-      const fundingAmount = chainMeta.id === '1' ? '5 PC' : '0.005 ETH';
-      const faucetHint = chainMeta.id === '1' ? '' : '\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia';
-      await rl.question(':::prompt:::Send at least ' + fundingAmount + ' to: ' + wallet.address + ' on ' + chainMeta.name + ', then press Enter.' + faucetHint);
-
-      // 6) Send universal transaction
-      console.log('📤 Sending transaction to:', RECIPIENT);
-
-      try {
-        const txResponse = await pushChainClient.universal.sendTransaction(txParams);
-        console.log('✅ Transaction sent! Tx Hash:', txResponse.hash);
-      } catch (error) {
-        console.error('❌ Transaction failed:', error.message);
-        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
-      }
-    }
-
-    await main().catch(console.error);
-
-    // --- HELPER FUNCTIONS ---
-    async function returnUserChainSelection() {
-      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
-
-      if (selection !== '1' && selection !== '2') {
-        console.log('Invalid selection. Please select 1 or 2.');
-        process.exit(0);
-      }
-
-      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-
-      return {id: selection, name: name};
-    }
-`}
-
-</NodeJSVirtualIDE>
-
-</Details>
-
-<!-- <Details summary="Pay Gas with USDC (instead of native ETH)" className="alert alert--live-play">
-
-<NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
-
-{`
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\\);
-// customPropGTagEvent=send_transaction_pay_gas_erc20
-
-    // Pay gas with USDC instead of native ETH while bridging USDT and calling a contract on Push Chain
-    import { PushChain } from '@pushchain/core';
-    import { ethers } from 'ethers';
-    import * as readline from 'node:readline/promises';
-
-    const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-    const COUNTER_ABI = [
-      { inputs: [], name: 'increment', outputs: [], stateMutability: 'nonpayable', type: 'function' },
-    ];
-    const COUNTER_ADDRESS = '0x5FbDB2315678afecb367f032d93F642f64180aa3';
-
-    async function main() {
-      const wallet = ethers.Wallet.createRandom();
-      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
-      const signer = wallet.connect(provider);
-      console.log('🔑 Sepolia account:', wallet.address);
-
-      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      const client = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-      });
-
-      const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT;
-      const usdc = PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDC;
-
-      await rl.question(
-        ':::prompt:::Send the following to ' + wallet.address + ' on Sepolia, then press Enter:\\\\n  • at least 0.005 ETH (Sepolia signing gas)\\\\n  • at least 0.2 USDT (ERC-20, bridged)\\\\n  • at least 5 USDC (Push Chain gas, paid in USDC — each tx costs ~3 USDC in gas)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT: https://sepolia.etherscan.io/address/' + usdt.address + '#writeContract#F6\\\\nMint USDC: https://sepolia.etherscan.io/address/' + usdc.address + '#writeContract#F6'
-      );
-
-      const data = PushChain.utils.helpers.encodeTxData({
-        abi: COUNTER_ABI,
-        functionName: 'increment',
-      });
-
-      try {
-        const tx = await client.universal.sendTransaction({
-          to: COUNTER_ADDRESS,
-          data,
-          funds: {
-            amount: PushChain.utils.helpers.parseUnits('0.1', { decimals: usdt.decimals }), // 0.1 USDT
-            token: usdt,
-          },
-          payGasWith: {
-            token: usdc, // pay gas with USDC instead of native ETH
-          },
-        });
-
-        console.log('✅ Push Chain TX Hash:', tx.hash);
-        const receipt = await tx.wait();
-        console.log('📦 Status:', receipt.status === 1 ? 'Success' : 'Failed');
-      } catch (err) {
-        console.error('❌ Failed:', err && err.message ? err.message : err);
-        console.log('Note: Ensure your wallet holds both USDT (to bridge) and USDC (for gas) on Sepolia.');
-      }
-    }
-
-    await main().catch(console.error);
-`}
-
-</NodeJSVirtualIDE>
-
-</Details> -->
 
 ## Route 2 → Execute on External Chain
+
+> **Route 2** originates from a wallet on an external chain or a Push Account (UEA, native Push Chain wallet, or smart contract on Push) → routes through your CEA on a target external chain → executes the transaction on that target chain. See [How Universal Routing Works](/docs/chain/build/send-universal-transaction/#how-routing-works) to learn more. Useful for cross-chain transfers, calling external-chain contracts from a single account, atomic move-and-call workflows, etc.
 
 <Details summary="Contract Call on External Chain" className="alert alert--live-play">
 
@@ -586,7 +405,6 @@ End-to-end playground examples for each universal transaction route. For API ref
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
       await rl.question(':::prompt:::Send at least 0.005 ETH (for gas) to: ' + wallet.address + ' on Sepolia, then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
@@ -605,6 +423,7 @@ End-to-end playground examples for each universal transaction route. For API ref
             chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
           },
           data,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
         console.log('Push Chain TX Hash:', tx.hash);
@@ -652,11 +471,12 @@ End-to-end playground examples for each universal transaction route. For API ref
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
-      console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.002 pETH (burned to release ETH on Sepolia)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+      
+      // Fund Sepolia UOA and UEA's pETH Balance
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia.\\\\nSend at least 0.01 pETH to your UEA: ' + client.universal.account + ' on Push Chain.\\\\n(This example assumes your UEA already holds at least 0.001 pETH. If not, go to https://bridge.push.org and transfer that first to the UEA above.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const TARGET = '0x1234567890123456789012345678901234567890';
 
@@ -668,7 +488,8 @@ End-to-end playground examples for each universal transaction route. For API ref
             address: TARGET,
             chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
           },
-          value: PushChain.utils.helpers.parseUnits('0.0005', 18),
+          value: PushChain.utils.helpers.parseUnits('0.001', 18),
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
         console.log('Push Chain TX Hash:', tx.hash);
@@ -698,7 +519,10 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route2_funds_erc20
 
-    // Route 2: Move Assets to an address on an external chain via CEA
+    // Route 2: Bridge USDT.eth on Push Chain → USDT on Sepolia (release to TARGET).
+    // The UEA burns its USDT.eth balance, and the CEA on Sepolia releases the
+    // matching amount of real USDT to TARGET. Sign from the same Sepolia UOA
+    // you used in the Route 1 "Move ERC-20 (USDT) to Push Chain" example.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -710,41 +534,44 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
-      const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
-      console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.02 pUSDT(BNB) (burned to release USDT on BNB)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      // Burn token is USDT.eth on Push Chain (the PRC-20 mirror for USDT
+      // bridged in from Sepolia). Note: only native assets carry the 'p'
+      // prefix (pETH, pBnb, pSol); ERC-20s use SYMBOL.<chain> (USDT.eth /
+      // USDT.bnb / USDC.bsc).
+      const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT;
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+      
+      // Fund User's Sepolia Address for tx and User's UEA address for asset to be burned
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia.\\\\nSend at least 0.02 USDT.eth to your UEA: ' + client.universal.account + ' on Push Chain.\\\\n(This example assumes your UEA already holds at least 0.01 USDT.eth. If not, go to https://bridge.push.org and bridge USDT from Sepolia to the UEA above first.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const TARGET = '0x1234567890123456789012345678901234567890';
 
       try {
-        // Route 2: transfer USDT to TARGET on BNB Testnet
-        // Burns pUSDT on Push Chain, releases USDT to TARGET on BNB Testnet
         const tx = await client.universal.sendTransaction({
           to: {
             address: TARGET,
-            chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+            chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
           },
           funds: {
             amount: PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals }),
             token: usdt,
           },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
-        console.log('Push Chain TX Hash:', tx.hash);
+        console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -764,7 +591,9 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route2_funds_with_payload
 
-    // Route 2: Move Assets to external chain AND atomically call a contract
+    // Route 2: Burn USDT.eth on Push Chain, release USDT on Sepolia, AND
+    // atomically call a contract (increment a counter) on Sepolia, all in
+    // one user signature.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -772,7 +601,7 @@ End-to-end playground examples for each universal transaction route. For API ref
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-    // Counter contract on BNB Testnet
+    // A simple counter on Sepolia.
     const COUNTER_ADDRESS = '0x7f0936bb90e7dcf3edb47199c2005e7184e44cf8';
     const COUNTER_ABI = [
       { type: 'function', name: 'increment', inputs: [], outputs: [], stateMutability: 'nonpayable' },
@@ -782,17 +611,17 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
-      const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
-      console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 1 PC + 0.02 pUSDT(BNB) (burned to release USDT on BNB with payload)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.ETHEREUM_SEPOLIA.USDT;
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+      // Fund your Sepolia UOA and ensure your UEA has assets to be burned and transferred.
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ' on Ethereum Sepolia.\\\\nSend at least 0.01 USDT.eth to your UEA: ' + client.universal.account + ' on Push Chain.\\\\n(This example assumes your UEA already holds at least 0.01 USDT.eth. If not, go to https://bridge.push.org and bridge USDT from Sepolia to the UEA above first.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -800,27 +629,27 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
 
       try {
-        // Route 2: move USDT to BNB Testnet and call increment() atomically
-        // Burns pUSDT on Push Chain, releases USDT and executes contract call on BNB Testnet
+        // Atomic: burn USDT.eth on Push, release USDT to COUNTER_ADDRESS on
+        // Sepolia, then call increment() — all in the same external tx.
         const tx = await client.universal.sendTransaction({
           to: {
             address: COUNTER_ADDRESS,
-            chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+            chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
           },
           data,
           funds: {
             amount: PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals }),
             token: usdt,
           },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
-        console.log('Push Chain TX Hash:', tx.hash);
+        console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -840,7 +669,10 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route2_multicall
 
-    // Route 2: Execute multiple contract calls atomically on an external chain via CEA
+    // Route 2: Two increment() calls on the same BNB Testnet counter executed
+    // atomically by the CEA on BNB. No funds bridged out — the SDK fee-locks
+    // Sepolia ETH for both the outbound dispatch fee and the destination CEA
+    // gas. Single account to fund: the Sepolia UOA.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -848,7 +680,6 @@ End-to-end playground examples for each universal transaction route. For API ref
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-    // Counter contract on BNB Testnet
     const COUNTER_ADDRESS = '0x7f0936bb90e7dcf3edb47199c2005e7184e44cf8';
     const COUNTER_ABI = [
       { type: 'function', name: 'increment', inputs: [], outputs: [], stateMutability: 'nonpayable' },
@@ -858,15 +689,14 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
-      await rl.question(':::prompt:::Send at least 0.005 ETH (for gas) to: ' + wallet.address + ' on Sepolia, then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      await rl.question(':::prompt:::Send at least 0.005 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const incrementData = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -874,7 +704,7 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
 
       try {
-        // Route 2: batch two increment() calls on BNB Testnet atomically
+        // For external-chain multicall, set to.address = address(0).
         const tx = await client.universal.sendTransaction({
           to: {
             address: '0x0000000000000000000000000000000000000000',
@@ -884,15 +714,15 @@ End-to-end playground examples for each universal transaction route. For API ref
             { to: COUNTER_ADDRESS, value: BigInt(0), data: incrementData },
             { to: COUNTER_ADDRESS, value: BigInt(0), data: incrementData },
           ],
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
-        console.log('Push Chain TX Hash:', tx.hash);
+        console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -903,7 +733,7 @@ End-to-end playground examples for each universal transaction route. For API ref
 
 </Details>
 
-<Details summary="Contract Call on Solana from Sepolia UOA" className="alert alert--live-play">
+<Details summary="Contract Call on Solana from Ethereum Sepolia" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
@@ -950,16 +780,18 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account (UOA):', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
 
-      console.log('UEA on Push Chain:', client.universal.account);
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • UEA ' + client.universal.account + ' on Push Chain — at least 5 PC (covers gas + gas-token swap for the Solana outbound)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
+      console.log('📍 UEA on Push Chain:', client.universal.account);
+      // Solana outbound costs more PC than EVM outbound because the SVM gas
+      // is converted from PC via the on-chain AMM. The SDK fee-locks the
+      // extra ETH on Sepolia automatically — you still only fund ONE account.
+      await rl.question(':::prompt:::Send at least 0.02 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\n(Solana outbound needs more fee-locked PC than EVM outbound; the SDK splits any overflow above the $10/tx prepaid cap into an extra funds leg automatically.)\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         idl: testCounterIdl,
@@ -973,15 +805,15 @@ End-to-end playground examples for each universal transaction route. For API ref
             address: SOL_TEST_PROGRAM,
             chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
           },
-          value: BigInt(0),
           data,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('TX Hash (Push Chain):', tx.hash);
+        console.log('✅ Push Chain tx hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash (Solana):', receipt.externalTxHash);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 Solana tx:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -994,7 +826,9 @@ End-to-end playground examples for each universal transaction route. For API ref
 
 ## Route 3 → Execute on Push Chain from CEA
 
-<Details summary="Contract Call on Push Chain from CEA" className="alert alert--live-play">
+> **Route 3** originates from a Push Account (UEA, native Push Chain wallet, or smart contract on Push) → bridges out through your CEA on an external chain → executes the transaction back on Push Chain. See [How Universal Routing Works](/docs/chain/build/send-universal-transaction/#how-routing-works) to learn more. Useful for rebalancing at the universal account level, executing DeFi strategies, settling external-chain holdings back to Push Chain, etc.
+
+<Details summary="Contract Call on Push Chain from BNB CEA" className="alert alert--live-play">
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
 
@@ -1003,9 +837,8 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_payload
 
-    // Route 3: CEA_TO_PUSH — Trigger a contract call on Push Chain from an external chain.
-    // Your CEA on the external chain sends the tx, which is relayed inbound to Push Chain.
-    // Use from: { chain } to specify which external chain your CEA lives on.
+    // Route 3: from: { chain } makes your CEA on BNB Testnet the execution
+    // origin. The call lands on Push Chain (Counter.increment() below).
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -1013,7 +846,7 @@ End-to-end playground examples for each universal transaction route. For API ref
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
-    // Counter contract on Push Chain (Testnet Donut)
+    // Counter contract on Push Chain (Donut testnet).
     const COUNTER_ADDRESS = '0x70d8f7a0fF8e493fb9cbEE19Eb780E40Aa872aaf';
     const COUNTER_ABI = [
       { type: 'function', name: 'increment', inputs: [], outputs: [], stateMutability: 'payable' },
@@ -1024,21 +857,18 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive CEA address on BNB Testnet so the user knows where to fund.
-      const bnbProvider = new ethers.JsonRpcProvider('https://bsc-testnet-rpc.publicnode.com');
-      const ceaFactory = new ethers.Contract('0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719', ['function getCEAForPushAccount(address) view returns (address, bool)'], bnbProvider);
-      const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
-      console.log('CEA on BNB Testnet:', ceaAddress);
-
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      // Single funding ask: only the Sepolia UOA. The CEA on BNB does not
+      // need a separate top-up for this example; the SDK funds CEA gas and
+      // deployment automatically from the same source-chain deposit.
+      await rl.question(':::prompt:::Send at least 0.01 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1051,6 +881,7 @@ End-to-end playground examples for each universal transaction route. For API ref
           from: { chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
           to: COUNTER_ADDRESS,
           data,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
         console.log('✅ Push Chain TX Hash:', tx.hash);
@@ -1081,46 +912,51 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_native
 
-    // Route 3: CEA_TO_PUSH — Bridge native value from CEA on external chain back to Push Chain.
+    // Route 3: bridge 0.001 native BNB from your CEA on BNB Testnet back to
+    // your account on Push Chain. The BNB lands as pBnb on the UEA.
     import { PushChain } from '@pushchain/core';
-    import { createWalletClient, createPublicClient, http } from 'viem';
-    import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-    import { bscTestnet } from 'viem/chains';
+    import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
 
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
     const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 
     async function main() {
-      const privateKey = generatePrivateKey();
-      const account = privateKeyToAccount(privateKey);
-      console.log('🔑 Sepolia account:', account.address);
+      const wallet = ethers.Wallet.createRandom();
+      const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
+      const signer = wallet.connect(provider);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
-      const walletClient = createWalletClient({ account, transport: http(RPC_SEPOLIA) });
-      const signer = await PushChain.utils.signer.toUniversal(walletClient);
-      const client = await PushChain.initialize(signer, {
+      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
+      const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive CEA address on BNB Testnet from the CEAFactory contract
-      const bnbClient = createPublicClient({ chain: bscTestnet, transport: http() });
-      const [ceaAddress] = await bnbClient.readContract({
-        address: '0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719',
-        abi: [{ type: 'function', name: 'getCEAForPushAccount', inputs: [{ name: 'pushAccount', type: 'address' }], outputs: [{ name: '', type: 'address' }, { name: '', type: 'bool' }], stateMutability: 'view' }],
-        functionName: 'getCEAForPushAccount',
-        args: [client.universal.account],
+      // Derive your CEA on BNB Testnet via the SDK so you can send the BNB
+      // you want bridged back to Push Chain.
+      const uoa = PushChain.utils.account.toUniversal(wallet.address, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
       });
-      console.log('CEA on BNB Testnet:', ceaAddress);
+      const bnbCEA = await PushChain.utils.account.deriveExecutorAccount(uoa, {
+        chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+        skipNetworkCheck: true,
+      });
+      console.log('📍 CEA on BNB Testnet:', bnbCEA.address);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + account.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit; 0.00005 BNB is bridged to Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      // Two funding asks because this example moves an asset off BNB:
+      //   1) Sepolia ETH on the UOA so the SDK can fund the UEA for the
+      //      inbound execution on Push Chain
+      //   2) the BNB you want bridged back goes to your CEA on BNB Testnet
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.01 Sepolia ETH to your UOA: ' + wallet.address + ' (powers the UEA for the inbound on Push Chain).\\\\n  • Send at least 0.001 BNB to your CEA on BNB Testnet: ' + bnbCEA.address + ' (this is what gets bridged back as pBnb).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nBNB Testnet faucet: https://www.bnbchain.org/en/testnet-faucet');
 
       try {
-        // Route 3: bridge native BNB from CEA on BNB_TESTNET back to Push Chain
+        // Route 3: bridge 0.001 BNB from CEA on BNB_TESTNET back to Push Chain
         const tx = await client.universal.sendTransaction({
           from: { chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
           to: client.universal.account,
-          value: PushChain.utils.helpers.parseUnits('0.00005', 18),
+          value: PushChain.utils.helpers.parseUnits('0.001', 18),
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
         console.log('✅ Push Chain TX Hash:', tx.hash);
@@ -1150,8 +986,8 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_funds
 
-    // Route 3: CEA_TO_PUSH — Bridge tokens from your CEA back to Push Chain.
-    // Useful when your CEA on an external chain holds tokens you want back on Push Chain.
+    // Route 3: bridge 0.01 USDT from your CEA on BNB Testnet back to your
+    // account on Push Chain. The USDT lands as USDT.bnb on the UEA.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -1163,41 +999,49 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive CEA address on BNB Testnet from the CEAFactory contract
-      const bnbProvider = new ethers.JsonRpcProvider('https://bsc-testnet-rpc.publicnode.com');
-      const ceaFactory = new ethers.Contract('0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719', ['function getCEAForPushAccount(address) view returns (address, bool)'], bnbProvider);
-      const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
-      console.log('CEA on BNB Testnet:', ceaAddress);
-
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (gas + ~$10 fee-lock deposit) + 0.02 USDT (the asset being bridged)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      // Derive your CEA on BNB Testnet via the SDK so you can send the USDT
+      // you want bridged back to Push Chain.
+      const uoa = PushChain.utils.account.toUniversal(wallet.address, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+      });
+      const bnbCEA = await PushChain.utils.account.deriveExecutorAccount(uoa, {
+        chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+        skipNetworkCheck: true,
+      });
+      console.log('📍 CEA on BNB Testnet:', bnbCEA.address);
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
+      // Two funding asks because this example moves an asset off BNB:
+      //   1) Sepolia ETH on the UOA so the SDK can fund the UEA for the
+      //      inbound execution on Push Chain
+      //   2) the USDT you want bridged back goes to your CEA on BNB Testnet
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.01 Sepolia ETH to your UOA: ' + wallet.address + ' (powers the UEA for the inbound on Push Chain).\\\\n  • Send at least 0.01 USDT to your CEA on BNB Testnet: ' + bnbCEA.address + ' (this is what gets bridged back as USDT.bnb).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT on BNB Testnet (mint(address,uint256) then transfer to the CEA): https://testnet.bscscan.com/address/' + usdt.address + '#writeProxyContract#F3');
 
       try {
-        // Route 3: bridge USDT from CEA on BNB_TESTNET back to your account on Push Chain
+        // Route 3: bridge 0.01 USDT from CEA on BNB_TESTNET back to Push Chain
         const tx = await client.universal.sendTransaction({
           from: { chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
           to: client.universal.account, // bridge back to self
           funds: {
-            amount: BigInt(10000), // 0.01 USDT (6 decimals)
+            amount: PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals }),
             token: usdt,
           },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
         console.log('✅ Push Chain TX Hash:', tx.hash);
 
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External TX Hash:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
         console.error('❌ Failed:', err && err.message ? err.message : err);
       }
@@ -1219,7 +1063,10 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_funds_with_payload
 
-    // Route 3: CEA_TO_PUSH — Bridge Assets from external chain and call a contract on Push Chain atomically
+    // Route 3: bridge 0.01 USDT from your CEA on BNB Testnet back to Push
+    // Chain AND atomically call Counter.increment() on Push Chain, in one
+    // universal signature. The USDT lands as USDT.bnb on the UEA, then the
+    // payload runs against the counter contract.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -1237,22 +1084,31 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive CEA address on BNB Testnet from the CEAFactory contract
-      const bnbProvider = new ethers.JsonRpcProvider('https://bsc-testnet-rpc.publicnode.com');
-      const ceaFactory = new ethers.Contract('0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719', ['function getCEAForPushAccount(address) view returns (address, bool)'], bnbProvider);
-      const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
-      console.log('CEA on BNB Testnet:', ceaAddress);
+      // Derive your CEA on BNB Testnet via the SDK so you can send the USDT
+      // you want bridged back alongside the payload.
+      const uoa = PushChain.utils.account.toUniversal(wallet.address, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+      });
+      const bnbCEA = await PushChain.utils.account.deriveExecutorAccount(uoa, {
+        chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+        skipNetworkCheck: true,
+      });
+      console.log('📍 CEA on BNB Testnet:', bnbCEA.address);
 
       const usdt = PushChain.CONSTANTS.MOVEABLE.TOKEN.BNB_TESTNET.USDT;
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (gas + ~$10 fee-lock deposit) + 0.02 USDT (bridged + payload on Push Chain)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      // Two funding asks because this example moves an asset off BNB:
+      //   1) Sepolia ETH on the UOA so the SDK can fund the UEA for the
+      //      inbound execution + payload on Push Chain
+      //   2) the USDT you want bridged back goes to your CEA on BNB Testnet
+      await rl.question(':::prompt:::Fund the following, then press Enter:\\\\n  • Send at least 0.01 Sepolia ETH to your UOA: ' + wallet.address + ' (powers the UEA for the inbound + payload on Push Chain).\\\\n  • Send at least 0.01 USDT to your CEA on BNB Testnet: ' + bnbCEA.address + ' (bridged in as USDT.bnb and forwarded with the payload).\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia\\\\nMint USDT on BNB Testnet (mint(address,uint256) then transfer to the CEA): https://testnet.bscscan.com/address/' + usdt.address + '#writeProxyContract#F3');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1260,24 +1116,24 @@ End-to-end playground examples for each universal transaction route. For API ref
       });
 
       try {
-        // Route 3: bridge USDT from CEA on BNB_TESTNET and call increment() on Push Chain
+        // Route 3: bridge 0.01 USDT from CEA on BNB_TESTNET AND call increment() on Push Chain
         const tx = await client.universal.sendTransaction({
           from: { chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
           to: COUNTER_ADDRESS,
           data,
           funds: {
-            amount: BigInt(10000), // 0.01 USDT (6 decimals)
+            amount: PushChain.utils.helpers.parseUnits('0.01', { decimals: usdt.decimals }),
             token: usdt,
           },
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
-        console.log('Push Chain TX Hash:', tx.hash);
+        console.log('✅ Push Chain TX Hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External TX Hash:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -1297,7 +1153,9 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_multicall
 
-    // Route 3: CEA_TO_PUSH — Batch multiple contract calls on Push Chain from a CEA origin
+    // Route 3: from: { chain } makes your CEA on BNB Testnet the execution
+    // origin, then a single multicall runs two Counter.increment() calls
+    // atomically on Push Chain.
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
     import * as readline from 'node:readline/promises';
@@ -1315,21 +1173,28 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account:', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive CEA address on BNB Testnet so the user knows where to fund.
-      const bnbProvider = new ethers.JsonRpcProvider('https://bsc-testnet-rpc.publicnode.com');
-      const ceaFactory = new ethers.Contract('0xe2182dae2dc11cBF6AA6c8B1a7f9c8315A6B0719', ['function getCEAForPushAccount(address) view returns (address, bool)'], bnbProvider);
-      const [ceaAddress] = await ceaFactory.getCEAForPushAccount(client.universal.account);
-      console.log('CEA on BNB Testnet:', ceaAddress);
+      // Derive your CEA on BNB Testnet via the SDK so it shows up in logs.
+      const uoa = PushChain.utils.account.toUniversal(wallet.address, {
+        chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
+      });
+      const bnbCEA = await PushChain.utils.account.deriveExecutorAccount(uoa, {
+        chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+        skipNetworkCheck: true,
+      });
+      console.log('📍 CEA on BNB Testnet:', bnbCEA.address);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + ceaAddress + ' on BNB Testnet — at least 0.02 BNB (CEA gas + ~$10 fee-lock deposit required for fresh UEA)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | BNB Testnet https://www.bnbchain.org/en/testnet-faucet');
+      // Single funding ask: only the Sepolia UOA. The CEA on BNB does not
+      // need a separate top-up for this example; the SDK funds CEA gas and
+      // deployment automatically from the same source-chain deposit.
+      await rl.question(':::prompt:::Send at least 0.01 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const incrementData = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1345,15 +1210,15 @@ End-to-end playground examples for each universal transaction route. For API ref
             { to: COUNTER_ADDRESS, value: BigInt(0), data: incrementData },
             { to: COUNTER_ADDRESS, value: BigInt(0), data: incrementData },
           ],
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
 
-        console.log('Push Chain TX Hash:', tx.hash);
+        console.log('✅ Push Chain TX Hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash:', receipt.externalTxHash);
-        console.log('External Chain:', receipt.externalChain);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External TX Hash:', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 
@@ -1373,10 +1238,11 @@ End-to-end playground examples for each universal transaction route. For API ref
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_route3_solana
 
-    // Route 3: CEA_TO_PUSH — your Solana CEA calls a contract on Push Chain.
-    // from: { chain: SOLANA_DEVNET } pins the originating CEA to Solana.
+    // Route 3: from: { chain: SOLANA_DEVNET } makes your CEA on Solana the
+    // execution origin. The call lands on Push Chain (Counter.increment() below).
     import { PushChain } from '@pushchain/core';
     import { ethers } from 'ethers';
+    import { PublicKey } from '@solana/web3.js';
     import * as readline from 'node:readline/promises';
 
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
@@ -1392,15 +1258,15 @@ End-to-end playground examples for each universal transaction route. For API ref
       const wallet = ethers.Wallet.createRandom();
       const provider = new ethers.JsonRpcProvider(RPC_SEPOLIA);
       const signer = wallet.connect(provider);
-      console.log('Sepolia account (UOA):', wallet.address);
+      console.log('🔑 Sepolia UOA:', wallet.address);
 
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
       const client = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-        progressHook: (p) => console.log('TX Progress:', p.title || p.id),
       });
+      console.log('📍 UEA on Push Chain:', client.universal.account);
 
-      // Derive the Solana CEA address so the user knows where to fund SOL.
+      // Derive your CEA on Solana Devnet via the SDK so it shows up in logs.
       const uoa = PushChain.utils.account.toUniversal(wallet.address, {
         chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA,
       });
@@ -1408,9 +1274,16 @@ End-to-end playground examples for each universal transaction route. For API ref
         chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET,
         skipNetworkCheck: true,
       });
-      console.log('CEA on Solana Devnet:', solanaCEA.address);
+      // The SDK returns the SVM address as a 0x-prefixed 32-byte hex string;
+      // convert to base58 for the familiar Solana wallet display format.
+      const solanaCEABase58 = new PublicKey(ethers.getBytes(solanaCEA.address)).toBase58();
+      console.log('📍 CEA on Solana Devnet:', solanaCEABase58);
 
-      await rl.question(':::prompt:::Fund these accounts, then press Enter:\\\\n  • UOA ' + wallet.address + ' on Sepolia — at least 0.005 ETH (gas to sign)\\\\n  • CEA ' + solanaCEA.address + ' on Solana Devnet — at least 0.02 SOL (CEA gas)\\\\nFaucets: Sepolia https://cloud.google.com/application/web3/faucet/ethereum/sepolia | Solana https://faucet.solana.com');
+      // Single funding ask: only the Sepolia UOA. The CEA on Solana does
+      // not need a separate top-up for this example; the SDK funds CEA gas
+      // automatically from the same source-chain deposit. Solana CEAs are
+      // PDAs, so no separate deployment step either.
+      await rl.question(':::prompt:::Send at least 0.01 Sepolia ETH to ' + wallet.address + ', then press Enter.\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia');
 
       const data = PushChain.utils.helpers.encodeTxData({
         abi: COUNTER_ABI,
@@ -1422,13 +1295,14 @@ End-to-end playground examples for each universal transaction route. For API ref
           from: { chain: PushChain.CONSTANTS.CHAIN.SOLANA_DEVNET },
           to: COUNTER_ADDRESS,
           data,
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('TX Hash (Push Chain):', tx.hash);
+        console.log('✅ Push Chain TX Hash:', tx.hash);
         const receipt = await tx.wait();
-        console.log('External TX Hash (Solana):', receipt.externalTxHash);
-        console.log('Explorer:', receipt.externalExplorerUrl);
+        console.log('🌐 External TX Hash (Solana):', receipt.externalTxHash);
+        console.log('🔍 Explorer:', receipt.externalExplorerUrl);
       } catch (err) {
-        console.error('Failed:', err && err.message ? err.message : err);
+        console.error('❌ Failed:', err && err.message ? err.message : err);
       }
     }
 

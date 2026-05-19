@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:06:21.222Z",
+  "lastUpdated": "2026-05-18T06:15:29.857Z",
   "keys": {
     "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
       "value": "Push Validator",
@@ -204,11 +204,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Seien Sie der Erste, wenn das Push Chain Testnet live geht. Melden Sie sich für unseren Newsletter an, um exklusive Updates zu erhalten.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.052Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1177,9 +1172,9 @@
       "lastUpdated": "2025-11-14T19:27:06.053Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Entdecke Apps, Partner und Early Adopter, die das nächste Zeitalter universeller Erfahrungen auf Push Chains Donut Testnet aufbauen.",
+      "value": "Entdecke Apps, Partner und Early Adopters, die auf der Donut-Testkette von Push Chain das nächste Zeitalter universeller Erfahrungen aufbauen.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:46:10.207Z"
+      "lastUpdated": "2026-05-17T19:23:54.845Z"
     },
     "components.short-support-snippet.qnas.qna1.discord-url-title": {
       "value": "Trete dem Push Chain Discord bei, um Hilfe in Echtzeit zu erhalten.",
@@ -2487,9 +2482,9 @@
       "lastUpdated": "2025-11-14T19:27:06.054Z"
     },
     "pages.lfpush.seo.twitter-title": {
-      "value": "Lassen Sie uns Pushen | Gemeinschaftsinitiative",
+      "value": "Lass uns Pushen | Gemeinschaftsinitiative",
       "englishChecksum": "a74bc769352dc913ac90019b078b3fe7",
-      "lastUpdated": "2026-02-25T23:45:18.469Z"
+      "lastUpdated": "2026-05-17T19:23:07.089Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title": {
       "value": "Lassen Sie uns universelle Apps aufbauen 💪",
@@ -2502,9 +2497,9 @@
       "lastUpdated": "2025-11-14T20:16:25.478Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### Wie unterscheidet sich dies von Brücken oder Messaging-Schichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem Ihre App läuft. Brücken/Messaging bewegen nur Token oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.\n\n- **Einzigartiger Wohnsitz vs viele Kopien**\n\tBei Brücken/Messaging müssen Sie pro Kette einsetzen und über Nachrichten synchronisieren. Bei Push setzen Sie einmal ein; alle treffen auf denselben Vertrag und gemeinsamen Zustand.\n\n- **Keine umwickelten Assets oder obligatorisches Bridging**\n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen Routing und Gebührsumwandlung unter der Haube.\n\n- **Einheitliche Identität & Verifikation**\n\tWir akzeptieren Signaturen von jedem Wallet/Kette und führen sie einem Benutzer auf Push zu — nicht verwahrend.\n\n- **Weniger bewegliche Teile**\n\tKein Cross-Chain-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoffverträge zum Synchronisieren.\n\n- **Brücken führen Komplexität ein. Kettennative Interoperabilität löst es**\n\tBrücken erfordern komplexe Ingenieurleistungen, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach als Ihre App nativ ihre vererbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheitquelle und ein UX, der sich wie eine Kette anfühlt — sogar wenn Benutzer es nicht sind.\n\n---",
+      "value": "### Wie unterscheidet sich dies von Brücken oder Messaging-Schichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem Ihre App läuft. Brücken/Messaging bewegen nur Token oder Nachrichten zwischen Ketten und komplizieren alles für den Benutzer und Entwickler.\n\n- **Einziges Zuhause vs viele Kopien** \n\tBei Brücken/Messaging müssen Sie pro Kette bereitstellen und über Nachrichten synchronisieren. Auf Push stellen Sie nur einmal bereit; jeder ruft denselben Vertrag und gemeinsam genutzten Zustand auf.\n\n- **Keine gewickelten Vermögenswerte oder verpflichtende Überführung** \n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen Routing und Gebührsumwandlung unter der Haube.\n\n- **Vereinheitlichte Identität und Verifizierung** \n\tWir akzeptieren Signaturen von jeder Wallet/Kette und ordnen sie demselben Benutzer auf Push zu – nicht verwahrend.\n\n- **Weniger bewegliche Teile** \n\tKein Kreuzketten-Zustimmungstanz, kein Gas-Token-Suchen, keine Klebverträge zur Synchronisierung.\n\n- **Brücken bringen Komplexität. Kettennative Interoperabilität löst sie** \n\tBrücken erfordern komplexen Engineering-Aufwand, Zeit, Kosten für das Auditing und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App sie nativ vererbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht sind.\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-02-25T23:45:30.037Z"
+      "lastUpdated": "2026-05-17T19:23:18.493Z"
     },
     "pages.docs.seo.og-description": {
       "value": "Baue und führe Apps auf der universellen Ausführungsschicht aus mit klaren Anleitungen und Beispielen.",
@@ -2514,17 +2509,17 @@
     "pages.tos.seo.og-description": {
       "value": "Rechtliche Bestimmungen zur Nutzung unserer Websites, Apps und Entwicklerwerkzeuge.",
       "englishChecksum": "9d071120c8c1e14b03af607cb3059de4",
-      "lastUpdated": "2026-02-25T23:46:08.457Z"
+      "lastUpdated": "2026-05-17T19:23:53.053Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>Kurze Antwort</2>: Push ist der Ort, an dem Ihre App läuft. Brücken/Nachrichten bewegen nur Tokens oder Nachrichten zwischen Ketten und komplizieren alles für den Benutzer und Entwickler.</1><1><2>Einheitlicher Heimathafen vs viele Klone.</2> Bei Brücken/Nachrichten müssen Sie pro Kette einsetzen und über Nachrichten synchronisieren. Auf Push setzen Sie einmal ein; alle rufen denselben Vertrag und denselben Shared State auf.</1><1><2>Keine verpackten Assets oder verpflichtende Überführung.</2> Benutzer bleiben auf ihrer Heimkette und bezahlen mit dem, was sie bereits besitzen; wir handeln unter der Haube die Routing- und Gebührsumwandlung ab.</1><1><2>Einheitliche Identität und Verifizierung.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette und ordnen sie demselben Benutzer auf Push zu – nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Quer-Ketten-Genehmigungstanz, keine Gas-Token-Jagd, keine Klebstoffverträge, die synchron gehalten werden müssen.</1><1><2>Brücken führen Komplexität ein. Kettennatives Interop löst es.</2> Brücken erfordern komplexen Ingenieuraufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App sie nativ erbt.</1><1>Ergebnis: einfachere Apps, eine Quelle der Wahrheit und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht tun.</1>",
+      "value": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Bridges/Messaging bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für Nutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Heimatort vs viele Klone.</2> Mit Bridges/Messaging führst du pro Kette eine Bereitstellung durch und synchronisierst über Nachrichten. Auf Push führst du nur einmalige Bereitstellungen durch; jeder trifft auf den gleichen Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überführungen.</2> Nutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen das Routing und die Gebührsumwandlung unter der Haube.</1><1><2>Einheitliche Identität & Verifizierung.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette undordnen sie demselben Benutzer auf Push zu – nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Kreuz-Ketten-Bestätigungstanz, kein Gas-Token-Suchen, keine Klebstoffverträge zum synchron halten.</1><1><2>Bridges bringen Komplexität ein. Kettennative Interoperabilität löst sie.</2> Bridges erfordern einen komplexen Entwicklungsaufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Ketten-native Interoperabilität funktioniert einfach so wie deine App nativ davon erbt.</1><1>Ergebnis: einfachere Apps, eine Wahrheitquelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Nutzer es nicht tun.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-02-25T23:46:21.126Z"
+      "lastUpdated": "2026-05-17T19:24:05.742Z"
     },
     "components.short-support-snippet.qnas.qna1.question": {
-      "value": "Ich kann meine Wallet nicht verbinden. Was sollte ich versuchen?",
+      "value": "Ich kann meinen Wallet nicht verbinden. Was sollte ich versuchen?",
       "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
-      "lastUpdated": "2026-02-25T23:46:24.815Z"
+      "lastUpdated": "2026-05-17T19:24:07.413Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Entwickler — Anleitungen & Tutorials",
@@ -2876,11 +2871,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:26:37.023Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "Jetzt bewerben",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:16.013Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "Toast-Benachrichtigung schließen",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -2896,16 +2886,6 @@
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T00:58:22.166Z"
     },
-    "notifications.info-bar.learn-more-text": {
-      "value": "Jetzt bewerben",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:38.240Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "Jetzt bewerben",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:42.648Z"
-    },
     "components.ecosystem-apps-partners.apps.ramen-swap.description": {
       "value": "Tokens deiner Wahl von jeder Kette serviert",
       "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
@@ -2914,57 +2894,57 @@
     "components.ecosystem-essentials.title": {
       "value": "Entdecken Sie wichtige Testnetzwerk-Apps",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-02-25T23:46:28.874Z"
+      "lastUpdated": "2026-05-17T19:24:11.647Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-heading": {
       "value": "### Was geändert?",
       "englishChecksum": "1aa7ea3bdd6597741a7863d77730fe27",
-      "lastUpdated": "2026-02-25T23:45:17.189Z"
+      "lastUpdated": "2026-05-18T06:15:25.849Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain führte einen Token-Umverteilungsvorschlag durch, um die Gesamtzahl der PC-Tokens von über 75 Billionen auf etwa 10 Milliarden zu reduzieren. Diese Aktualisierung behebt eine technische Schuld aus den Anfangstagen des Testnets und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
+      "value": "Push Chain führte einen Token-Umbuchungsvorschlag durch, um die Gesamtanzahl an PC-Token von über 75 Billionen auf etwa 10 Milliarden zu reduzieren. Diese Aktualisierung behebt eine technische Schuldenlast aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-25T23:45:34.264Z"
+      "lastUpdated": "2026-05-17T19:23:22.535Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "In den frühen Tagen des Push Chain Testnet gab es keine Verbrennung und Münzungsprozess für PC-Tokens. Dies führte zu sehr niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte es einer Handvoll Tokeninhabern, riesige Tokenvorräte (in die Billionen) anzuhäufen. Dies erschuf eine unausgewogene Token-Ökonomie, die vor dem Hauptnetzstart korrigiert werden musste.",
+      "value": "In den frühen Tagen des Push Chain Testnet gab es keinen Brenn- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte es einer Handvoll von Token-Inhabern, gigantische Token-Vorräte anzusammeln (in Milliardenhöhe). Dies führte zu einem unausgewogenen Token-Ökonomiesystem, das vor dem Hauptnetzstart korrigiert werden musste.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-02-25T23:45:39.179Z"
+      "lastUpdated": "2026-05-17T19:23:26.850Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- Alte technische Schulden aus dem frühen Testnetzwerk entfernen",
+      "value": "- Alte technische Schulden aus der frühen Testnet entfernen",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-02-25T23:45:41.730Z"
+      "lastUpdated": "2026-05-17T19:23:29.179Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Der Vorschlag betraf die TOP 1,950 Wallet aus insgesamt 1.178 Millionen Adressen. Wallets mit 1,100 oder mehr PC-Tokens (einschließlich derer mit Billionen) wurden neu ausgeglichen und halten nun zwischen 1,100-2,000 PC-Tokens.",
+      "value": "Der Vorschlag hat 1,950 von insgesamt 1.178M Adressen betroffen. Wallets mit mehr als 1,100 PC-Tokens (einschließlich derer mit Billionen) wurden neu equilibriert und halten nun zwischen 1,100-2,000 PC-Tokens.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-25T23:45:45.864Z"
+      "lastUpdated": "2026-05-17T19:23:32.969Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- Top 1,950 Wallets angepasst auf den Bereich von 1,100 bis 2,000 PC-Token",
+      "value": "- Top 1,950 Wallets neu balanceiert auf den Bereich von 1,100 bis 2,000 PC Token",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-25T23:45:48.849Z"
+      "lastUpdated": "2026-05-17T19:23:35.862Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Benutzer wurden im Voraus nicht informiert, um zu verhindern, dass böswillige Akteure Token vor dem Neuausbalancieren auf andere Wallets verteilen. Diese Sicherheitsmaßnahme sicherte die Integrität des Neuausbalancierens und verhinderte Manipulationen des Systems.",
+      "value": "Benutzer wurden im Voraus nicht informiert, um zu verhindern, dass böswillige Akteure Token vor dem Neuausbalancieren auf andere Wallets verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neuausbalancierens und verhinderte das Ausnutzen des Systems.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-25T23:45:52.674Z"
+      "lastUpdated": "2026-05-17T19:23:39.428Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Die Neuausrichtung ist ein zweiphasiger Ansatz. Die Token werden nun gesammelt und bald verbrannt.",
+      "value": "Die Rebalancing ist ein zweiphasiger Ansatz. Die Token werden nun gesammelt und bald verbrannt.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-25T23:45:56.160Z"
+      "lastUpdated": "2026-05-17T19:23:42.415Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Für 99,83% der Nutzer:** An dieser Änderung ändert sich nichts für Sie. Ihr Wallet-Guthaben bleibt unverändert.",
+      "value": "**Für 99,83% der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Balance bleibt unverändert.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-02-25T23:45:59.108Z"
+      "lastUpdated": "2026-05-17T19:23:45.332Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**Für betroffene Wallets (oberste 1,950):** Wenn Ihre Wallet mehr als 1,100 PC-Tokens (oder Billionen) gehalten hat, wurde Ihr Guthaben auf den Bereich von 1,100 bis 2,000 PC-Tokens angepasst.",
+      "value": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet zum Zeitpunkt des Upgrades 1,100+ PC-Token hielt (oder Billionen), wurde Ihr Kontostand auf den Bereich von 1,100 bis 2,000 PC-Token angepasst.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-02-25T23:46:04.093Z"
+      "lastUpdated": "2026-05-17T19:23:49.185Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Deep Dives — Konzepte & Architektur",
@@ -3030,6 +3010,836 @@
       "value": "Für Validatoren",
       "englishChecksum": "ee0336c666c1f8c6098e95d4bfb26a4b",
       "lastUpdated": "2026-02-26T00:06:21.222Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
+      "value": "1:1 gepegelter stabiler Coin, der flüssige USD Liquidität von allen Ketten kombiniert.",
+      "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
+      "lastUpdated": "2026-05-17T19:23:51.655Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFT Launchpad auf Push Chain",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-05-17T19:24:10.595Z"
+    },
+    "footer.email-section.title": {
+      "value": "Bleib auf dem Laufenden mit Push Chain",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T19:56:47.733Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "News und Updates!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T19:56:48.742Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "Newsletter-Abonnement Abschnitt",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T19:56:50.160Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "Push Chain Newsletter-Anmeldung",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T19:56:53.199Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "Fußzeilen-Navigation und Links",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T19:56:55.917Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "Blockchain-Plattform von Push Chain",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T19:56:58.100Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "Push Chain Homepage",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T19:57:01.390Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "Push Chain Logo",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T19:57:03.748Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "Ressourcen",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T19:57:17.038Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "Ressourcen-Navigation",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T19:57:18.611Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "Entwickler",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T19:57:20.860Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "Entwickler-Navigation",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T19:57:22.077Z"
+    },
+    "footer.columns.community.title": {
+      "value": "Gemeinschaft",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T19:57:26.182Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "Community-Navigation",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T19:57:41.063Z"
+    },
+    "footer.columns.help.title": {
+      "value": "Hilfe",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T19:57:43.358Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "Hilfe-Navigation",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T19:57:44.395Z"
+    },
+    "footer.links.get-started": {
+      "value": "Los geht's",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T19:57:45.432Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "Beginnen Sie mit dem Bauen auf Push Chain",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-18T06:15:27.078Z"
+    },
+    "footer.links.docs": {
+      "value": "Dokumentation",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T19:57:47.603Z"
+    },
+    "footer.links.docs-title": {
+      "value": "Dokumentation zur Push Chain",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T19:57:48.477Z"
+    },
+    "footer.links.github": {
+      "value": "GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T19:57:50.004Z"
+    },
+    "footer.links.github-title": {
+      "value": "GitHub-Repositories von Push Chain",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T19:57:51.036Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "Wissensdatenbank",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T19:57:52.436Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "Push Chain Wissen database",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T19:57:53.384Z"
+    },
+    "footer.links.blog": {
+      "value": "Blog",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-17T19:57:54.159Z"
+    },
+    "footer.links.blog-title": {
+      "value": "Push Chain Blog",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T19:57:55.046Z"
+    },
+    "footer.links.litepaper": {
+      "value": "Leichtpapier",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-17T19:57:56.005Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "Push Chain Litepaper (PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T19:57:58.751Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "Marken-Kit",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T19:58:01.051Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "Push Chain Marken-Assets und Leitlinien",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T19:58:03.751Z"
+    },
+    "footer.links.push-scan": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T19:58:18.085Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "Blockchain-Explorer für Push Chain",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T19:58:19.077Z"
+    },
+    "footer.links.faucet": {
+      "value": "Geldbörse",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T19:58:20.009Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "Test-Tokens vom Push Chain-Faucet erhalten",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T19:58:21.587Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T19:58:23.553Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Push Chain Community-Portal",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T19:58:36.201Z"
+    },
+    "footer.links.support": {
+      "value": "Support",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T19:58:37.078Z"
+    },
+    "footer.links.support-title": {
+      "value": "Hilfebereich",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T19:58:39.268Z"
+    },
+    "footer.links.security": {
+      "value": "Sicherheit & Offenlegung",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T19:58:40.096Z"
+    },
+    "footer.links.security-title": {
+      "value": "Melden Sie einen Schwachstellenschutz (verantwortungsvolle Offenlegung)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T19:58:42.594Z"
+    },
+    "footer.links.contact-us": {
+      "value": "Kontaktieren Sie uns",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T19:58:43.445Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "Partnerprogramme, Business-Entwicklung, Medien oder allgemeine Anfragen",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T19:58:44.549Z"
+    },
+    "footer.links.careers": {
+      "value": "Karriere",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T19:58:46.783Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Offene Stellenangebote bei Push Chain",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T19:58:47.854Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/Twitter",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T19:58:50.317Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "Folgen Sie Push Chain auf X/Twitter",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T19:58:52.949Z"
+    },
+    "footer.links.discord": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T19:58:53.787Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Tritt dem Push Chain Discord bei",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T19:58:56.574Z"
+    },
+    "footer.links.reddit": {
+      "value": "Reddit",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T19:58:58.560Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Treten Sie der Push Chain Subreddit bei",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T19:58:59.628Z"
+    },
+    "footer.links.telegram": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-17T19:59:00.466Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Tritt der Push Chain Telegram Gruppe bei",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T19:59:01.499Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "Links zu Social Media und rechtliche Informationen",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T19:59:02.586Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "Push Chain auf X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T19:59:03.493Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "Push Chain auf X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T19:59:04.448Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "Push Chain auf GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T19:59:06.504Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "Push Chain auf GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T19:59:07.538Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "Push Chain auf Discord",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T19:59:09.983Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "Push Chain auf Discord",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T19:59:10.905Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "Datenschutzrichtlinie",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T19:59:24.448Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "Datenschutzrichtlinie lesen",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T19:59:26.421Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "Datenschutzrichtlinie",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T19:59:27.357Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "Nutzungsbedingungen",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T19:59:28.978Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "Geschäftsbedingungen lesen",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T19:59:29.868Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "Geschäftsbedingungen",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T19:59:30.902Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": " Cookie-Einstellungen ",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T19:59:31.719Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "Cookies einstellungen verwalten",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T19:59:32.887Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "Blockchain Footer-Illustration",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T19:59:34.087Z"
+    },
+    "footer.footer-image.title": {
+      "value": "Push Chain – Universelles Blockchain",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T19:59:34.959Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "Dokumentation — Erstelle universelle Apps",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T19:59:37.884Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "Alles, was Sie benötigen, um auf Push Chain zu senden: schnelle Einsteigehilfen, SDKs, API-Referenz, Beispiele und Knotensetup.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T19:59:39.949Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "Push Chain Docs - Quickstarts, SDKs & API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T19:59:41.196Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Push Chain Docs – Erstelle jetzt",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T19:59:42.337Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "Schnellstartanleitungen, SDKs, API-Referenz und Beispiele für eine schnelle Auslieferung.",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T19:59:45.845Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "Testnet-Dokumentation startet in",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T19:59:48.055Z"
+    },
+    "pages.docs.header.description": {
+      "value": "Psst... wollen Sie einen Vorgeschmack von Testnet Donut? Schreiben Sie uns mit #pushchainsecret und wir senden Ihnen Zugang zu einem Testbuild.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T19:59:50.358Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "Twittern Sie über Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T19:59:51.562Z"
+    },
+    "pages.docs.header.title": {
+      "value": "Twittern über Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T19:59:52.690Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Twittern über Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-18T06:15:29.857Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "Was ist Push Chain?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T19:59:57.600Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "Push Chain bietet ein einheitliches Werkzeugset, um wahrhaft universelle Apps zu erstellen.",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-17T20:00:00.267Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "Erfahren Sie mehr",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:00:04.228Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "Lasst uns bauen!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T20:00:06.350Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Alles, was du benötigst, um deine universelle App mit Push Chain SDK zu erstellen",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T20:00:11.242Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:00:13.063Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UI Kit",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T20:00:31.298Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "Integrieren Sie jede React-basierte App in weniger als 5 Minuten.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T20:00:33.883Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "Mehr erfahren",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:00:36.051Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "Kommt bald",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:00:37.028Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "APP-HIGHLIGHT",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T20:00:39.681Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T20:00:42.218Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS und Privacy-Präsertender Computer.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:00:43.727Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "Human.tech",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T20:00:59.276Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS & Privacy Preserving Compute.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:01:02.840Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "Ramen Swap",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T20:01:07.427Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T20:01:09.660Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "Die einheitliche Infrastrukturschicht für agentische Geschäfte.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T20:01:12.608Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T20:01:15.055Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": " Assets bereitstellen, gegen sie borgen und optimierte Renditen verdienen",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T20:01:16.600Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T20:01:18.021Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "ERC-20-Tokens erstellen und starten",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T20:01:20.880Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: KI-Assistent",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T20:01:40.762Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "Sende, tausche und verwalte Assets über unterstützte Netzwerke hinweg",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T20:01:42.642Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T20:01:45.418Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "Zeige deine degensuperkräfte und verdiene Belohnungen.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T20:01:46.984Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampirSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T20:01:50.412Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "Universelles Vampire-Survivor-Spiel",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T20:01:52.444Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "Letzter einer",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T20:01:55.228Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "Der Letzte, der vor Ablauf des Timers mitbietet, bekommt den Jackpot",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T20:01:58.240Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T20:02:00.418Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "Deine Identität auf jeder Kette",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T20:02:01.831Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T20:02:03.257Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "Pay-per-call API Monetarisierung für agentenbasierte Infrastruktur",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T20:02:06.458Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T20:02:08.779Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "Universelle Wachstumsmaschine, die Qualität statt Klicks belohnt",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T20:02:10.595Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "BeatBrawls",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T20:02:14.694Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "Unvergessliche musikalische Duelle",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T20:02:16.095Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT Casino",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T20:02:20.354Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "Universell, fair und transparent – wetten um zu gewinnen",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T20:02:23.744Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T20:02:26.589Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "On-chain skillbasiertes Spiel",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T20:02:28.057Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "Schnitte. Ausweichen. Punkten.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T20:02:29.758Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T20:02:33.240Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "Tippe auf jeder Blockchain mit jedem Wallet",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T20:02:52.626Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T20:02:53.992Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.description": {
+      "value": "Nahtlose Brückentoken-Handels ohne Brücken",
+      "englishChecksum": "de2b3bf95e3ed660f78c959450838463",
+      "lastUpdated": "2026-05-17T20:02:55.482Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "ChainCircle",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T20:02:56.703Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "Kreuzkettensparkreise",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T20:03:01.353Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "Push Campus",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T20:03:03.616Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "Reiche Studierende auf Ethereum, Solana, Base und über 15 anderen Ketten",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-17T20:03:05.520Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "Ballzy",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T20:03:06.821Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "Kampfe um Ehre, indem du dich mit deiner Lieblingskette anmeldest",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T20:03:08.609Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "Athera",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T20:03:11.444Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "Automatisierte Krypto-Vererbung",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T20:03:12.795Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T20:03:14.789Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "1:1 festgepeiltes Stablecoin mit liquider USD-Nachfrage von allen Ketten",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-17T20:03:16.469Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T20:03:19.098Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "Sende Krypto an Domains, nicht an Hashes",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T20:03:20.556Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T20:03:23.612Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "Kommt bald",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:03:26.113Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Degen Chess",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T20:03:28.747Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Spiele Schach, setze auf universal",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T20:03:31.130Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "Omnihub",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T20:03:32.382Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "Erstelle, kauf und verkaufe Blockchain-Kollektibles",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T20:03:35.250Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T20:03:36.633Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.description": {
+      "value": "DEX, das auf dem Pushchain-Testnet gebaut wurde",
+      "englishChecksum": "6e79596adf46880630b94d8aed70ac68",
+      "lastUpdated": "2026-05-17T20:03:38.151Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T20:03:43.077Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "Mehrketten-Domains, GM + Bereitstellungstools",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T20:03:44.587Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Star Run",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T20:03:45.804Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "Eine dezentrale, vom Spieler kontrollierte Wirtschaft",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T20:03:48.685Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Forge Realm",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T20:03:50.337Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "Mische und kombiniere Basis-Charaktere und Merkmale aus mehreren Quellen",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T20:03:54.370Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T20:03:59.775Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Web3 multi-chain hub: Domain Names, NFTs und Launchpad.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T20:04:01.698Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Copet",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T20:04:02.997Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "Füttern, spielen und aufziehen Sie Ihren virtuellen Haustier durch On-Chain-Aktivitäten",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T20:04:04.706Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T20:04:06.062Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "Baue deine Identität auf und verdiene Belohnungen über 70+ Ketten hinweg.",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T20:04:10.288Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "Push Name Service",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T20:04:11.528Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Sichere dir deine eigene .push Domain",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T20:04:30.323Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T20:04:31.901Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "Veröffentliche deine NFT-Kollektion kostenlos auf jeder Kette",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T20:04:35.770Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T20:04:39.426Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "Schnellster Multichain-Relayer",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T20:04:42.603Z"
     }
   }
 }

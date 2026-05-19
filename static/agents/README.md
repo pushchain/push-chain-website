@@ -1,7 +1,7 @@
 ---
 schema_version: 1.0.0
 version: 1.0.0
-current_sdk_version: 6.0.0
+current_sdk_version: 6.0.9
 generated: 2026-05-15
 description: Human and agent orientation doc for the /agents/ directory
 ---
@@ -62,9 +62,9 @@ const pushChainClient = await PushChain.initialize(universalSigner, {
 
 ### pushChainClient.universal.sendTransaction(tx)
 Sends a universal transaction. Route determined by `tx.to` shape:
-- `to: "0x..."` → Route 1 (Push Chain)
-- `to: { address, chain }` → Route 2 (external chain via CEA)
-- `to: "0x..."` + `from: { chain }` → Route 3 (CEA origin to Push Chain)
+- `to: "0x..."` → **Route 1** (executes on Push Chain). Origin can be a wallet on any external chain OR a native Push Chain wallet.
+- `to: { address, chain }` → **Route 2** (executes on the target external chain via CEA). Origin can be a wallet on an external chain OR a Push Account (UEA, native Push Chain wallet, or smart contract on Push).
+- `to: "0x..."` + `from: { chain }` → **Route 3** (executes on Push Chain, bridged through the CEA on the named external chain). Origin is a Push Account (UEA, native Push Chain wallet, or smart contract on Push).
 
 ```typescript
 const response = await pushChainClient.universal.sendTransaction({

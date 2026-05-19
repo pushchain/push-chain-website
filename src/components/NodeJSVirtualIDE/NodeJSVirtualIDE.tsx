@@ -119,9 +119,18 @@ function App() {
   const [copiedAddr, setCopiedAddr] = useState(null);
   const promptButtonRef = useRef(null);
 
+  // Input modal (replaces window.prompt for un-prefixed rl.question calls)
+  const [inputModal, setInputModal] = useState(null);
+  const [inputModalValue, setInputModalValue] = useState('');
+  const inputModalRef = useRef(null);
+
   useEffect(() => {
     window.__pushShowPrompt = (text) => new Promise((resolve, reject) => {
       setPromptModal({ text: text, resolve: resolve, reject: reject });
+    });
+    window.__pushShowInputPrompt = (text) => new Promise((resolve, reject) => {
+      setInputModalValue('');
+      setInputModal({ text: text, resolve: resolve, reject: reject });
     });
   }, []);
 
@@ -143,6 +152,25 @@ function App() {
     };
   }, [promptModal]);
 
+  useEffect(() => {
+    if (!inputModal) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const handler = (e) => {
+      if (e.key === 'Escape') {
+        if (inputModal.reject) inputModal.reject(new Error('Cancelled by user'));
+        setInputModal(null);
+        setInputModalValue('');
+      }
+    };
+    window.addEventListener('keydown', handler);
+    if (inputModalRef.current) inputModalRef.current.focus();
+    return () => {
+      window.removeEventListener('keydown', handler);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [inputModal]);
+
   const cancelPromptModal = () => {
     if (promptModal && promptModal.reject) promptModal.reject(new Error('Cancelled by user'));
     setPromptModal(null);
@@ -151,6 +179,18 @@ function App() {
   const confirmPromptModal = () => {
     if (promptModal && promptModal.resolve) promptModal.resolve();
     setPromptModal(null);
+  };
+
+  const submitInputModal = () => {
+    if (inputModal && inputModal.resolve) inputModal.resolve(inputModalValue);
+    setInputModal(null);
+    setInputModalValue('');
+  };
+
+  const cancelInputModal = () => {
+    if (inputModal && inputModal.reject) inputModal.reject(new Error('Cancelled by user'));
+    setInputModal(null);
+    setInputModalValue('');
   };
 
   const parsePromptTokens = (text) => {
@@ -252,6 +292,9 @@ function App() {
                   window.alert(text); // fallback if bridge not ready
                   return Promise.resolve('');
                 }
+                if (typeof window.__pushShowInputPrompt === 'function') {
+                  return window.__pushShowInputPrompt(text);
+                }
                 return Promise.resolve(window.prompt(text));
               }
 
@@ -261,6 +304,8 @@ function App() {
               } else if (isPrompt) {
                 window.alert(text); // fallback if bridge not ready
                 callback('');
+              } else if (typeof window.__pushShowInputPrompt === 'function') {
+                window.__pushShowInputPrompt(text).then((v) => callback(v));
               } else {
                 callback(window.prompt(text));
               }
@@ -757,6 +802,148 @@ function App() {
                 }}
               >
                 I've funded these — continue
+              </button>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
+
+      {/* Styled input modal (replaces window.prompt for plain rl.question calls) */}
+      {inputModal && typeof document !== 'undefined' && createPortal(
+        <div
+          style={{
+            position: 'fixed',
+            top: 0, left: 0, right: 0, bottom: 0,
+            zIndex: 9999,
+            background: 'rgba(0,0,0,0.65)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: 20,
+            fontFamily: 'DM Sans, system-ui, sans-serif',
+          }}
+          onClick={(e) => { if (e.target === e.currentTarget) cancelInputModal(); }}
+        >
+          <div
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="push-input-title"
+            style={{
+              maxWidth: 520,
+              width: '100%',
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              background: '#131313',
+              color: '#e8e8e8',
+              borderRadius: 16,
+              border: '1px solid #2a2a2a',
+              padding: 28,
+              boxShadow: '0 24px 64px rgba(0,0,0,0.6)',
+            }}
+          >
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 10,
+              marginBottom: 18,
+              paddingBottom: 16,
+              borderBottom: '1px solid #2a2a2a',
+            }}>
+              <span style={{
+                display: 'inline-block',
+                width: 10, height: 10,
+                borderRadius: '50%',
+                background: 'rgb(213, 72, 236)',
+                boxShadow: '0 0 12px rgba(213, 72, 236,0.6)',
+              }} />
+              <h3 id="push-input-title" style={{
+                margin: 0, fontSize: 17, fontWeight: 600, color: '#fff', letterSpacing: '-0.01em',
+              }}>
+                Input required
+              </h3>
+            </div>
+            <div style={{
+              fontSize: 13.5,
+              lineHeight: 1.7,
+              color: '#d4d4d4',
+              whiteSpace: 'pre-wrap',
+              wordBreak: 'break-word',
+              fontFamily: 'Fira Code, ui-monospace, monospace',
+              marginBottom: 16,
+            }}>
+              {inputModal.text}
+            </div>
+            <input
+              ref={inputModalRef}
+              type="text"
+              value={inputModalValue}
+              onChange={(e) => setInputModalValue(e.target.value)}
+              onKeyDown={(e) => { if (e.key === 'Enter') submitInputModal(); }}
+              autoFocus
+              style={{
+                width: '100%',
+                background: '#1f1f1f',
+                color: '#fff',
+                border: '1px solid #333',
+                borderRadius: 10,
+                padding: '12px 14px',
+                fontSize: 14,
+                fontFamily: 'Fira Code, ui-monospace, monospace',
+                outline: 'none',
+                boxSizing: 'border-box',
+              }}
+              onFocus={(e) => { e.currentTarget.style.borderColor = '#d548ec'; }}
+              onBlur={(e) => { e.currentTarget.style.borderColor = '#333'; }}
+            />
+            <div style={{
+              display: 'flex',
+              justifyContent: 'flex-end',
+              alignItems: 'center',
+              marginTop: 20,
+              paddingTop: 16,
+              borderTop: '1px solid #2a2a2a',
+              gap: 12,
+            }}>
+              <span style={{ fontSize: 12, color: '#888', marginRight: 'auto' }}>
+                Enter to submit · Esc to cancel
+              </span>
+              <button
+                type="button"
+                onClick={cancelInputModal}
+                style={{
+                  background: 'transparent',
+                  color: '#aaa',
+                  border: '1px solid #333',
+                  borderRadius: 12,
+                  padding: '10px 16px',
+                  fontSize: 13,
+                  fontWeight: 500,
+                  cursor: 'pointer',
+                  fontFamily: 'DM Sans',
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="btn"
+                onClick={submitInputModal}
+                style={{
+                  background: 'rgb(213, 72, 236)',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 12,
+                  padding: '12px 22px',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  fontFamily: 'DM Sans',
+                }}
+              >
+                Submit
               </button>
             </div>
           </div>

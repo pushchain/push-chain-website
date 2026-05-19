@@ -84,14 +84,13 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | -- | ----- | ------- | ----- | -------- |
 | `SEND-TX-101` | Origin Chain Detected | Origin chain: `<chain>` — Address: `<address>` | INFO | `{ chain, address }` |
 | `SEND-TX-102-01` | Estimating Gas | Estimating and fetching gas limit, gas price for TX | INFO | `{ stage: 'estimating-gas' }` |
-| `SEND-TX-102-02` | Gas Estimated | Total execution cost: `<cost>` UPC | SUCCESS | `{ totalCost, currency }` |
 | `SEND-TX-103-01` | Resolving Universal Execution Account | Resolving UEA – computing address, checking deployment and balance | INFO | `{ stage: 'resolving-uea' }` |
 | `SEND-TX-103-02` | Universal Execution Account Resolved | UEA: `<address>`, Deployed: `<true/false>` | SUCCESS | `{ uea, deployed }` |
 | `SEND-TX-103-03` | Calculating Prepaid Deposit | Calculating required prepaid deposit (one-time >$1; refilled only when gas nears exhaustion) | INFO | null |
-| `SEND-TX-103-03-01` | Adjusting Prepaid Deposit to be >$1 | Required deposit below $1 minimum — padding to $1 floor | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-103-03-02` | Prepaid Deposit in range (>=$1 and &lt;$10) | Required deposit `${x}` within $1–$10 range — depositing as required | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-103-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | Required deposit exceeds $10 cap — splitting: $10 gas leg + `${overflow}` UPC overflow bridged as funds | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-103-04` | Prepaid Deposit Estimated | Prepaid deposit estimated | SUCCESS | `{ totalPCDeposit, totalDepositUSD }` |
+| `SEND-TX-103-03-01` | Adjusting Prepaid Deposit to be >$1 | Required deposit below $1 minimum — padding to $1 floor | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-103-03-02` | Prepaid Deposit in range (>=$1 and &lt;$10) | Required deposit `${x}` within $1–$10 range — depositing as required | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-103-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | Required deposit exceeds $10 cap — splitting: $10 gas leg + `${overflow}` UPC overflow bridged as funds | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-103-03-04` | Prepaid Deposit Estimated | Estimated prepaid deposit: $`<totalDepositUSD>` (`<totalPCDeposit>` UPC) | SUCCESS | `{ totalPCDeposit, totalDepositUSD, chain }` |
 | `SEND-TX-104-01` | Awaiting Transaction | Awaiting user transaction on origin chain | INFO | `{ stage: 'awaiting-transaction' }` |
 | `SEND-TX-104-02` | Awaiting Signature | Awaiting user signature for universal payload | INFO | `{ stage: 'awaiting-signature' }` |
 | `SEND-TX-104-03` | Verification Success | Verification completed via Transaction or Signature | SUCCESS | `{ stage: 'verified' }` |
@@ -108,7 +107,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-106-06` | Funds Credited on Push Chain | Funds credited: `<amount> <symbol>` | SUCCESS | `{ amount, symbol }` |
 | `SEND-TX-107` | Broadcasting to Push Chain | Sending tx to Push Chain... | INFO | `{ stage: 'broadcasting', destination: 'push-chain' }` |
 | `SEND-TX-199-01` | Push Chain Tx Success | Tx confirmed: `<txHash>` | SUCCESS | `{ txHash, response, receipt }` |
-| `SEND-TX-199-02` | Push Chain Tx Failed | `<error message>` | ERROR | `{ error }` |
+| `SEND-TX-199-02` | Push Chain Tx Failed | `<error message>` | ERROR | `{ error, decodedError? }` |
+| `SEND-TX-199-03` | Syncing State with Push Chain Timeout | Timed out waiting for relay to Push Chain | ERROR | `{ error: 'relay timeout', chain, elapsedMs }` |
+| `SEND-TX-199-99` | Intermediate Push Chain Tx Completed | Intermediate Push Chain tx confirmed: `<txHash>`, progressing to next phase | INFO | `{ txHash }` |
 
 **Route 2 → Execute on External Chain**
 
@@ -119,6 +120,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-202-02` | `<chain>` Chain Gas Estimated | Push gas: `<n>` UPC + UGPC relay: `<n>` UPC = `<total>` UPC | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
 | `SEND-TX-203-01` | Resolving `<chain>` Execution Account | Resolving UEA on Push Chain and CEA on `<chain>` | INFO | `{ stage: 'resolving-cea', chain }` |
 | `SEND-TX-203-02` | `<chain>` Execution Account Ready | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: `<true/false>` | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-203-03` | Pre-flight Balance Check | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (`<pathTag>`) | INFO when sufficient / WARNING when insufficient | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-203-04` | Insufficient UEA Balance | Shortfall `<n>` PC on `<pathTag>`. Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | WARNING when `enforceGasCheck` is false / ERROR when `enforceGasCheck` is true. | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-203-05` | SVM Native-Value Warn Threshold | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC for `<gasToken>` (`<pathTag>`). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |
 | `SEND-TX-204-01` | Awaiting Signature | Awaiting user signature for universal payload | INFO | `{ stage: 'awaiting-signature' }` |
 | `SEND-TX-204-02` | Signature Received | Universal payload signed — preparing broadcast | SUCCESS | `{ stage: 'signed' }` |
 | `SEND-TX-204-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
@@ -129,23 +133,23 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-299-01` | `<chain>` Tx Success | CEA executed on `<chain>` - tx: `<txHash>` | SUCCESS | `{ txHash, ...details }` |
 | `SEND-TX-299-02` | `<chain>` Tx Failed | `<errorMessage>` | ERROR | `{ error, chain }` |
 | `SEND-TX-299-03` | Syncing State with `<chain>` Timeout | Timed out waiting for UGPC relay to `<chain>` | ERROR | `{ error: 'relay timeout', chain, elapsedMs }` |
-| `SEND-TX-299-99` | `<chain>` Tx Completed | Intermediate `<chain>` tx confirmed: `<txHash>`, progressing to next phase | INFO | `{ chain, txHash }` |
+| `SEND-TX-299-99` | Intermediate `<chain>` Tx Completed | Intermediate `<chain>` tx confirmed: `<txHash>`, progressing to next phase | INFO | `{ chain, txHash }` |
 
 **Route 3 → Execute on Push Chain from CEA**
 
 | ID | Title | Message | Level | Response |
 | -- | ----- | ------- | ----- | -------- |
-| `SEND-TX-199-99-99` | Push Chain TX Completed | Intermediate Push Chain tx confirmed: `<txHash>`, progressing to next phase | INFO | `{ txHash }` |
 | `SEND-TX-301` | `<chain>`'s Executor Account Detected | Source chain: `<chain>` — CEA: `<ceaAddress>` | INFO | `{ chain, address }` |
 | `SEND-TX-302-01` | Estimating `<chain>` Gas | Querying Push Chain gas and UGPC relay fee | INFO | `{ stage: 'estimating-gas', chain }` |
 | `SEND-TX-302-02` | `<chain>` Gas Estimated | Push gas: `<n>` UPC + UGPC relay: `<n>` UPC = `<total>` UPC | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
-| `SEND-TX-302-03` | Calculating Prepaid Deposit | Calculating required prepaid deposit (one-time >$1; refilled only when gas nears exhaustion) | INFO | null |
-| `SEND-TX-302-03-01` | Adjusting Prepaid Deposit to be >$1 | Required deposit below $1 minimum — padding to $1 floor | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-302-03-02` | Prepaid Deposit in range (>=$1 and &lt;$10) | Required deposit `${x}` within $1–$10 range — depositing as required | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-302-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | Required deposit exceeds $10 cap — splitting: $10 gas leg + `${overflow}` UPC overflow bridged as funds | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD }` |
-| `SEND-TX-302-04` | Prepaid Deposit Estimated | Prepaid deposit estimated | SUCCESS | `{ totalPCDeposit, totalDepositUSD }` |
 | `SEND-TX-303-01` | Resolving Execution Accounts on Chains | Resolving UEA on Push Chain and CEA on `<chain>` | INFO | `{ stage: 'resolving-cea-uea', chain }` |
-| `SEND-TX-303-02` | Execution Accounts Resolved | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: true | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-303-02` | Execution Accounts Resolved | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: true | SUCCESS | `{ uea, cea, chain, deployed: true }` |
+| `SEND-TX-303-03-01` | Adjusting Prepaid Deposit to be >$1 | Required deposit below $1 minimum — padding to $1 floor | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-303-03-02` | Prepaid Deposit in range (>=$1 and &lt;$10) | Required deposit `${x}` within $1–$10 range — depositing as required | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-303-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | Required deposit exceeds $10 cap — splitting: $10 gas leg + `${overflow}` UPC overflow bridged as funds | INFO | `{ gasRequired, extraDepositPC, totalDepositUSD, chain }` |
+| `SEND-TX-303-04` | Checking Balance Requirements | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (`<pathTag>`) | INFO when sufficient / WARNING when insufficient based on `enforceGasCheck` | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex, enforceGasCheck, warningOnly, shortfall }` |
+| `SEND-TX-303-05` | Insufficient UEA Balance | Shortfall `<n>` PC on `<pathTag>`. Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | ERROR (only when `enforceGasCheck === true`) | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
+| `SEND-TX-303-06` | SVM Native-Value Warn Threshold | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC for `<gasToken>` (`<pathTag>`). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |
 | `SEND-TX-304-01` | Awaiting Signature | Awaiting user signature for universal payload | INFO | `{ stage: 'awaiting-signature' }` |
 | `SEND-TX-304-02` | Signature Received | Universal payload signed — preparing broadcast | SUCCESS | `{ stage: 'signed' }` |
 | `SEND-TX-304-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
@@ -159,6 +163,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-399-01` | Push Chain Inbound Tx Success | Inbound from `<chain>` confirmed · Push tx: `<txHash>` | SUCCESS | `{ chain, txHash, receipt }` |
 | `SEND-TX-399-02` | `<chain>` Tx Failed / Push Chain Tx Failed / Push Chain Inbound Tx Failed | `<errorMessage>` | ERROR | `{ error, phase, chain }` |
 | `SEND-TX-399-03` | `<chain>` Timeout / Push Chain Timeout / Push Chain Inbound Timeout | Timed out waiting for... | ERROR | `{ error, phase, chain, elapsedMs }` |
+| `SEND-TX-399-99` | Intermediate `<chain>` to Push Tx Completed | Intermediate `<chain>` to Push tx confirmed: `<txHash>`, progressing to next phase | INFO | `{ chain, txHash }` |
 
 **Executing multiple transactions (Send Multichain Transations)**
 
@@ -167,6 +172,9 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-001` | Multichain Transactions Initiated | `<hopCount>`-hop transaction — `<chains>` | INFO | `{ hopCount, chains }` |
 | `SEND-TX-002-01` | Starting Intermediate Transaction #`<n>`/`<total>` | Starting tx `<n>` of `<total>`: `<fromChain>` → `<toChain>` | INFO | `{ n, total, fromChain, toChain }` |
 | `SEND-TX-002-99-99` | Intermediate Transaction #`<n>`/`<total>` Complete | Tx `<n>` of `<total>` confirmed — proceeding to tx `<n+1>` | INFO | `{ n, total }` |
+| `SEND-TX-003-03` | Pre-flight Balance Check (cascade) | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (CASCADE) | INFO when sufficient / WARNING when insufficient | `{ required, available, sufficient, ueaAddress, pathTag: 'CASCADE', kind, burnToken, segmentIndex }` |
+| `SEND-TX-003-04` | Insufficient UEA Balance (cascade) | Shortfall `<n>` PC on CASCADE (segment `<segmentIndex>`). Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | WARNING when `enforceGasCheck` is false / ERROR when `enforceGasCheck` is true. | `{ required, available, shortfall, ueaAddress, pathTag: 'CASCADE', kind, burnToken, segmentIndex }` |
+| `SEND-TX-003-05` | SVM Native-Value Warn Threshold (cascade) | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC (CASCADE) | INFO | `{ quoted, threshold, gasToken, pathTag: 'CASCADE' }` |
 | `SEND-TX-999-01` | All Multichain Transactions Successful | `<hopCount>`-hop transaction confirmed across all chains | SUCCESS | `{ hopCount }` |
 | `SEND-TX-999-02` | Multichain Transactions Failed | Cascade failed at hop `<failedAt>` of `<total>`: `<error>` | ERROR | `{ failedAt, total, error }` |
 | `SEND-TX-999-03` | Multichain Transactions Timeout | Cascade timed out at hop `<failedAt>` of `<total>` | ERROR | `{ failedAt, total, error: 'cascade timeout' }` |
@@ -181,6 +189,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `tx.gasLimit`             | `BigInt`                                                                                               | `SDK Estimated` | Optional override for transaction gas limit. If omitted, the SDK estimates it.                                                                                                                                                                                                                       |
 | `tx.maxFeePerGas`         | `BigInt`                                                                                               | `SDK Estimated` | Optional override for max fee per gas. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                             |
 | `tx.maxPriorityFeePerGas` | `BigInt`                                                                                               | `SDK Estimated` | Optional override for priority fee. If omitted, the SDK estimates it when applicable.                                                                                                                                                                                                                |
+| `tx.options.enforceGasCheck` | `boolean`                                             | `false` | Controls how the SDK reacts when the pre-flight gas / balance check detects a shortfall on the UEA (native PC) or, for `funds` flows, the bridged PRC-20 balance.<br /><br />`false` will still emit a `WARNING`-level progress event and proceed. The transaction may still succeed (UEA gas is auto-refilled via fee locking; PRC-20 may settle on a follow-up leg).<br /><br />`true` will emit an `ERROR`-level progress event and throw `InsufficientUEABalanceError` before broadcast, leaving on-chain state untouched. Use this when you want pre-flight guarantees over best-effort retries. |
 | `tx.payGasWith`           | `{ token?: PushChain.CONSTANTS.PAYABLE.TOKEN; slippageBps?: number; minAmountOut?: bigint \| string }` | -               | Pay universal transaction fees using a supported token (e.g., `PushChain.CONSTANTS.PAYABLE.TOKEN.ETHEREUM_SEPOLIA.USDT`).<br />&nbsp;<br />Optional `slippageBps` (e.g., `100` = 1%) and `minAmountOut` (wei) let you control on-chain swap execution. <ConstantsDropdown variant="PAYABLE_TOKEN" /> |
 | `tx.deadline`             | `BigInt`                                                                                               | -               | Optional execution deadline for the transaction.                                                                                                                                                                                                                                                     |
 
@@ -403,54 +412,6 @@ For multicall, the `to` should always be zero address (`0x0000000000000000000000
 ## Live Playground
 
 <Tabs className="liveplaytab" groupId="send-universal-transaction-coding">
-  <TabItem value='ethers_v6_quick' label='Quickstart'>
-
-  <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
-
-{`
-// customPropHighlightRegexStart=universal\.sendTransaction
-// customPropHighlightRegexEnd=\\);
-// customPropGTagEvent=send_transaction_ethers_basic
-import { PushChain } from '@pushchain/core';
-import { ethers } from 'ethers';
-import \* as readline from 'node:readline/promises';
-
-    const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-
-    async function main() {
-      // Create a fresh wallet on Push Chain Testnet (Donut)
-      const wallet = ethers.Wallet.createRandom();
-      const provider = new ethers.JsonRpcProvider('https://evm.donut.rpc.push.org/');
-      const signer = wallet.connect(provider);
-      console.log('🔑 Push Chain account:', wallet.address);
-
-      // Initialize Push Chain SDK
-      const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-      const client = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
-      });
-
-      // Fund the wallet before sending
-      await rl.question(':::prompt:::Send at least 1 PC to: ' + wallet.address + ' on Push Chain Testnet (Donut), then press Enter.');
-
-      // Send a simple value transfer on Push Chain
-      const tx = await client.universal.sendTransaction({
-        to: '0x0000000000000000000000000000000000042101',
-        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC
-        progressHook: (p) => console.log('🔄 Progress:', p.title || p.id),
-      });
-
-      console.log('✅ TX Hash:', tx.hash);
-      console.log('⛓️  Chain ID:', tx.chainId);
-    }
-
-    await main().catch(console.error);
-`}
-
-  </NodeJSVirtualIDE>
-
-  </TabItem>
-
   <TabItem value='ethers_v6' label='Ethers (v6)'>
 
 <NodeJSVirtualIDE repo={{title: "Open in Github", url: "https://github.com/pushchain/push-chain-examples/tree/main/core-sdk-functions/send-universal-transaction"}}>
@@ -463,89 +424,66 @@ import { PushChain } from '@pushchain/core';
 import { ethers } from 'ethers';
 import \* as readline from 'node:readline/promises';
 
-    // ——— CONFIG ———
-    // RPC URL OF DIFFERENT CHAINS
+    // RPC endpoint controls the source chain the universal tx originates from.
+    // Swap this URL for any other supported chain's RPC (Push, BNB Testnet, Arbitrum
+    // Sepolia, Base Sepolia, etc.) and the UOA + fee-lock + bridge will all
+    // flip to that chain — no other code change needed.
     const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
-
-    // Dummy Address
     const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
-    // Enable User Input
     const rl = readline.createInterface({
       input: process.stdin,
-      output: process.stdout
+      output: process.stdout,
     });
 
-    // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
 
-      // Choose chain from which to send transaction
-      const chainMeta = await returnUserChainSelection();
+      // Route 1 origin can be EITHER an external chain wallet OR a native
+      // Push Chain wallet. Pick at runtime so you can see both flows.
+      const chain = await returnUserChainSelection();
 
-      // 1) Create a wallet (in production, you'd use your own wallet)
       const wallet = ethers.Wallet.createRandom();
-      console.log('📝 Created wallet:', wallet.address);
-
-      // 2) Set up provider and connect wallet
-      const provider = new ethers.JsonRpcProvider(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA);
+      const provider = new ethers.JsonRpcProvider(chain.rpc);
       const signer = wallet.connect(provider);
+      console.log('🔑 Source wallet on ' + chain.name + ':', wallet.address);
 
-      // 3) Convert to Universal Signer
-      console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(signer);
-
-      // 4) Initialize Push Chain Client
-      console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
-        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET
+        network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
+      console.log('📍 UEA on Push Chain:', pushChainClient.universal.account);
 
-      // 5) Prepare transaction parameters
-      const txParams = {
-        to: RECIPIENT,
-        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC (wei)
-      };
+      await rl.question(':::prompt:::Send at least ' + chain.fundingAsk + ' to ' + wallet.address + ' on ' + chain.name + ', then press Enter.' + chain.faucetHint);
 
-      // wait for user to send funds first
-      const fundingAmount = chainMeta.id === '1' ? '5 PC' : '0.005 ETH';
-      const faucetHint = chainMeta.id === '1' ? '' : 'Sepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia';
-      await rl.question(':::prompt:::Send at least ' + fundingAmount + ' to: ' + wallet.address + ' on ' + chainMeta.name + ', then press Enter.' + faucetHint);
-
-      // 6) Send universal transaction
-      console.log('📤 Sending transaction to:', RECIPIENT);
-
+      console.log('📤 Sending universal transaction to', RECIPIENT);
       try {
-        // Note: This would fail in playground without funds
-        // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction({
-          ...txParams,
-          progressHook: (p) => console.log('🔄 Progress:', p.title || p.id),
+          to: RECIPIENT,
+          value: PushChain.utils.helpers.parseUnits('0.001', 18),
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('✅ Transaction sent! Tx:', JSON.stringify(txResponse));
+        console.log('✅ Push tx hash:', txResponse.hash);
+        await txResponse.wait();
+        console.log('🎯 Confirmed on Push Chain');
       } catch (error) {
-        console.error('❌ Transaction failed:', error.message);
-        // In playground, this will fail without funds
-        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+        console.error('❌ Failed:', error.message);
       }
+    }
+
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Select the source chain (1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please pick 1 or 2.');
+        process.exit(0);
+      }
+      return selection === '1'
+        ? { id: '1', name: 'PUSH_TESTNET_DONUT', rpc: RPC_PUSH, fundingAsk: '0.1 PC', faucetHint: '' }
+        : { id: '2', name: 'ETHEREUM_SEPOLIA',  rpc: RPC_SEPOLIA, fundingAsk: '0.005 ETH', faucetHint: '\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia' };
     }
 
     await main().catch(console.error);
-
-    // --- HELPER FUNCTIONS ---
-    async function returnUserChainSelection() {
-      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
-
-      if (selection !== '1' && selection !== '2') {
-        console.log('Invalid selection. Please select 1 or 2.');
-        process.exit(0);
-      }
-
-      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-
-      return {id: selection, name: name};
-    }
 
 `}
 
@@ -562,95 +500,85 @@ import \* as readline from 'node:readline/promises';
 // customPropHighlightRegexEnd=\\);
 // customPropGTagEvent=send_transaction_viem_basic
 import { PushChain } from '@pushchain/core';
-import { createWalletClient, http } from 'viem';
+import { createWalletClient, defineChain, http } from 'viem';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
+import { sepolia } from 'viem/chains';
 import \* as readline from 'node:readline/promises';
 
-    // Dummy Address
-    const RECIPIENT = '0x0000000000000000000000000000000000042101';
-
+    // RPC endpoint controls the source chain the universal tx originates from.
+    // Swap this URL for any other supported chain's RPC (Push, BNB Testnet, Arbitrum
+    // Sepolia, Base Sepolia, etc.) and the UOA + fee-lock + bridge will all
+    // flip to that chain — no other code change needed.
     const RPC_PUSH = 'https://evm.donut.rpc.push.org/';
     const RPC_SEPOLIA = 'https://ethereum-sepolia-rpc.publicnode.com';
+    const RECIPIENT = '0x0000000000000000000000000000000000042101';
 
-    // Enable User Input
+    // viem's built-in chain registry doesn't ship Push Chain Donut yet,
+    // so define it inline with the chain id the SDK uses (42101).
+    const pushTestnetDonut = defineChain({
+      id: 42101,
+      name: 'Push Chain Testnet Donut',
+      nativeCurrency: { name: 'Push', symbol: 'PC', decimals: 18 },
+      rpcUrls: { default: { http: [RPC_PUSH] } },
+    });
+
     const rl = readline.createInterface({
       input: process.stdin,
       output: process.stdout,
     });
 
-    // ⭐️ MAIN FUNCTION ⭐️
     async function main() {
       console.log('🚀 Initializing Universal Transaction Example');
 
-      // Choose chain from which to send transaction
-      const chainMeta = await returnUserChainSelection();
+      // Route 1 origin can be EITHER an external chain wallet OR a native
+      // Push Chain wallet. Pick at runtime so you can see both flows.
+      const chain = await returnUserChainSelection();
 
-      // 1) Create a wallet (in production, you'd use your own wallet)
       const privateKey = generatePrivateKey();
       const account = privateKeyToAccount(privateKey);
-      console.log('🔑 Got account: ', account.address);
+      console.log('🔑 Source wallet on ' + chain.name + ':', account.address);
 
-      // 2) Create viem client
       const client = createWalletClient({
         account,
-        transport: http(chainMeta.id === '1' ? RPC_PUSH : RPC_SEPOLIA),
+        chain: chain.chain,
+        transport: http(chain.rpc),
       });
 
-      // 3) Convert to Universal Signer
-      console.log('🔄 Converting to Universal Signer...');
       const universalSigner = await PushChain.utils.signer.toUniversal(client);
-
-      // 4) Initialize Push Chain Client
-      console.log('🔗 Initializing Push Chain Client...');
       const pushChainClient = await PushChain.initialize(universalSigner, {
         network: PushChain.CONSTANTS.PUSH_NETWORK.TESTNET,
       });
+      console.log('📍 UEA on Push Chain:', pushChainClient.universal.account);
 
-      // 5) Prepare transaction parameters
-      const txParams = {
-        to: RECIPIENT,
-        value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
-        // data: '0x...', // For contract interactions - hex encoded
-      };
+      await rl.question(':::prompt:::Send at least ' + chain.fundingAsk + ' to ' + account.address + ' on ' + chain.name + ', then press Enter.' + chain.faucetHint);
 
-      // wait for user to send funds first
-      const fundingAmount = chainMeta.id === '1' ? '5 PC' : '0.005 ETH';
-      const faucetHint = chainMeta.id === '1' ? '' : 'Sepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia';
-      await rl.question(':::prompt:::Send at least ' + fundingAmount + ' to: ' + account.address + ' on ' + chainMeta.name + ', then press Enter.' + faucetHint);
-
-      // 6) Send universal transaction
-      console.log('📤 Sending transaction to:', RECIPIENT);
-
+      console.log('📤 Sending universal transaction to', RECIPIENT);
       try {
-        // Note: This would fail in playground without funds
-        // In production, ensure wallet has funds
         const txResponse = await pushChainClient.universal.sendTransaction({
-          ...txParams,
-          progressHook: (p) => console.log('🔄 Progress:', p.title || p.id),
+          to: RECIPIENT,
+          value: PushChain.utils.helpers.parseUnits('0.001', 18),
+          progressHook: (p) => console.log('[' + p.id + '] ' + p.level + ' — ' + (p.title || '')),
         });
-        console.log('✅ Transaction sent! Tx Response:', JSON.stringify(txResponse));
+        console.log('✅ Push tx hash:', txResponse.hash);
+        await txResponse.wait();
+        console.log('🎯 Confirmed on Push Chain');
       } catch (error) {
-        console.error('❌ Transaction failed:', error.message);
-        // In playground, this will fail without funds
-        console.log('Note: In playground, this might fail without funds. Ensure your wallet has PC tokens.');
+        console.error('❌ Failed:', error.message);
       }
+    }
+
+    async function returnUserChainSelection() {
+      const selection = await rl.question('Select the source chain (1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
+      if (selection !== '1' && selection !== '2') {
+        console.log('Invalid selection. Please pick 1 or 2.');
+        process.exit(0);
+      }
+      return selection === '1'
+        ? { id: '1', name: 'PUSH_TESTNET_DONUT', chain: pushTestnetDonut, rpc: RPC_PUSH, fundingAsk: '0.1 PC', faucetHint: '' }
+        : { id: '2', name: 'ETHEREUM_SEPOLIA',  chain: sepolia,           rpc: RPC_SEPOLIA, fundingAsk: '0.005 ETH', faucetHint: '\\\\nSepolia faucet: https://cloud.google.com/application/web3/faucet/ethereum/sepolia' };
     }
 
     await main().catch(console.error);
-
-    // --- HELPER FUNCTIONS ---
-    async function returnUserChainSelection() {
-      const selection = await rl.question('Please select the chain(1 for Push Testnet Donut, 2 for Ethereum Sepolia): ');
-
-      if (selection !== '1' && selection !== '2') {
-        console.log('Invalid selection. Please select 1 or 2.');
-        process.exit(0);
-      }
-
-      const name = selection === '1' ? 'PUSH_TESTNET_DONUT' : 'ETHEREUM_SEPOLIA';
-
-      return { id: selection, name: name };
-    }
 
 `}
 
@@ -745,43 +673,44 @@ import \* as readline from 'node:readline/promises';
     // customPropHighlightRegexEnd=</PushUniversalWalletProvider>
     // customPropGTagEvent=send_transaction_ui_kit
     // customPropMinimized='false'
-    // Import necessary components from @pushchain/ui-kit
+    import { useState } from 'react';
     import {
       PushUniversalWalletProvider,
       PushUniversalAccountButton,
       usePushWalletContext,
       usePushChainClient,
+      usePushChain,
       PushUI,
     } from '@pushchain/ui-kit';
 
     function App() {
-      // Define Wallet Config
       const walletConfig = {
         network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
       };
 
       function Component() {
-        const [txnHash, setTxnHash] = useState<string | null>(null);
+        const [txnHash, setTxnHash] = useState(null);
         const [isLoading, setIsLoading] = useState(false);
 
         const { connectionStatus } = usePushWalletContext();
         const { pushChainClient } = usePushChainClient();
+        // ui-kit re-exports the core PushChain class through this hook, so
+        // you do NOT need to import @pushchain/core separately.
+        const { PushChain } = usePushChain();
 
         const handleSendTransaction = async () => {
-          if (pushChainClient) {
-            setIsLoading(true);
-            try {
-              const res = await pushChainClient.universal.sendTransaction({
-                to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
-                value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
-                data: '0x',
-              });
-              setTxnHash(res.hash);
-            } catch (err) {
-              console.log(err);
-            }  finally {
-              setIsLoading(false);
-            }
+          if (!pushChainClient || !PushChain) return;
+          setIsLoading(true);
+          try {
+            const res = await pushChainClient.universal.sendTransaction({
+              to: '0xFaE3594C68EDFc2A61b7527164BDAe80bC302108',
+              value: PushChain.utils.helpers.parseUnits('0.001', 18), // 0.001 PC in uPC
+            });
+            setTxnHash(res.hash);
+          } catch (err) {
+            console.log(err);
+          } finally {
+            setIsLoading(false);
           }
         };
 
@@ -789,33 +718,34 @@ import \* as readline from 'node:readline/promises';
           <div>
             <PushUniversalAccountButton />
 
-            {connectionStatus == PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED &&
+            {connectionStatus === PushUI.CONSTANTS.CONNECTION.STATUS.CONNECTED && (
               <button
                 disabled={isLoading}
                 style={{
-                    background: 'transparent',
-                    border: '1px solid',
-                    borderRadius: '10px',
-                    padding: '12px 18px',
-                    cursor: 'pointer',
-                    margin: '8px 0',
+                  background: 'transparent',
+                  border: '1px solid',
+                  borderRadius: '10px',
+                  padding: '12px 18px',
+                  cursor: 'pointer',
+                  margin: '8px 0',
                 }}
                 onClick={handleSendTransaction}
               >
-                Send Transaction
+                {isLoading ? 'Sending…' : 'Send Transaction'}
               </button>
-            }
+            )}
+
             {txnHash && (
-                <>
-                    <p>Txn Hash: {txnHash}</p>
-                    <a
-                        href={pushChainClient.explorer.getTransactionUrl(txnHash)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        View in Explorer
-                    </a>
-                </>
+              <>
+                <p>Txn Hash: {txnHash}</p>
+                <a
+                  href={pushChainClient.explorer.getTransactionUrl(txnHash)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View in Explorer
+                </a>
+              </>
             )}
           </div>
         );

@@ -168,9 +168,15 @@ export async function checkAgentLinks({ http = true, json = false } = {}) {
   const tasks = refs.map((ref) => async () => {
     const { url } = ref;
 
+    // Strip any `#anchor` fragment before disk-existence checks — fragments
+    // are addressing intra-file sections and have no bearing on whether the
+    // file exists on disk. `?query` strings get the same treatment in case
+    // any agent doc starts emitting them.
+    const filePart = url.split('#')[0].split('?')[0];
+
     // Relative agent path → disk
-    if (url.startsWith('agents/')) {
-      const target = agentPathToFile(url);
+    if (filePart.startsWith('agents/')) {
+      const target = agentPathToFile(filePart);
       const exists = await fileExists(target);
       (exists ? results.ok : results.broken).push({
         ...ref,
@@ -181,8 +187,8 @@ export async function checkAgentLinks({ http = true, json = false } = {}) {
     }
 
     // push.org/agents/ → disk
-    if (url.startsWith(`${BASE_URL}/agents/`)) {
-      const target = pushOrgAgentsToFile(url);
+    if (filePart.startsWith(`${BASE_URL}/agents/`)) {
+      const target = pushOrgAgentsToFile(filePart);
       const exists = await fileExists(target);
       (exists ? results.ok : results.broken).push({
         ...ref,
@@ -193,8 +199,8 @@ export async function checkAgentLinks({ http = true, json = false } = {}) {
     }
 
     // push.org/llms* → disk
-    if (url.startsWith(`${BASE_URL}/llms`)) {
-      const file = path.join(STATIC_DIR, url.replace(`${BASE_URL}/`, ''));
+    if (filePart.startsWith(`${BASE_URL}/llms`)) {
+      const file = path.join(STATIC_DIR, filePart.replace(`${BASE_URL}/`, ''));
       const exists = await fileExists(file);
       (exists ? results.ok : results.broken).push({
         ...ref,

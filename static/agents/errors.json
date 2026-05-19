@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.0.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Catalog of Push Chain SDK error conditions with detection signals, user-visible symptoms, machine recovery steps, and escalation guidance. Cross-reference with agents/recovery-playbook.md for step-by-step procedures.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .errors[]. Change errors.json[N] → errors.json.errors[N].",
@@ -82,6 +82,23 @@
         "Suggest user add funds to origin wallet"
       ],
       "escalation": "No escalation needed. User action required to fund wallet.",
+      "confidence": "documented"
+    },
+    {
+      "id": "insufficient_uea_balance",
+      "name": "Insufficient UEA Balance (pre-flight)",
+      "description": "Pre-flight check detected that the UEA cannot cover the required outbound cost (native PC or burn-token PRC-20), and the caller opted into strict enforcement via `tx.options.enforceGasCheck = true`.",
+      "likely_cause": "The caller passed `options: { enforceGasCheck: true }` to `sendTransaction` or `prepareTransaction` on a route where the UEA's balance is below the SDK-computed `requiredFunds` (native PC) or below the PRC-20 amount the outbound leg needs to burn. With `enforceGasCheck` left at its default of `false`, the SDK only emits a `WARNING`-level progress event and proceeds.",
+      "detection_signal": "Error name is `InsufficientUEABalanceError`. The error carries `required`, `available`, `shortfall`, `ueaAddress`, `pathTag` (`R2_EVM` / `R2_SVM` / `R3_EVM` / `R3_SVM` / `CASCADE`), and `reason` (`NATIVE` or `PRC20`); `PRC20` shortfalls also include `burnToken`. Cascade failures additionally expose `segmentIndex`. Progress hook fires `SEND-TX-103-04`-class events with `level: 'ERROR'` and `enforceGasCheck: true` in the response.",
+      "user_visible_symptom": "Transaction never broadcasts. Error message reads `InsufficientUEABalance [<pathTag>:<reason>]: required <X> vs available <Y> on UEA <addr>`. No state change on Push Chain.",
+      "machine_recovery": [
+        "Surface `error.shortfall` to the user so they know exactly how much more native PC or PRC-20 is needed.",
+        "If `reason === 'NATIVE'`, top up the UEA's PC balance (faucet on testnet, or a small native transfer) and retry.",
+        "If `reason === 'PRC20'`, bridge or transfer additional `burnToken` into the UEA before retrying, or reduce the outbound `funds.amount`.",
+        "For one-off best-effort flows, drop `options.enforceGasCheck` (or set it to `false`) so the SDK degrades to a warning and lets the existing fee-locking / refill paths recover.",
+        "For cascades, inspect `error.segmentIndex` to identify the failing hop; consider splitting the cascade or pre-funding the UEA before the cascade starts."
+      ],
+      "escalation": "Not a bug; the error is the explicit signal that the caller asked for strict pre-flight. Only escalate if the reported `required` does not match what `prepareTransaction.estimatedGas` predicted, which would indicate a fee-estimation regression.",
       "confidence": "documented"
     },
     {

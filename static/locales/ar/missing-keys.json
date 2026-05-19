@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:07:36.833Z",
+  "lastUpdated": "2026-05-18T06:15:19.235Z",
   "keys": {
     "global.site-name": {
       "value": "بلوشكين — Universal L1 for Apps",
@@ -552,9 +552,9 @@
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
-      "value": "### ما يمكن بناؤه على Push Chain؟\n\nPush Chain带来无缝互操作性，统一所有L1s、L2s和L3s，从而成为创新和互操作的游乐场。您可以构建现有的Web3用例，例如：\n\n![Push Chain的主要用例](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\n或改进Web3并进行创新：\n\n![Push Chain的消费者用例](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\n或查看一些流行的应用示例，并从中获得灵感：\n\n![在Push Chain上的人气应用](/assets/website/chain/knowledge/tokenomics/popularapps.webp)",
+      "value": "### ما يمكن بناؤه على Push Chain؟\n\nPush Chain brings تآزرية كاملة و تجمع كل L1s, L2s, & L3s therefore هو مهيأ ليكون ملعبًا للابتكار والتآزر. يمكنك بناء استخدامات الويب3 الحالية مثل:\n\n![الاستخدامات الرئيسية لـ Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nأو تحسين الويب3 وإنشاء ابتكارات:\n\n![استخدامات المستهلكين لـ Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\n أو انظر بعض الأمثلة الشعبية للأقتراب من الإلهام:\n\n![مثلة تطبيقات شعبية على Push Chain](/assets/website/chain/knowledge/tokenomics/popularapps.webp)",
       "englishChecksum": "cf90790b81cb182728dc63d612a76a0d",
-      "lastUpdated": "2026-02-25T23:42:47.924Z"
+      "lastUpdated": "2026-05-17T19:21:25.441Z"
     },
     "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
       "value": "## Why Push Chain Exists\n\nToday's Web3 ecosystem is heavily fragmented and overly complex.\n\nDevelopers redeploy smart contracts across multiple chains, users have to manually bridge tokens or switch wallets, and teams spend months maintaining chain-specific codebases and audits.\n\nEach new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.\n\n**Push Chain eliminates this.**",
@@ -704,11 +704,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "كن أول من يعلم عندما يبدأ اختبار شبكة Push Chain. انضم إلى قائمتنا البريدية للحصول على تحديثات حصرية.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1552,9 +1547,9 @@
       "lastUpdated": "2025-11-14T19:27:06.033Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "اكتشف التطبيقات والشركاء والمبكرين الذين يعملون على بناء عصر عالمي جديد في maîtresse Chain's Donut Testnet.",
+      "value": "اكتشف التطبيقات والمشاركين واليمهينيين الذين يبنيون عصرًا جديدًا من التجارب العالمية على شبكة Push ChainTestnet دونات.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:43:59.447Z"
+      "lastUpdated": "2026-05-17T19:23:00.778Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "إغلاق الإعلان",
@@ -1581,9 +1576,9 @@
       "lastUpdated": "2025-11-14T20:15:34.955Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling": {
-      "value": "### كيف سيحافظ Push Chain على الديكينترالية أثناء تنمية الخوادم؟\n\nأكشفهنا Devnet كيف سنؤشر باستخدام الشرد الديناميكي وتنفيذ موازي - مما يرفع من معدل التحويل دون إضرار بالديكينترالية.\n\nفي اختبار الشبكة، كنا نركز على التكامل الكامل مع السلسلة التي تجرى على [CometBFT](https://github.com/cometbft/cometbft) - محرك مصامٍ لخطأ بيزنطي. mencapai شبكة نهائية في أقل من ثانية ويمكنها التعامل مع 20,000 تراكشنات كل دقيقة.\n\nهذا المفهوم هو مجرد بداية. كما نخطط لإطلاق تحسينات أخرى في مراحل لاحقة، نؤمن Push Chain سможونconiity of universal applications securely and without centralization.\n\n---",
+      "value": "### كيف سيحافظ Push Chain على اللامركزية أثناء التوسعة؟\n\nأشهاردنا في DevnetComment how we'll scale using dynamic sharding and parallel execution—boosting throughput without compromising decentralization.\n\nIn testnet, we focused on full stack interop with the chain running on [CometBFT](https://github.com/cometbft/cometbft), a battle-tested, Byzantine-fault-tolerant engine. The network achieved sub-second finality and has the ability to handle up to [20k transactions per minute](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nThis proof of concept is just the beginning. As we roll out further scaling optimizations in later phases, we're confident Push Chain can meet the demands of universal applications—securely and without centralization.\n\n---",
       "englishChecksum": "e3882a526d7c41194cbc04a7399040cb",
-      "lastUpdated": "2026-02-25T23:44:41.491Z"
+      "lastUpdated": "2026-05-17T19:22:58.616Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
       "value": "كل شيء تحتاج إليه مع SDK Push Chain للإنشاء الخاص بك التطبيق العالمي",
@@ -1591,19 +1586,19 @@
       "lastUpdated": "2026-02-25T23:43:55.504Z"
     },
     "components.short-faq-snippet.qnas.qna3.answer": {
-      "value": "<1><2>لا.</2></1><1><2>حفظ المحفظة لديك.</2> استخدم المحفظة التي تمتلكها بالفعل - لا حاجة لمحفظة أو حساب جديد.</1><1><2>دفع بما في حوزتك.</2> يمكن دفع الرسوم باستخدام العناوين التي تمتلكها على سلسلةك الرئيسية؛ نمرر تحويلات الخلفية.</1><1><2>لا تبديل الشبكة.</2> ابق على سلسلةك الرئيسية - لا حاجة لتبديل الجسور merely for obtaining a gas token.</1><1><2>غير مودعة.</2> signing all actions; Push does not hold your keys.</1><1><2>تحت البرجيس.</2> يفرز الشبكة الرسوم في $PC تلقائيًا - لا داعي إلى مناولة ذلك.</1>",
+      "value": "<1><2>لا.</2></1><1><2>أحفظ حافظة نقودك.</2> استخدم الحافظة التي لديك بالفعل - لا حاجة لحافظة أو حساب جديد.</1><1><2>دفع بما تمتلكه.</2> يمكن دفع الرسوم في bentuk Coins تفضل بها على منصة المبتدئين، ونحن نختص في التحويل behind the scenes.</1><1><2>لا الانتقال بين الشبكات.</2> ابق على منصة المبتدئين - لا الحاجة لبريج للتسوق فقط للحصول على token الغاز.</1><1><2>غير مخزن.</2> يوقع كل فعل - Push لا يحتفظ بمفاتيحك.</1><1><2>الآلي.</2> تنفق الشبكة في $PC تيرا تلقائيًا - ليس عليك لتخزينه.</1>",
       "englishChecksum": "861159a0d74b54a38d9321254f6f8043",
-      "lastUpdated": "2026-02-25T23:44:06.971Z"
+      "lastUpdated": "2026-05-17T19:22:32.301Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>أجوبة قصيرة</2>: «بيش» هو المكان الذي يعمل فيه تطبيقك. الجسور/التواصل مجرد حركة فئات أو رسائل بين سلاسل، مما ي复ق كل شيء للمستخدمين ومعلمين.</1><1><2>منزل واحد ضد العديد من التجزئة.</2> مع الجسور/التواصل، يتم نشره حسب السلسلة ومزامنة عبر الرسائل. في بيش، يتم النشر مرة واحدة؛ الجميع يضرب نفس العقد و«حالة مشتركة».</1><1><2>لا الأصول المحشوة أو جسور إلزامية.</2> يظل المستخدمون على سلسلةهم المنزلية، وييد مع ما لديهم بالفعل; نحن نتحكم في التوجيه وتحويل الرسوم من تحت الصندوق.</1><1><2>تحديد هويّة موحدة وتيّار.</2> نقبل تسبقات أي محفظة/سلسلة وتخصّها لبرجاء المستخدم نفسه على بيش — غير مستودع.</1><1><2>أجزاء أقل.</2> لا رقص إذنا الجسر، لا بحث عن غاز-فئة، لا عقود لاصقة للسماح في مزامنة.</1><1><2>الجسور تintroduce تعقيد. التعاونية من بيش تحلها.</2> تحتاج الجسور إلى جهد هندسي معقد، وقت، تكاليف تدقيق ودعم البنية التحتية إضافية. التعاونية من بيش simply just worked as تطبيقيك natively يرثها.</1><1>النتائج: تطبيقات أبسط، المصدر الواحد للحقيقة، وUX تبدو كأنها سلسلة واحدة — حتى عندما لا يكون المستخدمون عليها.</1>",
+      "value": "<1><2>الجواب القصير</2>: هو المكان الذي يعمل التطبيق. الجسور/التعليمات فقط تنقل التوكين أو الرسائل بين السلاسل مما ي complicates كل شيء للمستخدمين والمطورين.</1><1><2>منزل واحد مقابل العديد من النسخ.</2> مع الجسور/التعليمات، تشرع حسب السلسة وتناسق بواسطة الرسائل. على Push شركت واحدة؛ الجميع يضرب نفس العقدة وشارك في الحالة.</1><1><2> senza wrapped assets أو موافقة جسرية.</2> يظل المستخدمون على سلة المنزل ويستخدم ما يمتلكونه بالفعل ؛ نحن نتعامل مع التوجيه وتحويل النفقات تحتويذ.</1><1><2>الكيان الموحد والمصادقة.</2> نقبل التوقيعات من أي محفظة/سلسلة ونعزها إلى نفس المستخدم على Push — بدون سيسودية.</1><1><2>أجزاء أقل تتحرك.</2> دون رقصة موافقة عبر السلسلة، دون غاز-توكين بحث، بدون عقود لاصقة للحفاظ عليها.</1><1><2>الجسور تثير تعقيد. تداول السلاسل حلها.</2> الجسور تتطلب جهودًا هندسية معقدة، زمن، تكلفة مراجعة، وكيان إضافي. تداول السلاسل يعمل ببساطة مثل التطبيق ينشئ فيوها.</1><1>النتيجة: تطبيقات أكثر بساطة، مصدر واحد للحقيقة ، وأجواء UX تشعر كأنها سلسة — حتى عندما لا يكون المستخدمون.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-02-25T23:44:17.448Z"
+      "lastUpdated": "2026-05-17T19:22:41.810Z"
     },
     "components.short-support-snippet.qnas.qna4.answer": {
-      "value": "<1><2>تضاربات التطبيق:</2> ارفع بطاقة <3>دعم</3> أو ابلغ في <4>ديزكورد</4> مع خطوات التكرار.</1><1><2>سأئب مخاوف أمنية:</2> بريد إلكتروني إلى <5>security@push.org</5>. يرجى تجنب الإفصاح العام حتى نؤكد حلًا.</1>",
+      "value": "<1><2>بروجات التطبيق:</2> أرسل تيكيت <3>دعم</3> أو شارك في <4>ديسكورد</4> مع خطوات التكرير.</1><1><2>أيجابيات الأمن:</2> بريد إلى <5>security@push.org</5>. يرجى تجنب الكشف العام حتى نؤكد الصيانة.</1>",
       "englishChecksum": "e3864f1b6ec8ea7832ffe6c8aeb8af09",
-      "lastUpdated": "2026-02-25T23:44:21.088Z"
+      "lastUpdated": "2026-05-17T19:22:44.989Z"
     },
     "pages.knowledge.testnet.seo.description": {
       "value": "دونوت هو شبكة الاختبار العام لكتل الشبيكة. اكتشف كيفية الاتصال، وإنشاء تطبيقات عالمية، واستخدام الصخرة، وسير العملاقة.",
@@ -1949,11 +1944,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:26:28.309Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "تطبيق الآن",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:01.897Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "إغلاق إشعار شريحة",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1968,16 +1958,6 @@
       "value": "toast notification من Push Chain",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T00:58:08.368Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "تقدم الآن",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:09.390Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "تقدم الآن",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:11.990Z"
     },
     "components.blog.more-posts.title": {
       "value": "أكثر من بلوكشين الدفع",
@@ -2065,9 +2045,9 @@
       "lastUpdated": "2026-02-08T06:00:36.842Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "هل تريد الانضمام إلى مستندات التطبيق العالمية الأسرع التنامي وتعدد عدد مستخدميك بـ 10 مرة؟",
+      "value": "هل تريد الانضمام إلى نظام التطبيقات العالمي الأسرع نموًا وتضاعف مستخدميك 10 مرات؟",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-25T23:44:01.131Z"
+      "lastUpdated": "2026-05-17T19:22:26.355Z"
     },
     "components.ecosystem-apps-partners.apps.hodl-fun.description": {
       "value": "إنشاء وإطلاق بنوك ERC-20",
@@ -2098,42 +2078,41 @@
       "lastUpdated": "2026-02-25T23:44:33.333Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "استكشف التطبيقات الأساسية لشبكة الاختبار",
+      "value": "قم بتحليل التطبيقات الأساسية في الشبكة التجريبية",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-02-25T23:44:34.730Z"
+      "lastUpdated": "2026-05-17T19:22:49.237Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "بَلوكشِين دَارْعَبَتِ عَدْدٍ تَعْلِيْمِ تَكَنُّوجِهِ لِتَحْوِيلِ مُلْتَزَمِ التَّوَادُلِ مِن خَصَابٍ إِلَى هَذِهِ الحَسَابِ إِلَى يَالِبَيْنِ مِلْليَار تَعَلَى تَوكِن، وَنَتِي سَائِسَة مِليَار تَوَكْنِند. هَذَا التَّعْدِيل يَجْبَرُ عَظَامَةً صَنْفِيَّة مِن دَايَسٍ طَبِيعِيَّة مِن خَصَابِ التَّسْتِنِيت، وَيَضْمَنُ السَّلَقَكَ لِلْمَينِتْنِيد.",
+      "value": "تم تنفيذ proposal إعادة توازن التوكين من قبل Push Chain لتخفيض إجمالي supply توكين PC من 75T+ إلى حوالي مليار 10 توكين. يعد هذا التحديث شغلا لنوع من الديون الفنية منذ أيامearly من testnet ويعمل على الإعداد السلسلة mainnet مثل البيئة.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-25T23:43:04.280Z"
+      "lastUpdated": "2026-05-17T19:21:37.697Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "في أيام Push Chain testnet المبكرة، لم يكن هناك أي عملية احتراق وتوليد لـ PC_tokens. مما أدى إلى حساب أسعار مرتفعة بشكل مفرط للأعمال التجارية العالمية ومكن عددًا محدودًا من مالكي التوكين من جمع إمدادات هائلة من التوكين (تصل إلى تريليونات). وهذا créeد اقتصاد توكين غير متوازن كان يجب تصحيحه قبل إطلاق شبكة رئيسي.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-02-25T23:43:09.334Z"
+      "lastUpdated": "2026-05-17T19:21:42.996Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-25T23:44:46.106Z"
+      "lastUpdated": "2026-05-17T19:21:47.847Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
+      "value": "- أعلى 1,950 محفظة تم تعويضها ليمتد إلى 1,100-2,000 PC التوكين",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-25T23:43:40.805Z"
+      "lastUpdated": "2026-05-17T19:21:51.304Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "لم يتم إخبار المستخدمين سلفاً لتجنب تداول الممثلين الشريرين لتبديل الرموز إلى مقابض أخرى قبل التعادل. وهذا القياس الأمنيensuredتأكد من تكامل عملية التوزيع وتوقفت على تضييع النظام.",
+      "value": "لم يتم إخطار المستخدمين سلفًا لمنع الممثلون الماكرين من توزيع التوكينات إلى محفظة أخرى قبل إعادة التوزيع. وتأكد هذه التدابير الأمنية من سلامة عملية إعادة التوزيع ومنع تلاعب النظام.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-25T23:43:44.622Z"
+      "lastUpdated": "2026-05-17T19:21:56.715Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "الترتيب هو نهج في مرحلتين. الآن يتمجمع السكك إلى محفظة تحت سيطرة فريق وتكون عملية الحرق قريبًا.",
+      "value": "الترتيب هو مزيج من مرحلتين. والآن يتم جمع التوكين إلى محفظة under الفريق الإختصار، وسيتم حرقها قريبًا.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-26T00:07:36.833Z"
+      "lastUpdated": "2026-05-17T19:22:00.362Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**للأكثرية (99.83%):** هذه التغيرات لن تتأثر بك. وستبقي توازن المحفظة كما هو.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-02-25T23:43:50.849Z"
+      "lastUpdated": "2026-05-17T19:22:05.251Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "د möjفات — مفاهيم و آركيكتور",
@@ -2264,6 +2243,813 @@
       "value": "## روابط سريعة\n\n🧠 [قاعدة المعرفة](/knowledge) — تعلم العمارة والتصميم.\n\n🌳 [تطبيق نظام الإيكوسستم](/ecosystem) — استكشف التطبيقات الشاملة الممنوحة على Push Chain.\n\n**🪩 تطبيقات شعبية لإضافتها**\n\n&nbsp;&nbsp;&nbsp;&nbsp;[بالسى](https://ballsy.push.org/) — تجربة نفس منطق التطبيق يعملون بشكل سلس عبر سلاسل.\n\n&nbsp;&nbsp;&nbsp;&nbsp;[سيميليت](https://simulate.push.org/) — اختبار ودراسة التفاعلات بين السلاسل.\n\n📖 [وثائق المطور](/docs) — انغمس في وثائق Push Chain.\n\n💧 [منشا الفوائد](https://faucet.push.org) — احصل على رموز الإيكوسستم للاختبار.\n\n🔍 [مخطط Push](https://donut.push.network/) — تتبع المعاملات وبيانات الشبكة.",
       "englishChecksum": "8f49fb22c6f4c4d8ffcc857107231234",
       "lastUpdated": "2026-02-26T00:06:15.098Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
+      "value": "ستابيلكوين بكنج 1:1 تجميع سائلية دولار من جميع السلسلة.",
+      "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
+      "lastUpdated": "2026-05-17T19:22:07.551Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 نافت لاونتش باد على بلوكشين شوف",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-05-17T19:22:48.197Z"
+    },
+    "footer.email-section.title": {
+      "value": "أبْقَ في مَحْدِثِ بِشْنَايِخ‎ لِبِكَبْلَيبت",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T19:40:57.568Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "أخبار وتحسينات جديدة!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T19:40:59.823Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "بخش الاشتراك في نشرة الإخبارية",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-18T06:14:44.282Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "اشتراك في نشرة Push Chain",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T19:41:04.077Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "تنافسية القدمية وتصفح الرابط",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T19:41:06.152Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "رئيسية بلةشين",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T19:41:07.042Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "أحاديه بلوكChain الرئيسية",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T19:41:07.993Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "لوغو بلوكشين شوف",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T19:41:08.877Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "الموارد",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-18T06:15:09.047Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "موردين",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T19:41:13.131Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "المطورون",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T19:41:27.274Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "تسوية المطورين",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T19:41:28.359Z"
+    },
+    "footer.columns.community.title": {
+      "value": "أجتماعية",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T19:41:29.266Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "导航社区",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T19:41:32.366Z"
+    },
+    "footer.columns.help.title": {
+      "value": "مساعدة",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T19:41:33.246Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "مرشدتي المسموحة",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T19:41:34.331Z"
+    },
+    "footer.links.get-started": {
+      "value": "ابدأ",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T19:41:35.097Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "ابدأ البناء على بلوكشين شبر",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-17T19:41:38.090Z"
+    },
+    "footer.links.docs": {
+      "value": "توكنات",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T19:41:39.535Z"
+    },
+    "footer.links.docs-title": {
+      "value": "توكن بلوكشين: مرجع الوثائق",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T19:41:42.174Z"
+    },
+    "footer.links.github": {
+      "value": "غيت هاب",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T19:41:42.924Z"
+    },
+    "footer.links.github-title": {
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-18T06:14:45.785Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "قاعدة المعرفة",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T19:41:44.646Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "BASEידעات بلوكشين الشبل",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-18T06:14:47.274Z"
+    },
+    "footer.links.blog": {
+      "value": "بلاگ",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-17T19:41:47.793Z"
+    },
+    "footer.links.blog-title": {
+      "value": "بلاگ بلوكشين",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T19:41:49.657Z"
+    },
+    "footer.links.litepaper": {
+      "value": "ورقة بيضاء",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-17T19:42:02.743Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "ورقة Push Chain التقنية (PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T19:42:16.483Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "كتابه الماركة",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T19:42:18.476Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "أصول وإرشادات العلامة التجارية لـ Push Chain",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-18T06:14:59.728Z"
+    },
+    "footer.links.push-scan": {
+      "value": "بلوكشين Push",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T19:42:25.688Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "مستكشف بلوكشين بنش",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T19:42:28.812Z"
+    },
+    "footer.links.faucet": {
+      "value": "مصانع الصابون",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T19:42:31.082Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "احصل على توكنات اختبارية من صنبور Push Chain",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T19:42:48.356Z"
+    },
+    "footer.links.push-portal": {
+      "value": "بلوكشين بوترال",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T19:42:51.509Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "بوابة مجتمع Push Chain",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T19:43:04.277Z"
+    },
+    "footer.links.support": {
+      "value": "الدعم",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T19:43:06.222Z"
+    },
+    "footer.links.support-title": {
+      "value": "مركز المساعدة",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T19:43:08.427Z"
+    },
+    "footer.links.security": {
+      "value": "حماية وإعلان الأمان",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T19:43:09.341Z"
+    },
+    "footer.links.security-title": {
+      "value": "الإبلاغ عن عيب في الحفظ (اتخاذ ence responsib)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-18T06:15:01.968Z"
+    },
+    "footer.links.contact-us": {
+      "value": "اتصل بنا",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T19:43:14.373Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "شركاء، مبيعات، وسائط أو استفسارات عامة",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T19:43:15.471Z"
+    },
+    "footer.links.careers": {
+      "value": "الوظائف",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-18T06:15:03.741Z"
+    },
+    "footer.links.careers-title": {
+      "value": "وظائف مفتوحة في Push Chain",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T19:43:21.664Z"
+    },
+    "footer.links.twitter": {
+      "value": "إكس/تويتر",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T19:43:22.886Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "اتبع بلةشين على إكس/تويتر",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T19:43:27.020Z"
+    },
+    "footer.links.discord": {
+      "value": "ديسكورد",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T19:43:28.762Z"
+    },
+    "footer.links.discord-title": {
+      "value": "انضم إلى منتدىPush Chain على الديسكورد",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T19:43:31.019Z"
+    },
+    "footer.links.reddit": {
+      "value": "رديت",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T19:43:32.719Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "انضم إلىفيبست ريديت من شين البوش",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T19:43:35.804Z"
+    },
+    "footer.links.telegram": {
+      "value": "تلغرام",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-18T06:15:04.551Z"
+    },
+    "footer.links.telegram-title": {
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-18T06:15:07.045Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "روابط وسائل التواصل الاجتماعي والمعلومات القانونية",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T19:43:58.555Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "بلوكشين بلوس على اكس (تويتر)",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T19:44:02.166Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "بوش كلين على اكس/تويتر",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T19:44:05.191Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "بلوكشين دواير على جيثب",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T19:44:07.878Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "بلوكشين دايابيز على جيت هب",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T19:44:10.489Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "بلوكشين على ديسكورد",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T19:44:11.801Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "بلوكشين على ديسكورد",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T19:44:13.157Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "سياسة الخصوصية",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T19:44:16.694Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "قرأ سياسة الخصوصية",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T19:44:19.228Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "سياسة الخصوصية",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T19:44:21.648Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "شروط الخدمة",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T19:44:37.950Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "قرأ الشروط",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-18T06:15:10.170Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "أحكام الاستخدام",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:15:11.098Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-18T06:15:16.355Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "إدارة الإعدادات من الكوكيز",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T19:44:46.918Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "بلوكشين بيج فوتر ايليلستريهيشن",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T19:44:48.199Z"
+    },
+    "footer.footer-image.title": {
+      "value": "بلوكشين شيرت - توكن عالمي",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T19:44:49.246Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.validators.ctatitle": {
+      "value": "اقرأ المزيد",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-05-17T19:44:51.641Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "الدليل — بناء تطبيقات عالمية",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T19:44:52.708Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "جميع شيء ما تحتاج إليه لإطلاق في Push Chain: تعليمات سريعة، SDKs، مرجع API، أمثلة، وتعديل عقدة.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T19:44:56.208Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "وثائق بلوكشين Push - البداية السريعة، ومجموعات تطوير البرامج (SDKs) وواجهة برمجة التطبيقات (API)",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T19:45:15.175Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "بني و أدر Apps على طبقة التنفيذ الشاملة مع إرشادات واضحة ومثال​ات.‎",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T19:45:18.077Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "دوكز شين بلوك - بني في الأن",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T19:45:20.514Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "إتجهايات سريعة، kits من المطورين وAPI المرجعية و أمثلة لتسريع التطوير.",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T19:45:23.834Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "إطلاق وثائق الشبكة الفرعية في",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T19:45:25.005Z"
+    },
+    "pages.docs.header.description": {
+      "value": "يحبون نظرة على دونتنتست؟ اتصل بنا باستخدام #بلوكشينسركريت، وسنرسل لكم البناء التجريبي الخاص بك.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T19:45:26.672Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "غرّد عن Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T19:45:39.024Z"
+    },
+    "pages.docs.header.title": {
+      "value": "شارك في تويتر عن Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T19:45:40.116Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "نشر على توكست (X) عن Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-18T06:15:19.235Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "ما هي بلوكشين Push؟",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T19:46:01.640Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "إبليت شين يوفر كيت منحدر للبناء تطبيقات حقًا عالمية.",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-17T19:46:04.284Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "اعرف المزيد",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T19:46:23.870Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "لنتطور!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T19:46:25.965Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "تعلم المزيد",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T19:46:28.004Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "كيت يو آي",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T19:46:29.895Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "هندس أي تطبيق مخصص لبيئة React في أقل من 5 دقائق.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T19:46:32.132Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "تعلم المزيد",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T19:46:34.431Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "قريباً",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T19:46:48.404Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "تجربة التطبيق",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T19:46:49.629Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T19:47:10.815Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "محاكاة متعددة الإسناد (MPC-TSS) & الحوسبة التي تحافظ على خصوصية البيانات.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T19:47:12.872Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "هومن.تك",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T19:47:15.108Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "مكافأة MPC-TSS و الحوسبة المستقرة للخصوصية.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T19:47:17.779Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "رامين سوپ",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T19:47:20.963Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "تقديم توكنات من اختيارك من أي سلسلة بلوكشين",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T19:47:39.314Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "هالو",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T19:47:42.181Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "الطبقة البنية التحتية الموحدة للتعامل التجاري الذكي.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T19:47:59.623Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T19:48:13.837Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "تورِد الأصول، اقتَرِض ضَغْط عليها، وأكْبِر على العوائد المُسَوَّقَة",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T19:48:16.036Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "هدل.فون",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T19:48:19.450Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "إون: بوتر آي",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T19:48:21.331Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "أرسل، يتبادل، وإدارة الأصول عبر الشبكات الموقفة",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T19:48:24.472Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T19:48:41.900Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampireSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T19:48:59.272Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "لعبة عالمية تشبه لعبة مصاصي الدماء",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T19:49:18.765Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "أخر واحد",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T19:49:22.643Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "آخر من يرفع قبل انتهاء المدة يأخذ الجائزة",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T19:49:25.760Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T19:49:27.030Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "هويتك عبر كل السلسلة",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T19:49:30.602Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T19:49:49.381Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "تسويق دعوي عبر API حسب المكالمة لشبكة آلية",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T19:49:54.300Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T19:50:10.081Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "محرك نمو عالمي يكافئ الجودة بدلاً من النقرات",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T19:50:28.246Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "بيتبراولز",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T19:50:29.822Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "معارك موسيقية لن تنساها أبداً",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T19:50:35.105Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "بازار لعبت إيه بي تي",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T19:50:39.115Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "إجمالي, عادل, ومباشر للوعد",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T19:50:42.313Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "بوش نينجا",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T19:50:46.615Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "بازی اساس-شنت بر مبنای مهارت",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T19:50:53.600Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "قَطَع. اجْتَنِب. تَحَقَّق.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T19:50:59.200Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "تيب يوب",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T19:51:00.594Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "أعطي في أي سلسلة باستخدام أي حقيبة",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T19:51:02.078Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T19:51:16.950Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.description": {
+      "value": "تبديل توكنات سلس عبر السلاسل المختلفة دون الحاجة إلى الجسور",
+      "englishChecksum": "de2b3bf95e3ed660f78c959450838463",
+      "lastUpdated": "2026-05-17T19:51:33.855Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "شين سيركل",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T19:51:35.754Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "دولبي الصلة المحفظة",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T19:51:37.180Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "بوش كامبوس",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T19:51:39.508Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "توكنات الطلاب على الإيثريوم، سولانا، قاعدة ومن 15+ سلاسل",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-17T19:51:41.504Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "بلالسي",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T19:51:44.314Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "تنافس من أجل المجد عن طريق تسجيل الدخول باستخدام السلسلة المفضلة لديك",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T19:52:03.766Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "أثيرا",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T19:52:06.537Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "وراثة العملات الرقمية تلقائيًا",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T19:52:24.673Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "بوسد",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T19:52:28.080Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "ستبلكوين مشبوكة 1:1 تدمج سائلية دولار من كل سلسلات",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-17T19:52:30.274Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T19:52:44.851Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "أرسل العملات المشفرة إلى النطاقات، وليس الهاشات",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T19:53:01.882Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "هَانْغ4.فُون",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T19:53:04.818Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "قريبًا",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T19:53:23.638Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Degen Chess",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T19:53:41.856Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "العب الشطرنج، راهن، يونيفرسال",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T19:54:00.304Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "أومنيحوب",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T19:54:01.833Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "بلوكشين ديكس",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T19:54:07.452Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.description": {
+      "value": "منصة تداول لامركزية مبنية على شبكة بلوكشين Pushchain التجريبية",
+      "englishChecksum": "6e79596adf46880630b94d8aed70ac68",
+      "lastUpdated": "2026-05-17T19:54:25.008Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "زينس",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T19:54:26.605Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "نطاقات متعددة السلاسل، GM + أدوات النشر",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T19:54:48.643Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "ستار ران",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T19:54:54.796Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "اقتصاد مركزية، تملكها لاعبون",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T19:54:56.294Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "فورج ريلم",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T19:54:59.185Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "اختر و شويح الملامح الاساسية ومميزات اكثر من موجد",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T19:55:04.222Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T19:55:20.766Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "كوبت",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T19:55:24.640Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "سرفلير",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T19:55:26.138Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "خدمة أسماء Push",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T19:55:42.947Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "احصل على نطاق .push الخاص بك",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T19:56:02.107Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "نفتس2مي",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T19:56:06.549Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "أطلق مجموعة NFT الخاص بك مجانًا على أي سلسلة",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T19:56:09.764Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T19:56:26.735Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "رايلر متعدد السلاسل سريع للغاية",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T19:56:43.553Z"
     }
   }
 }

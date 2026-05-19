@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:08:14.713Z",
+  "lastUpdated": "2026-05-18T06:21:43.639Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "지식 기반 — 가이드, FAQ 및 방법",
@@ -69,11 +69,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Push Chain 테스트넷이 시작될 때 가장 먼저 소식을 받아보세요. 독점적인 업데이트를 위해 메일링 목록에 가입하세요.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.203Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1182,9 +1177,9 @@
       "lastUpdated": "2025-11-14T19:27:06.204Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Push 체인에서 다음 시대의 보편적인 경험을 만들고 있는 앱, 파트너, 그리고 초창기 채용자를 발견하세요. Donut 테스트넷으로 builders의 세상을 만나보세요.",
+      "value": "Push 체인 상의 도넛 테스트넷에서 다음 시대의 보편적인 경험을 위한 앱, 파트너, 그리고 얼리어답터를 발견해보세요.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:55:59.989Z"
+      "lastUpdated": "2026-05-17T19:32:08.911Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "공지 닫기",
@@ -1687,38 +1682,39 @@
       "lastUpdated": "2025-11-14T19:27:06.204Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain.subtitle": {
-      "value": "Push Chain과 유니버설 앱에 대한 궁금한 점? 가장 일반적이며 자주 묻는 답변들을 제공합니다.",
+      "value": "궁금한 점이 있으신가요? Push Chain 및 universal 앱에 대한 가장 일반적인 답변이 여기 있습니다.",
       "englishChecksum": "4d9917b7eb8ec31c7d601eb921a8f4ca",
-      "lastUpdated": "2026-02-25T23:55:12.459Z"
+      "lastUpdated": "2026-05-17T19:32:45.220Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved": {
-      "value": "### Push 체인에서 해결하는 문제점\n\n- **분할** \n  EVM & 비-EVM 체인을 단일 공유 상태 L1로 통합하여, 사용자가 네트워크나 지갑을 건너뛰지 않아도 됩니다.\n\n- **호환성** \n  모든 블록체인에서 지원되는.Native 거래 및 온체인 공유 상태 지원.\n\n- **결론성** \n ~1-2초 내에 즉시, 반전되지 않는 네이티브 결론성 – 기다리거나 다시 구성할 필요가 없습니다.\n\n- **온보딩 & UX** \n  소셜/이메일 로그인, Gas-in-any-token 및 Any-wallet 지원으로 모든 체인에서 제로피처 접근 지원.\n\n- **통합 앱** \n  한 번만 작성하고 어디든지 배포 – 모든 웹3 앱이 모든 사용자에게 모든 체인에서 원활하게 작동합니다.\n\n---",
+      "value": "### Push 체인에서 해결하는 문제\n\n- **분산**\n  EVM 및 비-EVM 체인을 하나로 통합하여 공유 상태 L1을 만들어 사용자가 네트워크나 지갑을 이동할 필요가 없음.\n\n- **호환성**\n  모든 블록체인과 온체인 공유 상태에 대한 원생지 지원.\n\n- **결정성**\n  ~1-2초 만에 즉시, 영구적인 원생지 – 더 이상 기다리거나 재조직되지 않음.\n\n- **진입장벽 및 UX**\n  소셜/이메일 로그인, Gas-in-Any-Token 및 Any-Wallet 지원으로 모든 체인에서 지장 없는 접근성 제공.\n\n- **유니버설 어플리케이션**\n  한 번 빌드, 어디에나 배포 – 모든 웹3 앱이 모든 사용자에 대해 모든 체인에서 순조롭게 작동.\n\n---",
       "englishChecksum": "a46bbdbb625fb82ad7fe978556186243",
-      "lastUpdated": "2026-02-25T23:55:20.541Z"
+      "lastUpdated": "2026-05-17T19:31:26.772Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism": {
-      "value": "### Push Chain은 어떤 Konsensus 메커니즘을 사용하나?\n\nPush Chain은 **Proof-of-Stake (PoS)** konsensus를 사용하며, **CometBFT** 엔진 기반으로 다양한 개선점들을 가지고 있다:\n\n- **빠른 최종성**: 거래는 ~1–2초에 결제되며, 재조직(Reorgs)이 없는 결정적 최종성이 있다.\n- **에너지 효율적인**: PoS는 PoW와 비교하여 환경 친화적으로 유지된다.\n- **발리데이터 네트워크**: 체인을 안전하게 하는 분산 발리데이터 네트워크\n- **슬래싱 보호**: 경제적 인센티브로 발리데이터의 정직성을 보장한다.\n\nCometBFT의 검증된 BFT konsensus는 여기서는 유니버설 거래 처리를 위한 최적화 및 체인 간 상태 관리와 같은 독특한 요구 사항을 위해 조정된다.\n\n---",
+      "value": "### Push Chain의 합의 메커니즘은 무엇입니까?\n\nPush Chain는 **Proof-of-Stake (PoS)** 합의 매커니즘을 사용하며, **CometBFT** 엔진 기반으로 여러 가지 개선을җ합했습니다:\n\n- **빠른 결말성**: 1–2초 이내로 트랜잭션이 결말지어지며, 재구조화 없이 결정적인 결말성이 있습니다.\n- **에너지 효율성**: PoW보다 환경 친화적입니다.\n- **발표자 네트워크**: 체인 보안에 분산된 발행자 네트워크가 있습니다.\n- **벌칙 보호**: 경제적인 유인으로 발행자의 정직성을 보장합니다.\n\n이번에는 유니버설 트랜잭션 처리 및 교차체인 상태 관리의 고유 요구 사항을 위해 CometBFT의 검증된 BFT 합의를 최적화했습니다.\n\n---",
       "englishChecksum": "56335834d49f4774c5aa232632523b92",
-      "lastUpdated": "2026-02-25T23:55:28.182Z"
+      "lastUpdated": "2026-05-17T19:31:34.038Z"
     },
     "pages.contact.hero-section.description": {
-      "value": "파트너십 및 통합, 장려금, 미디어 및 발표, 검증자, 법적 문제, 직업 또는 일반적인 질문—여기에서 연락을 취하세요. 기술적인 도움이 필요하거나 보안 문제에 대한 신고가 있는 경우 지원을 방문하세요.",
+      "value": "파트너십 및 통합, 장려금, 미디어 및 스피치, 발리데이터, 법률, 직업 또는 일반 질문이라면 여기에서 연락하세요. 기술적인 도움을 원하거나 보안 문제에 대한 신고는 지원 센터를 방문해주세요.",
       "englishChecksum": "a77ba80c097fb24b9c109642038d3abc",
-      "lastUpdated": "2026-02-25T23:55:57.890Z"
+      "lastUpdated": "2026-05-17T19:32:05.590Z"
     },
     "components.short-faq-snippet.qnas.qna3.question": {
+      "value": "다를 워렛이나 가스 토큰이 필요합니까?",
       "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
-      "lastUpdated": "2026-02-25T23:56:03.566Z"
+      "lastUpdated": "2026-05-17T19:32:13.810Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "이것이 브리지나 메시지 레이어와 어떻게 다른가요?",
+      "value": "이것은 다리나 메시징 레이어와 어떻게 다른가요?",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-02-25T23:56:28.825Z"
+      "lastUpdated": "2026-05-17T19:32:15.533Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>테스트 토큰을 요청하려면 <3>페이서</3>를 사용하세요.</1><1><2>참고사항:</2> 속도 제한이 적용될 수 있습니다; 일부 페이서는 간단한 확인을 요구합니다. 페이서가 실패하면 <4>디스코드</4>에서 우리를 호출하세요.</1>",
+      "value": "<1>테스트 토큰을 요청하려면 <3>페이크스</3>를 사용하세요.</1><1><2>참고사항:</2> 속도 제한이 적용될 수 있으며 일부 페이크스는 간단한 인증을 요구합니다. 페이크스가 실패하면 <4>디스코드</4>에서 연락 주세요.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-02-25T23:56:11.710Z"
+      "lastUpdated": "2026-05-17T19:32:18.911Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "빌더 — 방법 및 튜토리얼",
@@ -1925,11 +1921,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:28:03.451Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "지금 신청하기",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:47.755Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "토스트 알림 닫기",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1944,16 +1935,6 @@
       "value": "푸시체인 토스트 알림",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:01:51.234Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "now apply",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:53.937Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "신청하기",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:54.956Z"
     },
     "components.blog.more-posts.title": {
       "value": "Push 체인에서 더 보기",
@@ -2041,9 +2022,9 @@
       "lastUpdated": "2026-02-08T06:04:56.487Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "가장 빠르게 성장하는 유니버설 앱 생태계에 참여하고 사용자 기반을 10배로 늘리고 싶으신가요?",
+      "value": "가장 빠르게 성장하는 유니버설 앱 생태계에 참여하고 사용자 기반을 10배로 늘리고 싶으세요?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-25T23:56:01.919Z"
+      "lastUpdated": "2026-05-17T19:32:12.220Z"
     },
     "components.ecosystem-apps-partners.apps.halo.description": {
       "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
@@ -2067,47 +2048,48 @@
       "lastUpdated": "2026-02-25T23:56:24.050Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "테스트넷 앱 살펴보기",
+      "value": "테스트넷 Essential 앱 탐구하기",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-02-25T23:57:14.513Z"
+      "lastUpdated": "2026-05-17T19:32:28.862Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
-      "value": "Push Chain's universal wallet",
+      "value": "Push 체인의 유니버셜 월릿",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-02-25T23:57:26.320Z"
+      "lastUpdated": "2026-05-17T19:32:21.449Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "PC 체인이 토큰 재조정 제안을 실행하여 총 PC 토큰 공급량을 약 10억 토큰으로 줄였습니다. 이 업그레이드는 테스트넷 초기의 기술적 부채를 해결하고 메인넷과 유사한 환경으로 준비합니다.",
+      "value": "Push 체인이 PC 토큰 공급량을 75T+에서 약 100억 토큰으로 줄이기 위해 토큰 재조정 제안을 실행했습니다. 이 업그레이드는 테스트넷 초기기에 있었던 기술적 부채를 해결하고, 메인넷 환경에 Preparation합니다.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-25T23:55:32.155Z"
+      "lastUpdated": "2026-05-17T19:31:40.865Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "이 제안은 총 주소 1,178M 중 1,950개 지갑을 영향을 받았습니다. 1,100PC 토큰 이상(트리션까지 포함)을 보유한 지갑들이 1,100-2,000PC 토큰을 보유하도록 재조정되었습니다.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-25T23:55:36.342Z"
+      "lastUpdated": "2026-05-17T19:31:45.299Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
+      "value": "- 최상위 1,950 지갑이 1,100-2,000 PC 토큰 범위로 재조정됨",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-25T23:55:39.994Z"
+      "lastUpdated": "2026-05-17T19:31:48.481Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "사용자에게 사전에 통보하지 않았습니다. 재조정을 앞두고 다른 지갑으로 토큰을 분산할 수 있도록 하는 것을 방해하기 위해 보안 조치로 취했습니다.",
+      "value": "사용자들은 리밸런싱 전에 토큰을 다른 월렛으로 재분배하지 못하게 하려고 사전에 통보를 하지 않았습니다. 이 보안 조치로 인해 리밸런싱 과정의 무결성을 지키고 시스템의 게임 방지를 예방할 수 있었습니다.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-25T23:55:43.621Z"
+      "lastUpdated": "2026-05-17T19:31:52.973Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "리밸런스는 두 단계로 이루어진 접근법입니다. 토큰은 이제 팀 컨트롤 월렛에 모였고 곧 불태워질 예정입니다.",
+      "value": "리밸런스는 두 단계로 구성된 방식입니다. 토큰은 팀이 관리하는 지갑으로 모이고 곧 버려질 예정입니다.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-25T23:55:47.127Z"
+      "lastUpdated": "2026-05-17T19:32:27.852Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**99.83%의 사용자 대부분에게는:** 이 변경 사항이 영향을 주지 않습니다. 지갑 잔액은 변동되지 않습니다.",
+      "value": "**99.83%의 사용자에게는 영향이 없습니다.** 지갑 잔액이 변하지 않습니다.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-02-25T23:55:50.300Z"
+      "lastUpdated": "2026-05-17T19:31:58.928Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
+      "value": "**영향을 받은 지갑 (상위 1,950):** 지갑에서 1,100+ PC 토큰(트릴리언 이상) 보유 중이라면, 밸런스가 1,100-2,000 PC 토큰 범위로 재조정되었습니다.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-02-25T23:55:55.061Z"
+      "lastUpdated": "2026-05-17T19:32:03.191Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "심화 분석 — 개념 및 아키텍처",
@@ -2166,6 +2148,803 @@
       "value": "인터럽트 スペク트럼",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:01:25.146Z"
+    },
+    "footer.email-section.title": {
+      "value": "Push 체인에 대해 최신 정보를 받아보세요",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T21:01:34.377Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "뉴스와 업데이트!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T21:01:36.837Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "뉴스레터 구독 섹션",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T21:01:39.043Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": " Push 체인 뉴스레터 구독하기",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T21:01:41.203Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "푸터 내비게이션 및 링크",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T21:01:43.792Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "푸시 체인 홈페이지",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T21:01:46.259Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "푸시체인 홈페이지",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T21:01:47.217Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "푸시 체인 로고",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T21:01:48.062Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "리소스",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T21:01:49.293Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "자원 네비게이션",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T21:01:51.748Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "개발자",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-18T06:19:11.639Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "개발자 네비게이션",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T21:01:54.411Z"
+    },
+    "footer.columns.community.title": {
+      "value": "커뮤니티",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T21:01:55.729Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "커뮤니티 네비게이션",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T21:01:56.903Z"
+    },
+    "footer.columns.help.title": {
+      "value": "도움말",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T21:01:58.255Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "도움말 내비게이션",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-18T06:19:14.297Z"
+    },
+    "footer.links.get-started": {
+      "value": "시작하기",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T21:02:02.089Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "Push Chain에서 시작하기",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-18T06:20:23.651Z"
+    },
+    "footer.links.docs": {
+      "value": "문서",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T21:02:06.963Z"
+    },
+    "footer.links.docs-title": {
+      "value": "푸시체인 문서",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T21:02:07.862Z"
+    },
+    "footer.links.github": {
+      "value": "기타허브",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T21:02:08.656Z"
+    },
+    "footer.links.github-title": {
+      "value": "GitHub의 Push Chain 리포지토리",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-18T06:19:56.399Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "지식 기반",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T21:02:21.661Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-18T06:18:41.369Z"
+    },
+    "footer.links.blog": {
+      "value": "블로그",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-18T06:20:34.870Z"
+    },
+    "footer.links.blog-title": {
+      "value": "푸시체인 블로그",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T21:02:26.139Z"
+    },
+    "footer.links.litepaper": {
+      "value": "라이트페이퍼",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-17T21:02:28.431Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "푸시체인 라이트페이퍼(PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T21:02:29.418Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "브랜드 키트",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T21:02:30.229Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "푸시 체인 브랜드 자산 및 지침",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T21:02:34.838Z"
+    },
+    "footer.links.push-scan": {
+      "value": "푸시 스캔",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T21:02:37.697Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": " Push 체인 블록체인 탐색기",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T21:02:40.890Z"
+    },
+    "footer.links.faucet": {
+      "value": "фейс켓",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-18T06:18:43.113Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "푸시 체인 패브릿에서 테스트 토큰 가져오기",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-18T06:19:58.629Z"
+    },
+    "footer.links.push-portal": {
+      "value": "푸시 포털",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T21:03:11.489Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Push Chain 커뮤니티 포털",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-18T06:20:46.336Z"
+    },
+    "footer.links.support": {
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-18T06:18:49.200Z"
+    },
+    "footer.links.support-title": {
+      "value": "도움말 센터",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T21:03:14.696Z"
+    },
+    "footer.links.security": {
+      "value": "블인도 부축",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-18T06:18:50.591Z"
+    },
+    "footer.links.security-title": {
+      "value": "보안 문제에 대한 보고서 작성 (책임 있는 공개)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T21:03:16.578Z"
+    },
+    "footer.links.contact-us": {
+      "value": "문의하기",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-18T06:20:57.123Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "파트너십, 비즈니스 개발, 미디어 또는 일반 문의",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-18T06:20:02.713Z"
+    },
+    "footer.links.careers": {
+      "value": "채용",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T21:03:19.557Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Push Chain에서 지금 openings",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T21:03:22.527Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/트위터",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T21:03:23.343Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "Push Chain을 따라 X(Twitter)에 오세요",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T21:03:26.144Z"
+    },
+    "footer.links.discord": {
+      "value": "디스코드",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-18T06:18:55.250Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Push 체인 디스코드에 참여하세요",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-18T06:18:56.293Z"
+    },
+    "footer.links.reddit": {
+      "value": "리드디트",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-18T06:18:57.162Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Push 체인 subreddit에 참여하세요",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-18T06:18:58.194Z"
+    },
+    "footer.links.telegram": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-18T06:19:09.713Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Push 체인 테레그램에 참여하세요",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-18T06:19:52.695Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "사회 미디어 링크와 법적 정보",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T21:03:36.120Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": " Push Chain on X/Twitter ",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T21:03:37.017Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": " Push 체인에서 X (트위터)에 참여하세요",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T21:03:38.200Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": " Push 체인 Git허브 ",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-18T06:20:03.633Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": " Push 체인 Github ",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T21:03:40.380Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": " Push 체인에 디스코드 participate",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-18T06:19:16.646Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "Discord에서 Push Chain 참여하기",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T21:03:46.043Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "개인정보 처리방침",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T21:04:00.533Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "개인정보처리방침 읽기",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-18T06:19:17.794Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "개인정보처리방침",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-18T06:21:08.413Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "이용 약관",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:21:19.608Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "이용 약관 읽기",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T21:04:08.318Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "이용약관",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:20:08.543Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "쿠키 설정",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T21:04:11.190Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "쿠키 설정 관리",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T21:04:12.049Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "푸시 체인 풋터 일러스트레이션",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T21:04:13.022Z"
+    },
+    "footer.footer-image.title": {
+      "value": "푸시체인 - 유니버설 블록체인",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-18T06:19:22.376Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "문서 — 범용 앱 빌드",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T21:04:15.837Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "Push Chain에서 배포하는 데 필요한 모든 것: 빠른 시작 가이드, SDK, API 레퍼런스, 예제, 노드 설정 안내.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T21:04:33.803Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "푸시 체인 문서 - 빠른 시작, SDK 및 API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T21:04:36.446Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "유니버셜 실행 레이어에서 앱을 빌드하고 실행하세요. 명확한 가이드와 예시가 있습니다.",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T21:04:39.287Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": " Push 체인 문서 - 지금 빌드하기",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T21:04:41.791Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-18T06:19:31.950Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "테스트넷 문서 출시까지 남은 시간",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T21:04:57.923Z"
+    },
+    "pages.docs.header.description": {
+      "value": "psst... 테스트넷 던틀 보러 가고 싶니? #pushchainsecret으로 연락하면 테스트 빌드 액세스 링크를 보내줄게.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T21:05:02.033Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-18T06:19:34.814Z"
+    },
+    "pages.docs.header.title": {
+      "value": "Push Chain에 대해 트윗하기",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T21:05:05.689Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Push Chain에 대해 트윗하기",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-18T06:21:31.808Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": " Push체인是什么？",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T21:05:09.022Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "푸시체인은 진정으로 보편적인 앱을 구축하는 통합 도구킷을 제공합니다.",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-18T06:19:26.911Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "more 자세히 알아보기",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T21:05:13.445Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "같이 만들자!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T21:05:15.310Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "푸시 체인 SDK로 유니버설 앱을 만들기 위한 모든 것을 제공합니다",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T21:05:17.496Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "더 알아보기",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-18T06:19:29.005Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UI 키트",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T21:05:21.757Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "5분 만에任何 React 기반 앱을 통합하세요.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T21:05:23.933Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "더 알아보기",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T21:05:25.891Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "곧 개봉",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-18T06:19:48.528Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "앱 스포트라이트",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-18T06:21:43.639Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T21:05:44.236Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS & 프라이버시 페어싱 컴퓨트.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-18T06:19:51.603Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "휘먼.테크",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T21:05:47.600Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS & 프라이버시 보장 계산.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T21:05:50.693Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "라면 스왑",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-18T06:18:17.766Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "원하는 체인에서 선택한 토큰을 제공합니다",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T21:05:53.869Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T21:06:08.329Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "체트라",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T21:06:09.584Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "자산 공급, 대출 및 최적화 수익률을 위한 수입",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T21:06:12.365Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "호들.프런",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T21:06:14.912Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "ERC-20 토큰 생성 및 발행하기",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T21:06:16.679Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "이온: AI 보조인",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T21:06:18.244Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-18T06:19:37.853Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "푸시 배트",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T21:06:22.012Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "자신의 데겐 초능력을 과시하고 보상을 받으세요.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T21:06:25.232Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampireSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T21:06:41.723Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "유니버설 뱀파이어 서바이버즈 같은 게임",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T21:06:58.050Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "마지막 하나",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T21:06:59.299Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "타이머가 돌기 전에 마지막 입찰을 낸 사람이 포트를 가져갑니다",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-18T06:19:39.954Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T21:07:04.716Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "모든 체인에서 당신의 아이덴티티",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T21:07:11.977Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "푸시 X402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T21:07:15.355Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "소개에 따라 호출별 API 수익화 서비스",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T21:07:16.852Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "버전티브",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T21:07:18.211Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-18T06:19:41.624Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "비트배틀",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T21:07:25.371Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "기억에 남는 음악 대결",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T21:07:26.923Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT 카지노",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T21:07:28.374Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "전환형, 공정하고 투명한 도박을 즐겨보세요",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T21:07:31.649Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T21:07:48.370Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "on-chain 스킬 기반 게임",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T21:07:49.925Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "자르다. 피하다. 득점하다.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T21:07:52.250Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "티업",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T21:07:54.887Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "푸시 스와프",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T21:07:58.950Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "ChainCircle",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T21:08:15.458Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "크로스체인 세이빙 서클",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T21:08:30.656Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "푸시 캠퍼스",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T21:08:33.402Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "볼스리",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T21:08:34.835Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "좋아하는 체인으로 로그인하여 영광을 위해 전투하세요",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T21:08:52.806Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "아테라",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T21:08:58.620Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "자동화된 암호화폐 상속",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T21:09:17.050Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T21:09:21.366Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-18T06:19:43.711Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "프리네임",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T21:09:25.947Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "도메인에 크립토를 보내세요. 해시가 아니에요.",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T21:09:27.481Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "한글4.0",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T21:09:31.910Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "곧 출시될 예정입니다",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T21:09:51.509Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "데겐 체스",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T21:09:53.079Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "체스 게임하고 내기, 유니버설",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T21:09:55.858Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "오미니허브",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T21:10:00.267Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "블록체인 수집품을 생성, 구매 및 판매",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T21:10:17.034Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": " PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T21:10:21.865Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T21:10:37.463Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "다중 체인 도메인, GM + 배포 도구",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T21:10:42.264Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Star Run",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T21:10:58.194Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "분산화되고 사용자 소유 기반 경제",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T21:10:59.651Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "포지 레알름",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T21:11:04.801Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "다양한 크리에이터로부터 기반 캐릭터와 특성을 혼합하고 조합하세요",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T21:11:06.618Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "코NFT/코도메인",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T21:11:08.202Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Web3 멀티체인 허브: 도메인 이름, NFT, 런치패드.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T21:11:10.312Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "코페트",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T21:11:11.605Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "블록체인 활동으로 가상 애완동물을 키워보세요.",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T21:11:13.193Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "서프레이어",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T21:11:15.816Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-18T06:19:47.504Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "푸시 네임 서비스",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T21:11:21.004Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Push 도메인 이름을 얻어보세요",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T21:11:25.692Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T21:11:28.084Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "아무 체인에서 NFT 컬렉션 배포 가능",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T21:11:31.681Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "타키온",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T21:11:34.246Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "초고속 멀티체인 릴레이어",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T21:11:49.764Z"
     }
   }
 }

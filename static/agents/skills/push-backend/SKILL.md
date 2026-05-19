@@ -4,6 +4,8 @@ description: "Use when writing Node.js scripts, bots, or server-side code with @
 id: push-backend
 intent: Execute universal transactions from server-side code, scripts, bots, and automation
 package: '@pushchain/core'
+package_version: 6.0.9
+current_sdk_version: 6.0.9
 entry: 'PushChain.initialize'
 resources: 'https://push.org/agents/resources/push-backend/index.json'
 references:
@@ -17,6 +19,10 @@ references:
 
 **Intent**: Execute universal transactions from server-side code, scripts, bots, and automation pipelines.
 **Package**: `@pushchain/core` - no other library (ethers.js, viem, wagmi) can replace `sendTransaction`, `signMessage`, `prepareTransaction`, or `executeTransactions`.
+
+> **Full agent layer:** [push.org/llms.txt](https://push.org/llms.txt) indexes every skill, workflow, example, error code, constant, and routing decision in the Push Chain agent layer. Pull it when this skill points outside its domain — cross-skill context, unknown progress-hook IDs, error recovery, or constants lookups.
+
+> **PUSD stablecoin?** For minting, redeeming, or integrating **PUSD** (par-backed) and **PUSD+** (yield-bearing) — both native on Push Chain Donut — see the dedicated [push-pusd skill](https://pusd.push.org/agents/skill/push-pusd/SKILL.md) (or [pusd.push.org/llms.txt](https://pusd.push.org/llms.txt) for the full PUSD agent-layer index: ABIs, deployment addresses, examples). Covers Node.js mint/redeem flows, the multicall sentinel pattern for one-signature deposits, and the on-chain Solidity interfaces for protocols holding PUSD/PUSD+.
 
 ## Install
 
@@ -198,15 +204,19 @@ const newClient = await client.reinitialize(newSignerOrAccount, {
 **Access account info** after initialization:
 
 ```ts
-client.universal.origin; // source chain address: { address, chain } - e.g. Ethereum Sepolia wallet
-client.universal.account; // Push Chain execution account: UEA for cross-chain users, EOA for Push-native
+client.universal.origin;  // { address: string, chain: CHAIN } — source chain wallet (object)
+client.universal.account; // `0x${string}` — the Push Chain execution account address (UEA for
+                          // cross-chain users, native EOA for Push-native users). Plain string,
+                          // NOT an object.
 ```
+
+> ⚠️ **Shape difference.** `origin` is an object (`{ address, chain }`); `account` is a **plain address string** — no `.address` field. Reading `client.universal.account.address` returns `undefined` and silently breaks dependent guards. Use `client.universal.account` directly.
 
 **Verify initialization succeeded:**
 
 ```ts
-console.log('origin:', client.universal.origin); // { address, chain } - matches your signer
-console.log('account:', client.universal.account); // UEA (cross-chain) or EOA (Push-native)
+console.log('origin:', client.universal.origin);   // { address, chain } - object, matches your signer
+console.log('account:', client.universal.account); // '0x...' string - UEA (cross-chain) or EOA (Push-native)
 ```
 
 **Account status** - UEA deployment and version (SDK handles upgrades automatically in most cases):
@@ -249,6 +259,7 @@ const status = await client.getAccountStatus();
 | `tx.maxFeePerGas`         | `bigint` _(optional, SDK estimated)_                                                            | Override max fee per gas.                                                                                                                                                                              |
 | `tx.maxPriorityFeePerGas` | `bigint` _(optional, SDK estimated)_                                                            | Override priority fee.                                                                                                                                                                                 |
 | `tx.deadline`             | `bigint` _(optional)_                                                                           | Execution deadline.                                                                                                                                                                                    |
+| `tx.options.enforceGasCheck` | `boolean` _(optional, defaults to `false`)_                                                  | Pre-flight gas / balance check mode. `false` (default): emit a `WARNING` progress event on shortfall and proceed (the SDK's fee-locking / refill paths usually recover). `true`: emit an `ERROR` progress event and throw [`InsufficientUEABalanceError`](#insufficient_uea_balance) before broadcast. Use `true` when you want pre-flight guarantees over best-effort retries. Same option is accepted by `prepareTransaction`; setting it on any single hop opts the entire cascade into strict mode.                                          |
 
 ---
 
@@ -395,6 +406,17 @@ User → Push vault
 
 > Route 3 isn't for new outbound flows - use Route 2 for those. Route 3 is the return path from a CEA you've already deployed via prior Route 2 activity.
 
+**Route 3 funding pattern (what the dev actually has to send).** Depends on whether an asset is moving off the external chain:
+
+| Sub-pattern | Fund | Why |
+|-------------|------|-----|
+| Plain contract call / multicall on Push Chain (no `funds`, no `value` on the call) | Source-chain UOA only (e.g. ~0.01 Sepolia ETH) | The SDK fee-locks source-chain native, mints PC into the UEA, then UEA → UGPC swaps PC into the destination-chain native to cover CEA gas + first-time CEA deployment. CEA does not need a manual top-up. |
+| Bridge native back (`from: { chain }` + `value` + `to: client.universal.account`) | UOA on source chain AND the native asset on the CEA on the named external chain (amount = `value`) | The native asset being swept back has to physically sit on the CEA before the call. CEA gas still comes from the source-chain fee-lock. |
+| Bridge funds back (`from: { chain }` + `funds: { amount, token: MOVEABLE.<chain>.<TOKEN> }` + `to: client.universal.account`) | UOA on source chain AND the SDK-registered PRC-20 source token on the CEA on the named external chain (amount = `funds.amount`) | ERC-20 variant of the above. Mint the SDK-registered token at `PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN>.address` (e.g. `0xE935d9c9C24D02E61186c640cc01d713C876d40F` for USDT on BNB Testnet) and transfer to the printed CEA address. |
+| Funds-with-payload (bridge an asset back AND atomically call a Push Chain contract) | Same as bridge-funds-back | The payload runs on Push Chain via the UEA after the bridge settles. |
+
+> Anti-pattern: telling devs to send `0.02 BNB / SOL` to the CEA "for gas + fee-lock deposit" for a plain Route 3 call. The CEA gas is automatic; only ask for the CEA-side asset when an asset is actually being bridged back. Even then, ask for the burn amount itself (e.g. `0.001 BNB`, `0.01 USDT`), not a 10x buffer.
+
 **Solana CEA as origin** - set `from: { chain: SOLANA_DEVNET }` to use the user's Solana CEA as the origin. `msg.sender` on Push Chain will be the Solana CEA address. Use `deriveExecutorAccount` beforehand if you need to fund it.
 
 ```ts
@@ -530,8 +552,8 @@ console.log('Hops:', cascade.hopCount);
 const result = await cascade.wait({
   progressHook: (e) =>
     console.log(`[Hop ${e.hopIndex}] ${e.status} on ${e.chain}`),
-  pollingIntervalMs: 5000,
-  timeout: 600_000, // 10 min
+  pollingIntervalMs: 3000,
+  timeout: 300_000, // 5 min
 });
 console.log('All complete:', result.success);
 ```
@@ -540,23 +562,44 @@ console.log('All complete:', result.success);
 
 | Property            | Type                               | Description                                                                                                 |
 | ------------------- | ---------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `initialTxHash`     | `string`                           | Hash of the user-signed Push Chain transaction - use this to reference it downstream                        |
-| `initialTxResponse` | `TxResponse`                       | Full `TxResponse` for the coordinating Push Chain tx - use this when you need nonce, gas, or block metadata |
+| `initialTxHash`     | `string`                           | Hash of the user-signed Push Chain transaction; use this to reference it downstream                        |
+| `initialTxResponse` | `UniversalTxResponse`              | Full response for the coordinating Push Chain tx; use this when you need nonce, gas, or block metadata     |
 | `hops`              | `CascadeHopInfo[]`                 | All hops with routing and status                                                                            |
 | `hopCount`          | `number`                           | Total hop count                                                                                             |
+| `finalTxHash`       | `string` _(optional)_              | Final tx hash resolved by `waitForAll()` / `wait()` once cascade tracking completes                         |
 | `wait(opts?)`       | `Promise<CascadeCompletionResult>` | Wait for all hops to confirm                                                                                |
 | `waitForAll(opts?)` | `Promise<CascadeCompletionResult>` | Alias for `wait`                                                                                            |
 
 **`CascadeHopInfo` per hop:**
 
-| Property          | Type                                                  | Description                                                   |
-| ----------------- | ----------------------------------------------------- | ------------------------------------------------------------- |
-| `hopIndex`        | `number`                                              | 0-indexed position                                            |
-| `route`           | `string`                                              | Routing mode for this hop                                     |
-| `executionChain`  | `CHAIN`                                               | Chain where this hop executes                                 |
-| `status`          | `'pending' \| 'submitted' \| 'confirmed' \| 'failed'` | Current status                                                |
-| `txHash`          | `string`                                              | Resolved transaction hash                                     |
-| `outboundDetails` | `object`                                              | External chain details: hash, explorer URL, recipient, amount |
+| Property          | Type                                                  | Description                                                                                                                          |
+| ----------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `hopIndex`        | `number`                                              | 0-indexed position                                                                                                                   |
+| `route`           | `TransactionRouteType`                                | `'UOA_TO_PUSH'`, `'UOA_TO_CEA'`, `'CEA_TO_PUSH'`, or `'CEA_TO_CEA'`                                                                  |
+| `executionChain`  | `CHAIN`                                               | Chain where this hop executes                                                                                                        |
+| `expectedSubTxId` | `string` _(optional)_                                 | Expected `universalSubTxId`, computed deterministically from the parent; available before `txHash` resolves                          |
+| `status`          | `'pending' \| 'submitted' \| 'confirmed' \| 'failed'` | Current status                                                                                                                       |
+| `txHash`          | `string` _(optional)_                                 | Resolved transaction hash                                                                                                            |
+| `outboundDetails` | `OutboundTxDetails` _(optional)_                      | Outbound hops only. Fields: `externalTxHash`, `destinationChain` (CHAIN), `explorerUrl`, `recipient`, `amount`, `assetAddr` (`address(0)` for native) |
+
+**`CascadeCompletionResult` (from `wait()` / `waitForAll()`):**
+
+| Property          | Type                                | Description                                                                  |
+| ----------------- | ----------------------------------- | ---------------------------------------------------------------------------- |
+| `success`         | `boolean`                           | True if all hops confirmed                                                   |
+| `hops`            | `CascadeHopInfo[]`                  | Final state of all hops                                                      |
+| `finalTxHash`     | `string` _(optional)_               | Final tx hash for the last confirmed hop                                     |
+| `finalTxResponse` | `CascadedTxResponse` _(optional)_   | Original cascade response, for consumers that need the full context          |
+| `failedAt`        | `number` _(optional)_               | Index of first failed hop, if any                                            |
+
+**`CascadeTrackOptions` (wait / waitForAll options):**
+
+| Option              | Type                                       | Default   | Description                                                                                                                                                                                                                                                                                                                |
+| ------------------- | ------------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pollingIntervalMs` | `number`                                   | `3000`    | Poll interval (ms)                                                                                                                                                                                                                                                                                                          |
+| `timeout`           | `number`                                   | `300000`  | Total timeout (ms), default 5 min                                                                                                                                                                                                                                                                                          |
+| `progressHook`      | `(event: CascadeProgressEvent) => void`    | -         | Per-hop callback: `{ hopIndex, route, chain, status, txHash, elapsed }`                                                                                                                                                                                                                                                     |
+| `eventHook`         | `(event: ProgressEvent) => void`           | -         | Unified `ProgressEvent` stream for the cascade marker set (`001`, `002-xx`, `003-xx`, `203-xx`, `204-xx`, `209-xx`, `299-01`, `999-xx`, plus per-route awaiting/polling/success/failed/timeout). Cascade markers also fan out to the init-time `progressHook` on `PushChain.initialize`. Both channels are deduped if wired. |
 
 > **No atomicity across hops** - if a downstream hop fails, earlier hops are already on-chain. Design contracts to handle partial execution.
 
@@ -823,7 +866,7 @@ Derives a UEA on Push Chain from any origin account, or a CEA on an external cha
 
 ### `resolveControllerAccount(account, options?)` → `Promise<{ accounts }>`
 
-Reverse-maps any executor account (UEA or CEA) back to its origin controlling wallet. Complement of `deriveExecutorAccount` - forward is UOA→executor, this is executor→UOA.
+Reverse-maps any executor account (UEA or CEA) back to its origin controlling wallet. Complement of `deriveExecutorAccount` - forward is UOA→executor, this is executor→UOA. Prefer this over the older `convertExecutorToOriginAccount` (still exported but deprecated since 6.0.0): `resolveControllerAccount` handles UEA and CEA in one call, returns the full controller chain with `type` / `role` metadata, and supports `skipNetworkCheck` for deterministic-only resolution.
 
 | Argument                   | Type                   | Description                                                                    |
 | -------------------------- | ---------------------- | ------------------------------------------------------------------------------ |
@@ -831,29 +874,19 @@ Reverse-maps any executor account (UEA or CEA) back to its origin controlling wa
 | `options.chain`            | `CHAIN` _(optional)_   | Required for CEA context - specifies the external chain the CEA is deployed on |
 | `options.skipNetworkCheck` | `boolean` _(optional)_ | Deterministic resolution only, skip existence check. Default `false`           |
 
-**Returns**: `Promise<{ accounts: Array<{ chain, chainName, address, type, exists, role? }> }>` - `type`: `'uea' | 'uoa' | 'cea'`; `role: 'controller'` marks the root controlling account
-
----
-
-### `resolveControllerAccount(executorAddress, options?)` → `Promise<UniversalAccount>`
-
-Reverse-maps any executor address (UEA or CEA) back to its origin `UniversalAccount`. Complement of `deriveExecutorAccount`. Replaces the v5 `convertExecutorToOriginAccount`, which was removed in SDK v6.
-
-| Argument          | Type                 | Description                                                            |
-| ----------------- | -------------------- | ---------------------------------------------------------------------- |
-| `executorAddress` | `string`             | UEA or CEA address                                                     |
-| `options.chain`   | `CHAIN` _(optional)_ | Required when resolving a CEA - specifies which external chain it's on |
-
-**Returns**: `Promise<UniversalAccount>` - `{ chain, address }`
+**Returns**: `Promise<{ accounts: Array<{ chain, chainName, address, type, exists, role? }> }>` - `type`: `'uea' | 'uoa' | 'cea'`; `role: 'controller'` marks the root controlling account.
 
 ```ts
-const origin =
-  await PushChain.utils.account.convertExecutorToOriginAccount('0xUEAAddress');
-// For CEA: pass options.chain
-const ceaOrigin = await PushChain.utils.account.convertExecutorToOriginAccount(
-  '0xCEAAddress',
-  { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }
-);
+// Resolve a UEA back to its controlling UOA
+const { accounts } =
+  await PushChain.utils.account.resolveControllerAccount('0xUEAAddress');
+const controller = accounts.find((a) => a.role === 'controller');
+
+// Resolve a CEA - chain is required
+const { accounts: bnbAccounts } =
+  await PushChain.utils.account.resolveControllerAccount('0xCEAAddress', {
+    chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET,
+  });
 ```
 
 ---
@@ -981,6 +1014,7 @@ Full reference: https://push.org/agents/workflows/use-contract-helpers.md
 | `signMessage` return treated as a string                     | It returns `Uint8Array` - use `Buffer.from(sig).toString('hex')` if you need a hex string                      |
 | Silent tx failure (no throw, no logs)                        | `tx.wait()` resolves even on reverts - always check `receipt.status === 1`                                     |
 | Private key in source code                                   | Use `process.env.PRIVATE_KEY` - never hardcode keys in scripts or commit them to version control               |
+| Treating `client.universal.account` as `{ address }` object — `account.address` returns `undefined` | `account` is a **plain address string**, not an object. Only `origin` has the `{ address, chain }` shape. Read it directly: ``const me = client.universal.account; // `0x${string}` ``. |
 
 > For Solana targets, use `encodeTxData({ idl, functionName, args })` and pass the result as `tx.data` - same `{ to, value, data }` shape as EVM. The SDK resolves program accounts, PDAs, and the sender's CEA automatically from the IDL.
 >

@@ -4,6 +4,7 @@ description: "Use when writing Solidity contracts deployed on Push Chain - cover
 id: push-contracts
 intent: Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks
 package: 'solidity (EVM-compatible - Hardhat / Foundry / Remix)'
+current_sdk_version: 6.0.9
 entry: 'IUniversalGatewayPC.sendUniversalTxOutbound'
 resources: 'https://push.org/agents/resources/push-contracts/index.json'
 references:
@@ -16,6 +17,10 @@ scripts:
 
 **Intent**: Write Solidity contracts that run on Push Chain, identify cross-chain callers, dispatch outbound transactions to external chains, and receive inbound callbacks.
 **Tooling**: Standard EVM (Hardhat / Foundry / Remix) - Push Chain is fully EVM-compatible. No special SDK needed inside Solidity.
+
+> **Full agent layer:** [push.org/llms.txt](https://push.org/llms.txt) indexes every skill, workflow, example, error code, constant, and routing decision in the Push Chain agent layer. Pull it when this skill points outside its domain — cross-skill context, unknown progress-hook IDs, error recovery, or constants lookups.
+
+> **PUSD stablecoin?** If your contract holds, mints, or burns **PUSD** (par-backed) or **PUSD+** (yield-bearing) — both native on Push Chain Donut — see the dedicated [push-pusd skill](https://pusd.push.org/agents/skill/push-pusd/SKILL.md) (or [pusd.push.org/llms.txt](https://pusd.push.org/llms.txt) for the full PUSD agent-layer index: ABIs, deployment addresses, examples) for `IPUSD` / `IPUSDManager` / `IPUSDPlusVault` interfaces, the role model (`MINTER_ROLE` / `BURNER_ROLE` on PUSDManager), and patterns for `mintFor` / `redeemFor` wrappers in other contracts.
 
 ## Push Chain - Network Config
 
@@ -258,6 +263,18 @@ interface IUEAFactory {
 }
 ```
 
+### Decoding `account.owner`
+
+`account.owner` is `bytes` because the same struct carries both EVM (20-byte) and Solana (32-byte) addresses. Decode by chain type:
+
+- **EVM chains** - 20-byte ABI-packed address:
+  - Solidity: `address wallet = address(bytes20(account.owner))`
+  - ethers.js: `const wallet = ethers.getAddress(ethers.hexlify(account.owner))`
+- **Solana** - 32-byte base58 public key (off-chain only):
+  - `const pubkey = bs58.encode(ethers.getBytes(account.owner))`
+
+> The `ceaAddress` parameter in `executeUniversalTx` uses the same encoding - same chain type = same byte layout.
+
 ### On-chain usage
 
 ```solidity
@@ -310,7 +327,130 @@ const [uea, isDeployed] = await factory.getUEAForOrigin({
 });
 ```
 
-> Note: `account.owner` is always returned as hex bytes. For Solana addresses, decode with `bs58.encode(ethers.getBytes(account.owner))`.
+### Verifying EIP-712 Signatures from Cross-Chain Wallets
+
+Use this section when your Push Chain contract receives an EIP-712 typed-data payload that was signed by a wallet on a **different** chain (e.g. MetaMask on Ethereum Sepolia, signing a `PaymentRequest` that lands on Push Chain). The frontend signing side is documented in the [push-frontend skill — EIP-712 Typed-Data Signing](https://push.org/agents/skills/push-frontend/SKILL.md#eip-712-typed-data-signing-cross-chain-wallets).
+
+**Why this needs a special verifier.** EIP-712's domain hash binds the signature to `(name, version, chainId, verifyingContract)`. Wallets refuse to sign a domain whose `chainId` doesn't match their currently active chain — so a user on Sepolia signs with `domain.chainId = 11155111`, not Push Chain's `42101`. If your Push Chain verifier rebuilds the domain with `block.chainid`, signature recovery fails. The fix is to make `originChainId` part of the request payload, rebuild the domain dynamically from it, recover the signer's origin-chain EOA, and resolve that EOA's UEA via the factory.
+
+**Inputs the frontend must send along with the signature:**
+
+| Field | Why the verifier needs it |
+| --- | --- |
+| `originChainId` (uint256) | To rebuild the same EIP-712 domain the wallet signed against |
+| `originAddress` (address) | The signer's origin-chain EOA — feeds into `IUEAFactory.getUEAForOrigin` to resolve the UEA. Optional if you trust `ECDSA.recover` to produce the same address (it should). |
+| `signature` (bytes) | The 65-byte ECDSA signature returned by `signTypedData` |
+
+#### Verification pattern
+
+```solidity
+pragma solidity ^0.8.20;
+
+import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
+// or inline the interface — see "Or inline the interface directly" above
+
+address constant UEA_FACTORY = 0x00000000000000000000000000000000000000eA;
+
+struct PaymentRequest {
+    address recipient;       // UEA (cross-chain) or EOA (Push-native) — see branching below
+    uint256 amount;
+    uint256 nonce;
+    uint256 originChainId;   // signed-in domain chainId; supplied by the frontend payload
+}
+
+bytes32 constant PAYMENT_TYPEHASH = keccak256(
+    "PaymentRequest(address recipient,uint256 amount,uint256 nonce,uint256 originChainId)"
+);
+
+function verifyPaymentRequest(PaymentRequest calldata req, bytes calldata sig)
+    external
+    view
+    returns (address signer, address resolvedUEA)
+{
+    // 1. Rebuild the EIP-712 domain with the *origin* chainId — NOT block.chainid.
+    bytes32 domainSeparator = keccak256(abi.encode(
+        keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+        keccak256(bytes("MyApp")),
+        keccak256(bytes("1")),
+        req.originChainId,
+        address(this)
+    ));
+
+    // 2. Hash the struct and produce the EIP-712 digest.
+    bytes32 structHash = keccak256(abi.encode(
+        PAYMENT_TYPEHASH,
+        req.recipient,
+        req.amount,
+        req.nonce,
+        req.originChainId
+    ));
+    bytes32 digest = keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash));
+
+    // 3. Recover the signer — this is the user's EOA on their origin chain.
+    signer = ECDSA.recover(digest, sig);
+
+    // 4. Branch on whether the signer is cross-chain or Push-native.
+    if (req.originChainId == block.chainid) {
+        // Push-native EOA: there is no UEA — `signer` IS the Push Chain address.
+        require(signer == req.recipient, "bad signer (push-native)");
+        resolvedUEA = signer;
+    } else {
+        // Cross-chain origin: resolve the signer's deterministic UEA on Push Chain.
+        (address uea, ) = IUEAFactory(UEA_FACTORY).getUEAForOrigin(
+            UniversalAccountId({
+                chainNamespace: "eip155",
+                chainId: Strings.toString(req.originChainId),
+                owner: abi.encodePacked(signer)
+            })
+        );
+        require(uea == req.recipient, "bad signer (cross-chain)");
+        resolvedUEA = uea;
+    }
+}
+```
+
+> The Push-native branch matters because `IUEAFactory.getUEAForOrigin` is defined for *external-chain* origins. For a native Push EOA, there is no UEA — the EOA IS its own execution account on Push Chain. Calling the factory with `chainNamespace="eip155", chainId="42101"` is undefined; branch on `originChainId == block.chainid` instead.
+
+#### Replay protection
+
+EIP-712 alone is not replay protection. Add the usual primitives to your verifier:
+
+- **Per-request nonce.** Store `mapping(address signer => uint256 nonce)`, require `req.nonce == nonces[signer]`, and increment on use. The nonce is keyed by the recovered signer (origin EOA), not the UEA.
+- **Deadline.** Include `uint256 deadline` in the typed-data struct and `require(block.timestamp <= req.deadline, "expired")`.
+- **Domain pinning to verifying contract.** The `verifyingContract` field in the domain already binds the signature to *this* contract; a payload signed for contract A cannot be replayed against contract B.
+- **Cross-chain replay.** `originChainId` and `block.chainid` together prevent the same payload being replayed across forks or across origin chains: if a user re-signs the same struct on a different origin chain, `originChainId` differs and the domain hash differs.
+
+#### Alternative: ERC-1271 for contract signers
+
+For wallets that are themselves contracts (multisigs, account-abstraction wallets, UEAs once they implement it), skip the `ECDSA.recover` path entirely and call `IERC1271(signer).isValidSignature(digest, sig)`. Detect by `signer.code.length > 0` and dispatch accordingly:
+
+```solidity
+import "@openzeppelin/contracts/interfaces/IERC1271.sol";
+
+bytes4 constant ERC1271_MAGIC_VALUE = 0x1626ba7e;
+
+function _verifySig(address signer, bytes32 digest, bytes calldata sig) internal view returns (bool) {
+    if (signer.code.length > 0) {
+        try IERC1271(signer).isValidSignature(digest, sig) returns (bytes4 magic) {
+            return magic == ERC1271_MAGIC_VALUE;
+        } catch {
+            return false;
+        }
+    }
+    return ECDSA.recover(digest, sig) == signer;
+}
+```
+
+#### Anti-patterns
+
+| Don't | Why | Do |
+| --- | --- | --- |
+| Use `block.chainid` in the EIP-712 domain | Locks the contract to a single signing chain; cross-chain signatures fail | Use `req.originChainId` — supplied by the frontend, included in the signed payload |
+| Skip the Push-native branch and always call `getUEAForOrigin` | `getUEAForOrigin` is undefined for Push-native origins; behavior is implementation-defined | Branch on `req.originChainId == block.chainid` and verify `signer == recipient` directly |
+| Reuse `req.nonce` across signers | Two users can both submit nonce=0 and collide on the same key | Key the nonce map by `signer` (origin EOA), not by `recipient` (UEA) |
+| Omit `verifyingContract` from the domain | Payload becomes portable across contracts — replay risk | Always include `address(this)` in the domain |
+| Verify against `req.originAddress` instead of the recovered signer | The frontend-supplied `originAddress` is untrusted input | Always recover the signer via `ECDSA.recover` and use that as the authority |
 
 ---
 
@@ -805,13 +945,6 @@ cast code $CONTRACT --rpc-url https://evm.donut.rpc.push.org/
 | Push → Sepolia outbound succeeds locally but never lands on Sepolia                                                      | Donut Testnet does not yet have TSS relay support for Push → Ethereum Sepolia outbound. Push tx and UGPC event are valid; the destination tx just never fires. Use BNB Testnet as the destination for now. (Sepolia → Push **inbound** works fine.)                                                                                                                        |
 | TSS dispatches to the 2-arg `executeUniversalTx(UniversalPayload, bytes)` overload and the 6-arg version is never called | For Push-native contracts, TSS calls only the **6-arg** signature `executeUniversalTx(string, bytes, bytes, uint256, address, bytes32)`. The 2-arg signature is reserved for actual UEA proxy accounts. Implement the 6-arg version.                                                                                                                                       |
 | Refunds drain the EOA over many runs                                                                                     | UGPC routes surplus refund to `address(this)`, not back to the user EOA that called your function. Plan a `withdraw()` path or treasury sweep. Expected behavior, not a bug.                                                                                                                                                                                               |
-
-> **`account.owner` byte layout** in `UniversalAccountId`:
->
-> - **EVM chains**: 20-byte ABI-packed address - `address wallet = address(bytes20(account.owner))`
-> - **Solana**: 32-byte base58 public key - decode off-chain: `bs58.encode(ethers.getBytes(account.owner))`
->
-> This matches the `ceaAddress` layout in `executeUniversalTx` - the same chain type = same byte encoding.
 
 ## Source
 

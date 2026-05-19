@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:04:53.228Z",
+  "lastUpdated": "2026-05-18T06:25:39.755Z",
   "keys": {
     "pages.knowledge.validators.seo.title": {
       "value": "验证者 —",
@@ -94,11 +94,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.443Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "第一时间了解Push Chain testnet上线消息。加入我们的邮件列表，获取独家更新。",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.443Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1667,24 +1662,24 @@
       "lastUpdated": "2025-11-14T19:27:06.444Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build": {
-      "value": "### 什么应用可以在Push Chain上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助 Push Chain 的共享状态、跨链架构，可能性无穷无尽。以下是几个旗舰示例：\n\n- **通用DEX**\n  所有流动性池的单一交换UI–通过速度和CXO的体验进行跨链路由抽象.\n\n- **通用DeFi**\n  浏览器中的全球银行：跨生态系统的贷款、借贷、收益聚合器，无需手动桥接.\n\n- **通用AI代理人**\n  自治代理人支付并接受任意链上任何令牌– perfect for 订阅服务、数据机器人等.\n\n- **通用DAO**\n  跨链治理，令牌持有者投票并执行提案，无需原始链.\n\n- **通用游戏**\n  多玩家比赛和跨链游戏经济，统一玩家和资产来自Ethereum、Solana、Polygon等.\n\n- **通用市场**\n  买卖和交易NFTs和令牌的单一集成市场.\n\n- **通用名称服务**\n  跨多个区块链解析人类可读名称的钱包.\n\nPush Chain 上可以构建的应用和创新无穷无尽！查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)获取启动。开发者也可以查看[文档中心](/docs/)开始.\n\n---",
+      "value": "### 什么样的应用可以在推送链上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助推送链的共享状态和跨链架构，可能性无穷。以下是一些旗舰示例：\n\n- **通用DEX**  \n  一键式交易UI，跨所有链进行流动性池路由，速度和界面如同集中式交易所(CENTRALIZED EXCHANGE)。\n\n- **通用DeFi**  \n  全球浏览器银行：贷款、借款、收益聚合器跨链而无需手动桥接。\n\n- **通用AI代理人**  \n  自主代理人，在任何链上支付并接受任意令牌——适合订阅服务、数据机器人等。\n\n- **通用DAO**  \n  跨链治理：不论其来源链，令牌持有者投票并执行提案。\n\n- **通用游戏**  \n  多玩家锦标赛和跨链游戏经济，统一玩家和资产，涵盖以太坊、索拉纳、多边形等。\n\n- **通用市场**  \n  买卖交易NFT和令牌的集合市场——跨所有链。\n\n- **通用名称服务**  \n  人类可读名称，在多个区块链上解析钱包地址。\n\n推送链上可以构建的应用和创新无穷！查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)开始吧。开发者也可以检查[文档中心](/docs/)入门。\n\n---",
       "englishChecksum": "799908a6e48c469eb2b317beed9dd088",
-      "lastUpdated": "2026-02-26T00:04:10.648Z"
+      "lastUpdated": "2026-05-17T19:40:24.415Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section": {
       "value": "## 开发者、用户和节点运营商",
       "englishChecksum": "3e32786584a34093ac405ea1c254e3ab",
-      "lastUpdated": "2026-02-26T00:04:13.144Z"
+      "lastUpdated": "2026-05-17T19:40:26.562Z"
     },
     "pages.privacymobile.seo.description": {
-      "value": "我们如何在Push Chain移动应用中收集、使用和保护数据，以及您的选择。",
+      "value": "我们如何收集、使用和保护推链移动应用程序中的数据，以及您的选择。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-02-26T00:04:39.415Z"
+      "lastUpdated": "2026-05-17T19:40:48.372Z"
     },
     "components.short-faq-snippet.qnas.qna3.question": {
-      "value": "我需要一个不同的钱包或燃料令牌吗？",
+      "value": "我需要不同的钱包或手续费代币吗？",
       "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
-      "lastUpdated": "2026-02-26T00:04:41.111Z"
+      "lastUpdated": "2026-05-17T19:40:50.155Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "构建者 — 方法与教程",
@@ -1886,11 +1881,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:28:53.286Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "立即申请",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:38.386Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "关闭提示消息",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1905,16 +1895,6 @@
       "value": "区块链提示通知",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:04:43.721Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "立即申请",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:44.750Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "申请现在",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:47.776Z"
     },
     "components.blog.more-posts.title": {
       "value": "更多来自 Push Chain 的内容",
@@ -2011,43 +1991,43 @@
       "lastUpdated": "2026-02-26T00:04:47.687Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "在这里获取您的测试网代币",
+      "value": "在这里获取您的PC测试网令牌",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-02-26T00:04:51.770Z"
+      "lastUpdated": "2026-05-17T19:40:51.808Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
-      "value": "区块链的通用钱包",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-02-26T00:04:53.228Z"
+      "lastUpdated": "2026-05-17T19:40:53.300Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
+      "value": "- 移除早期测试网络的旧技术债务",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-02-26T00:04:16.177Z"
+      "lastUpdated": "2026-05-17T19:40:29.195Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "该提案影响了总共17.8万个地址中约1950个钱包。拥有1100个PC令牌或更多（包括数十亿）的钱包被重新平衡，以持有1100-2000个PC令牌。",
+      "value": "该提案影响了总地址17.8万个中的顶级1,950个钱包。持有1,100 PC代币或更多（包括亿万美元）的钱包进行重新平衡，以持有1,100-2,000 PC代币之间的数量。",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-26T00:04:22.163Z"
+      "lastUpdated": "2026-05-17T19:40:33.098Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
-      "value": "- 总供应量从75T+减少到约10B PC代币",
+      "value": "- 总供应量从75T+减至约10B PC代币",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-02-26T00:04:24.915Z"
+      "lastUpdated": "2026-05-17T19:40:35.749Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- 顶级1,950钱包重新平衡到1,100-2,000 PC代币范围",
+      "value": "- 顶级1,950钱包重新平衡至1,100-2,000 PC代币范围",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-26T00:04:28.285Z"
+      "lastUpdated": "2026-05-17T19:40:38.745Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "用户未提前通知，以防止恶意行为者在重新平衡之前将代币转移到其他钱包中。这一安全措施确保了重新平衡过程的完整性，并防止系统被操纵。",
+      "value": "用户事先未获通知，以防止恶意actors在重新平衡前将代币转移到其他钱包。这一安全措施确保了重新平衡过程的完整性，并防止系统被操控。",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-26T00:04:32.370Z"
+      "lastUpdated": "2026-05-17T19:40:42.525Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**对受影响的钱包（前 1,950 名）：**如果您的钱包持有 1,100+ PC 代币（或万亿），则您的余额已调整到 1,100-2,000 PC 代币范围。",
+      "value": "**对于受影响的钱包（前 1,950）：**如果您的钱包持有 1,100+ PC 代币（或万亿），您的余额已重新平衡为 1,100-2,000 PC 代币范围。",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-02-26T00:04:36.673Z"
+      "lastUpdated": "2026-05-17T19:40:46.733Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "深度解读 — 概念与架构",
@@ -2108,6 +2088,822 @@
       "value": "互操作性是一条谱线",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:06:29.644Z"
+    },
+    "footer.email-section.title": {
+      "value": "跟随推链网的最新动态",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T22:17:31.731Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "获取最新动态！",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T22:17:34.468Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "订阅电子邮件版块",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T22:17:35.696Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "区块链新闻订阅",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T22:17:38.432Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "页脚导航和链接",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T22:17:41.788Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "推特链主页",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T22:17:42.673Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "区块链之家",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T22:17:43.613Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "推链logo",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T22:17:45.757Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "资源",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T22:17:49.305Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "资源导航",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T22:17:50.714Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "开发者",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T22:17:52.943Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "开发者导航",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T22:17:55.546Z"
+    },
+    "footer.columns.community.title": {
+      "value": "社区",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T22:17:56.433Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "社区导航",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T22:17:57.486Z"
+    },
+    "footer.columns.help.title": {
+      "value": "帮助",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T22:17:58.369Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "帮助导航",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T22:18:01.119Z"
+    },
+    "footer.links.get-started": {
+      "value": "开始",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T22:18:02.056Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "开始构建在Push Chain上",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-17T22:18:02.979Z"
+    },
+    "footer.links.docs": {
+      "value": "文档",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T22:18:03.738Z"
+    },
+    "footer.links.docs-title": {
+      "value": " Push 链文档",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T22:18:06.530Z"
+    },
+    "footer.links.github": {
+      "value": " GitHub",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T22:18:07.270Z"
+    },
+    "footer.links.github-title": {
+      "value": "在GitHub上查看推链存储库",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T22:18:08.280Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "知ledge Base",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T22:18:10.266Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "区块链知识库",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T22:18:11.177Z"
+    },
+    "footer.links.blog": {
+      "value": "博客",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-17T22:18:12.736Z"
+    },
+    "footer.links.blog-title": {
+      "value": "推特链博客",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T22:18:13.785Z"
+    },
+    "footer.links.litepaper": {
+      "value": "白皮书",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-18T06:25:17.015Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "推链技术白皮书（PDF）",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T22:18:18.768Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "品牌套件",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T22:18:21.926Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "推链品牌资产和指南",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T22:18:23.685Z"
+    },
+    "footer.links.push-scan": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T22:18:36.433Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "区块链浏览器",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T22:18:39.799Z"
+    },
+    "footer.links.faucet": {
+      "value": "水龙头",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T22:18:41.787Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "从Push链取得测试代币",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T22:18:44.514Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T22:18:57.545Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "推特区块链社区门户网站",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T22:18:59.955Z"
+    },
+    "footer.links.support": {
+      "value": "支持",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T22:19:02.355Z"
+    },
+    "footer.links.support-title": {
+      "value": "帮助中心",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T22:19:03.122Z"
+    },
+    "footer.links.security": {
+      "value": "安全性与披露信息",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T22:19:04.016Z"
+    },
+    "footer.links.security-title": {
+      "value": "报告漏洞（责任披露）",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T22:19:05.055Z"
+    },
+    "footer.links.contact-us": {
+      "value": "联系我们",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T22:19:05.819Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "合作、商务发展，媒体或一般咨询",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T22:19:06.908Z"
+    },
+    "footer.links.careers": {
+      "value": "招聘",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T22:19:07.688Z"
+    },
+    "footer.links.careers-title": {
+      "value": "在Push Chain拥有开放岗位",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T22:19:10.425Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/Twitter",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T22:19:11.155Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "关注Push Chain的X/Twitter",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T22:19:12.016Z"
+    },
+    "footer.links.discord": {
+      "value": " Discord ",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-18T06:25:19.434Z"
+    },
+    "footer.links.discord-title": {
+      "value": "加入Push ChainDiscord",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T22:19:14.514Z"
+    },
+    "footer.links.reddit": {
+      "value": "推特",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T22:19:16.858Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "加入Push Chain Reddit",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T22:19:17.510Z"
+    },
+    "footer.links.telegram": {
+      "value": "电报",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-17T22:19:19.565Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "加入Push ChainTelegram",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T22:19:20.427Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "社交媒体链接和法律信息",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T22:19:23.929Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-18T06:25:20.821Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "Push Chain 在 X (Twitter) 上",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T22:19:42.268Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "区块链在GitHub上",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T22:19:43.403Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "在GitHub上查看推链项目",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T22:19:45.021Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "在 Discord 上了解 Push Chain",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T22:19:56.814Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "在Discord上加入Push Chain",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T22:19:59.807Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "隐私政策",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T22:20:13.533Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "阅读隐私政策",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T22:20:14.724Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "隐私政策",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T22:20:15.656Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "服务条款",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T22:20:18.146Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "阅读服务条款",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T22:20:19.074Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "服务条款",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T22:20:20.080Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": " cookie 设置",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T22:20:22.178Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "管理Cookie设置",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T22:20:24.275Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "Push Chain 页脚插图",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T22:20:26.512Z"
+    },
+    "footer.footer-image.title": {
+      "value": "Push Chain - 通用区块链",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T22:20:29.187Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "文档 - 构建通用应用程序",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T22:20:30.531Z"
+    },
+    "pages.docs.seo.description": {
+      "value": " Push 链上的所有快速入门、SDK、API参考、示例和节点设置都在这里。",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T22:20:33.518Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "推送链文档 - 快速开始、SDK和API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T22:20:37.717Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "在通用执行层上构建和运行应用，清晰的指南和示例。",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T22:20:41.704Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Push Chain 文档 - 立即构建",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T22:20:56.531Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "快速入门，SDK、API参考和示例，助力加速开发。",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T22:20:59.675Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "测试网文档将在{count}后发布",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T22:21:00.998Z"
+    },
+    "pages.docs.header.description": {
+      "value": "嘘... 想提前见到测试网 Donut 吗？给我们发送 #pushchainsecret，我们会发送你一个测试版本的访问权限。",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T22:21:03.042Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "分享 Push 链上",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:21:04.083Z"
+    },
+    "pages.docs.header.title": {
+      "value": "推特关于Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:21:06.542Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "在推特上分享Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:21:07.641Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "什么是Push Chain？",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T22:21:10.848Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "区块链为您提供统一的工具箱，构建真正通用的应用程序。",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-18T06:25:23.436Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "了解更多",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T22:21:15.695Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "开始构建吧！",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T22:21:17.744Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "创建你的通用应用所需的所有 Push Chain SDK 资源",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T22:21:20.582Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "了解更多",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T22:21:22.447Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UIKit",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T22:21:24.230Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "在5分钟内集成任意基于React的应用。",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T22:21:26.458Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "了解更多",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T22:21:28.279Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "即将推出",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T22:21:29.207Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-18T06:25:39.755Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "安静实验室",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T22:21:34.855Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS & 隐私保护计算。",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T22:21:37.688Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "人类科技",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T22:21:40.705Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS与隐私保护计算。",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T22:21:45.493Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "拉面交换",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T22:21:49.240Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "任意链上任意代币的兑换服务",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T22:21:51.205Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T22:22:09.884Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "塞特拉",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T22:22:12.638Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "供应资产，借入它们并赚取优化收益",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T22:22:15.374Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T22:22:30.192Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "创建并发行ERC-20代币",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T22:22:33.193Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: AI 助手",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T22:22:49.892Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "在支持的网络之间发送、互换和管理资产",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T22:22:53.267Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "推币赌注",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T22:22:56.295Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "展示你的狂热者超能力，赢取奖励。",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T22:23:01.260Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "区块链吸血鬼生存者",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T22:23:02.880Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "全球范围内的吸血者生存像游戏",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T22:23:05.666Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "最后一位",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T22:23:22.095Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "倒计时结束前最后出价的人获胜",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T22:23:27.502Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T22:23:29.799Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "跨链统一身份",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T22:23:31.175Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "推送 x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T22:23:38.034Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-18T06:25:25.255Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T22:24:00.882Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "区块链上通用的增长引擎，奖励有质量的点击",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T22:24:03.113Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "区块打击",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T22:24:05.492Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "永生难忘的音乐对战",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T22:24:21.260Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "区块链娱乐城",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T22:24:24.411Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "通用，公平且透明的押注赢取",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T22:24:27.122Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "推送精英",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T22:24:30.191Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-18T06:25:27.294Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "切片。躲避。得分。",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T22:24:40.098Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T22:24:41.463Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "在任意链上使用任意钱包打赏",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T22:24:45.258Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T22:25:02.358Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.description": {
+      "value": "无缝跨链代币交换，不需桥接",
+      "englishChecksum": "de2b3bf95e3ed660f78c959450838463",
+      "lastUpdated": "2026-05-18T06:25:30.704Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "链环",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T22:25:09.180Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "跨链储蓄圈",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T22:25:10.639Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "推校园",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T22:25:13.439Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "在以太坊、索拉纳、基地和15+链上触达学生",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-18T06:25:38.281Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "球儿",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T22:25:35.134Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "登录您喜欢的链并争取荣誉",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T22:25:36.730Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "阿特拉",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T22:25:38.986Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "自动化加密遗产",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T22:25:42.206Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSDT",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T22:25:43.635Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "跨链USD稳定币，与所有链的USD流动性1:1挂钩",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-17T22:25:45.980Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T22:26:02.186Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "发送加密货币到域名，而不是散列值",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T22:26:04.974Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T22:26:20.391Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "即将推出",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T22:26:21.803Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "德根棋牌",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T22:26:23.105Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "玩国际象棋，下注，通用",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T22:26:25.958Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "区块链合一",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T22:26:27.275Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "创建、购买和销售区块链收藏品",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T22:26:42.858Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "推送兑换平台",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T22:26:44.225Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T22:26:45.411Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "跨链域名，GM + 部署工具",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T22:26:48.963Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "星跑",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T22:27:03.776Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "一个去中心化的、玩家拥有的经济体",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T22:27:20.184Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Forge Realm",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T22:27:22.923Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "混合来自多位创作者的基本角色和特征",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T22:27:25.547Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T22:27:28.098Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "多链Web3入口：域名，NFT和启动平台。",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T22:27:29.747Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Copet",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T22:27:45.117Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "通过链上活动喂养、玩耍并培育你的虚拟宠物",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T22:27:47.090Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T22:28:07.926Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "在70多个链上建立您的身份，赚取奖励。",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T22:28:11.817Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "区块链名称服务",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T22:28:16.117Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "获取您自己的.push域名",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T22:28:19.006Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T22:28:24.598Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "在任何链上免费部署你的NFT集合",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T22:28:27.785Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "光速",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T22:28:30.608Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "多链中继，速度如闪电般迅猛",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T22:28:34.186Z"
     }
   }
 }

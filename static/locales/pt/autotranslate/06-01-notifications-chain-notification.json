@@ -1,10 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Precisa de um código de convite? Siga-nos, assista ao nosso vídeo explicativo e deixe um comentário. Convites limitados!",
-      "button-title": "Obter código de convite",
-      "button-aria-label": "Obter código de convite! Confira aqui",
-      "image-alt": "Obter código de convite!"
+      "description": "Precisa de um código de convite? Siga-nos, assista ao nosso vídeo explicativo e deixe um comentário. Convites limitados.",
+      "button-text": "Obter Código de Convite",
+      "button-title": "Obter Código de Convite",
+      "button-aria-label": "Obtenha o Código de Convite!. Você pode conferir aqui",
+      "image-alt": "Obtenha o Código de Convite!"
     }
   }
 }

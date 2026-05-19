@@ -42,6 +42,7 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 | `tx.maxPriorityFeePerGas` | `BigInt` | SDK estimated | Override priority fee (EIP-1559) |
 | `tx.payGasWith` | `{ token: PushChain.CONSTANTS.PAYABLE.TOKEN.<CHAIN>.<TOKEN>; slippageBps?: number; minAmountOut?: bigint \| string }` | - | Pay universal transaction fees with a supported token instead of native. `slippageBps` e.g. `100` = 1% |
 | `tx.deadline` | `BigInt` | - | Optional execution deadline timestamp |
+| `tx.options.enforceGasCheck` | `boolean` | `false` | When `true`, the SDK pre-flight check throws `InsufficientUEABalanceError` instead of emitting a `WARNING` progress event and proceeding. Set `true` when you want pre-flight guarantees; leave at the default for best-effort flows that rely on the SDK's fee-locking / refill paths. Same flag is accepted by `prepareTransaction` and propagates through `executeTransactions` cascades. |
 
 ## Steps
 
@@ -105,7 +106,7 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
    ```typescript
    const progressHandler = (progress) => {
      console.log(`[${progress.id}] ${progress.title}: ${progress.message}`);
-     // Example output: [SEND-TX-03-02] UEA Resolved: UEA: 0x..., Deployed: true
+     // Example output: [SEND-TX-103-02] Universal Execution Account Resolved: UEA: 0x..., Deployed: true
    };
    ```
 
@@ -257,32 +258,40 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 }
 ```
 
-### Progress Hook Events (in order)
+### Progress Hook Events (Route 1, in order)
+
+> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.9`.
 
 | ID | Title | Level |
 |----|-------|-------|
-| `SEND-TX-01` | Origin Chain Detected | INFO |
-| `SEND-TX-02-01` | Estimating Gas | INFO |
-| `SEND-TX-02-02` | Gas Estimated | SUCCESS |
-| `SEND-TX-03-01` | Resolving UEA | INFO |
-| `SEND-TX-03-02` | UEA Resolved | SUCCESS |
-| `SEND-TX-04-01` | Awaiting Transaction | INFO |
-| `SEND-TX-04-02` | Awaiting Signature | INFO |
-| `SEND-TX-04-03` | Verification Success | SUCCESS |
-| `SEND-TX-04-04` | Verification Declined | ERROR |
-| `SEND-TX-05-01` | Gas Funding In Progress | INFO |
-| `SEND-TX-05-02` | Gas Funding Confirmed | SUCCESS |
-| `SEND-TX-06-01` | Preparing Funds Transfer | INFO |
-| `SEND-TX-06-02` | Funds Lock Submitted | INFO |
-| `SEND-TX-06-03` | Awaiting Confirmations | INFO |
-| `SEND-TX-06-03-01` | Confirmation #N Received | INFO |
-| `SEND-TX-06-03-02` | Confirmation #N Received | SUCCESS |
-| `SEND-TX-06-04` | Funds Confirmed | SUCCESS |
-| `SEND-TX-06-05` | Syncing State with Push Chain | SUCCESS |
-| `SEND-TX-06-06` | Funds Credited on Push Chain | SUCCESS |
-| `SEND-TX-07` | Broadcasting to Push Chain | INFO |
-| `SEND-TX-99-01` | Push Chain Tx Success | SUCCESS |
-| `SEND-TX-99-02` | Push Chain Tx Failed | ERROR |
+| `SEND-TX-101` | Origin Chain Detected | INFO |
+| `SEND-TX-102-01` | Estimating Gas | INFO |
+| `SEND-TX-103-01` | Resolving Universal Execution Account | INFO |
+| `SEND-TX-103-02` | Universal Execution Account Resolved | SUCCESS |
+| `SEND-TX-103-03` | Calculating Prepaid Deposit | INFO |
+| `SEND-TX-103-03-01` | Adjusting Prepaid Deposit to be >$1 | INFO |
+| `SEND-TX-103-03-02` | Prepaid Deposit in range (>=$1 and <$10) | INFO |
+| `SEND-TX-103-03-03` | Prepaid Deposit Exceeds $10 Cap, splitting Gas and Funds | INFO |
+| `SEND-TX-103-03-04` | Prepaid Deposit Estimated | SUCCESS |
+| `SEND-TX-104-01` | Awaiting Transaction | INFO |
+| `SEND-TX-104-02` | Awaiting Signature | INFO |
+| `SEND-TX-104-03` | Verification Success | SUCCESS |
+| `SEND-TX-104-04` | Verification Declined / Signature Failed | ERROR |
+| `SEND-TX-105-01` | Gas Funding In Progress | INFO |
+| `SEND-TX-105-02` | Gas Funding Confirmed | SUCCESS |
+| `SEND-TX-106-01` | Preparing Funds Transfer | INFO |
+| `SEND-TX-106-02` | Funds Lock Submitted | INFO |
+| `SEND-TX-106-03` | Awaiting Confirmations | INFO |
+| `SEND-TX-106-03-01` | Confirmation `<current>/<required>` Received | INFO |
+| `SEND-TX-106-03-02` | Confirmation `<current>/<required>` Received (final) | SUCCESS |
+| `SEND-TX-106-04` | Funds Confirmed | SUCCESS |
+| `SEND-TX-106-05` | Syncing with Push Chain | INFO |
+| `SEND-TX-106-06` | Funds Credited on Push Chain | SUCCESS |
+| `SEND-TX-107` | Broadcasting to Push Chain | INFO |
+| `SEND-TX-199-01` | Push Chain Tx Success | SUCCESS |
+| `SEND-TX-199-02` | Push Chain Tx Failed | ERROR |
+| `SEND-TX-199-03` | Syncing State with Push Chain Timeout | ERROR |
+| `SEND-TX-199-99` | Intermediate Push Chain Tx Completed | INFO |
 
 ## Common Failures
 
@@ -293,18 +302,19 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `User rejected signature` | User declined wallet prompt | Retry transaction; inform user why signature is needed |
 | `Invalid recipient address` | Malformed `to` address | Validate address format before sending |
 | `Execution reverted` | Contract call failed on-chain | Check contract state, parameters, and simulate call first |
-| `SEND-TX-04-04` progress event | Verification declined by user | User cancelled; show appropriate UI message |
+| `SEND-TX-104-04` progress event | Verification declined by user | User cancelled; show appropriate UI message |
 | `Gas estimation failed` | Contract will revert or invalid state | Simulate transaction or check contract preconditions |
 
 ## Agent Notes
 
 - **Route 1 is default**: Plain `to` address always executes on Push Chain.
+- **Route 1 origin types**: The signer can be a wallet on any supported external chain (EVM or SVM) OR a native Push Chain wallet. When the origin is external, the call routes through the UEA on Push Chain; when the origin is a native Push Chain wallet, the SDK signs and submits directly with no UEA hop.
 - **Value is in smallest unit**: Use `PushChain.utils.helpers.parseUnits()` for human-readable conversion.
 - **UEA auto-deploys**: First transaction from a new origin wallet triggers automatic UEA deployment.
 - **Gas is abstracted**: Users pay gas on their origin chain in native tokens; SDK handles UEA funding.
 - **Signature prompt expected**: User will see one signature request from their wallet.
 - **Use progressHook for UX**: Display step-by-step status in frontend for better user experience.
-- **Check for reverts**: If `SEND-TX-99-02` fires, parse the error message for revert reason.
+- **Check for reverts**: If `SEND-TX-199-02` fires, parse the error message for revert reason.
 
 ## MCP Mapping Candidates
 

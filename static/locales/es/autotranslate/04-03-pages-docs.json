@@ -6,12 +6,10 @@
           "sections": {
             "resources": {
               "items": {
-                "whatispush": {
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "Stablecoin con paridad 1:1 que combina liquidez USD de todas las cadenas.",
                   "ctatitle": "Aprende más"
-                },
-                "builders": {
-                  "title": "¡Manos a la obra!",
-                  "subtitle": "Todo lo que necesitas con Push Chain SDK para crear tu app universal"
                 }
               }
             }

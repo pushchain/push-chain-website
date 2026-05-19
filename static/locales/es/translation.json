@@ -171,47 +171,9 @@
     }
   },
   "footer": {
-    "email-section": {
-      "title": "Mantente al tanto de Push Chain",
-      "title-secondary": "¡noticias y actualizaciones!",
-      "title-aria-label": "Sección de suscripción al boletín",
-      "section-aria-label": "Suscríbete al boletín de Push Chain"
-    },
-    "legal": {
-      "terms-of-service-title": "Lee los Términos de Servicio",
-      "terms-of-service-aria-label": "Términos de Servicio",
-      "cookie-preferences": "Preferencias de cookies",
-      "privacy-policy": "Política de Privacidad",
-      "privacy-policy-title": "Lee la Política de Privacidad",
-      "privacy-policy-aria-label": "Política de Privacidad",
-      "terms-of-service": "Términos de Servicio",
-      "cookie-preferences-title": "Administrar la configuración de cookies"
-    },
-    "main-section": {
-      "section-aria-label": "Navegación y enlaces del pie de página",
-      "logo-link-title": "Página principal de Push Chain",
-      "logo-link-aria-label": "Página de inicio de Push Chain",
-      "logo-alt": "Logotipo de Push Chain"
-    },
-    "columns": {
-      "resources": {
-        "title": "Recursos",
-        "title-aria-label": "Navegación de recursos"
-      },
-      "developers": {
-        "title": "Desarrolladores",
-        "title-aria-label": "Navegación para desarrolladores"
-      },
-      "community": {
-        "title": "Comunidad",
-        "title-aria-label": "Navegación de la comunidad"
-      },
-      "help": {
-        "title": "Ayuda",
-        "title-aria-label": "Navegación de ayuda"
-      }
-    },
     "links": {
+      "llms": "LLMs.txt para Agentes de IA",
+      "llms-title": "Documentación de Push Chain legible por máquina para asistentes de codificación de IA",
       "get-started": "Comenzar",
       "get-started-title": "Empieza a construir en Push Chain",
       "docs": "Documentación",
@@ -249,6 +211,46 @@
       "telegram": "Telegram",
       "telegram-title": "Únete al Telegram de Push Chain"
     },
+    "email-section": {
+      "title-secondary": "¡noticias y actualizaciones!",
+      "title-aria-label": "Sección de suscripción al boletín",
+      "section-aria-label": "Suscríbete al boletín de Push Chain",
+      "title": "Mantente actualizado con Push Chain"
+    },
+    "legal": {
+      "privacy-policy": "Política de Privacidad",
+      "privacy-policy-title": "Lee la Política de Privacidad",
+      "privacy-policy-aria-label": "Política de Privacidad",
+      "terms-of-service": "Términos de Servicio",
+      "cookie-preferences-title": "Administrar la configuración de cookies",
+      "terms-of-service-title": "Lee las Condiciones de Servicio",
+      "terms-of-service-aria-label": "Términos del servicio",
+      "cookie-preferences": "Preferencias de cookies"
+    },
+    "main-section": {
+      "section-aria-label": "Navegación y enlaces del pie de página",
+      "logo-link-title": "Página principal de Push Chain",
+      "logo-link-aria-label": "Página de inicio de Push Chain",
+      "logo-alt": "Logotipo de Push Chain"
+    },
+    "columns": {
+      "resources": {
+        "title": "Recursos",
+        "title-aria-label": "Navegación de recursos"
+      },
+      "developers": {
+        "title": "Desarrolladores",
+        "title-aria-label": "Navegación para desarrolladores"
+      },
+      "community": {
+        "title": "Comunidad",
+        "title-aria-label": "Navegación de la comunidad"
+      },
+      "help": {
+        "title": "Ayuda",
+        "title-aria-label": "Navegación de ayuda"
+      }
+    },
     "social-section": {
       "section-aria-label": "Enlaces a redes sociales e información legal",
       "twitter-icon-title": "Push Chain en X (Twitter)",
@@ -265,6 +267,29 @@
   },
   "pages": {
     "knowledge": {
+      "hero-section": {
+        "email-signup": {
+          "description": "Push Chain testnet está en vivo. Únete a nuestra lista de correo para recibir actualizaciones exclusivas.",
+          "title": {
+            "long": "Recibe notificaciones sobre la Testnet de Push Chain",
+            "short": "Push Chain Testnet"
+          }
+        },
+        "title": "Base de Conocimiento",
+        "description": {
+          "highlighted": "Push Chain es una verdadera blockchain universal diseñada para eliminar la fragmentación entre todas las cadenas.",
+          "developers": "Desarrolladores",
+          "developers-text": "despliega una vez y sé compatible instantáneamente con todas las cadenas EVM y no EVM compatibles.",
+          "users": "Usuarios",
+          "users-text": "usa la misma app sin importar la cadena de la que vengan."
+        },
+        "footer": {
+          "description": "Crea experiencias fluidas y fáciles de usar para tu app en cualquier blockchain con Push Chain.",
+          "cta": {
+            "text": "Recibe notificaciones"
+          }
+        }
+      },
       "push101": {
         "explainer-section": {
           "blocks": {
@@ -332,10 +357,10 @@
             "sections": {
               "universal-apps": {
                 "items": {
-                  "apps-only-possible-with-shared-state-v1": {
-                    "title": "Aplicaciones Posibles Solo con Estado Compartido - Vol. 1"
+                  "apps-only-possible-with-shared-state-v1": {},
+                  "apps-only-possible-with-shared-state-v2": {
+                    "title": "Apps Posibles Solo con Estado Compartido - Vol. 2"
                   },
-                  "apps-only-possible-with-shared-state-v2": {},
                   "apps-of-the-future": {
                     "title": "Aplicaciones del Futuro — Construyendo sin el caos"
                   },
@@ -649,7 +674,7 @@
                   "status-heading": "## Estado",
                   "status-timeline": "25 de febrero de 2026 - Comenzado<br />25 de febrero de 2026 - ✅ Completado",
                   "overview-heading": "## Resumen",
-                  "overview-text": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC desde 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días de la prueba y prepara la cadena para un entorno similar al mainnet.",
+                  "overview-text": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC de 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días del testnet y prepara la cadena para un entorno similar al mainnet.",
                   "why-heading": "### ¿Por qué se hizo esto?",
                   "why-text": "En los primeros días de Push Chain testnet, no había un proceso de quema y acuñación para los $PC tokens. Esto resultó en cálculos de precios extremadamente bajos para las transacciones universales y permitió a un pequeño número de tenedores de tokens acumular grandes cantidades de tokens (llegando a billones). Esto creó una economía de tokens desequilibrada que necesitaba corrección antes del lanzamiento de mainnet.",
                   "why-necessary": "El reequilibrio fue necesario para:",
@@ -664,12 +689,11 @@
                   "change-percentage": "- Afecta solo al 0.17% de las direcciones totales (1,950 de 1.178M)",
                   "change-unaffected": "- El 99,83% de los usuarios no se ven afectados",
                   "why-not-informed-heading": "### ¿Por qué los usuarios no fueron informados con anticipación?",
-                  "why-not-informed-text": "Los usuarios no recibieron una notificación previa para evitar que actores maliciosos redistribuyeran los tokens a otras billeteras antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el manipulación del sistema.",
+                  "why-not-informed-text": "Los usuarios no fueron notificados con anticipación para evitar que actores maliciosos redistribuyeran tokens a otros monederos antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el engaño del sistema.",
                   "validator-period": "El período de propuesta de validadores de la testnet está actualmente establecido en 5 minutos para ayudar a eliminar casos límite como este antes de que se implemente la propiedad descentralizada completa del validador.",
                   "why-52t-heading": "### ¿Por qué todavía veo una oferta de 52T?",
-                  "why-52t-text": "El reequilibrio es un enfoque en dos fases. Los tokens ahora se recogen a una cartera controlada por el equipo y serán quemados pronto.",
                   "how-affect-heading": "### ¿Cómo me afecta esto?",
-                  "affect-majority": "**Para el 99.83% de los usuarios:** Este cambio no afecta a su cartera. Su saldo sigue igual.",
+                  "affect-majority": "**Para el 99.83% de los usuarios:** Este cambio no afecta a usted. Su saldo de billetera sigue siendo el mismo.",
                   "affect-top-wallets": "**Para las billeteras afectadas (las 1,950 principales):** Si tu billetera tenía 1,100+ Token PC (o billones), tu saldo se ha reequilibrado al rango de 1,100-2,000 Token PC.",
                   "need-help-heading": "**¿Necesitas ayuda?**",
                   "need-help-text": "Si cree que se ve afectado por este reequilibrio y tiene preguntas o inquietudes, comuníquese con el equipo de Push Chain en Discord para obtener ayuda."
@@ -686,29 +710,6 @@
         "og-description": "Conceptos, guías paso a paso y respuestas a preguntas frecuentes sobre Push Chain.",
         "twitter-title": "Base de Conocimiento - Guías y Preguntas Frecuentes",
         "twitter-description": "Guías rápidas, preguntas frecuentes e instrucciones para Push Chain (sin jerga técnica)."
-      },
-      "hero-section": {
-        "title": "Base de Conocimiento",
-        "description": {
-          "highlighted": "Push Chain es una verdadera blockchain universal diseñada para eliminar la fragmentación entre todas las cadenas.",
-          "developers": "Desarrolladores",
-          "developers-text": "despliega una vez y sé compatible instantáneamente con todas las cadenas EVM y no EVM compatibles.",
-          "users": "Usuarios",
-          "users-text": "usa la misma app sin importar la cadena de la que vengan."
-        },
-        "email-signup": {
-          "title": {
-            "long": "Recibe notificaciones sobre la Testnet de Push Chain",
-            "short": "Push Chain Testnet"
-          },
-          "description": "Sé el primero en saber cuándo la testnet de Push Chain esté en funcionamiento. Únete a nuestra lista de correo para recibir actualizaciones exclusivas."
-        },
-        "footer": {
-          "description": "Crea experiencias fluidas y fáciles de usar para tu app en cualquier blockchain con Push Chain.",
-          "cta": {
-            "text": "Recibe notificaciones"
-          }
-        }
       },
       "explainer-section": {
         "blocks": {
@@ -786,15 +787,20 @@
           "sections": {
             "resources": {
               "items": {
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "Stablecoin con paridad 1:1 que combina liquidez USD de todas las cadenas.",
+                  "ctatitle": "Aprende más"
+                },
                 "whatispush": {
-                  "ctatitle": "Aprende más",
                   "title": "¿Qué es Push Chain?",
-                  "subtitle": "Push Chain proporciona un conjunto de herramientas unificado para construir aplicaciones verdaderamente universales."
+                  "subtitle": "Push Chain proporciona un conjunto de herramientas unificado para construir aplicaciones verdaderamente universales.",
+                  "ctatitle": "Aprender más"
                 },
                 "builders": {
-                  "title": "¡Manos a la obra!",
-                  "subtitle": "Todo lo que necesitas con Push Chain SDK para crear tu app universal",
-                  "ctatitle": "Aprende más"
+                  "ctatitle": "Aprende más",
+                  "title": "¡Vamos a construir!",
+                  "subtitle": "Todo lo que necesitas con Push Chain SDK para crear tu app universal"
                 },
                 "ui-kit": {
                   "title": "Kit de Interfaz de Usuario",
@@ -851,7 +857,7 @@
         "title": "Push Cult — Programa de Creadores para Contenido Impulsado por Señales",
         "description": "Push Cult es un programa exclusivo para creadores, solo por invitación, de Push Chain. 50 creadores. 20M PC tokens. Sin ruido, solo impacto medible.",
         "og-title": "Push Cult - El Programa de Creadores Construido para Signal",
-        "og-description": "Una orden invitación-only de 50 creadores que ganan con un bounty de 20M PC tokens al impulsar el uso real y la fe en Push Chain.",
+        "og-description": "Un grupo exclusivo de 50 creadores ganando 20M PC tokens como recompensa por impulsar el uso real y la creencia en Push Chain.",
         "twitter-title": "Push Cult - Programa de Creadores por Push Chain",
         "twitter-description": "50 creadores. 20M $PC tokens. Sin spam. Sin métricas vacías. Push Cult recompensa la señal real y el impacto real."
       },
@@ -866,7 +872,7 @@
     },
     "ecosystem": {
       "hero-section": {
-        "description": "Descubre apps, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en la Donut Testnet de Push Chain.",
+        "description": "Descubre aplicaciones, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en Donut Testnet de Push Chain.",
         "title": "Explora el Ecosistema Universal"
       },
       "tabs": {
@@ -1583,19 +1589,31 @@
       }
     },
     "ecosystem-apps-partners": {
-      "coming-soon": "Próximamente",
-      "app-spotlight": "APLICACIONES DESTACADAS",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS y computación que preserva la privacidad."
-        },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "Computación que preserva la privacidad y MPC-TSS."
-        }
-      },
       "apps": {
+        "puffles": {
+          "name": "Puffles",
+          "description": "#1 plataforma de lanzamiento de NFT en Push Chain"
+        },
+        "push-ninja": {
+          "name": "Push Ninja",
+          "spotlight-text": "Corta. Esquiva. Anota."
+        },
+        "tip-up": {
+          "description": "Manda propinas en cualquier cadena usando cualquier monedero",
+          "name": "TipUp"
+        },
+        "push-swap": {
+          "name": "Push Swap"
+        },
+        "omnihub": {
+          "name": "Omnihub"
+        },
+        "push-dex": {
+          "name": "PushDex"
+        },
+        "nfts2me": {
+          "name": "NFTs2Me"
+        },
         "ramen-swap": {
           "name": "Ramen Swap",
           "description": "Ofreciendo tokens de tu elección desde cualquier Blockchain"
@@ -1606,7 +1624,7 @@
         },
         "cetra": {
           "name": "Cetra",
-          "description": "Proporciona activos, préstales y obtén rendimientos optimizados"
+          "description": "Suministra activos, pide prestado contra ellos y obtén rendimientos optimizados"
         },
         "hodl-fun": {
           "name": "Hodl.fun",
@@ -1614,11 +1632,11 @@
         },
         "eon-ai-butler": {
           "name": "EON: Asistente de IA",
-          "description": "Envía, intercambia y gestiona activos en redes compatibles"
+          "description": "Envía, intercambia y administra activos a través de las redes compatibles"
         },
         "push-bet": {
           "name": "Push Bet",
-          "description": "Demuestra tus habilidades de jugador para ganar recompensas."
+          "description": "Muestra tus habilidades de degen para ganar recompensas."
         },
         "onchain-vampire-survivors": {
           "name": "OnchainVampireSurvivors",
@@ -1626,19 +1644,19 @@
         },
         "last-one": {
           "name": "El Último",
-          "description": "El último en ofertar antes de que se agote el tiempo se lleva el premio"
+          "description": "El último en pujar antes de que se acabe el tiempo se lleva el premio"
         },
         "pns": {
           "name": "PNS",
-          "description": "Tu Identidad en Todas las Cadenas"
+          "description": "Tu identidad en todas las cadenas"
         },
         "push-x402": {
           "name": "Push x402",
-          "description": "Monetización de API por llamada para infraestructura agente"
+          "description": "Monetización de API por pago para infraestructura agente"
         },
         "bountive": {
           "name": "Bountive",
-          "description": "Motor de crecimiento universal que recompensa la calidad por encima de los clics"
+          "description": "Motor de crecimiento universal que recompensa la calidad sobre los clics"
         },
         "beat-brawls": {
           "name": "BeatBrawls",
@@ -1648,24 +1666,13 @@
           "name": "APT Casino",
           "description": "Universal, justo, y transparente apuesta para ganar"
         },
-        "push-ninja": {
-          "name": "Push Ninja",
-          "spotlight-text": "Corta. Esquiva. Anota."
-        },
-        "tip-up": {
-          "name": "TipUp",
-          "description": "Manda propinas en cualquier cadena usando cualquier monedero"
-        },
-        "push-swap": {
-          "name": "Push Swap"
-        },
         "chain-circle": {
           "name": "ChainCircle",
-          "description": "Círculos de ahorro cross-chain"
+          "description": "Círculos de ahorros entre cadenas"
         },
         "push-campus": {
           "name": "Push Campus",
-          "description": "Llega a estudiantes en Ethereum, Solana, Base y más de 15 blockchains"
+          "description": "Llegar a estudiantes en Ethereum, Solana, Base y más de 15 cadenas"
         },
         "ballsy": {
           "name": "Ballsy",
@@ -1673,15 +1680,15 @@
         },
         "athera": {
           "name": "Athera",
-          "description": "Herencia de criptomonedas automatizada"
+          "description": "Herencia automática de criptomonedas"
         },
         "pusd": {
           "name": "PUSD",
-          "description": "Stablecoin con paridad 1:1 que combina liquidez USD de todas las cadenas"
+          "description": "Stablecoin de 1:1 con un valor equivalente al del dólar estadounidense que aprovecha la liquidez en USD desde todas las cadenas"
         },
         "freename": {
           "name": "Freename",
-          "description": "Envía criptomonedas a dominios, no a hashes"
+          "description": "Enviar cripto a dominios, no a hashs"
         },
         "hang4-fun": {
           "name": "Hang4.fun",
@@ -1691,15 +1698,9 @@
           "name": "Degen Chess",
           "description": "Juega al ajedrez, apuesta, universal"
         },
-        "omnihub": {
-          "name": "Omnihub"
-        },
-        "push-dex": {
-          "name": "PushDex"
-        },
         "zns": {
           "name": "ZNS",
-          "description": "Dominios multi-cadena, GM + Herramientas de Despliegue"
+          "description": "Dominios multi-cadena, GM + Herramientas de despliegue"
         },
         "star-run": {
           "name": "Star Run",
@@ -1707,35 +1708,43 @@
         },
         "forge-realm": {
           "name": "Forge Realm",
-          "description": "Combina y mezcla personajes base y rasgos de múltiples creadores"
+          "description": "Mezcla y combina personajes básicos y características de múltiples creadores"
         },
         "conft-codomain": {
           "name": "CoNFT/CoDomain",
-          "description": "Hub multi-blockchain Web3: Nombres de dominio, Tokens no fungibles (NFT), plataforma de lanzamiento."
+          "description": "Hub multichain Web3: Nombres de dominio, NFTs, plataforma de lanzamiento."
         },
         "copet": {
-          "name": "Copet",
-          "description": "Alimenta, juega y haz crecer a tu mascota virtual a través de actividad en la blockchain"
+          "name": "Copet"
         },
         "surf-layer": {
           "name": "SurfLayer",
-          "description": "Crea tu identidad y gana recompensas en más de 70 cadenas."
+          "description": "Construye tu identidad y gana recompensas en más de 70 cadenas."
         },
         "push-name-service": {
-          "name": "Servicio de nombres Push",
+          "name": "Servicio de Nombres Push",
           "description": "Obtén tu propio dominio .push"
-        },
-        "nfts2me": {
-          "name": "NFTs2Me"
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Receptor ultrarrápido entre múltiples blockchains"
+          "description": "Relayer Multichain Superrápido"
+        }
+      },
+      "coming-soon": "Pr√≥ximamente",
+      "app-spotlight": "DESTACADAS DE LA APLICACIÓN",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS y Computación que preserva la privacidad."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "Computación MPC-TSS y preservación de la privacidad."
         }
       }
     },
     "ecosystem-essentials": {
-      "title": "Explorar Aplicaciones Esenciales de la Red de Pruebas",
+      "title": "Explorar Aplicaciones de Prueba Essenciales",
       "apps": {
         "pc-faucet": {
           "name": "Grifo de PC",
@@ -1909,13 +1918,13 @@
       "container-aria-label": "Notificación toast de Push Chain"
     },
     "info-bar": {
-      "title": "Reúne a tu comunidad para un programa de creadores exclusivo con recompensas. ¡Únete a Push Cult!",
+      "title": "¡La invitación exclusiva a la Temporada 3 ya está activa!",
+      "learn-more-text": "Descubre la Temporada 3",
+      "learn-more-title": "Descubre la Temporada 3",
       "dismiss-button-title": "Descartar anuncio",
       "dismiss-button-aria-label": "Cerrar la barra de anuncios",
       "container-aria-label": "Anuncio del sitio",
-      "star-icon-alt": "Icono de estrella de anuncio",
-      "learn-more-text": "Aplicar Ahora",
-      "learn-more-title": "Solicitar Ahora"
+      "star-icon-alt": "Icono de estrella de anuncio"
     },
     "rewards-notification": {
       "title": "¡La beta cerrada de Donut Testnet está en vivo!",

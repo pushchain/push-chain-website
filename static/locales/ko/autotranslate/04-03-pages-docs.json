@@ -1,39 +1,14 @@
 {
   "pages": {
     "docs": {
-      "seo": {
-        "title": "문서 — 유니버설 앱 구축",
-        "description": "Push Chain에서 시작하는 데 필요한 모든 것: 빠른 시작 가이드, SDK, API 레퍼런스, 예제, 그리고 노드 설정 방법.",
-        "og-title": "Push Chain Docs - 빠른 시작, SDK 및 API",
-        "og-description": "유니버설 execution layer에서 앱을 구축하고 실행하는 명확한 가이드와 예제를 제공합니다.",
-        "twitter-title": "Push Chain Docs - 지금 시작하세요",
-        "twitter-description": "빠른 시작, SDK, API 참조 및 예제를 통해 빠르게 출시하세요."
-      },
-      "header": {
-        "countdown-title": "테스트넷 문서 출시까지 남은 시간",
-        "description": "쉿... 테스트넷 도넛을 미리 보고 싶으신가요? #pushchainsecret 해시태그와 함께 메시지를 보내주시면 테스트 빌드 액세스를 보내드릴게요.",
-        "tweet-button": "Push Chain에 대해 트윗하기",
-        "title": "Push Chain에 대해 트윗하기",
-        "ariaLabel": "Push Chain에 대해 트윗하기"
-      },
       "grid-section": {
         "blocks": {
           "sections": {
             "resources": {
               "items": {
-                "whatispush": {
-                  "title": "Push Chain이 무엇인가요?",
-                  "subtitle": "Push Chain은 진정으로 유니버설 앱을 구축하기 위한 통합 툴킷을 제공합니다.",
-                  "ctatitle": "자세히 알아보기"
-                },
-                "builders": {
-                  "title": "함께 만들어 봐요!",
-                  "subtitle": "Push Chain SDK를 이용해 유니버설 앱을 만드는 데 필요한 모든 것",
-                  "ctatitle": "더 알아보기"
-                },
-                "ui-kit": {
-                  "title": "UI Kit",
-                  "subtitle": "React 기반 앱을 5분 안에 통합하세요.",
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "모든 체인의 USD 유동성을 결합한 1:1 페깅 스테이블 코인입니다.",
                   "ctatitle": "더 알아보기"
                 }
               }

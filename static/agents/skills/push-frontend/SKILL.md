@@ -4,6 +4,8 @@ description: "Use when building React apps with @pushchain/ui-kit - covers PushU
 id: push-frontend
 intent: Enable universal transactions in a React frontend app
 package: '@pushchain/ui-kit'
+package_version: 6.0.9
+current_sdk_version: 6.0.9
 entry: 'usePushChainClient'
 resources: 'https://push.org/agents/resources/push-frontend/index.json'
 references:
@@ -15,6 +17,10 @@ references:
 **Intent**: Enable users to connect their wallet and execute universal transactions from a React app.
 **Package**: `@pushchain/ui-kit` - bundles `@pushchain/core`, no separate install needed.
 **Quickstart**: `npx create-universal-dapp` - interactive CLI, choose Next.js or Vite (React SPA); scaffolds the chosen framework with `PushUniversalWalletProvider` pre-wired and a demo transaction component ready to run.
+
+> **Full agent layer:** [push.org/llms.txt](https://push.org/llms.txt) indexes every skill, workflow, example, error code, constant, and routing decision in the Push Chain agent layer. Pull it when this skill points outside its domain — cross-skill context, unknown progress-hook IDs, error recovery, or constants lookups.
+
+> **PUSD stablecoin?** For minting, redeeming, or integrating **PUSD** (par-backed) and **PUSD+** (yield-bearing) — both native on Push Chain Donut — see the dedicated [push-pusd skill](https://pusd.push.org/agents/skill/push-pusd/SKILL.md) (or [pusd.push.org/llms.txt](https://pusd.push.org/llms.txt) for the full PUSD agent-layer index: ABIs, deployment addresses, examples). Covers cross-chain mint/redeem from any supported chain, NAV mechanics, and the three-tier redemption fulfillment (instant/convert/queue).
 
 ## Install
 
@@ -36,26 +42,28 @@ import { createRoot } from 'react-dom/client';
 import { PushUniversalWalletProvider, PushUI } from '@pushchain/ui-kit';
 import App from './App';
 
-export const walletConfig = {
-  network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // required
-  themeMode: PushUI.CONSTANTS.THEME.LIGHT, // LIGHT | DARK - controls the whole app theme
-  app: {
-    title: 'My App', // shown in the wallet connection modal
-    description: 'App tagline', // shown below the title in the modal
-  },
-  login: {
-    email: true, // enable email login (Push Wallet)
-    google: true, // enable Google OAuth login
-    wallet: true, // enable external wallet login (MetaMask, WalletConnect, etc.)
-  },
-};
-
 createRoot(document.getElementById('root')!).render(
-  <PushUniversalWalletProvider config={walletConfig}>
+  <PushUniversalWalletProvider
+    config={{
+      network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // required
+      login: {
+        email: true,            // email login (Push Wallet)
+        google: true,           // Google OAuth login
+        wallet: { enabled: true }, // external wallet login (MetaMask, WalletConnect, etc.)
+      },
+    }}
+    app={{
+      title: 'My App',         // shown in the wallet connection modal
+      description: 'App tagline', // shown below the title in the modal
+    }}
+    themeMode={PushUI.CONSTANTS.THEME.LIGHT} // LIGHT | DARK - controls the whole app theme
+  >
     <App />
   </PushUniversalWalletProvider>
 );
 ```
+
+> ⚠️ **Provider prop shape.** `app`, `themeMode`, and `themeOverrides` are **top-level props** on `PushUniversalWalletProvider`, NOT nested inside `config`. `config` only holds `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. Inside `login`, the wallet option is `wallet: { enabled: true }` (object form) — passing `wallet: true` as a bare boolean does not enable external wallet login and leaves `pushChainClient` null after connect.
 
 ```tsx
 // App.tsx - PushUniversalAccountButton can go anywhere inside the provider
@@ -401,6 +409,117 @@ const signature = await pushChainClient.universal.signMessage(message); // retur
 // To get a hex string: Buffer.from(signature).toString('hex')
 ```
 
+## EIP-712 Typed-Data Signing (Cross-Chain Wallets)
+
+Use this section when your dApp asks the **connected wallet** to sign an EIP-712 `PaymentRequest` (or any other typed-data payload) that will be verified by a contract on Push Chain. EVM origins only - Solana wallets cannot produce EIP-712 signatures and `signTypedData` will throw `Typed data signing is not supported for Solana`.
+
+### The trap
+
+EIP-712's `domain` includes a `chainId` field. MetaMask (and most other injected wallets) enforce that **`domain.chainId` must equal the wallet's currently active chainId** at signing time. So a wallet sitting on Ethereum Sepolia (`11155111`) cannot directly sign a payload whose domain says `chainId: 42101` (Push Chain Donut). The wallet rejects with:
+
+```
+Provided chainId "42101" must match the active chainId "11155111"
+```
+
+This is correct anti-replay behavior on the wallet's side. It is the friction point that the universal-account model exists to remove.
+
+### The pattern
+
+Sign with the wallet's **origin chainId** in the domain — never hardcode Push Chain's chainId. Verify on Push Chain by recovering the signer (which is the user's EOA on their origin chain) and resolving it to their UEA via `IUEAFactory.getUEAForOrigin(...)`.
+
+Use `pushChainClient.universal.signTypedData(...)` rather than calling the wallet directly. The SDK routes through the same signer the provider already holds, so it works for any connected EVM wallet (MetaMask, WalletConnect, ethers, viem) without grabbing `window.ethereum`.
+
+```tsx
+import { usePushChainClient } from '@pushchain/ui-kit';
+
+const { pushChainClient } = usePushChainClient();
+if (!pushChainClient) return; // gate on connection - see canonical guard pattern above
+
+// 1. Read the wallet's origin chain from the SDK — DO NOT hardcode Push Chain's chainId.
+const origin = pushChainClient.universal.origin; // { address: '0x...', chain: CHAIN }
+const originChainId = Number(origin.chain.split(':')[1]); // CHAIN is a CAIP-2 string, e.g. 'eip155:11155111'
+
+// 2. Build EIP-712 domain with the wallet's *current* chainId, not Push Chain's.
+const domain = {
+  name: 'MyApp',
+  version: '1',
+  chainId: originChainId,                       // the wallet's chain, not Push Chain's
+  verifyingContract: '0xYourContractOnPushChain',
+};
+
+const types = {
+  PaymentRequest: [
+    { name: 'recipient', type: 'address' },
+    { name: 'amount', type: 'uint256' },
+    { name: 'nonce', type: 'uint256' },
+    { name: 'originChainId', type: 'uint256' },
+  ],
+};
+
+// 3. Sign through the SDK - it delegates to the wallet's signTypedData.
+const sigHex = await pushChainClient.universal.signTypedData({
+  domain,
+  types,
+  primaryType: 'PaymentRequest',
+  message: value,
+});
+
+// 4. The signed payload must also carry the originChainId + origin address so the
+//    Push Chain contract can rebuild the same domain during verification and resolve
+//    the signer's UEA via the factory precompile.
+const requestForChain = {
+  ...value,
+  originChainId,
+  originAddress: origin.address,
+  signature: sigHex,
+};
+```
+
+### Verifying on Push Chain (Solidity)
+
+The companion contract must rebuild the EIP-712 domain with `req.originChainId`, recover the signer, and resolve their UEA via `IUEAFactory.getUEAForOrigin`. Skeleton:
+
+```solidity
+bytes32 domainSeparator = keccak256(abi.encode(
+    keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
+    keccak256("MyApp"),
+    keccak256("1"),
+    req.originChainId,            // dynamic, NOT block.chainid
+    address(this)
+));
+bytes32 digest = keccak256(abi.encodePacked("\x19\x01", domainSeparator, structHash));
+address signer = ECDSA.recover(digest, sig);
+
+if (req.originChainId == block.chainid) {
+    require(signer == req.recipient, "bad signer (push-native)");  // Push-native EOA — no UEA
+} else {
+    (address uea, ) = IUEAFactory(0x00000000000000000000000000000000000000eA).getUEAForOrigin(
+        UniversalAccountId({
+            chainNamespace: "eip155",
+            chainId: Strings.toString(req.originChainId),
+            owner: abi.encodePacked(signer)
+        })
+    );
+    require(uea == req.recipient, "bad signer (cross-chain)");
+}
+```
+
+> **Full contract pattern with replay protection, ERC-1271 fallback, and anti-patterns:** see [push-contracts skill — Verifying EIP-712 Signatures from Cross-Chain Wallets](https://push.org/agents/skills/push-contracts/SKILL.md#verifying-eip-712-signatures-from-cross-chain-wallets).
+
+### Alternative: ERC-1271
+
+For wallets that implement ERC-1271 (multisigs, account-abstraction wallets, UEAs themselves once they support it), skip the EOA-recover dance and call `IERC1271(recipient).isValidSignature(digest, sig)`. This is more general but the recipient address must be a contract that implements ERC-1271.
+
+### Anti-patterns
+
+| Don't | Why | Do |
+| --- | --- | --- |
+| Hardcode `chainId: 42101` in the EIP-712 domain when the user signs from MetaMask | Wallet rejects — chainId mismatch with active chain | Read `originChainId` from `pushChainClient.universal.origin.chain` |
+| Ask the user to switch their wallet to Push Chain just to sign | Defeats the universal-account UX entirely | Sign on origin chain, verify cross-chain via UEAFactory |
+| Use `block.chainid` inside the contract's EIP-712 domain | Locks the contract to one chain and one signing path | Build domain dynamically from `req.originChainId` |
+| Sign the EIP-712 digest as a raw `signMessage` to bypass the chainId check | Loses EIP-712 structured display in the wallet (user sees opaque hex), and the verifier must use `eth_sign` style recovery | Use `signTypedData` properly with the right chainId |
+| Grab `window.ethereum` to sign typed data | Skips the SDK's signer abstraction, only works for injected wallets, breaks for WalletConnect / Push Wallet users | Call `pushChainClient.universal.signTypedData(...)` — same wallet, no provider gymnastics |
+
 ## Common Mistakes
 
 | Mistake                                                                                       | Fix                                                                                                                                                                                                                                    |
@@ -411,6 +530,10 @@ const signature = await pushChainClient.universal.signMessage(message); // retur
 | Forgetting `'use client'` in Next.js App Router                                               | Add `'use client'` to the file that renders `PushUniversalWalletProvider`                                                                                                                                                              |
 | Expecting `pushChainClient` to be non-null on first render                                    | It's `null` until wallet connects - always use the canonical guard pattern above                                                                                                                                                       |
 | Hooks bind to wrong provider or return stale state (`uid` mismatch across multiple providers) | Pass the **same** `uid` to `usePushChainClient('wallet-a')`, `usePushWalletContext('wallet-a')`, and `<PushUniversalAccountButton uid='wallet-a' />` - omit `uid` entirely unless you are intentionally running two provider instances |
+| Treating `pushChainClient.universal.account` as `{ address }` object — `account.address` returns `undefined` | `account` is a **plain address string**, not an object. Read it directly: ``const me = pushChainClient.universal.account; // `0x${string}` ``. Only `origin` is the `{ address, chain }` shape. |
+| Wallet throws `Provided chainId "42101" must match the active chainId "<N>"` when signing EIP-712 | Don't hardcode Push Chain's chainId in the typed-data domain. Read `pushChainClient.universal.origin.chain`, stamp the origin chainId into the domain, sign via `pushChainClient.universal.signTypedData(...)`, and resolve the signer's UEA on the contract side via `IUEAFactory.getUEAForOrigin`. See [EIP-712 Typed-Data Signing](#eip-712-typed-data-signing-cross-chain-wallets). |
+| `wallet: true` in `login` config — `pushChainClient` stays `null` after external-wallet connect | Use the object form `wallet: { enabled: true }`. The bare boolean is silently ignored by the provider. See [Setup - Wrap Your App](#setup---wrap-your-app). |
+| `app`, `themeMode`, `themeOverrides` placed inside `config` — they're ignored and the provider falls back to defaults | These are **top-level props** on `PushUniversalWalletProvider`, NOT keys in `config`. `config` carries `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. |
 
 > For read-only state queries (no transactions): use ethers.js or viem directly with `https://evm.donut.rpc.push.org/` (HTTP) or `wss://evm.donut.rpc.push.org` (WebSocket - for `watchBlocks`, event subscriptions). See [read-blockchain-state.md](https://push.org/agents/workflows/read-blockchain-state.md).
 

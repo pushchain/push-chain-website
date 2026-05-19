@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-25T23:55:06.431Z",
+  "lastUpdated": "2026-05-18T06:18:10.058Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "ナレッジベース — ガイド、FAQ & チュートリアル",
@@ -69,11 +69,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.176Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Push Chain testnet の公開情報をいち早くお届けします。メールニュースレターにご登録いただき、限定アップデートを入手してください。",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.176Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1182,9 +1177,9 @@
       "lastUpdated": "2025-11-14T19:27:06.177Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "ブロックチェーンのドンツテストネットで、ユニバーサルな体験を築くためにアプリやパートナー、早期採用者を発見してください。",
+      "value": "プッシュチェーンのドーナッツテストネットで、ユニバーサルな体験を構築するためにアプリ、パートナー、先駆者を発見してください。",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:54:15.829Z"
+      "lastUpdated": "2026-05-18T06:17:32.382Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "アナウンスを閉じる",
@@ -1687,29 +1682,28 @@
       "lastUpdated": "2025-11-14T19:27:06.177Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain.title": {
-      "value": "なぜ Push Chain は Web3 の欠けている層なのか",
       "englishChecksum": "dda742e7ba033aecc1da77822f4efb8f",
-      "lastUpdated": "2026-02-25T23:53:02.729Z"
+      "lastUpdated": "2026-05-17T19:28:54.534Z"
     },
     "global.site-description": {
-      "value": "任意のチェーンでユーザーに到達するために、デプロイしたアプリを使用してください。任意のウォレットを使用し、任意のトークンで支払うことができます。ネットワーク切り替えなし。",
+      "value": "シェアード-ステート L1 で、あらゆるアプリを対象に。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どんなウォレットでも使えます。どんなトークンでも使って支払えます。ネットワークの切り替えは不要です。",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-02-25T23:52:40.448Z"
+      "lastUpdated": "2026-05-17T19:30:59.810Z"
     },
     "pages.knowledge.push101.seo.description": {
-      "value": "初心者向け、Pushチェーンとユニバーサルアプリのイントロ導入。それが何なのか、どのように動作するのか、はじめ方を学ぶことができます。",
+      "value": "パッションチェーンとユニバーサルアプリの入門的な解説—それが何なのか、どう機能するのか、始め方を学びます。",
       "englishChecksum": "0d309817c6171c9b903b25e7cbb58136",
-      "lastUpdated": "2026-02-25T23:54:57.951Z"
+      "lastUpdated": "2026-05-17T19:28:51.841Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1.subtitle": {
-      "value": " Push Chain isn’t about creating another siloed ecosystem — it’s about solving interoperability for everyone.",
+      "value": " Pushチェーンは、別の孤立したエコシステムを作り出すことではない — 全員のために互換性を解決する方法です。",
       "englishChecksum": "2a52413de055cfebf0245ffa537b8369",
-      "lastUpdated": "2026-02-25T23:53:05.559Z"
+      "lastUpdated": "2026-05-17T19:30:39.444Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain.subtitle": {
-      "value": "Pushチェーンやユニバーサルアプリに関する質問は、ここに最も一般的な回答があります。",
+      "value": "プッシュチェーンやユニバーサルアプリに関する質問がありますか？最も一般的な回答をご覧ください。",
       "englishChecksum": "4d9917b7eb8ec31c7d601eb921a8f4ca",
-      "lastUpdated": "2026-02-25T23:53:09.130Z"
+      "lastUpdated": "2026-05-17T19:29:18.381Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.consumer-apps-that-can-be-built-on-push-chain.title": {
       "value": " Push Chain 上で作成可能な消費者アプリ 🫶",
@@ -1722,9 +1716,9 @@
       "lastUpdated": "2025-11-14T20:19:55.578Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### Pushとは、ブリッジやメッセージング層とどう異なるのですか？\n\n**短い回答**：Pushは、あなたのアプリが実行されるところです。ブリッジ/メッセージングは単にチェイン間でトークンやメッセージを移動させ、ユーザーと開発者のためにすべてを複雑化させます。\n\n- **シングルホーム対多くのクローン**  \n\tブリッジ/メッセージングでは、各チェインでデプロイしてメッセージで同期しますが、Pushでは一度デプロイし、同じコントラクトと共有状態にすべてがヒットします。\n\n- **ラップされたアセットや強制的なブリッジはありません**  \n\tユーザーは自分のホームチェインに残り、既に所有しているもので支払いを行うことができますが、我々がルーティングと手数料の変換を内部で処理します。\n\n- **統一されたアイデンティティ＆検証**  \n\t我々は、アノーマリから何らかのウォレット/チェインにサインを受け入れますが、Push上では同一のユーザーに属するように割り当てます - 非コストードです。\n\n- **動くパーツが少ない**  \n\tクロスチェイン承認のダンスやガス・トークン探しなど、必要ありません。グル契約を同期させることも必要ありません。\n\n- **ブリッジは複雑性を導入します。チェインネイティブな相互運用はそれを解決します**  \n\tブリッジでは、 komplex engineering努力、時間、オーディットコストなど、追加のインフラを含むcomplex engineering努力が必要になりますが、チェインネイティブな相互運用は、アプリがネイティブに相互運用を継承するために単純に動作します。\n\n**結果**：簡単なアプリ、真実の一つのソース、ユーザーが実際には異なる場合でも一つのチェインのように感じるUXです。\n\n---",
+      "value": "### ブリッジやメッセージング層とはどう違うんですか？\n\n**短い回答**：プッシュはアプリが実行されるところです。ブリッジ/メッセージングは単にトークンやメッセージをチェーン間で移動するだけなので、ユーザーと開発者にとってより複雑になります。\n\n- **一つのホーム地盤 vs 複数のクローン**\n\tブリッジ/メッセージングでは各チェーンにデプロイし、メッセージで同期しますが、プッシュでは一度デプロイすれば、同じコンタクトと共有状態を叩くことになります。\n\n- **ラップされた資産や強制的なブリッジはありません**\n\tユーザーは自分のホームチェーンに残り、既に持っているもので支払います；我々がルーティングと手数料コンバージョンを裏側で処理します。\n\n- **統一されたアイデンティティ＆検証**\n\tどのウォレット/チェーンからでもサインを受け付け、プッシュ上に同じユーザーとして属性づけます─非管理型です。\n\n- **動くパーツが少ない**\n\tクロスチェーン承認のダンスやガストークン探し、同期を保つためのグル契約などはありません。\n\n- **ブリッジが複雑さを引き起こす。チェーインネイティブな相互運用性がそれを解決する**\n\tブリッジには komplex Engineering努力、時間、オーディットコスト、追加のインフラストラクチャなどが必要ですが、チェーインネイティブな相互運用性は単にアプリが NATIVELY 遺伝的に引き継ぐだけです。\n\n**結果**: より簡単なアプリ、真実の一つのソース、ユーザー間であれば感じるように一連のUXになります─実際にはそうではありません。\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-02-25T23:53:25.731Z"
+      "lastUpdated": "2026-05-17T19:29:33.137Z"
     },
     "pages.docs.header.description": {
       "value": "しーしー… テストネット ドーナツの先取りをご希望ですか？#pushchainsecret で連絡してください。テストビルドへのアクセスを送信します。",
@@ -1732,49 +1726,49 @@
       "lastUpdated": "2026-02-25T23:53:40.283Z"
     },
     "pages.litepaper.seo.description": {
-      "value": "プッシュチェーンのビジョン、アーキテクチャ、経済についての簡潔な見取り。ユニバーサル・アプリ向けです。",
+      "value": "プッシュチェーンのビジョン、アーキテクチャー、経済についての概要。ユニバーサルアプリのためです。",
       "englishChecksum": "2768e2658592fe376add9699d9d49ef6",
-      "lastUpdated": "2026-02-25T23:54:49.734Z"
+      "lastUpdated": "2026-05-17T19:29:48.356Z"
     },
     "pages.privacymobile.seo.description": {
-      "value": "プッシュチェーン・モバイルアプリで、データを収集、使用し、保護する方法と選択肢。",
+      "value": "Push チェーン モバイルアプリで、データの収集、使用、保護方法と選択肢について。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-02-25T23:53:44.639Z"
+      "lastUpdated": "2026-05-17T19:29:51.562Z"
     },
     "pages.privacymobile.hero-section.description": {
-      "value": "Push チェーン モバイルアプリでデータを収集、使用し、保護する方法と選択肢。",
+      "value": "プッシュチェーン モバイルアプリでデータを収集、使用し、保護する方法と、あなたの選択肢。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-02-25T23:54:59.742Z"
+      "lastUpdated": "2026-05-17T19:29:53.432Z"
     },
     "pages.donutsecret.seo.description": {
-      "value": "招待制の閉鎖βテスト。Push Chain テストネットにアクセスし、ユニバーサルアプリを配信してearlyリワードを解放するためのDonutパスを請求します。",
+      "value": "招待制の閉鎖型ベータテスト。プッシュチェーンテストネットにアクセスし、ユニバーサルアプリを送信し、早期報酬を解除するために、ドーナツパスを請求してください。",
       "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
-      "lastUpdated": "2026-02-25T23:55:03.141Z"
+      "lastUpdated": "2026-05-17T19:29:56.058Z"
     },
     "pages.donutsecret.seo.og-description": {
-      "value": "開発者限定の先行アクセス: クローズドベータパスを取得し、Push Chain (Donut) を試して、ユニバーサルアプリを構築しながら報酬を獲得しましょう。",
+      "value": "開発者向けの早期アクセス： Closed Beta Pass を請求し、Push チェーン（ドーナツ）を試して universal アプリを構築しながら報酬を得る。",
       "englishChecksum": "82bceccf67ffed51d02e1c40234de275",
-      "lastUpdated": "2026-02-25T23:54:12.110Z"
+      "lastUpdated": "2026-05-17T19:29:58.316Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "これはブリッジやメッセージングレイヤーとどう違うのですか？",
+      "value": "この方法はブリッジやメッセージングレイヤーとどう違うのですか？",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-02-25T23:54:19.350Z"
+      "lastUpdated": "2026-05-17T19:30:08.473Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>短い答え</2>: Pushはアプリが動作する場所です。ブリッジ/メッセージングはトークンやメッセージをチェーン間で移動させるだけなので、ユーザーと開発者にとって複雑になります。</1><1><2>単一のホームか多くのクローン</2>ブリッジ/メッセージングでは各チェーンでデプロイしてメッセージを通じて同期します。Pushでは一度デプロイし、誰でも同じコントラクトと共有状態にアクセスできます。</1><1><2>ラップされた資産や必須のブリッジなし</2>ユーザーは自分のホームチェーンでそのまま残り、既に所有しているもので支払いを行います。ルーティングと手数料のコンバージョンは裏で処理します。</1><1><2>統一されたIDと認証</2>どんなウォレット/チェーンからでも署名を受け付けて、Push上で同一のユーザーとして属性づけします。非保管型です。</1><1><2>動かす要素が少ない</2>クロスチェーンの承認ダンスやガストークンの探し回り、同期を維持するためのグルコントラクトは不要になります。</1><1><2>ブリッジでは複雑さが生じる。チェーンナティブなインターポップで解決します。</2>ブリッジではエンジニアリングの労力、時間、オーディットコスト、さらなるインフラストラクチャが必要になります。チェーンナチブなインターポップはアプリが単にこれを受け継ぐだけです。</1><1>結果:より簡単なアプリ、真実の一つの源、そしてユーザーであってもチェーンを感じないようなUXになります。</1>",
+      "value": "<1><2>短い回答</2>: Pushは、アプリが動作する場所です。ブリッジ/メッセージングは、チェーン間でトークンやメッセージを移動するだけで、ユーザーと開発者にとってすべてを複雑にします。</1><1><2>一つのホーム基盤vs多数の複製</2> ブリッジ/メッセージングでは、各チェーンごとにデプロイし、メッセージで同期します。Pushでは一度デプロイするだけで、誰でも同じコントラクトと共有状態にアクセスできます。</1><1><2>包装資産や強制的なブリッジ無し</2>ユーザーは自分のホームチェーンに残り、既に保有しているもので支払います。我々がルーティングと手数料変換を内部で処理します。</1><1><2>統一されたアイデンティティ&検証</2>どのウォレット/チェーンからでも署名を受け入れ、Push上で同じユーザーに割り当てます － 非保管式です。</1><1><2>部品が少ない</2>クロスチェーン承認ダンスやガス-トークンの探し回し、同期を維持するためのグルー契約はありません。</1><1><2>ブリッジが複雑さを導入する。チェーンネイティブな相互運用性を解決する</2>ブリッジには、複雑な工学的努力と時間、査証コストなどが必要になります。チェーンネイティブな相互運用性は、アプリが原生で遺産として機能します。</1><1>結果:単純化されたアプリ、真実の一つのソース、ユーザーにとっても感じるように一つのチェーンになります － asumió、ユーザーがそうではない場合でも。</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-02-25T23:54:33.352Z"
+      "lastUpdated": "2026-05-17T19:30:22.930Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>テストトークンをリクエストするには、<3>ファウセット</3>を使用してください。</1><1><2>ノート:</2>レート制限がかかる場合があります;一部のファウセットでは簡単な検証が必要です。ファウセットが失敗した場合は、<4>ディスカード</4>でお知らせください。</1>",
+      "value": "<1>テストトークンをリクエストするには、<3>ファウセット</3>を使用してください。</1><1><2>メモ:</2>速度制限がかかります;一部のファウセットでは簡単な検証が必要です。ファウセットで失敗した場合は、<4>Discord</4>で連絡をください。</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-02-25T23:54:37.199Z"
+      "lastUpdated": "2026-05-17T19:30:26.448Z"
     },
     "notifications.rewards-notification.image-alt": {
-      "value": "ユニバーサルアプを構築するためのブロックチェーン・テストネット報酬 - Push Chain",
+      "value": "ブロックチェーンテストネット報酬 - ユニバーサルアプリを構築する",
       "englishChecksum": "7e5ffae122997a63a81105184b921cb1",
-      "lastUpdated": "2026-02-25T23:54:47.750Z"
+      "lastUpdated": "2026-05-17T19:30:33.183Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "ビルダーズ － ハウツー＆チュートリアル",
@@ -1966,11 +1960,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-02-08T06:34:49.902Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "今すぐ申請する",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:17.157Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "トースト通知を閉じる",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1985,16 +1974,6 @@
       "value": "プッシュチェーン・トースト通知",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:01:40.180Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "申請する",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:41.235Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "応募する",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:42.286Z"
     },
     "components.blog.more-posts.title": {
       "value": "ブロックチェーンからの更なる記事",
@@ -2082,9 +2061,9 @@
       "lastUpdated": "2026-02-08T06:04:18.175Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "世界で最も成長の速いユニバーサルアプ・エコシステムに参加して、ユーザーを10倍にしますか？",
+      "value": "世界で最速成長中のユニバーサルアプエコシステムに参加し、ユーザーベースを10倍化しましょうか？",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-25T23:54:53.260Z"
+      "lastUpdated": "2026-05-17T19:30:06.549Z"
     },
     "components.ecosystem-apps-partners.apps.push-campus.description": {
       "value": "エーテリウム、ソーラナ、ベース、および15以上のチェーンで学生に接続します",
@@ -2101,24 +2080,23 @@
       "lastUpdated": "2026-02-25T23:54:42.613Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "ここでPCテストネットトークンを入手できます",
+      "value": "PCテストネットのトークンをここで入手しましょう",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-02-25T23:55:06.431Z"
+      "lastUpdated": "2026-05-17T19:30:29.438Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "この提案は、約1,178万アドレスのうち、トップ1,950ウォレットに影響を与えました。1,100PCトークン以上を保持しているウォレット（数兆にも及ぶ）は、再調整され、1,100-2,000の間のPCトークンを保持するようになりました。",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-25T23:53:30.454Z"
+      "lastUpdated": "2026-05-17T19:29:37.985Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- トップ 1,950 ウォレットが 1,100-2,000 PCトークンの範囲に再調整",
+      "value": "- トップ1,950ウォレットが1,100-2,000PCトークン範囲に再調整",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-25T23:53:34.111Z"
+      "lastUpdated": "2026-05-17T19:29:41.406Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.validator-period": {
-      "value": "テストネットのバリデーター提案期間は現在、フルデセントラライズドバリデーター所有権が実装される前のエッジケースを除くために、5分に設定されています。",
+      "value": "テストネットのバリデーター提案期間は、完全に分散化された所有権が実装される前にエッジ ケースを除去するために現在5分に設定されています。",
       "englishChecksum": "b1a156d417faacce984c38775b416372",
-      "lastUpdated": "2026-02-25T23:53:38.031Z"
+      "lastUpdated": "2026-05-17T19:30:42.746Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "デープダイブ — 概念とアーキテクチャ",
@@ -2179,6 +2157,815 @@
       "value": "互換性のスペクトラム",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:00:49.023Z"
+    },
+    "footer.email-section.title": {
+      "value": "プッシュチェーンの最新情報を受け取ってください",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T20:54:44.658Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "ニュースと更新情報！",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T20:54:47.121Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "ニュースレター購読セクション",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T20:54:48.219Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "ブロッカーチェーン ニュースレターにサインアップ",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T20:54:49.567Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "フッターのナビゲーションとリンク",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T20:54:51.229Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "ブロックチェーンのホームページ",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-18T06:17:12.807Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "プッシュチェーン ホームページ",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T20:54:53.700Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "ブロックチェーン・ロゴ",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T20:54:54.642Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "リソース",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T20:54:56.854Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "リソースナビゲーション",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T20:54:57.920Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "開発者用",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T20:54:58.842Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "開発者ナビゲーション",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T20:54:59.909Z"
+    },
+    "footer.columns.community.title": {
+      "value": "コミュニティ",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T20:55:00.920Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "コミュニティ ナビゲーション",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T20:55:02.017Z"
+    },
+    "footer.columns.help.title": {
+      "value": "ヘルプ",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T20:55:02.922Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "ヘルプナビゲーション",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T20:55:07.224Z"
+    },
+    "footer.links.get-started": {
+      "value": "はじめる",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T20:55:08.008Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "ブロックチェーン上で始める",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-18T06:16:55.545Z"
+    },
+    "footer.links.docs": {
+      "value": "ドキュメント",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T20:55:11.663Z"
+    },
+    "footer.links.docs-title": {
+      "value": "ブロックチェーンの文書",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T20:55:14.424Z"
+    },
+    "footer.links.github": {
+      "value": "ギットハブ",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-18T06:17:46.159Z"
+    },
+    "footer.links.github-title": {
+      "value": "GitHub 上の Push Chain リポジトリ",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T20:55:16.602Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "知識ベース",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-18T06:16:57.702Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "ブロックチェーン知識ベース",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T20:55:18.669Z"
+    },
+    "footer.links.blog": {
+      "value": "ブログ",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-18T06:16:59.693Z"
+    },
+    "footer.links.blog-title": {
+      "value": "プッシュチェーンブログ",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T20:55:20.943Z"
+    },
+    "footer.links.litepaper": {
+      "value": "ライトペーパー",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-17T20:55:21.820Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "ブロックチェーン・ライトペーパー（PDF）",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T20:55:22.977Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "ブランディング・キット",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T20:55:23.826Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "プッシュチェーン ブランド資産とガイドライン",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T20:55:26.329Z"
+    },
+    "footer.links.push-scan": {
+      "value": "プッシュ スキャン",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T20:55:27.191Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "ブロックチェーン・エクスプローラー Push チェーン",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T20:55:28.315Z"
+    },
+    "footer.links.faucet": {
+      "value": "ファウセット",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T20:55:29.122Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "プッシュチェーンファウセットからテストトークンを取得する",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-18T06:17:00.869Z"
+    },
+    "footer.links.push-portal": {
+      "value": "プッシュポータル",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T20:55:31.605Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "プッシュチェーン コミュニティ ポータル",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T20:55:33.724Z"
+    },
+    "footer.links.support": {
+      "value": "サポート",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T20:55:34.457Z"
+    },
+    "footer.links.support-title": {
+      "value": "ヘルプセンター",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T20:55:37.225Z"
+    },
+    "footer.links.security": {
+      "value": "セキュリティと開示",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-18T06:17:02.727Z"
+    },
+    "footer.links.security-title": {
+      "value": "脆弱性を報告する（適切な開示）",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T20:55:41.130Z"
+    },
+    "footer.links.contact-us": {
+      "value": "お問い合わせ",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-18T06:17:05.270Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "パートナーシップ、BD、メディアや一般的な問合せに関すること",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T20:55:43.323Z"
+    },
+    "footer.links.careers": {
+      "value": "キャリア",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-18T06:17:07.059Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Push チェーンでオープンなポジションを探す",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T20:55:45.236Z"
+    },
+    "footer.links.twitter": {
+      "value": "エックス（トワイター）",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T20:55:46.095Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "X（Twitter）でPush Chainをフォローする",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T20:55:49.161Z"
+    },
+    "footer.links.discord": {
+      "value": "ディスコード",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T20:55:49.945Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Pushチェーンのディスコードに参加する",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T20:55:50.978Z"
+    },
+    "footer.links.reddit": {
+      "value": "レディット",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T20:55:51.894Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Push チェーンのサブレディットに参加する",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-18T06:17:09.997Z"
+    },
+    "footer.links.telegram": {
+      "value": "テレグラム",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-18T06:17:11.859Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Push Chainテレグラムに参加する",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T20:55:57.011Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "ソーシャルメディアリンクと法的な情報",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T20:55:58.147Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "ブロックチェーンの推進をツイートで共有",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:55:59.182Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "ブロックチェーンのX/ツイート",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:56:00.199Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "ブロックチェーンチェーンソレゴン上のプッシュチェイン",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:56:01.409Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "GitHub で Push Chain を見る",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:56:04.690Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "ブロックチェーンでディスコード",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:56:05.685Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "ブロックスチェーンでディスコード",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:56:06.744Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "プライバシーポリシー",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-18T06:17:47.506Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "プライバシー ポリシーをご覧いただく",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-18T06:17:48.664Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "プライバシーポリシー",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T20:56:11.806Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "利用規約",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T20:56:13.959Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "利用規約をご確認ください",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T20:56:14.942Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "利用規約",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:17:49.808Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "クッキーの設定",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T20:56:16.808Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "クッキー設定の管理",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T20:56:17.682Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "プッシュチェーンのフッターイラスト",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T20:56:20.127Z"
+    },
+    "footer.footer-image.title": {
+      "value": "プッシュチェーン - ユニバーサル・ブロックチェーン",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T20:56:21.327Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "ドキュメント：ユニバーサルアプplicationsを構築する",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T20:56:22.711Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "プッシュチェーンで送信するためのすべてを提供します：クイックスタート、SDK、APIリファレンス、例、ノードセットアップ。",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T20:56:26.449Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "プッシュチェーンのドキュメント - クイックスタート、SDK、API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T20:56:27.867Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "ブロックチェーン上でアプリを構築して実行し、クリアなガイドと例で学びましょう。",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T20:56:32.006Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Push チェーン ドキュメント - 今から作成する",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T20:56:33.260Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "高速な展開に向けて、クイックスタート、SDK、APIリファレンス、例などを提供します。",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-18T06:17:30.213Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "テストネットのドキュメント公開まで",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-18T06:18:10.058Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "プッシュチェーンについてツイートする",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:56:39.308Z"
+    },
+    "pages.docs.header.title": {
+      "value": "プッシュチェーンについてツイートする",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:56:40.341Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "プッシュチェーンについてツイートする",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:56:42.844Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "ブロックチェーンとは?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T20:56:44.744Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "プッシュチェーンは真にユニバーサルなアプリを構築するための統一ツールキットを提供します。",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-17T20:56:49.379Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "詳細をご覧いただく",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:56:51.785Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "はじめましょう！",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T20:56:53.705Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Push チェーン SDK を使ってユニバーサル アプリを作成するのに必要なすべてのもの",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-18T06:17:20.081Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "もっと知る",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-18T06:17:21.944Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UI キット",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T20:57:16.301Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "React ベースのアプリを5分でインテグレートしましょう。",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T20:57:18.537Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "詳しく知る",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-18T06:17:23.879Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "直近の将来に発表",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:57:21.557Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "アプリ・スポットライト",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T20:57:23.920Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "サイレンス・ラボ",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T20:57:25.397Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS & プライバシー保護コンピュート。",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:57:27.333Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "ヒューマン・テック",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T20:57:28.924Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSSとプライバシー保護計算。",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:57:44.276Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "ラーメン スワップ",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T20:57:45.922Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "どのチェーンからでもお好みのトークンをご提供",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T20:58:02.246Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "ハロ",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T20:58:03.691Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "エージェント・コマースの統一されたインフラストラクチャー層です。",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T20:58:07.243Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T20:58:19.672Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "資産を供給し、貸すことで最適化された利回りを獲得",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T20:58:23.260Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "ホルド.ファンク",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T20:58:24.645Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "ERC-20 トークンを作成して発売する",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T20:58:30.612Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON：AIバトラー",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T20:58:34.140Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "サポートされているネットワーク間でアセットを送金、スワップ、管理する",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T20:58:37.832Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "プッシュベット",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T20:58:39.081Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "デゲンの超能力を披露してリワードを得よう。",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T20:58:42.310Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampireSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T20:58:57.908Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-18T06:17:34.299Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "ラストワン",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T20:59:02.567Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "タイマーが切れる直前に最後に入札する人は、ポットを得ます",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-18T06:17:54.776Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T20:59:07.315Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "あらゆるチェーンで使用可能なアイデンティティ",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T20:59:08.862Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "プッシュx402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T20:59:11.339Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "アジェンティックインフラのコールごとに支払いするAPIモニタイズ",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T20:59:13.365Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "バウンティヴ",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T20:59:14.668Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "クリック数ではなく質量を報酬とするユニバーサル成長エンジン",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T20:59:17.381Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "ビートバラウズ",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T20:59:20.216Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "決して忘れない音楽のバトル",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T20:59:21.839Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APTカジノ",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T20:59:23.523Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "ユニバーサル、フェアで、透明な Wahrscheinlichkeit wager to win",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T20:59:28.842Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "プッシュ・ニンジャ",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T20:59:30.140Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "チェーン上でスキルに基づいたゲーム",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T20:59:31.908Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "スライス。ドッジ。スコア。",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T20:59:33.332Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "Tipアップ",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T20:59:36.158Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "任意のチェーンで任意のウォレットを使用してチップを出せます",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T20:59:38.075Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "プッシュスワップ",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T20:59:39.359Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.description": {
+      "value": "ブリッジなしで柔らかなクロスチェーン・トークン交換",
+      "englishChecksum": "de2b3bf95e3ed660f78c959450838463",
+      "lastUpdated": "2026-05-17T20:59:40.986Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "チェインサークル",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T20:59:42.256Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "クロスチェーン貯金サークル",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-18T06:17:56.313Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "プッシュ・キャンパス",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T20:59:46.440Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "バルスィ",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T20:59:47.678Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "ご希望のチェーンでログインし、栄光を勝ち取る Battle",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T20:59:51.726Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "アテラ",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T20:59:53.037Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "暗号資産の自動相続",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T21:00:09.325Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "パスデージェー",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T21:00:10.695Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "すべてのチェーンからの米ドル流動性を組み合わせ、1:1でペッグされた安定コイン",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-18T06:17:42.433Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "フリーネーム",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T21:00:16.165Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "通信先をドメインで指定して、ハッシュを使わずにクリプトを送信",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-18T06:17:58.119Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "ハング4.ファーン",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T21:00:23.408Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "近日公開予定",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T21:00:37.824Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "デーゲンチェス",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T21:00:39.366Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "チェスをして、賭け、ユニバーサル",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T21:00:42.395Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "オミニハブ",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T21:00:45.442Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "ブロックチェーンアートコレクションを作成、買い、売ります",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T21:00:49.192Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "プッシュデックス",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T21:00:53.238Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T21:00:55.599Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "マルチチェーン ドメイン、GM + デプロイツール",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T21:00:59.636Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "スターラン",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T21:01:02.714Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "分散化、プレイヤー所有経済",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T21:01:04.120Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "フォージ・リアルム",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T21:01:07.268Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "複数のクリエーターからベースキャラクターと特徴を組み合わせて楽しもう",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T21:01:09.394Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "コンセプト/コドメイン",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T21:01:12.352Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Web3 複数チェーンハブ：ドメイン名、NFT、ローンチパッド。",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T21:01:14.749Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "コペット",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T21:01:16.009Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "チェーンソートでペットを育て、楽しみましょう！",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T21:01:17.734Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "サーフレイヤー",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T21:01:19.243Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "70以上のチェーンでアイデンティティを構築して報酬を獲得します。",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T21:01:21.169Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "プッシュ・ネームサービス",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T21:01:24.030Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "独自の.pushドメインを取得する",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T21:01:25.522Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2ミー",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T21:01:26.928Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "任意チェーンでNFTコレクションを無料でデプロイ",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T21:01:28.521Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "タチオン",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T21:01:30.435Z"
     }
   }
 }

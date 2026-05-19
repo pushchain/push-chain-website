@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "All PushChain.CONSTANTS.* values as a structured reference. Source: https://push.org/docs/chain/build/constants/",
   "PUSH_NETWORK": {
@@ -74,7 +74,7 @@
         "USDC.eth": "Push-wrapped USDC from Ethereum",
         "USDC.arb": "Push-wrapped USDC from Arbitrum",
         "USDC.base": "Push-wrapped USDC from Base",
-        "USDC.bnb": "Push-wrapped USDC from BNB Chain",
+        "USDC.bsc": "Push-wrapped USDC from BNB Chain (canonical accessor in SDK v6.0.1+; the legacy `USDC.bnb` accessor still resolves to the same token but is marked @deprecated and will be removed)",
         "USDC.sol": "Push-wrapped USDC from Solana"
       }
     }

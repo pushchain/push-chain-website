@@ -1,39 +1,14 @@
 {
   "pages": {
     "docs": {
-      "seo": {
-        "title": "ドキュメント — ユニバーサルアプリを構築",
-        "description": "Push Chain でのリリースに必要なものがすべて揃っています：クイックスタート、SDK、API リファレンス、サンプル、およびノードのセットアップ。",
-        "og-title": "Push Chain Docs - クイックスターツ、SDK、API",
-        "og-description": "ユニバーサル実行レイヤーでアプリを構築・実行するための明確なガイドと例。",
-        "twitter-title": "Push Chain Docs - 今すぐ構築",
-        "twitter-description": "クイックスタート、SDK、APIリファレンス、サンプルコードで迅速な開発を支援します。"
-      },
-      "header": {
-        "countdown-title": "テストネットドキュメントローンチまであと",
-        "description": "Psst... ドーナツ <testnet> をこっそり覗いてみませんか？ #pushchainsecret で教えていただければ、テスト版へのアクセスをお送りします。",
-        "tweet-button": "Push Chainについてツイート",
-        "title": "Push Chainについてツイート",
-        "ariaLabel": "Push Chain についてツイート"
-      },
       "grid-section": {
         "blocks": {
           "sections": {
             "resources": {
               "items": {
-                "whatispush": {
-                  "title": "Push Chainとは何ですか？",
-                  "subtitle": "Push Chain は、真にユニバーサルなアプリを構築するための統一ツールキットを提供します。",
-                  "ctatitle": "詳しくはこちら"
-                },
-                "builders": {
-                  "title": "さあ、一緒に作りましょう！",
-                  "subtitle": "Push Chain SDK を使ってユニバーサル app を作成するために必要なものがすべて揃っています",
-                  "ctatitle": "詳しくはこちら"
-                },
-                "ui-kit": {
-                  "title": "UI Kit",
-                  "subtitle": "Reactベースのアプリなら、わずか5分で簡単に連携できます。",
+                "pusd": {
+                  "title": "PUSD",
+                  "subtitle": "1:1で米ドルと連動するステーブルコイン。全チェーンからの米ドル流動性を組み合わせました。",
                   "ctatitle": "詳しくはこちら"
                 }
               }

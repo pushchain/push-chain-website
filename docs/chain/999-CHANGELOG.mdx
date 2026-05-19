@@ -18,7 +18,50 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
 
-### 5.2.0 (unreleased)
+### 6.0.2 (unreleased)
+
+#### Other Changes
+
+- Token constants now expose the missing `USDT.bsc` chain-suffix accessor,
+- Updated Donut testnet stable token metadata to match the current source of
+
+### 6.0.1 (2026-05-15)
+
+#### Other Changes
+
+- Pre-flight UEA balance checks now default to warning-only behavior and
+- Token constants added the `USDC.bsc` BSC suffix accessor while retaining
+- Consolidated tests, renamed transaction `target` fields to `recipient`, and
+
+### 6.0.0 (2026-05-14)
+
+#### Other Changes
+
+- Updated audit-driven contract and pool configuration, including BNB CEA
+- Fixed cascade, SVM payload, and SVM execution flows, with additional test-case
+- Improved PC amount formatting in transaction output and diagnostics.
+
+### 5.1.18 (2026-05-12)
+
+#### Other Changes
+
+- Added `executeTransactions` progress-hook coverage and fixed cascade
+- Removed the `allowUnderfundedSwap` parameter and tightened native PC
+
+### 5.1.17 (2026-05-07)
+
+#### Other Changes
+
+- Fixed the R3 EVM path tag so progress hooks emit the `303` route family
+
+### 5.1.16 (2026-05-07)
+
+#### Other Changes
+
+- Added pre-flight balance-check progress hooks.
+- Fixed SVM rent checks, SVM upward ceiling behavior, cascade progress-hook
+
+### 5.1.5 (2026-04-20)
 
 #### Other Changes
 

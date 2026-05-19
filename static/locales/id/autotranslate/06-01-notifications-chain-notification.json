@@ -1,9 +1,10 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Butuh kode undangan? Ikuti kami, tonton video penjelasan kami dan tinggalkan komentar. Undangan terbatas!",
+      "description": "Butuh kode undangan? Ikuti, Tonton Video Penjelasan kami dan tinggalkan komentar. Undangan terbatas.",
+      "button-text": "Dapatkan Kode Undangan",
       "button-title": "Dapatkan Kode Undangan",
-      "button-aria-label": "Dapatkan Kode Undangan! Lihat di sini",
+      "button-aria-label": "Dapatkan Kode Undangan!. Kamu bisa memeriksanya di sini",
       "image-alt": "Dapatkan Kode Undangan!"
     }
   }

@@ -1,10 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Bạn cần mã mời? Theo dõi chúng tôi, xem video giải thích và để lại bình luận. Số lượng mời có hạn!",
-      "button-title": "Nhận mã mời",
-      "button-aria-label": "Nhận mã mời! Xem thêm tại đây",
-      "image-alt": "Nhận mã mời!"
+      "description": "Cần mã mời? Hãy Theo dõi, Xem Video Giải thích của chúng tôi và để lại bình luận. Số lượng mã mời có hạn.",
+      "button-text": "Lấy Mã Mời",
+      "button-title": "Lấy Mã Mời",
+      "button-aria-label": "Lấy Mã Mời!. Bạn có thể xem nó ở đây",
+      "image-alt": "Nhận Mã Mời Ngay!"
     }
   }
 }

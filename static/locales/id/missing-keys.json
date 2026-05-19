@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:07:49.847Z",
+  "lastUpdated": "2026-05-18T06:16:49.840Z",
   "keys": {
     "pages.knowledge.validators.seo.title": {
       "value": "Validators —",
@@ -109,11 +109,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.158Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Jadilah yang pertama tahu kapan Push Chain testnet diluncurkan. Bergabunglah dengan daftar email kami untuk mendapatkan pembaruan eksklusif.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.158Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1182,9 +1177,8 @@
       "lastUpdated": "2025-11-14T19:27:06.158Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Temukan aplikasi, mitra, dan pengguna awal yang membangun era baru pengalaman universal di Push Chain's Donut Testnet.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:51:52.213Z"
+      "lastUpdated": "2026-05-17T19:28:34.817Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "Tutup pengumuman",
@@ -1687,9 +1681,9 @@
       "lastUpdated": "2025-11-14T19:27:06.158Z"
     },
     "global.site-description": {
-      "value": "L1 berbagi keadaan untuk aplikasi universal. Unggah sekali; capai pengguna di rantai apapun. Gunakan dompet apapun. Bayar dengan token apapun. Tidak ada perpindahan jaringan.",
+      "value": "L1 berbagi keadaan untuk aplikasi universal. Pasang sekali; capai pengguna di rantai apapun. Gunakan dompet apapun. Bayar dengan token apapun. Tidak ada penggantian jaringan.",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-02-25T23:50:54.845Z"
+      "lastUpdated": "2026-05-17T19:27:41.421Z"
     },
     "footer.footer-image.title": {
       "value": "Push Chain - Blokchai Universal",
@@ -1703,32 +1697,32 @@
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-particle-network": {
       "englishChecksum": "5f9fd560753afe99e2d4f16cf66c94a7",
-      "lastUpdated": "2026-02-25T23:51:07.990Z"
+      "lastUpdated": "2026-05-17T19:27:49.930Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section": {
-      "value": "## Token Berhubungan",
+      "value": "## Tokennya",
       "englishChecksum": "11c6e9de4502fb8d1a1ab8bd4eaff625",
-      "lastUpdated": "2026-02-25T23:51:09.969Z"
+      "lastUpdated": "2026-05-17T19:27:52.133Z"
     },
     "components.short-faq-snippet.section-aria-label": {
-      "value": "Pertanyaan sering diajukan tentang Push Chain - Blokchain Universal",
+      "value": "Pertanyaan umum tentang Push Chain - Blokchai Universal",
       "englishChecksum": "47c2141cd8381a063c08207a94b28b6f",
-      "lastUpdated": "2026-02-25T23:51:11.343Z"
+      "lastUpdated": "2026-05-17T19:27:53.421Z"
     },
     "notifications.rewards-notification.image-alt": {
-      "value": "Blok Penghasilan Testnet Push Chain - Bangun Aplikasi Universal",
+      "value": "Riset Jaringan Push Chain – Bangun Aplikasindo Universal",
       "englishChecksum": "7e5ffae122997a63a81105184b921cb1",
-      "lastUpdated": "2026-02-25T23:51:14.728Z"
+      "lastUpdated": "2026-05-17T19:27:56.254Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section": {
       "value": "## Pengembang, Pengguna dan Operator Node",
       "englishChecksum": "3e32786584a34093ac405ea1c254e3ab",
-      "lastUpdated": "2026-02-25T23:51:17.066Z"
+      "lastUpdated": "2026-05-17T19:27:58.621Z"
     },
     "pages.donutsecret.seo.description": {
-      "value": " Beta tertutup eksklusif untuk pendiri. Klaim kartu Donut Anda untuk mengakses Push Chain Testnet, kirim aplikasi universal, dan kunci hadiah awal.",
+      "value": "Beta tutup eksklusif untuk pembuat. Klaim kartu Donatmu untuk mengakses Push Chain Testnet, kirim aplikasi universal, dan kunci penghargaan dini.",
       "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
-      "lastUpdated": "2026-02-26T00:07:49.847Z"
+      "lastUpdated": "2026-05-17T19:28:28.751Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Bangun — Panduan & Tutorial",
@@ -1906,9 +1900,9 @@
       "lastUpdated": "2026-01-16T19:56:43.850Z"
     },
     "pages.cult.seo.og-description": {
-      "value": "Sebuah kelompok eksklusif 50 pencipta yang menghasilkan dari hadiah token PC senilai 20M dengan mendorong penggunaan dan keyakinan terhadap Push Chain.",
+      "value": "Sebuah kelompok eksklusif 50 orang kreatif yang mendapat ganti dari hadiah PC token sebesar 20M untuk mendorong penggunaan nyata dan kepercayaan pada Push Chain.",
       "englishChecksum": "45df3c59f89f6db4545500d75622968e",
-      "lastUpdated": "2026-02-25T23:51:47.935Z"
+      "lastUpdated": "2026-05-17T19:28:30.933Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.case-studies.title": {
       "value": "Kasus Khusus",
@@ -1930,11 +1924,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:27:42.751Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "Mengguna Sekarang",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:04.597Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "Tutup notifikasi toast",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1949,16 +1938,6 @@
       "value": "Peringatan Toast Push Chain",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:01:10.760Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "Mengisi Sekarang",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:11.826Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "Aplikasikan Sekarang",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:01:12.927Z"
     },
     "components.blog.more-posts.title": {
       "value": "Lagi dari Push Chain",
@@ -2050,7 +2029,7 @@
     },
     "pages.ecosystem.cta.title": {
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-25T23:51:54.029Z"
+      "lastUpdated": "2026-05-17T19:28:36.542Z"
     },
     "components.ecosystem-apps-partners.apps.pns.description": {
       "value": "ID Anda di Setiap Rangkaian",
@@ -2081,49 +2060,49 @@
     "components.ecosystem-essentials.apps.pc-faucet.description": {
       "value": "Ambil token PC Testnetmu di sini",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-02-25T23:52:08.602Z"
+      "lastUpdated": "2026-05-17T19:28:38.364Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-02-25T23:52:10.144Z"
+      "lastUpdated": "2026-05-17T19:28:39.717Z"
     },
     "components.ecosystem-essentials.apps.push-chain-scan.description": {
       "englishChecksum": "515d78b9289212f4b0283d68b0756b0c",
-      "lastUpdated": "2026-02-25T23:52:13.097Z"
+      "lastUpdated": "2026-05-17T19:28:41.192Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain melaksanakan proposal penyesuaian token untuk mengurangi total jumlah PC token dari lebih dari 75T hingga sekitar 10 miliar token. Ini meningkatkan kinerja rantai dan mengpersiapkannya untuk lingkungan utama seperti mainnet.",
+      "value": "Push Chain melaksanakan proposal penyesuaian token untuk mengurangi total suplai token PC dari 75T+ token menjadi sekitar 10 miliar token. Upgrade ini menyentuh utang teknis dari masa-masa awal testnet dan mempersiapkan rantai untuk lingkungan mainnet seperti.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-25T23:51:20.820Z"
+      "lastUpdated": "2026-05-17T19:28:04.662Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
+      "value": "- Menetapkan ekonomi token yang adil dan berkelanjutan",
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-02-25T23:51:23.414Z"
+      "lastUpdated": "2026-05-17T19:28:07.517Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
-      "value": "- Total supply dikurangi dari 75T+ hingga ~10B PC token",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-02-25T23:51:26.125Z"
+      "lastUpdated": "2026-05-17T19:28:10.204Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Pengguna tidak dimaklumi sebelumnya untuk mencegah aktor jahat mendistribusikan token ke other wallet sebelum rebalancing. Penganjur ini menjaga integritas proses rebalance dan mencegah manipulasi sistem.",
+      "value": "Pengguna tidak diberi notifikasi sebelumnya untuk mencegah aktor malis mendistribusikan token ke other wallet sebelum proses pencacahan. Perawatan ini menjaga integritas proses pencacahan dan mencegah manipulasi sistem.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-25T23:51:29.728Z"
+      "lastUpdated": "2026-05-17T19:28:13.704Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Proses rebalance ini terdiri dari dua tahap. Token sekarang dikumpulkan ke dompet yang dikendalikan oleh tim dan akan dibakar segera.",
+      "value": "Proses rebalance ini terdiri dari dua tahap. Token sekarang dikumpulkan ke dompet yang diatur oleh tim dan akan dibakar segera.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-25T23:51:32.946Z"
+      "lastUpdated": "2026-05-17T19:28:16.757Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Untuk 99,83% pengguna:** Perubahan ini tidak mempengaruhi Anda. Saldo dompet Anda tetap sama.",
+      "value": "**Untuk 99,83% pengguna:** Tidak ada dampak pada Anda. Saldo dompet tetap tidak berubah.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-02-25T23:51:36.264Z"
+      "lastUpdated": "2026-05-17T19:28:19.873Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**For affected wallets (top 1,950):** Jika dompet Anda mengandung 1,100+ token PC (atau triliun), saldo Anda telah disesuaikan ke rentang 1,100-2,000 token PC.",
+      "value": "**Untuk dompet yang terdampak (top 1,950):** Jika dompet Anda memiliki 1,100+ token PC (atau triliunan), saldo Anda telah dibalance ulang ke rentang 1,100-2,000 token PC.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-02-25T23:51:40.481Z"
+      "lastUpdated": "2026-05-17T19:28:24.534Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Deep Dives — Konsep & Arsitektur",
@@ -2184,6 +2163,801 @@
       "value": "Interoperabilitas sebagai Spektrum",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:00:09.240Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
+      "value": "1:1 disinkronkan stablecoin dengan kompatibilitas USD dari semua rantai.",
+      "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
+      "lastUpdated": "2026-05-17T19:28:26.831Z"
+    },
+    "footer.email-section.title": {
+      "value": "Mengikuti perkembangan Push Chain",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T20:38:32.233Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "berita dan pembaruan!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T20:38:33.138Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "Bagian langganan berita",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T20:38:36.056Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "Berlangganan berita Push Chain",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T20:38:37.112Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "Navigasi dan tautan kaki halaman",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T20:38:38.126Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "Halaman utama Push Chain",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T20:38:39.048Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "Halaman utama Push Chain",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T20:38:40.257Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "Logo Push Chain",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T20:38:41.048Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "Sumber Daya",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T20:38:43.604Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "Navigasi sumber daya",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T20:38:44.723Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "Pengembang",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T20:38:47.025Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "Navigasi Pengembang",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T20:38:48.302Z"
+    },
+    "footer.columns.community.title": {
+      "value": "Komunitas",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-18T06:16:16.789Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "Navigasi komunitas",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T20:38:52.278Z"
+    },
+    "footer.columns.help.title": {
+      "value": "Bantuan",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T20:38:53.283Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "Navigasi Bantuan",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-18T06:16:17.959Z"
+    },
+    "footer.links.get-started": {
+      "value": "Mulai",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T20:38:55.185Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "Mulai membangun di Push Chain",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-17T20:38:56.100Z"
+    },
+    "footer.links.docs": {
+      "value": "Dokumen",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T20:38:58.109Z"
+    },
+    "footer.links.docs-title": {
+      "value": "Dokumentasi Push Chain",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T20:38:59.370Z"
+    },
+    "footer.links.github": {
+      "value": "Github",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T20:39:00.179Z"
+    },
+    "footer.links.github-title": {
+      "value": "Repositori Push Chain di GitHub",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-18T06:16:05.075Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "Basis Pengetahuan",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T20:39:04.536Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": " Basis Pengetahuan Push Chain",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T20:39:05.466Z"
+    },
+    "footer.links.blog": {
+      "value": "Blog",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-17T20:39:07.857Z"
+    },
+    "footer.links.blog-title": {
+      "value": "Blog Push Chain",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T20:39:10.517Z"
+    },
+    "footer.links.litepaper": {
+      "value": "Litepaper",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-18T06:16:39.767Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "Ringkasan Ringan Push Chain (PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T20:39:13.763Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "Kit Pemandangan Merek",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T20:39:14.614Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "Aset merek dan pedoman Push Chain",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T20:39:15.964Z"
+    },
+    "footer.links.push-scan": {
+      "value": "Push Scan",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T20:39:18.124Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "Penjelajah rantai Push Chain",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T20:39:19.078Z"
+    },
+    "footer.links.faucet": {
+      "value": "Pompa",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T20:39:21.415Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "Dapatkan token uji dari faucet Push Chain",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T20:39:22.519Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T20:39:24.270Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Portal komunitas Push Chain",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T20:39:25.263Z"
+    },
+    "footer.links.support": {
+      "value": "Dukungan",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-18T06:16:10.784Z"
+    },
+    "footer.links.support-title": {
+      "value": "Pusat Bantuan",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-18T06:16:11.749Z"
+    },
+    "footer.links.security": {
+      "value": "Keamanan & Pemberitahuan",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T20:39:31.218Z"
+    },
+    "footer.links.security-title": {
+      "value": "Laporkan kerentanan keamanan (pengepungan bertanggung jawab)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T20:39:34.693Z"
+    },
+    "footer.links.contact-us": {
+      "value": "Kontak Kami",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T20:39:35.516Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "Kerjasama, BD, media, atau pertanyaan umum",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T20:39:36.562Z"
+    },
+    "footer.links.careers": {
+      "value": "Lowongan Kerja",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T20:39:37.350Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Lowongan pekerjaan di Push Chain",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T20:39:39.527Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/Twitter",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T20:39:41.447Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "Ikuti Push Chain di X/Twitter",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-18T06:16:12.696Z"
+    },
+    "footer.links.discord": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T20:39:43.129Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Gabung ke Push Chain Discord",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T20:39:43.990Z"
+    },
+    "footer.links.reddit": {
+      "value": "Reddit",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T20:39:44.742Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Gabung ke subreddit Push Chain",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T20:39:45.664Z"
+    },
+    "footer.links.telegram": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-18T06:16:49.840Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Gabung ke Telegram Push Chain",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T20:39:48.116Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "Tautan media sosial dan informasi hukum",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T20:39:49.126Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "Push Chain di X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:39:51.503Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "Push Chain di X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:39:53.554Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "Push Chain di GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:39:54.420Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "Push Chain di GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:39:55.343Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "Push Chain di Discord",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:39:58.222Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "Pusat Perbincangan Push Chain",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:39:59.290Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "Kebijakan Privasi",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T20:40:00.204Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "Baca Kebijakan Privasi",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T20:40:01.203Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "Kebijakan Privasi",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-18T06:16:19.091Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "Syarat dan Ketentuan Layanan",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T20:40:05.081Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "Baca Syarat dan Ketentuan",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T20:40:06.186Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "Syarat dan Ketentuan Layanan",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T20:40:07.403Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "Preferensi Cookie",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T20:40:10.098Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "Kelola pengaturan kuki",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-18T06:16:21.781Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "Ilustrasi kaki Push Chain",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T20:40:13.906Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "Dokumentasi — Bangun Aplikasi Universal",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T20:40:15.047Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "Semua yang Anda butuhkan untuk mempublish di Push Chain: panduan cepat, SDK, referensi API, contoh, dan pengaturan node.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T20:40:18.346Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "Dokumen Push Chain - Panduan Cepat, SDK dan API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T20:40:19.869Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "Bangun dan jalankan aplikasi pada lapisan eksekusi universal dengan panduan dan contoh yang jelas.",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T20:40:24.410Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Dokumen Push Chain - Bangun sekarang",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T20:40:25.718Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "Panduan cepat, SDK, referensi API, dan contoh untuk mengirim dengan cepat.",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T20:40:28.992Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "Mulai Dokumen Testnet dalam",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T20:40:30.262Z"
+    },
+    "pages.docs.header.description": {
+      "value": "Hey... ingin melihat Testnet Donut? mampir ke #pushchainsecret dan kita akan kirim akses build uji coba.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T20:40:33.284Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "Beri tahu tentang Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:40:36.084Z"
+    },
+    "pages.docs.header.title": {
+      "value": "Beri tahu tentang Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:40:38.826Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Bagikan tentang Push Chain di X/Twitter",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-18T06:16:27.477Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "Apa itu Push Chain?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T20:40:42.792Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "Push Chain menyediakan alat lengkap yang seragam untuk membangun aplikasi yang sebenarnya universal.",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-18T06:16:24.385Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "Pelajari Lebih Lanjut",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:40:48.519Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "Mari kita bangun!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T20:40:50.584Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Semua hal yang Anda butuhkan dengan SDK Push Chain untuk membuat aplikasi universal Anda",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T20:40:52.948Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Pelajari Lebih Lanjut",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:40:54.909Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "Kit Antarmuka",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T20:40:57.756Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "Integrasikan aplikasi berbasis React dalam kurang dari 5 menit.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T20:40:59.862Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "Pelajari Lebih Lanjut",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:41:01.761Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "Akan Datang",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:41:03.784Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "SPOTLIGHT APLIKASI",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T20:41:06.541Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T20:41:21.131Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS & Komputasi yang Mempertahankan Privasi.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:41:36.129Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "Human.tech",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T20:41:49.717Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS & Komputasi yang Menjaga Privasi.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:42:07.424Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "Ramen Swap",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T20:42:08.818Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "Menyajikan token pilihanmu dari rantai mana pun",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T20:42:11.913Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T20:42:27.271Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "Lapisan infrastruktur terpadu untuk perdagangan berbasis agen.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T20:42:42.467Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T20:42:59.851Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "Supply aset, pinjam menentang mereka, dan dapatkan pendapatan optimal",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T20:43:02.972Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T20:43:20.928Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "Buat & peluncur token ERC-20",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T20:43:22.562Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: AI Asisten",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T20:43:24.496Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "Kirim, tukar, dan atur aset di seluruh jaringan yang didukung",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T20:43:27.381Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T20:43:44.168Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "Tampilkan keahlian degeneratormu untuk mendapatkan hadiah.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T20:43:45.776Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampireSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T20:44:03.359Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "Game mirip *vampire survivors* yang bersifat universal",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T20:44:21.835Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "Terakhir",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T20:44:39.564Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "Pendanaan terakhir sebelum timer habis\nMereka mengambil pot",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T20:44:41.345Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T20:44:57.033Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T20:45:16.819Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "Monetisasi API bayar per panggilan untuk infrastruktur agentik",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T20:45:34.268Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T20:45:51.682Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "Mesin pertumbuhan universal yang memberi penghargaan atas kualitas, bukan klik",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T20:46:08.787Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "BeatBrawls",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T20:46:25.304Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "Pertempuran musik yang tak terlupakan",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T20:46:42.481Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT Casino",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T20:46:57.760Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T20:47:13.048Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "Potong. Lindungi. Scor!",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T20:47:16.854Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T20:47:37.074Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "Beri tip pada rantai apa pun menggunakan dompet apapun",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T20:47:38.838Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T20:47:55.617Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "ChainCircle",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T20:48:13.690Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "Lingkaran tabungan lintas-rantai",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T20:48:31.021Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "Push Campus",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T20:48:45.522Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "Capai siswa di Ethereum, Solana, Base, dan 15+ chain",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-17T20:48:49.637Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "Ballsy",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T20:49:04.567Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "Bertempur untuk kejayaan dengan masuk menggunakan rantai favorit Anda",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T20:49:22.008Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "Athera",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T20:49:40.220Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "Warisan kripto otomatis",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T20:50:01.852Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T20:50:16.597Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T20:50:34.502Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "Kirim Kripto ke Domain, Bukan Hash",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T20:50:51.624Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T20:51:08.987Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "Segera Hadir",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:51:24.383Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Degen Chess",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T20:51:41.733Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Main catur, wajib, universal",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T20:51:46.605Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "Omnihub",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T20:52:01.986Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "Buat, beli, dan jual koleksi blockchain",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T20:52:06.115Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T20:52:23.361Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T20:52:38.487Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "Domain multi-rantai, GM + Alat Deploy",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T20:52:58.046Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Star Run",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T20:53:01.128Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "Sistem ekonomi decentralisasi yang dimiliki oleh pemain",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T20:53:08.877Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Forge Realm",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T20:53:11.455Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "Kombinasikan karakter dasar dan fitur dari berbagai kreator",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T20:53:14.097Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T20:53:16.457Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Hub multi-rantai Web3: Nama Domain, NFT, dan platform peluncuran.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T20:53:18.234Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Kopet",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T20:53:20.857Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "Bermain, merawat, dan pertumbuhkan hewan peliharaan virtually Anda melalui aktivitas on-chain",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T20:53:24.746Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T20:53:39.330Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "Layanan Nama Push",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T20:53:44.756Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Dapatkan Domain .push milikmu sendiri",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T20:53:50.831Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T20:54:06.230Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "Sebarkan koleksi NFT Anda secara gratis di rantai mana pun",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T20:54:22.685Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T20:54:37.213Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "Penyebar Multichain Cepat Gila",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T20:54:40.712Z"
     }
   }
 }

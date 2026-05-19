@@ -241,10 +241,10 @@ const Card = styled.a`
     props.variant === 'row' ? 'center' : 'flex-start'};
 
   min-height: ${(props) => (props.variant === 'row' ? 'auto' : '420px')};
-  background-image: ${({ bgImage }) => (bgImage ? `url(${bgImage})` : 'none')};
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  ${({ bgImage }) =>
+    bgImage
+      ? `background-image: url(${bgImage}); background-repeat: no-repeat; background-size: cover; background-position: center;`
+      : ''}
   justify-content: ${(props) =>
     props.variant === 'tile' ? 'space-between' : ''};
   overflow: hidden;
@@ -265,11 +265,10 @@ const Card = styled.a`
       props.variant === 'row'
         ? 'var(--ifm-color-card-dark)'
         : props.bgColor || props.background};
-    background-image: ${({ bgImage }) =>
-      bgImage ? `url(${bgImage})` : 'none'};
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    ${({ bgImage }) =>
+      bgImage
+        ? `background-image: url(${bgImage}); background-repeat: no-repeat; background-size: cover; background-position: center;`
+        : ''}
     color: inherit;
   }
 

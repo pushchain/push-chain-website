@@ -157,6 +157,10 @@ const sidebars = {
           type: 'doc',
           id: 'chain/setup/docs-chain-setup-smart-contract-address-book',
         },
+        {
+          type: 'doc',
+          id: 'chain/setup/docs-chain-setup-faucets',
+        },
       ],
     },
     {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:07:44.724Z",
+  "lastUpdated": "2026-05-18T06:16:01.161Z",
   "keys": {
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-of-the-future.title": {
       "value": "भविष्य के ऐप्स — बिना किसी अराजकता के निर्माण",
@@ -129,11 +129,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.116Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Push Chain testnet लाइव होने पर सबसे पहले जानने वाले बनें। एक्सक्लूसिव अपडेट के लिए हमारी मेलिंग लिस्ट में शामिल हों।",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.116Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1242,9 +1237,9 @@
       "lastUpdated": "2025-11-14T19:27:06.117Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "खोजें ऐप्स, पार्टनर्स और प्रारंभिक अनुयायी जो Push Chain के डोनट टेस्टनेट पर अगले युग का शून्य-आधारित अनुभव निर्माण कर रहे हैं।",
+      "value": "खोजें ऐप्स, पार्टनर्स और प्रारंभिक प्रयोगकर्ता जो पुश चेन के डोनट टेस्टनेट पर अगले युग के विश्वसंवादी अनुभवों का निर्माण कर रहे हैं।",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:49:31.687Z"
+      "lastUpdated": "2026-05-17T19:27:08.151Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "घोषणा खारिज करें",
@@ -1747,9 +1742,9 @@
       "lastUpdated": "2025-11-14T19:27:06.117Z"
     },
     "components.short-contact-us-snippet.answer-aria-label": {
-      "value": "वेन्दु याकवाएमोलेचसरद् - ",
+      "value": "उत्तर को सवाल - ",
       "englishChecksum": "84c913b7410cbc873ad0018ac37fb40e",
-      "lastUpdated": "2026-02-25T23:48:59.549Z"
+      "lastUpdated": "2026-05-17T19:26:31.892Z"
     },
     "pages.docs.seo.og-description": {
       "value": "क्लियर गाइड्स और उदाहरण के साथ यूनिवर्सल एक्जीक्यूशन लेयर पर एप्प बनाएं और रन करें।",
@@ -1767,14 +1762,14 @@
       "lastUpdated": "2026-02-25T23:49:26.231Z"
     },
     "pages.privacymobile.seo.twitter-description": {
-      "value": "आपकी डेटा और विकल्प पुश मोबाइल ऐप्स में।",
+      "value": "पुश मोबाइल एप्लिकेशन में आपकी डेटा और विकल्प।",
       "englishChecksum": "eaa1cdd6da251c8602628f9804934510",
-      "lastUpdated": "2026-02-25T23:49:29.322Z"
+      "lastUpdated": "2026-05-17T19:27:36.521Z"
     },
     "components.cookie-banner.message": {
-      "value": "हम कोकीज़ का उपयोग व्यक्तिगत अनुभव को अनुकूलित करने के लिए करते हैं। अधिक जानने के लिए हमारे",
+      "value": "हम कोकीज़ का उपयोग करें ताकि हम आपका अनुभव व्यक्तिगत बना सकें। अधिक जानकारी के लिए हमारे",
       "englishChecksum": "371ae79da8a6e6e86e8fb94a8731eadb",
-      "lastUpdated": "2026-02-25T23:49:39.880Z"
+      "lastUpdated": "2026-05-17T19:27:11.597Z"
     },
     "components.blog.footer-item.about-description": {
       "value": "Push चेन पहला वास्तविक यूनिवर्सल ब्लॉकचेन है, जो सभी चैन पर फ्रागमेंटेशन को मिटाता है। यह डेवलपर्स को एक बार डालना और किसी भी चेन (EVM या नॉन-EVM, जिसमें इथीरियम, सोलाना, बिटकोइन शामिल हैं) पर उपयोगकर्ताओं के लिए तुरंत उपलब्ध होने की अनुमति देता है। यह 100% EVM संगत, प्रूफ ऑफ स्टेक (PoS) चेन है जो Push चेन पर डिप्लॉई किए गए ऐप्स से किसी भी चेन पर नेटिवल रूप से इंटरैक्ट करने के लिए उपयोगकर्ताओं को अनुमति देता है, जैसे ही वे अपनीown चेन पर करते हैं।",
@@ -1900,9 +1895,9 @@
       "lastUpdated": "2026-01-16T17:15:17.229Z"
     },
     "components.cult-contact.form.success.message-after-link": {
-      "value": "और देखें ",
+      "value": "\nऔर ध्यान रखें कि",
       "englishChecksum": "e4dbaa554e2c8e7ebec5e00f4677c448",
-      "lastUpdated": "2026-02-25T23:50:11.760Z"
+      "lastUpdated": "2026-05-17T19:27:12.925Z"
     },
     "notifications.chain-notification.title": {
       "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
@@ -1928,11 +1923,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:27:35.216Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "अप्लाई करें",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:00:52.500Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "टोस्ट सूचना को बंद करें",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1948,19 +1938,10 @@
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:00:58.127Z"
     },
-    "notifications.info-bar.learn-more-text": {
-      "value": "अब एप्लाई करें",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:00:59.248Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "अर्ज करें",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-02-08T06:34:39.747Z"
-    },
     "components.blog.tags.tag-link-title": {
+      "value": "{{tagName}} टैग वाले पोस्ट देखें",
       "englishChecksum": "4f71ea84561c9d5015c56d17ac242495",
-      "lastUpdated": "2026-02-25T23:49:01.258Z"
+      "lastUpdated": "2026-05-17T19:26:46.790Z"
     },
     "components.blog.more-posts.title": {
       "value": "और पोस्ट Push Chain से",
@@ -2043,24 +2024,24 @@
       "lastUpdated": "2026-02-08T06:02:57.589Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "फास्टेस्ट ग्रोइंग यूनिवर्सल एप्लिकेशन ईकोसिस्टम में शामिल होना चाहते हो और अपने उपयोगकर्ता आधार को 10 गुना करना चाहते हो?",
+      "value": "बोलो, तेजी से बढ़ते यूनिवर्सल एप्लिकेशन इकोसिस्टम में शामिल होना चाहो और अपने यूजरबेस को 10 गुना करना चाहते हो?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-25T23:49:34.128Z"
+      "lastUpdated": "2026-05-17T19:27:10.192Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "टेस्टनेट एप्लिकेशंस को अनुशासित करें",
+      "value": "टैस्टनेट एप्लिकेशन का आवश्यक इकाई खोजें",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-02-25T23:49:43.145Z"
+      "lastUpdated": "2026-05-17T19:27:14.156Z"
     },
     "components.ecosystem-essentials.apps.simulate-tx.description": {
-      "value": "\nटोकन को विश्वसनीय रूप से ट्रांसैक्ट करें\n",
+      "value": "टोकन ट्रांज़ैक्शन को सिमुलेट करें",
       "englishChecksum": "93a1dbc5de1a2b469a1d5e7e7422804e",
-      "lastUpdated": "2026-02-25T23:49:46.598Z"
+      "lastUpdated": "2026-05-17T19:27:19.992Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
       "value": "Push Chain का universal वॉलेट",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-02-25T23:50:28.945Z"
+      "lastUpdated": "2026-05-17T19:27:34.746Z"
     },
     "components.ecosystem-apps-partners.coming-soon": {
       "value": "आने वाला है",
@@ -2381,22 +2362,22 @@
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-necessary": {
       "englishChecksum": "7b7e650f26dafe2becb5d6337340dd09",
-      "lastUpdated": "2026-02-25T23:49:03.885Z"
+      "lastUpdated": "2026-05-17T19:26:51.022Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- पुराने टेस्टनेट से वीडियो टेक्निकल डिब्ट मिटाइए (old technical debt removal)",
+      "value": "- पुराने टेस्टनेट से पुराना प्रौद्योगिकी कर्जा हटाें",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-02-25T23:49:06.819Z"
+      "lastUpdated": "2026-05-17T19:26:53.998Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "इस प्रस्ताव ने 1.178M कुल पता में से 1,950 सर्वश्रेष्ठ वॉलेट्स को प्रभावित किया। 1,100 PC टोकन या उससे अधिक (बिलियन तक शामिल) रखने वाले वॉलेट्स को पुनः சமाहारित करके 1,100-2,000 PC टोकन के बीच रखा गया था।",
+      "value": "इस प्रस्ताव ने 1.178M कुल एड्रेसों में से 1,950 शीर्ष वॉलेट्स को प्रभावित किया। 1,100 PC टोकन या अधिक रखने वाले वॉलेट्स (त्रिलियनो सहित) पुनर्व्यवस्थित किए गए थे ताकि वे 1,100-2,000 PC टोकन रखें।",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-25T23:49:11.674Z"
+      "lastUpdated": "2026-05-17T19:26:58.526Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "यूजर्स को अग्रिम में सूचित नहीं किया गया था ताकि ब्लॉकचेन को रिबालेंसिंग से पहले अपने वॉलेट्स को दूसरे वॉलेट्स में टोकन पुनर्वितरित करने के लिए गैर-कानूनी एक्टर्स को रोक लिया जाए। यह सुरक्षा कदम रिबालेंसिंग प्रोसेस की अखंडता सुनिश्चित करने और प्रणाली का गेमिंग रोकने के लिए था।",
+      "value": "यूज़र्स को अपराधी एक्टर्स द्वारा टोकन के अन्य वॉलेटों में पुनर्वितरण से रोकने के लिए रिबालेंसिंग से पहले सूचित नहीं किया गया था। इस सुरक्षा उपाय ने रिबालेंसिंग प्रोसेस की अखंडता सुनिश्चित की और प्रणाली का गेमिंग रोक दिया।",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-26T00:07:44.724Z"
+      "lastUpdated": "2026-05-17T19:27:02.934Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": " profanth डिप डाइव्स — कॉन्सेप्ट्स एवं आर्किटेक्चर ",
@@ -2457,6 +2438,502 @@
       "value": "आईंटरॉप एस एंड आई सीमेट्रिकल एशा",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T22:58:43.950Z"
+    },
+    "footer.links.llms-title": {
+      "value": "एमशिन-रिडेबल पुश चेन डॉक्स फॉर एआई कोडिंग असिस्टेंट्स",
+      "englishChecksum": "9110ca9f429e7eb7cabe4af8cbdfa7f3",
+      "lastUpdated": "2026-05-17T19:26:48.299Z"
+    },
+    "footer.email-section.title": {
+      "value": "पुश चेन के साथ रखिए अपडेट में",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T20:29:40.648Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "अपडेट और समाचार प्राप्त करें!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T20:29:43.386Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "न्यूज़लेटर सदस्यता अनुभाग",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T20:30:00.140Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "पीश चेन न्यूज़लेटर साइनअप",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T20:30:01.537Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "फ़ुटर नैविगेशन और लिंक",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T20:30:04.313Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "पुश चेन होम पेज",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T20:30:06.812Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "पुश चेन होमपेज",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T20:30:08.033Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "Push Chain लोगो",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T20:30:20.799Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "रिसोर्सेस",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T20:30:21.895Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "रीसोर्सेस नैविगेशन",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T20:30:25.792Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "डेवलपर्स",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T20:30:27.071Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "डेवलपर नেভीगेशन",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T20:30:27.985Z"
+    },
+    "footer.columns.community.title": {
+      "value": "पेवानुय",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T20:30:29.677Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "समुदाय नেভीगेशन",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T20:30:30.797Z"
+    },
+    "footer.columns.help.title": {
+      "value": "सहायता",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T20:30:31.765Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": " सहायता नавिगेशन",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T20:30:32.870Z"
+    },
+    "footer.links.get-started": {
+      "value": "शुरु करना",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T20:30:33.755Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "पीश चेन पर बिल्ड करना शुरू करें",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-17T20:30:36.389Z"
+    },
+    "footer.links.docs": {
+      "value": "डाक्यूमेंटेशन",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T20:30:37.256Z"
+    },
+    "footer.links.docs-title": {
+      "value": "पुश चेन डॉक्युमेंटेशन",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T20:30:43.401Z"
+    },
+    "footer.links.github": {
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-18T06:15:50.683Z"
+    },
+    "footer.links.github-title": {
+      "value": "पुश चेन रिपोजिटरीज़ ऑन गिथब्रैक्स",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T20:30:45.614Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "कीडि बेस",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T20:30:49.898Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "पीश चेन जानकारी बेस",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T20:30:52.755Z"
+    },
+    "footer.links.blog": {
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-18T06:15:51.902Z"
+    },
+    "footer.links.blog-title": {
+      "value": "पुश चेन ब्लॉग",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T20:30:54.606Z"
+    },
+    "footer.links.litepaper": {
+      "value": "लाइटपेपर",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-17T20:31:08.380Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "पीश चेन लाइटपेपर (पीडीएफ)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T20:31:09.626Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "ब्रांड किट",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T20:31:25.136Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "Push Chain ब्रांड एसेट्स और गाइडलाइन्स",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T20:31:41.246Z"
+    },
+    "footer.links.push-scan": {
+      "value": "पुश स्कैन",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T20:31:43.171Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "पुश चेन ब्लॉकचेन एक्स्प्लोरर",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T20:31:45.566Z"
+    },
+    "footer.links.faucet": {
+      "value": "फौसेट",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T20:31:59.103Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "देय च्र नोकी (सौ)तोका वेया",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T20:32:05.234Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T20:32:17.703Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Push Chain समुदाय पोर्टल",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T20:32:32.720Z"
+    },
+    "footer.links.support": {
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-18T06:15:52.843Z"
+    },
+    "footer.links.support-title": {
+      "value": "हेल्प सेंटर",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T20:32:34.544Z"
+    },
+    "footer.links.security": {
+      "value": "सुरक्षा तथा खुलासा",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T20:32:37.171Z"
+    },
+    "footer.links.security-title": {
+      "value": "रेना कर्दोद (responsible disclosure)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T20:32:39.455Z"
+    },
+    "footer.links.contact-us": {
+      "value": "कानेप या",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T20:32:42.504Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "साझेदारी, व्यवसाय विकास, मीडिया, या सामान्य पूछताछ",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T20:32:57.587Z"
+    },
+    "footer.links.careers": {
+      "value": "करियर",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T20:32:59.069Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Push Chain में उपलब्ध रोल्स",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T20:32:59.967Z"
+    },
+    "footer.links.twitter": {
+      "value": "एक्स (ट्विटर)",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T20:33:00.919Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "पीश शेन को X (ट्विटर) पर फॉलो करें",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T20:33:08.764Z"
+    },
+    "footer.links.discord": {
+      "value": "डिसर्ड",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-18T06:16:01.161Z"
+    },
+    "footer.links.discord-title": {
+      "value": "ज्वाइन पुश चेन डिस्कॉर्ड",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-18T06:15:54.856Z"
+    },
+    "footer.links.reddit": {
+      "value": "Reddit",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T20:33:25.948Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "पुश चेन सबरेडिट में शामिल होइये",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T20:33:27.005Z"
+    },
+    "footer.links.telegram": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-17T20:33:38.958Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "पीश चेन टेलेग्राम में शामिल होइए",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T20:33:41.574Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "सोशल मीडिया लिंक और कानूनी जानकारी",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T20:33:55.927Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "Push Chain ऑन एक्स/ट्विटर",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:33:57.128Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "पुश चेन ऑन एक्स/ट्विटर",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T20:33:58.360Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "पुश चेन ऑन गिटहब",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:34:02.071Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "पीश चेन ऑन गिटहब",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T20:34:03.199Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "Discord पर Push Chain",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:34:16.715Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "पीएसटी को डिस्कॉर्ड पर जाएँ",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T20:34:21.357Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "गोपनीयता नीति",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T20:34:37.579Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "प्रीवェसी पॉलिसी को पढ़ें",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T20:34:42.113Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "गोपनीयता नीति",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T20:34:43.100Z"
+    },
+    "footer.legal.terms-of-service": {
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:15:56.436Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "सेर्विसेज़ के नियम पढ़ें",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T20:34:48.935Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "सेवा की शर्तें",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T20:35:05.965Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "कोकी प्रेफरेंसेज",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T20:35:06.913Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "कुकियों को मैनेज करें",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T20:35:10.794Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "पीश चेन फुटर इलस्ट्रेशन",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T20:35:14.166Z"
+    },
+    "footer.footer-image.title": {
+      "value": "पीश चेन - यूनिवर्सल ब्लॉकचेन",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T20:35:16.746Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "Documentation — यूनिवर्सल Apps बनाएँ",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T20:35:34.101Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "पुश चेन पर भेजने के लिए सब कुछ: स्नैप स्टार्ट्स, एसडीकेस, एपीआई संदर्भ, उदाहरण और नोड सेटअप।",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T20:35:38.495Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "Push Chain Docs - क्विकस्टार्ट्स, SDKs और API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T20:35:55.993Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "पुश चेन डॉकस - अब बनीजिए",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T20:35:57.369Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "सर्वे शुरू करने के लिए, एसडीके, एपीआई संदर्भ और उदाहरण, तेजी से चलना के लिए।",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-18T06:15:58.205Z"
+    },
+    "pages.docs.header.description": {
+      "value": "हीम... चाहेगा तो टेस्टनेट डोनट का एक्सक्लूसिव पीक देखना। हमें #पुशचेनसीक्रेट भेजकर अपने बारे में बता, हम टेस्ट बिल्ड के लिए ऐक्सेस भेजेंगे।",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-18T06:15:48.538Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "Push चेन के बारे में ट्वीट करें",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:36:07.274Z"
+    },
+    "pages.docs.header.title": {
+      "value": "ट्विट करें Push Chain के बारे में",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:36:08.321Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Push Chain के बारे में ट्वीट करें",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T20:36:20.476Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "पुशचेन्ने कया है?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T20:36:22.876Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "अधिक जानें",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:36:24.945Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "让我们开始吧！",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T20:36:26.774Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "पीश चेन एसडीके के साथ अपने युनिवर्सल ऐप को बनाने के लिए सभी आवश्यक चीज़ें",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T20:36:29.394Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "और जानें",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:36:31.357Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "यूआई किट",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T20:36:36.710Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "कई मिनट में किसी भी रिएक्ट बेस्ड एप्लिकेशन को इनटिग्रेट करें।",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T20:36:39.294Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "और जानें",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:36:41.225Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "बेस कैरेक्टर और ट्रैट्स को मलता-बिठाकर कई क्रिएटर से मिलाएं",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T20:36:43.391Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "कोएनएफटी/कोडोमेन",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T20:36:44.902Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "वेब3 मल्टी-चेन हब: डोमेन नाम, NFTs, लॉन्चपैड।",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-18T06:16:00.231Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "कोपेट",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T20:36:52.142Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "अपनी ऑन-चेन एक्टिविटी के माध्यम से अपने वर्चुअल पालतू जानवर को खिलाएं, खेलें और बढ़ाएं",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T20:37:10.165Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "सर्फ़-लेयर",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T20:37:14.191Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "लग्गे अपनी पहचान और ७०+ श्रृंखलाओं पर पुरस्कार कमाइए।",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T20:37:15.988Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "पुश नेम सर्विस",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T20:37:19.094Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": " अपनी .पुश डोमेन प्राप्त करें ",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T20:37:20.698Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T20:37:35.396Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "किसी भी चेन पर अपनी NFT कलेक्शन मुफ्त में डिप्लॉय करें",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T20:37:52.494Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T20:38:11.208Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "तेज़ मल्टीचेन रिलेयर",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T20:38:28.425Z"
     }
   }
 }

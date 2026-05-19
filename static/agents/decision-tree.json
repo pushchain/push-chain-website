@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.3.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Decision trees for Push Chain agent routing and action selection. Most trees route through SDK capabilities; one tree (`choose_pusd_product`) routes through an external first-party skill (push-pusd) for PUSD / PUSD+ stablecoin integration.",
   "trees": [
@@ -16,6 +16,11 @@
           "details": {
             "execution_target": "Push Chain",
             "executor": "UEA (Universal Executor Account)",
+            "origin_types": [
+              "Wallet on an external chain (Ethereum / Sepolia / Arbitrum / Base / BNB / Solana, etc.)",
+              "Native Push Chain wallet"
+            ],
+            "origin_note": "When origin is external, the call routes through the UEA on Push Chain. When origin is a native Push Chain wallet, the SDK signs and submits the tx directly with no UEA hop.",
             "sdk_call": "pushChainClient.universal.sendTransaction({ to: '0x...', data, value })"
           },
           "next": null
@@ -27,18 +32,29 @@
           "details": {
             "execution_target": "External chain (e.g., Ethereum Sepolia, BNB Chain)",
             "executor": "CEA (Chain Executor Account)",
+            "origin_types": [
+              "Wallet on an external chain",
+              "Push Account: UEA, native Push Chain wallet, or smart contract on Push Chain"
+            ],
+            "origin_note": "The signer can be any of the listed account shapes. The route always lands on the target external chain via that signer's CEA.",
             "sdk_call": "pushChainClient.universal.sendTransaction({ to: { address: '0x...', chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, data })"
           },
           "next": null
         },
         {
           "condition": "tx.to is a plain address AND tx.from.chain is set to an external chain",
-          "action": "Use Route 3: Execute on Push Chain with CEA as origin",
+          "action": "Use Route 3: Execute on Push Chain with CEA as the bridge",
           "capability_ids": ["send_multichain_transaction"],
           "details": {
             "execution_target": "Push Chain",
-            "origin": "CEA on specified external chain",
-            "use_case": "When execution on Push Chain must reflect an external chain identity",
+            "origin": "Push Account (UEA, native Push Chain wallet, or smart contract on Push) acting through its CEA on the specified external chain",
+            "origin_types": [
+              "UEA (Universal Executor Account)",
+              "Native Push Chain wallet",
+              "Smart contract on Push Chain"
+            ],
+            "origin_note": "The Push Account authorizes the call; its CEA on the external chain emits the outbound tx that is relayed back inbound to Push Chain for execution.",
+            "use_case": "Rebalancing at the universal account level, DeFi strategies, sweeping external-chain holdings back to Push Chain.",
             "sdk_call": "pushChainClient.universal.sendTransaction({ from: { chain: PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA }, to: '0x...', data })"
           },
           "next": null

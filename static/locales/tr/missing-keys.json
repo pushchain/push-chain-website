@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:01:34.956Z",
+  "lastUpdated": "2026-05-18T06:23:11.222Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır",
@@ -69,11 +69,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.360Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Push Chain testnet'in ne zaman yayınlandığını ilk öğrenen siz olun. Özel güncellemeler için haber listemize katılın.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.360Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1687,19 +1682,19 @@
       "lastUpdated": "2025-11-14T20:23:12.497Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section": {
-      "value": "## Token İlgili",
+      "value": "## Jeton İle İlgili",
       "englishChecksum": "11c6e9de4502fb8d1a1ab8bd4eaff625",
-      "lastUpdated": "2026-02-25T23:59:39.301Z"
+      "lastUpdated": "2026-05-17T19:34:31.193Z"
     },
     "components.typeform-support.categories.technical.description": {
-      "value": "Hata raporları, SDK/API, akıllı sözleşimler, entegreleme yardım",
+      "value": "Hata raporları, SDK/API, akıllı sözleşmeler, entegrasyon yardım",
       "englishChecksum": "952a0533dce9bf557f94342840ee4720",
-      "lastUpdated": "2026-02-25T23:59:46.027Z"
+      "lastUpdated": "2026-05-17T19:34:35.462Z"
     },
     "global.site-description": {
-      "value": "Herşeyden önce bir L1 şeması, evrensel uygulamalar için ortak durumlar sunuyor. Bir kez dağıtın; herhangi bir zincirdeki kullanıcılara ulaşın. Herhangi bir cüzdan kullanın. Herhangi bir token ile ödeyin. Ağı değiştirmekte ihtiyacınız yoktur.",
+      "value": "Herşeyden önce, ortak durumu (shared-state) kullanan üniversal uygulama için L1. Bir kez dağıt; herhangi bir zincirde yer alan kullanıcılara erişin. Herhangi bir cüzdan kullanın. Herhangi bir jeton ile ödeyin. Ağ değiştirmeden.",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-02-26T00:00:11.627Z"
+      "lastUpdated": "2026-05-17T19:34:37.919Z"
     },
     "footer.links.faucet-title": {
       "value": "Push Chain'den test tokenler almak için",
@@ -1707,9 +1702,9 @@
       "lastUpdated": "2026-02-26T00:00:12.780Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole": {
-      "value": "### Push Çekiç Nasıl Wormhole'den Farklıdır?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprümesi yapma üzerine odaklanır\n- **Saranşık Varsiyonlar**: Farklı zincirlerde token'lerin saransestock versiyonlarını oluşturur\n- **Koruyucu Ağı**: Köprü iletileri doğrulamak için validator setine güvenir\n- **Çok Adımlı Süreç**: Uygulamalar kullanmadan önce aktarım yapma gereklidir\n\n**Push Çekiç:**\n- **Evrenel Gerçekleştirme**: Köprüleme gereksiniminden kurtulur, doğrudan etkileşimler\n- **Orijinal Varlıklar**: Saransestock token'ler gerekmez, özgün varlıkları kullanır\n- **Direkt Doğrulama**: Herhangi bir zincirden orijinal imza doğrulaması yapar\n- **Teklem Transaction**: Köprüleme gereksinimi olmadan tek adım etkileşimler\n\nPush Çekiç, zincirlerarası etkileşimlerde aktarımın gerekliliğini ortadan kaldırırken Wormhole gerekliyor.\n\n---",
+      "value": "### Push Chain'i Wormhole'den neyin ayıran?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprüleme işlemlerine odaklanıyor\n- **Sarmalanmış Varlıklar**: Farklı zincirlerde token'ları sarmalaş edilmiş halini oluşturuyor\n- **Gözetim Ağı**: Köprü mesajlarını doğrulamak için validatör setine güveniyor\n- **Çok Adımlı İşlem**: Uygulamalar kullanmadan önce aktarım yapılması gerekiyor\n\n**Push Chain:**\n- **Universal Gerçekleşim**: Köprüleme işlemi olmaksızın direkt etkileşim sağlanıyor\n- **Orijinal Varlıklar**: Sarmalaşmış token'lara ihtiyaç yok, orijinal varlıkları kullanıyor\n- **Direkt Doğrulama**: Herhangi bir zincirden özgün imza doğrulaması yapılıyor\n- **Tek Transaction**: Köprüleme işlemi olmaksızın tek adımda etkileşim sağlanıyor\n\nPush Chain, köprüleme işlemlerine ihtiyaç duymadan doğrudan etkileşimler sağlıyorken Wormhole köprüleme işlemleri gerektiriyor.\n\n---",
       "englishChecksum": "b42c978c22c50f8c67751d98728c12ce",
-      "lastUpdated": "2026-02-26T00:00:22.774Z"
+      "lastUpdated": "2026-05-17T19:34:47.247Z"
     },
     "pages.docs.header.countdown-title": {
       "value": "Testnet Belgeler İndirmeye Hazırlanıyor %s",
@@ -1717,23 +1712,24 @@
       "lastUpdated": "2026-02-26T00:00:58.461Z"
     },
     "pages.litepaper.seo.description": {
-      "value": "Push Chain'in vizyonu, yapısı ve ekonomileri için kısa bir bakış. Evrensel uygulamalar için.",
+      "value": "Push Chain'in vizyonu, mimarisi ve ekonomileri için özlü bir bakış. Evrensel uygulamalar için.",
       "englishChecksum": "2768e2658592fe376add9699d9d49ef6",
-      "lastUpdated": "2026-02-26T00:01:00.105Z"
+      "lastUpdated": "2026-05-17T19:35:19.771Z"
     },
     "components.short-support-snippet.qnas.qna3.question": {
-      "value": "Testnet tokenlerini nasıl edinirim (Donut)?",
+      "value": "Nasıl testnet token'leri (Donut) elde ederim?",
       "englishChecksum": "bec0083e54c2e78706bd43f65e5207ae",
-      "lastUpdated": "2026-02-26T00:01:06.543Z"
+      "lastUpdated": "2026-05-17T19:35:25.395Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>Test token'leri talep etmek için <3>Faucet'i</3> kullanın.</1><1><2>Notlar:</2> hız limitleri uygulanabilir; bazı faucet'ler basit doğrulama gerektirebilir. Eğer faucet işlemedi, lütfen <4>Discord'da</4> bize iletin.</1>",
+      "value": "<1>Test tokens isteyenler için <3>Faucet'i</3> kullanınız.</1><1><2>Notlar:</2> rate limitleri uygulanabilir; bazı faucet'ler basit doğrulama gerektirir. Eğer faucet çalışmıyorsa, lütfen <4>Discord'u</4> üzerinden bize iletişime geçin.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-02-26T00:01:10.041Z"
+      "lastUpdated": "2026-05-17T19:35:28.876Z"
     },
     "notifications.rewards-notification.description": {
+      "value": "Testnet, Donut'te bir göz atış yap ve evrensel uygulamalar inşa et! Ödüller kazanın!",
       "englishChecksum": "4a4561fbdd8c6761d8759b0b0ec592ee",
-      "lastUpdated": "2026-02-26T00:01:28.809Z"
+      "lastUpdated": "2026-05-17T19:35:35.093Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Yapıcılar — Nasıl Yapar ve Öğreticiler",
@@ -1912,7 +1908,7 @@
     },
     "pages.cult.seo.description": {
       "englishChecksum": "0b81287e99702d4f24a964d8e370b3b3",
-      "lastUpdated": "2026-02-26T00:01:02.600Z"
+      "lastUpdated": "2026-05-17T19:35:21.980Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "value": "### Push Chain üzerinde ne yapılabilir?\n\nPush Chain, tüm L1'ler, L2'ler ve L3'lerden çapraz uyumluluğu sağlar ve bu nedenle yenilik ve uyum oynamak için oyuncak alanı olma potansiyeline sahiptir. Şu web3 kullanım durumlarını inşa edebilirsiniz:\n\n![Push Chain'in temel kullanım alanları](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nveya web3'yi iyileştirmek için yenilikler yaratabilirsiniz:\n\n![Tüketici kullanım durumları](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nveya popüler uygulama örneklerini görerek ilham alabilirsiniz:\n\n![Push Chain üzerinde popüler uygulamalar](/assets/website/chain/knowledge/tokenomics/popularapps.webp)",
@@ -1939,16 +1935,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:28:36.929Z"
     },
-    "notifications.chain-notification.description": {
-      "value": "En %53;k en yaratıcı %2415M jeton ödülü kazanır. Cemaatınizi toplar. Push Kult'a katılın!",
-      "englishChecksum": "49b3bcd6b310a7da48dda4eaaa7936b3",
-      "lastUpdated": "2026-02-26T00:00:08.931Z"
-    },
-    "notifications.chain-notification.button-text": {
-      "value": "Şimdi Uygula",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:08.696Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "Toast uyarıyı kapat",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1963,16 +1949,6 @@
       "value": "Push Chain bildirim tostu",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:04:13.857Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "Başvur",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:16.604Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "Uygula",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:17.606Z"
     },
     "components.blog.more-posts.title": {
       "value": "Push Chain'in daha fazla yazısı",
@@ -2065,8 +2041,9 @@
       "lastUpdated": "2026-02-26T00:01:31.824Z"
     },
     "pages.ecosystem.cta.title": {
+      "value": "Ücretsiz Universal Uygulama Ecosistemine Katılmak istiyor musunuz ve kullanıcınızı 10 katına çıkarmak?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-26T00:01:04.920Z"
+      "lastUpdated": "2026-05-17T19:35:23.802Z"
     },
     "components.ecosystem-apps-partners.apps.ramen-swap.description": {
       "value": "Herhangi bir zincirden tercihinizdeki tokenleri sunuyor",
@@ -2090,61 +2067,61 @@
       "lastUpdated": "2026-02-26T00:01:21.564Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "Burada PC Testnet token'lerini alın",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-02-26T00:01:34.956Z"
+      "lastUpdated": "2026-05-17T19:35:30.534Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-02-26T00:01:24.974Z"
+      "lastUpdated": "2026-05-17T19:35:32.024Z"
     },
     "components.ecosystem-essentials.apps.simulate-tx.description": {
       "englishChecksum": "93a1dbc5de1a2b469a1d5e7e7422804e",
-      "lastUpdated": "2026-02-26T00:01:27.027Z"
+      "lastUpdated": "2026-05-17T19:35:33.725Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.title": {
-      "value": "Zincir Geçişi - Token Yeniden Dağıtımı - 10 Milyar PC Token",
+      "value": "Zincir Geliştirme - Token Dengesizliği - 10 Milyar PC Jetonu",
       "englishChecksum": "47c4883068fe6b0c96673e994701b191",
-      "lastUpdated": "2026-02-25T23:59:42.186Z"
+      "lastUpdated": "2026-05-17T19:34:33.834Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain, bir token tekrardağılım önerisini gerçekleştirdi ve PC jetonu toplam tedarikini yaklaşık 10 milyar jetondan daha az olan seviyelere indirdi. Bu güncelleme, testnet'in erken günlerinden kalma teknik borçları içerir ve zincir için ana ağına hazırlanmayı sağlar.",
+      "value": "Push Chain, bir token yeniden dağıtım önerisini yürüttü. Böylece toplam PC token tedarikini yaklaşık 10 milyar token seviyesine indirdi. Bu güncelleme, testnet'in başlangıç dönemlerinden kalma teknik borcu çözümledi ve zinciri ana ağ için hazırladı.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-26T00:00:27.258Z"
+      "lastUpdated": "2026-05-17T19:34:51.394Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "Push Chain testi ağı'nın erken günlerinde, PC jetonlarının yakma ve üretim işlemi yoktu. Bunu takiben evrensel işlemler için ekstrem olarak düşük fiyat hesaplamaları oluşmuş ve az sayıda jeton sahiplerinin trilyonlarca jeton miktarlarına ulaşmasına izin vermiştir. Bu, ana ağı açılışına kadar düzeltmeye ihtiyaç duyulan dengesiz bir jeton ekonomisini yaratmıştır.",
+      "value": "Push Chain testnet'in erken günlerinde, PC jetonları için yakma ve miktar ayarlama işlemleri yoktu. Bu, evrensel işlemlerin çok düşük fiyat hesaplamalarına ve az sayıda jeton sahiplerinin çok yüksek miktarda jetonlara sahip olmasına neden oldu (trilyona kadar). Bu, ana ağın başlatılmadan önce düzleştirilmesi gereken eşitsiz bir jeton ekonomisi yarattı.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-02-26T00:00:32.420Z"
+      "lastUpdated": "2026-05-17T19:34:56.641Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
-      "value": "- Adil ve sürdürülebilir bir token ekonomisi kur",
+      "value": "- Adil ve sürdürülebilir bir token ekonomisi kurmak",
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-02-26T00:00:35.341Z"
+      "lastUpdated": "2026-05-17T19:34:59.238Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Öneri, 1.178M toplam adresden 1,950 adet en üst seviye cüzdanı etkiledi. 1,100 PC jetonu veya daha fazla tutan (trilyonlar da dahil) cüzdanları yeniden dengelendi ve bunların hepsi 1,100-2,000 arasında PC jetonu tutacak şekilde ayarlandı.",
+      "value": "Bu öneri, toplam 1.178M adresden 1,950 adet üst düzey cüzdanlara etki etti. Trilyonlarca PC jetonu tutan veya daha fazla tutan cüzdanlar (dahil olmak üzere) yeniden dâhşil olarak %1,100-%2,000 aralığına getirildi.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-26T00:00:41.874Z"
+      "lastUpdated": "2026-05-17T19:35:04.032Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
+      "value": "- Toplam tedarik %75+ dan yaklaşık 10B PC jetonu'ya düştü",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-02-26T00:00:44.876Z"
+      "lastUpdated": "2026-05-17T19:35:06.827Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Kullanıcıları önceden bilgilendirmek, rebalanslama sürecinden önce kötü niyetli aktörler tarafından token'ların diğer cüzdanlara yeniden dağıtılmasını önlemek için güvenlik önlemidir. Bu önlem, rebalanslama işleminin bütünlüğünü sağlamak ve sistem oyununu önlemektir.",
+      "value": "Kullanıcıları önceden bilgilendirmek, rebalancing'ten önce kötü niyetli aktörlerin tokenleri diğer cüzdanlara dağıtmasını engellemek için güvenlik önlemi olarak yapıldı. Bu önlem, rebalancing işleminin bütünlüğünü korumak ve sistem oyununu önlemeyi sağladı.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-26T00:00:49.350Z"
+      "lastUpdated": "2026-05-17T19:35:10.853Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Token dengesizliği iki aşamalı bir yaklaşım. Şimdi, bir takım kontrolü altındaki cüzdanda toplanmaktadır ve yakın zamanda yaktırılacaklar.",
+      "value": "Rebalans, iki aşamalı bir yaklaşım. Şimdi token'lar bir takım tarafından kontrol edilen bir cüzdana toplanıyor ve yakın zamanda yakanacak.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-26T00:00:52.760Z"
+      "lastUpdated": "2026-05-17T19:35:14.065Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**Etkilenmiş cüzdanlar (en yüksek 1,950):** Eğer cüzdanınız 1,100+ PC jetonu tutuyor veya trilyonlarca tutuyorsa, denge dengesi yapılarak 1,100-2,000 aralığına yerleştirildi.",
+      "value": "**Etkilenmiş cüzdanlar (en yüksek 1,950):** Eğer cüzdanınız 1,100+ PC jetonu tutuyorsa (ya da trilyonlar), balance'niz 1,100-2,000 aralığına yeniden ayarlanmıştır.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-02-26T00:00:57.110Z"
+      "lastUpdated": "2026-05-17T19:35:18.147Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Derinlemesine İncelemeler — Kavramlar ve Mimari",
@@ -2205,6 +2182,795 @@
       "value": "Ağ Geçişi Spektrum Olarak",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:04:34.260Z"
+    },
+    "footer.email-section.title": {
+      "value": "Push Chain ile güncel kalın",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T21:52:31.896Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "haberler ve güncellemeler!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T21:52:32.806Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "Haber bülteni abonelik bölümü",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T21:52:33.817Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "Push Chain haber bültenine kaydol",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-18T06:22:47.774Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "Alt menü ve bağlantılar",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T21:52:36.728Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "Push Chain ana sayfası",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T21:52:39.520Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "Push Chain ana sayfası",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T21:52:41.882Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "Push Chain logosu",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T21:52:44.105Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "Kaynaklar",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-17T21:52:45.018Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "Kaynaklar navigasyonu",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T21:52:46.090Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "Geliştençler",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T21:52:47.161Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "Geliştirici navigasyonu",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T21:52:50.682Z"
+    },
+    "footer.columns.community.title": {
+      "value": "Topluluk",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T21:52:51.864Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "Topluluk navigasyonu",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T21:52:54.735Z"
+    },
+    "footer.columns.help.title": {
+      "value": "Yardım",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T21:52:56.503Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "Yardım navigasyonu",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T21:52:59.405Z"
+    },
+    "footer.links.get-started": {
+      "value": "Başlayın",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-18T06:22:54.090Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "PushChain'e başlayın",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-17T21:53:01.331Z"
+    },
+    "footer.links.docs": {
+      "value": "Dökümanlar",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-17T21:53:03.380Z"
+    },
+    "footer.links.docs-title": {
+      "value": "Push Chain belgeleri",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-17T21:53:04.155Z"
+    },
+    "footer.links.github": {
+      "value": "Github",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T21:53:04.862Z"
+    },
+    "footer.links.github-title": {
+      "value": "GitHub'da Push Chain deposu",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T21:53:05.779Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "Bilgi Tabanı",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T21:53:08.254Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": " Push Chain Bilgi Tabanı",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-18T06:22:40.149Z"
+    },
+    "footer.links.blog": {
+      "value": "Blog",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-17T21:53:09.962Z"
+    },
+    "footer.links.blog-title": {
+      "value": "Push Chain blog",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T21:53:11.621Z"
+    },
+    "footer.links.litepaper": {
+      "value": "Açık Belgeleri",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-18T06:22:42.434Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "Push Chain LitePaper'i (PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T21:53:15.263Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "Marka Kiti",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T21:53:16.978Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "Push Chain marka varlıkları ve yönergeleri",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-17T21:53:29.342Z"
+    },
+    "footer.links.push-scan": {
+      "value": "Puş Gezgini",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T21:53:31.373Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "Push Chain blokzincir gezgini",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T21:53:43.233Z"
+    },
+    "footer.links.faucet": {
+      "value": "Faucet",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-17T21:53:44.092Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T21:53:44.859Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Push Chain topluluğu portali",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-17T21:53:45.760Z"
+    },
+    "footer.links.support": {
+      "value": "Destek",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T21:53:46.476Z"
+    },
+    "footer.links.support-title": {
+      "value": "Yardım Merkezi",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-18T06:22:43.274Z"
+    },
+    "footer.links.security": {
+      "value": "Güvenlik & Açıklama",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T21:53:48.217Z"
+    },
+    "footer.links.security-title": {
+      "value": "Zafiyet bildir (sorumlu açıklama)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-18T06:22:56.603Z"
+    },
+    "footer.links.contact-us": {
+      "value": "Bizimle İletişime Geçin",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T21:53:53.913Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "Ortaklıklar, BD, medya veya genel sorular için",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T21:53:55.010Z"
+    },
+    "footer.links.careers": {
+      "value": "करियर",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-18T06:23:11.222Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Push Chain'da açılan pozisyonlar",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-17T21:53:58.168Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/Twitter",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T21:53:58.941Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "Push Chain'i X (Twitter) üzerinden takip et",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T21:54:00.186Z"
+    },
+    "footer.links.discord": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T21:54:01.035Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Push Chain Discord'e katılın",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-18T06:22:59.370Z"
+    },
+    "footer.links.reddit": {
+      "value": "Reddit",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T21:54:03.000Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Push Chain alt reddit'e katılın",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-17T21:54:05.903Z"
+    },
+    "footer.links.telegram": {
+      "value": "Telegram",
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-17T21:54:06.661Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Push Chain Telegram'a Katılın",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T21:54:22.187Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "Sosyal medya bağlantılar ve yasal bilgiler",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T21:54:23.564Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": "Push Chain på X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T21:54:24.431Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "Push Chain Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T21:54:25.292Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": "GitHub'da Push Chain",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T21:54:27.577Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "Push Chain GitHub'de",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T21:54:29.974Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "Push Chain'de Discord",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T21:54:41.420Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": "Push Chain Discord'ü",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T21:54:42.397Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "Gizlilik Politikası",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T21:54:54.398Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "Gizlilik Politikası'yı Oku",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T21:54:55.553Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "Gizlilik Politikası",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T21:54:56.537Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "Hizmet Şartları",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-18T06:22:50.171Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "Şartları Okuyun",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T21:54:58.400Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "Şartlar ve Koşullar",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T21:54:59.356Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "Çerez Tercihler",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-18T06:23:00.265Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "Çerez tercihlerini yönetin",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T21:55:03.703Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "Push Chain ayakkabı resim",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T21:55:04.627Z"
+    },
+    "footer.footer-image.title": {
+      "value": "Push Chain - Evrensel Blok Zinciri",
+      "englishChecksum": "335a0ee6c9b58e1b96f653feab5a85b2",
+      "lastUpdated": "2026-05-17T21:55:07.458Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "Belgelendirme – Evrensel Uygulamalar Oluşturun",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T21:55:09.007Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "Push Chain için tüm ihtiyaçlarınızı karşılayan her şey: hızlı başlangıçlar, SDK'ler, API referansı, örnekler ve düğüm ayarlaması.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T21:55:12.793Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "Push Chain Belgeler - Hızlı Başlangıçlar, SDK'ler ve API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T21:55:17.065Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "Evrenşahlama katmanı üzerinde uygulamalar inşa et ve çalıştır. Açık rehberler ve örneklerle.",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T21:55:20.774Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Push Chain Docs - Şimdi Oluştur",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T21:55:32.301Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "Hızlı başlangıçlar, SDK'ler, API referansı ve örnekler hızlı bir şekilde sevketmek için.",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T21:55:34.058Z"
+    },
+    "pages.docs.header.description": {
+      "value": "Sss... Testnet Donut'i keşfetmek istiyor musun? Bize #pushchainsecret yaz ve bir test sürümüne erişim için bir bağlantı göndereceğiz.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T21:55:36.043Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "Push Chain hakkında tweet at",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T21:55:37.208Z"
+    },
+    "pages.docs.header.title": {
+      "value": "Push Chain hakkında tweet yaz",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T21:55:38.212Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Push Chain hakkında tweet yazın",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T21:55:39.335Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "Push Chain nedir?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T21:55:41.664Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
+      "value": "Push Chain, universal uygulama araç setini sağlar.",
+      "englishChecksum": "51c5c43c534cc7d1fbafd9c576678705",
+      "lastUpdated": "2026-05-17T21:55:43.822Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "Detaylı Bilgi Edinin",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T21:55:45.722Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "Başlayalım!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T21:55:47.620Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Push Chain SDK ile üniversal uygulamanız yaratmak için ihtiyacınız olan her şey",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T21:55:50.300Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Daha Fazla Öğren",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T21:55:52.431Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UI Kit",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-17T21:55:54.308Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "Herhangi bir React tabanlı uygulama için 5 dakika içinde entegre edin.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T21:55:57.199Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "Daha Fazla Öğren",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T21:56:02.032Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "Yakında",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T21:56:05.460Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "UYGULAMA VURGUSU",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T21:56:19.496Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T21:56:34.240Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS ve Gizlilik Koruyan Hesaplama.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T21:56:51.120Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "Human.tech",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T21:57:06.139Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS ve Gizlilik Koruyucu Hesaplama.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T21:57:22.926Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "Ramen Swap",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T21:57:38.143Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T21:57:52.893Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "Ajent tabanlı ticareti için birleşik altyapı katmanı.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T21:58:09.843Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T21:58:24.858Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "Ürünler tedarik edin, onları kredi alınacak şekilde kolaylaştırın ve optimize edilmiş kazançlar kazanın",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T21:58:27.204Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T21:58:30.417Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: Yapay Zeka Asistanı",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T21:58:48.965Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "Desteklenen ağlar üzerinden varlıkları gönderin, takas edin ve yönetin",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T21:59:07.200Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T21:59:22.942Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "Özel yeteneklerinizi göstererek ödüller kazanın.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T21:59:24.962Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnChainVampirSurvivörler",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T21:59:29.940Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "Universal vampire survivors benzeri oyun",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T21:59:33.210Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "Son Bir Tane",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T21:59:48.652Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "Son teklifi veren, zaman dolmadan potu alır.",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T22:00:05.649Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T22:00:20.400Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "Her Zincirde Kendiniz",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T22:00:23.374Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T22:00:39.615Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "Aracı altyapısı için kullanım başına ödeme API para kazanma",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T22:00:56.788Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T22:01:12.034Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "Evrensel büyüme motoru, tıklamalardan ziyade kaliteyi ödüllendiriyor",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T22:01:28.982Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "BeatBrawls",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T22:01:49.773Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "Unutulmaz müzik savaşları",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T22:02:07.124Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT Casino",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T22:02:24.299Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "Evrensel, adil ve şeffaf bahis yapmak için",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T22:02:28.452Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T22:02:42.557Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "Zincir üstü beceri tabanlı oyun",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T22:02:58.994Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "Kes. Atlat. Puan Kazan.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T22:03:14.968Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T22:03:30.586Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Değişim",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T22:03:37.917Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "ChainCircle",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T22:03:53.493Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "Çapraz zincir tasarruf çemberleri",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T22:03:56.924Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "Push Kampüs",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T22:04:12.215Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "Ethereum, Solana, Base ve 15+'dan fazla zincirde öğrencilere ulaşın",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-17T22:04:13.998Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "Ballsy",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T22:04:33.009Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "Athera",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T22:04:50.378Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "Otomatik kripto mirası",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T22:05:07.900Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T22:05:23.952Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "Tüm zincirlerden gelen USD akıtıyla 1:1 sabit kâr eden stabilizecoin",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-17T22:05:27.428Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T22:05:42.517Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "Kriptoyu Etiket Adreslerine Göndermek, Şekilde Göndermemek",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T22:05:44.484Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T22:05:49.107Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "Çok Yakında",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T22:06:05.081Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Degen Chess",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T22:06:20.518Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Satranç oynayın, bahis yapın, evrensel",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T22:06:38.264Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "Omnihub",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T22:06:54.597Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T22:06:55.956Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.description": {
+      "englishChecksum": "6e79596adf46880630b94d8aed70ac68",
+      "lastUpdated": "2026-05-18T06:22:52.971Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T22:07:29.286Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "Çoklu zincirli alan adları, GM + Dağıtım araçları",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T22:07:45.405Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Star Run",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T22:08:01.621Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "Merkezi bir, oyuncu sahipli ekonomiyi",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T22:08:03.377Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Forge Realm",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T22:08:18.635Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "Farklı yaratıcılardan temel karakterleri ve özellikleri karıştırın ve eşleştirin",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T22:08:35.710Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T22:08:52.068Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Web3 Çok zincirli merkez: Alan adları, NFT'ler, başlatma platformu.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T22:08:54.720Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Copet",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T22:09:09.639Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "Zincir üstü aktivitelerle sanal evcil hayvanını besle, oyna ve büyüt",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T22:09:28.527Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T22:09:43.773Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "Hesabınızı oluşturun ve 70'den fazla zincirin çoğunda ödüller kazanın.",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T22:09:45.767Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "Push İsim Servisi",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T22:10:03.558Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Kendi .push alan adınıza sahip olun",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T22:10:19.116Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T22:10:39.923Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.description": {
+      "value": "Herhangi bir zincirde NFT koleksiyonunuzu ücretsiz dağıtın",
+      "englishChecksum": "91d7285ddb2471e505208c016590d84c",
+      "lastUpdated": "2026-05-17T22:10:41.963Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T22:10:58.909Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "Işın Hızlı Çoklu Zincir Relayci",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T22:11:16.046Z"
     }
   }
 }

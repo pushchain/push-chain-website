@@ -145,7 +145,7 @@ const universalSigner = await PushChain.utils.signer.toUniversalFromKeypair(keyp
 | `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.eth` | Push-wrapped USDC from Ethereum |
 | `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.arb` | Push-wrapped USDC from Arbitrum |
 | `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.base` | Push-wrapped USDC from Base |
-| `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bnb` | Push-wrapped USDC from BNB Chain |
+| `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bsc` | Push-wrapped USDC from BNB Chain (renamed from `.bnb` in SDK v6.0.1; `.bnb` still resolves but is `@deprecated`) |
 | `MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.sol` | Push-wrapped USDC from Solana |
 
 ```typescript

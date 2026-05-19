@@ -1,10 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Davet koduna mı ihtiyacınız var? Bizi takip edin, açıklama videomuzu izleyin ve yorum bırakın. Sınırlı davetiyeler!",
-      "button-title": "Davet Kodu Al",
-      "button-aria-label": "Davet Kodu Al! Buradan kontrol edebilirsiniz",
-      "image-alt": "Davet Kodu Al!"
+      "description": "Davetiye koduna mı ihtiyacın var? Takip et, Açıklayıcı Videomuzu İzle ve bir yorum bırak. Sınırlı sayıda davetiye mevcut.",
+      "button-text": "Davet Kodunu Al",
+      "button-title": "Davet Kodunu Al",
+      "button-aria-label": "Davet Kodunu Al!. Buradan kontrol edebilirsin",
+      "image-alt": "Davet Kodunu Alın!"
     }
   }
 }

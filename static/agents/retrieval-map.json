@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.1.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "base_url": "https://push.org",
   "description": "Maps every major task and capability to its authoritative documentation source. Use this as the entry point for RAG and retrieval systems.",

@@ -1,9 +1,10 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Brauchst du einen Einladungscode? Folge uns, schau unser Erklärvideo und hinterlasse einen Kommentar. Begrenzte Einladungen!",
+      "description": "Brauchst du einen Einladungscode? Folge uns, schau dir unser Erklärvideo an und hinterlasse einen Kommentar. Nur begrenzte Einladungen verfügbar.",
+      "button-text": "Einladungscode anfordern",
       "button-title": "Einladungscode erhalten",
-      "button-aria-label": "Einladungscode erhalten! Hier kannst du mehr erfahren",
+      "button-aria-label": "Einladungscode abrufen!. Du kannst ihn hier prüfen",
       "image-alt": "Einladungscode erhalten!"
     }
   }

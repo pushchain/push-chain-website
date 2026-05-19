@@ -1,0 +1,105 @@
+---
+id: docs-chain-setup-faucets
+title: Faucets
+hide_title: false
+slug: ./faucets
+displayed_sidebar: pushChainSidebar
+sidebar_position: 3
+image: "/assets/docs/previews/docs_chain_setup--faucets.png"
+---
+
+<head>
+  <title>Faucets | Setup | Push Chain Docs</title>
+</head>
+
+import IFrameModal from '@site/src/components/IFrameModal/IFrameModal';
+import Details from '@theme/Details';
+
+<!-- Content Start -->
+
+Push Chain is multi-chain by design, so testing universal transactions end-to-end usually needs funds on more than one network. This page lists the official faucets for **$PC** (Push Chain native) and every external-chain stablecoin or native token supported by the Donut Testnet gateway.
+
+> **Limits and CAPTCHA**: Most faucets are rate-limited and CAPTCHA-gated. Do not write agent loops that call these endpoints automatically.<br /><br />
+> **Cross-reference**: Token addresses below match the [Smart Contract Address Book](/docs/chain/setup/smart-contract-address-book). When in doubt, that page is authoritative.
+
+## Push Chain Donut Testnet ($PC)
+
+The native gas token for Push Chain Donut Testnet.
+
+| Token | Faucet | Limit |
+| ----- | ------ | ----- |
+| **$PC** | [faucet.push.org](https://faucet.push.org/) | 1 PC per address per 6 hours |
+
+<IFrameModal
+  url='https://faucet.push.org/'
+  buttonTitle='Open Push Faucet'
+  maxHeight='500px'
+/>
+
+## Ethereum Sepolia
+
+Native ETH covers Sepolia gas. USDC, USDT, and WETH on Sepolia mint via the contract's `faucet()` function on the explorer's Write Contract tab. Connect your wallet and call it once per address to receive test tokens.
+
+| Token | Address | Get Tokens |
+| ----- | ------- | ---------- |
+| **Native ETH** | — | [Alchemy Sepolia Faucet](https://www.alchemy.com/faucets/ethereum-sepolia) or [PoW Faucet](https://sepolia-faucet.pk910.de/) |
+| **USDC** | `0x97F477B7f970D47a87B42869ceeace218106152a` | [Call `faucet()` on Sepolia Etherscan](https://sepolia.etherscan.io/address/0x97F477B7f970D47a87B42869ceeace218106152a#writeContract#F4) |
+| **USDT** | `0xC4230aEaFcF6b8B49a7b4e53886420f00ff71876` | [Call `faucet()` on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xC4230aEaFcF6b8B49a7b4e53886420f00ff71876#writeProxyContract#F3) |
+| **WETH** | `0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14` | Wrap Sepolia ETH via [`deposit()` on Sepolia Etherscan](https://sepolia.etherscan.io/address/0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14#writeContract) |
+
+
+## Solana Devnet
+
+Solana uses a different toolchain. Native SOL is obtained via the CLI airdrop or a web faucet. SPL test tokens have their own paths.
+
+| Token | Address | Get Tokens |
+| ----- | ------- | ---------- |
+| **Native SOL** | — | [faucet.solana.com](https://faucet.solana.com/), or CLI: `solana airdrop 2 <your-pubkey> --url devnet` |
+| **USDC** | `4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU` | [Circle Devnet Faucet](https://faucet.circle.com/) (select Solana Devnet) |
+| **USDT** (unofficial) | `EiXDnrAg9ea2Q6vEPV7E5TpTU1vh41jcuZqKjU5Dc4ZF` | Community SPL test token. Mint via `spl-token mint` if you control the mint authority, otherwise ask in [Discord](https://discord.com/invite/pushchain). |
+
+## BNB Testnet
+
+| Token | Address | Get Tokens |
+| ----- | ------- | ---------- |
+| **Native BNB** | — | [BNB Smart Chain Faucet](https://www.bnbchain.org/en/testnet-faucet) |
+| **USDC** | `0xA8802F96cAd0d45343d9bc660B6f7d80050A660b` | [Call `faucet()` on BscScan](https://testnet.bscscan.com/address/0xA8802F96cAd0d45343d9bc660B6f7d80050A660b#writeProxyContract#F4) |
+| **USDT** | `0xE935d9c9C24D02E61186c640cc01d713C876d40F` | [Call `faucet()` on BscScan](https://testnet.bscscan.com/address/0xE935d9c9C24D02E61186c640cc01d713C876d40F#writeProxyContract#F3) |
+
+## Base Sepolia
+
+| Token | Address | Get Tokens |
+| ----- | ------- | ---------- |
+| **Native ETH** | — | [Alchemy Base Sepolia Faucet](https://www.alchemy.com/faucets/base-sepolia) or [Coinbase Faucet](https://portal.cdp.coinbase.com/products/faucet) |
+| **USDC** | `0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8` | [Call `faucet()` on Basescan](https://sepolia.basescan.org/address/0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8#writeContract#F4) |
+| **USDT** | `0x4D7646B9eE3D68F4b0F135B5cbc66B00819F6b61` | [Call `faucet()` on Basescan](https://sepolia.basescan.org/address/0x4D7646B9eE3D68F4b0F135B5cbc66B00819F6b61#writeProxyContract#F3) |
+
+## Arbitrum Sepolia
+
+| Token | Address | Get Tokens |
+| ----- | ------- | ---------- |
+| **Native ETH** | — | [Alchemy Arbitrum Sepolia Faucet](https://www.alchemy.com/faucets/arbitrum-sepolia) or [QuickNode Faucet](https://faucet.quicknode.com/arbitrum/sepolia) |
+| **USDC** | `0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C` | [Call `faucet()` on Arbiscan](https://sepolia.arbiscan.io/address/0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C#writeContract#F4) |
+| **USDT** | `0xE30928528f52CAEeB75fB07837e22d77D47e9c07` | [Call `faucet()` on Arbiscan](https://sepolia.arbiscan.io/address/0xE30928528f52CAEeB75fB07837e22d77D47e9c07#writeProxyContract#F3) |
+
+## How to use faucet on a block explorer
+
+1. Click the address link in the table above. It opens the explorer's **Write Contract** tab directly.
+2. Click **Connect to Web3** and approve in your wallet (MetaMask, Rabby, etc.).
+3. Find the `faucet` function in the list, expand it, and click **Write**.
+4. Sign the transaction in your wallet. Once confirmed, the tokens land in your connected address.
+
+> The **faucet()** function is permissionless on these test deployments. Anyone can call it. Most return a fixed amount per call (commonly 500 units). Re-call after a cooldown if you need more.
+
+## Troubleshooting
+
+- **Faucet function not visible**: make sure you're on the **Write Contract** (or **Write Proxy Contract**) tab, and that your wallet is connected to the correct testnet network.
+- **Insufficient gas to call faucet**: fund the wallet with the chain's native testnet token first (see the **Native** row in each section).
+- **Tokens received but not visible in wallet**: import the token by address manually (MetaMask: Import Tokens, then paste the address).
+- **Still stuck**: reach out on [Discord](https://discord.com/invite/pushchain).
+
+## Next Steps
+
+- Bridge testnet tokens into Push Chain via the SDK. See [Send Universal Transaction](/docs/chain/build/send-universal-transaction).
+- Set up your local environment. See [Smart Contract Environment](/docs/chain/setup/smart-contract-environment).
+- View confirmed transactions on the [Block Explorer](/docs/chain/setup/tooling/block-explorer).

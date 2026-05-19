@@ -1,9 +1,10 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "초대 코드가 필요하신가요? 팔로우하고, 설명 영상을 시청하고, 댓글을 남겨주세요. 초대는 한정입니다!",
+      "description": "초대 코드가 필요하신가요? 팔로우하고, 설명 영상을 시청하신 후 댓글을 남겨주세요. 제한된 초대만 가능합니다.",
+      "button-text": "초대 코드 받기",
       "button-title": "초대 코드 받기",
-      "button-aria-label": "초대 코드 받기! 여기서 확인하세요",
+      "button-aria-label": "초대 코드를 받으세요!. 여기에서 확인하실 수 있습니다",
       "image-alt": "초대 코드 받기!"
     }
   }

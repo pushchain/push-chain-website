@@ -1,4 +1,4 @@
-<!-- version: 1.2.0 | schema_version: 1.0.0 | current_sdk_version: 6.0.0 | generated: 2026-05-15T00:00:00.000Z -->
+<!-- version: 1.2.0 | schema_version: 1.0.0 | current_sdk_version: 6.0.9 | generated: 2026-05-15T00:00:00.000Z -->
 
 # Push Chain Task Router
 
@@ -452,6 +452,26 @@ const expectedReserve = await vault.previewBurnPlus(plusAmount);
 ## Quick Reference Table
 
 <!-- capability_ids: [] | mapping_note: Aggregated summary table - see individual sections above for per-capability detail -->
+
+**Route origin reference** (who can initiate each route):
+
+| Route | Origin can be | Execution lands on |
+|-------|---------------|--------------------|
+| Route 1 | Wallet on any external chain (EVM/SVM), OR a native Push Chain wallet | Push Chain |
+| Route 2 | Wallet on an external chain, OR a Push Account (UEA, native Push Chain wallet, or smart contract on Push) | The target external chain (via the signer's CEA) |
+| Route 3 | A Push Account (UEA, native Push Chain wallet, or smart contract on Push) acting through its CEA on the named external chain | Push Chain |
+
+**Route 3 funding pattern** (what the dev actually has to send):
+
+| Sub-pattern | What gets funded | Why |
+|-------------|------------------|-----|
+| Plain contract call / multicall on Push Chain (no `funds`, no asset moves off the external chain) | Source-chain UOA only (e.g. `0.01 Sepolia ETH`) | SDK fee-locks source-chain native, mints PC into the UEA, then UEA → UGPC swaps PC into the destination-chain native to cover CEA gas + first-time CEA deployment. The CEA does **not** need to be pre-funded. |
+| Bridge native back (`from: { chain }` + `value: <native>` + `to: client.universal.account`) | UOA on source chain **and** the native asset on the CEA on the named external chain | The `value` amount is the asset being swept back to Push Chain — it has to physically sit on the CEA before the call. CEA gas still comes from the source-chain fee-lock. |
+| Bridge funds back (`from: { chain }` + `funds: { amount, token: MOVEABLE.<chain>.<TOKEN> }` + `to: client.universal.account`) | UOA on source chain **and** the PRC-20 source token on the CEA on the named external chain | Same as above, but ERC-20-style. Mint the SDK-registered source token (`PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN>.address`) and transfer to the printed CEA address. |
+| Funds-with-payload (bridge an asset back AND atomically call a Push Chain contract) | Same as bridge-funds-back | The payload runs on Push Chain via the UEA after the bridge settles. |
+
+> Derive the CEA address with `PushChain.utils.account.deriveExecutorAccount(uoa, { chain, skipNetworkCheck: true })`. Do not hand-roll `CEAFactory.getCEAForPushAccount(...)` when the SDK helper is available.
+
 
 | Task | Primary Method | Route |
 |------|----------------|-------|

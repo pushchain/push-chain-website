@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-25T23:47:53.199Z",
+  "lastUpdated": "2026-05-18T06:15:35.781Z",
   "keys": {
     "footer.email-section.title-secondary": {
       "value": "¡noticias y actualizaciones!",
@@ -846,11 +846,6 @@
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
       "lastUpdated": "2025-11-14T19:27:06.071Z"
     },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Sé el primero en saber cuándo la testnet de Push Chain esté en funcionamiento. Únete a nuestra lista de correo para recibir actualizaciones exclusivas.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
-      "lastUpdated": "2025-11-14T19:27:06.071Z"
-    },
     "pages.knowledge.hero-section.footer.description": {
       "value": "Crea experiencias fluidas y fáciles de usar para tu app en cualquier blockchain con Push Chain.",
       "englishChecksum": "ab374d1cf0f5e6677282aa1a97a13102",
@@ -1283,7 +1278,7 @@
     },
     "pages.knowledge.report.seo.twitter-description": {
       "englishChecksum": "36afc09b7ddb14ee5fc0994e3a0da380",
-      "lastUpdated": "2026-02-25T23:46:38.611Z"
+      "lastUpdated": "2026-05-17T19:24:39.265Z"
     },
     "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
       "value": "Base de conocimiento",
@@ -2596,9 +2591,9 @@
       "lastUpdated": "2025-11-14T19:27:06.073Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Descubre apps, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en la Donut Testnet de Push Chain.",
+      "value": "Descubre aplicaciones, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en Donut Testnet de Push Chain.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-25T23:47:13.553Z"
+      "lastUpdated": "2026-05-17T19:25:13.351Z"
     },
     "components.mailing-signup.title": {
       "value": "No te pierdas ninguna novedad",
@@ -4291,18 +4286,18 @@
       "lastUpdated": "2026-01-16T17:06:06.479Z"
     },
     "pages.cult.seo.og-description": {
-      "value": "Una orden invitación-only de 50 creadores que ganan con un bounty de 20M PC tokens al impulsar el uso real y la fe en Push Chain.",
+      "value": "Un grupo exclusivo de 50 creadores ganando 20M PC tokens como recompensa por impulsar el uso real y la creencia en Push Chain.",
       "englishChecksum": "45df3c59f89f6db4545500d75622968e",
-      "lastUpdated": "2026-02-25T23:46:58.540Z"
+      "lastUpdated": "2026-05-17T19:24:58.752Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v1.title": {
-      "value": "Aplicaciones Posibles Solo con Estado Compartido - Vol. 1",
       "englishChecksum": "f4155267906fb77f40ec521aaf9341be",
-      "lastUpdated": "2026-02-25T23:47:53.199Z"
+      "lastUpdated": "2026-05-17T19:25:19.078Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v2.title": {
+      "value": "Apps Posibles Solo con Estado Compartido - Vol. 2",
       "englishChecksum": "a47b06e49f50c64cc10a1035fc814bfe",
-      "lastUpdated": "2026-02-25T23:47:37.318Z"
+      "lastUpdated": "2026-05-17T19:25:38.055Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "englishChecksum": "cf90790b81cb182728dc63d612a76a0d",
@@ -4328,11 +4323,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:26:42.884Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "Aplicar ahora",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:58:59.192Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "Cerrar notificación",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -4347,16 +4337,6 @@
       "value": "Notificación del Push Chain",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T00:59:35.008Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "Aplicar Ahora",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:59:48.731Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "Solicitar Ahora",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T00:59:49.942Z"
     },
     "components.ecosystem-apps-partners.apps.push-ninja.description": {
       "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
@@ -4384,37 +4364,425 @@
       "lastUpdated": "2026-02-25T23:47:25.882Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "Explorar Aplicaciones Esenciales de la Red de Pruebas",
+      "value": "Explorar Aplicaciones de Prueba Essenciales",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-02-25T23:47:28.460Z"
+      "lastUpdated": "2026-05-17T19:25:14.589Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-02-25T23:47:31.753Z"
+      "lastUpdated": "2026-05-17T19:25:15.973Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC desde 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días de la prueba y prepara la cadena para un entorno similar al mainnet.",
+      "value": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC de 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días del testnet y prepara la cadena para un entorno similar al mainnet.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-25T23:46:42.730Z"
+      "lastUpdated": "2026-05-17T19:24:43.291Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-02-25T23:46:45.668Z"
+      "lastUpdated": "2026-05-17T19:24:46.054Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Los usuarios no recibieron una notificación previa para evitar que actores maliciosos redistribuyeran los tokens a otras billeteras antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el manipulación del sistema.",
+      "value": "Los usuarios no fueron notificados con anticipación para evitar que actores maliciosos redistribuyeran tokens a otros monederos antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el engaño del sistema.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-25T23:46:49.955Z"
+      "lastUpdated": "2026-05-17T19:24:49.749Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "El reequilibrio es un enfoque en dos fases. Los tokens ahora se recogen a una cartera controlada por el equipo y serán quemados pronto.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-25T23:46:53.488Z"
+      "lastUpdated": "2026-05-17T19:24:53.481Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Para el 99.83% de los usuarios:** Este cambio no afecta a su cartera. Su saldo sigue igual.",
+      "value": "**Para el 99.83% de los usuarios:** Este cambio no afecta a usted. Su saldo de billetera sigue siendo el mismo.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-02-25T23:46:56.631Z"
+      "lastUpdated": "2026-05-17T19:24:56.609Z"
+    },
+    "footer.email-section.title": {
+      "value": "Mantente actualizado con Push Chain",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T20:04:46.448Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "Lee las Condiciones de Servicio",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T20:04:47.377Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "Términos del servicio",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T20:04:50.117Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "Preferencias de cookies",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T20:04:51.038Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "Aprender más",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T20:04:53.253Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "¡Vamos a construir!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T20:04:55.096Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Todo lo que necesitas con Push Chain SDK para crear tu app universal",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T20:04:57.259Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "Pr√≥ximamente",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:04:58.238Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "DESTACADAS DE LA APLICACIÓN",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T20:05:16.069Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Silence Labs",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T20:05:34.292Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS y Computación que preserva la privacidad.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:05:49.603Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "Human.tech",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T20:06:06.293Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "Computación MPC-TSS y preservación de la privacidad.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T20:06:22.894Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "Ramen Swap",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T20:06:39.608Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.description": {
+      "value": "Ofreciendo tokens de tu elección desde cualquier Blockchain",
+      "englishChecksum": "6f363665a7c8a6770e301bcaaaf135b4",
+      "lastUpdated": "2026-05-17T20:06:56.615Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T20:07:13.394Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "La capa de infraestructura unificada para el comercio basado en agentes.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T20:07:29.728Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T20:07:44.882Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "Suministra activos, pide prestado contra ellos y obtén rendimientos optimizados",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T20:08:01.995Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T20:08:17.492Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.description": {
+      "value": "Crea y lanza tokens ERC-20",
+      "englishChecksum": "bacd459d533b38e6c14384420e4436d2",
+      "lastUpdated": "2026-05-17T20:08:34.102Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: Asistente de IA",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T20:08:50.526Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "Envía, intercambia y administra activos a través de las redes compatibles",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T20:09:08.431Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T20:09:24.269Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "Muestra tus habilidades de degen para ganar recompensas.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T20:09:25.964Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampireSurvivors",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T20:09:43.252Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "Juego universal tipo vampire survivors",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T20:10:02.695Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "El Último",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T20:10:20.049Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "El último en pujar antes de que se acabe el tiempo se lleva el premio",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-17T20:10:22.109Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T20:10:37.058Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.description": {
+      "value": "Tu identidad en todas las cadenas",
+      "englishChecksum": "d2ba1343b8445eeda74a0c5839ca9d52",
+      "lastUpdated": "2026-05-17T20:10:38.591Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T20:10:54.957Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "Monetización de API por pago para infraestructura agente",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-17T20:11:12.348Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T20:11:28.026Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "Motor de crecimiento universal que recompensa la calidad sobre los clics",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T20:11:44.248Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "BeatBrawls",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T20:12:00.211Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "Batallas musicales inolvidables",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T20:12:16.745Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT Casino",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T20:12:33.389Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "Universal, justo, y transparente apuesta para ganar",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T20:12:51.255Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T20:13:06.961Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "Corta. Esquiva. Anota.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-17T20:13:22.795Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T20:13:38.939Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T20:13:56.197Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": "ChainCircle",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T20:14:12.546Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "Círculos de ahorros entre cadenas",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T20:14:16.180Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "Push Campus",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T20:14:32.312Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.description": {
+      "value": "Llegar a estudiantes en Ethereum, Solana, Base y más de 15 cadenas",
+      "englishChecksum": "96177f6dc7967d71fea626c729e5b4d7",
+      "lastUpdated": "2026-05-17T20:14:34.303Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "Ballsy",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T20:14:48.878Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "Lucha por la gloria iniciando sesión con tu cadena favorita",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T20:15:07.596Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "Athera",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T20:15:22.091Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "Herencia automática de criptomonedas",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T20:15:38.503Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T20:15:53.706Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.description": {
+      "value": "Stablecoin de 1:1 con un valor equivalente al del dólar estadounidense que aprovecha la liquidez en USD desde todas las cadenas",
+      "englishChecksum": "a528d378828b52af79e3093736899028",
+      "lastUpdated": "2026-05-17T20:15:55.729Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "Freename",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T20:16:11.791Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "Enviar cripto a dominios, no a hashs",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T20:16:13.476Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T20:16:28.909Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "Próximamente",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T20:16:47.971Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Degen Chess",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T20:17:06.501Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Juega al ajedrez, apuesta, universal",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T20:17:27.161Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "Omnihub",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T20:17:44.021Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T20:17:59.623Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T20:18:18.951Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "Dominios multi-cadena, GM + Herramientas de despliegue",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-17T20:18:33.709Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Star Run",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T20:18:48.618Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "Una economía descentralizada, propiedad de los jugadores",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T20:19:09.562Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Forge Realm",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T20:19:26.614Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "Mezcla y combina personajes básicos y características de múltiples creadores",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T20:19:28.455Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T20:19:45.457Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Hub multichain Web3: Nombres de dominio, NFTs, plataforma de lanzamiento.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T20:20:02.894Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Copet",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T20:20:19.533Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-18T06:15:35.781Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T20:20:53.250Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.description": {
+      "value": "Construye tu identidad y gana recompensas en más de 70 cadenas.",
+      "englishChecksum": "1ccc9edcd548a714fd00fcbdcf68088a",
+      "lastUpdated": "2026-05-17T20:20:55.156Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "Servicio de Nombres Push",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T20:21:11.015Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Obtén tu propio dominio .push",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T20:21:13.948Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-17T20:21:30.544Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T20:21:45.251Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "Relayer Multichain Superrápido",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T20:22:01.519Z"
     }
   }
 }

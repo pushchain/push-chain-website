@@ -24,11 +24,12 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '6.0.0',
-  uiKit: '6.0.0',
+  core: '6.0.9',
+  uiKit: '6.0.9',
 };
-const AGENT_LAYER_VERSION = '1.0.12';
-const AGENT_LAYER_DATE = '2026-05-15';
+const AGENT_LAYER_VERSION = '1.0.19';
+const AGENT_LAYER_DATE = '2026-05-19';
+const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
   { key: 'core-execution', label: '### Core execution' },
@@ -103,6 +104,20 @@ const loadResources = async () => {
   }
 };
 
+// Load the canonical route definitions from agents/routes.json. This is the
+// single source of truth for route prose across the agent layer — when it
+// fails to load, fall back to inline strings so a missing file doesn't break
+// the build.
+const loadRoutes = async () => {
+  try {
+    const raw = await fs.readFile(ROUTES_PATH, 'utf-8');
+    const parsed = JSON.parse(raw);
+    return parsed.routes ?? [];
+  } catch {
+    return [];
+  }
+};
+
 // Load canonical workflows from agents/workflows/index.json if available
 const loadWorkflows = async () => {
   try {
@@ -164,7 +179,7 @@ const gatherBlogPosts = async () => {
 };
 
 // Build llms.txt — static sections hardcoded, workflows, skills, resources and blog posts dynamic
-const buildLlmsTxt = async (workflows, skills, resources, blogPosts) => {
+const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => {
   const lines = [];
 
   // ── Header ──────────────────────────────────────────────────────────────
@@ -206,15 +221,23 @@ const buildLlmsTxt = async (workflows, skills, resources, blogPosts) => {
   lines.push(
     '- **Universal Transaction**: A single SDK call that routes funds and execution from any origin chain to Push Chain or an external target.'
   );
-  lines.push(
-    '- **Route 1** — Target is Push Chain (`tx.to` = plain address). External-chain user: UOA → UEA → Push Chain contract. Native Push Chain account: wallet → Push Chain contract directly (no UEA hop). *(e.g. Ethereum user calls a Push Chain NFT contract signing once on Ethereum; or a Push Chain wallet calls the same contract directly.)*'
-  );
-  lines.push(
-    '- **Route 2** — Target is an external chain (`tx.to = { address, chain }`). External-chain user: UOA → UEA → CEA → external chain. Native Push Chain account: wallet → CEA → external chain. *(e.g. Solana user pays in SOL to mint an NFT on Base; or a Push Chain wallet triggers the same Base contract via CEA.)*'
-  );
-  lines.push(
-    "- **Route 3** — CEA-originated inbound to Push Chain (`tx.from.chain` set). Every account that acts on external chains gets a deterministic CEA deployed there — one per account, per chain — to preserve identity and prevent funds from mixing across accounts. Route 3 invokes that CEA on the specified external chain; the CEA then makes the inbound call to Push Chain, so `msg.sender` on Push Chain = the CEA address (not the UEA). *(e.g. a Push Chain contract that tracks per-chain identity uses Route 3 so each user's Ethereum CEA and Solana CEA are distinct `msg.sender` values.)*"
-  );
+  // Route prose pulled from agents/routes.json (single source of truth).
+  // Falls back to inline strings only if the JSON failed to load.
+  if (routes.length > 0) {
+    for (const route of routes) {
+      lines.push(`- **${route.name}** — ${route.llms_summary}`);
+    }
+  } else {
+    lines.push(
+      '- **Route 1** — Target is Push Chain (`tx.to` = plain address). External-chain user: UOA → UEA → Push Chain contract. Native Push Chain account: wallet → Push Chain contract directly (no UEA hop). *(e.g. Ethereum user calls a Push Chain NFT contract signing once on Ethereum; or a Push Chain wallet calls the same contract directly.)*'
+    );
+    lines.push(
+      '- **Route 2** — Target is an external chain (`tx.to = { address, chain }`). External-chain user: UOA → UEA → CEA → external chain. Native Push Chain account: wallet → CEA → external chain. *(e.g. Solana user pays in SOL to mint an NFT on Base; or a Push Chain wallet triggers the same Base contract via CEA.)*'
+    );
+    lines.push(
+      "- **Route 3** — CEA-originated inbound to Push Chain (`tx.from.chain` set). Every account that acts on external chains gets a deterministic CEA deployed there — one per account, per chain — to preserve identity and prevent funds from mixing across accounts. Route 3 invokes that CEA on the specified external chain; the CEA then makes the inbound call to Push Chain, so `msg.sender` on Push Chain = the CEA address (not the UEA). *(e.g. a Push Chain contract that tracks per-chain identity uses Route 3 so each user's Ethereum CEA and Solana CEA are distinct `msg.sender` values.)*"
+    );
+  }
   lines.push('');
 
   // ── Packages ─────────────────────────────────────────────────────────────
@@ -587,7 +610,22 @@ const buildLlmsTxt = async (workflows, skills, resources, blogPosts) => {
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 SDK v6 bump. \`UniversalOutboundTxRequest\` struct gained \`gasPrice\` and \`maxPCForGas\` fields (8 fields total; \`recipient\` retained). Refreshed CEAFactory addresses on Sepolia / Arbitrum / Base / BNB testnets plus USDT PRC-20 addresses across all chains. Tutorial \`universal-cross-chain-counters\` redeployed against v6 layout (Push Donut orchestrator + Sepolia / BNB destination counters).`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 SDK v6.0.9 bump (\`@pushchain/core\` 6.0.8 \u2192 6.0.9, \`@pushchain/ui-kit\` 6.0.8 \u2192 6.0.9). Fixes the UGPC \`GasPriceBelowBase()\` (selector \`0x05aab006\`) revert that intermittently failed Route 2 dispatches when the \`UniversalCore\` gas oracle lagged the destination chain's current base price. Tuned cascade tracking defaults: \`CascadeTrackOptions.pollingIntervalMs\` 5000 \u2192 3000, \`CascadeTrackOptions.timeout\` 600000 \u2192 300000 (10 min \u2192 5 min). Outbound polling: \`OUTBOUND_MAX_TIMEOUT_MS\` 180000 \u2192 300000; \`WaitForOutboundOptions\` initial wait 30000 \u2192 15000, poll 5000 \u2192 3000. New internal \`resolveR2DestinationFundsToken\` helper (no public API change). No progress hook ID changes; no type signature changes.`
+  );
+  lines.push(
+    `- **2026-05-19 v1.0.18** \u2014 SDK v6.0.8 bump (\`@pushchain/core\` 6.0.6 \u2192 6.0.8, \`@pushchain/ui-kit\` 6.0.6 \u2192 6.0.8). Skill clarifications validated against the 6.0.8 source: \`client.universal.account\` is a plain \`\\\`0x\${string}\\\`\` address (not an object \u2014 reading \`.address\` on it is the silent-fail trap); \`PushUniversalWalletProvider\` takes \`app\` / \`themeMode\` / \`themeOverrides\` as **top-level props** (NOT inside \`config\`); \`login.wallet\` must be the object form \`{ enabled: true }\` (bare boolean is silently ignored). New **EIP-712 typed-data signing** sections in both push-frontend (signing side) and push-contracts (verification side) covering the cross-chain \`chainId\` trap: sign with the wallet's origin chainId, rebuild the EIP-712 domain dynamically from \`req.originChainId\` on the contract, branch on \`originChainId == block.chainid\` for native Push EOAs vs \`IUEAFactory.getUEAForOrigin\` for cross-chain origins; full pattern includes replay protection, ERC-1271 fallback, and anti-pattern table. Multichain swap example fixed to display Solana CEAs as base58 (the SDK returns hex internally) and reduced the Hop 0 PC seed from 200 to 30 (fee-lock cost scales accordingly).`
+  );
+  lines.push(
+    `- **2026-05-18 v1.0.17** \u2014 SDK v6.0.6 bump (\`@pushchain/core\` 6.0.3 \u2192 6.0.6, \`@pushchain/ui-kit\` 6.0.2 \u2192 6.0.6). [progress-hook-events.md](${BASE_URL}/agents/workflows/progress-hook-events.md) rewritten against published SDK source. New pre-flight UEA balance check trio across Route 2 (\`SEND-TX-203-03/04/05\`), Route 3 (\`SEND-TX-303-04/05/06\`), and cascade (\`SEND-TX-003-03/04/05\`) with INFO / WARNING / ERROR level semantics gated by \`tx.options.enforceGasCheck\`. Route 1 gained \`SEND-TX-199-03\` (Push relay timeout) and \`SEND-TX-199-99\` (intermediate complete); Route 3 gained \`SEND-TX-399-99\` (intermediate inbound complete). Route 1 prepaid-deposit "Estimated" moved \`SEND-TX-103-04\` \u2192 \`SEND-TX-103-03-04\`; Route 3 prepaid-deposit cluster renumbered \`SEND-TX-302-03-XX\` \u2192 \`SEND-TX-303-03-XX\`. Removed: \`SEND-TX-102-02\`, \`SEND-TX-302-03\`, \`SEND-TX-302-04\`, \`SEND-TX-199-99-99\`. Migration table added.`
+  );
+  lines.push(
+    `- **2026-05-17 v1.0.16** \u2014 Source-chain stablecoin re-deployment. New USDT contracts on Sepolia / Arbitrum Sepolia / Base Sepolia / BNB Testnet plus a new USDC on BNB Testnet. Gateway re-wired to the new sources; Push-side PRC-20 wrappers unchanged. Address tables in [Smart Contract Address Book](/docs/chain/setup/smart-contract-address-book) and [contract-addresses.json](${BASE_URL}/agents/contract-addresses.json) refreshed; \`pusd-mint-from-external-chain\` and related push-chain-examples updated to mint at the new USDT contract on Sepolia.`
+  );
+  lines.push(
+    `- **2026-05-16 v1.0.13** \u2014 SDK v6.0.1 bump. New canonical accessor \`PushChain.CONSTANTS.MOVEABLE.TOKEN.PUSH_TESTNET_DONUT.USDC.bsc\` for Push-wrapped USDC from BNB Chain. Legacy \`USDC.bnb\` accessor still resolves to the same token but is marked \`@deprecated\`. Rename is USDC-only \u2014 \`USDT.bnb\` and \`pBnb\` are unchanged. All address tables and constants references updated.`
+  );
+  lines.push(
+    `- **2026-05-15 v1.0.12** \u2014 SDK v6 bump. \`UniversalOutboundTxRequest\` struct gained \`gasPrice\` and \`maxPCForGas\` fields (8 fields total; \`recipient\` retained). Refreshed CEAFactory addresses on Sepolia / Arbitrum / Base / BNB testnets plus USDT PRC-20 addresses across all chains. Tutorial \`universal-cross-chain-counters\` redeployed against v6 layout (Push Donut orchestrator + Sepolia / BNB destination counters).`
   );
   lines.push(
     `- **2026-04-17 v1.0.0** \u2014 Pinned SDK versions (originally \`@pushchain/core@5.1.4\`, \`@pushchain/ui-kit@5.2.2\`). Corrected Route 1/2 for native Push Chain accounts. Added Route 3 CEA-identity semantics. Added Core / Extended agent layer tiers. Directives expanded to 7 (split ethers/viem rule; added agent hot-key model). Added \`## Minimal Example\`. Grouped canonical workflows by category. \`contract-addresses.json\` designated as authoritative address source.`
@@ -657,12 +695,19 @@ const generateLlmsTxt = async () => {
     )
   );
 
+  const routes = await loadRoutes();
+  console.log(
+    chalk.gray(
+      `   Loaded ${routes.length} routes from agents/routes.json`
+    )
+  );
+
   const blogPosts = await gatherBlogPosts();
   console.log(chalk.gray(`   Found ${blogPosts.length} recent blog posts`));
 
   await fs.mkdir(STATIC_DIR, { recursive: true });
 
-  const content = await buildLlmsTxt(workflows, skills, resources, blogPosts);
+  const content = await buildLlmsTxt(workflows, skills, resources, routes, blogPosts);
   await fs.writeFile(OUTPUT_PATH, content, 'utf-8');
 
   console.log(chalk.green('✅ Generated static/llms.txt'));

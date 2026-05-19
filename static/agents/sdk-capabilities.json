@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.0.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
   "namespaces": [
@@ -309,15 +309,15 @@
         },
         {
           "name": "sendTransaction",
-          "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<UniversalTxResponse>",
-          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry. Solana targets use encodeTxData({ idl, functionName, args }) passed as tx.data — there is no svmExecute field.",
+          "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline?, options?: { enforceGasCheck?: boolean } }): Promise<UniversalTxResponse>",
+          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry; options.enforceGasCheck (default false) — when true, the SDK throws InsufficientUEABalanceError on pre-flight gas/balance shortfall instead of emitting a WARNING progress event and proceeding. Solana targets use encodeTxData({ idl, functionName, args }) passed as tx.data — there is no svmExecute field.",
           "returns": "UniversalTxResponse",
           "safe_for_autonomous_execution": false
         },
         {
           "name": "prepareTransaction",
-          "signature": "pushChainClient.universal.prepareTransaction(tx: { to, from?, value?, data?, funds?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline? }): Promise<PreparedUniversalTx>",
-          "description": "Prepares a transaction without executing it. Returns PreparedUniversalTx with route, estimatedGas, nonce, deadline, payload. Pass result to executeTransactions for multi-hop cascades.",
+          "signature": "pushChainClient.universal.prepareTransaction(tx: { to, from?, value?, data?, funds?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline?, options?: { enforceGasCheck?: boolean } }): Promise<PreparedUniversalTx>",
+          "description": "Prepares a transaction without executing it. Returns PreparedUniversalTx with route, estimatedGas, nonce, deadline, payload. Pass result to executeTransactions for multi-hop cascades. options.enforceGasCheck (default false) carries strict pre-flight gas/balance enforcement into executeTransactions — setting it on any single hop opts the entire cascade into strict mode.",
           "returns": "PreparedUniversalTx",
           "safe_for_autonomous_execution": true
         },

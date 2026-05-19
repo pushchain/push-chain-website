@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-26T00:03:53.683Z",
+  "lastUpdated": "2026-05-18T07:30:53.573Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "Kho thư viện — Hướng dẫn, Câu hỏi thường gặp & Cách thực hiện",
@@ -69,11 +69,6 @@
     "pages.knowledge.hero-section.email-signup.title.short": {
       "value": "Push Chain Testnet",
       "englishChecksum": "af424b2a0b03eef9df168813483ae6be",
-      "lastUpdated": "2025-11-14T19:27:06.390Z"
-    },
-    "pages.knowledge.hero-section.email-signup.description": {
-      "value": "Hãy là người đầu tiên biết khi Push Chain testnet ra mắt. Tham gia danh sách email của chúng tôi để nhận các cập nhật độc quyền.",
-      "englishChecksum": "d304be40858d656900a782db6475f3f8",
       "lastUpdated": "2025-11-14T19:27:06.390Z"
     },
     "pages.knowledge.hero-section.footer.description": {
@@ -1182,9 +1177,9 @@
       "lastUpdated": "2025-11-14T19:27:06.392Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Khám phá các ứng dụng, đối tác và những người sớm bắt đầu xây dựng thời đại tiếp theo của trải nghiệm phổ thông trên Push Chain's Donut Testnet.",
+      "value": "Khám phá ứng dụng, đối tác và những người tiên phong xây dựng thời đại tiếp theo của trải nghiệm phổ cập trên Push Chain's Donut Testnet.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-02-26T00:03:13.308Z"
+      "lastUpdated": "2026-05-17T19:37:22.189Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "Đóng thông báo",
@@ -1692,9 +1687,9 @@
       "lastUpdated": "2026-02-26T00:01:38.946Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-to-contribute": {
-      "value": "### Tuyệt, tôi nên đóng góp như thế nào?\n\nĐể theo dõi tiến độ của Push Chain một cách tốt nhất, bạn nên tham gia vào các kênh chính thức của Push: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), và [Discord](https://discord.com/invite/pushchain).\n\nLuôn luôn cảnh giác với những cố gắng gian lận, các website giả mạo hoặc scam yêu cầu bạn nhập thông tin tiền điện tử của mình. Tất cả thông điệp chính thức sẽ đi ra từ các tài khoản Push chính thức của chúng tôi.\n\n---",
+      "value": "### Tốt, cách nào tôi có thể đóng góp?\n\nĐể theo dõi tiến trình Push Chain một cách tốt nhất, hãy tham gia các kênh Push chính thức: website, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), và [Discord](https://discord.com/invite/pushchain).\n\nLuôn cảnh giác với những nỗ lực lừa đảo, trang web giả mạo hoặc các cuộc tham gia yêu cầu tiền điện tử của bạn. Tất cả các thông báo chính thức sẽ đi ra từ các tài khoản Push chính thức của chúng tôi.\n\n---",
       "englishChecksum": "0c2bafcd0c1a1d55260952bb832fcabf",
-      "lastUpdated": "2026-02-26T00:01:45.220Z"
+      "lastUpdated": "2026-05-17T19:36:05.045Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.airdrop-details": {
       "value": "### Chi Tiết Phát Hành\n\nKế hoạch về tokenomics cũng dành 10% tổng số Push Chain token cho các cuộc phát hành token (airdrop) cho người dùng hiện tại và trước đó của Push Protocol (thông báo, tin nhắn, trò chuyện). Cũng có các người dùng mới, tạo viên, nhà phát triển và đối tác hệ sinh thái Push Chain.\n\n<br />",
@@ -1702,24 +1697,24 @@
       "lastUpdated": "2025-11-14T20:26:52.970Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.how-does-push-chain-work": {
-      "value": "### Podczas Push Chain hoạt động?\n\n![Cách các ứng dụng thông thường hoạt động](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![Cách các ứng dụng phổ biến hoạt động](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain có một cách tiếp cận độc đáo giải quyết vấn đề phân mảnh trên tất cả các chuỗi. Thay vì dựa vào các giao thức tương thích, Push Chain theo sâu bên trong để xây dựng một chuỗi khối phổ biến thực sự có thể được sử dụng bởi bất kỳ người dùng nào từ bất kỳ chuỗi nào.\n\nĐể đạt được điều này, Push Chain khai thác các **precompiles** là các mô-đun tùy chỉnh được tạo ra để:\n\n1. **Nhận biết** người dùng của các chuỗi khác - Thương hiệu địa chỉ phổ biến mở rộng địa chỉ của một người dùng để không phụ thuộc vào chuỗi ( bases on [CAIP-10 standards](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)).\n\n2. **Map** người dùng đến Push Chain - Đối với mỗi người dùng chuỗi bên ngoài, một Tài khoản Executor Phổ biến (UEA) sẽ được triển khai. Mô-đun này được sử dụng để triển khai một tài khoản thông minh.\n\n3. **Thực hiện** giao dịch phổ biến - Điều này được thực hiện bằng cách sử dụng USV (Chữ ký Phổ biến) và UTXV (Giáo trình Phổ biến) các precompiles để xác nhận và thực hiện chữ ký và giao dịch từ các chuỗi khác.\n\n4. **Làm mờ** những rắc rối của chuỗi họ đang trên - Điều này được thực hiện bằng cách có các hợp đồng cổng phổ biến trên mỗi chuỗi để khóa quỹ gas trong mã token bản địa của chuỗi (hoặc bất kỳ token tuân thủ nào) và sử dụng UTXV các precompiles để thuộc về UEA (Tài khoản Executor) và USV để thực hiện giao dịch.\n\nĐây là một cách tiếp cận **extremely powerful** cho phép người dùng tương tác với bất kỳ ứng dụng nào trên Push Chain mà không cần quan tâm đến chuỗi họ đang trên hoặc sử dụng loại ví nào vì mọi thứ đều bị làm mờ đi, cả cho người dùng và các nhà phát triển.\n\n---",
+      "value": "### Push Chain hoạt động như thế nào?\n\n![Làm sao các ứng dụng thông thường hoạt động](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![Làm sao các ứng dụng phổ thông hoạt động](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain tiếp cận vấn đề phân mảnh trên mọi chuỗi bằng cách độc đáo, thay vì dựa vào giao thức tương tác chuỗi mà làm phức tạp hóa cho cả người dùng và nhà phát triển, nó xây dựng một blockchain phổ thông thực sự có thể được sử dụng bởi bất kỳ người dùng nào từ bất kỳ chuỗi nào.\n\nĐể đạt được điều này, Push Chain khai thác hàng tá **precompiles** là những module tùy chỉnh được tạo để:\n\n1. **Nhận diện** người dùng của các chuỗi khác - Chuẩn địa chỉ phổ thông mở rộng địa chỉ của một người dùng thành không thuộc bất kỳ chuỗi nào (dựa trên [chuẩn CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)).\n\n2. **Bản đồ** người dùng đến Push Chain - một Tài khoản Executor phổ thông (UEA) được triển khai cho mỗi người dùng chuỗi bên ngoài. Module này được sử dụng để triển khai một tài khoản thông minh sẽ sử dụng các precompiles khác để xử lý giao dịch.\n\n3. **Thực hiện** giao dịch phổ thông - Điều này được thực hiện bằng cách sử dụng USV (Xác thực Chữ ký Phổ thông) và UTXV (Giải phẫu Giao dịch Phổ thông) để xác nhận và thực hiện chữ ký và giao dịch từ các chuỗi khác.\n\n4. **Trừ bỏ** những rào cản của chuỗi họ đang trên - Điều này được làm bằng cách có các hợp đồng cửa hàng phổ thông trên mỗi chuỗi khóa tiền gas trong token bản địa của chuỗi (hoặc bất kỳ token tuân thủ nào) và sau đó sử dụng UTXV để quy định gas cho UEA (Tài khoản Executor) và USV để thực hiện giao dịch.\n\nĐây là một cách **làm việc cực kỳ mạnh mẽ** giúp người dùng tương tác với bất kỳ ứng dụng nào trên Push Chain mà không cần lo lắng về chuỗi họ đang hoặc sử dụng gì kiểu ví nào vì mọi thứ đều bị trừ bỏ đi, cho cả người dùng và nhà phát triển.\n\n---",
       "englishChecksum": "07d48f00941ab36fdac3693cb5a1a0ea",
-      "lastUpdated": "2026-02-26T00:02:04.970Z"
+      "lastUpdated": "2026-05-18T06:24:33.226Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### Push khác gì so với cầu hoặc lớp tin nhắn?\n\n**Tóm tắt**: Push là nơi chạy ứng dụng của bạn. Cầu/messaging chỉ di chuyển tokens hoặc tin nhắn giữa các chuỗi, gây phức tạp cho người dùng và nhà phát triển.\n\n- **Một gia đình trung tâm thay vì nhiều bản sao**  \n\tVới cầu/messaging, bạn triển khai theo chuỗi và đồng bộ qua tin nhắn. Với Push, bạn triển khai một lần; mọi người đến cùng hợp đồng và trạng thái chia sẻ.\n\n- **Không có tài sản bao hoặc cầu bắt buộc**  \n\tNgười dùng vẫn ở trên chuỗi của họ và thanh toán bằng những gì họ đã nắm giữ; chúng tôi xử lý định tuyến và chuyển đổi phí dưới nước.\n\n- **Thế hào thống nhất và xác minh**  \n\tChúng tôi chấp nhận chữ ký từ bất kỳ ví/chuỗi nào và quy thuộc nó đến cùng một người dùng trên Push — phi bảo vệ.\n\n- **Nhiều bộ phận ít hơn**  \n\tKhông nhảy đàng dạ giao dịch, không phải săn gas-token, không phải là các hợp đồng dính kết để giữ đồng bộ.\n\n- **Cầu giới thiệu phức tạp. Interop chuỗi giải quyết nó**  \n\tCầu yêu cầu nỗ lực kỹ thuật cao, thời gian, chi phí kiểm tra và cơ sở hạ tầng bổ sung. Interop chuỗi chỉ chạy như ứng dụng của bạn tự nhiên thừa hưởng nó.\n\n**Kết quả**: các ứng dụng đơn giản hơn, một nguồn sự thật và UX cảm thấy giống nhau — ngay cả khi người dùng không phải.\n\n---",
+      "value": "### Cách này khác gì so với cầu hàng hay lớp tin nhắn?\n\n**Trả lời ngắn gọn**: Push là nơi chạy ứng dụng của bạn. Hàng/messenger chỉ di chuyển token hoặc tin nhắn giữa những chuỗi mà phức tạp hóa mọi thứ cho người dùng và nhà phát triển.\n\n- **Một nhà so với nhiều bản sao**  \n\tVới hàng/messaging, bạn sẽ triển khai per chain và đồng bộ qua tin nhắn. Với Push, bạn triển khai một lần; mọi người đánh vào cùng hợp đồng và trạng thái chia sẻ.\n\n- **Không có tài sản bọc hoặc bắt buộc chuyển**  \n\tNgười dùng vẫn ở trên chuỗi nhà của họ và trả bằng những gì họ đã giữ; chúng tôi xử lý định tuyến và chuyển đổi phí dưới mặt sau.\n\n- **Chính thể thống nhất & xác minh**  \n\tChúng tôi chấp nhận ký tự từ bất kỳ ví/chuỗi nào và thuần hóa chúng đến cùng người dùng trên Push — phi bảo quản.\n\n- **Bớt các phần di chuyển**  \n\tKhông có vũ điệu tán thành giao chuỗi, không cần săn gas-token, không có hợp đồng dính kết để giữ đồng bộ.\n\n- **Hàng đưa ra phức tạp. Hợp tác chuỗi bản địa giải quyết nó**  \n\tHàng yêu cầu các nỗ lực kỹ thuật cầu kỳ, thời gian chi phí kiểm tra và cơ sở hạ tầng bổ sung. Hợp tác chuỗi bản địa chỉ hoạt động như ứng dụng của bạn tự nhiên thừa hưởng nó.\n\n**Kết quả**: ứng dụng đơn giản hơn, một nguồn thật và UX có cảm giác như một chuỗi — ngay cả khi người dùng không phải là vậy.\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-02-26T00:02:18.999Z"
+      "lastUpdated": "2026-05-17T19:36:35.488Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole": {
-      "value": "### Push Chain và Wormhole: Thế nào là khác biệt?\n\n**Wormhole:**\n- **Giao thức cầu**: Phù hợp với việc chuyển nhánh token và NFT\n- **Tài sản bọc**: Tạo các phiên bản bọc của token trên các chuỗi khác nhau\n- **Mạng bảo vệ**: Phụ thuộc vào bộ xác thực validator để xác minh tin tức chéo chuỗi\n- **Quy trình nhiều bước**: Người dùng phải chuyển nhánh tài sản trước khi sử dụng ứng dụng\n\n**Push Chain:**\n- **Thực hiện phổ biến**: Người dùng tương tác trực tiếp mà không cần chuyển nhánh\n- **Tài sản bản địa**: Không cần tiền bọc, sử dụng tài sản ban đầu\n- **Xác minh trực tiếp**: Xác minh chữ ký bản địa từ bất kỳ chuỗi nào\n- **Giao dịch đơn giản**: Người dùng tương tác trong một bước, không cần chuyển nhánh\n\nPush Chain loại bỏ nhu cầu chuyển nhánh còn Wormhole yêu cầu nó cho các tương tác chéo chuỗi.\n\n---",
+      "value": "### Push Chain và Wormhole có gì khác nhau?\n\n**Wormhole:**\n- **Giao thức cầu**: Chuyên về chuyển token và NFT giữa các chuỗi\n- **Tài sản bao phủ**: Tạo phiên bản bao phủ của token trên các chuỗi khác nhau\n- **Mạng bảo vệ**: Phụ thuộc vào tập hợp validators để xác minh thông điệp chuyển chuỗi\n- **Quy trình nhiều bước**: Người dùng phải chuyển tài sản trước khi sử dụng ứng dụng\n\n**Push Chain:**\n- **Thực hiện phổ biến**: Người dùng tương tác trực tiếp mà không cần chuyển\n- **Tài sản gốc**: Không cần tài sản bao phủ, sử dụng nguyên bản\n- **Xác minh trực tiếp**: Xác minh chữ ký gốc từ bất kỳ chuỗi nào\n- **Giao dịch đơn**: Người dùng tương tác trong một bước, không yêu cầu chuyển\n\nPush Chain loại bỏ nhu cầu chuyển tài sản khi Wormhole lại yêu cầu nó cho tương tác xuyên chuỗi.\n\n---",
       "englishChecksum": "b42c978c22c50f8c67751d98728c12ce",
-      "lastUpdated": "2026-02-26T00:02:27.433Z"
+      "lastUpdated": "2026-05-17T19:38:24.798Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.new-token": {
-      "value": "### Có sẽ có một token mới liên quan đến Push Chain không?\n\nVới tư cách là một tầng 1 mới, Push Chain sẽ có token bản địa của riêng nó với tokenomics phù hợp cho hoạt động, bảo trì và bảo mật của một chuỗi khối.\n\nĐể xem chi tiết đầy đủ, hãy xem [Hàng rào sâu về Tokenomics](/knowledge/tokenomics/) 👀.\n\n---",
+      "value": "### Push Chain sẽ có token mới được liên kết?\n\nVới tư cách là một tầng 1 mới, Push Chain sẽ có token bản địa của riêng nó với các nguyên tắc tokenomics phù hợp cho việc điều hành, bảo trì và an ninh của blockchain.\n\nĐể xem chi tiết đầy đủ, hãy tham khảo [phân tích sâu về Tokenomics](/knowledge/tokenomics/) 👀.\n\n---",
       "englishChecksum": "3a0fcca35af8b08a4da7d4308af2cd7d",
-      "lastUpdated": "2026-02-26T00:02:32.253Z"
+      "lastUpdated": "2026-05-18T07:30:53.573Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.whatispush.subtitle": {
       "value": "Push Chain cung cấp một bộ công cụ thống nhất để xây dựng các ứng dụng hoàn toàn phổ biến.",
@@ -1727,19 +1722,19 @@
       "lastUpdated": "2026-02-26T00:03:53.683Z"
     },
     "pages.donutsecret.seo.description": {
-      "value": "Nhóm tester chọn lọc dành cho người sáng tạo. Nhận thẻ Donut của bạn để tham gia Push Chain Testnet, xây dựng ứng dụng phổ biến và giải thưởng sớm.",
+      "value": " Beta đóng cửa exclusiv cho nhà xây dựng.Claim giấy phép Donut của bạn để truy cập Push Chain Testnet, vận chuyển ứng dụng phổ thông và giải phóng thưởng sớm.",
       "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
-      "lastUpdated": "2026-02-26T00:03:05.748Z"
+      "lastUpdated": "2026-05-17T19:37:16.456Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>Câu trả lời ngắn</2>: Push là nơi chạy ứng dụng của bạn. Giao thức/messenger chỉ di chuyển token hoặc tin nhắn giữa các chuỗi, làm phức tạp cho người dùng và nhà phát triển.</1><1><2>Một địa điểm duy nhất thay vì nhiều bản sao.</2> Với giao thức/messaging, bạn triển khai theo từng chuỗi và đồng bộ qua tin nhắn. Trên Push, bạn triển khai một lần; mọi người đến hợp đồng và trạng thái chia sẻ chung của nó.</1><1><2>Không có tài sản bọc hoặc bắc cầu bắt buộc.</2> Người dùng tiếp tục ở trên chuỗi nhà của họ và trả phí với những gì họ đang giữ; chúng tôi xử lý tuyến đường và chuyển đổi phí dưới lòng đất.</1><1><2>Nhân cách thống nhất & xác minh.</2> Chúng tôi chấp nhận ký tự từ bất kỳ ví/chuỗi nào và thuộc nó đến cùng một người dùng trên Push — phi bảo mật.</1><1><2>Bóng fewer moving parts.</2> Không nhảy đồng thuận đa chuỗi, không săn gas-token, không phải giữ các hợp đồng dính để giữ theo.</1><1><2>Giao thức gây phức tạp. Interop chuỗi nguyên bản giải quyết nó.</2> Giao thức đòi hỏi nỗ lực kỹ thuật phức tạp, thời gian, chi phí kiểm thử và cơ sở hạ tầng bổ sung. Interop chuỗi nguyên bản chỉ chạy như ứng dụng của bạn tự nhiên thừa hưởng nó.</1><1>Kết quả: các ứng dụng đơn giản hơn, một nguồn sự thật duy nhất và một UX cảm thấy giống như một chuỗi — ngay cả khi người dùng không phải là vậy.</1>",
+      "value": "<1><2>Câu trả lời ngắn</2>: Push là nơi chạy ứng dụng của bạn. Giao thông/ Tin nhắn chỉ di chuyển token hoặc tin nhắn giữa các chuỗi, làm phức tạp mọi thứ cho người dùng và nhà phát triển.</1><1><2>Nhà đơn vs nhiều bản sao.</2> Với giao thông/tin nhắn, bạn triển khai theo chuỗi và đồng bộ qua tin nhắn. Tại Push, bạn triển khai một lần; tất cả hit cùng hợp đồng và trạng thái chia sẻ.</1><1><2>Không tài sản bọc hoặc bắt buộc di chuyển.</2> Người dùng vẫn ở trên chuỗi nhà của họ và trả phí với gì họ đã sở hữu; chúng tôi xử lý định tuyến và biến đổi phí dưới lớp.</1><1><2>Số hóa xác thực thống nhất.</2> Chúng tôi chấp nhận ký hiệu từ bất kỳ ví/chuỗi nào và ghi nhận nó cho cùng người dùng trên Push - không nhắm giữ.</1><1><2>Phần tử di chuyển ít hơn.</2> Không đầm nhảy phê duyệt chuỗi, không săn gas-token, không cầu kết hợp để giữ đồng bộ.</1><1><2>Các cầu giới thiệu sự phức tạp. Interop chuỗi bản địa giải quyết nó.</2> Các cầu đòi hỏi nỗ lực kỹ thuật phức tạp, thời gian, chi phí kiểm tra và cơ sở hạ tầng bổ sung. Interop chuỗi bản địa chỉ hoạt động như ứng dụng của bạn tự nhiên thừa hưởng nó.</1><1>Kết quả: ứng dụng đơn giản hơn, một nguồn chân lý duy nhất và UX cảm giác giống như một chuỗi - ngay cả khi người dùng không phải là vậy.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-02-26T00:03:26.239Z"
+      "lastUpdated": "2026-05-17T19:38:17.451Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>Sử dụng <3>Faucet</3> để yêu cầu token thử nghiệm.</1><1><2>Ghi chú:</2> giới hạn rate có thể áp dụng; một số faucets cần xác thực đơn giản. Nếu faucet không hoạt động, hãy gọi chúng tôi qua <4>Discord</4>.</1>",
+      "value": "<1>Sử dụng <3>Faucet</3> để yêu cầu tokens thử nghiệm.</1><1><2>Ghi chú:</2> giới hạn tốc độ có thể áp dụng; một số faucet đòi hỏi xác minh đơn giản. Nếu faucet thất bại, hãy liên lạc với chúng tôi trên <4>Discord</4>.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-02-26T00:03:29.473Z"
+      "lastUpdated": "2026-05-17T19:37:37.424Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Người tạo — Hướng dẫn & Tư liệu học tập",
@@ -1917,14 +1912,14 @@
       "lastUpdated": "2026-01-16T19:59:46.447Z"
     },
     "pages.cult.seo.description": {
-      "value": "Push Cult là một chương trình tạo viên độc quyền do Push Chain điều hành. Gồm 50 nhà sáng tạo, 20M token PC. Không có tiếng ồn, chỉ có tác động đo lường được.",
+      "value": "Push Cult là một chương trình dành cho người sáng tạo được mời tham gia của Push Chain. Gồm 50 người sáng tạo và 20 triệu token PC. Không gian chói tai, chỉ có tác động đo lường được.",
       "englishChecksum": "0b81287e99702d4f24a964d8e370b3b3",
-      "lastUpdated": "2026-02-26T00:03:07.964Z"
+      "lastUpdated": "2026-05-17T19:37:18.617Z"
     },
     "pages.cult.seo.twitter-description": {
-      "value": "50 tạo giả. 20M token PC. Không quảng cáo. Không chỉ số vinh danh. Push Cult thưởng cho tín hiệu thực và tác động thực.",
+      "value": "50 nghệ sĩ. 20M token $PC. Không quảng cáo spam, không số liệu vui mắt. Push Cult thưởng tín hiệu và tác động thực sự.",
       "englishChecksum": "dee6c5930c64a58cdc6c933807d3c782",
-      "lastUpdated": "2026-02-26T00:03:11.394Z"
+      "lastUpdated": "2026-05-17T19:37:20.482Z"
     },
     "notifications.chain-notification.title": {
       "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
@@ -1950,11 +1945,6 @@
       "englishChecksum": "b149629a74a96fd785dbac42c4bc9324",
       "lastUpdated": "2026-01-23T00:28:44.747Z"
     },
-    "notifications.chain-notification.button-text": {
-      "value": "Áp dụng Ngay",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:21.778Z"
-    },
     "notifications.chain-notification.close-button-title": {
       "value": "Đóng thông báo toast",
       "englishChecksum": "12591ac1e416bdadc1cb78c88ecbe860",
@@ -1969,16 +1959,6 @@
       "value": "Thông báo Push Chain",
       "englishChecksum": "dd46ad4bfbc9da437c1dde14f74d3333",
       "lastUpdated": "2026-01-23T01:04:29.231Z"
-    },
-    "notifications.info-bar.learn-more-text": {
-      "value": "Áp dụng ngay",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:30.267Z"
-    },
-    "notifications.info-bar.learn-more-title": {
-      "value": "Áp dụng Ngay",
-      "englishChecksum": "5c8fc6dfaf940715ec1f2e5d18e8afd2",
-      "lastUpdated": "2026-01-23T01:04:31.335Z"
     },
     "components.blog.more-posts.title": {
       "value": "Khám phá thêm về Push Chain",
@@ -2065,9 +2045,9 @@
       "lastUpdated": "2026-02-08T06:08:30.949Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "Bạn muốn tham gia hệ sinh thái ứng dụng phổ thông đang phát triển nhanh nhất và tăng gấp đôi số lượng người dùng của bạn?",
+      "value": "Muốn tham gia hệ sinh thái ứng dụng phổ biến nhất và tăng gấp 10 người dùng của bạn?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-02-26T00:03:15.021Z"
+      "lastUpdated": "2026-05-17T19:37:23.659Z"
     },
     "components.ecosystem-apps-partners.apps.ramen-swap.description": {
       "value": "Phục vụ token theo lựa chọn của bạn từ bất kỳ chuỗi nào",
@@ -2115,59 +2095,58 @@
       "lastUpdated": "2026-02-26T00:03:48.285Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "Nhận những token Testnet PC của bạn ở đây",
+      "value": "Nhận token thử nghiệm PC Testnet tại đây",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-02-26T00:03:49.888Z"
+      "lastUpdated": "2026-05-17T19:37:43.931Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
-      "value": "Giao-token giữa chuỗi",
+      "value": "Giao dịch token giữa chuỗi",
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-02-26T00:03:51.269Z"
+      "lastUpdated": "2026-05-17T19:38:32.145Z"
     },
     "pages.knowledge.deepdives.explainer-section.blocks.sections.learn-push-chain.items.how-universal-transaction-works.title": {
-      "value": "Cách Hoạt Động Giao Dịch Toàn Cục",
       "englishChecksum": "d94f259fc81a6b7e353e19e3e1863d76",
-      "lastUpdated": "2026-02-26T00:01:48.014Z"
+      "lastUpdated": "2026-05-17T19:36:08.082Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain đã thực hiện một đề xuất cân bằng token để giảm tổng số lượng token PC từ 75T+ xuống đến khoảng 10 tỷ token. Điều này giải quyết một nợ kỹ thuật từ những ngày ban đầu của testnet và chuẩn bị chuỗi cho môi trường mainnet.",
+      "value": "Push Chain đã thực hiện một đề xuất tái cân bằng token để giảm tổng số token PC từ hơn 75T xuống đến khoảng 10 tỷ token. Sự nâng cấp này giải quyết một nợ kỹ thuật từ những ngày ban đầu của mạng testnet và chuẩn bị chuỗi cho môi trường mainnet tương tự.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-02-26T00:02:36.403Z"
+      "lastUpdated": "2026-05-18T06:23:59.016Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "Vào những ngày đầu tiên của Push Chain testnet, không có quá trình đốt và tạo mới cho token PC. Điều này đã dẫn đến việc tính toán giá token quá thấp cho các giao dịch toàn cầu và cho phép một số người sở hữu token tích lũy lượng token khổng lồ (tới tỷ tỷ). Điều này đã tạo ra một nền tảng kinh tế token bất cân bằng mà cần được sửa chữa trước khi đưa vào mainnet.",
+      "value": "Trong những ngày đầu của Push Chain testnet, không có quy trình đốt và in PC token. Điều này dẫn đến việc tính toán giá quá thấp cho giao dịch phổ biến và cho phép một số người sở hữu token tích lũy lượng token khổng lồ (đến tỷ). Điều này tạo ra sự bất cân bằng trong kinh tế token cần được điều chỉnh trước khi ra mắt mainnet.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-02-26T00:02:41.126Z"
+      "lastUpdated": "2026-05-17T19:36:55.610Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
-      "value": "- Thiết lập một nền kinh tế token công bằng và bền vững",
+      "value": "- Thiết lập một nền tảng token công bằng và bền vững",
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-02-26T00:02:43.897Z"
+      "lastUpdated": "2026-05-17T19:36:58.099Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Kế hoạch ảnh hưởng đến 1,950 ví nhất định trong số 1.178M địa chỉ tổng cộng. Ví giữ 1,100 PC token trở lên (bao gồm các ví giữ trillions) đã được điều chỉnh để giữ từ 1,100-2,000 PC token.",
+      "value": "Đề xuất đã ảnh hưởng đến 1,950 ví hàng đầu trong tổng số 1.178M địa chỉ. Các ví nắm giữ ít nhất 1,100 PC token (bao gồm những ví có trilliions) đã được tái cân bằng để nắm giữ từ 1,100-2,000 PC tokens.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-02-26T00:02:48.123Z"
+      "lastUpdated": "2026-05-17T19:37:02.198Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
-      "value": "- Tổng số lượng giảm từ 75T+ đến khoảng 10B token PC",
+      "value": "- Tổng lượng cung giảm từ 75T+ xuống đến khoảng ~10B token PC",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-02-26T00:02:50.849Z"
+      "lastUpdated": "2026-05-17T19:37:04.853Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- 1,950 ví đầu tiên được rebalance đến khoảng 1,100-2,000 token PC",
+      "value": "- 1,950 ví lớn nhất được tái cân bằng vào khoảng 1,100-2,000 token PC",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-02-26T00:02:53.804Z"
+      "lastUpdated": "2026-05-17T19:37:07.756Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Người dùng không được thông báo trước để ngăn chặn các hành động gian lận phân phối token sang những ví khác trước khi tái cân bằng. Biện pháp an ninh này đảm bảo tính toàn vẹn của quá trình tái cân bằng và ngăn chặn việc lợi dụng hệ thống.",
+      "value": "Người dùng không được thông báo trước để ngăn chặn các hành động xấu của những người tham gia phân phối lại tiền tố sang ví khác trước khi cân bằng. Biện pháp an ninh này đảm bảo tính toàn vẹn của quá trình cân bằng và ngăn chặn trò chơi hệ thống.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-02-26T00:02:57.767Z"
+      "lastUpdated": "2026-05-17T19:37:11.432Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Sự cân bằng là một phương pháp theo hai giai đoạn. Những token này hiện đang được tập hợp vào ví của đội ngũ và sẽ bị đốt cháy sớm.",
+      "value": "Quy trình cân bằng là hai phần. Các token nay đã được thu về vào một ví quản lý bởi đội ngũ và sẽ bị đốt sớm.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-02-26T00:03:01.035Z"
+      "lastUpdated": "2026-05-17T19:37:14.327Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Thám Hiểm Sâu — Khái Niệm Và Kiến Trúc",
@@ -2228,6 +2207,785 @@
       "value": "Khu vực tương tác",
       "englishChecksum": "668123f0a77585efe102f94ca66e13fa",
       "lastUpdated": "2026-02-25T23:05:04.923Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFT Launchpad trên Push Chain",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-05-17T19:37:40.412Z"
+    },
+    "footer.email-section.title": {
+      "value": "Nhận thông tin mới từ Push Chain",
+      "englishChecksum": "46006bd9f3c7c86fb47815f79135db84",
+      "lastUpdated": "2026-05-17T22:11:20.228Z"
+    },
+    "footer.email-section.title-secondary": {
+      "value": "tin tức và cập nhật!",
+      "englishChecksum": "2610376d06ac8c424e398f21202ef85f",
+      "lastUpdated": "2026-05-17T22:11:21.267Z"
+    },
+    "footer.email-section.title-aria-label": {
+      "value": "Phân đoạn đăng ký bản tin qua email",
+      "englishChecksum": "3eb0c50b4996bf9e0e5113610b1b39ad",
+      "lastUpdated": "2026-05-17T22:11:22.324Z"
+    },
+    "footer.email-section.section-aria-label": {
+      "value": "Đăng ký nhận bản tin của Push Chain",
+      "englishChecksum": "58c5b914a5e48c35d5dc8f53847a2a35",
+      "lastUpdated": "2026-05-17T22:11:25.368Z"
+    },
+    "footer.main-section.section-aria-label": {
+      "value": "Nhóm điều hướng và liên kết chân trang",
+      "englishChecksum": "c267abd56a3e2d554f9604c335abd7ae",
+      "lastUpdated": "2026-05-17T22:11:26.587Z"
+    },
+    "footer.main-section.logo-link-title": {
+      "value": "Trang chủ Push Chain",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-18T06:23:51.477Z"
+    },
+    "footer.main-section.logo-link-aria-label": {
+      "value": "Trang chủ Push Chain",
+      "englishChecksum": "6f6ae0b904141c2f369bf89ee5d91b37",
+      "lastUpdated": "2026-05-17T22:11:30.041Z"
+    },
+    "footer.main-section.logo-alt": {
+      "value": "Logo Push Chain",
+      "englishChecksum": "f5faa08ce7b5a885343cd231e57d802f",
+      "lastUpdated": "2026-05-17T22:11:30.835Z"
+    },
+    "footer.columns.resources.title": {
+      "value": "Tài Nguyên",
+      "englishChecksum": "3cd5cd5ad141c1dcd270ce9e6ce9e8d8",
+      "lastUpdated": "2026-05-18T06:23:52.447Z"
+    },
+    "footer.columns.resources.title-aria-label": {
+      "value": "Tài nguyên",
+      "englishChecksum": "71008aefde0a1f00ff07d005153a277e",
+      "lastUpdated": "2026-05-17T22:11:32.675Z"
+    },
+    "footer.columns.developers.title": {
+      "value": "Nhà phát triển",
+      "englishChecksum": "51398e96b295853a649886db989c76f5",
+      "lastUpdated": "2026-05-17T22:11:36.433Z"
+    },
+    "footer.columns.developers.title-aria-label": {
+      "value": "Phương hướng cho nhà phát triển",
+      "englishChecksum": "f5810a04f8ecb87fa184b5cc16a6d6dc",
+      "lastUpdated": "2026-05-17T22:11:39.314Z"
+    },
+    "footer.columns.community.title": {
+      "value": "Cộng đồng",
+      "englishChecksum": "95f2fd7b2ac7b18dbabc3555bf98f52e",
+      "lastUpdated": "2026-05-17T22:11:41.437Z"
+    },
+    "footer.columns.community.title-aria-label": {
+      "value": "Community navigation",
+      "englishChecksum": "0affe60df4d527c448b1f9b3e584a9e5",
+      "lastUpdated": "2026-05-17T22:11:43.758Z"
+    },
+    "footer.columns.help.title": {
+      "value": "Giúp đỡ",
+      "englishChecksum": "8c38e8325e3e3e0c30d223412e6e4f87",
+      "lastUpdated": "2026-05-17T22:11:44.715Z"
+    },
+    "footer.columns.help.title-aria-label": {
+      "value": "Trợ giúp điều hướng",
+      "englishChecksum": "5585e06561adb3c0621999986874d4ce",
+      "lastUpdated": "2026-05-17T22:11:45.767Z"
+    },
+    "footer.links.get-started": {
+      "value": "Bắt đầu ngay",
+      "englishChecksum": "8981a1611865418e0694b74dec63b9d6",
+      "lastUpdated": "2026-05-17T22:11:46.616Z"
+    },
+    "footer.links.get-started-title": {
+      "value": "Bắt đầu xây dựng trên Push Chain",
+      "englishChecksum": "2533bdb2b0599f9a6f8c91c4523d87bc",
+      "lastUpdated": "2026-05-18T06:23:38.847Z"
+    },
+    "footer.links.docs": {
+      "value": "Tài liệu",
+      "englishChecksum": "09ee9425ed7c98cb2af9936c3561f9b6",
+      "lastUpdated": "2026-05-18T06:23:39.631Z"
+    },
+    "footer.links.docs-title": {
+      "value": "Tài liệu Push Chain",
+      "englishChecksum": "1f11c18b8aacae9b14b483838e7a0f14",
+      "lastUpdated": "2026-05-18T06:23:40.605Z"
+    },
+    "footer.links.github": {
+      "value": "Github",
+      "englishChecksum": "cda118ca7bd485acdbc92e28d21762cd",
+      "lastUpdated": "2026-05-17T22:11:55.704Z"
+    },
+    "footer.links.github-title": {
+      "value": "Kho Push Chain trên GitHub",
+      "englishChecksum": "d274ea4b4a55f7a5f54ead8ee5844a9b",
+      "lastUpdated": "2026-05-17T22:11:56.659Z"
+    },
+    "footer.links.knowledge-base": {
+      "value": "Cẩm Nang",
+      "englishChecksum": "65a812822038eac996e42c04eff4f6b5",
+      "lastUpdated": "2026-05-17T22:11:57.494Z"
+    },
+    "footer.links.knowledge-base-title": {
+      "value": "Hỗ Trợ Push Chain",
+      "englishChecksum": "7587e2ace3c6f6d351076b73572170c4",
+      "lastUpdated": "2026-05-17T22:11:59.819Z"
+    },
+    "footer.links.blog": {
+      "value": "Blog",
+      "englishChecksum": "89da4c796f959ebe9e884890d903a3ed",
+      "lastUpdated": "2026-05-18T06:24:38.688Z"
+    },
+    "footer.links.blog-title": {
+      "value": "Blog Push Chain",
+      "englishChecksum": "41600746e68d333b5e8d62eb6fbda91e",
+      "lastUpdated": "2026-05-17T22:12:01.351Z"
+    },
+    "footer.links.litepaper": {
+      "value": "Tài liệu Litepaper",
+      "englishChecksum": "750558dbbc5759f03dba1689881c9758",
+      "lastUpdated": "2026-05-18T06:23:42.403Z"
+    },
+    "footer.links.litepaper-title": {
+      "value": "Bản ghi nhớ Push Chain (PDF)",
+      "englishChecksum": "cb6696dfffa7eb3f452abe58b810af80",
+      "lastUpdated": "2026-05-17T22:12:04.308Z"
+    },
+    "footer.links.brand-kit": {
+      "value": "Kit thương hiệu",
+      "englishChecksum": "9234abbfd44533edb77ba42490cbe655",
+      "lastUpdated": "2026-05-17T22:12:05.507Z"
+    },
+    "footer.links.brand-kit-title": {
+      "value": "Các tài nguyên thương hiệu và hướng dẫn của Push Chain",
+      "englishChecksum": "5f10088e48ea746219643632ec3d0705",
+      "lastUpdated": "2026-05-18T06:23:43.747Z"
+    },
+    "footer.links.push-scan": {
+      "value": "Danh mục Push",
+      "englishChecksum": "88d343d522c50a272ca4fc63b5d9a4c6",
+      "lastUpdated": "2026-05-17T22:12:08.760Z"
+    },
+    "footer.links.push-scan-title": {
+      "value": "Trình khám phá Blockchain Push Chain",
+      "englishChecksum": "e9cf8f18f641f511d14e09f3da423867",
+      "lastUpdated": "2026-05-17T22:12:23.043Z"
+    },
+    "footer.links.faucet": {
+      "value": "Vòi nước",
+      "englishChecksum": "a1cd32c7fd5f9001d2b4c1b2fd2d9e53",
+      "lastUpdated": "2026-05-18T06:25:11.293Z"
+    },
+    "footer.links.faucet-title": {
+      "value": "Nhận token thử nghiệm từ nhà nước Push Chain",
+      "englishChecksum": "926a89f4f88049af1a7d12ce4d54204f",
+      "lastUpdated": "2026-05-17T22:12:25.102Z"
+    },
+    "footer.links.push-portal": {
+      "value": "Push Portal",
+      "englishChecksum": "11365545b025dc3f5e7e0ea27edb5e76",
+      "lastUpdated": "2026-05-17T22:12:36.708Z"
+    },
+    "footer.links.push-portal-title": {
+      "value": "Cổng thông tin cộng đồng Push Chain",
+      "englishChecksum": "f997c3ed4145bf7a254568f857904ba8",
+      "lastUpdated": "2026-05-18T06:23:46.090Z"
+    },
+    "footer.links.support": {
+      "value": "Hỗ trợ",
+      "englishChecksum": "1def5221ade79f7711a467427e6b1bfd",
+      "lastUpdated": "2026-05-17T22:12:38.400Z"
+    },
+    "footer.links.support-title": {
+      "value": "Trung tâm Hỗ trợ",
+      "englishChecksum": "ce84bf94fa3ddcd52b47179a5c939b7e",
+      "lastUpdated": "2026-05-17T22:12:41.091Z"
+    },
+    "footer.links.security": {
+      "value": "An toàn và Phát biểu",
+      "englishChecksum": "e73bec6fddfcbc315bd8caa1d3041133",
+      "lastUpdated": "2026-05-17T22:12:41.892Z"
+    },
+    "footer.links.security-title": {
+      "value": "Báo cáo một lỗ hổng bảo mật (truyền thông trách nhiệm)",
+      "englishChecksum": "7676f070da5d3cb46c8b2ced5fbbe09b",
+      "lastUpdated": "2026-05-17T22:12:42.990Z"
+    },
+    "footer.links.contact-us": {
+      "value": "Liên Hệ Với Chúng Tôi",
+      "englishChecksum": "e54175e0713e8e406d516288a41a91cb",
+      "lastUpdated": "2026-05-17T22:12:45.080Z"
+    },
+    "footer.links.contact-us-title": {
+      "value": "Liên hệ về các hợp tác, kinh doanh, truyền thông hoặc thắc mắc chung",
+      "englishChecksum": "d5fd03a943d89f801162d414cab9d6b4",
+      "lastUpdated": "2026-05-17T22:12:46.267Z"
+    },
+    "footer.links.careers": {
+      "value": "Tuyển dụng",
+      "englishChecksum": "8085b5b45b63aaacfe9c2cdcb8f2d8e5",
+      "lastUpdated": "2026-05-17T22:12:47.066Z"
+    },
+    "footer.links.careers-title": {
+      "value": "Việc làm có sẵn tại Push Chain",
+      "englishChecksum": "8e9bcc463f1a2f0c1621a3684397ee8f",
+      "lastUpdated": "2026-05-18T06:23:47.136Z"
+    },
+    "footer.links.twitter": {
+      "value": "X/Twitter",
+      "englishChecksum": "a7a9ad2a146eaa5f57ee04b5a6482f4e",
+      "lastUpdated": "2026-05-17T22:12:50.446Z"
+    },
+    "footer.links.twitter-title": {
+      "value": "Theo dõi Push Chain trên X/Twitter",
+      "englishChecksum": "bf31cffce19043d7845191fe50c302ee",
+      "lastUpdated": "2026-05-17T22:12:51.505Z"
+    },
+    "footer.links.discord": {
+      "value": "Discord",
+      "englishChecksum": "8987ae81152c473c2b4941dc001e9cd8",
+      "lastUpdated": "2026-05-17T22:12:53.322Z"
+    },
+    "footer.links.discord-title": {
+      "value": "Tham gia Push Chain trên Discord",
+      "englishChecksum": "55ad023ae02089626dbf0e6254b730ed",
+      "lastUpdated": "2026-05-17T22:12:54.305Z"
+    },
+    "footer.links.reddit": {
+      "value": "Reddit",
+      "englishChecksum": "fe58f826703ba589472306e25679bceb",
+      "lastUpdated": "2026-05-17T22:12:55.067Z"
+    },
+    "footer.links.reddit-title": {
+      "value": "Tham giaPush Chain Reddit",
+      "englishChecksum": "3049556e84cdb76470f9cc4b4bcfae09",
+      "lastUpdated": "2026-05-18T06:23:48.076Z"
+    },
+    "footer.links.telegram": {
+      "englishChecksum": "89e31411b5bed17af9c0112c5ebca92c",
+      "lastUpdated": "2026-05-18T06:23:49.098Z"
+    },
+    "footer.links.telegram-title": {
+      "value": "Tham gia Push Chain trên Telegram",
+      "englishChecksum": "c0e0c9b145cd5ec4b4fd9620c44cdf95",
+      "lastUpdated": "2026-05-17T22:12:57.848Z"
+    },
+    "footer.social-section.section-aria-label": {
+      "value": "Liên kết mạng xã hội và thông tin pháp lý",
+      "englishChecksum": "02edf0e610242d96d4f6dc4c4deff9e0",
+      "lastUpdated": "2026-05-17T22:12:58.924Z"
+    },
+    "footer.social-section.twitter-icon-title": {
+      "value": " Push Chain trên X/Twitter ",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-18T06:23:53.442Z"
+    },
+    "footer.social-section.twitter-icon-aria-label": {
+      "value": "Push Chain trên X/Twitter",
+      "englishChecksum": "53a9990b30df5a7637f859915178bf02",
+      "lastUpdated": "2026-05-17T22:13:00.982Z"
+    },
+    "footer.social-section.github-icon-title": {
+      "value": " Push Chain trên GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T22:13:03.339Z"
+    },
+    "footer.social-section.github-icon-aria-label": {
+      "value": "Push Chain trên GitHub",
+      "englishChecksum": "9f330c80cf58050a44352c6965dc2b73",
+      "lastUpdated": "2026-05-17T22:13:04.230Z"
+    },
+    "footer.social-section.discord-icon-title": {
+      "value": "Push Chain trên Discord",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T22:13:05.082Z"
+    },
+    "footer.social-section.discord-icon-aria-label": {
+      "value": " Push Chain trên Discord ",
+      "englishChecksum": "d1a4a1f43e93817909840bddd8d78727",
+      "lastUpdated": "2026-05-17T22:13:06.015Z"
+    },
+    "footer.legal.privacy-policy": {
+      "value": "Chính Sách Riêng Tư",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-18T06:23:54.457Z"
+    },
+    "footer.legal.privacy-policy-title": {
+      "value": "Đọc Chính Sách Riêng Tư",
+      "englishChecksum": "1878b6e6bf04e8921f747e0e27c88985",
+      "lastUpdated": "2026-05-17T22:13:08.134Z"
+    },
+    "footer.legal.privacy-policy-aria-label": {
+      "value": "Chính sách Riêng Tư",
+      "englishChecksum": "5ea62442768a6cedc518d4e2d392d6ab",
+      "lastUpdated": "2026-05-17T22:13:09.138Z"
+    },
+    "footer.legal.terms-of-service": {
+      "value": "Điều khoản Sử dụng",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T22:13:10.164Z"
+    },
+    "footer.legal.terms-of-service-title": {
+      "value": "Xem điều khoản dịch vụ",
+      "englishChecksum": "79a2fbcded4d2b29c0ee81fbc30a068d",
+      "lastUpdated": "2026-05-17T22:13:11.089Z"
+    },
+    "footer.legal.terms-of-service-aria-label": {
+      "value": "Điều khoản dịch vụ",
+      "englishChecksum": "49d95ac810dccf9859ac89b7c9f85a3f",
+      "lastUpdated": "2026-05-17T22:13:12.024Z"
+    },
+    "footer.legal.cookie-preferences": {
+      "value": "Tùy chỉnh Cookies",
+      "englishChecksum": "da43f31bfb7595a59de7ba4b4f29cb07",
+      "lastUpdated": "2026-05-17T22:13:12.893Z"
+    },
+    "footer.legal.cookie-preferences-title": {
+      "value": "Quản lý cài đặt cookie",
+      "englishChecksum": "a7499bebbd03798400fbedd6d03e0075",
+      "lastUpdated": "2026-05-17T22:13:13.836Z"
+    },
+    "footer.footer-image.alt": {
+      "value": "Hình minh họa chân trang Push Chain",
+      "englishChecksum": "896ef7b31363a2d4635e4f65309dd3e5",
+      "lastUpdated": "2026-05-17T22:13:27.708Z"
+    },
+    "pages.docs.seo.title": {
+      "value": "Tài liệu — Xây dựng Ứng Dụng Toàn Cục",
+      "englishChecksum": "fd7b0876798930b45619ff5cecfc01d9",
+      "lastUpdated": "2026-05-17T22:13:30.108Z"
+    },
+    "pages.docs.seo.description": {
+      "value": "Tất cả những gì bạn cần để phát hành trên Push Chain: nhanh chóng, SDKs, tham chiếu API, ví dụ và thiết lập nút.",
+      "englishChecksum": "833a7c176ae1ae0339960641c0f1595d",
+      "lastUpdated": "2026-05-17T22:13:32.397Z"
+    },
+    "pages.docs.seo.og-title": {
+      "value": "Tài liệu Push Chain - Bắt đầu nhanh, SDK & API",
+      "englishChecksum": "dc5c3638e459495e0944bf04151b9ee2",
+      "lastUpdated": "2026-05-17T22:13:46.582Z"
+    },
+    "pages.docs.seo.og-description": {
+      "value": "Xây dựng và chạy ứng dụng trên lớp thực thi phổ cập với hướng dẫn và ví dụ rõ ràng.",
+      "englishChecksum": "4f218256c33decd445ac3e2dffc34c50",
+      "lastUpdated": "2026-05-17T22:13:48.371Z"
+    },
+    "pages.docs.seo.twitter-title": {
+      "value": "Hướng dẫn Push Chain - Xây dựng ngay bây giờ",
+      "englishChecksum": "820334aba34eb9d900816cba9aebd964",
+      "lastUpdated": "2026-05-17T22:13:50.770Z"
+    },
+    "pages.docs.seo.twitter-description": {
+      "value": "Không gian phát triển nhanh với Quickstarts, SDKs, tham khảo API và ví dụ.",
+      "englishChecksum": "dbdf808847ecb65e42a1330304a5fb6a",
+      "lastUpdated": "2026-05-17T22:13:52.156Z"
+    },
+    "pages.docs.header.countdown-title": {
+      "value": "Giữ Đỏ Docs Testnet trong {hours}h {minutes}m {seconds}s",
+      "englishChecksum": "f79a8cf0846ab46e9992670fb25f2eda",
+      "lastUpdated": "2026-05-17T22:13:53.636Z"
+    },
+    "pages.docs.header.description": {
+      "value": "Xin lỡ! Muốn xem thử Donut Testnet không? Hãy nhắc đến #pushchainsecret và chúng tôi sẽ gửi cho bạn quyền truy cập vào một phiên bản test.",
+      "englishChecksum": "dd896b434e320689e217d8dfc5db7567",
+      "lastUpdated": "2026-05-17T22:13:55.819Z"
+    },
+    "pages.docs.header.tweet-button": {
+      "value": "Chia sẻ về Push Chain trên Twitter",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:13:56.940Z"
+    },
+    "pages.docs.header.title": {
+      "value": "Bài đăng về Push Chain",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:13:57.929Z"
+    },
+    "pages.docs.header.ariaLabel": {
+      "value": "Chia sẻ về Push Chain trên Twitter",
+      "englishChecksum": "730c0dc0ca5c44dfd781e43f220d8754",
+      "lastUpdated": "2026-05-17T22:13:59.035Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.title": {
+      "value": "Push Chain là gì?",
+      "englishChecksum": "2d9c99a4526439aebcccf2b277f303fd",
+      "lastUpdated": "2026-05-17T22:14:01.042Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.whatispush.ctatitle": {
+      "value": "Khám phá thêm",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T22:14:02.956Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.title": {
+      "value": "Hãy xây dựng!",
+      "englishChecksum": "53e5c4848738940c9d161e0a927ec1bc",
+      "lastUpdated": "2026-05-17T22:14:05.234Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
+      "value": "Tất cả những gì bạn cần có với Push Chain SDK để tạo ứng dụng phổ biến của riêng mình",
+      "englishChecksum": "1403e34d598a63b64a6f92a880e7c414",
+      "lastUpdated": "2026-05-17T22:14:07.840Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.builders.ctatitle": {
+      "value": "Khám phá thêm",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-18T06:24:01.102Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.title": {
+      "value": "UI Kit",
+      "englishChecksum": "eac753c8e039c8aa0d43a3d2c7467384",
+      "lastUpdated": "2026-05-18T06:24:02.987Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.subtitle": {
+      "value": "Tích hợp bất kỳ ứng dụng React nào trong ít hơn 5 phút.",
+      "englishChecksum": "b5ad2bbd80ccdbd338500ea9181fa2be",
+      "lastUpdated": "2026-05-17T22:14:14.395Z"
+    },
+    "pages.docs.grid-section.blocks.sections.resources.items.ui-kit.ctatitle": {
+      "value": "Tìm hiểu thêm",
+      "englishChecksum": "32c19ed268877e6db636cb60b5dad3d7",
+      "lastUpdated": "2026-05-17T22:14:32.019Z"
+    },
+    "components.ecosystem-apps-partners.coming-soon": {
+      "value": "Sắp Đến",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T22:14:32.978Z"
+    },
+    "components.ecosystem-apps-partners.app-spotlight": {
+      "value": "HÀM SÁCH ĐỒNG LƯU",
+      "englishChecksum": "3a447e6e50e41a2e8770c75feab7e435",
+      "lastUpdated": "2026-05-17T22:14:34.208Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.name": {
+      "value": "Laboratory Tối Đa Yên Tĩnh",
+      "englishChecksum": "c635c7ab760b57b5b24800c80dd78e80",
+      "lastUpdated": "2026-05-17T22:14:35.811Z"
+    },
+    "components.ecosystem-apps-partners.partners.silence-labs.description": {
+      "value": "MPC-TSS & Compute bảo mật thông tin.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T22:14:38.707Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.name": {
+      "value": "Human.tech",
+      "englishChecksum": "b643fb748f065b2c1f7944525f73d435",
+      "lastUpdated": "2026-05-17T22:14:41.916Z"
+    },
+    "components.ecosystem-apps-partners.partners.human-tech.description": {
+      "value": "MPC-TSS & Tính toán bảo mật Privace.",
+      "englishChecksum": "a6b9a97c767643f157f93ac4be4d3820",
+      "lastUpdated": "2026-05-17T22:14:43.717Z"
+    },
+    "components.ecosystem-apps-partners.apps.ramen-swap.name": {
+      "value": "Ramen Swap",
+      "englishChecksum": "5940dd1727cb53669a74876ab6bdd5d0",
+      "lastUpdated": "2026-05-17T22:14:46.057Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.name": {
+      "value": "HALO",
+      "englishChecksum": "5ae9feb33e3f9aa51641d7a7cd6587cc",
+      "lastUpdated": "2026-05-17T22:14:47.252Z"
+    },
+    "components.ecosystem-apps-partners.apps.halo.description": {
+      "value": "Lớp cơ sở thống nhất cho thương mại tích hợp.",
+      "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
+      "lastUpdated": "2026-05-17T22:14:51.654Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.name": {
+      "value": "Cetra",
+      "englishChecksum": "b06279d7a2c1ef8aab9546c5215b0ba5",
+      "lastUpdated": "2026-05-17T22:14:52.948Z"
+    },
+    "components.ecosystem-apps-partners.apps.cetra.description": {
+      "value": "Tài trợ tài sản, vay tiền dựa vào chúng và kiếm lợi tức tối ưu",
+      "englishChecksum": "669e61255889e1be25d9b81161ad9c3b",
+      "lastUpdated": "2026-05-17T22:14:54.720Z"
+    },
+    "components.ecosystem-apps-partners.apps.hodl-fun.name": {
+      "value": "Hodl.fun",
+      "englishChecksum": "e8801f29c811d1f662071a6136828d32",
+      "lastUpdated": "2026-05-17T22:14:57.175Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.name": {
+      "value": "EON: AI Butler",
+      "englishChecksum": "a164a9e8bdcfc0e10eeeb3da690652d9",
+      "lastUpdated": "2026-05-17T22:14:58.592Z"
+    },
+    "components.ecosystem-apps-partners.apps.eon-ai-butler.description": {
+      "value": "Gửi, trao đổi và quản lý tài sản trên mạng lưới hỗ trợ",
+      "englishChecksum": "d2822a0f2c751033d49a46e8a093c0e3",
+      "lastUpdated": "2026-05-17T22:15:01.027Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.name": {
+      "value": "Nhánh Push Bet",
+      "englishChecksum": "85dd2b4a6830443df0995de3f6fdaad6",
+      "lastUpdated": "2026-05-17T22:15:05.864Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-bet.description": {
+      "value": "Hiển thị siêu năng lực của bạn để nhận thưởng.",
+      "englishChecksum": "33db2cc900ba48e417f8f908709df8e1",
+      "lastUpdated": "2026-05-17T22:15:07.304Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.name": {
+      "value": "OnchainVampirSurvivor",
+      "englishChecksum": "9e5e8a4e7b2695cb2356cbc42e599751",
+      "lastUpdated": "2026-05-17T22:15:08.797Z"
+    },
+    "components.ecosystem-apps-partners.apps.onchain-vampire-survivors.description": {
+      "value": "Trò chơi kiểu vampire phổ thông",
+      "englishChecksum": "198898d88d773f4b4f43e86f05c638f0",
+      "lastUpdated": "2026-05-17T22:15:11.638Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.name": {
+      "value": "Hạng Nhất",
+      "englishChecksum": "efa586fc1f25befff78cf7b39000ae0a",
+      "lastUpdated": "2026-05-17T22:15:15.107Z"
+    },
+    "components.ecosystem-apps-partners.apps.last-one.description": {
+      "value": "Lần cuối cùng nhắc giá trước khi giờ chạy hết là người thắng phần thưởng",
+      "englishChecksum": "52a2f5698ff42539399b6b424702f1b7",
+      "lastUpdated": "2026-05-18T06:24:09.909Z"
+    },
+    "components.ecosystem-apps-partners.apps.pns.name": {
+      "value": "PNS",
+      "englishChecksum": "6d21aa7daec30dfc7a2d145045971149",
+      "lastUpdated": "2026-05-17T22:15:19.764Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.name": {
+      "value": "Push x402",
+      "englishChecksum": "d3619edf8f9cbb1da49b8cd7218d8bc6",
+      "lastUpdated": "2026-05-17T22:15:22.068Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-x402.description": {
+      "value": "Thanh toán theo lượt gọi API cho cơ sở hạ tầng hành vi",
+      "englishChecksum": "522b2e49700be9e95c24d9e972b2805f",
+      "lastUpdated": "2026-05-18T06:24:12.555Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.name": {
+      "value": "Bountive",
+      "englishChecksum": "77907e6a6f8a96f91bde18d2d927a929",
+      "lastUpdated": "2026-05-17T22:15:26.809Z"
+    },
+    "components.ecosystem-apps-partners.apps.bountive.description": {
+      "value": "Máy phát triển phổ cập miễn phí tặng thưởng chất lượng thay vì click",
+      "englishChecksum": "b11654d18004ce8a435345b64a103ecd",
+      "lastUpdated": "2026-05-17T22:15:29.667Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.name": {
+      "value": "BeatBrawls",
+      "englishChecksum": "a901cdbf300774859c093a14e418e2ee",
+      "lastUpdated": "2026-05-17T22:15:30.929Z"
+    },
+    "components.ecosystem-apps-partners.apps.beat-brawls.description": {
+      "value": "Cuộc chiến âm nhạc để quên không được",
+      "englishChecksum": "3fd83fbf7b087be7c59604faf2832589",
+      "lastUpdated": "2026-05-17T22:15:33.451Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.name": {
+      "value": "APT Casino",
+      "englishChecksum": "01f97c1652a54dc7d416bc102d137c01",
+      "lastUpdated": "2026-05-17T22:15:36.488Z"
+    },
+    "components.ecosystem-apps-partners.apps.apt-casino.description": {
+      "value": "Đa dạng, công bằng & minh bạch cược để thắng",
+      "englishChecksum": "03591614d5bea997ab5413de4298c0db",
+      "lastUpdated": "2026-05-17T22:15:38.010Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.name": {
+      "value": "Push Ninja",
+      "englishChecksum": "b86e1b6f9d1e04c831ac2e3a54ed9cbb",
+      "lastUpdated": "2026-05-17T22:15:39.222Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.description": {
+      "value": "Trò chơi dựa trên chuỗi khối về kỹ năng",
+      "englishChecksum": "8787bd2656821a4c52f671486cbf9e7a",
+      "lastUpdated": "2026-05-17T22:15:42.236Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-ninja.spotlight-text": {
+      "value": "Chẻ. Tránh. Điểm số.",
+      "englishChecksum": "0c2c91f61d34f525ed855279f425dbfe",
+      "lastUpdated": "2026-05-18T06:24:14.332Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.name": {
+      "value": "TipUp",
+      "englishChecksum": "488c37dfaa955b605e9437e4856879ad",
+      "lastUpdated": "2026-05-17T22:15:46.342Z"
+    },
+    "components.ecosystem-apps-partners.apps.tip-up.description": {
+      "value": "Gửi tip bất kỳ chuỗi nào bằng bất kỳ ví nào",
+      "englishChecksum": "6c9bee02cde8c85a8dd3e4fa9b0df0a9",
+      "lastUpdated": "2026-05-17T22:15:47.759Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-swap.name": {
+      "value": "Push Swap",
+      "englishChecksum": "14e94494e10054a90567e76742d9cc9f",
+      "lastUpdated": "2026-05-17T22:15:48.991Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.name": {
+      "value": " Chuỗi Cách Liệu",
+      "englishChecksum": "0dc06c3039eee4f6e4b70fddc944610c",
+      "lastUpdated": "2026-05-17T22:15:51.712Z"
+    },
+    "components.ecosystem-apps-partners.apps.chain-circle.description": {
+      "value": "HỢP TÁC GIAO CHAIN",
+      "englishChecksum": "4f006bfe92fe7e36f82e22762f29cded",
+      "lastUpdated": "2026-05-17T22:15:54.462Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-campus.name": {
+      "value": "Push Campus",
+      "englishChecksum": "e60b6dc6a4b8dda6c7e65ae094400aca",
+      "lastUpdated": "2026-05-17T22:15:55.858Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.name": {
+      "value": "Ballsy",
+      "englishChecksum": "2dce491318f3a8c30d4243db0ed2efa7",
+      "lastUpdated": "2026-05-17T22:15:57.219Z"
+    },
+    "components.ecosystem-apps-partners.apps.ballsy.description": {
+      "value": "Chiến đấu để giành vinh quang bằng cách đăng nhập với chuỗi ưa thích của bạn",
+      "englishChecksum": "ed525116f9353cf0d99b87bb61be9dd7",
+      "lastUpdated": "2026-05-17T22:15:59.009Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.name": {
+      "value": "Athera",
+      "englishChecksum": "62eaf8b2ff19c85203b91181aaec159f",
+      "lastUpdated": "2026-05-17T22:16:01.862Z"
+    },
+    "components.ecosystem-apps-partners.apps.athera.description": {
+      "value": "Kế thừa tiền điện tử tự động",
+      "englishChecksum": "b858d9e3e797003c2bc27d7ea415eae2",
+      "lastUpdated": "2026-05-17T22:16:18.255Z"
+    },
+    "components.ecosystem-apps-partners.apps.pusd.name": {
+      "value": "PUSD",
+      "englishChecksum": "c754532c4ca53e2b6bf5559697220908",
+      "lastUpdated": "2026-05-17T22:16:21.541Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.name": {
+      "value": "FreeName",
+      "englishChecksum": "fa78f290e666570a113964a4f10d4696",
+      "lastUpdated": "2026-05-17T22:16:24.001Z"
+    },
+    "components.ecosystem-apps-partners.apps.freename.description": {
+      "value": "Gửi tiền mật mã đến tên miền, không phải hash",
+      "englishChecksum": "9db0b31f0e2f6e15c74e86812e4395b9",
+      "lastUpdated": "2026-05-17T22:16:28.000Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.name": {
+      "value": "Hang4.fun",
+      "englishChecksum": "92b8133ccc79161539d23d4305a32a6e",
+      "lastUpdated": "2026-05-17T22:16:29.297Z"
+    },
+    "components.ecosystem-apps-partners.apps.hang4-fun.description": {
+      "value": "Sắp có sẵn",
+      "englishChecksum": "5f2e4ff62859cd3386f72e27fe429497",
+      "lastUpdated": "2026-05-17T22:16:32.291Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.name": {
+      "value": "Chess Degen",
+      "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
+      "lastUpdated": "2026-05-17T22:16:33.639Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Chơi cờ vua, đặt cược, universal",
+      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
+      "lastUpdated": "2026-05-17T22:16:50.705Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.name": {
+      "value": "ÔmnihUb",
+      "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
+      "lastUpdated": "2026-05-17T22:16:52.196Z"
+    },
+    "components.ecosystem-apps-partners.apps.omnihub.description": {
+      "value": "Tạo, mua và bán NFT (blockchain collectibles)",
+      "englishChecksum": "012a780784dc5c40673a14fbcc5cc11a",
+      "lastUpdated": "2026-05-17T22:16:55.125Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-dex.name": {
+      "value": "PushDex",
+      "englishChecksum": "714cf8323f39fa139567f66f7935c25f",
+      "lastUpdated": "2026-05-17T22:16:56.354Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.name": {
+      "value": "ZNS",
+      "englishChecksum": "f5cae9fb73065bd6b28efd8b19cd0501",
+      "lastUpdated": "2026-05-17T22:16:57.540Z"
+    },
+    "components.ecosystem-apps-partners.apps.zns.description": {
+      "value": "Tên miền đa chuỗi, GM + công cụ triển khai",
+      "englishChecksum": "aa15cc9016159b819e78b7b8eaa4aad7",
+      "lastUpdated": "2026-05-18T06:24:15.904Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.name": {
+      "value": "Chạy Sao",
+      "englishChecksum": "c1011cf04146074ef134e5ee22c721a6",
+      "lastUpdated": "2026-05-17T22:17:01.098Z"
+    },
+    "components.ecosystem-apps-partners.apps.star-run.description": {
+      "value": "Một nền kinh tế phi tập trung, được sở hữu bởi người chơi",
+      "englishChecksum": "33f707aba5e959459f2af021a3adf6da",
+      "lastUpdated": "2026-05-17T22:17:02.712Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.name": {
+      "value": "Không Gian Đúc Tối Thượng",
+      "englishChecksum": "36fab03f05692f524d94f9e4a92219da",
+      "lastUpdated": "2026-05-17T22:17:05.428Z"
+    },
+    "components.ecosystem-apps-partners.apps.forge-realm.description": {
+      "value": "Trộn lẫn và kết hợp các nhân vật gốc và tính chất từ nhiều tác giả khác nhau",
+      "englishChecksum": "b22ac217a961619411e142de55ca6a36",
+      "lastUpdated": "2026-05-17T22:17:07.180Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.name": {
+      "value": "CoNFT/CoDomain",
+      "englishChecksum": "e47b86429c328e5070cb3e91f05b19e4",
+      "lastUpdated": "2026-05-17T22:17:08.587Z"
+    },
+    "components.ecosystem-apps-partners.apps.conft-codomain.description": {
+      "value": "Không gian Web3 đa chuỗi: Tên miền, NFTs và sàn khởi động.",
+      "englishChecksum": "888fd2c40021557761b4a820c86314b9",
+      "lastUpdated": "2026-05-17T22:17:10.320Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.name": {
+      "value": "Coptét",
+      "englishChecksum": "5a91bc0f1486d6fa7a6d2b3b44c43c97",
+      "lastUpdated": "2026-05-17T22:17:13.111Z"
+    },
+    "components.ecosystem-apps-partners.apps.copet.description": {
+      "value": "Chăm sóc, chơi và nuôi dưỡng thú cưng ảo của bạn thông qua hoạt động trên chuỗi",
+      "englishChecksum": "5812e6849ddd7912141b70f845abbd71",
+      "lastUpdated": "2026-05-17T22:17:16.459Z"
+    },
+    "components.ecosystem-apps-partners.apps.surf-layer.name": {
+      "value": "SurfLayer",
+      "englishChecksum": "0f9f16c9c1583150f3a3678251fe5196",
+      "lastUpdated": "2026-05-17T22:17:17.798Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.name": {
+      "value": "Dịch vụ Tên Push",
+      "englishChecksum": "76afd6d66e22b8b7af536150d364f3f4",
+      "lastUpdated": "2026-05-17T22:17:21.010Z"
+    },
+    "components.ecosystem-apps-partners.apps.push-name-service.description": {
+      "value": "Nhận tên miền .push của riêng bạn",
+      "englishChecksum": "f2add131c8fd554d587a91dc49a5c865",
+      "lastUpdated": "2026-05-17T22:17:22.455Z"
+    },
+    "components.ecosystem-apps-partners.apps.nfts2me.name": {
+      "value": "NFTs2Me",
+      "englishChecksum": "7f44dc17ddaab6adbd64c11292eaa1ab",
+      "lastUpdated": "2026-05-18T06:24:06.054Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.name": {
+      "value": "Tachyon",
+      "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
+      "lastUpdated": "2026-05-17T22:17:25.310Z"
+    },
+    "components.ecosystem-apps-partners.apps.tachyon.description": {
+      "value": "Tốc độ Nhiều Chuỗi Relay Rất Nhanh",
+      "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
+      "lastUpdated": "2026-05-17T22:17:26.772Z"
     }
   }
 }

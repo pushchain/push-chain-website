@@ -1,12 +1,8 @@
 {
   "footer": {
-    "email-section": {
-      "title": "Mantente al tanto de Push Chain"
-    },
-    "legal": {
-      "terms-of-service-title": "Lee los Términos de Servicio",
-      "terms-of-service-aria-label": "Términos de Servicio",
-      "cookie-preferences": "Preferencias de cookies"
+    "links": {
+      "llms": "LLMs.txt para Agentes de IA",
+      "llms-title": "Documentación de Push Chain legible por máquina para asistentes de codificación de IA"
     }
   }
 }

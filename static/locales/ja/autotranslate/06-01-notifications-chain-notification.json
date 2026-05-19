@@ -1,10 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "招待コードが必要ですか？フォローして、解説動画を見て、コメントを残してください。招待は限定です！",
+      "description": "招待コードが必要ですか？フォローして、解説動画をご覧になり、コメントを投稿してください。招待コードは限定数です。",
+      "button-text": "招待コードを取得",
       "button-title": "招待コードを取得",
-      "button-aria-label": "招待コードを取得！こちらからご確認ください",
-      "image-alt": "招待コードを取得！"
+      "button-aria-label": "招待コードを入手！こちらで確認できます",
+      "image-alt": "招待コードを入手!"
     }
   }
 }

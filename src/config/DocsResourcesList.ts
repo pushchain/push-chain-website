@@ -60,7 +60,8 @@ export const DocsResourcesList = {
             'pages.docs.grid-section.blocks.sections.resources.items.pusd',
           target: '_blank',
           image: '/static/assets/website/docshub/PUSDIcon@3x',
-          bgColor: '#000000',
+          bgColor:
+            'linear-gradient(35deg, #dd6fff 15%, var(--ifm-color-kb-blue) 100%)',
           bgStylizing: {
             type: 'lines',
             gridSize: 30,

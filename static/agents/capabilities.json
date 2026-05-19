@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.0",
+  "current_sdk_version": "6.0.9",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Intent-level agent capabilities — what an agent can do with Push Chain. For the complete SDK method surface with signatures see sdk-capabilities.json. Utilities (parseUnits, formatUnits, encodeTxData, chain/token discovery, constants) and raw ethers.js operations are API primitives consumed inside these capabilities rather than standalone agent intents.",
   "prerequisite_glossary": {
@@ -229,6 +229,12 @@
           "type": "BigInt",
           "required": false,
           "description": "Unix timestamp (seconds) after which the transaction expires — use for MEV protection and retry logic"
+        },
+        {
+          "name": "tx.options.enforceGasCheck",
+          "type": "boolean",
+          "required": false,
+          "description": "Defaults to false. When true, the SDK pre-flight check throws InsufficientUEABalanceError on a UEA native PC or burn-token PRC-20 shortfall instead of emitting a WARNING progress event and proceeding. Use true when you want pre-flight guarantees over best-effort retries."
         }
       ],
       "outputs": [
@@ -319,6 +325,12 @@
           "type": "BigInt",
           "required": false,
           "description": "Unix timestamp (seconds) after which the transaction expires"
+        },
+        {
+          "name": "tx.options.enforceGasCheck",
+          "type": "boolean",
+          "required": false,
+          "description": "Defaults to false. When true, the SDK pre-flight check throws InsufficientUEABalanceError on a UEA native PC or burn-token PRC-20 shortfall instead of emitting a WARNING progress event and proceeding."
         }
       ],
       "outputs": [
@@ -984,6 +996,12 @@
           "type": "BigInt",
           "required": false,
           "description": "Unix timestamp (seconds) after which this hop expires"
+        },
+        {
+          "name": "txs[].options.enforceGasCheck",
+          "type": "boolean",
+          "required": false,
+          "description": "Defaults to false. When true on any single hop, the entire cascade runs in strict pre-flight mode: a UEA native PC or burn-token PRC-20 shortfall on any hop throws InsufficientUEABalanceError (with `pathTag: 'CASCADE'` and `segmentIndex`) before broadcast, instead of degrading to a warning and proceeding."
         }
       ],
       "outputs": [

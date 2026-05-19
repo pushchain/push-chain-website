@@ -52,6 +52,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'white',
     descriptionColor: 'white',
     tagsColor: 'white',
+    appoftheweek: true,
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.halo.name',
@@ -78,7 +79,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     descriptionColor: 'white',
     tagsColor: 'white',
     twitterId: '2031754422884487425',
-    appoftheweek: true,
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.cetra.name',

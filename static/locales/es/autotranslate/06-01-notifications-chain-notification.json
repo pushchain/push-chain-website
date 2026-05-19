@@ -1,10 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "¿Necesitas un código de invitación? Síguenos, mira nuestro video explicativo y deja un comentario. ¡Invitaciones limitadas!",
-      "button-title": "Obtener código de invitación",
-      "button-aria-label": "¡Obtener código de invitación! Puedes verlo aquí",
-      "image-alt": "¡Obtener código de invitación!"
+      "description": "¿Necesitas un código de invitación? Sigue nuestras redes, mira nuestro Video Explicativo y deja un comentario. ¡Invitaciones limitadas!.",
+      "button-text": "Obtener código de invitación",
+      "button-title": "Obtén el código de invitación",
+      "button-aria-label": "¡Obtén tu código de invitación!. Puedes revisarlo aquí",
+      "image-alt": "¡Obtén tu código de invitación!"
     }
   }
 }

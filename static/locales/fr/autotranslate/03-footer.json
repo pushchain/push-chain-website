@@ -1,1 +1,8 @@
-{}
+{
+  "footer": {
+    "links": {
+      "llms": "LLMs.txt pour les Agents d'IA",
+      "llms-title": "Documentation Push Chain lisible par machine pour les assistants de codage IA"
+    }
+  }
+}
