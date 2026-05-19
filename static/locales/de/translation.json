@@ -1913,14 +1913,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Die 50 Top-Creators erhalten eine Belohnung von 20 Millionen Token. Sammle deine Community. Werde Teil der Push Cult!",
-      "button-title": "Tritt dem Push Cult bei!",
-      "button-aria-label": "Trete dem Push Cult bei!. Du kannst es hier überprüfen",
-      "image-alt": "Tritt der Push-Community bei!",
+      "description": "Entdecke die Kraft universeller Apps und werde in der letzten Saison vor dem Mainnet belohnt!",
+      "button-title": "Jetzt starten!",
+      "button-aria-label": "Jetzt starten!. Du kannst es hier ansehen",
+      "image-alt": "Jetzt starten!",
       "title": "",
-      "button-text": "Jetzt bewerben",
+      "button-text": "Jetzt starten!",
       "close-button-title": "Toast-Benachrichtigung schließen",
-      "close-button-aria-label": "Push Chain Benachrichtigung wegklappen",
+      "close-button-aria-label": "Push Chain Toast-Benachrichtigung schließen",
       "container-aria-label": "Push Chain Toast-Benachrichtigung"
     },
     "rewards-notification": {

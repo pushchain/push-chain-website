@@ -1807,14 +1807,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "50 meilleurs créateurs reçoivent une récompense de 20M Tokens. Rassemblez votre communauté. Rejoignez le Culte Push !",
-      "button-title": "Rejoignez la communauté Push !",
-      "button-aria-label": "Rejoignez la communauté Push Cult ! Vous pouvez la découvrir ici",
-      "image-alt": "Rejoignez la communauté Push !",
-      "button-text": "Postuler maintenant",
-      "close-button-title": "Fermer la notification",
-      "close-button-aria-label": "Fermer la notification Push Chain",
-      "container-aria-label": "Notification Push Chain"
+      "description": "Explorez la puissance des applications universelles et soyez récompensé lors de la dernière saison avant le mainnet !",
+      "button-title": "Commencer !",
+      "button-aria-label": "Commencer !. Vous pouvez le consulter ici",
+      "image-alt": "Commencer !",
+      "button-text": "Commencer !",
+      "close-button-title": "Fermer la notification toast",
+      "close-button-aria-label": "Ignorer la notification toast Push Chain",
+      "container-aria-label": "Notification toast Push Chain",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta est maintenant disponible !",

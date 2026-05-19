@@ -1912,14 +1912,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "50 nhà sáng tạo hàng đầu nhận được phần thưởng 20M token. Tập hợp đội của bạn. Tham gia Push Cult!",
-      "button-title": "Tham gia cộng đồng Push!",
-      "button-aria-label": "Tham gia Cộng đồng Push!. Bạn có thể xem thêm tại đây",
-      "image-alt": "Tham gia cộng đồng Push nhé!",
-      "button-text": "Áp dụng Ngay",
+      "description": "Khám phá sức mạnh của ứng dụng đa năng và nhận phần thưởng trong mùa cuối trước khi mainnet ra mắt!",
+      "button-title": "Bắt đầu!",
+      "button-aria-label": "Bắt đầu!. Bạn có thể xem tại đây",
+      "image-alt": "Bắt đầu!",
+      "button-text": "Bắt đầu!",
       "close-button-title": "Đóng thông báo toast",
-      "close-button-aria-label": "Đóng thông báo Push Chain",
-      "container-aria-label": "Thông báo Push Chain"
+      "close-button-aria-label": "Đóng thông báo toast Push Chain",
+      "container-aria-label": "Thông báo toast Push Chain",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta đã mở!",

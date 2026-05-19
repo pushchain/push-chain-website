@@ -1909,15 +1909,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "50 лучших создателей получат награду в 20M токенов. Собирайте свой клан. Присоединяйтесь к Пуш Кальту!",
-      "button-title": "Присоединяйтесь к Push Cult!",
-      "button-aria-label": "Присоединяйтесь к Push Cult!. Вы можете узнать больше здесь",
-      "image-alt": "Присоединяйтесь к Push Cult!",
+      "description": "Исследуйте возможности универсальных приложений и получайте награды в финальном сезоне перед запуском mainnet!",
+      "button-title": "Начать!",
+      "button-aria-label": "Начать!. Вы можете ознакомиться здесь",
+      "image-alt": "Начать!",
       "title": "",
-      "button-text": "Подать заявку",
+      "button-text": "Начать!",
       "close-button-title": "Закрыть уведомление",
       "close-button-aria-label": "Закрыть уведомление Push Chain",
-      "container-aria-label": "Push Chain уведомление в тост"
+      "container-aria-label": "Уведомление Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Закрытое бета-тестирование запущено!",

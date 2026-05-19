@@ -1907,15 +1907,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "أفضل 50 مُبدع يحصلون على مكافأة قدرها 20 مليون توكن. اجمع أتباعك. انضم إلى Push Cult!",
-      "button-title": "انضم إلى ثقافة Push!",
-      "button-aria-label": "انضم إلى مجتمع Push الآن!. يمكنك الاطلاع عليه هنا",
-      "image-alt": "انضم إلى مجتمع Push!",
+      "description": "استكشف قوة التطبيقات العالمية واحصل على مكافآت في الموسم الأخير قبل الإطلاق الرئيسي!",
+      "button-title": "ابدأ الآن!",
+      "button-aria-label": "ابدأ الآن!. يمكنك الاطلاع عليه هنا",
+      "image-alt": "ابدأ الآن!",
       "title": "",
-      "button-text": "تطبيق الآن",
-      "close-button-title": "إغلاق إشعار شريحة",
-      "close-button-aria-label": "إلغاء الإخطار من شريحة Push Chain",
-      "container-aria-label": "toast notification من Push Chain"
+      "button-text": "ابدأ الآن!",
+      "close-button-title": "إغلاق إشعار الشريحة",
+      "close-button-aria-label": "إلغاء إشعار Push Chain",
+      "container-aria-label": "إشعار Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta is Live!",

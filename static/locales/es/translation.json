@@ -1898,15 +1898,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "50 de los mejores creadores recibirán una recompensa de 20M tokens. ¡Reúne a tu comunidad y únete al Culto Push!",
-      "button-title": "¡Únete a la comunidad de Push!",
-      "button-aria-label": "¡Únete a la comunidad de Push! Puedes echarle un vistazo aquí",
-      "image-alt": "¡Únete a la comunidad Push!",
+      "description": "¡Explora el poder de las aplicaciones universales y obtén recompensas en la temporada final antes del mainnet!",
+      "button-title": "¡Empezar!",
+      "button-aria-label": "¡Empezar!. Puedes verlo aquí",
+      "image-alt": "¡Empezar!",
       "title": "",
-      "button-text": "Aplicar ahora",
-      "close-button-title": "Cerrar notificación",
+      "button-text": "¡Empezar!",
+      "close-button-title": "Cerrar notificación toast",
       "close-button-aria-label": "Descartar notificación toast de Push Chain",
-      "container-aria-label": "Notificación del Push Chain"
+      "container-aria-label": "Notificación toast de Push Chain"
     },
     "info-bar": {
       "title": "Reúne a tu comunidad para un programa de creadores exclusivo con recompensas. ¡Únete a Push Cult!",

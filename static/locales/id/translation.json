@@ -1902,15 +1902,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "50 kreator teratas mendapatkan hadiah sebesar 20 juta token. Kumpulkan komunitasmu. Bergabunglah dengan Push Cult!",
-      "button-title": "Bergabung dengan Komunitas Push!",
-      "button-aria-label": "Bergabung dengan Komunitas Push! Anda dapat memeriksanya di sini",
-      "image-alt": "Bergabung dengan Komunitas Push!",
-      "title": "{token} jaringan utama telah diluncurkan!",
-      "button-text": "Mengguna Sekarang",
+      "description": "Jelajahi kekuatan aplikasi universal dan dapatkan hadiah di musim terakhir sebelum mainnet!",
+      "button-title": "Mulai!",
+      "button-aria-label": "Mulai!. Anda dapat memeriksanya di sini",
+      "image-alt": "Mulai!",
+      "title": "",
+      "button-text": "Mulai!",
       "close-button-title": "Tutup notifikasi toast",
-      "close-button-aria-label": "Tutup notifikasi Push Chain",
-      "container-aria-label": "Peringatan Toast Push Chain"
+      "close-button-aria-label": "Tutup notifikasi toast Push Chain",
+      "container-aria-label": "Notifikasi toast Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta sudah dibuka!",

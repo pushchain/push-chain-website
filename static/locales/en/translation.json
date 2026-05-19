@@ -1925,11 +1925,11 @@
   "notifications": {
     "chain-notification": {
       "title": "",
-      "description": "Need an invite code? Follow, Watch our Explainer Video and drop a comment. Limited invites only.",
-      "button-text": "Get Invite Code",
-      "button-title": "Get Invite Code",
-      "button-aria-label": "Get Invite Code!. You can check it out here",
-      "image-alt": "Get Invite Code!",
+      "description": "Come explore the power of universal apps and get rewarded in the final season before mainnet!",
+      "button-text": "Get Started!",
+      "button-title": "Get Started!",
+      "button-aria-label": "Get Started!. You can check it out here",
+      "image-alt": "Get Started!",
       "close-button-title": "Close toast notification",
       "close-button-aria-label": "Dismiss Push Chain toast notification",
       "container-aria-label": "Push Chain toast notification"

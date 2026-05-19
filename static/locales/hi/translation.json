@@ -1906,14 +1906,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "शीर्ष 50 क्रिएटर्स को 20 मिलियन टोकन का पुरस्कार मिलता है। अपना समूह इकट्ठा करें। पुश कल्ट में शामिल हों!",
-      "button-title": "पुश कल्ट में शामिल हों!",
-      "button-aria-label": "Push Cult में शामिल हों!. आप इसे यहाँ देख सकते हैं",
-      "image-alt": "Push Cult में शामिल हों!",
-      "button-text": "अप्लाई करें",
-      "close-button-title": "टोस्ट सूचना को बंद करें",
-      "close-button-aria-label": " Push Chain टोस्ट सूचना को बन्द करें",
-      "container-aria-label": "पीश चेन टोस्ट नोटिफिकेशन"
+      "description": "यूनिवर्सल ऐप्स की शक्ति को explore करें और mainnet से पहले अंतिम सीज़न में पुरस्कार पाएं!",
+      "button-title": "शुरू करें!",
+      "button-aria-label": "शुरू करें!. आप इसे यहाँ देख सकते हैं",
+      "image-alt": "शुरू करें!",
+      "button-text": "शुरू करें!",
+      "close-button-title": "Toast नोटिफिकेशन बंद करें",
+      "close-button-aria-label": "Push Chain toast नोटिफिकेशन बंद करें",
+      "container-aria-label": "Push Chain toast नोटिफिकेशन",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta अब लाइव है!",
