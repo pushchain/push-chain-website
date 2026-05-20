@@ -208,10 +208,10 @@ export const EcosystemAppsList: EcosystemApp[] = [
       'components.ecosystem-apps-partners.apps.push-ninja.description',
     icon: '/assets/ecosystem/push-ninja-icon.png',
     bgImage: '/assets/ecosystem/push-ninja-bg.png',
-    bgGradientColor: '#591D5C',
+    bgGradientColor: '#5D1D51',
     tags: ['Gaming'],
     twitterId: '2014018188434964672',
-    href: 'https://push-ninja.abstractstudio.in',
+    href: 'https://push-ninja.fun',
     titleColor: 'white',
     spotlighttextKey:
       'components.ecosystem-apps-partners.apps.push-ninja.spotlight-text',
@@ -303,6 +303,30 @@ export const EcosystemAppsList: EcosystemApp[] = [
     tagsColor: 'white',
   },
   {
+    nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
+    descriptionKey:
+      'Play, wage bets, stream and guess the winner to win the pool',
+    icon: '/assets/ecosystem/degen-chess-icon.png',
+    bgImage: '/assets/ecosystem/degen-chess-bg.png',
+    bgGradientColor: '#4F38A8',
+    tags: ['Gaming/Streaming'],
+    href: 'https://degenchess.fun/',
+    titleColor: 'white',
+    comingsoon: false,
+  },
+  {
+    nameKey: 'Zappi.to',
+    descriptionKey:
+      'Your crypto, your rules: seamless payments across every chain.',
+    icon: '/assets/ecosystem/zappi-to-icon.png',
+    bgImage: '/assets/ecosystem/zappi-to-bg.png',
+    bgGradientColor: '#4A13BB',
+    tags: ['Payments'],
+    href: 'https://zappi.to/',
+    titleColor: 'white',
+    comingsoon: false,
+  },
+  {
     nameKey: 'components.ecosystem-apps-partners.apps.freename.name',
     descriptionKey:
       'components.ecosystem-apps-partners.apps.freename.description',
@@ -323,18 +347,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     bgGradientColor: 'rgba(148, 163, 184, 0.25)',
     tags: ['TBA'],
     href: 'https://hang4.fun/',
-    titleColor: 'white',
-    comingsoon: true,
-  },
-  {
-    nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
-    descriptionKey:
-      'components.ecosystem-apps-partners.apps.degen-chess.description',
-    icon: '/assets/ecosystem/degen-chess-icon.png',
-    bgImage: '/assets/ecosystem/degen-chess-bg.png',
-    bgGradientColor: 'rgba(148, 163, 184, 0.25)',
-    tags: ['Gaming'],
-    href: 'https://degenchess.example.com/',
     titleColor: 'white',
     comingsoon: true,
   },
