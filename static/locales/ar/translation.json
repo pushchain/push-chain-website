@@ -1741,9 +1741,6 @@
           "description": "أظهر قدراتك المتقدمة إلىearnwards.",
           "name": "Push Bet"
         },
-        "omnihub": {
-          "name": "أومنيحوب"
-        },
         "conft-codomain": {
           "description": "مركز Web3 متعدد-الخain: أسماء الحقول, NFTs, إطلاق.",
           "name": "CoNFT/CoDomain"
@@ -1842,7 +1839,10 @@
         },
         "degen-chess": {
           "name": "Degen Chess",
-          "description": "العب الشطرنج، راهن، يونيفرسال"
+          "description": "العب الشطرنج، راهن، شاهد البث وخمّن الفائز للفوز بالجائزة"
+        },
+        "omnihub": {
+          "name": "Omnihub"
         },
         "push-dex": {
           "name": "بلوكشين ديكس",
@@ -1870,19 +1870,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "رايلر متعدد السلاسل سريع للغاية"
-        }
-      },
-      "coming-soon": "قريباً",
-      "app-spotlight": "تجربة التطبيق",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "محاكاة متعددة الإسناد (MPC-TSS) & الحوسبة التي تحافظ على خصوصية البيانات."
+          "description": "ريلاير متعدد السلاسل فائق السرعة"
         },
-        "human-tech": {
-          "name": "هومن.تك",
-          "description": "مكافأة MPC-TSS و الحوسبة المستقرة للخصوصية."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "عملتك المشفرة، قواعدك: مدفوعات سلسة عبر كل سلسلة."
         }
       }
     },

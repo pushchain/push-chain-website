@@ -1839,8 +1839,8 @@
           "description": "近日公開予定"
         },
         "degen-chess": {
-          "name": "デーゲンチェス",
-          "description": "チェスをして、賭け、ユニバーサル"
+          "name": "Degen Chess",
+          "description": "チェスをプレイして、賭けて、ストリームを観て勝者を予想し、プールを獲得しよう"
         },
         "omnihub": {
           "name": "オミニハブ",
@@ -1877,6 +1877,10 @@
         "nfts2me": {
           "name": "NFTs2ミー",
           "description": "任意チェーンでNFTコレクションを無料でデプロイ"
+        },
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "あなたの暗号資産、あなたのルール：すべてのチェーンにわたるシームレスな決済。"
         }
       },
       "coming-soon": "直近の将来に発表",
@@ -1886,9 +1890,13 @@
           "name": "サイレンス・ラボ",
           "description": "MPC-TSS & プライバシー保護コンピュート。"
         },
-        "human-tech": {
-          "name": "ヒューマン・テック",
-          "description": "MPC-TSSとプライバシー保護計算。"
+        "tachyon": {
+          "name": "Tachyon",
+          "description": "超高速マルチチェーンリレイヤー"
+        },
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "あなたの暗号資産、あなたのルール：すべてのチェーンにわたるシームレスな決済。"
         }
       }
     },

@@ -1828,8 +1828,11 @@
           "description": "Bientôt disponible"
         },
         "degen-chess": {
-          "name": "Échecs Degenerateurs",
-          "description": "Jouer aux échecs, miser, universel"
+          "name": "Degen Chess",
+          "description": "Jouez aux échecs, pariez, regardez le stream et devinez le gagnant pour remporter la mise"
+        },
+        "omnihub": {
+          "name": "Omnihub"
         },
         "push-dex": {
           "name": "PushDex",
@@ -1865,19 +1868,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Relais multicouche ultra-rapide"
-        }
-      },
-      "coming-soon": "Bientôt disponible",
-      "app-spotlight": "SPOTLIGHT SUR L'APPLICATION",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS & Compute préservant la confidentialité."
+          "description": "Relayer multichaîne ultra-rapide"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "Calculs multi-signatures (MPC-TSS) et calculs préservant la confidentialité."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Votre crypto, vos règles : paiements fluides sur toutes les chaînes."
         }
       }
     },

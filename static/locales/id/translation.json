@@ -1834,7 +1834,7 @@
         },
         "degen-chess": {
           "name": "Degen Chess",
-          "description": "Main catur, wajib, universal"
+          "description": "Bermain catur, bertaruh, streaming dan tebak pemenang untuk memenangkan pool"
         },
         "omnihub": {
           "name": "Omnihub",
@@ -1870,19 +1870,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Penyebar Multichain Cepat Gila"
-        }
-      },
-      "coming-soon": "Akan Datang",
-      "app-spotlight": "SPOTLIGHT APLIKASI",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS & Komputasi yang Mempertahankan Privasi."
+          "description": "Relayer Multichain yang Sangat Cepat"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "MPC-TSS & Komputasi yang Menjaga Privasi."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Kripto Anda, aturan Anda: pembayaran mulus di setiap chain."
         }
       }
     },

@@ -1696,7 +1696,7 @@
         },
         "degen-chess": {
           "name": "Degen Chess",
-          "description": "Juega al ajedrez, apuesta, universal"
+          "description": "Juega al ajedrez, apuesta, haz streaming y adivina al ganador para ganar el pool"
         },
         "zns": {
           "name": "ZNS",
@@ -1727,19 +1727,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Relayer Multichain Superrápido"
-        }
-      },
-      "coming-soon": "Pr√≥ximamente",
-      "app-spotlight": "DESTACADAS DE LA APLICACIÓN",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS y Computación que preserva la privacidad."
+          "description": "Receptor ultrarrápido entre múltiples blockchains"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "Computación MPC-TSS y preservación de la privacidad."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Tu cripto, tus reglas: pagos sin fricciones en todas las cadenas."
         }
       }
     },

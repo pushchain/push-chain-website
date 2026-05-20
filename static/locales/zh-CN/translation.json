@@ -1835,8 +1835,8 @@
           "description": "即将推出"
         },
         "degen-chess": {
-          "name": "德根棋牌",
-          "description": "玩国际象棋，下注，通用"
+          "name": "Degen Chess",
+          "description": "下棋、下注、观看直播并猜测胜者以赢取奖池"
         },
         "omnihub": {
           "name": "区块链合一",
@@ -1875,19 +1875,12 @@
           "description": "在任何链上免费部署你的NFT集合"
         },
         "tachyon": {
-          "name": "光速",
-          "description": "多链中继，速度如闪电般迅猛"
-        }
-      },
-      "coming-soon": "即将推出",
-      "partners": {
-        "silence-labs": {
-          "name": "安静实验室",
-          "description": "MPC-TSS & 隐私保护计算。"
+          "name": "Tachyon",
+          "description": "闪电般快速的多链中继"
         },
-        "human-tech": {
-          "name": "人类科技",
-          "description": "MPC-TSS与隐私保护计算。"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "你的加密货币，你的规则：跨链无缝支付。"
         }
       }
     },

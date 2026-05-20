@@ -1827,7 +1827,8 @@
           "description": "Em breve"
         },
         "degen-chess": {
-          "name": "Degen Chess"
+          "name": "Degen Chess",
+          "description": "Jogue xadrez, aposte, transmita ao vivo e adivinhe o vencedor para ganhar o pool"
         },
         "omnihub": {
           "name": "Omnihub",
@@ -1870,6 +1871,10 @@
         "tachyon": {
           "name": "Tachyon",
           "description": "Relayer Multichain Super Rápido"
+        },
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Seu cripto, suas regras: pagamentos sem atrito em todas as chains."
         }
       },
       "coming-soon": "Em breve",

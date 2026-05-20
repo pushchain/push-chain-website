@@ -1815,7 +1815,7 @@
         },
         "degen-chess": {
           "name": "Degen Chess",
-          "description": "Spiele Schach, setze auf universal"
+          "description": "Spiele Schach, wette, streame und tippe den Gewinner, um den Pool zu gewinnen"
         },
         "omnihub": {
           "name": "Omnihub",
@@ -1859,19 +1859,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Schnellster Multichain-Relayer"
-        }
-      },
-      "coming-soon": "Kommt bald",
-      "app-spotlight": "APP-HIGHLIGHT",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS und Privacy-Präsertender Computer."
+          "description": "Unglaublich schneller Multichain Relayer"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "MPC-TSS & Privacy Preserving Compute."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Deine Krypto, deine Regeln: nahtlose Zahlungen über alle Chains."
         }
       }
     },

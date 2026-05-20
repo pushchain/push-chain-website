@@ -1825,8 +1825,8 @@
           "description": "곧 출시될 예정입니다"
         },
         "degen-chess": {
-          "name": "데겐 체스",
-          "description": "체스 게임하고 내기, 유니버설"
+          "name": "Degen Chess",
+          "description": "체스를 플레이하고, 베팅하고, 스트리밍하며 승자를 맞춰 상금 풀을 받으세요"
         },
         "omnihub": {
           "name": "오미니허브",
@@ -1866,6 +1866,10 @@
         "tachyon": {
           "name": "타키온",
           "description": "초고속 멀티체인 릴레이어"
+        },
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "내 크립토, 내 규칙: 모든 체인에서 끊김 없는 결제."
         }
       },
       "coming-soon": "곧 개봉",

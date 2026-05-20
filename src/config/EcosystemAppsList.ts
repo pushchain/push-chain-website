@@ -55,9 +55,9 @@ export const EcosystemAppsList: EcosystemApp[] = [
     tagsColor: 'white',
   },
   {
-    nameKey: 'Zappi.to',
+    nameKey: 'components.ecosystem-apps-partners.apps.zappi-to.name',
     descriptionKey:
-      'Your crypto, your rules: seamless payments across every chain.',
+      'components.ecosystem-apps-partners.apps.zappi-to.description',
     icon: '/assets/ecosystem/zappi-to-icon.png',
     bgImage: '/assets/ecosystem/zappi-to-bg.png',
     bgGradientColor: '#4A13BB',
@@ -82,7 +82,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
   {
     nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
     descriptionKey:
-      'Play, wage bets, stream and guess the winner to win the pool',
+      'components.ecosystem-apps-partners.apps.degen-chess.description',
     icon: '/assets/ecosystem/degen-chess-icon.png',
     bgImage: '/assets/ecosystem/degen-chess-bg.png',
     bgGradientColor: '#4F38A8',
