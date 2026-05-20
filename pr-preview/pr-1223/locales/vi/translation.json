@@ -1843,8 +1843,8 @@
           "description": "Sắp có sẵn"
         },
         "degen-chess": {
-          "name": "Chess Degen",
-          "description": "Chơi cờ vua, đặt cược, universal"
+          "name": "Degen Chess",
+          "description": "Chơi cờ vua, đặt cược, xem stream và đoán người thắng để nhận phần thưởng"
         },
         "omnihub": {
           "name": "ÔmnihUb",
@@ -1876,19 +1876,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Tốc độ Nhiều Chuỗi Relay Rất Nhanh"
-        }
-      },
-      "coming-soon": "Sắp Đến",
-      "app-spotlight": "HÀM SÁCH ĐỒNG LƯU",
-      "partners": {
-        "silence-labs": {
-          "name": "Laboratory Tối Đa Yên Tĩnh",
-          "description": "MPC-TSS & Compute bảo mật thông tin."
+          "description": "Relayer đa chuỗi siêu tốc"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "MPC-TSS & Tính toán bảo mật Privace."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Crypto của bạn, luật của bạn: thanh toán liền mạch trên mọi chain."
         }
       }
     },

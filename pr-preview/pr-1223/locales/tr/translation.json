@@ -1835,7 +1835,7 @@
         },
         "degen-chess": {
           "name": "Degen Chess",
-          "description": "Satranç oynayın, bahis yapın, evrensel"
+          "description": "Satranç oynayın, bahis yapın, yayın izleyin ve kazananı tahmin ederek havuzu kazanın"
         },
         "push-dex": {
           "name": "PushDex"
@@ -1874,19 +1874,11 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Işın Hızlı Çoklu Zincir Relayci"
-        }
-      },
-      "coming-soon": "Yakında",
-      "app-spotlight": "UYGULAMA VURGUSU",
-      "partners": {
-        "silence-labs": {
-          "name": "Silence Labs",
-          "description": "MPC-TSS ve Gizlilik Koruyan Hesaplama."
+          "description": "Çılgın Hızlı Çok Zincirli Relay"
         },
-        "human-tech": {
-          "name": "Human.tech",
-          "description": "MPC-TSS ve Gizlilik Koruyucu Hesaplama."
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Senin kripton, senin kuralların: tüm zincirlerde kesintisiz ödemeler."
         }
       }
     },

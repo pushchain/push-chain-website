@@ -1827,7 +1827,7 @@
         },
         "degen-chess": {
           "name": "डेगेन शतरंज",
-          "description": "शतरंज खेलें, दांव लगाएं, युनिवर्सल"
+          "description": "शतरंज खेलें, दांव लगाएं, स्ट्रीम करें और विजेता का अनुमान लगाकर पुरस्कार जीतें"
         },
         "omnihub": {
           "name": "ओम्निहब"
@@ -1844,33 +1844,37 @@
           "name": "स्टार रन",
           "description": "एक डिसेंtrlाइज़्ड, प्लेयर-owed इकॉनोमी"
         },
-        "forge-realm": {
-          "name": "फॉर्च रियलम",
-          "description": "बेस कैरेक्टर और ट्रैट्स को मलता-बिठाकर कई क्रिएटर से मिलाएं"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "आपकी क्रिप्टो, आपके नियम: हर चेन पर निर्बाध भुगतान।"
         },
         "conft-codomain": {
-          "name": "कोएनएफटी/कोडोमेन",
-          "description": "वेब3 मल्टी-चेन हब: डोमेन नाम, NFTs, लॉन्चपैड।"
+          "name": "CoNFT/CoDomain",
+          "description": "Web3 मल्टी-चेन हब: डोमेन नेम, NFTs, लॉन्चपैड।"
         },
         "copet": {
-          "name": "कोपेट",
-          "description": "अपनी ऑन-चेन एक्टिविटी के माध्यम से अपने वर्चुअल पालतू जानवर को खिलाएं, खेलें और बढ़ाएं"
+          "name": "Copet",
+          "description": "अपने वर्चुअल पेट को ऑन-चेन गतिविधि से खिलाएं, खेलें और बढ़ाएं"
         },
-        "surf-layer": {
-          "name": "सर्फ़-लेयर",
-          "description": "लग्गे अपनी पहचान और ७०+ श्रृंखलाओं पर पुरस्कार कमाइए।"
-        },
-        "push-name-service": {
-          "name": "पुश नेम सर्विस",
-          "description": " अपनी .पुश डोमेन प्राप्त करें "
+        "forge-realm": {
+          "name": "Forge Realm",
+          "description": "कई क्रिएटर्स के बेस कैरेक्टर और ट्रेट्स को मिलाएं"
         },
         "nfts2me": {
           "name": "NFTs2Me",
-          "description": "किसी भी चेन पर अपनी NFT कलेक्शन मुफ्त में डिप्लॉय करें"
+          "description": "किसी भी चेन पर मुफ्त में अपना NFT कलेक्शन डिप्लॉय करें"
+        },
+        "push-name-service": {
+          "name": "Push Name Service",
+          "description": "अपना .push डोमेन पाएं"
+        },
+        "surf-layer": {
+          "name": "SurfLayer",
+          "description": "70+ चेन पर अपनी पहचान बनाएं और रिवॉर्ड कमाएं।"
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "तेज़ मल्टीचेन रिलेयर"
+          "description": "अत्यंत तेज़ मल्टीचेन रिलेयर"
         }
       },
       "coming-soon": "आने वाला है",
