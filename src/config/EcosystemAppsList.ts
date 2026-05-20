@@ -1,16 +1,17 @@
 import { EcosystemApp } from '@site/src/components/Ecosystem/EcosystemBlocks';
 
 export const EcosystemFeaturedListUrls = [
-  'https://ramenfi.xyz/',
-  'https://cetra.app/',
   'https://pusd.push.org/',
+  'https://zappi.to/',
+  'https://ramenfi.xyz/',
+  'https://degenchess.fun/',
+  'https://cetra.app/',
   'https://www.thehodl.fun/',
+  'https://push-ninja.fun',
   'https://eon-five.vercel.app',
   'https://www.halofy.ai/',
-  'https://pushbet.fun/',
   'https://catkevin.github.io/OnchainVampireSurvivors/',
   'https://www.lastone.fun/',
-  'https://pushindexer.vercel.app/',
 ] as const;
 
 export const EcosystemPartnersList: EcosystemApp[] = [
@@ -41,6 +42,30 @@ export const EcosystemPartnersList: EcosystemApp[] = [
 
 export const EcosystemAppsList: EcosystemApp[] = [
   {
+    nameKey: 'components.ecosystem-apps-partners.apps.pusd.name',
+    descriptionKey: 'components.ecosystem-apps-partners.apps.pusd.description',
+    icon: '/assets/ecosystem/pusd-icon.png',
+    bgImage: '/assets/ecosystem/pusd-bg.png',
+    bgGradientColor: '#371243',
+    tags: ['DeFi'],
+    href: 'https://pusd.push.org/',
+    titleColor: 'white',
+    descriptionColor: 'white',
+    twitterId: '1993681001076478131',
+    tagsColor: 'white',
+  },
+  {
+    nameKey: 'Zappi.to',
+    descriptionKey:
+      'Your crypto, your rules: seamless payments across every chain.',
+    icon: '/assets/ecosystem/zappi-to-icon.png',
+    bgImage: '/assets/ecosystem/zappi-to-bg.png',
+    bgGradientColor: '#4A13BB',
+    tags: ['Payments'],
+    href: 'https://zappi.to/',
+    titleColor: 'white',
+  },
+  {
     nameKey: 'components.ecosystem-apps-partners.apps.ramen-swap.name',
     descriptionKey:
       'components.ecosystem-apps-partners.apps.ramen-swap.description',
@@ -55,26 +80,14 @@ export const EcosystemAppsList: EcosystemApp[] = [
     appoftheweek: true,
   },
   {
-    nameKey: 'components.ecosystem-apps-partners.apps.halo.name',
-    descriptionKey: 'components.ecosystem-apps-partners.apps.halo.description',
-    icon: '/assets/ecosystem/halo-icon.png',
-    bgImage: '/assets/ecosystem/halo-bg.png',
-    bgGradientColor: '#F3F6EC',
-    tags: ['Agentic AI'],
-    href: 'https://www.halofy.ai/',
-    titleColor: 'black',
-    descriptionColor: 'black',
-    tagsColor: 'black',
-  },
-  {
-    nameKey: 'components.ecosystem-apps-partners.apps.puffles.name',
+    nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
     descriptionKey:
-      'components.ecosystem-apps-partners.apps.puffles.description',
-    icon: '/assets/ecosystem/puffles-icon.jpg',
-    bgImage: '/assets/ecosystem/puffles-bg.jpg',
-    bgGradientColor: '#000000',
-    tags: ['NFT'],
-    href: 'https://puffles.io',
+      'Play, wage bets, stream and guess the winner to win the pool',
+    icon: '/assets/ecosystem/degen-chess-icon.png',
+    bgImage: '/assets/ecosystem/degen-chess-bg.png',
+    bgGradientColor: '#4F38A8',
+    tags: ['Gaming/Streaming'],
+    href: 'https://degenchess.fun/',
     titleColor: 'white',
     descriptionColor: 'white',
     tagsColor: 'white',
@@ -106,6 +119,20 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'white',
   },
   {
+    nameKey: 'components.ecosystem-apps-partners.apps.push-ninja.name',
+    descriptionKey:
+      'components.ecosystem-apps-partners.apps.push-ninja.description',
+    icon: '/assets/ecosystem/push-ninja-icon.png',
+    bgImage: '/assets/ecosystem/push-ninja-bg.png',
+    bgGradientColor: '#5D1D51',
+    tags: ['Gaming'],
+    twitterId: '2014018188434964672',
+    href: 'https://push-ninja.fun',
+    titleColor: 'white',
+    spotlighttextKey:
+      'components.ecosystem-apps-partners.apps.push-ninja.spotlight-text',
+  },
+  {
     nameKey: 'components.ecosystem-apps-partners.apps.eon-ai-butler.name',
     descriptionKey:
       'components.ecosystem-apps-partners.apps.eon-ai-butler.description',
@@ -116,6 +143,18 @@ export const EcosystemAppsList: EcosystemApp[] = [
     twitterId: '1989664469484728745',
     href: 'https://eon-five.vercel.app',
     titleColor: 'white',
+  },
+  {
+    nameKey: 'components.ecosystem-apps-partners.apps.halo.name',
+    descriptionKey: 'components.ecosystem-apps-partners.apps.halo.description',
+    icon: '/assets/ecosystem/halo-icon.png',
+    bgImage: '/assets/ecosystem/halo-bg.png',
+    bgGradientColor: '#F3F6EC',
+    tags: ['Agentic AI'],
+    href: 'https://www.halofy.ai/',
+    titleColor: 'black',
+    descriptionColor: 'black',
+    tagsColor: 'black',
   },
   {
     nameKey:
@@ -143,6 +182,20 @@ export const EcosystemAppsList: EcosystemApp[] = [
     descriptionColor: 'black',
     twitterId: '1993681001076478131',
     tagsColor: 'black',
+  },
+  {
+    nameKey: 'components.ecosystem-apps-partners.apps.puffles.name',
+    descriptionKey:
+      'components.ecosystem-apps-partners.apps.puffles.description',
+    icon: '/assets/ecosystem/puffles-icon.jpg',
+    bgImage: '/assets/ecosystem/puffles-bg.jpg',
+    bgGradientColor: '#000000',
+    tags: ['NFT'],
+    href: 'https://puffles.io',
+    titleColor: 'white',
+    descriptionColor: 'white',
+    tagsColor: 'white',
+    twitterId: '2031754422884487425',
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.pns.name',
@@ -201,20 +254,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     twitterId: '1989664509439713780',
     href: 'https://apt-casino-push-chain.vercel.app/',
     titleColor: 'white',
-  },
-  {
-    nameKey: 'components.ecosystem-apps-partners.apps.push-ninja.name',
-    descriptionKey:
-      'components.ecosystem-apps-partners.apps.push-ninja.description',
-    icon: '/assets/ecosystem/push-ninja-icon.png',
-    bgImage: '/assets/ecosystem/push-ninja-bg.png',
-    bgGradientColor: '#5D1D51',
-    tags: ['Gaming'],
-    twitterId: '2014018188434964672',
-    href: 'https://push-ninja.fun',
-    titleColor: 'white',
-    spotlighttextKey:
-      'components.ecosystem-apps-partners.apps.push-ninja.spotlight-text',
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.tip-up.name',
@@ -277,55 +316,6 @@ export const EcosystemAppsList: EcosystemApp[] = [
     href: 'https://ballsy.push.org/',
     titleColor: 'white',
   },
-  // Doesn't work so disabled
-  // {
-  //   name: 'Athera',
-  //   description: 'Automated crypto inheritance',
-  //   icon: '/assets/ecosystem/athera-icon.png',
-  //   bgImage: '/assets/ecosystem/athera-bg.png',
-  //   bgGradientColor: '#000000',
-  //   tags: ['DeFi'],
-  //   twitterId: '1989664503341129977',
-  //   href: 'https://atherra.vercel.app/',
-  //   titleColor: 'white',
-  // },
-  {
-    nameKey: 'components.ecosystem-apps-partners.apps.pusd.name',
-    descriptionKey: 'components.ecosystem-apps-partners.apps.pusd.description',
-    icon: '/assets/ecosystem/pusd-icon.png',
-    bgImage: '/assets/ecosystem/pusd-bg.png',
-    bgGradientColor: '#371243',
-    tags: ['DeFi'],
-    href: 'https://pusd.push.org/',
-    titleColor: 'white',
-    descriptionColor: 'white',
-    twitterId: '1993681001076478131',
-    tagsColor: 'white',
-  },
-  {
-    nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
-    descriptionKey:
-      'Play, wage bets, stream and guess the winner to win the pool',
-    icon: '/assets/ecosystem/degen-chess-icon.png',
-    bgImage: '/assets/ecosystem/degen-chess-bg.png',
-    bgGradientColor: '#4F38A8',
-    tags: ['Gaming/Streaming'],
-    href: 'https://degenchess.fun/',
-    titleColor: 'white',
-    comingsoon: false,
-  },
-  {
-    nameKey: 'Zappi.to',
-    descriptionKey:
-      'Your crypto, your rules: seamless payments across every chain.',
-    icon: '/assets/ecosystem/zappi-to-icon.png',
-    bgImage: '/assets/ecosystem/zappi-to-bg.png',
-    bgGradientColor: '#4A13BB',
-    tags: ['Payments'],
-    href: 'https://zappi.to/',
-    titleColor: 'white',
-    comingsoon: false,
-  },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.freename.name',
     descriptionKey:
@@ -350,6 +340,19 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'white',
     comingsoon: true,
   },
+  // Doesn't work so disabled
+  // {
+  //   name: 'Athera',
+  //   description: 'Automated crypto inheritance',
+  //   icon: '/assets/ecosystem/athera-icon.png',
+  //   bgImage: '/assets/ecosystem/athera-bg.png',
+  //   bgGradientColor: '#000000',
+  //   tags: ['DeFi'],
+  //   twitterId: '1989664503341129977',
+  //   href: 'https://atherra.vercel.app/',
+  //   titleColor: 'white',
+  // },
+  // --- Secondary (smaller grid) ---
   {
     nameKey: 'components.ecosystem-apps-partners.apps.omnihub.name',
     descriptionKey:
