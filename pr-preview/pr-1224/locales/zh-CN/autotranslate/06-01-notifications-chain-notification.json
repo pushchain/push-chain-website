@@ -1,0 +1,11 @@
+{
+  "notifications": {
+    "chain-notification": {
+      "description": "需要邀请码吗？关注我们，观看我们的说明视频并发表评论。邀请名额有限。",
+      "button-text": "获取邀请码",
+      "button-title": "获取邀请码",
+      "button-aria-label": "获取邀请码！您可以在这里查看",
+      "image-alt": "获取邀请码！"
+    }
+  }
+}
