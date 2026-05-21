@@ -53,7 +53,7 @@ jobs:
       - name: Install and Build
         if: github.event.action != 'closed' # You might want to skip the build if the PR has been closed
         run: |
-          yarn install
+          yarn install --no-immutable
           yarn build:pr:preview
 
       - name: Deploy preview

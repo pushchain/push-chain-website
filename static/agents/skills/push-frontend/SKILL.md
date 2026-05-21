@@ -4,7 +4,7 @@ description: "Use when building React apps with @pushchain/ui-kit - covers PushU
 id: push-frontend
 intent: Enable universal transactions in a React frontend app
 package: '@pushchain/ui-kit'
-package_version: 6.0.9
+package_version: 6.0.12
 current_sdk_version: 6.0.9
 entry: 'usePushChainClient'
 resources: 'https://push.org/agents/resources/push-frontend/index.json'
@@ -51,6 +51,10 @@ createRoot(document.getElementById('root')!).render(
         google: true,           // Google OAuth login
         wallet: { enabled: true }, // external wallet login (MetaMask, WalletConnect, etc.)
       },
+      toast: {
+        position: PushUI.CONSTANTS.TOAST.POSITION.BOTTOM_RIGHT, // optional, default 'bottom-right'
+        hidden: false,          // optional, default false. true = suppress the toast entirely
+      },
     }}
     app={{
       title: 'My App',         // shown in the wallet connection modal
@@ -63,7 +67,7 @@ createRoot(document.getElementById('root')!).render(
 );
 ```
 
-> ⚠️ **Provider prop shape.** `app`, `themeMode`, and `themeOverrides` are **top-level props** on `PushUniversalWalletProvider`, NOT nested inside `config`. `config` only holds `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`. Inside `login`, the wallet option is `wallet: { enabled: true }` (object form) — passing `wallet: true` as a bare boolean does not enable external wallet login and leaves `pushChainClient` null after connect.
+> ⚠️ **Provider prop shape.** `app`, `themeMode`, and `themeOverrides` are **top-level props** on `PushUniversalWalletProvider`, NOT nested inside `config`. `config` only holds `network`, `login`, `uid`, `rpcUrl`, `modal`, `chainConfig`, `version`, `toast`. Inside `login`, the wallet option is `wallet: { enabled: true }` (object form) — passing `wallet: true` as a bare boolean does not enable external wallet login and leaves `pushChainClient` null after connect.
 
 ```tsx
 // App.tsx - PushUniversalAccountButton can go anywhere inside the provider
@@ -207,6 +211,65 @@ When CSS variables aren't granular enough, use `connectButtonClassName` and `con
 ```
 
 > Use `className` overrides for gradients, animations, box-shadow, pseudo-elements, or any style that CSS variables don't expose. `themeOverrides` (`--pwauth-*`) still applies; `className` styles layer on top via standard CSS specificity.
+
+## Progress Toast
+
+When the provider receives `ProgressEvent`s from in-flight universal transactions, it renders a toast notification by default. Both position and visibility are configurable through `config.toast`.
+
+```tsx
+<PushUniversalWalletProvider
+  config={{
+    network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
+    toast: {
+      position: PushUI.CONSTANTS.TOAST.POSITION.BOTTOM_RIGHT,
+      hidden: false,
+    },
+  }}
+>
+```
+
+### `config.toast` shape
+
+| Field | Type | Default | Description |
+| -- | -- | -- | -- |
+| `position` | `ToastPosition` | `'bottom-right'` | Where the toast renders on screen. Use `PushUI.CONSTANTS.TOAST.POSITION.*` (see values below). |
+| `hidden` | `boolean` | `false` | When `true`, the toast is fully suppressed. Useful when the dApp surfaces progress via its own UI through the `progressHook` callback and does not want a duplicate toast. |
+
+### Position values
+
+`PushUI.CONSTANTS.TOAST.POSITION` exposes six anchors:
+
+- `TOP_LEFT` → `'top-left'`
+- `TOP_MIDDLE` → `'top-middle'`
+- `TOP_RIGHT` → `'top-right'`
+- `BOTTOM_LEFT` → `'bottom-left'`
+- `BOTTOM_MIDDLE` → `'bottom-middle'`
+- `BOTTOM_RIGHT` → `'bottom-right'` (default)
+
+### Styling: the `PUAToast` className
+
+The rendered toast carries the className **`PUAToast`** by default. Target it from your own CSS to restyle, reposition with custom transforms, or layer it under other overlays without rewriting the component.
+
+```css
+/* Restyle the toast */
+.PUAToast {
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(52, 89, 240, 0.25);
+  border: 1px solid #3459F0;
+}
+
+/* Tighten the corner offset */
+.PUAToast {
+  margin: 12px;
+}
+
+/* Layer under a modal that should sit on top */
+.PUAToast {
+  z-index: 9000;
+}
+```
+
+> The default toast is enough for most flows. Use `hidden: true` only when you have your own progress UI hooked to `tx.progressHook` and need to avoid a double notification.
 
 ## Hooks
 
