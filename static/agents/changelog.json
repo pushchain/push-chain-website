@@ -1,11 +1,37 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "current_sdk_version": "6.0.9",
-  "current_version": "1.0.19",
-  "generated": "2026-05-19T00:00:00.000Z",
+  "current_version": "1.0.20",
+  "generated": "2026-05-21T00:00:00.000Z",
   "description": "Version history of all /agents/ layer changes, SDK version bumps, and audit passes. Each entry includes the agent-layer content version, affected files, trigger description, and breaking/migration flags. current_version tracks the latest entry; version tracks this file's own schema revision.",
   "entries": [
+    {
+      "date": "2026-05-21T00:00:00.000Z",
+      "version": "1.0.20",
+      "changes": [
+        "Bumped @pushchain/ui-kit 6.0.9 → 6.0.12 across the agent layer (index.json sdk_version sub-object, push-frontend SKILL.md package_version, build script SDK_VERSIONS.uiKit). @pushchain/core stays at 6.0.9; push-backend package_version unchanged. AGENT_LAYER_VERSION 1.0.19 → 1.0.20, AGENT_LAYER_DATE → 2026-05-21. llms.txt regenerated.",
+        "Documented the new progress toast configuration shipped in ui-kit 6.0.12. ProviderConfigProps gained an optional `toast?: ToastProps` field where `ToastProps = { hidden?: boolean; position?: ToastPosition }`. Verified against /tmp/pushchain-ui-kit-6.0.12/package/src/lib/types/PushWalletProvider.types.d.ts (line 35 + lines 74-77) and the WalletContext renderer at context/WalletContext.js (passes config?.toast?.position and config?.toast?.hidden into PushWalletToast).",
+        "ToastPosition enum has six anchors exposed via PushUI.CONSTANTS.TOAST.POSITION: TOP_LEFT, TOP_MIDDLE, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_MIDDLE, BOTTOM_RIGHT. Default is 'bottom-right'. Verified against components/PushWalletToast/index.d.ts TOAST_POSITION declaration and constants/index.js POSITION accessor.",
+        "Documented the PUAToast className. The default className on the rendered PushWalletToast component is the literal string 'PUAToast' (verified in components/PushWalletToast/index.js line 37: `className = 'PUAToast'`). Surfaced this in the new Progress Toast section so devs can target the toast in their own CSS for restyling, repositioning via transform, or z-index layering without rewriting the component.",
+        "push-frontend SKILL.md changes: (1) provider example in `## Setup - Wrap Your App` now includes a `toast: { position, hidden }` block inside `config` with inline defaults; (2) provider-shape callout (`⚠️ Provider prop shape`) now lists `toast` among the valid `config` keys (previously: network, login, uid, rpcUrl, modal, chainConfig, version); (3) new `## Progress Toast` section between Theme Customization and Hooks, covering config table, six position values, PUAToast CSS targeting examples, and a `hidden: true` callout for dApps that already surface progress through `tx.progressHook`."
+      ],
+      "files_affected": [
+        "build.agents.llms.mjs",
+        "static/llms.txt",
+        "static/agents/changelog.json",
+        "static/agents/index.json",
+        "static/agents/skills/push-frontend/SKILL.md",
+        "package.json",
+        "yarn.lock"
+      ],
+      "sdk_version": "6.0.9",
+      "ui_kit_version": "6.0.12",
+      "category": "ui-kit-feature-add",
+      "trigger": "@pushchain/ui-kit published as 6.0.12 with a new progress toast configuration surface. Verified against the published 6.0.12 tarball: PushWalletProvider.types.d.ts adds `toast?: ToastProps` on ProviderConfigProps; PushWalletToast component carries the default className 'PUAToast' and accepts `toastPosition` / `hidden` props that the provider wires through from config.toast. No core changes.",
+      "breaking": false,
+      "migration": "No code changes required to existing apps. The toast renders in the default position (bottom-right) when omitted. To customize, add `toast: { position: PushUI.CONSTANTS.TOAST.POSITION.<ANCHOR>, hidden: false }` inside the provider config object. To restyle, target the `.PUAToast` className in your own CSS."
+    },
     {
       "date": "2026-05-19T00:00:00.000Z",
       "version": "1.0.19",
