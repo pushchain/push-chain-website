@@ -48,10 +48,7 @@ export const useChainNotification = () => {
           position='bottom-left'
           onClick={() => {
             localStorage.setItem('updatedSeasonThreeNotification', 'true');
-            window.open(
-              'https://x.com/PushChain/status/2039704813412425925?s=20',
-              '_blank'
-            );
+            window.open('https://portal.push.org', '_blank');
             toast.dismiss(toastId);
           }}
           onClose={() => {
