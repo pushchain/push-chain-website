@@ -54,17 +54,17 @@ export const EcosystemAppsList: EcosystemApp[] = [
     twitterId: '1993681001076478131',
     tagsColor: 'white',
   },
-  // {
-  //   nameKey: 'components.ecosystem-apps-partners.apps.zappi-to.name',
-  //   descriptionKey:
-  //     'components.ecosystem-apps-partners.apps.zappi-to.description',
-  //   icon: '/assets/ecosystem/zappi-to-icon.png',
-  //   bgImage: '/assets/ecosystem/zappi-to-bg.png',
-  //   bgGradientColor: '#4A13BB',
-  //   tags: ['Payments'],
-  //   href: 'https://zappi.to/',
-  //   titleColor: 'white',
-  // },
+  {
+    nameKey: 'components.ecosystem-apps-partners.apps.zappi-to.name',
+    descriptionKey:
+      'components.ecosystem-apps-partners.apps.zappi-to.description',
+    icon: '/assets/ecosystem/zappi-to-icon.png',
+    bgImage: '/assets/ecosystem/zappi-to-bg.png',
+    bgGradientColor: '#4A13BB',
+    tags: ['Payments'],
+    href: 'https://zappi.to/',
+    titleColor: 'white',
+  },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.ramen-swap.name',
     descriptionKey:

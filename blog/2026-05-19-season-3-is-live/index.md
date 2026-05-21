@@ -1,6 +1,6 @@
 ---
 slug: push-rewards-program
-title: 'Push Rewards Program goes Public: Universal Network Meets Real Usage
+title: 'Push Rewards Program goes Public: Universal Network Meets Real Usage'
 authors: [push]
 image: './cover-image.webp'
 description: “Following the launch of Donut Testnet and $PC ticker reveal, Push Chain has continued to gain strong momentum. Over the past few months,"
