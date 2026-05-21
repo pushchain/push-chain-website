@@ -97,6 +97,7 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 | _`network`_   | `PushUI.CONSTANTS.PUSH_NETWORK` | -                | Push Chain network to connect to. For example: `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` <Details summary="PushUI.CONSTANTS.PUSH_NETWORK" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET_DONUT` `PushUI.CONSTANTS.PUSH_NETWORK.LOCALNET`</Details> |
 | `login`       | `Object`                        | _\*\*_           | Login method configuration. _\*\*_ See `config.login` Options.                                                                                                                                                                                                                                                              |
 | `modal`       | `Object`                        | _\*\*_           | Global defaults for login and connected modal instances. _\*\*_ See `config.modal` Options.                                                                                                                                                                                                                                 |
+| `toast`       | `Object`                        | _\*\*_           | Transaction toast configuration. _\*\*_ See `config.toast` Options.                                                                                                                                                                                                                                                        |
 | `uid`         | `string`                        | 'default'        | Unique identifier for this provider. instance                                                                                                                                                                                                                                                                               |
 | `rpcUrl`      | `string`                        | Public endpoints | Custom JSON-RPC endpoint for supported chains.                                                                                                                                                                                                                                                                              |
 | `chainConfig` | `Object`                        | _\*\*_           | Custom settings to configure the SDK instance. _\*\*_ See `config.chainConfig` Options.                                                                                                                                                                                                                                     |
@@ -160,6 +161,19 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 | `bgImage`              | `string`                                 | `null`                                                | Background image for the login modal                                                                                                                                                                                                               |
 | `connectedLayout`      | `PushUI.CONSTANTS.CONNECTED.LAYOUT`      | `PushUI.CONSTANTS.CONNECTED.LAYOUT.HOVER`             | Connected modal layout type. <Details summary="PushUI.CONSTANTS.CONNECTED.LAYOUT" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.LAYOUT.FULL` `PushUI.CONSTANTS.CONNECTED.LAYOUT.HOVER`</Details>                          |
 | `connectedInteraction` | `PushUI.CONSTANTS.CONNECTED.INTERACTION` | `PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTABLE` | Connected modal outside interaction type. <Details summary="PushUI.CONSTANTS.CONNECTED.INTERACTION" className="alert alert--minimal-api-table">`PushUI.CONSTANTS.CONNECTED.INTERACTION.INTERACTABLE` `PushUI.CONSTANTS.INTERACTION.BLUR`</Details> |
+
+</PushAPIReference>
+
+</Details>
+
+<Details summary="`config.toast` Options" className="alert alert--minimal code">
+
+<PushAPIReference showRequiredNotice={false}>
+
+| Property               | Type                                     | Default                                               | Description                                                                                                                                                                                                                                        |
+| ---------------------- | ---------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `position`          | `PushUI.CONSTANTS.TOAST.POSITION`          | `PushUI.CONSTANTS.TOAST.POSITION.BOTTOM_RIGHT`         | Toast position.                                        |
+| `hidden`           | `boolean`                                | `false`                                               | Hide toast.                                                                                                                                                                                                                          |
 
 </PushAPIReference>
 
