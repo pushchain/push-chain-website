@@ -1916,14 +1916,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Brauchst du einen Einladungscode? Folge uns, schau dir unser Erklärvideo an und hinterlasse einen Kommentar. Nur begrenzte Einladungen verfügbar.",
-      "button-text": "Einladungscode anfordern",
-      "button-title": "Einladungscode erhalten",
-      "button-aria-label": "Einladungscode abrufen!. Du kannst ihn hier prüfen",
-      "image-alt": "Einladungscode erhalten!",
+      "description": "Entdecke die Kraft universeller Apps und werde in der letzten Saison vor dem Mainnet belohnt!",
+      "button-title": "Jetzt starten!",
+      "button-aria-label": "Jetzt starten!. Du kannst es hier ansehen",
+      "image-alt": "Jetzt starten!",
       "title": "",
+      "button-text": "Jetzt starten!",
       "close-button-title": "Toast-Benachrichtigung schließen",
-      "close-button-aria-label": "Push Chain Benachrichtigung wegklappen",
+      "close-button-aria-label": "Push Chain Toast-Benachrichtigung schließen",
       "container-aria-label": "Push Chain Toast-Benachrichtigung"
     },
     "rewards-notification": {

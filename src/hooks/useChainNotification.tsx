@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 // React and other libraries
-import React, { FC, ReactNode, useEffect, useState } from 'react';
+import { FC, ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { BiX } from 'react-icons/bi';
 import { toast, Toaster } from 'sonner';
@@ -47,7 +47,7 @@ export const useChainNotification = () => {
           description={t('notifications.chain-notification.description')}
           position='bottom-left'
           onClick={() => {
-            localStorage.setItem('seasonThreeNotification', 'true');
+            localStorage.setItem('updatedSeasonThreeNotification', 'true');
             window.open(
               'https://x.com/PushChain/status/2039704813412425925?s=20',
               '_blank'
@@ -55,7 +55,7 @@ export const useChainNotification = () => {
             toast.dismiss(toastId);
           }}
           onClose={() => {
-            localStorage.setItem('seasonThreeNotification', 'true');
+            localStorage.setItem('updatedSeasonThreeNotification', 'true');
             toast.dismiss(toastId);
           }}
           t={t}
@@ -72,7 +72,7 @@ export const useChainNotification = () => {
     // Ensure this code only runs in the browser
     if (typeof window !== 'undefined') {
       const notificationAlreadyShown =
-        localStorage.getItem('seasonThreeNotification') === 'true';
+        localStorage.getItem('updatedSeasonThreeNotification') === 'true';
 
       if (!notificationAlreadyShown && !hasMounted) {
         showNotification();

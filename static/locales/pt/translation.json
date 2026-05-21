@@ -1918,14 +1918,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Precisa de um código de convite? Siga-nos, assista ao nosso vídeo explicativo e deixe um comentário. Convites limitados.",
-      "button-text": "Obter Código de Convite",
-      "button-title": "Obter Código de Convite",
-      "button-aria-label": "Obtenha o Código de Convite!. Você pode conferir aqui",
-      "image-alt": "Obtenha o Código de Convite!",
-      "close-button-title": "Fechar notificação",
-      "close-button-aria-label": "Dismiss Push Chain toast notification",
-      "container-aria-label": "Notificação Push Chain",
+      "description": "Explore o poder dos apps universais e seja recompensado na temporada final antes da mainnet!",
+      "button-title": "Começar!",
+      "button-aria-label": "Começar!. Você pode verificar aqui",
+      "image-alt": "Começar!",
+      "button-text": "Começar!",
+      "close-button-title": "Fechar notificação toast",
+      "close-button-aria-label": "Fechar notificação toast da Push Chain",
+      "container-aria-label": "Notificação toast da Push Chain",
       "title": ""
     },
     "rewards-notification": {

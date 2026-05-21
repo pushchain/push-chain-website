@@ -1926,15 +1926,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Нужен код приглашения? Подпишитесь, посмотрите наше объясняющее видео и оставьте комментарий. Количество приглашений ограничено.",
-      "button-text": "Получить код приглашения",
-      "button-title": "Получить код приглашения",
-      "button-aria-label": "Получить код приглашения!. Вы можете посмотреть его здесь",
-      "image-alt": "Получите пригласительный код!",
+      "description": "Исследуйте возможности универсальных приложений и получайте награды в финальном сезоне перед запуском mainnet!",
+      "button-title": "Начать!",
+      "button-aria-label": "Начать!. Вы можете ознакомиться здесь",
+      "image-alt": "Начать!",
       "title": "",
+      "button-text": "Начать!",
       "close-button-title": "Закрыть уведомление",
       "close-button-aria-label": "Закрыть уведомление Push Chain",
-      "container-aria-label": "Push Chain уведомление в тост"
+      "container-aria-label": "Уведомление Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Закрытое бета-тестирование запущено!",

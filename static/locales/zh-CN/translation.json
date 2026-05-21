@@ -1911,15 +1911,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "需要邀请码吗？关注我们，观看我们的说明视频并发表评论。邀请名额有限。",
-      "button-text": "获取邀请码",
-      "button-title": "获取邀请码",
-      "button-aria-label": "获取邀请码！您可以在这里查看",
-      "image-alt": "获取邀请码！",
-      "title": "在注出一页贼还",
-      "close-button-title": "关闭提示消息",
-      "close-button-aria-label": "关闭“Push Chain”通知",
-      "container-aria-label": "区块链提示通知"
+      "description": "探索通用应用的力量，在主网上线前的最后一个赛季中获得奖励！",
+      "button-title": "开始！",
+      "button-aria-label": "开始！。您可以在这里查看",
+      "image-alt": "开始！",
+      "title": "",
+      "button-text": "开始！",
+      "close-button-title": "关闭提示通知",
+      "close-button-aria-label": "关闭 Push Chain 提示通知",
+      "container-aria-label": "Push Chain 提示通知"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta 已经上线！",

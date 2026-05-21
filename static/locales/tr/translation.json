@@ -1907,15 +1907,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Davetiye koduna mı ihtiyacın var? Takip et, Açıklayıcı Videomuzu İzle ve bir yorum bırak. Sınırlı sayıda davetiye mevcut.",
-      "button-text": "Davet Kodunu Al",
-      "button-title": "Davet Kodunu Al",
-      "button-aria-label": "Davet Kodunu Al!. Buradan kontrol edebilirsin",
-      "image-alt": "Davet Kodunu Alın!",
-      "title": "{chainName} zincirinde işlemler yapılıyor",
-      "close-button-title": "Toast uyarıyı kapat",
-      "close-button-aria-label": "PushChain bildirimlerini görmezden gel",
-      "container-aria-label": "Push Chain bildirim tostu"
+      "description": "Evrensel uygulamaların gücünü keşfedin ve mainnet öncesindeki son sezonda ödüller kazanın!",
+      "button-title": "Başla!",
+      "button-aria-label": "Başla!. Buradan kontrol edebilirsiniz",
+      "image-alt": "Başla!",
+      "title": "",
+      "button-text": "Başla!",
+      "close-button-title": "Toast bildirimini kapat",
+      "close-button-aria-label": "Push Chain toast bildirimini kapat",
+      "container-aria-label": "Push Chain toast bildirimi"
     },
     "rewards-notification": {
       "title": "Donut Testnet Kapalı Beta Sürümü Başladı!",

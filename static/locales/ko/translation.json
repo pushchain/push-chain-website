@@ -1913,15 +1913,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "초대 코드가 필요하신가요? 팔로우하고, 설명 영상을 시청하신 후 댓글을 남겨주세요. 제한된 초대만 가능합니다.",
-      "button-text": "초대 코드 받기",
-      "button-title": "초대 코드 받기",
-      "button-aria-label": "초대 코드를 받으세요!. 여기에서 확인하실 수 있습니다",
-      "image-alt": "초대 코드 받기!",
+      "description": "유니버설 앱의 힘을 탐험하고 메인넷 이전 마지막 시즌에서 보상을 받으세요!",
+      "button-title": "시작하기!",
+      "button-aria-label": "시작하기!. 여기서 확인할 수 있습니다",
+      "image-alt": "시작하기!",
       "title": "",
+      "button-text": "시작하기!",
       "close-button-title": "토스트 알림 닫기",
-      "close-button-aria-label": " Push Chain 알림을 닫습니다.",
-      "container-aria-label": "푸시체인 토스트 알림"
+      "close-button-aria-label": "Push Chain 토스트 알림 닫기",
+      "container-aria-label": "Push Chain 토스트 알림"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta가 시작되었습니다!",

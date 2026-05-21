@@ -1906,15 +1906,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "هل تحتاج إلى رمز دعوة؟ تابعنا، وشاهد الفيديو التوضيحي الخاص بنا، وأضف تعليقًا. الدعوات محدودة.",
-      "button-text": "احصل على رمز الدعوة",
-      "button-title": "احصل على رمز الدعوة",
-      "button-aria-label": "احصل على كود الدعوة!. يمكنك التحقق منه هنا",
-      "image-alt": "احصل على رمز الدعوة!",
+      "description": "استكشف قوة التطبيقات العالمية واحصل على مكافآت في الموسم الأخير قبل الإطلاق الرئيسي!",
+      "button-title": "ابدأ الآن!",
+      "button-aria-label": "ابدأ الآن!. يمكنك الاطلاع عليه هنا",
+      "image-alt": "ابدأ الآن!",
       "title": "",
-      "close-button-title": "إغلاق إشعار شريحة",
-      "close-button-aria-label": "إلغاء الإخطار من شريحة Push Chain",
-      "container-aria-label": "toast notification من Push Chain"
+      "button-text": "ابدأ الآن!",
+      "close-button-title": "إغلاق إشعار الشريحة",
+      "close-button-aria-label": "إلغاء إشعار Push Chain",
+      "container-aria-label": "إشعار Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta is Live!",

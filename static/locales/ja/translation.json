@@ -1928,15 +1928,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "招待コードが必要ですか？フォローして、解説動画をご覧になり、コメントを投稿してください。招待コードは限定数です。",
-      "button-text": "招待コードを取得",
-      "button-title": "招待コードを取得",
-      "button-aria-label": "招待コードを入手！こちらで確認できます",
-      "image-alt": "招待コードを入手!",
-      "title": "{{-chainName}}で新しいブロックが見つかりました。",
+      "description": "ユニバーサルアプリの力を探索し、メインネット前の最終シーズンで報酬を獲得しましょう！",
+      "button-title": "始める！",
+      "button-aria-label": "始める！。こちらで確認できます",
+      "image-alt": "始める！",
+      "title": "",
+      "button-text": "始める！",
       "close-button-title": "トースト通知を閉じる",
-      "close-button-aria-label": "Push Chain トースト通知を閉じる",
-      "container-aria-label": "プッシュチェーン・トースト通知"
+      "close-button-aria-label": "Push Chainトースト通知を閉じる",
+      "container-aria-label": "Push Chainトースト通知"
     },
     "rewards-notification": {
       "title": "Donut Testnet クロースドベータ版が開始されました！",

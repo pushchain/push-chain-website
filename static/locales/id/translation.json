@@ -1904,15 +1904,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Butuh kode undangan? Ikuti, Tonton Video Penjelasan kami dan tinggalkan komentar. Undangan terbatas.",
-      "button-text": "Dapatkan Kode Undangan",
-      "button-title": "Dapatkan Kode Undangan",
-      "button-aria-label": "Dapatkan Kode Undangan!. Kamu bisa memeriksanya di sini",
-      "image-alt": "Dapatkan Kode Undangan!",
-      "title": "{token} jaringan utama telah diluncurkan!",
+      "description": "Jelajahi kekuatan aplikasi universal dan dapatkan hadiah di musim terakhir sebelum mainnet!",
+      "button-title": "Mulai!",
+      "button-aria-label": "Mulai!. Anda dapat memeriksanya di sini",
+      "image-alt": "Mulai!",
+      "title": "",
+      "button-text": "Mulai!",
       "close-button-title": "Tutup notifikasi toast",
-      "close-button-aria-label": "Tutup notifikasi Push Chain",
-      "container-aria-label": "Peringatan Toast Push Chain"
+      "close-button-aria-label": "Tutup notifikasi toast Push Chain",
+      "container-aria-label": "Notifikasi toast Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta sudah dibuka!",

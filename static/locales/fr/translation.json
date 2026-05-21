@@ -1904,14 +1904,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Besoin d'un code d'invitation ? Suivez-nous, regardez notre vidéo explicative et laissez un commentaire. Invites limitées.",
-      "button-text": "Obtenir le code d'invitation",
-      "button-title": "Obtenir le code d'invitation",
-      "button-aria-label": "Obtenir le code d'invitation ! Vous pouvez y jeter un coup d'œil ici",
-      "image-alt": "Obtenez votre code d'invitation !",
-      "close-button-title": "Fermer la notification",
-      "close-button-aria-label": "Fermer la notification Push Chain",
-      "container-aria-label": "Notification Push Chain"
+      "description": "Explorez la puissance des applications universelles et soyez récompensé lors de la dernière saison avant le mainnet !",
+      "button-title": "Commencer !",
+      "button-aria-label": "Commencer !. Vous pouvez le consulter ici",
+      "image-alt": "Commencer !",
+      "button-text": "Commencer !",
+      "close-button-title": "Fermer la notification toast",
+      "close-button-aria-label": "Ignorer la notification toast Push Chain",
+      "container-aria-label": "Notification toast Push Chain",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta est maintenant disponible !",

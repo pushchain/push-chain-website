@@ -1899,15 +1899,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "¿Necesitas un código de invitación? Sigue nuestras redes, mira nuestro Video Explicativo y deja un comentario. ¡Invitaciones limitadas!.",
-      "button-text": "Obtener código de invitación",
-      "button-title": "Obtén el código de invitación",
-      "button-aria-label": "¡Obtén tu código de invitación!. Puedes revisarlo aquí",
-      "image-alt": "¡Obtén tu código de invitación!",
+      "description": "¡Explora el poder de las aplicaciones universales y obtén recompensas en la temporada final antes del mainnet!",
+      "button-title": "¡Empezar!",
+      "button-aria-label": "¡Empezar!. Puedes verlo aquí",
+      "image-alt": "¡Empezar!",
       "title": "",
-      "close-button-title": "Cerrar notificación",
+      "button-text": "¡Empezar!",
+      "close-button-title": "Cerrar notificación toast",
       "close-button-aria-label": "Descartar notificación toast de Push Chain",
-      "container-aria-label": "Notificación del Push Chain"
+      "container-aria-label": "Notificación toast de Push Chain"
     },
     "info-bar": {
       "title": "¡La invitación exclusiva a la Temporada 3 ya está activa!",

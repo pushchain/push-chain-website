@@ -197,6 +197,20 @@ export const EcosystemAppsList: EcosystemApp[] = [
     twitterId: '2031754422884487425',
   },
   {
+    nameKey: 'components.ecosystem-apps-partners.apps.puffles.name',
+    descriptionKey:
+      'components.ecosystem-apps-partners.apps.puffles.description',
+    icon: '/assets/ecosystem/puffles-icon.jpg',
+    bgImage: '/assets/ecosystem/puffles-bg.jpg',
+    bgGradientColor: '#000000',
+    tags: ['NFT'],
+    href: 'https://puffles.io',
+    titleColor: 'white',
+    descriptionColor: 'white',
+    tagsColor: 'white',
+    twitterId: '2031754422884487425',
+  },
+  {
     nameKey: 'components.ecosystem-apps-partners.apps.pns.name',
     descriptionKey: 'components.ecosystem-apps-partners.apps.pns.description',
     icon: '/assets/ecosystem/pns-icon.png',
