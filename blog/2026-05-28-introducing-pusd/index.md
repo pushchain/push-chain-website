@@ -1,6 +1,6 @@
 ---
 slug: introducing-pusd
-title: 'Introducing PUSD. A Universal Stablecoin Built for the Future of Onchain Payments.'
+title: 'Introducing PUSD: A Universal Stablecoin Built for the Future of Onchain Payments.'
 authors: [push]
 image: './cover-image.webp'
 description: "PUSD is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1."
@@ -44,7 +44,8 @@ Now, if you zoom out and try to apply this workflow for bigger organizations, te
 That is the problem PUSD is built to solve.
 
 
-**Missed opportunity:**
+## Missed opportunity:
+
 PS: There's over $320 billion in stablecoin liquidity across 50+ chain-token pairs. But none of it is shared. An app on Arbitrum can't tap USDC liquidity sitting on Solana. A prediction market on Base can't settle with USDT locked on Ethereum.
 
 PUSD is designed to remove that problem at the application layer.
@@ -67,7 +68,7 @@ Every PUSD is backed by reserve assets. The system is designed around reserve ac
 **Universal stablecoin liquidity for Push Chain apps**
 Instead of every app needing to support every chain-specific version of USDC or USDT, apps can integrate PUSD as the common stablecoin layer.
 
-Integration takes a few hours, not months. [Refer the guide here](https://pusd.push.org/).
+Integration takes a few hours, not months. [Refer the guide here](https://pusd.push.org/docs/).
 
 **Instantly redeemable into chain-specific stablecoins**
 Users can burn PUSD and redeem it back to required stablecoins. 
