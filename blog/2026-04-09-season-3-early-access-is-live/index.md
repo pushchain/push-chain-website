@@ -6,7 +6,6 @@ image: './cover-image.webp'
 description: “Early Access for the FINAL season of Push Points Program before mainnet is live!"
 text: “Early Access for the FINAL season of Push Points Program before mainnet is live!"
 tags: [Featured, Programs]
-showcase: true
 twitterId: "2042241539586576800"
 ---
 

@@ -16478,6 +16478,12 @@ Customize the behavior of the wallet connection, logins, and modals by using the
 | `position`          | `PushUI.CONSTANTS.TOAST.POSITION`          | `PushUI.CONSTANTS.TOAST.POSITION.BOTTOM_RIGHT`         | Toast position.                                        |
 | `hidden`           | `boolean`                                | `false`                                               | Hide toast.                                                                                                                                                                                                                          |
 
+:::note
+
+The transaction toast uses `PUAToast` as the default root class name. You can target it in CSS to customize the toast container.
+
+:::
+
 | Property         | Type                              | Default                                                        | Description                                                                     |
 | ---------------- | --------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `rpcUrls`        | `Partial>`  | `{}`                                                           | Custom RPC URLs mapped by chain IDs.                                            |
@@ -16721,8 +16727,8 @@ function App() {
 | `modalAppOverride`  | `Object`          | _\*\*_                | Used to override app preview in the modal presented. _\*\*_ See `modalAppOverride` prop for more info.                                                                                                                                            |
 | `customConnectComponent`  | `React.ReactNode`          | -                | Custom component to replace the default Connect Wallet button when the user is not connected.                                                                                                                                            |
 | `customConnectedComponent`  | `React.ReactNode`          | -               | Custom component to replace the default connected wallet button after the user connects.                                                                                                                                            |
-| `connectButtonClassName`  | `string`          | -                | CSS class applied to the default Connect Wallet button.                                                                                                                                           |
-| `connectedButtonClassName`  | `string`          | -                | CSS class applied to the default connected wallet button.                                                                                                                                          |
+| `connectButtonClassName`  | `string`          |  `"PUABConnect"`               | CSS class applied to the default Connect Wallet button.                                                                                                                                           |
+| `connectedButtonClassName`  | `string`          | `"PUABConnected"`                | CSS class applied to the default connected wallet button.                                                                                                                                          |
 
 ### `loginAppOverride` props
 

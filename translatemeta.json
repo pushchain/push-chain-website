@@ -4384,8 +4384,8 @@
       }
     },
     "06-01-notifications-chain-notification.json": {
-      "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-      "lastUpdated": "2026-05-19T12:09:33.042Z",
+      "checksum": "a23ccb4c4b24c6b805679e2eb51ff441",
+      "lastUpdated": "2026-05-28T14:02:57.513Z",
       "keys": {
         "notifications.chain-notification.title": {
           "checksum": "d41d8cd98f00b204e9800998ecf8427e",
@@ -4393,29 +4393,29 @@
           "lastUpdated": "2025-11-08T13:06:33.009Z"
         },
         "notifications.chain-notification.description": {
-          "checksum": "90e6d7490f25df6c685ff472e4dc0d43",
-          "value": "Need an invite code? Follow, Watch our Explainer Video and drop a comment. Limited invites only.",
-          "lastUpdated": "2026-04-09T18:48:51.232Z"
+          "checksum": "bbd9719d081b8c3bdaef42b389705452",
+          "value": "Come explore the power of universal apps and get rewarded in the final season before mainnet!",
+          "lastUpdated": "2026-05-28T14:02:57.513Z"
         },
         "notifications.chain-notification.button-text": {
-          "checksum": "ace08cb4d71c56232678dbdf1dd28a9f",
-          "value": "Get Invite Code",
-          "lastUpdated": "2026-04-09T18:48:51.232Z"
+          "checksum": "c2d96b4654e130748676f53d50c6221b",
+          "value": "Get Started!",
+          "lastUpdated": "2026-05-28T14:02:57.513Z"
         },
         "notifications.chain-notification.button-title": {
-          "checksum": "ace08cb4d71c56232678dbdf1dd28a9f",
-          "value": "Get Invite Code",
-          "lastUpdated": "2026-04-09T18:48:51.232Z"
+          "checksum": "c2d96b4654e130748676f53d50c6221b",
+          "value": "Get Started!",
+          "lastUpdated": "2026-05-28T14:02:57.513Z"
         },
         "notifications.chain-notification.button-aria-label": {
-          "checksum": "d0682676dbd08d51467587e61e4919ae",
-          "value": "Get Invite Code!. You can check it out here",
-          "lastUpdated": "2026-04-09T18:48:51.232Z"
+          "checksum": "d31070d00f6d803151853b33cf25b1b7",
+          "value": "Get Started!. You can check it out here",
+          "lastUpdated": "2026-05-28T14:02:57.513Z"
         },
         "notifications.chain-notification.image-alt": {
-          "checksum": "1020d1c7b4871a863df2f10d87a7bbed",
-          "value": "Get Invite Code!",
-          "lastUpdated": "2026-04-09T18:48:51.232Z"
+          "checksum": "c2d96b4654e130748676f53d50c6221b",
+          "value": "Get Started!",
+          "lastUpdated": "2026-05-28T14:02:57.513Z"
         },
         "notifications.chain-notification.close-button-title": {
           "checksum": "dd25fda8f7137bb8300b81b852e3361a",
@@ -8065,9 +8065,56 @@
         "lastUpdated": "2026-02-08T05:29:40.984Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:32:51.997Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:32:51.997Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:32:51.997Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:32:51.997Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:32:51.997Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -10799,9 +10846,56 @@
         "lastUpdated": "2026-02-08T05:31:01.647Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:37:28.855Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:37:28.855Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:37:28.855Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:37:28.855Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:37:28.855Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -13533,9 +13627,56 @@
         "lastUpdated": "2026-02-08T05:32:20.452Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:42:00.185Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:42:00.185Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:42:00.185Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:42:00.185Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:42:00.185Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -16267,9 +16408,56 @@
         "lastUpdated": "2026-02-08T05:33:40.479Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:46:17.965Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:46:17.965Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:46:17.965Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:46:17.965Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:46:17.965Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -19001,9 +19189,56 @@
         "lastUpdated": "2026-02-08T05:35:03.731Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:50:22.525Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:50:22.525Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:50:22.525Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:50:22.525Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:50:22.525Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -21735,9 +21970,56 @@
         "lastUpdated": "2026-02-08T05:36:31.461Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:54:30.538Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:54:30.538Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:54:30.538Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:54:30.538Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:54:30.538Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -24469,9 +24751,56 @@
         "lastUpdated": "2026-02-08T05:37:57.944Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T18:58:25.730Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T18:58:25.730Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T18:58:25.730Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T18:58:25.730Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T18:58:25.730Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -27203,9 +27532,56 @@
         "lastUpdated": "2026-02-08T05:39:26.756Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:02:20.509Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:02:20.509Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:02:20.509Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:02:20.509Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:02:20.509Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -29937,9 +30313,56 @@
         "lastUpdated": "2026-02-08T05:40:53.466Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:05:59.714Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:05:59.714Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:05:59.714Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:05:59.714Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:05:59.714Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -32671,9 +33094,56 @@
         "lastUpdated": "2026-02-08T05:42:22.522Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:09:29.906Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:09:29.906Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:09:29.906Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:09:29.906Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:09:29.906Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -35405,9 +35875,56 @@
         "lastUpdated": "2026-02-08T05:43:52.138Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:13:05.193Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:13:05.193Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:13:05.193Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:13:05.193Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:13:05.193Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -38139,9 +38656,56 @@
         "lastUpdated": "2026-02-08T05:45:21.245Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:16:32.491Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:16:32.491Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:16:32.491Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:16:32.491Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:16:32.491Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
@@ -40873,9 +41437,56 @@
         "lastUpdated": "2026-02-08T05:46:50.123Z"
       },
       "06-01-notifications-chain-notification.json": {
-        "translated": true,
-        "checksum": "1e5a4f889f8538d21396001df5c4e5b9",
-        "lastUpdated": "2026-05-17T19:20:02.160Z"
+        "translated": false,
+        "checksum": null,
+        "lastUpdated": null,
+        "keys": {
+          "notifications.chain-notification.title": {
+            "translated": true,
+            "checksum": "d41d8cd98f00b204e9800998ecf8427e",
+            "lastUpdated": "2026-05-17T19:20:02.160Z"
+          },
+          "notifications.chain-notification.description": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-text": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-title": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.button-aria-label": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.image-alt": {
+            "translated": false,
+            "checksum": null,
+            "lastUpdated": null
+          },
+          "notifications.chain-notification.close-button-title": {
+            "translated": true,
+            "checksum": "dd25fda8f7137bb8300b81b852e3361a",
+            "lastUpdated": "2026-05-17T19:20:02.160Z"
+          },
+          "notifications.chain-notification.close-button-aria-label": {
+            "translated": true,
+            "checksum": "7cbb7096ddb39dcbeb3b4f6534e0e167",
+            "lastUpdated": "2026-05-17T19:20:02.160Z"
+          },
+          "notifications.chain-notification.container-aria-label": {
+            "translated": true,
+            "checksum": "558cf4028d0899331b90978c7eeb1756",
+            "lastUpdated": "2026-05-17T19:20:02.160Z"
+          }
+        }
       },
       "06-02-notifications-rewards-notification.json": {
         "translated": true,
