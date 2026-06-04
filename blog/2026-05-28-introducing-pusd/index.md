@@ -10,7 +10,7 @@ showcase: true
 twitterId: ""
 ---
 
-![Cover Image of Push Rewards Program](./cover-image.webp)
+![Cover Image of Introducing PUSD](./cover-image.webp)
 
 <!--truncate-->
 
@@ -71,7 +71,7 @@ Instead of every app needing to support every chain-specific version of USDC or 
 Integration takes a few hours, not months. [Refer the guide here](https://pusd.push.org/docs/).
 
 **Instantly redeemable into chain-specific stablecoins**
-Users can burn PUSD and redeem it back to required stablecoins. 
+Users can burn PUSD and redeem it back to required stablecoins.
 
 **Universal means Universal:**
 PUSD is built for a multi-chain world. A user may enter with stablecoin liquidity from one chain and redeem into another supported chain, depending on available reserves and routing.
@@ -112,7 +112,7 @@ The yield is not based on aggressive farming, leverage, volatile collateral, or 
 Check out [Zappi.to](http://zappi.to): An instant payment app for inide hackers and freelancers. Receive payments in stablecoins in seconds instead of weeks.
 
 **Predict and trade across chains**
-Prediction markets today only accept stablecoins on their native chain, which cuts out users on every other chain. 
+Prediction markets today only accept stablecoins on their native chain, which cuts out users on every other chain.
 
 A prediction market settling in PUSD lets anyone from any supported chain place a bet with whatever stablecoin they already hold. No bridging before every trade.
 
