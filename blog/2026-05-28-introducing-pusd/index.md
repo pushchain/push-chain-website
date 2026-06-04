@@ -6,7 +6,6 @@ image: './cover-image.webp'
 description: "PUSD is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1."
 text: "PUSD is a universal stablecoin that unifies fragmented USDC, USDT liquidity from any chain to enable bridgeless, cross-chain asset movement. Every PUSD is backed 1:1."
 tags: [Featured, Product, Ecosystem]
-showcase: true
 twitterId: ""
 ---
 
