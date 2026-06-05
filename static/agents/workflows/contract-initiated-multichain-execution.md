@@ -253,7 +253,6 @@ Mirrors `@pushchain/core/src/lib/orchestrator/internals/gas-calculator.js#estima
 | `insufficient msg.value` | Protocol fee not included | Pass enough ETH/PC as `msg.value` to cover UGPC fee |
 | Outbound executed but no inbound | (a) No inbound handler implemented, OR (b) on a round-trip, `gasLimit < 2_000_000`, OR (c) wire format missing the CEA self-call | (a) Implement `executeUniversalTx()` 6-arg. (b) Set `gasLimit: 2_000_000` on UGPC outbound. (c) Include a step in the destination CEA's outer multicall that self-calls `sendUniversalTxToUEA` on the CEA itself. |
 | Solana outbound reverts with `STF` | `msg.value` to UGPC under-sizes the $PC → pSOL Uniswap V3 swap | Use the off-chain sizing snippet above; never use a flat `balance/2`. |
-| Push tx succeeds but no Sepolia activity | Push → Sepolia outbound is currently NOT relayed by TSS on Donut Testnet | Use BNB Testnet as the destination for now. Push → BNB outbound and Sepolia → Push inbound work. |
 | Contract CEA has no gas | First call deploys CEA; needs funding | Ensure contract has $PC for gas; CEA auto-funds on first use |
 
 ## Agent Notes

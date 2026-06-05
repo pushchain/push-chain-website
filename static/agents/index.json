@@ -1,21 +1,21 @@
 {
   "description": "Push Chain agent-layer root index. Curated discovery entry points for agents and retrieval systems — see sub-index files (workflows/index.json, examples/index.json, resources/index.json, schemas/index.json, skills/index.json) for complete per-category listings. Push Chain is a universal L1 blockchain enabling apps to deploy once and execute across all supported chains.",
   "schema_version": "1.0.0",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
   "current_sdk_version": "6.0.9",
   "sdk_version": { "@pushchain/core": "6.0.9", "@pushchain/ui-kit": "6.0.12" },
-  "generated": "2026-05-15T00:00:00.000Z",
+  "generated": "2026-06-06T00:00:00.000Z",
   "sub_indexes": [
     {
       "category": "examples",
       "path": "agents/examples/index.json",
-      "count": 57
+      "count": 62
     },
     {
       "category": "workflows",
       "path": "agents/workflows/index.json",
-      "count": 17
+      "count": 18
     },
     {
       "category": "resources",
@@ -82,6 +82,11 @@
       "type": "decision"
     },
     {
+      "path": "agents/routes.json",
+      "purpose": "Machine-readable definition of the three universal transaction routes (Route 1/2/3) — input shape, execution target, executor, and origin types. Consumed by the llms.txt generator and mirrored in prose across skills and workflows",
+      "type": "decision"
+    },
+    {
       "path": "agents/errors.json",
       "purpose": "Catalog of SDK error codes, meanings, and recommended recovery actions",
       "type": "error"
@@ -105,6 +110,11 @@
       "path": "agents/retrieval-map.json",
       "purpose": "Semantic mapping of concepts to file paths for RAG and retrieval systems",
       "type": "retrieval"
+    },
+    {
+      "path": "agents/mcp-candidates.json",
+      "purpose": "Reference MCP tool definitions mapping SDK capabilities to tool-use frameworks. Adapt for your tool framework; not a supported tool server",
+      "type": "capability"
     },
     {
       "path": "agents/workflows/index.json",

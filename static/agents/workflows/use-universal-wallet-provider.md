@@ -39,8 +39,8 @@ Configure `PushUniversalWalletProvider` with custom options - login methods, the
 | `config.login.wallet.enabled` | `boolean` | `true` | Allow external wallet connections |
 | `config.login.wallet.chains` | `PushUI.CONSTANTS.CHAIN[]` | All chains | Restrict to specific origin chains |
 | `config.login.wallet.excludedChains` | `PushUI.CONSTANTS.CHAIN[]` | `[]` | Exclude specific origin chains |
-| `config.chainConfig.rpcUrls` | `Record<CHAIN, string>` | `{}` | Per-chain custom RPC URLs |
-| `config.chainConfig.blockExplorers` | `Record<CHAIN, string[]>` | Default explorers | Custom block explorer URLs |
+| `config.chainConfig.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | `{}` | Per-chain custom RPC URLs |
+| `config.chainConfig.blockExplorers` | `Partial<Record<CHAIN, string[]>>` | Default explorers | Custom block explorer URLs |
 | `config.chainConfig.printTraces` | `boolean` | `false` | Enable debug logging |
 | `app` | `Object` | - | App metadata (name, logo) for modal display |
 | `themeMode` | `PushUI.CONSTANTS.THEME` | `LIGHT` | `LIGHT` or `DARK` |

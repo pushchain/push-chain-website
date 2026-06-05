@@ -27,8 +27,8 @@ const SDK_VERSIONS = {
   core: '6.0.9',
   uiKit: '6.0.12',
 };
-const AGENT_LAYER_VERSION = '1.0.20';
-const AGENT_LAYER_DATE = '2026-05-21';
+const AGENT_LAYER_VERSION = '1.0.21';
+const AGENT_LAYER_DATE = '2026-06-06';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -610,7 +610,10 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 \`@pushchain/ui-kit\` 6.0.9 \u2192 6.0.12 (\`@pushchain/core\` unchanged at 6.0.9). New progress toast config: \`config.toast\` on \`PushUniversalWalletProvider\` accepts \`{ position, hidden }\`. \`position\` is a \`PushUI.CONSTANTS.TOAST.POSITION.*\` value (six anchors: \`TOP_LEFT\` / \`TOP_MIDDLE\` / \`TOP_RIGHT\` / \`BOTTOM_LEFT\` / \`BOTTOM_MIDDLE\` / \`BOTTOM_RIGHT\`, default \`'bottom-right'\`). \`hidden: true\` fully suppresses the toast (useful when the dApp surfaces progress through its own \`tx.progressHook\` UI and wants to avoid duplicates). The rendered toast carries the className **\`PUAToast\`** for CSS targeting (restyle, reposition via transform, layer ordering). push-frontend SKILL.md gained a new \`## Progress Toast\` section with the config table, all six position values, and CSS examples. Provider example updated to include the new \`toast\` key, and the prop-shape callout now lists \`toast\` among \`config\`'s valid keys.`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 Audit cleanup. Removed the stale "Push \u2192 Sepolia outbound not relayed by TSS" caveat (Push \u2192 Ethereum Sepolia outbound now relays end-to-end on Donut) from the push-contracts skill and the contract-initiated multichain workflow. Fixed the push-frontend cascade example (\`POLYGON_AMOY\` \u2192 \`BNB_TESTNET\`), the Solana Devnet CAIP-2 in push-contracts (32-char \`solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1\`), a \`bs58\` import, and the advanced custom-signer example. Reconciled BNB Testnet token lists in \`supported-chains.json\` to \`[BNB, USDT, USDC]\`. Added \`PushUI.CONSTANTS.TOAST.POSITION\` to \`constants.json\`. Manifest fixes: registered \`routes.json\` + \`mcp-candidates.json\` in \`index.json\`, the \`theme-variables\` workflow in \`workflows/index.json\`, and five previously-orphaned examples in \`examples/index.json\`.`
+  );
+  lines.push(
+    `- **2026-05-21 v1.0.20** \u2014 \`@pushchain/ui-kit\` 6.0.9 \u2192 6.0.12 (\`@pushchain/core\` unchanged at 6.0.9). New progress toast config: \`config.toast\` on \`PushUniversalWalletProvider\` accepts \`{ position, hidden }\`. \`position\` is a \`PushUI.CONSTANTS.TOAST.POSITION.*\` value (six anchors: \`TOP_LEFT\` / \`TOP_MIDDLE\` / \`TOP_RIGHT\` / \`BOTTOM_LEFT\` / \`BOTTOM_MIDDLE\` / \`BOTTOM_RIGHT\`, default \`'bottom-right'\`). \`hidden: true\` fully suppresses the toast (useful when the dApp surfaces progress through its own \`tx.progressHook\` UI and wants to avoid duplicates). The rendered toast carries the className **\`PUAToast\`** for CSS targeting (restyle, reposition via transform, layer ordering). push-frontend SKILL.md gained a new \`## Progress Toast\` section with the config table, all six position values, and CSS examples. Provider example updated to include the new \`toast\` key, and the prop-shape callout now lists \`toast\` among \`config\`'s valid keys.`
   );
   lines.push(
     `- **2026-05-19 v1.0.19** \u2014 SDK v6.0.9 bump (\`@pushchain/core\` 6.0.8 \u2192 6.0.9, \`@pushchain/ui-kit\` 6.0.8 \u2192 6.0.9). Fixes the UGPC \`GasPriceBelowBase()\` (selector \`0x05aab006\`) revert that intermittently failed Route 2 dispatches when the \`UniversalCore\` gas oracle lagged the destination chain's current base price. Tuned cascade tracking defaults: \`CascadeTrackOptions.pollingIntervalMs\` 5000 \u2192 3000, \`CascadeTrackOptions.timeout\` 600000 \u2192 300000 (10 min \u2192 5 min). Outbound polling: \`OUTBOUND_MAX_TIMEOUT_MS\` 180000 \u2192 300000; \`WaitForOutboundOptions\` initial wait 30000 \u2192 15000, poll 5000 \u2192 3000. New internal \`resolveR2DestinationFundsToken\` helper (no public API change). No progress hook ID changes; no type signature changes.`

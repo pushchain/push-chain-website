@@ -25,8 +25,8 @@ Integrate Push Universal Wallet into a React application using `@pushchain/ui-ki
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `walletConfig.network` | `PushUI.CONSTANTS.PUSH_NETWORK` | Yes | Target Push Chain network |
-| `walletConfig.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | No | Custom RPC endpoints |
-| `walletConfig.blockExplorers` | `Partial<Record<CHAIN, string[]>>` | No | Custom explorer URLs |
+| `walletConfig.chainConfig.rpcUrls` | `Partial<Record<CHAIN, string[]>>` | No | Per-chain custom RPC endpoints |
+| `walletConfig.chainConfig.blockExplorers` | `Partial<Record<CHAIN, string[]>>` | No | Per-chain custom explorer URLs |
 | Theme props | Various | No | UI customization options |
 
 ## Steps
@@ -58,26 +58,29 @@ pnpm add @pushchain/ui-kit
    ```tsx
    export const walletConfig = {
      network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET, // required
-     app: {
-       title: 'My App',            // app name shown in the wallet modal
-       description: 'App tagline', // subtitle shown in the wallet modal
-     },
      login: {
-       email: true,   // Push Wallet email login
-       google: true,  // Google OAuth login
-       wallet: true,  // external wallets (MetaMask, WalletConnect, etc.)
+       email: true,                // Push Wallet email login
+       google: true,               // Google OAuth login
+       wallet: { enabled: true },  // external wallets (MetaMask, WalletConnect, etc.)
      },
+   };
+
+   // `app`, `themeMode`, and `themeOverrides` are TOP-LEVEL props on the provider,
+   // NOT keys inside `config`. Pass them alongside `config` (see Step 3).
+   export const appMetadata = {
+     title: 'My App',            // app name shown in the wallet modal
+     description: 'App tagline', // subtitle shown in the wallet modal
    };
    ```
 
    | Field | Type | Required | Description |
    |---|---|---|---|
    | `network` | `PUSH_NETWORK` | Yes | Target network - use `PushUI.CONSTANTS.PUSH_NETWORK.TESTNET` |
-   | `app.title` | `string` | No | App name displayed in the wallet connection modal |
-   | `app.description` | `string` | No | App tagline displayed below the title in the modal |
+   | `app.title` | `string` | No | App name displayed in the wallet connection modal (top-level `app` prop, not inside `config`) |
+   | `app.description` | `string` | No | App tagline displayed below the title in the modal (top-level `app` prop, not inside `config`) |
    | `login.email` | `boolean` | No | Enable Push Wallet email login (default: false) |
    | `login.google` | `boolean` | No | Enable Google OAuth login (default: false) |
-   | `login.wallet` | `boolean` | No | Enable external wallet login - MetaMask, WalletConnect, etc. (default: true) |
+   | `login.wallet.enabled` | `boolean` | No | Enable external wallet login - MetaMask, WalletConnect, etc. Use the object form `wallet: { enabled: true }`; a bare `wallet: true` is silently ignored. (default: true) |
 
 3. **Wrap your app at the root level** (`main.tsx` / `index.tsx`)
    ```tsx
@@ -86,7 +89,7 @@ pnpm add @pushchain/ui-kit
    import App from './App';
 
    createRoot(document.getElementById('root')!).render(
-     <PushUniversalWalletProvider config={walletConfig}>
+     <PushUniversalWalletProvider config={walletConfig} app={appMetadata}>
        <App />
      </PushUniversalWalletProvider>
    );
@@ -211,19 +214,20 @@ import App from './App';
 
 export const walletConfig = {
   network: PushUI.CONSTANTS.PUSH_NETWORK.TESTNET,
-  app: {
-    title: 'My Universal App',
-    description: 'Built on Push Chain',
-  },
   login: {
     email: true,
     google: true,
-    wallet: true,
+    wallet: { enabled: true },
   },
 };
 
+export const appMetadata = {
+  title: 'My Universal App',
+  description: 'Built on Push Chain',
+};
+
 createRoot(document.getElementById('root')!).render(
-  <PushUniversalWalletProvider config={walletConfig}>
+  <PushUniversalWalletProvider config={walletConfig} app={appMetadata}>
     <App />
   </PushUniversalWalletProvider>
 );

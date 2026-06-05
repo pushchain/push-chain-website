@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "current_sdk_version": "6.0.9",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "generated": "2026-06-06T00:00:00.000Z",
   "description": "Full index of all Push Chain code examples with SDK methods used, prerequisite examples, chains involved, and difficulty metadata. Referenced by agents/index.json as the canonical example catalog.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .examples[]. Change examples/index.json[N] → examples/index.json.examples[N].",
   "examples": [
@@ -52,8 +52,13 @@
       "id": "track-transaction",
       "name": "Track Universal Transaction",
       "file": "track-transaction.md",
-      "description": "Minimal example using trackTransaction with waitForCompletion and progressHook",
-      "sdk_methods_used": ["pushChainClient.orchestrator.trackTransaction"],
+      "description": "Minimal example tracking a universal transaction via sendTransaction's progressHook and tx.wait()",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "PushChain.utils.helpers.parseUnits",
+        "pushChainClient.universal.sendTransaction"
+      ],
       "chains_involved": ["eip155:42101"],
       "prerequisite_examples": ["send-transaction-push-chain"],
       "status": "inferred"
@@ -272,7 +277,8 @@
       "sdk_methods_used": [
         "PushChain.utils.signer.toUniversal",
         "PushChain.initialize",
-        "PushChain.utils.helpers.parseUnits"
+        "PushChain.utils.helpers.parseUnits",
+        "pushChainClient.universal.sendTransaction"
       ],
       "chains_involved": [],
       "prerequisite_examples": [],
@@ -344,7 +350,9 @@
       "description": "Code example: Fund BNB CEA then Increment Counter on BNB Testnet — https://push.org/docs/chain/build/send-multichain-transactions/",
       "sdk_methods_used": [
         "PushChain.utils.signer.toUniversal",
-        "PushChain.initialize"
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareTransaction",
+        "pushChainClient.universal.executeTransactions"
       ],
       "chains_involved": [],
       "prerequisite_examples": [],
@@ -361,11 +369,80 @@
         "PushChain.utils.helpers.parseUnits",
         "PushChain.utils.helpers.encodeTxData",
         "PushChain.utils.account.toUniversal",
-        "PushChain.utils.account.deriveExecutorAccount"
+        "PushChain.utils.account.deriveExecutorAccount",
+        "pushChainClient.universal.prepareTransaction",
+        "pushChainClient.universal.executeTransactions"
       ],
       "chains_involved": [],
       "prerequisite_examples": [],
       "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+    },
+    {
+      "id": "execute-transactions-batch",
+      "name": "Batch Contract Calls: Push Chain + BNB + Solana in One Signature",
+      "file": "execute-transactions-batch.md",
+      "description": "Code example: Batch Contract Calls: Push Chain + BNB + Solana in One Signature — https://push.org/docs/chain/build/send-multichain-transactions/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareTransaction",
+        "pushChainClient.universal.executeTransactions"
+      ],
+      "chains_involved": [
+        "eip155:42101",
+        "eip155:97",
+        "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+      ],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+    },
+    {
+      "id": "execute-transactions-counter",
+      "name": "Execute Transactions: Multichain Counter Increment",
+      "file": "execute-transactions-counter.md",
+      "description": "Code example: increment counters across BNB Testnet and Solana Devnet in one signature — https://push.org/docs/chain/build/send-multichain-transactions/",
+      "sdk_methods_used": [
+        "PushChain.utils.signer.toUniversal",
+        "PushChain.initialize",
+        "pushChainClient.universal.prepareTransaction",
+        "pushChainClient.universal.executeTransactions"
+      ],
+      "chains_involved": [
+        "eip155:97",
+        "solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1"
+      ],
+      "prerequisite_examples": [],
+      "source_url": "https://push.org/docs/chain/build/send-multichain-transactions/"
+    },
+    {
+      "id": "utility-convert-executor-to-origin-account",
+      "name": "Convert Executor Address to Origin Account (REMOVED in SDK v6)",
+      "file": "utility-convert-executor-to-origin-account.md",
+      "description": "Tombstone: PushChain.utils.account.convertExecutorToOriginAccount was removed in @pushchain/core@6.0.0. Documents the removal and migration path.",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "status": "removed"
+    },
+    {
+      "id": "utility-convert-executor-to-origin",
+      "name": "Convert Executor to Origin Account (REMOVED in SDK v6)",
+      "file": "utility-convert-executor-to-origin.md",
+      "description": "Tombstone: PushChain.utils.account.convertExecutorToOrigin was removed in @pushchain/core@6.0.0. Documents the removal and migration path.",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "status": "removed"
+    },
+    {
+      "id": "utility-convert-origin-to-executor",
+      "name": "Convert Origin to Executor Account (REMOVED in SDK v6)",
+      "file": "utility-convert-origin-to-executor.md",
+      "description": "Tombstone: PushChain.utils.account.convertOriginToExecutor was removed in @pushchain/core@6.0.0. Documents the removal and migration path.",
+      "sdk_methods_used": [],
+      "chains_involved": [],
+      "prerequisite_examples": [],
+      "status": "removed"
     },
     {
       "id": "track-transaction-uea-to-cea",
