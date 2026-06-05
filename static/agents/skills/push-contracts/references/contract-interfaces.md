@@ -263,7 +263,7 @@ const wpcNeeded = isGasTokenToken0 ? (gasFee * priceNum) / Q192 : (gasFee * Q192
 const valuePc = (wpcNeeded * 2n * 110n) / 100n;  // ×2 swap buffer × 1.1 executor buffer
 ```
 
-UGPC refunds surplus; over-sizing is safe. A flat `balance/2` reverts with `STF`. Donut Testnet's PC↔pSOL pool is currently shallow - quote can be high relative to a contract's working balance.
+UGPC refunds surplus; over-sizing is safe. A flat `balance/2` reverts with `STF`.
 
 ---
 

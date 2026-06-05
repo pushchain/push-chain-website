@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "current_sdk_version": "6.0.9",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "generated": "2026-06-06T00:00:00.000Z",
   "description": "Canonical workflow manifest for Push Chain agent layer",
   "workflows": [
     {
@@ -203,6 +203,24 @@
       "status": "documented"
     },
     {
+      "id": "theme-variables",
+      "category": "frontend",
+      "name": "Theme Variables",
+      "file": "agents/workflows/theme-variables.md",
+      "purpose": "Reference all CSS custom properties (theme tokens) exposed by @pushchain/ui-kit to customize modal, button, background, and brand colors across light and dark themes.",
+      "actor": "frontend_developer",
+      "operation": "read",
+      "prerequisites": ["use-universal-wallet-provider"],
+      "deterministic": true,
+      "safe_for_autonomous_execution": true,
+      "mcp_mapping_candidates": [
+        "list_theme_variables",
+        "get_theme_token",
+        "apply_theme_override"
+      ],
+      "status": "documented"
+    },
+    {
       "id": "initialize-evm-client",
       "category": "reading-utilities",
       "name": "Initialize EVM Client",
@@ -335,19 +353,19 @@
     }
   ],
   "metadata": {
-    "total_workflows": 17,
+    "total_workflows": 18,
     "operation_breakdown": {
-      "read": 6,
-      "write": 9,
+      "read": 7,
+      "write": 10,
       "tracking": 1,
       "simulation": 0
     },
     "actor_breakdown": {
       "developer": 14,
-      "frontend_developer": 2,
+      "frontend_developer": 3,
       "smart_contract": 1
     },
-    "autonomous_safe_count": 12,
-    "deterministic_count": 14
+    "autonomous_safe_count": 13,
+    "deterministic_count": 15
   }
 }

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "current_sdk_version": "6.0.9",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "generated": "2026-06-06T00:00:00.000Z",
   "description": "All PushChain.CONSTANTS.* values as a structured reference. Source: https://push.org/docs/chain/build/constants/",
   "PUSH_NETWORK": {
     "TESTNET": "TESTNET",
@@ -100,6 +100,17 @@
         "CONNECTED": "CONNECTED",
         "CONNECTING": "CONNECTING",
         "DISCONNECTED": "DISCONNECTED"
+      }
+    },
+    "TOAST": {
+      "_note": "Progress-toast anchors for config.toast.position on PushUniversalWalletProvider (ui-kit 6.0.12+). Default is BOTTOM_RIGHT.",
+      "POSITION": {
+        "TOP_LEFT": "top-left",
+        "TOP_MIDDLE": "top-middle",
+        "TOP_RIGHT": "top-right",
+        "BOTTOM_LEFT": "bottom-left",
+        "BOTTOM_MIDDLE": "bottom-middle",
+        "BOTTOM_RIGHT": "bottom-right"
       }
     }
   }

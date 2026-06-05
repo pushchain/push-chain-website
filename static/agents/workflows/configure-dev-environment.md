@@ -80,7 +80,7 @@ console.log(PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA);
    import '@nomicfoundation/hardhat-toolbox';
 
    const config: HardhatUserConfig = {
-     solidity: '0.8.24',
+     solidity: '0.8.26',
      networks: {
        pushTestnet: {
          url: 'https://evm.donut.rpc.push.org/',

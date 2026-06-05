@@ -148,7 +148,7 @@ getOrigin('0xbCfaD05E5f19Ae46feAab2F72Ad9977BC239b395');
 ### Off-Chain: Decode Solana Owner Address
 
 ```typescript
-import { bs58 } from 'bs58';
+import bs58 from 'bs58';
 import { ethers } from 'ethers';
 
 const [account, isUEA] = await factory.getOriginForUEA(address);

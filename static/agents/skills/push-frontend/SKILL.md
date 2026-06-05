@@ -451,7 +451,7 @@ const hopA = await pushChainClient.universal.prepareTransaction({
   data: callAData,
 });
 const hopB = await pushChainClient.universal.prepareTransaction({
-  to: { address: '0xContractB', chain: PushChain.CONSTANTS.CHAIN.POLYGON_AMOY },
+  to: { address: '0xContractB', chain: PushChain.CONSTANTS.CHAIN.BNB_TESTNET },
   data: callBData,
 });
 const result = await pushChainClient.universal.executeTransactions(

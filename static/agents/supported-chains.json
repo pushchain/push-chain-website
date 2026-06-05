@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "current_sdk_version": "6.0.9",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "generated": "2026-06-06T00:00:00.000Z",
   "description": "Supported chains for Push Chain universal transactions. Use PushChain.CONSTANTS.CHAIN.<KEY> for all identifiers.",
   "note": "Mainnet has not launched. All active chain support is on testnet only.",
   "testnet": [
@@ -68,8 +68,8 @@
       "fee_token": "BNB",
       "chain_id": 97,
       "block_explorer": "https://testnet.bscscan.com",
-      "moveable_tokens": ["ETH", "USDT"],
-      "payable_tokens": ["BNB", "USDT"]
+      "moveable_tokens": ["BNB", "USDT", "USDC"],
+      "payable_tokens": ["BNB", "USDT", "USDC"]
     },
     {
       "name": "Solana Devnet",
