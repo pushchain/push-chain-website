@@ -62,7 +62,7 @@ That is what Zappi is designed for.
 
 # How can I use Zappi?
 
-[https://youtu.be/P8Y3wIrCN74](https://youtu.be/P8Y3wIrCN74)
+<iframe width="100%" style={{aspectRatio: '16/9'}} src="https://www.youtube.com/embed/P8Y3wIrCN74" title="How to use Zappi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Where can I use Zappi?
 
