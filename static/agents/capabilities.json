@@ -1,7 +1,7 @@
 {
   "schema_version": "1.1.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.9",
+  "current_sdk_version": "6.0.16",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Intent-level agent capabilities — what an agent can do with Push Chain. For the complete SDK method surface with signatures see sdk-capabilities.json. Utilities (parseUnits, formatUnits, encodeTxData, chain/token discovery, constants) and raw ethers.js operations are API primitives consumed inside these capabilities rather than standalone agent intents.",
   "prerequisite_glossary": {

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.2.1",
-  "current_sdk_version": "6.0.9",
+  "current_sdk_version": "6.0.16",
   "generated": "2026-06-06T00:00:00.000Z",
   "description": "All PushChain.CONSTANTS.* values as a structured reference. Source: https://push.org/docs/chain/build/constants/",
   "PUSH_NETWORK": {

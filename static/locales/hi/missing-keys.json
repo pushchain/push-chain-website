@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:16:01.161Z",
+  "lastUpdated": "2026-06-07T16:38:14.691Z",
   "keys": {
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-of-the-future.title": {
       "value": "भविष्य के ऐप्स — बिना किसी अराजकता के निर्माण",
@@ -1237,9 +1237,9 @@
       "lastUpdated": "2025-11-14T19:27:06.117Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "खोजें ऐप्स, पार्टनर्स और प्रारंभिक प्रयोगकर्ता जो पुश चेन के डोनट टेस्टनेट पर अगले युग के विश्वसंवादी अनुभवों का निर्माण कर रहे हैं।",
+      "value": "पुश चेन के डोनट टेस्टनेट पर अगले युग के एअरोब्लॉकचेन्स, पार्टनर्स और प्रारंभिक एडॉप्टर को खोजें जो विश्वस्‍तीत कार्यक्षमता का अनुभव बना रहे हैं।",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-05-17T19:27:08.151Z"
+      "lastUpdated": "2026-06-07T16:24:17.719Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "घोषणा खारिज करें",
@@ -1742,9 +1742,9 @@
       "lastUpdated": "2025-11-14T19:27:06.117Z"
     },
     "components.short-contact-us-snippet.answer-aria-label": {
-      "value": "उत्तर को सवाल - ",
+      "value": "जवाब - ",
       "englishChecksum": "84c913b7410cbc873ad0018ac37fb40e",
-      "lastUpdated": "2026-05-17T19:26:31.892Z"
+      "lastUpdated": "2026-06-07T16:23:04.940Z"
     },
     "pages.docs.seo.og-description": {
       "value": "क्लियर गाइड्स और उदाहरण के साथ यूनिवर्सल एक्जीक्यूशन लेयर पर एप्प बनाएं और रन करें।",
@@ -1762,14 +1762,14 @@
       "lastUpdated": "2026-02-25T23:49:26.231Z"
     },
     "pages.privacymobile.seo.twitter-description": {
-      "value": "पुश मोबाइल एप्लिकेशन में आपकी डेटा और विकल्प।",
+      "value": "आपके डेटा और Push मोबाइल एप्स में आपकी पसंद।",
       "englishChecksum": "eaa1cdd6da251c8602628f9804934510",
-      "lastUpdated": "2026-05-17T19:27:36.521Z"
+      "lastUpdated": "2026-06-07T16:24:36.466Z"
     },
     "components.cookie-banner.message": {
-      "value": "हम कोकीज़ का उपयोग करें ताकि हम आपका अनुभव व्यक्तिगत बना सकें। अधिक जानकारी के लिए हमारे",
+      "value": "हम कुकीज़ का उपयोग व्यक्तिगत अनुभव को पसंदीदा करते हैं। अधिक जानकारी के लिए हमारी",
       "englishChecksum": "371ae79da8a6e6e86e8fb94a8731eadb",
-      "lastUpdated": "2026-05-17T19:27:11.597Z"
+      "lastUpdated": "2026-06-07T16:24:19.683Z"
     },
     "components.blog.footer-item.about-description": {
       "value": "Push चेन पहला वास्तविक यूनिवर्सल ब्लॉकचेन है, जो सभी चैन पर फ्रागमेंटेशन को मिटाता है। यह डेवलपर्स को एक बार डालना और किसी भी चेन (EVM या नॉन-EVM, जिसमें इथीरियम, सोलाना, बिटकोइन शामिल हैं) पर उपयोगकर्ताओं के लिए तुरंत उपलब्ध होने की अनुमति देता है। यह 100% EVM संगत, प्रूफ ऑफ स्टेक (PoS) चेन है जो Push चेन पर डिप्लॉई किए गए ऐप्स से किसी भी चेन पर नेटिवल रूप से इंटरैक्ट करने के लिए उपयोगकर्ताओं को अनुमति देता है, जैसे ही वे अपनीown चेन पर करते हैं।",
@@ -1895,9 +1895,9 @@
       "lastUpdated": "2026-01-16T17:15:17.229Z"
     },
     "components.cult-contact.form.success.message-after-link": {
-      "value": "\nऔर ध्यान रखें कि",
+      "value": "और यह को डिटेल्स देखना न भूलना",
       "englishChecksum": "e4dbaa554e2c8e7ebec5e00f4677c448",
-      "lastUpdated": "2026-05-17T19:27:12.925Z"
+      "lastUpdated": "2026-06-07T16:24:02.396Z"
     },
     "notifications.chain-notification.title": {
       "englishChecksum": "9d4568c009d203ab10e33ea9953a0264",
@@ -1939,9 +1939,9 @@
       "lastUpdated": "2026-01-23T01:00:58.127Z"
     },
     "components.blog.tags.tag-link-title": {
-      "value": "{{tagName}} टैग वाले पोस्ट देखें",
+      "value": "फेव सट्ञीदारव {{tagName}}धा इटसद",
       "englishChecksum": "4f71ea84561c9d5015c56d17ac242495",
-      "lastUpdated": "2026-05-17T19:26:46.790Z"
+      "lastUpdated": "2026-06-07T16:23:09.152Z"
     },
     "components.blog.more-posts.title": {
       "value": "और पोस्ट Push Chain से",
@@ -2024,24 +2024,22 @@
       "lastUpdated": "2026-02-08T06:02:57.589Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "बोलो, तेजी से बढ़ते यूनिवर्सल एप्लिकेशन इकोसिस्टम में शामिल होना चाहो और अपने यूजरबेस को 10 गुना करना चाहते हो?",
+      "value": "इच्छा है कि आप अपनी यूनिवर्सल ऐप इकोसिस्टम में शामिल हों और अपने उपयोगकर्ता आधार को 10 गुना करें?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-05-17T19:27:10.192Z"
+      "lastUpdated": "2026-06-07T16:23:55.935Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "टैस्टनेट एप्लिकेशन का आवश्यक इकाई खोजें",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-05-17T19:27:14.156Z"
+      "lastUpdated": "2026-06-07T16:24:03.732Z"
     },
     "components.ecosystem-essentials.apps.simulate-tx.description": {
-      "value": "टोकन ट्रांज़ैक्शन को सिमुलेट करें",
+      "value": "भेरमकूछ निकोदिर",
       "englishChecksum": "93a1dbc5de1a2b469a1d5e7e7422804e",
-      "lastUpdated": "2026-05-17T19:27:19.992Z"
+      "lastUpdated": "2026-06-07T16:24:07.221Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
-      "value": "Push Chain का universal वॉलेट",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-05-17T19:27:34.746Z"
+      "lastUpdated": "2026-06-07T16:24:09.262Z"
     },
     "components.ecosystem-apps-partners.coming-soon": {
       "value": "आने वाला है",
@@ -2311,11 +2309,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-02-21T21:49:07.222Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "शतरंज खेलें, दांव लगाएं, युनिवर्सल",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-02-21T21:49:24.444Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "ओम्निहब",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -2361,23 +2354,24 @@
       "lastUpdated": "2026-02-21T21:50:20.676Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-necessary": {
+      "value": "टोकन का पुनर्वितरण 25 फरवरी, 2026 को आवश्यक था:",
       "englishChecksum": "7b7e650f26dafe2becb5d6337340dd09",
-      "lastUpdated": "2026-05-17T19:26:51.022Z"
+      "lastUpdated": "2026-06-07T16:23:16.309Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- पुराने टेस्टनेट से पुराना प्रौद्योगिकी कर्जा हटाें",
+      "value": "- पुरानी टेस्टनेट से पुराना टेक्निकल डेब्ट मिटायें",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-05-17T19:26:53.998Z"
+      "lastUpdated": "2026-06-07T16:23:19.802Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "इस प्रस्ताव ने 1.178M कुल एड्रेसों में से 1,950 शीर्ष वॉलेट्स को प्रभावित किया। 1,100 PC टोकन या अधिक रखने वाले वॉलेट्स (त्रिलियनो सहित) पुनर्व्यवस्थित किए गए थे ताकि वे 1,100-2,000 PC टोकन रखें।",
+      "value": "इस प्रपोजल ने 1.178M कुल पता में से 1,950 शीर्ष वॉलेट्स को प्रभावित किया। जिन वॉलेट्स ने 1,100 PC टोकन या अधिक (शतकओड़ियों सहित) रखे हुए थे उन्हें पुन: संतुलन 1,100-2,000 PC टोकन के बीच रखा गया था।",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:26:58.526Z"
+      "lastUpdated": "2026-06-07T16:23:25.978Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "यूज़र्स को अपराधी एक्टर्स द्वारा टोकन के अन्य वॉलेटों में पुनर्वितरण से रोकने के लिए रिबालेंसिंग से पहले सूचित नहीं किया गया था। इस सुरक्षा उपाय ने रिबालेंसिंग प्रोसेस की अखंडता सुनिश्चित की और प्रणाली का गेमिंग रोक दिया।",
+      "value": "यूज़र्स को ब्लॉकचेन अपग्रेड से पहले नहीं बताया गया था, ताकि दुरुपयोग के लिए तैनाथ किए गए अक्ट्रेंस को अन्य वॉलेट्स में पुनर्वितरित करने से रोका जा सके। इस सुरक्षा उपाय ने रिबालांसिंग प्रक्रिया की पूरेपन का सुनिश्चय किया और व्यवस्था में खेलने से रोक दिया।",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:27:02.934Z"
+      "lastUpdated": "2026-06-07T16:23:31.649Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": " profanth डिप डाइव्स — कॉन्सेप्ट्स एवं आर्किटेक्चर ",
@@ -2440,9 +2434,8 @@
       "lastUpdated": "2026-02-25T22:58:43.950Z"
     },
     "footer.links.llms-title": {
-      "value": "एमशिन-रिडेबल पुश चेन डॉक्स फॉर एआई कोडिंग असिस्टेंट्स",
       "englishChecksum": "9110ca9f429e7eb7cabe4af8cbdfa7f3",
-      "lastUpdated": "2026-05-17T19:26:48.299Z"
+      "lastUpdated": "2026-06-07T16:23:12.675Z"
     },
     "footer.email-section.title": {
       "value": "पुश चेन के साथ रखिए अपडेट में",
@@ -2934,6 +2927,21 @@
       "value": "तेज़ मल्टीचेन रिलेयर",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T20:38:28.425Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "अन्वेषण करो और यूनिवर्सल एप्लिकेशंस की शक्ति का आनंद लो, मेननेट से पहले अंतिम सीज़न में पुरस्कार प्राप्त करो!",
+      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
+      "lastUpdated": "2026-06-07T16:24:23.523Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "पफुल्स",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:38:11.145Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFT लॉन्चपैड ऑन पुश चेन",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:38:14.680Z"
     }
   }
 }

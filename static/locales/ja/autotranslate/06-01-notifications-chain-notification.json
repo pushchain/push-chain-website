@@ -1,11 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "招待コードが必要ですか？フォローして、解説動画をご覧になり、コメントを投稿してください。招待コードは限定数です。",
-      "button-text": "招待コードを取得",
-      "button-title": "招待コードを取得",
-      "button-aria-label": "招待コードを入手！こちらで確認できます",
-      "image-alt": "招待コードを入手!"
+      "description": "メインネット開始前の最終シーズンで、ユニバーサル <app> の力を探求して、報酬を手に入れましょう！",
+      "button-text": "さあ、始めましょう！",
+      "button-title": "さあ、始めましょう！",
+      "button-aria-label": "さあ始めましょう！こちらでチェックできます",
+      "image-alt": "さあ、始めよう！"
     }
   }
 }

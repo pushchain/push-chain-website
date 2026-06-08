@@ -1,7 +1,6 @@
 {
   "global": {
-    "site-name": "Push Chain — Evrensel L1, Uygulamalar İçin",
-    "site-description": "Herşeyden önce, ortak durumu (shared-state) kullanan üniversal uygulama için L1. Bir kez dağıt; herhangi bir zincirde yer alan kullanıcılara erişin. Herhangi bir cüzdan kullanın. Herhangi bir jeton ile ödeyin. Ağ değiştirmeden."
+    "site-name": "Push Chain — Evrensel L1, Uygulamalar İçin"
   },
   "header": {
     "community": {
@@ -540,14 +539,14 @@
                   "vs-other-universal": "### Push Chain'i diğer Evrensel Çözümlerden ayıran nedir?\n\nGünümüzün sözde \"evrensel\" çözümleri hala köprülere, veri ve değeri taşımak için çift işlemlere veya merkezi röleyicilere güveniyor. Push Chain farklıdır—doğru bir Evrensel L1'dir:\n\n- **Kullanıcıları zincirler arasında birleştirir**  \n\tHer blockchain adresi yerel olarak desteklenir. MetaMask, Phantom gibi cüzdanların tamamı Push Chain ile uyumludur. Gas, herhangi bir zincirdeki herhangi bir token ile ödenir.\n\n- **Evrensel bir yürütme katmanı görevi görür**  \n\tTüm işlemler aynı zincirde sonlanır ve herkesin aynı uygulama ile etkileşim kurmasını sağlar—hile yok, çözüm yok.\n\n- **Her zincirin işlemlerini doğru şekilde atar ve yürütür**  \n\tİşlemler imzalanır, doğrulanır ve kaynak zincirlerindeki cüzdanlara atanır. Doğru bir evrensel zincir hepsini destekler.\n\n---",
                   "vs-bridges-messaging": "### Bu, köprülerden veya mesajlaşma katmanlarından nasıl farklıdır?\n\n**Kısa Cevap**: Push, uygulamanızın çalıştığı yerdir. Köprüler/mesajlaşma sadece token'ları veya mesajları zincirler arasında taşır; bu da kullanıcılar ve geliştiriciler için her şeyi karmaşıklaştırır.\n\n- **Tek ana ev vs birçok klon**  \n\tKöprüler/mesajlaşma ile zincir başına dağıtım yaparsınız ve mesajlar aracılığıyla senkronize edersiniz. Push'ta bir kez dağıtım yaparsınız; herkes aynı sözleşmeye ve paylaşılan duruma ulaşır.\n\n- **Sarılı varlıklar veya zorunlu köprüleme yok**  \n\tKullanıcılar kendi ana zincirlerinde kalır ve zaten sahip olduklarıyla ödeme yapar; yönlendirmeyi ve ücret dönüşümünü arka planda biz hallederiz.\n\n- **Birleşik kimlik ve doğrulama**  \n\tHerhangi bir cüzdandan/zincirden imzaları kabul ediyoruz ve bunları Push'taki aynı kullanıcıya atfediyoruz — saklama dışı.\n\n- **Daha az hareketli parça**  \n\tZincirler arası onay dansı yok, gaz token avı yok, senkronize tutulması gereken yapıştırıcı sözleşmeler yok.\n\n- **Köprüler karmaşıklık getirir. Zincir yerel birlikte çalışabilirlik onu çözer**  \n\tKöprüler karmaşık mühendislik çabası, zaman, denetim maliyeti ve ek altyapı gerektirir. Zincir yerel birlikte çalışabilirlik sadece çalışır çünkü uygulamanız yerel olarak onu miras alır.\n\n**Sonuç**: daha basit uygulamalar, tek bir gerçek kaynağı ve kullanıcıların olmadığı gibi hissettiren bir kullanıcı deneyimi.\n\n---",
                   "vs-layerzero": "### Push Chain, LayerZero’dan nasıl farklı?\n\n**LayerZero:**\n- **Mesajlaşma Protokolü**: Zincirler arası mesajlaşmayı sağlar\n- **Relayer Bağımlılığı**: Harici relayers ve orakollere bağlıdır\n- **Geliştirici Entegrasyonu**: Uygulamaların LayerZero SDK’sını entegre etmesi gerekir\n- **Güven Varsayımları**: Kullanıcıların relayers altyapısına güvenmesi gerekir\n\n**Push Chain:**\n- **Yerel Yürütme**: Herhangi bir zincirden doğrudan işlem yürütme\n- **Relayer Yok**: Protokol seviyesinde yerleşik zincirler arası işlevsellik\n- **Sıfır Entegrasyon**: Mevcut uygulamalar herhangi bir değişiklik olmadan çalışır\n- **Güven Minimasyonu**: Push Chain’in kendi konsensüsü dışında ek güven varsayımları yoktur\n\nPush Chain, yerel zincirler arası yürütme sağlarken LayerZero ek altyapı ve entegrasyon gerektirir.\n\n---",
-                  "vs-wormhole": "### Push Chain'i Wormhole'den neyin ayıran?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprüleme işlemlerine odaklanıyor\n- **Sarmalanmış Varlıklar**: Farklı zincirlerde token'ları sarmalaş edilmiş halini oluşturuyor\n- **Gözetim Ağı**: Köprü mesajlarını doğrulamak için validatör setine güveniyor\n- **Çok Adımlı İşlem**: Uygulamalar kullanmadan önce aktarım yapılması gerekiyor\n\n**Push Chain:**\n- **Universal Gerçekleşim**: Köprüleme işlemi olmaksızın direkt etkileşim sağlanıyor\n- **Orijinal Varlıklar**: Sarmalaşmış token'lara ihtiyaç yok, orijinal varlıkları kullanıyor\n- **Direkt Doğrulama**: Herhangi bir zincirden özgün imza doğrulaması yapılıyor\n- **Tek Transaction**: Köprüleme işlemi olmaksızın tek adımda etkileşim sağlanıyor\n\nPush Chain, köprüleme işlemlerine ihtiyaç duymadan doğrudan etkileşimler sağlıyorken Wormhole köprüleme işlemleri gerektiriyor.\n\n---",
+                  "vs-wormhole": "### Push Zinciri Nasıl Wormhole'Dan Farklıdır?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprüleme işlemini yapar\n- **Sarmal Assetler**: Çeşitli zincirlerde token'ların sarmallı versiyonlarını oluşturur\n- **Koruma Ağı**: Çapraz-zincir mesajlarının doğruluğunu doğrular\n- **Çok Adımlı Süreç**: Uygulamalar kullanmadan önceasstler köprülemesi gerekir\n\n**Push Zinciri:**\n- **Evrenel İçerik**: Köprüleme gerektirmeden doğrudan etkileşim\n- **Orijinal Assetler**: Sarmal token'lar gerekmeden orijinal assetleri kullan\n- **Doğrudan Doğrulama**: Herhangi bir zincirde doğruluğunu doğrulanacak imzaları\n- **Tek Seferlik İşlem**: Köprüleme gerektirmeden tek adımda etkileşim\n\nPush Zinciri, cross-chain etkileşimler için asset köprülemesini iptal ederken Wormhole bu işlemi gerektirir.",
                   "vs-axelar": "### Push Chain, Axelar'dan nasıl farklı?\n\n**Axelar:**\n- **Ağlar Ağı**: Zincirleri Axelar ağı üzerinden bağlar\n- **Doğrulayıcı Bağımlılığı**: Güvenlik için Axelar doğrulayıcı kümesine güvenir\n- **Gateway Sözleşmeleri**: Her zincirde gateway dağıtımları gerektirir\n- **Mesajlaşma**: Zincirler arası iletişim üzerine odaklanır\n\n**Push Chain:**\n- **Doğrudan Yürütme**: İşlemler aracı kurumlar olmadan Push Chain üzerinde yerel olarak işlenir\n- **Bağımsız Güvenlik**: Harici bağımlılıklar olmadan kendi fikir birliği\n- **Evrensel Sözleşmeler**: Tek bir dağıtım tüm zincirler için çalışır\n- **Yerel Yürütme**: Herhangi bir zincirden doğrudan işlem işleme\n\nPush Chain doğrudan evrensel erişim sağlarken Axelar aracı bir katman ekler.\n\n---",
                   "vs-chainlink-ccip": "### Push Chain, Chainlink CCIP'den nasıl farklıdır?\n\n**Chainlink CCIP:**\n- **Oracle Ağı**: Chainlink oracle altyapısını kullanır\n- **Mesaj Yönlendirme**: Farklı zincirler arasında mesajları yönlendirir\n- **Harici Bağımlılık**: Chainlink'in merkeziyetsiz ağına bağımlıdır\n- **Entegrasyon Gerekliliği**: Uygulamaların çapraz zincir özellikler için CCIP'yi entegre etmesi gerekir\n\n**Push Chain:**\n- **Yerleşik Protokol**: Çapraz zincir işlevselliği blokzincire özgüdür\n- **Doğrudan Yürütme**: Harici bir oracle ağına ihtiyaç duyulmaz\n- **Kendi Kendine Yeterli**: Tüm doğrulama ve yürütme Push Chain üzerinde gerçekleşir\n- **Otomatik Uyumluluk**: Mevcut sözleşmeleri dağıtın — tüm kullanıcılar için kutudan çıkar kutudan çalışırlar\n\nPush Chain, çekirdek protokolüne yerleşik çapraz zincir yeteneklerine sahipken, CCIP harici bir hizmet katmanıdır.\n\n---",
                   "vs-particle-network": "### Push Chain, Particle Network'dan nasıl farklı?\n\n**Particle Network:**\n- **Hesap Soyutlama Odaklı**: Öncelikle cüzdan soyutlama ve sosyal girişe odaklanır\n- **Çok Zincirli Cüzdanlar**: Zincirler arasında birleşik bir cüzdan deneyimi oluşturur\n- **SDK Entegrasyonu**: İşlevsellik için Particle SDK entegrasyonu gerektirir\n- **Kullanıcı Deneyimi Katmanı**: Mevcut zincirlerin üzerinde bir katman olarak çalışır\n\n**Push Chain:**\n- **Evrensel Blockchain**: Tüm zincir kullanıcılarını destekleyen yerel blockchain\n- **Protokol Düzeyi Entegrasyonu**: Çapraz zincirli işlevsellik, fikir birliği içine yerleşiktir\n- **SDK Gerekmez**: Mevcut cüzdanlar herhangi bir değişikliğe gerek kalmadan doğal olarak çalışır\n- **Temel Katman**: Sadece bir UX katmanı değil, altta yatan blockchain altyapısı sağlar\n\nPush Chain evrensel bir blockchain iken, Particle Network bir cüzdan soyutlama hizmetidir.\n\n---",
                   "vs-agglayer": "### Push Chain, AggLayer'dan Nasıl Farklıdır?\n\n**AggLayer (Polygon):**\n- **Aggregation Layer (Birleştirme Katmanı):** Polygon zincirlerindeki likiditeyi ve durumu birleştirir\n- **Polygon Ekosistemi:** Özellikle Polygon CDK zincirleri için tasarlanmıştır\n- **Paylaşımlı Sıralama:** Bağlı zincirler için birleşik sıralama sağlar\n- **Ekosistem Özelinde:** Polygon zincir ekosistemiyle sınırlıdır\n\n**Push Chain:**\n- **Evrensel Zincir:** Herhangi bir blockchain ile çalışır, ekosistem özelinde değildir\n- **Doğrudan Yürütme:** Herhangi bir zincirden doğrudan işlem yürütme\n- **Zincir Bağımsız:** Ethereum, Solana, Bitcoin ve diğer tüm zincirleri destekler\n- **Tek Dağıtım, Evrensel Uygulamalar:** Push Chain'e bir smart contract'i bir kez dağıtın, kullanıcılar için her zincirden erişilebilir olur — gerçek uygulama seviyesinde birlikte çalışabilirliği sağlar\n\nPush Chain, tüm blockchain'ler genelinde tek bir dağıtımla evrensel uygulamaları etkinleştirirken, AggLayer, Polygon ekosistemi içindeki likidite ve sıralama birleştirmesine odaklanır.\n\n---",
                   "vs-cosmos": "### Push Chain, Cosmos'tan nasıl farklı?\n\nHer ikisi de zincirler arası işlevsellik sağlarken, yaklaşımlar temelde farklıdır:\n\n**Cosmos:**\n- **Merkez-Uç Model**: Zincirler IBC protokolü üzerinden bağlanır\n- **Ayrı Ekosistemler**: Her zincir kendi durumunu ve kullanıcılarını korur\n- **Manuel Köprüleme**: Kullanıcılar varlıkları zincirler arasında köprülemek zorundadır\n- **Geliştirici Karmaşıklığı**: Birden fazla zincire dağıtım yapılması gerekir\n\n**Push Chain:**\n- **Evrensel Zincir**: Tüm kullanıcıları yerel olarak destekleyen tek zincir\n- **Paylaşımlı Durum**: Herhangi bir zincirden erişilebilen tek bir birleşik durum\n- **Köprüleme Yok**: Kullanıcılar doğrudan kaynak zincirlerinden etkileşim kurar\n- **Tek Dağıtım**: Tüm zincir kullanıcıları için tek dağıtım yeterlidir\n\nPush Chain, manuel köprüleme ve çoklu zincir dağıtım ihtiyacını ortadan kaldırarak daha basit, birleşik bir UX sunar.\n\n---",
                   "vs-polkadot": "### Push Chain, Polkadot'dan nasıl farklı?\n\n**Polkadot:**\n- **Parachain Modeli**: Bağlı zincirler için sınırlı yuvalar\n- **Relay Zinciri Bağımlılığı**: Tüm parachainler relay zinciri güvenliğine bağımlı\n- **Substrate Çerçevesi**: Belirli bir geliştirme çerçevesi gerektirir\n- **Açık Artırma Sistemi**: Pahalı parachain yuvası açık artırmaları\n\n**Push Chain:**\n- **Evrensel Destek**: Yerleşik olarak herhangi bir mevcut zinciri destekler\n- **Bağımsız Güvenlik**: Kendi fikir birliği ve doğrulayıcı seti\n- **EVM Uyumlu**: Mevcut Ethereum araçlarını ve sözleşmelerini kullanın\n- **Açık Artırma Yok**: Rekabetçi teklif vermeden doğrudan entegrasyon\n\nPush Chain mevcut zincirlerle doğrudan entegre olurken, Polkadot zincirlerin parachain olarak yeniden oluşturulmasını gerektirir.\n\n---",
-                  "token-section": "## Jeton İle İlgili",
+                  "token-section": "## Token İlgili",
                   "new-token": "### Push Chain ile ilişkili yeni bir token olacak mı?\n\nYeni bir katman 1 olarak, Push Chain, bir blockchain'in işleyişi, bakımı ve güvenliği için uygun tokenomiklere sahip kendi yerel token'ına sahip olacaktır.\n\nTam detaylar için [Tokenomikler derin dalışımızı](/knowledge/tokenomics/) inceleyin 👀.",
                   "developers-section": "## Geliştiriciler, Kullanıcılar ve Düğüm Operatörleri",
                   "early-adopter-incentives": "### Push Chain'de erken benimseyenler veya node operatörleri için teşvikler var mı?\n\nNode operatörleri, mainnet lansmanı sonrasında staking ödülleri kazanacak ve **Push Points Program**'a katılarak ödüller kazanmaya teşvik ediliyor.\n\nErken benimseyenler de **Push Points Program**'a katılarak ödüller kazanmaya teşvik ediliyor. [Push Portal](https://portal.push.org/) adresini ziyaret ederek başlayın.\n\n---",
@@ -677,34 +676,34 @@
                 }
               },
               "chain-upgrade-token-rebalance-25-feb-2026": {
-                "title": "Zincir Geliştirme - Token Dengesizliği - 10 Milyar PC Jetonu",
+                "title": "Zincir Yükseltme - Token Dönüştürme - 10 Milyar PC Token",
                 "items": {
                   "status-heading": "## Durum",
                   "status-timeline": "25 Şubat 2026 - Başladı<br />25 Şubat 2026 - ✅ Tamamlandı",
                   "overview-heading": "## Genel Bakış",
-                  "overview-text": "Push Chain, bir token yeniden dağıtım önerisini yürüttü. Böylece toplam PC token tedarikini yaklaşık 10 milyar token seviyesine indirdi. Bu güncelleme, testnet'in başlangıç dönemlerinden kalma teknik borcu çözümledi ve zinciri ana ağ için hazırladı.",
+                  "overview-text": "Push Chain, bir token yeniden dağıtım önerisi uyguladı ve PC jeton toplam tedarik miktarını yaklaşık 10 milyar jetondan 75T+ jetona indirdi. Bu yükseltme testnet'in erken günlerinde bir teknik borçtan vazgeçildi ve zincir için mainnet ortamı hazırlanması için hazırlandı.",
                   "why-heading": "### Bunun sebebi neydi?",
-                  "why-text": "Push Chain testnet'in erken günlerinde, PC jetonları için yakma ve miktar ayarlama işlemleri yoktu. Bu, evrensel işlemlerin çok düşük fiyat hesaplamalarına ve az sayıda jeton sahiplerinin çok yüksek miktarda jetonlara sahip olmasına neden oldu (trilyona kadar). Bu, ana ağın başlatılmadan önce düzleştirilmesi gereken eşitsiz bir jeton ekonomisi yarattı.",
+                  "why-text": "Push Chain testnet'in erken günlerinde, PC jetonları için yakma ve mıhtı işlemi yoktu. Bu, evrensel işlemler için ekstrem olarak düşük fiyat hesaplamaları yarattı ve az sayıda jeton sahibi tarafından trilyonlarca jeton birikimi meydana geldi. Ana ağı için fırlatılmadan önce düzeltmeye ihtiyacı olan bir denge dışı jeton ekonomisi oluştu.",
                   "why-necessary": "Yeniden dengeleme şunlar için gerekliydi:",
                   "reason-mainnet": "- Mainnet benzeri ortam için hazırlık yapın",
                   "reason-season3": "- Sezon 3 ödüllerinin dağıtımını etkinleştir",
                   "reason-tech-debt": "- Erken testnet'ten eski teknik borcu kaldır",
                   "reason-token-economy": "- Adil ve sürdürülebilir bir token ekonomisi kurmak",
                   "what-changed-heading": "### Neler Değişti?",
-                  "what-changed-text": "Bu öneri, toplam 1.178M adresden 1,950 adet üst düzey cüzdanlara etki etti. Trilyonlarca PC jetonu tutan veya daha fazla tutan cüzdanlar (dahil olmak üzere) yeniden dâhşil olarak %1,100-%2,000 aralığına getirildi.",
+                  "what-changed-text": "Oluşturulmuş 1.178M adresden sadece en yüksek 1,950 cüzdan etkiledi. 1,100 PC jetonu veya daha fazla (trilyonlar dahil) tutan cüzdanlar yeniden dengelenerek 1,100-2,000 arasında tutuldu.",
                   "key-changes-heading": "**Önemli Değişiklikler:**",
-                  "change-supply": "- Toplam tedarik %75+ dan yaklaşık 10B PC jetonu'ya düştü",
+                  "change-supply": "- Toplam tedarik 75T'den ~10B PC tokenine düşürüldü",
                   "change-wallets": "- En çok 1.950 cüzdan, 1.100-2.000 PC token aralığına yeniden dengelendi",
                   "change-percentage": "- Toplam adreslerin yalnızca %0,17'sini etkiler (1,178M adresin 1,950'sini)",
                   "change-unaffected": "- Kullanıcıların %99,83'ü etkilenmedi",
                   "why-not-informed-heading": "### Neden kullanıcılar önceden bilgilendirilmedi?",
-                  "why-not-informed-text": "Kullanıcıları önceden bilgilendirmek, rebalancing'ten önce kötü niyetli aktörlerin tokenleri diğer cüzdanlara dağıtmasını engellemek için güvenlik önlemi olarak yapıldı. Bu önlem, rebalancing işleminin bütünlüğünü korumak ve sistem oyununu önlemeyi sağladı.",
+                  "why-not-informed-text": "Kullanıcıları önceden bilgilendirmek, yeniden dengelenme işleminden önce kötü niyetli aktörler tarafından tokens'ların diğer cüzdanlara dağıtılmasına neden olabilirdi. Güvenlik önlemi olarak bu işlemın bütünlüğünü ve sistemi oyunlaştırmaktan korunması için bu güvenlik önlemi uygulandı.",
                   "validator-period": "Testnet validadör teklif süresi şu anda bu tür durumları tam olarak merkezi olmayan validadör sahipliği uygulanmadan önce ortadan kaldırmaya yardımcı olmak için 5 dakikaya ayarlanmıştır.",
                   "why-52t-heading": "### Hala 52T arzı görmeye devam ediyorum?",
-                  "why-52t-text": "Rebalans, iki aşamalı bir yaklaşım. Şimdi token'lar bir takım tarafından kontrol edilen bir cüzdana toplanıyor ve yakın zamanda yakanacak.",
+                  "why-52t-text": "Dönüşüm, iki aşamalı bir yaklaşımdır. Tokenler şimdi takımın kontrolündeki cüzdanlara toplanıyor ve yakılacaklardır.",
                   "how-affect-heading": "### Beni nasıl etkiler?",
                   "affect-majority": "**%99.83 kullanıcı için:** Bu değişiklik sizi etkilemez. Cüzdan bakiyeniz değişmeden kalır.",
-                  "affect-top-wallets": "**Etkilenmiş cüzdanlar (en yüksek 1,950):** Eğer cüzdanınız 1,100+ PC jetonu tutuyorsa (ya da trilyonlar), balance'niz 1,100-2,000 aralığına yeniden ayarlanmıştır.",
+                  "affect-top-wallets": "**Affected wallets (top 1,950):** Eğer cüzdanız 1,100+ PC jetonu tutuyor veya trilyonlarca miktarda ise, balansınız 1,100-2,000 arası PC jetonu olarak yeniden dengenize alınmıştır.",
                   "need-help-heading": "**Yardıma İhtiyacınız Var mı?**",
                   "need-help-text": "Bu yeniden dengelemeden etkilendiğinizi düşünüyorsanız ve sorularınız veya endişeleriniz varsa, lütfen yardım için Push Chain ekibiyle Discord üzerinden iletişime geçin."
                 }
@@ -893,7 +892,7 @@
     "litepaper": {
       "seo": {
         "title": "Litepaper — Teknik Genel Bakış",
-        "description": "Push Chain'in vizyonu, mimarisi ve ekonomileri için özlü bir bakış. Evrensel uygulamalar için.",
+        "description": "Push Chain'in genel çizimi, yapısı ve ekonomisi için özlü bir bakış universal uygulamalar için.",
         "og-title": "Push Chain Litepaper - Teknik Genel Bakış",
         "og-description": "Evrensel çalıştırma katmanının vizyonu, tasarımı ve ekonomik modeli—basitleştirilmiş.",
         "twitter-title": "Litepaper - Push Chain",
@@ -982,6 +981,7 @@
     "cult": {
       "seo": {
         "title": "Push Cult — İçerik Odaklı Sinyal Güdümlü Yaratıcı Programı",
+        "description": "Push Kult, Push Chain'in davetiye-only creator programıdır. 50creator. 20M PC tokenler. Sesi yok, sadece ölçülebilir etki.",
         "og-title": "Push Cult - Sinyal İçin Oluşturulmuş Yaratıcı Programı",
         "og-description": "Sadece davetiyeli 50 yaratıcıdan oluşan bir topluluk, Push Chain'e olan gerçek kullanımı ve inancı teşvik ederek 20M PC token ödülünden kazanıyor.",
         "twitter-title": "Push Cult - Push Chain tarafından oluşturulan içerik oluşturucu programı",
@@ -1007,7 +1007,6 @@
         "all-apps": "Tüm Uygulamalar"
       },
       "cta": {
-        "title": "Ücretsiz Universal Uygulama Ecosistemine Katılmak istiyor musunuz ve kullanıcınızı 10 katına çıkarmak?",
         "button": "İnşaya Başla"
       },
       "seo": {
@@ -1362,8 +1361,8 @@
           "status-url-title": "Ağ durumunu ve olayları görüntüleyin."
         },
         "qna3": {
-          "question": "Nasıl testnet token'leri (Donut) elde ederim?",
-          "answer": "<1>Test tokens isteyenler için <3>Faucet'i</3> kullanınız.</1><1><2>Notlar:</2> rate limitleri uygulanabilir; bazı faucet'ler basit doğrulama gerektirir. Eğer faucet çalışmıyorsa, lütfen <4>Discord'u</4> üzerinden bize iletişime geçin.</1>",
+          "question": "Nasıl testnet tokenler (Donut) edebilirim?",
+          "answer": "<1>Test tokens isteyenler için <3>Faucet'i</3> kullanın.</1><1><2>Notlar:</2> hız sınırları uygulanabilir; bazı faucet'ler basit doğrulama gerektirebilir. Faucet çalışmıyorsa, lütfen <4>Discord'u</4> üzerinden bize mesaj gönderin.</1>",
           "faucet-url-title": "Push Chain musluğunu açın.",
           "discord-url-title": "Push Chain Discord'a katılın."
         },
@@ -1455,7 +1454,7 @@
       "categories": {
         "technical": {
           "label": "🔧 Teknik Destek",
-          "description": "Hata raporları, SDK/API, akıllı sözleşmeler, entegrasyon yardım"
+          "description": "Hatalı bildirimler, SDK/API, akıllı sözleşimler, entegreleme yardımı"
         },
         "network": {
           "label": "🌐 Ağ & testnet",
@@ -1736,9 +1735,13 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Push Chain üzerindeki #1 NFT Başlatma Platformu"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Kriptonuz, kurallarınız: her zincirde sorunsuz ödemeler."
+        },
+        "degen-chess": {
+          "description": "Oyna, bahis yap, yayını izle ve kazananı tahmin ederek havuzu kazan",
+          "name": "Degen Chess"
         },
         "omnihub": {
           "description": "Bloğu oluştur, al ve sat blockchain koleksiyonları",
@@ -1833,10 +1836,6 @@
           "name": "Hang4.fun",
           "description": "Çok Yakında"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "Satranç oynayın, bahis yapın, yayın izleyin ve kazananı tahmin ederek havuzu kazanın"
-        },
         "push-dex": {
           "name": "PushDex"
         },
@@ -1874,11 +1873,23 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Çılgın Hızlı Çok Zincirli Relay"
+          "description": "Işın Hızlı Çoklu Zincir Relayci"
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "Senin kripton, senin kuralların: tüm zincirlerde kesintisiz ödemeler."
+        "puffles": {
+          "name": "Puffles",
+          "description": "Push Chain üzerindeki #1 NFT Başlatma Platformu"
+        }
+      },
+      "coming-soon": "Yakında",
+      "app-spotlight": "UYGULAMA VURGUSU",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS ve Gizlilik Koruyan Hesaplama."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS ve Gizlilik Koruyucu Hesaplama."
         }
       }
     },
@@ -1886,13 +1897,16 @@
       "title": "Donut testnet'teki Temel Uygulamaları Keşfedin",
       "apps": {
         "pc-faucet": {
-          "name": "PC Musluğu"
+          "name": "PC Musluğu",
+          "description": "Buradan PC Testnet jetonlarını al"
         },
         "push-bridge": {
-          "name": "Push Köprüsü"
+          "name": "Push Köprüsü",
+          "description": "Küçük parça işlemleri yapmak için zincirler arasında token köprü kur"
         },
         "simulate-tx": {
-          "name": "İşlemi Simüle Et"
+          "name": "İşlemi Simüle Et",
+          "description": "Evrenel bir işlemi simüle et"
         },
         "push-chain-scan": {
           "name": "Push Chain Scan",
@@ -1907,19 +1921,19 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Evrensel uygulamaların gücünü keşfedin ve mainnet öncesindeki son sezonda ödüller kazanın!",
-      "button-title": "Başla!",
-      "button-aria-label": "Başla!. Buradan kontrol edebilirsiniz",
-      "image-alt": "Başla!",
-      "title": "",
-      "button-text": "Başla!",
-      "close-button-title": "Toast bildirimini kapat",
-      "close-button-aria-label": "Push Chain toast bildirimini kapat",
-      "container-aria-label": "Push Chain toast bildirimi"
+      "description": "Gelin, evrensel uygulamaların gücünü keşfedin ve mainnet öncesi son sezonda ödüller kazanın!",
+      "button-text": "Başlayalım!",
+      "button-title": "Hemen Başla!",
+      "button-aria-label": "Hemen Başla!. Burada inceleyebilirsiniz",
+      "image-alt": "Başlamaya Hazır Mısınız!",
+      "title": "{chainName} zincirinde işlemler yapılıyor",
+      "close-button-title": "Toast uyarıyı kapat",
+      "close-button-aria-label": "PushChain bildirimlerini görmezden gel",
+      "container-aria-label": "Push Chain bildirim tostu"
     },
     "rewards-notification": {
       "title": "Donut Testnet Kapalı Beta Sürümü Başladı!",
-      "description": "Testnet, Donut'te bir göz atış yap ve evrensel uygulamalar inşa et! Ödüller kazanın!",
+      "description": "Testnet, Donut'te önizleme yapın ve evrenel uygulamalar inşa ederek ödüller kazanın!",
       "image-alt": "Push Chain Testnet Ödülleri - Evrensel Uygulamalar Oluştur",
       "close-button-title": "Ödül bildirimini kapat",
       "close-button-aria-label": "Push Chain ödül bildirimini kapat",

@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Nền tảng ra mắt <NFT> hàng đầu trên <Push Chain>"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Tiền điện tử của bạn, luật lệ của bạn: thanh toán liền mạch trên mọi chuỗi."
+        },
+        "degen-chess": {
+          "description": "Chơi cờ, đặt cược, phát trực tiếp và đoán người chiến thắng để giành giải thưởng."
         }
       }
     }

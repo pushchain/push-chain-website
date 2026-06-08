@@ -1,11 +1,40 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.21",
-  "current_sdk_version": "6.0.9",
-  "current_version": "1.0.21",
-  "generated": "2026-06-06T00:00:00.000Z",
+  "version": "1.0.22",
+  "current_sdk_version": "6.0.16",
+  "current_version": "1.0.22",
+  "generated": "2026-06-08T00:00:00.000Z",
   "description": "Version history of all /agents/ layer changes, SDK version bumps, and audit passes. Each entry includes the agent-layer content version, affected files, trigger description, and breaking/migration flags. current_version tracks the latest entry; version tracks this file's own schema revision.",
   "entries": [
+    {
+      "date": "2026-06-08T00:00:00.000Z",
+      "version": "1.0.22",
+      "changes": [
+        "Bumped @pushchain/core 6.0.9 → 6.0.16 and @pushchain/ui-kit 6.0.12 → 6.0.16 across the agent layer (all current_sdk_version stamps, index.json sdk_version, the three skills' package_version / current_sdk_version, build.agents.llms.mjs SDK_VERSIONS, source-freshness.json). AGENT_LAYER_VERSION 1.0.21 → 1.0.22, AGENT_LAYER_DATE → 2026-06-08. Verified the public-API delta by diffing the SDK type definitions 6.0.9 → 6.0.16: constants/enums.d.ts, constants/chain.d.ts, constants/tokens.d.ts, and constants/selectors.d.ts are byte-identical, so chains, tokens, token accessors, selectors, contract addresses, and PushChain.CONSTANTS did not change — no value content was edited, only version stamps.",
+        "Renamed the SEND-TX-203-02 progress-event title 'Execution Account Ready' → 'Execution Account Resolved' to match the 6.0.16 progress-hook source (the only progress-hook wording change in the range; no event IDs were added, removed, or renumbered). Updated workflows/progress-hook-events.md and workflows/send-multichain-transaction.md. Re-pinned the three inline '@pushchain/core@6.0.9' progress-hook references (progress-hook-events.md, send-universal-transaction.md, send-multichain-transaction.md) to 6.0.16.",
+        "Documented the previously-undocumented client.universal.migrateCEA(chain) and client.universal.rescueFunds({ universalTxId, prc20 }) maintenance methods in sdk-capabilities.json (pushChainClient.universal namespace) and the push-backend skill (new '## Account & CEA Maintenance' section). migrateCEA upgrades a CEA on an external chain via a MIGRATION_SELECTOR Route 2 dispatch; rescueFunds recovers source-chain Vault funds locked by a failed Route 3 inbound via a manual TSS revert (TX_TYPE.RESCUE_FUNDS = 4). Both predate 6.0.9 but were never surfaced. Deliberately kept out of the intent-level capabilities.json: every entry there carries a real docs_url and these are niche recovery ops, not standalone agent intents."
+      ],
+      "files_affected": [
+        "static/agents/index.json",
+        "static/agents/sdk-capabilities.json",
+        "static/agents/source-freshness.json",
+        "static/agents/changelog.json",
+        "static/agents/skills/push-backend/SKILL.md",
+        "static/agents/skills/push-frontend/SKILL.md",
+        "static/agents/skills/push-contracts/SKILL.md",
+        "static/agents/workflows/progress-hook-events.md",
+        "static/agents/workflows/send-multichain-transaction.md",
+        "static/agents/workflows/send-universal-transaction.md",
+        "build.agents.llms.mjs",
+        "static/llms.txt"
+      ],
+      "sdk_version": "6.0.16",
+      "ui_kit_version": "6.0.16",
+      "category": "sdk-bump",
+      "trigger": "package.json bumped @pushchain/core and @pushchain/ui-kit 6.0.13 → 6.0.16. The agent layer was pinned to core 6.0.9 / ui-kit 6.0.12 (the 1.0.21 audit deliberately kept the pin), so core 6.0.10–6.0.16 and ui-kit 6.0.13–6.0.16 were never recorded. This is a re-pin / sync pass, not a feature rewrite: the agent layer already covered the features shipped through 6.0.9 (ARBITRUM_SEPOLIA + BASE_SEPOLIA, the MOVEABLE/PAYABLE token taxonomy, WETH/stETH/DAI, USDT.bsc/USDC.bsc accessors, the explorer namespace, funds.getConversionQuote).",
+      "breaking": false,
+      "migration": "No code changes required. The 6.0.9 → 6.0.16 public-API delta is additive and non-breaking: trackTransaction gained options.chain (track by an origin/source-leg hash, resolved via the universal-tx detector), TxResponse / receipt / CascadeCompletionResult gained finalTxHash (one terminal 'where it landed' hash: R1 → hash, R2 → externalTxHash, R3 → pushInboundTxHash), and CascadeExecutionOptions gained a cascade-wide enforceGasCheck — all already documented in the agent layer. ui-kit 6.0.12 → 6.0.16 changed only the PushWalletToast internal (a failed toast now also triggers on level === 'ERROR'); no public type or config change, so the toast docs stay accurate."
+    },
     {
       "date": "2026-06-06T00:00:00.000Z",
       "version": "1.0.21",

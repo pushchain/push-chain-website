@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Push Chain üzerindeki #1 NFT Başlatma Platformu"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Kriptonuz, kurallarınız: her zincirde sorunsuz ödemeler."
+        },
+        "degen-chess": {
+          "description": "Oyna, bahis yap, yayını izle ve kazananı tahmin ederek havuzu kazan"
         }
       }
     }

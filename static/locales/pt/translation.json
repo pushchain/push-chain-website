@@ -1,7 +1,7 @@
 {
   "global": {
     "site-name": "Push Chain — Universal L1 para Apps",
-    "site-description": "L1 de estado compartilhado para aplicativos universais. Implante uma vez; alcance usuários em qualquer cadeia. Use qualquer carteira. Pague com qualquer token. Sem alternância de rede."
+    "site-description": "L1 compartilhada para aplicativos universais. Implante uma vez; alcance usuários em qualquer cadeia. Use qualquer carteira. Pague com qualquer token. Sem alternar a rede."
   },
   "header": {
     "community": {
@@ -680,14 +680,14 @@
                   "status-heading": "## Status",
                   "status-timeline": "25 de Fevereiro de 2026 - Iniciado<br />25 de Fevereiro de 2026 - ✅ Concluído",
                   "overview-heading": "## Visão Geral",
-                  "overview-text": "A rede Push Chain executou uma proposta de reequilíbrio de tokens para reduzir o fornecimento total de tokens PC de 75T+ tokens para aproximadamente 10 bilhões de tokens. Esta atualização aborda uma dívida técnica dos primeiros dias do testnet e prepara a cadeia para um ambiente similar ao mainnet.",
+                  "overview-text": "A rede Push Chain executou uma proposta de reequilíbrio de tokens para reduzir o suprimento total de tokens PC de 75T+ para aproximadamente 10 bilhões de tokens. Esta atualização aborda uma dívida técnica dos primeiros dias da testnet e prepara a cadeia para um ambiente semelhante ao mainnet.",
                   "why-heading": "### Por que isso foi feito?",
                   "why-text": "Nos primeiros dias da Push Chain testnet, não havia processo de queima e criação de tokens PC. Isso resultou em cálculos de preço extremamente baixos para transações universais e permitiu que um pequeno grupo de detentores de tokens acumulassem grandes quantidades de tokens (chegando a trilhões). Isso criou uma economia de tokens desequilibrada que precisava ser corrigida antes do lançamento da mainnet.",
                   "why-necessary": "O reequilíbrio foi necessário para:",
                   "reason-mainnet": "- Prepare para um ambiente semelhante ao mainnet",
                   "reason-season3": "- Habilitar a distribuição de recompensas da Temporada 3",
                   "reason-tech-debt": "- Remover dívida técnica antiga do início do testnet",
-                  "reason-token-economy": "- Estabelecer uma economia de token justa e sustentável",
+                  "reason-token-economy": "- Estabelecer uma economia de tokens justa e sustentável",
                   "what-changed-heading": "### O que mudou?",
                   "what-changed-text": "A proposta afetou as 1.950 carteiras principais de um total de 1.178 milhões de endereços. Carteiras que possuíam 1.100 $PC tokens ou mais (incluindo aquelas com trilhões) foram reequilibradas para manter entre 1.100 e 2.000 $PC tokens.",
                   "key-changes-heading": "**Principais Mudanças:**",
@@ -696,12 +696,12 @@
                   "change-percentage": "- Afeta apenas 0,17% dos endereços totais (1.950 de 1,178 milhão)",
                   "change-unaffected": "- 99.83% dos usuários não são afetados",
                   "why-not-informed-heading": "### Por que os usuários não foram informados com antecedência?",
-                  "why-not-informed-text": "Os usuários não foram notificados com antecedência para evitar que atores maliciosos redistribuíssem tokens para outras carteiras antes do reequilíbrio. Esta medida de segurança garantiu a integridade do processo de reequilíbrio e impediu a manipulação do sistema.",
-                  "validator-period": "O período de proposta do validador da rede de teste está atualmente definido em 5 minutos para ajudar a eliminar casos de borda como este antes que a propriedade completa dos validadores seja implementada.",
+                  "why-not-informed-text": "Os utilizadores não foram notificados antecipadamente para evitar que atores maliciosos redistribuíssem os tokens para outras carteiras antes da rebalanceamento. Esta medida de segurança garantiu a integridade do processo de rebalanceamento e impediu o aproveitamento indevido do sistema.",
+                  "validator-period": "O período de proposta do validador da testnet está atualmente definido em 5 minutos para ajudar a eliminar casos de borda como esse antes que a propriedade completa dos validadores seja implementada.",
                   "why-52t-heading": "### Por que ainda vejo 52T de oferta?",
-                  "why-52t-text": "O reequilíbrio é uma abordagem em duas fases. Os tokens agora estão sendo recolhidos para uma carteira controlada pela equipe e serão queimados em breve.",
+                  "why-52t-text": "O rebalanceamento é uma abordagem em duas fases. Os tokens agora estão sendo coletados para uma carteira controlada pela equipe e serão queimados em breve.",
                   "how-affect-heading": "### Como isso me afeta?",
-                  "affect-majority": "**Para 99,83% dos usuários:** Esta mudança não afeta você. Seu saldo da carteira permanece inalterado.",
+                  "affect-majority": "**Para 99,83% dos usuários:** Esta mudança não afeta você. O saldo da sua carteira permanecerá inalterado.",
                   "affect-top-wallets": "**Para carteiras afetadas (as 1.950 principais):** Se sua carteira continha 1.100+ $PC tokens (ou trilhões), seu saldo foi rebalanceado para a faixa de 1.100 a 2.000 $PC tokens.",
                   "need-help-heading": "**Precisa de Ajuda?**",
                   "need-help-text": "Se você acredita que foi afetado por este rebalanceamento e tem dúvidas ou preocupações, entre em contato com a equipe Push Chain no Discord para obter ajuda."
@@ -1348,8 +1348,8 @@
       "answer-aria-label": "Resposta à pergunta - ",
       "qnas": {
         "qna1": {
-          "question": "Não consigo conectar a minha carteira. O que eu devo tentar?",
-          "answer": "<1><2>Verificações rápidas:</2> atualize a página, desbloqueie sua carteira e desabilite bloqueadores de anúncios e scripts agressivos para push.org.</1><1><2>Não é necessário alternar a rede:</2> fique em sua cadeia principal; o Push maneja a roteagem nos bastidores.</1><1><2>Redefina as permissões do site:</2> em sua carteira, remova a conexão do site e reconecte-se.</1><1> Ainda preso? Pergunte no <3>Discord</3> ou abra um <4>Ticket de Suporte</4>.</1>",
+          "question": "Não consigo conectar minha carteira. O que eu devo tentar?",
+          "answer": "<1><2>Verificações rápidas:</2> atualize a página, desbloqueie sua carteira e desative bloqueadores de anúncios/scripts agressivos para push.org.</1><1><2>Sem necessidade de alternar a rede:</2> permaneça em sua rede principal; o Push cuida da roteagem atrás dos cenários.</1><1><2>Redefina as permissões do site:</2> em sua carteira, remova a conexão do site e reconecte-se.</1><1> Ainda com problemas? Pergunte no <3>Discord</3> ou abra um <4>Ticket de Suporte</4>.</1>",
           "discord-url-title": "Junte-se ao Discord do Push Chain para obter ajuda em tempo real.",
           "support-url-title": "Abra um chamado de suporte."
         },
@@ -1733,9 +1733,13 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 Plataforma de Lançamento de NFT na Blockchain Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Suas criptomoedas, suas regras: pagamentos perfeitos em todas as blockchains."
+        },
+        "degen-chess": {
+          "description": "Jogue, faça apostas, transmita e adivinhe o vencedor para ganhar o prêmio",
+          "name": "Degen Chess"
         },
         "ramen-swap": {
           "name": "Ramen Swap"
@@ -1826,10 +1830,6 @@
           "name": "Hang4.fun",
           "description": "Em breve"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "Jogue xadrez, aposte, transmita ao vivo e adivinhe o vencedor para ganhar o pool"
-        },
         "omnihub": {
           "name": "Omnihub",
           "description": "Crie, compre e venda colecionáveis blockchain"
@@ -1872,9 +1872,8 @@
           "name": "Tachyon",
           "description": "Relayer Multichain Super Rápido"
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "Seu cripto, suas regras: pagamentos sem atrito em todas as chains."
+        "puffles": {
+          "name": "Puffles"
         }
       },
       "coming-soon": "Em breve",
@@ -1918,14 +1917,13 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Explore o poder dos apps universais e seja recompensado na temporada final antes da mainnet!",
-      "button-title": "Começar!",
-      "button-aria-label": "Começar!. Você pode verificar aqui",
-      "image-alt": "Começar!",
       "button-text": "Começar!",
-      "close-button-title": "Fechar notificação toast",
-      "close-button-aria-label": "Fechar notificação toast da Push Chain",
-      "container-aria-label": "Notificação toast da Push Chain",
+      "button-title": "Comece já!",
+      "button-aria-label": "Comece agora!. Você pode conferir aqui",
+      "image-alt": "Comece Agora!",
+      "close-button-title": "Fechar notificação",
+      "close-button-aria-label": "Dismiss Push Chain toast notification",
+      "container-aria-label": "Notificação Push Chain",
       "title": ""
     },
     "rewards-notification": {

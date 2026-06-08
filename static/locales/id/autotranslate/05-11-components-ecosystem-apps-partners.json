@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 NFT Launchpad di Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Kripto Anda, aturan Anda: pembayaran lancar di setiap <blockchain>."
+        },
+        "degen-chess": {
+          "description": "Bermain, pasang taruhan, lakukan streaming, dan tebak pemenang untuk memenangkan hadiah"
         }
       }
     }

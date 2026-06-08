@@ -538,7 +538,7 @@
                   "true-universal-chain": "### Was bedeutet True Universal Chain?\n\nEine **True Universal Chain** ist eine Blockchain, die jedes andere Netzwerk als gleichwertig behandelt – keine Bridges, keine zentralisierten Relayer und keine Kompatibilitäts-Hacks. Sie bietet:\n\n1. **Native Multichain-Identität**\n\tWallets von Ethereum, Solana, jeder EVM- oder non-EVM-Chain signieren, verifizieren und führen nativ auf Push Chain aus. So müssen Benutzer niemals Konten wechseln oder sich mit der Komplexität mehrerer Wallets herumschlagen.\n\n2. **Einheitliche Abwicklung**\n\tTransaktionen von jedem Netzwerk werden auf Push Chain endgültig abgeschlossen, wodurch jeder eine einzige Quelle der Wahrheit erhält und dieselbe App für Benutzer aller Chains zugänglich wird.\n\n3. **Single Transaction und Universal Fee Abstraction**\n\tBenutzer signieren nur eine Transaktion, unabhängig von ihrer Quell-Chain und zahlen Gas in jedem Token. Kein Wartung oder Austausch unzähliger Token mehr, um eine App zu nutzen.\n\n4. **Einmal bereitstellen, überall nutzen**\n\tEntwickler schreiben und stellen Smart Contracts einmal (EVM oder anders) ohne **zusätzlichen** Code bereit – eine Bereitstellung deckt alle Chains ab.\n\nPush Chain ist die erste, die diese Funktionen direkt in ihren Konsens und ihre Laufzeit einbaut und Fragmentierung wirklich beseitigt – keine Workarounds, keine zusätzlichen Layers, nur eine universelle Chain für jeden.\n\n---",
                   "competitors-section": "## Wettbewerber",
                   "vs-other-universal": "### Was Push Chain Push Chain von anderen Universal Solutions unterscheidet?\n\nTagesaktuell sogenannte \"universal\" Lösungen verlassen sich immer noch auf Bridges, benötigen doppelte Transaktionen oder zentralisierte Relayer, um Daten und Wert zu bewegen. Push Chain ist anders—es ist die erste **wahre** Universal L1, die:\n\n- **Nutzer über Ketten hinweg vereinheitlicht**  \n\tJede Blockchain-Adresse wird nativ unterstützt. Wallets wie MetaMask, Phantom, usw. sind alle kompatibel mit Push Chain. Gas wird in jedem Token auf jeder Kette bezahlt.\n\n- **Als universelle Execution Layer fungiert**  \n\tAlle Transaktionen finalisieren auf derselben Kette, was sicherstellt, dass jeder mit derselben app interagiert—keine Hacks, keine Umwege.\n\n- **Transaktionen korrekt zuordnet & ausführt von jeder Kette**  \n\tTransaktionen werden signiert, verifiziert und Wallets auf ihren Quellketten zugeordnet. Eine wahre Universal Kette unterstützt sie alle.\n\n---",
-                  "vs-bridges-messaging": "### Wie unterscheidet sich dies von Brücken oder Messaging-Schichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem Ihre App läuft. Brücken/Messaging bewegen nur Token oder Nachrichten zwischen Ketten und komplizieren alles für den Benutzer und Entwickler.\n\n- **Einziges Zuhause vs viele Kopien** \n\tBei Brücken/Messaging müssen Sie pro Kette bereitstellen und über Nachrichten synchronisieren. Auf Push stellen Sie nur einmal bereit; jeder ruft denselben Vertrag und gemeinsam genutzten Zustand auf.\n\n- **Keine gewickelten Vermögenswerte oder verpflichtende Überführung** \n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen Routing und Gebührsumwandlung unter der Haube.\n\n- **Vereinheitlichte Identität und Verifizierung** \n\tWir akzeptieren Signaturen von jeder Wallet/Kette und ordnen sie demselben Benutzer auf Push zu – nicht verwahrend.\n\n- **Weniger bewegliche Teile** \n\tKein Kreuzketten-Zustimmungstanz, kein Gas-Token-Suchen, keine Klebverträge zur Synchronisierung.\n\n- **Brücken bringen Komplexität. Kettennative Interoperabilität löst sie** \n\tBrücken erfordern komplexen Engineering-Aufwand, Zeit, Kosten für das Auditing und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App sie nativ vererbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht sind.\n\n---",
+                  "vs-bridges-messaging": "### Wie unterscheidet sich das von Brücken oder Nachrichtenschichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem deine App läuft. Brücken/Nachrichtenschichten bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.\n\n- **Einziges Zuhause vs viele Klone**\n\tMit Brücken/Nachrichten musst du pro Kette einsetzen und über Nachrichten synchronisieren. Auf Push setzt du dich einmal ein; jeder ruft den gleichen Vertrag und den gemeinsamen Zustand auf.\n\n- **Keine eingepackten Assets oder verpflichtende Überführung**\n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits haben; wir erledigen das Routing und die Gebührenumwandlung unter der Haube.\n\n- **Einheitliche Identität & Verifizierung**\n\tWir akzeptieren Signaturen von jedem Wallet/Chain und ordnen sie dem gleichen Benutzer auf Push zu — nicht verwahrend.\n\n- **Weniger bewegte Teile**\n\tKein Cross-Chain-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoff-Verträge zum Synchronisieren.\n\n- **Brücken führen Komplexität ein. Chain-native Interoperabilität löst sie.**\n\tBrücken erfordern komplexe Ingenieurarbeit, Zeit, Auditkosten und zusätzliche Infrastruktur. Chain-native Interoperabilität funktioniert einfach, da deine App es nativ erbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht tun.\n\n---",
                   "vs-layerzero": "### Wie unterscheidet sich Push Chain von LayerZero?\n\n**LayerZero:**\n- **Messaging Protokoll**: Ermöglicht Cross-Chain-Nachrichtenübertragung\n- **Relayer-Abhängigkeit**: Verlässt sich auf externe Relayer und Orakel\n- **Entwicklerintegration**: Apps müssen das LayerZero SDK integrieren\n- **Vertrauensannahmen**: Benutzer müssen der Relayer-Infrastruktur vertrauen\n\n**Push Chain:**\n- **Native Ausführung**: Direkte Transaktionsausführung von jeder Chain\n- **Keine Relayer**: Integrierte Cross-Chain-Funktionalität auf Protokollebene\n- **Zero Integration**: Bestehende Apps funktionieren ohne Änderungen\n- **Trust-Minimiert**: Keine zusätzlichen Vertrauensannahmen über den Konsens von Push Chain hinaus\n\nPush Chain bietet native Cross-Chain-Ausführung, während LayerZero zusätzliche Infrastruktur und Integration erfordert.\n\n---",
                   "vs-wormhole": "### Wie unterscheidet sich Push Chain von Wormhole?\n\n**Wormhole:**\n- **Bridge Protocol**: Hauptsächlich auf Token- und NFT-Bridging konzentriert\n- **Wrapped Assets**: Erstellt Wrapped-Versionen von Tokens auf verschiedenen Chains\n- **Guardian Network**: Verlässt sich auf ein Validator Set zur Verifizierung von Cross-Chain-Nachrichten\n- **Mehrschrittiger Prozess**: Benutzer müssen Assets brücken, bevor sie Apps nutzen\n\n**Push Chain:**\n- **Universal Execution**: Benutzer interagieren direkt ohne Bridging\n- **Native Assets**: Keine Wrapped Tokens erforderlich, verwenden Sie Original-Assets\n- **Direkte Verifizierung**: Native Signaturverifizierung von jeder Chain\n- **Single Transaction**: Benutzer interagieren in einem Schritt, kein Bridging erforderlich\n\nPush Chain eliminiert die Notwendigkeit von Asset-Bridging, während Wormhole dies für Cross-Chain-Interaktionen erfordert.\n\n---",
                   "vs-axelar": "### Wie unterscheidet sich Push Chain von Axelar?\n\n**Axelar:**\n- **Netzwerk der Netzwerke**: Verbindet Chains über das Axelar-Netzwerk\n- **Validator-Abhängigkeit**: Verlässt sich für die Sicherheit auf das Axelar validator set\n- **Gateway-Kontrakte**: Erfordert Gateway-Deployments auf jeder Chain\n- **Message Passing**: Konzentriert sich auf cross-chain Kommunikation\n\n**Push Chain:**\n- **Direkte Ausführung**: Transaktionen werden nativ auf Push Chain ohne Zwischenhändler verarbeitet\n- **Unabhängige Sicherheit**: Eigenständiger Konsens ohne externe Abhängigkeiten\n- **Universal Contracts**: Ein einzelner Deployment funktioniert für alle Chains\n- **Native Ausführung**: Direkte Transaktionsverarbeitung von jeder Chain\n\nPush Chain bietet direkten, universellen Zugriff, während Axelar eine Zwischenschicht hinzufügt.\n\n---",
@@ -682,29 +682,29 @@
                   "status-heading": "## Status",
                   "status-timeline": "25. Feb 2026 - Gestartet<br />25. Feb 2026 - ✅ Abgeschlossen",
                   "overview-heading": "## Überblick",
-                  "overview-text": "Push Chain führte einen Token-Umbuchungsvorschlag durch, um die Gesamtanzahl an PC-Token von über 75 Billionen auf etwa 10 Milliarden zu reduzieren. Diese Aktualisierung behebt eine technische Schuldenlast aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
+                  "overview-text": "Die Push Chain führte einen Token-Neubalancierungsvorschlag durch, um die Gesamtanzahl der PC-Token von mehr als 75T auf etwa 10 Milliarden Tokens zu reduzieren. Diese Aktualisierung behebt eine technische Schuld aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
                   "why-heading": "### Warum wurde dies getan?",
-                  "why-text": "In den frühen Tagen des Push Chain Testnet gab es keinen Brenn- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte es einer Handvoll von Token-Inhabern, gigantische Token-Vorräte anzusammeln (in Milliardenhöhe). Dies führte zu einem unausgewogenen Token-Ökonomiesystem, das vor dem Hauptnetzstart korrigiert werden musste.",
+                  "why-text": "In den frühen Tagen des Push Chain Testnet gab es keinen Verbrennung- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte einer Handvoll von Token-Inhabern, riesige Token-Vorräte anzuhäufen (die in Billionen gingen). Dies schuf eine unausgewogene Token-Wirtschaft, die vor dem Mainnet-Start korrigiert werden musste.",
                   "why-necessary": "Die Neuausrichtung war notwendig, um:",
                   "reason-mainnet": "- Bereiten Sie sich auf eine mainnet-ähnliche Umgebung vor",
                   "reason-season3": "- Saison 3 Belohnungsverteilung aktivieren",
-                  "reason-tech-debt": "- Alte technische Schulden aus der frühen Testnet entfernen",
+                  "reason-tech-debt": "- Alte technische Schulden aus frühen Testnet entfernen",
                   "reason-token-economy": "- Eine faire und nachhaltige Tokenökonomie etablieren",
-                  "what-changed-heading": "### Was geändert?",
-                  "what-changed-text": "Der Vorschlag hat 1,950 von insgesamt 1.178M Adressen betroffen. Wallets mit mehr als 1,100 PC-Tokens (einschließlich derer mit Billionen) wurden neu equilibriert und halten nun zwischen 1,100-2,000 PC-Tokens.",
+                  "what-changed-heading": "### Was verändert?",
+                  "what-changed-text": "Der Vorschlag hat 1,950 der insgesamt 1.178 Mio. Wallets betroffen. Wallets mit einem Guthaben von 1,100 PC-Tokens oder mehr (inklusive solche mit Milliarden) wurden neujustiert und halten nun zwischen 1,100-2,000 PC-Tokens.",
                   "key-changes-heading": "**Wichtige Änderungen:**",
                   "change-supply": "- Gesamtmenge reduziert von 75T+ auf ~10B PC Token",
-                  "change-wallets": "- Top 1,950 Wallets neu balanceiert auf den Bereich von 1,100 bis 2,000 PC Token",
+                  "change-wallets": "- Oberste 1,950 Wallets neu balanciert auf den Bereich von 1,100 bis 2,000 PC-Tokens",
                   "change-percentage": "- Betrifft nur 0,17 % aller Adressen (1.950 von 1,178 Mio.)",
                   "change-unaffected": "- 99,83% der Nutzer sind nicht betroffen",
                   "why-not-informed-heading": "### Warum wurden die Nutzer nicht im Voraus informiert?",
-                  "why-not-informed-text": "Benutzer wurden im Voraus nicht informiert, um zu verhindern, dass böswillige Akteure Token vor dem Neuausbalancieren auf andere Wallets verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neuausbalancierens und verhinderte das Ausnutzen des Systems.",
+                  "why-not-informed-text": "Benutzer wurden im Voraus nicht über die Änderung informiert, um zu verhindern, dass böswillige Akteure vor dem Neujustieren Token auf andere Portemonnaie verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neujustierens und verhinderte das Manipulieren des Systems.",
                   "validator-period": "Die Testnet-Validator-Vorschlagsperiode ist aktuell auf 5 Minuten eingestellt, um Edge Cases wie diese zu vermeiden, bevor die vollständige dezentrale Validator-Eigentümerschaft implementiert wird.",
                   "why-52t-heading": "### Warum sehe ich noch immer ein Angebot von 52T?",
-                  "why-52t-text": "Die Rebalancing ist ein zweiphasiger Ansatz. Die Token werden nun gesammelt und bald verbrannt.",
+                  "why-52t-text": "Die Umverteilung ist ein zweiphasiger Ansatz. Die Token werden jetzt in eine teamkontrollierte Wallet gesammelt und bald verbrannt.",
                   "how-affect-heading": "### Wie wirkt sich das auf mich aus?",
-                  "affect-majority": "**Für 99,83% der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Balance bleibt unverändert.",
-                  "affect-top-wallets": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet zum Zeitpunkt des Upgrades 1,100+ PC-Token hielt (oder Billionen), wurde Ihr Kontostand auf den Bereich von 1,100 bis 2,000 PC-Token angepasst.",
+                  "affect-majority": "**Für 99,83 % der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Guthaben bleibt unverändert.",
+                  "affect-top-wallets": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet mehr als 1.100 PC-Token (oder Billionen) hielt, wurde Ihr Guthaben auf den Bereich von 1.100 bis 2.000 PC-Token angepasst.",
                   "need-help-heading": "**Brauchen Sie Hilfe?**",
                   "need-help-text": "Wenn Sie glauben, von dieser Neuausrichtung betroffen zu sein und Fragen oder Bedenken haben, wenden Sie sich bitte an das Push Chain Team auf Discord, um Hilfe zu erhalten."
                 }
@@ -799,7 +799,7 @@
               "items": {
                 "pusd": {
                   "title": "PUSD",
-                  "subtitle": "1:1 gepegelter stabiler Coin, der flüssige USD Liquidität von allen Ketten kombiniert.",
+                  "subtitle": "1:1 an das USD peggedes stabiles Coin, das flüssige Mittel aus allen Ketten vereint.",
                   "ctatitle": "Mehr erfahren"
                 },
                 "whatispush": {
@@ -854,7 +854,7 @@
         "description": "Push Community-Initiativen, Posts und mehr.",
         "og-title": "Let's Push - Community Initiative für Push Chain",
         "og-description": "Eine Community-Initiative und Anteile für Push Chain.",
-        "twitter-title": "Lass uns Pushen | Gemeinschaftsinitiative",
+        "twitter-title": "Lasst uns Pushen | Gemeindeinitiative",
         "twitter-description": "Sehen Sie die Community-Initiative für Push Chain."
       },
       "hero-section": {
@@ -999,7 +999,7 @@
     },
     "ecosystem": {
       "hero-section": {
-        "description": "Entdecke Apps, Partner und Early Adopters, die auf der Donut-Testkette von Push Chain das nächste Zeitalter universeller Erfahrungen aufbauen.",
+        "description": "Entdecken Sie Apps, Partner und Early Adopters, die an der nächsten Ära universeller Erfahrungen auf Push Chains Donut Testnet arbeiten.",
         "title": "Entdecke das Universal Ecosystem"
       },
       "tabs": {
@@ -1322,7 +1322,7 @@
         },
         "qna4": {
           "question": "Wie unterscheidet sich das von Bridges oder Messaging-Layern?",
-          "answer": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Bridges/Messaging bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für Nutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Heimatort vs viele Klone.</2> Mit Bridges/Messaging führst du pro Kette eine Bereitstellung durch und synchronisierst über Nachrichten. Auf Push führst du nur einmalige Bereitstellungen durch; jeder trifft auf den gleichen Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überführungen.</2> Nutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen das Routing und die Gebührsumwandlung unter der Haube.</1><1><2>Einheitliche Identität & Verifizierung.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette undordnen sie demselben Benutzer auf Push zu – nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Kreuz-Ketten-Bestätigungstanz, kein Gas-Token-Suchen, keine Klebstoffverträge zum synchron halten.</1><1><2>Bridges bringen Komplexität ein. Kettennative Interoperabilität löst sie.</2> Bridges erfordern einen komplexen Entwicklungsaufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Ketten-native Interoperabilität funktioniert einfach so wie deine App nativ davon erbt.</1><1>Ergebnis: einfachere Apps, eine Wahrheitquelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Nutzer es nicht tun.</1>"
+          "answer": "<1><2>Kurze Antwort</2>: Push ist der Ort, an dem Ihre App läuft. Brücken/Nachrichten bewegen nur Token oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Wohnsitz vs viele Klone.</2> Bei Brücken/Nachrichten müssen Sie pro Kette ausführen und über Nachrichten synchronisieren. Auf Push führen Sie einmal aus; jeder trifft auf denselben Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überbrückung.</2> Benutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir handeln Routing und Gebührsumwandlung unter der Haube ab.</1><1><2>Einheitliche Identität & Verifikation.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette und schreiben sie demselben Benutzer auf Push zu - nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Ketten-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoffverträge zum Halten in Einklang.</1><1><2>Brücken erzeugen Komplexität. Kettennative Interoperabilität löst sie.</2> Brücken benötigen komplexen Ingenieuraufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App diese nativ erbt.</1><1>Ergebnis: Einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar dann nicht, wenn Benutzer es nicht tun.</1>"
         },
         "qna5": {
           "question": "Ist es EVM-only? Welche Chains werden unterstützt?",
@@ -1716,13 +1716,21 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 NFT Launchpad auf Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Deine Kryptowährungen, deine Regeln: nahtlose Zahlungen über jede Blockchain."
+        },
+        "degen-chess": {
+          "description": "Spiele, setze Wetten, streame und errate den Gewinner, um den Pool zu gewinnen",
+          "name": "Degen Chess"
         },
         "ramen-swap": {
           "description": "Tokens deiner Wahl von jeder Kette serviert",
           "name": "Ramen Swap"
+        },
+        "puffles": {
+          "description": "#1 NFT Launchpad auf Push Chain",
+          "name": "Puffels"
         },
         "halo": {
           "name": "HALO",
@@ -1813,10 +1821,6 @@
           "name": "Hang4.fun",
           "description": "Kommt bald"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "Spiele Schach, wette, streame und tippe den Gewinner, um den Pool zu gewinnen"
-        },
         "omnihub": {
           "name": "Omnihub",
           "description": "Erstelle, kauf und verkaufe Blockchain-Kollektibles"
@@ -1859,16 +1863,24 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Unglaublich schneller Multichain Relayer"
+          "description": "Schnellster Multichain-Relayer"
+        }
+      },
+      "coming-soon": "Kommt bald",
+      "app-spotlight": "APP-HIGHLIGHT",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS und Privacy-Präsertender Computer."
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "Deine Krypto, deine Regeln: nahtlose Zahlungen über alle Chains."
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "MPC-TSS & Privacy Preserving Compute."
         }
       }
     },
     "ecosystem-essentials": {
-      "title": "Entdecken Sie wichtige Testnetzwerk-Apps",
+      "title": "Erforsche wichtige Testnetzwerk-Apps",
       "apps": {
         "pc-faucet": {
           "name": "PC Faucet",
@@ -1916,14 +1928,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Entdecke die Kraft universeller Apps und werde in der letzten Saison vor dem Mainnet belohnt!",
-      "button-title": "Jetzt starten!",
-      "button-aria-label": "Jetzt starten!. Du kannst es hier ansehen",
-      "image-alt": "Jetzt starten!",
+      "description": "Komm und entdecke die Möglichkeiten von universalen Apps und werde in der letzten Saison vor dem Mainnet belohnt!",
+      "button-text": "Loslegen!",
+      "button-title": "Loslegen!",
+      "button-aria-label": "Loslegen!. Du kannst es dir hier ansehen",
+      "image-alt": "Loslegen!",
       "title": "",
-      "button-text": "Jetzt starten!",
       "close-button-title": "Toast-Benachrichtigung schließen",
-      "close-button-aria-label": "Push Chain Toast-Benachrichtigung schließen",
+      "close-button-aria-label": "Push Chain Benachrichtigung wegklappen",
       "container-aria-label": "Push Chain Toast-Benachrichtigung"
     },
     "rewards-notification": {

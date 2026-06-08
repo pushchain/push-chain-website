@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:23:11.222Z",
+  "lastUpdated": "2026-06-07T16:41:51.376Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır",
@@ -1682,19 +1682,18 @@
       "lastUpdated": "2025-11-14T20:23:12.497Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.token-section": {
-      "value": "## Jeton İle İlgili",
+      "value": "## Token İlgili",
       "englishChecksum": "11c6e9de4502fb8d1a1ab8bd4eaff625",
-      "lastUpdated": "2026-05-17T19:34:31.193Z"
+      "lastUpdated": "2026-06-07T16:30:56.193Z"
     },
     "components.typeform-support.categories.technical.description": {
-      "value": "Hata raporları, SDK/API, akıllı sözleşmeler, entegrasyon yardım",
+      "value": "Hatalı bildirimler, SDK/API, akıllı sözleşimler, entegreleme yardımı",
       "englishChecksum": "952a0533dce9bf557f94342840ee4720",
-      "lastUpdated": "2026-05-17T19:34:35.462Z"
+      "lastUpdated": "2026-06-07T16:31:01.605Z"
     },
     "global.site-description": {
-      "value": "Herşeyden önce, ortak durumu (shared-state) kullanan üniversal uygulama için L1. Bir kez dağıt; herhangi bir zincirde yer alan kullanıcılara erişin. Herhangi bir cüzdan kullanın. Herhangi bir jeton ile ödeyin. Ağ değiştirmeden.",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-05-17T19:34:37.919Z"
+      "lastUpdated": "2026-06-07T16:31:06.401Z"
     },
     "footer.links.faucet-title": {
       "value": "Push Chain'den test tokenler almak için",
@@ -1702,9 +1701,9 @@
       "lastUpdated": "2026-02-26T00:00:12.780Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole": {
-      "value": "### Push Chain'i Wormhole'den neyin ayıran?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprüleme işlemlerine odaklanıyor\n- **Sarmalanmış Varlıklar**: Farklı zincirlerde token'ları sarmalaş edilmiş halini oluşturuyor\n- **Gözetim Ağı**: Köprü mesajlarını doğrulamak için validatör setine güveniyor\n- **Çok Adımlı İşlem**: Uygulamalar kullanmadan önce aktarım yapılması gerekiyor\n\n**Push Chain:**\n- **Universal Gerçekleşim**: Köprüleme işlemi olmaksızın direkt etkileşim sağlanıyor\n- **Orijinal Varlıklar**: Sarmalaşmış token'lara ihtiyaç yok, orijinal varlıkları kullanıyor\n- **Direkt Doğrulama**: Herhangi bir zincirden özgün imza doğrulaması yapılıyor\n- **Tek Transaction**: Köprüleme işlemi olmaksızın tek adımda etkileşim sağlanıyor\n\nPush Chain, köprüleme işlemlerine ihtiyaç duymadan doğrudan etkileşimler sağlıyorken Wormhole köprüleme işlemleri gerektiriyor.\n\n---",
+      "value": "### Push Zinciri Nasıl Wormhole'Dan Farklıdır?\n\n**Wormhole:**\n- **Köprü Protokolü**: Ana olarak token ve NFT köprüleme işlemini yapar\n- **Sarmal Assetler**: Çeşitli zincirlerde token'ların sarmallı versiyonlarını oluşturur\n- **Koruma Ağı**: Çapraz-zincir mesajlarının doğruluğunu doğrular\n- **Çok Adımlı Süreç**: Uygulamalar kullanmadan önceasstler köprülemesi gerekir\n\n**Push Zinciri:**\n- **Evrenel İçerik**: Köprüleme gerektirmeden doğrudan etkileşim\n- **Orijinal Assetler**: Sarmal token'lar gerekmeden orijinal assetleri kullan\n- **Doğrudan Doğrulama**: Herhangi bir zincirde doğruluğunu doğrulanacak imzaları\n- **Tek Seferlik İşlem**: Köprüleme gerektirmeden tek adımda etkileşim\n\nPush Zinciri, cross-chain etkileşimler için asset köprülemesini iptal ederken Wormhole bu işlemi gerektirir.",
       "englishChecksum": "b42c978c22c50f8c67751d98728c12ce",
-      "lastUpdated": "2026-05-17T19:34:47.247Z"
+      "lastUpdated": "2026-06-07T16:31:16.926Z"
     },
     "pages.docs.header.countdown-title": {
       "value": "Testnet Belgeler İndirmeye Hazırlanıyor %s",
@@ -1712,24 +1711,24 @@
       "lastUpdated": "2026-02-26T00:00:58.461Z"
     },
     "pages.litepaper.seo.description": {
-      "value": "Push Chain'in vizyonu, mimarisi ve ekonomileri için özlü bir bakış. Evrensel uygulamalar için.",
+      "value": "Push Chain'in genel çizimi, yapısı ve ekonomisi için özlü bir bakış universal uygulamalar için.",
       "englishChecksum": "2768e2658592fe376add9699d9d49ef6",
-      "lastUpdated": "2026-05-17T19:35:19.771Z"
+      "lastUpdated": "2026-06-07T16:31:56.458Z"
     },
     "components.short-support-snippet.qnas.qna3.question": {
-      "value": "Nasıl testnet token'leri (Donut) elde ederim?",
+      "value": "Nasıl testnet tokenler (Donut) edebilirim?",
       "englishChecksum": "bec0083e54c2e78706bd43f65e5207ae",
-      "lastUpdated": "2026-05-17T19:35:25.395Z"
+      "lastUpdated": "2026-06-07T16:32:06.006Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>Test tokens isteyenler için <3>Faucet'i</3> kullanınız.</1><1><2>Notlar:</2> rate limitleri uygulanabilir; bazı faucet'ler basit doğrulama gerektirir. Eğer faucet çalışmıyorsa, lütfen <4>Discord'u</4> üzerinden bize iletişime geçin.</1>",
+      "value": "<1>Test tokens isteyenler için <3>Faucet'i</3> kullanın.</1><1><2>Notlar:</2> hız sınırları uygulanabilir; bazı faucet'ler basit doğrulama gerektirebilir. Faucet çalışmıyorsa, lütfen <4>Discord'u</4> üzerinden bize mesaj gönderin.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-05-17T19:35:28.876Z"
+      "lastUpdated": "2026-06-07T16:32:09.991Z"
     },
     "notifications.rewards-notification.description": {
-      "value": "Testnet, Donut'te bir göz atış yap ve evrensel uygulamalar inşa et! Ödüller kazanın!",
+      "value": "Testnet, Donut'te önizleme yapın ve evrenel uygulamalar inşa ederek ödüller kazanın!",
       "englishChecksum": "4a4561fbdd8c6761d8759b0b0ec592ee",
-      "lastUpdated": "2026-05-17T19:35:35.093Z"
+      "lastUpdated": "2026-06-07T16:32:17.362Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Yapıcılar — Nasıl Yapar ve Öğreticiler",
@@ -1907,8 +1906,9 @@
       "lastUpdated": "2026-01-16T19:50:52.590Z"
     },
     "pages.cult.seo.description": {
+      "value": "Push Kult, Push Chain'in davetiye-only creator programıdır. 50creator. 20M PC tokenler. Sesi yok, sadece ölçülebilir etki.",
       "englishChecksum": "0b81287e99702d4f24a964d8e370b3b3",
-      "lastUpdated": "2026-05-17T19:35:21.980Z"
+      "lastUpdated": "2026-06-07T16:32:00.383Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "value": "### Push Chain üzerinde ne yapılabilir?\n\nPush Chain, tüm L1'ler, L2'ler ve L3'lerden çapraz uyumluluğu sağlar ve bu nedenle yenilik ve uyum oynamak için oyuncak alanı olma potansiyeline sahiptir. Şu web3 kullanım durumlarını inşa edebilirsiniz:\n\n![Push Chain'in temel kullanım alanları](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nveya web3'yi iyileştirmek için yenilikler yaratabilirsiniz:\n\n![Tüketici kullanım durumları](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nveya popüler uygulama örneklerini görerek ilham alabilirsiniz:\n\n![Push Chain üzerinde popüler uygulamalar](/assets/website/chain/knowledge/tokenomics/popularapps.webp)",
@@ -2041,9 +2041,8 @@
       "lastUpdated": "2026-02-26T00:01:31.824Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "Ücretsiz Universal Uygulama Ecosistemine Katılmak istiyor musunuz ve kullanıcınızı 10 katına çıkarmak?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-05-17T19:35:23.802Z"
+      "lastUpdated": "2026-06-07T16:32:04.211Z"
     },
     "components.ecosystem-apps-partners.apps.ramen-swap.description": {
       "value": "Herhangi bir zincirden tercihinizdeki tokenleri sunuyor",
@@ -2067,61 +2066,64 @@
       "lastUpdated": "2026-02-26T00:01:21.564Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
+      "value": "Buradan PC Testnet jetonlarını al",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-05-17T19:35:30.534Z"
+      "lastUpdated": "2026-06-07T16:32:11.745Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
+      "value": "Küçük parça işlemleri yapmak için zincirler arasında token köprü kur",
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-05-17T19:35:32.024Z"
+      "lastUpdated": "2026-06-07T16:32:14.001Z"
     },
     "components.ecosystem-essentials.apps.simulate-tx.description": {
+      "value": "Evrenel bir işlemi simüle et",
       "englishChecksum": "93a1dbc5de1a2b469a1d5e7e7422804e",
-      "lastUpdated": "2026-05-17T19:35:33.725Z"
+      "lastUpdated": "2026-06-07T16:32:15.707Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.title": {
-      "value": "Zincir Geliştirme - Token Dengesizliği - 10 Milyar PC Jetonu",
+      "value": "Zincir Yükseltme - Token Dönüştürme - 10 Milyar PC Token",
       "englishChecksum": "47c4883068fe6b0c96673e994701b191",
-      "lastUpdated": "2026-05-17T19:34:33.834Z"
+      "lastUpdated": "2026-06-07T16:30:59.167Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain, bir token yeniden dağıtım önerisini yürüttü. Böylece toplam PC token tedarikini yaklaşık 10 milyar token seviyesine indirdi. Bu güncelleme, testnet'in başlangıç dönemlerinden kalma teknik borcu çözümledi ve zinciri ana ağ için hazırladı.",
+      "value": "Push Chain, bir token yeniden dağıtım önerisi uyguladı ve PC jeton toplam tedarik miktarını yaklaşık 10 milyar jetondan 75T+ jetona indirdi. Bu yükseltme testnet'in erken günlerinde bir teknik borçtan vazgeçildi ve zincir için mainnet ortamı hazırlanması için hazırlandı.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-05-17T19:34:51.394Z"
+      "lastUpdated": "2026-06-07T16:32:22.344Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "Push Chain testnet'in erken günlerinde, PC jetonları için yakma ve miktar ayarlama işlemleri yoktu. Bu, evrensel işlemlerin çok düşük fiyat hesaplamalarına ve az sayıda jeton sahiplerinin çok yüksek miktarda jetonlara sahip olmasına neden oldu (trilyona kadar). Bu, ana ağın başlatılmadan önce düzleştirilmesi gereken eşitsiz bir jeton ekonomisi yarattı.",
+      "value": "Push Chain testnet'in erken günlerinde, PC jetonları için yakma ve mıhtı işlemi yoktu. Bu, evrensel işlemler için ekstrem olarak düşük fiyat hesaplamaları yarattı ve az sayıda jeton sahibi tarafından trilyonlarca jeton birikimi meydana geldi. Ana ağı için fırlatılmadan önce düzeltmeye ihtiyacı olan bir denge dışı jeton ekonomisi oluştu.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-05-17T19:34:56.641Z"
+      "lastUpdated": "2026-06-07T16:31:27.209Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
       "value": "- Adil ve sürdürülebilir bir token ekonomisi kurmak",
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-05-17T19:34:59.238Z"
+      "lastUpdated": "2026-06-07T16:31:30.522Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Bu öneri, toplam 1.178M adresden 1,950 adet üst düzey cüzdanlara etki etti. Trilyonlarca PC jetonu tutan veya daha fazla tutan cüzdanlar (dahil olmak üzere) yeniden dâhşil olarak %1,100-%2,000 aralığına getirildi.",
+      "value": "Oluşturulmuş 1.178M adresden sadece en yüksek 1,950 cüzdan etkiledi. 1,100 PC jetonu veya daha fazla (trilyonlar dahil) tutan cüzdanlar yeniden dengelenerek 1,100-2,000 arasında tutuldu.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:35:04.032Z"
+      "lastUpdated": "2026-06-07T16:31:35.225Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
-      "value": "- Toplam tedarik %75+ dan yaklaşık 10B PC jetonu'ya düştü",
+      "value": "- Toplam tedarik 75T'den ~10B PC tokenine düşürüldü",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-05-17T19:35:06.827Z"
+      "lastUpdated": "2026-06-07T16:31:38.236Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Kullanıcıları önceden bilgilendirmek, rebalancing'ten önce kötü niyetli aktörlerin tokenleri diğer cüzdanlara dağıtmasını engellemek için güvenlik önlemi olarak yapıldı. Bu önlem, rebalancing işleminin bütünlüğünü korumak ve sistem oyununu önlemeyi sağladı.",
+      "value": "Kullanıcıları önceden bilgilendirmek, yeniden dengelenme işleminden önce kötü niyetli aktörler tarafından tokens'ların diğer cüzdanlara dağıtılmasına neden olabilirdi. Güvenlik önlemi olarak bu işlemın bütünlüğünü ve sistemi oyunlaştırmaktan korunması için bu güvenlik önlemi uygulandı.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:35:10.853Z"
+      "lastUpdated": "2026-06-07T16:31:43.118Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Rebalans, iki aşamalı bir yaklaşım. Şimdi token'lar bir takım tarafından kontrol edilen bir cüzdana toplanıyor ve yakın zamanda yakanacak.",
+      "value": "Dönüşüm, iki aşamalı bir yaklaşımdır. Tokenler şimdi takımın kontrolündeki cüzdanlara toplanıyor ve yakılacaklardır.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-05-17T19:35:14.065Z"
+      "lastUpdated": "2026-06-07T16:31:47.273Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**Etkilenmiş cüzdanlar (en yüksek 1,950):** Eğer cüzdanınız 1,100+ PC jetonu tutuyorsa (ya da trilyonlar), balance'niz 1,100-2,000 aralığına yeniden ayarlanmıştır.",
+      "value": "**Affected wallets (top 1,950):** Eğer cüzdanız 1,100+ PC jetonu tutuyor veya trilyonlarca miktarda ise, balansınız 1,100-2,000 arası PC jetonu olarak yeniden dengenize alınmıştır.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-05-17T19:35:18.147Z"
+      "lastUpdated": "2026-06-07T16:31:52.047Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Derinlemesine İncelemeler — Kavramlar ve Mimari",
@@ -2863,11 +2865,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T22:06:20.518Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "Satranç oynayın, bahis yapın, evrensel",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T22:06:38.264Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "Omnihub",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -2971,6 +2968,16 @@
       "value": "Işın Hızlı Çoklu Zincir Relayci",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T22:11:16.046Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "Puffles",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:41:31.207Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "Push Chain üzerindeki #1 NFT Başlatma Platformu",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:41:51.365Z"
     }
   }
 }

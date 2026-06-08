@@ -357,9 +357,11 @@
             "sections": {
               "universal-apps": {
                 "items": {
-                  "apps-only-possible-with-shared-state-v1": {},
+                  "apps-only-possible-with-shared-state-v1": {
+                    "title": "Aplicaciones Posibles Solo con Shared State - Vol. 1"
+                  },
                   "apps-only-possible-with-shared-state-v2": {
-                    "title": "Apps Posibles Solo con Estado Compartido - Vol. 2"
+                    "title": "Sólo es posible con estado compartido - Vol. 2"
                   },
                   "apps-of-the-future": {
                     "title": "Aplicaciones del Futuro — Construyendo sin el caos"
@@ -674,7 +676,7 @@
                   "status-heading": "## Estado",
                   "status-timeline": "25 de febrero de 2026 - Comenzado<br />25 de febrero de 2026 - ✅ Completado",
                   "overview-heading": "## Resumen",
-                  "overview-text": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC de 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días del testnet y prepara la cadena para un entorno similar al mainnet.",
+                  "overview-text": "Se ejecutó una propuesta de reequilibrado de tokens en Push Chain para reducir la oferta total de tokens PC de más de 75T a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días de la red de prueba y prepara la cadena para un entorno similar al de la red principal.",
                   "why-heading": "### ¿Por qué se hizo esto?",
                   "why-text": "En los primeros días de Push Chain testnet, no había un proceso de quema y acuñación para los $PC tokens. Esto resultó en cálculos de precios extremadamente bajos para las transacciones universales y permitió a un pequeño número de tenedores de tokens acumular grandes cantidades de tokens (llegando a billones). Esto creó una economía de tokens desequilibrada que necesitaba corrección antes del lanzamiento de mainnet.",
                   "why-necessary": "El reequilibrio fue necesario para:",
@@ -689,11 +691,11 @@
                   "change-percentage": "- Afecta solo al 0.17% de las direcciones totales (1,950 de 1.178M)",
                   "change-unaffected": "- El 99,83% de los usuarios no se ven afectados",
                   "why-not-informed-heading": "### ¿Por qué los usuarios no fueron informados con anticipación?",
-                  "why-not-informed-text": "Los usuarios no fueron notificados con anticipación para evitar que actores maliciosos redistribuyeran tokens a otros monederos antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el engaño del sistema.",
+                  "why-not-informed-text": "Los usuarios no recibieron una notificación previa para evitar que actores malintencionados redistribuyeran tokens a otras billeteras antes del reequilibrado. Esta medida de seguridad aseguró la integridad del proceso de reequilibrado y evitó el uso fraudulento del sistema.",
                   "validator-period": "El período de propuesta de validadores de la testnet está actualmente establecido en 5 minutos para ayudar a eliminar casos límite como este antes de que se implemente la propiedad descentralizada completa del validador.",
                   "why-52t-heading": "### ¿Por qué todavía veo una oferta de 52T?",
                   "how-affect-heading": "### ¿Cómo me afecta esto?",
-                  "affect-majority": "**Para el 99.83% de los usuarios:** Este cambio no afecta a usted. Su saldo de billetera sigue siendo el mismo.",
+                  "affect-majority": "**Para el 99.83% de los usuarios:** Este cambio no afecta a tu wallet balance.",
                   "affect-top-wallets": "**Para las billeteras afectadas (las 1,950 principales):** Si tu billetera tenía 1,100+ Token PC (o billones), tu saldo se ha reequilibrado al rango de 1,100-2,000 Token PC.",
                   "need-help-heading": "**¿Necesitas ayuda?**",
                   "need-help-text": "Si cree que se ve afectado por este reequilibrio y tiene preguntas o inquietudes, comuníquese con el equipo de Push Chain en Discord para obtener ayuda."
@@ -857,7 +859,7 @@
         "title": "Push Cult — Programa de Creadores para Contenido Impulsado por Señales",
         "description": "Push Cult es un programa exclusivo para creadores, solo por invitación, de Push Chain. 50 creadores. 20M PC tokens. Sin ruido, solo impacto medible.",
         "og-title": "Push Cult - El Programa de Creadores Construido para Signal",
-        "og-description": "Un grupo exclusivo de 50 creadores ganando 20M PC tokens como recompensa por impulsar el uso real y la creencia en Push Chain.",
+        "og-description": "Un grupo exclusivo de 50 creadores que ganan tokens PC por un bounty de 20M y promueven el uso real e incredulidad en Push Chain.",
         "twitter-title": "Push Cult - Programa de Creadores por Push Chain",
         "twitter-description": "50 creadores. 20M $PC tokens. Sin spam. Sin métricas vacías. Push Cult recompensa la señal real y el impacto real."
       },
@@ -872,7 +874,7 @@
     },
     "ecosystem": {
       "hero-section": {
-        "description": "Descubre aplicaciones, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en Donut Testnet de Push Chain.",
+        "description": "Descubre aplicaciones, socios y pioneros construyendo la siguiente era de experiencias universales en la red Push Chain's Donut Testnet.",
         "title": "Explora el Ecosistema Universal"
       },
       "tabs": {
@@ -1590,9 +1592,13 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 plataforma de lanzamiento de NFT en Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Tus criptomonedas, tus reglas: pagos fluidos en todas las cadenas."
+        },
+        "degen-chess": {
+          "description": "Juega, haz apuestas, transmite y adivina al ganador para ganar el pozo",
+          "name": "Degen Chess"
         },
         "push-ninja": {
           "name": "Push Ninja",
@@ -1694,10 +1700,6 @@
           "name": "Hang4.fun",
           "description": "Próximamente"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "Juega al ajedrez, apuesta, haz streaming y adivina al ganador para ganar el pool"
-        },
         "zns": {
           "name": "ZNS",
           "description": "Dominios multi-cadena, GM + Herramientas de despliegue"
@@ -1727,16 +1729,28 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Receptor ultrarrápido entre múltiples blockchains"
+          "description": "Relayer Multichain Superrápido"
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "Tu cripto, tus reglas: pagos sin fricciones en todas las cadenas."
+        "puffles": {
+          "name": "Puffles",
+          "description": "#1 NFT Launchpad en Push Chain"
+        }
+      },
+      "coming-soon": "Pr√≥ximamente",
+      "app-spotlight": "DESTACADAS DE LA APLICACIÓN",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS y Computación que preserva la privacidad."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "Computación MPC-TSS y preservación de la privacidad."
         }
       }
     },
     "ecosystem-essentials": {
-      "title": "Explorar Aplicaciones de Prueba Essenciales",
+      "title": "Explorar Aplicaciones de Prueba de Red Esenciales",
       "apps": {
         "pc-faucet": {
           "name": "Grifo de PC",
@@ -1899,15 +1913,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "¡Explora el poder de las aplicaciones universales y obtén recompensas en la temporada final antes del mainnet!",
+      "button-text": "¡Comienza ahora!",
       "button-title": "¡Empezar!",
-      "button-aria-label": "¡Empezar!. Puedes verlo aquí",
-      "image-alt": "¡Empezar!",
+      "button-aria-label": "¡Comienza ahora!. Puedes echarle un vistazo aquí",
+      "image-alt": "¡Comienza!",
       "title": "",
-      "button-text": "¡Empezar!",
-      "close-button-title": "Cerrar notificación toast",
+      "close-button-title": "Cerrar notificación",
       "close-button-aria-label": "Descartar notificación toast de Push Chain",
-      "container-aria-label": "Notificación toast de Push Chain"
+      "container-aria-label": "Notificación del Push Chain"
     },
     "info-bar": {
       "title": "¡La invitación exclusiva a la Temporada 3 ya está activa!",

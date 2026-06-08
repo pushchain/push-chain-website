@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Push ChainでNo.1のNFTローンチパッド"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "あなたの暗号資産、あなたのルール：あらゆるチェーンでシームレスな支払い。"
+        },
+        "degen-chess": {
+          "description": "プレイして、賭けをしたり、ストリーミングしたり、勝者を当ててプールに勝つ"
         }
       }
     }

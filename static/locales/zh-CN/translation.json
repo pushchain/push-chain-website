@@ -524,7 +524,7 @@
                   "why-unique-for-users": "### 为什么 Push Chain 对用户来说是独特的？\n\nPush Chain 解决了现有区块链中的特定问题，例如互操作性、跨链状态访问、可编程求解器和钱包抽象，从而实现**真正的全栈互操作性**。 虽然现有的区块链很强大，但它们在自己的生态系统中运行，并且需要一个聚合器来统一这些链。 \n\nPush Chain 的重点是成为一个**共享状态链**，用于通用（可互操作的）应用，充当一个统一层，所有链都可以汇聚到一起，并将 Push Chain 用作通用中心或在它们之间进行结算。\n\n它提供了一种新的 Web3 范式，可以从**Any Chain（任何链）**开始。适用于**Any Wallet / User（任何钱包/用户）**。 并且适用于**Any App（任何应用）**。\n\n---",
                   "core-innovations": "### Push Chain 的创新之处是什么？\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\nPush Chain 是一个权益证明 Layer 1，旨在消除所有区块链之间的碎片化。在其底层，它结合了几个关键创新：\n\n- **通用的智能合约**  \n  100% EVM 兼容的智能合约，无需任何**链上代码更改**即可部署。一旦部署，它们就能立即与所有链上的用户兼容。\n\n- **真正的通用链**  \n  原生支持所有链，并使用户能够与同一个 app 进行交互。无需集中式中继器、桥接或其他技巧。\n\n- **通用的费用和钱包抽象**  \n  允许用户无需担心 gas 或钱包机制，即可从任何链与 app 进行交互。\n\n- **为任何链的单次交易**  \n  无论用户在哪条链上，他们只需要签名一次交易。\n\n- **通用的 EVM**  \n  Push Chain 足够智能，能够原生识别其他链上的用户，并正确地归因和映射交易。\n\n总之，这些特性让您可以构建**通用的 web3 app**。用户不再是 “以太坊上的 Uniswap” 或 “Polygon 上的 Uniswap”，而仅仅是 **Uniswap 的用户** — 就这样。\n\n---",
                   "problems-solved": "### Push Chain 解决什么问题？\n\n- **碎片化**  \n  将 EVM 和非 EVM 链整合到一个共享状态 L1 下，用户无需在网络或钱包之间跳转。\n\n- **互操作性**  \n  原生支持来自任何区块链的 transactions 和链上共享状态。\n\n- **最终性**  \n  ~1-2 秒的即时、不可逆的本地 finality – 无需等待或 reorg。\n\n- **Onboarding & UX**  \n  社交/email 登录，支持任何 token 的 gas 和任何钱包，实现跨链的零摩擦访问。\n\n- **Universal Apps**  \n  一次构建，随处部署 — 任何 web3 app 都能为任何链上的任何用户无缝工作。\n\n---",
-                  "what-apps-can-build": "### 什么样的应用可以在推送链上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助推送链的共享状态和跨链架构，可能性无穷。以下是一些旗舰示例：\n\n- **通用DEX**  \n  一键式交易UI，跨所有链进行流动性池路由，速度和界面如同集中式交易所(CENTRALIZED EXCHANGE)。\n\n- **通用DeFi**  \n  全球浏览器银行：贷款、借款、收益聚合器跨链而无需手动桥接。\n\n- **通用AI代理人**  \n  自主代理人，在任何链上支付并接受任意令牌——适合订阅服务、数据机器人等。\n\n- **通用DAO**  \n  跨链治理：不论其来源链，令牌持有者投票并执行提案。\n\n- **通用游戏**  \n  多玩家锦标赛和跨链游戏经济，统一玩家和资产，涵盖以太坊、索拉纳、多边形等。\n\n- **通用市场**  \n  买卖交易NFT和令牌的集合市场——跨所有链。\n\n- **通用名称服务**  \n  人类可读名称，在多个区块链上解析钱包地址。\n\n推送链上可以构建的应用和创新无穷！查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)开始吧。开发者也可以检查[文档中心](/docs/)入门。\n\n---",
+                  "what-apps-can-build": "### 什么样的应用可以在Push Chain上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助Push Chain的共享状态、跨链架构，可能性无穷。以下是几个旗舰示例：\n\n- **通用DEX**\n  单一交换界面适用于每个流动性池–跨所有链的抽象路由，具有CEX的速度和体验。\n\n- **通用DeFi**\n  浏览器中的全球银行：跨生态系统的贷款、借款、收益聚合器，无需手动桥接。\n\n- **通用AI代理**\n  自治代理可以在任何链上支付和获取任意令牌–适用于订阅服务、数据机器人等。\n\n- **通用DAO**\n  跨链治理，token持有者无论其起源链如何都可以投票并执行提案。\n\n- **通用游戏**\n  多玩家比赛和跨链游戏经济，统一玩家和资产来自以太坊、索拉纳、多边形等。\n\n- **通用市场**\n  可以在单一集成市场买卖和交易NFT和令牌的跨链平台。\n\n- **通用名称服务**\n  解析到多个区块链钱包的人类可读名称。\n\nPush Chain上可以构建的应用和创新无穷无尽！请查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)以帮助您入门。 builders也可以检查[文档中心](/docs/)开始。\n\n---",
                   "technical-section": "## 技术",
                   "why-not-an-l2": "### 为什么选择 L1 而不是 L2？\n\nPush Chain 旨在作为所有其他区块链的 **共享结算层** 和 **通用执行层** — 只有独立的 L1 才能实现这些角色：\n\n- **原生跨链结算**  \n  作为 L1，Push Chain 可以直接最终确定来自任何链的交易，而无需依赖外部安全模型或欺诈证明。\n\n- **通用执行与状态访问**  \n  运行自身共识和状态机使 Push Chain 能够解释和执行来自以太坊、Solana 等链的交易 — L2 无法原生实现此功能，因为它与单个基础层绑定。\n\n- **无 L2 限制或延迟**  \n  L2 继承其宿主链的延迟、最终性规则和 gas 模型（以及桥接开销）。Push Chain 通过在基础层提供即时最终性和通用费用抽象来避免这些瓶颈。\n\n- **真正的共享状态**  \n  要在智能合约中读取和写入多个链的状态，您需要直接的、协议层面的访问 — 只有在 L1 层才能实现。\n\n简而言之，只有专用的 L1 才能在不增加额外复杂性或信任假设的情况下将每个链统一到一个连贯的执行和结算层下。\n\n---",
                   "evm-compatibility": "### Push Chain 是否兼容 EVM？\n\n是的，Push Chain **兼容 EVM**，而且功能更多。它支持：\n\n- **EVM 智能合约**: 像在以太坊上一样部署 Solidity 合约\n- **以太坊工具**: 使用 MetaMask、Hardhat、Remix 和其他熟悉的工具\n- **Universal 扩展**: 额外的预编译，用于跨链功能\n- **多 VM 支持**: (Roadmap) 支持其他 VM，例如 SVM (Solana)、MoveVM 等。\n\n这意味着开发者可以：\n- 移植现有的以太坊 DApp，只需进行少量更改\n- 使用熟悉的开发流程和工具\n- 通过 Push Chain 的 universal 特性访问增强的跨链功能\n\n实际上，来自任何链上的用户和应用都可以无缝地与 Push Chain 应用交互，无论其底层的 VM 如何。\n\n---",
@@ -687,23 +687,22 @@
                   "why-necessary": "重组是必要的，原因如下:",
                   "reason-mainnet": "- 为主网环境做好准备",
                   "reason-season3": "- 启用第三赛季奖励分发",
-                  "reason-tech-debt": "- 移除早期测试网络的旧技术债务",
                   "reason-token-economy": "- 建立公平且可持续的代币经济",
                   "what-changed-heading": "### 发生了什么变化？",
-                  "what-changed-text": "该提案影响了总地址17.8万个中的顶级1,950个钱包。持有1,100 PC代币或更多（包括亿万美元）的钱包进行重新平衡，以持有1,100-2,000 PC代币之间的数量。",
+                  "what-changed-text": "该提案影响了1.178M总地址中的顶级1,950钱包。持有1,100个PC代币或更多（包括数千万）的钱包被重新平衡以持有1,100-2,000个PC代币。",
                   "key-changes-heading": "**主要变更:**",
-                  "change-supply": "- 总供应量从75T+减至约10B PC代币",
-                  "change-wallets": "- 顶级1,950钱包重新平衡至1,100-2,000 PC代币范围",
+                  "change-supply": "- 总供应量从75T+减少到约10B PC代币",
+                  "change-wallets": "- 顶级1,950钱包调整至1,100-2,000 PC代币范围",
                   "change-percentage": "- 仅影响总地址的 0.17% (1,950 个中的 1,178,000 个)",
                   "change-unaffected": "- 99.83% 的用户不受影响",
                   "why-not-informed-heading": "### 为什么事先没有通知用户？",
-                  "why-not-informed-text": "用户事先未获通知，以防止恶意actors在重新平衡前将代币转移到其他钱包。这一安全措施确保了重新平衡过程的完整性，并防止系统被操控。",
+                  "why-not-informed-text": "用户未提前通知，以防止恶意actors在重新平衡之前将代币 redistribution到其他钱包中。这项安全措施确保了重新平衡过程的完整性，并防止系统被操纵。",
                   "validator-period": "当前测试网验证者提案周期设置为 5 分钟，旨在帮助消除类似情况的边缘情况，然后再全面实施去中心化验证者所有权。",
                   "why-52t-heading": "### 为什么我仍然看到 52T 的代币供应量？",
                   "why-52t-text": "再平衡是一个两阶段的方法。这些代币现在被收集到团队控制的钱包中，并很快将被销毁。",
                   "how-affect-heading": "### 这会如何影响我？",
                   "affect-majority": "**对于 99.83% 的用户:** 此变更不会影响您。您的钱包余额保持不变。",
-                  "affect-top-wallets": "**对于受影响的钱包（前 1,950）：**如果您的钱包持有 1,100+ PC 代币（或万亿），您的余额已重新平衡为 1,100-2,000 PC 代币范围。",
+                  "affect-top-wallets": "**对受影响的钱包（前1950名）：**如果您的钱包持有1100+PC代币（或万亿），则已将余额调整到1100-2000 PC代币范围内。",
                   "need-help-heading": "**需要帮助？**",
                   "need-help-text": "如果您认为您受到此次代币重平衡的影响，并有任何疑问或疑虑，请通过 Discord 联系 Push Chain 团队寻求帮助。"
                 }
@@ -932,7 +931,6 @@
     "privacymobile": {
       "seo": {
         "title": "移动隐私政策",
-        "description": "我们如何收集、使用和保护推链移动应用程序中的数据，以及您的选择。",
         "og-title": "Push Chain 移动隐私政策 - App 数据保护",
         "og-description": "我们移动应用的数据实践和您的权利。",
         "twitter-title": "移动隐私政策 - Push Chain",
@@ -1316,7 +1314,7 @@
           "answer": "<1>使用你已有的钱包 — Push 会在幕后处理跨链部分。</1><1>1. <2>从任何地方开始。</2> 使用任何链上的任何钱包 — 无需切换网络。</1><1>2. <2>仅需一次签名。</2> 使用你已持有的代币付款；我们会为你主链预留费用。</1><1>3. <2>我们会进行路由。</2> Push 上一个关联的账户（仍然属于你）会将你的调用转发给app — 非托管。</1><1>4. <2>你始终是你自己。</2> 我们将你主链钱包与你关联的账户匹配，以便正确验证操作并将操作归因于你在 Push 上的身份。</1><1>5. <2>快速完成。</2> app 在 Push 上运行；费用在幕后处理。无需桥接，无需新钱包。</1><1>这样，任何链上的用户都可以使用部署在 Push Chain 上的相同app — 使app真正实现universal。</1>"
         },
         "qna3": {
-          "question": "我需要不同的钱包或手续费代币吗？",
+          "question": "我需要一个不同的钱包或气体令牌吗？",
           "answer": "<1><2>不用。</2></1><1><2>请保管好您的钱包。</2>使用您已有的钱包——无需创建新的钱包或帐户。</1><1><2>用您持有的资产支付。</2>费用可以用您在主网已有的代币支付；我们会在后台处理转换。</1><1><2>无需切换网络。</2>留在您的主网上——无需为了获取 gas 代币而进行跨链。</1><1><2>非托管。</2>您签署每个操作；Push 从不持有您的密钥。</1><1><2>在底层进行。</2>网络会自动结算 $PC 费用——您无需管理它。</1>"
         },
         "qna4": {
@@ -1736,9 +1734,13 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Push Chain 上的 #1 NFT 发射平台"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "你的加密货币，你的规则：跨链无缝支付。"
+        },
+        "degen-chess": {
+          "description": "玩游戏，下注，直播和猜测获胜者以赢得奖池",
+          "name": "德根棋牌"
         },
         "halo": {
           "name": "HALO"
@@ -1834,10 +1836,6 @@
           "name": "Hang4.fun",
           "description": "即将推出"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "下棋、下注、观看直播并猜测胜者以赢取奖池"
-        },
         "omnihub": {
           "name": "区块链合一",
           "description": "创建、购买和销售区块链收藏品"
@@ -1875,12 +1873,23 @@
           "description": "在任何链上免费部署你的NFT集合"
         },
         "tachyon": {
-          "name": "Tachyon",
-          "description": "闪电般快速的多链中继"
+          "name": "光速",
+          "description": "多链中继，速度如闪电般迅猛"
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "你的加密货币，你的规则：跨链无缝支付。"
+        "puffles": {
+          "name": "小笨熊",
+          "description": "#1 NFTLaunchpad在Push Chain上"
+        }
+      },
+      "coming-soon": "即将推出",
+      "partners": {
+        "silence-labs": {
+          "name": "安静实验室",
+          "description": "MPC-TSS & 隐私保护计算。"
+        },
+        "human-tech": {
+          "name": "人类科技",
+          "description": "MPC-TSS与隐私保护计算。"
         }
       }
     },
@@ -1888,8 +1897,7 @@
       "title": "探索重要的测试网应用",
       "apps": {
         "pc-faucet": {
-          "name": "PC 水龙头",
-          "description": "在这里获取您的PC测试网令牌"
+          "name": "PC 水龙头"
         },
         "push-bridge": {
           "name": "Push 桥接",
@@ -1904,22 +1912,23 @@
           "description": "Push Chain 的区块链浏览器"
         },
         "wallet": {
-          "name": "钱包"
+          "name": "钱包",
+          "description": "区块链的通用钱包，由Push Chain提供"
         }
       }
     }
   },
   "notifications": {
     "chain-notification": {
-      "description": "探索通用应用的力量，在主网上线前的最后一个赛季中获得奖励！",
-      "button-title": "开始！",
-      "button-aria-label": "开始！。您可以在这里查看",
-      "image-alt": "开始！",
-      "title": "",
-      "button-text": "开始！",
-      "close-button-title": "关闭提示通知",
-      "close-button-aria-label": "关闭 Push Chain 提示通知",
-      "container-aria-label": "Push Chain 提示通知"
+      "description": "来探索通用应用的力量，并获得主网之前最后一季的奖励吧！",
+      "button-text": "立即开始!",
+      "button-title": "开始体验!",
+      "button-aria-label": "立即开始！您可以在这里了解更多",
+      "image-alt": "立即开始！",
+      "title": "在注出一页贼还",
+      "close-button-title": "关闭提示消息",
+      "close-button-aria-label": "关闭“Push Chain”通知",
+      "container-aria-label": "区块链提示通知"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta 已经上线！",

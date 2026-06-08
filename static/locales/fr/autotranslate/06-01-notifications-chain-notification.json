@@ -1,11 +1,11 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Besoin d'un code d'invitation ? Suivez-nous, regardez notre vidéo explicative et laissez un commentaire. Invites limitées.",
-      "button-text": "Obtenir le code d'invitation",
-      "button-title": "Obtenir le code d'invitation",
-      "button-aria-label": "Obtenir le code d'invitation ! Vous pouvez y jeter un coup d'œil ici",
-      "image-alt": "Obtenez votre code d'invitation !"
+      "description": "Venez découvrir la puissance des applications universelles et soyez récompensé(e) lors de la saison finale avant le mainnet !",
+      "button-text": "Commencer !",
+      "button-title": "Commencer !",
+      "button-aria-label": "Commencer ! Vous pouvez y jeter un coup d'œil ici",
+      "image-alt": "Commencer !"
     }
   }
 }

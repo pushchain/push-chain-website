@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 NFT लॉन्चपैड ऑन Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "आपकी क्रिप्टो, आपके नियम: हर चेन पर निर्बाध भुगतान।"
+        },
+        "degen-chess": {
+          "description": "खेलें, दांव लगाएं, स्ट्रीम करें और जीतने के लिए पूल का अनुमान लगाएं"
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:15:35.781Z",
+  "lastUpdated": "2026-06-07T16:37:52.993Z",
   "keys": {
     "footer.email-section.title-secondary": {
       "value": "¡noticias y actualizaciones!",
@@ -1278,7 +1278,7 @@
     },
     "pages.knowledge.report.seo.twitter-description": {
       "englishChecksum": "36afc09b7ddb14ee5fc0994e3a0da380",
-      "lastUpdated": "2026-05-17T19:24:39.265Z"
+      "lastUpdated": "2026-06-07T16:21:10.217Z"
     },
     "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
       "value": "Base de conocimiento",
@@ -2591,9 +2591,9 @@
       "lastUpdated": "2025-11-14T19:27:06.073Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Descubre aplicaciones, socios y los primeros usuarios que están construyendo la próxima era de experiencias universales en Donut Testnet de Push Chain.",
+      "value": "Descubre aplicaciones, socios y pioneros construyendo la siguiente era de experiencias universales en la red Push Chain's Donut Testnet.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-05-17T19:25:13.351Z"
+      "lastUpdated": "2026-06-07T16:21:32.760Z"
     },
     "components.mailing-signup.title": {
       "value": "No te pierdas ninguna novedad",
@@ -4286,18 +4286,19 @@
       "lastUpdated": "2026-01-16T17:06:06.479Z"
     },
     "pages.cult.seo.og-description": {
-      "value": "Un grupo exclusivo de 50 creadores ganando 20M PC tokens como recompensa por impulsar el uso real y la creencia en Push Chain.",
+      "value": "Un grupo exclusivo de 50 creadores que ganan tokens PC por un bounty de 20M y promueven el uso real e incredulidad en Push Chain.",
       "englishChecksum": "45df3c59f89f6db4545500d75622968e",
-      "lastUpdated": "2026-05-17T19:24:58.752Z"
+      "lastUpdated": "2026-06-07T16:21:30.872Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v1.title": {
+      "value": "Aplicaciones Posibles Solo con Shared State - Vol. 1",
       "englishChecksum": "f4155267906fb77f40ec521aaf9341be",
-      "lastUpdated": "2026-05-17T19:25:19.078Z"
+      "lastUpdated": "2026-06-07T16:21:58.643Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v2.title": {
-      "value": "Apps Posibles Solo con Estado Compartido - Vol. 2",
+      "value": "Sólo es posible con estado compartido - Vol. 2",
       "englishChecksum": "a47b06e49f50c64cc10a1035fc814bfe",
-      "lastUpdated": "2026-05-17T19:25:38.055Z"
+      "lastUpdated": "2026-06-07T16:21:08.367Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "englishChecksum": "cf90790b81cb182728dc63d612a76a0d",
@@ -4364,36 +4365,36 @@
       "lastUpdated": "2026-02-25T23:47:25.882Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "Explorar Aplicaciones de Prueba Essenciales",
+      "value": "Explorar Aplicaciones de Prueba de Red Esenciales",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-05-17T19:25:14.589Z"
+      "lastUpdated": "2026-06-07T16:21:34.076Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-05-17T19:25:15.973Z"
+      "lastUpdated": "2026-06-07T16:21:35.688Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain ejecutó una propuesta de reequilibrio de tokens para reducir la oferta total de tokens PC de 75T+ a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días del testnet y prepara la cadena para un entorno similar al mainnet.",
+      "value": "Se ejecutó una propuesta de reequilibrado de tokens en Push Chain para reducir la oferta total de tokens PC de más de 75T a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días de la red de prueba y prepara la cadena para un entorno similar al de la red principal.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-05-17T19:24:43.291Z"
+      "lastUpdated": "2026-06-07T16:21:14.787Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-05-17T19:24:46.054Z"
+      "lastUpdated": "2026-06-07T16:21:17.842Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Los usuarios no fueron notificados con anticipación para evitar que actores maliciosos redistribuyeran tokens a otros monederos antes del reequilibrado. Esta medida de seguridad garantizó la integridad del proceso de reequilibrado y evitó el engaño del sistema.",
+      "value": "Los usuarios no recibieron una notificación previa para evitar que actores malintencionados redistribuyeran tokens a otras billeteras antes del reequilibrado. Esta medida de seguridad aseguró la integridad del proceso de reequilibrado y evitó el uso fraudulento del sistema.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:24:49.749Z"
+      "lastUpdated": "2026-06-07T16:21:21.849Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-05-17T19:24:53.481Z"
+      "lastUpdated": "2026-06-07T16:21:25.706Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Para el 99.83% de los usuarios:** Este cambio no afecta a usted. Su saldo de billetera sigue siendo el mismo.",
+      "value": "**Para el 99.83% de los usuarios:** Este cambio no afecta a tu wallet balance.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-05-17T19:24:56.609Z"
+      "lastUpdated": "2026-06-07T16:21:28.755Z"
     },
     "footer.email-section.title": {
       "value": "Mantente actualizado con Push Chain",
@@ -4685,11 +4686,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T20:17:06.501Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "Juega al ajedrez, apuesta, universal",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T20:17:27.161Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "Omnihub",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -4783,6 +4779,20 @@
       "value": "Relayer Multichain Superrápido",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T20:22:01.519Z"
+    },
+    "notifications.chain-notification.description": {
+      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
+      "lastUpdated": "2026-06-07T16:21:37.770Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "Puffles",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:37:36.167Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFT Launchpad en Push Chain",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:37:52.981Z"
     }
   }
 }

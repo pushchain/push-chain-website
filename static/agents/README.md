@@ -1,7 +1,7 @@
 ---
 schema_version: 1.0.0
 version: 1.0.0
-current_sdk_version: 6.0.9
+current_sdk_version: 6.0.16
 generated: 2026-05-15
 description: Human and agent orientation doc for the /agents/ directory
 ---

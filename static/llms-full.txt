@@ -125,8 +125,8 @@ const customSignTypedData = async (typedDataArgs) => {
 };
 
 const skeleton = PushChain.utils.signer.construct(account, {
+  signAndSendTransaction: customSignAndSendTransaction,
   signMessage: customSignMessage,
-  signTransaction: customSignTransaction,
   signTypedData: customSignTypedData
 });
 
@@ -178,8 +178,9 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
       // 2.3 signTypedData
 
       // 1. account to universal account
-      // Create random wallet
-      const wallet = ethers.Wallet.createRandom();
+      // Create random wallet, attached to a provider so the custom signer can broadcast.
+      const provider = new ethers.JsonRpcProvider('https://ethereum-sepolia-rpc.publicnode.com');
+      const wallet = ethers.Wallet.createRandom(provider);
 
       // Convert wallet.address to Universal Account
       const universalAccount = PushChain.utils.account.toUniversal(wallet.address, {
@@ -191,13 +192,15 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
       // 2.1 signAndSendTransaction
 
       // create custom Sign and Send Transaction
+      // unsignedTx is a serialized transaction (Uint8Array). Sign it, broadcast,
+      // and return the resulting tx hash as a Uint8Array.
       const customSignAndSendTransaction = async (unsignedTx) => {
-        // Sign the transaction using ethers wallet
-        const signedTx = await wallet.signTransaction(unsignedTx);
-        const sendTx = await wallet.sendTransaction(signedTx);
+        const parsedTx = ethers.Transaction.from(ethers.hexlify(unsignedTx));
+        const signedTx = await wallet.signTransaction(parsedTx);
+        const response = await wallet.provider.broadcastTransaction(signedTx);
 
-        // Always a Uint8Array
-        return Uint8Array.from(sendTx);
+        // Always a Uint8Array (the tx hash)
+        return ethers.getBytes(response.hash);
       };
 
       // 2.2 signMessage
@@ -205,17 +208,17 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
         // Sign message using ethers wallet
         const signature = await wallet.signMessage(message);
 
-        // Always a Uint8Array
-        return Uint8Array.from(signature);
+        // Always a Uint8Array (the signature bytes)
+        return ethers.getBytes(signature);
       };
 
-      // 2.3 signMessage
+      // 2.3 signTypedData
       const customSignTypedData = async (domain, types, value) => {
-        // Sign typed data using ethers wallet
-        const signature = await wallet._signTypedData(domain, types, value);
+        // Sign typed data using ethers wallet (v6: signTypedData, not _signTypedData)
+        const signature = await wallet.signTypedData(domain, types, value);
 
-        // Always a Uint8Array
-        return Uint8Array.from(signature);
+        // Always a Uint8Array (the signature bytes)
+        return ethers.getBytes(signature);
       };
 
       // * Construct the universal signer skeleton with custom signing functions

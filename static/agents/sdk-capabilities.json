@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
-  "current_sdk_version": "6.0.9",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "version": "1.0.1",
+  "current_sdk_version": "6.0.16",
+  "generated": "2026-06-08T00:00:00.000Z",
   "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
   "namespaces": [
     {
@@ -378,6 +378,20 @@
           ],
           "returns": "UniversalTxResponse",
           "safe_for_autonomous_execution": true
+        },
+        {
+          "name": "migrateCEA",
+          "signature": "pushChainClient.universal.migrateCEA(chain: CHAIN): Promise<UniversalTxResponse>",
+          "description": "Migrates the Chain Executor Account (CEA) contract on an external chain to the latest implementation. Sends a MIGRATION_SELECTOR payload via Route 2. Pass the external chain whose CEA should be upgraded (e.g. PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA).",
+          "returns": "UniversalTxResponse",
+          "safe_for_autonomous_execution": false
+        },
+        {
+          "name": "rescueFunds",
+          "signature": "pushChainClient.universal.rescueFunds(params: { universalTxId: `0x${string}`, prc20: `0x${string}` }): Promise<UniversalTxResponse>",
+          "description": "Recovers funds locked in the source-chain Vault after a CEA-to-Push (Route 3) inbound transaction fails, leaving the bridged tokens stuck. Triggers a manual TSS revert that releases them back to the user. universalTxId is the bytes32 hash of the failed inbound transaction; prc20 is the Push Chain PRC-20 token address whose source-chain counterpart is locked.",
+          "returns": "UniversalTxResponse",
+          "safe_for_autonomous_execution": false
         },
         {
           "name": "signMessage",

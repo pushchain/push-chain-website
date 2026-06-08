@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "Die führende NFT-Plattform auf <keep>"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Deine Kryptowährungen, deine Regeln: nahtlose Zahlungen über jede Blockchain."
+        },
+        "degen-chess": {
+          "description": "Spiele, setze Wetten, streame und errate den Gewinner, um den Pool zu gewinnen"
         }
       }
     }

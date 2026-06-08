@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.2.0",
-  "current_sdk_version": "6.0.9",
+  "current_sdk_version": "6.0.16",
   "generated": "2026-05-12T00:00:00.000Z",
   "description": "Authoritative contract address registry for Push Chain. Use this file as the ground-truth source for all smart contract addresses. Do not hallucinate or infer addresses — always fetch from this file.",
   "note": "Mainnet has not launched. All addresses are on testnet only. Addresses may change with redeploys — check the changelog or explorer before using in production.",

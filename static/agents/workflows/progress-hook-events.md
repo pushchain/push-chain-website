@@ -1,6 +1,6 @@
 # ProgressHook Events Reference
 
-Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions` in `@pushchain/core@6.0.9`. Pass a callback to `tx.progressHook` to receive these events.
+Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions` in `@pushchain/core@6.0.16`. Pass a callback to `tx.progressHook` to receive these events.
 
 ## Event Object Shape
 
@@ -83,7 +83,7 @@ The SVM warn slot (`203-05 / 303-06 / 003-05`) is informational only; it fires w
 | `SEND-TX-202-01` | Estimating `<chain>` Chain Gas | INFO | `{ stage: 'estimating-gas', chain }` |
 | `SEND-TX-202-02` | `<chain>` Chain Gas Estimated | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
 | `SEND-TX-203-01` | Resolving `<chain>` Execution Account | INFO | `{ stage: 'resolving-cea', chain }` |
-| `SEND-TX-203-02` | `<chain>` Execution Account Ready | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-203-02` | `<chain>` Execution Account Resolved | SUCCESS | `{ uea, cea, chain, deployed }` |
 | `SEND-TX-203-03` | Checking Balance Requirements | INFO / WARNING | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex, enforceGasCheck, warningOnly, shortfall }` |
 | `SEND-TX-203-04` | Insufficient UEA Balance | ERROR | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
 | `SEND-TX-203-05` | SVM Native-Value Warn Threshold | INFO | `{ quoted, threshold, gasToken, pathTag }` |

@@ -4,7 +4,7 @@ description: "Use when writing Solidity contracts deployed on Push Chain - cover
 id: push-contracts
 intent: Write Solidity contracts on Push Chain - identify cross-chain callers, dispatch outbound txs via UGPC, receive inbound callbacks
 package: 'solidity (EVM-compatible - Hardhat / Foundry / Remix)'
-current_sdk_version: 6.0.9
+current_sdk_version: 6.0.16
 entry: 'IUniversalGatewayPC.sendUniversalTxOutbound'
 resources: 'https://push.org/agents/resources/push-contracts/index.json'
 references:

@@ -24,11 +24,11 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '6.0.9',
-  uiKit: '6.0.12',
+  core: '6.0.16',
+  uiKit: '6.0.16',
 };
-const AGENT_LAYER_VERSION = '1.0.21';
-const AGENT_LAYER_DATE = '2026-06-06';
+const AGENT_LAYER_VERSION = '1.0.22';
+const AGENT_LAYER_DATE = '2026-06-08';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -610,7 +610,10 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 Audit cleanup. Removed the stale "Push \u2192 Sepolia outbound not relayed by TSS" caveat (Push \u2192 Ethereum Sepolia outbound now relays end-to-end on Donut) from the push-contracts skill and the contract-initiated multichain workflow. Fixed the push-frontend cascade example (\`POLYGON_AMOY\` \u2192 \`BNB_TESTNET\`), the Solana Devnet CAIP-2 in push-contracts (32-char \`solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1\`), a \`bs58\` import, and the advanced custom-signer example. Reconciled BNB Testnet token lists in \`supported-chains.json\` to \`[BNB, USDT, USDC]\`. Added \`PushUI.CONSTANTS.TOAST.POSITION\` to \`constants.json\`. Manifest fixes: registered \`routes.json\` + \`mcp-candidates.json\` in \`index.json\`, the \`theme-variables\` workflow in \`workflows/index.json\`, and five previously-orphaned examples in \`examples/index.json\`.`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 \`@pushchain/core\` 6.0.9 \u2192 6.0.16 and \`@pushchain/ui-kit\` 6.0.12 \u2192 6.0.16. Re-pin / sync pass, not a feature rewrite. Verified against the SDK type defs that chains, tokens, selectors, and \`PushChain.CONSTANTS\` are unchanged 6.0.9 \u2192 6.0.16 (no chain/token/address content moved). Applied the one progress-hook wording change: \`SEND-TX-203-02\` "Execution Account Ready" \u2192 "Execution Account Resolved". Newly documented two maintenance methods that predate 6.0.9 but were never surfaced \u2014 \`client.universal.migrateCEA(chain)\` (upgrade a CEA via a \`MIGRATION_SELECTOR\` Route 2 dispatch) and \`client.universal.rescueFunds({ universalTxId, prc20 })\` (recover source-Vault funds from a failed Route 3 inbound via TSS revert) \u2014 in \`sdk-capabilities.json\` and the push-backend skill. Non-breaking: \`trackTransaction\` \`options.chain\`, \`finalTxHash\`, and cascade-wide \`enforceGasCheck\` were already documented.`
+  );
+  lines.push(
+    `- **2026-06-06 v1.0.21** \u2014 Audit cleanup. Removed the stale "Push \u2192 Sepolia outbound not relayed by TSS" caveat (Push \u2192 Ethereum Sepolia outbound now relays end-to-end on Donut) from the push-contracts skill and the contract-initiated multichain workflow. Fixed the push-frontend cascade example (\`POLYGON_AMOY\` \u2192 \`BNB_TESTNET\`), the Solana Devnet CAIP-2 in push-contracts (32-char \`solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1\`), a \`bs58\` import, and the advanced custom-signer example. Reconciled BNB Testnet token lists in \`supported-chains.json\` to \`[BNB, USDT, USDC]\`. Added \`PushUI.CONSTANTS.TOAST.POSITION\` to \`constants.json\`. Manifest fixes: registered \`routes.json\` + \`mcp-candidates.json\` in \`index.json\`, the \`theme-variables\` workflow in \`workflows/index.json\`, and five previously-orphaned examples in \`examples/index.json\`.`
   );
   lines.push(
     `- **2026-05-21 v1.0.20** \u2014 \`@pushchain/ui-kit\` 6.0.9 \u2192 6.0.12 (\`@pushchain/core\` unchanged at 6.0.9). New progress toast config: \`config.toast\` on \`PushUniversalWalletProvider\` accepts \`{ position, hidden }\`. \`position\` is a \`PushUI.CONSTANTS.TOAST.POSITION.*\` value (six anchors: \`TOP_LEFT\` / \`TOP_MIDDLE\` / \`TOP_RIGHT\` / \`BOTTOM_LEFT\` / \`BOTTOM_MIDDLE\` / \`BOTTOM_RIGHT\`, default \`'bottom-right'\`). \`hidden: true\` fully suppresses the toast (useful when the dApp surfaces progress through its own \`tx.progressHook\` UI and wants to avoid duplicates). The rendered toast carries the className **\`PUAToast\`** for CSS targeting (restyle, reposition via transform, layer ordering). push-frontend SKILL.md gained a new \`## Progress Toast\` section with the config table, all six position values, and CSS examples. Provider example updated to include the new \`toast\` key, and the prop-shape callout now lists \`toast\` among \`config\`'s valid keys.`

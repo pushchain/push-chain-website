@@ -260,7 +260,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 
 ### Progress Hook Events (Route 1, in order)
 
-> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.9`.
+> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.16`.
 
 | ID | Title | Level |
 |----|-------|-------|

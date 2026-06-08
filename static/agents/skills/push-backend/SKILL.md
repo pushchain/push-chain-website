@@ -4,8 +4,8 @@ description: "Use when writing Node.js scripts, bots, or server-side code with @
 id: push-backend
 intent: Execute universal transactions from server-side code, scripts, bots, and automation
 package: '@pushchain/core'
-package_version: 6.0.9
-current_sdk_version: 6.0.9
+package_version: 6.0.16
+current_sdk_version: 6.0.16
 entry: 'PushChain.initialize'
 resources: 'https://push.org/agents/resources/push-backend/index.json'
 references:
@@ -661,6 +661,42 @@ try {
   // Error codes and recovery actions: https://push.org/agents/errors.json
   console.error(e);
 }
+```
+
+---
+
+## Account & CEA Maintenance
+
+### `migrateCEA(chain)` - upgrade a CEA to the latest version
+
+`client.universal.migrateCEA(chain)` → `Promise<UniversalTxResponse>`
+
+Migrates the **Chain Executor Account** (the contract that runs your Push-originated calls on an external chain) to the latest implementation. Sends a `MIGRATION_SELECTOR` payload via Route 2. Pass the external chain whose CEA should be upgraded.
+
+```ts
+const tx = await client.universal.migrateCEA(
+  PushChain.CONSTANTS.CHAIN.ETHEREUM_SEPOLIA
+);
+await tx.wait();
+```
+
+### `rescueFunds({ universalTxId, prc20 })` - recover funds stuck in the source Vault
+
+`client.universal.rescueFunds(params)` → `Promise<UniversalTxResponse>`
+
+When a CEA-to-Push (Route 3) inbound transaction fails, the bridged tokens stay locked in the source-chain Vault. `rescueFunds` triggers a manual TSS revert that releases them back to you.
+
+| Arg             | Type             | Description                                                                  |
+| --------------- | ---------------- | ---------------------------------------------------------------------------- |
+| `universalTxId` | `0x${string}`    | `bytes32` hash of the failed inbound transaction                             |
+| `prc20`         | `0x${string}`    | Push Chain PRC-20 token address whose source-chain counterpart is locked     |
+
+```ts
+const tx = await client.universal.rescueFunds({
+  universalTxId: '0x...', // the failed inbound tx hash
+  prc20: '0x...',         // PRC-20 whose locked source funds to release
+});
+await tx.wait();
 ```
 
 ---

@@ -473,6 +473,7 @@
                   "vs-other-universal": "### Qu'est-ce qui distingue Push Chain des autres solutions Universelles?\n\nLes solutions dites \"universelles\" actuelles reposent encore sur des bridges, nécessitent des transactions doubles ou des relayers centralisés pour déplacer des données et de la valeur. Push Chain est différent—c'est la première L1 véritablement universelle qui :\n\n- **Unifie les utilisateurs sur différentes chaînes**  \n\tChaque adresse blockchain est prise en charge nativement. Les portefeuilles comme MetaMask, Phantom, etc. sont tous compatibles avec Push Chain. Le gas est payé dans n'importe quel token sur n'importe quelle chaîne.\n\n- **Agit comme une couche d'exécution universelle**  \n\tToutes les transactions sont finalisées sur la même chaîne, garantissant que tout le monde interagit avec la même app—pas de hacks, pas de contournements.\n\n- **Attribue et exécute correctement les transactions de n'importe quelle chaîne**  \n\tLes transactions sont signées, vérifiées et attribuées aux portefeuilles sur leurs chaînes d'origine. Une chaîne universelle véritable les prend toutes en charge.\n\n---",
                   "vs-bridges-messaging": "### En quoi cela diffère-t-il des bridges ou des couches de messagerie?\n\n**Réponse courte**: Push est l'endroit où votre app fonctionne. Les bridges/la messagerie ne font que déplacer des tokens ou des messages entre les chaînes, ce qui complique tout pour les utilisateurs et les développeurs.\n\n- **Un seul environnement vs de nombreux clones**  \n\tAvec les bridges/la messagerie, vous déployez par chaîne et vous synchronisez via des messages. Sur Push, vous déployez une seule fois ; tout le monde accède au même contrat et au même shared state.\n\n- **Pas d'assets enveloppés ni de bridging obligatoire**  \n\tLes utilisateurs restent sur leur chaîne d'origine et paient avec ce qu'ils possèdent déjà ; nous gérons le routage et la conversion des frais en coulisses.\n\n- **Identité et vérification unifiées**  \n\tNous acceptons les signatures de n'importe quel wallet/chaîne et les attribuons au même utilisateur sur Push — non custodial.\n\n- **Moins de pièces mobiles**  \n\tPas de danse d'approbation inter-chaînes, pas de chasse aux gas-tokens, pas de contrats de colle à maintenir synchronisés.\n\n- **Les bridges introduisent de la complexité. L'interopérabilité native à la chaîne la résout**  \n\tLes bridges nécessitent des efforts d'ingénierie complexes, du temps, des coûts d'audit et des infrastructures supplémentaires. L'interopérabilité native à la chaîne fonctionne simplement, car votre app hérite nativement de celle-ci.\n\n**Résultat**: apps plus simples, une seule source de vérité et une UX qui donne l'impression d'une seule chaîne — même lorsque les utilisateurs ne le sont pas.\n\n---",
                   "vs-layerzero": "### Comment Push Chain se différencie-t-il de LayerZero?\n\n**LayerZero:**\n- **Protocole de messagerie**: Permet le passage de messages inter-chaînes\n- **Dépendance aux relayeurs**: S'appuie sur des relayeurs et des oracles externes\n- **Intégration des développeurs**: Les apps doivent intégrer le SDK LayerZero\n- **Hypothèses de confiance**: Les utilisateurs doivent faire confiance à l'infrastructure des relayeurs\n\n**Push Chain:**\n- **Exécution native**: Exécution directe des transactions depuis n'importe quelle chaîne\n- **Pas de relayeurs**: Fonctionnalité inter-chaînes intégrée au niveau du protocole\n- **Intégration zéro**: Les apps existantes fonctionnent sans modifications\n- **Confiance minimisée**: Aucune hypothèse de confiance supplémentaire au-delà du propre consensus de Push Chain\n\nPush Chain fournit une exécution inter-chaînes native tandis que LayerZero nécessite une infrastructure et une intégration supplémentaires.\n\n---",
+                  "vs-wormhole": "### Comment Push Chain se différencie-t-il de Wormhole ?\n\n**Wormhole :** \n- **Protocole pont**: Principalement axé sur le pontage de jetons et NFT \n- **Actifs enveloppés**: Crée des versions enveloppées des jetons sur différentes chaînes \n- **Réseau Gardien**: S'appuie sur l'ensemble de validateurs pour vérifier les messages inter-chaînes \n- **Processus en plusieurs étapes**: Les utilisateurs doivent pontasser les actifs avant d'utiliser les apps \n\n**Push Chain :**\n- **Exécution universelle**: Les utilisateurs interagissent directement sans pontage \n- **Actifs natifs**: Pas besoin de jetons enveloppés, utilisez les actifs originaux \n- **Vérification directe**: Vérification de signature native depuis n'importe quelle chaîne\n- **Transaction unique**: Les utilisateurs interagissent en une seule étape, pas de pontage requis\n\nPush Chain élimine le besoin de pontage d'actifs tandis que Wormhole en nécessite pour les interactions inter-chaînes.\n\n---",
                   "vs-axelar": "### Comment Push Chain se différencie-t-il d'Axelar?\n\n**Axelar:**\n- **Réseau de réseaux**: Connecte les chaînes via le réseau Axelar\n- **Dépendance des validateurs**: Repose sur l'ensemble de validateurs Axelar pour la sécurité\n- **Contrats de passerelle**: Nécessite des déploiements de passerelles sur chaque chaîne\n- **Passage de messages**: Se concentre sur la communication inter-chaînes\n\n**Push Chain:**\n- **Exécution directe**: Les transactions sont traitées nativement sur Push Chain sans intermédiaires\n- **Sécurité indépendante**: Consensus propre sans dépendances externes\n- **Contrats universels**: Un seul déploiement fonctionne pour toutes les chaînes\n- **Exécution native**: Traitement direct des transactions depuis n'importe quelle chaîne\n\nPush Chain fournit un accès universel direct, tandis qu'Axelar ajoute une couche intermédiaire.\n\n---",
                   "vs-chainlink-ccip": "### Comment Push Chain se différencie-t-il de Chainlink CCIP?\n\n**Chainlink CCIP:**\n- **Réseau d'oracles**: Utilise l'infrastructure oracle de Chainlink\n- **Routage des messages**: Route les messages entre différentes chaînes\n- **Dépendance externe**: S'appuie sur le réseau décentralisé de Chainlink\n- **Intégration requise**: Les apps doivent intégrer CCIP pour les fonctionnalités inter-chaînes\n\n**Push Chain:**\n- **Protocole intégré**: La fonctionnalité inter-chaînes est native à la blockchain\n- **Exécution directe**: Pas de réseau oracle externe nécessaire\n- **Autonome**: Toute vérification et exécution se produit sur Push Chain\n- **Compatibilité automatique**: Déployez des contrats existants – ils fonctionnent directement pour tous les utilisateurs\n\nPush Chain a des capacités inter-chaînes intégrées à son protocole central tandis que CCIP est une couche de service externe.\n\n---",
                   "vs-particle-network": "### Comment Push Chain se différencie-t-il de Particle Network?\n\n**Particle Network:**\n- **Focus sur l'abstraction des comptes**: Se concentre principalement sur l'abstraction des portefeuilles et la connexion sociale\n- **Portefeuilles multi-chaînes**: Crée une expérience de portefeuille unifiée sur différentes chaînes\n- **Intégration SDK**: Nécessite l'intégration du SDK de Particle pour la fonctionnalité\n- **Couche d'expérience utilisateur**: Fonctionne comme une couche au-dessus des chaînes existantes\n\n**Push Chain:**\n- **Blockchain universel**: Blockchain natif qui prend en charge tous les utilisateurs de chaînes\n- **Intégration au niveau du protocole**: Fonctionnalité cross-chaîne intégrée au consensus\n- **Pas de SDK requis**: Les portefeuilles existants fonctionnent nativement sans modification\n- **Couche de base**: Fournit l'infrastructure blockchain sous-jacente, pas seulement une couche d'expérience utilisateur\n\nPush Chain est un blockchain universel tandis que Particle Network est un service d'abstraction de portefeuilles.\n\n---",
@@ -493,7 +494,6 @@
                   "core-focus-shift": "### Push Chain est-il un changement de cap par rapport à l'objectif principal de Push Protocol en matière de notifications et de chat?\n\nNon. Push Chain s'appuie sur les bases solides de Push Protocol. Push Chain représente la **prochaine évolution** de Push Protocol, et non un abandon.\n\n---",
                   "partnerships-effect": "### Comment le lancement de Push Chain affectera-t-il les partenariats et les intégrations existants?\n\nPush Chain complète les partenariats existants en offrant des capacités supplémentaires telles que le support cross-chaîne, une finalité plus rapide et des solutions évolutives. Il renforce les collaborations en permettant aux partenaires de créer et de développer des applications universelles.\n\n---",
                   "decentralization-scaling": "### Comment Push Chain maintiendra-t-elle la décentralisation tout en évoluant?\n\nNotre Devnet a démontré comment nous allons évoluer grâce au sharding dynamique et à l'exécution parallèle - augmentant le débit sans compromettre la décentralisation.\n\nSur le testnet, nous nous sommes concentrés sur l'interopérabilité full stack avec la chaîne fonctionnant sur [CometBFT](https://github.com/cometbft/cometbft), un moteur Byzantine-fault-tolerant éprouvé. Le réseau a atteint une finalité inférieure à la seconde et a la capacité de gérer jusqu'à [20k transactions par minute](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nCette preuve de concept n'est que le début. Au fur et à mesure du déploiement de nouvelles optimisations d'évolution dans les phases ultérieures, nous sommes convaincus que Push Chain pourra répondre aux exigences des applications universelles - de manière sécurisée et sans centralisation.\n\n---",
-                  "centralization-risks": "### Y a-t-il des risques de centralisation avec Push Chain?\n\n**Non.** L'architecture de Push Chain met l'accent sur la décentralisation.\n\nPush Chain est intégralement décentralisé et conçu pour être robuste et résistant. N'importe qui peut faire fonctionner un nœud et participer au réseau, et est incité ou pénalisé via PoS. Pour résumer:\n\n- Les validateurs et autres acteurs fonctionnent indépendamment et sont incités via PoS.\n- Les mécanismes de gouvernance assurent l'implication de la communauté.\n- Chaque partie de l'écosystème est incluse dans la gouvernance dans une certaine mesure.\n\nPour en savoir plus sur la façon de faire fonctionner un nœud, consultez notre [Base de connaissances](/knowledge/) ou vérifiez notre [Dépôt de nœuds validateurs](https://github.com/pushchain/push-chain-node).\n\n---",
                   "support-section": "## Support et Engagement",
                   "need-help": "### J'ai besoin d'aide, où puis-je contacter Push Chain?\n\nPour obtenir de l'aide, vous pouvez [soumettre une demande ici](https://push.org/support) ou nous contacter à support@push.org.\n\nSi vous êtes un développeur, vous pouvez également nous contacter sur notre [Discord](https://discord.com/invite/pushchain) et nous serons heureux de vous aider.\n\n---",
                   "how-to-contribute": "### Super, comment puis-je contribuer ?\n\nLe meilleur moyen de rester informé de l'avancement de Push Chain est de suivre les chaînes officielles de Push : site web, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), et [Discord](https://discord.com/invite/pushchain).\n\nSoyez toujours prudent face aux tentatives de phishing, aux faux sites ou aux escroqueries demandant vos crypto-actifs. Toutes les communications officielles proviendront des chaînes officielles de Push.\n\n---"
@@ -590,6 +590,7 @@
           "title": "Mises à jour du réseau",
           "description": "Mises à jour en temps réel de l'état du réseau pour Push Chain. Restez informé des pannes, de la maintenance et des problèmes résolus.",
           "og-title": "Mises à jour du réseau Push Chain - Statut du réseau",
+          "og-description": "Suivez les mises à jour du réseau Push Chain, les fenêtres de maintenance et les mises à jour des services. Obtenez des informations sur l'état en temps réel.",
           "twitter-title": "Mises à jour du réseau Push Chain",
           "twitter-description": "Mises à jour en direct sur l'état du réseau Push Chain et la maintenance."
         },
@@ -619,20 +620,21 @@
                   "why-necessary": "Le rééquilibrage était nécessaire pour :",
                   "reason-mainnet": "- Préparer l'environnement de type mainnet",
                   "reason-season3": "- Permettre la distribution des récompenses de la Saison 3",
-                  "reason-tech-debt": "- Éliminer l'ancien endettement technique des premiers tests",
                   "reason-token-economy": "- Établir une économie de Token juste et durable",
                   "what-changed-heading": "### Qu'est-ce qui a changé ?",
-                  "what-changed-text": "La proposition a affecté les 1 950 portefeuilles les plus importants parmi les 1,178 millions d'adresses totales. Les portefeuilles contenant 1 100 PC tokens ou plus (y compris ceux avec des milliards) ont été rééquilibrés pour contenir entre 1 100 et 2 000 PC tokens.",
+                  "what-changed-text": "La proposition a affecté les 1 950 portefeuilles les plus importants sur un total de 1,178 millions d'adresses. Les portefeuilles contenant 1 100 PC jetons ou plus (y compris ceux avec des milliards) ont été rééquilibrés pour contenir entre 1 100 et 2 000 PC jetons.",
                   "key-changes-heading": "**Principaux changements :**",
                   "change-supply": "- L’offre totale réduite de 75T+ à environ 10B PC tokens",
                   "change-wallets": "- Les 1 950 premiers portefeuilles rééquilibrés dans la fourchette de 1 100 à 2 000 PC token",
                   "change-percentage": "- Affecte seulement 0,17 % des adresses totales (1 950 sur 1,178 million)",
                   "change-unaffected": "- 99.83 % des utilisateurs ne sont pas concernés",
                   "why-not-informed-heading": "### Pourquoi les utilisateurs n'ont-ils pas été informés à l'avance ?",
-                  "why-not-informed-text": "Les utilisateurs n'ont pas été informés à l'avance pour empêcher les acteurs malveillants de redistribuer les jetons vers d'autres portefeuilles avant le rééquilibrage. Cette mesure de sécurité a garanti l'intégrité du processus de rééquilibrage et a empêché la manipulation du système.",
+                  "why-not-informed-text": "Les utilisateurs n'avaient pas été informés à l'avance pour empêcher les acteurs malveillants de redistribuer des jetons vers d'autres portefeuilles avant le rééquilibrage. Cette mesure de sécurité a garantit l'intégrité du processus de rééquilibrage et a empêché la manipulation du système.",
                   "validator-period": "La période de proposition des validateurs du testnet est actuellement fixée à 5 minutes afin d'éliminer les cas limites comme celui-ci avant la mise en œuvre complète de la propriété décentralisée des validateurs.",
                   "why-52t-heading": "### Pourquoi vois-je encore une offre de 52T ?",
+                  "why-52t-text": "Le rééquilibrage est une approche en deux phases. Les jetons sont désormais collectés dans un portefeuille contrôlé par l'équipe et seront bientôt détruits.",
                   "how-affect-heading": "### Comment cela m'affecte-t-il ?",
+                  "affect-majority": "**Pour 99,83% des utilisateurs :** Ce changement ne vous affecte pas. Votre solde de portefeuille reste inchangé.",
                   "affect-top-wallets": "**Pour les wallets concernés (les 1 950 premiers) :** Si votre wallet détenait plus de 1 100 Token PC (ou des trillions), votre solde a été rééquilibré pour se situer entre 1 100 et 2 000 Token PC.",
                   "need-help-heading": "**Besoin d'aide ?**",
                   "need-help-text": "Si vous pensez être affecté par ce rééquilibrage et avez des questions ou des préoccupations, n'hésitez pas à contacter l'équipe Push Chain sur Discord pour obtenir de l'aide."
@@ -840,11 +842,11 @@
     },
     "lfpush": {
       "seo": {
-        "title": "Allons-y Push — Initiative communautaire",
+        "title": "Poussons ensemble — Initiative communautaire",
         "description": "Initiatives communautaires Push, publications et bien plus encore.",
         "og-title": "Let's Push - Initiative Communautaire pour Push Chain",
         "og-description": "Initiative communautaire et parts pour Push Chain.",
-        "twitter-title": "On push ensemble | Initiative communautaire",
+        "twitter-title": "Allons-y Pousser | Initiative Communautaire",
         "twitter-description": "Découvrez l'initiative communautaire Push pour Push Chain."
       },
       "hero-section": {
@@ -1308,7 +1310,7 @@
         },
         "qna3": {
           "question": "Ai-je besoin d'un portefeuille différent ou d'un Token de gas différent ?",
-          "answer": "<1><2>Non.</2></1><1><2>Conservez votre portefeuille.</2> Utilisez le portefeuille que vous avez déjà — pas besoin de créer un nouveau portefeuille ou compte.</1><1><2>Payez avec ce que vous possédez.</2> Les frais peuvent être payés en tokens que vous avez déjà sur votre chaîne principale; nous gérons la conversion derrière les scenes.</1><1><2>Pas de changement de réseau.</2> Restez sur votre chaîne principale — pas besoin de passer par un pont juste pour obtenir un token de gaz.</1><1><2>Non custodial.</2> Vous signez chaque action; Push ne conserve jamais vos clés.</1><1><2>Derrière les scenes.</2> Le réseau règle automatiquement les frais en $PC — vous n'avez pas besoin de le gérer.</1>"
+          "answer": "<1><2>Non.</2></1><1><2>Gardez votre portefeuille.</2> Utilisez le portefeuille que vous avez déjà — pas besoin de nouveau portefeuille ou compte.</1><1><2>Payez avec ce que vous avez.</2> Les frais peuvent être payés en utilisant les jetons que vous avez déjà sur votre chaîne d'origine ; nous gérons la conversion en coulisses.</1><1><2>Pas de changement de réseau.</2> Restez sur votre chaîne d'origine — pas besoin de pont pour obtenir un jeton de gaz.</1><1><2>Non custodial.</2> Vous signez chaque action; Push ne détient jamais vos clés.</1><1><2>Dans les coulisses.</2> Le réseau règle automatiquement les frais en $PC — vous n'avez pas besoin de le gérer.</1>"
         },
         "qna4": {
           "question": "En quoi cela diffère-t-il des bridges ou des couches de messagerie ?",
@@ -1341,7 +1343,7 @@
       "answer-aria-label": "Réponse à la question - ",
       "qnas": {
         "qna1": {
-          "question": "Je ne parviens pas à connecter mon portefeuille. Que devrais-je essayer ?",
+          "question": "Je ne peux pas connecter mon portefeuille. Que devrais-je essayer ?",
           "answer": "<1><2>Vérifications rapides:</2> actualisez la page, déverrouillez votre wallet, et désactivez les bloqueurs de publicités/scripts agressifs pour push.org.</1><1><2>Pas de changement de réseau nécessaire:</2> restez sur votre chaîne principale ; Push gère le routage en arrière-plan.</1><1><2>Réinitialisez les permissions du site:</2> dans votre wallet, supprimez la connexion du site et reconnectez-vous.</1><1>Toujours bloqué ? Posez votre question sur <3>Discord</3> ou ouvrez un <4>ticket de support</4>.</1>",
           "discord-url-title": "Rejoignez le Discord de Push Chain pour une aide en temps réel.",
           "support-url-title": "Ouvrir un ticket de support."
@@ -1727,9 +1729,13 @@
     },
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "La plateforme de lancement NFT n°1 sur Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Vos cryptos, vos règles : des paiements fluides sur toutes les chaînes."
+        },
+        "degen-chess": {
+          "description": "Jouez, pariez, streamez et devinez le vainqueur pour gagner le pool",
+          "name": "Échecs Degenerateurs"
         },
         "ramen-swap": {
           "name": "RamenSwap"
@@ -1827,13 +1833,6 @@
           "name": "Hang4.fun",
           "description": "Bientôt disponible"
         },
-        "degen-chess": {
-          "name": "Degen Chess",
-          "description": "Jouez aux échecs, pariez, regardez le stream et devinez le gagnant pour remporter la mise"
-        },
-        "omnihub": {
-          "name": "Omnihub"
-        },
         "push-dex": {
           "name": "PushDex",
           "description": "DEX construit sur le réseau de test Pushchain"
@@ -1868,11 +1867,23 @@
         },
         "tachyon": {
           "name": "Tachyon",
-          "description": "Relayer multichaîne ultra-rapide"
+          "description": "Relais multicouche ultra-rapide"
         },
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "Votre crypto, vos règles : paiements fluides sur toutes les chaînes."
+        "puffles": {
+          "name": "Puffles",
+          "description": "#1 plateforme NFT de lancement sur Push Chain"
+        }
+      },
+      "coming-soon": "Bientôt disponible",
+      "app-spotlight": "SPOTLIGHT SUR L'APPLICATION",
+      "partners": {
+        "silence-labs": {
+          "name": "Silence Labs",
+          "description": "MPC-TSS & Compute préservant la confidentialité."
+        },
+        "human-tech": {
+          "name": "Human.tech",
+          "description": "Calculs multi-signatures (MPC-TSS) et calculs préservant la confidentialité."
         }
       }
     },
@@ -1904,15 +1915,14 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Explorez la puissance des applications universelles et soyez récompensé lors de la dernière saison avant le mainnet !",
-      "button-title": "Commencer !",
-      "button-aria-label": "Commencer !. Vous pouvez le consulter ici",
-      "image-alt": "Commencer !",
+      "description": "Venez découvrir la puissance des applications universelles et soyez récompensé(e) lors de la saison finale avant le mainnet !",
       "button-text": "Commencer !",
-      "close-button-title": "Fermer la notification toast",
-      "close-button-aria-label": "Ignorer la notification toast Push Chain",
-      "container-aria-label": "Notification toast Push Chain",
-      "title": ""
+      "button-title": "Commencer !",
+      "button-aria-label": "Commencer ! Vous pouvez y jeter un coup d'œil ici",
+      "image-alt": "Commencer !",
+      "close-button-title": "Fermer la notification",
+      "close-button-aria-label": "Fermer la notification Push Chain",
+      "container-aria-label": "Notification Push Chain"
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta est maintenant disponible !",

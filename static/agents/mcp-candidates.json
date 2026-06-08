@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.0.0",
-  "current_sdk_version": "6.0.9",
+  "current_sdk_version": "6.0.16",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "MCP tool definitions for Push Chain operations. Each entry is a candidate MCP tool ready for Model Context Protocol integration — includes inputs, safety metadata, and mapping to the corresponding SDK method and workflow.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .candidates[]. Change mcp-candidates.json[N] → mcp-candidates.json.candidates[N].",

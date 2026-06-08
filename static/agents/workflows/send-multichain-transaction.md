@@ -263,7 +263,7 @@ For `executeTransactions`, see `CascadedTxResponse` table above.
 
 ### Progress Hook Events
 
-Pinned to `@pushchain/core@6.0.9`. Full per-route reference: [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Key milestones for this workflow:
+Pinned to `@pushchain/core@6.0.16`. Full per-route reference: [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Key milestones for this workflow:
 
 **Route 2 (external chain via CEA), prefix `SEND-TX-2xx`:**
 
@@ -273,7 +273,7 @@ Pinned to `@pushchain/core@6.0.9`. Full per-route reference: [progress-hook-even
 | `SEND-TX-202-01` | Estimating `<chain>` Chain Gas | INFO |
 | `SEND-TX-202-02` | `<chain>` Chain Gas Estimated | SUCCESS |
 | `SEND-TX-203-01` | Resolving `<chain>` Execution Account | INFO |
-| `SEND-TX-203-02` | `<chain>` Execution Account Ready | SUCCESS |
+| `SEND-TX-203-02` | `<chain>` Execution Account Resolved | SUCCESS |
 | `SEND-TX-203-03` | Checking Balance Requirements | INFO / WARNING |
 | `SEND-TX-203-04` | Insufficient UEA Balance | ERROR (only when `enforceGasCheck === true`) |
 | `SEND-TX-203-05` | SVM Native-Value Warn Threshold | INFO |

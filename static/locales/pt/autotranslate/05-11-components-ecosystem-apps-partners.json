@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 Plataforma de Lançamento de NFT na Blockchain Push Chain"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "Suas criptomoedas, suas regras: pagamentos perfeitos em todas as blockchains."
+        },
+        "degen-chess": {
+          "description": "Jogue, faça apostas, transmita e adivinhe o vencedor para ganhar o prêmio"
         }
       }
     }

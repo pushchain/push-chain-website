@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:15:29.857Z",
+  "lastUpdated": "2026-06-07T16:37:17.427Z",
   "keys": {
     "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
       "value": "Push Validator",
@@ -1172,9 +1172,9 @@
       "lastUpdated": "2025-11-14T19:27:06.053Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Entdecke Apps, Partner und Early Adopters, die auf der Donut-Testkette von Push Chain das nächste Zeitalter universeller Erfahrungen aufbauen.",
+      "value": "Entdecken Sie Apps, Partner und Early Adopters, die an der nächsten Ära universeller Erfahrungen auf Push Chains Donut Testnet arbeiten.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-05-17T19:23:54.845Z"
+      "lastUpdated": "2026-06-07T16:20:41.278Z"
     },
     "components.short-support-snippet.qnas.qna1.discord-url-title": {
       "value": "Trete dem Push Chain Discord bei, um Hilfe in Echtzeit zu erhalten.",
@@ -2482,9 +2482,9 @@
       "lastUpdated": "2025-11-14T19:27:06.054Z"
     },
     "pages.lfpush.seo.twitter-title": {
-      "value": "Lass uns Pushen | Gemeinschaftsinitiative",
+      "value": "Lasst uns Pushen | Gemeindeinitiative",
       "englishChecksum": "a74bc769352dc913ac90019b078b3fe7",
-      "lastUpdated": "2026-05-17T19:23:07.089Z"
+      "lastUpdated": "2026-06-07T16:19:43.523Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title": {
       "value": "Lassen Sie uns universelle Apps aufbauen 💪",
@@ -2497,9 +2497,9 @@
       "lastUpdated": "2025-11-14T20:16:25.478Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### Wie unterscheidet sich dies von Brücken oder Messaging-Schichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem Ihre App läuft. Brücken/Messaging bewegen nur Token oder Nachrichten zwischen Ketten und komplizieren alles für den Benutzer und Entwickler.\n\n- **Einziges Zuhause vs viele Kopien** \n\tBei Brücken/Messaging müssen Sie pro Kette bereitstellen und über Nachrichten synchronisieren. Auf Push stellen Sie nur einmal bereit; jeder ruft denselben Vertrag und gemeinsam genutzten Zustand auf.\n\n- **Keine gewickelten Vermögenswerte oder verpflichtende Überführung** \n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen Routing und Gebührsumwandlung unter der Haube.\n\n- **Vereinheitlichte Identität und Verifizierung** \n\tWir akzeptieren Signaturen von jeder Wallet/Kette und ordnen sie demselben Benutzer auf Push zu – nicht verwahrend.\n\n- **Weniger bewegliche Teile** \n\tKein Kreuzketten-Zustimmungstanz, kein Gas-Token-Suchen, keine Klebverträge zur Synchronisierung.\n\n- **Brücken bringen Komplexität. Kettennative Interoperabilität löst sie** \n\tBrücken erfordern komplexen Engineering-Aufwand, Zeit, Kosten für das Auditing und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App sie nativ vererbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht sind.\n\n---",
+      "value": "### Wie unterscheidet sich das von Brücken oder Nachrichtenschichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem deine App läuft. Brücken/Nachrichtenschichten bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.\n\n- **Einziges Zuhause vs viele Klone**\n\tMit Brücken/Nachrichten musst du pro Kette einsetzen und über Nachrichten synchronisieren. Auf Push setzt du dich einmal ein; jeder ruft den gleichen Vertrag und den gemeinsamen Zustand auf.\n\n- **Keine eingepackten Assets oder verpflichtende Überführung**\n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits haben; wir erledigen das Routing und die Gebührenumwandlung unter der Haube.\n\n- **Einheitliche Identität & Verifizierung**\n\tWir akzeptieren Signaturen von jedem Wallet/Chain und ordnen sie dem gleichen Benutzer auf Push zu — nicht verwahrend.\n\n- **Weniger bewegte Teile**\n\tKein Cross-Chain-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoff-Verträge zum Synchronisieren.\n\n- **Brücken führen Komplexität ein. Chain-native Interoperabilität löst sie.**\n\tBrücken erfordern komplexe Ingenieurarbeit, Zeit, Auditkosten und zusätzliche Infrastruktur. Chain-native Interoperabilität funktioniert einfach, da deine App es nativ erbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht tun.\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-05-17T19:23:18.493Z"
+      "lastUpdated": "2026-06-07T16:19:56.527Z"
     },
     "pages.docs.seo.og-description": {
       "value": "Baue und führe Apps auf der universellen Ausführungsschicht aus mit klaren Anleitungen und Beispielen.",
@@ -2509,17 +2509,17 @@
     "pages.tos.seo.og-description": {
       "value": "Rechtliche Bestimmungen zur Nutzung unserer Websites, Apps und Entwicklerwerkzeuge.",
       "englishChecksum": "9d071120c8c1e14b03af607cb3059de4",
-      "lastUpdated": "2026-05-17T19:23:53.053Z"
+      "lastUpdated": "2026-06-07T16:20:39.404Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>Kurze Antwort</2>: Push ist, wo deine App läuft. Bridges/Messaging bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für Nutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Heimatort vs viele Klone.</2> Mit Bridges/Messaging führst du pro Kette eine Bereitstellung durch und synchronisierst über Nachrichten. Auf Push führst du nur einmalige Bereitstellungen durch; jeder trifft auf den gleichen Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überführungen.</2> Nutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir erledigen das Routing und die Gebührsumwandlung unter der Haube.</1><1><2>Einheitliche Identität & Verifizierung.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette undordnen sie demselben Benutzer auf Push zu – nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Kreuz-Ketten-Bestätigungstanz, kein Gas-Token-Suchen, keine Klebstoffverträge zum synchron halten.</1><1><2>Bridges bringen Komplexität ein. Kettennative Interoperabilität löst sie.</2> Bridges erfordern einen komplexen Entwicklungsaufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Ketten-native Interoperabilität funktioniert einfach so wie deine App nativ davon erbt.</1><1>Ergebnis: einfachere Apps, eine Wahrheitquelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Nutzer es nicht tun.</1>",
+      "value": "<1><2>Kurze Antwort</2>: Push ist der Ort, an dem Ihre App läuft. Brücken/Nachrichten bewegen nur Token oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Wohnsitz vs viele Klone.</2> Bei Brücken/Nachrichten müssen Sie pro Kette ausführen und über Nachrichten synchronisieren. Auf Push führen Sie einmal aus; jeder trifft auf denselben Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überbrückung.</2> Benutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir handeln Routing und Gebührsumwandlung unter der Haube ab.</1><1><2>Einheitliche Identität & Verifikation.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette und schreiben sie demselben Benutzer auf Push zu - nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Ketten-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoffverträge zum Halten in Einklang.</1><1><2>Brücken erzeugen Komplexität. Kettennative Interoperabilität löst sie.</2> Brücken benötigen komplexen Ingenieuraufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App diese nativ erbt.</1><1>Ergebnis: Einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar dann nicht, wenn Benutzer es nicht tun.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-05-17T19:24:05.742Z"
+      "lastUpdated": "2026-06-07T16:20:53.897Z"
     },
     "components.short-support-snippet.qnas.qna1.question": {
       "value": "Ich kann meinen Wallet nicht verbinden. Was sollte ich versuchen?",
       "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
-      "lastUpdated": "2026-05-17T19:24:07.413Z"
+      "lastUpdated": "2026-06-07T16:20:57.446Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Entwickler — Anleitungen & Tutorials",
@@ -2892,59 +2892,59 @@
       "lastUpdated": "2026-02-25T23:46:27.778Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "Entdecken Sie wichtige Testnetzwerk-Apps",
+      "value": "Erforsche wichtige Testnetzwerk-Apps",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-05-17T19:24:11.647Z"
+      "lastUpdated": "2026-06-07T16:20:58.957Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-heading": {
-      "value": "### Was geändert?",
+      "value": "### Was verändert?",
       "englishChecksum": "1aa7ea3bdd6597741a7863d77730fe27",
-      "lastUpdated": "2026-05-18T06:15:25.849Z"
+      "lastUpdated": "2026-06-07T16:19:42.287Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push Chain führte einen Token-Umbuchungsvorschlag durch, um die Gesamtanzahl an PC-Token von über 75 Billionen auf etwa 10 Milliarden zu reduzieren. Diese Aktualisierung behebt eine technische Schuldenlast aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
+      "value": "Die Push Chain führte einen Token-Neubalancierungsvorschlag durch, um die Gesamtanzahl der PC-Token von mehr als 75T auf etwa 10 Milliarden Tokens zu reduzieren. Diese Aktualisierung behebt eine technische Schuld aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-05-17T19:23:22.535Z"
+      "lastUpdated": "2026-06-07T16:20:01.449Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "In den frühen Tagen des Push Chain Testnet gab es keinen Brenn- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte es einer Handvoll von Token-Inhabern, gigantische Token-Vorräte anzusammeln (in Milliardenhöhe). Dies führte zu einem unausgewogenen Token-Ökonomiesystem, das vor dem Hauptnetzstart korrigiert werden musste.",
+      "value": "In den frühen Tagen des Push Chain Testnet gab es keinen Verbrennung- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte einer Handvoll von Token-Inhabern, riesige Token-Vorräte anzuhäufen (die in Billionen gingen). Dies schuf eine unausgewogene Token-Wirtschaft, die vor dem Mainnet-Start korrigiert werden musste.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-05-17T19:23:26.850Z"
+      "lastUpdated": "2026-06-07T16:20:06.670Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- Alte technische Schulden aus der frühen Testnet entfernen",
+      "value": "- Alte technische Schulden aus frühen Testnet entfernen",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-05-17T19:23:29.179Z"
+      "lastUpdated": "2026-06-07T16:20:09.616Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Der Vorschlag hat 1,950 von insgesamt 1.178M Adressen betroffen. Wallets mit mehr als 1,100 PC-Tokens (einschließlich derer mit Billionen) wurden neu equilibriert und halten nun zwischen 1,100-2,000 PC-Tokens.",
+      "value": "Der Vorschlag hat 1,950 der insgesamt 1.178 Mio. Wallets betroffen. Wallets mit einem Guthaben von 1,100 PC-Tokens oder mehr (inklusive solche mit Milliarden) wurden neujustiert und halten nun zwischen 1,100-2,000 PC-Tokens.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:23:32.969Z"
+      "lastUpdated": "2026-06-07T16:20:14.347Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- Top 1,950 Wallets neu balanceiert auf den Bereich von 1,100 bis 2,000 PC Token",
+      "value": "- Oberste 1,950 Wallets neu balanciert auf den Bereich von 1,100 bis 2,000 PC-Tokens",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-05-17T19:23:35.862Z"
+      "lastUpdated": "2026-06-07T16:20:17.758Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Benutzer wurden im Voraus nicht informiert, um zu verhindern, dass böswillige Akteure Token vor dem Neuausbalancieren auf andere Wallets verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neuausbalancierens und verhinderte das Ausnutzen des Systems.",
+      "value": "Benutzer wurden im Voraus nicht über die Änderung informiert, um zu verhindern, dass böswillige Akteure vor dem Neujustieren Token auf andere Portemonnaie verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neujustierens und verhinderte das Manipulieren des Systems.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:23:39.428Z"
+      "lastUpdated": "2026-06-07T16:20:22.100Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Die Rebalancing ist ein zweiphasiger Ansatz. Die Token werden nun gesammelt und bald verbrannt.",
+      "value": "Die Umverteilung ist ein zweiphasiger Ansatz. Die Token werden jetzt in eine teamkontrollierte Wallet gesammelt und bald verbrannt.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-05-17T19:23:42.415Z"
+      "lastUpdated": "2026-06-07T16:20:25.498Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Für 99,83% der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Balance bleibt unverändert.",
+      "value": "**Für 99,83 % der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Guthaben bleibt unverändert.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-05-17T19:23:45.332Z"
+      "lastUpdated": "2026-06-07T16:20:28.806Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet zum Zeitpunkt des Upgrades 1,100+ PC-Token hielt (oder Billionen), wurde Ihr Kontostand auf den Bereich von 1,100 bis 2,000 PC-Token angepasst.",
+      "value": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet mehr als 1.100 PC-Token (oder Billionen) hielt, wurde Ihr Guthaben auf den Bereich von 1.100 bis 2.000 PC-Token angepasst.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-05-17T19:23:49.185Z"
+      "lastUpdated": "2026-06-07T16:20:33.152Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Deep Dives — Konzepte & Architektur",
@@ -3012,9 +3012,9 @@
       "lastUpdated": "2026-02-26T00:06:21.222Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
-      "value": "1:1 gepegelter stabiler Coin, der flüssige USD Liquidität von allen Ketten kombiniert.",
+      "value": "1:1 an das USD peggedes stabiles Coin, das flüssige Mittel aus allen Ketten vereint.",
       "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
-      "lastUpdated": "2026-05-17T19:23:51.655Z"
+      "lastUpdated": "2026-06-07T16:20:36.238Z"
     },
     "components.ecosystem-apps-partners.apps.puffles.description": {
       "value": "#1 NFT Launchpad auf Push Chain",
@@ -3726,11 +3726,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T20:03:28.747Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "Spiele Schach, setze auf universal",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T20:03:31.130Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "Omnihub",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -3840,6 +3835,11 @@
       "value": "Schnellster Multichain-Relayer",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T20:04:42.603Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "Puffels",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:37:17.419Z"
     }
   }
 }

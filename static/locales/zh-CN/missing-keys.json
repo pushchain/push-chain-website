@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:25:39.755Z",
+  "lastUpdated": "2026-06-07T16:42:11.945Z",
   "keys": {
     "pages.knowledge.validators.seo.title": {
       "value": "验证者 —",
@@ -1662,24 +1662,23 @@
       "lastUpdated": "2025-11-14T19:27:06.444Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.what-apps-can-build": {
-      "value": "### 什么样的应用可以在推送链上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助推送链的共享状态和跨链架构，可能性无穷。以下是一些旗舰示例：\n\n- **通用DEX**  \n  一键式交易UI，跨所有链进行流动性池路由，速度和界面如同集中式交易所(CENTRALIZED EXCHANGE)。\n\n- **通用DeFi**  \n  全球浏览器银行：贷款、借款、收益聚合器跨链而无需手动桥接。\n\n- **通用AI代理人**  \n  自主代理人，在任何链上支付并接受任意令牌——适合订阅服务、数据机器人等。\n\n- **通用DAO**  \n  跨链治理：不论其来源链，令牌持有者投票并执行提案。\n\n- **通用游戏**  \n  多玩家锦标赛和跨链游戏经济，统一玩家和资产，涵盖以太坊、索拉纳、多边形等。\n\n- **通用市场**  \n  买卖交易NFT和令牌的集合市场——跨所有链。\n\n- **通用名称服务**  \n  人类可读名称，在多个区块链上解析钱包地址。\n\n推送链上可以构建的应用和创新无穷！查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)开始吧。开发者也可以检查[文档中心](/docs/)入门。\n\n---",
+      "value": "### 什么样的应用可以在Push Chain上构建？\n\n![通用应用示例](/assets/website/chain/knowledge/faq/appusecases.webp)\n\n借助Push Chain的共享状态、跨链架构，可能性无穷。以下是几个旗舰示例：\n\n- **通用DEX**\n  单一交换界面适用于每个流动性池–跨所有链的抽象路由，具有CEX的速度和体验。\n\n- **通用DeFi**\n  浏览器中的全球银行：跨生态系统的贷款、借款、收益聚合器，无需手动桥接。\n\n- **通用AI代理**\n  自治代理可以在任何链上支付和获取任意令牌–适用于订阅服务、数据机器人等。\n\n- **通用DAO**\n  跨链治理，token持有者无论其起源链如何都可以投票并执行提案。\n\n- **通用游戏**\n  多玩家比赛和跨链游戏经济，统一玩家和资产来自以太坊、索拉纳、多边形等。\n\n- **通用市场**\n  可以在单一集成市场买卖和交易NFT和令牌的跨链平台。\n\n- **通用名称服务**\n  解析到多个区块链钱包的人类可读名称。\n\nPush Chain上可以构建的应用和创新无穷无尽！请查看更多[用例](/blog/consumer-apps-that-can-be-built-on-push-chain/)以帮助您入门。 builders也可以检查[文档中心](/docs/)开始。\n\n---",
       "englishChecksum": "799908a6e48c469eb2b317beed9dd088",
-      "lastUpdated": "2026-05-17T19:40:24.415Z"
+      "lastUpdated": "2026-06-07T16:36:34.091Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.developers-section": {
       "value": "## 开发者、用户和节点运营商",
       "englishChecksum": "3e32786584a34093ac405ea1c254e3ab",
-      "lastUpdated": "2026-05-17T19:40:26.562Z"
+      "lastUpdated": "2026-06-07T16:36:36.260Z"
     },
     "pages.privacymobile.seo.description": {
-      "value": "我们如何收集、使用和保护推链移动应用程序中的数据，以及您的选择。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-05-17T19:40:48.372Z"
+      "lastUpdated": "2026-06-07T16:36:59.531Z"
     },
     "components.short-faq-snippet.qnas.qna3.question": {
-      "value": "我需要不同的钱包或手续费代币吗？",
+      "value": "我需要一个不同的钱包或气体令牌吗？",
       "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
-      "lastUpdated": "2026-05-17T19:40:50.155Z"
+      "lastUpdated": "2026-06-07T16:37:01.165Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "构建者 — 方法与教程",
@@ -1991,43 +1990,42 @@
       "lastUpdated": "2026-02-26T00:04:47.687Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "在这里获取您的PC测试网令牌",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-05-17T19:40:51.808Z"
+      "lastUpdated": "2026-06-07T16:37:03.258Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
+      "value": "区块链的通用钱包，由Push Chain提供",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-05-17T19:40:53.300Z"
+      "lastUpdated": "2026-06-07T16:37:06.177Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- 移除早期测试网络的旧技术债务",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-05-17T19:40:29.195Z"
+      "lastUpdated": "2026-06-07T16:36:39.212Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "该提案影响了总地址17.8万个中的顶级1,950个钱包。持有1,100 PC代币或更多（包括亿万美元）的钱包进行重新平衡，以持有1,100-2,000 PC代币之间的数量。",
+      "value": "该提案影响了1.178M总地址中的顶级1,950钱包。持有1,100个PC代币或更多（包括数千万）的钱包被重新平衡以持有1,100-2,000个PC代币。",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:40:33.098Z"
+      "lastUpdated": "2026-06-07T16:36:43.760Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-supply": {
-      "value": "- 总供应量从75T+减至约10B PC代币",
+      "value": "- 总供应量从75T+减少到约10B PC代币",
       "englishChecksum": "addb4ef5d2c67e2d490cc090ab2ba3f9",
-      "lastUpdated": "2026-05-17T19:40:35.749Z"
+      "lastUpdated": "2026-06-07T16:36:46.748Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- 顶级1,950钱包重新平衡至1,100-2,000 PC代币范围",
+      "value": "- 顶级1,950钱包调整至1,100-2,000 PC代币范围",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-05-17T19:40:38.745Z"
+      "lastUpdated": "2026-06-07T16:36:49.745Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "用户事先未获通知，以防止恶意actors在重新平衡前将代币转移到其他钱包。这一安全措施确保了重新平衡过程的完整性，并防止系统被操控。",
+      "value": "用户未提前通知，以防止恶意actors在重新平衡之前将代币 redistribution到其他钱包中。这项安全措施确保了重新平衡过程的完整性，并防止系统被操纵。",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:40:42.525Z"
+      "lastUpdated": "2026-06-07T16:36:53.597Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**对于受影响的钱包（前 1,950）：**如果您的钱包持有 1,100+ PC 代币（或万亿），您的余额已重新平衡为 1,100-2,000 PC 代币范围。",
+      "value": "**对受影响的钱包（前1950名）：**如果您的钱包持有1100+PC代币（或万亿），则已将余额调整到1100-2000 PC代币范围内。",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-05-17T19:40:46.733Z"
+      "lastUpdated": "2026-06-07T16:36:57.688Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "深度解读 — 概念与架构",
@@ -2795,11 +2793,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T22:26:23.105Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "玩国际象棋，下注，通用",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T22:26:25.958Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "区块链合一",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -2904,6 +2897,21 @@
       "value": "多链中继，速度如闪电般迅猛",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T22:28:34.186Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "来探索通用应用的力量，并获得主网之前最后一季的奖励吧！",
+      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
+      "lastUpdated": "2026-06-07T16:37:07.674Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "小笨熊",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:42:06.747Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFTLaunchpad在Push Chain上",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:42:11.935Z"
     }
   }
 }

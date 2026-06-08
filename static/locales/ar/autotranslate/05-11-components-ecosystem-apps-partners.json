@@ -2,9 +2,12 @@
   "components": {
     "ecosystem-apps-partners": {
       "apps": {
-        "puffles": {
-          "name": "Puffles",
-          "description": "#1 منصة إطلاق <NFT> على <بلوكشين> <Push Chain>"
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "عملاتك الرقمية، قواعدك: دفعات سلسة عبر كل سلسلة بلوكشين."
+        },
+        "degen-chess": {
+          "description": "العب، راهن، بثّ وتوقع الفائز للفوز بالجائزة"
         }
       }
     }

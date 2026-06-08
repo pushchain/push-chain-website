@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "version": "1.0.0",
-  "current_sdk_version": "6.0.9",
+  "current_sdk_version": "6.0.16",
   "generated": "2026-05-15T00:00:00.000Z",
   "description": "Catalog of Push Chain SDK error conditions with detection signals, user-visible symptoms, machine recovery steps, and escalation guidance. Cross-reference with agents/recovery-playbook.md for step-by-step procedures.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .errors[]. Change errors.json[N] → errors.json.errors[N].",

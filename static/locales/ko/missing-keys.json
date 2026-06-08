@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:21:43.639Z",
+  "lastUpdated": "2026-06-07T16:39:25.974Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "지식 기반 — 가이드, FAQ 및 방법",
@@ -1177,9 +1177,9 @@
       "lastUpdated": "2025-11-14T19:27:06.204Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Push 체인 상의 도넛 테스트넷에서 다음 시대의 보편적인 경험을 위한 앱, 파트너, 그리고 얼리어답터를 발견해보세요.",
+      "value": "Push 체인에서 다음 시대 보편적인 경험을 창조하려는 앱, 파트너, 초기 채택자들을 발견하세요.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-05-17T19:32:08.911Z"
+      "lastUpdated": "2026-06-07T16:28:58.793Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "공지 닫기",
@@ -1682,39 +1682,38 @@
       "lastUpdated": "2025-11-14T19:27:06.204Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain.subtitle": {
-      "value": "궁금한 점이 있으신가요? Push Chain 및 universal 앱에 대한 가장 일반적인 답변이 여기 있습니다.",
+      "value": " Push 체인 및 보편적 앱에 대한 질문과 대답을 찾기 어려워요? 가장 일반적인 답변을 확인하세요.",
       "englishChecksum": "4d9917b7eb8ec31c7d601eb921a8f4ca",
-      "lastUpdated": "2026-05-17T19:32:45.220Z"
+      "lastUpdated": "2026-06-07T16:28:53.156Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved": {
-      "value": "### Push 체인에서 해결하는 문제\n\n- **분산**\n  EVM 및 비-EVM 체인을 하나로 통합하여 공유 상태 L1을 만들어 사용자가 네트워크나 지갑을 이동할 필요가 없음.\n\n- **호환성**\n  모든 블록체인과 온체인 공유 상태에 대한 원생지 지원.\n\n- **결정성**\n  ~1-2초 만에 즉시, 영구적인 원생지 – 더 이상 기다리거나 재조직되지 않음.\n\n- **진입장벽 및 UX**\n  소셜/이메일 로그인, Gas-in-Any-Token 및 Any-Wallet 지원으로 모든 체인에서 지장 없는 접근성 제공.\n\n- **유니버설 어플리케이션**\n  한 번 빌드, 어디에나 배포 – 모든 웹3 앱이 모든 사용자에 대해 모든 체인에서 순조롭게 작동.\n\n---",
+      "value": "### Push Chain이 해결하는 문제점\n\n- **단편화**\n  EVM 및 비-EVM 체인 모두를 단일 공유 상태 L1로 통합하여 사용자가 네트워크나 지갑을 이동하지 않고도 모든 체인에서 사용할 수 있습니다.\n\n- **호환성**\n  모든 블록체인의 트랜잭션 지원과 온체인 공유 상태\n\n- **결론적 처리 시간**\n  ~1-2초 내에 원활하고 불변의 네이티브 결말 – 더 이상 기다리거나 재조직하지 않습니다.\n\n- **onboarding & UX**\n  소셜/이메일 로그인, 토큰 및 지갑 지원으로 모든 체인에서 무결점 액세스를 위한 제로 마찰 접근성을 제공합니다.\n\n- **유니버설 앱**\n  한 번 구축, 어디서나 배포 – 어떤 웹3 애플리케이션도 모든 사용자에 대해 모든 체인에서 원활하게 작동합니다.\n\n---",
       "englishChecksum": "a46bbdbb625fb82ad7fe978556186243",
-      "lastUpdated": "2026-05-17T19:31:26.772Z"
+      "lastUpdated": "2026-06-07T16:27:52.708Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism": {
-      "value": "### Push Chain의 합의 메커니즘은 무엇입니까?\n\nPush Chain는 **Proof-of-Stake (PoS)** 합의 매커니즘을 사용하며, **CometBFT** 엔진 기반으로 여러 가지 개선을җ합했습니다:\n\n- **빠른 결말성**: 1–2초 이내로 트랜잭션이 결말지어지며, 재구조화 없이 결정적인 결말성이 있습니다.\n- **에너지 효율성**: PoW보다 환경 친화적입니다.\n- **발표자 네트워크**: 체인 보안에 분산된 발행자 네트워크가 있습니다.\n- **벌칙 보호**: 경제적인 유인으로 발행자의 정직성을 보장합니다.\n\n이번에는 유니버설 트랜잭션 처리 및 교차체인 상태 관리의 고유 요구 사항을 위해 CometBFT의 검증된 BFT 합의를 최적화했습니다.\n\n---",
+      "value": "### Push Chain은 어떤 합의 메커니즘을 사용합니까?\n\nPush Chain은 **Proof-of-Stake (PoS)** 합의 메커니즘을 사용하며, **CometBFT** 엔진 기반으로 여러 개선 사항이 있습니다:\n\n- **빠른 최종성**: 트랜잭션이 ~1–2초 만에 결정되며, 재조직 없이 예측 가능합니다.\n- **에너지 효율적인**: PoW보다 환경 친화적입니다.\n- **검증자 네트워크**: 체인 보호를 위한 분산 검증자 네트워크가 있습니다.\n- **벌칙 보호**: 경제적激励는 검증자의 정직성을 보장합니다.\n\nCross-chain 상태 관리와 보편적인 트랜잭션 처리를 위한 최적화된 BFT 합의입니다.",
       "englishChecksum": "56335834d49f4774c5aa232632523b92",
-      "lastUpdated": "2026-05-17T19:31:34.038Z"
+      "lastUpdated": "2026-06-07T16:28:00.292Z"
     },
     "pages.contact.hero-section.description": {
-      "value": "파트너십 및 통합, 장려금, 미디어 및 스피치, 발리데이터, 법률, 직업 또는 일반 질문이라면 여기에서 연락하세요. 기술적인 도움을 원하거나 보안 문제에 대한 신고는 지원 센터를 방문해주세요.",
+      "value": "파트너십 및 통합, 지출, 미디어 및 강연, 검증자, 법적, 경력 또는 일반적인 질문—여기에서 연락하세요. 기술적인 도움이 필요하거나 보안 관련 정보를 제공하려면 지원 센터를 방문하세요.",
       "englishChecksum": "a77ba80c097fb24b9c109642038d3abc",
-      "lastUpdated": "2026-05-17T19:32:05.590Z"
+      "lastUpdated": "2026-06-07T16:28:30.118Z"
     },
     "components.short-faq-snippet.qnas.qna3.question": {
-      "value": "다를 워렛이나 가스 토큰이 필요합니까?",
       "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
-      "lastUpdated": "2026-05-17T19:32:13.810Z"
+      "lastUpdated": "2026-06-07T16:28:38.123Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "이것은 다리나 메시징 레이어와 어떻게 다른가요?",
+      "value": "이것이 브리ッジ나 메시징 레이어와 어떻게 다른가요?",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-05-17T19:32:15.533Z"
+      "lastUpdated": "2026-06-07T16:28:40.240Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>테스트 토큰을 요청하려면 <3>페이크스</3>를 사용하세요.</1><1><2>참고사항:</2> 속도 제한이 적용될 수 있으며 일부 페이크스는 간단한 인증을 요구합니다. 페이크스가 실패하면 <4>디스코드</4>에서 연락 주세요.</1>",
+      "value": "<1>테스트 토큰을 요청하려면 <3>페이크</3>를 사용하세요.</1><1><2>메모:</2> 속도 제한이 적용될 수 있고 일부 페이크는 간단한 인증을 요구할 수 있습니다. 페이크가 실패하면 <4>디스코드</4>에서 저희에게 연락해주세요.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-05-17T19:32:18.911Z"
+      "lastUpdated": "2026-06-07T16:28:43.917Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "빌더 — 방법 및 튜토리얼",
@@ -2022,9 +2021,9 @@
       "lastUpdated": "2026-02-08T06:04:56.487Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "가장 빠르게 성장하는 유니버설 앱 생태계에 참여하고 사용자 기반을 10배로 늘리고 싶으세요?",
+      "value": "가장 빠르게 성장하는 유니버설 앱 에코시스템에 참여하고 사용자 기반을 10배로 늘리고 싶으신가요?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-05-17T19:32:12.220Z"
+      "lastUpdated": "2026-06-07T16:28:36.333Z"
     },
     "components.ecosystem-apps-partners.apps.halo.description": {
       "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
@@ -2048,48 +2047,48 @@
       "lastUpdated": "2026-02-25T23:56:24.050Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "테스트넷 Essential 앱 탐구하기",
+      "value": "테스트넷 앱을 탐구하세요",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-05-17T19:32:28.862Z"
+      "lastUpdated": "2026-06-07T16:28:48.225Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
-      "value": "Push 체인의 유니버셜 월릿",
+      "value": "푸시 체인의 유니버설 지갑",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-05-17T19:32:21.449Z"
+      "lastUpdated": "2026-06-07T16:28:49.793Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Push 체인이 PC 토큰 공급량을 75T+에서 약 100억 토큰으로 줄이기 위해 토큰 재조정 제안을 실행했습니다. 이 업그레이드는 테스트넷 초기기에 있었던 기술적 부채를 해결하고, 메인넷 환경에 Preparation합니다.",
+      "value": "푸시 체인이 토큰 재조정 제안을 실행하여 총 PC토큰 공급량을 약 10억 토큰으로 줄입니다. 이 업그레이드는 테스트넷 초창기의 기술 부채를 해결하고 메인넷 환경에 준비합니다.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-05-17T19:31:40.865Z"
+      "lastUpdated": "2026-06-07T16:28:04.319Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:31:45.299Z"
+      "lastUpdated": "2026-06-07T16:28:09.708Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- 최상위 1,950 지갑이 1,100-2,000 PC 토큰 범위로 재조정됨",
+      "value": "- 최상위 1,950 지갑이 1,100-2,000 PC 토큰 범위로 재조정되었습니다",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-05-17T19:31:48.481Z"
+      "lastUpdated": "2026-06-07T16:28:13.024Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "사용자들은 리밸런싱 전에 토큰을 다른 월렛으로 재분배하지 못하게 하려고 사전에 통보를 하지 않았습니다. 이 보안 조치로 인해 리밸런싱 과정의 무결성을 지키고 시스템의 게임 방지를 예방할 수 있었습니다.",
+      "value": "사용자들은 균형 조정을 미리 알리지 않는 보안 조치로 토큰을 다른 지갑으로 이전하는 악의적인 행위를 방지했습니다. 이로 인해 균형 조정 과정의égrity가 보장되었으며 시스템에 대한 게임이 방지되었습니다.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-05-17T19:31:52.973Z"
+      "lastUpdated": "2026-06-07T16:28:16.929Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "리밸런스는 두 단계로 구성된 방식입니다. 토큰은 팀이 관리하는 지갑으로 모이고 곧 버려질 예정입니다.",
+      "value": "리밸런스는 두 단계로 구성된 접근법입니다. 토큰들은 팀이 관리하는 지갑에 모이고 곧 불태워질 예정입니다.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-05-17T19:32:27.852Z"
+      "lastUpdated": "2026-06-07T16:28:56.692Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**99.83%의 사용자에게는 영향이 없습니다.** 지갑 잔액이 변하지 않습니다.",
+      "value": "**99.83%의 사용자:** 이 변경 사항은 당신에게 영향을 주지 않습니다. 지갑 잔고가 변하지 않습니다.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-05-17T19:31:58.928Z"
+      "lastUpdated": "2026-06-07T16:28:23.454Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**영향을 받은 지갑 (상위 1,950):** 지갑에서 1,100+ PC 토큰(트릴리언 이상) 보유 중이라면, 밸런스가 1,100-2,000 PC 토큰 범위로 재조정되었습니다.",
+      "value": "** Influence on top wallets (top 1,950):** If your wallet had 1,100만 PC 토큰 이상 보유하고 있었다면, 잔액이 1,100-2,000 PC 토큰 범위로 재조정되었습니다.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-05-17T19:32:03.191Z"
+      "lastUpdated": "2026-06-07T16:28:27.662Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "심화 분석 — 개념 및 아키텍처",
@@ -2837,11 +2836,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T21:09:53.079Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "체스 게임하고 내기, 유니버설",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T21:09:55.858Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "오미니허브",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -2945,6 +2939,16 @@
       "value": "초고속 멀티체인 릴레이어",
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T21:11:49.764Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "Puffles",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:39:08.253Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "Push Chain 최고의 NFT 런치패드",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:39:25.967Z"
     }
   }
 }

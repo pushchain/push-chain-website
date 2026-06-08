@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-18T06:18:10.058Z",
+  "lastUpdated": "2026-06-07T16:38:43.345Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "ナレッジベース — ガイド、FAQ & チュートリアル",
@@ -1177,9 +1177,9 @@
       "lastUpdated": "2025-11-14T19:27:06.177Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "プッシュチェーンのドーナッツテストネットで、ユニバーサルな体験を構築するためにアプリ、パートナー、先駆者を発見してください。",
+      "value": "ブロックチェーンのドーナッツテストネットで、ユニバーサルな体験を構築するアプリ、パートナー、エールリーダーを発見してください。",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-05-18T06:17:32.382Z"
+      "lastUpdated": "2026-06-07T16:26:56.322Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "アナウンスを閉じる",
@@ -1682,28 +1682,29 @@
       "lastUpdated": "2025-11-14T19:27:06.177Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.learn-why-push-chain.title": {
+      "value": "Why ブロックチェーン is the Missing Layer in Web3",
       "englishChecksum": "dda742e7ba033aecc1da77822f4efb8f",
-      "lastUpdated": "2026-05-17T19:28:54.534Z"
+      "lastUpdated": "2026-06-07T16:26:01.047Z"
     },
     "global.site-description": {
-      "value": "シェアード-ステート L1 で、あらゆるアプリを対象に。一度デプロイすれば、どのチェーンのユーザーにもリーチできます。どんなウォレットでも使えます。どんなトークンでも使って支払えます。ネットワークの切り替えは不要です。",
+      "value": "ユニバーサルアプリ用の共有状態L1。一度デプロイして、任意のチェーン上でユーザーに reach。任意のウォレットを使用し、任意のトークンで支払うことができます。ネットワークスイッチングは不要です。",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-05-17T19:30:59.810Z"
+      "lastUpdated": "2026-06-07T16:25:55.722Z"
     },
     "pages.knowledge.push101.seo.description": {
-      "value": "パッションチェーンとユニバーサルアプリの入門的な解説—それが何なのか、どう機能するのか、始め方を学びます。",
+      "value": "ブロックチェーンの新人向けイントロ導入 — Push Chain とユニバーサルアプリが何なのか、どのように機能するのか、はじめる方法を学びます。",
       "englishChecksum": "0d309817c6171c9b903b25e7cbb58136",
-      "lastUpdated": "2026-05-17T19:28:51.841Z"
+      "lastUpdated": "2026-06-07T16:25:58.224Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.another-l1.subtitle": {
-      "value": " Pushチェーンは、別の孤立したエコシステムを作り出すことではない — 全員のために互換性を解決する方法です。",
+      "value": "プッシュチェーンは、もう一つの孤立したエコシステムを作るためではない――全員のために相互運用性を解決する方法である。",
       "englishChecksum": "2a52413de055cfebf0245ffa537b8369",
-      "lastUpdated": "2026-05-17T19:30:39.444Z"
+      "lastUpdated": "2026-06-07T16:26:06.370Z"
     },
     "pages.knowledge.push101.explainer-section.blocks.sections.why-push-chain-future.items.faq-push-chain.subtitle": {
-      "value": "プッシュチェーンやユニバーサルアプリに関する質問がありますか？最も一般的な回答をご覧ください。",
+      "value": "_pushChainとユニバーサルアプリについて、よくある質問への答えです。",
       "englishChecksum": "4d9917b7eb8ec31c7d601eb921a8f4ca",
-      "lastUpdated": "2026-05-17T19:29:18.381Z"
+      "lastUpdated": "2026-06-07T16:27:35.854Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.consumer-apps-that-can-be-built-on-push-chain.title": {
       "value": " Push Chain 上で作成可能な消費者アプリ 🫶",
@@ -1716,9 +1717,9 @@
       "lastUpdated": "2025-11-14T20:19:55.578Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### ブリッジやメッセージング層とはどう違うんですか？\n\n**短い回答**：プッシュはアプリが実行されるところです。ブリッジ/メッセージングは単にトークンやメッセージをチェーン間で移動するだけなので、ユーザーと開発者にとってより複雑になります。\n\n- **一つのホーム地盤 vs 複数のクローン**\n\tブリッジ/メッセージングでは各チェーンにデプロイし、メッセージで同期しますが、プッシュでは一度デプロイすれば、同じコンタクトと共有状態を叩くことになります。\n\n- **ラップされた資産や強制的なブリッジはありません**\n\tユーザーは自分のホームチェーンに残り、既に持っているもので支払います；我々がルーティングと手数料コンバージョンを裏側で処理します。\n\n- **統一されたアイデンティティ＆検証**\n\tどのウォレット/チェーンからでもサインを受け付け、プッシュ上に同じユーザーとして属性づけます─非管理型です。\n\n- **動くパーツが少ない**\n\tクロスチェーン承認のダンスやガストークン探し、同期を保つためのグル契約などはありません。\n\n- **ブリッジが複雑さを引き起こす。チェーインネイティブな相互運用性がそれを解決する**\n\tブリッジには komplex Engineering努力、時間、オーディットコスト、追加のインフラストラクチャなどが必要ですが、チェーインネイティブな相互運用性は単にアプリが NATIVELY 遺伝的に引き継ぐだけです。\n\n**結果**: より簡単なアプリ、真実の一つのソース、ユーザー間であれば感じるように一連のUXになります─実際にはそうではありません。\n\n---",
+      "value": "### Pushとは、ブリッジやメッセージング層とどう違うのですか？\n\n**短く言うと**：Pushはアプリが実行される場所です。ブリッジ/メッセージングはトークンやメッセージをチェーン間で移動するだけで、ユーザーと開発者にとってすべてを複雑にします。\n\n- **単一のホームvs多数のクローン**  \n\tブリッジ/メッセージングでは、各チェーンごとにデプロイしてメッセージで同期する必要があります。Pushでは一度デプロイすれば、すべてのユーザーが同じコントラクトと共有状態をタッチします。\n\n- **ラップされた資産や義務的なブリッジなし**  \n\tユーザーはホームチェーンに残り、既に持っているもので支払います；ルーティングと手数料コンバージョンは内部で処理します。\n\n- **統一されたIDと検証**  \n\t任意のウォレット/チェーンからの署名を受け入れ、Push上に同じユーザーに割り当てます —非保管型です。\n\n- **動く部品が少ない**  \n\tクロスチェーン承認ダンスはなくなり、ガス・トークンやグル契約を同期する必要もありません。\n\n- **ブリッジによる複雑さ。チェーンネイティブな相互運用性がそれを解決する**  \n\tブリッジにはComplexエンジニアリング努力、時間、オーディットコストと追加インフラストラクチャが必要です。チェーンネイティブな相互運用性は、アプリがネイティブに相互運用性を継承するだけで動作します。\n\n**結果**：単純化されたアプリ、真実の一つのソース、ユーザーが実際にそうではない場合でも一貫したUXが得られます。\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-05-17T19:29:33.137Z"
+      "lastUpdated": "2026-06-07T16:26:28.105Z"
     },
     "pages.docs.header.description": {
       "value": "しーしー… テストネット ドーナツの先取りをご希望ですか？#pushchainsecret で連絡してください。テストビルドへのアクセスを送信します。",
@@ -1726,49 +1727,49 @@
       "lastUpdated": "2026-02-25T23:53:40.283Z"
     },
     "pages.litepaper.seo.description": {
-      "value": "プッシュチェーンのビジョン、アーキテクチャー、経済についての概要。ユニバーサルアプリのためです。",
+      "value": "プッシュチェーンのビジョン、アーキテクチャ、経済については、ユニバーサルアプリ向けにコンシェンスな紹介です。",
       "englishChecksum": "2768e2658592fe376add9699d9d49ef6",
-      "lastUpdated": "2026-05-17T19:29:48.356Z"
+      "lastUpdated": "2026-06-07T16:26:42.866Z"
     },
     "pages.privacymobile.seo.description": {
-      "value": "Push チェーン モバイルアプリで、データの収集、使用、保護方法と選択肢について。",
+      "value": "プッシュチェーンのモバイルアプリでデータを収集、使用、保護し、あなたの選択肢について。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-05-17T19:29:51.562Z"
+      "lastUpdated": "2026-06-07T16:26:45.104Z"
     },
     "pages.privacymobile.hero-section.description": {
-      "value": "プッシュチェーン モバイルアプリでデータを収集、使用し、保護する方法と、あなたの選択肢。",
+      "value": "Push チェーン モバイル アプリでデータを収集、使用し、保護する方法と選択肢。",
       "englishChecksum": "f48114206228db0b9d9cf7e18aa08505",
-      "lastUpdated": "2026-05-17T19:29:53.432Z"
+      "lastUpdated": "2026-06-07T16:26:47.268Z"
     },
     "pages.donutsecret.seo.description": {
-      "value": "招待制の閉鎖型ベータテスト。プッシュチェーンテストネットにアクセスし、ユニバーサルアプリを送信し、早期報酬を解除するために、ドーナツパスを請求してください。",
+      "value": "招待制の閉じたベータテストに参加してください。Push Chain テストネットへのアクセス権を得るために、ドンツパスを請求し、ユニバーサルアプを送信し、早期報酬をアンロックしましょう。",
       "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
-      "lastUpdated": "2026-05-17T19:29:56.058Z"
+      "lastUpdated": "2026-06-07T16:26:50.158Z"
     },
     "pages.donutsecret.seo.og-description": {
-      "value": "開発者向けの早期アクセス： Closed Beta Pass を請求し、Push チェーン（ドーナツ）を試して universal アプリを構築しながら報酬を得る。",
+      "value": "開発者向けプレリリース： Closed Beta Passを申し込み、Push Chain（ドーナツ）で実験し、ユニバーサルアプリの開発中に報酬を獲得する。",
       "englishChecksum": "82bceccf67ffed51d02e1c40234de275",
-      "lastUpdated": "2026-05-17T19:29:58.316Z"
+      "lastUpdated": "2026-06-07T16:26:54.060Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "この方法はブリッジやメッセージングレイヤーとどう違うのですか？",
+      "value": "このアプローチはブリッジやメッセージングレイヤーとどう異なるのですか？",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-05-17T19:30:08.473Z"
+      "lastUpdated": "2026-06-07T16:27:02.411Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>短い回答</2>: Pushは、アプリが動作する場所です。ブリッジ/メッセージングは、チェーン間でトークンやメッセージを移動するだけで、ユーザーと開発者にとってすべてを複雑にします。</1><1><2>一つのホーム基盤vs多数の複製</2> ブリッジ/メッセージングでは、各チェーンごとにデプロイし、メッセージで同期します。Pushでは一度デプロイするだけで、誰でも同じコントラクトと共有状態にアクセスできます。</1><1><2>包装資産や強制的なブリッジ無し</2>ユーザーは自分のホームチェーンに残り、既に保有しているもので支払います。我々がルーティングと手数料変換を内部で処理します。</1><1><2>統一されたアイデンティティ&検証</2>どのウォレット/チェーンからでも署名を受け入れ、Push上で同じユーザーに割り当てます － 非保管式です。</1><1><2>部品が少ない</2>クロスチェーン承認ダンスやガス-トークンの探し回し、同期を維持するためのグルー契約はありません。</1><1><2>ブリッジが複雑さを導入する。チェーンネイティブな相互運用性を解決する</2>ブリッジには、複雑な工学的努力と時間、査証コストなどが必要になります。チェーンネイティブな相互運用性は、アプリが原生で遺産として機能します。</1><1>結果:単純化されたアプリ、真実の一つのソース、ユーザーにとっても感じるように一つのチェーンになります － asumió、ユーザーがそうではない場合でも。</1>",
+      "value": "<1><2>_SHORT ANSWER</2>: Pushはアプリが実行される場所です。ブリッジ/メッセージングは単にトークンやメッセージをチェーンの間で移動するため、ユーザーと開発者にとって複雑になります。</1><1><2>一つのホーム vs 複数のクローン</2>ブリッジ/メッセージングでは各チェーンでデプロイし、メッセージを通じて同期します。Pushでは一度デプロイすれば、誰でも同じコントラクトと共有状態にアクセスできます。</1><1><2>ラップした資産や強制的なブリッジはありません</2>ユーザーはホームチェーンで残り、既存の資産で支払います。我々がルーティングや手数料コンバートを裏側で処理します。</1><1><2>統一されたIDと検証</2>我々は任意のウォレット/チェーンから署名を受け入れ、Push上で同じユーザーに属性付けます - 非保管式です。</1><1><2>動くパーツが少ない</2>クロスチェーンアプロバールドンスはありません。手数料トークンの探し回りもありません。同期を維持するためのグルードコントラクトも必要ありません。</1><1><2>ブリッジは複雑さを導入します。チェーンネイティブな相互運用はそれを解決します</2>ブリッジには高度なエンジニアリング努力、時間、オーディットコスト、追加インフラストラクチャが必要です。チェーンネイティブな相互運用は単にアプリがネイティブに遵守するだけです。</1><1>結果：よりシンプルなアプリ、一つの真実のソース、ユーザーがあってもなくても一つのチェーンを感じるUX</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-05-17T19:30:22.930Z"
+      "lastUpdated": "2026-06-07T16:27:20.839Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>テストトークンをリクエストするには、<3>ファウセット</3>を使用してください。</1><1><2>メモ:</2>速度制限がかかります;一部のファウセットでは簡単な検証が必要です。ファウセットで失敗した場合は、<4>Discord</4>で連絡をください。</1>",
+      "value": "<1>テストトークンをリクエストするには、<3>ファウセット</3>を使用してください。</1><1><2>メモ:</2>レート制限が適用される場合があります;一部のファウセットでは簡単な検証が必要になる場合があります。ファウセットで失敗した場合は、<4>ディスコード</4>で私たちにピンを送信してください。</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-05-17T19:30:26.448Z"
+      "lastUpdated": "2026-06-07T16:27:27.525Z"
     },
     "notifications.rewards-notification.image-alt": {
-      "value": "ブロックチェーンテストネット報酬 - ユニバーサルアプリを構築する",
+      "value": "ブロックチェーン テストネット報酬 - ユニバーサル アプリを建設する",
       "englishChecksum": "7e5ffae122997a63a81105184b921cb1",
-      "lastUpdated": "2026-05-17T19:30:33.183Z"
+      "lastUpdated": "2026-06-07T16:27:32.658Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "ビルダーズ － ハウツー＆チュートリアル",
@@ -2061,9 +2062,9 @@
       "lastUpdated": "2026-02-08T06:04:18.175Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "世界で最速成長中のユニバーサルアプエコシステムに参加し、ユーザーベースを10倍化しましょうか？",
+      "value": "世界で最も成長の早いユニバーサルアプリエコシステムに参加して、ユーザー規模を10倍にしたいですか？",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-05-17T19:30:06.549Z"
+      "lastUpdated": "2026-06-07T16:27:00.349Z"
     },
     "components.ecosystem-apps-partners.apps.push-campus.description": {
       "value": "エーテリウム、ソーラナ、ベース、および15以上のチェーンで学生に接続します",
@@ -2080,23 +2081,22 @@
       "lastUpdated": "2026-02-25T23:54:42.613Z"
     },
     "components.ecosystem-essentials.apps.pc-faucet.description": {
-      "value": "PCテストネットのトークンをここで入手しましょう",
+      "value": "PCテストネットトークンをこちらで取得してください",
       "englishChecksum": "7d5eea9c1d62836ae78b6ac64cf7b30b",
-      "lastUpdated": "2026-05-17T19:30:29.438Z"
+      "lastUpdated": "2026-06-07T16:27:29.278Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-05-17T19:29:37.985Z"
+      "lastUpdated": "2026-06-07T16:26:33.385Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- トップ1,950ウォレットが1,100-2,000PCトークン範囲に再調整",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-05-17T19:29:41.406Z"
+      "lastUpdated": "2026-06-07T16:26:36.939Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.validator-period": {
-      "value": "テストネットのバリデーター提案期間は、完全に分散化された所有権が実装される前にエッジ ケースを除去するために現在5分に設定されています。",
+      "value": "現在、テストネットのバリデーター提案期間は全てのバリデーター所有権が実装される前にエッジケースを排除するために5分に設定されています。",
       "englishChecksum": "b1a156d417faacce984c38775b416372",
-      "lastUpdated": "2026-05-17T19:30:42.746Z"
+      "lastUpdated": "2026-06-07T16:26:40.503Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "デープダイブ — 概念とアーキテクチャ",
@@ -2862,11 +2862,6 @@
       "englishChecksum": "6f509f930a51f2466313d613b79b88f0",
       "lastUpdated": "2026-05-17T21:00:39.366Z"
     },
-    "components.ecosystem-apps-partners.apps.degen-chess.description": {
-      "value": "チェスをして、賭け、ユニバーサル",
-      "englishChecksum": "e615a86c9a6d0d2489928155479b5e04",
-      "lastUpdated": "2026-05-17T21:00:42.395Z"
-    },
     "components.ecosystem-apps-partners.apps.omnihub.name": {
       "value": "オミニハブ",
       "englishChecksum": "cec5a3b7f2cb33073d108bccbe1a6fa1",
@@ -2966,6 +2961,21 @@
       "value": "タチオン",
       "englishChecksum": "835d7367f2b5cbca943ad7a04a5af588",
       "lastUpdated": "2026-05-17T21:01:30.435Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "universalアプリの力を体感し、メインネット前最後のシーズンで報酬を得てみましょう！",
+      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
+      "lastUpdated": "2026-06-07T16:27:37.513Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.name": {
+      "value": "プフルズ",
+      "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
+      "lastUpdated": "2026-06-07T16:38:41.522Z"
+    },
+    "components.ecosystem-apps-partners.apps.puffles.description": {
+      "value": "#1 NFTランチパッド on Pushチェーン",
+      "englishChecksum": "f343105b0775425c6f1facf855389429",
+      "lastUpdated": "2026-06-07T16:38:43.336Z"
     }
   }
 }
