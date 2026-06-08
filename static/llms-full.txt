@@ -2139,7 +2139,7 @@ Progress Hook Type and Response
 | `SEND-TX-202-01` | Estimating `` Chain Gas | Querying Push Chain gas and UGPC relay fee | INFO | `{ stage: 'estimating-gas', chain }` |
 | `SEND-TX-202-02` | `` Chain Gas Estimated | Push gas: `` UPC + UGPC relay: `` UPC = `` UPC | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
 | `SEND-TX-203-01` | Resolving `` Execution Account | Resolving UEA on Push Chain and CEA on `` | INFO | `{ stage: 'resolving-cea', chain }` |
-| `SEND-TX-203-02` | `` Execution Account Ready | UEA: ``. CEA: `` on ``. Deployed: `` | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-203-02` | `` Execution Account Resolved | UEA: ``. CEA: `` on ``. Deployed: `` | SUCCESS | `{ uea, cea, chain, deployed }` |
 | `SEND-TX-203-03` | Pre-flight Balance Check | UEA balance: `` PC; required: `` PC; `` (``) | INFO when sufficient / WARNING when insufficient | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
 | `SEND-TX-203-04` | Insufficient UEA Balance | Shortfall `` PC on ``. Bridge >=`` PC to UEA `` before retrying. | WARNING when `enforceGasCheck` is false / ERROR when `enforceGasCheck` is true. | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
 | `SEND-TX-203-05` | SVM Native-Value Warn Threshold | Buffered pool quote `` PC exceeds warn threshold `` PC for `` (``). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |

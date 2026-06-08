@@ -119,7 +119,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 | `SEND-TX-202-01` | Estimating `<chain>` Chain Gas | Querying Push Chain gas and UGPC relay fee | INFO | `{ stage: 'estimating-gas', chain }` |
 | `SEND-TX-202-02` | `<chain>` Chain Gas Estimated | Push gas: `<n>` UPC + UGPC relay: `<n>` UPC = `<total>` UPC | SUCCESS | `{ gasEstimate, relayFee, totalCost, currency }` |
 | `SEND-TX-203-01` | Resolving `<chain>` Execution Account | Resolving UEA on Push Chain and CEA on `<chain>` | INFO | `{ stage: 'resolving-cea', chain }` |
-| `SEND-TX-203-02` | `<chain>` Execution Account Ready | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: `<true/false>` | SUCCESS | `{ uea, cea, chain, deployed }` |
+| `SEND-TX-203-02` | `<chain>` Execution Account Resolved | UEA: `<ueaAddr>`. CEA: `<ceaAddr>` on `<chain>`. Deployed: `<true/false>` | SUCCESS | `{ uea, cea, chain, deployed }` |
 | `SEND-TX-203-03` | Pre-flight Balance Check | UEA balance: `<n>` PC; required: `<n>` PC; `<sufficient/INSUFFICIENT>` (`<pathTag>`) | INFO when sufficient / WARNING when insufficient | `{ required, available, sufficient, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
 | `SEND-TX-203-04` | Insufficient UEA Balance | Shortfall `<n>` PC on `<pathTag>`. Bridge >=`<n>` PC to UEA `<ueaAddr>` before retrying. | WARNING when `enforceGasCheck` is false / ERROR when `enforceGasCheck` is true. | `{ required, available, shortfall, ueaAddress, pathTag, kind, burnToken, segmentIndex }` |
 | `SEND-TX-203-05` | SVM Native-Value Warn Threshold | Buffered pool quote `<n>` PC exceeds warn threshold `<n>` PC for `<gasToken>` (`<pathTag>`). Pool may be skewed. | INFO | `{ quoted, threshold, gasToken, pathTag }` |
