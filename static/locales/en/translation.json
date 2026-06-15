@@ -350,6 +350,15 @@
           "imagetitle": "Transactions from any chain finalize on Push Chain, enabling users of any chain to natively use the same app aka Universal Execution Layer."
         },
         "box7": {
+          "texttitle": "Universal\nValidators",
+          "bodytext": "Trigger, validate, and complete transactions across any chain using your smart contract.",
+          "tags": {
+            "title1": "WRITE TO CHAINS"
+          },
+          "imagealt": "Illustration showing tetris blocks in different colors merging and changing.",
+          "imagetitle": "(Roadmap) Universal Validators allow users to trigger, validate, and complete transactions across any chain using your smart contract."
+        },
+        "box8": {
           "texttitle": "State Access",
           "bodytext": "Access account and state data from other chains in your smart contract.",
           "tagText": "COMING SOON",
@@ -358,16 +367,6 @@
           },
           "imagealt": "Illustration showing Push Chain growing in blocks style animation.",
           "imagetitle": "(Roadmap) Shared State allows access to account and state data from other chains in your smart contract."
-        },
-        "box8": {
-          "texttitle": "Universal\nValidators",
-          "bodytext": "Trigger, validate, and complete transactions across any chain using your smart contract.",
-          "tagText": "COMING SOON",
-          "tags": {
-            "title1": "WRITE TO CHAINS"
-          },
-          "imagealt": "Illustration showing tetris blocks in different colors merging and changing.",
-          "imagetitle": "(Roadmap) Universal Validators allow users to trigger, validate, and complete transactions across any chain using your smart contract."
         },
         "footer": {
           "title": "your app's user base by going universal",
@@ -1947,7 +1946,7 @@
       "container-aria-label": "Push Chain rewards notification"
     },
     "info-bar": {
-      "title": "Season 3 Invite Only Exclusive Access is Live!",
+      "title": "Push Rewards Program S3 is now open to everyone!",
       "learn-more-text": "Explore Season 3",
       "learn-more-title": "Explore Season 3",
       "dismiss-button-title": "Dismiss announcement",

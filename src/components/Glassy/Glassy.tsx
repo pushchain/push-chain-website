@@ -538,6 +538,9 @@ const Glassy = ({ item }) => {
 
                 // Render type "regular text"
                 if (object.type === 'text') {
+                  const hasTagText = Boolean(object.tagText);
+                  const hasTags = Boolean(object.tags?.length);
+
                   return (
                     <BodyTextItem
                       bodytextwidth={object.bodytextwidth}
@@ -552,12 +555,12 @@ const Glassy = ({ item }) => {
                             : 'center'
                       }
                     >
-                      {object.tagText && (
+                      {(hasTagText || hasTags) && (
                         <TagText>
-                          <span>{t(object.tagText)}</span>
+                          {hasTagText && <span>{t(object.tagText)}</span>}
 
                           {object.tags?.map((item) => (
-                            <Tag item={item} />
+                            <Tag item={item} key={item.title} />
                           ))}
                         </TagText>
                       )}

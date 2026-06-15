@@ -7,7 +7,7 @@ description: "Introducing Zappi an anychain to anychain stablecoin payments app 
 text: "Introducing Zappi an anychain to anychain stablecoin payments app for freelancers, merchants, and businesses. Powered by PUSD, the Universal Stablecoin. Built on Push Chain."
 tags: [Featured, Product, Ecosystem]
 showcase: true
-twitterId: ""
+twitterId: "2062546147215028296"
 ---
 
 ![Cover Image of Introducing Zappi - First Universal Payments App on Push Chain](./cover-image.webp)

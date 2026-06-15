@@ -51,7 +51,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     href: 'https://pusd.push.org/',
     titleColor: 'white',
     descriptionColor: 'white',
-    twitterId: '1993681001076478131',
+    twitterId: '2060006563419664756',
     tagsColor: 'white',
   },
   {
@@ -64,6 +64,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     tags: ['Payments'],
     href: 'https://zappi.to/',
     titleColor: 'white',
+    twitterId: '2062546147215028296',
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.ramen-swap.name',
@@ -77,6 +78,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'white',
     descriptionColor: 'white',
     tagsColor: 'white',
+    twitterId: '2044119647130399010',
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.degen-chess.name',
@@ -90,7 +92,7 @@ export const EcosystemAppsList: EcosystemApp[] = [
     titleColor: 'white',
     descriptionColor: 'white',
     tagsColor: 'white',
-    twitterId: '2031754422884487425',
+    twitterId: '2051682290774966686',
   },
   {
     nameKey: 'components.ecosystem-apps-partners.apps.cetra.name',

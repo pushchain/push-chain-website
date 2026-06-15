@@ -335,7 +335,6 @@ export const FeaturesList = {
       body: [
         {
           type: 'text',
-          tagText: 'pages.home.chain-features-section.box7.tagText',
           tags: [
             {
               title: 'pages.home.chain-features-section.box7.tags.title1',
@@ -355,8 +354,8 @@ export const FeaturesList = {
         },
         {
           type: 'image',
-          imagesrc: 'chain/shared-state',
-          videosrc: 'chain/shared-state-video',
+          imagesrc: 'chain/programmable-solvers',
+          videosrc: 'chain/programmable-solvers-video',
           videowebm: true,
           imagealt: 'pages.home.chain-features-section.box7.imagealt',
           imagetitle: 'pages.home.chain-features-section.box7.imagetitle',
@@ -388,8 +387,8 @@ export const FeaturesList = {
       body: [
         {
           type: 'image',
-          imagesrc: 'chain/programmable-solvers',
-          videosrc: 'chain/programmable-solvers-video',
+          imagesrc: 'chain/shared-state',
+          videosrc: 'chain/shared-state-video',
           videowebm: true,
           imagealt: 'pages.home.chain-features-section.box8.imagealt',
           imagetitle: 'pages.home.chain-features-section.box8.imagetitle',
