@@ -18,7 +18,110 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
 
-### 6.0.2 (unreleased)
+### 6.0.17 (2026-06-09)
+
+#### Fixes
+
+- make SVM payload encoding browser-safe
+- prevent underfunded outbound gas swaps
+
+### 6.0.17 (unreleased)
+
+#### Other Changes
+
+- Fixed outbound (UOA_TO_CEA) transactions reverting on-chain with Uniswap `STF`
+- Fixed SVM payload encoding in browser environments whose `Buffer` polyfill
+
+### 6.0.16 (2026-06-05)
+
+#### Other Changes
+
+- Fixed SVM domain-separator chainId encoding to match the pre-EIP-712 UEA_SVM
+- Fixed Route 1 deposit-sizing progress-hook ordering: the `103-03-04` event is
+- Additional cascade execution test coverage and validation fixes.
+
+### 6.0.15 (2026-06-02)
+
+#### Other Changes
+
+- Internal fixes to response-building logic.
+
+### 6.0.14 (2026-06-02)
+
+#### Other Changes
+
+- `trackTransaction` now resolves the originating source chain correctly even when
+- Added `finalTxHash` to `UniversalTxResponse` — a single hash that resolves across
+
+### 6.0.13 (2026-05-26)
+
+#### Other Changes
+
+- Maintenance release (version bump only; no code changes).
+
+### 6.0.12 (2026-05-26)
+
+#### Other Changes
+
+- Maintenance release (version bump only; no code changes).
+
+### 6.0.11 (2026-05-25)
+
+#### Other Changes
+
+- Added transaction-indexing polling for SVM multihop: the SDK now retries with
+
+### 6.0.10 (2026-05-23)
+
+#### Other Changes
+
+- Added Borsh-encoded SVM-origin inbound relay payload building for Route 3
+- Improved SVM child-inbound detection using log index for more reliable
+
+### 6.0.9 (2026-05-19)
+
+#### Other Changes
+
+- Added a decoder for the `GasPriceBelowBase` (0x05aab006) error with an
+
+### 6.0.8 (2026-05-19)
+
+#### Other Changes
+
+- Maintenance release (version bump only; no code changes).
+
+### 6.0.7 (2026-05-19)
+
+#### Other Changes
+
+- Fixed corner-case bugs in cascade execution and funds-payload handling for
+
+### 6.0.6 (2026-05-18)
+
+#### Other Changes
+
+- Clarified progress-event message text (no functional changes).
+
+### 6.0.5 (2026-05-18)
+
+#### Other Changes
+
+- Added multihop progress markers: `SEND_TX_199_03` / `SEND_TX_199_99` (Route 1
+
+### 6.0.4 (2026-05-18)
+
+#### Other Changes
+
+- Fixed payload-builder detection of executable data vs. value-only transfers,
+- Fixed progress-hook wiring for funds-only execution paths.
+
+### 6.0.3 (2026-05-16)
+
+#### Other Changes
+
+- Added per-call `progressHook` support: `sendTransaction(params, { progressHook })`
+
+### 6.0.2 (2026-05-16)
 
 #### Other Changes
 
@@ -250,6 +353,78 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 - release fix
 
 ## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)
+
+### 6.0.18 (2026-06-12)
+
+#### Other Changes
+
+- release: bump to 6.0.17
+- release: bump to 6.0.16
+- release: bump to 6.0.15
+- release: bump to 6.0.14
+- release: bump to 6.0.13
+- release: bump to 6.0.12
+- release: bump to 6.0.11
+- release: bump to 6.0.9
+- release: bump to 6.0.8
+- release: bump to 6.0.6
+- release: bump to 6.0.4
+- release: bump to 6.0.2
+- release: bump to 6.0.1
+- release: bump to 6.0.0
+- release: bump to 5.2.11
+- release: bump to 5.2.10
+
+### 6.0.17 (2026-06-09)
+
+#### Chores
+
+- update bundled `@pushchain/core` to pull in the latest core features and fixes.
+
+### 6.0.16 (2026-06-05)
+
+#### Chores
+
+- update bundled `@pushchain/core` to pull in the latest core features and fixes.
+
+#### Fixes
+
+- show progress events with `ERROR` level as failure toasts.
+
+### 6.0.12 (2026-05-20)
+
+#### Fixes
+
+- honor `config.toast.hidden` when rendering wallet progress toasts.
+- return `null` for hidden or missing toast content.
+
+### 6.0.11 (2026-05-20)
+
+#### Features
+
+- add configurable wallet toast placement through `config.toast.position`.
+- expose toast position constants through `PushUI.CONSTANTS.TOAST.POSITION`.
+
+#### Chores
+
+- add direct ui-kit build targets for skip-deps and direct TypeScript builds.
+
+#### Fixes
+
+- reset expanded toast details when a new progress event arrives.
+- improve long error-message wrapping and toast width on small screens.
+
+### 6.0.0 (2026-05-14)
+
+#### Other Changes
+
+- note: major release aligned ui-kit with `@pushchain/core` v6.0.0.
+
+### 5.2.11 (2026-05-12)
+
+#### Other Changes
+
+- release: bump to 5.2.10
 
 ### 5.2.7 (2026-04-24)
 
