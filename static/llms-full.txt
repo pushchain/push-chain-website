@@ -9483,24 +9483,9 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ### 6.0.18 (2026-06-12)
 
-#### Other Changes
+#### Chores
 
-- release: bump to 6.0.17
-- release: bump to 6.0.16
-- release: bump to 6.0.15
-- release: bump to 6.0.14
-- release: bump to 6.0.13
-- release: bump to 6.0.12
-- release: bump to 6.0.11
-- release: bump to 6.0.9
-- release: bump to 6.0.8
-- release: bump to 6.0.6
-- release: bump to 6.0.4
-- release: bump to 6.0.2
-- release: bump to 6.0.1
-- release: bump to 6.0.0
-- release: bump to 5.2.11
-- release: bump to 5.2.10
+- update bundled `@pushchain/core` to pull in the latest core features and fixes.
 
 ### 6.0.17 (2026-06-09)
 
