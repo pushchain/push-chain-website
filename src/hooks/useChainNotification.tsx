@@ -48,7 +48,7 @@ export const useChainNotification = () => {
           position='bottom-left'
           onClick={() => {
             localStorage.setItem('pushHackenNotification', 'true');
-            window.open('https://portal.push.org', '_blank');
+            window.open('/knowledge/audit', '_blank');
             toast.dismiss(toastId);
           }}
           onClose={() => {

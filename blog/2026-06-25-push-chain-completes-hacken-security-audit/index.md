@@ -88,7 +88,7 @@ The full audit reports are linked below \- we encourage you to read them.
 
 *Read the full Hacken audit reports:*
 
-* *\[link to EVM Gateway report\] ·*
-* *\[SVM Gateway report\] ·*
-* *\[Core Contracts report\] ·*
-* *\[Push Chain node report \- publishing on finalization\]*
+* *[EVM Gateway report](https://github.com/pushchain/push-chain-gateway-contracts/tree/audit-main-fixes/contracts/evm-gateway/audits)*
+* *[SVM Gateway report](https://github.com/pushchain/push-chain-gateway-contracts/tree/audit-main-fixes/contracts/svm-gateway/audits)*
+* *[Core Contracts report](https://github.com/pushchain/push-chain-core-contracts/tree/audit-main-fixes/audits)*
+* *[Push Chain node report](https://github.com/pushchain/push-chain-node/tree/audit-fixes/audits)*
