@@ -579,6 +579,11 @@
                   "subtitle": "The place to find answers to all the popular questions the community has asked",
                   "ctatitle": "Read More"
                 },
+                "audit": {
+                  "title": "Audit Reports",
+                  "subtitle": "Explore Push Chain's audit reports and see how independent security reviews from top firms validate the infrastructure you're building on.",
+                  "ctatitle": "Read More"
+                },
                 "testnet": {
                   "title": "Donut Testnet",
                   "subtitle": "Donut is Push Chain’s public testnet for Universal Apps that run across chains (EVM or non-EVM)",
@@ -1028,6 +1033,47 @@
           },
           "blocks": {
             "title": "Validators"
+          }
+        }
+      },
+      "audit": {
+        "seo": {
+          "title": "Audit Reports",
+          "description": "Explore Push Chain's audit reports and see how independent security reviews from top firms validate the infrastructure you're building on.",
+          "og-title": "Audit Reports",
+          "og-description": "Read independent security audit reports on Push Chain's architecture, modules, and smart contracts.",
+          "twitter-title": "Push Chain Audit Reports",
+          "twitter-description": "Independent security audit reports on Push Chain."
+        },
+        "explainer-section": {
+          "breadcrumbs": {
+            "knowledge-base": "Knowledge Base"
+          },
+          "blocks": {
+            "title": "Push Chain Audit Reports",
+            "sections": {
+              "audit-reports": {
+                "items": {
+                  "intro": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)"
+                }
+              },
+              "reports": {
+                "items": {
+                  "audit-report-1": {
+                    "title": "Blockchain Protocol Security Analysis Report"
+                  },
+                  "audit-report-2": {
+                    "title": "Core Contracts Security Analysis Report"
+                  },
+                  "audit-report-3": {
+                    "title": "EVM Gateway Security Analysis Report"
+                  },
+                  "audit-report-4": {
+                    "title": "SVM Gateway Security Analysis Report"
+                  }
+                }
+              }
+            }
           }
         }
       }
