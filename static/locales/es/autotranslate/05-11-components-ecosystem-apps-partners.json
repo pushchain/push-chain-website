@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "Juega, haz apuestas, transmite y adivina al ganador para ganar el pozo"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "Socio integral de seguridad y cumplimiento blockchain"
+        }
       }
     }
   }

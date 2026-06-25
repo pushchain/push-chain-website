@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "プレイして、賭けをしたり、ストリーミングしたり、勝者を当ててプールに勝つ"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "エンドツーエンドのブロックチェーンセキュリティ＆コンプライアンスパートナー"
+        }
       }
     }
   }

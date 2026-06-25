@@ -38,6 +38,19 @@ export const EcosystemPartnersList: EcosystemApp[] = [
     href: 'https://human.tech/',
     titleColor: 'white',
   },
+  {
+    nameKey: 'components.ecosystem-apps-partners.partners.hacken.name',
+    descriptionKey:
+      'components.ecosystem-apps-partners.partners.hacken.description',
+    icon: '/assets/ecosystem/hacken-icon.png',
+    bgImage: '/assets/ecosystem/hacken-bg.png',
+    bgGradientColor: '#64F1B8',
+    tags: ['Chain Audit Partner'],
+    href: 'https://hacken.io/',
+    titleColor: '#000000',
+    tagsColor: '#000000',
+    descriptionColor: '#000000',
+  },
 ];
 
 export const EcosystemAppsList: EcosystemApp[] = [

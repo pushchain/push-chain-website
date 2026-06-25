@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "Bermain, pasang taruhan, lakukan streaming, dan tebak pemenang untuk memenangkan hadiah"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "Mitra keamanan & kepatuhan blockchain end-to-end"
+        }
       }
     }
   }

@@ -1886,6 +1886,10 @@
         "human-tech": {
           "name": "Human.tech",
           "description": "MPC-TSS e Computação Preservadora de Privacidade."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "Parceiro completo de segurança e conformidade em blockchain"
         }
       }
     },
@@ -1917,14 +1921,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "button-text": "Começar!",
-      "button-title": "Comece já!",
+      "button-text": "Relatório de Auditoria da Push Chain",
+      "button-title": "Relatório de Auditoria da Push Chain",
       "button-aria-label": "Comece agora!. Você pode conferir aqui",
       "image-alt": "Comece Agora!",
       "close-button-title": "Fechar notificação",
       "close-button-aria-label": "Dismiss Push Chain toast notification",
       "container-aria-label": "Notificação Push Chain",
-      "title": ""
+      "title": "",
+      "description": "Auditoria concluída. Mainnet a seguir 👀 Leia o relatório completo da auditoria."
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta está ao vivo!",

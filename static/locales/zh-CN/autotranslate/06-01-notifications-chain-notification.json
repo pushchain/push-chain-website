@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "快来探索普适<universal>应用的力量，在主网<mainnet>上线前的最终赛季获得奖励！",
-      "button-text": "立即开始!",
-      "button-title": "开始体验!",
+      "description": "审计已完成。接下来是主网 👀 阅读完整审计报告。",
+      "button-text": "Push Chain 审计报告",
+      "button-title": "Push Chain 审计报告",
       "button-aria-label": "立即开始！您可以在这里了解更多",
-      "image-alt": "立即开始！"
+      "image-alt": "立即开始！",
+      "title": ""
     }
   }
 }

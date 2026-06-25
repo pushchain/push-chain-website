@@ -135,6 +135,22 @@ export const KBRootResourcesList = {
           },
           customWidth: '70px',
         },
+        {
+          id: 'audit',
+          url: 'audit',
+          valueKey:
+            'pages.knowledge.explainer-section.blocks.sections.resources.items.audit',
+          target: '_self',
+          image: '/static/assets/website/docshub/AuditIcon',
+          imageSrcSet: true,
+          bgColor: 'var(--ifm-color-kb-dark)',
+          bgStylizing: {
+            type: 'sparkle',
+            density: 40,
+            size: 10,
+          },
+          customWidth: '70px',
+        },
         // {
         //   id: 'validators',
         //   url: 'validators',

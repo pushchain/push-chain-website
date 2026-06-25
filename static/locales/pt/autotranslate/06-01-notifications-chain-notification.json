@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Venha explorar o poder dos <app> universais e seja recompensado na última temporada antes da <mainnet>!",
-      "button-text": "Começar!",
-      "button-title": "Comece já!",
+      "description": "Auditoria concluída. Mainnet a seguir 👀 Leia o relatório completo da auditoria.",
+      "button-text": "Relatório de Auditoria da Push Chain",
+      "button-title": "Relatório de Auditoria da Push Chain",
       "button-aria-label": "Comece agora!. Você pode conferir aqui",
-      "image-alt": "Comece Agora!"
+      "image-alt": "Comece Agora!",
+      "title": ""
     }
   }
 }

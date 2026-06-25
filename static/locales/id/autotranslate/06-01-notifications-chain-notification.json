@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Mari jelajahi kekuatan aplikasi universal dan dapatkan hadiah di musim terakhir sebelum mainnet!",
-      "button-text": "Mulai Sekarang!",
-      "button-title": "Mulai Sekarang!",
+      "description": "Audit selesai. Mainnet berikutnya 👀 Baca laporan audit lengkap.",
+      "button-text": "Laporan Audit Push Chain",
+      "button-title": "Laporan Audit Push Chain",
       "button-aria-label": "Mulai Sekarang!. Anda bisa cek di sini",
-      "image-alt": "Mulai!"
+      "image-alt": "Mulai!",
+      "title": ""
     }
   }
 }

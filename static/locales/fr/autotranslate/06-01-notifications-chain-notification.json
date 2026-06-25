@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Venez découvrir la puissance des applications universelles et soyez récompensé(e) lors de la saison finale avant le mainnet !",
-      "button-text": "Commencer !",
-      "button-title": "Commencer !",
+      "description": "Audit terminé. Le mainnet arrive 👀 Lisez le rapport d'audit complet.",
+      "button-text": "Rapport d'audit Push Chain",
+      "button-title": "Rapport d'audit Push Chain",
       "button-aria-label": "Commencer ! Vous pouvez y jeter un coup d'œil ici",
-      "image-alt": "Commencer !"
+      "image-alt": "Commencer !",
+      "title": ""
     }
   }
 }

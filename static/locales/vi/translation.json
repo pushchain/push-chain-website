@@ -1893,6 +1893,10 @@
         "human-tech": {
           "name": "Human.tech",
           "description": "MPC-TSS & Tính toán bảo mật Privace."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "Đối tác bảo mật & tuân thủ blockchain toàn diện"
         }
       }
     },
@@ -1924,14 +1928,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Hãy cùng khám phá sức mạnh của các ứng dụng đa năng và nhận phần thưởng trong mùa cuối cùng trước khi mainnet chính thức ra mắt!",
-      "button-text": "Bắt đầu ngay!",
-      "button-title": "Bắt đầu ngay!",
+      "description": "Kiểm toán hoàn tất. Tiếp theo là mainnet 👀 Đọc báo cáo kiểm toán đầy đủ.",
+      "button-text": "Báo cáo kiểm toán Push Chain",
+      "button-title": "Báo cáo kiểm toán Push Chain",
       "button-aria-label": "Bắt đầu!. Bạn có thể xem nó tại đây",
       "image-alt": "Bắt đầu ngay!",
       "close-button-title": "Đóng thông báo toast",
       "close-button-aria-label": "Đóng thông báo Push Chain",
-      "container-aria-label": "Thông báo Push Chain"
+      "container-aria-label": "Thông báo Push Chain",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta đã mở!",

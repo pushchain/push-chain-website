@@ -1887,6 +1887,10 @@
         "human-tech": {
           "name": "ჰүმან.թექ",
           "description": "एमपीसी-टीएसएस एवं प्राइवसी प्रीसर्विंग कंप्यूट."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "एंड-टू-एंड ब्लॉकचेन सुरक्षा और अनुपालन साझेदार"
         }
       }
     },
@@ -1916,14 +1920,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "अन्वेषण करो और यूनिवर्सल एप्लिकेशंस की शक्ति का आनंद लो, मेननेट से पहले अंतिम सीज़न में पुरस्कार प्राप्त करो!",
-      "button-text": "शुरू करें!",
-      "button-title": "शुरू करें!",
+      "description": "ऑडिट पूरा हुआ। अगला मेननेट 👀 पूरी ऑडिट रिपोर्ट पढ़ें।",
+      "button-text": "Push Chain ऑडिट रिपोर्ट",
+      "button-title": "Push Chain ऑडिट रिपोर्ट",
       "button-aria-label": "शुरू करें!. आप इसे यहां देख सकते हैं",
       "image-alt": "शुरू करें!",
       "close-button-title": "टोस्ट सूचना को बंद करें",
       "close-button-aria-label": " Push Chain टोस्ट सूचना को बन्द करें",
-      "container-aria-label": "पीश चेन टोस्ट नोटिफिकेशन"
+      "container-aria-label": "पीश चेन टोस्ट नोटिफिकेशन",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta अब लाइव है!",

@@ -668,81 +668,83 @@ const ChainKnowledgeBaseIndexList = ({ block, blockIndex }) => {
         overflow: 'visible',
       }}
     >
-      <ItemV
-        maxWidth={isTablet ? '100%' : '300px'}
-        minWidth={isTablet ? '100%' : '300px'}
-        alignItems='flex-start'
-        alignSelf='flex-start'
-        flexShrink={0}
-        margin={!isMobile ? '12px 0 0 0' : ''}
-      >
-        {isTablet && toc?.length > 0 && (
-          <MobileTOCWrapper>
-            <UL>
-              {(showFullMobileTOC ? toc : toc.slice(0, 2)).map(
-                (item, index) => {
+      {toc.length > 0 && (
+        <ItemV
+          maxWidth={isTablet ? '100%' : '300px'}
+          minWidth={isTablet ? '100%' : '300px'}
+          alignItems='flex-start'
+          alignSelf='flex-start'
+          flexShrink={0}
+          margin={!isMobile ? '12px 0 0 0' : ''}
+        >
+          {isTablet && toc?.length > 0 && (
+            <MobileTOCWrapper>
+              <UL>
+                {(showFullMobileTOC ? toc : toc.slice(0, 2)).map(
+                  (item, index) => {
+                    const highestLevel = Math.min(...toc.map((t) => t.level));
+                    return (
+                      <LI key={index}>
+                        <ListItem
+                          href={`#${item.id}`}
+                          level={item.level}
+                          highestLevel={highestLevel}
+                          title={`${t('components.explainer.prepend', '')}${item.text}${t('components.explainer.append', '')}`}
+                        >
+                          {item.text}
+                        </ListItem>
+                      </LI>
+                    );
+                  }
+                )}
+
+                {toc.length > 2 && (
+                  <ToggleIcon
+                    onClick={() => setShowFullMobileTOC(!showFullMobileTOC)}
+                  >
+                    {showFullMobileTOC ? <BsChevronUp /> : <BsChevronDown />}
+                  </ToggleIcon>
+                )}
+              </UL>
+            </MobileTOCWrapper>
+          )}
+
+          {!isTablet && toc.length > 0 && (
+            <DesktopTOC
+              ref={tocRef}
+              background='var(--ifm-color-neutral-1100)'
+              padding='32px'
+              borderRadius='32px'
+              alignItems='flex-start'
+              margin='0'
+            >
+              <UL>
+                {toc?.map((item, index) => {
                   const highestLevel = Math.min(...toc.map((t) => t.level));
+                  const isActive =
+                    activeHeadingId === item.id ||
+                    (index === 0 && activeHeadingId === '' && !isAtEnd);
+
                   return (
                     <LI key={index}>
                       <ListItem
                         href={`#${item.id}`}
                         level={item.level}
                         highestLevel={highestLevel}
-                        title={`${t('components.explainer.prepend', '')}${item.text}${t('components.explainer.append', '')}`}
+                        isActive={isActive}
+                        onClick={handleTOCItemClick}
+                        title={`${t('components.explainer.prepend', 'Navigate to ')}${item.text}${t('components.explainer.append', ' section')}`}
                       >
                         {item.text}
                       </ListItem>
                     </LI>
                   );
-                }
-              )}
-
-              {toc.length > 2 && (
-                <ToggleIcon
-                  onClick={() => setShowFullMobileTOC(!showFullMobileTOC)}
-                >
-                  {showFullMobileTOC ? <BsChevronUp /> : <BsChevronDown />}
-                </ToggleIcon>
-              )}
-            </UL>
-          </MobileTOCWrapper>
-        )}
-
-        {!isTablet && toc.length > 0 && (
-          <DesktopTOC
-            ref={tocRef}
-            background='var(--ifm-color-neutral-1100)'
-            padding='32px'
-            borderRadius='32px'
-            alignItems='flex-start'
-            margin='0'
-          >
-            <UL>
-              {toc?.map((item, index) => {
-                const highestLevel = Math.min(...toc.map((t) => t.level));
-                const isActive =
-                  activeHeadingId === item.id ||
-                  (index === 0 && activeHeadingId === '' && !isAtEnd);
-
-                return (
-                  <LI key={index}>
-                    <ListItem
-                      href={`#${item.id}`}
-                      level={item.level}
-                      highestLevel={highestLevel}
-                      isActive={isActive}
-                      onClick={handleTOCItemClick}
-                      title={`${t('components.explainer.prepend', 'Navigate to ')}${item.text}${t('components.explainer.append', ' section')}`}
-                    >
-                      {item.text}
-                    </ListItem>
-                  </LI>
-                );
-              })}
-            </UL>
-          </DesktopTOC>
-        )}
-      </ItemV>
+                })}
+              </UL>
+            </DesktopTOC>
+          )}
+        </ItemV>
+      )}
 
       <ItemV width={'100%'} flex={1}>
         <TextItem>

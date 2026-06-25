@@ -1884,6 +1884,10 @@
         "human-tech": {
           "name": "Human.tech",
           "description": "Calculs multi-signatures (MPC-TSS) et calculs préservant la confidentialité."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "Partenaire de sécurité et de conformité blockchain de bout en bout"
         }
       }
     },
@@ -1915,14 +1919,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Venez découvrir la puissance des applications universelles et soyez récompensé(e) lors de la saison finale avant le mainnet !",
-      "button-text": "Commencer !",
-      "button-title": "Commencer !",
+      "description": "Audit terminé. Le mainnet arrive 👀 Lisez le rapport d'audit complet.",
+      "button-text": "Rapport d'audit Push Chain",
+      "button-title": "Rapport d'audit Push Chain",
       "button-aria-label": "Commencer ! Vous pouvez y jeter un coup d'œil ici",
       "image-alt": "Commencer !",
       "close-button-title": "Fermer la notification",
       "close-button-aria-label": "Fermer la notification Push Chain",
-      "container-aria-label": "Notification Push Chain"
+      "container-aria-label": "Notification Push Chain",
+      "title": ""
     },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta est maintenant disponible !",

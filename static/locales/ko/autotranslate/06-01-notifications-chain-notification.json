@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "어서 와서 universal 앱의 강력함을 경험하고 mainnet 출시 전 마지막 시즌에 보상을 받으세요!",
-      "button-text": "시작하기!",
-      "button-title": "시작하기!",
+      "description": "감사 완료. 다음은 메인넷입니다 👀 전체 감사 보고서를 읽어보세요.",
+      "button-text": "Push Chain 감사 보고서",
+      "button-title": "Push Chain 감사 보고서",
       "button-aria-label": "시작하기!. 여기서 확인해 보세요",
-      "image-alt": "시작하기!"
+      "image-alt": "시작하기!",
+      "title": ""
     }
   }
 }
