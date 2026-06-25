@@ -17,7 +17,7 @@ showcase: true
 
 Push Chain is a complex system \- it lets users from *any* chain, settled in one place. No bridges, gas in any token. Behind the scenes it means coordinating contracts and infrastructure across several networks at once.
 
-A system with that many moving parts deserves rigorous, independent scrutiny to protect user funds, and launch with confidence. So we partnered with [Hacken](https://hacken.io/), a leading web3 security firm that has audited major ecosystems including NEAR, Solana, MetaMask, BNB Chain, ByBit, Base and TON. Hacken’s smart contract audit combines senior-led code review, structured testing, and real-world exploit analysis – trusted by 1,500+ projects securing over $180B+ in digital assets.
+A system with that many moving parts deserves rigorous, independent scrutiny to protect user funds, and launch with confidence. So we partnered with [Hacken](https://hacken.io/?utm_source=push_chain&utm_medium=article&utm_campaign=audits), a leading web3 security firm that has audited major ecosystems including NEAR, Solana, MetaMask, BNB Chain, ByBit, Base and TON. Hacken’s smart contract audit combines senior-led code review, structured testing, and real-world exploit analysis – trusted by 1,500+ projects securing over $180B+ in digital assets.
 
 Between March and June 2026, Hacken conducted a full security audit program across Push Chain \- covering our ***cross-chain gateway contracts on both EVM chains and Solana, our core contracts on Push Chain, and a protocol-level assessment of the Push Chain node itself.***
 
@@ -27,8 +27,8 @@ Today we're sharing the results.
 
 ## **Key Outcomes**
 
+* Zero critical-severity findings across any audit
 * 3 smart contract and full chain audit was completed across Push Chain infrastructure
-* No critical-severity findings across any audit
 * All High and Medium findings resolved, mitigated, or formally acknowledged
 * Final audit reports delivered by Hacken
 * Dual Defense bug bounty launching soon with rewards of up to **$100,000**
@@ -88,7 +88,7 @@ The full audit reports are linked below \- we encourage you to read them.
 
 *Read the full Hacken audit reports:*
 
-* *[EVM Gateway report](https://github.com/pushchain/push-chain-gateway-contracts/tree/audit-main-fixes/contracts/evm-gateway/audits)*
-* *[SVM Gateway report](https://github.com/pushchain/push-chain-gateway-contracts/tree/audit-main-fixes/contracts/svm-gateway/audits)*
-* *[Core Contracts report](https://github.com/pushchain/push-chain-core-contracts/tree/audit-main-fixes/audits)*
-* *[Push Chain node report](https://github.com/pushchain/push-chain-node/tree/audit-fixes/audits)*
+* *[EVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-evm-gateway-mar2026/)*
+* *[SVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-svm-gateway-mar2026/)*
+* *[Core Contracts report](https://hacken.io/audits/push-chain/sca-push-chain-core-contracts-mar2026/)*
+* *[Push Chain node report ](https://hacken.io/audits/push-chain/l1-push-chain-blockchain-audit-apr2026/)*
