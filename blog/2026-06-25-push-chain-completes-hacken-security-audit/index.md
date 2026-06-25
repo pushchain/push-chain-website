@@ -86,7 +86,7 @@ The completion of this audit program marks an important milestone for Push Chain
 
 The full audit reports are linked below \- we encourage you to read them.
 
-*Read the full Hacken audit reports:*
+*Read the full Hacken audit reports:* https://push.org/knowledge/audit
 
 * *[EVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-evm-gateway-mar2026/)*
 * *[SVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-svm-gateway-mar2026/)*
