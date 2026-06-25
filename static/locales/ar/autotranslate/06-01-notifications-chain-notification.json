@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "تعال واستكشف قوة التطبيقات <transliterate>universel</transliterate> واحصل على مكافآت في الموسم الأخير قبل <transliterate>mainnet</transliterate>!",
-      "button-text": "ابدأ الآن!",
-      "button-title": "ابدأ الآن!",
+      "description": "تم إجراء التدقيق. الشبكة الرئيسية قادمة 👀 اقرأ تقرير التدقيق الكامل.",
+      "button-text": "تقرير تدقيق Push Chain",
+      "button-title": "تقرير تدقيق Push Chain",
       "button-aria-label": "ابدأ الآن!. يمكنك التحقق منه هنا",
-      "image-alt": "ابدأ الآن!"
+      "image-alt": "ابدأ الآن!",
+      "title": ""
     }
   }
 }

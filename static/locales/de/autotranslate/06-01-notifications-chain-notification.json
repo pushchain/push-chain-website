@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Komm und entdecke die Möglichkeiten von universalen Apps und werde in der letzten Saison vor dem Mainnet belohnt!",
-      "button-text": "Loslegen!",
-      "button-title": "Loslegen!",
+      "description": "Audit abgeschlossen. Mainnet kommt als Nächstes 👀 Lies den vollständigen Audit-Bericht.",
+      "button-text": "Push Chain Audit-Bericht",
+      "button-title": "Push Chain Audit-Bericht",
       "button-aria-label": "Loslegen!. Du kannst es dir hier ansehen",
-      "image-alt": "Loslegen!"
+      "image-alt": "Loslegen!",
+      "title": ""
     }
   }
 }

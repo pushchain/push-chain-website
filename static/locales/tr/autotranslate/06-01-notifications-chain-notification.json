@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Gelin, evrensel uygulamaların gücünü keşfedin ve mainnet öncesi son sezonda ödüller kazanın!",
-      "button-text": "Başlayalım!",
-      "button-title": "Hemen Başla!",
+      "description": "Denetim tamamlandı. Sırada mainnet var 👀 Tam denetim raporunu okuyun.",
+      "button-text": "Push Chain Denetim Raporu",
+      "button-title": "Push Chain Denetim Raporu",
       "button-aria-label": "Hemen Başla!. Burada inceleyebilirsiniz",
-      "image-alt": "Başlamaya Hazır Mısınız!"
+      "image-alt": "Başlamaya Hazır Mısınız!",
+      "title": ""
     }
   }
 }

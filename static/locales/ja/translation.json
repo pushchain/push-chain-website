@@ -1893,6 +1893,10 @@
         "human-tech": {
           "name": "ヒューマン・テック",
           "description": "MPC-TSSとプライバシー保護計算。"
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "エンドツーエンドのブロックチェーンセキュリティ＆コンプライアンスパートナー"
         }
       }
     },
@@ -1924,12 +1928,12 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "universalアプリの力を体感し、メインネット前最後のシーズンで報酬を得てみましょう！",
-      "button-text": "さあ、始めましょう！",
-      "button-title": "さあ、始めましょう！",
+      "description": "監査完了。次はメインネット 👀 監査レポート全文を読む。",
+      "button-text": "Push Chain 監査レポート",
+      "button-title": "Push Chain 監査レポート",
       "button-aria-label": "さあ始めましょう！こちらでチェックできます",
       "image-alt": "さあ、始めよう！",
-      "title": "{{-chainName}}で新しいブロックが見つかりました。",
+      "title": "",
       "close-button-title": "トースト通知を閉じる",
       "close-button-aria-label": "Push Chain トースト通知を閉じる",
       "container-aria-label": "プッシュチェーン・トースト通知"

@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "Jouez, pariez, streamez et devinez le vainqueur pour gagner le pool"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "Partenaire de sécurité et de conformité blockchain de bout en bout"
+        }
       }
     }
   }

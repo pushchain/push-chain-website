@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "玩游戏，下注，直播和猜测获胜者以赢得奖池"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "端到端区块链安全与合规合作伙伴"
+        }
       }
     }
   }

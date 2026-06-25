@@ -1890,6 +1890,10 @@
         "human-tech": {
           "name": "هومن.تك",
           "description": "مكافأة MPC-TSS و الحوسبة المستقرة للخصوصية."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "شريك أمن وامتثال البلوكتشين الشامل"
         }
       }
     },
@@ -1921,9 +1925,9 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "حعيا ẋمليار المصة اللادعة ويدمي عمةيالةنودة الطمحيوالاخروع الديجخة حنورمةهجالديخ!",
-      "button-text": "ابدأ الآن!",
-      "button-title": "ابدأ الآن!",
+      "description": "تم إجراء التدقيق. الشبكة الرئيسية قادمة 👀 اقرأ تقرير التدقيق الكامل.",
+      "button-text": "تقرير تدقيق Push Chain",
+      "button-title": "تقرير تدقيق Push Chain",
       "button-aria-label": "ابدأ الآن!. يمكنك التحقق منه هنا",
       "image-alt": "ابدأ الآن!",
       "title": "",

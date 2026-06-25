@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "Oyna, bahis yap, yayını izle ve kazananı tahmin ederek havuzu kazan"
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "Uçtan uca blockchain güvenliği ve uyumluluk ortağı"
+        }
       }
     }
   }

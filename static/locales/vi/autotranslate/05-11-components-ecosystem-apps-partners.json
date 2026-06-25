@@ -9,6 +9,12 @@
         "degen-chess": {
           "description": "Chơi cờ, đặt cược, phát trực tiếp và đoán người chiến thắng để giành giải thưởng."
         }
+      },
+      "partners": {
+        "hacken": {
+          "name": "Hacken",
+          "description": "Đối tác bảo mật & tuân thủ blockchain toàn diện"
+        }
       }
     }
   }

@@ -1890,6 +1890,10 @@
         "human-tech": {
           "name": "人类科技",
           "description": "MPC-TSS与隐私保护计算。"
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "端到端区块链安全与合规合作伙伴"
         }
       }
     },
@@ -1920,12 +1924,12 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "来探索通用应用的力量，并获得主网之前最后一季的奖励吧！",
-      "button-text": "立即开始!",
-      "button-title": "开始体验!",
+      "description": "审计已完成。接下来是主网 👀 阅读完整审计报告。",
+      "button-text": "Push Chain 审计报告",
+      "button-title": "Push Chain 审计报告",
       "button-aria-label": "立即开始！您可以在这里了解更多",
       "image-alt": "立即开始！",
-      "title": "在注出一页贼还",
+      "title": "",
       "close-button-title": "关闭提示消息",
       "close-button-aria-label": "关闭“Push Chain”通知",
       "container-aria-label": "区块链提示通知"

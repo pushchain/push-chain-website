@@ -1746,6 +1746,10 @@
         "human-tech": {
           "name": "Human.tech",
           "description": "Computación MPC-TSS y preservación de la privacidad."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "Socio integral de seguridad y cumplimiento blockchain"
         }
       }
     },
@@ -1913,14 +1917,15 @@
   },
   "notifications": {
     "chain-notification": {
-      "button-text": "¡Comienza ahora!",
-      "button-title": "¡Empezar!",
+      "button-text": "Informe de auditoría de Push Chain",
+      "button-title": "Informe de auditoría de Push Chain",
       "button-aria-label": "¡Comienza ahora!. Puedes echarle un vistazo aquí",
       "image-alt": "¡Comienza!",
       "title": "",
       "close-button-title": "Cerrar notificación",
       "close-button-aria-label": "Descartar notificación toast de Push Chain",
-      "container-aria-label": "Notificación del Push Chain"
+      "container-aria-label": "Notificación del Push Chain",
+      "description": "Auditoría completada. Mainnet a continuación 👀 Lee el informe completo de la auditoría."
     },
     "info-bar": {
       "title": "¡La invitación exclusiva a la Temporada 3 ya está activa!",

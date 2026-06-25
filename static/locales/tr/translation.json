@@ -1890,6 +1890,10 @@
         "human-tech": {
           "name": "Human.tech",
           "description": "MPC-TSS ve Gizlilik Koruyucu Hesaplama."
+        },
+        "hacken": {
+          "name": "Hacken",
+          "description": "Uçtan uca blockchain güvenliği ve uyumluluk ortağı"
         }
       }
     },
@@ -1921,12 +1925,12 @@
   },
   "notifications": {
     "chain-notification": {
-      "description": "Gelin, evrensel uygulamaların gücünü keşfedin ve mainnet öncesi son sezonda ödüller kazanın!",
-      "button-text": "Başlayalım!",
-      "button-title": "Hemen Başla!",
+      "description": "Denetim tamamlandı. Sırada mainnet var 👀 Tam denetim raporunu okuyun.",
+      "button-text": "Push Chain Denetim Raporu",
+      "button-title": "Push Chain Denetim Raporu",
       "button-aria-label": "Hemen Başla!. Burada inceleyebilirsiniz",
       "image-alt": "Başlamaya Hazır Mısınız!",
-      "title": "{chainName} zincirinde işlemler yapılıyor",
+      "title": "",
       "close-button-title": "Toast uyarıyı kapat",
       "close-button-aria-label": "PushChain bildirimlerini görmezden gel",
       "container-aria-label": "Push Chain bildirim tostu"

@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "メインネット開始前の最終シーズンで、ユニバーサル <app> の力を探求して、報酬を手に入れましょう！",
-      "button-text": "さあ、始めましょう！",
-      "button-title": "さあ、始めましょう！",
+      "description": "監査完了。次はメインネット 👀 監査レポート全文を読む。",
+      "button-text": "Push Chain 監査レポート",
+      "button-title": "Push Chain 監査レポート",
       "button-aria-label": "さあ始めましょう！こちらでチェックできます",
-      "image-alt": "さあ、始めよう！"
+      "image-alt": "さあ、始めよう！",
+      "title": ""
     }
   }
 }

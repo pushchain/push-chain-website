@@ -1,11 +1,12 @@
 {
   "notifications": {
     "chain-notification": {
-      "description": "Hãy cùng khám phá sức mạnh của các ứng dụng đa năng và nhận phần thưởng trong mùa cuối cùng trước khi mainnet chính thức ra mắt!",
-      "button-text": "Bắt đầu ngay!",
-      "button-title": "Bắt đầu ngay!",
+      "description": "Kiểm toán hoàn tất. Tiếp theo là mainnet 👀 Đọc báo cáo kiểm toán đầy đủ.",
+      "button-text": "Báo cáo kiểm toán Push Chain",
+      "button-title": "Báo cáo kiểm toán Push Chain",
       "button-aria-label": "Bắt đầu!. Bạn có thể xem nó tại đây",
-      "image-alt": "Bắt đầu ngay!"
+      "image-alt": "Bắt đầu ngay!",
+      "title": ""
     }
   }
 }

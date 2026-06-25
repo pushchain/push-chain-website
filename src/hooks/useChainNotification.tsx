@@ -47,12 +47,12 @@ export const useChainNotification = () => {
           description={t('notifications.chain-notification.description')}
           position='bottom-left'
           onClick={() => {
-            localStorage.setItem('updatedSeasonThreeNotification', 'true');
+            localStorage.setItem('pushHackenNotification', 'true');
             window.open('https://portal.push.org', '_blank');
             toast.dismiss(toastId);
           }}
           onClose={() => {
-            localStorage.setItem('updatedSeasonThreeNotification', 'true');
+            localStorage.setItem('pushHackenNotification', 'true');
             toast.dismiss(toastId);
           }}
           t={t}
@@ -69,7 +69,7 @@ export const useChainNotification = () => {
     // Ensure this code only runs in the browser
     if (typeof window !== 'undefined') {
       const notificationAlreadyShown =
-        localStorage.getItem('updatedSeasonThreeNotification') === 'true';
+        localStorage.getItem('pushHackenNotification') === 'true';
 
       if (!notificationAlreadyShown && !hasMounted) {
         showNotification();
@@ -125,7 +125,7 @@ const NotificationItem: FC<NotificationProps> = ({
           <Image
             src={
               require(
-                `@site/static/assets/website/notifications/seasonThreeNotifs.webp`
+                `@site/static/assets/website/notifications/push-hacken.webp`
               ).default
             }
             alt={t?.('notifications.chain-notification.image-alt')}
@@ -144,6 +144,7 @@ const NotificationItem: FC<NotificationProps> = ({
           hoverBorder='1.5px solid var(--ifm-color-white)'
           fontFamily='DM Sans'
           width='100%'
+          padding={`16px 16px`}
           title={t?.('notifications.chain-notification.button-title')}
           aria-label={t?.('notifications.chain-notification.button-aria-label')}
         >
@@ -157,16 +158,11 @@ const NotificationItem: FC<NotificationProps> = ({
 // Notification Container
 const NotificationContainer = styled.div`
   position: relative;
-  background-color: var(--ifm-color-black);
-  background-image: url('/assets/website/notifications/bottomsectionbg.webp');
-  background-size: cover;
-  background-position: center;
-  border: 1px solid rgba(85, 48, 218, 0.3);
+  background: linear-gradient(180deg, #ed45f3 0%, #00989c 100%);
   border-radius: 24px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  height: 345px;
   width: 275px;
   cursor: pointer;
   box-sizing: border-box;
@@ -253,5 +249,5 @@ const PushLogoBlackContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0px auto;
 `;
