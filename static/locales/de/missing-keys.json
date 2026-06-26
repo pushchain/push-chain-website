@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:37:17.427Z",
+  "lastUpdated": "2026-06-26T09:44:28.839Z",
   "keys": {
     "pages.knowledge.testnet.explainer-section.blocks.sections.for-validators.items.push-validator.title": {
       "value": "Push Validator",
@@ -681,64 +681,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.052Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "Zugriff auf den shared state",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "Greife auf Kontodaten und Zustandsdaten anderer Chains in deinem smart contract zu.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "DEMNÄCHST VERFÜGBAR",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.052Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "AUS KETTEN LESEN",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "Illustration showing Push Chain growing in blocks style animation.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(Roadmap) Shared-State ermöglicht den Zugriff auf Konto- und Zustandsdaten von anderen Chains in Ihrem smart contract.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "Universal\nValidators",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "Lösen Sie Transaktionen auf jeder Blockchain aus, validieren Sie sie und schließen Sie sie mit Ihrem smart contract ab.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "DEMNÄCHST VERFÜGBAR",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "SCHREIBEN SIE IN DIE blockchains",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "Illustration showing tetris blocks in different colors merging and changing.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.052Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(Roadmap) Universal Validators ermöglichen es Benutzern, Transaktionen über jede Chain mithilfe Ihres Smart Contracts auszulösen, zu validieren und abzuschließen.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.052Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -1172,9 +1122,8 @@
       "lastUpdated": "2025-11-14T19:27:06.053Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Entdecken Sie Apps, Partner und Early Adopters, die an der nächsten Ära universeller Erfahrungen auf Push Chains Donut Testnet arbeiten.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-06-07T16:20:41.278Z"
+      "lastUpdated": "2026-06-25T16:51:35.399Z"
     },
     "components.short-support-snippet.qnas.qna1.discord-url-title": {
       "value": "Trete dem Push Chain Discord bei, um Hilfe in Echtzeit zu erhalten.",
@@ -2482,9 +2431,8 @@
       "lastUpdated": "2025-11-14T19:27:06.054Z"
     },
     "pages.lfpush.seo.twitter-title": {
-      "value": "Lasst uns Pushen | Gemeindeinitiative",
       "englishChecksum": "a74bc769352dc913ac90019b078b3fe7",
-      "lastUpdated": "2026-06-07T16:19:43.523Z"
+      "lastUpdated": "2026-06-25T16:48:32.295Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.title": {
       "value": "Lassen Sie uns universelle Apps aufbauen 💪",
@@ -2497,9 +2445,9 @@
       "lastUpdated": "2025-11-14T20:16:25.478Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-bridges-messaging": {
-      "value": "### Wie unterscheidet sich das von Brücken oder Nachrichtenschichten?\n\n**Kurze Antwort**: Push ist der Ort, an dem deine App läuft. Brücken/Nachrichtenschichten bewegen nur Tokens oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.\n\n- **Einziges Zuhause vs viele Klone**\n\tMit Brücken/Nachrichten musst du pro Kette einsetzen und über Nachrichten synchronisieren. Auf Push setzt du dich einmal ein; jeder ruft den gleichen Vertrag und den gemeinsamen Zustand auf.\n\n- **Keine eingepackten Assets oder verpflichtende Überführung**\n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits haben; wir erledigen das Routing und die Gebührenumwandlung unter der Haube.\n\n- **Einheitliche Identität & Verifizierung**\n\tWir akzeptieren Signaturen von jedem Wallet/Chain und ordnen sie dem gleichen Benutzer auf Push zu — nicht verwahrend.\n\n- **Weniger bewegte Teile**\n\tKein Cross-Chain-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoff-Verträge zum Synchronisieren.\n\n- **Brücken führen Komplexität ein. Chain-native Interoperabilität löst sie.**\n\tBrücken erfordern komplexe Ingenieurarbeit, Zeit, Auditkosten und zusätzliche Infrastruktur. Chain-native Interoperabilität funktioniert einfach, da deine App es nativ erbt.\n\n**Ergebnis**: einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar wenn Benutzer es nicht tun.\n\n---",
+      "value": "### Wie ist dies unterschiedlich von Brücken oder Messaging-Layers?\n\n**Kurze Antwort**: Push ist dort, wo sich Ihre App befindet. Brücken/Messaging-Layer bewegen nur Tokens oder Nachrichten zwischen den Kettten, was alles für Benutzer und Entwickler kompliziert.\n\n- **Ein einziges Zuhause gegen viele Kopien**  \n\tBei Brücken/Messaging muss jede Kette einzeln bereitgestellt und über Nachrichten synchronisiert werden. Auf Push deployieren Sie einmal; jeder besucht dieselbe Vertrag und geteilte Zustand.\n\n- **Keine umgewickelten Assets oder verpflichtende Brücke**  \n\tBenutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits halten. Wir übernehmen Routing und Umrechnung der Gebühren unter der Haube.\n\n- **Einfache Identität & -Überprüfung**  \n\tWir akzeptieren Signatur aus beliebigen Wallets/Ketten und attributieren sie zu demselben Benutzer auf Push – non-custodial.\n\n- **Weniger bewegliche Teile**  \n\tKeine komplexen Schnittstellen, keine Gas-Token-Suche, keine Glue-Verträge zur Wartung.\n\n- **Bridges führen Komplexität ein. Kettens-native Interop löst sie**  \n\tBrücken erfordern komplexes Ingenieureffort, Zeit, Auditzahl und zusätzliches Infrastruktur. Kettens-native Interop funktioniert einfach, da Ihre App es automatisch übernimmt.\n\n**Ergebnis**: einfache Apps, eine Quelle der Wahrheit und eine UX, die wie ein einzige Kette aussehen – auch wenn Benutzer nicht darin sind.\n\n---",
       "englishChecksum": "9da0bbfa9d3af2251d391086303c5fa0",
-      "lastUpdated": "2026-06-07T16:19:56.527Z"
+      "lastUpdated": "2026-06-25T16:49:06.723Z"
     },
     "pages.docs.seo.og-description": {
       "value": "Baue und führe Apps auf der universellen Ausführungsschicht aus mit klaren Anleitungen und Beispielen.",
@@ -2507,19 +2455,18 @@
       "lastUpdated": "2026-02-25T23:46:05.681Z"
     },
     "pages.tos.seo.og-description": {
-      "value": "Rechtliche Bestimmungen zur Nutzung unserer Websites, Apps und Entwicklerwerkzeuge.",
       "englishChecksum": "9d071120c8c1e14b03af607cb3059de4",
-      "lastUpdated": "2026-06-07T16:20:39.404Z"
+      "lastUpdated": "2026-06-25T16:51:16.922Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>Kurze Antwort</2>: Push ist der Ort, an dem Ihre App läuft. Brücken/Nachrichten bewegen nur Token oder Nachrichten zwischen Ketten und machen alles für den Benutzer und Entwickler kompliziert.</1><1><2>Einheitlicher Wohnsitz vs viele Klone.</2> Bei Brücken/Nachrichten müssen Sie pro Kette ausführen und über Nachrichten synchronisieren. Auf Push führen Sie einmal aus; jeder trifft auf denselben Vertrag und gemeinsamen Zustand.</1><1><2>Keine eingekapselten Vermögenswerte oder verpflichtende Überbrückung.</2> Benutzer bleiben auf ihrer Heimatkette und zahlen mit dem, was sie bereits besitzen; wir handeln Routing und Gebührsumwandlung unter der Haube ab.</1><1><2>Einheitliche Identität & Verifikation.</2> Wir akzeptieren Signaturen von jeder Wallet/Kette und schreiben sie demselben Benutzer auf Push zu - nicht verwahrend.</1><1><2>Weniger bewegliche Teile.</2> Kein Cross-Ketten-Genehmigungstanz, kein Gas-Token-Jagen, keine Klebstoffverträge zum Halten in Einklang.</1><1><2>Brücken erzeugen Komplexität. Kettennative Interoperabilität löst sie.</2> Brücken benötigen komplexen Ingenieuraufwand, Zeit, Auditkosten und zusätzliche Infrastruktur. Kettennative Interoperabilität funktioniert einfach, da Ihre App diese nativ erbt.</1><1>Ergebnis: Einfachere Apps, eine Wahrheit Quelle und ein UX, der sich wie eine Kette anfühlt – sogar dann nicht, wenn Benutzer es nicht tun.</1>",
+      "value": "<1><2>Kurzer Text</2>: Push ist der Ort, an dem Ihre App läuft. Bridges/Meldungen bewegen nur Token oder Nachrichten zwischen Ketten und machen alles für den Nutzer und Entwickler komplexer.</1><1><2>Ein Zuhause gegen viele Kopien.</2> Mit Bridges/Meldungen müssen Sie pro Kette deployen und via Meldung synchronisieren. Bei Push deployen Sie nur einmal; alle Nutzer greifen auf denselben Vertrag und die gleiche geteilte Zustand zu.</1><1><2>Keine umgewickelten Assets oder verpflichtende Brücken.</2> Die Nutzer bleiben bei ihrem Zuhause-Ketten-Asset und zahlen mit dem, was sie bereits halten; wir übernehmen das Routing und die FEE-Konvertierung unter der Haube.</1><1><2>Eine einheitliche Identität & Überprüfung.</2> Wir akzeptieren Signatur von jedem Wallet/Kette und zuordnen sie auf Push zum gleichen Benutzer – non-custodial.</1><1><2>Fewer bewegliche Teile.</2> Kein Kreuz-Ketten-Annahme-Tanz, kein Gas-Token-Jagd, keine Glue-Verträge, die synchronisiert werden müssen.</1><1><2>Bridges führen Komplexität ein. Ketten-native Interop löst sie.</2> Bridges erfordern komplexes Ingenieurbemühen, Zeit, Audit-Kosten und zusätzliches Infrastructure. Ketten-native Interop funktioniert einfach, weil Ihre App es ursprünglich mit einer einzigen Quelle erbt.</1><1>Ergebnis: einfache Apps, eine einheitliche Wahrheit und eine UX, die sich wie eine Kette anfühlt – auch wenn Nutzer nicht auf derselben Kette sind.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-06-07T16:20:53.897Z"
+      "lastUpdated": "2026-06-25T16:51:58.281Z"
     },
     "components.short-support-snippet.qnas.qna1.question": {
-      "value": "Ich kann meinen Wallet nicht verbinden. Was sollte ich versuchen?",
+      "value": "Ich kann mich nicht mit meinem Wallet verbinden. Was soll ich versuchen?",
       "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
-      "lastUpdated": "2026-06-07T16:20:57.446Z"
+      "lastUpdated": "2026-06-25T16:52:11.331Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "Entwickler — Anleitungen & Tutorials",
@@ -2892,59 +2839,51 @@
       "lastUpdated": "2026-02-25T23:46:27.778Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "Erforsche wichtige Testnetzwerk-Apps",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-06-07T16:20:58.957Z"
+      "lastUpdated": "2026-06-25T16:52:21.787Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-heading": {
-      "value": "### Was verändert?",
       "englishChecksum": "1aa7ea3bdd6597741a7863d77730fe27",
-      "lastUpdated": "2026-06-07T16:19:42.287Z"
+      "lastUpdated": "2026-06-25T16:48:24.124Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Die Push Chain führte einen Token-Neubalancierungsvorschlag durch, um die Gesamtanzahl der PC-Token von mehr als 75T auf etwa 10 Milliarden Tokens zu reduzieren. Diese Aktualisierung behebt eine technische Schuld aus den frühen Tagen des Testnetzes und bereitet die Kette auf eine mainnet-ähnliche Umgebung vor.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-06-07T16:20:01.449Z"
+      "lastUpdated": "2026-06-25T16:49:18.987Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "In den frühen Tagen des Push Chain Testnet gab es keinen Verbrennung- und Mint-Prozess für PC-Token. Dies führte zu extrem niedrigen Preisberechnungen für universelle Transaktionen und ermöglichte einer Handvoll von Token-Inhabern, riesige Token-Vorräte anzuhäufen (die in Billionen gingen). Dies schuf eine unausgewogene Token-Wirtschaft, die vor dem Mainnet-Start korrigiert werden musste.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-06-07T16:20:06.670Z"
+      "lastUpdated": "2026-06-25T16:49:32.362Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
-      "value": "- Alte technische Schulden aus frühen Testnet entfernen",
+      "value": "- Entferne alte technische Schulden von frühen Testnet",
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-06-07T16:20:09.616Z"
+      "lastUpdated": "2026-06-25T16:52:31.898Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Der Vorschlag hat 1,950 der insgesamt 1.178 Mio. Wallets betroffen. Wallets mit einem Guthaben von 1,100 PC-Tokens oder mehr (inklusive solche mit Milliarden) wurden neujustiert und halten nun zwischen 1,100-2,000 PC-Tokens.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-06-07T16:20:14.347Z"
+      "lastUpdated": "2026-06-25T16:50:00.430Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- Oberste 1,950 Wallets neu balanciert auf den Bereich von 1,100 bis 2,000 PC-Tokens",
+      "value": "- Top 1.950 Wallets auf 1.100-2.000 PC-Token-Bereich abgestimmt",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-06-07T16:20:17.758Z"
+      "lastUpdated": "2026-06-25T16:50:11.213Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Benutzer wurden im Voraus nicht über die Änderung informiert, um zu verhindern, dass böswillige Akteure vor dem Neujustieren Token auf andere Portemonnaie verteilen. Diese Sicherheitsmaßnahme garantierte die Integrität des Neujustierens und verhinderte das Manipulieren des Systems.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-06-07T16:20:22.100Z"
+      "lastUpdated": "2026-06-25T16:50:25.550Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Die Umverteilung ist ein zweiphasiger Ansatz. Die Token werden jetzt in eine teamkontrollierte Wallet gesammelt und bald verbrannt.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:20:25.498Z"
+      "lastUpdated": "2026-06-25T16:50:35.970Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Für 99,83 % der Nutzer:** Diese Änderung betrifft Sie nicht. Ihr Wallet-Guthaben bleibt unverändert.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-06-07T16:20:28.806Z"
+      "lastUpdated": "2026-06-25T16:50:45.808Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "**Für betroffene Wallets (Top 1.950):** Wenn Ihre Wallet mehr als 1.100 PC-Token (oder Billionen) hielt, wurde Ihr Guthaben auf den Bereich von 1.100 bis 2.000 PC-Token angepasst.",
+      "value": "**Für betroffene Wallets (Top 1.950):** Wenn Ihr Wallet mindestens 1.100 PC-Tokens (oder Trillionen) gehalten hat, wurde Ihr Gleichgewicht auf die Bereich von 1.100 bis 2.000 PC-Tokens angepasst.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-06-07T16:20:33.152Z"
+      "lastUpdated": "2026-06-25T16:50:52.595Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Deep Dives — Konzepte & Architektur",
@@ -3012,9 +2951,8 @@
       "lastUpdated": "2026-02-26T00:06:21.222Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
-      "value": "1:1 an das USD peggedes stabiles Coin, das flüssige Mittel aus allen Ketten vereint.",
       "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
-      "lastUpdated": "2026-06-07T16:20:36.238Z"
+      "lastUpdated": "2026-06-25T16:51:10.899Z"
     },
     "components.ecosystem-apps-partners.apps.puffles.description": {
       "value": "#1 NFT Launchpad auf Push Chain",
@@ -3840,6 +3778,161 @@
       "value": "Puffels",
       "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
       "lastUpdated": "2026-06-07T16:37:17.419Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Kenntnisbasis",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-06-25T19:40:59.856Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.audit-reports.items.intro": {
+      "value": "![Bild](/assets/Website/Know-how/Audit/Hacken-BG.webp)",
+      "englishChecksum": "a9d948dbb767cebec07bd19262a4d23d",
+      "lastUpdated": "2026-06-25T19:42:15.990Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "<1>Hacken</1>",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-25T19:53:27.839Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "End-to-End-Blockchain-Sicherheit und -Konnektivitätspartner",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-25T19:54:04.509Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-25T19:57:15.265Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "Ihr Krypto, Ihre Regeln: nahtlose Zahlungen auf jedem Chain.",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-25T19:57:22.792Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Spiel, wetten, streamen und erraten Sie den Gewinner, um die Poolgelder zu gewinnen",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-25T19:57:31.152Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Audit abgeschlossen. Mainnet nächstes Mal 👀 Lesen Sie die vollständige Audit-Bericht.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-25T20:01:49.218Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Blockchain-Abrechnungsbericht",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-25T20:05:00.402Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "Loslegen! Sie können es auch hier anschauen",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-25T20:07:52.992Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "Universal\nValidators",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2026-06-26T09:31:11.921Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "Starte, validiere und schließe Transaktionen über jede Chain mit deinem Smart Contract ab.",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-06-26T09:32:05.856Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "AUF CHAINS SCHREIBEN",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2026-06-26T09:32:13.049Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "Illustration zeigt Tetris-Blöcke in verschiedenen Farben, die sich zusammenfügen und verändern.",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2026-06-26T09:32:15.454Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "State-Zugriff",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-06-26T09:33:08.208Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "Greife auf Account- und Zustandsdaten von anderen Chains in deinem Smart Contract zu.",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2026-06-26T09:33:16.411Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Illustration, die Push Chain in einer Blockstil-Animation wachsend zeigt.",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2026-06-26T09:34:06.128Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Das Push Chain Testnet ist live. Tritt unserer Mailing-Liste bei für exklusive Updates.",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-26T09:34:12.880Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.title": {
+      "value": "Audit-Berichte",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:34:19.526Z"
+    },
+    "pages.knowledge.audit.seo.title": {
+      "value": "Audit-Berichte",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:35:09.444Z"
+    },
+    "pages.knowledge.audit.seo.description": {
+      "value": "Entdecke die Audit-Berichte von Push Chain und erfahre, wie unabhängige Sicherheitsprüfungen von führenden Unternehmen die Infrastruktur bestätigen, auf der du aufbaust.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T09:35:16.565Z"
+    },
+    "pages.knowledge.audit.seo.og-title": {
+      "value": "Audit-Berichte",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:36:16.457Z"
+    },
+    "pages.knowledge.audit.seo.og-description": {
+      "value": "Lies unabhängige Sicherheits-Audit-Berichte über die Architektur, Module und Smart Contracts von Push Chain.",
+      "englishChecksum": "05dd3ee77f204c48df1b205d0194a651",
+      "lastUpdated": "2026-06-26T09:36:19.264Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Push Chain Audit-Berichte",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:36:21.236Z"
+    },
+    "pages.knowledge.audit.seo.twitter-description": {
+      "value": "Unabhängige Sicherheitsaudit-Berichte zu Push Chain.",
+      "englishChecksum": "da7f00ff30ab21a4c5a13aa962e869af",
+      "lastUpdated": "2026-06-26T09:40:01.117Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.title": {
+      "value": "Push Chain Audit-Berichte",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:40:08.047Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-1.title": {
+      "value": "Blockchain Protocol Sicherheitsanalyse-Bericht",
+      "englishChecksum": "98ee58f6d57c664ecf23520bf2d50eb5",
+      "lastUpdated": "2026-06-26T09:40:10.777Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-3.title": {
+      "value": "EVM Gateway Sicherheitsanalyse-Bericht",
+      "englishChecksum": "9911a079ea718f57efd7e8b727d1e6c7",
+      "lastUpdated": "2026-06-26T09:43:24.823Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-4.title": {
+      "value": "SVM Gateway Sicherheitsanalysebericht",
+      "englishChecksum": "6509b2a925aff33ea7bbc39878668527",
+      "lastUpdated": "2026-06-26T09:43:27.397Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Push Chain Audit Report",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T09:44:26.866Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "Jetzt loslegen!",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-26T09:44:28.839Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:41:09.886Z",
+  "lastUpdated": "2026-06-26T11:24:29.047Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "База знаний — Руководства, часто задаваемые вопросы и инструкции",
@@ -686,44 +686,9 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.294Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "Доступ к состоянию",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "Получите доступ к данным аккаунта и состоянию с других блокчейнов в вашем смарт-контракте.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "СКОРО",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "ЧТЕНИЕ ДАННЫХ ИЗ БЛОКЧЕЙНОВ",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "Иллюстрация, показывающая рост Push Chain в стиле блочной анимации.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(Дорожная карта) Общий статус позволяет получить доступ к данным учетной записи и состояния других цепей в вашем智能 контракт.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "Универсальные\nВалидаторы",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "Инициируйте, подтверждайте и завершайте транзакции в любой сети, используя ваш смарт-контракт.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
       "lastUpdated": "2025-11-14T19:27:06.294Z"
     },
     "pages.home.chain-features-section.box8.tagText": {
@@ -731,20 +696,10 @@
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.294Z"
     },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "ЗАПИСЬ В БЛОКЧЕЙНЫ",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "Иллюстрация, показывающая тетрис блоки разных цветов, сливающиеся и меняющиеся.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
-    },
     "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(Roadmap) Универсальные валидаторы позволяют пользователям инициировать, проверять и завершать транзакции в любой сети, используя ваш смарт-контракт.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
-      "lastUpdated": "2025-11-14T19:27:06.294Z"
+      "value": "(Роадмэп) Shared State позволяет доступ к учетной записи и состоянию данных с других блокчейна в вашем смарт-контракте.",
+      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
+      "lastUpdated": "2026-06-25T17:30:03.976Z"
     },
     "pages.home.chain-features-section.footer.title": {
       "value": "расширьте пользовательскую базу вашего app, став универсальным",
@@ -1177,8 +1132,9 @@
       "lastUpdated": "2025-11-14T19:27:06.295Z"
     },
     "pages.ecosystem.hero-section.description": {
+      "value": "Открывайте приложения, партнеров и ранних сторонников, которые создают следующую эру универсальных опытов на Пуш Чейне Donut Testnet.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-06-07T16:30:41.244Z"
+      "lastUpdated": "2026-06-25T17:32:38.213Z"
     },
     "components.typeform-support.categories.legal.label": {
       "value": "⚖️ Юридические вопросы и соответствие требованиям",
@@ -1831,9 +1787,9 @@
       "lastUpdated": "2026-02-21T21:35:44.209Z"
     },
     "global.site-description": {
-      "value": "Универсальный Л1 с общим состоянием для приложений.Deploy раз, дойди до пользователей на любой цепи. Используй любой кошелек. Плати любыми токенами. Без переключения сетей.",
+      "value": "Правовая плоскость L1 для всех приложений. Распространение один раз; достичь пользователей на любом канале. Используйте любой вallet. Платите любым токеном. Без переключения сети.",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-06-07T16:29:51.409Z"
+      "lastUpdated": "2026-06-25T17:29:59.431Z"
     },
     "footer.links.faucet-title": {
       "value": "Получить тестовые токены из крана Push Chain",
@@ -1841,24 +1797,23 @@
       "lastUpdated": "2026-02-25T23:58:26.702Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks": {
-      "value": "### Существуют ли риски централизации Push Chain?\n\n**Нет.** Архитектура Push Chain делает акцент на децентрализации.\n\nPush Chain полностью децентрализован и спроектирован, чтобы быть устойчивым и прочным. Любой может запустить узел и участвовать в сети, и получать вознаграждение или штраф через PoS. Кратко:\n\n- Валидаторы и другие участники действуют независимо и получают вознаграждение через PoS.\n- Механизмы управления гарантируют участие сообщества.\n- Каждый участник экосистемы включен в управление в той или иной степени.\n\nЧтобы узнать больше о том, как запустить узел, посмотрите нашу [Базу знаний](/knowledge/) или проверьте наш репозиторий [Validator Node Repo](https://github.com/pushchain/push-chain-node).\n\n---",
       "englishChecksum": "f7e4ee7e1c25d1707799ec218aaf421f",
-      "lastUpdated": "2026-06-07T16:30:02.741Z"
+      "lastUpdated": "2026-06-25T17:30:40.922Z"
     },
     "pages.donutsecret.seo.description": {
-      "value": "Пригласительное закрытое бета-тестирование для разработчиков. Зарегистрируйтесь чтобы получить пасс Доноута и присоединиться к Push Chain Тестнету, выпустить универсальные приложения и разблокировать ранние вознаграждения.",
+      "value": "Invite-only closed бета для разработчиков. Claim ваш Donut pass для доступа к Push Chain Testnet, развертыванию универсальных приложений и получению ранних наград.",
       "englishChecksum": "64b7335ba91ea24daa0a93878be5b067",
-      "lastUpdated": "2026-06-07T16:30:38.871Z"
+      "lastUpdated": "2026-06-25T17:32:24.393Z"
     },
     "components.short-support-snippet.qnas.qna1.question": {
-      "value": "Я не могу подключить свой кошелёк. Что мне предпринять?",
+      "value": "Не могу подключить свой кошелек. Что мне следует попробовать?",
       "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
-      "lastUpdated": "2026-06-07T16:30:44.504Z"
+      "lastUpdated": "2026-06-25T17:32:45.374Z"
     },
     "components.short-support-snippet.qnas.qna1.answer": {
-      "value": "<1><2>Быстрые проверки:</2> обновите страницу, разблокируйте свой кошелек и отключите агрессивные блокировщики рекламы/скриптов для push.org.</1><1><2>Переключение сети не требуется:</2> оставайтесь на своей основной цепочке; Push обрабатывает маршрутизацию в фоновом режиме.</1><1><2>Сбросить разрешения сайта:</2> в своем кошельке, удалите соединение сайта и erneсоединитесь.</1><1>Все еще застряли? Задайте вопрос на <3>Discord</3> или откройте <4>билет поддержки</4>.</1>",
+      "value": "<1><2>Быстрые проверки:</2> обновите страницу, разблокируйте свой вallet, и отключите агрессивные рекламо/скрипт-блокировщики для push.org.</1><1><2>Нет необходимости переключать сеть:</2> оставайтесь на своей домашней цепочке; Push обрабатывает маршрутизацию за-scenes.</1><1><2>Сбросьте разрешения сайта:</2> в своем кошельке, удалите подключение сайта и повторно подключитесь.</1><1>Всё ещё запоролось? Задайте вопрос на <3>Discord</3> или открыть <4>Тикет поддержки</4>.</1>",
       "englishChecksum": "2711fad7973d2c585095969a584bfc01",
-      "lastUpdated": "2026-06-07T16:30:50.695Z"
+      "lastUpdated": "2026-06-25T17:33:15.655Z"
     },
     "components.blog.footer-item.about-description": {
       "value": "Push Chain — первый настоящий универсальный блокчейн, разработанный для устранения фрагментации во всех цепочках. Он позволяет разработчикам развертывать приложения один раз и мгновенно становиться доступными для пользователей на любой цепи, независимо от того, является ли она EVM или не-EVM (включая Ethereum, Solana, Bitcoin и другие). Это полностью совместимая с EVM, Proof of Stake (PoS) цепь, которая позволяет пользователям взаимодействовать с приложениями, развернутыми на Push Chain, так же, как они естественно делают на своей собственной цепи.",
@@ -2051,9 +2006,8 @@
       "lastUpdated": "2026-01-22T19:58:04.664Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v1.title": {
-      "value": "Приложения возможны только с общим состоянием - выпуск 1",
       "englishChecksum": "f4155267906fb77f40ec521aaf9341be",
-      "lastUpdated": "2026-06-07T16:29:54.587Z"
+      "lastUpdated": "2026-06-25T17:30:25.703Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.case-studies.title": {
       "value": "Примеры",
@@ -2194,44 +2148,41 @@
       "lastUpdated": "2026-02-25T23:59:34.123Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.title": {
-      "value": "Обновление цепи - перебалансировка токенов - 10 миллиардов PC токенов",
+      "value": "&#x041c;&#x0430;&#x0439;&#x043d;&#x044f;&#x0432;&#x0438;&#x0447;&#x0438;&#x043b&#x0435;&#x043d;&#x0438;&#x0435;&#x0432-&amp;-&#x0421;&#x0434&#x0435&#x043b;&#x043e;&#x0436;&#x0438;&#x0440;&#x043e;&#x0432;&#x0430;&#x043d;&#x0438;&#x0435;&#x0432;&#x043b;&#x044f-10-&amp;-&#x0411;&#x0438;&#x043b&#x0438&#x043e;&#x043d-PC-&amp;-&#x0422;&#x043e;&#x043a;&#x0435;&#x043d;&#x0430;&#x0439",
       "englishChecksum": "47c4883068fe6b0c96673e994701b191",
-      "lastUpdated": "2026-06-07T16:30:05.914Z"
+      "lastUpdated": "2026-06-25T17:30:52.001Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "В ранние дни тестовой сети Push Chain не было процесса сжигания и эмиссии монет PC. Это привело к чрезвычайно низким расчетам цены для универсальных транзакций и позволило небольшому количеству держателей токенов накопить колоссальные поставки монет (доходящих до триллионов). Это создало неравномерную экономику монет, которую необходимо было скорректировать перед запуском основной сети.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-06-07T16:30:11.536Z"
+      "lastUpdated": "2026-06-25T17:33:27.312Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
-      "value": "- Установить честную и устойчивую экономику токенов",
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-06-07T16:30:15.000Z"
+      "lastUpdated": "2026-06-25T17:33:36.638Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "Этот проект затронул 1,950 кошельков из общего числа 1.178М адресов. Кошельки, содержащие более 1,100 PC токенов (включая те, у которых триллионы), были перебалансированы и теперь содержат от 1,100 до 2,000 PC.",
+      "value": "Проект затронул топ 1,950 кошельков из 1.178M общего числа адресов. Кошельки, держащие 1,100 $PC или более (включая те с триллионами) были сбалансированы для хранения между 1,100-2,000 $PC.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-06-07T16:30:20.578Z"
+      "lastUpdated": "2026-06-25T17:31:27.568Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- Верхние 1,950 кошельков перебалансированы в диапазон 1,100-2,000 PC",
+      "value": "- Топ 1,950 кошельков сбалансировано в диапазон PC-талона от 1,100 до 2,000",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-06-07T16:30:24.151Z"
+      "lastUpdated": "2026-06-25T17:31:33.839Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Пользователей не оповестили заранее, чтобы предотвратить перемещение токенов в другие кошельки злонамеренными акторами до перебалансировки. Это обеспечило безопасность процесса и предотвратило манипулирование системой.",
+      "value": "Пользователи не получали уведомлений заранее, чтобы предотвратить мошеннические действия, при которых токены бы распределялись между другими кошельками до перераспределения. Этот мерой безопасности была обеспечена целостность процесса перераспределения и предотвращалось эксплуатирование системы.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-06-07T16:30:28.848Z"
+      "lastUpdated": "2026-06-25T17:31:47.739Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Ребаланс происходит в два этапа. Токены собираются в кошелек, контролируемый командой, и будут сожжены вскоре.",
+      "value": "Перераспределение является двустадийным подходом. Токены теперь собираются в кошелье, контролируемым командой, и вскоре будет сожжено.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:30:32.247Z"
+      "lastUpdated": "2026-06-25T17:32:03.818Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**Для 99,83% пользователей:** Этот изменение не затрагивает вас. Ваш баланс кошелька остается без изменения.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-06-07T16:30:35.706Z"
+      "lastUpdated": "2026-06-25T17:33:52.855Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "Глубокие исследования — Концепции и Архитектура",
@@ -3088,6 +3039,131 @@
       "value": "#1 NFT Launchpad on keep",
       "englishChecksum": "f343105b0775425c6f1facf855389429",
       "lastUpdated": "2026-06-07T16:41:09.875Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Тестнет Push Chain запущен. Присоединяйтесь к нашей рассылке, чтобы получать эксклюзивные обновления.",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-26T11:13:09.302Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.title": {
+      "value": "Отчеты об аудите",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T11:14:13.603Z"
+    },
+    "pages.knowledge.audit.seo.title": {
+      "value": "Отчёты аудита",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T11:14:20.337Z"
+    },
+    "pages.knowledge.audit.seo.description": {
+      "value": "Изучите аудиторские отчеты Push Chain и узнайте, как независимые проверки безопасности от ведущих компаний подтверждают надежность инфраструктуры, на которой вы строите.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T11:15:12.784Z"
+    },
+    "pages.knowledge.audit.seo.og-title": {
+      "value": "Отчёты об аудите",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T11:15:16.686Z"
+    },
+    "pages.knowledge.audit.seo.og-description": {
+      "value": "Читайте независимые отчеты по аудиту безопасности архитектуры, модулей и смарт-контрактов Push Chain.",
+      "englishChecksum": "05dd3ee77f204c48df1b205d0194a651",
+      "lastUpdated": "2026-06-26T11:16:01.342Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Отчеты аудита Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T11:16:16.532Z"
+    },
+    "pages.knowledge.audit.seo.twitter-description": {
+      "value": "Независимые отчёты аудита безопасности Push Chain.",
+      "englishChecksum": "da7f00ff30ab21a4c5a13aa962e869af",
+      "lastUpdated": "2026-06-26T11:16:21.170Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "База знаний",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-06-26T11:17:12.040Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.title": {
+      "value": "Отчеты аудита Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T11:17:20.415Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.audit-reports.items.intro": {
+      "value": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)",
+      "englishChecksum": "a9d948dbb767cebec07bd19262a4d23d",
+      "lastUpdated": "2026-06-26T11:18:00.972Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-1.title": {
+      "value": "Отчет об анализе безопасности блокчейн-протокола",
+      "englishChecksum": "98ee58f6d57c664ecf23520bf2d50eb5",
+      "lastUpdated": "2026-06-26T11:18:17.733Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-2.title": {
+      "value": "Отчет по анализу безопасности основных контрактов",
+      "englishChecksum": "439440209a5d8f7df58284444e574571",
+      "lastUpdated": "2026-06-26T11:18:25.040Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-3.title": {
+      "value": "Отчет по анализу безопасности EVM Gateway",
+      "englishChecksum": "9911a079ea718f57efd7e8b727d1e6c7",
+      "lastUpdated": "2026-06-26T11:19:16.686Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-4.title": {
+      "value": "Отчет по анализу безопасности SVM Gateway",
+      "englishChecksum": "6509b2a925aff33ea7bbc39878668527",
+      "lastUpdated": "2026-06-26T11:19:21.025Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "Hacken",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-26T11:20:01.473Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "Комплексный партнер по безопасности и соответствию блокчейна",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-26T11:20:19.554Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-26T11:20:24.221Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "Ваша крипта, ваши правила: бесшовные платежи на любой сети.",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-26T11:21:28.403Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Играй, делай ставки, стрими и угадывай победителя, чтобы выиграть пул",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-26T11:22:02.302Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Аудит завершён. Мейннет следующий 👀 Читайте полный отчёт по аудиту.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-26T11:22:22.478Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Отчет об аудите Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T11:22:32.587Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Отчет об аудите Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T11:23:12.808Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "Начать! Вы можете ознакомиться здесь",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-26T11:24:04.553Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "Начать!",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-26T11:24:29.029Z"
     }
   }
 }

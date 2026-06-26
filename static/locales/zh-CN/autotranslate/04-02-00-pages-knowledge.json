@@ -1,9 +1,19 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain 测试网已上线。加入我们的邮件列表以获取独家更新。"
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "title": "未模籿图",
+                  "subtitle": "种图種的语說海得此和定介角为有可到有六firm某涕一化请くは本图一区手机巡用吃.",
+                  "ctatitle": "了解更多"
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:39:25.974Z",
+  "lastUpdated": "2026-06-26T10:54:33.670Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "지식 기반 — 가이드, FAQ 및 방법",
@@ -686,64 +686,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.203Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "상태 접근",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "스마트 컨트랙트에서 다른 체인의 계정 및 상태 데이터를 액세스하세요.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "COMING SOON",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.203Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "체인에서 읽기",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "Push Chain이 블록 스타일 애니메이션으로 성장하는 모습을 보여주는 그림.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(로드맵) 공유 상태를 통해 스마트 컨트랙트에서 다른 체인의 계정 및 상태 데이터에 액세스할 수 있습니다.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "유니버설\n밸리데이터",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "스마트 컨트랙트를 사용하여 어떤 체인에서든 트랜잭션을 트리거, 검증 및 완료하세요.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "COMING SOON",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "체인에 쓰기",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "다양한 색상의 테트리스 블록들이 합쳐지고 변화하는 모습.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.203Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(로드맵) 유니버설 밸리데이터는 사용자가 스마트 컨트랙트를 사용하여 모든 체인에서 트랜잭션을 트리거, 유효성을 확인하고 완료할 수 있도록 합니다.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.203Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -1687,33 +1637,34 @@
       "lastUpdated": "2026-06-07T16:28:53.156Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.problems-solved": {
-      "value": "### Push Chain이 해결하는 문제점\n\n- **단편화**\n  EVM 및 비-EVM 체인 모두를 단일 공유 상태 L1로 통합하여 사용자가 네트워크나 지갑을 이동하지 않고도 모든 체인에서 사용할 수 있습니다.\n\n- **호환성**\n  모든 블록체인의 트랜잭션 지원과 온체인 공유 상태\n\n- **결론적 처리 시간**\n  ~1-2초 내에 원활하고 불변의 네이티브 결말 – 더 이상 기다리거나 재조직하지 않습니다.\n\n- **onboarding & UX**\n  소셜/이메일 로그인, 토큰 및 지갑 지원으로 모든 체인에서 무결점 액세스를 위한 제로 마찰 접근성을 제공합니다.\n\n- **유니버설 앱**\n  한 번 구축, 어디서나 배포 – 어떤 웹3 애플리케이션도 모든 사용자에 대해 모든 체인에서 원활하게 작동합니다.\n\n---",
+      "value": "### Push Chain 이 해결하는 문제는 무엇입니까?\n\n- **분산화**  \n  EVM & non-EVM 체인 아래 하나의 공유 상태 L1에 통합하여 사용자가 네트워크 또는 지갑을 이동하지 않고 사용할 수 있도록 합니다.\n\n- **호환성**  \n  모든 블록체인의 트랜ザクション과 온 칸스 공유 상태 지원.\n\n- **결정성**  \n  ~1-2초 내에 즉시 irreversible native finality – 더 이상 기다리거나 재조정할 필요가 없습니다.\n\n- **인증 및 사용자 경험**  \n  소셜 / 이메일 로그인, GAS-in-any-token & any-wallet 지원을 통해 자원.chain.across 접근이 자유롭습니다.\n\n- **전 世界 앱**  \n  한 번 빌드하고 모든 곳에 배포하세요 — 어떤 사용자가 어떤 chain에서든 웹3 앱이 평온하게 작동합니다.\n\n---",
       "englishChecksum": "a46bbdbb625fb82ad7fe978556186243",
-      "lastUpdated": "2026-06-07T16:27:52.708Z"
+      "lastUpdated": "2026-06-25T17:24:12.175Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.consensus-mechanism": {
-      "value": "### Push Chain은 어떤 합의 메커니즘을 사용합니까?\n\nPush Chain은 **Proof-of-Stake (PoS)** 합의 메커니즘을 사용하며, **CometBFT** 엔진 기반으로 여러 개선 사항이 있습니다:\n\n- **빠른 최종성**: 트랜잭션이 ~1–2초 만에 결정되며, 재조직 없이 예측 가능합니다.\n- **에너지 효율적인**: PoW보다 환경 친화적입니다.\n- **검증자 네트워크**: 체인 보호를 위한 분산 검증자 네트워크가 있습니다.\n- **벌칙 보호**: 경제적激励는 검증자의 정직성을 보장합니다.\n\nCross-chain 상태 관리와 보편적인 트랜잭션 처리를 위한 최적화된 BFT 합의입니다.",
+      "value": "### Push Chain에서 사용하는 합의 메커니즘은 무엇입니까?\n\nPush Chain은 **Proof-of-Stake (PoS)** 합의를 사용하며, **CometBFT** 엔진을 기반으로 구축하고 여러 개선점을 적용하여 다음과 같이 최적화하였습니다:\n\n- **Fast Finality**: 거래는 ~1–2초 내에 결정되며, 예측가능한 최종결과로 (재조정 無)\n- **Energy Efficient**: PoS는 PoW보다 환경 친화적인 것으로 보입니다.\n- **Validator Network**: 분산형 검증인 네트워크로 Chain을 보호합니다\n- **Slashing Protection**: 검증인诚実性를 보장하기 위해 경제적 유인이 존재합니다\n\nCometBFT의 BFT 합의는 universal transaction processing 및 cross-chain state management에 특화된 것으로 최적화하였습니다.\n\n---",
       "englishChecksum": "56335834d49f4774c5aa232632523b92",
-      "lastUpdated": "2026-06-07T16:28:00.292Z"
+      "lastUpdated": "2026-06-25T17:20:19.907Z"
     },
     "pages.contact.hero-section.description": {
-      "value": "파트너십 및 통합, 지출, 미디어 및 강연, 검증자, 법적, 경력 또는 일반적인 질문—여기에서 연락하세요. 기술적인 도움이 필요하거나 보안 관련 정보를 제공하려면 지원 센터를 방문하세요.",
+      "value": "파트너십 및 통합, 자원 지원, 미디어 및 발언, 검증자, 법률, 경력, 또는 일반적인 질문 - 이곳에서 연락해 주세요. 기술 도움말이나 보안 공표를 위한 경우 지원 센터를 방문하세요.",
       "englishChecksum": "a77ba80c097fb24b9c109642038d3abc",
-      "lastUpdated": "2026-06-07T16:28:30.118Z"
+      "lastUpdated": "2026-06-25T17:21:58.873Z"
     },
     "components.short-faq-snippet.qnas.qna3.question": {
+      "value": "블록체인이나 가스 토큰이 달라야 하나요?",
       "englishChecksum": "bad5371a0ad97ea964ac3793698d5ef2",
-      "lastUpdated": "2026-06-07T16:28:38.123Z"
+      "lastUpdated": "2026-06-25T17:22:39.770Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "이것이 브리ッジ나 메시징 레이어와 어떻게 다른가요?",
+      "value": "How is this different from bridges or messaging layers?",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-06-07T16:28:40.240Z"
+      "lastUpdated": "2026-06-25T17:22:52.554Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
-      "value": "<1>테스트 토큰을 요청하려면 <3>페이크</3>를 사용하세요.</1><1><2>메모:</2> 속도 제한이 적용될 수 있고 일부 페이크는 간단한 인증을 요구할 수 있습니다. 페이크가 실패하면 <4>디스코드</4>에서 저희에게 연락해주세요.</1>",
+      "value": "<1>테스트 토큰을 요청하려면 <3>Faucet</3> 사용하세요.</1><1><2>참고 사항:</2> 할당량이 있거나, 간단한 인증이 필요할 수도 있습니다. faucet가 작동하지 않으면 <4>디스코드</4>에서 저희에게 메시지를 보세요.</1>",
       "englishChecksum": "7f83302c6145ea56a16d5722c8fe0257",
-      "lastUpdated": "2026-06-07T16:28:43.917Z"
+      "lastUpdated": "2026-06-25T17:23:06.165Z"
     },
     "pages.knowledge.builders.seo.title": {
       "value": "빌더 — 방법 및 튜토리얼",
@@ -2021,9 +1972,9 @@
       "lastUpdated": "2026-02-08T06:04:56.487Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "가장 빠르게 성장하는 유니버설 앱 에코시스템에 참여하고 사용자 기반을 10배로 늘리고 싶으신가요?",
+      "value": "구고실호 법을주어안해촍 소제요 시리읽주 학네세요?",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-06-07T16:28:36.333Z"
+      "lastUpdated": "2026-06-25T17:25:03.707Z"
     },
     "components.ecosystem-apps-partners.apps.halo.description": {
       "englishChecksum": "e2d4d3fa708b5b228bbcd4ca3b5b9fdf",
@@ -2047,48 +1998,49 @@
       "lastUpdated": "2026-02-25T23:56:24.050Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "테스트넷 앱을 탐구하세요",
+      "value": "<1>테스트넷 앱들을 탐색해 보세요</1>",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-06-07T16:28:48.225Z"
+      "lastUpdated": "2026-06-25T17:23:12.455Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
-      "value": "푸시 체인의 유니버설 지갑",
+      "value": "푸시 체인의 유니버설 월렛",
       "englishChecksum": "258a71a14dbe59778ba2f85609a4e3a5",
-      "lastUpdated": "2026-06-07T16:28:49.793Z"
+      "lastUpdated": "2026-06-25T17:26:48.455Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "푸시 체인이 토큰 재조정 제안을 실행하여 총 PC토큰 공급량을 약 10억 토큰으로 줄입니다. 이 업그레이드는 테스트넷 초창기의 기술 부채를 해결하고 메인넷 환경에 준비합니다.",
+      "value": "촜캸요 번호입력세요 25는야을 2026요 관식지쥴어 번호입력세요 주치석음엜 75T+ 이항세요 머 10개스고의 관식지쥴어 주치석음엜. 번호입력세요 25는야을 2026요 머 관식지쥴어 주치석음엜 번호입력세요 위감야공고의. ",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-06-07T16:28:04.319Z"
+      "lastUpdated": "2026-06-25T17:20:37.254Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
+      "value": "proposal Ġülōkćěn",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-06-07T16:28:09.708Z"
+      "lastUpdated": "2026-06-25T17:24:18.906Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- 최상위 1,950 지갑이 1,100-2,000 PC 토큰 범위로 재조정되었습니다",
+      "value": "- 상위 1,950 개의 지갑이 1,100-2,000 구0석로을재어일의 1,100일문엘을일",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-06-07T16:28:13.024Z"
+      "lastUpdated": "2026-06-25T17:26:12.959Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "사용자들은 균형 조정을 미리 알리지 않는 보안 조치로 토큰을 다른 지갑으로 이전하는 악의적인 행위를 방지했습니다. 이로 인해 균형 조정 과정의égrity가 보장되었으며 시스템에 대한 게임이 방지되었습니다.",
+      "value": "유저들은 업그레이드 전 재배포를 위해 악의적인 행위자들이 다른 지갑에 토큰을 이동시키는 것을 방지하기 위해 사전에 알리지 않았습니다. 이 보안조치가 재균형 처리의完整성을 유지하고 시스템의 게임화를 막았습니다.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-06-07T16:28:16.929Z"
+      "lastUpdated": "2026-06-25T17:24:50.199Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "리밸런스는 두 단계로 구성된 접근법입니다. 토큰들은 팀이 관리하는 지갑에 모이고 곧 불태워질 예정입니다.",
+      "value": "해시변경이란?",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:28:56.692Z"
+      "lastUpdated": "2026-06-25T17:21:33.199Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**99.83%의 사용자:** 이 변경 사항은 당신에게 영향을 주지 않습니다. 지갑 잔고가 변하지 않습니다.",
+      "value": "**99.83%의 사용자 중 99%에게:** 이 변경은 당신에게 영향을 미치지 않습니다. 당신의 지갑 잔액은 변하지 않습니다.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-06-07T16:28:23.454Z"
+      "lastUpdated": "2026-06-25T17:21:40.200Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-top-wallets": {
-      "value": "** Influence on top wallets (top 1,950):** If your wallet had 1,100만 PC 토큰 이상 보유하고 있었다면, 잔액이 1,100-2,000 PC 토큰 범위로 재조정되었습니다.",
+      "value": "**해당 위험한 지갑(상위 1,950개):** 자신의 지갑에 PC 토큰 1,100+ (또는 수천조)를 보유하고 있다면, 1,100-2,000 PC 토큰 범위로 재균형화되었습니다.",
       "englishChecksum": "111fb1e2f37b4215021e4ef7b4c0894c",
-      "lastUpdated": "2026-06-07T16:28:27.662Z"
+      "lastUpdated": "2026-06-25T17:21:54.915Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "심화 분석 — 개념 및 아키텍처",
@@ -2949,6 +2901,101 @@
       "value": "Push Chain 최고의 NFT 런치패드",
       "englishChecksum": "f343105b0775425c6f1facf855389429",
       "lastUpdated": "2026-06-07T16:39:25.967Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Push Chain 테스트넷이 라이브되었습니다. 독점 업데이트를 받아보시려면 메일링 리스트에 가입하세요.",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-26T10:46:31.057Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.subtitle": {
+      "value": "Push Chain의 감사 보고서를 살펴보고, 최고 수준의 보안 전문 기관들이 수행한 독립적인 보안 검토를 통해 여러분이 구축하는 인프라가 어떻게 검증되었는지 확인해보세요.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T10:47:22.294Z"
+    },
+    "pages.knowledge.audit.seo.og-description": {
+      "value": "Push Chain의 아키텍처, 모듈 및 스마트 컨트랙트에 대한 독립적인 보안 감사 보고서를 확인하세요.",
+      "englishChecksum": "05dd3ee77f204c48df1b205d0194a651",
+      "lastUpdated": "2026-06-26T10:47:30.397Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Push Chain 감사 보고서",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T10:47:35.759Z"
+    },
+    "pages.knowledge.audit.seo.twitter-description": {
+      "value": "Push Chain에 대한 독립적인 보안 감사 보고서.",
+      "englishChecksum": "da7f00ff30ab21a4c5a13aa962e869af",
+      "lastUpdated": "2026-06-26T10:48:26.131Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "지식 베이스",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-06-26T10:48:33.716Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.title": {
+      "value": "Push Chain 감사 보고서",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T10:49:20.004Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.audit-reports.items.intro": {
+      "value": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)",
+      "englishChecksum": "a9d948dbb767cebec07bd19262a4d23d",
+      "lastUpdated": "2026-06-26T10:49:31.018Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-4.title": {
+      "value": "SVM 게이트웨이 보안 분석 보고서",
+      "englishChecksum": "6509b2a925aff33ea7bbc39878668527",
+      "lastUpdated": "2026-06-26T10:49:36.768Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "Hacken",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-26T10:50:28.335Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "엔드투엔드 블록체인 보안 및 컴플라이언스 파트너",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-26T10:50:33.407Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-26T10:51:20.782Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "당신의 크립토, 당신의 규칙: 모든 체인에서 원활한 결제를 경험하세요.",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-26T10:51:41.678Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "플레이하고, 베팅하고, 스트리밍하며 승자를 맞춰 상금을 획득하세요",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-26T10:52:25.718Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "감사 완료. 메인넷이 다음이에요 👀 전체 감사 보고서를 읽어보세요.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-26T10:52:45.246Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Push Chain 감사 보고서",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T10:53:22.708Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Push Chain 감사 보고서",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T10:53:31.844Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "시작하기! 여기서 확인해보세요",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-26T10:53:48.654Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "시작하기!",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-26T10:54:33.658Z"
     }
   }
 }

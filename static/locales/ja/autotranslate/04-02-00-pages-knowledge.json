@@ -1,9 +1,18 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain testnet がライブです。最新情報を受け取るために、メーリングリストにご登録ください。"
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "title": "監査レポート",
+                  "ctatitle": "グブロア"
+                }
+              }
+            }
+          }
         }
       }
     }

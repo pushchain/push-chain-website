@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:37:12.979Z",
+  "lastUpdated": "2026-06-26T09:29:15.298Z",
   "keys": {
     "global.site-name": {
       "value": "بلوشكين — Universal L1 for Apps",
@@ -552,9 +552,9 @@
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
-      "value": "### ما الذي يمكن بناؤه على بلوكشين Push Chain؟\n\nيجلب بلوكشين Push Chain قابلية التشغيل البيني السلس ويوحد جميع L1s و L2s و L3s وبالتالي فهو مهيأ ليصبح ملعبًا للابتكار والتشغيل البيني. يمكنك بناء حالات استخدام Web3 الحالية مثل:\n\n![Primary use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nأو يمكنك تحسين Web3 وإنشاء ابتكارات:\n\n![Consumer use cases of Push Chain](/assets/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nأو يمكنك الاطلاع على بعض أمثلة التطبيقات الشائعة للحصول على الإلهام:\n\n![Popular app examples on Push Chain](/assets/website/chain/knowledge/tokenomics/popularapps.webp)",
+      "value": "### ما يمكن أن يتم بناؤه على Push Chain?\n\nPush Chain يتيح التوافق الشامل والمتماسك لجميع L1 وL2 وL3 وبالتالي يصبح مهيأً للانضباط كمحطة للمبتكرين والمتسابقين. يمكنك بناء الاستخدامات الموجودة بالفعل في web3 مثل:\n\n![استخدامات Push Chain الأساسية](/assets/%D9%87%D8%B1%D9%81/website/chain/knowledge/tokenomics/usecasesmain.webp)\n\nأو يمكنك تحسين web3 وإنشاء ابتكارات جديدة:\n\n![استخدامات المستهلكين على Push Chain](/assets/%D9%87%D8%B1%D9%81/website/chain/knowledge/tokenomics/consumerusecases.webp)\n\nأو يمكنك رؤية بعض الأمثلة الشعبية للتطبيقات وتخذلهم من شروق فكرك:\n\n![أمثلة التطبيقات الشائعة على Push Chain](/assets/%D9%87%D8%B1%D9%81/website/chain/knowledge/tokenomics/popularapps.webp)",
       "englishChecksum": "cf90790b81cb182728dc63d612a76a0d",
-      "lastUpdated": "2026-06-07T16:19:36.191Z"
+      "lastUpdated": "2026-06-25T16:44:31.028Z"
     },
     "pages.knowledge.testnet.explainer-section.blocks.sections.donut-overview.items.why-push-exists": {
       "value": "## Why Push Chain Exists\n\nToday's Web3 ecosystem is heavily fragmented and overly complex.\n\nDevelopers redeploy smart contracts across multiple chains, users have to manually bridge tokens or switch wallets, and teams spend months maintaining chain-specific codebases and audits.\n\nEach new chain adds overhead, complexity, cost and friction, which massively slows innovation and adoption.\n\n**Push Chain eliminates this.**",
@@ -1056,64 +1056,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "الوصول إلى الحالة",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "الوصول إلى بيانات الحساب والحالة من سلاسل أخرى في العقد الذكي الخاص بك.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "قريباً",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "قراءة من السلاسل",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "رسم توضيحي يظهر بلوكشين تدريجيًا بأسلوب الرسوم المتحركة.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(خريطة الطريق) الحالة المشتركة تسمح بالوصول إلى بيانات الحساب والحالة من سلاسل أخرى في العقد الذكي الخاص بك.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "Universal\nValidators",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "قم بتشغيل والتحقق وإكمال المعاملات عبر أي سلسلة باستخدام العقد الذكي الخاص بك.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "قريبًا",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "الكتابة إلى الـ بلوكشين",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "تصوير توضيحي يظهر مكعبات تيتريس بألوان مختلفة تندمج وتتغير.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.032Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(خريطة الطريق) يسمحUniversal Validators للمستخدمين بتشغيل والتحقق من إتمام المعاملات عبر أي سلسلة باستخدام العقد الذكي الخاص بك.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.032Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -1547,9 +1497,9 @@
       "lastUpdated": "2025-11-14T19:27:06.033Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "اكتشاف التطبيقات والشركاء والمبكرين الذين يبهرون عصر من الدقة الشاملة على شبكة بلوكشين بيتس شاين.",
+      "value": "اكشف عن التطبيقات والشركاء والمبدعين الأوائل الذين هم في وضع الإبتكار على نطاق واسع على منصة Donut Testnet الخاصة بـ Push Chain.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-06-07T16:18:20.619Z"
+      "lastUpdated": "2026-06-25T16:46:29.814Z"
     },
     "notifications.info-bar.dismiss-button-title": {
       "value": "إغلاق الإعلان",
@@ -1576,9 +1526,9 @@
       "lastUpdated": "2025-11-14T20:15:34.955Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.decentralization-scaling": {
-      "value": "### كيف ستحافظ Chain Push على اللامركزية أثناء التوسع؟\n\nأشارت شبكة Development Net على كيفية توسيعنا باستخدام الشردات الديناميكية وتعديل التنفيذ - مما يزيد من قدرته Without compromising decentralization.\n\nفيشبكة اختبار، قمنا بتبادل تنقلات كاملة مع الشبكة التي تعمل على [CometBFT](https://github.com/cometbft/cometbft)، وهو محرك مقاوم لخطأ البيزنط يستند إلى معركة ودي. وتحقق الشبكة من نهائية أقل من ثانية وثقت قدرتها على معالجة ما يصل إلى [20k تنقلات في دقيقة](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nوهذا هو مجرد بدايةً. سنحافظ على التوسع الإضافي في مراحل لاحقة، ونحنonomous and secure way.\n\n---",
+      "value": "### كيف سوف يحافظ Push Chain على التماثل بين decentralization وامتداد؟\n\nتمت إظناهنا في نوتي لدينا كيف سوف ينمو باستخدام المشاركة الدودية والتنفيذ المتسلسل - مما يعزز من معدل النقل بدون تنكير التماثل.\n\nفي نوتي , تناولنا لما فيه أنتم على الكامل بملائمتها مع الشبكة التي تستخدم في [CometBFT](https://github.com/cometbft/cometbft), محرك مقاوم للمخاطر البايزنطية. أصبح النطاق يتحقق للوصول إلى الثواني الخمس وعلى القدرة على التعامل مع ما يقرب من  [20,000 transaction per minute](https://github.com/push-protocol/push-chain/blob/main/docs/testnet-performance.md).\n\nهذه الدليل العيان هو فقط البداية. عند إطلاقنا للمزيد من التأشيرات المتماثلة في المراحل المستقبلية , نعتقد أن Push Chain يمكن أن يلتزم مع الطلبات العالميّة - بلا تمثيل مركزي.\n\n---",
       "englishChecksum": "e3882a526d7c41194cbc04a7399040cb",
-      "lastUpdated": "2026-06-07T16:17:46.326Z"
+      "lastUpdated": "2026-06-25T16:44:48.969Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.builders.subtitle": {
       "value": "كل شيء تحتاج إليه مع SDK Push Chain للإنشاء الخاص بك التطبيق العالمي",
@@ -1586,19 +1536,19 @@
       "lastUpdated": "2026-02-25T23:43:55.504Z"
     },
     "components.short-faq-snippet.qnas.qna3.answer": {
-      "value": "<1><2>لا.</2></1><1><2>حافظ على المحفظة لديك.</2>استخدم المحفظة التي تمتلكها بالفعل - لا حاجة إلى محفزة أو حساب جديد.</1><1><2>دفع في ما تملك.</2>يمكن دفع الرسوم بما تملّكه على سلسلة الوطن، ننظم التحويل خلف الكواليس.</1><1><2>لا تبديل الشبكة.</2>إبقي على السلسلة الوطن - لا حاجة للتدفق فقط للحصول على رمز غاز.</1><1><2>غير محفوظ في مستودع.</2>توقّع كل فعل - لن يتم احاطة Push بمفاتيحك.</1><1><2>في الخلفية.</2>الشبكة تتسكن الرسوم في $PC تلقائيًا - لا حاجة لإدارة ذلك.</1>",
+      "value": "<1><2>لا.</2></1><1><2>احتفظ بمحفظتك.</2> استخدم المحفظة التي уже تمتلكها - لا حاجة إلى محفظة جديدة أو حساب.</1><1><2>دفع بحيث تملك ما فيه.</2> يمكن دفع الرسوم بالtokens التي تقوم بها على شبكتك المنزلية؛ نتعامل مع التحويل من وراء الكواليس.</1><1><2>لا تغيير الشبكات.</2> البقاء على شبكتك المنزلية - لا حاجة لعبور فقط لتكمن الرسوم.</1><1><2>ليست كاشفاً.</2> تقوم بالتوقيع لكل إجراء - Push أبداً لا يمتلك المفاتيح الخاصة بك.</1><1><2>تحت السطح.</2> تسوية الشبكة الرسوم في $PC تلقائياً - لا حاجة لتعامل مع ذلك من جانبك.</1>",
       "englishChecksum": "861159a0d74b54a38d9321254f6f8043",
-      "lastUpdated": "2026-06-07T16:18:31.569Z"
+      "lastUpdated": "2026-06-25T16:47:04.201Z"
     },
     "components.short-faq-snippet.qnas.qna4.answer": {
-      "value": "<1><2>جواب قصير</2>: هو المكان حيث تنفذ تطبيقك. الجسور/الرسائل مجرد نقل المال أو الرسائل بين سلاسل blockchain، مما ي复杂 كل شيء للمستخدمين وللطقاءل.</1><1><2>منزل واحد ضد كلوناتها.</2> مع الجسور/الرسائل، يتم نشرها لكل سلسلة، وتناسقها عبر رسائل. على Push، يتم النشر مرة واحدة؛ الجميع يسقط نفس العقد والولاء المجمع.</1><1><2>لم يبرج أو مرافق إلزامية.</2> يبقى المستخدمون في المنزل ودراهم ما بحوزتهم; نحن ننظم التوجيه وتحويل الرسوم تحتويء. </1><1><2>معرفات موحدة والتحقق من الهوية.</2> نقبل التوقيعات من أي محفظة/سلسلة ويربطها إلى نفس المستخدم على Push — غير مدعوم.</1><1><2>أجزاء أقل تحرك.</2> لا يرقص مرافق عبر السلسلة، ولا غاز-دراهم للبحث، ولا عقد لاصقة للحفاظ عليها في تناسق.</1><1><2>الجسور ت复杂. تفاعل ناطقة مع سلاسل الحل.</2> الجسور تتطلب مهندسيا مرنود تعقد، وقت، تكاليف استعراضات، وinfrastructure إضافية. التفاعل الناطق مع سلاسل simply just works كما تنفذ التطبيق ورثت بها.</1><1>النتائج: تطبيقات أبسط، مصدر واحد للحقيقة، ومظهر user experience كأنه واحدة السلسلة — حتى عندما لا يكون المستخدمون.</1>",
+      "value": "<1><2>الإجابة القصيرة</2>: Push هي المكان الذي يجرى فيه التطبيق. الجسور/الرسائل فقط تحمل الكريبتوكيرنسيات أو الرسائل بين السلاسل مما يجعل كل شيء أكثر تعقيدًا للمستخدمين والمطورين.</1><1><2>واحدة منزلة مقابل العديد من النسخ المكررة.</2> مع الجسور/الرسائل تُنشر التطبيق لكل سلة وتنسق عبر الرسائل. على Push يُنشر مرة واحدة; جميع المستخدمون يحضرون نفس العقد والمحالة المشتركة.</1><1><2>لا يوجد أسSETS مشتقة أو جسر متطلب.</2> يظل المستخدمين على سلةهم الأصلية ويستخدمون ما يحتفظ به بالفعل; نحن نمسك في الخلفية في عملية الدفع والتكامل.</1><1><2>الوحدات الواحدة لتحديد الهوية.</2> نَقبل التوقيعات من أي خزانة/سلة وندخلها إلى المستخدم واحد على Push — غير الحصصية.</1><1><2>أجزاء قليله.</2> لا هناك حاجة إلى زحمة موافقات بين السلاسل، ولا البحث عن تكاليف الغاز-المنقوعات، ولا العقود المُستعارة للاحتفاظ بسلاسة التوافق.</1><1><2>جسور تحمل التعقيد.</2> يمكن حل التوافق بين السلاسل بشكل وطني من خلال سلة واحدة. يتعين على الجسور على العقلانية العمل مع كل تطبيق منفردًا وعدة مصادر لتحديد الأبعاد، والموارد التي لا يتطلبها هذا. التواصل الإيجابي بين السلاسل هو أكثر بساطة.</1>",
       "englishChecksum": "db02bf29481e064dd0861942251e253c",
-      "lastUpdated": "2026-06-07T16:18:43.013Z"
+      "lastUpdated": "2026-06-25T16:47:28.215Z"
     },
     "components.short-support-snippet.qnas.qna4.answer": {
-      "value": "<1><2>apps' bugs:</2> file a <3>support ticket</3> or post in <4>Discord</4> with reproduction steps.</1><1><2>security issues:</2> email <5>security@push.org</5>. Avoid public disclosure until we confirm a fix.</1>",
+      "value": "<1><2>تطبيق bugs:</2> Submit <3>طلب دعم</3> or post in <4>ديسكورد</4> with steps to reproduce.</1><1><2>المشاكل الأمنية:</2> Email <5>security@push.org</5>. Please avoid public disclosure until we confirm a fix.</1>",
       "englishChecksum": "e3864f1b6ec8ea7832ffe6c8aeb8af09",
-      "lastUpdated": "2026-06-07T16:18:46.448Z"
+      "lastUpdated": "2026-06-25T16:47:39.022Z"
     },
     "pages.knowledge.testnet.seo.description": {
       "value": "دونوت هو شبكة الاختبار العام لكتل الشبيكة. اكتشف كيفية الاتصال، وإنشاء تطبيقات عالمية، واستخدام الصخرة، وسير العملاقة.",
@@ -2045,9 +1995,9 @@
       "lastUpdated": "2026-02-08T06:00:36.842Z"
     },
     "pages.ecosystem.cta.title": {
-      "value": "تريد الانضمام إلى أكبر بيئة تطبيقات عالمية وitchie اعرق المستخدمين؟",
+      "value": "رغبة في الانضمام إلى أكبر نظام تطبيقات عالمي وزيادة استفادتك بعشر مرات؟",
       "englishChecksum": "ed9cee94f66b2ed5c1118bb8725708d4",
-      "lastUpdated": "2026-06-07T16:18:24.760Z"
+      "lastUpdated": "2026-06-25T16:46:41.490Z"
     },
     "components.ecosystem-apps-partners.apps.hodl-fun.description": {
       "value": "إنشاء وإطلاق بنوك ERC-20",
@@ -2078,29 +2028,28 @@
       "lastUpdated": "2026-02-25T23:44:33.333Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "استكشف تطبيقات التست نت الحامة",
+      "value": "استكشف تطبيقات الحوسبة الأساسية للشبكة التجريبية",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-06-07T16:18:47.619Z"
+      "lastUpdated": "2026-06-25T16:47:43.708Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "تم تنفيذPush Chain اقتراح إعادة توازن التوكين للحد من إجمالي توكين PC من 75 مليار+ إلى حوالي 10 مليار توكين. هذا التحديث ي解决 دين تقني من أيام اختبار الشبكة الأولى ويعد الشبكة لبيئة مشابهة للملخص.",
+      "value": "تم تنفيذ مشروع تكافؤ العملات الرقمية من قبل سلسلة Push لخفض عدد إجمالي الكيانات PC من 75T+ كيانات إلى ما يقرب من مليار كيان. وتتعلق هذه التحديثة بالديون التقنية من الأيام الأولى لل thửبة والاستعداد لموئل شبكة متوافقة مع محتوى المئوية.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-06-07T16:17:50.997Z"
+      "lastUpdated": "2026-06-25T16:44:57.586Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-text": {
-      "value": "في مراحل Push Chain early testnet، لم تكن هناك عملية احتراق ومinture للسمات. وهذا أدى إلى حساب أسعار منخفضة جدا لtransactions عالمية وتجويف عدد من token owners. وقد تسبب هذا في اقتصاد منقوص لا توازن قبل إطلاق الشبكة الرئيسية.",
+      "value": "في الأيام الأولى للمنتج Push Chain لم يكن هناك عملية تفتيش وتحفيز للتokens PC. هذا أدى إلى احتساب الأسعار المنخفضة للغاية لtransactions العالمية، وسمح لأقل من handful من الملاك بالجمع بين التوفيرات الضخمة (المداهنة إلى الألياف). وهذا خلق اقتصاد التكنولوجيا الذي يحتاج إلى التصحيح قبل الإطلاق في mainnet.",
       "englishChecksum": "6b963c55a003ca0043dddd3bf0ed217e",
-      "lastUpdated": "2026-06-07T16:17:55.511Z"
+      "lastUpdated": "2026-06-25T16:45:07.697Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
-      "value": "تأثر المقترح على 1,950 محفظة من إجمالي 1.178 مليون عنوان. تم إعادة ترتيبه للمحفظة التي تمتلك 1,100 PC أو أكثر (شاملة تريليونات) بحيث تكون بين 1,100-2,000 PC.",
+      "value": "أثرت المبادرة على 1,950 سلة من إجمالي 1.178م مليون عنوان. تم استكمال السطول الذي يملك 1,100 من عملة PC (بما في ذلك أولئك الذين يعيشون بترليونات) ليحتفظ بين 1,100-2,000 عملة PC.",
       "englishChecksum": "8c14152e04277cae454595ea916cfa88",
-      "lastUpdated": "2026-06-07T16:18:00.198Z"
+      "lastUpdated": "2026-06-25T16:45:18.078Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.change-wallets": {
-      "value": "- أعلى 1,950 معاوين تم تعديلها إلى 1,100-2,000 PC تداول",
       "englishChecksum": "91fa92ebb60a5fce654b585ae3ef09cb",
-      "lastUpdated": "2026-06-07T16:18:03.988Z"
+      "lastUpdated": "2026-06-25T16:45:29.735Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
       "value": "لم يتم إعلام المستخدمين سلفًا للوقاية من تصرفات الممثلين السيئين الذين يمكنهم توزيع التوكينات على عوالم أخرى قبل التوازن. هذا التدبير الأمني ضمانة لإسنان عملية الإعادة التوزيع وتوقيتها.",
@@ -2108,14 +2057,13 @@
       "lastUpdated": "2026-06-07T16:18:08.431Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "تمت إعادة توازن التوكين باثنتي عشرة مرحلة. تم جمع التوكينات إلى حافظة تحت سيطرة الفريق وسيتم حرقها قريبًا.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:18:12.015Z"
+      "lastUpdated": "2026-06-25T16:45:58.813Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
-      "value": "**للأكثرية (99.83%) من المستخدمين:** لا يغير هذا التغيير شيئًا من توازن والتوكين الخاص بك في المحفظة.",
+      "value": "**للمعظم من المستخدمين (99.83%)**: لا يؤثر هذا التغيير عليك.تبقى توازن مدفوعتك عند المستوى السابق.",
       "englishChecksum": "73bc9170b143d2a58000611a232be418",
-      "lastUpdated": "2026-06-07T16:18:15.839Z"
+      "lastUpdated": "2026-06-25T16:46:12.551Z"
     },
     "pages.knowledge.deepdives.seo.title": {
       "value": "د möjفات — مفاهيم و آركيكتور",
@@ -2248,9 +2196,9 @@
       "lastUpdated": "2026-02-26T00:06:15.098Z"
     },
     "pages.docs.grid-section.blocks.sections.resources.items.pusd.subtitle": {
-      "value": "ستبلكوين مقطوعة 1:1 تجمع لياقتنا من美元 من جميع السلسلة",
+      "value": "ناسب مدخلة افوزية ثلتبة احذة قبلة.",
       "englishChecksum": "63a79885ccfd7a52d0f303b89b845cfe",
-      "lastUpdated": "2026-06-07T16:18:18.557Z"
+      "lastUpdated": "2026-06-25T16:46:24.002Z"
     },
     "components.ecosystem-apps-partners.apps.puffles.description": {
       "value": "#1 نافت لاونتش باد على بلوكشين شوف",
@@ -3049,15 +2997,90 @@
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T19:56:43.553Z"
     },
-    "notifications.chain-notification.description": {
-      "value": "حعيا ẋمليار المصة اللادعة ويدمي عمةيالةنودة الطمحيوالاخروع الديجخة حنورمةهجالديخ!",
-      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
-      "lastUpdated": "2026-06-07T16:18:58.492Z"
-    },
     "components.ecosystem-apps-partners.apps.puffles.name": {
       "value": "بوفليس",
       "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
       "lastUpdated": "2026-06-07T16:37:12.972Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "بيص اثقل خيارية حيدية. اثقة بينت أشباء المايل",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-25T17:50:07.180Z"
+    },
+    "pages.knowledge.audit.seo.description": {
+      "value": "تجربة بلوكشين's audit reports واجعلهم كيف تتأكد من independant security reviews من الشركات الأولى أن infrastructure الذي تركز عليه ",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-25T17:50:30.036Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-1.title": {
+      "value": "بلوكشين بروتوكول أمنية تحليل تقرير",
+      "englishChecksum": "98ee58f6d57c664ecf23520bf2d50eb5",
+      "lastUpdated": "2026-06-25T17:52:13.333Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "هكين",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-25T17:52:44.627Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "شريك أمنية وامتثال البلوكشين من الجذور إلى الأطراف",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-25T17:53:39.624Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "بلوكشين تو",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-25T17:53:59.211Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "إشي الأعداد: الحيراب الكريقي داثة",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-25T17:54:23.411Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "لعب، ووضع رهان، بث مباشر ومخاطرة لاختيار الفائز للحصول على المال",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-25T17:55:19.909Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "تقارير فحص قناة PUSH",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-25T17:56:09.640Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "بلوكشين التقرير الاستئنافي",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-25T17:56:33.596Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "ابدأ الآن! يمكنك التحقق منه هنا",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-25T17:56:58.065Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "ابدأ الآن!",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-25T17:57:18.484Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "تمت حماية Push Chain من قبل Audit الأمني ل Hacken. لم يتم العثور على أي مشاكل حرجة.",
+      "englishChecksum": "3366ad5c171b2cc371c544cea6b4505c",
+      "lastUpdated": "2026-06-25T17:57:49.709Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "قراءة المزيد",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-06-25T17:58:05.286Z"
+    },
+    "pages.knowledge.audit.seo.og-title": {
+      "value": "تقارير التدقيق",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:29:10.843Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "تم التدقيق. المينت القادم 👀 اقرأ تقرير التدقيق الكامل.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-26T09:29:15.298Z"
     }
   }
 }

@@ -1,1 +1,22 @@
-{}
+{
+  "pages": {
+    "home": {
+      "chain-features-section": {
+        "box7": {
+          "bodytext": "Trig, valide e complete transações em qualquer cadeia usando seu contrato inteligente.",
+          "tags": {
+            "title1": "ESCREVA PARA CADEIAS"
+          },
+          "imagealt": "Ilustração mostrando blocos de Tetris em diferentes cores se fundindo e mudando.",
+          "imagetitle": "(Rota) Universais de Validação permitem aos usuários disparar, validar e concluir transações em qualquer cadeia usando seu contrato inteligente."
+        },
+        "box8": {
+          "bodytext": "Acesse dados de conta e estado de outras cadeias em seu contrato inteligente.",
+          "tags": {},
+          "imagealt": "Ilustração mostrando o Push Chain crescendo em blocos estilo animação.",
+          "imagetitle": "(Roadmap) Estado compartilhado permite acesso a dados de conta e estado de outras cadeias em sua contracto inteligente."
+        }
+      }
+    }
+  }
+}

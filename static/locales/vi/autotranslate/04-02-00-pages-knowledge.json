@@ -1,9 +1,17 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Mạng thử nghiệm Push Chain đã hoạt động. Tham gia danh sách email của chúng tôi để nhận thông tin cập nhật độc quyền."
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "subtitle": "Khám phá báo cáo kiểm toán của Push Chain và hiểu làm thế nào các đánh giá độc lập từ các công ty hàng đầu đã xác minh cơ sở hạ tầng mà bạn đang xây dựng trên đó."
+                }
+              }
+            }
+          }
         }
       }
     }

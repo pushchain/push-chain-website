@@ -1,12 +1,1 @@
-{
-  "notifications": {
-    "chain-notification": {
-      "description": "Audit terminé. Le mainnet arrive 👀 Lisez le rapport d'audit complet.",
-      "button-text": "Rapport d'audit Push Chain",
-      "button-title": "Rapport d'audit Push Chain",
-      "button-aria-label": "Commencer ! Vous pouvez y jeter un coup d'œil ici",
-      "image-alt": "Commencer !",
-      "title": ""
-    }
-  }
-}
+{}

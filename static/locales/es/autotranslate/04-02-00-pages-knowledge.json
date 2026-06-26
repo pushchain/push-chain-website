@@ -1,9 +1,17 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain testnet está en vivo. Únete a nuestra lista de correo para recibir actualizaciones exclusivas."
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "subtitle": "Explora los informes de auditoría de Push Chain y cómo las revisiones de seguridad independientes de las principales firmas validan la infraestructura en la que estás trabajando."
+                }
+              }
+            }
+          }
         }
       }
     }

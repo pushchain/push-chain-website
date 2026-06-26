@@ -1,12 +1,1 @@
-{
-  "notifications": {
-    "chain-notification": {
-      "description": "Аудит завершён. Дальше мейннет 👀 Прочитайте полный отчёт об аудите.",
-      "button-text": "Отчёт об аудите Push Chain",
-      "button-title": "Отчёт об аудите Push Chain",
-      "button-aria-label": "Начать!. Вы можете ознакомиться с этим здесь",
-      "image-alt": "Начните прямо сейчас!",
-      "title": ""
-    }
-  }
-}
+{}

@@ -1,9 +1,19 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "شبكة Push Chain التجريبية مباشرة. انضم إلى قائمتنا البريدية للحصول على تحديثات حصرية."
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "title": "تقارير المراجعة",
+                  "subtitle": "معرا خودية علية السية من Push Chain قابلة الثيرة الحصذيية.",
+                  "ctatitle": "اقرأ المزيد"
+                }
+              }
+            }
+          }
         }
       }
     }

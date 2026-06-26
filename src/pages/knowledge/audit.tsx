@@ -41,7 +41,7 @@ function AuditPage() {
         <meta
           property='og:image'
           content={useBaseUrl(
-            require('/static/assets/previews/kbdeepdivespreview.png').default,
+            require('/static/assets/previews/kbauditpreview.png').default,
             { absolute: true }
           )}
         />
@@ -61,7 +61,7 @@ function AuditPage() {
         <meta
           name='twitter:image'
           content={useBaseUrl(
-            require('/static/assets/previews/kbdeepdivespreview.png').default,
+            require('/static/assets/previews/kbauditpreview.png').default,
             { absolute: true }
           )}
         />

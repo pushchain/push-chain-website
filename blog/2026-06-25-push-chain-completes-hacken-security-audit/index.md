@@ -1,19 +1,20 @@
 ---
 slug: push-chain-completes-hacken-security-audit
-title: 'Push Chain Completes Hacken Security Audit, $100,000 Bug Bounty Launching Soon'
+title: 'Push Chain Completes Hacken Security Audit, $75,000 Bug Bounty Launching Soon'
 authors: [push]
 image: './cover-image.webp'
 description: "Push Chain is a complex system, it lets users from *any* chain, settled in one place. No bridges, gas in any token."
 text: "Push Chain is a complex system, it lets users from *any* chain, settled in one place. No bridges, gas in any token."
 tags: [Featured, Product, Partnerships]
 showcase: true
+twitterId: "2070174890397999388"
 ---
 
 ![Cover Image of Push Chain Completes Hacken Security Audit](./cover-image.webp)
 
 <!--truncate-->
 
-# **Push Chain Completes Hacken Security Audit, $100,000 Bug Bounty Launching Soon**
+# **Push Chain Completes Hacken Security Audit, $75,000 Bug Bounty Launching Soon**
 
 Push Chain is a complex system \- it lets users from *any* chain, settled in one place. No bridges, gas in any token. Behind the scenes it means coordinating contracts and infrastructure across several networks at once.
 
@@ -31,7 +32,7 @@ Today we're sharing the results.
 * 3 smart contract and full chain audit was completed across Push Chain infrastructure
 * All High and Medium findings resolved, mitigated, or formally acknowledged
 * Final audit reports delivered by Hacken
-* Dual Defense bug bounty launching soon with rewards of up to **$100,000**
+* Dual Defense bug bounty launching soon with rewards of up to **$75,000**
 
 ## **The Security Audit Scope**
 
@@ -68,11 +69,11 @@ The review of the fixes done by the Push Chain team is now complete.
 
 After a final re-verification and extensive review, Hacken has now provided the Final Audit Reports.
 
-## **Beyond the Audit: A Bug Bounty of Up to $100,000**
+## **Beyond the Audit: A Bug Bounty of Up to $75,000**
 
 An audit is a point-in-time review of a specific commit. It is necessary, but it is not sufficient \- and Hacken's own guidance is explicit that no project should rely on an audit alone.
 
-So alongside the completion of this audit program, we'll soon be launching a **Hacken-hosted bug bounty for Push Chain, with rewards of up to $100,000** for qualifying vulnerabilities. This turns security from a milestone into a standing invitation: the more eyes we have on the code as we move toward mainnet, the safer the system becomes for everyone building and transacting on it.
+So alongside the completion of this audit program, we'll soon be launching a **Hacken-hosted bug bounty for Push Chain, with rewards of up to $75,000** for qualifying vulnerabilities. This turns security from a milestone into a standing invitation: the more eyes we have on the code as we move toward mainnet, the safer the system becomes for everyone building and transacting on it.
 
 ## **What's Next**
 
@@ -86,7 +87,7 @@ The completion of this audit program marks an important milestone for Push Chain
 
 The full audit reports are linked below \- we encourage you to read them.
 
-*Read the full Hacken audit reports:* https://push.org/knowledge/audit
+*[Read the full Hacken audit reports](https://push.org/knowledge/audit)*
 
 * *[EVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-evm-gateway-mar2026/)*
 * *[SVM Gateway report](https://hacken.io/audits/push-chain/sca-push-chain-svm-gateway-mar2026/)*

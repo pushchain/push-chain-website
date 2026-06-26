@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:38:03.824Z",
+  "lastUpdated": "2026-06-26T13:46:01.952Z",
   "keys": {
     "pages.knowledge.tokenomics.seo.title": {
       "value": "Tokenomics — $PC Value Accrual & Economics",
@@ -677,9 +677,8 @@
       "lastUpdated": "2025-11-14T19:27:06.092Z"
     },
     "pages.knowledge.report.seo.og-description": {
-      "value": "Suivez les mises à jour du réseau Push Chain, les fenêtres de maintenance et les mises à jour des services. Obtenez des informations sur l'état en temps réel.",
       "englishChecksum": "5ead5d887d908eb7fddff502944542ce",
-      "lastUpdated": "2026-06-07T16:22:33.753Z"
+      "lastUpdated": "2026-06-25T16:57:54.776Z"
     },
     "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
       "value": "Base de connaissances",
@@ -1021,64 +1020,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.093Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "Accès à l'état",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "Accédez aux données de compte et d'état d'autres blockchains directement dans votre smart contract.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "À VENIR",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.093Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "LIRE À PARTIR DES CHAÎNES",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "Illustration montrant Push Chain en pleine croissance dans un style d'animation en blocs.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(Plan) L'état partagé permet l'accès aux données de compte et d'état depuis d'autres chaînes dans votre contrat intelligent.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "Universal\nValidators",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "Déclenchez, validez et complétez des transactions sur n'importe quelle chaîne en utilisant votre smart contract.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "À VENIR",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "ÉCRIRE SUR LES blockchains",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "Illustration montrant des blocs de tétris de différentes couleurs fusionnant et changeant.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.093Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(Roadmap) Les validateurs universels permettent aux utilisateurs de déclencher, valider et compléter des transactions sur n'importe quelle chaîne en utilisant leur smart contract.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.093Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -2367,33 +2316,32 @@
       "lastUpdated": "2025-11-14T19:27:06.093Z"
     },
     "pages.lfpush.seo.title": {
-      "value": "Poussons ensemble — Initiative communautaire",
+      "value": "Laissez-Passer - Initiative Communautaire",
       "englishChecksum": "7c0dbd394ef56ddb6084285538f6a976",
-      "lastUpdated": "2026-06-07T16:22:58.807Z"
+      "lastUpdated": "2026-06-25T16:59:13.005Z"
     },
     "pages.lfpush.seo.twitter-title": {
-      "value": "Allons-y Pousser | Initiative Communautaire",
+      "value": "Laissez-Pousser | Initiative Communautaire",
       "englishChecksum": "a74bc769352dc913ac90019b078b3fe7",
-      "lastUpdated": "2026-06-07T16:23:00.189Z"
+      "lastUpdated": "2026-06-25T16:56:42.172Z"
     },
     "components.short-faq-snippet.qnas.qna3.answer": {
-      "value": "<1><2>Non.</2></1><1><2>Gardez votre portefeuille.</2> Utilisez le portefeuille que vous avez déjà — pas besoin de nouveau portefeuille ou compte.</1><1><2>Payez avec ce que vous avez.</2> Les frais peuvent être payés en utilisant les jetons que vous avez déjà sur votre chaîne d'origine ; nous gérons la conversion en coulisses.</1><1><2>Pas de changement de réseau.</2> Restez sur votre chaîne d'origine — pas besoin de pont pour obtenir un jeton de gaz.</1><1><2>Non custodial.</2> Vous signez chaque action; Push ne détient jamais vos clés.</1><1><2>Dans les coulisses.</2> Le réseau règle automatiquement les frais en $PC — vous n'avez pas besoin de le gérer.</1>",
+      "value": "<1><2>Non.</2></1><1><2>Conservez votre portefeuille.</2> Utilisez le portefeuille que vous avez déjà — pas de nouveau portefeuille ou compte.</1><1><2>Payer avec ce que vous possédez.</2> Les frais peuvent être payés en les jetons que vous avez déjà sur votre chaîne d'accueil ; nous traiterons la conversion en arrière-plan.</1><1><2>Aucun réseau de rechange.</2> Restez sur votre chaîne d'accueil — pas de pontage juste pour obtenir un jeton de gaz.</1><1><2>Não-custodien.</2> Vous signez chaque action ; Push ne garde jamais vos clés.</1><1><2>Sous la capote.</2> Le réseau règle les frais automatiquement dans $PC — vous n'avez pas besoin de les gérer.</1>",
       "englishChecksum": "861159a0d74b54a38d9321254f6f8043",
-      "lastUpdated": "2026-06-07T16:22:13.743Z"
+      "lastUpdated": "2026-06-25T16:57:03.068Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.vs-wormhole": {
-      "value": "### Comment Push Chain se différencie-t-il de Wormhole ?\n\n**Wormhole :** \n- **Protocole pont**: Principalement axé sur le pontage de jetons et NFT \n- **Actifs enveloppés**: Crée des versions enveloppées des jetons sur différentes chaînes \n- **Réseau Gardien**: S'appuie sur l'ensemble de validateurs pour vérifier les messages inter-chaînes \n- **Processus en plusieurs étapes**: Les utilisateurs doivent pontasser les actifs avant d'utiliser les apps \n\n**Push Chain :**\n- **Exécution universelle**: Les utilisateurs interagissent directement sans pontage \n- **Actifs natifs**: Pas besoin de jetons enveloppés, utilisez les actifs originaux \n- **Vérification directe**: Vérification de signature native depuis n'importe quelle chaîne\n- **Transaction unique**: Les utilisateurs interagissent en une seule étape, pas de pontage requis\n\nPush Chain élimine le besoin de pontage d'actifs tandis que Wormhole en nécessite pour les interactions inter-chaînes.\n\n---",
       "englishChecksum": "b42c978c22c50f8c67751d98728c12ce",
-      "lastUpdated": "2026-06-07T16:22:23.068Z"
+      "lastUpdated": "2026-06-25T16:57:28.010Z"
     },
     "pages.knowledge.faq.explainer-section.blocks.sections.faq-overview.items.centralization-risks": {
       "englishChecksum": "f7e4ee7e1c25d1707799ec218aaf421f",
-      "lastUpdated": "2026-06-07T16:22:31.312Z"
+      "lastUpdated": "2026-06-25T16:57:44.926Z"
     },
     "components.short-support-snippet.qnas.qna1.question": {
-      "value": "Je ne peux pas connecter mon portefeuille. Que devrais-je essayer ?",
+      "value": "Je ne peux pas connecter mon portefeuille. Qu'est-ce que je dois essayer ?",
       "englishChecksum": "d830538471ae5e43fb4ba375b6e6eec3",
-      "lastUpdated": "2026-06-07T16:22:57.452Z"
+      "lastUpdated": "2026-06-25T16:59:06.620Z"
     },
     "pages.knowledge.tokenomics.seo.twitter-title": {
       "value": "Push Chain Tokenomics | Économie du Token",
@@ -2585,7 +2533,7 @@
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-tech-debt": {
       "englishChecksum": "9d6ba367ae5d250715420958d40a1412",
-      "lastUpdated": "2026-06-07T16:22:37.084Z"
+      "lastUpdated": "2026-06-25T17:00:23.682Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.what-changed-text": {
       "value": "La proposition a affecté les 1 950 portefeuilles les plus importants sur un total de 1,178 millions d'adresses. Les portefeuilles contenant 1 100 PC jetons ou plus (y compris ceux avec des milliards) ont été rééquilibrés pour contenir entre 1 100 et 2 000 PC jetons.",
@@ -2593,14 +2541,12 @@
       "lastUpdated": "2026-06-07T16:22:41.791Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Les utilisateurs n'avaient pas été informés à l'avance pour empêcher les acteurs malveillants de redistribuer des jetons vers d'autres portefeuilles avant le rééquilibrage. Cette mesure de sécurité a garantit l'intégrité du processus de rééquilibrage et a empêché la manipulation du système.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-06-07T16:22:46.316Z"
+      "lastUpdated": "2026-06-25T16:58:35.041Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
-      "value": "Le rééquilibrage est une approche en deux phases. Les jetons sont désormais collectés dans un portefeuille contrôlé par l'équipe et seront bientôt détruits.",
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:22:49.721Z"
+      "lastUpdated": "2026-06-25T17:01:06.811Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
       "value": "**Pour 99,83% des utilisateurs :** Ce changement ne vous affecte pas. Votre solde de portefeuille reste inchangé.",
@@ -3075,6 +3021,151 @@
       "value": "#1 plateforme NFT de lancement sur Push Chain",
       "englishChecksum": "f343105b0775425c6f1facf855389429",
       "lastUpdated": "2026-06-07T16:38:03.816Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Le testnet Push Chain est en ligne. Rejoignez notre liste de diffusion pour des mises à jour exclusives.",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-26T09:47:25.139Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.title": {
+      "value": "Rapports d'audit",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:47:33.514Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.subtitle": {
+      "value": "Consultez les rapports d'audit de Push Chain et découvrez comment les vérifications de sécurité indépendantes des meilleures entreprises valident l'infrastructure sur laquelle vous construisez.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T09:47:36.302Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.ctatitle": {
+      "value": "En savoir plus",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-06-26T09:48:29.141Z"
+    },
+    "pages.knowledge.audit.seo.title": {
+      "value": "Rapports d'audit",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:48:36.582Z"
+    },
+    "pages.knowledge.audit.seo.description": {
+      "value": "Découvrez les rapports d'audit de Push Chain et voyez comment les analyses de sécurité indépendantes des meilleures entreprises valident l'infrastructure sur laquelle vous construisez.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T09:49:25.373Z"
+    },
+    "pages.knowledge.audit.seo.og-title": {
+      "value": "Rapports d'Audit",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:49:33.233Z"
+    },
+    "pages.knowledge.audit.seo.og-description": {
+      "value": "Consultez les rapports d'audit de sécurité indépendants sur l'architecture, les modules et les smart contracts de Push Chain.",
+      "englishChecksum": "05dd3ee77f204c48df1b205d0194a651",
+      "lastUpdated": "2026-06-26T09:49:38.973Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Rapports d'audit Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:50:28.801Z"
+    },
+    "pages.knowledge.audit.seo.twitter-description": {
+      "value": "Rapports d'audit de sécurité indépendants sur Push Chain.",
+      "englishChecksum": "da7f00ff30ab21a4c5a13aa962e869af",
+      "lastUpdated": "2026-06-26T09:50:36.501Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Base de connaissances",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-06-26T09:51:24.751Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.title": {
+      "value": "Rapports d'Audit Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:51:34.324Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.audit-reports.items.intro": {
+      "value": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)",
+      "englishChecksum": "a9d948dbb767cebec07bd19262a4d23d",
+      "lastUpdated": "2026-06-26T09:51:39.289Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-1.title": {
+      "value": "Rapport d'analyse de sécurité du Protocol Blockchain",
+      "englishChecksum": "98ee58f6d57c664ecf23520bf2d50eb5",
+      "lastUpdated": "2026-06-26T09:52:29.766Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-2.title": {
+      "value": "Rapport d'analyse de sécurité des smart contracts principaux",
+      "englishChecksum": "439440209a5d8f7df58284444e574571",
+      "lastUpdated": "2026-06-26T09:52:38.678Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-3.title": {
+      "value": "Rapport d'analyse de sécurité EVM Gateway",
+      "englishChecksum": "9911a079ea718f57efd7e8b727d1e6c7",
+      "lastUpdated": "2026-06-26T09:53:25.099Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-4.title": {
+      "value": "Rapport d'analyse de sécurité SVM Gateway",
+      "englishChecksum": "6509b2a925aff33ea7bbc39878668527",
+      "lastUpdated": "2026-06-26T09:53:34.033Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "Hacken",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-26T09:53:41.299Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "Partenaire de sécurité et conformité blockchain de bout en bout",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-26T09:54:52.340Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-26T09:54:54.774Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "Votre crypto, vos règles : paiements fluides sur toutes les chaînes.",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-26T09:57:13.583Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Joue, parie, diffuse en direct et devine le gagnant pour remporter la cagnotte",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-26T09:57:16.099Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Audit terminé. Mainnet ensuite 👀 Lisez le rapport d'audit complet.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-26T09:58:48.731Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Rapport d'audit Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T09:58:50.493Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Rapport d'audit Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T09:58:56.132Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "Commencer ! Vous pouvez le découvrir ici",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-26T10:00:22.846Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "Commencez !",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-26T10:00:25.083Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "En savoir plus",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-06-26T10:01:44.620Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "Déclenchez, validez et finalisez des transactions sur n'importe quelle chaîne en utilisant votre smart contract.",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-06-26T13:46:01.952Z"
     }
   }
 }

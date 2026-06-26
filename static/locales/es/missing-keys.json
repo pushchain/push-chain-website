@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-07T16:37:52.993Z",
+  "lastUpdated": "2026-06-26T09:25:00.866Z",
   "keys": {
     "footer.email-section.title-secondary": {
       "value": "¡noticias y actualizaciones!",
@@ -1278,7 +1278,7 @@
     },
     "pages.knowledge.report.seo.twitter-description": {
       "englishChecksum": "36afc09b7ddb14ee5fc0994e3a0da380",
-      "lastUpdated": "2026-06-07T16:21:10.217Z"
+      "lastUpdated": "2026-06-25T16:55:58.346Z"
     },
     "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
       "value": "Base de conocimiento",
@@ -1755,64 +1755,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.072Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "Acceso al Estado",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "Accede a datos de cuenta y de estado de otras cadenas directamente desde tu smart contract.",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "PRÓXIMAMENTE",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.072Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "LEER DE LAS CADENAS",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "Ilustración que muestra a Push Chain creciendo en un estilo de animación de bloques.",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(Roadmap) shared-state permite acceder a datos de cuenta y estado de otras cadenas en tu smart contract.",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "Universal\nValidators",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "Activa, valida y completa transacciones en cualquier cadena usando tu smart contract.",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "PRÓXIMAMENTE",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "ESCRIBE EN BLOOCKCHEINS",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "Ilustración que muestra bloques de Tetris en diferentes colores uniéndose y cambiando.",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.072Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(Roadmap) Validadores Universales permiten a los usuarios activar, validar y completar transacciones en cualquier cadena utilizando tu smart contract.",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.072Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -2591,9 +2541,8 @@
       "lastUpdated": "2025-11-14T19:27:06.073Z"
     },
     "pages.ecosystem.hero-section.description": {
-      "value": "Descubre aplicaciones, socios y pioneros construyendo la siguiente era de experiencias universales en la red Push Chain's Donut Testnet.",
       "englishChecksum": "94f3912f6a18a9736abb88b2414682c7",
-      "lastUpdated": "2026-06-07T16:21:32.760Z"
+      "lastUpdated": "2026-06-25T16:54:39.165Z"
     },
     "components.mailing-signup.title": {
       "value": "No te pierdas ninguna novedad",
@@ -4286,19 +4235,17 @@
       "lastUpdated": "2026-01-16T17:06:06.479Z"
     },
     "pages.cult.seo.og-description": {
-      "value": "Un grupo exclusivo de 50 creadores que ganan tokens PC por un bounty de 20M y promueven el uso real e incredulidad en Push Chain.",
+      "value": "Una orden de invitación solo con 50 creadores que ganan desde una bonificación de tokens PC por valor de 20M al impulsar el uso real y la creencia en Push Chain.",
       "englishChecksum": "45df3c59f89f6db4545500d75622968e",
-      "lastUpdated": "2026-06-07T16:21:30.872Z"
+      "lastUpdated": "2026-06-25T16:54:30.329Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v1.title": {
-      "value": "Aplicaciones Posibles Solo con Shared State - Vol. 1",
       "englishChecksum": "f4155267906fb77f40ec521aaf9341be",
-      "lastUpdated": "2026-06-07T16:21:58.643Z"
+      "lastUpdated": "2026-06-25T16:52:46.040Z"
     },
     "pages.knowledge.builders.explainer-section.blocks.sections.universal-apps.items.apps-only-possible-with-shared-state-v2.title": {
-      "value": "Sólo es posible con estado compartido - Vol. 2",
       "englishChecksum": "a47b06e49f50c64cc10a1035fc814bfe",
-      "lastUpdated": "2026-06-07T16:21:08.367Z"
+      "lastUpdated": "2026-06-25T16:55:10.547Z"
     },
     "pages.knowledge.tokenomics.explainer-section.blocks.sections.tokenomics-overview.items.use-cases": {
       "englishChecksum": "cf90790b81cb182728dc63d612a76a0d",
@@ -4365,31 +4312,28 @@
       "lastUpdated": "2026-02-25T23:47:25.882Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "Explorar Aplicaciones de Prueba de Red Esenciales",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-06-07T16:21:34.076Z"
+      "lastUpdated": "2026-06-25T16:54:50.082Z"
     },
     "components.ecosystem-essentials.apps.push-bridge.description": {
       "englishChecksum": "39d0dc5422c403ceca9d6d679db7f8f7",
-      "lastUpdated": "2026-06-07T16:21:35.688Z"
+      "lastUpdated": "2026-06-25T16:55:51.513Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.overview-text": {
-      "value": "Se ejecutó una propuesta de reequilibrado de tokens en Push Chain para reducir la oferta total de tokens PC de más de 75T a aproximadamente 10 mil millones de tokens. Esta actualización aborda una deuda técnica de los primeros días de la red de prueba y prepara la cadena para un entorno similar al de la red principal.",
       "englishChecksum": "a7c81996952eb346cf22795ce83ce25c",
-      "lastUpdated": "2026-06-07T16:21:14.787Z"
+      "lastUpdated": "2026-06-25T16:53:26.872Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.reason-token-economy": {
       "englishChecksum": "a9d0dfd880d8117806a3149d8a042aad",
-      "lastUpdated": "2026-06-07T16:21:17.842Z"
+      "lastUpdated": "2026-06-25T16:53:36.078Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-not-informed-text": {
-      "value": "Los usuarios no recibieron una notificación previa para evitar que actores malintencionados redistribuyeran tokens a otras billeteras antes del reequilibrado. Esta medida de seguridad aseguró la integridad del proceso de reequilibrado y evitó el uso fraudulento del sistema.",
       "englishChecksum": "0969bae9cf2ff1b89133fb3a6bbef811",
-      "lastUpdated": "2026-06-07T16:21:21.849Z"
+      "lastUpdated": "2026-06-25T16:53:48.288Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.why-52t-text": {
       "englishChecksum": "4b54a097f58e9e2e45001365ac2439bc",
-      "lastUpdated": "2026-06-07T16:21:25.706Z"
+      "lastUpdated": "2026-06-25T16:54:03.428Z"
     },
     "pages.knowledge.report.explainer-section.blocks.sections.chain-upgrade-token-rebalance-25-feb-2026.items.affect-majority": {
       "value": "**Para el 99.83% de los usuarios:** Este cambio no afecta a tu wallet balance.",
@@ -4780,10 +4724,6 @@
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T20:22:01.519Z"
     },
-    "notifications.chain-notification.description": {
-      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
-      "lastUpdated": "2026-06-07T16:21:37.770Z"
-    },
     "components.ecosystem-apps-partners.apps.puffles.name": {
       "value": "Puffles",
       "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
@@ -4793,6 +4733,156 @@
       "value": "#1 NFT Launchpad en Push Chain",
       "englishChecksum": "f343105b0775425c6f1facf855389429",
       "lastUpdated": "2026-06-07T16:37:52.981Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "La testnet de Push Chain está activa. Únete a nuestra lista de correo para recibir actualizaciones exclusivas.",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-06-26T09:11:37.782Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.title": {
+      "value": "Informes de Auditoría",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:11:40.576Z"
+    },
+    "pages.knowledge.explainer-section.blocks.sections.resources.items.audit.ctatitle": {
+      "value": "Leer más",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-06-26T09:12:34.714Z"
+    },
+    "pages.knowledge.audit.seo.title": {
+      "value": "Informes de Auditoría",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:12:39.950Z"
+    },
+    "pages.knowledge.audit.seo.description": {
+      "value": "Explora los informes de auditoría de Push Chain y descubre cómo las revisiones de seguridad independientes de las mejores firmas validan la infraestructura sobre la que estás construyendo.",
+      "englishChecksum": "aef40f52667931b88baf27d079816b5a",
+      "lastUpdated": "2026-06-26T09:13:35.059Z"
+    },
+    "pages.knowledge.audit.seo.og-title": {
+      "value": "Informes de Auditoría",
+      "englishChecksum": "af610434d9371e42d818b53c44d2f0a6",
+      "lastUpdated": "2026-06-26T09:13:37.008Z"
+    },
+    "pages.knowledge.audit.seo.og-description": {
+      "value": "Lee informes independientes de auditoría de seguridad sobre la arquitectura, módulos y smart contracts de Push Chain.",
+      "englishChecksum": "05dd3ee77f204c48df1b205d0194a651",
+      "lastUpdated": "2026-06-26T09:13:42.438Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Reportes de Auditoría de Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:14:32.095Z"
+    },
+    "pages.knowledge.audit.seo.twitter-description": {
+      "value": "Informes independientes de auditoría de seguridad sobre Push Chain.",
+      "englishChecksum": "da7f00ff30ab21a4c5a13aa962e869af",
+      "lastUpdated": "2026-06-26T09:14:40.644Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "Base de conocimientos",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-06-26T09:15:31.916Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.title": {
+      "value": "Informes de Auditoría de Push Chain",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-06-26T09:15:37.288Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.audit-reports.items.intro": {
+      "value": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)",
+      "englishChecksum": "a9d948dbb767cebec07bd19262a4d23d",
+      "lastUpdated": "2026-06-26T09:15:42.930Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-1.title": {
+      "value": "Informe de Análisis de Seguridad del Protocol Blockchain",
+      "englishChecksum": "98ee58f6d57c664ecf23520bf2d50eb5",
+      "lastUpdated": "2026-06-26T09:16:35.057Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-2.title": {
+      "value": "Informe de Análisis de Seguridad de Contratos Principales",
+      "englishChecksum": "439440209a5d8f7df58284444e574571",
+      "lastUpdated": "2026-06-26T09:16:40.262Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-3.title": {
+      "value": "Informe de Análisis de Seguridad del EVM Gateway",
+      "englishChecksum": "9911a079ea718f57efd7e8b727d1e6c7",
+      "lastUpdated": "2026-06-26T09:17:34.012Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-4.title": {
+      "value": "Reporte de Análisis de Seguridad de SVM Gateway",
+      "englishChecksum": "6509b2a925aff33ea7bbc39878668527",
+      "lastUpdated": "2026-06-26T09:17:38.678Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "Hacken",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-06-26T09:17:42.538Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "Partner integral de seguridad y cumplimiento en Blockchain",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-06-26T09:18:36.829Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-06-26T09:18:40.836Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "Tu crypto, tus reglas: pagos fluidos en cada chain.",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-06-26T09:19:40.336Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "Juega, haz apuestas, transmite y adivina el ganador para ganar el premio",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-06-26T09:19:42.604Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Reporte de Auditoría de Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T09:20:43.715Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Reporte de Auditoría de Push Chain",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-06-26T09:20:45.520Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "¡Empieza ahora!. Puedes revisarlo aquí",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-06-26T09:21:43.247Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "¡Comienza ahora!",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-06-26T09:21:46.393Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain pasa la auditoría de seguridad de Hacken. Cero problemas críticos encontrados.",
+      "englishChecksum": "3366ad5c171b2cc371c544cea6b4505c",
+      "lastUpdated": "2026-06-26T09:21:49.745Z"
+    },
+    "notifications.info-bar.learn-more-text": {
+      "value": "Leer más",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-06-26T09:22:46.986Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "Activa, valida y completa transactions a través de cualquier chain usando tu smart contract.",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-06-26T09:23:59.999Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "LEER DESDE CHAINS",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2026-06-26T09:24:02.121Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Auditoría completada. Mainnet a continuación 👀 Lee el informe de auditoría completo.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-06-26T09:25:00.866Z"
     }
   }
 }

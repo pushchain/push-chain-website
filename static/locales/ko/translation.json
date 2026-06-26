@@ -211,7 +211,9 @@
       "reddit": "리드디트",
       "reddit-title": "Push 체인 subreddit에 참여하세요",
       "telegram": "Telegram",
-      "telegram-title": "Push 체인 테레그램에 참여하세요"
+      "telegram-title": "Push 체인 테레그램에 참여하세요",
+      "knowledge-base-title": "Push Chain 지식 기반",
+      "support": "지원"
     },
     "email-section": {
       "title": "Push 체인에 대해 최신 정보를 받아보세요",
@@ -268,27 +270,301 @@
     }
   },
   "pages": {
-    "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain testnet이 시작되었습니다. 독점적인 업데이트를 받으려면 메일링 리스트에 가입하세요.",
-          "title": {
-            "long": "Push Chain 테스트넷 소식 알림 받기",
-            "short": "Push Chain Testnet"
-          }
+    "home": {
+      "chain-features-section": {
+        "box7": {
+          "texttitle": "\n품출고",
+          "bodytext": "핽는 총요 머각, 번속 살세요. (골용을 챺안 었세요)",
+          "tags": {
+            "title1": "안남약개"
+          },
+          "imagealt": "데원 주닱일징안공세요.",
+          "imagetitle": "(로드맵) 유니버설验证자(Universal Validator)는 사용자가 스마트 컨트렉트를 통해任意 체인간의 트랜잭션을 트리거, 검증 및 완료할 수 있는 기능입니다."
         },
-        "title": "지식 기반",
-        "description": {
-          "highlighted": "Push Chain은 모든 체인 간의 파편화를 제거하도록 설계된 진정한 유니버설 블록체인입니다.",
-          "developers": "개발자",
-          "developers-text": "한 번 배포하면 지원되는 모든 EVM 및 non-EVM 체인과 즉시 호환됩니다.",
-          "users": "사용자",
-          "users-text": "어떤 체인에서 왔든 동일한 앱을 사용하세요."
+        "box8": {
+          "texttitle": "총호스다도",
+          "bodytext": "다른 체인에서 스마트 계약의 계정 및 상태 데이터에 접근하세요.",
+          "tags": {
+            "title1": "번가소시삹"
+          },
+          "imagealt": "총호어 백식카짌장 머야우하세요.현일해름우.",
+          "imagetitle": "(로드맵) 주체된 상태(state)는 다른 체인에서 스마트 컨트랙트에 접근할 수 있도록합니다.",
+          "tagText": "COMING SOON"
+        },
+        "section-aria-label": "Push Chain 혁신 및 기능 섹션",
+        "header": {
+          "main-text": "분산 혁신을 기반으로 파편화를 제거합니다!",
+          "other-text": "Push는 여러분이 필요로 하는 유일한 유니버설 레이어 1입니다!"
+        },
+        "box1": {
+          "texttitle": "어떤 체인이라도 트랜잭션",
+          "bodytext": "Push Chain은 모든 블록체인의 트랜잭션을 지원합니다. 사용자는 어떤 토큰으로든 가스를 지불할 수 있습니다. 브리징할 필요가 없습니다.",
+          "imagealt": "블록체인 로고들이 핀볼 머신 안으로 떨어지는 모습을 보여주는 일러스트.",
+          "imagetitle": "어떤 블록체인의 트랜잭션도 지원합니다."
+        },
+        "box2": {
+          "texttitle": "Wallet 추상화",
+          "bodytext": "아무런 체인에서나 연결, 상호작용, 거래가 가능하게 만들어줍니다. 소셜 로그인 또는 이메일을 사용하여 웹3의 장벽을 해체하세요. Push Chain에서 사용자가 결정을 내립니다.",
+          "imagealt": "Metamask 지갑, Phantom 지갑 등이 Push Chain 로고가 있는 큰 지갑에서 나오는 모습을 보여주는 일러스트.",
+          "imagetitle": "MetaMask, Phantom 등 기존 월렛은 물론 소셜 로그인도 지원합니다"
+        },
+        "box3": {
+          "texttitle": "100% EVM\n호환 가능",
+          "bodytext": "체인 상 코드를 전혀 사용하지 않고 배포하세요. 몇 분 안에 네이티브 앱을 유니버설 앱으로 전환하세요.",
+          "imagealt": "Ethereum Virtual Machine 로고가 회전하며 100% EVM 호환성을 보여주는 일러스트레이션",
+          "imagetitle": "체인 코드 변경 없이 바로 사용 가능, 100% EVM 호환."
+        },
+        "box4": {
+          "texttitle": "유니버설 스마트 컨트랙트",
+          "bodytext": "한 번 개발하고, 여러 체인에서 실행되는 다단계 경험을 단일하고 미래 지향적인 계약으로 구축하세요.",
+          "imagealt": "이더리움 Virtual Maching 로고와 그 주위를 도는 아크 '100% EVM Compatible'의 일러스트레이션",
+          "imagetitle": "한 번 배포하면 지원되는 모든 체인(EVM 또는 non-EVM)과 즉시 호환됩니다."
+        },
+        "box5": {
+          "texttitle": "유니버설 수수료 추상화\n(Universal Fee\nAbstraction)",
+          "bodytext": "사용자가 브리징 없이 모든 체인에서 모든 토큰으로 가스 비용을 지불할 수 있도록 합니다.",
+          "imagealt": "비트코인, 이더리움, 솔라나 로고들이 Push Chain 주변을 회전하는 모습",
+          "imagetitle": "어떤 체인의 어떤 토큰이라도 트랜잭션에 사용할 수 있도록 지원합니다."
+        },
+        "box6": {
+          "texttitle": "유니버설 실행 레이어",
+          "bodytext": "웹3 전반에 걸쳐 원자적이고 조합 가능한 앱을 구축하세요. 여러 체인의 사용자가 동일한 앱으로 거래함으로써 전에 없던 앱 경험을 만들어보세요.",
+          "imagealt": "다양한 테트리스 블록들이 웜홀을 통해 Push Chain 로고가 나오는 것을 보여주는 일러스트.",
+          "imagetitle": "Push Chain에서 모든 체인의 트랜잭션이 확정되어 사용자가 어떤 체인이든 네이티브하게 동일한 앱, 즉 유니버설 실행 레이어를 사용할 수 있습니다."
         },
         "footer": {
-          "description": "Push Chain을 사용하면 어떤 블록체인에서든 앱을 위해 쉽고 사용자 친화적인 경험을 만들 수 있습니다.",
-          "cta": {
-            "text": "알림 받기"
+          "title": "앱의 사용자 기반을 유니버설하게 확장하세요",
+          "secondary": "노력 없이!",
+          "ctatext": "프로젝트 시작하기",
+          "ctatitle": "한 번 배포하고, 사용자 기반을 10배 확장하세요. 개발자 문서 방문."
+        }
+      },
+      "seo": {
+        "title": "Home — keep | The Universal 블록체인 for 앱",
+        "description": "유니버설 앱을 위한 shared-state 블록체인입니다. 한 번 배포하고, 어떤 체인의 사용자에게든 도달하세요. 어떤 지갑을 사용해도 되고, 어떤 토큰으로도 결제할 수 있습니다.",
+        "og-title": "Push Chain - 유니버설 L1 for 앱",
+        "og-description": "EVM 및 non-EVM 사용자 모두를 위한 단 한 번의 배포. 어떤 wallet을 사용하든, 어떤 토큰으로든 결제하세요 — 네트워크 전환은 필요 없습니다.",
+        "twitter-title": "한 번 배포하고, 모든 체인에 도달하세요.",
+        "twitter-description": "블록체인 어디서든 거래하세요. 어떤 월렛이든 사용하세요. 어떤 토큰으로든 결제하세요. 네트워크 전환은 필요 없습니다."
+      },
+      "hero-section": {
+        "title": "어떤 체인, 어떤 앱, 모든 사용자.\n단 하나의 Push Chain.",
+        "description": "유니버설 앱을 위해 구축된 첫 번째 레이어 1입니다. \n한 번 빌드하고 배포하여 모든 체인의 사용자를 온보드하세요.",
+        "primary-button": "빌딩 시작하기",
+        "primary-button-title": "Push Chain으로 빌더 여정을 시작하세요!",
+        "secondary-button": "지식 기반 둘러보기",
+        "secondary-button-title": "Push Chain에 대해 배우고 알아보기",
+        "section-aria-label": "Push Chain hero section - 유니버설 레이어 1 블록체인 소개",
+        "primary-button-aria-label": "Push Chain에서 유니버설 앱 구축 시작 - 개발자 문서로 이동",
+        "secondary-button-aria-label": "지식 기반에서 Push Chain 기능 및 개념에 대해 자세히 알아보세요.",
+        "hero-background-alt": "Push Chain hero 배경 애니메이션으로 유니버설 블록체인 연결을 보여줍니다.",
+        "hero-background-title": "Push Chain - 유니버설 레이어 1 블록체인, 크로스체인 애플리케이션을 위한 플랫폼",
+        "schema-headline": "Push Chain - 앱을 위한 유니버설 L1",
+        "schema-description": "Push Chain에 한 번 배포하면 유니버설 앱으로 모든 블록체인의 사용자를 확보할 수 있습니다."
+      },
+      "whatis-section": {
+        "titleFirst": "진정한",
+        "titleSecondGraditent": "유니버설",
+        "titleThird": "체인",
+        "bottomTextFirst": "한 번 배포하세요,",
+        "bottomTextSecond": "어디든 도달하세요",
+        "bottomLinkText": "시작하기",
+        "bottomLinkTitle": "문서 허브로 이동",
+        "section-aria-label": "Push Chain란 무엇인가 - 유니버설 블록체인 설명",
+        "animation-alt": "Push Chain의 유니버설 앱 배포를 여러 블록체인에서 보여주는 애니메이션",
+        "animation-title": "Push Chain universal 배포 시각화 - 한 번 배포하고 모든 체인에 도달",
+        "bottom-link-aria-label": "유니버설 앱 구축을 시작하기 위해 Push Chain 문서로 이동"
+      },
+      "partners-section": {
+        "section-aria-label": "Push Chain 생태계 파트너 및 통합",
+        "title": "Powered by Push Chain",
+        "subtitle": "Push Chain에 배포하는 것만으로 사용자 기반을 늘린 앱을 살펴보세요.",
+        "ctatitle": "Push Chain에 배포된 파트너, 앱 및 인프라를 확인해보세요",
+        "ctatext": "에코시스템 살펴보기",
+        "partners-grid-aria-label": "Web3 프로젝트에서 Push Chain을 사용하는 파트너 로고 그리드",
+        "partner-logo-title-prefix": "파트너 로고 - ",
+        "partner-logo-alt-prefix": "Logo of ",
+        "mobile-view-aria-label": "Push Chain 생태계 파트너 모바일 보기"
+      },
+      "stats-section": {
+        "section-aria-label": "Push Chain의 성능 통계 및 지표",
+        "title": "달성하세요",
+        "titleGradient": "즉시",
+        "titleThird": "상호 운용성",
+        "description": "성능 최적화.\n높은 TPS, 초저렴한 gas, 그리고 실시간 앱 실행을 위한 1초 미만의\nfinality를 제공합니다.",
+        "animation-alt": "Push Chain의 여러 블록체인 간의 즉각적인 상호운용성을 보여주는 인터랙티브 애니메이션",
+        "animation-title": "Push Chain의 즉각적인 상호운용성 시각화",
+        "stats": {
+          "stat1": {
+            "title": "지원하는 체인",
+            "imagealt": "지원하는 체인의 모습을 보여주는 일러스트",
+            "imagetitle": "이더리움, 솔라나, 바이낸스 체인 등 지원하는 모든 체인 목록"
+          },
+          "stat2": {
+            "title": "TPS",
+            "description": "4.2k"
+          },
+          "stat3": {
+            "title": "네이티브 파이널리티",
+            "description": "즉시"
+          },
+          "stat4": {
+            "title": "네이티브 블록 시간",
+            "description": "1초"
+          }
+        }
+      },
+      "blog-section": {
+        "subtitle": "뉴스, 개발 일지 및 아이디어",
+        "subtitle-aria-label": "블로그 카테고리 정보",
+        "title": "Push Chain의 맥박을 느껴보세요",
+        "title-aria-label": "최신 Push Chain 블로그 게시물 및 업데이트",
+        "explore-link-text": "더 많은 기사 보기",
+        "explore-link-title": "Push Chain 블로그를 방문하여 모든 기사와 업데이트를 확인하세요.",
+        "explore-link-aria-label": "Push Chain 블로그 페이지로 이동",
+        "section-aria-label": "Push Chain 블로그 게시물 및 뉴스 섹션",
+        "blog-posts-list-aria-label": "최신 Push Chain 블로그 게시물",
+        "blog-post-aria-label": "{title}에 대한 블로그 게시물 읽기",
+        "blog-post-title-prefix": "블로그 게시글 읽기 - ",
+        "loading-text": "최신 블로그 게시물 로딩 중...",
+        "error-text": "현재 블로그 게시물을 불러올 수 없습니다.",
+        "no-posts-text": "블로그 게시물이 없습니다."
+      },
+      "trustedby-section": {
+        "title": "웹3 개척자들의 신뢰를 받는 팀이 만들었습니다",
+        "section-aria-label": "Push Chain 신뢰하는 곳",
+        "trusted-by-alt": "투자자 - "
+      },
+      "featured-section": {
+        "aria-label": "Featured On 섹션",
+        "tag": "FEATURED ON",
+        "title": " Push 체인 강조",
+        "subtitle": "저희 말만 믿지 마세요. 미디어가 진정한 유니버설 체인에 대해 말하는 것을 직접 확인해 보세요.",
+        "articles-image-alt": "Media coverage from ",
+        "articles-text": "전체 기사 보기",
+        "articles-title-1": "다음 기사 읽어보기",
+        "articles-title-2": "'s 생각에 대한 Push Chain 상세 설명",
+        "articles": {
+          "binance-chain": {
+            "text": "Push Protocol, Web3를 위한 선도적인 탈중앙화 커뮤니케이션 프로토콜이 BNB 체인에 출시되었음을 알려드립니다."
+          },
+          "coindesk": {
+            "text": "프로토콜 빌리지: Unstoppable이 Push Protocol과 협력하여 토큰 게이트된 그룹 채팅 제공"
+          },
+          "defiant": {
+            "text": "Unstoppable Domains에서 토큰 게이트된 그룹 채팅을 시작합니다. Push Protocol과의 협력을 통해 허위 정보 및 사기를 방지하는 것을 목표로 합니다."
+          },
+          "balaji": {
+            "text": "사용자 제어 알림. Apple과 Google 두 회사가 수십억 대의 스마트폰에 대한 푸시 알림을 제어합니다."
+          },
+          "defiprime": {
+            "text": "Harsh Rajat는 미래의 은행 시스템, EPNS 프로토콜 인센티브, 그리고 탈중앙화된 푸시 알림의 비즈니스 모델에 대해 이야기합니다."
+          },
+          "ethfoundation": {
+            "text": "HackMoney 이후 Richa와 Harsh는 EPNS를 \"웹3의 누락된 부분\"이라고 부르며 엄청난 에너지를 쏟아부었습니다."
+          },
+          "beincrypto": {
+            "text": "Web3 통신 네트워크 작동 방식: 기술 심층 분석"
+          },
+          "the-block": {
+            "text": "Web3 알림 프로토콜 Push가 자체 Layer 1 체인을 출시합니다."
+          },
+          "business-insider": {
+            "text": "Push, Push Chain을 공개합니다: 유니버설 블록체인 앱의 미래"
+          },
+          "chainwire": {
+            "text": "Push, Push Chain 공개: 유니버설 블록체인 애플리케이션의 미래."
+          },
+          "benzinga": {
+            "text": "Push, Push Chain 공개: 범용 블록체인 애플리케이션의 미래"
+          },
+          "crypto-briefing": {
+            "text": "Push, Push Chain 공개: 유니버설 블록체인 앱의 미래"
+          },
+          "cryptoslate": {
+            "text": "Push Protocol launches Push Chain to unify 블록체인 communication and transactions"
+          },
+          "messari": {
+            "text": "EPNS는 분산형 알림을 수신하는 사용자를 위한 인센티브와 수동적 수익을 가능하게 합니다."
+          },
+          "coin-telegraph-1": {
+            "text": "Harsh Rajat, Push Protocol 창립자이자 프로젝트 리더는 최신 Hashing It Out 에피소드에서 Web3 채팅 애플리케이션 개발 급증에 대해 설명합니다."
+          },
+          "coin-telegraph-2": {
+            "text": "Unstoppable Domains, 사용자 이름 보유자를 위한 배지 게이트 그룹 채팅 기능을 출시했습니다."
+          }
+        }
+      },
+      "ending-section": {
+        "aria-label": "유니버설 앱 빌드 섹션",
+        "section-title": "유니버설 앱을 구축하세요.",
+        "section-subtitle": "사일로를 깨고, 한 번 구축하면 모든 블록체인에서 확장하세요.",
+        "docs-link": {
+          "text": "Push Chain 문서를 살펴보기",
+          "title": "Push Chain 문서 및 개발자 리소스를 살펴보세요",
+          "aria-label": "Push Chain 문서를 새 탭에서 열기"
+        },
+        "cta-link": {
+          "text": "LFG Push Chain",
+          "title": "Push Chain으로 시작하세요 - 범용 블록체인 플랫폼",
+          "aria-label": "Push Chain 개발 시작하기"
+        }
+      }
+    },
+    "knowledge": {
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "title": "하라집 주서을 명드스핮",
+                  "ctatitle": "품다 어음",
+                  "subtitle": "Push Chain의 감사 보고서를 살펴보고, 최고 수준의 보안 전문 기관들이 수행한 독립적인 보안 검토를 통해 여러분이 구축하는 인프라가 어떻게 검증되었는지 확인해보세요."
+                },
+                "push101": {
+                  "title": "Push Chain 기초",
+                  "subtitle": "Push Chain의 기본 사항, 혁신 및 필요성에 대해 알아보세요",
+                  "ctatitle": "더 알아보기"
+                },
+                "builders": {
+                  "title": "Push Chain에서 구축하기",
+                  "subtitle": "유니버설 앱 구축 방법, 잠재력, 시작 방법에 대해 자세히 알아보세요!",
+                  "ctatitle": "빌더들이 모여요"
+                },
+                "deepdives": {
+                  "title": "기술 심층 분석",
+                  "subtitle": "Push의 복잡한 작동 방식이 궁금하신가요? 아니면 단순히 호기심이 많으신가요? 어느 쪽이든, 인사하세요!",
+                  "ctatitle": "작동 원리 살펴보기"
+                },
+                "devdocs": {
+                  "title": "개발자 문서",
+                  "subtitle": "본론부터 바로 들어가죠! 저는 유니버설 체인이고... 당신은 개발자입니다. 공식적으로 시작해 봅시다!",
+                  "ctatitle": "지금 구축하기"
+                },
+                "tokenomics": {
+                  "title": "토큰 이코노미 살펴보기",
+                  "subtitle": "우리 토큰 이코노미가 어떻게 지속 가능한 네트워크를 유도하고 장기적인 성장을 보장하는지 알아보세요",
+                  "ctatitle": "토큰 디자인 배우기"
+                },
+                "faq": {
+                  "title": "자주 묻는 질문(FAQ)",
+                  "subtitle": "커뮤니티에서 가장 많이 묻는 질문에 대한 답변을 찾을 수 있는 곳",
+                  "ctatitle": "더 알아보기"
+                },
+                "testnet": {
+                  "title": "Donut Testnet",
+                  "subtitle": "Donut is Push Chain’s public testnet for Universal Apps that run across chains (EVM or non-EVM)",
+                  "ctatitle": "더 읽어보기"
+                },
+                "validators": {
+                  "title": "밸리데이터",
+                  "subtitle": "",
+                  "ctatitle": "더 알아보기"
+                }
+              },
+              "title": "자료"
+            }
           }
         }
       },
@@ -459,7 +735,9 @@
           "title": "심화 분석 — 개념 및 아키텍처",
           "description": "shared-state, fee abstraction, USV/UEA 및 유니버설 실행 계층에 대한 읽기 쉬운 설명서.",
           "og-title": "Deep Dives - 개념 및 아키텍처",
-          "og-description": "푸시 체인 모듈, 디자인 결제 및 성능에 대해 심층적인 기사."
+          "og-description": "푸시 체인 모듈, 디자인 결제 및 성능에 대해 심층적인 기사.",
+          "twitter-title": "딥다이브 - 내부 동작 원리",
+          "twitter-description": "Push Chain의 작동 방식에 대한 설명."
         }
       },
       "tokenomics": {
@@ -520,7 +798,7 @@
                   "how-does-push-chain-work": "### Push Chain은 어떻게 작동하나요?\n\n![How Normal Apps Work](/assets/website/chain/knowledge/faq/normalapps.webp)\n\n![How Universal Apps Work](/assets/website/chain/knowledge/faq/universalapps.webp)\n\nPush Chain은 모든 체인에서 파편화를 해결하는 데 독특한 접근 방식을 취합니다. 상호 운용성 프로토콜에 의존하는 대신, 사용자와 개발자 모두에게 복잡성을 더하는 대신 모든 사용자가 어떤 체인에서든 기본적으로 사용할 수 있는 진정한 범용 블록체인을 구축하여 새로운 접근 방식을 취합니다.\n\n이를 달성하기 위해 Push Chain은 다음과 같은 **precompiles**를 활용합니다. 사용자 정의 모듈을 생성하여:\n\n1. **Recognize** 다른 체인의 사용자 - 체인에 관계없이 사용자의 주소를 확장하는 범용 주소 표준(CAIP-10 표준([https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md](https://github.com/ChainAgnostic/CAIPs/blob/main/CAIPs/caip-10.md)) 기반).\n\n2. **Map** 사용자를 Push Chain에 매핑 - 각 외부 체인 사용자에 대해 범용 Executor 계정(UEA)을 배포합니다. 이 모듈은 다른 precompiles를 사용하여 트랜잭션을 처리하는 스마트 계정을 배포하는 데 사용됩니다.\n\n3. **Execute** 범용 트랜잭션 - 이는 USV(Universal Signature Verification) 및 UTXV(Universal Transaction Verifier) precompiles를 사용하여 다른 체인의 서명과 트랜잭션을 확인하고 실행하여 수행됩니다.\n\n4. **Abstract** 체인의 복잡성을 숨김 - 이는 각 체인에 범용 게이트웨이 계약을 배치하여 체인의 기본 토큰(또는 다른 호환 가능한 토큰)으로 gas 자금을 잠그고 UTXV precompiles를 사용하여 gas를 UEA(Executor 계정)에 속성하고 USV를 사용하여 트랜잭션을 실행하여 수행됩니다.\n\n이는 사용자 모두가 어떤 체인에서든 걱정할 필요 없이 Push Chain의 모든 앱과 상호 작용할 수 있도록 사용자뿐만 아니라 개발자 모두에게 추상화를 제공하는 **매우 강력한 접근 방식**입니다.\n\n---",
                   "why-unique-for-users": "### 왜 Push Chain이 사용자에게 특별할까요?\n\nPush Chain은 기존 블록체인의 interoperability, 체인 간 state 접근, programmable solvers 및 월렛 추상화와 같은 특정 격차를 해결하여 **진정한 풀 스택 interoperability**를 제공합니다. 기존 블록체인은 강력하지만 자체 생태계 내에서 작동하며 이러한 체인을 통합하는 통합기가 필요합니다.\n\nPush Chain은 universal (interoperable) 애플리케이션을 위한 **shared state chain**으로 모든 체인이 함께 모여 universal hub으로 Push Chain을 사용하거나 이들 간에 settlement를 수행할 수 있는 통합 레이어 역할을 하는 데 중점을 둡니다.\n\n**Any Chain**에서 작동하고, **Any Wallet / User**에게 적합하며, **Any App**에 적합한 새로운 Web3 패러다임을 제공합니다.\n\n---",
                   "core-innovations": "### 푸시 체인이 혁신적인 이유는 무엇인가요?\n\n![Push Chain Architecture](/assets/website/chain/knowledge/faq/pcoverview.webp)\n\n푸시 체인은 모든 블록체인 간의 단편화를 제거하도록 설계된 지분 증명 레이어 1입니다. 내부적으로는 다음과 같은 몇 가지 핵심 혁신을 결합합니다.\n\n- **유니버설 스마트 컨트랙트**\n  **제로 온체인 코드 변경**으로 배포할 수 있는 100% EVM 호환 스마트 컨트랙트입니다. 배포되면 모든 체인의 사용자와 즉시 호환됩니다.\n\n- **진정한 유니버설 체인**\n  모든 체인을 기본적으로 지원하며 사용자가 동일한 앱과 상호 작용할 수 있도록 합니다. 중앙 집중식 릴레이어, 브리지 또는 기타 해킹이 필요하지 않습니다.\n\n- **유니버설 수수료 & 월렛 추상화**\n  사용자가 수수료나 월렛 메커니즘에 대해 걱정할 필요 없이 어떤 체인에서든 앱과 상호 작용할 수 있도록 합니다.\n\n- **어떤 체인이든 단일 트랜잭션**\n  사용자는 어떤 체인에 있든 상관없이 단 한 번의 트랜잭션만 서명하면 됩니다.\n\n- **유니버설 EVM**\n  푸시 체인은 다른 체인의 사용자를 기본적으로 인식하고 트랜잭션을 올바르게 속성하고 매핑할 만큼 똑똑합니다.\n\n이러한 기능이 함께 사용자가 **유니버설 Web3 앱**을 구축할 수 있도록 합니다. “이더리움의 Uniswap” 또는 “폴리곤의 Uniswap” 대신 사용자는 단순히 **Uniswap 사용자**가 됩니다 — 그게 전부입니다.\n\n---",
-                  "problems-solved": "### Push Chain이 해결하는 문제점\n\n- **단편화**\n  EVM 및 비-EVM 체인 모두를 단일 공유 상태 L1로 통합하여 사용자가 네트워크나 지갑을 이동하지 않고도 모든 체인에서 사용할 수 있습니다.\n\n- **호환성**\n  모든 블록체인의 트랜잭션 지원과 온체인 공유 상태\n\n- **결론적 처리 시간**\n  ~1-2초 내에 원활하고 불변의 네이티브 결말 – 더 이상 기다리거나 재조직하지 않습니다.\n\n- **onboarding & UX**\n  소셜/이메일 로그인, 토큰 및 지갑 지원으로 모든 체인에서 무결점 액세스를 위한 제로 마찰 접근성을 제공합니다.\n\n- **유니버설 앱**\n  한 번 구축, 어디서나 배포 – 어떤 웹3 애플리케이션도 모든 사용자에 대해 모든 체인에서 원활하게 작동합니다.\n\n---",
+                  "problems-solved": "### Push Chain 이 해결하는 문제는 무엇입니까?\n\n- **분산화**  \n  EVM & non-EVM 체인 아래 하나의 공유 상태 L1에 통합하여 사용자가 네트워크 또는 지갑을 이동하지 않고 사용할 수 있도록 합니다.\n\n- **호환성**  \n  모든 블록체인의 트랜ザクション과 온 칸스 공유 상태 지원.\n\n- **결정성**  \n  ~1-2초 내에 즉시 irreversible native finality – 더 이상 기다리거나 재조정할 필요가 없습니다.\n\n- **인증 및 사용자 경험**  \n  소셜 / 이메일 로그인, GAS-in-any-token & any-wallet 지원을 통해 자원.chain.across 접근이 자유롭습니다.\n\n- **전 世界 앱**  \n  한 번 빌드하고 모든 곳에 배포하세요 — 어떤 사용자가 어떤 chain에서든 웹3 앱이 평온하게 작동합니다.\n\n---",
                   "what-apps-can-build": "### 어떤 앱을 Push Chain에서 구축할 수 있나요?\n\n![Universal App Examples](/assets/website/chain/knowledge/faq/appusecases.webp)\n\nPush Chain의 shared-state, cross-chain 아키텍처를 통해 가능성은 무궁무진합니다. 몇 가지 주요 예시는 다음과 같습니다:\n\n- **Universal DEX**  \n  모든 유동성 풀에 대한 단일 스왑 UI–모든 체인에서 CEX의 속도와 UX로 라우팅을 추상화합니다.\n\n- **Universal DeFi**  \n  브라우저의 글로벌 은행: 수동 브리징 없이 생태계를 확장하는 대출, 차입, 수익 집계기.\n\n- **Universal AI Agents**  \n  어떤 체인의 어떤 토큰으로든 지불하고 받을 수 있는 자율 에이전트–구독 서비스, 데이터 봇 등에 적합합니다.\n\n- **Universal DAOs**  \n  토큰 보유자가 원산 체인에 관계없이 투표하고 제안을 실행하는 cross-chain 거버넌스.\n\n- **Universal Gaming**  \n  Ethereum, Solana, Polygon 등을 통합하는 멀티플레이어 토너먼트 및 게임 내 경제.\n\n- **Universal Marketplace**  \n  모든 체인의 NFT 및 토큰을 하나의 통합 마켓플레이스에서 구매, 판매, 거래.\n\n- **Universal Name Service**  \n  여러 블록체인에서 지갑을 확인할 수 있는 사람이 읽을 수 있는 이름.\n\nThe 앱과 혁신은 Push Chain에서 끝없이 일어날 수 있습니다! [더 많은 사용 사례](/blog/consumer-apps-that-can-be-built-on-push-chain/)를 보려면 여기를 방문하세요. 개발자는 [Documentation Hub](/docs/)를 확인하여 시작할 수도 있습니다.\n\n---",
                   "technical-section": "## 기술 정보",
                   "why-not-an-l2": "### 왜 L1이 아닌 L2인가요?\n\nPush Chain은 다른 모든 블록체인의 **공유 결제 레이어** 및 **범용 실행 레이어** 역할을 하도록 구축되었습니다. 이러한 역할을 수행할 수 있는 것은 독립 실행형 L1 뿐입니다.\n\n- **네이티브 크로스체인 결제**  \n  L1로서 Push Chain은 외부 보안 모델이나 사기 증거에 의존하지 않고 모든 체인에서 직접 트랜잭션을 확정할 수 있습니다.\n\n- **범용 실행 및 상태 접근**  \n  자체 합의 및 상태 머신을 실행하면 Push Chain은 Ethereum, Solana 등을 해석하고 실행할 수 있습니다 — 이는 단일 베이스 레이어에 묶인 L2가 기본적으로 수행할 수 없는 작업입니다.\n\n- **L2 제약 조건 또는 지연 없음**  \n  L2는 호스트 체인의 대기 시간, 확정 규칙 및 가스 모델을 상속받습니다(브리징 오버헤드 포함). Push Chain은 이러한 병목 현상을 피하고 베이스 레이어에서 즉각적인 확정 및 범용 수수료 추상화를 제공합니다.\n\n- **진정한 공유 상태**  \n  여러 체인의 상태를 스마트 컨트랙트 내에서 읽고 쓰려면 직접적인 프로토콜 수준 접근이 필요합니다 — 이는 L1 레이어에서만 가능합니다.\n\n간단히 말해서, 목적에 맞게 구축된 L1만이 모든 체인을 하나의 응집력 있는 실행 및 결제 레이어 아래 통일할 수 있습니다 — 추가적인 복잡성이나 추가적인 신뢰 가정을 추가하지 않고.\n\n---",
@@ -529,7 +807,7 @@
                   "why-not-ethereum-or-solana": "### 기존 이더리움이나 솔라나와 같은 블록체인이 이미 존재할 때 왜 새로운 블록체인을 만들어야 할까요?\n\n기존 블록체인은 특정 영역에서 뛰어난 성능을 발휘하지만 **분열**을 초래합니다:\n\n- **Ethereum**: DeFi에 뛰어나지만 비싸고 느립니다.\n- **Solana**: 빠르고 저렴하지만 다른 도구와 생태계를 가지고 있습니다.\n- **L2s**: 확장성을 해결하지만 더 많은 분열을 만듭니다.\n\nPush Chain은 이 체인들과 경쟁하지 않고 **통합**합니다:\n\n- 사용자는 기존 지갑(MetaMask, Phantom 등)을 사용하여 Push Chain 앱과 상호 작용할 수 있습니다.\n- 선호하는 토큰(ETH, SOL, USDC)으로 gas를 지불합니다.\n- 개발자는 여러 체인에 배포하는 대신 한 번만 빌드합니다.\n- 모든 체인의 유동성과 사용자가 동일한 앱에서 상호 작용할 수 있습니다.\n\nPush Chain은 기존의 모든 체인이 원활하게 작동하도록 하는 **누락된 조각**입니다.\n\n---",
                   "shared-state-meaning": "### 공유 상태 블록체인은 무엇을 의미하나요?\n\n공유 상태는 온체인 데이터의 현재 상태를 의미합니다. 공유 상태 블록체인은 자체 상태와 상호 작용하는 모든 다른 체인의 상태에 대한 읽기 및 쓰기 액세스 권한을 가진 블록체인입니다.\n\n공유 상태 체인은 다른 체인의 데이터, 유동성 및 사용자를 처리할 수 있습니다.\n\n---",
                   "how-achieve-shared-state": "### Push Chain은 어떻게 공유 상태를 달성하나요?\n\n![Push Chain Universal App](/assets/website/chain/knowledge/faq/pcuniversalapp.webp)\n\nA 전통적인 블록체인은 자체 원장과 wallet 표준만 알고 있습니다. Push Chain은 4가지 주요 방식으로 해당 모델을 확장합니다:\n\n1. **Universal Wallet 호환성**  \n\t- Ethereum, Solana, Bitcoin, Cosmos SDK 등 모든 chain의 chain 비종속적 주소를 지원합니다.\n\t- USV/UTXV precompiles를 통해 모든 chain의 서명을 확인하므로 사용자는 wallet를 전환할 필요가 없습니다.\n\n2. **Universal Smart Contract**  \n\t- EVM contract은 변경 없이 배포되지만 기본적으로 크로스체인 트랜잭션을 확인하고 실행할 수 있습니다.\n\t- Push Chain의 런타임은 지원되는 모든 네트워크에 대한 서명 매핑 및 payload 구문 분석을 처리합니다.\n\n3. **On-Chain 공유 상태**  \n\t- Validators는 각 block마다 외부 chain 상태의 Merkle 증명(MPT roots를 통해)을 커밋합니다.\n\t- Relayers는 필요에 따라 leaf 증명을 가져와 제출하므로 contract은 실시간으로 모든 chain의 데이터를 읽을 수 있습니다.\n\n4. **Programmable Solvers**  \n\t- solver 네트워크는 단일 트랜잭션으로 원자적 크로스체인 워크플로우(예: Chain A에서 swap, Chain B에서 mint)를 실행합니다.\n\t- 개발자는 간단한 solver 스크립트를 작성하고, 네트워크는 라우팅 및 실행을 처리합니다.\n\n함께 이러한 기능들은 Push Chain을 모든 chain에 native한 universal app을 가능하게 하는 **shared-state L1**로 만듭니다. 모든 chain의 모든 사용자가 다른 chain의 모든 app에 액세스하고 상호 작용할 수 있는 세상.\n\n**Any Chain, Any App, Any User - One Push Chain**\n\n---",
-                  "consensus-mechanism": "### Push Chain은 어떤 합의 메커니즘을 사용합니까?\n\nPush Chain은 **Proof-of-Stake (PoS)** 합의 메커니즘을 사용하며, **CometBFT** 엔진 기반으로 여러 개선 사항이 있습니다:\n\n- **빠른 최종성**: 트랜잭션이 ~1–2초 만에 결정되며, 재조직 없이 예측 가능합니다.\n- **에너지 효율적인**: PoW보다 환경 친화적입니다.\n- **검증자 네트워크**: 체인 보호를 위한 분산 검증자 네트워크가 있습니다.\n- **벌칙 보호**: 경제적激励는 검증자의 정직성을 보장합니다.\n\nCross-chain 상태 관리와 보편적인 트랜잭션 처리를 위한 최적화된 BFT 합의입니다.",
+                  "consensus-mechanism": "### Push Chain에서 사용하는 합의 메커니즘은 무엇입니까?\n\nPush Chain은 **Proof-of-Stake (PoS)** 합의를 사용하며, **CometBFT** 엔진을 기반으로 구축하고 여러 개선점을 적용하여 다음과 같이 최적화하였습니다:\n\n- **Fast Finality**: 거래는 ~1–2초 내에 결정되며, 예측가능한 최종결과로 (재조정 無)\n- **Energy Efficient**: PoS는 PoW보다 환경 친화적인 것으로 보입니다.\n- **Validator Network**: 분산형 검증인 네트워크로 Chain을 보호합니다\n- **Slashing Protection**: 검증인诚実性를 보장하기 위해 경제적 유인이 존재합니다\n\nCometBFT의 BFT 합의는 universal transaction processing 및 cross-chain state management에 특화된 것으로 최적화하였습니다.\n\n---",
                   "transaction-fees": "### Push Chain의 트랜잭션 수수료는 어떻게 작동하나요?\n\nPush Chain은 **Universal Fee Abstraction**으로 수수료 결제를 혁신합니다:\n\n- **모든 토큰으로 결제**: 사용자는 ETH, SOL, USDC 또는 지원되는 모든 토큰으로 가스 수수료를 지불할 수 있습니다.\n- **크로스체인 수수료 결제**: 브리징 없이 원본 체인에서 수수료를 지불합니다.\n- **가스리스 트랜잭션**: 앱에서 사용자 트랜잭션을 후원하여 원활한 사용자 경험을 제공합니다.\n- **동적 수수료 시장**: 수수료는 네트워크 수요에 따라 조정됩니다.\n\n즉, 사용자는 앱과 상호 작용하기 위해 기본 Push Chain 토큰을 획득할 필요가 없습니다.\n\n---",
                   "true-universal-chain": "### True Universal Chain이란 무엇인가요?\n\n**True Universal Chain**은 모든 네트워크를 1등 시민으로 취급하는 블록체인입니다. 브리지, 중앙 집중식 릴레이어 또는 호환성 해킹이 없습니다. 다음과 같은 기능을 제공합니다:\n\n1. **네이티브 멀티체인 ID**  \n\tEthereum, Solana, 모든 EVM 또는 non-EVM 체인의 월렛은 Push Chain에서 네이티브로 서명, 검증 및 실행됩니다. 따라서 사용자는 계정을 전환하거나 여러 월렛의 복잡성에 대해 걱정할 필요가 없습니다.\n\n2. **통합된 결제**  \n\t모든 네트워크의 트랜잭션은 Push Chain에서 최종적으로 처리되어 모두에게 단일 진실 소스를 제공하고 모든 체인의 사용자가 동일한 앱에 액세스할 수 있도록 합니다.\n\n3. **단일 트랜잭션 및 유니버설 수수료 추상화**  \n\t사용자는 소스 체인에 관계없이 단 하나의 트랜잭션에 서명하고 모든 토큰으로 수수료를 지불합니다. 앱을 사용하기 위해 수많은 토큰을 유지하거나 교환할 필요가 더 이상 없습니다.\n\n4. **한 번 배포, 어디든 사용**  \n\t개발자는 추가 코드를 추가하지 않고 (EVM 또는 기타) 스마트 컨트랙트를 한 번 작성하고 배포합니다. 한 번의 배포로 모든 체인을 커버합니다.\n\nPush Chain은 이러한 기능을 합의 및 런타임에 직접 구현한 최초의 체인입니다. 진정한 의미로 단편화를 제거합니다. 우회 방법, 추가 레이어가 필요하지 않습니다. 모두를 위한 하나의 유니버설 체인입니다.\n\n---",
                   "competitors-section": "## 경쟁사",
@@ -678,7 +956,7 @@
                   "status-heading": "## 상태",
                   "status-timeline": "2026년 2월 25일 - 시작<br />2026년 2월 25일 - ✅ 완료",
                   "overview-heading": "## 개요",
-                  "overview-text": "푸시 체인이 토큰 재조정 제안을 실행하여 총 PC토큰 공급량을 약 10억 토큰으로 줄입니다. 이 업그레이드는 테스트넷 초창기의 기술 부채를 해결하고 메인넷 환경에 준비합니다.",
+                  "overview-text": "촜캸요 번호입력세요 25는야을 2026요 관식지쥴어 번호입력세요 주치석음엜 75T+ 이항세요 머 10개스고의 관식지쥴어 주치석음엜. 번호입력세요 25는야을 2026요 머 관식지쥴어 주치석음엜 번호입력세요 위감야공고의. ",
                   "why-heading": "### 왜 이렇게 했나요?",
                   "why-text": "Push Chain testnet 초기에는 PC 토큰에 대한 소각 및 발행 프로세스가 없었습니다. 이로 인해 유니버설 트랜잭션의 가격 계산이 극도로 낮아졌고, 소수의 토큰 보유자가 막대한 토큰 공급량(조 단위)을 축적할 수 있었습니다. 이는 mainnet 출시 전에 수정되어야 할 불균형한 토큰 경제를 초래했습니다.",
                   "why-necessary": "토큰 재조정은 다음과 같은 이유로 필요했습니다:",
@@ -687,24 +965,66 @@
                   "reason-tech-debt": "- 오래된 테스트넷 초기 기술 부채 제거",
                   "reason-token-economy": "- 공정하고 지속 가능한 토큰 이코노미 구축",
                   "what-changed-heading": "### 무엇이 변경되었나요?",
+                  "what-changed-text": "proposal Ġülōkćěn",
                   "key-changes-heading": "**주요 변경 사항:**",
                   "change-supply": "- 총 공급량이 75T+에서 약 10B PC 토큰으로 감소했습니다.",
-                  "change-wallets": "- 최상위 1,950 지갑이 1,100-2,000 PC 토큰 범위로 재조정되었습니다",
+                  "change-wallets": "- 상위 1,950 개의 지갑이 1,100-2,000 구0석로을재어일의 1,100일문엘을일",
                   "change-percentage": "- 총 주소의 0.17% (117.8만 개 중 1,950개)에만 영향을 미칩니다.",
                   "change-unaffected": "- 99.83%의 사용자는 영향을 받지 않습니다.",
                   "why-not-informed-heading": "### 왜 사용자들에게 미리 알리지 않았나요?",
-                  "why-not-informed-text": "사용자들은 균형 조정을 미리 알리지 않는 보안 조치로 토큰을 다른 지갑으로 이전하는 악의적인 행위를 방지했습니다. 이로 인해 균형 조정 과정의égrity가 보장되었으며 시스템에 대한 게임이 방지되었습니다.",
+                  "why-not-informed-text": "유저들은 업그레이드 전 재배포를 위해 악의적인 행위자들이 다른 지갑에 토큰을 이동시키는 것을 방지하기 위해 사전에 알리지 않았습니다. 이 보안조치가 재균형 처리의完整성을 유지하고 시스템의 게임화를 막았습니다.",
                   "validator-period": "현재 testnet validator 제안 기간은 풀 분산형 validator 소유권이 구현되기 전에 이러한 예외적인 경우를 제거하는 데 도움이 되도록 5분으로 설정되어 있습니다.",
                   "why-52t-heading": "### 왜 여전히 52T 공급량을 보나요?",
-                  "why-52t-text": "리밸런스는 두 단계로 구성된 접근법입니다. 토큰들은 팀이 관리하는 지갑에 모이고 곧 불태워질 예정입니다.",
+                  "why-52t-text": "해시변경이란?",
                   "how-affect-heading": "### 저에게는 어떤 영향을 미치나요?",
-                  "affect-majority": "**99.83%의 사용자:** 이 변경 사항은 당신에게 영향을 주지 않습니다. 지갑 잔고가 변하지 않습니다.",
-                  "affect-top-wallets": "** Influence on top wallets (top 1,950):** If your wallet had 1,100만 PC 토큰 이상 보유하고 있었다면, 잔액이 1,100-2,000 PC 토큰 범위로 재조정되었습니다.",
+                  "affect-majority": "**99.83%의 사용자 중 99%에게:** 이 변경은 당신에게 영향을 미치지 않습니다. 당신의 지갑 잔액은 변하지 않습니다.",
+                  "affect-top-wallets": "**해당 위험한 지갑(상위 1,950개):** 자신의 지갑에 PC 토큰 1,100+ (또는 수천조)를 보유하고 있다면, 1,100-2,000 PC 토큰 범위로 재균형화되었습니다.",
                   "need-help-heading": "**도움이 필요하신가요?**",
                   "need-help-text": "이 재조정으로 인해 영향을 받았다고 생각되거나 질문이나 우려 사항이 있으시면 Discord에서 Push Chain 팀에 문의하여 도움을 받으세요."
                 }
               }
             }
+          }
+        }
+      },
+      "audit": {
+        "seo": {
+          "title": "",
+          "description": "Push Chain의 аудит 리포트를 탐색하고, топ 조직에서 독립적인 보안 검토로 인한 infrastructure에 빌드는 유효성 검사를 통해 확인합니다.",
+          "og-title": "번안해약주석 재세요",
+          "og-description": "Push Chain의 아키텍처, 모듈 및 스마트 컨트랙트에 대한 독립적인 보안 감사 보고서를 확인하세요.",
+          "twitter-title": "Push Chain 감사 보고서",
+          "twitter-description": "Push Chain에 대한 독립적인 보안 감사 보고서."
+        },
+        "explainer-section": {
+          "blocks": {
+            "sections": {
+              "reports": {
+                "items": {
+                  "audit-report-1": {
+                    "title": "안소 해는서어 주생 프록댐의닱력다"
+                  },
+                  "audit-report-2": {
+                    "title": "구소가 총료 명소쾔 세요"
+                  },
+                  "audit-report-3": {
+                    "title": "[EVM 게이트웨이] 보안 분석 보고서"
+                  },
+                  "audit-report-4": {
+                    "title": "SVM 게이트웨이 보안 분석 보고서"
+                  }
+                }
+              },
+              "audit-reports": {
+                "items": {
+                  "intro": "![Image](/assets/website/chain/knowledge/audit/hacken-bg.webp)"
+                }
+              }
+            },
+            "title": "Push Chain 감사 보고서"
+          },
+          "breadcrumbs": {
+            "knowledge-base": "지식 베이스"
           }
         }
       },
@@ -716,54 +1036,26 @@
         "twitter-title": "지식 기반 - 가이드 & FAQ",
         "twitter-description": "Push Chain에 대한 빠른 가이드, FAQ, 그리고 사용 설명서 (전문 용어 없이)."
       },
-      "explainer-section": {
-        "blocks": {
-          "sections": {
-            "resources": {
-              "title": "자료",
-              "items": {
-                "push101": {
-                  "title": "Push Chain 기초",
-                  "subtitle": "Push Chain의 기본 사항, 혁신 및 필요성에 대해 알아보세요",
-                  "ctatitle": "더 알아보기"
-                },
-                "builders": {
-                  "title": "Push Chain에서 구축하기",
-                  "subtitle": "유니버설 앱 구축 방법, 잠재력, 시작 방법에 대해 자세히 알아보세요!",
-                  "ctatitle": "빌더들이 모여요"
-                },
-                "deepdives": {
-                  "title": "기술 심층 분석",
-                  "subtitle": "Push의 복잡한 작동 방식이 궁금하신가요? 아니면 단순히 호기심이 많으신가요? 어느 쪽이든, 인사하세요!",
-                  "ctatitle": "작동 원리 살펴보기"
-                },
-                "devdocs": {
-                  "title": "개발자 문서",
-                  "subtitle": "본론부터 바로 들어가죠! 저는 유니버설 체인이고... 당신은 개발자입니다. 공식적으로 시작해 봅시다!",
-                  "ctatitle": "지금 구축하기"
-                },
-                "tokenomics": {
-                  "title": "토큰 이코노미 살펴보기",
-                  "subtitle": "우리 토큰 이코노미가 어떻게 지속 가능한 네트워크를 유도하고 장기적인 성장을 보장하는지 알아보세요",
-                  "ctatitle": "토큰 디자인 배우기"
-                },
-                "faq": {
-                  "title": "자주 묻는 질문(FAQ)",
-                  "subtitle": "커뮤니티에서 가장 많이 묻는 질문에 대한 답변을 찾을 수 있는 곳",
-                  "ctatitle": "더 알아보기"
-                },
-                "testnet": {
-                  "title": "Donut Testnet",
-                  "subtitle": "Donut is Push Chain’s public testnet for Universal Apps that run across chains (EVM or non-EVM)",
-                  "ctatitle": "더 읽어보기"
-                },
-                "validators": {
-                  "title": "밸리데이터",
-                  "subtitle": "",
-                  "ctatitle": "더 알아보기"
-                }
-              }
-            }
+      "hero-section": {
+        "title": "지식 기반",
+        "description": {
+          "highlighted": "Push Chain은 모든 체인 간의 파편화를 제거하도록 설계된 진정한 유니버설 블록체인입니다.",
+          "developers": "개발자",
+          "developers-text": "한 번 배포하면 지원되는 모든 EVM 및 non-EVM 체인과 즉시 호환됩니다.",
+          "users": "사용자",
+          "users-text": "어떤 체인에서 왔든 동일한 앱을 사용하세요."
+        },
+        "email-signup": {
+          "title": {
+            "long": "Push Chain 테스트넷 소식 알림 받기",
+            "short": "Push Chain Testnet"
+          },
+          "description": "Push Chain 테스트넷이 라이브되었습니다. 독점 업데이트를 받아보시려면 메일링 리스트에 가입하세요."
+        },
+        "footer": {
+          "description": "Push Chain을 사용하면 어떤 블록체인에서든 앱을 위해 쉽고 사용자 친화적인 경험을 만들 수 있습니다.",
+          "cta": {
+            "text": "알림 받기"
           }
         }
       },
@@ -822,13 +1114,15 @@
         "description": "Push Chain에서 배포하는 데 필요한 모든 것: 빠른 시작 가이드, SDK, API 레퍼런스, 예제, 노드 설정 안내.",
         "og-title": "푸시 체인 문서 - 빠른 시작, SDK 및 API",
         "og-description": "유니버셜 실행 레이어에서 앱을 빌드하고 실행하세요. 명확한 가이드와 예시가 있습니다.",
-        "twitter-title": " Push 체인 문서 - 지금 빌드하기"
+        "twitter-title": " Push 체인 문서 - 지금 빌드하기",
+        "twitter-description": "빠르게 출시하기 위한 퀵스타트, SDK, API 레퍼런스 및 예제."
       },
       "header": {
         "countdown-title": "테스트넷 문서 출시까지 남은 시간",
         "description": "psst... 테스트넷 던틀 보러 가고 싶니? #pushchainsecret으로 연락하면 테스트 빌드 액세스 링크를 보내줄게.",
         "title": "Push Chain에 대해 트윗하기",
-        "ariaLabel": "Push Chain에 대해 트윗하기"
+        "ariaLabel": "Push Chain에 대해 트윗하기",
+        "tweet-button": "Push Chain에 대해 트윗하기"
       }
     },
     "blog": {
@@ -959,7 +1253,7 @@
       },
       "hero-section": {
         "title": "Push Chain 팀에 문의하세요",
-        "description": "파트너십 및 통합, 지출, 미디어 및 강연, 검증자, 법적, 경력 또는 일반적인 질문—여기에서 연락하세요. 기술적인 도움이 필요하거나 보안 관련 정보를 제공하려면 지원 센터를 방문하세요."
+        "description": "파트너십 및 통합, 자원 지원, 미디어 및 발언, 검증자, 법률, 경력, 또는 일반적인 질문 - 이곳에서 연락해 주세요. 기술 도움말이나 보안 공표를 위한 경우 지원 센터를 방문하세요."
       }
     },
     "donutsecret": {
@@ -1001,7 +1295,7 @@
         "all-apps": "모든 앱"
       },
       "cta": {
-        "title": "가장 빠르게 성장하는 유니버설 앱 에코시스템에 참여하고 사용자 기반을 10배로 늘리고 싶으신가요?",
+        "title": "구고실호 법을주어안해촍 소제요 시리읽주 학네세요?",
         "button": "빌드 시작하기"
       },
       "seo": {
@@ -1011,248 +1305,6 @@
         "og-description": "Push Chain에서 활발하게 운영되고 있는 유니버설 앱과 프로젝트 생태계를 살펴보세요. 실제 크로스체인 사용성을 경험하세요. 브리지나 스왑 없이요.",
         "twitter-title": "Push Chain 생태계 살펴보기 – 유니버설 앱 및 파트너",
         "twitter-description": "Push Chain에서 유니버설 앱과 파트너를 만나보세요. 한 번 개발하여 이더리움, 솔라나, 베이스를 넘어 다양한 사용자에게 도달하세요."
-      }
-    },
-    "home": {
-      "seo": {
-        "title": "Home — keep | The Universal 블록체인 for 앱",
-        "description": "유니버설 앱을 위한 shared-state 블록체인입니다. 한 번 배포하고, 어떤 체인의 사용자에게든 도달하세요. 어떤 지갑을 사용해도 되고, 어떤 토큰으로도 결제할 수 있습니다.",
-        "og-title": "Push Chain - 유니버설 L1 for 앱",
-        "og-description": "EVM 및 non-EVM 사용자 모두를 위한 단 한 번의 배포. 어떤 wallet을 사용하든, 어떤 토큰으로든 결제하세요 — 네트워크 전환은 필요 없습니다.",
-        "twitter-title": "한 번 배포하고, 모든 체인에 도달하세요.",
-        "twitter-description": "블록체인 어디서든 거래하세요. 어떤 월렛이든 사용하세요. 어떤 토큰으로든 결제하세요. 네트워크 전환은 필요 없습니다."
-      },
-      "hero-section": {
-        "title": "어떤 체인, 어떤 앱, 모든 사용자.\n단 하나의 Push Chain.",
-        "description": "유니버설 앱을 위해 구축된 첫 번째 레이어 1입니다. \n한 번 빌드하고 배포하여 모든 체인의 사용자를 온보드하세요.",
-        "primary-button": "빌딩 시작하기",
-        "primary-button-title": "Push Chain으로 빌더 여정을 시작하세요!",
-        "secondary-button": "지식 기반 둘러보기",
-        "secondary-button-title": "Push Chain에 대해 배우고 알아보기",
-        "section-aria-label": "Push Chain hero section - 유니버설 레이어 1 블록체인 소개",
-        "primary-button-aria-label": "Push Chain에서 유니버설 앱 구축 시작 - 개발자 문서로 이동",
-        "secondary-button-aria-label": "지식 기반에서 Push Chain 기능 및 개념에 대해 자세히 알아보세요.",
-        "hero-background-alt": "Push Chain hero 배경 애니메이션으로 유니버설 블록체인 연결을 보여줍니다.",
-        "hero-background-title": "Push Chain - 유니버설 레이어 1 블록체인, 크로스체인 애플리케이션을 위한 플랫폼",
-        "schema-headline": "Push Chain - 앱을 위한 유니버설 L1",
-        "schema-description": "Push Chain에 한 번 배포하면 유니버설 앱으로 모든 블록체인의 사용자를 확보할 수 있습니다."
-      },
-      "whatis-section": {
-        "titleFirst": "진정한",
-        "titleSecondGraditent": "유니버설",
-        "titleThird": "체인",
-        "bottomTextFirst": "한 번 배포하세요,",
-        "bottomTextSecond": "어디든 도달하세요",
-        "bottomLinkText": "시작하기",
-        "bottomLinkTitle": "문서 허브로 이동",
-        "section-aria-label": "Push Chain란 무엇인가 - 유니버설 블록체인 설명",
-        "animation-alt": "Push Chain의 유니버설 앱 배포를 여러 블록체인에서 보여주는 애니메이션",
-        "animation-title": "Push Chain universal 배포 시각화 - 한 번 배포하고 모든 체인에 도달",
-        "bottom-link-aria-label": "유니버설 앱 구축을 시작하기 위해 Push Chain 문서로 이동"
-      },
-      "chain-features-section": {
-        "section-aria-label": "Push Chain 혁신 및 기능 섹션",
-        "header": {
-          "main-text": "분산 혁신을 기반으로 파편화를 제거합니다!",
-          "other-text": "Push는 여러분이 필요로 하는 유일한 유니버설 레이어 1입니다!"
-        },
-        "box1": {
-          "texttitle": "어떤 체인이라도 트랜잭션",
-          "bodytext": "Push Chain은 모든 블록체인의 트랜잭션을 지원합니다. 사용자는 어떤 토큰으로든 가스를 지불할 수 있습니다. 브리징할 필요가 없습니다.",
-          "imagealt": "블록체인 로고들이 핀볼 머신 안으로 떨어지는 모습을 보여주는 일러스트.",
-          "imagetitle": "어떤 블록체인의 트랜잭션도 지원합니다."
-        },
-        "box2": {
-          "texttitle": "Wallet 추상화",
-          "bodytext": "아무런 체인에서나 연결, 상호작용, 거래가 가능하게 만들어줍니다. 소셜 로그인 또는 이메일을 사용하여 웹3의 장벽을 해체하세요. Push Chain에서 사용자가 결정을 내립니다.",
-          "imagealt": "Metamask 지갑, Phantom 지갑 등이 Push Chain 로고가 있는 큰 지갑에서 나오는 모습을 보여주는 일러스트.",
-          "imagetitle": "MetaMask, Phantom 등 기존 월렛은 물론 소셜 로그인도 지원합니다"
-        },
-        "box3": {
-          "texttitle": "100% EVM\n호환 가능",
-          "bodytext": "체인 상 코드를 전혀 사용하지 않고 배포하세요. 몇 분 안에 네이티브 앱을 유니버설 앱으로 전환하세요.",
-          "imagealt": "Ethereum Virtual Machine 로고가 회전하며 100% EVM 호환성을 보여주는 일러스트레이션",
-          "imagetitle": "체인 코드 변경 없이 바로 사용 가능, 100% EVM 호환."
-        },
-        "box4": {
-          "texttitle": "유니버설 스마트 컨트랙트",
-          "bodytext": "한 번 개발하고, 여러 체인에서 실행되는 다단계 경험을 단일하고 미래 지향적인 계약으로 구축하세요.",
-          "imagealt": "이더리움 Virtual Maching 로고와 그 주위를 도는 아크 '100% EVM Compatible'의 일러스트레이션",
-          "imagetitle": "한 번 배포하면 지원되는 모든 체인(EVM 또는 non-EVM)과 즉시 호환됩니다."
-        },
-        "box5": {
-          "texttitle": "유니버설 수수료 추상화\n(Universal Fee\nAbstraction)",
-          "bodytext": "사용자가 브리징 없이 모든 체인에서 모든 토큰으로 가스 비용을 지불할 수 있도록 합니다.",
-          "imagealt": "비트코인, 이더리움, 솔라나 로고들이 Push Chain 주변을 회전하는 모습",
-          "imagetitle": "어떤 체인의 어떤 토큰이라도 트랜잭션에 사용할 수 있도록 지원합니다."
-        },
-        "box6": {
-          "texttitle": "유니버설 실행 레이어",
-          "bodytext": "웹3 전반에 걸쳐 원자적이고 조합 가능한 앱을 구축하세요. 여러 체인의 사용자가 동일한 앱으로 거래함으로써 전에 없던 앱 경험을 만들어보세요.",
-          "imagealt": "다양한 테트리스 블록들이 웜홀을 통해 Push Chain 로고가 나오는 것을 보여주는 일러스트.",
-          "imagetitle": "Push Chain에서 모든 체인의 트랜잭션이 확정되어 사용자가 어떤 체인이든 네이티브하게 동일한 앱, 즉 유니버설 실행 레이어를 사용할 수 있습니다."
-        },
-        "box7": {
-          "texttitle": "상태 접근",
-          "bodytext": "스마트 컨트랙트에서 다른 체인의 계정 및 상태 데이터를 액세스하세요.",
-          "tagText": "COMING SOON",
-          "tags": {
-            "title1": "체인에서 읽기"
-          },
-          "imagealt": "Push Chain이 블록 스타일 애니메이션으로 성장하는 모습을 보여주는 그림.",
-          "imagetitle": "(로드맵) 공유 상태를 통해 스마트 컨트랙트에서 다른 체인의 계정 및 상태 데이터에 액세스할 수 있습니다."
-        },
-        "box8": {
-          "texttitle": "유니버설\n밸리데이터",
-          "bodytext": "스마트 컨트랙트를 사용하여 어떤 체인에서든 트랜잭션을 트리거, 검증 및 완료하세요.",
-          "tagText": "COMING SOON",
-          "tags": {
-            "title1": "체인에 쓰기"
-          },
-          "imagealt": "다양한 색상의 테트리스 블록들이 합쳐지고 변화하는 모습.",
-          "imagetitle": "(로드맵) 유니버설 밸리데이터는 사용자가 스마트 컨트랙트를 사용하여 모든 체인에서 트랜잭션을 트리거, 유효성을 확인하고 완료할 수 있도록 합니다."
-        },
-        "footer": {
-          "title": "앱의 사용자 기반을 유니버설하게 확장하세요",
-          "secondary": "노력 없이!",
-          "ctatext": "프로젝트 시작하기",
-          "ctatitle": "한 번 배포하고, 사용자 기반을 10배 확장하세요. 개발자 문서 방문."
-        }
-      },
-      "partners-section": {
-        "section-aria-label": "Push Chain 생태계 파트너 및 통합",
-        "title": "Powered by Push Chain",
-        "subtitle": "Push Chain에 배포하는 것만으로 사용자 기반을 늘린 앱을 살펴보세요.",
-        "ctatitle": "Push Chain에 배포된 파트너, 앱 및 인프라를 확인해보세요",
-        "ctatext": "에코시스템 살펴보기",
-        "partners-grid-aria-label": "Web3 프로젝트에서 Push Chain을 사용하는 파트너 로고 그리드",
-        "partner-logo-title-prefix": "파트너 로고 - ",
-        "partner-logo-alt-prefix": "Logo of ",
-        "mobile-view-aria-label": "Push Chain 생태계 파트너 모바일 보기"
-      },
-      "stats-section": {
-        "section-aria-label": "Push Chain의 성능 통계 및 지표",
-        "title": "달성하세요",
-        "titleGradient": "즉시",
-        "titleThird": "상호 운용성",
-        "description": "성능 최적화.\n높은 TPS, 초저렴한 gas, 그리고 실시간 앱 실행을 위한 1초 미만의\nfinality를 제공합니다.",
-        "animation-alt": "Push Chain의 여러 블록체인 간의 즉각적인 상호운용성을 보여주는 인터랙티브 애니메이션",
-        "animation-title": "Push Chain의 즉각적인 상호운용성 시각화",
-        "stats": {
-          "stat1": {
-            "title": "지원하는 체인",
-            "imagealt": "지원하는 체인의 모습을 보여주는 일러스트",
-            "imagetitle": "이더리움, 솔라나, 바이낸스 체인 등 지원하는 모든 체인 목록"
-          },
-          "stat2": {
-            "title": "TPS",
-            "description": "4.2k"
-          },
-          "stat3": {
-            "title": "네이티브 파이널리티",
-            "description": "즉시"
-          },
-          "stat4": {
-            "title": "네이티브 블록 시간",
-            "description": "1초"
-          }
-        }
-      },
-      "blog-section": {
-        "subtitle": "뉴스, 개발 일지 및 아이디어",
-        "subtitle-aria-label": "블로그 카테고리 정보",
-        "title": "Push Chain의 맥박을 느껴보세요",
-        "title-aria-label": "최신 Push Chain 블로그 게시물 및 업데이트",
-        "explore-link-text": "더 많은 기사 보기",
-        "explore-link-title": "Push Chain 블로그를 방문하여 모든 기사와 업데이트를 확인하세요.",
-        "explore-link-aria-label": "Push Chain 블로그 페이지로 이동",
-        "section-aria-label": "Push Chain 블로그 게시물 및 뉴스 섹션",
-        "blog-posts-list-aria-label": "최신 Push Chain 블로그 게시물",
-        "blog-post-aria-label": "{title}에 대한 블로그 게시물 읽기",
-        "blog-post-title-prefix": "블로그 게시글 읽기 - ",
-        "loading-text": "최신 블로그 게시물 로딩 중...",
-        "error-text": "현재 블로그 게시물을 불러올 수 없습니다.",
-        "no-posts-text": "블로그 게시물이 없습니다."
-      },
-      "trustedby-section": {
-        "title": "웹3 개척자들의 신뢰를 받는 팀이 만들었습니다",
-        "section-aria-label": "Push Chain 신뢰하는 곳",
-        "trusted-by-alt": "투자자 - "
-      },
-      "featured-section": {
-        "aria-label": "Featured On 섹션",
-        "tag": "FEATURED ON",
-        "title": " Push 체인 강조",
-        "subtitle": "저희 말만 믿지 마세요. 미디어가 진정한 유니버설 체인에 대해 말하는 것을 직접 확인해 보세요.",
-        "articles-image-alt": "Media coverage from ",
-        "articles-text": "전체 기사 보기",
-        "articles-title-1": "다음 기사 읽어보기",
-        "articles-title-2": "'s 생각에 대한 Push Chain 상세 설명",
-        "articles": {
-          "binance-chain": {
-            "text": "Push Protocol, Web3를 위한 선도적인 탈중앙화 커뮤니케이션 프로토콜이 BNB 체인에 출시되었음을 알려드립니다."
-          },
-          "coindesk": {
-            "text": "프로토콜 빌리지: Unstoppable이 Push Protocol과 협력하여 토큰 게이트된 그룹 채팅 제공"
-          },
-          "defiant": {
-            "text": "Unstoppable Domains에서 토큰 게이트된 그룹 채팅을 시작합니다. Push Protocol과의 협력을 통해 허위 정보 및 사기를 방지하는 것을 목표로 합니다."
-          },
-          "balaji": {
-            "text": "사용자 제어 알림. Apple과 Google 두 회사가 수십억 대의 스마트폰에 대한 푸시 알림을 제어합니다."
-          },
-          "defiprime": {
-            "text": "Harsh Rajat는 미래의 은행 시스템, EPNS 프로토콜 인센티브, 그리고 탈중앙화된 푸시 알림의 비즈니스 모델에 대해 이야기합니다."
-          },
-          "ethfoundation": {
-            "text": "HackMoney 이후 Richa와 Harsh는 EPNS를 \"웹3의 누락된 부분\"이라고 부르며 엄청난 에너지를 쏟아부었습니다."
-          },
-          "beincrypto": {
-            "text": "Web3 통신 네트워크 작동 방식: 기술 심층 분석"
-          },
-          "the-block": {
-            "text": "Web3 알림 프로토콜 Push가 자체 Layer 1 체인을 출시합니다."
-          },
-          "business-insider": {
-            "text": "Push, Push Chain을 공개합니다: 유니버설 블록체인 앱의 미래"
-          },
-          "chainwire": {
-            "text": "Push, Push Chain 공개: 유니버설 블록체인 애플리케이션의 미래."
-          },
-          "benzinga": {
-            "text": "Push, Push Chain 공개: 범용 블록체인 애플리케이션의 미래"
-          },
-          "crypto-briefing": {
-            "text": "Push, Push Chain 공개: 유니버설 블록체인 앱의 미래"
-          },
-          "cryptoslate": {
-            "text": "Push Protocol launches Push Chain to unify 블록체인 communication and transactions"
-          },
-          "messari": {
-            "text": "EPNS는 분산형 알림을 수신하는 사용자를 위한 인센티브와 수동적 수익을 가능하게 합니다."
-          },
-          "coin-telegraph-1": {
-            "text": "Harsh Rajat, Push Protocol 창립자이자 프로젝트 리더는 최신 Hashing It Out 에피소드에서 Web3 채팅 애플리케이션 개발 급증에 대해 설명합니다."
-          },
-          "coin-telegraph-2": {
-            "text": "Unstoppable Domains, 사용자 이름 보유자를 위한 배지 게이트 그룹 채팅 기능을 출시했습니다."
-          }
-        }
-      },
-      "ending-section": {
-        "aria-label": "유니버설 앱 빌드 섹션",
-        "section-title": "유니버설 앱을 구축하세요.",
-        "section-subtitle": "사일로를 깨고, 한 번 구축하면 모든 블록체인에서 확장하세요.",
-        "docs-link": {
-          "text": "Push Chain 문서를 살펴보기",
-          "title": "Push Chain 문서 및 개발자 리소스를 살펴보세요",
-          "aria-label": "Push Chain 문서를 새 탭에서 열기"
-        },
-        "cta-link": {
-          "text": "LFG Push Chain",
-          "title": "Push Chain으로 시작하세요 - 범용 블록체인 플랫폼",
-          "aria-label": "Push Chain 개발 시작하기"
-        }
       }
     }
   },
@@ -1310,10 +1362,11 @@
           "answer": "<1>이미 사용하고 있는 지갑을 사용하세요 — Push가 백그라운드에서 크로스체인 작업을 처리합니다.</1><1>1. <2>어디서든 시작하세요.</2> 어떤 체인의 어떤 지갑이든 사용해도 됩니다 — 네트워크 전환이 필요하지 않습니다.</1><1>2. <2>한 번만 서명하세요.</2> 이미 보유하고 있는 토큰으로 결제하세요. 저희가 홈 체인에서 수수료를 따로 준비합니다.</1><1>3. <2>저희가 경로를 찾습니다.</2> Push에 연결된 계정(여전히 본인 소유)이 앱으로 콜을 전달합니다 — 비수탁 방식입니다.</1><1>4. <2>본인은 항상 본인입니다.</2> 본인의 홈 체인 지갑을 Push에 연결된 계정과 매칭하여 작업이 Push에서 올바르게 확인되고 귀하에게 속하는지 확인합니다.</1><1>5. <2>빠르게 완료됩니다.</2> 앱은 Push에서 실행됩니다. 수수료는 백그라운드에서 처리됩니다. 브리지나 새로운 지갑이 필요하지 않습니다.</1><1>이것이 모든 체인의 사용자가 Push Chain에 배포된 동일한 앱을 사용할 수 있는 방법입니다 — 앱을 진정으로 universal하게 만드는 방법입니다.</1>"
         },
         "qna3": {
+          "question": "블록체인이나 가스 토큰이 달라야 하나요?",
           "answer": "<1><2>아니요.</2></1><1><2>기존 월렛을 유지하세요.</2> 이미 가지고 있는 월렛을 사용하세요 — 새로운 월렛이나 계정이 필요하지 않습니다.</1><1><2>보유하신 자산으로 결제하세요.</2> 수수료는 홈 체인에서 이미 보유하고 계신 토큰으로 결제할 수 있습니다. 저희가 백그라운드에서 변환을 처리합니다.</1><1><2>네트워크 전환은 필요하지 않습니다.</2> 가스 토큰을 얻기 위해 브리징할 필요가 없습니다 — 홈 체인에 머무르세요.</1><1><2>비수탁입니다.</2> 모든 작업을 직접 서명합니다 — Push는 키를 보관하지 않습니다.</1><1><2>백그라운드에서 처리됩니다.</2> 네트워크는 자동으로 $PC로 수수료를 정산합니다 — 직접 관리할 필요가 없습니다.</1>"
         },
         "qna4": {
-          "question": "이것이 브리ッジ나 메시징 레이어와 어떻게 다른가요?",
+          "question": "브릿지나 메시징 레이어와 어떻게 다른가요?",
           "answer": "<1><2>간단한 답변:</2> Push는 앱이 실행되는 곳입니다. 브리지/메시징은 단순히 체인 간에 토큰이나 메시지를 이동시키는 것으로, 사용자 및 개발자에게 복잡성을 더합니다.</1><1><2>단일 홈 vs 많은 복제본.</2> 브리지/메시징을 사용하면 체인별로 배포하고 메시지를 통해 동기화합니다. Push에서는 한 번 배포하면 됩니다. 모든 사용자가 동일한 컨트랙트와 공유 상태에 액세스합니다.</1><1><2>래핑된 자산이나 필수 브리징 없음.</2> 사용자는 자신의 홈 체인에 머물면서 이미 보유하고 있는 것을 사용하여 결제합니다. 저희가 내부적으로 라우팅 및 수수료 변환을 처리합니다.</1><1><2>통합된 신원 및 검증.</2> 모든 지갑/체인에서 서명을 받아 Push에서 동일한 사용자에게 속성합니다 — 비수탁 방식입니다.</1><1><2>더 적은 이동 부품.</2> 체인 간 승인 춤, 가스 토큰 사냥, 동기화를 유지해야 하는 접착 컨트랙트가 없습니다.</1><1><2>브리지는 복잡성을 초래합니다. 체인 기본 상호 운용성이 이를 해결합니다.</2> 브리지는 복잡한 엔지니어링 노력, 시간, 감사 비용 및 추가 인프라가 필요합니다. 체인 기본 상호 운용성은 앱이 기본적으로 상속하므로 작동합니다.</1><1>결과: 더 간단한 앱, 단일 진실 공급원, 사용자가 그렇지 않은 것처럼 보이는 UX.</1>"
         },
         "qna5": {
@@ -1356,7 +1409,7 @@
         },
         "qna3": {
           "question": "Donut 테스트넷 토큰은 어떻게 얻을 수 있나요?",
-          "answer": "<1>테스트 토큰을 요청하려면 <3>페이크</3>를 사용하세요.</1><1><2>메모:</2> 속도 제한이 적용될 수 있고 일부 페이크는 간단한 인증을 요구할 수 있습니다. 페이크가 실패하면 <4>디스코드</4>에서 저희에게 연락해주세요.</1>",
+          "answer": "<1>테스트 토큰을 요청하려면 <3>Faucet</3> 사용하세요.</1><1><2>참고 사항:</2> 할당량이 있거나, 간단한 인증이 필요할 수도 있습니다. faucet가 작동하지 않으면 <4>디스코드</4>에서 저희에게 메시지를 보세요.</1>",
           "faucet-url-title": "Push Chain 탭에서 탭 열기.",
           "discord-url-title": "Push Chain Discord에 참여하세요."
         },
@@ -1727,31 +1780,52 @@
         }
       }
     },
+    "ecosystem-essentials": {
+      "title": "필수 테스트넷 앱 살펴보기",
+      "apps": {
+        "pc-faucet": {
+          "name": "PC 파이프",
+          "description": "여기에서 PC 테스트넷 토큰을 받아보세요"
+        },
+        "push-bridge": {
+          "name": "Push Bridge",
+          "description": "체인 간 토큰을 이동하세요"
+        },
+        "simulate-tx": {
+          "name": "거래 시뮬레이션",
+          "description": "유니버설 트랜잭션을 시뮬레이션합니다."
+        },
+        "push-chain-scan": {
+          "name": "Push Chain 스캔",
+          "description": "Push Chain의 블록체인 탐색기"
+        },
+        "wallet": {
+          "name": "지갑",
+          "description": "푸시 체인의 유니버설 월렛"
+        }
+      }
+    },
     "ecosystem-apps-partners": {
       "apps": {
-        "zappi-to": {
-          "name": "Zappi.to",
-          "description": "당신의 암호화폐, 당신의 규칙: 모든 체인에서 원활한 결제."
-        },
-        "degen-chess": {
-          "description": "게임을 플레이하고, 베팅하고, 스트리밍하고, 승자를 예측하여 풀에서 상금을 획득하세요.",
-          "name": "데겐 체스"
-        },
         "halo": {
-          "name": "HALO"
+          "name": "HALO",
+          "description": "에이전틱 커머스를 위한 통합 인프라 레이어."
         },
         "tip-up": {
-          "name": "티업"
+          "name": "티업",
+          "description": "어떤 지갑으로든 모든 체인에서 팁을 주세요"
         },
         "push-swap": {
           "description": "브릿지 없이 크로스 체인 토큰 스왑을 원활하게提供합니다",
           "name": "푸시 스와프"
         },
         "push-campus": {
-          "name": "푸시 캠퍼스"
+          "name": "푸시 캠퍼스",
+          "description": "Ethereum, Solana, Base 등 15개 이상의 체인에서 학생들에게 다가가세요"
         },
         "push-dex": {
-          "name": " PushDex"
+          "name": " PushDex",
+          "description": "Pushchain 테스트넷 위에 구축된 DEX"
         },
         "ramen-swap": {
           "name": "라면 스왑",
@@ -1766,7 +1840,8 @@
           "description": "ERC-20 토큰 생성 및 발행하기"
         },
         "eon-ai-butler": {
-          "name": "이온: AI 보조인"
+          "name": "이온: AI 보조인",
+          "description": "지원되는 네트워크 전반에서 자산을 보내고, 스왑하고, 관리하세요"
         },
         "push-bet": {
           "name": "푸시 배트",
@@ -1789,7 +1864,8 @@
           "description": "소개에 따라 호출별 API 수익화 서비스"
         },
         "bountive": {
-          "name": "버전티브"
+          "name": "버전티브",
+          "description": "클릭 수보다 품질을 보상하는 유니버설 성장 엔진"
         },
         "beat-brawls": {
           "name": "비트배틀",
@@ -1817,7 +1893,8 @@
           "description": "자동화된 암호화폐 상속"
         },
         "pusd": {
-          "name": "PUSD"
+          "name": "PUSD",
+          "description": "모든 체인의 USD 유동성을 결합한 1:1 페그 스테이블코인"
         },
         "freename": {
           "name": "프리네임",
@@ -1826,6 +1903,10 @@
         "hang4-fun": {
           "name": "한글4.0",
           "description": "곧 출시될 예정입니다"
+        },
+        "degen-chess": {
+          "name": "데겐 체스",
+          "description": "플레이하고, 베팅하고, 스트리밍하며 승자를 맞춰 상금을 획득하세요"
         },
         "omnihub": {
           "name": "오미니허브",
@@ -1852,7 +1933,8 @@
           "description": "블록체인 활동으로 가상 애완동물을 키워보세요."
         },
         "surf-layer": {
-          "name": "서프레이어"
+          "name": "서프레이어",
+          "description": "70개 이상의 체인에서 정체성을 구축하고 보상을 받으세요."
         },
         "push-name-service": {
           "name": "푸시 네임 서비스",
@@ -1869,6 +1951,10 @@
         "puffles": {
           "name": "Puffles",
           "description": "Push Chain 최고의 NFT 런치패드"
+        },
+        "zappi-to": {
+          "name": "Zappi.to",
+          "description": "당신의 크립토, 당신의 규칙: 모든 체인에서 원활한 결제를 경험하세요."
         }
       },
       "coming-soon": "곧 개봉",
@@ -1884,48 +1970,12 @@
         },
         "hacken": {
           "name": "Hacken",
-          "description": "엔드 투 엔드 블록체인 보안 및 컴플라이언스 파트너"
-        }
-      }
-    },
-    "ecosystem-essentials": {
-      "title": "테스트넷 앱을 탐구하세요",
-      "apps": {
-        "pc-faucet": {
-          "name": "PC 파이프",
-          "description": "여기에서 PC 테스트넷 토큰을 받아보세요"
-        },
-        "push-bridge": {
-          "name": "Push Bridge",
-          "description": "체인 간 토큰을 이동하세요"
-        },
-        "simulate-tx": {
-          "name": "거래 시뮬레이션",
-          "description": "유니버설 트랜잭션을 시뮬레이션합니다."
-        },
-        "push-chain-scan": {
-          "name": "Push Chain 스캔",
-          "description": "Push Chain의 블록체인 탐색기"
-        },
-        "wallet": {
-          "name": "지갑",
-          "description": "푸시 체인의 유니버설 지갑"
+          "description": "엔드투엔드 블록체인 보안 및 컴플라이언스 파트너"
         }
       }
     }
   },
   "notifications": {
-    "chain-notification": {
-      "description": "감사 완료. 다음은 메인넷입니다 👀 전체 감사 보고서를 읽어보세요.",
-      "button-text": "Push Chain 감사 보고서",
-      "button-title": "Push Chain 감사 보고서",
-      "button-aria-label": "시작하기!. 여기서 확인해 보세요",
-      "image-alt": "시작하기!",
-      "title": "",
-      "close-button-title": "토스트 알림 닫기",
-      "close-button-aria-label": " Push Chain 알림을 닫습니다.",
-      "container-aria-label": "푸시체인 토스트 알림"
-    },
     "rewards-notification": {
       "title": "Donut Testnet Closed beta가 시작되었습니다!",
       "description": "Donut testnet을 미리 살펴보세요. universal 앱을 구축하고 상품을 받아보세요!",
@@ -1935,9 +1985,9 @@
       "container-aria-label": "Push Chain rewards 알림"
     },
     "info-bar": {
-      "title": "시즌 3 초대 전용 혜택이 시작되었습니다!",
-      "learn-more-text": "시즌 3 살펴보기",
-      "learn-more-title": "시즌 3 살펴보기",
+      "title": "촜나어 호소신용 해주음세요. 먹약문성을 3오이해주대재.",
+      "learn-more-text": "대하약 세질",
+      "learn-more-title": "해울북도가",
       "dismiss-button-title": "공지 닫기",
       "dismiss-button-aria-label": "공지사항 막기",
       "container-aria-label": "사이트 공지사항",
@@ -1950,6 +2000,17 @@
       "close-button-title": "알림 닫기",
       "close-button-aria-label": "Push Metamask Snap 알림 닫기",
       "container-aria-label": "Push MetaMask Snap 공지"
+    },
+    "chain-notification": {
+      "title": "",
+      "close-button-title": "토스트 알림 닫기",
+      "close-button-aria-label": " Push Chain 알림을 닫습니다.",
+      "container-aria-label": "푸시체인 토스트 알림",
+      "description": "감사 완료. 메인넷이 다음이에요 👀 전체 감사 보고서를 읽어보세요.",
+      "button-text": "Push Chain 감사 보고서",
+      "button-title": "Push Chain 감사 보고서",
+      "button-aria-label": "시작하기! 여기서 확인해보세요",
+      "image-alt": "시작하기!"
     }
   }
 }

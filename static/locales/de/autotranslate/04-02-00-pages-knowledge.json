@@ -1,9 +1,18 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain testnet ist live. Melden Sie sich für unseren Newsletter an, um exklusive Updates zu erhalten."
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "subtitle": "Entdecken Sie die Audit-Berichte von Push Chain und sehen Sie, wie unabhängige Sicherheitsüberprüfungen von Top-Firmen das Infrastruktur-Modell bestätigen, auf dem Sie bauen.",
+                  "ctatitle": "Mehr erfahren"
+                }
+              }
+            }
+          }
         }
       }
     }

@@ -1,9 +1,18 @@
 {
   "pages": {
     "knowledge": {
-      "hero-section": {
-        "email-signup": {
-          "description": "Push Chain testnet लाइव है। विशेष अपडेट के लिए हमारी मेलिंग लिस्ट में शामिल हों।"
+      "explainer-section": {
+        "blocks": {
+          "sections": {
+            "resources": {
+              "items": {
+                "audit": {
+                  "title": "आडिट रिपोर्ट्स",
+                  "ctatitle": "और जानें"
+                }
+              }
+            }
+          }
         }
       }
     }

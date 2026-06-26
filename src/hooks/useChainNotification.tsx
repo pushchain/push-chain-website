@@ -16,10 +16,6 @@ import { device } from '@site/src/config/globals';
 
 type NotificationProps = {
   image?: ReactNode;
-  /* Title of the notification */
-  title?: string;
-  /* Description of the notification */
-  description?: string;
   /* Optional onClose action for the notification */
   onClose?: () => void;
   /* Custom React component to be passed as the image. */
@@ -30,21 +26,16 @@ type NotificationProps = {
   position?: 'bottom-right' | 'bottom-left' | 'top-center';
   /* Optional duration of the notification component */
   duration?: number;
-  /* Translation function */
-  t?: (key: string) => string;
 };
 
 // Custom Hook
 export const useChainNotification = () => {
   const [hasMounted, setHasMounted] = useState(false);
-  const { t } = useTranslation();
 
   const showNotification = () => {
     const toastId = toast.custom(
       () => (
         <NotificationItem
-          title={t('notifications.chain-notification.title')}
-          description={t('notifications.chain-notification.description')}
           position='bottom-left'
           onClick={() => {
             localStorage.setItem('pushHackenNotification', 'true');
@@ -55,7 +46,6 @@ export const useChainNotification = () => {
             localStorage.setItem('pushHackenNotification', 'true');
             toast.dismiss(toastId);
           }}
-          t={t}
         />
       ),
       {
@@ -87,13 +77,11 @@ export const Notification = () => {
 };
 
 // Notification Item Component
-const NotificationItem: FC<NotificationProps> = ({
-  title,
-  description,
-  onClick,
-  onClose,
-  t,
-}) => {
+const NotificationItem: FC<NotificationProps> = ({ onClick, onClose }) => {
+  const { t } = useTranslation();
+  const title = t('notifications.chain-notification.title');
+  const description = t('notifications.chain-notification.description');
+
   const handleNotificationClick = () => onClick?.();
   const handleNotificationClose = () => {
     onClose?.();
@@ -104,7 +92,7 @@ const NotificationItem: FC<NotificationProps> = ({
     <NotificationContainer
       onClick={handleNotificationClick}
       role='alert'
-      aria-label={t?.('notifications.chain-notification.container-aria-label')}
+      aria-label={t('notifications.chain-notification.container-aria-label')}
       aria-describedby='chain-notification-content'
       aria-live='assertive'
     >
@@ -113,8 +101,8 @@ const NotificationItem: FC<NotificationProps> = ({
           e.stopPropagation();
           handleNotificationClose();
         }}
-        title={t?.('notifications.chain-notification.close-button-title')}
-        aria-label={t?.(
+        title={t('notifications.chain-notification.close-button-title')}
+        aria-label={t(
           'notifications.chain-notification.close-button-aria-label'
         )}
       >
@@ -123,14 +111,16 @@ const NotificationItem: FC<NotificationProps> = ({
       <TextContainer id='chain-notification-content'>
         <PushLogoBlackContainer>
           <Image
+            className='img'
             src={
               require(
                 `@site/static/assets/website/notifications/push-hacken.webp`
               ).default
             }
-            alt={t?.('notifications.chain-notification.image-alt')}
+            alt={t('notifications.chain-notification.image-alt')}
             loading='lazy'
-            width={220}
+            // height={300}
+            // width={'auto'}
           />
         </PushLogoBlackContainer>
         {title && <NotificationTitle>{title}</NotificationTitle>}
@@ -145,10 +135,10 @@ const NotificationItem: FC<NotificationProps> = ({
           fontFamily='DM Sans'
           width='100%'
           padding={`16px 16px`}
-          title={t?.('notifications.chain-notification.button-title')}
-          aria-label={t?.('notifications.chain-notification.button-aria-label')}
+          title={t('notifications.chain-notification.button-title')}
+          aria-label={t('notifications.chain-notification.button-aria-label')}
         >
-          {t?.('notifications.chain-notification.button-text')}
+          {t('notifications.chain-notification.button-text')}
         </Button>
       </TextContainer>
     </NotificationContainer>
@@ -163,6 +153,8 @@ const NotificationContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  // min-height: 300px;
+  height: 100%;
   width: 275px;
   cursor: pointer;
   box-sizing: border-box;
@@ -174,9 +166,9 @@ const NotificationContainer = styled.div`
     display: none;
   }
 
-  img {
+  .img {
     width: 100%;
-    height: auto;
+    height: 130px;
     margin: 0 auto;
   }
 `;

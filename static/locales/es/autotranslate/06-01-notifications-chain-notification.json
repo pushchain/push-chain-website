@@ -1,12 +1,1 @@
-{
-  "notifications": {
-    "chain-notification": {
-      "description": "Auditoría completada. Mainnet a continuación 👀 Lee el informe completo de la auditoría.",
-      "button-text": "Informe de auditoría de Push Chain",
-      "button-title": "Informe de auditoría de Push Chain",
-      "button-aria-label": "¡Comienza ahora!. Puedes echarle un vistazo aquí",
-      "image-alt": "¡Comienza!",
-      "title": ""
-    }
-  }
-}
+{}

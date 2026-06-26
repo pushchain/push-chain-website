@@ -1,1 +1,19 @@
-{}
+{
+  "pages": {
+    "home": {
+      "chain-features-section": {
+        "box7": {
+          "texttitle": "ブライジクは剂れ",
+          "imagetitle": "(ロードマップ) フレコトロースクを田台さの標きためトシガシンディー、ドを手叠さの標きため放上してへしはトメー。"
+        },
+        "box8": {
+          "tags": {
+            "title1": "フレド、末置を压"
+          },
+          "imagealt": "ブロックチェーンが成長するアニメーションを示すイラスト。",
+          "imagetitle": "\nロードマップ\n\ntoken allows access to account and state data from other chains in your smart contract.\n"
+        }
+      }
+    }
+  }
+}
