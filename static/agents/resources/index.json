@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "version": "1.0.1",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Downloadable, runnable code resources organized by developer skill. Each subdirectory is self-contained and can be copied directly into a project. Resources are the execution counterpart to the skill .md files.",
   "resources": [
     {

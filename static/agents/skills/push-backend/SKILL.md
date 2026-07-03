@@ -1,18 +1,15 @@
 ---
 name: push-backend
 description: "Use when writing Node.js scripts, bots, or server-side code with @pushchain/core - covers PushChain.initialize, wrapping ethers/viem/Solana keypairs into a UniversalSigner, all three routes, multichain cascades, transaction tracking, and utility functions. Not for browser or React code. Triggers on: 'initialize PushChain client in Node.js', 'send transaction from backend script', 'wrap ethers signer with toUniversal', 'track transaction by hash'."
-id: push-backend
-intent: Execute universal transactions from server-side code, scripts, bots, and automation
-package: '@pushchain/core'
-package_version: 6.0.16
-current_sdk_version: 6.0.16
-entry: 'PushChain.initialize'
-resources: 'https://push.org/agents/resources/push-backend/index.json'
-references:
-  - references/signer-options.md
-  - references/initialize-client.md
-  - references/send-universal-transaction.md
-  - ../../workflows/send-multichain-transaction.md
+metadata:
+  id: push-backend
+  intent: 'Execute universal transactions from server-side code, scripts, bots, and automation'
+  package: '@pushchain/core'
+  package_version: '6.0.19'
+  current_sdk_version: '6.0.19'
+  entry: 'PushChain.initialize'
+  resources: 'https://push.org/agents/resources/push-backend/index.json'
+  references: 'references/signer-options.md, references/initialize-client.md, references/send-universal-transaction.md, ../../workflows/send-multichain-transaction.md'
 ---
 
 # Skill: Universal Transactions - Backend (Node.js / Scripts)
@@ -158,6 +155,8 @@ Always two steps - create a chain-native signer, then convert it to a `Universal
 | Ethereum / EVM (viem)      | `createWalletClient({ account, transport: http(rpc) })` ← RPC picks chain | `PushChain.utils.signer.toUniversal(viemClient)`                             |
 | Solana                     | `Keypair.fromSecretKey(...)`                                              | `PushChain.utils.signer.toUniversalFromKeypair(keypair, { chain, library })` |
 | Custom / any               | implement `signMessage`, `signAndSendTransaction`, `signTypedData`        | `PushChain.utils.signer.construct(account, signingMethods)`                  |
+
+> **Atomic batching capability (EIP-7702).** `toUniversal` also wires an optional `signAuthorization` method for ethers v6 `Wallet` and viem **local** accounts - this is what lets a Push-native EOA run [multicall](#multicall---batch-multiple-calls) atomically in one EIP-7702 tx. JSON-RPC/browser accounts and ethers v5 can't sign 7702 authorizations, so multicall falls back to sequential execution. Custom signers can pass `signAuthorization` in `construct` to opt in - see [signer-options reference](references/signer-options.md).
 
 See all supported chains: `PushChain.utils.chains.getSupportedChainsByName(PushChain.CONSTANTS.PUSH_NETWORK.TESTNET)`
 
@@ -439,16 +438,24 @@ await tx.wait();
 
 Pass an array to `tx.data` and set `tx.to` to the zero address. The zero-address target signals multicall mode to the SDK; individual call targets are in the `data` array.
 
-> **External-chain origin only.** Push-native senders cannot use multicall and the SDK will throw. Ensure the signer's origin is an external chain when using this pattern.
+Multicall works from **any origin**:
+
+- **External-chain origin** (Ethereum, Solana, BNB, ...) - the batch executes atomically through the UEA (unchanged behavior).
+- **Push-native EOA origin** - the batch executes atomically in a **single EIP-7702 type-4 transaction** via the PushBatchExecutor when the signer can sign EIP-7702 authorizations. `PushChain.utils.signer.toUniversal` wires this automatically for ethers v6 `Wallet` and viem **local** accounts (e.g. `privateKeyToAccount`). If the signer can't sign an authorization (JSON-RPC/browser wallets, ethers v5), the SDK logs a warning and safely falls back to sequential per-call execution - **non-atomic**: an earlier call stays committed if a later one reverts.
+
+Check `atomic` on the response to know which path ran (`true` = single atomic tx; `false` = sequential fallback).
+
+> **Zero address rule.** Only the **outer** `tx.to` is the zero address (that's what signals multicall mode). Every **inner** entry's `to` must be an explicit non-zero target - a zero inner `to` is rejected with a `PushChainExecutionError` (the EIP-7702 executor reinterprets a zero target as the account itself).
 
 ```ts
-await client.universal.sendTransaction({
-  to: '0x0000000000000000000000000000000000000000', // required for multicall
+const tx = await client.universal.sendTransaction({
+  to: '0x0000000000000000000000000000000000000000', // required for multicall (outer target only)
   data: [
-    { to: '0xContract1', value: 0n, data: call1Data },
+    { to: '0xContract1', value: 0n, data: call1Data }, // inner targets must be non-zero
     { to: '0xContract2', value: 0n, data: call2Data },
   ],
 });
+console.log('atomic:', tx.atomic); // false = Push-native sequential fallback ran
 ```
 
 ---
@@ -466,6 +473,7 @@ await client.universal.sendTransaction({
 | `chainId`              | `string`                                 | Push Chain ID (`'42101'` on testnet)       |
 | `blockNumber`          | `bigint`                                 | Block number                               |
 | `nonce`                | `number`                                 | UEA nonce                                  |
+| `atomic`               | `boolean`                                | `true` for a single tx or an atomic batch (EIP-7702 or UEA multicall); `false` only when a Push-native multicall fell back to sequential execution |
 | `gasLimit`             | `bigint`                                 | Gas limit                                  |
 | `gasPrice`             | `bigint`                                 | Gas price (wei)                            |
 | `maxFeePerGas`         | `bigint`                                 | EIP-1559 max fee                           |
@@ -626,6 +634,8 @@ Use this to re-check progress of a previously submitted transaction - after a pa
 | `options.advanced.rpcUrls`           | `Partial<Record<CHAIN, string[]>>` | `{}`                                           | Custom RPC URLs for status queries                                        |
 
 Returns the same `UniversalTxResponse` shape as `sendTransaction`.
+
+> On Push Chain Donut, history-sensitive lookups (transactions/receipts pruned from the default RPC) transparently fall back to the archive RPC (`https://archive.evm.donut.rpc.push.org/`) - old tx hashes resolve without any extra option.
 
 ```ts
 // Track a Push Chain tx
@@ -1051,6 +1061,7 @@ Full reference: https://push.org/agents/workflows/use-contract-helpers.md
 | Silent tx failure (no throw, no logs)                        | `tx.wait()` resolves even on reverts - always check `receipt.status === 1`                                     |
 | Private key in source code                                   | Use `process.env.PRIVATE_KEY` - never hardcode keys in scripts or commit them to version control               |
 | Treating `client.universal.account` as `{ address }` object — `account.address` returns `undefined` | `account` is a **plain address string**, not an object. Only `origin` has the `{ address, chain }` shape. Read it directly: ``const me = client.universal.account; // `0x${string}` ``. |
+| Multicall rejected with `PushChainExecutionError` about a zero `to` address     | Only the **outer** `tx.to` is the zero address (multicall marker). Every entry inside the `data` array needs an explicit non-zero target. |
 
 > For Solana targets, use `encodeTxData({ idl, functionName, args })` and pass the result as `tx.data` - same `{ to, value, data }` shape as EVM. The SDK resolves program accounts, PDAs, and the sender's CEA automatically from the IDL.
 >

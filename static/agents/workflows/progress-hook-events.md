@@ -1,6 +1,6 @@
 # ProgressHook Events Reference
 
-Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions` in `@pushchain/core@6.0.16`. Pass a callback to `tx.progressHook` to receive these events.
+Complete list of `progressHook` event IDs emitted by `sendTransaction` and `executeTransactions` in `@pushchain/core@6.0.19`. Pass a callback to `tx.progressHook` to receive these events.
 
 ## Event Object Shape
 
@@ -155,6 +155,10 @@ Emitted by the auto-upgrade flow when `getAccountStatus().uea.requiresUpgrade ==
 | `UEA-MIG-9901` | UEA Migration Successful | SUCCESS | `{ version }` |
 | `UEA-MIG-9902` | UEA Migration Failed | ERROR | `{ error: 'UEA migration failed' }` |
 | `UEA-MIG-9903` | UEA Migration Skipped | INFO | `null` |
+
+## Changed in 6.0.17-6.0.19
+
+No event IDs were added, removed, or renumbered between `6.0.16` and `6.0.19` - all tables above are unchanged. One additive payload change: the outbound wait-stage markers (the awaiting / polling / timeout / failed relay events, e.g. `SEND-TX-209-01/-02`, `SEND-TX-299-02/-03` and their Route 3 `309-xx` / `399-xx` counterparts) now include the coordinating Push Chain tx hash as `pushTxHash` in `response`; the failed marker can additionally carry the destination chain `txHash`.
 
 ## Removed in 6.0.6+
 

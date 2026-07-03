@@ -64,8 +64,38 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
 | _`options.signAndSendTransaction`_ | `(unsignedTx: Uint8Array) => Promise<Uint8Array>` | Function to sign transaction data                      |
 | _`options.signMessage`_            | `(data: Uint8Array) => Promise<Uint8Array>`       | Function to sign raw message data                      |
 | `options.signTypedData`            | `(params) => Promise<Uint8Array>`                 | Function to sign typed data (EIP-712)                  |
+| `options.signAuthorization`        | `(params: SignAuthorizationParams) => Promise<SignedAuthorization>` | Optional. Function to sign an EIP-7702 authorization delegating the EOA's code to a contract |
 
 </PushAPIReference>
+
+<Details summary="Optional `signAuthorization` for EIP-7702 atomic batching" className="alert alert--fn-args">
+
+Provide `signAuthorization` when your wallet can sign raw EIP-7702 authorizations. With it, multicall batches sent from a native Push Chain EOA execute atomically in a single EIP-7702 (type-4) transaction, which means that all calls succeed or the whole transaction reverts. Without it, the SDK safely falls back to the sequential per-call execution (the transaction response's `atomic` field tells you which path ran).<br /><br />
+
+The SDK wires this automatically for ethers v6 `Wallet` (local key) and viem local accounts (e.g. `privateKeyToAccount`). JSON-RPC accounts like browser wallets like MetaMask cannot sign raw EIP-7702 authorizations, and neither can ethers v5 signers.
+
+```typescript
+// SignAuthorizationParams
+{
+  contractAddress: `0x${string}`; // contract to delegate the EOA's code to
+  chainId?: number;               // defaults to the signer's chain
+  nonce?: number;                 // omit to let the wallet fill it
+  executor?: 'self';              // set when the signing EOA also submits the tx
+}
+
+// SignedAuthorization (viem-compatible)
+{
+  address: `0x${string}`;
+  chainId: number;
+  nonce: number;
+  r: `0x${string}`;
+  s: `0x${string}`;
+  yParity: number;
+  v?: bigint;
+}
+```
+
+</Details>
 
 <Details summary="Returns `UniversalSignerSkeleton` <object>" className="alert alert--fn-args">
 

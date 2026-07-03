@@ -247,6 +247,7 @@ https://donut.push.network/tx/0x04ee80f072ab06ec88092701e7ba223451d0a1376e267550
 - **Status 1 = success**: EVM convention; status 0 indicates revert.
 - **Block explorer is user-friendly**: Always provide explorer link for transparency.
 - **Push Chain is EVM-compatible**: Standard ethers/viem receipt methods work.
+- **Pruned history on Donut is handled automatically**: When the default (pruned) Donut RPC no longer has an old tx, the SDK's history-sensitive lookups (`trackTransaction`, transaction/receipt reads) transparently retry the archive RPC - old tx hashes remain trackable.
 - **Cross-chain tracking**: For Route 2/3, Push Chain tx confirms coordination; external chain execution may need separate tracking.
 
 ## MCP Mapping Candidates

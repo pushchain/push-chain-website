@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-06-06T00:00:00.000Z",
+  "version": "1.0.2",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Full index of all Push Chain code examples with SDK methods used, prerequisite examples, chains involved, and difficulty metadata. Referenced by agents/index.json as the canonical example catalog.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .examples[]. Change examples/index.json[N] → examples/index.json.examples[N].",
   "examples": [

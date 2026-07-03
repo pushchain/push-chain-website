@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-17T00:00:00.000Z",
+  "version": "1.0.1",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Machine-readable definition of Push Chain's three universal transaction routes. Consumed by build.agents.llms.mjs to generate the route bullets in llms.txt. Other agent surfaces (README.md, task-router.md, decision-tree.json, workflows, skills) carry the same route concepts in prose form intended for human / LLM reading.",
   "routes": [
     {

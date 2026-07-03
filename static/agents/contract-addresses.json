@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.2.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-12T00:00:00.000Z",
+  "version": "1.3.0",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Authoritative contract address registry for Push Chain. Use this file as the ground-truth source for all smart contract addresses. Do not hallucinate or infer addresses — always fetch from this file.",
   "note": "Mainnet has not launched. All addresses are on testnet only. Addresses may change with redeploys — check the changelog or explorer before using in production.",
   "docs": "https://push.org/docs/chain/setup/smart-contract-address-book/",
@@ -11,6 +11,8 @@
     "network": "Push Chain Donut Testnet",
     "chain_id": 42101,
     "rpc_url": "https://evm.donut.rpc.push.org/",
+    "archive_rpc_url": "https://archive.evm.donut.rpc.push.org/",
+    "_archive_rpc_note": "Full-history EVM endpoint. The default RPC prunes old history; @pushchain/core 6.0.19+ falls back to the archive endpoint automatically for history-sensitive reads (old transactions, receipts, universal-tx status). Point raw ethers/viem readers here directly for full-history queries.",
     "core_contracts": {
       "UniversalCore": {
         "proxy": "0x00000000000000000000000000000000000000C0",
@@ -55,6 +57,10 @@
         "implementation": "0xF1000000000000000000000000000000000000aA",
         "proxy_admin": "0xF2000000000000000000000000000000000000aA",
         "purpose": "User-facing proxy admin for universal contracts."
+      },
+      "PushBatchExecutor": {
+        "address": "0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796",
+        "purpose": "ERC-7821 batch executor (OpenZeppelin-based, payable receive) used as the EIP-7702 delegation target by @pushchain/core 6.0.19+ to execute native Push Chain EOA multicall batches atomically in a single type-4 (SetCode) transaction. Deployed 2026-06-22 on Push Chain Donut Testnet only (mainnet TBD). Source: push-chain-core-contracts/src/executor/PushBatchExecutor.sol."
       }
     },
     "evm_default_precompiles": {

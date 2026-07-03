@@ -29,7 +29,7 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
 | `tx.to` | `string` \| `{ address: string; chain: CHAIN }` | Yes | Plain address → Push Chain (Route 1). Object → external chain (Route 2) |
 | `tx.from` | `{ chain: CHAIN }` | No | Forces CEA of that chain as execution origin (Route 3) |
 | `tx.value` | `BigInt` | No | Native value in smallest unit (uPC on Push Chain, wei on EVM external chains). Default: `0n` |
-| `tx.data` | `string` \| `Array<{to: string; value: bigint; data: string}>` | No | ABI-encoded calldata (string) or multicall array. **For multicall `tx.to` must be `0x0000000000000000000000000000000000000000`** |
+| `tx.data` | `string` \| `Array<{to: string; value: bigint; data: string}>` | No | ABI-encoded calldata (string) or multicall array. **For multicall the outer `tx.to` must be `0x0000000000000000000000000000000000000000`; every inner entry needs a non-zero `to`** |
 | `tx.funds` | `{ amount: BigInt; token: PushChain.CONSTANTS.MOVEABLE.TOKEN.<CHAIN>.<TOKEN> }` | No | Move cross-chain asset atomically (external origin chains only) |
 | `tx.progressHook` | `(progress: ProgressHookType) => void` | No | Callback for real-time progress updates |
 
@@ -137,15 +137,21 @@ Execute a transaction on Push Chain from any origin wallet (EVM or non-EVM), wit
    ];
    ```
 
-2. **Send as batched transaction** - `to` **must be zero address** for multicall
+2. **Send as batched transaction** - outer `to` **must be zero address** for multicall
    ```typescript
    const txResponse = await pushChainClient.universal.sendTransaction({
      to: '0x0000000000000000000000000000000000000000', // REQUIRED for multicall
      data: calls,
    });
+   console.log('Executed atomically:', txResponse.atomic);
    ```
 
-> **Warning:** The SDK will `console.warn` if any other address is used for multicall. This restriction will become mandatory in a future release. Multicall is only supported from external origin chains.
+> **Warning:** The SDK will `console.warn` if any other address is used for the outer multicall `to`. This restriction will become mandatory in a future release. Only the **outer** `to` is the zero address - each **inner** entry must have a non-zero `to`; a zero-address entry is rejected with a `PushChainExecutionError` (the EIP-7702 executor reinterprets a zero target as the account itself).
+
+3. **Understand the execution path per origin** - multicall works from any origin:
+   - **External origin chains (EVM or SVM)**: the batch executes atomically through the UEA (`UEA_MULTICALL`). Unchanged behavior.
+   - **Native Push Chain EOAs**: the SDK executes the whole batch atomically in a single EIP-7702 type-4 (SetCode) transaction. The EOA signs an authorization delegating its code to the `PushBatchExecutor` contract (deployed on Push Chain Donut Testnet), then submits one tx calling the batch on itself - all calls succeed or the whole tx reverts. Requires a signer that can sign EIP-7702 authorizations: `PushChain.utils.signer.toUniversal` wires this automatically for ethers v6 `Wallet` (local key) and viem local accounts (e.g. `privateKeyToAccount`); custom signers can supply `signAuthorization` via `PushChain.utils.signer.construct`. Browser wallets (JSON-RPC accounts such as MetaMask) and ethers v5 signers cannot sign EIP-7702 authorizations - the SDK detects this **before any broadcast**, logs a `console.warn`, and safely falls back to the legacy sequential per-call loop (non-atomic: an earlier call stays committed if a later one reverts). No double-execution risk.
+   - Check `txResponse.atomic` to see which path ran: `false` only when a native-EOA batch fell back to sequential execution.
 
 ### With Asset Movement (tx.funds)
 
@@ -233,6 +239,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
   accessList: [],
   type: '2',
   typeVerbose: 'eip1559',
+  atomic: true, // true for a single tx, an EIP-7702 batch, or a UEA multicall; false only when a native-EOA multicall fell back to sequential execution
   signature: { r: '0x...', s: '0x...', v: 1, yParity: 1 },
   raw: { from: '0x...', to: '0x...', nonce: 341, data: '0x', value: 1000n },
   wait: [Function], // wait(confirmations?: number): Promise<UniversalTxReceipt>
@@ -260,7 +267,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 
 ### Progress Hook Events (Route 1, in order)
 
-> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.16`.
+> Route 1 events carry the `1xx` prefix. Full per-route reference (Route 1/2/3 + cascade): [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Pinned to `@pushchain/core@6.0.19`.
 
 | ID | Title | Level |
 |----|-------|-------|
@@ -313,6 +320,7 @@ const txResponse = await pushChainClient.universal.sendTransaction({
 - **UEA auto-deploys**: First transaction from a new origin wallet triggers automatic UEA deployment.
 - **Gas is abstracted**: Users pay gas on their origin chain in native tokens; SDK handles UEA funding.
 - **Signature prompt expected**: User will see one signature request from their wallet.
+- **Multicall works from any origin**: External origins batch atomically via the UEA; native Push Chain EOAs batch atomically via EIP-7702 when the signer can sign authorizations (local keys, Push Wallet email/google logins), otherwise the SDK falls back to sequential execution. Inspect `atomic` on the response to know which path ran - browser wallets (JSON-RPC accounts) always take the sequential fallback.
 - **Use progressHook for UX**: Display step-by-step status in frontend for better user experience.
 - **Check for reverts**: If `SEND-TX-199-02` fires, parse the error message for revert reason.
 

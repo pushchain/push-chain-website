@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "version": "1.0.1",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Feature availability matrix showing which Push Chain capabilities are supported per actor type (developer, end_user, agent, backend). Cross-reference with capabilities.json for full capability definitions.",
   "legend": {
     "true": "Fully supported for this actor type",
@@ -116,7 +116,7 @@
     },
     {
       "feature": "batch_transactions",
-      "description": "Execute multiple calls in single transaction (multicall)",
+      "description": "Execute multiple calls in single transaction (multicall). Atomic for external-origin senders (UEA_MULTICALL) and, since core v6.0.19, for native Push Chain EOAs via a single EIP-7702 transaction when the signer supports signAuthorization (ethers v6 Wallet, viem local accounts); browser JSON-RPC wallets fall back to sequential non-atomic execution — check response.atomic",
       "developer": true,
       "end_user": true,
       "agent": true,

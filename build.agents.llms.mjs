@@ -24,11 +24,11 @@ const BASE_URL = 'https://push.org';
 const MAX_BLOG_POSTS = 5;
 
 const SDK_VERSIONS = {
-  core: '6.0.16',
-  uiKit: '6.0.16',
+  core: '6.0.19',
+  uiKit: '6.0.18',
 };
-const AGENT_LAYER_VERSION = '1.0.22';
-const AGENT_LAYER_DATE = '2026-06-08';
+const AGENT_LAYER_VERSION = '1.0.24';
+const AGENT_LAYER_DATE = '2026-07-03';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -610,7 +610,13 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 \`@pushchain/core\` 6.0.9 \u2192 6.0.16 and \`@pushchain/ui-kit\` 6.0.12 \u2192 6.0.16. Re-pin / sync pass, not a feature rewrite. Verified against the SDK type defs that chains, tokens, selectors, and \`PushChain.CONSTANTS\` are unchanged 6.0.9 \u2192 6.0.16 (no chain/token/address content moved). Applied the one progress-hook wording change: \`SEND-TX-203-02\` "Execution Account Ready" \u2192 "Execution Account Resolved". Newly documented two maintenance methods that predate 6.0.9 but were never surfaced \u2014 \`client.universal.migrateCEA(chain)\` (upgrade a CEA via a \`MIGRATION_SELECTOR\` Route 2 dispatch) and \`client.universal.rescueFunds({ universalTxId, prc20 })\` (recover source-Vault funds from a failed Route 3 inbound via TSS revert) \u2014 in \`sdk-capabilities.json\` and the push-backend skill. Non-breaking: \`trackTransaction\` \`options.chain\`, \`finalTxHash\`, and cascade-wide \`enforceGasCheck\` were already documented.`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 \`@pushchain/core\` 6.0.16 \u2192 6.0.19 and \`@pushchain/ui-kit\` 6.0.16 \u2192 6.0.18 (versions now intentionally unequal). Core headline: **EIP-7702 atomic batching for native Push Chain EOAs** \u2014 a multicall from a Push-native EOA now executes as ONE type-4 (SetCode) transaction delegating to \`PushBatchExecutor\` (Donut: \`0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796\`) when the signer can sign authorizations (auto-wired for ethers v6 Wallet and viem local accounts; browser JSON-RPC wallets and ethers v5 fall back safely, pre-broadcast, to the legacy sequential loop). New additive \`atomic: boolean\` response field (\`false\` only on that fallback); inner multicall entries with a zero \`to\` now reject with \`PushChainExecutionError\`; \`UniversalSigner\` gains optional \`signAuthorization\`. Corrected the long-stale "Push-native senders cannot use multicall" claim across the skill/workflow/docs surfaces. Also: automatic **archive-RPC fallback** on Donut for pruned history (\`https://archive.evm.donut.rpc.push.org/\`), wait-stage progress markers now carry \`pushTxHash\` (no event ID changes), normalized user-facing revert messages, and a gas-swap preflight fix that reports real shortfalls instead of Uniswap \`STF\` reverts. ui-kit 6.0.18 is internal-only (viem/wagmi refresh, no public prop changes).`
+  );
+  lines.push(
+    `- **2026-07-02 v1.0.23** \u2014 Agent Skills spec-compliance pass on skill frontmatter. All non-standard top-level YAML keys in the three SKILL.md files (\`id\`, \`intent\`, \`package\`, \`package_version\`, \`current_sdk_version\`, \`entry\`, \`resources\`, \`references\`, \`scripts\`) moved under the spec-sanctioned \`metadata:\` map as string values \u2014 the Claude Code / Claude desktop app skill validator hard-rejects unknown top-level frontmatter keys, so saving the skills into Claude raised a frontmatter error. Only \`name\` and \`description\` remain top-level. Same fix applied to the external push-pusd skill (push-chain-pusd repo). No body content changed; \`skills/index.json\` remains the canonical machine-readable field source.`
+  );
+  lines.push(
+    `- **2026-06-08 v1.0.22** \u2014 \`@pushchain/core\` 6.0.9 \u2192 6.0.16 and \`@pushchain/ui-kit\` 6.0.12 \u2192 6.0.16. Re-pin / sync pass, not a feature rewrite. Verified against the SDK type defs that chains, tokens, selectors, and \`PushChain.CONSTANTS\` are unchanged 6.0.9 \u2192 6.0.16 (no chain/token/address content moved). Applied the one progress-hook wording change: \`SEND-TX-203-02\` "Execution Account Ready" \u2192 "Execution Account Resolved". Newly documented two maintenance methods that predate 6.0.9 but were never surfaced \u2014 \`client.universal.migrateCEA(chain)\` (upgrade a CEA via a \`MIGRATION_SELECTOR\` Route 2 dispatch) and \`client.universal.rescueFunds({ universalTxId, prc20 })\` (recover source-Vault funds from a failed Route 3 inbound via TSS revert) \u2014 in \`sdk-capabilities.json\` and the push-backend skill. Non-breaking: \`trackTransaction\` \`options.chain\`, \`finalTxHash\`, and cascade-wide \`enforceGasCheck\` were already documented.`
   );
   lines.push(
     `- **2026-06-06 v1.0.21** \u2014 Audit cleanup. Removed the stale "Push \u2192 Sepolia outbound not relayed by TSS" caveat (Push \u2192 Ethereum Sepolia outbound now relays end-to-end on Donut) from the push-contracts skill and the contract-initiated multichain workflow. Fixed the push-frontend cascade example (\`POLYGON_AMOY\` \u2192 \`BNB_TESTNET\`), the Solana Devnet CAIP-2 in push-contracts (32-char \`solana:EtWTRABZaYq6iMfeYKouRu166VU2xqa1\`), a \`bs58\` import, and the advanced custom-signer example. Reconciled BNB Testnet token lists in \`supported-chains.json\` to \`[BNB, USDT, USDC]\`. Added \`PushUI.CONSTANTS.TOAST.POSITION\` to \`constants.json\`. Manifest fixes: registered \`routes.json\` + \`mcp-candidates.json\` in \`index.json\`, the \`theme-variables\` workflow in \`workflows/index.json\`, and five previously-orphaned examples in \`examples/index.json\`.`

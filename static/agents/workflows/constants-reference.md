@@ -206,6 +206,8 @@ const chains = PushChain.utils.chains.getSupportedChains(
 - **CAIP-2 format**: all `CHAIN` constants use CAIP-2 format (`namespace:chainId`). This is what appears in `universalSigner.account.chain`.
 - **MOVEABLE vs PAYABLE**: `MOVEABLE.TOKEN` is for `tx.funds` (what you move); `PAYABLE.TOKEN` is for `tx.payGasWith` (how you pay gas).
 - **Solana addresses are hex-encoded on-chain**: when reading origin addresses via UEAFactory, Solana addresses come back as hex and must be base58-decoded.
+- **Donut archive RPCs (informational, not in `CONSTANTS`)**: the default Donut RPC serves recent (pruned) history; full-history endpoints are `https://archive.evm.donut.rpc.push.org/` (EVM) and `https://archive.donut.rpc.push.org/` (Tendermint). The SDK falls back to them automatically for history-sensitive reads.
+- **PushBatchExecutor address (internal, not public API)**: the EIP-7702 batch executor backing atomic native-EOA multicall is deployed on Donut at `0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796` (mainnet: not yet deployed). The SDK resolves it internally; the constant is not re-exported from `@pushchain/core`.
 
 ## MCP Mapping Candidates
 

@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1.0",
-  "version": "1.2.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "version": "1.2.1",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Intent-level agent capabilities — what an agent can do with Push Chain. For the complete SDK method surface with signatures see sdk-capabilities.json. Utilities (parseUnits, formatUnits, encodeTxData, chain/token discovery, constants) and raw ethers.js operations are API primitives consumed inside these capabilities rather than standalone agent intents.",
   "prerequisite_glossary": {
     "sdk_imported": "@pushchain/core is imported — check with `typeof PushChain !== 'undefined'`",
@@ -103,7 +103,7 @@
         {
           "name": "universalSigner",
           "type": "UniversalSigner",
-          "description": "Chain-agnostic signer with signMessage, signAndSendTransaction, signTypedData"
+          "description": "Chain-agnostic signer with signMessage, signAndSendTransaction, signTypedData, and (v6.0.19+) optional signAuthorization — auto-wired for ethers v6 Wallet and viem local accounts to enable atomic EIP-7702 multicall batching; not available for JSON-RPC browser wallets or ethers v5"
         }
       ],
       "sdk_method": "PushChain.utils.signer.toUniversal(signer)",
@@ -186,7 +186,7 @@
           "name": "tx.data",
           "type": "string | Array<{to, data, value}>",
           "required": false,
-          "description": "ABI-encoded calldata or multicall array"
+          "description": "ABI-encoded calldata or multicall array. Multicall from a native Push Chain EOA executes atomically in a single EIP-7702 transaction when the signer supports signAuthorization (v6.0.19+, ethers v6 Wallet or viem local account); otherwise the SDK falls back to non-atomic sequential per-call execution. External-origin batches are always atomic via UEA_MULTICALL. Every inner entry needs a non-zero `to` — only the outer tx.to stays the zero address to signal multicall mode."
         },
         {
           "name": "tx.funds",
@@ -241,7 +241,7 @@
         {
           "name": "txResponse",
           "type": "TransactionResponse",
-          "description": "Transaction hash and execution receipt"
+          "description": "Transaction hash and execution receipt. Includes `atomic: boolean` (v6.0.19+) — false only when a native-EOA multicall fell back to non-atomic sequential execution"
         }
       ],
       "sdk_method": "pushChainClient.universal.sendTransaction({tx})",
@@ -399,7 +399,7 @@
     {
       "id": "track_transaction",
       "name": "Track Universal Transaction",
-      "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — use for session restore, backend polling, or monitoring any stored tx hash.",
+      "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — use for session restore, backend polling, or monitoring any stored tx hash. On Push Chain Donut, status queries automatically retry the archive RPC endpoints when the default pruned RPC no longer has the transaction (core v6.0.19+), so old hashes still resolve.",
       "actor": ["developer", "end_user", "agent", "backend", "browser_agent"],
       "operation": "tracking",
       "prerequisites": ["push_chain_client_initialized"],
@@ -495,7 +495,7 @@
     {
       "id": "read_blockchain_state",
       "name": "Read Blockchain State",
-      "description": "Reads on-chain state from Push Chain using Ethers.js JsonRpcProvider or Viem PublicClient connected to the Push Chain EVM RPC endpoint.",
+      "description": "Reads on-chain state from Push Chain using Ethers.js JsonRpcProvider or Viem PublicClient connected to the Push Chain EVM RPC endpoint. The default Donut RPC prunes old history — for full-history raw reads (old transactions/receipts) point the provider at the archive endpoint https://archive.evm.donut.rpc.push.org/ (SDK reads fall back to it automatically since core v6.0.19).",
       "actor": ["developer", "agent", "backend", "browser_agent"],
       "operation": "read",
       "prerequisites": ["rpc_url_available"],
@@ -860,6 +860,12 @@
           "type": "(params) => Promise<Uint8Array>",
           "required": true,
           "description": "Custom typed data signing"
+        },
+        {
+          "name": "options.signAuthorization",
+          "type": "(params: { contractAddress: `0x${string}`; chainId?: number; nonce?: number; executor?: 'self' }) => Promise<SignedAuthorization>",
+          "required": false,
+          "description": "Optional EIP-7702 authorization signing (v6.0.19+). Returns a viem-compatible SignedAuthorization ({ address, chainId, nonce, r, s, yParity, v? }). Provide it to enable atomic multicall batching for native Push Chain EOAs; omitted signers fall back to sequential execution."
         }
       ],
       "outputs": [

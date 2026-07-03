@@ -75,6 +75,8 @@ tx.blockNumber          // bigint
 tx.value                // bigint (smallest unit)
 tx.gasLimit / tx.gasPrice / tx.maxFeePerGas / tx.maxPriorityFeePerGas // bigint
 tx.nonce                // number (UEA nonce)
+tx.atomic               // boolean - true for a single tx or an atomic batch (EIP-7702 or UEA multicall);
+                        // false only when a Push-native multicall fell back to sequential execution
 tx.wait()               // () => Promise<TxReceipt>
 ```
 

@@ -161,7 +161,8 @@ Create a fully-configured `PushChainClient` instance that can send universal tra
     },
     signMessage: [Function],
     signAndSendTransaction: [Function],
-    signTypedData: [Function]
+    signTypedData: [Function],
+    signAuthorization: [Function]  // optional - present for local-key signers (ethers v6 Wallet, viem local account)
   },
   blockExplorers: { 'eip155:42101': ['https://donut.push.network'] },
   universal: {
@@ -193,6 +194,7 @@ Create a fully-configured `PushChainClient` instance that can send universal tra
 - **Chain detection is automatic**: The RPC URL of the signer determines the origin chain. No manual chain ID needed.
 - **UEA is lazily deployed**: The Universal Executor Account deploys automatically on first transaction, not during initialization.
 - **Cache the client**: Store `pushChainClient` in application state; avoid re-initializing on every operation.
+- **Local-key signers get EIP-7702 support**: `toUniversal` auto-wires an optional `signAuthorization` method for ethers v6 `Wallet` and viem local accounts (`@pushchain/core` ≥6.0.19), enabling atomic batch execution for Push-native EOA multicalls. Browser (JSON-RPC) wallets can't sign EIP-7702 authorizations - their batches fall back to sequential execution.
 - **Check account status for upgrades**: After initialization, call `pushChainClient.getAccountStatus()` to detect if UEA upgrade is required.
 - **Prefer UI Kit for frontend**: `@pushchain/ui-kit` handles signer creation automatically via `usePushChainClient()` hook.
 

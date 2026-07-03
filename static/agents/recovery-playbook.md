@@ -1,7 +1,7 @@
 ---
 schema_version: "1.0.0"
-version: "1.1.0"
-current_sdk_version: "6.0.16"
+version: "1.2.0"
+current_sdk_version: "6.0.19"
 generated: "2026-05-15T00:00:00.000Z"
 ---
 
@@ -703,24 +703,27 @@ async function validateFundsField(
 
 ---
 
-### multicall_partial_failure ⚠ inferred
+### multicall_partial_failure
 
-One or more sub-calls in a batched multicall reverted while the outer transaction was mined. Whether other sub-calls rolled back depends on the contract's atomicity configuration. Detection signal is inferred.
+One or more sub-calls in a batched multicall reverted while the outer transaction was mined. Whether other sub-calls rolled back depends on which execution path ran. External-origin (UEA) multicalls are atomic, and as of `@pushchain/core` 6.0.19 a multicall from a native Push Chain EOA also executes atomically where possible — as a single EIP-7702 type-4 transaction — so all calls succeed or the whole transaction reverts. Partial failure is only possible when a native-EOA batch fell back to the legacy sequential per-call loop (the SDK does this with a `console.warn` when the signer cannot sign an EIP-7702 authorization — e.g. browser JSON-RPC wallets like MetaMask, or ethers v5). The transaction response's `atomic: boolean` field reports which path ran.
 
 **Detection**
 ```typescript
-// Transaction receipt exists (not a revert of the outer tx)
-// but sub-call status events in logs show individual failures
+// txResponse.atomic === false → native-EOA batch ran as the sequential
+// per-call loop; earlier calls stay committed if a later one reverts.
+// atomic === true → all-or-nothing (single tx, EIP-7702 batch, or UEA
+// multicall) — partial failure cannot occur.
 const receipt = await txResponse.wait();
 // receipt.status === 1 (outer tx mined) but individual operations may have failed
 ```
 
 **Recovery**
 
-1. Parse `receipt.logs` for per-call status events emitted by the multicall contract. If the contract emits a `CallExecuted(index, success, returnData)` pattern, identify which indices have `success === false`.
-2. For failed sub-calls, extract the `returnData` and decode it against the target contract's ABI for a human-readable revert reason.
-3. Retry only the failed operations as individual `sendTransaction()` calls - do not re-submit the full batch.
-4. If per-call events are not emitted (opaque multicall), treat the entire batch as suspect: surface the tx hash to the user and ask them to verify on-chain state before retrying any sub-operation.
+1. Check `atomic` on the send response first. If `atomic === true`, there is no partial state to recover - a failed batch reverted in full; fix the failing call and re-submit the whole batch.
+2. Parse `receipt.logs` for per-call status events emitted by the multicall contract. If the contract emits a `CallExecuted(index, success, returnData)` pattern, identify which indices have `success === false`.
+3. For failed sub-calls, extract the `returnData` and decode it against the target contract's ABI for a human-readable revert reason.
+4. Retry only the failed operations as individual `sendTransaction()` calls - do not re-submit the full batch.
+5. If per-call events are not emitted (opaque multicall), treat the entire batch as suspect: surface the tx hash to the user and ask them to verify on-chain state before retrying any sub-operation.
 
 ```typescript
 import { PushChain } from '@pushchain/core';

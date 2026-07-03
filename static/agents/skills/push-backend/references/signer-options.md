@@ -29,11 +29,14 @@ The primary way to create a `UniversalSigner`. Wraps any supported EVM or Solana
   },
   signMessage: [Function],
   signAndSendTransaction: [Function],
-  signTypedData: [Function]
+  signTypedData: [Function],
+  signAuthorization: [Function] // optional - EIP-7702 authorization signing (see note below)
 }
 ```
 
 This `UniversalSigner` is passed directly to `PushChain.initialize(universalSigner, options)`.
+
+> **`signAuthorization` (optional).** Auto-wired by `toUniversal` for ethers v6 `Wallet` (local key) and viem **local** accounts (e.g. `privateKeyToAccount`); absent for JSON-RPC/browser accounts (they can't sign raw EIP-7702 authorizations) and for ethers v5. When present, a Push-native EOA multicall executes atomically in a single EIP-7702 transaction; without it the SDK safely falls back to sequential per-call (non-atomic) execution - the response's `atomic` field tells you which path ran.
 
 ---
 
@@ -101,6 +104,7 @@ Use when you have a custom signing function (hardware wallet, KMS, MPC, etc.). C
 | `options.signAndSendTransaction` | `(unsignedTx: Uint8Array) => Promise<Uint8Array>` | ✓ | Signs and broadcasts the transaction; returns the tx hash as `Uint8Array` |
 | `options.signMessage` | `(data: Uint8Array) => Promise<Uint8Array>` | ✓ | Signs raw message data; returns signature as `Uint8Array` |
 | `options.signTypedData` | `(params) => Promise<Uint8Array>` | - | Signs EIP-712 typed data; returns signature as `Uint8Array` |
+| `options.signAuthorization` | `(params: SignAuthorizationParams) => Promise<SignedAuthorization>` | - | Signs an EIP-7702 authorization; enables atomic multicall batching for Push-native EOAs. `SignAuthorizationParams = { contractAddress, chainId?, nonce?, executor?: 'self' }`; returns a viem-compatible `{ address, chainId, nonce, r, s, yParity, v? }` |
 
 **Returns `UniversalSignerSkeleton`:**
 

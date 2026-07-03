@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.0",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-05-15T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Catalog of Push Chain SDK error conditions with detection signals, user-visible symptoms, machine recovery steps, and escalation guidance. Cross-reference with agents/recovery-playbook.md for step-by-step procedures.",
   "migration_note": "v1.0.0: root was a bare array. v1.0.0+ wraps in object — access via .errors[]. Change errors.json[N] → errors.json.errors[N].",
   "errors": [
@@ -263,18 +263,50 @@
     {
       "id": "multicall_partial_failure",
       "name": "Multicall Batch Partial Failure",
-      "description": "One or more operations in a batched multicall transaction failed",
-      "likely_cause": "Batch contains independent operations where one failed (e.g., one of multiple token transfers had insufficient balance). Depending on batch configuration, may revert all or continue.",
-      "detection_signal": "Transaction receipt shows partial execution. Multicall contract events indicate which sub-calls succeeded/failed.",
+      "description": "Some calls in a multicall batch executed while a later call failed, leaving partial state",
+      "likely_cause": "As of @pushchain/core 6.0.19 this can only happen on the non-atomic fallback path: a native Push Chain EOA multicall whose signer could not sign an EIP-7702 authorization (e.g., a browser JSON-RPC wallet or ethers v5) executed as a sequential per-call loop, and a later call reverted after earlier calls were already committed. Atomic paths — the EIP-7702 batch for native EOAs and UEA_MULTICALL for external-origin senders — revert entirely on any sub-call failure and never leave partial state.",
+      "detection_signal": "response.atomic === false on the send result identifies the sequential fallback path. Some per-call transactions succeeded while a later one reverted — inspect the individual call receipts to identify which sub-calls failed.",
       "user_visible_symptom": "Some operations in batch completed, others did not. User sees inconsistent state.",
       "machine_recovery": [
-        "Parse multicall result to identify which operations failed",
+        "Parse per-call results to identify which operations failed",
         "Provide user with clear breakdown of success/failure per operation",
         "Allow retry of only failed operations",
-        "Consider using atomic batching to revert all on any failure"
+        "To get all-or-nothing behavior from a native Push Chain EOA, use a signer that supports signAuthorization (ethers v6 Wallet or viem local account, or a custom signer built with construct() providing signAuthorization) so the batch runs as a single atomic EIP-7702 transaction",
+        "Check response.atomic after sending to confirm which execution path ran"
       ],
       "escalation": "If multicall behavior is inconsistent with documentation, escalate with batch payload and results.",
-      "confidence": "inferred"
+      "confidence": "documented"
+    },
+    {
+      "id": "multicall_zero_address_entry",
+      "name": "Multicall Entry Targets Zero Address",
+      "description": "A multicall batch (outer tx.to = zero address) contains an inner entry whose `to` is the zero address; the SDK rejects the batch during validation (@pushchain/core 6.0.19+)",
+      "likely_cause": "Developer built the multicall array with a missing or placeholder `to` on one entry. The ERC-7821 batch executor used by the EIP-7702 atomic path reinterprets a zero target as address(this) — the sender's own account — so the SDK rejects the entry to prevent an unintended self-call.",
+      "detection_signal": "PushChainExecutionError thrown before any broadcast with message: 'A multicall entry has a zero to address. Use an explicit target (the EIP-7702 executor reinterprets a zero target as the account itself).'",
+      "user_visible_symptom": "Multicall transaction fails immediately during validation. Nothing is broadcast and no state changes on any chain.",
+      "machine_recovery": [
+        "Set an explicit non-zero `to` on every inner multicall entry",
+        "Keep the OUTER tx.to as the zero address — that is what signals multicall mode; only the inner entries must be non-zero",
+        "If a call genuinely must target the sender's own account, pass that account's address explicitly"
+      ],
+      "escalation": "No escalation needed. Input validation issue — fix the batch payload.",
+      "confidence": "documented"
+    },
+    {
+      "id": "eip7702_not_supported",
+      "name": "EIP-7702 Authorization Not Supported (auto-handled)",
+      "description": "The signer cannot sign an EIP-7702 authorization, so a native Push Chain EOA multicall cannot use the atomic batch path. The SDK raises EIP7702NotSupportedError internally, strictly before any broadcast, catches it, and falls back to the legacy sequential per-call loop — it is not surfaced to callers as a thrown error (@pushchain/core 6.0.19+)",
+      "likely_cause": "The signer is a JSON-RPC account (browser wallets like MetaMask cannot sign raw EIP-7702 authorizations), an ethers v5 signer, or a custom signer built without signAuthorization. The atomic path also requires the batch executor contract to be deployed on the chain (Donut: yes; mainnet: not yet).",
+      "detection_signal": "console.warn logged by the SDK when it falls back. Observable signal in the result: response.atomic === false on a native-EOA multicall. Any other error during the atomic attempt surfaces normally.",
+      "user_visible_symptom": "The batch still executes, but as separate sequential transactions — an earlier call stays committed if a later one reverts. No error is thrown; there is no double-execution risk.",
+      "machine_recovery": [
+        "No action required for correctness — the SDK falls back automatically",
+        "If atomicity is required, use a signer that supports signAuthorization: an ethers v6 Wallet (local key) or a viem local account (e.g., privateKeyToAccount)",
+        "For custom signers, provide signAuthorization in PushChain.utils.signer.construct(account, { ..., signAuthorization })",
+        "Check response.atomic after sending to detect which path ran"
+      ],
+      "escalation": "Not a bug. If atomic batching is needed from a browser context, route signing through Push Wallet (email/google login) or a backend local-key signer instead of a JSON-RPC wallet.",
+      "confidence": "documented"
     }
   ]
 }

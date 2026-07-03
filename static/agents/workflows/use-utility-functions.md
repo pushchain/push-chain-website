@@ -169,7 +169,9 @@ Converts an ethers.js `Wallet` or viem `WalletClient` into a `UniversalSigner`.
 |---|---|---|
 | `signer` | `ethers.Wallet \| WalletClient` | EVM-compatible signer |
 
-**Returns**: `UniversalSigner` - `{ account: UniversalAccount, signMessage, signAndSendTransaction, signTypedData }`
+**Returns**: `UniversalSigner` - `{ account: UniversalAccount, signMessage, signAndSendTransaction, signTypedData, signAuthorization? }`
+
+> `signAuthorization` (optional, `@pushchain/core` ≥6.0.19) is wired automatically for ethers v6 `Wallet` (local key) and viem local accounts - it enables atomic EIP-7702 batch execution for Push Chain-native EOA multicalls. JSON-RPC (browser) accounts and ethers v5 don't get it; their batches fall back to sequential execution.
 
 ### `toUniversalFromKeypair(keypair, options)` → `Promise<UniversalSigner>`
 
@@ -193,6 +195,7 @@ Builds a custom signer for any wallet type not natively supported.
 | `signingMethods.signAndSendTransaction` | `(tx: Uint8Array) => Promise<Uint8Array>` | Sign and broadcast transaction bytes |
 | `signingMethods.signMessage` | `(data: Uint8Array) => Promise<Uint8Array>` | Sign arbitrary message bytes |
 | `signingMethods.signTypedData` | `(params) => Promise<Uint8Array>` | Sign EIP-712 typed data |
+| `signingMethods.signAuthorization` | `(params: SignAuthorizationParams) => Promise<SignedAuthorization>` _(optional)_ | Sign an EIP-7702 authorization - `params` is `{ contractAddress, chainId?, nonce?, executor? }`; returns a viem-compatible `{ address, chainId, nonce, r, s, yParity, v? }`. Enables atomic batch execution for Push-native EOA multicalls; if omitted, the SDK safely falls back to sequential execution |
 
 **Returns**: `UniversalSignerSkeleton` - pass to `PushChain.utils.signer.toUniversal(skeleton)` to get a `UniversalSigner`
 

@@ -222,12 +222,29 @@ console.log('Block:', receipt.blockNumber);
 |---------|----------|---------------|----------|
 | Donut Testnet | `https://evm.donut.rpc.push.org/` | `wss://evm.donut.rpc.push.org/` | `42101` |
 
+### Archive Endpoints (Full History)
+
+The default Donut RPC serves recent (pruned) history only. For full-history reads - old transactions, receipts, historical state - use the archive endpoints:
+
+| Endpoint | URL |
+|----------|-----|
+| Archive EVM RPC (HTTP) | `https://archive.evm.donut.rpc.push.org/` |
+| Archive Tendermint RPC | `https://archive.donut.rpc.push.org/` |
+
+```typescript
+// Full-history reads: point ethers/viem at the archive endpoint directly
+const archiveProvider = new ethers.JsonRpcProvider('https://archive.evm.donut.rpc.push.org/');
+const oldTx = await archiveProvider.getTransaction(oldTxHash);
+```
+
+> The `@pushchain/core` SDK handles this automatically: history-sensitive reads (transaction lookups, receipts, `trackTransaction` status queries) hit the default RPC first and fall back to the archive endpoints on a pruned-history miss. Only raw ethers/viem reads need to target the archive endpoint explicitly.
+
 ## Common Failures
 
 | Error | Cause | Recovery |
 |-------|-------|----------|
 | `network error` / `ECONNREFUSED` | RPC not reachable | Verify RPC URL and network access |
-| `null` returned for transaction | Tx hash not found or pending | Confirm hash is correct and transaction is mined |
+| `null` returned for transaction | Tx hash not found, pending, or pruned from default RPC history | Confirm hash is correct and transaction is mined; for old Donut txs, retry against `https://archive.evm.donut.rpc.push.org/` |
 | `WebSocket connection failed` | WSS endpoint not supported in environment | Use HTTP RPC for non-WebSocket environments |
 | `call exception` | Contract call failed | Check contract address, ABI, and function name |
 
@@ -236,6 +253,7 @@ console.log('Block:', receipt.blockNumber);
 - **No signer needed**: all reads use unauthenticated JSON-RPC - no wallet or private key required.
 - **Same API as Ethereum**: any ethers/viem code targeting Ethereum works on Push Chain by changing the RPC URL.
 - **WebSocket for real-time**: use `WebSocketProvider` / `webSocket` transport for subscriptions; HTTP for one-off queries.
+- **Pruned vs archive history**: the default Donut RPC prunes old history; use the archive endpoints for full-history reads. SDK reads fall back to archive automatically - only direct ethers/viem reads need the archive URL.
 - **Block explorer**: for human-readable transaction lookup, use `https://donut.push.network`.
 
 ## MCP Mapping Candidates

@@ -130,6 +130,11 @@ Wrap any EVM or non-EVM signer (Ethers.js, Viem, Solana) into a `UniversalSigner
        signTypedData: async (params) => {
          return signatureBytes;
        },
+       // Optional - enables atomic EIP-7702 batching for Push Chain-native EOAs
+       signAuthorization: async (params) => {
+         // params: { contractAddress: `0x${string}`, chainId?: number, nonce?: number, executor?: 'self' }
+         return signedAuthorization; // viem-compatible: { address, chainId, nonce, r, s, yParity, v? }
+       },
      }
    );
    ```
@@ -138,6 +143,21 @@ Wrap any EVM or non-EVM signer (Ethers.js, Viem, Solana) into a `UniversalSigner
    ```typescript
    const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
    ```
+
+### Optional: `signAuthorization` (EIP-7702 Atomic Batching)
+
+`UniversalSigner` has an optional method (`@pushchain/core` ≥6.0.19):
+
+```typescript
+signAuthorization?: (params: SignAuthorizationParams) => Promise<SignedAuthorization>
+// SignAuthorizationParams = { contractAddress: `0x${string}`, chainId?: number, nonce?: number, executor?: 'self' }
+// SignedAuthorization  = viem-compatible { address, chainId, nonce, r, s, yParity, v? }
+```
+
+- **Wired automatically by `toUniversal`** for ethers v6 `Wallet` (local key, via `wallet.authorize`) and viem local accounts (e.g., `privateKeyToAccount`). **Not available** for JSON-RPC accounts (browser wallets like MetaMask cannot sign raw EIP-7702 authorizations) or ethers v5.
+- **What it enables**: when a Push Chain-native EOA sends a multicall (batch of calls), the SDK executes the whole batch atomically in a single EIP-7702 type-4 transaction - all calls succeed or the whole tx reverts.
+- **Safe fallback**: if the signer cannot sign an authorization, the SDK detects this before any broadcast, logs a `console.warn`, and falls back to the legacy sequential per-call execution (non-atomic, no double-execution risk). The transaction response's `atomic` field reports which path ran.
+- **Custom signers**: provide `signAuthorization` in the `construct()` signing methods (as above) to opt your signer into the atomic path.
 
 ## Expected Output
 
@@ -150,7 +170,8 @@ Wrap any EVM or non-EVM signer (Ethers.js, Viem, Solana) into a `UniversalSigner
   },
   signMessage: [AsyncFunction],
   signAndSendTransaction: [AsyncFunction],
-  signTypedData: [AsyncFunction]
+  signTypedData: [AsyncFunction],
+  signAuthorization: [AsyncFunction]  // optional - present for local-key signers (ethers v6 Wallet, viem local account)
 }
 ```
 
@@ -169,6 +190,7 @@ Wrap any EVM or non-EVM signer (Ethers.js, Viem, Solana) into a `UniversalSigner
 - **`toUniversal` wraps, not copies** - it adapts the underlying signer's signing functions into a unified interface.
 - **Skeleton approach is for exotic signers**: hardware wallets, MPC wallets, or custom key management.
 - **Result is required for `PushChain.initialize()`** - pass this `universalSigner` directly.
+- **`signAuthorization` is optional and signer-dependent**: local-key signers (ethers v6 `Wallet`, viem local accounts) get it automatically; browser (JSON-RPC) wallets do not - their Push-native EOA batches fall back to sequential execution.
 
 ## MCP Mapping Candidates
 

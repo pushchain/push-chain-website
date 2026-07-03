@@ -13,6 +13,11 @@
     "wait": {
       "description": "Method to await transaction confirmation. Returns a TransactionReceipt. Type: () => Promise<TransactionReceipt>",
       "status": "inferred"
+    },
+    "atomic": {
+      "type": "boolean",
+      "description": "Whether the transaction executed atomically (all-or-nothing). true for a single tx, an EIP-7702 batch, or a UEA multicall batch; false only when a native Push EOA multicall fell back to the non-atomic sequential per-call loop (signer without signAuthorization support). Added in @pushchain/core 6.0.19.",
+      "status": "documented"
     }
   },
   "required": ["hash"],

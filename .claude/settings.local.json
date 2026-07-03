@@ -3,7 +3,8 @@
     "allow": [
       "mcp__acp__Write",
       "mcp__acp__Edit",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Read(//Users/Prodigy/.claude/**)"
     ]
   }
 }

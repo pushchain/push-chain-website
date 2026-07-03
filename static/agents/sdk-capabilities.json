@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.1",
-  "current_sdk_version": "6.0.16",
-  "generated": "2026-06-08T00:00:00.000Z",
+  "version": "1.1.0",
+  "current_sdk_version": "6.0.19",
+  "generated": "2026-07-03T00:00:00.000Z",
   "description": "Complete SDK method surface for @pushchain/core and @pushchain/ui-kit: all namespaces, method signatures, parameter types, return types, and safe_for_autonomous_execution flags. For intent-level capability definitions (what an agent can do) see capabilities.json. For routing logic see decision-tree.json and task-router.md.",
   "namespaces": [
     {
@@ -86,7 +86,7 @@
         {
           "name": "toUniversal",
           "signature": "PushChain.utils.signer.toUniversal(signer: viem.WalletClient | ethers.Wallet | UniversalSignerSkeleton): Promise<UniversalSigner>",
-          "description": "Converts EVM signer or skeleton to universal signer",
+          "description": "Converts EVM signer or skeleton to universal signer. Since v6.0.19 auto-wires the optional signAuthorization method (EIP-7702) for ethers v6 Wallet (local key) and viem local accounts (e.g. privateKeyToAccount), enabling atomic native-EOA multicall batching. Not available for JSON-RPC accounts (browser wallets like MetaMask) or ethers v5.",
           "returns": "UniversalSigner",
           "safe_for_autonomous_execution": true
         },
@@ -99,8 +99,8 @@
         },
         {
           "name": "construct",
-          "signature": "PushChain.utils.signer.construct(account: UniversalAccount, options: { signAndSendTransaction, signMessage, signTypedData }): UniversalSignerSkeleton",
-          "description": "Constructs custom signer skeleton with manual signing implementations",
+          "signature": "PushChain.utils.signer.construct(account: UniversalAccount, options: { signAndSendTransaction, signMessage, signTypedData, signAuthorization? }): UniversalSignerSkeleton",
+          "description": "Constructs custom signer skeleton with manual signing implementations. Optional signAuthorization (v6.0.19+): (params: { contractAddress: `0x${string}`, chainId?: number, nonce?: number, executor?: 'self' }) => Promise<SignedAuthorization> (viem-compatible { address, chainId, nonce, r, s, yParity, v? }) — provide it to enable atomic EIP-7702 multicall batching for native Push Chain EOAs.",
           "returns": "UniversalSignerSkeleton",
           "safe_for_autonomous_execution": true
         }
@@ -310,7 +310,7 @@
         {
           "name": "sendTransaction",
           "signature": "pushChainClient.universal.sendTransaction(tx: { to, from?, value?, data?, funds?, progressHook?, gasLimit?, maxFeePerGas?, maxPriorityFeePerGas?, payGasWith?, deadline?, options?: { enforceGasCheck?: boolean } }): Promise<UniversalTxResponse>",
-          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry; options.enforceGasCheck (default false) — when true, the SDK throws InsufficientUEABalanceError on pre-flight gas/balance shortfall instead of emitting a WARNING progress event and proceeding. Solana targets use encodeTxData({ idl, functionName, args }) passed as tx.data — there is no svmExecute field.",
+          "description": "Sends universal transaction. Advanced args: gasLimit/maxFeePerGas/maxPriorityFeePerGas override gas; payGasWith pays fees in supported token; deadline sets execution expiry; options.enforceGasCheck (default false) — when true, the SDK throws InsufficientUEABalanceError on pre-flight gas/balance shortfall instead of emitting a WARNING progress event and proceeding. Solana targets use encodeTxData({ idl, functionName, args }) passed as tx.data — there is no svmExecute field. Multicall (outer tx.to = zero address, tx.data = Array<{to, value, data}>): from a native Push Chain EOA the batch executes atomically in a single EIP-7702 type-4 (SetCode) transaction when the signer supports signAuthorization (v6.0.19+; requires the batch executor to be deployed on the chain — Donut: yes, mainnet: not yet); if the signer cannot sign an authorization the SDK logs a warning and falls back to the legacy non-atomic sequential per-call loop before any broadcast. External-origin batches are unchanged and always atomic via UEA_MULTICALL. Every inner multicall entry must have a non-zero `to` (only the outer tx.to stays the zero address to signal multicall mode). The UniversalTxResponse includes `atomic: boolean` — false only when a native-EOA multicall fell back to sequential execution.",
           "returns": "UniversalTxResponse",
           "safe_for_autonomous_execution": false
         },
@@ -331,7 +331,7 @@
         {
           "name": "trackTransaction",
           "signature": "pushChainClient.universal.trackTransaction(txHash: string, options?: { chain?: CHAIN, progressHook?: (event: ProgressEvent) => void, waitForCompletion?: boolean, advanced?: { pollingIntervalMs?: number, timeout?: number, rpcUrls?: Partial<Record<CHAIN, string[]>> } }): Promise<UniversalTxResponse>",
-          "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — pass any stored hash. Defaults chain to PUSH_TESTNET_DONUT. Set waitForCompletion:false for a snapshot status check without waiting.",
+          "description": "Resumes tracking any universal transaction by hash and origin chain. Works independently of sendTransaction — pass any stored hash. Defaults chain to PUSH_TESTNET_DONUT. Set waitForCompletion:false for a snapshot status check without waiting. On Push Chain Donut, history-sensitive reads (transactions, receipts, universal-tx status) query the default pruned RPC first and automatically retry the archive endpoints on a pruned-history miss (v6.0.19+) — old transactions no longer fail to resolve; no new option needed.",
           "arguments": [
             {
               "name": "txHash",
@@ -489,7 +489,7 @@
         {
           "name": "usePushChainClient",
           "type": "hook",
-          "description": "Returns the initialized PushChainClient (from @pushchain/core) after wallet connection. Exposes all core transaction methods: sendTransaction, signMessage, prepareTransaction, executeTransactions. This is the primary way to execute universal transactions in a React app.",
+          "description": "Returns the initialized PushChainClient (from @pushchain/core) after wallet connection. Exposes all core transaction methods: sendTransaction, signMessage, prepareTransaction, executeTransactions. This is the primary way to execute universal transactions in a React app. Note on multicall: browser wallets connect as JSON-RPC accounts and cannot sign EIP-7702 authorizations, so a native-Push-EOA batch sent from the browser falls back to sequential (non-atomic) execution — check response.atomic to see which path ran. Push Wallet email/google logins and backend local-key signers can use the atomic path.",
           "safe_for_autonomous_execution": true
         },
         {

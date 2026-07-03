@@ -263,7 +263,7 @@ For `executeTransactions`, see `CascadedTxResponse` table above.
 
 ### Progress Hook Events
 
-Pinned to `@pushchain/core@6.0.16`. Full per-route reference: [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Key milestones for this workflow:
+Pinned to `@pushchain/core@6.0.19`. Full per-route reference: [progress-hook-events.md](https://push.org/agents/workflows/progress-hook-events.md). Key milestones for this workflow:
 
 **Route 2 (external chain via CEA), prefix `SEND-TX-2xx`:**
 
