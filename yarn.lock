@@ -5338,37 +5338,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/core@npm:^6.0.17":
-  version: 6.0.18
-  resolution: "@pushchain/core@npm:6.0.18"
-  dependencies:
-    "@bufbuild/protobuf": "npm:^2.0.0"
-    "@cosmjs/crypto": "npm:0.33.1"
-    "@cosmjs/encoding": "npm:0.33.1"
-    "@cosmjs/proto-signing": "npm:^0.33.1"
-    "@cosmjs/stargate": "npm:^0.33.1"
-    "@cosmjs/tendermint-rpc": "npm:0.33.1"
-    "@solana/web3.js": "npm:^1.68.0"
-    bs58: "npm:^4.0.0"
-    buffer: "npm:^6.0.3"
-    cosmjs-types: "npm:0.9.0"
-    tslib: "npm:^2.3.0"
-    viem: "npm:^2.27.2"
-  peerDependencies:
-    "@coral-xyz/anchor": ^0.31.0
-    ethers: ^6.0.0
-    tweetnacl: ^1.0.3
-  peerDependenciesMeta:
-    "@coral-xyz/anchor":
-      optional: true
-    ethers:
-      optional: true
-    tweetnacl:
-      optional: true
-  checksum: 10c0/a5d70d365405877932bd1f00df1cb04ab93b1497486189fb380907985cd3e8f8af94b3fcf0721b3d1bf1b73b14b0f207daec15dfbf0558a65be9ef223dc34e4b
-  languageName: node
-  linkType: hard
-
 "@pushchain/core@npm:^6.0.19":
   version: 6.0.19
   resolution: "@pushchain/core@npm:6.0.19"
@@ -5400,14 +5369,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pushchain/ui-kit@npm:^6.0.18":
-  version: 6.0.18
-  resolution: "@pushchain/ui-kit@npm:6.0.18"
+"@pushchain/ui-kit@npm:^6.0.19":
+  version: 6.0.19
+  resolution: "@pushchain/ui-kit@npm:6.0.19"
   dependencies:
     "@coral-xyz/anchor": "npm:^0.31.1"
     "@human.tech/waap-sdk": "npm:^1.3.0"
     "@metamask/sdk": "npm:^0.32.0"
-    "@pushchain/core": "npm:^6.0.17"
+    "@pushchain/core": "npm:^6.0.19"
     "@solana/web3.js": "npm:^1.98.2"
     "@walletconnect/ethereum-provider": "npm:^2.21.5"
     buffer: "npm:^6.0.3"
@@ -5419,7 +5388,7 @@ __metadata:
   peerDependencies:
     react: ">=18.3.0 <20.0.0"
     react-dom: ">=18.3.0 <20.0.0"
-  checksum: 10c0/911adc2130c7069eaaed54ed02948364bce893a008b6bc8380148fc85deabbeef66599c6dd15ac8b980489b817f401c7addf72325c0022a275f281e824c369ab
+  checksum: 10c0/53c8c1418a8e988eb9c67018aad8d5e7649ad7a9fa293b92fba34898dcda419f7bdb2408db512a4766f5b5884aff04670feeec662f99d34090c2cd94f2947a48
   languageName: node
   linkType: hard
 
@@ -19866,7 +19835,7 @@ __metadata:
     "@openzeppelin/merkle-tree": "npm:^1.0.8"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.6.2"
     "@pushchain/core": "npm:^6.0.19"
-    "@pushchain/ui-kit": "npm:^6.0.18"
+    "@pushchain/ui-kit": "npm:^6.0.19"
     "@radix-ui/react-dialog": "npm:^1.1.2"
     "@solana/web3.js": "npm:^1.98.2"
     "@splidejs/react-splide": "npm:^0.7.12"
