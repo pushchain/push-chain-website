@@ -18,23 +18,19 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
 
-### 6.0.19 (2026-07-03)
+### 6.0.20 (2026-07-10)
 
 #### Features
 
-- EIP-7702 atomic batch execution for native Push Chain EOAs: multicall batches now execute in a single type-4 transaction via the `PushBatchExecutor` when the signer can sign authorizations (ethers v6 `Wallet`, viem local accounts) — all calls succeed or the whole transaction reverts.
-- Added `atomic: boolean` to the universal transaction response. Wallets that cannot sign an EIP-7702 authorization (e.g. browser JSON-RPC wallets like MetaMask) log a warning and safely fall back to the legacy sequential per-call execution (`atomic: false`).
-- Archive RPC fallback on Push Chain Donut Testnet: history-sensitive reads (transactions, receipts, universal-tx status) automatically retry the archive endpoints when the default pruned RPC has no record.
+- support custom EIP-7702 signers and dynamic multicall gas
 
-#### Fixes
+### 6.0.19 (2026-07-01)
 
-- Gas-swap preflight no longer caps the buffered WPC swap estimate below the swap's real minimum, so tight balances surface a real shortfall instead of an on-chain Uniswap `STF` revert.
-- Failed Push-side transactions now surface normalized, human-readable revert messages instead of raw logs.
-- Multicall entries with a zero `to` address are now rejected (the EIP-7702 executor reinterprets a zero target as the account itself).
+#### Features
 
-#### Other Changes
-
-- Outbound wait-stage progress markers now include the coordinating Push Chain tx hash (`pushTxHash`) in event metadata.
+- use OZ ERC-7821 executor for 7702 batching
+- native EIP-7702 atomic multicall for native-Push EOAs
+- archive-RPC fallback for prune-miss reads in tracking
 
 ### 6.0.17 (2026-06-09)
 
@@ -372,12 +368,27 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)
 
+### 6.0.20 (2026-07-13)
+
+#### Features
+
+- support EIP-7702 authorization signing
+
+### 6.0.19 (2026-07-06)
+
+#### Features
+
+- support phantom wallet connection on the mobile devices.
+
+#### Chores
+
+- update bundled `@pushchain/core` to pull in the latest core features and fixes.
+
 ### 6.0.18 (2026-06-12)
 
 #### Chores
 
 - update bundled `@pushchain/core` to pull in the latest core features and fixes.
-- refresh internal viem/wagmi types and Buffer polyfill handling; no public component or prop changes.
 
 ### 6.0.17 (2026-06-09)
 
