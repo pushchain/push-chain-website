@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "yarn build",
+  "outputDirectory": "build",
+  "functions": {
+    "api/mcp.ts": {
+      "includeFiles": "build/mcp/**",
+      "maxDuration": 10
+    }
+  }
+}
