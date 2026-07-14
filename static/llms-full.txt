@@ -140,6 +140,32 @@ const universalSigner = await PushChain.utils.signer.toUniversal(skeleton);
 | _`options.signAndSendTransaction`_ | `(unsignedTx: Uint8Array) => Promise` | Function to sign transaction data                      |
 | _`options.signMessage`_            | `(data: Uint8Array) => Promise`       | Function to sign raw message data                      |
 | `options.signTypedData`            | `(params) => Promise`                 | Function to sign typed data (EIP-712)                  |
+| `options.signAuthorization`        | `(params: SignAuthorizationParams) => Promise` | Optional. Function to sign an EIP-7702 authorization delegating the EOA's code to a contract |
+
+Provide `signAuthorization` when your wallet can sign raw EIP-7702 authorizations. With it, multicall batches sent from a native Push Chain EOA execute atomically in a single EIP-7702 (type-4) transaction, which means that all calls succeed or the whole transaction reverts. Without it, the SDK safely falls back to the sequential per-call execution (the transaction response's `atomic` field tells you which path ran).
+
+The SDK wires this automatically for ethers v6 `Wallet` (local key) and viem local accounts (e.g. `privateKeyToAccount`). JSON-RPC accounts like browser wallets like MetaMask cannot sign raw EIP-7702 authorizations, and neither can ethers v5 signers.
+
+```typescript
+// SignAuthorizationParams
+{
+  contractAddress: `0x${string}`; // contract to delegate the EOA's code to
+  chainId?: number;               // defaults to the signer's chain
+  nonce?: number;                 // omit to let the wallet fill it
+  executor?: 'self';              // set when the signing EOA also submits the tx
+}
+
+// SignedAuthorization (viem-compatible)
+{
+  address: `0x${string}`;
+  chainId: number;
+  nonce: number;
+  r: `0x${string}`;
+  s: `0x${string}`;
+  yParity: number;
+  v?: bigint;
+}
+```
 
 " className="alert alert--fn-args">
 
@@ -2148,11 +2174,11 @@ Progress Hook Type and Response
 | `SEND-TX-204-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
 | `SEND-TX-204-04` | Verification Declined / Signature Failed | Verification declined by user \| `` | ERROR | `{ error, isUserDecline }` |
 | `SEND-TX-207` | Broadcasting from Push Chain → `` | Sending tx to Push Chain... | INFO | `{ chain }` |
-| `SEND-TX-209-01` | Awaiting Push Chain Relay | Waiting for UGPC to relay execution to `` | INFO | `{ chain }` |
-| `SEND-TX-209-02` | Syncing State with `` | Polling `` for CEA execution | INFO | `{ chain, elapsedMs }` |
+| `SEND-TX-209-01` | Awaiting Push Chain Relay | Waiting for UGPC to relay execution to `` | INFO | `{ chain, pushTxHash? }` |
+| `SEND-TX-209-02` | Syncing State with `` | Polling `` for CEA execution | INFO | `{ chain, elapsedMs, pushTxHash? }` |
 | `SEND-TX-299-01` | `` Tx Success | CEA executed on `` - tx: `` | SUCCESS | `{ txHash, ...details }` |
-| `SEND-TX-299-02` | `` Tx Failed | `` | ERROR | `{ error, chain }` |
-| `SEND-TX-299-03` | Syncing State with `` Timeout | Timed out waiting for UGPC relay to `` | ERROR | `{ error: 'relay timeout', chain, elapsedMs }` |
+| `SEND-TX-299-02` | `` Tx Failed | `` | ERROR | `{ error, chain, pushTxHash?, txHash? }` |
+| `SEND-TX-299-03` | Syncing State with `` Timeout | Timed out waiting for UGPC relay to `` | ERROR | `{ error: 'relay timeout', chain, elapsedMs, pushTxHash? }` |
 | `SEND-TX-299-99` | Intermediate `` Tx Completed | Intermediate `` tx confirmed: ``, progressing to next phase | INFO | `{ chain, txHash }` |
 
 **Route 3 → Execute on Push Chain from CEA**
@@ -2175,14 +2201,14 @@ Progress Hook Type and Response
 | `SEND-TX-304-03` | Verification Success | Verification completed | SUCCESS | `{ stage: 'verified' }` |
 | `SEND-TX-304-04` | Verification Declined / Signature Failed | Verification declined by user \| `` | ERROR | `{ error, isUserDecline }` |
 | `SEND-TX-307` | Broadcasting from Push Chain → `` | Sending tx from Push Chain... | INFO | `{ chain }` |
-| `SEND-TX-309-01` | Awaiting `` Relay | Waiting for UGPC to relay to CEA on `` | INFO | `{ chain }` |
-| `SEND-TX-309-02` | Syncing State with `` | Polling `` for CEA execution | INFO | `{ chain, elapsedMs }` |
+| `SEND-TX-309-01` | Awaiting `` Relay | Waiting for UGPC to relay to CEA on `` | INFO | `{ chain, pushTxHash? }` |
+| `SEND-TX-309-02` | Syncing State with `` | Polling `` for CEA execution | INFO | `{ chain, elapsedMs, pushTxHash? }` |
 | `SEND-TX-309-03` | `` Tx Confirmed | CEA executed on ``: `` — return inbound initiated | INFO | `{ chain, txHash }` |
 | `SEND-TX-310-01` | `` → Push Chain Inbound Tx Submitted | CEA initiated return — waiting for Push Chain inbound from `` | INFO | `{ chain }` |
 | `SEND-TX-310-02` | Syncing State with Push Chain for Inbound Tx | Polling Push Chain for inbound from `` | INFO | `{ chain, elapsedMs }` |
 | `SEND-TX-399-01` | Push Chain Inbound Tx Success | Inbound from `` confirmed · Push tx: `` | SUCCESS | `{ chain, txHash, receipt }` |
-| `SEND-TX-399-02` | `` Tx Failed / Push Chain Tx Failed / Push Chain Inbound Tx Failed | `` | ERROR | `{ error, phase, chain }` |
-| `SEND-TX-399-03` | `` Timeout / Push Chain Timeout / Push Chain Inbound Timeout | Timed out waiting for... | ERROR | `{ error, phase, chain, elapsedMs }` |
+| `SEND-TX-399-02` | `` Tx Failed / Push Chain Tx Failed / Push Chain Inbound Tx Failed | `` | ERROR | `{ error, phase, chain, pushTxHash?, txHash? }` |
+| `SEND-TX-399-03` | `` Timeout / Push Chain Timeout / Push Chain Inbound Timeout | Timed out waiting for... | ERROR | `{ error, phase, chain, elapsedMs, pushTxHash? }` |
 | `SEND-TX-399-99` | Intermediate `` to Push Tx Completed | Intermediate `` to Push tx confirmed: ``, progressing to next phase | INFO | `{ chain, txHash }` |
 
 **Executing multiple transactions (Send Multichain Transations)**
@@ -2233,6 +2259,7 @@ Returns TxResponse
   wait: [Function: wait],
   type: '2',
   typeVerbose: 'eip1559',
+  atomic: true,
   signature: {
     r: '0x556566ba1304bf8e93025fc82daff32eb24b7ee9804a76d0baa0098dfa7237de',
     s: '0x4495d7811d3dcb1beac16f29261903b542b0b65f51aa5942f65dbaf67e735724',
@@ -2269,6 +2296,7 @@ Returns TxResponse
 | `accessList`           | `array`    | EIP-2930 access list for optimized storage access                                |
 | `type`                 | `string`   | Transaction type identifier                                                      |
 | `typeVerbose`          | `string`   | Human-readable transaction type                                                  |
+| `atomic`               | `boolean`  | Whether execution was all-or-nothing. `true` for single transactions and atomic batches; `false` only when a native-origin multicall fell back to sequential per-call execution |
 | `signature`            | `object`   | ECDSA signature components                                                       |
 | `signature.r`          | `string`   | R component of ECDSA signature                                                   |
 | `signature.s`          | `string`   | S component of ECDSA signature                                                   |
@@ -2390,8 +2418,7 @@ You can batch multiple calls into a single transaction. This pattern is commonly
 
 To do so, instead of passing a single `data` field, supply an array of calls (each with `to`, `value`, and `data`) to sendTransaction.
 
-> **Note:** Batch transactions are only supported from external origin chains.
-> Native Push Chain users cannot use batch mode on Push but can use it on other chains (ie: when doing Route 2 or Route 3 universal transactions).
+> **Note:** Batch transactions now works from any origin including external chains and native Push Chain wallets. see [Batch Atomicity for Native Push Chain Wallets](#batch-atomicity-for-native-push-chain-wallets) to learn more.
 
 ```typescript
 // Execute two increment() calls atomically
@@ -2412,9 +2439,19 @@ await client.universal.sendTransaction({
 
 :::warning Multicall requirements
 
-For multicall, the `to` should always be zero address (`0x0000000000000000000000000000000000000000`). The SDK will `console.warn` if you pass any other address. This will become mandatory in a future release.
+For multicall, the outer `to` should always be zero address (`0x0000000000000000000000000000000000000000`). The SDK will `console.warn` if you pass any other address.
+
+The inner entries are the opposite: every entry in the `data` array must have a **non-zero** `to`. A zero-address entry is rejected with a `PushChainExecutionError`, because the EIP-7702 executor reinterprets a zero target as the account itself.
 
 :::
+
+### Batch Atomicity for Native Push Chain Wallets
+
+When the origin is an external chain, the batch always executes atomically through the UEA. When the origin is a **native Push Chain EOA**, the SDK executes the whole batch atomically in a single [EIP-7702](https://eips.ethereum.org/EIPS/eip-7702) type-4 transaction: the EOA signs an authorization delegating to a batch executor contract (deployed on Push Chain Donut Testnet), so all calls succeed or the whole transaction reverts.
+
+The atomic path requires a signer that can sign EIP-7702 authorizations. The SDK wires this automatically for all supported signers. Browser wallets (JSON-RPC accounts like MetaMask) cannot sign raw 7702 authorizations. For those, the SDK logs a **console.warn** and safely falls back to sequential per-call execution, which is non-atomic, ie: series of transactions are sent one by one.
+
+Check the `atomic` field on the returned `TxResponse` to know which path ran: `true` for atomic execution, `false` only when a native-origin batch fell back to the sequential loop.
 
 ## Live Playground
 
@@ -6918,6 +6955,7 @@ Reading Blockchain State | Build | Push Chain Docs
 Push Chain is an EVM-compatible blockchain, so you can use familiar Ethereum tools to fetch on-chain data. This guide shows you how to:
 
 - Initialize HTTP client for one-off requests
+- Choose between default (pruned) and archive RPC endpoints
 - Fetch transactions and blocks
 - Initialize WebSocket client for real-time streaming
 - Subscribe to new blocks and filter for specific transactions
@@ -9145,6 +9183,14 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
 
+### 6.0.19 (2026-07-01)
+
+#### Features
+
+- use OZ ERC-7821 executor for 7702 batching
+- native EIP-7702 atomic multicall for native-Push EOAs
+- archive-RPC fallback for prune-miss reads in tracking
+
 ### 6.0.17 (2026-06-09)
 
 #### Fixes
@@ -10611,6 +10657,7 @@ Core protocol contracts deployed natively on Push Chain Donut Testnet. These con
 | Universal Core                    | [0x00000000000000000000000000000000000000C0](https://donut.push.network/address/0x00000000000000000000000000000000000000C0?tab=contract) `Proxy` Mints PRC-20 tokens and manages cross-chain native token pricing  Implementation - [0xF1000000000000000000000000000000000000c0](https://donut.push.network/address/0xF1000000000000000000000000000000000000c0?tab=contract)ProxyAdmin - [0xF2000000000000000000000000000000000000c0](https://donut.push.network/address/0xF2000000000000000000000000000000000000c0?tab=contract)                |
 | Universal Gateway PC              | [0x00000000000000000000000000000000000000C1](https://donut.push.network/address/0x00000000000000000000000000000000000000C1?tab=contract) `Proxy` Push-side gateway for sending and processing outward cross-chain messages Implementation - [0xF1000000000000000000000000000000000000C2](https://donut.push.network/address/0xF1000000000000000000000000000000000000C2?tab=contract)ProxyAdmin - [0xF2000000000000000000000000000000000000C3](https://donut.push.network/address/0xF2000000000000000000000000000000000000C3?tab=contract)  |
 | Universal Executor Module         | [0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7](https://donut.push.network/address/0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7?tab=contract) Module responsible for executing universal transactions on Push Chain                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| Push Batch Executor               | [0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796](https://donut.push.network/address/0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796?tab=contract) ERC-7821 batch executor — EIP-7702 delegation target the SDK uses for atomic native-EOA batches                                                                                                                                                                                                                                                                                                                                                                                                        |
 | VaultPC                           | [0x00000000000000000000000000000000000000B0](https://donut.push.network/address/0x00000000000000000000000000000000000000B0?tab=contract) `Proxy` Reserved vault contract for custody of chain assets Implementation - [0xF1000000000000000000000000000000000000B0](https://donut.push.network/address/0xF1000000000000000000000000000000000000B0?tab=contract)ProxyAdmin - [0xF2000000000000000000000000000000000000B0](https://donut.push.network/address/0xF2000000000000000000000000000000000000B0?tab=contract)                              |
 | UEA Factory                       | [0x00000000000000000000000000000000000000eA](https://donut.push.network/address/0x00000000000000000000000000000000000000eA?tab=contract) `Proxy` Deploys and manages Universal Execution Accounts (UEAs) for each user Implementation - [0xF1000000000000000000000000000000000000eA](https://donut.push.network/address/0xF1000000000000000000000000000000000000eA?tab=contract)ProxyAdmin - [0xF2000000000000000000000000000000000000eA](https://donut.push.network/address/0xF2000000000000000000000000000000000000eA?tab=contract)            |
 | UEA_EVM Implementation            | [0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF](https://donut.push.network/address/0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF?tab=contract) Logic contract for EVM-compatible UEAs                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
