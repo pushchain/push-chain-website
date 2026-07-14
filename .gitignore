@@ -5,6 +5,9 @@
 /build
 /static/invite-codes.json
 
+# MCP server compiled output (source lives in mcp/src)
+/mcp/dist
+
 # Yarn
 .yarn
 
