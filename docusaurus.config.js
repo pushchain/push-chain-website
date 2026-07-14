@@ -102,6 +102,9 @@ const config = {
       },
     ],
     require.resolve('./plugins/custom-webpack-plugin'),
+    // Generates the MCP server artifacts (search index, per-page markdown,
+    // manifest) into build/mcp/ after the site build. See mcp/README.md.
+    require.resolve('./plugins/docusaurus-plugin-push-mcp'),
     [
       '@docusaurus/plugin-client-redirects',
       {
