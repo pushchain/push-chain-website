@@ -9183,6 +9183,12 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 
 ## [@pushchain/core](https://www.npmjs.com/package/@pushchain/core)
 
+### 6.0.20 (2026-07-10)
+
+#### Fixes
+
+- support custom EIP-7702 signers and dynamic multicall gas
+
 ### 6.0.19 (2026-07-01)
 
 #### Features
@@ -9526,6 +9532,22 @@ Keep track of the latest changes and updates to the Push Chain Core and UI Kit S
 - release fix
 
 ## [@pushchain/ui-kit](https://www.npmjs.com/package/@pushchain/ui-kit)
+
+### 6.0.20 (2026-07-13)
+
+#### Features
+
+- support EIP-7702 authorization signing
+
+### 6.0.19 (2026-07-06)
+
+#### Features
+
+- support phantom wallet connection on the mobile devices.
+
+#### Chores
+
+- update bundled `@pushchain/core` to pull in the latest core features and fixes.
 
 ### 6.0.18 (2026-06-12)
 
