@@ -2,7 +2,7 @@
 
 > Push Chain is a universal, shared-state Layer 1 blockchain. Developers deploy once on Push Chain and reach users from any EVM or non-EVM chain. Users transact from their home chain using any supported token — no bridging, no network switching.
 
-> **Agent layer:** v1.0.24 | Last updated: 2026-07-03 | SDK: `@pushchain/core@6.0.19` · `@pushchain/ui-kit@6.0.18` | Network: Donut Testnet (Mainnet not yet launched)
+> **Agent layer:** v1.0.25 | Last updated: 2026-07-15 | SDK: `@pushchain/core@6.0.19` · `@pushchain/ui-kit@6.0.18` | Network: Donut Testnet (Mainnet not yet launched)
 
 ## Who This Is For
 
@@ -88,10 +88,20 @@ Load these for deeper context, RAG grounding, or tool-use integration:
 - [Supported Chains](https://push.org/agents/supported-chains.json): Verified chain list with CAIP-2 IDs, chain IDs, RPC URLs, block explorers, and Universal Gateway contract addresses.
 - [Decision Tree](https://push.org/agents/decision-tree.json): Branching logic to select the right capability from user intent.
 - [Task Router](https://push.org/agents/task-router.md): Plain-language routing guide mapping common goals to capabilities and workflows.
-- [MCP Tool Definitions](https://push.org/agents/mcp-candidates.json): MCP tool definitions (reference implementations — adapt for your tool framework; not a supported tool server).
+- [MCP Tool Definitions](https://push.org/agents/mcp-candidates.json): Candidate MCP tool definitions for Push Chain SDK operations (transactions, signing, chain reads) — adapt for your tool framework. Docs access no longer needs adaptation: it is live as a supported MCP server (see the MCP Server section below). SDK-operation candidates remain reference definitions.
 - [Schemas](https://push.org/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.
 - [Examples](https://push.org/agents/examples/index.json): 60+ minimal, self-contained TypeScript code snippets ready to execute.
 - [Retrieval Map](https://push.org/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.
+
+### MCP Server
+
+Live Model Context Protocol endpoint for programmatic docs access. No API key required.
+
+- **Endpoint:** `https://push.org/api/mcp` (transport: Streamable HTTP, spec revision 2025-11-25; stateless — no sessions, POST only)
+- **Discovery:** [/.well-known/mcp.json](https://push.org/.well-known/mcp.json)
+- **Tools:** `search_docs` (ranked full-text search), `get_page` (full page as clean markdown), `list_sections` (docs tree), `get_agent_resource` (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, or changelog)
+- **Resources:** every docs page (`text/markdown`) and the six agent-layer files (`application/json`), addressable by their canonical push.org URLs
+- Read-only. Content is a static snapshot regenerated on every site deploy.
 
 ## AI System Directives
 
@@ -196,6 +206,7 @@ Full text of all canonical documentation pages, stripped of MDX/JSX markup. Suit
 
 > Machine-readable version: [changelog.json](https://push.org/agents/changelog.json)
 
+- **2026-07-15 v1.0.25** — Launched the push.org docs **MCP server** at `https://push.org/api/mcp` (Streamable HTTP, spec revision 2025-11-25; stateless, read-only, no API key). Four tools: `search_docs` (ranked full-text search over the indexed docs), `get_page` (full page as clean markdown with title/url/section/lastUpdated), `list_sections` (hierarchical docs tree), `get_agent_resource` (raw JSON of `capabilities`, `errors`, `contract-addresses`, `supported-chains`, `sdk-capabilities`, or `changelog` — snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin (MiniSearch index, per-page markdown, manifest with build hash); pages containing raw i18n placeholder keys are excluded from the index and logged to `build/mcp/skipped.json`. Discovery document at `/.well-known/mcp.json`. Updated the `mcp-candidates.json` description — docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework.
 - **2026-07-03 v1.0.24** — `@pushchain/core` 6.0.16 → 6.0.19 and `@pushchain/ui-kit` 6.0.16 → 6.0.18 (versions now intentionally unequal). Core headline: **EIP-7702 atomic batching for native Push Chain EOAs** — a multicall from a Push-native EOA now executes as ONE type-4 (SetCode) transaction delegating to `PushBatchExecutor` (Donut: `0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796`) when the signer can sign authorizations (auto-wired for ethers v6 Wallet and viem local accounts; browser JSON-RPC wallets and ethers v5 fall back safely, pre-broadcast, to the legacy sequential loop). New additive `atomic: boolean` response field (`false` only on that fallback); inner multicall entries with a zero `to` now reject with `PushChainExecutionError`; `UniversalSigner` gains optional `signAuthorization`. Corrected the long-stale "Push-native senders cannot use multicall" claim across the skill/workflow/docs surfaces. Also: automatic **archive-RPC fallback** on Donut for pruned history (`https://archive.evm.donut.rpc.push.org/`), wait-stage progress markers now carry `pushTxHash` (no event ID changes), normalized user-facing revert messages, and a gas-swap preflight fix that reports real shortfalls instead of Uniswap `STF` reverts. ui-kit 6.0.18 is internal-only (viem/wagmi refresh, no public prop changes).
 - **2026-07-02 v1.0.23** — Agent Skills spec-compliance pass on skill frontmatter. All non-standard top-level YAML keys in the three SKILL.md files (`id`, `intent`, `package`, `package_version`, `current_sdk_version`, `entry`, `resources`, `references`, `scripts`) moved under the spec-sanctioned `metadata:` map as string values — the Claude Code / Claude desktop app skill validator hard-rejects unknown top-level frontmatter keys, so saving the skills into Claude raised a frontmatter error. Only `name` and `description` remain top-level. Same fix applied to the external push-pusd skill (push-chain-pusd repo). No body content changed; `skills/index.json` remains the canonical machine-readable field source.
 - **2026-06-08 v1.0.22** — `@pushchain/core` 6.0.9 → 6.0.16 and `@pushchain/ui-kit` 6.0.12 → 6.0.16. Re-pin / sync pass, not a feature rewrite. Verified against the SDK type defs that chains, tokens, selectors, and `PushChain.CONSTANTS` are unchanged 6.0.9 → 6.0.16 (no chain/token/address content moved). Applied the one progress-hook wording change: `SEND-TX-203-02` "Execution Account Ready" → "Execution Account Resolved". Newly documented two maintenance methods that predate 6.0.9 but were never surfaced — `client.universal.migrateCEA(chain)` (upgrade a CEA via a `MIGRATION_SELECTOR` Route 2 dispatch) and `client.universal.rescueFunds({ universalTxId, prc20 })` (recover source-Vault funds from a failed Route 3 inbound via TSS revert) — in `sdk-capabilities.json` and the push-backend skill. Non-breaking: `trackTransaction` `options.chain`, `finalTxHash`, and cascade-wide `enforceGasCheck` were already documented.
@@ -215,7 +226,7 @@ Full text of all canonical documentation pages, stripped of MDX/JSX markup. Suit
 
 ### Blog — Recent Posts
 
-- [Push Chain Completes Hacken Security Audit, $75,000 Bug Bounty Launching Soon](https://push.org/blog/push-chain-completes-hacken-security-audit/)
+- [Push Chain Completes Hacken Security Audit, $100,000 Bug Bounty Launching Soon](https://push.org/blog/push-chain-completes-hacken-security-audit/)
 - [Introducing Zappi - First Universal Payments App on Push Chain](https://push.org/blog/introducing-zappi/)
 - [Introducing PUSD: A Universal Stablecoin Built for the Future of Onchain Payments.](https://push.org/blog/introducing-pusd/)
 - [Push Rewards Program goes Public: Universal Network Meets Real Usage](https://push.org/blog/push-rewards-program/)

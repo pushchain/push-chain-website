@@ -27,8 +27,8 @@ const SDK_VERSIONS = {
   core: '6.0.19',
   uiKit: '6.0.18',
 };
-const AGENT_LAYER_VERSION = '1.0.24';
-const AGENT_LAYER_DATE = '2026-07-03';
+const AGENT_LAYER_VERSION = '1.0.25';
+const AGENT_LAYER_DATE = '2026-07-15';
 const ROUTES_PATH = path.join(AGENTS_DIR, 'routes.json');
 
 const WORKFLOW_CATEGORIES = [
@@ -426,7 +426,7 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
     `- [Task Router](${BASE_URL}/agents/task-router.md): Plain-language routing guide mapping common goals to capabilities and workflows.`
   );
   lines.push(
-    `- [MCP Tool Definitions](${BASE_URL}/agents/mcp-candidates.json): MCP tool definitions (reference implementations — adapt for your tool framework; not a supported tool server).`
+    `- [MCP Tool Definitions](${BASE_URL}/agents/mcp-candidates.json): Candidate MCP tool definitions for Push Chain SDK operations (transactions, signing, chain reads) — adapt for your tool framework. Docs access no longer needs adaptation: it is live as a supported MCP server (see the MCP Server section below). SDK-operation candidates remain reference definitions.`
   );
   lines.push(
     `- [Schemas](${BASE_URL}/agents/schemas/index.json): JSON schemas for all SDK request and response types including universal transaction, signer, and chain config.`
@@ -436,6 +436,30 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push(
     `- [Retrieval Map](${BASE_URL}/agents/retrieval-map.json): Maps every capability to its authoritative documentation source — use for RAG grounding.`
+  );
+  lines.push('');
+
+  // ── MCP Server sub-section
+  lines.push('### MCP Server');
+  lines.push('');
+  lines.push(
+    'Live Model Context Protocol endpoint for programmatic docs access. No API key required.'
+  );
+  lines.push('');
+  lines.push(
+    `- **Endpoint:** \`${BASE_URL}/api/mcp\` (transport: Streamable HTTP, spec revision 2025-11-25; stateless — no sessions, POST only)`
+  );
+  lines.push(
+    `- **Discovery:** [/.well-known/mcp.json](${BASE_URL}/.well-known/mcp.json)`
+  );
+  lines.push(
+    '- **Tools:** `search_docs` (ranked full-text search), `get_page` (full page as clean markdown), `list_sections` (docs tree), `get_agent_resource` (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, or changelog)'
+  );
+  lines.push(
+    '- **Resources:** every docs page (`text/markdown`) and the six agent-layer files (`application/json`), addressable by their canonical push.org URLs'
+  );
+  lines.push(
+    '- Read-only. Content is a static snapshot regenerated on every site deploy.'
   );
   lines.push('');
 
@@ -610,7 +634,10 @@ const buildLlmsTxt = async (workflows, skills, resources, routes, blogPosts) => 
   );
   lines.push('');
   lines.push(
-    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 \`@pushchain/core\` 6.0.16 \u2192 6.0.19 and \`@pushchain/ui-kit\` 6.0.16 \u2192 6.0.18 (versions now intentionally unequal). Core headline: **EIP-7702 atomic batching for native Push Chain EOAs** \u2014 a multicall from a Push-native EOA now executes as ONE type-4 (SetCode) transaction delegating to \`PushBatchExecutor\` (Donut: \`0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796\`) when the signer can sign authorizations (auto-wired for ethers v6 Wallet and viem local accounts; browser JSON-RPC wallets and ethers v5 fall back safely, pre-broadcast, to the legacy sequential loop). New additive \`atomic: boolean\` response field (\`false\` only on that fallback); inner multicall entries with a zero \`to\` now reject with \`PushChainExecutionError\`; \`UniversalSigner\` gains optional \`signAuthorization\`. Corrected the long-stale "Push-native senders cannot use multicall" claim across the skill/workflow/docs surfaces. Also: automatic **archive-RPC fallback** on Donut for pruned history (\`https://archive.evm.donut.rpc.push.org/\`), wait-stage progress markers now carry \`pushTxHash\` (no event ID changes), normalized user-facing revert messages, and a gas-swap preflight fix that reports real shortfalls instead of Uniswap \`STF\` reverts. ui-kit 6.0.18 is internal-only (viem/wagmi refresh, no public prop changes).`
+    `- **${AGENT_LAYER_DATE} v${AGENT_LAYER_VERSION}** \u2014 Launched the push.org docs **MCP server** at \`${BASE_URL}/api/mcp\` (Streamable HTTP, spec revision 2025-11-25; stateless, read-only, no API key). Four tools: \`search_docs\` (ranked full-text search over the indexed docs), \`get_page\` (full page as clean markdown with title/url/section/lastUpdated), \`list_sections\` (hierarchical docs tree), \`get_agent_resource\` (raw JSON of \`capabilities\`, \`errors\`, \`contract-addresses\`, \`supported-chains\`, \`sdk-capabilities\`, or \`changelog\` \u2014 snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin (MiniSearch index, per-page markdown, manifest with build hash); pages containing raw i18n placeholder keys are excluded from the index and logged to \`build/mcp/skipped.json\`. Discovery document at \`/.well-known/mcp.json\`. Updated the \`mcp-candidates.json\` description \u2014 docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework.`
+  );
+  lines.push(
+    `- **2026-07-03 v1.0.24** \u2014 \`@pushchain/core\` 6.0.16 \u2192 6.0.19 and \`@pushchain/ui-kit\` 6.0.16 \u2192 6.0.18 (versions now intentionally unequal). Core headline: **EIP-7702 atomic batching for native Push Chain EOAs** \u2014 a multicall from a Push-native EOA now executes as ONE type-4 (SetCode) transaction delegating to \`PushBatchExecutor\` (Donut: \`0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796\`) when the signer can sign authorizations (auto-wired for ethers v6 Wallet and viem local accounts; browser JSON-RPC wallets and ethers v5 fall back safely, pre-broadcast, to the legacy sequential loop). New additive \`atomic: boolean\` response field (\`false\` only on that fallback); inner multicall entries with a zero \`to\` now reject with \`PushChainExecutionError\`; \`UniversalSigner\` gains optional \`signAuthorization\`. Corrected the long-stale "Push-native senders cannot use multicall" claim across the skill/workflow/docs surfaces. Also: automatic **archive-RPC fallback** on Donut for pruned history (\`https://archive.evm.donut.rpc.push.org/\`), wait-stage progress markers now carry \`pushTxHash\` (no event ID changes), normalized user-facing revert messages, and a gas-swap preflight fix that reports real shortfalls instead of Uniswap \`STF\` reverts. ui-kit 6.0.18 is internal-only (viem/wagmi refresh, no public prop changes).`
   );
   lines.push(
     `- **2026-07-02 v1.0.23** \u2014 Agent Skills spec-compliance pass on skill frontmatter. All non-standard top-level YAML keys in the three SKILL.md files (\`id\`, \`intent\`, \`package\`, \`package_version\`, \`current_sdk_version\`, \`entry\`, \`resources\`, \`references\`, \`scripts\`) moved under the spec-sanctioned \`metadata:\` map as string values \u2014 the Claude Code / Claude desktop app skill validator hard-rejects unknown top-level frontmatter keys, so saving the skills into Claude raised a frontmatter error. Only \`name\` and \`description\` remain top-level. Same fix applied to the external push-pusd skill (push-chain-pusd repo). No body content changed; \`skills/index.json\` remains the canonical machine-readable field source.`

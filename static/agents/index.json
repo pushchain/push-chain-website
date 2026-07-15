@@ -1,11 +1,11 @@
 {
   "description": "Push Chain agent-layer root index. Curated discovery entry points for agents and retrieval systems — see sub-index files (workflows/index.json, examples/index.json, resources/index.json, schemas/index.json, skills/index.json) for complete per-category listings. Push Chain is a universal L1 blockchain enabling apps to deploy once and execute across all supported chains.",
   "schema_version": "1.0.0",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "version_policy": "All files in /agents/ carry schema_version (bumps only when the file's field layout changes — signals a consumer code update is needed) and version (bumps when content changes — backward-compatible by default). Per-file versioning is intentional: contract-addresses.json can be at 1.1.0 while index.json remains at 1.0.0 because each file evolves on its own cadence. changelog.json entries additionally carry breaking and migration fields so agents can detect whether a version change requires action.",
   "current_sdk_version": "6.0.19",
   "sdk_version": { "@pushchain/core": "6.0.19", "@pushchain/ui-kit": "6.0.18" },
-  "generated": "2026-07-03T00:00:00.000Z",
+  "generated": "2026-07-15T00:00:00.000Z",
   "sub_indexes": [
     {
       "category": "examples",
@@ -29,6 +29,14 @@
     "developer": "agents/workflows/send-universal-transaction.md",
     "agent": "agents/capabilities.json",
     "retrieval_system": "agents/retrieval-map.json"
+  },
+  "mcp_server": {
+    "endpoint": "https://push.org/api/mcp",
+    "transport": "streamable-http",
+    "protocol_version": "2025-11-25",
+    "discovery": "https://push.org/.well-known/mcp.json",
+    "tools": ["search_docs", "get_page", "list_sections", "get_agent_resource"],
+    "notes": "Read-only docs access; stateless, no API key. SDK-operation tool candidates live in agents/mcp-candidates.json and remain reference definitions."
   },
   "files": [
     {
@@ -113,7 +121,7 @@
     },
     {
       "path": "agents/mcp-candidates.json",
-      "purpose": "Reference MCP tool definitions mapping SDK capabilities to tool-use frameworks. Adapt for your tool framework; not a supported tool server",
+      "purpose": "Candidate MCP tool definitions for Push Chain SDK operations. Adapt for your tool framework. Docs access is live as a supported MCP server at https://push.org/api/mcp (discovery: /.well-known/mcp.json); SDK-operation candidates remain reference definitions.",
       "type": "capability"
     },
     {

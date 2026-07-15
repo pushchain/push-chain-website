@@ -1,11 +1,36 @@
 {
   "schema_version": "1.0.0",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "current_sdk_version": "6.0.19",
-  "current_version": "1.0.24",
-  "generated": "2026-07-03T00:00:00.000Z",
+  "current_version": "1.0.25",
+  "generated": "2026-07-15T00:00:00.000Z",
   "description": "Version history of all /agents/ layer changes, SDK version bumps, and audit passes. Each entry includes the agent-layer content version, affected files, trigger description, and breaking/migration flags. current_version tracks the latest entry; version tracks this file's own schema revision.",
   "entries": [
+    {
+      "date": "2026-07-15T00:00:00.000Z",
+      "version": "1.0.25",
+      "changes": [
+        "Launched the push.org docs MCP server at https://push.org/api/mcp (Streamable HTTP, spec revision 2025-11-25; stateless JSON responses, read-only, no API key). Four tools: search_docs (ranked full-text search over the indexed docs pages), get_page (full page as clean markdown with title/url/section/lastUpdated frontmatter), list_sections (hierarchical docs tree), get_agent_resource (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, or changelog — snapshotted at site build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin into build/mcp/ (MiniSearch index, per-page markdown, manifest.json with build hash + doc count); pages containing raw i18n placeholder keys are excluded from the index and logged to build/mcp/skipped.json. Discovery document published at /.well-known/mcp.json.",
+        "Updated the mcp-candidates.json description in index.json and llms.txt: docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework. Added a top-level mcp_server object to index.json for endpoint discovery."
+      ],
+      "files_affected": [
+        "static/llms.txt",
+        "static/agents/index.json",
+        "static/agents/changelog.json",
+        "static/.well-known/mcp.json",
+        "build.agents.llms.mjs",
+        "api/mcp.ts",
+        "mcp/ (new workspace: build plugin, runtime, tests)",
+        "plugins/docusaurus-plugin-push-mcp/",
+        "vercel.json"
+      ],
+      "sdk_version": "6.0.19",
+      "ui_kit_version": "6.0.18",
+      "category": "mcp-server-launch",
+      "trigger": "mcp-candidates.json shipped as reference definitions explicitly marked 'not a supported tool server'. The docs-access half is now a real, supported MCP endpoint: agents and MCP-capable clients (Claude, Cursor, Windsurf) get ranked search and clean-markdown page access to push.org docs without scraping HTML or adapting candidate definitions.",
+      "breaking": false,
+      "migration": "None. Additive: new endpoint, new discovery file, and description updates only. Existing consumers of mcp-candidates.json are unaffected; SDK-operation candidates remain reference definitions with unchanged shapes."
+    },
     {
       "date": "2026-07-03T00:00:00.000Z",
       "version": "1.0.24",
