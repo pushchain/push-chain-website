@@ -1,8 +1,8 @@
 # llms.txt and agent-layer edits for the MCP server launch
 
-Status: APPLIED on 2026-07-15 (agent layer v1.0.25) at the founder's direction. Edits landed in `build.agents.llms.mjs` (regenerated `static/llms.txt`), `static/agents/index.json`, and `static/agents/changelog.json`. They reach production on the next site deploy.
+Status: APPLIED on 2026-07-15 (agent layer v1.0.25) at the founder's direction. Edits landed in `build.agents.llms.mjs` (regenerated `static/llms.txt`), `static/agents/index.json`, and `static/agents/changelog.json`. They reach production on the next site deploy. Same day, the canonical endpoint was changed from `https://push.org/api/mcp` to `https://mcp.push.org/api` (dedicated subdomain, founder's choice); all declarations and the quoted blocks below reflect the final URL.
 
-REMAINING GATE: the announced endpoint `https://push.org/api/mcp` must be live and answering the initialize handshake BEFORE the next production deploy (see the Deployment section of `mcp/README.md` and the checklist in section 5). Deploying the site first would publish an announcement pointing at a dead endpoint.
+REMAINING GATE: the announced endpoint `https://mcp.push.org/api` must be live and answering the initialize handshake BEFORE the next production deploy (see the Deployment section of `mcp/README.md` and the checklist in section 5). Deploying the site first would publish an announcement pointing at a dead endpoint.
 
 The section below is preserved as the record of the planned edits.
 
@@ -17,7 +17,7 @@ Insert the following block into the machine-readable resources area, directly af
 
 Live Model Context Protocol endpoint for programmatic docs access. No API key required.
 
-- **Endpoint:** `https://push.org/api/mcp` (transport: Streamable HTTP, spec revision 2025-11-25; stateless — no sessions, POST only)
+- **Endpoint:** `https://mcp.push.org/api` (transport: Streamable HTTP, spec revision 2025-11-25; stateless — no sessions, POST only)
 - **Discovery:** [/.well-known/mcp.json](https://push.org/.well-known/mcp.json)
 - **Tools:** `search_docs` (ranked full-text search), `get_page` (full page as clean markdown), `list_sections` (docs tree), `get_agent_resource` (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, or changelog)
 - **Resources:** every docs page (`text/markdown`) and the six agent-layer files (`application/json`), addressable by their canonical push.org URLs
@@ -35,7 +35,7 @@ Replace the current line:
 with:
 
 ```markdown
-- [MCP Tool Definitions](https://push.org/agents/mcp-candidates.json): Candidate MCP tool definitions for Push Chain SDK operations (transactions, signing, chain reads) — adapt for your tool framework. Docs access no longer needs adaptation: it is live as a supported MCP server at `https://push.org/api/mcp` (see MCP Server section above). SDK-operation candidates remain reference definitions.
+- [MCP Tool Definitions](https://push.org/agents/mcp-candidates.json): Candidate MCP tool definitions for Push Chain SDK operations (transactions, signing, chain reads) — adapt for your tool framework. Docs access no longer needs adaptation: it is live as a supported MCP server (see the MCP Server section below). SDK-operation candidates remain reference definitions.
 ```
 
 ## 3. agents/index.json: updated purpose for mcp-candidates.json
@@ -49,14 +49,14 @@ Replace the `files[]` entry purpose:
 with:
 
 ```json
-"purpose": "Candidate MCP tool definitions for Push Chain SDK operations. Adapt for your tool framework. Docs access is live as a supported MCP server at https://push.org/api/mcp (discovery: /.well-known/mcp.json); SDK-operation candidates remain reference definitions."
+"purpose": "Candidate MCP tool definitions for Push Chain SDK operations. Adapt for your tool framework. Docs access is live as a supported MCP server at https://mcp.push.org/api (discovery: /.well-known/mcp.json); SDK-operation candidates remain reference definitions."
 ```
 
 Optionally add a top-level `mcp_server` object to `agents/index.json` so agents can discover the endpoint without fetching llms.txt:
 
 ```json
 "mcp_server": {
-  "endpoint": "https://push.org/api/mcp",
+  "endpoint": "https://mcp.push.org/api",
   "transport": "streamable-http",
   "protocol_version": "2025-11-25",
   "discovery": "https://push.org/.well-known/mcp.json",
@@ -73,7 +73,7 @@ Prepend to `entries[]` (set the date at release; bump `current_version` to 1.0.2
   "date": "<release date>T00:00:00.000Z",
   "version": "1.0.25",
   "changes": [
-    "Launched the push.org docs MCP server at https://push.org/api/mcp (Streamable HTTP, spec revision 2025-11-25, stateless JSON responses, read-only). Four tools: search_docs (ranked full-text search over 78 indexed docs pages), get_page (full page as clean markdown with title/url/section/lastUpdated frontmatter), list_sections (hierarchical docs tree), get_agent_resource (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, changelog — snapshotted at build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin into build/mcp/ (MiniSearch index, per-page markdown, manifest.json with build hash + doc count); pages containing raw i18n placeholder keys are excluded and logged to build/mcp/skipped.json. Discovery document published at /.well-known/mcp.json.",
+    "Launched the push.org docs MCP server at https://mcp.push.org/api (Streamable HTTP, spec revision 2025-11-25, stateless JSON responses, read-only). Four tools: search_docs (ranked full-text search over 78 indexed docs pages), get_page (full page as clean markdown with title/url/section/lastUpdated frontmatter), list_sections (hierarchical docs tree), get_agent_resource (raw JSON of capabilities, errors, contract-addresses, supported-chains, sdk-capabilities, changelog — snapshotted at build time). Docs pages and the six agent files are also exposed as MCP resources under their canonical URLs. Artifacts are generated at site build time by a Docusaurus postBuild plugin into build/mcp/ (MiniSearch index, per-page markdown, manifest.json with build hash + doc count); pages containing raw i18n placeholder keys are excluded and logged to build/mcp/skipped.json. Discovery document published at /.well-known/mcp.json.",
     "Updated mcp-candidates.json description in index.json and llms.txt: docs access is now a supported tool server; SDK-operation candidates (send_universal_transaction, sign_universal_message, etc.) remain reference definitions to adapt per framework."
   ],
   "files_affected": [
@@ -93,6 +93,6 @@ Prepend to `entries[]` (set the date at release; bump `current_version` to 1.0.2
 
 ## 5. Sanity checklist before applying
 
-- `curl -X POST https://push.org/api/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"check","version":"0"}}}'` returns `protocolVersion` and `serverInfo`.
+- `curl -X POST https://mcp.push.org/api -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"check","version":"0"}}}'` returns `protocolVersion` and `serverInfo`.
 - `https://push.org/.well-known/mcp.json` serves with `content-type: application/json`.
 - `yarn generate:llms` regenerated both llms files and `yarn check:agent-links` passes.

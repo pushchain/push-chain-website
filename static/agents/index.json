@@ -31,7 +31,7 @@
     "retrieval_system": "agents/retrieval-map.json"
   },
   "mcp_server": {
-    "endpoint": "https://push.org/api/mcp",
+    "endpoint": "https://mcp.push.org/api",
     "transport": "streamable-http",
     "protocol_version": "2025-11-25",
     "discovery": "https://push.org/.well-known/mcp.json",
@@ -121,7 +121,7 @@
     },
     {
       "path": "agents/mcp-candidates.json",
-      "purpose": "Candidate MCP tool definitions for Push Chain SDK operations. Adapt for your tool framework. Docs access is live as a supported MCP server at https://push.org/api/mcp (discovery: /.well-known/mcp.json); SDK-operation candidates remain reference definitions.",
+      "purpose": "Candidate MCP tool definitions for Push Chain SDK operations. Adapt for your tool framework. Docs access is live as a supported MCP server at https://mcp.push.org/api (discovery: /.well-known/mcp.json); SDK-operation candidates remain reference definitions.",
       "type": "capability"
     },
     {

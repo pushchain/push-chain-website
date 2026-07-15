@@ -11,7 +11,7 @@
     "websiteUrl": "https://push.org"
   },
   "endpoint": {
-    "url": "https://push.org/api/mcp",
+    "url": "https://mcp.push.org/api",
     "transport": "streamable-http",
     "authentication": "none",
     "notes": "Stateless: no sessions are issued, every POST is independent. Requests are answered as single application/json responses; GET/DELETE return 405."
