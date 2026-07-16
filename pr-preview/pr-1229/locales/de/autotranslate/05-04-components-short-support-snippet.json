@@ -1,0 +1,23 @@
+{
+  "components": {
+    "short-support-snippet": {
+      "section-aria-label": "Support Fragen zu Push Chain - universale Blockchain",
+      "title": "Support\nHilfe-Center",
+      "title-aria-label": "Häufig gestellte Fragen und Antworten zu Push Chain",
+      "discord-link-text": "Frag uns auf Discord",
+      "discord-link-title": "Trete der Push Chain Discord-Community für Unterstützung und Fragen bei.",
+      "discord-link-aria-label": "Discord-Community in neuem Tab öffnen",
+      "explore-more-text": "Weitere FAQs entdecken",
+      "explore-more-title": "Sieh dir die umfassende Push Chain FAQ-Dokumentation und Entwicklerhandbücher an",
+      "explore-more-aria-label": "Zur vollständigen Push Chain FAQ-Seite navigieren",
+      "accordion-aria-label": "Liste der Fragen zum Push Chain Support",
+      "answer-aria-label": "Antwort auf die Frage - ",
+      "qnas": {
+        "qna1": {
+          "question": "Ich kann meine <wallet> nicht verbinden. Was sollte ich versuchen?",
+          "answer": "<1><2>Schnelle Überprüfungen:</2> Seite aktualisieren, Wallet entsperren und aggressive Werbe-/Script-Blocker für push.org deaktivieren.</1><1><2>Kein Netzwerkwechsel erforderlich:</2> Bleiben Sie auf Ihrer Home-Chain; Push übernimmt die Weiterleitung im Hintergrund.</1><1><2>Website-Berechtigungen zurücksetzen:</2> Entfernen Sie die Verbindung der Website in Ihrer Wallet und verbinden Sie sie erneut.</1><1>Immer noch Probleme? Fragen Sie auf <3>Discord</3> oder öffnen Sie ein <4>Support-Ticket</4>.</1>"
+        }
+      }
+    }
+  }
+}
