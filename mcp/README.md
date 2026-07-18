@@ -19,7 +19,7 @@ build/mcp/
       |
       |  bundled into the deployment via vercel.json includeFiles
       v
-/api/mcp (api/mcp.ts -> mcp/src/runtime)
+/api (api/index.ts -> mcp/src/runtime)
   stateless Streamable HTTP endpoint, artifacts loaded once per
   cold start and cached in module scope
 ```
@@ -98,7 +98,7 @@ The same content is exposed as MCP resources: `resources/list` returns every doc
 
 ## Protocol behavior
 
-- Single MCP endpoint. The canonical public URL is `https://mcp.push.org/api`; a rewrite in `vercel.json` maps `/api` to the function at `/api/mcp`, so both paths answer. Requests are answered with a single `application/json` body (permitted by the transport spec in place of an SSE stream). Notifications and client responses get `202` with no body.
+- Single MCP endpoint at `https://mcp.push.org/api` (the function lives at `api/index.ts`, which Vercel serves at `/api`). Requests are answered with a single `application/json` body (permitted by the transport spec in place of an SSE stream). Notifications and client responses get `202` with no body.
 - `GET` and `DELETE` return `405` with an `Allow` header: the server opens no server-initiated streams and issues no sessions, both spec-permitted choices. Every request is independent.
 - `initialize` echoes a supported `protocolVersion` or answers with `2025-11-25`; capabilities are `tools` and `resources` (no subscribe, no listChanged). `ping` returns `{}`.
 - An `MCP-Protocol-Version` header with an unsupported value is a `400`; a missing header is tolerated per the spec's backwards-compatibility rule.
@@ -117,7 +117,7 @@ yarn build:mcp-plugin
 yarn mcp:artifacts
 
 # 3. Serve the endpoint locally
-node mcp/scripts/serve-local.mjs        # http://127.0.0.1:3939/api/mcp
+node mcp/scripts/serve-local.mjs        # http://127.0.0.1:3939/api
 ```
 
 ### Testing with MCP Inspector
@@ -126,7 +126,7 @@ node mcp/scripts/serve-local.mjs        # http://127.0.0.1:3939/api/mcp
 npx @modelcontextprotocol/inspector
 ```
 
-In the Inspector UI choose transport "Streamable HTTP", URL `http://127.0.0.1:3939/api/mcp`, connect, and you should see the four tools under Tools and the docs pages under Resources. The handshake, `tools/list`, and every tool are also exercised automatically by the integration test, which uses the official SDK client over real HTTP.
+In the Inspector UI choose transport "Streamable HTTP", URL `http://127.0.0.1:3939/api`, connect, and you should see the four tools under Tools and the docs pages under Resources. The handshake, `tools/list`, and every tool are also exercised automatically by the integration test, which uses the official SDK client over real HTTP.
 
 ### Tests
 
@@ -145,7 +145,7 @@ The site currently deploys to GitHub Pages, which cannot host serverless functio
 1. Create a Vercel project pointing at this repository. `vercel.json` already sets `buildCommand: yarn build`, `outputDirectory: build`, and bundles `build/mcp/**` into the function via `includeFiles`.
 2. The build produces the artifacts as part of `yarn build` (the `build:mcp-plugin` step compiles the plugin, then the Docusaurus postBuild hook writes `build/mcp/`).
 3. The function reads artifacts from `build/mcp` relative to the working directory; override with `MCP_ARTIFACTS_DIR` if the layout ever changes.
-4. Wire the `mcp.push.org` subdomain to the deployment: add the domain to the Vercel project and create a DNS record `CNAME mcp.push.org -> cname.vercel-dns.com`. The canonical endpoint is `https://mcp.push.org/api` (a `vercel.json` rewrite maps `/api` to the function). `static/.well-known/mcp.json` declares that URL; the llms.txt announcement (already applied, see `LLMS-TXT-CHANGES.md`) must not reach production before the endpoint answers the initialize handshake.
+4. Wire the `mcp.push.org` subdomain to the deployment: add the domain to the Vercel project and create a DNS record `CNAME mcp.push.org -> cname.vercel-dns.com`. The canonical endpoint is `https://mcp.push.org/api`. `static/.well-known/mcp.json` declares that URL; the llms.txt announcement (already applied, see `LLMS-TXT-CHANGES.md`) must not reach production before the endpoint answers the initialize handshake.
 
 Full-site builds are heavy (translations, blog). For a lighter artifact-producing build on CI, `BLOG_MODE=lite yarn build` uses the reduced blog set; the docs content that this server indexes is identical.
 
@@ -160,7 +160,7 @@ mcp/
   src/shared/      types.ts, schemas.ts (zod), searchOptions.ts, sections.ts
   scripts/         build-artifacts.mjs (standalone), serve-local.mjs
   test/            unit + integration suites and fixtures
-api/mcp.ts         Vercel entry point (re-exports POST/GET/DELETE/OPTIONS)
+api/index.ts       Vercel entry point at /api (re-exports POST/GET/DELETE/OPTIONS)
 plugins/docusaurus-plugin-push-mcp/   CJS shim loading the compiled plugin
 static/.well-known/mcp.json           discovery document
 vercel.json        function config + artifact bundling

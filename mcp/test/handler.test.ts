@@ -182,7 +182,7 @@ describe('handleMcp protocol behavior', () => {
   it('answers GET and DELETE with 405 and an Allow header', async () => {
     for (const method of ['GET', 'DELETE']) {
       const response = await handleMcp(
-        new Request('http://localhost/api/mcp', { method })
+        new Request('http://localhost/api', { method })
       );
       expect(response.status).toBe(405);
       expect(response.headers.get('allow')).toContain('POST');
@@ -191,7 +191,7 @@ describe('handleMcp protocol behavior', () => {
 
   it('answers OPTIONS preflight with permissive CORS headers', async () => {
     const response = await handleMcp(
-      new Request('http://localhost/api/mcp', { method: 'OPTIONS' })
+      new Request('http://localhost/api', { method: 'OPTIONS' })
     );
     expect(response.status).toBe(204);
     expect(response.headers.get('access-control-allow-origin')).toBe('*');

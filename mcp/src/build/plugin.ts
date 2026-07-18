@@ -13,7 +13,7 @@ export interface PushMcpPluginOptions {
 /**
  * Docusaurus plugin that generates the MCP artifacts (search index, clean
  * markdown per page, manifest, skipped log, agent-layer copies) into
- * build/mcp/ after the site build finishes. The serverless /api/mcp
+ * build/mcp/ after the site build finishes. The serverless /api
  * function serves exactly these artifacts; nothing is computed at runtime.
  */
 export default function pushMcpPlugin(

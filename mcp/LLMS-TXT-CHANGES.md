@@ -82,7 +82,7 @@ Prepend to `entries[]` (set the date at release; bump `current_version` to 1.0.2
     "static/agents/index.json",
     "static/agents/changelog.json",
     "static/.well-known/mcp.json",
-    "api/mcp.ts",
+    "api/index.ts",
     "mcp/ (new workspace)",
     "plugins/docusaurus-plugin-push-mcp/"
   ],

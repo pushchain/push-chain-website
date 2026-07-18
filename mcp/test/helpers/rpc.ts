@@ -11,7 +11,7 @@ export async function postMcp(
   headers: Record<string, string> = {}
 ): Promise<RpcHttpResult> {
   const response = await handleMcp(
-    new Request('http://localhost/api/mcp', {
+    new Request('http://localhost/api', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

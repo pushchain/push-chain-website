@@ -19,7 +19,7 @@
         "static/agents/changelog.json",
         "static/.well-known/mcp.json",
         "build.agents.llms.mjs",
-        "api/mcp.ts",
+        "api/index.ts",
         "mcp/ (new workspace: build plugin, runtime, tests)",
         "plugins/docusaurus-plugin-push-mcp/",
         "vercel.json"

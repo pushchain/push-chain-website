@@ -31,7 +31,7 @@ describe('MCP SDK client integration', () => {
     bridge = await startHttpBridge();
 
     client = new Client({ name: 'push-docs-integration-test', version: '1.0.0' });
-    const transport = new StreamableHTTPClientTransport(new URL(`${bridge.url}/api/mcp`));
+    const transport = new StreamableHTTPClientTransport(new URL(`${bridge.url}/api`));
     await client.connect(transport);
   });
 

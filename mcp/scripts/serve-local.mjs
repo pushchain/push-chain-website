@@ -6,7 +6,7 @@
  *   yarn mcp:artifacts                 (build the artifacts once)
  *   node mcp/scripts/serve-local.mjs   (default port 3939)
  *
- * Then connect MCP Inspector to http://127.0.0.1:3939/api/mcp with the
+ * Then connect MCP Inspector to http://127.0.0.1:3939/api with the
  * Streamable HTTP transport.
  */
 import http from 'node:http';
@@ -59,6 +59,6 @@ const server = http.createServer((incoming, outgoing) => {
 });
 
 server.listen(port, '127.0.0.1', () => {
-  console.log(`push-docs MCP server listening on http://127.0.0.1:${port}/api/mcp`);
+  console.log(`push-docs MCP server listening on http://127.0.0.1:${port}/api`);
   console.log(`artifacts: ${process.env.MCP_ARTIFACTS_DIR}`);
 });

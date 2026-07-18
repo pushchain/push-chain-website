@@ -3,15 +3,9 @@
   "buildCommand": "yarn build",
   "outputDirectory": "build",
   "functions": {
-    "api/mcp.ts": {
+    "api/index.ts": {
       "includeFiles": "build/mcp/**",
       "maxDuration": 10
     }
-  },
-  "rewrites": [
-    {
-      "source": "/api",
-      "destination": "/api/mcp"
-    }
-  ]
+  }
 }
