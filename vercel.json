@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "yarn build",
+  "buildCommand": "NODE_OPTIONS=--max-old-space-size=8192 yarn build",
   "outputDirectory": "build",
   "functions": {
     "api/index.ts": {
