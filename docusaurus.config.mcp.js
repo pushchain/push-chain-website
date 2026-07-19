@@ -25,9 +25,13 @@ function mirrorRobotsPlugin() {
   return {
     name: 'mcp-mirror-robots',
     async postBuild({ outDir }) {
+      // Allow comes first: modern parsers use longest-match, older ones use
+      // first-match, and this ordering satisfies both. The carve-out keeps
+      // the MCP discovery document fetchable by conservative agent tooling
+      // that consults robots.txt before a GET.
       fs.writeFileSync(
         path.join(outDir, 'robots.txt'),
-        'User-agent: *\nDisallow: /\n',
+        'User-agent: *\nAllow: /.well-known/\nDisallow: /\n',
         'utf8'
       );
     },
