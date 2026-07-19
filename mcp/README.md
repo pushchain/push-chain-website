@@ -140,14 +140,14 @@ Unit tests build a fixture site (realistic Docusaurus HTML, including Prism code
 
 ## Deployment
 
-The site currently deploys to GitHub Pages, which cannot host serverless functions. The MCP endpoint therefore ships as a Vercel deployment of this same repo:
+The site currently deploys to GitHub Pages, which cannot host serverless functions. The MCP endpoint therefore ships as a Vercel deployment of this same repo, live at `https://mcp.push.org/api`:
 
-1. Create a Vercel project pointing at this repository. `vercel.json` already sets `buildCommand: yarn build`, `outputDirectory: build`, and bundles `build/mcp/**` into the function via `includeFiles`.
-2. The build produces the artifacts as part of `yarn build` (the `build:mcp-plugin` step compiles the plugin, then the Docusaurus postBuild hook writes `build/mcp/`).
-3. The function reads artifacts from `build/mcp` relative to the working directory; override with `MCP_ARTIFACTS_DIR` if the layout ever changes.
-4. Wire the `mcp.push.org` subdomain to the deployment: add the domain to the Vercel project and create a DNS record `CNAME mcp.push.org -> cname.vercel-dns.com`. The canonical endpoint is `https://mcp.push.org/api`. `static/.well-known/mcp.json` declares that URL; the llms.txt announcement (already applied, see `LLMS-TXT-CHANGES.md`) must not reach production before the endpoint answers the initialize handshake.
-
-Full-site builds are heavy (translations, blog). For a lighter artifact-producing build on CI, `BLOG_MODE=lite yarn build` uses the reduced blog set; the docs content that this server indexes is identical.
+1. The Vercel project builds with `yarn build:mcp-site` (see `vercel.json`), which uses `docusaurus.config.mcp.js`: a docs-only config derived from the main config at require time. No blog, no src/pages, no sitemap, no analytics. This keeps builds fast and means mcp.push.org serves only the docs plus the API instead of mirroring the whole site.
+2. The mirror must never appear in search results: the canonical site is push.org (every page already carries a push.org canonical tag), `robots.txt` on the mirror disallows all crawling, `vercel.json` adds an `X-Robots-Tag: noindex` header on every response, and `/` redirects to `https://push.org/`. If push.org itself ever migrates to Vercel, use a separate project; this `vercel.json` is specific to the mirror.
+3. The build produces the artifacts in its postBuild hook (`build/mcp/`), and `includeFiles` in `vercel.json` bundles them into the function. Extraction output is identical to a full-site build because docs pages render the same either way; the site url stays `https://push.org` so all extracted URLs and resource URIs remain canonical.
+4. The function reads artifacts from `build/mcp` relative to the working directory; override with `MCP_ARTIFACTS_DIR` if the layout ever changes.
+5. Domain wiring: the `mcp.push.org` domain is attached to the Vercel project with a DNS record `CNAME mcp.push.org -> cname.vercel-dns.com`. `static/.well-known/mcp.json` declares the endpoint.
+6. Vercel project settings that matter: `ENABLE_EXPERIMENTAL_COREPACK=1` env var (Yarn 4 via the packageManager field), Standard build machine, and a spend cap. The Node heap flag is baked into the buildCommand, not dashboard config.
 
 ## File map
 

@@ -1,11 +1,29 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "NODE_OPTIONS=--max-old-space-size=8192 yarn build",
+  "buildCommand": "NODE_OPTIONS=--max-old-space-size=8192 yarn build:mcp-site",
   "outputDirectory": "build",
   "functions": {
     "api/index.ts": {
       "includeFiles": "build/mcp/**",
       "maxDuration": 10
     }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://push.org/",
+      "permanent": false
+    }
+  ]
 }

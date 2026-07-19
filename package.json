@@ -24,6 +24,7 @@
     "prebuild": "yarn generate:ecosystem && node hotbuild.merge.translation.mjs",
     "build": "yarn generate:ecosystem && yarn build:mcp-plugin && docusaurus build",
     "build:mcp-plugin": "node node_modules/typescript5/bin/tsc -p mcp/tsconfig.json",
+    "build:mcp-site": "yarn generate:ecosystem && yarn build:mcp-plugin && docusaurus build --config docusaurus.config.mcp.js",
     "mcp:artifacts": "yarn build:mcp-plugin && node mcp/scripts/build-artifacts.mjs",
     "test:mcp": "jest -c mcp/jest.config.cjs",
     "typecheck:mcp": "node node_modules/typescript5/bin/tsc -p mcp/tsconfig.test.json",
