@@ -284,12 +284,12 @@
         "box8": {
           "imagetitle": "(Rota Haritası) Paylaşılmış Durum, diğer zincirlerden hesaptan ve durum verisinden erişimi sağlayan akıllı sözleşmenize sağlar.",
           "tagText": "ÇOK YAKINDA",
-          "texttitle": "State Erişimi",
-          "bodytext": "Smart contract'ınızda diğer blockchain'lerden hesap ve durum verilerine erişin.",
+          "bodytext": "smart contract'ınızdan diğer zincirlerdeki hesap ve durum verilerine erişin.",
+          "texttitle": "Durum Erişimi",
           "tags": {
-            "title1": "ZİNCİRLERDEN OKU"
+            "title1": "Zincirlerden Oku"
           },
-          "imagealt": "Push Chain'in bloklar stili animasyonunda büyüdüğünü gösteren illüstrasyon."
+          "imagealt": "Push Chain'in bloklar şeklinde büyüyen bir animasyonunu gösteren illüstrasyon."
         },
         "section-aria-label": "Push Chain yenilikleri ve özellikleri bölümü",
         "header": {
@@ -976,12 +976,8 @@
                   "how-affect-heading": "### Beni nasıl etkiler?",
                   "affect-majority": "**%99.83 kullanıcı için:** Bu değişiklik sizi etkilemez. Cüzdan bakiyeniz değişmeden kalır.",
                   "need-help-heading": "**Yardıma İhtiyacınız Var mı?**",
-                  "need-help-text": "Bu yeniden dengelemeden etkilendiğinizi düşünüyorsanız ve sorularınız veya endişeleriniz varsa, lütfen yardım için Push Chain ekibiyle Discord üzerinden iletişime geçin.",
-                  "reason-token-economy": "- Adil ve sürdürülebilir bir token ekonomisi oluşturmak",
-                  "why-not-informed-text": "Kötü niyetli aktörlerin yeniden dengeleme öncesinde tokenleri diğer cüzdanlara dağıtmasını önlemek için kullanıcılar önceden bilgilendirilmedi. Bu güvenlik önlemi, yeniden dengeleme sürecinin bütünlüğünü sağladı ve sistemin manipüle edilmesini önledi.",
-                  "affect-top-wallets": "**Etkilenen cüzdanlar için (ilk 1.950):** Cüzdanınızda 1.100+ PC token (veya trilyonlarca) bulunuyorsa, bakiyeniz 1.100-2.000 PC token aralığına yeniden dengelendi."
-                },
-                "title": "Zincir Yükseltmesi - Token Yeniden Dengeleme - 10 Milyar PC Token"
+                  "need-help-text": "Bu yeniden dengelemeden etkilendiğinizi düşünüyorsanız ve sorularınız veya endişeleriniz varsa, lütfen yardım için Push Chain ekibiyle Discord üzerinden iletişime geçin."
+                }
               }
             }
           }
@@ -1183,8 +1179,7 @@
         "og-title": "Push Chain Litepaper - Teknik Genel Bakış",
         "og-description": "Evrensel çalıştırma katmanının vizyonu, tasarımı ve ekonomik modeli—basitleştirilmiş.",
         "twitter-title": "Litepaper - Push Chain",
-        "twitter-description": "Vizyon, mimari ve ekonomiye genel bir bakış.",
-        "description": "Push Chain'in evrensel uygulamalar için vizyonuna, mimarisine ve ekonomisine kısa bir bakış."
+        "twitter-description": "Vizyon, mimari ve ekonomiye genel bir bakış."
       }
     },
     "tos": {
@@ -1500,8 +1495,7 @@
       "expanded-title-for-contact": "Merhaba! 👋",
       "categories": {
         "technical": {
-          "label": "🔧 Teknik Destek",
-          "description": "Hata bildirimleri, SDK/API, akıllı sözleşmeler, entegrasyon yardımı"
+          "label": "🔧 Teknik Destek"
         },
         "network": {
           "label": "🌐 Ağ & testnet",
@@ -1784,16 +1778,13 @@
       "title": "Donut testnet'teki Temel Uygulamaları Keşfedin",
       "apps": {
         "pc-faucet": {
-          "name": "PC Musluğu",
-          "description": "PC Testnet tokenlerinizi buradan alın"
+          "name": "PC Musluğu"
         },
         "push-bridge": {
-          "name": "Push Köprüsü",
-          "description": "Zincirler arasında token köprüleyin"
+          "name": "Push Köprüsü"
         },
         "simulate-tx": {
-          "name": "İşlemi Simüle Et",
-          "description": "Evrensel bir işlemi simüle edin"
+          "name": "İşlemi Simüle Et"
         },
         "push-chain-scan": {
           "name": "Push Chain Scan",
@@ -1816,20 +1807,16 @@
           "name": "Ramen Swap"
         },
         "hodl-fun": {
-          "name": "Hodl.fun",
-          "description": "ERC-20 tokenleri oluşturun ve başlatın"
+          "name": "Hodl.fun"
         },
         "tip-up": {
-          "name": "TipUp",
-          "description": "Herhangi bir cüzdanla herhangi bir zincirde bahşiş verin"
+          "name": "TipUp"
         },
         "push-swap": {
-          "name": "Push Değişim",
-          "description": "Köprüsüz, kesintisiz zincirler arası token takasları"
+          "name": "Push Değişim"
         },
         "ballsy": {
-          "name": "Ballsy",
-          "description": "Favori zincirinizle giriş yaparak zafer için savaşın"
+          "name": "Ballsy"
         },
         "halo": {
           "name": "HALO",
@@ -1909,8 +1896,7 @@
           "description": "Oyna, bahis yap, yayın yap ve havuzu kazanmak için kazananı tahmin et"
         },
         "push-dex": {
-          "name": "PushDex",
-          "description": "Pushchain test ağı üzerine kurulu DEX"
+          "name": "PushDex"
         },
         "zns": {
           "name": "ZNS",
@@ -1981,8 +1967,7 @@
       "image-alt": "Push Chain Testnet Ödülleri - Evrensel Uygulamalar Oluştur",
       "close-button-title": "Ödül bildirimini kapat",
       "close-button-aria-label": "Push Chain ödül bildirimini kapat",
-      "container-aria-label": "Push Chain rewards notification",
-      "description": "Testnet, Donut'a göz atın, evrensel uygulamalar geliştirin ve ödüller kazanın!"
+      "container-aria-label": "Push Chain rewards notification"
     },
     "info-bar": {
       "title": "Push Zinciri Hacken güvenlik denetimi geçiyor. Zéro kritik sorun bulundu.",

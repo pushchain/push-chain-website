@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T12:03:09.992Z",
+  "lastUpdated": "2026-07-19T18:37:01.836Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "Kho thư viện — Hướng dẫn, Câu hỏi thường gặp & Cách thực hiện",
@@ -3054,6 +3054,46 @@
       "value": "Tìm hiểu thêm",
       "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
       "lastUpdated": "2026-06-26T12:03:09.976Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "Kích hoạt, xác thực và hoàn tất giao dịch trên bất kỳ chuỗi nào bằng hợp đồng thông minh của bạn.",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-07-19T18:25:59.779Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "Truy cập dữ liệu tài khoản và trạng thái từ các chuỗi khác trong smart contract của bạn.",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2026-07-19T18:26:28.530Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "U-ni-vơ-sal\nVát-li-đét",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2026-07-19T18:34:51.033Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "GHI LÊN CÁC CHAIN",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2026-07-19T18:35:18.161Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "Hình minh họa các khối Tetris nhiều màu sắc đang kết hợp và biến đổi.",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2026-07-19T18:35:43.489Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(Lộ trình) Universal Validators cho phép người dùng kích hoạt, xác thực và hoàn tất transactions trên mọi chuỗi thông qua smart contract của bạn.",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2026-07-19T18:36:21.150Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Truy cập Trạng thái",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:36:38.020Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Ảnh minh họa Push Chain đang phát triển theo phong cách khối.",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2026-07-19T18:37:01.836Z"
     }
   }
 }

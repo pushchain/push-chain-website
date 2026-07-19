@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T10:44:13.322Z",
+  "lastUpdated": "2026-07-19T18:29:11.718Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "ナレッジベース — ガイド、FAQ & チュートリアル",
@@ -1637,9 +1637,9 @@
       "lastUpdated": "2026-06-25T17:12:35.632Z"
     },
     "global.site-description": {
-      "value": "<1>ブロックチェーンベースの統一されたL1アプリケーション。1回のデプロイで任意のチェーンにユーザーを到達することができます。任意のウォレットで、任意のトークンで支払うことができます。ネットワーク切替はありません。</1>",
+      "value": "ユニバーサルアプリ向けのシェアードステートL1。1回デプロイするだけで、あらゆるチェーンのユーザーにリーチできます。好きなウォレットを使え、好きなトークンで支払えます。ネットワークの切り替えは不要です。",
       "englishChecksum": "1d43097af09adf17ad01e9f772fffb50",
-      "lastUpdated": "2026-06-25T17:16:59.099Z"
+      "lastUpdated": "2026-07-19T18:24:03.859Z"
     },
     "pages.knowledge.push101.seo.description": {
       "value": "始めてみるためのチュートリアル—Push Portalとuniversal appの紹介。",
@@ -3002,6 +3002,36 @@
       "value": "詳しく見る",
       "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
       "lastUpdated": "2026-06-26T10:44:13.310Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "スマートコントラクトを使って、任意のチェーン上でトランザクションをトリガーし、検証し、完了できます。",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-07-19T18:23:03.244Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "スマートコントラクトから、他のチェーンのアカウントおよびステートデータにアクセスできます。",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2026-07-19T18:23:29.065Z"
+    },
+    "pages.home.chain-features-section.box7.tags.title1": {
+      "value": "チェーンに書き込む",
+      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
+      "lastUpdated": "2026-07-19T18:28:24.055Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "異なる色のテトリミノブロックが結合し、変化する様子を示すイラスト",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2026-07-19T18:28:38.508Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "状態へのアクセス",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:28:57.706Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "監査完了。メインネットへ 👀 監査レポート全文を読む。",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-07-19T18:29:11.718Z"
     }
   }
 }

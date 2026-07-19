@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T17:48:04.920Z",
+  "lastUpdated": "2026-07-19T22:23:33.162Z",
   "keys": {
     "pages.knowledge.validators.seo.title": {
       "value": "验证者 —",
@@ -671,64 +671,14 @@
       "englishChecksum": "7da2e7a0657dd41b28d96b03c66e2ca5",
       "lastUpdated": "2025-11-14T19:27:06.444Z"
     },
-    "pages.home.chain-features-section.box7.texttitle": {
-      "value": "状态访问",
-      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box7.bodytext": {
-      "value": "在您的智能合约中访问其他链的账户和状态数据。",
-      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
     "pages.home.chain-features-section.box7.tagText": {
       "value": "即将推出",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
       "lastUpdated": "2025-11-14T19:27:06.444Z"
     },
-    "pages.home.chain-features-section.box7.tags.title1": {
-      "value": "从链上读取",
-      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box7.imagealt": {
-      "value": "图示展示Push Chain以区块风格动画增长。",
-      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box7.imagetitle": {
-      "value": "(Roadmap) 共享状态允许您的智能合约访问来自其他链的账户和状态数据。",
-      "englishChecksum": "d1f905f304e22cc443ff2983eed898e3",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box8.texttitle": {
-      "value": "通用\n验证者",
-      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box8.bodytext": {
-      "value": "使用您的智能合约触发、验证和完成任何链上的交易。",
-      "englishChecksum": "135d1082fcef28092472432bee5f8942",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
     "pages.home.chain-features-section.box8.tagText": {
       "value": "即将推出",
       "englishChecksum": "482c33e49f552960c728d7cdfe79b9b5",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box8.tags.title1": {
-      "value": "写入区块链",
-      "englishChecksum": "19682cefa662446be4aac561fd1a7c7e",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box8.imagealt": {
-      "value": "展示不同颜色积木合并和变化的图示。",
-      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
-      "lastUpdated": "2025-11-14T19:27:06.444Z"
-    },
-    "pages.home.chain-features-section.box8.imagetitle": {
-      "value": "(路线图) 通用验证者允许用户使用您的智能合约触发、验证和完成任何链上的交易。",
-      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
       "lastUpdated": "2025-11-14T19:27:06.444Z"
     },
     "pages.home.chain-features-section.footer.title": {
@@ -2899,11 +2849,6 @@
       "englishChecksum": "a0cfffc38fbc3da77696e61e869441ad",
       "lastUpdated": "2026-05-17T22:28:34.186Z"
     },
-    "notifications.chain-notification.description": {
-      "value": "来探索通用应用的力量，并获得主网之前最后一季的奖励吧！",
-      "englishChecksum": "0d15de02c1f23a0557e48c0673407aed",
-      "lastUpdated": "2026-06-07T16:37:07.674Z"
-    },
     "components.ecosystem-apps-partners.apps.puffles.name": {
       "value": "小笨熊",
       "englishChecksum": "6b715b51415b94f116e683e0fa0513e0",
@@ -2918,6 +2863,101 @@
       "value": "探索 Push Chain 的审计报告，并看到顶级安全评估公司如何验证您在上面构建的基础设施。",
       "englishChecksum": "aef40f52667931b88baf27d079816b5a",
       "lastUpdated": "2026-06-25T17:45:35.364Z"
+    },
+    "pages.knowledge.hero-section.email-signup.description": {
+      "value": "Push Chain 测试网已上线。加入我们的邮件列表，获取独家更新。",
+      "englishChecksum": "95c6b00400e9afb9f253d70b3db4e0e5",
+      "lastUpdated": "2026-07-19T18:38:27.265Z"
+    },
+    "pages.knowledge.audit.seo.twitter-title": {
+      "value": "Push Chain 审计报告",
+      "englishChecksum": "c1abbde6000fdc9c11dedfd0066f0289",
+      "lastUpdated": "2026-07-19T18:38:45.962Z"
+    },
+    "pages.knowledge.audit.explainer-section.breadcrumbs.knowledge-base": {
+      "value": "知识库",
+      "englishChecksum": "6e0ccd34932801f356cffa7455f7178f",
+      "lastUpdated": "2026-07-19T18:39:04.854Z"
+    },
+    "pages.knowledge.audit.explainer-section.blocks.sections.reports.items.audit-report-3.title": {
+      "value": "EVM 网关安全分析报告",
+      "englishChecksum": "9911a079ea718f57efd7e8b727d1e6c7",
+      "lastUpdated": "2026-07-19T18:39:24.477Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.name": {
+      "value": "Hacken",
+      "englishChecksum": "8156ef13e1db7210d7f9c66503eb953f",
+      "lastUpdated": "2026-07-19T18:39:45.500Z"
+    },
+    "components.ecosystem-apps-partners.partners.hacken.description": {
+      "value": "端到端区块链安全与合规合作伙伴",
+      "englishChecksum": "a7638a4aed6f0bf83b729d5bf8631496",
+      "lastUpdated": "2026-07-19T18:39:58.655Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.name": {
+      "value": "Zappi.to",
+      "englishChecksum": "eae047e7a37fca344d9302861db9a81c",
+      "lastUpdated": "2026-07-19T18:40:17.108Z"
+    },
+    "components.ecosystem-apps-partners.apps.zappi-to.description": {
+      "value": "你的加密资产，你的规则：跨链无缝支付。",
+      "englishChecksum": "c6f45be256793895e78b85e9e57afb0e",
+      "lastUpdated": "2026-07-19T18:40:42.143Z"
+    },
+    "components.ecosystem-apps-partners.apps.degen-chess.description": {
+      "value": "对弈、下注、直播并预测赢家，赢取奖池",
+      "englishChecksum": "07e37c8851d1e875c00428cb9ed6e84f",
+      "lastUpdated": "2026-07-19T18:41:03.345Z"
+    },
+    "notifications.chain-notification.button-text": {
+      "value": "Push Chain 审计报告",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-07-19T18:41:42.928Z"
+    },
+    "notifications.chain-notification.button-title": {
+      "value": "Push Chain 审计报告",
+      "englishChecksum": "f1eb2ba33c92fdbefdd9f75477810342",
+      "lastUpdated": "2026-07-19T18:42:03.780Z"
+    },
+    "notifications.chain-notification.button-aria-label": {
+      "value": "立即开始！点击此处查看详情",
+      "englishChecksum": "49276ce17adec23261ed45857bea2db9",
+      "lastUpdated": "2026-07-19T18:42:24.901Z"
+    },
+    "notifications.chain-notification.image-alt": {
+      "value": "开始使用！",
+      "englishChecksum": "9838c5ed200849890435a10702f41ded",
+      "lastUpdated": "2026-07-19T18:42:45.478Z"
+    },
+    "notifications.info-bar.title": {
+      "value": "Push Chain 通过 Hacken 安全审计。未发现任何严重问题。",
+      "englishChecksum": "3366ad5c171b2cc371c544cea6b4505c",
+      "lastUpdated": "2026-07-19T18:43:03.728Z"
+    },
+    "notifications.info-bar.learn-more-title": {
+      "value": "了解更多",
+      "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
+      "lastUpdated": "2026-07-19T18:43:17.924Z"
+    },
+    "pages.home.chain-features-section.box7.bodytext": {
+      "value": "使用您的智能合约，跨任意链触发、验证并完成交易。",
+      "englishChecksum": "135d1082fcef28092472432bee5f8942",
+      "lastUpdated": "2026-07-19T22:21:48.151Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "状态访问",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T22:22:11.742Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "展示 Push Chain 以区块风格动画不断增长的插图。",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2026-07-19T22:23:02.780Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "审计已完成。下一步是主网 👀 阅读完整的审计报告。",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-07-19T22:23:33.162Z"
     }
   }
 }

@@ -261,8 +261,7 @@
       "terms-of-service-title": "Leia os Termos de Serviço",
       "terms-of-service-aria-label": "Termos de Serviço",
       "cookie-preferences": "Preferências de Cookie",
-      "cookie-preferences-title": "Gerenciar configurações de cookies",
-      "terms-of-service": "Termos de Serviço"
+      "cookie-preferences-title": "Gerenciar configurações de cookies"
     },
     "footer-image": {
       "alt": "Ilustração do rodapé da Push Chain",
@@ -279,12 +278,12 @@
           },
           "imagealt": "Ilustração mostrando blocos de Tetris em diferentes cores se fundindo e mudando.",
           "imagetitle": "(Rota) Universais de Validação permitem aos usuários disparar, validar e concluir transações em qualquer cadeia usando seu contrato inteligente.",
-          "texttitle": "Validadores\nUniversais"
+          "texttitle": "Universal\nValidators"
         },
         "box8": {
           "bodytext": "Acesse dados de conta e estado de outras cadeias em seu contrato inteligente.",
           "tags": {
-            "title1": "LER DE CHAINS"
+            "title1": "LER DAS CHAINS"
           },
           "imagealt": "Ilustração mostrando o Push Chain crescendo em blocos estilo animação.",
           "imagetitle": "(Roadmap) Estado compartilhado permite acesso a dados de conta e estado de outras cadeias em sua contracto inteligente.",
@@ -755,8 +754,7 @@
                   "migration-details": "### Detalhes da Migração\n\nPush Chain é o resultado de anos aprendendo a construir o principal protocolo de notificação e comunicação web3, que foi um dos primeiros aplicativos para consumidores para criptomoedas.\n\nDevido a isso, além da distribuição airdrop (veja os detalhes abaixo) destinada aos usuários, criadores, desenvolvedores e parceiros do ecossistema Push Chain, **também há uma reserva de migração para os detentores de $PUSH** (que era o token nativo do Push Protocol).\n\n<details>\n  <summary>\n  <b>Detalhes da migração para detentores existentes de token $PUSH</b>\n\n  </summary>\n\n  **Para os detentores existentes de token $PUSH**, a proposta de tokenomics do Push Chain destina 15% do fornecimento total de tokens do Push Chain especificamente para migração. A migração ocorrerá em uma razão de **1:15**—ou seja, para cada token Push Protocol ($PUSH) que você possui, receberá 15 tokens do Push Chain. Por exemplo, se você atualmente possui 40 tokens $PUSH, receberá 600 tokens do Push Chain após a migração.\n\nO lançamento do Push Chain é projetado para recompensar e incentivar os detentores anteriores do Push Protocol ($PUSH) pela sua lealdade e contribuição. O processo de migração para os detentores existentes de token $PUSH funcionará da seguinte maneira:\n\n  - Os tokens serão migrados em uma razão de 1:15 (1 token do Push Protocol = 15 tokens do Push Chain).\n  - Os participantes na migração do Push Chain verão 50% dos seus tokens migrados desbloqueados imediatamente, e outros 50% desbloqueados após 3 meses.\n  - Os migradores de tokens também terão acesso a um pool de fazenda de taxa reservado para eles. Essas recompensas serão distribuídas aos migradores de tokens se eles empilharem seus tokens do Push Chain migrados, para recompensar sua contribuição de longo prazo ao ecossistema.\n  - Por exemplo, se você tiver 100 tokens do Push Protocol $PUSH, receberá 750 tokens do Push Chain quando você migrar e outros 750 tokens do Push Chain após três meses — totalizando 1.500 tokens do Push Chain. Você pode optar por empilhar esses tokens para obter recompensas adicionais do pool de fazenda de taxa do Push Chain, distribuídos periodicamente.\n\nA migração de tokens do Push Chain estará aberta por 12 meses após o lançamento, após os quais qualquer token restante irá para a reserva da comunidade e do ecossistema.\n\n</details>\n<p />",
                   "airdrop-details": "### Detalhes do Airdrop\n\nAlém disso, a proposta de tokenomics destina 10% da oferta total de tokens Push Chain para airdrops para usuários atuais e antigos das aplicações Push Protocol (notificações, mensagens, chat), bem como novos usuários, criadores, desenvolvedores e parceiros do ecossistema do Push Chain.\n\n<br />",
                   "token-distribution": "## Detalhes da Distribuição de Tokens\n\nA oferta total de tokens Push Chain é proposta em **10 bilhões**, distribuída da seguinte forma:\n\n![Tokenomics Push Chain](/assets/website/chain/knowledge/tokenomics/vestingpc.webp)\n\n![Detalhes da Vesting Push Chain](/assets/website/chain/knowledge/tokenomics/vestingdetailspc.webp)\n\n1. As distribuições de airdrop começam na TGE, mas acontecerão ao longo de várias estações.\n2. Contribuidores principais têm um atraso de 12 meses seguido por uma vesting de 24 meses.\n3. O tesouro Push Labs tem uma vesting de 36 meses.\n4. Investidores têm uma vesting linear de 24 meses.\n5. Reservas da comunidade e ecossistema têm um descongelamento de 13,5% na TGE seguido por uma vesting de 36 meses.\n\n<br />",
-                  "get-involved": "## Fique Involvido\n\n- **🧙 Desenvolvedores**\nExplore o nosso SDK e Docs em [Hub de Documentação](/docs/)\n\n- **🦹 Comunidade**  \nSiga [@PushChain](https://x.com/PushChain) no X/Twitter, junte-se ao nosso [Discord](https://discord.com/invite/pushchain) e [Telegram](https://t.me/epnsproject).\n\nJuntos, construamos o futuro da **Web3 Universal**!",
-                  "vision": "## Qual é a Visão da Push Chain?\n\nTodas as blockchains se mostraram particularmente úteis para aplicativos e casos de uso específicos. O Bitcoin viabilizou o dinheiro inteligente. O Ethereum viabilizou inovações para DeFi. O Solana viabilizou aplicativos rápidos e a cultura dos memes. Várias L2s e novas L1s estão direcionadas a outras áreas de interesse.\n\nNo entanto, ainda é necessária uma blockchain projetada especificamente para viabilizar a abstração de chains e a interoperabilidade fluida no espaço. Essa chain permitiria transações de qualquer chain (ETH, SOL, EVM ou não-EVM) para impulsionar aplicativos que podem ser usados por **qualquer usuário** — independentemente da chain ou carteira. Esta é a chain dos **Aplicativos Universais**. Esta é a Push Chain!"
+                  "get-involved": "## Fique Involvido\n\n- **🧙 Desenvolvedores**\nExplore o nosso SDK e Docs em [Hub de Documentação](/docs/)\n\n- **🦹 Comunidade**  \nSiga [@PushChain](https://x.com/PushChain) no X/Twitter, junte-se ao nosso [Discord](https://discord.com/invite/pushchain) e [Telegram](https://t.me/epnsproject).\n\nJuntos, construamos o futuro da **Web3 Universal**!"
                 }
               }
             },
@@ -933,8 +931,7 @@
           "description": "Atualizações de status da rede em tempo real para o Push Chain. Mantenha-se informado sobre interrupções, manutenções e problemas resolvidos.",
           "og-title": "Atualizações da Rede Push Chain - Status da Rede",
           "twitter-title": "Atualizações da Rede Push Chain",
-          "twitter-description": "Atualizações ao vivo sobre o status e a manutenção da rede Push Chain.",
-          "og-description": "Acompanhe as atualizações da rede Push Chain, janelas de manutenção e atualizações de serviço. Obtenha informações de status em tempo real."
+          "twitter-description": "Atualizações ao vivo sobre o status e a manutenção da rede Push Chain."
         },
         "explainer-section": {
           "breadcrumbs": {
@@ -976,11 +973,7 @@
                   "how-affect-heading": "### Como isso me afeta?",
                   "affect-top-wallets": "**Para carteiras afetadas (as 1.950 principais):** Se sua carteira continha 1.100+ $PC tokens (ou trilhões), seu saldo foi rebalanceado para a faixa de 1.100 a 2.000 $PC tokens.",
                   "need-help-heading": "**Precisa de Ajuda?**",
-                  "need-help-text": "Se você acredita que foi afetado por este rebalanceamento e tem dúvidas ou preocupações, entre em contato com a equipe Push Chain no Discord para obter ajuda.",
-                  "overview-text": "A Push Chain executou uma proposta de reequilíbrio de tokens para reduzir o fornecimento total de tokens PC de mais de 75T para aproximadamente 10 bilhões de tokens. Essa atualização resolve uma dívida técnica dos primeiros dias da testnet e prepara a chain para um ambiente semelhante à mainnet.",
-                  "why-not-informed-text": "Os usuários não foram notificados com antecedência para evitar que atores maliciosos redistribuíssem tokens para outras carteiras antes do reequilíbrio. Essa medida de segurança garantiu a integridade do processo de reequilíbrio e evitou manipulações no sistema.",
-                  "validator-period": "O período de proposta de validadores da testnet está atualmente definido em 5 minutos para ajudar a eliminar casos extremos como este antes que a propriedade totalmente descentralizada dos validadores seja implementada.",
-                  "affect-majority": "**Para 99,83% dos usuários:** Essa alteração não afeta você. O saldo da sua carteira permanece inalterado."
+                  "need-help-text": "Se você acredita que foi afetado por este rebalanceamento e tem dúvidas ou preocupações, entre em contato com a equipe Push Chain no Discord para obter ajuda."
                 }
               }
             }
@@ -1286,8 +1279,7 @@
     },
     "ecosystem": {
       "hero-section": {
-        "title": "Explore o Ecossistema Universal",
-        "description": "Descubra aplicativos, parceiros e early adopters construindo a próxima era de experiências universais na Donut Testnet da Push Chain."
+        "title": "Explore o Ecossistema Universal"
       },
       "tabs": {
         "flagship-apps": "Aplicativos Principais",
@@ -1524,8 +1516,7 @@
           "description": "Perguntas, feedback ou outros tópicos"
         },
         "partnerships": {
-          "label": "🤝 Parcerias e Integrações",
-          "description": "BD, integrações com o ecossistema (carteiras, infraestrutura, exchanges, protocolos)"
+          "label": "🤝 Parcerias e Integrações"
         },
         "grants": {
           "label": "💰 Subvenções & Programas do Ecossistema",
@@ -1808,20 +1799,16 @@
     "ecosystem-apps-partners": {
       "apps": {
         "ramen-swap": {
-          "name": "Ramen Swap",
-          "description": "Fornecendo os tokens da sua escolha de qualquer chain"
+          "name": "Ramen Swap"
         },
         "tip-up": {
-          "name": "TipUp",
-          "description": "Dê gorjetas em qualquer chain usando qualquer carteira"
+          "name": "TipUp"
         },
         "push-swap": {
-          "name": "Push Swap",
-          "description": "Swaps de tokens entre chains, sem bridges"
+          "name": "Push Swap"
         },
         "ballsy": {
-          "name": "Ballsy",
-          "description": "Lute por gloria fazendo login com sua chain favorita"
+          "name": "Ballsy"
         },
         "halo": {
           "name": "HALO",
@@ -1909,8 +1896,7 @@
           "description": "Crie, compre e venda colecionáveis blockchain"
         },
         "push-dex": {
-          "name": "PushDex",
-          "description": "DEX construída na testnet da Pushchain"
+          "name": "PushDex"
         },
         "zns": {
           "name": "ZNS",
@@ -1941,16 +1927,14 @@
           "description": "Tenha seu próprio domínio .push"
         },
         "nfts2me": {
-          "name": "NFTs2Me",
-          "description": "Implante sua coleção de NFT gratuitamente em qualquer chain"
+          "name": "NFTs2Me"
         },
         "tachyon": {
           "name": "Tachyon",
           "description": "Relayer Multichain Super Rápido"
         },
         "puffles": {
-          "name": "Puffles",
-          "description": "Launchpad de NFT #1 na Push Chain"
+          "name": "Puffles"
         },
         "zappi-to": {
           "name": "Zappi.to",
@@ -2005,12 +1989,12 @@
       "close-button-title": "Fechar notificação",
       "close-button-aria-label": "Dismiss Push Chain toast notification",
       "container-aria-label": "Notificação Push Chain",
-      "title": "",
-      "description": "Auditoria concluída. Mainnet em seguida 👀 Leia o relatório completo da auditoria.",
       "button-text": "Relatório de Auditoria Push Chain",
       "button-title": "Relatório de Auditoria da Push Chain",
       "button-aria-label": "Comece agora!. Você pode conferir aqui",
-      "image-alt": "Comece Agora!"
+      "image-alt": "Comece Agora!",
+      "description": "Audit concluído. Mainnet a seguir 👀 Leia o relatório completo do Audit.",
+      "title": ""
     }
   }
 }

@@ -211,9 +211,7 @@
       "reddit": "리드디트",
       "reddit-title": "Push 체인 subreddit에 참여하세요",
       "telegram": "Telegram",
-      "telegram-title": "Push 체인 테레그램에 참여하세요",
-      "knowledge-base-title": "Push Chain 지식 기반",
-      "support": "지원"
+      "telegram-title": "Push 체인 테레그램에 참여하세요"
     },
     "email-section": {
       "title": "Push 체인에 대해 최신 정보를 받아보세요",
@@ -735,9 +733,7 @@
           "title": "심화 분석 — 개념 및 아키텍처",
           "description": "shared-state, fee abstraction, USV/UEA 및 유니버설 실행 계층에 대한 읽기 쉬운 설명서.",
           "og-title": "Deep Dives - 개념 및 아키텍처",
-          "og-description": "푸시 체인 모듈, 디자인 결제 및 성능에 대해 심층적인 기사.",
-          "twitter-title": "딥다이브 - 내부 동작 원리",
-          "twitter-description": "Push Chain의 작동 방식에 대한 설명."
+          "og-description": "푸시 체인 모듈, 디자인 결제 및 성능에 대해 심층적인 기사."
         }
       },
       "tokenomics": {
@@ -1114,15 +1110,13 @@
         "description": "Push Chain에서 배포하는 데 필요한 모든 것: 빠른 시작 가이드, SDK, API 레퍼런스, 예제, 노드 설정 안내.",
         "og-title": "푸시 체인 문서 - 빠른 시작, SDK 및 API",
         "og-description": "유니버셜 실행 레이어에서 앱을 빌드하고 실행하세요. 명확한 가이드와 예시가 있습니다.",
-        "twitter-title": " Push 체인 문서 - 지금 빌드하기",
-        "twitter-description": "빠르게 출시하기 위한 퀵스타트, SDK, API 레퍼런스 및 예제."
+        "twitter-title": " Push 체인 문서 - 지금 빌드하기"
       },
       "header": {
         "countdown-title": "테스트넷 문서 출시까지 남은 시간",
         "description": "psst... 테스트넷 던틀 보러 가고 싶니? #pushchainsecret으로 연락하면 테스트 빌드 액세스 링크를 보내줄게.",
         "title": "Push Chain에 대해 트윗하기",
-        "ariaLabel": "Push Chain에 대해 트윗하기",
-        "tweet-button": "Push Chain에 대해 트윗하기"
+        "ariaLabel": "Push Chain에 대해 트윗하기"
       }
     },
     "blog": {
@@ -1366,7 +1360,7 @@
           "answer": "<1><2>아니요.</2></1><1><2>기존 월렛을 유지하세요.</2> 이미 가지고 있는 월렛을 사용하세요 — 새로운 월렛이나 계정이 필요하지 않습니다.</1><1><2>보유하신 자산으로 결제하세요.</2> 수수료는 홈 체인에서 이미 보유하고 계신 토큰으로 결제할 수 있습니다. 저희가 백그라운드에서 변환을 처리합니다.</1><1><2>네트워크 전환은 필요하지 않습니다.</2> 가스 토큰을 얻기 위해 브리징할 필요가 없습니다 — 홈 체인에 머무르세요.</1><1><2>비수탁입니다.</2> 모든 작업을 직접 서명합니다 — Push는 키를 보관하지 않습니다.</1><1><2>백그라운드에서 처리됩니다.</2> 네트워크는 자동으로 $PC로 수수료를 정산합니다 — 직접 관리할 필요가 없습니다.</1>"
         },
         "qna4": {
-          "question": "브릿지나 메시징 레이어와 어떻게 다른가요?",
+          "question": "이것이 브리ッジ나 메시징 레이어와는 어떻게 다른가요?",
           "answer": "<1><2>간단한 답변:</2> Push는 앱이 실행되는 곳입니다. 브리지/메시징은 단순히 체인 간에 토큰이나 메시지를 이동시키는 것으로, 사용자 및 개발자에게 복잡성을 더합니다.</1><1><2>단일 홈 vs 많은 복제본.</2> 브리지/메시징을 사용하면 체인별로 배포하고 메시지를 통해 동기화합니다. Push에서는 한 번 배포하면 됩니다. 모든 사용자가 동일한 컨트랙트와 공유 상태에 액세스합니다.</1><1><2>래핑된 자산이나 필수 브리징 없음.</2> 사용자는 자신의 홈 체인에 머물면서 이미 보유하고 있는 것을 사용하여 결제합니다. 저희가 내부적으로 라우팅 및 수수료 변환을 처리합니다.</1><1><2>통합된 신원 및 검증.</2> 모든 지갑/체인에서 서명을 받아 Push에서 동일한 사용자에게 속성합니다 — 비수탁 방식입니다.</1><1><2>더 적은 이동 부품.</2> 체인 간 승인 춤, 가스 토큰 사냥, 동기화를 유지해야 하는 접착 컨트랙트가 없습니다.</1><1><2>브리지는 복잡성을 초래합니다. 체인 기본 상호 운용성이 이를 해결합니다.</2> 브리지는 복잡한 엔지니어링 노력, 시간, 감사 비용 및 추가 인프라가 필요합니다. 체인 기본 상호 운용성은 앱이 기본적으로 상속하므로 작동합니다.</1><1>결과: 더 간단한 앱, 단일 진실 공급원, 사용자가 그렇지 않은 것처럼 보이는 UX.</1>"
         },
         "qna5": {
@@ -1781,7 +1775,7 @@
       }
     },
     "ecosystem-essentials": {
-      "title": "필수 테스트넷 앱 살펴보기",
+      "title": "필수 테스트넷 앱 탐색하기",
       "apps": {
         "pc-faucet": {
           "name": "PC 파이프",
@@ -1808,24 +1802,20 @@
     "ecosystem-apps-partners": {
       "apps": {
         "halo": {
-          "name": "HALO",
-          "description": "에이전틱 커머스를 위한 통합 인프라 레이어."
+          "name": "HALO"
         },
         "tip-up": {
-          "name": "티업",
-          "description": "어떤 지갑으로든 모든 체인에서 팁을 주세요"
+          "name": "티업"
         },
         "push-swap": {
           "description": "브릿지 없이 크로스 체인 토큰 스왑을 원활하게提供합니다",
           "name": "푸시 스와프"
         },
         "push-campus": {
-          "name": "푸시 캠퍼스",
-          "description": "Ethereum, Solana, Base 등 15개 이상의 체인에서 학생들에게 다가가세요"
+          "name": "푸시 캠퍼스"
         },
         "push-dex": {
-          "name": " PushDex",
-          "description": "Pushchain 테스트넷 위에 구축된 DEX"
+          "name": " PushDex"
         },
         "ramen-swap": {
           "name": "라면 스왑",
@@ -1840,8 +1830,7 @@
           "description": "ERC-20 토큰 생성 및 발행하기"
         },
         "eon-ai-butler": {
-          "name": "이온: AI 보조인",
-          "description": "지원되는 네트워크 전반에서 자산을 보내고, 스왑하고, 관리하세요"
+          "name": "이온: AI 보조인"
         },
         "push-bet": {
           "name": "푸시 배트",
@@ -1864,8 +1853,7 @@
           "description": "소개에 따라 호출별 API 수익화 서비스"
         },
         "bountive": {
-          "name": "버전티브",
-          "description": "클릭 수보다 품질을 보상하는 유니버설 성장 엔진"
+          "name": "버전티브"
         },
         "beat-brawls": {
           "name": "비트배틀",
@@ -1893,8 +1881,7 @@
           "description": "자동화된 암호화폐 상속"
         },
         "pusd": {
-          "name": "PUSD",
-          "description": "모든 체인의 USD 유동성을 결합한 1:1 페그 스테이블코인"
+          "name": "PUSD"
         },
         "freename": {
           "name": "프리네임",
@@ -1933,8 +1920,7 @@
           "description": "블록체인 활동으로 가상 애완동물을 키워보세요."
         },
         "surf-layer": {
-          "name": "서프레이어",
-          "description": "70개 이상의 체인에서 정체성을 구축하고 보상을 받으세요."
+          "name": "서프레이어"
         },
         "push-name-service": {
           "name": "푸시 네임 서비스",

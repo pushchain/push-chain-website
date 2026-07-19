@@ -19,7 +19,7 @@
   "enChunks": {
     "01-global.json": {
       "checksum": "3d53e5506bca5216eec0fce15911267e",
-      "lastUpdated": "2026-06-26T13:44:51.226Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "global.site-name": {
           "checksum": "ab90175701a07de068e1398e3f039705",
@@ -35,7 +35,7 @@
     },
     "02-header.json": {
       "checksum": "163996837158971675718bb113abb802",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "header.meta.logo-aria-label": {
           "checksum": "ddb15ed31e10e523a0ae18b1605ef229",
@@ -536,7 +536,7 @@
     },
     "03-footer.json": {
       "checksum": "f81fb3499c0a296d60710019ecbd9912",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "footer.email-section.title": {
           "checksum": "8ed988fe5e29bb5d37ff55ffe9adf418",
@@ -897,7 +897,7 @@
     },
     "04-01-pages-home.json": {
       "checksum": "05f759613c48e0d13418a2bbe4a7cc55",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.home.seo.title": {
           "checksum": "06af9bb5b7bfb45ac4a4b90719173c50",
@@ -1638,7 +1638,7 @@
     },
     "04-02-00-pages-knowledge.json": {
       "checksum": "6cd3af59a9df6cf86a9cf736defb755a",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.seo.title": {
           "checksum": "e8e1e84abb2b2b3fdf58100ec4ac0ad5",
@@ -1869,7 +1869,7 @@
     },
     "04-02-01-pages-knowledge-push101.json": {
       "checksum": "b690b188a70464d8561c81afafa962a1",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.push101.seo.title": {
           "checksum": "4e4a3871154442ab37aeb8b0b33f6950",
@@ -2010,7 +2010,7 @@
     },
     "04-02-02-pages-knowledge-builders.json": {
       "checksum": "a1cac4b11665b5490d44bd8d12aebddb",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.builders.seo.title": {
           "checksum": "2c4b579dbf6c79202249c4eaec8da451",
@@ -2121,7 +2121,7 @@
     },
     "04-02-03-pages-knowledge-deepdives.json": {
       "checksum": "e6eb4231132b4ad514628c4f7210130b",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.deepdives.seo.title": {
           "checksum": "df5f86dbe5872c54abbf184d7bdd6401",
@@ -2207,7 +2207,7 @@
     },
     "04-02-04-pages-knowledge-tokenomics.json": {
       "checksum": "2395015f46e4ee17a2017de87bf1f9d2",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.tokenomics.seo.title": {
           "checksum": "c1d74ac838447f0ba74714d9570fab97",
@@ -2308,7 +2308,7 @@
     },
     "04-02-05-pages-knowledge-faq.json": {
       "checksum": "99b7e792d8167d9621fe7da3eaa6000a",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.faq.seo.title": {
           "checksum": "aaa9a3e4e5a4265aa383c98af54cba78",
@@ -2584,7 +2584,7 @@
     },
     "04-03-pages-docs.json": {
       "checksum": "daca6473f69125979105ec3bdc8f86d5",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.docs.seo.title": {
           "checksum": "d975add027d1034fa65ac20fb1d50727",
@@ -2705,7 +2705,7 @@
     },
     "04-04-pages-blog.json": {
       "checksum": "cf02a9d4b5a7373ae858866e5c71f3be",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.blog.seo.title": {
           "checksum": "f8d9960b2ef2f61e0c1f06e453327bf8",
@@ -2741,7 +2741,7 @@
     },
     "04-05-pages-lfpush.json": {
       "checksum": "af4d7f84b0f23159f2a7667ad8b003eb",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.lfpush.seo.title": {
           "checksum": "491a4781a2632f88c9b11f39eda2687f",
@@ -2827,7 +2827,7 @@
     },
     "04-06-pages-support.json": {
       "checksum": "7909d6d2a8121c70f9e886ac2bae0230",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.support.seo.title": {
           "checksum": "9f722592a545e65f2d8c6ecfcfd762f3",
@@ -2873,7 +2873,7 @@
     },
     "04-07-pages-litepaper.json": {
       "checksum": "148621a63ec39532bf53a877d8f3ea70",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.litepaper.seo.title": {
           "checksum": "63f4e13f51450cbf454a73aeffdad4cf",
@@ -2909,7 +2909,7 @@
     },
     "04-08-pages-tos.json": {
       "checksum": "cc6632e61103809c2851511a43ae0dfc",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.tos.seo.title": {
           "checksum": "3b6c2b4caaf4f14f8d7feeddc4ac3f4d",
@@ -2960,7 +2960,7 @@
     },
     "04-09-pages-privacy.json": {
       "checksum": "6968f96ac9a2e31d7d142794270e1505",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.privacy.seo.title": {
           "checksum": "fa2ead697d9998cbc65c81384e6533d5",
@@ -3011,7 +3011,7 @@
     },
     "04-10-pages-privacymobile.json": {
       "checksum": "f8698ed91d9fa0bbcc0615f4879ef2c2",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.privacymobile.seo.title": {
           "checksum": "c0be9b5157f3597624c64f96e2b59153",
@@ -3062,7 +3062,7 @@
     },
     "04-11-pages-brb.json": {
       "checksum": "5d1a28e581dd93e4f8490f5de8b247d3",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.brb.seo.title": {
           "checksum": "512532965092ab5a452c18f90d89c710",
@@ -3098,7 +3098,7 @@
     },
     "04-12-pages-contact.json": {
       "checksum": "2de955069e3b52cbc0f5383ff4c988f9",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.contact.seo.title": {
           "checksum": "d076c93ff727a1354c14644902a49ea4",
@@ -3144,7 +3144,7 @@
     },
     "04-13-donut-testnet-secret.json": {
       "checksum": "85a18ce7a9a4d6bd18c6f70553111760",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.donutsecret.seo.title": {
           "checksum": "693f882fb38ac6945a5bf4fc94c89e0e",
@@ -3180,7 +3180,7 @@
     },
     "05-01-components-mailing-signup.json": {
       "checksum": "8ed8619f70f3747e5a3746eb499fe0c5",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.mailing-signup.title": {
           "checksum": "708313e1e306a3c6d6203624779492b3",
@@ -3261,7 +3261,7 @@
     },
     "05-02-components-cookie-banner.json": {
       "checksum": "13470269cc56c1ddb08fb8272603fe2f",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.cookie-banner.message": {
           "checksum": "677861b85aa90c36f33ce08606f7548c",
@@ -3327,7 +3327,7 @@
     },
     "05-03-components-short-faq-snippet.json": {
       "checksum": "21e16abcc9dba8a091d7aa65e92c9042",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.short-faq-snippet.section-aria-label": {
           "checksum": "d8225eba6d8ea4cb8c98e998faae4ed2",
@@ -3463,7 +3463,7 @@
     },
     "05-04-components-short-support-snippet.json": {
       "checksum": "460b75d2b0f53f044f812c404beb2991",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.short-support-snippet.section-aria-label": {
           "checksum": "18f8e4c16ed7d0342d2a2b06fbb13ddb",
@@ -3644,7 +3644,7 @@
     },
     "05-05-components-short-contact-us-snippet.json": {
       "checksum": "cf410564bece679560794b375b8e9059",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.short-contact-us-snippet.section-aria-label": {
           "checksum": "b9e7f03998e0af83ad08961d215f2984",
@@ -3850,7 +3850,7 @@
     },
     "05-06-components-typeform-support.json": {
       "checksum": "a388ce789952bcec83d08eed2b168101",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.typeform-support.collapsed-text-for-support": {
           "checksum": "22d6dfdfffa420807dbf9860ca010ade",
@@ -4186,7 +4186,7 @@
     },
     "05-07-components-breadcrumbs.json": {
       "checksum": "fba771938394b9afb71beac12c4baade",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.breadcrumbs.navigation-aria-label": {
           "checksum": "24dddb45a7fd74ddfa78a398628d800b",
@@ -4222,7 +4222,7 @@
     },
     "05-07-components-explainer.json": {
       "checksum": "1a2fe6661bb43cefb9b9229f57317ea3",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.explainer.prepend": {
           "checksum": "9c433bbfd38024f89f81f6419846feb5",
@@ -4238,7 +4238,7 @@
     },
     "05-07-components-explore-collection.json": {
       "checksum": "baf45e7f0401093a5d98b5018d481997",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.explore-collection.explore-card.image-prepend": {
           "checksum": "9aa7afb360abc986b11cc3ca018f22ee",
@@ -4269,7 +4269,7 @@
     },
     "05-08-components-blog.json": {
       "checksum": "49a2083f0ed1f7f0885182aadccdc929",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.blog.more-posts.title": {
           "checksum": "61005f8df8f6a3fb54a451b8f20f4208",
@@ -4395,7 +4395,7 @@
     },
     "06-01-notifications-chain-notification.json": {
       "checksum": "61b448830f0aaabd5fdfc3fe53898224",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "notifications.chain-notification.title": {
           "checksum": "d41d8cd98f00b204e9800998ecf8427e",
@@ -4446,7 +4446,7 @@
     },
     "06-02-notifications-rewards-notification.json": {
       "checksum": "d07652ad319976ddab84a56667273019",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "notifications.rewards-notification.title": {
           "checksum": "4855edd99c96834921b39b20ca508f70",
@@ -4482,7 +4482,7 @@
     },
     "06-03-notifications-info-bar.json": {
       "checksum": "63aa2f5546ea176ed8ed02736d7d6428",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "notifications.info-bar.title": {
           "checksum": "53d14bf93092ed498a3c36da2c024be5",
@@ -4523,7 +4523,7 @@
     },
     "06-04-notifications-alert.json": {
       "checksum": "ded0d9e63163213597e3491f8e75e53a",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "notifications.alert.message": {
           "checksum": "7e1a0e7f4fcf772b48be90f3d700b060",
@@ -4559,7 +4559,7 @@
     },
     "04-02-06-00-pages-knowledge-testnet.json": {
       "checksum": "fe38c17b3dc541a6768c05939c23f7bb",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.testnet.seo.title": {
           "checksum": "470c2d1ec04fb2bbed087ebf841085b5",
@@ -4776,7 +4776,7 @@
     },
     "04-02-07-pages-knowledge-validators.json": {
       "checksum": "77b0d638ba75a9c6c7e8b532560cff51",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.validators.seo.title": {
           "checksum": "69895f03329163136454c2d2adead5b7",
@@ -4822,7 +4822,7 @@
     },
     "04-14-pages-ecosystem.json": {
       "checksum": "4341a422ba6a3f0db81c321398d2c30e",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.ecosystem.seo.title": {
           "checksum": "e6d635698ff7104de0e5c08f0c511c08",
@@ -4893,7 +4893,7 @@
     },
     "04-14-pages-cult.json": {
       "checksum": "2ec2753454626ebb5a510f0e084328f2",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.cult.seo.title": {
           "checksum": "47e7a070efa31c8bafe3e780915ad0dd",
@@ -4959,7 +4959,7 @@
     },
     "05-09-components-cult-contact.json": {
       "checksum": "dee5d05142de7ca727851065a7544416",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.cult-contact.collapsed-text": {
           "checksum": "65063a53ea117ff6932b31d9484e91f1",
@@ -5150,7 +5150,7 @@
     },
     "05-10-components-short-cult-snippet.json": {
       "checksum": "08b98c98a31359918f8fda6b6eb670f1",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.short-cult-snippet.section-aria-label": {
           "checksum": "4e559ed747da59d9663574298b424b18",
@@ -5331,7 +5331,7 @@
     },
     "05-11-components-ecosystem-apps-partners.json": {
       "checksum": "7a1f14ffb58147c4a8a227c24b2b559f",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.ecosystem-apps-partners.coming-soon": {
           "checksum": "f2407056c089170d4df9dac66a284f38",
@@ -5752,7 +5752,7 @@
     },
     "05-11-components-ecosystem-essentials.json": {
       "checksum": "9cecea687d4a9d180dabd9ae679e933d",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "components.ecosystem-essentials.title": {
           "checksum": "687534be7392f5c4a6c912c121bdffcf",
@@ -5813,7 +5813,7 @@
     },
     "04-02-06-01-pages-knowledge-testnet-network-updates.json": {
       "checksum": "47cdfe20052f3d45f41ccf53d1bc5506",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.report.seo.title": {
           "checksum": "462d627de16602bab10ebdb9a6532055",
@@ -6019,7 +6019,7 @@
     },
     "04-02-08-pages-knowledge-audit.json": {
       "checksum": "23775c3e0657c4e190dd8ff87d971290",
-      "lastUpdated": "2026-06-26T13:44:51.227Z",
+      "lastUpdated": "2026-07-19T22:19:59.029Z",
       "keys": {
         "pages.knowledge.audit.seo.title": {
           "checksum": "5a32b0bb17fd4b334513d307573ec3fd",

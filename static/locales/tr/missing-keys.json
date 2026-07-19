@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T11:37:04.353Z",
+  "lastUpdated": "2026-07-19T18:33:54.013Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "Bilgi Bankası — Kılavuzlar, SSS ve Nasıl Yapılır",
@@ -3025,6 +3025,26 @@
       "value": "Daha Fazla Oku",
       "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
       "lastUpdated": "2026-06-26T11:37:04.331Z"
+    },
+    "pages.home.chain-features-section.box8.bodytext": {
+      "value": "smart contract'ınızdan diğer zincirlerdeki hesap ve durum verilerine erişin.",
+      "englishChecksum": "2f4f8d22096f96088ba6b1e344a8dd58",
+      "lastUpdated": "2026-07-19T18:25:18.902Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Durum Erişimi",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:33:15.568Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "Zincirlerden Oku",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2026-07-19T18:33:36.922Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Push Chain'in bloklar şeklinde büyüyen bir animasyonunu gösteren illüstrasyon.",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2026-07-19T18:33:54.012Z"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T11:09:46.417Z",
+  "lastUpdated": "2026-07-19T18:31:30.590Z",
   "keys": {
     "pages.knowledge.report.explainer-section.breadcrumbs.knowledge-base": {
       "value": "Base de Conhecimento",
@@ -2999,6 +2999,26 @@
       "value": "Saiba Mais",
       "englishChecksum": "ffea8cbbeceb80da22704c60d9779c83",
       "lastUpdated": "2026-06-26T11:09:46.404Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "Universal\nValidators",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2026-07-19T18:29:38.613Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Acesso ao Estado",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:29:59.458Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "LER DAS CHAINS",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2026-07-19T18:30:20.394Z"
+    },
+    "notifications.chain-notification.description": {
+      "value": "Audit concluído. Mainnet a seguir 👀 Leia o relatório completo do Audit.",
+      "englishChecksum": "094b3ec9c9c84e30546a555b59006564",
+      "lastUpdated": "2026-07-19T18:31:30.589Z"
     }
   }
 }

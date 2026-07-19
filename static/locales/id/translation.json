@@ -278,8 +278,8 @@
           "tags": {
             "title1": "TULIS KE JARINGAN"
           },
-          "imagealt": "Ilustrasi yang menampilkan blok tetris dengan warna berbeda yang menyatu dan berubah.",
-          "imagetitle": "(Roadmap) Validator Universal memungkinkan pengguna untuk memicu, memvalidasi, dan menyelesaikan transaksi di semua chain menggunakan smart contract Anda."
+          "imagealt": "Ilustrasi menampilkan balok Tetris berwarna berbeda yang bergabung dan berubah.",
+          "imagetitle": "(Roadmap) Validater Universal memungkinkan pengguna untuk memicu, memvalidasi, dan menyelesaikan transaksi di berbagai rantai menggunakan smart contract Anda."
         },
         "box8": {
           "bodytext": "Akses akun dan data status dari jaringan lain dalam kontrak pintar Anda.",
@@ -289,7 +289,7 @@
           "imagetitle": "(Roadmap) State Bagian Berbagi memungkinkan akses ke data akun dan state dari jaringan lain dalam kontrak pintar Anda.",
           "tagText": "SEBENTAR LAGI",
           "texttitle": "Akses State",
-          "imagealt": "Ilustrasi yang menampilkan Push Chain tumbuh dalam gaya animasi blok."
+          "imagealt": "Ilustrasi menunjukkan Push Chain yang berkembang dengan animasi bergaya blok."
         },
         "section-aria-label": "Bagian inovasi dan fitur Push Chain",
         "header": {
@@ -836,9 +836,7 @@
                   "centralization-risks": "### Apakah ada risiko sentralisasi dengan Push Chain?\n\n**Tidak.** Arsitektur Push Chain menekankan desentralisasi.\n\nPush Chain sepenuhnya terdesentralisasi dan dirancang agar kuat dan tahan lama. Siapa pun dapat menjalankan node dan berpartisipasi dalam jaringan dan diberi insentif atau dihukum melalui PoS. Singkatnya:\n\n- Validator dan aktor lain beroperasi secara independen dan diberi insentif melalui PoS.\n- Mekanisme tata kelola memastikan keterlibatan komunitas.\n- Setiap pihak ekosistem disertakan dalam tata kelola sampai batas tertentu.\n\nUntuk mempelajari lebih lanjut tentang cara menjalankan node, lihat [Basis Pengetahuan](/knowledge/) kami atau lihat [Repo Node Validator](https://github.com/pushchain/push-chain-node).\n\n---",
                   "support-section": "## Dukungan dan Keterlibatan",
                   "need-help": "### Saya butuh bantuan, di mana saya bisa menghubungi Push Chain?\n\nUntuk dukungan, Anda dapat [kirim tiket di sini](https://push.org/support) atau hubungi kami di support@push.org.\n\nJika Anda seorang pengembang, Anda juga dapat menghubungi kami di [Discord](https://discord.com/invite/pushchain) dan kami akan dengan senang hati membantu Anda.\n\n---",
-                  "how-to-contribute": "### Bagus, bagaimana cara saya berkontribusi?\n\nCara terbaik untuk tetap mengikuti perkembangan Push Chain adalah melalui saluran resmi Push: situs web, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), dan [Discord](https://discord.com/invite/pushchain).\n\nSelalu waspada terhadap upaya phishing, situs palsu, atau penipuan yang meminta crypto Anda. Semua komunikasi resmi akan dikirim dari akun resmi Push.\n\n---",
-                  "vs-particle-network": "### Apa perbedaan Push Chain dengan Particle Network?\n\n**Particle Network:**\n- **Fokus Abstraksi Akun**: Berfokus terutama pada abstraksi wallet dan login sosial\n- **Wallet Multi-Chain**: Menciptakan pengalaman wallet terpadu di berbagai chain\n- **Integrasi SDK**: Memerlukan integrasi Particle SDK agar berfungsi\n- **Lapisan Pengalaman Pengguna**: Beroperasi sebagai lapisan di atas chain yang sudah ada\n\n**Push Chain:**\n- **Blockchain Universal**: Blockchain native yang mendukung pengguna dari semua chain\n- **Integrasi Tingkat Protokol**: Fungsionalitas cross-chain dibangun ke dalam konsensus\n- **Tanpa SDK**: Wallet yang sudah ada bekerja secara native tanpa modifikasi\n- **Lapisan Dasar**: Menyediakan infrastruktur blockchain dasar, bukan hanya lapisan UX\n\nPush Chain adalah blockchain universal, sedangkan Particle Network adalah layanan abstraksi wallet.\n\n---",
-                  "developers-section": "## Developer, Pengguna, dan Operator Node"
+                  "how-to-contribute": "### Bagus, bagaimana cara saya berkontribusi?\n\nCara terbaik untuk tetap mengikuti perkembangan Push Chain adalah melalui saluran resmi Push: situs web, [Twitter/X](https://x.com/PushChain), [Telegram](https://t.me/epnsproject), dan [Discord](https://discord.com/invite/pushchain).\n\nSelalu waspada terhadap upaya phishing, situs palsu, atau penipuan yang meminta crypto Anda. Semua komunikasi resmi akan dikirim dari akun resmi Push.\n\n---"
                 }
               }
             }
@@ -975,12 +973,7 @@
                   "affect-majority": "**Untuk 99,83% pengguna:** Perubahan ini tidak akan mempengaruhi Anda. Saldo dompet tetap utuh.",
                   "affect-top-wallets": "**Untuk dompet yang terdampak (top 1.950):** Jika dompet Anda menempuh lebih dari 1.100 PC token (atau triliun), keseimbangan saldo Anda telah diperbarui ke rentang 1.100-2.000 PC token.",
                   "need-help-heading": "**Butuh Bantuan?**",
-                  "need-help-text": "Jika Anda merasa terdampak oleh rebalancing ini dan memiliki pertanyaan atau kekhawatiran, silakan hubungi tim Push Chain di Discord untuk mendapatkan bantuan.",
-                  "overview-text": "Push Chain menjalankan proposal penyeimbangan ulang token untuk mengurangi total suplai token PC dari lebih dari 75T token menjadi sekitar 10 miliar token. Upgrade ini mengatasi utang teknis dari masa awal testnet dan menyiapkan chain untuk lingkungan yang menyerupai mainnet.",
-                  "reason-token-economy": "- Membangun ekonomi token yang adil dan berkelanjutan",
-                  "change-supply": "- Total suplai dikurangi dari lebih dari 75T menjadi ~10 miliar token PC",
-                  "why-not-informed-text": "Pengguna tidak diberi tahu sebelumnya untuk mencegah pihak jahat mendistribusikan ulang token ke wallet lain sebelum penyeimbangan ulang. Langkah keamanan ini memastikan integritas proses penyeimbangan ulang dan mencegah eksploitasi sistem.",
-                  "why-52t-text": "Penyeimbangan ulang dilakukan dalam dua fase. Token sekarang dikumpulkan ke wallet yang dikendalikan oleh tim dan akan segera dibakar."
+                  "need-help-text": "Jika Anda merasa terdampak oleh rebalancing ini dan memiliki pertanyaan atau kekhawatiran, silakan hubungi tim Push Chain di Discord untuk mendapatkan bantuan."
                 }
               }
             }
@@ -1286,8 +1279,7 @@
     },
     "ecosystem": {
       "hero-section": {
-        "title": "Jelajahi Ekosistem Universal",
-        "description": "Temukan aplikasi, partner, dan pengguna awal yang membangun era baru pengalaman universal di Donut Testnet Push Chain."
+        "title": "Jelajahi Ekosistem Universal"
       },
       "tabs": {
         "flagship-apps": "Aplikasi Unggulan",
@@ -1295,8 +1287,7 @@
         "all-apps": "Semua Aplikasi"
       },
       "cta": {
-        "button": "Mulai Membangun",
-        "title": "Ingin bergabung dengan ekosistem aplikasi universal yang tumbuh tercepat dan melipatgandakan basis penggunamu 10x?"
+        "button": "Mulai Membangun"
       },
       "seo": {
         "title": "Push Chain Ecosystem — Aplikasi Universal & Mitra",
@@ -1379,8 +1370,7 @@
           "answer": "<1><2>Kecepatan.</2> Dirancang untuk konfirmasi ~1 detik di Push Chain dengan finalitas determinitis dan umpan balik UX yang cepat. Untuk transaksi universal, tergantung per rantai tetapi sebagian besar blockchain modern seharusnya membutuhkan konfirmasi ~2-3 detik atau kurang. Periksa metrik langsung di <3>🍩 Donut Testnet</3>.</1><1><2>Model biaya.</2> Anda melihat biaya dalam token yang Anda pilih untuk dibayarkan; jaringan diselesaikan dalam $PC di balik layar.</1><1><2>Biaya tipikal.</2> Biaya tipikal kurang dari <2>$0.001</2> per transaksi. meskipun, bervariasi berdasarkan kompleksitas kontrak, harga token dan beban jaringan. Anda mendapatkan kutipan yang tepat sebelum Anda menandatangani.</1>",
           "donut-testnet-title": "Lihat statistik Push Chain Donut Testnet."
         }
-      },
-      "section-aria-label": "Pertanyaan yang sering diajukan tentang Push Chain - Blockchain Universal"
+      }
     },
     "short-support-snippet": {
       "section-aria-label": "Pertanyaan Dukungan tentang Push Chain - Universal Blockchain",
@@ -1652,8 +1642,7 @@
       },
       "paginator": {
         "nav-aria-label": "Navigasi daftar blog",
-        "newer-entries": "Masukkan Entri Baru",
-        "older-entries": "Entri Lama"
+        "newer-entries": "Masukkan Entri Baru"
       },
       "footer-item": {
         "share-title": "Jadi bagian dari diskusi dengan membagikan artikel ini",
@@ -1784,20 +1773,17 @@
       "title": "Jelajahi Aplikasi Testnet Penting",
       "apps": {
         "pc-faucet": {
-          "name": "Keran PC",
-          "description": "Dapatkan token PC Testnet kamu di sini"
+          "name": "Keran PC"
         },
         "push-bridge": {
-          "name": "Push Bridge",
-          "description": "Bridge token antar chain"
+          "name": "Push Bridge"
         },
         "simulate-tx": {
           "name": "Simulasi Tx",
           "description": "Simulasikan sebuah transaksi universal"
         },
         "push-chain-scan": {
-          "name": "Push Chain Scan",
-          "description": "Penjelajah blockchain Push Chain"
+          "name": "Push Chain Scan"
         },
         "wallet": {
           "name": "Dompet",
@@ -1808,8 +1794,7 @@
     "ecosystem-apps-partners": {
       "apps": {
         "apt-casino": {
-          "name": "APT Casino",
-          "description": "Taruhan universal, adil, dan transparan untuk menang"
+          "name": "APT Casino"
         },
         "pns": {
           "description": "ID Anda di Setiap Rangkaian",
@@ -1817,24 +1802,20 @@
         },
         "push-ninja": {
           "name": "Push Ninja",
-          "spotlight-text": "Potong. Lindungi. Scor!",
-          "description": "Game berbasis keterampilan on-chain"
+          "spotlight-text": "Potong. Lindungi. Scor!"
         },
         "push-swap": {
-          "name": "Push Swap",
-          "description": "Swap token cross-chain yang mulus tanpa bridge"
+          "name": "Push Swap"
         },
         "pusd": {
           "description": "Stablecoin terpegangan 1:1 yang menggabungkan likuiditas USD dari semua rantai",
           "name": "PUSD"
         },
         "push-dex": {
-          "name": "PushDex",
-          "description": "DEX yang dibangun di testnet Pushchain"
+          "name": "PushDex"
         },
         "surf-layer": {
-          "name": "SurfLayer",
-          "description": "Bangun identitasmu dan dapatkan reward di lebih dari 70 chain."
+          "name": "SurfLayer"
         },
         "ramen-swap": {
           "name": "Ramen Swap",
@@ -1981,8 +1962,7 @@
       "description": "Dapatkan bocoran tentang Testnet, Donut, bangun aplikasi universal dan menangkan hadiah!",
       "close-button-title": "Tutup notifikasi hadiah",
       "close-button-aria-label": "Tutup notifikasi hadiah Push Chain",
-      "container-aria-label": "Notifikasi hadiah Push Chain",
-      "image-alt": "Reward Testnet Push Chain - Bangun Aplikasi Universal"
+      "container-aria-label": "Notifikasi hadiah Push Chain"
     },
     "info-bar": {
       "title": "Push Chain lulus audit keamanan Hacken. Tidak ada masalah kritis yang ditemukan.",

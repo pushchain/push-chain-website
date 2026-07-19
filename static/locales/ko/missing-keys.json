@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T10:54:33.670Z",
+  "lastUpdated": "2026-07-19T18:24:44.997Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "지식 기반 — 가이드, FAQ 및 방법",
@@ -1657,9 +1657,9 @@
       "lastUpdated": "2026-06-25T17:22:39.770Z"
     },
     "components.short-faq-snippet.qnas.qna4.question": {
-      "value": "How is this different from bridges or messaging layers?",
+      "value": "이것이 브리ッジ나 메시징 레이어와는 어떻게 다른가요?",
       "englishChecksum": "b5d86c3d717c6454f3040120ad8fd86c",
-      "lastUpdated": "2026-06-25T17:22:52.554Z"
+      "lastUpdated": "2026-07-19T18:24:20.765Z"
     },
     "components.short-support-snippet.qnas.qna3.answer": {
       "value": "<1>테스트 토큰을 요청하려면 <3>Faucet</3> 사용하세요.</1><1><2>참고 사항:</2> 할당량이 있거나, 간단한 인증이 필요할 수도 있습니다. faucet가 작동하지 않으면 <4>디스코드</4>에서 저희에게 메시지를 보세요.</1>",
@@ -1998,9 +1998,9 @@
       "lastUpdated": "2026-02-25T23:56:24.050Z"
     },
     "components.ecosystem-essentials.title": {
-      "value": "<1>테스트넷 앱들을 탐색해 보세요</1>",
+      "value": "필수 테스트넷 앱 탐색하기",
       "englishChecksum": "9d4ba33fc7e6db6c398a1fe55d4f906b",
-      "lastUpdated": "2026-06-25T17:23:12.455Z"
+      "lastUpdated": "2026-07-19T18:24:44.997Z"
     },
     "components.ecosystem-essentials.apps.wallet.description": {
       "value": "푸시 체인의 유니버설 월렛",

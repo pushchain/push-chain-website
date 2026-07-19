@@ -78,8 +78,13 @@ function getAIConfig(modelIndex = 0) {
     };
   } else if (provider === 'local') {
     const modelString = process.env.LOCAL_AI_MODEL || 'llama3.1';
-    const availableModels = modelString.split('|').map((m) => m.trim());
-    const selectedModel = availableModels[modelIndex] || availableModels[0];
+    const availableModels = modelString
+      .split('|')
+      .map((m) => m.trim())
+      .filter((m) => m.length > 0);
+    // Safely handle out-of-bounds modelIndex by falling back to first model
+    const safeModelIndex = modelIndex < availableModels.length ? modelIndex : 0;
+    const selectedModel = availableModels[safeModelIndex];
     return {
       provider: 'local',
       apiKey: process.env.LOCAL_AI_API_KEY, // Optional
@@ -766,7 +771,8 @@ async function translateContentWithAlternateModel(
   }
 
   // Try alternate models (starting from index 1, then 0 as fallback)
-  const modelOrder = [1, 0]; // Start with second model, then fallback to first
+  // Only include model indices that actually exist
+  const modelOrder = availableModels.length > 1 ? [1, 0] : [0];
 
   for (let i = 0; i < modelOrder.length; i++) {
     const modelIndex = modelOrder[i];
@@ -912,11 +918,11 @@ async function attemptTranslation(
           signal: controller.signal,
         });
       } else {
-        // Local AI (OpenWebUI/Ollama)
+        // Local AI (LM Studio / OpenWebUI / Ollama) via OpenAI-compatible API
         const baseUrl = config.baseUrl.endsWith('/')
           ? config.baseUrl.slice(0, -1)
           : config.baseUrl;
-        response = await fetch(`${baseUrl}/api/generate`, {
+        response = await fetch(`${baseUrl}/v1/chat/completions`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -924,7 +930,12 @@ async function attemptTranslation(
           },
           body: JSON.stringify({
             model: config.model,
-            prompt: prompt,
+            messages: [
+              {
+                role: 'user',
+                content: prompt,
+              },
+            ],
             stream: false,
           }),
           signal: controller.signal,
@@ -935,8 +946,14 @@ async function attemptTranslation(
     }
 
     if (!response.ok) {
+      let errorBody = '';
+      try {
+        errorBody = await response.text();
+      } catch {
+        errorBody = '<unable to read response body>';
+      }
       throw new Error(
-        `${config.provider} API error: ${response.status} ${response.statusText}`
+        `${config.provider} API error: ${response.status} ${response.statusText} - ${errorBody.slice(0, 500)}`
       );
     }
 
@@ -944,9 +961,27 @@ async function attemptTranslation(
     let translatedContent;
 
     if (config.provider === 'windsurf') {
-      translatedContent = result.content[0].text;
+      translatedContent = result.content?.[0]?.text;
     } else {
-      translatedContent = result.response;
+      // Support multiple local AI response formats:
+      // - Ollama /api/generate: { response: "..." }
+      // - OpenAI-compatible (LM Studio, OpenWebUI): { choices: [{ message: { content } }] }
+      // - OpenAI completions: { choices: [{ text }] }
+      translatedContent =
+        result.response ??
+        result.choices?.[0]?.message?.content ??
+        result.choices?.[0]?.text ??
+        result.message?.content;
+    }
+
+    // Ensure we actually received textual content before parsing
+    if (
+      typeof translatedContent !== 'string' ||
+      translatedContent.length === 0
+    ) {
+      throw new Error(
+        `${config.provider} API returned no usable content (model: ${config.model}). Raw response: ${JSON.stringify(result).slice(0, 500)}`
+      );
     }
 
     // Parse the JSON response with improved error handling
@@ -1652,13 +1687,15 @@ function extractHtmlTags(text) {
   if (!text || typeof text !== 'string') return [];
   const tagRegex = /<[^>]+>/g;
   const matches = text.match(tagRegex) || [];
-  
+
   // Normalize tags by removing attribute values to focus on structure
-  const normalizedTags = matches.map(tag => {
+  const normalizedTags = matches.map((tag) => {
     // Extract tag name and attribute names only, ignore attribute values
-    return tag.replace(/(\w+)="[^"]*"/g, '$1=""').replace(/(\w+)='[^']*'/g, '$1=""');
+    return tag
+      .replace(/(\w+)="[^"]*"/g, '$1=""')
+      .replace(/(\w+)='[^']*'/g, '$1=""');
   });
-  
+
   return [...new Set(normalizedTags)]; // Remove duplicates
 }
 
@@ -1667,19 +1704,21 @@ function extractHtmlTags(text) {
  */
 function stripHtmlForLanguageCheck(text) {
   if (typeof text !== 'string') return text;
-  
-  return text
-    // Remove iframe and other media elements entirely
-    .replace(/<iframe[^>]*>.*?<\/iframe>/gi, '')
-    .replace(/<video[^>]*>.*?<\/video>/gi, '')
-    .replace(/<audio[^>]*>.*?<\/audio>/gi, '')
-    .replace(/<script[^>]*>.*?<\/script>/gi, '')
-    .replace(/<style[^>]*>.*?<\/style>/gi, '')
-    // Remove HTML tags but keep content
-    .replace(/<[^>]+>/g, ' ')
-    // Clean up extra whitespace
-    .replace(/\s+/g, ' ')
-    .trim();
+
+  return (
+    text
+      // Remove iframe and other media elements entirely
+      .replace(/<iframe[^>]*>.*?<\/iframe>/gi, '')
+      .replace(/<video[^>]*>.*?<\/video>/gi, '')
+      .replace(/<audio[^>]*>.*?<\/audio>/gi, '')
+      .replace(/<script[^>]*>.*?<\/script>/gi, '')
+      .replace(/<style[^>]*>.*?<\/style>/gi, '')
+      // Remove HTML tags but keep content
+      .replace(/<[^>]+>/g, ' ')
+      // Clean up extra whitespace
+      .replace(/\s+/g, ' ')
+      .trim()
+  );
 }
 
 /**
@@ -1692,12 +1731,12 @@ function validateLanguagePurity(translation, languageCode, languageName) {
     if (typeof value === 'string' && value.trim()) {
       // Strip HTML content for language detection
       const textForLanguageCheck = stripHtmlForLanguageCheck(value);
-      
+
       // Skip validation if no meaningful text remains after HTML stripping
       if (!textForLanguageCheck || textForLanguageCheck.length < 10) {
         return;
       }
-      
+
       const detectedLang = detectLanguage(textForLanguageCheck, languageCode);
       const wordCount = textForLanguageCheck.trim().split(/\s+/).length;
 
@@ -2001,17 +2040,27 @@ async function validateAndRetryTranslations(supportedLanguages) {
 
               if (translatedSingle) {
                 // Extract the translated value and set it in the updated translation
-                let translatedValue = getValueByPath(
-                  translatedSingle,
-                  keyPath
-                );
+                let translatedValue = getValueByPath(translatedSingle, keyPath);
                 // Validate the translated value is in correct language
-                const textForValidation = stripHtmlForLanguageCheck(translatedValue);
-                const detectedLang = detectLanguage(textForValidation, languageCode);
-                
+                const textForValidation =
+                  stripHtmlForLanguageCheck(translatedValue);
+                const detectedLang = detectLanguage(
+                  textForValidation,
+                  languageCode
+                );
+
                 // If translation is in wrong language, use English fallback
-                if (detectedLang !== languageCode && detectedLang !== 'en' && detectedLang !== 'unknown' && textForValidation.length > 10) {
-                  console.log(chalk.yellow(`   ⚠️  ${keyProgress} Translation returned wrong language (${detectedLang}), using English fallback`));
+                if (
+                  detectedLang !== languageCode &&
+                  detectedLang !== 'en' &&
+                  detectedLang !== 'unknown' &&
+                  textForValidation.length > 10
+                ) {
+                  console.log(
+                    chalk.yellow(
+                      `   ⚠️  ${keyProgress} Translation returned wrong language (${detectedLang}), using English fallback`
+                    )
+                  );
                   const englishValue = getValueByPath(enTranslation, keyPath);
                   translatedValue = englishValue; // Update the variable for console output and missing-keys.json
                   setValueByPath(updatedTranslation, keyPath, englishValue);
@@ -2028,14 +2077,21 @@ async function validateAndRetryTranslations(supportedLanguages) {
 
                 // Update missing-keys.json with new translation and checksum
                 try {
-                  const missingKeysPath = path.join(LOCALES_DIR, languageCode, 'missing-keys.json');
+                  const missingKeysPath = path.join(
+                    LOCALES_DIR,
+                    languageCode,
+                    'missing-keys.json'
+                  );
                   let missingKeysData = {
                     lastUpdated: new Date().toISOString(),
-                    keys: {}
+                    keys: {},
                   };
 
                   try {
-                    const existingContent = await fs.readFile(missingKeysPath, 'utf8');
+                    const existingContent = await fs.readFile(
+                      missingKeysPath,
+                      'utf8'
+                    );
                     missingKeysData = JSON.parse(existingContent);
                   } catch {
                     // File doesn't exist, use empty structure
@@ -2043,26 +2099,35 @@ async function validateAndRetryTranslations(supportedLanguages) {
 
                   // Get English value and calculate checksum
                   const englishValue = getValueByPath(enTranslation, keyPath);
-                  const currentChecksum = crypto.createHash('md5').update(JSON.stringify(englishValue)).digest('hex');
+                  const currentChecksum = crypto
+                    .createHash('md5')
+                    .update(JSON.stringify(englishValue))
+                    .digest('hex');
 
                   // Update the key in missing-keys.json
                   missingKeysData.keys[keyPath] = {
                     value: translatedValue,
                     englishChecksum: currentChecksum,
-                    lastUpdated: new Date().toISOString()
+                    lastUpdated: new Date().toISOString(),
                   };
 
                   missingKeysData.lastUpdated = new Date().toISOString();
 
                   // Save updated missing-keys.json
-                  await fs.mkdir(path.dirname(missingKeysPath), { recursive: true });
+                  await fs.mkdir(path.dirname(missingKeysPath), {
+                    recursive: true,
+                  });
                   await fs.writeFile(
                     missingKeysPath,
                     JSON.stringify(missingKeysData, null, 2),
                     'utf8'
                   );
                 } catch (error) {
-                  console.log(chalk.yellow(`   ⚠️  Could not update missing-keys.json: ${error.message}`));
+                  console.log(
+                    chalk.yellow(
+                      `   ⚠️  Could not update missing-keys.json: ${error.message}`
+                    )
+                  );
                 }
 
                 // Update langTranslation for next validation iteration
@@ -2283,12 +2348,15 @@ async function validateAndRetryTranslations(supportedLanguages) {
   }
 }
 
-
 /**
  * Step 14: Reconstruct translation.json from autotranslate + missing-keys.json with checksum validation
  */
 async function retryMissingKeys(supportedLanguages) {
-  console.log(chalk.blue('\n📋 Step 14: Reconstructing translations with missing-keys validation...'));
+  console.log(
+    chalk.blue(
+      '\n📋 Step 14: Reconstructing translations with missing-keys validation...'
+    )
+  );
 
   // Load English translation as reference for checksums
   const enTranslationPath = path.join(LOCALES_DIR, 'en', 'translation.json');
@@ -2299,7 +2367,9 @@ async function retryMissingKeys(supportedLanguages) {
     enTranslation = JSON.parse(enContent);
   } catch (error) {
     console.log(
-      chalk.red('❌ Could not load English translation.json for checksum comparison')
+      chalk.red(
+        '❌ Could not load English translation.json for checksum comparison'
+      )
     );
     return;
   }
@@ -2315,35 +2385,52 @@ async function retryMissingKeys(supportedLanguages) {
     }
 
     try {
-      console.log(chalk.blue(`\n🔄 Reconstructing ${languageName} (${languageCode})...`));
+      console.log(
+        chalk.blue(`\n🔄 Reconstructing ${languageName} (${languageCode})...`)
+      );
 
       // Step 1: Combine autotranslate folder
-      const autotranslateDir = path.join(LOCALES_DIR, languageCode, 'autotranslate');
+      const autotranslateDir = path.join(
+        LOCALES_DIR,
+        languageCode,
+        'autotranslate'
+      );
       let combinedAutotranslate = {};
       let autotranslateKeyCount = 0;
 
       try {
         const chunkFiles = await fs.readdir(autotranslateDir);
-        const jsonFiles = chunkFiles.filter(file => file.endsWith('.json'));
-        
+        const jsonFiles = chunkFiles.filter((file) => file.endsWith('.json'));
+
         for (const chunkFile of jsonFiles) {
           const chunkPath = path.join(autotranslateDir, chunkFile);
           const chunkContent = JSON.parse(await fs.readFile(chunkPath, 'utf8'));
-          
+
           // Deep merge chunks
           const merged = deepMerge(combinedAutotranslate, chunkContent);
           Object.assign(combinedAutotranslate, merged);
         }
-        
+
         autotranslateKeyCount = getAllKeys(combinedAutotranslate).length;
-        console.log(chalk.gray(`   📁 Combined ${jsonFiles.length} autotranslate chunks (${autotranslateKeyCount} keys)`));
-        
+        console.log(
+          chalk.gray(
+            `   📁 Combined ${jsonFiles.length} autotranslate chunks (${autotranslateKeyCount} keys)`
+          )
+        );
       } catch (error) {
-        console.log(chalk.yellow(`   ⚠️  No autotranslate folder found for ${languageCode}, starting with empty base`));
+        console.log(
+          chalk.yellow(
+            `   ⚠️  No autotranslate folder found for ${languageCode}, starting with empty base`
+          )
+        );
       }
 
       // Step 2: Load and validate missing-keys.json
-      const missingKeysPath = path.join(LOCALES_DIR, languageCode, 'missing-keys.json');
+      const missingKeysPath = path.join(
+        LOCALES_DIR,
+        languageCode,
+        'missing-keys.json'
+      );
       let validMissingKeys = {};
       let invalidatedKeys = [];
       let missingKeysCount = 0;
@@ -2351,136 +2438,193 @@ async function retryMissingKeys(supportedLanguages) {
       try {
         const missingKeysContent = await fs.readFile(missingKeysPath, 'utf8');
         const missingKeysData = JSON.parse(missingKeysContent);
-        
-        console.log(chalk.gray(`   🔗 Validating missing-keys.json (${Object.keys(missingKeysData.keys || {}).length} cached keys)...`));
-        
+
+        console.log(
+          chalk.gray(
+            `   🔗 Validating missing-keys.json (${Object.keys(missingKeysData.keys || {}).length} cached keys)...`
+          )
+        );
+
         // Validate each cached key against English checksums
-        for (const [keyPath, keyData] of Object.entries(missingKeysData.keys || {})) {
+        for (const [keyPath, keyData] of Object.entries(
+          missingKeysData.keys || {}
+        )) {
           const currentEnglishValue = getValueByPath(enTranslation, keyPath);
           if (currentEnglishValue !== undefined) {
-            const currentChecksum = crypto.createHash('md5').update(JSON.stringify(currentEnglishValue)).digest('hex');
-            
+            const currentChecksum = crypto
+              .createHash('md5')
+              .update(JSON.stringify(currentEnglishValue))
+              .digest('hex');
+
             // If English checksum matches, use the cached translation
             if (keyData.englishChecksum === currentChecksum) {
               setValueByPath(validMissingKeys, keyPath, keyData.value);
               missingKeysCount++;
             } else {
               invalidatedKeys.push(keyPath);
-              console.log(chalk.yellow(`   🔄 Key ${keyPath} changed in English, invalidated`));
+              console.log(
+                chalk.yellow(
+                  `   🔄 Key ${keyPath} changed in English, invalidated`
+                )
+              );
             }
           } else {
-            console.log(chalk.gray(`   🗑️  Key ${keyPath} no longer exists in English, removing`));
+            console.log(
+              chalk.gray(
+                `   🗑️  Key ${keyPath} no longer exists in English, removing`
+              )
+            );
           }
         }
-        
+
         if (missingKeysCount > 0) {
-          console.log(chalk.green(`   ✅ ${missingKeysCount} cached keys validated and merged`));
+          console.log(
+            chalk.green(
+              `   ✅ ${missingKeysCount} cached keys validated and merged`
+            )
+          );
         }
         if (invalidatedKeys.length > 0) {
-          console.log(chalk.yellow(`   ⚠️  ${invalidatedKeys.length} keys invalidated due to English changes`));
+          console.log(
+            chalk.yellow(
+              `   ⚠️  ${invalidatedKeys.length} keys invalidated due to English changes`
+            )
+          );
         }
-        
       } catch (error) {
-        console.log(chalk.gray(`   ⚠️  No missing-keys.json found for ${languageCode}, skipping cache merge`));
+        console.log(
+          chalk.gray(
+            `   ⚠️  No missing-keys.json found for ${languageCode}, skipping cache merge`
+          )
+        );
       }
 
       // Step 3: Handle missing keys with intelligent validation
       let finalTranslation = deepMerge(combinedAutotranslate, validMissingKeys);
       const allEnglishKeys = getAllKeys(enTranslation);
       const currentKeys = getAllKeys(finalTranslation);
-      const missingKeys = allEnglishKeys.filter(key => !currentKeys.includes(key));
-      
+      const missingKeys = allEnglishKeys.filter(
+        (key) => !currentKeys.includes(key)
+      );
+
       let newlyTranslatedCount = 0;
       let fallbackCount = 0;
-      
+
       if (missingKeys.length > 0) {
-        console.log(chalk.yellow(`   🔍 Found ${missingKeys.length} missing keys, processing...`));
-        
+        console.log(
+          chalk.yellow(
+            `   🔍 Found ${missingKeys.length} missing keys, processing...`
+          )
+        );
+
         // Load existing missing-keys.json for updates
         let missingKeysData = {
           lastUpdated: new Date().toISOString(),
-          keys: {}
+          keys: {},
         };
-        
+
         try {
           const existingContent = await fs.readFile(missingKeysPath, 'utf8');
           missingKeysData = JSON.parse(existingContent);
         } catch {
           // File doesn't exist, use empty structure
         }
-        
+
         for (const keyPath of missingKeys) {
           const englishValue = getValueByPath(enTranslation, keyPath);
           if (englishValue === undefined) continue;
-          
-          const currentChecksum = crypto.createHash('md5').update(JSON.stringify(englishValue)).digest('hex');
+
+          const currentChecksum = crypto
+            .createHash('md5')
+            .update(JSON.stringify(englishValue))
+            .digest('hex');
           const cachedKey = missingKeysData.keys[keyPath];
-          
+
           // Check if we have a cached translation with matching checksum
           if (cachedKey && cachedKey.englishChecksum === currentChecksum) {
             // Use cached translation
             setValueByPath(finalTranslation, keyPath, cachedKey.value);
-            console.log(chalk.gray(`   ✅ ${keyPath} → Using cached translation`));
+            console.log(
+              chalk.gray(`   ✅ ${keyPath} → Using cached translation`)
+            );
           } else {
             // Need to translate this key (checksum changed or no cache)
             let translatedValue = null;
             let retryCount = 0;
             const maxRetries = 3;
-            
+
             while (retryCount < maxRetries && !translatedValue) {
               retryCount++;
               try {
                 // Create single key object for translation
                 const singleKeyObject = {};
                 setValueByPath(singleKeyObject, keyPath, englishValue);
-                
+
                 let translated;
-                
+
                 // Try alternate model first (attempts 1-2), then regular model (attempt 3)
                 if (retryCount <= 2) {
-                  console.log(chalk.gray(`   🔄 ${keyPath} → Translating with alternate model (attempt ${retryCount}/${maxRetries})...`));
+                  console.log(
+                    chalk.gray(
+                      `   🔄 ${keyPath} → Translating with alternate model (attempt ${retryCount}/${maxRetries})...`
+                    )
+                  );
                   translated = await translateContentWithAlternateModel(
                     singleKeyObject,
                     languageCode,
                     languageName
                   );
                 } else {
-                  console.log(chalk.gray(`   🔄 ${keyPath} → Translating with regular model (attempt ${retryCount}/${maxRetries})...`));
+                  console.log(
+                    chalk.gray(
+                      `   🔄 ${keyPath} → Translating with regular model (attempt ${retryCount}/${maxRetries})...`
+                    )
+                  );
                   translated = await translateContentWithValidation(
                     singleKeyObject,
                     languageCode,
                     languageName
                   );
                 }
-                
+
                 translatedValue = getValueByPath(translated, keyPath);
                 if (translatedValue) {
                   // Update missing-keys.json with new translation
                   missingKeysData.keys[keyPath] = {
                     value: translatedValue,
                     englishChecksum: currentChecksum,
-                    lastUpdated: new Date().toISOString()
+                    lastUpdated: new Date().toISOString(),
                   };
-                  
+
                   setValueByPath(finalTranslation, keyPath, translatedValue);
-                  console.log(chalk.green(`   ✅ ${keyPath} → Translated successfully`));
+                  console.log(
+                    chalk.green(`   ✅ ${keyPath} → Translated successfully`)
+                  );
                   newlyTranslatedCount++;
                   break;
                 }
               } catch (error) {
-                console.log(chalk.red(`   ❌ ${keyPath} → Translation failed (${error.message})`));
+                console.log(
+                  chalk.red(
+                    `   ❌ ${keyPath} → Translation failed (${error.message})`
+                  )
+                );
               }
             }
-            
+
             // If all retries failed, use English value as fallback
             if (!translatedValue) {
               setValueByPath(finalTranslation, keyPath, englishValue);
-              console.log(chalk.yellow(`   ⚠️  ${keyPath} → Using English fallback after ${maxRetries} failed attempts`));
+              console.log(
+                chalk.yellow(
+                  `   ⚠️  ${keyPath} → Using English fallback after ${maxRetries} failed attempts`
+                )
+              );
               fallbackCount++;
             }
           }
         }
-        
+
         // Save updated missing-keys.json if we made changes
         if (newlyTranslatedCount > 0) {
           missingKeysData.lastUpdated = new Date().toISOString();
@@ -2490,15 +2634,27 @@ async function retryMissingKeys(supportedLanguages) {
             JSON.stringify(missingKeysData, null, 2),
             'utf8'
           );
-          console.log(chalk.blue(`   💾 Updated missing-keys.json with ${newlyTranslatedCount} new translations`));
+          console.log(
+            chalk.blue(
+              `   💾 Updated missing-keys.json with ${newlyTranslatedCount} new translations`
+            )
+          );
         }
       }
-      
+
       const finalKeyCount = getAllKeys(finalTranslation).length;
-      console.log(chalk.blue(`   📊 Final translation: ${finalKeyCount} keys (${autotranslateKeyCount} autotranslate + ${missingKeysCount} cached + ${newlyTranslatedCount} new + ${fallbackCount} fallback)`));
+      console.log(
+        chalk.blue(
+          `   📊 Final translation: ${finalKeyCount} keys (${autotranslateKeyCount} autotranslate + ${missingKeysCount} cached + ${newlyTranslatedCount} new + ${fallbackCount} fallback)`
+        )
+      );
 
       // Step 4: Save reconstructed translation.json
-      const langTranslationPath = path.join(LOCALES_DIR, languageCode, 'translation.json');
+      const langTranslationPath = path.join(
+        LOCALES_DIR,
+        languageCode,
+        'translation.json'
+      );
       await fs.mkdir(path.dirname(langTranslationPath), { recursive: true });
       await fs.writeFile(
         langTranslationPath,
@@ -2511,34 +2667,46 @@ async function retryMissingKeys(supportedLanguages) {
         try {
           const missingKeysContent = await fs.readFile(missingKeysPath, 'utf8');
           const missingKeysData = JSON.parse(missingKeysContent);
-          
+
           // Remove invalidated keys
           for (const keyPath of invalidatedKeys) {
             delete missingKeysData.keys[keyPath];
           }
-          
+
           missingKeysData.lastUpdated = new Date().toISOString();
-          
+
           await fs.writeFile(
             missingKeysPath,
             JSON.stringify(missingKeysData, null, 2),
             'utf8'
           );
-          
-          console.log(chalk.gray(`   🧹 Cleaned ${invalidatedKeys.length} invalidated keys from missing-keys.json`));
+
+          console.log(
+            chalk.gray(
+              `   🧹 Cleaned ${invalidatedKeys.length} invalidated keys from missing-keys.json`
+            )
+          );
         } catch (error) {
-          console.log(chalk.yellow(`   ⚠️  Could not update missing-keys.json: ${error.message}`));
+          console.log(
+            chalk.yellow(
+              `   ⚠️  Could not update missing-keys.json: ${error.message}`
+            )
+          );
         }
       }
 
-      console.log(chalk.green(`✅ ${languageName}: Reconstructed successfully (${finalKeyCount}/${allEnglishKeys.length} keys)`));
-
+      console.log(
+        chalk.green(
+          `✅ ${languageName}: Reconstructed successfully (${finalKeyCount}/${allEnglishKeys.length} keys)`
+        )
+      );
     } catch (error) {
-      console.log(chalk.red(`❌ Error processing ${languageName}: ${error.message}`));
+      console.log(
+        chalk.red(`❌ Error processing ${languageName}: ${error.message}`)
+      );
     }
   }
 }
-
 
 /**
  * Get all nested keys from an object as dot-notation paths
@@ -3558,15 +3726,25 @@ async function automateTranslations(targetLanguages = null) {
               let englishCombined = {};
               try {
                 for (const chunkFile of chunkFiles) {
-                  const englishChunkPath = path.join(SOURCE_CHUNKS_DIR, chunkFile);
+                  const englishChunkPath = path.join(
+                    SOURCE_CHUNKS_DIR,
+                    chunkFile
+                  );
                   const englishChunkContent = JSON.parse(
                     await fs.readFile(englishChunkPath, 'utf8')
                   );
-                  const merged = deepMerge(englishCombined, englishChunkContent);
+                  const merged = deepMerge(
+                    englishCombined,
+                    englishChunkContent
+                  );
                   Object.assign(englishCombined, merged);
                 }
               } catch (englishError) {
-                console.log(chalk.yellow(`   ⚠️  Could not load English chunks for checksum comparison`));
+                console.log(
+                  chalk.yellow(
+                    `   ⚠️  Could not load English chunks for checksum comparison`
+                  )
+                );
               }
 
               // Merge missing-keys.json with combined translation before saving
@@ -3575,31 +3753,58 @@ async function automateTranslations(targetLanguages = null) {
                 languageCode,
                 'missing-keys.json'
               );
-              
+
               try {
-                const missingKeysContent = await fs.readFile(missingKeysPath, 'utf8');
+                const missingKeysContent = await fs.readFile(
+                  missingKeysPath,
+                  'utf8'
+                );
                 const missingKeysData = JSON.parse(missingKeysContent);
-                
-                console.log(chalk.gray(`   🔗 Merging missing-keys.json (${Object.keys(missingKeysData.keys || {}).length} keys)...`));
-                
+
+                console.log(
+                  chalk.gray(
+                    `   🔗 Merging missing-keys.json (${Object.keys(missingKeysData.keys || {}).length} keys)...`
+                  )
+                );
+
                 // Check each missing key against English checksums to see if it needs updating
-                for (const [keyPath, keyData] of Object.entries(missingKeysData.keys || {})) {
+                for (const [keyPath, keyData] of Object.entries(
+                  missingKeysData.keys || {}
+                )) {
                   // Get current English value and checksum
-                  const currentEnglishValue = getValueByPath(englishCombined, keyPath);
+                  const currentEnglishValue = getValueByPath(
+                    englishCombined,
+                    keyPath
+                  );
                   if (currentEnglishValue !== undefined) {
-                    const currentChecksum = crypto.createHash('md5').update(JSON.stringify(currentEnglishValue)).digest('hex');
-                    
+                    const currentChecksum = crypto
+                      .createHash('md5')
+                      .update(JSON.stringify(currentEnglishValue))
+                      .digest('hex');
+
                     // If English checksum matches, use the cached translation
                     if (keyData.englishChecksum === currentChecksum) {
-                      setValueByPath(combinedTranslation, keyPath, keyData.value);
+                      setValueByPath(
+                        combinedTranslation,
+                        keyPath,
+                        keyData.value
+                      );
                     } else {
-                      console.log(chalk.yellow(`   🔄 Key ${keyPath} changed in English, will need retranslation`));
+                      console.log(
+                        chalk.yellow(
+                          `   🔄 Key ${keyPath} changed in English, will need retranslation`
+                        )
+                      );
                       // Don't set the value - let Step 14 handle retranslation
                     }
                   }
                 }
               } catch (error) {
-                console.log(chalk.gray(`   ⚠️  No missing-keys.json found for ${languageCode}, skipping merge`));
+                console.log(
+                  chalk.gray(
+                    `   ⚠️  No missing-keys.json found for ${languageCode}, skipping merge`
+                  )
+                );
               }
 
               // Save final combined translation to locales directory (required by deploy)

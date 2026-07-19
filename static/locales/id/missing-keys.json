@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T10:32:39.575Z",
+  "lastUpdated": "2026-07-19T18:28:02.322Z",
   "keys": {
     "pages.knowledge.validators.seo.title": {
       "value": "Validators —",
@@ -3035,6 +3035,26 @@
       "value": "Mulai Sekarang!",
       "englishChecksum": "9838c5ed200849890435a10702f41ded",
       "lastUpdated": "2026-06-26T10:32:39.560Z"
+    },
+    "pages.home.chain-features-section.box7.imagealt": {
+      "value": "Ilustrasi menampilkan balok Tetris berwarna berbeda yang bergabung dan berubah.",
+      "englishChecksum": "1f3ef984d4d23f687c56478494d6f9af",
+      "lastUpdated": "2026-07-19T18:26:53.618Z"
+    },
+    "pages.home.chain-features-section.box7.imagetitle": {
+      "value": "(Roadmap) Validater Universal memungkinkan pengguna untuk memicu, memvalidasi, dan menyelesaikan transaksi di berbagai rantai menggunakan smart contract Anda.",
+      "englishChecksum": "892e841c35891383093e580f5aa1fea3",
+      "lastUpdated": "2026-07-19T18:27:23.450Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Akses State",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:27:41.859Z"
+    },
+    "pages.home.chain-features-section.box8.imagealt": {
+      "value": "Ilustrasi menunjukkan Push Chain yang berkembang dengan animasi bergaya blok.",
+      "englishChecksum": "29e4d84d0e2ec3c2b85aca8d9bdf3981",
+      "lastUpdated": "2026-07-19T18:28:02.322Z"
     }
   }
 }

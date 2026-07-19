@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T11:24:29.047Z",
+  "lastUpdated": "2026-07-19T18:32:49.118Z",
   "keys": {
     "pages.knowledge.seo.title": {
       "value": "База знаний — Руководства, часто задаваемые вопросы и инструкции",
@@ -3164,6 +3164,21 @@
       "value": "Начать!",
       "englishChecksum": "9838c5ed200849890435a10702f41ded",
       "lastUpdated": "2026-06-26T11:24:29.029Z"
+    },
+    "pages.home.chain-features-section.box7.texttitle": {
+      "value": "Универсальные\nВалидаторы",
+      "englishChecksum": "27ae6522863d328b873ecc44d6a7c077",
+      "lastUpdated": "2026-07-19T18:32:00.628Z"
+    },
+    "pages.home.chain-features-section.box8.texttitle": {
+      "value": "Доступ к состоянию",
+      "englishChecksum": "66ba72430a0b33daefbb4c0e8c92395d",
+      "lastUpdated": "2026-07-19T18:32:27.642Z"
+    },
+    "pages.home.chain-features-section.box8.tags.title1": {
+      "value": "Чтение из сетей",
+      "englishChecksum": "5e3987bddb186206384b450acc06fd5c",
+      "lastUpdated": "2026-07-19T18:32:49.118Z"
     }
   }
 }

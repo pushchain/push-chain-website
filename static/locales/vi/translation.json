@@ -273,12 +273,12 @@
       "chain-features-section": {
         "box7": {
           "tags": {
-            "title1": "GHI VÀO CÁC CHAIN"
+            "title1": "GHI LÊN CÁC CHAIN"
           },
-          "texttitle": "Universal\nValidator",
-          "bodytext": "Kích hoạt, xác thực và hoàn thành các transaction trên bất kỳ chuỗi nào bằng smart contract của bạn.",
-          "imagealt": "Hình minh họa các khối tetris với nhiều màu sắc khác nhau đang hợp nhất và thay đổi.",
-          "imagetitle": "(Lộ trình) Universal Validator cho phép người dùng kích hoạt, xác thực và hoàn tất các transaction trên bất kỳ chuỗi nào bằng smart contract của bạn."
+          "bodytext": "Kích hoạt, xác thực và hoàn tất giao dịch trên bất kỳ chuỗi nào bằng hợp đồng thông minh của bạn.",
+          "texttitle": "U-ni-vơ-sal\nVát-li-đét",
+          "imagealt": "Hình minh họa các khối Tetris nhiều màu sắc đang kết hợp và biến đổi.",
+          "imagetitle": "(Lộ trình) Universal Validators cho phép người dùng kích hoạt, xác thực và hoàn tất transactions trên mọi chuỗi thông qua smart contract của bạn."
         },
         "box8": {
           "tags": {
@@ -286,9 +286,9 @@
           },
           "imagetitle": "(Sơ đồ thời gian) Shared State cho phép truy cập dữ liệu trạng thái và tài khoản từ các chuỗi khác trong hợp đồng thông minh của bạn.",
           "tagText": "SẮP RA MẮT",
-          "texttitle": "Truy cập trạng thái",
-          "bodytext": "Truy cập dữ liệu tài khoản và trạng thái từ các chain khác trong smart contract của bạn.",
-          "imagealt": "Hình minh họa cho thấy Push Chain phát triển theo phong cách hoạt hình khối."
+          "bodytext": "Truy cập dữ liệu tài khoản và trạng thái từ các chuỗi khác trong smart contract của bạn.",
+          "texttitle": "Truy cập Trạng thái",
+          "imagealt": "Ảnh minh họa Push Chain đang phát triển theo phong cách khối."
         },
         "section-aria-label": "Phần giới thiệu về các tính năng và đổi mới của Push Chain",
         "header": {

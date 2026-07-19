@@ -1,7 +1,7 @@
 {
   "global": {
     "site-name": "プッシュチェーン — アプリのためのユニバーサル L1",
-    "site-description": "ユニバーサルアプリのためのシェアードステートL1。一度デプロイすれば、あらゆるチェーンのユーザーにリーチ。どのウォレットでも使用可能。どのトークンでも支払い可能。ネットワーク切り替え不要。"
+    "site-description": "ユニバーサルアプリ向けのシェアードステートL1。1回デプロイするだけで、あらゆるチェーンのユーザーにリーチできます。好きなウォレットを使え、好きなトークンで支払えます。ネットワークの切り替えは不要です。"
   },
   "header": {
     "community": {
@@ -275,11 +275,11 @@
         "box7": {
           "texttitle": "ブライジクは剂れ",
           "imagetitle": "(ロードマップ) フレコトロースクを田台さの標きためトシガシンディー、ドを手叠さの標きため放上してへしはトメー。",
-          "bodytext": "スマートコントラクトを使って、あらゆるチェーン上でトランザクションをトリガー、検証、完了できます。",
+          "bodytext": "スマートコントラクトを使って、任意のチェーン上でトランザクションをトリガーし、検証し、完了できます。",
           "tags": {
-            "title1": "チェーンへの書き込み"
+            "title1": "チェーンに書き込む"
           },
-          "imagealt": "異なる色のテトリスブロックが結合して変化する様子を示すイラスト。"
+          "imagealt": "異なる色のテトリミノブロックが結合し、変化する様子を示すイラスト"
         },
         "box8": {
           "tags": {
@@ -288,8 +288,8 @@
           "imagealt": "ブロックチェーンが成長するアニメーションを示すイラスト。",
           "imagetitle": "\nロードマップ\n\ntoken allows access to account and state data from other chains in your smart contract.\n",
           "tagText": "COMING SOON",
-          "texttitle": "ステートアクセス",
-          "bodytext": "スマートコントラクト内で他のチェーンのアカウントや状態データにアクセスできます。"
+          "bodytext": "スマートコントラクトから、他のチェーンのアカウントおよびステートデータにアクセスできます。",
+          "texttitle": "状態へのアクセス"
         },
         "section-aria-label": "Push Chain の革新的な機能セクション",
         "header": {
@@ -1228,8 +1228,7 @@
       },
       "hero-section": {
         "title": "モバイルプライバシーポリシー",
-        "update-text": "最終更新日: 2020年11月2日",
-        "description": "Push Chain モバイルアプリでのデータの収集、利用、保護方法、そしてあなたの選択肢について。"
+        "update-text": "最終更新日: 2020年11月2日"
       }
     },
     "brb": {
@@ -1812,8 +1811,7 @@
           "name": "プッシュ・キャンパス"
         },
         "push-dex": {
-          "name": "プッシュデックス",
-          "description": "Pushchain テストネット上に構築されたDEX"
+          "name": "プッシュデックス"
         },
         "tachyon": {
           "description": "超高速マルチチェーンリレイヤー",
@@ -1844,8 +1842,7 @@
           "description": "デゲンの超能力を披露してリワードを得よう。"
         },
         "onchain-vampire-survivors": {
-          "name": "OnchainVampireSurvivors",
-          "description": "ユニバーサル版ヴァンパイアサバイバーズ風ゲーム"
+          "name": "OnchainVampireSurvivors"
         },
         "last-one": {
           "name": "ラストワン",
@@ -2006,11 +2003,11 @@
       "close-button-title": "トースト通知を閉じる",
       "close-button-aria-label": "Push Chain トースト通知を閉じる",
       "container-aria-label": "プッシュチェーン・トースト通知",
-      "description": "監査完了。次はメインネット👀 完全な監査レポートを読む。",
       "button-text": "Push Chain 監査レポート",
       "button-title": "Push Chain監査レポート",
       "button-aria-label": "始めよう！ここで確認できます",
-      "image-alt": "始めましょう！"
+      "image-alt": "始めましょう！",
+      "description": "監査完了。メインネットへ 👀 監査レポート全文を読む。"
     }
   }
 }
