@@ -112,8 +112,8 @@ Maximum slippage: 0.5%
 
 There are more than 250,000 ai agent agents in crypto, but today NONE OF THEM can easily operate cross-chain because there isn't any way to:
 
-> preserve an agents identity across chains
-> have an aggregated reputation score
+- preserve an agents identity across chains
+- have an aggregated reputation score
 
 [Trustless Agent Plus (TAP)](https://github.com/zaryab2000/create-8004-TAP-agent) framework on Push Chain fixes this
 
