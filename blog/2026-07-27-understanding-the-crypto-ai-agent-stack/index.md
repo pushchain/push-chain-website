@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: "Understand what crypto AI agents are composed of and how they work behind the scenes in the simplest way possible."
 text: "Understand what crypto AI agents are composed of and how they work behind the scenes in the simplest way possible."
 tags: [Key Features, Deep Dives]
-twitterId: ""
+twitterId: "2081756011715875292"
 ---
 
 ![Cover Image of Understanding the crypto ai agent stack](./cover-image.webp)

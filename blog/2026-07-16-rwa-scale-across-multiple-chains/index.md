@@ -6,7 +6,7 @@ image: './cover-image.webp'
 description: "Learn how RWA apps can become universally accessible to any user on any chain using Push Chain's Universal Execution Layer."
 text: "Learn how RWA apps can become universally accessible to any user on any chain using Push Chain's Universal Execution Layer."
 tags: [Key Features, Product]
-twitterId: ""
+twitterId: "2077756092994695420"
 ---
 
 ![Cover Image of What Happens When RWAs Scale Across Multiple Chains](./cover-image.webp)
