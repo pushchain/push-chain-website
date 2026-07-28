@@ -3,7 +3,27 @@
 
 // List of tweet URLs to fetch
 export const LFPushTweetsList: string[] = [
+  // Jul 2026
+  'https://x.com/lordsgood/status/2082012315147542888?s=20',
+  'https://x.com/0xKeng/status/2081802816612691984?s=20',
+  'https://x.com/MATHEW_KINZY/status/2081777145672593745?s=20',
+  'https://x.com/Abba__80/status/2080359305656639952?s=20',
+  'https://x.com/kefanss/status/2077768085155561513?s=20',
+  'https://x.com/ZNSConnect/status/2077758128876048689?s=20',
+  'https://x.com/sosogamex/status/2077635901669228994?s=20',
+  'https://x.com/BlaqOnyemauche/status/2077626490057805952?s=20',
+  'https://x.com/PeacePrinc29959/status/2074835904519077916?s=20',
+  'https://x.com/0xhu7i/status/2074143127200272393?s=20',
+  'https://x.com/torettoj283/status/2074016487325549016?s=20',
+
   // Jun 2026
+  'https://x.com/igangsan54078/status/2072038712540614787?s=20',
+  'https://x.com/lordsgood/status/2072022342667022836?s=20',
+  'https://x.com/0xKeng/status/2071973676275454228?s=20',
+  'https://x.com/OnchainLegend/status/2071945442771030017?s=20',
+  'https://x.com/sosogamex/status/2071917352266924043?s=20',
+  // Push's own audit video — kept as a viral exception (168 likes, 4x the account's norm)
+  'https://x.com/PushChain/status/2070174890397999388?s=20',
   'https://x.com/0xKeng/status/2068972519156015333?s=20',
   'https://x.com/Koyum_1/status/2068966538149777713?s=20',
   'https://x.com/Saandyeth/status/2068943288556519550?s=20',
