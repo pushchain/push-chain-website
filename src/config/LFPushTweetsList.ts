@@ -3,12 +3,99 @@
 
 // List of tweet URLs to fetch
 export const LFPushTweetsList: string[] = [
+  // Jul 2026
+  'https://x.com/lordsgood/status/2082012315147542888?s=20',
+  'https://x.com/0xKeng/status/2081802816612691984?s=20',
+  'https://x.com/MATHEW_KINZY/status/2081777145672593745?s=20',
+  'https://x.com/Abba__80/status/2080359305656639952?s=20',
+  'https://x.com/kefanss/status/2077768085155561513?s=20',
+  'https://x.com/ZNSConnect/status/2077758128876048689?s=20',
+  'https://x.com/sosogamex/status/2077635901669228994?s=20',
+  'https://x.com/BlaqOnyemauche/status/2077626490057805952?s=20',
+  'https://x.com/PeacePrinc29959/status/2074835904519077916?s=20',
+  'https://x.com/0xhu7i/status/2074143127200272393?s=20',
+  'https://x.com/torettoj283/status/2074016487325549016?s=20',
+
+  // Jun 2026
+  'https://x.com/igangsan54078/status/2072038712540614787?s=20',
+  'https://x.com/lordsgood/status/2072022342667022836?s=20',
+  'https://x.com/0xKeng/status/2071973676275454228?s=20',
+  'https://x.com/OnchainLegend/status/2071945442771030017?s=20',
+  'https://x.com/sosogamex/status/2071917352266924043?s=20',
+  // Push's own audit video — kept as a viral exception (168 likes, 4x the account's norm)
+  'https://x.com/PushChain/status/2070174890397999388?s=20',
+  'https://x.com/0xKeng/status/2068972519156015333?s=20',
+  'https://x.com/Koyum_1/status/2068966538149777713?s=20',
+  'https://x.com/Saandyeth/status/2068943288556519550?s=20',
+  'https://x.com/drizzy_khaled44/status/2068630495085166936?s=20',
+  'https://x.com/0xKeng/status/2067984731053158616?s=20',
+  'https://x.com/OnchainLegend/status/2067350499171651618?s=20',
+  'https://x.com/RinovMRN/status/2065769905572466988?s=20',
+  'https://x.com/mat_rash38998/status/2065137275298816335?s=20',
+  'https://x.com/ParticleNtwrk/status/2064741957294072009?s=20',
+  'https://x.com/roxpunks/status/2064201298585751850?s=20',
+  'https://x.com/dungair24/status/2063956997196919170?s=20',
+  'https://x.com/ZNSConnect/status/2063915750197248267?s=20',
+  'https://x.com/emons2nd/status/2063859875453800506?s=20',
+  'https://x.com/igangsan54078/status/2062733900745437402?s=20',
+  'https://x.com/KiiChainio/status/2062494633540678093?s=20',
+
+  // May 2026
+  'https://x.com/ZNSConnect/status/2053723941064028613?s=20',
+
+  // Apr 2026
+  'https://x.com/PRISMEVM/status/2045463781191365073?s=20',
+  'https://x.com/zns_bio/status/2045138894933352592?s=20',
+  'https://x.com/aegixe_cn/status/2044721355128701024?s=20',
+  'https://x.com/narb_s/status/2044467226917671148?s=20',
+  'https://x.com/bynomofun/status/2044342239850369500?s=20',
+  'https://x.com/0xKeng/status/2044320525154169272?s=20',
+  'https://x.com/GoatXII3/status/2043722595531378995?s=20',
+  'https://x.com/0xKeng/status/2042873768109129800?s=20',
+  'https://x.com/developer_dao/status/2042626019576922323?s=20',
+  'https://x.com/Trathoa/status/2042448887441735953?s=20',
+  'https://x.com/ofalamin/status/2042379314268627274?s=20',
+  'https://x.com/SimonNickweb3/status/2042125566036291915?s=20',
+  'https://x.com/0xDanteee/status/2041876800859472011?s=20',
+  'https://x.com/developer_dao/status/2041123833680384274?s=20',
+  'https://x.com/drizzy_khaled44/status/2040163446033948896?s=20',
+  'https://x.com/Fairu_90/status/2040049192501182798?s=20',
+  'https://x.com/Koyum_1/status/2040021067079565651?s=20',
+  'https://x.com/RinovMRN/status/2039986720863924521?s=20',
+  'https://x.com/_CryptoNotes_/status/2039941137197097232?s=20',
+  'https://x.com/Cetra_app/status/2039687038975533253?s=20',
+
+  // Mar 2026
+  'https://x.com/ZnsEco/status/2037530645535101387?s=20',
+  'https://x.com/ZNSConnect/status/2037526493341921436?s=20',
+  'https://x.com/rexa233_dev/status/2037275904016081241?s=20',
+  'https://x.com/ZNSConnect/status/2037215540238761993?s=20',
+  'https://x.com/useSmartTools/status/2037104668023619627?s=20',
+  'https://x.com/useSmartTools/status/2036105524932993337?s=20',
+  'https://x.com/darkigbogirl/status/2034990420778684857?s=20',
+  'https://x.com/zns_bio/status/2034929070916378643?s=20',
+  'https://x.com/Push_Ninja/status/2031102184696459755?s=20',
+  'https://x.com/WaaPxyz/status/2030326869669920882?s=20',
+  'https://x.com/dut469/status/2030298537934905733?s=20',
+  'https://x.com/POSTHUMAN_DVS/status/2029983338207887706?s=20',
+  'https://x.com/marilyn100x/status/2029851848488968493?s=20',
+  'https://x.com/Cetra_app/status/2029201764650823858?s=20',
+  'https://x.com/humntech/status/2028891187567096043?s=20',
+  'https://x.com/HenryVo_TTT/status/2028070216308232394?s=20',
+  'https://x.com/humntech/status/2027941923336687945?s=20',
+
+  // Feb 2026
+  'https://x.com/humntech/status/2027609973702987976?s=20',
+  'https://x.com/HumnPassport/status/2027074059696218129?s=20',
+  'https://x.com/Dipo_web3/status/2027016877508071475?s=20',
+  'https://x.com/HumnPassport/status/2026737209215500486?s=20',
+  'https://x.com/humntech/status/2026708407802278021?s=20',
+
   // Feb 10th to Feb 24th
   'https://x.com/NanakNihal/status/2026322305710719451?s=20',
   'https://x.com/WaaPxyz/status/2026280473417363648?s=20',
   'https://x.com/stake_shark/status/2020889017814815145?s=20',
   'https://x.com/easynodexyz/status/2024505503183781918?s=20',
-  'https://x.com/pufflesio/status/2023790547341897851?s=20',
   'https://x.com/pushbetfun/status/2022757532465295497?s=20',
   'https://x.com/humntech/status/2025960857952571460?s=20',
 
@@ -49,12 +136,10 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/1inchdevs/status/2000995958214078550?s=20',
   'https://x.com/BeatBRAWLS/status/1995801210130235586?s=20',
   'https://x.com/BeatBRAWLS/status/2001708893798568401?s=20',
-  'https://x.com/Jack_O_web3/status/1993666245590388875?s=20',
   'https://x.com/Aleksdnb01/status/1993985114263498823?s=20',
   'https://x.com/1337Systems/status/1993125276180693430?s=20',
   'https://x.com/Omni_Hub/status/1996951171177550176?s=20',
   'https://x.com/NFTs2Me/status/1996536224211751186?s=20',
-  'https://x.com/gmcheap/status/1996198396701344131?s=20',
   'https://x.com/zns_bio/status/1996235914939338920?s=20',
   'https://x.com/ZNSConnect/status/1996238889061642655?s=20',
   'https://x.com/chaincircle_/status/1999099618408231405?s=20',
@@ -72,7 +157,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/QuickswapDEX/status/1989699636819263582?s=20',
   'https://x.com/envio_indexer/status/1988293502883803392?s=20',
   'https://x.com/cartesiproject/status/1988892935455125548?s=20',
-  'https://x.com/Maneki_DeFi/status/1990349896034275475?s=20',
   'https://x.com/hyderabaddao/status/1988272895987253657?s=20',
   'https://x.com/GalacticaNet/status/1989034257227084154?s=20',
   'https://x.com/chainalphaai/status/1988530931561320520?s=20',
@@ -95,14 +179,12 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/web3_lord/status/1988507405156823158?s=20',
   'https://x.com/LavinM/status/1988454839651889322?s=20',
   'https://x.com/ravikantagrawal/status/1988512003980214274?s=20',
-  'https://x.com/SadraWeb3/status/1991411707722494239?s=20',
   'https://x.com/xyra_network/status/1988864412208206189?s=20',
   'https://x.com/Psu353/status/1988309812598513810?s=20',
   'https://x.com/0xsakshamtyagi/status/1988349341480951828?s=20',
   'https://x.com/PranshuWeb3/status/1988477194755338364?s=20',
 
   // Till 24th Nov
-  'https://x.com/hyderabaddao/status/1988272895987253657?s=20',
   'https://x.com/techtusharojha/status/1988959987344031886?s=20',
   'https://x.com/ranjan3118/status/1988351239797829877?s=20',
   'https://x.com/0xaniketsharma/status/1988323124858024244?s=20',
@@ -143,14 +225,12 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/WhyParabola/status/1992189204437327960?s=20',
   'https://x.com/KakoliGM/status/1988631301579010169?s=20',
   'https://x.com/Dagon361/status/1988960851081195973?s=20',
-  'https://x.com/Jack_O_web3/status/1989751843543752776?s=20',
   'https://x.com/winsznx/status/1991223235183034395?s=20',
 
   // Till 11 Nov
   'https://x.com/BountiveXYZ/status/1985442545774555512?s=20',
   'https://x.com/winsznx/status/1985701631762001967?s=20',
   'https://x.com/zachy_yo/status/1985731524969267442?s=20',
-  'https://x.com/TheSantiagoVoss/status/1986089238643757245',
   'https://x.com/vaidik_namdev/status/1986816459822014681',
 
   // Till 3 Nov, 2025
@@ -164,7 +244,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/BountiveXYZ/status/1982897209168601497',
   'https://x.com/Singh04A/status/1982870535785894247',
   'https://x.com/BountiveXYZ/status/1982899728422711477',
-  'https://x.com/Jack_O_web3/status/1981679172738322643',
   'https://x.com/zax_raider/status/1982056400483471674',
 
   // Till 21 Sep, 2025
@@ -195,9 +274,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/theweb3voyager/status/1971178931207413965',
   'https://x.com/IDOL_TheoVon/status/1971589235544134025',
 
-  // Till 23 Sep, 2025
-  'https://x.com/Jack_O_web3/status/1968685392820867243',
-
   // Till 16 Sep, 2025
   'https://x.com/Superfluid_HQ/status/1965676257607385108',
   'https://x.com/Boldrin71/status/1965676604107227359',
@@ -216,7 +292,6 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/V_Agarwal_666/status/1959121365984059521',
   'https://x.com/Dnlxxy/status/1958896983328059394',
   'https://x.com/amitrajeet7635/status/1958889843377021204',
-  'https://x.com/Unknown46433700/status/1958757044195934546',
   'https://x.com/Streamr_TV/status/1958646700593344917',
   'https://x.com/mohammadasimnod/status/1958561822253998500',
   'https://x.com/V_Agarwal_666/status/1958455281178067004',
@@ -233,10 +308,8 @@ export const LFPushTweetsList: string[] = [
   // Till 17th Aug, 2025
   'https://x.com/0Kynzar/status/1956624778686525883',
   'https://x.com/grokassist/status/1956254221260484734',
-  'https://x.com/metacrm_inc/status/1956217998978748785',
   'https://x.com/Andikad54965792/status/1950138002782462268',
   'https://x.com/AKAwolfcito/status/1949817114224984286',
-  'https://x.com/Jack_O_web3/status/1950668699997983117',
   'https://x.com/blockchain_Josh/status/1952647805652156529',
   'https://x.com/CNairobian1_/status/1950173620031959309',
   'https://x.com/ri5hitripathi/status/1949941971989983448',
@@ -244,5 +317,4 @@ export const LFPushTweetsList: string[] = [
   'https://x.com/karan_pujara/status/1946104141425897978',
   'https://x.com/web3_lord/status/1947584901496098974',
   'https://x.com/ramenfarm/status/1949574575953715259',
-  'https://x.com/ForwardWin/status/1949170940778356785',
 ];
