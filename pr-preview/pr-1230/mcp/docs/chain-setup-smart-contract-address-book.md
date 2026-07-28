@@ -1,0 +1,447 @@
+---
+title: "Smart Contract Address Book"
+url: "https://pushchain.github.io/docs/chain/setup/smart-contract-address-book/"
+section: "setup"
+lastUpdated: "2026-07-28T15:25:29+04:00"
+description: "Smart Contract Address Book | Setup | Push Chain Docs"
+---
+
+# Smart Contract Address Book
+
+Below are the official addresses of the smart contracts deployed on Push Chain Donut Testnet 🍩 or on other chains by Push.
+
+> **Scope**: Addresses may change with redeploys. If something looks off, check the changelog or explorer before using in production code.
+
+## Push Chain Donut Testnet
+
+### Push Chain Core Functionalities
+
+Core protocol contracts deployed natively on Push Chain Donut Testnet. These contracts power universal execution, enabling apps to send and receive cross-chain transactions through a unified account layer.
+
+| Contract | Address |
+| --- | --- |
+| Universal Core | [0x00000000000000000000000000000000000000C0](https://donut.push.network/address/0x00000000000000000000000000000000000000C0?tab=contract) `Proxy` Purpose
+Mints PRC-20 tokens and manages cross-chain native token pricing
+
+Other Details
+
+Implementation - [0xF1000000000000000000000000000000000000c0](https://donut.push.network/address/0xF1000000000000000000000000000000000000c0?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000c0](https://donut.push.network/address/0xF2000000000000000000000000000000000000c0?tab=contract)
+
+ |
+| Universal Gateway PC | [0x00000000000000000000000000000000000000C1](https://donut.push.network/address/0x00000000000000000000000000000000000000C1?tab=contract) `Proxy` Purpose
+
+Push-side gateway for sending and processing outward cross-chain messages
+
+Other Details
+
+Implementation - [0xF1000000000000000000000000000000000000C2](https://donut.push.network/address/0xF1000000000000000000000000000000000000C2?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000C3](https://donut.push.network/address/0xF2000000000000000000000000000000000000C3?tab=contract)
+
+ |
+| Universal Executor Module | [0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7](https://donut.push.network/address/0x14191Ea54B4c176fCf86f51b0FAc7CB1E71Df7d7?tab=contract) Purpose
+
+Module responsible for executing universal transactions on Push Chain
+
+ |
+| Push Batch Executor | [0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796](https://donut.push.network/address/0x0106BF2F9B02f32203A83a3bDaD79fE8818f3796?tab=contract) Purpose
+
+ERC-7821 batch executor — EIP-7702 delegation target the SDK uses for atomic native-EOA batches
+
+ |
+| VaultPC | [0x00000000000000000000000000000000000000B0](https://donut.push.network/address/0x00000000000000000000000000000000000000B0?tab=contract) `Proxy` Purpose
+
+Reserved vault contract for custody of chain assets
+
+Other Details
+
+Implementation - [0xF1000000000000000000000000000000000000B0](https://donut.push.network/address/0xF1000000000000000000000000000000000000B0?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000B0](https://donut.push.network/address/0xF2000000000000000000000000000000000000B0?tab=contract)
+
+ |
+| UEA Factory | [0x00000000000000000000000000000000000000eA](https://donut.push.network/address/0x00000000000000000000000000000000000000eA?tab=contract) `Proxy` Purpose
+
+Deploys and manages Universal Execution Accounts (UEAs) for each user
+
+Other Details
+
+Implementation - [0xF1000000000000000000000000000000000000eA](https://donut.push.network/address/0xF1000000000000000000000000000000000000eA?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000eA](https://donut.push.network/address/0xF2000000000000000000000000000000000000eA?tab=contract)
+
+ |
+| UEA\_EVM Implementation | [0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF](https://donut.push.network/address/0x93a31A8DDdCA2686243f1a701AbF82aBA90Fe2eF?tab=contract) Purpose
+
+Logic contract for EVM-compatible UEAs
+
+ |
+| UEA\_SVM Implementation | [0x3cab28b2d179258ce3246385977aae4b4A4b40C9](https://donut.push.network/address/0x3cab28b2d179258ce3246385977aae4b4A4b40C9?tab=contract) Purpose
+
+Logic contract for SVM (Solana)-compatible UEAs
+
+ |
+| UProxyAdmin | [0x00000000000000000000000000000000000000aA](https://donut.push.network/address/0x00000000000000000000000000000000000000aA?tab=contract) `Proxy` Purpose
+
+User-facing proxy admin for universal contracts
+
+Other Details
+
+Implementation - [0xF1000000000000000000000000000000000000aA](https://donut.push.network/address/0xF1000000000000000000000000000000000000aA?tab=contract)  
+ProxyAdmin - [0xF2000000000000000000000000000000000000aA](https://donut.push.network/address/0xF2000000000000000000000000000000000000aA?tab=contract)
+
+ |
+
+### EVM Default Precompiles
+
+Standard precompiles available on all Cosmos EVM chains, including Push Chain.
+
+| Precompile | Address |
+| --- | --- |
+| p256 | [0x0000000000000000000000000000000000000100](https://donut.push.network/address/0x0000000000000000000000000000000000000100?tab=contract) |
+| bech32 | [0x0000000000000000000000000000000000000400](https://donut.push.network/address/0x0000000000000000000000000000000000000400?tab=contract) |
+| staking | [0x0000000000000000000000000000000000000800](https://donut.push.network/address/0x0000000000000000000000000000000000000800?tab=contract) |
+| distribution | [0x0000000000000000000000000000000000000801](https://donut.push.network/address/0x0000000000000000000000000000000000000801?tab=contract) |
+| ics20 | [0x0000000000000000000000000000000000000802](https://donut.push.network/address/0x0000000000000000000000000000000000000802?tab=contract) |
+| vesting | [0x0000000000000000000000000000000000000803](https://donut.push.network/address/0x0000000000000000000000000000000000000803?tab=contract) |
+| bank | [0x0000000000000000000000000000000000000804](https://donut.push.network/address/0x0000000000000000000000000000000000000804?tab=contract) |
+| gov | [0x0000000000000000000000000000000000000805](https://donut.push.network/address/0x0000000000000000000000000000000000000805?tab=contract) |
+| slashing | [0x0000000000000000000000000000000000000806](https://donut.push.network/address/0x0000000000000000000000000000000000000806?tab=contract) |
+| evidence | [0x0000000000000000000000000000000000000807](https://donut.push.network/address/0x0000000000000000000000000000000000000807?tab=contract) |
+
+### Push Chain Precompiles
+
+Custom precompiles deployed on Push Chain for universal transaction verification.
+
+| Precompile | Address |
+| --- | --- |
+| USigVerifierPrecompile | [0xEC00000000000000000000000000000000000001](https://donut.push.network/address/0xEC00000000000000000000000000000000000001?tab=contract) Purpose
+Verifies Solana signatures for universal execution
+
+ |
+
+### PRC-20 Supported Tokens (on Push Chain)
+
+Push-native representations of tokens bridged from external chains. Each PRC-20 token is minted on Push Chain when its source token is deposited via the respective chain's gateway.
+
+| Token Name | Symbol | Source Chain | Token Address on Push Chain |
+| --- | --- | --- | --- |
+| pETH | pETH | Ethereum\_Sepolia | [0x2971824Db68229D087931155C2b8bB820B275809](https://donut.push.network/address/0x2971824Db68229D087931155C2b8bB820B275809?tab=contract) |
+| WETH.eth | WETH.eth | Ethereum\_Sepolia | [0x0d0dF7E8807430A81104EA84d926139816eC7586](https://donut.push.network/address/0x0d0dF7E8807430A81104EA84d926139816eC7586?tab=contract) |
+| USDT.eth | USDT.eth | Ethereum\_Sepolia | [0x0f97A213207703923F5f0C613C9827f7C9A0f96B](https://donut.push.network/address/0x0f97A213207703923F5f0C613C9827f7C9A0f96B?tab=contract) |
+| USDC.eth | USDC.eth | Ethereum\_Sepolia | [0x7A58048036206bB898008b5bBDA85697DB1e5d66](https://donut.push.network/address/0x7A58048036206bB898008b5bBDA85697DB1e5d66?tab=contract) |
+| pSOL | pSOL | Solana\_Devnet | [0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed](https://donut.push.network/address/0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed?tab=contract) |
+| USDC.sol | USDC.sol | Solana\_Devnet | [0x04B8F634ABC7C879763F623e0f0550a4b5c4426F](https://donut.push.network/address/0x04B8F634ABC7C879763F623e0f0550a4b5c4426F?tab=contract) |
+| USDT.sol | USDT.sol | Solana\_Devnet | [0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34](https://donut.push.network/address/0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34?tab=contract) |
+| DAI.sol | DAI.sol | Solana\_Devnet | [0x5861f56A556c990358cc9cccd8B5baa3767982A8](https://donut.push.network/address/0x5861f56A556c990358cc9cccd8B5baa3767982A8?tab=contract) |
+| pETH.base | pETH.base | Base\_Testnet | [0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21](https://donut.push.network/address/0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21?tab=contract) |
+| USDT.base | USDT.base | Base\_Testnet | [0x148823809B853e1db187BC09A9ac909BC42F971a](https://donut.push.network/address/0x148823809B853e1db187BC09A9ac909BC42F971a?tab=contract) |
+| USDC.base | USDC.base | Base\_Testnet | [0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1](https://donut.push.network/address/0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1?tab=contract) |
+| pETH.arb | pETH.arb | Arbitrum\_Sepolia | [0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e](https://donut.push.network/address/0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e?tab=contract) |
+| USDC.arb | USDC.arb | Arbitrum\_Sepolia | [0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C](https://donut.push.network/address/0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C?tab=contract) |
+| USDT.arb | USDT.arb | Arbitrum\_Sepolia | [0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891](https://donut.push.network/address/0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891?tab=contract) |
+| pBNB | pBNB | BNB\_Testnet | [0x7a9082dA308f3fa005beA7dB0d203b3b86664E36](https://donut.push.network/address/0x7a9082dA308f3fa005beA7dB0d203b3b86664E36?tab=contract) |
+| USDC.bsc | USDC.bsc | BNB\_Testnet | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) |
+| USDT.bnb | USDT.bnb | BNB\_Testnet | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) |
+
+* * *
+
+### Core AMM & Helpers
+
+Uniswap V3-compatible AMM contracts deployed on Push Chain for on-chain token swaps and liquidity management.
+
+| Contract | Address |
+| --- | --- |
+| Factory | [0x81b8Bca02580C7d6b636051FDb7baAC436bFb454](https://donut.push.network/address/0x81b8Bca02580C7d6b636051FDb7baAC436bFb454?tab=contract) |
+| WPC | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) |
+| Swap Router | [0x5D548bB9E305AAe0d6dc6e6fdc3ab419f6aC0037](https://donut.push.network/address/0x5D548bB9E305AAe0d6dc6e6fdc3ab419f6aC0037?tab=contract) |
+| Position Manager | [0xf9b3ac66aed14A2C7D9AA7696841aB6B27a6231e](https://donut.push.network/address/0xf9b3ac66aed14A2C7D9AA7696841aB6B27a6231e?tab=contract) |
+| QuoterV2 | [0x83316275f7C2F79BC4E26f089333e88E89093037](https://donut.push.network/address/0x83316275f7C2F79BC4E26f089333e88E89093037?tab=contract) |
+| Tick Lens | [0xb64113Fc16055AfE606f25658812EE245Aa41dDC](https://donut.push.network/address/0xb64113Fc16055AfE606f25658812EE245Aa41dDC?tab=contract) |
+| Multicall | [0xa8c00017955c8654bfFbb6d5179c99f5aB8B7849](https://donut.push.network/address/0xa8c00017955c8654bfFbb6d5179c99f5aB8B7849?tab=contract) |
+
+### AMM Pools
+
+Active official liquidity pools pairing various PRC-20 tokens with WPC (Wrapped Push Chain native token). Fee tiers are in basis points (e.g. 500 = 0.05%).
+
+| Pool | Address | Token 0 | Token 1 | Fee |
+| --- | --- | --- | --- | --- |
+| pSOL/WPC Pool | [0x0E5914e3A7e2e6d18330Dd33fA387Ce33Da48b54](https://donut.push.network/address/0x0E5914e3A7e2e6d18330Dd33fA387Ce33Da48b54?tab=contract) | [0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed](https://donut.push.network/address/0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| pETH/WPC Pool | [0x012d5C099f8AE00009f40824317a18c3A342f622](https://donut.push.network/address/0x012d5C099f8AE00009f40824317a18c3A342f622?tab=contract) | [0x2971824Db68229D087931155C2b8bB820B275809](https://donut.push.network/address/0x2971824Db68229D087931155C2b8bB820B275809?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDT.eth/WPC Pool | [0x1e3f6b38582535A8eB021829853A08Bb1C7b604B](https://donut.push.network/address/0x1e3f6b38582535A8eB021829853A08Bb1C7b604B?tab=contract) | [0x0f97A213207703923F5f0C613C9827f7C9A0f96B](https://donut.push.network/address/0x0f97A213207703923F5f0C613C9827f7C9A0f96B?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDC.eth/WPC Pool | [0x524B9b3e98CEF71a20B30859D6c52e13E17C5BA2](https://donut.push.network/address/0x524B9b3e98CEF71a20B30859D6c52e13E17C5BA2?tab=contract) | [0x7A58048036206bB898008b5bBDA85697DB1e5d66](https://donut.push.network/address/0x7A58048036206bB898008b5bBDA85697DB1e5d66?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| pETH.base/WPC Pool | [0xF926707689ad2fE9A81e666E5B888b2f3AD33980](https://donut.push.network/address/0xF926707689ad2fE9A81e666E5B888b2f3AD33980?tab=contract) | [0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21](https://donut.push.network/address/0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDT.base/WPC Pool | [0x0c906B6FE47f1666F4723273Cf8E681b3e35aFF0](https://donut.push.network/address/0x0c906B6FE47f1666F4723273Cf8E681b3e35aFF0?tab=contract) | [0x148823809B853e1db187BC09A9ac909BC42F971a](https://donut.push.network/address/0x148823809B853e1db187BC09A9ac909BC42F971a?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDC.base/WPC Pool | [0xC76D211B1c40775ec340692bA5BC0D728A0dF745](https://donut.push.network/address/0xC76D211B1c40775ec340692bA5BC0D728A0dF745?tab=contract) | [0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1](https://donut.push.network/address/0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| pETH.arb/WPC Pool | [0x1354c9A72F447f60F4811FC34b8C2e084FE338A3](https://donut.push.network/address/0x1354c9A72F447f60F4811FC34b8C2e084FE338A3?tab=contract) | [0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e](https://donut.push.network/address/0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 3000 |
+| USDT.arb/WPC Pool | [0x5EBEa067F75C0661EC37577547209E38C8b93c18](https://donut.push.network/address/0x5EBEa067F75C0661EC37577547209E38C8b93c18?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | [0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891](https://donut.push.network/address/0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891?tab=contract) | 500 |
+| USDC.arb/WPC Pool | [0xB3ccbD470A19D4aB2fAa43c6eE4d43dEF8F4Ee63](https://donut.push.network/address/0xB3ccbD470A19D4aB2fAa43c6eE4d43dEF8F4Ee63?tab=contract) | [0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C](https://donut.push.network/address/0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| pBNB/WPC Pool | [0x826edC20c926653f4ddC01b8d4C7Df31a403e7d6](https://donut.push.network/address/0x826edC20c926653f4ddC01b8d4C7Df31a403e7d6?tab=contract) | [0x7a9082dA308f3fa005beA7dB0d203b3b86664E36](https://donut.push.network/address/0x7a9082dA308f3fa005beA7dB0d203b3b86664E36?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDT.bnb/WPC Pool | [0x735010da121541515CB509339Ea0A0fD4f48d4a9](https://donut.push.network/address/0x735010da121541515CB509339Ea0A0fD4f48d4a9?tab=contract) | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+| USDC.bsc/WPC Pool | [0xf09aD7D5e8800d0863F5ea845509bC1B1aCAe37a](https://donut.push.network/address/0xf09aD7D5e8800d0863F5ea845509bC1B1aCAe37a?tab=contract) | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) | [0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9](https://donut.push.network/address/0xE17DD2E0509f99E9ee9469Cf6634048Ec5a3ADe9?tab=contract) | 500 |
+
+* * *
+
+## External Chain Gateway Contracts
+
+UniversalGateway contracts deployed on external testnets. These contracts accept deposits and initiate cross-chain transactions routed through Push Chain.
+
+## Ethereum Sepolia
+
+Contracts deployed on Ethereum Sepolia testnet (Chain ID: 11155111).
+
+### Ethereum Sepolia - Gateway Addresses
+
+| Contract | Address |
+| --- | --- |
+| Universal Gateway | [0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A](https://sepolia.etherscan.io/address/0x05bD7a3D18324c1F7e216f7fBF2b15985aE5281A#code) `Proxy` Purpose
+Accepts deposits and initiates cross-chain transactions routed through Push Chain
+
+Other Details
+
+Implementation - [0xa594c32593eD1E0Fce83fa1b3A56870b4a1b4ec1](https://sepolia.etherscan.io/address/0xa594c32593eD1E0Fce83fa1b3A56870b4a1b4ec1#code)  
+ProxyAdmin - [0x756C0bEa91F5692384AEe147C10409BB062Bf39b](https://sepolia.etherscan.io/address/0x756C0bEa91F5692384AEe147C10409BB062Bf39b#code)
+
+ |
+
+### Ethereum Sepolia - CEA Contracts
+
+Chain Execution Account (CEA) contracts enable contract-initiated cross-chain transactions on behalf of users.
+
+| Contract | Address |
+| --- | --- |
+| CEAFactory | [0x5E191fbBe22F8866C5e4250557664fCE760e8870](https://sepolia.etherscan.io/address/0x5E191fbBe22F8866C5e4250557664fCE760e8870#code) `Proxy` Other Details
+Implementation - [0xe5B51807f2252A5Ea9B591fE02285954446c8cAD](https://sepolia.etherscan.io/address/0xe5B51807f2252A5Ea9B591fE02285954446c8cAD#code)  
+ProxyAdmin - [0xF920e3D1420885A117Cb59830d0474aD5690dd82](https://sepolia.etherscan.io/address/0xF920e3D1420885A117Cb59830d0474aD5690dd82#code)
+
+ |
+| CEA (logic) | [0x1939376ce03998F638b8760c7a13C9A379A053C0](https://sepolia.etherscan.io/address/0x1939376ce03998F638b8760c7a13C9A379A053C0#code) |
+| CEAMigration | [0x97BCEba9c6f13B0E12Fde0E4D2697F74A79899de](https://sepolia.etherscan.io/address/0x97BCEba9c6f13B0E12Fde0E4D2697F74A79899de#code) |
+
+### Ethereum Sepolia - Vault Contracts
+
+Vault contract custodies user funds deposited via the gateway and coordinates with CEAFactory for finalization.
+
+| Contract | Address |
+| --- | --- |
+| Vault | [0xD019Eb12D0d6eF8D299661f22B4B7d262eD4b965](https://sepolia.etherscan.io/address/0xD019Eb12D0d6eF8D299661f22B4B7d262eD4b965#code) `Proxy` Purpose
+Custodies deposited funds and coordinates cross-chain finalization
+
+Other Details
+
+Implementation - [0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C](https://sepolia.etherscan.io/address/0x493F3a9Be4841445Db6Cb87FcBe45377f4E82e8C#code)  
+ProxyAdmin - [0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3](https://sepolia.etherscan.io/address/0x0c9b4741b9D8744D777d915a20c2C952f1f5aBc3#code)
+
+ |
+
+### Ethereum Sepolia - Supported Tokens
+
+Tokens accepted by the Ethereum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
+
+| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| --- | --- | --- |
+| Native ETH | 0x0000000000000000000000000000000000000000 | [0x2971824Db68229D087931155C2b8bB820B275809](https://donut.push.network/address/0x2971824Db68229D087931155C2b8bB820B275809?tab=contract) `pETH` |
+| USDC | [0x97F477B7f970D47a87B42869ceeace218106152a](https://sepolia.etherscan.io/address/0x97F477B7f970D47a87B42869ceeace218106152a#code) | [0x7A58048036206bB898008b5bBDA85697DB1e5d66](https://donut.push.network/address/0x7A58048036206bB898008b5bBDA85697DB1e5d66?tab=contract) `USDC.eth` |
+| USDT | [0xC4230aEaFcF6b8B49a7b4e53886420f00ff71876](https://sepolia.etherscan.io/address/0xC4230aEaFcF6b8B49a7b4e53886420f00ff71876#code) | [0x0f97A213207703923F5f0C613C9827f7C9A0f96B](https://donut.push.network/address/0x0f97A213207703923F5f0C613C9827f7C9A0f96B?tab=contract) `USDT.eth` |
+| WETH | [0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14](https://sepolia.etherscan.io/address/0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14#code) | [0x0d0dF7E8807430A81104EA84d926139816eC7586](https://donut.push.network/address/0x0d0dF7E8807430A81104EA84d926139816eC7586?tab=contract) `WETH.eth` |
+
+* * *
+
+## Arbitrum Sepolia
+
+Contracts deployed on Arbitrum Sepolia testnet (Chain ID: 421614).
+
+### Arbitrum Sepolia - Gateway Addresses
+
+| Contract | Address |
+| --- | --- |
+| Universal Gateway | [0x2cd870e0166Ba458dEC615168Fd659AacD795f34](https://sepolia.arbiscan.io/address/0x2cd870e0166Ba458dEC615168Fd659AacD795f34#code) `Proxy` Purpose
+Accepts deposits and initiates cross-chain transactions routed through Push Chain
+
+Other Details
+
+Implementation - [0xa81a398289D04503Aab64C4276CdB99Ff1594801](https://sepolia.arbiscan.io/address/0xa81a398289D04503Aab64C4276CdB99Ff1594801#code)  
+ProxyAdmin - [0xF838473Ddc2228267023A319c7305564391313f7](https://sepolia.arbiscan.io/address/0xF838473Ddc2228267023A319c7305564391313f7#code)
+
+ |
+
+### Arbitrum Sepolia - CEA Contracts
+
+Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain transactions on Arbitrum Sepolia.
+
+| Contract | Address |
+| --- | --- |
+| CEAFactory | [0x65572FFa81c230360a8a53C1682C7f0Ee321E5E7](https://sepolia.arbiscan.io/address/0x65572FFa81c230360a8a53C1682C7f0Ee321E5E7#code) `Proxy` Other Details
+Implementation - [0xd8335e762E42b7f9610293707d6d8A6b97578bFb](https://sepolia.arbiscan.io/address/0xd8335e762E42b7f9610293707d6d8A6b97578bFb#code)  
+ProxyAdmin - [0x6349546d872d483A35bdD165c9ef85757e064D4E](https://sepolia.arbiscan.io/address/0x6349546d872d483A35bdD165c9ef85757e064D4E#code)
+
+ |
+| CEA (logic) | [0x2c933Ff6FBcD479055F344691bc628F51DcE871A](https://sepolia.arbiscan.io/address/0x2c933Ff6FBcD479055F344691bc628F51DcE871A#code) |
+| CEAMigration | [0x81f33160020AaDF47000E85915d332943b69F9f9](https://sepolia.arbiscan.io/address/0x81f33160020AaDF47000E85915d332943b69F9f9#code) |
+
+### Arbitrum Sepolia - Vault Contracts
+
+Vault contract on Arbitrum Sepolia that custodies deposited funds and coordinates cross-chain finalization.
+
+| Contract | Address |
+| --- | --- |
+| Vault | [0x233B1B1B378eb0Aa723097634025A47C4b73A8F7](https://sepolia.arbiscan.io/address/0x233B1B1B378eb0Aa723097634025A47C4b73A8F7#code) `Proxy` Purpose
+Custodies deposited funds and coordinates cross-chain finalization
+
+Other Details
+
+Implementation - [0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef](https://sepolia.arbiscan.io/address/0x60326FA4dD66CEA3637f4Dd6B4D65ad3112B87Ef#code)  
+ProxyAdmin - [0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2](https://sepolia.arbiscan.io/address/0x3BA9EbE1c6b797BFB04CfF1CF26A8D5500b7c9b2#code)
+
+ |
+
+### Arbitrum Sepolia - Supported Tokens
+
+Tokens accepted by the Arbitrum Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
+
+| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| --- | --- | --- |
+| Native ETH | 0x0000000000000000000000000000000000000000 | [0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e](https://donut.push.network/address/0xc0a821a1AfEd1322c5e15f1F4586C0B8cE65400e?tab=contract) `pETH.arb` |
+| USDC | [0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C](https://sepolia.arbiscan.io/address/0x5dd39b0b3610F666F631a6506b7713EF83e1Ac5C#code) | [0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C](https://donut.push.network/address/0x1091cCBA2FF8d2A131AE4B35e34cf3308C48572C?tab=contract) `USDC.arb` |
+| USDT | [0xE30928528f52CAEeB75fB07837e22d77D47e9c07](https://sepolia.arbiscan.io/address/0xE30928528f52CAEeB75fB07837e22d77D47e9c07#code) | [0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891](https://donut.push.network/address/0xFE6E9DF2BbC9ce05D98b83B1365df6DcA9951891?tab=contract) `USDT.arb` |
+
+* * *
+
+## Base Sepolia
+
+Contracts deployed on Base Sepolia testnet (Chain ID: 84532).
+
+### Base Sepolia - Gateway Addresses
+
+| Contract | Address |
+| --- | --- |
+| Universal Gateway | [0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16](https://sepolia.basescan.org/address/0xFD4fef1F43aFEc8b5bcdEEc47f35a1431479aC16#code) `Proxy` Purpose
+Accepts deposits and initiates cross-chain transactions routed through Push Chain
+
+Other Details
+
+Implementation - [0x9f63e2bCFC19994c664a7d7265dCfAb206634612](https://sepolia.basescan.org/address/0x9f63e2bCFC19994c664a7d7265dCfAb206634612#code)  
+ProxyAdmin - [0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3](https://sepolia.basescan.org/address/0x0b30F0ECd37B8D44FE1d2b98d5Dc64654d9ac9b3#code)
+
+ |
+
+### Base Sepolia - CEA Contracts
+
+Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain transactions on Base Sepolia.
+
+| Contract | Address |
+| --- | --- |
+| CEAFactory | [0x7e8CeeDA043ED1460540616103dD57581a66C856](https://sepolia.basescan.org/address/0x7e8CeeDA043ED1460540616103dD57581a66C856#code) `Proxy` Other Details
+Implementation - [0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5](https://sepolia.basescan.org/address/0xd26E793Ef931EB62AeBc6e87DE1FEEF4fDbA01F5#code)  
+ProxyAdmin - [0x413A39fFA85657A25768799f7fd64A917eceDe48](https://sepolia.basescan.org/address/0x413A39fFA85657A25768799f7fd64A917eceDe48#code)
+
+ |
+| CEA (logic) | [0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8](https://sepolia.basescan.org/address/0x733078bA1dFDDDB68A9E082696A256AEcBFb26b8#code) |
+| CEAMigration | [0x95c453fDFf55Afc5754c1fA95Ad6607273D71B20](https://sepolia.basescan.org/address/0x95c453fDFf55Afc5754c1fA95Ad6607273D71B20#code) |
+
+### Base Sepolia - Vault Contracts
+
+Vault contract on Base Sepolia that custodies deposited funds and coordinates cross-chain finalization.
+
+| Contract | Address |
+| --- | --- |
+| Vault | [0xb4Ba4D5542D1dD48BD3589543660B265B41f16CB](https://sepolia.basescan.org/address/0xb4Ba4D5542D1dD48BD3589543660B265B41f16CB#code) `Proxy` Purpose
+Custodies deposited funds and coordinates cross-chain finalization
+
+Other Details
+
+Implementation - [0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b](https://sepolia.basescan.org/address/0x3F9ba2dFCe97Ef55b7a03C455911fd25f8f12B3b#code)  
+ProxyAdmin - [0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d](https://sepolia.basescan.org/address/0xdD1aF0f056D290c2BcE8d785340D4c7ab2FAC75d#code)
+
+ |
+
+### Base Sepolia - Supported Tokens
+
+Tokens accepted by the Base Sepolia gateway and their corresponding PRC-20 representations on Push Chain.
+
+| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| --- | --- | --- |
+| Native ETH | 0x0000000000000000000000000000000000000000 | [0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21](https://donut.push.network/address/0xc7007af2B24D4eb963fc9633B0c66e1d2D90Fc21?tab=contract) `pETH.base` |
+| USDC | [0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8](https://sepolia.basescan.org/address/0x5c3504F0E3bA28FDc1F74234fE936518276AaBB8#code) | [0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1](https://donut.push.network/address/0xD7C6cA1e2c0CE260BE0c0AD39C1540de460e3Be1?tab=contract) `USDC.base` |
+| USDT | [0x4D7646B9eE3D68F4b0F135B5cbc66B00819F6b61](https://sepolia.basescan.org/address/0x4D7646B9eE3D68F4b0F135B5cbc66B00819F6b61#code) | [0x148823809B853e1db187BC09A9ac909BC42F971a](https://donut.push.network/address/0x148823809B853e1db187BC09A9ac909BC42F971a?tab=contract) `USDT.base` |
+
+* * *
+
+## BNB Testnet
+
+Contracts deployed on BNB Testnet (Chain ID: 97).
+
+### BNB Testnet - Gateway Addresses
+
+| Contract | Address |
+| --- | --- |
+| Universal Gateway | [0x44aFFC61983F4348DdddB886349eb992C061EaC0](https://testnet.bscscan.com//address/0x44aFFC61983F4348DdddB886349eb992C061EaC0#code) `Proxy` Purpose
+Accepts deposits and initiates cross-chain transactions routed through Push Chain
+
+Other Details
+
+Implementation - [0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E](https://testnet.bscscan.com//address/0x1f5afA0eEDC2F7E2442D8a51E8A892C98517De1E#code)  
+ProxyAdmin - [0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C](https://testnet.bscscan.com//address/0x5Cef317D8392dF9F8C8E8a696c6893FD4112542C#code)
+
+ |
+
+### BNB Testnet - CEA Contracts
+
+Chain Execution Account (CEA) contracts enabling contract-initiated cross-chain transactions on BNB Testnet.
+
+| Contract | Address |
+| --- | --- |
+| CEAFactory | [0x3f1B16e0B072d472951C4563d29d3da6a3EE3Ce8](https://testnet.bscscan.com/address/0x3f1B16e0B072d472951C4563d29d3da6a3EE3Ce8#code) `Proxy` Other Details
+Implementation - [0xC0D35725Dd054B09931740DC231cDea89B0FEd3b](https://testnet.bscscan.com/address/0xC0D35725Dd054B09931740DC231cDea89B0FEd3b#code)  
+ProxyAdmin - [0xf33CBb6a1c1D511dF40764063a11978D640C41A7](https://testnet.bscscan.com/address/0xf33CBb6a1c1D511dF40764063a11978D640C41A7#code)
+
+ |
+| CEA (logic) | [0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd](https://testnet.bscscan.com/address/0xdC3A3a18a17EB4FDa9cF34a8CEee8540e6F2b5Fd#code) |
+| CEAMigration | [0x2a06BF2A9C19dacbb38852f846B42e278e82e855](https://testnet.bscscan.com/address/0x2a06BF2A9C19dacbb38852f846B42e278e82e855#code) |
+
+### BNB Testnet - Vault Contracts
+
+Vault contract on BNB Testnet that custodies deposited funds and coordinates cross-chain finalization.
+
+| Contract | Address |
+| --- | --- |
+| Vault | [0xE52AC4f8DD3e0263bDF748F3390cdFA1f02be881](https://testnet.bscscan.com/address/0xE52AC4f8DD3e0263bDF748F3390cdFA1f02be881#code) `Proxy` Purpose
+Custodies deposited funds and coordinates cross-chain finalization
+
+Other Details
+
+Implementation - [0xc1CD9c126e1F38Ffe016d448FaF563e825eb60CA](https://testnet.bscscan.com/address/0xc1CD9c126e1F38Ffe016d448FaF563e825eb60CA#code)  
+ProxyAdmin - [0xc34eF3cA76d1C18c35AbF5C3664d183B57382AbC](https://testnet.bscscan.com/address/0xc34eF3cA76d1C18c35AbF5C3664d183B57382AbC#code)
+
+ |
+
+### BNB Testnet - Supported Tokens
+
+Tokens accepted by the BNB Testnet gateway and their corresponding PRC-20 representations on Push Chain.
+
+| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| --- | --- | --- |
+| Native BNB | 0x0000000000000000000000000000000000000000 | [0x7a9082dA308f3fa005beA7dB0d203b3b86664E36](https://donut.push.network/address/0x7a9082dA308f3fa005beA7dB0d203b3b86664E36?tab=contract) `pBNB` |
+| USDC | [0xA8802F96cAd0d45343d9bc660B6f7d80050A660b](https://testnet.bscscan.com/address/0xA8802F96cAd0d45343d9bc660B6f7d80050A660b#code) | [0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639](https://donut.push.network/address/0x120EBf25Dad7D6a09Ad2316f23f9Be95DBb90639?tab=contract) `USDC.bsc` |
+| USDT | [0xE935d9c9C24D02E61186c640cc01d713C876d40F](https://testnet.bscscan.com/address/0xE935d9c9C24D02E61186c640cc01d713C876d40F#code) | [0x731aF1Da5365259d27528557EE4aFBA4baC90ef2](https://donut.push.network/address/0x731aF1Da5365259d27528557EE4aFBA4baC90ef2?tab=contract) `USDT.bnb` |
+
+* * *
+
+## Solana Devnet
+
+Contracts deployed on Solana Devnet. The Solana gateway is a native Solana program (not EVM) and uses a different address format.
+
+### Solana Devnet - Gateway Addresses
+
+| Program | Address |
+| --- | --- |
+| Universal Gateway | [CFVSincHYbETh2k7w6u1ENEkjbSLtveRCEBupKidw2VS](https://explorer.solana.com/address/CFVSincHYbETh2k7w6u1ENEkjbSLtveRCEBupKidw2VS?cluster=devnet) |
+
+### Solana Devnet - Supported Tokens
+
+Tokens accepted by the Solana Devnet gateway and their corresponding PRC-20 representations on Push Chain.
+
+| Token Name | Source Address | PRC20 Address (on Push Chain) |
+| --- | --- | --- |
+| Native SOL | — | [0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed](https://donut.push.network/address/0x5D525Df2bD99a6e7ec58b76aF2fd95F39874EBed?tab=contract) `pSOL` |
+| USDC | [4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU](https://explorer.solana.com/address/4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU?cluster=devnet) | [0x04B8F634ABC7C879763F623e0f0550a4b5c4426F](https://donut.push.network/address/0x04B8F634ABC7C879763F623e0f0550a4b5c4426F?tab=contract) `USDC.sol` |
+| USDT (Unofficial) | [EiXDnrAg9ea2Q6vEPV7E5TpTU1vh41jcuZqKjU5Dc4ZF](https://explorer.solana.com/address/EiXDnrAg9ea2Q6vEPV7E5TpTU1vh41jcuZqKjU5Dc4ZF?cluster=devnet) | [0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34](https://donut.push.network/address/0x4f1A3D22d170a2F4Bddb37845a962322e24f4e34?tab=contract) `USDT.sol` |
+| DAI (Unofficial) | [G2ZLaRhpohW23KTEX3fBjZXtNTFFwemqCaWWnWVTj4TB](https://explorer.solana.com/address/G2ZLaRhpohW23KTEX3fBjZXtNTFFwemqCaWWnWVTj4TB?cluster=devnet) | [0x5861f56A556c990358cc9cccd8B5baa3767982A8](https://donut.push.network/address/0x5861f56A556c990358cc9cccd8B5baa3767982A8?tab=contract) `DAI.sol` |
