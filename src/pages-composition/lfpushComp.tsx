@@ -433,6 +433,17 @@ const TweetWrapper = styled.div`
     }
   }
 
+  /* Quoted tweet card nested inside a tweet.
+     .article_bYSq is react-tweet's generated class; the nested-article
+     selector is the version-proof fallback if that hash ever changes. */
+  .article_bYSq,
+  article article {
+    border: 1px solid #425364;
+    border-radius: 16px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+
   &:hover {
     border-color: var(--ifm-link-color);
     transform: translateY(-2px);
