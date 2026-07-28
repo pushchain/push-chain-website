@@ -2,7 +2,7 @@
 title: "Utility Functions"
 url: "https://pushchain.github.io/docs/chain/build/utility-functions/"
 section: "build"
-lastUpdated: "2026-07-28T15:25:29+04:00"
+lastUpdated: "2026-07-28T11:30:15Z"
 description: "Utility Functions | Build | Push Chain Docs"
 ---
 

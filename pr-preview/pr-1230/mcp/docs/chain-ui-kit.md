@@ -2,7 +2,7 @@
 title: "UI Kit Section"
 url: "https://pushchain.github.io/docs/chain/ui-kit/"
 section: "ui-kit"
-lastUpdated: "2026-07-28T15:25:29+04:00"
+lastUpdated: "2026-07-28T11:30:15Z"
 description: "UI Kit Section | Push Chain Docs"
 ---
 

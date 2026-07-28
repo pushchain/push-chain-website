@@ -2,7 +2,7 @@
 title: "Configure Foundry"
 url: "https://pushchain.github.io/docs/chain/setup/smart-contract-environment/configure-foundry/"
 section: "setup"
-lastUpdated: "2026-07-28T15:25:29+04:00"
+lastUpdated: "2026-07-28T11:30:15Z"
 description: "Configure Foundry | Smart Contract Environment | Tooling | Setup | Push Chain Docs"
 ---
 

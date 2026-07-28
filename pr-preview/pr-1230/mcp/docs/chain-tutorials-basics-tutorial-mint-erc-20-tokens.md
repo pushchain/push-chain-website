@@ -2,7 +2,7 @@
 title: "Mint Universal ERC-20 Tokens"
 url: "https://pushchain.github.io/docs/chain/tutorials/basics/tutorial-mint-erc-20-tokens/"
 section: "tutorials"
-lastUpdated: "2026-07-28T15:25:29+04:00"
+lastUpdated: "2026-07-28T11:30:15Z"
 description: "Mint Universal ERC-20 Tokens | Tutorials | Push Chain Docs"
 ---
 
